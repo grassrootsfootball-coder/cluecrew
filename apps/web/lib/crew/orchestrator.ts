@@ -35,6 +35,7 @@ import {
 } from '@cluecrew/core';
 import { logEvent, prisma, Prisma } from '@cluecrew/db';
 import type { MechanicFamily } from '@cluecrew/core';
+import { shuffleOptionsForChild } from '@/lib/crew/shuffle';
 
 const DAY_MS = 86_400_000;
 
@@ -393,6 +394,9 @@ async function serveItem(
   const item = chosen.item;
   const family = familyForType(input.questionTypeId);
   const plain = input.activityKind === 'closer';
+  // Authored order never leaves the server: seeded on (childId, itemId) so
+  // the order is stable for this child but differs between children.
+  const options = shuffleOptionsForChild(item.options, childId, item.id);
 
   state.pending = {
     kind: 'item',
@@ -402,7 +406,7 @@ async function serveItem(
     questionTypeId: input.questionTypeId,
     context: input.context,
     unitId: input.unitId,
-    options: item.options.map((option) => ({
+    options: options.map((option) => ({
       id: option.id,
       isCorrect: option.isCorrect,
       misconceptionId: option.misconceptionId,
@@ -422,7 +426,7 @@ async function serveItem(
         : 'corner'
       : 'none',
     stem: item.stem,
-    options: item.options.map((option) => ({ id: option.id, content: option.content })),
+    options: options.map((option) => ({ id: option.id, content: option.content })),
   };
 }
 

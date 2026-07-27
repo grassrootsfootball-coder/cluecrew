@@ -11,7 +11,7 @@
     "start": "pnpm --filter @cluecrew/web start",
     "typecheck": "pnpm --filter @cluecrew/db generate && pnpm -r run typecheck",
     "lint": "eslint .",
-    "test": "pnpm --filter @cluecrew/core test",
+    "test": "pnpm --filter @cluecrew/core test && pnpm --filter @cluecrew/web test",
     "e2e": "pnpm --filter @cluecrew/web e2e",
     "db:setup": "pnpm --filter @cluecrew/db generate && pnpm --filter @cluecrew/db migrate:deploy && pnpm --filter @cluecrew/db seed",
     "db:migrate": "pnpm --filter @cluecrew/db migrate:dev",

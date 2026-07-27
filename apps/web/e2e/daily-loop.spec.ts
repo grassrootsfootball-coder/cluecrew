@@ -123,10 +123,10 @@ test('full Daily Loop: HQ → warm-up → case → plain closer → wind-down; m
         .click();
       continue;
     }
-    // Items: first options for a few (exercising the celebrate path), then
-    // always the last option — generated items author the correct option
-    // first, so this deterministically walks the miss path to the 3-miss
-    // frustration break, the closer, and the wind-down.
+    // Items: options arrive in a per-child seeded shuffle (never authored
+    // order), so answers are probabilistic: always picking the last option
+    // misses ~2/3+ of the time, which reliably reaches the 3-miss frustration
+    // break, the closer, and the wind-down within the step budget.
     if (await page.locator('.crew-plain').isVisible().catch(() => false)) sawPlainCloser = true;
     const groups = page.locator('[role="group"][aria-label="Answer choices"] button');
     if ((await groups.count()) > 0) {

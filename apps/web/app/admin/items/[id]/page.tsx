@@ -9,6 +9,8 @@ import {
 } from '@/lib/actions/admin-items';
 import { ItemFormFields } from '@/components/item-form';
 import { currentStaff, roleAllows } from '@/lib/staff';
+import { shuffleOptionsForChild } from '@/lib/crew/shuffle';
+import { optionLabel } from '@/components/crew/engines/shared';
 
 const ERROR_COPY: Record<string, string> = {
   'missing-misconceptions':
@@ -78,6 +80,23 @@ export default async function ItemDetailPage({
           {JSON.stringify({ stem: item.stem, options: item.options.map((option) => ({ content: option.content, isCorrect: option.isCorrect, misconceptionId: option.misconceptionId })) }, null, 2)}
         </pre>
       )}
+
+      <div className="cc-card">
+        <h2 style={{ marginTop: 0 }}>Child view (review what children see)</h2>
+        <p className="cc-muted">
+          Options are served in a seeded shuffle per child — never in authored order. This preview
+          uses your reviewer seed; each child sees their own stable order.
+        </p>
+        <ol style={{ listStyle: 'none', paddingLeft: 0 }}>
+          {shuffleOptionsForChild(item.options, staff.id, item.id).map((option, index) => (
+            <li key={option.id} style={{ margin: '0.3rem 0' }}>
+              <span className="cc-muted">{String.fromCharCode(65 + index)}.</span>{' '}
+              {optionLabel(option.content)}
+              {option.isCorrect ? ' ✓' : ''}
+            </li>
+          ))}
+        </ol>
+      </div>
 
       {canReview ? (
         <div className="cc-card">
