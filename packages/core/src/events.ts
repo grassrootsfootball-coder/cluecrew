@@ -17,6 +17,16 @@ export const EVENT_NAMES = [
   'word_collected',
   'rank_up',
   'warmup_completed',
+  // Learning engine (Phase 3)
+  'warmup_item_result',
+  'mode_opened',
+  'mode_completed',
+  'difficulty_stepped',
+  'frustration_break_triggered',
+  'review_due_served',
+  'teachback_completed',
+  'streak_week_earned',
+  'session_capped',
   // Parent lifecycle (Phase 2)
   'signup_completed',
   'email_verified',

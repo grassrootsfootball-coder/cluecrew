@@ -1,7 +1,18 @@
+// The API surface Phase 4 consumes (BUILD-PHASE-3 §9). Phase 4 renders
+// states; it makes NO pedagogical decisions. That boundary is the anti-drift
+// line for the whole child app.
+export * from './config';
 export * from './events';
 export * from './ranks';
 export * from './mastery';
-export * from './scheduling';
+export * from './scheduler';
+export * from './adaptivity';
+export * from './calibration';
+export * from './session';
+export * from './crew-state';
+export * from './streaks';
+export * from './modes';
+export * from './teachback';
 export * from './content-schema';
 export * from './pricing';
 export * from './regions';

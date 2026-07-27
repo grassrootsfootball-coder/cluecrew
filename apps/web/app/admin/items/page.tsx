@@ -5,13 +5,17 @@ const STATUSES: ItemStatus[] = ['DRAFT', 'REVIEWED', 'LIVE', 'RETIRED'];
 export default async function ItemsPage({
   searchParams,
 }: {
-  searchParams: Promise<{ status?: string; imported?: string }>;
+  searchParams: Promise<{ status?: string; imported?: string; flagged?: string }>;
 }) {
-  const { status, imported } = await searchParams;
+  const { status, imported, flagged } = await searchParams;
   const filter = STATUSES.includes(status as ItemStatus) ? (status as ItemStatus) : undefined;
 
   const items = await prisma.item.findMany({
-    where: filter ? { status: filter } : undefined,
+    where: {
+      ...(filter ? { status: filter } : {}),
+      // Calibration QC queue (Phase 3 §2): drifted ≥1.5 tiers from authored.
+      ...(flagged ? { calibrationFlaggedAt: { not: null } } : {}),
+    },
     include: { questionType: true, options: true },
     orderBy: { createdAt: 'desc' },
     take: 200,
@@ -34,6 +38,8 @@ export default async function ItemsPage({
             <a href={`/admin/items?status=${value}`}>{value}</a>
           </span>
         ))}
+        {' · '}
+        <a href="/admin/items?flagged=1">calibration-flagged</a>
       </p>
       <table className="cc-table">
         <thead>

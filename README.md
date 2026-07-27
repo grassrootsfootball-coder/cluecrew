@@ -2,7 +2,7 @@
 
 **ClueCrew makes the 11+ make sense — for every child and every parent — through clear teaching, calm design, and a price any family can reach.**
 
-Read [CLUECREW-MANIFESTO.md](CLUECREW-MANIFESTO.md) before contributing. It wins all conflicts. Phase 1 (foundation) is complete and gate-ratified; the current build phase is [BUILD-PHASE-2.md](BUILD-PHASE-2.md) — accounts, billing, onboarding, admin CMS, bursary.
+Read [CLUECREW-MANIFESTO.md](CLUECREW-MANIFESTO.md) before contributing. It wins all conflicts. Phases 1 (foundation) and 2 (accounts/billing/CMS) are complete and gate-ratified; the current build phase is [BUILD-PHASE-3.md](BUILD-PHASE-3.md) — the learning engine (pure TS in `packages/core`, simulation-tested; Stripe staging validation from Phase 2 remains parked until Stripe keys exist).
 
 ## Quickstart (target: under 10 minutes)
 
@@ -45,7 +45,11 @@ All workspaces read the single root `.env` (Next loads it in `next.config.ts`; p
 pnpm dev                 # migrate + seed + run the app on :3100
 pnpm typecheck           # all workspaces
 pnpm lint
-pnpm test                # unit tests (packages/core)
+pnpm test                # unit tests (packages/core, incl. 90-day learner simulations)
+pnpm test:coverage       # same, gated at 90%+ on mastery/scheduler/adaptivity/session
+pnpm sim:report          # regenerate docs/sim-report.html (six learner profiles)
+pnpm check:l2            # L2 firewall grep: no modality/learning-style profiles
+pnpm jobs:calibrate      # nightly item calibration; drifted items flag to the CMS queue
 pnpm e2e                 # Playwright: child-token isolation, CSP (needs dev DB seeded)
 pnpm validate:content    # /content against zod schemas
 pnpm scan:vocab          # banned vocabulary + pure-white background lint

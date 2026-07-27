@@ -52,6 +52,14 @@ model ChildProfile {
   examYear  Int? // e.g. 2028 — drives programme pacing
   settings  Json // accessibility prefs: reducedMotion, dyslexiaFont, audioDefault
   rank      Rank    @default(TRAINEE)
+  // Streak weeks earned (rank input). Forgiveness days are never stored —
+  // they are computed transiently and invisible by design (D2).
+  streakWeeks Int   @default(0)
+  // The single permitted mode pointer (L2 firewall): a UI convenience only.
+  // No other mode-choice data may ever be stored — reviewer instruction:
+  // reject any PR adding a learner-profile column or score here. See
+  // packages/core/src/modes.ts for the full firewall text.
+  lastUsedMode String?
 
   caseFiles       CaseFile[]
   wordVault       WordVaultEntry[]
@@ -222,6 +230,9 @@ model Item {
   authoredBy           String // "human:<name>" | "ai-draft:<model>" | "seed" — provenance is mandatory
   reviewedBy           String? // human reviewer name; REQUIRED before LIVE (P3, AI-QC)
   reviewNotes          String? // reviewer feedback when an item is returned to DRAFT
+  // Set by the nightly calibration job when calibrated difficulty drifts
+  // ≥1.5 tiers from the authored tier — the live QC net (Phase 3 §2).
+  calibrationFlaggedAt DateTime?
   createdAt            DateTime     @default(now())
 
   @@index([questionTypeId, status])
@@ -249,6 +260,10 @@ model Misconception {
   district    District
   description String // teacher-facing
   childHint   String // the authored hint shown when this distractor is chosen
+  // Teach-Back content (Phase 3 §6): authored working steps, the index of the
+  // step containing the slip, and authored correction options. The engine
+  // never generates text (S3) — evaluation is deterministic.
+  teachback   Json?
   options     ItemOption[]
 }
 
@@ -271,6 +286,8 @@ model CaseFile {
   case         Case         @relation(fields: [caseId], references: [id])
   masteryLevel Float        @default(0) // 0–1; mastery model in /packages/core
   solvedAt     DateTime? // case "cracked"
+  taughtBackAt DateTime? // Teach-Back badge (Phase 3 §6)
+  lastPracticedAt DateTime? // drives lazy mastery decay (Phase 3 §1)
 
   @@unique([childId, caseId])
 }
@@ -337,6 +354,9 @@ model Session {
   startedAt     DateTime     @default(now())
   endedAt       DateTime?
   secondsActive Int          @default(0) // 15-min cap enforcement (D2) reads this
+  // Serialized engine state (packages/core session reducer). The engine is
+  // pure; this row is just its persistence.
+  engineState Json?
 }
 
 // ---------- Analytics spine (§6) ----------

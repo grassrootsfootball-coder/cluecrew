@@ -1,53 +1,80 @@
 /**
- * Mastery model (P2: mastery gates progression; nothing advances on exposure
- * alone) and adaptive difficulty (P5: target the zone where the child succeeds
- * roughly 70–85% of the time).
- *
- * Phase 1 ships a simple, well-tested exponentially weighted model; live
- * calibration replaces constants later without changing the interface.
+ * Mastery model (BUILD-PHASE-3 §1). masteryLevel ∈ [0,1] per CaseFile and per
+ * WordVaultEntry. Exponential moving average with difficulty-relative α, lazy
+ * time decay that never punishes, and config-driven thresholds.
  */
+import { ENGINE_CONFIG } from './config';
 
-/** Mastery is 0–1. A Case is considered "cracked" at or above this level. */
-export const MASTERY_THRESHOLD = 0.85;
+const { mastery: CONFIG } = ENGINE_CONFIG;
 
-/** How much a single attempt moves the estimate. Harder items move it more when correct. */
-const BASE_WEIGHT = 0.15;
-
-export interface AttemptSignal {
+export interface MasteryAttempt {
   correct: boolean;
-  /** Authored 1–5 difficulty tier of the item. */
-  difficultyTier: number;
+  /** Item difficulty tier 1–5 (calibrated where available). */
+  itemTier: number;
+  /** The child's current estimated tier for this question type. */
+  childTier: number;
 }
 
-export function updateMastery(current: number, attempt: AttemptSignal): number {
-  const difficulty = clamp(attempt.difficultyTier, 1, 5);
-  // Correct answers on harder items are stronger evidence of mastery;
-  // misses on easier items are stronger evidence it hasn't clicked yet.
-  const weight = attempt.correct
-    ? BASE_WEIGHT * (0.75 + difficulty * 0.15)
-    : BASE_WEIGHT * (0.75 + (6 - difficulty) * 0.15);
+/**
+ * m' = m + α(target − m). α scales with item difficulty relative to the
+ * child's level: harder-than-level correct answers move mastery up more;
+ * easier-than-level misses move it down less (a miss on an easy item is
+ * noise, not collapse).
+ */
+export function updateMastery(current: number, attempt: MasteryAttempt): number {
+  const relative = clamp(attempt.itemTier, 1, 5) - clamp(attempt.childTier, 1, 5);
+  const alpha = attempt.correct
+    ? CONFIG.baseAlpha * clamp(1 + 0.25 * relative, 0.5, 2)
+    : CONFIG.baseAlpha * clamp(1 + 0.3 * relative, 0.3, 1.2);
   const target = attempt.correct ? 1 : 0;
-  return clamp(current + weight * (target - current), 0, 1);
+  return clamp(current + alpha * (target - current), 0, 1);
+}
+
+export interface DecayResult {
+  masteryLevel: number;
+  /** True when decay on a cracked case hit the floor — schedule review instead of dropping (P2). */
+  triggersReview: boolean;
+}
+
+/**
+ * Lazy decay, applied at read time: mastery decays toward decayFloorFactor ×
+ * its value over decayDays without practice. Decay never drops a cracked
+ * case below the cracked threshold — it triggers review scheduling instead;
+ * it does not punish.
+ */
+export function applyDecay(current: number, daysSincePractice: number, isCracked: boolean): DecayResult {
+  if (daysSincePractice <= 0) return { masteryLevel: current, triggersReview: false };
+  const progress = Math.min(daysSincePractice, CONFIG.decayDays) / CONFIG.decayDays;
+  const decayed = current * (1 - (1 - CONFIG.decayFloorFactor) * progress);
+  if (isCracked && decayed < CONFIG.cracked) {
+    return { masteryLevel: CONFIG.cracked, triggersReview: true };
+  }
+  return { masteryLevel: decayed, triggersReview: false };
+}
+
+export type MasteryStatus = 'not_yet' | 'progressing' | 'cracked';
+
+export function masteryStatus(masteryLevel: number): MasteryStatus {
+  if (masteryLevel >= CONFIG.cracked) return 'cracked';
+  if (masteryLevel >= CONFIG.progressing) return 'progressing';
+  return 'not_yet';
 }
 
 export function isMastered(masteryLevel: number): boolean {
-  return masteryLevel >= MASTERY_THRESHOLD;
+  return masteryLevel >= CONFIG.cracked;
 }
 
-/** P5 success band: sustained accuracy outside 70–85% triggers difficulty adjustment, not blame. */
-export const SUCCESS_BAND = { min: 0.7, max: 0.85 } as const;
-
-export type DifficultyAdjustment = 'easier' | 'hold' | 'harder';
-
 /**
- * @param recentAccuracy accuracy over the recent attempt window (0–1)
- * @param attemptCount attempts in the window; small samples never trigger adjustment
+ * "Needs a different way in" (P1 doing real work): low mastery after real
+ * effort means the explanation is wrong for this child, not the child —
+ * resurface a not-yet-tried Mode before more practice.
  */
-export function recommendDifficulty(recentAccuracy: number, attemptCount: number): DifficultyAdjustment {
-  if (attemptCount < 8) return 'hold';
-  if (recentAccuracy < SUCCESS_BAND.min) return 'easier';
-  if (recentAccuracy > SUCCESS_BAND.max) return 'harder';
-  return 'hold';
+export function needsDifferentWayIn(masteryLevel: number, attemptCount: number): boolean {
+  return attemptCount >= CONFIG.differentWayMinAttempts && masteryLevel < CONFIG.differentWayBelow;
+}
+
+export function applyTeachbackBump(current: number): number {
+  return clamp(current + CONFIG.teachbackBump, 0, 1);
 }
 
 function clamp(value: number, min: number, max: number): number {

@@ -45,22 +45,63 @@ export function vrTypeId(num: number, slug: string): string {
 }
 
 // Every distractor maps to a tagged misconception (P3). Child hints use
-// "not yet" language only (D1).
-const MISCONCEPTIONS: Array<{ id: string; description: string; childHint: string }> = [
+// "not yet" language only (D1). Teach-Back content is authored here (S3) —
+// the mascot's working, the slip, and pick-from corrections.
+const MISCONCEPTIONS: Array<{
+  id: string;
+  description: string;
+  childHint: string;
+  teachback?: { working: string[]; wrongStepIndex: number; corrections: Array<{ text: string; correct: boolean }> };
+}> = [
   {
     id: 'vr-series-step-carryover',
     description: 'Reused the previous step instead of spotting that the step size changes.',
     childHint: 'Look at the jumps between the numbers. Do the jumps stay the same, or do they grow?',
+    teachback: {
+      working: [
+        'I found the jumps: 3, then 4, then 5.',
+        'The last jump was 5, so the next jump is 5 again.',
+        'So my answer is the last number plus 5.',
+      ],
+      wrongStepIndex: 1,
+      corrections: [
+        { text: 'The jumps grow by one each time, so the next jump is 6.', correct: true },
+        { text: 'The jumps repeat in a loop, so the next jump is 3.', correct: false },
+        { text: 'The next jump is the two last jumps added together.', correct: false },
+      ],
+    },
   },
   {
     id: 'vr-series-off-by-one',
     description: 'Identified the rule but slipped by one when applying it.',
     childHint: 'Your rule looks right — count the last jump one more time, nice and slowly.',
+    teachback: {
+      working: [
+        'The rule is: add 4 each time.',
+        'The last number is 18, and 18 add 4 makes 23.',
+      ],
+      wrongStepIndex: 1,
+      corrections: [
+        { text: '18 add 4 makes 22 — count it on your fingers to check.', correct: true },
+        { text: 'The rule should be add 5, not add 4.', correct: false },
+      ],
+    },
   },
   {
     id: 'vr-series-direction',
     description: 'Applied the step in the opposite direction.',
     childHint: 'Check which way the trail is heading. Is it climbing up or stepping down?',
+    teachback: {
+      working: [
+        'The numbers are 20, 17, 14, 11.',
+        'The gap is 3, so the next number is 11 add 3, which is 14.',
+      ],
+      wrongStepIndex: 1,
+      corrections: [
+        { text: 'The trail is stepping DOWN by 3, so the next number is 8.', correct: true },
+        { text: 'The gap changes to 4, so the next number is 15.', correct: false },
+      ],
+    },
   },
   {
     id: 'vr-letter-series-step-repeat',
@@ -219,7 +260,11 @@ async function seedMisconceptions(): Promise<void> {
     await prisma.misconception.upsert({
       where: { id: misconception.id },
       create: { ...misconception, district: 'VR' },
-      update: { description: misconception.description, childHint: misconception.childHint },
+      update: {
+        description: misconception.description,
+        childHint: misconception.childHint,
+        teachback: misconception.teachback,
+      },
     });
   }
 }

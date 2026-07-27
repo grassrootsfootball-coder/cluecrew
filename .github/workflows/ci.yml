@@ -76,8 +76,11 @@ jobs:
       - name: Lint
         run: pnpm lint
 
-      - name: Unit tests
-        run: pnpm test
+      - name: Unit tests + simulations (coverage-gated)
+        run: pnpm test:coverage
+
+      - name: L2 firewall grep (no modality profiles)
+        run: pnpm check:l2
 
       - name: Content schema validation
         run: pnpm validate:content

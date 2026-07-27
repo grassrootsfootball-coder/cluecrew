@@ -7,6 +7,7 @@ Owner: David (controller). Basis: UK GDPR, Data Protection Act 2018, ICO Age App
 |---|---|---|---|
 | 0.1 | 2026-07-27 | 1 | Initial DPIA: data inventory, lawful bases, minimisation, retention |
 | 0.2 | 2026-07-27 | 2 | Payments data (Stripe as processor), bursary evidence handling, email provider as processor, admin roles/audit |
+| 0.3 | 2026-07-27 | 3 | Derived learning records (mastery, scheduling, adaptivity state) documented as pseudonymised; L2 firewall automated |
 
 ---
 
@@ -95,7 +96,31 @@ Phase 1 processes data only in dev/staging with synthetic seed data. No real chi
 
 - Staff roles (AUTHOR/REVIEWER/ADMIN) on named accounts; all admin actions land in `AdminAuditLog`. Region Registry entries carry a source URL and last-verified date to keep parent-facing regional claims accountable.
 
-## 8. Open items for next phase gates
+## 8. Phase 3 additions — derived learning records
+
+The learning engine derives per-child records from practice: mastery levels
+(`CaseFile.masteryLevel`, `WordVaultEntry.masteryLevel`), spaced-repetition
+state (`ReviewSchedule`), per-type difficulty estimates and session state
+(`Session.engineState`), streak weeks, and rank. These are **pseudonymised
+learning records**: keyed to the child profile id, containing no free text,
+no biometrics, and no inferred sensitive attributes.
+
+- **Purpose and child's interest (Children's Code):** every derived value
+  exists to keep the child in a 70–85% success band, schedule kind review, or
+  prevent frustration (hard anti-frustration rules). Profiling here is
+  squarely in the child's interest; nothing is used for advertising, pricing,
+  or ranking children against each other (D3 forbids leaderboards).
+- **The L2 firewall:** the system computes NO learning-style, modality, or
+  learner-type profile from Mode choices — structurally absent (no columns),
+  and enforced by a CI grep (`scripts/check-l2-firewall.mjs`). The single
+  stored pointer is `lastUsedMode`, a UI convenience.
+- **Retention:** derived records follow the same schedule as attempt data
+  (§4): cascade-deleted with the account; attempt-level data aggregates and
+  anonymises after the exam year + 12 months.
+- **Transparency:** parent-facing dashboards (Phase 5) will present mastery
+  in plain language; the data export already includes every derived record.
+
+## 9. Open items for next phase gates
 
 - Phase 2: onboarding wizard region data, Stripe processor agreement, verifiable parental consent flow detail, marketing consent UX, data export UI.
 - Phase 6: Writing Room two-pass pipeline DPIA section, DSL appointment (S4), free-text PII screening (S5), OSA scope assessment.
