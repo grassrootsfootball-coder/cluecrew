@@ -1,5 +1,6 @@
 /**
- * Canonical design tokens — names come from CLUECREW-MANIFESTO.md §6 and are law.
+ * Canonical design tokens — names come from docs/CLUECREW-MANIFESTO.md §6 and
+ * are law.
  * Pure white (#FFFFFF) is banned as a page background (D1/D4); `cream` is the
  * default background. District accents appear only inside their district and
  * in navigation. All text/background pairs must pass WCAG AA before merge.

@@ -47,7 +47,10 @@ the mascot embodies that.
 
 ## Inputs to hand the designer
 
-- Manifesto §6–7 (voice, world, palette) — `CLUECREW-MANIFESTO.md`
+- Manifesto §6–7 (voice, world, palette) — [CLUECREW-MANIFESTO.md](CLUECREW-MANIFESTO.md)
+- The voice and feel the mascot must match — [ADDENDUM-A-VOICE-AND-JUICE.md](ADDENDUM-A-VOICE-AND-JUICE.md)
+  (§2.2 "Mascot idle": **never static** — breathing, blink, head turns toward
+  the last touch, idle break every ~20s)
 - Brand board — `assets/brand/cluecrew-brand-board.png`
 - Placeholder rig in product (for state semantics, not style):
   `apps/web/components/crew/mascot.tsx` and the debug panel `/crew/debug/mascot`

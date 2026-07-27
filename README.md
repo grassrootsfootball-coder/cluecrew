@@ -2,7 +2,19 @@
 
 **ClueCrew makes the 11+ make sense — for every child and every parent — through clear teaching, calm design, and a price any family can reach.**
 
-Read [CLUECREW-MANIFESTO.md](CLUECREW-MANIFESTO.md) before contributing. It wins all conflicts. Phases 1–4 are complete and gate-passed; the current build phase is [BUILD-PHASE-5.md](BUILD-PHASE-5.md) — art, sound, live Parent HQ, Casebook, marketing, accessibility. External deliverables (mascot rig per `docs/mascot-brief.md`, illustration set, sound set) drop into clean integration points. Outstanding cross-phase items: Stripe staging validation (parked until keys exist), review of ai-draft items to LIVE (David, via CMS), words 120/300.
+Read [docs/CLUECREW-MANIFESTO.md](docs/CLUECREW-MANIFESTO.md) before contributing. It wins all conflicts, including conflicts with instructions in chat. [docs/ADDENDUM-A-VOICE-AND-JUICE.md](docs/ADDENDUM-A-VOICE-AND-JUICE.md) sits under it and makes the voice and the interaction feel executable — its examples are law.
+
+Phases 1–4 are complete and gate-passed; the current build phase is [docs/BUILD-PHASE-5.md](docs/BUILD-PHASE-5.md) — art, sound, live Parent HQ, Casebook, marketing, accessibility. External deliverables (mascot rig per [docs/mascot-brief.md](docs/mascot-brief.md), illustration set, sound set) drop into clean integration points. Outstanding cross-phase items: Stripe staging validation (parked until keys exist), review of ai-draft items to LIVE (David, via CMS), words 120/300.
+
+### The documents
+
+| Document | What it is |
+|---|---|
+| [docs/CLUECREW-MANIFESTO.md](docs/CLUECREW-MANIFESTO.md) | The constitution: mission, laws (L/S/D/P), vocabulary, brand. Amendable only by David, recorded in its changelog. |
+| [docs/ADDENDUM-A-VOICE-AND-JUICE.md](docs/ADDENDUM-A-VOICE-AND-JUICE.md) | The voice bible and juice spec. Applies to Phases 4–6 retroactively. |
+| [docs/BUILD-PHASE-1.md](docs/BUILD-PHASE-1.md) … [docs/BUILD-PHASE-5.md](docs/BUILD-PHASE-5.md) | Phase specs. Each ends in a gate checklist that must pass human inspection before the next phase begins. |
+| [docs/dpia.md](docs/dpia.md) | Living Data Protection Impact Assessment, updated at every phase gate. |
+| [docs/a11y-audit.md](docs/a11y-audit.md) · [docs/child-testing-protocol.md](docs/child-testing-protocol.md) · [docs/mascot-brief.md](docs/mascot-brief.md) | Accessibility audit log, child-testing protocol, mascot commission brief. |
 
 Child app dev flow: sign in as the test parent → Parent HQ → Children → "Enter Crew HQ as Alex". `pnpm content:generate` fills the item bank with ai-draft DRAFTs (dev/staging only; the app serves LIVE items in production, falling back to the whole bank elsewhere).
 
@@ -36,7 +48,7 @@ Without `STRIPE_SECRET_KEY`, the dev payment provider simulates checkout and web
 | `packages/core` | Domain logic (mastery, scheduling, events, content schemas) — pure TS |
 | `packages/ui` | Design tokens (canonical colour names) |
 | `content` | Authored content source (JSON), schema-validated in CI |
-| `docs/dpia.md` | Living Data Protection Impact Assessment |
+| `docs` | The manifesto, addendum, phase specs, DPIA, audits and briefs |
 | `assets/brand` | Logo lockups, mark, brand board |
 
 All workspaces read the single root `.env` (Next loads it in `next.config.ts`; package scripts use `dotenv -e ../../.env`).
