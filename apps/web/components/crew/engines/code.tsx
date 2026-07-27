@@ -2,9 +2,10 @@
 
 /** CODEBREAKER (§2): series, codes and sums with the Alphabet Rail on hand. */
 import { AlphabetRail } from './alphabet-rail';
-import { optionLabel, stemText, type EngineProps } from './shared';
+import { OptionButton } from './option-button';
+import { optionLabel, outcomeFor, stemText, type EngineProps } from './shared';
 
-export default function CodeEngine({ stem, options, rail, selected, onSelect }: EngineProps) {
+export default function CodeEngine({ stem, options, rail, selected, onSelect, outcome }: EngineProps) {
   const series = Array.isArray(stem.series) ? (stem.series as Array<string | number>) : null;
   const code = stem.code as Record<string, string> | undefined;
   const sum = typeof stem.sum === 'string' ? stem.sum : null;
@@ -39,15 +40,16 @@ export default function CodeEngine({ stem, options, rail, selected, onSelect }: 
 
       <div role="group" aria-label="Answer choices" style={{ marginTop: '1rem' }}>
         {options.map((option) => (
-          <button
+          <OptionButton
             key={option.id}
-            type="button"
-            className={`crew-tap${selected === option.id ? ' selected' : ''}`}
-            aria-pressed={selected === option.id}
-            onClick={() => onSelect(option.id)}
+            optionId={option.id}
+            selected={selected === option.id}
+            outcome={outcomeFor(option.id, outcome)}
+            locked={Boolean(outcome)}
+            onSelect={onSelect}
           >
             {optionLabel(option.content)}
-          </button>
+          </OptionButton>
         ))}
       </div>
     </div>

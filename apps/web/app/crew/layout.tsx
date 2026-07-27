@@ -1,6 +1,9 @@
 import { childFromCookie, childHasAccess, childSettings } from '@/lib/crew/server';
 import { SwRegister } from '@/components/crew/sw-register';
 import { MuteButton } from '@/components/crew/mute-button';
+import { TapRipple } from '@/components/crew/ripple';
+import { OfflineNotice } from '@/components/crew/offline-notice';
+import { VOICE } from '@/lib/voice';
 import './crew.css';
 
 /**
@@ -15,7 +18,7 @@ export default async function CrewLayout({ children }: { children: React.ReactNo
     return (
       <main className="cc-container">
         <h1>Crew HQ</h1>
-        <p>Ask your grown-up to open ClueCrew and choose your profile — then this door opens.</p>
+        <p>{VOICE.hqNoProfile}</p>
       </main>
     );
   }
@@ -25,8 +28,8 @@ export default async function CrewLayout({ children }: { children: React.ReactNo
     // Warm and generic — the child app NEVER shows payment state (§2).
     return (
       <main className="cc-container">
-        <h1>Crew HQ is having a quiet day</h1>
-        <p>Ask your grown-up to open ClueCrew on their side — they can wake it up.</p>
+        <h1>HQ&apos;s quiet today</h1>
+        <p>{VOICE.hqLocked}</p>
       </main>
     );
   }
@@ -43,6 +46,8 @@ export default async function CrewLayout({ children }: { children: React.ReactNo
   return (
     <div className={classes}>
       <SwRegister />
+      <TapRipple />
+      <OfflineNotice />
       <MuteButton soundEnabled={settings.soundEnabled !== false} />
       {children}
     </div>

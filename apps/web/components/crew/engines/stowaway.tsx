@@ -5,7 +5,8 @@
  * the move — it ghosts out of the first word and lands in the second.
  */
 import { AlphabetRail } from './alphabet-rail';
-import { optionLabel, stemText, type EngineProps } from './shared';
+import { OptionButton } from './option-button';
+import { optionLabel, outcomeFor, stemText, type EngineProps } from './shared';
 
 function Word({ word, ghostLetter }: { word: string; ghostLetter?: string | null }) {
   let ghosted = false;
@@ -23,7 +24,14 @@ function Word({ word, ghostLetter }: { word: string; ghostLetter?: string | null
   );
 }
 
-export default function StowawayEngine({ stem, options, rail, selected, onSelect }: EngineProps) {
+export default function StowawayEngine({
+  stem,
+  options,
+  rail,
+  selected,
+  onSelect,
+  outcome,
+}: EngineProps) {
   const word1 = typeof stem.word1 === 'string' ? stem.word1 : null;
   const word2 = typeof stem.word2 === 'string' ? stem.word2 : null;
   const sentence = typeof stem.sentence === 'string' ? stem.sentence : null;
@@ -57,15 +65,16 @@ export default function StowawayEngine({ stem, options, rail, selected, onSelect
 
       <div role="group" aria-label="Answer choices" style={{ marginTop: '1rem' }}>
         {options.map((option) => (
-          <button
+          <OptionButton
             key={option.id}
-            type="button"
-            className={`crew-tap${selected === option.id ? ' selected' : ''}`}
-            aria-pressed={selected === option.id}
-            onClick={() => onSelect(option.id)}
+            optionId={option.id}
+            selected={selected === option.id}
+            outcome={outcomeFor(option.id, outcome)}
+            locked={Boolean(outcome)}
+            onSelect={onSelect}
           >
             {optionLabel(option.content)}
-          </button>
+          </OptionButton>
         ))}
       </div>
     </div>

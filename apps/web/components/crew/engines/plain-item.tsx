@@ -5,11 +5,12 @@
  * No theme, no mascot, no rail — the contrast is the pedagogy. Used by the
  * boss closer now and Phase 6 mocks later.
  */
-import { optionLabel, type EngineProps } from './shared';
+import { OptionButton } from './option-button';
+import { optionLabel, outcomeFor, type EngineProps } from './shared';
 
 const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F'];
 
-export default function PlainItem({ stem, options, selected, onSelect }: EngineProps) {
+export default function PlainItem({ stem, options, selected, onSelect, outcome }: EngineProps) {
   const series = Array.isArray(stem.series) ? (stem.series as Array<string | number>).join(',  ') : null;
   const parts: string[] = [];
   if (typeof stem.prompt === 'string') parts.push(stem.prompt);
@@ -44,14 +45,17 @@ export default function PlainItem({ stem, options, selected, onSelect }: EngineP
       <ol style={{ paddingLeft: 0, listStyle: 'none' }}>
         {options.map((option, index) => (
           <li key={option.id} style={{ margin: '0.3rem 0' }}>
-            <button
-              type="button"
-              className={`crew-tap${selected === option.id ? ' selected' : ''}`}
-              aria-pressed={selected === option.id}
-              onClick={() => onSelect(option.id)}
+            {/* plain: no pop, no sparks — the Boss Case keeps its calm (P4) */}
+            <OptionButton
+              optionId={option.id}
+              selected={selected === option.id}
+              outcome={outcomeFor(option.id, outcome)}
+              locked={Boolean(outcome)}
+              plain
+              onSelect={onSelect}
             >
               {LETTERS[index]}. {optionLabel(option.content)}
-            </button>
+            </OptionButton>
           </li>
         ))}
       </ol>

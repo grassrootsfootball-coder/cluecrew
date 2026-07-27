@@ -1,7 +1,25 @@
-/* Child app styles (BUILD-PHASE-4). Tablet landscape (1180×820) is the
-   design centre; phone is an adaptation. Touch targets ≥48px with ≥8px
-   spacing. Errors are never red: try-again is coral, "not yet" language only
-   (D1). All animation is CSS transforms; reduced-motion disables it. */
+/* Child app styles (BUILD-PHASE-4) + the juice spec (Addendum A Part 2).
+   Tablet landscape (1180×820) is the design centre. Touch targets ≥48px with
+   ≥8px spacing. Errors are never red: try-again is coral, "not yet" language
+   only (D1).
+
+   JUICE RULES ENCODED HERE:
+   - 100ms rule: every tap responds within 100ms (--tap: 90ms).
+   - Overshoot everything: --spring has back-out overshoot. LINEAR IS BANNED —
+     there is no `linear` timing function anywhere in this file.
+   - Nothing cuts: panels settle in, cards fly, screens dim.
+   - Everything is interruptible: juice is decorative, never blocking.
+   - §2.5 parity: every effect has a reduced-motion answer at the foot of this
+     file. Base styles are always the FINAL state, so killing animation leaves
+     the meaning intact. */
+
+:root {
+  /* Spring: overshoot then settle (~1.08 feel). */
+  --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  /* Settle: fast out, gentle rest — for things that must not bounce. */
+  --settle: cubic-bezier(0.22, 1, 0.36, 1);
+  --tap: 90ms;
+}
 
 .crew-app {
   min-height: 100vh;
@@ -17,22 +35,21 @@
   font-family: Verdana, 'Comic Sans MS', system-ui, sans-serif;
 }
 
-.crew-app.reduced-motion *,
-.crew-app.reduced-motion *::before,
-.crew-app.reduced-motion *::after {
-  animation: none !important;
-  transition: none !important;
-}
-
 .crew-stage {
   flex: 1;
   max-width: 1180px;
   width: 100%;
   margin: 0 auto;
-  padding: 1.25rem 1.5rem 2rem;
+  /* Top band is reserved for the always-reachable mute button so nothing
+     (notably the mascot in the session frame) slides under it. */
+  padding: 4.5rem 1.5rem 2rem;
 }
 
+/* ---------- Option tap: press-down, ripple, immediate lock (§2.2) ---------- */
+
 .crew-tap {
+  position: relative;
+  overflow: hidden;
   min-width: 48px;
   min-height: 48px;
   margin: 4px;
@@ -44,7 +61,10 @@
   border-radius: 14px;
   padding: 0.6rem 1rem;
   cursor: pointer;
-  transition: transform 120ms ease, border-color 120ms ease;
+  transition:
+    transform var(--tap) var(--spring),
+    border-color var(--tap) var(--settle),
+    background var(--tap) var(--settle);
 }
 
 .crew-tap:hover,
@@ -53,6 +73,11 @@
   border-color: var(--cc-amber);
   outline: 3px solid var(--cc-amber);
   outline-offset: 2px;
+}
+
+/* The 100ms rule: nothing may ever feel dead. */
+.crew-tap:active {
+  transform: scale(0.96);
 }
 
 .crew-tap[aria-pressed='true'],
@@ -66,21 +91,50 @@
   border-color: var(--cc-amber);
 }
 
+.crew-ripple {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  background: currentColor;
+  opacity: 0.22;
+  transform: scale(0);
+  animation: crew-ripple 420ms var(--settle) forwards;
+}
+
+@keyframes crew-ripple {
+  to {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+
+/* ---------- Panels settle in; nothing cuts ---------- */
+
 .crew-panel {
   background: color-mix(in srgb, var(--cc-cream) 55%, #fdfcf9 45%);
   border: 2px solid color-mix(in srgb, var(--cc-ink) 12%, transparent);
   border-radius: 18px;
   padding: 1.25rem 1.5rem;
   margin: 0.75rem 0;
+  animation: crew-settle-in 260ms var(--spring) both;
 }
 
-/* Plain (exam-faithful) mode: no theme, no mascot, deliberately quiet (P4). */
+@keyframes crew-settle-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.985);
+  }
+}
+
+/* Plain (exam-faithful) mode: no theme, no mascot, deliberately quiet (P4).
+   Juice here is limited to bead progress — the contrast is the point. */
 .crew-plain {
   background: #fdfcf9;
   border: 1px solid #9aa0ab;
   border-radius: 4px;
   padding: 1.5rem;
   font-family: Georgia, 'Times New Roman', serif;
+  animation: none;
 }
 
 .crew-plain .crew-tap {
@@ -89,7 +143,13 @@
   background: #fdfcf9;
 }
 
-/* Progress beads: they fill, never drain (§4.3). */
+.crew-plain .crew-tap:hover,
+.crew-plain .crew-tap:focus-visible {
+  transform: none;
+}
+
+/* ---------- Progress beads: fill with a pop and a glow trail; never drain ---------- */
+
 .crew-beads {
   display: flex;
   gap: 10px;
@@ -102,7 +162,7 @@
   height: 18px;
   border-radius: 50%;
   border: 2px solid color-mix(in srgb, var(--cc-ink) 35%, transparent);
-  transition: background 200ms ease;
+  transition: background 200ms var(--settle);
 }
 
 .crew-bead.filled {
@@ -110,12 +170,120 @@
   border-color: var(--cc-amber);
 }
 
-/* Try-again beat: coral, never red (D1). */
+.crew-bead.just-filled {
+  animation: crew-bead-pop 420ms var(--spring) both;
+}
+
+@keyframes crew-bead-pop {
+  0% {
+    transform: scale(0.55);
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--cc-amber) 70%, transparent);
+  }
+  60% {
+    transform: scale(1.3);
+    box-shadow: 0 0 14px 6px color-mix(in srgb, var(--cc-amber) 45%, transparent);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--cc-amber) 0%, transparent);
+  }
+}
+
+/* ---------- Correct: tile pops 1.12 → 1.0, amber spark burst ---------- */
+
+.crew-tap.is-correct {
+  animation: crew-pop 460ms var(--spring) both;
+  border-color: var(--cc-amber);
+  background: color-mix(in srgb, var(--cc-amber) 30%, var(--cc-cream));
+}
+
+@keyframes crew-pop {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.12);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.crew-spark {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.crew-spark i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  margin: -3.5px;
+  border-radius: 2px;
+  background: var(--cc-amber);
+  animation: crew-spark-fly 620ms var(--settle) both;
+}
+
+@keyframes crew-spark-fly {
+  0% {
+    transform: translate(0, 0) scale(0.4) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--dx), var(--dy)) scale(0.9) rotate(140deg);
+    opacity: 0;
+  }
+}
+
+/* ---------- Not yet: gentle shake (2 cycles, ≤6px), coral glow over 200ms ---------- */
+
+.crew-tap.is-not-yet {
+  animation: crew-nudge 360ms var(--settle) both;
+  border-color: var(--cc-coral);
+  background: color-mix(in srgb, var(--cc-coral) 18%, var(--cc-cream));
+}
+
+/* Never violent: two small cycles, capped at 6px, then rest. */
+@keyframes crew-nudge {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-6px);
+  }
+  45% {
+    transform: translateX(5px);
+  }
+  70% {
+    transform: translateX(-3px);
+  }
+  88% {
+    transform: translateX(2px);
+  }
+}
+
 .crew-notyet {
   border-left: 6px solid var(--cc-coral);
   background: color-mix(in srgb, var(--cc-coral) 12%, var(--cc-cream));
   border-radius: 0 12px 12px 0;
   padding: 0.9rem 1.2rem;
+  animation: crew-glow-in 200ms var(--settle) both;
+}
+
+@keyframes crew-glow-in {
+  from {
+    opacity: 0;
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--cc-coral) 0%, transparent);
+  }
+  to {
+    opacity: 1;
+    box-shadow: 0 0 18px 0 color-mix(in srgb, var(--cc-coral) 22%, transparent);
+  }
 }
 
 .crew-celebrate {
@@ -123,9 +291,11 @@
   background: color-mix(in srgb, var(--cc-amber) 14%, var(--cc-cream));
   border-radius: 0 12px 12px 0;
   padding: 0.9rem 1.2rem;
+  animation: crew-settle-in 240ms var(--spring) both;
 }
 
-/* Letter tiles (STOWAWAY) */
+/* ---------- Letter tiles ---------- */
+
 .crew-tile {
   display: inline-flex;
   align-items: center;
@@ -139,7 +309,7 @@
   border-radius: 10px;
   background: #fdfcf9;
   cursor: pointer;
-  transition: transform 140ms ease;
+  transition: transform 160ms var(--spring);
 }
 
 .crew-tile.ghost {
@@ -150,10 +320,13 @@
 .crew-tile.landed {
   border-color: var(--cc-vr-teal);
   background: color-mix(in srgb, var(--cc-vr-teal) 18%, #fdfcf9);
+  animation: crew-pop 420ms var(--spring) both;
 }
 
-/* Alphabet Rail (§3) */
+/* ---------- Alphabet Rail: lift and glow on pass, drawn amber arc ---------- */
+
 .crew-rail {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
@@ -170,6 +343,7 @@
 }
 
 .crew-rail .letter {
+  position: relative;
   min-width: 34px;
   min-height: 44px;
   font-weight: 700;
@@ -177,11 +351,45 @@
   border: 1px solid color-mix(in srgb, var(--cc-ink) 20%, transparent);
   background: #fdfcf9;
   cursor: pointer;
+  /* Notched, not smooth: a short snap rather than a glide. */
+  transition:
+    transform 110ms var(--spring),
+    box-shadow 110ms var(--settle);
+}
+
+.crew-rail .letter:hover,
+.crew-rail .letter:focus-visible {
+  transform: translateY(-6px) scale(1.06);
+  box-shadow: 0 6px 14px -4px color-mix(in srgb, var(--cc-vr-teal) 55%, transparent);
 }
 
 .crew-rail .letter.picked {
   background: var(--cc-vr-teal);
   color: #fdfcf9;
+  transform: translateY(-6px) scale(1.08);
+}
+
+.crew-rail .arc {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.crew-rail .arc path {
+  fill: none;
+  stroke: var(--cc-amber);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: var(--len);
+  stroke-dashoffset: 0;
+  animation: crew-draw 320ms var(--settle) both;
+}
+
+@keyframes crew-draw {
+  from {
+    stroke-dashoffset: var(--len);
+  }
 }
 
 .crew-rail .jump {
@@ -191,7 +399,8 @@
   color: var(--cc-vr-teal);
 }
 
-/* Word Vault cards (§5) */
+/* ---------- Word Vault ---------- */
+
 .crew-card {
   width: 168px;
   min-height: 118px;
@@ -201,6 +410,12 @@
   padding: 0.75rem;
   cursor: pointer;
   text-align: left;
+  transition: transform 160ms var(--spring);
+}
+
+.crew-card:hover,
+.crew-card:focus-visible {
+  transform: translateY(-4px) rotate(-0.6deg);
 }
 
 .crew-card.gilded {
@@ -220,7 +435,85 @@
   padding: 0.75rem 0 1.5rem;
 }
 
-/* HQ path stones + district map */
+/* Root family complete: shelf lights left to right, cards flip in sequence. */
+.crew-shelf.complete .crew-card {
+  animation: crew-shelf-flip 700ms var(--spring) both;
+  animation-delay: calc(var(--i, 0) * 110ms);
+}
+
+@keyframes crew-shelf-flip {
+  0% {
+    transform: rotateY(-90deg);
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--cc-amber) 0%, transparent);
+  }
+  55% {
+    transform: rotateY(8deg);
+    box-shadow: 0 0 22px 4px color-mix(in srgb, var(--cc-amber) 60%, transparent);
+  }
+  100% {
+    transform: rotateY(0deg);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--cc-amber) 70%, transparent);
+  }
+}
+
+/* Word collected: the card flies an arc to the vault chip, which bounces. */
+.crew-vault-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 800;
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  border: 2px solid color-mix(in srgb, var(--cc-amber) 60%, transparent);
+  background: color-mix(in srgb, var(--cc-amber) 12%, var(--cc-cream));
+}
+
+.crew-vault-chip.bounce {
+  animation: crew-chip-bounce 520ms var(--spring) both;
+}
+
+@keyframes crew-chip-bounce {
+  0% {
+    transform: scale(1);
+  }
+  35% {
+    transform: scale(1.22);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.crew-flyer {
+  position: fixed;
+  z-index: 40;
+  pointer-events: none;
+  border-radius: 12px;
+  border: 3px solid var(--cc-amber);
+  background: #fdfcf9;
+  padding: 0.4rem 0.7rem;
+  font-weight: 800;
+  animation: crew-fly 700ms var(--settle) both;
+}
+
+/* An arc, not a straight line: the midpoint lifts. */
+@keyframes crew-fly {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  55% {
+    transform: translate(calc(var(--dx) * 0.55), calc(var(--dy) * 0.55 - 90px)) scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--dx), var(--dy)) scale(0.35);
+    opacity: 0;
+  }
+}
+
+/* ---------- HQ: path stones, doors, lantern ---------- */
+
 .crew-stones {
   display: flex;
   gap: 1.25rem;
@@ -239,10 +532,54 @@
   font-weight: 800;
   text-align: center;
   padding: 0.5rem;
+  animation: crew-settle-in 300ms var(--spring) both;
+  animation-delay: calc(var(--i, 0) * 90ms);
 }
 
 .crew-stone.done {
   border-color: var(--cc-vr-teal);
+}
+
+/* Streak lantern: idle flicker always; warms and pulses once on shift end. */
+.crew-lantern {
+  display: inline-block;
+  animation: crew-flicker 3.2s var(--settle) infinite;
+  transform-origin: 50% 10%;
+}
+
+@keyframes crew-flicker {
+  0%,
+  100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 3px color-mix(in srgb, var(--cc-amber) 65%, transparent));
+  }
+  38% {
+    opacity: 0.86;
+    filter: drop-shadow(0 0 7px color-mix(in srgb, var(--cc-amber) 80%, transparent));
+  }
+  62% {
+    opacity: 0.95;
+    filter: drop-shadow(0 0 4px color-mix(in srgb, var(--cc-amber) 55%, transparent));
+  }
+}
+
+.crew-lantern.pulse {
+  animation:
+    crew-flicker 3.2s var(--settle) infinite,
+    crew-lantern-pulse 900ms var(--spring) both;
+}
+
+@keyframes crew-lantern-pulse {
+  0% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.35);
+    filter: drop-shadow(0 0 18px color-mix(in srgb, var(--cc-amber) 90%, transparent));
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .crew-door {
@@ -258,11 +595,21 @@
   color: var(--cc-ink);
   padding: 0.75rem;
   text-align: center;
+  transition: transform 180ms var(--spring);
+}
+
+.crew-door:hover,
+.crew-door:focus-visible {
+  transform: translateY(-4px) scale(1.02);
 }
 
 .crew-door.locked {
   opacity: 0.55;
   border-style: dashed;
+}
+
+.crew-door.locked:hover {
+  transform: none;
 }
 
 .crew-location {
@@ -275,6 +622,12 @@
   text-decoration: none;
   color: var(--cc-ink);
   display: block;
+  transition: transform 170ms var(--spring);
+}
+
+.crew-location:hover,
+.crew-location:focus-visible {
+  transform: translateY(-4px) rotate(-0.4deg);
 }
 
 .crew-location.current {
@@ -295,7 +648,273 @@
   transform: rotate(-12deg);
 }
 
-/* Loading shimmer (§8): the magnifying glass sweeps while a case file opens. */
+/* ---------- Case cracked: the set piece (~2.5s, skippable after first view) ---------- */
+
+.crew-dim {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  background: rgba(27, 42, 74, 0.15);
+  animation: crew-fade-in 240ms var(--settle) both;
+}
+
+@keyframes crew-fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+.crew-ceremony {
+  position: relative;
+  z-index: 31;
+  text-align: center;
+}
+
+/* Anticipation (a 220ms beat), then the stamp descends and lands with
+   overshoot, rotation jitter and a thump. */
+.crew-bigstamp {
+  display: inline-block;
+  border: 6px solid var(--cc-vr-teal);
+  color: var(--cc-vr-teal);
+  border-radius: 12px;
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  padding: 0.5rem 1.2rem;
+  transform: rotate(-8deg);
+  animation: crew-stamp-land 900ms var(--spring) 220ms both;
+}
+
+@keyframes crew-stamp-land {
+  0% {
+    transform: scale(2.6) rotate(-22deg);
+    opacity: 0;
+  }
+  55% {
+    transform: scale(0.92) rotate(-4deg);
+    opacity: 1;
+  }
+  72% {
+    transform: scale(1.06) rotate(-11deg);
+  }
+  86% {
+    transform: scale(0.99) rotate(-6deg);
+  }
+  100% {
+    transform: scale(1) rotate(-8deg);
+    opacity: 1;
+  }
+}
+
+/* Ink spreads for 300ms under the landed stamp. */
+.crew-ink {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 260px;
+  height: 260px;
+  margin-left: -130px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--cc-vr-teal) 26%, transparent) 0%,
+    transparent 70%
+  );
+  transform: scale(0);
+  animation: crew-ink-spread 300ms var(--settle) 900ms both;
+}
+
+@keyframes crew-ink-spread {
+  to {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+}
+
+/* Dust puff on impact. */
+.crew-dust {
+  position: absolute;
+  left: 50%;
+  top: 2.2rem;
+  width: 20px;
+  height: 20px;
+  margin-left: -10px;
+  border-radius: 50%;
+  pointer-events: none;
+  border: 3px solid color-mix(in srgb, var(--cc-ink) 30%, transparent);
+  animation: crew-dust-puff 520ms var(--settle) 900ms both;
+}
+
+@keyframes crew-dust-puff {
+  0% {
+    transform: scale(0.3);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(6);
+    opacity: 0;
+  }
+}
+
+/* The case file flips shut at the end of the set piece. */
+.crew-casefile {
+  animation: crew-file-shut 620ms var(--settle) 1500ms both;
+  transform-origin: left center;
+}
+
+@keyframes crew-file-shut {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(-14deg) scale(0.97);
+  }
+}
+
+/* ---------- Rank up: full screen, amber-only confetti, ribbon ---------- */
+
+.crew-rankup {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+  justify-items: center;
+  text-align: center;
+  background: color-mix(in srgb, var(--cc-cream) 92%, var(--cc-ink));
+  animation: crew-fade-in 220ms var(--settle) both;
+}
+
+.crew-badge {
+  font-size: 3.4rem;
+  animation: crew-badge-in 760ms var(--spring) 200ms both;
+}
+
+@keyframes crew-badge-in {
+  0% {
+    transform: scale(0.2) rotate(-20deg);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.18) rotate(4deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.crew-ribbon {
+  background: var(--cc-amber);
+  color: var(--cc-ink);
+  font-weight: 900;
+  padding: 0.5rem 1.6rem;
+  border-radius: 6px;
+  transform-origin: center;
+  animation: crew-ribbon-unfurl 620ms var(--spring) 620ms both;
+}
+
+@keyframes crew-ribbon-unfurl {
+  from {
+    transform: scaleX(0.02);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+.crew-confetti {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Amber only — no rainbow, no loot-box glitter (§2.4). */
+.crew-confetti i {
+  position: absolute;
+  top: -20px;
+  width: 9px;
+  height: 14px;
+  background: var(--cc-amber);
+  opacity: 0.9;
+  animation: crew-confetti-fall 2.4s var(--settle) both;
+}
+
+@keyframes crew-confetti-fall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 0.95;
+  }
+  100% {
+    transform: translateY(105vh) rotate(520deg);
+    opacity: 0;
+  }
+}
+
+/* ---------- Session wind-down: words fan out, lights dim warmly ---------- */
+
+.crew-winddown {
+  text-align: center;
+  animation: crew-warm-dim 900ms var(--settle) both;
+}
+
+/* Beat the global `p { text-align: left }` for the centred set pieces. */
+.crew-winddown p,
+.crew-ceremony p,
+.crew-rankup p {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes crew-warm-dim {
+  from {
+    filter: brightness(1.06);
+  }
+  to {
+    filter: brightness(0.97);
+  }
+}
+
+.crew-fan {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  min-height: 60px;
+}
+
+.crew-fan span {
+  display: inline-block;
+  border: 2px solid var(--cc-amber);
+  border-radius: 10px;
+  background: #fdfcf9;
+  padding: 0.35rem 0.7rem;
+  font-weight: 700;
+  transform-origin: bottom center;
+  animation: crew-fan-out 620ms var(--spring) both;
+  animation-delay: calc(var(--i, 0) * 90ms);
+}
+
+@keyframes crew-fan-out {
+  from {
+    transform: translateY(26px) rotate(0deg) scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) rotate(var(--rot, 0deg)) scale(1);
+    opacity: 1;
+  }
+}
+
+/* ---------- Loading: dusting for prints ---------- */
+
 .crew-shimmer {
   display: grid;
   place-items: center;
@@ -306,26 +925,122 @@
 
 .crew-shimmer .glass {
   font-size: 2.4rem;
-  animation: crew-sweep 1.4s ease-in-out infinite;
+  animation: crew-sweep 1.4s var(--settle) infinite;
 }
 
 @keyframes crew-sweep {
-  0%, 100% { transform: translateX(-14px) rotate(-8deg); }
-  50% { transform: translateX(14px) rotate(8deg); }
+  0%,
+  100% {
+    transform: translateX(-14px) rotate(-8deg);
+  }
+  50% {
+    transform: translateX(14px) rotate(8deg);
+  }
 }
 
-@keyframes crew-spark {
-  0% { transform: scale(0.6); opacity: 0; }
-  40% { transform: scale(1.15); opacity: 1; }
-  100% { transform: scale(1); opacity: 1; }
+/* ---------- Mascot: never static ---------- */
+
+.crew-mascot {
+  display: inline-block;
+  transition: transform 420ms var(--spring);
 }
 
-.crew-ceremony {
-  animation: crew-spark 600ms ease;
-  text-align: center;
+.crew-mascot .body {
+  transform-origin: 50% 90%;
+  animation: crew-breathe 3.6s var(--settle) infinite;
+}
+
+@keyframes crew-breathe {
+  0%,
+  100% {
+    transform: scaleY(1) translateY(0);
+  }
+  50% {
+    transform: scaleY(1.022) translateY(-1.5px);
+  }
+}
+
+.crew-mascot .lid {
+  transform-origin: 50% 50%;
+  animation: crew-blink 6.5s var(--settle) infinite;
+}
+
+@keyframes crew-blink {
+  0%,
+  95%,
+  100% {
+    transform: scaleY(0);
+  }
+  97% {
+    transform: scaleY(1);
+  }
+}
+
+.crew-mascot.idle-break {
+  animation: crew-idle-break 1.1s var(--spring) both;
+}
+
+@keyframes crew-idle-break {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(-5deg) translateY(-3px);
+  }
+  65% {
+    transform: rotate(4deg);
+  }
 }
 
 @media (max-width: 700px) {
-  .crew-stage { padding: 0.75rem; }
-  .crew-card { width: 140px; }
+  .crew-stage {
+    padding: 3.25rem 0.75rem 1rem;
+  }
+  .crew-card {
+    width: 140px;
+  }
+}
+
+/* ---------- §2.5 REDUCED MOTION PARITY ----------
+   Motion is replaced by instant state changes. Colour beats survive (base
+   styles are the final state); purely decorative particles are removed
+   entirely rather than frozen mid-flight. Juice is never load-bearing for
+   meaning, so nothing here costs a child information. */
+
+.crew-app.reduced-motion *,
+.crew-app.reduced-motion *::before,
+.crew-app.reduced-motion *::after,
+.crew-rankup.reduced-motion,
+.crew-rankup.reduced-motion * {
+  animation: none !important;
+  transition: none !important;
+}
+
+.crew-app.reduced-motion .crew-spark,
+.crew-app.reduced-motion .crew-confetti,
+.crew-app.reduced-motion .crew-dust,
+.crew-app.reduced-motion .crew-flyer,
+.crew-app.reduced-motion .crew-ripple,
+.crew-rankup.reduced-motion .crew-confetti {
+  display: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .crew-app *,
+  .crew-app *::before,
+  .crew-app *::after,
+  .crew-rankup,
+  .crew-rankup * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .crew-spark,
+  .crew-confetti,
+  .crew-dust,
+  .crew-flyer,
+  .crew-ripple {
+    display: none !important;
+  }
 }

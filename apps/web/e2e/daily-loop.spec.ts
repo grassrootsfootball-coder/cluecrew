@@ -52,9 +52,9 @@ test('full Daily Loop: HQ → warm-up → case → plain closer → wind-down; m
   }
   await makeChildSession(page);
 
-  await expect(page.getByText('Welcome back, Robin.')).toBeVisible();
+  await expect(page.getByRole('heading', { name: /Robin/ })).toBeVisible();
   await expect(page.getByText(/Lantern/)).toBeVisible();
-  await page.getByRole('button', { name: "Start today's loop" }).click();
+  await page.getByRole('button', { name: "Start today's shift" }).click();
   await page.waitForURL('**/crew/play');
 
   let sawNotYet = false;
@@ -76,46 +76,46 @@ test('full Daily Loop: HQ → warm-up → case → plain closer → wind-down; m
       console.log(`step ${step} +${Date.now() - lastTick}ms answered=${answered} last=${lastBranch}`);
       lastTick = Date.now();
     }
-    if (await page.getByText('See you tomorrow, Detective.').isVisible().catch(() => false)) break;
+    if (await page.getByTestId('wind-down').isVisible().catch(() => false)) break;
 
     // Crack ceremony → continue.
-    if (await page.getByText('CASE CRACKED ✓').isVisible().catch(() => false)) {
-      lastBranch = 'ceremony'; await tryClick(page.getByRole('button', { name: 'Continue' }));
+    if (await page.getByTestId('case-cracked').isVisible().catch(() => false)) {
+      lastBranch = 'ceremony'; await tryClick(page.getByRole('button', { name: 'Keep going' }));
       continue;
     }
     // Feedback beats.
     if (await page.locator('.crew-notyet').isVisible().catch(() => false)) {
       sawNotYet = true;
       const beat = page.locator('.crew-notyet');
-      await expect(beat).toContainText('Not yet');
+      await expect(beat).toBeVisible();
       if ((await beat.locator('p').count()) > 1) sawHint = true;
-      lastBranch = 'try-another'; await tryClick(page.getByRole('button', { name: 'Try another?' }));
+      lastBranch = 'try-another'; await tryClick(page.getByTestId('try-again'));
       continue;
     }
     if (await page.locator('.crew-celebrate').first().isVisible().catch(() => false)) {
       sawAffirmation = true;
-      const next = page.getByRole('button', { name: 'Next clue' });
+      const next = page.getByTestId('next-clue');
       if (await next.isVisible().catch(() => false)) {
         lastBranch = 'next-clue'; await tryClick(next);
         continue;
       }
     }
     // Word collection.
-    if (await page.getByRole('button', { name: 'Add it to my Vault' }).isVisible().catch(() => false)) {
-      lastBranch = 'collect'; await tryClick(page.getByRole('button', { name: 'Add it to my Vault' }));
+    if (await page.getByTestId('collect-word').isVisible().catch(() => false)) {
+      lastBranch = 'collect'; await tryClick(page.getByTestId('collect-word'));
       continue;
     }
     // Mode content (offered or forced).
-    if (await page.getByRole('button', { name: 'Done — back to the case' }).isVisible().catch(() => false)) {
-      lastBranch = 'mode'; await tryClick(page.getByRole('button', { name: 'Done — back to the case' }));
+    if (await page.getByRole('button', { name: 'Back to the case' }).isVisible().catch(() => false)) {
+      lastBranch = 'mode'; await tryClick(page.getByRole('button', { name: 'Back to the case' }));
       continue;
     }
     // Teach-back: tap a step then a correction.
-    if (await page.getByText('Your turn to teach!').isVisible().catch(() => false)) {
+    if (await page.getByText('Your turn to teach.').isVisible().catch(() => false)) {
       await tryClick(page.locator('button', { hasText: '💭' }).first());
-      await page.getByText('what should the mascot do instead?').waitFor();
+      await page.getByText('what should I have done instead?').waitFor();
       await page
-        .locator('section', { hasText: 'Your turn to teach!' })
+        .locator('section', { hasText: 'Your turn to teach.' })
         .locator('div')
         .last()
         .locator('button')
@@ -158,7 +158,7 @@ test('full Daily Loop: HQ → warm-up → case → plain closer → wind-down; m
     lastBranch = 'idle'; await page.waitForTimeout(400);
   }
 
-  await expect(page.getByText('See you tomorrow, Detective.')).toBeVisible();
+  await expect(page.getByTestId('wind-down')).toBeVisible();
   expect(answered).toBeGreaterThan(3);
   expect(sawPlainCloser, 'the boss closer must render in Plain mode (P4)').toBe(true);
   expect(sawNotYet || sawAffirmation, 'feedback beats must appear').toBe(true);
@@ -177,5 +177,5 @@ test('full Daily Loop: HQ → warm-up → case → plain closer → wind-down; m
 
   // Back at HQ, the vault holds today's words.
   await page.goto('/crew/vault');
-  await expect(page.getByText(/words collected/)).toBeVisible();
+  await expect(page.getByText(/in the vault/)).toBeVisible();
 });

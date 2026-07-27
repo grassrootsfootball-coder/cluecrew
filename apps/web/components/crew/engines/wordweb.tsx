@@ -1,9 +1,10 @@
 'use client';
 
 /** WORD WEB (§2): card decks — meanings weighed side by side. */
-import { optionLabel, stemText, type EngineProps } from './shared';
+import { OptionButton } from './option-button';
+import { optionLabel, outcomeFor, stemText, type EngineProps } from './shared';
 
-export default function WordWebEngine({ stem, options, selected, onSelect }: EngineProps) {
+export default function WordWebEngine({ stem, options, selected, onSelect, outcome }: EngineProps) {
   const words = Array.isArray(stem.words) ? (stem.words as string[]) : null;
   const groupA = Array.isArray(stem.groupA) ? (stem.groupA as string[]) : null;
   const groupB = Array.isArray(stem.groupB) ? (stem.groupB as string[]) : null;
@@ -41,15 +42,16 @@ export default function WordWebEngine({ stem, options, selected, onSelect }: Eng
 
       <div role="group" aria-label="Answer choices" style={{ marginTop: '1rem', display: 'flex', flexWrap: 'wrap' }}>
         {options.map((option) => (
-          <button
+          <OptionButton
             key={option.id}
-            type="button"
-            className={`crew-tap${selected === option.id ? ' selected' : ''}`}
-            aria-pressed={selected === option.id}
-            onClick={() => onSelect(option.id)}
+            optionId={option.id}
+            selected={selected === option.id}
+            outcome={outcomeFor(option.id, outcome)}
+            locked={Boolean(outcome)}
+            onSelect={onSelect}
           >
             {optionLabel(option.content)}
-          </button>
+          </OptionButton>
         ))}
       </div>
     </div>

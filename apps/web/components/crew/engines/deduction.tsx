@@ -5,9 +5,10 @@
  * while working the mini-mystery.
  */
 import { useState } from 'react';
-import { optionLabel, stemText, type EngineProps } from './shared';
+import { OptionButton } from './option-button';
+import { optionLabel, outcomeFor, stemText, type EngineProps } from './shared';
 
-export default function DeductionEngine({ stem, options, selected, onSelect }: EngineProps) {
+export default function DeductionEngine({ stem, options, selected, onSelect, outcome }: EngineProps) {
   const clues = Array.isArray(stem.clues) ? (stem.clues as string[]) : [];
   const question = typeof stem.question === 'string' ? stem.question : '';
   const [used, setUsed] = useState<Set<number>>(new Set());
@@ -43,15 +44,16 @@ export default function DeductionEngine({ stem, options, selected, onSelect }: E
 
       <div role="group" aria-label="Answer choices">
         {options.map((option) => (
-          <button
+          <OptionButton
             key={option.id}
-            type="button"
-            className={`crew-tap${selected === option.id ? ' selected' : ''}`}
-            aria-pressed={selected === option.id}
-            onClick={() => onSelect(option.id)}
+            optionId={option.id}
+            selected={selected === option.id}
+            outcome={outcomeFor(option.id, outcome)}
+            locked={Boolean(outcome)}
+            onSelect={onSelect}
           >
             {optionLabel(option.content)}
-          </button>
+          </OptionButton>
         ))}
       </div>
     </div>

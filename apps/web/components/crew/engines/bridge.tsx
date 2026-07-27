@@ -4,9 +4,10 @@
  * BRIDGE (§2): the relationship between pair A visually lifts and drops onto
  * pair B — the child builds the bridge before answering.
  */
-import { optionLabel, stemText, type EngineProps } from './shared';
+import { OptionButton } from './option-button';
+import { optionLabel, outcomeFor, stemText, type EngineProps } from './shared';
 
-export default function BridgeEngine({ stem, options, selected, onSelect }: EngineProps) {
+export default function BridgeEngine({ stem, options, selected, onSelect, outcome }: EngineProps) {
   const pairA = Array.isArray(stem.pairA) ? (stem.pairA as string[]) : null;
   const stemWord = typeof stem.stemWord === 'string' ? stem.stemWord : null;
   const chosen = selected ? optionLabel(options.find((option) => option.id === selected)?.content) : '?';
@@ -46,15 +47,16 @@ export default function BridgeEngine({ stem, options, selected, onSelect }: Engi
 
       <div role="group" aria-label="Answer choices" style={{ marginTop: '1rem' }}>
         {options.map((option) => (
-          <button
+          <OptionButton
             key={option.id}
-            type="button"
-            className={`crew-tap${selected === option.id ? ' selected' : ''}`}
-            aria-pressed={selected === option.id}
-            onClick={() => onSelect(option.id)}
+            optionId={option.id}
+            selected={selected === option.id}
+            outcome={outcomeFor(option.id, outcome)}
+            locked={Boolean(outcome)}
+            onSelect={onSelect}
           >
             {optionLabel(option.content)}
-          </button>
+          </OptionButton>
         ))}
       </div>
     </div>

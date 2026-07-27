@@ -2,41 +2,54 @@ import { childFromCookie } from '@/lib/crew/server';
 import { hqState } from '@/lib/crew/orchestrator';
 import { Mascot } from '@/components/crew/mascot';
 import { StartLoopButton } from '@/components/crew/start-loop-button';
+import { VOICE, beatLine, countWord } from '@/lib/voice';
 
-/** Crew HQ (BUILD-PHASE-4 §6): the child's home. */
+/** Crew HQ (BUILD-PHASE-4 §6) in the Addendum A voice. */
 export default async function CrewHqPage() {
   const child = (await childFromCookie())!;
   const { crew } = await hqState(child.id);
 
-  const crackedCount = crew.caseSummaries.filter((summary) => summary.status === 'cracked').length;
+  const cracked = crew.caseSummaries.filter((summary) => summary.status === 'cracked').length;
+  const onTheBoard = crew.caseSummaries.filter((summary) => summary.status !== 'cracked').length;
+  const firstVisit = crew.caseSummaries.length === 0;
 
   return (
     <main className="crew-stage">
       <header style={{ display: 'flex', gap: '1.25rem', alignItems: 'center', flexWrap: 'wrap' }}>
         <Mascot size={84} />
         <div>
-          <h1 style={{ margin: 0 }}>Welcome back, {child.crewName}.</h1>
+          <h1 style={{ margin: 0 }}>
+            {firstVisit ? `You're in, ${child.crewName}.` : VOICE.hqReturning(onTheBoard)}
+          </h1>
           <p style={{ margin: '0.2rem 0' }}>
             <strong>{crew.rankLabel}</strong>
             {' · '}
             <span aria-label={`Streak lantern: ${crew.streak.state}`}>
-              {crew.streak.state === 'alive'
-                ? `🏮 Lantern lit — ${crew.streak.weeks} week${crew.streak.weeks === 1 ? '' : 's'} strong`
-                : '🏮 Lantern rekindling — light it again today'}
+              <span className="crew-lantern" aria-hidden>
+                🏮
+              </span>{' '}
+              {crew.streak.state === 'alive' ? VOICE.streakAlive : VOICE.streakRekindled}
             </span>
           </p>
         </div>
       </header>
 
       <section className="crew-panel">
-        <h2 style={{ marginTop: 0 }}>Today&apos;s loop</h2>
+        <h2 style={{ marginTop: 0 }}>{firstVisit ? VOICE.hqFirstVisit : "Today's shift"}</h2>
         <div className="crew-stones">
-          <div className="crew-stone">Warm-up{crew.hasReviewsDue ? ' 🔎' : ''}</div>
-          <div className="crew-stone">Today&apos;s Case</div>
-          <div className="crew-stone">One Big Question</div>
+          <div className="crew-stone" style={{ ['--i' as never]: 0 }}>
+            {crew.hasReviewsDue ? 'Warm-up. Old ground first.' : 'Warm-up'}
+          </div>
+          <div className="crew-stone" style={{ ['--i' as never]: 1 }}>
+            Today&apos;s case
+          </div>
+          <div className="crew-stone" style={{ ['--i' as never]: 2 }}>
+            One big question
+          </div>
         </div>
+        <p className="cc-muted">{beatLine('warmup-open')}</p>
         <p style={{ marginBottom: 0 }}>
-          <StartLoopButton childId={child.id} label="Start today's loop" />
+          <StartLoopButton childId={child.id} label={VOICE.hqStartShift} />
         </p>
       </section>
 
@@ -45,21 +58,16 @@ export default async function CrewHqPage() {
         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
           <a className="crew-door" href="/crew/district">
             <span>VR District</span>
-            <span className="cc-muted">{crackedCount} cases cracked</span>
-            <span>🚪</span>
+            <span className="cc-muted">{countWord(cracked, 'case')} cracked</span>
+            <span aria-hidden>🚪</span>
           </a>
-          <div className="crew-door locked" aria-label="A locked district — not open yet">
-            <span>? ? ?</span>
-            <span>🔒</span>
-          </div>
-          <div className="crew-door locked" aria-label="A locked district — not open yet">
-            <span>? ? ?</span>
-            <span>🔒</span>
-          </div>
-          <div className="crew-door locked" aria-label="A locked district — not open yet">
-            <span>? ? ?</span>
-            <span>🔒</span>
-          </div>
+          {[0, 1, 2].map((index) => (
+            <div key={index} className="crew-door locked" aria-label={VOICE.lockedDistrict}>
+              <span aria-hidden>? ? ?</span>
+              <span className="cc-muted">{VOICE.lockedDistrict}</span>
+              <span aria-hidden>🔒</span>
+            </div>
+          ))}
         </div>
       </section>
 

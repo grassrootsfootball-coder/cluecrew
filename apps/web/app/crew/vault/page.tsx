@@ -2,11 +2,13 @@ import { ENGINE_CONFIG } from '@cluecrew/core';
 import { prisma } from '@cluecrew/db';
 import { childFromCookie } from '@/lib/crew/server';
 import { VaultCard } from '@/components/crew/vault-card';
+import { VOICE, countWord } from '@/lib/voice';
 
 /**
  * The Word Vault (§5): collected cards on root-family shelves; uncollected
  * cards are silhouettes with counts — collection pull without naming what's
- * missing.
+ * missing. A finished shelf lights up left to right and flips in sequence
+ * (Addendum A §2.2).
  */
 export default async function VaultPage() {
   const child = (await childFromCookie())!;
@@ -30,17 +32,15 @@ export default async function VaultPage() {
           <span className="glass" aria-hidden>
             🔍
           </span>
-          <p style={{ margin: 0 }}>
-            Your Vault is waiting for its first word. Every warm-up brings three new Word Cards —
-            start today&apos;s loop and the shelves begin to fill.
-          </p>
+          <p style={{ margin: 0 }}>{VOICE.vaultEmpty}</p>
           <a className="crew-tap primary" href="/crew">
-            To Crew HQ
+            Back to HQ
           </a>
         </div>
       ) : (
         <p className="cc-muted">
-          {entries.length} words collected. Tap a card to flip it — gilded edges mean you really know it.
+          {countWord(entries.length, 'word')} in the vault. Tap a card to flip it — a gilded edge
+          means you really have it.
         </p>
       )}
 
@@ -48,16 +48,22 @@ export default async function VaultPage() {
         const collectedHere = shelfWords.filter((word) => entryByWord.has(word.id));
         const hiddenCount = shelfWords.length - collectedHere.length;
         const shelfComplete = hiddenCount === 0 && shelfWords.length > 1;
+        const familyName = shelf.split('-')[1]?.toUpperCase() ?? '';
         return (
           <section key={shelf}>
             <h2 style={{ marginBottom: 0, textTransform: 'capitalize' }}>
-              {shelf === 'detective-finds' ? "Detective's finds" : `The ${shelf.split('-')[1]?.toUpperCase()} family`}
-              {shelfComplete ? ' · shelf complete! 🏆' : ''}
+              {shelf === 'detective-finds' ? "Detective's finds" : `The ${familyName} family`}
             </h2>
-            <div className="crew-shelf">
-              {collectedHere.map((word) => (
+            {shelfComplete ? (
+              <p className="cc-muted" style={{ margin: '0.2rem 0 0' }}>
+                {VOICE.shelfComplete(familyName || 'this')}
+              </p>
+            ) : null}
+            <div className={`crew-shelf${shelfComplete ? ' complete' : ''}`}>
+              {collectedHere.map((word, index) => (
                 <VaultCard
                   key={word.id}
+                  index={index}
                   headword={word.headword}
                   definitionChild={word.definitionChild}
                   sentence={word.sentence}
@@ -71,7 +77,7 @@ export default async function VaultPage() {
                   aria-label={`${hiddenCount} more cards to find on this shelf`}
                 >
                   <span style={{ color: 'var(--cc-ink)', opacity: 0.7 }}>
-                    {hiddenCount} more to find…
+                    {countWord(hiddenCount, 'card')} still out there…
                   </span>
                 </div>
               ) : null}
@@ -82,7 +88,7 @@ export default async function VaultPage() {
 
       <p>
         <a className="crew-tap" href="/crew">
-          ← Back to Crew HQ
+          ← Back to HQ
         </a>
       </p>
     </main>

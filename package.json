@@ -27,7 +27,7 @@
     "test:coverage": "pnpm --filter @cluecrew/core test:coverage",
     "sim:report": "pnpm --filter @cluecrew/core sim:report",
     "jobs:calibrate": "pnpm --filter @cluecrew/db jobs:calibrate",
-    "validate:content": "pnpm --filter @cluecrew/core validate:content",
+    "validate:content": "tsx scripts/validate-content.ts",
     "audit": "pnpm audit --audit-level high",
     "check:assets": "node scripts/check-assets.mjs",
     "jobs:weekly-email": "echo \"POST /api/jobs/weekly-email with CRON_SECRET (Sunday 17:00 Europe/London)\""
@@ -36,6 +36,8 @@
     "@eslint/js": "^9.20.0",
     "eslint": "^9.20.0",
     "typescript": "^5.7.0",
-    "typescript-eslint": "^8.24.0"
+    "typescript-eslint": "^8.24.0",
+    "@cluecrew/core": "workspace:*",
+    "tsx": "^4.19.0"
   }
 }

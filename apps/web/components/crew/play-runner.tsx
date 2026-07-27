@@ -1,10 +1,14 @@
 'use client';
 
 /**
- * The Daily Loop runner (BUILD-PHASE-4 §4). This component RENDERS what the
- * engine decides — it holds zero pedagogy. Activities arrive from the API;
- * answers go back; feedback beats, ceremonies and the wind-down are staged
- * here. Mascot state changes flow only through mascotController.
+ * The Daily Loop runner (BUILD-PHASE-4 §4) with the voice (Addendum A Part 1)
+ * and the juice (Part 2). This component RENDERS what the engine decides — it
+ * holds zero pedagogy. Mascot state changes flow only through mascotController;
+ * sound flows only through soundController (files land later, cues are wired).
+ *
+ * Juice moments implemented here: option tap, correct, not yet, progress
+ * beads, case cracked (the set piece), word collected, rank up, session
+ * wind-down, and the deliberately restrained Boss Case.
  */
 import dynamic from 'next/dynamic';
 import { useCallback, useEffect, useRef, useState } from 'react';
@@ -13,6 +17,14 @@ import { playCue } from './sound-controller';
 import { Mascot } from './mascot';
 import { SpeakButton } from './speak-button';
 import { stemText } from './engines/shared';
+import {
+  VOICE,
+  beatLine,
+  correctLine,
+  loadingLine,
+  notYetLine,
+  windDownLine,
+} from '@/lib/voice';
 
 const engines = {
   code: dynamic(() => import('./engines/code')),
@@ -42,44 +54,61 @@ type Activity =
 
 interface AnswerResult {
   correct: boolean;
-  affirmation?: string;
   childHint?: string;
   cracked?: boolean;
   bonusWord?: { headword: string; definitionChild: string } | null;
 }
 
+interface EndResult {
+  wordsToday?: string[];
+  rankUp?: string | null;
+}
+
 const MODE_BLURBS: Record<string, string> = {
-  watch: 'Picture the detective walking the trail, one clue at a time. Watch how each step follows from the last.',
-  walk: "Let's do one together, then one where you finish it, then one that is all yours.",
-  see: 'Here it is as a picture — move through it slowly and see the pattern with your eyes.',
+  watch: 'Watch me walk the trail, one clue at a time. Notice how each step follows the last.',
+  walk: "We'll do one together, then one where you finish it, then one that's all yours.",
+  see: "Here it is as a picture. Move through it slowly and you'll see the pattern.",
   hear: 'Close your eyes if you like. Listen to how the clue is built, piece by piece.',
-  try: 'Straight to the magnifying glass — you can always hop back for a different way in.',
+  try: 'Straight to the magnifying glass. You can always come back for another way in.',
 };
+
+/** The set piece runs ~2.5s, and is skippable after the first time (§2.2). */
+const CEREMONY_MS = 2500;
+const SEEN_CEREMONY_KEY = 'crew-seen-crack';
+/** Anticipation before a reveal — free tension (§2.1). */
+const ANTICIPATION_MS = 200;
 
 export function PlayRunner({ childId }: { childId: string }) {
   const [activity, setActivity] = useState<Activity | null>(null);
   const [selected, setSelected] = useState<string | null>(null);
   const [feedback, setFeedback] = useState<AnswerResult | null>(null);
+  const [outcome, setOutcome] = useState<{ optionId: string; correct: boolean } | null>(null);
   const [ceremony, setCeremony] = useState<AnswerResult | null>(null);
+  const [canSkipCeremony, setCanSkipCeremony] = useState(false);
   const [beads, setBeads] = useState(0);
-  const [ended, setEnded] = useState<{ wordsToday?: number } | null>(null);
+  const [justFilled, setJustFilled] = useState(false);
+  const [vaultCount, setVaultCount] = useState(0);
+  const [vaultBounce, setVaultBounce] = useState(false);
+  const [flyer, setFlyer] = useState<{ word: string; from: DOMRect } | null>(null);
+  const [ended, setEnded] = useState<EndResult | null>(null);
+  const [rankUp, setRankUp] = useState<string | null>(null);
   const [teachStep, setTeachStep] = useState<number | null>(null);
-  const [busy, setBusy] = useState(false);
+  const [loadingLabel] = useState(() => loadingLine());
   const shownAt = useRef(Date.now());
   const loading = useRef(false);
   const finished = useRef(false);
+  const vaultChip = useRef<HTMLSpanElement>(null);
+  const collectCard = useRef<HTMLDivElement>(null);
 
   const seconds = () => Math.min(600, Math.round((Date.now() - shownAt.current) / 1000));
 
   const loadActivity = useCallback(async () => {
-    // The wind-down is terminal, and only one activity fetch may run at a
-    // time — otherwise a second fetch can race session end and overwrite the
-    // goodbye screen with "no session".
     if (loading.current || finished.current) return;
     loading.current = true;
     try {
       setSelected(null);
       setFeedback(null);
+      setOutcome(null);
       setTeachStep(null);
       const response = await fetch(`/api/crew/${childId}/session/activity`);
       const next = (await response.json()) as Activity;
@@ -89,8 +118,19 @@ export function PlayRunner({ childId }: { childId: string }) {
         mascotEvent('wind_down');
         playCue('wind-down');
         const endResponse = await fetch(`/api/crew/${childId}/session`, { method: 'DELETE' });
-        setEnded(await endResponse.json());
+        const summary = (await endResponse.json()) as EndResult;
+        setEnded(summary);
         setActivity(next);
+        if (summary.rankUp) {
+          // Rank up owns the screen for ~3s, then the wind-down settles in.
+          setRankUp(summary.rankUp);
+          mascotEvent('case_cracked');
+          playCue('rank-up');
+          window.setTimeout(() => {
+            setRankUp(null);
+            mascotEvent('wind_down');
+          }, 3000);
+        }
         return;
       }
       if (finished.current) return;
@@ -107,39 +147,62 @@ export function PlayRunner({ childId }: { childId: string }) {
     void loadActivity();
   }, [loadActivity]);
 
-  async function submit(optionId?: string, skipFeedbackBeat = false) {
-    if (busy) return;
-    setBusy(true);
-    try {
-      const response = await fetch(`/api/crew/${childId}/session/answer`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ optionId, secondsElapsed: seconds() }),
-      });
-      if (!response.ok) {
-        // Answer raced a state change (e.g. a double tap) — just re-sync.
-        await loadActivity();
-        return;
-      }
-      const result = (await response.json()) as AnswerResult;
-      setBeads((count) => count + 1);
-      if (result.cracked) {
+  /** Beads fill with a pop and a glow trail; they never drain (§2.2). */
+  function fillBead() {
+    setBeads((count) => count + 1);
+    setJustFilled(true);
+    window.setTimeout(() => setJustFilled(false), 460);
+  }
+
+  async function submit(optionId?: string) {
+    if (outcome) return;
+    const response = await fetch(`/api/crew/${childId}/session/answer`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ optionId, secondsElapsed: seconds() }),
+    });
+    if (!response.ok) {
+      await loadActivity();
+      return;
+    }
+    const result = (await response.json()) as AnswerResult;
+    fillBead();
+
+    if (optionId) setOutcome({ optionId, correct: result.correct });
+    mascotEvent(result.correct ? 'answer_correct' : 'answer_not_yet');
+    playCue(result.correct ? 'correct' : 'not-yet');
+    setFeedback(result);
+
+    if (result.cracked) {
+      // Anticipation beat, then the set piece.
+      window.setTimeout(() => {
         mascotEvent('case_cracked');
         playCue('case-cracked');
         setCeremony(result);
-        return;
-      }
-      if (skipFeedbackBeat) {
-        playCue('word-collected');
-        await loadActivity();
-        return;
-      }
-      mascotEvent(result.correct ? 'answer_correct' : 'answer_not_yet');
-      playCue(result.correct ? 'correct' : 'not-yet');
-      setFeedback(result);
-    } finally {
-      setBusy(false);
+        setCanSkipCeremony(window.localStorage.getItem(SEEN_CEREMONY_KEY) === '1');
+        window.localStorage.setItem(SEEN_CEREMONY_KEY, '1');
+        window.setTimeout(() => setCanSkipCeremony(true), CEREMONY_MS);
+      }, ANTICIPATION_MS + 400);
     }
+  }
+
+  /** Word collected: the card flies an arc to the vault chip, which bounces. */
+  async function collectWord(headword: string) {
+    const from = collectCard.current?.getBoundingClientRect();
+    if (from) setFlyer({ word: headword, from });
+    setVaultCount((count) => count + 1);
+    setVaultBounce(true);
+    playCue('word-collected');
+    window.setTimeout(() => setVaultBounce(false), 540);
+    window.setTimeout(() => setFlyer(null), 720);
+
+    const response = await fetch(`/api/crew/${childId}/session/answer`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ secondsElapsed: seconds() }),
+    });
+    if (response.ok) fillBead();
+    await loadActivity();
   }
 
   async function modeApi(mode: string, action: 'open' | 'complete' | 'decline') {
@@ -161,8 +224,11 @@ export function PlayRunner({ childId }: { childId: string }) {
 
   if (!activity) {
     return (
-      <div className="crew-stage">
-        <p>Opening your case file…</p>
+      <div className="crew-shimmer" role="status">
+        <span className="glass" aria-hidden>
+          🔍
+        </span>
+        <p>{loadingLabel}</p>
       </div>
     );
   }
@@ -170,62 +236,124 @@ export function PlayRunner({ childId }: { childId: string }) {
   if (activity.kind === 'no_session') {
     return (
       <div className="crew-stage">
-        <p>No case open right now.</p>
+        <p>Nothing open on the board right now.</p>
         <a className="crew-tap primary" href="/crew">
-          Back to Crew HQ
+          Back to HQ
         </a>
       </div>
     );
   }
 
-  if (activity.kind === 'wind_down' || ended) {
+  /* ---------- Rank up: full screen, amber-only confetti (§2.2) ---------- */
+  if (rankUp) {
     return (
-      <div className="crew-stage crew-ceremony">
+      <div className="crew-rankup" data-testid="rank-up">
+        <div className="crew-confetti" aria-hidden>
+          {Array.from({ length: 26 }, (_, index) => (
+            <i
+              key={index}
+              style={{
+                left: `${(index * 3.9) % 100}%`,
+                animationDelay: `${(index % 7) * 120}ms`,
+                animationDuration: `${2000 + (index % 5) * 220}ms`,
+              }}
+            />
+          ))}
+        </div>
+        <span className="crew-badge" aria-hidden>
+          🎖️
+        </span>
         <Mascot size={120} />
-        <h1>Case closed for today.</h1>
-        {ended?.wordsToday ? (
-          <p>
-            {ended.wordsToday} word{ended.wordsToday === 1 ? '' : 's'} joined your Vault today. 📚
-          </p>
-        ) : null}
-        <p style={{ fontSize: '1.3rem' }}>See you tomorrow, Detective.</p>
+        <p className="crew-ribbon">{VOICE.rankUp(rankUp)}</p>
+      </div>
+    );
+  }
+
+  /* ---------- Wind-down: words fan out, lantern pulses, lights dim ---------- */
+  if (activity.kind === 'wind_down' || ended) {
+    const words = ended?.wordsToday ?? [];
+    return (
+      <div className="crew-stage crew-winddown" data-testid="wind-down">
+        <Mascot size={120} />
+        <div className="crew-fan">
+          {words.map((word, index) => (
+            <span
+              key={`${word}-${index}`}
+              style={{
+                ['--i' as never]: index,
+                ['--rot' as never]: `${(index - (words.length - 1) / 2) * 7}deg`,
+              }}
+            >
+              {word}
+            </span>
+          ))}
+        </div>
+        <p style={{ fontSize: '1.3rem' }}>{windDownLine()}</p>
+        <p>
+          <span className="crew-lantern pulse" aria-hidden>
+            🏮
+          </span>
+        </p>
         <a className="crew-tap primary" href="/crew">
-          Back to Crew HQ
+          Back to HQ
         </a>
       </div>
     );
   }
 
-  // Crack ceremony (§4.5) — stamp, spark, bonus word. Skippable via Continue.
+  /* ---------- Case cracked: the set piece (§2.2) ---------- */
   if (ceremony) {
     return (
-      <div className="crew-stage crew-ceremony">
-        <div className="crew-stamp" style={{ position: 'static', display: 'inline-block', fontSize: '2rem', padding: '0.5rem 1rem' }}>
-          CASE CRACKED ✓
-        </div>
-        <Mascot size={110} />
-        <p style={{ fontSize: '1.25rem' }}>{ceremony.affirmation ?? 'You cracked it!'}</p>
-        {ceremony.bonusWord ? (
-          <p className="crew-celebrate" style={{ display: 'inline-block' }}>
-            Bonus Word Card: <strong>{ceremony.bonusWord.headword}</strong> — {ceremony.bonusWord.definitionChild}
+      <>
+        <div className="crew-dim" aria-hidden />
+        <div className="crew-stage crew-ceremony" data-testid="case-cracked">
+          <div className="crew-casefile">
+            <div style={{ position: 'relative', display: 'inline-block' }}>
+              <span className="crew-ink" aria-hidden />
+              <span className="crew-dust" aria-hidden />
+              <span className="crew-bigstamp">{VOICE.crackedStamp}</span>
+            </div>
+          </div>
+          <Mascot size={110} />
+          <p style={{ fontSize: '1.25rem' }}>{beatLine('cracked')}</p>
+          {ceremony.bonusWord ? (
+            <p className="crew-celebrate" style={{ display: 'inline-block' }}>
+              {beatLine('word-collected')} <strong>{ceremony.bonusWord.headword}</strong> —{' '}
+              {ceremony.bonusWord.definitionChild}
+            </p>
+          ) : null}
+          <p>
+            <button
+              className="crew-tap primary"
+              disabled={!canSkipCeremony}
+              onClick={() => {
+                setCeremony(null);
+                void loadActivity();
+              }}
+            >
+              Keep going
+            </button>
           </p>
-        ) : null}
-        <p>
-          <button className="crew-tap primary" onClick={() => { setCeremony(null); void loadActivity(); }}>
-            Continue
-          </button>
-        </p>
-      </div>
+        </div>
+      </>
     );
   }
 
   const frame = (
     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '1rem' }}>
-      <div className="crew-beads" aria-label={`${beads} clues answered so far`}>
+      <div className="crew-beads" aria-label={`${beads} clues worked so far`}>
         {Array.from({ length: Math.max(beads + 3, 8) }, (_, index) => (
-          <span key={index} className={`crew-bead${index < beads ? ' filled' : ''}`} />
+          <span
+            key={index}
+            className={`crew-bead${index < beads ? ' filled' : ''}${
+              justFilled && index === beads - 1 ? ' just-filled' : ''
+            }`}
+          />
         ))}
       </div>
+      <span className={`crew-vault-chip${vaultBounce ? ' bounce' : ''}`} ref={vaultChip}>
+        📚 {vaultCount}
+      </span>
       {activity.kind === 'item' && !activity.plain ? <Mascot size={64} /> : null}
     </div>
   );
@@ -234,16 +362,37 @@ export function PlayRunner({ childId }: { childId: string }) {
     <div className="crew-stage">
       {frame}
 
-      {activity.kind === 'word_collect' && !feedback ? (
-        <section className="crew-panel" aria-live="polite">
-          <h2 style={{ marginTop: 0 }}>A new Word Card! ✨</h2>
-          <p style={{ fontSize: '1.5rem', margin: '0.25rem 0' }}>
-            <strong>{activity.word.headword}</strong> <SpeakButton text={`${activity.word.headword}. ${activity.word.definitionChild}. ${activity.word.sentence}`} />
-          </p>
+      {flyer ? (
+        <div
+          className="crew-flyer"
+          aria-hidden
+          style={{
+            left: flyer.from.left,
+            top: flyer.from.top,
+            ['--dx' as never]: `${(vaultChip.current?.getBoundingClientRect().left ?? 0) - flyer.from.left}px`,
+            ['--dy' as never]: `${(vaultChip.current?.getBoundingClientRect().top ?? 0) - flyer.from.top}px`,
+          }}
+        >
+          {flyer.word}
+        </div>
+      ) : null}
+
+      {activity.kind === 'word_collect' ? (
+        <section className="crew-panel" aria-live="polite" ref={collectCard}>
+          <h2 style={{ marginTop: 0 }}>
+            {beatLine('word-collected')} <strong>{activity.word.headword}</strong>{' '}
+            <SpeakButton
+              text={`${activity.word.headword}. ${activity.word.definitionChild}. ${activity.word.sentence}`}
+            />
+          </h2>
           <p>{activity.word.definitionChild}</p>
           <p style={{ fontStyle: 'italic' }}>{activity.word.sentence}</p>
-          <button className="crew-tap primary" disabled={busy} onClick={() => void submit(undefined, true)}>
-            Add it to my Vault
+          <button
+            className="crew-tap primary"
+            data-testid="collect-word"
+            onClick={() => void collectWord(activity.word.headword)}
+          >
+            Into the vault
           </button>
         </section>
       ) : null}
@@ -251,12 +400,17 @@ export function PlayRunner({ childId }: { childId: string }) {
       {activity.kind === 'word_review' && !feedback ? (
         <section className="crew-panel">
           <h2 style={{ marginTop: 0 }}>
-            Word check <SpeakButton text={activity.prompt} />
+            Vault check <SpeakButton text={activity.prompt} />
           </h2>
           <p style={{ fontSize: '1.3rem' }}>{activity.prompt}</p>
           <div role="group" aria-label="Answer choices">
             {activity.options.map((option) => (
-              <button key={option.id} className="crew-tap" disabled={busy} onClick={() => void submit(option.id)}>
+              <button
+                key={option.id}
+                className="crew-tap"
+                disabled={Boolean(outcome)}
+                onClick={() => void submit(option.id)}
+              >
                 {option.label}
               </button>
             ))}
@@ -266,16 +420,16 @@ export function PlayRunner({ childId }: { childId: string }) {
 
       {activity.kind === 'mode_content' ? (
         <section className="crew-panel">
-          {activity.forced ? (
-            <h2 style={{ marginTop: 0 }}>Let&apos;s look at this another way.</h2>
-          ) : (
-            <h2 style={{ marginTop: 0 }}>Fancy a quick look at another way in?</h2>
-          )}
+          <h2 style={{ marginTop: 0 }}>
+            {activity.forced ? "Let's look at this another way." : beatLine('second-miss')}
+          </h2>
           <p style={{ fontSize: '1.15rem' }}>
             {MODE_BLURBS[activity.mode] ?? MODE_BLURBS.walk}{' '}
             <SpeakButton text={MODE_BLURBS[activity.mode] ?? ''} />
           </p>
-          <p className="cc-muted">({activity.caseTitle} — the full {activity.mode} clip lands with the real artwork.)</p>
+          <p className="cc-muted">
+            ({activity.caseTitle} — the full {activity.mode} clip lands with the real artwork.)
+          </p>
           <button
             className="crew-tap primary"
             onClick={async () => {
@@ -284,7 +438,7 @@ export function PlayRunner({ childId }: { childId: string }) {
               await loadActivity();
             }}
           >
-            Done — back to the case
+            Back to the case
           </button>
           {!activity.forced ? (
             <button
@@ -302,8 +456,8 @@ export function PlayRunner({ childId }: { childId: string }) {
 
       {activity.kind === 'teachback' ? (
         <section className="crew-panel">
-          <h2 style={{ marginTop: 0 }}>Your turn to teach! 🎓</h2>
-          <p>The mascot tried this one — but one step went wobbly. Tap the wobbly step:</p>
+          <h2 style={{ marginTop: 0 }}>Your turn to teach.</h2>
+          <p>I had a go at this one, but a step went wobbly. Tap the wobbly step:</p>
           <div style={{ display: 'grid', gap: '8px', maxWidth: 640 }}>
             {activity.working.map((step, index) => (
               <button
@@ -319,10 +473,15 @@ export function PlayRunner({ childId }: { childId: string }) {
           </div>
           {teachStep !== null ? (
             <>
-              <p style={{ fontWeight: 700 }}>Now — what should the mascot do instead?</p>
+              <p style={{ fontWeight: 700 }}>Now — what should I have done instead?</p>
               <div style={{ display: 'grid', gap: '8px', maxWidth: 640 }}>
                 {activity.corrections.map((correction, index) => (
-                  <button key={index} className="crew-tap" style={{ textAlign: 'left' }} onClick={() => void submitTeachback(index)}>
+                  <button
+                    key={index}
+                    className="crew-tap"
+                    style={{ textAlign: 'left' }}
+                    onClick={() => void submitTeachback(index)}
+                  >
                     {correction}
                   </button>
                 ))}
@@ -332,13 +491,17 @@ export function PlayRunner({ childId }: { childId: string }) {
         </section>
       ) : null}
 
-      {activity.kind === 'item' && !feedback ? (
+      {activity.kind === 'item' ? (
         <section aria-live="polite">
-          {!activity.plain ? (
+          {activity.plain ? (
+            <p className="cc-muted" data-testid="boss-intro">
+              {VOICE.bossIntro}
+            </p>
+          ) : (
             <p className="cc-muted" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               <SpeakButton text={stemText(activity.stem)} /> Tap the speaker to hear it.
             </p>
-          ) : null}
+          )}
           {activity.plain ? (
             <PlainItem
               stem={activity.stem}
@@ -346,6 +509,7 @@ export function PlayRunner({ childId }: { childId: string }) {
               rail="none"
               selected={selected}
               onSelect={setSelected}
+              outcome={outcome}
             />
           ) : (
             (() => {
@@ -357,35 +521,43 @@ export function PlayRunner({ childId }: { childId: string }) {
                   rail={activity.rail}
                   selected={selected}
                   onSelect={setSelected}
+                  outcome={outcome}
                 />
               );
             })()
           )}
-          <p>
-            <button className="crew-tap primary" disabled={!selected || busy} onClick={() => void submit(selected!)}>
-              That&apos;s my answer
-            </button>
-          </p>
+          {!outcome ? (
+            <p>
+              <button
+                className="crew-tap primary"
+                data-testid="lock-answer"
+                disabled={!selected}
+                onClick={() => void submit(selected!)}
+              >
+                That&apos;s my answer
+              </button>
+            </p>
+          ) : null}
         </section>
       ) : null}
 
       {feedback ? (
         feedback.correct ? (
-          <section className="crew-celebrate" role="status">
+          <section className="crew-celebrate" role="status" data-testid="beat-correct">
             <p style={{ margin: 0, fontSize: '1.2rem' }}>
-              ✔ {feedback.affirmation ?? 'Nicely worked out!'}
+              ✔ {correctLine(activity.kind === 'item' ? activity.family : 'wordweb')}
             </p>
-            <button className="crew-tap primary" onClick={() => void loadActivity()}>
+            <button className="crew-tap primary" data-testid="next-clue" onClick={() => void loadActivity()}>
               Next clue
             </button>
           </section>
         ) : (
-          <section className="crew-notyet" role="status">
-            <p style={{ margin: 0, fontSize: '1.2rem' }}>Not yet — you&apos;re on the trail.</p>
+          <section className="crew-notyet" role="status" data-testid="beat-not-yet">
+            <p style={{ margin: 0, fontSize: '1.2rem' }}>{notYetLine()}</p>
             {feedback.childHint ? <p style={{ marginBottom: 0 }}>{feedback.childHint}</p> : null}
             <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginTop: '0.5rem' }}>
-              <button className="crew-tap primary" onClick={() => void loadActivity()}>
-                Try another?
+              <button className="crew-tap primary" data-testid="try-again" onClick={() => void loadActivity()}>
+                {VOICE.missAgain}
               </button>
               <button
                 className="crew-tap"
@@ -395,7 +567,7 @@ export function PlayRunner({ childId }: { childId: string }) {
                   await loadActivity();
                 }}
               >
-                Show me a way in
+                {VOICE.missWayIn}
               </button>
             </div>
           </section>
@@ -410,7 +582,7 @@ export function PlayRunner({ childId }: { childId: string }) {
             window.location.href = '/crew';
           }}
         >
-          I&apos;m done for now
+          That&apos;s me for now
         </button>
       </p>
     </div>

@@ -14,9 +14,7 @@ export default async function DistrictPage() {
   return (
     <main className="crew-stage">
       <h1>The VR District</h1>
-      <p className="cc-muted">
-        Every location is a Case. Pick any door — your current case glows amber.
-      </p>
+      <p className="cc-muted">Every door is a case. Take any one — the amber glow is where you left off.</p>
       <div
         style={{
           display: 'grid',
@@ -37,7 +35,7 @@ export default async function DistrictPage() {
               <strong>{candidate.title}</strong>
               <p className="cc-muted" style={{ margin: '0.3rem 0 0' }}>
                 Case №{candidate.orderInDistrict}
-                {caseFile?.taughtBackAt ? ' · taught the mascot 🎓' : ''}
+                {caseFile?.taughtBackAt ? ' · you taught this one 🎓' : ''}
               </p>
             </a>
           );
@@ -45,7 +43,7 @@ export default async function DistrictPage() {
       </div>
       <p>
         <a className="crew-tap" href="/crew">
-          ← Back to Crew HQ
+          ← Back to HQ
         </a>
       </p>
     </main>

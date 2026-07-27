@@ -55,9 +55,29 @@ for (const file of readdirSync(join(ROOT, 'content/cases'))) {
   check(`case:${parsed.case.id} narrative`, parsed.case.narrativeIntro.text);
 }
 
+// Voice packs (Addendum A §1.4) — every authored variant a child hears.
+let voiceLines = 0;
+for (const file of readdirSync(join(ROOT, 'content/voice'))) {
+  if (!file.endsWith('.json')) continue;
+  const pack = JSON.parse(readFileSync(join(ROOT, 'content/voice', file), 'utf8'));
+  const groups = [
+    ...(pack.variants ? [['', pack.variants]] : []),
+    ...Object.entries(pack.byFamily ?? {}),
+    ...Object.entries(pack.beats ?? {}),
+  ];
+  for (const [group, variants] of groups) {
+    variants.forEach((line, index) => {
+      voiceLines++;
+      check(`voice:${pack.beat}${group ? `/${group}` : ''}[${index}]`, line);
+    });
+  }
+}
+
 if (failures.length > 0) {
   console.error(`Reading-age lint FAILED (${failures.length}):\n`);
   for (const failure of failures) console.error(`  ${failure}`);
   process.exit(1);
 }
-console.log(`Reading-age lint passed (${wordsFile.words.length} words + case narratives).`);
+console.log(
+  `Reading-age lint passed (${wordsFile.words.length} words + case narratives + ${voiceLines} voice lines).`,
+);

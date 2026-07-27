@@ -26,7 +26,6 @@ import {
   completeMode,
   declineModeOffer,
   completeTeachback,
-  FAMILY_AFFIRMATIONS,
   INITIAL_REVIEW_STATE,
   ENGINE_CONFIG,
   type Mode,
@@ -432,7 +431,11 @@ async function serveItem(
 
 export interface AnswerResult {
   correct: boolean;
-  affirmation?: string;
+  /**
+   * Authored hint for the chosen distractor, shown verbatim (Addendum A §1.2).
+   * The "correct" line is NOT sent from here — it is drawn from the voice pack
+   * client-side so it can rotate without immediate repeats (§1.4).
+   */
   childHint?: string;
   cracked?: boolean;
   bonusWord?: { headword: string; definitionChild: string } | null;
@@ -606,15 +609,7 @@ export async function submitAnswer(
   await drainAndLog(childId, state);
   await saveState(session.id, state);
 
-  const family = familyForType(pending.questionTypeId);
-  const affirmations = FAMILY_AFFIRMATIONS[family];
-  return {
-    correct,
-    affirmation: correct ? affirmations[state.engine.focus.itemsServed % affirmations.length] : undefined,
-    childHint,
-    cracked: outcome.caseJustCracked,
-    bonusWord,
-  };
+  return { correct, childHint, cracked: outcome.caseJustCracked, bonusWord };
 }
 
 async function applyReviewOutcome(
@@ -718,14 +713,23 @@ export async function endDailyLoop(childId: string) {
       engineState: state as unknown as Prisma.InputJsonValue,
     },
   });
-  await rollupStreakAndRank(childId);
-  const wordsToday = await prisma.wordVaultEntry.count({
+  const rollup = await rollupStreakAndRank(childId);
+  const collectedToday = await prisma.wordVaultEntry.findMany({
     where: { childId, collectedAt: { gte: new Date(Date.now() - DAY_MS) } },
+    include: { word: { select: { headword: true } } },
+    orderBy: { collectedAt: 'desc' },
+    take: 8,
   });
-  return { ok: true, secondsActive: summary.secondsActive, wordsToday };
+  return {
+    ok: true,
+    secondsActive: summary.secondsActive,
+    wordsToday: collectedToday.map((entry) => entry.word.headword),
+    // Drives the rank-up set piece client-side (Addendum A §2.2).
+    rankUp: rollup.rankUp,
+  };
 }
 
-async function rollupStreakAndRank(childId: string): Promise<void> {
+async function rollupStreakAndRank(childId: string): Promise<{ rankUp: string | null }> {
   const child = await prisma.childProfile.findUniqueOrThrow({ where: { id: childId } });
   const now = new Date();
   const since = new Date(now.getTime() - 8 * 7 * DAY_MS);
@@ -769,7 +773,10 @@ async function rollupStreakAndRank(childId: string): Promise<void> {
   if (applied !== child.rank) {
     await prisma.childProfile.update({ where: { id: childId }, data: { rank: applied } });
     await logEvent({ name: 'rank_up', childId, props: { rank: applied } });
+    const { RANK_LABELS } = await import('@cluecrew/core');
+    return { rankUp: RANK_LABELS[applied] };
   }
+  return { rankUp: null };
 }
 
 export function mondayOf(date: Date): Date {

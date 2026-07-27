@@ -10,12 +10,15 @@ export function VaultCard({
   sentence,
   tier,
   gilded,
+  index = 0,
 }: {
   headword: string;
   definitionChild: string;
   sentence: string;
   tier: number;
   gilded: boolean;
+  /** Position on the shelf — drives the left-to-right flip sequence (§2.2). */
+  index?: number;
 }) {
   const [flipped, setFlipped] = useState(false);
 
@@ -23,7 +26,10 @@ export function VaultCard({
     <button
       type="button"
       className={`crew-card${gilded ? ' gilded' : ''}`}
-      style={{ ['--tier-color' as never]: TIER_COLORS[(tier - 1) % TIER_COLORS.length] }}
+      style={{
+        ['--tier-color' as never]: TIER_COLORS[(tier - 1) % TIER_COLORS.length],
+        ['--i' as never]: index,
+      }}
       onClick={() => setFlipped((value) => !value)}
       aria-label={`Word card: ${headword}. Tap to flip.`}
     >
