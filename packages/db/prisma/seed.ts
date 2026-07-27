@@ -299,7 +299,7 @@ async function seedItems(): Promise<void> {
 async function seedWords(): Promise<void> {
   const raw = JSON.parse(readFileSync(resolve(CONTENT_ROOT, 'words/words.json'), 'utf8'));
   const { words } = wordFileSchema.parse(raw);
-  if (words.length !== 60) throw new Error(`Expected 60 seed words, got ${words.length}`);
+  if (words.length < 60) throw new Error(`Expected at least 60 seed words, got ${words.length}`);
   for (const word of words) {
     const { id, ...rest } = word;
     await prisma.word.upsert({ where: { id }, create: { id, ...rest }, update: rest });

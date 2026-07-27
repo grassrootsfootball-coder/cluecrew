@@ -2,6 +2,7 @@ import { MAX_CHILD_PROFILES } from '@cluecrew/core';
 import { prisma } from '@cluecrew/db';
 import { currentParent } from '@/lib/auth';
 import { addChildAction, archiveChildAction, updateChildAction } from '@/lib/actions/parent';
+import { EnterCrewButton } from '@/components/enter-crew-button';
 
 interface ChildSettings {
   reducedMotion?: boolean;
@@ -38,6 +39,9 @@ export default async function ChildrenPage({
         return (
           <div className="cc-card" key={child.id}>
             <h2 style={{ marginTop: 0 }}>{child.crewName}</h2>
+            <p>
+              <EnterCrewButton childId={child.id} crewName={child.crewName} />
+            </p>
             <form className="cc-form" action={updateChildAction}>
               <input type="hidden" name="childId" value={child.id} />
               <label>

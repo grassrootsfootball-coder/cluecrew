@@ -8,6 +8,7 @@ Owner: David (controller). Basis: UK GDPR, Data Protection Act 2018, ICO Age App
 | 0.1 | 2026-07-27 | 1 | Initial DPIA: data inventory, lawful bases, minimisation, retention |
 | 0.2 | 2026-07-27 | 2 | Payments data (Stripe as processor), bursary evidence handling, email provider as processor, admin roles/audit |
 | 0.3 | 2026-07-27 | 3 | Derived learning records (mastery, scheduling, adaptivity state) documented as pseudonymised; L2 firewall automated |
+| 0.4 | 2026-07-27 | 4 | Child-testing data handling; text-to-speech approach (on-device, no processor yet) |
 
 ---
 
@@ -120,7 +121,25 @@ no biometrics, and no inferred sensitive attributes.
 - **Transparency:** parent-facing dashboards (Phase 5) will present mastery
   in plain language; the data export already includes every derived record.
 
-## 9. Open items for next phase gates
+## 9. Phase 4 additions
+
+### 9.1 Child usability testing
+
+Per `/docs/child-testing-protocol.md`: written parental consent + child assent;
+**no face recordings** (screen + written notes only); findings pseudonymised
+(Child A–H); recordings deleted within 30 days of triage; consent forms held
+offline by the controller. This is offline research data, never entered into
+the product database.
+
+### 9.2 Text-to-speech (tap-to-hear)
+
+Phase 4 uses the **device's own speech engine** (Web Speech API): authored text
+is spoken locally, no audio or text leaves the device, no processor involved.
+The planned Phase 5 upgrade (pre-generated TTS files from authored strings)
+would send only AUTHORED CONTENT — never child data — to a TTS provider;
+provider selection will add a processor entry here before use.
+
+## 10. Open items for next phase gates
 
 - Phase 2: onboarding wizard region data, Stripe processor agreement, verifiable parental consent flow detail, marketing consent UX, data export UI.
 - Phase 6: Writing Room two-pass pipeline DPIA section, DSL appointment (S4), free-text PII screening (S5), OSA scope assessment.

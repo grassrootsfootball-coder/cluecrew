@@ -1,0 +1,26 @@
+{
+  "ci": {
+    "collect": {
+      "url": ["http://localhost:3100/", "http://localhost:3100/crew"],
+      "startServerCommand": "pnpm start",
+      "startServerReadyPattern": "Ready",
+      "numberOfRuns": 1,
+      "settings": {
+        "preset": "desktop",
+        "throttling": {
+          "cpuSlowdownMultiplier": 4,
+          "rttMs": 150,
+          "throughputKbps": 1638
+        }
+      }
+    },
+    "assert": {
+      "assertions": {
+        "interactive": ["error", { "maxNumericValue": 3000 }],
+        "total-byte-weight": ["warn", { "maxNumericValue": 800000 }],
+        "categories:performance": ["warn", { "minScore": 0.8 }],
+        "categories:accessibility": ["error", { "minScore": 0.9 }]
+      }
+    }
+  }
+}

@@ -2,7 +2,26 @@
  * Gate checklist #7: the CSP on /crew blocks a deliberately injected
  * third-party script, and no third-party origin appears in the policy.
  */
-import { expect, test } from '@playwright/test';
+import { expect, request, test, type Page } from '@playwright/test';
+
+/** The crew layout gates on a child session; give the probe page a real one. */
+async function enterChildMode(page: Page): Promise<void> {
+  const api = await request.newContext({ baseURL: 'http://localhost:3100' });
+  const { csrfToken } = (await (await api.get('/api/auth/csrf')).json()) as { csrfToken: string };
+  await api.post('/api/auth/callback/credentials', {
+    form: { csrfToken, email: 'test-family@cluecrew.test', password: 'CrewTest!2026' },
+  });
+  const children = (await (await api.get('/api/parent/children')).json()) as {
+    children: Array<{ id: string }>;
+  };
+  await api.post('/api/child-session', { data: { childId: children.children[0]!.id } });
+  const cookies = (await api.storageState()).cookies;
+  const crewToken = cookies.find((cookie) => cookie.name === 'crew_token')!;
+  await page.context().addCookies([
+    { name: 'crew_token', value: crewToken.value, domain: 'localhost', path: '/' },
+  ]);
+  await api.dispose();
+}
 
 test('/crew responses carry a self-only Content-Security-Policy', async ({ request }) => {
   for (const path of ['/crew', '/crew/csp-probe']) {
@@ -23,6 +42,7 @@ test('an injected third-party script never executes on /crew', async ({ page }) 
     if (message.text().includes('Content Security Policy')) cspViolations.push(message.text());
   });
 
+  await enterChildMode(page);
   await page.goto('/crew/csp-probe');
   await expect(page.getByTestId('probe-ready')).toBeVisible();
 

@@ -288,6 +288,11 @@ model CaseFile {
   solvedAt     DateTime? // case "cracked"
   taughtBackAt DateTime? // Teach-Back badge (Phase 3 §6)
   lastPracticedAt DateTime? // drives lazy mastery decay (Phase 3 §1)
+  // Adaptivity persistence (Phase 3 §2): estimate + rolling outcome window
+  // survive across sessions. These are engine state, not analytics.
+  tierEstimate Int @default(2)
+  recentOutcomes Json @default("[]")
+  attemptCount Int @default(0)
 
   @@unique([childId, caseId])
 }

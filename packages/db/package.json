@@ -15,6 +15,7 @@
     "migrate:deploy": "dotenv -e ../../.env -- prisma migrate deploy",
     "migrate:check": "node scripts/migrate-check.mjs",
     "seed": "dotenv -e ../../.env -- tsx prisma/seed.ts",
+    "content:generate": "dotenv -e ../../.env -- tsx prisma/generate-content.ts",
     "jobs:hard-delete": "dotenv -e ../../.env -- tsx src/jobs/hard-delete.ts",
     "jobs:purge-evidence": "dotenv -e ../../.env -- tsx src/jobs/purge-bursary-evidence.ts",
     "jobs:calibrate": "dotenv -e ../../.env -- tsx src/jobs/calibrate-items.ts",

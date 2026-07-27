@@ -12,6 +12,7 @@ export * from './session';
 export * from './crew-state';
 export * from './streaks';
 export * from './modes';
+export * from './families';
 export * from './teachback';
 export * from './content-schema';
 export * from './pricing';

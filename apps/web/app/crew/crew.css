@@ -1,0 +1,312 @@
+/* Child app styles (BUILD-PHASE-4). Tablet landscape (1180×820) is the
+   design centre; phone is an adaptation. Touch targets ≥48px with ≥8px
+   spacing. Errors are never red: try-again is coral, "not yet" language only
+   (D1). All animation is CSS transforms; reduced-motion disables it. */
+
+.crew-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1rem;
+}
+
+.crew-app.dyslexia {
+  letter-spacing: 0.06em;
+  word-spacing: 0.16em;
+  line-height: 1.9;
+  font-family: Verdana, 'Comic Sans MS', system-ui, sans-serif;
+}
+
+.crew-app.reduced-motion *,
+.crew-app.reduced-motion *::before,
+.crew-app.reduced-motion *::after {
+  animation: none !important;
+  transition: none !important;
+}
+
+.crew-stage {
+  flex: 1;
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.25rem 1.5rem 2rem;
+}
+
+.crew-tap {
+  min-width: 48px;
+  min-height: 48px;
+  margin: 4px;
+  font: inherit;
+  font-weight: 700;
+  color: var(--cc-ink);
+  background: color-mix(in srgb, var(--cc-cream) 55%, #fdfcf9 45%);
+  border: 2px solid color-mix(in srgb, var(--cc-ink) 25%, transparent);
+  border-radius: 14px;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  transition: transform 120ms ease, border-color 120ms ease;
+}
+
+.crew-tap:hover,
+.crew-tap:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--cc-amber);
+  outline: 3px solid var(--cc-amber);
+  outline-offset: 2px;
+}
+
+.crew-tap[aria-pressed='true'],
+.crew-tap.selected {
+  border-color: var(--cc-amber);
+  background: color-mix(in srgb, var(--cc-amber) 25%, var(--cc-cream));
+}
+
+.crew-tap.primary {
+  background: var(--cc-amber);
+  border-color: var(--cc-amber);
+}
+
+.crew-panel {
+  background: color-mix(in srgb, var(--cc-cream) 55%, #fdfcf9 45%);
+  border: 2px solid color-mix(in srgb, var(--cc-ink) 12%, transparent);
+  border-radius: 18px;
+  padding: 1.25rem 1.5rem;
+  margin: 0.75rem 0;
+}
+
+/* Plain (exam-faithful) mode: no theme, no mascot, deliberately quiet (P4). */
+.crew-plain {
+  background: #fdfcf9;
+  border: 1px solid #9aa0ab;
+  border-radius: 4px;
+  padding: 1.5rem;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.crew-plain .crew-tap {
+  border-radius: 4px;
+  font-weight: 400;
+  background: #fdfcf9;
+}
+
+/* Progress beads: they fill, never drain (§4.3). */
+.crew-beads {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.crew-bead {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid color-mix(in srgb, var(--cc-ink) 35%, transparent);
+  transition: background 200ms ease;
+}
+
+.crew-bead.filled {
+  background: var(--cc-amber);
+  border-color: var(--cc-amber);
+}
+
+/* Try-again beat: coral, never red (D1). */
+.crew-notyet {
+  border-left: 6px solid var(--cc-coral);
+  background: color-mix(in srgb, var(--cc-coral) 12%, var(--cc-cream));
+  border-radius: 0 12px 12px 0;
+  padding: 0.9rem 1.2rem;
+}
+
+.crew-celebrate {
+  border-left: 6px solid var(--cc-amber);
+  background: color-mix(in srgb, var(--cc-amber) 14%, var(--cc-cream));
+  border-radius: 0 12px 12px 0;
+  padding: 0.9rem 1.2rem;
+}
+
+/* Letter tiles (STOWAWAY) */
+.crew-tile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  min-height: 48px;
+  margin: 4px;
+  font-size: 1.4rem;
+  font-weight: 800;
+  border: 2px solid color-mix(in srgb, var(--cc-ink) 30%, transparent);
+  border-radius: 10px;
+  background: #fdfcf9;
+  cursor: pointer;
+  transition: transform 140ms ease;
+}
+
+.crew-tile.ghost {
+  opacity: 0.35;
+  transform: scale(0.92);
+}
+
+.crew-tile.landed {
+  border-color: var(--cc-vr-teal);
+  background: color-mix(in srgb, var(--cc-vr-teal) 18%, #fdfcf9);
+}
+
+/* Alphabet Rail (§3) */
+.crew-rail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0.75rem;
+  border: 2px dashed color-mix(in srgb, var(--cc-vr-teal) 60%, transparent);
+  border-radius: 14px;
+  justify-content: center;
+}
+
+.crew-rail.corner {
+  background: color-mix(in srgb, var(--cc-cream) 92%, #fdfcf9);
+  zoom: 0.82;
+  max-width: 560px;
+}
+
+.crew-rail .letter {
+  min-width: 34px;
+  min-height: 44px;
+  font-weight: 700;
+  border-radius: 8px;
+  border: 1px solid color-mix(in srgb, var(--cc-ink) 20%, transparent);
+  background: #fdfcf9;
+  cursor: pointer;
+}
+
+.crew-rail .letter.picked {
+  background: var(--cc-vr-teal);
+  color: #fdfcf9;
+}
+
+.crew-rail .jump {
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  color: var(--cc-vr-teal);
+}
+
+/* Word Vault cards (§5) */
+.crew-card {
+  width: 168px;
+  min-height: 118px;
+  border-radius: 14px;
+  border: 3px solid var(--tier-color, var(--cc-amber));
+  background: #fdfcf9;
+  padding: 0.75rem;
+  cursor: pointer;
+  text-align: left;
+}
+
+.crew-card.gilded {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--cc-amber) 70%, transparent);
+}
+
+.crew-card.silhouette {
+  background: color-mix(in srgb, var(--cc-ink) 12%, var(--cc-cream));
+  border-style: dashed;
+  color: transparent;
+}
+
+.crew-shelf {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 0.75rem 0 1.5rem;
+}
+
+/* HQ path stones + district map */
+.crew-stones {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.crew-stone {
+  min-width: 150px;
+  min-height: 96px;
+  border-radius: 50% 50% 46% 54% / 58% 54% 46% 42%;
+  border: 3px solid color-mix(in srgb, var(--cc-ink) 25%, transparent);
+  background: color-mix(in srgb, var(--cc-cream) 45%, #fdfcf9);
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.crew-stone.done {
+  border-color: var(--cc-vr-teal);
+}
+
+.crew-door {
+  min-width: 140px;
+  min-height: 150px;
+  border-radius: 16px 16px 4px 4px;
+  border: 3px solid color-mix(in srgb, var(--cc-ink) 40%, transparent);
+  display: grid;
+  place-items: center;
+  gap: 0.25rem;
+  font-weight: 800;
+  text-decoration: none;
+  color: var(--cc-ink);
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.crew-door.locked {
+  opacity: 0.55;
+  border-style: dashed;
+}
+
+.crew-location {
+  position: relative;
+  min-height: 110px;
+  border-radius: 14px;
+  border: 2px solid color-mix(in srgb, var(--cc-ink) 18%, transparent);
+  background: #fdfcf9;
+  padding: 0.75rem;
+  text-decoration: none;
+  color: var(--cc-ink);
+  display: block;
+}
+
+.crew-location.current {
+  border-color: var(--cc-amber);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--cc-amber) 35%, transparent);
+}
+
+.crew-stamp {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: 3px solid var(--cc-vr-teal);
+  color: var(--cc-vr-teal);
+  border-radius: 8px;
+  font-size: 0.7rem;
+  font-weight: 900;
+  padding: 2px 6px;
+  transform: rotate(-12deg);
+}
+
+@keyframes crew-spark {
+  0% { transform: scale(0.6); opacity: 0; }
+  40% { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.crew-ceremony {
+  animation: crew-spark 600ms ease;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .crew-stage { padding: 0.75rem; }
+  .crew-card { width: 140px; }
+}

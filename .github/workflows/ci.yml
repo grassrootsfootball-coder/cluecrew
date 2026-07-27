@@ -82,6 +82,12 @@ jobs:
       - name: L2 firewall grep (no modality profiles)
         run: pnpm check:l2
 
+      - name: Mascot single-door guard
+        run: pnpm check:mascot
+
+      - name: Reading-age lint (child-facing content)
+        run: pnpm check:reading-age
+
       - name: Content schema validation
         run: pnpm validate:content
 
@@ -101,5 +107,33 @@ jobs:
         working-directory: apps/web
         run: pnpm exec playwright install --with-deps chromium
 
-      - name: E2E (child-token isolation, CSP)
+      - name: E2E (child-token isolation, CSP, daily loop, billing, CMS)
         run: pnpm e2e
+
+  lighthouse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    needs: checks
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Write .env
+        run: |
+          {
+            echo "APP_ENV=staging"
+            echo "DATABASE_URL=postgresql://postgres:postgres@localhost:5432/unused"
+            echo "SHADOW_DATABASE_URL=postgresql://postgres:postgres@localhost:5432/unused"
+            echo "AUTH_SECRET=ci-only-secret-not-used-anywhere-real"
+          } > .env
+      - name: Build
+        run: pnpm build
+      # Performance budget is a release gate (D6): throttled profile, /crew shell.
+      - name: Lighthouse CI
+        working-directory: apps/web
+        run: pnpm dlx @lhci/cli@0.14.x autorun --config=../../.lighthouserc.json

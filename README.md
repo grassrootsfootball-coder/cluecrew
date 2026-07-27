@@ -2,7 +2,9 @@
 
 **ClueCrew makes the 11+ make sense — for every child and every parent — through clear teaching, calm design, and a price any family can reach.**
 
-Read [CLUECREW-MANIFESTO.md](CLUECREW-MANIFESTO.md) before contributing. It wins all conflicts. Phases 1 (foundation) and 2 (accounts/billing/CMS) are complete and gate-ratified; the current build phase is [BUILD-PHASE-3.md](BUILD-PHASE-3.md) — the learning engine (pure TS in `packages/core`, simulation-tested; Stripe staging validation from Phase 2 remains parked until Stripe keys exist).
+Read [CLUECREW-MANIFESTO.md](CLUECREW-MANIFESTO.md) before contributing. It wins all conflicts. Phases 1–3 are complete and gate-ratified; the current build phase is [BUILD-PHASE-4.md](BUILD-PHASE-4.md) — the VR District child app (Crew HQ, Daily Loop, five mechanic engines, Word Vault). Outstanding cross-phase items: Stripe staging validation (parked until keys exist), review of ai-draft items to LIVE (David, via CMS), words 120/300, child testing per `/docs/child-testing-protocol.md`.
+
+Child app dev flow: sign in as the test parent → Parent HQ → Children → "Enter Crew HQ as Alex". `pnpm content:generate` fills the item bank with ai-draft DRAFTs (dev/staging only; the app serves LIVE items in production, falling back to the whole bank elsewhere).
 
 ## Quickstart (target: under 10 minutes)
 

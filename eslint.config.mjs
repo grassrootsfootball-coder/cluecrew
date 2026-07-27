@@ -26,4 +26,10 @@ export default tseslint.config(
       globals: { process: 'readonly', console: 'readonly', URL: 'readonly' },
     },
   },
+  {
+    files: ['apps/web/public/*-sw.js'],
+    languageOptions: {
+      globals: { self: 'readonly', caches: 'readonly', fetch: 'readonly' },
+    },
+  },
 );

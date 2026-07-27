@@ -5,12 +5,16 @@ const PORT = 3100;
 export default defineConfig({
   testDir: './e2e',
   fullyParallel: false,
-  workers: 2,
+  workers: 1,
   timeout: 60_000,
   retries: process.env.CI ? 1 : 0,
   reporter: process.env.CI ? 'github' : 'list',
   use: {
     baseURL: `http://localhost:${PORT}`,
+    // The trimmed headless shell intermittently locks its renderer on the
+    // crew app (reproduced on /crew/play; fine in real Chrome). Use full
+    // Chromium's new headless mode instead.
+    channel: 'chromium',
   },
   webServer: {
     command: process.env.CI ? `pnpm start` : `pnpm dev`,
