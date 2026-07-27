@@ -9,7 +9,7 @@
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { hash } from '@node-rs/argon2';
-import { caseFileSchema, wordFileSchema } from '@cluecrew/core';
+import { caseFileSchema, regionFileSchema, wordFileSchema } from '@cluecrew/core';
 import { prisma } from '../src/index';
 
 const CONTENT_ROOT = resolve(import.meta.dirname, '../../../content');
@@ -285,6 +285,34 @@ async function seedCases(): Promise<void> {
   }
 }
 
+async function seedRegions(): Promise<void> {
+  const raw = JSON.parse(readFileSync(resolve(CONTENT_ROOT, 'regions.json'), 'utf8'));
+  const { regions } = regionFileSchema.parse(raw);
+  for (const region of regions) {
+    const { code, lastVerified, ...rest } = region;
+    const data = { ...rest, lastVerified: new Date(lastVerified) };
+    await prisma.region.upsert({ where: { id: code }, create: { id: code, ...data }, update: data });
+  }
+}
+
+/** Staff accounts for the admin CMS — dev/staging only (§2). */
+async function seedStaff(): Promise<void> {
+  if (process.env.APP_ENV === 'production') return;
+  const passwordHash = await hash('CrewStaff!2026', { memoryCost: 19456, timeCost: 2, parallelism: 1 });
+  const staff = [
+    { id: 'seed-staff-admin', email: 'staff-admin@cluecrew.test', displayName: 'Staff Admin', staffRole: 'ADMIN' as const },
+    { id: 'seed-staff-reviewer', email: 'staff-reviewer@cluecrew.test', displayName: 'Staff Reviewer', staffRole: 'REVIEWER' as const },
+    { id: 'seed-staff-author', email: 'staff-author@cluecrew.test', displayName: 'Staff Author', staffRole: 'AUTHOR' as const },
+  ];
+  for (const member of staff) {
+    await prisma.parentAccount.upsert({
+      where: { email: member.email },
+      create: { ...member, passwordHash, emailVerified: new Date() },
+      update: { staffRole: member.staffRole, passwordHash },
+    });
+  }
+}
+
 /** Synthetic test family — staging/dev only, never production (§2). */
 async function seedTestFamily(): Promise<void> {
   if (process.env.APP_ENV === 'production') {
@@ -419,6 +447,8 @@ async function main(): Promise<void> {
   await seedItems();
   await seedWords();
   await seedCases();
+  await seedRegions();
+  await seedStaff();
   await seedTestFamily();
 
   const counts = {
@@ -427,6 +457,7 @@ async function main(): Promise<void> {
     items: await prisma.item.count(),
     words: await prisma.word.count(),
     cases: await prisma.case.count(),
+    regions: await prisma.region.count(),
     events: await prisma.event.count(),
   };
   console.log('Seed complete:', counts);

@@ -1,6 +1,6 @@
 import { createHash } from 'node:crypto';
 import { NextResponse } from 'next/server';
-import { prisma } from '@cluecrew/db';
+import { logEvent, prisma } from '@cluecrew/db';
 import { clientKey, rateLimit } from '@/lib/rate-limit';
 
 export async function GET(request: Request) {
@@ -21,6 +21,7 @@ export async function GET(request: Request) {
     prisma.verificationToken.update({ where: { id: record.id }, data: { usedAt: new Date() } }),
     prisma.parentAccount.update({ where: { id: record.parentId }, data: { emailVerified: new Date() } }),
   ]);
+  await logEvent({ name: 'email_verified', parentId: record.parentId, props: {} });
 
-  return NextResponse.redirect(new URL('/?verified=1', request.url));
+  return NextResponse.redirect(new URL('/onboarding', request.url));
 }

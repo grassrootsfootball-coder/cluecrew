@@ -1,49 +1,44 @@
-import { auth, isAdminEmail, signIn } from '@/lib/auth';
+import { bursaryCapacity } from '@cluecrew/core';
+import { prisma } from '@cluecrew/db';
 
-/** Bare admin login (Phase 1 §8: no UI beyond health check and this). */
-export default async function AdminPage() {
-  const session = await auth();
+export default async function AdminOverview() {
+  const [draft, reviewed, live, misconceptions, words, regions, pendingBursaries, approvedBursaries, paidSubs] =
+    await Promise.all([
+      prisma.item.count({ where: { status: 'DRAFT' } }),
+      prisma.item.count({ where: { status: 'REVIEWED' } }),
+      prisma.item.count({ where: { status: 'LIVE' } }),
+      prisma.misconception.count(),
+      prisma.word.count(),
+      prisma.region.count(),
+      prisma.bursaryApplication.count({ where: { status: { in: ['RECEIVED', 'WAITLISTED'] } } }),
+      prisma.bursaryApplication.count({ where: { status: 'APPROVED' } }),
+      prisma.subscription.count({ where: { status: 'active', isBursary: false } }),
+    ]);
 
-  if (session?.user?.email) {
-    if (!isAdminEmail(session.user.email)) {
-      return (
-        <main style={{ padding: '4rem 2rem' }}>
-          <h1>Admin</h1>
-          <p>This account does not have admin access.</p>
-        </main>
-      );
-    }
-    return (
-      <main style={{ padding: '4rem 2rem' }}>
-        <h1>Admin</h1>
-        <p>Signed in as {session.user.email}. Admin tooling arrives with content authoring (Phase 2+).</p>
-      </main>
-    );
-  }
-
-  async function login(formData: FormData) {
-    'use server';
-    await signIn('credentials', {
-      email: formData.get('email'),
-      password: formData.get('password'),
-      redirectTo: '/admin',
-    });
-  }
+  const capacity = bursaryCapacity(paidSubs);
 
   return (
-    <main style={{ padding: '4rem 2rem', maxWidth: 420 }}>
-      <h1>Admin sign-in</h1>
-      <form action={login} style={{ display: 'grid', gap: '0.75rem' }}>
-        <label>
-          Email
-          <input name="email" type="email" required style={{ display: 'block', width: '100%' }} />
-        </label>
-        <label>
-          Password
-          <input name="password" type="password" required style={{ display: 'block', width: '100%' }} />
-        </label>
-        <button type="submit">Sign in</button>
-      </form>
+    <main className="cc-container">
+      <h1>Overview</h1>
+      <div className="cc-card">
+        <h2 style={{ marginTop: 0 }}>Item bank</h2>
+        <p>
+          Draft: {draft} · Reviewed (ready to publish): {reviewed} · Live: {live}
+        </p>
+      </div>
+      <div className="cc-card">
+        <h2 style={{ marginTop: 0 }}>Libraries</h2>
+        <p>
+          Misconceptions: {misconceptions} · Words: {words} · Regions: {regions}
+        </p>
+      </div>
+      <div className="cc-card">
+        <h2 style={{ marginTop: 0 }}>Bursary capacity</h2>
+        <p>
+          Paid subscriptions: {paidSubs} → places unlocked: {capacity} · Approved: {approvedBursaries} ·
+          Awaiting review: {pendingBursaries}
+        </p>
+      </div>
     </main>
   );
 }

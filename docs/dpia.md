@@ -6,6 +6,7 @@ Owner: David (controller). Basis: UK GDPR, Data Protection Act 2018, ICO Age App
 | Version | Date | Phase | Change |
 |---|---|---|---|
 | 0.1 | 2026-07-27 | 1 | Initial DPIA: data inventory, lawful bases, minimisation, retention |
+| 0.2 | 2026-07-27 | 2 | Payments data (Stripe as processor), bursary evidence handling, email provider as processor, admin roles/audit |
 
 ---
 
@@ -71,7 +72,30 @@ Phase 1 processes data only in dev/staging with synthetic seed data. No real chi
 | Re-identification from analytics | Low | Med | Events carry IDs/enums only; aggregates drop child id |
 | Staging leak of real child data | Low | High | Synthetic-only seed outside production, enforced in seed script |
 
-## 7. Open items for next phase gates
+## 7. Phase 2 additions
+
+### 7.1 Payments (Stripe as processor)
+
+- Card details are entered **only on Stripe-hosted checkout** — they never touch ClueCrew servers or the database. We store Stripe customer/subscription identifiers and status only.
+- Trials collect **no card at all** (deliberate: zero accidental-charge risk). Lawful basis: contract.
+- Webhook processing is signature-verified and idempotent; the `WebhookEvent` table stores Stripe event ids (no payload) for replay protection.
+- Payment state is never visible on any child-facing surface — the child app has no knowledge billing exists.
+
+### 7.2 Bursary evidence (special care)
+
+- One document (school letter or benefit screenshot) confirming FSM/pupil-premium status. This can reveal financial circumstances, so: **AES-256-GCM encrypted at rest**, decrypted only for ADMIN-role staff, every access written to the audit log, **auto-deleted 30 days after the decision** (`evidencePurgeAt` + purge job).
+- The `isBursary` flag is used only for capacity accounting; a CI grep guarantees no parent- or child-facing UI reads it. Lawful basis: consent (the parent applies) + legitimate interests for capacity accounting.
+
+### 7.3 Email provider (Resend as processor)
+
+- Transactional email only: verification, trial/renewal reminders (DMCC), receipts, payment issues, cancellation/refund confirmations, bursary decisions, lockout notices. Recipient address and message content pass through Resend under their DPA; no child data appears in any email template.
+- Marketing email requires an explicit `marketing_optin` consent event (none is sent in Phase 2).
+
+### 7.4 Admin access
+
+- Staff roles (AUTHOR/REVIEWER/ADMIN) on named accounts; all admin actions land in `AdminAuditLog`. Region Registry entries carry a source URL and last-verified date to keep parent-facing regional claims accountable.
+
+## 8. Open items for next phase gates
 
 - Phase 2: onboarding wizard region data, Stripe processor agreement, verifiable parental consent flow detail, marketing consent UX, data export UI.
 - Phase 6: Writing Room two-pass pipeline DPIA section, DSL appointment (S4), free-text PII screening (S5), OSA scope assessment.

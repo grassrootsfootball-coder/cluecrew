@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { regionFileSchema } from './regions';
 
 /**
  * Schemas for authored content in /content (validated in CI, BUILD-PHASE-1 §2).
@@ -73,5 +74,9 @@ export const caseFileSchema = z.object({
   case: caseContentSchema,
 });
 
-export const contentFileSchema = z.discriminatedUnion('kind', [wordFileSchema, caseFileSchema]);
+export const contentFileSchema = z.discriminatedUnion('kind', [
+  wordFileSchema,
+  caseFileSchema,
+  regionFileSchema,
+]);
 export type ContentFile = z.infer<typeof contentFileSchema>;

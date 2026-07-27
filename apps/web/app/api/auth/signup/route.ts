@@ -1,9 +1,10 @@
 import { createHash, randomBytes } from 'node:crypto';
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
-import { prisma } from '@cluecrew/db';
+import { logEvent, prisma } from '@cluecrew/db';
 import { hashPassword } from '@/lib/passwords';
 import { sendEmail } from '@/lib/email';
+import { verifyEmailTemplate } from '@/lib/email-templates';
 import { clientKey, rateLimit } from '@/lib/rate-limit';
 
 const POLICY_VERSION = 'v1.0';
@@ -57,9 +58,9 @@ export async function POST(request: Request) {
     const origin = new URL(request.url).origin;
     await sendEmail({
       to: email,
-      subject: 'Verify your ClueCrew email',
-      text: `Welcome to ClueCrew, ${parsed.data.displayName}.\n\nPlease confirm your email address:\n${origin}/api/auth/verify?token=${rawToken}\n\nThe link is valid for 24 hours.`,
+      ...verifyEmailTemplate(parsed.data.displayName, `${origin}/api/auth/verify?token=${rawToken}`),
     });
+    await logEvent({ name: 'signup_completed', parentId: parent.id, props: {} });
   }
 
   return NextResponse.json(

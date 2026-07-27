@@ -85,6 +85,9 @@ jobs:
       - name: Banned-vocabulary scan
         run: pnpm scan:vocab
 
+      - name: Bursary isolation grep (no UI reads isBursary)
+        run: pnpm check:bursary
+
       - name: Dependency audit
         run: pnpm audit --audit-level high
 

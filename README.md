@@ -2,7 +2,7 @@
 
 **ClueCrew makes the 11+ make sense — for every child and every parent — through clear teaching, calm design, and a price any family can reach.**
 
-Read [CLUECREW-MANIFESTO.md](CLUECREW-MANIFESTO.md) before contributing. It wins all conflicts. The current build phase is [BUILD-PHASE-1.md](BUILD-PHASE-1.md) (foundation — no user-visible product).
+Read [CLUECREW-MANIFESTO.md](CLUECREW-MANIFESTO.md) before contributing. It wins all conflicts. Phase 1 (foundation) is complete and gate-ratified; the current build phase is [BUILD-PHASE-2.md](BUILD-PHASE-2.md) — accounts, billing, onboarding, admin CMS, bursary.
 
 ## Quickstart (target: under 10 minutes)
 
@@ -18,7 +18,12 @@ pnpm dev                          # migrates, seeds, starts http://localhost:310
 
 Verify: <http://localhost:3100/api/health> returns `{ ok: true, db: { connected: true } }`.
 
-Seeded staging family (dev/staging only, never production): `test-family@cluecrew.test` / `CrewTest!2026`, children Alex and Sam.
+Seeded staging accounts (dev/staging only, never production):
+
+- Family: `test-family@cluecrew.test` / `CrewTest!2026` (children Alex and Sam)
+- Staff: `staff-admin@`, `staff-reviewer@`, `staff-author@cluecrew.test` / `CrewStaff!2026`
+
+Without `STRIPE_SECRET_KEY`, the dev payment provider simulates checkout and webhook-driven status transitions, so the entire billing journey (trial → convert → cancel → cooling-off refund) runs locally with no keys. With keys set (staging/production), real Stripe Checkout and the signature-verified webhook at `/api/payments/webhook` take over. `CLUECREW_NOW` time-travels the billing clock for reminder tests (non-production only).
 
 ## Repo layout (BUILD-PHASE-1 §1)
 
@@ -47,8 +52,12 @@ pnpm scan:vocab          # banned vocabulary + pure-white background lint
 pnpm db:migrate          # create a new migration after schema changes
 pnpm db:migrate:check    # drift check (CI gate)
 pnpm jobs:hard-delete    # retention: hard-delete accounts soft-deleted >30 days
+pnpm jobs:purge-evidence # retention: clear bursary evidence 30 days after decision
+pnpm check:bursary       # grep guarantee: no UI reads isBursary
 pnpm --filter @cluecrew/db analytics:sample   # attempts per child per day
 ```
+
+Scheduled jobs also run over HTTP with `Authorization: Bearer $CRON_SECRET`: `/api/jobs/hard-delete`, `/api/jobs/reminders`, `/api/jobs/purge-evidence`.
 
 CI (GitHub Actions) runs on every PR: typecheck, lint, unit tests, migration drift check, content validation, banned-vocabulary scan, dependency audit, build, and the e2e isolation/CSP suite.
 
@@ -58,7 +67,7 @@ CI (GitHub Actions) runs on every PR: typecheck, lint, unit tests, migration dri
 - **staging** — Neon Postgres (EU-West), synthetic data only. Real child data never leaves production.
 - **production** — Neon Postgres (**EU-West region mandatory** for data residency), Resend for transactional email, Vercel hosting.
 
-### Decisions log (pending David's ratification at the Phase 1 gate)
+### Decisions log (Phase 1 gate ratified by David, 2026-07-27)
 
 | Decision | Choice | Notes |
 |---|---|---|

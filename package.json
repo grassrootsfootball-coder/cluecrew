@@ -17,7 +17,9 @@
     "db:migrate": "pnpm --filter @cluecrew/db migrate:dev",
     "db:migrate:check": "pnpm --filter @cluecrew/db migrate:check",
     "jobs:hard-delete": "pnpm --filter @cluecrew/db jobs:hard-delete",
+    "jobs:purge-evidence": "pnpm --filter @cluecrew/db jobs:purge-evidence",
     "scan:vocab": "node scripts/scan-vocab.mjs",
+    "check:bursary": "node scripts/check-bursary-isolation.mjs",
     "validate:content": "pnpm --filter @cluecrew/core validate:content",
     "audit": "pnpm audit --audit-level high"
   },

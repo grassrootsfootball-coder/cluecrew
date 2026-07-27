@@ -3,6 +3,7 @@ import Credentials from 'next-auth/providers/credentials';
 import { prisma } from '@cluecrew/db';
 import { verifyPassword } from '@/lib/passwords';
 import { sendEmail } from '@/lib/email';
+import { accountLockedTemplate } from '@/lib/email-templates';
 
 const MAX_FAILED_LOGINS = 5;
 const LOCKOUT_MINUTES = 15;
@@ -38,8 +39,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
           if (lock) {
             await sendEmail({
               to: parent.email,
-              subject: 'ClueCrew: your account is temporarily locked',
-              text: `There were ${failedLogins} unsuccessful sign-in attempts, so we locked your account for ${LOCKOUT_MINUTES} minutes. If this was not you, please reset your password once the lock lifts.`,
+              ...accountLockedTemplate(parent.displayName, failedLogins, LOCKOUT_MINUTES),
             });
           }
           return null;

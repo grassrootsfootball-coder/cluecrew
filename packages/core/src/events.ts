@@ -7,6 +7,7 @@
  * launch-critical.
  */
 export const EVENT_NAMES = [
+  // Child learning loop (Phase 1 starting set)
   'session_started',
   'session_ended',
   'case_opened',
@@ -16,6 +17,19 @@ export const EVENT_NAMES = [
   'word_collected',
   'rank_up',
   'warmup_completed',
+  // Parent lifecycle (Phase 2)
+  'signup_completed',
+  'email_verified',
+  'child_profile_created',
+  'onboarding_completed',
+  'trial_started',
+  'checkout_started',
+  'subscription_activated',
+  'payment_failed',
+  'subscription_canceled',
+  'refund_issued',
+  'bursary_application_submitted',
+  'bursary_decided',
 ] as const;
 
 export type EventName = (typeof EVENT_NAMES)[number];

@@ -28,11 +28,14 @@ model ParentAccount {
   // Auth throttling (§4): lockout with email notification on repeated failures
   failedLogins  Int       @default(0)
   lockedUntil   DateTime?
+  // Admin CMS access (BUILD-PHASE-2 §5). Parents are NONE; staff roles gate /admin.
+  staffRole     StaffRole @default(NONE)
 
-  consentLog         ConsentEvent[]
-  children           ChildProfile[]
-  subscription       Subscription?
-  verificationTokens VerificationToken[]
+  consentLog          ConsentEvent[]
+  children            ChildProfile[]
+  subscription        Subscription?
+  verificationTokens  VerificationToken[]
+  bursaryApplications BursaryApplication[]
 
   createdAt DateTime  @default(now())
   deletedAt DateTime? // soft delete; hard-delete job runs after 30 days
@@ -58,6 +61,13 @@ model ChildProfile {
 
   createdAt DateTime  @default(now())
   deletedAt DateTime?
+}
+
+enum StaffRole {
+  NONE
+  AUTHOR
+  REVIEWER
+  ADMIN
 }
 
 enum Rank {
@@ -98,8 +108,17 @@ model Subscription {
   stripeCustomerId  String?
   stripeSubId       String?
   status            String // trialing | active | past_due | canceled
+  // Trial: 7 days, NO card required (BUILD-PHASE-2 §1); card collected at conversion only.
+  trialEndsAt       DateTime?
+  // Bursary flag — capacity accounting and aggregate reporting ONLY.
+  // Grep-level guarantee: no child- or parent-facing UI ever reads this (§6).
+  isBursary         Boolean       @default(false)
+  firstPaidAt       DateTime? // anchors the 14-day cooling-off window (§2.2)
+  canceledAt        DateTime?
   commitmentEndsAt  DateTime? // for DMCC-compliant display of total contract value
-  renewalReminderAt DateTime? // scheduled reminder before renewal (L5)
+  renewalReminderAt DateTime? // next scheduled reminder (T-14 then T-3) (L5)
+  // Stripe event ordering guard: webhooks apply only if newer than this.
+  lastStripeEventAt DateTime?
   createdAt         DateTime      @default(now())
 }
 
@@ -107,6 +126,68 @@ enum Tier {
   TWO_YEAR
   ONE_YEAR
   SUMMER
+}
+
+// Processed Stripe webhook ids — makes the handler idempotent under replay (§2).
+model WebhookEvent {
+  id          String   @id // Stripe event id
+  type        String
+  processedAt DateTime @default(now())
+}
+
+model BursaryApplication {
+  id           String        @id @default(cuid())
+  parentId     String
+  parent       ParentAccount @relation(fields: [parentId], references: [id], onDelete: Cascade)
+  status       BursaryStatus @default(RECEIVED)
+  confirmation String // "fsm" | "pupil_premium" — self-confirmation basis
+  // Evidence is AES-256-GCM encrypted at rest and hard-deleted 30 days after decision (§6).
+  evidence     Bytes?
+  evidenceName String?
+  evidenceMime String?
+  decidedAt    DateTime?
+  decidedById  String?
+  evidencePurgeAt DateTime?
+  createdAt    DateTime      @default(now())
+
+  @@index([status, createdAt])
+}
+
+enum BursaryStatus {
+  RECEIVED
+  APPROVED
+  DECLINED
+  WAITLISTED
+}
+
+// Audit log on all admin actions (BUILD-PHASE-2 §5).
+model AdminAuditLog {
+  id         String   @id @default(cuid())
+  actorId    String
+  action     String // e.g. "item.publish", "bursary.approve", "region.update"
+  targetKind String
+  targetId   String
+  detail     Json?
+  createdAt  DateTime @default(now())
+
+  @@index([actorId, createdAt])
+  @@index([targetKind, targetId])
+}
+
+// Region Registry (BUILD-PHASE-2 §3.3): seeded from /content/regions.json,
+// maintained via the admin CMS with source URL + last-verified date.
+model Region {
+  id               String   @id // code slug, e.g. "kent"
+  name             String
+  examFormat       String // gl-style | csse | set | school-specific | mixed | unknown
+  formatSummary    String
+  typicalTestMonth String
+  subjects         District[]
+  exampleSchools   Json
+  notes            String?
+  sourceUrl        String
+  lastVerified     DateTime
+  updatedAt        DateTime @updatedAt
 }
 
 // ---------- Item bank (§3.3) ----------
@@ -140,6 +221,7 @@ model Item {
   status               ItemStatus   @default(DRAFT) // DRAFT → REVIEWED → LIVE → RETIRED
   authoredBy           String // "human:<name>" | "ai-draft:<model>" | "seed" — provenance is mandatory
   reviewedBy           String? // human reviewer name; REQUIRED before LIVE (P3, AI-QC)
+  reviewNotes          String? // reviewer feedback when an item is returned to DRAFT
   createdAt            DateTime     @default(now())
 
   @@index([questionTypeId, status])
