@@ -1,0 +1,15 @@
+packages:
+  - apps/*
+  - packages/*
+# Security patches for transitive deps flagged by `pnpm audit` (CI gate).
+# Revisit whenever next/next-auth update their own ranges.
+overrides:
+  postcss: '>=8.5.18 <9'
+  sharp: '>=0.35.0'
+  brace-expansion: '>=5.0.8'
+allowBuilds:
+  '@prisma/client': true
+  '@prisma/engines': true
+  esbuild: true
+  prisma: true
+  sharp: true

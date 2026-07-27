@@ -1,0 +1,90 @@
+import NextAuth from 'next-auth';
+import Credentials from 'next-auth/providers/credentials';
+import { prisma } from '@cluecrew/db';
+import { verifyPassword } from '@/lib/passwords';
+import { sendEmail } from '@/lib/email';
+
+const MAX_FAILED_LOGINS = 5;
+const LOCKOUT_MINUTES = 15;
+
+export const { handlers, auth, signIn, signOut } = NextAuth({
+  trustHost: true,
+  session: { strategy: 'jwt', maxAge: 8 * 60 * 60 },
+  providers: [
+    Credentials({
+      credentials: { email: {}, password: {} },
+      async authorize(credentials) {
+        const email = typeof credentials?.email === 'string' ? credentials.email.toLowerCase().trim() : '';
+        const password = typeof credentials?.password === 'string' ? credentials.password : '';
+        if (!email || !password) return null;
+
+        const parent = await prisma.parentAccount.findUnique({ where: { email } });
+        if (!parent || parent.deletedAt) return null;
+
+        // DB-backed lockout (§4): survives restarts and multiple instances.
+        if (parent.lockedUntil && parent.lockedUntil > new Date()) return null;
+
+        const valid = await verifyPassword(parent.passwordHash, password);
+        if (!valid) {
+          const failedLogins = parent.failedLogins + 1;
+          const lock = failedLogins >= MAX_FAILED_LOGINS;
+          await prisma.parentAccount.update({
+            where: { id: parent.id },
+            data: {
+              failedLogins,
+              lockedUntil: lock ? new Date(Date.now() + LOCKOUT_MINUTES * 60 * 1000) : null,
+            },
+          });
+          if (lock) {
+            await sendEmail({
+              to: parent.email,
+              subject: 'ClueCrew: your account is temporarily locked',
+              text: `There were ${failedLogins} unsuccessful sign-in attempts, so we locked your account for ${LOCKOUT_MINUTES} minutes. If this was not you, please reset your password once the lock lifts.`,
+            });
+          }
+          return null;
+        }
+
+        // Email must be verified before the account is usable (§4).
+        if (!parent.emailVerified) return null;
+
+        if (parent.failedLogins > 0 || parent.lockedUntil) {
+          await prisma.parentAccount.update({
+            where: { id: parent.id },
+            data: { failedLogins: 0, lockedUntil: null },
+          });
+        }
+
+        return { id: parent.id, email: parent.email, name: parent.displayName };
+      },
+    }),
+  ],
+  callbacks: {
+    jwt({ token, user }) {
+      if (user?.id) token.parentId = user.id;
+      return token;
+    },
+    session({ session, token }) {
+      if (typeof token.parentId === 'string') session.parentId = token.parentId;
+      return session;
+    },
+  },
+});
+
+/** Returns the signed-in, non-deleted parent account or null. */
+export async function currentParent() {
+  const session = await auth();
+  if (!session?.parentId) return null;
+  const parent = await prisma.parentAccount.findUnique({ where: { id: session.parentId } });
+  if (!parent || parent.deletedAt) return null;
+  return parent;
+}
+
+export function isAdminEmail(email: string | null | undefined): boolean {
+  if (!email) return false;
+  const allowlist = (process.env.ADMIN_EMAILS ?? '')
+    .split(',')
+    .map((entry) => entry.trim().toLowerCase())
+    .filter(Boolean);
+  return allowlist.includes(email.toLowerCase());
+}

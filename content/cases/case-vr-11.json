@@ -1,0 +1,20 @@
+{
+  "kind": "case",
+  "case": {
+    "id": "case-vr-11",
+    "questionTypeId": "vr-11-number-series",
+    "title": "The Counting Culprit",
+    "narrativeIntro": {
+      "text": "The Counting Culprit leaves number trails wherever they go — and every trail follows a secret rule. Crack the rule, and you will know the culprit's next number before they do.",
+      "skippable": true
+    },
+    "modes": {
+      "watch": { "kind": "video", "assetRef": "placeholder/vr-11/watch.mp4", "maxSeconds": 90 },
+      "walk": { "kind": "faded-example", "assetRef": "placeholder/vr-11/walk.json" },
+      "see": { "kind": "visual", "assetRef": "placeholder/vr-11/see.json" },
+      "hear": { "kind": "audio", "assetRef": "placeholder/vr-11/hear.mp3" },
+      "try": { "kind": "practice" }
+    },
+    "orderInDistrict": 11
+  }
+}

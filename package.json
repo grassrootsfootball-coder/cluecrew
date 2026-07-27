@@ -1,0 +1,30 @@
+{
+  "name": "cluecrew",
+  "private": true,
+  "packageManager": "pnpm@11.0.9",
+  "engines": {
+    "node": ">=20.9"
+  },
+  "scripts": {
+    "dev": "pnpm db:setup && pnpm --filter @cluecrew/web dev",
+    "build": "pnpm --filter @cluecrew/db generate && pnpm --filter @cluecrew/web build",
+    "start": "pnpm --filter @cluecrew/web start",
+    "typecheck": "pnpm --filter @cluecrew/db generate && pnpm -r run typecheck",
+    "lint": "eslint .",
+    "test": "pnpm --filter @cluecrew/core test",
+    "e2e": "pnpm --filter @cluecrew/web e2e",
+    "db:setup": "pnpm --filter @cluecrew/db generate && pnpm --filter @cluecrew/db migrate:deploy && pnpm --filter @cluecrew/db seed",
+    "db:migrate": "pnpm --filter @cluecrew/db migrate:dev",
+    "db:migrate:check": "pnpm --filter @cluecrew/db migrate:check",
+    "jobs:hard-delete": "pnpm --filter @cluecrew/db jobs:hard-delete",
+    "scan:vocab": "node scripts/scan-vocab.mjs",
+    "validate:content": "pnpm --filter @cluecrew/core validate:content",
+    "audit": "pnpm audit --audit-level high"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.20.0",
+    "eslint": "^9.20.0",
+    "typescript": "^5.7.0",
+    "typescript-eslint": "^8.24.0"
+  }
+}

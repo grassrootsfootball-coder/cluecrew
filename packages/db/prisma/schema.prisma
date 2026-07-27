@@ -1,0 +1,292 @@
+// ClueCrew data model — BUILD-PHASE-1 §3. Model names are law (manifesto §7):
+// Case, CaseFile, Rank, WordVault, District. Naming drift fails review.
+//
+// Data minimisation is structural, not procedural (S1): there is NO field for
+// a child's surname, date of birth, school name, photo, or free-text "about me".
+// Adding one requires a manifesto amendment first.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider          = "postgresql"
+  url               = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+}
+
+// ---------- Accounts and families (§3.1) ----------
+
+model ParentAccount {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  passwordHash  String // argon2id
+  emailVerified DateTime?
+  displayName   String // how we address the parent, e.g. "David"
+  regionCode    String? // 11+ region, set by onboarding wizard (Phase 2)
+  targetSchools Json? // [{name, examBoard, examDate}] — parent-entered
+  // Auth throttling (§4): lockout with email notification on repeated failures
+  failedLogins  Int       @default(0)
+  lockedUntil   DateTime?
+
+  consentLog         ConsentEvent[]
+  children           ChildProfile[]
+  subscription       Subscription?
+  verificationTokens VerificationToken[]
+
+  createdAt DateTime  @default(now())
+  deletedAt DateTime? // soft delete; hard-delete job runs after 30 days
+
+  @@index([deletedAt])
+}
+
+model ChildProfile {
+  id        String  @id @default(cuid())
+  parentId  String
+  parent    ParentAccount @relation(fields: [parentId], references: [id], onDelete: Cascade)
+  crewName  String // first name or nickname ONLY — no surname field exists
+  yearGroup Int // 4, 5, or 6
+  examYear  Int? // e.g. 2028 — drives programme pacing
+  settings  Json // accessibility prefs: reducedMotion, dyslexiaFont, audioDefault
+  rank      Rank    @default(TRAINEE)
+
+  caseFiles       CaseFile[]
+  wordVault       WordVaultEntry[]
+  attempts        Attempt[]
+  sessions        Session[]
+  reviewSchedules ReviewSchedule[]
+
+  createdAt DateTime  @default(now())
+  deletedAt DateTime?
+}
+
+enum Rank {
+  TRAINEE
+  JUNIOR_DETECTIVE
+  DETECTIVE
+  SENIOR_DETECTIVE
+  CHIEF_INSPECTOR
+}
+
+model ConsentEvent {
+  id        String        @id @default(cuid())
+  parentId  String
+  parent    ParentAccount @relation(fields: [parentId], references: [id], onDelete: Cascade)
+  kind      String // "tos", "privacy", "child_profile_created", "writing_review_notice", "marketing_optin"
+  version   String // policy version consented to
+  createdAt DateTime      @default(now())
+}
+
+// Email verification (§4: parent verifies email before any child profile exists)
+model VerificationToken {
+  id        String        @id @default(cuid())
+  parentId  String
+  parent    ParentAccount @relation(fields: [parentId], references: [id], onDelete: Cascade)
+  tokenHash String        @unique // sha-256 of the emailed token; raw token never stored
+  expiresAt DateTime
+  usedAt    DateTime?
+  createdAt DateTime      @default(now())
+}
+
+// ---------- Subscription (§3.2 — schema only; Stripe wiring is Phase 2) ----------
+
+model Subscription {
+  id                String        @id @default(cuid())
+  parentId          String        @unique
+  parent            ParentAccount @relation(fields: [parentId], references: [id], onDelete: Cascade)
+  tier              Tier
+  stripeCustomerId  String?
+  stripeSubId       String?
+  status            String // trialing | active | past_due | canceled
+  commitmentEndsAt  DateTime? // for DMCC-compliant display of total contract value
+  renewalReminderAt DateTime? // scheduled reminder before renewal (L5)
+  createdAt         DateTime      @default(now())
+}
+
+enum Tier {
+  TWO_YEAR
+  ONE_YEAR
+  SUMMER
+}
+
+// ---------- Item bank (§3.3) ----------
+
+model QuestionType {
+  id       String   @id // stable slug: "vr-08-move-letter"
+  district District
+  name     String
+  glCode   String? // GL familiarisation numbering where applicable
+  mechanic String // slug of the game mechanic that renders it
+  items    Item[]
+  cases    Case[]
+}
+
+enum District {
+  VR
+  NVR
+  MATHS
+  ENGLISH
+}
+
+model Item {
+  id                   String       @id @default(cuid())
+  questionTypeId       String
+  questionType         QuestionType @relation(fields: [questionTypeId], references: [id])
+  difficultyTier       Int // 1–5 authored estimate; live calibration adjusts calibratedDifficulty
+  calibratedDifficulty Float? // updated nightly from attempt data
+  stem                 Json // structured content, never HTML strings
+  options              ItemOption[]
+  explanation          Json // per-mode explanation asset refs (watch/walk/see/hear)
+  status               ItemStatus   @default(DRAFT) // DRAFT → REVIEWED → LIVE → RETIRED
+  authoredBy           String // "human:<name>" | "ai-draft:<model>" | "seed" — provenance is mandatory
+  reviewedBy           String? // human reviewer name; REQUIRED before LIVE (P3, AI-QC)
+  createdAt            DateTime     @default(now())
+
+  @@index([questionTypeId, status])
+}
+
+enum ItemStatus {
+  DRAFT
+  REVIEWED
+  LIVE
+  RETIRED
+}
+
+model ItemOption {
+  id              String         @id @default(cuid())
+  itemId          String
+  item            Item           @relation(fields: [itemId], references: [id], onDelete: Cascade)
+  content         Json
+  isCorrect       Boolean
+  misconceptionId String? // REQUIRED on every incorrect option before item goes LIVE (P3)
+  misconception   Misconception? @relation(fields: [misconceptionId], references: [id])
+}
+
+model Misconception {
+  id          String       @id // slug: "vr-analogy-surface-match"
+  district    District
+  description String // teacher-facing
+  childHint   String // the authored hint shown when this distractor is chosen
+  options     ItemOption[]
+}
+
+model Case {
+  id              String       @id // slug: "case-vr-08"
+  questionTypeId  String
+  questionType    QuestionType @relation(fields: [questionTypeId], references: [id])
+  title           String // child-facing case name
+  narrativeIntro  Json // ≤30s of story (D5)
+  modes           Json // asset manifest for the five Modes (P1)
+  orderInDistrict Int
+  caseFiles       CaseFile[]
+}
+
+model CaseFile {
+  id           String       @id @default(cuid())
+  childId      String
+  child        ChildProfile @relation(fields: [childId], references: [id], onDelete: Cascade)
+  caseId       String
+  case         Case         @relation(fields: [caseId], references: [id])
+  masteryLevel Float        @default(0) // 0–1; mastery model in /packages/core
+  solvedAt     DateTime? // case "cracked"
+
+  @@unique([childId, caseId])
+}
+
+// ---------- Practice, scheduling, vocabulary (§3.4) ----------
+
+model Attempt {
+  id             String       @id @default(cuid())
+  childId        String
+  child          ChildProfile @relation(fields: [childId], references: [id], onDelete: Cascade)
+  itemId         String
+  sessionId      String
+  chosenOptionId String?
+  correct        Boolean
+  latencyMs      Int
+  context        String // "case_practice" | "warmup_review" | "boss_case" | "word_vault"
+  createdAt      DateTime     @default(now())
+
+  @@index([childId, createdAt])
+}
+
+model ReviewSchedule {
+  id           String       @id @default(cuid())
+  childId      String
+  child        ChildProfile @relation(fields: [childId], references: [id], onDelete: Cascade)
+  unitKind     String // "question_type" | "word"
+  unitId       String
+  dueAt        DateTime
+  intervalDays Float
+  easeFactor   Float        @default(2.3)
+  lapses       Int          @default(0)
+
+  @@unique([childId, unitKind, unitId])
+  @@index([childId, dueAt])
+}
+
+model Word {
+  id              String           @id // slug of the word
+  headword        String
+  definitionChild String // authored, reading age ≤9
+  sentence        String
+  rootFamily      String? // "latin-port", "greek-tele"
+  imageRef        String?
+  tier            Int // frequency/difficulty tier 1–5
+  vaultEntries    WordVaultEntry[]
+}
+
+model WordVaultEntry {
+  id           String       @id @default(cuid())
+  childId      String
+  child        ChildProfile @relation(fields: [childId], references: [id], onDelete: Cascade)
+  wordId       String
+  word         Word         @relation(fields: [wordId], references: [id])
+  collectedAt  DateTime     @default(now())
+  masteryLevel Float        @default(0)
+
+  @@unique([childId, wordId])
+}
+
+model Session {
+  id            String       @id @default(cuid())
+  childId       String
+  child         ChildProfile @relation(fields: [childId], references: [id], onDelete: Cascade)
+  startedAt     DateTime     @default(now())
+  endedAt       DateTime?
+  secondsActive Int          @default(0) // 15-min cap enforcement (D2) reads this
+}
+
+// ---------- Analytics spine (§6) ----------
+// Append-only. Deliberately no foreign keys: rows are removed by the
+// hard-delete job, not by cascade, and must never block account deletion.
+// Events NEVER contain free text a child wrote, item content, or anything
+// beyond IDs and enums (enforced in code via @cluecrew/core assertEvent).
+
+model Event {
+  id        String   @id @default(cuid())
+  childId   String?
+  parentId  String?
+  name      String // canonical names live in packages/core/src/events.ts
+  props     Json
+  createdAt DateTime @default(now())
+
+  @@index([name, createdAt])
+  @@index([childId, createdAt])
+  @@index([parentId, createdAt])
+}
+
+// ---------- Retention (§5: design the aggregation now, enable later) ----------
+// Anonymised daily rollup written by the aggregation job for attempt data older
+// than the child's exam year + 12 months. No childId — aggregate is by design.
+
+model AggregateDailyStat {
+  id             String   @id @default(cuid())
+  district       District
+  questionTypeId String
+  day            DateTime @db.Date
+  attempts       Int
+  correct        Int
+
+  @@unique([district, questionTypeId, day])
+}

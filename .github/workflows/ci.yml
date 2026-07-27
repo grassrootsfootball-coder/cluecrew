@@ -1,0 +1,99 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: cluecrew_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+
+    env:
+      APP_ENV: staging
+      DATABASE_URL: postgresql://postgres:postgres@localhost:5432/cluecrew_test
+      SHADOW_DATABASE_URL: postgresql://postgres:postgres@localhost:5432/cluecrew_shadow
+      AUTH_SECRET: ci-only-secret-not-used-anywhere-real
+      CRON_SECRET: ci-only-cron-secret
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Write root .env for workspace scripts
+        run: |
+          {
+            echo "APP_ENV=$APP_ENV"
+            echo "DATABASE_URL=$DATABASE_URL"
+            echo "SHADOW_DATABASE_URL=$SHADOW_DATABASE_URL"
+            echo "AUTH_SECRET=$AUTH_SECRET"
+            echo "CRON_SECRET=$CRON_SECRET"
+          } > .env
+
+      - name: Create shadow database
+        run: PGPASSWORD=postgres createdb -h localhost -U postgres cluecrew_shadow
+
+      - name: Prisma generate
+        run: pnpm --filter @cluecrew/db generate
+
+      - name: Apply migrations
+        run: pnpm --filter @cluecrew/db migrate:deploy
+
+      - name: Migration drift check
+        run: pnpm db:migrate:check
+
+      - name: Seed
+        run: pnpm --filter @cluecrew/db seed
+
+      - name: Typecheck
+        run: pnpm -r run typecheck
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Unit tests
+        run: pnpm test
+
+      - name: Content schema validation
+        run: pnpm validate:content
+
+      - name: Banned-vocabulary scan
+        run: pnpm scan:vocab
+
+      - name: Dependency audit
+        run: pnpm audit --audit-level high
+
+      - name: Build
+        run: pnpm build
+
+      - name: Install Playwright browsers
+        working-directory: apps/web
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: E2E (child-token isolation, CSP)
+        run: pnpm e2e

@@ -1,0 +1,25 @@
+# dependencies
+node_modules/
+
+# next.js
+.next/
+out/
+
+# builds
+dist/
+*.tsbuildinfo
+
+# env — secrets never live in the repo (BUILD-PHASE-1 §2)
+.env
+.env.*
+!.env.example
+
+# testing
+coverage/
+playwright-report/
+test-results/
+blob-report/
+
+# misc
+.DS_Store
+.vercel

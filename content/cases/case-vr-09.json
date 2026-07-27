@@ -1,0 +1,20 @@
+{
+  "kind": "case",
+  "case": {
+    "id": "case-vr-09",
+    "questionTypeId": "vr-09-letter-series",
+    "title": "The Alphabet Trail",
+    "narrativeIntro": {
+      "text": "Someone left a trail of letters through Crew HQ. Each letter is a stepping stone — work out the size of each step and you can tell exactly where the trail leads next.",
+      "skippable": true
+    },
+    "modes": {
+      "watch": { "kind": "video", "assetRef": "placeholder/vr-09/watch.mp4", "maxSeconds": 90 },
+      "walk": { "kind": "faded-example", "assetRef": "placeholder/vr-09/walk.json" },
+      "see": { "kind": "visual", "assetRef": "placeholder/vr-09/see.json" },
+      "hear": { "kind": "audio", "assetRef": "placeholder/vr-09/hear.mp3" },
+      "try": { "kind": "practice" }
+    },
+    "orderInDistrict": 9
+  }
+}

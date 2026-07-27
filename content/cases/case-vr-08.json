@@ -1,0 +1,20 @@
+{
+  "kind": "case",
+  "case": {
+    "id": "case-vr-08",
+    "questionTypeId": "vr-08-move-letter",
+    "title": "The Case of the Wandering Letter",
+    "narrativeIntro": {
+      "text": "A letter has slipped out of one word and wants to join another! Track it down and find the one move that makes both words real again.",
+      "skippable": true
+    },
+    "modes": {
+      "watch": { "kind": "video", "assetRef": "placeholder/vr-08/watch.mp4", "maxSeconds": 90 },
+      "walk": { "kind": "faded-example", "assetRef": "placeholder/vr-08/walk.json" },
+      "see": { "kind": "visual", "assetRef": "placeholder/vr-08/see.json" },
+      "hear": { "kind": "audio", "assetRef": "placeholder/vr-08/hear.mp3" },
+      "try": { "kind": "practice" }
+    },
+    "orderInDistrict": 8
+  }
+}

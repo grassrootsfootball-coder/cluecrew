@@ -1,0 +1,37 @@
+/* Token values are injected as CSS variables from @cluecrew/ui in the root
+   layout. Cream is the default page background — pure white is banned (D1/D4). */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--cc-cream);
+  color: var(--cc-ink);
+  font-family:
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+/* D4: dyslexia-aware — justified text is banned */
+p,
+li {
+  text-align: left;
+  max-width: 65ch;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

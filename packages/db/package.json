@@ -1,0 +1,34 @@
+{
+  "name": "@cluecrew/db",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./jobs/hard-delete": "./src/jobs/hard-delete.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "generate": "prisma generate",
+    "migrate:dev": "dotenv -e ../../.env -- prisma migrate dev",
+    "migrate:deploy": "dotenv -e ../../.env -- prisma migrate deploy",
+    "migrate:check": "node scripts/migrate-check.mjs",
+    "seed": "dotenv -e ../../.env -- tsx prisma/seed.ts",
+    "jobs:hard-delete": "dotenv -e ../../.env -- tsx src/jobs/hard-delete.ts",
+    "jobs:aggregate": "dotenv -e ../../.env -- tsx src/jobs/aggregate-old-attempts.ts",
+    "analytics:sample": "dotenv -e ../../.env -- tsx src/queries/attempts-per-day.ts"
+  },
+  "dependencies": {
+    "@cluecrew/core": "workspace:*",
+    "@prisma/client": "^6.4.0"
+  },
+  "devDependencies": {
+    "@node-rs/argon2": "^2.0.0",
+    "@types/node": "^22.20.1",
+    "dotenv": "^16.4.0",
+    "dotenv-cli": "^8.0.0",
+    "prisma": "^6.4.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
