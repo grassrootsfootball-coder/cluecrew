@@ -8,6 +8,7 @@ interface ChildSettings {
   reducedMotion?: boolean;
   dyslexiaFont?: boolean;
   audioDefault?: boolean;
+  soundEnabled?: boolean;
 }
 
 export default async function ChildrenPage({
@@ -77,6 +78,10 @@ export default async function ChildrenPage({
               <label className="cc-checkbox">
                 <input type="checkbox" name="reducedMotion" defaultChecked={Boolean(settings.reducedMotion)} />
                 <span>Reduce animation and movement</span>
+              </label>
+              <label className="cc-checkbox">
+                <input type="checkbox" name="soundEnabled" defaultChecked={settings.soundEnabled !== false} />
+                <span>Sound effects (quiet chimes; there is always a mute button too)</span>
               </label>
               <button className="cc-button-quiet" type="submit">
                 Save changes

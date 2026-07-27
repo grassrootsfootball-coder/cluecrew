@@ -9,6 +9,7 @@
 import dynamic from 'next/dynamic';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { mascotEvent } from './mascot-controller';
+import { playCue } from './sound-controller';
 import { Mascot } from './mascot';
 import { SpeakButton } from './speak-button';
 import { stemText } from './engines/shared';
@@ -86,6 +87,7 @@ export function PlayRunner({ childId }: { childId: string }) {
       if (next.kind === 'wind_down') {
         finished.current = true;
         mascotEvent('wind_down');
+        playCue('wind-down');
         const endResponse = await fetch(`/api/crew/${childId}/session`, { method: 'DELETE' });
         setEnded(await endResponse.json());
         setActivity(next);
@@ -123,14 +125,17 @@ export function PlayRunner({ childId }: { childId: string }) {
       setBeads((count) => count + 1);
       if (result.cracked) {
         mascotEvent('case_cracked');
+        playCue('case-cracked');
         setCeremony(result);
         return;
       }
       if (skipFeedbackBeat) {
+        playCue('word-collected');
         await loadActivity();
         return;
       }
       mascotEvent(result.correct ? 'answer_correct' : 'answer_not_yet');
+      playCue(result.correct ? 'correct' : 'not-yet');
       setFeedback(result);
     } finally {
       setBusy(false);

@@ -1,5 +1,6 @@
 import { childFromCookie, childHasAccess, childSettings } from '@/lib/crew/server';
 import { SwRegister } from '@/components/crew/sw-register';
+import { MuteButton } from '@/components/crew/mute-button';
 import './crew.css';
 
 /**
@@ -42,6 +43,7 @@ export default async function CrewLayout({ children }: { children: React.ReactNo
   return (
     <div className={classes}>
       <SwRegister />
+      <MuteButton soundEnabled={settings.soundEnabled !== false} />
       {children}
     </div>
   );

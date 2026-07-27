@@ -30,6 +30,9 @@ model ParentAccount {
   lockedUntil   DateTime?
   // Admin CMS access (BUILD-PHASE-2 §5). Parents are NONE; staff roles gate /admin.
   staffRole     StaffRole @default(NONE)
+  // One-tap unsubscribe from the weekly email (BUILD-PHASE-5 §4) —
+  // never touches transactional email.
+  weeklyOptOut  Boolean   @default(false)
 
   consentLog          ConsentEvent[]
   children            ChildProfile[]

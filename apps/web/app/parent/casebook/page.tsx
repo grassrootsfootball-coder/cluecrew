@@ -1,12 +1,28 @@
-export default function CasebookPage() {
+import { currentParent } from '@/lib/auth';
+import { visibleChapters } from '@/lib/casebook/chapters';
+
+export default async function CasebookPage() {
+  await currentParent();
+  const chapters = visibleChapters(process.env.APP_ENV);
+
   return (
     <main className="cc-container">
       <h1>The Parents&apos; Casebook</h1>
-      <p>
-        A plain-English course that explains exactly what the 11+ involves in your region, how
-        selection works, and what to do (and not do) each term. It lands here in a later build
-        phase — the shell exists now so you know it is coming.
+      <p className="cc-muted">
+        The 11+ explained for busy parents — including anyone who did not grow up in the UK system.
+        Each chapter is under five minutes.
       </p>
+      <ol style={{ paddingLeft: '1.25rem' }}>
+        {chapters.map((chapter) => (
+          <li key={chapter.id} style={{ margin: '0.6rem 0' }}>
+            <a href={`/parent/casebook/${chapter.id}`}>{chapter.title}</a>{' '}
+            <span className="cc-muted">
+              · {chapter.minutes} min read
+              {chapter.sensitive && process.env.APP_ENV !== 'production' ? ' · awaiting final approval' : ''}
+            </span>
+          </li>
+        ))}
+      </ol>
     </main>
   );
 }

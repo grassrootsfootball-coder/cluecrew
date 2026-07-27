@@ -9,6 +9,7 @@ Owner: David (controller). Basis: UK GDPR, Data Protection Act 2018, ICO Age App
 | 0.2 | 2026-07-27 | 2 | Payments data (Stripe as processor), bursary evidence handling, email provider as processor, admin roles/audit |
 | 0.3 | 2026-07-27 | 3 | Derived learning records (mastery, scheduling, adaptivity state) documented as pseudonymised; L2 firewall automated |
 | 0.4 | 2026-07-27 | 4 | Child-testing data handling; text-to-speech approach (on-device, no processor yet) |
+| 0.5 | 2026-07-27 | 5 | Weekly email (no open tracking), marketing analytics (Plausible, cookieless, marketing routes only), illustration/animation contractor handling |
 
 ---
 
@@ -139,7 +140,22 @@ The planned Phase 5 upgrade (pre-generated TTS files from authored strings)
 would send only AUTHORED CONTENT — never child data — to a TTS provider;
 provider selection will add a processor entry here before use.
 
-## 10. Open items for next phase gates
+## 10. Phase 5 additions
+
+- **Weekly summary email:** content derives from the same pseudonymised learning
+  records (§8); addressed to the parent; child referred to by crew name only.
+  **Open/click tracking is OFF by default and stays off** — disable link/open
+  tracking in the Resend dashboard (checklist item). One-tap signed
+  unsubscribe; opt-out stored on the account; transactional email unaffected.
+- **Marketing analytics:** Plausible (cookieless, no personal data, EU-hosted)
+  on marketing routes only, and only when configured. Child-facing routes are
+  protected twice over: the component is never rendered there AND the /crew
+  CSP blocks all third-party scripts.
+- **Contractors (illustrator / Rive animator / sound):** receive brand assets
+  and briefs only — never any user or child data. No processor relationship
+  arises; contracts cover IP assignment and confidentiality (mascot brief).
+
+## 11. Open items for next phase gates
 
 - Phase 2: onboarding wizard region data, Stripe processor agreement, verifiable parental consent flow detail, marketing consent UX, data export UI.
 - Phase 6: Writing Room two-pass pipeline DPIA section, DSL appointment (S4), free-text PII screening (S5), OSA scope assessment.

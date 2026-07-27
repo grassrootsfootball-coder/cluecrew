@@ -1,5 +1,5 @@
 import { currentParent } from '@/lib/auth';
-import { changePasswordAction } from '@/lib/actions/parent';
+import { changePasswordAction, setWeeklyEmailAction } from '@/lib/actions/parent';
 
 export default async function AccountPage({
   searchParams,
@@ -35,6 +35,22 @@ export default async function AccountPage({
           </label>
           <button className="cc-button" type="submit">
             Change password
+          </button>
+        </form>
+      </div>
+
+      <div className="cc-card">
+        <h2 style={{ marginTop: 0 }}>Weekly summary email</h2>
+        <p className="cc-muted">
+          One concrete win, one thing to try, the runway — under a minute to read, each Sunday.
+        </p>
+        <form className="cc-form" action={setWeeklyEmailAction}>
+          <label className="cc-checkbox">
+            <input type="checkbox" name="weekly" defaultChecked={!parent.weeklyOptOut} />
+            <span>Send me the Sunday summary</span>
+          </label>
+          <button className="cc-button-quiet" type="submit">
+            Save
           </button>
         </form>
       </div>

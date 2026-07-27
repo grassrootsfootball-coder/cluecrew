@@ -88,6 +88,9 @@ jobs:
       - name: Reading-age lint (child-facing content)
         run: pnpm check:reading-age
 
+      - name: Asset manifest + image weight budget
+        run: pnpm check:assets
+
       - name: Content schema validation
         run: pnpm validate:content
 

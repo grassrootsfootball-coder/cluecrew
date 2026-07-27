@@ -295,6 +295,25 @@
   transform: rotate(-12deg);
 }
 
+/* Loading shimmer (§8): the magnifying glass sweeps while a case file opens. */
+.crew-shimmer {
+  display: grid;
+  place-items: center;
+  gap: 0.75rem;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.crew-shimmer .glass {
+  font-size: 2.4rem;
+  animation: crew-sweep 1.4s ease-in-out infinite;
+}
+
+@keyframes crew-sweep {
+  0%, 100% { transform: translateX(-14px) rotate(-8deg); }
+  50% { transform: translateX(14px) rotate(8deg); }
+}
+
 @keyframes crew-spark {
   0% { transform: scale(0.6); opacity: 0; }
   40% { transform: scale(1.15); opacity: 1; }

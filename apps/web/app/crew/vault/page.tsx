@@ -25,9 +25,24 @@ export default async function VaultPage() {
   return (
     <main className="crew-stage">
       <h1>The Word Vault</h1>
-      <p className="cc-muted">
-        {entries.length} words collected. Tap a card to flip it — gilded edges mean you really know it.
-      </p>
+      {entries.length === 0 ? (
+        <div className="crew-panel crew-shimmer">
+          <span className="glass" aria-hidden>
+            🔍
+          </span>
+          <p style={{ margin: 0 }}>
+            Your Vault is waiting for its first word. Every warm-up brings three new Word Cards —
+            start today&apos;s loop and the shelves begin to fill.
+          </p>
+          <a className="crew-tap primary" href="/crew">
+            To Crew HQ
+          </a>
+        </div>
+      ) : (
+        <p className="cc-muted">
+          {entries.length} words collected. Tap a card to flip it — gilded edges mean you really know it.
+        </p>
+      )}
 
       {[...shelves.entries()].map(([shelf, shelfWords]) => {
         const collectedHere = shelfWords.filter((word) => entryByWord.has(word.id));

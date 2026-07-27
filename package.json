@@ -28,7 +28,9 @@
     "sim:report": "pnpm --filter @cluecrew/core sim:report",
     "jobs:calibrate": "pnpm --filter @cluecrew/db jobs:calibrate",
     "validate:content": "pnpm --filter @cluecrew/core validate:content",
-    "audit": "pnpm audit --audit-level high"
+    "audit": "pnpm audit --audit-level high",
+    "check:assets": "node scripts/check-assets.mjs",
+    "jobs:weekly-email": "echo \"POST /api/jobs/weekly-email with CRON_SECRET (Sunday 17:00 Europe/London)\""
   },
   "devDependencies": {
     "@eslint/js": "^9.20.0",

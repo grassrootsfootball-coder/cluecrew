@@ -1,0 +1,46 @@
+{
+  "note": "Asset manifest (BUILD-PHASE-5 §2). Every shipped visual/audio asset needs an entry with provenance, mirroring the item-bank stance. provenance: human:<name> | ai-assisted-human-finished:<name> | code-placeholder. No raw AI output ships child-facing. checked by scripts/check-assets.mjs",
+  "assets": [
+    {
+      "path": "assets/brand/cluecrew-logo.svg",
+      "provenance": "human:brand-concept-v1",
+      "childFacing": true,
+      "status": "concept-pending-designer-final"
+    },
+    {
+      "path": "assets/brand/cluecrew-logo-reversed.svg",
+      "provenance": "human:brand-concept-v1",
+      "childFacing": true,
+      "status": "concept-pending-designer-final"
+    },
+    {
+      "path": "assets/brand/cluecrew-mark.svg",
+      "provenance": "human:brand-concept-v1",
+      "childFacing": true,
+      "status": "concept-pending-designer-final"
+    },
+    {
+      "path": "assets/brand/cluecrew-brand-board.png",
+      "provenance": "human:brand-concept-v1",
+      "childFacing": false,
+      "status": "reference"
+    },
+    {
+      "path": "apps/web/public/cluecrew-logo.svg",
+      "provenance": "human:brand-concept-v1",
+      "childFacing": true,
+      "status": "concept-pending-designer-final"
+    },
+    {
+      "path": "apps/web/public/favicon.svg",
+      "provenance": "human:brand-concept-v1",
+      "childFacing": true,
+      "status": "concept-pending-designer-final"
+    }
+  ],
+  "expected": [
+    { "path": "apps/web/public/mascot.riv", "provenance": "human:<rive-animator>", "childFacing": true, "maxBytes": 256000 },
+    { "path": "apps/web/public/sounds/*", "provenance": "human:<sound-designer-or-licensed>", "childFacing": true },
+    { "path": "apps/web/public/art/*", "provenance": "human or ai-assisted-human-finished", "childFacing": true }
+  ]
+}

@@ -35,6 +35,7 @@ const childSchema = z.object({
   reducedMotion: z.boolean(),
   dyslexiaFont: z.boolean(),
   audioDefault: z.boolean(),
+  soundEnabled: z.boolean(),
 });
 
 export async function addChildAction(formData: FormData): Promise<void> {
@@ -51,6 +52,7 @@ export async function addChildAction(formData: FormData): Promise<void> {
     reducedMotion: formData.get('reducedMotion') === 'on',
     dyslexiaFont: formData.get('dyslexiaFont') === 'on',
     audioDefault: formData.get('audioDefault') === 'on',
+    soundEnabled: formData.get('soundEnabled') === 'on',
   });
 
   const child = await prisma.childProfile.create({
@@ -63,6 +65,7 @@ export async function addChildAction(formData: FormData): Promise<void> {
         reducedMotion: parsed.reducedMotion,
         dyslexiaFont: parsed.dyslexiaFont,
         audioDefault: parsed.audioDefault,
+        soundEnabled: parsed.soundEnabled,
       },
     },
   });
@@ -88,6 +91,7 @@ export async function updateChildAction(formData: FormData): Promise<void> {
     reducedMotion: formData.get('reducedMotion') === 'on',
     dyslexiaFont: formData.get('dyslexiaFont') === 'on',
     audioDefault: formData.get('audioDefault') === 'on',
+    soundEnabled: formData.get('soundEnabled') === 'on',
   });
 
   await prisma.childProfile.update({
@@ -100,10 +104,21 @@ export async function updateChildAction(formData: FormData): Promise<void> {
         reducedMotion: parsed.reducedMotion,
         dyslexiaFont: parsed.dyslexiaFont,
         audioDefault: parsed.audioDefault,
+        soundEnabled: parsed.soundEnabled,
       },
     },
   });
   redirect('/parent/children');
+}
+
+export async function setWeeklyEmailAction(formData: FormData): Promise<void> {
+  const parent = await currentParent();
+  if (!parent) redirect('/login');
+  await prisma.parentAccount.update({
+    where: { id: parent.id },
+    data: { weeklyOptOut: formData.get('weekly') !== 'on' },
+  });
+  redirect('/parent/account?weekly=saved');
 }
 
 /** Archive = soft delete; the retention job hard-deletes after 30 days. */

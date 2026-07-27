@@ -7,6 +7,8 @@ export interface ChildSettings {
   reducedMotion?: boolean;
   dyslexiaFont?: boolean;
   audioDefault?: boolean;
+  /** Parent default-off option for sound effects (§3). */
+  soundEnabled?: boolean;
   sessionMinutes?: number;
 }
 
