@@ -603,13 +603,32 @@
   transform: translateY(-4px) scale(1.02);
 }
 
+/*
+ * Locked doors read as dimmed and mysterious through BORDER and WASH, never
+ * through container opacity: opacity would compound with the sub-label's own
+ * and crush the text to 2.37:1. Text stays full-contrast (D4 / WCAG 2.2 AA).
+ */
 .crew-door.locked {
-  opacity: 0.55;
   border-style: dashed;
+  border-color: color-mix(in srgb, var(--cc-ink) 26%, transparent);
+  background: color-mix(in srgb, var(--cc-ink) 5%, transparent);
+  cursor: default;
 }
 
 .crew-door.locked:hover {
   transform: none;
+}
+
+/* Only the decorative glyphs dim; contrast-bearing text never does. */
+.crew-door.locked .door-glyph {
+  opacity: 0.5;
+}
+
+/* 75% ink over cream ≈ 6.2:1 — muted in look, safe in contrast. */
+.crew-door .door-sub {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: color-mix(in srgb, var(--cc-ink) 75%, transparent);
 }
 
 .crew-location {

@@ -3,12 +3,31 @@
 | Version | Date | Change |
 |---|---|---|
 | 0.1 | 2026-07-27 | Automated pass wired into CI; manual checklist first pass; AT session pending |
+| 0.2 | 2026-07-28 | Contrast defect found and fixed on Crew HQ locked doors; axe now zero critical AND zero serious across all route families |
+
+## Findings and fixes
+
+### F-001 — Locked district doors failed AA contrast (fixed 2026-07-28)
+
+`.crew-door.locked` dimmed the whole card with `opacity: 0.55`, which compounded
+with the sub-label's own `.cc-muted { opacity: 0.75 }` to an effective 0.41 —
+measured at **2.37:1** for "Locked. Not your patch yet." and **3.42:1** for the
+`? ? ?` glyph, against the 4.5:1 requirement. Container opacity is the trap: it
+dims text you did not intend to dim.
+
+Fix: the locked state now reads through a dashed border and a 5% ink wash, with
+only the decorative padlock glyph dimmed. Text uses a `.door-sub` colour
+(75% ink over cream ≈ 6.2:1). The doors still read as locked and mysterious —
+verified by screenshot — and the text is legible. Re-run: zero critical, zero
+serious.
 
 ## Automated (axe, in CI — `apps/web/e2e/a11y.spec.ts`)
 
 - Scope: marketing, auth, Parent HQ, Casebook, child app (HQ, district, vault, case intro).
 - Gate: **zero critical violations** fails the build. Serious findings print for this document.
-- Status: green at time of writing (see CI run for the current list of serious/moderate advisories).
+- Status (2026-07-28): **zero critical and zero serious** across marketing, auth,
+  Parent HQ, Casebook and the child app. One serious finding was raised and
+  fixed in this pass — see F-001.
 
 ## Manual checklist (2.2-specific criteria included)
 

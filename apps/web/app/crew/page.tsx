@@ -58,14 +58,18 @@ export default async function CrewHqPage() {
         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
           <a className="crew-door" href="/crew/district">
             <span>VR District</span>
-            <span className="cc-muted">{countWord(cracked, 'case')} cracked</span>
+            <span className="door-sub">{countWord(cracked, 'case')} cracked</span>
             <span aria-hidden>🚪</span>
           </a>
           {[0, 1, 2].map((index) => (
             <div key={index} className="crew-door locked" aria-label={VOICE.lockedDistrict}>
-              <span aria-hidden>? ? ?</span>
-              <span className="cc-muted">{VOICE.lockedDistrict}</span>
-              <span aria-hidden>🔒</span>
+              <span className="door-sub" aria-hidden>
+                ? ? ?
+              </span>
+              <span className="door-sub">{VOICE.lockedDistrict}</span>
+              <span className="door-glyph" aria-hidden>
+                🔒
+              </span>
             </div>
           ))}
         </div>
