@@ -379,9 +379,12 @@ async function seedTestFamily(): Promise<void> {
       passwordHash,
       emailVerified: new Date(),
       displayName: 'Test Parent',
-      regionCode: 'gl-birmingham',
+      // Must match a Region.id from content/regions.json — an orphan code
+      // silently falls back to "Not sure yet / other area" wherever the
+      // registry is rendered (Casebook ch. 2, onboarding, Parent HQ).
+      regionCode: 'birmingham',
     },
-    update: { passwordHash },
+    update: { passwordHash, regionCode: 'birmingham' },
   });
 
   const children = [
