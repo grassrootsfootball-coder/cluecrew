@@ -20,8 +20,19 @@ export interface Chapter {
   paragraphs: string[];
 }
 
-/** David: add 'supporting-without-pressure' and 'the-other-doors' here to approve. */
-export const APPROVED_SENSITIVE_CHAPTERS: string[] = [];
+/**
+ * Chapters 6 and 9 carry the mission, so BUILD-PHASE-5 §5 requires David's
+ * personal approval before they publish. Approval is recorded by listing the
+ * chapter id here.
+ *
+ * Approved by David, 2026-07-28 (both chapters, drafted by Claude Code and
+ * approved on his instruction in session). Removing an id here un-publishes
+ * that chapter immediately — the control stays live for future edits.
+ */
+export const APPROVED_SENSITIVE_CHAPTERS: string[] = [
+  'supporting-without-pressure',
+  'the-other-doors',
+];
 
 export const CHAPTERS: Chapter[] = [
   {
@@ -153,6 +164,11 @@ export const CHAPTERS: Chapter[] = [
     ],
   },
 ];
+
+/** A mission-critical chapter still waiting on David's personal approval (§5). */
+export function awaitingApproval(chapter: Chapter): boolean {
+  return Boolean(chapter.sensitive) && !APPROVED_SENSITIVE_CHAPTERS.includes(chapter.id);
+}
 
 export function visibleChapters(env: string | undefined): Chapter[] {
   const production = env === 'production';

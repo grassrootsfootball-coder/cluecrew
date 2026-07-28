@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import { REGION_CAVEAT, UNKNOWN_REGION } from '@cluecrew/core';
 import { prisma } from '@cluecrew/db';
 import { currentParent } from '@/lib/auth';
-import { visibleChapters } from '@/lib/casebook/chapters';
+import { awaitingApproval, visibleChapters } from '@/lib/casebook/chapters';
 
 export default async function ChapterPage({ params }: { params: Promise<{ chapterId: string }> }) {
   const parent = (await currentParent())!;
@@ -19,7 +19,7 @@ export default async function ChapterPage({ params }: { params: Promise<{ chapte
     <main className="cc-container">
       <p className="cc-muted">
         Chapter {chapter.number} · {chapter.minutes} min read
-        {chapter.sensitive && process.env.APP_ENV !== 'production' ? ' · awaiting final approval' : ''}
+        {awaitingApproval(chapter) ? ' · awaiting final approval' : ''}
       </p>
       <h1>{chapter.title}</h1>
       {chapter.paragraphs.map((paragraph, index) => (

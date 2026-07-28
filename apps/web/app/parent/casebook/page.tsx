@@ -1,5 +1,5 @@
 import { currentParent } from '@/lib/auth';
-import { visibleChapters } from '@/lib/casebook/chapters';
+import { awaitingApproval, visibleChapters } from '@/lib/casebook/chapters';
 
 export default async function CasebookPage() {
   await currentParent();
@@ -18,7 +18,7 @@ export default async function CasebookPage() {
             <a href={`/parent/casebook/${chapter.id}`}>{chapter.title}</a>{' '}
             <span className="cc-muted">
               · {chapter.minutes} min read
-              {chapter.sensitive && process.env.APP_ENV !== 'production' ? ' · awaiting final approval' : ''}
+              {awaitingApproval(chapter) ? ' · awaiting final approval' : ''}
             </span>
           </li>
         ))}
