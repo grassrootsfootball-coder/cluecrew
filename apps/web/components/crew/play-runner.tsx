@@ -111,8 +111,14 @@ export function PlayRunner({ childId }: { childId: string }) {
 
   const seconds = () => Math.min(600, Math.round((Date.now() - shownAt.current) / 1000));
 
-  const loadActivity = useCallback(async () => {
-    if (loading.current || finished.current) return;
+  /**
+   * Returns whether it actually loaded something. Callers must know: the
+   * guards below make this a NO-OP while a load is in flight or once the
+   * session has finished, so treating it as "recovery happened" is how a
+   * child ends up on a loading screen that never resolves.
+   */
+  const loadActivity = useCallback(async (): Promise<boolean> => {
+    if (loading.current || finished.current) return false;
     loading.current = true;
     try {
       setSelected(null);
@@ -147,19 +153,21 @@ export function PlayRunner({ childId }: { childId: string }) {
             mascotEvent('wind_down');
           }, 3000);
         }
-        return;
+        return true;
       }
-      if (finished.current) return;
+      if (finished.current) return true;
       if (next.kind === 'teachback') mascotEvent('teachback_shown');
       else if (next.kind === 'item' || next.kind === 'word_review') mascotEvent('question_shown');
       else mascotEvent('browsing');
       setActivity(next);
+      return true;
     } catch {
       // Without this the child sat on "Following the trail…" for ever: a
       // single failed request left activity null with nothing to retry it,
       // and no error was surfaced at all. Errors are in-world and always
       // offer a way onward (Addendum A §1.1 rule 4).
       setTrouble(beatLine('trouble'));
+      return false;
     } finally {
       loading.current = false;
     }
@@ -192,7 +200,14 @@ export function PlayRunner({ childId }: { childId: string }) {
       return;
     }
     if (!response.ok) {
-      await loadActivity();
+      // The server rejects an answer with 409 when it has no pending question
+      // for us — normally because the session already moved on. Recovery used
+      // to be a bare loadActivity() call, but that is a no-op while a load is
+      // in flight or once the session has finished, so a 409 could leave the
+      // child on a loading screen with no error and nothing to tap. Only claim
+      // recovery if it actually happened.
+      const recovered = await loadActivity();
+      if (!recovered && !finished.current) setTrouble(beatLine('trouble'));
       return;
     }
     const result = (await response.json()) as AnswerResult;
