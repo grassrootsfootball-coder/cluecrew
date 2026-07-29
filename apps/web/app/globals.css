@@ -147,3 +147,219 @@ li {
     transition: none !important;
   }
 }
+
+/* ---------------------------------------------------------------------------
+ * Marketing surfaces.
+ *
+ * The illustration set is not commissioned yet, so hierarchy here comes from
+ * type scale, banding and the canonical palette rather than pictures. Cream
+ * stays the page; the hero band is a warm tint of it, never pure white
+ * (manifesto §6), and amber is reserved for the one action that matters.
+ * ------------------------------------------------------------------------ */
+
+.mk-hero {
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--cc-amber) 12%, var(--cc-cream)) 0%,
+    var(--cc-cream) 100%
+  );
+  border-bottom: 1px solid color-mix(in srgb, var(--cc-ink) 10%, transparent);
+  padding: 2.5rem 1.5rem 3rem;
+}
+
+.mk-hero-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .mk-hero-inner {
+    grid-template-columns: 1.05fr 0.95fr;
+  }
+}
+
+.mk-hero-line {
+  font-size: clamp(1.9rem, 4.2vw, 2.9rem);
+  line-height: 1.15;
+  margin: 1.1rem 0 0.6rem;
+  max-width: 18ch;
+}
+
+.mk-hero-sub {
+  font-size: 1.1rem;
+  max-width: 44ch;
+  margin: 0 0 1.4rem;
+}
+
+.mk-hero-cta {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.mk-hero-note {
+  font-size: 0.95rem;
+  color: color-mix(in srgb, var(--cc-ink) 75%, transparent);
+}
+
+/* The product peek — real patterns, real tokens, no image weight. */
+.mk-peek {
+  background: color-mix(in srgb, var(--cc-ink) 92%, #000);
+  border-radius: 20px;
+  padding: 14px;
+  box-shadow: 0 18px 40px -18px color-mix(in srgb, var(--cc-ink) 55%, transparent);
+}
+
+.mk-peek-screen {
+  background: var(--cc-cream);
+  border-radius: 12px;
+  padding: 1.1rem;
+}
+
+.mk-peek-stem {
+  font-weight: 700;
+  margin: 0 0 0.8rem;
+}
+
+.mk-peek-tiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.mk-peek-tile {
+  min-width: 34px;
+  text-align: center;
+  font-weight: 800;
+  border: 2px solid color-mix(in srgb, var(--cc-ink) 25%, transparent);
+  border-radius: 8px;
+  padding: 0.35rem 0.4rem;
+  background: #fdfcf9;
+}
+
+.mk-peek-arrow {
+  font-weight: 800;
+  padding: 0 0.3rem;
+}
+
+/* Coral is the try-again colour and only ever that (D1). */
+.mk-peek-notyet {
+  border-left: 5px solid var(--cc-coral);
+  background: color-mix(in srgb, var(--cc-coral) 12%, transparent);
+  border-radius: 0 10px 10px 0;
+  padding: 0.6rem 0.85rem;
+}
+
+.mk-peek-caption {
+  margin: 0.7rem 0 0;
+  font-size: 0.9rem;
+  color: color-mix(in srgb, var(--cc-ink) 75%, transparent);
+}
+
+.mk-section {
+  margin: 3rem 0;
+}
+
+.mk-section h2 {
+  font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+  margin-bottom: 1rem;
+}
+
+.mk-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.mk-step {
+  background: color-mix(in srgb, var(--cc-cream) 55%, #ffffff 45%);
+  border: 1px solid color-mix(in srgb, var(--cc-ink) 12%, transparent);
+  border-radius: 14px;
+  padding: 1.1rem 1.2rem;
+}
+
+.mk-step h3 {
+  margin: 0.5rem 0 0.4rem;
+  font-size: 1.1rem;
+}
+
+.mk-step p {
+  margin: 0;
+}
+
+.mk-step-num {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--cc-amber);
+  color: var(--cc-ink);
+  font-weight: 800;
+}
+
+.mk-grid {
+  display: grid;
+  gap: 1.1rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.mk-feature {
+  border-left: 4px solid color-mix(in srgb, var(--cc-vr-teal) 60%, var(--cc-ink));
+  padding: 0.2rem 0 0.2rem 1rem;
+}
+
+.mk-feature h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+}
+
+.mk-feature p {
+  margin: 0;
+}
+
+.mk-price,
+.mk-bursary {
+  background: color-mix(in srgb, var(--cc-cream) 50%, #ffffff 50%);
+  border: 1px solid color-mix(in srgb, var(--cc-ink) 14%, transparent);
+  border-radius: 16px;
+  padding: 1.4rem 1.5rem;
+}
+
+.mk-price-line {
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem;
+}
+
+.mk-regions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+}
+
+.mk-footer {
+  border-top: 1px solid color-mix(in srgb, var(--cc-ink) 12%, transparent);
+  padding: 1.6rem 0 2.5rem;
+  margin-top: 3rem;
+}
+
+.mk-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.2rem;
+  margin: 0 0 0.7rem;
+}
