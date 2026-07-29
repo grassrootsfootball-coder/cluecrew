@@ -28,7 +28,10 @@ export default async function CrewHqPage() {
           <p style={{ margin: '0.2rem 0' }}>
             <strong>{crew.rankLabel}</strong>
             {' · '}
-            <span aria-label={`Streak lantern: ${crew.streak.state}`}>
+            {/* role="img": aria-label on a generic span is prohibited and
+                would be discarded, leaving the lantern silent (its emoji is
+                aria-hidden). */}
+            <span role="img" aria-label={`Streak lantern: ${crew.streak.state}`}>
               <span className="crew-lantern" aria-hidden>
                 🏮
               </span>{' '}
@@ -65,8 +68,11 @@ export default async function CrewHqPage() {
             <span className="door-sub">{countWord(cracked, 'case')} cracked</span>
             <span aria-hidden>🚪</span>
           </a>
+          {/* No aria-label on the locked doors: it is prohibited on a generic
+              div, and it only duplicated the visible label inside, which is
+              announced already. */}
           {[0, 1, 2].map((index) => (
-            <div key={index} className="crew-door locked" aria-label={VOICE.lockedDistrict}>
+            <div key={index} className="crew-door locked">
               <span className="door-sub" aria-hidden>
                 ? ? ?
               </span>

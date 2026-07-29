@@ -4,6 +4,33 @@
 |---|---|---|
 | 0.1 | 2026-07-27 | Automated pass wired into CI; manual checklist first pass; AT session pending |
 | 0.2 | 2026-07-28 | Contrast defect found and fixed on Crew HQ locked doors; axe now zero critical AND zero serious across all route families |
+| 0.3 | 2026-07-29 | /crew/play (mid-session) brought under audit; prohibited-ARIA and rail contrast defects found and fixed; axe rule set widened |
+
+### F-002 — Prohibited ARIA on generic elements, and rail contrast (fixed 2026-07-29)
+
+Adding a mid-session Lighthouse page (`/crew/play`, parked on a practice item)
+scored **90** on accessibility where every other page scored 100. Two defects,
+both on the screen children use most:
+
+1. **`aria-prohibited-attr`.** `aria-label` was set on generic `<div>`/`<span>`
+   elements: the progress beads, the stowaway engine's tiled words (PLANT /
+   RAIN), the Crew HQ streak lantern, and the locked district doors. ARIA
+   prohibits `aria-label` on `role=generic`, so screen readers **discard it** —
+   and because the inner tiles are `aria-hidden`, those elements had no
+   accessible name at all. Fixed with `role="img"` where the label is the
+   content (beads, tiled word, lantern), and by deleting the redundant label on
+   the locked doors, whose visible text is already announced.
+2. **Rail contrast.** `.crew-rail .jump` used the canonical `vr-teal` as a text
+   colour: 3.2:1 on cream, below AA. District accents are accent colours, not
+   text colours. Now derived from the same token by mixing toward ink
+   (~5.5:1) rather than inventing a new hex, keeping manifesto §6 intact.
+
+**Why the existing axe suite missed all of this.** Two gaps, both closed:
+`/crew/play` was never audited (it needs a session driven to a practice item),
+and `AxeBuilder.withTags(['wcag2a','wcag2aa','wcag22aa'])` does not carry
+`aria-prohibited-attr`, so the suite reported a clean 100 on pages that had the
+defect. The suite now parks a session and audits `/crew/play`, and includes the
+ARIA rules explicitly. Result: 100/100/100 with zero failing audits.
 
 ## Findings and fixes
 

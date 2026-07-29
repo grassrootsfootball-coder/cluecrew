@@ -11,7 +11,11 @@ import { optionLabel, outcomeFor, stemText, type EngineProps } from './shared';
 function Word({ word, ghostLetter }: { word: string; ghostLetter?: string | null }) {
   let ghosted = false;
   return (
-    <span style={{ display: 'inline-flex', flexWrap: 'wrap' }} aria-label={word}>
+    // role="img" is load-bearing, not decoration: aria-label is PROHIBITED on
+    // a generic span, so without a role the label is discarded and a screen
+    // reader gets nothing at all (the letter tiles are aria-hidden). With it,
+    // the tiled word is announced once, as the word.
+    <span style={{ display: 'inline-flex', flexWrap: 'wrap' }} role="img" aria-label={word}>
       {word.split('').map((letter, index) => {
         const isGhost = !ghosted && ghostLetter != null && letter === ghostLetter && (ghosted = true);
         return (

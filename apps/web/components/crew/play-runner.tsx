@@ -341,7 +341,10 @@ export function PlayRunner({ childId }: { childId: string }) {
 
   const frame = (
     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '1rem' }}>
-      <div className="crew-beads" aria-label={`${beads} clues worked so far`}>
+      {/* role="img": aria-label is prohibited on a generic div, so the beads
+          would otherwise carry no accessible name. Beads only ever fill,
+          never drain (Addendum A §2.2), so the label counts work done. */}
+      <div className="crew-beads" role="img" aria-label={`${beads} clues worked so far`}>
         {Array.from({ length: Math.max(beads + 3, 8) }, (_, index) => (
           <span
             key={index}

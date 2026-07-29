@@ -65,6 +65,9 @@ if [ -z "$CREW_TOKEN" ]; then
 fi
 echo "  ✓ child session ready (${CHILD_ID})"
 
+echo "→ parking the session on a practice item so /crew/play measures the heaviest screen"
+node "${ROOT}/scripts/park-crew-session.mjs" "$BASE" "$CREW_TOKEN" "$CHILD_ID"
+
 echo "→ running Lighthouse CI"
 cd "$ROOT/apps/web"
 pnpm dlx @lhci/cli@0.14.x autorun \

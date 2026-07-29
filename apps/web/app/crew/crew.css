@@ -396,7 +396,11 @@
   width: 100%;
   text-align: center;
   font-weight: 700;
-  color: var(--cc-vr-teal);
+  /* The canonical vr-teal is an ACCENT, not a text colour: on cream it is
+     3.2:1 and fails AA. Derived from the same token (never a new hex) by
+     mixing toward ink, which lands at ~5.5:1. Manifesto §6: district accents
+     are canonical, and every text/background pair must pass AA. */
+  color: color-mix(in srgb, var(--cc-vr-teal) 60%, var(--cc-ink));
 }
 
 /* ---------- Word Vault ---------- */
