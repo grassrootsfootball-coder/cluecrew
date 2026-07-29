@@ -99,6 +99,11 @@ for (const { family, caseId } of FAMILY_CASES) {
     test.setTimeout(180_000);
     const { api, childId } = await childContext(page);
     const session = `/api/crew/${childId}/session`;
+    // All five family tests share the seed child, and starting a session
+    // RESUMES an open one — so without ending the previous test's session
+    // first, the requested caseId is ignored and this test parks on whatever
+    // the last one left behind. End it, then start the case we want.
+    await api.delete(session);
     await api.post(session, { data: { caseId } });
 
     let parked = false;
