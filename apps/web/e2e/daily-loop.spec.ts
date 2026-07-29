@@ -72,6 +72,7 @@ test('full Daily Loop: HQ → warm-up → case → plain closer → wind-down; m
   let sawPlainCloser = false;
   let sawAffirmation = false;
   let answered = 0;
+  let sawTrouble = false;
 
   // Any single click may race a re-render (the state moved on server-side);
   // treat that as progress and re-read the page.
@@ -93,6 +94,15 @@ test('full Daily Loop: HQ → warm-up → case → plain closer → wind-down; m
       lastTick = Date.now();
     }
     if (await page.getByTestId('wind-down').isVisible().catch(() => false)) break;
+
+    // A cold trail is recoverable, so recover — this loop used to burn its
+    // whole budget polling a loading screen that would never resolve.
+    if (await page.getByTestId('trouble').isVisible().catch(() => false)) {
+      sawTrouble = true;
+      lastBranch = 'trouble';
+      await tryClick(page.getByRole('button', { name: 'Pick the trail up again' }));
+      continue;
+    }
 
     // Crack ceremony → continue.
     if (await page.getByTestId('case-cracked').isVisible().catch(() => false)) {
@@ -173,6 +183,11 @@ test('full Daily Loop: HQ → warm-up → case → plain closer → wind-down; m
     }
     lastBranch = 'idle'; await page.waitForTimeout(400);
   }
+
+  // Not an assertion: a request can legitimately fail and be recovered from.
+  // But a run that needed the cold-trail path should say so rather than look
+  // identical to a clean one.
+  if (sawTrouble) console.log('[loop] recovered from a cold trail at least once');
 
   await expect(page.getByTestId('wind-down')).toBeVisible();
   expect(answered).toBeGreaterThan(3);

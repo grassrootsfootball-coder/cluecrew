@@ -94,6 +94,8 @@ export function PlayRunner({ childId }: { childId: string }) {
   const [ended, setEnded] = useState<EndResult | null>(null);
   const [rankUp, setRankUp] = useState<string | null>(null);
   const [teachStep, setTeachStep] = useState<number | null>(null);
+  /** The in-world cold-trail beat, shown instead of a dead loading screen. */
+  const [trouble, setTrouble] = useState<string | null>(null);
   // Deterministic on the first render (server and hydration agree), then
   // rotated from an effect so the line still varies between visits. A
   // useState initializer would run on BOTH server and client and pick two
@@ -117,7 +119,14 @@ export function PlayRunner({ childId }: { childId: string }) {
       setFeedback(null);
       setOutcome(null);
       setTeachStep(null);
-      const response = await fetch(`/api/crew/${childId}/session/activity`);
+      setTrouble(null);
+      // A hung request must become a cold trail too, not an eternal loading
+      // screen: a catch only fires when a request FAILS, never when it simply
+      // never answers.
+      const response = await fetch(`/api/crew/${childId}/session/activity`, {
+        signal: AbortSignal.timeout(15_000),
+      });
+      if (!response.ok) throw new Error(`activity ${response.status}`);
       const next = (await response.json()) as Activity;
       shownAt.current = Date.now();
       if (next.kind === 'wind_down') {
@@ -145,6 +154,12 @@ export function PlayRunner({ childId }: { childId: string }) {
       else if (next.kind === 'item' || next.kind === 'word_review') mascotEvent('question_shown');
       else mascotEvent('browsing');
       setActivity(next);
+    } catch {
+      // Without this the child sat on "Following the trail…" for ever: a
+      // single failed request left activity null with nothing to retry it,
+      // and no error was surfaced at all. Errors are in-world and always
+      // offer a way onward (Addendum A §1.1 rule 4).
+      setTrouble(beatLine('trouble'));
     } finally {
       loading.current = false;
     }
@@ -163,11 +178,19 @@ export function PlayRunner({ childId }: { childId: string }) {
 
   async function submit(optionId?: string) {
     if (outcome) return;
-    const response = await fetch(`/api/crew/${childId}/session/answer`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ optionId, secondsElapsed: seconds() }),
-    });
+    let response: Response;
+    try {
+      response = await fetch(`/api/crew/${childId}/session/answer`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ optionId, secondsElapsed: seconds() }),
+      });
+    } catch {
+      // A dropped answer must not swallow the tap silently — the child gets
+      // the cold-trail beat and a way to carry on.
+      setTrouble(beatLine('trouble'));
+      return;
+    }
     if (!response.ok) {
       await loadActivity();
       return;
@@ -227,6 +250,28 @@ export function PlayRunner({ childId }: { childId: string }) {
       body: JSON.stringify({ stepIndex: teachStep ?? 0, correctionIndex, secondsElapsed: seconds() }),
     });
     await loadActivity();
+  }
+
+  // A cold trail always offers the way onward — never a dead loading screen.
+  if (trouble) {
+    return (
+      <div className="crew-shimmer" data-testid="trouble">
+        <span className="glass" aria-hidden>
+          🔍
+        </span>
+        <p>{trouble}</p>
+        <button
+          type="button"
+          className="crew-tap primary"
+          onClick={() => {
+            setTrouble(null);
+            void loadActivity();
+          }}
+        >
+          Pick the trail up again
+        </button>
+      </div>
+    );
   }
 
   if (!activity) {
