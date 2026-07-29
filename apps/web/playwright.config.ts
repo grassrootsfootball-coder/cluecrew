@@ -11,6 +11,11 @@ export default defineConfig({
   reporter: process.env.CI ? 'github' : 'list',
   use: {
     baseURL: `http://localhost:${PORT}`,
+    // Keep evidence when something fails on CI. Diagnosing the mid-session
+    // timeouts cost several 20-minute round trips of guessing because a
+    // failed run left nothing behind but a stack trace.
+    trace: 'retain-on-failure',
+    screenshot: 'only-on-failure',
     // The trimmed headless shell intermittently locks its renderer on the
     // crew app (reproduced on /crew/play; fine in real Chrome). Use full
     // Chromium's new headless mode instead.

@@ -385,7 +385,22 @@ async function serveItem(
     new Set(state.engine.focus.servedItemIds),
   );
   if (!chosen) {
-    // Item bank exhausted for this type: end gracefully via the closer path.
+    // Nothing left to serve for this type. Routing to the closer is the
+    // graceful end — but if we are ALREADY serving the closer there is
+    // nothing behind it, and re-entering getActivity would ask for the closer
+    // again, find the pool empty again, and recurse until the request dies.
+    // That is not hypothetical: a case whose question type has no LIVE items
+    // hangs every request a child makes. End the session instead.
+    if (input.activityKind === 'closer') {
+      state.engine = {
+        ...state.engine,
+        closerServed: true,
+        phase: 'wind_down',
+        focus: { ...state.engine.focus, frustrationBreak: false },
+      };
+      await saveState(sessionId, state);
+      return getActivity(childId);
+    }
     state.engine = { ...state.engine, focus: { ...state.engine.focus, frustrationBreak: false }, phase: 'closer' };
     await saveState(sessionId, state);
     return getActivity(childId);

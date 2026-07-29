@@ -70,6 +70,13 @@ jobs:
       - name: Seed
         run: pnpm --filter @cluecrew/db seed
 
+      # The seed only creates the Phase 1 synthetic items — three VR types. The
+      # item bank for the other eighteen comes from this generator, and without
+      # it any case outside those three has an EMPTY pool: no practice item can
+      # be served, so mid-session tests wait forever. Idempotent, DRAFT-only.
+      - name: Generate the item bank
+        run: pnpm content:generate
+
       - name: Typecheck
         run: pnpm -r run typecheck
 
@@ -112,6 +119,19 @@ jobs:
 
       - name: E2E (child-token isolation, CSP, daily loop, billing, CMS)
         run: pnpm e2e
+
+      # Traces and screenshots for the failing tests, so a CI-only failure can
+      # be diagnosed from evidence instead of guessed at from a stack trace.
+      - name: Upload Playwright evidence
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-evidence
+          path: |
+            apps/web/test-results/
+            apps/web/playwright-report/
+          retention-days: 7
+          if-no-files-found: ignore
 
   lighthouse:
     runs-on: ubuntu-latest
@@ -168,6 +188,13 @@ jobs:
         run: pnpm --filter @cluecrew/db migrate:deploy
       - name: Seed
         run: pnpm --filter @cluecrew/db seed
+
+      # The seed only creates the Phase 1 synthetic items — three VR types. The
+      # item bank for the other eighteen comes from this generator, and without
+      # it any case outside those three has an EMPTY pool: no practice item can
+      # be served, so mid-session tests wait forever. Idempotent, DRAFT-only.
+      - name: Generate the item bank
+        run: pnpm content:generate
       - name: Build
         run: pnpm build
       # Performance budget is a release gate (D6). The script starts the
