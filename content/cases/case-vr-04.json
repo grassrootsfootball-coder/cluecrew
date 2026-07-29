@@ -1,0 +1,20 @@
+{
+  "kind": "case",
+  "case": {
+    "id": "case-vr-04",
+    "questionTypeId": "vr-04-closest-meaning",
+    "title": "The Word Twins",
+    "narrativeIntro": {
+      "text": "Some words are twins. They look different but mean almost the same thing. Spot the twin and the case is yours.",
+      "skippable": true
+    },
+    "modes": {
+      "watch": { "kind": "video", "assetRef": "placeholder/vr-04/watch.mp4", "maxSeconds": 90 },
+      "walk": { "kind": "faded-example", "assetRef": "placeholder/vr-04/walk.json" },
+      "see": { "kind": "visual", "assetRef": "placeholder/vr-04/see.json" },
+      "hear": { "kind": "audio", "assetRef": "placeholder/vr-04/hear.mp3" },
+      "try": { "kind": "practice" }
+    },
+    "orderInDistrict": 4
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "kind": "case",
+  "case": {
+    "id": "case-vr-03",
+    "questionTypeId": "vr-03-related-words",
+    "title": "The Bridge Builder",
+    "narrativeIntro": {
+      "text": "Two words are joined by a rule, like a bridge. Find the rule in the first pair, then build the same bridge for the second.",
+      "skippable": true
+    },
+    "modes": {
+      "watch": { "kind": "video", "assetRef": "placeholder/vr-03/watch.mp4", "maxSeconds": 90 },
+      "walk": { "kind": "faded-example", "assetRef": "placeholder/vr-03/walk.json" },
+      "see": { "kind": "visual", "assetRef": "placeholder/vr-03/see.json" },
+      "hear": { "kind": "audio", "assetRef": "placeholder/vr-03/hear.mp3" },
+      "try": { "kind": "practice" }
+    },
+    "orderInDistrict": 3
+  }
+}

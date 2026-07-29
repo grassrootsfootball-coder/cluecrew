@@ -5,6 +5,31 @@
 | 0.1 | 2026-07-27 | Automated pass wired into CI; manual checklist first pass; AT session pending |
 | 0.2 | 2026-07-28 | Contrast defect found and fixed on Crew HQ locked doors; axe now zero critical AND zero serious across all route families |
 | 0.3 | 2026-07-29 | /crew/play (mid-session) brought under audit; prohibited-ARIA and rail contrast defects found and fixed; axe rule set widened |
+| 0.4 | 2026-07-29 | All five mechanic engines audited mid-session, not just stowaway |
+
+### Coverage note — all five mechanic families (2026-07-29)
+
+Auditing one engine proves nothing about the other four: each renders its own
+markup, and it was precisely this screen that hid the F-002 ARIA defects while
+it went unloaded. `e2e/a11y.spec.ts` now steers the session by `caseId` and
+audits `/crew/play` once per family:
+
+| Family | Case | Engine verified | Rail | Result |
+|---|---|---|---|---|
+| code | `case-vr-11` | code | stage | clean |
+| stowaway | `case-vr-08` | stowaway | stage | clean |
+| wordweb | `case-vr-04` | wordweb | none | clean |
+| bridge | `case-vr-03` | bridge | none | clean |
+| deduction | `case-vr-15` | deduction | none | clean |
+
+The rail appearing only in code and stowaway matches BUILD-PHASE-4 §3. The test
+asserts the expected engine actually loaded, so a mis-mapped family fails
+rather than silently auditing the wrong markup twice.
+
+**Performance** stays pinned to one family: measured across all five, stowaway
+renders the largest DOM (91 nodes vs 51–81) because every letter is its own
+tile, so it is the budget's worst case. Pinning by `caseId` also stops the
+budget silently changing what it measures as content grows.
 
 ### F-002 — Prohibited ARIA on generic elements, and rail contrast (fixed 2026-07-29)
 

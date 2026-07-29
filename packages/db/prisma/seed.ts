@@ -6,7 +6,7 @@
  *
  * Idempotent: everything uses deterministic ids and upserts.
  */
-import { readFileSync } from 'node:fs';
+import { readdirSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { hash } from '@node-rs/argon2';
 import { caseFileSchema, regionFileSchema, wordFileSchema } from '@cluecrew/core';
@@ -307,7 +307,12 @@ async function seedWords(): Promise<void> {
 }
 
 async function seedCases(): Promise<void> {
-  for (const file of ['case-vr-08.json', 'case-vr-09.json', 'case-vr-11.json']) {
+  // Read the directory rather than a hardcoded list: a new authored case
+  // should appear by dropping the file in, not by also editing the seed.
+  const files = readdirSync(resolve(CONTENT_ROOT, 'cases'))
+    .filter((file) => file.endsWith('.json'))
+    .sort();
+  for (const file of files) {
     const raw = JSON.parse(readFileSync(resolve(CONTENT_ROOT, 'cases', file), 'utf8'));
     const { case: caseContent } = caseFileSchema.parse(raw);
     await prisma.case.upsert({

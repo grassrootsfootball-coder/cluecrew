@@ -1,0 +1,20 @@
+{
+  "kind": "case",
+  "case": {
+    "id": "case-vr-15",
+    "questionTypeId": "vr-15-reading-information",
+    "title": "The Locked Room",
+    "narrativeIntro": {
+      "text": "Four clues sit on the table. Each one rules something out. Cross those off, and the answer is what is left.",
+      "skippable": true
+    },
+    "modes": {
+      "watch": { "kind": "video", "assetRef": "placeholder/vr-15/watch.mp4", "maxSeconds": 90 },
+      "walk": { "kind": "faded-example", "assetRef": "placeholder/vr-15/walk.json" },
+      "see": { "kind": "visual", "assetRef": "placeholder/vr-15/see.json" },
+      "hear": { "kind": "audio", "assetRef": "placeholder/vr-15/hear.mp3" },
+      "try": { "kind": "practice" }
+    },
+    "orderInDistrict": 15
+  }
+}

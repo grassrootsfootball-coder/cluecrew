@@ -11,12 +11,16 @@
  * without mutating it, and item selection is deterministic, so repeated page
  * loads render the same item. Only submitting an answer advances the session.
  *
- * Usage: node scripts/park-crew-session.mjs <baseUrl> <crewToken> <childId>
+ * A caseId may be given to steer which mechanic family ends up on stage —
+ * without one the focus case is deterministic, so every run would land on the
+ * same engine and the other four would never be measured.
+ *
+ * Usage: node scripts/park-crew-session.mjs <baseUrl> <crewToken> <childId> [caseId]
  */
 
-const [baseUrl, crewToken, childId] = process.argv.slice(2);
+const [baseUrl, crewToken, childId, caseId] = process.argv.slice(2);
 if (!baseUrl || !crewToken || !childId) {
-  console.error('usage: park-crew-session.mjs <baseUrl> <crewToken> <childId>');
+  console.error('usage: park-crew-session.mjs <baseUrl> <crewToken> <childId> [caseId]');
   process.exit(1);
 }
 
@@ -40,7 +44,7 @@ async function activity() {
   return response.json();
 }
 
-await post('', {});
+await post('', caseId ? { caseId } : {});
 
 for (let step = 0; step < MAX_STEPS; step++) {
   const current = await activity();

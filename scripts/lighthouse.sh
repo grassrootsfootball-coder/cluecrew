@@ -65,8 +65,16 @@ if [ -z "$CREW_TOKEN" ]; then
 fi
 echo "  ✓ child session ready (${CHILD_ID})"
 
-echo "→ parking the session on a practice item so /crew/play measures the heaviest screen"
-node "${ROOT}/scripts/park-crew-session.mjs" "$BASE" "$CREW_TOKEN" "$CHILD_ID"
+# Pinned to the STOWAWAY case deliberately. Measured across all five mechanic
+# families, stowaway renders the largest DOM (91 nodes vs 51–81) because every
+# letter is its own tile, so it is the budget's worst case. Pinning also keeps
+# the number stable: without a caseId the focus case is "first uncracked",
+# which would silently change what the budget measures as content grows.
+# Accessibility for the other four families is covered by e2e/a11y.spec.ts,
+# which audits /crew/play once per family.
+PERF_CASE_ID="${PERF_CASE_ID:-case-vr-08}"
+echo "→ parking on ${PERF_CASE_ID} (heaviest mechanic) so /crew/play measures the worst case"
+node "${ROOT}/scripts/park-crew-session.mjs" "$BASE" "$CREW_TOKEN" "$CHILD_ID" "$PERF_CASE_ID"
 
 echo "→ running Lighthouse CI"
 cd "$ROOT/apps/web"

@@ -6,6 +6,15 @@
 import AxeBuilder from '@axe-core/playwright';
 import { expect, request, test, type Page } from '@playwright/test';
 
+/** One case per mechanic family, so every engine's markup gets audited. */
+const FAMILY_CASES = [
+  { family: 'code', caseId: 'case-vr-11' },
+  { family: 'stowaway', caseId: 'case-vr-08' },
+  { family: 'wordweb', caseId: 'case-vr-04' },
+  { family: 'bridge', caseId: 'case-vr-03' },
+  { family: 'deduction', caseId: 'case-vr-15' },
+] as const;
+
 async function analyze(page: Page, label: string): Promise<void> {
   // Tag filtering alone let a real defect through: aria-prohibited-attr is not
   // carried by the wcag2*/wcag22aa tags, so aria-label on generic <div>/<span>
@@ -71,50 +80,53 @@ test('child app routes have zero critical a11y violations', async ({ page }) => 
     await analyze(page, path);
   }
 
-  // Park the session on a practice item so /crew/play is audited with a
-  // mechanic engine, the Alphabet Rail and the mascot all on stage — the
-  // heaviest and most-used screen in the product, and the one whose ARIA
-  // defects went unnoticed while it was never loaded here. Parked last so
-  // nothing audited in between can disturb the session state.
+  // Audit /crew/play once per mechanic family. Each engine renders its own
+  // markup, so auditing one of them proves nothing about the other four — and
+  // it was exactly this screen that hid prohibited-ARIA defects while it went
+  // unloaded. Parked last so nothing audited above can disturb session state.
   const session = `/api/crew/${childId}/session`;
-  await api.post(session, { data: {} });
-  let parked = false;
-  for (let step = 0; step < 60 && !parked; step++) {
-    const current = (await (await api.get(`${session}/activity`)).json()) as {
-      kind: string;
-      activityKind?: string;
-      plain?: boolean;
-      options?: Array<{ id: string }>;
-    };
-    if (current.kind === 'item' && current.activityKind === 'practice_item' && !current.plain) {
-      parked = true;
-      break;
+  for (const { family, caseId } of FAMILY_CASES) {
+    await api.post(session, { data: { caseId } });
+    let parked = false;
+    for (let step = 0; step < 60 && !parked; step++) {
+      const current = (await (await api.get(`${session}/activity`)).json()) as {
+        kind: string;
+        activityKind?: string;
+        plain?: boolean;
+        family?: string;
+        options?: Array<{ id: string }>;
+      };
+      if (current.kind === 'item' && current.activityKind === 'practice_item' && !current.plain) {
+        expect(current.family, `expected the ${family} engine for ${caseId}`).toBe(family);
+        parked = true;
+        break;
+      }
+      if (current.kind === 'item' || current.kind === 'word_review') {
+        await api.post(`${session}/answer`, {
+          data: { optionId: current.options?.[0]?.id, secondsElapsed: 5 },
+        });
+      } else if (current.kind === 'word_collect') {
+        await api.post(`${session}/answer`, { data: { secondsElapsed: 3 } });
+      } else if (current.kind === 'mode_content') {
+        await api.post(`${session}/mode`, { data: { action: 'decline' } });
+      } else if (current.kind === 'teachback') {
+        await api.post(`${session}/teachback`, {
+          data: { stepIndex: 0, correctionIndex: 0, secondsElapsed: 5 },
+        });
+      } else {
+        break;
+      }
     }
-    if (current.kind === 'item' || current.kind === 'word_review') {
-      await api.post(`${session}/answer`, {
-        data: { optionId: current.options?.[0]?.id, secondsElapsed: 5 },
-      });
-    } else if (current.kind === 'word_collect') {
-      await api.post(`${session}/answer`, { data: { secondsElapsed: 3 } });
-    } else if (current.kind === 'mode_content') {
-      await api.post(`${session}/mode`, { data: { action: 'decline' } });
-    } else if (current.kind === 'teachback') {
-      await api.post(`${session}/teachback`, {
-        data: { stepIndex: 0, correctionIndex: 0, secondsElapsed: 5 },
-      });
-    } else {
-      break;
-    }
-  }
-  expect(parked, 'could not reach a practice item to audit /crew/play').toBe(true);
-  await api.dispose();
+    expect(parked, `could not reach a practice item for the ${family} engine`).toBe(true);
 
-  await page.goto('/crew/play');
-  // The mechanic mounts client-side, and under `next dev` this route compiles
-  // on first hit — audit it only once the answer choices are actually on stage.
-  await page
-    .locator('[role="group"][aria-label="Answer choices"]')
-    .first()
-    .waitFor({ timeout: 60_000 });
-  await analyze(page, '/crew/play');
+    await page.goto('/crew/play');
+    // The mechanic mounts client-side, and under `next dev` this route
+    // compiles on first hit — audit only once the choices are on stage.
+    await page
+      .locator('[role="group"][aria-label="Answer choices"]')
+      .first()
+      .waitFor({ timeout: 60_000 });
+    await analyze(page, `/crew/play [${family}]`);
+  }
+  await api.dispose();
 });
