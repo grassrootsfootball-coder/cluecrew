@@ -22,6 +22,7 @@ import {
   beatLine,
   correctLine,
   loadingLine,
+  FIRST_LOADING_LINE,
   notYetLine,
   windDownLine,
 } from '@/lib/voice';
@@ -93,7 +94,13 @@ export function PlayRunner({ childId }: { childId: string }) {
   const [ended, setEnded] = useState<EndResult | null>(null);
   const [rankUp, setRankUp] = useState<string | null>(null);
   const [teachStep, setTeachStep] = useState<number | null>(null);
-  const [loadingLabel] = useState(() => loadingLine());
+  // Deterministic on the first render (server and hydration agree), then
+  // rotated from an effect so the line still varies between visits. A
+  // useState initializer would run on BOTH server and client and pick two
+  // different variants — a hydration mismatch that makes React throw the tree
+  // away and rebuild it, which also races in-flight taps.
+  const [loadingLabel, setLoadingLabel] = useState(FIRST_LOADING_LINE);
+  useEffect(() => setLoadingLabel(loadingLine()), []);
   const shownAt = useRef(Date.now());
   const loading = useRef(false);
   const finished = useRef(false);

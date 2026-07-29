@@ -45,6 +45,17 @@ export function loadingLine(): string {
   return pick('loading', loadingPack.variants);
 }
 
+/**
+ * The first loading variant, chosen deterministically.
+ *
+ * pick() uses Math.random(), so calling it while rendering a client component
+ * produces one string on the server and a different one during hydration —
+ * React then discards and regenerates the whole tree. Anything rendered on the
+ * FIRST render of a client component must use this; rotate afterwards from an
+ * effect, once only the client is rendering.
+ */
+export const FIRST_LOADING_LINE: string = loadingPack.variants[0]!;
+
 export function windDownLine(): string {
   return pick('wind-down', windDownPack.variants);
 }

@@ -54,7 +54,15 @@ test('full Daily Loop: HQ → warm-up → case → plain closer → wind-down; m
 
   await expect(page.getByRole('heading', { name: /Robin/ })).toBeVisible();
   await expect(page.getByText(/Lantern/)).toBeVisible();
-  await page.getByRole('button', { name: "Start today's shift" }).click();
+
+  // Enter through the district map and open a NAMED case rather than tapping
+  // "Start today's shift". Both are real user paths, but the shift button
+  // starts on "first uncracked case" — so authoring a new case at a lower
+  // orderInDistrict silently changes which mechanic this test exercises, and
+  // the assertions below (miss path, plain closer) are tuned to a mechanic.
+  // Pinning keeps the journey identical as content grows.
+  await page.goto('/crew/case/case-vr-08');
+  await page.getByRole('button', { name: 'Open the case' }).click();
   await page.waitForURL('**/crew/play');
 
   let sawNotYet = false;

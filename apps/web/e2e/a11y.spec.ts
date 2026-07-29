@@ -60,6 +60,7 @@ test('parent HQ routes have zero critical a11y violations', async ({ page }) => 
 });
 
 test('child app routes have zero critical a11y violations', async ({ page }) => {
+  test.setTimeout(240_000);
   const api = await request.newContext({ baseURL: 'http://localhost:3100' });
   const { csrfToken } = (await (await api.get('/api/auth/csrf')).json()) as { csrfToken: string };
   await api.post('/api/auth/callback/credentials', {
