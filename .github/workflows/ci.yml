@@ -33,11 +33,11 @@ jobs:
       CRON_SECRET: ci-only-cron-secret
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@v6
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: pnpm
@@ -145,9 +145,9 @@ jobs:
       CRON_SECRET: ci-only-cron-secret
 
     steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: pnpm
@@ -170,7 +170,8 @@ jobs:
         run: pnpm --filter @cluecrew/db seed
       - name: Build
         run: pnpm build
-      # Performance budget is a release gate (D6): throttled profile, /crew shell.
-      - name: Lighthouse CI
-        working-directory: apps/web
-        run: pnpm dlx @lhci/cli@0.14.x autorun --config=../../.lighthouserc.json
+      # Performance budget is a release gate (D6). The script starts the
+      # server and mints a real child session first, so /crew is measured as
+      # the actual child app rather than the anonymous access gate.
+      - name: Lighthouse CI (authenticated /crew)
+        run: pnpm perf
