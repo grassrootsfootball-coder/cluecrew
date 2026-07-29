@@ -635,6 +635,66 @@
   color: color-mix(in srgb, var(--cc-ink) 75%, transparent);
 }
 
+/* ---------- The child's case file ---------- */
+
+.crew-next-step {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 0.9rem;
+}
+
+/* A ladder, not a scoreboard: it shows where they are and what is next,
+   and every rung already earned stays earned (D3 — no loss mechanics). */
+.crew-ladder {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.crew-rung {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  color: color-mix(in srgb, var(--cc-ink) 70%, transparent);
+}
+
+.crew-rung.held {
+  color: var(--cc-ink);
+  font-weight: 700;
+}
+
+.crew-rung.current {
+  color: var(--cc-ink);
+}
+
+.crew-rung-mark {
+  color: color-mix(in srgb, var(--cc-amber) 75%, var(--cc-ink));
+  font-size: 1.05rem;
+}
+
+.crew-rung-you {
+  font-weight: 400;
+  color: color-mix(in srgb, var(--cc-ink) 72%, transparent);
+}
+
+.crew-stamp-list {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.crew-stamp-item {
+  border: 2px solid color-mix(in srgb, var(--cc-vr-teal) 55%, var(--cc-ink));
+  border-radius: 10px;
+  padding: 0.35rem 0.75rem;
+  background: color-mix(in srgb, var(--cc-vr-teal) 8%, transparent);
+}
+
 /* ---------- Orientation: what a shift is ---------- */
 
 .crew-how {

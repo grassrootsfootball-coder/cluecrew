@@ -835,6 +835,13 @@ export async function hqState(childId: string) {
 
   return {
     child,
+    // Raw counts the case file needs to say what comes next; getCrewState
+    // deliberately hides numbers HQ has no business showing.
+    stats: {
+      taughtBackCount,
+      bossCaseParticipated: bossCount > 0,
+      casesCracked: caseFiles.filter((caseFile) => caseFile.solvedAt).length,
+    },
     crew: getCrewState({
       currentRank: child.rank,
       casesCracked: caseFiles.filter((caseFile) => caseFile.solvedAt).length,

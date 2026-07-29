@@ -81,6 +81,11 @@ export default async function CrewHqPage() {
             <span className="door-sub">{countWord(cracked, 'case')} cracked</span>
             <span aria-hidden>🚪</span>
           </a>
+          <a className="crew-door" href="/crew/casefile">
+            <span>{VOICE.caseFileLink}</span>
+            <span className="door-sub">{crew.rankLabel}</span>
+            <span aria-hidden>🗂️</span>
+          </a>
           {/* No aria-label on the locked doors: it is prohibited on a generic
               div, and it only duplicated the visible label inside, which is
               announced already. */}

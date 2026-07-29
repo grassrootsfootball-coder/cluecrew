@@ -80,7 +80,13 @@ async function childContext(page: Page): Promise<{ api: APIRequestContext; child
 
 test('child app routes have zero critical a11y violations', async ({ page }) => {
   const { api } = await childContext(page);
-  for (const path of ['/crew', '/crew/district', '/crew/vault', '/crew/case/case-vr-11']) {
+  for (const path of [
+    '/crew',
+    '/crew/district',
+    '/crew/vault',
+    '/crew/casefile',
+    '/crew/case/case-vr-11',
+  ]) {
     await page.goto(path);
     await analyze(page, path);
   }

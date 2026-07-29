@@ -78,6 +78,15 @@ export const VOICE = {
   districtIntro: 'Five corners. Every door is a case you can take.',
   // Orientation — open on a first visit, tucked away after that. Reading age
   // ≤9, ≤30 seconds, and it never gates anything (D5).
+  // The child's own case file. Self-referential only — no other child is ever
+  // mentioned, and nothing on the page can go down (D2/D3).
+  caseFileLede: 'Everything you have worked out so far. Nothing here ever goes backwards.',
+  caseFileNoStamps: 'No stamps yet. Crack your first case and it lands here for good.',
+  caseFileNoWords: 'The vault is empty for now. Every warm-up brings you three new words.',
+  caseFileWeeks: (weeks: number) =>
+    weeks === 1 ? 'One good week so far.' : `${weeks} good weeks so far.`,
+  caseFileLanternNew: 'Show up a few days this week and it stays lit.',
+  caseFileLink: 'Your case file',
   howHeading: 'What happens in a shift?',
   howSteps: [
     'Warm-up: a quick look at old cases, so they stay yours.',
