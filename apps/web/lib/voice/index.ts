@@ -74,7 +74,9 @@ export const VOICE = {
   lockedDistrict: 'Locked. Not your patch yet.',
   // A case whose file has not been written yet. In-world and honest — never
   // "coming soon", and never framed as something being withheld (§1.5).
-  caseNotWritten: "Still on the Chief's desk.",
+  // Uses the board, which the world already has; it used to invent a "Chief",
+  // a character no one had sanctioned (manifesto §10).
+  caseNotWritten: 'Not on the board yet.',
   districtIntro: 'Five corners. Every door is a case you can take.',
   // Orientation — open on a first visit, tucked away after that. Reading age
   // ≤9, ≤30 seconds, and it never gates anything (D5).
@@ -87,6 +89,17 @@ export const VOICE = {
     weeks === 1 ? 'One good week so far.' : `${weeks} good weeks so far.`,
   caseFileLanternNew: 'Show up a few days this week and it stays lit.',
   caseFileLink: 'Your case file',
+  // The Crew (manifesto §7 v1.1): the family. Roles, never a ranking — the
+  // no-comparison rule means crew-mates are listed, never measured.
+  crewHeading: 'Who is on your crew?',
+  crewChild: (name: string) => `${name} — that's you. You crack the cases.`,
+  crewParent: (name: string) =>
+    `${name} — on your crew too. They get a note each week with one thing to try together.`,
+  crewMates: (names: string[]) =>
+    names.length === 1
+      ? `${names[0]} — your crew-mate. Same crew, own cases.`
+      : `${names.join(' and ')} — your crew-mates. Same crew, own cases.`,
+  crewPartner: 'Your partner. Never says much, always watching the board.',
   howHeading: 'What happens in a shift?',
   howSteps: [
     'Warm-up: a quick look at old cases, so they stay yours.',

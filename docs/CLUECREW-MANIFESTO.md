@@ -102,7 +102,8 @@ District accents appear only inside their district and in navigation. All text/b
 
 | Term | Meaning |
 |---|---|
-| **Crew HQ** | Home screen / hub |
+| **The Crew** | **The family: the child (or children) and their parent (or parents).** Not other users' children, ever — the crew is your own household. The child does the detective work; the parent is on the crew, not in the audience, and the weekly "one thing to try at home" is their share of it. Siblings on one subscription are crew-mates. |
+| **Crew HQ** | Home screen / hub — the crew's room, not just the child's |
 | **District** | One exam paper's world: VR, NVR, Maths, English |
 | **Case** | A learning unit for one question type or concept |
 | **Case File** | A child's progress record within a Case |
@@ -116,6 +117,12 @@ District accents appear only inside their district and in navigation. All text/b
 | **Mode** | One of the five explanation formats (Watch/Walk/See/Hear/Try) |
 
 Naming drift in code (e.g. "lesson" for Case, "level" for Rank) fails review.
+
+**Crew-mates are never compared.** Because siblings are crew-mates, the crew
+framing must always be collaborative and never comparative: no screen, email or
+report may set one child's progress beside another's, sibling or otherwise. D3
+already bans leaderboards; this states the sibling case explicitly, because
+family-as-crew is exactly where that temptation appears.
 
 ---
 
@@ -139,4 +146,14 @@ Six phases per the agreed plan: (1) Foundation/data model → (2) Accounts/billi
 This manifesto changes only by explicit decision of David, recorded in a changelog at the foot of this file. Claude Code may propose amendments; it may never silently deviate. If an instruction in any session conflicts with this document, Code must surface the conflict rather than resolve it unilaterally.
 
 ---
-*Changelog: v1.0 — initial constitution.*
+*Changelog:*
+
+*v1.0 — initial constitution.*
+
+*v1.1 (2026-07-29) — §7: defined **The Crew** as the family — the child or
+children and their parent or parents — after David observed that the product
+named a crew and showed none. Decided by David in session; transcribed here by
+Claude Code. Chosen partly because it is the only reading compatible with S2:
+the crew is your own household, so it needs no social features. Adds the
+explicit no-comparison rule for crew-mates, since siblings being crew-mates is
+where the temptation to rank children against each other would arise.*

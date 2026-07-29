@@ -26,6 +26,16 @@ export default async function ParentDashboardPage() {
     <main className="cc-container">
       <h1>Hello, {parent.displayName}</h1>
 
+      {/* The Crew is the family (manifesto §7 v1.1) — so say so here, plainly.
+          A parent reading this page is on the crew, not watching it. */}
+      {dashboards.length > 0 ? (
+        <p className="cc-muted">
+          You are on the crew.{' '}
+          {dashboards.length === 1 ? dashboards[0]!.crewName : 'Your detectives'} crack the cases;
+          your share is the one thing to try together each week. That is the whole ask.
+        </p>
+      ) : null}
+
       {trialDaysLeft !== null ? (
         <div className="cc-card">
           <strong>

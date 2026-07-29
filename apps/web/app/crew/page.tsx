@@ -1,3 +1,4 @@
+import { prisma } from '@cluecrew/db';
 import { childFromCookie } from '@/lib/crew/server';
 import { hqState } from '@/lib/crew/orchestrator';
 import { Mascot } from '@/components/crew/mascot';
@@ -12,6 +13,22 @@ export default async function CrewHqPage() {
   // quietly; CrewLayout owns the warm, in-world gate the child sees.
   if (!child) return null;
   const { crew } = await hqState(child.id);
+
+  // The Crew is the family (manifesto §7 v1.1). Names and roles ONLY — no
+  // progress, no ranks, nothing measurable, because crew-mates are never
+  // compared. Nothing about billing or the account crosses into this app.
+  const household = await prisma.parentAccount.findUnique({
+    where: { id: child.parentId },
+    select: {
+      displayName: true,
+      children: {
+        where: { deletedAt: null, id: { not: child.id } },
+        select: { id: true, crewName: true },
+        orderBy: { createdAt: 'asc' },
+      },
+    },
+  });
+  const crewMates = household?.children.map((sibling) => sibling.crewName) ?? [];
 
   const cracked = crew.caseSummaries.filter((summary) => summary.status === 'cracked').length;
   const onTheBoard = crew.caseSummaries.filter((summary) => summary.status !== 'cracked').length;
@@ -70,6 +87,16 @@ export default async function CrewHqPage() {
             ))}
           </ol>
           <p className="crew-how-close">{VOICE.howClose}</p>
+        </details>
+
+        <details className="crew-how" open={firstVisit}>
+          <summary>{VOICE.crewHeading}</summary>
+          <ul className="crew-roster">
+            <li>{VOICE.crewChild(child.crewName)}</li>
+            {household?.displayName ? <li>{VOICE.crewParent(household.displayName)}</li> : null}
+            {crewMates.length > 0 ? <li>{VOICE.crewMates(crewMates)}</li> : null}
+            <li>{VOICE.crewPartner}</li>
+          </ul>
         </details>
       </section>
 

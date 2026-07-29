@@ -722,6 +722,15 @@
   font-weight: 700;
 }
 
+/* The crew roster: roles, never a ranking. Nothing measurable appears here —
+   crew-mates are listed, never compared (manifesto §7 v1.1, D3). */
+.crew-roster {
+  margin: 0.4rem 0 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
 /* ---------- District quarters (BUILD-PHASE-4 §6) ---------- */
 
 .crew-lede {
