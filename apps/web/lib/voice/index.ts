@@ -72,6 +72,25 @@ export const VOICE = {
   streakAlive: "Lantern's still lit.",
   streakRekindled: "Lantern's lit again.",
   lockedDistrict: 'Locked. Not your patch yet.',
+  // A case whose file has not been written yet. In-world and honest — never
+  // "coming soon", and never framed as something being withheld (§1.5).
+  caseNotWritten: "Still on the Chief's desk.",
+  districtIntro: 'Five corners. Every door is a case you can take.',
+  // Orientation — open on a first visit, tucked away after that. Reading age
+  // ≤9, ≤30 seconds, and it never gates anything (D5).
+  howHeading: 'What happens in a shift?',
+  howSteps: [
+    'Warm-up: a quick look at old cases, so they stay yours.',
+    "Today's case: one kind of puzzle, taught the way that suits you.",
+    'One big question: exam rules, just like the real day.',
+  ] as const,
+  howClose: 'Crack a case and it gets stamped. Enough stamps and you go up a rank.',
+  hqFirstBoard:
+    "This is your board. Cases land here, and the ones you crack stay stamped.",
+  districtNothingCracked:
+    "Nothing stamped yet — that's just the start of the shift. Take any door.",
+  quarterProgress: (cracked: number, open: number) =>
+    cracked === 0 ? `${open} open here.` : `${cracked} of ${open} cracked here.`,
   modeShelfHeader: 'How do you want to crack this one?',
   modeLabels: {
     watch: 'Watch me solve one',

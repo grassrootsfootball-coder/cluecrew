@@ -52,6 +52,22 @@ export default async function ParentDashboardPage() {
         <section key={child.childId} className="cc-card">
           <h2 style={{ marginTop: 0 }}>{child.crewName}</h2>
 
+          {child.runway.casesCracked === 0 && child.sessionsThisWeek === 0 ? (
+            <div className="cc-card" style={{ marginTop: 0 }}>
+              <h3 style={{ marginTop: 0 }}>{child.crewName} hasn&apos;t started yet</h3>
+              <p>
+                Nothing to read here until they do — and that is fine. Their first session takes
+                fifteen minutes: a warm-up, one detective Case, and one exam-style question.
+              </p>
+              <p style={{ marginBottom: 0 }}>
+                <strong>What you can do:</strong> open Crew HQ with them once, let them pick any
+                case that looks interesting, then leave them to it. This page fills in on its own
+                from the first session, and the Sunday email starts once there is something worth
+                telling you.
+              </p>
+            </div>
+          ) : null}
+
           <h3>This week</h3>
           {child.sessionsThisWeek === 0 ? (
             <p>

@@ -55,9 +55,22 @@ export default async function CrewHqPage() {
           </div>
         </div>
         <p className="cc-muted">{beatLine('warmup-open')}</p>
-        <p style={{ marginBottom: 0 }}>
+        <p>
           <StartLoopButton childId={child.id} label={VOICE.hqStartShift} />
         </p>
+
+        {/* Orientation lives here permanently, open on a first visit and
+            folded away afterwards: a child arriving for the first time could
+            not tell what a shift was, and there was nowhere to find out. */}
+        <details className="crew-how" open={firstVisit}>
+          <summary>{VOICE.howHeading}</summary>
+          <ol className="crew-how-steps">
+            {VOICE.howSteps.map((step) => (
+              <li key={step}>{step}</li>
+            ))}
+          </ol>
+          <p className="crew-how-close">{VOICE.howClose}</p>
+        </details>
       </section>
 
       <section className="crew-panel">

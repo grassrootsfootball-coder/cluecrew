@@ -635,6 +635,117 @@
   color: color-mix(in srgb, var(--cc-ink) 75%, transparent);
 }
 
+/* ---------- Orientation: what a shift is ---------- */
+
+.crew-how {
+  border-top: 1px solid color-mix(in srgb, var(--cc-ink) 12%, transparent);
+  padding-top: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.crew-how summary {
+  cursor: pointer;
+  font-weight: 700;
+  /* ≥44px tap target without a box: the summary is the control. */
+  padding: 0.5rem 0;
+}
+
+.crew-how-steps {
+  margin: 0.4rem 0 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.crew-how-close {
+  margin: 0.6rem 0 0;
+  font-weight: 700;
+}
+
+/* ---------- District quarters (BUILD-PHASE-4 §6) ---------- */
+
+.crew-lede {
+  font-size: 1.05rem;
+  max-width: 46ch;
+  margin: 0 0 1.5rem;
+}
+
+.crew-quarter {
+  margin: 0 0 2rem;
+}
+
+/* vr-teal is THIS district's accent, so it may mark the quarters — as a rule
+   and a wash, never as text (manifesto §6: accents are accents). */
+.crew-quarter-head {
+  border-left: 5px solid var(--cc-vr-teal);
+  padding: 0.15rem 0 0.15rem 0.85rem;
+  margin-bottom: 0.85rem;
+}
+
+.crew-quarter-head h2 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.crew-quarter-blurb {
+  margin: 0.15rem 0 0;
+  max-width: 44ch;
+}
+
+.crew-quarter-count {
+  margin: 0.2rem 0 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: color-mix(in srgb, var(--cc-ink) 72%, transparent);
+}
+
+.crew-quarter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 14px;
+}
+
+.crew-location-note {
+  margin: 0.3rem 0 0;
+  font-size: 0.88rem;
+  color: color-mix(in srgb, var(--cc-ink) 72%, transparent);
+}
+
+/*
+ * Cases whose files are not written yet still hold their place, so a quarter
+ * reads as a whole street — but as quiet chips beneath the open cases, never
+ * as full cards competing with them. Dimmed through border and wash only,
+ * never container opacity, which would drag the text under AA (F-001).
+ */
+.crew-pending-row {
+  margin-top: 0.85rem;
+}
+
+.crew-pending-lead {
+  margin: 0 0 0.4rem;
+  font-size: 0.88rem;
+  color: color-mix(in srgb, var(--cc-ink) 72%, transparent);
+}
+
+.crew-pending-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.crew-pending-chip {
+  border: 1px dashed color-mix(in srgb, var(--cc-ink) 28%, transparent);
+  background: color-mix(in srgb, var(--cc-ink) 4%, transparent);
+  border-radius: 999px;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: color-mix(in srgb, var(--cc-ink) 75%, transparent);
+}
+
 .crew-location {
   position: relative;
   min-height: 110px;
