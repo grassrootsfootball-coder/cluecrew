@@ -3,7 +3,11 @@ import { childFromCookie } from '@/lib/crew/server';
 
 /** The VR District map (§6): each Case is a location; any case is enterable. */
 export default async function DistrictPage() {
-  const child = (await childFromCookie())!;
+  const child = await childFromCookie();
+  // Pages render in parallel with the layout in the App Router, so the
+  // layout's missing-child gate does NOT stop this body executing. Bail
+  // quietly; CrewLayout owns the warm, in-world gate the child sees.
+  if (!child) return null;
   const [cases, caseFiles] = await Promise.all([
     prisma.case.findMany({ orderBy: { orderInDistrict: 'asc' } }),
     prisma.caseFile.findMany({ where: { childId: child.id } }),

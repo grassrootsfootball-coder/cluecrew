@@ -6,7 +6,11 @@ import { VOICE, beatLine, countWord } from '@/lib/voice';
 
 /** Crew HQ (BUILD-PHASE-4 §6) in the Addendum A voice. */
 export default async function CrewHqPage() {
-  const child = (await childFromCookie())!;
+  const child = await childFromCookie();
+  // Pages render in parallel with the layout in the App Router, so the
+  // layout's missing-child gate does NOT stop this body executing. Bail
+  // quietly; CrewLayout owns the warm, in-world gate the child sees.
+  if (!child) return null;
   const { crew } = await hqState(child.id);
 
   const cracked = crew.caseSummaries.filter((summary) => summary.status === 'cracked').length;

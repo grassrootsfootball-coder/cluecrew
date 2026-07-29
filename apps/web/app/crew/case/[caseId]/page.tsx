@@ -16,7 +16,11 @@ const MODE_ICONS: Record<Mode, string> = {
 
 /** Case open (§4.1): one panel + two sentences, skippable, then the Modes shelf. */
 export default async function CaseIntroPage({ params }: { params: Promise<{ caseId: string }> }) {
-  const child = (await childFromCookie())!;
+  const child = await childFromCookie();
+  // Pages render in parallel with the layout in the App Router, so the
+  // layout's missing-child gate does NOT stop this body executing. Bail
+  // quietly; CrewLayout owns the warm, in-world gate the child sees.
+  if (!child) return null;
   const { caseId } = await params;
   const caseRow = await prisma.case.findUnique({ where: { id: caseId } });
   if (!caseRow) notFound();

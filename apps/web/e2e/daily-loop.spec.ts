@@ -71,7 +71,13 @@ test('full Daily Loop: HQ → warm-up → case → plain closer → wind-down; m
 
   let lastTick = Date.now();
   let lastBranch = 'start';
-  for (let step = 0; step < 220; step++) {
+  // Steps are DOM polls, not interactions: a single warm-up item costs 2–4 of
+  // them (render → answer → feedback). When this test runs after the rest of
+  // the suite, the shared seed child carries accumulated review debt, so the
+  // warm-up alone can consume ~80 steps before the first focus answer. The
+  // budget is only a runaway guard — test.setTimeout(240_000) is the real
+  // deadline — so it is sized for the loaded case, not the fresh one.
+  for (let step = 0; step < 500; step++) {
     if (process.env.LOOP_DEBUG) {
       console.log(`step ${step} +${Date.now() - lastTick}ms answered=${answered} last=${lastBranch}`);
       lastTick = Date.now();
