@@ -25,7 +25,7 @@ const PATTERNS = [
 ];
 
 const EXTENSIONS = /\.(ts|tsx|prisma|json|mjs|css|md|mdx)$/;
-const EXCLUDED = ['node_modules', '.next', 'test-results', 'playwright-report'];
+const EXCLUDED = ['node_modules', '.next', '.lighthouseci', 'test-results', 'playwright-report'];
 
 function collect(dir) {
   const out = [];

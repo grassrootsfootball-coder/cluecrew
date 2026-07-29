@@ -69,7 +69,7 @@ const CHILD_FACING_SCOPE = [
 const STYLE_SCOPE = ['apps/web', 'packages/ui/src'];
 
 const SCAN_EXTENSIONS = new Set(['.ts', '.tsx', '.css', '.json', '.md', '.mdx']);
-const EXCLUDED_SEGMENTS = ['node_modules', '.next', 'e2e', 'test-results', 'playwright-report'];
+const EXCLUDED_SEGMENTS = ['node_modules', '.next', '.lighthouseci', 'e2e', 'test-results', 'playwright-report'];
 const EXCLUDED_SUFFIXES = ['.test.ts', '.test.tsx', '.d.ts'];
 
 function collectFiles(path) {
