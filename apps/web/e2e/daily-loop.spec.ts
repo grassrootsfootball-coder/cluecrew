@@ -43,7 +43,9 @@ async function makeChildSession(page: Page): Promise<void> {
 test('full Daily Loop: HQ → warm-up → case → plain closer → wind-down; miss path is kind', async ({
   page,
 }) => {
-  test.setTimeout(240_000);
+  // A full 15-minute loop driven click-by-click; CI runs ~5x slower than
+  // local, where this takes ~55s.
+  test.setTimeout(480_000);
   if (process.env.LOOP_DEBUG) {
     page.on('pageerror', (error) => console.log('PAGEERROR:', error.message));
     page.on('console', (message) => {
@@ -83,7 +85,7 @@ test('full Daily Loop: HQ → warm-up → case → plain closer → wind-down; m
   // them (render → answer → feedback). When this test runs after the rest of
   // the suite, the shared seed child carries accumulated review debt, so the
   // warm-up alone can consume ~80 steps before the first focus answer. The
-  // budget is only a runaway guard — test.setTimeout(240_000) is the real
+  // budget is only a runaway guard — test.setTimeout(480_000) is the real
   // deadline — so it is sized for the loaded case, not the fresh one.
   for (let step = 0; step < 500; step++) {
     if (process.env.LOOP_DEBUG) {

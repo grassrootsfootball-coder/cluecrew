@@ -4,7 +4,7 @@
  * manual audit but do not (yet) fail the build — the manual audit closes them.
  */
 import AxeBuilder from '@axe-core/playwright';
-import { expect, request, test, type Page } from '@playwright/test';
+import { expect, request, test, type APIRequestContext, type Page } from '@playwright/test';
 
 /** One case per mechanic family, so every engine's markup gets audited. */
 const FAMILY_CASES = [
@@ -59,8 +59,8 @@ test('parent HQ routes have zero critical a11y violations', async ({ page }) => 
   }
 });
 
-test('child app routes have zero critical a11y violations', async ({ page }) => {
-  test.setTimeout(240_000);
+/** Signs in, mints a crew session, and puts the token on the page context. */
+async function childContext(page: Page): Promise<{ api: APIRequestContext; childId: string }> {
   const api = await request.newContext({ baseURL: 'http://localhost:3100' });
   const { csrfToken } = (await (await api.get('/api/auth/csrf')).json()) as { csrfToken: string };
   await api.post('/api/auth/callback/credentials', {
@@ -75,19 +75,32 @@ test('child app routes have zero critical a11y violations', async ({ page }) => 
   await page.context().addCookies([
     { name: 'crew_token', value: crewToken.value, domain: 'localhost', path: '/' },
   ]);
+  return { api, childId };
+}
 
+test('child app routes have zero critical a11y violations', async ({ page }) => {
+  const { api } = await childContext(page);
   for (const path of ['/crew', '/crew/district', '/crew/vault', '/crew/case/case-vr-11']) {
     await page.goto(path);
     await analyze(page, path);
   }
+  await api.dispose();
+});
 
-  // Audit /crew/play once per mechanic family. Each engine renders its own
-  // markup, so auditing one of them proves nothing about the other four — and
-  // it was exactly this screen that hid prohibited-ARIA defects while it went
-  // unloaded. Parked last so nothing audited above can disturb session state.
-  const session = `/api/crew/${childId}/session`;
-  for (const { family, caseId } of FAMILY_CASES) {
+// One test per mechanic family rather than a single loop: each engine renders
+// its own markup, so auditing one proves nothing about the other four — and it
+// was this screen that hid the prohibited-ARIA defects while it went unloaded.
+// Split so a slow or failing engine is isolated, retried and named on its own
+// instead of consuming one shared deadline.
+for (const { family, caseId } of FAMILY_CASES) {
+  test(`/crew/play has zero critical a11y violations [${family}]`, async ({ page }) => {
+    // Parking walks up to 60 sequential API calls; CI runs several times
+    // slower than a laptop, so this needs more than the 60s default.
+    test.setTimeout(180_000);
+    const { api, childId } = await childContext(page);
+    const session = `/api/crew/${childId}/session`;
     await api.post(session, { data: { caseId } });
+
     let parked = false;
     for (let step = 0; step < 60 && !parked; step++) {
       const current = (await (await api.get(`${session}/activity`)).json()) as {
@@ -119,15 +132,11 @@ test('child app routes have zero critical a11y violations', async ({ page }) => 
       }
     }
     expect(parked, `could not reach a practice item for the ${family} engine`).toBe(true);
+    await api.dispose();
 
     await page.goto('/crew/play');
-    // The mechanic mounts client-side, and under `next dev` this route
-    // compiles on first hit — audit only once the choices are on stage.
-    await page
-      .locator('[role="group"][aria-label="Answer choices"]')
-      .first()
-      .waitFor({ timeout: 60_000 });
+    // The mechanic mounts client-side — audit once the choices are on stage.
+    await page.locator('[role="group"][aria-label="Answer choices"]').first().waitFor();
     await analyze(page, `/crew/play [${family}]`);
-  }
-  await api.dispose();
-});
+  });
+}
