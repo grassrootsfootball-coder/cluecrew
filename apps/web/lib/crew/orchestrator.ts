@@ -46,7 +46,22 @@ interface PersistedState {
   /** The activity currently awaiting an answer, with grading data. */
   pending: PendingActivity | null;
   bonusWordId: string | null;
+  /**
+   * When the session clock was last settled, ISO. Set when an activity goes on
+   * stage and again each time time is charged, so the gap between the two is
+   * the real time the child spent there. See serve and chargeableSeconds.
+   */
+  clockAt?: string;
 }
+
+/**
+ * The row version a state snapshot was read at. Keyed by a symbol so it is
+ * invisible to JSON.stringify and can never leak into the stored JSON: it
+ * exists only to let saveState refuse a write built on a snapshot that
+ * something else has already moved past.
+ */
+const VERSION = Symbol('stateVersion');
+type LoadedState = PersistedState & { [VERSION]: number };
 
 type PendingActivity =
   | {
@@ -65,21 +80,78 @@ type PendingActivity =
       wordId: string;
       correctOptionId: string;
     }
-  | { kind: 'teachback'; content: TeachbackContent; misconceptionId: string };
+  | { kind: 'teachback'; content: TeachbackContent; misconceptionId: string }
+  /** A Mode the child is currently looking at; consumed by complete/decline. */
+  | { kind: 'mode'; mode: Mode };
 
-async function loadState(sessionId: string): Promise<PersistedState> {
+async function loadState(sessionId: string): Promise<LoadedState> {
   const session = await prisma.session.findUniqueOrThrow({ where: { id: sessionId } });
-  return session.engineState as unknown as PersistedState;
+  const state = session.engineState as unknown as LoadedState;
+  state[VERSION] = session.stateVersion;
+  return state;
 }
 
+/**
+ * Writes the state back, but only if nothing else has written since it was
+ * read. A losing write throws `state_conflict`, which the crew routes turn
+ * into a 409 — the same answer a replayed submission already gets, and one the
+ * runner recovers from by reloading the real activity.
+ *
+ * Without this, two overlapping requests both read the same snapshot, both
+ * mutated it, and both saved: whichever landed first was silently discarded.
+ * That is how a session could appear to go backwards mid-tap.
+ */
 async function saveState(sessionId: string, state: PersistedState): Promise<void> {
-  await prisma.session.update({
-    where: { id: sessionId },
+  const loaded = state as LoadedState;
+  const version = loaded[VERSION] ?? 0;
+  const result = await prisma.session.updateMany({
+    where: { id: sessionId, stateVersion: version },
     data: {
       engineState: state as unknown as Prisma.InputJsonValue,
       secondsActive: state.engine.secondsActive,
+      stateVersion: version + 1,
     },
   });
+  if (result.count === 0) throw new Error('state_conflict');
+  loaded[VERSION] = version + 1;
+}
+
+/**
+ * Puts an activity on stage and starts its clock.
+ *
+ * Only a CHANGE of activity restarts it. The activity endpoint rewrites the
+ * same pending value every time it is polled, and the Mode screen's `open`
+ * rewrites the value the offer already set — neither means the child has
+ * arrived at something new, and treating them as if it did would keep pushing
+ * the checkpoint forward so the screen was never charged for at all.
+ */
+function serve(state: PersistedState, pending: PendingActivity): void {
+  const unchanged = JSON.stringify(state.pending) === JSON.stringify(pending);
+  state.pending = pending;
+  if (!unchanged) state.clockAt = new Date().toISOString();
+}
+
+/**
+ * How many seconds this submission may add to the session clock, and the
+ * settling of that clock.
+ *
+ * The child's device reports how long a screen took, and that number used to be
+ * trusted outright. Sending it twice added it twice: ten taps on the Mode
+ * screen over ten real seconds charged the child about fifty-five. D2's
+ * fifteen-minute cap is measured against this clock, so inflating it ends a
+ * child's session early.
+ *
+ * The clock may now never move faster than the wall clock. The claim is still
+ * honoured when it is SMALLER — a slow network, or a request the child never
+ * saw, must not cost them time they did not spend.
+ */
+function chargeableSeconds(state: PersistedState, now: Date, claimed: number): number {
+  const claim = Math.min(Math.max(0, claimed), 600);
+  const charge = state.clockAt
+    ? Math.max(0, Math.min(claim, Math.floor((now.getTime() - Date.parse(state.clockAt)) / 1000)))
+    : claim;
+  state.clockAt = now.toISOString();
+  return charge;
 }
 
 async function drainAndLog(childId: string, state: PersistedState): Promise<void> {
@@ -243,8 +315,26 @@ export type ActivityPayload =
       options: Array<{ id: string; content: unknown }>;
     };
 
-/** Builds the next renderable activity payload. Never leaks answers. */
-export async function getActivity(childId: string): Promise<ActivityPayload> {
+/**
+ * Builds the next renderable activity payload. Never leaks answers.
+ *
+ * Reading the next activity can write (it records what went on stage), so it
+ * can lose a version race with a submission landing at the same moment. A read
+ * must not fail for that: it simply re-reads and asks again, which is safe
+ * because the activity is derived from state rather than advancing it.
+ */
+export async function getActivity(childId: string, attempt = 0): Promise<ActivityPayload> {
+  try {
+    return await buildActivity(childId);
+  } catch (error) {
+    if ((error as Error).message === 'state_conflict' && attempt < 2) {
+      return getActivity(childId, attempt + 1);
+    }
+    throw error;
+  }
+}
+
+async function buildActivity(childId: string): Promise<ActivityPayload> {
   const session = await openSessionFor(childId);
   if (!session) return { kind: 'no_session' as const };
   const state = await loadState(session.id);
@@ -257,6 +347,9 @@ export async function getActivity(childId: string): Promise<ActivityPayload> {
 
   if (activity.kind === 'mode_content') {
     const focusCase = await prisma.case.findUniqueOrThrow({ where: { id: activity.caseId } });
+    // Record what is on stage, exactly as every other activity does, so a
+    // second complete/decline for it can be recognised as a replay.
+    serve(state, { kind: 'mode', mode: activity.mode });
     await saveState(session.id, state);
     return {
       kind: 'mode_content' as const,
@@ -281,7 +374,7 @@ export async function getActivity(childId: string): Promise<ActivityPayload> {
       return getActivity(childId);
     }
     const content = teachbackContentSchema.parse(chosen.teachback);
-    state.pending = { kind: 'teachback', content, misconceptionId: chosen.id };
+    serve(state, { kind: 'teachback', content, misconceptionId: chosen.id });
     await saveState(session.id, state);
     return {
       kind: 'teachback' as const,
@@ -298,7 +391,7 @@ export async function getActivity(childId: string): Promise<ActivityPayload> {
       if (!word) return advancePastBrokenUnit(childId, session.id, state);
 
       if (state.collectCardIds.includes(unit.unitId)) {
-        state.pending = { kind: 'word_collect', wordId: word.id };
+        serve(state, { kind: 'word_collect', wordId: word.id });
         await saveState(session.id, state);
         return {
           kind: 'word_collect' as const,
@@ -320,7 +413,7 @@ export async function getActivity(childId: string): Promise<ActivityPayload> {
       const shuffled = distractors.sort(() => 0.5 - Math.random()).slice(0, 3);
       const direction = state.engine.warmup.index % 2 === 0 ? 'meaning_to_word' : 'word_to_meaning';
       const optionWords = [word, ...shuffled].sort(() => 0.5 - Math.random());
-      state.pending = { kind: 'word_review', wordId: word.id, correctOptionId: word.id };
+      serve(state, { kind: 'word_review', wordId: word.id, correctOptionId: word.id });
       await saveState(session.id, state);
       return {
         kind: 'word_review' as const,
@@ -412,7 +505,7 @@ async function serveItem(
   // the order is stable for this child but differs between children.
   const options = shuffleOptionsForChild(item.options, childId, item.id);
 
-  state.pending = {
+  serve(state, {
     kind: 'item',
     activityKind: input.activityKind,
     itemId: item.id,
@@ -425,7 +518,7 @@ async function serveItem(
       isCorrect: option.isCorrect,
       misconceptionId: option.misconceptionId,
     })),
-  };
+  });
   await saveState(sessionId, state);
   return {
     kind: 'item' as const,
@@ -467,7 +560,7 @@ export async function submitAnswer(
   if (!pending) throw new Error('nothing_pending');
   const now = new Date();
   const child = await prisma.childProfile.findUniqueOrThrow({ where: { id: childId } });
-  const seconds = Math.min(Math.max(0, body.secondsElapsed), 600);
+  const seconds = chargeableSeconds(state, now, body.secondsElapsed);
 
   if (pending.kind === 'word_collect') {
     await prisma.wordVaultEntry.upsert({
@@ -501,6 +594,12 @@ export async function submitAnswer(
 
   if (pending.kind === 'teachback') {
     throw new Error('use_teachback_endpoint');
+  }
+
+  if (pending.kind === 'mode') {
+    // A Mode is on stage, not a question. Reaching here means an answer
+    // arrived for a screen the session has already left behind.
+    throw new Error('nothing_pending');
   }
 
   if (pending.kind === 'word_review') {
@@ -650,6 +749,24 @@ async function applyReviewOutcome(
   });
 }
 
+/**
+ * Modes are the one activity that used to change the session without the
+ * server having recorded that it was showing them, so there was nothing to
+ * check a second, identical request against. Every other activity is written
+ * into `pending` when it goes on stage and consumed when it is answered — a
+ * replayed answer finds nothing pending and is refused. Modes now work the
+ * same way:
+ *
+ *   open      the child is looking at this Mode. Sets the pending mode, so it
+ *             covers both the Mode the engine offered and one the child asked
+ *             for from a miss beat. Repeating it writes the same value.
+ *   complete  the child is done with it. REQUIRES the pending mode, and clears
+ *             it, so a second `complete` is refused.
+ *   decline   the child waved the offer away. Same rule.
+ *
+ * Only `complete` and `decline` carry time, so refusing their replays is what
+ * stops a tapped button from spending the child's session.
+ */
 export async function modeAction(
   childId: string,
   body: { mode: Mode; action: 'open' | 'complete' | 'decline'; secondsElapsed?: number },
@@ -660,16 +777,23 @@ export async function modeAction(
 
   if (body.action === 'open') {
     state.engine = openMode(state.engine, body.mode);
+    serve(state, { kind: 'mode', mode: body.mode });
     // The single permitted pointer (L2): last used mode, a UI convenience.
     await prisma.childProfile.update({ where: { id: childId }, data: { lastUsedMode: body.mode } });
-  } else if (body.action === 'complete') {
-    state.engine = completeMode(state.engine, body.mode);
   } else {
-    state.engine = declineModeOffer(state.engine);
+    if (state.pending?.kind !== 'mode' || state.pending.mode !== body.mode) {
+      throw new Error('nothing_pending');
+    }
+    state.engine =
+      body.action === 'complete'
+        ? completeMode(state.engine, body.mode)
+        : declineModeOffer(state.engine);
+    state.pending = null;
   }
+
   if (body.secondsElapsed) {
     const { tick } = await import('@cluecrew/core');
-    state.engine = tick(state.engine, body.secondsElapsed);
+    state.engine = tick(state.engine, chargeableSeconds(state, new Date(), body.secondsElapsed));
   }
   await drainAndLog(childId, state);
   await saveState(session.id, state);
@@ -690,7 +814,7 @@ export async function answerTeachback(
     chosenStepIndex: body.stepIndex,
     chosenCorrectionIndex: body.correctionIndex,
   });
-  state.engine = tick(state.engine, Math.min(body.secondsElapsed, 600));
+  state.engine = tick(state.engine, chargeableSeconds(state, new Date(), body.secondsElapsed));
   state.engine = completeTeachback(state.engine, result.success);
 
   if (result.success) {

@@ -30,7 +30,12 @@ export default async function ItemDetailPage({
 }) {
   const { id } = await params;
   const { error } = await searchParams;
-  const staff = (await currentStaff())!;
+  const staff = await currentStaff();
+  // The layout renders the sign-in form when there is no staff session,
+  // but a layout does not gate its page: in the App Router both render in
+  // parallel, so this ran with null and threw on effectiveRole. Render
+  // nothing and let the layout own the signed-out view.
+  if (!staff) return null;
 
   const item = await prisma.item.findUnique({
     where: { id },

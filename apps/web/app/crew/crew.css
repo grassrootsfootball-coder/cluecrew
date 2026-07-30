@@ -91,22 +91,47 @@
   border-color: var(--cc-amber);
 }
 
-/* Waiting on the server. The tap still answers inside 100ms — the button
-   settles, drops its lift and stops inviting another press — but it is never
-   greyed out and never loses its text contrast: the case is still moving, it
-   just has not landed yet. No animation here, so reduced motion needs no
-   separate story (§2.5).
-
-   This must sit AFTER .crew-tap.primary. Both are two-class selectors, so
-   specificity ties and source order decides — placed any earlier, the primary
-   button's amber quietly wins and the busy state never shows at all. */
+/* Waiting on the server.
+ *
+ * The first version of this washed the amber out towards cream. On screen that
+ * reads as switched OFF — fading is the visual language of a disabled control,
+ * and to an 8-year-old a button that goes pale has stopped working, which is
+ * the opposite of what is true. So the amber stays at full strength and the
+ * torchlight sweeps across it instead: the same metaphor the amber already
+ * carries in the manifesto, and the one thing on the screen that unambiguously
+ * says still going.
+ *
+ * The sweep is a background-image, not a pseudo-element, so it passes UNDER
+ * the label rather than over it — text contrast is never touched, and the
+ * lightened band can only raise it against the dark ink.
+ *
+ * This block must sit AFTER .crew-tap.primary. Both are two-class selectors,
+ * so specificity ties and source order decides — placed any earlier the
+ * primary button's amber quietly wins and the waiting state never shows. */
 .crew-tap[aria-busy='true'],
 .crew-tap[aria-busy='true']:hover,
 .crew-tap[aria-busy='true']:focus-visible {
   cursor: progress;
   transform: none;
-  border-color: color-mix(in srgb, var(--cc-ink) 25%, transparent);
-  background: color-mix(in srgb, var(--cc-amber) 40%, var(--cc-cream));
+  border-color: color-mix(in srgb, var(--cc-ink) 45%, transparent);
+  background-image: linear-gradient(
+    100deg,
+    transparent 35%,
+    color-mix(in srgb, #fdfcf9 55%, transparent) 50%,
+    transparent 65%
+  ); /* vocab-ok: a light sweep on the button, page background stays cream */
+  background-size: 250% 100%;
+  background-repeat: no-repeat;
+  animation: crew-sweep 1200ms ease-in-out infinite;
+}
+
+@keyframes crew-sweep {
+  from {
+    background-position: 120% 0;
+  }
+  to {
+    background-position: -20% 0;
+  }
 }
 
 .crew-ripple {
@@ -1263,5 +1288,13 @@
   .crew-flyer,
   .crew-ripple {
     display: none !important;
+  }
+
+  /* Parity, not removal (§2.5). The sweep is how a waiting button says it is
+     still working; with the animation switched off it would sit frozen off
+     the left edge and say nothing at all. Park the light in the middle so the
+     button still looks lit, just not moving. */
+  .crew-tap[aria-busy='true'] {
+    background-position: 50% 0 !important;
   }
 }

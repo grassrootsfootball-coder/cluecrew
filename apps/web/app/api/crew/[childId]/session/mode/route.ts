@@ -18,5 +18,12 @@ export async function POST(request: Request, { params }: { params: Promise<{ chi
     .safeParse(await request.json().catch(() => null));
   if (!parsed.success) return NextResponse.json({ error: 'invalid_request' }, { status: 400 });
 
-  return NextResponse.json(await modeAction(childId, parsed.data as never));
+  try {
+    return NextResponse.json(await modeAction(childId, parsed.data as never));
+  } catch (error) {
+    // A replayed complete/decline, or a write that lost a version race. 409 is
+    // what the answer route already returns for the same situations, and what
+    // the runner recovers from by reloading the real activity.
+    return NextResponse.json({ error: (error as Error).message }, { status: 409 });
+  }
 }

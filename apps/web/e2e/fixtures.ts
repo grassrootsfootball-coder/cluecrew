@@ -221,14 +221,27 @@ export async function signInAsStaff(page: Page, staff: FixtureStaff): Promise<Pa
   await page.getByRole('button', { name: 'Sign in' }).click();
 
   const nav = page.getByRole('navigation', { name: 'Admin' });
+  // /admin is the one area no other spec visits, so whichever staff test runs
+  // first pays for compiling it AND its sign-in server action against the dev
+  // server. That first submission has been measured well past 15s; the budget
+  // is for a cold compile, not for how long a sign-in ought to take.
   const arrived = await nav
-    .waitFor({ timeout: 15_000 })
+    .waitFor({ timeout: 45_000 })
     .then(() => true)
     .catch(() => false);
   if (!arrived) {
     const shown = await page.locator('main').innerText().catch(() => '(no main element)');
+    // The page alone never says why: a filled-in form with no error looks the
+    // same whether the password was wrong, the account was locked, the role
+    // was missing, or the row had gone. Ask the database directly.
+    const row = await prisma.parentAccount.findUnique({
+      where: { email: staff.email },
+      select: { staffRole: true, failedLogins: true, lockedUntil: true, emailVerified: true },
+    });
     throw new Error(
-      `staff sign-in failed for ${staff.email} (${staff.role}). Page said:\n${shown.slice(0, 400)}`,
+      `staff sign-in failed for ${staff.email} (${staff.role}).\n` +
+        `Account row: ${row ? JSON.stringify(row) : 'GONE — deleted before it was used'}\n` +
+        `Page said:\n${shown.slice(0, 300)}`,
     );
   }
   return page;

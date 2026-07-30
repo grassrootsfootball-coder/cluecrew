@@ -365,6 +365,12 @@ model Session {
   // Serialized engine state (packages/core session reducer). The engine is
   // pure; this row is just its persistence.
   engineState Json?
+  // Optimistic concurrency for engineState. Every read carries this number and
+  // every write requires it to be unchanged, so two overlapping requests can
+  // no longer both read the same state, both mutate it, and both save — which
+  // silently discarded whichever landed first. The loser is told (409) and the
+  // client reloads the real activity. See apps/web/lib/crew/orchestrator.ts.
+  stateVersion Int @default(0)
 }
 
 // ---------- Analytics spine (§6) ----------

@@ -12,7 +12,12 @@ export default async function BursaryQueuePage({
 }: {
   searchParams: Promise<{ error?: string }>;
 }) {
-  const staff = (await currentStaff())!;
+  const staff = await currentStaff();
+  // The layout renders the sign-in form when there is no staff session,
+  // but a layout does not gate its page: in the App Router both render in
+  // parallel, so this ran with null and threw on effectiveRole. Render
+  // nothing and let the layout own the signed-out view.
+  if (!staff) return null;
   const { error } = await searchParams;
   const [applications, paidSubs, approvedCount] = await Promise.all([
     prisma.bursaryApplication.findMany({

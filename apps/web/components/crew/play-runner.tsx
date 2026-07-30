@@ -497,9 +497,12 @@ export function PlayRunner({ childId }: { childId: string }) {
           <button
             className="crew-tap primary"
             data-testid="collect-word"
-            onClick={() => void collectWord(activity.word.headword)}
+            aria-busy={busy === 'collect-word'}
+            onClick={() =>
+              void tapThrough('collect-word', () => collectWord(activity.word.headword))
+            }
           >
-            Into the vault
+            {busy === 'collect-word' ? 'Locking it away…' : 'Into the vault'}
           </button>
         </section>
       ) : null}
@@ -516,7 +519,8 @@ export function PlayRunner({ childId }: { childId: string }) {
                 key={option.id}
                 className="crew-tap"
                 disabled={Boolean(outcome)}
-                onClick={() => void submit(option.id)}
+                aria-busy={busy === 'word-review'}
+                onClick={() => void tapThrough('word-review', () => submit(option.id))}
               >
                 {option.label}
               </button>
@@ -645,9 +649,10 @@ export function PlayRunner({ childId }: { childId: string }) {
                 className="crew-tap primary"
                 data-testid="lock-answer"
                 disabled={!selected}
-                onClick={() => void submit(selected!)}
+                aria-busy={busy === 'lock-answer'}
+                onClick={() => void tapThrough('lock-answer', () => submit(selected!))}
               >
-                That&apos;s my answer
+                {busy === 'lock-answer' ? 'Checking…' : "That's my answer"}
               </button>
             </p>
           ) : null}
