@@ -91,6 +91,24 @@
   border-color: var(--cc-amber);
 }
 
+/* Waiting on the server. The tap still answers inside 100ms — the button
+   settles, drops its lift and stops inviting another press — but it is never
+   greyed out and never loses its text contrast: the case is still moving, it
+   just has not landed yet. No animation here, so reduced motion needs no
+   separate story (§2.5).
+
+   This must sit AFTER .crew-tap.primary. Both are two-class selectors, so
+   specificity ties and source order decides — placed any earlier, the primary
+   button's amber quietly wins and the busy state never shows at all. */
+.crew-tap[aria-busy='true'],
+.crew-tap[aria-busy='true']:hover,
+.crew-tap[aria-busy='true']:focus-visible {
+  cursor: progress;
+  transform: none;
+  border-color: color-mix(in srgb, var(--cc-ink) 25%, transparent);
+  background: color-mix(in srgb, var(--cc-amber) 40%, var(--cc-cream));
+}
+
 .crew-ripple {
   position: absolute;
   border-radius: 50%;

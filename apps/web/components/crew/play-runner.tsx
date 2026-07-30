@@ -96,6 +96,13 @@ export function PlayRunner({ childId }: { childId: string }) {
   const [teachStep, setTeachStep] = useState<number | null>(null);
   /** The in-world cold-trail beat, shown instead of a dead loading screen. */
   const [trouble, setTrouble] = useState<string | null>(null);
+  /**
+   * Which control is mid-flight, or null. Keyed rather than a plain boolean so
+   * only the button actually tapped shows the waiting state — a sibling that
+   * nothing is happening to must not light up alongside it. The `working` ref
+   * is the guard; this only paints.
+   */
+  const [busy, setBusy] = useState<string | null>(null);
   // Deterministic on the first render (server and hydration agree), then
   // rotated from an effect so the line still varies between visits. A
   // useState initializer would run on BOTH server and client and pick two
@@ -106,6 +113,7 @@ export function PlayRunner({ childId }: { childId: string }) {
   const shownAt = useRef(Date.now());
   const loading = useRef(false);
   const finished = useRef(false);
+  const working = useRef(false);
   const vaultChip = useRef<HTMLSpanElement>(null);
   const collectCard = useRef<HTMLDivElement>(null);
 
@@ -256,6 +264,35 @@ export function PlayRunner({ childId }: { childId: string }) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ mode, action, secondsElapsed: action === 'complete' ? seconds() : 0 }),
     });
+  }
+
+  /**
+   * For taps that must finish a server round trip before the screen can move.
+   *
+   * Measured: leaving the Mode screen costs two POSTs and a GET — about a
+   * second, during which the button looked untouched. A child does the obvious
+   * thing and taps again, and each extra tap posted `open` + `complete` afresh:
+   * duplicate mode_opened/mode_completed events, and — because secondsElapsed
+   * is time-since-the-screen-appeared, re-sent every time and tick()ed in — a
+   * session clock that ran ahead of the real world. Ten taps over ten seconds
+   * charged the child about fifty-five. That clock is what D2's fifteen-minute
+   * cap is measured against, so tapping shortened the session.
+   *
+   * The guard is a ref, not the state: two taps in one frame would both read a
+   * stale `false` from state and both go through. The state exists only to
+   * paint the button, which happens on the same frame as the tap — Addendum A
+   * §2.2's 100ms rule, which the round trip was quietly breaking.
+   */
+  async function tapThrough(key: string, action: () => Promise<void>): Promise<void> {
+    if (working.current) return;
+    working.current = true;
+    setBusy(key);
+    try {
+      await action();
+    } finally {
+      working.current = false;
+      setBusy(null);
+    }
   }
 
   async function submitTeachback(correctionIndex: number) {
@@ -502,21 +539,27 @@ export function PlayRunner({ childId }: { childId: string }) {
           </p>
           <button
             className="crew-tap primary"
-            onClick={async () => {
-              await modeApi(activity.mode, 'open');
-              await modeApi(activity.mode, 'complete');
-              await loadActivity();
-            }}
+            aria-busy={busy === 'mode-back'}
+            onClick={() =>
+              void tapThrough('mode-back', async () => {
+                await modeApi(activity.mode, 'open');
+                await modeApi(activity.mode, 'complete');
+                await loadActivity();
+              })
+            }
           >
-            Back to the case
+            {busy === 'mode-back' ? 'On our way back…' : 'Back to the case'}
           </button>
           {!activity.forced ? (
             <button
               className="crew-tap"
-              onClick={async () => {
-                await modeApi(activity.mode, 'decline');
-                await loadActivity();
-              }}
+              aria-busy={busy === 'mode-decline'}
+              onClick={() =>
+                void tapThrough('mode-decline', async () => {
+                  await modeApi(activity.mode, 'decline');
+                  await loadActivity();
+                })
+              }
             >
               No thanks, keep going
             </button>
@@ -631,11 +674,14 @@ export function PlayRunner({ childId }: { childId: string }) {
               </button>
               <button
                 className="crew-tap"
-                onClick={async () => {
-                  await modeApi('walk', 'open');
-                  await modeApi('walk', 'complete');
-                  await loadActivity();
-                }}
+                aria-busy={busy === 'miss-way-in'}
+                onClick={() =>
+                  void tapThrough('miss-way-in', async () => {
+                    await modeApi('walk', 'open');
+                    await modeApi('walk', 'complete');
+                    await loadActivity();
+                  })
+                }
               >
                 {VOICE.missWayIn}
               </button>
