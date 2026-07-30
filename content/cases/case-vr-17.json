@@ -1,0 +1,35 @@
+{
+  "kind": "case",
+  "case": {
+    "id": "case-vr-17",
+    "questionTypeId": "vr-17-complete-the-sum",
+    "title": "The Balanced Scales",
+    "narrativeIntro": {
+      "text": "Both sides of the sign must weigh the same. One number is missing from the scales. Set one for your crew on paper.",
+      "skippable": true
+    },
+    "modes": {
+      "watch": {
+        "kind": "video",
+        "assetRef": "placeholder/vr-17/watch.mp4",
+        "maxSeconds": 90
+      },
+      "walk": {
+        "kind": "faded-example",
+        "assetRef": "placeholder/vr-17/walk.json"
+      },
+      "see": {
+        "kind": "visual",
+        "assetRef": "placeholder/vr-17/see.json"
+      },
+      "hear": {
+        "kind": "audio",
+        "assetRef": "placeholder/vr-17/hear.mp3"
+      },
+      "try": {
+        "kind": "practice"
+      }
+    },
+    "orderInDistrict": 17
+  }
+}

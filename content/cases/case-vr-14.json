@@ -1,0 +1,35 @@
+{
+  "kind": "case",
+  "case": {
+    "id": "case-vr-14",
+    "questionTypeId": "vr-14-letter-connections",
+    "title": "The Same Jump",
+    "narrativeIntro": {
+      "text": "B to E is a jump of three. Find the jump in the first pair, then make the same jump again. An A to Z strip on the fridge helps the whole crew.",
+      "skippable": true
+    },
+    "modes": {
+      "watch": {
+        "kind": "video",
+        "assetRef": "placeholder/vr-14/watch.mp4",
+        "maxSeconds": 90
+      },
+      "walk": {
+        "kind": "faded-example",
+        "assetRef": "placeholder/vr-14/walk.json"
+      },
+      "see": {
+        "kind": "visual",
+        "assetRef": "placeholder/vr-14/see.json"
+      },
+      "hear": {
+        "kind": "audio",
+        "assetRef": "placeholder/vr-14/hear.mp3"
+      },
+      "try": {
+        "kind": "practice"
+      }
+    },
+    "orderInDistrict": 14
+  }
+}

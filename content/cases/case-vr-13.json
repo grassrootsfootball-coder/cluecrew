@@ -1,0 +1,35 @@
+{
+  "kind": "case",
+  "case": {
+    "id": "case-vr-13",
+    "questionTypeId": "vr-13-make-a-word",
+    "title": "The Word Builder",
+    "narrativeIntro": {
+      "text": "Take the front of one word and the front of another. Put them together and a new word appears. Build one for your crew to solve.",
+      "skippable": true
+    },
+    "modes": {
+      "watch": {
+        "kind": "video",
+        "assetRef": "placeholder/vr-13/watch.mp4",
+        "maxSeconds": 90
+      },
+      "walk": {
+        "kind": "faded-example",
+        "assetRef": "placeholder/vr-13/walk.json"
+      },
+      "see": {
+        "kind": "visual",
+        "assetRef": "placeholder/vr-13/see.json"
+      },
+      "hear": {
+        "kind": "audio",
+        "assetRef": "placeholder/vr-13/hear.mp3"
+      },
+      "try": {
+        "kind": "practice"
+      }
+    },
+    "orderInDistrict": 13
+  }
+}

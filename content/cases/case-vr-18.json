@@ -1,0 +1,35 @@
+{
+  "kind": "case",
+  "case": {
+    "id": "case-vr-18",
+    "questionTypeId": "vr-18-related-numbers",
+    "title": "The Middle Number",
+    "narrativeIntro": {
+      "text": "Three numbers sit in a row, and the middle one comes from the outside two. Find the rule, then use it again. One triple is plenty for your crew.",
+      "skippable": true
+    },
+    "modes": {
+      "watch": {
+        "kind": "video",
+        "assetRef": "placeholder/vr-18/watch.mp4",
+        "maxSeconds": 90
+      },
+      "walk": {
+        "kind": "faded-example",
+        "assetRef": "placeholder/vr-18/walk.json"
+      },
+      "see": {
+        "kind": "visual",
+        "assetRef": "placeholder/vr-18/see.json"
+      },
+      "hear": {
+        "kind": "audio",
+        "assetRef": "placeholder/vr-18/hear.mp3"
+      },
+      "try": {
+        "kind": "practice"
+      }
+    },
+    "orderInDistrict": 18
+  }
+}

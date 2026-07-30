@@ -1,0 +1,35 @@
+{
+  "kind": "case",
+  "case": {
+    "id": "case-vr-20",
+    "questionTypeId": "vr-20-complete-the-word",
+    "title": "The Smudged Page",
+    "narrativeIntro": {
+      "text": "Rain got to the case notes and took some letters with it. The word is still in there. Work out what belongs in the gap.",
+      "skippable": true
+    },
+    "modes": {
+      "watch": {
+        "kind": "video",
+        "assetRef": "placeholder/vr-20/watch.mp4",
+        "maxSeconds": 90
+      },
+      "walk": {
+        "kind": "faded-example",
+        "assetRef": "placeholder/vr-20/walk.json"
+      },
+      "see": {
+        "kind": "visual",
+        "assetRef": "placeholder/vr-20/see.json"
+      },
+      "hear": {
+        "kind": "audio",
+        "assetRef": "placeholder/vr-20/hear.mp3"
+      },
+      "try": {
+        "kind": "practice"
+      }
+    },
+    "orderInDistrict": 20
+  }
+}
