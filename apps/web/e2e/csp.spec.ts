@@ -2,24 +2,16 @@
  * Gate checklist #7: the CSP on /crew blocks a deliberately injected
  * third-party script, and no third-party origin appears in the policy.
  */
-import { expect, request, test, type Page } from '@playwright/test';
+import { expect, test, type Page } from '@playwright/test';
+import { cleanupFixtures, createFamily, enterCrewMode, parentApi } from './fixtures';
+
+test.afterAll(cleanupFixtures);
 
 /** The crew layout gates on a child session; give the probe page a real one. */
 async function enterChildMode(page: Page): Promise<void> {
-  const api = await request.newContext({ baseURL: 'http://localhost:3100' });
-  const { csrfToken } = (await (await api.get('/api/auth/csrf')).json()) as { csrfToken: string };
-  await api.post('/api/auth/callback/credentials', {
-    form: { csrfToken, email: 'test-family@cluecrew.test', password: 'CrewTest!2026' },
-  });
-  const children = (await (await api.get('/api/parent/children')).json()) as {
-    children: Array<{ id: string }>;
-  };
-  await api.post('/api/child-session', { data: { childId: children.children[0]!.id } });
-  const cookies = (await api.storageState()).cookies;
-  const crewToken = cookies.find((cookie) => cookie.name === 'crew_token')!;
-  await page.context().addCookies([
-    { name: 'crew_token', value: crewToken.value, domain: 'localhost', path: '/' },
-  ]);
+  const family = await createFamily('csp');
+  const api = await parentApi(family.email);
+  await enterCrewMode(page, api, family.child.id);
   await api.dispose();
 }
 

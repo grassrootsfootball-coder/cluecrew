@@ -1,42 +1,28 @@
 /**
  * Phase 4 gates #1 (loop end-to-end), #5 (miss path reads kindly, no red),
- * and the Plain-mode closer (#2, P4). Drives the real child app UI with a
- * fresh family so state is deterministic.
+ * and the Plain-mode closer (#2, P4). Drives the real child app UI with its
+ * own fresh family so state is deterministic.
  */
-import { expect, request, test, type Page } from '@playwright/test';
+import { expect, test, type Page } from '@playwright/test';
+import { cleanupFixtures, createFamily, signInAsParent } from './fixtures';
 
-const PASSWORD = 'E2eCrewLoop!2026';
+test.afterAll(cleanupFixtures);
 
+/**
+ * Signs the parent in and hands the device over through the real "Enter Crew
+ * HQ" button — the parent→child handover is part of what this test covers.
+ *
+ * The account and child come from the fixture rather than from walking signup
+ * and onboarding. That is not only faster: it stops a change to the onboarding
+ * form from breaking this test, which is about the daily loop.
+ * billing-journey.spec.ts owns the signup journey and asserts on it properly.
+ */
 async function makeChildSession(page: Page): Promise<void> {
-  const email = `e2e-loop-${Date.now()}@cluecrew.test`;
-  const api = await request.newContext({ baseURL: 'http://localhost:3100' });
-  await api.post('/api/auth/signup', { data: { email, password: PASSWORD, displayName: 'Loop Parent' } });
-  const { url } = (await (
-    await api.get(`/api/dev/verification-link?email=${encodeURIComponent(email)}`)
-  ).json()) as { url: string };
-  await api.get(url);
-  await api.dispose();
-
-  await page.goto('/login');
-  await page.fill('input[name="email"]', email);
-  await page.fill('input[name="password"]', PASSWORD);
-  await page.getByRole('button', { name: 'Sign in' }).click();
-  await page.waitForURL('**/parent');
-
-  await page.goto('/onboarding');
-  await page.fill('input[name="crewName"]', 'Robin');
-  await page.getByRole('button', { name: 'Create profile' }).click();
-  await page.waitForURL('**/onboarding');
-  await page.selectOption('select[name="regionCode"]', 'kent');
-  await page.getByRole('button', { name: 'Save and continue' }).click();
-  await page
-    .locator('.cc-card', { hasText: '1-Year Crew' })
-    .getByRole('button', { name: /Start free trial/ })
-    .click();
-  await page.waitForURL('**/parent');
+  const family = await createFamily('loop', { crewNames: ['Robin'] });
+  await signInAsParent(page, family.email);
 
   await page.goto('/parent/children');
-  await page.getByRole('button', { name: 'Enter Crew HQ as Robin' }).click();
+  await page.getByRole('button', { name: `Enter Crew HQ as ${family.child.crewName}` }).click();
   await page.waitForURL('**/crew');
 }
 
@@ -83,16 +69,23 @@ test('full Daily Loop: HQ → warm-up → case → plain closer → wind-down; m
   let lastTick = Date.now();
   let lastBranch = 'start';
   // Steps are DOM polls, not interactions: a single warm-up item costs 2–4 of
-  // them (render → answer → feedback). When this test runs after the rest of
-  // the suite, the shared seed child carries accumulated review debt, so the
-  // warm-up alone can consume ~80 steps before the first focus answer. The
-  // budget is only a runaway guard — test.setTimeout(480_000) is the real
-  // deadline — so it is sized for the loaded case, not the fresh one.
+  // them (render → answer → feedback). The budget is only a runaway guard —
+  // test.setTimeout(480_000) is the real deadline — so it stays generous even
+  // though this child is now created fresh and carries no review debt.
   for (let step = 0; step < 500; step++) {
     if (process.env.LOOP_DEBUG) {
       console.log(`step ${step} +${Date.now() - lastTick}ms answered=${answered} last=${lastBranch}`);
       lastTick = Date.now();
     }
+    // Latch what this poll can SEE before any branch takes an action, because
+    // every branch below ends in `continue`. The Plain-mode check used to sit
+    // seven branches down, so a lingering "Back to the case" button starved it
+    // for ~200 consecutive polls: the closer rendered, the loop never looked,
+    // and the run failed at the end claiming Plain mode never appeared.
+    // Latching on presence rather than visibility for the same reason — this
+    // records what happened; it does not decide what to do next.
+    if ((await page.locator('.crew-plain').count()) > 0) sawPlainCloser = true;
+
     if (await page.getByTestId('wind-down').isVisible().catch(() => false)) break;
 
     // A cold trail is recoverable, so recover — this loop used to burn its
@@ -153,7 +146,6 @@ test('full Daily Loop: HQ → warm-up → case → plain closer → wind-down; m
     // order), so answers are probabilistic: always picking the last option
     // misses ~2/3+ of the time, which reliably reaches the 3-miss frustration
     // break, the closer, and the wind-down within the step budget.
-    if (await page.locator('.crew-plain').isVisible().catch(() => false)) sawPlainCloser = true;
     const groups = page.locator('[role="group"][aria-label="Answer choices"] button');
     if ((await groups.count()) > 0) {
       const count = await groups.count();

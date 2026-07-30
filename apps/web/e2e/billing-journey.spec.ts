@@ -2,10 +2,18 @@
  * Phase 2 gate #1 & #3 & #10: the full journey — signup → verify → child →
  * region → trial (NO card anywhere) → convert (card only at upgrade) →
  * cancel measured at two clicks. Runs against the dev payment provider.
+ *
+ * This is the one spec that builds its accounts by driving signup and
+ * onboarding for real, because the journey IS the subject. Everything else
+ * uses e2e/fixtures.ts. The accounts are still registered for cleanup so a
+ * long-lived dev database does not silently fill up with abandoned families.
  */
 import { expect, request, test, type Page } from '@playwright/test';
+import { cleanupFixtures, trackAccount } from './fixtures';
 
 const PASSWORD = 'E2eJourney!2026';
+
+test.afterAll(cleanupFixtures);
 
 async function signupAndVerify(email: string): Promise<void> {
   const api = await request.newContext({ baseURL: 'http://localhost:3100' });
@@ -18,6 +26,7 @@ async function signupAndVerify(email: string): Promise<void> {
   const verify = await api.get(url);
   expect(verify.ok()).toBeTruthy();
   await api.dispose();
+  await trackAccount(email);
 }
 
 async function login(page: Page, email: string): Promise<void> {

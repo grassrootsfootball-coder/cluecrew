@@ -2,29 +2,21 @@
  * Phase 2 gate #8: an item cannot reach LIVE without a (different) reviewer
  * and fully misconception-mapped distractors; bulk-imported ai-draft items
  * land as DRAFT and cannot skip review.
+ *
+ * Each test creates its own author and reviewer. Two fixtures are never the
+ * same account, so "the reviewer must not be the author" is satisfied by
+ * construction rather than by two seeded accounts that both tests shared.
  */
-import { expect, test, type Browser, type Page } from '@playwright/test';
+import { expect, test } from '@playwright/test';
+import { cleanupFixtures, createStaff, staffContext } from './fixtures';
 
-const STAFF_PASSWORD = 'CrewStaff!2026';
-
-async function staffLogin(browser: Browser, email: string): Promise<Page> {
-  const context = await browser.newContext();
-  const page = await context.newPage();
-  await page.goto('/admin');
-  await page.fill('input[name="email"]', email);
-  await page.fill('input[name="password"]', STAFF_PASSWORD);
-  await page.getByRole('button', { name: 'Sign in' }).click();
-  // The login form lives at /admin itself, so wait for the authenticated
-  // nav rather than a URL change.
-  await expect(page.getByRole('navigation', { name: 'Admin' })).toBeVisible();
-  return page;
-}
+test.afterAll(cleanupFixtures);
 
 test('publish gate: misconceptions + independent reviewer are hard requirements', async ({
   browser,
 }) => {
   // Author drafts an item whose distractor has NO misconception mapping.
-  const author = await staffLogin(browser, 'staff-author@cluecrew.test');
+  const author = await staffContext(browser, await createStaff('cms-author', 'AUTHOR'));
   await author.goto('/admin/items/new');
   await author.selectOption('select[name="questionTypeId"]', 'vr-11-number-series');
   await author.fill('input[name="difficultyTier"]', '2');
@@ -41,7 +33,7 @@ test('publish gate: misconceptions + independent reviewer are hard requirements'
   const itemUrl = author.url();
 
   // Reviewer cannot mark it REVIEWED while a distractor is unmapped (P3).
-  const reviewer = await staffLogin(browser, 'staff-reviewer@cluecrew.test');
+  const reviewer = await staffContext(browser, await createStaff('cms-reviewer', 'REVIEWER'));
   await reviewer.goto(itemUrl);
   await reviewer.getByRole('button', { name: 'Mark REVIEWED' }).click();
   await expect(reviewer.getByText(/must map to a tagged misconception/)).toBeVisible();
@@ -70,7 +62,7 @@ test('publish gate: misconceptions + independent reviewer are hard requirements'
 });
 
 test('bulk-imported ai-draft items land as DRAFT and cannot skip review', async ({ browser }) => {
-  const reviewer = await staffLogin(browser, 'staff-reviewer@cluecrew.test');
+  const reviewer = await staffContext(browser, await createStaff('cms-import', 'REVIEWER'));
   await reviewer.goto('/admin/import');
   // The default payload is an ai-draft example — import it as-is.
   await reviewer.getByRole('button', { name: 'Import as DRAFT' }).click();

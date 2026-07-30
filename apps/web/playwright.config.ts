@@ -1,4 +1,10 @@
+import { config as loadEnv } from 'dotenv';
 import { defineConfig } from '@playwright/test';
+
+// e2e/fixtures.ts builds each test's accounts through Prisma, so the test
+// process needs DATABASE_URL as well as the web server. dotenv does not
+// override variables already set, so CI's own environment still wins.
+loadEnv({ path: '../../.env', quiet: true });
 
 const PORT = 3100;
 

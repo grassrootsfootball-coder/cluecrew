@@ -2,9 +2,15 @@
  * WCAG 2.2 AA automated pass (BUILD-PHASE-5 §7, gate #8): axe on every route
  * family, ZERO critical violations. Serious violations are reported for the
  * manual audit but do not (yet) fail the build — the manual audit closes them.
+ *
+ * Every test here builds its own family (see e2e/fixtures.ts). The five
+ * /crew/play audits in particular need a child with no open session and no
+ * accumulated review debt: sharing one meant each test parked on whatever the
+ * previous test had left behind, and the setup loop grew longer every run.
  */
 import AxeBuilder from '@axe-core/playwright';
-import { expect, request, test, type APIRequestContext, type Page } from '@playwright/test';
+import { expect, test, type APIRequestContext, type Page } from '@playwright/test';
+import { cleanupFixtures, copyCookies, createFamily, enterCrewMode, parentApi } from './fixtures';
 
 /** One case per mechanic family, so every engine's markup gets audited. */
 const FAMILY_CASES = [
@@ -14,6 +20,8 @@ const FAMILY_CASES = [
   { family: 'bridge', caseId: 'case-vr-03' },
   { family: 'deduction', caseId: 'case-vr-15' },
 ] as const;
+
+test.afterAll(cleanupFixtures);
 
 async function analyze(page: Page, label: string): Promise<void> {
   // Tag filtering alone let a real defect through: aria-prohibited-attr is not
@@ -42,15 +50,9 @@ test('marketing and auth routes have zero critical a11y violations', async ({ pa
 });
 
 test('parent HQ routes have zero critical a11y violations', async ({ page }) => {
-  const api = await request.newContext({ baseURL: 'http://localhost:3100' });
-  const { csrfToken } = (await (await api.get('/api/auth/csrf')).json()) as { csrfToken: string };
-  await api.post('/api/auth/callback/credentials', {
-    form: { csrfToken, email: 'test-family@cluecrew.test', password: 'CrewTest!2026' },
-  });
-  const cookies = (await api.storageState()).cookies;
-  await page.context().addCookies(
-    cookies.map((cookie) => ({ name: cookie.name, value: cookie.value, domain: 'localhost', path: '/' })),
-  );
+  const family = await createFamily('a11y-parent');
+  const api = await parentApi(family.email);
+  await copyCookies(page, api);
   await api.dispose();
 
   for (const path of ['/parent', '/parent/children', '/parent/billing', '/parent/casebook', '/parent/casebook/what-the-11-plus-is', '/parent/account']) {
@@ -59,27 +61,19 @@ test('parent HQ routes have zero critical a11y violations', async ({ page }) => 
   }
 });
 
-/** Signs in, mints a crew session, and puts the token on the page context. */
-async function childContext(page: Page): Promise<{ api: APIRequestContext; childId: string }> {
-  const api = await request.newContext({ baseURL: 'http://localhost:3100' });
-  const { csrfToken } = (await (await api.get('/api/auth/csrf')).json()) as { csrfToken: string };
-  await api.post('/api/auth/callback/credentials', {
-    form: { csrfToken, email: 'test-family@cluecrew.test', password: 'CrewTest!2026' },
-  });
-  const children = (await (await api.get('/api/parent/children')).json()) as {
-    children: Array<{ id: string }>;
-  };
-  const childId = children.children[0]!.id;
-  await api.post('/api/child-session', { data: { childId } });
-  const crewToken = (await api.storageState()).cookies.find((cookie) => cookie.name === 'crew_token')!;
-  await page.context().addCookies([
-    { name: 'crew_token', value: crewToken.value, domain: 'localhost', path: '/' },
-  ]);
-  return { api, childId };
+/** A family of one, signed in, with the child's crew token on the page. */
+async function ownChild(
+  page: Page,
+  label: string,
+): Promise<{ api: APIRequestContext; childId: string }> {
+  const family = await createFamily(label);
+  const api = await parentApi(family.email);
+  await enterCrewMode(page, api, family.child.id);
+  return { api, childId: family.child.id };
 }
 
 test('child app routes have zero critical a11y violations', async ({ page }) => {
-  const { api } = await childContext(page);
+  const { api } = await ownChild(page, 'a11y-child');
   for (const path of [
     '/crew',
     '/crew/district',
@@ -100,16 +94,14 @@ test('child app routes have zero critical a11y violations', async ({ page }) => 
 // instead of consuming one shared deadline.
 for (const { family, caseId } of FAMILY_CASES) {
   test(`/crew/play has zero critical a11y violations [${family}]`, async ({ page }) => {
-    // Parking walks up to 60 sequential API calls; CI runs several times
+    // Parking walks a short run of sequential API calls; CI is several times
     // slower than a laptop, so this needs more than the 60s default.
     test.setTimeout(180_000);
-    const { api, childId } = await childContext(page);
+    const { api, childId } = await ownChild(page, `a11y-${family}`);
     const session = `/api/crew/${childId}/session`;
-    // All five family tests share the seed child, and starting a session
-    // RESUMES an open one — so without ending the previous test's session
-    // first, the requested caseId is ignored and this test parks on whatever
-    // the last one left behind. End it, then start the case we want.
-    await api.delete(session);
+    // This child was created seconds ago, so there is no earlier session for
+    // POST to resume and no review debt to clear first — the case asked for is
+    // the case that gets served.
     await api.post(session, { data: { caseId } });
 
     let parked = false;
