@@ -43,6 +43,11 @@ async function analyze(page: Page, label: string): Promise<void> {
 }
 
 test('marketing and auth routes have zero critical a11y violations', async ({ page }) => {
+  // Each of these walks a list of routes, compiling every one against the dev
+  // server and running a full axe pass on it, inside a single deadline. The
+  // 60s default was never sized for that — it is one test doing a dozen
+  // page loads, not one page load.
+  test.setTimeout(180_000);
   for (const path of ['/', '/pricing', '/faq', '/safeguarding', '/accessibility', '/privacy', '/bursary', '/login', '/signup', '/casebook-sample', '/11-plus/kent']) {
     await page.goto(path);
     await analyze(page, path);
@@ -50,6 +55,11 @@ test('marketing and auth routes have zero critical a11y violations', async ({ pa
 });
 
 test('parent HQ routes have zero critical a11y violations', async ({ page }) => {
+  // Each of these walks a list of routes, compiling every one against the dev
+  // server and running a full axe pass on it, inside a single deadline. The
+  // 60s default was never sized for that — it is one test doing a dozen
+  // page loads, not one page load.
+  test.setTimeout(180_000);
   const family = await createFamily('a11y-parent');
   const api = await parentApi(family.email);
   await copyCookies(page, api);
@@ -73,6 +83,11 @@ async function ownChild(
 }
 
 test('child app routes have zero critical a11y violations', async ({ page }) => {
+  // Each of these walks a list of routes, compiling every one against the dev
+  // server and running a full axe pass on it, inside a single deadline. The
+  // 60s default was never sized for that — it is one test doing a dozen
+  // page loads, not one page load.
+  test.setTimeout(180_000);
   const { api } = await ownChild(page, 'a11y-child');
   for (const path of [
     '/crew',
@@ -111,6 +126,7 @@ for (const { family, caseId } of FAMILY_CASES) {
         activityKind?: string;
         plain?: boolean;
         family?: string;
+        mode?: string;
         options?: Array<{ id: string }>;
       };
       if (current.kind === 'item' && current.activityKind === 'practice_item' && !current.plain) {
@@ -125,7 +141,10 @@ for (const { family, caseId } of FAMILY_CASES) {
       } else if (current.kind === 'word_collect') {
         await api.post(`${session}/answer`, { data: { secondsElapsed: 3 } });
       } else if (current.kind === 'mode_content') {
-        await api.post(`${session}/mode`, { data: { action: 'decline' } });
+        // The mode matters: without it this is a 400 and the offer is never
+        // actually declined, so the loop just polls the same screen until it
+        // runs out of steps.
+        await api.post(`${session}/mode`, { data: { mode: current.mode, action: 'decline' } });
       } else if (current.kind === 'teachback') {
         await api.post(`${session}/teachback`, {
           data: { stepIndex: 0, correctionIndex: 0, secondsElapsed: 5 },

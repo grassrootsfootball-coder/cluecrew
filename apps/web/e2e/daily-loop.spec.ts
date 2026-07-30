@@ -164,9 +164,16 @@ test('full Daily Loop: HQ → warm-up → case → plain closer → wind-down; m
       lastBranch = 'word-review'; await tryClick(wordButtons.first());
       continue;
     }
-    // Plain closer options (ordered list buttons).
+    // Plain closer options (ordered list buttons). Latch here as well as at the
+    // top: the closer can render in the gap between the top-of-loop check and
+    // this one, get answered here, and be replaced by its feedback before the
+    // next pass — so the poll never lands on it while it is on stage. Reaching
+    // this branch at all IS the closer rendering, which is what the assertion
+    // is about. (The server was measured serving it 10 runs out of 10, so a
+    // miss here was always the watching, never the serving.)
     const plainButtons = page.locator('.crew-plain button');
     if ((await plainButtons.count()) > 0) {
+      sawPlainCloser = true;
       lastBranch = 'plain'; await tryClick(plainButtons.first());
       const confirm = page.getByRole('button', { name: "That's my answer" });
       const enabled = await expect(confirm).toBeEnabled({ timeout: 3000 }).then(() => true).catch(() => false);
