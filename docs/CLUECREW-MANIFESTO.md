@@ -85,10 +85,20 @@ This document is read by Claude Code at the start of every build session and by 
 | `coral` | #E8836B | Try-again states only |
 | `vr-teal` | #2A9D8F | VR district accent only |
 | `nvr-violet` | #7B6FA8 | NVR district accent only |
-| `maths-green` | #5B9A68 | Maths district accent only |
+| `maths-green` | #409020 | Maths district accent only |
 | `english-rose` | #C76B7E | English district accent only |
 
-District accents appear only inside their district and in navigation. All text/background pairs must pass AA; check before merge.
+District accents appear only inside their district and in navigation.
+
+**Every token has one role.** A colour dark enough to reach 3:1 against `cream` can never also be light enough to carry `ink` at 4.5:1 — the two luminance windows do not overlap, for any hue. So `ink` is the only token permitted for text; `amber` and `coral` are fills with `ink` on top; the four district colours are accents (borders, rules, nav marks) and never fills carrying text.
+
+**Contrast, required before merge:**
+- text against its background — **4.5:1**, or **3:1** at 24px+ or 19px+ bold;
+- any colour carrying meaning without text (borders, state fills, focus rings, progress) against what sits next to it — **3:1**.
+
+**Colour is never the only carrier of meaning.** Anything a colour tells a child must also be told by a word, a shape, a position or an icon. Measured under the three common types of colour vision deficiency, the district accents crowd one another, so a colour-only district cue is invisible to roughly one boy in twelve. District names are load-bearing; district colours are decoration on top of them.
+
+`pnpm audit:palette` checks all of the above against `packages/ui/src/tokens.ts` and runs in CI.
 
 ### Voice
 - **Child-facing:** warm, direct, a little playful, never sarcastic, never babyish. Reading age ≤9 for instructions. Second person. Short sentences.
@@ -157,3 +167,28 @@ Claude Code. Chosen partly because it is the only reading compatible with S2:
 the crew is your own household, so it needs no social features. Adds the
 explicit no-comparison rule for crew-mates, since siblings being crew-mates is
 where the temptation to rank children against each other would arise.*
+
+*v1.2 (2026-07-30) — §6: replaced the contrast rule and amended `maths-green`
+from #5B9A68 to #409020. Proposed by Claude Code with measurements, accepted by
+David in session.*
+
+*The old rule read "All text/background pairs must pass AA". It was not true and
+could not be: seven of the eight tokens fail as body text on `cream`, `amber`
+worst at 1.88:1. A rule nobody can satisfy is a rule reviewers learn to skip.
+The replacement separates the two jobs a colour can do, and records why a token
+can only ever do one of them — for any hue, the luminance window for 3:1
+against `cream` and the window for carrying `ink` at 4.5:1 do not overlap.*
+
+*The green moved because `maths-green` sat ΔE 22.1 from `vr-teal` — close
+enough to read as the same colour — and collapsed to ΔE 8.5 from `nvr-violet`
+under tritanopia. It is now 51.6 and 23.5. Note the new value is DARKER than
+the "warmer, lighter" the proposal suggested: lighter fights the 3:1 accent
+floor, and the darker candidate measured better on both separation and
+legibility while staying inside the range the other three accents already
+occupy. Done now because the Maths district is unbuilt, so the change costs
+nothing today and would only get more expensive.*
+
+*The "colour is never the only carrier of meaning" rule is the part that
+actually protects children: roughly one boy in twelve has some red-green
+colour vision deficiency, and none of them will report that the districts look
+alike.*

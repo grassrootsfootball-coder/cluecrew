@@ -104,6 +104,9 @@ jobs:
       - name: Banned-vocabulary scan
         run: pnpm scan:vocab
 
+      - name: Palette audit (manifesto §6 token roles + contrast)
+        run: pnpm audit:palette
+
       - name: Bursary isolation grep (no UI reads isBursary)
         run: pnpm check:bursary
 

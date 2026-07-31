@@ -1,16 +1,22 @@
+/**
+ * Enforces manifesto §6 (v1.2) against the real tokens.
+ *
+ * §6 gives every token exactly one role, because a colour cannot do both jobs:
+ * for any hue, the luminance window for 3:1 against `cream` and the window for
+ * carrying `ink` at 4.5:1 do not overlap. So this checks each token against the
+ * role it is declared to have, and fails the build when one slips.
+ *
+ * It also reports how the district accents behave under the three common types
+ * of colour vision deficiency. That part does NOT fail the build — the accents
+ * genuinely do crowd each other, and §6 answers it with the "colour is never
+ * the only carrier of meaning" rule instead, which no script can check. The
+ * numbers are printed so the crowding is never a surprise to anyone.
+ */
 import { readFileSync } from 'node:fs';
 
-/**
- * Measures every child-facing colour pair in the manifesto §6 palette, plus
- * how distinguishable the four district accents are from one another — the
- * thing that matters if colour is ever load-bearing for a child.
- */
 // Read from the real token source rather than a copy, so this can never
 // quietly audit a palette the product no longer ships.
-const tokenSource = readFileSync(
-  new URL('../packages/ui/src/tokens.ts', import.meta.url),
-  'utf8',
-);
+const tokenSource = readFileSync(new URL('../packages/ui/src/tokens.ts', import.meta.url), 'utf8');
 const color = Object.fromEntries(
   [...tokenSource.matchAll(/'?([a-z-]+)'?:\s*'(#[0-9A-Fa-f]{6})'/g)].map((m) => [m[1], m[2]]),
 );
@@ -19,25 +25,32 @@ if (Object.keys(color).length !== 8) {
   process.exit(1);
 }
 
+/** The role §6 assigns each token. */
+const ROLE = {
+  ink: 'text',
+  cream: 'background',
+  amber: 'fill', // a surface carrying ink on top
+  coral: 'fill',
+  'vr-teal': 'accent', // borders and rules, never text-bearing
+  'nvr-violet': 'accent',
+  'maths-green': 'accent',
+  'english-rose': 'accent',
+};
+
 const rgb = (hex) => [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16));
+const asHex = ([r, g, b]) =>
+  `#${[r, g, b].map((v) => Math.round(v).toString(16).padStart(2, '0')).join('')}`;
+const lin = (v) => (v / 255 <= 0.03928 ? v / 255 / 12.92 : ((v / 255 + 0.055) / 1.055) ** 2.4);
 const lum = (hex) =>
   rgb(hex)
-    .map((v) => {
-      const c = v / 255;
-      return c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4;
-    })
+    .map(lin)
     .reduce((sum, c, i) => sum + [0.2126, 0.7152, 0.0722][i] * c, 0);
 const contrast = (a, b) => {
   const [x, y] = [lum(a), lum(b)].sort((p, q) => q - p);
   return Math.round(((x + 0.05) / (y + 0.05)) * 100) / 100;
 };
-
-// Perceptual distance in OKLab-ish terms via simple CIE76 on Lab.
 const toLab = (hex) => {
-  let [r, g, b] = rgb(hex).map((v) => {
-    const c = v / 255;
-    return c <= 0.04045 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4;
-  });
+  const [r, g, b] = rgb(hex).map(lin);
   const [X, Y, Z] = [
     (r * 0.4124 + g * 0.3576 + b * 0.1805) / 0.95047,
     r * 0.2126 + g * 0.7152 + b * 0.0722,
@@ -51,33 +64,6 @@ const deltaE = (a, b) => {
   const [l2, a2, b2] = toLab(b);
   return Math.round(Math.hypot(l1 - l2, a1 - a2, b1 - b2) * 10) / 10;
 };
-
-const AA_BODY = 4.5;
-const AA_LARGE = 3.0;
-
-console.log('TEXT ON THE TWO BACKGROUNDS (AA body needs 4.5, large text 3.0)\n');
-for (const bg of ['cream', 'amber']) {
-  for (const [name, hex] of Object.entries(color)) {
-    if (name === bg) continue;
-    const ratio = contrast(hex, color[bg]);
-    const body = ratio >= AA_BODY ? 'body ok ' : 'BODY FAIL';
-    const large = ratio >= AA_LARGE ? 'large ok' : 'LARGE FAIL';
-    console.log(`  ${name.padEnd(14)} on ${bg.padEnd(6)} ${String(ratio).padStart(6)}:1   ${body}  ${large}`);
-  }
-  console.log('');
-}
-
-console.log('DISTRICT ACCENTS AGAINST EACH OTHER (deltaE; under ~25 reads as "similar")\n');
-const districts = ['vr-teal', 'nvr-violet', 'maths-green', 'english-rose'];
-for (let i = 0; i < districts.length; i++) {
-  for (let j = i + 1; j < districts.length; j++) {
-    const d = deltaE(color[districts[i]], color[districts[j]]);
-    console.log(`  ${districts[i].padEnd(14)} vs ${districts[j].padEnd(14)} ΔE ${String(d).padStart(5)}${d < 25 ? '   ← close' : ''}`);
-  }
-}
-
-console.log('\nCOMMON COLOUR VISION DEFICIENCY: how the accents collapse\n');
-// Brettel-style approximation, enough to show which pairs merge.
 const simulate = (hex, type) => {
   const [r, g, b] = rgb(hex);
   const m = {
@@ -85,21 +71,76 @@ const simulate = (hex, type) => {
     deuteranopia: [[0.625, 0.375, 0], [0.7, 0.3, 0], [0, 0.3, 0.7]],
     tritanopia: [[0.95, 0.05, 0], [0, 0.433, 0.567], [0, 0.475, 0.525]],
   }[type];
-  const out = m.map((row) => Math.round(Math.min(255, row[0] * r + row[1] * g + row[2] * b)));
-  return `#${out.map((v) => v.toString(16).padStart(2, '0')).join('')}`;
+  return asHex(m.map((row) => Math.min(255, row[0] * r + row[1] * g + row[2] * b)));
 };
+
+const failures = [];
+const check = (ok, message) => {
+  console.log(`  ${ok ? '✓' : '✗'} ${message}`);
+  if (!ok) failures.push(message);
+};
+
+console.log('§6 roles — each token checked against the ONE job it has\n');
+
+console.log('text');
+check(
+  contrast(color.ink, color.cream) >= 4.5,
+  `ink on cream ${contrast(color.ink, color.cream)}:1 (needs 4.5)`,
+);
+
+console.log('\nfills — a surface with ink on top');
+for (const [name, role] of Object.entries(ROLE)) {
+  if (role !== 'fill') continue;
+  const ratio = contrast(color.ink, color[name]);
+  check(ratio >= 4.5, `ink on ${name} ${ratio}:1 (needs 4.5)`);
+}
+
+console.log('\naccents — carry meaning without text, so measured against cream');
+for (const [name, role] of Object.entries(ROLE)) {
+  if (role !== 'accent') continue;
+  const ratio = contrast(color[name], color.cream);
+  check(ratio >= 3.0, `${name} on cream ${ratio}:1 (needs 3.0)`);
+}
+
+console.log('\nevery token distinguishable from every other (ΔE > 25)');
+const names = Object.keys(color);
+let tooClose = 0;
+for (let i = 0; i < names.length; i++) {
+  for (let j = i + 1; j < names.length; j++) {
+    const d = deltaE(color[names[i]], color[names[j]]);
+    if (d <= 25) {
+      check(false, `${names[i]} vs ${names[j]} ΔE ${d} — too close to tell apart`);
+      tooClose += 1;
+    }
+  }
+}
+if (tooClose === 0) console.log(`  ✓ all ${(names.length * (names.length - 1)) / 2} pairs separated`);
+
+console.log('\nD1 — the try-again colour must not be red');
+check(
+  deltaE(color.coral, '#FF0000') > 40,
+  `coral is ΔE ${deltaE(color.coral, '#FF0000')} from pure red (needs > 40)`,
+);
+
+console.log('\nreport only — district accents under colour vision deficiency.');
+console.log('§6 answers this with "colour is never the only carrier of meaning",');
+console.log('which no script can check. The numbers are here to stay honest:\n');
+const districts = names.filter((n) => ROLE[n] === 'accent');
 for (const type of ['protanopia', 'deuteranopia', 'tritanopia']) {
-  const merged = [];
+  const crowded = [];
   for (let i = 0; i < districts.length; i++) {
     for (let j = i + 1; j < districts.length; j++) {
       const d = deltaE(simulate(color[districts[i]], type), simulate(color[districts[j]], type));
-      if (d < 25) merged.push(`${districts[i]}/${districts[j]} (ΔE ${d})`);
+      if (d < 25) crowded.push(`${districts[i]}/${districts[j]} (ΔE ${d})`);
     }
   }
-  console.log(`  ${type.padEnd(14)} ${merged.length ? 'merges: ' + merged.join(', ') : 'all four stay distinct'}`);
+  console.log(
+    `  ${type.padEnd(14)} ${crowded.length ? 'crowds: ' + crowded.join(', ') : 'all four stay distinct'}`,
+  );
 }
 
-console.log('\nCORAL — the try-again colour (D1 says errors are never red)\n');
-console.log(`  coral on cream        ${contrast(color.coral, color.cream)}:1`);
-console.log(`  ink on coral          ${contrast(color.ink, color.coral)}:1`);
-console.log(`  ΔE coral vs pure red  ${deltaE(color.coral, '#FF0000')}`);
+if (failures.length > 0) {
+  console.error(`\nPalette audit FAILED: ${failures.length} rule(s) broken (manifesto §6).`);
+  process.exit(1);
+}
+console.log('\nPalette audit passed (manifesto §6 v1.2).');

@@ -1,9 +1,23 @@
-# Proposed amendment to Manifesto §6 — Colour tokens
+# Amendment to Manifesto §6 — Colour tokens
 
-**Status: PROPOSED. Nothing here has shipped.** The palette in
-`packages/ui/src/tokens.ts` is unchanged and will stay unchanged until David
-accepts or rejects this. Drafted by Claude Code on David's instruction,
-2026-07-30.
+**Status: ACCEPTED and enacted as manifesto v1.2, 2026-07-30.** David accepted
+both the wording and the token change in session. This file is kept as the
+working that led to the decision; the binding text now lives in §6 itself, and
+`pnpm audit:palette` enforces it in CI.
+
+**Two things changed between proposal and enactment, both recorded in the §10
+changelog:**
+
+1. The proposal suggested a *"warmer, **lighter** green"*. The shipped value,
+   `#409020`, is warmer but **darker** (3.11:1 → 3.73:1 against cream).
+   Lighter fights the 3:1 accent floor; the darker candidate measured better on
+   both separation and legibility, and sits inside the range the other three
+   accents already occupy.
+2. Trying to satisfy the proposed rules turned up something stronger than the
+   proposal knew: **a token cannot serve both roles, ever.** For any hue the
+   luminance window for 3:1 against `cream` and the window for carrying `ink`
+   at 4.5:1 do not overlap — they miss by 0.0074. §6 now states this outright,
+   so nobody spends an afternoon searching for a colour that cannot exist.
 
 Measured with `pnpm audit:palette`, which reads the eight tokens out of
 `packages/ui/src/tokens.ts` itself rather than a copy, so it can never audit a
