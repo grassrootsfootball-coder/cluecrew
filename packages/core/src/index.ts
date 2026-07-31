@@ -15,6 +15,8 @@ export * from './modes';
 export * from './families';
 export * from './teachback';
 export * from './content-schema';
+export * from './blueprints';
+export * from './mock-report';
 export * from './pricing';
 export * from './regions';
 export * from './billing';

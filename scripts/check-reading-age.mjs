@@ -73,11 +73,24 @@ for (const file of readdirSync(join(ROOT, 'content/voice'))) {
   }
 }
 
+// Blueprint instruction pages (Addendum B §2): exam-faithful in register but
+// still child-facing authored text, so the same ceiling applies — we test the
+// question types, not the child's decoding of our instructions.
+let blueprintPages = 0;
+for (const file of readdirSync(join(ROOT, 'content/blueprints'))) {
+  if (!file.endsWith('.json')) continue;
+  const parsed = JSON.parse(readFileSync(join(ROOT, 'content/blueprints', file), 'utf8'));
+  parsed.blueprint.sections.forEach((section, index) => {
+    blueprintPages++;
+    check(`blueprint:${parsed.blueprint.id} section ${index + 1} instructions`, section.instructions);
+  });
+}
+
 if (failures.length > 0) {
   console.error(`Reading-age lint FAILED (${failures.length}):\n`);
   for (const failure of failures) console.error(`  ${failure}`);
   process.exit(1);
 }
 console.log(
-  `Reading-age lint passed (${wordsFile.words.length} words + case narratives + ${voiceLines} voice lines).`,
+  `Reading-age lint passed (${wordsFile.words.length} words + case narratives + ${voiceLines} voice lines + ${blueprintPages} blueprint instruction pages).`,
 );

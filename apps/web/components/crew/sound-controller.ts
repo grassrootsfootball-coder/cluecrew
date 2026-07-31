@@ -23,6 +23,10 @@ export const SOUND_CUES = [
   'word-collected',
   'rank-up',
   'wind-down',
+  // Mock sittings (Addendum B §3): the only juice a Boss Case keeps is bead
+  // progress and these two — a soft chime between sections, and "time".
+  'section-chime',
+  'paper-time',
 ] as const;
 
 export type SoundCue = (typeof SOUND_CUES)[number];

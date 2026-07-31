@@ -1,0 +1,38 @@
+{
+  "kind": "blueprint",
+  "blueprint": {
+    "id": "gl-maths-standard",
+    "district": "MATHS",
+    "title": "Maths Paper — GL Standard Style",
+    "sections": [
+      {
+        "instructions": "This paper is about maths you know. Read each question slowly — most tell a little story. Five answers are shown; work yours out first, then find it and mark it. Rough working on paper is allowed and a good idea. No calculators. If one feels hard, move on and come back.",
+        "questionCount": 25,
+        "typeMix": {
+          "maths-number-place-value": 4,
+          "maths-four-operations": 5,
+          "maths-fractions-decimals-percentages": 5,
+          "maths-measures-money-time": 4,
+          "maths-word-problems": 7
+        },
+        "minutes": 25
+      },
+      {
+        "instructions": "Same rules as the first section: read carefully, work it out, mark one answer. Charts and shapes appear here — look at the labels before the numbers. About a minute a question keeps you on time.",
+        "questionCount": 25,
+        "typeMix": {
+          "maths-ratio-proportion": 4,
+          "maths-algebra": 3,
+          "maths-geometry": 6,
+          "maths-statistics": 5,
+          "maths-word-problems": 7
+        },
+        "minutes": 25
+      }
+    ],
+    "notes": "DRAFT, doubly provisional: the Maths district is unbuilt, so type ids are placeholders from the BUILD-DISTRICT-MATHS strand list — re-point at real QuestionType ids when the district ships, then the KS2 specialist verifies the whole composition against the current familiarisation edition (about a question a minute, word-problem heavy, no negative marking, spec §1). Instruction wording GL-neutral (L3), no reproduced text (L4).",
+    "verifiedBy": "PENDING REVIEWER VERIFICATION",
+    "verifiedAt": null,
+    "sourceRef": "DRAFT — to be verified against the current GL familiarisation edition and dated here"
+  }
+}

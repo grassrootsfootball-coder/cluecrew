@@ -69,6 +69,7 @@ model ChildProfile {
   attempts        Attempt[]
   sessions        Session[]
   reviewSchedules ReviewSchedule[]
+  mockSittings    MockSitting[]
 
   createdAt DateTime  @default(now())
   deletedAt DateTime?
@@ -230,6 +231,10 @@ model Item {
   options              ItemOption[]
   explanation          Json // per-mode explanation asset refs (watch/walk/see/hear)
   status               ItemStatus   @default(DRAFT) // DRAFT → REVIEWED → LIVE → RETIRED
+  // ADDENDUM-B §1: which serving world this item belongs to. MOCK items are
+  // new volume on top of the practice gates, never a reclassification of
+  // practice items a child may already have met.
+  pool                 ItemPool     @default(PRACTICE)
   authoredBy           String // "human:<name>" | "ai-draft:<model>" | "seed" — provenance is mandatory
   reviewedBy           String? // human reviewer name; REQUIRED before LIVE (P3, AI-QC)
   reviewNotes          String? // reviewer feedback when an item is returned to DRAFT
@@ -238,7 +243,7 @@ model Item {
   calibrationFlaggedAt DateTime?
   createdAt            DateTime     @default(now())
 
-  @@index([questionTypeId, status])
+  @@index([questionTypeId, status, pool])
 }
 
 enum ItemStatus {
@@ -246,6 +251,22 @@ enum ItemStatus {
   REVIEWED
   LIVE
   RETIRED
+}
+
+// ADDENDUM-B §1: mock items are held out from practice, permanently. A mock
+// only measures if the child has not seen its questions, so MOCK items are
+// never served by the practice/warm-up/review engines — enforced in core item
+// selection and again at the query in the orchestrator.
+enum ItemPool {
+  PRACTICE
+  MOCK
+}
+
+enum MockSittingStatus {
+  SCHEDULED // parent booked it; composition is fixed at this moment
+  IN_PROGRESS // the child is sitting it
+  COMPLETED // burns every served item for this child (Addendum B §1)
+  ABANDONED // kind exit; only the sections the child OPENED burn (§3)
 }
 
 model ItemOption {
@@ -371,6 +392,34 @@ model Session {
   // silently discarded whichever landed first. The loser is told (409) and the
   // client reloads the real activity. See apps/web/lib/crew/orchestrator.ts.
   stateVersion Int @default(0)
+}
+
+// ADDENDUM-B §5: one sat (or scheduled) mock paper. Feeds parent reporting,
+// the burn rule, the Stage-2 cohort stats when they arrive, and (aggregated,
+// consented) the L1 evidence base. No new personal data: item ids, timings and
+// option choices only — same classes of data the practice engine already
+// stores per attempt. DPIA note appended (docs/dpia.md).
+model MockSitting {
+  id          String            @id @default(cuid())
+  childId     String
+  child       ChildProfile      @relation(fields: [childId], references: [id], onDelete: Cascade)
+  blueprintId String // /content/blueprints/<id>.json — content, not a table
+  // Per-section composition fixed at scheduling: [{ itemIds: string[] }, …].
+  // Which of these burn for the child depends on status + sectionTimings:
+  // COMPLETED burns all; ABANDONED burns only sections with a startedAt (§3).
+  servedItemIds Json
+  // Per section: { startedAt?: ISO, endedAt?: ISO, secondsUsed?: number }.
+  sectionTimings Json
+  // { [itemId]: { optionId, correct, answeredAt } } — graded server-side; the
+  // child's device never receives an isCorrect flag during the sitting.
+  responses Json
+  status    MockSittingStatus @default(SCHEDULED)
+  // Same optimistic-concurrency guard the Session rows carry, same rationale.
+  stateVersion Int      @default(0)
+  createdAt    DateTime @default(now())
+
+  @@index([childId, blueprintId, status])
+  @@index([childId, createdAt])
 }
 
 // ---------- Analytics spine (§6) ----------

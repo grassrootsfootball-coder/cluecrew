@@ -13,7 +13,7 @@
 import { readdirSync, readFileSync, statSync } from 'node:fs';
 import { join, relative, resolve } from 'node:path';
 import { z } from 'zod';
-import { caseFileSchema, regionFileSchema, wordFileSchema } from '@cluecrew/core';
+import { blueprintFileSchema, caseFileSchema, isBlueprintVerified, regionFileSchema, wordFileSchema } from '@cluecrew/core';
 
 const CONTENT_ROOT = resolve(import.meta.dirname, '../content');
 const MIN_VARIANTS = 6;
@@ -36,6 +36,7 @@ const anyContentFile = z.discriminatedUnion('kind', [
   caseFileSchema,
   regionFileSchema,
   voiceFileSchema,
+  blueprintFileSchema,
 ]);
 
 function collectJsonFiles(dir: string): string[] {
@@ -74,6 +75,13 @@ for (const file of files) {
       console.error(`    ${issue.path.join('.') || '(root)'}: ${issue.message}`);
     }
     failures++;
+    continue;
+  }
+  if (parsed.data.kind === 'blueprint') {
+    // A draft is valid content, but the difference must never be silent:
+    // drafts do not serve real children in production (Addendum B §2).
+    const verified = isBlueprintVerified(parsed.data.blueprint);
+    console.log(`✓ ${label}${verified ? '' : '  [DRAFT — pending reviewer verification]'}`);
     continue;
   }
   if (parsed.data.kind === 'voice') {

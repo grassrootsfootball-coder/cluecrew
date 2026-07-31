@@ -162,14 +162,22 @@ async function drainAndLog(childId: string, state: PersistedState): Promise<void
   }
 }
 
-/** LIVE items only in production; dev/staging fall back to the whole bank. */
+/**
+ * LIVE items only in production; dev/staging fall back to the whole bank.
+ * PRACTICE pool only, always (Addendum B §1): mock items never reach the
+ * practice engines. selectItem enforces the same rule again in core — this
+ * filter is the second layer, core is the load-bearing one.
+ */
 async function itemPool(questionTypeId: string) {
   const live = await prisma.item.findMany({
-    where: { questionTypeId, status: 'LIVE' },
+    where: { questionTypeId, status: 'LIVE', pool: 'PRACTICE' },
     include: { options: true },
   });
   if (live.length > 0 || process.env.APP_ENV === 'production') return live;
-  return prisma.item.findMany({ where: { questionTypeId }, include: { options: true } });
+  return prisma.item.findMany({
+    where: { questionTypeId, pool: 'PRACTICE' },
+    include: { options: true },
+  });
 }
 
 async function modesOpenedFor(childId: string, caseId: string): Promise<Mode[]> {
@@ -473,7 +481,9 @@ async function serveItem(
 ): Promise<ActivityPayload> {
   const pool = await itemPool(input.questionTypeId);
   const chosen = selectItem(
-    pool.map((item) => ({ id: item.id, tier: item.difficultyTier, item })),
+    // pool is passed through so core's MOCK exclusion is live on this path,
+    // not just in tests — the query filter above is the second layer.
+    pool.map((item) => ({ id: item.id, tier: item.difficultyTier, pool: item.pool, item })),
     input.targetTier,
     new Set(state.engine.focus.servedItemIds),
   );

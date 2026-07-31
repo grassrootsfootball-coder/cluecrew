@@ -155,6 +155,25 @@ provider selection will add a processor entry here before use.
   and briefs only — never any user or child data. No processor relationship
   arises; contracts cover IP assignment and confidentiality (mascot brief).
 
+## 10a. Addendum B additions — mock sittings
+
+- **`MockSitting` rows** record, per child: the blueprint id, the item ids
+  composed into the paper, per-section timings, and the option chosen per item
+  with server-side grading. These are the same classes of data the practice
+  engine already stores per `Attempt` (§8) — **no new category of personal data
+  is collected**, and in particular no date of birth: Addendum B §4 states
+  outright that true age-standardised scores are therefore impossible for us,
+  and the parent report says so rather than faking it.
+- **Purpose:** parent progress reporting (Stage 1), the exposure-control "burn"
+  rule (an item a child has seen in a mock is never re-served to that child),
+  Stage-2 cohort statistics when a blueprint reaches N≥300 sittings (year-group
+  banding via `yearGroup` only), and — aggregated and consented — the L1
+  evidence base.
+- **Retention:** follows the child profile (cascade on delete), same as
+  attempts and sessions.
+- **Abandoned sittings** are discarded from reporting entirely: no partial
+  score is stored for or shown to the parent (§3).
+
 ## 11. Open items for next phase gates
 
 - Phase 2: onboarding wizard region data, Stripe processor agreement, verifiable parental consent flow detail, marketing consent UX, data export UI.

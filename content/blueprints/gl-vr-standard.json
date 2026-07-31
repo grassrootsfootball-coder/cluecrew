@@ -1,0 +1,56 @@
+{
+  "kind": "blueprint",
+  "blueprint": {
+    "id": "gl-vr-standard",
+    "district": "VR",
+    "title": "VR Paper — GL Standard Style",
+    "sections": [
+      {
+        "instructions": "This section is about words. Read each question. Five answers are shown — pick the one that fits and mark it clearly. If a question feels hard, move on and come back at the end. A blank scores nothing, so a careful guess beats no answer.",
+        "questionCount": 20,
+        "typeMix": {
+          "vr-02-two-odd-ones-out": 3,
+          "vr-03-related-words": 3,
+          "vr-04-closest-meaning": 3,
+          "vr-10-word-connections": 3,
+          "vr-12-compound-words": 2,
+          "vr-16-opposite-meaning": 3,
+          "vr-21-same-meaning": 3
+        },
+        "minutes": 15
+      },
+      {
+        "instructions": "This section is about letters hiding and moving. Work the same way as before: read, pick one of the five answers, mark it clearly. Keep a steady pace — about a minute for each question is plenty.",
+        "questionCount": 20,
+        "typeMix": {
+          "vr-01-insert-letter": 3,
+          "vr-05-hidden-word": 3,
+          "vr-06-missing-word": 3,
+          "vr-08-move-letter": 3,
+          "vr-13-make-a-word": 3,
+          "vr-14-letter-connections": 3,
+          "vr-20-complete-the-word": 2
+        },
+        "minutes": 15
+      },
+      {
+        "instructions": "This section is about codes and numbers. Read each question, work it out on paper if that helps, and mark one answer. Check the clock when you finish a page — steady beats rushed.",
+        "questionCount": 20,
+        "typeMix": {
+          "vr-07-letters-for-numbers": 3,
+          "vr-09-letter-series": 3,
+          "vr-11-number-series": 3,
+          "vr-15-reading-information": 2,
+          "vr-17-complete-the-sum": 3,
+          "vr-18-related-numbers": 3,
+          "vr-19-word-number-codes": 3
+        },
+        "minutes": 15
+      }
+    ],
+    "notes": "DRAFT composition. Section grouping, type mix, question counts and timings are working values modelled on GL-style familiarisation structure and MUST be verified by the specialist reviewer against the current familiarisation edition before this blueprint serves a real child. Instruction wording is GL-neutral (L3): style-faithful, no affiliation claim, no reproduced text (L4).",
+    "verifiedBy": "PENDING REVIEWER VERIFICATION",
+    "verifiedAt": null,
+    "sourceRef": "DRAFT — to be verified against the current GL familiarisation edition and dated here"
+  }
+}

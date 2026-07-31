@@ -40,6 +40,14 @@ export const EVENT_NAMES = [
   'refund_issued',
   'bursary_application_submitted',
   'bursary_decided',
+  // Mock papers (Addendum B)
+  'mock_scheduled',
+  'mock_started',
+  'mock_completed',
+  'mock_abandoned',
+  // The volume-floor admin alert (Addendum B gate #2): a paper that could not
+  // compose without item reuse. Carries blueprintId + shortfalls in props.
+  'mock_composition_failed',
 ] as const;
 
 export type EventName = (typeof EVENT_NAMES)[number];

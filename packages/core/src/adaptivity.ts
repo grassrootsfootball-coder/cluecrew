@@ -94,15 +94,28 @@ export function nextItemTier(state: AdaptState, isFirstOfTypeInSession: boolean)
 export interface SelectableItem {
   id: string;
   tier: number;
+  /**
+   * ADDENDUM-B §1. Practice selection refuses MOCK items unconditionally: a
+   * mock only measures if the child has not seen its questions, so mock items
+   * are held out from practice permanently. Optional so existing callers whose
+   * rows predate the field keep working — absent means PRACTICE.
+   */
+  pool?: 'PRACTICE' | 'MOCK';
 }
 
-/** Closest-tier selection from LIVE items, avoiding repeats within a session. */
+/**
+ * Closest-tier selection from LIVE items, avoiding repeats within a session.
+ * MOCK-pool items are excluded here, at the last line of defence, regardless
+ * of what a caller passes in (Addendum B §1) — the orchestrator also filters
+ * its query, but the guarantee lives where every practice/warm-up/review path
+ * converges.
+ */
 export function selectItem<T extends SelectableItem>(
   items: T[],
   targetTier: number,
   excludeIds: ReadonlySet<string> = new Set(),
 ): T | null {
-  const candidates = items.filter((item) => !excludeIds.has(item.id));
+  const candidates = items.filter((item) => item.pool !== 'MOCK' && !excludeIds.has(item.id));
   if (candidates.length === 0) return null;
   return candidates.reduce((best, item) => {
     const bestDistance = Math.abs(best.tier - targetTier);

@@ -34,6 +34,13 @@ export default async function CrewHqPage() {
   const onTheBoard = crew.caseSummaries.filter((summary) => summary.status !== 'cracked').length;
   const firstVisit = crew.caseSummaries.length === 0;
 
+  // A booked mock paper (Addendum B). The chip only appears when one exists —
+  // mocks are the parent's to schedule, never HQ's to push (anti-cram, §3).
+  const bookedPaper = await prisma.mockSitting.findFirst({
+    where: { childId: child.id, status: { in: ['SCHEDULED', 'IN_PROGRESS'] } },
+    select: { id: true },
+  });
+
   return (
     <main className="crew-stage">
       <header style={{ display: 'flex', gap: '1.25rem', alignItems: 'center', flexWrap: 'wrap' }}>
@@ -75,6 +82,15 @@ export default async function CrewHqPage() {
         <p>
           <StartLoopButton childId={child.id} label={VOICE.hqStartShift} />
         </p>
+
+        {bookedPaper ? (
+          <p data-testid="booked-paper">
+            {/* Addendum A's Boss Case intro row, as the invitation. */}
+            <a className="crew-tap" href="/crew/mock">
+              Big one today. Real exam rules: no tools, just you.
+            </a>
+          </p>
+        ) : null}
 
         {/* Orientation lives here permanently, open on a first visit and
             folded away afterwards: a child arriving for the first time could

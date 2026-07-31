@@ -30,6 +30,13 @@ const BANNED_EVERYWHERE = [
   { name: '"tutor-proof"', pattern: /\btutor[- ]proof\b/i },
   { name: '"beat the exam"', pattern: /\bbeat the exam\b/i },
   { name: 'third-party marks (L6)', pattern: /\b(for dummies|idiot'?s guide)\b/i },
+  // Addendum B §4: mock reporting may never claim or imply an outcome. The
+  // patterns are phrase-precise because the report's honest note legitimately
+  // contains "not a predicted result" and "age-standardised" — the scan must
+  // catch a claim, not the disclaimer that denies one.
+  { name: '"predicted pass" (Addendum B §4 / L1)', pattern: /\bpredicted (pass|score|grade)\b/i },
+  { name: '"pass probability" (Addendum B §4 / L1)', pattern: /\bpass (probability|chance|likelihood)\b/i },
+  { name: '"will pass" (Addendum B §4 / L1)', pattern: /\b(will|would|should) pass\b/i },
 ];
 
 // D1 + Addendum A §1.3.
