@@ -63,6 +63,9 @@ export const blueprintSectionSchema = z
 export const blueprintSchema = z.object({
   id: z.string().regex(/^[a-z0-9-]+$/, 'blueprint id must be a kebab-case slug'),
   district: z.enum(['VR', 'NVR', 'MATHS', 'ENGLISH']),
+  /** Addendum C §1: the Half Boss Case is its OWN authored blueprint — a
+   *  representative type spread at half length, never a runtime truncation. */
+  variant: z.enum(['full', 'half']).default('full'),
   title: z.string().min(1).max(80),
   sections: z.array(blueprintSectionSchema).min(1),
   notes: z.string().min(1).max(500),

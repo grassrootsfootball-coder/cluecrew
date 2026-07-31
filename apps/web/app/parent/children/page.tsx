@@ -1,4 +1,5 @@
 import { MAX_CHILD_PROFILES } from '@cluecrew/core';
+import { effectiveYearGroup } from '@cluecrew/core';
 import { prisma } from '@cluecrew/db';
 import { currentParent } from '@/lib/auth';
 import { addChildAction, archiveChildAction, updateChildAction } from '@/lib/actions/parent';
@@ -50,8 +51,15 @@ export default async function ChildrenPage({
                 <input name="crewName" type="text" defaultValue={child.crewName} required maxLength={40} />
               </label>
               <label>
-                Year group
-                <select name="yearGroup" defaultValue={String(child.yearGroup)}>
+                {/* Derived year (Addendum D §1); editing re-captures and audits. */}
+                Year group (from this September)
+                <select
+                  name="yearGroup"
+                  defaultValue={String(
+                    effectiveYearGroup(child.yearGroupAtCapture, child.capturedAcademicYear, new Date()),
+                  )}
+                >
+                  <option value="3">Year 3 (early start)</option>
                   <option value="4">Year 4</option>
                   <option value="5">Year 5</option>
                   <option value="6">Year 6</option>
@@ -106,8 +114,9 @@ export default async function ChildrenPage({
               <input name="crewName" type="text" required maxLength={40} />
             </label>
             <label>
-              Year group
+              Which year group are they in from this September?
               <select name="yearGroup" defaultValue="5">
+                <option value="3">Year 3 (early start)</option>
                 <option value="4">Year 4</option>
                 <option value="5">Year 5</option>
                 <option value="6">Year 6</option>

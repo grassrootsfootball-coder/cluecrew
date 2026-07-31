@@ -2,7 +2,7 @@
 
 import { redirect } from 'next/navigation';
 import { z } from 'zod';
-import { MAX_CHILD_PROFILES } from '@cluecrew/core';
+import { MAX_CHILD_PROFILES, captureAcademicYear, effectiveYearGroup } from '@cluecrew/core';
 import { logEvent, prisma } from '@cluecrew/db';
 import { currentParent } from '@/lib/auth';
 import { hashPassword, verifyPassword } from '@/lib/passwords';
@@ -30,7 +30,8 @@ export async function changePasswordAction(formData: FormData): Promise<void> {
 
 const childSchema = z.object({
   crewName: z.string().min(1).max(40),
-  yearGroup: z.coerce.number().int().min(4).max(6),
+  // Years 3–6 (Addendum D §1): Year 3 accepted as an early start.
+  yearGroup: z.coerce.number().int().min(3).max(6),
   examYear: z.coerce.number().int().min(2026).max(2035).optional(),
   reducedMotion: z.boolean(),
   dyslexiaFont: z.boolean(),
@@ -59,7 +60,10 @@ export async function addChildAction(formData: FormData): Promise<void> {
     data: {
       parentId: parent.id,
       crewName: parsed.crewName,
-      yearGroup: parsed.yearGroup,
+      // Capture pair (Addendum D §1): the form asks for the year from this
+      // September, so the capture year is this calendar year.
+      yearGroupAtCapture: parsed.yearGroup,
+      capturedAcademicYear: captureAcademicYear(new Date()),
       examYear: parsed.examYear ?? null,
       settings: {
         reducedMotion: parsed.reducedMotion,
@@ -94,11 +98,30 @@ export async function updateChildAction(formData: FormData): Promise<void> {
     soundEnabled: formData.get('soundEnabled') === 'on',
   });
 
+  // A year-group edit is a CORRECTION (Addendum D §1): it re-captures the
+  // pair against this September and leaves an audit event, so the rollover
+  // beat and every derived calculation take the parent's word from here on.
+  const nextCapture = {
+    yearGroupAtCapture: parsed.yearGroup,
+    capturedAcademicYear: captureAcademicYear(new Date()),
+  };
+  const yearChanged =
+    effectiveYearGroup(child.yearGroupAtCapture, child.capturedAcademicYear, new Date()) !==
+    parsed.yearGroup;
+  if (yearChanged) {
+    await logEvent({
+      name: 'year_rollover_corrected',
+      parentId: parent.id,
+      childId,
+      props: { academicYear: nextCapture.capturedAcademicYear, yearGroup: parsed.yearGroup },
+    });
+  }
+
   await prisma.childProfile.update({
     where: { id: childId },
     data: {
       crewName: parsed.crewName,
-      yearGroup: parsed.yearGroup,
+      ...nextCapture,
       examYear: parsed.examYear ?? null,
       settings: {
         reducedMotion: parsed.reducedMotion,
@@ -132,4 +155,17 @@ export async function archiveChildAction(formData: FormData): Promise<void> {
 
   await prisma.childProfile.update({ where: { id: childId }, data: { deletedAt: new Date() } });
   redirect('/parent/children');
+}
+
+
+/** One-tap confirmation of the September rollover beat (Addendum D §1). */
+export async function confirmRolloverAction(formData: FormData): Promise<void> {
+  const parent = await currentParent();
+  if (!parent) redirect('/login');
+  const childId = z.string().min(1).parse(formData.get('childId'));
+  const child = await prisma.childProfile.findUnique({ where: { id: childId } });
+  if (!child || child.parentId !== parent.id) redirect('/parent');
+  const { confirmRollover } = await import('@/lib/crew/readiness-io');
+  await confirmRollover(parent.id, childId);
+  redirect('/parent');
 }

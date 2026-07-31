@@ -7,11 +7,17 @@
  * isCorrect flag during a sitting, and no partial score of an abandoned
  * sitting is stored for or shown to anyone (§3).
  */
+import glMathsHalf from '../../../../content/blueprints/gl-maths-half.json';
 import glMathsStandard from '../../../../content/blueprints/gl-maths-standard.json';
+import glVrHalf from '../../../../content/blueprints/gl-vr-half.json';
 import glVrStandard from '../../../../content/blueprints/gl-vr-standard.json';
 import {
   blueprintFileSchema,
   burnedItemIds,
+  earlyHalfAvailable,
+  hardFloorSatisfied,
+  intensityForCapture,
+  reachableRung,
   childMockResult,
   composeMockPaper,
   isBlueprintVerified,
@@ -27,7 +33,7 @@ import { logEvent, prisma, Prisma, type MockSitting } from '@cluecrew/db';
 import { shuffleOptionsForChild } from '@/lib/crew/shuffle';
 
 /** Bundled at build like the voice packs; validated at module load. */
-const BLUEPRINTS: Blueprint[] = [glVrStandard, glMathsStandard].map(
+const BLUEPRINTS: Blueprint[] = [glVrStandard, glVrHalf, glMathsStandard, glMathsHalf].map(
   (file) => blueprintFileSchema.parse(file).blueprint,
 );
 
@@ -105,17 +111,61 @@ export type ScheduleResult =
   | { ok: true; sittingId: string }
   | { ok: false; reason: 'unknown_blueprint' | 'draft_blueprint' | 'already_scheduled' }
   | { ok: false; reason: 'cadence'; allowedAt: string }
-  | { ok: false; reason: 'shortfall' };
+  | { ok: false; reason: 'shortfall' }
+  // Addendum C: the readiness ladder.
+  | { ok: false; reason: 'hard_floor'; untaughtTypes: string[] }
+  | { ok: false; reason: 'not_ready' };
 
 /**
  * The frequency cap counts scheduled/sat papers in the blueprint's DISTRICT,
  * not just this blueprint — one paper per district per 7 days (§3). Abandoned
  * sittings do not count: the kind exit costs the family nothing.
  */
-export async function scheduleMock(childId: string, blueprintId: string): Promise<ScheduleResult> {
+export async function scheduleMock(
+  childId: string,
+  blueprintId: string,
+  options: { earlyHalfRequest?: boolean } = {},
+): Promise<ScheduleResult> {
   const blueprint = blueprintById(blueprintId);
   if (!blueprint) return { ok: false, reason: 'unknown_blueprint' };
   if (!blueprintServable(blueprint)) return { ok: false, reason: 'draft_blueprint' };
+
+  // The readiness ladder (Addendum C §3–4). The hard floor first — a fairness
+  // law with no override, on every path: no paper may contain a question type
+  // the child has never been taught.
+  const { readinessFor } = await import('@/lib/crew/readiness-io');
+  const readiness = await readinessFor(childId, blueprint);
+  const taught = new Set(
+    (
+      await prisma.caseFile.findMany({
+        where: { childId },
+        include: { case: { select: { questionTypeId: true } } },
+      })
+    ).map((file) => file.case.questionTypeId),
+  );
+  const floor = hardFloorSatisfied(blueprint, taught);
+  if (!floor.ok) return { ok: false, reason: 'hard_floor', untaughtTypes: floor.untaughtTypes };
+
+  const child = await prisma.childProfile.findUniqueOrThrow({ where: { id: childId } });
+  const intensity = intensityForCapture(
+    child.yearGroupAtCapture,
+    child.capturedAcademicYear,
+    child.examYear,
+    new Date(),
+  );
+  const rung = reachableRung(readiness, intensity);
+  if (blueprint.variant === 'half') {
+    const early = options.earlyHalfRequest && earlyHalfAvailable(readiness, intensity);
+    if (rung === 'locked' && !early) return { ok: false, reason: 'not_ready' };
+    if (rung === 'locked' && early) {
+      // The deliberate flow (§4): the parent saw the readiness picture first.
+      await logEvent({ name: 'early_half_requested', childId, props: { blueprintId } });
+    }
+  } else if (rung !== 'full') {
+    // Full papers are never available below the FULL threshold — no early
+    // path exists for them (§4).
+    return { ok: false, reason: 'not_ready' };
+  }
 
   const sittings = await prisma.mockSitting.findMany({ where: { childId } });
   const districtIds = new Set(
@@ -490,7 +540,17 @@ export async function parentMockReport(childId: string) {
 export async function schedulingState(childId: string) {
   const sittings = await prisma.mockSitting.findMany({ where: { childId } });
   const now = new Date();
-  return listBlueprints().map((blueprint) => {
+  const { readinessFor } = await import('@/lib/crew/readiness-io');
+  const child = await prisma.childProfile.findUniqueOrThrow({ where: { id: childId } });
+  const intensity = intensityForCapture(
+    child.yearGroupAtCapture,
+    child.capturedAcademicYear,
+    child.examYear,
+    now,
+  );
+  const typeNames = await typeNameMap();
+  const entries = [];
+  for (const blueprint of listBlueprints()) {
     const districtIds = new Set(
       BLUEPRINTS.filter((candidate) => candidate.district === blueprint.district).map(
         (candidate) => candidate.id,
@@ -503,10 +563,17 @@ export async function schedulingState(childId: string) {
         .map((sitting) => sitting.createdAt),
       now,
     );
-    return {
+    // The readiness picture (Addendum C §4): the meter frames what's LEFT,
+    // by name, never a percentage judgement of the child.
+    const readiness = await readinessFor(childId, blueprint);
+    const rung = reachableRung(readiness, intensity);
+    const unlocked =
+      blueprint.variant === 'half' ? rung === 'half' || rung === 'full' : rung === 'full';
+    entries.push({
       id: blueprint.id,
       title: blueprint.title,
       district: blueprint.district,
+      variant: blueprint.variant,
       draft: !isBlueprintVerified(blueprint),
       servable: blueprintServable(blueprint),
       pending: inDistrict.some((sitting) =>
@@ -514,6 +581,16 @@ export async function schedulingState(childId: string) {
       ),
       allowedAt: allowedAt.toISOString(),
       blocked: allowedAt > now,
-    };
-  });
+      unlocked,
+      earlyAvailable:
+        blueprint.variant === 'half' && earlyHalfAvailable(readiness, intensity),
+      hardFloorMet: readiness.untaughtTypes.length === 0,
+      typesStillBuilding: readiness.typesStillBuilding.map(
+        (typeId) => typeNames[typeId] ?? typeId,
+      ),
+      intensityColumn: intensity.column,
+      parentRegister: intensity.parentRegister,
+    });
+  }
+  return entries;
 }

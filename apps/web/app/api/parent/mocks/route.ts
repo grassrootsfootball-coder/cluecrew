@@ -27,12 +27,20 @@ export async function POST(request: Request) {
   const parent = await currentParent();
   if (!parent) return NextResponse.json({ error: 'parent_session_required' }, { status: 401 });
   const parsed = z
-    .object({ childId: z.string().min(1), blueprintId: z.string().min(1) })
+    .object({
+      childId: z.string().min(1),
+      blueprintId: z.string().min(1),
+      // The deliberate early-half flow (Addendum C §4): the panel shows the
+      // readiness picture before this flag can be sent.
+      earlyHalfRequest: z.boolean().optional(),
+    })
     .safeParse(await request.json().catch(() => null));
   if (!parsed.success) return NextResponse.json({ error: 'invalid_request' }, { status: 400 });
   if (!(await ownChild(parent.id, parsed.data.childId))) {
     return NextResponse.json({ error: 'not_found' }, { status: 404 });
   }
-  const result = await scheduleMock(parsed.data.childId, parsed.data.blueprintId);
+  const result = await scheduleMock(parsed.data.childId, parsed.data.blueprintId, {
+    earlyHalfRequest: parsed.data.earlyHalfRequest,
+  });
   return NextResponse.json(result, { status: result.ok ? 201 : 409 });
 }

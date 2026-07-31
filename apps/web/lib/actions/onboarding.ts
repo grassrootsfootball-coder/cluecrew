@@ -2,7 +2,7 @@
 
 import { redirect } from 'next/navigation';
 import { z } from 'zod';
-import { MAX_CHILD_PROFILES } from '@cluecrew/core';
+import { MAX_CHILD_PROFILES, MAX_YEAR_GROUP, MIN_YEAR_GROUP, captureAcademicYear } from '@cluecrew/core';
 import { logEvent, prisma } from '@cluecrew/db';
 import { currentParent } from '@/lib/auth';
 import { startTrial } from '@/lib/billing';
@@ -11,7 +11,9 @@ const POLICY_VERSION = 'v1.0';
 
 const childSchema = z.object({
   crewName: z.string().min(1).max(40),
-  yearGroup: z.coerce.number().int().min(4).max(6),
+  // "Which year group is [name] in from this September?" (Addendum D §1) —
+  // Years 3–6; Year 3 accepted as an early start, never marketed.
+  yearGroup: z.coerce.number().int().min(MIN_YEAR_GROUP).max(MAX_YEAR_GROUP),
   reducedMotion: z.coerce.boolean(),
   dyslexiaFont: z.coerce.boolean(),
   audioDefault: z.coerce.boolean(),
@@ -38,7 +40,11 @@ export async function createChildProfileAction(formData: FormData): Promise<void
     data: {
       parentId: parent.id,
       crewName: parsed.crewName,
-      yearGroup: parsed.yearGroup,
+      // The capture pair (Addendum D §1): the wizard asks for the year FROM
+      // THIS SEPTEMBER, so the capture year is this calendar year whether
+      // September has happened yet or not — the summer-ambiguity fix.
+      yearGroupAtCapture: parsed.yearGroup,
+      capturedAcademicYear: captureAcademicYear(new Date()),
       settings: {
         reducedMotion: parsed.reducedMotion,
         dyslexiaFont: parsed.dyslexiaFont,

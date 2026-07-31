@@ -5,9 +5,11 @@
  * unsubscribe that never touches transactional email.
  */
 import { createHmac } from 'node:crypto';
+import { INTENSITY_TRANSITION_LINES, type IntensityColumn } from '@cluecrew/core';
 import { prisma } from '@cluecrew/db';
 import { billingNow } from '@/lib/billing';
 import { sendEmail } from '@/lib/email';
+import { rolloverState } from '@/lib/crew/readiness-io';
 import { parentDashboard } from './dashboard';
 
 const DAY_MS = 86_400_000;
@@ -74,11 +76,50 @@ export async function buildWeeklyEmail(parentId: string, origin: string): Promis
       ? `Runway: ${child.runway.monthsToExam} months to the test window, ${child.runway.casesCracked} of ${child.runway.casesTotal} cases cracked. ${child.runway.nextMilestone}`
       : `Progress: ${child.runway.casesCracked} of ${child.runway.casesTotal} cases cracked. ${child.runway.nextMilestone}`;
 
+  // Addendum C §4 + Addendum D §4 beats, each at most one calm line.
+  const extraLines: string[] = [];
+
+  // September rollover (D §1): confirm the derived change, one tap to fix.
+  const rollover = await rolloverState(child.childId);
+  if (rollover?.pending) {
+    extraLines.push(
+      `${child.crewName} starts Year ${rollover.effectiveYear} this week — the programme steps up gently from today. If that's not right, fix it in one tap: ${origin}/parent`,
+    );
+  }
+
+  // Intensity column transition (D §4): the calm authored line, once.
+  const columnChange = await prisma.event.findFirst({
+    where: { childId: child.childId, name: 'intensity_column_changed', createdAt: { gte: weekAgo } },
+    orderBy: { createdAt: 'desc' },
+  });
+  if (columnChange) {
+    const to = (columnChange.props as { to?: string }).to as IntensityColumn | undefined;
+    if (to) extraLines.push(INTENSITY_TRANSITION_LINES[to]);
+  }
+
+  // Mock ladder unlocks (C §4), linking the exam-day one-pager.
+  const unlock = await prisma.event.findFirst({
+    where: {
+      childId: child.childId,
+      name: { in: ['readiness_half_unlocked', 'readiness_full_unlocked'] },
+      createdAt: { gte: weekAgo },
+    },
+    orderBy: { createdAt: 'desc' },
+  });
+  if (unlock) {
+    extraLines.push(
+      unlock.name === 'readiness_full_unlocked'
+        ? `${child.crewName}'s first full paper is ready when you are — how to set the room up: ${origin}/parent/casebook/mocks-and-what-results-mean`
+        : `${child.crewName}'s first half-paper is ready when you are — here's how to set the room up: ${origin}/parent/casebook/mocks-and-what-results-mean`,
+    );
+  }
+
   const unsubscribe = `${origin}/api/email/weekly-unsubscribe?p=${parentId}&t=${weeklyUnsubscribeToken(parentId)}`;
+  const extras = extraLines.length > 0 ? `\n\n${extraLines.join('\n\n')}` : '';
 
   return {
     subject,
-    text: `Hello ${parent.displayName},\n\n${winLine}\n\n${tryLine}\n\n${runwayLine}\n\nThe ClueCrew team\n\n—\nStop these weekly summaries (one tap, transactional emails unaffected):\n${unsubscribe}`,
+    text: `Hello ${parent.displayName},\n\n${winLine}\n\n${tryLine}\n\n${runwayLine}${extras}\n\nThe ClueCrew team\n\n—\nStop these weekly summaries (one tap, transactional emails unaffected):\n${unsubscribe}`,
   };
 }
 

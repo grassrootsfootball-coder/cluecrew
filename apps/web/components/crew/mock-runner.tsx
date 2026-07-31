@@ -105,7 +105,10 @@ export function MockRunner({ childId }: { childId: string }) {
 
   const act = useCallback(
     async (body: Record<string, unknown>): Promise<boolean> => {
-      if (busy.current) return false;
+      // Serialise, never drop: a child who taps "Finish section" while an
+      // answer is still posting means BOTH. Dropping the second tap left the
+      // section visibly running with a button that did nothing.
+      while (busy.current) await new Promise((resolve) => setTimeout(resolve, 40));
       busy.current = true;
       try {
         const response = await fetch(`/api/crew/${childId}/mock`, {
@@ -135,7 +138,13 @@ export function MockRunner({ childId }: { childId: string }) {
     endingRef.current = true;
     const isLast = view.sectionIndex === view.sectionCount - 1;
     const sittingId = view.sittingId;
-    await act({ action: 'end_section', sectionIndex: view.sectionIndex });
+    const ended = await act({ action: 'end_section', sectionIndex: view.sectionIndex });
+    if (!ended) {
+      // A replay or a lost race — the server state is the truth; re-read it.
+      endingRef.current = false;
+      await load();
+      return;
+    }
     playCue(isLast ? 'paper-time' : 'section-chime');
     endingRef.current = false;
     if (isLast) {

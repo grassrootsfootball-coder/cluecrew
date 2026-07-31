@@ -1,5 +1,5 @@
 import { redirect } from 'next/navigation';
-import { PRICING, REGION_CAVEAT, UNKNOWN_REGION, formatPence, recommendTier } from '@cluecrew/core';
+import { PRICING, REGION_CAVEAT, UNKNOWN_REGION, captureAcademicYear, effectiveYearGroup, formatPence, intensityForCapture, recommendTier } from '@cluecrew/core';
 import { prisma } from '@cluecrew/db';
 import { currentParent } from '@/lib/auth';
 import {
@@ -31,9 +31,13 @@ export default async function OnboardingPage() {
   const subscription = await prisma.subscription.findUnique({ where: { parentId: parent.id } });
 
   if (children.length === 0) return <ChildStep />;
-  if (!parent.regionCode) return <RegionStep yearGroup={children[0]!.yearGroup} />;
-  if (!subscription)
-    return <TrialStep yearGroup={children[0]!.yearGroup} regionCode={parent.regionCode} />;
+  const effectiveYear = effectiveYearGroup(
+    children[0]!.yearGroupAtCapture,
+    children[0]!.capturedAcademicYear,
+    new Date(),
+  );
+  if (!parent.regionCode) return <RegionStep yearGroup={effectiveYear} />;
+  if (!subscription) return <TrialStep yearGroup={effectiveYear} regionCode={parent.regionCode} />;
   redirect('/parent');
 }
 
@@ -48,8 +52,12 @@ function ChildStep() {
           <input name="crewName" type="text" required maxLength={40} />
         </label>
         <label>
-          School year group
+          {/* Addendum D §1: parents signing up in summer routinely mean the
+              INCOMING year, so the question names this September explicitly —
+              one sentence that prevents a full-year pacing error. */}
+          Which year group are they in from this September ({captureAcademicYear(new Date())})?
           <select name="yearGroup" required defaultValue="5">
+            <option value="3">Year 3 (early start)</option>
             <option value="4">Year 4</option>
             <option value="5">Year 5</option>
             <option value="6">Year 6</option>
@@ -157,6 +165,10 @@ async function TrialStep({ yearGroup, regionCode }: { yearGroup: number; regionC
     notes: null as string | null,
   };
   const recommendation = recommendTier(yearGroup, new Date());
+  // The recommendation reads from the intensity matrix (Addendum D §4):
+  // "Year 4 from September → 2-Year Crew at foundations intensity".
+  const register = intensityForCapture(yearGroup, captureAcademicYear(new Date()), null, new Date())
+    .parentRegister;
 
   return (
     <main className="cc-container">
@@ -180,8 +192,9 @@ async function TrialStep({ yearGroup, regionCode }: { yearGroup: number; regionC
       <h2>Pick a plan to try</h2>
       <p className="cc-muted">
         Every plan starts with a 7-day free trial — no card, nothing to cancel. Our suggestion for
-        Year {yearGroup} is the {PRICING[recommendation.tier].displayName}, but all three are shown
-        and the choice is entirely yours.{recommendation.note ? ` ${recommendation.note}` : ''}
+        Year {yearGroup} is the {PRICING[recommendation.tier].displayName} at {register} intensity,
+        but all three are shown and the choice is entirely yours.
+        {recommendation.note ? ` ${recommendation.note}` : ''}
       </p>
 
       {(['TWO_YEAR', 'ONE_YEAR', 'SUMMER'] as const).map((tier) => {

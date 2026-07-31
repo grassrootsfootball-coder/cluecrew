@@ -7,6 +7,7 @@
  */
 import { writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
+import { INTENSITY_MATRIX, type IntensityColumn } from '../src/intensity';
 import { PROFILES } from './learners';
 import { runSimulation, type SimResult } from './runner';
 
@@ -83,6 +84,72 @@ const profileSections = results
   })
   .join('\n');
 
+// ---------------------------------------------------------------------------
+// Addenda C + D: the same engine per intensity column, Boss Rounds included.
+// ---------------------------------------------------------------------------
+const COLUMNS: IntensityColumn[] = ['foundations', 'building', 'together', 'final'];
+const columnProfiles = ['average', 'struggling'] as const;
+
+const columnSections = COLUMNS.map((column, columnIndex) => {
+  const levers = INTENSITY_MATRIX[column];
+  const runs = columnProfiles.map((name) =>
+    runSimulation(PROFILES.find((profile) => profile.name === name)!, {
+      seed: 42,
+      intensityColumn: column,
+      examDayIndex: column === 'final' ? 60 : null,
+    }),
+  );
+  const color = COLORS[columnIndex % COLORS.length]!;
+  const stats = runs
+    .map(
+      (result) =>
+        `${result.profile}: ${result.casesCracked} cracked · ${result.newTypesOpened} new types opened · max boss round ${Math.max(
+          ...result.days.map((day) => day.bossRoundQuestions),
+        )}q`,
+    )
+    .join(' — ');
+  return `
+    <section>
+      <h2 style="color:${color}">Column: ${column} <span style="font-weight:400">(${levers.parentRegister})</span></h2>
+      <p class="meta">
+        Boss Round ${levers.bossRoundSize}q · review cap ${levers.reviewLoadCap} ·
+        new cases/wk ${levers.coverageDriven ? 'coverage-driven' : levers.newCasesPerWeek} ·
+        ladder ${levers.mockLadder} — ${stats}
+      </p>
+      <div class="charts">
+        ${chart(
+          'Rolling success (10-day) vs band — average & struggling',
+          runs.map((result, index) => ({ values: rolling(result, 10), color: COLORS[index === 0 ? 0 : 3]! })),
+          0,
+          1,
+          [0.7, 0.85],
+        )}
+        ${chart(
+          'Session seconds (cap 900, warm finish ≤960)',
+          runs.map((result, index) => ({
+            values: result.days.map((day) => (day.attended ? day.secondsActive : null)),
+            color: COLORS[index === 0 ? 0 : 3]!,
+          })),
+          0,
+          1000,
+          [900],
+        )}
+        ${chart(
+          'Cumulative case types opened',
+          runs.map((result, index) => {
+            let opened = 0;
+            return {
+              values: result.days.map((day) => (day.newCaseOpened ? ++opened : opened)),
+              color: COLORS[index === 0 ? 0 : 3]!,
+            };
+          }),
+          0,
+          6,
+        )}
+      </div>
+    </section>`;
+}).join('\n');
+
 const html = `<!doctype html>
 <html lang="en-GB">
 <head>
@@ -104,6 +171,12 @@ const html = `<!doctype html>
 The dashed lines mark the 70–85% success band and the 0.8 cracked threshold. Every run uses the real
 session/adaptivity/mastery/scheduler code with a fixed random seed (42).</p>
 ${profileSections}
+<h1>Addenda C + D — Boss Rounds and the intensity matrix</h1>
+<p class="note">The same six-profile engine re-run per intensity column with the Boss Round replacing
+the single-item closer. Watch for: session seconds never crossing the warm-finish line, the
+struggling curve staying in the band at every column, and the "final" column's cumulative-types
+line staying FLAT — no new question types in the final stretch, by design.</p>
+${columnSections}
 <p class="meta">Generated ${new Date().toISOString()} · packages/core/sim/report.ts</p>
 </body>
 </html>`;

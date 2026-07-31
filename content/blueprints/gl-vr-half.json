@@ -1,0 +1,39 @@
+{
+  "kind": "blueprint",
+  "blueprint": {
+    "id": "gl-vr-half",
+    "district": "VR",
+    "variant": "half",
+    "title": "VR Half Paper \u2014 First Sitting",
+    "sections": [
+      {
+        "instructions": "This is a half-length paper \u2014 a real run at real pace, just shorter. Read each question. Five answers are shown; pick one and mark it clearly. If a question feels hard, move on and come back.",
+        "questionCount": 15,
+        "typeMix": {
+          "vr-02-two-odd-ones-out": 3,
+          "vr-04-closest-meaning": 3,
+          "vr-10-word-connections": 3,
+          "vr-16-opposite-meaning": 3,
+          "vr-21-same-meaning": 3
+        },
+        "minutes": 12
+      },
+      {
+        "instructions": "Same rules as the first section. Letters and numbers now. Work steadily \u2014 about a minute a question \u2014 and mark one answer for each.",
+        "questionCount": 15,
+        "typeMix": {
+          "vr-05-hidden-word": 3,
+          "vr-08-move-letter": 3,
+          "vr-09-letter-series": 3,
+          "vr-11-number-series": 3,
+          "vr-19-word-number-codes": 3
+        },
+        "minutes": 12
+      }
+    ],
+    "notes": "DRAFT half-paper (Addendum C \u00a71 rung 2): an authored representative spread at half length \u2014 ten types across the word, letter and number families \u2014 never a runtime truncation of the full paper. Composition and wording to be verified by the specialist reviewer alongside gl-vr-standard.",
+    "verifiedBy": "PENDING REVIEWER VERIFICATION",
+    "verifiedAt": null,
+    "sourceRef": "DRAFT \u2014 representative selection from gl-vr-standard, pending reviewer verification"
+  }
+}

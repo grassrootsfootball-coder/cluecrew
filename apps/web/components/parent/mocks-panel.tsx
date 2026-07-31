@@ -15,11 +15,18 @@ interface BlueprintState {
   id: string;
   title: string;
   district: string;
+  variant: 'full' | 'half';
   draft: boolean;
   servable: boolean;
   pending: boolean;
   allowedAt: string;
   blocked: boolean;
+  unlocked: boolean;
+  earlyAvailable: boolean;
+  hardFloorMet: boolean;
+  typesStillBuilding: string[];
+  intensityColumn: string;
+  parentRegister: string;
 }
 
 interface SittingReport {
@@ -56,6 +63,8 @@ function shortDate(iso: string): string {
 export function MocksPanel({ childId, crewName }: { childId: string; crewName: string }) {
   const [data, setData] = useState<MocksData | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
+  /** The deliberate early-request flow (Addendum C §4): readiness first. */
+  const [earlyFlowFor, setEarlyFlowFor] = useState<string | null>(null);
 
   const load = useCallback(async () => {
     const response = await fetch(`/api/parent/mocks?childId=${childId}`);
@@ -66,12 +75,13 @@ export function MocksPanel({ childId, crewName }: { childId: string; crewName: s
     void load();
   }, [load]);
 
-  async function schedule(blueprintId: string) {
+  async function schedule(blueprintId: string, earlyHalfRequest = false) {
     setNotice(null);
+    setEarlyFlowFor(null);
     const response = await fetch('/api/parent/mocks', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ childId, blueprintId }),
+      body: JSON.stringify({ childId, blueprintId, earlyHalfRequest }),
     });
     const result = (await response.json()) as { ok: boolean; reason?: string; allowedAt?: string };
     if (!result.ok) {
@@ -82,7 +92,9 @@ export function MocksPanel({ childId, crewName }: { childId: string; crewName: s
             ? 'Not enough unseen paper questions are ready yet — we have flagged it on our side.'
             : result.reason === 'already_scheduled'
               ? `A paper is already waiting for ${crewName}.`
-              : 'That paper is not available yet.',
+              : result.reason === 'not_ready' || result.reason === 'hard_floor'
+                ? 'That paper unlocks as the case types below get underway.'
+                : 'That paper is not available yet.',
       );
     }
     await load();
@@ -114,18 +126,54 @@ export function MocksPanel({ childId, crewName }: { childId: string; crewName: s
             <span className="cc-muted">scheduled — ready in Crew HQ</span>
           ) : blueprint.blocked ? (
             <span className="cc-muted">next unlocks {shortDate(blueprint.allowedAt)}</span>
-          ) : blueprint.servable ? (
+          ) : !blueprint.servable ? (
+            <span className="cc-muted">not yet available</span>
+          ) : blueprint.unlocked ? (
             <button className="cc-button" onClick={() => void schedule(blueprint.id)}>
               Book for {crewName}
             </button>
+          ) : blueprint.earlyAvailable ? (
+            <button className="cc-button" data-testid={`early-${blueprint.id}`} onClick={() => setEarlyFlowFor(blueprint.id)}>
+              Request early
+            </button>
           ) : (
-            <span className="cc-muted">not yet available</span>
+            <span className="cc-muted" data-testid={`locked-${blueprint.id}`}>
+              {/* The meter names what's left — building, never judging (§4). */}
+              unlocks when{' '}
+              {blueprint.typesStillBuilding.length > 0
+                ? `these case types are underway: ${blueprint.typesStillBuilding.slice(0, 3).join(', ')}${blueprint.typesStillBuilding.length > 3 ? '…' : ''}`
+                : 'the first half paper is done'}
+            </span>
           )}
         </div>
       ))}
+      {earlyFlowFor ? (
+        <div className="cc-card" data-testid="early-flow">
+          {/* Quoted framing from Addendum C §4. */}
+          <p>
+            You can go ahead — here&apos;s what the mock will and won&apos;t tell you yet. It will
+            show how {crewName} handles exam formatting and timing on the question types already
+            underway. It won&apos;t yet reflect the types still building
+            {(() => {
+              const chosen = data.blueprints.find((candidate) => candidate.id === earlyFlowFor);
+              const names = chosen?.typesStillBuilding.slice(0, 3) ?? [];
+              return names.length > 0 ? `: ${names.join(', ')}` : '';
+            })()}
+            . A quieter result now usually means &ldquo;not covered yet&rdquo;, not &ldquo;not
+            able&rdquo;.
+          </p>
+          <button className="cc-button" data-testid="confirm-early" onClick={() => void schedule(earlyFlowFor, true)}>
+            Go ahead with the early half paper
+          </button>{' '}
+          <button className="cc-button" onClick={() => setEarlyFlowFor(null)}>
+            Wait for the unlock
+          </button>
+        </div>
+      ) : null}
       {notice ? <p>{notice}</p> : null}
       <p className="cc-muted">
-        Before the sitting: a tablet or laptop and a quiet room make it a fair run.
+        Papers are their own occasion, outside the daily fifteen minutes — pick a calm morning. A
+        tablet or laptop and a quiet room make it a fair run.
       </p>
 
       <h3>Results</h3>

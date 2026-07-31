@@ -51,8 +51,13 @@ model ChildProfile {
   parentId  String
   parent    ParentAccount @relation(fields: [parentId], references: [id], onDelete: Cascade)
   crewName  String // first name or nickname ONLY — no surname field exists
-  yearGroup Int // 4, 5, or 6
-  examYear  Int? // e.g. 2028 — drives programme pacing
+  // ADDENDUM-D §1: the year model. A static year group goes stale every
+  // 1 September, so the effective year group is ALWAYS derived —
+  // yearGroupAtCapture + (currentAcademicYear − capturedAcademicYear),
+  // computed in @cluecrew/core year.ts and never stored denormalised.
+  yearGroupAtCapture   Int // Years 3–6 at the moment of capture
+  capturedAcademicYear Int // e.g. 2026 = academic year 2026/27
+  examYear             Int? // e.g. 2028 — drives programme pacing
   settings  Json // accessibility prefs: reducedMotion, dyslexiaFont, audioDefault
   rank      Rank    @default(TRAINEE)
   // Streak weeks earned (rank input). Forgiveness days are never stored —
@@ -70,6 +75,7 @@ model ChildProfile {
   sessions        Session[]
   reviewSchedules ReviewSchedule[]
   mockSittings    MockSitting[]
+  readinessSnapshots ReadinessSnapshot[]
 
   createdAt DateTime  @default(now())
   deletedAt DateTime?
@@ -317,6 +323,9 @@ model CaseFile {
   tierEstimate Int @default(2)
   recentOutcomes Json @default("[]")
   attemptCount Int @default(0)
+  // When the case opened for this child — the new-case pacing signal
+  // (Addendum D §2). Backfilled with the migration date for older rows.
+  createdAt DateTime @default(now())
 
   @@unique([childId, caseId])
 }
@@ -420,6 +429,27 @@ model MockSitting {
 
   @@index([childId, blueprintId, status])
   @@index([childId, createdAt])
+}
+
+// ADDENDUM-C §5 (+ Addendum D §5): the readiness picture per child, district
+// and target blueprint, recomputed nightly and on session end. Feeds the
+// parent readiness meter and the L1 evidence base. Percentages of coverage,
+// never a judgement of the child; the child never sees any of it (§6).
+model ReadinessSnapshot {
+  id          String       @id @default(cuid())
+  childId     String
+  child       ChildProfile @relation(fields: [childId], references: [id], onDelete: Cascade)
+  district    String // 'VR' | 'MATHS' | …
+  blueprintId String
+  coveragePct Int // % of blueprint types at "taught and progressing" (≥0.55)
+  crackedPct  Int // % of district cases cracked (≥0.8)
+  transferPct Int // rolling Boss Round accuracy, last 20 items
+  tier        Int // current adaptive tier estimate for context
+  // The D §2 matrix column in force when this was computed.
+  intensityColumn String
+  computedAt      DateTime @default(now())
+
+  @@index([childId, district, computedAt])
 }
 
 // ---------- Analytics spine (§6) ----------

@@ -26,7 +26,8 @@ export async function GET() {
         select: {
           id: true,
           crewName: true,
-          yearGroup: true,
+          yearGroupAtCapture: true,
+          capturedAcademicYear: true,
           examYear: true,
           settings: true,
           rank: true,

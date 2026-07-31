@@ -120,3 +120,73 @@ describe('events (gate #9)', () => {
     }
   });
 });
+
+// ---------------------------------------------------------------------------
+// Addendum C gate #1 + Addendum D gate #3: the suite re-run with Boss Rounds
+// at every runway scaling, per intensity column.
+// ---------------------------------------------------------------------------
+import { INTENSITY_MATRIX, type IntensityColumn } from '../src/intensity';
+import { PROFILES } from './learners';
+import { trailingSuccessRate } from './runner';
+
+const COLUMNS: IntensityColumn[] = ['foundations', 'building', 'together', 'final'];
+
+describe('intensity columns (Addenda C+D): the same laws hold in all four', () => {
+  const struggling = PROFILES.find((profile) => profile.name === 'struggling')!;
+  const steady = PROFILES.find((profile) => profile.name === 'average')!;
+
+  for (const column of COLUMNS) {
+    const levers = INTENSITY_MATRIX[column];
+
+    it(`${column}: the session cap is never exceeded, whatever the Boss Round size`, () => {
+      for (const profile of PROFILES) {
+        const result = runSimulation(profile, {
+          intensityColumn: column,
+          examDayIndex: column === 'final' ? 60 : null,
+          seed: 7,
+        });
+        for (const day of result.days) {
+          // The Phase 3 gate's own tolerance: the in-flight activity finishes
+          // warmly (D2 is "not a cliff"), so cap + one activity, same as the
+          // ratified D2 test above.
+          expect(day.secondsActive, `${profile.name} day ${day.day}`).toBeLessThanOrEqual(
+            15 * 60 + 60,
+          );
+        }
+      }
+    });
+
+    it(`${column}: sessions serve the matrix's Boss Round size`, () => {
+      const result = runSimulation(steady, { intensityColumn: column, seed: 7 });
+      const sized = result.days.filter((day) => day.attended && day.bossRoundQuestions > 0);
+      expect(sized.length).toBeGreaterThan(0);
+      const maxServed = Math.max(...sized.map((day) => day.bossRoundQuestions));
+      expect(maxServed).toBeLessThanOrEqual(levers.bossRoundSize);
+      // The full size is actually reached on ordinary days, not just capped at.
+      expect(maxServed).toBe(levers.bossRoundSize);
+    });
+
+    it(`${column}: the struggling profile still lands in the 70–85 band`, () => {
+      const result = runSimulation(struggling, { intensityColumn: column, seed: 7 });
+      const rate = trailingSuccessRate(result, 30);
+      expect(rate).toBeGreaterThanOrEqual(0.65); // band floor with sim noise
+      expect(rate).toBeLessThanOrEqual(0.9);
+    });
+  }
+
+  it('final stretch: zero new question types open (the matrix’s most important cell)', () => {
+    for (const profile of PROFILES) {
+      const result = runSimulation(profile, { intensityColumn: 'final', examDayIndex: 60, seed: 7 });
+      expect(result.newTypesOpened, profile.name).toBe(0);
+    }
+  });
+
+  it('struggling sessions still end on completion beats in every column', () => {
+    for (const column of COLUMNS) {
+      const result = runSimulation(struggling, { intensityColumn: column, seed: 7 });
+      const attended = result.days.filter((day) => day.attended);
+      const onBeat = attended.filter((day) => day.endedOnCompletionBeat).length;
+      expect(onBeat / attended.length, column).toBeGreaterThanOrEqual(0.8);
+    }
+  });
+});

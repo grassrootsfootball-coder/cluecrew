@@ -48,6 +48,16 @@ export const EVENT_NAMES = [
   // The volume-floor admin alert (Addendum B gate #2): a paper that could not
   // compose without item reuse. Carries blueprintId + shortfalls in props.
   'mock_composition_failed',
+  // Readiness ladder (Addendum C §5)
+  'boss_round_started',
+  'boss_round_completed',
+  'readiness_half_unlocked',
+  'readiness_full_unlocked',
+  'early_half_requested',
+  // Year model (Addendum D §5)
+  'year_rollover_confirmed',
+  'year_rollover_corrected',
+  'intensity_column_changed',
 ] as const;
 
 export type EventName = (typeof EVENT_NAMES)[number];

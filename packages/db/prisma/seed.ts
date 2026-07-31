@@ -393,8 +393,10 @@ async function seedTestFamily(): Promise<void> {
   });
 
   const children = [
-    { id: 'seed-child-alex', crewName: 'Alex', yearGroup: 5, examYear: 2027 },
-    { id: 'seed-child-sam', crewName: 'Sam', yearGroup: 4, examYear: 2028 },
+    // Year model (Addendum D): capture pair, from which the effective year is
+    // always derived. Alex: Year 5 from September 2026; Sam: Year 4.
+    { id: 'seed-child-alex', crewName: 'Alex', yearGroupAtCapture: 5, capturedAcademicYear: 2026, examYear: 2027 },
+    { id: 'seed-child-sam', crewName: 'Sam', yearGroupAtCapture: 4, capturedAcademicYear: 2026, examYear: 2028 },
   ];
   for (const child of children) {
     await prisma.childProfile.upsert({
@@ -404,7 +406,12 @@ async function seedTestFamily(): Promise<void> {
         parentId: parent.id,
         settings: { reducedMotion: false, dyslexiaFont: false, audioDefault: false },
       },
-      update: { crewName: child.crewName, yearGroup: child.yearGroup, examYear: child.examYear },
+      update: {
+        crewName: child.crewName,
+        yearGroupAtCapture: child.yearGroupAtCapture,
+        capturedAcademicYear: child.capturedAcademicYear,
+        examYear: child.examYear,
+      },
     });
   }
 

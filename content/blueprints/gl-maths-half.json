@@ -1,0 +1,29 @@
+{
+  "kind": "blueprint",
+  "blueprint": {
+    "id": "gl-maths-half",
+    "district": "MATHS",
+    "variant": "half",
+    "title": "Maths Half Paper — First Sitting",
+    "sections": [
+      {
+        "instructions": "This is a half-length paper — a real run, just shorter. Read each question slowly; most tell a little story. Work your answer out first, then find it and mark it. Rough working on paper is a good idea. No calculators.",
+        "questionCount": 25,
+        "typeMix": {
+          "maths-number-place-value": 4,
+          "maths-four-operations": 5,
+          "maths-fractions-decimals-percentages": 4,
+          "maths-measures-money-time": 3,
+          "maths-geometry": 3,
+          "maths-statistics": 2,
+          "maths-word-problems": 4
+        },
+        "minutes": 25
+      }
+    ],
+    "notes": "DRAFT half-paper, doubly provisional like gl-maths-standard: strand-placeholder type ids until the Maths district ships, then reviewer verification of the representative spread. Authored, never a truncation (Addendum C §6).",
+    "verifiedBy": "PENDING REVIEWER VERIFICATION",
+    "verifiedAt": null,
+    "sourceRef": "DRAFT — representative selection from gl-maths-standard, pending reviewer verification"
+  }
+}

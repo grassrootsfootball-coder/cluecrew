@@ -174,6 +174,20 @@ provider selection will add a processor entry here before use.
 - **Abandoned sittings** are discarded from reporting entirely: no partial
   score is stored for or shown to the parent (§3).
 
+## 10b. Addenda C + D additions — readiness and the year model
+
+- **`ReadinessSnapshot`** stores per child/district/blueprint coverage,
+  cracked and transfer percentages plus the intensity column — all derived
+  from data already held (case files, attempts). Parent-facing only; the
+  child never sees any readiness artefact (Addendum C §6). No new category of
+  personal data.
+- **Derived year group (Addendum D §1):** the schema stores year group AT
+  CAPTURE plus the capturing academic year; the effective year group is
+  computed, never collected and never stored denormalised. Corrections are
+  parent-initiated and audited via events.
+- **Boss Round outcomes** are ordinary attempts (context `boss_case`),
+  already covered in §8.
+
 ## 11. Open items for next phase gates
 
 - Phase 2: onboarding wizard region data, Stripe processor agreement, verifiable parental consent flow detail, marketing consent UX, data export UI.

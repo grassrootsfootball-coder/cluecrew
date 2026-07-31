@@ -23,6 +23,7 @@ import {
   type ReviewState,
   type SessionState,
 } from '../src/index';
+import { INTENSITY_MATRIX, type IntensityColumn } from '../src/intensity';
 import { makeRandom, pCorrect, type LearnerProfile } from './learners';
 
 const QUESTION_TYPES = ['vr-01', 'vr-08', 'vr-09', 'vr-10', 'vr-11', 'vr-12'];
@@ -37,6 +38,7 @@ interface SimCase {
   attempts: number;
   taughtBack: boolean;
   crackedOnDay: number | null;
+  firstOpenedDay: number | null;
   lastPracticedDay: number | null;
   modesOpened: Mode[];
   everUncrackedByDecay: boolean;
@@ -61,6 +63,8 @@ export interface DailyStat {
   reviewPoolSize: number;
   maxMissStreak: number;
   secondsActive: number;
+  bossRoundQuestions: number;
+  newCaseOpened: boolean;
 }
 
 export interface SimResult {
@@ -73,6 +77,8 @@ export interface SimResult {
   maxReviewPoolSize: number;
   scheduledIntervals: Array<{ day: number; intervalDays: number }>;
   finalAbility: number;
+  /** Case types first opened after day 0 — the final stretch must add none. */
+  newTypesOpened: number;
 }
 
 export interface SimOptions {
@@ -80,6 +86,8 @@ export interface SimOptions {
   /** Exam date as a day index from sim start (drives horizon compression). */
   examDayIndex?: number | null;
   seed?: number;
+  /** Addendum D §2: run the whole simulation in one matrix column. */
+  intensityColumn?: IntensityColumn;
 }
 
 export function runSimulation(profile: LearnerProfile, options: SimOptions = {}): SimResult {
@@ -87,6 +95,7 @@ export function runSimulation(profile: LearnerProfile, options: SimOptions = {})
   const examDate =
     options.examDayIndex != null ? new Date(SIM_START.getTime() + options.examDayIndex * DAY_MS) : null;
   const random = makeRandom(options.seed ?? 42);
+  const levers = INTENSITY_MATRIX[options.intensityColumn ?? 'building'];
 
   let ability = profile.startAbility;
   const cases: SimCase[] = QUESTION_TYPES.map((typeId) => ({
@@ -96,6 +105,7 @@ export function runSimulation(profile: LearnerProfile, options: SimOptions = {})
     attempts: 0,
     taughtBack: false,
     crackedOnDay: null,
+    firstOpenedDay: null,
     lastPracticedDay: null,
     modesOpened: [],
     everUncrackedByDecay: false,
@@ -122,6 +132,7 @@ export function runSimulation(profile: LearnerProfile, options: SimOptions = {})
     maxReviewPoolSize: 0,
     scheduledIntervals: [],
     finalAbility: ability,
+    newTypesOpened: 0,
   };
 
   for (let day = 0; day < daysToSimulate; day++) {
@@ -142,6 +153,8 @@ export function runSimulation(profile: LearnerProfile, options: SimOptions = {})
         reviewPoolSize: 0,
         maxMissStreak: 0,
         secondsActive: 0,
+        bossRoundQuestions: 0,
+        newCaseOpened: false,
       });
       continue;
     }
@@ -164,11 +177,41 @@ export function runSimulation(profile: LearnerProfile, options: SimOptions = {})
     const pool = buildReviewPool(
       [...reviews.values()].map((unit) => ({ ...unit, lapses: unit.state.lapses })),
       now,
+      levers.reviewLoadCap,
     );
     result.maxReviewPoolSize = Math.max(result.maxReviewPoolSize, pool.length);
 
-    const focus = cases.find((simCase) => simCase.crackedOnDay === null) ?? cases[cases.length - 1]!;
+    const startedUncracked = cases.find(
+      (simCase) => simCase.attempts > 0 && simCase.crackedOnDay === null,
+    );
+    const nextNew = cases.find((simCase) => simCase.attempts === 0);
+    const lastOpenedDay = cases.reduce<number | null>(
+      (latest, simCase) =>
+        simCase.firstOpenedDay !== null &&
+        (latest === null || simCase.firstOpenedDay > latest)
+          ? simCase.firstOpenedDay
+          : latest,
+      null,
+    );
+    const newCaseAllowed =
+      levers.newCasesPerWeek > 0 &&
+      (levers.coverageDriven ||
+        lastOpenedDay === null ||
+        day - lastOpenedDay >= 7 / levers.newCasesPerWeek);
+    const leastMastered = [...cases]
+      .filter((simCase) => simCase.attempts > 0)
+      .sort((a, b) => a.mastery - b.mastery)[0];
+    const focus =
+      startedUncracked ??
+      (newCaseAllowed ? nextNew : undefined) ??
+      leastMastered ??
+      nextNew ??
+      cases[cases.length - 1]!;
+    const isNewOpen = focus.attempts === 0;
+    if (isNewOpen && day > 0) result.newTypesOpened += 1;
+    if (focus.firstOpenedDay === null) focus.firstOpenedDay = day;
     let state: SessionState = startSession({
+      bossRoundSize: levers.bossRoundSize,
       sessionId: `s-${profile.name}-${day}`,
       childId: `sim-${profile.name}`,
       reviewUnits: pool.map((unit) => ({ unitKind: unit.unitKind, unitId: unit.unitId })),
@@ -191,6 +234,7 @@ export function runSimulation(profile: LearnerProfile, options: SimOptions = {})
     let maxMissStreak = 0;
     let frustrationBreak = false;
     let closerAnswered = false;
+    let bossRoundQuestions = 0;
 
     let guard = 0;
     while (guard++ < 200) {
@@ -240,6 +284,7 @@ export function runSimulation(profile: LearnerProfile, options: SimOptions = {})
 
         if (activity.kind === 'closer') {
           closerAnswered = true;
+          bossRoundQuestions += 1;
           continue;
         }
 
@@ -292,6 +337,8 @@ export function runSimulation(profile: LearnerProfile, options: SimOptions = {})
       reviewPoolSize: pool.length,
       maxMissStreak,
       secondsActive: summary.secondsActive,
+      bossRoundQuestions,
+      newCaseOpened: isNewOpen,
     });
   }
 

@@ -43,8 +43,14 @@ export const ENGINE_CONFIG = {
     /** D2: hard cap. A parent setting may SHORTEN this (min below), never lengthen. */
     capMinutes: 15,
     parentMinimumMinutes: 10,
-    /** New items stop this many minutes before the cap; closer + wind-down follow. */
+    /** New items stop this many minutes before the cap; the Boss Round and
+     *  wind-down follow. Sized for a ONE-question round — bigger rounds
+     *  reserve more via bossRoundSecondsPerQuestion, so the session still
+     *  ends inside the cap (Addendum C §2: focus time yields the difference;
+     *  D2 does not move). */
     softStopBeforeCapMinutes: 2,
+    /** Reserved seconds per Boss Round question beyond the first. */
+    bossRoundSecondsPerQuestion: 60,
     /** Warm-up composition (P2): due review units + word cards. */
     warmupReviewUnitsMin: 4,
     warmupReviewUnitsMax: 6,

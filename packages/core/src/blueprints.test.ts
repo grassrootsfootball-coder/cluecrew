@@ -46,6 +46,7 @@ describe('practice selection never serves a MOCK item', () => {
 const draftBlueprint: Blueprint = {
   id: 'test-standard',
   district: 'VR',
+  variant: 'full',
   title: 'Test Paper',
   sections: [
     {

@@ -69,7 +69,13 @@ export interface SessionState {
     teachbackPending: boolean;
     taughtBack: boolean;
   };
-  closerServed: boolean;
+  /**
+   * The Boss Round (ADDENDUM-C §1 rung 1): 1–5 exam-format questions closing
+   * every session, replacing the single-item closer. Size comes from the
+   * intensity matrix (Addendum D §2) via startSession; the child sees no
+   * score, ever — completion is the beat.
+   */
+  bossRound: { size: number; served: number; correct: number };
   /** Events accumulated for the caller to persist (IDs and enums only). */
   pendingEvents: EngineEvent[];
 }
@@ -99,6 +105,8 @@ export interface StartSessionInputs {
   };
   /** Parent-configured session minutes; clamped to [10, 15] — shorten only. */
   parentSessionMinutes?: number;
+  /** Boss Round questions, 1–5, from the intensity matrix (Addendum D §2). */
+  bossRoundSize?: number;
 }
 
 export function startSession(inputs: StartSessionInputs): SessionState {
@@ -142,7 +150,11 @@ export function startSession(inputs: StartSessionInputs): SessionState {
       teachbackPending: false,
       taughtBack: inputs.focusCase.taughtBack,
     },
-    closerServed: false,
+    bossRound: {
+      size: Math.min(5, Math.max(1, Math.round(inputs.bossRoundSize ?? 1))),
+      served: 0,
+      correct: 0,
+    },
     pendingEvents: [
       { name: 'session_started', props: { sessionId: inputs.sessionId } },
       ...warmupReviews.map(
@@ -160,11 +172,22 @@ export type Activity =
   | { kind: 'mode_content'; mode: Mode; caseId: string; forced: boolean }
   | { kind: 'practice_item'; questionTypeId: string; targetTier: number; context: 'case_practice' }
   | { kind: 'teachback'; questionTypeId: string; caseId: string }
-  | { kind: 'closer'; questionTypeId: string; targetTier: number; context: 'boss_case' }
+  | {
+      kind: 'closer';
+      questionTypeId: string;
+      targetTier: number;
+      context: 'boss_case';
+      round: { index: number; size: number };
+    }
   | { kind: 'wind_down' };
 
 function softStopReached(state: SessionState): boolean {
-  return state.secondsActive >= state.capSeconds - CONFIG.softStopBeforeCapMinutes * 60;
+  // A bigger Boss Round reserves more of the cap: intensity changes what
+  // fills the fifteen minutes, never how many minutes there are (D §3).
+  const reserved =
+    CONFIG.softStopBeforeCapMinutes * 60 +
+    (state.bossRound.size - 1) * CONFIG.bossRoundSecondsPerQuestion;
+  return state.secondsActive >= state.capSeconds - reserved;
 }
 
 /**
@@ -229,13 +252,16 @@ export function nextActivity(state: SessionState): { activity: Activity; state: 
   }
 
   if (state.phase === 'closer') {
-    if (!state.closerServed) {
+    if (state.bossRound.served < state.bossRound.size) {
       return {
         activity: {
           kind: 'closer',
+          // The focus type is the DEFAULT; the serving layer mixes in other
+          // taught types (Addendum C §2) — core owns the count and the tier.
           questionTypeId: state.focus.questionTypeId,
           targetTier: state.focus.adapt.tierEstimate,
           context: 'boss_case',
+          round: { index: state.bossRound.served, size: state.bossRound.size },
         },
         state,
       };
@@ -285,10 +311,25 @@ export function submitAttempt(state: SessionState, submission: AttemptSubmission
   }
 
   if (submission.activityKind === 'closer') {
+    const served = next.bossRound.served + 1;
+    const events: EngineEvent[] = [];
+    if (next.bossRound.served === 0) {
+      events.push({
+        name: 'boss_round_started',
+        props: { sessionId: next.sessionId, size: next.bossRound.size },
+      });
+    }
+    const correct = next.bossRound.correct + (submission.correct ? 1 : 0);
+    if (served >= next.bossRound.size) {
+      events.push({
+        name: 'boss_round_completed',
+        props: { sessionId: next.sessionId, size: next.bossRound.size, correct },
+      });
+    }
     next = {
       ...next,
-      closerServed: true,
-      pendingEvents: [...next.pendingEvents],
+      bossRound: { ...next.bossRound, served, correct },
+      pendingEvents: [...next.pendingEvents, ...events],
     };
     return { state: next, focusMastery: next.focus.masteryLevel, caseJustCracked: false };
   }

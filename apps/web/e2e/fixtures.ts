@@ -74,7 +74,7 @@ function fixtureEmail(label: string): string {
  */
 export async function createFamily(
   label: string,
-  options: { crewNames?: string[]; regionCode?: string; yearGroup?: number } = {},
+  options: { crewNames?: string[]; regionCode?: string; yearGroup?: number; examYear?: number } = {},
 ): Promise<FixtureFamily> {
   const email = fixtureEmail(label);
   const parent = await prisma.parentAccount.create({
@@ -98,8 +98,9 @@ export async function createFamily(
       data: {
         parentId: parent.id,
         crewName,
-        yearGroup: options.yearGroup ?? 5,
-        examYear: 2028,
+        yearGroupAtCapture: options.yearGroup ?? 5,
+        capturedAcademicYear: new Date().getUTCFullYear(),
+        examYear: options.examYear ?? 2028,
         settings: { reducedMotion: false, dyslexiaFont: false, audioDefault: false },
       },
     });

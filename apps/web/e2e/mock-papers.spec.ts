@@ -71,6 +71,53 @@ async function scheduleFor(api: APIRequestContext, childId: string) {
   return api.post('/api/parent/mocks', { data: { childId, blueprintId: BLUEPRINT.id } });
 }
 
+/**
+ * Addendum C changed who may sit a paper: the readiness ladder and the hard
+ * floor refuse an unprepared child, so these tests first make the child
+ * genuinely ready the way months of practice would — every case taught and
+ * cracked, a strong Boss Round record, and a completed half paper.
+ */
+async function makeReadyForFullPaper(childId: string): Promise<void> {
+  const cases = await prisma.case.findMany({ select: { id: true } });
+  for (const caseRow of cases) {
+    await prisma.caseFile.create({
+      data: { childId, caseId: caseRow.id, masteryLevel: 0.9, solvedAt: new Date() },
+    });
+  }
+  const session = await prisma.session.create({
+    data: { childId, endedAt: new Date(), secondsActive: 540 },
+  });
+  const anyItem = await prisma.item.findFirst({
+    where: { pool: 'PRACTICE' },
+    select: { id: true },
+  });
+  for (let index = 0; index < 20; index++) {
+    await prisma.attempt.create({
+      data: {
+        childId,
+        sessionId: session.id,
+        itemId: anyItem!.id,
+        correct: index % 5 !== 0, // 80% transfer
+        latencyMs: 20_000,
+        context: 'boss_case',
+      },
+    });
+  }
+  await prisma.mockSitting.create({
+    data: {
+      childId,
+      blueprintId: 'gl-vr-half',
+      servedItemIds: [],
+      sectionTimings: [],
+      responses: {},
+      status: 'COMPLETED',
+      // Eight days ago: a half paper IS a paper for the 7-day district cap
+      // (§3), so a same-day one would rightly block the full paper.
+      createdAt: new Date(Date.now() - 8 * 24 * 60 * 60 * 1000),
+    },
+  });
+}
+
 test('mock items never reach practice, even when the pool is full of them', async () => {
   const mockIds = await createMockBank('isolation', 1);
   const family = await createFamily('mock-isolation');
@@ -120,7 +167,14 @@ test('the full sitting: book → sit in Plain mode → child result without numb
 }) => {
   test.setTimeout(180_000);
   await createMockBank('sitting', 1);
-  const family = await createFamily('mock-sitting');
+  // Effectively Year 5 with a one-month runway: the 'final' intensity column,
+  // whose ladder reaches FULL — the year guard would rightly cap a younger
+  // child at half papers (Addendum D §2).
+  const family = await createFamily('mock-sitting', {
+    yearGroup: 6,
+    examYear: new Date().getUTCFullYear(),
+  });
+  await makeReadyForFullPaper(family.child.id);
   const api = await parentApi(family.email);
 
   const booked = await scheduleFor(api, family.child.id);
@@ -171,7 +225,8 @@ test('the full sitting: book → sit in Plain mode → child result without numb
   // Stage 1 on the parent side: raw, percentage, per-type, the honesty note.
   await copyCookies(page, api);
   await page.goto('/parent/mocks');
-  await expect(page.getByTestId('sitting-report')).toBeVisible();
+  // .first(): the arrange step's synthetic half paper also reports.
+  await expect(page.getByTestId('sitting-report').first()).toBeVisible();
   await expect(
     page.getByText(
       'Real 11+ results are age-standardised; practice scores here show attainment and progress, not a predicted result.',
@@ -190,7 +245,11 @@ test('abandoning is kind: sitting discarded, no parent score, only opened sectio
 }) => {
   test.setTimeout(120_000);
   await createMockBank('abandon', 2);
-  const family = await createFamily('mock-abandon');
+  const family = await createFamily('mock-abandon', {
+    yearGroup: 6,
+    examYear: new Date().getUTCFullYear(),
+  });
+  await makeReadyForFullPaper(family.child.id);
   const api = await parentApi(family.email);
   expect((await scheduleFor(api, family.child.id)).status()).toBe(201);
 
@@ -213,11 +272,12 @@ test('abandoning is kind: sitting discarded, no parent score, only opened sectio
   await page.getByTestId('confirm-stop').click();
   await page.waitForURL('**/crew');
 
-  // Discarded from reporting: the parent sees nothing of it.
+  // Discarded from reporting: the parent sees nothing of the abandoned FULL
+  // paper (the arrange step's synthetic half sitting legitimately reports).
   const report = (await (
     await api.get(`/api/parent/mocks?childId=${family.child.id}`)
-  ).json()) as { sittings: unknown[] };
-  expect(report.sittings).toHaveLength(0);
+  ).json()) as { sittings: Array<{ blueprintId: string }> };
+  expect(report.sittings.filter((entry) => entry.blueprintId === BLUEPRINT.id)).toHaveLength(0);
 
   // Abandoning does not spend the weekly cap, and the recomposition avoids
   // exactly the opened section's items — the unseen sections' items are free.
@@ -239,7 +299,11 @@ test('a paper that cannot compose fails loudly, never with substituted content',
   // No MOCK bank for this family's composition beyond what other tests made —
   // burn it all by using a fresh child and a deliberately starved type check:
   // schedule against a bank in which one type has been fully consumed.
-  const family = await createFamily('mock-shortfall');
+  const family = await createFamily('mock-shortfall', {
+    yearGroup: 6,
+    examYear: new Date().getUTCFullYear(),
+  });
+  await makeReadyForFullPaper(family.child.id);
   const api = await parentApi(family.email);
 
   // Consume the entire remaining vr-01 MOCK pool for this child by burning it.

@@ -46,6 +46,7 @@ type Activity =
   | {
       kind: 'item';
       activityKind: string;
+      round?: { index: number; size: number };
       family: keyof typeof engines;
       plain: boolean;
       rail: 'stage' | 'corner' | 'none';
@@ -58,6 +59,8 @@ interface AnswerResult {
   childHint?: string;
   cracked?: boolean;
   bonusWord?: { headword: string; definitionChild: string } | null;
+  /** Boss Round answers carry ONLY this — the child sees no score, ever. */
+  bossRound?: { answered: number; size: number; done: boolean };
 }
 
 interface EndResult {
@@ -220,6 +223,14 @@ export function PlayRunner({ childId }: { childId: string }) {
     }
     const result = (await response.json()) as AnswerResult;
     fillBead();
+
+    if (result.bossRound) {
+      // Boss Round (Addendum C §2): no feedback beat, no mascot, no score —
+      // the bead fill above is the whole acknowledgement, and the next
+      // question (or the wind-down) follows straight on.
+      await loadActivity();
+      return;
+    }
 
     if (optionId) setOutcome({ optionId, correct: result.correct });
     mascotEvent(result.correct ? 'answer_correct' : 'answer_not_yet');
@@ -610,6 +621,13 @@ export function PlayRunner({ childId }: { childId: string }) {
 
       {activity.kind === 'item' ? (
         <section aria-live="polite">
+          {activity.round ? (
+            <p className="crew-mock-progress" data-testid="boss-round-frame">
+              {activity.round.index === 0
+                ? `Boss Round. ${activity.round.size === 1 ? 'One quick one' : `${['','','Two','Three','Four','Five'][activity.round.size]} quick ones`} — real exam rules.`
+                : `Boss Round: ${activity.round.index + 1} of ${activity.round.size}.`}
+            </p>
+          ) : null}
           {activity.plain ? (
             <p className="cc-muted" data-testid="boss-intro">
               {VOICE.bossIntro}

@@ -7,6 +7,7 @@
  */
 import {
   applyDecay,
+  intensityForCapture,
   applyRank,
   applyTeachbackBump,
   buildReviewPool,
@@ -87,6 +88,16 @@ type PendingActivity =
 async function loadState(sessionId: string): Promise<LoadedState> {
   const session = await prisma.session.findUniqueOrThrow({ where: { id: sessionId } });
   const state = session.engineState as unknown as LoadedState;
+  // A session opened before Addendum C persisted `closerServed: boolean`;
+  // normalise it to a one-question Boss Round so an in-flight session
+  // finishes cleanly instead of crashing on the new shape.
+  const legacy = state.engine as unknown as { closerServed?: boolean; bossRound?: unknown };
+  if (legacy.bossRound === undefined) {
+    state.engine = {
+      ...state.engine,
+      bossRound: { size: 1, served: legacy.closerServed ? 1 : 0, correct: 0 },
+    };
+  }
   state[VERSION] = session.stateVersion;
   return state;
 }
@@ -198,6 +209,15 @@ export async function startDailyLoop(childId: string, caseIdOverride?: string) {
   const child = await prisma.childProfile.findUniqueOrThrow({ where: { id: childId } });
   const now = new Date();
 
+  // The intensity column in force (Addendum D §2): composition, never
+  // duration. Sizes the Boss Round, caps review load, and paces new cases.
+  const intensity = intensityForCapture(
+    child.yearGroupAtCapture,
+    child.capturedAcademicYear,
+    child.examYear,
+    now,
+  );
+
   // One session per child at a time; concurrent devices resolve to the newest.
   await prisma.session.updateMany({
     where: { childId, endedAt: null },
@@ -209,9 +229,37 @@ export async function startDailyLoop(childId: string, caseIdOverride?: string) {
   const caseFiles = await prisma.caseFile.findMany({ where: { childId } });
   const caseFileByCase = new Map(caseFiles.map((caseFile) => [caseFile.caseId, caseFile]));
   const cases = await prisma.case.findMany({ orderBy: { orderInDistrict: 'asc' } });
+  // New-case pacing (Addendum D §2). A case with no CaseFile is NEW; whether
+  // one may open now depends on the column: the final stretch opens none (the
+  // matrix's most important cell), coverage-driven columns pace freely toward
+  // completion, and gentler columns respect the authored rate. A child's own
+  // explicit pick (caseIdOverride) is honoured for cases already underway.
+  const newestCaseFileAt = caseFiles.reduce<Date | null>(
+    (latest, file) => (latest === null || file.createdAt > latest ? file.createdAt : latest),
+    null,
+  );
+  const newCaseAllowed =
+    intensity.newCasesPerWeek > 0 &&
+    (intensity.coverageDriven ||
+      newestCaseFileAt === null ||
+      now.getTime() - newestCaseFileAt.getTime() >= (7 / intensity.newCasesPerWeek) * DAY_MS);
+  const startedUncracked = cases.find(
+    (candidate) => caseFileByCase.has(candidate.id) && !caseFileByCase.get(candidate.id)!.solvedAt,
+  );
+  const nextUncracked = cases.find((candidate) => !caseFileByCase.get(candidate.id)?.solvedAt);
   const focusCase =
     (caseIdOverride ? cases.find((candidate) => candidate.id === caseIdOverride) : undefined) ??
-    cases.find((candidate) => !caseFileByCase.get(candidate.id)?.solvedAt) ??
+    startedUncracked ??
+    (newCaseAllowed ? nextUncracked : undefined) ??
+    // Nothing underway and no new case allowed: consolidate the least-mastered
+    // existing case rather than opening a type three weeks before the exam.
+    cases
+      .filter((candidate) => caseFileByCase.has(candidate.id))
+      .sort(
+        (a, b) =>
+          caseFileByCase.get(a.id)!.masteryLevel - caseFileByCase.get(b.id)!.masteryLevel,
+      )[0] ??
+    nextUncracked ??
     cases[cases.length - 1];
   if (!focusCase) throw new Error('no cases exist');
 
@@ -256,6 +304,7 @@ export async function startDailyLoop(childId: string, caseIdOverride?: string) {
       lapses: row.lapses,
     })),
     now,
+    intensity.reviewLoadCap, // the matrix's per-session review cap (D §2)
   ).slice(0, ENGINE_CONFIG.session.warmupReviewUnitsMax);
 
   // Three collectible Word Cards per warm-up (§5): lowest-tier uncollected.
@@ -283,6 +332,7 @@ export async function startDailyLoop(childId: string, caseIdOverride?: string) {
       taughtBack: Boolean(caseFile.taughtBackAt),
     },
     parentSessionMinutes: settings.sessionMinutes,
+    bossRoundSize: intensity.bossRoundSize,
   });
 
   const session = await prisma.session.create({ data: { childId, engineState: {} } });
@@ -317,6 +367,7 @@ export type ActivityPayload =
       activityKind: 'warmup_item' | 'practice_item' | 'closer';
       family: MechanicFamily;
       plain: boolean;
+      round?: { index: number; size: number };
       questionTypeId: string;
       rail: 'stage' | 'corner' | 'none';
       stem: unknown;
@@ -443,12 +494,50 @@ async function buildActivity(childId: string): Promise<ActivityPayload> {
     });
   }
 
-  // practice_item | closer
+  if (activity.kind === 'closer') {
+    // The Boss Round mixes question types the child has already been taught
+    // (Addendum C §2): the focus type is only the fallback. Taught = a case
+    // file exists — the case was opened, so its type has been introduced.
+    const taught = await prisma.caseFile.findMany({
+      where: { childId },
+      include: { case: { select: { questionTypeId: true } } },
+    });
+    const taughtTypes = [...new Set(taught.map((file) => file.case.questionTypeId))];
+    const roundType =
+      taughtTypes.length > 0
+        ? taughtTypes[
+            // Seeded rotation: varied within the round, stable per session.
+            (activity.round.index +
+              [...state.engine.sessionId].reduce((sum, ch) => sum + ch.charCodeAt(0), 0)) %
+              taughtTypes.length
+          ]!
+        : activity.questionTypeId;
+    // Prefer items unseen in the last 14 days (§2) — a preference, not a
+    // requirement: the exclusion set is dropped when it would empty the pool.
+    const fortnight = new Date(Date.now() - 14 * DAY_MS);
+    const recent = await prisma.attempt.findMany({
+      where: { childId, createdAt: { gte: fortnight } },
+      select: { itemId: true },
+    });
+    return serveItem(
+      childId,
+      session.id,
+      state,
+      {
+        activityKind: 'closer',
+        questionTypeId: roundType,
+        targetTier: activity.targetTier,
+        context: 'boss_case',
+      },
+      new Set(recent.map((attempt) => attempt.itemId)),
+    );
+  }
+
   return serveItem(childId, session.id, state, {
-    activityKind: activity.kind === 'closer' ? 'closer' : 'practice_item',
+    activityKind: 'practice_item',
     questionTypeId: activity.questionTypeId,
     targetTier: activity.targetTier,
-    context: activity.kind === 'closer' ? 'boss_case' : 'case_practice',
+    context: 'case_practice',
   });
 }
 
@@ -478,15 +567,27 @@ async function serveItem(
     context: string;
     unitId?: string;
   },
+  preferUnseen: ReadonlySet<string> = new Set(),
 ): Promise<ActivityPayload> {
   const pool = await itemPool(input.questionTypeId);
-  const chosen = selectItem(
-    // pool is passed through so core's MOCK exclusion is live on this path,
-    // not just in tests — the query filter above is the second layer.
-    pool.map((item) => ({ id: item.id, tier: item.difficultyTier, pool: item.pool, item })),
-    input.targetTier,
-    new Set(state.engine.focus.servedItemIds),
-  );
+  const candidates = pool.map((item) => ({
+    id: item.id,
+    tier: item.difficultyTier,
+    pool: item.pool,
+    item,
+  }));
+  const exclude = new Set([...state.engine.focus.servedItemIds, ...preferUnseen]);
+  const chosen =
+    selectItem(
+      // pool is passed through so core's MOCK exclusion is live on this path,
+      // not just in tests — the query filter above is the second layer.
+      candidates,
+      input.targetTier,
+      exclude,
+    ) ??
+    // The 14-day recency rule is a preference (Addendum C §2): when honouring
+    // it would leave nothing to serve, recently-seen items return.
+    selectItem(candidates, input.targetTier, new Set(state.engine.focus.servedItemIds));
   if (!chosen) {
     // Nothing left to serve for this type. Routing to the closer is the
     // graceful end — but if we are ALREADY serving the closer there is
@@ -497,7 +598,7 @@ async function serveItem(
     if (input.activityKind === 'closer') {
       state.engine = {
         ...state.engine,
-        closerServed: true,
+        bossRound: { ...state.engine.bossRound, served: state.engine.bossRound.size },
         phase: 'wind_down',
         focus: { ...state.engine.focus, frustrationBreak: false },
       };
@@ -535,6 +636,11 @@ async function serveItem(
     activityKind: input.activityKind,
     family,
     plain,
+    // The Boss Round frame (Addendum C §2): index/size for "2 of 3", framed
+    // once client-side with the Addendum A line. Absent outside the round.
+    ...(input.activityKind === 'closer'
+      ? { round: { index: state.engine.bossRound.served, size: state.engine.bossRound.size } }
+      : {}),
     questionTypeId: input.questionTypeId,
     // Rail progression (§3): big on stage early, corner tool later, absent in Plain.
     rail: !plain && railAvailable(family, input.questionTypeId)
@@ -557,6 +663,9 @@ export interface AnswerResult {
   childHint?: string;
   cracked?: boolean;
   bonusWord?: { headword: string; definitionChild: string } | null;
+  /** Present for Boss Round answers INSTEAD of correct/childHint: the child
+   *  sees no score, ever — completion is the beat (Addendum C §2). */
+  bossRound?: { answered: number; size: number; done: boolean };
 }
 
 export async function submitAnswer(
@@ -676,6 +785,27 @@ export async function submitAnswer(
 
   if (pending.activityKind === 'warmup_item' && pending.unitId) {
     await applyReviewOutcome(childId, 'question_type', pending.unitId, correct, now, child.examYear);
+  }
+
+  if (pending.activityKind === 'closer') {
+    // Boss Round (Addendum C §2): misses are NOT reviewed in the moment — the
+    // round closes the session — but the missed type becomes review priority
+    // for the scheduler, so next session's warm-up picks it up.
+    if (!correct) {
+      await applyReviewOutcome(childId, 'question_type', pending.questionTypeId, false, now, child.examYear);
+    }
+    state.pending = null;
+    await drainAndLog(childId, state);
+    await saveState(session.id, state);
+    // No correct flag, no hint: the child's device never learns the score.
+    return {
+      correct: false, // constant — carries no signal; the runner ignores it
+      bossRound: {
+        answered: state.engine.bossRound.served,
+        size: state.engine.bossRound.size,
+        done: state.engine.bossRound.served >= state.engine.bossRound.size,
+      },
+    };
   }
 
   if (pending.activityKind === 'practice_item') {
@@ -863,6 +993,14 @@ export async function endDailyLoop(childId: string) {
     },
   });
   const rollup = await rollupStreakAndRank(childId);
+  // Readiness recomputes on session end as well as nightly (Addendum C §3);
+  // failures here must never cost the child their wind-down.
+  try {
+    const { snapshotReadiness } = await import('@/lib/crew/readiness-io');
+    await snapshotReadiness(childId);
+  } catch (error) {
+    console.error('readiness snapshot failed', error);
+  }
   const collectedToday = await prisma.wordVaultEntry.findMany({
     where: { childId, collectedAt: { gte: new Date(Date.now() - DAY_MS) } },
     include: { word: { select: { headword: true } } },

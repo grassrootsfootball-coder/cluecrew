@@ -1,7 +1,25 @@
+import { intensityForCapture, type IntensityColumn } from '@cluecrew/core';
 import { prisma } from '@cluecrew/db';
 import { currentParent } from '@/lib/auth';
 import { billingNow } from '@/lib/billing';
+import { confirmRolloverAction } from '@/lib/actions/parent';
+import { rolloverState } from '@/lib/crew/readiness-io';
 import { GENTLE_WEEKLY_TARGET, parentDashboard } from '@/lib/parent/dashboard';
+
+/**
+ * The intensity widget (Addendum D §4): the current column in plain words, so
+ * the product's restraint reads as design, not absence. Calm at every column —
+ * the final stretch especially (§3).
+ */
+const PLAN_LINES: Record<IntensityColumn, string> = {
+  foundations:
+    'Building foundations: a new case every couple of weeks, plenty of play forward — no hurry.',
+  building: 'Steady build: about one new case type a week, mock papers unlock ahead.',
+  together:
+    'Putting it together: pacing to cover every question type well before the test; papers unlock as readiness builds.',
+  final:
+    'Staying sharp, staying calm: no new question types now — sharpening what is already there.',
+};
 
 /**
  * Parent HQ dashboard, live (BUILD-PHASE-5 §4). Tells parents what to DO,
@@ -58,9 +76,43 @@ export default async function ParentDashboardPage() {
         </div>
       ) : null}
 
-      {dashboards.map((child) => (
+      {dashboards.map(async (child) => {
+        const profile = await prisma.childProfile.findUniqueOrThrow({
+          where: { id: child.childId },
+        });
+        const intensity = intensityForCapture(
+          profile.yearGroupAtCapture,
+          profile.capturedAcademicYear,
+          profile.examYear,
+          new Date(),
+        );
+        const rollover = await rolloverState(child.childId);
+        return (
         <section key={child.childId} className="cc-card">
           <h2 style={{ marginTop: 0 }}>{child.crewName}</h2>
+
+          {rollover?.pending ? (
+            <div className="cc-card" data-testid="rollover-beat">
+              {/* The September beat (Addendum D §1): confirm or correct. */}
+              <p style={{ marginTop: 0 }}>
+                <strong>
+                  {child.crewName} starts Year {rollover.effectiveYear} this week
+                </strong>{' '}
+                — the programme steps up gently from today.
+              </p>
+              <form action={confirmRolloverAction} style={{ display: 'inline' }}>
+                <input type="hidden" name="childId" value={child.childId} />
+                <button className="cc-button" type="submit">
+                  That&apos;s right
+                </button>
+              </form>{' '}
+              <a href="/parent/children">Not right? Fix the year group here.</a>
+            </div>
+          ) : null}
+
+          <p className="cc-muted" data-testid="intensity-widget">
+            The plan right now — {intensity.parentRegister}: {PLAN_LINES[intensity.column]}
+          </p>
 
           {child.runway.casesCracked === 0 && child.sessionsThisWeek === 0 ? (
             <div className="cc-card" style={{ marginTop: 0 }}>
@@ -152,7 +204,8 @@ export default async function ParentDashboardPage() {
             {child.runway.nextMilestone}
           </p>
         </section>
-      ))}
+        );
+      })}
 
       <p className="cc-muted">
         A summary of all this reaches your inbox each Sunday — nothing here is homework for you.
