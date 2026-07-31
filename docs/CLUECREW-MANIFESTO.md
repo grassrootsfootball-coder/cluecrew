@@ -181,12 +181,14 @@ against `cream` and the window for carrying `ink` at 4.5:1 do not overlap.*
 
 *The green moved because `maths-green` sat ΔE 22.1 from `vr-teal` — close
 enough to read as the same colour — and collapsed to ΔE 8.5 from `nvr-violet`
-under tritanopia. It is now 51.6 and 23.5. Note the new value is DARKER than
-the "warmer, lighter" the proposal suggested: lighter fights the 3:1 accent
-floor, and the darker candidate measured better on both separation and
-legibility while staying inside the range the other three accents already
-occupy. Done now because the Maths district is unbuilt, so the change costs
-nothing today and would only get more expensive.*
+under tritanopia. It is now 51.6 and 23.5. The value is DARKER than the
+"warmer, lighter" the proposal suggested: lighter fights the 3:1 accent floor,
+and the darker candidate measured better on both separation and legibility
+while staying inside the range the other three accents already occupy. The
+deviation was put to David and ratified — "the darker green is fine, keep it" —
+so #409020 is the decided value, not a liberty taken. Done now because the
+Maths district is unbuilt, so the change costs nothing today and would only get
+more expensive.*
 
 *The "colour is never the only carrier of meaning" rule is the part that
 actually protects children: roughly one boy in twelve has some red-green

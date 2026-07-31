@@ -12,7 +12,8 @@ changelog:**
    `#409020`, is warmer but **darker** (3.11:1 → 3.73:1 against cream).
    Lighter fights the 3:1 accent floor; the darker candidate measured better on
    both separation and legibility, and sits inside the range the other three
-   accents already occupy.
+   accents already occupy. Flagged to David as a deviation and ratified by him
+   in session — the darker value stands.
 2. Trying to satisfy the proposed rules turned up something stronger than the
    proposal knew: **a token cannot serve both roles, ever.** For any hue the
    luminance window for 3:1 against `cream` and the window for carrying `ink`
