@@ -141,14 +141,42 @@ export async function trackAccount(email: string): Promise<void> {
 /**
  * Deletes every fixture account this file created. ParentAccount cascades to
  * children, and children to sessions, attempts, mastery and review rows, so
- * one delete per account clears the lot and the dev database does not fill up
- * with abandoned families.
+ * one delete per account clears most of it — but two tables deliberately have
+ * NO cascade and must be cleared by hand, or they regrow forever:
+ *
+ *   - Event keeps only nullable childId/parentId columns, so a cascade can
+ *     never gut the analytics spine. Deleting accounts around the hard-delete
+ *     job once stranded 16k orphaned events.
+ *   - Item records its author as a provenance STRING. The publish-gate test
+ *     ships one LIVE item per run; left alone they accumulated until all 44
+ *     LIVE items in dev were the same test stem, drowning out vr-11 practice
+ *     and overstating the Phase 4 gate.
  */
 export async function cleanupFixtures(): Promise<void> {
   if (created.length > 0) {
+    const children = await prisma.childProfile.findMany({
+      where: { parentId: { in: created } },
+      select: { id: true },
+    });
+    await prisma.event.deleteMany({
+      where: {
+        OR: [
+          { parentId: { in: created } },
+          { childId: { in: children.map((child) => child.id) } },
+        ],
+      },
+    });
     await prisma.parentAccount.deleteMany({ where: { id: { in: created } } });
     created.length = 0;
   }
+  // By provenance marker rather than by this run's accounts, so debris from a
+  // crashed earlier run is swept too. Real items can never match: they are
+  // authored as 'seed', by the generator, or by a real staff email.
+  await prisma.item.deleteMany({
+    where: {
+      OR: [{ authoredBy: { startsWith: 'human:e2e-' } }, { authoredBy: 'ai-draft:example-model' }],
+    },
+  });
   await prisma.$disconnect();
 }
 
