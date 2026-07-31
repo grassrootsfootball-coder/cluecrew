@@ -2,8 +2,24 @@
 
 import { redirect } from 'next/navigation';
 import { z } from 'zod';
+import { fingerprintItem, screenAgainstIndex } from '@cluecrew/core';
 import { prisma } from '@cluecrew/db';
+import { similarityIndexSource } from '@/lib/similarity-index';
 import { currentStaff, recordAudit, roleAllows } from '@/lib/staff';
+
+/**
+ * ADDENDUM-E §2: a misconception must be ACTIVE before any item may reference
+ * it. Corpus-proposed misconceptions land PROPOSED and stay unusable until a
+ * named reviewer approves — server-enforced here, on every item-writing path.
+ */
+async function assertMisconceptionsActive(
+  options: Array<{ misconceptionId?: string | null }>,
+): Promise<string | null> {
+  const ids = [...new Set(options.map((option) => option.misconceptionId).filter(Boolean))] as string[];
+  if (ids.length === 0) return null;
+  const active = await prisma.misconception.count({ where: { id: { in: ids }, status: 'ACTIVE' } });
+  return active === ids.length ? null : 'unapproved-misconception';
+}
 
 const optionSchema = z.object({
   content: z.record(z.unknown()),
@@ -34,6 +50,9 @@ export async function createItemAction(formData: FormData): Promise<void> {
   if (!staff || !roleAllows(staff.effectiveRole, ['AUTHOR', 'REVIEWER'])) redirect('/admin');
 
   const parsed = parseItemForm(formData);
+  if (await assertMisconceptionsActive(parsed.options)) {
+    redirect('/admin/items/new?error=unapproved-misconception');
+  }
   const item = await prisma.item.create({
     data: {
       questionTypeId: parsed.questionTypeId,
@@ -64,6 +83,9 @@ export async function updateItemAction(formData: FormData): Promise<void> {
   if (item.status === 'LIVE' || item.status === 'RETIRED') redirect(`/admin/items/${itemId}?error=locked`);
 
   const parsed = parseItemForm(formData);
+  if (await assertMisconceptionsActive(parsed.options)) {
+    redirect(`/admin/items/${itemId}?error=unapproved-misconception`);
+  }
   await prisma.$transaction([
     prisma.itemOption.deleteMany({ where: { itemId } }),
     prisma.item.update({
@@ -101,8 +123,16 @@ export async function markReviewedAction(formData: FormData): Promise<void> {
   if (item.authoredBy === `human:${staff.email}`) {
     redirect(`/admin/items/${itemId}?error=own-item`);
   }
+  // ADDENDUM-E §3: a similarity-flagged item is blocked from REVIEWED until a
+  // reviewer clears the flag with a note — a separate, deliberate act.
+  if (item.similarityFlaggedAt && !item.similarityClearedBy) {
+    redirect(`/admin/items/${itemId}?error=similarity-review`);
+  }
   const failure = publishBlockers(item.options, `human:${staff.email}`, item.authoredBy);
   if (failure) redirect(`/admin/items/${itemId}?error=${failure}`);
+  if (await assertMisconceptionsActive(item.options)) {
+    redirect(`/admin/items/${itemId}?error=unapproved-misconception`);
+  }
 
   await prisma.item.update({
     where: { id: itemId },
@@ -192,7 +222,43 @@ export async function bulkImportAction(formData: FormData): Promise<void> {
   }
   if (items.length === 0 || items.length > 500) redirect('/admin/import?error=invalid');
 
+  // ADDENDUM-E §2: un-approved misconception ids are rejected at the door.
+  const allOptions = items.flatMap((entry) => entry.options);
+  if (await assertMisconceptionsActive(allOptions)) {
+    redirect('/admin/import?error=unapproved-misconception');
+  }
+
+  // ADDENDUM-E §3: the similarity gate. Exact/near-exact anywhere rejects the
+  // WHOLE batch, naming failures by batch position + type id only — matched
+  // source text never appears anywhere in this flow, by construction.
+  const index = await similarityIndexSource().load();
+  const flagged = new Map<number, number>(); // batch position → score
+  if (index) {
+    const failures: string[] = [];
+    items.forEach((entry, position) => {
+      const verdict = screenAgainstIndex(
+        fingerprintItem({
+          stem: entry.stem,
+          optionContents: entry.options.map((option) => option.content),
+        }),
+        index,
+      );
+      if (verdict.kind === 'fail') failures.push(`${position}:${entry.questionTypeId}`);
+      else if (verdict.kind === 'review') flagged.set(position, verdict.score);
+    });
+    if (failures.length > 0) {
+      await recordAudit(staff.id, 'item.bulk_import_rejected', 'Item', 'batch', {
+        similarityFailures: failures,
+      });
+      redirect(`/admin/import?error=similarity&items=${encodeURIComponent(failures.join(','))}`);
+    }
+  } else {
+    console.warn('similarity index not configured — bulk import ran ungated (Addendum E §3)');
+  }
+
+  let position = -1;
   for (const entry of items) {
+    position += 1;
     await prisma.item.create({
       data: {
         questionTypeId: entry.questionTypeId,
@@ -201,6 +267,9 @@ export async function bulkImportAction(formData: FormData): Promise<void> {
         explanation: entry.explanation as object,
         status: 'DRAFT', // imports NEVER skip review, especially ai-draft (§5)
         authoredBy: entry.authoredBy,
+        ...(flagged.has(position)
+          ? { similarityFlaggedAt: new Date(), similarityScore: flagged.get(position) }
+          : {}),
         options: {
           create: entry.options.map((option) => ({
             content: option.content as object,
@@ -213,4 +282,28 @@ export async function bulkImportAction(formData: FormData): Promise<void> {
   }
   await recordAudit(staff.id, 'item.bulk_import', 'Item', 'batch', { count: items.length });
   redirect(`/admin/items?imported=${items.length}`);
+}
+
+
+/**
+ * ADDENDUM-E §3: the false-positive escape. Some resemblance is inevitable —
+ * there are only so many ways to ask a T1 letter-code question. The gate
+ * protects against derivation; the reviewer judges coincidence, with a note,
+ * logged.
+ */
+export async function clearSimilarityAction(formData: FormData): Promise<void> {
+  const staff = await currentStaff();
+  if (!staff || !roleAllows(staff.effectiveRole, ['REVIEWER'])) redirect('/admin');
+
+  const itemId = z.string().min(1).parse(formData.get('itemId'));
+  const note = z.string().min(5).max(1000).parse(formData.get('note'));
+  const item = await prisma.item.findUniqueOrThrow({ where: { id: itemId } });
+  if (!item.similarityFlaggedAt) redirect(`/admin/items/${itemId}`);
+
+  await prisma.item.update({
+    where: { id: itemId },
+    data: { similarityClearedBy: `human:${staff.email}`, similarityClearNote: note },
+  });
+  await recordAudit(staff.id, 'item.similarity_clear', 'Item', itemId, { note });
+  redirect(`/admin/items/${itemId}`);
 }

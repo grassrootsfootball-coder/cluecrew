@@ -194,3 +194,11 @@ more expensive.*
 actually protects children: roughly one boy in twelve has some red-green
 colour vision deficiency, and none of them will report that the districts look
 alike.*
+
+*v1.3 (2026-08-01) — Amendment 1 (Pricing V2) recorded as ratified by David:
+supersedes §8 pillar 6 and Phase 2 §1 pricing with the Crew / Full Crew /
+Crew Plus / Crew Bursary / Summer Intensive ladder, and adds design law D7
+(the child never sees a paywall, price, upsell or any signal that money
+exists). Full text: docs/AMENDMENT-1-PRICING-V2.md. Recorded on receipt of the
+ratified document; the §5 build migration has NOT yet been implemented and
+awaits David's build instruction.*

@@ -107,6 +107,13 @@ jobs:
       - name: Palette audit (manifesto §6 token roles + contrast)
         run: pnpm audit:palette
 
+      # Addendum E §3: screens generated + imported items against the source
+      # fingerprint index. Skips loudly until SIMILARITY_INDEX_PATH is set at
+      # the repo/environment level (the index lives in private storage, never
+      # in this repo).
+      - name: Similarity gate (Addendum E §3)
+        run: pnpm similarity:scan
+
       - name: Bursary isolation grep (no UI reads isBursary)
         run: pnpm check:bursary
 

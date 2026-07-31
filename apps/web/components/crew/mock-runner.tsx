@@ -93,7 +93,12 @@ export function MockRunner({ childId }: { childId: string }) {
   const endingRef = useRef(false);
 
   const load = useCallback(async () => {
-    const response = await fetch(`/api/crew/${childId}/mock`);
+    // A hung request must never strand the sitting — same rule as the
+    // practice runner: no fetch without a deadline.
+    const response = await fetch(`/api/crew/${childId}/mock`, {
+      signal: AbortSignal.timeout(15_000),
+    }).catch(() => null);
+    if (!response?.ok) return;
     const next = (await response.json()) as View;
     setView(next);
     if (next.phase === 'section') setSecondsLeft(next.secondsLeft);
@@ -111,12 +116,15 @@ export function MockRunner({ childId }: { childId: string }) {
       while (busy.current) await new Promise((resolve) => setTimeout(resolve, 40));
       busy.current = true;
       try {
+        // Deadline for the same reason as load(): a hung POST would wedge the
+        // serialisation queue for the rest of the sitting.
         const response = await fetch(`/api/crew/${childId}/mock`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(body),
-        });
-        return response.ok;
+          signal: AbortSignal.timeout(15_000),
+        }).catch(() => null);
+        return response?.ok ?? false;
       } finally {
         busy.current = false;
       }

@@ -6,6 +6,7 @@ import {
   retireItemAction,
   returnWithNotesAction,
   updateItemAction,
+  clearSimilarityAction,
 } from '@/lib/actions/admin-items';
 import { ItemFormFields } from '@/components/item-form';
 import { currentStaff, roleAllows } from '@/lib/staff';
@@ -19,6 +20,10 @@ const ERROR_COPY: Record<string, string> = {
   'own-item': 'Blocked: an item cannot be reviewed by its own author — a different person must check it.',
   'no-correct-option': 'Blocked: the item has no correct option.',
   locked: 'LIVE and RETIRED items cannot be edited; retire and re-author instead.',
+  'similarity-review':
+    'Blocked: the similarity gate flagged this item. A reviewer must judge coincidence vs derivation and clear it with a note first (Addendum E §3).',
+  'unapproved-misconception':
+    'Blocked: one or more misconception ids are still PROPOSED. Approve them in the misconception queue first (Addendum E §2).',
 };
 
 export default async function ItemDetailPage({
@@ -60,6 +65,31 @@ export default async function ItemDetailPage({
       {item.reviewNotes ? (
         <div className="cc-card">
           <strong>Returned with notes:</strong> {item.reviewNotes}
+        </div>
+      ) : null}
+
+      {item.similarityFlaggedAt ? (
+        <div className="cc-card" data-testid="similarity-flag">
+          <strong>SIMILARITY_REVIEW</strong> — the gate scored this item{' '}
+          {item.similarityScore?.toFixed(3)} against the source index. No matched text is shown
+          anywhere, by design (Addendum E §3): judge whether this is coincidence (only so many ways
+          to ask this type) or derivation, and clear with a note — or return it to the author.
+          {item.similarityClearedBy ? (
+            <p style={{ marginBottom: 0 }}>
+              Cleared by {item.similarityClearedBy}: {item.similarityClearNote}
+            </p>
+          ) : canReview ? (
+            <form action={clearSimilarityAction} className="cc-form" style={{ marginTop: '0.5rem' }}>
+              <input type="hidden" name="itemId" value={item.id} />
+              <label>
+                Why this is coincidence, not derivation
+                <input name="note" type="text" required minLength={5} maxLength={1000} />
+              </label>
+              <button className="cc-button-quiet" type="submit">
+                Clear the flag (logged)
+              </button>
+            </form>
+          ) : null}
         </div>
       ) : null}
 

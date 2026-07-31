@@ -247,6 +247,14 @@ model Item {
   // Set by the nightly calibration job when calibrated difficulty drifts
   // ≥1.5 tiers from the authored tier — the live QC net (Phase 3 §2).
   calibrationFlaggedAt DateTime?
+  // ADDENDUM-E §3: the similarity gate. A flagged item is blocked from
+  // REVIEWED until a reviewer clears it with a note — the gate protects
+  // against derivation; the reviewer judges coincidence. Score only, never
+  // matched text.
+  similarityFlaggedAt  DateTime?
+  similarityScore      Float?
+  similarityClearedBy  String?
+  similarityClearNote  String?
   createdAt            DateTime     @default(now())
 
   @@index([questionTypeId, status, pool])
@@ -285,11 +293,26 @@ model ItemOption {
   misconception   Misconception? @relation(fields: [misconceptionId], references: [id])
 }
 
+// ADDENDUM-E §2: corpus-proposed misconceptions land as PROPOSED and are
+// unusable by items until a named reviewer approves them. Corpus findings are
+// evidence, not instructions — the approval is the door.
+enum MisconceptionStatus {
+  PROPOSED
+  ACTIVE
+}
+
 model Misconception {
   id          String       @id // slug: "vr-analogy-surface-match"
   district    District
   description String // teacher-facing
   childHint   String // the authored hint shown when this distractor is chosen
+  status      MisconceptionStatus @default(ACTIVE)
+  /** "ai-corpus:v1" for corpus-proposed entries (Addendum E §2). */
+  proposedBy  String?
+  /** Corpus pattern reference — an opaque citation id, never source text. */
+  sourcePattern String?
+  /** "human:<email>" — set by approval; approval activates. */
+  approvedBy  String?
   // Teach-Back content (Phase 3 §6): authored working steps, the index of the
   // step containing the slip, and authored correction options. The engine
   // never generates text (S3) — evaluation is deterministic.
