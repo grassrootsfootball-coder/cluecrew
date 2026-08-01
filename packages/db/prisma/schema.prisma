@@ -477,6 +477,23 @@ enum ReviewRecordingStatus {
 // bench, with a public waitlist.
 // AMENDMENT-1 §1: the Schools register-interest waitlist — demand
 // measurement only, nothing built. Business contacts, not families.
+// ---------- Demand test (DEMAND-TEST-PACK §3) ----------
+// The Founding Crew waitlist: email plus two OPTIONAL fields, nothing else.
+// Double opt-in proves consent (confirmedAt). Unconverted rows are deleted
+// 12 months post-launch — the privacy notice states this and ops runs it.
+
+model WaitlistSignup {
+  id          String    @id @default(cuid())
+  email       String    @unique
+  regionCode  String?
+  yearGroup   Int?
+  // UTM source per §4 (fb-kent, org-bucks, …) — measurement, never marketing.
+  src         String?
+  tokenHash   String    @unique
+  confirmedAt DateTime?
+  createdAt   DateTime  @default(now())
+}
+
 model SchoolInterest {
   id        String   @id @default(cuid())
   email     String   @unique

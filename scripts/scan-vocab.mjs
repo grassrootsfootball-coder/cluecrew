@@ -76,8 +76,15 @@ const PURE_WHITE_BACKGROUND = {
 };
 
 // The review recording guide carries the Plus checklist text — L1 claims are
-// banned there like anywhere a parent reads (AMENDMENT-1 gate #5).
-const EVERYWHERE_SCOPE = ['apps/web', 'packages/ui/src', 'content', 'docs/review-recording-guide.md'];
+// banned there like anywhere a parent reads (AMENDMENT-1 gate #5). The
+// demand-test pack demands the same of itself (DEMAND-TEST-PACK, prerequisite).
+const EVERYWHERE_SCOPE = [
+  'apps/web',
+  'packages/ui/src',
+  'content',
+  'docs/review-recording-guide.md',
+  'docs/DEMAND-TEST-PACK.md',
+];
 const CHILD_FACING_SCOPE = [
   'apps/web/app/crew',
   'apps/web/components/crew',

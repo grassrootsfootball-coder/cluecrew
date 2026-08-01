@@ -101,6 +101,14 @@ export function bursaryWaitlistTemplate(name: string): EmailContent {
   };
 }
 
+/** Double opt-in for the Founding Crew waitlist (DEMAND-TEST-PACK §3). */
+export function waitlistConfirmTemplate(link: string): EmailContent {
+  return {
+    subject: 'One tap to join the Founding Crew waitlist',
+    text: `Hello,\n\nTap the link below to confirm your place on the ClueCrew Founding Crew waitlist:\n\n${link}\n\nWe'll email you about ClueCrew's launch and nothing else, and you can unsubscribe any time. If this wasn't you, ignore this email and the address never joins the list.${signoff}`,
+  };
+}
+
 export function accountLockedTemplate(name: string, attempts: number, minutes: number): EmailContent {
   return {
     subject: 'ClueCrew: your account is temporarily locked',

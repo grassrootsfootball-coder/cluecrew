@@ -1,9 +1,9 @@
 'use client';
 
 /**
- * Signup submits to a server action for the same progressive-enhancement
- * guarantee as login: live from first paint, and a pre-hydration submit is a
- * POST to the action — the password can never land in a URL (§4).
+ * Signup submits to a server action, progressively enhanced like login:
+ * live from first paint, and a pre-hydration submit is a POST to the action
+ * — the password can never land in a URL (§4).
  */
 import { useActionState } from 'react';
 import { signupAction, type AuthFormState } from '@/lib/actions/auth';
