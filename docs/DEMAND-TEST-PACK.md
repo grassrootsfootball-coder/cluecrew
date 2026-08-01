@@ -30,7 +30,7 @@ We won't promise you a pass. Nobody honestly can. We promise the clearest teachi
 **Crew Bursary — Free.** Full Crew, free, for families on free school meals. One bursary place opens for every ten paid ones. Same product, exactly.
 
 **[For parents who didn't grow up with the 11+ — one short block]**
-New to all this? So are half the families we're building for. ClueCrew HQ explains the whole system in plain language — which test your region uses, how scoring works, how much practice is enough, and how to support without pressuring.
+New to all this? So are half the families we're building for. ClueCrew explains the whole system in plain language — which test your region uses, how scoring works, how much practice is enough, and how to support without pressuring.
 
 **[FAQ — five only]**
 *Which exam boards?* GL-style formats first (most grammar regions), with more to follow. Always confirm your target school's format for your entry year — schools do change providers.
@@ -39,11 +39,11 @@ New to all this? So are half the families we're building for. ClueCrew HQ explai
 *Is it just AI-generated questions?* Every question is reviewed and signed off by a qualified KS2 teacher before any child sees it, and every wrong answer is designed to catch a real misconception — that's where the teaching lives.
 *What about screen time?* Fifteen minutes daily, hard-capped. We think that's a feature.
 
-**[Footer]** Privacy notice · Contact · © ClueCrew HQ *(trademark application pending)*
+**[Footer]** Privacy notice · Contact · © ClueCrew *(trademark application pending)*
 
 ## 3. WAITLIST PLUMBING (personal data, done properly)
 - Fields: email (required) · region dropdown (optional, from the Region Registry list + "not sure") · child's school year from this September (optional — Addendum D wording).
-- Consent line under the button, unticked-box-free by design: "We'll email you about ClueCrew HQ's launch and nothing else. Unsubscribe anytime." Link to a one-page plain-English privacy notice (what we store, why, retention: deleted 12 months post-launch if unconverted, UK/EU hosting, no third-party trackers).
+- Consent line under the button, unticked-box-free by design: "We'll email you about ClueCrew's launch and nothing else. Unsubscribe anytime." Link to a one-page plain-English privacy notice (what we store, why, retention: deleted 12 months post-launch if unconverted, UK/EU hosting, no third-party trackers).
 - Provider: the existing transactional email provider's audience feature; no marketing platform pixels. Plausible only for analytics.
 - Double-opt-in confirmation email (protects deliverability and proves consent).
 
@@ -77,3 +77,5 @@ opt-in round-trip tested, privacy notice linked.
 Posting only in groups that skew affluent (bursary line won't land; conversion reads high but wrong) · running it in late August (panic-adjacent Year 6 parents inflate urgency signups we can't serve until next cohort) · iterating copy AND price together (uninterpretable) · counting organic-post sympathy signups from people you know. The test is only as honest as its audience.
 
 *Changelog: v1.1 (2026-08-01) — public-facing name is **ClueCrew HQ** throughout (David: IPO search came back clear for ClueCrew HQ; the plain mark did not work). Decision David's, transcription Claude Code's.*
+
+*Changelog: v1.2 (2026-08-01) — CORRECTION superseding v1.1: the brand is **ClueCrew** everywhere — page copy, footer, privacy notice, confirmation email. "@cluecrewhq" is only the social username, used solely where the handle itself appears (social icon links, if any; the page currently has none). The © line reads "© ClueCrew (trademark application pending)". The logo asset was already correct. Decision David's, transcription Claude Code's.*
