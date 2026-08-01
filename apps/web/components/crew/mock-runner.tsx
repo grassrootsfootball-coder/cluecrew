@@ -11,6 +11,7 @@
  * quoted directly from Addendum B §3.
  */
 import { useCallback, useEffect, useRef, useState } from 'react';
+import type { BoardVoice } from '@/lib/crew/board-names';
 import { playCue } from './sound-controller';
 import { optionLabel } from './engines/shared';
 
@@ -83,7 +84,7 @@ function stemLines(stem: Record<string, unknown>): string[] {
   return parts;
 }
 
-export function MockRunner({ childId }: { childId: string }) {
+export function MockRunner({ childId, board = null }: { childId: string; board?: BoardVoice | null }) {
   const [view, setView] = useState<View | null>(null);
   const [secondsLeft, setSecondsLeft] = useState(0);
   const [stopPanel, setStopPanel] = useState(false);
@@ -207,7 +208,7 @@ export function MockRunner({ childId }: { childId: string }) {
   if (view.phase === 'ready') {
     return (
       <main className="crew-mock">
-        <h1>Big one today. Real exam rules: no tools, just you.</h1>
+        <h1>{board ? board.hallLine : 'Big one today. Real exam rules: no tools, just you.'}</h1>
         <p>
           {view.blueprintTitle} · {view.sectionCount} sections · {view.totalQuestions} questions ·{' '}
           {view.totalMinutes} minutes.
@@ -316,7 +317,10 @@ export function MockRunner({ childId }: { childId: string }) {
         {stopPanel ? (
           <div className="crew-mock-stop" role="dialog" aria-label="Stop the paper">
             {/* Quoted from Addendum B §3 — the kind exit. */}
-            <p>We&apos;ll call that one a practice run — no case file today.</p>
+            <p>
+              We&apos;ll call that one a practice run — no case file today.
+              {board ? ` ${board.rescheduleLine}` : ''}
+            </p>
             <button
               className="crew-tap"
               data-testid="confirm-stop"
@@ -337,6 +341,7 @@ export function MockRunner({ childId }: { childId: string }) {
   return (
     <main className="crew-mock" data-testid="mock-result">
       {over ? <h1>Time. Pens down, Detective.</h1> : <h1>That&apos;s the paper done.</h1>}
+      {board ? <p style={{ fontSize: '1.1rem' }}>{board.completionLine}</p> : null}
       {result ? (
         <>
           {result.strengths.length > 0 ? (

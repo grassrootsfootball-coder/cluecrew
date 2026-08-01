@@ -35,7 +35,9 @@
     "audit:palette": "node scripts/audit-palette.mjs",
     "similarity:scan": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/similarity-scan.ts",
     "metrics:launch": "node scripts/launch-metrics.mjs",
-    "verify:solutions": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/verify-solutions.ts"
+    "verify:solutions": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/verify-solutions.ts",
+    "scan:chapter-style": "node scripts/scan-chapter-style.mjs",
+    "verify:chapters": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/verify-chapters.ts"
   },
   "devDependencies": {
     "@eslint/js": "^9.20.0",

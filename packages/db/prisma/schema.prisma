@@ -344,6 +344,9 @@ model Case {
   // door, pedagogy never crippled. Selection ratified by David + reviewer;
   // default is the first two per engine family by orderInDistrict.
   freeTier        Boolean    @default(false)
+  // STORY BIBLE v1.2 §9 (phase 1, feature-flagged): the per-case story skin —
+  // open/close lines + clue-skin labels. Law 1: wraps the case, never items.
+  storyWrapper    Json?
   caseFiles       CaseFile[]
 }
 

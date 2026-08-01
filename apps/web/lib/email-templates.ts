@@ -132,6 +132,25 @@ export function foundingReserveTemplate(name: string, link: string): EmailConten
   };
 }
 
+
+/**
+ * The Detective's Board invitation (STORY BIBLE §6, feature-flagged): fires
+ * once on readiness unlock, riding the same announced-once event logic.
+ * Marlowe's voice for the frame; the readiness picture stays L1-clean —
+ * taught coverage and format-accuracy, never a prediction.
+ */
+export function boardInvitationTemplate(
+  childName: string,
+  rung: 'preliminary' | 'full',
+  readinessLine: string,
+): EmailContent {
+  const exam = rung === 'full' ? "the Detective's Board" : "the Board's Preliminary";
+  return {
+    subject: `${childName}'s been invited to sit ${exam}`,
+    text: `Hello,\n\nFrom the desk of Chief Inspector Marlowe: "The Board's asked for ${childName}. I told them they were ready — don't make a liar of me."\n\nOut of the story and in plain terms: ${readinessLine}\n\nYou can book the paper any time from Parent HQ → Practice papers, where the exam-day one-pager is waiting. There is no rush and no right week — the invitation does not expire.${signoff}`,
+  };
+}
+
 export function accountLockedTemplate(name: string, attempts: number, minutes: number): EmailContent {
   return {
     subject: 'ClueCrew: your account is temporarily locked',

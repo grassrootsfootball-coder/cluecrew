@@ -324,12 +324,14 @@ async function seedCases(): Promise<void> {
         narrativeIntro: caseContent.narrativeIntro,
         modes: caseContent.modes,
         orderInDistrict: caseContent.orderInDistrict,
+        storyWrapper: caseContent.storyWrapper ?? undefined,
       },
       update: {
         title: caseContent.title,
         narrativeIntro: caseContent.narrativeIntro,
         modes: caseContent.modes,
         orderInDistrict: caseContent.orderInDistrict,
+        storyWrapper: caseContent.storyWrapper ?? undefined,
       },
     });
   }

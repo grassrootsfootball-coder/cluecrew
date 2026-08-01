@@ -49,12 +49,35 @@ export const caseContentSchema = z
     }),
     modes: z.object({
       watch: modeSchema,
-      walk: modeSchema,
+      // Walk-it is crew-taught (STORY BIBLE §4): the worked example may be
+      // voiced by a district specialist. Authoring metadata only — the
+      // faded-scaffold pedagogy is unchanged.
+      walk: modeSchema.and(
+        z.object({
+          voicedBy: z.enum(['marlowe', 'ozzie', 'marta', 'silas', 'prue']).optional(),
+        }),
+      ),
       see: modeSchema,
       hear: modeSchema,
       try: modeSchema,
     }),
     orderInDistrict: z.number().int().positive(),
+    /**
+     * The per-case story skin (STORY BIBLE §4, Law 1): wraps the case, never
+     * the items. Open/close lines are authored and scanned; clue-skin labels
+     * rename the FRAME's words in Case mode only ("the postmarks"), stems
+     * untouched. Absent until S1 authoring lands; ignored while the story
+     * flag is off.
+     */
+    storyWrapper: z
+      .object({
+        open: z.string().min(1).max(NARRATIVE_MAX_CHARS),
+        close: z.string().min(1).max(240),
+        clueSkinLabels: z.record(z.string().max(40)).optional(),
+        season: z.string().min(1),
+        threadTags: z.array(z.string()).default([]),
+      })
+      .optional(),
   })
   .superRefine((value, ctx) => {
     const watchSeconds = value.modes.watch.maxSeconds;
@@ -121,11 +144,75 @@ export const mathsPlanFileSchema = z.object({
     .length(36),
 });
 
+/**
+ * Story infrastructure (STORY BIBLE v1.2 §9, phase 1, feature-flagged).
+ * A Chapter is prose the child is IN: second person, one optional dialogue
+ * choice (cosmetic only), seeded Vault words tappable in the reader, one
+ * optional clue-tap (a real LIVE item in a no-stakes frame — the taste in
+ * the story, the meal in the cases). Law 3: opt-in, skippable, replayable.
+ * Law 4: audio is a RELEASE CONDITION — the schema refuses a released
+ * chapter without an audioRef.
+ */
+export const chapterTriggerSchema = z.union([
+  z.object({
+    kind: z.literal('rank'),
+    rank: z.enum(['TRAINEE', 'JUNIOR_DETECTIVE', 'DETECTIVE', 'SENIOR_DETECTIVE', 'CHIEF_INSPECTOR']),
+  }),
+  z.object({ kind: z.literal('cases_cracked'), count: z.number().int().min(1) }),
+  z.object({ kind: z.literal('season_complete'), season: z.string() }),
+  z.object({ kind: z.literal('board'), beat: z.enum(['invitation', 'completion']) }),
+]);
+
+export const chapterFileSchema = z.object({
+  kind: z.literal('chapter'),
+  chapter: z
+    .object({
+      id: z.string().regex(/^s\d+-ch\d+$/),
+      title: z.string().min(1).max(80),
+      season: z.string().min(1),
+      trigger: chapterTriggerSchema,
+      /** Prose body; seeded Vault words are marked [[like this]]. */
+      body: z.string().min(200),
+      seededWordIds: z.array(z.string()).max(8),
+      /** Law 4: pre-generated narration; null only while drafting. */
+      audioRef: z.string().nullable(),
+      /** Spot illustration at the chapter head; placeholder until art. */
+      spotImage: z.string().nullable(),
+      /** The reading-age ladder (map rule 3): Ch1 ≈ 8.5 rising to ≈10. */
+      readingAgeTarget: z.number().min(7).max(11).default(9),
+      status: z.enum(['draft', 'review', 'released']).default('draft'),
+      choice: z
+        .object({
+          id: z.string().min(1),
+          prompt: z.string().min(1).max(200),
+          options: z.array(z.string().min(1).max(120)).min(2).max(3),
+        })
+        .optional(),
+      /** One optional in-reader interactive beat (map rule 5). */
+      clueTap: z
+        .object({
+          itemId: z.string().min(1),
+          engineFamily: z.string().min(1),
+          prompt: z.string().min(1).max(200),
+        })
+        .optional(),
+      /** Advisory style flags a human dismissed, with the reason logged. */
+      styleDismissals: z
+        .array(z.object({ flag: z.string().min(1), note: z.string().min(3) }))
+        .default([]),
+    })
+    .refine((chapter) => chapter.status !== 'released' || chapter.audioRef !== null, {
+      message: 'Law 4: a chapter cannot be released without audio',
+    }),
+});
+export type ChapterFile = z.infer<typeof chapterFileSchema>;
+
 export const contentFileSchema = z.discriminatedUnion('kind', [
   wordFileSchema,
   caseFileSchema,
   regionFileSchema,
   replayTemplatesFileSchema,
   mathsPlanFileSchema,
+  chapterFileSchema,
 ]);
 export type ContentFile = z.infer<typeof contentFileSchema>;

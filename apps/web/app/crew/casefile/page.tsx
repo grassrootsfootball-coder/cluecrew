@@ -2,6 +2,8 @@ import { prisma } from '@cluecrew/db';
 import { childFromCookie } from '@/lib/crew/server';
 import { hqState } from '@/lib/crew/orchestrator';
 import { nextStepFor, rankLadder } from '@/lib/crew/casefile';
+import { loadChapters, readable, unlocked } from '@/lib/crew/chapters';
+import { storyEnabled } from '@/lib/story';
 import { VOICE, countWord } from '@/lib/voice';
 
 /**
@@ -57,6 +59,36 @@ export default async function CaseFilePage() {
           ))}
         </ol>
       </section>
+
+      {/* The chapter shelf (STORY BIBLE Law 3): opt-in, replayable, never
+          gating anything. Flag off → the shelf simply is not here. */}
+      {storyEnabled()
+        ? (() => {
+            const shelf = loadChapters().filter(
+              (chapter) =>
+                readable(chapter) &&
+                unlocked(chapter, {
+                  rank: crew.rank,
+                  casesCracked: cracked.length,
+                  seasonsComplete: [],
+                }),
+            );
+            return shelf.length > 0 ? (
+              <section className="crew-panel" data-testid="chapter-shelf">
+                <h2 style={{ marginTop: 0 }}>The story so far</h2>
+                <ul className="crew-story-shelf">
+                  {shelf.map((chapter) => (
+                    <li key={chapter.id}>
+                      <a className="crew-tap" href={`/crew/story/${chapter.id}`}>
+                        {chapter.title}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ) : null;
+          })()
+        : null}
 
       <section className="crew-panel">
         <h2 style={{ marginTop: 0 }}>Stamps</h2>

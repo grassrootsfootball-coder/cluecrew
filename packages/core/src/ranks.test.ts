@@ -45,3 +45,28 @@ describe('applyRank — rank never decreases (no loss mechanics)', () => {
     expect(applyRank('CHIEF_INSPECTOR', 'TRAINEE')).toBe('CHIEF_INSPECTOR');
   });
 });
+
+describe('the Board is score-blind (STORY BIBLE §6: rank gates on SITTING, never score)', () => {
+  it('holds structurally: no score can even be expressed to computeRank', () => {
+    // RankInputs carries participation as a boolean of sitting. A child who
+    // scored 20% and one who scored 95% produce IDENTICAL inputs — the type
+    // has nowhere to put a score, which is the strongest possible guarantee.
+    const inputs: RankInputs = {
+      casesCracked: 18,
+      streakWeeks: 4,
+      taughtBackCount: 2,
+      bossCaseParticipated: true, // sat it — that is all the Board reports
+    };
+    expect(Object.keys(inputs).some((key) => /score|percent|mark|correct/i.test(key))).toBe(false);
+    const twentyPercentChild = computeRank({ ...inputs });
+    const ninetyFivePercentChild = computeRank({ ...inputs });
+    expect(twentyPercentChild).toBe('CHIEF_INSPECTOR');
+    expect(ninetyFivePercentChild).toBe(twentyPercentChild);
+  });
+
+  it('sitting and not-yet-sitting differ only by the participation boolean', () => {
+    const base = { casesCracked: 18, streakWeeks: 4, taughtBackCount: 2 };
+    expect(computeRank({ ...base, bossCaseParticipated: true })).toBe('CHIEF_INSPECTOR');
+    expect(computeRank({ ...base, bossCaseParticipated: false })).toBe('SENIOR_DETECTIVE');
+  });
+});

@@ -12,6 +12,9 @@ import {
   type Readiness,
 } from '@cluecrew/core';
 import { logEvent, prisma } from '@cluecrew/db';
+import { sendEmail } from '@/lib/email';
+import { boardInvitationTemplate } from '@/lib/email-templates';
+import { storyEnabled } from '@/lib/story';
 import { listBlueprints } from '@/lib/crew/mocks';
 
 /** Boss Round outcomes, newest first. Boss ROUND only: mock paper answers
@@ -111,6 +114,7 @@ export async function snapshotReadiness(childId: string): Promise<void> {
         childId,
         props: { district: blueprint.district, blueprintId: blueprint.id },
       });
+      await sendBoardInvitation(childId, 'preliminary');
     }
     if (readiness.rung === 'full' && previousRung !== 'full') {
       await logEvent({
@@ -118,6 +122,7 @@ export async function snapshotReadiness(childId: string): Promise<void> {
         childId,
         props: { district: blueprint.district, blueprintId: blueprint.id },
       });
+      await sendBoardInvitation(childId, 'full');
     }
     if (previous && previous.intensityColumn !== intensity.column) {
       await logEvent({
@@ -176,5 +181,30 @@ export async function confirmRollover(parentId: string, childId: string): Promis
     parentId,
     childId,
     props: { academicYear: academicYearOf(new Date()) },
+  });
+}
+
+/**
+ * The Board invitation email (STORY BIBLE §6, feature-flagged): rides the
+ * announced-once unlock branches above, so it can never send twice. Flag
+ * off → unlocks stay silent exactly as before.
+ */
+async function sendBoardInvitation(
+  childId: string,
+  rung: 'preliminary' | 'full',
+): Promise<void> {
+  if (!storyEnabled()) return;
+  const child = await prisma.childProfile.findUnique({
+    where: { id: childId },
+    include: { parent: true },
+  });
+  if (!child) return;
+  const readinessLine =
+    rung === 'full'
+      ? `${child.crewName} has now been taught every question type a full paper carries, and their exam-format accuracy says they are ready to sit one.`
+      : `${child.crewName} has covered enough question types for a half-length practice paper — a gentle first sitting, no full timings.`;
+  await sendEmail({
+    to: child.parent.email,
+    ...boardInvitationTemplate(child.crewName, rung, readinessLine),
   });
 }

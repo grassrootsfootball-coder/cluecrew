@@ -72,3 +72,20 @@ points, not truths.**
 
 Nothing above requires ratification to run in dev/staging; production launch
 of the mock ladder does (C §7.7).
+
+## Content review checklist — story additions (STORY BIBLE v1.2, 2026-08-01)
+Two checks join the reviewer's list for ALL story content (chapters,
+storyWrappers, Board framing):
+- **Tension-Law check (Law 2):** suspense lives in the mystery, never the
+  child's performance. No answer, score or result may raise, lower or colour
+  story stakes; resolutions are warm. A reviewer who cannot say "this beat
+  reads identically for a child who got everything astray" returns the
+  content.
+- **Reading-age ladder check (map rule 3):** prose meets its chapter's
+  declared readingAgeTarget (Ch1 ≈ 8.5 rising to ≈ 10); the mechanical lint
+  (`pnpm check:reading-age`) is the floor, the reviewer's ear is the check.
+  Seeded Vault words are the deliberate stretch and are exempt.
+The Anti-Marker style scanner (`node scripts/scan-chapter-style.mjs`) runs in
+CI: hard budgets block review submission; advisory flags require a logged
+dismissal note in the chapter's styleDismissals. David's read-aloud pass
+remains the final filter.

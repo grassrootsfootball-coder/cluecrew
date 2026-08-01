@@ -86,11 +86,41 @@ for (const file of readdirSync(join(ROOT, 'content/blueprints'))) {
   });
 }
 
+// Chapter prose (STORY BIBLE Law 3 + map rule 3, the reading-age ladder):
+// each chapter declares its own readingAgeTarget (default 9, Ch1 ≈ 8.5
+// rising to ≈10). The sentence-length ceiling scales with the target —
+// 16 words at age 9, proportionally looser or tighter either side. Seeded
+// Vault words are the DELIBERATE stretch (Law 5), so [[marked]] words are
+// exempt from the long-word count, exactly like Word-card headwords.
+let chapterCount = 0;
+const chaptersDir = join(ROOT, 'content/chapters');
+try {
+  for (const file of readdirSync(chaptersDir)) {
+    if (!file.endsWith('.json')) continue;
+    const { chapter } = JSON.parse(readFileSync(join(chaptersDir, file), 'utf8'));
+    chapterCount++;
+    const target = chapter.readingAgeTarget ?? 9;
+    const maxSentence = Math.round(MAX_SENTENCE_WORDS * (target / 9));
+    const prose = chapter.body.replace(/\[\[([^\]]+)\]\]/g, '');
+    const chapterSentences = prose.split(/[.!?]/).map((s) => s.trim()).filter(Boolean);
+    for (const sentence of chapterSentences) {
+      const words = sentence.split(/\s+/).filter(Boolean);
+      if (words.length > maxSentence) {
+        failures.push(
+          `chapter:${chapter.id} (target ${target}) sentence of ${words.length} words (max ${maxSentence}): "${sentence.slice(0, 60)}…"`,
+        );
+      }
+    }
+  }
+} catch {
+  // No /content/chapters yet — the ladder starts linting when authoring lands.
+}
+
 if (failures.length > 0) {
   console.error(`Reading-age lint FAILED (${failures.length}):\n`);
   for (const failure of failures) console.error(`  ${failure}`);
   process.exit(1);
 }
 console.log(
-  `Reading-age lint passed (${wordsFile.words.length} words + case narratives + ${voiceLines} voice lines + ${blueprintPages} blueprint instruction pages).`,
+  `Reading-age lint passed (${wordsFile.words.length} words + case narratives + ${voiceLines} voice lines + ${blueprintPages} blueprint instruction pages + ${chapterCount} chapter(s)).`,
 );

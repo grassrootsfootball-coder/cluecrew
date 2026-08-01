@@ -1485,3 +1485,59 @@
   padding-left: 0.8rem;
   margin-top: 0.6rem;
 }
+
+/* ---------- Story mode (STORY BIBLE v1.2 §9, feature-flagged) ---------- */
+/* The reader is the calmest surface in the app: generous measure, no
+   decoration competing with prose, dyslexia and reduced-motion settings
+   inherited from the crew layout. */
+.crew-story { max-width: 38rem; }
+.crew-story-kicker { opacity: 0.7; margin-bottom: 0; }
+.crew-story-spot {
+  width: 100%;
+  max-width: 20rem;
+  border-radius: 12px;
+  margin: 0.75rem 0;
+}
+.crew-story-spot.placeholder {
+  height: 6rem;
+  display: grid;
+  place-items: center;
+  font-size: 2.4rem;
+  border: 2px dashed color-mix(in srgb, var(--cc-ink) 25%, transparent);
+  opacity: 0.6;
+}
+.crew-story-audio { width: 100%; margin: 0.5rem 0 1rem; }
+.crew-story-body p { line-height: 1.7; font-size: 1.08rem; }
+.crew-story-word {
+  font: inherit;
+  font-weight: 700;
+  border: none;
+  border-bottom: 2px dotted var(--cc-amber);
+  background: none;
+  color: var(--cc-ink);
+  cursor: pointer;
+  padding: 0;
+}
+.crew-story-word-wrap { position: relative; }
+.crew-story-word-card {
+  display: block;
+  margin: 0.4rem 0;
+  padding: 0.6rem 0.8rem;
+  border-radius: 10px;
+  border-left: 4px solid var(--cc-amber);
+  background: color-mix(in srgb, var(--cc-amber) 12%, var(--cc-cream));
+}
+.crew-story-choice { border-top: 1px solid color-mix(in srgb, var(--cc-ink) 14%, transparent); padding-top: 0.8rem; }
+.crew-story-choice-prompt { font-weight: 600; }
+.crew-story-choice-options { display: flex; flex-direction: column; gap: 0.4rem; align-items: flex-start; }
+.crew-story-cluetap {
+  border: 1px solid color-mix(in srgb, var(--cc-vr-teal) 50%, transparent);
+  border-radius: 12px;
+  padding: 0.9rem;
+  margin: 1rem 0;
+}
+.crew-story-cluetap-options { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.crew-story-cluetap .crew-tile.lit { border-color: var(--cc-amber); }
+.crew-story-cluetap .crew-tile.dim { opacity: 0.6; }
+.crew-story-shelf { margin: 0; padding-left: 1.1rem; }
+.crew-story-shelf li { margin: 0.3rem 0; }
