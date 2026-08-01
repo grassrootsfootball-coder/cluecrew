@@ -1,0 +1,31 @@
+{
+ "kind": "nvr-generator-config",
+ "note": "BUILD-DISTRICT-NVR generator tuning from pass 2, per corpus decisions entry 1. RATIFIED values are David's accepted SCPs; the generator itself is not yet built in this repo — these are its §3 difficulty/density parameters, consumed at build time. No template may be signed or served from this file alone.",
+ "optionCount": {
+  "value": 5,
+  "specDefault": 4,
+  "status": "RATIFIED — SCP-NVR-1 (GL is always 5-option; spec assumption corrected)"
+ },
+ "densityCaps": {
+  "status": "RATIFIED — SCP-NVR-2, adopted verbatim as the district density-cap config",
+  "maxElementsByTier": { "t1": 15, "t2": 15, "t3": 30, "t4": 45, "t5": 45 },
+  "typicalElementsByTier": { "t1-2": [5, 15], "t3": [12, 30], "t4-5": [20, 45] },
+  "designRule": "difficulty at T4-5 comes from axis subtlety at least as much as density; extreme density only when counting IS the task"
+ },
+ "codesScaffold": {
+  "status": "RATIFIED — SCP-NVR-4",
+  "teachLetterCount": 2,
+  "scoreLetterCounts": [2, 3]
+ },
+ "reflectionRole": {
+  "status": "RATIFIED — SCP-NVR-5",
+  "glStyle": "misconception-executor inside rotation items (reflection-instead-of-rotation distractor), never a primary rule axis",
+  "cemStyle": "reflection-as-task permitted in CEM-legacy practice content only"
+ },
+ "glSectionPool": {
+  "status": "RATIFIED — SCP-NVR-1/NVR-3",
+  "sections": ["series", "analogy", "like-classification", "odd-classification", "matrix", "codes"],
+  "codesMandatory": true,
+  "neverInGlBlueprints": ["reflection-identification", "nets", "plan-views"]
+ }
+}

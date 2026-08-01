@@ -19,6 +19,8 @@ const REVIEWER_ALLOWED = [
   '/admin/misconceptions',
   '/admin/words',
   '/admin/blueprints',
+  // Sitting #1 materials (ingestion contract 4) — review work by definition.
+  '/admin/sitting-one',
 ];
 
 /**

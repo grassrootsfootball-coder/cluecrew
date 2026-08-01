@@ -1,0 +1,24 @@
+{
+ "kind": "batch-mix",
+ "note": "Authoring batch composition per corpus decisions entry 1 (2026-08-01). PROPOSED values await sitting #1 co-ratification (SCP-M-2); ACCEPTED values are David's ruling. Evidence: private corpus folder, inventory-cited; only decisions and derived values live here.",
+ "pools": {
+  "gl-maths": {
+   "tierMixPct": {
+    "specDefault": [20, 30, 30, 15, 5],
+    "proposed": [20, 32, 28, 15, 5],
+    "status": "PROPOSED — SCP-M-2, reviewer co-ratification at sitting #1 (tier-centre evidence is a provisional mapping until the reviewer calibrates)"
+   },
+   "singleVsMultiStepPct": {
+    "single": 55,
+    "multi": 45,
+    "status": "ACCEPTED — SCP-M-4"
+   }
+  },
+  "independent-prep": {
+   "tierMixPct": {
+    "specDefault": [10, 20, 30, 25, 15],
+    "status": "UNCHANGED — T3+ centre with a real T5 tail, per the independents evidence"
+   }
+  }
+ }
+}

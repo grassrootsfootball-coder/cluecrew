@@ -29,3 +29,27 @@ Format, one entry per decision:
   reviewer. **Date:** 2026-08-01.
 
 *(Entries below this line are appended as decisions are ratified.)*
+
+## Entry 1 — four-pass campaign triage (2026-08-01, David)
+Full text as ratified by David (SCP-M-1..5, SCP-NVR-1..5); this repo carries
+the decisions and their derived config values only — evidence stays in the
+private corpus folder, inventory-cited.
+
+**Executed by Code (this entry's ingestion):** similarity index built per
+Addendum E §3 (1,495 fingerprints, 86/103 papers; 17 image-only skipped —
+OCR owed) → private storage, wired via SIMILARITY_INDEX_PATH; retro scan
+over 565 unpublished items: ZERO fails, ZERO review flags. 37 corpus
+misconceptions (18 VR + 19 NVR) imported PROPOSED with provenance.
+SCP-M-3 plan revision applied (36 slots: +Puzzle 3 via deduction-den,
+Stats 4, FDP 5; donors Number 8→6, Ops 6→5 — donor choice flagged for
+ratification). SCP-M-2/M-4 → content/batch-mix.json (PROPOSED/ACCEPTED as
+ruled). SCP-NVR-1..5 → content/nvr-generator-config.json (RATIFIED values)
++ gl-nvr-standard blueprint authored as draft PENDING REVIEWER VERIFICATION.
+Sitting #1 page at /admin/sitting-one.
+
+**Newly arrived since the log (NOT triaged — awaiting David):** the VR pass
+evidence landed with four proposals (SCP-VR-1..4: blueprint shape/timing
+verification, registry homes for letter-shift ciphers and related-numbers,
+demotion of never-observed types in batch mixes, the unscaffolded
+read-and-reason teaching convention). Listed in the session report's
+ratification block; nothing applied.

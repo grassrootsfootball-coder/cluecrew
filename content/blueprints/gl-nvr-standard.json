@@ -1,0 +1,46 @@
+{
+ "kind": "blueprint",
+ "blueprint": {
+  "id": "gl-nvr-standard",
+  "district": "NVR",
+  "title": "NVR Paper — GL Standard Style",
+  "sections": [
+   {
+    "instructions": "This section shows shape patterns in a row. Work out how the pattern grows, then pick the shape that comes next. There are five answers each time. A worked example starts the section — read it first. If one feels hard, move on and come back.",
+    "questionCount": 20,
+    "typeMix": {
+     "nvr-series": 20
+    },
+    "minutes": 10
+   },
+   {
+    "instructions": "This section is about shape pairs. The first two shapes go together in a certain way. Work out the way. Then pick the shape that pairs with the third one just like that. Read the worked example first.",
+    "questionCount": 20,
+    "typeMix": {
+     "nvr-analogy": 20
+    },
+    "minutes": 10
+   },
+   {
+    "instructions": "This section shows groups of shapes. Most of them belong together in one way. Find the one that does not belong. The worked example shows you how. A blank scores nothing, so a careful guess beats no answer.",
+    "questionCount": 20,
+    "typeMix": {
+     "nvr-odd-classification": 20
+    },
+    "minutes": 10
+   },
+   {
+    "instructions": "This section uses letter codes for shapes. Each letter stands for one thing about a shape. A fresh code applies to every question, so read each one from the start. The worked example shows how a code fits together.",
+    "questionCount": 20,
+    "typeMix": {
+     "nvr-codes": 20
+    },
+    "minutes": 10
+   }
+  ],
+  "notes": "Authored FROM corpus evidence (SCP-NVR-1, decisions entry 1): GL NVR = 4x20 sections from the six-pool {series, analogy, like-classification, odd-classification, matrix, codes}, codes in every paper, always 5 options, worked example + practice per section, separate sheet. This draft fixes one representative 4-of-6; 3D/reflection-as-task never appears in GL blueprints (SCP-NVR-3). ~10 min per 20q. Types are forward refs to the NVR registry.",
+  "verifiedBy": "PENDING REVIEWER VERIFICATION",
+  "verifiedAt": null,
+  "sourceRef": "corpus decisions entry 1 / nvr-blueprint-evidence.json (private corpus folder, inventory-cited)"
+ }
+}

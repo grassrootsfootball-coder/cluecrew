@@ -20,7 +20,7 @@
 - **Marta Okafor-Bright** — the Workshop's quartermaster. Builds, measures, prices; bar models are her blueprints. Maths season anchor.
 - **Silas Vane** — the Gallery's observer. Rotations, reflections, the shape of things; speaks rarely, points precisely. NVR anchor; deadpan.
 - **Prue Archer** — the Archive's keeper. Words, records, old stories; English anchor and in-world custodian of the Word Vault.
-- **The Grey Umbrella** — the mystery figure. Season one: cases keep resolving a beat after someone unseen got there first; only a small grey umbrella token remains. **Sealed two-year reveal (David's private appendix): a former ClueCrew Chief Inspector, testing the recruit for succession — the final case is an invitation to lead.** Every season plants exactly one clue. Tension-Law compliant: the payoff is an honour.
+- **The Grey Umbrella** — the mystery figure. Season one: cases keep resolving a beat after someone unseen got there first; only a small grey umbrella token remains. **[Sealed two-year reveal: David's private appendix — not in this repo.]** Every season plants exactly one clue. Tension-Law compliant: the payoff is an honour.
 
 ## 3. SEASONS AND THE THROUGH-THREAD
 One season per district. Each season RESOLVES COMPLETELY (1-Year and Summer children get whole stories) while advancing one Grey Umbrella thread.

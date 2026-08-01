@@ -14,10 +14,12 @@ import { readdirSync, readFileSync, statSync } from 'node:fs';
 import { join, relative, resolve } from 'node:path';
 import { z } from 'zod';
 import {
+  batchMixFileSchema,
   blueprintFileSchema,
   caseFileSchema,
   isBlueprintVerified,
   mathsPlanFileSchema,
+  nvrGeneratorConfigFileSchema,
   regionFileSchema,
   replayTemplatesFileSchema,
   wordFileSchema,
@@ -40,6 +42,8 @@ const voiceFileSchema = z.object({
 });
 
 const anyContentFile = z.discriminatedUnion('kind', [
+  batchMixFileSchema,
+  nvrGeneratorConfigFileSchema,
   wordFileSchema,
   caseFileSchema,
   regionFileSchema,

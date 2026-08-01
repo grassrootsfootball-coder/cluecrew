@@ -132,8 +132,18 @@ export const mathsPlanFileSchema = z.object({
           'measures',
           'geometry',
           'statistics',
+          // SCP-M-3 (corpus decisions entry 1): the Puzzle strand, rendered
+          // through the cross-district DEDUCTION DEN engine.
+          'puzzle',
         ]),
-        mechanic: z.enum(['number-forge', 'workshop', 'mark-homework', 'data-desk', 'shape-shop']),
+        mechanic: z.enum([
+          'number-forge',
+          'workshop',
+          'mark-homework',
+          'data-desk',
+          'shape-shop',
+          'deduction-den',
+        ]),
         orderInDistrict: z.number().int().min(1),
         cluster: z.string().min(1),
         // D7 clarification (manifesto v1.4): bare currency is permitted in
@@ -207,6 +217,58 @@ export const chapterFileSchema = z.object({
 });
 export type ChapterFile = z.infer<typeof chapterFileSchema>;
 
+
+/** Authoring batch composition (corpus decisions entry 1): PROPOSED vs spec. */
+export const batchMixFileSchema = z.object({
+  kind: z.literal('batch-mix'),
+  note: z.string(),
+  pools: z.record(
+    z.object({
+      tierMixPct: z
+        .object({
+          specDefault: z.array(z.number()).length(5),
+          proposed: z.array(z.number()).length(5).optional(),
+          status: z.string(),
+        })
+        .refine(
+          (mix) => [mix.specDefault, mix.proposed].every(
+            (values) => !values || values.reduce((sum, value) => sum + value, 0) === 100,
+          ),
+          { message: 'tier mixes must sum to 100' },
+        ),
+      singleVsMultiStepPct: z
+        .object({ single: z.number(), multi: z.number(), status: z.string() })
+        .refine((split) => split.single + split.multi === 100)
+        .optional(),
+    }),
+  ),
+});
+
+/** NVR generator tuning (BUILD-DISTRICT-NVR §3 parameters, corpus-calibrated). */
+export const nvrGeneratorConfigFileSchema = z.object({
+  kind: z.literal('nvr-generator-config'),
+  note: z.string(),
+  optionCount: z.object({ value: z.number().int(), specDefault: z.number().int(), status: z.string() }),
+  densityCaps: z.object({
+    status: z.string(),
+    maxElementsByTier: z.record(z.number().int().positive()),
+    typicalElementsByTier: z.record(z.array(z.number()).length(2)),
+    designRule: z.string(),
+  }),
+  codesScaffold: z.object({
+    status: z.string(),
+    teachLetterCount: z.number().int(),
+    scoreLetterCounts: z.array(z.number().int()),
+  }),
+  reflectionRole: z.object({ status: z.string(), glStyle: z.string(), cemStyle: z.string() }),
+  glSectionPool: z.object({
+    status: z.string(),
+    sections: z.array(z.string()).length(6),
+    codesMandatory: z.literal(true),
+    neverInGlBlueprints: z.array(z.string()),
+  }),
+});
+
 export const contentFileSchema = z.discriminatedUnion('kind', [
   wordFileSchema,
   caseFileSchema,
@@ -214,5 +276,7 @@ export const contentFileSchema = z.discriminatedUnion('kind', [
   replayTemplatesFileSchema,
   mathsPlanFileSchema,
   chapterFileSchema,
+  batchMixFileSchema,
+  nvrGeneratorConfigFileSchema,
 ]);
 export type ContentFile = z.infer<typeof contentFileSchema>;
