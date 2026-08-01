@@ -121,6 +121,17 @@ export function waitlistConfirmTemplate(
   };
 }
 
+/**
+ * Founding-rate reserve confirmation (LIVE-LAUNCH-PACK-V3 §1 Step 2).
+ * Explicitly not a payment and says so; the tap confirms the email only.
+ */
+export function foundingReserveTemplate(name: string, link: string): EmailContent {
+  return {
+    subject: 'Your founding rate is noted — one tap to confirm',
+    text: `Hello ${name},\n\nYour founding-rate reservation is noted. This is NOT a payment and nothing is owed — when Full Crew checkout opens, the founding rate is yours to take or leave.\n\nTap to confirm your email so we can reach you when it opens:\n\n${link}\n\nWe'll email you about ClueCrew's launch and nothing else, and you can unsubscribe any time. If this wasn't you, ignore this email and the address never joins the list.${signoff}`,
+  };
+}
+
 export function accountLockedTemplate(name: string, attempts: number, minutes: number): EmailContent {
   return {
     subject: 'ClueCrew: your account is temporarily locked',

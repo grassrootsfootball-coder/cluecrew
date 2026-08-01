@@ -1,13 +1,18 @@
 /**
- * DEMAND-TEST-PACK-V2 verification:
- *   - §1 architecture: hero CTAs, the three-item demo with the product's
- *     answer behaviour (praise / "Not yet" + misconception hint), the close
- *     beat, the Region Decoder card with the mandatory caveat, the sticky
- *     bar after scroll, and §6 prohibitions (no screenshots, no countdown);
- *   - §2 plumbing: signup round-trips with double opt-in; capture source
- *     and decoder region recorded; the confirm email carries the guide;
- *   - §3 goals: demo_started, demo_q_answered (with result prop),
- *     demo_completed, region_decoded, waitlist_signup, pricing_viewed.
+ * LIVE-LAUNCH-PACK-V3 verification (supersedes the v1/v2 assertions):
+ *   - §2 architecture: Start-free hero, playable demo with the close beat
+ *     and a product-delivering CTA, the "What's live today" firewall, the
+ *     Region Decoder, the pricing TABLE with reserve buttons, the amended
+ *     FAQ — and NO Crew Plus or Summer anywhere (absent, not teased);
+ *   - the v2-review carry-overs, pinned: every wrong demo option surfaces
+ *     ITS OWN misconception hint (the hint-mismatch class), and the page's
+ *     images are all the (fixed) lockup;
+ *   - reserve plumbing: name + email + tier recorded as paid-intent with
+ *     double opt-in, explicitly not a payment;
+ *   - §3 goals: demo_started/completed, region_decoded, pricing_viewed,
+ *     founding_reserved, signup_started (signup_completed is covered by the
+ *     billing journey's real signups; first_session/first_case stay
+ *     first-party by manifesto S1 — see scripts/launch-metrics.mjs).
  */
 import { expect, request, test, type Page } from '@playwright/test';
 import { prisma } from '@cluecrew/db';
@@ -18,59 +23,104 @@ test.afterAll(async () => {
   await prisma.waitlistSignup.deleteMany({ where: { email: { in: EMAILS } } });
 });
 
-/** Plays the three-question demo to the end, taking one deliberate slip. */
 async function playDemo(page: Page) {
-  // Q1 (TARTS = 24): slip on the repeated-letter misconception first.
   await page.getByRole('button', { name: '18', exact: true }).click();
   await expect(page.getByText(/Not yet\. So close — check the letter T/)).toBeVisible();
   await page.getByRole('button', { name: '24', exact: true }).click();
   await expect(page.getByText(/You paid every letter, even the repeat/)).toBeVisible();
   await page.getByRole('button', { name: 'Next question' }).click();
 
-  // Q2 (CHIN hides in "muCH INside").
   await page.getByRole('button', { name: 'CHIN', exact: true }).click();
   await expect(page.getByText(/You read across the join/)).toBeVisible();
   await page.getByRole('button', { name: 'Next question' }).click();
 
-  // Q3 (5 packs).
   await page.getByRole('button', { name: '5 packs', exact: true }).click();
   await expect(page.getByText(/rounded UP for the packs/)).toBeVisible();
   await page.getByRole('button', { name: 'What was that hint about?' }).click();
 
-  // The close beat (§1, verbatim).
   await expect(
     page.getByText(/written to\s+catch a real misconception and teach through it/),
   ).toBeVisible();
+  // V3: the close beat's button delivers the product.
+  await expect(
+    page.getByTestId('demo-close-beat').getByRole('link', { name: /Start free/ }),
+  ).toBeVisible();
 }
 
-test('the page carries the v2 architecture and none of the §6 prohibitions', async ({ page }) => {
+test('the page carries the v3 two-step architecture', async ({ page }) => {
   await page.goto('/founding?src=fb-kent');
 
   await expect(page.getByRole('heading', { name: 'The 11+ finally makes sense.' })).toBeVisible();
-  await expect(page.getByRole('link', { name: 'Try a question — takes 20 seconds' })).toBeVisible();
-  await expect(page.getByRole('heading', { name: "Here's what it feels like." })).toBeVisible();
-  await expect(page.getByText("We won't promise you a pass. Nobody honestly can.")).toBeVisible();
-  await expect(page.getByText('never “trade secret”')).toBeVisible();
-  await expect(page.getByText('Is this like Atom?')).toBeVisible();
-  await expect(page.getByText('(trademark application pending)')).toBeVisible();
+  const hero = page.locator('.mk-hero');
+  await expect(hero.getByRole('link', { name: 'Start free — no card, no clock' })).toBeVisible();
+  await expect(hero.getByRole('link', { name: 'Try a question first — 20 seconds' })).toBeVisible();
 
-  // §6: no screenshots or stock photos — the logo is the only image family
-  // (hero + sticky bar render the same asset).
+  // The honesty roadmap.
+  await expect(page.getByRole('heading', { name: "What's live today" })).toBeVisible();
+  await expect(page.getByTestId('live-now')).toContainText('all 21 GL-style question types');
+
+  // Pricing is a table: Crew row starts free; Full Crew rows reserve.
+  const table = page.locator('.fd-pricing table');
+  await expect(table.getByRole('link', { name: 'Start free' })).toBeVisible();
+  await expect(table.getByRole('button', { name: 'Reserve the founding rate' })).toHaveCount(3);
+  await expect(table.getByText('£203.76 total')).toBeVisible();
+  await expect(table.getByText('£119.88 total')).toBeVisible();
+
+  // Hidden at launch: absent, not "coming soon" (§1).
+  await expect(page.getByText(/Crew Plus|Summer Intensive|£24\.99|£69/)).toHaveCount(0);
+
+  // FAQ amendments.
+  await expect(page.getByText('What do I get free?')).toBeVisible();
+  await expect(page.getByText('When do the other subjects arrive?')).toBeVisible();
+  await expect(page.getByText('When does it launch?')).toHaveCount(0);
+  await expect(page.getByText('Is this like Atom?')).toBeVisible();
+
+  // Every image is the lockup.
   for (const image of await page.locator('img').all()) {
     await expect(image).toHaveAttribute('alt', 'ClueCrew');
   }
 
-  // The sticky bar appears only after the hero scrolls past.
+  // Sticky bar: Start free after scroll.
   await expect(page.getByTestId('sticky-bar')).toHaveCount(0);
   await page.getByRole('heading', { name: 'Questions parents ask' }).scrollIntoViewIfNeeded();
-  await expect(page.getByTestId('sticky-bar')).toBeVisible();
+  await expect(page.getByTestId('sticky-bar').getByRole('link', { name: 'Start free' })).toBeVisible();
 });
 
-test('the demo behaves like the product: praise, "Not yet" + hint, close beat', async ({
-  page,
-}) => {
+test('the demo plays start to finish with the product behaviour', async ({ page }) => {
   await page.goto('/founding');
   await playDemo(page);
+});
+
+test('every wrong option surfaces its own hint — the hint-mismatch pin', async ({ page }) => {
+  await page.goto('/founding');
+
+  // Q1 TARTS: each distractor's hint names ITS misconception.
+  await page.getByRole('button', { name: '18', exact: true }).click();
+  await expect(page.getByText(/It appears twice, and it gets paid both times/)).toBeVisible();
+  await page.getByRole('button', { name: '23', exact: true }).click();
+  await expect(page.getByText(/add the five prices one step at a time/)).toBeVisible();
+  await page.getByRole('button', { name: '20', exact: true }).click();
+  await expect(page.getByText(/Five letters need five prices/)).toBeVisible();
+  await page.getByRole('button', { name: '24', exact: true }).click();
+  await page.getByRole('button', { name: 'Next question' }).click();
+
+  // Q2 CHIN: the three distractors, each to its own hint.
+  await page.getByRole('button', { name: 'MUCH', exact: true }).click();
+  await expect(page.getByText(/MUCH is standing in plain sight/)).toBeVisible();
+  await page.getByRole('button', { name: 'SIDE', exact: true }).click();
+  await expect(page.getByText(/SIDE lives inside one word/)).toBeVisible();
+  await page.getByRole('button', { name: 'BOX', exact: true }).click();
+  await expect(page.getByText(/BOX is a whole word doing its own job/)).toBeVisible();
+  await page.getByRole('button', { name: 'CHIN', exact: true }).click();
+  await page.getByRole('button', { name: 'Next question' }).click();
+
+  // Q3 fence packs.
+  await page.getByRole('button', { name: '4 packs', exact: true }).click();
+  await expect(page.getByText(/4 packs only brings 40/)).toBeVisible();
+  await page.getByRole('button', { name: '42 packs', exact: true }).click();
+  await expect(page.getByText(/42 is the number of PLANKS/)).toBeVisible();
+  await page.getByRole('button', { name: '6 packs', exact: true }).click();
+  await expect(page.getByText(/Six packs would cover it/)).toBeVisible();
 });
 
 test('the Region Decoder answers in ten seconds and always carries the caveat', async ({
@@ -84,29 +134,34 @@ test('the Region Decoder answers in ten seconds and always carries the caveat', 
   await expect(
     card.getByText('Schools change providers — always confirm with the school for your entry year.'),
   ).toBeVisible();
-  // No prediction anywhere on the card (the anti-Atom line, structurally).
   await expect(card.getByText(/chance|likelihood|predict/i)).toHaveCount(0);
 });
 
-test('signup from the decoder records source + region and the email carries the guide', async ({
+test('reserving the founding rate records paid-intent, explicitly not a payment', async ({
   page,
 }) => {
-  const email = `e2e-waitlist-v2-${Date.now()}@cluecrew.test`;
+  const email = `e2e-reserve-${Date.now()}@cluecrew.test`;
   EMAILS.push(email);
 
   await page.goto('/founding?src=fb-kent');
-  await page.selectOption('.fd-decoder select', 'kent');
-  await page.fill('.fd-decoder-capture input[name="email"]', email);
-  await page.getByRole('button', { name: 'Send my guide' }).click();
-  await page.waitForURL('**/founding/thanks');
+  await page
+    .locator('.fd-pricing tbody tr', { hasText: '24 months' })
+    .getByRole('button', { name: 'Reserve the founding rate' })
+    .click();
+  const form = page.getByTestId('reserve-form');
+  await expect(form.getByText('This is not a payment and nothing is owed.')).toBeVisible();
+  await form.locator('input[name="name"]').fill('Test Parent');
+  await form.locator('input[name="email"]').fill(email);
+  await form.getByRole('button', { name: 'Reserve — not a payment' }).click();
+  await page.waitForURL('**/founding/reserved');
 
   const row = await prisma.waitlistSignup.findUnique({ where: { email } });
-  expect(row?.source).toBe('region-decoder');
-  expect(row?.regionCode).toBe('kent');
+  expect(row?.source).toBe('founding-reserve');
+  expect(row?.reservedTier).toBe('FULL_24');
+  expect(row?.name).toBe('Test Parent');
   expect(row?.src).toBe('fb-kent');
   expect(row?.confirmedAt).toBeNull();
 
-  // Double opt-in round trip via the dev helper.
   const api = await request.newContext({ baseURL: 'http://localhost:3100' });
   const link = await api.get(`/api/dev/waitlist-confirm-link?email=${encodeURIComponent(email)}`);
   const { url } = (await link.json()) as { url: string };
@@ -117,14 +172,14 @@ test('signup from the decoder records source + region and the email carries the 
   await api.dispose();
 });
 
-test('§3 goals fire with their props across the whole journey', async ({ page }) => {
+test('§3 goals fire across the journey', async ({ page }) => {
   await page.route('https://plausible.io/js/script.js', (route) =>
     route.fulfill({
       contentType: 'application/javascript',
       body: `
-        const queued = (window.plausible && window.plausible.q) ? Array.from(window.plausible.q).map(a => ({ goal: a[0], props: (a[1] && a[1].props) || {} })) : [];
+        const queued = (window.plausible && window.plausible.q) ? Array.from(window.plausible.q).map(a => a[0]) : [];
         window.__plausibleGoals = queued;
-        window.plausible = (goal, options) => window.__plausibleGoals.push({ goal, props: (options && options.props) || {} });
+        window.plausible = (goal) => window.__plausibleGoals.push(goal);
       `,
     }),
   );
@@ -135,41 +190,23 @@ test('§3 goals fire with their props across the whole journey', async ({ page }
 
   const goals = () =>
     page.evaluate(
-      () =>
-        (window as never as { __plausibleGoals?: { goal: string; props: Record<string, string> }[] })
-          .__plausibleGoals ?? [],
+      () => (window as never as { __plausibleGoals?: string[] }).__plausibleGoals ?? [],
     );
 
   await playDemo(page);
   await page.selectOption('.fd-decoder select', 'kent');
-  await page.getByRole('heading', { name: 'Crew — Free, forever.' }).scrollIntoViewIfNeeded();
+  await page.getByRole('heading', { name: 'Pricing' }).scrollIntoViewIfNeeded();
 
-  await expect.poll(async () => (await goals()).map((g) => g.goal)).toContain('demo_started');
-  await expect.poll(async () => (await goals()).map((g) => g.goal)).toContain('demo_completed');
-  await expect.poll(async () => (await goals()).map((g) => g.goal)).toContain('region_decoded');
-  await expect.poll(async () => (await goals()).map((g) => g.goal)).toContain('pricing_viewed');
+  await expect.poll(goals).toContain('demo_started');
+  await expect.poll(goals).toContain('demo_completed');
+  await expect.poll(goals).toContain('region_decoded');
+  await expect.poll(goals).toContain('pricing_viewed');
 
-  const answered = (await goals()).filter((g) => g.goal === 'demo_q_answered');
-  expect(answered.some((g) => g.props.result === 'incorrect')).toBe(true); // the money moment
-  expect(answered.some((g) => g.props.result === 'correct')).toBe(true);
-
-  const email = `e2e-waitlist-v2goal-${Date.now()}@cluecrew.test`;
-  EMAILS.push(email);
-  await page.fill('#waitlist input[name="email"]', email);
-  await page.locator('#waitlist').getByRole('button', { name: 'Join' }).click();
-  await page.waitForURL('**/founding/thanks');
-  await expect
-    .poll(async () =>
-      page.evaluate(
-        () =>
-          (
-            (window as never as { __plausibleGoals?: { goal: string }[] }).__plausibleGoals ?? []
-          ).map((g) => g.goal),
-      ),
-    )
-    .toContain('waitlist_signup');
-  const demoEnd = await prisma.waitlistSignup.findUnique({ where: { email } });
-  expect(demoEnd?.source).toBe('demo-end');
+  // founding_reserved on the reserved page; signup_started on /signup.
+  await page.goto('/founding/reserved');
+  await expect.poll(goals).toContain('founding_reserved');
+  await page.goto('/signup');
+  await expect.poll(goals).toContain('signup_started');
 });
 
 test('the privacy notice answers what §3 requires of it', async ({ page }) => {

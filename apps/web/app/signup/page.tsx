@@ -6,6 +6,8 @@
  * — the password can never land in a URL (§4).
  */
 import { useActionState } from 'react';
+import { GoalBeacon } from '@/components/founding/analytics';
+import { Plausible } from '@/components/plausible';
 import { signupAction, type AuthFormState } from '@/lib/actions/auth';
 
 const INITIAL: AuthFormState = { error: null, done: false };
@@ -16,6 +18,9 @@ export default function SignupPage() {
   if (state.done) {
     return (
       <main className="cc-container">
+        {/* V3 §3 funnel: a completed parent signup. Never fires in the child app. */}
+        <Plausible />
+        <GoalBeacon goal="signup_completed" />
         <h1>Check your inbox</h1>
         <p>
           We have sent you a verification link. Open it to confirm your email, then sign in to set up
@@ -27,6 +32,8 @@ export default function SignupPage() {
 
   return (
     <main className="cc-container">
+      <Plausible />
+      <GoalBeacon goal="signup_started" />
       <h1>Create your parent account</h1>
       <p className="cc-muted">
         Parents own the account; children get their own safe profiles inside it. The 7-day trial

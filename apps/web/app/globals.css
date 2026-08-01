@@ -488,3 +488,20 @@ li {
   .fd-demo-options { grid-template-columns: 1fr 1fr; }
   .fd-sticky-label { display: none; }
 }
+
+/* ---------- Live launch v3 (LIVE-LAUNCH-PACK-V3) ---------- */
+.fd-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+.fd-pricing { overflow-x: auto; }
+.fd-pricing .cc-table { min-width: 34rem; }
+.fd-reserve { max-width: 34rem; margin-top: 1rem; }
+/* Three cards never orphan 2+1: three-up on wide screens, one column small. */
+.fd-three-up { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 760px) {
+  .fd-three-up { grid-template-columns: 1fr; }
+}

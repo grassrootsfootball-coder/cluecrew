@@ -489,9 +489,15 @@ model WaitlistSignup {
   yearGroup   Int?
   // UTM source per §4 (fb-kent, org-bucks, …) — measurement, never marketing.
   src         String?
-  // Which capture box (V2 §2: demo-end | region-decoder | sticky | hero) —
-  // buyer temperatures differ and the mix is itself a finding.
+  // Which capture box (V2 §2: demo-end | region-decoder | sticky | hero;
+  // V3 adds founding-reserve) — buyer temperatures differ and the mix is
+  // itself a finding.
   source      String?
+  // Founding-rate reserve fields (LIVE-LAUNCH-PACK-V3 §1 Step 2): explicitly
+  // NOT a payment; the rate is honoured at checkout opening. name is only
+  // ever collected on the reserve path.
+  name        String?
+  reservedTier String?
   tokenHash   String    @unique
   confirmedAt DateTime?
   createdAt   DateTime  @default(now())

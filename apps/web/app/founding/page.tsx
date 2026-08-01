@@ -1,19 +1,19 @@
 import { PricingViewedBeacon } from '@/components/founding/analytics';
 import { RegionDecoder } from '@/components/founding/decoder';
 import { DemoWidget } from '@/components/founding/demo';
+import { PricingTable } from '@/components/founding/pricing-table';
 import { StickyBar } from '@/components/founding/sticky-bar';
-import { joinWaitlistAction } from '@/lib/actions/waitlist';
 
 /**
- * The demand-test page, V2 (DEMAND-TEST-PACK-V2 §1): experience before
- * email — the order of the sections IS the argument. Copy is verbatim from
- * the pack where the pack gives it; do not edit copy here without editing
- * the pack. No screenshots, no stock photos, no countdowns, no popups, no
- * exit-intent, no fake scarcity (§6).
+ * The live launch page, Step 1 (LIVE-LAUNCH-PACK-V3): no waitlist theatre —
+ * the primary CTA delivers the free product, the pricing table carries a
+ * founding-rate reserve until checkout opens, and the "What's live today"
+ * section is the mis-selling firewall. Crew Plus and Summer Intensive are
+ * ABSENT, not "coming soon" (§1). All v2 copy stands unless amended (§2).
  *
- * HUMAN GATES before public DNS: the three demo items need reviewer
- * sign-off, and the founder note below is a DRAFT in David's voice that
- * only David can ratify.
+ * HUMAN GATES before DNS (§5A): reviewer sitting #1 (demo items + free-ten
+ * item sets), David's 375px mobile pass, Step-1 legal/ops list, Ezra's
+ * end-to-end smoke test. The founder note remains a DRAFT for David.
  */
 export default async function FoundingPage({
   searchParams,
@@ -37,13 +37,13 @@ export default async function FoundingPage({
               minutes a day, at a price built for every family.
             </p>
             <p className="mk-hero-cta">
-              <a className="cc-button" href="#demo">
-                Try a question — takes 20 seconds
+              <a className="cc-button" href="/signup">
+                Start free — no card, no clock
               </a>
             </p>
             <p>
-              <a className="fd-quiet-link" href="#waitlist">
-                Join the Founding Crew waitlist
+              <a className="fd-quiet-link" href="#demo">
+                Try a question first — 20 seconds
               </a>
             </p>
           </div>
@@ -55,40 +55,32 @@ export default async function FoundingPage({
           <div className="cc-container">
             <h2>Here&apos;s what it feels like.</h2>
             <DemoWidget />
+          </div>
+        </section>
 
-            <div className="cc-card fd-waitlist" id="waitlist">
-              <form action={joinWaitlistAction} className="cc-form">
-                <p style={{ margin: 0, fontWeight: 700 }}>
-                  Get your child early access — join the Founding Crew
-                </p>
-                <label>
-                  Email
-                  <input name="email" type="email" required autoComplete="email" />
-                </label>
-                <label>
-                  Which year group are they in from this September? (optional)
-                  <select name="yearGroup" defaultValue="">
-                    <option value="">Choose a year…</option>
-                    <option value="3">Year 3</option>
-                    <option value="4">Year 4</option>
-                    <option value="5">Year 5</option>
-                    <option value="6">Year 6</option>
-                  </select>
-                </label>
-                <input type="hidden" name="source" value="demo-end" />
-                {cleanSrc ? <input type="hidden" name="src" value={cleanSrc} /> : null}
-                <button className="cc-button" type="submit">
-                  Join
-                </button>
-                <p className="cc-muted" style={{ margin: 0 }}>
-                  We&apos;ll email you about ClueCrew&apos;s launch and nothing else. Unsubscribe
-                  anytime. <a href="/founding/privacy">Privacy notice</a>.
-                </p>
-              </form>
-              <p className="cc-muted" style={{ marginBottom: 0 }}>
-                <em>Founding families get our best-ever rate, locked for their whole programme.</em>
-              </p>
-            </div>
+        {/* The honesty roadmap (V3 §2) — the mis-selling firewall. */}
+        <section className="mk-section">
+          <div className="cc-container" style={{ maxWidth: '44rem' }}>
+            <h2>What&apos;s live today</h2>
+            <p data-testid="live-now">
+              <strong>Live now:</strong> Verbal Reasoning — all 21 GL-style question types, taught
+              five ways, free to start.
+            </p>
+            <p>
+              <strong>Opening next:</strong> Full programmes with the complete VR case library and
+              paced plans to your exam year.
+            </p>
+            <p>
+              <strong>Then:</strong> Maths (the Workshop), Non-Verbal Reasoning, English — in that
+              order, included in Full Crew as they land, at the same price.
+            </p>
+            <p className="cc-muted">
+              <em>
+                We&apos;d rather tell you exactly what exists than sell you everything at once.
+                Full Crew&apos;s price never changes as subjects are added — founding families lock
+                the founding rate for their whole programme.
+              </em>
+            </p>
           </div>
         </section>
 
@@ -101,7 +93,7 @@ export default async function FoundingPage({
 
         <section className="mk-section">
           <div className="cc-container">
-            <div className="mk-grid">
+            <div className="mk-grid fd-three-up">
               <div className="mk-feature fd-accent-vr">
                 <h3>Crack cases, don&apos;t do drills</h3>
                 <p>
@@ -139,8 +131,8 @@ export default async function FoundingPage({
               teacher before it goes live. Ask us anything about how it&apos;s built — the answer
               is never &ldquo;trade secret&rdquo;.
             </p>
-            {/* Founder note (V2 §1.4): DRAFT in David's first person — David
-                must ratify or rewrite before public DNS. */}
+            {/* Founder note (V2 §1.4, carried by V3): DRAFT in David's first
+                person — David must ratify or rewrite before public DNS. */}
             <p className="fd-founder-note">
               I&apos;m building ClueCrew because 11+ prep is either £8 workbooks your child
               ignores or platforms that cost more than school dinners. The families the market
@@ -159,39 +151,11 @@ export default async function FoundingPage({
         <PricingViewedBeacon>
           <section className="mk-section">
             <div className="cc-container">
-              <div className="mk-grid">
-                <div className="mk-price">
-                  <h3>Crew — Free, forever.</h3>
-                  <p>
-                    A real taste: ten full cases, daily word collecting, weekly exam-style
-                    questions. No card, no catch, no ads — ever.
-                  </p>
-                </div>
-                <div className="mk-price">
-                  <h3>Full Crew — from £8.49/month.</h3>
-                  <p>
-                    Everything: all subjects as they launch, the full programme paced to your
-                    child&apos;s year, mock papers, the parent guide. (£8.49/mo on 24 months, total
-                    £203.76 · £9.99/mo on 12 months, total £119.88 · £12.99 rolling, cancel in two
-                    clicks.)
-                  </p>
-                </div>
-                <div className="mk-price">
-                  <h3>Crew Plus — £24.99/month.</h3>
-                  <p>
-                    Everything, plus a monthly video from a qualified teacher reviewing your
-                    child&apos;s progress — what&apos;s working, what to focus on, what to try at
-                    home.
-                  </p>
-                </div>
-                <div className="mk-bursary">
-                  <h3>Crew Bursary — Free.</h3>
-                  <p>
-                    Full Crew, free, for families on free school meals. One bursary place opens for
-                    every ten paid ones. Same product, exactly.
-                  </p>
-                </div>
-              </div>
+              <h2>Pricing</h2>
+              <PricingTable src={cleanSrc} />
+              <p className="cc-muted">
+                <em>Founding families get our best-ever rate, locked for their whole programme.</em>
+              </p>
             </div>
           </section>
         </PricingViewedBeacon>
@@ -205,8 +169,15 @@ export default async function FoundingPage({
               schools do change providers.
             </p>
             <p>
-              <em>When does it launch?</em> Founding Crew families get access first, at the
-              founding rate, before general release.
+              <em>What do I get free?</em> Ten full cases across the five question families, every
+              one taught all five ways, daily word collecting, and a weekly exam-style Boss Round.
+              No card, no clock, no ads — ever.
+            </p>
+            <p>
+              <em>When do the other subjects arrive?</em> Maths, Non-Verbal Reasoning and English
+              land in that order — no hard dates promised, and each is included in Full Crew at
+              the same price as it arrives. Founding families lock the founding rate for their
+              whole programme.
             </p>
             <p>
               <em>What ages?</em> Built for Years 3–6, paced to your child&apos;s year and exam

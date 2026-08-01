@@ -12,9 +12,10 @@ export default function WaitlistPrivacyPage() {
       <h2>What we store</h2>
       <p>
         Your email address; your region and your child&apos;s school year only if you chose to tell
-        us; and a short tag saying which link brought you here (for example, a Kent parents&apos;
-        group rather than a Bucks one). That is the whole list — no names, no addresses, nothing
-        about your child beyond a school year you volunteered.
+        us; your first name only if you reserved the founding rate (a reservation is never a
+        payment and we hold no payment details); and a short tag saying which link brought you
+        here (for example, a Kent parents&apos; group rather than a Bucks one). That is the whole
+        list — no addresses, nothing about your child beyond a school year you volunteered.
       </p>
 
       <h2>Why we store it</h2>

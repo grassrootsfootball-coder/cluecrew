@@ -28,9 +28,9 @@ export function StickyBar() {
   return (
     <div className="fd-sticky" data-testid="sticky-bar">
       <img src="/cluecrew-logo.svg" alt="ClueCrew" width={120} height={30} />
-      <span className="fd-sticky-label">Founding Crew waitlist</span>
-      <a className="cc-button fd-sticky-join" href="#waitlist">
-        Join
+      <span className="fd-sticky-label">Crew is free — no card, no clock</span>
+      <a className="cc-button fd-sticky-join" href="/signup">
+        Start free
       </a>
     </div>
   );

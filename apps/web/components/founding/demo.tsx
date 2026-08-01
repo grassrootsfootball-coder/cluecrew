@@ -137,9 +137,6 @@ export function DemoWidget() {
       window.plausible?.('demo_started');
     }
     const correct = option.id === item.correctId;
-    window.plausible?.('demo_q_answered', {
-      props: { q: item.family, result: correct ? 'correct' : 'incorrect' },
-    });
     if (correct) {
       setSolved(true);
       setFeedback({ kind: 'praise', text: item.praise });
@@ -169,6 +166,12 @@ export function DemoWidget() {
           That hint you just got when you slipped? Every wrong answer in ClueCrew is written to
           catch a real misconception and teach through it. A teacher signs off every question
           before any child sees it. That&apos;s the whole idea.
+        </p>
+        {/* V3 Step 1: the button delivers the product, not a list. */}
+        <p style={{ marginBottom: 0 }}>
+          <a className="cc-button" href="/signup">
+            Start free — no card, no clock
+          </a>
         </p>
       </div>
     );

@@ -33,7 +33,8 @@
     "jobs:weekly-email": "echo \"POST /api/jobs/weekly-email with CRON_SECRET (Sunday 17:00 Europe/London)\"",
     "perf": "bash scripts/lighthouse.sh",
     "audit:palette": "node scripts/audit-palette.mjs",
-    "similarity:scan": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/similarity-scan.ts"
+    "similarity:scan": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/similarity-scan.ts",
+    "metrics:launch": "node scripts/launch-metrics.mjs"
   },
   "devDependencies": {
     "@eslint/js": "^9.20.0",
