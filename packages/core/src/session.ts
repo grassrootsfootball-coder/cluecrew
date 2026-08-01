@@ -51,6 +51,10 @@ export interface SessionState {
   warmup: {
     queue: ReviewUnitRef[];
     index: number;
+    /** BUILD-DISTRICT-MATHS §6, wired by David's ruling (2026-08-01): the
+     *  intensity column's fluency lever, consumed here. 'off' = no round. */
+    fluency: 'off' | 'light' | 'standard';
+    fluencyDone: boolean;
   };
   focus: {
     caseId: string;
@@ -87,6 +91,12 @@ export interface StartSessionInputs {
   reviewUnits: ReviewUnitRef[];
   /** Word Vault card ids for the warm-up. */
   wordCardIds: string[];
+  /**
+   * The fluency thread (BUILD-DISTRICT-MATHS §6, David's ruling 2026-08-01):
+   * presence comes from the caller's intensity column (Addendum D governs);
+   * the round's seconds are charged against the cap like any activity.
+   */
+  fluency?: 'off' | 'light' | 'standard';
   focusCase: {
     caseId: string;
     questionTypeId: string;
@@ -131,7 +141,12 @@ export function startSession(inputs: StartSessionInputs): SessionState {
     phase: 'warmup',
     secondsActive: 0,
     capSeconds: capMinutes * 60,
-    warmup: { queue: [...warmupReviews, ...wordCards], index: 0 },
+    warmup: {
+      queue: [...warmupReviews, ...wordCards],
+      index: 0,
+      fluency: inputs.fluency ?? 'off',
+      fluencyDone: false,
+    },
     focus: {
       caseId: inputs.focusCase.caseId,
       questionTypeId: inputs.focusCase.questionTypeId,
@@ -171,6 +186,7 @@ export function startSession(inputs: StartSessionInputs): SessionState {
 }
 
 export type Activity =
+  | { kind: 'fluency_round'; intensity: 'light' | 'standard' }
   | { kind: 'warmup_item'; unit: ReviewUnitRef }
   | { kind: 'mode_content'; mode: Mode; caseId: string; forced: boolean }
   | { kind: 'practice_item'; questionTypeId: string; targetTier: number; context: 'case_practice' }
@@ -202,6 +218,15 @@ export function nextActivity(state: SessionState): { activity: Activity; state: 
   const stopped = softStopReached(state);
 
   if (state.phase === 'warmup') {
+    // The fluency round opens the warm-up (§6): facts first, when the
+    // intensity column asks for them. Skipped like everything else once the
+    // soft stop is reached — fluency never outranks the cap.
+    if (!stopped && state.warmup.fluency !== 'off' && !state.warmup.fluencyDone) {
+      return {
+        activity: { kind: 'fluency_round', intensity: state.warmup.fluency },
+        state,
+      };
+    }
     if (!stopped && state.warmup.index < state.warmup.queue.length) {
       return {
         activity: { kind: 'warmup_item', unit: state.warmup.queue[state.warmup.index]! },
@@ -289,6 +314,40 @@ export interface AttemptOutcome {
   /** New mastery for the focus case after this attempt (practice/closer only). */
   focusMastery: number;
   caseJustCracked: boolean;
+}
+
+export interface FluencyResult {
+  correctCount: number;
+  questionCount: number;
+  secondsElapsed: number;
+}
+
+/**
+ * Completes the warm-up fluency round (BUILD-DISTRICT-MATHS §6, David's
+ * ruling 2026-08-01). Its seconds are charged against the D2 cap through
+ * the SAME tick as every activity — clamped to fluencyMaxSeconds so the
+ * round can never take more than its 90-second envelope from the session.
+ * Facts feed readiness through the logged result; streak logic is untouched
+ * (an active day is still measured purely in secondsActive).
+ */
+export function completeFluencyRound(state: SessionState, result: FluencyResult): SessionState {
+  const next = tick(state, Math.min(result.secondsElapsed, CONFIG.fluencyMaxSeconds));
+  return {
+    ...next,
+    warmup: { ...next.warmup, fluencyDone: true },
+    pendingEvents: [
+      ...next.pendingEvents,
+      {
+        name: 'warmup_item_result',
+        props: {
+          sessionId: state.sessionId,
+          fluency: true,
+          correct: result.correctCount,
+          of: result.questionCount,
+        },
+      },
+    ],
+  };
 }
 
 export function submitAttempt(state: SessionState, submission: AttemptSubmission): AttemptOutcome {

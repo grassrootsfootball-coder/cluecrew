@@ -79,3 +79,4 @@ No calculator features (11+ is non-calculator). No Y6 SATs-specific content beyo
 
 ---
 *Changelog: v1.0 — initial Maths District spec; build order amended (Maths before NVR) by David's decision.*
+*Changelog addendum (2026-08-01, David's ruling): the "Case shells" deliverable is RATIFIED as the 36-slot engineering plan (content/maths-district-plan.json — strand × engine × order); Case rows, titles and narratives remain reviewer-pipeline content. Also ratified: the fluency thread (§6) is a spec'd core change — warm-up composition gains the round, its seconds charged against the D2 cap, presence governed by the Addendum D intensity columns.*

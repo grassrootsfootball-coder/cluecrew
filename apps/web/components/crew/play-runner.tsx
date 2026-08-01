@@ -17,6 +17,7 @@ import { playCue } from './sound-controller';
 import { Mascot } from './mascot';
 import { SpeakButton } from './speak-button';
 import { stemText } from './engines/shared';
+import { FluencyRound } from './engines/maths/fluency-round';
 import {
   VOICE,
   beatLine,
@@ -47,6 +48,7 @@ type Activity =
   | { kind: 'wind_down' }
   | { kind: 'mode_content'; mode: string; forced: boolean; caseId: string; caseTitle: string }
   | { kind: 'teachback'; caseId: string; working: string[]; corrections: string[] }
+  | { kind: 'fluency_round'; intensity: 'light' | 'standard'; questions: Array<{ prompt: string; answer: number }> }
   | { kind: 'word_collect'; word: { headword: string; definitionChild: string; sentence: string; tier: number } }
   | { kind: 'word_review'; direction: string; prompt: string; options: Array<{ id: string; label: string }> }
   | {
@@ -533,6 +535,29 @@ export function PlayRunner({ childId }: { childId: string }) {
         >
           {flyer.word}
         </div>
+      ) : null}
+
+      {activity.kind === 'fluency_round' ? (
+        <section className="crew-panel" aria-label="Warm-up facts">
+          <h2 style={{ marginTop: 0 }}>{VOICE.fluencyOpen}</h2>
+          <FluencyRound
+            questions={activity.questions}
+            onDone={(correct) =>
+              void (async () => {
+                await fetch(`/api/crew/${childId}/session/fluency`, {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({
+                    correctCount: correct,
+                    questionCount: activity.questions.length,
+                    secondsElapsed: Math.round((Date.now() - shownAt.current) / 1000),
+                  }),
+                });
+                await loadActivity();
+              })()
+            }
+          />
+        </section>
       ) : null}
 
       {activity.kind === 'word_collect' ? (

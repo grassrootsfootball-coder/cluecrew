@@ -202,3 +202,12 @@ Crew Plus / Crew Bursary / Summer Intensive ladder, and adds design law D7
 exists). Full text: docs/AMENDMENT-1-PRICING-V2.md. Recorded on receipt of the
 ratified document; the §5 build migration has NOT yet been implemented and
 awaits David's build instruction.*
+
+*v1.4 (2026-08-01) — D7 clarification, ratified by David: bare currency
+(£) is permitted ONLY inside item content — stem, options, explanation —
+of money-strand-tagged items, because the Maths district teaches money
+and a pound sign in arithmetic is curriculum, not commerce. Commerce
+shapes remain banned in ALL child scope including item content: any
+£N.NN joined to plan/month/upgrade/unlock/subscribe vocabulary, and
+every tier name. The scanner and the CMS import gate both enforce the
+split. Decision David's, transcription Claude Code's.*

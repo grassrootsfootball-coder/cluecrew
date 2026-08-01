@@ -113,6 +113,9 @@ export const mathsPlanFileSchema = z.object({
         mechanic: z.enum(['number-forge', 'workshop', 'mark-homework', 'data-desk', 'shape-shop']),
         orderInDistrict: z.number().int().min(1),
         cluster: z.string().min(1),
+        // D7 clarification (manifesto v1.4): bare currency is permitted in
+        // this slot's ITEM CONTENT only when the reviewer tags it.
+        allowsCurrency: z.boolean().optional(),
       }),
     )
     .length(36),

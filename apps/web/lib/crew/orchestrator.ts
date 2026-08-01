@@ -20,6 +20,7 @@ import {
   railAvailable,
   scheduleNextReview,
   selectItem,
+  completeFluencyRound,
   startSession,
   submitAttempt,
   teachbackContentSchema,
@@ -35,6 +36,7 @@ import {
 } from '@cluecrew/core';
 import { logEvent, prisma, Prisma } from '@cluecrew/db';
 import type { MechanicFamily } from '@cluecrew/core';
+import { fluencyRound } from '@/lib/crew/fluency';
 import { mathsFamilyForType, type MathsFamily } from '@/lib/crew/maths';
 import { buildReplay } from '@/lib/crew/replay';
 import { shuffleOptionsForChild } from '@/lib/crew/shuffle';
@@ -78,6 +80,8 @@ type PendingActivity =
       unitId?: string;
     }
   | { kind: 'word_collect'; wordId: string }
+  /** The warm-up fluency round (§6) — completes via submitFluency. */
+  | { kind: 'fluency_round' }
   | {
       kind: 'word_review';
       wordId: string;
@@ -338,9 +342,19 @@ export async function startDailyLoop(childId: string, caseIdOverride?: string) {
   });
 
   const settings = (child.settings ?? {}) as { sessionMinutes?: number };
+  // The fluency thread (§6, ruling 2026-08-01): presence is the intensity
+  // column's lever, but only once the Maths district actually exists for
+  // children — with zero maths Cases seeded, the lever reads 'off' and
+  // nothing changes for a VR-only child.
+  const mathsCases = await prisma.case.count({
+    where: { questionType: { district: 'MATHS' } },
+  });
+  const fluency = mathsCases > 0 ? intensity.fluency : 'off';
+
   const engine = startSession({
     sessionId: 'pending',
     childId,
+    fluency,
     reviewUnits: pool.map((unit) => ({ unitKind: unit.unitKind, unitId: unit.unitId })),
     wordCardIds: collectCards.map((word) => word.id),
     focusCase: {
@@ -377,6 +391,11 @@ export async function openSessionFor(childId: string) {
 export type ActivityPayload =
   | { kind: 'no_session' }
   | { kind: 'wind_down'; sessionId: string }
+  | {
+      kind: 'fluency_round';
+      intensity: 'light' | 'standard';
+      questions: Array<{ prompt: string; answer: number }>;
+    }
   | { kind: 'mode_content'; mode: Mode; forced: boolean; caseId: string; caseTitle: string; modes: unknown }
   | { kind: 'teachback'; caseId: string; working: string[]; corrections: string[] }
   | {
@@ -462,6 +481,20 @@ async function buildActivity(childId: string): Promise<ActivityPayload> {
       caseId: activity.caseId,
       working: content.working,
       corrections: content.corrections.map((correction) => correction.text),
+    };
+  }
+
+  if (activity.kind === 'fluency_round') {
+    // Facts are generated, not authored (§6): seeded per child per day so a
+    // refresh never re-rolls the round. Light rounds are shorter.
+    const dayKey = new Date().toISOString().slice(0, 10);
+    const questions = fluencyRound(childId, dayKey);
+    serve(state, { kind: 'fluency_round' });
+    await saveState(session.id, state);
+    return {
+      kind: 'fluency_round' as const,
+      intensity: activity.intensity,
+      questions: activity.intensity === 'light' ? questions.slice(0, 6) : questions,
     };
   }
 
@@ -713,6 +746,32 @@ export interface AnswerResult {
   bossRound?: { answered: number; size: number; done: boolean };
 }
 
+/**
+ * Completes the warm-up fluency round (§6, ruling 2026-08-01). Seconds pass
+ * through the same wall-clock-clamped charge as every submission, then the
+ * engine's own 90s envelope — the round can never buy or cost more time
+ * than it truly took, and never more than its slot.
+ */
+export async function submitFluency(
+  childId: string,
+  body: { correctCount: number; questionCount: number; secondsElapsed: number },
+): Promise<{ done: true }> {
+  const session = await openSessionFor(childId);
+  if (!session) throw new Error('no_session');
+  const state = await loadState(session.id);
+  if (state.pending?.kind !== 'fluency_round') throw new Error('nothing_pending');
+  const seconds = chargeableSeconds(state, new Date(), body.secondsElapsed);
+  state.engine = completeFluencyRound(state.engine, {
+    correctCount: Math.max(0, Math.min(body.correctCount, body.questionCount)),
+    questionCount: body.questionCount,
+    secondsElapsed: seconds,
+  });
+  state.pending = null;
+  await drainAndLog(childId, state);
+  await saveState(session.id, state);
+  return { done: true };
+}
+
 export async function submitAnswer(
   childId: string,
   body: { optionId?: string; secondsElapsed: number },
@@ -789,6 +848,11 @@ export async function submitAnswer(
     await drainAndLog(childId, state);
     await saveState(session.id, state);
     return { correct };
+  }
+
+  if (pending.kind === 'fluency_round') {
+    // The round has its own completion call; an answer here is a stray.
+    throw new Error('use_fluency_endpoint');
   }
 
   // Item answer: grade server-side.

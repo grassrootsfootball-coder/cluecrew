@@ -114,7 +114,7 @@ const columnSections = COLUMNS.map((column, columnIndex) => {
       <p class="meta">
         Boss Round ${levers.bossRoundSize}q · review cap ${levers.reviewLoadCap} ·
         new cases/wk ${levers.coverageDriven ? 'coverage-driven' : levers.newCasesPerWeek} ·
-        ladder ${levers.mockLadder} — ${stats}
+        ladder ${levers.mockLadder} · fluency ${levers.fluency} — ${stats}
       </p>
       <div class="charts">
         ${chart(
@@ -124,6 +124,20 @@ const columnSections = COLUMNS.map((column, columnIndex) => {
           1,
           [0.7, 0.85],
         )}
+        ${
+          levers.fluency !== 'off'
+            ? chart(
+                'Fluency round seconds per session (envelope 90; ruling 2026-08-01)',
+                runs.map((result, index) => ({
+                  values: result.fluencySeconds,
+                  color: COLORS[index === 0 ? 0 : 3]!,
+                })),
+                0,
+                120,
+                [90],
+              )
+            : ''
+        }
         ${chart(
           'Session seconds (cap 900, warm finish ≤960)',
           runs.map((result, index) => ({

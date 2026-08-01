@@ -2,7 +2,10 @@
 
 import { redirect } from 'next/navigation';
 import { z } from 'zod';
-import { checkSolution, fingerprintItem, screenAgainstIndex } from '@cluecrew/core';
+import { checkSolution, fingerprintItem, mathsPlanFileSchema, screenAgainstIndex } from '@cluecrew/core';
+import mathsPlanContent from '../../../../content/maths-district-plan.json';
+
+const mathsPlan = mathsPlanFileSchema.parse(mathsPlanContent);
 import { prisma } from '@cluecrew/db';
 import { similarityIndexSource } from '@/lib/similarity-index';
 import { currentStaff, recordAudit, roleAllows } from '@/lib/staff';
@@ -240,6 +243,12 @@ export async function bulkImportAction(formData: FormData): Promise<void> {
     ).map((row) => row.id),
   );
   const solutionFailures: string[] = [];
+  // D7 clarification (manifesto v1.4): commerce shapes are banned in ALL
+  // item content; bare currency only in money-strand-tagged slots.
+  const COMMERCE = /£\s*\d+(\.\d{2})?\s*(\/|\bper\s|a\s)?(month|mo\b|year|week)|\bpaywall\b|\bupgrade|\bsubscri|\bpremium\b|\btrial\b|\bcheckout\b|\bbilling\b|\bfree tier\b|\bfull crew\b|\bcrew plus\b|\bfounding rate\b/i;
+  const currencyAllowed = new Set(
+    mathsPlan.slots.filter((slot) => slot.allowsCurrency).map((slot) => slot.id),
+  );
   items.forEach((entry, position) => {
     if (!mathsTypes.has(entry.questionTypeId)) return;
     if (!entry.solution) {
@@ -248,6 +257,11 @@ export async function bulkImportAction(formData: FormData): Promise<void> {
     }
     const verdict = checkSolution(entry.solution, entry.options);
     if (!verdict.ok) solutionFailures.push(`${position}:${verdict.reason ?? 'mismatch'}`);
+    const text = JSON.stringify([entry.stem, entry.options, entry.explanation]);
+    if (COMMERCE.test(text)) solutionFailures.push(`${position}:commerce-shape-in-item (D7)`);
+    else if (text.includes('£') && !currencyAllowed.has(entry.questionTypeId)) {
+      solutionFailures.push(`${position}:currency-outside-money-strand (D7 v1.4)`);
+    }
   });
   if (solutionFailures.length > 0) {
     await recordAudit(staff.id, 'item.bulk_import_rejected', 'Item', 'batch', {

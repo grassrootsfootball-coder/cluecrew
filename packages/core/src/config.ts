@@ -57,6 +57,9 @@ export const ENGINE_CONFIG = {
     warmupWordCards: 3,
     /** A day is "active" for streaks at ≥ this many minutes. */
     activeDayMinutes: 5,
+    /** The warm-up fluency round may never charge more than this
+     *  (BUILD-DISTRICT-MATHS §6 gate: 60–90s, engine-clamped). */
+    fluencyMaxSeconds: 90,
   },
   frustration: {
     /** After this many consecutive misses: next item one tier easier + offer a Mode revisit. */

@@ -69,6 +69,8 @@ export const VOICE = {
   hqReturning: (cases: number) => `You're back. ${countWord(cases, 'case')} on the board.`,
   hqFirstVisit: "Your board's empty. Let's fix that.",
   hqStartShift: "Start today's shift",
+  // The fluency round's opener (BUILD-DISTRICT-MATHS §6): no speed words, ever.
+  fluencyOpen: 'Sharpen the tools — a few facts before the shift.',
   streakAlive: "Lantern's still lit.",
   streakRekindled: "Lantern's lit again.",
   lockedDistrict: 'Locked. Not your patch yet.',

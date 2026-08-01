@@ -51,18 +51,17 @@ const FIXTURES: Record<EngineKey, Fixture> = {
     ],
   },
   markhomework: {
-    // Deliberately money-free: the D7 scanner bans £ in child scope, and the
-    // money strand's collision with that pattern is a gate decision for
-    // David + reviewer — fixtures don't get to pre-empt it.
+    // Money-strand fixture, unblocked by the D7 clarification (manifesto
+    // v1.4): bare currency in item content of a money-strand slot (mq-26).
     title: 'MARK THE HOMEWORK — find the slip',
     stem: {
-      prompt: 'A shelf job used 3 packs of 6 screws, and 5 spare screws. Check the working.',
-      working: ['3 × 6 = 18', '18 + 5 = 24', 'So 24 screws in all'],
+      prompt: 'A customer paid for 3 shelves at £6 each and a £5 fitting fee. Check the working.', // money-strand-item
+      working: ['3 × £6 = £18', '£18 + £5 = £24', 'Total: £24'], // money-strand-item
     },
     options: [
-      { id: 'a', content: '3 × 6 = 18' },
-      { id: 'b', content: '18 + 5 = 24' },
-      { id: 'c', content: 'So 24 screws in all' },
+      { id: 'a', content: '3 × £6 = £18' }, // money-strand-item
+      { id: 'b', content: '£18 + £5 = £24' }, // money-strand-item
+      { id: 'c', content: 'Total: £24' }, // money-strand-item
     ],
   },
   datadesk: {

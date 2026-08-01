@@ -14,6 +14,7 @@ import {
   completeMode,
   completeTeachback,
   scheduleNextReview,
+  completeFluencyRound,
   startSession,
   submitAttempt,
   tick,
@@ -76,6 +77,8 @@ export interface SimResult {
   crackedEverUncrackedByDecay: boolean;
   maxReviewPoolSize: number;
   scheduledIntervals: Array<{ day: number; intervalDays: number }>;
+  /** Seconds each simulated fluency round charged (gate 6: never >90). */
+  fluencySeconds: number[];
   finalAbility: number;
   /** Case types first opened after day 0 — the final stretch must add none. */
   newTypesOpened: number;
@@ -131,6 +134,7 @@ export function runSimulation(profile: LearnerProfile, options: SimOptions = {})
     crackedEverUncrackedByDecay: false,
     maxReviewPoolSize: 0,
     scheduledIntervals: [],
+    fluencySeconds: [],
     finalAbility: ability,
     newTypesOpened: 0,
   };
@@ -212,6 +216,7 @@ export function runSimulation(profile: LearnerProfile, options: SimOptions = {})
     if (focus.firstOpenedDay === null) focus.firstOpenedDay = day;
     let state: SessionState = startSession({
       bossRoundSize: levers.bossRoundSize,
+      fluency: levers.fluency,
       sessionId: `s-${profile.name}-${day}`,
       childId: `sim-${profile.name}`,
       reviewUnits: pool.map((unit) => ({ unitKind: unit.unitKind, unitId: unit.unitId })),
@@ -242,6 +247,24 @@ export function runSimulation(profile: LearnerProfile, options: SimOptions = {})
       state = advanced;
 
       if (activity.kind === 'wind_down') break;
+
+      if (activity.kind === 'fluency_round') {
+        const questionCount = activity.intensity === 'light' ? 6 : 8;
+        let correctCount = 0;
+        let fluencySeconds = 0;
+        for (let q = 0; q < questionCount; q += 1) {
+          const correct = random() < pCorrect(ability, 1.4, mood);
+          if (correct) correctCount += 1;
+          fluencySeconds += correct ? 5 + Math.floor(random() * 5) : 9 + Math.floor(random() * 6);
+        }
+        state = completeFluencyRound(state, {
+          correctCount,
+          questionCount,
+          secondsElapsed: fluencySeconds,
+        });
+        result.fluencySeconds.push(fluencySeconds > 90 ? 90 : fluencySeconds);
+        continue;
+      }
 
       if (activity.kind === 'warmup_item') {
         const unit = reviews.get(activity.unit.unitId);

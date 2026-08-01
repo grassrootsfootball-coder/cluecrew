@@ -5,6 +5,7 @@ import {
   nextActivity,
   openMode,
   declineModeOffer,
+  completeFluencyRound,
   completeTeachback,
   startSession,
   submitAttempt,
@@ -207,5 +208,47 @@ describe('stopping early punishes nothing', () => {
     expect(names).toContain('session_ended');
     // No punitive event exists in the vocabulary at all.
     expect(names.join(',')).not.toMatch(/lost|broken|penal/);
+  });
+});
+
+describe('the fluency round (BUILD-DISTRICT-MATHS §6, wired by ruling 2026-08-01)', () => {
+  it('opens the warm-up when the intensity column asks for it, and only then', () => {
+    const withFluency = makeSession({ fluency: 'standard' });
+    const first = nextActivity(withFluency);
+    expect(first.activity).toEqual({ kind: 'fluency_round', intensity: 'standard' });
+
+    const without = makeSession();
+    expect(nextActivity(without).activity.kind).toBe('warmup_item');
+  });
+
+  it('charges its seconds against the D2 cap, clamped to the 90s envelope', () => {
+    const state = makeSession({ fluency: 'light' });
+    const after = completeFluencyRound(state, {
+      correctCount: 6,
+      questionCount: 8,
+      secondsElapsed: 600, // a wedged client cannot spend ten minutes here
+    });
+    expect(after.secondsActive).toBe(90);
+    expect(after.warmup.fluencyDone).toBe(true);
+    // The round is done: the warm-up queue takes over.
+    expect(nextActivity(after).activity.kind).toBe('warmup_item');
+  });
+
+  it('never outranks the cap: at the soft stop the round is skipped like everything else', () => {
+    let state = makeSession({ fluency: 'standard' });
+    state = tick(state, state.capSeconds); // an exhausted session
+    const next = nextActivity(state);
+    expect(next.activity.kind).not.toBe('fluency_round');
+    expect(next.activity.kind).not.toBe('warmup_item');
+  });
+
+  it('reports facts through the existing warm-up event — streak logic untouched', () => {
+    const state = makeSession({ fluency: 'light' });
+    const after = completeFluencyRound(state, { correctCount: 8, questionCount: 8, secondsElapsed: 62 });
+    const drained = drainEvents(after).events;
+    const fluencyEvent = drained.find(
+      (event) => event.name === 'warmup_item_result' && event.props.fluency === true,
+    );
+    expect(fluencyEvent?.props).toMatchObject({ correct: 8, of: 8 });
   });
 });
