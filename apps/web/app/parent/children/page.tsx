@@ -49,9 +49,9 @@ export default async function ChildrenPage({
         return (
           <div className="cc-card" key={child.id}>
             <h2 style={{ marginTop: 0 }}>{child.crewName}</h2>
-            <p>
+            <div style={{ margin: '0.75rem 0' }}>
               <EnterCrewButton childId={child.id} crewName={child.crewName} />
-            </p>
+            </div>
             <form className="cc-form" action={updateChildAction}>
               <input type="hidden" name="childId" value={child.id} />
               <label>

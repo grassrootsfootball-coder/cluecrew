@@ -1,32 +1,19 @@
 'use client';
 
-import { useState } from 'react';
+/**
+ * Signup submits to a server action for the same progressive-enhancement
+ * guarantee as login: live from first paint, and a pre-hydration submit is a
+ * POST to the action — the password can never land in a URL (§4).
+ */
+import { useActionState } from 'react';
+import { signupAction, type AuthFormState } from '@/lib/actions/auth';
+
+const INITIAL: AuthFormState = { error: null, done: false };
 
 export default function SignupPage() {
-  const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [busy, setBusy] = useState(false);
+  const [state, formAction, pending] = useActionState(signupAction, INITIAL);
 
-  async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setBusy(true);
-    setError(null);
-    const form = new FormData(event.currentTarget);
-    const response = await fetch('/api/auth/signup', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        email: form.get('email'),
-        password: form.get('password'),
-        displayName: form.get('displayName'),
-      }),
-    });
-    setBusy(false);
-    if (response.ok) setSubmitted(true);
-    else setError('That did not work — please check the details and try again.');
-  }
-
-  if (submitted) {
+  if (state.done) {
     return (
       <main className="cc-container">
         <h1>Check your inbox</h1>
@@ -45,7 +32,7 @@ export default function SignupPage() {
         Parents own the account; children get their own safe profiles inside it. The 7-day trial
         needs no card.
       </p>
-      <form className="cc-form" onSubmit={onSubmit}>
+      <form className="cc-form" action={formAction}>
         <label>
           Your first name
           <input name="displayName" type="text" required maxLength={80} autoComplete="given-name" />
@@ -67,9 +54,9 @@ export default function SignupPage() {
           <input type="checkbox" required />
           <span>I have read the privacy notice (plain-English version included).</span>
         </label>
-        {error ? <p role="alert">{error}</p> : null}
-        <button className="cc-button" type="submit" disabled={busy}>
-          {busy ? 'Creating…' : 'Create account'}
+        {state.error ? <p role="alert">{state.error}</p> : null}
+        <button className="cc-button" type="submit" disabled={pending}>
+          {pending ? 'Creating…' : 'Create account'}
         </button>
       </form>
       <p className="cc-muted">
