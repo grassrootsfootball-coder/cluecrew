@@ -1,8 +1,10 @@
 import { PricingViewedBeacon } from '@/components/founding/analytics';
 import { RegionDecoder } from '@/components/founding/decoder';
 import { DemoWidget } from '@/components/founding/demo';
+import { FiveWays } from '@/components/founding/five-ways';
 import { PricingTable } from '@/components/founding/pricing-table';
 import { StickyBar } from '@/components/founding/sticky-bar';
+import '@/app/crew/crew.css'; // the Alphabet Rail's own styles (V3.1 §A See-it tab)
 
 /**
  * The live launch page, Step 1 (LIVE-LAUNCH-PACK-V3): no waitlist theatre —
@@ -55,6 +57,80 @@ export default async function FoundingPage({
           <div className="cc-container">
             <h2>Here&apos;s what it feels like.</h2>
             <DemoWidget />
+          </div>
+        </section>
+
+        {/* One concept, five ways in (V3.1 §A) — the depth-proof. */}
+        <section className="mk-section">
+          <div className="cc-container">
+            <h2>One concept, five ways in.</h2>
+            <p className="cc-muted" style={{ maxWidth: '44rem' }}>
+              <em>
+                Most platforms explain something once and hope. ClueCrew teaches every question
+                type five ways — and your child picks what clicks.
+              </em>
+            </p>
+            <FiveWays />
+            <p style={{ maxWidth: '44rem' }}>
+              <em>
+                &ldquo;When something isn&apos;t landing, the engine notices — and offers a
+                different way in before frustration ever sets in.&rdquo;
+              </em>
+            </p>
+          </div>
+        </section>
+
+        {/* Under the bonnet (V3.1 §B) — every entry verified against the
+            shipped engine before it was written here. */}
+        <section className="mk-section">
+          <div className="cc-container" style={{ maxWidth: '44rem' }}>
+            <h2>Built like it matters. Because it does.</h2>
+            <p className="cc-muted">
+              <em>
+                For the parents who want to know exactly what they&apos;re signing their child up
+                to — here&apos;s the engine, plainly.
+              </em>
+            </p>
+            <p data-testid="bonnet-1">
+              <strong>Review timed to the forgetting curve.</strong> Every session opens by
+              revisiting what your child learned before — spaced at the intervals memory research
+              says they&apos;d otherwise start to forget, tightening automatically as the exam
+              approaches.
+            </p>
+            <p>
+              <strong>Difficulty that keeps them in the zone.</strong> The engine holds your child
+              where they succeed roughly three times out of four — hard enough to grow, never hard
+              enough to break. Two misses in a row and it eases off and offers another way in.
+              Three, and it changes the subject. No child grinds against a wall here.
+            </p>
+            <p>
+              <strong>Every wrong answer is authored.</strong> Each distractor is built from a
+              real, named misconception — so a miss produces the hint for that exact mix-up, not a
+              generic &ldquo;try again&rdquo;. A teacher signs off every question before any child
+              sees it.
+            </p>
+            <p>
+              <strong>Mock exams that wait until they&apos;re ready.</strong> Papers unlock only
+              when your child has been taught every question type on them and their exam-format
+              accuracy says they&apos;re ready. A mock should measure readiness — never ambush.
+            </p>
+            <p>
+              <strong>Intensity that follows the calendar.</strong> A Year 4 gets foundations at a
+              gentle pace; the final four months before the exam introduce nothing new —
+              consolidation only. The plan changes; the 15-minute cap never does.
+            </p>
+            <p>
+              <strong>The exam format, made boring.</strong> Every session ends with real
+              exam-format questions, no tools, no theming — so by September, test formatting is
+              the most familiar thing in the room.
+            </p>
+            <p className="cc-muted">
+              <em>
+                Want the full picture? We publish how ClueCrew teaches — every rule above, and the
+                evidence behind it. The answer is never &ldquo;trade secret&rdquo;.
+              </em>{' '}
+              <a href="/how-we-teach">How we teach</a>
+            </p>
           </div>
         </section>
 

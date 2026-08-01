@@ -123,6 +123,64 @@ test('every wrong option surfaces its own hint — the hint-mismatch pin', async
   await expect(page.getByText(/Six packs would cover it/)).toBeVisible();
 });
 
+test('five ways in: every tab is real, the rail scrubs, the try item plays (V3.1 §A)', async ({
+  page,
+}) => {
+  await page.goto('/founding');
+  const section = page.getByTestId('five-ways');
+
+  // Watch + Hear carry their honest in-production tags, never a fake player.
+  await expect(section.getByText('the animation is in production')).toBeVisible();
+
+  // Walk: three steps, scaffold fading, the solo step ends in the repeat trap.
+  await section.getByRole('tab', { name: 'Walk it' }).click();
+  await expect(section.getByText('CAB costs 11')).toBeVisible();
+  await section.getByRole('button', { name: 'Next step' }).click();
+  await section.getByRole('button', { name: 'Show the finish' }).click();
+  await expect(section.getByText('B‑A‑T is 7 + 6 = 13.')).toBeVisible();
+  await section.getByRole('button', { name: 'Next step' }).click();
+  await section.getByRole('button', { name: 'Show the finish' }).click();
+  await expect(section.getByText('T + A + C + T = 6 + 2 + 4 + 6 = 18.')).toBeVisible();
+
+  // See: the REAL Alphabet Rail — tap two letters, the jump counts.
+  await section.getByRole('tab', { name: 'See it' }).click();
+  await section.getByRole('button', { name: 'B', exact: true }).click();
+  await section.getByRole('button', { name: 'E', exact: true }).click();
+  await expect(section.getByText('B to E: 3 jumps')).toBeVisible();
+
+  // Hear: transcript visible with the device-speech tag.
+  await section.getByRole('tab', { name: 'Hear it' }).click();
+  await expect(section.getByText('Read aloud by your device')).toBeVisible();
+  await expect(section.getByText(/it gets paid both times/)).toBeVisible();
+
+  // Try: the letter-code item with the product behaviour.
+  await section.getByRole('tab', { name: 'Try it' }).click();
+  await section.getByRole('button', { name: '18', exact: true }).click();
+  await expect(section.getByText(/Not yet\. So close — check the letter T/)).toBeVisible();
+  await section.getByRole('button', { name: '24', exact: true }).click();
+  await expect(section.getByText(/You paid every letter, even the repeat/)).toBeVisible();
+});
+
+test('under the bonnet: six entries and the transparency link (V3.1 §B)', async ({ page }) => {
+  await page.goto('/founding');
+  await expect(page.getByRole('heading', { name: 'Built like it matters. Because it does.' })).toBeVisible();
+  for (const lead of [
+    'Review timed to the forgetting curve.',
+    'Difficulty that keeps them in the zone.',
+    'Every wrong answer is authored.',
+    "Mock exams that wait until they're ready.",
+    'Intensity that follows the calendar.',
+    'The exam format, made boring.',
+  ]) {
+    await expect(page.getByText(lead)).toBeVisible();
+  }
+  await page.getByRole('link', { name: 'How we teach' }).click();
+  await page.waitForURL('**/how-we-teach');
+  await expect(page.getByRole('heading', { name: 'How ClueCrew teaches' })).toBeVisible();
+  // The shell never pretends: it says the write-up is on its way.
+  await expect(page.getByText('is being finished and lands here')).toBeVisible();
+});
+
 test('the Region Decoder answers in ten seconds and always carries the caveat', async ({
   page,
 }) => {

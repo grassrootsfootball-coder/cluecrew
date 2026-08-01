@@ -121,6 +121,60 @@ const ITEMS: DemoItem[] = [
 
 type Feedback = { kind: 'praise' | 'hint'; text: string } | null;
 
+/**
+ * One playable item with the product's answer behaviour — used by the demo
+ * flow and by the "Try it" tab of the five-ways section (V3.1 §A), so the
+ * two can never drift apart.
+ */
+export function SingleItemCard({ item }: { item: DemoItem }) {
+  const [feedback, setFeedback] = useState<Feedback>(null);
+  const [solved, setSolved] = useState(false);
+
+  function choose(option: DemoOption) {
+    if (solved) return;
+    if (option.id === item.correctId) {
+      setSolved(true);
+      setFeedback({ kind: 'praise', text: item.praise });
+    } else {
+      setFeedback({
+        kind: 'hint',
+        text: `Not yet. ${option.hint ?? 'Have another look at the question.'} Have another go.`,
+      });
+    }
+  }
+
+  return (
+    <div className={`fd-demo ${item.family}`}>
+      <p className="fd-demo-kicker">{item.kicker}</p>
+      <p className="fd-demo-stem">{item.stem}</p>
+      <div className="fd-demo-options" role="group" aria-label="Answer choices">
+        {item.options.map((option) => (
+          <button
+            key={option.id}
+            type="button"
+            className="fd-demo-option"
+            onClick={() => choose(option)}
+            disabled={solved && option.id !== item.correctId}
+          >
+            {option.label}
+          </button>
+        ))}
+      </div>
+      <p
+        aria-live="polite"
+        className={
+          feedback ? (feedback.kind === 'praise' ? 'fd-demo-praise' : 'fd-demo-hint') : 'fd-demo-quiet'
+        }
+      >
+        {feedback?.text ?? ''}
+      </p>
+    </div>
+  );
+}
+
+/** The first demo item (letter codes) — the five-ways "Try it" tab's content. */
+export const LETTER_CODE_ITEM = ITEMS[0]!;
+
 export function DemoWidget() {
   const [index, setIndex] = useState(0);
   const [feedback, setFeedback] = useState<Feedback>(null);

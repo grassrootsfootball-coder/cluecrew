@@ -505,3 +505,57 @@ li {
 @media (max-width: 760px) {
   .fd-three-up { grid-template-columns: 1fr; }
 }
+
+/* ---------- V3.1 five-ways section ---------- */
+.fd-fiveways {
+  max-width: 44rem;
+  border: 1px solid color-mix(in srgb, var(--cc-ink) 14%, transparent);
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--cc-cream) 60%, #fdfcf9);
+}
+.fd-fiveways-tabs {
+  display: flex;
+  gap: 0.25rem;
+  overflow-x: auto; /* the 375px swipeable strip */
+  border-bottom: 1px solid color-mix(in srgb, var(--cc-ink) 14%, transparent);
+  padding: 0.5rem 0.5rem 0;
+}
+.fd-fiveways-tab {
+  font: inherit;
+  font-weight: 600;
+  white-space: nowrap;
+  padding: 0.55rem 0.9rem;
+  border: none;
+  border-bottom: 3px solid transparent;
+  background: none;
+  color: var(--cc-ink);
+  cursor: pointer;
+  min-height: 44px;
+}
+.fd-fiveways-tab.active {
+  border-bottom-color: var(--cc-amber);
+}
+.fd-fiveways-tab:focus-visible {
+  outline: 2px solid var(--cc-amber);
+  outline-offset: -2px;
+}
+.fd-fiveways [role='tabpanel'] {
+  padding: 1rem 1.25rem 1.25rem;
+}
+.fd-fiveways-tag {
+  display: inline-block;
+  font-size: 0.85rem;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--cc-ink) 8%, transparent);
+}
+.fd-fiveways-kicker {
+  font-weight: 600;
+  margin-top: 0;
+}
+.fd-walk {
+  border-left: 4px solid var(--cc-vr-teal);
+  padding-left: 0.9rem;
+}
+.fd-walk.scaffold-half { border-left-style: dashed; }
+.fd-walk.scaffold-none { border-left-color: transparent; }
