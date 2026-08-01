@@ -489,6 +489,9 @@ model WaitlistSignup {
   yearGroup   Int?
   // UTM source per §4 (fb-kent, org-bucks, …) — measurement, never marketing.
   src         String?
+  // Which capture box (V2 §2: demo-end | region-decoder | sticky | hero) —
+  // buyer temperatures differ and the mix is itself a finding.
+  source      String?
   tokenHash   String    @unique
   confirmedAt DateTime?
   createdAt   DateTime  @default(now())

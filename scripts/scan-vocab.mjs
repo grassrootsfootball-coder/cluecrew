@@ -84,6 +84,7 @@ const EVERYWHERE_SCOPE = [
   'content',
   'docs/review-recording-guide.md',
   'docs/DEMAND-TEST-PACK.md',
+  'docs/DEMAND-TEST-PACK-V2.md',
 ];
 const CHILD_FACING_SCOPE = [
   'apps/web/app/crew',

@@ -1,13 +1,19 @@
-import { prisma } from '@cluecrew/db';
 import { PricingViewedBeacon } from '@/components/founding/analytics';
+import { RegionDecoder } from '@/components/founding/decoder';
+import { DemoWidget } from '@/components/founding/demo';
+import { StickyBar } from '@/components/founding/sticky-bar';
 import { joinWaitlistAction } from '@/lib/actions/waitlist';
 
 /**
- * The demand-test page (DEMAND-TEST-PACK §2). Copy is VERBATIM from the pack
- * — it is scanned content and every line is L1/L2-clean by construction; do
- * not edit copy here without editing the pack. No product screenshots, no
- * countdowns, no popups (§1). The form is a server action so it works from
- * first paint, and the UTM src (§4) rides a hidden field.
+ * The demand-test page, V2 (DEMAND-TEST-PACK-V2 §1): experience before
+ * email — the order of the sections IS the argument. Copy is verbatim from
+ * the pack where the pack gives it; do not edit copy here without editing
+ * the pack. No screenshots, no stock photos, no countdowns, no popups, no
+ * exit-intent, no fake scarcity (§6).
+ *
+ * HUMAN GATES before public DNS: the three demo items need reviewer
+ * sign-off, and the founder note below is a DRAFT in David's voice that
+ * only David can ratify.
  */
 export default async function FoundingPage({
   searchParams,
@@ -15,98 +21,106 @@ export default async function FoundingPage({
   searchParams: Promise<{ src?: string }>;
 }) {
   const { src } = await searchParams;
-  const regions = await prisma.region.findMany({
-    orderBy: { name: 'asc' },
-    select: { id: true, name: true },
-  });
-
-  const waitlistBox = (
-    <div className="cc-card" style={{ maxWidth: '34rem' }}>
-      <form action={joinWaitlistAction} className="cc-form">
-        <p style={{ margin: 0, fontWeight: 700 }}>Join the Founding Crew waitlist →</p>
-        <label>
-          Email
-          <input name="email" type="email" required autoComplete="email" />
-        </label>
-        <label>
-          Your region (optional)
-          <select name="regionCode" defaultValue="">
-            <option value="">Choose a region…</option>
-            {regions.map((region) => (
-              <option key={region.id} value={region.id}>
-                {region.name}
-              </option>
-            ))}
-            <option value="not-sure">Not sure yet</option>
-          </select>
-        </label>
-        <label>
-          {/* Addendum D §1 wording, same as onboarding. */}
-          Which year group are they in from this September? (optional)
-          <select name="yearGroup" defaultValue="">
-            <option value="">Choose a year…</option>
-            <option value="3">Year 3</option>
-            <option value="4">Year 4</option>
-            <option value="5">Year 5</option>
-            <option value="6">Year 6</option>
-          </select>
-        </label>
-        {typeof src === 'string' && /^[a-zA-Z0-9-]{1,40}$/.test(src) ? (
-          <input type="hidden" name="src" value={src} />
-        ) : null}
-        <button className="cc-button" type="submit">
-          Join
-        </button>
-        <p className="cc-muted" style={{ margin: 0 }}>
-          We&apos;ll email you about ClueCrew&apos;s launch and nothing else. Unsubscribe anytime.{' '}
-          <a href="/founding/privacy">Privacy notice</a>.
-        </p>
-      </form>
-      <p className="cc-muted" style={{ marginBottom: 0 }}>
-        <em>Founding families get our best-ever rate, locked for their whole programme.</em>
-      </p>
-    </div>
-  );
+  const cleanSrc = typeof src === 'string' && /^[a-zA-Z0-9-]{1,40}$/.test(src) ? src : null;
 
   return (
     <>
+      <StickyBar />
+
       <header className="mk-hero">
         <div className="mk-hero-inner">
           <div className="mk-hero-words">
             <img src="/cluecrew-logo.svg" alt="ClueCrew" width={280} height={71} />
             <h1 className="mk-hero-line">The 11+ finally makes sense.</h1>
             <p className="mk-hero-sub">
-              Every question type, explained the way that clicks for <em>your</em> child — in 15
-              calm minutes a day. Built for every family, priced like it means it.
+              Every question type, taught the way that clicks for <em>your</em> child — 15 calm
+              minutes a day, at a price built for every family.
             </p>
-            {waitlistBox}
+            <p className="mk-hero-cta">
+              <a className="cc-button" href="#demo">
+                Try a question — takes 20 seconds
+              </a>
+            </p>
+            <p>
+              <a className="fd-quiet-link" href="#waitlist">
+                Join the Founding Crew waitlist
+              </a>
+            </p>
           </div>
         </div>
       </header>
 
       <main>
+        <section className="mk-section" id="demo">
+          <div className="cc-container">
+            <h2>Here&apos;s what it feels like.</h2>
+            <DemoWidget />
+
+            <div className="cc-card fd-waitlist" id="waitlist">
+              <form action={joinWaitlistAction} className="cc-form">
+                <p style={{ margin: 0, fontWeight: 700 }}>
+                  Get your child early access — join the Founding Crew
+                </p>
+                <label>
+                  Email
+                  <input name="email" type="email" required autoComplete="email" />
+                </label>
+                <label>
+                  Which year group are they in from this September? (optional)
+                  <select name="yearGroup" defaultValue="">
+                    <option value="">Choose a year…</option>
+                    <option value="3">Year 3</option>
+                    <option value="4">Year 4</option>
+                    <option value="5">Year 5</option>
+                    <option value="6">Year 6</option>
+                  </select>
+                </label>
+                <input type="hidden" name="source" value="demo-end" />
+                {cleanSrc ? <input type="hidden" name="src" value={cleanSrc} /> : null}
+                <button className="cc-button" type="submit">
+                  Join
+                </button>
+                <p className="cc-muted" style={{ margin: 0 }}>
+                  We&apos;ll email you about ClueCrew&apos;s launch and nothing else. Unsubscribe
+                  anytime. <a href="/founding/privacy">Privacy notice</a>.
+                </p>
+              </form>
+              <p className="cc-muted" style={{ marginBottom: 0 }}>
+                <em>Founding families get our best-ever rate, locked for their whole programme.</em>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="mk-section">
+          <div className="cc-container">
+            <h2>Every region runs the 11+ differently. Here&apos;s yours.</h2>
+            <RegionDecoder src={cleanSrc} />
+          </div>
+        </section>
+
         <section className="mk-section">
           <div className="cc-container">
             <div className="mk-grid">
-              <div className="mk-feature">
-                <h3>Crack cases, don&apos;t do drills.</h3>
+              <div className="mk-feature fd-accent-vr">
+                <h3>Crack cases, don&apos;t do drills</h3>
                 <p>
-                  Verbal reasoning becomes codebreaking. Maths problems become jobs in the Workshop.
-                  Same exam skills, completely different feeling.
+                  VR becomes codebreaking; maths problems become jobs in the Workshop. Same exam
+                  skills, different feeling entirely.
                 </p>
               </div>
-              <div className="mk-feature">
-                <h3>Every concept, multiple ways.</h3>
+              <div className="mk-feature fd-accent-nvr">
+                <h3>Every concept, multiple ways</h3>
                 <p>
-                  Watch it, walk through it, see it, hear it, or just try it — your child chooses
-                  how it clicks. When one way doesn&apos;t land, another one will.
+                  Watch it, walk it, see it, hear it, or just try it. Your child picks how it
+                  clicks.
                 </p>
               </div>
-              <div className="mk-feature">
-                <h3>Calm by design.</h3>
+              <div className="mk-feature fd-accent-maths">
+                <h3>Calm by design</h3>
                 <p>
-                  Fifteen minutes a day, capped. No red pen, no leaderboards, no pressure
-                  mechanics. Mocks unlock only when your child is genuinely ready for them.
+                  15 minutes daily, capped. No red pen, no leaderboards. Mocks unlock only when
+                  your child is ready for them — never before.
                 </p>
               </div>
             </div>
@@ -114,12 +128,31 @@ export default async function FoundingPage({
         </section>
 
         <section className="mk-section">
-          <div className="cc-container">
-            <p className="cc-muted" style={{ maxWidth: '44rem' }}>
+          <div className="cc-container" style={{ maxWidth: '44rem' }}>
+            <p style={{ fontWeight: 700 }}>
               We won&apos;t promise you a pass. Nobody honestly can. We promise the clearest
-              teaching we know how to build, real exam-format practice, and a straight answer about
-              how it&apos;s going.
+              teaching we know how to build, real exam practice, and a straight answer about how
+              it&apos;s going.
             </p>
+            <p>
+              Every question is written to a misconception map and signed off by a qualified KS2
+              teacher before it goes live. Ask us anything about how it&apos;s built — the answer
+              is never &ldquo;trade secret&rdquo;.
+            </p>
+            {/* Founder note (V2 §1.4): DRAFT in David's first person — David
+                must ratify or rewrite before public DNS. */}
+            <p className="fd-founder-note">
+              I&apos;m building ClueCrew because 11+ prep is either £8 workbooks your child
+              ignores or platforms that cost more than school dinners. The families the market
+              ignores are the ones I&apos;m building for first. If we can&apos;t make this work
+              for them, we haven&apos;t made it work. — David
+            </p>
+            <div className="cc-card">
+              <p style={{ margin: 0 }}>
+                <strong>Full access, free, for families on free school meals.</strong> One bursary
+                place opens for every ten paid ones. Same product, exactly.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -164,16 +197,6 @@ export default async function FoundingPage({
         </PricingViewedBeacon>
 
         <section className="mk-section">
-          <div className="cc-container">
-            <p style={{ maxWidth: '44rem' }}>
-              New to all this? So are half the families we&apos;re building for. ClueCrew explains
-              the whole system in plain language — which test your region uses, how scoring works,
-              how much practice is enough, and how to support without pressuring.
-            </p>
-          </div>
-        </section>
-
-        <section className="mk-section">
           <div className="cc-container" style={{ maxWidth: '44rem' }}>
             <h2>Questions parents ask</h2>
             <p>
@@ -197,6 +220,12 @@ export default async function FoundingPage({
             <p>
               <em>What about screen time?</em> Fifteen minutes daily, hard-capped. We think
               that&apos;s a feature.
+            </p>
+            <p>
+              <em>Is this like Atom?</em> Different philosophy. We don&apos;t predict your
+              child&apos;s chances or compare them to other applicants — we teach, calmly, and show
+              you honestly how it&apos;s going. Also: a quarter of the price, and free if
+              you&apos;re on free school meals.
             </p>
           </div>
         </section>

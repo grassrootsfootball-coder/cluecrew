@@ -363,3 +363,128 @@ li {
   gap: 0.6rem 1.2rem;
   margin: 0 0 0.7rem;
 }
+
+/* ---------- Demand test v2 (DEMAND-TEST-PACK-V2) ---------- */
+/* The demo widget: the product's answer feeling without its engines.
+   Amber = progress, coral = try-again (D1: never red). Mobile-first —
+   the entire test audience is at 375px. */
+
+.fd-quiet-link {
+  color: var(--cc-ink);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.fd-demo {
+  max-width: 34rem;
+  border: 1px solid color-mix(in srgb, var(--cc-ink) 14%, transparent);
+  border-radius: 14px;
+  padding: 1.25rem;
+  background: color-mix(in srgb, var(--cc-cream) 60%, #fdfcf9);
+}
+.fd-demo.codebreaker { border-top: 5px solid var(--cc-vr-teal); }
+.fd-demo.stowaway { border-top: 5px solid var(--cc-nvr-violet); }
+.fd-demo.workshop { border-top: 5px solid var(--cc-maths-green); }
+
+.fd-demo-kicker {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  color: color-mix(in srgb, var(--cc-ink) 70%, transparent);
+}
+.fd-demo-stem { margin: 0 0 1rem; font-weight: 600; }
+
+.fd-demo-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  gap: 0.5rem;
+}
+.fd-demo-option {
+  font: inherit;
+  padding: 0.7rem 0.9rem;
+  border-radius: 10px;
+  border: 1px solid color-mix(in srgb, var(--cc-ink) 30%, transparent);
+  background: var(--cc-cream);
+  color: var(--cc-ink);
+  cursor: pointer;
+  min-height: 44px; /* tap target */
+}
+.fd-demo-option:hover:not(:disabled),
+.fd-demo-option:focus-visible {
+  border-color: var(--cc-amber);
+  outline: 2px solid var(--cc-amber);
+  outline-offset: 1px;
+}
+.fd-demo-option:disabled { opacity: 0.5; cursor: default; }
+
+.fd-demo-quiet,
+.fd-demo-praise,
+.fd-demo-hint {
+  min-height: 3.2rem;
+  margin: 0.9rem 0;
+  padding: 0.6rem 0.8rem;
+  border-radius: 10px;
+}
+.fd-demo-praise {
+  background: color-mix(in srgb, var(--cc-amber) 20%, var(--cc-cream));
+  border-left: 4px solid var(--cc-amber);
+}
+.fd-demo-hint {
+  background: color-mix(in srgb, var(--cc-coral) 14%, var(--cc-cream));
+  border-left: 4px solid var(--cc-coral);
+}
+.fd-demo-close {
+  margin: 0;
+  font-weight: 600;
+  border-left: 4px solid var(--cc-amber);
+  padding-left: 0.8rem;
+}
+
+.fd-waitlist { max-width: 34rem; margin-top: 1.5rem; }
+
+.fd-decoder { max-width: 34rem; }
+.fd-decoder-pick { display: block; font-weight: 600; }
+.fd-decoder-pick select {
+  display: block;
+  width: 100%;
+  margin-top: 0.4rem;
+  font: inherit;
+  padding: 0.6rem;
+  border-radius: 10px;
+  border: 1px solid color-mix(in srgb, var(--cc-ink) 30%, transparent);
+  background: var(--cc-cream);
+  color: var(--cc-ink);
+}
+.fd-decoder-card { margin-top: 1rem; }
+.fd-decoder-capture { margin-top: 1rem; }
+
+.fd-accent-vr { border-top: 4px solid var(--cc-vr-teal); }
+.fd-accent-nvr { border-top: 4px solid var(--cc-nvr-violet); }
+.fd-accent-maths { border-top: 4px solid var(--cc-maths-green); }
+
+.fd-founder-note {
+  border-left: 4px solid color-mix(in srgb, var(--cc-ink) 30%, transparent);
+  padding-left: 0.9rem;
+  font-style: italic;
+}
+
+.fd-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 1rem;
+  background: color-mix(in srgb, var(--cc-cream) 92%, #fdfcf9);
+  border-bottom: 1px solid color-mix(in srgb, var(--cc-ink) 14%, transparent);
+}
+.fd-sticky-label { flex: 1; font-weight: 600; font-size: 0.95rem; }
+.fd-sticky-join { padding: 0.4rem 1.1rem; }
+
+@media (max-width: 420px) {
+  .fd-demo { padding: 1rem; }
+  .fd-demo-options { grid-template-columns: 1fr 1fr; }
+  .fd-sticky-label { display: none; }
+}

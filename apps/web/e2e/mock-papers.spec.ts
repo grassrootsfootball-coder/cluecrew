@@ -206,13 +206,18 @@ test('the full sitting: book → sit in Plain mode → child result without numb
   // The child result: names, one focus, and not a digit anywhere.
   await expect(page.getByTestId('mock-result')).toBeVisible();
   await expect(page.getByText('Time. Pens down, Detective.')).toBeVisible();
+  // Strengths appear only when something went well — a child whose seeded
+  // option order led them astray on every question legitimately has none.
+  // innerText() RETRIES until timeout on a missing element, so the absent
+  // block must be a bounded wait, not a 3-minute stall (the cause of this
+  // spec's long-standing "flake").
   const strengths = await page
     .getByTestId('result-strengths')
-    .innerText()
+    .innerText({ timeout: 2_000 })
     .catch(() => '');
   const focus = await page
     .getByTestId('result-focus')
-    .innerText()
+    .innerText({ timeout: 2_000 })
     .catch(() => '');
   expect(`${strengths}${focus}`).not.toMatch(/\d/);
 

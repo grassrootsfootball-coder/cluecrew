@@ -101,11 +101,23 @@ export function bursaryWaitlistTemplate(name: string): EmailContent {
   };
 }
 
-/** Double opt-in for the Founding Crew waitlist (DEMAND-TEST-PACK §3). */
-export function waitlistConfirmTemplate(link: string): EmailContent {
+/**
+ * Double opt-in for the Founding Crew waitlist (DEMAND-TEST-PACK §3; V2 §2).
+ * When the signup came through the Region Decoder, the promised one-page
+ * guide travels IN this email — value first, list-join only after the tap.
+ */
+export function waitlistConfirmTemplate(
+  link: string,
+  regionGuide: { name: string; guideUrl: string } | null = null,
+): EmailContent {
+  const guide = regionGuide
+    ? `\n\nYour one-page guide to the 11+ in ${regionGuide.name} is here:\n${regionGuide.guideUrl}\n(Schools change providers — always confirm with the school for your entry year.)`
+    : '';
   return {
-    subject: 'One tap to join the Founding Crew waitlist',
-    text: `Hello,\n\nTap the link below to confirm your place on the ClueCrew Founding Crew waitlist:\n\n${link}\n\nWe'll email you about ClueCrew's launch and nothing else, and you can unsubscribe any time. If this wasn't you, ignore this email and the address never joins the list.${signoff}`,
+    subject: regionGuide
+      ? `Your ${regionGuide.name} 11+ guide — and one tap to join the waitlist`
+      : 'One tap to join the Founding Crew waitlist',
+    text: `Hello,${guide}\n\nTap the link below to confirm your place on the ClueCrew Founding Crew waitlist:\n\n${link}\n\nWe'll email you about ClueCrew's launch and nothing else, and you can unsubscribe any time. If this wasn't you, ignore this email and the address never joins the list.${signoff}`,
   };
 }
 
