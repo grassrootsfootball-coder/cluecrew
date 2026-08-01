@@ -20,6 +20,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
       await signIn('credentials', {
         email: formData.get('email'),
         password: formData.get('password'),
+        totp: formData.get('totp'),
         redirectTo: '/admin',
       });
     }
@@ -35,6 +36,10 @@ export default async function AdminLayout({ children }: { children: React.ReactN
           <label>
             Password
             <input name="password" type="password" required />
+          </label>
+          <label>
+            Authenticator code (staff accounts with 2FA)
+            <input name="totp" type="text" inputMode="numeric" maxLength={8} />
           </label>
           <button className="cc-button" type="submit">
             Sign in

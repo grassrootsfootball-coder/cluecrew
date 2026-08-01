@@ -3,6 +3,10 @@ import { registerParent, signupSchema } from '@/lib/signup';
 import { clientKey, rateLimit } from '@/lib/rate-limit';
 
 export async function POST(request: Request) {
+  // Prelaunch (production promotion, 2026-08-01): signup is off until 5A.
+  if (process.env.PRELAUNCH === 'on') {
+    return NextResponse.json({ error: 'not_available' }, { status: 404 });
+  }
   if (!rateLimit(clientKey(request, 'signup'), 5, 60 * 60 * 1000)) {
     return NextResponse.json({ error: 'rate_limited' }, { status: 429 });
   }

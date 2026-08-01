@@ -46,6 +46,11 @@ export async function signupAction(
   _previous: AuthFormState,
   formData: FormData,
 ): Promise<AuthFormState> {
+  // Prelaunch: signup is off until 5A — the middleware holds the page, this
+  // holds the action.
+  if (process.env.PRELAUNCH === 'on') {
+    return { error: 'Signups are not open yet.', done: false };
+  }
   const requestHeaders = await headers();
   const ip = requestHeaders.get('x-forwarded-for')?.split(',')[0]?.trim() || 'local';
   if (!rateLimit(`signup:${ip}`, 5, 60 * 60 * 1000)) {

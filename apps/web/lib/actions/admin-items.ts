@@ -53,7 +53,7 @@ function parseItemForm(formData: FormData) {
 
 export async function createItemAction(formData: FormData): Promise<void> {
   const staff = await currentStaff();
-  if (!staff || !roleAllows(staff.effectiveRole, ['AUTHOR', 'REVIEWER'])) redirect('/admin');
+  if (!staff || !roleAllows(staff.effectiveRole, ['AUTHOR'])) redirect('/admin');
 
   const parsed = parseItemForm(formData);
   if (await assertMisconceptionsActive(parsed.options)) {
@@ -82,7 +82,7 @@ export async function createItemAction(formData: FormData): Promise<void> {
 
 export async function updateItemAction(formData: FormData): Promise<void> {
   const staff = await currentStaff();
-  if (!staff || !roleAllows(staff.effectiveRole, ['AUTHOR', 'REVIEWER'])) redirect('/admin');
+  if (!staff || !roleAllows(staff.effectiveRole, ['AUTHOR'])) redirect('/admin');
 
   const itemId = z.string().min(1).parse(formData.get('itemId'));
   const item = await prisma.item.findUniqueOrThrow({ where: { id: itemId } });
@@ -218,7 +218,7 @@ const bulkImportSchema = z.array(
 /** Bulk import (§5): validated, lands as DRAFT, provenance preserved. */
 export async function bulkImportAction(formData: FormData): Promise<void> {
   const staff = await currentStaff();
-  if (!staff || !roleAllows(staff.effectiveRole, ['AUTHOR', 'REVIEWER'])) redirect('/admin');
+  if (!staff || !roleAllows(staff.effectiveRole, ['AUTHOR'])) redirect('/admin');
 
   let items: z.infer<typeof bulkImportSchema>;
   try {

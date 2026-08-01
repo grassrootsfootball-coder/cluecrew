@@ -2,6 +2,7 @@ import NextAuth from 'next-auth';
 import Credentials from 'next-auth/providers/credentials';
 import { prisma } from '@cluecrew/db';
 import { verifyPassword } from '@/lib/passwords';
+import { verifyTotp } from '@/lib/totp';
 import { sendEmail } from '@/lib/email';
 import { accountLockedTemplate } from '@/lib/email-templates';
 
@@ -13,7 +14,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   session: { strategy: 'jwt', maxAge: 8 * 60 * 60 },
   providers: [
     Credentials({
-      credentials: { email: {}, password: {} },
+      credentials: { email: {}, password: {}, totp: {} },
       async authorize(credentials) {
         const email = typeof credentials?.email === 'string' ? credentials.email.toLowerCase().trim() : '';
         const password = typeof credentials?.password === 'string' ? credentials.password : '';
@@ -48,6 +49,13 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         // Email must be verified before the account is usable (§4).
         if (!parent.emailVerified) return null;
 
+        // Staff 2FA (Phase 2 §5 hardening): an enrolled staff account never
+        // signs in on a password alone.
+        if (parent.totpEnabledAt && parent.totpSecret) {
+          const totp = typeof credentials?.totp === 'string' ? credentials.totp : '';
+          if (!verifyTotp(parent.totpSecret, totp)) return null;
+        }
+
         if (parent.failedLogins > 0 || parent.lockedUntil) {
           await prisma.parentAccount.update({
             where: { id: parent.id },
@@ -60,8 +68,21 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     }),
   ],
   callbacks: {
-    jwt({ token, user }) {
-      if (user?.id) token.parentId = user.id;
+    async jwt({ token, user }) {
+      if (user?.id) {
+        token.parentId = user.id;
+        const account = await prisma.parentAccount.findUnique({
+          where: { id: user.id },
+          select: { staffRole: true, email: true },
+        });
+        const bootstrapAdmins = (process.env.ADMIN_EMAILS ?? '')
+          .split(',')
+          .map((email) => email.trim().toLowerCase())
+          .filter(Boolean);
+        token.staffRole = bootstrapAdmins.includes((account?.email ?? '').toLowerCase())
+          ? 'ADMIN'
+          : (account?.staffRole ?? 'NONE');
+      }
       return token;
     },
     session({ session, token }) {

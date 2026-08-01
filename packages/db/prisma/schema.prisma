@@ -30,6 +30,10 @@ model ParentAccount {
   lockedUntil   DateTime?
   // Admin CMS access (BUILD-PHASE-2 §5). Parents are NONE; staff roles gate /admin.
   staffRole     StaffRole @default(NONE)
+  // Staff 2FA (Phase 2 §5 hardening, 2026-08-01): TOTP is enrolled during
+  // invite acceptance and required at every staff sign-in thereafter.
+  totpSecret    String?
+  totpEnabledAt DateTime?
   // One-tap unsubscribe from the weekly email (BUILD-PHASE-5 §4) —
   // never touches transactional email.
   weeklyOptOut  Boolean   @default(false)
@@ -508,6 +512,20 @@ model WaitlistSignup {
   tokenHash   String    @unique
   confirmedAt DateTime?
   createdAt   DateTime  @default(now())
+}
+
+// Staff invites (Phase 2 §5, 2026-08-01): an admin adds email + role; the
+// invitee sets their own password and enrolls 2FA on acceptance. No
+// credential ever travels by hand — the token is single-use and hashed.
+model StaffInvite {
+  id         String    @id @default(cuid())
+  email      String    @unique
+  role       StaffRole
+  tokenHash  String    @unique
+  invitedBy  String
+  expiresAt  DateTime
+  acceptedAt DateTime?
+  createdAt  DateTime  @default(now())
 }
 
 model SchoolInterest {

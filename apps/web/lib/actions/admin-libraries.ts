@@ -15,7 +15,7 @@ const misconceptionSchema = z.object({
 
 export async function upsertMisconceptionAction(formData: FormData): Promise<void> {
   const staff = await currentStaff();
-  if (!staff || !roleAllows(staff.effectiveRole, ['AUTHOR', 'REVIEWER'])) redirect('/admin');
+  if (!staff || !roleAllows(staff.effectiveRole, ['AUTHOR'])) redirect('/admin');
 
   const parsed = misconceptionSchema.parse({
     id: formData.get('id'),
@@ -41,7 +41,7 @@ const wordSchema = z.object({
 
 export async function upsertWordAction(formData: FormData): Promise<void> {
   const staff = await currentStaff();
-  if (!staff || !roleAllows(staff.effectiveRole, ['AUTHOR', 'REVIEWER'])) redirect('/admin');
+  if (!staff || !roleAllows(staff.effectiveRole, ['AUTHOR'])) redirect('/admin');
 
   const parsed = wordSchema.parse({
     id: formData.get('id'),
@@ -71,7 +71,7 @@ const regionUpdateSchema = z.object({
 /** Region edits always require a source URL and a fresh last-verified date (§5). */
 export async function updateRegionAction(formData: FormData): Promise<void> {
   const staff = await currentStaff();
-  if (!staff || !roleAllows(staff.effectiveRole, ['AUTHOR', 'REVIEWER'])) redirect('/admin');
+  if (!staff || !roleAllows(staff.effectiveRole, [])) redirect('/admin');
 
   const parsed = regionUpdateSchema.parse({
     id: formData.get('id'),

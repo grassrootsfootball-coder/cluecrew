@@ -151,6 +151,15 @@ export function boardInvitationTemplate(
   };
 }
 
+
+/** Staff invite (Phase 2 §5): the link is the credential-free handover. */
+export function staffInviteTemplate(role: string, link: string): EmailContent {
+  return {
+    subject: `You've been invited to the ClueCrew ${role.toLowerCase()} desk`,
+    text: `Hello,\n\nYou've been invited to join ClueCrew's content team as ${role.toLowerCase()}.\n\nOpen the link below to set your own password and connect an authenticator app — nothing is sent to you and nothing needs sending back:\n\n${link}\n\nThe link works once and expires in 7 days. If you weren't expecting this, ignore it and nothing happens.${signoff}`,
+  };
+}
+
 export function accountLockedTemplate(name: string, attempts: number, minutes: number): EmailContent {
   return {
     subject: 'ClueCrew: your account is temporarily locked',
