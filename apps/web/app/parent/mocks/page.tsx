@@ -24,9 +24,14 @@ export default async function ParentMocksPage() {
         Your child sits it from Crew HQ; you book it here and the results come back to this page.
       </p>
       {children.length === 0 ? (
-        <p className="cc-muted">
-          Set up a child profile in <a href="/onboarding">onboarding</a> first.
-        </p>
+        <div className="cc-card">
+          <h2 style={{ marginTop: 0 }}>First things first</h2>
+          <p style={{ marginBottom: 0 }}>
+            Papers belong to a detective, and you haven&apos;t set one up yet. Two minutes in{' '}
+            <a href="/onboarding">onboarding</a> and this page will be ready when they are — no
+            paper is worth sitting before the practice feels easy.
+          </p>
+        </div>
       ) : (
         children.map((child) => (
           <MocksPanel key={child.id} childId={child.id} crewName={child.crewName} />

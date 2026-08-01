@@ -194,6 +194,7 @@ export function MockRunner({ childId }: { childId: string }) {
     return (
       <main className="crew-mock">
         <h1>No paper on the desk today.</h1>
+        <p>The district&apos;s still open, though — the cases don&apos;t sit papers.</p>
         <p>
           <a className="crew-tap" href="/crew">
             Back to HQ

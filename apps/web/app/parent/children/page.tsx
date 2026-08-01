@@ -27,9 +27,17 @@ export default async function ChildrenPage({
   return (
     <main className="cc-container">
       <h1>Children</h1>
-      <p className="cc-muted">
-        Additional children are free on the same subscription (up to {MAX_CHILD_PROFILES} profiles).
-      </p>
+      {children.length === 0 ? (
+        <p className="cc-muted">
+          No detectives on the books yet — the form below takes two minutes, and their Crew HQ is
+          ready the moment you save it.
+        </p>
+      ) : (
+        <p className="cc-muted">
+          Additional children are free on the same subscription (up to {MAX_CHILD_PROFILES}{' '}
+          profiles).
+        </p>
+      )}
       {full ? (
         <p role="alert">
           You have reached the maximum of {MAX_CHILD_PROFILES} profiles. Archive one to add another.
@@ -107,7 +115,9 @@ export default async function ChildrenPage({
 
       {children.length < MAX_CHILD_PROFILES ? (
         <div className="cc-card">
-          <h2 style={{ marginTop: 0 }}>Add a child</h2>
+          <h2 style={{ marginTop: 0 }}>
+            {children.length === 0 ? 'Set up your first detective' : 'Add a child'}
+          </h2>
           <form className="cc-form" action={addChildAction}>
             <label>
               First name or nickname
