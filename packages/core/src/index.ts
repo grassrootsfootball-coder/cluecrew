@@ -25,3 +25,4 @@ export * from './entitlements';
 export * from './pricing';
 export * from './regions';
 export * from './billing';
+export * from './solution';

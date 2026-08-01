@@ -114,6 +114,11 @@ jobs:
       - name: Similarity gate (Addendum E §3)
         run: pnpm similarity:scan
 
+      # Every MATHS item's key is computed from its solution expression —
+      # a wrong key fails the build (BUILD-DISTRICT-MATHS §5, gate #3).
+      - name: Solution verification (Maths district)
+        run: pnpm verify:solutions
+
       - name: Bursary isolation grep (no UI reads isBursary)
         run: pnpm check:bursary
 

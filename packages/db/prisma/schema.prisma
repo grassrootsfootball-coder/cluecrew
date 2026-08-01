@@ -261,6 +261,10 @@ model Item {
   // matched text.
   similarityFlaggedAt  DateTime?
   similarityScore      Float?
+  // BUILD-DISTRICT-MATHS §5: the machine-verifiable key. REQUIRED for every
+  // MATHS-district item (CI + import both enforce); the correct option is
+  // computed from this expression, never asserted. VR items carry null.
+  solution             String?
   similarityClearedBy  String?
   similarityClearNote  String?
   createdAt            DateTime     @default(now())

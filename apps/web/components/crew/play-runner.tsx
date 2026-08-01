@@ -33,6 +33,12 @@ const engines = {
   wordweb: dynamic(() => import('./engines/wordweb')),
   bridge: dynamic(() => import('./engines/bridge')),
   deduction: dynamic(() => import('./engines/deduction')),
+  // The Maths district (BUILD-DISTRICT-MATHS §2) — five engines, one quarter.
+  forge: dynamic(() => import('./engines/maths/number-forge')),
+  workshop: dynamic(() => import('./engines/maths/workshop')),
+  markhomework: dynamic(() => import('./engines/maths/mark-homework')),
+  datadesk: dynamic(() => import('./engines/maths/data-desk')),
+  shapeshop: dynamic(() => import('./engines/maths/shape-shop')),
 };
 const PlainItem = dynamic(() => import('./engines/plain-item'));
 
@@ -57,6 +63,8 @@ type Activity =
 interface AnswerResult {
   correct: boolean;
   childHint?: string;
+  /** Worked-example replay lines for THIS missed question (maths district). */
+  replaySteps?: string[];
   cracked?: boolean;
   bonusWord?: { headword: string; definitionChild: string } | null;
   /** Boss Round answers carry ONLY this — the child sees no score, ever. */
@@ -81,6 +89,38 @@ const CEREMONY_MS = 2500;
 const SEEN_CEREMONY_KEY = 'crew-seen-crack';
 /** Anticipation before a reveal — free tension (§2.1). */
 const ANTICIPATION_MS = 200;
+
+/**
+ * Worked-example replay (BUILD-DISTRICT-MATHS, ratified addition): the
+ * missed question walked step by step, one tap at a time — Walk mode's
+ * scaffold brought to the exact moment it helps. Opt-in, never forced.
+ */
+function ReplayWalk({ steps }: { steps: string[] }) {
+  const [shown, setShown] = useState(0);
+  if (shown === 0) {
+    return (
+      <p style={{ marginBottom: 0 }}>
+        <button className="crew-tap" data-testid="replay-walk" onClick={() => setShown(1)}>
+          Walk this one with me
+        </button>
+      </p>
+    );
+  }
+  return (
+    <div className="crew-replay" role="group" aria-label="Walk this one step by step">
+      {steps.slice(0, shown).map((line, index) => (
+        <p key={index} style={{ margin: '0.35rem 0' }}>
+          {line}
+        </p>
+      ))}
+      {shown < steps.length ? (
+        <button className="crew-tap" onClick={() => setShown(shown + 1)}>
+          Next step
+        </button>
+      ) : null}
+    </div>
+  );
+}
 
 export function PlayRunner({ childId }: { childId: string }) {
   const [activity, setActivity] = useState<Activity | null>(null);
@@ -691,6 +731,7 @@ export function PlayRunner({ childId }: { childId: string }) {
           <section className="crew-notyet" role="status" data-testid="beat-not-yet">
             <p style={{ margin: 0, fontSize: '1.2rem' }}>{notYetLine()}</p>
             {feedback.childHint ? <p style={{ marginBottom: 0 }}>{feedback.childHint}</p> : null}
+            {feedback.replaySteps ? <ReplayWalk steps={feedback.replaySteps} /> : null}
             <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginTop: '0.5rem' }}>
               <button className="crew-tap primary" data-testid="try-again" onClick={() => void loadActivity()}>
                 {VOICE.missAgain}

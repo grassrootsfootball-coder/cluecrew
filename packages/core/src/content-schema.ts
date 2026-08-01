@@ -74,9 +74,55 @@ export const caseFileSchema = z.object({
   case: caseContentSchema,
 });
 
+/**
+ * Worked-example replay templates (BUILD-DISTRICT-MATHS, ratified addition):
+ * authored phrasing frames the replay fills from a solution trace. Every
+ * frame must use its slots — a template that ignores {operation} or {value}
+ * would read as a canned line, not a walk-through.
+ */
+export const replayTemplatesFileSchema = z.object({
+  kind: z.literal('replay-templates'),
+  templates: z.record(
+    z.object({
+      intro: z.string().min(1),
+      step: z.string().includes('{operation}').includes('{value}'),
+      outro: z.string().includes('{value}'),
+    }),
+  ),
+});
+
+/** The Maths district's 36-slot engineering plan (§4) — shells, not content. */
+export const mathsPlanFileSchema = z.object({
+  kind: z.literal('maths-district-plan'),
+  note: z.string(),
+  quarterName: z.string(),
+  slots: z
+    .array(
+      z.object({
+        id: z.string().regex(/^mq-\d{2}$/),
+        strand: z.enum([
+          'number',
+          'operations',
+          'fractions-decimals-percentages',
+          'ratio-proportion',
+          'algebra',
+          'measures',
+          'geometry',
+          'statistics',
+        ]),
+        mechanic: z.enum(['number-forge', 'workshop', 'mark-homework', 'data-desk', 'shape-shop']),
+        orderInDistrict: z.number().int().min(1),
+        cluster: z.string().min(1),
+      }),
+    )
+    .length(36),
+});
+
 export const contentFileSchema = z.discriminatedUnion('kind', [
   wordFileSchema,
   caseFileSchema,
   regionFileSchema,
+  replayTemplatesFileSchema,
+  mathsPlanFileSchema,
 ]);
 export type ContentFile = z.infer<typeof contentFileSchema>;

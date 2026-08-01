@@ -13,7 +13,15 @@
 import { readdirSync, readFileSync, statSync } from 'node:fs';
 import { join, relative, resolve } from 'node:path';
 import { z } from 'zod';
-import { blueprintFileSchema, caseFileSchema, isBlueprintVerified, regionFileSchema, wordFileSchema } from '@cluecrew/core';
+import {
+  blueprintFileSchema,
+  caseFileSchema,
+  isBlueprintVerified,
+  mathsPlanFileSchema,
+  regionFileSchema,
+  replayTemplatesFileSchema,
+  wordFileSchema,
+} from '@cluecrew/core';
 
 const CONTENT_ROOT = resolve(import.meta.dirname, '../content');
 const MIN_VARIANTS = 6;
@@ -37,6 +45,8 @@ const anyContentFile = z.discriminatedUnion('kind', [
   regionFileSchema,
   voiceFileSchema,
   blueprintFileSchema,
+  replayTemplatesFileSchema,
+  mathsPlanFileSchema,
 ]);
 
 function collectJsonFiles(dir: string): string[] {

@@ -2,7 +2,7 @@
 
 import { redirect } from 'next/navigation';
 import { z } from 'zod';
-import { fingerprintItem, screenAgainstIndex } from '@cluecrew/core';
+import { checkSolution, fingerprintItem, screenAgainstIndex } from '@cluecrew/core';
 import { prisma } from '@cluecrew/db';
 import { similarityIndexSource } from '@/lib/similarity-index';
 import { currentStaff, recordAudit, roleAllows } from '@/lib/staff';
@@ -33,6 +33,9 @@ const itemInputSchema = z.object({
   stem: z.record(z.unknown()),
   explanation: z.record(z.unknown()).default({}),
   options: z.array(optionSchema).min(2).max(6),
+  // BUILD-DISTRICT-MATHS §5: required for MATHS items, enforced below —
+  // the key is computed from this, never asserted.
+  solution: z.string().max(200).optional(),
 });
 
 function parseItemForm(formData: FormData) {
@@ -228,6 +231,33 @@ export async function bulkImportAction(formData: FormData): Promise<void> {
     redirect('/admin/import?error=unapproved-misconception');
   }
 
+  // BUILD-DISTRICT-MATHS §5: a MATHS item's key is COMPUTED from its
+  // solution expression. Missing or mismatching solutions reject the whole
+  // batch, naming positions — the same door-policy as the similarity gate.
+  const mathsTypes = new Set(
+    (
+      await prisma.questionType.findMany({ where: { district: 'MATHS' }, select: { id: true } })
+    ).map((row) => row.id),
+  );
+  const solutionFailures: string[] = [];
+  items.forEach((entry, position) => {
+    if (!mathsTypes.has(entry.questionTypeId)) return;
+    if (!entry.solution) {
+      solutionFailures.push(`${position}:missing-solution`);
+      return;
+    }
+    const verdict = checkSolution(entry.solution, entry.options);
+    if (!verdict.ok) solutionFailures.push(`${position}:${verdict.reason ?? 'mismatch'}`);
+  });
+  if (solutionFailures.length > 0) {
+    await recordAudit(staff.id, 'item.bulk_import_rejected', 'Item', 'batch', {
+      solutionFailures,
+    });
+    redirect(
+      `/admin/import?error=solution&items=${encodeURIComponent(solutionFailures.join(','))}`,
+    );
+  }
+
   // ADDENDUM-E §3: the similarity gate. Exact/near-exact anywhere rejects the
   // WHOLE batch, naming failures by batch position + type id only — matched
   // source text never appears anywhere in this flow, by construction.
@@ -267,6 +297,7 @@ export async function bulkImportAction(formData: FormData): Promise<void> {
         explanation: entry.explanation as object,
         status: 'DRAFT', // imports NEVER skip review, especially ai-draft (§5)
         authoredBy: entry.authoredBy,
+        solution: entry.solution ?? null,
         ...(flagged.has(position)
           ? { similarityFlaggedAt: new Date(), similarityScore: flagged.get(position) }
           : {}),

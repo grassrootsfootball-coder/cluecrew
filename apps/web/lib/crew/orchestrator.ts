@@ -35,6 +35,8 @@ import {
 } from '@cluecrew/core';
 import { logEvent, prisma, Prisma } from '@cluecrew/db';
 import type { MechanicFamily } from '@cluecrew/core';
+import { mathsFamilyForType, type MathsFamily } from '@/lib/crew/maths';
+import { buildReplay } from '@/lib/crew/replay';
 import { shuffleOptionsForChild } from '@/lib/crew/shuffle';
 
 const DAY_MS = 86_400_000;
@@ -385,7 +387,7 @@ export type ActivityPayload =
   | {
       kind: 'item';
       activityKind: 'warmup_item' | 'practice_item' | 'closer';
-      family: MechanicFamily;
+      family: MechanicFamily | MathsFamily;
       plain: boolean;
       round?: { index: number; size: number };
       questionTypeId: string;
@@ -630,7 +632,17 @@ async function serveItem(
     return getActivity(childId);
   }
   const item = chosen.item;
-  const family = familyForType(input.questionTypeId);
+  // Maths types (mq-*) resolve through the district registry; core's VR map
+  // stays untouched (BUILD-DISTRICT-MATHS: no core changes beyond spec'd
+  // integration points).
+  let family: MechanicFamily | MathsFamily = familyForType(input.questionTypeId);
+  if (input.questionTypeId.startsWith('mq-')) {
+    const questionType = await prisma.questionType.findUnique({
+      where: { id: input.questionTypeId },
+      select: { mechanic: true },
+    });
+    family = mathsFamilyForType(input.questionTypeId, questionType?.mechanic) ?? family;
+  }
   const plain = input.activityKind === 'closer';
   // Authored order never leaves the server: seeded on (childId, itemId) so
   // the order is stable for this child but differs between children.
@@ -662,8 +674,14 @@ async function serveItem(
       ? { round: { index: state.engine.bossRound.served, size: state.engine.bossRound.size } }
       : {}),
     questionTypeId: input.questionTypeId,
-    // Rail progression (§3): big on stage early, corner tool later, absent in Plain.
-    rail: !plain && railAvailable(family, input.questionTypeId)
+    // Rail progression (§3): big on stage early, corner tool later, absent in
+    // Plain. Maths engines follow the same fade with their own furniture —
+    // the Bar Model Builder and manipulatives ride the rail contract
+    // (BUILD-DISTRICT-MATHS §3); Mark-the-Homework carries no side tool.
+    rail: !plain &&
+      (input.questionTypeId.startsWith('mq-')
+        ? family !== 'markhomework'
+        : railAvailable(family as MechanicFamily, input.questionTypeId))
       ? state.engine.focus.itemsServed < 2
         ? 'stage'
         : 'corner'
@@ -681,6 +699,13 @@ export interface AnswerResult {
    * client-side so it can rotate without immediate repeats (§1.4).
    */
   childHint?: string;
+  /**
+   * Worked-example replay (BUILD-DISTRICT-MATHS, ratified addition): on a
+   * missed maths item, Walk-mode lines for THIS exact question, generated
+   * from its solution expression through authored templates only. Sent only
+   * AFTER an answer — the solution never travels with the question.
+   */
+  replaySteps?: string[];
   cracked?: boolean;
   bonusWord?: { headword: string; definitionChild: string } | null;
   /** Present for Boss Round answers INSTEAD of correct/childHint: the child
@@ -773,6 +798,20 @@ export async function submitAnswer(
   if (!correct && chosen?.misconceptionId) {
     const misconception = await prisma.misconception.findUnique({ where: { id: chosen.misconceptionId } });
     childHint = misconception?.childHint;
+  }
+  // Worked-example replay (ratified addition): only after a miss, only from
+  // the item's own solution expression, only through authored templates.
+  let replaySteps: string[] | undefined;
+  if (!correct) {
+    const missed = await prisma.item.findUnique({
+      where: { id: pending.itemId },
+      select: { solution: true, explanation: true },
+    });
+    if (missed?.solution) {
+      const templateId = (missed.explanation as { replayTemplate?: string } | null)
+        ?.replayTemplate;
+      replaySteps = buildReplay(missed.solution, templateId ?? undefined) ?? undefined;
+    }
   }
 
   await prisma.attempt.create({
@@ -883,7 +922,7 @@ export async function submitAnswer(
   await drainAndLog(childId, state);
   await saveState(session.id, state);
 
-  return { correct, childHint, cracked: outcome.caseJustCracked, bonusWord };
+  return { correct, childHint, replaySteps, cracked: outcome.caseJustCracked, bonusWord };
 }
 
 async function applyReviewOutcome(

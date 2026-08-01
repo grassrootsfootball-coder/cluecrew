@@ -1365,3 +1365,123 @@
   background: var(--cc-cream);
   border-top: 2px solid color-mix(in srgb, var(--cc-ink) 25%, transparent);
 }
+
+/* ---------- Maths district (BUILD-DISTRICT-MATHS) ---------- */
+/* maths-green is the district accent — borders and rules, never fills
+   carrying text (manifesto §6). Tap targets ≥44px throughout. */
+
+.crew-barmodel {
+  border: 1px solid color-mix(in srgb, var(--cc-maths-green) 50%, transparent);
+  border-radius: 12px;
+  padding: 0.9rem;
+  margin: 0.75rem 0;
+}
+.crew-barmodel.corner { max-width: 30rem; }
+.crew-barmodel-bars { display: flex; flex-direction: column; gap: 0.5rem; }
+.crew-barmodel-bar {
+  display: flex;
+  gap: 2px;
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background: none;
+  cursor: pointer;
+  min-height: 44px;
+}
+.crew-barmodel-bar.working { border-color: var(--cc-amber); }
+.crew-barmodel-part {
+  flex: 1;
+  min-width: 34px;
+  min-height: 40px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  background: color-mix(in srgb, var(--cc-maths-green) 16%, var(--cc-cream));
+  border: 1px solid color-mix(in srgb, var(--cc-maths-green) 55%, transparent);
+  border-radius: 6px;
+}
+.crew-barmodel-part.mystery {
+  background: var(--cc-cream);
+  border-style: dashed;
+}
+.crew-barmodel-empty { margin: 0; opacity: 0.8; }
+.crew-barmodel-tools { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.6rem; }
+.crew-barmodel-verdict {
+  border-left: 4px solid var(--cc-amber);
+  padding-left: 0.7rem;
+}
+
+.crew-numberpad { max-width: 16rem; }
+.crew-numberpad-display {
+  display: block;
+  min-height: 2.4rem;
+  font-size: 1.4rem;
+  font-weight: 800;
+  border-bottom: 2px solid color-mix(in srgb, var(--cc-ink) 30%, transparent);
+  margin-bottom: 0.4rem;
+}
+.crew-numberpad-keys { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.35rem; }
+
+.crew-numberline { width: 100%; max-width: 26rem; display: block; margin: 0.75rem 0; }
+.crew-duel { display: flex; gap: 0.75rem; }
+
+.crew-homework {
+  border: 1px solid color-mix(in srgb, var(--cc-ink) 14%, transparent);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  margin: 0.6rem 0;
+}
+.crew-homework-line { margin: 0.3rem 0; }
+.crew-homework-num { font-weight: 800; opacity: 0.6; }
+
+.crew-datadesk {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.6rem;
+  height: 160px;
+  margin: 0.75rem 0;
+}
+.crew-datadesk-bar {
+  flex: 1;
+  max-width: 72px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: stretch;
+  background: none;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 2px;
+  cursor: pointer;
+}
+.crew-datadesk-bar.picked { border-color: var(--cc-amber); }
+.crew-datadesk-fill {
+  background: color-mix(in srgb, var(--cc-maths-green) 30%, var(--cc-cream));
+  border: 1px solid color-mix(in srgb, var(--cc-maths-green) 60%, transparent);
+  border-radius: 4px 4px 0 0;
+}
+.crew-datadesk-label { text-align: center; font-size: 0.85rem; padding-top: 2px; }
+.crew-datadesk-table { margin: 0.75rem 0; }
+
+.crew-shapeshop-canvas { width: 100%; max-width: 22rem; display: block; margin: 0.5rem 0; }
+.crew-shapeshop-handles { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.crew-shapeshop-readout { font-weight: 700; }
+
+.crew-fluency { max-width: 20rem; }
+.crew-fluency-beads { display: flex; gap: 0.3rem; margin-bottom: 0.5rem; }
+.crew-bead {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1.5px solid color-mix(in srgb, var(--cc-ink) 40%, transparent);
+}
+.crew-bead.filled { background: var(--cc-amber); border-color: var(--cc-amber); }
+.crew-fluency-prompt { font-size: 1.5rem; font-weight: 800; margin: 0.25rem 0 0.6rem; }
+.crew-fluency-beat { min-height: 2rem; font-weight: 600; }
+
+.crew-replay {
+  border-left: 4px solid color-mix(in srgb, var(--cc-maths-green) 70%, var(--cc-ink));
+  padding-left: 0.8rem;
+  margin-top: 0.6rem;
+}
