@@ -348,7 +348,12 @@ async function seedCases(): Promise<void> {
       byFamily.set(family, list);
     }
   }
-  const freeTierIds = [...byFamily.values()].flat();
+  // The tenth (David, 2026-08-01): the derived rule yields 9 because the
+  // deduction family has a single case. The Counting Culprit (Number Series)
+  // completes the ten — it is the flagship case with LIVE items, so the free
+  // tier always contains a case a production child can genuinely play.
+  const TENTH_FREE_CASE = 'case-vr-11';
+  const freeTierIds = [...new Set([...byFamily.values()].flat().concat(TENTH_FREE_CASE))];
   await prisma.case.updateMany({ data: { freeTier: false } });
   await prisma.case.updateMany({ where: { id: { in: freeTierIds } }, data: { freeTier: true } });
   console.log(`Free-tier cases (Amendment 1 default): ${freeTierIds.length}`);
