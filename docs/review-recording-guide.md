@@ -20,7 +20,7 @@ only: crew name, year group, the same dashboards the parent sees.
 - [ ] Strengths are method-praised and dashboard-grounded
 - [ ] Exactly one focus; exactly one at-home suggestion
 - [ ] No prediction of any result, score, or outcome (L1 — includes
-      "on track for", "should pass", "likely to")
+      "on track for", "likely to", and any claim about passing)
 - [ ] No comparison to any other child, named or statistical
 - [ ] No urgency language; the register is the parent copy register for the
       child's current intensity column (Addendum D §2)

@@ -75,7 +75,9 @@ const PURE_WHITE_BACKGROUND = {
     /background(?:-color)?\s*:\s*(?:#fff\b|#ffffff\b|white\b)|background\s*:\s*['"]?(?:#fff\b|#ffffff\b|white\b)/i,
 };
 
-const EVERYWHERE_SCOPE = ['apps/web', 'packages/ui/src', 'content'];
+// The review recording guide carries the Plus checklist text — L1 claims are
+// banned there like anywhere a parent reads (AMENDMENT-1 gate #5).
+const EVERYWHERE_SCOPE = ['apps/web', 'packages/ui/src', 'content', 'docs/review-recording-guide.md'];
 const CHILD_FACING_SCOPE = [
   'apps/web/app/crew',
   'apps/web/components/crew',
