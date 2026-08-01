@@ -19,7 +19,7 @@ export default function WaitlistPrivacyPage() {
 
       <h2>Why we store it</h2>
       <p>
-        To email you about ClueCrew&apos;s launch, and for nothing else. No marketing lists are
+        To email you about ClueCrew HQ&apos;s launch, and for nothing else. No marketing lists are
         bought, sold, shared or joined. We also count signups per region and year group in
         aggregate to understand where to build first.
       </p>
@@ -33,7 +33,7 @@ export default function WaitlistPrivacyPage() {
 
       <h2>How long we keep it</h2>
       <p>
-        If you join and never become a ClueCrew family, we delete your details 12 months after
+        If you join and never become a ClueCrew HQ family, we delete your details 12 months after
         launch. Want them gone sooner? Use the unsubscribe link or email us and we&apos;ll delete
         them within 30 days.
       </p>

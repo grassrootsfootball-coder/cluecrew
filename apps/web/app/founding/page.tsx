@@ -58,7 +58,7 @@ export default async function FoundingPage({
           Join
         </button>
         <p className="cc-muted" style={{ margin: 0 }}>
-          We&apos;ll email you about ClueCrew&apos;s launch and nothing else. Unsubscribe anytime.{' '}
+          We&apos;ll email you about ClueCrew HQ&apos;s launch and nothing else. Unsubscribe anytime.{' '}
           <a href="/founding/privacy">Privacy notice</a>.
         </p>
       </form>
@@ -166,7 +166,7 @@ export default async function FoundingPage({
         <section className="mk-section">
           <div className="cc-container">
             <p style={{ maxWidth: '44rem' }}>
-              New to all this? So are half the families we&apos;re building for. ClueCrew explains
+              New to all this? So are half the families we&apos;re building for. ClueCrew HQ explains
               the whole system in plain language — which test your region uses, how scoring works,
               how much practice is enough, and how to support without pressuring.
             </p>
@@ -211,7 +211,7 @@ export default async function FoundingPage({
             </a>
           </p>
           <p className="cc-muted">
-            © ClueCrew <em>(trademark application pending)</em>
+            © ClueCrew HQ <em>(trademark application pending)</em>
           </p>
         </div>
       </footer>
