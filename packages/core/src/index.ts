@@ -21,6 +21,7 @@ export * from './year';
 export * from './intensity';
 export * from './readiness';
 export * from './similarity';
+export * from './entitlements';
 export * from './pricing';
 export * from './regions';
 export * from './billing';

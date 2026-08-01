@@ -24,7 +24,9 @@ export default async function BursaryPage({
       </p>
       <p className="cc-muted">
         Places grow with our community: every ten paid subscriptions unlock a new bursary place.
-        When places are full, applications join a waitlist and we email the moment one opens.
+        When places are full, applications join a waitlist and we email the moment one opens —
+        and while you wait, your family holds Crew, the free tier, automatically: real cases,
+        the Word Vault and the weekly Boss Round from day one. Nobody waits with nothing.
       </p>
 
       {state === 'received' ? (

@@ -33,6 +33,12 @@ export async function buildWeeklyEmail(parentId: string, origin: string): Promis
   const dashboards = await parentDashboard(parentId);
   if (dashboards.length === 0) return null;
   const now = billingNow();
+
+  // Amendment 1 §1: Crew's cadence is a light MONTHLY email — sent only on
+  // the month's first Sunday run, and carrying the win alone.
+  const { entitlementsForParent } = await import('@/lib/entitlements');
+  const entitlements = await entitlementsForParent(parentId);
+  if (entitlements.emailCadence === 'monthly' && now.getUTCDate() > 7) return null;
   const weekAgo = new Date(now.getTime() - 7 * DAY_MS);
 
   // The win: a cracked case this week beats everything; then new words; then rhythm.
@@ -115,6 +121,12 @@ export async function buildWeeklyEmail(parentId: string, origin: string): Promis
   }
 
   const unsubscribe = `${origin}/api/email/weekly-unsubscribe?p=${parentId}&t=${weeklyUnsubscribeToken(parentId)}`;
+  if (entitlements.emailCadence === 'monthly') {
+    return {
+      subject,
+      text: `Hello ${parent.displayName},\n\n${winLine}\n\nThe ClueCrew team\n\n—\nStop these summaries (one tap, transactional emails unaffected):\n${unsubscribe}`,
+    };
+  }
   const extras = extraLines.length > 0 ? `\n\n${extraLines.join('\n\n')}` : '';
 
   return {

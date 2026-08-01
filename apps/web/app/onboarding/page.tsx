@@ -191,13 +191,14 @@ async function TrialStep({ yearGroup, regionCode }: { yearGroup: number; regionC
 
       <h2>Pick a plan to try</h2>
       <p className="cc-muted">
-        Every plan starts with a 7-day free trial — no card, nothing to cancel. Our suggestion for
+        You already have Crew — free, forever, no card. A paid plan adds the rest; every one
+        starts with a 7-day preview, no card, nothing to cancel. Our suggestion for
         Year {yearGroup} is the {PRICING[recommendation.tier].displayName} at {register} intensity,
         but all three are shown and the choice is entirely yours.
         {recommendation.note ? ` ${recommendation.note}` : ''}
       </p>
 
-      {(['TWO_YEAR', 'ONE_YEAR', 'SUMMER'] as const).map((tier) => {
+      {(['FULL_24', 'FULL_12', 'FULL_ROLLING', 'SUMMER'] as const).map((tier) => {
         const pricing = PRICING[tier];
         return (
           <div className="cc-card" key={tier}>

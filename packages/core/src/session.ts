@@ -151,7 +151,10 @@ export function startSession(inputs: StartSessionInputs): SessionState {
       taughtBack: inputs.focusCase.taughtBack,
     },
     bossRound: {
-      size: Math.min(5, Math.max(1, Math.round(inputs.bossRoundSize ?? 1))),
+      // 0 is legal: a Crew child's weekly Boss Round is already spent
+      // (Amendment 1 §1) — the session simply closes on the wind-down, which
+      // is not a lock-out the child can perceive (D7).
+      size: Math.min(5, Math.max(0, Math.round(inputs.bossRoundSize ?? 1))),
       served: 0,
       correct: 0,
     },

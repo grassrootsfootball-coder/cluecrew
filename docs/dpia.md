@@ -188,6 +188,24 @@ provider selection will add a processor entry here before use.
 - **Boss Round outcomes** are ordinary attempts (context `boss_case`),
   already covered in §8.
 
+## 10c. Amendment 1 additions — pricing V2, teacher reviews, entitlements
+
+- **Entitlement data:** which capabilities a family's subscription opens is
+  derived at read time from the Subscription row — nothing new is stored, and
+  no child-facing surface reflects it as anything but content (D7).
+- **Teacher bench (processors):** qualified teachers recording Crew Plus
+  reviews see the child's progress SNAPSHOT only — crew name, year group,
+  dashboards. Phase 1 minimisation means there is nothing else to see; item-
+  level child writing is out of scope. Bench contracts cover confidentiality
+  and safer-recruitment checks; teachers act as processors for that snapshot.
+- **Review videos:** recorded ABOUT the child, addressed TO the parent,
+  stored in private media storage, spot-checked before release, and deleted
+  12 months after the subscription ends. The child never sees them.
+- **Schools register-interest:** business contact emails only, no family
+  linkage.
+- **Plus waitlist:** parent id + timestamp, removed on entry or account
+  deletion (cascade).
+
 ## 11. Open items for next phase gates
 
 - Phase 2: onboarding wizard region data, Stripe processor agreement, verifiable parental consent flow detail, marketing consent UX, data export UI.

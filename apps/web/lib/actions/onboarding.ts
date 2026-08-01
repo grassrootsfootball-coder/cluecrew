@@ -100,7 +100,9 @@ export async function saveRegionAction(formData: FormData): Promise<void> {
   redirect('/onboarding');
 }
 
-const trialSchema = z.object({ tier: z.enum(['TWO_YEAR', 'ONE_YEAR', 'SUMMER']) });
+// The optional Full Crew preview (Amendment 1 §1): 7 days, no card, chosen at
+// onboarding — or the family simply stays on Crew, which needs no action.
+const trialSchema = z.object({ tier: z.enum(['FULL_24', 'FULL_12', 'FULL_ROLLING', 'PLUS_ROLLING', 'SUMMER']) });
 
 export async function startTrialAction(formData: FormData): Promise<void> {
   const parent = await currentParent();

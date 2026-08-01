@@ -1,5 +1,7 @@
 # BUILD-PHASE-2: THE OUTSIDE STRUCTURE
 ### ClueCrew Build Bible — Phase 2 of 6 — v1.0
+
+> **§1 (pricing) SUPERSEDED** by [AMENDMENT-1-PRICING-V2](AMENDMENT-1-PRICING-V2.md) (manifesto changelog v1.3). DMCC flows, the fair-exit principle and L5 stand; the tier ladder and prices are the amendment's.
 **Prerequisites: CLUECREW-MANIFESTO.md (wins all conflicts) and a passed Phase 1 gate. Ratified pricing below is final; changes require David's sign-off recorded in the changelog.**
 
 **Phase 2 delivers: a parent can discover, sign up, take a trial, pay, create child profiles, and manage their account. An admin can author and review items. No child-facing learning UI yet (Phase 3–4).**

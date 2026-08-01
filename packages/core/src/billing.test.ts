@@ -13,7 +13,7 @@ const T1 = new Date('2026-08-01T10:05:00Z');
 const T2 = new Date('2026-08-01T10:10:00Z');
 
 const trialing: SubscriptionState = {
-  tier: 'TWO_YEAR',
+  tier: 'FULL_24',
   status: 'trialing',
   lastStripeEventAt: null,
   firstPaidAt: null,

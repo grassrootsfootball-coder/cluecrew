@@ -130,6 +130,13 @@ export async function scheduleMock(
   if (!blueprint) return { ok: false, reason: 'unknown_blueprint' };
   if (!blueprintServable(blueprint)) return { ok: false, reason: 'draft_blueprint' };
 
+  // Amendment 1: the mock ladder is a Full Crew capability, enforced here at
+  // the API — a Crew child cannot reach a paper by any route (gate #1).
+  const { entitlementsForChild } = await import('@/lib/entitlements');
+  if (!(await entitlementsForChild(childId)).mockLadder) {
+    return { ok: false, reason: 'not_ready' };
+  }
+
   // The readiness ladder (Addendum C §3–4). The hard floor first — a fairness
   // law with no override, on every path: no paper may contain a question type
   // the child has never been taught.
@@ -306,6 +313,10 @@ function secondsLeft(blueprint: Blueprint, sitting: MockSitting, sectionIndex: n
 
 /** Reads never mutate; an over-time section is closed by the next POST. */
 export async function sittingView(childId: string): Promise<SittingView> {
+  // A Crew child sees no paper, ever — including one scheduled before a
+  // downgrade. Nothing about WHY is visible: the desk is simply empty (D7).
+  const { entitlementsForChild } = await import('@/lib/entitlements');
+  if (!(await entitlementsForChild(childId)).mockLadder) return { phase: 'none' };
   const sitting = await openSitting(childId);
   if (!sitting) return { phase: 'none' };
   const blueprint = blueprintById(sitting.blueprintId);

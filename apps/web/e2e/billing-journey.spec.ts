@@ -61,10 +61,11 @@ test('trial requires no card; conversion collects card only at upgrade; cancel i
   await login(page, email);
   await completeOnboarding(page);
 
-  // Steps 4–5: all tiers visible with TCV; start the 2-Year trial.
-  await expect(page.getByText('£215.76')).toBeVisible();
-  await expect(page.getByText('£155.88')).toBeVisible();
-  const twoYearCard = page.locator('.cc-card', { hasText: '2-Year Crew' });
+  // Steps 4–5 (Amendment 1 prices): all terms visible with TCV; start the
+  // 24-month Full Crew preview.
+  await expect(page.getByText('£203.76')).toBeVisible();
+  await expect(page.getByText('£119.88')).toBeVisible();
+  const twoYearCard = page.locator('.cc-card', { hasText: 'Full Crew — 24 months' });
   // NO card collection anywhere on the trial path (gate #10).
   await expect(page.locator('input[autocomplete*="cc-"], input[name*="card"]')).toHaveCount(0);
   await twoYearCard.getByRole('button', { name: /Start free trial/ }).click();
@@ -75,9 +76,9 @@ test('trial requires no card; conversion collects card only at upgrade; cancel i
   await page.goto('/parent/billing');
   await expect(page.getByText('Free trial — no card on file')).toBeVisible();
   const dmccBlock = page.locator('.cc-card', { hasText: 'Continue after your trial' });
-  await expect(dmccBlock.getByText('Total contract value: £215.76')).toBeVisible();
+  await expect(dmccBlock.getByText('Total contract value: £203.76')).toBeVisible();
   await expect(dmccBlock.getByText(/two clicks/)).toBeVisible();
-  await expect(dmccBlock.getByText(/£4\.00 per month used/)).toBeVisible(); // fair-exit at checkout
+  await expect(dmccBlock.getByText(/£1\.50 per month used/)).toBeVisible(); // fair-exit, V2 prices
 
   // Convert: card is collected only now (dev provider simulates Stripe).
   await dmccBlock.getByRole('button', { name: 'Add payment details' }).click();
@@ -102,7 +103,7 @@ test('cooling-off refund is self-serve and returns the account to cancelled', as
   await login(page, email);
   await completeOnboarding(page);
   await page
-    .locator('.cc-card', { hasText: '1-Year Crew' })
+    .locator('.cc-card', { hasText: 'Full Crew — 12 months' })
     .getByRole('button', { name: /Start free trial/ })
     .click();
   await page.waitForURL('**/parent');

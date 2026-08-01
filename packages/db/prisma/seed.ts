@@ -9,7 +9,7 @@
 import { readdirSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { hash } from '@node-rs/argon2';
-import { caseFileSchema, regionFileSchema, wordFileSchema } from '@cluecrew/core';
+import { FAMILY_BY_TYPE, caseFileSchema, regionFileSchema, wordFileSchema } from '@cluecrew/core';
 import { prisma } from '../src/index';
 
 const CONTENT_ROOT = resolve(import.meta.dirname, '../../../content');
@@ -333,11 +333,31 @@ async function seedCases(): Promise<void> {
       },
     });
   }
+
+  // AMENDMENT-1 §5.1: the free Crew tier's default selection — the first two
+  // cases per engine family by orderInDistrict (10 in all). David + reviewer
+  // ratify or adjust; the seed re-derives the DEFAULT on every run, so a
+  // hand-ratified change should be made HERE, not in the database.
+  const allCases = await prisma.case.findMany({ orderBy: { orderInDistrict: 'asc' } });
+  const byFamily = new Map<string, string[]>();
+  for (const caseRow of allCases) {
+    const family = FAMILY_BY_TYPE[caseRow.questionTypeId] ?? 'wordweb';
+    const list = byFamily.get(family) ?? [];
+    if (list.length < 2) {
+      list.push(caseRow.id);
+      byFamily.set(family, list);
+    }
+  }
+  const freeTierIds = [...byFamily.values()].flat();
+  await prisma.case.updateMany({ data: { freeTier: false } });
+  await prisma.case.updateMany({ where: { id: { in: freeTierIds } }, data: { freeTier: true } });
+  console.log(`Free-tier cases (Amendment 1 default): ${freeTierIds.length}`);
 }
 
 async function seedRegions(): Promise<void> {
   const raw = JSON.parse(readFileSync(resolve(CONTENT_ROOT, 'regions.json'), 'utf8'));
   const { regions } = regionFileSchema.parse(raw);
+
   for (const region of regions) {
     const { code, lastVerified, ...rest } = region;
     const data = { ...rest, lastVerified: new Date(lastVerified) };

@@ -23,7 +23,14 @@ export interface PaymentProvider {
 }
 
 function priceIdFor(tier: PaidTier): string {
-  const envKey = { TWO_YEAR: 'STRIPE_PRICE_2YR', ONE_YEAR: 'STRIPE_PRICE_1YR', SUMMER: 'STRIPE_PRICE_SUMMER' }[tier];
+  // Amendment 1 §5.2: the V2 product set, rolling and Plus included.
+  const envKey = {
+    FULL_24: 'STRIPE_PRICE_FULL_24',
+    FULL_12: 'STRIPE_PRICE_FULL_12',
+    FULL_ROLLING: 'STRIPE_PRICE_FULL_ROLLING',
+    PLUS_ROLLING: 'STRIPE_PRICE_PLUS_ROLLING',
+    SUMMER: 'STRIPE_PRICE_SUMMER',
+  }[tier];
   const priceId = process.env[envKey];
   if (!priceId) throw new Error(`${envKey} is not configured`);
   return priceId;

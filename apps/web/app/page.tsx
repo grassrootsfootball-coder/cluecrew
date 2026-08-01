@@ -13,7 +13,7 @@ export default async function HomePage() {
     orderBy: { name: 'asc' },
     select: { id: true, name: true },
   });
-  const twoYear = PRICING.TWO_YEAR;
+  const full = PRICING.FULL_12;
 
   return (
     <>
@@ -116,19 +116,22 @@ export default async function HomePage() {
         </section>
 
         <section className="mk-section mk-price">
-          <h2>Honest pricing</h2>
+          <h2>Honest pricing — and a real free tier</h2>
           <p className="mk-price-line">
-            <strong>{formatPence(twoYear.amountPence)} a month</strong> for the{' '}
-            {twoYear.displayName}, over {twoYear.commitmentMonths} months.
+            <strong>Crew is free, forever</strong> — the first cases of every question-type
+            family, all five ways in, no card and no clock.
           </p>
           <p>
-            That is <strong>{formatPence(twoYear.totalContractValuePence)} in total</strong>, printed
-            before you pay and again above the pay button. Cancelling takes two clicks. Full refund
-            within {COOLING_OFF_DAYS} days, no questions. We email before anything renews.
+            Everything unlocks with Full Crew from{' '}
+            <strong>{formatPence(PRICING.FULL_24.amountPence)} a month</strong> ({full.displayName}:{' '}
+            {formatPence(full.amountPence)}/month, {formatPence(full.totalContractValuePence)} in
+            total — printed before you pay and again above the pay button). Cancelling takes two
+            clicks. Full refund within {COOLING_OFF_DAYS} days, no questions. We email before
+            anything renews.
           </p>
           <p>
             <a className="cc-button-quiet" href="/pricing">
-              All three plans
+              Every plan, every number
             </a>
           </p>
         </section>

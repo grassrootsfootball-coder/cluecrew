@@ -56,13 +56,13 @@ export async function approveBursaryAction(formData: FormData): Promise<void> {
       where: { parentId: application.parentId },
       create: {
         parentId: application.parentId,
-        tier: 'TWO_YEAR', // bursary matches the TWO_YEAR term (§1)
+        tier: 'FULL_24', // bursary is Full Crew on the 24-month term (Amendment 1 §1)
         status: 'active',
         isBursary: true,
         commitmentEndsAt: addMonths(now, PRICING.BURSARY.commitmentMonths),
       },
       update: {
-        tier: 'TWO_YEAR',
+        tier: 'FULL_24',
         status: 'active',
         isBursary: true,
         trialEndsAt: null,

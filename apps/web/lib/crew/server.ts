@@ -1,5 +1,4 @@
 import { cookies } from 'next/headers';
-import { hasActiveAccess } from '@cluecrew/core';
 import { prisma, type ChildProfile } from '@cluecrew/db';
 import { CHILD_TOKEN_COOKIE, verifyChildToken } from '@/lib/child-token';
 
@@ -27,14 +26,15 @@ export async function childFromCookie(): Promise<ChildProfile | null> {
  * Access check for the child app. When access is paused the child sees a
  * warm, generic "ask your grown-up" — NEVER any sign of payment state (§2).
  */
-export async function childHasAccess(child: ChildProfile): Promise<boolean> {
-  const subscription = await prisma.subscription.findUnique({ where: { parentId: child.parentId } });
-  if (!subscription) return process.env.APP_ENV !== 'production';
-  return hasActiveAccess(
-    subscription.status as 'trialing' | 'active' | 'past_due' | 'canceled',
-    subscription.trialEndsAt,
-    new Date(),
-  );
+/**
+ * AMENDMENT-1 (D7): the child app door is ALWAYS open. Crew — the absence of
+ * a live subscription — is a real tier with real content, so there is no
+ * billing state a child can perceive: no lock-out screen, no quiet-HQ page,
+ * nothing. What differs by tier is which cases are open, and a closed case
+ * looks exactly like an unbuilt district door.
+ */
+export async function childHasAccess(_child: ChildProfile): Promise<boolean> {
+  return true;
 }
 
 export function childSettings(child: ChildProfile): ChildSettings {

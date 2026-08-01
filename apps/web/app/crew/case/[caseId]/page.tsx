@@ -24,6 +24,12 @@ export default async function CaseIntroPage({ params }: { params: Promise<{ case
   const { caseId } = await params;
   const caseRow = await prisma.case.findUnique({ where: { id: caseId } });
   if (!caseRow) notFound();
+  // D7: a tier-locked case answers exactly as if it did not exist — the same
+  // notFound an unwritten case id gets. The API refuses it too
+  // (startDailyLoop filters the override), so a crafted URL earns nothing.
+  const { openCaseIds } = await import('@/lib/entitlements');
+  const open = await openCaseIds(child.id);
+  if (open !== 'all' && !open.has(caseRow.id)) notFound();
 
   const narrative = (caseRow.narrativeIntro as { text?: string }).text ?? '';
   const lastUsed = child.lastUsedMode as Mode | null;

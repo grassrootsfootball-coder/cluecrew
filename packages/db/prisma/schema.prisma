@@ -39,6 +39,7 @@ model ParentAccount {
   subscription        Subscription?
   verificationTokens  VerificationToken[]
   bursaryApplications BursaryApplication[]
+  plusWaitlist        PlusWaitlistEntry?
 
   createdAt DateTime  @default(now())
   deletedAt DateTime? // soft delete; hard-delete job runs after 30 days
@@ -76,6 +77,7 @@ model ChildProfile {
   reviewSchedules ReviewSchedule[]
   mockSittings    MockSitting[]
   readinessSnapshots ReadinessSnapshot[]
+  reviewRecordings   ReviewRecording[]
 
   createdAt DateTime  @default(now())
   deletedAt DateTime?
@@ -140,9 +142,15 @@ model Subscription {
   createdAt         DateTime      @default(now())
 }
 
+// AMENDMENT-1 §1: the Pricing V2 ladder. CREW (free) holds no Subscription
+// row at all — absence of a subscription IS the free tier, so free can never
+// silently convert to paid. Bursary is FULL_24 + isBursary (identical
+// product, §1).
 enum Tier {
-  TWO_YEAR
-  ONE_YEAR
+  FULL_24
+  FULL_12
+  FULL_ROLLING
+  PLUS_ROLLING
   SUMMER
 }
 
@@ -328,6 +336,10 @@ model Case {
   narrativeIntro  Json // ≤30s of story (D5)
   modes           Json // asset manifest for the five Modes (P1)
   orderInDistrict Int
+  // AMENDMENT-1 §5.1: the free Crew tier's open cases — the genuine front
+  // door, pedagogy never crippled. Selection ratified by David + reviewer;
+  // default is the first two per engine family by orderInDistrict.
+  freeTier        Boolean    @default(false)
   caseFiles       CaseFile[]
 }
 
@@ -431,6 +443,54 @@ model Session {
 // consented) the L1 evidence base. No new personal data: item ids, timings and
 // option choices only — same classes of data the practice engine already
 // stores per attempt. DPIA note appended (docs/dpia.md).
+// AMENDMENT-1 §3: the Crew Plus monthly teacher review — a recorded ~5-minute
+// video addressed to the PARENT about the child, never child-facing, checked
+// before release. Videos deleted 12 months after the subscription ends.
+model ReviewRecording {
+  id        String       @id @default(cuid())
+  childId   String
+  child     ChildProfile @relation(fields: [childId], references: [id], onDelete: Cascade)
+  /** The month this review covers, e.g. "2026-08". One per child per month. */
+  month     String
+  /** Reference into private media storage — never a public URL. */
+  videoRef  String?
+  /** Teacher self-attestation against the recording checklist (§3). */
+  checklistAttestedBy String?
+  /** DSL/admin spot-check before release. */
+  spotCheckedBy String?
+  status    ReviewRecordingStatus @default(QUEUED)
+  releasedAt DateTime?
+  createdAt DateTime @default(now())
+
+  @@unique([childId, month])
+  @@index([status, createdAt])
+}
+
+enum ReviewRecordingStatus {
+  QUEUED // Plus month started; awaiting recording
+  RECORDED // teacher recorded + checklist attested
+  RELEASED // spot-checked and visible to the parent
+  CREDITED // month missed: Plus premium auto-credited (§3), no recording
+}
+
+// AMENDMENT-1 §3: Plus subscriptions are capacity-capped to the teacher
+// bench, with a public waitlist.
+// AMENDMENT-1 §1: the Schools register-interest waitlist — demand
+// measurement only, nothing built. Business contacts, not families.
+model SchoolInterest {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  school    String?
+  createdAt DateTime @default(now())
+}
+
+model PlusWaitlistEntry {
+  id        String        @id @default(cuid())
+  parentId  String        @unique
+  parent    ParentAccount @relation(fields: [parentId], references: [id], onDelete: Cascade)
+  createdAt DateTime      @default(now())
+}
+
 model MockSitting {
   id          String            @id @default(cuid())
   childId     String

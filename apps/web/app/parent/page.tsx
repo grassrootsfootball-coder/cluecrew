@@ -77,6 +77,9 @@ export default async function ParentDashboardPage() {
       ) : null}
 
       {dashboards.map(async (child) => {
+        const { entitlementsForParent } = await import('@/lib/entitlements');
+        const entitlements = await entitlementsForParent(parent.id);
+        const fullDepth = entitlements.dashboardDepth === 'full';
         const profile = await prisma.childProfile.findUniqueOrThrow({
           where: { id: child.childId },
         });
@@ -146,7 +149,7 @@ export default async function ParentDashboardPage() {
             </p>
           )}
 
-          {(child.clicking.length > 0 || child.developing.length > 0) && (
+          {fullDepth && (child.clicking.length > 0 || child.developing.length > 0) && (
             <>
               <h3>What&apos;s clicking / what&apos;s tricky</h3>
               <ul>
@@ -195,7 +198,15 @@ export default async function ParentDashboardPage() {
             </>
           )}
 
-          <h3>Exam runway</h3>
+          {!fullDepth ? (
+            <p className="cc-muted">
+              The full picture — what&apos;s clicking, what to try, the exam runway and practice
+              papers — comes with Full Crew. <a href="/parent/billing">Plans</a>.
+            </p>
+          ) : null}
+
+          {fullDepth ? <h3>Exam runway</h3> : null}
+          {fullDepth ? (
           <p>
             {child.runway.monthsToExam !== null
               ? `${child.runway.monthsToExam} months to the test window. `
@@ -203,6 +214,7 @@ export default async function ParentDashboardPage() {
             {child.runway.casesCracked} of {child.runway.casesTotal} VR cases cracked.{' '}
             {child.runway.nextMilestone}
           </p>
+          ) : null}
         </section>
         );
       })}

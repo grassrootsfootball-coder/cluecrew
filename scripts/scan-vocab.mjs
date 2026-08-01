@@ -58,6 +58,15 @@ const BANNED_CHILD_FACING = [
   { name: '"unfortunately" (§1.3)', pattern: /\bunfortunately\b/i },
   // §1.3: praise the work, never the child.
   { name: 'praise of the child, not the work (§1.3)', pattern: /\b(clever|smart|gifted|genius)\b/i },
+  // AMENDMENT-1 D7: the child never sees a paywall, price, upsell, lock-out
+  // moment, or any signal that money exists. These may not appear in any
+  // child-facing string OR code path — a comment about billing in the child
+  // app is a comment one refactor away from a string.
+  // Commerce MECHANICS, not English: "The Price of Letters" is an approved
+  // case about letter codes, and Word Cards may teach "price" or "pay" — a
+  // child reading those sees a puzzle, not a paywall. What may never appear
+  // is the machinery of money: currency, payment flows, tiers, upsells.
+  { name: 'money signal (D7)', pattern: /£|\bpaywall\b|\bupgrade[sd]?\b|\bsubscri(be|ption|bed)\b|\bpremium\b|\btrial\b|\bcheckout\b|\bbilling\b|\bper month\b|\bfree tier\b|\bpaid (plan|tier|version)\b/i },
 ];
 
 const PURE_WHITE_BACKGROUND = {

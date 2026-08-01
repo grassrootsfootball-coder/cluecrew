@@ -218,6 +218,22 @@ export async function startDailyLoop(childId: string, caseIdOverride?: string) {
     now,
   );
 
+  // Entitlements (Amendment 1 §5.1), enforced HERE at the API — never in UI.
+  const { openCaseIds } = await import('@/lib/entitlements');
+  const open = await openCaseIds(childId);
+  // Crew's weekly Boss Round (§1): if this week's is spent, this session
+  // closes on the wind-down — size 0, imperceptible as a limit (D7).
+  let bossRoundSize = intensity.bossRoundSize;
+  const { entitlementsForChild } = await import('@/lib/entitlements');
+  const entitlements = await entitlementsForChild(childId);
+  if (entitlements.bossRoundsPerWeek !== null) {
+    const weekAgo = new Date(now.getTime() - 7 * DAY_MS);
+    const roundsThisWeek = await prisma.event.count({
+      where: { childId, name: 'boss_round_completed', createdAt: { gte: weekAgo } },
+    });
+    if (roundsThisWeek >= entitlements.bossRoundsPerWeek) bossRoundSize = 0;
+  }
+
   // One session per child at a time; concurrent devices resolve to the newest.
   await prisma.session.updateMany({
     where: { childId, endedAt: null },
@@ -228,7 +244,11 @@ export async function startDailyLoop(childId: string, caseIdOverride?: string) {
   // first un-cracked case in district order.
   const caseFiles = await prisma.caseFile.findMany({ where: { childId } });
   const caseFileByCase = new Map(caseFiles.map((caseFile) => [caseFile.caseId, caseFile]));
-  const cases = await prisma.case.findMany({ orderBy: { orderInDistrict: 'asc' } });
+  // Only cases this child's tier opens are candidates — the child's own pick
+  // included: a locked case refuses at the API whatever the client sent.
+  const cases = (await prisma.case.findMany({ orderBy: { orderInDistrict: 'asc' } })).filter(
+    (candidate) => open === 'all' || open.has(candidate.id),
+  );
   // New-case pacing (Addendum D §2). A case with no CaseFile is NEW; whether
   // one may open now depends on the column: the final stretch opens none (the
   // matrix's most important cell), coverage-driven columns pace freely toward
@@ -332,7 +352,7 @@ export async function startDailyLoop(childId: string, caseIdOverride?: string) {
       taughtBack: Boolean(caseFile.taughtBackAt),
     },
     parentSessionMinutes: settings.sessionMinutes,
-    bossRoundSize: intensity.bossRoundSize,
+    bossRoundSize,
   });
 
   const session = await prisma.session.create({ data: { childId, engineState: {} } });

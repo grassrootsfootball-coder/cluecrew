@@ -17,11 +17,17 @@ export default async function DistrictPage() {
   // quietly; CrewLayout owns the warm, in-world gate the child sees.
   if (!child) return null;
 
-  const [questionTypes, cases, caseFiles] = await Promise.all([
+  const [questionTypes, allCases, caseFiles, open] = await Promise.all([
     prisma.questionType.findMany({ where: { district: 'VR' }, orderBy: { id: 'asc' } }),
     prisma.case.findMany(),
     prisma.caseFile.findMany({ where: { childId: child.id } }),
+    (await import('@/lib/entitlements')).openCaseIds(child.id),
   ]);
+  // D7: a tier-locked case is INDISTINGUISHABLE from one that isn't written
+  // yet — by construction, not by styling: dropping it from the open set here
+  // sends it down the exact same quiet-chip path as unbuilt content. No
+  // child-facing branch anywhere knows why a door is closed.
+  const cases = allCases.filter((row) => open === 'all' || open.has(row.id));
 
   const caseByType = new Map(cases.map((row) => [row.questionTypeId, row]));
   const fileByCase = new Map(caseFiles.map((caseFile) => [caseFile.caseId, caseFile]));

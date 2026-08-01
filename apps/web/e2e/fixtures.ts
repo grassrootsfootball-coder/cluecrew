@@ -74,7 +74,15 @@ function fixtureEmail(label: string): string {
  */
 export async function createFamily(
   label: string,
-  options: { crewNames?: string[]; regionCode?: string; yearGroup?: number; examYear?: number } = {},
+  options: {
+    crewNames?: string[];
+    regionCode?: string;
+    yearGroup?: number;
+    examYear?: number;
+    /** 'CREW' = no subscription (Amendment 1's free tier). Default FULL so
+     *  the wider suite keeps exercising full-tier behaviour. */
+    tier?: 'CREW' | 'FULL_12' | 'PLUS_ROLLING';
+  } = {},
 ): Promise<FixtureFamily> {
   const email = fixtureEmail(label);
   const parent = await prisma.parentAccount.create({
@@ -89,6 +97,19 @@ export async function createFamily(
     },
   });
   created.push(parent.id);
+
+  // Amendment 1: entitlements flow from the subscription; most tests want
+  // Full Crew, entitlement tests pass tier: 'CREW' for the free tier.
+  if ((options.tier ?? 'FULL_12') !== 'CREW') {
+    await prisma.subscription.create({
+      data: {
+        parentId: parent.id,
+        tier: (options.tier ?? 'FULL_12') as 'FULL_12' | 'PLUS_ROLLING',
+        status: 'active',
+        firstPaidAt: new Date(),
+      },
+    });
+  }
 
   // Created one at a time: `include: { children: true }` returns no guaranteed
   // order, and tests address children by position.

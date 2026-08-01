@@ -169,3 +169,48 @@ export async function confirmRolloverAction(formData: FormData): Promise<void> {
   await confirmRollover(parent.id, childId);
   redirect('/parent');
 }
+
+
+/**
+ * Change plan (Amendment 1 §5.4): two-click parity with cancellation — the
+ * radio pick is click one, this confirm is click two. Plus→Full downgrades
+ * seamlessly, no review claw-backs; commitment re-anchors from the original
+ * first payment (never restarted — no dark patterns, L5).
+ */
+export async function changePlanAction(formData: FormData): Promise<void> {
+  const parent = await currentParent();
+  if (!parent) redirect('/login');
+  const tier = z
+    .enum(['FULL_24', 'FULL_12', 'FULL_ROLLING', 'PLUS_ROLLING'])
+    .parse(formData.get('tier'));
+  const subscription = await prisma.subscription.findUnique({ where: { parentId: parent.id } });
+  if (!subscription || subscription.status === 'canceled') redirect('/parent/billing');
+
+  // Plus is capacity-capped (Amendment 1 §3) on the way IN only.
+  if (tier === 'PLUS_ROLLING') {
+    const { PLUS_BENCH_CAPACITY } = await import('@cluecrew/core');
+    const activePlus = await prisma.subscription.count({
+      where: { tier: 'PLUS_ROLLING', status: 'active' },
+    });
+    if (activePlus >= PLUS_BENCH_CAPACITY) {
+      await prisma.plusWaitlistEntry.upsert({
+        where: { parentId: parent.id },
+        create: { parentId: parent.id },
+        update: {},
+      });
+      redirect('/parent/billing?plus=waitlisted');
+    }
+  }
+
+  const { PRICING } = await import('@cluecrew/core');
+  const months = PRICING[tier].commitmentMonths;
+  const anchor = subscription.firstPaidAt ?? new Date();
+  const commitmentEndsAt =
+    months > 1 ? new Date(new Date(anchor).setMonth(anchor.getMonth() + months)) : null;
+  await prisma.subscription.update({
+    where: { id: subscription.id },
+    data: { tier, commitmentEndsAt },
+  });
+  await logEvent({ name: 'subscription_activated', parentId: parent.id, props: { tier, changed: true } });
+  redirect('/parent/billing?changed=1');
+}
