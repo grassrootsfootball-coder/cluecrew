@@ -1,0 +1,122 @@
+/**
+ * EXECUTABLE MATHS MISCONCEPTIONS (BUILD-DISTRICT-MATHS §5, advantage #2).
+ *
+ * In maths a distractor should not merely be TAGGED with a misconception — it
+ * should BE the number that misconception produces when executed on the item's
+ * own operands. "What answer does the place-value slip give for 304?" → 34.
+ * These functions execute the derivable misconceptions from the reviewer's seed
+ * library, keyed by her entry number, so the gate can verify a distractor
+ * against the very error it claims to model.
+ *
+ * A CONCEPTUAL misconception (a belief or definition — "a square is not a
+ * rectangle") has no single arithmetic output and is deliberately absent; the
+ * gate reports those as review-only, never as a defect.
+ *
+ * Each executor reads the operands it needs from a named bag and returns the
+ * wrong answer as a normalised string, or null when the operands do not let it
+ * run (reported, so a missing operand is visible rather than silently passing).
+ */
+
+/** The item's numbers, named. Authoring supplies these alongside the solution. */
+export type MathsOperands = Record<string, number | number[] | string | undefined>;
+
+const num = (o: MathsOperands, k: string): number | null =>
+  typeof o[k] === 'number' ? (o[k] as number) : null;
+const list = (o: MathsOperands, k: string): number[] | null =>
+  Array.isArray(o[k]) ? (o[k] as number[]) : null;
+
+/** Trim, collapse inner whitespace, lowercase, drop a leading £. Units kept. */
+export function normaliseAnswer(value: unknown): string {
+  return String(value ?? '').trim().replace(/\s+/g, ' ').replace(/^£/, '').toLowerCase();
+}
+
+/** Column subtraction taking |top−bottom| in every column (the classic slip). */
+function commutativeSubtraction(a: number, b: number): string {
+  const width = Math.max(String(a).length, String(b).length);
+  const top = String(a).padStart(width, '0');
+  const bot = String(b).padStart(width, '0');
+  let out = '';
+  for (let i = 0; i < width; i += 1) out += String(Math.abs(Number(top[i]) - Number(bot[i])));
+  return String(Number(out)); // strip leading zeros
+}
+
+/** Executors, keyed by the reviewer's entry number. Derivable entries only. */
+export const MISCONCEPTION_EXECUTORS: Record<number, (o: MathsOperands) => string | null> = {
+  // 1 — Zero placeholder missing: drop the internal zero(s). 304 → 34.
+  1: (o) => { const n = num(o, 'number'); return n === null ? null : String(Number(String(n).replace(/0/g, '')) || 0); },
+  // 6 — ×10 adds a zero: append a zero to the decimal instead of shifting. 3.4 → 3.40.
+  6: (o) => { const n = num(o, 'value'); return n === null ? null : `${n}0`; },
+  // 8 — Negative inversion: the "greater" is the one further from zero. −10 vs −5 → −10.
+  8: (o) => { const xs = list(o, 'options'); return xs && xs.length ? String(xs.reduce((m, x) => (Math.abs(x) > Math.abs(m) ? x : m))) : null; },
+  // 9 — Always round down regardless of the next digit. 3.7 → 3.
+  9: (o) => { const n = num(o, 'value'); return n === null ? null : String(Math.floor(n)); },
+  // 10 — Round an exact half DOWN. 2.5 → 2.
+  10: (o) => { const n = num(o, 'value'); return n === null ? null : String(Math.floor(n)); },
+  // 11 — Commutative subtraction: |top−bottom| per column. 42−17 → 35? no: |4−1||2−7|→ 35 becomes 3,5.
+  11: (o) => { const a = num(o, 'a'), b = num(o, 'b'); return a === null || b === null ? null : commutativeSubtraction(a, b); },
+  // 16 — Reversed division: divide the other way. 3 ÷ 12 → 12 ÷ 3 = 4.
+  16: (o) => { const a = num(o, 'dividend'), b = num(o, 'divisor'); return a === null || b === null || a === 0 ? null : String(b / a); },
+  // 22 — Add numerators and denominators. 1/2 + 1/3 → 2/5.
+  22: (o) => { const n1 = num(o, 'n1'), d1 = num(o, 'd1'), n2 = num(o, 'n2'), d2 = num(o, 'd2'); return [n1, d1, n2, d2].some((x) => x === null) ? null : `${n1! + n2!}/${d1! + d2!}`; },
+  // 25 — Thirds as tenths: read the numerator straight into the tenths. 1/3 → 0.3.
+  25: (o) => { const n = num(o, 'numerator'); return n === null ? null : `0.${n}`; },
+  // 26 — Percent symbol as a unit: attach % without ×100. 0.4 → 0.4%.
+  26: (o) => { const n = num(o, 'decimal'); return n === null ? null : `${n}%`; },
+  // 31 — Drop the trailing zero in money. £3.50 → £3.5.
+  31: (o) => { const n = num(o, 'amount'); return n === null ? null : String(n); },
+  // 32 — Base-100 time: add the minutes with no 60 rollover. 45 + 20 → :65.
+  32: (o) => { const h = num(o, 'hour'), m = num(o, 'minute'), add = num(o, 'addMinutes'); return h === null || m === null || add === null ? null : `${h}:${m + add}`; },
+  // 37 — Metric prefix as ×100: 1 kg → 100 g.
+  37: (o) => { const n = num(o, 'value'); return n === null ? null : String(n * 100); },
+  // 51 — Additive scaling: scale up by adding the difference, not multiplying.
+  //      2 eggs → 4 cakes; 4 eggs → 4 + (4−2) = 6.
+  51: (o) => { const a1 = num(o, 'a1'), b1 = num(o, 'b1'), a2 = num(o, 'a2'); return a1 === null || b1 === null || a2 === null ? null : String(b1 + (a2 - a1)); },
+  // 52 — Ratio read straight as a fraction: 1:3 → 1/3 (not 1/4).
+  52: (o) => { const p = num(o, 'part'), q = num(o, 'other'); return p === null || q === null ? null : `${p}/${q}`; },
+  // 56 — Incomplete mean: give the total, forget to divide.
+  56: (o) => { const xs = list(o, 'values'); return xs && xs.length ? String(xs.reduce((s, x) => s + x, 0)) : null; },
+  // 57 — Mean vs median: give the middle value instead of the mean.
+  57: (o) => {
+    const xs = list(o, 'values'); if (!xs || !xs.length) return null;
+    const s = [...xs].sort((x, y) => x - y); const mid = Math.floor(s.length / 2);
+    return String(s.length % 2 ? s[mid]! : (s[mid - 1]! + s[mid]!) / 2);
+  },
+};
+
+/** A safe evaluator for the item's `solution` — +, −, ×, ÷, parens, decimals. */
+export function evalArithmetic(expr: string): number | null {
+  const src = expr.replace(/×/g, '*').replace(/÷/g, '/').replace(/[−–]/g, '-');
+  if (!/^[-+*/(). \d]+$/.test(src)) return null;
+  let i = 0;
+  const peek = () => src[i];
+  const parseExpr = (): number => {
+    let v = parseTerm();
+    while (peek() === '+' || peek() === '-') { const op = src[i++]!; const r = parseTerm(); v = op === '+' ? v + r : v - r; }
+    return v;
+  };
+  const parseTerm = (): number => {
+    let v = parseFactor();
+    while (peek() === '*' || peek() === '/') { const op = src[i++]!; const r = parseFactor(); v = op === '*' ? v * r : v / r; }
+    return v;
+  };
+  const parseFactor = (): number => {
+    while (peek() === ' ') i += 1;
+    if (peek() === '(') { i += 1; const v = parseExpr(); if (peek() === ')') i += 1; return v; }
+    if (peek() === '-') { i += 1; return -parseFactor(); }
+    let n = '';
+    while (peek() && /[\d.]/.test(peek()!)) n += src[i++];
+    while (peek() === ' ') i += 1;
+    return n === '' ? NaN : Number(n);
+  };
+  const result = parseExpr();
+  return Number.isFinite(result) ? result : null;
+}
+
+/** The reviewer's conceptual entries — no single executable output. */
+export const CONCEPTUAL_ENTRIES = new Set([15, 20, 27, 28, 30, 40, 41, 42, 43, 49, 50, 58, 59]);
+
+/** The entry number carried in a seed id, e.g. maths-11-commutative-subtraction → 11. */
+export function mathsEntryNumber(misconceptionId: string): number | null {
+  const m = /^maths-(\d{2})-/.exec(misconceptionId);
+  return m ? Number(m[1]) : null;
+}

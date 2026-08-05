@@ -32,3 +32,4 @@ export * from './billing';
 export * from './solution';
 export * from './nvr';
 export * from './english';
+export * from './maths';

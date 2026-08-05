@@ -2380,3 +2380,39 @@ entry, and read by every gate that screens the hint — the import, the approval
 door, and the `check:db-content` sweep. A serving hint's exemption can no longer
 be honoured in one place and forgotten in another, which is the same failure
 class as a DB-only fix reverted by its generator (Entry 44).
+
+## Entry 47 — The derivable maths distractor gate
+*2026-08-05. BUILD-DISTRICT-MATHS §5, gate #4, built ahead of item authoring.*
+
+The maths district's structural advantage is that a distractor can BE the
+misconception executed on the item's own numbers — "what answer does the
+place-value slip give for 304?" is 34, computable, not asserted. This gate
+makes that verifiable.
+
+**What it does.** For every MATHS item: the key is recomputed from the item's
+`solution` expression (a small safe arithmetic evaluator — four operations and
+parentheses, nothing else executes), and every distractor tagged with a
+DERIVABLE misconception must equal the number that misconception produces on the
+item's operands. A distractor that does not is a defect; a defect on a LIVE item
+fails the build, on a DRAFT item it is backlog.
+
+**The executors.** One function per derivable misconception, keyed by the
+reviewer's entry number, in `packages/core/src/maths`. `#11` commutative
+subtraction runs |top−bottom| per column (42−17 → 35); `#16` divides the other
+way; `#22` adds numerators and denominators; `#52` reads a ratio straight as a
+fraction; `#56`/`#57` give the total or the median instead of the mean. **17 of
+the 47 derivable misconceptions have an executor so far** — the crisp numeric
+ones across all six strands. The gate REPORTS the 30 still uncovered by number,
+so the coverage gap is visible rather than a silent pass, and each slots in as a
+pure, tested function.
+
+**Conceptual entries are review-only.** The 13 conceptual misconceptions (a
+belief or definition — "a square is not a rectangle") have no single executable
+answer; the gate reports them as verified by human review, never as a defect.
+
+**Contract for authoring.** A maths item carries `stem.operands` (its named
+numbers) and a `solution`. Without operands the executors cannot run and the
+gate says so per item. Wired into CI after `verify:solutions` (gate #3), and
+there are no maths items yet, so it is a green no-op that is ready the day the
+first item lands. 13 unit tests cover the executors, the evaluator and the item
+check.

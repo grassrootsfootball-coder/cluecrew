@@ -148,6 +148,13 @@ jobs:
       - name: Solution verification (Maths district)
         run: pnpm verify:solutions
 
+      # Every MATHS distractor tagged with a derivable misconception must BE
+      # the number that misconception produces on the item's operands — the
+      # distractor IS the executed error, not just labelled with it
+      # (BUILD-DISTRICT-MATHS §5, gate #4).
+      - name: Derivable distractor gate (Maths district)
+        run: pnpm check:maths-distractors
+
       # The Anti-Marker Law (story map rule 10): self-test proves every rule
       # fires, then the real scan gates any chapters past draft.
       - name: Chapter style scanner (Anti-Marker Law)

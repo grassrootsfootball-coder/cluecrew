@@ -61,7 +61,8 @@
     "import:maths-misconceptions": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/import-maths-misconceptions.ts",
     "export:maths-misconceptions": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-maths-misconceptions.ts",
     "export:maths-hints-to-reword": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-maths-hints-to-reword.ts",
-    "import:maths-reworded": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/import-maths-reworded.ts"
+    "import:maths-reworded": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/import-maths-reworded.ts",
+    "check:maths-distractors": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-maths-distractors.ts"
   },
   "devDependencies": {
     "@eslint/js": "^9.20.0",
