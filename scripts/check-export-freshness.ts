@@ -20,6 +20,7 @@ import { buildMathsMisconceptionsSource } from './lib/maths-misconceptions-sourc
 import { buildCalibration } from './lib/maths-calibration-source';
 import { NVR_FAMILIES, buildNvrSignoffFamilySource } from './lib/nvr-signoff-source';
 import { buildVrAuditSource, buildVrMisconceptionDefsSource, buildVrPatternSource } from './lib/vr-audit-source';
+import { buildReviewerStatusSource } from './export-reviewer-status';
 import { prisma } from '../packages/db/src/index';
 
 const VR_PATTERN_SPECS = [
@@ -39,6 +40,7 @@ const BUILDERS: Record<string, () => Promise<unknown>> = {
   'vr-audit-sample': () => buildVrAuditSource(prisma),
   'vr-pattern-sample': () => buildVrPatternSource(prisma, VR_PATTERN_SPECS),
   'vr-misconception-defs': () => buildVrMisconceptionDefsSource(prisma),
+  'reviewer-status': () => buildReviewerStatusSource(prisma),
 };
 
 type Verdict = 'CURRENT' | 'STALE' | 'UNSTAMPED' | 'UNKNOWN-KIND' | 'UNREADABLE';
