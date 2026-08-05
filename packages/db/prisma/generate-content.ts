@@ -63,6 +63,9 @@ export const M: Record<string, Array<{ id: string; description: string; childHin
   'vr-03-related-words': [
     { id: 'vr03-same-topic', description: 'Chose a word from the same topic without the same relationship.', childHint: 'Say the first pair as a sentence, then use the SAME sentence for the second.' },
     { id: 'vr03-reversed-relation', description: 'Applied the relationship backwards.', childHint: 'Check which way round the first pair goes. Keep your answer the same way round.' },
+    { id: 'vr03-wrong-link', description: 'Found a genuine relationship between the pair and applied it consistently, but not the one the example shows.', childHint: 'Make the first pair into a sentence. Then try your answer in the same sentence.' },
+    { id: 'vr03-part-for-kind', description: 'Gave a part of the second word where the example gave a kind, a whole, or a category.', childHint: 'A part is not the same as a whole. Check what the first pair gave you.' },
+    { id: 'vr03-example-anchor', description: 'Chose a word related to the first pair rather than applying the relationship to the second.', childHint: 'The first pair only shows the rule. Now use that rule on the new word.' },
   ],
   'vr-04-closest-meaning': [
     { id: 'vr04-associated-not-same', description: 'Chose an associated word rather than a synonym.', childHint: 'Goes-together is not the same as means-the-same. Swap the words in a sentence to test.' },
@@ -198,7 +201,7 @@ const ANALOGIES: Array<[string, string, string, string, string, string]> = [
   ['rain', 'wet', 'sun', 'dry', 'wet', 'yellow'],
   ['caterpillar', 'butterfly', 'tadpole', 'frog', 'pond', 'jump'],
   ['book', 'read', 'song', 'sing', 'music', 'note'],
-  ['winter', 'cold', 'summer', 'warm', 'holiday', 'august'],
+  ['winter', 'cold', 'summer', 'warm', 'holiday', 'August'],
   ['minute', 'hour', 'hour', 'day', 'clock', 'week'],
   ['leaf', 'tree', 'petal', 'flower', 'garden', 'stem'],
   ['captain', 'ship', 'pilot', 'plane', 'airport', 'wing'],
@@ -656,6 +659,85 @@ function analogies(offset: number, prompt: string): GenItem[] {
   });
 }
 
+// ---------- vr-03: typed analogy rows, generate-TO-diagnosis ----------
+// Reviewer-authored (2026-08-05). Each row carries a POOL of diagnosis-tagged
+// distractors, every one matching the answer's word class. The constructor
+// EMITS BY DIAGNOSIS: it serves two distractors that carry DIFFERENT diagnoses
+// (the pool holds up to three; the item takes two), so each wrong option is
+// exactly what its tag names — the lineup-counting-v5 property, now for a
+// semantic type (see VR03-GENERATOR-AND-DESCRIPTION-REPORTS §1).
+//   - Two-distractor rows are COMPLETE, not thin: six verb/adjective rows (and
+//     two noun rows) support only two diagnoses for structural reasons.
+//   - NEVER-ADD is a hard block: those words produce a defensibly-correct
+//     second answer, so the constructor refuses to emit them whatever a pool says.
+//   - king->crown is RETIRED (ambiguity is in the pair, not the distractor);
+//     a replacement row follows, so this bank is 25 rows, not 26.
+type Vr03Dx = 'rR' | 'wL' | 'pFK' | 'sT' | 'eA';
+const VR03_DX_ID: Record<Vr03Dx, string> = {
+  rR: 'vr03-reversed-relation',
+  wL: 'vr03-wrong-link',
+  pFK: 'vr03-part-for-kind',
+  sT: 'vr03-same-topic',
+  eA: 'vr03-example-anchor',
+};
+const VR03_NEVER_ADD = new Set(['listen', 'slice', 'star', 'sunny', 'hot', 'roof', 'door', 'window']);
+interface Vr03Row { a: string; b: string; stem: string; answer: string; pool: Array<[string, Vr03Dx]>; }
+const VR03_ROWS: Vr03Row[] = [
+  // Noun rows — three diagnoses each.
+  { a: 'tree', b: 'leaf', stem: 'flower', answer: 'petal', pool: [['garden', 'rR'], ['bee', 'wL'], ['vase', 'sT']] },
+  { a: 'hand', b: 'finger', stem: 'foot', answer: 'toe', pool: [['leg', 'rR'], ['boot', 'wL'], ['floor', 'sT']] },
+  { a: 'book', b: 'page', stem: 'house', answer: 'room', pool: [['street', 'rR'], ['key', 'wL'], ['neighbour', 'sT']] },
+  { a: 'minute', b: 'hour', stem: 'hour', answer: 'day', pool: [['minute', 'rR'], ['clock', 'wL'], ['second', 'eA']] },
+  { a: 'kitten', b: 'cat', stem: 'puppy', answer: 'dog', pool: [['bone', 'wL'], ['paw', 'pFK'], ['whiskers', 'eA']] },
+  { a: 'sheep', b: 'lamb', stem: 'horse', answer: 'foal', pool: [['saddle', 'wL'], ['hoof', 'pFK'], ['wool', 'eA']] },
+  { a: 'caterpillar', b: 'butterfly', stem: 'tadpole', answer: 'frog', pool: [['pond', 'wL'], ['tail', 'pFK'], ['cocoon', 'eA']] },
+  { a: 'leaf', b: 'tree', stem: 'petal', answer: 'flower', pool: [['garden', 'wL'], ['gardener', 'sT'], ['branch', 'eA']] },
+  { a: 'seed', b: 'plant', stem: 'egg', answer: 'chick', pool: [['nest', 'wL'], ['shell', 'pFK'], ['root', 'eA']] },
+  { a: 'baker', b: 'bread', stem: 'potter', answer: 'pot', pool: [['clay', 'wL'], ['handle', 'pFK'], ['oven', 'eA']] },
+  { a: 'rabbit', b: 'burrow', stem: 'bee', answer: 'hive', pool: [['honey', 'wL'], ['sting', 'pFK'], ['straw', 'eA']] },
+  { a: 'spider', b: 'web', stem: 'bird', answer: 'nest', pool: [['egg', 'wL'], ['feather', 'pFK'], ['silk', 'eA']] },
+  { a: 'car', b: 'road', stem: 'train', answer: 'track', pool: [['station', 'wL'], ['carriage', 'pFK'], ['tyre', 'eA']] },
+  { a: 'captain', b: 'ship', stem: 'pilot', answer: 'plane', pool: [['airport', 'wL'], ['wing', 'pFK'], ['anchor', 'eA']] },
+  { a: 'bee', b: 'honey', stem: 'cow', answer: 'milk', pool: [['grass', 'wL'], ['horn', 'pFK'], ['wax', 'eA']] },
+  { a: 'foot', b: 'shoe', stem: 'head', answer: 'hat', pool: [['pillow', 'wL'], ['hair', 'pFK'], ['sock', 'eA']] },
+  { a: 'hand', b: 'glove', stem: 'foot', answer: 'sock', pool: [['floor', 'wL'], ['toe', 'pFK'], ['finger', 'eA']] },
+  // Noun rows — relation supports only two diagnoses.
+  { a: 'teacher', b: 'school', stem: 'doctor', answer: 'hospital', pool: [['medicine', 'wL'], ['pupil', 'eA']] },
+  { a: 'day', b: 'sun', stem: 'night', answer: 'moon', pool: [['owl', 'wL'], ['morning', 'eA']] },
+  // Verb rows — two diagnoses each.
+  { a: 'fish', b: 'swim', stem: 'bird', answer: 'fly', pool: [['sing', 'wL'], ['float', 'eA']] },
+  { a: 'eye', b: 'see', stem: 'ear', answer: 'hear', pool: [['whisper', 'wL'], ['look', 'eA']] },
+  { a: 'pen', b: 'write', stem: 'knife', answer: 'cut', pool: [['spread', 'wL'], ['draw', 'eA']] },
+  { a: 'book', b: 'read', stem: 'song', answer: 'sing', pool: [['record', 'wL'], ['write', 'eA']] },
+  // Adjective rows — two diagnoses each.
+  { a: 'winter', b: 'cold', stem: 'summer', answer: 'warm', pool: [['long', 'wL'], ['frosty', 'eA']] },
+  { a: 'whisper', b: 'quiet', stem: 'shout', answer: 'loud', pool: [['angry', 'wL'], ['soft', 'eA']] },
+];
+
+function relatedWordsTyped(): GenItem[] {
+  return VR03_ROWS.map((row, i) => {
+    if (row.pool.length > 3) throw new Error(`vr-03 row ${i + 1}: pool holds more than three diagnoses`);
+    // Serve two distractors of DIFFERENT diagnoses. Three-diagnosis rows drop
+    // one on rotation (i % 3) so every diagnosis gets bank-wide exposure;
+    // two-diagnosis rows serve both — complete, not thin.
+    const served = row.pool.length === 3 ? row.pool.filter((_, k) => k !== i % 3) : row.pool;
+    if (served.length !== 2) throw new Error(`vr-03 row ${i + 1}: needs two served distractors, got ${served.length}`);
+    if (served[0]![1] === served[1]![1]) throw new Error(`vr-03 row ${i + 1}: both distractors carry diagnosis ${served[0]![1]}`);
+    for (const [word] of served) {
+      if (VR03_NEVER_ADD.has(word)) throw new Error(`vr-03 row ${i + 1}: "${word}" is on the never-add list — refused`);
+    }
+    return {
+      n: i + 1,
+      tier: vocabTierOfSet([row.a, row.b, row.stem, row.answer]),
+      stem: { prompt: 'The first pair go together in a certain way. Complete the second pair the same way.', pairA: [row.a, row.b], stemWord: row.stem },
+      options: [
+        { content: { value: row.answer }, isCorrect: true },
+        ...served.map(([word, dx]) => ({ content: { value: word }, isCorrect: false, mid: VR03_DX_ID[dx] })),
+      ],
+    };
+  });
+}
+
 function letterConnections(): GenItem[] {
   return Array.from({ length: 25 }, (_, i) => {
     const tier = 1 + (i % 4);
@@ -860,7 +942,7 @@ function completeTheWord(): GenItem[] {
 export const GENERATORS: Record<string, () => GenItem[]> = {
   'vr-01-insert-letter': insertLetter,
   'vr-02-two-odd-ones-out': oddOnesOut,
-  'vr-03-related-words': () => analogies(0, 'The first pair go together in a certain way. Complete the second pair the same way.'),
+  'vr-03-related-words': () => relatedWordsTyped(),
   'vr-04-closest-meaning': () => synonymItems('Which word is closest in meaning to the word on the card?', SYNONYMS),
   'vr-05-hidden-word': hiddenWords,
   'vr-06-missing-word': missingWords,
