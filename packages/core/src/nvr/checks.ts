@@ -17,8 +17,45 @@ export interface NvrCheckFailure {
     | 'single-answer'
     | 'option-count'
     | 'misconception-mapping'
+    | 'misconception-distinctness'
     | 'duplicate-option';
   detail: string;
+}
+
+/**
+ * Templates whose wrong options legitimately repeat a misconception, and why —
+ * the parameterised / set-level families (reviewer + corpus, 2026-08-05). Every
+ * OTHER template must give its four wrong options four DISTINCT executed errors;
+ * these are the honest exceptions, not a licence to tag by slot.
+ *
+ *   lineup-odd       set-level — the four members ARE the group; one shared mode
+ *   lineup-counting  one estimate error, magnitude a parameter (count-by-glance ×3)
+ *   lineup-like@T1–3 three modes at low tiers; the relational fourth only exists T4–5
+ */
+function distinctnessExempt(templateId: string, tier: number): boolean {
+  if (templateId === 'lineup-odd' || templateId === 'lineup-counting') return true;
+  if (templateId === 'lineup-like' && tier <= 3) return true;
+  return false;
+}
+
+/**
+ * Gate #4 follow-up (reviewer audit): a distractor must BE a distinct executed
+ * error, so a template's wrong options carry distinct misconception tags — no
+ * fixed-slot duplicate. The parameterised/set-level families above are exempt.
+ */
+export function checkMisconceptionDistinctness(item: GeneratedNvrItem): NvrCheckFailure[] {
+  if (distinctnessExempt(item.templateId, item.tier)) return [];
+  const wrongTags = item.options.filter((o) => !o.isCorrect).map((o) => o.misconceptionId);
+  const distinct = new Set(wrongTags);
+  if (distinct.size < wrongTags.length) {
+    const counts = wrongTags.reduce<Record<string, number>>((acc, t) => ((acc[t ?? '∅'] = (acc[t ?? '∅'] ?? 0) + 1), acc), {});
+    const dup = Object.entries(counts).filter(([, n]) => n > 1).map(([t, n]) => `${t}×${n}`).join(', ');
+    return [{
+      check: 'misconception-distinctness',
+      detail: `${item.templateId}@${item.templateVersion} seed ${item.seed} T${item.tier}: wrong options repeat a misconception (${dup}) — each must be a distinct executed error`,
+    }];
+  }
+  return [];
 }
 
 /** SCP-NVR-2, adopted verbatim: no visual may exceed its tier's element cap. */
@@ -138,5 +175,6 @@ export function checkItem(item: GeneratedNvrItem): NvrCheckFailure[] {
     ...checkColourblindSafe(item),
     ...checkSingleAnswer(item),
     ...checkMisconceptionMapping(item),
+    ...checkMisconceptionDistinctness(item),
   ];
 }

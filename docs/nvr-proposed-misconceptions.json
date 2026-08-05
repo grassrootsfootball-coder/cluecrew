@@ -1,0 +1,67 @@
+{
+  "kind": "nvr-proposed-misconceptions",
+  "source": "corpus confirm/refute against Pass-2 distractor patterns (7 papers, GL/CGP/Bond) + nvr-blueprint-evidence",
+  "firewallAttestation": "Behaviours are abstractions across papers; no source item is described reconstructably; every example is an invented configuration.",
+  "against": "NVR-TAG-VOCABULARY-GAP.md",
+  "proposed": [
+    {
+      "id": "nvr-rotation-wrong-direction",
+      "status": "PROPOSED",
+      "verdict": "CONFIRMED — the brief's candidate is a real corpus error mode",
+      "engines": [
+        "turntable",
+        "machine"
+      ],
+      "templates": [
+        "turntable-rotation",
+        "machine-series",
+        "machine-matrix",
+        "machine-analogy"
+      ],
+      "distractorClass": "derivable",
+      "description": "Turns the figure by the correct amount but the wrong way round — anticlockwise when clockwise was required (or vice versa). A whole-turn sense error, distinct from the magnitude slip of series-phase-slip (over/under by a step) and from a mirror.",
+      "childHint": "Check which way to turn, like clock hands. A turn the other way is the trap.",
+      "corpusEvidence": "Constructed as its own one-parameter-wrong distractor in three engine families: matrix items offer 'anticlockwise for clockwise' listed separately from '90 for 45' (magnitude) and from 'reflection for rotation'; analogy items run a feature cycle 'anticlockwise instead of clockwise' listed apart from 'two places instead of one'; series items offer a sub-element 'wrong-way rotated'. Direction and magnitude are handled as separate slips across GL and CGP papers."
+    },
+    {
+      "id": "nvr-partial-reflection",
+      "status": "PROPOSED",
+      "verdict": "brief's candidate REFUTED (flip-about-own-centre not attested); this is the corpus-attested distinct fourth instead",
+      "engines": [
+        "turntable",
+        "machine"
+      ],
+      "templates": [
+        "turntable-reflection",
+        "machine-analogy"
+      ],
+      "distractorClass": "derivable",
+      "description": "A near-correct mirror image with one internal element left unflipped — the whole figure is reflected across the given line except one sub-part, which keeps its original handedness. Distinct from rotation-for-reflection (a turn, not a flip) and from wrong-mirror-axis (a full flip across the wrong line).",
+      "childHint": "Fold along the mirror line so every part flips. One piece left unflipped is the trap.",
+      "corpusEvidence": "Reflection sections construct 'partial mirrors with one internal element unflipped' as a distinct distractor alongside rotation-for-reflection and wrong-axis (CEM/Bond dedicated reflection sections; GL uses reflection mainly as the mirror-vs-rotation discriminator). Requires changing one constructed option from a turn to a partial flip, not just a relabel."
+    },
+    {
+      "id": "nvr-net-duplicated-face",
+      "status": "PROPOSED",
+      "verdict": "brief's candidate REFUTED (opposite-by-mirror not attested); this is the corpus-attested distinct fourth instead",
+      "engines": [
+        "foldingroom"
+      ],
+      "templates": [
+        "folding-net"
+      ],
+      "distractorClass": "derivable",
+      "description": "A cube (or fold) showing the same motif on two faces when the net carries it only once. Distinct from net-adjacency-blindspot (faces that fold opposite shown adjacent) and from net-mark-orientation (right faces, mark pointing the wrong way after folding).",
+      "childHint": "Each mark sits on one face only. A shape showing twice can't be the right cube.",
+      "corpusEvidence": "Nets sections construct the 'duplicated face' — a motif visible twice though the net holds it once — as a common distractor distinct from the forced-opposite adjacency error and the post-fold mark-orientation error. Attested in the Pass-2 spatial-3D patterns but not previously given a ratified id. Requires changing one constructed option to duplicate a face, not just a relabel."
+    }
+  ],
+  "refutedWithNoReplacement": [
+    {
+      "template": "lineup-like (T1-3)",
+      "candidate": "matched the example's exact rotation/size (over-specific match)",
+      "verdict": "REFUTED — not a distinct wrong-option generator",
+      "reasoning": "In a kind+shading-defined group, rotation and size are the free (non-criterial) axes, so an option that matches an exemplar's exact rotation/size is either the key (if kind+shading are right) or already a look-alike that breaks kind/shading — which is surface-similarity or single-axis-fixation, both already tagged on this template. The corpus documents no separate 'over-specific match' pattern. At T1-3 like-classification has three honest error modes (surface-similarity, partial-rule-match, single-axis-fixation); the fourth legitimately repeats. A finding, not a gap — belongs on the checkItem allow-list as a parameterised family, alongside rotation phase-slip and counting."
+    }
+  ]
+}

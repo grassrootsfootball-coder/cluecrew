@@ -462,12 +462,12 @@ const lineupLike: NvrTemplate = {
 
 const lineupOdd: NvrTemplate = {
   id: 'lineup-odd',
-  version: 1,
+  version: 2, // v2: honest set-level tagging, not index parity (corpus 2026-08-05)
   engineFamily: 'lineup',
   sectionType: 'odd-classification',
   glPool: true,
   generate(seed, tier) {
-    const random = rng(`lineup-odd@1:${seed}:${tier}`);
+    const random = rng(`lineup-odd@2:${seed}:${tier}`);
     const tone = pick(random, TONES);
     return attemptLoop(this.id, () => {
       const family = mainShape(random, tone, ROTATABLE_KINDS.filter((kind) => kind !== 'hook'));
@@ -485,16 +485,16 @@ const lineupOdd: NvrTemplate = {
       const position = Math.floor(random() * NVR_CONFIG.optionCount);
       const lineup = [...members];
       lineup.splice(position, 0, odd);
+      // Odd-one-out is a SET-LEVEL misconception: the four wrong options are the
+      // group members, so there is no per-option constructed error to name (corpus
+      // 2026-08-05). A child pulled to any member fixated on a free-roaming axis
+      // (rotation or size), so all four are honestly single-axis-fixation — NOT
+      // tagged by index parity, which was decorative. The distinctness check
+      // allow-lists this template for exactly this reason.
       const candidates: NvrOption[] = lineup.map((visual, index) => ({
         visual,
         isCorrect: index === position,
-        misconceptionId:
-          index === position
-            ? null
-            : index % 2 === 0
-              ? // Fixated on the free axis (rotation or size) instead.
-                'nvr-single-axis-fixation'
-              : 'nvr-surface-similarity',
+        misconceptionId: index === position ? null : 'nvr-single-axis-fixation',
       }));
       // The line-up IS the option row — no reshuffle; the odd position is
       // already seeded. Distinctness and single-answer still verified.
@@ -513,12 +513,13 @@ const lineupOdd: NvrTemplate = {
 
 const lineupCounting: NvrTemplate = {
   id: 'lineup-counting',
-  version: 2, // v2: seeded scatter so two items of the same count are different pictures
+  version: 3, // v3: count+2 retagged to count-by-glance — off-by-several is the same
+  //             estimate error, magnitude a parameter (corpus 2026-08-05)
   engineFamily: 'lineup',
   sectionType: 'like-classification',
   glPool: true,
   generate(seed, tier) {
-    const random = rng(`lineup-counting@2:${seed}:${tier}`);
+    const random = rng(`lineup-counting@3:${seed}:${tier}`);
     const tone = pick(random, TONES);
     // Counting IS the task — the one place extreme density is allowed
     // (SCP-NVR-2), still inside the tier cap even at count+2.
@@ -550,7 +551,9 @@ const lineupCounting: NvrTemplate = {
       { visual: withCount(count - 1), isCorrect: false, misconceptionId: 'nvr-count-by-glance' },
       { visual: withCount(count + 1), isCorrect: false, misconceptionId: 'nvr-count-by-glance' },
       { visual: withCount(count - 2), isCorrect: false, misconceptionId: 'nvr-count-by-glance' },
-      { visual: withCount(count + 2), isCorrect: false, misconceptionId: 'nvr-surface-similarity' },
+      // Off-by-several is the same estimate-instead-of-count error, the size of
+      // the miss a parameter — count-by-glance ×3 is honest here (corpus 2026-08-05).
+      { visual: withCount(count + 2), isCorrect: false, misconceptionId: 'nvr-count-by-glance' },
     ];
     const options = finalize(random, candidates);
     if (!options) throw new Error('nvr generator refused: lineup-counting collision');
@@ -673,26 +676,31 @@ const lineupCodes: NvrTemplate = {
 
 const turntableRotation: NvrTemplate = {
   id: 'turntable-rotation',
-  version: 1,
+  version: 2, // v2: the fourth distinct error is now wrong-direction (corpus 2026-08-05)
   engineFamily: 'turntable',
   sectionType: 'rotation',
   glPool: false, // GL treats rotation inside the pool types (SCP-NVR-3)
   generate(seed, tier) {
-    const random = rng(`turntable-rotation@1:${seed}:${tier}`);
+    const random = rng(`turntable-rotation@2:${seed}:${tier}`);
     const tone = pick(random, TONES);
     return attemptLoop(this.id, () => {
       // The hook is chiral, so its mirror twin is honestly wrong at every
       // angle; the achiral kinds stay in the mix and the distinctness gate
       // resamples any angle where the mirror collapses into a rotation.
       const spec = mainShape(random, tone, ['triangle', 'arrow', 'arc', 'hook', 'hook']);
-      const degrees = tier <= 2 ? pick(random, [90, 180]) : pick(random, [45, 90, 135, 180]);
+      // 180 is excluded: at a half-turn clockwise and anticlockwise coincide, so
+      // the wrong-direction distractor would equal the key. 270 gives the same
+      // "big turn" without that collapse.
+      const degrees = tier <= 2 ? pick(random, [90, 270]) : pick(random, [45, 90, 135, 270]);
       const extras = frame(random, tier, tone);
       const key = rotate(spec, degrees);
       const options = finalize(random, [
         { visual: single(key, extras), isCorrect: true, misconceptionId: null },
         { visual: single(reflect(key), extras), isCorrect: false, misconceptionId: 'nvr-mirror-for-rotation' },
+        // Right amount, one step too far (phase-slip) — and, distinct from it,
+        // the right amount turned the WRONG WAY (wrong-direction, corpus 4th).
         { visual: single(rotate(spec, degrees + 45), extras), isCorrect: false, misconceptionId: 'nvr-series-phase-slip' },
-        { visual: single(rotate(spec, degrees - 45), extras), isCorrect: false, misconceptionId: 'nvr-series-phase-slip' },
+        { visual: single(rotate(spec, -degrees), extras), isCorrect: false, misconceptionId: 'nvr-rotation-wrong-direction' },
         { visual: single(spec, extras), isCorrect: false, misconceptionId: 'nvr-transform-not-applied' },
       ]);
       if (!options) return null;
@@ -708,36 +716,46 @@ const turntableRotation: NvrTemplate = {
 
 const turntableReflection: NvrTemplate = {
   id: 'turntable-reflection',
-  version: 2, // v2: seeded frame added, matching sibling rotation, for item variety
+  version: 3, // v3: figure gains an internal mark so the fourth error is a genuine
+  //             partial reflection — one element unflipped (corpus 2026-08-05)
   engineFamily: 'turntable',
   sectionType: 'reflection-identification',
   glPool: false, // CEM-legacy practice ONLY (SCP-NVR-5); never in GL blueprints
   generate(seed, tier) {
-    const random = rng(`turntable-reflection@2:${seed}:${tier}`);
+    const random = rng(`turntable-reflection@3:${seed}:${tier}`);
     const tone = pick(random, TONES);
     return attemptLoop(this.id, () => {
-      const spec = { ...mainShape(random, tone, ['hook', 'hook', 'arrow', 'triangle', 'arc']), x: 0.6, y: 1 };
+      // The figure is a main shape at centre PLUS a smaller internal mark off to
+      // one side. Reflecting the figure flips both; the partial-reflection
+      // distractor flips the main shape but leaves the mark — a genuinely
+      // different picture, not a relabel (corpus-attested fourth error).
+      const shape = { ...mainShape(random, tone, ['hook', 'hook', 'arrow', 'triangle', 'arc']), x: 1, y: 1 };
+      const mark: ShapeSpec = { kind: 'hook', size: 1, rotation: 0, pattern: 'solid', tone, x: 1.35, y: 0.65 };
       const vertical = tier <= 2 ? true : random() < 0.5;
       const mirror = vertical ? reflect : reflectHorizontal;
       const wrongAxis = vertical ? reflectHorizontal : reflect;
-      const key = mirror(spec);
-      // The same seeded corner frame the rotation template carries: identical in
-      // every option so it never differentiates within an item, but its seeded
-      // offset makes two reflection items with the same shape distinct pictures.
+      const id = (s: ShapeSpec): ShapeSpec => s;
+      const turn = (s: ShapeSpec): ShapeSpec => ({ ...rotate(s, 180), x: 2 - s.x, y: 2 - s.y });
       const extras = frame(random, tier, tone);
+      const fig = (shapeT: (s: ShapeSpec) => ShapeSpec, markT: (s: ShapeSpec) => ShapeSpec): Visual => ({
+        elements: [shapeT(shape), markT(mark), ...extras],
+      });
       const options = finalize(random, [
-        { visual: single(key, extras), isCorrect: true, misconceptionId: null },
+        { visual: fig(mirror, mirror), isCorrect: true, misconceptionId: null },
         // Turned instead of flipped.
-        { visual: single({ ...rotate(spec, 180), x: key.x, y: key.y }, extras), isCorrect: false, misconceptionId: 'nvr-rotation-for-reflection' },
-        { visual: single({ ...wrongAxis(spec) }, extras), isCorrect: false, misconceptionId: 'nvr-wrong-mirror-axis' },
-        { visual: single({ ...spec, x: key.x, y: key.y }, extras), isCorrect: false, misconceptionId: 'nvr-transform-not-applied' },
-        { visual: single({ ...rotate(spec, 90), x: key.x, y: key.y }, extras), isCorrect: false, misconceptionId: 'nvr-rotation-for-reflection' },
+        { visual: fig(turn, turn), isCorrect: false, misconceptionId: 'nvr-rotation-for-reflection' },
+        // Flipped across the wrong mirror line.
+        { visual: fig(wrongAxis, wrongAxis), isCorrect: false, misconceptionId: 'nvr-wrong-mirror-axis' },
+        // Near-correct mirror — every part flipped EXCEPT the mark (corpus 4th).
+        { visual: fig(mirror, id), isCorrect: false, misconceptionId: 'nvr-partial-reflection' },
+        // Not flipped at all.
+        { visual: fig(id, id), isCorrect: false, misconceptionId: 'nvr-transform-not-applied' },
       ]);
       if (!options) return null;
       return {
         ...base(this, seed, tier),
         prompt: 'The shape flips over the mirror line. Which picture shows it after the flip?',
-        panels: [single(spec, extras)],
+        panels: [fig(id, id)],
         stemDecoration: vertical ? 'mirror-vertical' : 'mirror-horizontal',
         options,
       };
@@ -763,12 +781,12 @@ const NET_ADJACENT_PAIRS: ReadonlyArray<[number, number]> = [
 
 const foldingNet: NvrTemplate = {
   id: 'folding-net',
-  version: 1,
+  version: 2, // v2: fourth distinct error is a duplicated face (corpus 2026-08-05)
   engineFamily: 'foldingroom',
   sectionType: 'nets',
   glPool: false,
   generate(seed, tier) {
-    const random = rng(`folding-net@1:${seed}:${tier}`);
+    const random = rng(`folding-net@2:${seed}:${tier}`);
     const tone = pick(random, TONES);
     return attemptLoop(this.id, () => {
       // Six DISTINCT face marks by construction: kind × pattern pairs are
@@ -794,14 +812,16 @@ const foldingNet: NvrTemplate = {
         ],
       });
       const [keyA, keyB] = pick(random, NET_OPPOSITE_PAIRS);
-      const adjacents = shuffle(random, NET_ADJACENT_PAIRS).slice(0, 2);
+      const adjacents = shuffle(random, NET_ADJACENT_PAIRS).slice(0, 1);
       const swapSource = [0, 1, 2, 3, 4, 5].find((face) => face !== keyA && face !== keyB)!;
       const options = finalize(random, [
         { visual: pair(keyA, keyB), isCorrect: true, misconceptionId: null },
         // Faces that sit near each other on the net fold ADJACENT, not
         // opposite — the one-square-between rule not known.
         { visual: pair(adjacents[0]![0], adjacents[0]![1]), isCorrect: false, misconceptionId: 'nvr-net-adjacency-blindspot' },
-        { visual: pair(adjacents[1]![0], adjacents[1]![1]), isCorrect: false, misconceptionId: 'nvr-net-adjacency-blindspot' },
+        // The same motif shown on two faces though the net carries it once — a
+        // cube that cannot exist (corpus-attested fourth error).
+        { visual: pair(keyA, keyA), isCorrect: false, misconceptionId: 'nvr-net-duplicated-face' },
         // Right faces, one mark mis-tracked from another face.
         { visual: pair(keyA, swapSource), isCorrect: false, misconceptionId: 'nvr-multi-part-tracking' },
         // Right faces, the second mark turned — which way marks point after

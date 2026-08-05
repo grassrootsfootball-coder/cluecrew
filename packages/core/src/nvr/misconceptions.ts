@@ -32,6 +32,12 @@ export const NVR_MISCONCEPTION_IDS = [
   'nvr-surface-similarity',
   'nvr-transform-not-applied',
   'nvr-wrong-mirror-axis',
+  // Corpus confirm/refute against the tag-vocabulary gap (2026-08-05): three
+  // ratified additions giving the thin turntable/net families a genuine fourth
+  // distinct error. PROPOSED until the reviewer approves (they cannot serve yet).
+  'nvr-rotation-wrong-direction', // turntable-rotation (also machine engines)
+  'nvr-partial-reflection', // turntable-reflection — one internal element unflipped
+  'nvr-net-duplicated-face', // folding-net — same motif on two faces
 ] as const;
 
 export type NvrMisconceptionId = (typeof NVR_MISCONCEPTION_IDS)[number];

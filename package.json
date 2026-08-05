@@ -73,7 +73,8 @@
     "check:option-positions": "pnpm exec tsx scripts/check-option-positions.ts --self-test && pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-option-positions.ts",
     "check:vr-distractors": "pnpm exec tsx scripts/check-vr-distractors.ts --self-test && pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-vr-distractors.ts",
     "publish:vr-signoff": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/publish-vr-signoff.ts",
-    "import:maths-additions": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/import-maths-additions.ts"
+    "import:maths-additions": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/import-maths-additions.ts",
+    "import:nvr-proposed": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/import-nvr-proposed.ts"
   },
   "devDependencies": {
     "@eslint/js": "^9.20.0",
