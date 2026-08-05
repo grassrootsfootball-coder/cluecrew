@@ -157,7 +157,7 @@ function seedDerived(idPrefix: string, keyValue: string | number, operands: VrOp
   ];
 }
 
-function numberSeriesItems(): SeedItem[] {
+export function numberSeriesItems(): SeedItem[] {
   const items: SeedItem[] = [];
   for (let i = 0; i < 14; i++) {
     const a = 3 + i;
@@ -184,7 +184,7 @@ function numberSeriesItems(): SeedItem[] {
   return items;
 }
 
-function letterSeriesItems(): SeedItem[] {
+export function letterSeriesItems(): SeedItem[] {
   const items: SeedItem[] = [];
   for (let i = 0; i < 13; i++) {
     const start = i % 5; // 0-indexed to match the executors' vrLetterOf
@@ -588,10 +588,13 @@ async function main(): Promise<void> {
   console.log('Seed complete:', counts);
 }
 
-main()
-  .then(() => prisma.$disconnect())
-  .catch(async (error) => {
-    console.error(error);
-    await prisma.$disconnect();
-    process.exit(1);
-  });
+// Only seed when run directly, not when a report imports the item builders.
+if (process.argv[1]?.endsWith('seed.ts')) {
+  main()
+    .then(() => prisma.$disconnect())
+    .catch(async (error) => {
+      console.error(error);
+      await prisma.$disconnect();
+      process.exit(1);
+    });
+}

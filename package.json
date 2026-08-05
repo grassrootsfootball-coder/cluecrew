@@ -69,6 +69,7 @@
     "export:vr-audit-sample": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-vr-audit-sample.ts",
     "export:vr-pattern-sample": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-vr-pattern-sample.ts",
     "export:vr-misconception-defs": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-vr-misconception-defs.ts",
+    "export:vr-reimport-bundle": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-vr-reimport-bundle.ts",
     "check:option-positions": "pnpm exec tsx scripts/check-option-positions.ts --self-test && pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-option-positions.ts",
     "check:vr-distractors": "pnpm exec tsx scripts/check-vr-distractors.ts --self-test && pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-vr-distractors.ts",
     "publish:vr-signoff": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/publish-vr-signoff.ts",
