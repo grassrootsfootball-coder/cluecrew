@@ -18,7 +18,7 @@ import { OUTBOUND_DIR, freshnessStamp } from './lib/export-destination';
 import { buildFreeTenSource } from './lib/vr-free-ten-source';
 import { buildMathsMisconceptionsSource } from './lib/maths-misconceptions-source';
 import { buildCalibration } from './lib/maths-calibration-source';
-import { buildNvrSignoffSource } from './lib/nvr-signoff-source';
+import { NVR_FAMILIES, buildNvrSignoffFamilySource } from './lib/nvr-signoff-source';
 import { prisma } from '../packages/db/src/index';
 
 /** kind → how to rebuild the source this export hashed. Extend as exports adopt the stamp. */
@@ -28,7 +28,8 @@ const BUILDERS: Record<string, () => Promise<unknown>> = {
   'maths-misconceptions-approved': () => buildMathsMisconceptionsSource(prisma),
   'maths-gap-families': async () => buildCalibration().families,
   'maths-calibration-pack': async () => buildCalibration().items,
-  'nvr-signoff': () => buildNvrSignoffSource(prisma),
+  // One kind per NVR engine-family file (nvr-signoff-machine, -lineup, …).
+  ...Object.fromEntries(NVR_FAMILIES.map((fam) => [fam.kind, () => buildNvrSignoffFamilySource(prisma, fam.key)])),
 };
 
 type Verdict = 'CURRENT' | 'STALE' | 'UNSTAMPED' | 'UNKNOWN-KIND' | 'UNREADABLE';

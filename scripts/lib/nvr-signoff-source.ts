@@ -109,22 +109,47 @@ export async function buildNvrSignoff(prisma: PrismaClient): Promise<NvrSignoff>
 }
 
 /**
- * The LIGHT source the freshness stamp hashes: what the reviewer is actually
- * signing. A template's fingerprint already captures every sampled item across
- * every tier, so hashing (id, version, fingerprint) makes the stamp go stale
- * exactly when a signed template's output would change — and stay current
- * through a cosmetic edit to the pack layout. The misconception rows travel in
- * the hash because approving them is part of the same signature.
+ * The four engine families, each shipped as its own reviewer file (David's
+ * ruling — a reviewer signs one machine at a time, not a 13-template omnibus).
+ * `key` is the template's engineFamily; the child stations are its sectionTypes.
+ * The 19 shared misconceptions ride with THE MACHINE (the first file), because
+ * the tags cut across every family and asking for them once is enough.
  */
-export async function buildNvrSignoffSource(prisma: PrismaClient): Promise<unknown> {
-  const pack = await buildNvrSignoff(prisma);
+export const NVR_FAMILIES = [
+  { key: 'machine', title: 'THE MACHINE', blurb: 'series · matrix · analogy', family: 'nvr-signoff-machine', kind: 'nvr-signoff-machine', misconceptions: true },
+  { key: 'lineup', title: 'THE LINE-UP', blurb: 'like · odd one out · counting · codes', family: 'nvr-signoff-lineup', kind: 'nvr-signoff-lineup', misconceptions: false },
+  { key: 'turntable', title: 'THE TURNTABLE', blurb: 'rotation · reflection', family: 'nvr-signoff-turntable', kind: 'nvr-signoff-turntable', misconceptions: false },
+  { key: 'foldingroom', title: 'THE FOLDING ROOM', blurb: 'nets · fold-and-punch · hidden shapes · plan views', family: 'nvr-signoff-foldingroom', kind: 'nvr-signoff-foldingroom', misconceptions: false },
+] as const;
+
+export type NvrFamilyKey = (typeof NVR_FAMILIES)[number]['key'];
+
+/**
+ * The LIGHT source the freshness stamp hashes for ONE family file: what the
+ * reviewer is actually signing in it. A template's fingerprint already captures
+ * every sampled item across every tier, so hashing (id, version, fingerprint)
+ * makes the stamp go stale exactly when a signed template's output would change
+ * — and stay current through a cosmetic edit to the pack layout. THE MACHINE's
+ * source also carries the misconception rows, because approving them is part of
+ * that file's signature; the other three do not repeat them.
+ *
+ * Pure over an already-built pack so the exporter (which builds the pack once
+ * for all four files) and the checker (which rebuilds per file) serialise the
+ * SAME bytes — the whole point of one shared builder behind both sides.
+ */
+export function familySource(pack: NvrSignoff, key: NvrFamilyKey): unknown {
+  const fam = NVR_FAMILIES.find((f) => f.key === key);
   return {
-    templates: pack.templates.map((t) => ({ id: t.id, version: t.version, fingerprint: t.fingerprint })),
-    misconceptions: pack.misconceptions.map((m) => ({
-      id: m.id,
-      description: m.description,
-      childHint: m.childHint,
-      status: m.status,
-    })),
+    templates: pack.templates
+      .filter((t) => t.engineFamily === key)
+      .map((t) => ({ id: t.id, version: t.version, fingerprint: t.fingerprint })),
+    misconceptions: fam?.misconceptions
+      ? pack.misconceptions.map((m) => ({ id: m.id, description: m.description, childHint: m.childHint, status: m.status }))
+      : [],
   };
+}
+
+/** The checker's entry point: rebuild the pack, then the family's light source. */
+export async function buildNvrSignoffFamilySource(prisma: PrismaClient, key: NvrFamilyKey): Promise<unknown> {
+  return familySource(await buildNvrSignoff(prisma), key);
 }
