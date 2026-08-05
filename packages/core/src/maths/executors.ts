@@ -25,6 +25,17 @@ const num = (o: MathsOperands, k: string): number | null =>
 const list = (o: MathsOperands, k: string): number[] | null =>
   Array.isArray(o[k]) ? (o[k] as number[]) : null;
 
+/**
+ * Answer equality that tolerates float noise: (0.60/3)*5 evaluates to
+ * 0.9999999999999999, which IS 1. Numeric strings compare within 1e-9; anything
+ * non-numeric (a fraction "2/5", a word) falls back to normalised string match.
+ */
+export function answersEqual(a: unknown, b: unknown): boolean {
+  const na = Number(String(a).replace(/[£,]/g, '')), nb = Number(String(b).replace(/[£,]/g, ''));
+  if (Number.isFinite(na) && Number.isFinite(nb)) return Math.abs(na - nb) < 1e-9;
+  return normaliseAnswer(a) === normaliseAnswer(b);
+}
+
 /** Trim, collapse inner whitespace, lowercase, drop a leading £. Units kept. */
 export function normaliseAnswer(value: unknown): string {
   return String(value ?? '').trim().replace(/\s+/g, ' ').replace(/^£/, '').toLowerCase();
@@ -88,7 +99,8 @@ export function evalArithmetic(expr: string): number | null {
   const src = expr.replace(/×/g, '*').replace(/÷/g, '/').replace(/[−–]/g, '-');
   if (!/^[-+*/(). \d]+$/.test(src)) return null;
   let i = 0;
-  const peek = () => src[i];
+  const ws = () => { while (src[i] === ' ') i += 1; };
+  const peek = () => { ws(); return src[i]; };
   const parseExpr = (): number => {
     let v = parseTerm();
     while (peek() === '+' || peek() === '-') { const op = src[i++]!; const r = parseTerm(); v = op === '+' ? v + r : v - r; }
@@ -96,16 +108,20 @@ export function evalArithmetic(expr: string): number | null {
   };
   const parseTerm = (): number => {
     let v = parseFactor();
-    while (peek() === '*' || peek() === '/') { const op = src[i++]!; const r = parseFactor(); v = op === '*' ? v * r : v / r; }
+    while (peek() === '*' || peek() === '/') {
+      // `//` is integer (floor) division — the maths batch's solution keys use
+      // it for rounding and remainder work (BUILD-DISTRICT-MATHS).
+      if (peek() === '/' && src[i + 1] === '/') { i += 2; const r = parseFactor(); v = Math.floor(v / r); continue; }
+      const op = src[i++]!; const r = parseFactor(); v = op === '*' ? v * r : v / r;
+    }
     return v;
   };
   const parseFactor = (): number => {
-    while (peek() === ' ') i += 1;
     if (peek() === '(') { i += 1; const v = parseExpr(); if (peek() === ')') i += 1; return v; }
     if (peek() === '-') { i += 1; return -parseFactor(); }
+    ws();
     let n = '';
-    while (peek() && /[\d.]/.test(peek()!)) n += src[i++];
-    while (peek() === ' ') i += 1;
+    while (src[i] && /[\d.]/.test(src[i]!)) n += src[i++];
     return n === '' ? NaN : Number(n);
   };
   const result = parseExpr();

@@ -17,9 +17,9 @@ import {
   CONCEPTUAL_ENTRIES,
   MISCONCEPTION_EXECUTORS,
   type MathsOperands,
+  answersEqual,
   evalArithmetic,
   mathsEntryNumber,
-  normaliseAnswer,
 } from './executors';
 
 export interface MathsDistractor {
@@ -60,7 +60,7 @@ export function checkMathsItem(spec: MathsItemSpec): MathsFailure[] {
     const computed = evalArithmetic(spec.solution);
     if (computed === null) {
       failures.push({ itemId: spec.id, rule: 'key-mismatch', severity: 'report', detail: `solution "${spec.solution}" could not be evaluated` });
-    } else if (normaliseAnswer(computed) !== normaliseAnswer(spec.keyValue)) {
+    } else if (!answersEqual(computed, spec.keyValue)) {
       failures.push({ itemId: spec.id, rule: 'key-mismatch', severity: 'defect', detail: `solution "${spec.solution}" computes ${computed}, but the key is "${spec.keyValue}"` });
     }
   }
@@ -84,7 +84,7 @@ export function checkMathsItem(spec: MathsItemSpec): MathsFailure[] {
       failures.push({ itemId: spec.id, rule: 'operands-insufficient', severity: 'report', detail: `${distractor.misconceptionId}: operands do not let the misconception run (${JSON.stringify(spec.operands)})` });
       continue;
     }
-    if (normaliseAnswer(produced) !== normaliseAnswer(distractor.value)) {
+    if (!answersEqual(produced, distractor.value)) {
       failures.push({
         itemId: spec.id,
         rule: 'distractor-not-executed-misconception',

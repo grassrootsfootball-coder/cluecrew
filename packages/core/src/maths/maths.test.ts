@@ -68,3 +68,10 @@ describe('checkMathsItem', () => {
     expect(found.filter((f) => f.severity === 'defect')).toEqual([]);
   });
 });
+
+describe('solution evaluator: integer division', () => {
+  it('floors on // (used by rounding/remainder keys)', () => {
+    expect(evalArithmetic('((3762 + 50) // 100) * 100')).toBe(3800);
+    expect(evalArithmetic('13 // 5')).toBe(2);
+  });
+});
