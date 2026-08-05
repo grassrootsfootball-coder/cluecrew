@@ -1,0 +1,10 @@
+{
+  "kind": "vr03-typed-analogies-seed",
+  "note": "The reviewer's three reversal items as the FIRST ROWS of the typed vr-03 shape (report 1). Each carries the genuine reversed-relation distractor she authored — the WHOLE the stem is part of, which the old bank never had (it held topic associates mislabelled reversed-relation). The other diagnostic slots per row are the re-authoring work (see the effort report); a row needs at least two distractors to serve.",
+  "shape": "{ pair:[a,b], stem, answer, distractors:{ reversedRelation?, wrongLink?, partForKind?, sameTopic?, exampleAnchor? } }",
+  "rows": [
+    { "pair": ["tree", "leaf"], "stem": "flower", "answer": "petal", "distractors": { "reversedRelation": "garden" } },
+    { "pair": ["hand", "finger"], "stem": "foot", "answer": "toe", "distractors": { "reversedRelation": "leg" } },
+    { "pair": ["book", "page"], "stem": "house", "answer": "room", "distractors": { "reversedRelation": "street" } }
+  ]
+}

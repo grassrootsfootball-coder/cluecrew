@@ -189,7 +189,7 @@ const ANALOGIES: Array<[string, string, string, string, string, string]> = [
   ['kitten', 'cat', 'puppy', 'dog', 'bone', 'kennel'],
   ['hand', 'glove', 'foot', 'sock', 'leg', 'lace'],
   ['bird', 'nest', 'bee', 'hive', 'honey', 'sting'],
-  ['day', 'sun', 'night', 'moon', 'dark', 'sleep'],
+  ['day', 'sun', 'night', 'moon', 'owl', 'sleep'], // 'dark' replaced: it is a defensible answer at T1 (night IS dark), reviewer 2026-08-05
   ['eye', 'see', 'ear', 'hear', 'sound', 'head'],
   ['pen', 'write', 'knife', 'cut', 'fork', 'sharp'],
   ['fish', 'swim', 'bird', 'fly', 'wing', 'sky'],
