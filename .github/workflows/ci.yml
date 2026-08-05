@@ -143,6 +143,13 @@ jobs:
       - name: Word-puzzle gate (single answer, no label collisions)
         run: pnpm check:word-puzzles
 
+      # An audit sample showed the key as option A on every item — the pack
+      # printed stored (key-first) order without the per-child serving shuffle.
+      # This gate makes the safety standing: every bank uniform in storage, and
+      # no bank's SERVED key position above chance through the real shuffle.
+      - name: Option-position gate (key position uniform in storage, fair when served)
+        run: pnpm check:option-positions
+
       # Every MATHS item's key is computed from its solution expression —
       # a wrong key fails the build (BUILD-DISTRICT-MATHS §5, gate #3).
       - name: Solution verification (Maths district)

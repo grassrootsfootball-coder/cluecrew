@@ -20,6 +20,7 @@
  * the case, so the sample is reproducible and its freshness hash is meaningful.
  */
 import type { PrismaClient } from '@prisma/client';
+import { shuffleOptionsForChild } from '../../apps/web/lib/crew/shuffle';
 
 /** The four types whose correctness is a meaning judgement, not a computation. */
 export const SEMANTIC_CASES = new Set(['case-vr-04', 'case-vr-03', 'case-vr-06', 'case-vr-15']);
@@ -87,11 +88,11 @@ export async function buildVrAuditSample(prisma: PrismaClient): Promise<VrAuditS
       include: { options: { include: { misconception: true }, orderBy: { id: 'asc' } } },
       orderBy: { id: 'asc' },
     });
-    const sampled = strideSample(live, semantic ? SEMANTIC_SAMPLE : FORMAL_SAMPLE).map((item) => ({
-      itemId: item.id,
-      tier: item.difficultyTier,
-      stem: (item.stem ?? {}) as Record<string, unknown>,
-      options: item.options.map((option) => {
+    const sampled = strideSample(live, semantic ? SEMANTIC_SAMPLE : FORMAL_SAMPLE).map((item) => {
+      // Present options in the SAME shuffle a child is served (seeded, stable),
+      // NOT stored order — stored is key-first by generator convention, and
+      // printing that made the reviewer see the key as option A on every item.
+      const options = shuffleOptionsForChild(item.options, 'vr-audit-sample', item.id).map((option) => {
         const content = (option.content ?? {}) as Record<string, unknown>;
         return {
           label: (content.label as string) ?? null,
@@ -100,8 +101,14 @@ export async function buildVrAuditSample(prisma: PrismaClient): Promise<VrAuditS
           misconceptionId: option.misconceptionId,
           misconception: option.misconception?.description ?? null,
         };
-      }),
-    }));
+      });
+      return {
+        itemId: item.id,
+        tier: item.difficultyTier,
+        stem: (item.stem ?? {}) as Record<string, unknown>,
+        options,
+      };
+    });
     out.push({
       caseId: kase.id,
       title: kase.title,
