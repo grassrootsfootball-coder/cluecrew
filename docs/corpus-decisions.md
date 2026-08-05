@@ -2416,3 +2416,38 @@ gate says so per item. Wired into CI after `verify:solutions` (gate #3), and
 there are no maths items yet, so it is a green no-op that is ready the day the
 first item lands. 13 unit tests cover the executors, the evaluator and the item
 check.
+
+## Entry 48 — VR free-ten published LIVE, and two gate holes it exposed
+*2026-08-05. The reviewer signed off VR; 299 items now LIVE.*
+
+The specialist reviewer's verbatim confirmation — "I confirm I am content for the
+VR items I have passed to go live to children" — recorded on every published
+item through the written-review path: `reviewedBy` the reviewer, `reviewRecordedBy`
+David (a LIVE item's DB CHECK requires `reviewedBy`, and the two identities may
+never be equal). `pnpm publish:vr-signoff` runs every gate per item and REFUSES
+any that fail, because publishing to a child is one-way.
+
+**299 of 307 published; all ten cases clear the 15-item floor.** vr-01 25, vr-03
+23, vr-04 40, vr-06 34, vr-07 25, vr-09 38, vr-11 39, vr-12 25, vr-14 25, vr-15
+25. Eight held back as DRAFT: the two vr-03 scripts naming a removed distractor
+(hot/deep — the reviewer's open finding, correctly refused by the word-option
+staleness gate), and six vr-06 items whose cloze `stem.sentence` fails the
+child-facing gate (three over 16 words, plus "poorly", "You must", "weak").
+
+**Two gate holes this surfaced, both fixed — honestly, because one leaked.**
+1. The publish gate first checked only `stem.prompt`, so six vr-06 items went
+   LIVE with a faulty `stem.sentence` before `check:db-content` caught them as
+   serving failures. I reverted all six to DRAFT immediately and rebuilt the
+   gate to screen EVERY stem string (the same extraction the serving sweep
+   uses), not just the prompt. A publish gate that checks less than the serving
+   gate is worse than none.
+2. `check:word-puzzles` failed the build on a REVIEW-level finding once the item
+   was LIVE — a dictionary-only competitor ("crush/hent") is a worth-a-glance,
+   not a second answer a child can pick. Soft findings (needs-review,
+   ambiguous-outcome) now route to a non-blocking reports bucket; only a real
+   double-key or an unanswerable key blocks serving.
+
+**Gate-5A content status: MET.** Ten free-tier cases, each ≥15 LIVE, 299 total.
+Every serving gate green — check:db-content, check:word-puzzles, check:nvr,
+validate:content, 508 core tests. The 8 held items go back to authoring; each
+returns through the same gated publish once fixed.

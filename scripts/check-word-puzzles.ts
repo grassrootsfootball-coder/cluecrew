@@ -70,6 +70,16 @@ function gradeCandidates(candidates: readonly string[], key: string): Outcome {
 const serving: WordPuzzleFailure[] = [];
 const draft: WordPuzzleFailure[] = [];
 /**
+ * REVIEW-level findings never fail the build, even on a LIVE item: a
+ * dictionary-only competitor ("crush/hent") or a tag mismatch is a "worth a
+ * glance", not a second right answer a child can pick. Only a real double-key
+ * (ambiguous-answer) or an unanswerable key blocks serving. Without this split
+ * a signed-off item with a soft finding would red the build the moment it went
+ * live — which is exactly what publishing the VR free ten surfaced.
+ */
+const SOFT_RULES = new Set(['needs-review', 'ambiguous-outcome']);
+const reports: WordPuzzleFailure[] = [];
+/**
  * DEFECTS, not warnings (David's ruling, 2026-08-02). A `key-not-derivable`
  * item cannot be answered correctly by any child: the rule it states either
  * produces nothing, or produces something other than the key. Ambiguity is a
@@ -392,7 +402,7 @@ async function main(): Promise<void> {
         defects.set(item.id, failure.detail);
       }
     }
-    bucket.push(...found);
+    for (const f of found) (SOFT_RULES.has(f.rule) ? reports : bucket).push(f);
   }
 
   // Reconcile the flag with what the gate just found: set it on every defect,
@@ -431,6 +441,7 @@ async function main(): Promise<void> {
     if (list.length > 20) console.log(`  … and ${list.length - 20} more`);
   };
   report('DRAFT backlog (not serving, not blocking)', draft);
+  if (reports.length) console.log(`\nReview-level notes (non-blocking): ${reports.length} — dictionary-only competitors and tag mismatches.`);
   console.log(
     `\nThree-outcome grading — AMBIGUOUS ${outcomes.AMBIGUOUS} (a competitor is a word in common usage) · ` +
       `REVIEW ${outcomes.REVIEW} (competitors are dictionary-only). ` +
