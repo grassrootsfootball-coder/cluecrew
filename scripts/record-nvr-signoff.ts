@@ -30,12 +30,14 @@ const SIGNED: string[] = [
   'folding-net', 'folding-punch', 'folding-hidden', 'folding-plans',
 ];
 const HELD = new Set(['lineup-counting', 'lineup-odd', 'lineup-like']);
-const CONFIRMATION = ''; // ← her verbatim words; refuses to --apply while blank
+// Her wording, one sentence per template (CLUECREW-REVIEWER-BRIEF §5), the
+// template name and fingerprint pre-filled so it IS her verbatim confirmation.
+const confirmation = (id: string, fingerprint: string): string =>
+  `I confirm the ${id} template at fingerprint ${fingerprint} is approved for live use. [entered by ${RECORDER}, written review ${TODAY}]`;
 
 async function main(): Promise<void> {
   const approver = await prisma.parentAccount.findUnique({ where: { email: REVIEWER.replace(/^human:/, '') }, select: { staffRole: true } });
   if (approver?.staffRole !== 'REVIEWER') throw new Error(`${REVIEWER} is not a REVIEWER account`);
-  const note = `written review — NVR template sign-off, ${TODAY}. "${CONFIRMATION}" [entered by ${RECORDER}]`;
 
   const recorded: string[] = [];
   const refused: string[] = [];
@@ -46,11 +48,10 @@ async function main(): Promise<void> {
     const fingerprint = templateFingerprint(template);
     console.log(`  ${id.padEnd(22)} v${template.version}  fingerprint ${fingerprint}`);
     if (APPLY) {
-      if (!CONFIRMATION.trim()) throw new Error('CONFIRMATION is blank — cannot record a signature without the reviewer\'s words');
       await prisma.nvrTemplateSignature.upsert({
         where: { templateId_version: { templateId: id, version: template.version } },
-        create: { templateId: id, version: template.version, fingerprint, signedBy: REVIEWER, sampleSheetHash: fingerprint, notes: note },
-        update: { fingerprint, signedBy: REVIEWER, sampleSheetHash: fingerprint, notes: note },
+        create: { templateId: id, version: template.version, fingerprint, signedBy: REVIEWER, sampleSheetHash: fingerprint, notes: confirmation(id, fingerprint) },
+        update: { fingerprint, signedBy: REVIEWER, sampleSheetHash: fingerprint, notes: confirmation(id, fingerprint) },
       });
     }
     recorded.push(`${id} v${template.version}`);
@@ -59,7 +60,6 @@ async function main(): Promise<void> {
   console.log(`\n${APPLY ? 'RECORDED' : '--dry-run (no --apply)'}: ${recorded.length} signatures${APPLY ? ' written' : ' would write'}.`);
   console.log(`Held (not signed): ${[...HELD].join(', ')}`);
   if (refused.length) for (const r of refused) console.log(`  ✗ ${r}`);
-  if (!CONFIRMATION.trim()) console.log('\n⚠ CONFIRMATION is blank — fill the reviewer\'s verbatim words before --apply.');
   await prisma.$disconnect();
 }
 

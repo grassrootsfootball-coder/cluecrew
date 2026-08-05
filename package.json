@@ -76,7 +76,8 @@
     "import:maths-additions": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/import-maths-additions.ts",
     "import:nvr-proposed": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/import-nvr-proposed.ts",
     "export:reviewer-status": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-reviewer-status.ts",
-    "record:nvr-signoff": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/record-nvr-signoff.ts"
+    "record:nvr-signoff": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/record-nvr-signoff.ts",
+    "apply:nvr-review": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/apply-nvr-review.ts"
   },
   "devDependencies": {
     "@eslint/js": "^9.20.0",

@@ -172,6 +172,17 @@ function renderTemplate(t: SignoffTemplate): string {
     </div>`
     : '';
 
+  // An acknowledged, deliberate exception — stated plainly so it is not read as
+  // an oversight (reviewer + David, 2026-08-05).
+  const exception = t.id === 'lineup-odd'
+    ? `<div class="statement"><p><strong>Acknowledged exception — one tag by design.</strong> Odd-one-out is a
+      SET-LEVEL misconception: the four wrong options ARE the group members, so there is no per-option
+      error to name — the set is engineered so a child fixated on a free-roaming axis is pulled to a
+      member. All four therefore carry <code>single-axis-fixation</code>. Splitting into fixed-on-size /
+      -rotation / -position was considered and declined: there are only three irrelevant axes for four
+      conformers, and the corpus does not support axis-specific ids. This is intended, not a gap.</p></div>`
+    : '';
+
   const tiers = t.tiers
     .map((tierSheet) => {
       const thin = tierSheet.distinctCount < tierSheet.items.length;
@@ -201,12 +212,14 @@ function renderTemplate(t: SignoffTemplate): string {
       <p class="fp">fingerprint <code>${esc(t.fingerprint)}</code></p>
     </div>
     ${statement}
+    ${exception}
     ${tiers}
     ${answerKey}
     <div class="signoff">
-      <p class="signline"><strong>Sign-off — ${esc(t.id)} v${t.version}</strong> (fingerprint <code>${esc(t.fingerprint)}</code>)</p>
-      <div class="boxes"><span class="box">☐ approve this version</span><span class="box">☐ reject</span><span class="box">☐ amend (note below)</span></div>
-      ${writingSpace(1, 'reviewer name')}${writingSpace(1, 'date')}${writingSpace(2, 'notes')}
+      <p class="signline"><strong>Sign-off — ${esc(t.id)} v${t.version}</strong></p>
+      <p class="confirm">“I confirm the ${esc(t.id)} template at fingerprint <code>${esc(t.fingerprint)}</code> is approved for live use.”</p>
+      ${writingSpace(1, 'reviewer signature')}${writingSpace(1, 'date')}
+      <p class="muted">To reject or amend instead, strike the sentence through and note why below.</p>${writingSpace(2, 'notes, only if amending')}
     </div>
   </section>`;
 }
@@ -425,6 +438,7 @@ const PACK_CSS = `
   .ktable .kw { font-family: Helvetica, Arial, sans-serif; font-size: 8pt; color: #333; }
   .signoff { page-break-inside: avoid; border-top: 1pt solid #000; margin-top: 4mm; padding-top: 2mm; }
   .signline { margin: 0 0 1mm; } .signline code { font-size: 8pt; }
+  .confirm { font-size: 11.5pt; margin: 0 0 2mm; } .confirm code { font-size: 9pt; }
   .boxes { display: flex; gap: 6mm; font-family: Helvetica, Arial, sans-serif; font-size: 9.5pt; margin: 1.5mm 0; }
   .box { white-space: nowrap; }
   .block { page-break-inside: avoid; border: 0.6pt solid #000; border-radius: 2mm; padding: 3mm; margin: 0 0 4mm; }
