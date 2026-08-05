@@ -392,12 +392,14 @@ const machineAnalogy: NvrTemplate = {
 
 const lineupLike: NvrTemplate = {
   id: 'lineup-like',
-  version: 1,
+  version: 2, // v2: the two surface-similarity look-alikes draw DIFFERENT wrong
+  //             kinds (without replacement) instead of repeating one (reviewer,
+  //             2026-08-05: 90/150 items repeated the same surface distractor)
   engineFamily: 'lineup',
   sectionType: 'like-classification',
   glPool: true,
   generate(seed, tier) {
-    const random = rng(`lineup-like@1:${seed}:${tier}`);
+    const random = rng(`lineup-like@2:${seed}:${tier}`);
     const tone = pick(random, TONES);
     return attemptLoop(this.id, () => {
       // The family: same kind, same pattern; rotation and size roam free.
@@ -413,7 +415,11 @@ const lineupLike: NvrTemplate = {
         ],
       });
       const offPattern = nextPattern(family.pattern);
-      const otherKind = pick(random, ROTATABLE_KINDS.filter((kind) => kind !== family.kind && kind !== 'hook'));
+      // Draw the wrong kinds WITHOUT replacement, so the two surface-similarity
+      // look-alikes key off DIFFERENT shape-families rather than repeating one.
+      const otherKinds = shuffle(random, ROTATABLE_KINDS.filter((kind) => kind !== family.kind && kind !== 'hook'));
+      const otherKind = otherKinds[0]!;
+      const otherKind2 = otherKinds[1] ?? otherKinds[0]!;
       const panels = [member(0, 1), member(90, 2), member(135, 3)];
       const keySize = pick(random, [1, 2, 3] as const);
       const options = finalize(random, [
@@ -444,7 +450,8 @@ const lineupLike: NvrTemplate = {
               misconceptionId: 'nvr-relational-rule-miss' as const,
             }
           : {
-              visual: { elements: [{ ...rotate(family, 270), kind: otherKind, pattern: offPattern, size: 1 as const }, ...extras] },
+              // A DIFFERENT wrong shape-family from the first look-alike.
+              visual: { elements: [{ ...rotate(family, 270), kind: otherKind2, pattern: offPattern, size: 1 as const }, ...extras] },
               isCorrect: false,
               misconceptionId: 'nvr-surface-similarity' as const,
             },
@@ -513,24 +520,22 @@ const lineupOdd: NvrTemplate = {
 
 const lineupCounting: NvrTemplate = {
   id: 'lineup-counting',
-  version: 3, // v3: count+2 retagged to count-by-glance — off-by-several is the same
-  //             estimate error, magnitude a parameter (corpus 2026-08-05)
+  version: 4, // v4: randomised asymmetric offsets so the key is not always the
+  //             median, and the tag splits by magnitude — near = lost her place,
+  //             far = judged by fullness (reviewer, 2026-08-05)
   engineFamily: 'lineup',
   sectionType: 'like-classification',
   glPool: true,
   generate(seed, tier) {
-    const random = rng(`lineup-counting@3:${seed}:${tier}`);
+    const random = rng(`lineup-counting@4:${seed}:${tier}`);
     const tone = pick(random, TONES);
-    // Counting IS the task — the one place extreme density is allowed
-    // (SCP-NVR-2), still inside the tier cap even at count+2.
+    // Counting IS the task — the one place extreme density is allowed (SCP-NVR-2).
     const cap = NVR_CONFIG.densityCaps.maxElementsByTier[tier]!;
     const span: [number, number] =
       tier === 1 ? [5, 8] : tier === 2 ? [8, 12] : tier === 3 ? [12, 20] : tier === 4 ? [20, 32] : [28, 43];
-    const count = Math.min(cap - 2, span[0] + Math.floor(rngSpan(random, span)));
-    // The narrow count range at low tiers meant two items of the same count were
-    // byte-identical pictures. The count is still the answer, but the SCATTER is
-    // now seeded: dots land in a shuffled subset of a 54-cell grid with a seeded
-    // fill parity, so equal-count items look different without changing the task.
+    return attemptLoop(this.id, () => {
+    // Leave headroom so a large positive offset still fits under the cap.
+    const count = Math.min(cap - 6, Math.max(span[0], span[0] + Math.floor(rngSpan(random, span))));
     const layout = shuffle(random, Array.from({ length: 54 }, (_, index) => index));
     const parity = Math.floor(random() * 2);
     const dot = (index: number): ShapeSpec => {
@@ -546,23 +551,37 @@ const lineupCounting: NvrTemplate = {
       };
     };
     const withCount = (n: number): Visual => ({ elements: Array.from({ length: n }, (_, index) => dot(index)) });
+    // The old ±1/±2 offsets put the key at the median every time, so a child
+    // could RANK five pictures by density and pick the middle instead of counting
+    // — worse at high tiers where counting is laborious. Now four DISTINCT offsets
+    // are drawn from the valid range (keeping every count in [2, cap]), so the set
+    // is usually asymmetric and the key's rank varies item to item. The tag splits
+    // by magnitude: a near miss (±1–2) is a child who lost her place mid-count
+    // (count-by-glance); a far miss judged the picture by fullness, not by number
+    // (surface-similarity) — genuinely different hints.
+    const lo = Math.max(-6, 2 - count);
+    const hi = Math.min(6, cap - count);
+    const pool: number[] = [];
+    for (let offset = lo; offset <= hi; offset += 1) if (offset !== 0) pool.push(offset);
+    const offsets = shuffle(random, pool).slice(0, 4);
+    if (offsets.length < 4) return null; // not enough headroom this seed — resample
     const candidates: NvrOption[] = [
       { visual: withCount(count), isCorrect: true, misconceptionId: null },
-      { visual: withCount(count - 1), isCorrect: false, misconceptionId: 'nvr-count-by-glance' },
-      { visual: withCount(count + 1), isCorrect: false, misconceptionId: 'nvr-count-by-glance' },
-      { visual: withCount(count - 2), isCorrect: false, misconceptionId: 'nvr-count-by-glance' },
-      // Off-by-several is the same estimate-instead-of-count error, the size of
-      // the miss a parameter — count-by-glance ×3 is honest here (corpus 2026-08-05).
-      { visual: withCount(count + 2), isCorrect: false, misconceptionId: 'nvr-count-by-glance' },
+      ...offsets.map((offset): NvrOption => ({
+        visual: withCount(count + offset),
+        isCorrect: false,
+        misconceptionId: Math.abs(offset) <= 2 ? 'nvr-count-by-glance' : 'nvr-surface-similarity',
+      })),
     ];
     const options = finalize(random, candidates);
-    if (!options) throw new Error('nvr generator refused: lineup-counting collision');
+    if (!options) return null;
     return {
       ...base(this, seed, tier),
       prompt: 'Count carefully. Which picture holds exactly as many shapes as the first?',
       panels: [withCount(count)],
       options,
     };
+    });
   },
 };
 

@@ -14,7 +14,7 @@
  * Unlike the VR/English/Maths packs it does not list items to tick one by one —
  * NVR items are generated on demand and never stored, so what she signs is a
  * TEMPLATE VERSION, judged from a 30-per-tier sample of its deterministic
- * output. The 19 PROPOSED distractor tags cut across every family, so they ride
+ * output. The shared PROPOSED distractor tags cut across every family, so they ride
  * with THE MACHINE (the first file) and are asked for once.
  *
  * Delivery follows the house pattern: each file is hash-named, freshness-
@@ -264,7 +264,7 @@ function renderFamilyFile(fam: FamilyConfig, pack: NvrSignoff, generatedAt: stri
   </div>`
     : `<div class="decision">
     <p class="desc"><strong>3 · Distractor tags are in THE MACHINE file</strong></p>
-    <p>The 19 shared distractor tags these templates use are listed for approval in <strong>THE MACHINE</strong> file, so you decide them once rather than four times. This file's items cannot serve until both these template versions are signed and those tags are ACTIVE.</p>
+    <p>The ${pack.misconceptions.length} shared distractor tags these templates use are listed for approval in <strong>THE MACHINE</strong> file, so you decide them once rather than four times. This file's items cannot serve until both these template versions are signed and those tags are ACTIVE.</p>
   </div>`;
 
   const templateSections = templates.map(renderTemplate).join('\n');
@@ -285,7 +285,7 @@ function renderFamilyFile(fam: FamilyConfig, pack: NvrSignoff, generatedAt: stri
     <dt>What you are signing</dt><dd>A template <strong>version</strong>, not a list of items. NVR items are generated on the spot from a template and never stored, so there is no fixed set of items to tick. You judge each version by the 30-per-tier sample of its output printed here.</dd>
     <dt>What a signature covers</dt><dd>Every item that signed version will ever generate — at any seed, in any sitting — inherits your approval. That is the whole point of signing the version rather than items.</dd>
     <dt>What voids it</dt><dd>Any change to the template. Each version carries a <em>fingerprint</em> computed from its full sampled output; if the template changes, the fingerprint changes and the signature no longer matches, so a changed template cannot serve on an old signature. This is enforced in code, not by anyone remembering.</dd>
-    ${fam.misconceptions ? '<dt>The misconceptions</dt><dd>This file also carries the 19 shared distractor tags for the whole NVR district. A generated item cannot serve while any of its wrong-answer tags is unapproved, so approving these here is what lets every family’s signed templates actually run.</dd>' : '<dt>The misconceptions</dt><dd>The distractor tags these templates use are approved once, in <strong>THE MACHINE</strong> file — not repeated here.</dd>'}
+    ${fam.misconceptions ? `<dt>The misconceptions</dt><dd>This file also carries the ${pack.misconceptions.length} shared distractor tags for the whole NVR district. A generated item cannot serve while any of its wrong-answer tags is unapproved, so approving these here is what lets every family’s signed templates actually run.</dd>` : '<dt>The misconceptions</dt><dd>The distractor tags these templates use are approved once, in <strong>THE MACHINE</strong> file — not repeated here.</dd>'}
   </dl>
   <p class="muted">Nothing here is LIVE. No NVR item can reach a child until both the template version is signed and its distractor tags are ACTIVE.</p>
 </div>

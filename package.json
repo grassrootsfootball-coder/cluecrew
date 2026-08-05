@@ -75,7 +75,8 @@
     "publish:vr-signoff": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/publish-vr-signoff.ts",
     "import:maths-additions": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/import-maths-additions.ts",
     "import:nvr-proposed": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/import-nvr-proposed.ts",
-    "export:reviewer-status": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-reviewer-status.ts"
+    "export:reviewer-status": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-reviewer-status.ts",
+    "record:nvr-signoff": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/record-nvr-signoff.ts"
   },
   "devDependencies": {
     "@eslint/js": "^9.20.0",
