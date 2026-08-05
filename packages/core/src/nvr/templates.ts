@@ -513,12 +513,12 @@ const lineupOdd: NvrTemplate = {
 
 const lineupCounting: NvrTemplate = {
   id: 'lineup-counting',
-  version: 1,
+  version: 2, // v2: seeded scatter so two items of the same count are different pictures
   engineFamily: 'lineup',
   sectionType: 'like-classification',
   glPool: true,
   generate(seed, tier) {
-    const random = rng(`lineup-counting@1:${seed}:${tier}`);
+    const random = rng(`lineup-counting@2:${seed}:${tier}`);
     const tone = pick(random, TONES);
     // Counting IS the task — the one place extreme density is allowed
     // (SCP-NVR-2), still inside the tier cap even at count+2.
@@ -526,15 +526,24 @@ const lineupCounting: NvrTemplate = {
     const span: [number, number] =
       tier === 1 ? [5, 8] : tier === 2 ? [8, 12] : tier === 3 ? [12, 20] : tier === 4 ? [20, 32] : [28, 43];
     const count = Math.min(cap - 2, span[0] + Math.floor(rngSpan(random, span)));
-    const dot = (index: number): ShapeSpec => ({
-      kind: 'circle',
-      size: 1,
-      rotation: 0,
-      pattern: index % 2 === 0 ? 'solid' : 'open',
-      tone,
-      x: (index % 5) * 0.5,
-      y: Math.floor(index / 5) * 0.35,
-    });
+    // The narrow count range at low tiers meant two items of the same count were
+    // byte-identical pictures. The count is still the answer, but the SCATTER is
+    // now seeded: dots land in a shuffled subset of a 54-cell grid with a seeded
+    // fill parity, so equal-count items look different without changing the task.
+    const layout = shuffle(random, Array.from({ length: 54 }, (_, index) => index));
+    const parity = Math.floor(random() * 2);
+    const dot = (index: number): ShapeSpec => {
+      const cellIndex = layout[index]!;
+      return {
+        kind: 'circle',
+        size: 1,
+        rotation: 0,
+        pattern: (cellIndex + parity) % 2 === 0 ? 'solid' : 'open',
+        tone,
+        x: (cellIndex % 9) * 0.27,
+        y: Math.floor(cellIndex / 9) * 0.3,
+      };
+    };
     const withCount = (n: number): Visual => ({ elements: Array.from({ length: n }, (_, index) => dot(index)) });
     const candidates: NvrOption[] = [
       { visual: withCount(count), isCorrect: true, misconceptionId: null },
@@ -699,12 +708,12 @@ const turntableRotation: NvrTemplate = {
 
 const turntableReflection: NvrTemplate = {
   id: 'turntable-reflection',
-  version: 1,
+  version: 2, // v2: seeded frame added, matching sibling rotation, for item variety
   engineFamily: 'turntable',
   sectionType: 'reflection-identification',
   glPool: false, // CEM-legacy practice ONLY (SCP-NVR-5); never in GL blueprints
   generate(seed, tier) {
-    const random = rng(`turntable-reflection@1:${seed}:${tier}`);
+    const random = rng(`turntable-reflection@2:${seed}:${tier}`);
     const tone = pick(random, TONES);
     return attemptLoop(this.id, () => {
       const spec = { ...mainShape(random, tone, ['hook', 'hook', 'arrow', 'triangle', 'arc']), x: 0.6, y: 1 };
@@ -712,19 +721,23 @@ const turntableReflection: NvrTemplate = {
       const mirror = vertical ? reflect : reflectHorizontal;
       const wrongAxis = vertical ? reflectHorizontal : reflect;
       const key = mirror(spec);
+      // The same seeded corner frame the rotation template carries: identical in
+      // every option so it never differentiates within an item, but its seeded
+      // offset makes two reflection items with the same shape distinct pictures.
+      const extras = frame(random, tier, tone);
       const options = finalize(random, [
-        { visual: single(key), isCorrect: true, misconceptionId: null },
+        { visual: single(key, extras), isCorrect: true, misconceptionId: null },
         // Turned instead of flipped.
-        { visual: single({ ...rotate(spec, 180), x: key.x, y: key.y }), isCorrect: false, misconceptionId: 'nvr-rotation-for-reflection' },
-        { visual: single({ ...wrongAxis(spec) }), isCorrect: false, misconceptionId: 'nvr-wrong-mirror-axis' },
-        { visual: single({ ...spec, x: key.x, y: key.y }), isCorrect: false, misconceptionId: 'nvr-transform-not-applied' },
-        { visual: single({ ...rotate(spec, 90), x: key.x, y: key.y }), isCorrect: false, misconceptionId: 'nvr-rotation-for-reflection' },
+        { visual: single({ ...rotate(spec, 180), x: key.x, y: key.y }, extras), isCorrect: false, misconceptionId: 'nvr-rotation-for-reflection' },
+        { visual: single({ ...wrongAxis(spec) }, extras), isCorrect: false, misconceptionId: 'nvr-wrong-mirror-axis' },
+        { visual: single({ ...spec, x: key.x, y: key.y }, extras), isCorrect: false, misconceptionId: 'nvr-transform-not-applied' },
+        { visual: single({ ...rotate(spec, 90), x: key.x, y: key.y }, extras), isCorrect: false, misconceptionId: 'nvr-rotation-for-reflection' },
       ]);
       if (!options) return null;
       return {
         ...base(this, seed, tier),
         prompt: 'The shape flips over the mirror line. Which picture shows it after the flip?',
-        panels: [single(spec)],
+        panels: [single(spec, extras)],
         stemDecoration: vertical ? 'mirror-vertical' : 'mirror-horizontal',
         options,
       };
@@ -806,44 +819,63 @@ const foldingNet: NvrTemplate = {
   },
 };
 
+/** Left-half punch cells: three columns (x 0, 0.4, 0.8, all left of the x=1
+ * fold) × three rows. Nine cells give a real spread of hole subsets where v1
+ * offered barely two configurations per tier. */
+const PUNCH_CELLS: ReadonlyArray<[number, number]> = [
+  [0, 0], [0, 1], [0, 2], [0.4, 0], [0.4, 1], [0.4, 2], [0.8, 0], [0.8, 1], [0.8, 2],
+];
+
 const foldingPunch: NvrTemplate = {
   id: 'folding-punch',
-  version: 1,
+  version: 2, // v2: seeded multi-cell hole sets (v1 had ~2 pictures per tier)
   engineFamily: 'foldingroom',
   sectionType: 'fold-punch',
   glPool: false,
   generate(seed, tier) {
-    const random = rng(`folding-punch@1:${seed}:${tier}`);
+    const random = rng(`folding-punch@2:${seed}:${tier}`);
     const tone = pick(random, TONES);
     return attemptLoop(this.id, () => {
       // The paper folds right-half-onto-left along x=1. Holes are punched
-      // through both layers on the left half; unfolding mirrors them to
-      // x=2. Hole sets are chosen y-asymmetric so every distractor is a
-      // genuinely different picture.
-      const holeYs: number[] = tier <= 2 ? [pick(random, [0, 2])] : pick(random, [[0, 1], [1, 2]] as const).slice();
+      // through both layers on the left half (x < 1); unfolding mirrors them to
+      // x = 2 - x. The hole set is a seeded subset of the punch grid, chosen
+      // y-asymmetric so the top-to-bottom distractor is a genuinely different
+      // picture from the key.
+      // T1 one hole, then 2, then 3 — nine cells make even the one-hole tier
+      // carry six distinct configurations, and two/three holes far more.
+      const holeCount = tier <= 1 ? 1 : tier <= 3 ? 2 : 3;
+      const chosen = shuffle(random, [...PUNCH_CELLS]).slice(0, holeCount);
+      const setKey = (cells: ReadonlyArray<[number, number]>): string =>
+        cells.map(([x, y]) => `${x}:${y}`).sort().join(',');
+      // If the set is its own top-to-bottom mirror, the wrong-axis distractor
+      // collapses onto the key — resample.
+      if (setKey(chosen) === setKey(chosen.map(([x, y]) => [x, 2 - y]))) return null;
       const hole = (x: number, y: number): ShapeSpec => ({
         kind: 'circle', size: 1, rotation: 0, pattern: 'open', tone, x, y,
       });
-      const holes = holeYs.map((y) => hole(0, y));
       const asVisual = (specs: ShapeSpec[]): Visual => ({ elements: dedupeByPosition(specs) });
-      const key = asVisual([...holes, ...holeYs.map((y) => hole(2, y))]);
-      const extraY = [0, 1, 2].find((y) => !holeYs.includes(y))!;
+      const punched = chosen.map(([x, y]) => hole(x, y));
+      const key = asVisual([...punched, ...chosen.map(([x, y]) => hole(2 - x, y))]);
+      // A right-half cell not already taken by the unfolded key — the extra hole.
+      const extra = PUNCH_CELLS.map(([x, y]) => [2 - x, y] as [number, number]).find(
+        ([x, y]) => !key.elements.some((element) => element.x === x && element.y === y),
+      )!;
       const options = finalize(random, [
         { visual: key, isCorrect: true, misconceptionId: null },
         // Unfold not applied: only the punched half shown.
-        { visual: asVisual(holes), isCorrect: false, misconceptionId: 'nvr-transform-not-applied' },
+        { visual: asVisual(punched), isCorrect: false, misconceptionId: 'nvr-transform-not-applied' },
         // Mirrored top-to-bottom instead of across the fold line.
-        { visual: asVisual([...holes, ...holeYs.map((y) => hole(0, 2 - y))]), isCorrect: false, misconceptionId: 'nvr-wrong-mirror-axis' },
+        { visual: asVisual([...punched, ...chosen.map(([x, y]) => hole(x, 2 - y))]), isCorrect: false, misconceptionId: 'nvr-wrong-mirror-axis' },
         // Copies turned half a turn instead of reflected.
-        { visual: asVisual([...holes, ...holeYs.map((y) => hole(2, 2 - y))]), isCorrect: false, misconceptionId: 'nvr-rotation-for-reflection' },
+        { visual: asVisual([...punched, ...chosen.map(([x, y]) => hole(2 - x, 2 - y))]), isCorrect: false, misconceptionId: 'nvr-rotation-for-reflection' },
         // One hole too many — counted at a glance.
-        { visual: asVisual([...key.elements, hole(2, extraY)]), isCorrect: false, misconceptionId: 'nvr-count-by-glance' },
+        { visual: asVisual([...key.elements, hole(extra[0], extra[1])]), isCorrect: false, misconceptionId: 'nvr-count-by-glance' },
       ]);
       if (!options) return null;
       return {
         ...base(this, seed, tier),
         prompt: 'The paper folds in half, then a hole punch goes through. Which picture shows the paper opened out?',
-        panels: [asVisual(holes)],
+        panels: [asVisual(punched)],
         stemDecoration: 'fold-vertical',
         optionDecoration: 'fold-vertical',
         options,
@@ -922,12 +954,12 @@ const foldingHidden: NvrTemplate = {
 
 const foldingPlans: NvrTemplate = {
   id: 'folding-plans',
-  version: 1,
+  version: 2, // v2: taller low-tier stacks widen the 2×2's cramped output space
   engineFamily: 'foldingroom',
   sectionType: 'plan-views',
   glPool: false,
   generate(seed, tier) {
-    const random = rng(`folding-plans@1:${seed}:${tier}`);
+    const random = rng(`folding-plans@2:${seed}:${tier}`);
     const tone = pick(random, TONES);
     return attemptLoop(this.id, () => {
       // Column heights on a small grid; the stem draws 2.5D stacks, the
@@ -939,7 +971,9 @@ const foldingPlans: NvrTemplate = {
       for (let x = 0; x < gridSize; x += 1) {
         for (let y = 0; y < gridSize; y += 1) {
           if (random() < (tier <= 2 ? 0.7 : 0.55)) {
-            columns.push({ x, y, height: 1 + Math.floor(random() * Math.min(3, tier + 1)) });
+            // Heights reach 3 even at T1 (was capped at 2), so the small 2×2
+            // grid stops repeating the same handful of low arrangements.
+            columns.push({ x, y, height: 1 + Math.floor(random() * Math.min(3, tier + 2)) });
           }
         }
       }

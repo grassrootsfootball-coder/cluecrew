@@ -28,7 +28,7 @@
  * these figure counts would be hundreds of pages and is deliberately not
  * produced; the HTML is the print artifact and prints the same as every pack.
  */
-import { mkdirSync, writeFileSync, copyFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync, copyFileSync, readdirSync, rmSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { checkChildFacingText, renderVisual, svgDefs } from '@cluecrew/core';
@@ -357,6 +357,13 @@ async function main(): Promise<void> {
     );
 
     const delivered = [htmlPath, manifestPath].map((p) => deliver(p, fam.family));
+    // Mirror deliver's supersede logic in the Downloads copy: drop any earlier
+    // hash of this family so the send folder holds exactly the current version.
+    for (const existing of readdirSync(DOWNLOADS_DIR)) {
+      if (existing.startsWith(`${fam.family}-`) && !existing.includes(stamp.sourceHash)) {
+        rmSync(join(DOWNLOADS_DIR, existing));
+      }
+    }
     for (const p of delivered) copyFileSync(p, join(DOWNLOADS_DIR, p.split('/').pop()!));
   }
 
