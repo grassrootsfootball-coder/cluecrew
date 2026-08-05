@@ -27,16 +27,32 @@ import {
   SAMPLES_PER_TIER,
   TIERS,
   buildSampleSheet,
+  contentHash,
   templateFingerprint,
+  visualKey,
   type GeneratedNvrItem,
   type NvrTemplate,
 } from '@cluecrew/core';
 
+/** A tone-independent fingerprint of the puzzle a child would meet — panels and
+ * the option set (sorted, so shuffle order does not count as variety). Two items
+ * with the same value are the same puzzle in different colours. */
+function itemContentKey(item: GeneratedNvrItem): string {
+  const options = item.options
+    .map((o) => `${o.codeLabel ?? visualKey(o.visual)}|${o.isCorrect}|${o.misconceptionId ?? ''}`)
+    .sort();
+  return contentHash({ prompt: item.prompt, panels: item.panels.map((p) => visualKey(p)), options });
+}
+
 export interface SignoffTierSheet {
   tier: number;
   items: GeneratedNvrItem[];
-  /** Seeds the generator refused (ambiguous) — reported, never hidden. */
-  failures: number;
+  /** How many of the sampled items tripped an automated fairness check (0 on a
+   * green template). NOT "seeds refused" — the generator resamples internally. */
+  checkFailures: number;
+  /** Distinct items among the sample, by tone-independent content. Surfaces
+   * a thin output space (a template repeating the same few puzzles) honestly. */
+  distinctCount: number;
 }
 
 export interface SignoffTemplate {
@@ -69,7 +85,8 @@ export interface NvrSignoff {
 function sheetFor(template: NvrTemplate): SignoffTemplate {
   const tiers = TIERS.map((tier) => {
     const sheet = buildSampleSheet(template, tier);
-    return { tier, items: sheet.items, failures: sheet.failures };
+    const distinctCount = new Set(sheet.items.map(itemContentKey)).size;
+    return { tier, items: sheet.items, checkFailures: sheet.failures.length, distinctCount };
   });
   return {
     id: template.id,
