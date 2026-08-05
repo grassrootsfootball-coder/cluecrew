@@ -22,6 +22,7 @@
  */
 import { readFileSync } from 'node:fs';
 import { checkChildFacingText, isBlocking } from '@cluecrew/core';
+import { parseMathsSeed as parse, type MathsSeedEntry as Entry } from './lib/parse-maths-seed';
 import { prisma, recordMisconceptionApprovals } from '../packages/db/src/index';
 
 const DRY = process.argv.includes('--dry-run');
@@ -37,45 +38,6 @@ const METHOD = 'written review — maths misconception seed library';
  * treated as final.
  */
 const CONCEPTUAL = new Set([15, 20, 27, 28, 30, 40, 41, 42, 43, 49, 50, 58, 59]);
-
-interface Entry {
-  n: number;
-  title: string;
-  description: string;
-  hint: string;
-  category: string;
-  id: string;
-}
-
-function kebab(title: string): string {
-  return title
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '');
-}
-
-function parse(md: string): Entry[] {
-  const entries: Entry[] = [];
-  let category = '';
-  let pending: Omit<Entry, 'hint'> | null = null;
-  for (const raw of md.split('\n')) {
-    const line = raw.trim();
-    const group = /^##\s+\d+\.\s+(.+)$/.exec(line);
-    if (group) { category = group[1]!.trim(); continue; }
-    const head = /^\*\*(\d+)\.\s+(.+?)\*\*\s+[—-]+\s+(.+)$/.exec(line);
-    if (head) {
-      const n = Number(head[1]);
-      pending = { n, title: head[2]!.trim(), description: head[3]!.trim(), category, id: `maths-${String(n).padStart(2, '0')}-${kebab(head[2]!)}` };
-      continue;
-    }
-    const hint = /^\*Hint:\*\s+(.+)$/.exec(line);
-    if (hint && pending) {
-      entries.push({ ...pending, hint: hint[1]!.trim() });
-      pending = null;
-    }
-  }
-  return entries;
-}
 
 async function main(): Promise<void> {
   const path = process.argv.find((arg) => arg.endsWith('.md'));

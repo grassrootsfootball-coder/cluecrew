@@ -59,7 +59,8 @@
     "import:vr-banks": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/import-vr-banks.ts",
     "check:export-freshness": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-export-freshness.ts",
     "import:maths-misconceptions": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/import-maths-misconceptions.ts",
-    "export:maths-misconceptions": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-maths-misconceptions.ts"
+    "export:maths-misconceptions": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-maths-misconceptions.ts",
+    "export:maths-hints-to-reword": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-maths-hints-to-reword.ts"
   },
   "devDependencies": {
     "@eslint/js": "^9.20.0",
