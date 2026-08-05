@@ -21,6 +21,7 @@ import { buildCalibration } from './lib/maths-calibration-source';
 import { NVR_FAMILIES, buildNvrSignoffFamilySource } from './lib/nvr-signoff-source';
 import { buildVrAuditSource, buildVrMisconceptionDefsSource, buildVrPatternSource } from './lib/vr-audit-source';
 import { buildReviewerStatusSource } from './export-reviewer-status';
+import { buildNvrHintsToRewordSource } from './export-nvr-hints-to-reword';
 import { prisma } from '../packages/db/src/index';
 
 const VR_PATTERN_SPECS = [
@@ -41,6 +42,7 @@ const BUILDERS: Record<string, () => Promise<unknown>> = {
   'vr-pattern-sample': () => buildVrPatternSource(prisma, VR_PATTERN_SPECS),
   'vr-misconception-defs': () => buildVrMisconceptionDefsSource(prisma),
   'reviewer-status': () => buildReviewerStatusSource(prisma),
+  'nvr-hints-to-reword': () => buildNvrHintsToRewordSource(prisma).then((h) => h.map((x) => ({ id: x.id, hint: x.childHint, faults: x.faults }))),
 };
 
 type Verdict = 'CURRENT' | 'STALE' | 'UNSTAMPED' | 'UNKNOWN-KIND' | 'UNREADABLE';
