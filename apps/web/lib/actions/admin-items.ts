@@ -2,7 +2,7 @@
 
 import { redirect } from 'next/navigation';
 import { z } from 'zod';
-import { checkSolution, fingerprintItem, mathsPlanFileSchema, screenAgainstIndex } from '@cluecrew/core';
+import { checkItemChildFacing, checkSolution, fingerprintItem, isBlocking, mathsPlanFileSchema, screenAgainstIndex } from '@cluecrew/core';
 import mathsPlanContent from '../../../../content/maths-district-plan.json';
 
 const mathsPlan = mathsPlanFileSchema.parse(mathsPlanContent);
@@ -234,7 +234,7 @@ export async function markReviewedAction(formData: FormData): Promise<void> {
   if (!staff || !roleAllows(staff.effectiveRole, ['REVIEWER'])) redirect('/admin');
 
   const itemId = z.string().min(1).parse(formData.get('itemId'));
-  const item = await prisma.item.findUniqueOrThrow({ where: { id: itemId }, include: { options: true } });
+  const item = await prisma.item.findUniqueOrThrow({ where: { id: itemId }, include: { options: true, questionType: true } });
 
   if (item.authoredBy === `human:${staff.email}`) {
     redirect(`/admin/items/${itemId}?error=own-item`);
@@ -249,6 +249,7 @@ export async function markReviewedAction(formData: FormData): Promise<void> {
   if (await assertMisconceptionsActive(item.options)) {
     redirect(`/admin/items/${itemId}?error=unapproved-misconception`);
   }
+  if (childFacingBlock(item)) redirect(`/admin/items/${itemId}?error=child-facing-copy`);
 
   await prisma.item.update({
     where: { id: itemId },
@@ -303,6 +304,22 @@ function publishBlockers(
 }
 
 /**
+ * The child-facing COPY gate for a whole item — the same `checkItemChildFacing`
+ * the serving sweep runs (packages/core). Every door to REVIEWED or LIVE calls
+ * this, so a door can never let through copy the sweep would fail. It was the
+ * absence of exactly this at the publish door — the door checked structure,
+ * tagging and keys but never the words — that let six vr-06 items reach LIVE on
+ * a stem.sentence the serving sweep then flagged.
+ */
+function childFacingBlock(item: {
+  id: string; stem: unknown; explanation: unknown;
+  questionType: { mechanic: string }; options: Array<{ content: unknown }>;
+}): string | null {
+  const faults = checkItemChildFacing({ id: item.id, stem: item.stem, explanation: item.explanation, mechanic: item.questionType.mechanic, options: item.options }).filter(isBlocking);
+  return faults[0]?.detail ?? null;
+}
+
+/**
  * Publish to LIVE (§5) — P3 as a hard server-side constraint: blocked unless
  * every incorrect option has a misconceptionId AND reviewedBy is set (and is
  * not the author). This is the ONLY path to LIVE; bulk import cannot skip it.
@@ -312,13 +329,14 @@ export async function publishItemAction(formData: FormData): Promise<void> {
   if (!staff || !roleAllows(staff.effectiveRole, ['REVIEWER'])) redirect('/admin');
 
   const itemId = z.string().min(1).parse(formData.get('itemId'));
-  const item = await prisma.item.findUniqueOrThrow({ where: { id: itemId }, include: { options: true } });
+  const item = await prisma.item.findUniqueOrThrow({ where: { id: itemId }, include: { options: true, questionType: true } });
 
   if (item.status !== 'REVIEWED' || !item.reviewedBy) {
     redirect(`/admin/items/${itemId}?error=not-reviewed`);
   }
   const failure = publishBlockers(item.options, item.reviewedBy, item.authoredBy, item.answerFlaggedAt);
   if (failure) redirect(`/admin/items/${itemId}?error=${failure}`);
+  if (childFacingBlock(item)) redirect(`/admin/items/${itemId}?error=child-facing-copy`);
 
   await prisma.item.update({ where: { id: itemId }, data: { status: 'LIVE' } });
   await recordAudit(staff.id, 'item.publish', 'Item', itemId);
@@ -528,7 +546,7 @@ export async function bulkRecordItemReviewsAction(formData: FormData): Promise<v
   let recorded = 0;
   const skipped: string[] = [];
   for (const itemId of itemIds) {
-    const item = await prisma.item.findUnique({ where: { id: itemId }, include: { options: true } });
+    const item = await prisma.item.findUnique({ where: { id: itemId }, include: { options: true, questionType: true } });
     if (!item || item.status !== 'DRAFT') {
       skipped.push(`${itemId.slice(0, 8)}: not a draft`);
       continue;
@@ -546,6 +564,8 @@ export async function bulkRecordItemReviewsAction(formData: FormData): Promise<v
       skipped.push(`${itemId.slice(0, 8)}: ${blocker}`);
       continue;
     }
+    const copyBlock = childFacingBlock(item);
+    if (copyBlock) { skipped.push(`${itemId.slice(0, 8)}: child-facing copy — ${copyBlock}`); continue; }
     if (await assertMisconceptionsActive(item.options)) {
       skipped.push(`${itemId.slice(0, 8)}: uses an unapproved misconception`);
       continue;
@@ -596,7 +616,7 @@ export async function bulkMarkReviewedAction(formData: FormData): Promise<void> 
   const skipped: string[] = [];
 
   for (const itemId of itemIds) {
-    const item = await prisma.item.findUnique({ where: { id: itemId }, include: { options: true } });
+    const item = await prisma.item.findUnique({ where: { id: itemId }, include: { options: true, questionType: true } });
     if (!item || item.status !== 'DRAFT') {
       skipped.push(`${itemId.slice(0, 8)}: not a draft`);
       continue;
@@ -614,6 +634,8 @@ export async function bulkMarkReviewedAction(formData: FormData): Promise<void> 
       skipped.push(`${itemId.slice(0, 8)}: ${blocker}`);
       continue;
     }
+    const copyBlock = childFacingBlock(item);
+    if (copyBlock) { skipped.push(`${itemId.slice(0, 8)}: child-facing copy — ${copyBlock}`); continue; }
     if (await assertMisconceptionsActive(item.options)) {
       skipped.push(`${itemId.slice(0, 8)}: uses a misconception you have not approved yet`);
       continue;

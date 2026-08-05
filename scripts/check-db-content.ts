@@ -26,12 +26,9 @@
 import {
   checkBannedVocabulary,
   checkChildFacingText,
+  checkItemChildFacing,
   checkWordCard,
   isBlocking,
-  lettersNamedNotOnCard,
-  wordOptionsNamedNotOnCard,
-  roleForItemStem,
-  spansPresentIn,
   type ContentFailure,
 } from '@cluecrew/core';
 import { prisma } from '../packages/db/src/index';
@@ -56,17 +53,6 @@ function record(isServing: boolean, found: ContentFailure[]): void {
   }
 }
 
-/** Pull the readable strings out of an item's Json stem / option content. */
-function textsFrom(value: unknown, path: string): Array<[string, string]> {
-  if (typeof value === 'string') return value.trim().includes(' ') ? [[path, value]] : [];
-  if (Array.isArray(value)) return value.flatMap((entry, index) => textsFrom(entry, `${path}[${index}]`));
-  if (value && typeof value === 'object') {
-    return Object.entries(value as Record<string, unknown>).flatMap(([key, entry]) =>
-      textsFrom(entry, path ? `${path}.${key}` : key),
-    );
-  }
-  return [];
-}
 
 async function main(): Promise<void> {
   // --- Word cards ---------------------------------------------------------
@@ -80,94 +66,13 @@ async function main(): Promise<void> {
   for (const item of items) {
     counted.items += 1;
     const serving = item.status === 'LIVE';
-    // The stem's role follows the question type's MECHANIC: an
-    // error-spotting or cloze stem is a sentence to proofread, and its length
-    // is the format (spec correction 2026-08-02).
-    const stemRole = roleForItemStem(item.questionType.mechanic);
-    const stemQuotes = Array.isArray((item.stem as Record<string, unknown>).quotes)
-      ? ((item.stem as Record<string, unknown>).quotes as Array<{ text?: string }>)
-          .map((quote) => quote.text ?? '')
-          .filter(Boolean)
-      : [];
-    const testedTokens = Array.isArray((item.stem as Record<string, unknown>).testedTokens)
-      ? ((item.stem as Record<string, unknown>).testedTokens as string[])
-      : [];
-    for (const [path, text] of textsFrom(item.stem, '')) {
-      // Only the prompt carries the quotes; other stem fields are ours.
-      const quotedSpans = path === 'prompt' ? stemQuotes : [];
-      record(
-        serving,
-        checkChildFacingText({
-          role: stemRole,
-          label: `item:${item.id} stem.${path}`,
-          text,
-          quotedSpans,
-          testedTokens,
-        }),
-      );
-    }
-    // The walk script and its hint core. Both are spoken to the child in the
-    // hint's register, and until now NOTHING screened them — an explanation
-    // was a Json blob nobody read. That is the same evasion route as the one
-    // the vault import took, one column over, so it is closed the same way.
-    const explanation = (item.explanation ?? {}) as Record<string, unknown>;
-    // AN ITEM'S OWN OPTION TEXT IS STIMULUS, NOT THE SCRIPT'S VOCABULARY
-    // (David's ruling, 2026-08-02, same logic as R4 and tested tokens). A walk
-    // script naming a 10-letter key ("courageous") cannot be penalised on the
-    // long-word ceiling for a word printed on its own card. Bounded: the
-    // option's own words, only in that item's script, lifting only the
-    // vocabulary ceiling — which is exactly what a tested token does.
-    const optionWords = item.options.flatMap((option) => {
-      const value = (option.content as { value?: unknown }).value;
-      const flat = Array.isArray(value) ? value : [value];
-      return flat.flatMap((v) => String(v ?? '').split(/\s+/)).filter(Boolean);
-    });
-    const scriptTested = [...testedTokens, ...optionWords];
-    for (const field of ['walkScript', 'walk', 'hintCore'] as const) {
-      const text = explanation[field];
-      if (typeof text !== 'string' || !text.trim()) continue;
-      record(
-        serving,
-        checkChildFacingText({
-          role: 'hint',
-          label: `item:${item.id} explanation.${field}`,
-          text,
-          // Only the quotes this script actually uses: the declaration was
-          // made about the stem, so an unused one is not a broken claim.
-          quotedSpans: spansPresentIn(text, stemQuotes),
-          testedTokens: scriptTested,
-        }),
-      );
-      // A script naming a letter-option not on the card is stale against its
-      // item (David, 2026-08-02).
-      const optionValues = item.options.map((o) => String((o.content as { value?: unknown }).value ?? ''));
-      const orphans = [
-        ...lettersNamedNotOnCard(text, optionValues, JSON.stringify(item.stem)),
-        ...wordOptionsNamedNotOnCard(text, optionValues, JSON.stringify(item.stem)),
-      ];
-      if (orphans.length > 0) {
-        record(serving, [{
-          where: `item:${item.id} explanation.${field}`,
-          rule: 'internal-id-leak',
-          detail: `names option(s) not on the card: ${orphans.join(', ')} — script is stale against the current item`,
-        }]);
-      }
-    }
-    for (const option of item.options) {
-      for (const [path, text] of textsFrom(option.content, '')) {
-        record(
-          serving,
-          // The exemption travels with the ITEM, so an option naming the
-          // correct spelling is covered too.
-          checkChildFacingText({
-            role: 'item-option',
-            label: `item:${item.id} option.${path}`,
-            text,
-            testedTokens,
-          }),
-        );
-      }
-    }
+    // The ONE shared item gate (packages/core) — the same call the publish door
+    // and the import gates make, so this sweep can never read a field a door
+    // skips (the vr-06 stem.sentence leak).
+    record(
+      serving,
+      checkItemChildFacing({ id: item.id, stem: item.stem, explanation: item.explanation, mechanic: item.questionType.mechanic, options: item.options }),
+    );
   }
 
   // --- Misconception child hints ------------------------------------------

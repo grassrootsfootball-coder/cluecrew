@@ -2475,3 +2475,48 @@ pack carries the corrected tiers.
 to real ids.** Both source documents live in `docs/`. One check stays open for
 Cowork's mapping step: verify no calibration item ends up with two options on
 the same id — the whole reason 61 and 62 are separate.
+
+## Entry 50 — Gate-parity audit: one item gate, called by every door
+*2026-08-05. After six vr-06 items reached LIVE past a door the sweep would fail.*
+
+The publish gate checked `stem.prompt`; the serving sweep checked every stem
+string. Six vr-06 items went LIVE on a `stem.sentence` the door never read. The
+audit asked which other gate pairs disagree.
+
+**What each surface checked, before:**
+
+| Surface | Fields | Copy rules |
+|---|---|---|
+| Serving sweep `check:db-content` | every stem string + options + walk script + staleness | full |
+| Publish script `publish:vr-signoff` | `stem.prompt` only → then a *copy* of the sweep's extractor | full (once fixed) |
+| **CMS doors** (markReviewed, publish, 2× bulk) | structure, tagging, keys, answer-flag | **NONE — no copy gate at all** |
+| Import gates | `prompt` + options | same rules, narrower fields |
+
+**The two divergences that could pass bad content past a door:**
+1. **The CMS publish/review doors gated no child-facing copy whatsoever.** An
+   item edited in the admin UI could be marked REVIEWED and published LIVE
+   carrying a banned word or a 20-word stem — caught only by the serving sweep
+   in CI, after it was already serving. This is the more dangerous of the two:
+   the incident was a script; this was the product's own door.
+2. `publish:vr-signoff` read only the prompt, and once fixed carried a *second
+   copy* of the sweep's `textsFrom` — two implementations that happened to match.
+
+**The fix — one implementation, `checkItemChildFacing` (packages/core).** It
+extracts every readable string (all stem fields, every option, the walk script)
+and applies the reading-age, banned-vocabulary, internal-id and staleness rules
+with the quotation and tested-token exemptions — once. Every ENFORCING surface
+now calls it:
+- `check:db-content` — refactored; output byte-identical to before (regression-checked).
+- `publish:vr-signoff` — refactored; refuses the same eight.
+- the four CMS doors — the gate ADDED where there was none, with a
+  `child-facing-copy` error surfaced to the reviewer.
+
+**Import gates left advisory, deliberately.** They report on DRAFT rows, and
+the English importer's prompt+quotes check is complete for what an English item
+shows (there is no sentence field or script at import). Routing it through the
+full extractor would double-gate a declared quotation and wrongly flag the
+archaic passage text it is meant to exempt — a regression, not a fix. Nothing an
+import gate under-reports can reach LIVE without passing the now-unified
+enforcing gates, so the reporting gate staying narrower is safe. The principle:
+the doors that DECIDE share one implementation; the gates that ADVISE may be
+lighter, but never the reverse.

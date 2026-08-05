@@ -19,6 +19,7 @@ const ERROR_COPY: Record<string, string> = {
   'not-reviewed': 'Blocked: the item must be marked REVIEWED by a reviewer first.',
   'own-item': 'Blocked: an item cannot be reviewed by its own author — a different person must check it.',
   'no-correct-option': 'Blocked: the item has no correct option.',
+  'child-facing-copy': 'Blocked: the item text fails a child-facing gate (reading age, banned vocabulary, a stale walk script, or an internal id). Run pnpm check:db-content for the detail — the same gate the live sweep uses.',
   locked: 'LIVE and RETIRED items cannot be edited; retire and re-author instead.',
   'similarity-review':
     'Blocked: the similarity gate flagged this item. A reviewer must judge coincidence vs derivation and clear it with a note first (Addendum E §3).',

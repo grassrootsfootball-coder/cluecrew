@@ -15,19 +15,8 @@
  *   · the reviewer is not the author.
  * Publishing to a child is one-way; a refusal is the safe default.
  */
-import { checkChildFacingText, isBlocking, lettersNamedNotOnCard, roleForItemStem, wordOptionsNamedNotOnCard } from '@cluecrew/core';
+import { checkItemChildFacing, isBlocking } from '@cluecrew/core';
 import { prisma } from '../packages/db/src/index';
-
-/** Every readable string in a Json stem/option, path-labelled — the same
- *  extraction check:db-content uses, so the publish gate cannot pass a field
- *  the serving sweep would fail (the stem.sentence gap that leaked six vr-06
- *  items live before this was fixed). */
-function textsFrom(value: unknown, path: string): Array<[string, string]> {
-  if (typeof value === 'string') return value.trim().includes(' ') ? [[path, value]] : [];
-  if (Array.isArray(value)) return value.flatMap((entry, i) => textsFrom(entry, `${path}[${i}]`));
-  if (value && typeof value === 'object') return Object.entries(value as Record<string, unknown>).flatMap(([k, e]) => textsFrom(e, path ? `${path}.${k}` : k));
-  return [];
-}
 
 const APPLY = process.argv.includes('--apply');
 const REVIEWER = 'human:staff-reviewer@cluecrew.test';
@@ -55,28 +44,11 @@ async function main(): Promise<void> {
     for (const item of items) {
       if (item.status === 'LIVE') continue; // already live, leave it
       const reasons: string[] = [];
-      const role = roleForItemStem(item.questionType.mechanic);
-      const faults = [
-        // EVERY stem string, not just the prompt — a cloze `sentence`, a word
-        // list, a series are all read by the child.
-        ...textsFrom(item.stem, '').flatMap(([path, text]) => checkChildFacingText({ role, label: `${item.id} stem.${path}`, text }).filter(isBlocking)),
-        ...item.options.flatMap((o) => textsFrom(o.content, '').flatMap(([, text]) => checkChildFacingText({ role: 'item-option', label: `${item.id} option`, text }).filter(isBlocking))),
-      ];
-      if (faults.length) reasons.push(`child-facing: ${faults[0]!.detail}`);
-      // The walk script becomes child-facing the moment the item is LIVE, so it
-      // is gated too — copy AND staleness (a script naming an option not on the
-      // card, the vr-03 hot/deep case). An item with no script serves its
-      // misconception hint instead and is not blocked for lacking one.
-      const explanation = (item.explanation ?? {}) as Record<string, unknown>;
-      const walk = String(explanation.walkScript ?? explanation.walk ?? '');
-      if (walk.trim()) {
-        const optionWords = item.options.flatMap((o) => { const v = (o.content as { value?: unknown }).value; return (Array.isArray(v) ? v : [v]).flatMap((x) => String(x ?? '').split(/\s+/)).filter(Boolean); });
-        const optionValues = item.options.map((o) => String((o.content as { value?: unknown }).value ?? ''));
-        const walkFaults = checkChildFacingText({ role: 'hint', label: `${item.id} walkScript`, text: walk, testedTokens: optionWords }).filter(isBlocking);
-        if (walkFaults.length) reasons.push(`walk script: ${walkFaults[0]!.detail}`);
-        const stale = [...lettersNamedNotOnCard(walk, optionValues, JSON.stringify(item.stem)), ...wordOptionsNamedNotOnCard(walk, optionValues, JSON.stringify(item.stem))];
-        if (stale.length) reasons.push(`walk script stale — names option(s) not on the card: ${stale.join(', ')}`);
-      }
+      // The SAME shared item gate the serving sweep runs — stem (every field),
+      // options, and the walk script (copy + staleness). One implementation, so
+      // the door can never read less than the sweep.
+      const faults = checkItemChildFacing({ id: item.id, stem: item.stem, explanation: item.explanation, mechanic: item.questionType.mechanic, options: item.options }).filter(isBlocking);
+      if (faults.length) reasons.push(faults[0]!.detail);
       if (item.answerFlaggedAt) reasons.push('answerability defect (answerFlaggedAt)');
       if (!item.options.some((o) => o.isCorrect)) reasons.push('no correct option');
       if (item.options.some((o) => !o.isCorrect && !o.misconceptionId)) reasons.push('a wrong option has no misconception (P3)');
