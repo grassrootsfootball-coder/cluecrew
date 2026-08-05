@@ -175,7 +175,9 @@ async function main(): Promise<void> {
     counted.misconceptions += 1;
     record(
       entry.status === 'ACTIVE',
-      checkChildFacingText({ role: 'hint', label: `misconception:${entry.id} childHint`, text: entry.childHint }),
+      // A misconception may carry tested tokens — vocabulary its hint is ABOUT
+      // (isosceles/equilateral), exempt from the long-word ceiling on that hint.
+      checkChildFacingText({ role: 'hint', label: `misconception:${entry.id} childHint`, text: entry.childHint, testedTokens: entry.testedTokens ?? [] }),
     );
   }
 

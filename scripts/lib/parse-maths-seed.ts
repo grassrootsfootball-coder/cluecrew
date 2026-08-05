@@ -34,3 +34,23 @@ export function parseMathsSeed(md: string): MathsSeedEntry[] {
   }
   return entries;
 }
+
+/**
+ * The reworded file gives each held entry as `**N. Title**` then the new hint
+ * on the following line — no description or *Hint:* prefix. Returns N → hint.
+ */
+export function parseMathsReworded(md: string): Map<number, string> {
+  const out = new Map<number, string>();
+  const lines = md.split('\n');
+  for (let i = 0; i < lines.length; i += 1) {
+    const head = /^\*\*(\d+)\.\s+.+\*\*$/.exec(lines[i]!.trim());
+    if (!head) continue;
+    for (let j = i + 1; j < lines.length; j += 1) {
+      const t = lines[j]!.trim();
+      if (!t || t.startsWith('#') || t.startsWith('**') || t === '---') continue;
+      out.set(Number(head[1]), t);
+      break;
+    }
+  }
+  return out;
+}

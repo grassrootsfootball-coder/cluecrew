@@ -65,6 +65,15 @@ export async function recordMisconceptionApprovals(input: {
    * was still outstanding. Every use is a decision someone has to own.
    */
   skipCopyGate?: boolean;
+  /**
+   * Per-id tested-token exemptions, honoured by the copy gate here as well as
+   * at import. A tested token is vocabulary the misconception is ABOUT
+   * ("isosceles"/"equilateral" on the universal-symmetry entry), exempt from
+   * the long-word ceiling for that entry only — the same bounding as
+   * headwordInOwnCard. Unlike skipCopyGate this is not a blanket pass: every
+   * other rule still applies, and only the named tokens are lifted.
+   */
+  testedTokensById?: Record<string, readonly string[]>;
 }): Promise<RecordOutcome> {
   const problems = assertRecordable(input.record);
   if (problems.length > 0) throw new Error(`cannot record: ${problems.join('; ')}`);
@@ -99,6 +108,7 @@ export async function recordMisconceptionApprovals(input: {
       role: 'hint',
       label: `misconception:${id} childHint`,
       text: entry.childHint,
+      testedTokens: input.testedTokensById?.[id] ?? entry.testedTokens ?? [],
     });
     if (copyFailures.length > 0 && !input.skipCopyGate) {
       outcome.skipped.push({ id, reason: `child hint fails the gates — ${copyFailures[0]!.detail}` });

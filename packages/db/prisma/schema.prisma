@@ -357,6 +357,11 @@ model Misconception {
   /** The reviewer's own grouping of a seed misconception (e.g. the six KS2
    *  maths strands). Editorial provenance, not a serving field. */
   category    String?
+  /** Vocabulary this misconception's hint is ABOUT (e.g. "isosceles",
+   *  "equilateral") — exempt from the long-word ceiling on THIS hint only,
+   *  the same bounding as headwordInOwnCard. Read by every gate that screens
+   *  the hint, so the exemption is stored once and honoured everywhere. */
+  testedTokens String[]
   /** "human:<email>" — the REVIEWER whose judgement this is. Approval activates. */
   approvedBy  String?
   // Verbal-decision provenance (David's ruling, 2026-08-02). A reviewer may

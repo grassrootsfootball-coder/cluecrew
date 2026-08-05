@@ -2351,3 +2351,32 @@ entries were among the 20 held on the gates).
 approved ACTIVE ids with category, class, description and hint — hash-named,
 stamped and freshness-checkable like every other export. Only ACTIVE ids are
 exported, since a PROPOSED id cannot be referenced by a live item.
+
+## Entry 46 — Maths hint rewords, source docs into the repo, and a stored exemption
+*2026-08-05. All 20 held hints reworded; the maths seed set is complete at 60.*
+
+**Source documents moved into the repo.** The reviewer's original seed library
+had vanished from Downloads by the time the rewords arrived — the exact
+staleness the outbound discipline exists to prevent, now proven on the input
+side. Both source documents live in `docs/` from here:
+`maths-misconception-seed-library.md` (reconstructed from the reviewer's
+verbatim text and validated byte-for-byte against the 40 already-imported
+descriptions — 40/40 match) and `maths-misconception-seed-reworded.md`. Neither
+sits in a scanned scope, so their by-design gate-failing text does not redden
+CI.
+
+**The 20 reworded hints all pass; all 20 imported and approved** through the
+written-review path (method "written review — maths hint rewords"). The maths
+seed set is now **60/60 ACTIVE**. None came back with a new fault; her rewords
+were clean.
+
+**The #49 tested-token exemption, stored on the row.** "isosceles" and
+"equilateral" are the vocabulary the universal-symmetry hint is ABOUT, so they
+are exempt from the long-word ceiling on that hint — but the first import
+approved 59 of 20+39 and left #49 stuck PROPOSED, because the exemption lived
+only in the import script and the APPROVAL door re-gated without it. The fix is
+a `Misconception.testedTokens` field: the exemption is stored once, on the
+entry, and read by every gate that screens the hint — the import, the approval
+door, and the `check:db-content` sweep. A serving hint's exemption can no longer
+be honoured in one place and forgotten in another, which is the same failure
+class as a DB-only fix reverted by its generator (Entry 44).
