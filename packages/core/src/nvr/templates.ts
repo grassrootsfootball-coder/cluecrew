@@ -560,6 +560,12 @@ const lineupCounting: NvrTemplate = {
     // All four wrong counts are the same estimate-instead-of-count error, the size
     // of the miss a parameter — count-by-glance, whose hint hedges both a lost
     // place and a fullness judgment. (Allow-listed for repeated tags by design.)
+    //
+    // TIER-1 NOTE (reviewer, 2026-08-05): at T1 targets of 5–8 a −6 offset has
+    // nowhere to go, so the valid pool skews positive and distractors sit high
+    // (≈74 above the key, 46 below across the sample). Not exploitable at these
+    // counts — the key is still not reliably the median — but if T1 targets are
+    // ever lowered, revisit the offset range so the skew does not tighten.
     const lo = Math.max(-6, 2 - count);
     const hi = Math.min(6, cap - count);
     const pool: number[] = [];

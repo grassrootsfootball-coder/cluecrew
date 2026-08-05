@@ -181,6 +181,14 @@ function renderTemplate(t: SignoffTemplate): string {
       member. All four therefore carry <code>single-axis-fixation</code>. Splitting into fixed-on-size /
       -rotation / -position was considered and declined: there are only three irrelevant axes for four
       conformers, and the corpus does not support axis-specific ids. This is intended, not a gap.</p></div>`
+    : t.id === 'lineup-like'
+    ? `<div class="statement"><p><strong>Acknowledged exception — a repeated tag at T1–T3 only.</strong>
+      At tiers 1–3 the group is defined by kind + shading, which gives three honest failure modes
+      (<code>partial-rule-match</code>, <code>single-axis-fixation</code>, <code>surface-similarity</code>).
+      With four distractors and three modes, the fourth has nowhere to go and repeats
+      <code>surface-similarity</code> — now on a DIFFERENT wrong shape-family (drawn without replacement),
+      so the two look-alikes are distinct pictures. It resolves at T4, where the relational clause adds a
+      genuine fourth mode (<code>relational-rule-miss</code>). Confined to T1–T3, intended, not a gap.</p></div>`
     : '';
 
   const tiers = t.tiers

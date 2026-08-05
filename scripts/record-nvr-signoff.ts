@@ -22,14 +22,23 @@ const REVIEWER = 'human:staff-reviewer@cluecrew.test';
 const RECORDER = 'human:david@cluecrew.test';
 const TODAY = new Date().toISOString().slice(0, 10);
 
-// Fill these two from the reviewer's returns before --apply.
+// All 13 signed: the first 10 on her first pass, the last 3 (held for fixes)
+// on her second, each verified against the fingerprint she quoted.
 const SIGNED: string[] = [
   'machine-series', 'machine-matrix', 'machine-analogy',
   'lineup-codes',
   'turntable-rotation', 'turntable-reflection',
   'folding-net', 'folding-punch', 'folding-hidden', 'folding-plans',
+  'lineup-counting', 'lineup-odd', 'lineup-like',
 ];
-const HELD = new Set(['lineup-counting', 'lineup-odd', 'lineup-like']);
+const HELD = new Set<string>();
+// Fingerprints the reviewer quoted for the last three — recording refuses any
+// template whose current fingerprint no longer matches (changed under her).
+const HER_FINGERPRINT: Record<string, string> = {
+  'lineup-counting': 'bc0770319bbdf10d',
+  'lineup-odd': '87afe664b31dfcbc',
+  'lineup-like': '99495ded26e773f9',
+};
 // Her wording, one sentence per template (CLUECREW-REVIEWER-BRIEF §5), the
 // template name and fingerprint pre-filled so it IS her verbatim confirmation.
 const confirmation = (id: string, fingerprint: string): string =>
@@ -46,7 +55,12 @@ async function main(): Promise<void> {
     const template = NVR_TEMPLATES.find((t) => t.id === id);
     if (!template) { refused.push(`${id}: no such template`); continue; }
     const fingerprint = templateFingerprint(template);
-    console.log(`  ${id.padEnd(22)} v${template.version}  fingerprint ${fingerprint}`);
+    const quoted = HER_FINGERPRINT[id];
+    if (quoted && quoted !== fingerprint) {
+      refused.push(`${id}: fingerprint ${fingerprint} ≠ the ${quoted} she signed — changed under her, NOT recorded`);
+      continue;
+    }
+    console.log(`  ${id.padEnd(22)} v${template.version}  fingerprint ${fingerprint}${quoted ? ' ✓ matches hers' : ''}`);
     if (APPLY) {
       await prisma.nvrTemplateSignature.upsert({
         where: { templateId_version: { templateId: id, version: template.version } },
