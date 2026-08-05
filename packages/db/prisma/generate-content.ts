@@ -714,25 +714,67 @@ const VR03_ROWS: Vr03Row[] = [
   { a: 'whisper', b: 'quiet', stem: 'shout', answer: 'loud', pool: [['angry', 'wL'], ['soft', 'eA']] },
 ];
 
+const VR03_SCARCE = new Set<Vr03Dx>(['rR', 'sT']);
+
+// Generate-to-diagnosis makes each distractor type PREDICTABLE by design, so a
+// shortcut appears the moment one type is both predictable and over-represented
+// (CLAUDE.md house rule: generated-distractor distribution). Distribution is
+// therefore held down deliberately, on the reviewer's two rules (2026-08-06):
+//   1. Never drop a scarce diagnosis. If a row carries reversed-relation or
+//      same-topic, that slot is FIXED; the free slot is chosen from the rest.
+//   2. Cap example-anchor at ~half the items and stop it being the default
+//      filler — where a row offers three, prefer part-for-kind over
+//      example-anchor. (The eight two-diagnosis rows force wL+eA, so eA has a
+//      floor; the cap lets only a few three-diagnosis rows top it up to balance
+//      wrong-link, then no more.)
 function relatedWordsTyped(): GenItem[] {
+  const EA_CAP = Math.ceil(VR03_ROWS.length / 2); // ~half the items
+  const forcedEa = VR03_ROWS.filter((r) => r.pool.length === 2 && r.pool.some(([, d]) => d === 'eA')).length;
+  let eaBudget = EA_CAP - forcedEa; // example-anchor slots the free rows may add
+  let freeIdx = 0; // counts no-scarce rows, to spread the eA budget across them
   return VR03_ROWS.map((row, i) => {
     if (row.pool.length > 3) throw new Error(`vr-03 row ${i + 1}: pool holds more than three diagnoses`);
-    // Serve two distractors of DIFFERENT diagnoses. Three-diagnosis rows drop
-    // one on rotation (i % 3) so every diagnosis gets bank-wide exposure;
-    // two-diagnosis rows serve both — complete, not thin.
-    const served = row.pool.length === 3 ? row.pool.filter((_, k) => k !== i % 3) : row.pool;
+    let served: Array<[string, Vr03Dx]>;
+    if (row.pool.length === 2) {
+      served = row.pool; // two-diagnosis rows are complete — serve both
+    } else {
+      const scarce = row.pool.filter(([, d]) => VR03_SCARCE.has(d));
+      const rest = row.pool.filter(([, d]) => !VR03_SCARCE.has(d));
+      if (scarce.length === 2) {
+        served = scarce; // both scarce present — fix both, drop the abundant one
+      } else if (scarce.length === 1) {
+        // Fix the scarce slot; fill the other with a non-eA (part-for-kind,
+        // then wrong-link) so example-anchor is never the default filler.
+        const filler = rest.find(([, d]) => d === 'pFK') ?? rest.find(([, d]) => d === 'wL') ?? rest.find(([, d]) => d === 'eA')!;
+        served = [scarce[0]!, filler];
+      } else {
+        // No scarce (wrong-link / part-for-kind / example-anchor). Always keep
+        // part-for-kind; add example-anchor only while budget allows and on a
+        // spread of rows, else wrong-link.
+        const pfk = rest.find(([, d]) => d === 'pFK')!;
+        const ea = rest.find(([, d]) => d === 'eA');
+        const wl = rest.find(([, d]) => d === 'wL')!;
+        const takeEa = !!ea && eaBudget > 0 && freeIdx % 2 === 0;
+        served = takeEa ? [pfk, ea!] : [pfk, wl];
+        if (takeEa) eaBudget--;
+        freeIdx++;
+      }
+    }
     if (served.length !== 2) throw new Error(`vr-03 row ${i + 1}: needs two served distractors, got ${served.length}`);
     if (served[0]![1] === served[1]![1]) throw new Error(`vr-03 row ${i + 1}: both distractors carry diagnosis ${served[0]![1]}`);
     for (const [word] of served) {
       if (VR03_NEVER_ADD.has(word)) throw new Error(`vr-03 row ${i + 1}: "${word}" is on the never-add list — refused`);
     }
+    // Alternate which distractor is stored first so no diagnosis holds a fixed
+    // column (serving reshuffles per child regardless — this is for the review).
+    const ordered = i % 2 === 1 ? [served[1]!, served[0]!] : served;
     return {
       n: i + 1,
       tier: vocabTierOfSet([row.a, row.b, row.stem, row.answer]),
       stem: { prompt: 'The first pair go together in a certain way. Complete the second pair the same way.', pairA: [row.a, row.b], stemWord: row.stem },
       options: [
         { content: { value: row.answer }, isCorrect: true },
-        ...served.map(([word, dx]) => ({ content: { value: word }, isCorrect: false, mid: VR03_DX_ID[dx] })),
+        ...ordered.map(([word, dx]) => ({ content: { value: word }, isCorrect: false, mid: VR03_DX_ID[dx] })),
       ],
     };
   });

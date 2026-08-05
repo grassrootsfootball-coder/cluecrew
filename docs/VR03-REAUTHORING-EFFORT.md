@@ -37,3 +37,18 @@ The generator *can* be the fix, exactly as she said — but the leverage is in t
 DATA, not the code. The code change is small and one-off; the value is the ~25 rows
 of curated diagnostic distractors, which is teacher work and hers. Relabelling the
 two existing distractors stays the patch until those rows exist.
+
+## Logged: vr-03 tops out at tier 2 (reviewer, 2026-08-06 — NOT this job)
+
+The 25 typed rows the constructor now consumes are all tier 1-2 by
+`vocabTierOfSet` — single-step relations (whole→part, young→adult, worker→product)
+on common vocabulary. The case has **no tier 3-5 rows**. To open the T3-T5 range
+it needs rows built on:
+- **two-step relations** (A relates to B, B relates to C — the child tracks a
+  chain, not a single link), and
+- **closer distractors** — near-miss words that share more with the key, so the
+  wrong options can't be eliminated on surface association alone.
+
+That is fresh data authoring in the same typed shape (pair, stem, answer,
+diagnosis-tagged pool), not a code change; the constructor and gate already
+handle any tier the rows declare. Backlog, not this job.

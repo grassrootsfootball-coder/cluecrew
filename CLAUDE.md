@@ -23,6 +23,13 @@ The build is governed by documents, and the documents win arguments.
   needs a dash to read, split it into two sentences with a full stop instead.
 - Content decisions (items, chapters, misconceptions) go through the CMS
   review pipeline; nothing skips the reviewer.
+- Generated-distractor distribution must be held down deliberately (reviewer,
+  2026-08-06, every generated district): a shortcut appears whenever one
+  distractor type is both predictable AND over-represented. Generating to
+  diagnosis makes each type predictable by design, so a generator must never
+  drop a scarce diagnosis to top up an abundant one, and must cap any single
+  type (position and frequency) rather than let it become the default filler.
+  Ship-rate is a review artifact — export it with every generated bank.
 - Local dev: Postgres on 5432, app on 3100, root `.env` is the single env
   source. Never run `pnpm build` while the dev server is up.
 - e2e fixtures build their own accounts (`apps/web/e2e/fixtures.ts`); the
