@@ -162,6 +162,13 @@ jobs:
       - name: Derivable distractor gate (Maths district)
         run: pnpm check:maths-distractors
 
+      # The VR analogue (reviewer audit, 2026-08-05): a VR distractor tagged with
+      # an executable misconception must BE the value that misconception produces
+      # on the item's operands — not a fixed-slot near-miss. Catches the class of
+      # bug a reviewer found by reading fifty items by hand.
+      - name: Derivable distractor gate (VR district)
+        run: pnpm check:vr-distractors
+
       # The Anti-Marker Law (story map rule 10): self-test proves every rule
       # fires, then the real scan gates any chapters past draft.
       - name: Chapter style scanner (Anti-Marker Law)

@@ -9,7 +9,7 @@
 import { readdirSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { hash } from '@node-rs/argon2';
-import { FAMILY_BY_TYPE, caseFileSchema, regionFileSchema, wordFileSchema } from '@cluecrew/core';
+import { FAMILY_BY_TYPE, buildDerivedVrDistractors, caseFileSchema, regionFileSchema, vrLetterOf, wordFileSchema, type VrOperands } from '@cluecrew/core';
 import { prisma } from '../src/index';
 
 const CONTENT_ROOT = resolve(import.meta.dirname, '../../../content');
@@ -143,54 +143,62 @@ interface SeedItem {
   options: Array<{ id: string; content: object; isCorrect: boolean; misconceptionId: string | null }>;
 }
 
+/** Derived seed options (reviewer audit): distractors are executor outputs, and
+ * the stem carries operands so the VR distractor gate verifies them. */
+function seedDerived(idPrefix: string, keyValue: string | number, operands: VrOperands, ids: string[]): SeedItem['options'] {
+  return [
+    { id: `${idPrefix}-opt1`, content: { value: keyValue }, isCorrect: true, misconceptionId: null },
+    ...buildDerivedVrDistractors(keyValue, operands, ids).map((d, k) => ({
+      id: `${idPrefix}-opt${k + 2}`,
+      content: { value: d.value },
+      isCorrect: false,
+      misconceptionId: d.misconceptionId,
+    })),
+  ];
+}
+
 function numberSeriesItems(): SeedItem[] {
   const items: SeedItem[] = [];
   for (let i = 0; i < 14; i++) {
     const a = 3 + i;
-    const d = 2 + (i % 4);
-    // Steps grow by one each time: d, d+1, d+2, then d+3 to the answer.
-    const terms = [a, a + d, a + 2 * d + 1, a + 3 * d + 3];
-    const answer = a + 4 * d + 6;
+    const dBase = 2 + (i % 4);
+    // Changing step that grows by TWO each term, so the step-carryover distractor
+    // (reuse the previous gap) is distinct from off-by-one — with the old grow-by-
+    // one the two collided (reviewer, item 36: previous-step-repeated == answer−1).
+    const grow = 2;
+    const gapAt = (k: number): number => dBase + k * grow;
+    const terms = [a];
+    for (let k = 0; k < 3; k += 1) terms.push(terms[k]! + gapAt(k));
+    const last = terms[3]!;
+    const answer = last + gapAt(3);
     const id = `seed-vr11-${String(i + 1).padStart(2, '0')}`;
+    const operands: VrOperands = { kind: 'number-series', first: a, step: dBase, answer, last, prevStep: gapAt(2) };
     items.push({
       id,
       questionTypeId: vrTypeId(11, 'number-series'),
       difficultyTier: 1 + (i % 5),
-      stem: { prompt: 'What number comes next in the series?', series: terms },
-      options: [
-        { id: `${id}-opt1`, content: { value: answer }, isCorrect: true, misconceptionId: null },
-        { id: `${id}-opt2`, content: { value: answer - 1 }, isCorrect: false, misconceptionId: 'vr-series-step-carryover' },
-        { id: `${id}-opt3`, content: { value: answer + 1 }, isCorrect: false, misconceptionId: 'vr-series-off-by-one' },
-        { id: `${id}-opt4`, content: { value: terms[3]! - (d + 3) }, isCorrect: false, misconceptionId: 'vr-series-direction' },
-      ],
+      stem: { prompt: 'What number comes next in the series?', series: terms, operands },
+      options: seedDerived(id, answer, operands, ['vr-series-step-carryover', 'vr-series-off-by-one', 'vr-series-direction']),
     });
   }
   return items;
 }
 
-function letterAt(position: number): string {
-  return String.fromCharCode(64 + position); // 1 → A
-}
-
 function letterSeriesItems(): SeedItem[] {
   const items: SeedItem[] = [];
   for (let i = 0; i < 13; i++) {
-    const start = 1 + (i % 5);
+    const start = i % 5; // 0-indexed to match the executors' vrLetterOf
     const step = 2 + (i % 3);
-    const terms = [0, 1, 2, 3].map((n) => letterAt(start + n * step));
+    const terms = [0, 1, 2, 3].map((n) => vrLetterOf(start + n * step));
     const answer = start + 4 * step;
     const id = `seed-vr09-${String(i + 1).padStart(2, '0')}`;
+    const operands: VrOperands = { kind: 'letter-series', first: start, step, answer };
     items.push({
       id,
       questionTypeId: vrTypeId(9, 'letter-series'),
       difficultyTier: 1 + (i % 5),
-      stem: { prompt: 'Which letter comes next in the series?', series: terms },
-      options: [
-        { id: `${id}-opt1`, content: { value: letterAt(answer) }, isCorrect: true, misconceptionId: null },
-        { id: `${id}-opt2`, content: { value: letterAt(answer - 1) }, isCorrect: false, misconceptionId: 'vr-letter-series-off-by-one' },
-        { id: `${id}-opt3`, content: { value: letterAt(Math.min(26, answer + step)) }, isCorrect: false, misconceptionId: 'vr-letter-series-step-repeat' },
-        { id: `${id}-opt4`, content: { value: letterAt(answer - 2 * step) }, isCorrect: false, misconceptionId: 'vr-letter-series-direction' },
-      ],
+      stem: { prompt: 'Which letter comes next in the series?', series: terms, operands },
+      options: seedDerived(id, vrLetterOf(answer), operands, ['vr-letter-series-step-repeat', 'vr-letter-series-direction', 'vr-letter-series-off-by-one']),
     });
   }
   return items;

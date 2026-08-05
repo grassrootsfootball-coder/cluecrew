@@ -121,3 +121,69 @@ Proposed fix pass (not started):
 3. vr-15 needs a new ratified **"didn't chain the clues"** misconception (a
    corpus decision, like the NVR vocabulary gap).
 4. vr-01 needs the common-usage word list cleaned.
+
+---
+
+# Fix applied (David approved, 2026-08-05) — code complete, LIVE re-import held
+
+Executed in the approved order. **The code is done and CI-clean; the production
+re-import is deliberately NOT applied — the R10 check found a hard blocker (below).**
+
+## What changed (a shared, executable derivation)
+
+`packages/core/src/vr/distractors.ts` is the single source both the generator and
+the seed use: each executable misconception is a function from the item's
+`stem.operands` to the exact value(s) it produces. Distractors are now built from
+those executors and tagged with that id, so a distractor IS what its tag produces
+by construction. Tag-change counts (new generator vs the old LIVE tagging):
+
+| Bank | Old tagging | New | Distractor changes | Note |
+|---|---|---|---|---|
+| vr-03 | same-topic ×23, **reversed-relation ×23** | same-topic ×50 | 27 | reversed-relation was 100% wrong; both distractors are topic associates |
+| vr-07 | value/operation-slip on sum±1/±2 | derived substitutions + real op-slip | 68 | near-misses removed; **Q=S duplicate values fixed (was 15/25)** |
+| vr-09 | step-repeat ×63 (fixed slot) | 25/25/25 clean | 50 | the answer+1 off-by-one mislabel fixed |
+| vr-11 | carryover on answer±1 (collides with off-by-one) | constant + changing-step, distinct | 61 | series redesigned so carryover ≠ off-by-one |
+| vr-14 | step-direction/step-size | **unchanged (0)** | 0 | vr-14 was already correctly tagged; now carries operands for the gate |
+
+The gate — `scripts/check-vr-distractors.ts` (`check:vr-distractors`, wired into
+CI, `--self-test` proves it bites) — verifies every executable-tagged distractor
+against the operands: 127 items derivation-verified, 0 defects on freshly
+generated content; LIVE defects fail, DRAFT reports, semantic tags review-only,
+items without operands are reported "uncovered".
+
+vr-03 keeps two same-topic distractors and reversed-relation is now unused there:
+none of the ANALOGIES data applies the relationship backwards, so a genuine
+reversed-relation distractor needs new data — **flagged, not faked**.
+
+## Word list (item 3)
+
+`bose` (non-word) and `lea` (child-obscure) removed from
+`content/wordlists/common-en.txt`. **Systemic finding:** the "common-usage floor"
+is a 30,946-entry permissive lexicon riddled with non-child words (`ake, ako,
+aku, bae, bah, bap, bes…`). Removing thousands is an unreviewed content decision,
+so only the two named were removed; a curated child word list is recommended as a
+separate task. Only two LIVE items depended on the removed words (vr-01 #13 → `b`
+made `bose`; vr-01 #25 → `l` made `lea`), whose tags move to `completes-neither`.
+
+## R10 — two dependencies found before re-import
+
+1. **`packages/db/prisma/seed.ts` had the same bug** — it authors `seed-vr09-*`
+   and `seed-vr11-*`, and tagged `answer−1` as `step-carryover` (the reviewer's
+   flagged item 36 = `seed-vr11-14`), where the step grew by one so carryover was
+   indistinguishable from off-by-one. Fixed to the same derivable design.
+2. **The reviewer's walk-scripts are coupled to exact option values.**
+   `content/review-returns/2026-08-02-hints-and-walkscripts.json` describes each
+   distractor by letter ("J drops back, Q pulls up early"). Changing a distractor
+   value makes the walk-script stale — `check:db-content` flagged `seed-vr09-12/13`
+   as serving with a script naming an option no longer on the card. **This blocks
+   the LIVE re-import:** every changed item needs its walk-script re-authored (the
+   reviewer's prose, not ours) and a re-sign, since vr-07/vr-11 also get new stems.
+
+CI stays green because it never imports walk-scripts or publishes — the LIVE items
+are the only place the coupling bites, which is exactly what "check before
+re-import" surfaced.
+
+## Held, per instruction
+
+vr-15's "didn't chain the clues" misconception — the reviewer drafts it (her
+wording). Not touched.

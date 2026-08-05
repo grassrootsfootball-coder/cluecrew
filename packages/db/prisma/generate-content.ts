@@ -12,6 +12,27 @@
  */
 import { prisma } from '../src/index';
 import { deductionTier, isCommon, vocabTier, vocabTierOfSet } from './difficulty';
+import { buildDerivedVrDistractors, type VrOperands } from '@cluecrew/core';
+
+/**
+ * Derived distractors (reviewer audit, 2026-08-05): each is the value its
+ * misconception PRODUCES on the operands, tagged with that id — not a fixed-slot
+ * near-miss. Wraps the shared core builder into GenItem option shape.
+ */
+function derivedOptions(
+  keyValue: string | number,
+  operands: VrOperands,
+  ids: string[],
+): Array<{ content: object; isCorrect: boolean; mid?: string }> {
+  return [
+    { content: { value: keyValue }, isCorrect: true },
+    ...buildDerivedVrDistractors(keyValue, operands, ids).map((d) => ({
+      content: { value: d.value },
+      isCorrect: false,
+      mid: d.misconceptionId,
+    })),
+  ];
+}
 
 const PROVENANCE = 'ai-draft:claude-fable-5';
 
@@ -19,12 +40,14 @@ interface GenItem {
   n: number;
   tier: number;
   stem: object;
-  options: Array<{ content: object; isCorrect: boolean; m?: number }>; // m = misconception index (0/1)
+  // m = misconception index into the bank list; OR `mid` = an explicit id
+  // (preferred for the derived VR banks, so the tag is not a fixed slot).
+  options: Array<{ content: object; isCorrect: boolean; m?: number; mid?: string }>;
 }
 
 // ---------- Misconception library: 2 per type (§9) ----------
 // Child hints use "not yet" language only (D1); never a banned word.
-const M: Record<string, Array<{ id: string; description: string; childHint: string }>> = {
+export const M: Record<string, Array<{ id: string; description: string; childHint: string }>> = {
   // Redesigned 2026-08-02 with the constructor: each distractor is COMPUTED to
   // do exactly what its tag says, and none completes both words (so no offered
   // distractor is a second right answer). Three honest error shapes.
@@ -324,33 +347,35 @@ function numberSeries(): GenItem[] {
   const items: GenItem[] = [];
   for (let i = 0; i < 25; i++) {
     const tier = 1 + (i % 4);
-    const a = 2 + (i % 9);
-    const d = 2 + (i % 5);
-    let terms: number[];
-    let answer: number;
-    if (tier === 1) {
-      terms = [a, a + d, a + 2 * d, a + 3 * d];
-      answer = a + 4 * d;
-    } else if (tier === 2) {
-      terms = [a, a + d, a + 2 * d + 1, a + 3 * d + 3];
-      answer = a + 4 * d + 6;
-    } else if (tier === 3) {
-      terms = [a, a + d, a + 1, a + d + 1]; // alternating +d, -(d-1)
-      answer = a + 2;
-    } else {
-      terms = [a, 30 + i, a + d, 30 + i - 2]; // two interleaved sequences
-      answer = a + 2 * d;
-    }
+    const a = 2 + (i % 9) + (tier - 1) * 3; // magnitude climbs with tier
+    const dBase = 2 + (i % 5);
+    // Redesigned (reviewer audit): the old alternating/interleaved tiers could
+    // not support a derivable step-carryover or direction tag. Every tier is now
+    // a clean arithmetic series — constant step (T1–2) or a step that grows by a
+    // fixed amount each term (T3–4) — so every distractor is what its tag
+    // produces. Difficulty still climbs (magnitude, then a changing step).
+    const changing = tier >= 3;
+    const grow = tier === 4 ? 3 : 2; // how much the gap grows each term (T3/T4)
+    const gapAt = (k: number): number => dBase + (changing ? k * grow : 0);
+    const terms = [a];
+    for (let k = 0; k < 3; k += 1) terms.push(terms[k]! + gapAt(k));
+    const last = terms[3]!;
+    const prevStep = gapAt(2); // the last gap the child actually saw
+    const answer = last + gapAt(3);
+    const operands: VrOperands = changing
+      ? { kind: 'number-series', first: a, step: dBase, answer, last, prevStep }
+      : { kind: 'number-series', first: a, step: dBase, answer };
+    // Changing-step series carry the carryover error (reuse the last gap);
+    // constant series cannot (there is no previous different gap), so they lean
+    // on direction (extend backwards) and off-by-one instead.
+    const ids = changing
+      ? ['vr-series-step-carryover', 'vr-series-off-by-one', 'vr-series-direction']
+      : ['vr-series-off-by-one', 'vr-series-direction', 'vr-series-off-by-one'];
     items.push({
       n: i + 1,
       tier,
-      stem: { prompt: 'What number comes next in the series?', series: terms },
-      options: [
-        { content: { value: answer }, isCorrect: true },
-        { content: { value: answer - 1 }, isCorrect: false, m: 1 },
-        { content: { value: answer + d }, isCorrect: false, m: 0 },
-        { content: { value: answer + 1 }, isCorrect: false, m: 1 },
-      ],
+      stem: { prompt: 'What number comes next in the series?', series: terms, operands },
+      options: derivedOptions(answer, operands, ids),
     });
   }
   return items;
@@ -366,16 +391,19 @@ function letterSeries(): GenItem[] {
     const step = 1 + (i % 3) + (tier >= 3 ? 1 : 0);
     const terms = [0, 1, 2, 3].map((n) => letterOf(start + n * step));
     const answer = start + 4 * step;
+    // Derived (reviewer audit): overshoot a step (step-repeat), extend backwards
+    // off the front (direction), land one letter out (off-by-one) — each the
+    // value its tag produces, not a fixed slot.
+    const operands: VrOperands = { kind: 'letter-series', first: start, step, answer };
     return {
       n: i + 1,
       tier,
-      stem: { prompt: 'Which letter comes next?', series: terms },
-      options: [
-        { content: { value: letterOf(answer) }, isCorrect: true },
-        { content: { value: letterOf(answer + step) }, isCorrect: false, m: 0 },
-        { content: { value: letterOf(answer - 2 * step) }, isCorrect: false, m: 1 },
-        { content: { value: letterOf(answer + 1) }, isCorrect: false, m: 0 },
-      ],
+      stem: { prompt: 'Which letter comes next?', series: terms, operands },
+      options: derivedOptions(letterOf(answer), operands, [
+        'vr-letter-series-step-repeat',
+        'vr-letter-series-direction',
+        'vr-letter-series-off-by-one',
+      ]),
     };
   });
 }
@@ -398,21 +426,22 @@ function lettersForNumbers(): GenItem[] {
     // operands and the operations, not just add-vs-subtract. T1 two-term add,
     // T2 three-term add, T3 a subtraction, T4 four terms with a subtraction.
     const tier = 1 + (i % 4);
-    const v = { P: 2 + (i % 4), Q: 3 + (i % 5), R: 4 + (i % 3), S: 5 + (i % 4) };
+    // DISTINCT letter values (reviewer audit: Q=S on 15 of 25). Four values are
+    // rotated out of a pool, so no two letters ever share a value — a code where
+    // two letters mean the same number is ambiguous.
+    const pool = [2, 3, 4, 5, 6, 7, 8, 9];
+    const picked = [0, 1, 2, 3].map((k) => pool[(i + k * 2) % pool.length]!);
+    const v = { P: picked[0]!, Q: picked[1]!, R: picked[2]!, S: picked[3]! };
     const expr = tier === 1 ? 'P + Q' : tier === 2 ? 'P + Q + R' : tier === 3 ? 'P + Q − R' : 'P + Q + R − S';
     const sum =
       tier === 1 ? v.P + v.Q : tier === 2 ? v.P + v.Q + v.R : tier === 3 ? v.P + v.Q - v.R : v.P + v.Q + v.R - v.S;
-    // An operation-slip distractor: the same terms with the sign flipped where
-    // there is one, else a plain miscount. Nudged to stay distinct from the key.
-    const opSlip = tier >= 3 ? v.P + v.Q + v.R : sum + 2;
-    const distinct = (candidate: number, taken: number[]): number => {
-      let value = candidate;
-      while (taken.includes(value)) value += 1;
-      return value;
-    };
-    const d1 = distinct(sum + 1, [sum]);
-    const d2 = distinct(opSlip, [sum, d1]);
-    const d3 = distinct(sum - 1, [sum, d1, d2]);
+    const operands: VrOperands = { kind: 'code', values: v, expr };
+    // Derived (reviewer audit): distractors are genuine value substitutions (one
+    // letter read as another's value) and, where there is a subtraction, the
+    // operation slipped to an add — NOT sum ± 1/2 near-misses wearing the tags.
+    const ids = /[−–]/.test(expr)
+      ? ['vr07-value-slip', 'vr07-operation-slip', 'vr07-value-slip']
+      : ['vr07-value-slip', 'vr07-value-slip', 'vr07-value-slip'];
     return {
       n: i + 1,
       tier,
@@ -420,13 +449,9 @@ function lettersForNumbers(): GenItem[] {
         prompt: `If ${Object.entries(v).map(([letter, value]) => `${letter} = ${value}`).join(', ')}, what is ${expr}?`,
         code: Object.fromEntries(Object.entries(v).map(([letter, value]) => [letter, String(value)])),
         sum: expr,
+        operands,
       },
-      options: [
-        { content: { value: sum }, isCorrect: true },
-        { content: { value: d1 }, isCorrect: false, m: 0 },
-        { content: { value: d2 }, isCorrect: false, m: 1 },
-        { content: { value: d3 }, isCorrect: false, m: 0 },
-      ],
+      options: derivedOptions(sum, operands, ids),
     };
   });
 }
@@ -617,10 +642,15 @@ function analogies(offset: number, prompt: string): GenItem[] {
       // An analogy is as hard as its most demanding word (backbone).
       tier: vocabTierOfSet([entry[0], entry[1], entry[2], entry[3]]),
       stem: { prompt, pairA: [entry[0], entry[1]], stemWord: entry[2] },
+      // Derived (reviewer audit): BOTH distractors in the data are topic
+      // associates of the key — same kind of error — so both are tagged
+      // same-topic. The old fixed-slot `reversed-relation` on column 5 was a lie:
+      // none of the column-5 words apply the relationship backwards. A genuine
+      // reversed-relation distractor would need new data; flagged, not faked.
       options: [
         { content: { value: entry[3] }, isCorrect: true },
-        { content: { value: entry[4] }, isCorrect: false, m: 0 },
-        { content: { value: entry[5] }, isCorrect: false, m: 1 },
+        { content: { value: entry[4] }, isCorrect: false, mid: 'vr03-same-topic' },
+        { content: { value: entry[5] }, isCorrect: false, mid: 'vr03-same-topic' },
       ],
     };
   });
@@ -633,6 +663,10 @@ function letterConnections(): GenItem[] {
     const a = i % 8;
     const c = 8 + (i % 10);
     const answer = c + step;
+    // Derived (reviewer audit): step applied backwards (step-direction), and the
+    // jump one short/long either way (two honest step-size distractors) — each
+    // the value its tag produces, not a fixed slot.
+    const operands: VrOperands = { kind: 'letter-analogy', first: c, step, answer };
     return {
       n: i + 1,
       tier,
@@ -640,13 +674,9 @@ function letterConnections(): GenItem[] {
         prompt: 'The second pair follows the same rule as the first. Which letter completes it?',
         pairA: [letterOf(a), letterOf(a + step)],
         stemWord: letterOf(c),
+        operands,
       },
-      options: [
-        { content: { value: letterOf(answer) }, isCorrect: true },
-        { content: { value: letterOf(c - step) }, isCorrect: false, m: 0 },
-        { content: { value: letterOf(answer + 1) }, isCorrect: false, m: 1 },
-        { content: { value: letterOf(answer - 1) }, isCorrect: false, m: 1 },
-      ],
+      options: derivedOptions(letterOf(answer), operands, ['vr14-step-direction', 'vr14-step-size', 'vr14-step-size']),
     };
   });
 }
@@ -827,7 +857,7 @@ function completeTheWord(): GenItem[] {
   });
 }
 
-const GENERATORS: Record<string, () => GenItem[]> = {
+export const GENERATORS: Record<string, () => GenItem[]> = {
   'vr-01-insert-letter': insertLetter,
   'vr-02-two-odd-ones-out': oddOnesOut,
   'vr-03-related-words': () => analogies(0, 'The first pair go together in a certain way. Complete the second pair the same way.'),
@@ -906,7 +936,7 @@ async function main(): Promise<void> {
           itemId: id,
           content: option.content,
           isCorrect: option.isCorrect,
-          misconceptionId: option.isCorrect ? null : misconceptions[option.m ?? 0]!.id,
+          misconceptionId: option.isCorrect ? null : (option.mid ?? misconceptions[option.m ?? 0]!.id),
         })),
       });
       itemCount++;
@@ -917,10 +947,14 @@ async function main(): Promise<void> {
   console.log('Every item requires human review through the CMS before it can go LIVE (P3).');
 }
 
-main()
-  .then(() => prisma.$disconnect())
-  .catch(async (error) => {
-    console.error(error);
-    await prisma.$disconnect();
-    process.exit(1);
-  });
+// Only write when run directly (`pnpm content:generate`), not when a report or
+// gate imports GENERATORS/M to inspect the output without touching the database.
+if (process.argv[1]?.endsWith('generate-content.ts')) {
+  main()
+    .then(() => prisma.$disconnect())
+    .catch(async (error) => {
+      console.error(error);
+      await prisma.$disconnect();
+      process.exit(1);
+    });
+}
