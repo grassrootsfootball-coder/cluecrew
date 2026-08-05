@@ -119,7 +119,7 @@
 **35. Assuming scale ticks are 1** — Not calculating the scale intervals on a graph or jug.
 *Hint:* Look at the numbers provided. How much space is between them, and how many jumps are there? Divide the space by the jumps!
 
-**36. Multiplying to convert to a larger unit** — e.g., 100cm = 10,000m.
+**36. Multiplying to convert to a larger unit** — Multiplies instead of dividing when converting up, so gives 100 cm = 10,000 m where the answer is 1 m.
 *Hint:* A metre is much larger than a centimetre, so you will need fewer of them. If you are going to a larger unit, you need to divide.
 
 **37. Metric prefix confusion** — Thinking 1kg = 100g.

@@ -62,7 +62,7 @@ export const M: Record<string, Array<{ id: string; description: string; childHin
   ],
   'vr-03-related-words': [
     { id: 'vr03-same-topic', description: 'Chose a word from the same topic without the same relationship.', childHint: 'Say the first pair as a sentence, then use the SAME sentence for the second.' },
-    { id: 'vr03-reversed-relation', description: 'Applied the relationship backwards.', childHint: 'Check the direction — which one is the little one, which is the big one?' },
+    { id: 'vr03-reversed-relation', description: 'Applied the relationship backwards.', childHint: 'Check which way round the first pair goes. Keep your answer the same way round.' },
   ],
   'vr-04-closest-meaning': [
     { id: 'vr04-associated-not-same', description: 'Chose an associated word rather than a synonym.', childHint: 'Goes-together is not the same as means-the-same. Swap the words in a sentence to test.' },
