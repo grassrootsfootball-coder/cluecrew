@@ -1,11 +1,21 @@
 /**
  * Reading-age lint (BUILD-PHASE-4 §5/§8): child-facing authored content must
- * read at age ≤9. A Word card deliberately TEACHES a hard word, so the
- * headword itself is exempt — what we lint is the wording AROUND it:
- *   1. sentences stay short (≤16 words);
- *   2. at most one other long word (4+ syllables) per text.
- * Flesch-Kincaid on 5-word snippets punishes the very word being taught,
- * so it is deliberately not used here.
+ * read at age ≤9.
+ *
+ * CHECKED BY ROLE (David's spec correction, 2026-08-02). The 16-word
+ * sentence cap applies to what a child reads under pressure — item stems,
+ * options, instructions, narrative and voice. It does NOT apply to a
+ * Word-card sentence: disambiguating a meaning is that sentence's required
+ * function and a long one is often correct. Word cards keep the vocabulary
+ * ceiling and lose the length cap.
+ *
+ * A Word card deliberately TEACHES a hard word, so the headword itself is
+ * exempt — what we lint is the wording AROUND it. Flesch-Kincaid on 5-word
+ * snippets punishes the very word being taught, so it is not used here.
+ *
+ * The rules themselves live in packages/core/src/content-gates.ts, shared
+ * with the database sweep (pnpm check:db-content) so content cannot pass one
+ * gate and fail the other.
  */
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
@@ -13,6 +23,9 @@ import { join } from 'node:path';
 const ROOT = new URL('..', import.meta.url).pathname;
 const MAX_SENTENCE_WORDS = 16;
 const MAX_LONG_WORDS = 1;
+
+/** Ruling 2026-08-02: roles whose sentences are NOT length-capped. */
+const UNCAPPED_ROLES = new Set(['word-card']);
 
 function syllables(word) {
   const cleaned = word.toLowerCase().replace(/[^a-z]/g, '');
@@ -23,13 +36,15 @@ function syllables(word) {
 
 const failures = [];
 
-function check(label, text, exemptStem = '') {
+function check(label, text, exemptStem = '', role = 'item-stem') {
   const stem = exemptStem.toLowerCase().slice(0, 6);
-  const sentences = text.split(/[.!?]/).map((sentence) => sentence.trim()).filter(Boolean);
-  for (const sentence of sentences) {
-    const words = sentence.split(/\s+/).filter(Boolean);
-    if (words.length > MAX_SENTENCE_WORDS) {
-      failures.push(`${label}: sentence has ${words.length} words (max ${MAX_SENTENCE_WORDS}): "${sentence.slice(0, 60)}…"`);
+  if (!UNCAPPED_ROLES.has(role)) {
+    const sentences = text.split(/[.!?]/).map((sentence) => sentence.trim()).filter(Boolean);
+    for (const sentence of sentences) {
+      const words = sentence.split(/\s+/).filter(Boolean);
+      if (words.length > MAX_SENTENCE_WORDS) {
+        failures.push(`${label}: sentence has ${words.length} words (max ${MAX_SENTENCE_WORDS}): "${sentence.slice(0, 60)}…"`);
+      }
     }
   }
   const words = text.split(/\s+/).filter(Boolean);
@@ -45,8 +60,9 @@ function check(label, text, exemptStem = '') {
 
 const wordsFile = JSON.parse(readFileSync(join(ROOT, 'content/words/words.json'), 'utf8'));
 for (const word of wordsFile.words) {
-  check(`word:${word.id} definition`, word.definitionChild, word.headword);
-  check(`word:${word.id} sentence`, word.sentence, word.headword);
+  // role 'word-card': vocabulary ceiling only, no sentence-length cap.
+  check(`word:${word.id} definition`, word.definitionChild, word.headword, 'word-card');
+  check(`word:${word.id} sentence`, word.sentence, word.headword, 'word-card');
 }
 
 for (const file of readdirSync(join(ROOT, 'content/cases'))) {

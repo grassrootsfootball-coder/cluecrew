@@ -336,7 +336,7 @@ export async function startDailyLoop(childId: string, caseIdOverride?: string) {
   // Three collectible Word Cards per warm-up (§5): lowest-tier uncollected.
   const collected = await prisma.wordVaultEntry.findMany({ where: { childId }, select: { wordId: true } });
   const collectCards = await prisma.word.findMany({
-    where: { id: { notIn: collected.map((entry) => entry.wordId) } },
+    where: { status: 'LIVE', id: { notIn: collected.map((entry) => entry.wordId) } },
     orderBy: [{ tier: 'asc' }, { id: 'asc' }],
     take: 3,
   });
@@ -521,7 +521,7 @@ async function buildActivity(childId: string): Promise<ActivityPayload> {
 
       // Review quiz: alternate meaning→word and word→meaning (§5).
       const distractors = await prisma.word.findMany({
-        where: { id: { not: word.id }, tier: { in: [word.tier, Math.max(1, word.tier - 1)] } },
+        where: { status: 'LIVE', id: { not: word.id }, tier: { in: [word.tier, Math.max(1, word.tier - 1)] } },
         take: 12,
       });
       const shuffled = distractors.sort(() => 0.5 - Math.random()).slice(0, 3);
@@ -971,7 +971,7 @@ export async function submitAnswer(
         await prisma.wordVaultEntry.findMany({ where: { childId }, select: { wordId: true } })
       ).map((entry) => entry.wordId);
       const bonus = await prisma.word.findFirst({
-        where: { id: { notIn: collectedIds } },
+        where: { status: 'LIVE', id: { notIn: collectedIds } },
         orderBy: [{ tier: 'asc' }, { id: 'desc' }],
       });
       if (bonus) {

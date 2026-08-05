@@ -1541,3 +1541,166 @@
 .crew-story-cluetap .crew-tile.dim { opacity: 0.6; }
 .crew-story-shelf { margin: 0; padding-left: 1.1rem; }
 .crew-story-shelf li { margin: 0.3rem 0; }
+
+/* ---------- NVR district (BUILD-DISTRICT-NVR) ---------- */
+/* nvr-violet is the district ACCENT — borders, rules and the tool frame,
+   never a fill carrying text and never the only carrier of meaning
+   (manifesto §6): every lit panel and every ringed square is paired with a
+   caption that says the same thing in words. Tap targets ≥48px; nothing here
+   drags. No animation is declared in this block, so the reduced-motion parity
+   at the foot of this file has nothing to switch off — the static render IS
+   the render (Addendum A §2.5). */
+
+.crew-nvr-prompt {
+  font-size: 1.15rem;
+  margin: 0 0 0.75rem;
+}
+
+.crew-nvr-panels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: flex-start;
+  margin: 0.5rem 0 1rem;
+}
+
+.crew-nvr-panels.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 96px));
+}
+
+.crew-nvr-cell {
+  position: relative;
+  display: block;
+  width: 96px;
+  border: 1px solid color-mix(in srgb, var(--cc-ink) 20%, transparent);
+  border-radius: 10px;
+  background: #fdfcf9;
+  padding: 4px;
+}
+
+.crew-nvr-cell.lit {
+  border-color: var(--cc-nvr-violet);
+  border-width: 3px;
+  padding: 2px;
+}
+
+.crew-nvr-cell.tail {
+  display: grid;
+  place-items: center;
+  min-height: 96px;
+  border-style: dashed;
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.crew-nvr-art {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.crew-nvr-art.big {
+  width: 150px;
+  margin: 0.4rem 0;
+}
+
+.crew-nvr-art svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* The square the folding walk is talking about: one third of the panel,
+   placed on the grammar's 3×3 layout grid. */
+.crew-nvr-ring {
+  position: absolute;
+  width: 33.33%;
+  height: 33.33%;
+  border: 3px dashed var(--cc-nvr-violet);
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+/* The half of the sheet that has folded underneath. */
+.crew-nvr-shade {
+  position: absolute;
+  inset: 4px 4px 4px 50%;
+  border-radius: 0 8px 8px 0;
+  background: color-mix(in srgb, var(--cc-ink) 12%, transparent);
+  pointer-events: none;
+}
+
+.crew-nvr-tag {
+  display: block;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.crew-nvr-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-top: 1rem;
+}
+
+.crew-nvr-options .crew-tap {
+  padding: 6px;
+}
+
+.crew-nvr-options .crew-nvr-art {
+  width: 84px;
+}
+
+.crew-nvr-code {
+  display: inline-block;
+  min-width: 72px;
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+/* The fade contract's furniture: big on stage, small in the corner, absent
+   in Plain mode (the engines never render it at rail="none"). */
+.crew-nvr-tool {
+  border: 1px solid color-mix(in srgb, var(--cc-nvr-violet) 60%, transparent);
+  border-radius: 12px;
+  padding: 0.9rem;
+  margin: 0.75rem 0;
+}
+
+.crew-nvr-tool.corner {
+  zoom: 0.82;
+  max-width: 30rem;
+}
+
+.crew-nvr-tool-title {
+  margin: 0 0 0.5rem;
+  font-weight: 800;
+  /* The canonical accent is 3.1:1 on cream and fails AA as text, so the tool
+     title is derived from the same token by mixing toward ink — never a new
+     hex (manifesto §6, the vr-teal precedent above). */
+  color: color-mix(in srgb, var(--cc-nvr-violet) 55%, var(--cc-ink));
+}
+
+/* District accents appear only inside their district (§6): the shared tile's
+   picked state is vr-teal, so inside an NVR engine it is restated in violet.
+   The border is the signal; the tint is only warmth, and the caption under
+   every tool says in words what the picked tile means. */
+.crew-nvr .crew-tile.landed {
+  border-color: var(--cc-nvr-violet);
+  background: color-mix(in srgb, var(--cc-nvr-violet) 18%, #fdfcf9);
+}
+
+.crew-nvr-tool-steps {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.crew-nvr-tool-caption {
+  margin: 0.6rem 0 0;
+  font-weight: 600;
+}

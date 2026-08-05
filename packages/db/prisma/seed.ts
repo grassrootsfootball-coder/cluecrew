@@ -342,7 +342,37 @@ async function seedCases(): Promise<void> {
   // hand-ratified change should be made HERE, not in the database.
   const allCases = await prisma.case.findMany({ orderBy: { orderInDistrict: 'asc' } });
   const byFamily = new Map<string, string[]>();
+  /**
+   * HELD OUT OF THE FREE TIER (David's ruling, 2026-08-02).
+   *
+   * `case-vr-05` (Hidden Word) has four gate-clean items against a floor of
+   * fifteen. Fourteen of its twenty-five admit a second word at a join, so a
+   * child who reads correctly can be marked wrong. Four out of fifteen is
+   * authoring a case, not fixing one, and it goes to the paid tier once
+   * rebuilt properly.
+   *
+   * Held out HERE, in the derivation, rather than by hard-coding its
+   * replacement: the rule is still "the first two cases of each family in
+   * district order", so skipping vr-05 selects vr-06 on its own. Encoding the
+   * ruling rather than its consequence means the next case to be held out —
+   * or vr-05's return — needs one line, not a re-derivation by hand.
+   *
+   * `case-vr-10` (Word Connections) FOLDED (David's ruling, 2026-08-02): it is
+   * the same 25 analogies as `case-vr-03`, differing only in tag names (Entry
+   * 27), so it adds nothing to the free tier. Both are the bridge family;
+   * skipping vr-10 makes the rule select the next bridge case in district
+   * order, `case-vr-14` (Letter Connections) — a LETTER analogy against
+   * vr-03's word analogy, so the family shows its range instead of running the
+   * same mechanic twice (the vr-06 reasoning, applied again).
+   */
+  // `case-vr-02` (Two Odd Ones Out) HELD OUT (David's ruling, 2026-08-02): the
+   // oddOnesOut generator writes its answer as a {pair} with no `value`, against
+   // a select-two mechanic, so every value-based consumer reads it as unkeyable
+   // and it cannot be scored as served. Out until the interaction is rebuilt.
+   const HELD_OUT_OF_FREE_TIER = new Set(['case-vr-05', 'case-vr-10', 'case-vr-02']);
+
   for (const caseRow of allCases) {
+    if (HELD_OUT_OF_FREE_TIER.has(caseRow.id)) continue;
     const family = FAMILY_BY_TYPE[caseRow.questionTypeId] ?? 'wordweb';
     const list = byFamily.get(family) ?? [];
     if (list.length < 2) {

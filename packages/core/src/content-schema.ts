@@ -218,31 +218,202 @@ export const chapterFileSchema = z.object({
 export type ChapterFile = z.infer<typeof chapterFileSchema>;
 
 
-/** Authoring batch composition (corpus decisions entry 1): PROPOSED vs spec. */
+/**
+ * Authoring batch composition (corpus decisions entry 1, extended by the
+ * VR-pass ratifications of 2026-08-01): spec default vs PROPOSED vs RATIFIED.
+ *
+ * `ratified` is the only field Okafor may consume as a decision; `proposed`
+ * is a queue entry with a named holder in its status line. A pool may carry
+ * neither — the English pool deliberately carries only a status, because the
+ * district's spec is unwritten and a number there would be invention.
+ */
+const tierMixSchema = z
+  .object({
+    specDefault: z.array(z.number()).length(5),
+    proposed: z.array(z.number()).length(5).optional(),
+    /** SCP-VR-5: David's ruling; consumable without further approval. */
+    ratified: z.array(z.number()).length(5).optional(),
+    status: z.string(),
+  })
+  .refine(
+    (mix) => [mix.specDefault, mix.proposed, mix.ratified].every(
+      (values) => !values || values.reduce((sum, value) => sum + value, 0) === 100,
+    ),
+    { message: 'tier mixes must sum to 100' },
+  );
+
+/** SCP-VR-6: a type's tier range, constrained to what real papers show. */
+const tierEnvelopeSchema = z.object({
+  min: z.number().int().min(1).max(5),
+  max: z.number().int().min(1).max(5),
+  /** The weighted question count behind the row — thin evidence stays visible. */
+  weightedQuestions: z.number().int().positive(),
+  corpusType: z.string().min(1),
+  caveat: z.string().optional(),
+}).refine((envelope) => envelope.min <= envelope.max, {
+  message: 'an envelope cannot close below where it opens',
+});
+
 export const batchMixFileSchema = z.object({
   kind: z.literal('batch-mix'),
   note: z.string(),
   pools: z.record(
     z.object({
-      tierMixPct: z
-        .object({
-          specDefault: z.array(z.number()).length(5),
-          proposed: z.array(z.number()).length(5).optional(),
-          status: z.string(),
-        })
-        .refine(
-          (mix) => [mix.specDefault, mix.proposed].every(
-            (values) => !values || values.reduce((sum, value) => sum + value, 0) === 100,
-          ),
-          { message: 'tier mixes must sum to 100' },
-        ),
+      tierMixPct: tierMixSchema.optional(),
+      /** Paper-shape findings that are not a tier distribution (e.g. NVR). */
+      composition: z.string().optional(),
+      status: z.string().optional(),
       singleVsMultiStepPct: z
         .object({ single: z.number(), multi: z.number(), status: z.string() })
         .refine((split) => split.single + split.multi === 100)
         .optional(),
     }),
   ),
+  typeTierEnvelopes: z
+    .object({
+      status: z.string(),
+      district: z.enum(['VR', 'NVR', 'MATHS', 'ENGLISH']),
+      envelopes: z.record(z.string().regex(/^[a-z0-9-]+$/), tierEnvelopeSchema),
+      /** Observed envelopes with no unambiguous registry home — never applied. */
+      pendingRegistryMapping: z
+        .object({
+          note: z.string(),
+          rows: z.array(
+            z.object({
+              corpusType: z.string(),
+              observedMin: z.number().int().min(1).max(5),
+              observedMax: z.number().int().min(1).max(5),
+              weightedQuestions: z.number().int().positive(),
+              candidates: z.array(z.string()),
+              reason: z.string().optional(),
+            }),
+          ),
+        })
+        .optional(),
+      discrepancyFlagged: z.string().optional(),
+    })
+    .optional(),
+  unobservedRegistryTypes: z
+    .object({ status: z.string(), types: z.array(z.string()) })
+    .optional(),
 });
+
+export type BatchMixFile = z.infer<typeof batchMixFileSchema>;
+
+/**
+ * The envelope a generator or batch must stay inside for a question type.
+ * Returns null when the type has no ratified envelope — the caller keeps its
+ * existing range rather than inventing a constraint.
+ */
+export function tierEnvelopeFor(
+  file: BatchMixFile,
+  questionTypeId: string,
+): { min: number; max: number } | null {
+  const envelope = file.typeTierEnvelopes?.envelopes[questionTypeId];
+  return envelope ? { min: envelope.min, max: envelope.max } : null;
+}
+
+/**
+ * NVR case shells (BUILD-DISTRICT-NVR §5): 16 slots across the four engines,
+ * sequenced simple→compound. Titles, narratives and Mode assets stay in the
+ * reviewer pipeline — this file is the engineering plan, exactly as the Maths
+ * 36-slot plan is.
+ */
+export const nvrPlanFileSchema = z.object({
+  kind: z.literal('nvr-district-plan'),
+  note: z.string(),
+  districtName: z.string(),
+  slots: z
+    .array(
+      z.object({
+        id: z.string().regex(/^nq-\d{2}$/),
+        engine: z.enum(['machine', 'lineup', 'turntable', 'foldingroom']),
+        /** Must name a real template id — checked against core by pnpm check:nvr. */
+        template: z.string().regex(/^[a-z-]+$/),
+        sectionType: z.string().min(1),
+        /** SCP-NVR-1/3: may this slot's section type appear in a GL blueprint? */
+        glPool: z.boolean(),
+        orderInDistrict: z.number().int().min(1),
+        cluster: z.string().min(1),
+        tierBand: z.tuple([z.number().int().min(1).max(5), z.number().int().min(1).max(5)]),
+        scaffoldNote: z.string().optional(),
+        trackNote: z.string().optional(),
+      }),
+    )
+    .length(16),
+});
+
+/**
+ * English case shells (BUILD-DISTRICT-ENGLISH §2): 30 slots across the two
+ * tracks. `itemModel` is load-bearing rather than descriptive — the GL track
+ * is multiple choice with tagged distractors and the Selective track is the
+ * open-response model (SCP-E-9), and a slot belongs to exactly one track
+ * because they are, in the spec's words, two subjects wearing one name.
+ */
+export const englishPlanFileSchema = z.object({
+  kind: z.literal('english-district-plan'),
+  note: z.string(),
+  districtName: z.string(),
+  slots: z
+    .array(
+      z.object({
+        id: z.string().regex(/^eq-\d{2}$/),
+        track: z.enum(['GL', 'SELECTIVE']),
+        strand: z.string().min(1),
+        itemModel: z.enum(['MC', 'OPEN']),
+        orderInDistrict: z.number().int().min(1),
+        cluster: z.string().min(1),
+        note: z.string().optional(),
+      }),
+    )
+    .min(28)
+    .max(32)
+    .superRefine((slots, ctx) => {
+      for (const slot of slots) {
+        // SCP-E-9/E-10: the item model follows the track, never the author's
+        // preference — an MC item on the Selective track would be a question
+        // type that track's papers do not contain.
+        const expected = slot.track === 'GL' ? 'MC' : 'OPEN';
+        if (slot.itemModel !== expected) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: `${slot.id}: the ${slot.track} track uses the ${expected} item model`,
+          });
+        }
+      }
+    }),
+});
+
+/**
+ * The cross-district exam-technique tree: the things that cost marks
+ * regardless of subject knowledge. Nodes are SLOTS — `content: null` means
+ * "not authored yet", and the engine treats that as unschedulable, so an
+ * unfinished node is invisible to a child rather than half-taught.
+ */
+export const examTechniqueTreeFileSchema = z.object({
+  kind: z.literal('exam-technique-tree'),
+  note: z.string(),
+  nodes: z
+    .array(
+      z.object({
+        id: z.string().regex(/^tech-[a-z-]+$/),
+        title: z.string().min(1).max(60),
+        foundational: z.boolean(),
+        districts: z.array(z.enum(['VR', 'NVR', 'MATHS', 'ENGLISH'])).min(1),
+        teaches: z.string().min(1),
+        /** Where the finding came from — citation ids only, never source text. */
+        evidence: z.string().min(1),
+        relatedMisconceptions: z.array(z.string()),
+        content: z.unknown().nullable(),
+      }),
+    )
+    .min(1),
+});
+
+/** A technique node may only be scheduled once its content is authored. */
+export function isTechniqueNodeBuilt(node: { content: unknown }): boolean {
+  return node.content !== null && node.content !== undefined;
+}
 
 /** NVR generator tuning (BUILD-DISTRICT-NVR §3 parameters, corpus-calibrated). */
 export const nvrGeneratorConfigFileSchema = z.object({
@@ -278,5 +449,8 @@ export const contentFileSchema = z.discriminatedUnion('kind', [
   chapterFileSchema,
   batchMixFileSchema,
   nvrGeneratorConfigFileSchema,
+  nvrPlanFileSchema,
+  englishPlanFileSchema,
+  examTechniqueTreeFileSchema,
 ]);
 export type ContentFile = z.infer<typeof contentFileSchema>;

@@ -4,7 +4,7 @@ The build is governed by documents, and the documents win arguments.
 
 **Read at session start, in this order:**
 1. `docs/CLUECREW-MANIFESTO.md` — wins ALL conflicts; amendable only by
-   David; deviations are surfaced, never silent. Currently v1.4.
+   David; deviations are surfaced, never silent. Currently v1.11.
 2. The phase spec for whatever you're touching: `docs/BUILD-PHASE-1..6.md`,
    `docs/BUILD-DISTRICT-MATHS.md`, `docs/BUILD-DISTRICT-NVR.md`.
 3. `docs/ADDENDUM-A..E` (voice/juice, mock papers, readiness, year/intensity,

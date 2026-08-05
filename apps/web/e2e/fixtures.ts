@@ -28,7 +28,7 @@ import { hash } from '@node-rs/argon2';
 import { prisma, type StaffRole } from '@cluecrew/db';
 import { expect, request, type APIRequestContext, type Browser, type Page } from '@playwright/test';
 
-const BASE = 'http://localhost:3100';
+const BASE = `http://localhost:${process.env.E2E_PORT ?? 3100}`;
 
 /** One password for every fixture account, so the hash is computed once. */
 export const FIXTURE_PASSWORD = 'E2eFixture!2026';

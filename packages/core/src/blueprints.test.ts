@@ -248,6 +248,92 @@ describe('composeMockPaper', () => {
 // Burn rule and cadence
 // ---------------------------------------------------------------------------
 
+// ---------------------------------------------------------------------------
+// Per-cycle-policy sections (BUILD-DISTRICT-ENGLISH §7): CSSE's writing
+// allocation is the exam setter's policy for a cycle, not a fixed property of
+// the format — one observed cycle carried none. Composition must be told.
+// ---------------------------------------------------------------------------
+
+describe('per-cycle-policy sections', () => {
+  const policyBlueprint: Blueprint = {
+    id: 'policy-test',
+    district: 'ENGLISH',
+    variant: 'full',
+    title: 'Policy test paper',
+    sections: [
+      {
+        instructions: 'Read the story first. Then answer the questions about it.',
+        questionCount: 2,
+        typeMix: { [TYPES[0]!]: 2 },
+        minutes: 10,
+      },
+      {
+        instructions: 'Now the writing task. Plan for five minutes before you start.',
+        questionCount: 2,
+        typeMix: { [TYPES[1]!]: 2 },
+        minutes: 20,
+        perCyclePolicy: true,
+        perCyclePolicyNote: 'One observed cycle carried no writing task at all.',
+      },
+    ],
+    notes: 'test fixture',
+    verifiedBy: PENDING_VERIFICATION,
+    verifiedAt: null,
+    sourceRef: 'test',
+  };
+
+  it('a policy-variable section without a note cannot even parse', () => {
+    const parsed = blueprintFileSchema.safeParse({
+      kind: 'blueprint',
+      blueprint: {
+        ...policyBlueprint,
+        sections: [{ ...policyBlueprint.sections[1]!, perCyclePolicyNote: undefined }],
+      },
+    });
+    expect(parsed.success).toBe(false);
+  });
+
+  it('composition REFUSES when it has not been told about the policy section', () => {
+    const composed = composeMockPaper({
+      blueprint: policyBlueprint,
+      candidates: pool(10, TYPES),
+      burnedItemIds: new Set(),
+      seed: 'child-1',
+    });
+    expect(composed.ok).toBe(false);
+    if (composed.ok) return;
+    expect(composed.undecidedPolicySections).toEqual([1]);
+  });
+
+  it('told the cycle carries it, the section composes normally', () => {
+    const composed = composeMockPaper({
+      blueprint: policyBlueprint,
+      candidates: pool(10, TYPES),
+      burnedItemIds: new Set(),
+      seed: 'child-1',
+      policySections: { 1: true },
+    });
+    expect(composed.ok).toBe(true);
+    if (!composed.ok) return;
+    expect(composed.sections[1]!.itemIds).toHaveLength(2);
+  });
+
+  it('told the cycle does NOT carry it, the section stays empty and nothing is burned for it', () => {
+    const composed = composeMockPaper({
+      blueprint: policyBlueprint,
+      candidates: pool(10, TYPES),
+      burnedItemIds: new Set(),
+      seed: 'child-1',
+      policySections: { 1: false },
+    });
+    expect(composed.ok).toBe(true);
+    if (!composed.ok) return;
+    expect(composed.sections).toHaveLength(2);
+    expect(composed.sections[0]!.itemIds).toHaveLength(2);
+    expect(composed.sections[1]!.itemIds).toEqual([]);
+  });
+});
+
 describe('burnedItemIds', () => {
   const sections = [{ itemIds: ['a', 'b'] }, { itemIds: ['c', 'd'] }];
 

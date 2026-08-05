@@ -46,6 +46,11 @@ A persistent, summonable A–Z rail: scrubbing it animates position counting; tw
 - Collection moments: 3 cards in every warm-up; bonus draw on case cracked; root-family completion gives a shelf ceremony.
 - Review integration: due words appear in warm-up as flip-and-answer (choose the meaning / choose the word for the meaning, alternating). Mastery ≥0.8 gilds the card edge.
 - All definitions/sentences authored at reading age ≤9 (CI reading-level check on Word content).
+  **Corrected 2026-08-02 (David):** "reading age ≤9" here means the VOCABULARY ceiling, not a
+  sentence-length cap. The lint applied the 16-word cap to Word cards, which was a spec error:
+  a Word-card sentence exists to DISAMBIGUATE a meaning and a long sentence is often the correct
+  one. The 16-word cap applies to item stems, options and instructions — text read under time
+  pressure. Reading age is now checked BY ROLE (packages/core content-gates.ts).
 
 ## 6. CREW HQ AND THE DISTRICT MAP
 

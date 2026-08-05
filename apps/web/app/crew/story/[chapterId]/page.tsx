@@ -30,6 +30,7 @@ export default async function ChapterReaderPage({
   // Resolve seeded words once, server-side.
   const words = await prisma.word.findMany({
     where: {
+      status: 'LIVE',
       OR: chapter.seededWordIds.flatMap((wordId) => [{ id: wordId }, { headword: wordId }]),
     },
     select: { id: true, headword: true, definitionChild: true },

@@ -21,7 +21,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ chi
   if (!parsed.success) return NextResponse.json({ error: 'invalid_request' }, { status: 400 });
 
   const word = await prisma.word.findFirst({
-    where: { OR: [{ id: parsed.data.wordId }, { headword: parsed.data.wordId }] },
+    where: { status: 'LIVE', OR: [{ id: parsed.data.wordId }, { headword: parsed.data.wordId }] },
   });
   if (!word) return NextResponse.json({ error: 'word_not_found' }, { status: 404 });
 

@@ -17,9 +17,12 @@ import {
   batchMixFileSchema,
   blueprintFileSchema,
   caseFileSchema,
+  examTechniqueTreeFileSchema,
   isBlueprintVerified,
   mathsPlanFileSchema,
   nvrGeneratorConfigFileSchema,
+  englishPlanFileSchema,
+  nvrPlanFileSchema,
   regionFileSchema,
   replayTemplatesFileSchema,
   wordFileSchema,
@@ -41,7 +44,66 @@ const voiceFileSchema = z.object({
   beats: z.record(variantList).optional(),
 });
 
+/**
+ * A curated passage (Stream A public-domain, Stream B/C commissioned). Defined
+ * here for the same reason the voice pack is: it post-dates the core
+ * validator's discriminated union.
+ *
+ * `numberedLines` is the load-bearing field — every stem and walk script cites
+ * lines against it, and `pnpm check:line-refs` resolves those citations here.
+ * The numbering must therefore be dense and 1-based, which is checked rather
+ * than assumed.
+ */
+const passageFileSchema = z.object({
+  kind: z.literal('passage'),
+  id: z.string().min(1),
+  stream: z.string().min(1),
+  work: z
+    .object({ author: z.string(), title: z.string(), firstPublished: z.number().optional(), authorDied: z.number().optional() })
+    .optional(),
+  commissioned: z.boolean().optional(),
+  copyrightCheck: z.record(z.unknown()).optional(),
+  provenance: z.string().optional(),
+  sceneTitle: z.string().optional(),
+  preamble: z.string().optional(),
+  body: z.string().min(1),
+  // `n: null` is a paragraph break — a real entry in the layout that carries
+  // no line number, exactly as a printed paper prints one. The NUMBERING is
+  // dense over the numbered entries; the array is longer than the line count,
+  // which is why nothing may use `numberedLines.length` as the last line.
+  numberedLines: z
+    .array(
+      z.object({
+        n: z.number().int().positive().nullable(),
+        text: z.string(),
+        label: z.string().optional(),
+      }),
+    )
+    .min(1)
+    .superRefine((lines, ctx) => {
+      let expected = 0;
+      for (const [index, line] of lines.entries()) {
+        if (line.n === null) continue;
+        expected += 1;
+        if (line.n !== expected) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: `line numbering must be dense and 1-based: entry ${index} is numbered ${line.n}, expected ${expected}`,
+          });
+        }
+      }
+    }),
+  /** Cloze vehicles only: how many gaps the text carries. Its presence
+   *  declares that citations into this passage count GAPS, not lines. */
+  gapCount: z.number().int().positive().optional(),
+  metadata: z.record(z.unknown()).optional(),
+  editorialCuts: z.array(z.string()).optional(),
+  verbatimVerification: z.record(z.unknown()).optional(),
+  similarityCheck: z.record(z.unknown()).optional(),
+});
+
 const anyContentFile = z.discriminatedUnion('kind', [
+  passageFileSchema,
   batchMixFileSchema,
   nvrGeneratorConfigFileSchema,
   wordFileSchema,
@@ -51,11 +113,26 @@ const anyContentFile = z.discriminatedUnion('kind', [
   blueprintFileSchema,
   replayTemplatesFileSchema,
   mathsPlanFileSchema,
+  nvrPlanFileSchema,
+  englishPlanFileSchema,
+  examTechniqueTreeFileSchema,
 ]);
+
+/**
+ * /content/exports holds GENERATED artefacts — reviewer packs and the
+ * decisions files that come back — not authored content. They are output of
+ * this repo, not input to it, so the authored-content schemas do not apply.
+ *
+ * /content/review-returns holds the filled-in decisions files. They are
+ * correspondence, kept as the paper trail behind a recorded decision; the
+ * import script validates their shape at the point of use.
+ */
+const GENERATED_DIRS = new Set(['exports', 'review-returns']);
 
 function collectJsonFiles(dir: string): string[] {
   const out: string[] = [];
   for (const entry of readdirSync(dir)) {
+    if (GENERATED_DIRS.has(entry)) continue;
     const full = join(dir, entry);
     if (statSync(full).isDirectory()) out.push(...collectJsonFiles(full));
     else if (entry.endsWith('.json')) out.push(full);

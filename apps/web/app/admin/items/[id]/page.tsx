@@ -22,6 +22,11 @@ const ERROR_COPY: Record<string, string> = {
   locked: 'LIVE and RETIRED items cannot be edited; retire and re-author instead.',
   'similarity-review':
     'Blocked: the similarity gate flagged this item. A reviewer must judge coincidence vs derivation and clear it with a note first (Addendum E §3).',
+  // No "clear it with a note" here, unlike the similarity flag above. This is
+  // not a judgement a reviewer can make — the item's own rule does not produce
+  // its key, so a child cannot answer it correctly whatever anyone signs.
+  unanswerable:
+    'Blocked: this item has no derivable answer. Its own rule either produces nothing or produces something other than the key, so it cannot be signed off — it has to be fixed or retired. Run pnpm check:word-puzzles for the detail.',
   'unapproved-misconception':
     'Blocked: one or more misconception ids are still PROPOSED. Approve them in the misconception queue first (Addendum E §2).',
 };

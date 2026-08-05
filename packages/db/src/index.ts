@@ -8,6 +8,7 @@ export const prisma = globalForPrisma.prisma ?? new PrismaClient();
 if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
 
 export * from '@prisma/client';
+export * from './review-recording';
 
 /**
  * The one canonical way to record an analytics event (§6).

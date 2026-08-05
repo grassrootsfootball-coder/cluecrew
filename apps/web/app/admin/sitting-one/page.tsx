@@ -17,8 +17,20 @@ export default async function SittingOnePage() {
   const proposed = await prisma.misconception.count({ where: { status: 'PROPOSED' } });
   const reviewedItems = await prisma.item.count({ where: { status: 'REVIEWED' } });
   const draftItems = await prisma.item.count({ where: { status: 'DRAFT' } });
-  const mix = (batchMix as { pools: Record<string, { tierMixPct: { specDefault: number[]; proposed?: number[] } }> })
-    .pools['gl-maths']!;
+  // Pools carry different shapes now that the NVR and English pools have
+  // landed (some are composition notes, not tier mixes), so the cast reads
+  // the one pool this card is about and treats the mix as optional.
+  const pools = (
+    batchMix as unknown as {
+      pools: Record<
+        string,
+        { tierMixPct?: { specDefault: number[]; proposed?: number[]; ratified?: number[] } }
+      >;
+    }
+  ).pools;
+  const mathsPractice = pools['gl-maths-practice']!;
+  const vrPractice = pools['gl-vr-practice']!;
+  const vrMock = pools['gl-vr-mock']!;
   const nvr = nvrConfig as { optionCount: { value: number; specDefault: number } };
 
   return (
@@ -44,11 +56,20 @@ export default async function SittingOnePage() {
       <div className="cc-card">
         <h2 style={{ marginTop: 0 }}>2 · The batch-mix co-ratification (SCP-M-2)</h2>
         <p>
-          GL-maths tier mix, spec default {mix.tierMixPct.specDefault.join('/')} → proposed{' '}
-          {mix.tierMixPct.proposed?.join('/')}. The corpus centres GL maths on T2; the proposal
-          shifts the practice-pool centre of mass to the T2/T3 boundary while tier definitions
-          stay put. Your calibration confirms or corrects the analyst&apos;s provisional tier
-          mapping — this is the one decision David holds jointly with you.
+          GL-maths tier mix, spec default {mathsPractice.tierMixPct?.specDefault.join('/')} →
+          proposed {mathsPractice.tierMixPct?.proposed?.join('/')}. The corpus centres GL maths on
+          T2; the proposal shifts the practice-pool centre of mass to the T2/T3 boundary while tier
+          definitions stay put. Your calibration confirms or corrects the analyst&apos;s provisional
+          tier mapping — this is the one decision David holds jointly with you, and the only tier
+          mix still waiting.
+        </p>
+        <p className="cc-muted">
+          For contrast, VR is settled: David ratified practice{' '}
+          {vrPractice.tierMixPct?.ratified?.join('/')} and mock{' '}
+          {vrMock.tierMixPct?.ratified?.join('/')} (SCP-VR-5), plus per-type tier envelopes
+          constrained to observed ranges (SCP-VR-6). Three observed VR types have no unambiguous
+          registry home and are recorded as pending — those need a decision from you or David
+          before they constrain anything.
         </p>
       </div>
 
@@ -73,6 +94,19 @@ export default async function SittingOnePage() {
           NVR generator note: option count is {nvr.optionCount.value} (spec assumed{' '}
           {nvr.optionCount.specDefault}; corrected by corpus evidence, ratified). The generator
           build consumes the rest of the config when the district engineering starts.
+        </p>
+      </div>
+
+      <div className="cc-card">
+        <h2 style={{ marginTop: 0 }}>5 · NVR generator sign-off</h2>
+        <p>
+          The NVR district reviews GENERATORS, not items (BUILD-DISTRICT-NVR §4). Thirteen
+          templates, <strong>30 stratified samples per tier</strong>, keys marked and every
+          distractor&apos;s misconception id on the page:{' '}
+          <a href="/admin/nvr-samples">the sample sheets</a>. Each sheet prints for signing and
+          carries its own contentHash plus the templateFingerprint, so what you signed stays
+          provable — and any later change to a template moves that fingerprint, voids the
+          signature and stops it serving.
         </p>
       </div>
     </main>

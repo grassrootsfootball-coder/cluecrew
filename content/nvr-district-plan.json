@@ -1,0 +1,23 @@
+{
+ "kind": "nvr-district-plan",
+ "note": "Case SHELLS only (BUILD-DISTRICT-NVR §5): 16 slots across the four engines, sequenced simple→compound. Titles, narrative intros, Mode assets and Walk scripts remain reviewer-pipeline content. Sequencing rule: every GL-pool section type is taught before its compound form, and the spatial family (Folding Room) sits after the Turntable because folding assumes the child can already hold a shape's orientation in mind. `glPool` marks the slots whose section type can appear in a GL blueprint (SCP-NVR-1/3); the rest are practice-only by ruling, not by omission.",
+ "districtName": "The Gallery",
+ "slots": [
+  { "id": "nq-01", "engine": "machine", "template": "machine-series", "sectionType": "series", "glPool": true, "orderInDistrict": 1, "cluster": "Series: one turn at a time", "tierBand": [1, 2] },
+  { "id": "nq-02", "engine": "lineup", "template": "lineup-odd", "sectionType": "odd-classification", "glPool": true, "orderInDistrict": 2, "cluster": "Odd one out: the shared rule", "tierBand": [1, 2] },
+  { "id": "nq-03", "engine": "lineup", "template": "lineup-like", "sectionType": "like-classification", "glPool": true, "orderInDistrict": 3, "cluster": "Belongs with these: naming the group", "tierBand": [1, 3] },
+  { "id": "nq-04", "engine": "machine", "template": "machine-analogy", "sectionType": "analogy", "glPool": true, "orderInDistrict": 4, "cluster": "Pairs: the same change again", "tierBand": [1, 3] },
+  { "id": "nq-05", "engine": "turntable", "template": "turntable-rotation", "sectionType": "rotation", "glPool": false, "orderInDistrict": 5, "cluster": "Turning: which way the clock hands go", "tierBand": [1, 3] },
+  { "id": "nq-06", "engine": "machine", "template": "machine-matrix", "sectionType": "matrix", "glPool": true, "orderInDistrict": 6, "cluster": "Grids: one rule across", "tierBand": [1, 2] },
+  { "id": "nq-07", "engine": "lineup", "template": "lineup-counting", "sectionType": "like-classification", "glPool": true, "orderInDistrict": 7, "cluster": "Counting: when the number IS the rule", "tierBand": [2, 4] },
+  { "id": "nq-08", "engine": "lineup", "template": "lineup-codes", "sectionType": "codes", "glPool": true, "orderInDistrict": 8, "cluster": "Codes: two letters, two jobs", "tierBand": [1, 2], "scaffoldNote": "SCP-NVR-4: taught on 2-letter codes" },
+  { "id": "nq-09", "engine": "turntable", "template": "turntable-reflection", "sectionType": "reflection-identification", "glPool": false, "orderInDistrict": 9, "cluster": "Mirrors: flipping, not turning", "tierBand": [1, 3], "trackNote": "CEM-legacy practice only (SCP-NVR-5); never appears in a GL blueprint" },
+  { "id": "nq-10", "engine": "machine", "template": "machine-series", "sectionType": "series", "glPool": true, "orderInDistrict": 10, "cluster": "Series: two things changing at once", "tierBand": [3, 5] },
+  { "id": "nq-11", "engine": "machine", "template": "machine-matrix", "sectionType": "matrix", "glPool": true, "orderInDistrict": 11, "cluster": "Grids: one rule across, one down", "tierBand": [3, 5] },
+  { "id": "nq-12", "engine": "lineup", "template": "lineup-codes", "sectionType": "codes", "glPool": true, "orderInDistrict": 12, "cluster": "Codes: three letters, fresh every question", "tierBand": [3, 5], "scaffoldNote": "SCP-NVR-4: scored on 2–3 letters" },
+  { "id": "nq-13", "engine": "foldingroom", "template": "folding-net", "sectionType": "nets", "glPool": false, "orderInDistrict": 13, "cluster": "Nets: which faces meet", "tierBand": [2, 4] },
+  { "id": "nq-14", "engine": "foldingroom", "template": "folding-punch", "sectionType": "fold-punch", "glPool": false, "orderInDistrict": 14, "cluster": "Fold and punch: opening it out", "tierBand": [1, 4] },
+  { "id": "nq-15", "engine": "foldingroom", "template": "folding-hidden", "sectionType": "hidden-shapes", "glPool": false, "orderInDistrict": 15, "cluster": "Hidden shapes: finding it in the clutter", "tierBand": [2, 5] },
+  { "id": "nq-16", "engine": "foldingroom", "template": "folding-plans", "sectionType": "plan-views", "glPool": false, "orderInDistrict": 16, "cluster": "From above: the plan of a stack", "tierBand": [2, 5] }
+ ]
+}

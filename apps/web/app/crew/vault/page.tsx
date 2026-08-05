@@ -17,7 +17,9 @@ export default async function VaultPage() {
   // quietly; CrewLayout owns the warm, in-world gate the child sees.
   if (!child) return null;
   const [words, entries] = await Promise.all([
-    prisma.word.findMany({ orderBy: [{ tier: 'asc' }, { headword: 'asc' }] }),
+    // LIVE only: a DRAFT card has not passed a reviewer and must never
+    // appear in a child's vault (Word review door, 2026-08-02).
+    prisma.word.findMany({ where: { status: 'LIVE' }, orderBy: [{ tier: 'asc' }, { headword: 'asc' }] }),
     prisma.wordVaultEntry.findMany({ where: { childId: child.id } }),
   ]);
   const entryByWord = new Map(entries.map((entry) => [entry.wordId, entry]));

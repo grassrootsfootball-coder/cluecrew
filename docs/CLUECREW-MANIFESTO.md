@@ -1,5 +1,5 @@
 # THE CLUECREW MANIFESTO
-### Constitution and Anti-Drift Document — v1.0
+### Constitution and Anti-Drift Document — v1.11
 **Status: pending trademark clearance on "ClueCrew" (UK IPO classes 9, 41, 42) and domain check. No external spend until cleared.**
 
 This document is read by Claude Code at the start of every build session and by every human contributor before any work. Phase specs (BUILD-PHASE-1.md through BUILD-PHASE-6.md) implement this document. Where a phase spec conflicts with this manifesto, the manifesto wins. Where anything conflicts with UK law or child safety, law and safety win.
@@ -104,6 +104,12 @@ District accents appear only inside their district and in navigation.
 - **Child-facing:** warm, direct, a little playful, never sarcastic, never babyish. Reading age ≤9 for instructions. Second person. Short sentences.
 - **Parent-facing:** plain English, no eduspeak, no fear. Explains *what to do*, not just what happened. Assumes intelligence, never assumes UK-system knowledge.
 - **Banned vocabulary (child-facing):** fail, failure, wrong, behind, weak, poor, careless, "should have."
+- **Content ABOUT language takes different gate rules from content that USES language** (v1.8). Most of what we write is our voice talking to a child, and the gates police it: short sentences, plain vocabulary, no banned words. But some content has language as its SUBJECT — it teaches a word, quotes a writer, asks a child to proofread a sentence, or plants a misspelling to be found. There the thing the gate would strike out is the thing the content exists to carry, and striking it out does not protect a child; it deletes the lesson. Such content declares what it is, structurally, and the gate steps over exactly that and nothing else. **A new gate rule should ask which of the two it is before it is written.**
+- **A quotation reproduces its source EXACTLY, including apparent errors** (v1.10). This is the second half of the principle above, and it exists because the first half would otherwise read as permission. We exempt quoted text from our gates *because the words are not ours*; the same fact forbids us from altering them. Quoting LESS is always allowed — a truncated quotation is still the passage's words — but changing a character never is. The reason is answerability, not reverence: the child is reading the passage while they answer, so a stem quoting something the passage does not say sends them hunting for words that are not there, and the item stops being a comprehension question at all.
+- **Two tolerances, and nothing else** (v1.11). Sentence-initial capitalisation of a quoted word, and terminal punctuation on a truncated quote. Both are artefacts of setting someone else's clause into our sentence, not changes to what the passage says — the child scanning the line still finds the words, in the order the passage has them. Everything else stays a failure, including an attribution deleted from the middle of a quotation. **Preferred where it is available: recast the sentence so the quotation needs no adjusting at all.** A tolerance is permission to stop fighting the grammar, not an invitation to lean on it.
+- **"Behind" is banned in its PROGRESS sense** (v1.7): D1 protects a child from being told they are lagging — "falling behind", "behind the class", "behind schedule", "behind where you should be". Spatial position is not that, and never was: "a puppy behind a stair gate" says nothing about a child. The scanner distinguishes the two. Word-card image prompts are scanned as a child-facing surface, because a prompt becomes an illustration a child sees.
+- **A Word card may use its own headword** (v1.6): where the word being taught is itself on the ban list, that word may appear in the card's definition, sentence and image prompt. A card teaching "guarantee" must be able to say the word. This is a SCANNER RULE derived from the card, never a list of exceptions, and it is bounded to the headword, inside its own card, and only where the headword IS the banned term — every other banned word in that card still fails.
+- **The ban list polices PRODUCT VOICE only** (v1.5): stems, options, hints, Walk scripts, UI, emails — everything we write. It does not reach text QUOTED from a curated passage, because a real literary extract contains these words and rewriting it would falsify the source and make our papers unlike the ones children actually sit. A quoted span claims the exemption structurally (`passageQuote: true` plus a `passageRef` that resolves to a real passage), never with a comment marker, and the exemption covers the quoted span alone — a stem discussing the quote is our voice and stays in scope.
 - **Banned vocabulary (everywhere):** guarantee(d) [re outcomes], learning style, tutor-proof, "beat the exam."
 
 ---
@@ -202,6 +208,215 @@ Crew Plus / Crew Bursary / Summer Intensive ladder, and adds design law D7
 exists). Full text: docs/AMENDMENT-1-PRICING-V2.md. Recorded on receipt of the
 ratified document; the §5 build migration has NOT yet been implemented and
 awaits David's build instruction.*
+
+*v1.11 (2026-08-02) — the verbatim tolerances, ratified by David,
+transcription Claude Code's. §6.*
+
+*v1.10 said a quotation reproduces its source exactly. Applied without
+tolerance that is stricter than any publisher: a quoted clause lifted to the
+head of our sentence has to take a capital, and a quotation truncated
+mid-sentence has to close somehow. Both are typesetting, not alteration, and a
+gate that fired on them would push authors to paraphrase — which is worse for
+the child, because a paraphrase is OUR wording and is not on the page they are
+searching.*
+
+*Exactly two, named: sentence-initial capitalisation of a quoted word, and
+terminal punctuation on a truncated quote. The boundary is what the tolerance
+does NOT reach: `ENG-002-pp-19` deleted `," cried Bingley, "` from the middle
+of a quotation, and an interior deletion is not terminal punctuation under any
+reading. The five corrections of v1.10 stand; the gate simply stops flagging
+the two cases that were never faults.*
+
+*Recorded with the ruling because it is the part that will be forgotten:
+RECASTING IS PREFERRED. `ENG-001-WIW-10` rewrites its own sentence so the
+quotation sits mid-clause and needs no adjusting at all. Where that is
+available it is the better answer, and a tolerance should not become the
+default route.*
+
+*v1.10 (2026-08-02) — TWO RULINGS, ratified by David, transcription Claude
+Code's.*
+
+*(a) VERBATIM QUOTATION. A stem or walk script quoting a passage reproduces it
+exactly, including anything that looks like an error in the source. Recorded
+as precedent ALONGSIDE the ABOUT-language principle (v1.8), because it is the
+same principle read the other way: v1.8 exempts quoted text from our gates on
+the ground that the words are not ours, and that ground equally forbids us to
+change them. A carve-out that licensed alteration of the thing it exempted
+would not be a carve-out.*
+
+*What it cost to find: `ENG-001-WIW-18` quoted Grahame's "Oh, its all very well
+to talk" as "it's" — a silent modernisation, kindly meant. The passage was
+verbatim and correct; the ITEM was wrong. A child scanning for "it's" would
+never have found it, so the item was unanswerable for the most careful readers
+and easy for the ones who guessed. Three Austen items had closed a quotation
+with a full stop where Austen has a comma, turning a clause into a sentence;
+`ENG-002-pp-19` had deleted `," cried Bingley, "` from the middle of a
+quotation and presented the join as one continuous cry. None of the five was
+visible to a reader who did not have the passage open beside them, which is
+why the rule is machine-enforced (`pnpm check:line-refs`) and not a style
+note. Truncation is explicitly permitted, and is how all five were fixed.*
+
+*(b) THE PASSAGE DIRECTORY IS EXEMPT AT FILE SCOPE. `content/passages/` holds
+nothing but text we did not write and may not alter: fifteen public-domain
+extracts verified verbatim against Project Gutenberg, six commissioned
+originals, two cloze vehicles. The v1.5 carve-out applies to the FILE rather
+than to spans declared inside it, because there is no unquoted wording in that
+directory for a scanner to protect — a `preamble` aside, and those are ours
+and stay in scope by living on the item, not the passage.*
+
+*This SUPERSEDES, for passage files only, v1.5's "deliberately NOT carved out:
+the everywhere-rules still apply to quoted text". That sentence was written
+about a span inside an item we authored, where the risk is an author
+laundering their own claim through a quotation. A whole file of Kipling and
+Jerome K. Jerome carries no such risk: the L1 outcome-claim pattern duly fired
+on "would pass him up the hammer", and a novel published in 1889 cannot make a
+promise on our behalf. v1.5 stands unchanged everywhere else — a declared span
+inside an item still gets the everywhere-rules in full.*
+
+*The honesty condition is the same as v1.5's and is what makes file scope
+safe: a passage file cannot be authored casually. It carries its provenance,
+its copyright verdict, its editorial cuts and its similarity check, and the
+verbatim audit re-derives it from the source. Nobody can put a sentence of
+their own into that directory to escape a scanner without first passing all of
+that.*
+
+*v1.9 (2026-08-02) — a quotation sits outside the sentence cap, ratified by
+David. Extends precedent 2 of the ABOUT-language principle: a declared quoted
+span is now exempt from the 16-word cap as well as the ban list. Our wording
+around the quotation is still counted and still capped, so the exemption
+cannot be widened by quoting loosely. Rationale in David's words: the child
+must read the passage's words to answer, and the carve-out exists so
+quotations are not butchered.*
+
+*Extended the same day to the VOCABULARY ceiling, which had been flagged here
+as the obvious next case. David's rationale: comprehension passages are
+pre-1950 literature BY DESIGN, so quoted archaic vocabulary is the content
+under test, not a fairness failure. A declared span is now outside all three
+gates — ban list, sentence cap, vocabulary ceiling — and our own wording
+around it stays fully in scope on every one.*
+
+*The carve-out is now complete for quotation, and the bound that keeps it
+honest is unchanged: only a DECLARED span, only inside its own item, and the
+declaration must resolve to text that is actually there.*
+
+*v1.8 (2026-08-02) — the ABOUT-language principle, ratified by David. §6.
+Decision David's, transcription Claude Code's.*
+
+*Written because the same argument had now been had four times in one day,
+each time from scratch, each time discovered by a gate failing on correct
+work. The principle names the pattern so the fifth case is anticipated
+instead. The four precedents, in the order they arose:*
+
+*1. **Word cards** (v1.5 era, spec correction). A card's example sentence
+exists to DISAMBIGUATE a meaning, so it takes reading age ≤9 but no sentence
+cap — a long sentence is often the correct one. 164 of 183 cards had been
+failing on the thing that made them work.*
+
+*2. **Quoted passages** (v1.5, completed 2026-08-02). A curated extract
+carries words our ban list refuses and vocabulary our ceiling refuses,
+because real pre-1950 prose does both. A declared span is exempt from all
+three gates — ban list, sentence cap, vocabulary ceiling — and our wording
+around it stays fully in scope on every one. Extended to inline quotation
+inside a stem, declared on the stem and bounded to the quoted characters.
+This precedent took three rulings to reach its final shape, each one arriving
+when a gate failed on correct work; the ABOUT-language principle exists so the
+next one does not need three.*
+
+*3. **Proofread stems** (2026-08-02, spec correction). An error-spotting or
+cloze stem IS the sentence to be corrected. Reading age ≤9, no sentence cap.
+Keyed on the question type's mechanic, so a future spotting type is covered
+the day it is registered.*
+
+*4. **Tested spellings and words** (2026-08-02). An item that plants
+`dictionery` for a child to find, or asks what `fastidious` means, was being
+marked down for containing its own question. Declared tokens are exempt from
+the VOCABULARY CEILING only, inside their own item only.*
+
+*Every one of the four is bounded the same way, and the shape is the rule:
+the content DECLARES its exemption structurally rather than claiming it in a
+comment; the exemption covers the declared span or token and nothing else;
+it lifts one named gate rather than all of them; and a declaration that does
+not resolve is reported rather than trusted. An exemption that cannot be
+checked is not an exemption, it is a hole.*
+
+*What this does NOT license: turning a gate off because it is inconvenient.
+Three of the four precedents began as a gate correctly catching bad content
+elsewhere. The question is never "is this rule annoying" but "is this
+content about language, or is it language".*
+
+*v1.7 (2026-08-02) — the "behind" narrowing and image-prompt scanning,
+ratified by David. §5 D1 lists "behind" among the words that never appear
+child-facing; the scanner had implemented that as a bare word match.*
+
+*The evidence for narrowing: of 23 real occurrences of "behind" across the
+Word Vault, 23 were SPATIAL — a puppy behind a stair gate, seagulls behind a
+ferry, bins behind a chip shop. Zero were about a child lagging. A rule with a
+100% false-positive rate does not protect anyone; it teaches authors that the
+scanner is noise. D1's intent is that a child is never told they are behind
+their peers, so the pattern now catches the progress constructions — a verb of
+slipping plus behind, behind a yardstick (schedule, target, the class, the
+expected level), behind IN a subject, behind where you should be, and a person
+simply being behind — and leaves position alone. Validated against every real
+occurrence plus nineteen progress phrasings, all tested.*
+
+*Image prompts became a scanned surface in the same change: the prompt turns
+into an illustration a child sees, so what it depicts obeys the child-facing
+vocabulary rules. The reading-age caps deliberately do NOT apply — no child
+reads a brief to an illustrator, so measuring its sentence length would score
+a document nobody sees. After the narrowing, zero image prompts fail.*
+
+*v1.6 (2026-08-02) — the `headwordInOwnCard` rule, ratified by David. §6: a
+Word card may use its own headword in its definition, sentence and image
+prompt even when that headword is on the ban list. Decision David's,
+transcription Claude Code's.*
+
+*Why: the card teaching "guarantee" was caught by L1's outcome-claim rule on
+its own example sentence — "the shop guarantees the bike for two years". That
+is vocabulary, not a claim about ClueCrew, and it cannot be reworded without
+deleting the word being taught. The same shape as the passage-quote problem:
+a rule written for our voice catching text that is not our voice.*
+
+*Recorded as a scanner RULE, not a per-card exception, so nothing is listed
+anywhere and it applies to any future card teaching a ban-list word. Three
+bounds, each tested: the headword only (a "guarantee" card that also says
+"clever" still fails on "clever"); inside its own card only (another card
+using the word still fails); and only where the headword IS the banned term
+(a card teaching "brave" gets no exemption, so "wrong" in its sentence still
+fails). The exemption is per RULE — it lifts exactly the rule the headword
+trips and leaves every other rule in force. Inflections are covered, bounded
+to a shared prefix within three characters, because the motivating case is
+itself an inflection ("guarantees").*
+
+*Residual risk, stated: a card teaching a ban-list word cannot be caught by
+that word's own rule anywhere in the card. That is inherent to the ruling and
+bounded by the card being about the word; the reviewer remains the reader of
+last resort.*
+
+*v1.5 (2026-08-02) — the passage-quote carve-out, ratified by David. §6:
+the banned-vocabulary scan applies to PRODUCT VOICE only and does not reach
+quoted passage text. Decision David's, transcription Claude Code's.*
+
+*Why it was needed: the English district curates public-domain pre-1950
+extracts, and those extracts contain "wrong", "failed", "poor" and worse.
+Without a carve-out the scanner would have blocked the passage bank at the
+door — the curated source could never have been authored in the first place,
+which would have made the whole Stream A plan unbuildable.*
+
+*How the exemption is kept honest, because a carve-out in a ban list is
+exactly where drift enters: the claim is structural, not a comment marker
+(`passageQuote: true` + `passageRef`), and the `passageRef` must resolve to a
+real passage in the bank. An author therefore cannot launder their own
+sentence through the exemption without first putting that sentence into a
+curated, reviewed passage. A claim that does not resolve is REPORTED and its
+text stays fully in scope: a broken exemption must never read as a passing
+one. The exemption covers the quoted span, not the line it sits on, so a stem
+and the quote it discusses can share a line and only the quote is exempt.*
+
+*Deliberately NOT carved out: the everywhere-rules (L1 outcome claims, L2
+learning styles, L6 third-party marks) still apply to quoted text — a source
+that says "guaranteed" is still a claim when we reprint it. And a passage
+file's `preamble` is our own scene-setting sentence, so it stays in scope
+while the passage's `lines` do not.*
 
 *v1.4 (2026-08-01) — D7 clarification, ratified by David: bare currency
 (£) is permitted ONLY inside item content — stem, options, explanation —

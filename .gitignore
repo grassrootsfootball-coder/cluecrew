@@ -27,3 +27,7 @@ blob-report/
 # Lighthouse CI report artifacts (pnpm perf)
 .lighthouseci/
 .env*
+
+# Generated reviewer packs and returned decisions files (pnpm export:review-pack).
+# Output of the repo, not input to it; regenerate rather than commit.
+content/exports/

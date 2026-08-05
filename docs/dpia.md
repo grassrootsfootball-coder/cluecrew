@@ -206,7 +206,43 @@ provider selection will add a processor entry here before use.
 - **Plus waitlist:** parent id + timestamp, removed on entry or account
   deletion (cascade).
 
+## 10d. English district — the unmatched-answer sample (open-response items)
+
+The English district's Selective track asks children to TYPE short answers
+(BUILD-DISTRICT-ENGLISH §3). That is the first child free text outside the
+Writing Room, so it is recorded here before it serves anyone.
+
+- **`EnglishUnmatchedAnswer`** stores an answer the matching engine could not
+  place against the item's authored acceptable-answer set, so a reviewer can
+  widen that set. The row is a note **about an ITEM, not about a person**: it
+  carries `itemId` and deliberately carries no `childId`, `sessionId` or
+  `attemptId`, and therefore sits outside the account cascade entirely. It
+  cannot be joined back to a child by us.
+- **What is stored:** the answer normalised and redacted (email shapes, all
+  digit runs and postcode shapes stripped), capped at 300 characters, plus a
+  token count, the best coverage score, and enum reasons. Never raw
+  keystrokes.
+- **When it is stored:** only on a genuine no-match. Blank, barred-near-miss
+  and lifted-from-the-passage answers are authored behaviours working as
+  designed, so sampling them would collect child text for nothing.
+- **Purpose:** improving the acceptable-answer set — the mechanism by which
+  the "never marked wrong" promise (§3, gate #2) actually gets better rather
+  than merely being polite.
+- **Retention:** every row is written with a `purgeAt` and the purge job
+  deletes on that date regardless of review status. **The job is not built
+  yet** — see §11.
+- **Residual risk, stated plainly:** redaction is pattern-based, so a first
+  name written mid-sentence is not deterministically removable. Mitigations:
+  the row is unlinked from any child, the text is capped, retention is short
+  and enforced by date, and access is staff-only through the CMS. S5's
+  free-text PII screening (Phase 6) should extend to this surface when it
+  lands, and until then this table must not serve a real child.
+
 ## 11. Open items for next phase gates
 
 - Phase 2: onboarding wizard region data, Stripe processor agreement, verifiable parental consent flow detail, marketing consent UX, data export UI.
 - Phase 6: Writing Room two-pass pipeline DPIA section, DSL appointment (S4), free-text PII screening (S5), OSA scope assessment.
+- English district, BEFORE the open-response model serves a real child: build
+  the `EnglishUnmatchedAnswer` purge job (rows carry `purgeAt`; nothing
+  currently acts on it), and extend S5 free-text PII screening to typed
+  answers (§10d).

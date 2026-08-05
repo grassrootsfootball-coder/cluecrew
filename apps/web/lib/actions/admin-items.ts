@@ -9,6 +9,7 @@ const mathsPlan = mathsPlanFileSchema.parse(mathsPlanContent);
 import { prisma } from '@cluecrew/db';
 import { similarityIndexSource } from '@/lib/similarity-index';
 import { currentStaff, recordAudit, roleAllows } from '@/lib/staff';
+import { validateVerbalRecord } from '@/lib/review-provenance';
 
 /**
  * ADDENDUM-E §2: a misconception must be ACTIVE before any item may reference
@@ -30,10 +31,119 @@ const optionSchema = z.object({
   misconceptionId: z.string().nullable().optional(),
 });
 
+/**
+ * CANONICAL PASSAGE FIELDS (David's ratified correction, 2026-08-02).
+ *
+ * `passageRef` (string) and `lineRefs` (integer array) mean the same thing in
+ * both item models — this MC/GL one and the English open-response one. An MC
+ * item carries them inside its `stem`, so the import door is where the shape
+ * is held: a stem may omit them, but if it names them it names them
+ * correctly. Rejecting `{from, to}` here is deliberate — that WAS the
+ * open-response shape until this correction, so it is the exact drift most
+ * likely to arrive in an authored batch.
+ */
+const stemSchema = z.record(z.unknown()).superRefine((stem, ctx) => {
+  if ('passageRef' in stem) {
+    const value = stem.passageRef;
+    if (typeof value !== 'string' || value.trim() === '') {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['passageRef'],
+        message: 'passageRef must be a non-empty passage id string',
+      });
+    }
+  }
+  if ('lineRefs' in stem) {
+    const value = stem.lineRefs;
+    const isCanonical =
+      Array.isArray(value) && value.every((line) => Number.isInteger(line) && (line as number) > 0);
+    if (!isCanonical) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['lineRefs'],
+        message:
+          'lineRefs must be an array of positive integers — a {from,to} range is the superseded shape; author "lines 12–14" as [12, 13, 14]',
+      });
+    }
+  }
+  // Inline quotation (2026-08-02): a stem declares the spans it quotes from
+  // its passage, so the ban list can step over exactly those characters. The
+  // span must genuinely appear in the prompt — a declared quote that is not
+  // there is a claim, not a quote.
+  if ('quotes' in stem) {
+    const quotes = stem.quotes;
+    const prompt = typeof stem.prompt === 'string' ? stem.prompt : '';
+    if (!Array.isArray(quotes)) {
+      ctx.addIssue({ code: z.ZodIssueCode.custom, path: ['quotes'], message: 'quotes must be an array' });
+    } else {
+      quotes.forEach((quote, index) => {
+        const entry = quote as { text?: unknown; passageRef?: unknown };
+        if (typeof entry.text !== 'string' || entry.text.trim().length < 3) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            path: ['quotes', index, 'text'],
+            message: 'a quoted span needs its text, at least 3 characters',
+          });
+          return;
+        }
+        if (!prompt.includes(entry.text.trim())) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            path: ['quotes', index, 'text'],
+            message: `the declared quote is not in the stem: "${entry.text.slice(0, 30)}"`,
+          });
+        }
+        if (typeof entry.passageRef !== 'string' || !entry.passageRef.trim()) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            path: ['quotes', index, 'passageRef'],
+            message: 'a quoted span must name the passage it came from',
+          });
+        } else if (typeof stem.passageRef === 'string' && entry.passageRef !== stem.passageRef) {
+          // You may only quote the passage this item is about.
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            path: ['quotes', index, 'passageRef'],
+            message: `quote cites "${entry.passageRef}" but the item reads "${stem.passageRef}"`,
+          });
+        }
+      });
+    }
+  }
+  // Tested tokens (2026-08-02): the words an item exists to test, exempt from
+  // the vocabulary ceiling inside this item only. A token that appears
+  // nowhere in the item is a claim, not a test — the stem check below is the
+  // cheap half; the option check happens at import, which can see them.
+  if ('testedTokens' in stem) {
+    const tokens = stem.testedTokens;
+    if (!Array.isArray(tokens) || tokens.some((token) => typeof token !== 'string' || !token.trim())) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['testedTokens'],
+        message: 'testedTokens must be an array of non-empty strings',
+      });
+    } else if (tokens.length > 6) {
+      // A generous ceiling that still refuses "exempt everything".
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['testedTokens'],
+        message: 'at most 6 tested tokens per item — beyond that it is not a test, it is an exemption',
+      });
+    }
+  }
+  if ('lineRefs' in stem && !('passageRef' in stem)) {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ['passageRef'],
+      message: 'lineRefs without a passageRef point at nothing',
+    });
+  }
+});
+
 const itemInputSchema = z.object({
   questionTypeId: z.string().min(1),
   difficultyTier: z.coerce.number().int().min(1).max(5),
-  stem: z.record(z.unknown()),
+  stem: stemSchema,
   explanation: z.record(z.unknown()).default({}),
   options: z.array(optionSchema).min(2).max(6),
   // BUILD-DISTRICT-MATHS §5: required for MATHS items, enforced below —
@@ -134,7 +244,7 @@ export async function markReviewedAction(formData: FormData): Promise<void> {
   if (item.similarityFlaggedAt && !item.similarityClearedBy) {
     redirect(`/admin/items/${itemId}?error=similarity-review`);
   }
-  const failure = publishBlockers(item.options, `human:${staff.email}`, item.authoredBy);
+  const failure = publishBlockers(item.options, `human:${staff.email}`, item.authoredBy, item.answerFlaggedAt);
   if (failure) redirect(`/admin/items/${itemId}?error=${failure}`);
   if (await assertMisconceptionsActive(item.options)) {
     redirect(`/admin/items/${itemId}?error=unapproved-misconception`);
@@ -166,7 +276,24 @@ function publishBlockers(
   options: Array<{ isCorrect: boolean; misconceptionId: string | null }>,
   reviewer: string | null,
   authoredBy: string,
+  /**
+   * THE ANSWERABILITY FLAG (David's ruling, 2026-08-02). Set by
+   * `pnpm check:word-puzzles` when an item's own stated rule does not produce
+   * its key — no valid answer at all, or a different one.
+   *
+   * There is no clearing path and that is deliberate. A similarity flag is a
+   * judgement a reviewer can make: coincidence or derivation. This is not a
+   * judgement. The child cannot answer the question correctly, so a signature
+   * saying otherwise would only record that someone did not check. The flag
+   * lifts when the item is fixed and the gate stops setting it.
+   *
+   * Checked in `publishBlockers` rather than at each call site because all
+   * three routes to REVIEWED already run this, and a fourth route added later
+   * gets it for free.
+   */
+  answerFlaggedAt?: Date | null,
 ): string | null {
+  if (answerFlaggedAt) return 'unanswerable';
   if (!options.some((option) => option.isCorrect)) return 'no-correct-option';
   if (options.some((option) => !option.isCorrect && !option.misconceptionId)) {
     return 'missing-misconceptions';
@@ -190,7 +317,7 @@ export async function publishItemAction(formData: FormData): Promise<void> {
   if (item.status !== 'REVIEWED' || !item.reviewedBy) {
     redirect(`/admin/items/${itemId}?error=not-reviewed`);
   }
-  const failure = publishBlockers(item.options, item.reviewedBy, item.authoredBy);
+  const failure = publishBlockers(item.options, item.reviewedBy, item.authoredBy, item.answerFlaggedAt);
   if (failure) redirect(`/admin/items/${itemId}?error=${failure}`);
 
   await prisma.item.update({ where: { id: itemId }, data: { status: 'LIVE' } });
@@ -351,4 +478,157 @@ export async function clearSimilarityAction(formData: FormData): Promise<void> {
   });
   await recordAudit(staff.id, 'item.similarity_clear', 'Item', itemId, { note });
   redirect(`/admin/items/${itemId}`);
+}
+
+/**
+ * Bulk recording of item reviews decided elsewhere (David's ruling,
+ * 2026-08-02) — the item-review twin of the misconception action.
+ *
+ * Every guard the single-item reviewer path applies still applies here, per
+ * item: a reviewer may not review their own authoring (P3/AI-QC), a
+ * similarity-flagged item stays blocked until cleared, and an item whose
+ * distractors reference unapproved misconceptions cannot pass. Items that
+ * fail are SKIPPED WITH A REASON rather than quietly dropped — a bulk tool
+ * that hides its refusals is worse than no bulk tool.
+ */
+export async function bulkRecordItemReviewsAction(formData: FormData): Promise<void> {
+  const staff = await currentStaff();
+  if (!staff || staff.effectiveRole !== 'ADMIN') redirect('/admin');
+
+  const itemIds = formData.getAll('itemIds').map(String).filter(Boolean);
+  const reviewerId = String(formData.get('reviewedByStaffId') ?? '');
+  const method = String(formData.get('method') ?? '');
+  const note = String(formData.get('note') ?? '');
+  if (itemIds.length === 0) redirect('/admin/items?error=nothing-selected');
+
+  const reviewer = await prisma.parentAccount.findUnique({
+    where: { id: reviewerId },
+    select: { email: true, staffRole: true },
+  });
+  if (!reviewer || reviewer.staffRole !== 'REVIEWER') {
+    redirect('/admin/items?error=reviewer-not-a-reviewer');
+  }
+
+  const record = {
+    reviewedBy: `human:${reviewer.email}`,
+    recordedBy: `human:${staff.email}`,
+    method,
+    note,
+  };
+  const failures = validateVerbalRecord({
+    approvedBy: record.reviewedBy,
+    recordedBy: record.recordedBy,
+    method,
+    note,
+  });
+  if (failures.length > 0) {
+    redirect(`/admin/items?error=${encodeURIComponent(failures[0]!.reason)}`);
+  }
+
+  let recorded = 0;
+  const skipped: string[] = [];
+  for (const itemId of itemIds) {
+    const item = await prisma.item.findUnique({ where: { id: itemId }, include: { options: true } });
+    if (!item || item.status !== 'DRAFT') {
+      skipped.push(`${itemId.slice(0, 8)}: not a draft`);
+      continue;
+    }
+    if (item.authoredBy === record.reviewedBy) {
+      skipped.push(`${itemId.slice(0, 8)}: that reviewer wrote it`);
+      continue;
+    }
+    if (item.similarityFlaggedAt && !item.similarityClearedBy) {
+      skipped.push(`${itemId.slice(0, 8)}: similarity flag not cleared`);
+      continue;
+    }
+    const blocker = publishBlockers(item.options, record.reviewedBy, item.authoredBy, item.answerFlaggedAt);
+    if (blocker) {
+      skipped.push(`${itemId.slice(0, 8)}: ${blocker}`);
+      continue;
+    }
+    if (await assertMisconceptionsActive(item.options)) {
+      skipped.push(`${itemId.slice(0, 8)}: uses an unapproved misconception`);
+      continue;
+    }
+    await prisma.item.update({
+      where: { id: itemId },
+      data: {
+        status: 'REVIEWED',
+        reviewedBy: record.reviewedBy,
+        reviewRecordedBy: record.recordedBy,
+        reviewMethod: method,
+        reviewRecordNote: note,
+        reviewNotes: null,
+      },
+    });
+    await recordAudit(staff.id, 'item.review_recorded', 'Item', itemId, {
+      reviewedBy: record.reviewedBy,
+      recordedBy: record.recordedBy,
+      method,
+      note,
+    });
+    recorded += 1;
+  }
+
+  redirect(
+    `/admin/items?status=DRAFT&recorded=${recorded}${
+      skipped.length ? `&skipped=${encodeURIComponent(skipped.join(' · '))}` : ''
+    }`,
+  );
+}
+
+/**
+ * BULK MARK REVIEWED, AS YOURSELF (David's ruling, 2026-08-02). The reviewer's
+ * own click sets `reviewedBy`; there is no recorder, because nothing is being
+ * transcribed. Every per-item guard the single-item path applies still
+ * applies, and anything refused is reported rather than dropped — a reviewer
+ * needs to know which three of their forty did not go through, and why.
+ */
+export async function bulkMarkReviewedAction(formData: FormData): Promise<void> {
+  const staff = await currentStaff();
+  if (!staff || !roleAllows(staff.effectiveRole, ['REVIEWER'])) redirect('/admin');
+
+  const itemIds = formData.getAll('itemIds').map(String).filter(Boolean);
+  if (itemIds.length === 0) redirect('/admin/items?status=DRAFT&error=Select+at+least+one+first.');
+
+  const reviewedBy = `human:${staff.email}`;
+  let reviewed = 0;
+  const skipped: string[] = [];
+
+  for (const itemId of itemIds) {
+    const item = await prisma.item.findUnique({ where: { id: itemId }, include: { options: true } });
+    if (!item || item.status !== 'DRAFT') {
+      skipped.push(`${itemId.slice(0, 8)}: not a draft`);
+      continue;
+    }
+    if (item.authoredBy === reviewedBy) {
+      skipped.push(`${itemId.slice(0, 8)}: you wrote it`);
+      continue;
+    }
+    if (item.similarityFlaggedAt && !item.similarityClearedBy) {
+      skipped.push(`${itemId.slice(0, 8)}: similarity flag not cleared`);
+      continue;
+    }
+    const blocker = publishBlockers(item.options, reviewedBy, item.authoredBy, item.answerFlaggedAt);
+    if (blocker) {
+      skipped.push(`${itemId.slice(0, 8)}: ${blocker}`);
+      continue;
+    }
+    if (await assertMisconceptionsActive(item.options)) {
+      skipped.push(`${itemId.slice(0, 8)}: uses a misconception you have not approved yet`);
+      continue;
+    }
+    await prisma.item.update({
+      where: { id: itemId },
+      data: { status: 'REVIEWED', reviewedBy, reviewMethod: 'in-platform', reviewNotes: null },
+    });
+    await recordAudit(staff.id, 'item.review', 'Item', itemId, { reviewedBy });
+    reviewed += 1;
+  }
+
+  redirect(
+    `/admin/items?status=DRAFT&reviewed=${reviewed}${
+      skipped.length ? `&skipped=${encodeURIComponent(skipped.join(' · '))}` : ''
+    }`,
+  );
 }

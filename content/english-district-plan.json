@@ -1,0 +1,38 @@
+{
+ "kind": "english-district-plan",
+ "note": "Case SHELLS only (BUILD-DISTRICT-ENGLISH §2): 30 slots across the two tracks, GL first as instructed. Titles, narratives, Mode assets, Walk scripts, passages and items are all reviewer-pipeline content and are deliberately absent — every slot below is an empty room with a name on the door. The two tracks are two subjects (§1): a child runs one, with the other reachable, and no slot belongs to both.",
+ "districtName": "The Archive",
+ "slots": [
+  { "id": "eq-01", "track": "GL", "strand": "comprehension", "itemModel": "MC", "orderInDistrict": 1, "cluster": "Retrieval: finding what it says" },
+  { "id": "eq-02", "track": "GL", "strand": "comprehension", "itemModel": "MC", "orderInDistrict": 2, "cluster": "Inference: what it means but does not say" },
+  { "id": "eq-03", "track": "GL", "strand": "comprehension", "itemModel": "MC", "orderInDistrict": 3, "cluster": "Vocabulary in context: the word in this sentence" },
+  { "id": "eq-04", "track": "GL", "strand": "comprehension", "itemModel": "MC", "orderInDistrict": 4, "cluster": "Technique: what the writer did on purpose", "note": "~5% of GL items but the hardest of them" },
+  { "id": "eq-05", "track": "GL", "strand": "spelling", "itemModel": "MC", "orderInDistrict": 5, "cluster": "Homophones: same sound, different word" },
+  { "id": "eq-06", "track": "GL", "strand": "spelling", "itemModel": "MC", "orderInDistrict": 6, "cluster": "Unstressed vowels in endings" },
+  { "id": "eq-07", "track": "GL", "strand": "spelling", "itemModel": "MC", "orderInDistrict": 7, "cluster": "Silent letters and doubles" },
+  { "id": "eq-08", "track": "GL", "strand": "punctuation", "itemModel": "MC", "orderInDistrict": 8, "cluster": "Apostrophes: owning and shortening" },
+  { "id": "eq-09", "track": "GL", "strand": "punctuation", "itemModel": "MC", "orderInDistrict": 9, "cluster": "Sentence ends and boundaries" },
+  { "id": "eq-10", "track": "GL", "strand": "punctuation", "itemModel": "MC", "orderInDistrict": 10, "cluster": "Speech marks and commas" },
+  { "id": "eq-11", "track": "GL", "strand": "grammar", "itemModel": "MC", "orderInDistrict": 11, "cluster": "Word class by the job it does" },
+  { "id": "eq-12", "track": "GL", "strand": "grammar", "itemModel": "MC", "orderInDistrict": 12, "cluster": "Tense that stays put" },
+  { "id": "eq-13", "track": "GL", "strand": "grammar", "itemModel": "MC", "orderInDistrict": 13, "cluster": "Joining words and question tags" },
+  { "id": "eq-14", "track": "GL", "strand": "exam-technique", "itemModel": "MC", "orderInDistrict": 14, "cluster": "N-courage: when nothing is missing", "note": "§2: children's N-avoidance is an observed, teachable trap — its own short Case" },
+
+  { "id": "eq-15", "track": "SELECTIVE", "strand": "ladder", "itemModel": "OPEN", "orderInDistrict": 15, "cluster": "Rung one: quote the bit that shows it" },
+  { "id": "eq-16", "track": "SELECTIVE", "strand": "ladder", "itemModel": "OPEN", "orderInDistrict": 16, "cluster": "Rung two: name what the writer did" },
+  { "id": "eq-17", "track": "SELECTIVE", "strand": "ladder", "itemModel": "OPEN", "orderInDistrict": 17, "cluster": "Rung three: say what it does to the reader" },
+  { "id": "eq-18", "track": "SELECTIVE", "strand": "ladder", "itemModel": "OPEN", "orderInDistrict": 18, "cluster": "Rung four: notice the complication", "note": "§4: where mark schemes reserve top marks — taught as its own skill" },
+  { "id": "eq-19", "track": "SELECTIVE", "strand": "own-words", "itemModel": "OPEN", "orderInDistrict": 19, "cluster": "Own words: saying it again, differently" },
+  { "id": "eq-20", "track": "SELECTIVE", "strand": "own-words", "itemModel": "OPEN", "orderInDistrict": 20, "cluster": "Own words at tariff: two marks, two rephrasings" },
+  { "id": "eq-21", "track": "SELECTIVE", "strand": "evidence", "itemModel": "OPEN", "orderInDistrict": 21, "cluster": "Choosing the quotation that proves it" },
+  { "id": "eq-22", "track": "SELECTIVE", "strand": "evidence", "itemModel": "OPEN", "orderInDistrict": 22, "cluster": "Short quotations, embedded" },
+  { "id": "eq-23", "track": "SELECTIVE", "strand": "vocabulary", "itemModel": "OPEN", "orderInDistrict": 23, "cluster": "Vocabulary at tariff: meaning plus effect" },
+  { "id": "eq-24", "track": "SELECTIVE", "strand": "vocabulary", "itemModel": "OPEN", "orderInDistrict": 24, "cluster": "Connotation: the feeling a word carries" },
+  { "id": "eq-25", "track": "SELECTIVE", "strand": "poetry", "itemModel": "OPEN", "orderInDistrict": 25, "cluster": "Reading a whole poem" },
+  { "id": "eq-26", "track": "SELECTIVE", "strand": "whole-text", "itemModel": "OPEN", "orderInDistrict": 26, "cluster": "Whole-text: how it changes from start to end" },
+  { "id": "eq-27", "track": "SELECTIVE", "strand": "whole-text", "itemModel": "OPEN", "orderInDistrict": 27, "cluster": "The long answer: twelve marks, no scaffold" },
+  { "id": "eq-28", "track": "SELECTIVE", "strand": "composition", "itemModel": "OPEN", "orderInDistrict": 28, "cluster": "Writing from a stimulus" },
+  { "id": "eq-29", "track": "SELECTIVE", "strand": "composition", "itemModel": "OPEN", "orderInDistrict": 29, "cluster": "Writing as someone else", "note": "SCP-E-15: the perspective constraint, the dominant difficulty lever" },
+  { "id": "eq-30", "track": "SELECTIVE", "strand": "composition", "itemModel": "OPEN", "orderInDistrict": 30, "cluster": "Plan, then write: five minutes that pay", "note": "SCP-E-16: papers expect planning; only one scaffolds it" }
+ ]
+}

@@ -1,9 +1,11 @@
 /**
  * Server-enforced admin role boundary (Phase 2 §5, David's ruling
- * 2026-08-01): a REVIEWER's world is the four review surfaces — item review,
- * misconception approvals, blueprint verification, Word list review — plus
- * the admin landing page. Everything else under /admin answers 403 at the
- * edge, before any page code runs: not menu-hidden, refused.
+ * 2026-08-01): a REVIEWER's world is the review surfaces — the misconception
+ * queue, item review, the Word list, the NVR sample sheets and the sitting
+ * materials — plus the admin landing page. Everything else under /admin
+ * answers 403 at the edge, before any page code runs: refused, not merely
+ * hidden. The nav ALSO hides them (2026-08-02) so a reviewer is never invited
+ * through a door this closes — but hiding is courtesy; this is the gate.
  *
  * The role rides the session JWT (set at sign-in), read here without any
  * database call — so role changes apply from the next sign-in, a trade
@@ -12,16 +14,11 @@
  */
 import { NextResponse, type NextRequest } from 'next/server';
 import { getToken } from 'next-auth/jwt';
+import { REVIEWER_ALLOWED_PREFIXES } from '@/lib/admin-nav';
 
-/** Path prefixes a REVIEWER may enter. AUTHOR keeps its existing surface. */
-const REVIEWER_ALLOWED = [
-  '/admin/items',
-  '/admin/misconceptions',
-  '/admin/words',
-  '/admin/blueprints',
-  // Sitting #1 materials (ingestion contract 4) — review work by definition.
-  '/admin/sitting-one',
-];
+// The allowlist lives in lib/admin-nav.ts, shared with the nav that renders
+// these links, so a reviewer is never offered a door this refuses to open.
+const REVIEWER_ALLOWED = REVIEWER_ALLOWED_PREFIXES;
 
 /**
  * Prelaunch gate (production promotion, 2026-08-01): with PRELAUNCH=on the

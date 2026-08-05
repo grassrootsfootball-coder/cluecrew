@@ -1,4 +1,5 @@
 import { currentStaff } from '@/lib/staff';
+import { navFor } from '@/lib/admin-nav';
 import { auth, signIn } from '@/lib/auth';
 
 export default async function AdminLayout({ children }: { children: React.ReactNode }) {
@@ -53,14 +54,11 @@ export default async function AdminLayout({ children }: { children: React.ReactN
     <>
       <nav className="cc-nav" aria-label="Admin">
         <strong>Admin CMS</strong>
-        <a href="/admin">Overview</a>
-        <a href="/admin/items">Items</a>
-        <a href="/admin/import">Bulk import</a>
-        <a href="/admin/misconceptions">Misconceptions</a>
-        <a href="/admin/words">Words</a>
-        <a href="/admin/regions">Regions</a>
-        <a href="/admin/bursaries">Bursaries</a>
-        <a href="/admin/audit">Audit log</a>
+        {navFor(staff.effectiveRole).map((item) => (
+          <a key={item.href} href={item.href}>
+            {item.label}
+          </a>
+        ))}
         <span className="cc-muted">
           {staff.displayName} · {staff.effectiveRole}
         </span>

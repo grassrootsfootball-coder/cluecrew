@@ -256,6 +256,12 @@ model Item {
   authoredBy           String // "human:<name>" | "ai-draft:<model>" | "seed" — provenance is mandatory
   reviewedBy           String? // human reviewer name; REQUIRED before LIVE (P3, AI-QC)
   reviewNotes          String? // reviewer feedback when an item is returned to DRAFT
+  // Verbal-decision provenance, same rule as Misconception above: whose
+  // judgement (`reviewedBy`) is never merged with who entered it
+  // (`reviewRecordedBy`). CHECK-constrained in the migration.
+  reviewRecordedBy     String?
+  reviewMethod         String?
+  reviewRecordNote     String?
   // Set by the nightly calibration job when calibrated difficulty drifts
   // ≥1.5 tiers from the authored tier — the live QC net (Phase 3 §2).
   calibrationFlaggedAt DateTime?
@@ -271,6 +277,22 @@ model Item {
   solution             String?
   similarityClearedBy  String?
   similarityClearNote  String?
+  // THE ANSWERABILITY FLAG (David's ruling, 2026-08-02). Set by
+  // `pnpm check:word-puzzles` when an item's own rule does not produce its
+  // key — no valid answer, or a different one. That is not a style problem
+  // and not a matter of taste: the child cannot answer it correctly, so no
+  // sign-off can make it servable.
+  //
+  // Deliberately UNLIKE similarityFlaggedAt, which a reviewer may clear with
+  // a note. There is no clearing field here. The flag goes when the item is
+  // fixed and the gate stops setting it, and by no other route.
+  answerFlaggedAt      DateTime?
+  answerFlagNote       String?
+  // BUILD-DISTRICT-ENGLISH §3: the Selective track's open-response half.
+  // Present only on open-response items; GL-track English items are MC and
+  // carry options like every other district.
+  englishOpenResponse  EnglishOpenResponse?
+  englishUnmatchedAnswers EnglishUnmatchedAnswer[]
   createdAt            DateTime     @default(now())
 
   @@index([questionTypeId, status, pool])
@@ -315,6 +337,11 @@ model ItemOption {
 enum MisconceptionStatus {
   PROPOSED
   ACTIVE
+  // Soft reject (David's ruling, 2026-08-02): a rejected proposal is kept,
+  // not deleted. A mis-click during a review sitting used to destroy corpus
+  // evidence with no undo; now it changes a status that an admin can put
+  // back. REJECTED is as unusable by items as PROPOSED — only ACTIVE serves.
+  REJECTED
 }
 
 model Misconception {
@@ -327,13 +354,145 @@ model Misconception {
   proposedBy  String?
   /** Corpus pattern reference — an opaque citation id, never source text. */
   sourcePattern String?
-  /** "human:<email>" — set by approval; approval activates. */
+  /** "human:<email>" — the REVIEWER whose judgement this is. Approval activates. */
   approvedBy  String?
+  // Verbal-decision provenance (David's ruling, 2026-08-02). A reviewer may
+  // decide in a sitting and an admin may enter it afterwards. The two are
+  // different people doing different things and the record must never merge
+  // them: `approvedBy` is whose judgement it was, `recordedBy` is who typed
+  // it in. A CHECK constraint in the migration enforces that a recorded
+  // approval names both and that they differ — self-recording would launder
+  // an admin's own approval into a reviewer's name.
+  /** "human:<email>" — the ADMIN who entered a decision made elsewhere. */
+  recordedBy  String?
+  /** e.g. "verbal — sitting #1, 2026-08-01", or absent when done in-platform. */
+  approvalMethod String?
+  /** What the reviewer actually said — the only place nuance survives. */
+  approvalNote   String?
+  /** "human:<email>" — who rejected it, kept so a restore has a history. */
+  rejectedBy     String?
+  rejectedAt     DateTime?
+  rejectionNote  String?
   // Teach-Back content (Phase 3 §6): authored working steps, the index of the
   // step containing the slip, and authored correction options. The engine
   // never generates text (S3) — evaluation is deterministic.
   teachback   Json?
   options     ItemOption[]
+}
+
+// ---------- English district, Selective track (BUILD-DISTRICT-ENGLISH §3) ----------
+
+// The open-response item model — the district's engineering core. It HANGS
+// OFF Item rather than replacing it, so the existing reviewer door is reused
+// and not duplicated: review status (DRAFT → REVIEWED → LIVE → RETIRED),
+// authoredBy/reviewedBy provenance, the pool split and the similarity gate
+// all stay on the Item row and mean exactly what they mean everywhere else.
+// The stem lives on Item.stem; everything here is the marking apparatus.
+//
+// Reviewer note recorded in the spec (§3): reviewing one of these is
+// mark-scheme drafting, not distractor checking — slower per item, and
+// scoped accordingly in sittings.
+//
+// The engine that reads these rows is packages/core/src/english. Its publish
+// gate (validateForPublish) is the door a row must pass before the Item may
+// go LIVE: no acceptable answers, an out-of-range tariff, or a GRADUATED item
+// with an incomplete ladder are all refusals.
+model EnglishOpenResponse {
+  itemId String @id
+  item   Item   @relation(fields: [itemId], references: [id], onDelete: Cascade)
+  /** The curated extract this question reads (Stream A/B/C, §6). */
+  passageRef String
+  /** [{ from, to }] — "lines 12–18", as the papers phrase it. */
+  lineRefs   Json
+  /** 1–12 marks. The range is enforced by the core publish gate. */
+  tariff         Int
+  /** Papers routinely state "give two reasons". */
+  requiredPoints Int?
+  /** [{ text, tolerance, barredNearMisses, conceptSets, pointId, rung,
+   *  feedback, misconceptionId }] — validated by openResponseItemSchema. */
+  acceptableAnswers Json
+  creditModel       EnglishCreditModel @default(POINT)
+  /** [{ level, descriptor, exampleAnswer, marks }] — one per ladder rung,
+   *  required in full for GRADUATED credit (§4, gate #1). */
+  bands             Json
+  /** Unsupported general answers hit a ceiling. */
+  evidenceCapRule   Boolean @default(false)
+  /** Lifting from the passage scores zero on these. */
+  ownWordsRequired  Boolean @default(false)
+  /** CSSE-style embedded accuracy mark, scored and reported separately. */
+  spagRider         Int?
+  /** Authored, neutral, never a criticism — gate #9 refuses the item without
+   *  it, because a bare number is not something a child can be shown. */
+  spagRiderLabel    String?
+  /** [{ kind, barredSpellings }] — authored checks only; there is no
+   *  dictionary and no invented judgement of a child's spelling. */
+  spagRiderChecks   Json?
+  /** §3: misconceptions tag ANSWER PATTERNS, not options. Ids reference
+   *  Misconception rows, which carry their own PROPOSED → ACTIVE door. */
+  misconceptionIds  String[]
+  createdAt DateTime @default(now())
+}
+
+enum EnglishCreditModel {
+  POINT
+  GRADUATED // the ladder (§4)
+}
+
+// Gate #2, second half: unmatched answers are logged for reviewer sampling so
+// the acceptable-answer set improves over time.
+//
+// DATA DECISION (S1/S5), recorded here because it is the only place it is
+// visible: this table holds child free text, and the repo's standing position
+// on child free text is that it does not get stored (Event props are IDs and
+// enums; there is no free-text column on ChildProfile; the columns simply do
+// not exist). Sampling needs the WORDS to be useful, so the concession made
+// is the narrowest one that still serves the purpose:
+//
+//  - NO childId, sessionId or attemptId. The row is a note about an ITEM, and
+//    nothing in the schema can link it to the child who typed it. That is why
+//    it is not on the account cascade-delete path — there is no person here
+//    to delete.
+//  - The text stored is NORMALISED and REDACTED by the core engine
+//    (buildUnmatchedAnswerLog): case and punctuation gone, digits, emails and
+//    postcode shapes stripped, capped at 300 characters.
+//  - Only the engine may create a row: it returns null for every outcome that
+//    was already authored (blank, a barred near miss, a detected lift), so the
+//    only answers kept are the ones nobody has an answer for yet.
+//  - purgeAt is set on write and a purge job honours it. Nothing here is kept
+//    because it might be useful later.
+//
+// Residual risk, stated plainly: a first name typed mid-sentence is not
+// detectable by any deterministic rule, so redaction cannot be complete. The
+// mitigations are the absent child link, the length cap, reviewer-only access
+// and the purge date. This needs a DPIA §2 inventory row before the district
+// serves a real child.
+model EnglishUnmatchedAnswer {
+  id     String @id @default(cuid())
+  itemId String
+  item   Item   @relation(fields: [itemId], references: [id], onDelete: Cascade)
+  /** Normalised + redacted; never the raw keystrokes. */
+  normalisedAnswer String
+  tokenCount       Int
+  /** Best coverage of any authored answer — how near a miss it was. */
+  bestCoverage     Float
+  /** CompareReason values from the engine — enums, never a sentence. */
+  reasons          String[]
+  status     EnglishSampleStatus @default(SAMPLED)
+  /** "human:<email>" — set when a reviewer acts on the sample. */
+  reviewedBy String?
+  reviewNote String?
+  createdAt  DateTime @default(now())
+  /** Set on write; the purge job deletes on this date regardless. */
+  purgeAt    DateTime
+
+  @@index([itemId, status, createdAt])
+  @@index([purgeAt])
+}
+
+enum EnglishSampleStatus {
+  SAMPLED // waiting for a reviewer
+  ACTIONED // the acceptable-answer set was widened because of it
+  DISMISSED // reviewed and not creditworthy; the item stands
 }
 
 model Case {
@@ -408,15 +567,61 @@ model ReviewSchedule {
   @@index([childId, dueAt])
 }
 
+// Word cards had NO review door until 2026-08-02: anything written to this
+// table was immediately collectable by a child. The corpus vault import made
+// that untenable — 180 AI-drafted cards cannot go straight to children — so
+// Word now carries the same DRAFT→LIVE discipline Item has, and every
+// child-facing query filters on it.
+enum WordStatus {
+  DRAFT // authored or imported; never served to a child
+  LIVE // reviewer-approved
+  RETIRED
+}
+
 model Word {
   id              String           @id // slug of the word
   headword        String
-  definitionChild String // authored, reading age ≤9
+  definitionChild String // authored, reading age ≤9 (sense A)
   sentence        String
-  rootFamily      String? // "latin-port", "greek-tele"
+  rootFamily      String? // "latin-port", "greek-tele" — the primary family
   imageRef        String?
   tier            Int // frequency/difficulty tier 1–5
-  vaultEntries    WordVaultEntry[]
+  // Fails closed: a row written without an explicit status cannot be served.
+  status          WordStatus       @default(DRAFT)
+  /** "seed" | "ai-draft:<model>" | "human:<email>" — provenance is mandatory. */
+  authoredBy      String?
+  /** "human:<email>" — set by reviewer approval; required before LIVE. */
+  reviewedBy      String?
+
+  // --- Polysemy (the "Two Meanings" pool source) --------------------------
+  // A card with two senses is a different teaching object from a card with
+  // one: it is the raw material for two-meanings questions, and the child
+  // must meet both senses honestly. senseB is CHECK-constrained to exist
+  // whenever twoMeanings is true.
+  twoMeanings      Boolean @default(false)
+  wordClass        String?
+  senseBDefinition String?
+  senseBSentence   String?
+  senseBWordClass  String?
+  /** "A" | "B" — which sense a child is likelier to already hold. */
+  likelierKnown     String?
+  likelierKnownNote String?
+
+  /** The incoming cards carry a LIST of families; rootFamily keeps the first. */
+  rootFamilies String[] @default([])
+  imagePrompt  String?
+  imagePromptB String?
+  /** The authoring pass's own verdict, kept as provenance, never as approval. */
+  preReviewVerdict String?
+  /** Set when this card replaced an earlier one: the old values and the ruling. */
+  supersedeNote String?
+  /** Reviewer feedback when a card is returned for redraft (mirrors Item). */
+  reviewNotes   String?
+
+  vaultEntries WordVaultEntry[]
+
+  @@index([status, tier])
+  @@index([twoMeanings, status])
 }
 
 model WordVaultEntry {
@@ -563,6 +768,31 @@ model MockSitting {
 
   @@index([childId, blueprintId, status])
   @@index([childId, createdAt])
+}
+
+// BUILD-DISTRICT-NVR §4: the generator-level review model. The reviewer signs
+// TEMPLATE VERSIONS, not items; all items from a signed version inherit
+// REVIEWED status. The fingerprint is the template's behavioural hash at
+// signing time (core nvr/samples.ts templateFingerprint) — if the template's
+// behaviour changes without a version bump, serving compares fingerprints and
+// treats the signature as voided. Unsigned versions cannot serve (core
+// serving door + CI check both enforce).
+model NvrTemplateSignature {
+  templateId  String
+  version     Int
+  fingerprint String
+  /** "human:<email>" — the specialist reviewer who signed this version. */
+  signedBy    String
+  signedAt    DateTime @default(now())
+  /** contentHash of the 30-per-tier sample sheets the reviewer inspected —
+   *  the archived artefact is reproducible byte-for-byte from
+   *  (templateId, version), this hash proves what was seen (§4.2). */
+  sampleSheetHash String
+  /** Set by the quarterly drift check (§4.3). */
+  lastDriftCheckAt DateTime?
+  notes       String?
+
+  @@id([templateId, version])
 }
 
 // ADDENDUM-C §5 (+ Addendum D §5): the readiness picture per child, district

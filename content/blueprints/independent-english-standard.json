@@ -1,0 +1,33 @@
+{
+ "kind": "blueprint",
+ "blueprint": {
+  "id": "independent-english-standard",
+  "district": "ENGLISH",
+  "title": "English Paper — Independent School Style",
+  "sections": [
+   {
+    "instructions": "Read the text twice. Then answer in your own words. Look at the marks next to each question. A question worth more marks wants more from you. Say what you noticed, then say what it does. The last questions are worth the most, so leave yourself time.",
+    "questionCount": 9,
+    "typeMix": {
+     "en-open-technique": 4,
+     "en-open-inference": 2,
+     "en-open-evidence-selection": 2,
+     "en-open-whole-text": 1
+    },
+    "minutes": 50
+   },
+   {
+    "instructions": "Now the writing task. Plan for five minutes first. Check who you are writing as, and what to include. Write in full sentences and paragraphs. Better beats longer — nobody is counting your words.",
+    "questionCount": 1,
+    "typeMix": {
+     "en-composition-response-to-stimulus": 1
+    },
+    "minutes": 40
+   }
+  ],
+  "notes": "Authored FROM corpus evidence (SCP-E-11/E-12/E-13/E-17). Single cluster here; the dual-cluster variant (contrasting prose plus a complete poem) is supported by the cluster-set model and wants its own blueprint. Technique-dominant: up to 63% of reading marks, tariffs to 12, graduated credit with band descriptors, T5 reachable. Single writing task at 27-43% of marks. Open-response throughout. Types are forward refs to an English registry that does not exist yet.",
+  "verifiedBy": "PENDING REVIEWER VERIFICATION",
+  "verifiedAt": null,
+  "sourceRef": "corpus decisions entry 3 / english-comprehension-evidence-v2.json + english-writing-evidence.md (private corpus folder, inventory-cited)"
+ }
+}

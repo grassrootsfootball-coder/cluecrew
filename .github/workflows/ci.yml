@@ -101,6 +101,14 @@ jobs:
       - name: Content schema validation
         run: pnpm validate:content
 
+      # BUILD-DISTRICT-NVR gates 2/5/6/7: determinism, density caps,
+      # colourblind safety over ~2,000 sampled items, disjoint seed ranges,
+      # and plan-versus-generator agreement. Deliberately bad fixtures prove
+      # the checks bite; a template change that skips a version bump is
+      # caught by the fingerprint, not by anyone remembering.
+      - name: NVR generator gates
+        run: pnpm check:nvr
+
       - name: Banned-vocabulary scan
         run: pnpm scan:vocab
 
@@ -113,6 +121,27 @@ jobs:
       # in this repo).
       - name: Similarity gate (Addendum E §3)
         run: pnpm similarity:scan
+
+      # David's ruling 2026-08-02: the gates run against the DATABASE too.
+      # The lint reads /content and the scanner reads source files, so an
+      # import straight into a table used to evade both. Serving rows fail
+      # the build; the DRAFT backlog is reported, not blocking.
+      - name: Database content gate (child-facing text in the DB)
+        run: pnpm check:db-content
+
+      # David's ruling 2026-08-02: a line citation is the one part of an item
+      # nobody can check by reading it, and five bad references survived three
+      # authoring rounds. Same policy as the gate above — serving fails, the
+      # DRAFT backlog is reported.
+      - name: Line-reference gate (citations resolve against the passage)
+        run: pnpm check:line-refs
+
+      # David's ruling 2026-08-02: a word puzzle's answer is DERIVED from its
+      # own rule and counted, never asserted — the same discipline as the
+      # Maths computed key. An item with more than one valid answer marks a
+      # child wrong for being right.
+      - name: Word-puzzle gate (single answer, no label collisions)
+        run: pnpm check:word-puzzles
 
       # Every MATHS item's key is computed from its solution expression —
       # a wrong key fails the build (BUILD-DISTRICT-MATHS §5, gate #3).

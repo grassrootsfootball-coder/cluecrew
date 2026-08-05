@@ -1,0 +1,49 @@
+{
+ "kind": "blueprint",
+ "blueprint": {
+  "id": "gl-english-standard",
+  "district": "ENGLISH",
+  "title": "English Paper — GL Standard Style",
+  "sections": [
+   {
+    "instructions": "Read the story first. Take your time. Then answer the questions about it. Some questions point you to a line number. Go back and read that line again before you choose. There are five answers each time. If one feels hard, move on and come back.",
+    "questionCount": 25,
+    "typeMix": {
+     "en-gl-retrieval": 8,
+     "en-gl-inference": 8,
+     "en-gl-vocabulary-in-context": 6,
+     "en-gl-technique": 3
+    },
+    "minutes": 20
+   },
+   {
+    "instructions": "Each line here has four parts. One part may have a spelling that is not right. Mark that part. If every part is fine, mark N. A worked example comes first — read it before you start.",
+    "questionCount": 9,
+    "typeMix": {
+     "en-gl-spelling-slips": 9
+    },
+    "minutes": 9
+   },
+   {
+    "instructions": "Each line here has four parts. One part may be missing a punctuation mark, or have one that does not belong. Mark that part. If every part is fine, mark N.",
+    "questionCount": 9,
+    "typeMix": {
+     "en-gl-punctuation-slips": 9
+    },
+    "minutes": 9
+   },
+   {
+    "instructions": "Each sentence has a gap. Pick the word that fits the gap best. Read the whole sentence before you choose. The words around the gap tell you what kind of word it needs.",
+    "questionCount": 9,
+    "typeMix": {
+     "en-gl-grammar-cloze": 9
+    },
+    "minutes": 9
+   }
+  ],
+  "notes": "Authored FROM corpus evidence (SCP-E-1 as revised: the 56% SPaG share is GL-SPECIFIC, this track only). 52q/50min: one deep comprehension cluster plus spelling 9, punctuation 9, cloze 9; MC throughout; 4-segment+N slip-spotting, N genuinely keyed 1-2 per section. Mirror-pair design (SCP-E-4) applies to MOCK-pool pairs. Types are forward refs to an English registry that does not exist yet.",
+  "verifiedBy": "PENDING REVIEWER VERIFICATION",
+  "verifiedAt": null,
+  "sourceRef": "corpus decisions entries 2-3 / english-blueprint-evidence.json + english-question-taxonomy.json (private corpus folder, inventory-cited)"
+ }
+}

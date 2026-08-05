@@ -1,0 +1,104 @@
+{
+  "note": "The ONE canonical ban list (manifesto L1/L2/L6/D1/\u00a76 voice + Addendum A \u00a71.3). Read by scripts/scan-vocab.mjs over source files, by packages/core content-gates over database rows, and by the publish doors. It lived only inside the scanner until 2026-08-02, which meant a database import could carry banned words past it \u2014 see corpus-decisions Entry 5.",
+  "everywhere": [
+    {
+      "name": "\"guarantee\" (L1: no outcome guarantees)",
+      "pattern": "\\bguarantee[ds]?\\b"
+    },
+    {
+      "name": "\"learning style\" (L2)",
+      "pattern": "\\blearning[- ]styles?\\b"
+    },
+    {
+      "name": "\"visual learner\" (L2)",
+      "pattern": "\\b(visual|kinaesthetic|auditory) learners?\\b"
+    },
+    {
+      "name": "\"tutor-proof\"",
+      "pattern": "\\btutor[- ]proof\\b"
+    },
+    {
+      "name": "\"beat the exam\"",
+      "pattern": "\\bbeat the exam\\b"
+    },
+    {
+      "name": "third-party marks (L6)",
+      "pattern": "\\b(for dummies|idiot'?s guide)\\b"
+    },
+    {
+      "name": "\"predicted pass\" (Addendum B \u00a74 / L1)",
+      "pattern": "\\bpredicted (pass|score|grade)\\b"
+    },
+    {
+      "name": "\"pass probability\" (Addendum B \u00a74 / L1)",
+      "pattern": "\\bpass (probability|chance|likelihood)\\b"
+    },
+    {
+      "name": "\"will pass\" (Addendum B \u00a74 / L1)",
+      "pattern": "\\b(will|would|should) pass\\b"
+    }
+  ],
+  "childFacing": [
+    {
+      "name": "\"fail/failure\" (D1)",
+      "pattern": "\\bfail(s|ed|ure|ures|ing)?\\b"
+    },
+    {
+      "name": "\"wrong\" (D1)",
+      "pattern": "\\bwrong(ly)?\\b"
+    },
+    {
+      "name": "\"incorrect\" (\u00a71.3)",
+      "pattern": "\\bincorrect(ly)?\\b"
+    },
+    {
+      "name": "\"error\" in child UI (\u00a71.3)",
+      "pattern": "\\berrors?\\b"
+    },
+    {
+      "name": "\"behind\" in a progress sense (D1)",
+      "pattern": "\\b(?:fall|falls|falling|fell|fallen|slip|slips|slipping|slipped|drop|drops|dropping|dropped|lag|lags|lagging|lagged|get|gets|getting|got|run|runs|running)\\s+(?:further\\s+|a\\s+bit\\s+|badly\\s+|well\\s+|way\\s+)?behind\\b|\\bbehind\\s+(?:schedule|target|plan|the\\s+(?:class|others|rest|group|pack|curve|expected|standard|average|national)|(?:his|her|their|your|my|the)\\s+(?:class|classmates|year|group|peers|level)|everyone|the\\s+other\\s+(?:children|pupils|students|kids))\\b|\\bbehind\\s+(?:in|at|on|with)\\s+(?:his|her|their|your|my|the)?\\s*\\w+|\\bbehind\\s+where\\b|\\b(?:so\\s+far|far|a\\s+bit|slightly|badly|well|much)\\s+behind\\b|\\b(?:you|he|she|they|we)\\s*(?:'re|'s|'ve)?\\s*(?:is|are|was|were|am|been|feel|feels|felt|look|looks|seem|seems)?\\s*behind\\b|\\bleft\\s+behind\\s+by\\b",
+      "note": "Narrowed 2026-08-02 (David). D1 protects a child from being told they are LAGGING. Spatial position is not that: \"a puppy behind a stair gate\" is innocent, and 23 of 23 real occurrences in the vault were spatial. This catches the progress senses \u2014 falling behind, behind the class, behind schedule, behind where you should be, \"you are behind\" \u2014 and leaves position alone."
+    },
+    {
+      "name": "\"weak\" (voice)",
+      "pattern": "\\bweak(er|est|ness)?\\b"
+    },
+    {
+      "name": "\"poor\" (voice)",
+      "pattern": "\\bpoor(ly)?\\b"
+    },
+    {
+      "name": "\"careless\" (voice)",
+      "pattern": "\\bcareless(ly|ness)?\\b"
+    },
+    {
+      "name": "\"should have\" (voice)",
+      "pattern": "\\bshould have\\b"
+    },
+    {
+      "name": "\"limit\" as a restriction (\u00a71.3/\u00a71.5)",
+      "pattern": "\\blimits?\\b"
+    },
+    {
+      "name": "\"quota\" (\u00a71.3)",
+      "pattern": "\\bquotas?\\b"
+    },
+    {
+      "name": "\"restricted\" (\u00a71.3)",
+      "pattern": "\\brestrict(ed|ion|ions)?\\b"
+    },
+    {
+      "name": "\"you must\" (\u00a71.3)",
+      "pattern": "\\byou must\\b"
+    },
+    {
+      "name": "\"unfortunately\" (\u00a71.3)",
+      "pattern": "\\bunfortunately\\b"
+    },
+    {
+      "name": "praise of the child, not the work (\u00a71.3)",
+      "pattern": "\\b(clever|smart|gifted|genius)\\b"
+    }
+  ]
+}

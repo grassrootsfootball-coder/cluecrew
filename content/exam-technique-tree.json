@@ -1,0 +1,26 @@
+{
+ "kind": "exam-technique-tree",
+ "note": "Cross-district exam technique — the things that cost marks regardless of subject knowledge. SLOTS ONLY: each node declares what it teaches and where the evidence came from; the Walk scripts, Mode assets and item links are reviewer-pipeline content and are deliberately absent. A node with no authored content cannot be scheduled — the engine treats an empty `content` as 'not built yet', so an unfinished slot is invisible to children rather than half-taught.",
+ "nodes": [
+  {
+   "id": "tech-finish-the-check",
+   "title": "Finish the check",
+   "foundational": true,
+   "districts": ["VR", "NVR", "MATHS", "ENGLISH"],
+   "teaches": "Check every part of the answer before choosing it, not just the first part that matches. The commonest way to lose a mark you had is to verify one letter, one clause or one step, see it fit, and stop.",
+   "evidence": "Cross-subject partial-verification pattern (teaching-notes.md, corpus decisions entry 2). It executes as a real distractor family in more than one district — NVR carries it as `nvr-code-partial-verification`, and the VR and English proposal sets carry their own equivalents.",
+   "relatedMisconceptions": ["nvr-code-partial-verification"],
+   "content": null
+  },
+  {
+   "id": "tech-know-your-papers-clock",
+   "title": "Know your paper's clock",
+   "foundational": false,
+   "districts": ["VR", "NVR", "MATHS", "ENGLISH"],
+   "teaches": "Every paper has its own rhythm — how many questions, how long, and where the expensive questions sit. Knowing the shape before the day means the clock stops being a surprise.",
+   "evidence": "Observed paper-shape and timing findings across all four passes (teaching-notes.md; maths-method-conventions.md; the English v2 finding that one paper places composition at Q14 of 16, so over-investing there kills the remaining reading marks).",
+   "relatedMisconceptions": [],
+   "content": null
+  }
+ ]
+}

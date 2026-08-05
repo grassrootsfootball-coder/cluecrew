@@ -89,3 +89,31 @@ The Anti-Marker style scanner (`node scripts/scan-chapter-style.mjs`) runs in
 CI: hard budgets block review submission; advisory flags require a logged
 dismissal note in the chapter's styleDismissals. David's read-aloud pass
 remains the final filter.
+
+## Walk-script house style (reviewer ruling, written review 2026-08-02)
+
+Decided by the specialist reviewer on the first English calibration pack;
+recorded by David; method: written review 2026-08-02.
+
+A walk script is the Walk-it mode's voice on a single item. The house style,
+as ruled:
+
+- **Direct.** No preamble, no throat-clearing. Start where the work starts.
+- **Addresses the child.** Second person, talking to them, not about them and
+  not about the item.
+- **Three to four sentences.** Long enough to carry a chain of reasoning,
+  short enough to read before patience runs out.
+- **Scaffolds the logic TOWARD the answer.** It builds the path — where to
+  look, what to compare, what that tells you — so the child can walk it.
+- **Does not hand the answer over**, and **does not narrate the mistake.**
+  Those are the two failure modes either side of the ruling: a script that
+  states the answer teaches nothing, and one that recounts what a child got
+  wrong teaches shame. Neither is the job.
+
+Why it is written down here rather than left to taste: 78 items arrived with
+walk scripts drafted against no stated style, and every future batch will
+have the same problem until the style is a document. This is that document.
+
+The scripts already in the bank were drafted BEFORE this ruling and have not
+been re-checked against it — that is a reviewer pass on the second sitting,
+not something to apply retroactively by script.

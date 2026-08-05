@@ -6,7 +6,9 @@ import { defineConfig } from '@playwright/test';
 // override variables already set, so CI's own environment still wins.
 loadEnv({ path: '../../.env', quiet: true });
 
-const PORT = 3100;
+// 3100 by default; E2E_PORT lets a second session test against its own dev
+// server while another one holds the default port.
+const PORT = Number(process.env.E2E_PORT ?? 3100);
 
 export default defineConfig({
   testDir: './e2e',

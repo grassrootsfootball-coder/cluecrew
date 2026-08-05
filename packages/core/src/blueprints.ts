@@ -49,6 +49,17 @@ export const blueprintSectionSchema = z
     minutes: z.number().int().positive().max(90),
     /** Authored override of DEFAULT_TIER_SPREAD (§2: "authored spread"). */
     tierSpread: tierSpreadSchema.optional(),
+    /**
+     * BUILD-DISTRICT-ENGLISH §7: some sections are a per-CYCLE policy of the
+     * exam setter, not a fixed property of the format — CSSE's writing
+     * allocation is the known case, because one observed cycle carried none.
+     * Composition must be TOLD whether this cycle includes the section; it
+     * refuses rather than assuming either way, since a paper that quietly
+     * grew or lost a section is not the paper the reviewer verified.
+     */
+    perCyclePolicy: z.boolean().optional(),
+    /** Why this section is policy-variable — required when it is. */
+    perCyclePolicyNote: z.string().min(10).max(300).optional(),
   })
   .superRefine((section, ctx) => {
     const mixTotal = Object.values(section.typeMix).reduce((sum, count) => sum + count, 0);
@@ -56,6 +67,12 @@ export const blueprintSectionSchema = z
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
         message: `typeMix sums to ${mixTotal} but questionCount is ${section.questionCount}`,
+      });
+    }
+    if (section.perCyclePolicy && !section.perCyclePolicyNote) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: 'a per-cycle-policy section must record WHY it varies by cycle',
       });
     }
   });
@@ -120,6 +137,8 @@ export interface CompositionShortfall {
 export interface FailedComposition {
   ok: false;
   shortfalls: CompositionShortfall[];
+  /** Per-cycle-policy sections composition was not told about (English §7). */
+  undecidedPolicySections?: number[];
 }
 
 /** Deterministic small PRNG so a composition is reproducible from its seed. */
@@ -180,9 +199,24 @@ export function composeMockPaper(input: {
   burnedItemIds: ReadonlySet<string>;
   /** Vary composition per child/sitting while staying reproducible. */
   seed: string;
+  /**
+   * Section index → does THIS cycle include it. Required for every section
+   * marked perCyclePolicy; composition refuses without it (English §7).
+   */
+  policySections?: Readonly<Record<number, boolean>>;
 }): ComposedPaper | FailedComposition {
-  const { blueprint, candidates, burnedItemIds, seed } = input;
+  const { blueprint, candidates, burnedItemIds, seed, policySections } = input;
   const random = mulberry32(`${blueprint.id}:${seed}`);
+
+  // Decide the policy sections BEFORE drawing anything: an undecided section
+  // is a question about the exam, not something a default should answer.
+  const undecidedPolicySections = blueprint.sections
+    .map((section, index) => ({ section, index }))
+    .filter(({ section, index }) => section.perCyclePolicy && policySections?.[index] === undefined)
+    .map(({ index }) => index);
+  if (undecidedPolicySections.length > 0) {
+    return { ok: false, shortfalls: [], undecidedPolicySections };
+  }
 
   const eligible = candidates.filter(
     (item) => item.pool === 'MOCK' && item.status === 'LIVE' && !burnedItemIds.has(item.id),
@@ -209,6 +243,10 @@ export function composeMockPaper(input: {
 
   blueprint.sections.forEach((section, sectionIndex) => {
     const itemIds: string[] = [];
+    if (section.perCyclePolicy && policySections?.[sectionIndex] === false) {
+      sections.push({ itemIds });
+      return; // this cycle does not carry the section; its slot stays, empty
+    }
     for (const [questionTypeId, count] of Object.entries(section.typeMix)) {
       const available = (byType.get(questionTypeId) ?? []).filter(
         (item) => !takenThisPaper.has(item.id),

@@ -1,12 +1,31 @@
 {
  "kind": "batch-mix",
- "note": "Authoring batch composition per corpus decisions entry 1 (2026-08-01). PROPOSED values await sitting #1 co-ratification (SCP-M-2); ACCEPTED values are David's ruling. Evidence: private corpus folder, inventory-cited; only decisions and derived values live here.",
+ "note": "Authoring batch composition. RATIFIED values are David's ruling and Okafor consumes them directly (Addendum E §2: she reads this file, never the difficulty map). PROPOSED values await the named holder in their status line. Evidence: private corpus folder, inventory-cited; only decisions and derived values live here. VR ratified 2026-08-01 (SCP-VR-5/6); Maths values re-copied from batch-mix-PROPOSAL at the same ratification — see the discrepancy note on gl-maths-practice.",
  "pools": {
-  "gl-maths": {
+  "gl-vr-practice": {
+   "tierMixPct": {
+    "specDefault": [20, 30, 30, 20, 0],
+    "ratified": [15, 30, 35, 18, 2],
+    "status": "RATIFIED — SCP-VR-5 (David, 2026-08-01). Real GL-format papers run ~9/30/40/19/2; practice keeps a kinder T1 floor at 15 while moving its centre to the observed T3. The intensity matrix's T3 centre of gravity is CONFIRMED by the data, not amended."
+   },
+   "singleVsMultiStepPct": {
+    "single": 55,
+    "multi": 45,
+    "status": "ACCEPTED — pass-1 VR observation (~55% resolve in one operation once the type's rule is known)"
+   }
+  },
+  "gl-vr-mock": {
+   "tierMixPct": {
+    "specDefault": [20, 30, 30, 20, 0],
+    "ratified": [10, 30, 40, 18, 2],
+    "status": "RATIFIED — SCP-VR-5 (David, 2026-08-01). Mock pools match observed reality: a mock kinder than the real paper measures something other than readiness."
+   }
+  },
+  "gl-maths-practice": {
    "tierMixPct": {
     "specDefault": [20, 30, 30, 15, 5],
-    "proposed": [20, 32, 28, 15, 5],
-    "status": "PROPOSED — SCP-M-2, reviewer co-ratification at sitting #1 (tier-centre evidence is a provisional mapping until the reviewer calibrates)"
+    "proposed": [20, 33, 30, 15, 2],
+    "status": "PROPOSED — SCP-M-2, still reviewer-held at 2026-08-01. Observed GL maths centres T2 (22/36/27/13/2); the proposal shifts weight toward T2 without fully matching observation, preserving stretch. The reviewer's calibration confirms or corrects the analyst's provisional tier mapping before this becomes RATIFIED. DISCREPANCY LOGGED: the value carried here before 2026-08-01 was [20,32,28,15,5], which matches neither the spec default nor batch-mix-PROPOSAL.json; the proposal artefact's values are used now and the earlier figure is recorded as unexplained."
    },
    "singleVsMultiStepPct": {
     "single": 55,
@@ -14,11 +33,66 @@
     "status": "ACCEPTED — SCP-M-4"
    }
   },
+  "gl-maths-mock": {
+   "tierMixPct": {
+    "specDefault": [20, 30, 30, 15, 5],
+    "proposed": [20, 35, 28, 15, 2],
+    "status": "PROPOSED — SCP-M-2, reviewer-held. Same tier-mapping dependency as the practice pool."
+   }
+  },
   "independent-prep": {
    "tierMixPct": {
     "specDefault": [10, 20, 30, 25, 15],
-    "status": "UNCHANGED — T3+ centre with a real T5 tail, per the independents evidence"
+    "status": "UNCHANGED — T3+ centre with a real T5 tail, per the independents evidence. CEM-style and independent tracks keep this centre; only the GL-format pools moved."
+   },
+   "singleVsMultiStepPct": {
+    "single": 35,
+    "multi": 65,
+    "status": "PROPOSED — SCP-M-4 (~65% multi-step for CEM-style batches)"
    }
+  },
+  "gl-nvr": {
+   "composition": "4 sections × 20 from {series, analogy, like-classification, odd-classification, matrix, codes}, codes always present; density caps per the ratified nvr-generator-config.json tier bands; reflection-as-task and the 3D/spatial engines are practice-only and never appear in GL blueprints.",
+   "status": "PROPOSED — SCP-NVR-1/2/3/5 restated as a batch-mix entry. NO TIER MIX IS PROPOSED: the NVR pass produced a paper-shape finding, not a tier distribution, and inventing one here would substitute judgement for evidence. NVR tier weighting stays governed by the generator's per-tier sampling and the blueprint's authored spread until evidence exists."
+  },
+  "english": {
+   "status": "EMPTY — pending BUILD-DISTRICT-ENGLISH. Deliberately carries no mix: the spec is unwritten, so any number here would be invention. Evidence waiting for it: 56% SPaG, seven live types, T4 ceiling (SCP-E-1/5/6)."
   }
+ },
+ "typeTierEnvelopes": {
+  "status": "RATIFIED — SCP-VR-6 (David, 2026-08-01). Per-type tier ranges are constrained to the envelope OBSERVED in real papers rather than a uniform T1–T5, so no generator or batch may draft an insert-letter item at T5 or a read-and-reason item at T1. Ranges are the non-zero tiers of each type's observed distribution (weighted across five GL-format papers, 400 questions); weightedQuestions carries the evidence base per row so a thin row cannot be mistaken for a strong one.",
+  "district": "VR",
+  "envelopes": {
+   "vr-01-insert-letter": { "min": 1, "max": 3, "weightedQuestions": 24, "corpusType": "vrP-01_insert-letter" },
+   "vr-02-two-odd-ones-out": { "min": 1, "max": 4, "weightedQuestions": 15, "corpusType": "vrP-02_odd-two-out" },
+   "vr-04-closest-meaning": { "min": 1, "max": 3, "weightedQuestions": 12, "corpusType": "vrP-04_closest-meaning" },
+   "vr-05-hidden-word": { "min": 1, "max": 3, "weightedQuestions": 32, "corpusType": "vrP-03_hidden-word" },
+   "vr-07-letters-for-numbers": { "min": 2, "max": 4, "weightedQuestions": 19, "corpusType": "vrP-07_letters-for-numbers" },
+   "vr-08-move-letter": { "min": 1, "max": 4, "weightedQuestions": 24, "corpusType": "vrP-08_move-letter" },
+   "vr-09-letter-series": { "min": 2, "max": 5, "weightedQuestions": 24, "corpusType": "vrP-09_letter-series" },
+   "vr-10-word-connections": { "min": 1, "max": 4, "weightedQuestions": 24, "corpusType": "vrP-10_word-analogy" },
+   "vr-11-number-series": { "min": 2, "max": 4, "weightedQuestions": 26, "corpusType": "vrP-11_number-series" },
+   "vr-12-compound-words": { "min": 1, "max": 3, "weightedQuestions": 13, "corpusType": "vrP-12_compound-words" },
+   "vr-13-make-a-word": { "min": 2, "max": 5, "weightedQuestions": 33, "corpusType": "vrP-13_make-word-same-way" },
+   "vr-14-letter-connections": { "min": 2, "max": 5, "weightedQuestions": 17, "corpusType": "vrP-14_letter-analogy" },
+   "vr-15-reading-information": { "min": 3, "max": 5, "weightedQuestions": 12, "corpusType": "vrP-15_read-and-reason" },
+   "vr-16-opposite-meaning": { "min": 1, "max": 4, "weightedQuestions": 21, "corpusType": "vrP-05_opposite-meaning" },
+   "vr-17-complete-the-sum": { "min": 2, "max": 4, "weightedQuestions": 17, "corpusType": "vrP-17_complete-sum" },
+   "vr-18-related-numbers": { "min": 3, "max": 5, "weightedQuestions": 5, "corpusType": "vrP-18_related-numbers", "caveat": "single-paper evidence — thin; treat this envelope as provisional" },
+   "vr-19-word-number-codes": { "min": 2, "max": 4, "weightedQuestions": 30, "corpusType": "vrP-16_word-codes" }
+  },
+  "pendingRegistryMapping": {
+   "note": "Observed envelopes whose corpus type does not map unambiguously onto a registry questionType. NOT APPLIED — the mapping is a David/reviewer decision, and a guess would put a real constraint on a generator it was never about.",
+   "rows": [
+    { "corpusType": "vrP-06_complete-word-sentence", "observedMin": 1, "observedMax": 4, "weightedQuestions": 28, "candidates": ["vr-06-missing-word", "vr-20-complete-the-word"] },
+    { "corpusType": "vrP-19_two-meanings", "observedMin": 1, "observedMax": 4, "weightedQuestions": 17, "candidates": ["vr-03-related-words", "vr-21-same-meaning"], "reason": "no registry type is named for the two-meanings format" },
+    { "corpusType": "vrP-EXTRA-alphabet-cipher", "observedMin": 3, "observedMax": 5, "weightedQuestions": 7, "candidates": [], "reason": "the registry home is itself an open ruling (SCP-VR-2, untriaged); single-paper evidence" }
+   ]
+  },
+  "discrepancyFlagged": "batch-mix-PROPOSAL's prose gloss says make-word-same-way and read-and-reason 'never appear below T3'. The underlying per-type data has make-word-same-way at 6% T2, so its ratified envelope opens at T2, not T3. The data is the evidence and the gloss is a summary of it; flagged rather than resolved. Read-and-reason genuinely never drops below T3 and its envelope reflects that."
+ },
+ "unobservedRegistryTypes": {
+  "status": "NOT APPLIED — pending SCP-VR-3 (David's ruling, untriaged). Registry types carrying no observed questions across the five weighted GL-format papers, listed so the omission is visible. No weighting change is made here.",
+  "types": ["vr-03-related-words", "vr-06-missing-word", "vr-20-complete-the-word", "vr-21-same-meaning"]
  }
 }

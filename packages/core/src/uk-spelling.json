@@ -1,0 +1,128 @@
+{
+  "$comment": [
+    "UK SPELLING THROUGHOUT — David's ruling, 2026-08-02. These are British exam papers.",
+    "",
+    "ONE canonical table, like banned-vocabulary.json beside it: read by the shared gates",
+    "in content-gates.ts (database sweep + publish doors) and by scripts/scan-vocab.mjs",
+    "(the file scan). A second copy would eventually disagree with this one.",
+    "",
+    "SEVERITY IS THE WHOLE DESIGN HERE. An 'error' form does not exist in British English,",
+    "so flagging it is safe. A 'warning' form IS a real British word in another sense or",
+    "part of speech — 'practice' the noun, 'meter' the gas meter, 'tire' meaning to grow",
+    "weary. A scanner cannot tell which sense is meant without parsing the sentence, so it",
+    "reports and a person decides. Making those errors would train people to bypass the",
+    "gate, which costs more than the misses.",
+    "",
+    "Quoted passage spans and tested tokens are exempt, on the manifesto's ABOUT-language",
+    "principle (v1.8): we do not re-spell a quotation, and a spelling item that presents a",
+    "US form AS the error to spot is content about the spelling, not a spelling failure."
+  ],
+  "allowedIze": "^(cap|down|up|over|out|super|re)?siz(e|es|ed|ing)$|^assizes?$|^prizes?$|^maize$|^seiz(e|es|ed|ing|ure|ures)$",
+  "izeRule": {
+    "pattern": "\\b[A-Z]?[a-z]{2,}iz(e|es|ed|ing|er|ers|ation|ations|able)\\b",
+    "flags": "g",
+    "$why": "Case-SENSITIVE, and at most one leading capital: `fontSize` and `maxSize` are code identifiers, not American spelling. `Organize` at the start of a sentence still matches.",
+    "uk": "-ise / -isation",
+    "severity": "error",
+    "family": "-ize for -ise"
+  },
+  "rules": [
+    {
+      "pattern": "\\b(col|hon|fav|lab|neighb|hum|behavi|flav|harb|rum|arm|vap|od|sav|splend|val|vig|endeav|parl|tum|clam|arb|cand|demean|ferv|succ)or(s|ed|ing|ful|less|er|ers|able|ably|ite|ites|y|ies|al|ally|ist|ists)?\\b",
+      "uk": "-our",
+      "severity": "error",
+      "family": "-or for -our"
+    },
+    {
+      "pattern": "\\b(analyz|paralyz|catalyz|dialyz)(e|es|ed|ing|er|ers)\\b",
+      "uk": "-yse",
+      "severity": "error",
+      "family": "-yze for -yse"
+    },
+    {
+      "pattern": "\\b(travel|cancel|model|marvel|quarrel|signal|total|fuel|level|rival|tunnel|shovel|unravel|duel|equal|pencil|spiral|worship|counsel|initial|libel|marshal|pedal|dial|label|revel|channel|jewel)(ed|ing|er|ers|or|ors)\\b",
+      "uk": "double the l: travelled, cancelling, jeweller",
+      "severity": "error",
+      "family": "single-l past tense / agent"
+    },
+    {
+      "pattern": "\\b(marvelous|marvelously|jewelry|skillful|skillfully|fulfill|fulfills|fulfilled|fulfilling|fulfillment|enrollment|installment|counselor|counselors|willful|willfully)\\b",
+      "uk": "marvellous · jewellery · skilful · fulfil · fulfilment · enrolment · instalment · counsellor · wilful",
+      "severity": "error",
+      "family": "l-doubling, the other direction"
+    },
+    {
+      "pattern": "\\b(cent|theat|lit|fib|somb|spect|lust|scept|calib|sab|goit|sepulch)er(s|ed|ing)?\\b",
+      "uk": "-re: centre, theatre, litre, fibre",
+      "severity": "error",
+      "family": "-er for -re"
+    },
+    {
+      "pattern": "\\b(defens|offens|pretens)(e|es|eless)\\b",
+      "uk": "-ce: defence, offence, pretence",
+      "severity": "error",
+      "family": "-se for -ce"
+    },
+    {
+      "pattern": "\\b(gray|grayer|grayest|grayish|plow|plows|plowed|plowing|mold|molds|molded|molding|moldy|smolder|smolders|smoldered|smoldering|catalog|catalogs|dialog|dialogs|aluminum|sulfur|sulfurs|donut|donuts|pajamas|airplane|airplanes|cozy|cozier|coziest|ax|maneuver|maneuvers|maneuvered|maneuvering|mustache|mustaches|plagiarize)\\b",
+      "uk": "grey · plough · mould · smoulder · catalogue · dialogue · aluminium · sulphur · doughnut · pyjamas · aeroplane · cosy · axe · manoeuvre · moustache",
+      "severity": "error",
+      "family": "assorted US forms"
+    },
+    {
+      "pattern": "\\bmath\\b",
+      "uk": "maths",
+      "severity": "error",
+      "family": "assorted US forms"
+    },
+    {
+      "pattern": "\\b(practice|practices|practiced|practicing|practise|practises|practised|practising)\\b",
+      "uk": "noun 'practice', verb 'practise' — check which this is",
+      "severity": "warning",
+      "family": "noun/verb pair"
+    },
+    {
+      "pattern": "\\b(license|licenses|licensed|licensing|licence|licences|licenced)\\b",
+      "uk": "noun 'licence', verb 'license' — check which this is",
+      "severity": "warning",
+      "family": "noun/verb pair"
+    },
+    {
+      "pattern": "\\b(meter|meters)\\b",
+      "uk": "the unit is 'metre'; a measuring device is a 'meter'",
+      "severity": "warning",
+      "family": "sense-dependent"
+    },
+    {
+      "pattern": "\\b(program|programs|programmed|programming)\\b",
+      "uk": "'programme' unless this is computer code",
+      "severity": "warning",
+      "family": "sense-dependent"
+    },
+    {
+      "pattern": "\\b(tire|tires)\\b",
+      "$why": "Only the bare noun is ambiguous. Nobody has ever written 'tyred' or 'tyring', so flagging 'tired' just teaches people to skim the warnings.",
+      "uk": "the wheel is a 'tyre'; growing weary is 'tire'",
+      "severity": "warning",
+      "family": "sense-dependent"
+    },
+    {
+      "pattern": "\\b(curb|curbs|curbed|curbing)\\b",
+      "uk": "the pavement edge is a 'kerb'; restraining is 'curb'",
+      "severity": "warning",
+      "family": "sense-dependent"
+    },
+    {
+      "pattern": "\\b(draft|drafts|drafted|drafting)\\b",
+      "uk": "air, beer and animals take 'draught'; a first version is a 'draft'",
+      "severity": "warning",
+      "family": "sense-dependent"
+    },
+    {
+      "pattern": "\\b(story|stories)\\b(?=[^.!?]*\\b(building|buildings|floor|floors|tall|high)\\b)",
+      "uk": "a floor of a building is a 'storey'",
+      "severity": "warning",
+      "family": "sense-dependent"
+    }
+  ]
+}
