@@ -20,7 +20,7 @@
  * the case, so the sample is reproducible and its freshness hash is meaningful.
  */
 import type { PrismaClient } from '@prisma/client';
-import { shuffleOptionsForChild } from '../../apps/web/lib/crew/shuffle';
+import { seededShuffle, shuffleOptionsForChild } from '../../apps/web/lib/crew/shuffle';
 
 /** The four types whose correctness is a meaning judgement, not a computation. */
 export const SEMANTIC_CASES = new Set(['case-vr-04', 'case-vr-03', 'case-vr-06', 'case-vr-15']);
@@ -123,6 +123,75 @@ export async function buildVrAuditSample(prisma: PrismaClient): Promise<VrAuditS
   const total = out.reduce((s, c) => s + c.sampled.length, 0);
   const semanticTotal = out.filter((c) => c.semantic).reduce((s, c) => s + c.sampled.length, 0);
   return { cases: out, total, semanticTotal };
+}
+
+/** Map a LIVE item row to a served-shuffled AuditItem (shared with pattern pack). */
+function toAuditItem(item: { id: string; difficultyTier: number | null; stem: unknown; options: Array<{ id: string; content: unknown; isCorrect: boolean; misconceptionId: string | null; misconception: { description: string } | null }> }): AuditItem {
+  const options = shuffleOptionsForChild(item.options, 'vr-audit-sample', item.id).map((option) => {
+    const content = (option.content ?? {}) as Record<string, unknown>;
+    return {
+      label: (content.label as string) ?? null,
+      value: content.value,
+      isKey: option.isCorrect,
+      misconceptionId: option.misconceptionId,
+      misconception: option.misconception?.description ?? null,
+    };
+  });
+  return { itemId: item.id, tier: item.difficultyTier, stem: (item.stem ?? {}) as Record<string, unknown>, options };
+}
+
+/**
+ * A GENUINELY RANDOM (not stride) sample of N LIVE items from named banks —
+ * for the reviewer's pattern check across a whole bank. Random via a seeded
+ * shuffle, so it is unbiased in selection yet reproducible (the freshness hash
+ * stays meaningful). Options are served-shuffled, same as the audit pack.
+ */
+export async function buildVrPatternSample(
+  prisma: PrismaClient,
+  specs: Array<{ questionTypeId: string; sampleSize: number; seed: string }>,
+): Promise<VrAuditSample> {
+  const out: AuditCase[] = [];
+  for (const spec of specs) {
+    const kase = await prisma.case.findFirst({ where: { questionTypeId: spec.questionTypeId }, include: { questionType: true } });
+    const live = await prisma.item.findMany({
+      where: { questionTypeId: spec.questionTypeId, status: 'LIVE' },
+      include: { options: { include: { misconception: true }, orderBy: { id: 'asc' } } },
+      orderBy: { id: 'asc' },
+    });
+    const picked = seededShuffle(live, spec.seed).slice(0, spec.sampleSize).sort((a, b) => a.id.localeCompare(b.id));
+    out.push({
+      caseId: kase?.id ?? spec.questionTypeId,
+      title: kase?.title ?? spec.questionTypeId,
+      questionTypeId: spec.questionTypeId,
+      mechanic: kase?.questionType.mechanic ?? null,
+      semantic: SEMANTIC_CASES.has(kase?.id ?? ''),
+      liveTotal: live.length,
+      sampled: picked.map(toAuditItem),
+    });
+  }
+  const total = out.reduce((s, c) => s + c.sampled.length, 0);
+  return { cases: out, total, semanticTotal: out.filter((c) => c.semantic).reduce((s, c) => s + c.sampled.length, 0) };
+}
+
+/** The two VR misconception ids the reviewer asked to see as-written. */
+export const VR_DEF_IDS = ['vr03-reversed-relation', 'vr15-first-mention'];
+
+/** The library rows the definitions export hashes — verbatim text. */
+export async function buildVrMisconceptionDefsSource(prisma: PrismaClient): Promise<unknown> {
+  const rows = await prisma.misconception.findMany({
+    where: { id: { in: VR_DEF_IDS } },
+    select: { id: true, description: true, childHint: true, status: true, category: true },
+  });
+  return VR_DEF_IDS.map((id) => rows.find((r) => r.id === id) ?? { id, missing: true });
+}
+
+/** The light source the freshness stamp hashes for a pattern sample. */
+export async function buildVrPatternSource(prisma: PrismaClient, specs: Array<{ questionTypeId: string; sampleSize: number; seed: string }>): Promise<unknown> {
+  const sample = await buildVrPatternSample(prisma, specs);
+  return sample.cases.map((c) => ({
+    caseId: c.caseId,
+    items: c.sampled.map((i) => ({ itemId: i.itemId, tier: i.tier, stem: i.stem, options: i.options.map((o) => ({ value: o.value, isKey: o.isKey, misconceptionId: o.misconceptionId })) })),
+  }));
 }
 
 /** The light source the freshness stamp hashes — the sampled content itself, so

@@ -19,8 +19,13 @@ import { buildFreeTenSource } from './lib/vr-free-ten-source';
 import { buildMathsMisconceptionsSource } from './lib/maths-misconceptions-source';
 import { buildCalibration } from './lib/maths-calibration-source';
 import { NVR_FAMILIES, buildNvrSignoffFamilySource } from './lib/nvr-signoff-source';
-import { buildVrAuditSource } from './lib/vr-audit-source';
+import { buildVrAuditSource, buildVrMisconceptionDefsSource, buildVrPatternSource } from './lib/vr-audit-source';
 import { prisma } from '../packages/db/src/index';
+
+const VR_PATTERN_SPECS = [
+  { questionTypeId: 'vr-04-closest-meaning', sampleSize: 20, seed: 'vr04-pattern-2026-08' },
+  { questionTypeId: 'vr-07-letters-for-numbers', sampleSize: 20, seed: 'vr07-pattern-2026-08' },
+];
 
 /** kind → how to rebuild the source this export hashed. Extend as exports adopt the stamp. */
 const BUILDERS: Record<string, () => Promise<unknown>> = {
@@ -32,6 +37,8 @@ const BUILDERS: Record<string, () => Promise<unknown>> = {
   // One kind per NVR engine-family file (nvr-signoff-machine, -lineup, …).
   ...Object.fromEntries(NVR_FAMILIES.map((fam) => [fam.kind, () => buildNvrSignoffFamilySource(prisma, fam.key)])),
   'vr-audit-sample': () => buildVrAuditSource(prisma),
+  'vr-pattern-sample': () => buildVrPatternSource(prisma, VR_PATTERN_SPECS),
+  'vr-misconception-defs': () => buildVrMisconceptionDefsSource(prisma),
 };
 
 type Verdict = 'CURRENT' | 'STALE' | 'UNSTAMPED' | 'UNKNOWN-KIND' | 'UNREADABLE';

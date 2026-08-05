@@ -67,6 +67,8 @@
     "export:maths-review-pack": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-maths-review-pack.ts",
     "export:nvr-signoff": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-nvr-signoff.ts",
     "export:vr-audit-sample": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-vr-audit-sample.ts",
+    "export:vr-pattern-sample": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-vr-pattern-sample.ts",
+    "export:vr-misconception-defs": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-vr-misconception-defs.ts",
     "check:option-positions": "pnpm exec tsx scripts/check-option-positions.ts --self-test && pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-option-positions.ts",
     "publish:vr-signoff": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/publish-vr-signoff.ts",
     "import:maths-additions": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/import-maths-additions.ts"
