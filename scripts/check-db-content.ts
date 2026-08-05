@@ -29,6 +29,7 @@ import {
   checkWordCard,
   isBlocking,
   lettersNamedNotOnCard,
+  wordOptionsNamedNotOnCard,
   roleForItemStem,
   spansPresentIn,
   type ContentFailure,
@@ -139,12 +140,16 @@ async function main(): Promise<void> {
       );
       // A script naming a letter-option not on the card is stale against its
       // item (David, 2026-08-02).
-      const orphanLetters = lettersNamedNotOnCard(text, optionWords, JSON.stringify(item.stem));
-      if (orphanLetters.length > 0) {
+      const optionValues = item.options.map((o) => String((o.content as { value?: unknown }).value ?? ''));
+      const orphans = [
+        ...lettersNamedNotOnCard(text, optionValues, JSON.stringify(item.stem)),
+        ...wordOptionsNamedNotOnCard(text, optionValues, JSON.stringify(item.stem)),
+      ];
+      if (orphans.length > 0) {
         record(serving, [{
           where: `item:${item.id} explanation.${field}`,
           rule: 'internal-id-leak',
-          detail: `names option(s) not on the card: ${orphanLetters.join(', ')} — script is stale against the current item`,
+          detail: `names option(s) not on the card: ${orphans.join(', ')} — script is stale against the current item`,
         }]);
       }
     }

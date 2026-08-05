@@ -360,6 +360,58 @@ export function solveOrdering(
  *
  * "a" and "i" are English words, never option references, so they are ignored.
  */
+/**
+ * WORD-OPTION staleness (David's ruling, 2026-08-02 — extends the letter check
+ * to word options). A walk script that presents a word as a wrong option the
+ * card no longer offers is stale — "hot and yellow" when the card offers "wet"
+ * and "yellow", after "hot" was removed.
+ *
+ * Word options are noisier than letters: a script names many words that are not
+ * options (the key, the stem, plain prose). The reliable signal is
+ * COORDINATION with a real option — "X and Y" or "X, Y" where one side IS a
+ * current option and the other is neither an option nor a stem word. That is
+ * exactly how a script lists the distractors it dismisses, so a non-option
+ * word standing in that list is a stale reference; a coordination of two
+ * ordinary words ("brooms and dusters") never fires, because neither is an
+ * option.
+ */
+export function wordOptionsNamedNotOnCard(
+  script: string,
+  optionValues: readonly string[],
+  stemText = '',
+): string[] {
+  const options = new Set(
+    optionValues.map((v) => v.trim().toLowerCase()).filter((v) => /^[a-z]{2,}$/.test(v)),
+  );
+  if (options.size === 0) return []; // not a word-option item
+  const allowed = new Set(options);
+  for (const w of stemText.toLowerCase().match(/[a-z]{2,}/g) ?? []) allowed.add(w);
+
+  // A word only reads as a listed OPTION if it is a content word. Restrict the
+  // connector to "and" (the form a script uses to list the choices it weighs —
+  // "hot and yellow"), and never flag a function word: "cut, so cut" once
+  // fired on "so", which is noise, not a stale option.
+  const STOP = new Set([
+    'so', 'the', 'and', 'but', 'not', 'you', 'your', 'its', 'it', 'is', 'are', 'was', 'a', 'an',
+    'to', 'of', 'in', 'on', 'at', 'for', 'with', 'as', 'or', 'nor', 'if', 'no', 'yes', 'here',
+    'this', 'that', 'them', 'they', 'we', 'he', 'she', 'him', 'her', 'his', 'one', 'two', 'both',
+    'each', 'link', 'match', 'sound', 'word', 'card', 'clue',
+  ]);
+  const contentWord = (w: string) => w.length >= 3 && !STOP.has(w);
+
+  const stale = new Set<string>();
+  const pair = /\b([a-z]+)\s+and\s+([a-z]+)\b/gi;
+  for (const match of script.matchAll(pair)) {
+    const a = match[1]!.toLowerCase();
+    const b = match[2]!.toLowerCase();
+    // Exactly one side is a real option; the other is a content word that is
+    // not on the card and not stem stimulus → a stale option reference.
+    if (options.has(a) && !allowed.has(b) && contentWord(b)) stale.add(b);
+    if (options.has(b) && !allowed.has(a) && contentWord(a)) stale.add(a);
+  }
+  return [...stale];
+}
+
 export function lettersNamedNotOnCard(
   script: string,
   optionValues: readonly string[],

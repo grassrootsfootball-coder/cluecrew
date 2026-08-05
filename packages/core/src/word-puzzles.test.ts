@@ -5,6 +5,7 @@ import {
   movableLetters,
   deriveSeries,
   lettersNamedNotOnCard,
+  wordOptionsNamedNotOnCard,
   solveInsertLetter,
   solveOrdering,
   solveHiddenWord,
@@ -275,5 +276,26 @@ describe('a walk script must not name an option not on the card', () => {
   });
   it('is a no-op for word-option items (nothing single-letter to check)', () => {
     expect(lettersNamedNotOnCard('A lake is large, not deep.', ['large', 'water', 'little'])).toEqual([]);
+  });
+});
+
+describe('word-option staleness — a script naming a distractor word not on the card', () => {
+  it('flags "hot" when the card offers wet/yellow (Entry 25 hot-fix)', () => {
+    const script = 'Dry is the match; hot and yellow miss the link.';
+    expect(wordOptionsNamedNotOnCard(script, ['dry', 'wet', 'yellow'], 'rain wet sun')).toEqual(['hot']);
+  });
+  it('flags "deep" when the card offers water/little', () => {
+    const script = 'Water and deep sit near lakes but drop the link.';
+    expect(wordOptionsNamedNotOnCard(script, ['large', 'water', 'little'], 'puddle small lake')).toEqual(['deep']);
+  });
+  it('passes when every coordinated option is on the card', () => {
+    const script = 'Station and ticket sit near trains but drop the link.';
+    expect(wordOptionsNamedNotOnCard(script, ['track', 'station', 'ticket'], 'car road train')).toEqual([]);
+  });
+  it('does not fire on ordinary prose coordination (no option involved)', () => {
+    expect(wordOptionsNamedNotOnCard('brooms and dusters filled the room.', ['track', 'station'], 'car road')).toEqual([]);
+  });
+  it('is a no-op for letter-option items', () => {
+    expect(wordOptionsNamedNotOnCard('t and r finish it', ['t', 'e', 'b'], 'plan ail')).toEqual([]);
   });
 });

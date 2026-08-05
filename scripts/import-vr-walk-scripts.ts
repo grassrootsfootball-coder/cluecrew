@@ -11,7 +11,7 @@
  * `--dry-run` reports the verdict and writes nothing.
  */
 import { readFileSync } from 'node:fs';
-import { checkChildFacingText, isBlocking, lettersNamedNotOnCard, type ContentFailure } from '@cluecrew/core';
+import { checkChildFacingText, isBlocking, lettersNamedNotOnCard, wordOptionsNamedNotOnCard, type ContentFailure } from '@cluecrew/core';
 import { prisma } from '../packages/db/src/index';
 
 const DRY = process.argv.includes('--dry-run');
@@ -54,7 +54,10 @@ async function main(): Promise<void> {
     // Refuse a script that names a letter-option not on the card — it was
     // written against a different version of the item (David, 2026-08-02).
     const optionValues = item.options.map((o) => String((o.content as { value?: unknown }).value ?? ''));
-    const orphanLetters = lettersNamedNotOnCard(entry.walkScript, optionValues, JSON.stringify(item.stem));
+    const orphanLetters = [
+      ...lettersNamedNotOnCard(entry.walkScript, optionValues, JSON.stringify(item.stem)),
+      ...wordOptionsNamedNotOnCard(entry.walkScript, optionValues, JSON.stringify(item.stem)),
+    ];
     if (orphanLetters.length > 0) {
       blocking.push({ where: `item:${entry.itemId} walkScript`, rule: 'internal-id-leak', detail: `names option(s) not on the card: ${orphanLetters.join(', ')} — script is stale against the current item` });
     }

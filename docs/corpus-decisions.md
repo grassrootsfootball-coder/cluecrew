@@ -2281,3 +2281,39 @@ regardless of hash. Fixed to key on the 16-hex content hash: a same-family file
 is removed only when its hash DIFFERS, so a pack's .html/.pdf/-decisions.json/
 manifest (one hash, four files) all survive while every older version is
 cleared.
+
+## Entry 44 — Reviewer's three fixes on the rebuilt pack
+*2026-08-02. Zero double-keys and zero ambiguities confirmed; three fixes.*
+
+**1. Two stale vr-03 walk scripts (R10).** `gen-vr-03-related-words-10` names
+"hot" and `-23` names "deep" — the two Entry-25 false-negative hot-fixes, whose
+distractors were removed from the cards but whose scripts were never redrafted.
+Sent for redraft. The vr-10 folds (`-23`, `-11`) carry the same stale scripts;
+not free-tier, but flagged for the same redraft.
+
+**2. Staleness checker extended to WORD options.** `lettersNamedNotOnCard`
+only caught lone letters; `wordOptionsNamedNotOnCard` now catches a script
+naming a distractor WORD the card no longer offers. The signal is coordination
+with a real option — "X and Y" where one side IS a current option and the other
+is a content word that is neither an option nor stem stimulus — which is how a
+script lists the choices it dismisses. Restricted to "and", with a stop-word
+filter, after a first pass fired on "cut, so cut" and other prose: 56 false
+positives down to the 4 genuine stale scripts. Wired into check:db-content and
+the walk-script importer.
+
+**3. vr-15 first-mention derived, not fixed-slot.** `vr15-first-mention` sat on
+a fixed person while the tier≥3 clues are given out of order, so it named the
+wrong person in **12 of 25**. Now derived from the clue text — the distractor
+whose name opens the clues carries the tag; if the first-named person is the
+answer, neither distractor is a first-mention trap. After regeneration, **0 of
+25 mistagged** (18 carry the tag, all correct).
+
+**A regression this surfaced and closed.** Regenerating for the vr-15 fix ran
+`content:generate`, which recreates options from the banks — and REVERTED the
+nine vr-12 swaps, which had been applied to the database only. The corrected
+scripts (naming umbrella, dentist, …) were then stale against reverted options,
+and the new word-option checker caught all eight. The fix was to bake the swaps
+into the COMPOUNDS bank so regeneration produces them, the same lesson as the
+Entry-25 analogy hot-fix: a correction applied to the database and not to its
+generator is reverted the next time the generator runs. Both exports were
+flagged stale by the freshness checker and refreshed (d0ee2df5).

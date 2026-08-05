@@ -275,19 +275,23 @@ const MOVE_LETTER_EXTRA: Array<[string, string, string, string, string]> = [
   ['PLUMP', 'AY', 'P', 'L', 'M'], ['SNOW', 'HOE', 'S', 'N', 'W'],
 ];
 
+// Distractors corrected 2026-08-02 (case-vr-12-CORRECTED-BANK): nine that
+// formed a real compound with the base — raindrop, toothpaste, starshine,
+// lamplight, footwalk, gameplay, sunday, airplane, storybook — replaced with
+// clean words, so regeneration cannot reintroduce the double-keys.
 const COMPOUNDS: Array<[string, string, string, string]> = [
-  ['sun', 'flower', 'cloud', 'grass'], ['rain', 'bow', 'drop?', 'sky'],
-  ['tooth', 'brush', 'paste?', 'mouth'], ['cup', 'board', 'plate', 'spoon'],
+  ['sun', 'flower', 'cloud', 'grass'], ['rain', 'bow', 'umbrella', 'sky'],
+  ['tooth', 'brush', 'dentist', 'mouth'], ['cup', 'board', 'plate', 'spoon'],
   ['butter', 'fly', 'bread', 'yellow'], ['grand', 'mother', 'house', 'old'],
   ['news', 'paper', 'story', 'radio'], ['skate', 'board', 'wheel', 'ice'],
-  ['snow', 'man', 'cold', 'winter'], ['star', 'fish', 'night', 'shine'],
+  ['snow', 'man', 'cold', 'winter'], ['star', 'fish', 'night', 'planet'],
   ['pan', 'cake', 'pot', 'fry'], ['hand', 'bag', 'finger', 'glove'],
-  ['light', 'house', 'lamp', 'bright'], ['foot', 'path', 'toe', 'walk'],
-  ['bed', 'room', 'sleep', 'pillow'], ['play', 'ground', 'game', 'fun'],
-  ['day', 'dream', 'night', 'sun'], ['moon', 'light', 'star', 'round'],
+  ['light', 'house', 'shadow', 'bright'], ['foot', 'path', 'toe', 'ankle'],
+  ['bed', 'room', 'sleep', 'pillow'], ['play', 'ground', 'toy', 'fun'],
+  ['day', 'dream', 'night', 'hour'], ['moon', 'light', 'star', 'round'],
   ['sea', 'weed', 'sand', 'wave'], ['fire', 'work', 'flame', 'hot'],
-  ['water', 'fall', 'river', 'wet'], ['air', 'port', 'plane', 'wind'],
-  ['farm', 'yard', 'field', 'barn'], ['book', 'case', 'page', 'story'],
+  ['water', 'fall', 'river', 'wet'], ['air', 'port', 'breeze', 'wind'],
+  ['farm', 'yard', 'field', 'barn'], ['book', 'case', 'page', 'chapter'],
   ['arm', 'chair', 'elbow', 'sit'],
 ];
 
@@ -675,11 +679,26 @@ function readingInformation(): GenItem[] {
         clues,
         question: `Who is the ${askTop ? comparative[1] : comparative[2]}?`,
       },
-      options: [
-        { content: { value: askTop ? people[0] : people[2] }, isCorrect: true },
-        { content: { value: people[1] }, isCorrect: false, m: 1 },
-        { content: { value: askTop ? people[2] : people[0] }, isCorrect: false, m: tier >= 3 ? 0 : 1 },
-      ],
+      // DERIVE the first-mention tag from the clue text, not a fixed slot
+      // (reviewer, 2026-08-02, same fix as vr-01's computed distractors). The
+      // tier>=3 clues are given out of order, so who is named first changes;
+      // tagging a fixed person put vr15-first-mention on the wrong one in 12 of
+      // 25. The distractor whose name opens the clues is the first-mention trap;
+      // the other reads a comparison the wrong way (clue-flip). If the person
+      // named first IS the answer, neither distractor is a first-mention trap.
+      options: (() => {
+        const key = askTop ? people[0] : people[2];
+        const firstMentioned = clues[0]!.split(/\s+/)[0]!.replace(/[^A-Za-z]/g, '');
+        const distractors = [people[1]!, askTop ? people[2]! : people[0]!];
+        return [
+          { content: { value: key }, isCorrect: true },
+          ...distractors.map((person) => ({
+            content: { value: person },
+            isCorrect: false,
+            m: person === firstMentioned ? 0 : 1, // 0 = first-mention, 1 = clue-flip
+          })),
+        ];
+      })(),
     };
   });
 }
