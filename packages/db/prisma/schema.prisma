@@ -354,6 +354,9 @@ model Misconception {
   proposedBy  String?
   /** Corpus pattern reference — an opaque citation id, never source text. */
   sourcePattern String?
+  /** The reviewer's own grouping of a seed misconception (e.g. the six KS2
+   *  maths strands). Editorial provenance, not a serving field. */
+  category    String?
   /** "human:<email>" — the REVIEWER whose judgement this is. Approval activates. */
   approvedBy  String?
   // Verbal-decision provenance (David's ruling, 2026-08-02). A reviewer may

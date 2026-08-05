@@ -2317,3 +2317,37 @@ into the COMPOUNDS bank so regeneration produces them, the same lesson as the
 Entry-25 analogy hot-fix: a correction applied to the database and not to its
 generator is reverted the next time the generator runs. Both exports were
 flagged stale by the freshness checker and refreshed (d0ee2df5).
+
+## Entry 45 — KS2 maths misconception seed library (reviewer-authored)
+*2026-08-02. 60 entries; 40 imported and approved, 20 held on the gates.*
+
+The specialist reviewer authored 60 KS2 maths misconceptions, her wording
+verbatim. Imported per David's notes.
+
+**Gate result: 40 pass, 20 held.** The 20 fail the child-facing hint gates —
+sentence length over 16 words (15), "you must" (§1.3 pressure phrasing, 5), and
+long words (thermometer/temperature, isosceles/equilateral). Her wording is not
+amended; the 20 go back to her, exactly as with the English hint set. The 40
+that pass landed PROPOSED and were approved through the written-review path —
+approvedBy the reviewer, recordedBy David, method "written review — maths
+misconception seed library", she being the author.
+
+**Her six groupings are preserved** as a new `category` field on Misconception
+(migration `misconception-category`): Place Value & Decimals, the four
+operations, Fractions/Decimals/Percentages, Measurement, Geometry, and
+Statistics/Ratio/Proportion.
+
+**Derivable vs conceptual, across all 60.** A DERIVABLE misconception executes
+on an item's own numbers to yield one specific wrong answer, so a gate can
+machine-verify a distractor the way insert-letter and compound gates do; a
+CONCEPTUAL one is a belief or definition that authoring and review must judge.
+**47 derivable, 13 conceptual** — conceptual: 15, 20, 27, 28, 30, 40, 41, 42,
+43, 49, 50, 58, 59, anchored on David's examples. Geometry is the most
+conceptual strand (5 of 10); Place Value is entirely derivable (10 of 10).
+Among the 40 APPROVED, 31 are derivable and 9 conceptual (four conceptual
+entries were among the 20 held on the gates).
+
+**Exported for authoring**: `pnpm export:maths-misconceptions` writes the
+approved ACTIVE ids with category, class, description and hint — hash-named,
+stamped and freshness-checkable like every other export. Only ACTIVE ids are
+exported, since a PROPOSED id cannot be referenced by a live item.

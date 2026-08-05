@@ -16,12 +16,14 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { basename, join } from 'node:path';
 import { OUTBOUND_DIR, freshnessStamp } from './lib/export-destination';
 import { buildFreeTenSource } from './lib/vr-free-ten-source';
+import { buildMathsMisconceptionsSource } from './lib/maths-misconceptions-source';
 import { prisma } from '../packages/db/src/index';
 
 /** kind → how to rebuild the source this export hashed. Extend as exports adopt the stamp. */
 const BUILDERS: Record<string, () => Promise<unknown>> = {
   'vr-free-ten-item-bank': () => buildFreeTenSource(prisma),
   'vr-review-pack': () => buildFreeTenSource(prisma),
+  'maths-misconceptions-approved': () => buildMathsMisconceptionsSource(prisma),
 };
 
 type Verdict = 'CURRENT' | 'STALE' | 'UNSTAMPED' | 'UNKNOWN-KIND' | 'UNREADABLE';
