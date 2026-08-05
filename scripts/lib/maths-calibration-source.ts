@@ -93,6 +93,9 @@ function loadBatch(): { items: RawItem[] } {
 
 const TIER_QUERY_ITEMS = new Set(['MC01-MEAS-03', 'MC01-MEAS-06', 'MC01-GEOM-06']);
 
+/** The reviewer's tier rulings on the flagged items (written review, 2026-08-05). */
+const TIER_RULINGS: Record<string, number> = { 'MC01-MEAS-03': 2, 'MC01-MEAS-06': 2, 'MC01-GEOM-06': 4 };
+
 export function buildCalibration(): { items: CalItem[]; families: GapFamily[] } {
   const batch = loadBatch();
   const famMap = new Map<string, GapFamily>();
@@ -118,7 +121,7 @@ export function buildCalibration(): { items: CalItem[]; families: GapFamily[] } 
       };
     });
     return {
-      itemId: it.itemId, group: it.group, tier: it.tier, steps: it.steps,
+      itemId: it.itemId, group: it.group, tier: TIER_RULINGS[it.itemId] ?? it.tier, steps: it.steps,
       stem: it.stem, solution: String(it.solution), key: String(it.solutionValue),
       walkScript: it.explanation?.walkScript ?? '', tierQuery: TIER_QUERY_ITEMS.has(it.itemId),
       options,

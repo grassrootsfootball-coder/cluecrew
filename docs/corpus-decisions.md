@@ -2451,3 +2451,27 @@ child-facing gate (three over 16 words, plus "poorly", "You must", "weak").
 Every serving gate green — check:db-content, check:word-puzzles, check:nvr,
 validate:content, 508 core tests. The 8 held items go back to authoring; each
 returns through the same gated publish once fixed.
+
+## Entry 49 — Maths gap families named (61–97) and the tier rulings
+*2026-08-05. The reviewer's returns on the calibration batch.*
+
+The 33 gap families the calibration batch surfaced came back **named and worded
+as 37 misconceptions (61–97)** — she split the place-value read error into two
+ids (61, 62) so a single item cannot carry two options under one misconception
+(the R11 concern we flagged). Imported PROPOSED then approved through the
+written-review path (method "written review — maths gap families and tier
+rulings"); **all 37 pass the child-facing gates** (she wrote them to the 16-word
+ceiling), so none went back. Her six `###` groupings are preserved as the
+category — the parser now reads both her `## N. Name` library headers and these
+`### Name` ones. **The maths library is now 97 ACTIVE**, 84 derivable.
+
+**Two tier rulings, applied to the calibration source:** MEAS-03 and MEAS-06
+both standardise to Tier 2 (structurally identical unitary proportion; the
+200÷4 vs 60÷3 gap doesn't justify a tier), and GEOM-06 drops T5→T4 (a classic
+missing-angle stretch, not a T5 cognitive load). The re-exported calibration
+pack carries the corrected tiers.
+
+**Re-exported the approved set (97) so the 84 gap-family distractors can now map
+to real ids.** Both source documents live in `docs/`. One check stays open for
+Cowork's mapping step: verify no calibration item ends up with two options on
+the same id — the whole reason 61 and 62 are separate.

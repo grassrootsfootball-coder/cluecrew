@@ -21,7 +21,10 @@ export function parseMathsSeed(md: string): MathsSeedEntry[] {
   let pending: Omit<MathsSeedEntry, 'hint'> | null = null;
   for (const raw of md.split('\n')) {
     const line = raw.trim();
-    const group = /^##\s+\d+\.\s+(.+)$/.exec(line);
+    // Category header: `## N. Name` (original library) or `### Name` (her
+    // additions file). A `## ` line with no leading number is a section header
+    // (TIER RULINGS, IMPORT NOTES) and is deliberately not a category.
+    const group = /^##\s+\d+\.\s+(.+)$/.exec(line) ?? /^###\s+(.+)$/.exec(line);
     if (group) { category = group[1]!.trim(); continue; }
     const head = /^\*\*(\d+)\.\s+(.+?)\*\*\s+[—-]+\s+(.+)$/.exec(line);
     if (head) {
