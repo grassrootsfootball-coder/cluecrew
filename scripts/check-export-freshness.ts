@@ -18,6 +18,7 @@ import { OUTBOUND_DIR, freshnessStamp } from './lib/export-destination';
 import { buildFreeTenSource } from './lib/vr-free-ten-source';
 import { buildMathsMisconceptionsSource } from './lib/maths-misconceptions-source';
 import { buildCalibration } from './lib/maths-calibration-source';
+import { buildNvrSignoffSource } from './lib/nvr-signoff-source';
 import { prisma } from '../packages/db/src/index';
 
 /** kind → how to rebuild the source this export hashed. Extend as exports adopt the stamp. */
@@ -27,6 +28,7 @@ const BUILDERS: Record<string, () => Promise<unknown>> = {
   'maths-misconceptions-approved': () => buildMathsMisconceptionsSource(prisma),
   'maths-gap-families': async () => buildCalibration().families,
   'maths-calibration-pack': async () => buildCalibration().items,
+  'nvr-signoff': () => buildNvrSignoffSource(prisma),
 };
 
 type Verdict = 'CURRENT' | 'STALE' | 'UNSTAMPED' | 'UNKNOWN-KIND' | 'UNREADABLE';
