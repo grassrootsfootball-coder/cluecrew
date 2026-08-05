@@ -19,6 +19,7 @@ import { buildFreeTenSource } from './lib/vr-free-ten-source';
 import { buildMathsMisconceptionsSource } from './lib/maths-misconceptions-source';
 import { buildCalibration } from './lib/maths-calibration-source';
 import { NVR_FAMILIES, buildNvrSignoffFamilySource } from './lib/nvr-signoff-source';
+import { buildVrAuditSource } from './lib/vr-audit-source';
 import { prisma } from '../packages/db/src/index';
 
 /** kind → how to rebuild the source this export hashed. Extend as exports adopt the stamp. */
@@ -30,6 +31,7 @@ const BUILDERS: Record<string, () => Promise<unknown>> = {
   'maths-calibration-pack': async () => buildCalibration().items,
   // One kind per NVR engine-family file (nvr-signoff-machine, -lineup, …).
   ...Object.fromEntries(NVR_FAMILIES.map((fam) => [fam.kind, () => buildNvrSignoffFamilySource(prisma, fam.key)])),
+  'vr-audit-sample': () => buildVrAuditSource(prisma),
 };
 
 type Verdict = 'CURRENT' | 'STALE' | 'UNSTAMPED' | 'UNKNOWN-KIND' | 'UNREADABLE';
