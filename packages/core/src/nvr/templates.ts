@@ -520,14 +520,15 @@ const lineupOdd: NvrTemplate = {
 
 const lineupCounting: NvrTemplate = {
   id: 'lineup-counting',
-  version: 4, // v4: randomised asymmetric offsets so the key is not always the
-  //             median, and the tag splits by magnitude — near = lost her place,
-  //             far = judged by fullness (reviewer, 2026-08-05)
+  version: 5, // v5: keep v4's randomised asymmetric offsets (key no longer always
+  //             the median), but REVERT the magnitude tag split — counting has one
+  //             honest error and her hedged count-by-glance hint covers a lost
+  //             place AND a fullness judgment in one (reviewer, 2026-08-05)
   engineFamily: 'lineup',
   sectionType: 'like-classification',
   glPool: true,
   generate(seed, tier) {
-    const random = rng(`lineup-counting@4:${seed}:${tier}`);
+    const random = rng(`lineup-counting@5:${seed}:${tier}`);
     const tone = pick(random, TONES);
     // Counting IS the task — the one place extreme density is allowed (SCP-NVR-2).
     const cap = NVR_CONFIG.densityCaps.maxElementsByTier[tier]!;
@@ -556,9 +557,9 @@ const lineupCounting: NvrTemplate = {
     // — worse at high tiers where counting is laborious. Now four DISTINCT offsets
     // are drawn from the valid range (keeping every count in [2, cap]), so the set
     // is usually asymmetric and the key's rank varies item to item. The tag splits
-    // by magnitude: a near miss (±1–2) is a child who lost her place mid-count
-    // (count-by-glance); a far miss judged the picture by fullness, not by number
-    // (surface-similarity) — genuinely different hints.
+    // All four wrong counts are the same estimate-instead-of-count error, the size
+    // of the miss a parameter — count-by-glance, whose hint hedges both a lost
+    // place and a fullness judgment. (Allow-listed for repeated tags by design.)
     const lo = Math.max(-6, 2 - count);
     const hi = Math.min(6, cap - count);
     const pool: number[] = [];
@@ -570,7 +571,7 @@ const lineupCounting: NvrTemplate = {
       ...offsets.map((offset): NvrOption => ({
         visual: withCount(count + offset),
         isCorrect: false,
-        misconceptionId: Math.abs(offset) <= 2 ? 'nvr-count-by-glance' : 'nvr-surface-similarity',
+        misconceptionId: 'nvr-count-by-glance',
       })),
     ];
     const options = finalize(random, candidates);

@@ -250,6 +250,12 @@ export function checkReadingAge(
   }
 
   if (rules.maxSentenceWords !== null) {
+    // PUNCTUATION RULE (reviewer, 2026-08-05, applies to every district): a
+    // sentence ends only on a full stop, question mark, or exclamation mark —
+    // NOT on a dash. An em dash or en dash is a mid-sentence pause a child reads
+    // straight through, so a clause a dash "breaks off" still counts toward the
+    // 16-word cap. If a hint needs a dash to be readable, it needs a full stop
+    // instead: split it into two sentences. (Authoring guidance mirrors this.)
     for (const sentence of ourWording.split(/[.!?]/).map((part) => part.trim()).filter(Boolean)) {
       const words = sentence.split(/\s+/).filter(Boolean).filter(isWord);
       if (words.length > rules.maxSentenceWords) {

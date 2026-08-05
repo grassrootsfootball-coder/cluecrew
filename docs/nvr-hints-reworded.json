@@ -1,0 +1,59 @@
+{
+  "kind": "nvr-hints-to-reword",
+  "generatedAt": "2026-08-05T21:43:10.173Z",
+  "sourceHash": "2d0a00f91d1f4da1",
+  "note": "Reworded by the reviewer. Sentence split on full stops only, not dashes.",
+  "heldCount": 5,
+  "hints": [
+    {
+      "id": "nvr-code-row-swap",
+      "description": "Binds top-row meaning to bottom-row letters or loses row alignment (types: codes)",
+      "currentHint": "\"Say it in order: 'top letter is shape, bottom letter is shading' — before you look at the answers.\"",
+      "faults": [
+        "sentence of 18 words (max 16 for hint): \"\"Say it in order: 'top letter is shape, bottom letter is sha…\""
+      ],
+      "rewordedHint": "Point at each row and say what it stands for. Then read the letters in that order.",
+      "rewordedBy": "specialist reviewer"
+    },
+    {
+      "id": "nvr-count-by-glance",
+      "description": "Estimates counts of small repeated marks; off-by-one options succeed (types: all)",
+      "currentHint": "\"When dots or stripes matter, touch-count them with your pencil tip — 'looks the same' is the trap.\"",
+      "faults": [
+        "sentence of 17 words (max 16 for hint): \"\"When dots or stripes matter, touch-count them with your pen…\""
+      ],
+      "rewordedHint": "Touch each mark with your pencil as you count. A full-looking picture can still hold fewer.",
+      "rewordedBy": "specialist reviewer"
+    },
+    {
+      "id": "nvr-mirror-for-rotation",
+      "description": "Accepts a reflection where the rule is rotation (silhouette looks right) (types: all)",
+      "currentHint": "\"Turn it like a steering wheel — if it only matches after flipping like a pancake, it's a mirror twin.\"",
+      "faults": [
+        "sentence of 19 words (max 16 for hint): \"\"Turn it like a steering wheel — if it only matches after fl…\""
+      ],
+      "rewordedHint": "Turn it like a steering wheel, never flip it like a pancake. A shape that only matches after flipping is a mirror twin.",
+      "rewordedBy": "specialist reviewer"
+    },
+    {
+      "id": "nvr-transform-not-applied",
+      "description": "Chooses the option most resembling C untransformed (types: analogy)",
+      "currentHint": "\"Say the change out loud first — 'it turns and goes stripy' — then do it to the new shape.\"",
+      "faults": [
+        "sentence of 18 words (max 16 for hint): \"\"Say the change out loud first — 'it turns and goes stripy' …\""
+      ],
+      "rewordedHint": "Say the change out loud first, like 'it turns and goes stripy'. Now do that to the new shape.",
+      "rewordedBy": "specialist reviewer"
+    },
+    {
+      "id": "nvr-wrong-mirror-axis",
+      "description": "Reflects top-bottom across a vertical line (or vice versa) (types: reflection tasks)",
+      "currentHint": "\"Look at the mirror line first — an upright line swaps left and right, not up and down.\"",
+      "faults": [
+        "sentence of 17 words (max 16 for hint): \"\"Look at the mirror line first — an upright line swaps left …\""
+      ],
+      "rewordedHint": "Find the mirror line first. An upright line swaps left and right. A flat line swaps up and down.",
+      "rewordedBy": "specialist reviewer"
+    }
+  ]
+}

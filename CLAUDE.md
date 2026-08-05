@@ -17,6 +17,10 @@ The build is governed by documents, and the documents win arguments.
 **House rules that recur:**
 - All child-facing strings pass `pnpm scan:vocab` and the reading-age lint;
   never exempt a scanner hit — reword it.
+- Child-facing sentences end only on a full stop, `?` or `!` — a dash does not
+  end a sentence for the ≤16-word reading-age cap (reviewer, 2026-08-05, every
+  district). A clause a dash breaks off still counts toward the cap; if a hint
+  needs a dash to read, split it into two sentences with a full stop instead.
 - Content decisions (items, chapters, misconceptions) go through the CMS
   review pipeline; nothing skips the reviewer.
 - Local dev: Postgres on 5432, app on 3100, root `.env` is the single env
