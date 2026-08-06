@@ -93,7 +93,9 @@ function loadBatch(): { items: RawItem[] } {
 
 const TIER_QUERY_ITEMS = new Set(['MC01-MEAS-03', 'MC01-MEAS-06', 'MC01-GEOM-06']);
 
-/** The reviewer's tier rulings on the flagged items (written review, 2026-08-05). */
+/** The PREVIOUS reviewer's tier rulings on the flagged items (her written review;
+ *  reconstructed into the repo 2026-08-05). Authored before the handover — NOT the
+ *  current reviewer's work. See docs/maths-misconception-seed-additions-61-97.md. */
 const TIER_RULINGS: Record<string, number> = { 'MC01-MEAS-03': 2, 'MC01-MEAS-06': 2, 'MC01-GEOM-06': 4 };
 
 export function buildCalibration(): { items: CalItem[]; families: GapFamily[] } {
@@ -134,9 +136,12 @@ export function buildCalibration(): { items: CalItem[]; families: GapFamily[] } 
 }
 
 /**
- * The reviewer's additions 61-97 were written directly from these gap families,
- * in doc order (docs/maths-misconception-seed-additions-61-97.md, ratified
- * 2026-08-06). Four families were split into two ids each so no single item can
+ * The PREVIOUS reviewer's additions 61-97 (her predecessor, authored before the
+ * handover — NOT the current reviewer) were written directly from these gap
+ * families, in doc order (docs/maths-misconception-seed-additions-61-97.md). The
+ * 2026-08-06 date below is only when this family->id mapping was encoded in code,
+ * not when she authored the additions. Four families were split into two ids each
+ * so no single item can
  * carry two options under one misconception (the R11 rule): place-value reading
  * (61 wrong column / 62 face value), the calculation carry (69 dropped / 70 two-
  * digit total), fraction-of-an-amount (75 incomplete / 76 inverted) and

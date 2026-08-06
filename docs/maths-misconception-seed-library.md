@@ -1,5 +1,5 @@
 # KS2 MATHS MISCONCEPTION SEED LIBRARY
-**Author: the specialist reviewer (KS2 teacher, 11+ specialist)**
+**Author: the PREVIOUS reviewer (KS2 teacher, 11+ specialist; the current reviewer's predecessor), authored before the handover — NOT the current reviewer.**
 **Source: written review, emailed to David, August 2026 — reproduced verbatim below**
 **Status on import: PROPOSED → approved via the written-review path. `approvedBy` = the reviewer; `recordedBy` = David; `method` = "written review — maths misconception seed library". She authored these directly, so authorship is hers.**
 **Consumer: BUILD-DISTRICT-MATHS item authoring. Every maths distractor must be the executed misconception on that item's own numbers (P3).**

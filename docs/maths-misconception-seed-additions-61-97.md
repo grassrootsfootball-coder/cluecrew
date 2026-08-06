@@ -1,5 +1,5 @@
 # KS2 MATHS — REVIEWER RETURNS: TIER RULINGS + 37 NEW MISCONCEPTIONS (61–97)
-**Author: the specialist reviewer. Source: written review, August 2026, reproduced verbatim below.**
+**Author: the PREVIOUS reviewer (the current reviewer's predecessor), authored before the handover — NOT the current reviewer. Source: her written review, August 2026, reproduced verbatim below.**
 **Import via the written-review path: `approvedBy` = the reviewer, `recordedBy` = David, `method` = "written review — maths gap families and tier rulings". Her wording is not to be amended; anything failing the gates goes back to her.**
 
 **Also recorded in this reply, handled separately: her VR sign-off — "I confirm I am content for the VR items I have passed to go live to children."**

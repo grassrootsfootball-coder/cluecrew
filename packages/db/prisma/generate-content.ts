@@ -423,6 +423,12 @@ function letterSeries(): GenItem[] {
  * The rule generalises and is checked by `pnpm check:word-puzzles`: an item's
  * internal symbols never draw from the option-label range.
  */
+// DO NOT DEPLOY this generator's output over the current live vr-07 bank
+// (reviewer, 2026-08-06): the current live items are BETTER than these
+// replacements, so the vr-07 re-import is cancelled. Held re-authoring for a
+// future rebuild — per-item generation, mixed parities within a value set, and
+// a check that no two operations on a set collide (P×Q = P+R) — is tracked
+// separately and must not ride a straight regenerate of this function.
 function lettersForNumbers(): GenItem[] {
   return Array.from({ length: 25 }, (_, i) => {
     // Four genuine levels (2026-08-02): the tier drives BOTH the number of
