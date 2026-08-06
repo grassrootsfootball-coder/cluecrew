@@ -46,6 +46,7 @@ export type MathsRule =
   | 'key-mismatch'
   | 'distractor-not-executed-misconception'
   | 'duplicate-id-same-value'
+  | 'process-step-invalid'
   | 'operands-insufficient'
   | 'no-executor'
   | 'conceptual-review-only';
@@ -100,6 +101,22 @@ export function checkMathsItem(spec: MathsItemSpec): MathsFailure[] {
   for (const distractor of spec.distractors) {
     const derivableId = execId(distractor);
     if (!derivableId) continue; // the P3 tagging gate is elsewhere
+
+    // PROC-01 and future process tags execute against a LIST of the item's
+    // intermediate results (annie, 2026-08-06): the child stopped at one of them.
+    // The distractor must BE one of the declared steps; none may equal the key
+    // (then the first step is the answer and stop-early does not apply); and the
+    // steps must be distinct (else it is ambiguous where she stopped).
+    if (derivableId.startsWith('maths-proc-')) {
+      const raw = spec.operands.firstStepResults;
+      const steps = Array.isArray(raw) ? raw.map(String) : null;
+      if (!steps || steps.length === 0) { failures.push({ itemId: spec.id, rule: 'operands-insufficient', severity: 'report', detail: `${derivableId}: no firstStepResults list on the item` }); continue; }
+      if (steps.some((s) => answersEqual(s, spec.keyValue))) { failures.push({ itemId: spec.id, rule: 'process-step-invalid', severity: 'defect', detail: `${derivableId}: an intermediate result equals the key — the first step is the answer, stop-early does not apply` }); continue; }
+      if (steps.some((s, i) => steps.findIndex((t) => answersEqual(s, t)) !== i)) { failures.push({ itemId: spec.id, rule: 'process-step-invalid', severity: 'defect', detail: `${derivableId}: intermediate results are not distinct (${steps.join(', ')}) — ambiguous where she stopped` }); continue; }
+      if (!steps.some((s) => answersEqual(s, distractor.value))) { failures.push({ itemId: spec.id, rule: 'distractor-not-executed-misconception', severity: 'defect', detail: `${derivableId}: distractor "${distractor.value}" is not one of the declared intermediate results (${steps.join(', ')})` }); }
+      continue;
+    }
+
     const n = mathsEntryNumber(derivableId);
     if (n === null) continue; // not a maths seed misconception
     if (CONCEPTUAL_ENTRIES.has(n)) {

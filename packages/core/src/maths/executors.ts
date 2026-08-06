@@ -101,6 +101,21 @@ export const MISCONCEPTION_EXECUTORS: Record<number, (o: MathsOperands) => strin
   // 98 — Digit dropped in column work (annie's split): sets the sum out with only
   // part of one addend, losing its highest digit (234 + 158 → 234 + 58).
   98: (o) => { const a = num(o, 'a'), b = num(o, 'b'); return a === null || b === null ? null : String(a + (Number(String(Math.abs(b)).slice(1)) || 0)); },
+  // 61 — Place-value column misread, PARAMETRIC on column: a digit worth
+  //      digit×place read `shift` columns over (−1 right, +1 left). 6 in 4,652 is
+  //      digit 6, place 100 → shift −1 gives 60, shift +1 gives 6,000.
+  61: (o) => { const d = num(o, 'digit'), p = num(o, 'place'), s = num(o, 'shift'); return d === null || p === null || s === null ? null : String(d * p * 10 ** s); },
+  // 75 — Uses only ONE number of the fraction, treating it as a single number
+  //      (annie's narrowing): the problem's own operation applied to `single`.
+  //      2/3 of 12 → 12 × 2 = 24 (op mult); 15 ÷ 3/4 → 15 ÷ 3 = 5 (op div).
+  75: (o) => {
+    const amount = num(o, 'amount'), single = num(o, 'single');
+    const op = typeof o.op === 'string' ? o.op : null;
+    if (amount === null || single === null || op === null) return null;
+    if (op === 'mult') return String(amount * single);
+    if (op === 'div' && single !== 0) return String(amount / single);
+    return null;
+  },
 };
 
 /** A safe evaluator for the item's `solution` — +, −, ×, ÷, parens, decimals. */
@@ -171,6 +186,12 @@ export const MISCONCEPTION_EXAMPLES: Record<number, Array<{ operands: MathsOpera
   56: [{ operands: { values: [8, 4, 6, 2] }, childValue: '20', keyValue: '5' }, { operands: { values: [12, 6, 9, 3] }, childValue: '30', keyValue: '7.5' }],
   57: [{ operands: { values: [2, 4, 9] }, childValue: '4', keyValue: '5' }, { operands: { values: [1, 2, 9] }, childValue: '2', keyValue: '4' }],
   98: [{ operands: { a: 234, b: 158 }, childValue: '292', keyValue: '392' }, { operands: { a: 345, b: 167 }, childValue: '412', keyValue: '512' }],
+  // #61 parametric on column (annie's Desc A/B): the 6 in 4,652 read one column
+  // right (60) and one left (6,000). Two cases pin the dial the way 304 could not.
+  61: [{ operands: { digit: 6, place: 100, shift: -1 }, childValue: '60', keyValue: '600' }, { operands: { digit: 6, place: 100, shift: 1 }, childValue: '6000', keyValue: '600' }],
+  // #75 top-only vs bottom-only (annie's Desc A/B) — the hardest instances, each
+  // ignoring a different half of the fraction.
+  75: [{ operands: { amount: 12, single: 2, op: 'mult' }, childValue: '24', keyValue: '8' }, { operands: { amount: 15, single: 3, op: 'div' }, childValue: '5', keyValue: '20' }],
 };
 
 /** The entry number carried in a seed id, e.g. maths-11-commutative-subtraction → 11,

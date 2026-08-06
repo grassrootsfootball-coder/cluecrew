@@ -414,6 +414,9 @@ model Misconception {
   teachback   Json?
   options     ItemOption[]
   optionTags  ItemOptionTag[]
+  // The two-ids AXIS (annie, 2026-08-06): PROCESS ids (PROC-01, #71/#72/#99/#100)
+  // are cross-topic and own the child-facing hint; null/absent means a TOPIC id.
+  axis        MisconceptionTagRole?
   // Added 2026-08-06: the reviewer-handover audit could not be timelined
   // because these rows had no birth date. Existing rows stamp the migration
   // time, not their true authorship — the real epoch lives in AttributionEvent.

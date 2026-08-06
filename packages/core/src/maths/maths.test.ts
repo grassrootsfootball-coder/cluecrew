@@ -94,3 +94,19 @@ describe('worked-example CI — every executor produces its description example'
     }
   });
 });
+
+describe('PROC-01 process tag — executes against a list of intermediate results', () => {
+  const PROC = 'maths-proc-01-stopped-at-the-first-answer';
+  it('accepts a distractor equal to any intermediate (annie: FDP-07 stops at the 2nd)', () => {
+    const r = checkMathsItem({ id: 'P', solution: null, keyValue: '9', operands: { firstStepResults: [12, 18] }, distractors: [{ value: '18', misconceptionId: 'maths-75-x', processMisconceptionId: PROC }] });
+    expect(r).toEqual([]);
+  });
+  it('rejects an intermediate equal to the key, non-distinct steps, and an off-list distractor', () => {
+    const keyEq = checkMathsItem({ id: 'P', solution: null, keyValue: '12', operands: { firstStepResults: [12, 18] }, distractors: [{ value: '18', misconceptionId: null, processMisconceptionId: PROC }] });
+    expect(keyEq.some((f) => f.rule === 'process-step-invalid')).toBe(true);
+    const dup = checkMathsItem({ id: 'P', solution: null, keyValue: '9', operands: { firstStepResults: [12, 12] }, distractors: [{ value: '12', misconceptionId: null, processMisconceptionId: PROC }] });
+    expect(dup.some((f) => f.rule === 'process-step-invalid')).toBe(true);
+    const off = checkMathsItem({ id: 'P', solution: null, keyValue: '9', operands: { firstStepResults: [12, 18] }, distractors: [{ value: '99', misconceptionId: null, processMisconceptionId: PROC }] });
+    expect(off.some((f) => f.rule === 'distractor-not-executed-misconception')).toBe(true);
+  });
+});
