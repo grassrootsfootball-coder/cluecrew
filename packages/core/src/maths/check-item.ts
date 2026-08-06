@@ -24,7 +24,12 @@ import {
 
 export interface MathsDistractor {
   value: string | number;
+  /** The TOPIC tag — domain context, taught in the walk script. May be conceptual. */
   misconceptionId: string | null;
+  /** The PROCESS tag (annie's two-ids model). The DERIVABLE one: the gate executes
+   *  THIS on the operands, and it owns the child-facing hint at serve time. Falls
+   *  back to the topic id when a distractor has only one tag. */
+  processMisconceptionId?: string | null;
 }
 export interface MathsItemSpec {
   id: string;
@@ -73,12 +78,16 @@ export function checkMathsItem(spec: MathsItemSpec): MathsFailure[] {
   // a different place, wrong column at tens vs thousands — may tag two options,
   // BECAUSE it produces two different values. So a shared id with different values
   // passes; a shared id with the SAME value means only one is really that error.
+  // The DERIVABLE tag is the process tag (annie's two-ids model); it falls back to
+  // the topic id for a single-tagged distractor. Everything derivable runs on it.
+  const execId = (d: MathsDistractor): string | null => d.processMisconceptionId ?? d.misconceptionId;
   const byId = new Map<string, Array<string | number>>();
   for (const d of spec.distractors) {
-    if (!d.misconceptionId) continue;
-    const seen = byId.get(d.misconceptionId) ?? [];
+    const id = execId(d);
+    if (!id) continue;
+    const seen = byId.get(id) ?? [];
     seen.push(d.value);
-    byId.set(d.misconceptionId, seen);
+    byId.set(id, seen);
   }
   for (const [id, values] of byId) {
     if (values.length < 2) continue;
@@ -89,21 +98,22 @@ export function checkMathsItem(spec: MathsItemSpec): MathsFailure[] {
 
   // --- Each distractor IS its executed misconception ----------------------
   for (const distractor of spec.distractors) {
-    if (!distractor.misconceptionId) continue; // the P3 tagging gate is elsewhere
-    const n = mathsEntryNumber(distractor.misconceptionId);
+    const derivableId = execId(distractor);
+    if (!derivableId) continue; // the P3 tagging gate is elsewhere
+    const n = mathsEntryNumber(derivableId);
     if (n === null) continue; // not a maths seed misconception
     if (CONCEPTUAL_ENTRIES.has(n)) {
-      failures.push({ itemId: spec.id, rule: 'conceptual-review-only', severity: 'report', detail: `${distractor.misconceptionId} is conceptual — verified by review, not by this gate` });
+      failures.push({ itemId: spec.id, rule: 'conceptual-review-only', severity: 'report', detail: `${derivableId} is conceptual — verified by review, not by this gate` });
       continue;
     }
     const executor = MISCONCEPTION_EXECUTORS[n];
     if (!executor) {
-      failures.push({ itemId: spec.id, rule: 'no-executor', severity: 'report', detail: `${distractor.misconceptionId} is derivable but has no executor yet` });
+      failures.push({ itemId: spec.id, rule: 'no-executor', severity: 'report', detail: `${derivableId} is derivable but has no executor yet` });
       continue;
     }
     const produced = executor(spec.operands);
     if (produced === null) {
-      failures.push({ itemId: spec.id, rule: 'operands-insufficient', severity: 'report', detail: `${distractor.misconceptionId}: operands do not let the misconception run (${JSON.stringify(spec.operands)})` });
+      failures.push({ itemId: spec.id, rule: 'operands-insufficient', severity: 'report', detail: `${derivableId}: operands do not let the misconception run (${JSON.stringify(spec.operands)})` });
       continue;
     }
     if (!answersEqual(produced, distractor.value)) {
@@ -111,7 +121,7 @@ export function checkMathsItem(spec: MathsItemSpec): MathsFailure[] {
         itemId: spec.id,
         rule: 'distractor-not-executed-misconception',
         severity: 'defect',
-        detail: `${distractor.misconceptionId} executes to "${produced}", but the distractor is "${distractor.value}" — the distractor is not the executed misconception`,
+        detail: `${derivableId} executes to "${produced}", but the distractor is "${distractor.value}" — the distractor is not the executed misconception`,
       });
     }
   }

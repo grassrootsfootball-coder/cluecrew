@@ -59,10 +59,13 @@ export const MISCONCEPTION_EXECUTORS: Record<number, (o: MathsOperands) => strin
   6: (o) => { const n = num(o, 'value'); return n === null ? null : `${n}0`; },
   // 8 — Negative inversion: the "greater" is the one further from zero. −10 vs −5 → −10.
   8: (o) => { const xs = list(o, 'options'); return xs && xs.length ? String(xs.reduce((m, x) => (Math.abs(x) > Math.abs(m) ? x : m))) : null; },
-  // 9 — Always round down regardless of the next digit. 3.7 → 3.
-  9: (o) => { const n = num(o, 'value'); return n === null ? null : String(Math.floor(n)); },
-  // 10 — Round an exact half DOWN. 2.5 → 2.
-  10: (o) => { const n = num(o, 'value'); return n === null ? null : String(Math.floor(n)); },
+  // 9 — Always rounds DOWN to the target PLACE, not to the integer (fixed 2026-08-06:
+  //     floor(value) gave the unrounded number for "round 3847 to the nearest 1000").
+  //     Needs a `place` operand (10/100/1000/…) so the round-down is place-relative.
+  9: (o) => { const v = num(o, 'value'), p = num(o, 'place'); return v === null || p === null || p === 0 ? null : String(Math.floor(v / p) * p); },
+  // 10 — Rounds an EXACT HALF down to the place instead of up (25→20, 2.5→2). Same
+  //     place-relative round-down; which items carry it is the authoring distinction.
+  10: (o) => { const v = num(o, 'value'), p = num(o, 'place'); return v === null || p === null || p === 0 ? null : String(Math.floor(v / p) * p); },
   // 11 — Commutative subtraction: |top−bottom| per column. 42−17 → 35? no: |4−1||2−7|→ 35 becomes 3,5.
   11: (o) => { const a = num(o, 'a'), b = num(o, 'b'); return a === null || b === null ? null : commutativeSubtraction(a, b); },
   // 16 — Reversed division: divide the other way. 3 ÷ 12 → 12 ÷ 3 = 4.

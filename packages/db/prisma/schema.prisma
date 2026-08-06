@@ -327,8 +327,35 @@ model ItemOption {
   item            Item           @relation(fields: [itemId], references: [id], onDelete: Cascade)
   content         Json
   isCorrect       Boolean
+  // The single legacy tag. Kept as the TOPIC tag's cache; the two-role model
+  // below is the source of truth for maths (annie, 2026-08-06).
   misconceptionId String? // REQUIRED on every incorrect option before item goes LIVE (P3)
   misconception   Misconception? @relation(fields: [misconceptionId], references: [id])
+  tags            ItemOptionTag[]
+}
+
+// Two tags per distractor, one TOPIC, one PROCESS (annie's two-ids decision,
+// 2026-08-06). Evidence: eight distractors across eight topic ids are all one
+// process ("stop-early") — a pattern one tag dissolves and two make visible.
+// The PROCESS tag owns the child-facing hint and is the DERIVABLE one the gate
+// executes; the TOPIC id carries domain teaching in the walk script. @@unique
+// keeps it to at most one of each role per option (extensible to more processes).
+enum MisconceptionTagRole {
+  TOPIC
+  PROCESS
+}
+
+model ItemOptionTag {
+  id              String               @id @default(cuid())
+  optionId        String
+  option          ItemOption           @relation(fields: [optionId], references: [id], onDelete: Cascade)
+  misconceptionId String
+  misconception   Misconception        @relation(fields: [misconceptionId], references: [id])
+  role            MisconceptionTagRole
+  createdAt       DateTime             @default(now())
+
+  @@unique([optionId, role])
+  @@index([misconceptionId])
 }
 
 // ADDENDUM-E §2: corpus-proposed misconceptions land as PROPOSED and are
@@ -386,6 +413,7 @@ model Misconception {
   // never generates text (S3) — evaluation is deterministic.
   teachback   Json?
   options     ItemOption[]
+  optionTags  ItemOptionTag[]
   // Added 2026-08-06: the reviewer-handover audit could not be timelined
   // because these rows had no birth date. Existing rows stamp the migration
   // time, not their true authorship — the real epoch lives in AttributionEvent.

@@ -22,6 +22,41 @@ each distractor carries. The engine fills the numbers and `checkMathsItem` verif
 item. Batch 02 built this way: **12 items, 0 defects.** Two-pass review is annie's, same
 contract as batch 01. Batches ship in 40s.
 
+## Executor audit (2026-08-06) — a wrong executor is a class of failure
+
+The gate verifies `distractor == executor(operands)`, so an executor that encodes the
+WRONG error produces a wrong-but-self-consistent distractor the gate blesses (annie caught
+one by hand). Audited all 18 executors against their descriptions:
+
+**Fixed now:**
+- **#9 rounding-misdirection (always down)** — was `floor(value)` (3847→3847, the unrounded
+  number). Now rounds DOWN to a `place` operand: `floor(value/place)*place` (3847, place 1000
+  → 3000). Missing `place` returns null — a visible gap, not a silent floor. *This is the bug
+  annie flagged; she named #10, but #10's definition is .5-halves — the floor≠place bug is #9.*
+- **#10 rounding-exact-halves** — same floor code, now place-relative too (25, place 10 → 20).
+
+**Held for annie (report before fixing — each is a semantic call):**
+- **#25 confusing-thirds-and-tenths** — the error reads the DENOMINATOR ("1/3 → 0.3" writes the
+  *bottom*), but the executor reads operand `numerator`. It only gives the right value if the
+  caller feeds the denominator in as `numerator` — a mislabel. Rename the operand to `denominator`.
+- **#31 dropping-the-zero-in-money** — produces a value NUMERICALLY EQUAL to the key (£3.5 = £3.50
+  under numeric compare), so it can't be a distractor at all. It's a notation error — reclassify
+  as conceptual, or the money gate needs string-exact compare.
+- **#1 zero-placeholder-missing** — removes ALL zeros, not just the internal placeholder (3040→34,
+  1000→0). Over-applies on multi-zero numbers; should drop one placeholder.
+
+**Verified correct:** #6 #8 #11 #16 #22 #26 #32 #37 #51 #52 #56 #57 #98. (Note #56 is
+incomplete-MEAN — sum without dividing; my batch-02 mis-used it as a total. Authoring error, not
+an executor one.)
+
+## Two tags per distractor — the join table (annie's decision, built)
+
+`ItemOptionTag{optionId, misconceptionId, role: TOPIC|PROCESS}`, `@@unique([optionId, role])`.
+The PROCESS tag is the derivable one — `checkMathsItem` executes `processMisconceptionId ?? misconceptionId`,
+so a distractor's derivation runs on its process error while its topic id carries domain teaching in
+the walk script, and (at serve time) the process tag owns the child-facing hint. Extensible: any
+process error (stop-early, reversed-operation, off-by-one) is a PROCESS tag across topics.
+
 ## Authoring guidance (annie's mechanical test, 2026-08-06)
 
 **Execute the description on the item's own numbers. If you must CHOOSE partway through
