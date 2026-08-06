@@ -93,10 +93,12 @@ function loadBatch(): { items: RawItem[] } {
 
 const TIER_QUERY_ITEMS = new Set(['MC01-MEAS-03', 'MC01-MEAS-06', 'MC01-GEOM-06']);
 
-/** The PREVIOUS reviewer's tier rulings on the flagged items (her written review;
- *  reconstructed into the repo 2026-08-05). Authored before the handover — NOT the
- *  current reviewer's work. See docs/maths-misconception-seed-additions-61-97.md. */
-const TIER_RULINGS: Record<string, number> = { 'MC01-MEAS-03': 2, 'MC01-MEAS-06': 2, 'MC01-GEOM-06': 4 };
+/** Tier rulings on the flagged items. The PREVIOUS reviewer (joan) set MEAS-03 and
+ *  MEAS-06 to T2 and retiered GEOM-06 to T4. The CURRENT reviewer (annie) AMENDED
+ *  the two MEAS items to T3 on her calibration pass (2026-08-06): unitary method,
+ *  two steps with an intermediate value to hold — a secure Year 5 skill. GEOM-06
+ *  stands at T4. Two teachers, later ruling wins; see docs/MATHS-CALIBRATION-ANNIE-PASS.md. */
+const TIER_RULINGS: Record<string, number> = { 'MC01-MEAS-03': 3, 'MC01-MEAS-06': 3, 'MC01-GEOM-06': 4 };
 
 export function buildCalibration(): { items: CalItem[]; families: GapFamily[] } {
   const batch = loadBatch();
