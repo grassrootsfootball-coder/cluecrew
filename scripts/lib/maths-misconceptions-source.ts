@@ -7,22 +7,26 @@
  */
 import type { PrismaClient } from '@prisma/client';
 
-const CONCEPTUAL = new Set([15, 20, 27, 28, 30, 40, 41, 42, 43, 49, 50, 58, 59]);
+const CONCEPTUAL = new Set([15, 20, 27, 28, 30, 40, 41, 42, 43, 49, 50, 58, 59, 101]);
 
 export async function buildMathsMisconceptionsSource(prisma: PrismaClient): Promise<unknown[]> {
   const rows = await prisma.misconception.findMany({
     where: { district: 'MATHS', status: 'ACTIVE' },
-    orderBy: { id: 'asc' },
-    select: { id: true, category: true, description: true, childHint: true, sourcePattern: true },
+    select: { id: true, category: true, description: true, childHint: true, sourcePattern: true, status: true },
   });
-  return rows.map((m) => {
-    const n = Number(/#(\d+)$/.exec(m.sourcePattern ?? '')?.[1] ?? 0);
-    return {
-      id: m.id,
-      category: m.category,
-      distractorClass: CONCEPTUAL.has(n) ? 'conceptual' : 'derivable',
-      description: m.description,
-      childHint: m.childHint,
-    };
-  });
+  const entryNum = (sp?: string | null): number => Number(/#(\d+)\b/.exec(sp ?? '')?.[1] ?? 0);
+  return rows
+    .map((m) => {
+      const n = entryNum(m.sourcePattern);
+      return {
+        entry: n,
+        id: m.id,
+        category: m.category,
+        status: m.status,
+        distractorClass: CONCEPTUAL.has(n) ? 'conceptual' : 'derivable',
+        description: m.description,
+        childHint: m.childHint,
+      };
+    })
+    .sort((a, b) => a.entry - b.entry);
 }

@@ -15,6 +15,26 @@ import { prisma } from '../packages/db/src/index';
 const OUT_DIR = resolve(import.meta.dirname, '../content/exports');
 const FAMILY = 'maths-misconceptions-approved';
 
+// Annie's split retag map (2026-08-06): where batch-01 distractors move now that
+// #71/#74/#89 are narrowed and #98-101 exist. Batches tag against this from the start.
+const SPLIT_RETAG = {
+  note: 'Splits of #71/#74/#89 into #98-101 (annie). Use these ids when a distractor matches the narrowed definition.',
+  moves: {
+    'CALC-01 D': '#98 digit-dropped-in-column-work',
+    'CALC-02 D': '#99 rounded-without-compensating',
+    'CALC-08 D': '#99 rounded-without-compensating',
+    'GEOM-06 A': '#100 steps-out-of-order',
+    'GEOM-06 D': '#100 steps-out-of-order',
+    'FDP-01 D': '#101 unlike-denominators-cannot-be-compared',
+  },
+  unchangedUnderNarrowedDefinition: {
+    'CALC-04 B, CALC-07 B': '#71 quantity left out',
+    'GEOM-02 A, GEOM-02 C, GEOM-06 C': '#89 wrong angle total',
+    'FDP-01 C': '#74 same numerator means equal',
+  },
+  libraryWideReRead: 'Each narrowed entry describes less than it did; anything ELSE in the library carrying #71/#89/#74 must be re-read against the new wording before tagging.',
+};
+
 async function main(): Promise<void> {
   const entries = await buildMathsMisconceptionsSource(prisma);
   const stamp = freshnessStamp(entries, new Date().toISOString());
@@ -31,6 +51,7 @@ async function main(): Promise<void> {
         count: entries.length,
         derivable,
         conceptual: entries.length - derivable,
+        splitRetagMap: SPLIT_RETAG,
         misconceptions: entries,
       },
       null,
