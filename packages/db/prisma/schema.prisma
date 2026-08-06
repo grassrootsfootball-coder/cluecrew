@@ -386,6 +386,49 @@ model Misconception {
   // never generates text (S3) — evaluation is deterministic.
   teachback   Json?
   options     ItemOption[]
+  // Added 2026-08-06: the reviewer-handover audit could not be timelined
+  // because these rows had no birth date. Existing rows stamp the migration
+  // time, not their true authorship — the real epoch lives in AttributionEvent.
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @default(now()) @updatedAt
+}
+
+// Reviewer-handover attribution (2026-08-06). approvedBy/signedBy name a single
+// generic REVIEWER role account, so they cannot say WHICH human authored,
+// approved or amended a record — and some records are two-person (a predecessor
+// authored the maths library entry, the current reviewer corrected it). This
+// append-only log records each touch as its own event: the individual actor,
+// what they did, and — crucially — who typed it (recordedBy stays David). A
+// reassignment is itself an event, so no correction is ever silent. The
+// denormalised approvedBy/signedBy columns are left untouched as a role cache.
+enum AttributionAction {
+  AUTHORED
+  APPROVED
+  AMENDED
+  SIGNED
+  REASSIGNED
+  UNATTRIBUTED
+}
+
+model AttributionEvent {
+  id         String            @id @default(cuid())
+  /** "misconception" | "item" | "nvr-signature" | "word" */
+  recordType String
+  /** target id; composite keys use "templateId@version" */
+  recordId   String
+  action     AttributionAction
+  /** the INDIVIDUAL — "previous-reviewer" | "current-reviewer" | "unattributed" */
+  actor      String
+  /** who typed it in — David. The working half of the design, kept explicit. */
+  recordedBy String
+  /** which field this touch changed, e.g. "description" */
+  field      String?
+  note       String?
+  method     String?
+  at         DateTime          @default(now())
+
+  @@index([recordType, recordId])
+  @@index([actor])
 }
 
 // ---------- English district, Selective track (BUILD-DISTRICT-ENGLISH §3) ----------
