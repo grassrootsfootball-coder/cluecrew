@@ -15,24 +15,35 @@ import { prisma } from '../packages/db/src/index';
 const OUT_DIR = resolve(import.meta.dirname, '../content/exports');
 const FAMILY = 'maths-misconceptions-approved';
 
-// Annie's split retag map (2026-08-06): where batch-01 distractors move now that
-// #71/#74/#89 are narrowed and #98-101 exist. Batches tag against this from the start.
+// Annie's retag map — current truth after the library sitting (2026-08-06). The
+// batch-01 distractor moves now that the process axis, the splits, the #24/#76 merge
+// and #98-108 exist. Batches 02+ tag against this from the start.
 const SPLIT_RETAG = {
-  note: 'Splits of #71/#74/#89 into #98-101 (annie). Use these ids when a distractor matches the narrowed definition.',
+  note: 'Post-sitting map. PROC-01 is a PROCESS tag (pair it with a topic tag on the two-role model); #102-108 are new; #76 and #86 are retired.',
+  toProcessTagPROC01: ['FDP-02 B', 'FDP-06 C', 'FDP-07 D', 'MEAS-05 C', 'STATS-03 A', 'GEOM-01 C', 'GEOM-03 A', 'GEOM-06 A'],
   moves: {
-    'CALC-01 D': '#98 digit-dropped-in-column-work',
-    'CALC-02 D': '#99 rounded-without-compensating',
-    'CALC-08 D': '#99 rounded-without-compensating',
-    'GEOM-06 A': '#100 steps-out-of-order',
-    'GEOM-06 D': '#100 steps-out-of-order',
-    'FDP-01 D': '#101 unlike-denominators-cannot-be-compared',
+    'MEAS-03 A, MEAS-06 D': '#92 scaled-without-finding-one',
+    'MEAS-03 B, MEAS-06 B': '#102 scaled-by-the-difference',
+    'MEAS-03 C, MEAS-06 A': '#103 scaled-by-the-original-count',
+    'STATS-03 B': '#96 divided-by-the-wrong-count',
+    'STATS-03 C': '#104 gave-a-different-average',
+    'MEAS-07 A': '#93 compared-packs-not-units',
+    'MEAS-07 C': '#105 divided-by-the-other-quantity',
+    'MEAS-07 B, NPV-05 C': '#72 wrong-operation (process)',
+    'GEOM-01 D': '#88 missed-a-side',
+    'NPV-04 C, NPV-04 D': '#65 rounded-to-the-wrong-place',
+    'NPV-04 B': '#106 always-rounds-down',
+    'NPV-02 B, NPV-02 C': '#63 misaligned-carry (kept whole, parametric on column)',
+    'NPV-02 D': '#69 dropped-carry',
+    'NPV-05 B': '#66 ignored-the-minus',
+    'NPV-05 D': '#107 miscounted-across-zero',
+    'FDP-02 C, FDP-08 C, FDP-08 D': '#75 used-one-number-of-the-fraction',
+    'FDP-02 D': '#24 fraction-used-upside-down (absorbs #76)',
+    'FDP-04 B, FDP-08 B': '#108 multiplied-instead-of-dividing-by-a-fraction',
+    'MEAS-05 B, MEAS-05 D': '#71 quantity-left-out',
   },
-  unchangedUnderNarrowedDefinition: {
-    'CALC-04 B, CALC-07 B': '#71 quantity left out',
-    'GEOM-02 A, GEOM-02 C, GEOM-06 C': '#89 wrong angle total',
-    'FDP-01 C': '#74 same numerator means equal',
-  },
-  libraryWideReRead: 'Each narrowed entry describes less than it did; anything ELSE in the library carrying #71/#89/#74 must be re-read against the new wording before tagging.',
+  retired: { '#76': 'absorbed into #24', '#86': 'dissolved → #71 and PROC-01' },
+  libraryWideReRead: 'Each narrowed entry describes less than it did; anything ELSE carrying #71/#72/#89/#92/#96/#93/#88 must be re-read against the new wording before tagging.',
 };
 
 /**
