@@ -132,3 +132,40 @@ export function buildCalibration(): { items: CalItem[]; families: GapFamily[] } 
   const families = FAMILIES.map((f) => famMap.get(f.slug)).filter((g): g is GapFamily => !!g);
   return { items, families };
 }
+
+/**
+ * The reviewer's additions 61-97 were written directly from these gap families,
+ * in doc order (docs/maths-misconception-seed-additions-61-97.md, ratified
+ * 2026-08-06). Four families were split into two ids each so no single item can
+ * carry two options under one misconception (the R11 rule): place-value reading
+ * (61 wrong column / 62 face value), the calculation carry (69 dropped / 70 two-
+ * digit total), fraction-of-an-amount (75 incomplete / 76 inverted) and
+ * percentage-of-an-amount (77 as money / 78 fraction confusion). Every populated
+ * family maps; `calc-wrong-order` carries no distractors in this batch and no
+ * addition was written for it. Split families resolve by the distractor's own
+ * behaviour so each distractor lands on exactly one id.
+ */
+const FAMILY_ADDITION: Record<string, number> = {
+  'npv-wrong-column-operation': 63, 'npv-leading-zero-ordering': 64, 'npv-rounding-place-or-direction': 65,
+  'npv-negative-across-zero': 66, 'npv-digit-transposition': 67, 'npv-place-value-scaling': 68,
+  'calc-forgets-part': 71, 'calc-wrong-operation': 72, 'calc-digitwise-division': 73,
+  'fdp-compare-fractions': 74, 'fdp-divide-by-fraction': 79, 'fdp-add-fractions': 80,
+  'fdp-discount-not-applied': 81, 'fdp-fraction-of-wrong-whole': 82,
+  'meas-money-place-value': 83, 'meas-add-instead-of-subtract': 84, 'meas-count-or-rounding': 85,
+  'meas-incomplete-money-step': 86, 'meas-unitary-proportion': 92, 'meas-compare-ignoring-quantity': 93,
+  'geom-perimeter-area-swap': 87, 'geom-perimeter-incomplete': 88, 'geom-angle-wrong-total': 89,
+  'geom-composite-area': 90, 'geom-coordinate-read': 91,
+  'stats-incomplete-total': 94, 'stats-reads-wrong-quantity': 95, 'stats-mean-incomplete': 96, 'stats-missing-value-mean': 97,
+};
+
+/** The addition id (61-97) a gap-family distractor maps to; null if its family has no addition. */
+export function additionIdFor(familySlug: string, behaviour: string): number | null {
+  const b = behaviour.toLowerCase();
+  switch (familySlug) {
+    case 'npv-place-value-digit-misread': return /face value|reads only the digit/.test(b) ? 62 : 61;
+    case 'calc-drops-the-carry': return /without carrying|side by side/.test(b) ? 70 : 69;
+    case 'fdp-fraction-of-amount': return /upside down/.test(b) ? 76 : 75;
+    case 'fdp-percent-of-amount': return /quarter with a half/.test(b) ? 78 : 77;
+    default: return FAMILY_ADDITION[familySlug] ?? null;
+  }
+}
