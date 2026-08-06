@@ -23,7 +23,8 @@ import { vocabTier, vocabTierOfSet } from '../packages/db/prisma/difficulty';
 const PROVENANCE = 'ai-draft:cowork-vocab-banks';
 
 const BANKS: Array<{ file: string; questionTypeId: string }> = [
-  { file: 'vr04-bank.json', questionTypeId: 'vr-04-closest-meaning' },
+  // vr-04 left the bank importer (annie, 2026-08-06): it is now a typed constructor
+  // (generate-content: closestMeaningTyped), generate-to-diagnosis on her 40 rows.
   { file: 'vr06-bank.json', questionTypeId: 'vr-06-missing-word' },
   { file: 'vr02-bank.json', questionTypeId: 'vr-02-two-odd-ones-out' },
 ];

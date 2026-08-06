@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { checkVr04Row, forbiddenFor, selectVr04Distractors, VR04_NEVER_ADD, type Vr04Row } from './vr04';
+import { checkVr04Row, flagNearSynonymHeadwords, forbiddenFor, selectVr04Distractors, VR04_NEVER_ADD, type Vr04Row } from './vr04';
 
 describe('vr-04 constructor machinery (annie 2026-08-06)', () => {
   it('two-part screen: a two-sense headword is fine; a distractor in its other sense is blocked', () => {
@@ -26,5 +26,20 @@ describe('vr-04 constructor machinery (annie 2026-08-06)', () => {
     const kept = selectVr04Distractors(pool, 3);
     expect(kept.some((d) => d.diagnosis === 'OM')).toBe(true);
     expect(kept).toHaveLength(3);
+  });
+  it('near-synonym flag surfaces the cross-tier pair WITH both option sets, and never blocks', () => {
+    const swift: Vr04Row = { n: 2, tier: 1, headword: 'swift', key: 'speedy', distractors: [{ word: 'frantic', diagnosis: 'WS' }, { word: 'sudden', diagnosis: 'SH' }, { word: 'early', diagnosis: 'SC' }] };
+    const rapid: Vr04Row = { n: 9, tier: 2, headword: 'rapid', key: 'quick', distractors: [{ word: 'speedy', diagnosis: 'WS' }, { word: 'hurried', diagnosis: 'SH' }, { word: 'brisk', diagnosis: 'OF' }] };
+    const brave: Vr04Row = { n: 1, tier: 1, headword: 'brave', key: 'fearless', distractors: [{ word: 'reckless', diagnosis: 'WS' }] };
+    const bold: Vr04Row = { n: 15, tier: 2, headword: 'bold', key: 'daring', distractors: [{ word: 'reckless', diagnosis: 'WS' }] };
+    const flags = flagNearSynonymHeadwords([swift, rapid, brave, bold]);
+    // both cross-tier pairs surface — Annie rules, the flag does not
+    expect(flags).toHaveLength(2);
+    const fast = flags.find((f) => f.group === 'fast')!;
+    expect(fast.a.options).toContain('speedy'); // swift's key
+    expect(fast.b.options).toEqual(['quick', 'speedy', 'hurried', 'brisk']); // rapid's full set, tightened
+    expect(flags.some((f) => f.group === 'courage')).toBe(true);
+    // same tier is not a paired-design flag (that is the separate same-tier finding)
+    expect(flagNearSynonymHeadwords([swift, { ...rapid, tier: 1 }])).toEqual([]);
   });
 });

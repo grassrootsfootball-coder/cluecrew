@@ -12,7 +12,7 @@
  */
 import { prisma } from '../src/index';
 import { deductionTier, isCommon, vocabTier, vocabTierOfSet } from './difficulty';
-import { buildDerivedVrDistractors, type VrOperands } from '@cluecrew/core';
+import { buildDerivedVrDistractors, checkVr04Row, flagNearSynonymHeadwords, selectVr04Distractors, type VrOperands, type Vr04Diagnosis, type Vr04Row } from '@cluecrew/core';
 
 /**
  * Derived distractors (reviewer audit, 2026-08-05): each is the value its
@@ -67,9 +67,16 @@ export const M: Record<string, Array<{ id: string; description: string; childHin
     { id: 'vr03-part-for-kind', description: 'Gave a part of the second word where the example gave a kind, a whole, or a category.', childHint: 'A part is not the same as a whole. Check what the first pair gave you.' },
     { id: 'vr03-example-anchor', description: 'Chose a word related to the first pair rather than applying the relationship to the second.', childHint: 'The first pair only shows the rule. Now use that rule on the new word.' },
   ],
+  // Re-authored to annie's five-diagnosis model (2026-08-06, verbatim). The old
+  // associated-not-same / opposite-pull pair is retired: an antonym is never a
+  // vr-04 distractor now, and "associated" split into keeps-the-same-company
+  // (shares the setting, not the sense) and one-feature-only (names one sign).
   'vr-04-closest-meaning': [
-    { id: 'vr04-associated-not-same', description: 'Chose an associated word rather than a synonym.', childHint: 'Goes-together is not the same as means-the-same. Swap the words in a sentence to test.' },
-    { id: 'vr04-opposite-pull', description: 'Chose the opposite by mistake.', childHint: 'So close — that one means the reverse. Read both again slowly.' },
+    { id: 'vr04-wrong-strength', description: 'Picks a word from the right family at the wrong intensity, far stronger or far weaker than the headword (terrified for TIMID; annoyed for FURIOUS).', childHint: 'Check how strong the word is. A quiet word needs a quiet answer.' },
+    { id: 'vr04-wrong-shade', description: 'Picks a word that shares the general area of meaning but tilts it in a different direction (gloomy for STOIC, hearing sadness where the word means not showing feeling).', childHint: 'Close is not the same. Ask exactly what the first word means.' },
+    { id: 'vr04-one-feature-only', description: 'Picks a word naming one visible sign of the headword rather than what it means (silent for STOIC — one thing a stoic person might do, not what stoic means).', childHint: 'That is one thing it can look like. The word itself means something wider.' },
+    { id: 'vr04-keeps-the-same-company', description: 'Picks a word that turns up in the same situations as the headword without sharing its meaning (loyal for BRAVE — another word of praise, not one that means unafraid).', childHint: 'These words often turn up together. That does not make them the same.' },
+    { id: 'vr04-the-other-meaning', description: 'Picks a genuine meaning of the headword, but not the sense the carrier sentence fixes (poor for HUMBLE in "stayed HUMBLE after winning" — the humble-cottage sense). T4/T5 only.', childHint: 'This word has more than one meaning. Read the sentence and pick the one it shows.' },
   ],
   'vr-05-hidden-word': [
     { id: 'vr05-single-word-only', description: 'Searched inside single words instead of across the join.', childHint: 'The hidden word loves to hide across TWO words. Check where they meet.' },
@@ -826,6 +833,116 @@ function relatedWordsTyped(): GenItem[] {
   });
 }
 
+// ---------- vr-04: closest-meaning, 40 typed rows, generate-TO-diagnosis ----------
+// Reviewer-authored (annie, 2026-08-06; RAPID tightened 2026-08-07). Replaces the
+// procedurally-generated synonym bank. Every row carries THREE distractors, each a
+// named diagnosis on annie's five-way model (see M['vr-04-closest-meaning']). The
+// machinery lives in @cluecrew/core/vr04 so the import door and this constructor
+// share one implementation: checkVr04Row enforces the two-part screen (a distractor
+// correct in the headword's OTHER sense is a second right answer — blocked), the
+// never-add list, and the-other-meaning-needs-a-carrier gate; selectVr04Distractors
+// protects the scarce OM tag. T1-T3 are bare cards; T4-T5 fix the sense with a
+// carrier sentence (routed to the word-card via stem.sentence).
+const VR04_DX_ID: Record<Vr04Diagnosis, string> = {
+  WS: 'vr04-wrong-strength',
+  SH: 'vr04-wrong-shade',
+  OF: 'vr04-one-feature-only',
+  SC: 'vr04-keeps-the-same-company',
+  OM: 'vr04-the-other-meaning',
+};
+// Shorthand: [key, [word, dx]×3, carrier?]. Rows 01-24 are the live re-authoring
+// (row 06 FAIR→GLAD; three live senses, no key survives a bare card); 25-40 carry
+// the carrier that licenses the-other-meaning. RAPID's set is annie's 2026-08-07
+// tightening (was frantic/busy/eager) so the SWIFT/RAPID pair tests discrimination.
+const VR04_ROWS: Vr04Row[] = ([
+  // T1
+  ['brave', 'fearless', [['reckless', 'WS'], ['loud', 'OF'], ['loyal', 'SC']]],
+  ['swift', 'speedy', [['frantic', 'WS'], ['sudden', 'SH'], ['early', 'SC']]],
+  ['damp', 'moist', [['soaked', 'WS'], ['mouldy', 'OF'], ['cold', 'SC']]],
+  ['chilly', 'cool', [['freezing', 'WS'], ['shivery', 'OF'], ['grey', 'SC']]],
+  ['shiny', 'gleaming', [['dazzling', 'WS'], ['smooth', 'OF'], ['new', 'SC']]],
+  ['glad', 'pleased', [['overjoyed', 'WS'], ['relieved', 'SH'], ['lucky', 'SC']]],
+  ['hollow', 'empty', [['bottomless', 'WS'], ['light', 'OF'], ['wooden', 'SC']]],
+  ['huge', 'enormous', [['big', 'WS'], ['tall', 'OF'], ['heavy', 'SH']]],
+  // T2
+  ['rapid', 'quick', [['speedy', 'WS'], ['hurried', 'SH'], ['brisk', 'OF']]],
+  ['generous', 'giving', [['extravagant', 'WS'], ['friendly', 'SH'], ['wealthy', 'SC']]],
+  ['gloomy', 'miserable', [['despairing', 'WS'], ['grumpy', 'SH'], ['silent', 'OF']]],
+  ['timid', 'shy', [['terrified', 'WS'], ['quiet', 'OF'], ['polite', 'SC']]],
+  ['rare', 'uncommon', [['unique', 'WS'], ['strange', 'SH'], ['precious', 'SC']]],
+  ['sturdy', 'strong', [['massive', 'WS'], ['heavy', 'SH'], ['wooden', 'SC']]],
+  ['bold', 'daring', [['reckless', 'WS'], ['rude', 'SH'], ['loud', 'OF']]],
+  ['ancient', 'old', [['prehistoric', 'WS'], ['ruined', 'OF'], ['valuable', 'SC']]],
+  // T3
+  ['hostile', 'unfriendly', [['murderous', 'WS'], ['rude', 'SH'], ['cold', 'OF']]],
+  ['humble', 'modest', [['meek', 'SH'], ['quiet', 'OF'], ['grateful', 'SC']]],
+  ['vague', 'unclear', [['meaningless', 'WS'], ['careless', 'SH'], ['brief', 'OF']]],
+  ['feeble', 'weak', [['helpless', 'WS'], ['pale', 'OF'], ['elderly', 'SC']]],
+  ['genuine', 'real', [['perfect', 'WS'], ['signed', 'OF'], ['costly', 'SC']]],
+  ['reluctant', 'unwilling', [['opposed', 'WS'], ['doubtful', 'SH'], ['slow', 'OF']]],
+  ['obedient', 'well-behaved', [['submissive', 'WS'], ['polite', 'SH'], ['quiet', 'OF']]],
+  ['trivial', 'unimportant', [['worthless', 'WS'], ['simple', 'SH'], ['small', 'OF']]],
+  // T4 — carrier sentence
+  ['jubilant', 'overjoyed', [['pleased', 'WS'], ['noisy', 'OF'], ['relieved', 'SH']], 'The crowd was JUBILANT when the final whistle blew.'],
+  ['recede', 'retreat', [['vanish', 'WS'], ['settle', 'SH'], ['fade', 'OM']], 'They waited for the floodwater to RECEDE.'],
+  ['conceal', 'hide', [['bury', 'WS'], ['ignore', 'SH'], ['pretend', 'SC']], 'She tried to CONCEAL her disappointment from her friends.'],
+  ['exhausted', 'drained', [['tired', 'WS'], ['sleepy', 'SC'], ['empty', 'OM']], 'After the long walk home they were EXHAUSTED.'],
+  ['amend', 'change', [['rewrite', 'WS'], ['improve', 'SH'], ['check', 'SC']], 'The teacher asked her to AMEND the last paragraph.'],
+  ['futile', 'pointless', [['impossible', 'WS'], ['foolish', 'SH'], ['slow', 'SC']], 'Their efforts to save the old tree proved FUTILE.'],
+  ['amiable', 'friendly', [['devoted', 'WS'], ['cheerful', 'SH'], ['chatty', 'OF']], 'The new neighbour seemed AMIABLE from the first day.'],
+  ['abundant', 'plentiful', [['endless', 'WS'], ['large', 'SH'], ['valuable', 'SC']], 'Fish were ABUNDANT in the river that summer.'],
+  // T5 — carrier sentence
+  ['notorious', 'infamous', [['legendary', 'WS'], ['famous', 'SH'], ['dangerous', 'SC']], 'That road is NOTORIOUS for its sharp bends.'],
+  ['exquisite', 'beautiful', [['pretty', 'WS'], ['delicate', 'OF'], ['sharp', 'OM']], 'The lace on the dress was EXQUISITE.'],
+  ['benevolent', 'kind', [['saintly', 'WS'], ['polite', 'SH'], ['wealthy', 'SC']], 'The school was founded by a BENEVOLENT businessman.'],
+  ['stoic', 'unemotional', [['patient', 'SH'], ['silent', 'OF'], ['brave', 'SC']], 'She remained STOIC throughout the long wait.'],
+  ['jovial', 'cheerful', [['ecstatic', 'WS'], ['friendly', 'SH'], ['loud', 'OF']], 'The innkeeper greeted them in a JOVIAL manner.'],
+  ['transparent', 'clear', [['thin', 'SH'], ['shiny', 'OF'], ['obvious', 'OM']], 'The lid was TRANSPARENT, so she could see the cake inside.'],
+  ['luminous', 'glowing', [['blazing', 'WS'], ['pale', 'SH'], ['visible', 'OF']], 'The dial on the watch was LUMINOUS in the dark.'],
+  ['melancholy', 'sad', [['heartbroken', 'WS'], ['gentle', 'SH'], ['slow', 'OF']], 'A MELANCHOLY tune drifted from the piano.'],
+] as Array<[string, string, Array<[string, Vr04Diagnosis]>, string?]>).map(([headword, key, ds, carrier], i) => ({
+  n: i + 1,
+  tier: i < 8 ? 1 : i < 16 ? 2 : i < 24 ? 3 : i < 32 ? 4 : 5,
+  headword,
+  key,
+  carrier: carrier ?? null,
+  distractors: ds.map(([word, diagnosis]) => ({ word, diagnosis })),
+}));
+
+function closestMeaningTyped(): GenItem[] {
+  return VR04_ROWS.map((row) => {
+    const errs = checkVr04Row(row);
+    if (errs.length) throw new Error(`vr-04 row ${row.n} (${row.headword}): ${errs.join('; ')}`);
+    // Every authored row holds exactly three; the selector is a no-op here but keeps
+    // the scarce OM tag protected the moment a pool is ever widened past three.
+    const served = selectVr04Distractors(row.distractors, 3);
+    return {
+      n: row.n,
+      // Tier from the vocabulary the child must know — headword + its key — not the
+      // authored tier band, so a mis-banded row is caught (backbone, 2026-08-02).
+      tier: vocabTierOfSet([row.headword, row.key]),
+      stem: {
+        prompt: row.carrier
+          ? 'Read the sentence. Which word is closest in meaning to the word in capitals?'
+          : 'Which word is closest in meaning to the word on the card?',
+        words: [row.headword],
+        ...(row.carrier ? { sentence: row.carrier } : {}),
+      },
+      options: [
+        { content: { value: row.key }, isCorrect: true },
+        ...served.map((d) => ({ content: { value: d.word }, isCorrect: false, mid: VR04_DX_ID[d.diagnosis] })),
+      ],
+    };
+  });
+}
+
+/** Cross-tier near-synonym pairs in the vr-04 bank, surfaced with both option sets
+ *  for a human call (annie, 2026-08-07). A flag, never a block — exposed for the
+ *  review export, not the seed loop. */
+export function vr04NearSynonymFlags(): ReturnType<typeof flagNearSynonymHeadwords> {
+  return flagNearSynonymHeadwords(VR04_ROWS);
+}
+
 function letterConnections(): GenItem[] {
   return Array.from({ length: 25 }, (_, i) => {
     const tier = 1 + (i % 4);
@@ -1031,7 +1148,7 @@ export const GENERATORS: Record<string, () => GenItem[]> = {
   'vr-01-insert-letter': insertLetter,
   'vr-02-two-odd-ones-out': oddOnesOut,
   'vr-03-related-words': () => relatedWordsTyped(),
-  'vr-04-closest-meaning': () => synonymItems('Which word is closest in meaning to the word on the card?', SYNONYMS),
+  'vr-04-closest-meaning': () => closestMeaningTyped(),
   'vr-05-hidden-word': hiddenWords,
   'vr-06-missing-word': missingWords,
   'vr-07-letters-for-numbers': lettersForNumbers,
@@ -1070,13 +1187,13 @@ async function main(): Promise<void> {
     }
   }
 
-  // Superseded by re-authored banks (David, 2026-08-02): these three types now
-  // come from vr-banks/ via `pnpm import:vr-banks`, carrying their Word-Vault
-  // tier explicitly. Skipped here so a re-seed cannot resurrect the old
-  // procedurally-generated items alongside the imported bank.
+  // Superseded by re-authored banks (David, 2026-08-02): these types now come from
+  // vr-banks/ via `pnpm import:vr-banks`, carrying their Word-Vault tier explicitly.
+  // Skipped here so a re-seed cannot resurrect the old procedurally-generated items
+  // alongside the imported bank. vr-04 LEFT this set (annie, 2026-08-06): it is now
+  // a typed constructor (closestMeaningTyped, generate-to-diagnosis), not a bank.
   const SUPERSEDED_BY_BANK = new Set([
     'vr-02-two-odd-ones-out',
-    'vr-04-closest-meaning',
     'vr-06-missing-word',
   ]);
 

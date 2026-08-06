@@ -116,6 +116,24 @@ export const MISCONCEPTION_EXECUTORS: Record<number, (o: MathsOperands) => strin
     if (op === 'div' && single !== 0) return String(amount / single);
     return null;
   },
+  // 63 — Misaligned addition carry, PARAMETRIC on column: the carry OUT of column
+  //      `carryFrom` is dropped (0 = units). 47+38 loses the units carry → 75;
+  //      85+72 loses the tens carry → 57.
+  63: (o) => {
+    const a = num(o, 'a'), b = num(o, 'b'), col = num(o, 'carryFrom');
+    if (a === null || b === null || col === null || col < 0) return null;
+    const da = String(a).split('').reverse().map(Number), db = String(b).split('').reverse().map(Number);
+    let carry = 0;
+    for (let i = 0; i <= col; i += 1) carry = Math.floor(((da[i] ?? 0) + (db[i] ?? 0) + carry) / 10);
+    return String(carry > 0 ? a + b - carry * 10 ** (col + 1) : a + b);
+  },
+  // 65 — Rounds to the WRONG place, PARAMETRIC on place: rounds to `wrongPlace`
+  //      instead of the asked place. 3762 to the nearest 10 → 3760; 4827 to the
+  //      nearest 1000 → 5000.
+  65: (o) => { const v = num(o, 'value'), p = num(o, 'wrongPlace'); return v === null || p === null || p === 0 ? null : String(Math.round(v / p) * p); },
+  // 96 — Divides the total by the WRONG count, PARAMETRIC on divisor. 32 ÷ 2 → 16
+  //      (mean of four); 60 ÷ 5 → 12 (mean of six).
+  96: (o) => { const t = num(o, 'total'), c = num(o, 'wrongCount'); return t === null || c === null || c === 0 ? null : String(t / c); },
 };
 
 /** A safe evaluator for the item's `solution` — +, −, ×, ÷, parens, decimals. */
@@ -192,6 +210,18 @@ export const MISCONCEPTION_EXAMPLES: Record<number, Array<{ operands: MathsOpera
   // #75 top-only vs bottom-only (annie's Desc A/B) — the hardest instances, each
   // ignoring a different half of the fraction.
   75: [{ operands: { amount: 12, single: 2, op: 'mult' }, childValue: '24', keyValue: '8' }, { operands: { amount: 15, single: 3, op: 'div' }, childValue: '5', keyValue: '20' }],
+  // #63 misaligned-carry, PARAMETRIC on column — canonical loses the units carry
+  // (47+38 → 75); the hardest varies the column, losing the tens carry (85+72 → 57,
+  // a two-digit answer where a three-digit one was due).
+  63: [{ operands: { a: 47, b: 38, carryFrom: 0 }, childValue: '75', keyValue: '85' }, { operands: { a: 85, b: 72, carryFrom: 1 }, childValue: '57', keyValue: '157' }],
+  // #65 rounded-to-the-wrong-place, PARAMETRIC on place — canonical rounds to the ten
+  // not the hundred (3762 → 3760); the hardest varies the place and crosses a boundary,
+  // rounding to the thousand not the hundred (4827 → 5000 where 4800 was due).
+  65: [{ operands: { value: 3762, wrongPlace: 10 }, childValue: '3760', keyValue: '3800' }, { operands: { value: 4827, wrongPlace: 1000 }, childValue: '5000', keyValue: '4800' }],
+  // #96 divided-by-the-wrong-count, PARAMETRIC on divisor — canonical divides by two
+  // not four (32 → 16); the hardest varies the divisor to a near-miss (60 ÷ 5 → 12
+  // where the mean of six is 10, two apart and easy to accept).
+  96: [{ operands: { total: 32, wrongCount: 2 }, childValue: '16', keyValue: '8' }, { operands: { total: 60, wrongCount: 5 }, childValue: '12', keyValue: '10' }],
 };
 
 /** The entry number carried in a seed id, e.g. maths-11-commutative-subtraction → 11,
