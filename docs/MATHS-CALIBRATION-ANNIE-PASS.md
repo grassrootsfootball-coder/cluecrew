@@ -60,13 +60,12 @@ the new wording. In this batch that's the nine above, placed; outside it, unaudi
 
 ## Held / reported (not rewritten)
 
-### CALC-07 — held, D is mistagged and C collides
-Stem: 4 boxes of 6 + 3 loose − 15 = **12**. Option **D = 21** is tagged wrong-order, but wrong-order
-(add loose before multiplying) gives (4+3)×6−15 = **27**, not 21 (21 = 4×6−3, a different error). Option
-**C = 42** is reachable two ways — 27+15 (its adds-used tag) *and* (4+3)×6 (wrong-order stopping early),
-so a wrong-order child lands on C under the wrong tag. **Fix needs authoring:** D → 27 for a clean
-wrong-order value, but C's 42 collision is structural to these numbers — clearing it needs a numbers
-change or a retag, which is annie's call. Held out of the retag map until then.
+### CALC-07 — CLOSED (annie: retag, don't change numbers). Batch is 40/40.
+Stem: 4 boxes of 6 + 3 loose − 15 = **12**. **D fixed 21 → 27** (the true wrong-order value,
+(4+3)×6−15). **C = 42 stays on #72 (wrong operation)** deliberately: two real routes converge on 42 —
+add-for-subtract (27+15) and wrong-order ((4+3)×6) — and a distractor can't carry two tags; #72's hint
+("check what the question is asking you to do") serves both children, which is the test. The collision is
+**logged in the item's `reviewNote`** so it isn't rediscovered as a bug later.
 
 ### Notation — all three are SOURCE, not the export
 - **Money inconsistent:** MEAS-01 uses £5 / £3.50; **CALC-04's stem writes "5.00 pounds" / "2.65 pounds"
@@ -76,8 +75,9 @@ change or a retag, which is annie's call. Held out of the retag map until then.
   step keys on the string it won't find "0.5" among the options (the isKey flag is set, so answerability is
   safe, but the key field should read 1/2 to match).
 
-These edits live in the external batch file (`MATHS-CALIBRATION-01.json`), not the repo. Awaiting a call:
-apply them to the batch here, or fold into a corrected batch from Cowork.
+**APPLIED to the batch (2026-08-06, backup `.bak-2026-08-06`):** money on the £ symbol throughout —
+CALC-04, FDP-03, FDP-06 stems and options (the three that used the word "pounds"); degree marks on
+NPV-05 (stem `4°C`/`9°C` and options); FDP-05 `solutionValue` stored as `1/2` to match its key option.
 
 ### The other 86 entries — 16 bare-example candidates (report only)
 annie has seen 20; a scan of the rest flags **16** entries whose description carries a numeric example with
