@@ -1,0 +1,284 @@
+{
+  "kind": "maths-batch",
+  "batch": "02",
+  "generatedNote": "shapes authored; keys and distractors machine-produced",
+  "itemCount": 12,
+  "items": [
+    {
+      "id": "MC02-CALC-01",
+      "group": "CALC",
+      "difficultyTier": 2,
+      "stem": "Work out 482 − 176.",
+      "solution": "482-176",
+      "operands": {
+        "a": 482,
+        "b": 176
+      },
+      "options": [
+        {
+          "value": "306",
+          "isCorrect": true,
+          "misconceptionId": null
+        },
+        {
+          "value": "314",
+          "isCorrect": false,
+          "misconceptionId": "maths-11-commutative-subtraction"
+        }
+      ]
+    },
+    {
+      "id": "MC02-CALC-02",
+      "group": "CALC",
+      "difficultyTier": 3,
+      "stem": "Work out 234 + 158.",
+      "solution": "234+158",
+      "operands": {
+        "a": 234,
+        "b": 158
+      },
+      "options": [
+        {
+          "value": "392",
+          "isCorrect": true,
+          "misconceptionId": null
+        },
+        {
+          "value": "292",
+          "isCorrect": false,
+          "misconceptionId": "maths-98-digit-dropped-in-column-work"
+        }
+      ]
+    },
+    {
+      "id": "MC02-CALC-03",
+      "group": "CALC",
+      "difficultyTier": 2,
+      "stem": "What is 12 ÷ 3?",
+      "solution": "12/3",
+      "operands": {
+        "dividend": 12,
+        "divisor": 3
+      },
+      "options": [
+        {
+          "value": "4",
+          "isCorrect": true,
+          "misconceptionId": null
+        },
+        {
+          "value": "0.25",
+          "isCorrect": false,
+          "misconceptionId": "maths-16-reversing-division"
+        }
+      ]
+    },
+    {
+      "id": "MC02-NPV-01",
+      "group": "NPV",
+      "difficultyTier": 2,
+      "stem": "What is 3.4 × 10?",
+      "solution": "3.4*10",
+      "operands": {
+        "value": 3.4
+      },
+      "options": [
+        {
+          "value": "34",
+          "isCorrect": true,
+          "misconceptionId": null
+        },
+        {
+          "value": "3.40",
+          "isCorrect": false,
+          "misconceptionId": "maths-06-multiplying-by-10-adds-a-zero"
+        }
+      ]
+    },
+    {
+      "id": "MC02-NPV-02",
+      "group": "NPV",
+      "difficultyTier": 3,
+      "stem": "Round 3,847 to the nearest thousand.",
+      "solution": "4000",
+      "operands": {
+        "value": 3847
+      },
+      "options": [
+        {
+          "value": "4000",
+          "isCorrect": true,
+          "misconceptionId": null
+        },
+        {
+          "value": "3847",
+          "isCorrect": false,
+          "misconceptionId": "maths-10-rounding-down-always"
+        }
+      ]
+    },
+    {
+      "id": "MC02-FDP-01",
+      "group": "FDP",
+      "difficultyTier": 3,
+      "stem": "What is 1/4 + 1/6?",
+      "solution": null,
+      "operands": {
+        "n1": 1,
+        "d1": 4,
+        "n2": 1,
+        "d2": 6
+      },
+      "options": [
+        {
+          "value": "5/12",
+          "isCorrect": true,
+          "misconceptionId": null
+        },
+        {
+          "value": "2/10",
+          "isCorrect": false,
+          "misconceptionId": "maths-22-adding-numerators-and-denominators"
+        }
+      ]
+    },
+    {
+      "id": "MC02-FDP-02",
+      "group": "FDP",
+      "difficultyTier": 3,
+      "stem": "Write 0.4 as a percentage.",
+      "solution": null,
+      "operands": {
+        "decimal": 0.4
+      },
+      "options": [
+        {
+          "value": "40%",
+          "isCorrect": true,
+          "misconceptionId": null
+        },
+        {
+          "value": "0.4%",
+          "isCorrect": false,
+          "misconceptionId": "maths-26-percentage-symbol-as-a-unit"
+        }
+      ]
+    },
+    {
+      "id": "MC02-FDP-03",
+      "group": "FDP",
+      "difficultyTier": 4,
+      "stem": "The ratio of red to blue counters is 1 : 3. What fraction of the counters are red?",
+      "solution": null,
+      "operands": {
+        "part": 1,
+        "other": 3
+      },
+      "options": [
+        {
+          "value": "1/4",
+          "isCorrect": true,
+          "misconceptionId": null
+        },
+        {
+          "value": "1/3",
+          "isCorrect": false,
+          "misconceptionId": "maths-52-ratio-to-fraction-confusion"
+        }
+      ]
+    },
+    {
+      "id": "MC02-FDP-04",
+      "group": "FDP",
+      "difficultyTier": 4,
+      "stem": "Write 1/3 as a decimal.",
+      "solution": null,
+      "operands": {
+        "numerator": 3
+      },
+      "options": [
+        {
+          "value": "0.333",
+          "isCorrect": true,
+          "misconceptionId": null
+        },
+        {
+          "value": "0.3",
+          "isCorrect": false,
+          "misconceptionId": "maths-25-confusing-thirds-and-tenths"
+        }
+      ]
+    },
+    {
+      "id": "MC02-MEAS-01",
+      "group": "MEAS",
+      "difficultyTier": 2,
+      "stem": "How many grams are there in 1 kilogram?",
+      "solution": "1*1000",
+      "operands": {
+        "value": 1
+      },
+      "options": [
+        {
+          "value": "1000",
+          "isCorrect": true,
+          "misconceptionId": null
+        },
+        {
+          "value": "100",
+          "isCorrect": false,
+          "misconceptionId": "maths-37-metric-prefix-confusion"
+        }
+      ]
+    },
+    {
+      "id": "MC02-MEAS-02",
+      "group": "MEAS",
+      "difficultyTier": 3,
+      "stem": "A bus leaves at 2:45. The journey takes 20 minutes. What time does it arrive?",
+      "solution": null,
+      "operands": {
+        "hour": 2,
+        "minute": 45,
+        "addMinutes": 20
+      },
+      "options": [
+        {
+          "value": "3:05",
+          "isCorrect": true,
+          "misconceptionId": null
+        },
+        {
+          "value": "2:65",
+          "isCorrect": false,
+          "misconceptionId": "maths-32-base-100-time"
+        }
+      ]
+    },
+    {
+      "id": "MC02-STATS-01",
+      "group": "STATS",
+      "difficultyTier": 2,
+      "stem": "A table shows goals scored: Red 8, Blue 5, Green 6. How many goals were scored altogether?",
+      "solution": "8+5+6",
+      "operands": {
+        "values": [
+          8,
+          5
+        ]
+      },
+      "options": [
+        {
+          "value": "19",
+          "isCorrect": true,
+          "misconceptionId": null
+        },
+        {
+          "value": "13",
+          "isCorrect": false,
+          "misconceptionId": "maths-56-incomplete-total"
+        }
+      ]
+    }
+  ]
+}

@@ -92,6 +92,9 @@ export const MISCONCEPTION_EXECUTORS: Record<number, (o: MathsOperands) => strin
     const s = [...xs].sort((x, y) => x - y); const mid = Math.floor(s.length / 2);
     return String(s.length % 2 ? s[mid]! : (s[mid - 1]! + s[mid]!) / 2);
   },
+  // 98 — Digit dropped in column work (annie's split): sets the sum out with only
+  // part of one addend, losing its highest digit (234 + 158 → 234 + 58).
+  98: (o) => { const a = num(o, 'a'), b = num(o, 'b'); return a === null || b === null ? null : String(a + (Number(String(Math.abs(b)).slice(1)) || 0)); },
 };
 
 /** A safe evaluator for the item's `solution` — +, −, ×, ÷, parens, decimals. */
@@ -128,11 +131,14 @@ export function evalArithmetic(expr: string): number | null {
   return Number.isFinite(result) ? result : null;
 }
 
-/** The reviewer's conceptual entries — no single executable output. */
-export const CONCEPTUAL_ENTRIES = new Set([15, 20, 27, 28, 30, 40, 41, 42, 43, 49, 50, 58, 59]);
+/** The reviewer's conceptual entries — no single executable output. #101
+ *  (unlike-denominators-cannot-be-compared, annie) is a belief that closes the
+ *  question off, not a wrong number, so it is review-only like the rest. */
+export const CONCEPTUAL_ENTRIES = new Set([15, 20, 27, 28, 30, 40, 41, 42, 43, 49, 50, 58, 59, 101]);
 
-/** The entry number carried in a seed id, e.g. maths-11-commutative-subtraction → 11. */
+/** The entry number carried in a seed id, e.g. maths-11-commutative-subtraction → 11,
+ *  maths-100-steps-out-of-order → 100 (annie's splits pushed the library past 99). */
 export function mathsEntryNumber(misconceptionId: string): number | null {
-  const m = /^maths-(\d{2})-/.exec(misconceptionId);
+  const m = /^maths-(\d{1,3})-/.exec(misconceptionId);
   return m ? Number(m[1]) : null;
 }

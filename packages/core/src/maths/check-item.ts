@@ -40,6 +40,7 @@ export interface MathsItemSpec {
 export type MathsRule =
   | 'key-mismatch'
   | 'distractor-not-executed-misconception'
+  | 'duplicate-id-same-value'
   | 'operands-insufficient'
   | 'no-executor'
   | 'conceptual-review-only';
@@ -62,6 +63,25 @@ export function checkMathsItem(spec: MathsItemSpec): MathsFailure[] {
       failures.push({ itemId: spec.id, rule: 'key-mismatch', severity: 'report', detail: `solution "${spec.solution}" could not be evaluated` });
     } else if (!answersEqual(computed, spec.keyValue)) {
       failures.push({ itemId: spec.id, rule: 'key-mismatch', severity: 'defect', detail: `solution "${spec.solution}" computes ${computed}, but the key is "${spec.keyValue}"` });
+    }
+  }
+
+  // --- Annie's duplicate-id rule (2026-08-06) -----------------------------
+  // Two distractors may share a misconception id ONLY where it is the same error
+  // with a parameter varied — the wrong column read at tens vs at thousands —
+  // which means DIFFERENT values. Two distractors on one id with the SAME value
+  // means only one of them is really that error; the other is mislabelled.
+  const byId = new Map<string, Array<string | number>>();
+  for (const d of spec.distractors) {
+    if (!d.misconceptionId) continue;
+    const seen = byId.get(d.misconceptionId) ?? [];
+    seen.push(d.value);
+    byId.set(d.misconceptionId, seen);
+  }
+  for (const [id, values] of byId) {
+    if (values.length < 2) continue;
+    if (values.some((v, i) => values.findIndex((w) => answersEqual(v, w)) !== i)) {
+      failures.push({ itemId: spec.id, rule: 'duplicate-id-same-value', severity: 'defect', detail: `${id} tags two distractors with the same value (${values.join(', ')}) — a shared id needs a varied parameter and so a different value` });
     }
   }
 
