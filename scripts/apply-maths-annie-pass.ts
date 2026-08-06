@@ -12,6 +12,7 @@
  */
 import { checkChildFacingText, isBlocking } from '@cluecrew/core';
 import { prisma } from '../packages/db/src/index';
+import { exportMathsMisconceptions } from './export-maths-misconceptions';
 
 const APPLY = process.argv.includes('--apply');
 const DAVID = 'human:david@cluecrew.test';
@@ -90,6 +91,11 @@ async function main(): Promise<void> {
 
   console.log(`${APPLY ? 'APPLIED' : '--dry-run (no --apply)'}: descriptions ${desc}/11, narrowed ${narrow}/3, created ${created}/4`);
   if (missing.length) console.log('  NOTE:', missing.join(', '));
+
+  // House rule: a script that applies reviewer decisions re-exports the affected
+  // artefact as its FINAL step, so the export follows the state change instead of
+  // lagging it (the freshness stamp is a check, not the mechanism).
+  if (APPLY) { const path = await exportMathsMisconceptions(prisma); console.log(`re-exported the maths library → ${path.split('/').pop()}`); }
   await prisma.$disconnect();
 }
 

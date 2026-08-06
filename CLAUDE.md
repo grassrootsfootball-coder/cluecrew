@@ -23,6 +23,12 @@ The build is governed by documents, and the documents win arguments.
   needs a dash to read, split it into two sentences with a full stop instead.
 - Content decisions (items, chapters, misconceptions) go through the CMS
   review pipeline; nothing skips the reviewer.
+- A script that applies reviewer decisions RE-EXPORTS the affected artefact as
+  its final step (David, 2026-08-06, after the seventh stall on a file that
+  lagged the DB): the export must FOLLOW the state change automatically, not
+  wait for someone to notice the freshness stamp is stale. Deliver + prune the
+  old file. Exports are reusable functions (e.g. `exportMathsMisconceptions`)
+  so an apply script can call one directly rather than duplicating it.
 - Generated-distractor distribution must be held down deliberately (reviewer,
   2026-08-06, every generated district): a shortcut appears whenever one
   distractor type is both predictable AND over-represented. Generating to

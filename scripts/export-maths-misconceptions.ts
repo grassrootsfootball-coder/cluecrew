@@ -35,8 +35,14 @@ const SPLIT_RETAG = {
   libraryWideReRead: 'Each narrowed entry describes less than it did; anything ELSE in the library carrying #71/#89/#74 must be re-read against the new wording before tagging.',
 };
 
-async function main(): Promise<void> {
-  const entries = await buildMathsMisconceptionsSource(prisma);
+/**
+ * Build, stamp, write and DELIVER the current library (pruning the stale file).
+ * Reusable so any script that changes the library can re-export as its final
+ * step — the export follows the state change instead of lagging it. Takes a
+ * PrismaClient and never disconnects it (the caller owns the connection).
+ */
+export async function exportMathsMisconceptions(client: typeof prisma): Promise<string> {
+  const entries = await buildMathsMisconceptionsSource(client);
   const stamp = freshnessStamp(entries, new Date().toISOString());
   mkdirSync(OUT_DIR, { recursive: true });
   const path = join(OUT_DIR, stampedName(FAMILY, stamp.sourceHash, 'json'));
@@ -58,9 +64,15 @@ async function main(): Promise<void> {
       2,
     ),
   );
-  console.log(`${entries.length} approved maths misconceptions (${derivable} derivable, ${entries.length - derivable} conceptual) → ${path}`);
+  console.log(`${entries.length} approved maths misconceptions (${derivable} derivable, ${entries.length - derivable} conceptual) → ${stampedName(FAMILY, stamp.sourceHash, 'json')}`);
   deliver(path, FAMILY);
+  return path;
+}
+
+async function main(): Promise<void> {
+  await exportMathsMisconceptions(prisma);
   await prisma.$disconnect();
 }
 
-void main();
+// Run only when invoked directly, so importing the function does not re-export.
+if (process.argv[1]?.endsWith('export-maths-misconceptions.ts')) void main();
