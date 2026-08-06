@@ -3,9 +3,11 @@
  *
  * Three rules, all enforced here so the constructor (and the import door) share one
  * implementation rather than drifting:
- *   · BARE-CARD SCREEN — a headword with two live senses cannot sit at T1-T3, because
- *     a single-word card cannot fix which sense, so it has two correct answers. Test:
- *     if you can write two carrier sentences that take different keys, it is polysemous.
+ *   · TWO-PART SCREEN (annie's correction, 2026-08-06) — a two-sense headword is NOT
+ *     disqualified from a bare card. The ambiguity only becomes a WRONG answer when a
+ *     distractor is correct in the OTHER sense. So (a) the headword may stay, (b) any
+ *     distractor living in another sense is a hard block. dark is fine as a distractor
+ *     in general but forbidden under GLOOMY (the "gloomy room" sense). Per-headword.
  *   · NEVER-ADD — a hard block on the words a near-synonym generator reaches for first
  *     that are a defensible second answer (calm/composed for stoic; drain for receding).
  *   · THE-OTHER-MEANING — a gate, not a guideline: OM only where a carrier sentence
@@ -22,28 +24,43 @@
 /** Words that are a defensible second answer — never emitted as a vr-04 distractor. */
 export const VR04_NEVER_ADD = new Set(['nervous', 'fearful', 'drain', 'subside', 'cover', 'mask', 'calm', 'composed', 'see-through']);
 
-/** Headwords with two live senses — seeded from annie's rejections. The gate refuses
- *  these on a bare (T1-T3) card; extend as the bare-card screen flags more. */
-export const VR04_POLYSEMOUS = new Set(['brisk', 'abrupt', 'content', 'fair']);
+/** Per-headword hard blocks: distractor words correct in the headword's OTHER sense
+ *  (annie's two-part screen, 2026-08-06). These are exactly what a near-synonym
+ *  generator reaches for first, so they block alongside VR04_NEVER_ADD. FAIR is absent
+ *  because it is retired from bare cards (three live senses, no key survives — GLAD
+ *  replaces it at T1). */
+export const VR04_FORBIDDEN_BY_HEADWORD: Record<string, string[]> = {
+  chilly: ['unfriendly', 'frosty', 'distant'],
+  hollow: ['meaningless', 'false', 'worthless', 'deep', 'echoing'],
+  generous: ['large', 'plentiful', 'ample'],
+  gloomy: ['dark', 'dim', 'shadowy'],
+  rare: ['underdone', 'pink'],
+  bold: ['thick', 'dark', 'heavy'],
+  humble: ['poor', 'simple', 'plain', 'shabby'],
+  vague: ['forgetful', 'dreamy', 'absent-minded'],
+  feeble: ['unconvincing', 'pathetic', 'lame'],
+  genuine: ['honest', 'sincere', 'open'],
+};
 
 export type Vr04Diagnosis = 'WS' | 'SH' | 'OF' | 'SC' | 'OM';
 export interface Vr04Distractor { word: string; diagnosis: Vr04Diagnosis }
 export interface Vr04Row { n: number; tier: number; headword: string; key: string; carrier?: string | null; distractors: Vr04Distractor[] }
 
-/** Screen a bare-card headword: null if it may sit at T1-T3, else the reason it may not. */
-export function screenBareCard(headword: string): string | null {
-  return VR04_POLYSEMOUS.has(headword.toLowerCase())
-    ? `"${headword}" has two live senses — a bare card cannot fix the sense; it belongs at T4-T5 or nowhere`
-    : null;
+/** The words forbidden as distractors under a given headword (its other senses). */
+export function forbiddenFor(headword: string): Set<string> {
+  return new Set(VR04_FORBIDDEN_BY_HEADWORD[headword.toLowerCase()] ?? []);
 }
 
 /** Every rule against one row. Empty = clean. A defect blocks the row at import. */
 export function checkVr04Row(row: Vr04Row): string[] {
   const errs: string[] = [];
   const bare = !row.carrier;
-  if (bare && row.tier <= 3) { const s = screenBareCard(row.headword); if (s) errs.push(s); }
+  const forbidden = forbiddenFor(row.headword);
   for (const d of row.distractors) {
-    if (VR04_NEVER_ADD.has(d.word.toLowerCase())) errs.push(`never-add: "${d.word}" is a defensible second answer, not a distractor`);
+    const w = d.word.toLowerCase();
+    // The two-part screen: a distractor correct in the headword's OTHER sense.
+    if (forbidden.has(w)) errs.push(`two-sense: "${d.word}" is correct in another sense of "${row.headword}" — a second correct answer; forbidden as a distractor`);
+    if (VR04_NEVER_ADD.has(w)) errs.push(`never-add: "${d.word}" is a defensible second answer, not a distractor`);
     if (d.diagnosis === 'OM' && bare) errs.push(`the-other-meaning on the bare card "${row.headword}" — a second correct answer at T1-T3; OM needs a carrier sentence`);
   }
   return errs;

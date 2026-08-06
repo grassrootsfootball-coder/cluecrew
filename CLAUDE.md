@@ -29,6 +29,14 @@ The build is governed by documents, and the documents win arguments.
   wait for someone to notice the freshness stamp is stale. Deliver + prune the
   old file. Exports are reusable functions (e.g. `exportMathsMisconceptions`)
   so an apply script can call one directly rather than duplicating it.
+- Bare-card vocabulary items use the TWO-PART SCREEN (reviewer, 2026-08-06,
+  any district incl. English): a two-sense headword is NOT disqualified from a
+  bare card — the ambiguity only becomes a wrong answer when a distractor is
+  correct in the OTHER sense. So (a) flag the headword's other senses, (b)
+  forbid, as a hard block, any distractor correct in one of them (they are what
+  a near-synonym generator reaches for first). A headword whose senses leave NO
+  surviving key at all (FAIR: just / light / fine-weather) is retired to a
+  carrier slot or dropped. Shared machinery: `packages/core/src/vr/vr04.ts`.
 - Generated-distractor distribution must be held down deliberately (reviewer,
   2026-08-06, every generated district): a shortcut appears whenever one
   distractor type is both predictable AND over-represented. Generating to

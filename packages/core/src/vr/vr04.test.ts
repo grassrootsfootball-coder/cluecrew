@@ -1,11 +1,14 @@
 import { describe, expect, it } from 'vitest';
-import { checkVr04Row, screenBareCard, selectVr04Distractors, VR04_NEVER_ADD, type Vr04Row } from './vr04';
+import { checkVr04Row, forbiddenFor, selectVr04Distractors, VR04_NEVER_ADD, type Vr04Row } from './vr04';
 
 describe('vr-04 constructor machinery (annie 2026-08-06)', () => {
-  it('bare-card screen refuses a two-sense headword at T1-T3', () => {
-    expect(screenBareCard('BRISK')).not.toBeNull();
-    expect(screenBareCard('fair')).not.toBeNull();
-    expect(screenBareCard('timid')).toBeNull();
+  it('two-part screen: a two-sense headword is fine; a distractor in its other sense is blocked', () => {
+    // GLOOMY may sit on a bare card; "dark" (the "gloomy room" sense) may not tag it.
+    const clean: Vr04Row = { n: 1, tier: 2, headword: 'gloomy', key: 'miserable', distractors: [{ word: 'grumpy', diagnosis: 'SH' }] };
+    expect(checkVr04Row(clean)).toEqual([]);
+    const other: Vr04Row = { ...clean, distractors: [{ word: 'dark', diagnosis: 'OF' }] };
+    expect(checkVr04Row(other).some((e) => e.includes('two-sense'))).toBe(true);
+    expect(forbiddenFor('feeble').has('unconvincing')).toBe(true);
   });
   it('the-other-meaning is refused on a bare card, allowed with a carrier', () => {
     const bare: Vr04Row = { n: 1, tier: 2, headword: 'recede', key: 'retreat', distractors: [{ word: 'fade', diagnosis: 'OM' }] };
