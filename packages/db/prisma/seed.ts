@@ -162,10 +162,12 @@ export function numberSeriesItems(): SeedItem[] {
   for (let i = 0; i < 14; i++) {
     const a = 3 + i;
     const dBase = 2 + (i % 4);
-    // Changing step that grows by TWO each term, so the step-carryover distractor
-    // (reuse the previous gap) is distinct from off-by-one — with the old grow-by-
-    // one the two collided (reviewer, item 36: previous-step-repeated == answer−1).
-    const grow = 2;
+    // Re-tiered against the gen ladder (reviewer, 2026-08-06). A step that grows
+    // by +2 each term is the gen bank's changing-step T3 structure; grow +3 is T4.
+    // Half the seeds now grow +3 so the bank does not pile 20 items at T3 (was all
+    // 14 at T3, forced by the old `1 + (i % 5)` random spread). T5 stays empty —
+    // it needs a genuinely new structure (see the report), not a bigger grow.
+    const grow = i < 7 ? 2 : 3;
     const gapAt = (k: number): number => dBase + k * grow;
     const terms = [a];
     for (let k = 0; k < 3; k += 1) terms.push(terms[k]! + gapAt(k));
@@ -176,13 +178,11 @@ export function numberSeriesItems(): SeedItem[] {
     items.push({
       id,
       questionTypeId: vrTypeId(11, 'number-series'),
-      // Re-tiered against the gen ladder (reviewer, 2026-08-06): these all use a
-      // step that grows by +2 each term — the gen bank's changing-step T3
-      // structure — so they belong at T3, not spread across all five tiers at
-      // random. The old `1 + (i % 5)` labelled identical structures T1–T5.
-      difficultyTier: 3,
+      difficultyTier: grow === 2 ? 3 : 4,
       stem: { prompt: 'What number comes next in the series?', series: terms, operands },
-      options: seedDerived(id, answer, operands, ['vr-series-step-carryover', 'vr-series-off-by-one', 'vr-series-direction']),
+      // direction RETIRED from this bank (reviewer, 2026-08-06). Changing series
+      // still field two distinct tags: step-carryover + off-by-one.
+      options: seedDerived(id, answer, operands, ['vr-series-step-carryover', 'vr-series-off-by-one']),
     });
   }
   return items;

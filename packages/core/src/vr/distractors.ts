@@ -91,6 +91,15 @@ export const VR_EXECUTORS: Record<string, (op: VrOperands) => string[] | null> =
     const correct = evalCode(op.expr, op.values);
     return value !== null && value !== correct ? [s(value)] : null;
   },
+  // vr-07 — stopped before using every letter, leaving off the last term
+  // (reviewer-authored, 2026-08-06): P+Q on three-term items, P+Q+R on four-term.
+  'vr07-term-dropped': (op) => {
+    if (!op.values || !op.expr) return null;
+    const correct = evalCode(op.expr, op.values);
+    const dropped = op.expr.replace(/\s*[+\-−–]\s*[A-Za-z]+\s*$/, ''); // remove the final ± term
+    const value = evalCode(dropped, op.values);
+    return value !== null && value !== correct ? [s(value)] : null;
+  },
 
   // vr-09 letter series
   'vr-letter-series-off-by-one': (op) =>

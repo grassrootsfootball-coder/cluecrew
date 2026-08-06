@@ -82,6 +82,7 @@ export const M: Record<string, Array<{ id: string; description: string; childHin
   'vr-07-letters-for-numbers': [
     { id: 'vr07-value-slip', description: 'Substituted one letter with the neighbouring value.', childHint: 'Write each letter’s number above it before you add.' },
     { id: 'vr07-operation-slip', description: 'Added when the sum needed another operation.', childHint: 'Circle the signs first — plus, minus or times?' },
+    { id: 'vr07-term-dropped', description: 'Stopped before using every letter, usually leaving off the last term.', childHint: 'Check you have used every letter. Tick each one as you go.' },
   ],
   'vr-08-move-letter': [
     { id: 'vr-move-letter-first-word-invalid', description: 'exists-from-seed', childHint: '' },
@@ -368,14 +369,16 @@ function numberSeries(): GenItem[] {
     const operands: VrOperands = changing
       ? { kind: 'number-series', first: a, step: dBase, answer, last, prevStep }
       : { kind: 'number-series', first: a, step: dBase, answer };
-    // Changing-step series carry the carryover error (reuse the last gap) and so
-    // field three DISTINCT tags. Constant series cannot carry it (there is no
-    // previous different gap), so — folding into the vr-03 approach — they serve
-    // two distinct tags rather than repeating off-by-one (reviewer, 2026-08-06:
-    // the old third slot doubled off-by-one, which the gate cannot resolve).
+    // RETIRED direction (reviewer, 2026-08-06): every direction option was
+    // smaller than the first term — eliminable without arithmetic — and some
+    // produced 0 or a negative, meaningless as a VR option. No second EXECUTABLE
+    // diagnosis exists for constant series (step-carryover needs a changing gap),
+    // so — per "report rather than invent" — constant series field only off-by-one
+    // here; restoring their fourth option needs a reviewer-authored constant
+    // diagnosis (see the report). Changing series keep step-carryover + off-by-one.
     const ids = changing
-      ? ['vr-series-step-carryover', 'vr-series-off-by-one', 'vr-series-direction']
-      : ['vr-series-off-by-one', 'vr-series-direction'];
+      ? ['vr-series-step-carryover', 'vr-series-off-by-one']
+      : ['vr-series-off-by-one'];
     items.push({
       n: i + 1,
       tier,
@@ -458,16 +461,16 @@ function vr07Values(seed: number, lo: number, hi: number): Record<string, number
 // (b) made every set all-even or all-odd, so a child could eliminate options by
 // parity without arithmetic. It also tagged two distractors 'value-slip'.
 // Now: value sets are searched PER ITEM (25 distinct), forced to mixed parity,
-// and rejected unless value-slip and operation-slip land on DIFFERENT numbers
-// (the no-collision check — else the derivability gate cannot say which tag owns
-// a value). Folded into the vr-03 approach, each item serves two DISTINCT-tag
-// distractors, so vr-07 is now 3-option (key + value-slip + operation-slip).
-// SURFACED DEVIATION from BUILD-DISTRICT's T1-add-only ladder: every tier now
-// carries a subtraction so operation-slip always applies; difficulty climbs by
-// magnitude and term count instead. The current live bank is the fallback until
-// the reviewer closes the pass (was: do-not-deploy).
+// and rejected unless all three tags land on DIFFERENT numbers (the no-collision
+// check — else the derivability gate cannot say which tag owns a value). Folded
+// into the vr-03 approach, each item serves THREE DISTINCT-tag distractors
+// (value-slip, operation-slip and the reviewer's term-dropped), so vr-07 is a
+// four-option item. SURFACED DEVIATION from BUILD-DISTRICT's T1-add-only ladder:
+// every tier now carries a subtraction so operation-slip always applies;
+// difficulty climbs by magnitude and term count instead. The current live bank is
+// the fallback until the reviewer closes the pass (was: do-not-deploy).
 function lettersForNumbers(): GenItem[] {
-  const ids = ['vr07-value-slip', 'vr07-operation-slip'];
+  const ids = ['vr07-value-slip', 'vr07-operation-slip', 'vr07-term-dropped'];
   const usedSets = new Set<string>(); // no two items share a value set + expr
   return Array.from({ length: 25 }, (_, i) => {
     const tier = 1 + (i % 4);
@@ -485,9 +488,9 @@ function lettersForNumbers(): GenItem[] {
       const key = vr07Eval(expr, v);
       if (key <= 0) continue; // no zero/negative answers
       const operands: VrOperands = { kind: 'code', values: Object.fromEntries(shown.map((l) => [l, v[l]!])), expr };
-      // no-collision: BOTH tags must resolve to distinct numbers, else the
-      // builder drops one and the item is a 2-option guess.
-      if (buildDerivedVrDistractors(key, operands, ids).length !== 2) continue;
+      // no-collision: ALL THREE tags must resolve to distinct numbers, else the
+      // builder drops one and the item falls short of four options.
+      if (buildDerivedVrDistractors(key, operands, ids).length !== 3) continue;
       usedSets.add(setKey);
       return {
         n: i + 1,

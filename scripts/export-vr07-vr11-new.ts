@@ -30,15 +30,15 @@ function opts(list: Array<{ content: unknown; isCorrect: boolean; mid?: string; 
 
 function main(): void {
   const L: string[] = [];
-  L.push('vr-07 & vr-11 — REBUILT, plain text for the reviewer to close the pass (2026-08-06)');
-  L.push('Each item whole: stem, key (*), distractors + tags. All three findings applied:');
-  L.push(' vr-07: value sets are now PER ITEM (25 distinct, was 8), mixed parity in every set,');
-  L.push('   and value-slip / operation-slip never collide. Folded into the vr-03 approach —');
-  L.push('   two DISTINCT-tag distractors, so 3-option now (was two value-slips). DEVIATION');
-  L.push('   surfaced: every tier now carries a subtraction so operation-slip always applies.');
-  L.push(' vr-11: constant series serve two distinct tags (was doubled off-by-one); changing');
-  L.push('   series keep three. The 14 seed items are re-tiered to T3 (their +2-grow structure).');
-  L.push('Tag key — vr-07: value-slip, operation-slip.   vr-11: step-carryover, off-by-one, direction.');
+  L.push('vr-07 & vr-11 — REBUILT round 2, your three closing changes applied (2026-08-06)');
+  L.push('Each item whole: stem, key (*), distractors + tags.');
+  L.push(' vr-07: your third diagnosis term-dropped added — four options again, three DISTINCT');
+  L.push('   tags (value-slip, operation-slip, term-dropped), no collision on any of the 25.');
+  L.push(' vr-11: direction RETIRED. Changing series field step-carryover + off-by-one (3 options).');
+  L.push('   CONSTANT series (T1-T2) now field ONLY off-by-one → 2 options: no second EXECUTABLE');
+  L.push('   diagnosis exists, so this is REPORTED, not invented (candidates + T5 in the reply).');
+  L.push(' vr-11 tiers: T3 13 / T4 13 now (was T3 20 / T4 6) — half the seeds re-grown to +3 (T4).');
+  L.push('Tag key — vr-07: value-slip, operation-slip, term-dropped.   vr-11: step-carryover, off-by-one.');
 
   const v7 = GENERATORS['vr-07-letters-for-numbers']!();
   L.push(`\n===== vr-07 letters-for-numbers — REBUILT (${v7.length}) [deployable after your sign-off] =====`);
