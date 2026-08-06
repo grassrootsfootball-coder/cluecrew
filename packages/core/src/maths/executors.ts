@@ -53,8 +53,9 @@ function commutativeSubtraction(a: number, b: number): string {
 
 /** Executors, keyed by the reviewer's entry number. Derivable entries only. */
 export const MISCONCEPTION_EXECUTORS: Record<number, (o: MathsOperands) => string | null> = {
-  // 1 — Zero placeholder missing: drop the internal zero(s). 304 → 34.
-  1: (o) => { const n = num(o, 'number'); return n === null ? null : String(Number(String(n).replace(/0/g, '')) || 0); },
+  // 1 — Zero placeholder missing: drop ONE zero (annie: 304 → 34; removing ALL
+  //     zeros, 1000 → 0, is a different error). Removes the first zero only.
+  1: (o) => { const n = num(o, 'number'); if (n === null) return null; const s = String(n); return s.includes('0') ? String(Number(s.replace('0', ''))) : null; },
   // 6 — ×10 adds a zero: append a zero to the decimal instead of shifting. 3.4 → 3.40.
   6: (o) => { const n = num(o, 'value'); return n === null ? null : `${n}0`; },
   // 8 — Negative inversion: the "greater" is the one further from zero. −10 vs −5 → −10.
@@ -72,12 +73,14 @@ export const MISCONCEPTION_EXECUTORS: Record<number, (o: MathsOperands) => strin
   16: (o) => { const a = num(o, 'dividend'), b = num(o, 'divisor'); return a === null || b === null || a === 0 ? null : String(b / a); },
   // 22 — Add numerators and denominators. 1/2 + 1/3 → 2/5.
   22: (o) => { const n1 = num(o, 'n1'), d1 = num(o, 'd1'), n2 = num(o, 'n2'), d2 = num(o, 'd2'); return [n1, d1, n2, d2].some((x) => x === null) ? null : `${n1! + n2!}/${d1! + d2!}`; },
-  // 25 — Thirds as tenths: read the numerator straight into the tenths. 1/3 → 0.3.
-  25: (o) => { const n = num(o, 'numerator'); return n === null ? null : `0.${n}`; },
+  // 25 — Thirds as tenths: read the DENOMINATOR straight into the tenths (annie:
+  //     "1/3 → 0.3" writes the bottom number, not the top — operand renamed 2026-08-06).
+  25: (o) => { const n = num(o, 'denominator'); return n === null ? null : `0.${n}`; },
   // 26 — Percent symbol as a unit: attach % without ×100. 0.4 → 0.4%.
   26: (o) => { const n = num(o, 'decimal'); return n === null ? null : `${n}%`; },
-  // 31 — Drop the trailing zero in money. £3.50 → £3.5.
-  31: (o) => { const n = num(o, 'amount'); return n === null ? null : String(n); },
+  // 31 — RECLASSIFIED conceptual (annie, 2026-08-06): £3.50 → £3.5 is a notation
+  //     error whose value is NUMERICALLY EQUAL to the key, so it cannot be a
+  //     derivable distractor. Moved to CONCEPTUAL_ENTRIES; no executor.
   // 32 — Base-100 time: add the minutes with no 60 rollover. 45 + 20 → :65.
   32: (o) => { const h = num(o, 'hour'), m = num(o, 'minute'), add = num(o, 'addMinutes'); return h === null || m === null || add === null ? null : `${h}:${m + add}`; },
   // 37 — Metric prefix as ×100: 1 kg → 100 g.
@@ -137,7 +140,35 @@ export function evalArithmetic(expr: string): number | null {
 /** The reviewer's conceptual entries — no single executable output. #101
  *  (unlike-denominators-cannot-be-compared, annie) is a belief that closes the
  *  question off, not a wrong number, so it is review-only like the rest. */
-export const CONCEPTUAL_ENTRIES = new Set([15, 20, 27, 28, 30, 40, 41, 42, 43, 49, 50, 58, 59, 101]);
+export const CONCEPTUAL_ENTRIES = new Set([15, 20, 27, 28, 30, 31, 40, 41, 42, 43, 49, 50, 58, 59, 101]);
+
+/**
+ * A worked example per executor — the operands and the value the CHILD gives.
+ * annie's reframed descriptions carry both values in prose ("child gives X where
+ * the answer is Y"); this is that example as executable data. The CI test asserts
+ * executor(operands) === childValue, so an executor that drifts from its own
+ * description fails WITHOUT a batch or an audit (it is what would have caught #9:
+ * floor(3847) ≠ 3000). Extend as descriptions gain examples — 17 of 86 today.
+ */
+export const MISCONCEPTION_EXAMPLES: Record<number, { operands: MathsOperands; childValue: string }> = {
+  1: { operands: { number: 304 }, childValue: '34' },
+  6: { operands: { value: 3.4 }, childValue: '3.40' },
+  8: { operands: { options: [-10, -5] }, childValue: '-10' },
+  9: { operands: { value: 3847, place: 1000 }, childValue: '3000' },
+  10: { operands: { value: 25, place: 10 }, childValue: '20' },
+  11: { operands: { a: 42, b: 17 }, childValue: '35' },
+  16: { operands: { dividend: 3, divisor: 12 }, childValue: '4' },
+  22: { operands: { n1: 1, d1: 2, n2: 1, d2: 3 }, childValue: '2/5' },
+  25: { operands: { denominator: 3 }, childValue: '0.3' },
+  26: { operands: { decimal: 0.4 }, childValue: '0.4%' },
+  32: { operands: { hour: 2, minute: 45, addMinutes: 20 }, childValue: '2:65' },
+  37: { operands: { value: 1 }, childValue: '100' },
+  51: { operands: { a1: 2, b1: 4, a2: 4 }, childValue: '6' },
+  52: { operands: { part: 1, other: 3 }, childValue: '1/3' },
+  56: { operands: { values: [8, 5, 6] }, childValue: '19' },
+  57: { operands: { values: [3, 7, 5] }, childValue: '5' },
+  98: { operands: { a: 234, b: 158 }, childValue: '292' },
+};
 
 /** The entry number carried in a seed id, e.g. maths-11-commutative-subtraction → 11,
  *  maths-100-steps-out-of-order → 100 (annie's splits pushed the library past 99). */

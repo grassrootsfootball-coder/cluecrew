@@ -7,7 +7,7 @@
  */
 import type { PrismaClient } from '@prisma/client';
 
-const CONCEPTUAL = new Set([15, 20, 27, 28, 30, 40, 41, 42, 43, 49, 50, 58, 59, 101]);
+const CONCEPTUAL = new Set([15, 20, 27, 28, 30, 31, 40, 41, 42, 43, 49, 50, 58, 59, 101]);
 
 export async function buildMathsMisconceptionsSource(prisma: PrismaClient): Promise<unknown[]> {
   const rows = await prisma.misconception.findMany({

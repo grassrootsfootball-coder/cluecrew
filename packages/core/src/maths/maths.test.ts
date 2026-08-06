@@ -75,3 +75,17 @@ describe('solution evaluator: integer division', () => {
     expect(evalArithmetic('13 // 5')).toBe(2);
   });
 });
+
+describe('worked-example CI — every executor produces its description example', () => {
+  // annie's mechanism: the reframed description carries the child's value, so the
+  // executor run on the example's operands must equal it. This is what catches an
+  // executor that has drifted from its own error (it would have failed #9's floor).
+  it('each executor matches MISCONCEPTION_EXAMPLES', async () => {
+    const { MISCONCEPTION_EXAMPLES, answersEqual } = await import('./executors');
+    for (const [n, ex] of Object.entries(MISCONCEPTION_EXAMPLES)) {
+      const produced = MISCONCEPTION_EXECUTORS[Number(n)]!(ex.operands);
+      expect(produced, `#${n} executed to ${produced}, example says ${ex.childValue}`).not.toBeNull();
+      expect(answersEqual(produced, ex.childValue), `#${n}: ${produced} ≠ ${ex.childValue}`).toBe(true);
+    }
+  });
+});
