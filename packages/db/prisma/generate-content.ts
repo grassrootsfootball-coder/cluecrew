@@ -368,12 +368,14 @@ function numberSeries(): GenItem[] {
     const operands: VrOperands = changing
       ? { kind: 'number-series', first: a, step: dBase, answer, last, prevStep }
       : { kind: 'number-series', first: a, step: dBase, answer };
-    // Changing-step series carry the carryover error (reuse the last gap);
-    // constant series cannot (there is no previous different gap), so they lean
-    // on direction (extend backwards) and off-by-one instead.
+    // Changing-step series carry the carryover error (reuse the last gap) and so
+    // field three DISTINCT tags. Constant series cannot carry it (there is no
+    // previous different gap), so — folding into the vr-03 approach — they serve
+    // two distinct tags rather than repeating off-by-one (reviewer, 2026-08-06:
+    // the old third slot doubled off-by-one, which the gate cannot resolve).
     const ids = changing
       ? ['vr-series-step-carryover', 'vr-series-off-by-one', 'vr-series-direction']
-      : ['vr-series-off-by-one', 'vr-series-direction', 'vr-series-off-by-one'];
+      : ['vr-series-off-by-one', 'vr-series-direction'];
     items.push({
       n: i + 1,
       tier,
@@ -423,45 +425,83 @@ function letterSeries(): GenItem[] {
  * The rule generalises and is checked by `pnpm check:word-puzzles`: an item's
  * internal symbols never draw from the option-label range.
  */
-// DO NOT DEPLOY this generator's output over the current live vr-07 bank
-// (reviewer, 2026-08-06): the current live items are BETTER than these
-// replacements, so the vr-07 re-import is cancelled. Held re-authoring for a
-// future rebuild — per-item generation, mixed parities within a value set, and
-// a check that no two operations on a set collide (P×Q = P+R) — is tracked
-// separately and must not ride a straight regenerate of this function.
+// vr-07 helpers (rebuild 2026-08-06). evalCode in core is +/− only; this mirrors
+// it so the generator can score a candidate set without exporting it.
+const VR07_BAND: Record<number, [number, number]> = { 1: [2, 7], 2: [3, 11], 3: [4, 14], 4: [5, 18] };
+const vr07Expr = (tier: number): string => (tier === 1 ? 'P + Q − R' : 'P + Q + R − S');
+function vr07Eval(expr: string, v: Record<string, number>): number {
+  let total = 0;
+  let sign = 1;
+  for (const tok of expr.replace(/[−–]/g, '-').match(/[A-Za-z]+|[+-]/g)!) {
+    if (tok === '+') sign = 1;
+    else if (tok === '-') sign = -1;
+    else total += sign * v[tok]!;
+  }
+  return total;
+}
+// Deterministic (no RNG — idempotent re-seed) four distinct values in [lo,hi].
+function vr07Values(seed: number, lo: number, hi: number): Record<string, number> | null {
+  const span = hi - lo + 1;
+  const vals: number[] = [];
+  let x = (seed >>> 0) || 1;
+  for (let k = 0; k < 32 && vals.length < 4; k += 1) {
+    x = (Math.imul(x, 1664525) + 1013904223) >>> 0;
+    const val = lo + (x % span);
+    if (!vals.includes(val)) vals.push(val);
+  }
+  if (vals.length < 4) return null;
+  return { P: vals[0]!, Q: vals[1]!, R: vals[2]!, S: vals[3]! };
+}
+
+// Rebuilt 2026-08-06 (reviewer findings). The old generator rotated four values
+// out of a pool by tier, which (a) collapsed 25 items to 8 distinct sets and
+// (b) made every set all-even or all-odd, so a child could eliminate options by
+// parity without arithmetic. It also tagged two distractors 'value-slip'.
+// Now: value sets are searched PER ITEM (25 distinct), forced to mixed parity,
+// and rejected unless value-slip and operation-slip land on DIFFERENT numbers
+// (the no-collision check — else the derivability gate cannot say which tag owns
+// a value). Folded into the vr-03 approach, each item serves two DISTINCT-tag
+// distractors, so vr-07 is now 3-option (key + value-slip + operation-slip).
+// SURFACED DEVIATION from BUILD-DISTRICT's T1-add-only ladder: every tier now
+// carries a subtraction so operation-slip always applies; difficulty climbs by
+// magnitude and term count instead. The current live bank is the fallback until
+// the reviewer closes the pass (was: do-not-deploy).
 function lettersForNumbers(): GenItem[] {
+  const ids = ['vr07-value-slip', 'vr07-operation-slip'];
+  const usedSets = new Set<string>(); // no two items share a value set + expr
   return Array.from({ length: 25 }, (_, i) => {
-    // Four genuine levels (2026-08-02): the tier drives BOTH the number of
-    // operands and the operations, not just add-vs-subtract. T1 two-term add,
-    // T2 three-term add, T3 a subtraction, T4 four terms with a subtraction.
     const tier = 1 + (i % 4);
-    // DISTINCT letter values (reviewer audit: Q=S on 15 of 25). Four values are
-    // rotated out of a pool, so no two letters ever share a value — a code where
-    // two letters mean the same number is ambiguous.
-    const pool = [2, 3, 4, 5, 6, 7, 8, 9];
-    const picked = [0, 1, 2, 3].map((k) => pool[(i + k * 2) % pool.length]!);
-    const v = { P: picked[0]!, Q: picked[1]!, R: picked[2]!, S: picked[3]! };
-    const expr = tier === 1 ? 'P + Q' : tier === 2 ? 'P + Q + R' : tier === 3 ? 'P + Q − R' : 'P + Q + R − S';
-    const sum =
-      tier === 1 ? v.P + v.Q : tier === 2 ? v.P + v.Q + v.R : tier === 3 ? v.P + v.Q - v.R : v.P + v.Q + v.R - v.S;
-    const operands: VrOperands = { kind: 'code', values: v, expr };
-    // Derived (reviewer audit): distractors are genuine value substitutions (one
-    // letter read as another's value) and, where there is a subtraction, the
-    // operation slipped to an add — NOT sum ± 1/2 near-misses wearing the tags.
-    const ids = /[−–]/.test(expr)
-      ? ['vr07-value-slip', 'vr07-operation-slip', 'vr07-value-slip']
-      : ['vr07-value-slip', 'vr07-value-slip', 'vr07-value-slip'];
-    return {
-      n: i + 1,
-      tier,
-      stem: {
-        prompt: `If ${Object.entries(v).map(([letter, value]) => `${letter} = ${value}`).join(', ')}, what is ${expr}?`,
-        code: Object.fromEntries(Object.entries(v).map(([letter, value]) => [letter, String(value)])),
-        sum: expr,
-        operands,
-      },
-      options: derivedOptions(sum, operands, ids),
-    };
+    const [lo, hi] = VR07_BAND[tier]!;
+    const expr = vr07Expr(tier);
+    const shown = [...new Set((expr.match(/[A-Za-z]+/g) ?? []))]; // letters the stem uses
+    for (let attempt = 0; attempt < 6000; attempt += 1) {
+      const v = vr07Values(i * 100003 + attempt * 7 + 1, lo, hi);
+      if (!v) continue;
+      const nums = shown.map((l) => v[l]!);
+      if (new Set(nums).size !== shown.length) continue; // distinct values in play
+      if (!(nums.some((n) => n % 2 === 0) && nums.some((n) => n % 2 === 1))) continue; // mixed parity
+      const setKey = `${expr}|${shown.map((l) => v[l]).join(',')}`;
+      if (usedSets.has(setKey)) continue; // per-item, not per-tier (was 8 distinct of 25)
+      const key = vr07Eval(expr, v);
+      if (key <= 0) continue; // no zero/negative answers
+      const operands: VrOperands = { kind: 'code', values: Object.fromEntries(shown.map((l) => [l, v[l]!])), expr };
+      // no-collision: BOTH tags must resolve to distinct numbers, else the
+      // builder drops one and the item is a 2-option guess.
+      if (buildDerivedVrDistractors(key, operands, ids).length !== 2) continue;
+      usedSets.add(setKey);
+      return {
+        n: i + 1,
+        tier,
+        stem: {
+          prompt: `If ${shown.map((l) => `${l} = ${v[l]}`).join(', ')}, what is ${expr}?`,
+          code: Object.fromEntries(shown.map((l) => [l, String(v[l])])),
+          sum: expr,
+          operands,
+        },
+        options: derivedOptions(key, operands, ids),
+      };
+    }
+    throw new Error(`vr-07 item ${i + 1}: no value set met distinct + mixed-parity + no-collision in 6000 tries`);
   });
 }
 

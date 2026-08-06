@@ -176,7 +176,11 @@ export function numberSeriesItems(): SeedItem[] {
     items.push({
       id,
       questionTypeId: vrTypeId(11, 'number-series'),
-      difficultyTier: 1 + (i % 5),
+      // Re-tiered against the gen ladder (reviewer, 2026-08-06): these all use a
+      // step that grows by +2 each term — the gen bank's changing-step T3
+      // structure — so they belong at T3, not spread across all five tiers at
+      // random. The old `1 + (i % 5)` labelled identical structures T1–T5.
+      difficultyTier: 3,
       stem: { prompt: 'What number comes next in the series?', series: terms, operands },
       options: seedDerived(id, answer, operands, ['vr-series-step-carryover', 'vr-series-off-by-one', 'vr-series-direction']),
     });

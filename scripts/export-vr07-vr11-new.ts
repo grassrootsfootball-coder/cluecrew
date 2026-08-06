@@ -30,13 +30,18 @@ function opts(list: Array<{ content: unknown; isCorrect: boolean; mid?: string; 
 
 function main(): void {
   const L: string[] = [];
-  L.push('vr-07 & vr-11 — NEW stems WITH NEW distractors, plain text (2026-08-06)');
-  L.push('These are the re-import items whole: new stem, new key (*), new distractors + tags.');
-  L.push('vr-07 will NOT deploy — current live items are better; shown for distractor review only.');
+  L.push('vr-07 & vr-11 — REBUILT, plain text for the reviewer to close the pass (2026-08-06)');
+  L.push('Each item whole: stem, key (*), distractors + tags. All three findings applied:');
+  L.push(' vr-07: value sets are now PER ITEM (25 distinct, was 8), mixed parity in every set,');
+  L.push('   and value-slip / operation-slip never collide. Folded into the vr-03 approach —');
+  L.push('   two DISTINCT-tag distractors, so 3-option now (was two value-slips). DEVIATION');
+  L.push('   surfaced: every tier now carries a subtraction so operation-slip always applies.');
+  L.push(' vr-11: constant series serve two distinct tags (was doubled off-by-one); changing');
+  L.push('   series keep three. The 14 seed items are re-tiered to T3 (their +2-grow structure).');
   L.push('Tag key — vr-07: value-slip, operation-slip.   vr-11: step-carryover, off-by-one, direction.');
 
   const v7 = GENERATORS['vr-07-letters-for-numbers']!();
-  L.push(`\n===== vr-07 letters-for-numbers — NEW (${v7.length}) [held, not deploying] =====`);
+  L.push(`\n===== vr-07 letters-for-numbers — REBUILT (${v7.length}) [deployable after your sign-off] =====`);
   for (const it of v7) {
     const st = it.stem as { prompt: string };
     L.push(`${String(it.n).padStart(2, '0')} [T${it.tier}]  ${st.prompt}`);
@@ -45,13 +50,13 @@ function main(): void {
 
   const v11gen = GENERATORS['vr-11-number-series']!();
   const v11seed = numberSeriesItems();
-  L.push(`\n===== vr-11 number-series — NEW gen bank (${v11gen.length}) =====`);
+  L.push(`\n===== vr-11 number-series — REBUILT gen bank (${v11gen.length}) =====`);
   for (const it of v11gen) {
     const st = it.stem as { series: number[] };
     L.push(`${String(it.n).padStart(2, '0')} [T${it.tier}]  series [${st.series.join(', ')}] -> ?`);
     L.push(`     ${opts(it.options)}`);
   }
-  L.push(`\n===== vr-11 number-series — NEW seed items (${v11seed.length}) [held, pending re-tier] =====`);
+  L.push(`\n===== vr-11 number-series — REBUILT seed items (${v11seed.length}) [re-tiered to T3] =====`);
   for (const s of v11seed) {
     const st = s.stem as { series: number[] };
     L.push(`${s.id} [T${s.difficultyTier}]  series [${st.series.join(', ')}] -> ?`);
@@ -60,7 +65,7 @@ function main(): void {
 
   const text = L.join('\n') + '\n';
   for (const dir of OUT_DIRS) {
-    try { writeFileSync(`${dir}/vr07-vr11-new-distractors.txt`, text); } catch (e) { console.error(`skip ${dir}: ${(e as Error).message}`); }
+    try { writeFileSync(`${dir}/vr07-vr11-rebuilt.txt`, text); } catch (e) { console.error(`skip ${dir}: ${(e as Error).message}`); }
   }
   console.log(`[${Buffer.byteLength(text)} bytes] vr07=${v7.length} vr11gen=${v11gen.length} vr11seed=${v11seed.length}`);
 }
