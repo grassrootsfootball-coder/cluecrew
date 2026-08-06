@@ -66,6 +66,15 @@ single wrong number is one id; a description that forks — "does the first step
 and must be split. This is the test that catches a bundled id before it ships (it is why
 `stop-early` cuts across eight topic ids — see the two-ids report).
 
+**The example in a description must be the HARDEST instance of the error, not the tidiest
+(annie, 2026-08-06 — supersedes the earlier "one canonical + one varying" framing).** A
+clean example reads better, so a writer reaches for it instinctively — and that is exactly
+the instance that cannot fail: 304 has one zero, so it cannot distinguish "removes a zero"
+from "removes every zero" (the #1 bug). Choose the instance that would break a subtly-wrong
+executor. Where the error turns on a dial (which column, which place, which divisor), one
+hardest instance still cannot pin it, so a `[param]` entry carries a SECOND example varying
+that dial — the parametric double is the mechanism, hardest-instance is the principle behind it.
+
 ### R11 and its parametric exemption (same shape as the lineup-odd documented exception)
 
 R11 forbids **two options in one item under a single misconception** (the double-key the
