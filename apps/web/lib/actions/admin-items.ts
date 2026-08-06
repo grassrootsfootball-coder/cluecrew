@@ -131,6 +131,21 @@ const stemSchema = z.record(z.unknown()).superRefine((stem, ctx) => {
       });
     }
   }
+  // Carrier sentence (2026-08-06): a stem sentence disambiguates the intended
+  // sense of a word card — vr-04 at tiers 4-5, and vr-06's existing cloze
+  // sentence. Bounds mirror the Word-Vault card sentence (content-schema
+  // wordContentSchema.sentence). The child-facing gate screens it at the
+  // word-card role (uncapped length, vocabulary ceiling holds).
+  if ('sentence' in stem) {
+    const value = stem.sentence;
+    if (typeof value !== 'string' || value.trim().length < 3 || value.trim().length > 200) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['sentence'],
+        message: 'sentence must be a string of 3–200 characters',
+      });
+    }
+  }
   if ('lineRefs' in stem && !('passageRef' in stem)) {
     ctx.addIssue({
       code: z.ZodIssueCode.custom,

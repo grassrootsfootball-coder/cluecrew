@@ -8,10 +8,13 @@ export default function WordWebEngine({ stem, options, selected, onSelect, outco
   const words = Array.isArray(stem.words) ? (stem.words as string[]) : null;
   const groupA = Array.isArray(stem.groupA) ? (stem.groupA as string[]) : null;
   const groupB = Array.isArray(stem.groupB) ? (stem.groupB as string[]) : null;
+  // Carrier sentence (vr-04 T4-T5): disambiguates the sense of the word card.
+  const sentence = typeof stem.sentence === 'string' ? stem.sentence : null;
 
   return (
     <div>
       <p style={{ fontSize: '1.15rem' }}>{stemText(stem)}</p>
+      {sentence ? <p style={{ fontSize: '1.05rem', fontStyle: 'italic' }}>{sentence}</p> : null}
       {words ? (
         <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
           {words.map((word) => (

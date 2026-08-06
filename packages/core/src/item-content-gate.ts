@@ -52,9 +52,15 @@ export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
 
   // Every stem string. Only the prompt carries the declared quotes.
   for (const [path, text] of textsFrom(item.stem, '')) {
+    // A carrier sentence disambiguates a meaning and can run long, so it takes
+    // the word-card role (no length cap; the vocabulary ceiling ≤9 still holds,
+    // and the headword stays exempt via testedTokens). Every other stem field
+    // keeps the item's stem role. One field, one rule — vr-06's existing
+    // sentence rides the same path, which is the point of the single gate.
+    const role = path === 'sentence' ? 'word-card' : stemRole;
     failures.push(
       ...checkChildFacingText({
-        role: stemRole,
+        role,
         label: `item:${item.id} stem.${path}`,
         text,
         quotedSpans: path === 'prompt' ? stemQuotes : [],
