@@ -30,15 +30,15 @@ function opts(list: Array<{ content: unknown; isCorrect: boolean; mid?: string; 
 
 function main(): void {
   const L: string[] = [];
-  L.push('vr-07 & vr-11 — REBUILT round 2, your three closing changes applied (2026-08-06)');
+  L.push('vr-11 for SIGN-OFF (+ vr-07 for reference) — your round-two rulings applied (2026-08-06)');
   L.push('Each item whole: stem, key (*), distractors + tags.');
-  L.push(' vr-07: your third diagnosis term-dropped added — four options again, three DISTINCT');
-  L.push('   tags (value-slip, operation-slip, term-dropped), no collision on any of the 25.');
+  L.push(' vr-07 [APPROVED, signed, recorded live]: term-dropped in — four options, three distinct tags.');
   L.push(' vr-11: direction RETIRED. Changing series field step-carryover + off-by-one (3 options).');
-  L.push('   CONSTANT series (T1-T2) now field ONLY off-by-one → 2 options: no second EXECUTABLE');
-  L.push('   diagnosis exists, so this is REPORTED, not invented (candidates + T5 in the reply).');
-  L.push(' vr-11 tiers: T3 13 / T4 13 now (was T3 20 / T4 6) — half the seeds re-grown to +3 (T4).');
-  L.push('Tag key — vr-07: value-slip, operation-slip, term-dropped.   vr-11: step-carryover, off-by-one.');
+  L.push('   CONSTANT series now four options: off-by-one + step-applied-twice + sum-of-last-two.');
+  L.push('   The gate confirmed sum-of-last-two on ALL 13 constant items — zero collisions.');
+  L.push(' vr-11 tiers: T1 7 / T2 6 / T3 13 / T4 13 / T5 0 (was T3 20 / T4 6). T5 spec is backlog.');
+  L.push('Tag key — vr-07: value-slip, operation-slip, term-dropped.');
+  L.push('  vr-11: step-carryover, off-by-one, step-applied-twice, sum-of-last-two.');
 
   const v7 = GENERATORS['vr-07-letters-for-numbers']!();
   L.push(`\n===== vr-07 letters-for-numbers — REBUILT (${v7.length}) [deployable after your sign-off] =====`);

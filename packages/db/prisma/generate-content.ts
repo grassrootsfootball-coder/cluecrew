@@ -369,16 +369,13 @@ function numberSeries(): GenItem[] {
     const operands: VrOperands = changing
       ? { kind: 'number-series', first: a, step: dBase, answer, last, prevStep }
       : { kind: 'number-series', first: a, step: dBase, answer };
-    // RETIRED direction (reviewer, 2026-08-06): every direction option was
-    // smaller than the first term — eliminable without arithmetic — and some
-    // produced 0 or a negative, meaningless as a VR option. No second EXECUTABLE
-    // diagnosis exists for constant series (step-carryover needs a changing gap),
-    // so — per "report rather than invent" — constant series field only off-by-one
-    // here; restoring their fourth option needs a reviewer-authored constant
-    // diagnosis (see the report). Changing series keep step-carryover + off-by-one.
+    // direction RETIRED (reviewer, 2026-08-06). Changing series field
+    // step-carryover + off-by-one. Constant series field the reviewer's authored
+    // constant diagnoses: off-by-one, step-applied-twice, and (gated on a
+    // no-collision check across all 13) sum-of-last-two — four options.
     const ids = changing
       ? ['vr-series-step-carryover', 'vr-series-off-by-one']
-      : ['vr-series-off-by-one'];
+      : ['vr-series-off-by-one', 'vr-series-step-applied-twice', 'vr-series-sum-of-last-two'];
     items.push({
       n: i + 1,
       tier,

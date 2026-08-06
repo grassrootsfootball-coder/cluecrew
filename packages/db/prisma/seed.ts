@@ -104,6 +104,19 @@ const MISCONCEPTIONS: Array<{
     },
   },
   {
+    // Reviewer-authored (2026-08-06), replacing the retired direction distractor
+    // for constant-step series. Her wording, verbatim.
+    id: 'vr-series-step-applied-twice',
+    description: 'Added the step twice from the last term, usually after losing track of the gaps.',
+    childHint: 'Take one jump from the last number, not two. Check the gaps first.',
+  },
+  {
+    // Reviewer-authored (2026-08-06), the optional fourth for constant series.
+    id: 'vr-series-sum-of-last-two',
+    description: 'Read the series as each term being the sum of the two before it, and added the last pair.',
+    childHint: 'Look at the gap between each pair. The gap is what tells you the next number.',
+  },
+  {
     id: 'vr-letter-series-step-repeat',
     description: 'Applied the letter step twice, overshooting the target.',
     childHint: 'One jump at a time! Count the step from the last letter just once.',

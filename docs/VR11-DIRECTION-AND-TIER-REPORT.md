@@ -28,19 +28,28 @@ Both are executable from the existing operands. With **one** of them a constant 
 reaches three options; with **both**, four. Your call which (or both) to author — I have
 not added them.
 
-## 2. A genuine T5 structure
+### RESOLVED (reviewer, 2026-08-06)
 
-The +2 / +3 growing step tops out at T4 — a bigger grow is more arithmetic, not a harder
-*structure*, so T5 stays honestly empty. Your two suggestions, made concrete:
+- **`series-stopped-early` REJECTED** — it gives the last term, already printed in the stem, so
+  it eliminates without reasoning (the same fault as `direction`). Not added.
+- **`series-double-step` ACCEPTED, renamed `vr-series-step-applied-twice`** — "Added the step
+  twice from the last term, usually after losing track of the gaps." Value = `answer + step`.
+- **`vr-series-sum-of-last-two` ADDED (her authoring)** — "Read the series as each term being the
+  sum of the two before it, and added the last pair." Value = `2·answer − 3·step`. The gate
+  confirmed **all 13** constant items carry it with zero collisions, so constant series are now
+  **four options**: off-by-one + step-applied-twice + sum-of-last-two.
 
-- **Two interleaved operations** — alternate two rules on odd/even positions, e.g.
-  `+3, ×2, +3, ×2 …` or `+2` on odds and `−1` on evens. The child must track two threads.
-  This also *unlocks new executable diagnoses* (applied-the-wrong-thread, applied-one-op-throughout).
-- **A multiplying step** — a geometric or step-multiplying series, e.g. `×2` (`3,6,12,24 → 48`)
-  or a step that itself multiplies. Distinct error space from additive series.
+## 2. A genuine T5 structure — RATIFIED (reviewer, 2026-08-06)
 
-Either is a real difficulty jump, not a magnitude bump. Recommend the interleaved-operations
-form: it carries the richest, most derivable set of misconceptions.
+Alternating operations, **five terms shown**: `3, 6, 12, 15, 30, ?` running `+3, ×2, +3, ×2`,
+answering **33**. A real structural jump, not a magnitude bump — the +2/+3 growing step tops
+out at T4, so T5 stays empty until this lands.
+
+It also **opens a new derivable error**: the child applying the wrong operation at the final
+step (`×2` instead of `+3`), giving **60**. That is a fresh executable diagnosis to author when
+the structure is built (`wrong-op-at-final-step`, value = apply the other operation to the last
+term). Backlog — her spec, not this job. Needs: a five-term series generator with an
+alternating-op operand shape, and the new diagnosis wired to the derivability gate.
 
 ## Recorded (not for action now): the vr-07 ladder caveat
 

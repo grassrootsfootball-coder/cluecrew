@@ -116,6 +116,16 @@ export const VR_EXECUTORS: Record<string, (op: VrOperands) => string[] | null> =
     op.last === undefined || op.prevStep === undefined ? null : [s(op.last + op.prevStep)],
   'vr-series-direction': (op) =>
     op.first === undefined || op.step === undefined ? null : [s(op.first - op.step)],
+  // Constant-series diagnoses (reviewer-authored, 2026-08-06, after direction was
+  // retired). On a constant step the last term is answer − step, so both compute
+  // from {answer, step} alone.
+  // step-applied-twice: two jumps of the step from the last term (last + 2·step).
+  'vr-series-step-applied-twice': (op) =>
+    op.answer === undefined || op.step === undefined ? null : [s(op.answer + op.step)],
+  // sum-of-last-two: read as Fibonacci — the last two shown terms added
+  // ((last−step) + last = 2·answer − 3·step).
+  'vr-series-sum-of-last-two': (op) =>
+    op.answer === undefined || op.step === undefined ? null : [s(2 * op.answer - 3 * op.step)],
 
   // vr-14 letter connections (analogy on letters)
   'vr14-step-size': (op) =>
