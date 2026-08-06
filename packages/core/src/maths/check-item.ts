@@ -66,11 +66,13 @@ export function checkMathsItem(spec: MathsItemSpec): MathsFailure[] {
     }
   }
 
-  // --- Annie's duplicate-id rule (2026-08-06) -----------------------------
-  // Two distractors may share a misconception id ONLY where it is the same error
-  // with a parameter varied — the wrong column read at tens vs at thousands —
-  // which means DIFFERENT values. Two distractors on one id with the SAME value
-  // means only one of them is really that error; the other is mislabelled.
+  // --- R11 + its parametric exemption (annie, 2026-08-06) -----------------
+  // R11 forbids two options in one item under one misconception. The acknowledged
+  // exemption (documented, like lineup-odd's single-axis one — see
+  // docs/MATHS-VOLUME-RUN.md): a PARAMETER-VARIED misconception — the same error at
+  // a different place, wrong column at tens vs thousands — may tag two options,
+  // BECAUSE it produces two different values. So a shared id with different values
+  // passes; a shared id with the SAME value means only one is really that error.
   const byId = new Map<string, Array<string | number>>();
   for (const d of spec.distractors) {
     if (!d.misconceptionId) continue;

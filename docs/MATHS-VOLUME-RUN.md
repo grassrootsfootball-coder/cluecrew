@@ -22,6 +22,26 @@ each distractor carries. The engine fills the numbers and `checkMathsItem` verif
 item. Batch 02 built this way: **12 items, 0 defects.** Two-pass review is annie's, same
 contract as batch 01. Batches ship in 40s.
 
+## Authoring guidance (annie's mechanical test, 2026-08-06)
+
+**Execute the description on the item's own numbers. If you must CHOOSE partway through
+which error it is, it is two entries, not one.** A description that runs cleanly to a
+single wrong number is one id; a description that forks — "does the first step, then
+*either* stops *or* does the wrong second step" — is hiding two children under one label
+and must be split. This is the test that catches a bundled id before it ships (it is why
+`stop-early` cuts across eight topic ids — see the two-ids report).
+
+### R11 and its parametric exemption (same shape as the lineup-odd documented exception)
+
+R11 forbids **two options in one item under a single misconception** (the double-key the
+place-value split — #61/#62 — was made to prevent). The **acknowledged exemption**: a
+misconception that is genuinely *parameter-varied* — the same error read at a different
+place, e.g. the wrong column at tens vs at thousands — may tag two options in one item,
+*because it produces two different values*. The gate enforces the boundary automatically:
+`checkMathsItem`'s `duplicate-id-same-value` rule permits a shared id with different values
+(the parametric case) and blocks a shared id with the same value (the mislabel case). Like
+lineup-odd's single-axis exception, this is a named, bounded permission — not a loophole.
+
 ## Annie's two rules — both now in the gate
 
 1. **Duplicate ids within an item** are fine only where the same misconception is *parameter-varied*
