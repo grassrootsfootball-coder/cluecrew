@@ -80,12 +80,17 @@ describe('worked-example CI — every executor produces its description example'
   // annie's mechanism: the reframed description carries the child's value, so the
   // executor run on the example's operands must equal it. This is what catches an
   // executor that has drifted from its own error (it would have failed #9's floor).
-  it('each executor matches MISCONCEPTION_EXAMPLES', async () => {
+  it('each executor matches MISCONCEPTION_EXAMPLES, and no example equals its key', async () => {
     const { MISCONCEPTION_EXAMPLES, answersEqual } = await import('./executors');
-    for (const [n, ex] of Object.entries(MISCONCEPTION_EXAMPLES)) {
-      const produced = MISCONCEPTION_EXECUTORS[Number(n)]!(ex.operands);
-      expect(produced, `#${n} executed to ${produced}, example says ${ex.childValue}`).not.toBeNull();
-      expect(answersEqual(produced, ex.childValue), `#${n}: ${produced} ≠ ${ex.childValue}`).toBe(true);
+    for (const [n, examples] of Object.entries(MISCONCEPTION_EXAMPLES)) {
+      for (const ex of examples) {
+        const produced = MISCONCEPTION_EXECUTORS[Number(n)]!(ex.operands);
+        // (1) the executor produces exactly what the child gives
+        expect(produced, `#${n} on ${JSON.stringify(ex.operands)} produced null`).not.toBeNull();
+        expect(answersEqual(produced, ex.childValue), `#${n}: executor ${produced} ≠ child ${ex.childValue}`).toBe(true);
+        // (2) the child's value is a real distractor — never equal to the key
+        expect(answersEqual(ex.childValue, ex.keyValue), `#${n}: distractor ${ex.childValue} equals key ${ex.keyValue}`).toBe(false);
+      }
     }
   });
 });

@@ -143,31 +143,34 @@ export function evalArithmetic(expr: string): number | null {
 export const CONCEPTUAL_ENTRIES = new Set([15, 20, 27, 28, 30, 31, 40, 41, 42, 43, 49, 50, 58, 59, 101]);
 
 /**
- * A worked example per executor — the operands and the value the CHILD gives.
- * annie's reframed descriptions carry both values in prose ("child gives X where
- * the answer is Y"); this is that example as executable data. The CI test asserts
- * executor(operands) === childValue, so an executor that drifts from its own
- * description fails WITHOUT a batch or an audit (it is what would have caught #9:
- * floor(3847) ≠ 3000). Extend as descriptions gain examples — 17 of 86 today.
+ * Worked examples per executor — engineering fixtures that exercise the executor,
+ * each carrying the operands, the value the CHILD gives, and the correct KEY. The
+ * CI test asserts BOTH: executor(operands) === childValue (a drifted executor
+ * fails — this is what would have caught #9's floor), AND childValue ≠ keyValue (a
+ * "distractor" equal to the key is no distractor — caught #57's median==mean and
+ * would have caught #31). Where the error is PARAMETRIC there are TWO examples, one
+ * canonical and one varying the parameter, so the test cannot pass by sidestepping
+ * the defect the way #1's single-zero example did. Covers the 17 executor-backed
+ * entries; the other 69 derivable entries need their executor authored first.
  */
-export const MISCONCEPTION_EXAMPLES: Record<number, { operands: MathsOperands; childValue: string }> = {
-  1: { operands: { number: 304 }, childValue: '34' },
-  6: { operands: { value: 3.4 }, childValue: '3.40' },
-  8: { operands: { options: [-10, -5] }, childValue: '-10' },
-  9: { operands: { value: 3847, place: 1000 }, childValue: '3000' },
-  10: { operands: { value: 25, place: 10 }, childValue: '20' },
-  11: { operands: { a: 42, b: 17 }, childValue: '35' },
-  16: { operands: { dividend: 3, divisor: 12 }, childValue: '4' },
-  22: { operands: { n1: 1, d1: 2, n2: 1, d2: 3 }, childValue: '2/5' },
-  25: { operands: { denominator: 3 }, childValue: '0.3' },
-  26: { operands: { decimal: 0.4 }, childValue: '0.4%' },
-  32: { operands: { hour: 2, minute: 45, addMinutes: 20 }, childValue: '2:65' },
-  37: { operands: { value: 1 }, childValue: '100' },
-  51: { operands: { a1: 2, b1: 4, a2: 4 }, childValue: '6' },
-  52: { operands: { part: 1, other: 3 }, childValue: '1/3' },
-  56: { operands: { values: [8, 5, 6] }, childValue: '19' },
-  57: { operands: { values: [3, 7, 5] }, childValue: '5' },
-  98: { operands: { a: 234, b: 158 }, childValue: '292' },
+export const MISCONCEPTION_EXAMPLES: Record<number, Array<{ operands: MathsOperands; childValue: string; keyValue: string }>> = {
+  1: [{ operands: { number: 304 }, childValue: '34', keyValue: '304' }, { operands: { number: 1000 }, childValue: '100', keyValue: '1000' }],
+  6: [{ operands: { value: 3.4 }, childValue: '3.40', keyValue: '34' }, { operands: { value: 5.2 }, childValue: '5.20', keyValue: '52' }],
+  8: [{ operands: { options: [-10, -5] }, childValue: '-10', keyValue: '-5' }, { operands: { options: [-8, -3] }, childValue: '-8', keyValue: '-3' }],
+  9: [{ operands: { value: 3847, place: 1000 }, childValue: '3000', keyValue: '4000' }, { operands: { value: 470, place: 100 }, childValue: '400', keyValue: '500' }],
+  10: [{ operands: { value: 25, place: 10 }, childValue: '20', keyValue: '30' }, { operands: { value: 250, place: 100 }, childValue: '200', keyValue: '300' }],
+  11: [{ operands: { a: 42, b: 17 }, childValue: '35', keyValue: '25' }, { operands: { a: 63, b: 28 }, childValue: '45', keyValue: '35' }],
+  16: [{ operands: { dividend: 3, divisor: 12 }, childValue: '4', keyValue: '0.25' }, { operands: { dividend: 2, divisor: 10 }, childValue: '5', keyValue: '0.2' }],
+  22: [{ operands: { n1: 1, d1: 2, n2: 1, d2: 3 }, childValue: '2/5', keyValue: '5/6' }, { operands: { n1: 1, d1: 4, n2: 1, d2: 6 }, childValue: '2/10', keyValue: '5/12' }],
+  25: [{ operands: { denominator: 3 }, childValue: '0.3', keyValue: '0.333' }, { operands: { denominator: 5 }, childValue: '0.5', keyValue: '0.2' }],
+  26: [{ operands: { decimal: 0.4 }, childValue: '0.4%', keyValue: '40%' }, { operands: { decimal: 0.7 }, childValue: '0.7%', keyValue: '70%' }],
+  32: [{ operands: { hour: 2, minute: 45, addMinutes: 20 }, childValue: '2:65', keyValue: '3:05' }, { operands: { hour: 3, minute: 50, addMinutes: 20 }, childValue: '3:70', keyValue: '4:10' }],
+  37: [{ operands: { value: 1 }, childValue: '100', keyValue: '1000' }, { operands: { value: 2 }, childValue: '200', keyValue: '2000' }],
+  51: [{ operands: { a1: 2, b1: 4, a2: 4 }, childValue: '6', keyValue: '8' }, { operands: { a1: 3, b1: 6, a2: 6 }, childValue: '9', keyValue: '12' }],
+  52: [{ operands: { part: 1, other: 3 }, childValue: '1/3', keyValue: '1/4' }, { operands: { part: 2, other: 5 }, childValue: '2/5', keyValue: '2/7' }],
+  56: [{ operands: { values: [8, 4, 6, 2] }, childValue: '20', keyValue: '5' }, { operands: { values: [12, 6, 9, 3] }, childValue: '30', keyValue: '7.5' }],
+  57: [{ operands: { values: [2, 4, 9] }, childValue: '4', keyValue: '5' }, { operands: { values: [1, 2, 9] }, childValue: '2', keyValue: '4' }],
+  98: [{ operands: { a: 234, b: 158 }, childValue: '292', keyValue: '392' }, { operands: { a: 345, b: 167 }, childValue: '412', keyValue: '512' }],
 };
 
 /** The entry number carried in a seed id, e.g. maths-11-commutative-subtraction → 11,
