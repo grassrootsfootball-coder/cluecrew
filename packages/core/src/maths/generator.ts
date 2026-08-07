@@ -119,13 +119,32 @@ export interface MathsFamily {
 }
 
 export interface LadderGap { familyId: string; issue: string; between?: [Tier, Tier] }
+
+/**
+ * DISTRICT-AGNOSTIC family contract (David, 2026-08-08: "English follows the maths model
+ * … on the existing engine"). The ladder gate, tier resolution and range renderer only
+ * ever read these members, so any district's family — maths operands, SPaG segments —
+ * runs on the SAME ladder/range machinery by satisfying this shape. The maths and English
+ * generators add their own assemble + gate on top; this is only the shared skeleton the
+ * structural-ladder gate and sample sheets bind to. `MathsFamily` and `SpagFamily` are
+ * both assignable here structurally — no `extends` needed.
+ */
+export interface LadderedFamily {
+  id: string;
+  tierRule: (tier: Tier) => string;
+  structuralParams?: (tier: Tier) => Record<string, string | number>;
+  numberRanges?: (tier: Tier) => Record<string, [number, number]>;
+  collapsed?: Tier;
+}
+
 /**
  * The structural-ladder gate (annie's spec). A multi-tier family must declare structural
  * parameters, and every adjacent tier pair must differ in at least one — otherwise the
  * tiers differ only in numeric range, which the range check alone would pass. Returns the
- * gaps; empty means every multi-tier family has a real (declared) ladder.
+ * gaps; empty means every multi-tier family has a real (declared) ladder. Generic over any
+ * LadderedFamily, so maths and SPaG share this one implementation.
  */
-export function structuralLadderGaps(families: MathsFamily[]): LadderGap[] {
+export function structuralLadderGaps(families: LadderedFamily[]): LadderGap[] {
   const gaps: LadderGap[] = [];
   for (const f of families) {
     const tiers = familyTiers(f);
@@ -149,7 +168,7 @@ export class GateError extends Error {}
 
 /** The tiers a family supports — those for which it states a tier rule. A family that
  *  starts at T3 (a two-step split-child) leaves T1-T2 blank. */
-export function familyTiers(family: MathsFamily): Tier[] {
+export function familyTiers(family: LadderedFamily): Tier[] {
   if (family.collapsed) return [family.collapsed];
   return ([1, 2, 3, 4, 5] as Tier[]).filter((t) => family.tierRule(t).trim() !== '');
 }

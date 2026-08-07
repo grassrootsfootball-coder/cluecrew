@@ -15,3 +15,9 @@ export * from './matching';
  *  stimulus and its cluster of items reach them. */
 export * from './tracks';
 export * from './passages';
+/** SPaG generator — English on the maths-family model (David, 2026-08-08): the eleven
+ *  rule-driven error franchises as generator families on the shared ladder/range engine. */
+export * from './spag-generator';
+export * from './spag-families';
+/** Vocabulary-in-context — semi-generable from the two-sense vault via the vr04 screen. */
+export * from './vocab-in-context';

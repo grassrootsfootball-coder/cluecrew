@@ -347,6 +347,29 @@ tagging; never tag from the slug or from memory of what an id "means". When a sl
 its description have drifted far enough to mislead, that is a library note (rename is
 v2), not a licence to tag by the slug.
 
+## R12 — Comprehension misconceptions cannot have executors — a property, not a gap
+*David, 2026-08-08, recorded during the English generator build.*
+
+A maths executor reproduces a distractor's VALUE by running the misconception on the
+item's operands (`MISCONCEPTION_EXECUTORS`, keyed by entry number) — the derivability gate
+then reproves it. That mechanism needs two things a comprehension item does not have:
+operands, and a single computable wrong value. A comprehension misconception is an
+error-TYPE of *reading* — mis-scoped retrieval, an inference the text does not license, a
+pull to the extreme option — and its "distractor" is a phrase chosen against a specific
+passage, not a number a function can emit. **There is nothing to execute, and that is a
+property of the content, not a coverage gap.**
+
+**The rule:** do NOT scope executors for the ~24 comprehension-domain entries. "0 of 24
+have an executor" is correct-by-nature and must never be read as work outstanding — the
+figure a maths reader would flag was never possible. What stands in for derivability by
+district: **maths** — the executor + derivability gate; **SPaG** — the legality gate
+(`assembleSpagItem`: every wrong option tagged (P3), no tie/repeat, floor held) with
+correctness of the untouched material guaranteed by drawing distractor segments from a
+pre-cleared bank; **vocabulary-in-context** — Annie's two-part bare-card screen (`checkVr04Row`:
+no distractor correct in the headword's other sense); **comprehension** — authored-and-
+reviewed distractors, each tagged to a reading error-type, checked by the line-reference gate
+for citation accuracy. Four districts, four correctness mechanisms; only maths executes.
+
 ## R11 — Minimality is load-bearing in constrained-deduction items
 *Annie, relayed by David, 2026-08-07 — the LOGIC-tail logic-grid shape (L-04, L-05).*
 
