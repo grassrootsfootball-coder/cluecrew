@@ -1,12 +1,11 @@
 import { describe, expect, it } from 'vitest';
 import { MATHS_FAMILIES } from './families';
-import { assembleItem, familyExecutorCoverage, generateSample, makeRng, type Tier } from './generator';
+import { familyExecutorCoverage, familyTiers, generateSample, type Tier } from './generator';
 import { checkMathsNotation } from './notation';
 
 describe('maths generator — every family emits only gated items', () => {
   for (const family of MATHS_FAMILIES) {
-    // Unit-price starts at T3; others run all five tiers.
-    const tiers: Tier[] = family.id === 'M-05a' ? [3, 4, 5] : [1, 2, 3, 4, 5];
+    const tiers = familyTiers(family);
     it(`${family.id} (${family.name}) generates 30/tier that pass the gate`, () => {
       for (const tier of tiers) {
         const items = generateSample(family, tier, 30, 12345);

@@ -90,6 +90,12 @@ export interface MathsFamily {
 
 export class GateError extends Error {}
 
+/** The tiers a family supports — those for which it states a tier rule. A family that
+ *  starts at T3 (a two-step split-child) leaves T1-T2 blank. */
+export function familyTiers(family: MathsFamily): Tier[] {
+  return ([1, 2, 3, 4, 5] as Tier[]).filter((t) => family.tierRule(t).trim() !== '');
+}
+
 /**
  * Assemble a drafted item into a gated GenMathsItem. Resolves each distractor to its
  * executed value (derived) or its authored value, then runs checkMathsItem and the
@@ -178,8 +184,11 @@ export function generateSample(family: MathsFamily, tier: Tier, count: number, s
       if (e instanceof GateError) continue;
       throw e;
     }
-    if (seen.has(item.stem)) continue;
-    seen.add(item.stem);
+    // Dedup on stem AND option values — a "pick the greatest" family shares one stem
+    // but varies the options, so the stem alone would collapse the whole sheet.
+    const key = `${item.stem}|${item.options.map((o) => o.value).sort().join(',')}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
     out.push(item);
   }
   if (out.length < count) throw new GateError(`${family.id} T${tier}: produced ${out.length}/${count} clean items — family defect, not a seed accident`);

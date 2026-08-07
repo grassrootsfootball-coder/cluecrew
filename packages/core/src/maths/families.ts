@@ -29,7 +29,37 @@ const ID = {
   divOther: 'maths-105-divided-by-the-other-quantity',
   roundDown: 'maths-106-always-rounds-down',
   proc: 'maths-proc-01-stopped-at-the-first-answer',
+  wrongCol: 'maths-61-reading-the-wrong-place-value-column',
+  faceValue: 'maths-62-reading-a-digit-at-face-value',
+  powerTen: 'maths-68-wrong-power-of-ten-scaling',
+  commSub: 'maths-11-commutative-subtraction',
+  droppedCarry: 'maths-69-dropped-calculation-carry',
+  colTotals: 'maths-70-two-digit-column-totals',
+  negInv: 'maths-08-negative-number-inversion',
+  negMiscount: 'maths-66-negative-number-miscount',
+  addNumDenom: 'maths-22-adding-numerators-and-denominators',
+  largerDenom: 'maths-21-larger-denominator-means-larger-fraction',
+  noCommonDenom: 'maths-29-comparing-without-common-denominators',
+  pctMoney: 'maths-77-treating-a-percentage-as-money',
+  pctUnit: 'maths-26-percentage-symbol-as-a-unit',
+  addScale: 'maths-51-additive-scaling',
+  unitarySlip: 'maths-92-unitary-proportion-slip',
+  ratioFrac: 'maths-52-ratio-to-fraction-confusion',
+  metricPrefix: 'maths-37-metric-prefix-confusion',
+  convWrongWay: 'maths-36-multiplying-to-convert-to-a-larger-unit',
+  base100time: 'maths-32-base-100-time',
+  h1224: 'maths-33-12-24-hour-confusion',
+  incMean: 'maths-56-incomplete-mean',
+  meanMedian: 'maths-57-mean-vs-median',
+  incTotal: 'maths-94-incomplete-statistical-total',
+  wrongStat: 'maths-95-reading-the-wrong-statistical-quantity',
+  perimAreaSwap: 'maths-87-perimeter-area-swap',
+  incompletePerim: 'maths-88-incomplete-perimeter',
+  composite: 'maths-90-composite-shape-area-slip',
 } as const;
+
+const pad2 = (n: number): string => String(n).padStart(2, '0');
+const gcd = (a: number, b: number): number => (b === 0 ? a : gcd(b, a % b));
 
 const money = (pounds: number): string => `£${pounds.toFixed(2)}`;
 
@@ -306,4 +336,352 @@ const unitPrice: MathsFamily = {
   },
 };
 
-export const MATHS_FAMILIES: MathsFamily[] = [rounding, timeAndMoney, wrongOperation, reversedDivision, misreadQuantity, unitFraction, unitPrice];
+// ---------- P-1 · Place value & ordering ----------
+const placeValue: MathsFamily = {
+  id: 'M-place',
+  name: 'Place value — value of a digit',
+  shape: 'Value of a digit / place value',
+  tierRule: (t) => ['', '3-digit whole number', '4-digit whole number', '5-digit whole number', '5-digit, higher columns', '6-digit whole number'][t]!,
+  ranges: (t) => ['', '100–999', '1,000–9,999', '10,000–99,999', '10,000–99,999', '100,000–999,999'][t]!,
+  draft: (tier, r) => {
+    const len = [0, 3, 4, 5, 5, 6][tier]!;
+    const posIdx = randInt(r, 2, len - 1); // hundreds or higher, so #61 ≠ face value
+    const place = 10 ** posIdx;
+    const d = randInt(r, 1, 9);
+    const digits: number[] = [];
+    for (let i = len - 1; i >= 0; i -= 1) {
+      if (i === posIdx) { digits.push(d); continue; }
+      let x = randInt(r, i === len - 1 ? 1 : 0, 9);
+      while (x === d) x = randInt(r, i === len - 1 ? 1 : 0, 9); // keep d unique in the number
+      digits.push(x);
+    }
+    const num = Number(digits.join(''));
+    return {
+      stem: `In ${num.toLocaleString('en-GB')}, what is the value of the digit ${d}?`,
+      solution: `${d} * ${place}`,
+      keyValue: String(d * place),
+      operands: { digit: d, place, shift: -1 },
+      hint: 'Find which column the digit sits in. Its value is the digit times that column.',
+      distractors: [
+        { entry: 61, id: ID.wrongCol }, // read one column to the right (derived)
+        { entry: 62, id: ID.faceValue, value: String(d) }, // face value
+        { entry: 68, id: ID.powerTen, value: String(d * place * 10) }, // read one column to the left
+      ],
+    };
+  },
+};
+
+// ---------- P-2 · Column arithmetic (bare subtraction) ----------
+const columnArithmetic: MathsFamily = {
+  id: 'M-column',
+  name: 'Column arithmetic — subtraction',
+  shape: 'Bare column arithmetic (+ − × ÷)',
+  tierRule: (t) => ['', '2-digit − 2-digit', '3-digit − 2/3-digit', '4-digit − 3-digit', '4-digit − 4-digit with borrows', '5-digit − 4-digit'][t]!,
+  ranges: (t) => ['', '20–99', '120–999', '1,200–9,999', '3,000–9,999', '12,000–99,999'][t]!,
+  draft: (tier, r) => {
+    const mag = [0, 10, 100, 1000, 1000, 10000][tier]!;
+    const a = randInt(r, mag * (tier >= 4 ? 3 : 2), mag * 10 - 1);
+    const b = randInt(r, mag, a - 1);
+    const key = a - b;
+    return {
+      stem: `Work out ${a.toLocaleString('en-GB')} − ${b.toLocaleString('en-GB')}.`,
+      solution: `${a} - ${b}`,
+      keyValue: String(key),
+      operands: { a, b },
+      hint: 'Line up the columns. Borrow from the next column when the top digit is smaller.',
+      distractors: [
+        { entry: 11, id: ID.commSub }, // |top − bottom| in each column (derived)
+        { entry: 84, id: ID.addDiff, value: String(a + b) }, // added instead of subtracting
+        { entry: 69, id: ID.droppedCarry, value: String(key + 10) }, // a borrow slip, over by ten
+      ],
+    };
+  },
+};
+
+// ---------- P-3 · Negative numbers ----------
+const negatives: MathsFamily = {
+  id: 'M-neg',
+  name: 'Negative numbers — greatest of a set',
+  shape: 'Negative numbers / temperature change',
+  tierRule: (t) => ['', 'greatest of three, −10..0', 'greatest of four, −15..0', 'greatest of four, −20..5', 'greatest of four, −30..10', 'order of five, −30..10'][t]!,
+  ranges: (t) => ['', '−10 to 0', '−15 to 0', '−20 to 5', '−30 to 10', '−30 to 10'][t]!,
+  draft: (tier, r) => {
+    const lo = [0, -10, -15, -20, -30, -30][tier]!;
+    const hi = [0, 0, 0, 5, 10, 10][tier]!;
+    const set = new Set<number>();
+    while (set.size < 4) set.add(randInt(r, lo, hi));
+    const nums = [...set];
+    const key = Math.max(...nums);
+    const furthest = nums.reduce((m, x) => (Math.abs(x) > Math.abs(m) ? x : m));
+    const others = nums.filter((n) => n !== key && n !== furthest);
+    return {
+      stem: 'Which of these numbers is the greatest?',
+      solution: null,
+      keyValue: String(key),
+      operands: { options: nums },
+      hint: 'On a number line, greater means further to the right. Zero beats every minus.',
+      distractors: [
+        { entry: 8, id: ID.negInv }, // furthest from zero read as greatest (derived)
+        { entry: 66, id: ID.negMiscount, value: String(others[0]) },
+        { entry: 66, id: ID.negMiscount, value: String(others[1]) },
+      ],
+    };
+  },
+};
+
+// ---------- P-4 · Fractions: add / subtract ----------
+const fractionsAddSub: MathsFamily = {
+  id: 'M-frac',
+  name: 'Fractions — adding unit fractions',
+  shape: 'Add / subtract / compare fractions',
+  tierRule: (t) => ['', 'proper fractions, denominators to 5', 'proper fractions, denominators to 5', 'proper fractions, denominators to 6', 'proper fractions, denominators to 8', 'proper fractions, denominators to 9'][t]!,
+  ranges: (t) => ['', 'denom 2–5', 'denom 2–5', 'denom 2–6', 'denom 3–8', 'denom 3–9'][t]!,
+  draft: (tier, r) => {
+    const cap = [0, 5, 5, 6, 8, 9][tier]!;
+    const d1 = randInt(r, 2, cap);
+    const d2 = randInt(r, 2, cap);
+    const n1 = randInt(r, 1, d1 - 1);
+    const n2 = randInt(r, 1, d2 - 1);
+    const num = n1 * d2 + n2 * d1;
+    const den = d1 * d2;
+    if (num >= den) return { stem: '', solution: null, keyValue: 'x', operands: {}, distractors: [] }; // proper sum only — retry
+    const g = gcd(num, den);
+    return {
+      stem: `What is ${n1}/${d1} + ${n2}/${d2}?`,
+      solution: null,
+      keyValue: `${num / g}/${den / g}`,
+      operands: { n1, d1, n2, d2 },
+      hint: 'Give the two fractions the same bottom number first. Then add the tops.',
+      distractors: [
+        { entry: 22, id: ID.addNumDenom }, // add tops and bottoms: (n1+n2)/(d1+d2) (derived)
+        { entry: 21, id: ID.largerDenom, value: `${n1 + n2}/${Math.max(d1, d2)}` }, // added tops, kept the larger bottom
+        { entry: 29, id: ID.noCommonDenom, value: `${n1 + n2}/${den}` }, // added tops over the multiplied bottom
+      ],
+    };
+  },
+};
+
+// ---------- P-5a · Percentage of an amount ----------
+const percentageOfAmount: MathsFamily = {
+  id: 'M-pct',
+  name: 'Percentage of an amount',
+  shape: 'Percentage of an amount / % change',
+  tierRule: (t) => ['', '10% / 50% of round amounts', '10/25/50% of round amounts', 'multiples of 5% ', '5% steps, 3-digit amount', 'reverse and % change'][t]!,
+  ranges: (t) => ['', '10/50% of 20–200', '10/25/50% of 40–400', '5–90% of 20–200', '5–95% of 100–900', '5–90% of 100–900'][t]!,
+  draft: (tier, r) => {
+    const pct = tier <= 1 ? randPick(r, [10, 50]) : tier === 2 ? randPick(r, [10, 25, 50]) : randInt(r, 1, 19) * 5;
+    const step = pct % 25 === 0 ? 4 : 20; // amount a multiple that keeps the answer whole
+    const amount = randInt(r, 2, 22 + tier * 4) * step * (tier >= 4 ? 5 : 1);
+    const key = (pct * amount) / 100;
+    return {
+      stem: `What is ${pct}% of ${amount}?`,
+      solution: `${pct} * ${amount} / 100`,
+      keyValue: String(key),
+      operands: { percent: pct, amount },
+      hint: 'Find one per cent first by dividing by 100. Then multiply by the percentage.',
+      distractors: [
+        { entry: 77, id: ID.pctMoney, value: String(pct) }, // read the percentage as the answer
+        { entry: 26, id: ID.pctUnit, value: String((pct * amount) / 10) }, // divided by 10, not 100
+        { entry: 92, id: ID.unitarySlip, value: String(amount + key) }, // added the percentage on instead
+      ],
+    };
+  },
+};
+
+// ---------- P-5b · Ratio share ----------
+const ratioShare: MathsFamily = {
+  id: 'M-ratio',
+  name: 'Ratio share',
+  shape: 'Ratio share',
+  tierRule: (t) => ['', '', 'two-part ratio, larger share', 'two-part ratio, either share', 'two-part, larger totals', 'two-part, 3-digit totals'][t]!,
+  ranges: (t) => ['', '', 'ratio parts 1–4, total to 60', 'parts 1–5, total to 90', 'parts 1–6, total to 150', 'parts 2–7, total to 300'][t]!,
+  draft: (tier, r) => {
+    const a = randInt(r, 1, 3 + tier);
+    let b = randInt(r, 1, 3 + tier);
+    while (b === a) b = randInt(r, 1, 3 + tier);
+    const parts = a + b;
+    const unit = randInt(r, 3, 6 + tier * 2);
+    const total = parts * unit;
+    const large = Math.max(a, b) * unit;
+    return {
+      stem: `${total} sweets are shared in the ratio ${a} : ${b}. What is the larger share?`,
+      solution: `${Math.max(a, b)} * ${total} / ${parts}`,
+      keyValue: String(large),
+      operands: { total, a, b },
+      hint: 'Add the ratio numbers to find how many equal parts. Share the total into those.',
+      distractors: [
+        { entry: 92, id: ID.unitarySlip, value: String(Math.min(a, b) * unit) }, // gave the smaller share
+        { entry: 51, id: ID.addScale, value: String(unit) }, // gave one part only
+        { entry: 52, id: ID.ratioFrac, value: String(total) }, // gave the whole total, did not share
+      ],
+    };
+  },
+};
+
+// ---------- P-6a · Metric conversion ----------
+const metricConversion: MathsFamily = {
+  id: 'M-convert',
+  name: 'Metric unit conversion',
+  shape: 'Unit conversion (length/mass/volume)',
+  tierRule: (t) => ['', 'kg→g, whole', 'km→m / l→ml, whole', 'kg→g, 2-digit', 'larger whole values', 'multi-unit values'][t]!,
+  ranges: (t) => ['', '1–9 kg', '1–9 km/l', '10–90 kg', '10–900', '100–9,000'][t]!,
+  draft: (tier, r) => {
+    // All ×1000 conversions, so #37 (prefix-as-×100) is always a wrong value, never the key.
+    const [big, small, factor] = randPick(r, [['kg', 'g', 1000], ['km', 'm', 1000], ['litres', 'ml', 1000], ['g', 'mg', 1000]] as [string, string, number][]);
+    const value = randInt(r, 1, [0, 12, 12, 90, 900, 9000][tier]!);
+    const key = value * factor;
+    return {
+      stem: `Convert ${value} ${big} to ${small}.`,
+      solution: `${value} * ${factor}`,
+      keyValue: String(key),
+      operands: { value },
+      hint: 'There are 1000 small units in each big one. Multiply to go from big to small.',
+      distractors: [
+        { entry: 37, id: ID.metricPrefix }, // ×100 not ×1000 (derived)
+        { entry: 36, id: ID.convWrongWay, value: String(value) }, // did not convert
+        { entry: 68, id: ID.powerTen, value: String(value * factor * 10) }, // ×10000
+      ],
+    };
+  },
+};
+
+// ---------- P-6b · Time interval ----------
+const timeInterval: MathsFamily = {
+  id: 'M-time',
+  name: 'Time interval',
+  shape: 'Time interval / timetable journey',
+  tierRule: (t) => ['', 'add minutes across the hour', 'add across the hour, larger', 'add across the hour, any start', 'add over an hour', 'timetable across the hour'][t]!,
+  ranges: (t) => ['', 'start :35–:55, add 10–35', 'start :30–:55, add 10–40', 'start :20–:55, add 15–45', 'start :15–:55, add 20–50', 'start any, add 20–55'][t]!,
+  draft: (tier, r) => {
+    const startH = randInt(r, 1, 5);
+    const startM = randInt(r, 3, 11) * 5; // 15–55
+    const addM = randInt(r, 3, 11) * 5;
+    if (startM + addM < 60) return { stem: '', solution: null, keyValue: 'x', operands: {}, distractors: [] }; // forces a retry (crosses the hour)
+    const endM = startM + addM - 60;
+    const key = `${startH + 1}:${pad2(endM)}`;
+    return {
+      stem: `A film starts at ${startH}:${pad2(startM)} and lasts ${addM} minutes. What time does it end?`,
+      solution: null,
+      keyValue: key,
+      operands: { hour: startH, minute: startM, addMinutes: addM },
+      hint: 'Count on to the next hour first. Then add the minutes that are left.',
+      distractors: [
+        { entry: 32, id: ID.base100time }, // no 60 rollover: H:(m+add) (derived)
+        { entry: 33, id: ID.h1224, value: `${startH + 1}:${pad2(startM)}` }, // added an hour, kept the minutes
+        { entry: 70, id: ID.colTotals, value: `${startH}:${pad2(endM)}` }, // right minutes, forgot the hour
+      ],
+    };
+  },
+};
+
+// ---------- P-7 · Statistics: averages ----------
+const statisticsAverages: MathsFamily = {
+  id: 'M-stats',
+  name: 'Statistics — mean of a list',
+  shape: 'Mean of a list',
+  tierRule: (t) => ['', 'mean of four small values', 'mean of four values', 'mean of five values', 'mean of five, larger', 'mean of six values'][t]!,
+  ranges: (t) => ['', '4 values 1–12', '4 values 1–20', '5 values 1–20', '5 values 1–40', '6 values 1–40'][t]!,
+  draft: (tier, r) => {
+    const count = [0, 4, 4, 5, 5, 6][tier]!;
+    const hi = [0, 12, 20, 20, 40, 40][tier]!;
+    const mean = randInt(r, 3, hi - 2);
+    const vals: number[] = [];
+    for (let i = 0; i < count - 1; i += 1) vals.push(randInt(r, 1, hi));
+    const last = mean * count - vals.reduce((s, x) => s + x, 0);
+    if (last < 1 || last > hi) return { stem: '', solution: null, keyValue: 'x', operands: {}, distractors: [] }; // retry: keep the last value in range
+    vals.push(last);
+    const sum = mean * count;
+    const sorted = [...vals].sort((x, y) => x - y);
+    const median = count % 2 ? sorted[(count - 1) / 2]! : (sorted[count / 2 - 1]! + sorted[count / 2]!) / 2;
+    return {
+      stem: `A team scored ${vals.join(', ')} points in ${count} games. What is the mean score?`,
+      solution: `(${vals.join(' + ')}) / ${count}`,
+      keyValue: String(mean),
+      operands: { values: vals },
+      hint: 'Add all the scores together. Then divide by how many games there were.',
+      distractors: [
+        { entry: 56, id: ID.incMean }, // gave the total, forgot to divide (derived)
+        { entry: 57, id: ID.meanMedian, value: String(median) }, // gave the median
+        { entry: 95, id: ID.wrongStat, value: String(Math.max(...vals) - Math.min(...vals)) }, // gave the range
+      ],
+    };
+  },
+};
+
+// ---------- P-8 · Geometry: calculate from given numbers (annie's axis) ----------
+// Numbers are GIVEN in the stem — the "calculate" family. The diagram-READING family
+// (find the numbers off a figure) groups with scale-reading and needs a render component.
+const geometryCalculate: MathsFamily = {
+  id: 'M-geom',
+  name: 'Geometry — perimeter and area from given lengths',
+  shape: 'Perimeter / area of a rectangle',
+  tierRule: (t) => ['', 'perimeter, 1-digit sides', 'perimeter, 2-digit sides', 'area, 1–2 digit sides', 'perimeter or area, larger', 'perimeter or area, 2-digit'][t]!,
+  ranges: (t) => ['', 'sides 3–9 cm', 'sides 6–20 cm', 'sides 4–15 cm', 'sides 8–30 cm', 'sides 10–40 cm'][t]!,
+  draft: (tier, r) => {
+    const l = randInt(r, [0, 5, 8, 6, 10, 12][tier]!, [0, 16, 24, 18, 32, 44][tier]!);
+    let w = randInt(r, 3, l - 1); // w < l so perimeter ≠ area coincidences are rarer
+    if (w < 2) w = 2;
+    const area = l * w;
+    const perim = 2 * (l + w);
+    if (tier === 3) { // area tier
+      return {
+        stem: `A rectangle is ${l} cm long and ${w} cm wide. What is its area in cm²?`,
+        solution: `${l} * ${w}`,
+        keyValue: String(area),
+        operands: { l, w },
+        hint: 'Area is the space inside. Multiply the length by the width.',
+        distractors: [
+          { entry: 87, id: ID.perimAreaSwap, value: String(perim) }, // gave the perimeter
+          { entry: 88, id: ID.incompletePerim, value: String(l + w) }, // added the two sides once
+          { entry: 90, id: ID.composite, value: String(l * w + l) }, // an extra strip added
+        ],
+      };
+    }
+    return {
+      stem: `A rectangle is ${l} cm long and ${w} cm wide. What is its perimeter in cm?`,
+      solution: `2 * (${l} + ${w})`,
+      keyValue: String(perim),
+      operands: { l, w },
+      hint: 'Perimeter is all the way round. Add all four sides, or double the length plus width.',
+      distractors: [
+        { entry: 87, id: ID.perimAreaSwap, value: String(area) }, // gave the area
+        { entry: 88, id: ID.incompletePerim, value: String(l + w) }, // added the two sides once, no doubling
+        { entry: 70, id: ID.colTotals, value: String(2 * l + w) }, // doubled the length only
+      ],
+    };
+  },
+};
+
+// ---------- M-06b · Worded fraction of an amount (composition; split-child) ----------
+const wordedFraction: MathsFamily = {
+  id: 'M-06b',
+  name: 'Fraction of an amount — worded (two-step)',
+  shape: 'Fraction of an amount',
+  tierRule: (t) => ['', '', '', 'find a unit fraction, then the rest', 'unit fraction of a 2-digit amount, then the rest', 'unit fraction of a 3-digit amount, then the rest'][t]!,
+  ranges: (t) => ['', '', '', 'denom 2–4, amount 12–48', 'denom 3–5, amount 30–120', 'denom 3–6, amount 60–240'][t]!,
+  draft: (tier, r) => {
+    const denom = randInt(r, 2 + Math.floor((tier - 3) / 1), 4 + (tier - 3));
+    const part = randInt(r, 6, 12 + (tier - 3) * 12);
+    const amount = denom * part; // 1/denom of amount = part (whole)
+    const key = amount - part; // how many are LEFT
+    const obj = randPick(r, OBJECTS);
+    return {
+      stem: `There are ${amount} ${obj}. One ${obj.slice(0, -1)} in ${denom} is taken. How many are left?`,
+      solution: `${amount} - ${amount} / ${denom}`,
+      keyValue: String(key),
+      operands: { firstStepResults: [part] },
+      hint: 'Work out how many are taken first. Then take that from the total.',
+      distractors: [
+        { entry: 0, id: ID.proc, value: String(part), process: true }, // stopped at the part taken (derived)
+        { entry: 84, id: ID.addDiff, value: String(amount + part) }, // added the part instead
+        { entry: 92, id: ID.unitarySlip, value: String(amount - denom) }, // took the denominator, not the part
+      ],
+    };
+  },
+};
+
+export const MATHS_FAMILIES: MathsFamily[] = [
+  rounding, timeAndMoney, wrongOperation, reversedDivision, misreadQuantity, unitFraction, unitPrice,
+  placeValue, columnArithmetic, negatives, fractionsAddSub, percentageOfAmount, ratioShare,
+  metricConversion, timeInterval, statisticsAverages, geometryCalculate, wordedFraction,
+];
