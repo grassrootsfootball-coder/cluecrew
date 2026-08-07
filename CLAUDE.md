@@ -21,6 +21,15 @@ The build is governed by documents, and the documents win arguments.
   end a sentence for the ≤16-word reading-age cap (reviewer, 2026-08-05, every
   district). A clause a dash breaks off still counts toward the cap; if a hint
   needs a dash to read, split it into two sentences with a full stop instead.
+- HOUSE NOTATION is a gate, not an export patch (reviewer, 2026-08-07, maths):
+  money on the £ symbol (£5.00, never "5.00 pounds"), temperatures with the
+  degree sign (4°C, never "4C"), areas/volumes with a real superscript (48 cm²,
+  never "cm2"). Batch 01 was fixed by a manual edit on its own export file, so
+  batches 04-05 regressed — at 900 items nobody catches it by reading. The rule
+  lives in `checkMathsNotation`/`normaliseMathsNotation` (packages/core) and runs
+  inside the one child-facing gate (`checkItemChildFacing`), so every door
+  enforces it. An import door NORMALISES then gates; the degree sign is reported,
+  never auto-inserted (a bare "C" may be a label).
 - Content decisions (items, chapters, misconceptions) go through the CMS
   review pipeline; nothing skips the reviewer.
 - A script that applies reviewer decisions RE-EXPORTS the affected artefact as

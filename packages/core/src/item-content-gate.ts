@@ -18,7 +18,19 @@
  */
 import { checkChildFacingText, spansPresentIn, type ContentFailure } from './content-gates';
 import { roleForItemStem } from './content-gates';
+import { checkMathsNotation } from './maths/notation';
 import { lettersNamedNotOnCard, wordOptionsNamedNotOnCard } from './word-puzzles';
+
+/** Every string in a Json value, INCLUDING single-token ones — the notation gate
+ *  needs to see a bare "cm2" or "5C" option that textsFrom skips as a token. */
+function everyString(value: unknown, path: string): Array<[string, string]> {
+  if (typeof value === 'string') return [[path, value]];
+  if (Array.isArray(value)) return value.flatMap((entry, i) => everyString(entry, `${path}[${i}]`));
+  if (value && typeof value === 'object') {
+    return Object.entries(value as Record<string, unknown>).flatMap(([k, entry]) => everyString(entry, path ? `${path}.${k}` : k));
+  }
+  return [];
+}
 
 /** Every readable string in a Json value, path-labelled. A lone word (no space)
  *  is a token, not prose, and is skipped — matching the serving sweep. */
@@ -109,6 +121,20 @@ export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
       failures.push(
         ...checkChildFacingText({ role: 'item-option', label: `item:${item.id} option.${path}`, text, testedTokens }),
       );
+    }
+  }
+
+  // House notation over EVERY child-facing string — stem, options (single tokens
+  // too), and the walk script/hint. Money on £, temperatures with the degree sign,
+  // areas/volumes with a real superscript. A word or ascii form is a defect: the
+  // batch-01 fix was a manual edit on one export, so batches 04-05 regressed and no
+  // reviewer sees it by eye at scale. One gate, every door.
+  const notationSources: Array<[string, unknown]> = [['stem', item.stem], ['explanation', item.explanation], ...item.options.map((o, i): [string, unknown] => [`option[${i}]`, o.content])];
+  for (const [root, value] of notationSources) {
+    for (const [path, text] of everyString(value, root)) {
+      for (const issue of checkMathsNotation(text)) {
+        failures.push({ where: `item:${item.id} ${path}`, rule: 'notation', detail: `${issue.kind}: "${issue.found}" → house form "${issue.suggestion}"` });
+      }
     }
   }
   return failures;

@@ -79,7 +79,7 @@ export const ROLE_RULES: Record<ContentRole, RoleRules> = {
 
 export interface ContentFailure {
   where: string;
-  rule: 'sentence-length' | 'long-words' | 'banned-vocabulary' | 'internal-id-leak' | 'us-spelling';
+  rule: 'sentence-length' | 'long-words' | 'banned-vocabulary' | 'internal-id-leak' | 'us-spelling' | 'notation';
   detail: string;
   /**
    * Absent means 'error' — every rule that existed before UK spelling arrived

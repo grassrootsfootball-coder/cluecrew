@@ -2582,6 +2582,40 @@ accept/suspect/pause; "question" had been a near-synonym of the stem, not a weak
 One residual wrong-degree remains at T5-07 (accept), which is what the pool count
 of six reflects.
 
+## Entry 53 — Batches 04-05 pre-review: notation made a gate, and two structural flags
+*2026-08-07. Annie approved 04/05 subject to a notation fix and two questions answered before batch 06.*
+
+**Notation was regressing, not just wrong.** Batch 01 shows £5.00 / 4°C / 48 cm²;
+batches 04-05 write "5.00 pounds" / "5C" / "cm2" — zero symbols anywhere. The batch-01
+fix was a MANUAL edit on that file (`MATHS-CALIBRATION-ANNIE-PASS.md`, "notation applied
+to the batch", `.bak-2026-08-06`), so nothing systemic changed and the next batches came
+back worse. Fixed at the point of production: `checkMathsNotation` / `normaliseMathsNotation`
+(packages/core/maths/notation.ts) now run inside the one child-facing gate
+(`checkItemChildFacing`), so every door — serving sweep, publish, a future import door —
+rejects the word/ascii forms. Verified against the real files: the gate flags 21 defects
+across 7 items in 04, 11 across 3 items in 05 (child-facing text only; the reviewer's
+higher raw counts include the internal `notes`/`distractorWorking` fields a child never
+sees). The import door NORMALISES then gates; the degree sign is reported, never
+auto-inserted, because a bare "C" can be a label.
+
+**Parallel forms are NOT deliberate — the shape inventory is ~40 deep.** Both batches
+instantiate the identical 40 slot-codes with an identical tier map (8/13/11/6/2), and
+~20 stems are the same shape with only the numbers changed (NPV-01 "value of a digit",
+NPV-04 "round to the nearest 100", GEOM-05 the *same* 12×8 rectangle with a different
+corner cut). There is no `form`/`variant` field and no serving rule preventing a child
+from seeing two fills of one shape, and there is no maths item generator in the repo —
+the items are authored JSON re-filling a fixed skeleton. So at 900 items the volume run
+yields a bank ~40 shapes WIDE and ~23 fills DEEP, not 900 distinct shapes. Before batch
+06: either (a) treat them AS parallel forms — a shape-id on every item plus a rule that
+no child sees two fills of the same shape (useful for retries and mock variants), or
+(b) expand the shape inventory well past 40. This must be decided before 17 more batches
+harden the pattern.
+
+**Tier skew, confirmed and upside-down.** Combined tiers are T1 16 / T2 26 / T3 22 /
+T4 12 / T5 4 — T1-T2 = 42 against T4-T5 = 16, with T2 (not T3) the mode. For a bank the
+spec centres on T3 this is inverted; the batch-mix tier weights (or the per-batch tier
+template both batches copied) need correcting before the run scales.
+
 **Distribution discipline.** example-anchor capped at ~half from the start (it sits
 in every pool and would otherwise become the predictable slot); the served split
 lands eA at 18 of 98 across the whole bank. reversed-relation (3 rows) and same-topic
