@@ -284,3 +284,51 @@ All three routes to REVIEWED refuse a flagged item, and the check sits in
 fairness problem a reviewer can weigh — it is answerable, just unfairly. An
 item whose rule produces nothing, or produces something other than the key, is
 broken. The first is reported; only the second blocks.
+
+## R9 — The two-distractor floor: don't force a fourth option that collides with the key
+*Cowork finding, maths volume run batches 04–05, 2026-08-07. Recorded by David.*
+
+Some items can only carry **two** honest distractors, because a third would be
+**correct by construction** — a defensible second answer, not a wrong one. Forcing
+a fourth option on them manufactures the very ambiguity R8's sibling rule (single-
+answer) exists to prevent. The floor is a property of the item's structure, not a
+gap to fill.
+
+Two from the batch run:
+
+- **`#52` ratio-to-fraction is a lone wolf.** On a bare "what fraction is red, from a
+  1:3 ratio" item there is no second or third ratio-to-fraction sibling to fill the
+  other slots without straying into another topic. Hardest instance: **2:5**, where
+  2/5 (correct part-to-whole) and 2/7 (part-to-part read as a fraction) are *both*
+  defensible — so the item floors at one clean distractor, not three.
+- **Metric g↔kg affords only two clean distractors** — ×1000 the wrong way (`#36`)
+  and the wrong prefix (`#37`). A third strains, because `#68` is now narrowed to the
+  hundreds context. Not a gap to fill: **allow-list the family, or don't demand a
+  fourth option on it.**
+
+**The rule:** where a family's structure yields fewer than three distinct, non-
+colliding distractors, the item ships with what it honestly has and the family is
+allow-listed — never topped up with an option that is defensibly correct.
+
+## R10 — Tag against the entry's current wording, not its id slug (slug drift)
+*Cowork finding, maths volume run batches 04–05, 2026-08-07. Recorded by David.*
+
+A misconception id's **slug** — the human-readable tail of `maths-88-incomplete-perimeter`
+— is frozen at creation, but the entry's **description** is re-worded and narrowed as
+the library is calibrated. After a narrowing pass the slug lags the meaning, and a
+tagger reading the slug tags by the sense it *used* to carry. The description is
+authoritative; the slug is a label, not the definition.
+
+Two mis-tags the batch cold-read caught, both slug-driven:
+
+- **`#71`** now means *a given number is never used*, not *stopped halfway* — its slug
+  still reads like the latter. A "found the rest and stopped" distractor tagged `#71`
+  by the slug was retagged to **PROC-01**.
+- **`#88`** ("missed-a-side" / incomplete-perimeter) was hung on a **half-perimeter**
+  value it does not produce; the slug looked close enough. Retagged to a real
+  missed-a-side value.
+
+**The rule:** read the entry's current `description` beside the distractor before
+tagging; never tag from the slug or from memory of what an id "means". When a slug and
+its description have drifted far enough to mislead, that is a library note (rename is
+v2), not a licence to tag by the slug.
