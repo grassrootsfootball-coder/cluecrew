@@ -10,7 +10,7 @@
  */
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
-import { MATHS_FAMILIES, derive, familyExecutorCoverage, familyTiers, generateSample, mathsEntryNumber, type GenMathsItem, type MathsFamily, type Tier } from '@cluecrew/core';
+import { MATHS_FAMILIES, derive, familyExecutorCoverage, familyTiers, generateSample, mathsEntryNumber, renderNumberRanges, type GenMathsItem, type MathsFamily, type Tier } from '@cluecrew/core';
 import { deliver, freshnessStamp, stampedName } from './lib/export-destination';
 
 const OUT_DIR = resolve(import.meta.dirname, '../content/exports');
@@ -30,9 +30,11 @@ function isDerived(item: GenMathsItem, opt: GenMathsItem['options'][number]): bo
 
 function renderFamily(family: MathsFamily): string {
   const L: string[] = [];
-  const tiers: Tier[] = family.id === 'M-05a' ? [3, 4, 5] : [1, 2, 3, 4, 5];
+  const tiers: Tier[] = familyTiers(family); // honours collapsed families (single tier)
   L.push(`## ${family.id} — ${family.name}`);
-  L.push(`*Shape: ${family.shape}. Generated through the derivability + notation gates; every item below passed both.*\n`);
+  L.push(`*Shape: ${family.shape}. Generated through the derivability + notation gates; every item below passed both.*`);
+  if (family.collapsed) L.push(`**COLLAPSED to a single tier (T${family.collapsed}) — no structural ladder; a proposed level, not five tiers to sign.**`);
+  L.push('');
 
   const cov = familyExecutorCoverage(family);
   L.push('**Executor coverage (annie requirement #2).** A derived distractor is recomputed by the gate on the item\'s numbers; an authored one is trusted to the author (disclosed, not gate-verified).');
@@ -45,7 +47,7 @@ function renderFamily(family: MathsFamily): string {
     const items = generateSample(family, tier, PER_TIER, SEED);
     L.push(`### Tier ${tier}`);
     L.push(`- **Tier rule:** ${family.tierRule(tier)}`);
-    L.push(`- **Number ranges:** ${family.ranges(tier)}`);
+    L.push(`- **Number ranges:** ${family.ranges ? family.ranges(tier) : family.numberRanges ? renderNumberRanges(family.numberRanges(tier)) : "—"}`);
     if (items[0]?.hint) L.push(`- **Hint:** ${items[0].hint}`);
     L.push('');
     items.forEach((item, i) => {

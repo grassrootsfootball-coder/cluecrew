@@ -72,14 +72,14 @@ describe('maths generator — every family emits only gated items', () => {
     }
   });
 
-  it('structural-ladder gate: signed ladder families pass; magnitude-only families are flagged', () => {
+  it('structural-ladder gate is clean: every multi-tier family has a real declared ladder', () => {
+    // After the collapse, the magnitude-only families are single-tier (make no ladder claim)
+    // and the six laddered families (M-round/M-money/M-column/M-pct/M-geom/M-inverse) each
+    // differ structurally at every step. So no gaps remain.
     const gaps = structuralLadderGaps(MATHS_FAMILIES);
-    const flagged = new Set(gaps.map((g) => g.familyId));
-    // The three signed families declare a distinct structural parameter at every step.
-    for (const id of ['M-pct', 'M-geom', 'M-inverse']) expect(flagged.has(id), `${id} should pass the ladder gate`).toBe(false);
-    // A representative magnitude-only family (annie's hollow example) is caught.
-    expect(flagged.has('M-06a')).toBe(true);
-    expect(flagged.has('M-column')).toBe(true);
+    expect(gaps, `unexpected ladder gaps: ${gaps.map((g) => `${g.familyId}[${g.between ?? '-'}]`).join(', ')}`).toEqual([]);
+    // And the collapsed families really are single-tier.
+    for (const id of ['M-06a', 'M-04a', 'M-stats']) expect(familyTiers(MATHS_FAMILIES.find((f) => f.id === id)!)).toHaveLength(1);
   });
 
   it('executor coverage is reportable per family (annie requirement #2)', () => {

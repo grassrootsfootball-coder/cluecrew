@@ -108,6 +108,13 @@ export interface MathsFamily {
   ranges?: (tier: Tier) => string;
   /** Allow-listed to ship fewer than three distractors (the two-distractor floor, R9). */
   distractorFloor?: 2;
+  /**
+   * COLLAPSED to a single tier (annie's ruling, 2026-08-07): a family with no structural
+   * ladder claims ONE honest tier, not five false ones. familyTiers returns just this tier.
+   * The latent ladder a v2 rebuild would add is recorded in the family's own comment so v2
+   * does not rediscover it.
+   */
+  collapsed?: Tier;
   draft: (tier: Tier, r: () => number) => FamilyItemDraft;
 }
 
@@ -143,6 +150,7 @@ export class GateError extends Error {}
 /** The tiers a family supports — those for which it states a tier rule. A family that
  *  starts at T3 (a two-step split-child) leaves T1-T2 blank. */
 export function familyTiers(family: MathsFamily): Tier[] {
+  if (family.collapsed) return [family.collapsed];
   return ([1, 2, 3, 4, 5] as Tier[]).filter((t) => family.tierRule(t).trim() !== '');
 }
 

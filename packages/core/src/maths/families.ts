@@ -65,6 +65,21 @@ const ID = {
 const pad2 = (n: number): string => String(n).padStart(2, '0');
 const gcd = (a: number, b: number): number => (b === 0 ? a : gcd(b, a % b));
 
+/** Column-subtraction exchange analysis: how many borrows, and whether any borrow had to
+ *  pass THROUGH a zero (the across-zero case). Lets M-column tier on the exchange, not size. */
+function subInfo(a: number, b: number): { borrows: number; acrossZero: boolean } {
+  const da = String(a).split('').reverse().map(Number);
+  const db = String(b).split('').reverse().map(Number);
+  let borrow = 0, borrows = 0, acrossZero = false;
+  for (let i = 0; i < da.length; i += 1) {
+    if (borrow === 1 && da[i] === 0) acrossZero = true; // a 0 column was asked to lend
+    const top = da[i]! - borrow;
+    const bot = db[i] ?? 0;
+    if (top < bot) { borrows += 1; borrow = 1; } else borrow = 0;
+  }
+  return { borrows, acrossZero };
+}
+
 const money = (pounds: number): string => `£${pounds.toFixed(2)}`;
 
 // Surface contexts multiply the distinct-item count without touching the maths difficulty —
@@ -80,8 +95,9 @@ const rounding: MathsFamily = {
   name: 'Rounding to the nearest 10 / 100 / 1000',
   shape: 'Round N to nearest 10/100/1000',
   tierRule: (t) => ['', 'nearest 10, 3-digit', 'nearest 10 or 100, 3-digit', 'nearest 100, 4-digit', 'nearest 100 or 1000, 4-digit', 'nearest 1000, 5-digit'][t]!,
-  // The rounding TARGET is a structural dial the draft already turns per tier (10→1000);
-  // borderline (it also grows magnitude) — flagged for Annie to ratify as a real ladder.
+  // RATIFIED as a real ladder (annie, 2026-08-07): rounding to the nearest 10 vs 1000 are
+  // different jobs — the larger holds more columns and decides on a digit further from the
+  // one being written. The magnitude growth is incidental, not load-bearing.
   structuralParams: (t) => ({ place: ['', '10', '10/100', '100', '100/1000', '1000'][t]! }),
   ranges: (t) => ['', '120–980 → 10', '150–980 → 10/100', '1,050–9,800 → 100', '1,050–9,800 → 100/1000', '10,500–98,000 → 1000'][t]!,
   draft: (tier: Tier, r) => {
@@ -114,24 +130,42 @@ const timeAndMoney: MathsFamily = {
   name: 'Money: change and multi-item shopping',
   shape: 'Money: change, multi-item shopping',
   tierRule: (t) => ['', 'one-step change from a note', 'one-step change, larger note', 'two-step: buy several, then total', 'two-step: buy several then find change', 'three-step: items then change'][t]!,
-  structuralParams: (t) => ({ steps: [0, 1, 1, 2, 2, 3][t]!, kind: ['', 'change', 'change', 'total', 'change', 'change'][t]! }),
-  ranges: (t) => ['', 'item £1.50–£4.50, £5 note', 'item £1.50–£8.50, £10 note', 'item £2–£6 × 2–4', 'item £2–£6 × 2–4, £20 note', 'items £2–£9, £20 note'][t]!,
+  // Seam fixed (annie, 2026-08-07): T1 gives change in ONE part (whole pounds); T2 gives
+  // it in TWO parts (pounds AND pence) — an actual second thing the child does, not just a
+  // bigger note. T3–T5 is the real step ladder and is unchanged.
+  structuralParams: (t) => ({ steps: [0, 1, 1, 2, 2, 3][t]!, kind: ['', 'change', 'change', 'total', 'change', 'change'][t]!, parts: ['', 'one', 'two', 'two', 'two', 'three'][t]! }),
+  ranges: (t) => ['', 'item £1–£4 whole, £5 note', 'item £1.10–£8.90, £10 note', 'item £2–£6 × 2–4', 'item £2–£6 × 2–4, £20 note', 'items £2–£9, £20 note'][t]!,
   draft: (tier: Tier, r) => {
-    if (tier <= 2) {
-      const note = tier === 1 ? 5 : 10;
+    if (tier === 1) {
+      // One part: whole-pound cost, whole-pound change (£5 or £10 note for enough spread).
       const obj = randPick(r, ['toy', 'book', 'pen', 'kite', 'mug', 'cap', 'ball']);
-      const cost = randInt(r, 11, note * 10 - 5) / 10; // 10p resolution, carries pence, < note
+      const note = randPick(r, [5, 10]);
+      const cost = randInt(r, 1, note - 1);
       const change = note - cost;
       return {
         stem: `A ${obj} costs ${money(cost)}. You pay with a ${money(note)} note. How much change do you get?`,
-        solution: `${note} - ${cost}`,
-        keyValue: money(change),
-        operands: { a: note, b: cost },
-        hint: 'Take the cost away from what you paid. Count up from the cost to the note.',
+        solution: `${note} - ${cost}`, keyValue: money(change), operands: { a: note, b: cost },
+        hint: 'Take the cost away from the pounds you paid.',
         distractors: [
           { entry: 84, id: ID.addDiff, value: money(note + cost) }, // added instead of subtracting
           { entry: 72, id: ID.wrongOp, value: money(cost) }, // gave the cost back as the change
-          { entry: 106, id: ID.roundDown, value: money(note - Math.floor(cost)) }, // dropped the pence
+          { entry: 106, id: ID.roundDown, value: money(note - cost - 1) }, // counted up one short
+        ],
+      };
+    }
+    if (tier === 2) {
+      // Two parts: cost in pounds and pence, so the change has BOTH pounds and pence.
+      const obj = randPick(r, ['toy', 'book', 'pen', 'kite', 'mug', 'cap', 'ball']);
+      const cost = randInt(r, 11, 89) / 10; // £1.10–£8.90, always carries pence
+      const change = 10 - cost; // ≥ £1.10, has pounds and pence
+      return {
+        stem: `A ${obj} costs ${money(cost)}. You pay with a ${money(10)} note. How much change do you get?`,
+        solution: `10 - ${cost}`, keyValue: money(change), operands: { a: 10, b: cost },
+        hint: 'Count up to the next pound first. Then count on to ten pounds.',
+        distractors: [
+          { entry: 84, id: ID.addDiff, value: money(10 + cost) }, // added instead of subtracting
+          { entry: 72, id: ID.wrongOp, value: money(cost) }, // gave the cost back as the change
+          { entry: 106, id: ID.roundDown, value: money(10 - Math.floor(cost)) }, // dropped the pence
         ],
       };
     }
@@ -205,6 +239,7 @@ const timeAndMoney: MathsFamily = {
 // M-04a: chose the wrong OPERATION.
 const wrongOperation: MathsFamily = {
   id: 'M-04a',
+  collapsed: 2, // COLLAPSED (annie, 2026-08-07). v2 ladder: one-step · remainder · two-step
   name: 'Division word problem — chose the wrong operation',
   shape: 'Multi-step / one-step operation word problem',
   tierRule: (t) => ['', 'share within times tables', 'share, 2-digit total', 'grouping, 2-digit total', 'grouping, larger total', 'two-step with a division'][t]!,
@@ -234,6 +269,7 @@ const wrongOperation: MathsFamily = {
 // whole number; the key is a clean 2-decimal unit share (denominator 4/5/10/20).
 const reversedDivision: MathsFamily = {
   id: 'M-04b',
+  collapsed: 4, // COLLAPSED (annie, 2026-08-07). v2 ladder: one-step · remainder · two-step (reversed)
   name: 'Division word problem — reversed the division',
   shape: 'Multi-step / one-step operation word problem',
   tierRule: (t) => ['', 'share £ among 4 or 5', 'share £ among 4/5/10', 'share £ among 5/10', 'share £ among 10/20', 'share £ among 10/20, larger £'][t]!,
@@ -263,6 +299,7 @@ const reversedDivision: MathsFamily = {
 // group size). total is a multiple of the price so the wrong division is a whole number.
 const misreadQuantity: MathsFamily = {
   id: 'M-04c',
+  collapsed: 3, // COLLAPSED (annie, 2026-08-07). v2 ladder: two numbers · three numbers · two plausible divisors
   name: 'Division word problem — misread which quantity is which',
   shape: 'Multi-step / one-step operation word problem',
   tierRule: (t) => ['', 'two numbers + a price', 'price present, 2-digit', 'price present, larger', 'two plausible divisors', 'two-step, misread at the divide'][t]!,
@@ -292,6 +329,7 @@ const misreadQuantity: MathsFamily = {
 // M-06a: unit fraction OF an amount, bare. A third distractor is correct by construction.
 const unitFraction: MathsFamily = {
   id: 'M-06a',
+  collapsed: 2, // COLLAPSED (annie, 2026-08-07). v2 ladder: PERMANENT — single shape by nature, no v2 ladder
   name: 'Unit fraction of an amount (bare)',
   shape: 'Fraction of an amount',
   distractorFloor: 2,
@@ -319,6 +357,7 @@ const unitFraction: MathsFamily = {
 // group size read as the price; a third strays into another topic (R9).
 const unitPrice: MathsFamily = {
   id: 'M-05a',
+  collapsed: 3, // COLLAPSED (annie, 2026-08-07). v2 ladder: find one · compare two packs · multi-buy
   name: 'Unit price / best buy',
   shape: 'Unitary proportion / best-buy',
   distractorFloor: 2,
@@ -347,6 +386,7 @@ const unitPrice: MathsFamily = {
 // ---------- P-1 · Place value & ordering ----------
 const placeValue: MathsFamily = {
   id: 'M-place',
+  collapsed: 2, // COLLAPSED (annie, 2026-08-07). v2 ladder: which column · then decimals (and fix the T1 monotony)
   name: 'Place value — value of a digit',
   shape: 'Value of a digit / place value',
   tierRule: (t) => ['', '3-digit whole number', '4-digit whole number', '5-digit whole number', '5-digit, higher columns', '6-digit whole number'][t]!,
@@ -384,24 +424,42 @@ const columnArithmetic: MathsFamily = {
   id: 'M-column',
   name: 'Column arithmetic — subtraction',
   shape: 'Bare column arithmetic (+ − × ÷)',
-  tierRule: (t) => ['', '2-digit − 2-digit', '3-digit − 2/3-digit', '4-digit − 3-digit', '4-digit − 4-digit with borrows', '5-digit − 4-digit'][t]!,
-  ranges: (t) => ['', '20–99', '120–999', '1,200–9,999', '3,000–9,999', '12,000–99,999'][t]!,
+  // Real EXCHANGE ladder (annie, 2026-08-07 — the family that proves KEEP is not a loophole):
+  // the tier turns the borrow structure, and the draft HONOURS it by regenerating until the
+  // subtraction has the required exchange. Size grows too, but the exchange is what's load-bearing.
+  tierRule: (t) => ['', 'no exchange (no borrow)', 'a single borrow', 'several borrows', 'a borrow across a zero', 'a borrow across two zeros'][t]!,
+  structuralParams: (t) => ({ exchange: ['', 'none', 'single', 'multiple', 'across-zero', 'across-zeros'][t]! }),
+  numberRanges: (t) => ({ a: [[0, 20, 100, 1000, 1000, 10000][t]!, [0, 99, 999, 9999, 9999, 99999][t]!] }),
   draft: (tier, r) => {
-    const mag = [0, 10, 100, 1000, 1000, 10000][tier]!;
-    const a = randInt(r, mag * (tier >= 4 ? 3 : 2), mag * 10 - 1);
-    const b = randInt(r, mag, a - 1);
+    const [lo, hi] = [[0, 20, 100, 1000, 1000, 10000][tier]!, [0, 99, 999, 9999, 9999, 99999][tier]!];
+    const a = randInt(r, lo, hi);
+    const b = randInt(r, Math.floor(lo / 2) || 1, a - 1);
+    const info = subInfo(a, b);
+    const want = tier; // 1 none, 2 single, 3 multiple, 4 across-zero, 5 across-zeros
+    const ok = want === 1 ? info.borrows === 0
+      : want === 2 ? info.borrows === 1 && !info.acrossZero
+        : want === 3 ? info.borrows >= 2 && !info.acrossZero
+          : want === 4 ? info.acrossZero && String(a).replace(/[^0]/g, '').length === 1
+            : info.acrossZero && String(a).replace(/[^0]/g, '').length >= 2; // T5: two+ zeros
+    if (!ok) return { stem: '', solution: null, keyValue: 'x', operands: {}, distractors: [] }; // regenerate until the exchange matches
     const key = a - b;
-    return {
-      stem: `Work out ${a.toLocaleString('en-GB')} − ${b.toLocaleString('en-GB')}.`,
-      solution: `${a} - ${b}`,
-      keyValue: String(key),
-      operands: { a, b },
-      hint: 'Line up the columns. Borrow from the next column when the top digit is smaller.',
-      distractors: [
+    // With NO borrow, |top−bottom| per column equals the real answer — the commutative-
+    // subtraction error (#11) produces the key, so it cannot be a distractor at T1.
+    const distractors = info.borrows > 0
+      ? [
         { entry: 11, id: ID.commSub }, // |top − bottom| in each column (derived)
         { entry: 84, id: ID.addDiff, value: String(a + b) }, // added instead of subtracting
         { entry: 69, id: ID.droppedCarry, value: String(key + 10) }, // a borrow slip, over by ten
-      ],
+      ]
+      : [
+        { entry: 84, id: ID.addDiff, value: String(a + b) }, // added instead of subtracting
+        { entry: 69, id: ID.droppedCarry, value: String(key + 10) }, // a place slip, over by ten
+        { entry: 70, id: ID.colTotals, value: String(key + 1) }, // an off-by-one column slip
+      ];
+    return {
+      stem: `Work out ${a.toLocaleString('en-GB')} − ${b.toLocaleString('en-GB')}.`,
+      solution: `${a} - ${b}`, keyValue: String(key), operands: { a, b }, distractors,
+      hint: 'Line up the columns. Borrow from the next column when the top digit is smaller.',
     };
   },
 };
@@ -409,6 +467,7 @@ const columnArithmetic: MathsFamily = {
 // ---------- P-3 · Negative numbers ----------
 const negatives: MathsFamily = {
   id: 'M-neg',
+  collapsed: 2, // COLLAPSED (annie, 2026-08-07). v2 ladder: compare · count across zero · temperature change
   name: 'Negative numbers — greatest of a set',
   shape: 'Negative numbers / temperature change',
   tierRule: (t) => ['', 'greatest of three, −10..0', 'greatest of four, −15..0', 'greatest of four, −20..5', 'greatest of four, −30..10', 'order of five, −30..10'][t]!,
@@ -440,6 +499,7 @@ const negatives: MathsFamily = {
 // ---------- P-4 · Fractions: add / subtract ----------
 const fractionsAddSub: MathsFamily = {
   id: 'M-frac',
+  collapsed: 4, // COLLAPSED (annie, 2026-08-07). v2 ladder: same denominator · related · unrelated
   name: 'Fractions — adding unit fractions',
   shape: 'Add / subtract / compare fractions',
   tierRule: (t) => ['', 'proper fractions, denominators to 5', 'proper fractions, denominators to 5', 'proper fractions, denominators to 6', 'proper fractions, denominators to 8', 'proper fractions, denominators to 9'][t]!,
@@ -554,6 +614,7 @@ const percentageOfAmount: MathsFamily = {
 // ---------- P-5b · Ratio share ----------
 const ratioShare: MathsFamily = {
   id: 'M-ratio',
+  collapsed: 3, // COLLAPSED (annie, 2026-08-07). v2 ladder: larger share · either share · three-part
   name: 'Ratio share',
   shape: 'Ratio share',
   tierRule: (t) => ['', '', 'two-part ratio, larger share', 'two-part ratio, either share', 'two-part, larger totals', 'two-part, 3-digit totals'][t]!,
@@ -584,6 +645,7 @@ const ratioShare: MathsFamily = {
 // ---------- P-6a · Metric conversion ----------
 const metricConversion: MathsFamily = {
   id: 'M-convert',
+  collapsed: 2, // COLLAPSED (annie, 2026-08-07). v2 ladder: adjacent units · multi-step · up-and-down
   name: 'Metric unit conversion',
   shape: 'Unit conversion (length/mass/volume)',
   tierRule: (t) => ['', 'kg→g, whole', 'km→m / l→ml, whole', 'kg→g, 2-digit', 'larger whole values', 'multi-unit values'][t]!,
@@ -611,6 +673,7 @@ const metricConversion: MathsFamily = {
 // ---------- P-6b · Time interval ----------
 const timeInterval: MathsFamily = {
   id: 'M-time',
+  collapsed: 3, // COLLAPSED (annie, 2026-08-07). v2 ladder: within the hour · across it · across midnight
   name: 'Time interval',
   shape: 'Time interval / timetable journey',
   tierRule: (t) => ['', 'add minutes across the hour', 'add across the hour, larger', 'add across the hour, any start', 'add over an hour', 'timetable across the hour'][t]!,
@@ -640,6 +703,7 @@ const timeInterval: MathsFamily = {
 // ---------- P-7 · Statistics: averages ----------
 const statisticsAverages: MathsFamily = {
   id: 'M-stats',
+  collapsed: 3, // COLLAPSED (annie, 2026-08-07). v2 ladder: mean · median/mode · missing value
   name: 'Statistics — mean of a list',
   shape: 'Mean of a list',
   tierRule: (t) => ['', 'mean of four small values', 'mean of four values', 'mean of five values', 'mean of five, larger', 'mean of six values'][t]!,
@@ -692,7 +756,12 @@ const geometryCalculate: MathsFamily = {
   shape: 'Perimeter / area of a rectangle and composite',
   tierRule: (t) => GEOM_TIERS[t].rule,
   structuralParams: (t) => ({ shape: GEOM_TIERS[t].shape }),
-  numberRanges: (t) => ({ l: [GEOM_TIERS[t].lo, GEOM_TIERS[t].hi], w: [GEOM_TIERS[t].lo, GEOM_TIERS[t].hi] }),
+  numberRanges: (t) => {
+    const c = GEOM_TIERS[t];
+    const base: Record<string, [number, number]> = { l: [c.lo, c.hi], w: [c.lo, c.hi] };
+    if (c.shape === 'notch') { base.nw = [2, c.hi - 1]; base.nd = [2, c.hi - 1]; } // the notch operands are bound too
+    return base;
+  },
   ranges: (t) => `sides ${GEOM_TIERS[t].lo}–${GEOM_TIERS[t].hi} cm`,
   draft: (tier, r) => {
     const c = GEOM_TIERS[tier];
@@ -750,12 +819,12 @@ const geometryCalculate: MathsFamily = {
     // NOTCH (annie's T5 fix, 2026-08-07): a rectangular slot cut into one long side ADDS
     // 2 × depth to the perimeter (a corner cut would not — that was the hollow item). So the
     // answer depends on the notch, and a child who ignores it (2(l+w)) is now WRONG, not right.
-    const nd = randInt(r, 1, w - 1); // notch depth < width
-    const nw = randInt(r, 1, l - 1); // notch width < length
+    const nd = randInt(r, 2, w - 1); // notch depth, bound ≥ 2 and < width
+    const nw = randInt(r, 2, l - 1); // notch width, bound ≥ 2 and < length
     const key = 2 * (l + w) + 2 * nd;
     return {
       stem: `A rectangle is ${l} cm by ${w} cm. A notch ${nw} cm wide and ${nd} cm deep is cut into one long side. What is the perimeter in cm?`,
-      solution: `2 * (${l} + ${w}) + 2 * ${nd}`, keyValue: String(key), operands: { l, w, firstStepResults: [2 * (l + w), 2 * nd] }, hint: c.hint,
+      solution: `2 * (${l} + ${w}) + 2 * ${nd}`, keyValue: String(key), operands: { l, w, nw, nd, firstStepResults: [2 * (l + w), 2 * nd] }, hint: c.hint,
       distractors: [
         { entry: 88, id: ID.incompletePerim, value: String(2 * (l + w)) }, // ignored the notch entirely (the 30/30 trap, now wrong)
         { entry: 90, id: ID.composite, value: String(2 * (l + w) + nd) }, // added the depth once, not twice
@@ -768,6 +837,7 @@ const geometryCalculate: MathsFamily = {
 // ---------- M-06b · Worded fraction of an amount (composition; split-child) ----------
 const wordedFraction: MathsFamily = {
   id: 'M-06b',
+  collapsed: 4, // COLLAPSED (annie, 2026-08-07). v2 ladder: one-step worded · two-step · of-the-remainder
   name: 'Fraction of an amount — worded (two-step)',
   shape: 'Fraction of an amount',
   tierRule: (t) => ['', '', '', 'find a unit fraction, then the rest', 'unit fraction of a 2-digit amount, then the rest', 'unit fraction of a 3-digit amount, then the rest'][t]!,
