@@ -117,22 +117,46 @@ const timeAndMoney: MathsFamily = {
         ],
       };
     }
-    // Change from a £20 note: keep the subtotal under the note (unit ≤ 5, qty ≤ 3 ⇒ ≤ 15).
-    const u = randInt(r, 2, 5);
-    const q = randInt(r, 2, 3);
-    const sub = u * q;
     const note = 20;
-    const key = note - sub;
+    if (tier === 4) {
+      // Two-step change: keep the subtotal under the note (unit ≤ 5, qty ≤ 3 ⇒ ≤ 15).
+      const u = randInt(r, 2, 5);
+      const q = randInt(r, 2, 3);
+      const sub = u * q;
+      const key = note - sub;
+      return {
+        stem: `A ${item} costs ${money(u)}. You buy ${q} ${item}s and pay with a ${money(note)} note. How much change?`,
+        solution: `${note} - ${q} * ${u}`,
+        keyValue: money(key),
+        operands: { firstStepResults: [sub] },
+        hint: 'Work out the cost of the items first. Then take it from the note.',
+        distractors: [
+          { entry: 0, id: ID.proc, value: money(sub), process: true }, // stopped at the cost (derived)
+          { entry: 84, id: ID.addDiff, value: money(note + sub) }, // added instead of taking away
+          { entry: 72, id: ID.wrongOp, value: money(note - u) }, // took only one item off
+        ],
+      };
+    }
+    // T5 — THREE-STEP composition: two items, then change. The two intermediate subtotals
+    // (pens, then pens + book) FALL OUT as firstStepResults; the PROC-01 distractor is the
+    // running total after the second step (bought both, forgot the change).
+    const u = randInt(r, 2, 4);
+    const q = randInt(r, 2, 3);
+    const book = randInt(r, 2, 6);
+    const other = randPick(r, ['book', 'bag', 'hat', 'torch']);
+    const pens = q * u; // step 1
+    const spent = pens + book; // step 2
+    const key = note - spent; // step 3
     return {
-      stem: `A ${item} costs ${money(u)}. You buy ${q} ${item}s and pay with a ${money(note)} note. How much change?`,
-      solution: `${note} - ${q} * ${u}`,
+      stem: `A ${item} costs ${money(u)} and a ${other} costs ${money(book)}. You buy ${q} ${item}s and one ${other}, and pay with a ${money(note)} note. How much change?`,
+      solution: `${note} - (${q} * ${u} + ${book})`,
       keyValue: money(key),
-      operands: { firstStepResults: [sub] },
-      hint: 'Work out the cost of the items first. Then take it from the note.',
+      operands: { firstStepResults: [pens, spent] },
+      hint: 'Add the items up first. Then take the total from the note.',
       distractors: [
-        { entry: 0, id: ID.proc, value: money(sub), process: true }, // stopped at the cost (derived)
-        { entry: 84, id: ID.addDiff, value: money(note + sub) }, // added instead of taking away
-        { entry: 72, id: ID.wrongOp, value: money(note - u) }, // took only one item off
+        { entry: 0, id: ID.proc, value: money(spent), process: true }, // stopped at the total spent (derived)
+        { entry: 84, id: ID.addDiff, value: money(note + spent) }, // added instead of taking away
+        { entry: 72, id: ID.wrongOp, value: money(note - book) }, // forgot the pens
       ],
     };
   },
