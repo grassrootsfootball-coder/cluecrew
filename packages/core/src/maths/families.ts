@@ -465,24 +465,74 @@ const fractionsAddSub: MathsFamily = {
   },
 };
 
-// ---------- P-5a · Percentage of an amount ----------
+// ---------- P-5a · Percentage (rebuilt to annie's review, 2026-08-07) ----------
+// Single source: the tier CONFIG below drives generation AND renders the range/rule, so
+// they cannot diverge. The ladder is by SHAPE, not magnitude — friendly %, then multiples
+// of ten, then multiples of five, then a % CHANGE composition, then a REVERSE %. Per-tier
+// hints. The amount is always a multiple of `step` so the answer is whole and in range.
+const PCT_TIERS: Record<Tier, { pcts: number[]; step: number; amtLo: number; amtHi: number; shape: 'of' | 'change' | 'reverse'; rule: string; hint: string }> = {
+  1: { pcts: [10, 25, 50], step: 20, amtLo: 1, amtHi: 15, shape: 'of', rule: 'friendly percentages (½, ¼, ⅒) of a round amount', hint: 'Fifty per cent is half. Twenty-five per cent is a quarter. Ten per cent is one tenth.' },
+  2: { pcts: [10, 20, 30, 40, 60, 70, 80, 90], step: 10, amtLo: 3, amtHi: 30, shape: 'of', rule: 'multiples of ten per cent of a round amount', hint: 'Find ten per cent by dividing by ten. Then count how many tens you need.' },
+  3: { pcts: [5, 15, 35, 45, 55, 65, 85, 95], step: 20, amtLo: 3, amtHi: 22, shape: 'of', rule: 'multiples of five per cent', hint: 'Find ten per cent, then halve it for five per cent. Build the percentage from those.' },
+  4: { pcts: [10, 20, 25, 50], step: 20, amtLo: 6, amtHi: 45, shape: 'change', rule: 'percentage decrease — find the new price', hint: 'Find the discount first. Then take it off the original price.' },
+  5: { pcts: [10, 20, 25, 50], step: 1, amtLo: 3, amtHi: 40, shape: 'reverse', rule: 'reverse — the percentage is known, find the whole', hint: 'You are told what the percentage is worth. Work back to the whole.' },
+};
+const pctAmtRange = (c: (typeof PCT_TIERS)[Tier]): string => `${c.amtLo * c.step}–${c.amtHi * c.step}`;
 const percentageOfAmount: MathsFamily = {
   id: 'M-pct',
-  name: 'Percentage of an amount',
-  shape: 'Percentage of an amount / % change',
-  tierRule: (t) => ['', '10% / 50% of round amounts', '10/25/50% of round amounts', 'multiples of 5% ', '5% steps, 3-digit amount', 'reverse and % change'][t]!,
-  ranges: (t) => ['', '10/50% of 20–200', '10/25/50% of 40–400', '5–90% of 20–200', '5–95% of 100–900', '5–90% of 100–900'][t]!,
+  name: 'Percentage',
+  shape: 'Percentage of an amount / % change / reverse',
+  tierRule: (t) => PCT_TIERS[t].rule,
+  ranges: (t) => {
+    const c = PCT_TIERS[t];
+    if (c.shape === 'change') return `${c.pcts.join('/')}% off amounts ${pctAmtRange(c)}`;
+    if (c.shape === 'reverse') return `${c.pcts.join('/')}%, the part worth ${c.amtLo}–${c.amtHi}`;
+    return `${c.pcts.join('/')}% of amounts ${pctAmtRange(c)}`;
+  },
   draft: (tier, r) => {
-    const pct = tier <= 1 ? randPick(r, [10, 50]) : tier === 2 ? randPick(r, [10, 25, 50]) : randInt(r, 1, 19) * 5;
-    const step = pct % 25 === 0 ? 4 : 20; // amount a multiple that keeps the answer whole
-    const amount = randInt(r, 2, 22 + tier * 4) * step * (tier >= 4 ? 5 : 1);
+    const c = PCT_TIERS[tier];
+    const pct = randPick(r, c.pcts);
+    if (c.shape === 'change') {
+      const amount = randInt(r, c.amtLo, c.amtHi) * c.step;
+      const discount = (pct * amount) / 100; // step 1
+      const key = amount - discount;
+      return {
+        stem: `A coat costs ${money(amount)}. In a sale it is reduced by ${pct}%. What is the new price?`,
+        solution: `${amount} - ${pct} * ${amount} / 100`,
+        keyValue: money(key),
+        operands: { firstStepResults: [discount] },
+        hint: c.hint,
+        distractors: [
+          { entry: 0, id: ID.proc, value: money(discount), process: true }, // gave the discount, stopped
+          { entry: 77, id: ID.pctMoney, value: money(amount + discount) }, // added the discount on
+          { entry: 92, id: ID.unitarySlip, value: money(pct) }, // read the percentage as pounds
+        ],
+      };
+    }
+    if (c.shape === 'reverse') {
+      const whole = randInt(r, c.amtLo, c.amtHi) * (100 / pct); // whole is a clean multiple
+      const part = (pct * whole) / 100;
+      return {
+        stem: `${pct}% of a number is ${part}. What is the number?`,
+        solution: `${part} * 100 / ${pct}`,
+        keyValue: String(whole),
+        operands: { percent: pct, part },
+        hint: c.hint,
+        distractors: [
+          { entry: 92, id: ID.unitarySlip, value: String(part) }, // gave the part back
+          { entry: 26, id: ID.pctUnit, value: String(part * (pct / 10)) }, // scaled by pct/10, not 100/pct
+          { entry: 77, id: ID.pctMoney, value: String(part + pct) }, // added the percentage on
+        ],
+      };
+    }
+    const amount = randInt(r, c.amtLo, c.amtHi) * c.step;
     const key = (pct * amount) / 100;
     return {
       stem: `What is ${pct}% of ${amount}?`,
       solution: `${pct} * ${amount} / 100`,
       keyValue: String(key),
       operands: { percent: pct, amount },
-      hint: 'Find one per cent first by dividing by 100. Then multiply by the percentage.',
+      hint: c.hint,
       distractors: [
         { entry: 77, id: ID.pctMoney, value: String(pct) }, // read the percentage as the answer
         { entry: 26, id: ID.pctUnit, value: String((pct * amount) / 10) }, // divided by 10, not 100
@@ -615,42 +665,87 @@ const statisticsAverages: MathsFamily = {
 // ---------- P-8 · Geometry: calculate from given numbers (annie's axis) ----------
 // Numbers are GIVEN in the stem — the "calculate" family. The diagram-READING family
 // (find the numbers off a figure) groups with scale-reading and needs a render component.
+// ---------- P-8 · Geometry — CALCULATE from given numbers (rebuilt to annie's review) ----------
+// Ladder by SHAPE, not size: T1 perimeter · T2 area (a different skill, not a bigger one) ·
+// T3 mixed (child reads which is asked) · T4 composite L-shape (COMPOSITION of two rectangles,
+// firstStepResults are the two areas) · T5 composite where a missing side must be found first.
+// Sides come from one bound per tier that also renders as the stated range. Per-tier hints.
+const GEOM_TIERS: Record<Tier, { lo: number; hi: number; shape: 'perimeter' | 'area' | 'mixed' | 'lshape' | 'missing'; rule: string; hint: string }> = {
+  1: { lo: 3, hi: 12, shape: 'perimeter', rule: 'perimeter of a rectangle', hint: 'Perimeter is all the way round. Add every side, or double the length plus the width.' },
+  2: { lo: 3, hi: 12, shape: 'area', rule: 'area of a rectangle (a different job from perimeter)', hint: 'Area is the space inside. Multiply the length by the width.' },
+  3: { lo: 6, hi: 15, shape: 'mixed', rule: 'perimeter OR area — read which is asked', hint: 'Read the question. Round the edge is perimeter; the space inside is area.' },
+  4: { lo: 4, hi: 12, shape: 'lshape', rule: 'area of an L-shape (two rectangles joined)', hint: 'Split the L into two rectangles. Find each area, then add them.' },
+  5: { lo: 5, hi: 14, shape: 'missing', rule: 'perimeter of an L-shape — find the missing side first', hint: 'The missing side is the two short sides added. Find it, then go round.' },
+};
 const geometryCalculate: MathsFamily = {
   id: 'M-geom',
-  name: 'Geometry — perimeter and area from given lengths',
-  shape: 'Perimeter / area of a rectangle',
-  tierRule: (t) => ['', 'perimeter, 1-digit sides', 'perimeter, 2-digit sides', 'area, 1–2 digit sides', 'perimeter or area, larger', 'perimeter or area, 2-digit'][t]!,
-  ranges: (t) => ['', 'sides 3–9 cm', 'sides 6–20 cm', 'sides 4–15 cm', 'sides 8–30 cm', 'sides 10–40 cm'][t]!,
+  name: 'Geometry — calculate from given lengths',
+  shape: 'Perimeter / area of a rectangle and composite',
+  tierRule: (t) => GEOM_TIERS[t].rule,
+  ranges: (t) => `sides ${GEOM_TIERS[t].lo}–${GEOM_TIERS[t].hi} cm`,
   draft: (tier, r) => {
-    const l = randInt(r, [0, 5, 8, 6, 10, 12][tier]!, [0, 16, 24, 18, 32, 44][tier]!);
-    let w = randInt(r, 3, l - 1); // w < l so perimeter ≠ area coincidences are rarer
-    if (w < 2) w = 2;
-    const area = l * w;
-    const perim = 2 * (l + w);
-    if (tier === 3) { // area tier
+    const c = GEOM_TIERS[tier];
+    const l = randInt(r, c.lo + 1, c.hi);
+    const w = randInt(r, c.lo, l - 1);
+    if (c.shape === 'perimeter') {
+      return {
+        stem: `A rectangle is ${l} cm long and ${w} cm wide. What is its perimeter in cm?`,
+        solution: `2 * (${l} + ${w})`, keyValue: String(2 * (l + w)), operands: { l, w }, hint: c.hint,
+        distractors: [
+          { entry: 87, id: ID.perimAreaSwap, value: String(l * w) }, // gave the area
+          { entry: 88, id: ID.incompletePerim, value: String(l + w) }, // added the two sides once
+          { entry: 70, id: ID.colTotals, value: String(2 * l + w) }, // doubled the length only
+        ],
+      };
+    }
+    if (c.shape === 'area') {
       return {
         stem: `A rectangle is ${l} cm long and ${w} cm wide. What is its area in cm²?`,
-        solution: `${l} * ${w}`,
-        keyValue: String(area),
-        operands: { l, w },
-        hint: 'Area is the space inside. Multiply the length by the width.',
+        solution: `${l} * ${w}`, keyValue: String(l * w), operands: { l, w }, hint: c.hint,
         distractors: [
-          { entry: 87, id: ID.perimAreaSwap, value: String(perim) }, // gave the perimeter
-          { entry: 88, id: ID.incompletePerim, value: String(l + w) }, // added the two sides once
+          { entry: 87, id: ID.perimAreaSwap, value: String(2 * (l + w)) }, // gave the perimeter
+          { entry: 88, id: ID.incompletePerim, value: String(l + w) }, // added the sides once
           { entry: 90, id: ID.composite, value: String(l * w + l) }, // an extra strip added
         ],
       };
     }
+    if (c.shape === 'mixed') {
+      const askArea = r() < 0.5;
+      return askArea
+        ? { stem: `A rectangle is ${l} cm long and ${w} cm wide. What is its area in cm²?`, solution: `${l} * ${w}`, keyValue: String(l * w), operands: { l, w }, hint: c.hint,
+          distractors: [{ entry: 87, id: ID.perimAreaSwap, value: String(2 * (l + w)) }, { entry: 88, id: ID.incompletePerim, value: String(l + w) }, { entry: 90, id: ID.composite, value: String(l * w + l) }] }
+        : { stem: `A rectangle is ${l} cm long and ${w} cm wide. What is its perimeter in cm?`, solution: `2 * (${l} + ${w})`, keyValue: String(2 * (l + w)), operands: { l, w }, hint: c.hint,
+          distractors: [{ entry: 87, id: ID.perimAreaSwap, value: String(l * w) }, { entry: 88, id: ID.incompletePerim, value: String(l + w) }, { entry: 70, id: ID.colTotals, value: String(2 * l + w) }] };
+    }
+    // Composite L-shape: a big rectangle l×w with a smaller a×b corner removed. The
+    // stem is split into short sentences so it clears the reading-age cap.
+    if (l - 2 < c.lo || w - 2 < c.lo) return { stem: '', solution: null, keyValue: 'x', operands: {}, distractors: [] }; // the corner would not fit — retry
+    const a = randInt(r, c.lo, l - 2);
+    const b = randInt(r, c.lo, w - 2);
+    const bigArea = l * w;
+    const cutArea = a * b;
+    if (c.shape === 'lshape') {
+      const key = bigArea - cutArea;
+      return {
+        stem: `An L-shape is made from a ${l} cm by ${w} cm rectangle. A ${a} cm by ${b} cm corner is removed. What is the area in cm²?`,
+        solution: `${l} * ${w} - ${a} * ${b}`, keyValue: String(key), operands: { l, w, firstStepResults: [bigArea, cutArea] }, hint: c.hint,
+        distractors: [
+          { entry: 0, id: ID.proc, value: String(bigArea), process: true }, // gave the whole rectangle, forgot the cut
+          { entry: 90, id: ID.composite, value: String(bigArea + cutArea) }, // added the corner instead of removing it
+          { entry: 88, id: ID.incompletePerim, value: String(cutArea) }, // gave only the corner
+        ],
+      };
+    }
+    // Perimeter of the L-shape is unchanged by the corner cut (= 2(l+w)); the child must
+    // see the two new short edges sum to the sides they replace.
+    const key = 2 * (l + w);
     return {
-      stem: `A rectangle is ${l} cm long and ${w} cm wide. What is its perimeter in cm?`,
-      solution: `2 * (${l} + ${w})`,
-      keyValue: String(perim),
-      operands: { l, w },
-      hint: 'Perimeter is all the way round. Add all four sides, or double the length plus width.',
+      stem: `An L-shape is made from a ${l} cm by ${w} cm rectangle. A ${a} cm by ${b} cm corner is removed. What is the perimeter in cm?`,
+      solution: `2 * (${l} + ${w})`, keyValue: String(key), operands: { l, w, firstStepResults: [l - a, w - b] }, hint: c.hint,
       distractors: [
-        { entry: 87, id: ID.perimAreaSwap, value: String(area) }, // gave the area
-        { entry: 88, id: ID.incompletePerim, value: String(l + w) }, // added the two sides once, no doubling
-        { entry: 70, id: ID.colTotals, value: String(2 * l + w) }, // doubled the length only
+        { entry: 88, id: ID.incompletePerim, value: String(2 * (l + w) - a - b) }, // dropped the two cut edges
+        { entry: 87, id: ID.perimAreaSwap, value: String(l * w - a * b) }, // gave the area instead
+        { entry: 90, id: ID.composite, value: String(2 * (l + w) + a + b) }, // double-counted the cut edges
       ],
     };
   },
@@ -694,20 +789,22 @@ const inverseReasoning: MathsFamily = {
   id: 'M-inverse',
   name: 'Inverse reasoning — work back to the input',
   shape: 'Missing number / function machine (early algebra) + reverse mean',
-  tierRule: (t) => ['', 'one operation to undo', 'one operation, larger numbers', 'two operations to undo', 'two operations, larger', 'reverse mean — two steps, order decides'][t]!,
-  ranges: (t) => ['', '× 2–5, answer 2–9', '× or + , 2–9, answer 2–12', '×a+b, a 2–4, answer 3–9', '×a+b, a 2–5, answer 3–12', '5 numbers, mean 4–9, values 1–14'][t]!,
+  // Adjusted to annie's two notes (2026-08-07): the pairs no longer differ by size —
+  // T2 makes the child SPOT which operation to undo (not just a bigger ×), and T4 is a
+  // genuinely ORDER-SENSITIVE two-step (undo the outside first). T5's rule no longer
+  // claims "order decides" — reverse mean is an extra step back, not an order case.
+  tierRule: (t) => ['', 'one operation — division to undo', 'one operation — spot which to undo', 'two operations — take away, then divide', 'two operations — order decides (undo the outside first)', 'reverse mean — recover a value from the average'][t]!,
+  ranges: (t) => ['', '□ × 2–5, answer 2–9', '□ ?(×/+) 2–9, answer 2–10', '□ × a + b, a 2–4, answer 3–9', '(□ + a) × b, b 2–4, answer 3–8', '5 numbers, mean 4–9, values 1–14'][t]!,
   draft: (tier, r) => {
-    if (tier <= 2) {
-      // One-step function machine: □ × c = result. Undo = divide.
-      const c = randInt(r, 2, tier === 1 ? 5 : 9);
-      const q = randInt(r, 2, tier === 1 ? 9 : 12);
+    if (tier === 1) {
+      // One-step, known operation: □ × c = result. Undo = divide.
+      const c = randInt(r, 2, 5);
+      const q = randInt(r, 2, 9);
       const result = q * c;
       return {
         stem: `□ × ${c} = ${result}. What is □?`,
-        solution: `${result} / ${c}`,
-        keyValue: String(q),
-        operands: { result, c, op: 'mult' },
-        hint: 'Going backwards undoes each step. Divide where it multiplied.',
+        solution: `${result} / ${c}`, keyValue: String(q), operands: { result, c, op: 'mult' },
+        hint: 'Going backwards undoes the step. Divide where it multiplied.',
         distractors: [
           { entry: 109, id: ID.ranForwards }, // multiplied instead of dividing (derived)
           { entry: 14, id: ID.signAnswer, value: String(result) }, // gave the number after the = sign
@@ -715,23 +812,60 @@ const inverseReasoning: MathsFamily = {
         ],
       };
     }
-    if (tier <= 4) {
-      // Two-step: □ × a + b = result, b a multiple of a so every distractor stays whole.
-      const a = randInt(r, 2, 3 + tier - 2);
-      const q = randInt(r, 3, 8 + tier * 2);
+    if (tier === 2) {
+      // One-step, but the child must SPOT the operation (× or +) before undoing it.
+      const mult = r() < 0.5;
+      const c = randInt(r, 2, 9);
+      const q = randInt(r, 2, 10);
+      const result = mult ? q * c : q + c;
+      return {
+        stem: `□ ${mult ? '×' : '+'} ${c} = ${result}. What is □?`,
+        solution: mult ? `${result} / ${c}` : `${result} - ${c}`, keyValue: String(q),
+        operands: { result, c, op: mult ? 'mult' : 'add' },
+        hint: 'Spot the operation, then undo it. Divide undoes times; take away undoes plus.',
+        distractors: [
+          { entry: 109, id: ID.ranForwards }, // ran the machine forwards (derived: applies the stated op)
+          { entry: 14, id: ID.signAnswer, value: String(result) }, // gave the number after the = sign
+          { entry: 72, id: ID.wrongOp, value: String(mult ? result - c : result * c) }, // undid with the wrong operation
+        ],
+      };
+    }
+    if (tier === 3) {
+      // Two operations, one sensible undo order: □ × a + b = result. Take away, then divide.
+      const a = randInt(r, 2, 4);
+      const q = randInt(r, 3, 9);
       const m = randInt(r, 1, 5);
       const b = a * m;
       const result = a * q + b;
       return {
         stem: `□ × ${a} + ${b} = ${result}. What is □?`,
-        solution: `(${result} - ${b}) / ${a}`,
-        keyValue: String(q),
+        solution: `(${result} - ${b}) / ${a}`, keyValue: String(q),
         operands: { result, c: b, op: 'sub', firstStepResults: [a * q] },
-        hint: 'Undo the last step first. Take away, then divide.',
+        hint: 'Undo the last step first. Take away the number added, then divide.',
         distractors: [
-          { entry: 0, id: ID.proc, value: String(a * q), process: true }, // subtracted b, stopped before dividing (derived)
+          { entry: 0, id: ID.proc, value: String(a * q), process: true }, // took away b, stopped before dividing (derived)
           { entry: 72, id: ID.wrongOp, value: String(q + m) }, // divided first, ignored the + b
-          { entry: 100, id: ID.stepsOrder, value: String(result - b - a) }, // undid in the wrong order
+          { entry: 14, id: ID.signAnswer, value: String(result) }, // gave the number after the = sign
+        ],
+      };
+    }
+    if (tier === 4) {
+      // Two operations where ORDER DECIDES: (□ + a) × b = result. Undo ÷b, then − a.
+      // a is a multiple of b so the wrong-order value stays whole (that is the trap).
+      const b = randInt(r, 2, 4);
+      const k = randInt(r, 1, 3);
+      const a = b * k;
+      const q = randInt(r, 3, 8);
+      const result = (q + a) * b;
+      return {
+        stem: `(□ + ${a}) × ${b} = ${result}. What is □?`,
+        solution: `${result} / ${b} - ${a}`, keyValue: String(q),
+        operands: { firstStepResults: [result / b] },
+        hint: 'Undo the outside first. Divide by the multiplier, then take away.',
+        distractors: [
+          { entry: 100, id: ID.stepsOrder, value: String(q + k * (b - 1)) }, // took away first, then divided — wrong order
+          { entry: 0, id: ID.proc, value: String(result / b), process: true }, // divided, stopped before taking away (derived)
+          { entry: 72, id: ID.wrongOp, value: String(result - a) }, // took a off the result, ignored ×b
         ],
       };
     }

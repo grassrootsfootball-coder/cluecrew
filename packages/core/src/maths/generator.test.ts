@@ -53,6 +53,29 @@ describe('maths generator — every family emits only gated items', () => {
     expect(a).toEqual(b);
   });
 
+  it('rebuilt families keep generation INSIDE the stated range (annie point 1)', () => {
+    // The stated range must bound the output — M-geom sides and M-pct amounts, the two
+    // she cited (T1 said 3–9 but emitted 13×11; T4 said 100–900 but emitted 3,800).
+    const checks: Array<[string, string[]]> = [['M-geom', ['l', 'w']], ['M-pct', ['amount']]];
+    for (const [id, fields] of checks) {
+      const fam = MATHS_FAMILIES.find((f) => f.id === id)!;
+      for (const tier of familyTiers(fam)) {
+        const m = fam.ranges(tier).match(/(\d[\d,]*)\s*[–-]\s*(\d[\d,]*)/);
+        if (!m) continue;
+        const lo = Number(m[1]!.replace(/,/g, '')), hi = Number(m[2]!.replace(/,/g, ''));
+        for (const item of generateSample(fam, tier, 30, 42)) {
+          for (const field of fields) {
+            const v = item.operands[field];
+            if (typeof v === 'number') {
+              expect(v, `${id} T${tier} ${field}=${v} outside stated ${lo}–${hi}`).toBeGreaterThanOrEqual(lo);
+              expect(v, `${id} T${tier} ${field}=${v} outside stated ${lo}–${hi}`).toBeLessThanOrEqual(hi);
+            }
+          }
+        }
+      }
+    }
+  });
+
   it('executor coverage is reportable per family (annie requirement #2)', () => {
     const cov = familyExecutorCoverage(MATHS_FAMILIES.find((f) => f.id === 'M-04b')!);
     expect(cov.derived).toContain(16); // reversed-division is gate-verified

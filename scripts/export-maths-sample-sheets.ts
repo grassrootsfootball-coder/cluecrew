@@ -74,6 +74,32 @@ const PACKS: Array<{ name: string; title: string; families: string[] }> = [
 function main(): void {
   mkdirSync(OUT_DIR, { recursive: true });
   const byId = new Map(MATHS_FAMILIES.map((f) => [f.id, f] as const));
+
+  // Single-family mode: `... export-maths-sample-sheets.ts M-pct M-geom` emits one sheet
+  // per named family (for sending a rebuilt family on its own, before the rest are touched).
+  const picked = process.argv.slice(2).filter((a) => byId.has(a));
+  if (picked.length) {
+    for (const id of picked) {
+      const f = byId.get(id)!;
+      const items = familyTiers(f).length * PER_TIER;
+      const doc = [
+        `# MATHS SAMPLE SHEET — ${f.id} · ${f.name}`,
+        `*Rebuilt to the review. ${items} gated items, 30 per tier, seeded ${SEED}. Ranges are enforced at generation and rendered from the same source; each tier states the rule it generates and carries its own hint.*`,
+        '',
+        'Legend: `✓` key · `[D #n]` derived by executor #n · `[A #n]` authored (disclosed) · `[D PROC-01]` stop-early, verified against firstStepResults.',
+        '', '---', '',
+        renderFamily(f),
+      ].join('\n');
+      const family = `${FAMILY}-${f.id.toLowerCase()}`;
+      const stamp = freshnessStamp(doc, new Date().toISOString());
+      const path = join(OUT_DIR, stampedName(family, stamp.sourceHash, 'md'));
+      writeFileSync(path, doc);
+      console.log(`${f.id}: ${items} items → ${stampedName(family, stamp.sourceHash, 'md')}`);
+      deliver(path, family);
+    }
+    return;
+  }
+
   PACKS.forEach((pack, i) => {
     const families = pack.families.map((id) => byId.get(id)!);
     const items = families.reduce((n, f) => n + familyTiers(f).length * PER_TIER, 0);
