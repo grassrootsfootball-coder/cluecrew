@@ -10,7 +10,7 @@
  */
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
-import { MATHS_FAMILIES, derive, familyExecutorCoverage, generateSample, mathsEntryNumber, type GenMathsItem, type MathsFamily, type Tier } from '@cluecrew/core';
+import { MATHS_FAMILIES, derive, familyExecutorCoverage, familyTiers, generateSample, mathsEntryNumber, type GenMathsItem, type MathsFamily, type Tier } from '@cluecrew/core';
 import { deliver, freshnessStamp, stampedName } from './lib/export-destination';
 
 const OUT_DIR = resolve(import.meta.dirname, '../content/exports');
@@ -62,26 +62,38 @@ function renderFamily(family: MathsFamily): string {
   return L.join('\n');
 }
 
-function main(): void {
-  const sheets = MATHS_FAMILIES.map(renderFamily).join('\n---\n\n');
-  const doc = [
-    '# MATHS TEMPLATE SAMPLE SHEETS',
-    `*For the reviewer sitting. ${MATHS_FAMILIES.length} families, ${PER_TIER} items per tier, seeded ${SEED}. Gate-verified; regenerates byte-for-byte.*`,
-    '',
-    'Legend: `✓` key · `[D #n]` distractor derived by executor #n · `[A #n]` authored (disclosed) · `[D PROC-01]` stop-early, verified against firstStepResults.',
-    '',
-    '---',
-    '',
-    sheets,
-  ].join('\n');
+// Four packs so the 12–16 hour sitting splits into reviewable sessions, grouped by
+// domain rather than dumped as one 2,790-item file (the batch-size discipline).
+const PACKS: Array<{ name: string; title: string; families: string[] }> = [
+  { name: 'pack-1-number-operations', title: 'Number, place value & operations', families: ['M-place', 'M-column', 'M-neg', 'M-round', 'M-04a', 'M-04b', 'M-04c'] },
+  { name: 'pack-2-fractions-percent-ratio', title: 'Fractions, percentages & ratio', families: ['M-frac', 'M-06a', 'M-06b', 'M-pct', 'M-ratio'] },
+  { name: 'pack-3-measures-money', title: 'Measures & money', families: ['M-money', 'M-convert', 'M-time', 'M-05a'] },
+  { name: 'pack-4-data-geometry-reasoning', title: 'Data, geometry & inverse reasoning', families: ['M-stats', 'M-geom', 'M-inverse'] },
+];
 
-  const stamp = freshnessStamp(doc, new Date().toISOString());
+function main(): void {
   mkdirSync(OUT_DIR, { recursive: true });
-  const path = join(OUT_DIR, stampedName(FAMILY, stamp.sourceHash, 'md'));
-  writeFileSync(path, doc);
-  const total = MATHS_FAMILIES.reduce((n, f) => n + (f.id === 'M-05a' ? 3 : 5) * PER_TIER, 0);
-  console.log(`Sample sheets: ${MATHS_FAMILIES.length} families, ${total} gated items → ${stampedName(FAMILY, stamp.sourceHash, 'md')}`);
-  deliver(path, FAMILY);
+  const byId = new Map(MATHS_FAMILIES.map((f) => [f.id, f] as const));
+  PACKS.forEach((pack, i) => {
+    const families = pack.families.map((id) => byId.get(id)!);
+    const items = families.reduce((n, f) => n + familyTiers(f).length * PER_TIER, 0);
+    const doc = [
+      `# MATHS TEMPLATE SAMPLE SHEETS — Pack ${i + 1} of ${PACKS.length}: ${pack.title}`,
+      `*For the reviewer sitting. ${families.length} families, ${PER_TIER} items per tier, ${items} gated items, seeded ${SEED}. Gate-verified; regenerates byte-for-byte. See the signing brief for how to read these.*`,
+      '',
+      'Legend: `✓` key · `[D #n]` distractor derived by executor #n · `[A #n]` authored (disclosed) · `[D PROC-01]` stop-early, verified against firstStepResults.',
+      '',
+      '---',
+      '',
+      families.map(renderFamily).join('\n---\n\n'),
+    ].join('\n');
+    const family = `${FAMILY}-${pack.name}`;
+    const stamp = freshnessStamp(doc, new Date().toISOString());
+    const path = join(OUT_DIR, stampedName(family, stamp.sourceHash, 'md'));
+    writeFileSync(path, doc);
+    console.log(`Pack ${i + 1}: ${families.length} families, ${items} items → ${stampedName(family, stamp.sourceHash, 'md')}`);
+    deliver(path, family);
+  });
 }
 
 main();
