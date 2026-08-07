@@ -242,11 +242,11 @@ const wrongOperation: MathsFamily = {
   collapsed: 2, // COLLAPSED (annie, 2026-08-07). v2 ladder: one-step · remainder · two-step
   name: 'Division word problem — chose the wrong operation',
   shape: 'Multi-step / one-step operation word problem',
-  tierRule: (t) => ['', 'share within times tables', 'share, 2-digit total', 'grouping, 2-digit total', 'grouping, larger total', 'two-step with a division'][t]!,
-  ranges: (t) => ['', '÷ 3–5, quotient 3–8', '÷ 4–6, quotient 4–12', '÷ 4–7, quotient 4–14', '÷ 5–8, quotient 5–16', '÷ 6–9, quotient 6–18'][t]!,
-  draft: (tier: Tier, r) => {
-    const divisor = randInt(r, tier + 2, tier + 5);
-    const quotient = randInt(r, 3, 9 + tier * 2);
+  tierRule: () => 'share a 2-digit total within the times tables',
+  numberRanges: () => ({ single: [4, 6], amount: [16, 84] }),
+  draft: (_tier: Tier, r) => {
+    const divisor = randInt(r, 4, 6);
+    const quotient = randInt(r, 4, 14);
     const total = divisor * quotient;
     const obj = randPick(r, OBJECTS);
     const who = randPick(r, SHARERS);
@@ -269,15 +269,15 @@ const wrongOperation: MathsFamily = {
 // whole number; the key is a clean 2-decimal unit share (denominator 4/5/10/20).
 const reversedDivision: MathsFamily = {
   id: 'M-04b',
-  collapsed: 4, // COLLAPSED (annie, 2026-08-07). v2 ladder: one-step · remainder · two-step (reversed)
+  collapsed: 3, // COLLAPSED (annie, 2026-08-07). v2 ladder: one-step · remainder · two-step (reversed)
   name: 'Division word problem — reversed the division',
   shape: 'Multi-step / one-step operation word problem',
-  tierRule: (t) => ['', 'share £ among 4 or 5', 'share £ among 4/5/10', 'share £ among 5/10', 'share £ among 10/20', 'share £ among 10/20, larger £'][t]!,
-  ranges: (t) => ['', '£2–£3 ÷ {4,5}', '£2–£4 ÷ {4,5,10}', '£3–£5 ÷ {5,10}', '£4–£6 ÷ {10,20}', '£6–£9 ÷ {10,20}'][t]!,
-  draft: (tier: Tier, r) => {
-    const mult = randPick(r, ([[4, 5], [4, 5, 10], [5, 10], [10, 20], [10, 20]] as number[][])[tier - 1]!);
-    const pounds = randInt(r, 1 + tier, 6 + tier);
-    const people = pounds * mult; // people is a multiple of pounds → reversed division is whole
+  tierRule: () => 'share a small £ amount among a plausible group (one-step, made harder by the decimal)',
+  numberRanges: () => ({ dividend: [2, 4], divisor: [8, 20] }),
+  draft: (_tier: Tier, r) => {
+    const mult = randPick(r, [4, 5]); // clean unit share 0.25 / 0.20
+    const pounds = randInt(r, 2, 4);
+    const people = pounds * mult; // multiple of pounds → reversed division is whole; ≤ 20 (a class)
     const each = pounds / people; // = 1/mult ∈ {0.25, 0.20, 0.10, 0.05}
     const who = randPick(r, SHARERS);
     return {
@@ -302,12 +302,14 @@ const misreadQuantity: MathsFamily = {
   collapsed: 3, // COLLAPSED (annie, 2026-08-07). v2 ladder: two numbers · three numbers · two plausible divisors
   name: 'Division word problem — misread which quantity is which',
   shape: 'Multi-step / one-step operation word problem',
-  tierRule: (t) => ['', 'two numbers + a price', 'price present, 2-digit', 'price present, larger', 'two plausible divisors', 'two-step, misread at the divide'][t]!,
-  ranges: (t) => ['', 'boxes 4–6, per 4–6', 'boxes 4–8, per 4–7', 'boxes 5–9, per 5–8', 'boxes 6–10, per 6–9', 'boxes 6–12, per 6–9'][t]!,
-  draft: (tier: Tier, r) => {
+  // The redundant £ price is DELIBERATE (annie): the misread-quantity diagnosis needs a
+  // second plausible divisor in the problem. Keep as the reference example for the v2 ladder.
+  tierRule: () => 'divide, with a redundant price present to misread as the divisor',
+  numberRanges: () => ({ divisor: [4, 8], total: [16, 160] }),
+  draft: (_tier: Tier, r) => {
     const price = randPick(r, [2, 3, 5]); // the misread divisor
-    const perBox = randInt(r, 4, 6 + tier);
-    const boxes = price * randInt(r, 2, 3 + tier); // boxes multiple of price → total divisible by price
+    const perBox = randInt(r, 4, 8);
+    const boxes = price * randInt(r, 2, 4); // boxes multiple of price → total divisible by price; total ≤ 160
     const total = perBox * boxes;
     return {
       stem: `${total} eggs are packed into boxes of ${perBox}. Each box is sold for ${money(price)}. How many boxes are there?`,
@@ -333,11 +335,11 @@ const unitFraction: MathsFamily = {
   name: 'Unit fraction of an amount (bare)',
   shape: 'Fraction of an amount',
   distractorFloor: 2,
-  tierRule: (t) => ['', '1/2–1/4 of a times-table amount', '1/3–1/5 of a 2-digit amount', 'unit fraction, 2–3 digit', 'unit fraction, 2-digit answer', 'unit fraction, 3-digit amount'][t]!,
-  ranges: (t) => ['', 'denom 2–4, answer 5–10', 'denom 3–5, answer 5–12', 'denom 3–6, answer 6–14', 'denom 4–8, answer 6–16', 'denom 4–9, answer 8–20'][t]!,
-  draft: (tier: Tier, r) => {
-    const denom = randInt(r, 2 + Math.floor(tier / 2), 4 + tier);
-    const answer = randInt(r, 5, 16 + tier * 4);
+  tierRule: () => 'unit fraction of a 2-digit amount',
+  numberRanges: () => ({ single: [3, 5], amount: [15, 80] }),
+  draft: (_tier: Tier, r) => {
+    const denom = randInt(r, 3, 5);
+    const answer = randInt(r, 5, 16);
     const amount = denom * answer;
     return {
       stem: `What is 1/${denom} of ${amount}?`,
@@ -361,11 +363,11 @@ const unitPrice: MathsFamily = {
   name: 'Unit price / best buy',
   shape: 'Unitary proportion / best-buy',
   distractorFloor: 2,
-  tierRule: (t) => ['', '', 'price for a pack, find one', 'find one, cleaner pack', 'larger pack', 'larger pack, higher unit'][t]!,
-  ranges: (t) => ['', '', 'pack 4–6 at £2–£3 each', 'pack 4–8 at £2–£3 each', 'pack 5–9 at £2–£3 each', 'pack 6–10 at £2–£4 each'][t]!,
+  tierRule: () => 'price for a pack, find the price of one',
+  numberRanges: () => ({ divisor: [4, 8], dividend: [8, 24] }),
   draft: (tier: Tier, r) => {
-    const each = randInt(r, 2, tier >= 5 ? 4 : 3);
-    const count = randInt(r, 5, 12 + tier); // count > each, so count read-as-price ≠ key
+    const each = randInt(r, 2, 3);
+    const count = randInt(r, 4, 8); // count > each, so count read-as-price ≠ key
     const packPrice = count * each;
     const obj = randPick(r, ['pens', 'pencils', 'apples', 'cakes', 'yoghurts', 'stickers']);
     const one = obj.slice(0, -1);
@@ -386,13 +388,13 @@ const unitPrice: MathsFamily = {
 // ---------- P-1 · Place value & ordering ----------
 const placeValue: MathsFamily = {
   id: 'M-place',
-  collapsed: 2, // COLLAPSED (annie, 2026-08-07). v2 ladder: which column · then decimals (and fix the T1 monotony)
+  collapsed: 2, // COLLAPSED (annie, 2026-08-07). v2 ladder: which column · then decimals. V2 NOTE: the collapse RELOCATED the intra-tier monotony (only thousands/hundreds asked) rather than fixing it — the gate can't see it inside a single tier.
   name: 'Place value — value of a digit',
   shape: 'Value of a digit / place value',
-  tierRule: (t) => ['', '3-digit whole number', '4-digit whole number', '5-digit whole number', '5-digit, higher columns', '6-digit whole number'][t]!,
-  ranges: (t) => ['', '100–999', '1,000–9,999', '10,000–99,999', '10,000–99,999', '100,000–999,999'][t]!,
+  tierRule: () => 'value of a digit in a 4-digit whole number',
+  ranges: () => '1,000–9,999',
   draft: (tier, r) => {
-    const len = [0, 3, 4, 5, 5, 6][tier]!;
+    const len = 4;
     const posIdx = randInt(r, 2, len - 1); // hundreds or higher, so #61 ≠ face value
     const place = 10 ** posIdx;
     const d = randInt(r, 1, 9);
@@ -470,11 +472,11 @@ const negatives: MathsFamily = {
   collapsed: 2, // COLLAPSED (annie, 2026-08-07). v2 ladder: compare · count across zero · temperature change
   name: 'Negative numbers — greatest of a set',
   shape: 'Negative numbers / temperature change',
-  tierRule: (t) => ['', 'greatest of three, −10..0', 'greatest of four, −15..0', 'greatest of four, −20..5', 'greatest of four, −30..10', 'order of five, −30..10'][t]!,
-  ranges: (t) => ['', '−10 to 0', '−15 to 0', '−20 to 5', '−30 to 10', '−30 to 10'][t]!,
+  tierRule: () => 'greatest of four negatives, −15 to 0',
+  ranges: () => '−15 to 0',
   draft: (tier, r) => {
-    const lo = [0, -10, -15, -20, -30, -30][tier]!;
-    const hi = [0, 0, 0, 5, 10, 10][tier]!;
+    const lo = -15;
+    const hi = 0;
     const set = new Set<number>();
     while (set.size < 4) set.add(randInt(r, lo, hi));
     const nums = [...set];
@@ -502,12 +504,12 @@ const fractionsAddSub: MathsFamily = {
   collapsed: 4, // COLLAPSED (annie, 2026-08-07). v2 ladder: same denominator · related · unrelated
   name: 'Fractions — adding unit fractions',
   shape: 'Add / subtract / compare fractions',
-  tierRule: (t) => ['', 'proper fractions, denominators to 5', 'proper fractions, denominators to 5', 'proper fractions, denominators to 6', 'proper fractions, denominators to 8', 'proper fractions, denominators to 9'][t]!,
-  ranges: (t) => ['', 'denom 2–5', 'denom 2–5', 'denom 2–6', 'denom 3–8', 'denom 3–9'][t]!,
+  tierRule: () => 'add two proper fractions, denominators 3–8',
+  numberRanges: () => ({ d1: [3, 8], d2: [3, 8] }),
   draft: (tier, r) => {
-    const cap = [0, 5, 5, 6, 8, 9][tier]!;
-    const d1 = randInt(r, 2, cap);
-    const d2 = randInt(r, 2, cap);
+    const cap = 8;
+    const d1 = randInt(r, 3, cap);
+    const d2 = randInt(r, 3, cap);
     const n1 = randInt(r, 1, d1 - 1);
     const n2 = randInt(r, 1, d2 - 1);
     const num = n1 * d2 + n2 * d1;
@@ -614,17 +616,17 @@ const percentageOfAmount: MathsFamily = {
 // ---------- P-5b · Ratio share ----------
 const ratioShare: MathsFamily = {
   id: 'M-ratio',
-  collapsed: 3, // COLLAPSED (annie, 2026-08-07). v2 ladder: larger share · either share · three-part
+  collapsed: 4, // COLLAPSED (annie, 2026-08-07). v2 ladder: larger share · either share · three-part
   name: 'Ratio share',
   shape: 'Ratio share',
-  tierRule: (t) => ['', '', 'two-part ratio, larger share', 'two-part ratio, either share', 'two-part, larger totals', 'two-part, 3-digit totals'][t]!,
-  ranges: (t) => ['', '', 'ratio parts 1–4, total to 60', 'parts 1–5, total to 90', 'parts 1–6, total to 150', 'parts 2–7, total to 300'][t]!,
+  tierRule: () => 'two-part ratio, find the larger share',
+  numberRanges: () => ({ a: [1, 6], b: [1, 6], total: [9, 150] }),
   draft: (tier, r) => {
-    const a = randInt(r, 1, 3 + tier);
-    let b = randInt(r, 1, 3 + tier);
-    while (b === a) b = randInt(r, 1, 3 + tier);
+    const a = randInt(r, 1, 6);
+    let b = randInt(r, 1, 6);
+    while (b === a) b = randInt(r, 1, 6);
     const parts = a + b;
-    const unit = randInt(r, 3, 6 + tier * 2);
+    const unit = randInt(r, 3, 12);
     const total = parts * unit;
     const large = Math.max(a, b) * unit;
     return {
@@ -648,12 +650,12 @@ const metricConversion: MathsFamily = {
   collapsed: 2, // COLLAPSED (annie, 2026-08-07). v2 ladder: adjacent units · multi-step · up-and-down
   name: 'Metric unit conversion',
   shape: 'Unit conversion (length/mass/volume)',
-  tierRule: (t) => ['', 'kg→g, whole', 'km→m / l→ml, whole', 'kg→g, 2-digit', 'larger whole values', 'multi-unit values'][t]!,
-  ranges: (t) => ['', '1–9 kg', '1–9 km/l', '10–90 kg', '10–900', '100–9,000'][t]!,
+  tierRule: () => 'convert a whole number of large units to small (×1000)',
+  numberRanges: () => ({ value: [1, 9] }),
   draft: (tier, r) => {
     // All ×1000 conversions, so #37 (prefix-as-×100) is always a wrong value, never the key.
     const [big, small, factor] = randPick(r, [['kg', 'g', 1000], ['km', 'm', 1000], ['litres', 'ml', 1000], ['g', 'mg', 1000]] as [string, string, number][]);
-    const value = randInt(r, 1, [0, 12, 12, 90, 900, 9000][tier]!);
+    const value = randInt(r, 1, 9);
     const key = value * factor;
     return {
       stem: `Convert ${value} ${big} to ${small}.`,
@@ -673,15 +675,15 @@ const metricConversion: MathsFamily = {
 // ---------- P-6b · Time interval ----------
 const timeInterval: MathsFamily = {
   id: 'M-time',
-  collapsed: 3, // COLLAPSED (annie, 2026-08-07). v2 ladder: within the hour · across it · across midnight
+  collapsed: 2, // COLLAPSED (annie, 2026-08-07). v2 ladder: within the hour · across it · across midnight
   name: 'Time interval',
   shape: 'Time interval / timetable journey',
-  tierRule: (t) => ['', 'add minutes across the hour', 'add across the hour, larger', 'add across the hour, any start', 'add over an hour', 'timetable across the hour'][t]!,
-  ranges: (t) => ['', 'start :35–:55, add 10–35', 'start :30–:55, add 10–40', 'start :20–:55, add 15–45', 'start :15–:55, add 20–50', 'start any, add 20–55'][t]!,
+  tierRule: () => 'add minutes, crossing the hour',
+  numberRanges: () => ({ minute: [15, 55], addMinutes: [10, 40] }),
   draft: (tier, r) => {
     const startH = randInt(r, 1, 5);
     const startM = randInt(r, 3, 11) * 5; // 15–55
-    const addM = randInt(r, 3, 11) * 5;
+    const addM = randInt(r, 2, 8) * 5; // 10–40
     if (startM + addM < 60) return { stem: '', solution: null, keyValue: 'x', operands: {}, distractors: [] }; // forces a retry (crosses the hour)
     const endM = startM + addM - 60;
     const key = `${startH + 1}:${pad2(endM)}`;
@@ -703,14 +705,14 @@ const timeInterval: MathsFamily = {
 // ---------- P-7 · Statistics: averages ----------
 const statisticsAverages: MathsFamily = {
   id: 'M-stats',
-  collapsed: 3, // COLLAPSED (annie, 2026-08-07). v2 ladder: mean · median/mode · missing value
+  collapsed: 4, // COLLAPSED (annie, 2026-08-07). v2 ladder: mean · median/mode · missing value
   name: 'Statistics — mean of a list',
   shape: 'Mean of a list',
-  tierRule: (t) => ['', 'mean of four small values', 'mean of four values', 'mean of five values', 'mean of five, larger', 'mean of six values'][t]!,
-  ranges: (t) => ['', '4 values 1–12', '4 values 1–20', '5 values 1–20', '5 values 1–40', '6 values 1–40'][t]!,
+  tierRule: () => 'mean of five values, 1–40',
+  ranges: () => '5 values 1–40',
   draft: (tier, r) => {
-    const count = [0, 4, 4, 5, 5, 6][tier]!;
-    const hi = [0, 12, 20, 20, 40, 40][tier]!;
+    const count = 5;
+    const hi = 40;
     const mean = randInt(r, 3, hi - 2);
     const vals: number[] = [];
     for (let i = 0; i < count - 1; i += 1) vals.push(randInt(r, 1, hi));
@@ -840,12 +842,12 @@ const wordedFraction: MathsFamily = {
   collapsed: 4, // COLLAPSED (annie, 2026-08-07). v2 ladder: one-step worded · two-step · of-the-remainder
   name: 'Fraction of an amount — worded (two-step)',
   shape: 'Fraction of an amount',
-  tierRule: (t) => ['', '', '', 'find a unit fraction, then the rest', 'unit fraction of a 2-digit amount, then the rest', 'unit fraction of a 3-digit amount, then the rest'][t]!,
-  ranges: (t) => ['', '', '', 'denom 2–4, amount 12–48', 'denom 3–5, amount 30–120', 'denom 3–6, amount 60–240'][t]!,
+  tierRule: () => 'unit fraction of an amount, then find the rest (two-step)',
+  numberRanges: () => ({ amount: [30, 120] }),
   draft: (tier, r) => {
-    const denom = randInt(r, 2 + Math.floor((tier - 3) / 1), 4 + (tier - 3));
-    const part = randInt(r, 6, 12 + (tier - 3) * 12);
-    const amount = denom * part; // 1/denom of amount = part (whole)
+    const denom = randInt(r, 3, 5);
+    const part = randInt(r, 10, 24);
+    const amount = denom * part; // 1/denom of amount = part (whole); amount 30–120
     const key = amount - part; // how many are LEFT
     const obj = randPick(r, OBJECTS);
     return {
