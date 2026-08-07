@@ -2520,3 +2520,77 @@ import gate under-reports can reach LIVE without passing the now-unified
 enforcing gates, so the reporting gate staying narrower is safe. The principle:
 the doors that DECIDE share one implementation; the gates that ADVISE may be
 lighter, but never the reverse.
+
+## Entry 51 — What the paired-tier corpus finding can and cannot conclude
+*2026-08-07. Annie's methodological limit, recorded against the finding so it is not re-derived.*
+
+The vr-04 bank tests some vocabulary at two tiers (SWIFT T1 / RAPID T2 in the
+"fast" family; BRAVE T1 / BOLD T2 in "courage"). The tempting corpus conclusion —
+that real GL/CEM papers *deliberately* pair a word's easy and hard senses across a
+tier ladder — **does not survive**, and the reason is structural, not a matter of
+more data:
+
+**A discriminative-only word list cannot answer the paired-tier question.** By
+construction it keeps the rarer half of a near-synonym pair and drops the commoner
+half (the common word is not discriminative, so it never enters the list). So when
+the analysis looks for a paired easy/hard design and finds nothing, *absence of
+evidence is exactly what it would see whether or not the design exists* — the
+method has thrown away the evidence it would need to see it. The conclusion is
+unfalsifiable from this instrument; it is withdrawn, not disproven.
+
+**The two findings that DO survive** (both hold, both instrument-independent):
+1. **Same-tier clustering within a paper** — a single paper draws several items
+   from one sense-family at one difficulty. Observable directly.
+2. **Recurrence across papers through a rarer word** — the same concept resurfaces
+   in a later paper via a lower-frequency synonym. Observable directly.
+
+**Product consequence.** The near-synonym composition check is therefore a FLAG,
+never a threshold-block (Entry-adjacent to the vr-04 build): no headword-only
+metric distinguishes a real duplication (SWIFT/RAPID asked the same way twice) from
+a legitimate difficulty ladder (a harder item asking a harder question of the same
+word). The flag surfaces every cross-tier pair **with both option sets** so the
+reviewer rules on the actual question — "does the harder item ask a harder
+question" — which the headwords alone cannot answer. SWIFT/RAPID she kept, tightening
+RAPID's distractors to speedy/hurried/brisk so the T2 item tests discrimination
+rather than rarity; BRAVE/BOLD is a genuine ladder, left as is.
+
+## Entry 52 — vr-03 extended to T3-T5, and where wrong-degree belongs
+*2026-08-07. Annie authored 24 T3-T5 rows (the case had topped out at T2), with three T5 self-corrections applied before build.*
+
+**The ladder.** T3 = functional/abstract relations (what a thing is for, holds, or
+lacks — the child must name the relation before carrying it). T4 = degree and scale
+(the pair shows a change in strength and the answer must match its *size*, not just
+its direction) plus raw-to-made chains. T5 = abstract relations where at least one
+distractor is correct under a plausible near-reading, so the child must decide which
+relation the pair actually shows.
+
+**New diagnosis `vr03-wrong-degree`** — applies the right relationship at the wrong
+strength or scale (wet for damp→soaked). Justified by volume, not one item: it
+carries the degree rows at T4, and the previously-stranded minute→hour→day / "week"
+case now has a home. Its hint opens by affirming the link the child *did* find —
+damp→soaked and damp→wet are the same insight at two scales.
+
+**The tier principle (recorded at Annie's request).** Wrong-degree belongs at **T4**,
+where the pair sets a clear step and the child matches it. At T5 it degrades into
+relative-magnitude ranking — a *different* skill, and a worse one to test with words.
+So the three T5 self-corrections all pulled wrong-degree out of T5: T5-03 mercy
+retagged wrong-link (a shade of kindness, not a lesser amount); T5-06 replaced whole
+(spark→blaze/seed→forest did not parallel — one substance scaled up vs one thing
+becoming many — so "tree" matched the left side better than the key; now
+sketch→painting/draft→essay, rough-to-finished); T5-07 rebuilt (doubt→believe with
+accept/suspect/pause; "question" had been a near-synonym of the stem, not a weak key).
+One residual wrong-degree remains at T5-07 (accept), which is what the pool count
+of six reflects.
+
+**Distribution discipline.** example-anchor capped at ~half from the start (it sits
+in every pool and would otherwise become the predictable slot); the served split
+lands eA at 18 of 98 across the whole bank. reversed-relation (3 rows) and same-topic
+(5 rows) stay scarcity-protected, as in T1-T2. Each segment runs its own eA budget so
+the extension leaves the already-LIVE T1-T2 items byte-identical (verified).
+
+**One count to reconcile.** Annie's stated pool split is eA 24 / wL 19 / pFK 15 /
+wD 6 / rR 3 / sT 5. The literal per-row tags give **wL 20 / pFK 14** (all others
+match). It is a one-distractor pFK-vs-wL judgment call in the hand count, present in
+her working file too; the per-row tags are what generate the items, so the bank is
+built to those. Flagged for her to confirm which row she meant to read as part-for-kind
+if the review artifact needs the aggregate to agree.

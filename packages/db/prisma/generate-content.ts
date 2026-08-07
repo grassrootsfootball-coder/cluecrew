@@ -66,6 +66,10 @@ export const M: Record<string, Array<{ id: string; description: string; childHin
     { id: 'vr03-wrong-link', description: 'Found a genuine relationship between the pair and applied it consistently, but not the one the example shows.', childHint: 'Make the first pair into a sentence. Then try your answer in the same sentence.' },
     { id: 'vr03-part-for-kind', description: 'Gave a part of the second word where the example gave a kind, a whole, or a category.', childHint: 'A part is not the same as a whole. Check what the first pair gave you.' },
     { id: 'vr03-example-anchor', description: 'Chose a word related to the first pair rather than applying the relationship to the second.', childHint: 'The first pair only shows the rule. Now use that rule on the new word.' },
+    // NEW (annie, 2026-08-06) — justified by volume, eight of the 72 T3-T5 pool
+    // distractors, all at T4-T5. The hint opens by affirming the link the child DID
+    // find (damp→soaked and damp→wet are the same insight at two scales).
+    { id: 'vr03-wrong-degree', description: 'Applies the right relationship but at the wrong strength or scale (wet for damp→soaked — the right direction of change, not its size).', childHint: 'You found the right link. Now check how big the change is.' },
   ],
   // Re-authored to annie's five-diagnosis model (2026-08-06, verbatim). The old
   // associated-not-same / opposite-pull pair is retired: an antonym is never a
@@ -725,15 +729,21 @@ function analogies(offset: number, prompt: string): GenItem[] {
 //     second answer, so the constructor refuses to emit them whatever a pool says.
 //   - king->crown is RETIRED (ambiguity is in the pair, not the distractor);
 //     a replacement row follows, so this bank is 25 rows, not 26.
-type Vr03Dx = 'rR' | 'wL' | 'pFK' | 'sT' | 'eA';
+type Vr03Dx = 'rR' | 'wL' | 'pFK' | 'sT' | 'eA' | 'wD';
 const VR03_DX_ID: Record<Vr03Dx, string> = {
   rR: 'vr03-reversed-relation',
   wL: 'vr03-wrong-link',
   pFK: 'vr03-part-for-kind',
   sT: 'vr03-same-topic',
   eA: 'vr03-example-anchor',
+  wD: 'vr03-wrong-degree',
 };
-const VR03_NEVER_ADD = new Set(['listen', 'slice', 'star', 'sunny', 'hot', 'roof', 'door', 'window']);
+// Defensible second answers, hard-blocked as distractors. The T1-T2 eight, then
+// annie's T3-T5 additions (2026-08-06): a thermometer measures heat; pictures/art
+// are paintings; water is what a drought lacks; an act divides a play; wine is a
+// grape product; notes / rough copy are a draft. "fire" (the retired spark→blaze
+// row) left with T5-06; "notes"/"rough copy" arrived with its draft→essay replacement.
+const VR03_NEVER_ADD = new Set(['listen', 'slice', 'star', 'sunny', 'hot', 'roof', 'door', 'window', 'heat', 'pictures', 'art', 'water', 'act', 'wine', 'notes', 'rough copy']);
 interface Vr03Row { a: string; b: string; stem: string; answer: string; pool: Array<[string, Vr03Dx]>; }
 const VR03_ROWS: Vr03Row[] = [
   // Noun rows — three diagnoses each.
@@ -769,24 +779,65 @@ const VR03_ROWS: Vr03Row[] = [
 
 const VR03_SCARCE = new Set<Vr03Dx>(['rR', 'sT']);
 
+// T3-T5, authored by annie (2026-08-06) with three T5 self-corrections (2026-08-07,
+// applied here): the case previously topped out at T2. T3 = functional/abstract
+// relations; T4 = degree/scale and raw-to-made; T5 = abstract with a near-reading
+// distractor. wrong-degree lives at T4 (the pair sets a clear step and the child
+// matches it) plus one residual at T5-07 (doubt→believe / accept). The recorded tier
+// principle: wrong-degree belongs at T4; at T5 it becomes relative-magnitude ranking,
+// a different and worse-tested skill — so it is not seeded below T4 or spread across T5.
+const VR03_T3T5_ROWS: Vr03Row[] = [
+  // T3 — functional and abstract relations.
+  { a: 'clock', b: 'time', stem: 'thermometer', answer: 'temperature', pool: [['weather', 'wL'], ['mercury', 'pFK'], ['hour', 'eA']] },
+  { a: 'author', b: 'novel', stem: 'composer', answer: 'symphony', pool: [['orchestra', 'wL'], ['note', 'pFK'], ['chapter', 'eA']] },
+  { a: 'shepherd', b: 'sheep', stem: 'beekeeper', answer: 'bees', pool: [['honey', 'wL'], ['sting', 'pFK'], ['wool', 'eA']] },
+  { a: 'library', b: 'books', stem: 'gallery', answer: 'paintings', pool: [['artist', 'wL'], ['frame', 'pFK'], ['shelf', 'eA']] },
+  { a: 'drought', b: 'rain', stem: 'famine', answer: 'food', pool: [['hunger', 'wL'], ['crop', 'sT'], ['desert', 'eA']] },
+  { a: 'captain', b: 'crew', stem: 'conductor', answer: 'orchestra', pool: [['music', 'wL'], ['violin', 'pFK'], ['ship', 'eA']] },
+  { a: 'recipe', b: 'meal', stem: 'blueprint', answer: 'building', pool: [['architect', 'wL'], ['brick', 'pFK'], ['chef', 'eA']] },
+  { a: 'chapter', b: 'novel', stem: 'scene', answer: 'play', pool: [['line', 'rR'], ['actor', 'wL'], ['page', 'eA']] },
+  // T4 — degree, scale, and raw-to-made.
+  { a: 'warm', b: 'hot', stem: 'damp', answer: 'soaked', pool: [['wet', 'wD'], ['mouldy', 'wL'], ['boiling', 'eA']] },
+  { a: 'breeze', b: 'gale', stem: 'shower', answer: 'downpour', pool: [['drizzle', 'wD'], ['puddle', 'wL'], ['storm', 'eA']] },
+  { a: 'whisper', b: 'shout', stem: 'glance', answer: 'stare', pool: [['peek', 'wD'], ['blink', 'wL'], ['yell', 'eA']] },
+  { a: 'chuckle', b: 'roar', stem: 'sniffle', answer: 'wail', pool: [['cry', 'wD'], ['sneeze', 'wL'], ['giggle', 'eA']] },
+  { a: 'annoyed', b: 'furious', stem: 'pleased', answer: 'delighted', pool: [['content', 'wD'], ['calm', 'wL'], ['angry', 'eA']] },
+  { a: 'wheat', b: 'flour', stem: 'grape', answer: 'juice', pool: [['vine', 'rR'], ['skin', 'pFK'], ['bread', 'eA']] },
+  { a: 'sculptor', b: 'marble', stem: 'potter', answer: 'clay', pool: [['pot', 'wL'], ['handle', 'pFK'], ['statue', 'eA']] },
+  { a: 'herd', b: 'cattle', stem: 'flock', answer: 'sheep', pool: [['shepherd', 'wL'], ['wool', 'pFK'], ['cow', 'eA']] },
+  // T5 — abstract, with a near-reading distractor.
+  { a: 'novel', b: 'chapter', stem: 'symphony', answer: 'movement', pool: [['note', 'pFK'], ['orchestra', 'wL'], ['paragraph', 'eA']] },
+  { a: 'dictionary', b: 'word', stem: 'atlas', answer: 'map', pool: [['country', 'pFK'], ['geography', 'sT'], ['meaning', 'eA']] },
+  // T5-03 corrected 2026-08-07: mercy is a shade of kindness (wrong-link), not a lesser degree; violence → same-topic.
+  { a: 'cowardice', b: 'bravery', stem: 'cruelty', answer: 'kindness', pool: [['mercy', 'wL'], ['violence', 'sT'], ['fear', 'eA']] },
+  { a: 'witness', b: 'trial', stem: 'referee', answer: 'match', pool: [['player', 'wL'], ['whistle', 'pFK'], ['judge', 'eA']] },
+  { a: 'drop', b: 'ocean', stem: 'grain', answer: 'desert', pool: [['dune', 'pFK'], ['camel', 'sT'], ['wave', 'eA']] },
+  // T5-06 replaced 2026-08-07: spark→blaze/seed→forest relations did not parallel; sketch→painting/draft→essay is rough-to-finished, and "outline" is close-but-wrong without being a size judgement.
+  { a: 'sketch', b: 'painting', stem: 'draft', answer: 'essay', pool: [['outline', 'wL'], ['pen', 'sT'], ['canvas', 'eA']] },
+  // T5-07 rebuilt 2026-08-07: "question" was a near-synonym of the stem, not a weak version of the key.
+  { a: 'hesitate', b: 'act', stem: 'doubt', answer: 'believe', pool: [['accept', 'wD'], ['suspect', 'wL'], ['pause', 'eA']] },
+  { a: 'apprentice', b: 'master', stem: 'sapling', answer: 'oak', pool: [['acorn', 'rR'], ['branch', 'pFK'], ['teacher', 'eA']] },
+];
+
 // Generate-to-diagnosis makes each distractor type PREDICTABLE by design, so a
 // shortcut appears the moment one type is both predictable and over-represented
 // (CLAUDE.md house rule: generated-distractor distribution). Distribution is
-// therefore held down deliberately, on the reviewer's two rules (2026-08-06):
-//   1. Never drop a scarce diagnosis. If a row carries reversed-relation or
-//      same-topic, that slot is FIXED; the free slot is chosen from the rest.
-//   2. Cap example-anchor at ~half the items and stop it being the default
-//      filler — where a row offers three, prefer part-for-kind over
-//      example-anchor. (The eight two-diagnosis rows force wL+eA, so eA has a
-//      floor; the cap lets only a few three-diagnosis rows top it up to balance
-//      wrong-link, then no more.)
-function relatedWordsTyped(): GenItem[] {
-  const EA_CAP = Math.ceil(VR03_ROWS.length / 2); // ~half the items
-  const forcedEa = VR03_ROWS.filter((r) => r.pool.length === 2 && r.pool.some(([, d]) => d === 'eA')).length;
+// therefore held down deliberately, on the reviewer's rules (2026-08-06):
+//   1. Never drop a scarce diagnosis (reversed-relation, same-topic): that slot is
+//      FIXED; the free slot is chosen from the rest. wrong-degree is fixed the same
+//      way where present — it is the diagnosis that makes a degree relation testable.
+//   2. Cap example-anchor at ~half the items and stop it being the default filler —
+//      where a row offers three, prefer part-for-kind (then wrong-link) over eA.
+// Each SEGMENT (T1-T2, then T3-T5) runs its own eA budget so the extension cannot
+// shift the already-LIVE T1-T2 items — same rows, same cap, byte-identical output.
+function emitVr03Segment(rows: Vr03Row[], offset: number): GenItem[] {
+  const EA_CAP = Math.ceil(rows.length / 2); // ~half the items in this segment
+  const forcedEa = rows.filter((r) => r.pool.length === 2 && r.pool.some(([, d]) => d === 'eA')).length;
   let eaBudget = EA_CAP - forcedEa; // example-anchor slots the free rows may add
-  let freeIdx = 0; // counts no-scarce rows, to spread the eA budget across them
-  return VR03_ROWS.map((row, i) => {
-    if (row.pool.length > 3) throw new Error(`vr-03 row ${i + 1}: pool holds more than three diagnoses`);
+  let freeIdx = 0; // counts no-fixed rows, to spread the eA budget across them
+  return rows.map((row, i) => {
+    const rowNo = offset + i + 1;
+    if (row.pool.length > 3) throw new Error(`vr-03 row ${rowNo}: pool holds more than three diagnoses`);
     let served: Array<[string, Vr03Dx]>;
     if (row.pool.length === 2) {
       served = row.pool; // two-diagnosis rows are complete — serve both
@@ -801,28 +852,35 @@ function relatedWordsTyped(): GenItem[] {
         const filler = rest.find(([, d]) => d === 'pFK') ?? rest.find(([, d]) => d === 'wL') ?? rest.find(([, d]) => d === 'eA')!;
         served = [scarce[0]!, filler];
       } else {
-        // No scarce (wrong-link / part-for-kind / example-anchor). Always keep
-        // part-for-kind; add example-anchor only while budget allows and on a
-        // spread of rows, else wrong-link.
-        const pfk = rest.find(([, d]) => d === 'pFK')!;
-        const ea = rest.find(([, d]) => d === 'eA');
-        const wl = rest.find(([, d]) => d === 'wL')!;
-        const takeEa = !!ea && eaBudget > 0 && freeIdx % 2 === 0;
-        served = takeEa ? [pfk, ea!] : [pfk, wl];
-        if (takeEa) eaBudget--;
-        freeIdx++;
+        const wd = row.pool.find(([, d]) => d === 'wD');
+        if (wd) {
+          // wrong-degree row (T4-T5 only): fix the degree slot, fill with part-for-kind,
+          // then wrong-link (eA stays capped). Keeps wrong-degree served every time.
+          const filler = rest.find(([, d]) => d === 'pFK' || d === 'wL') ?? rest.find(([, d]) => d === 'eA')!;
+          served = [wd, filler];
+        } else {
+          // No fixed diagnosis. Always keep part-for-kind; add example-anchor only
+          // while budget allows and on a spread of rows, else wrong-link.
+          const pfk = rest.find(([, d]) => d === 'pFK')!;
+          const ea = rest.find(([, d]) => d === 'eA');
+          const wl = rest.find(([, d]) => d === 'wL')!;
+          const takeEa = !!ea && eaBudget > 0 && freeIdx % 2 === 0;
+          served = takeEa ? [pfk, ea!] : [pfk, wl];
+          if (takeEa) eaBudget--;
+          freeIdx++;
+        }
       }
     }
-    if (served.length !== 2) throw new Error(`vr-03 row ${i + 1}: needs two served distractors, got ${served.length}`);
-    if (served[0]![1] === served[1]![1]) throw new Error(`vr-03 row ${i + 1}: both distractors carry diagnosis ${served[0]![1]}`);
+    if (served.length !== 2) throw new Error(`vr-03 row ${rowNo}: needs two served distractors, got ${served.length}`);
+    if (served[0]![1] === served[1]![1]) throw new Error(`vr-03 row ${rowNo}: both distractors carry diagnosis ${served[0]![1]}`);
     for (const [word] of served) {
-      if (VR03_NEVER_ADD.has(word)) throw new Error(`vr-03 row ${i + 1}: "${word}" is on the never-add list — refused`);
+      if (VR03_NEVER_ADD.has(word)) throw new Error(`vr-03 row ${rowNo}: "${word}" is on the never-add list — refused`);
     }
     // Alternate which distractor is stored first so no diagnosis holds a fixed
     // column (serving reshuffles per child regardless — this is for the review).
     const ordered = i % 2 === 1 ? [served[1]!, served[0]!] : served;
     return {
-      n: i + 1,
+      n: rowNo,
       tier: vocabTierOfSet([row.a, row.b, row.stem, row.answer]),
       stem: { prompt: 'The first pair go together in a certain way. Complete the second pair the same way.', pairA: [row.a, row.b], stemWord: row.stem },
       options: [
@@ -831,6 +889,12 @@ function relatedWordsTyped(): GenItem[] {
       ],
     };
   });
+}
+
+// T1-T2 first (n 1-25, unchanged), then the T3-T5 ladder (n 26-49). Separate
+// segments keep each eA budget local so the extension cannot disturb LIVE items.
+function relatedWordsTyped(): GenItem[] {
+  return [...emitVr03Segment(VR03_ROWS, 0), ...emitVr03Segment(VR03_T3T5_ROWS, VR03_ROWS.length)];
 }
 
 // ---------- vr-04: closest-meaning, 40 typed rows, generate-TO-diagnosis ----------
