@@ -18,12 +18,6 @@ import { prisma } from '../packages/db/src/index';
 const OUT_DIR = resolve(import.meta.dirname, '../content/exports');
 const FAMILY = 'maths-executor-coverage';
 
-// A distractor is gate-verified two ways: a NUMERIC executor recomputes a topic id on
-// the operands (MISCONCEPTION_EXECUTORS), OR a PROCESS-axis id is checked against
-// operands.firstStepResults (the process branch in check-item). Both are "derived";
-// only derivable-without-executor is authored-and-trusted.
-type Coverage = 'conceptual' | 'derivable-with-executor' | 'process-gate-verified' | 'derivable-without-executor';
-
 async function main(): Promise<void> {
   const rows = await prisma.misconception.findMany({
     where: { district: 'MATHS', status: 'ACTIVE' },
@@ -38,48 +32,49 @@ async function main(): Promise<void> {
   const entries = rows
     .map((m) => {
       const entry = entryNum(m.sourcePattern, m.id);
-      const isProcess = m.axis === 'PROCESS';
-      const conceptual = CONCEPTUAL_ENTRIES.has(entry);
-      const hasExecutor = execKeys.has(entry);
-      const coverage: Coverage = conceptual
-        ? 'conceptual'
-        : hasExecutor
-          ? 'derivable-with-executor'
-          : isProcess
-            ? 'process-gate-verified'
-            : 'derivable-without-executor';
+      const klass: 'derivable' | 'conceptual' = CONCEPTUAL_ENTRIES.has(entry) ? 'conceptual' : 'derivable';
+      const numeric = execKeys.has(entry);
+      // Only PROC-01 has an implemented process check (firstStepResults). The four
+      // reclassified topic ids (#71/#72/#99/#100) are derivable-classed but have NO
+      // executor of their own — a distractor tagged with one ships AUTHORED, which is
+      // exactly the derivable-vs-implemented gap this manifest exposes.
+      const procImplemented = /proc-01/.test(m.id);
+      const mechanism: 'numeric' | 'process-firstStepResults' | 'none' = numeric ? 'numeric' : procImplemented ? 'process-firstStepResults' : 'none';
+      const executorPresent: 'yes' | 'no' = mechanism === 'none' ? 'no' : 'yes';
       return {
-        // PROC-01 carries no numeric slot; label it by id, not entry 0.
-        entry: entry || null,
+        entry: entry || null, // PROC-01 carries no numeric slot; label it by id.
         id: m.id,
+        class: klass,
+        executorPresent,
+        mechanism,
         category: m.category,
-        axis: isProcess ? 'PROCESS' : 'TOPIC',
-        coverage,
-        hasExecutor,
+        axis: m.axis === 'PROCESS' ? 'PROCESS' : 'TOPIC',
         description: m.description,
       };
     })
     .sort((a, b) => (a.entry ?? 999) - (b.entry ?? 999));
 
-  const count = (c: Coverage): number => entries.filter((e) => e.coverage === c).length;
-  const without = entries.filter((e) => e.coverage === 'derivable-without-executor');
+  const derivable = entries.filter((e) => e.class === 'derivable');
+  const implemented = derivable.filter((e) => e.executorPresent === 'yes');
+  const unimplemented = derivable.filter((e) => e.executorPresent === 'no');
   const summary = {
     active: entries.length,
-    conceptual: count('conceptual'),
-    derivableWithExecutor: count('derivable-with-executor'),
-    processGateVerified: count('process-gate-verified'),
-    derivableWithoutExecutor: without.length,
-    gateVerifiedTotal: count('derivable-with-executor') + count('process-gate-verified'),
-    executorEntries: [...execKeys].sort((a, b) => a - b),
-    note: 'A derivable-without-executor entry is authored, not gate-verified: its distractors are trusted to the author, not recomputed on the item\'s numbers. A family whose distractors rest only on these carries the weaker guarantee. process-gate-verified = a PROCESS-axis id checked against firstStepResults, no numeric executor needed.',
+    conceptual: entries.length - derivable.length,
+    derivable: derivable.length,
+    derivableExecutorImplemented: implemented.length,
+    derivableExecutorMissing: unimplemented.length,
+    note: 'class is the library class field (derivable vs conceptual). executorPresent = an executor is IMPLEMENTED that recomputes the distractor: numeric (MISCONCEPTION_EXECUTORS) or PROC-01\'s firstStepResults check. A derivable entry with executorPresent=no ships AUTHORED distractors that look derived — the gap Cowork must see per family.',
+    numericExecutorEntries: [...execKeys].sort((a, b) => a - b),
+    derivableMissingExecutor: unimplemented.map((e) => e.entry ?? e.id),
   };
 
   const stamp = freshnessStamp(entries, new Date().toISOString());
   mkdirSync(OUT_DIR, { recursive: true });
   const path = join(OUT_DIR, stampedName(FAMILY, stamp.sourceHash, 'json'));
   writeFileSync(path, JSON.stringify({ kind: FAMILY, ...stamp, summary, entries }, null, 2));
-  console.log(`Executor coverage: ${summary.active} ACTIVE — ${summary.conceptual} conceptual, ${summary.derivableWithExecutor} numeric-executor, ${summary.processGateVerified} process-gate-verified, ${summary.derivableWithoutExecutor} derivable WITHOUT executor.`);
-  console.log(`  flagged (derivable, no executor, ${without.length}): ${without.map((e) => `#${e.entry}`).join(', ')}`);
+  console.log(`Executor manifest: ${summary.active} ACTIVE — ${summary.derivable} derivable, ${summary.conceptual} conceptual.`);
+  console.log(`  derivable with an IMPLEMENTED executor: ${summary.derivableExecutorImplemented}; derivable WITHOUT (ships authored): ${summary.derivableExecutorMissing}.`);
+  console.log(`  missing (${unimplemented.length}): ${summary.derivableMissingExecutor.map((e) => `#${e}`).join(', ')}`);
   deliver(path, FAMILY);
   await prisma.$disconnect();
 }
