@@ -83,6 +83,19 @@ export interface MathsFamily {
   /** Human-readable, for the sample sheet — the reviewer signs the rule, not the output. */
   tierRule: (tier: Tier) => string;
   /**
+   * DECLARED structural parameters per tier (annie's ladder gate, 2026-08-07): the
+   * non-numeric dials a tier turns — shape, step count, operation, which-percentages.
+   * The gate requires adjacent tiers to differ in at least ONE, so a magnitude-only
+   * ladder is forced to confront itself at build time. A family with a real ladder
+   * declares distinct parameters; one without either declares none (flagged) or declares
+   * identical ones (flagged). BLIND SPOTS it cannot see (recorded, corpus Entry): a
+   * family with no numbers at all (vr-04); intra-tier monotony where a tier is itself one
+   * shape (M-place T1, every item the hundreds column); a tier whose declared parameter
+   * differs but whose ITEM does not use it (M-geom T5 before the notch fix — honest
+   * ladder, hollow item). The gate checks the DECLARATION, not that the item honours it.
+   */
+  structuralParams?: (tier: Tier) => Record<string, string | number>;
+  /**
    * STRUCTURED number ranges, per tier, keyed by operand name: {l: [3, 12], w: [3, 12]}.
    * This is GENERATOR-CONSUMED, not a display label (annie, 2026-08-07: the old `ranges`
    * string was authored by hand and never enforced). assembleItem refuses any item whose
@@ -96,6 +109,28 @@ export interface MathsFamily {
   /** Allow-listed to ship fewer than three distractors (the two-distractor floor, R9). */
   distractorFloor?: 2;
   draft: (tier: Tier, r: () => number) => FamilyItemDraft;
+}
+
+export interface LadderGap { familyId: string; issue: string; between?: [Tier, Tier] }
+/**
+ * The structural-ladder gate (annie's spec). A multi-tier family must declare structural
+ * parameters, and every adjacent tier pair must differ in at least one — otherwise the
+ * tiers differ only in numeric range, which the range check alone would pass. Returns the
+ * gaps; empty means every multi-tier family has a real (declared) ladder.
+ */
+export function structuralLadderGaps(families: MathsFamily[]): LadderGap[] {
+  const gaps: LadderGap[] = [];
+  for (const f of families) {
+    const tiers = familyTiers(f);
+    if (tiers.length < 2) continue; // a single-tier family makes no ladder claim to check
+    if (!f.structuralParams) { gaps.push({ familyId: f.id, issue: `claims ${tiers.length} tiers but declares no structural parameter — magnitude-only by default` }); continue; }
+    for (let i = 1; i < tiers.length; i += 1) {
+      const a = f.structuralParams(tiers[i - 1]!), b = f.structuralParams(tiers[i]!);
+      const differs = [...new Set([...Object.keys(a), ...Object.keys(b)])].some((k) => a[k] !== b[k]);
+      if (!differs) gaps.push({ familyId: f.id, issue: `tiers ${tiers[i - 1]} and ${tiers[i]} share every structural parameter — they differ only in numeric range`, between: [tiers[i - 1]!, tiers[i]!] });
+    }
+  }
+  return gaps;
 }
 
 /** Render structured numberRanges as a human range string for the sample sheet. */

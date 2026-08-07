@@ -2628,3 +2628,36 @@ match). It is a one-distractor pFK-vs-wL judgment call in the hand count, presen
 her working file too; the per-row tags are what generate the items, so the bank is
 built to those. Flagged for her to confirm which row she meant to read as part-for-kind
 if the review artifact needs the aggregate to agree.
+
+## Entry 54 — The structural-ladder gate (a build-time tier-differentiation check)
+*2026-08-07. Annie's spec, after she found the maths sample sheets described generators that don't exist.*
+
+**The fault, fourth instance.** After vr-04, vr-07 and vr-11 topped out or failed to
+differentiate tiers, maths arrived at scale: fifteen of nineteen families ran one code
+path with only per-tier magnitude lookups, so their tiers differed by number size alone.
+The number-range check alone passes that — a bigger number is still in range.
+
+**The gate (packages/core `structuralLadderGaps`).** A family DECLARES its structural
+parameters per tier (`structuralParams`: shape, step count, operation, which-percentages);
+the gate requires adjacent tiers to differ in at least one. A magnitude-only ladder either
+declares none (flagged) or declares identical parameters (flagged) — it is forced to
+confront itself at build time, in code, not in review. The three signed families
+(M-pct/M-geom/M-inverse) declare a distinct parameter at every step and pass.
+
+**Two companion fixes recorded here.** (1) `numberRanges` is now generator-CONSUMED — a
+structured per-operand bound `assembleItem` enforces — because the old `ranges()` was a
+hand-authored display string no `draft()` ever read (never enforced, not drifted). (2)
+M-geom T5's held item: removing a CORNER leaves a rectangle's perimeter unchanged, so the
+answer ignored the cut and a child ignoring it scored 30/30; replaced with a NOTCH, which
+adds 2×depth, so the answer depends on it.
+
+**The gate's three blind spots (it checks the declaration, not the item).** A family with
+no numbers (vr-04); intra-tier monotony where a tier is itself one shape (M-place T1, every
+item the hundreds column — the gate compares across tiers, not within); a tier whose
+declared parameter differs but whose item does not use it (M-geom T5 pre-notch). The
+sign-off review remains the backstop for what the gate cannot see.
+
+**Ruling (David, relayed).** Families with no available ladder collapse to a single honest
+tier rather than being rebuilt; claiming five tiers on the strength of bigger numbers tells
+a parent something false. Rebuilds that add a real ladder are v2. Legit-magnitude families
+whose size tracks difficulty (M-column: exchanges across zeros) keep their tiers.

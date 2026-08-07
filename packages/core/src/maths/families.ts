@@ -80,6 +80,9 @@ const rounding: MathsFamily = {
   name: 'Rounding to the nearest 10 / 100 / 1000',
   shape: 'Round N to nearest 10/100/1000',
   tierRule: (t) => ['', 'nearest 10, 3-digit', 'nearest 10 or 100, 3-digit', 'nearest 100, 4-digit', 'nearest 100 or 1000, 4-digit', 'nearest 1000, 5-digit'][t]!,
+  // The rounding TARGET is a structural dial the draft already turns per tier (10→1000);
+  // borderline (it also grows magnitude) — flagged for Annie to ratify as a real ladder.
+  structuralParams: (t) => ({ place: ['', '10', '10/100', '100', '100/1000', '1000'][t]! }),
   ranges: (t) => ['', '120–980 → 10', '150–980 → 10/100', '1,050–9,800 → 100', '1,050–9,800 → 100/1000', '10,500–98,000 → 1000'][t]!,
   draft: (tier: Tier, r) => {
     const place = randPick(r, ({ 1: [10], 2: [10, 100], 3: [100], 4: [100, 1000], 5: [1000] } as Record<Tier, number[]>)[tier]);
@@ -111,6 +114,7 @@ const timeAndMoney: MathsFamily = {
   name: 'Money: change and multi-item shopping',
   shape: 'Money: change, multi-item shopping',
   tierRule: (t) => ['', 'one-step change from a note', 'one-step change, larger note', 'two-step: buy several, then total', 'two-step: buy several then find change', 'three-step: items then change'][t]!,
+  structuralParams: (t) => ({ steps: [0, 1, 1, 2, 2, 3][t]!, kind: ['', 'change', 'change', 'total', 'change', 'change'][t]! }),
   ranges: (t) => ['', 'item £1.50–£4.50, £5 note', 'item £1.50–£8.50, £10 note', 'item £2–£6 × 2–4', 'item £2–£6 × 2–4, £20 note', 'items £2–£9, £20 note'][t]!,
   draft: (tier: Tier, r) => {
     if (tier <= 2) {
@@ -483,7 +487,8 @@ const percentageOfAmount: MathsFamily = {
   name: 'Percentage',
   shape: 'Percentage of an amount / % change / reverse',
   tierRule: (t) => PCT_TIERS[t].rule,
-  numberRanges: (t) => {
+  structuralParams: (t) => ({ shape: PCT_TIERS[t].shape, band: PCT_TIERS[t].pcts.join(',') }),
+  numberRanges: (t): Record<string, [number, number]> => {
     const c = PCT_TIERS[t];
     return c.shape === 'reverse' ? { part: [c.amtLo, c.amtHi] } : { amount: [c.amtLo * c.step, c.amtHi * c.step] };
   },
@@ -686,6 +691,7 @@ const geometryCalculate: MathsFamily = {
   name: 'Geometry — calculate from given lengths',
   shape: 'Perimeter / area of a rectangle and composite',
   tierRule: (t) => GEOM_TIERS[t].rule,
+  structuralParams: (t) => ({ shape: GEOM_TIERS[t].shape }),
   numberRanges: (t) => ({ l: [GEOM_TIERS[t].lo, GEOM_TIERS[t].hi], w: [GEOM_TIERS[t].lo, GEOM_TIERS[t].hi] }),
   ranges: (t) => `sides ${GEOM_TIERS[t].lo}–${GEOM_TIERS[t].hi} cm`,
   draft: (tier, r) => {
@@ -802,6 +808,7 @@ const inverseReasoning: MathsFamily = {
   // genuinely ORDER-SENSITIVE two-step (undo the outside first). T5's rule no longer
   // claims "order decides" — reverse mean is an extra step back, not an order case.
   tierRule: (t) => ['', 'one operation — division to undo', 'one operation — spot which to undo', 'two operations — take away, then divide', 'two operations — order decides (undo the outside first)', 'reverse mean — recover a value from the average'][t]!,
+  structuralParams: (t) => ({ steps: [0, 1, 1, 2, 2, 3][t]!, mode: ['', 'known-op', 'spot-op', 'ordered', 'order-decides', 'reverse-mean'][t]! }),
   ranges: (t) => ['', '□ × 2–5, answer 2–9', '□ ?(×/+) 2–9, answer 2–10', '□ × a + b, a 2–4, answer 3–9', '(□ + a) × b, b 2–4, answer 3–8', '5 numbers, mean 4–9, values 1–14'][t]!,
   draft: (tier, r) => {
     if (tier === 1) {

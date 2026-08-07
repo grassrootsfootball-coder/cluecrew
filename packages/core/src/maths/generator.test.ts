@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { MATHS_FAMILIES } from './families';
-import { familyExecutorCoverage, familyTiers, generateSample, type Tier } from './generator';
+import { familyExecutorCoverage, familyTiers, generateSample, structuralLadderGaps, type Tier } from './generator';
 import { checkMathsNotation } from './notation';
 
 describe('maths generator — every family emits only gated items', () => {
@@ -53,27 +53,33 @@ describe('maths generator — every family emits only gated items', () => {
     expect(a).toEqual(b);
   });
 
-  it('rebuilt families keep generation INSIDE the stated range (annie point 1)', () => {
-    // The stated range must bound the output — M-geom sides and M-pct amounts, the two
-    // she cited (T1 said 3–9 but emitted 13×11; T4 said 100–900 but emitted 3,800).
-    const checks: Array<[string, string[]]> = [['M-geom', ['l', 'w']], ['M-pct', ['amount']]];
-    for (const [id, fields] of checks) {
-      const fam = MATHS_FAMILIES.find((f) => f.id === id)!;
+  it('numberRanges is enforced — generation stays INSIDE the declared bound (annie point 1)', () => {
+    // The declared range now bounds the output, for every family that declares it — the
+    // two she cited included (M-geom T1 said 3–9 but emitted 13×11; M-pct T4 said 3,800).
+    for (const fam of MATHS_FAMILIES.filter((f) => f.numberRanges)) {
       for (const tier of familyTiers(fam)) {
-        const m = fam.ranges(tier).match(/(\d[\d,]*)\s*[–-]\s*(\d[\d,]*)/);
-        if (!m) continue;
-        const lo = Number(m[1]!.replace(/,/g, '')), hi = Number(m[2]!.replace(/,/g, ''));
+        const bounds = fam.numberRanges!(tier);
         for (const item of generateSample(fam, tier, 30, 42)) {
-          for (const field of fields) {
-            const v = item.operands[field];
+          for (const [key, [lo, hi]] of Object.entries(bounds)) {
+            const v = item.operands[key];
             if (typeof v === 'number') {
-              expect(v, `${id} T${tier} ${field}=${v} outside stated ${lo}–${hi}`).toBeGreaterThanOrEqual(lo);
-              expect(v, `${id} T${tier} ${field}=${v} outside stated ${lo}–${hi}`).toBeLessThanOrEqual(hi);
+              expect(v, `${fam.id} T${tier} ${key}=${v} outside declared ${lo}–${hi}`).toBeGreaterThanOrEqual(lo);
+              expect(v, `${fam.id} T${tier} ${key}=${v} outside declared ${lo}–${hi}`).toBeLessThanOrEqual(hi);
             }
           }
         }
       }
     }
+  });
+
+  it('structural-ladder gate: signed ladder families pass; magnitude-only families are flagged', () => {
+    const gaps = structuralLadderGaps(MATHS_FAMILIES);
+    const flagged = new Set(gaps.map((g) => g.familyId));
+    // The three signed families declare a distinct structural parameter at every step.
+    for (const id of ['M-pct', 'M-geom', 'M-inverse']) expect(flagged.has(id), `${id} should pass the ladder gate`).toBe(false);
+    // A representative magnitude-only family (annie's hollow example) is caught.
+    expect(flagged.has('M-06a')).toBe(true);
+    expect(flagged.has('M-column')).toBe(true);
   });
 
   it('executor coverage is reportable per family (annie requirement #2)', () => {
