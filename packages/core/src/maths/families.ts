@@ -56,6 +56,10 @@ const ID = {
   perimAreaSwap: 'maths-87-perimeter-area-swap',
   incompletePerim: 'maths-88-incomplete-perimeter',
   composite: 'maths-90-composite-shape-area-slip',
+  ranForwards: 'maths-109-ran-the-machine-forwards',
+  reverseMeanAvg: 'maths-110-missing-value-equals-the-average',
+  signAnswer: 'maths-14-the-sign-as-the-answer-is',
+  stepsOrder: 'maths-100-steps-out-of-order',
 } as const;
 
 const pad2 = (n: number): string => String(n).padStart(2, '0');
@@ -680,8 +684,82 @@ const wordedFraction: MathsFamily = {
   },
 };
 
+// ---------- INVERSE REASONING (the nineteenth; annie 2026-08-07) ----------
+// Knowing the output, working back to the input. Resolves the algebra and reverse-mean
+// orphans (both are backwards reasoning). Tiered on STEPS TO UNDO, not number size —
+// T1 one operation, T3 two, T5 two where the undoing order decides. Draws the two new
+// ids (#109/#110), the three reassignments (#14/#100/#72) and PROC-01, widened for a
+// chain worked backwards. One of the few families that carries T4/T5 honestly.
+const inverseReasoning: MathsFamily = {
+  id: 'M-inverse',
+  name: 'Inverse reasoning — work back to the input',
+  shape: 'Missing number / function machine (early algebra) + reverse mean',
+  tierRule: (t) => ['', 'one operation to undo', 'one operation, larger numbers', 'two operations to undo', 'two operations, larger', 'reverse mean — two steps, order decides'][t]!,
+  ranges: (t) => ['', '× 2–5, answer 2–9', '× or + , 2–9, answer 2–12', '×a+b, a 2–4, answer 3–9', '×a+b, a 2–5, answer 3–12', '5 numbers, mean 4–9, values 1–14'][t]!,
+  draft: (tier, r) => {
+    if (tier <= 2) {
+      // One-step function machine: □ × c = result. Undo = divide.
+      const c = randInt(r, 2, tier === 1 ? 5 : 9);
+      const q = randInt(r, 2, tier === 1 ? 9 : 12);
+      const result = q * c;
+      return {
+        stem: `□ × ${c} = ${result}. What is □?`,
+        solution: `${result} / ${c}`,
+        keyValue: String(q),
+        operands: { result, c, op: 'mult' },
+        hint: 'Going backwards undoes each step. Divide where it multiplied.',
+        distractors: [
+          { entry: 109, id: ID.ranForwards }, // multiplied instead of dividing (derived)
+          { entry: 14, id: ID.signAnswer, value: String(result) }, // gave the number after the = sign
+          { entry: 72, id: ID.wrongOp, value: String(result - c) }, // subtracted instead of dividing
+        ],
+      };
+    }
+    if (tier <= 4) {
+      // Two-step: □ × a + b = result, b a multiple of a so every distractor stays whole.
+      const a = randInt(r, 2, 3 + tier - 2);
+      const q = randInt(r, 3, 8 + tier * 2);
+      const m = randInt(r, 1, 5);
+      const b = a * m;
+      const result = a * q + b;
+      return {
+        stem: `□ × ${a} + ${b} = ${result}. What is □?`,
+        solution: `(${result} - ${b}) / ${a}`,
+        keyValue: String(q),
+        operands: { result, c: b, op: 'sub', firstStepResults: [a * q] },
+        hint: 'Undo the last step first. Take away, then divide.',
+        distractors: [
+          { entry: 0, id: ID.proc, value: String(a * q), process: true }, // subtracted b, stopped before dividing (derived)
+          { entry: 72, id: ID.wrongOp, value: String(q + m) }, // divided first, ignored the + b
+          { entry: 100, id: ID.stepsOrder, value: String(result - b - a) }, // undid in the wrong order
+        ],
+      };
+    }
+    // T5 — reverse mean: five numbers, one unknown; order/steps decide.
+    const mean = randInt(r, 4, 9);
+    const known: number[] = [];
+    for (let i = 0; i < 4; i += 1) known.push(randInt(r, 1, 14));
+    const total = mean * 5;
+    const sumKnown = known.reduce((s, x) => s + x, 0);
+    const missing = total - sumKnown;
+    if (missing < 1 || missing > 14 || missing === mean) return { stem: '', solution: null, keyValue: 'x', operands: {}, distractors: [] }; // retry: keep the answer in range and off the mean
+    return {
+      stem: `Five numbers have a mean of ${mean}. Four of them are ${known.join(', ')}. What is the fifth?`,
+      solution: `${mean} * 5 - (${known.join(' + ')})`,
+      keyValue: String(missing),
+      operands: { mean, firstStepResults: [sumKnown, total] },
+      hint: 'The mean is what they share out to. Find the total first, then take the four away.',
+      distractors: [
+        { entry: 110, id: ID.reverseMeanAvg }, // gave the mean itself (derived)
+        { entry: 0, id: ID.proc, value: String(total), process: true }, // found the total, stopped (derived)
+        { entry: 14, id: ID.signAnswer, value: String(sumKnown) }, // gave the sum of the four
+      ],
+    };
+  },
+};
+
 export const MATHS_FAMILIES: MathsFamily[] = [
   rounding, timeAndMoney, wrongOperation, reversedDivision, misreadQuantity, unitFraction, unitPrice,
   placeValue, columnArithmetic, negatives, fractionsAddSub, percentageOfAmount, ratioShare,
-  metricConversion, timeInterval, statisticsAverages, geometryCalculate, wordedFraction,
+  metricConversion, timeInterval, statisticsAverages, geometryCalculate, wordedFraction, inverseReasoning,
 ];

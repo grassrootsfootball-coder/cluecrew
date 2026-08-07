@@ -134,6 +134,22 @@ export const MISCONCEPTION_EXECUTORS: Record<number, (o: MathsOperands) => strin
   // 96 — Divides the total by the WRONG count, PARAMETRIC on divisor. 32 ÷ 2 → 16
   //      (mean of four); 60 ÷ 5 → 12 (mean of six).
   96: (o) => { const t = num(o, 'total'), c = num(o, 'wrongCount'); return t === null || c === null || c === 0 ? null : String(t / c); },
+  // 109 — Ran the machine FORWARDS (annie, inverse-reasoning family): applies the
+  //       stated operation instead of its inverse when working backwards. □ + 7 = 12
+  //       → 12 + 7 = 19 (add instead of subtract); □ × 4 = 20 → 20 × 4 = 80.
+  109: (o) => {
+    const result = num(o, 'result'), c = num(o, 'c');
+    const op = typeof o.op === 'string' ? o.op : null;
+    if (result === null || c === null || op === null) return null;
+    if (op === 'add') return String(result + c);
+    if (op === 'sub') return String(result - c);
+    if (op === 'mult') return String(result * c);
+    if (op === 'div' && c !== 0) return String(result / c);
+    return null;
+  },
+  // 110 — Missing value equals the average (annie, inverse-reasoning family): in a
+  //       reverse-mean problem, gives the mean itself as the unknown. mean 6 → 6.
+  110: (o) => { const m = num(o, 'mean'); return m === null ? null : String(m); },
 };
 
 /** A safe evaluator for the item's `solution` — +, −, ×, ÷, parens, decimals. */
@@ -222,6 +238,11 @@ export const MISCONCEPTION_EXAMPLES: Record<number, Array<{ operands: MathsOpera
   // not four (32 → 16); the hardest varies the divisor to a near-miss (60 ÷ 5 → 12
   // where the mean of six is 10, two apart and easy to accept).
   96: [{ operands: { total: 32, wrongCount: 2 }, childValue: '16', keyValue: '8' }, { operands: { total: 60, wrongCount: 5 }, childValue: '12', keyValue: '10' }],
+  // #109 ran-the-machine-forwards — canonical (add instead of subtract) + the hardest
+  // (multiply instead of divide, a far larger wrong answer): □+7=12 → 19; □×4=20 → 80.
+  109: [{ operands: { result: 12, c: 7, op: 'add' }, childValue: '19', keyValue: '5' }, { operands: { result: 20, c: 4, op: 'mult' }, childValue: '80', keyValue: '5' }],
+  // #110 missing-value-equals-the-average — gives the mean as the unknown.
+  110: [{ operands: { mean: 6 }, childValue: '6', keyValue: '4' }, { operands: { mean: 10 }, childValue: '10', keyValue: '7' }],
 };
 
 /** The entry number carried in a seed id, e.g. maths-11-commutative-subtraction → 11,
