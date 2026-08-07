@@ -82,10 +82,25 @@ export interface MathsFamily {
   shape: string; // which of Cowork's 38 shapes this generates
   /** Human-readable, for the sample sheet — the reviewer signs the rule, not the output. */
   tierRule: (tier: Tier) => string;
-  ranges: (tier: Tier) => string;
+  /**
+   * STRUCTURED number ranges, per tier, keyed by operand name: {l: [3, 12], w: [3, 12]}.
+   * This is GENERATOR-CONSUMED, not a display label (annie, 2026-08-07: the old `ranges`
+   * string was authored by hand and never enforced). assembleItem refuses any item whose
+   * named operand falls outside its bound, so the stated range is the range — a family
+   * cannot emit outside what its sheet claims. The sheet renders THIS, one source.
+   */
+  numberRanges?: (tier: Tier) => Record<string, [number, number]>;
+  /** Legacy display string — used only where numberRanges is not yet declared (the
+   *  families still to be rebuilt). Never enforced; the sheet marks it unverified. */
+  ranges?: (tier: Tier) => string;
   /** Allow-listed to ship fewer than three distractors (the two-distractor floor, R9). */
   distractorFloor?: 2;
   draft: (tier: Tier, r: () => number) => FamilyItemDraft;
+}
+
+/** Render structured numberRanges as a human range string for the sample sheet. */
+export function renderNumberRanges(ranges: Record<string, [number, number]>): string {
+  return Object.entries(ranges).map(([k, [lo, hi]]) => `${k} ${lo.toLocaleString('en-GB')}–${hi.toLocaleString('en-GB')}`).join(', ');
 }
 
 export class GateError extends Error {}
@@ -141,6 +156,17 @@ export function assembleItem(family: MathsFamily, tier: Tier, r: () => number): 
   const wrong = options.filter((o) => !o.isKey).map((o) => o.value);
   if (wrong.some((v) => answersEqual(v, d.keyValue))) throw new GateError(`${family.id} T${tier}: a distractor equals the key (${d.keyValue})`);
   if (wrong.some((v, i) => wrong.findIndex((w) => answersEqual(v, w)) !== i)) throw new GateError(`${family.id} T${tier}: distractors repeat (${wrong.join(', ')})`);
+
+  // Range enforcement (annie, 2026-08-07): every named operand must fall inside the
+  // family's declared numberRanges for this tier. This is what makes the stated range a
+  // constraint rather than a label — a family that generates outside its own range throws.
+  const bounds = family.numberRanges?.(tier);
+  if (bounds) {
+    for (const [key, [lo, hi]] of Object.entries(bounds)) {
+      const v = d.operands[key];
+      if (typeof v === 'number' && (v < lo || v > hi)) throw new GateError(`${family.id} T${tier}: ${key}=${v} outside stated range ${lo}–${hi}`);
+    }
+  }
 
   // The derivability gate — key recompute, distractor-executes-misconception, R11
   // parametric exemption, PROC-01 firstStepResults. Defects (not review-only) block.

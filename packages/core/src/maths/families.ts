@@ -483,6 +483,10 @@ const percentageOfAmount: MathsFamily = {
   name: 'Percentage',
   shape: 'Percentage of an amount / % change / reverse',
   tierRule: (t) => PCT_TIERS[t].rule,
+  numberRanges: (t) => {
+    const c = PCT_TIERS[t];
+    return c.shape === 'reverse' ? { part: [c.amtLo, c.amtHi] } : { amount: [c.amtLo * c.step, c.amtHi * c.step] };
+  },
   ranges: (t) => {
     const c = PCT_TIERS[t];
     if (c.shape === 'change') return `${c.pcts.join('/')}% off amounts ${pctAmtRange(c)}`;
@@ -500,7 +504,7 @@ const percentageOfAmount: MathsFamily = {
         stem: `A coat costs ${money(amount)}. In a sale it is reduced by ${pct}%. What is the new price?`,
         solution: `${amount} - ${pct} * ${amount} / 100`,
         keyValue: money(key),
-        operands: { firstStepResults: [discount] },
+        operands: { amount, firstStepResults: [discount] },
         hint: c.hint,
         distractors: [
           { entry: 0, id: ID.proc, value: money(discount), process: true }, // gave the discount, stopped
@@ -670,18 +674,19 @@ const statisticsAverages: MathsFamily = {
 // T3 mixed (child reads which is asked) · T4 composite L-shape (COMPOSITION of two rectangles,
 // firstStepResults are the two areas) · T5 composite where a missing side must be found first.
 // Sides come from one bound per tier that also renders as the stated range. Per-tier hints.
-const GEOM_TIERS: Record<Tier, { lo: number; hi: number; shape: 'perimeter' | 'area' | 'mixed' | 'lshape' | 'missing'; rule: string; hint: string }> = {
+const GEOM_TIERS: Record<Tier, { lo: number; hi: number; shape: 'perimeter' | 'area' | 'mixed' | 'lshape' | 'notch'; rule: string; hint: string }> = {
   1: { lo: 3, hi: 12, shape: 'perimeter', rule: 'perimeter of a rectangle', hint: 'Perimeter is all the way round. Add every side, or double the length plus the width.' },
   2: { lo: 3, hi: 12, shape: 'area', rule: 'area of a rectangle (a different job from perimeter)', hint: 'Area is the space inside. Multiply the length by the width.' },
   3: { lo: 6, hi: 15, shape: 'mixed', rule: 'perimeter OR area — read which is asked', hint: 'Read the question. Round the edge is perimeter; the space inside is area.' },
   4: { lo: 4, hi: 12, shape: 'lshape', rule: 'area of an L-shape (two rectangles joined)', hint: 'Split the L into two rectangles. Find each area, then add them.' },
-  5: { lo: 5, hi: 14, shape: 'missing', rule: 'perimeter of an L-shape — find the missing side first', hint: 'The missing side is the two short sides added. Find it, then go round.' },
+  5: { lo: 5, hi: 14, shape: 'notch', rule: 'perimeter of a rectangle with a notch cut into one side', hint: 'A notch adds two new edges. Find its depth and add it to the perimeter twice.' },
 };
 const geometryCalculate: MathsFamily = {
   id: 'M-geom',
   name: 'Geometry — calculate from given lengths',
   shape: 'Perimeter / area of a rectangle and composite',
   tierRule: (t) => GEOM_TIERS[t].rule,
+  numberRanges: (t) => ({ l: [GEOM_TIERS[t].lo, GEOM_TIERS[t].hi], w: [GEOM_TIERS[t].lo, GEOM_TIERS[t].hi] }),
   ranges: (t) => `sides ${GEOM_TIERS[t].lo}–${GEOM_TIERS[t].hi} cm`,
   draft: (tier, r) => {
     const c = GEOM_TIERS[tier];
@@ -736,16 +741,19 @@ const geometryCalculate: MathsFamily = {
         ],
       };
     }
-    // Perimeter of the L-shape is unchanged by the corner cut (= 2(l+w)); the child must
-    // see the two new short edges sum to the sides they replace.
-    const key = 2 * (l + w);
+    // NOTCH (annie's T5 fix, 2026-08-07): a rectangular slot cut into one long side ADDS
+    // 2 × depth to the perimeter (a corner cut would not — that was the hollow item). So the
+    // answer depends on the notch, and a child who ignores it (2(l+w)) is now WRONG, not right.
+    const nd = randInt(r, 1, w - 1); // notch depth < width
+    const nw = randInt(r, 1, l - 1); // notch width < length
+    const key = 2 * (l + w) + 2 * nd;
     return {
-      stem: `An L-shape is made from a ${l} cm by ${w} cm rectangle. A ${a} cm by ${b} cm corner is removed. What is the perimeter in cm?`,
-      solution: `2 * (${l} + ${w})`, keyValue: String(key), operands: { l, w, firstStepResults: [l - a, w - b] }, hint: c.hint,
+      stem: `A rectangle is ${l} cm by ${w} cm. A notch ${nw} cm wide and ${nd} cm deep is cut into one long side. What is the perimeter in cm?`,
+      solution: `2 * (${l} + ${w}) + 2 * ${nd}`, keyValue: String(key), operands: { l, w, firstStepResults: [2 * (l + w), 2 * nd] }, hint: c.hint,
       distractors: [
-        { entry: 88, id: ID.incompletePerim, value: String(2 * (l + w) - a - b) }, // dropped the two cut edges
-        { entry: 87, id: ID.perimAreaSwap, value: String(l * w - a * b) }, // gave the area instead
-        { entry: 90, id: ID.composite, value: String(2 * (l + w) + a + b) }, // double-counted the cut edges
+        { entry: 88, id: ID.incompletePerim, value: String(2 * (l + w)) }, // ignored the notch entirely (the 30/30 trap, now wrong)
+        { entry: 90, id: ID.composite, value: String(2 * (l + w) + nd) }, // added the depth once, not twice
+        { entry: 87, id: ID.perimAreaSwap, value: String(l * w - nw * nd) }, // gave the area instead
       ],
     };
   },
