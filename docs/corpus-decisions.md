@@ -2661,3 +2661,31 @@ sign-off review remains the backstop for what the gate cannot see.
 tier rather than being rebuilt; claiming five tiers on the strength of bigger numbers tells
 a parent something false. Rebuilds that add a real ladder are v2. Legit-magnitude families
 whose size tracks difficulty (M-column: exchanges across zeros) keep their tiers.
+
+## 55 · A single-use tag does not earn a library entry — fold it (Annie, relayed by David, 2026-08-07)
+
+A library entry earns its place by **recurring**; a one-item tail does not justify one. When
+authoring the sixteen LOGIC-tail items Annie proposed eight new ids and declined a ninth
+"wrong-degree" split at one instance — so the standard is her own, applied inconsistently to
+two ids used exactly once. **Ruling: fold `#111` (rule-applied-to-the-wrong-term, L-01 only)
+and `#117` (believes-one-method-only, L-09 only).** Neither was ever imported — they lived
+only in the authoring appendix — so the fold is a withdrawal with nothing to retire. The
+other six new ids (`#113`–`#116`, `#118`) stay; `#115`/`#116` fall to single-use as a
+side-effect of the L-06 digit change but were not part of this ruling.
+
+**The fold is not a relabel.** The maths derivability gate requires a distractor to *execute*
+its tagged misconception (R10). All 111 active MATHS ids were read; none produces L-01's
+operand-swap value or L-09's method-belief options, so a pure retag would fail the gate. Each
+item was reworked to land honestly on an existing id — a distractor-value or stem change, not
+a label swap:
+- **L-01** — the `#111` operand-swap distractor (`11 = 2×3+5`) replaced by `30 = (2×5)×3`,
+  which honestly executes **#72 wrong-operation-chosen** (multiplied where the rule adds). The
+  three-route structure (order / stop / wrong-op) is preserved.
+- **L-09** — the "which method works?" framing carried *belief* distractors, which no
+  computational id can execute. Reworked to run one unfamiliar-but-valid method (**"what does
+  Kai get?"**, key 15), keeping the T5 stretch. Distractors now execute PROC-01 (stopped
+  early), **#82** (half of the wrong whole), **#78** (25%-as-a-half) — three existing ids.
+
+**The general fact:** minting a library id for a single item is the same error as tagging by a
+stale slug — both put a label where the recurring, executable meaning isn't. If a shape needs
+a distractor that no existing id executes, rework the distractor, don't mint a tag for one use.

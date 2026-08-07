@@ -346,3 +346,23 @@ Two mis-tags the batch cold-read caught, both slug-driven:
 tagging; never tag from the slug or from memory of what an id "means". When a slug and
 its description have drifted far enough to mislead, that is a library note (rename is
 v2), not a licence to tag by the slug.
+
+## R11 — Minimality is load-bearing in constrained-deduction items
+*Annie, relayed by David, 2026-08-07 — the LOGIC-tail logic-grid shape (L-04, L-05).*
+
+A redundant clue teaches a child that clues are optional, and in real papers they almost
+never are. In the constrained-deduction shape (logic grids, ordering puzzles) **minimality
+is part of what the item teaches, not a stylistic preference**: every clue must be
+load-bearing — drop any one and a second solution appears.
+
+- **L-04 rebuilt** to four load-bearing clues (Cara=chess; Ben not swim; Ben not run; Dan
+  not swim → Ben=tennis). Each is checked: removing any one admits a second solution. The
+  clue set is now minimal **and** diagnostic — "running" is Dan's sport, so the wrong-person
+  read (#114) lands on it; "swimming" is the negated clue read positively (#113); "chess" is
+  the name-a-sport clue taken as the whole answer (PROC-01).
+- **L-05** dropped "Finn finishes ahead of Ella" — dead weight that generated no distractor;
+  the puzzle stays unique and all three distractors are intact.
+
+Test a deduction item by deletion: if the puzzle survives a clue's removal, the clue is
+teaching the wrong lesson and comes out (or the item is under-constrained and has two
+answers). This is a property of the shape, alongside R9's distractor floor.
