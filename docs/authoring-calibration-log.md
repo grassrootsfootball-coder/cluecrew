@@ -310,6 +310,20 @@ Two from the batch run:
 colliding distractors, the item ships with what it honestly has and the family is
 allow-listed — never topped up with an option that is defensibly correct.
 
+**A general fact, not a per-family quirk (annie, 2026-08-07 — third instance).** The
+floor arrives for a DIFFERENT reason each time, which is why it is worth stating as a
+property of items rather than of families:
+1. **`M-06a` unit fraction** — a third distractor would be *defensibly correct* (a valid
+   alternative reading), so it cannot be offered.
+2. **`M-05a` unit price** — a third *strays into another topic*; there is no third
+   unit-price error to reach for.
+3. **`M-column` subtraction with no borrow** — the commutative-subtraction error
+   (`|top−bottom|` per column) **equals the key** when no column borrows, so that
+   distractor produces the right answer and cannot be offered at the no-borrow tier.
+Three families, three causes — a defensible alternative, a topic boundary, and a
+misconception that degenerates to the key. The floor is a fact about the item's
+distractor space; expect it to recur wherever that space is genuinely thin.
+
 ## R10 — Tag against the entry's current wording, not its id slug (slug drift)
 *Cowork finding, maths volume run batches 04–05, 2026-08-07. Recorded by David.*
 
