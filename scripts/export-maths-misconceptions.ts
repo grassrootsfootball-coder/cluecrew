@@ -58,6 +58,7 @@ export async function exportMathsMisconceptions(client: typeof prisma): Promise<
   mkdirSync(OUT_DIR, { recursive: true });
   const path = join(OUT_DIR, stampedName(FAMILY, stamp.sourceHash, 'json'));
   const derivable = (entries as Array<{ distractorClass: string }>).filter((e) => e.distractorClass === 'derivable').length;
+  const processIds = (entries as Array<{ axis: string; id: string }>).filter((e) => e.axis === 'PROCESS').map((e) => e.id);
   writeFileSync(
     path,
     JSON.stringify(
@@ -68,6 +69,14 @@ export async function exportMathsMisconceptions(client: typeof prisma): Promise<
         count: entries.length,
         derivable,
         conceptual: entries.length - derivable,
+        // The taxonomy half of the export (added 2026-08-07): each entry carries an
+        // `axis`, and a PROCESS tag never stands alone. Without this a drafter cannot
+        // see which ids are the process axis, and stop-early distractors go untagged.
+        twoTagRule: {
+          axes: 'Every entry is TOPIC or PROCESS. TOPIC names WHAT was got wrong; PROCESS names a stop-early / wrong-operation / steps-out-of-order slip that is not a topic.',
+          pairing: 'A PROCESS tag is a SECOND tag: the distractor carries a TOPIC id (its value, executed on the item\'s numbers) AND the PROCESS id. The PROCESS id is the derivable one — it executes against operands.firstStepResults (the list of intermediate results); no intermediate may equal the key and all must be distinct.',
+          processIds,
+        },
         splitRetagMap: SPLIT_RETAG,
         misconceptions: entries,
       },
@@ -75,7 +84,7 @@ export async function exportMathsMisconceptions(client: typeof prisma): Promise<
       2,
     ),
   );
-  console.log(`${entries.length} approved maths misconceptions (${derivable} derivable, ${entries.length - derivable} conceptual) → ${stampedName(FAMILY, stamp.sourceHash, 'json')}`);
+  console.log(`${entries.length} approved maths misconceptions (${derivable} derivable, ${entries.length - derivable} conceptual; ${processIds.length} PROCESS-axis) → ${stampedName(FAMILY, stamp.sourceHash, 'json')}`);
   deliver(path, FAMILY);
   return path;
 }

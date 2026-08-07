@@ -95,6 +95,35 @@ describe('worked-example CI — every executor produces its description example'
   });
 });
 
+describe('R11 parametric exemption — the SOLE shared implementation (import + CI both call this)', () => {
+  // annie's parametric ids (#61/#63/#65) tag two distractors in one item on purpose:
+  // the same error at a different place gives two different values. The 12 collisions
+  // flagged in batches 04-05 are all same-id DIFFERENT-value, so they must PASS here.
+  const base = { id: 'MC-NPV-01', solution: '9 * 100', keyValue: '900', operands: { digit: 9, place: 100 } };
+  it('same id, DIFFERENT values passes (the digit-9 place item: 90 and 9000)', () => {
+    const spec: MathsItemSpec = { ...base, distractors: [
+      { value: '90', misconceptionId: 'maths-61-reading-the-wrong-place-value-column' },
+      { value: '9000', misconceptionId: 'maths-61-reading-the-wrong-place-value-column' },
+    ] };
+    expect(checkMathsItem(spec).filter((f) => f.rule === 'duplicate-id-same-value')).toEqual([]);
+  });
+  it('same id, SAME value is the genuine collision — rejected', () => {
+    const spec: MathsItemSpec = { ...base, distractors: [
+      { value: '90', misconceptionId: 'maths-61-reading-the-wrong-place-value-column' },
+      { value: '90', misconceptionId: 'maths-61-reading-the-wrong-place-value-column' },
+    ] };
+    expect(checkMathsItem(spec).some((f) => f.rule === 'duplicate-id-same-value' && f.severity === 'defect')).toBe(true);
+  });
+  it('the exemption keys on the SAME execId a future import door uses (process tag), different values pass', () => {
+    const PROC = 'maths-proc-01-stopped-at-the-first-answer';
+    const spec: MathsItemSpec = { id: 'P', solution: null, keyValue: '9', operands: { firstStepResults: [12, 18] }, distractors: [
+      { value: '12', misconceptionId: 'maths-71-forgetting-part-of-a-multi-step-problem', processMisconceptionId: PROC },
+      { value: '18', misconceptionId: 'maths-71-forgetting-part-of-a-multi-step-problem', processMisconceptionId: PROC },
+    ] };
+    expect(checkMathsItem(spec).filter((f) => f.rule === 'duplicate-id-same-value')).toEqual([]);
+  });
+});
+
 describe('PROC-01 process tag — executes against a list of intermediate results', () => {
   const PROC = 'maths-proc-01-stopped-at-the-first-answer';
   it('accepts a distractor equal to any intermediate (annie: FDP-07 stops at the 2nd)', () => {

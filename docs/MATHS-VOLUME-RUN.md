@@ -86,6 +86,14 @@ place, e.g. the wrong column at tens vs at thousands — may tag two options in 
 (the parametric case) and blocks a shared id with the same value (the mislabel case). Like
 lineup-odd's single-axis exception, this is a named, bounded permission — not a loophole.
 
+`checkMathsItem` is the **sole** R11 authority (the publish-door-incident discipline, corpus
+Entry 50): the CI sweep calls it and any maths item-import door MUST call it too — never a
+second copy that "happens to match". The exemption keys on `execId = processMisconceptionId
+?? misconceptionId`, so it holds identically for a single-tagged topic distractor and a
+two-tagged process one. Locked by test (`maths.test.ts`, "R11 parametric exemption"): the
+12 same-id **different-value** collisions on #61/#63/#65 in batches 04-05 pass under it; a
+same-id **same-value** pair is the genuine collision and is rejected.
+
 ## Annie's two rules — both now in the gate
 
 1. **Duplicate ids within an item** are fine only where the same misconception is *parameter-varied*
