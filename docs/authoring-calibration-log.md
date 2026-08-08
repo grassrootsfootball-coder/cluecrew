@@ -775,3 +775,19 @@ parameter — reviewer rules on the drafts.
 site anywhere — hollow, nothing to consider. A good N item keeps an arguable site and no required one,
 so the child must DECIDE the arguable one does not need an apostrophe: `The teachers lounge had new
 chairs this term` is a real N because `teachers lounge` is a tempting, defensible attributive.
+
+**Possessive O sites collapse to ONE type — natural attributive — with two child readings (annie
+2026-08-08).** A `plur-poss` O only works where the attributive reading is NATURAL: facility/group
+nouns (`teachers lounge`, `boys club`, `changing room`). A CONCRETE possession (`boys ball`, `girls
+coats`, `brothers bike`) has no reading but ownership, so it REQUIRES an apostrophe — it is a second
+R, not an O, and printing it unapostrophised gives the item two answers (the fault in four of the
+first twelve). So: **an O site is always a natural attributive noun-modifier; a concrete personal
+possession is R, never O.** The two tags stay, assigned by the modifier's NUMBER — the site is one
+type, the child's reading is what differs:
+- **singular modifier** (`school gate`, `kitchen table`) → `en-apostrophe-attributive` — the child
+  thinks a noun before a noun shows ownership.
+- **plural modifier** (`teachers lounge`, `boys club`) → `en-apostrophe-plural-misplaced` — the
+  child senses possession but the apostrophe is not required there.
+Hint reworded (annie): `en-apostrophe-plural-misplaced` → "Ownership can be shown without an
+apostrophe here. Find the part that cannot manage without one." (the drafted "something does belong
+here" was false — the O part is a distractor, nothing needs an apostrophe there).
