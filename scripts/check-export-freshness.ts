@@ -22,7 +22,32 @@ import { NVR_FAMILIES, buildNvrSignoffFamilySource } from './lib/nvr-signoff-sou
 import { buildVrAuditSource, buildVrMisconceptionDefsSource, buildVrPatternSource } from './lib/vr-audit-source';
 import { buildReviewerStatusSource } from './export-reviewer-status';
 import { buildNvrHintsToRewordSource } from './export-nvr-hints-to-reword';
+import { buildProposedQueueSource } from './export-proposed-misconceptions';
+import { buildMisconceptionLibrarySource } from './export-misconception-library';
+import { buildFamilyStatusSource } from './export-family-status';
 import { prisma } from '../packages/db/src/index';
+
+/**
+ * WHICH KINDS ARE STATUS SNAPSHOTS (annie, 2026-08-08).
+ *
+ * A content artefact that goes stale is a stale copy. A STATUS artefact that goes stale is a wrong
+ * instruction about what to work on, and it looks identical to a right one. So a status kind with
+ * no builder is not a gap in tidiness — it is an artefact that CANNOT be checked, and the scan used
+ * to skip those silently as UNKNOWN-KIND. It now reports them.
+ */
+const STATUS_KINDS = new Set([
+  'reviewer-status',
+  'family-status',
+  'misconceptions-proposed-queue',
+  'misconception-library-current',
+  'maths-gap-families',
+  'maths-misconceptions-approved',
+  'maths-executor-coverage',
+  'maths-hints-to-reword',
+  'nvr-hints-to-reword',
+  'vr-reimport-bundle',
+  'review-decisions',
+]);
 
 const VR_PATTERN_SPECS = [
   { questionTypeId: 'vr-04-closest-meaning', sampleSize: 20, seed: 'vr04-pattern-2026-08' },
@@ -43,9 +68,12 @@ const BUILDERS: Record<string, () => Promise<unknown>> = {
   'vr-misconception-defs': () => buildVrMisconceptionDefsSource(prisma),
   'reviewer-status': () => buildReviewerStatusSource(prisma),
   'nvr-hints-to-reword': () => buildNvrHintsToRewordSource(prisma).then((h) => h.map((x) => ({ id: x.id, hint: x.childHint, faults: x.faults }))),
+  'misconceptions-proposed-queue': () => buildProposedQueueSource(prisma),
+  'misconception-library-current': () => buildMisconceptionLibrarySource(prisma),
+  'family-status': () => buildFamilyStatusSource(prisma),
 };
 
-type Verdict = 'CURRENT' | 'STALE' | 'UNSTAMPED' | 'UNKNOWN-KIND' | 'UNREADABLE';
+type Verdict = 'CURRENT' | 'STALE' | 'UNSTAMPED' | 'UNKNOWN-KIND' | 'UNCHECKABLE-STATUS' | 'UNREADABLE';
 
 async function checkFile(path: string): Promise<{ verdict: Verdict; detail: string }> {
   let doc: { kind?: string; sourceHash?: string };
@@ -56,7 +84,12 @@ async function checkFile(path: string): Promise<{ verdict: Verdict; detail: stri
   }
   const kind = doc.kind ?? '(none)';
   const builder = doc.kind ? BUILDERS[doc.kind] : undefined;
-  if (!builder) return { verdict: 'UNKNOWN-KIND', detail: `kind "${kind}" has no source builder` };
+  if (!builder) {
+    // A status artefact with no builder is the dangerous case, never a skip.
+    return STATUS_KINDS.has(kind)
+      ? { verdict: 'UNCHECKABLE-STATUS', detail: `kind "${kind}" is a STATUS snapshot with no source builder — staleness cannot be detected` }
+      : { verdict: 'UNKNOWN-KIND', detail: `kind "${kind}" has no source builder` };
+  }
   if (!doc.sourceHash) return { verdict: 'UNSTAMPED', detail: `kind "${kind}" carries no sourceHash` };
   const current = freshnessStamp(await builder(), 'n/a').sourceHash;
   return doc.sourceHash === current
@@ -78,9 +111,9 @@ async function main(): Promise<void> {
     const { verdict, detail } = await checkFile(file);
     if (verdict === 'UNKNOWN-KIND' && !arg) continue; // scanning: silently skip non-exports
     checked += 1;
-    const bad = verdict === 'STALE' || verdict === 'UNSTAMPED' || verdict === 'UNREADABLE';
+    const bad = verdict === 'STALE' || verdict === 'UNSTAMPED' || verdict === 'UNREADABLE' || verdict === 'UNCHECKABLE-STATUS';
     if (bad) failed += 1;
-    console.log(`  ${bad ? '✗' : verdict === 'CURRENT' ? '✓' : '·'} ${verdict.padEnd(13)} ${basename(file)} — ${detail}`);
+    console.log(`  ${bad ? '✗' : verdict === 'CURRENT' ? '✓' : '·'} ${verdict.padEnd(19)} ${basename(file)} — ${detail}`);
   }
 
   console.log(`\n${checked} checkable file(s), ${failed} stale or unstamped.`);

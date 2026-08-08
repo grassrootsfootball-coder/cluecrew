@@ -9,13 +9,31 @@
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { checkChildFacingText, isBlocking } from '../packages/core/src/index';
-import { deliver, freshnessStamp, stampedName } from './lib/export-destination';
-import { prisma } from '../packages/db/src/index';
+import { artefactStamp, deliver, stampedName } from './lib/export-destination';
+import { prisma as defaultPrisma } from '../packages/db/src/index';
 
 const OUT_DIR = resolve(import.meta.dirname, '../content/exports');
 const FAMILY = 'misconceptions-proposed-queue';
 
+/**
+ * The queue's source, shared with `check-export-freshness` so staleness is DETECTABLE.
+ *
+ * This is a STATUS snapshot: membership is decided by `status: 'PROPOSED'`, so a single
+ * ratification invalidates the whole file while leaving it looking like a valid queue. That is
+ * precisely what happened to the fourteen-entry export — one entry was ratified between export
+ * and reading. Without a builder here the checker skipped the file as an unknown kind, so the
+ * stamp it carried could never be compared against anything.
+ */
+export async function buildProposedQueueSource(prisma: typeof defaultPrisma): Promise<unknown> {
+  const rows = await prisma.misconception.findMany({
+    where: { status: 'PROPOSED' },
+    orderBy: [{ district: 'asc' }, { id: 'asc' }],
+  });
+  return rows.map((m) => ({ id: m.id, district: m.district, description: m.description, childHint: String(m.childHint ?? '') }));
+}
+
 async function main(): Promise<void> {
+  const prisma = defaultPrisma;
   const rows = await prisma.misconception.findMany({
     where: { status: 'PROPOSED' },
     orderBy: [{ district: 'asc' }, { id: 'asc' }],
@@ -36,15 +54,20 @@ async function main(): Promise<void> {
       gate: fails.length ? fails.map((f) => f.detail) : 'clean',
     };
   });
+  const generatedAt = new Date().toISOString();
+  const stamp = artefactStamp(await buildProposedQueueSource(prisma), generatedAt, 'status', 'every misconception whose status is PROPOSED');
   const out = {
     kind: 'misconceptions-proposed-queue',
+    ...stamp,
+    staleness:
+      'STATUS SNAPSHOT. Ratifying or rejecting any entry invalidates this file while leaving it looking valid. ' +
+      'Check with `pnpm check:export-freshness` before working from it.',
     note: 'Every description and childHint is the field value verbatim. Ratify, reword as a transform against the quoted text, or reject.',
-    exportedAt: new Date().toISOString(),
+    exportedAt: generatedAt,
     count: entries.length,
     byDistrict: entries.reduce<Record<string, number>>((m, e) => ({ ...m, [e.district]: (m[e.district] ?? 0) + 1 }), {}),
     entries,
   };
-  const stamp = freshnessStamp(entries, out.exportedAt);
   mkdirSync(OUT_DIR, { recursive: true });
   const path = join(OUT_DIR, stampedName(FAMILY, stamp.sourceHash, 'json'));
   writeFileSync(path, JSON.stringify(out, null, 2));
@@ -53,4 +76,6 @@ async function main(): Promise<void> {
   await prisma.$disconnect();
 }
 
-void main();
+// Only when run directly: importing this for its source builder must not run the export
+// (and must not `$disconnect()` the client the importer is still using).
+if (process.argv[1]?.endsWith('export-proposed-misconceptions.ts')) void main();

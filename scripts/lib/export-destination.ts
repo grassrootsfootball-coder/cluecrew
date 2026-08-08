@@ -89,6 +89,62 @@ export interface FreshnessStamp {
   sourceHash: string;
 }
 
+/**
+ * WHAT THE ARTEFACT IS A SNAPSHOT OF (annie's ruling, 2026-08-08 — the tenth
+ * delivery failure, and the finding underneath it).
+ *
+ * Her distinction, which the freshness stamp alone does not capture:
+ *
+ *   CONTENT ages VISIBLY. A passage export, a batch of items, a sample sheet —
+ *   these stay true until the content itself changes, and a reader comparing
+ *   them against the live thing can see the difference.
+ *
+ *   STATUS ages INVISIBLY. A queue of what is PROPOSED, a table of what is
+ *   still to build, a list of hints that still need rewording — every one of
+ *   these is stale the MOMENT the status changes, and nothing in the document
+ *   says so. It goes on looking like a valid queue.
+ *
+ * The fourteen-entry proposed queue was dangerous rather than merely out of
+ * date for exactly this reason: one entry had been ratified between export and
+ * reading, and the file gave the reviewer no way to know. A content export
+ * that loses a race is a stale copy; a status export that loses a race is a
+ * WRONG INSTRUCTION about what to work on.
+ *
+ * So every export declares its kind here. `status` and `mixed` artefacts are
+ * held to the stricter rule: they must carry the stamp IN the document a human
+ * opens (see `stampHeader`), not only in a JSON sidecar, and they must have a
+ * builder registered in `check-export-freshness` so staleness is DETECTABLE
+ * rather than merely recorded.
+ */
+export type SnapshotOf = 'content' | 'status' | 'mixed';
+
+export interface ArtefactStamp extends FreshnessStamp {
+  /** What the reader is looking at a snapshot of. */
+  snapshotOf: SnapshotOf;
+  /** Plain-English name of the thing described, for the human-readable header. */
+  describes: string;
+}
+
+/**
+ * The stamp as a line a human reads, for .md and .html artefacts.
+ *
+ * The reviewer-status pair is why this exists: the stamp lived in the .json
+ * sidecar while the reviewer read the .md, so the guard was on a file nobody
+ * opened. A status artefact states its own staleness risk in its first lines
+ * or the guard is decorative.
+ */
+export function stampHeader(stamp: ArtefactStamp, format: 'md' | 'html'): string {
+  const when = stamp.generatedAt.slice(0, 16).replace('T', ' ');
+  const warn =
+    stamp.snapshotOf === 'content'
+      ? 'Content snapshot — stays true until the content changes.'
+      : `SNAPSHOT OF STATUS, ${when} UTC. Status may have moved since; this document cannot tell you that it has. Verify with \`pnpm check:export-freshness\` before working from it.`;
+  const line = `Generated ${when} · describes ${stamp.describes} · source hash \`${stamp.sourceHash}\``;
+  return format === 'md'
+    ? `> ${warn}\n>\n> ${line}\n`
+    : `<div class="stamp"><strong>${warn}</strong><br>${line}</div>`;
+}
+
 function canonical(value: unknown): unknown {
   if (Array.isArray(value)) return value.map(canonical);
   if (value && typeof value === 'object') {
@@ -104,4 +160,14 @@ function canonical(value: unknown): unknown {
 export function freshnessStamp(source: unknown, generatedAt: string): FreshnessStamp {
   const hash = createHash('sha256').update(JSON.stringify(canonical(source))).digest('hex').slice(0, 16);
   return { generatedAt, sourceHash: hash };
+}
+
+/** A freshness stamp that also declares what it is a snapshot of (see `SnapshotOf`). */
+export function artefactStamp(
+  source: unknown,
+  generatedAt: string,
+  snapshotOf: SnapshotOf,
+  describes: string,
+): ArtefactStamp {
+  return { ...freshnessStamp(source, generatedAt), snapshotOf, describes };
 }

@@ -456,6 +456,24 @@ model AttributionEvent {
   field      String?
   note       String?
   method     String?
+  /**
+   * FINGERPRINT OF THE THING SIGNED (annie, 2026-08-08) — the same guard that
+   * made the NVR signatures work (`NvrTemplateSignature.sampleSheetHash`).
+   *
+   * A SIGNED event's `note` carries figures about what was signed: the depth of
+   * a family, the ladder it exercises, the size of its bank. Those are prose.
+   * Regenerate the family — widen a bank, re-tier a rung — and the note goes on
+   * asserting the old numbers with nothing to contradict it. The signature then
+   * describes a family that no longer exists, and reads as though it still does.
+   *
+   * This column pins it: the hash of the family's generator surface (tier rules,
+   * structural parameters, ranges, bank content) as it stood at signing. If the
+   * family moves, `pnpm audit:signed-depth` reports the signature as describing
+   * a superseded version rather than leaving the reviewer to notice.
+   *
+   * Null on events that sign no generated artefact (a misconception approval).
+   */
+  subjectHash String?
   at         DateTime          @default(now())
 
   @@index([recordType, recordId])

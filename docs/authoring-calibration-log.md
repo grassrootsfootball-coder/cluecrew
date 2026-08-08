@@ -1306,3 +1306,41 @@ clause is slightly harder for a nine-year-old than the comma version. It passes 
 It is a candidate for any future pass on hint READABILITY — which is a different job from the
 COMPLIANCE the gate performs, and worth naming as such: the gate can tell you a hint is permitted,
 never that it is easy to read.
+
+## R27 — Content ages visibly; status ages silently
+*Annie, 2026-08-08, after the tenth delivery failure. Recorded by David.*
+
+**Any artefact mixing CONTENT with STATUS ages silently, and must say so on its face.**
+
+Her distinction: a **content** snapshot stays true until the content changes, and that change is
+visible to anyone comparing it against the live thing. A **status** snapshot is stale the moment
+the status changes, and nothing in it says so. The fourteen-entry proposed queue was **dangerous
+rather than merely out of date** because it looked like a valid queue — one entry had been ratified
+between export and reading, and the file offered the reviewer no way to know.
+
+The sharper form: *a content export that loses a race is a stale copy; a status export that loses a
+race is a wrong instruction about what to work on.*
+
+**The guard, hers — the one that made the NVR fingerprints work:** a generated-at timestamp plus
+the hash of the thing the artefact describes, so a reader can tell whether it has moved.
+
+Applied at three levels:
+
+1. **Exports** declare `snapshotOf: content | status | mixed` and what they describe. Status and
+   mixed artefacts must carry a builder in `check-export-freshness`, so staleness is DETECTABLE and
+   not merely recorded; a status kind with no builder now reports `UNCHECKABLE-STATUS` instead of
+   being skipped as an unknown kind. The stamp goes in the document a human opens, never only in a
+   JSON sidecar — the reviewer-status pair had the guard on the file nobody opened.
+2. **Signatures** carry `AttributionEvent.subjectHash`, the fingerprint of the family's generator
+   surface at signing. A regenerated family now reads as a signature describing a superseded
+   version. `pnpm audit:signed-depth` reports it.
+3. **Status tables are generated, not maintained.** `maths-approved-families-proposal.md` had
+   drifted three ways at once — internally inconsistent (M-inverse both PROPOSED and BUILT),
+   overtaken by reality (all 19 families signed since), and unstamped, so neither was detectable.
+   Replaced by `pnpm export:family-status`.
+
+**A corollary worth stating, because it inverts the usual reading:** the depth figures on the SPaG
+signatures do not equal the generator's depth, and that is a UNITS problem, not drift. The notes
+count bank sentences; an N-keyed family yields two items per sentence. Six of thirteen differ for
+exactly this reason. A figure carried in prose has no units, so nothing could ever have caught it —
+which is the general argument for measuring rather than asserting.

@@ -81,7 +81,9 @@
     "record:nvr-signoff": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/record-nvr-signoff.ts",
     "apply:nvr-review": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/apply-nvr-review.ts",
     "export:nvr-hints-to-reword": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-nvr-hints-to-reword.ts",
-    "import:nvr-reworded-hints": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/import-nvr-reworded-hints.ts"
+    "import:nvr-reworded-hints": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/import-nvr-reworded-hints.ts",
+    "audit:signed-depth": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/audit-signed-depth.ts",
+    "export:family-status": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-family-status.ts"
   },
   "devDependencies": {
     "@eslint/js": "^9.20.0",

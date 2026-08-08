@@ -1,6 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import { familyTiers, makeRng } from '../maths/generator';
+import type { Tier } from '../maths/generator';
 import { assembleSpagItem, generateSpagSample, spagLadderGaps } from './spag-generator';
+import { familyFingerprint, spagFamilyTiers } from './spag-fingerprint';
 import { SPAG_FAMILIES as FAMILIES, HOMOPHONE_BANK, nonErrorNearMiss, DOUBLE_BANK, esNonErrorNearMiss, partHasDouble, SUFFIX_BANK, partHasSuffix, SILENT_BANK, partHasSilent, CONTRACTION_BANK, partHasContraction } from './spag-families';
 
 describe('SPaG families on the maths engine', () => {
@@ -123,5 +125,40 @@ describe('SPaG families on the maths engine', () => {
       },
     };
     expect(() => assembleSpagItem(bad, tier, makeRng(1))).toThrow(/no misconception tag/);
+  });
+});
+
+/**
+ * The artefact audit's catch (annie, 2026-08-08): a declared tier ladder was enforced nowhere.
+ * `tiers` reached only `tierRule`, so a family signed as T1–T3 drafted at T4 and T5 without
+ * complaint. These pin both halves — the ladder is refused outside itself, and the fingerprint
+ * that a signature will carry actually moves when the family does.
+ */
+describe('family ladder and fingerprint', () => {
+  it('refuses a tier the family states no rule for', () => {
+    const terminal = FAMILIES.find((f) => f.id === 'spag-punct-terminal-boundary')!;
+    expect(spagFamilyTiers(terminal)).toEqual([1, 2, 3]);
+    expect(() => assembleSpagItem(terminal, 5, makeRng(1))).toThrow(/not part of its ladder/);
+  });
+
+  it('produces items at every tier it does declare', () => {
+    for (const family of FAMILIES) {
+      for (const tier of spagFamilyTiers(family)) {
+        expect(() => generateSpagSample(family, tier, 1, 7)).not.toThrow();
+      }
+    }
+  });
+
+  it('fingerprints are stable, distinct, and move when the family moves', () => {
+    const seen = new Map<string, string>();
+    for (const family of FAMILIES) {
+      const fp = familyFingerprint(family);
+      expect(familyFingerprint(family)).toBe(fp); // deterministic
+      expect(seen.has(fp)).toBe(false); // distinct across families
+      seen.set(fp, family.id);
+    }
+    const one = FAMILIES[0]!;
+    const retiered = { ...one, tierRule: (t: Tier) => (t === 1 ? '' : one.tierRule(t)) };
+    expect(familyFingerprint(retiered)).not.toBe(familyFingerprint(one));
   });
 });

@@ -94,6 +94,14 @@ export class SpagGateError extends Error {}
 
 /** Assemble a drafted SPaG item through the range + legality + child-facing gates. */
 export function assembleSpagItem(family: SpagFamily, tier: Tier, r: () => number): GenSpagItem {
+  // A DECLARED TIER LADDER IS A CONSTRAINT, NOT A LABEL — the same lesson as the ranges below,
+  // found by the artefact audit (annie, 2026-08-08). `tiers` reached only `tierRule`, which decides
+  // whether a rule STRING is printed; `draft` never consulted it. So a family signed as T1–T3 drafted
+  // happily at T4 and T5, and the tiers a signature names were enforced nowhere. Callers that go
+  // through `spagFamilyTiers`/`familyTiers` were safe by habit; nothing made them safe by rule.
+  if (family.tierRule(tier).trim() === '') {
+    throw new SpagGateError(`${family.id} T${tier}: family states no rule at this tier — it is not part of its ladder`);
+  }
   const d = family.draft(tier, r);
 
   const keys = d.options.filter((o) => o.isKey);

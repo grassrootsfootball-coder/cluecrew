@@ -12,7 +12,7 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import type { PrismaClient } from '@prisma/client';
 import { prisma } from '../packages/db/src/index';
-import { deliver, freshnessStamp, stampedName } from './lib/export-destination';
+import { artefactStamp, deliver, stampHeader, stampedName } from './lib/export-destination';
 
 const OUT_DIR = resolve(import.meta.dirname, '../content/exports');
 const FAMILY = 'reviewer-status';
@@ -37,12 +37,12 @@ export async function buildReviewerStatusSource(prisma: PrismaClient): Promise<R
 
 async function main(): Promise<void> {
   const c = await buildReviewerStatusSource(prisma);
-  const stamp = freshnessStamp(c, TODAY);
+  const stamp = artefactStamp(c, TODAY, 'status', 'what is waiting for review, and in what order');
   const base = stampedName(FAMILY, stamp.sourceHash, '').replace(/\.$/, '');
 
   const md = `# Review queue — what's waiting, in order
 
-Generated ${stamp.generatedAt.slice(0, 10)} · source hash \`${stamp.sourceHash}\`
+${stampHeader(stamp, 'md')}
 
 Four content jobs plus two small ones. They are ordered by urgency, not size —
 the first is live and actively teaching the wrong thing, so it comes first even

@@ -13,13 +13,27 @@
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { checkChildFacingText, isBlocking } from '../packages/core/src/index';
-import { deliver, freshnessStamp, stampedName } from './lib/export-destination';
-import { prisma } from '../packages/db/src/index';
+import { artefactStamp, deliver, stampedName } from './lib/export-destination';
+import { prisma as defaultPrisma } from '../packages/db/src/index';
 
 const OUT_DIR = resolve(import.meta.dirname, '../content/exports');
 const FAMILY = 'misconception-library-current';
 
+/**
+ * The library's source, shared with `check-export-freshness`.
+ *
+ * MIXED, in annie's sense: the childHint text is CONTENT (it ages visibly — a reader comparing it
+ * against the live hint sees the difference), but `status` and the gate verdict are STATUS, and
+ * they age invisibly. The status half is why this needs a builder: a ratification changes what the
+ * file says about an entry without changing the entry's text at all.
+ */
+export async function buildMisconceptionLibrarySource(prisma: typeof defaultPrisma): Promise<unknown> {
+  const rows = await prisma.misconception.findMany({ orderBy: [{ district: 'asc' }, { id: 'asc' }] });
+  return rows.map((m) => ({ id: m.id, district: m.district, status: m.status, description: m.description, childHint: String(m.childHint ?? '') }));
+}
+
 async function main(): Promise<void> {
+  const prisma = defaultPrisma;
   const rows = await prisma.misconception.findMany({ orderBy: [{ district: 'asc' }, { id: 'asc' }] });
   const entries = rows.map((m) => {
     const hint = String(m.childHint ?? '');
@@ -36,10 +50,22 @@ async function main(): Promise<void> {
     };
   });
 
+  const generatedAt = new Date().toISOString();
+  const stamp = artefactStamp(
+    await buildMisconceptionLibrarySource(prisma),
+    generatedAt,
+    'mixed',
+    'every misconception, with its verbatim childHint (content) and its status and gate verdict (status)',
+  );
   const out = {
     kind: 'misconception-library-current',
+    ...stamp,
+    staleness:
+      'MIXED SNAPSHOT. The hint text ages visibly; the status and gate verdict do not. A ratification ' +
+      'changes what this file says about an entry without changing the entry text. Check with ' +
+      '`pnpm check:export-freshness` before working from it.',
     note: 'The DB holds library text. Propose changes as a TRANSFORM against the childHint quoted here, never as a rewritten copy — a rewrite is how "or sound right" was lost. Do not keep this file as a working copy; re-run the export instead.',
-    exportedAt: new Date().toISOString(),
+    exportedAt: generatedAt,
     counts: {
       total: entries.length,
       byStatus: entries.reduce<Record<string, number>>((m, e) => ({ ...m, [e.status]: (m[e.status] ?? 0) + 1 }), {}),
@@ -48,7 +74,6 @@ async function main(): Promise<void> {
     entries,
   };
 
-  const stamp = freshnessStamp(entries, out.exportedAt);
   mkdirSync(OUT_DIR, { recursive: true });
   const path = join(OUT_DIR, stampedName(FAMILY, stamp.sourceHash, 'json'));
   writeFileSync(path, JSON.stringify(out, null, 2));
@@ -57,4 +82,6 @@ async function main(): Promise<void> {
   await prisma.$disconnect();
 }
 
-void main();
+// Only when run directly: importing this for its source builder must not run the export
+// (and must not `$disconnect()` the client the importer is still using).
+if (process.argv[1]?.endsWith('export-misconception-library.ts')) void main();
