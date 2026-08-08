@@ -868,3 +868,42 @@ a three-clause splice is acceptable.
 - Clean parts are safe: correct terminal punctuation (full stop, or semicolon — Year 6) is never
   arguable-wrong, so unlike comma there is no optional-site problem.
 - **BUILD RULE:** splice items use clauses of roughly five-plus words, non-parallel in structure.
+
+**Speech is N-FREE, by consequence not omission (annie, confirmed 2026-08-08).** A speech N item
+needs a properly closed quotation, which puts a terminal-at-a-quote-boundary CHOICE in a clean part;
+the alternative — reported speech — has no speech punctuation to consider at all, which is the comma
+rung-0 hollowness already rejected. So the family has **no N option at any rung**, which is cleaner
+than one that appears at some. Two consequences, recorded so the absence is not later read as a
+build gap: **`en-n-option-avoidance` is unreachable in this family**, and **the guessing rate is 1
+in 4 throughout, not 1 in 5.**
+
+**Correct full stops stay PLAIN in terminal's clean parts (annie, ruled 2026-08-08) — the trap
+principle again.** A full stop between independent clauses is a RULE, not a choice, so the part is
+genuinely clean; tagging it a trap would assert a child hesitates there, and a full stop after a
+complete sentence is the most automatic punctuation decision in English. No lookup change. **This is
+the THIRD family where the trap principle keeps something in the clean set that a mechanical test
+would have flagged** — after `right`/`walk` in silent letters (silent but automatic) and `happens`/
+`summer` in double letters (doubled but audible). The pattern: a mechanical test finds the FEATURE;
+the trap principle asks whether the child gets a signal she can rely on.
+
+## R18 — Cloze: the deciding factor is TYPED, and two of the four types are forbidden
+*Annie, 2026-08-08, recorded before the cloze build. Recorded by David.*
+
+The permissiveness fact that shaped the whole punctuation subtype **does apply to cloze** — not to
+its form (nothing is marked wrong) but to its CONTENT. At rung 3 all four options parse, so the key
+is decided by sense, grammar, register or collocation — and **register and collocation are exactly
+the dimensions where English permits more than one acceptable answer**: `she walked quickly` and
+`she walked fast` are both fine. A rung-3 cloze item decided on register carries a defensible second
+answer, in the same way a comma at a phrase boundary did.
+
+**The rule, built in from the start rather than probed for:** every cloze item DECLARES its deciding
+factor, typed, and the type gates the rung:
+- **`grammar`** (the sentence's syntax forces one form) — SAFE at every rung.
+- **`sense`** (only one option is true of what the passage says) — SAFE at every rung.
+- **`register`** (one option fits the tone better) — **FORBIDDEN as a deciding factor**; a second
+  answer is defensible.
+- **`collocation`** (one option is the idiomatic partner) — **FORBIDDEN**, same reason.
+So rung 3 — all four parsing — is reachable only where the decision is grammatical or semantic.
+Expect the three cloze families to land where the punctuation ones did: a real ceiling, stated.
+This also discharges the vr-04 discipline named earlier: if the author cannot write one sentence
+saying why the key beats each distractor, the option comes out — the declared factor IS that sentence.
