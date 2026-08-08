@@ -174,6 +174,17 @@ export const VOCAB_BANK: VocabItem[] = [
     { carrier: 'He was a noble man who gave up his place.', key: 'brave and good', trap: 'born into a titled family', wrong: ['quiet and very modest', 'well known in the town'] }),
   ...rareOnly('vc-outrageous', 'outrageous', 3,
     { carrier: 'She wore an outrageous hat to the wedding.', key: 'very unusual, so people stare', trap: 'so unfair it makes people angry', wrong: ['borrowed just for the day', 'far too small for her'] }),
+  // The four whose vault `likelierKnown` was corrected B→A first (scripts/fix-vault-likelier-known).
+  // Built only AFTER the data fix: a card built to a wrong likelierKnown produces an item labelled
+  // rare that tests the familiar sense — the shortcut the flip exists to close.
+  ...rareOnly('vc-genuine', 'genuine', 3,
+    { carrier: 'Her thanks sounded genuine rather than polite.', key: 'honest about what you feel', trap: 'real and not a fake', wrong: ['rehearsed well beforehand', 'quiet and very brief'] }),
+  ...rareOnly('vc-valid', 'valid', 3,
+    { carrier: 'Your ticket is still valid until Friday.', key: 'official and not run out', trap: 'based on good reasons', wrong: ['cheaper than the day rate', 'printed on thin card'] }),
+  ...rareOnly('vc-animated', 'animated', 3,
+    { carrier: 'They watched an animated film about a fox.', key: 'made from drawings shown quickly', trap: 'full of life and excitement', wrong: ['shot in black and white', 'made for younger children'] }),
+  ...rareOnly('vc-passive', 'passive', 4,
+    { carrier: 'The report was written in the passive throughout.', key: 'built so it does not say who acted', trap: 'accepting whatever happens', wrong: ['written in the past tense', 'kept short and formal'] }),
 ];
 
 // The headword is NAMED in the stem: an option-set item has no bold/markup channel, so "the word in

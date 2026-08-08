@@ -1047,6 +1047,21 @@ carefully his argument`) or topically disconnected (`heavy to lift` of a tree); 
 **No heuristic catches this** — it is a judgement about meaning, and it is where the remaining risk
 in the family sits.
 
+**LIKELIER-KNOWN IS THE SENSE SHE CAN USE, NOT THE ONE SHE HAS SEEN (annie, 2026-08-08).** The vault's
+`likelierKnown` feeds the vocabulary flip, which carries a signature — so a wrong value produces an
+item labelled RARE that tests the FAMILIAR sense, the exact shortcut the flip closes. Four values were
+INVERTED because whoever populated the field ranked EXPOSURE: `passive` claimed the grammar sense,
+`genuine` the honest-about-feelings sense, `valid` the official-and-unexpired sense, `animated` the
+cartoon sense. **`animated film` and `the passive voice` are LABELS a child recognises; they do not
+give her the word.** All four corrected B→A in the DATA (`scripts/fix-vault-likelier-known.ts`), not
+worked around in the bank, so the next reader is not misled too.
+**Pass over all 67 two-sense cards:** 8 carry lk=B; those 4 are wrong; `capital`, `mature` and
+`passage` are RIGHT (a child can use each — "start with a capital", "be mature", "read the passage");
+`condemn` is borderline and left alone. From the lk=A side, **`noble` is raised as the reverse
+candidate** ("brave and good" may be more available than "from an old family of lords") and left for
+the reviewer. So the field is 4 wrong in 67 — not systematically exposure-ranked, which is a
+reassuring result for an axis that carries a signature.
+
 **Instrument note.** The option-form audit is a heuristic: it separates "to …" / noun-phrase /
 gerund reliably, but recognises adjective phrases only from a word list, and produced false
 positives three times (`something`, `warm and friendly`, `fully grown and ready`). It catches gross
