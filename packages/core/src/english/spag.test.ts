@@ -19,7 +19,8 @@ describe('SPaG families on the maths engine', () => {
       // Honest per-tier counts: double 4/rung (child-usable key pool); comma 4/tier (the R-well
       // is narrow — rung-2 keyed items are all lists, so the opening-construction cap limits it);
       // the rest 6.
-      const n = (f.id === 'spag-spell-double-consonant-boundary' || f.id === 'spag-punct-comma-needs') ? 4 : 6;
+      const n = f.id === 'spag-punct-apostrophe-contraction' ? 3
+        : (f.id === 'spag-spell-double-consonant-boundary' || f.id === 'spag-punct-comma-needs') ? 4 : 6;
       for (const t of familyTiers(f)) {
         const items = generateSpagSample(f, t, n, 1);
         expect(items).toHaveLength(n);

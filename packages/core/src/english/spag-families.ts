@@ -599,6 +599,39 @@ const SILENT_V2 = errorSpotFamily({
 });
 
 // ---------------------------------------------------------------------------------------
+// APOSTROPHE — CONTRACTION (spot-the-mistake, annie 2026-08-08). its/it's, they're/their/there,
+// you're/your, we're/were, who's/whose — UNARGUABLE (one form right, one wrong). Runs on the
+// error-spot factory exactly like a spelling franchise: trap = a part with a contraction-set word
+// (either form), a reviewed word LIST (the fourth no-rule case). Apostrophes are stripped in the
+// lookup, so `it's` and `its` both normalise to `its` and both count.
+// ---------------------------------------------------------------------------------------
+const PUNCT_SPOT_STEM = 'Read the sentence. One part has a punctuation mistake. Which part is it? If every part is right, choose N.';
+const CONTRACTIONS = new Set<string>(['its', 'theyre', 'their', 'there', 'youre', 'your', 'were', 'whos', 'whose']);
+export const partHasContraction = (part: string): boolean =>
+  part.toLowerCase().split(/\s+/).some((w) => CONTRACTIONS.has(w.replace(/[^a-z]/g, '')));
+export const CONTRACTION_BANK: EsSentence[] = [
+  // 0 near-miss — error part CORRECTED; the other three carry no contraction word. Distinct keys.
+  { id: 'ct0-its', klass: "it's", parts: ["It's very cold", 'in the old', 'school hall', 'this week'], errorIndex: 0, wrong: 'Its very cold', intended: 0 },
+  { id: 'ct0-your', klass: 'your', parts: ['Your new book', 'is on the', 'wooden desk', 'by the shelf'], errorIndex: 0, wrong: "You're new book", intended: 0 },
+  { id: 'ct0-whos', klass: "who's", parts: ["Who's coming", 'to the big', 'match', 'this Saturday'], errorIndex: 0, wrong: 'Whose coming', intended: 0 },
+  { id: 'ct0-their', klass: 'their', parts: ['Their coats', 'hung on the', 'pegs', 'all day'], errorIndex: 0, wrong: 'There coats', intended: 0 },
+  // 1 near-miss — one other part carries a contraction word.
+  { id: 'ct1-itsposs', klass: 'its', parts: ['The dog chased its ball', 'across the', 'muddy field', "where they're playing"], errorIndex: 0, wrong: "The dog chased it's ball", intended: 1 },
+  { id: 'ct1-theyre', klass: "they're", parts: ["They're going out", 'to play', 'in your garden', 'after lunch'], errorIndex: 0, wrong: 'Their going out', intended: 1 },
+  { id: 'ct1-youre', klass: "you're", parts: ["You're very kind", 'to lend', 'me your pen', 'today'], errorIndex: 0, wrong: 'Your very kind', intended: 1 },
+  { id: 'ct1-were', klass: "we're", parts: ["We're leaving now", 'before it', 'gets dark', 'over there'], errorIndex: 0, wrong: 'Were leaving now', intended: 1 },
+  // 2 near-miss — two other parts carry contraction words.
+  { id: 'ct2-there', klass: 'there', parts: ['There is your bag', "and it's", 'by their coats', 'on the floor'], errorIndex: 0, wrong: 'Their is your bag', intended: 2 },
+  { id: 'ct2-wereverb', klass: 'were', parts: ['They were happy', "when you're", 'near their friends', 'at school'], errorIndex: 0, wrong: "They we're happy", intended: 2 },
+  { id: 'ct2-whose', klass: 'whose', parts: ['Whose turn is it', "now that they're", 'using your desk', 'today'], errorIndex: 0, wrong: "Who's turn is it", intended: 2 },
+];
+const CONTRACTION_V2 = errorSpotFamily({
+  id: 'spag-punct-apostrophe-contraction', name: 'Apostrophes (contraction)', subtype: 'punctuation',
+  franchise: 'en-apostrophe-contraction', stem: PUNCT_SPOT_STEM, nm: esNm, tiers: [1, 2, 3],
+  bank: CONTRACTION_BANK, nearMiss: partHasContraction,
+});
+
+// ---------------------------------------------------------------------------------------
 // COMMAS — the REFRAME (annie 2026-08-08): "which part NEEDS a comma", not spot-the-mistake
 // (which rests on "no comma is acceptable here", nearly empty at phrase boundaries). THREE parts
 // + N, so every part is a constituent; comma serves T1–T3 (three parts can't hold three optional
@@ -671,7 +704,7 @@ export const SPAG_FAMILIES: SpagFamily[] = [
   UNSTRESSED_V2,
   SILENT_V2,
   // Punctuation (4)
-  punctFamily('en-apostrophe-possession', 'Apostrophes', [1, 2, 3, 4]),
+  CONTRACTION_V2,
   punctFamily('en-terminal-punctuation-blind', 'Terminal and boundary', [2, 3, 4]),
   punctFamily('en-speech-punctuation-inside', 'Speech punctuation', [2, 3, 4]),
   COMMA_NEEDS_V2,

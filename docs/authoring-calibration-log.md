@@ -673,3 +673,47 @@ survives only if restricted to its/it's + irregular-plural possessives with clea
 regular-plural-before-noun — thin, and a slice of the skill. Decision pending. Terminal/boundary and
 speech are expected to survive the spot-form (their sites are far less arguable) but each is probed
 at the joins before assuming.
+
+## R14 — Apostrophe splits into TWO families; and the four stem forms, settled once
+*Annie, 2026-08-08. Recorded by David.*
+
+The apostrophe probe found two different properties that want two question types, so apostrophe
+becomes **two families**, not one:
+
+- **`apostrophe-contraction` — SPOT-THE-MISTAKE.** its/it's, they're/their/there, you're/your,
+  we're/were, who's/whose. UNARGUABLE: one form is right, the other wrong, no reading rescues it —
+  exactly the spot-form's requirement. Highest value in the subtype: its/it's is the commonest KS2
+  apostrophe error, and spotting it is the very thing a child fails to do in her own writing. TRAP
+  DEFINITION: a part contains a word from the reviewed contraction-confusion set (in EITHER form);
+  clean parts contain none. A word list, no generative rule — **the fourth no-rule case** (after
+  homophones, silent, comma-site-typing), and it says so.
+- **`apostrophe-possessive` — REFRAME "which part needs an apostrophe".** Regular plurals,
+  noun-modifiers, singular/plural possessives — the probe shows these blur constantly (`boys
+  changing room`), so the spot-form can't hold them; under the reframe an arguable site becomes an
+  `over-applied` trap, not a broken clean part. TYPING (reviewed per sentence, comma-style): R = a
+  clear singular possessive with an animate owner (`the girl's coat`, `my brother's bike`); O = any
+  noun-before-noun / plural-before-noun where a possessive reading is defensible; F = a plain plural
+  or a verb. **Probe the R-well BEFORE authoring** — if the only unarguable required site is the
+  singular animate possessive, that is one construction, and comma's experience says one
+  construction gives a positional cue.
+
+**The four stem forms, settled as a SET (annie 2026-08-08) — so four near-identical stems don't
+make a child misread which task she has, an error unrelated to the skill:**
+1. **Spot-the-mistake** (spelling; contraction): "Read the sentence. One part has a {spelling|
+   punctuation} mistake. Which part is it? If every part is right, choose N."
+2. **Needs a comma:** "One part must have a comma but does not. Which part is it? If every part is
+   right, choose N."
+3. **Needs an apostrophe:** "One part must have an apostrophe but does not. Which part is it? If
+   every part is right, choose N."
+4. **Cloze:** "Choose the word that fits best." (a different shape — a gap, not four parts.)
+Every one ends on the same N clause ("If every part is right, choose N") so only the TASK verb
+changes; the difference between "has a mistake", "must have a comma", "must have an apostrophe" is
+carried in the main verb where a child reads it first.
+
+**Terminal and speech — probe before building (annie 2026-08-08), and check specifically:**
+- **Terminal:** a comma splice is an error, but a full stop where a comma belongs is arguable
+  against it ("It was raining. We stayed inside" vs "…, so we stayed inside" are both correct), so
+  a clause-join boundary may be OPTIONAL — the comma failure in a new place.
+- **Speech:** check the CLEAN parts — British allows single or double quotation marks, and
+  comma-vs-colon before speech varies, so a clean part holding a punctuation CHOICE is optional,
+  not forbidden.
