@@ -61,6 +61,8 @@ export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
     ? (stem.quotes as Array<{ text?: string }>).map((q) => q.text ?? '').filter(Boolean)
     : [];
   const testedTokens = Array.isArray(stem.testedTokens) ? (stem.testedTokens as string[]) : [];
+  // R23 — proper nouns the passage itself uses, declared on the stem, exempt from the ceiling only.
+  const passageNames = Array.isArray(stem.passageNames) ? (stem.passageNames as string[]) : [];
 
   // Every stem string. Only the prompt carries the declared quotes.
   for (const [path, text] of textsFrom(item.stem, '')) {
@@ -77,6 +79,7 @@ export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
         text,
         quotedSpans: path === 'prompt' ? stemQuotes : [],
         testedTokens,
+        passageNames,
       }),
     );
   }
@@ -109,6 +112,7 @@ export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
         text,
         quotedSpans: spansPresentIn(text, declaredForScripts),
         testedTokens: scriptTested,
+        passageNames,
       }),
     );
     const orphans = [

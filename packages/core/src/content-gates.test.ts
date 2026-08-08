@@ -512,3 +512,18 @@ describe('notation is not a word (David, 2026-08-02)', () => {
     expect(longest('The well-behaved spring-cleaning mole went out.')).toEqual([]);
   });
 });
+
+describe('R23 — declared passage proper nouns', () => {
+  it('R23: a declared passage name is exempt from the CEILING ONLY', () => {
+    const text = 'Elizabeth understood immediately.';
+    // Undeclared, the name counts against the ceiling like any other four-syllable word.
+    expect(checkReadingAge('item-stem', 'T', text, '', [], [], []).some((f) => f.rule === 'long-words')).toBe(true);
+    // Declared, it does not — the passage has already taught it.
+    expect(checkReadingAge('item-stem', 'T', text, '', [], [], ['Elizabeth']).some((f) => f.rule === 'long-words')).toBe(false);
+    // But the exemption reaches the ceiling and nothing else: the ban list still bites.
+    expect(
+      checkChildFacingText({ role: 'item-stem', label: 'T', text: 'Elizabeth got the wrong answer.', passageNames: ['Elizabeth'] })
+        .some((f) => f.rule === 'banned-vocabulary'),
+    ).toBe(true);
+  });
+});

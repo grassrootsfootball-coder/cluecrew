@@ -1160,22 +1160,64 @@ now fires **ZERO** across all content while still permitting the ten definitions
 permanent exception list: the rule keeps guarding against real stance drift, and nothing has to
 remember why three items are allowed to break it. (`scripts/reword-urgency-walkscripts.ts`.)
 
-## R23 — Declare the passage's word; reword only what is ours
+## R23 — Declare the passage's word; reword only what is ours (2026-08-08)
 
-The R4 mechanism now works on walk scripts and hints, not only stems.
-The gate was reading stem.quotes while the contract puts them in
-explanation.quotes, so declarations made in the right place were being
-ignored and passage vocabulary was measured as ours. Fixed.
+*(Logged as R7 in Cowork's partial copy before the canonical number was known. Renumbered to R23 on
+confirmation; R7 here remains the option-label rule and is cited elsewhere.)*
 
-Consequence for authoring — ask whose word it is before touching it:
+The R4 mechanism now works on **walk scripts and hints**, not only stems. The gate was
+reading `stem.quotes` while the contract puts them in `explanation.quotes`, so declarations
+made in the right place were being ignored and passage vocabulary was measured as ours.
+Fixed.
+
+**Consequence for authoring — ask whose word it is before touching it:**
 
 | the word is | do this |
 |---|---|
-| the passage's own word | declare it in explanation.quotes. Do not reword around it. |
-| our paraphrase of the passage | prefer replacing it with the passage's own words, then declare. Reword only if no passage phrase fits. |
-| our own instructional word (semicolon, paragraph, comparison) | reword. Nothing to declare. |
-| a character's name the item uses rather than quotes | reword. Using a name is not quoting it. |
+| the passage's own word | **declare it** in `explanation.quotes`. Do not reword around it. |
+| our paraphrase of the passage | prefer **replacing it with the passage's own words**, then declare. Reword only if no passage phrase fits. |
+| our own instructional word (*semicolon*, *paragraph*, *comparison*) | **reword**. Nothing to declare. |
+| a character's name the item *uses* rather than *quotes* | **reword** — unless declared under the passage-name rule below. |
 
-Worked example, this session: contemptuous in WIW-10 is the passage's
-word and the item is about it — declared. Semicolon and Elizabeth in
-pp-21 are ours — reworded.
+**Worked examples from this pass:**
+
+- *ENG-001-WIW-19* — "He unfastened a rope earlier." `unfastened` is the passage's word at
+  line 59. Declared, not reworded; the hint now shows it as a quotation.
+- *ENG-001-WIW-14* — "…beside a good storyteller?" `storyteller` was our paraphrase, and it
+  is the word R4 already names as this item's teaching case. Replaced with the passage's own
+  `exciting stories` and declared, rather than reworded around.
+- *ENG-002-pp-21* — "The words after the semicolon describe Elizabeth." Neither word was
+  quotable away: `semicolon` is ours and `Elizabeth` was a name in use. Both reworded; the
+  nudge now rides on the tested token `spirit`, which R1 already exempts.
+
+**Passage proper nouns — ruled.** A proper noun that appears in the passage may be
+**declared as a named token** and is then exempt from the vocabulary and long-word ceiling
+within that item. Same machinery as `testedTokens`, a sibling field:
+
+```
+"passageNames": ["Elizabeth"]
+```
+
+Three limits, so this stays a carve-out and not a hole:
+
+1. **It must be the passage's name.** Verified in code against the passage file, exactly as a
+   quotation is. A name we invent for a worked example is our word and gets reworded.
+2. **The exemption is from the ceiling only.** The ban list, the sentence cap and reading age
+   all still apply to the sentence the name sits in.
+3. **Declared, not automatic.** Declaring it is what records that the author checked whose
+   word it is, which is the same discipline the quotation rule rests on.
+
+The reasoning: the ceiling exists to stop *our own* wording out-running the child, and a name
+is not vocabulary the child has to decode — the passage has just spent 900 words teaching it.
+
+**IMPLEMENTED 2026-08-08.** `passageNames` on the stem, exempt in the long-word filter beside
+`testedTokens` (`content-gates.ts`); limit 1 verified by `pnpm check:line-refs` against the passage
+file; limit 2 holds because only the ceiling filter consults it. Proven both ways: *"Elizabeth
+understood immediately."* fails `2 long words (max 1): Elizabeth, immediately` undeclared and passes
+declared, while a banned word in the same sentence still trips.
+
+**One correction to the measurement.** Of the three names cited, **only `Elizabeth` is four
+syllables** — `Netherfield` and `Derbyshire` are three, and were never at risk from a ceiling that
+starts at four. So the rule bites on the Elizabeth occurrences alone (six items in the live DB). The
+carve-out is still right, and for the reason given — every passage has a protagonist, and it recurs
+by construction — but it is narrower than 12 occurrences.

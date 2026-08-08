@@ -49,6 +49,26 @@ async function main(): Promise<void> {
       : [];
     const bucket = item.status === 'LIVE' ? serving : draft;
 
+    // R23 limit 1 — a declared passage NAME must actually be the passage's name. Verified here,
+    // against the passage file, exactly as a quotation is. A name we invent for a worked example
+    // is our word and gets reworded; declaring it must not be a way to smuggle one past the
+    // ceiling. A declaration that does not resolve is REPORTED, never silently honoured.
+    const declaredNames = Array.isArray(stem.passageNames)
+      ? (stem.passageNames as string[]).filter((n) => typeof n === 'string' && n.trim())
+      : [];
+    if (declaredNames.length) {
+      const body = passage
+        ? passage.numberedLines.map((l) => l.text).join(' ').toLowerCase()
+        : '';
+      for (const name of declaredNames) {
+        if (!passage) {
+          bucket.push({ where: `item:${item.id} stem.passageNames`, rule: 'line-ref', detail: `declares passage name "${name}" but passage ${passageRef} is missing` });
+        } else if (!new RegExp(`\\b${name.toLowerCase().replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`).test(body)) {
+          bucket.push({ where: `item:${item.id} stem.passageNames`, rule: 'line-ref', detail: `declares passage name "${name}", which does not appear in ${passageRef}` });
+        }
+      }
+    }
+
     bucket.push(
       ...checkLineRefs({
         label: `item:${item.id} stem`,

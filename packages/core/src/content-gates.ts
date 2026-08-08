@@ -229,6 +229,15 @@ export function checkReadingAge(
    * counted, still capped and still held to plain vocabulary.
    */
   quotedSpans: readonly string[] = [],
+  /**
+   * PASSAGE PROPER NOUNS (R23, annie 2026-08-08). A name the passage itself uses may be declared
+   * and is then exempt from the CEILING ONLY — the ban list, the sentence cap and reading age all
+   * still apply to the sentence it sits in. The ceiling exists to stop OUR OWN wording out-running
+   * the child, and a name is not vocabulary she has to decode: the passage has just spent 900 words
+   * teaching it. Declared rather than automatic, so the declaration records that the author checked
+   * whose word it is — the same discipline the quotation rule rests on.
+   */
+  passageNames: readonly string[] = [],
 ): ContentFailure[] {
   const rules = ROLE_RULES[role] ?? ROLE_RULES['item-stem'];
   const failures: ContentFailure[] = [];
@@ -277,6 +286,8 @@ export function checkReadingAge(
       if (stem && cleaned.startsWith(stem)) return false;
       // The word under test is the question, not a reading-load problem.
       if (isTestedToken(word, testedTokens)) return false;
+      // A declared passage name is the passage's word, not ours (R23).
+      if (isTestedToken(word, passageNames)) return false;
       return syllables(cleaned) >= 4;
     });
   if (longWords.length > rules.maxLongWords) {
@@ -550,6 +561,9 @@ export function checkChildFacingText(input: {
   quotedSpans?: readonly string[];
   /** Words this item tests. Exempt from the VOCABULARY CEILING only. */
   testedTokens?: readonly string[];
+  /** Proper nouns the PASSAGE uses (R23). Exempt from the ceiling only; verified against the
+   *  passage file by `pnpm check:line-refs`, exactly as a quotation is. */
+  passageNames?: readonly string[];
 }): ContentFailure[] {
   return [
     ...checkReadingAge(
@@ -559,6 +573,7 @@ export function checkChildFacingText(input: {
       input.exemptStem,
       input.testedTokens ?? [],
       input.quotedSpans ?? [],
+      input.passageNames ?? [],
     ),
     ...checkBannedVocabulary(
       input.label,
