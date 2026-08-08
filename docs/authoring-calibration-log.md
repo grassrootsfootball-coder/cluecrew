@@ -437,6 +437,10 @@ shape as M-place). R13 carries all six rules to the other ten in one pass.
   reads as rung-zero — correct by the lookup, but a child taught were/we're may flag it. Whether
   the list includes weak-form and near-homophone pairs changes which sentences qualify as clean;
   make that call once (it is a lookup edit) rather than arguing it per sentence.
+  **RULED (David, 2026-08-08): standard KS2 homophone pairs only** — weak-forms (were/we're),
+  near-homophones (shore/sure) and low-frequency pairs (time/thyme) are EXCLUDED, because
+  near-miss should mirror what a child is taught to flag. The current lookup already matches this,
+  so `time`/`shore`/`were` stay clean and homophones needs no rung-zero change on their account.
 
 ## R12 — Comprehension misconceptions cannot have executors — a property, not a gap
 *David, 2026-08-08, recorded during the English generator build.*
