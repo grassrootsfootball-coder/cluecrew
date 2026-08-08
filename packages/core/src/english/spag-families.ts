@@ -280,11 +280,78 @@ function clozeFamily(franchise: string, name: string, tiers: Tier[]): SpagFamily
 }
 
 // ---------------------------------------------------------------------------------------
+// HOMOPHONES — REBUILT to annie's spec (2026-08-08). Fixes the four faults she found on the
+// v1 sheet:
+//  1. FALSE-POSITIVE TAG. A child who picks a CORRECT part is not making the spelling error a
+//     borrowed franchise tag claimed; she is making a false-positive error (thinking a correct
+//     part is wrong). Every correct-part distractor carries `en-error-spot-false-positive` —
+//     the nameable misconception, not a mis-describing franchise tag.
+//  2. ONE COHERENT SENTENCE. The four parts are one sentence in order (not four unrelated
+//     clauses), exactly one part carrying the error — the GL spot-the-mistake shape. Parts are
+//     shown in sentence order, never shuffled.
+//  3. NO RECURRENCE. Each item is a distinct sentence, so no fragment or key repeats.
+//  4. STRUCTURAL LADDER, NOT MAGNITUDE. The ladder is carried by N-keying and near-miss
+//     proximity (both genuinely structural) — NOT by word length. Word length stays a bounded
+//     range but makes no ladder claim (blind-spot one from the maths pass).
+// Ceiling T4 (SPaG cap, BUILD-DISTRICT-ENGLISH §1) — no T5, by the corpus, not by omission.
+// ---------------------------------------------------------------------------------------
+const SPOT_FALSE_POSITIVE = 'en-error-spot-false-positive';
+interface SpotSentence { parts: string[]; errorIndex: number; wrong: string; targetLen: number; nm: number[] }
+// nm = indices of NEAR-MISS parts: correct on the page, but carrying a homophone-family word a
+// child might wrongly flag. Those are the hard false-positive traps the top tiers turn up.
+const HOMOPHONE_BANK: SpotSentence[] = [
+  // Plain (no near-miss) — T1/T2.
+  { parts: ['He was allowed', 'to leave early', 'because he felt', 'rather unwell'], errorIndex: 0, wrong: 'He was aloud', targetLen: 5, nm: [] },
+  { parts: ['We walked past', 'the old mill', 'to reach', 'the stone bridge'], errorIndex: 0, wrong: 'We walked passed', targetLen: 6, nm: [] },
+  { parts: ['She could hear', 'the last bell', 'ring out', 'across the yard'], errorIndex: 0, wrong: 'She could here', targetLen: 4, nm: [] },
+  { parts: ['They rode home', 'in heavy rain', 'after the long', 'football match'], errorIndex: 0, wrong: 'They road home', targetLen: 4, nm: [] },
+  { parts: ['I knew the test', 'would be hard', 'so I studied', 'every page twice'], errorIndex: 0, wrong: 'I new the test', targetLen: 3, nm: [] },
+  { parts: ['The plane flew', 'above the clouds', 'for many', 'long hours'], errorIndex: 0, wrong: 'The plane flu', targetLen: 3, nm: [] },
+  // One near-miss — T3.
+  { parts: ['She could not hear', 'the coach shout', 'over the loud', 'cheers outside'], errorIndex: 0, wrong: 'She could not here', targetLen: 4, nm: [2] },
+  { parts: ['They watched the weather', 'change so fast', 'and grabbed their', 'coats and bags'], errorIndex: 0, wrong: 'They watched the whether', targetLen: 7, nm: [2] },
+  { parts: ['The plane flew', 'right through', 'the grey cloud', 'and then stopped'], errorIndex: 1, wrong: 'right threw', targetLen: 5, nm: [0] },
+  { parts: ['We rode home', 'past the shops', 'to fetch', 'some warm bread'], errorIndex: 0, wrong: 'We road home', targetLen: 4, nm: [1] },
+  // Two near-miss — T4.
+  { parts: ['He rode the bike', 'past the shops', 'to meet his aunt', 'by the sea'], errorIndex: 1, wrong: 'passed the shops', targetLen: 6, nm: [0, 3] },
+  { parts: ['She knew the ball', 'would roll past', 'the goal line', 'near the road'], errorIndex: 1, wrong: 'would roll passed', targetLen: 6, nm: [0, 3] },
+  { parts: ['I heard the horse', 'gallop past', 'the open field', 'where we flew'], errorIndex: 1, wrong: 'gallop passed', targetLen: 6, nm: [0, 3] },
+  { parts: ['They sailed through', 'the calm sea', 'past the grey', 'harbour wall'], errorIndex: 0, wrong: 'They sailed threw', targetLen: 5, nm: [1, 2] },
+];
+function homophoneCfg(tier: Tier): { nKeyed: string; nm: number; nRate: number } {
+  return ({ 1: { nKeyed: 'no', nm: 0, nRate: 0 }, 2: { nKeyed: 'sometimes', nm: 0, nRate: 0.25 }, 3: { nKeyed: 'sometimes', nm: 1, nRate: 0.25 }, 4: { nKeyed: 'often', nm: 2, nRate: 0.4 }, 5: { nKeyed: 'often', nm: 2, nRate: 0.4 } } as const)[tier];
+}
+const HOMOPHONES_V2: SpagFamily = {
+  id: 'spag-spell-homophone-by-sound',
+  name: 'Homophones',
+  subtype: 'spelling',
+  franchise: 'en-homophone-by-sound',
+  tierRule: (t) => (([1, 2, 3, 4] as Tier[]).includes(t) ? `Homophones — one sentence in four parts, spot the wrong-sound spelling (${homophoneCfg(t).nKeyed === 'no' ? 'N never the answer' : 'N sometimes the answer'}, ${homophoneCfg(t).nm} near-miss part${homophoneCfg(t).nm === 1 ? '' : 's'}).` : ''),
+  structuralParams: (t) => ({ nKeyed: homophoneCfg(t).nKeyed, nearMissParts: homophoneCfg(t).nm }),
+  numberRanges: (t) => ({ letters: [3, 7], segments: [4, 4], nearMissParts: [homophoneCfg(t).nm, homophoneCfg(t).nm] }),
+  draft: (tier, r): SpagItemDraft => {
+    const cfg = homophoneCfg(tier);
+    const pool = HOMOPHONE_BANK.filter((s) => s.nm.length === cfg.nm);
+    const s = randPick(r, pool);
+    const nKey = cfg.nRate > 0 && r() < cfg.nRate;
+    const opts: SpagOption[] = [];
+    if (nKey) {
+      s.parts.forEach((p) => opts.push({ value: p, isKey: false, misconceptionId: SPOT_FALSE_POSITIVE }));
+      opts.push({ value: 'No mistake', isKey: true });
+    } else {
+      s.parts.forEach((p, i) => opts.push(i === s.errorIndex ? { value: s.wrong, isKey: true } : { value: p, isKey: false, misconceptionId: SPOT_FALSE_POSITIVE }));
+      opts.push({ value: 'No mistake', isKey: false, misconceptionId: 'en-n-option-avoidance' });
+    }
+    return { stem: SPELL_STEM, options: opts, params: { letters: s.targetLen, segments: 4, nearMissParts: s.nm.length } };
+  },
+};
+
+// ---------------------------------------------------------------------------------------
 // THE ELEVEN
 // ---------------------------------------------------------------------------------------
 export const SPAG_FAMILIES: SpagFamily[] = [
-  // Spelling (4) — franchises span the bands their words naturally occupy.
-  spellFamily('en-homophone-by-sound', 'Homophones', [1, 2]),
+  // Spelling (4) — homophones REBUILT (annie 2026-08-08); the other three await the same pass.
+  HOMOPHONES_V2,
   spellFamily('en-double-consonant-boundary', 'Double letters', [2, 3, 4]),
   spellFamily('en-unstressed-suffix-vowel', 'Unstressed suffix vowel', [2, 3, 4]),
   spellFamily('en-silent-letter-dropped', 'Silent letters', [1, 2]),

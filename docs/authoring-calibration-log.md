@@ -347,6 +347,32 @@ tagging; never tag from the slug or from memory of what an id "means". When a sl
 its description have drifted far enough to mislead, that is a library note (rename is
 v2), not a licence to tag by the slug.
 
+## R13 — A spot-the-mistake distractor is a false positive, not the error it resembles
+*Annie, written review of the SPaG homophones sheet, 2026-08-08. The vr-03 fault in a new district.*
+
+In a spot-the-mistake item every wrong option is a **correct part** of the sentence. A child
+who picks one is not making the spelling or punctuation error a franchise tag would claim —
+"The coach checked her list" has no dropped silent letter — she is making a **false-positive
+error**: thinking something is wrong when it isn't. That is a real, nameable misconception
+(`en-error-spot-false-positive`), and tagging the correct part with a franchise it does not
+instantiate actively **misdescribes her** and teaches a rule she applied correctly.
+
+**The rules (all eleven SPaG families):**
+1. **Correct-part distractors carry `en-error-spot-false-positive`**, never a franchise tag the
+   part does not instantiate. The `No mistake` option, when a distractor, carries
+   `en-n-option-avoidance`. The keyed error part carries no tag (it is the answer).
+2. **The item is ONE coherent sentence in labelled parts**, exactly one part carrying the
+   error — not four unrelated clauses. Parts show in sentence order, never shuffled.
+3. **The ladder is structural** — N-keying and near-miss proximity — **not word length**.
+   Word length may be a bounded range but makes no ladder claim: a `wordBand short→medium`
+   ladder is magnitude wearing a structural name, which the gate passes because it checks the
+   declaration, not whether the declared parameter is structural (blind-spot one, maths pass).
+4. **Tier reach is honest.** SPaG ceilings at T4 (corpus); no family reaches T5. A family
+   reaches T1 only where the error can be made genuinely obvious.
+
+Homophones was rebuilt to this and sent for check before the other ten; they get the same pass
+once it is signed — the maths discipline of proving one family before the volume run.
+
 ## R12 — Comprehension misconceptions cannot have executors — a property, not a gap
 *David, 2026-08-08, recorded during the English generator build.*
 

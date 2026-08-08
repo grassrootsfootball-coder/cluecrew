@@ -21,15 +21,21 @@ import { SPAG_FAMILIES as FAMILIES } from '../packages/core/src/english/spag-fam
 import { familyTiers } from '../packages/core/src/maths/generator';
 
 const OUT_DIR = resolve(import.meta.dirname, '../content/exports');
-const FAMILY = 'spag-sample-sheets';
 const esc = (s: string): string => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
 function main(): void {
   const gaps = spagLadderGaps(FAMILIES);
   if (gaps.length) throw new Error(`structural-ladder gate not green: ${JSON.stringify(gaps)}`);
 
+  // Optional argv filter — a family-id substring, so one rebuilt family can go for a check
+  // on its own (e.g. `... export-spag-sample-sheets.ts homophone`).
+  const filter = process.argv[2];
+  const selected = filter ? FAMILIES.filter((f) => f.id.includes(filter)) : FAMILIES;
+  if (!selected.length) throw new Error(`no family matches "${filter}"`);
+  const FAMILY = filter ? `spag-sample-${filter}` : 'spag-sample-sheets';
+
   const sections: string[] = [];
-  for (const f of FAMILIES) {
+  for (const f of selected) {
     const rows = spagFamilySheetRows(f)
       .map((r) => {
         const sp = f.structuralParams(r.tier);
@@ -65,16 +71,16 @@ function main(): void {
     `table{border-collapse:collapse;width:100%;margin:.5rem 0;font-size:.9rem}th,td{border:1px solid #ccc;padding:.35rem .5rem;text-align:left;vertical-align:top}` +
     `.rng{font-family:monospace;font-size:.85rem}.ex{margin:.4rem 0;padding:.3rem .6rem;border-left:3px solid #ddd}.stem{margin:.2rem 0}` +
     `.t{font:700 .75rem monospace;background:#eee;padding:.05rem .3rem;border-radius:3px}ul{margin:.2rem 0 .4rem 1.2rem}.tag{font:400 .75rem monospace;color:#a00}</style>` +
-    `<h1>SPaG generator — the eleven families</h1>` +
-    `<p>English on the maths model. Structural-ladder gate: <b>green</b> (${FAMILIES.length} families). Ranges shown are the source the generator enforces.</p>` +
+    `<h1>SPaG generator — ${filter ? esc(selected[0]!.name) + ' (rebuilt for check)' : 'the eleven families'}</h1>` +
+    `<p>English on the maths model. Structural-ladder gate: <b>green</b> (${selected.length} of ${FAMILIES.length} families). Ranges shown are the source the generator enforces.</p>` +
     sections.join('');
 
-  const stamp = freshnessStamp(FAMILIES.map((f) => ({ id: f.id, tiers: familyTiers(f), rule: familyTiers(f).map(f.tierRule) })), new Date().toISOString());
+  const stamp = freshnessStamp(selected.map((f) => ({ id: f.id, tiers: familyTiers(f), rule: familyTiers(f).map(f.tierRule) })), new Date().toISOString());
   mkdirSync(OUT_DIR, { recursive: true });
   const path = join(OUT_DIR, stampedName(FAMILY, stamp.sourceHash, 'html'));
   writeFileSync(path, html, 'utf8');
   const delivered = deliver(path, FAMILY);
-  console.log(`SPaG sample sheets: ${FAMILIES.length} families, ladder green → ${delivered}`);
+  console.log(`SPaG sample sheets: ${selected.length} of ${FAMILIES.length} families, ladder green → ${delivered}`);
   void SPAG_FAMILIES;
 }
 
