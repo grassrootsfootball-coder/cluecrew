@@ -492,6 +492,25 @@ The surviving shape is the REFRAME: **"which part NEEDS a comma"** — clean par
 be places a comma is not REQUIRED (abundant), same skill, natural sentences, a real multi-rung
 bank. Decision pending; the other three punctuation families hit this wall far less hard.
 
+**Comma site-typing is the THIRD no-rule case — reviewed PER-SENTENCE, not a lookup (annie,
+2026-08-08).** Unlike homophones/silent (word lists), comma site-type depends on the construction,
+not the word ("by the river" is optional in one sentence, part of a required list in another), so a
+cue-classifier would mis-type trailing adverbs and appositives as forbidden — the exact mis-typed-
+clean-part fault caught in three districts. So each sentence is typed by hand and REVIEWED. To keep
+the 24th sentence typed like the first, the SETTLED CASES (extend as new ones arise):
+- **Required (R) — beyond argument only:** fronted subordinate clause (comma after it); a list's
+  internal commas (between items 1–2, 2–3). Nothing "strongly preferred" — that is a trap in a
+  key's clothes.
+- **Optional (O) — a trap:** trailing prepositional phrase; trailing adverb; the **serial-comma
+  slot** (pre-final-conjunction in a list — British: optional, a trap, NEVER the key); a short
+  fronted adverbial.
+- **Forbidden (F):** between a verb and its object; inside a noun phrase; between an auxiliary and
+  its main verb; the subject–verb join. Forbidden means forbidden, not merely unusual — "you
+  wouldn't but could" is O, not F.
+Key = the R part (or N if none). rung = number of O parts. An N item carries no REQUIRED site and
+**no paired construction** (parentheticals / non-restrictive relatives excluded — both are taught
+as things you DO with commas, so they read as invitations, not "already right").
+
 **The general lesson (annie, 2026-08-08 — state it this way, it is the reusable part).** "No comma
 is acceptable here" is not a thin property, it is a nearly-EMPTY one *at phrase boundaries*, and a
 four-part item splits at phrase boundaries by construction. Five of six candidates failed at a
