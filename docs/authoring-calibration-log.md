@@ -1000,3 +1000,42 @@ signed for, no defect — and tense T2 was **4**, not the 8 signed for. Rather t
 downward, the definite-past well was WIDENED to 8 (Two days ago / Last summer / Yesterday morning / A
 week ago), so the signed figure is true. A signature carrying a wrong depth is a defect; checking the
 built bank against the recalled figure is part of signing.
+
+## R20 — Vocabulary in context: the sense flip, the guard, and a T2 floor
+*Annie, 2026-08-08. Recorded by David.*
+
+**THE SENSE FLIP.** An earlier build tested the LESS-familiar sense in 16 of 18 items at every tier.
+That is not merely a flat difficulty axis: the family then only ever asks "do you know the second
+meaning?", when the skill it is named for is **letting the sentence tell you which meaning is live**.
+A child who learns the trick scores 16/18 without reading a sentence — the vr-04 shortcut inside the
+family's own mechanism. So the familiar sense is tested at the bottom (rarer sense as the trap) and
+the rarer sense at the top. Two declared variables, and the flip is mechanically checkable against
+the vault's `likelierKnown`: **tier <= 2 iff familiar**.
+
+**THE GUARD.** A familiar-sense item may exist only where the HEADWORD is itself within reach of the
+tier — vault tier <= 2. Otherwise the child is not choosing between senses, she is being asked
+whether she has met the word at all, and no amount of sentence-reading rescues a word she does not
+know (`warrant` at T2 was the case that showed it). Cards failing the guard contribute their
+rare-sense item ONLY. Second checkable condition, on top of the flip.
+
+**THE FLOOR IS T2, and the reason is a property of the VAULT, not of the question type.** Only 9 of
+23 Mode A cards clear the guard, and just 3 sit at vault T1 — a pair and a half, which by the
+tense standard is not a tier. So there is no T1: **two-sense words easy enough for a secure Year 4
+child are rare, because a word must be common enough to be known TWICE OVER.** Recorded so that "no
+T1" is not later read as a gap to fill by hunting for words that do not exist.
+
+**ROUTE (b) COLLAPSES INTO ROUTE (a) — probe result, 3 cards.** Mode B cards were rejected for BARE
+items because the FAMILIAR sense is broad and has no clean distractor space. Their RARE senses are
+narrow and do: `dear` = costing much more than expected, `mature` = fully grown, `superior` =
+behaving as if better than others. All three carry a clean rare-sense item. So route (b) is NOT 13
+purpose-authored discrimination cards — it is 13 rare-sense-only cards, the same shape as a
+guard-failing Mode A card, and much less authoring than scoped.
+
+**Final shape: 35 items — T2 9 · T3 9 · T4 17.** The family is the district's LARGEST T4 contributor,
+against a district T4 that was its thinnest tier. A constraint that looked like a cost three rounds
+earlier ended by making the family bigger and filling the tier that needed it.
+
+**Instrument note.** The option-form audit is a heuristic: it separates "to …" / noun-phrase /
+gerund reliably, but recognises adjective phrases only from a word list, and produced false
+positives three times (`something`, `warm and friendly`, `fully grown and ready`). It catches gross
+form mismatches; adjective-phrase items still need an eye.

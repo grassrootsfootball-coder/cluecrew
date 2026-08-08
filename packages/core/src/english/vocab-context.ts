@@ -61,12 +61,22 @@ export interface VocabItem {
 
 /** Tier from BOTH declared variables, so the ladder is visible rather than inferred. */
 export const vocabTier = (v: Pick<VocabItem, 'headwordRarity' | 'testedSense'>): Tier => {
-  // The SENSE picks the half (annie's ruling: T1–T2 familiar, T3–T4 rare) and the RARITY picks
-  // within it. Both variables visible, and the flip is checkable: tier <= 2 iff familiar.
-  const lowRarity = v.headwordRarity <= 2;
-  if (v.testedSense === 'familiar') return (lowRarity ? 1 : 2) as Tier;
-  return (lowRarity ? 3 : 4) as Tier;
+  // FLOOR IS T2 (annie, 2026-08-08). Familiar-sense items all sit at T2; rare-sense items at T3
+  // (common headword) or T4 (rarer). The flip stays checkable — tier <= 2 iff familiar — and the
+  // GUARD is the second checkable condition: a familiar item exists only where the headword itself
+  // is within reach, i.e. vault tier <= 2. See VOCAB_GUARD_OK.
+  if (v.testedSense === 'familiar') return 2;
+  return (v.headwordRarity <= 2 ? 3 : 4) as Tier;
 };
+
+/** The guard: a card may carry a FAMILIAR-sense item only if the headword is within reach at T2. */
+export const VOCAB_GUARD_OK = (headwordRarity: Tier): boolean => headwordRarity <= 2;
+
+/** A card whose headword fails the guard: it contributes its RARE-sense item only. */
+const rareOnly = (
+  pairId: string, headword: string, headwordRarity: Tier,
+  rare: { carrier: string; key: string; trap: string; wrong: [string, string] },
+): VocabItem[] => [{ id: `${pairId}-rare`, pairId, headword, headwordRarity, testedSense: 'rare', ...rare }];
 
 const card = (
   pairId: string, headword: string, headwordRarity: Tier,
@@ -99,39 +109,51 @@ export const VOCAB_BANK: VocabItem[] = [
   ...card('vc-spell', 'spell', 2,
     { carrier: 'Can you spell your surname for me?', key: 'to say the letters in order', trap: 'to last for a period of time', wrong: ['to write very neatly', 'to repeat out loud'] },
     { carrier: 'We had a long spell of wet weather.', key: 'a period of time', trap: 'the order of letters in a word', wrong: ['a heavy rain shower', 'a change in season'] }),
-  ...card('vc-plot', 'plot', 3,
-    { carrier: 'The plot of the film confused everyone.', key: 'the events of a story in order', trap: 'a secret plan against someone', wrong: ['a list of the actors', 'a piece of background music'] },
+  ...rareOnly('vc-plot', 'plot', 3,
     { carrier: 'The rebels began to plot against the king.', key: 'to plan something secretly', trap: 'to tell the events of a story', wrong: ['to march in a line', 'to build a stone wall'] }),
-  ...card('vc-subject', 'subject', 3,
-    { carrier: 'History is her favourite subject.', key: 'an area you learn about at school', trap: 'something forced upon a person', wrong: ['a large school building', 'a friendly class teacher'] },
+  ...rareOnly('vc-subject', 'subject', 3,
     { carrier: 'They should not subject anyone to that noise.', key: 'to make someone go through something', trap: 'to teach a school topic', wrong: ['to praise loudly', 'to invite politely'] }),
-  ...card('vc-permit', 'permit', 3,
-    { carrier: 'The rules do not permit dogs in here.', key: 'to allow something to happen', trap: 'to hand over an official paper', wrong: ['to charge a small fee', 'to open the doors early'] },
+  ...rareOnly('vc-permit', 'permit', 3,
     { carrier: 'You need a permit to park on this street.', key: 'an official paper giving a right', trap: 'an act of allowing something', wrong: ['a small parking fee', 'a printed street map'] }),
-  ...card('vc-grant', 'grant', 3,
-    { carrier: 'The council will grant her request.', key: 'to let someone have what they asked for', trap: 'to pay out money for a set purpose', wrong: ['to delay a decision', 'to explain a rule'] },
+  ...rareOnly('vc-grant', 'grant', 3,
     { carrier: 'The club won a grant for new equipment.', key: 'money given for a set purpose', trap: 'an act of allowing a request', wrong: ['a yearly club fee', 'a written thank-you note'] }),
-  ...card('vc-counter', 'counter', 3,
-    { carrier: 'He put the coins on the counter.', key: 'the flat top where you are served', trap: 'an argument answering another', wrong: ['a large shopping basket', 'a printed paper receipt'] },
+  ...rareOnly('vc-counter', 'counter', 3,
     { carrier: 'She was quick to counter his argument.', key: 'to answer with a different argument', trap: 'to serve at a shop desk', wrong: ['to count very carefully', 'to agree warmly'] }),
-  ...card('vc-entrance', 'entrance', 3,
-    { carrier: 'We waited by the entrance to the hall.', key: 'the way into a place', trap: 'a hold on someone’s attention', wrong: ['a long patient queue', 'a narrow side window'] },
+  ...rareOnly('vc-entrance', 'entrance', 3,
     { carrier: 'The dancers entrance the whole audience.', key: 'to hold attention completely', trap: 'to walk in through a door', wrong: ['to teach a new step', 'to clap in time'] }),
-  ...card('vc-tramp', 'tramp', 3,
-    { carrier: 'They tramp home through the deep mud.', key: 'to walk a long way with heavy steps', trap: 'to live without a settled home', wrong: ['to run in short bursts', 'to climb a steep hill'] },
+  ...rareOnly('vc-tramp', 'tramp', 3,
     { carrier: 'An old tramp sat quietly on the bench.', key: 'a person with no settled home', trap: 'a long tiring walk', wrong: ['a park keeper', 'a market trader'] }),
-  ...card('vc-recount', 'recount', 3,
-    { carrier: 'He will recount what happened at the match.', key: 'to tell what happened step by step', trap: 'to count again to check a total', wrong: ['to argue about a result', 'to write a short note'] },
+  ...rareOnly('vc-recount', 'recount', 3,
     { carrier: 'The close election ended with a recount.', key: 'a second count to check the result', trap: 'a step-by-step telling', wrong: ['a public speech', 'a written report'] }),
-  ...card('vc-novel', 'novel', 4,
-    { carrier: 'She read the novel in two days.', key: 'a long made-up story in a book', trap: 'a new and different idea', wrong: ['a short rhyming poem', 'a written school report'] },
+  ...rareOnly('vc-novel', 'novel', 4,
     { carrier: 'The team tried a novel way of training.', key: 'new and different', trap: 'long and made-up', wrong: ['slow and careful', 'cheap and simple'] }),
-  ...card('vc-warrant', 'warrant', 4,
-    { carrier: 'The police arrived with a warrant.', key: 'an official paper allowing a search', trap: 'a good reason for a response', wrong: ['a written final warning', 'a printed parking ticket'] },
+  ...rareOnly('vc-warrant', 'warrant', 4,
     { carrier: 'Those results warrant a much closer look.', key: 'to deserve a response', trap: 'to give police written permission', wrong: ['to delay a decision', 'to repeat a test'] }),
-  ...card('vc-bait', 'bait', 4,
-    { carrier: 'He put fresh bait on the hook.', key: 'food used to catch an animal', trap: 'a remark meant to annoy', wrong: ['a length of strong line', 'a small metal weight'] },
+  ...rareOnly('vc-bait', 'bait', 4,
     { carrier: 'Do not bait him about his team.', key: 'to say things to make someone angry', trap: 'to put out food to catch an animal', wrong: ['to cheer someone up', 'to explain a rule'] }),
+  // The five remaining Mode A cards. `hollow` and `charge` clear the guard and so carry a familiar
+  // item too — worth building on their own, since the familiar half is where the shortage is.
+  ...card('vc-hollow', 'hollow', 1,
+    { carrier: 'The old tree was completely hollow inside.', key: 'empty inside', trap: 'shaped like a dip in the ground', wrong: ['rough to the touch', 'heavy to lift'] },
+    { carrier: 'Sheep sheltered in a hollow on the hillside.', key: 'a dip in the ground', trap: 'an empty space inside something', wrong: ['a low stone wall', 'a narrow winding path'] }),
+  ...card('vc-charge', 'charge', 2,
+    { carrier: 'There is a small charge for parking here.', key: 'an amount you must pay', trap: 'a sudden rush forward', wrong: ['a printed paper receipt', 'a marked parking space'] },
+    { carrier: 'The bull will charge at anything red.', key: 'to run straight at full speed', trap: 'to ask someone for payment', wrong: ['to stand very still', 'to graze quietly'] }),
+  ...rareOnly('vc-contest', 'contest', 3,
+    { carrier: "They will contest the referee's decision.", key: 'to argue that something is wrong', trap: 'to take part in a competition', wrong: ['to explain a rule clearly', 'to accept a result calmly'] }),
+  ...rareOnly('vc-desert', 'desert', 3,
+    { carrier: 'He would never desert his friends.', key: 'to leave someone you should have helped', trap: 'to travel across dry empty land', wrong: ['to argue with a friend', 'to visit someone often'] }),
+  ...rareOnly('vc-dispute', 'dispute', 3,
+    { carrier: 'She will dispute the final score.', key: 'to say openly that something is wrong', trap: 'to quarrel with someone', wrong: ['to record a result', 'to agree very quickly'] }),
+  // ROUTE (b) PROBE — three Mode B cards (annie, 2026-08-08). Mode B was rejected for BARE cards
+  // because the FAMILIAR sense is broad and has no clean distractor space. The RARE sense is narrow
+  // and does, so these carry a rare-sense item only — the same shape as a guard-failing Mode A card.
+  ...rareOnly('vc-dear', 'dear', 3,
+    { carrier: 'The trainers were far too dear for his savings.', key: 'far too expensive', trap: 'loved very much', wrong: ['too small to wear', 'made of thin cloth'] }),
+  ...rareOnly('vc-mature', 'mature', 3,
+    { carrier: 'The apples are mature and ready to pick.', key: 'fully grown and ready', trap: 'sensible and thoughtful', wrong: ['sweet to taste', 'hard to reach'] }),
+  ...rareOnly('vc-superior', 'superior', 3,
+    { carrier: 'She gave a superior smile and turned away.', key: 'proud and looking down on others', trap: 'better than another of the same kind', wrong: ['quick and nervous', 'warm and friendly'] }),
 ];
 
 // The headword is NAMED in the stem: an option-set item has no bold/markup channel, so "the word in
