@@ -12,10 +12,10 @@
 import { mkdirSync, writeFileSync, copyFileSync, readdirSync, rmSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { join, resolve } from 'node:path';
-import { prisma } from '../packages/db/src/index';
+import { prisma as defaultPrisma } from '../packages/db/src/index';
 import { GENERATORS, M } from '../packages/db/prisma/generate-content';
 import { numberSeriesItems, letterSeriesItems } from '../packages/db/prisma/seed';
-import { deliver, freshnessStamp, stampedName } from './lib/export-destination';
+import { artefactStamp, deliver, stampedName } from './lib/export-destination';
 import { esc, writingSpace } from './lib/review-pack-format';
 
 const OUT_DIR = resolve(import.meta.dirname, '../content/exports');
@@ -63,7 +63,28 @@ function stemText(stem: Record<string, unknown>): string {
   return parts.join(' | ');
 }
 
+/**
+ * The bundle's source, shared with `check-export-freshness`.
+ *
+ * STATUS: "which LIVE items the re-import would change" is a work list, and it moves whenever the
+ * generators move OR the live items do. Publishing a single reworked item invalidates the file
+ * while leaving it reading as an accurate re-import plan.
+ */
+export async function buildReimportBundleSource(prisma: typeof defaultPrisma): Promise<unknown> {
+  const nu = newItemsById();
+  const live = await prisma.item.findMany({
+    where: { status: 'LIVE', id: { in: [...nu.keys()] } },
+    select: { id: true },
+    orderBy: { id: 'asc' },
+  });
+  return live.map(({ id }) => {
+    const next = nu.get(id)!;
+    return { id, stem: next.stem, options: next.options };
+  });
+}
+
 async function main(): Promise<void> {
+  const prisma = defaultPrisma;
   const nu = newItemsById();
   const live = await prisma.item.findMany({
     where: { status: 'LIVE', id: { in: [...nu.keys()] } },
@@ -88,7 +109,7 @@ async function main(): Promise<void> {
     changes.push({ id: item.id, bank: item.questionTypeId, oldStem, oldOpts, newItem: next, stemChanged, walkScript, scriptStale });
   }
 
-  const stamp = freshnessStamp(changes.map((c) => ({ id: c.id, stem: c.newItem.stem, options: c.newItem.options })), TODAY);
+  const stamp = artefactStamp(await buildReimportBundleSource(prisma), TODAY, 'status', 'which LIVE VR items the re-import would change, and which walk scripts it strands');
   const base = stampedName(FAMILY, stamp.sourceHash, '').replace(/\.$/, '');
 
   const byBank = new Map<string, Change[]>();
@@ -162,4 +183,5 @@ const CSS = `
   .rule { border-bottom: 0.4pt solid #999; height: 7mm; }
   @media screen { body { max-width: 195mm; margin: 0 auto; padding: 10mm; } }`;
 
-void main();
+// Only when run directly — importing this for its source builder must not run the export.
+if (process.argv[1]?.endsWith('export-vr-reimport-bundle.ts')) void main();

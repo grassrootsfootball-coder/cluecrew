@@ -12,13 +12,28 @@
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { CONCEPTUAL_ENTRIES, MISCONCEPTION_EXECUTORS, mathsEntryNumber } from '@cluecrew/core';
-import { deliver, freshnessStamp, stampedName } from './lib/export-destination';
-import { prisma } from '../packages/db/src/index';
+import { artefactStamp, deliver, stampedName } from './lib/export-destination';
+import { prisma as defaultPrisma } from '../packages/db/src/index';
 
 const OUT_DIR = resolve(import.meta.dirname, '../content/exports');
 const FAMILY = 'maths-executor-coverage';
 
+/**
+ * The manifest's source, shared with `check-export-freshness`.
+ *
+ * STATUS, in annie's sense: "which derivable entries still have no executor" is a work list, and
+ * implementing one silently invalidates the file while it goes on reading as a live gap report.
+ */
+export async function buildExecutorCoverageSource(prisma: typeof defaultPrisma): Promise<unknown> {
+  return prisma.misconception.findMany({
+    where: { district: 'MATHS', status: 'ACTIVE' },
+    select: { id: true, category: true, description: true, sourcePattern: true, axis: true },
+    orderBy: { id: 'asc' },
+  });
+}
+
 async function main(): Promise<void> {
+  const prisma = defaultPrisma;
   const rows = await prisma.misconception.findMany({
     where: { district: 'MATHS', status: 'ACTIVE' },
     select: { id: true, category: true, description: true, sourcePattern: true, axis: true },
@@ -68,7 +83,7 @@ async function main(): Promise<void> {
     derivableMissingExecutor: unimplemented.map((e) => e.entry ?? e.id),
   };
 
-  const stamp = freshnessStamp(entries, new Date().toISOString());
+  const stamp = artefactStamp(await buildExecutorCoverageSource(prisma), new Date().toISOString(), 'status', 'which ACTIVE maths misconceptions have an implemented executor and which still ship authored distractors');
   mkdirSync(OUT_DIR, { recursive: true });
   const path = join(OUT_DIR, stampedName(FAMILY, stamp.sourceHash, 'json'));
   writeFileSync(path, JSON.stringify({ kind: FAMILY, ...stamp, summary, entries }, null, 2));
@@ -79,4 +94,5 @@ async function main(): Promise<void> {
   await prisma.$disconnect();
 }
 
-void main();
+// Only when run directly — importing this for its source builder must not run the export.
+if (process.argv[1]?.endsWith('export-maths-executor-coverage.ts')) void main();

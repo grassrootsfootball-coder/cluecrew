@@ -25,6 +25,8 @@ import { buildNvrHintsToRewordSource } from './export-nvr-hints-to-reword';
 import { buildProposedQueueSource } from './export-proposed-misconceptions';
 import { buildMisconceptionLibrarySource } from './export-misconception-library';
 import { buildFamilyStatusSource } from './export-family-status';
+import { buildExecutorCoverageSource } from './export-maths-executor-coverage';
+import { buildReimportBundleSource } from './export-vr-reimport-bundle';
 import { prisma } from '../packages/db/src/index';
 
 /**
@@ -44,10 +46,21 @@ const STATUS_KINDS = new Set([
   'maths-misconceptions-approved',
   'maths-executor-coverage',
   'maths-hints-to-reword',
+  // NOTE: maths-hints-to-reword is built from an external seed .md passed on argv, not from repo
+  // state, so it can never be rebuilt here. Its work is complete (all 20 hints are in the library
+  // and clean), and it has been retired from the drop rather than left reading as a live work order.
   'nvr-hints-to-reword',
   'vr-reimport-bundle',
-  'review-decisions',
 ]);
+
+/**
+ * Kinds that are FORMS, not snapshots — a blank template the reviewer fills in and sends back.
+ * A form describes nothing, so it can never be stale; it can only be SPENT. `review-decisions` sat
+ * in the status set at first, which was wrong in a way worth naming: the test is not "does this
+ * file go out of date" but "does it assert something about current state". A blank form asserts
+ * nothing.
+ */
+const FORM_KINDS = new Set(['review-decisions']);
 
 const VR_PATTERN_SPECS = [
   { questionTypeId: 'vr-04-closest-meaning', sampleSize: 20, seed: 'vr04-pattern-2026-08' },
@@ -71,9 +84,11 @@ const BUILDERS: Record<string, () => Promise<unknown>> = {
   'misconceptions-proposed-queue': () => buildProposedQueueSource(prisma),
   'misconception-library-current': () => buildMisconceptionLibrarySource(prisma),
   'family-status': () => buildFamilyStatusSource(prisma),
+  'maths-executor-coverage': () => buildExecutorCoverageSource(prisma),
+  'vr-reimport-bundle': () => buildReimportBundleSource(prisma),
 };
 
-type Verdict = 'CURRENT' | 'STALE' | 'UNSTAMPED' | 'UNKNOWN-KIND' | 'UNCHECKABLE-STATUS' | 'UNREADABLE';
+type Verdict = 'CURRENT' | 'STALE' | 'UNSTAMPED' | 'UNKNOWN-KIND' | 'UNCHECKABLE-STATUS' | 'FORM' | 'UNREADABLE';
 
 async function checkFile(path: string): Promise<{ verdict: Verdict; detail: string }> {
   let doc: { kind?: string; sourceHash?: string };
@@ -85,6 +100,7 @@ async function checkFile(path: string): Promise<{ verdict: Verdict; detail: stri
   const kind = doc.kind ?? '(none)';
   const builder = doc.kind ? BUILDERS[doc.kind] : undefined;
   if (!builder) {
+    if (FORM_KINDS.has(kind)) return { verdict: 'FORM', detail: `kind "${kind}" is a blank form, not a snapshot — it cannot go stale` };
     // A status artefact with no builder is the dangerous case, never a skip.
     return STATUS_KINDS.has(kind)
       ? { verdict: 'UNCHECKABLE-STATUS', detail: `kind "${kind}" is a STATUS snapshot with no source builder — staleness cannot be detected` }

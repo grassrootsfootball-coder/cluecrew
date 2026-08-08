@@ -83,7 +83,8 @@
     "export:nvr-hints-to-reword": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-nvr-hints-to-reword.ts",
     "import:nvr-reworded-hints": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/import-nvr-reworded-hints.ts",
     "audit:signed-depth": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/audit-signed-depth.ts",
-    "export:family-status": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-family-status.ts"
+    "export:family-status": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-family-status.ts",
+    "export:drop-manifest": "tsx scripts/export-drop-manifest.ts"
   },
   "devDependencies": {
     "@eslint/js": "^9.20.0",

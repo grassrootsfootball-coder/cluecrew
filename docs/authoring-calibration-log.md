@@ -1344,3 +1344,44 @@ signatures do not equal the generator's depth, and that is a UNITS problem, not 
 count bank sentences; an N-keyed family yields two items per sentence. Six of thirteen differ for
 exactly this reason. A figure carried in prose has no units, so nothing could ever have caught it —
 which is the general argument for measuring rather than asserting.
+
+## R28 — The handover is a step, not a bug
+*David and annie, 2026-08-08, after the tenth delivery failure. Investigated and reported by Claude.*
+
+**The last hop cannot be observed from this side, so it stops being counted as a delivery bug and
+becomes a handover step that a human confirms.**
+
+`deliver()` was built after three failures on the theory that the fault was a forgotten manual copy.
+It fixed that hop — the write is proven, by path, byte size and content hash — and left the NEXT hop
+unwatched, which is why the counter ran to ten. Every one of the ten is consistent with "written
+correctly, never collected".
+
+**What was tested, and what each is worth:**
+
+| signal | verdict |
+|---|---|
+| `atime` | Recorded, but ANONYMOUS and CONTAMINATED — reading a file to check it moves its own atime. Demonstrated: 22:59:37 → 23:25:57 from nothing but the check. It cannot distinguish a reviewer from a `grep`. |
+| Spotlight `kMDItemLastUsedDate` / `kMDItemUseCount` | Not available — the folder is not indexed. |
+| `com.apple.macl` | A real but one-bit signal: an app was granted access via a user picker. UNDATED, ANONYMOUS, and absent for anything read by a CLI. Six files in the drop carry it; **no queue or status export ever has** — consistent with pickup being a manual upload that these files have never been through. Suggestive, not proof. |
+| A sync layer | **None.** No cloud provider on the path. The drop is a plain local folder; nothing pushes from it. |
+| A consumer-side manifest | Does not exist, and by design cannot: nothing on the far side writes into the drop. |
+
+**So it is structurally outside what this repo can see.** Observing the hop would require a return
+signal, and the consumers are a human reviewer and a separate agent — neither instrumentable from
+here. No amount of care on the sending side closes it.
+
+**What was done instead — invert the check.** `pnpm export:drop-manifest` publishes every file in
+the drop with its byte size and content hash, so the READER can verify what she holds rather than
+the sender trying to prove what he sent. "Do I have the current queue?" becomes one hash comparison
+instead of a filename recalled from three messages ago. The manifest is itself subject to the hop,
+and that is the point: **if she has it she can check everything; if she has not, the handover is
+broken and we know at once rather than on the tenth attempt.**
+
+The general form, which is the same move as the freshness stamp one level out: *a guard that cannot
+see a fault directly can still make the fault answerable from the other side.*
+
+**A related invariant is already broken and should be fixed separately.** `from-cluecrew` is
+specified as outbound-only — "what this repo SENDS is never mixed with what authoring sends back" —
+yet four inbound files sit in it (`ENG-004-anne-green-gables.json`, `en-hint-redraft.json`,
+`vr-hint-redrafts.json`, `vr-hint-redrafts-corrective.json`). Not the cause of the ten failures, but
+it is the exact confusion the separate folder exists to prevent.
