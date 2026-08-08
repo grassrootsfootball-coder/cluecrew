@@ -720,22 +720,27 @@ const POSS_TAG: Record<'O' | 'F', string> = { O: 'en-apostrophe-attributive', F:
 export interface PossSentence { id: string; well: string; parts: [string, PossSite][] }
 export const possRung = (s: PossSentence): number => s.parts.filter((p) => p[1] === 'O').length;
 export const possKeyIndex = (s: PossSentence): number => s.parts.findIndex((p) => p[1] === 'R');
+// TWO well types only (annie 2026-08-08): a required site must be unambiguous AS PRESENTED, and the
+// apostrophe is stripped in the item. `Toms`/`childrens` are not words, so those readings are
+// forced; `the girls purse` is NOT (girl's / girls' / plural attributive), so the singular-
+// determiner type is dropped and its six sentences re-authored. Keys pushed to B and C, since two
+// well types plus position movement is what keeps the key spread honest.
 export const POSSESSIVE_BANK: PossSentence[] = [
-  // rung 0 — one R, zero O. All three well types; R at A and B.
+  // rung 0 — one R, zero O.
   { id: 'p0-tom', well: 'name', parts: [['Toms bike', 'R'], ['was chained', 'F'], ['to the rail', 'F']] },
-  { id: 'p0-brother', well: 'det', parts: [['My brothers coat', 'R'], ['hung on', 'F'], ['the hook', 'F']] },
   { id: 'p0-children', well: 'irreg', parts: [['The childrens shoes', 'R'], ['were left', 'F'], ['in the hall', 'F']] },
-  { id: 'p0-girl', well: 'det', parts: [['We found', 'F'], ['the girls purse', 'R'], ['on the bus', 'F']] },
-  { id: 'p0-teacher', well: 'det', parts: [['She borrowed', 'F'], ['her teachers pen', 'R'], ['that morning', 'F']] },
+  { id: 'p0-sara', well: 'name', parts: [['We found', 'F'], ['Saras gloves', 'R'], ['on the step', 'F']] },
+  { id: 'p0-mens', well: 'irreg', parts: [['The cleaner swept', 'F'], ['the hall', 'F'], ['and the mens room', 'R']] },
+  { id: 'p0-amir', well: 'name', parts: [['We waited', 'F'], ['outside', 'F'], ['for Amirs bus', 'R']] },
   // rung 1 — one O (a natural attributive).
-  { id: 'p1-dog', well: 'det', parts: [['The girls dog', 'R'], ['slept by the kitchen table', 'O'], ['all afternoon', 'F']] },
-  { id: 'p1-ball', well: 'name', parts: [['Toms ball', 'R'], ['rolled under', 'F'], ['the garden shed', 'O']] },
+  { id: 'p1-noah', well: 'name', parts: [['Noahs ball', 'R'], ['rolled under', 'F'], ['the garden shed', 'O']] },
+  { id: 'p1-priya', well: 'name', parts: [['We queued', 'F'], ['by the car park', 'O'], ['for Priyas ticket', 'R']] },
   { id: 'p1-lounge', well: 'none', parts: [['The teachers lounge', 'O'], ['had new chairs', 'F'], ['this term', 'F']] },
   { id: 'p1-gate', well: 'none', parts: [['The school gate', 'O'], ['was painted', 'F'], ['last week', 'F']] },
   // rung 2 — two O. N items carry an O so the child must DECLINE the tempting site.
-  { id: 'p2-barked', well: 'det', parts: [['The girls dog barked', 'R'], ['near the boys club', 'O'], ['by the school gate', 'O']] },
-  { id: 'p2-coat', well: 'det', parts: [['My brothers coat', 'R'], ['hung in the players entrance', 'O'], ['near the changing room', 'O']] },
-  { id: 'p2-shoes', well: 'irreg', parts: [['The childrens shoes', 'R'], ['sat by the changing room', 'O'], ['near the school gate', 'O']] },
+  { id: 'p2-womens', well: 'irreg', parts: [['The womens team', 'R'], ['trained by the changing room', 'O'], ['near the school gate', 'O']] },
+  { id: 'p2-leila', well: 'name', parts: [['The teachers lounge', 'O'], ['held Leilas bag', 'R'], ['near the school gate', 'O']] },
+  { id: 'p2-omar', well: 'name', parts: [['The bus stop', 'O'], ['stood by the changing room', 'O'], ['and Omars club', 'R']] },
   { id: 'p2-lounge', well: 'none', parts: [['The teachers lounge', 'O'], ['by the bus stop', 'O'], ['was locked', 'F']] },
 ];
 const POSSESSIVE_V2: SpagFamily = {

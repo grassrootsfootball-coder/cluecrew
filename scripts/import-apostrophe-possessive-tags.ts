@@ -27,10 +27,12 @@ const TAGS = [
   },
   {
     id: 'en-apostrophe-not-a-site',
-    description: 'Child chooses "was chained to the rail" where the answer is elsewhere, picking a part with no noun-before-noun and nothing that could belong to anyone.',
-    childHint: 'Nothing here belongs to anyone. Look for a part that shows belonging.',
-    status: 'PROPOSED' as const,
-    note: 'Structural parallel of en-comma-not-a-comma-site, added because P3 requires a tag on every distractor; annie ruled only on the O-site tag. For her confirmation.',
+    description: 'Child chooses "was chained to the rail" where the answer is elsewhere, picking a part containing no noun before a noun and nothing that could belong to anyone.',
+    // annie's rewording (2026-08-08): tell her what to LOOK FOR, not what the part isn't — she
+    // needs the same instruction on the next item. Same principle as the comma pair.
+    childHint: 'Look for one noun sitting in front of another. That is where to check.',
+    status: 'ACTIVE' as const,
+    note: 'Structural parallel of en-comma-not-a-comma-site (P3 requires a tag on every distractor). APPROVED with annie\'s reworded hint, 2026-08-08.',
   },
 ];
 

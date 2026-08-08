@@ -807,3 +807,20 @@ family to test plural possessives, so the gap is stated rather than left silent.
 **v2 note (annie):** the only frame that can test plural-possessive PLACEMENT without ambiguity asks
 *where the apostrophe goes* rather than which part needs one — "The girls coats were soaked. Which is
 correct: girl's / girls' / girls?" A different shape again; carried to v2.
+
+**A required site must be unambiguous AS PRESENTED, not as corrected (annie, 2026-08-08 — the
+general rule, and it is new).** Every trap definition in this district had been checked against the
+CORRECTED form. Possessive is the first family where removing the mark changes what the phrase can
+MEAN: `the girl's purse` is unambiguous, but the child is shown `the girls purse`, which reads as
+girl's / girls' / plural-attributive — three answers. So the singular-determiner well type FAILS
+(the determiner fixes number only while the apostrophe is present), and the R-well is **two
+constructions, not three**:
+- **proper name** — `Toms bike` can only be `Tom's`, because `Toms` is not a word;
+- **irregular plural** — `The childrens shoes` can only be `children's`, because `childrens` is not
+  a word.
+Both survive stripping precisely because the stripped form is not a word — which is why the probe
+found them first. (A rescue exists for the determiner type — make the number explicit elsewhere,
+"The girl who won the race lost her purse" — but it is long and puts the disambiguator in another
+part for the child to connect across; not worth it. Two well types plus position movement is
+cleaner.) **Apply this test in the SPEECH probe**, where removing a quotation mark changes which
+words are spoken — the same failure mode.
