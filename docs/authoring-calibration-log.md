@@ -828,9 +828,14 @@ words are spoken — the same failure mode.
 ## R17 — Terminal and speech probes: both keep the spot-form, narrowly
 *Annie's split hypothesis, probed 2026-08-08 (six sentences each). Recorded by David.*
 
-Both families are MIXED as predicted (R15), but unlike apostrophe the arguable half does not
-dominate natural sentences, so neither needs a companion reframe family: the arguable cases are
-EXCLUDED BY A BUILD RULE rather than rehoused. **The district stays at twelve families.**
+**The split hypothesis is REVISED, not partly confirmed (annie, 2026-08-08) — and this is the
+version to carry forward.** A mixed family splits only when the arguable cases are **COMMON in
+natural sentences**, not merely when they exist. Apostrophe split because noun-modifiers are
+everywhere and unavoidable; terminal and speech do not, because mark-less speech and short parallel
+splices are easy to avoid without straining the prose. **So the test is FREQUENCY, not arguability**
+— measure how often the arguable case appears in natural child-level sentences before deciding to
+split. Here the arguable cases are excluded by a build rule rather than rehoused, and **the district
+stays at twelve families.**
 
 **SPEECH — every unarguable error requires a mark ALREADY PRESENT.** This is the as-presented rule
 biting harder than in possessive: there the stripped form was ambiguous but still clearly needed a
@@ -839,8 +844,12 @@ speech and wrong only as direct — so an item with no marks carries no unarguab
 - Unarguable (all need ≥1 existing mark): **missing closing mark** (opening present); **missing
   opening mark** (closing present); **missing capital** at the start of quoted speech (both present).
 - Arguable, therefore EXCLUDED: **terminal placement at a quote boundary** (British "logical"
-  placement genuinely permits outside) — and excluded from CLEAN parts too, or a child taught
-  "inside" flags a correct part (the comma clean-part failure in miniature).
+  placement genuinely permits outside) — excluded from CLEAN parts, **and the exclusion reaches the
+  KEYED part too** (annie, 2026-08-08): if the key is a missing closing mark, the correction must
+  place the full stop on one side of it, and the WALK SCRIPT would then teach one convention as
+  though it were the only one. The child only names the part, so the item holds — but the teaching
+  does not. **SETTLED, once, like the serial comma: the platform teaches terminal punctuation INSIDE
+  the closing mark for a quoted full sentence.** Every walk script follows it.
 - Not an error either way: **single vs double marks** — safe in a clean part.
 - **BUILD RULES:** every item carries at least one existing quotation mark; no clean part places
   terminal punctuation at a quote boundary.
@@ -848,8 +857,12 @@ speech and wrong only as direct — so an item with no marks carries no unarguab
 **TERMINAL — the splice survives; SHORTNESS is what weakens it, not the semicolon.** The semicolon
 defence does not rescue a splice: a child arguing "the comma stands in for a semicolon" is still
 saying the mark must change, and the spot-form asks only WHICH part is wrong, not what the fix is.
-But **short parallel clauses do** rescue it — `It was cold, we stayed in.` is licensed by the
-tricolon convention, while `The rain fell all afternoon, we stayed inside the hall.` is not.
+**Short clauses are excluded, but NOT on tricolon grounds (annie's correction, 2026-08-08).**
+`It was cold, we stayed in.` is two clauses in a CAUSAL relation, which the tricolon does not cover,
+so strictly it IS a splice. It is excluded because **a child cannot tell the difference**: she has
+met "I came, I saw, I conquered", and asking her to judge parallelism is a rhetorical judgement that
+is not on the curriculum. Same build rule, sounder ground — and it stops someone later arguing that
+a three-clause splice is acceptable.
 - Unarguable: **comma splice on long, non-parallel clauses**; **run-on** (no mark); **fragment**
   after a subordinator.
 - Clean parts are safe: correct terminal punctuation (full stop, or semicolon — Year 6) is never

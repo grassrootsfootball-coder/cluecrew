@@ -23,7 +23,8 @@ describe('SPaG families on the maths engine', () => {
       // the rest 6.
       // Possessive 4/tier too: the R-well is three narrow well types (R16).
       const n = f.id === 'spag-punct-apostrophe-contraction' ? 3
-        : ['spag-spell-double-consonant-boundary', 'spag-punct-comma-needs', 'spag-punct-apostrophe-possessive'].includes(f.id) ? 4 : 6;
+        : ['spag-spell-double-consonant-boundary', 'spag-punct-comma-needs', 'spag-punct-apostrophe-possessive',
+           'spag-punct-terminal-boundary', 'spag-punct-speech'].includes(f.id) ? 4 : 6;
       for (const t of familyTiers(f)) {
         const items = generateSpagSample(f, t, n, 1);
         expect(items).toHaveLength(n);
