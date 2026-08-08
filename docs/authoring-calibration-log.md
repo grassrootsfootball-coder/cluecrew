@@ -492,6 +492,18 @@ The surviving shape is the REFRAME: **"which part NEEDS a comma"** — clean par
 be places a comma is not REQUIRED (abundant), same skill, natural sentences, a real multi-rung
 bank. Decision pending; the other three punctuation families hit this wall far less hard.
 
+**The general lesson (annie, 2026-08-08 — state it this way, it is the reusable part).** "No comma
+is acceptable here" is not a thin property, it is a nearly-EMPTY one *at phrase boundaries*, and a
+four-part item splits at phrase boundaries by construction. Five of six candidates failed at a
+JOIN, not inside a part — meaning no amount of careful part-authoring could have saved them: **the
+spot-the-mistake question type and the four-part split are incompatible whenever the tested property
+lives at phrase boundaries.** Any future spot-the-mistake family built on a phrase-boundary property
+will hit the same wall for the same reason; check the joins first. **RULING: comma is rebuilt as
+"which part needs a comma" (annie, 2026-08-08).** Consequence for the district: punctuation now
+holds TWO question types (comma = needs-a-comma; apostrophe/terminal/speech = spot-the-mistake, if
+they survive their probes), so family names and stems must make the two obvious to the child — she
+must not have to work out which task she has been handed.
+
 **Pool sizing carried on the spelling families (annie, 2026-08-08).** An honest small bank beats a
 padded large one: **double letters ships at 4/rung** (16), its key pool restricted to child-used
 words though its trap pool is the full ~30; **silent letters aims at 6/rung** on the 36-word list
