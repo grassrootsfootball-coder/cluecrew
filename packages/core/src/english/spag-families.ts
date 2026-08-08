@@ -450,7 +450,7 @@ function errorSpotFamily(cfg: EsConfig): SpagFamily {
         opts.push({ value: 'No mistake', isKey: false, misconceptionId: 'en-n-option-avoidance' });
         nearMiss = esNonErrorNearMiss(s, cfg.nearMiss);
       }
-      return { stem: cfg.stem, options: opts, params: { segments: 4, nearMissParts: nearMiss }, dedupKey: s.id, diversityKey: s.klass };
+      return { stem: cfg.stem, options: opts, params: { segments: 4, nearMissParts: nearMiss }, dedupKey: s.id, diversityKey: s.klass, errorTokenKey: wantN ? undefined : s.klass };
     },
   };
 }
@@ -458,54 +458,49 @@ function errorSpotFamily(cfg: EsConfig): SpagFamily {
 // The 0/1/2/3 near-miss ladder every error-spot family shares (T4 ceiling; T5 out of scope).
 const esNm = (tier: Tier): number => ({ 1: 0, 2: 1, 3: 2, 4: 3, 5: 3 } as const)[tier];
 
-// DOUBLE-CONSONANT BOUNDARY — proving R13 generalises to a second franchise with its own
-// lookup. Near-miss = a part carrying a correctly-DOUBLED word a shaky child might flag.
-const NEAR_DOUBLE = new Set<string>([
-  'dinner', 'summer', 'running', 'swimming', 'better', 'letter', 'happy', 'sunny', 'funny',
-  'hobby', 'rabbit', 'message', 'address', 'suddenly', 'different', 'difficult', 'appear',
-  'arrive', 'collect', 'comment', 'connect', 'correct', 'apple', 'little', 'bottle', 'kettle',
-  'middle', 'puddle', 'ribbon', 'ladder', 'hammer', 'mirror', 'arrow', 'borrow', 'narrow',
-  'pillow', 'yellow', 'follow', 'traffic', 'bigger', 'hotter', 'hidden', 'sudden', 'common',
-  'lesson', 'tennis', 'carrot', 'butter', 'cotton', 'kitten', 'berry', 'cherry', 'sorry',
-]);
-const partHasDouble = (part: string): boolean =>
-  part.toLowerCase().split(/\s+/).some((w) => NEAR_DOUBLE.has(w.replace(/[^a-z]/g, '')));
-const DOUBLE_BANK: EsSentence[] = [
-  // 0 near-miss.
-  { id: 'd0-disappointed', klass: 'disappointed', parts: ['Jonah was dissapointed', 'with his own score', 'yet he clapped', 'for the winner'], errorIndex: 0, wrong: 'Jonah was dissapointed', intended: 0 },
-  { id: 'd0-beginning', klass: 'beginning', parts: ['At the begining', 'of the new term', 'the class chose', 'a fresh topic'], errorIndex: 0, wrong: 'At the begining', intended: 0 },
-  { id: 'd0-embarrass', klass: 'embarrassing', parts: ['She found the mix-up', 'quite embarassing', 'but soon', 'laughed about it'], errorIndex: 1, wrong: 'quite embarassing', intended: 0 },
-  { id: 'd0-recommend', klass: 'recommended', parts: ['The teacher recomended', 'a longer novel', 'about a brave', 'young explorer'], errorIndex: 0, wrong: 'The teacher recomended', intended: 0 },
-  { id: 'd0-necessary', klass: 'necessary', parts: ['It was not necesary', 'to bring a pen', 'as the school', 'gave one out'], errorIndex: 0, wrong: 'It was not necesary', intended: 0 },
-  { id: 'd0-tomorrow', klass: 'tomorrow', parts: ['We leave tomorow', 'for the coast', 'and hope', 'the sky stays clear'], errorIndex: 0, wrong: 'We leave tomorow', intended: 0 },
-  // 1 near-miss.
-  { id: 'd1-success', klass: 'success', parts: ['The play was a sucess', 'so the happy cast', 'took a bow', 'on the stage'], errorIndex: 0, wrong: 'The play was a sucess', intended: 1 },
-  { id: 'd1-professional', klass: 'professional', parts: ['A profesional coach', 'ran the summer camp', 'for the whole', 'of the week'], errorIndex: 0, wrong: 'A profesional coach', intended: 1 },
-  { id: 'd1-committed', klass: 'committed', parts: ['She was comitted', 'to her hobby', 'and practised', 'each afternoon'], errorIndex: 0, wrong: 'She was comitted', intended: 1 },
-  { id: 'd1-address', klass: 'address', parts: ['He wrote the adress', 'on a yellow card', 'and posted it', 'that same day'], errorIndex: 0, wrong: 'He wrote the adress', intended: 1 },
-  { id: 'd1-different', klass: 'different', parts: ['The twins chose', 'diferent hobbies', 'and rarely', 'agreed on little'], errorIndex: 1, wrong: 'diferent hobbies', intended: 1 },
-  { id: 'd1-occasion', klass: 'occasion', parts: ['It was a happy', 'occassion for all', 'and the hall', 'was packed'], errorIndex: 1, wrong: 'occassion for all', intended: 1 },
+// DOUBLE-CONSONANT BOUNDARY. Near-miss is the PROPERTY, not a word list (annie, 2026-08-08):
+// a part is a near-miss iff a word in it contains a doubled consonant — what the family trains a
+// child to notice. The error PART holds the CORRECT spelling (so an N-keyed item is answerable);
+// `wrong` is the misspelling injected only when this part is the key. Errored tokens are distinct
+// across the bank (rule 7); rung-3 keeps the traps in short parts with a natural shape (rule 8).
+export const partHasDouble = (part: string): boolean =>
+  part.toLowerCase().split(/\s+/).some((w) => /([bcdfghjklmnpqrstvwxz])\1/.test(w.replace(/[^a-z]/g, '')));
+export const DOUBLE_BANK: EsSentence[] = [
+  // 0 near-miss — error part correct; the other three carry NO doubled consonant. 24 DISTINCT
+  // errored tokens across the bank (rule 7). Every error is a genuine doubling slip.
+  { id: 'd0-disappointed', klass: 'disappointed', parts: ['Jonah was disappointed', 'with his low score', 'yet he smiled', 'at the result'], errorIndex: 0, wrong: 'Jonah was dissapointed', intended: 0 },
+  { id: 'd0-beginning', klass: 'beginning', parts: ['At the beginning', 'of the new term', 'we chose', 'a fresh topic'], errorIndex: 0, wrong: 'At the begining', intended: 0 },
+  { id: 'd0-recommended', klass: 'recommended', parts: ['The teacher recommended', 'a long novel', 'about a brave', 'young hero'], errorIndex: 0, wrong: 'The teacher recomended', intended: 0 },
+  { id: 'd0-necessary', klass: 'necessary', parts: ['A pen was necessary', 'for the exam', 'so she', 'took two'], errorIndex: 0, wrong: 'A pen was necesary', intended: 0 },
+  { id: 'd0-tomorrow', klass: 'tomorrow', parts: ['We leave tomorrow', 'for the coast', 'and hope', 'the sky clears'], errorIndex: 0, wrong: 'We leave tomorow', intended: 0 },
+  { id: 'd0-professional', klass: 'professional', parts: ['A professional guide', 'met us', 'at the', 'main gate'], errorIndex: 0, wrong: 'A profesional guide', intended: 0 },
+  // 1 near-miss — exactly one other part carries a doubled consonant.
+  { id: 'd1-different', klass: 'different', parts: ['The twins chose different', 'woolly coats', 'and left', 'the shop'], errorIndex: 0, wrong: 'The twins chose diferent', intended: 1 },
+  { id: 'd1-address', klass: 'address', parts: ['He wrote the address', 'on a card', 'by the', 'summer fair'], errorIndex: 0, wrong: 'He wrote the adress', intended: 1 },
+  { id: 'd1-occasion', klass: 'occasion', parts: ['It was an occasion', 'of great joy', 'for the', 'happy town'], errorIndex: 0, wrong: 'It was an ocasion', intended: 1 },
+  { id: 'd1-committed', klass: 'committed', parts: ['She stayed committed', 'to the rally', 'through the', 'cold winter'], errorIndex: 0, wrong: 'She stayed comitted', intended: 1 },
+  { id: 'd1-appointment', klass: 'appointment', parts: ['My appointment fell', 'on a sunny', 'day this', 'cold week'], errorIndex: 0, wrong: 'My apointment fell', intended: 1 },
+  { id: 'd1-arrange', klass: 'arrange', parts: ['They will arrange', 'a jolly party', 'next', 'spring term'], errorIndex: 0, wrong: 'They will arange', intended: 1 },
   // 2 near-miss.
-  { id: 'd2-accommodate', klass: 'accommodate', parts: ['The little inn', 'could not acommodate', 'the summer', 'crowds at all'], errorIndex: 1, wrong: 'could not acommodate', intended: 2 },
-  { id: 'd2-beginning', klass: 'beginning', parts: ['The summer dinner', 'was a happy begining', 'to a sunny', 'and busy week'], errorIndex: 1, wrong: 'was a happy begining', intended: 2 },
-  { id: 'd2-disappear', klass: 'disappear', parts: ['The rabbit seemed', 'to disapear', 'behind the yellow', 'garden shed'], errorIndex: 1, wrong: 'to disapear', intended: 2 },
-  { id: 'd2-success', klass: 'success', parts: ['Her funny comment', 'was a sucess', 'and the common', 'mood lifted'], errorIndex: 1, wrong: 'was a sucess', intended: 2 },
-  { id: 'd2-embarrass', klass: 'embarrassing', parts: ['The sudden noise', 'was embarassing', 'in the middle', 'of the class'], errorIndex: 1, wrong: 'was embarassing', intended: 2 },
-  { id: 'd2-recommend', klass: 'recommended', parts: ['A better guide', 'recomended the arrow', 'trail past', 'the narrow gate'], errorIndex: 1, wrong: 'recomended the arrow', intended: 2 },
-  // 3 near-miss.
-  { id: 'd3-success', klass: 'success', parts: ['The summer dinner', 'was a sucess', 'with a happy', 'common table'], errorIndex: 1, wrong: 'was a sucess', intended: 3 },
-  { id: 'd3-different', klass: 'different', parts: ['The little rabbit', 'chose a diferent', 'yellow apple', 'in the middle'], errorIndex: 1, wrong: 'chose a diferent', intended: 3 },
-  { id: 'd3-beginning', klass: 'beginning', parts: ['A sunny begining', 'to the summer', 'brought better', 'traffic and hobby'], errorIndex: 0, wrong: 'A sunny begining', intended: 3 },
-  { id: 'd3-tomorrow', klass: 'tomorrow', parts: ['The dinner is tomorow', 'in the common', 'hall with butter', 'and yellow cherry'], errorIndex: 0, wrong: 'The dinner is tomorow', intended: 3 },
-  { id: 'd3-address', klass: 'address', parts: ['The adress on', 'the yellow letter', 'named a little', 'summer cottage'], errorIndex: 0, wrong: 'The adress on', intended: 3 },
-  { id: 'd3-occasion', klass: 'occasion', parts: ['A happy occassion', 'brought butter', 'and cherry', 'to every dinner'], errorIndex: 0, wrong: 'A happy occassion', intended: 3 },
+  { id: 'd2-accommodate', klass: 'accommodate', parts: ['The inn can accommodate', 'the summer', 'rally crowd', 'with ease'], errorIndex: 0, wrong: 'The inn can acommodate', intended: 2 },
+  { id: 'd2-success', klass: 'success', parts: ['The play was a success', 'with a funny', 'yellow set', 'and calm music'], errorIndex: 0, wrong: 'The play was a sucess', intended: 2 },
+  { id: 'd2-disappear', klass: 'disappear', parts: ['The rabbit will disappear', 'behind the yellow shed', 'near the', 'summer villa'], errorIndex: 0, wrong: 'The rabbit will disapear', intended: 2 },
+  { id: 'd2-possess', klass: 'possess', parts: ['They possess', 'a summer cottage', 'and a', 'little boat'], errorIndex: 0, wrong: 'They posess', intended: 2 },
+  { id: 'd2-aggressive', klass: 'aggressive', parts: ['The aggressive dog', 'ran across', 'the muddy', 'open field'], errorIndex: 0, wrong: 'The agressive dog', intended: 2 },
+  { id: 'd2-opposite', klass: 'opposite', parts: ['The opposite team', 'sat in', 'the sunny', 'yellow stand'], errorIndex: 0, wrong: 'The oposite team', intended: 2 },
+  // 3 near-miss — a normal sentence where three of the four parts happen to carry a double.
+  { id: 'd3-difficulty', klass: 'difficulty', parts: ['The difficulty', 'appeared suddenly', 'in the yellow', 'summer haze'], errorIndex: 0, wrong: 'The dificulty', intended: 3 },
+  { id: 'd3-embarrassing', klass: 'embarrassing', parts: ['The embarrassing muddle', 'happened in', 'the sunny', 'football match'], errorIndex: 0, wrong: 'The embarassing muddle', intended: 3 },
+  { id: 'd3-assessment', klass: 'assessment', parts: ['The assessment', 'happened across', 'the muddy', 'grassy hill'], errorIndex: 0, wrong: 'The asessment', intended: 3 },
+  { id: 'd3-swimming', klass: 'swimming', parts: ['Swimming happens', 'every summer', 'in the yellow', 'paddling pool'], errorIndex: 0, wrong: 'Swiming happens', intended: 3 },
+  { id: 'd3-parallel', klass: 'parallel', parts: ['The parallel lines', 'ran across', 'the yellow', 'summer banner'], errorIndex: 0, wrong: 'The paralel lines', intended: 3 },
+  { id: 'd3-suddenly', klass: 'suddenly', parts: ['Suddenly the rabbit', 'ran off', 'the narrow', 'grassy hill'], errorIndex: 0, wrong: 'Sudenly the rabbit', intended: 3 },
 ];
 const DOUBLE_CONSONANT_V2 = errorSpotFamily({
   id: 'spag-spell-double-consonant-boundary', name: 'Double letters', subtype: 'spelling',
   franchise: 'en-double-consonant-boundary', stem: SPELL_STEM, nm: esNm, tiers: [1, 2, 3, 4],
   bank: DOUBLE_BANK, nearMiss: partHasDouble,
 });
-export { DOUBLE_BANK, partHasDouble };
 
 // UNSTRESSED SUFFIX VOWEL — near-miss = a part with a correctly-spelled word ending in the
 // ambiguous unstressed suffix a child mis-vowels (-ent/-ant, -ence/-ance, -able/-ible).

@@ -54,6 +54,9 @@ describe('SPaG families on the maths engine', () => {
       const buckets = bank.reduce<Record<number, number>>((m, s) => ({ ...m, [s.intended]: (m[s.intended] ?? 0) + 1 }), {});
       expect(buckets).toEqual({ 0: 6, 1: 6, 2: 6, 3: 6 });
     }
+    // Rule 7: double letters — the errored token is distinct across the whole family bank, so
+    // the same misspelling never keys twice (homophones/suffix/silent get this in their rework).
+    expect(new Set(DOUBLE_BANK.map((s) => s.klass)).size).toBe(DOUBLE_BANK.length);
   });
 
   it('homophones (rebuilt): split tags, item-level ladder, no N at T1, no repeated sentence, pair-share', () => {
