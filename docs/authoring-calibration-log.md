@@ -426,6 +426,17 @@ dozen:
 The test for any proposed trap: *would a taught child hesitate here?* If not, it is not a trap,
 however much it superficially resembles the error pattern.
 
+**Where no generative rule exists, use a REVIEWED LIST — and call it a list** (annie, 2026-08-08;
+now the second family to need it). Two of the eleven have no rule: **homophones** ("is a homophone"
+has no cheaper test than membership) and **silent letters** (frequency and position both fail to
+separate `knight` from `right`; the true criterion — do children omit it — is a fact about
+children, not the word). Dressing a list as a rule is exactly what produced the double-letters
+regex. So the definition SAYS "list", the list is authored to the trap principle and reviewed (not
+derived, ~25–40 words), and it is checked by membership. This is the discipline applied honestly,
+not a retreat from it — and naming it will stop the temptation to "derive" comma sites from
+something that only looks like a parse. (Double-letters (c), the inert-double set, is also a
+reviewed list; (a)/(b) remain generative.)
+
 **PROCESS (annie, 2026-08-08): ratify the trap DEFINITION before the bank, not the items after.**
 Every round of this district caught a mechanism deriving from something narrower than the property
 it claimed — a hand list, then a regex, then the uncertain-doubling class — each found by reading
