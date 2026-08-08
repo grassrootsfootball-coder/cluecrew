@@ -1282,3 +1282,27 @@ read path (`export-misconception-library.ts`), the proposed queue (`export-propo
 the bank counts, the generated sample. Prose may accompany the value; it may not stand in for it.
 And a proposal against a value is written as a TRANSFORM against the quoted text, because a
 transform survives a stale copy where a rewrite does not.
+
+## R26 — The record beats the transcript
+*Annie, 2026-08-08, ratifying `vr-form-without-meaning`. Recorded by David.*
+
+**A reviewer's file is the transcript of what she WROTE. The database is the record of what was
+APPROVED. Where the two differ, the record wins.** This is the transform ruling one level up: apply
+the transform, do not reimpose the text.
+
+The case: `vr-form-without-meaning` was stored in a parenthesised form — "Read the whole sentence
+(or picture the word written in a book)." — because the reviewer had instructed that the transform,
+not her text, be applied to the DB's own wording. The character-for-character diff at ratification
+therefore found the one entry that differed from her file, which is exactly what that diff is for.
+Ratified as stored.
+
+**Consequence:** a diff against a reviewer's file is a QUESTION, not a fault. It asks whether the
+stored text is right, and the answer may be that the file is the stale side. Report it and let the
+reviewer rule; do not "restore" the file's wording on the assumption it is authoritative.
+
+**A readability note carried, not acted on** (recorded on the entry itself, so it travels with the
+record rather than living only here): brackets are not neutral in child-facing copy, and a suspended
+clause is slightly harder for a nine-year-old than the comma version. It passes the gate and stands.
+It is a candidate for any future pass on hint READABILITY — which is a different job from the
+COMPLIANCE the gate performs, and worth naming as such: the gate can tell you a hint is permitted,
+never that it is easy to read.
