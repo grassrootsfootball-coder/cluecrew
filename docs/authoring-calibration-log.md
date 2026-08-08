@@ -390,6 +390,34 @@ applied correctly.
    pair.
 6. **Tier reach is honest.** SPaG ceilings at T4 (corpus); no family reaches T5. A family
    reaches T1 only where the error can be made genuinely obvious (near-miss 0).
+7. **The errored token is capped like the class** (annie, 2026-08-08). Dedup is by sentence and
+   diversity by pair/class, so nothing stopped the same MISSPELLING keying twice — `iland` keyed
+   silent-letters T1 and T4, `maid` keyed homophones T1 and T4. A child who learns `iland` is
+   wrong at T1 is handed T4's answer, and the tier claim is hollow for her. Rule: the errored
+   token (the corrected key word) is DISTINCT across a family's bank — used as the key in at most
+   one sentence — enforced by a CI test and a sample-time cap (`errorTokenKey`). This changes the
+   signed homophones bank, so it is regenerated and re-signed (the fingerprint moves; the
+   signature voids by design — better than the rule applying to ten families and not the eleventh).
+8. **Every sentence is correct in EVERY dimension the district tests, not only the one under
+   test** (annie, 2026-08-08). A silent-letters item read "hid a silent ghost a knight and a
+   lamb" — an unpunctuated list of three, on a sheet whose own punctuation families are about to
+   teach that comma. A spelling item that punctuates badly teaches against a sibling family. So a
+   clean part carries no error of ANY franchise; a checked list-of-three takes its commas; and
+   (rung-3 naturalness) the traps sit in one- or two-word parts with a normal sentence shape
+   around them, never adjective-stacked or list-padded to force three traps into one noun phrase.
+
+**Subtype guidance for the two held families (annie, 2026-08-08), recorded before they are built
+so the banks are authored to it, not retrofitted:**
+- **Punctuation.** Near-miss is a SITE lookup, not a word lookup: a part is a near-miss if it
+  contains a boundary where a mark could plausibly go (before a coordinating conjunction, after a
+  fronted adverbial, at a subject–verb join) — derivable from sentence shape, verified the same
+  way. And "clean parts correctly punctuated" is not strict enough, because comma placement has
+  legitimate variation: a clean part must contain **no optional punctuation site at all** (no
+  fronted adverbial, no serial-comma list, no parenthetical aside), or a well-taught child who
+  flags it is marked wrong.
+- **Cloze.** R13's spot-rules do not apply (there is no error to spot). The ladder analogue is
+  how many options grammatically PARSE in the slot: rung 0 only the key parses; by rung 3 all four
+  parse and only one is right on sense or register — the same derive-and-check discipline.
 
 Homophones was rebuilt to all of this and SIGNED (annie, 2026-08-08, T1–T4) with a bank-depth
 qualification carried on the signature (24 verified sentences, 6/rung → a tier emits six
