@@ -1251,3 +1251,34 @@ end — so a contradiction does not announce itself, it just quietly produces th
 text would now mislead someone reading only that entry, edit it. An annotation saying "these two
 disagree" is not enough — it leaves the wrong text in place for whoever reads the table and not the
 note. (This entry supersedes such an annotation, which was added to R23 and has been removed.)
+
+## R25 — When a value carries a signature, send the VALUE, not an account of it
+*Annie, 2026-08-08. Supersedes the "quote the whole field" reporting note. Recorded by David.*
+
+**Depths from the bank. Hints from the field. Ranges from the generator.** Where a reviewer's
+signature will rest on a value, that value is sent as it stands — not summarised, not truncated, not
+recalled, not quoted in part.
+
+**Her reasoning: a summary is a door into her judgement and there is no guard on it.** It is the same
+fault as the seven ungated import scripts, one level up. Those wrote unchecked content into the
+database; a summary writes unchecked content into a signature. The gate on one is code; the gate on
+the other is this rule.
+
+**The instances, all from this build:**
+1. **Depths signed from a presented sample rather than the built bank.** Word class was 6 not 4,
+   connectives 6 not 4, and tense T2 was 4 where 8 had been signed for — caught only because the
+   banks were counted before the signatures were recorded.
+2. **Tier rules describing generators that did not exist.** Sample sheets stated number ranges the
+   generator never read, so the sheet described an intention rather than the family.
+3. **`likelierKnown` values populated by exposure rather than meaning.** Four were inverted, and the
+   field feeds the vocabulary flip — so a summary judgement about a word became a wrong item.
+4. **Four figures supplied from memory**, each costing a round trip: 21 passages against 19, "12
+   occurrences" against 6, a 13-field drift reported one-directional when it ran both ways, and a
+   hint quoted as its failing sentence rather than its whole text — which came back as a redraft
+   missing a leading sentence the DB had all along.
+
+**The practical form.** A reviewer asking for a value gets the export, not the prose: the library
+read path (`export-misconception-library.ts`), the proposed queue (`export-proposed-misconceptions.ts`),
+the bank counts, the generated sample. Prose may accompany the value; it may not stand in for it.
+And a proposal against a value is written as a TRANSFORM against the quoted text, because a
+transform survives a stale copy where a rewrite does not.

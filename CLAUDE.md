@@ -76,11 +76,12 @@ The build is governed by documents, and the documents win arguments.
   `scripts/export-misconception-library.ts`, which delivers every entry's
   current `childHint` verbatim plus a gate verdict; re-run it rather than
   reusing a download.
-- **QUOTE THE WHOLE FIELD WHEN REPORTING IT.** One of those three mismatches was
-  mine: a sweep report quoted only the FAILING SENTENCE of a hint, and the
-  reviewer reasonably read it as the hint, so the redraft came back missing a
-  leading sentence. When reporting a failure, give the failing fragment AND the
-  whole field it came from — a partial quote becomes someone's source text.
+- **WHEN A VALUE CARRIES A SIGNATURE, SEND THE VALUE, NOT AN ACCOUNT OF IT**
+  (annie's rule, 2026-08-08 — R25; supersedes the earlier "quote the whole
+  field" note). Depths from the bank, hints from the field, ranges from the
+  generator. A summary is a door into the reviewer's judgement with no guard on
+  it — the same fault as the ungated import scripts, one level up. Send the
+  export, not the prose; prose may accompany a value, never stand in for it.
 - Content decisions (items, chapters, misconceptions) go through the CMS
   review pipeline; nothing skips the reviewer.
 - A script that applies reviewer decisions RE-EXPORTS the affected artefact as
