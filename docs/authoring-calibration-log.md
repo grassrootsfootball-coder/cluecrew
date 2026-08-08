@@ -503,13 +503,28 @@ the 24th sentence typed like the first, the SETTLED CASES (extend as new ones ar
   key's clothes.
 - **Optional (O) — a trap:** trailing prepositional phrase; trailing adverb; the **serial-comma
   slot** (pre-final-conjunction in a list — British: optional, a trap, NEVER the key); a short
-  fronted adverbial.
+  fronted adverbial; **a coordinator joining two INDEPENDENT clauses** (British: optional — "the
+  rain stopped, and we left" is acceptable but not required, so it is O, never the key; annie
+  2026-08-08, the clause form of the serial-comma settlement).
 - **Forbidden (F):** between a verb and its object; inside a noun phrase; between an auxiliary and
   its main verb; the subject–verb join. Forbidden means forbidden, not merely unusual — "you
   wouldn't but could" is O, not F.
 Key = the R part (or N if none). rung = number of O parts. An N item carries no REQUIRED site and
-**no paired construction** (parentheticals / non-restrictive relatives excluded — both are taught
-as things you DO with commas, so they read as invitations, not "already right").
+**no paired construction** (parentheticals / non-restrictive relatives) AND **no sequence of three
+or more parallel phrases** (a run like "down the hill past the shops into the square" reads as a
+list and invites the list rule — annie 2026-08-08, the same concern as parentheticals).
+
+**No part may end inside a noun phrase — a SPLIT rule, not a typing one (annie 2026-08-08).** A
+part must be a constituent; a chunk like "near the busy" (ending inside "the busy market") cannot
+be evaluated for a comma at its own boundary because that boundary is not a site. **And the deeper
+finding: a four-part split fights short natural syntax** — a ~12-word sentence has perhaps three
+genuine boundaries, and comma splits must land on syntactic joins (spelling got away with mid-word
+readability; comma cannot). **RULING: comma items are THREE parts + N, not four** (annie 2026-08-08).
+Consequence: with three parts a keyed item is 1 R + up to 1 O + 1 F for the main verb, so keyed
+tops at rung 1 unless the key is a LIST (verb inside the list part), which reaches rung 2; rung 3 is
+unreachable. **Comma therefore serves T1–T3, not T4** — an honest ladder outcome of the shape, like
+the collapsed maths families. (Spelling families keep four parts: their task is word-level, so
+mid-phrase splits are readable and acceptable there — tightened only if a reviewer asks.)
 
 **The general lesson (annie, 2026-08-08 — state it this way, it is the reusable part).** "No comma
 is acceptable here" is not a thin property, it is a nearly-EMPTY one *at phrase boundaries*, and a
