@@ -1090,3 +1090,35 @@ half while authoring: `to prop up firmly` (lean), `to make necessary` (warrant),
 someone` (bait), `still hard and green` (mature). The test is the vr-04 one: *if you cannot write the
 sentence saying why the key beats it, the option comes out*. **Expect this band to be narrowest on the
 Mode B cards**, whose familiar sense is broad by definition — the trap writes itself, the fillers do not.
+
+## R21 — The comprehension pilot (ENG-004): gate reversal, scoping, and the T4 ruling
+*Annie, 2026-08-08, on the twelve-item Anne of Green Gables cluster. Recorded by David.*
+
+**THE ONE-DIFFERENT-MISCONCEPTION-PER-OPTION GATE IS REVERSED.** Two distractors MAY share a tag
+where both genuinely instantiate it — precedent: the lineup-counting split she reversed, and NPV-01's
+two #61 distractors. Six of thirty-six tags in the pilot went OUTSIDE their own scope because the
+honest tag was already taken, **so the gate caused the fault it was meant to prevent**. Replaced by
+the check that matters: *every tag satisfies its own library entry's scope test, including
+qualifiers.* The gate lived in Cowork's `verify-eng004.py:77`, not in the platform — the platform
+never had it. **Mechanisable only in part:** tag-exists-and-is-ACTIVE and a per-distractor
+execution statement are checkable; whether the distractor actually falls inside the entry's scope is
+not, because entries carry prose descriptions, not structured qualifiers. Same division as the
+plausibility finding — the machine checks presence, the reviewer checks fit.
+
+**MOTIVE vs PLAUSIBLE, scoped on reason-versus-fact.** `en-motive-invention` covers a REASON,
+INTENTION or WISH the text does not give; `en-plausible-not-stated` covers a FACT or EVENT it does
+not state. Applied: AGG-06 option D ("wants Marilla to drive the horse home") is a wish →
+motive-invention, now permitted alongside option C under the reversed gate.
+
+**AGG-02 REBUILDS, it does not narrow.** The window is [6,7]; line 7 carries "expectation" (line 6
+"tense rigidity"), giving in-window support to the opinion distractor — and the window CANNOT be
+narrowed because the quoted phrase "her attitude and expression" is itself on line 7, so citing less
+loses the quotation. The distractor was replaced. **Her convention, stated symmetrically: disposal
+evidence sits INSIDE the cited window, AND no in-window text supports a distractor.**
+
+**T4 BLUEPRINT RULING (David, 2026-08-08).** English T4 is **spelling, vocabulary, and roughly thirty
+comprehension items** — the blueprint is set against that, not against a 25% comprehension share it
+cannot reach. **The yield finding:** T4 hooks are NOT rare — 12 of 15 extracts carry at least one (a
+double description, a say/do gap, an unreliable observation; 8 strong, 4 moderate, 3 weak). But a
+say/do gap supports **two or three questions, not six**, so fifteen extracts yield ~30 T4 items
+against the ~90 a 25% share would need. **The constraint is hook YIELD, not hook scarcity.**
