@@ -615,32 +615,32 @@ export const commaRung = (s: CommaSentence): number => s.parts.filter((p) => p[1
 export const commaKeyIndex = (s: CommaSentence): number => s.parts.findIndex((p) => p[1] === 'R');
 const commaNm = (tier: Tier): number => tier - 1; // T1→0, T2→1, T3→2
 export const COMMA_BANK: CommaSentence[] = [
-  // rung 0 — one R (fronted CLAUSE) or N, zero O.
+  // RUNG 0 — KEYED-ONLY (fronted clause, R + F + F). N cannot live here: an N item needs an O site,
+  // and an N item with one O is a rung-1 item (annie 2026-08-08).
   { id: 'c0-when', open: 'when', parts: [['When the fire alarm rang', 'R'], ['the class left', 'F'], ['the quiet room', 'F']] },
   { id: 'c0-because', open: 'because', parts: [['Because the bus was late', 'R'], ['we missed', 'F'], ['the early train', 'F']] },
   { id: 'c0-although', open: 'although', parts: [['Although he was tired', 'R'], ['he finished', 'F'], ['the whole race', 'F']] },
   { id: 'c0-once', open: 'once', parts: [['Once the film ended', 'R'], ['we cleared', 'F'], ['the small room', 'F']] },
   { id: 'c0-while', open: 'while', parts: [['While we waited', 'R'], ['she read', 'F'], ['a long book', 'F']] },
-  { id: 'c0-n1', open: 'none', parts: [['The old clock', 'F'], ['filled', 'F'], ['the narrow hallway', 'F']] },
-  { id: 'c0-n2', open: 'none', parts: [['The heavy box', 'F'], ['crushed', 'F'], ['the paper cup', 'F']] },
-  { id: 'c0-n3', open: 'none', parts: [['A kind man', 'F'], ['opened', 'F'], ['the front gate', 'F']] },
-  // rung 1 — one O.
-  { id: 'c1-if', open: 'if', parts: [['If it rains', 'R'], ['we will stay', 'F'], ['in the hall', 'O']] },
-  { id: 'c1-when', open: 'when', parts: [['When the game ended', 'R'], ['the crowd cheered', 'F'], ['for the winners', 'O']] },
+  { id: 'c0-if', open: 'if', parts: [['If the rain stops', 'R'], ['we will eat', 'F'], ['our packed lunch', 'F']] },
+  // RUNG 1 — one O. Keyed = fronted clause + trailing PP (key A). N = a TRAILING subordinate clause
+  // (the O — where a child over-applies the fronted-clause rule), so the same subordinators appear
+  // off the front and the opening word stops predicting the key.
   { id: 'c1-before', open: 'before', parts: [['Before the storm came', 'R'], ['we ran', 'F'], ['to the house', 'O']] },
-  { id: 'c1-since', open: 'since', parts: [['Since nobody replied', 'R'], ['she waited', 'F'], ['by the door', 'O']] },
-  { id: 'c1-as', open: 'as', parts: [['As the sun set', 'R'], ['we walked', 'F'], ['along the beach', 'O']] },
-  { id: 'c1-n1', open: 'none', parts: [['The children', 'F'], ['played games', 'F'], ['in the park', 'O']] },
-  { id: 'c1-n2', open: 'none', parts: [['The dog', 'F'], ['slept quietly', 'F'], ['on the mat', 'O']] },
-  { id: 'c1-n3', open: 'none', parts: [['The man', 'F'], ['read his book', 'F'], ['on the train', 'O']] },
-  // rung 2 — two O. Keyed only via LIST (verb inside the list part); the rest N.
+  { id: 'c1-when', open: 'when', parts: [['When the bell rang', 'R'], ['she hurried', 'F'], ['into the hall', 'O']] },
+  { id: 'c1-since', open: 'since', parts: [['Since the shop shut', 'R'], ['we walked', 'F'], ['down the road', 'O']] },
+  { id: 'c1-nt1', open: 'none', parts: [['We cleared', 'F'], ['the small room', 'F'], ['once the film ended', 'O']] },
+  { id: 'c1-nt2', open: 'none', parts: [['She read', 'F'], ['a long book', 'F'], ['while we waited', 'O']] },
+  { id: 'c1-nt3', open: 'none', parts: [['He finished', 'F'], ['the whole race', 'F'], ['although he was tired', 'O']] },
+  { id: 'c1-np1', open: 'none', parts: [['The children', 'F'], ['played games', 'F'], ['in the park', 'O']] },
+  // RUNG 2 — two O. Keyed only via LIST (verb inside the list part); the rest N.
   { id: 'c2-list1', open: 'list', parts: [['We packed apples', 'R'], ['pears and plums', 'O'], ['for the trip', 'O']] },
   { id: 'c2-list2', open: 'list', parts: [['For the fair', 'O'], ['we baked cakes', 'R'], ['buns and tarts', 'O']] },
   { id: 'c2-list3', open: 'list', parts: [['On Friday', 'O'], ['we bought bread', 'R'], ['milk and eggs', 'O']] },
   { id: 'c2-list4', open: 'list', parts: [['She grew beans', 'R'], ['peas and corn', 'O'], ['in the garden', 'O']] },
   { id: 'c2-n1', open: 'none', parts: [['The bus stopped', 'F'], ['at the corner', 'O'], ['near the market', 'O']] },
   { id: 'c2-n2', open: 'none', parts: [['The plane flew', 'F'], ['over the hills', 'O'], ['past the clouds', 'O']] },
-  { id: 'c2-n3', open: 'phrase', parts: [['After the match', 'O'], ['we ate lunch', 'F'], ['by the river', 'O']] },
+  { id: 'c2-nt1', open: 'none', parts: [['We ate our lunch', 'F'], ['by the river', 'O'], ['before the game', 'O']] },
   { id: 'c2-n4', open: 'none', parts: [['The river flowed', 'F'], ['under the bridge', 'O'], ['into the lake', 'O']] },
 ];
 const COMMA_NEEDS_V2: SpagFamily = {

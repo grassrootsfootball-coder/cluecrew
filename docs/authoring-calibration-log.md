@@ -503,7 +503,15 @@ the 24th sentence typed like the first, the SETTLED CASES (extend as new ones ar
   without a verb (`After the match`, `For the fair`, `In the morning`) is **O, not R** (annie
   2026-08-08 — the distinction is the verb, and it is subtle enough to state explicitly). Also R:
   a list's internal commas (between items 1–2, 2–3). Nothing "strongly preferred" — that is a trap
-  in a key's clothes.
+  in a key's clothes. A **TRAILING** subordinate clause (`we cleared the room once the film ended`)
+  is **O, not R** — a comma before it is acceptable but not required, and it is exactly where a
+  child over-applies the fronted-clause rule. Using each subordinator both fronted (R, key A) and
+  trailing (O) is what stops "opens with a subordinator → answer A" being a shortcut, and it
+  teaches the real Year-5 rule (fronted clause takes a comma, trailing one does not).
+- **Rung 0 is KEYED-ONLY (annie 2026-08-08).** An N item needs at least one O site or the child is
+  asked nothing (a plain S-V-O with no comma anywhere is hollow); but an N item with one O is a
+  rung-1 item. So rung 0 carries only keyed (fronted-clause) items — N items live at rung 1+, most
+  naturally as trailing-subordinate-clause sentences.
 - **Optional (O) — a trap:** trailing prepositional phrase; trailing adverb; the **serial-comma
   slot** (pre-final-conjunction in a list — British: optional, a trap, NEVER the key); a short
   fronted adverbial; **a coordinator joining two INDEPENDENT clauses** (British: optional — "the
