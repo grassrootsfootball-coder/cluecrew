@@ -14,11 +14,13 @@ describe('SPaG families on the maths engine', () => {
     expect(spagLadderGaps(FAMILIES)).toEqual([]);
   });
 
-  it('every served tier generates 6 distinct, gated items', () => {
+  it('every served tier generates its honest per-tier count of distinct, gated items', () => {
     for (const f of FAMILIES) {
+      // Double letters ships 4/rung by ratified sizing (child-usable key pool); the rest 6.
+      const n = f.id === 'spag-spell-double-consonant-boundary' ? 4 : 6;
       for (const t of familyTiers(f)) {
-        const items = generateSpagSample(f, t, 6, 1);
-        expect(items).toHaveLength(6);
+        const items = generateSpagSample(f, t, n, 1);
+        expect(items).toHaveLength(n);
         for (const item of items) {
           // exactly one key; every wrong option carries a misconception (P3)
           expect(item.options.filter((o) => o.isKey)).toHaveLength(1);
@@ -45,18 +47,17 @@ describe('SPaG families on the maths engine', () => {
     expect(buckets).toEqual({ 0: 6, 1: 6, 2: 6, 3: 6 }); // enough at each rung to sample cleanly
   });
 
-  it('spelling banks (R13 via the shared factory): near-miss VERIFIED against each own lookup', () => {
-    const banks: Array<[typeof DOUBLE_BANK, (p: string) => boolean]> = [
-      [DOUBLE_BANK, partHasDouble], [SUFFIX_BANK, partHasSuffix], [SILENT_BANK, partHasSilent],
+  it('spelling banks (R13 via the shared factory): near-miss VERIFIED, keys distinct (rule 7)', () => {
+    const banks: Array<[typeof DOUBLE_BANK, (p: string) => boolean, number]> = [
+      [SUFFIX_BANK, partHasSuffix, 6], [SILENT_BANK, partHasSilent, 6], [DOUBLE_BANK, partHasDouble, 4],
     ];
-    for (const [bank, lookup] of banks) {
-      for (const s of bank) expect(esNonErrorNearMiss(s, lookup)).toBe(s.intended);
+    for (const [bank, lookup, perRung] of banks) {
+      for (const s of bank) expect(esNonErrorNearMiss(s, lookup)).toBe(s.intended); // derived == declared
       const buckets = bank.reduce<Record<number, number>>((m, s) => ({ ...m, [s.intended]: (m[s.intended] ?? 0) + 1 }), {});
-      expect(buckets).toEqual({ 0: 6, 1: 6, 2: 6, 3: 6 });
+      expect(buckets).toEqual({ 0: perRung, 1: perRung, 2: perRung, 3: perRung });
+      // rule 7 — the errored token is distinct across the whole family bank
+      expect(new Set(bank.map((s) => s.klass)).size).toBe(bank.length);
     }
-    // Rule 7: double letters — the errored token is distinct across the whole family bank, so
-    // the same misspelling never keys twice (homophones/suffix/silent get this in their rework).
-    expect(new Set(DOUBLE_BANK.map((s) => s.klass)).size).toBe(DOUBLE_BANK.length);
   });
 
   it('homophones (rebuilt): split tags, item-level ladder, no N at T1, no repeated sentence, pair-share', () => {
