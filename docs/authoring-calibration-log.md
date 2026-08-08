@@ -406,6 +406,26 @@ applied correctly.
    (rung-3 naturalness) the traps sit in one- or two-word parts with a normal sentence shape
    around them, never adjective-stacked or list-padded to force three traps into one noun phrase.
 
+**THE TRAP PRINCIPLE (annie, 2026-08-08 — the general form of the list-edge ruling).** A part is
+a near-miss ONLY where the child has been *taught to hesitate*. This decides every family's
+near-miss lookup, and it is why a lookup is a definable CLASS, not a regex and not a hand-picked
+dozen:
+- **Homophones** — the standard KS2 pairs (ruled above); `thyme` and weak-forms are out because a
+  child is not taught to hesitate there.
+- **Double letters** — NOT "any doubled consonant" (`/(.)\1/` catches `happens`, `summer`,
+  `grassy`, which pose no decision). The class is *uncertain* doubling: a prefix/suffix boundary
+  or an unstressed syllable where single and double both look plausible — `recommend`, `disappoint`,
+  `embarrass`, `necessary`, `accommodate`, `beginning`, `travelling`. The regex was over-inclusive
+  and it showed: it made an N-keyed key-part double as a trap (`Swiming happens`) and over-dense a
+  rung-3 item (`appeared`). **Fix folded into the suffix/silent pass** so all three families share
+  one trap definition, not two.
+- **Suffix vowel** — already the right shape: `-ant` vs `-ent` is uncertain *by definition*.
+- **Silent letters** — already right: a silent letter either is or isn't there; no judgement, so
+  a comprehensive class of silent-letter words is the property.
+
+The test for any proposed trap: *would a taught child hesitate here?* If not, it is not a trap,
+however much it superficially resembles the error pattern.
+
 **Subtype guidance for the two held families (annie, 2026-08-08), recorded before they are built
 so the banks are authored to it, not retrofitted:**
 - **Punctuation.** Near-miss is a SITE lookup, not a word lookup: a part is a near-miss if it
