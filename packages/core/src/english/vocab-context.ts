@@ -42,11 +42,11 @@ export interface VocabItem {
 export const VOCAB_BANK: VocabItem[] = [
   // T1
   { id: 'vc-bark', headword: 'bark', tier: 1, carrier: 'She pulled a strip of bark from the old oak tree.', key: 'the rough covering of a tree', trap: 'a short loud sound', wrong: ['a thin green leaf', 'a deep underground root'] },
-  { id: 'vc-fair', headword: 'fair', tier: 1, carrier: 'The fair comes to our town every summer.', key: 'an event with rides and stalls', trap: 'treating everyone the same way', wrong: ['a weekly food market', 'a school sports day'] },
+  { id: 'vc-fair', headword: 'fair', tier: 1, carrier: 'The fair comes to our town every summer.', key: 'an event with rides and stalls', trap: 'a way of treating people equally', wrong: ['a weekly food market', 'a school sports day'] },
   // T2
   { id: 'vc-march', headword: 'march', tier: 2, carrier: 'Thousands joined the march through the city.', key: 'an organised walk to show a belief', trap: 'firm even steps in time', wrong: ['a loud brass band', 'a long city street'] },
   { id: 'vc-spring', headword: 'spring', tier: 2, carrier: 'The cat will spring onto the high wall.', key: 'to jump suddenly', trap: 'to arrive after winter', wrong: ['to sleep in the sun', 'to wash carefully'] },
-  { id: 'vc-lean', headword: 'lean', tier: 2, carrier: 'The greyhound looked lean beside the other dogs.', key: 'thin, with little fat', trap: 'resting at an angle', wrong: ['fast over short distances', 'gentle with children'] },
+  { id: 'vc-lean', headword: 'lean', tier: 2, carrier: 'The greyhound looked lean beside the other dogs.', key: 'thin, with little fat', trap: 'tilted to one side', wrong: ['fast over short distances', 'gentle with children'] },
   { id: 'vc-bolt', headword: 'bolt', tier: 2, carrier: 'The horse will bolt if the gate bangs shut.', key: 'to run off suddenly', trap: 'to slide a bar across a door', wrong: ['to stand very still', 'to walk in slow circles'] },
   { id: 'vc-spell', headword: 'spell', tier: 2, carrier: 'We had a long spell of wet weather.', key: 'a period of time', trap: 'the order of letters in a word', wrong: ['a heavy rain shower', 'a change in season'] },
   // T3
@@ -57,11 +57,11 @@ export const VOCAB_BANK: VocabItem[] = [
   { id: 'vc-counter', headword: 'counter', tier: 3, carrier: 'She was quick to counter his argument.', key: 'to answer with a different argument', trap: 'to serve at a shop desk', wrong: ['to count very carefully', 'to agree warmly'] },
   { id: 'vc-entrance', headword: 'entrance', tier: 3, carrier: 'The dancers entrance the whole audience.', key: 'to hold attention completely', trap: 'to walk in through a door', wrong: ['to teach a new step', 'to clap in time'] },
   { id: 'vc-tramp', headword: 'tramp', tier: 3, carrier: 'An old tramp sat quietly on the bench.', key: 'a person with no settled home', trap: 'a long tiring walk', wrong: ['a park keeper', 'a market trader'] },
-  { id: 'vc-recount', headword: 'recount', tier: 3, carrier: 'The close election ended with a recount.', key: 'adding up again to check', trap: 'a step-by-step telling', wrong: ['a public speech', 'a written report'] },
+  { id: 'vc-recount', headword: 'recount', tier: 3, carrier: 'The close election ended with a recount.', key: 'a second count to check the result', trap: 'a step-by-step telling', wrong: ['a public speech', 'a written report'] },
   // T4
-  { id: 'vc-novel', headword: 'novel', tier: 4, carrier: 'The team tried a novel way of training.', key: 'new and different', trap: 'printed as a long story', wrong: ['slow and careful', 'cheap and simple'] },
+  { id: 'vc-novel', headword: 'novel', tier: 4, carrier: 'The team tried a novel way of training.', key: 'new and different', trap: 'long and made-up', wrong: ['slow and careful', 'cheap and simple'] },
   { id: 'vc-warrant', headword: 'warrant', tier: 4, carrier: 'Those results warrant a much closer look.', key: 'to deserve a response', trap: 'to give police written permission', wrong: ['to delay a decision', 'to repeat a test'] },
-  { id: 'vc-bait', headword: 'bait', tier: 4, carrier: 'Do not bait him about his team.', key: 'to say things to make someone angry', trap: 'food used to catch an animal', wrong: ['to cheer someone up', 'to explain a rule'] },
+  { id: 'vc-bait', headword: 'bait', tier: 4, carrier: 'Do not bait him about his team.', key: 'to say things to make someone angry', trap: 'to put out food to catch an animal', wrong: ['to cheer someone up', 'to explain a rule'] },
 ];
 
 // The headword is NAMED in the stem: there is no bold/markup channel in an option-set item, so
