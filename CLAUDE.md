@@ -60,6 +60,10 @@ The build is governed by documents, and the documents win arguments.
   held. Drift is rarely one-directional: check FIELD BY FIELD, and carry back
   only what a gate forced. A gate failure is the only thing that overrides
   Cowork's authoring, and the export must say which fields it changed.
+  **Compare JSON fields order-insensitively.** Postgres JSONB does not preserve
+  object key order, so a raw `JSON.stringify` diff reports permanent false drift
+  on any structured field (`quotes`, options). Sort keys before comparing, or a
+  synced batch reads as still-drifted and someone re-imports it forever.
 - Content decisions (items, chapters, misconceptions) go through the CMS
   review pipeline; nothing skips the reviewer.
 - A script that applies reviewer decisions RE-EXPORTS the affected artefact as
