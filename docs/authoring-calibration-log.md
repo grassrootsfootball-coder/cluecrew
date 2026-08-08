@@ -1445,3 +1445,45 @@ rather than assumed, because "build-time only" is exactly the belief that stops 
 The general point, worth more than the instance: **a reviewer's stated reason for a limit is a
 prediction about what lies beyond it, and it can be tested.** This is the only case in the project
 where that comparison was available, and the prediction was right.
+
+## R31 — Every structural parameter is a promise about the emitted item
+*Annie, 2026-08-09. Applied and swept. Her wording throughout.*
+
+**A parameter is computed at emission and asserted by the generator — never the bank row it drew
+from.** The sample sheet is what a reviewer signs; without an assertion the sheet could say one
+thing and the generator do another, and only the sheet was ever visible in review.
+
+**Her test, for any parameter anyone adds later:** *could you recompute this from the emitted item
+alone?* **Yes** → it is a promise, assert it. **No** → it is not a parameter about the item; put it
+in family metadata, off the sheet.
+
+| parameter | ruling | how it is recomputed |
+|---|---|---|
+| `nearMissParts` | asserted | parts of THIS item holding a trap, by the family's own lookup, over the options that are neither the key nor N. One expression covers both shapes: error-keyed drops the error part; N-keyed keeps all four, so the slot that would have held the error counts if its correct form holds a trap — which is exactly why an N item draws at rung minus one and still honours the rung. |
+| `segments` | asserted | the parts the sentence splits into. **Not option count** — comma and possessive are three-part with an N option, so four segments would be wrong and four options right. |
+| `options` | asserted | option count, declared separately now the two have provably parted company. |
+| tier ceiling | asserted | at emission, not at rule-string printing. A family that cannot honestly reach T4 must not emit T4. |
+| number ranges | asserted | already generator-consumed; listed so the set is complete rather than remembered. |
+| trap / site type | asserted **as a count** | comma's optional sites and possessive's well types are reviewed per sentence, but the reviewed type RIDES ON THE EMITTED OPTION as its misconception tag, so the count is recomputable from the item. This is why they pass her test and `optionsThatParse` does not. |
+| `optionsThatParse` | **metadata** | how many options produce a grammatical sentence is a reviewed linguistic judgement, and nothing on an emitted cloze item carries it. Moved off the sheet by her own rule. |
+
+**THE RETROSPECTIVE SWEEP she asked for, over the signed families and not only the unsigned:
+13 of 13 families, 21,920 items emitted, ZERO disagreements.** She expected it to be small; it is
+empty. Ranges were already enforced, the trap lookups are property-based and CI-verified against
+their banks, and the N mechanism was correct. No sheet said anything untrue when she signed it.
+
+**Three consequences she needs to rule on:**
+
+1. **`spag-cloze-tense` loses its ladder.** It distinguished T2 from T4 ONLY by `optionsThatParse`,
+   so moving that off the sheet leaves it with no declared structural ladder. The fix her own
+   reasoning implies: give each cloze distractor a parses flag, exactly as comma and possessive
+   carry their site type. The count then becomes recomputable AND a real ladder dimension, and
+   parses-but-wrong becomes a diagnosis rather than a bank annotation.
+2. **All 13 signatures now read MOVED.** Adding `segments` and `options` changed the generator
+   surface the fingerprint covers. Nothing about the items changed and no tier rule or range moved,
+   but the sheet now shows more than it did. Whether that needs re-signing or is a non-substantive
+   amendment is hers, not ours — the guard exists to force the question rather than answer it.
+3. **`spag-punct-speech` emits five options, not four.** Her ruling says "speech has four with no N,
+   the spot families five". Measured: speech emits a "No mistake" option like every other spot
+   family; it is simply never the key (`nRate: 0`). So the child sees five. Reported rather than
+   encoded either way.

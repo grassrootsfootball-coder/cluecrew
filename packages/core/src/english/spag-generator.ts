@@ -75,6 +75,21 @@ export interface SpagFamily {
   structuralParams: (tier: Tier) => Record<string, string | number>;
   numberRanges: (tier: Tier) => Record<string, [number, number]>;
   draft: (tier: Tier, r: () => number) => SpagItemDraft;
+  /**
+   * Declarations that are TRUE OF THE FAMILY but not recomputable from any single emitted item
+   * (annie, R31). Her test sends them here rather than onto the sample sheet, where a reviewer
+   * would read them as a promise the generator was keeping. They are printed as family metadata,
+   * clearly separated from the asserted parameters.
+   */
+  metadata?: (tier: Tier) => Record<string, string | number>;
+  /**
+   * Recompute the declared structural parameters FROM THE EMITTED ITEM (annie, R31).
+   *
+   * Every key `structuralParams` declares must be recomputable here from the item alone — no bank
+   * row, no rung, no draft-time state. `assembleSpagItem` asserts the two agree, so the sheet a
+   * reviewer signs and the thing the generator emits cannot diverge.
+   */
+  recomputeParams?: (item: GenSpagItem) => Record<string, string | number>;
 }
 
 export interface GenSpagItem {
@@ -139,7 +154,32 @@ export function assembleSpagItem(family: SpagFamily, tier: Tier, r: () => number
   const blocking = failures.filter(isBlocking);
   if (blocking.length) throw new SpagGateError(`${family.id} T${tier}: ${blocking.map((f) => `${f.rule}: ${f.detail}`).join('; ')}`);
 
-  return { familyId: family.id, tier, stem: d.stem, key, options: d.options, params: d.params, dedupKey: d.dedupKey, diversityKey: d.diversityKey, errorTokenKey: d.errorTokenKey, pairId: d.pairId };
+  const item: GenSpagItem = { familyId: family.id, tier, stem: d.stem, key, options: d.options, params: d.params, dedupKey: d.dedupKey, diversityKey: d.diversityKey, errorTokenKey: d.errorTokenKey, pairId: d.pairId };
+
+  // EVERY STRUCTURAL PARAMETER IS A PROMISE ABOUT THE EMITTED ITEM (annie's ruling, R31).
+  //
+  // Her test, to apply to any parameter anyone adds later: *could you recompute this from the
+  // emitted item alone?* Yes → it is a promise about the item, so assert it. No → it is not a
+  // parameter about the item at all; it belongs in family metadata, off the sample sheet.
+  //
+  // So a family that declares parameters must also say how to RECOMPUTE them from what it emitted,
+  // and the two must agree. The declaration is what a reviewer signs; without this the sheet could
+  // say one thing and the generator do another, and only the sheet was ever visible in review.
+  // The bank row's rung is not the answer to any of these questions — the emitted item is.
+  if (family.recomputeParams) {
+    const declared = family.structuralParams(tier);
+    const actual = family.recomputeParams(item);
+    for (const [k, v] of Object.entries(declared)) {
+      if (!(k in actual)) {
+        throw new SpagGateError(`${family.id} T${tier}: declares "${k}" but cannot recompute it from the emitted item — it is family metadata, not an item parameter`);
+      }
+      if (actual[k] !== v) {
+        throw new SpagGateError(`${family.id} T${tier}: declared ${k}=${String(v)} but the emitted item has ${k}=${String(actual[k])}`);
+      }
+    }
+  }
+
+  return item;
 }
 
 /** No single error CLASS (diversityKey) may exceed this share of a sample — so a family samples

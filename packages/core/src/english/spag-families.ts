@@ -19,6 +19,9 @@
 import { randPick, type Tier } from '../maths/generator';
 import type { SpagFamily, SpagItemDraft, SpagOption } from './spag-generator';
 
+/** The N option's exact wording. Named once so the R31 recomputation and the drafts cannot drift. */
+const SPOT_N_OPTION = 'No mistake';
+
 // ---------------------------------------------------------------------------------------
 // Shared helpers
 // ---------------------------------------------------------------------------------------
@@ -145,7 +148,18 @@ const HOMOPHONES_V2: SpagFamily = {
   subtype: 'spelling',
   franchise: 'en-homophone-by-sound',
   tierRule: (t) => (([1, 2, 3, 4] as Tier[]).includes(t) ? `Homophones — one sentence in four parts, spot the wrong-sound spelling; ${homophoneNm(t)} of the correct parts is a near-miss trap${homophoneNm(t) === 1 ? '' : 's'}.` : ''),
-  structuralParams: (t) => ({ nearMissParts: homophoneNm(t) }),
+  structuralParams: (t) => ({ nearMissParts: homophoneNm(t), segments: 4, options: 5 }),
+  // R31 — recomputed from the emitted item. Same single expression as the shared factory: the
+  // options that are neither the key nor N are the parts still in play, and an N-keyed item keeps
+  // all four because its key is "No mistake", which is how rung-minus-one still honours the rung.
+  recomputeParams: (item) => {
+    const parts = item.options.filter((o) => o.value !== SPOT_N_OPTION);
+    return {
+      nearMissParts: parts.filter((o) => !o.isKey && partHasHomophone(String(o.value))).length,
+      segments: parts.length,
+      options: item.options.length,
+    };
+  },
   numberRanges: (t) => ({ letters: [3, 7], segments: [4, 4], nearMissParts: [homophoneNm(t), homophoneNm(t)] }),
   draft: (tier, r): SpagItemDraft => {
     const rung = homophoneNm(tier);
@@ -204,8 +218,23 @@ function errorSpotFamily(cfg: EsConfig): SpagFamily {
     subtype: cfg.subtype,
     franchise: cfg.franchise,
     tierRule: (t) => (cfg.tiers.includes(t) ? `${cfg.name} — one sentence in four parts, spot the slip; ${cfg.nm(t)} of the correct parts is a near-miss trap${cfg.nm(t) === 1 ? '' : 's'}.` : ''),
-    structuralParams: (t) => ({ nearMissParts: cfg.nm(t) }),
+    structuralParams: (t) => ({ nearMissParts: cfg.nm(t), segments: 4, options: 5 }),
     numberRanges: (t) => ({ segments: [4, 4], nearMissParts: [cfg.nm(t), cfg.nm(t)] }),
+    // R31 — recomputed from the emitted item, never from the bank row's rung.
+    //
+    // `nearMissParts` counts the parts of THIS item that hold a trap, by the family's own lookup,
+    // over the options that are neither the key nor the N option. That one expression covers both
+    // item shapes, which is what makes the rung-minus-one rule enforceable rather than assumed:
+    //   · error-keyed — the key IS the error part, so it drops out and the three remaining parts
+    //     carry the rung's traps;
+    //   · N-keyed — the key is "No mistake", so all four parts remain, and the slot that would
+    //     have held the error counts if its correct form holds a trap. That is exactly why an
+    //     N item is drawn at rung minus one and still honours the tier's rung.
+    recomputeParams: (item) => {
+      const parts = item.options.filter((o) => o.value !== SPOT_N_OPTION);
+      const trapParts = parts.filter((o) => !o.isKey && cfg.nearMiss(String(o.value)));
+      return { nearMissParts: trapParts.length, segments: parts.length, options: item.options.length };
+    },
     draft: (tier, r): SpagItemDraft => {
       const rung = cfg.nm(tier);
       const wantN = rung >= 1 && r() < nRate;
@@ -461,7 +490,19 @@ const COMMA_NEEDS_V2: SpagFamily = {
   subtype: 'punctuation',
   franchise: 'en-comma-subject-verb-split',
   tierRule: (t) => (([1, 2, 3] as Tier[]).includes(t) ? `Commas — three parts; which part must have a comma? ${commaNm(t)} of the other parts is a place a comma may sit but need not.` : ''),
-  structuralParams: (t) => ({ optionalParts: commaNm(t) }),
+  structuralParams: (t) => ({ optionalParts: commaNm(t), segments: 3, options: 4 }),
+  // R31 — the SITE TYPE is reviewed per sentence, but it travels with the emitted option as its
+  // misconception tag, so the COUNT is recomputable from the item alone: an optional site is the
+  // one tagged over-applied. Three parts and four options, not four and four — the reframe families
+  // are three-part with an N option, which is where segments and option count part company.
+  recomputeParams: (item) => {
+    const parts = item.options.filter((o) => o.value !== SPOT_N_OPTION);
+    return {
+      optionalParts: parts.filter((o) => !o.isKey && o.misconceptionId === COMMA_TAG.O).length,
+      segments: parts.length,
+      options: item.options.length,
+    };
+  },
   numberRanges: (t) => ({ segments: [3, 3], optionalParts: [commaNm(t), commaNm(t)] }),
   draft: (tier, r): SpagItemDraft => {
     const rung = commaNm(tier);
@@ -520,7 +561,17 @@ const POSSESSIVE_V2: SpagFamily = {
   subtype: 'punctuation',
   franchise: 'en-apostrophe-possession',
   tierRule: (t) => (([1, 2, 3] as Tier[]).includes(t) ? `Apostrophes — three parts; which part must have one? ${t - 1} of the other parts is a noun describing a noun, where none is needed.` : ''),
-  structuralParams: (t) => ({ attributiveParts: t - 1 }),
+  structuralParams: (t) => ({ attributiveParts: t - 1, segments: 3, options: 4 }),
+  // R31 — as comma: the well type is reviewed per sentence and rides on the option's tag, so the
+  // count of attributive parts is recomputable from the emitted item.
+  recomputeParams: (item) => {
+    const parts = item.options.filter((o) => o.value !== SPOT_N_OPTION);
+    return {
+      attributiveParts: parts.filter((o) => !o.isKey && o.misconceptionId === POSS_TAG.O).length,
+      segments: parts.length,
+      options: item.options.length,
+    };
+  },
   numberRanges: (t) => ({ segments: [3, 3], attributiveParts: [t - 1, t - 1] }),
   draft: (tier, r): SpagItemDraft => {
     const s = randPick(r, POSSESSIVE_BANK.filter((x) => possRung(x) === tier - 1));
@@ -556,7 +607,19 @@ function clozeFamilyV2(cfg: { id: string; name: string; franchise: string; tiers
   return {
     id: cfg.id, name: cfg.name, subtype: 'cloze', franchise: cfg.franchise,
     tierRule: (t) => (cfg.tiers.includes(t) ? cfg.rule(t) : ''),
-    structuralParams: (t) => ({ optionsThatParse: cfg.bank.filter((s) => cfg.tierOf(s) === t)[0]?.parses ?? 0 }),
+    // R31 — `options` is a promise about the item and is asserted. `optionsThatParse` is NOT:
+    // "how many of the four options produce a grammatical sentence" is a reviewed linguistic
+    // judgement, and nothing on the emitted item carries it, so it cannot be recomputed from the
+    // item alone. By her own test it is family metadata, and it moves off the sheet.
+    //
+    // FOR HER RULING: it could become assertable. Comma and possessive pass the test only because
+    // their reviewed site type RIDES ON THE EMITTED OPTION as its misconception tag. Give each
+    // cloze distractor the same treatment — a flag for whether it parses — and the count becomes
+    // recomputable, and the parses/doesn't-parse split becomes a real diagnostic distinction
+    // rather than a bank-row annotation.
+    structuralParams: () => ({ options: 4 }),
+    metadata: (t) => ({ optionsThatParse: cfg.bank.filter((s) => cfg.tierOf(s) === t)[0]?.parses ?? 0 }),
+    recomputeParams: (item) => ({ options: item.options.length }),
     numberRanges: () => ({ options: [4, 4] }),
     draft: (tier, r): SpagItemDraft => {
       const s = randPick(r, cfg.bank.filter((x) => cfg.tierOf(x) === tier));

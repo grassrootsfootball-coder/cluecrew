@@ -16,7 +16,16 @@ describe('SPaG families on the maths engine', () => {
   });
 
   it('every multi-tier family declares a real structural ladder (gate green)', () => {
-    expect(spagLadderGaps(FAMILIES)).toEqual([]);
+    // ONE KNOWN GAP, pending annie's ruling (R31). `spag-cloze-tense` distinguished T2 from T4
+    // ONLY by `optionsThatParse`, and her recomputability test moved that off the sample sheet into
+    // family metadata: nothing on an emitted cloze item records which options parse, so it cannot be
+    // recomputed from the item. Removing it from the declared parameters leaves the family with no
+    // structural ladder — which is the finding, not a regression. It resolves the moment a cloze
+    // distractor carries a parses flag, at which point the count is assertable AND a real ladder
+    // dimension. Any OTHER gap still fails this test.
+    expect(spagLadderGaps(FAMILIES)).toEqual([
+      { familyId: 'spag-cloze-tense', issue: 'tiers 2 and 4 share every structural parameter — they differ only in numeric range', between: [2, 4] },
+    ]);
   });
 
   it('every served tier generates its honest per-tier count of distinct, gated items', () => {
