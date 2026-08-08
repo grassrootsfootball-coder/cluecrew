@@ -761,82 +761,83 @@ const POSSESSIVE_V2: SpagFamily = {
 };
 
 // ---------------------------------------------------------------------------------------
-// TERMINAL AND BOUNDARY — spot-form survives (R17). Unarguable errors: a comma SPLICE on long,
-// non-parallel clauses; a RUN-ON (no mark at all); a FRAGMENT after a subordinator. Short parallel
-// splices are excluded — not on tricolon grounds (the relation is causal, so it is strictly a
-// splice) but because a child cannot judge parallelism, which is not on the curriculum.
-// TRAP = a part holding a CORRECTLY punctuated clause join (a semicolon, or a comma + coordinator)
-// — a boundary a child may wrongly flag. Clean parts are safe here: correct terminal punctuation is
-// never arguable-wrong, so unlike comma there is no optional-site problem.
+// TERMINAL AND BOUNDARY — spot-form, TWO error types (annie, 2026-08-08). RUN-ONS DROPPED: the
+// missing full stop sits at a part JOIN, so nothing is wrong inside either part and a child naming
+// the second part has reasoned identically to one naming the first — a defensible wrong answer with
+// no location, unfixable by rewording. Kept: the SPLICE (long non-parallel clauses — short parallel
+// ones excluded because a child cannot judge parallelism) and the FRAGMENT after a subordinator.
+// Both put a visible mark INSIDE a part.
+// TRAP = a part holding a REQUIRED comma — after a fronted subordinate clause, or internal to a
+// list. NOT a semicolon and NOT comma-plus-coordinator: those are punctuation CHOICES, and the
+// comma family's clean-part rule applies here too — a clean part may hold a punctuation RULE, never
+// a choice, or a child taught "no comma before and" is right to flag it.
+// Consequence: rung 3 needs three required-comma parts in one item, which does not occur without
+// strain, so terminal serves T1–T3.
 // ---------------------------------------------------------------------------------------
 const PUNCT_STEM_SPOT = 'Read the sentence. One part has a punctuation mistake. Which part is it? If every part is right, choose N.';
-export const partHasClauseJoin = (part: string): boolean => /;|,\s+(and|but|so|or|yet)\b/i.test(part);
+export const partHasRequiredComma = (part: string): boolean => /,/.test(part);
 export const TERMINAL_BANK: EsSentence[] = [
-  // 0 traps — error part CORRECTED; no other part holds a clause join.
+  // 0 traps — error part CORRECTED; no other part carries a comma at all.
   { id: 'tm0-splice', klass: 'rain-splice', parts: ['The rain fell all afternoon.', 'We stayed inside the hall', 'with our board games', 'until the bus came'], errorIndex: 0, wrong: 'The rain fell all afternoon,', intended: 0 },
-  { id: 'tm0-runon', klass: 'bell-runon', parts: ['The bell rang loudly.', 'Everyone rushed outside', 'to the playing field', 'in bright sunshine'], errorIndex: 0, wrong: 'The bell rang loudly', intended: 0 },
   { id: 'tm0-frag', klass: 'sun-fragment', parts: ['Although the sun was warm,', 'we wore our coats', 'to the park', 'that morning'], errorIndex: 0, wrong: 'Although the sun was warm.', intended: 0 },
   { id: 'tm0-splice2', klass: 'film-splice', parts: ['The film ended quite late.', 'We walked home', 'along the quiet road', 'without our torches'], errorIndex: 0, wrong: 'The film ended quite late,', intended: 0 },
-  // 1 trap.
-  { id: 'tm1-splice', klass: 'storm-splice', parts: ['The storm lasted all night.', 'We slept badly, but morning came', 'over the calm sea', 'at last'], errorIndex: 0, wrong: 'The storm lasted all night,', intended: 1 },
-  { id: 'tm1-runon', klass: 'class-runon', parts: ['The bell rang for lunch.', 'The class lined up quickly;', 'the teacher counted heads', 'by the door'], errorIndex: 0, wrong: 'The bell rang for lunch', intended: 1 },
-  { id: 'tm1-frag', klass: 'shop-fragment', parts: ['Because the shop had closed,', 'we walked to the market;', 'the stalls were busy', 'that afternoon'], errorIndex: 0, wrong: 'Because the shop had closed.', intended: 1 },
-  { id: 'tm1-splice2', klass: 'train-splice', parts: ['The train arrived very late.', 'Nobody complained, but the guard', 'apologised twice', 'to the passengers'], errorIndex: 0, wrong: 'The train arrived very late,', intended: 1 },
-  // 2 traps.
-  { id: 'tm2-splice', klass: 'match-splice', parts: ['The match finished at six.', 'We waited, but the coach', 'arrived late; nobody minded', 'the long delay'], errorIndex: 0, wrong: 'The match finished at six,', intended: 2 },
-  { id: 'tm2-runon', klass: 'lesson-runon', parts: ['The lesson ended early.', 'The class tidied up;', 'the teacher smiled, and', 'everyone went outside'], errorIndex: 0, wrong: 'The lesson ended early', intended: 2 },
-  { id: 'tm2-frag', klass: 'path-fragment', parts: ['Although the path was steep,', 'we climbed to the top;', 'the view was clear, and', 'nobody was tired'], errorIndex: 0, wrong: 'Although the path was steep.', intended: 2 },
-  { id: 'tm2-splice2', klass: 'road-splice', parts: ['The road was very quiet.', 'We walked home, but the wind', 'was cold; the lights', 'glowed above us'], errorIndex: 0, wrong: 'The road was very quiet,', intended: 2 },
-  // 3 traps.
-  { id: 'tm3-splice', klass: 'night-splice', parts: ['The storm lasted all night.', 'We slept badly, but morning came;', 'the sea shone, and gulls called;', 'the boats returned, so we cheered'], errorIndex: 0, wrong: 'The storm lasted all night,', intended: 3 },
-  { id: 'tm3-runon', klass: 'fair-runon', parts: ['The fair opened at noon.', 'The stalls were busy;', 'the band played, and children sang;', 'the sun shone, so we stayed'], errorIndex: 0, wrong: 'The fair opened at noon', intended: 3 },
-  { id: 'tm3-frag', klass: 'river-fragment', parts: ['Because the river had risen,', 'the bridge was shut;', 'we walked round, and the path', 'was muddy, but nobody minded'], errorIndex: 0, wrong: 'Because the river had risen.', intended: 3 },
-  { id: 'tm3-splice2', klass: 'garden-splice', parts: ['The garden looked lovely.', 'The roses bloomed, and bees hummed;', 'the grass was soft;', 'we sat there, so time passed'], errorIndex: 0, wrong: 'The garden looked lovely,', intended: 3 },
+  { id: 'tm0-frag2', klass: 'shop-fragment', parts: ['Because the shop had closed,', 'we walked to the market', 'in the heavy rain', 'that afternoon'], errorIndex: 0, wrong: 'Because the shop had closed.', intended: 0 },
+  // 1 trap — one non-error part carries a required comma (fronted clause, or list-internal).
+  { id: 'tm1-splice', klass: 'storm-splice', parts: ['The storm lasted all night.', 'When the sun came out,', 'we ran outside', 'to the wet field'], errorIndex: 0, wrong: 'The storm lasted all night,', intended: 1 },
+  { id: 'tm1-frag', klass: 'wind-fragment', parts: ['Although the sun was warm,', 'we wore thick coats.', 'When the wind rose,', 'we hurried inside'], errorIndex: 0, wrong: 'Although the sun was warm.', intended: 1 },
+  { id: 'tm1-list', klass: 'bus-splice', parts: ['We packed apples, pears and plums.', 'The bus left at nine.', 'We arrived by noon', 'and set up camp'], errorIndex: 1, wrong: 'The bus left at nine,', intended: 1 },
+  { id: 'tm1-frag2', klass: 'river-fragment', parts: ['Because the river had risen,', 'the bridge was shut.', 'When the water fell,', 'we walked across'], errorIndex: 0, wrong: 'Because the river had risen.', intended: 1 },
+  // 2 traps — two non-error parts carry required commas.
+  { id: 'tm2-splice', klass: 'bell-splice', parts: ['When the bell rang,', 'we packed books, pens and rulers.', 'The class lined up quietly.', 'Nobody spoke at all'], errorIndex: 2, wrong: 'The class lined up quietly,', intended: 2 },
+  { id: 'tm2-frag', klass: 'rain-fragment', parts: ['Because the rain fell,', 'we played games, puzzles and cards.', 'When the sun returned,', 'we ran outside'], errorIndex: 0, wrong: 'Because the rain fell.', intended: 2 },
+  { id: 'tm2-splice2', klass: 'fair-splice', parts: ['Although the day was cold,', 'we packed hats, gloves and scarves.', 'The fair opened at noon.', 'The stalls were busy'], errorIndex: 2, wrong: 'The fair opened at noon,', intended: 2 },
+  { id: 'tm2-frag2', klass: 'path-fragment', parts: ['Although the path was steep,', 'we carried bags, ropes and maps.', 'When the mist cleared,', 'we saw the valley'], errorIndex: 0, wrong: 'Although the path was steep.', intended: 2 },
 ];
 const TERMINAL_V2 = errorSpotFamily({
   id: 'spag-punct-terminal-boundary', name: 'Terminal and boundary', subtype: 'punctuation',
-  franchise: 'en-terminal-punctuation-blind', stem: PUNCT_STEM_SPOT, nm: esNm, tiers: [1, 2, 3, 4],
-  bank: TERMINAL_BANK, nearMiss: partHasClauseJoin,
+  franchise: 'en-terminal-punctuation-blind', stem: PUNCT_STEM_SPOT, nm: esNm, tiers: [1, 2, 3],
+  bank: TERMINAL_BANK, nearMiss: partHasRequiredComma,
 });
 
 // ---------------------------------------------------------------------------------------
-// SPEECH PUNCTUATION — spot-form survives, narrowly (R17). Every unarguable error needs a mark
-// ALREADY PRESENT: a mark-less sentence (`She said I am coming home now.`) is CORRECT as reported
-// speech, so it carries no error — the as-presented rule biting harder than in possessive.
-// Unarguable: missing CLOSING mark (opening present), missing OPENING mark (closing present),
-// missing CAPITAL at the start of quoted speech. EXCLUDED: terminal placement at a quote boundary
-// (British usage permits either side) — from clean parts AND from keyed parts, since the walk
-// script would otherwise teach one convention as the only one. Platform convention, settled:
-// terminal punctuation sits INSIDE the closing mark for a quoted full sentence.
-// TRAP = a part holding a quotation mark or a reporting verb, correctly used.
+// SPEECH PUNCTUATION — spot-form, TWO error types (annie, 2026-08-08). MISSING-OPENING DROPPED:
+// with the opening mark gone, the stray closing mark is the only evidence of direct speech, so the
+// correction is undetermined — add an opening mark, or delete the closing one and read it as
+// reported speech. Both give defensible English. Kept: MISSING CLOSING (the opening mark and the
+// comma before it establish direct speech, so closing is the only correction) and MISSING CAPITAL.
+// TRAP = a part holding a reporting verb with NO marks — no punctuation choice in it. A correctly
+// closed quotation is NOT a trap: it carries terminal punctuation at a quote boundary, which
+// British usage argues both ways, so it may appear only in the ERROR part.
+// N items are reached through correct REPORTED speech (no marks, nothing to fix).
+// Platform convention, settled: terminal punctuation sits INSIDE the closing mark.
 // ---------------------------------------------------------------------------------------
-export const partHasSpeechCue = (part: string): boolean => /["'"'"]|\b(said|asked|shouted|replied|called|whispered)\b/i.test(part);
+export const partHasSpeechCue = (part: string): boolean => /\b(said|asked|shouted|replied|called|whispered)\b/i.test(part);
 export const SPEECH_BANK: EsSentence[] = [
-  // 0 traps — the reporting clause and both marks sit INSIDE the error part; no other part cues speech.
+  // 0 traps — the reporting verb sits INSIDE the error part; no other part cues speech.
   { id: 'sp0-close', klass: 'sara-closing', parts: ['Sara said, "I am coming home now."', 'She picked up her bag', 'from the floor', 'and hurried out'], errorIndex: 0, wrong: 'Sara said, "I am coming home now.', intended: 0 },
-  { id: 'sp0-open', klass: 'omar-opening', parts: ['Omar shouted, "Wait for me!"', 'He ran across', 'the wide field', 'towards the gate'], errorIndex: 0, wrong: 'Omar shouted, Wait for me!"', intended: 0 },
   { id: 'sp0-capital', klass: 'priya-capital', parts: ['Priya asked, "Where is my coat?"', 'She looked under', 'the wooden bench', 'by the door'], errorIndex: 0, wrong: 'Priya asked, "where is my coat?"', intended: 0 },
   { id: 'sp0-close2', klass: 'noah-closing', parts: ['Noah replied, "I will help you."', 'He rolled up', 'his long sleeves', 'at once'], errorIndex: 0, wrong: 'Noah replied, "I will help you.', intended: 0 },
-  // 1 trap.
+  { id: 'sp0-capital2', klass: 'zara-capital', parts: ['Zara asked, "Who left the door open?"', 'She looked round', 'the empty hall', 'for a moment'], errorIndex: 0, wrong: 'Zara asked, "who left the door open?"', intended: 0 },
+  // 1 trap — one other part carries a reporting verb (no marks).
   { id: 'sp1-close', klass: 'leila-closing', parts: ['Leila said, "I have finished my work."', 'Omar called back', 'from the gate', 'and waved'], errorIndex: 0, wrong: 'Leila said, "I have finished my work.', intended: 1 },
-  { id: 'sp1-open', klass: 'amir-opening', parts: ['Amir shouted, "Come and see this!"', 'Priya said nothing', 'as she walked', 'down the path'], errorIndex: 0, wrong: 'Amir shouted, Come and see this!"', intended: 1 },
-  { id: 'sp1-capital', klass: 'zara-capital', parts: ['Zara asked, "Who left the door open?"', 'Noah replied quietly', 'from the hallway', 'near the stairs'], errorIndex: 0, wrong: 'Zara asked, "who left the door open?"', intended: 1 },
-  { id: 'sp1-close2', klass: 'tom-closing', parts: ['Tom whispered, "The play starts soon."', 'Sara asked again', 'about the plan', 'for tomorrow'], errorIndex: 0, wrong: 'Tom whispered, "The play starts soon.', intended: 1 },
+  { id: 'sp1-capital', klass: 'rosa-capital', parts: ['Rosa asked, "Where does this path go?"', 'Amir replied slowly', 'and pointed', 'up the hill'], errorIndex: 0, wrong: 'Rosa asked, "where does this path go?"', intended: 1 },
+  { id: 'sp1-close2', klass: 'tom-closing', parts: ['Tom whispered, "The play starts soon."', 'Sara asked again', 'about the time', 'of the show'], errorIndex: 0, wrong: 'Tom whispered, "The play starts soon.', intended: 1 },
+  { id: 'sp1-close3', klass: 'ivy-closing', parts: ['Ivy said, "I will be there soon."', 'Ben asked twice', 'about the plan', 'for Saturday'], errorIndex: 0, wrong: 'Ivy said, "I will be there soon.', intended: 1 },
   // 2 traps.
   { id: 'sp2-close', klass: 'ava-closing', parts: ['Ava said, "I found your gloves."', 'Omar called back', 'and Priya replied', 'from the hall'], errorIndex: 0, wrong: 'Ava said, "I found your gloves.', intended: 2 },
-  { id: 'sp2-open', klass: 'yusuf-opening', parts: ['Yusuf shouted, "The bus is here!"', 'Leila asked twice', 'but Noah said nothing', 'at all'], errorIndex: 0, wrong: 'Yusuf shouted, The bus is here!"', intended: 2 },
-  { id: 'sp2-capital', klass: 'rosa-capital', parts: ['Rosa asked, "Where does this path go?"', 'Amir replied slowly', 'and Zara called out', 'from behind'], errorIndex: 0, wrong: 'Rosa asked, "where does this path go?"', intended: 2 },
+  { id: 'sp2-capital', klass: 'ivy-capital', parts: ['Ivy asked, "When does the film start?"', 'Tom replied at once', 'and Ava called out', 'from upstairs'], errorIndex: 0, wrong: 'Ivy asked, "when does the film start?"', intended: 2 },
   { id: 'sp2-close2', klass: 'ben-closing', parts: ['Ben replied, "I will carry that box."', 'Sara whispered thanks', 'and Tom asked', 'about the time'], errorIndex: 0, wrong: 'Ben replied, "I will carry that box.', intended: 2 },
+  { id: 'sp2-capital2', klass: 'kai-capital', parts: ['Kai asked, "Where did you find that?"', 'Rosa replied slowly', 'and Finn called out', 'from the door'], errorIndex: 0, wrong: 'Kai asked, "where did you find that?"', intended: 2 },
   // 3 traps.
   { id: 'sp3-close', klass: 'mira-closing', parts: ['Mira said, "We are nearly ready."', 'Omar called back', 'Priya replied softly', 'and Noah asked again'], errorIndex: 0, wrong: 'Mira said, "We are nearly ready.', intended: 3 },
-  { id: 'sp3-open', klass: 'kai-opening', parts: ['Kai shouted, "Look at the sky!"', 'Leila asked why', 'Amir said nothing', 'and Zara whispered back'], errorIndex: 0, wrong: 'Kai shouted, Look at the sky!"', intended: 3 },
-  { id: 'sp3-capital', klass: 'ivy-capital', parts: ['Ivy asked, "When does the film start?"', 'Tom replied at once', 'Ava called from upstairs', 'and Ben said so too'], errorIndex: 0, wrong: 'Ivy asked, "when does the film start?"', intended: 3 },
-  { id: 'sp3-close2', klass: 'finn-closing', parts: ['Finn replied, "I have seen that film."', 'Rosa asked about it', 'Mira whispered a reply', 'and Kai called out'], errorIndex: 0, wrong: 'Finn replied, "I have seen that film.', intended: 3 },
+  { id: 'sp3-capital', klass: 'finn-capital', parts: ['Finn asked, "Who has seen my book?"', 'Rosa replied at once', 'Mira whispered a reply', 'and Kai called out'], errorIndex: 0, wrong: 'Finn asked, "who has seen my book?"', intended: 3 },
+  { id: 'sp3-close2', klass: 'kai-closing', parts: ['Kai said, "The bus is nearly here."', 'Leila asked why', 'Amir replied quietly', 'and Zara whispered back'], errorIndex: 0, wrong: 'Kai said, "The bus is nearly here.', intended: 3 },
+  { id: 'sp3-capital2', klass: 'ava-capital', parts: ['Ava asked, "Who wants to go first?"', 'Ben replied at once', 'Ivy whispered a reply', 'and Kai called back'], errorIndex: 0, wrong: 'Ava asked, "who wants to go first?"', intended: 3 },
 ];
 const SPEECH_V2 = errorSpotFamily({
   id: 'spag-punct-speech', name: 'Speech punctuation', subtype: 'punctuation',
   franchise: 'en-speech-punctuation-inside', stem: PUNCT_STEM_SPOT, nm: esNm, tiers: [1, 2, 3, 4],
-  bank: SPEECH_BANK, nearMiss: partHasSpeechCue,
+  bank: SPEECH_BANK, nearMiss: partHasSpeechCue, nRate: 0,
 });
 
 // ---------------------------------------------------------------------------------------
