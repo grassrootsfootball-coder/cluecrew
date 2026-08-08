@@ -297,50 +297,83 @@ function clozeFamily(franchise: string, name: string, tiers: Tier[]): SpagFamily
 // ---------------------------------------------------------------------------------------
 // annie's split (2026-08-08): a distractor part built as a NEAR-MISS is picked by a child
 // over-applying a real rule; a PLAIN part is picked by a child who assumes something must be
-// wrong and guesses. The near-miss flag the generator already sets is exactly what separates
-// them, so each gets its own tag and its own hint.
+// wrong and guesses. Near-miss status is DERIVED from the family's own homophone list —
+// VERIFIED per part, not asserted per sentence (her third-district catch of the maths gate's
+// declare-don't-verify blind spot). Each gets its own tag and its own hint.
 const SPOT_RULE_OVER_APPLIED = 'en-error-spot-rule-over-applied'; // a near-miss part
 const SPOT_GUESSED = 'en-error-spot-guessed-a-part'; // a plain part
-interface SpotSentence { parts: string[]; errorIndex: number; wrong: string; targetLen: number; nm: number[] }
-// nm = indices of NEAR-MISS parts: correct on the page, but carrying a homophone-family word a
-// child might wrongly flag. Those are the hard false-positive traps the top tiers turn up.
-const HOMOPHONE_BANK: SpotSentence[] = [
-  // Plain (no near-miss) — T1/T2.
-  { parts: ['He was allowed', 'to leave early', 'because he felt', 'rather unwell'], errorIndex: 0, wrong: 'He was aloud', targetLen: 5, nm: [] },
-  { parts: ['We walked past', 'the old mill', 'to reach', 'the stone bridge'], errorIndex: 0, wrong: 'We walked passed', targetLen: 6, nm: [] },
-  { parts: ['She could hear', 'the last bell', 'ring out', 'across the yard'], errorIndex: 0, wrong: 'She could here', targetLen: 4, nm: [] },
-  { parts: ['They rode home', 'in heavy rain', 'after the long', 'football match'], errorIndex: 0, wrong: 'They road home', targetLen: 4, nm: [] },
-  { parts: ['I knew the test', 'would be hard', 'so I studied', 'every page twice'], errorIndex: 0, wrong: 'I new the test', targetLen: 3, nm: [] },
-  { parts: ['The plane flew', 'above the clouds', 'for many', 'long hours'], errorIndex: 0, wrong: 'The plane flu', targetLen: 3, nm: [] },
-  // One near-miss — T3.
-  { parts: ['She could not hear', 'the coach shout', 'over the loud', 'cheers outside'], errorIndex: 0, wrong: 'She could not here', targetLen: 4, nm: [2] },
-  { parts: ['They watched the weather', 'change so fast', 'and grabbed their', 'coats and bags'], errorIndex: 0, wrong: 'They watched the whether', targetLen: 7, nm: [2] },
-  { parts: ['The plane flew', 'right through', 'the grey cloud', 'and then stopped'], errorIndex: 1, wrong: 'right threw', targetLen: 5, nm: [0] },
-  { parts: ['We rode home', 'past the shops', 'to fetch', 'some warm bread'], errorIndex: 0, wrong: 'We road home', targetLen: 4, nm: [1] },
-  // Two near-miss — T3.
-  { parts: ['He rode the bike', 'past the shops', 'to meet his aunt', 'by the sea'], errorIndex: 1, wrong: 'passed the shops', targetLen: 6, nm: [0, 3] },
-  { parts: ['She knew the ball', 'would roll past', 'the goal line', 'near the road'], errorIndex: 1, wrong: 'would roll passed', targetLen: 6, nm: [0, 3] },
-  { parts: ['I heard the horse', 'gallop past', 'the open field', 'where we flew'], errorIndex: 1, wrong: 'gallop passed', targetLen: 6, nm: [0, 3] },
-  { parts: ['They sailed through', 'the calm sea', 'past the grey', 'harbour wall'], errorIndex: 0, wrong: 'They sailed threw', targetLen: 5, nm: [1, 2] },
-  // Three near-miss (every other part a trap) — T4.
-  { parts: ['She knew', 'the sea was', 'too rough', 'to sail'], errorIndex: 1, wrong: 'the see was', targetLen: 4, nm: [0, 2, 3] },
-  { parts: ['We rode', 'past the beach', 'to meet', 'our whole class'], errorIndex: 1, wrong: 'passed the beach', targetLen: 6, nm: [0, 2, 3] },
-  { parts: ['We flew', 'past the coast', 'to see', 'the whole bay'], errorIndex: 1, wrong: 'passed the coast', targetLen: 6, nm: [0, 2, 3] },
-  { parts: ['He heard', 'the loud bells', 'ring right', 'through the town'], errorIndex: 2, wrong: 'ring write', targetLen: 5, nm: [0, 1, 3] },
+
+// THE FAMILY'S HOMOPHONE LIST. A part is a near-miss iff a word in it is here — a lookup, so
+// the count is TRUE, not declared. Kept deliberately wide (KS2 homophones): a missed entry is
+// exactly how "long hours" (hours/ours) and "ring out" (ring/wring) slipped past as plain.
+const HOMOPHONES = new Set<string>([
+  'their', 'there', 'theyre', 'hear', 'here', 'past', 'passed', 'allowed', 'aloud',
+  'weather', 'whether', 'road', 'rode', 'rowed', 'knew', 'new', 'flew', 'flu', 'flue',
+  'sea', 'see', 'meet', 'meat', 'whole', 'hole', 'hours', 'hour', 'ours', 'our',
+  'ring', 'wring', 'right', 'write', 'rite', 'through', 'threw', 'to', 'too', 'two',
+  'for', 'four', 'fore', 'by', 'buy', 'bye', 'be', 'bee', 'no', 'know', 'one', 'won',
+  'son', 'sun', 'some', 'sum', 'so', 'sew', 'sow', 'week', 'weak', 'way', 'weigh',
+  'made', 'maid', 'read', 'red', 'reed', 'plane', 'plain', 'would', 'wood', 'wait', 'weight',
+  'break', 'brake', 'tail', 'tale', 'sail', 'sale', 'night', 'knight', 'blue', 'blew',
+  'pair', 'pear', 'pare', 'peace', 'piece', 'rain', 'reign', 'rein', 'scene', 'seen',
+  'sight', 'site', 'cite', 'stair', 'stare', 'steal', 'steel', 'tide', 'tied', 'toe', 'tow',
+  'wear', 'where', 'which', 'witch', 'whine', 'wine', 'in', 'inn', 'mail', 'male',
+  'hair', 'hare', 'bored', 'board', 'flour', 'flower', 'great', 'grate', 'guessed', 'guest',
+  'heard', 'herd', 'loan', 'lone', 'none', 'nun', 'sent', 'cent', 'scent', 'cell', 'sell',
+  'waist', 'waste', 'wail', 'whale', 'war', 'wore', 'yolk', 'yoke', 'your', 'youre',
+  'ewe', 'eye', 'or', 'oar', 'ore', 'ate', 'eight', 'fair', 'fare',
+]);
+export const partHasHomophone = (part: string): boolean =>
+  part.toLowerCase().split(/\s+/).some((w) => HOMOPHONES.has(w.replace(/[^a-z]/g, '')));
+
+export interface SpotSentence { id: string; pair: string; parts: string[]; errorIndex: number; wrong: string; targetLen: number; intended: number }
+// `intended` = the near-miss DISTRACTOR count this sentence is authored to carry (non-error
+// parts with a homophone). A test asserts the DERIVED count equals it, so a mis-count fails CI
+// instead of shipping. Error pairs are varied so a tier samples the space, not one pair.
+export const HOMOPHONE_BANK: SpotSentence[] = [
+  // 0 near-miss — error part homophone, the other three strictly clean.
+  { id: 'h0-allowed', pair: 'allowed/aloud', parts: ['He was allowed', 'inside the hall', 'before the others', 'arrived that day'], errorIndex: 0, wrong: 'He was aloud', targetLen: 5, intended: 0 },
+  { id: 'h0-hear', pair: 'hear/here', parts: ['She could hear', 'the head teacher', 'calling her name', 'after the lesson'], errorIndex: 0, wrong: 'She could here', targetLen: 4, intended: 0 },
+  { id: 'h0-past', pair: 'past/passed', parts: ['We walked past', 'the science lab', 'and the library', 'that same day'], errorIndex: 0, wrong: 'We walked passed', targetLen: 6, intended: 0 },
+  { id: 'h0-knew', pair: 'knew/new', parts: ['They knew the plan', 'needed more time', 'than the class', 'had expected'], errorIndex: 0, wrong: 'They new the plan', targetLen: 3, intended: 0 },
+  { id: 'h0-made', pair: 'made/maid', parts: ['She made a cake', 'and iced it', 'with such care', 'that evening'], errorIndex: 0, wrong: 'She maid a cake', targetLen: 4, intended: 0 },
+  { id: 'h0-won', pair: 'won/one', parts: ['The team won', 'the final match', 'after extra', 'games were played'], errorIndex: 0, wrong: 'The team one', targetLen: 3, intended: 0 },
+  // 1 near-miss.
+  { id: 'h1-hear', pair: 'hear/here', parts: ['She could not hear', 'the coach clearly', 'across the sea', 'that afternoon'], errorIndex: 0, wrong: 'She could not here', targetLen: 4, intended: 1 },
+  { id: 'h1-rode', pair: 'rode/road', parts: ['We rode the bus', 'into the busy town', 'past the shops', 'and the park'], errorIndex: 0, wrong: 'We road the bus', targetLen: 4, intended: 1 },
+  { id: 'h1-weather', pair: 'weather/whether', parts: ['They watched the weather', 'turn grey and cold', 'then packed their tents', 'away again'], errorIndex: 0, wrong: 'They watched the whether', targetLen: 7, intended: 1 },
+  { id: 'h1-flew', pair: 'flew/flu', parts: ['The plane flew low', 'above the fields', 'and over the sea', 'near the cliffs'], errorIndex: 0, wrong: 'The plane flu low', targetLen: 3, intended: 1 },
+  { id: 'h1-would', pair: 'would/wood', parts: ['I would like', 'a piece of cake', 'before the class', 'begins again'], errorIndex: 0, wrong: 'I wood like', targetLen: 4, intended: 1 },
+  { id: 'h1-knew', pair: 'knew/new', parts: ['She knew the answer', 'right from the start', 'of the hard test', 'that morning'], errorIndex: 0, wrong: 'She new the answer', targetLen: 3, intended: 1 },
+  // 2 near-miss.
+  { id: 'h2-rode', pair: 'rode/road', parts: ['He rode his bike', 'past the old shops', 'to meet his friend', 'near the lake'], errorIndex: 0, wrong: 'He road his bike', targetLen: 4, intended: 2 },
+  { id: 'h2-through', pair: 'through/threw', parts: ['We sailed through', 'the calm sea', 'past the tall cliffs', 'at dawn'], errorIndex: 0, wrong: 'We sailed threw', targetLen: 5, intended: 2 },
+  { id: 'h2-see', pair: 'see/sea', parts: ['She could see', 'the whole field', 'from the high stair', 'above the hall'], errorIndex: 0, wrong: 'She could sea', targetLen: 3, intended: 2 },
+  { id: 'h2-made', pair: 'made/maid', parts: ['They made a raft', 'from planks of wood', 'and rode the waves', 'near the shore'], errorIndex: 0, wrong: 'They maid a raft', targetLen: 4, intended: 2 },
+  { id: 'h2-knight', pair: 'knight/night', parts: ['The knight rode', 'past the castle', 'near the sea', 'at dawn'], errorIndex: 0, wrong: 'The night rode', targetLen: 5, intended: 2 },
+  { id: 'h2-won', pair: 'won/one', parts: ['She won the race', 'at record speed', 'by a whole', 'second or more'], errorIndex: 0, wrong: 'She one the race', targetLen: 3, intended: 2 },
+  // 3 near-miss — every other part a trap.
+  { id: 'h3-see', pair: 'see/sea', parts: ['She knew', 'the sea was', 'too rough', 'to sail'], errorIndex: 1, wrong: 'the see was', targetLen: 3, intended: 3 },
+  { id: 'h3-past', pair: 'past/passed', parts: ['We rode', 'past the beach', 'to meet', 'the whole class'], errorIndex: 1, wrong: 'passed the beach', targetLen: 6, intended: 3 },
+  { id: 'h3-ring', pair: 'ring/wring', parts: ['He heard', 'the great bells', 'ring out', 'right through town'], errorIndex: 2, wrong: 'wring out', targetLen: 4, intended: 3 },
+  { id: 'h3-would', pair: 'would/wood', parts: ['I would', 'buy a pair', 'of blue boots', 'this week'], errorIndex: 0, wrong: 'I wood', targetLen: 4, intended: 3 },
+  { id: 'h3-flew', pair: 'flew/flu', parts: ['They flew', 'through the night', 'past two peaks', 'by the sea'], errorIndex: 0, wrong: 'They flu', targetLen: 3, intended: 3 },
+  { id: 'h3-made', pair: 'made/maid', parts: ['We made', 'a plain cake', 'for the fair', 'last week'], errorIndex: 0, wrong: 'We maid', targetLen: 4, intended: 3 },
 ];
+
 // The ladder is NEAR-MISS PROXIMITY, and only that (annie, 2026-08-08): near-miss count is
-// visible in the single item a child meets, so it can carry the tiers on its own — T1 0,
-// T2 1, T3 2, T4 3. N-keying is NOT a tier dial: "sometimes/often" are properties of a tier,
-// never of the one item a child sees, so it would collapse T1 and T2 into the same item. It is
-// a SERVING-DISTRIBUTION property instead — a fixed share of every tier's items key "No
-// mistake" — held here as one family constant.
+// visible in the single item a child meets, so it carries the tiers on its own — T1 0, T2 1,
+// T3 2, T4 3. N-keying is NOT a tier dial ("sometimes/often" are tier properties a child never
+// meets, which would collapse T1 and T2); it is a SERVING-DISTRIBUTION property applied at RUNG
+// MINUS ONE, so an N-keyed item — whose un-errored slot is itself a near-miss — lands on its
+// tier's true count, and never at T1 (rung-1 = -1 there).
 const HOMOPHONE_N_RATE = 0.2; // serving profile, not a tier parameter
 function homophoneNm(tier: Tier): number {
   return ({ 1: 0, 2: 1, 3: 2, 4: 3, 5: 3 } as const)[tier];
 }
-/** Tag a correct DISTRACTOR part: a near-miss = over-applied rule, a plain part = a guess. */
-function spotTag(index: number, nm: number[]): string {
-  return nm.includes(index) ? SPOT_RULE_OVER_APPLIED : SPOT_GUESSED;
+/** DERIVED near-miss distractor count for an error item (non-error parts with a homophone). */
+export function nonErrorNearMiss(s: SpotSentence): number {
+  return s.parts.filter((p, i) => i !== s.errorIndex && partHasHomophone(p)).length;
 }
 const HOMOPHONES_V2: SpagFamily = {
   id: 'spag-spell-homophone-by-sound',
@@ -351,24 +384,24 @@ const HOMOPHONES_V2: SpagFamily = {
   structuralParams: (t) => ({ nearMissParts: homophoneNm(t) }),
   numberRanges: (t) => ({ letters: [3, 7], segments: [4, 4], nearMissParts: [homophoneNm(t), homophoneNm(t)] }),
   draft: (tier, r): SpagItemDraft => {
-    const nm = homophoneNm(tier);
-    const pool = HOMOPHONE_BANK.filter((s) => s.nm.length === nm);
-    const s = randPick(r, pool);
-    const nKey = r() < HOMOPHONE_N_RATE; // uniform across tiers — a distribution, not a ladder rung
+    const rung = homophoneNm(tier);
+    const wantN = rung >= 1 && r() < HOMOPHONE_N_RATE; // N at rung-1; excluded at T1 automatically
+    const target = wantN ? rung - 1 : rung;
+    const s = randPick(r, HOMOPHONE_BANK.filter((x) => nonErrorNearMiss(x) === target));
     const opts: SpagOption[] = [];
-    if (nKey) {
-      // No error present, so the error SLOT is now a correct part that still carries its
-      // homophone — a near-miss too. An N-keyed item therefore carries one more near-miss than
-      // its tier's error items and is the hardest variant in the tier (a serving-overlay, not a
-      // rung): every trap is live and the answer is still "No mistake".
-      const nearMiss = [...s.nm, s.errorIndex];
-      s.parts.forEach((p, i) => opts.push({ value: p, isKey: false, misconceptionId: spotTag(i, nearMiss) }));
+    let nearMiss: number;
+    if (wantN) {
+      // No error: the un-errored slot still carries its homophone, so it is a near-miss too,
+      // taking the item to `rung`. Every trap is live and the answer is still "No mistake".
+      s.parts.forEach((p) => opts.push({ value: p, isKey: false, misconceptionId: partHasHomophone(p) ? SPOT_RULE_OVER_APPLIED : SPOT_GUESSED }));
       opts.push({ value: 'No mistake', isKey: true });
+      nearMiss = s.parts.filter(partHasHomophone).length;
     } else {
-      s.parts.forEach((p, i) => opts.push(i === s.errorIndex ? { value: s.wrong, isKey: true } : { value: p, isKey: false, misconceptionId: spotTag(i, s.nm) }));
+      s.parts.forEach((p, i) => opts.push(i === s.errorIndex ? { value: s.wrong, isKey: true } : { value: p, isKey: false, misconceptionId: partHasHomophone(p) ? SPOT_RULE_OVER_APPLIED : SPOT_GUESSED }));
       opts.push({ value: 'No mistake', isKey: false, misconceptionId: 'en-n-option-avoidance' });
+      nearMiss = nonErrorNearMiss(s);
     }
-    return { stem: SPELL_STEM, options: opts, params: { letters: s.targetLen, segments: 4, nearMissParts: s.nm.length } };
+    return { stem: SPELL_STEM, options: opts, params: { letters: s.targetLen, segments: 4, nearMissParts: nearMiss }, dedupKey: s.id, diversityKey: s.pair };
   },
 };
 

@@ -48,6 +48,13 @@ export interface SpagItemDraft {
   /** Numeric dials the range gate enforces (syllables, segments, gapIndex …) plus any
    *  string labels. Only numeric entries are range-checked. */
   params: Record<string, number | string>;
+  /** Sampler identity of the underlying stimulus (e.g. the carrier SENTENCE). A sample never
+   *  shows the same stimulus twice — not its correct form AND its errored form — so a child is
+   *  never handed the answer to one item by another (annie, 2026-08-08). Defaults to stem+options. */
+  dedupKey?: string;
+  /** The error CLASS being exercised (e.g. the homophone pair). A sample caps any one class to
+   *  a stated share so a family samples its space rather than one pair (annie, 2026-08-08). */
+  diversityKey?: string;
 }
 
 /** Satisfies LadderedFamily structurally, so it runs on the shared ladder/range machinery. */
@@ -70,6 +77,8 @@ export interface GenSpagItem {
   key: string;
   options: SpagOption[];
   params: Record<string, number | string>;
+  dedupKey?: string;
+  diversityKey?: string;
 }
 
 export class SpagGateError extends Error {}
@@ -113,15 +122,23 @@ export function assembleSpagItem(family: SpagFamily, tier: Tier, r: () => number
   const blocking = failures.filter(isBlocking);
   if (blocking.length) throw new SpagGateError(`${family.id} T${tier}: ${blocking.map((f) => `${f.rule}: ${f.detail}`).join('; ')}`);
 
-  return { familyId: family.id, tier, stem: d.stem, key, options: d.options, params: d.params };
+  return { familyId: family.id, tier, stem: d.stem, key, options: d.options, params: d.params, dedupKey: d.dedupKey, diversityKey: d.diversityKey };
 }
 
-/** Generate `count` distinct gated items for one tier, reseeding past collisions. */
+/** No single error CLASS (diversityKey) may exceed this share of a sample — so a family samples
+ *  its space rather than one pair. A third, per annie's pair-share rule (2026-08-08). */
+const DIVERSITY_SHARE = 1 / 3;
+
+/** Generate `count` distinct gated items for one tier, reseeding past collisions. Enforces two
+ *  serving rules at sample time: no stimulus (dedupKey) appears twice — not its correct and its
+ *  errored form — and no error class (diversityKey) exceeds a stated share. */
 export function generateSpagSample(family: SpagFamily, tier: Tier, count: number, seed = 1): GenSpagItem[] {
   const out: GenSpagItem[] = [];
   const seen = new Set<string>();
+  const classCount = new Map<string, number>();
+  const cap = Math.max(1, Math.ceil(count * DIVERSITY_SHARE));
   const r = makeRng(seed * 100003 + tier * 31 + 11);
-  for (let attempt = 0; attempt < count * 60 && out.length < count; attempt += 1) {
+  for (let attempt = 0; attempt < count * 80 && out.length < count; attempt += 1) {
     let item: GenSpagItem;
     try {
       item = assembleSpagItem(family, tier, r);
@@ -129,9 +146,11 @@ export function generateSpagSample(family: SpagFamily, tier: Tier, count: number
       if (e instanceof SpagGateError) continue;
       throw e;
     }
-    const dedup = `${item.stem}|${item.options.map((o) => o.value).join(',')}`;
+    const dedup = item.dedupKey ?? `${item.stem}|${item.options.map((o) => o.value).join(',')}`;
     if (seen.has(dedup)) continue;
+    if (item.diversityKey && (classCount.get(item.diversityKey) ?? 0) >= cap) continue;
     seen.add(dedup);
+    if (item.diversityKey) classCount.set(item.diversityKey, (classCount.get(item.diversityKey) ?? 0) + 1);
     out.push(item);
   }
   if (out.length < count) throw new SpagGateError(`${family.id} T${tier}: produced ${out.length}/${count} clean items — family defect, not a seed accident`);

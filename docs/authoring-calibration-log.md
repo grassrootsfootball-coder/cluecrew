@@ -354,8 +354,9 @@ In a spot-the-mistake item every wrong option is a **correct part** of the sente
 who picks one is not making the spelling or punctuation error a franchise tag would claim —
 "The coach checked her list" has no dropped silent letter — she is making a **false-positive
 error**: thinking something is wrong when it isn't. That is a real, nameable misconception
-(`en-error-spot-false-positive`), and tagging the correct part with a franchise it does not
-instantiate actively **misdescribes her** and teaches a rule she applied correctly.
+(named `en-error-spot-false-positive`, then split — see rule 1), and tagging the correct part
+with a franchise it does not instantiate actively **misdescribes her** and teaches a rule she
+applied correctly.
 
 **The rules (all eleven SPaG families):**
 1. **Correct-part distractors carry a false-positive tag split by the near-miss flag** (annie,
@@ -367,17 +368,31 @@ instantiate actively **misdescribes her** and teaches a rule she applied correct
 2. **The item is ONE coherent sentence in labelled parts**, exactly one part carrying the
    error — not four unrelated clauses. Parts show in sentence order, never shuffled.
 3. **The ladder is NEAR-MISS PROXIMITY, and only that — 0, 1, 2, 3** (annie's correction,
-   2026-08-08). Near-miss count is visible in the single item a child meets, so it laddens at
-   item level. **N-keying is NOT a tier dial** — "sometimes/often" are properties of a tier,
-   not the one item a child sees, so an N-keying ladder collapses adjacent tiers into identical
-   items (the magnitude problem one level up). N-keying is a **serving-distribution** property,
-   a fixed share of every tier's items, held on the family, out of the tier rule. Word length
-   likewise makes no ladder claim.
-4. **Tier reach is honest.** SPaG ceilings at T4 (corpus); no family reaches T5. A family
+   2026-08-08). Near-miss count is visible in the single item a child meets, so it ladders at
+   item level. **N-keying is NOT a tier dial** — "sometimes/often" are properties of a tier, not
+   the one item a child sees, so an N-keying ladder collapses adjacent tiers (the magnitude
+   problem one level up). N-keying is a **serving-distribution** property (`N_RATE`, held on the
+   family), applied at **RUNG MINUS ONE**: an N-keyed item's un-errored slot is itself a
+   near-miss, so building it from a rung-1 sentence lands it on the tier's true count — and
+   excludes T1 automatically (rung-1 = -1). Word length makes no ladder claim.
+4. **Near-miss is DERIVED and VERIFIED, never declared** (annie's third-district catch of the
+   maths gate's blind spot, now one layer down: there a family declared a structural parameter
+   the item didn't honour; here an item declared a count its own words didn't). A part is a
+   near-miss **iff** a word in it is on the family's homophone list (a lookup). The generator
+   sets the count from that lookup and the range gate enforces it == rung, so a mis-count
+   ("long hours" = hours/ours; "ring out" = ring/wring; "the loud bells" = no homophone) fails
+   the build, not the child. A CI test asserts every bank sentence's derived count == its
+   declared `intended`.
+5. **No stimulus twice, and sample the space** (serving rules, `generateSpagSample`): a sample
+   never shows the same sentence twice — not its correct AND its errored form (`dedupKey`), so a
+   child is never handed one item's answer by another; and no error pair exceeds a stated share
+   of a tier (`diversityKey`, ≤ 1/3), so a family samples its homophone space rather than one
+   pair.
+6. **Tier reach is honest.** SPaG ceilings at T4 (corpus); no family reaches T5. A family
    reaches T1 only where the error can be made genuinely obvious (near-miss 0).
 
-Homophones was rebuilt to this and sent for check before the other ten; they get the same pass
-once it is signed — the maths discipline of proving one family before the volume run.
+Homophones was rebuilt to all of this and sent for check before the other ten; they get the
+same pass once it is signed — the maths discipline of proving one family before the volume run.
 
 ## R12 — Comprehension misconceptions cannot have executors — a property, not a gap
 *David, 2026-08-08, recorded during the English generator build.*
