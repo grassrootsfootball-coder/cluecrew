@@ -725,3 +725,28 @@ punctuation. A child defending any of the three is defending something real, so 
 binary: it must carry which reading it is, or the `over-applied` tag is as vague as the borrowed
 franchise tags were at the start of the district. Type possessive O sites as `O:sing-poss` /
 `O:plur-poss` / `O:attributive`, so the trap tag says what the child actually did.
+
+## R15 — Spot-the-mistake needs a BINARY property; permissive properties reframe
+*Annie, 2026-08-08. The general fact behind all four probes. Recorded by David.*
+
+Every SPaG probe found the same thing: a family survives the spot-the-mistake form iff the tested
+property is **binary — one reading right, all others wrong**. Where the property lives where natural
+English is PERMISSIVE, the spot-form dies and the "which part NEEDS it" reframe is the survivor.
+- **Binary → spot-form:** a misspelled word (spelling), a wrong contraction (its/it's). No second
+  reading exists, so a clean part is genuinely unimpeachable.
+- **Permissive → reframe:** a comma at a phrase boundary, an apostrophe at a noun-modifier. English
+  admits a second reading, so clean parts can't be unimpeachable and the arguable site becomes the
+  trap instead.
+- **Mixed → SPLIT the family** (the apostrophe pattern): terminal and speech each hold both. A comma
+  splice is unarguably wrong (spot) but a full stop where a comma also works is not (reframe); a
+  missing closing quote is unarguably wrong (spot) but single-vs-double marks is a choice (reframe).
+  **Probe terminal and speech with the split hypothesis in hand** — a narrow spot-form on the
+  unarguable errors, a reframe for the rest — rather than testing the whole family against one shape.
+
+**Possessive R-well probe result (2026-08-08, six candidates).** Possessive reframes (arguable
+sites common — regular-plural-before-noun and noun-modifiers all blur into girl's/girls'/attributive).
+The unarguable R-well is **two constructions**: irregular-plural possessive (`children's`, `men's` —
+bare plural never right) and named/unambiguously-singular animate possessive (`Tom's bike`, number
+fixed). **Do not widen it** (annie): the singular possessive MOVES (keys A/B/C by position), the
+arguable O sites are abundant so the ladder fills, and `the coat belonged to Tom` gives an N item —
+position variety + N, comma's answer, not more constructions. O sites typed by reading (R14).
