@@ -659,3 +659,17 @@ load-bearing — drop any one and a second solution appears.
 Test a deduction item by deletion: if the puzzle survives a clue's removal, the clue is
 teaching the wrong lesson and comes out (or the item is under-constrained and has two
 answers). This is a property of the shape, alongside R9's distractor floor.
+
+**Apostrophe probe result (2026-08-08, six natural candidates).** Plural/noun-before-noun is
+COMMON — four of six carried an arguable apostrophe site (`dogs bowl`, `boys changing room`,
+`teachers lounge`, `teams match`), and in two the ERROR site itself was ambiguous (singular vs
+plural possessive vs attributive vs verb). Only two error types are cleanly unarguable: irregular-
+plural possessives (`children's`, `men's` — the bare plural is never right) and its/it's (a fixed
+rule). So the general apostrophe family fails the spot-form clean-part rule for the same reason
+comma did — the tested property lives where natural sentences constantly put arguable sites.
+**Recommendation: reframe to "which part NEEDS an apostrophe"** (arguable noun-modifier → an
+`over-applied` trap, not a broken clean part; key = a clear required possessive). A narrow spot-form
+survives only if restricted to its/it's + irregular-plural possessives with clean parts scrubbed of
+regular-plural-before-noun — thin, and a slice of the skill. Decision pending. Terminal/boundary and
+speech are expected to survive the spot-form (their sites are far less arguable) but each is probed
+at the joins before assuming.
