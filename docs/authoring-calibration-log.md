@@ -1177,7 +1177,13 @@ Fixed.
 | the passage's own word | **declare it** in `explanation.quotes`. Do not reword around it. |
 | our paraphrase of the passage | prefer **replacing it with the passage's own words**, then declare. Reword only if no passage phrase fits. |
 | our own instructional word (*semicolon*, *paragraph*, *comparison*) | **reword**. Nothing to declare. |
-| a character's name the item *uses* rather than *quotes* | **reword** — unless declared under the passage-name rule below. |
+| a character's name the item *uses* rather than *quotes* | **reword**. Using a name is not quoting it. |
+
+> **REPO NOTE — the last row and the passage-noun ruling below disagree, and an author reading the
+> table alone will reword a name they could have declared.** The row says a name in use is reworded;
+> the ruling says a passage name may be declared and is then exempt from the ceiling. The ruling is
+> later and more specific, so the implementation follows the ruling. Row left verbatim; flagged for
+> the reviewer to reconcile.
 
 **Worked examples from this pass:**
 
@@ -1209,15 +1215,18 @@ Three limits, so this stays a carve-out and not a hole:
 
 The reasoning: the ceiling exists to stop *our own* wording out-running the child, and a name
 is not vocabulary the child has to decode — the passage has just spent 900 words teaching it.
+Across the live DB the rule bites on **Elizabeth alone, in six items**. The names sit mostly
+in stems and options, where the only alternative is declining to name the character the
+question is about. Every passage has a protagonist, so this recurs by construction rather
+than by accident.
+
+*(An earlier draft of this entry said 12 occurrences across three names. That figure came
+from a local screen built to over-flag, and it was wrong: Netherfield and Derbyshire are
+three syllables and never reached the ceiling. Corrected against the implementation.)*
 
 **IMPLEMENTED 2026-08-08.** `passageNames` on the stem, exempt in the long-word filter beside
 `testedTokens` (`content-gates.ts`); limit 1 verified by `pnpm check:line-refs` against the passage
 file; limit 2 holds because only the ceiling filter consults it. Proven both ways: *"Elizabeth
 understood immediately."* fails `2 long words (max 1): Elizabeth, immediately` undeclared and passes
-declared, while a banned word in the same sentence still trips.
-
-**One correction to the measurement.** Of the three names cited, **only `Elizabeth` is four
-syllables** — `Netherfield` and `Derbyshire` are three, and were never at risk from a ceiling that
-starts at four. So the rule bites on the Elizabeth occurrences alone (six items in the live DB). The
-carve-out is still right, and for the reason given — every passage has a protagonist, and it recurs
-by construction — but it is narrower than 12 occurrences.
+declared, while a banned word in the same sentence still trips. Regression test in
+`content-gates.test.ts` covers both directions so the carve-out cannot quietly widen.
