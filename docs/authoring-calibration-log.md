@@ -512,6 +512,16 @@ the 24th sentence typed like the first, the SETTLED CASES (extend as new ones ar
   asked nothing (a plain S-V-O with no comma anywhere is hollow); but an N item with one O is a
   rung-1 item. So rung 0 carries only keyed (fronted-clause) items — N items live at rung 1+, most
   naturally as trailing-subordinate-clause sentences.
+- **Mirrored pairs — the district's ONLY sanctioned repeated sentence (annie 2026-08-08).** The
+  same subordinate clause appears once fronted (key A, rung 0) and once trailing (key N, rung 1) —
+  `once the film ended`, `while we waited`, `although he was tired`. This is rule 7 (no repeated
+  sentence) DELIBERATELY excepted, because the repetition IS the teaching: the pair makes the
+  fronted-vs-trailing contrast directly, which a bank of only fronted clauses never could. Allowed
+  under two conditions, both holding here: (1) the pair is **never served to the same child in the
+  same session** — met together it becomes a giveaway, not a contrast; (2) the pair **straddles
+  rungs** (fronted rung 0 / trailing rung 1) so it cannot collide inside one tier's sample. Flagged
+  so a later reader does not mistake it for a rule-7 leak; the serving layer must honour condition
+  (1) as a pair constraint (the two ids are a linked pair, not independent items).
 - **Optional (O) — a trap:** trailing prepositional phrase; trailing adverb; the **serial-comma
   slot** (pre-final-conjunction in a list — British: optional, a trap, NEVER the key); a short
   fronted adverbial; **a coordinator joining two INDEPENDENT clauses** (British: optional — "the
