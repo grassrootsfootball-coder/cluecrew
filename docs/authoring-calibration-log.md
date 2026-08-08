@@ -480,6 +480,18 @@ four. That is the rule telling the truth about comma placement, not a defect —
 fewer rungs, or a single honest tier, stated) so no one later "fixes" comma to match its siblings
 by loosening the very rule that makes it correct.
 
+**Comma probe result (2026-08-08, six sentences authored to the two-sided clean-part rule).** The
+rule has two sides: no comma acceptable INSIDE a clean part, and none at a JOIN between two clean
+parts (a four-part split has three joins). The join side binds hardest: five of six candidates
+failed at a join — a trailing adverbial (`after school`), a post-modifying PP (`on the shelf`), or
+a comma-before-coordinator (`and sat down`), which is exactly where four-part items split. Only a
+contrived double-object item survived, and only if a trailing PP is read as integral. **Verdict:
+the "spot the mistake" comma family sustains ONE rung at most, unnaturally — the question type
+rests on "no comma is acceptable here", which English almost never grants at a phrase boundary.**
+The surviving shape is the REFRAME: **"which part NEEDS a comma"** — clean parts then only need to
+be places a comma is not REQUIRED (abundant), same skill, natural sentences, a real multi-rung
+bank. Decision pending; the other three punctuation families hit this wall far less hard.
+
 **Pool sizing carried on the spelling families (annie, 2026-08-08).** An honest small bank beats a
 padded large one: **double letters ships at 4/rung** (16), its key pool restricted to child-used
 words though its trap pool is the full ~30; **silent letters aims at 6/rung** on the 36-word list
