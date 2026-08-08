@@ -426,6 +426,15 @@ dozen:
 The test for any proposed trap: *would a taught child hesitate here?* If not, it is not a trap,
 however much it superficially resembles the error pattern.
 
+**PROCESS (annie, 2026-08-08): ratify the trap DEFINITION before the bank, not the items after.**
+Every round of this district caught a mechanism deriving from something narrower than the property
+it claimed — a hand list, then a regex, then the uncertain-doubling class — each found by reading
+32 items and inferring the definition from where they failed. The definition is what the signature
+rests on, so it is ratified first, as a written class per family (a rule that GENERATES the set,
+checkable by lookup), the same move as ratifying a maths tier-rule + number ranges before the
+sample sheet. Delivered: `content/exports/spag-trap-definitions.md` (eleven families). Build banks
+only against a ratified definition.
+
 **Subtype guidance for the two held families (annie, 2026-08-08), recorded before they are built
 so the banks are authored to it, not retrofitted:**
 - **Punctuation.** Near-miss is a SITE lookup, not a word lookup: a part is a near-miss if it
