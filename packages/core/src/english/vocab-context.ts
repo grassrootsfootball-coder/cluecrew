@@ -154,6 +154,26 @@ export const VOCAB_BANK: VocabItem[] = [
     { carrier: 'The apples are mature and ready to pick.', key: 'fully grown and ready', trap: 'sensible and thoughtful', wrong: ['sweet to taste', 'heavy on the branch'] }),
   ...rareOnly('vc-superior', 'superior', 3,
     { carrier: 'She gave a superior smile and turned away.', key: 'proud and looking down on others', trap: 'better than another of the same kind', wrong: ['quick and nervous', 'faint and tired'] }),
+  // ROUTE (b), the remaining Mode B cards — rare-sense ONLY (their familiar sense is the broad one
+  // with no clean distractor space, which is why they were rejected for bare cards). Fillers honour
+  // vr-04's forbidden-distractor list for each headword. FOUR of the ten are HELD: genuine, passive,
+  // valid and animated have a `likelierKnown` that looks inverted (passive claims the GRAMMAR sense
+  // is the likelier — implausible for Year 5), and building them would test the FAMILIAR sense while
+  // labelling it rare, which is the exact thing the flip prevents.
+  ...rareOnly('vc-bold', 'bold', 2,
+    { carrier: 'Put the heading in bold so it stands out.', key: 'printed in thick dark letters', trap: 'brave enough to dare', wrong: ['written in capital letters', 'underlined twice for effect'] }),
+  ...rareOnly('vc-flexible', 'flexible', 2,
+    { carrier: 'Our coach is flexible about training times.', key: 'willing to change plans', trap: 'able to bend without breaking', wrong: ['strict about being punctual', 'new to the whole club'] }),
+  ...rareOnly('vc-ambitious', 'ambitious', 3,
+    { carrier: 'Repainting the whole school in one weekend was ambitious.', key: 'big and hard to finish', trap: 'eager to do well', wrong: ['badly planned from the start', 'cheaper than everyone expected'] }),
+  ...rareOnly('vc-humble', 'humble', 3,
+    { carrier: 'The restaurant began as a humble van on the seafront.', key: 'small and not grand', trap: 'not boasting about yourself', wrong: ['busy from the first day', 'run by two brothers'] }),
+  ...rareOnly('vc-noble', 'noble', 3,
+    // Carrier changed to a PERSON: an *act* cannot be aristocratic, so the trap was eliminable on
+    // sense as well as form. A man can be either kind of noble, so both senses stay live.
+    { carrier: 'He was a noble man who gave up his place.', key: 'brave and good', trap: 'born into a titled family', wrong: ['quiet and very modest', 'well known in the town'] }),
+  ...rareOnly('vc-outrageous', 'outrageous', 3,
+    { carrier: 'She wore an outrageous hat to the wedding.', key: 'very unusual, so people stare', trap: 'so unfair it makes people angry', wrong: ['borrowed just for the day', 'far too small for her'] }),
 ];
 
 // The headword is NAMED in the stem: an option-set item has no bold/markup channel, so "the word in

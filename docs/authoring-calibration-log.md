@@ -1051,3 +1051,13 @@ in the family sits.
 gerund reliably, but recognises adjective phrases only from a word list, and produced false
 positives three times (`something`, `warm and friendly`, `fully grown and ready`). It catches gross
 form mismatches; adjective-phrase items still need an eye.
+
+**THE FILLER BAND — "plausible but not a synonym" (annie, 2026-08-08).** This is the vr-04 gate
+arriving as an AUTHORING CONSTRAINT rather than a check, and it is what makes this family's fillers
+slow to write. Each of the two non-sense options must be **plausible against the carrier** — grammatical
+in the frame, topically consistent — so the elimination route is closed; and simultaneously **must not
+drift into a synonym of the key**, or it is a defensible second answer. Options rejected on the second
+half while authoring: `to prop up firmly` (lean), `to make necessary` (warrant), `to argue with
+someone` (bait), `still hard and green` (mature). The test is the vr-04 one: *if you cannot write the
+sentence saying why the key beats it, the option comes out*. **Expect this band to be narrowest on the
+Mode B cards**, whose familiar sense is broad by definition — the trap writes itself, the fillers do not.
