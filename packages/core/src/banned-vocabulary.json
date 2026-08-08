@@ -1,5 +1,5 @@
 {
-  "note": "The ONE canonical ban list (manifesto L1/L2/L6/D1/\u00a76 voice + Addendum A \u00a71.3). Read by scripts/scan-vocab.mjs over source files, by packages/core content-gates over database rows, and by the publish doors. It lived only inside the scanner until 2026-08-02, which meant a database import could carry banned words past it \u2014 see corpus-decisions Entry 5.",
+  "note": "The ONE canonical ban list (manifesto L1/L2/L6/D1/§6 voice + Addendum A §1.3). Read by scripts/scan-vocab.mjs over source files, by packages/core content-gates over database rows, and by the publish doors. It lived only inside the scanner until 2026-08-02, which meant a database import could carry banned words past it — see corpus-decisions Entry 5.",
   "everywhere": [
     {
       "name": "\"guarantee\" (L1: no outcome guarantees)",
@@ -26,15 +26,15 @@
       "pattern": "\\b(for dummies|idiot'?s guide)\\b"
     },
     {
-      "name": "\"predicted pass\" (Addendum B \u00a74 / L1)",
+      "name": "\"predicted pass\" (Addendum B §4 / L1)",
       "pattern": "\\bpredicted (pass|score|grade)\\b"
     },
     {
-      "name": "\"pass probability\" (Addendum B \u00a74 / L1)",
+      "name": "\"pass probability\" (Addendum B §4 / L1)",
       "pattern": "\\bpass (probability|chance|likelihood)\\b"
     },
     {
-      "name": "\"will pass\" (Addendum B \u00a74 / L1)",
+      "name": "\"will pass\" (Addendum B §4 / L1)",
       "pattern": "\\b(will|would|should) pass\\b"
     }
   ],
@@ -48,17 +48,17 @@
       "pattern": "\\bwrong(ly)?\\b"
     },
     {
-      "name": "\"incorrect\" (\u00a71.3)",
+      "name": "\"incorrect\" (§1.3)",
       "pattern": "\\bincorrect(ly)?\\b"
     },
     {
-      "name": "\"error\" in child UI (\u00a71.3)",
+      "name": "\"error\" in child UI (§1.3)",
       "pattern": "\\berrors?\\b"
     },
     {
       "name": "\"behind\" in a progress sense (D1)",
       "pattern": "\\b(?:fall|falls|falling|fell|fallen|slip|slips|slipping|slipped|drop|drops|dropping|dropped|lag|lags|lagging|lagged|get|gets|getting|got|run|runs|running)\\s+(?:further\\s+|a\\s+bit\\s+|badly\\s+|well\\s+|way\\s+)?behind\\b|\\bbehind\\s+(?:schedule|target|plan|the\\s+(?:class|others|rest|group|pack|curve|expected|standard|average|national)|(?:his|her|their|your|my|the)\\s+(?:class|classmates|year|group|peers|level)|everyone|the\\s+other\\s+(?:children|pupils|students|kids))\\b|\\bbehind\\s+(?:in|at|on|with)\\s+(?:his|her|their|your|my|the)?\\s*\\w+|\\bbehind\\s+where\\b|\\b(?:so\\s+far|far|a\\s+bit|slightly|badly|well|much)\\s+behind\\b|\\b(?:you|he|she|they|we)\\s*(?:'re|'s|'ve)?\\s*(?:is|are|was|were|am|been|feel|feels|felt|look|looks|seem|seems)?\\s*behind\\b|\\bleft\\s+behind\\s+by\\b",
-      "note": "Narrowed 2026-08-02 (David). D1 protects a child from being told they are LAGGING. Spatial position is not that: \"a puppy behind a stair gate\" is innocent, and 23 of 23 real occurrences in the vault were spatial. This catches the progress senses \u2014 falling behind, behind the class, behind schedule, behind where you should be, \"you are behind\" \u2014 and leaves position alone."
+      "note": "Narrowed 2026-08-02 (David). D1 protects a child from being told they are LAGGING. Spatial position is not that: \"a puppy behind a stair gate\" is innocent, and 23 of 23 real occurrences in the vault were spatial. This catches the progress senses — falling behind, behind the class, behind schedule, behind where you should be, \"you are behind\" — and leaves position alone."
     },
     {
       "name": "\"weak\" (voice)",
@@ -77,28 +77,38 @@
       "pattern": "\\bshould have\\b"
     },
     {
-      "name": "\"limit\" as a restriction (\u00a71.3/\u00a71.5)",
+      "name": "\"limit\" as a restriction (§1.3/§1.5)",
       "pattern": "\\blimits?\\b"
     },
     {
-      "name": "\"quota\" (\u00a71.3)",
+      "name": "\"quota\" (§1.3)",
       "pattern": "\\bquotas?\\b"
     },
     {
-      "name": "\"restricted\" (\u00a71.3)",
+      "name": "\"restricted\" (§1.3)",
       "pattern": "\\brestrict(ed|ion|ions)?\\b"
     },
     {
-      "name": "\"you must\" (\u00a71.3)",
+      "name": "\"you must\" (§1.3)",
       "pattern": "\\byou must\\b"
     },
     {
-      "name": "\"unfortunately\" (\u00a71.3)",
+      "name": "\"unfortunately\" (§1.3)",
       "pattern": "\\bunfortunately\\b"
     },
     {
-      "name": "praise of the child, not the work (\u00a71.3)",
+      "name": "praise of the child, not the work (§1.3)",
       "pattern": "\\b(clever|smart|gifted|genius)\\b"
+    }
+  ],
+  "stanceOnly": [
+    {
+      "name": "\"hurry\" (no-urgency stance — barred in text addressed to the child)",
+      "pattern": "\\bhurr(y|ies|ied|ying)\\b"
+    },
+    {
+      "name": "\"quickly/quick\" (no-urgency stance — barred in text addressed to the child)",
+      "pattern": "\\bquick(ly)?\\b"
     }
   ]
 }

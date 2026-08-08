@@ -1122,3 +1122,32 @@ cannot reach. **The yield finding:** T4 hooks are NOT rare — 12 of 15 extracts
 double description, a say/do gap, an unreliable observation; 8 strong, 4 moderate, 3 weak). But a
 say/do gap supports **two or three questions, not six**, so fifteen extracts yield ~30 T4 items
 against the ~90 a 25% share would need. **The constraint is hook YIELD, not hook scarcity.**
+
+## R22 — Urgency language is ROLE-SCOPED, and the headword exemption cannot reach it
+*Annie's principle, ruled by David, 2026-08-08. Recorded by David.*
+
+**No list entry. Role-scoped instead:** `hurry` / `quickly` are barred where the platform ADDRESSES
+the child (`hint` — which covers hints AND walk scripts — and `instructions`) and permitted where they
+are CONTENT (`word-card` definitions, `item-option`, passage-derived stems). Implemented as a third
+ban band, `stanceOnly`, applied by role in `checkBannedVocabulary`.
+
+**Why a flat list entry was impossible.** It would have caught 18 things, and nearly all were
+legitimate: **10 word cards whose HEADWORD MEANS the banned word** — `hasty` ("in a hurry"), `nimble`,
+`brisk`, `agile`, `scurry`, `flit`, `alacrity`, `seize`, `spring`, `animated` — plus vocabulary items
+testing exactly those synonyms. A district cannot teach `hasty` while banning `hurry`.
+
+**THE FINDING WORTH KEEPING: `headwordInOwnCard` cannot cover this shape.** The exemption masks
+occurrences of THE HEADWORD when the headword itself trips a rule. Here the banned word sits in the
+DEFINITION — `hasty` does not match `/hurry/`, so nothing is masked and the card fails anyway. It is
+the same class as the ABOUT-language principle (a word may appear because it is what the text is
+ABOUT), in a form the existing exemption does not reach. **Worth knowing before the next rule of this
+kind: an exemption keyed to the headword protects the headword, not its gloss.**
+
+**What the role-scoped version actually catches — and the residual over-fire.** Across all content:
+**0 misconception hints, 3 walk scripts, 10 definitions correctly permitted.** But all three
+walk-script hits are FALSE POSITIVES by annie's own `mistake` test — each describes the TEXT, not the
+child's pace: "a happy animal in far too much of a hurry to be polite" (the Mole), "'Smartly' tells
+you he went quickly" (a gloss), "the room's quick view sounds like a fact" (the room's judgement).
+**Role-scoping separates FIELDS, not STANCE** — a walk script legitimately holds both instruction to
+the child and description of the passage, and no mechanical rule tells them apart. So the rule is a
+large improvement (18 false positives → 3) but not a clean one, and the residue is a reviewer call.

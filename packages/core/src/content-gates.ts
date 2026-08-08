@@ -293,7 +293,19 @@ interface BannedRule {
   name: string;
   pattern: string;
 }
-const BANNED = bannedVocabulary as { everywhere: BannedRule[]; childFacing: BannedRule[] };
+const BANNED = bannedVocabulary as { everywhere: BannedRule[]; childFacing: BannedRule[]; stanceOnly: BannedRule[] };
+
+/**
+ * ROLE-SCOPED BAN (annie's ruling via David, 2026-08-08). Urgency language is a STANCE fault, not a
+ * vocabulary one: "hurry"/"quickly" are barred where the platform ADDRESSES the child (hints, walk
+ * scripts, instructions) and permitted where they are CONTENT (a definition, an option, text drawn
+ * from a passage). A flat list entry would have broken the vocabulary district outright — `hasty`,
+ * `nimble`, `brisk`, `agile`, `scurry`, `flit` and `alacrity` are all DEFINED with the banned words,
+ * and `headwordInOwnCard` cannot rescue them because the banned word sits in the DEFINITION rather
+ * than being the headword, so there is no headword occurrence to mask.
+ */
+const STANCE_ROLES: ReadonlySet<ContentRole> = new Set<ContentRole>(['hint', 'instructions']);
+export const isStanceRole = (role: ContentRole): boolean => STANCE_ROLES.has(role);
 
 export type BanScope = 'everywhere' | 'child-facing';
 
@@ -482,8 +494,12 @@ export function checkBannedVocabulary(
   headwordInOwnCard?: string,
   /** Spans quoted from a passage — stepped over, and only these. */
   quotedSpans: readonly string[] = [],
+  /** The stance band applies only where the platform ADDRESSES the child. */
+  role?: ContentRole,
 ): ContentFailure[] {
-  const rules = scope === 'child-facing' ? [...BANNED.everywhere, ...BANNED.childFacing] : BANNED.everywhere;
+  const rules = scope === 'child-facing'
+    ? [...BANNED.everywhere, ...BANNED.childFacing, ...(role && isStanceRole(role) ? BANNED.stanceOnly : [])]
+    : BANNED.everywhere;
   const failures: ContentFailure[] = [];
   for (const broken of invalidQuotedSpans(text, quotedSpans)) {
     // A claim that does not resolve is REPORTED and its text stays in scope —
@@ -550,6 +566,7 @@ export function checkChildFacingText(input: {
       'child-facing',
       input.headwordInOwnCard,
       input.quotedSpans ?? [],
+      input.role,
     ),
     ...checkNoInternalIds(input.label, input.text),
     ...checkUkSpelling(input.label, input.text, input.quotedSpans ?? [], input.testedTokens ?? []),
