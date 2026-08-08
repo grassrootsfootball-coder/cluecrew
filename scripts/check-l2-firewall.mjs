@@ -14,6 +14,11 @@ const SCAN_ROOTS = ['apps/web', 'packages', 'content'];
 const ALLOWED_FILES = new Set([
   'packages/core/src/modes.ts',
   'packages/ui/src/tokens.ts',
+  // The ban list NAMES the banned phrases in order to ban them, so it trips every pattern here
+  // by construction. It is the same category as the two above and was simply never added, which
+  // turned CI red the moment "learning style" and "visual learner" were added as L2 entries: the
+  // firewall was reporting the firewall.
+  'packages/core/src/banned-vocabulary.json',
 ]);
 
 const PATTERNS = [

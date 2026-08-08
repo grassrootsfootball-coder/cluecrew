@@ -52,7 +52,7 @@ async function main(): Promise<void> {
     };
     const byId = new Map(rows.map((r) => [r.id, r]));
     const applied: string[] = [];
-    const items = (envelope.items as Array<Record<string, any>>).map((src) => {
+    const items = (envelope.items as Array<Record<string, unknown>>).map((src) => {
       const fields = GATE_FORCED[src.itemId];
       if (!fields) return src;
       const db = byId.get(src.itemId);

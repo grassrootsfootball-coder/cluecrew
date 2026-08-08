@@ -17,7 +17,7 @@ const SRC = '/Users/davidb/Downloads/ENG002prideprejudice (1).json';
 async function main(): Promise<void> {
   const item = await prisma.item.findUnique({ where: { id: 'ENG-002-pp-21' } });
   if (!item) { console.log('MISSING ENG-002-pp-21'); return; }
-  const batch = JSON.parse(readFileSync(SRC, 'utf8')) as { items: Array<Record<string, any>> };
+  const batch = JSON.parse(readFileSync(SRC, 'utf8')) as { items: Array<Record<string, unknown>> };
   const src = batch.items.find((i) => i.itemId === 'ENG-002-pp-21');
 
   const ex = { ...((item.explanation ?? {}) as Record<string, unknown>) };

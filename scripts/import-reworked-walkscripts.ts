@@ -20,7 +20,7 @@ const SOURCES: Array<[string, string]> = [
 
 async function main(): Promise<void> {
   for (const [itemId, path] of SOURCES) {
-    const batch = JSON.parse(readFileSync(path, 'utf8')) as { items: Array<Record<string, any>> };
+    const batch = JSON.parse(readFileSync(path, 'utf8')) as { items: Array<Record<string, unknown>> };
     const src = batch.items.find((i) => i.itemId === itemId);
     if (!src) { console.log(`MISSING ${itemId} in ${path}`); continue; }
     const item = await prisma.item.findUnique({ where: { id: itemId } });
@@ -35,7 +35,7 @@ async function main(): Promise<void> {
     const declared = (src.explanation.quotes ?? []) as Array<{ text: string }>;
     if (declared.length) {
       const existing = Array.isArray(stem.quotes) ? (stem.quotes as Array<unknown>) : [];
-      const texts = new Set(existing.map((q: any) => (typeof q === 'string' ? q : q?.text)));
+      const texts = new Set(existing.map((q: unknown) => (typeof q === 'string' ? q : q?.text)));
       stem.quotes = [...existing, ...declared.filter((q) => !texts.has(q.text))];
     }
 

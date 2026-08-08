@@ -719,7 +719,6 @@ const statisticsAverages: MathsFamily = {
     const last = mean * count - vals.reduce((s, x) => s + x, 0);
     if (last < 1 || last > hi) return { stem: '', solution: null, keyValue: 'x', operands: {}, distractors: [] }; // retry: keep the last value in range
     vals.push(last);
-    const sum = mean * count;
     const sorted = [...vals].sort((x, y) => x - y);
     const median = count % 2 ? sorted[(count - 1) / 2]! : (sorted[count / 2 - 1]! + sorted[count / 2]!) / 2;
     return {

@@ -6,7 +6,7 @@ const SRC: Array<[string,string]> = [
 ];
 async function main(){
   for (const [id,path] of SRC){
-    const batch = JSON.parse(readFileSync(path,'utf8')) as { items: Array<Record<string,any>> };
+    const batch = JSON.parse(readFileSync(path,'utf8')) as { items: Array<Record<string, unknown>> };
     const src = batch.items.find(i=>i.itemId===id)!;
     const item = await prisma.item.findUnique({ where:{id} });
     if(!item) continue;

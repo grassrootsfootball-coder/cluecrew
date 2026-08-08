@@ -25,7 +25,7 @@ const FIELDS = ['walkScript', 'hintCore'] as const;
 async function main(): Promise<void> {
   let changed = 0, skipped = 0, quoteWrites = 0;
   for (const path of SOURCES) {
-    const batch = JSON.parse(readFileSync(path, 'utf8')) as { items: Array<Record<string, any>> };
+    const batch = JSON.parse(readFileSync(path, 'utf8')) as { items: Array<Record<string, unknown>> };
     for (const src of batch.items) {
       const item = await prisma.item.findUnique({ where: { id: src.itemId } });
       if (!item) { console.log(`  MISSING IN DB: ${src.itemId}`); continue; }

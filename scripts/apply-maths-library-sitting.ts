@@ -103,7 +103,16 @@ async function main(): Promise<void> {
     for (const [sp, d] of Object.entries(DESC16)) { const id = idBySp(sp); if (!id) { missing.push(sp); continue; } await prisma.misconception.update({ where: { id }, data: { description: d } }); await attr(id, 'AMENDED', 'description', `Reframed description ${sp} (annie's sitting).`); described += 1; }
   }
 
-  console.log(`${APPLY ? 'APPLIED' : '--dry-run'}: created ${APPLY ? created : NEW.length}, reclass ${RECLASSIFY_PROCESS.length}, retire ${RETIRE.length}, reword ${Object.keys(REWORD).length}, rehint ${Object.keys(REHINT).length}, desc16 ${Object.keys(DESC16).length}`);
+  // Report what was DONE, not what was planned. The counters were being incremented and thrown
+  // away while this line printed the input lengths, so a sitting that silently skipped rows still
+  // reported the full count — the same asserted-vs-measured fault the generator sweep turned up.
+  const done = APPLY
+    ? `created ${created}, reclass ${reclassed}, retire ${retired}, reword ${reworded}, rehint ${rehinted}, desc16 ${described}`
+    : `created ${NEW.length}, reclass ${RECLASSIFY_PROCESS.length}, retire ${RETIRE.length}, reword ${Object.keys(REWORD).length}, rehint ${Object.keys(REHINT).length}, desc16 ${Object.keys(DESC16).length}`;
+  const planned = NEW.length + RECLASSIFY_PROCESS.length + RETIRE.length + Object.keys(REWORD).length + Object.keys(REHINT).length + Object.keys(DESC16).length;
+  const applied = created + reclassed + retired + reworded + rehinted + described;
+  console.log(`${APPLY ? 'APPLIED' : '--dry-run'}: ${done}`);
+  if (APPLY && applied !== planned) console.log(`  SHORT: ${applied} of ${planned} rows changed — see MISSING below.`);
   if (missing.length) console.log('  MISSING ids for:', missing.join(', '));
   if (APPLY) { const path = await exportMathsMisconceptions(prisma); console.log(`re-exported → ${path.split('/').pop()}`); }
   await prisma.$disconnect();
