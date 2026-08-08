@@ -750,3 +750,28 @@ bare plural never right) and named/unambiguously-singular animate possessive (`T
 fixed). **Do not widen it** (annie): the singular possessive MOVES (keys A/B/C by position), the
 arguable O sites are abundant so the ladder fills, and `the coat belonged to Tom` gives an N item —
 position variety + N, comma's answer, not more constructions. O sites typed by reading (R14).
+
+## R16 — Possessive: the R-well is THREE well types, and N items need an O
+*Annie, 2026-08-08. Recorded by David, before authoring the possessive bank.*
+
+Construction (2) — "named or singular animate" — is only unambiguous when the DETERMINER fixes the
+number, because a plural name blurs exactly like a plural noun (`the Smiths house` has the same three
+readings as `the girls coats`). So the unarguable R-well is **three well types**:
+1. **Irregular-plural possessive** — `children's`, `men's`, `women's`, `people's` (bare plural never right).
+2. **Proper-name possessive** — `Tom's bike`, `Sara's book`.
+3. **Singular determiner + singular noun** — `my brother's`, `the girl's`, `her teacher's`. The
+   determiner does the work: `my brother's` fixes number in a way `brothers` cannot.
+The useful pair is (3) against its plural: `my brother's bike` is required, `my brothers bike` is
+arguable, and they differ by one word — a bank holding both teaches the actual rule (the apostrophe's
+POSITION depends on the number, not the noun).
+
+**O subtyping — two children, probably two tags (drafted for the reviewer to rule).** The child who
+picks an attributive noun-modifier (`the school gate`) thinks a noun before a noun always shows
+possession; the child who picks a plural-before-noun (`the girls coats`) knows possession is involved
+but cannot place the apostrophe. Different hints, so likely two tags rather than one with a reading
+parameter — reviewer rules on the drafts.
+
+**N items carry at least one O (same as comma rung 0).** `The coat belonged to Tom` has no apostrophe
+site anywhere — hollow, nothing to consider. A good N item keeps an arguable site and no required one,
+so the child must DECIDE the arguable one does not need an apostrophe: `The teachers lounge had new
+chairs this term` is a real N because `teachers lounge` is a tempting, defensible attributive.
