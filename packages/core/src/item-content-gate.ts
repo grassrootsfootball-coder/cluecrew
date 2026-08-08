@@ -90,6 +90,15 @@ export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
     return (Array.isArray(v) ? v : [v]).flatMap((x) => String(x ?? '').split(/\s+/)).filter(Boolean);
   });
   const scriptTested = [...testedTokens, ...optionWords];
+  // Quotations declared ON THE EXPLANATION. The authoring contract puts a walk script's quoted
+  // spans in `explanation.quotes` — where they are USED — but this gate previously read only
+  // `stem.quotes`, so an R4 declaration on a walk script was silently invisible and the passage's
+  // own word still failed the ceiling. Both sources are honoured now, filtered to spans actually
+  // present in the field being checked (a declaration that does not resolve is still reported).
+  const explanationQuotes = Array.isArray(explanation.quotes)
+    ? (explanation.quotes as Array<{ text?: string }>).map((q) => q.text ?? '').filter(Boolean)
+    : [];
+  const declaredForScripts = [...stemQuotes, ...explanationQuotes];
   for (const field of ['walkScript', 'walk', 'hintCore'] as const) {
     const text = explanation[field];
     if (typeof text !== 'string' || !text.trim()) continue;
@@ -98,7 +107,7 @@ export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
         role: 'hint',
         label: `item:${item.id} explanation.${field}`,
         text,
-        quotedSpans: spansPresentIn(text, stemQuotes),
+        quotedSpans: spansPresentIn(text, declaredForScripts),
         testedTokens: scriptTested,
       }),
     );
