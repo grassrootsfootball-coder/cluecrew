@@ -39,6 +39,21 @@ The build is governed by documents, and the documents win arguments.
   did all three, after it was already built and signed. Anyone extending the
   vault will assume it is a spelling-correction-grade edit; it is not. Re-run the
   vocabulary audit and re-sign the affected family after any such change.
+- ONE DIRECTION ONLY FOR AUTHORED ITEM CONTENT: COWORK AUTHORS, THE DB HOLDS
+  (David, 2026-08-08, after the two English comprehension batches drifted on 13
+  fields). Both copies were being edited and neither side knew — Cowork applied
+  R23 to `pp-16` while this repo applied the R22 urgency rewording to `WIW-19`
+  and `pp-13`. Both edits were CORRECT; the fault was two-way editing, not bad
+  judgement, and a drift that size is invisible until someone diffs 44 items.
+  So: **Cowork is authoritative for authored item content** (stems, options,
+  walk scripts, hints, quotations). This repo does not edit it in place — it
+  imports, gates, and when a GATE forces a change it exports the whole batch
+  back so Cowork absorbs it and stays the single source. `pnpm --filter
+  @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-english-batches.ts`
+  is that return path. The DB remains authoritative for everything the gates and
+  the platform own: status, pool, signatures, misconception library, tiers.
+  Before importing a batch, diff it against the DB — if both have moved, the
+  gate-forced side exports first and Cowork merges, never the reverse.
 - Content decisions (items, chapters, misconceptions) go through the CMS
   review pipeline; nothing skips the reviewer.
 - A script that applies reviewer decisions RE-EXPORTS the affected artefact as
