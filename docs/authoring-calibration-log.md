@@ -969,3 +969,34 @@ punctuation families. It is either accepting that **English T4 is a spelling-and
 tier**, or building T4 out of **comprehension** — the second reviewer's district, where the
 genuinely hard unarguable questions live. A paper weighted to spelling at the top is defensible; one
 that pretends to an even spread it cannot supply is not. **Design question, to be ruled before import.**
+
+## R19 — CONDITIONS ON THE SPaG SIGNATURES (not findings — they need an owner)
+*Annie, 2026-08-08, closing the SPaG district at 13/13 signed. Recorded by David.*
+
+Three requirements accumulated across the build sit on the SERVING and RENDER paths. Each is
+something a signature ASSUMES to be true and cannot itself guarantee, so each needs an owner:
+1. **The cloze four-option render.** Cloze has no N, deliberately; the other eleven families render
+   a fifth labelled option. The VISUAL difference must carry the signal the stem cannot, or a child
+   who has learned that N is always there will hunt for it in a timed test. (Verified true of the
+   authored corpus — error-spot items hold 5 options, cloze 3–4 — but **no renderer exists for the
+   generated families**, so this is a requirement, not a verified fact.)
+2. **The comma mirrored-pair same-session constraint.** The fronted/trailing pairs are the district's
+   ONLY sanctioned repeated sentence, allowed because the repetition teaches the contrast. Served to
+   one child in one session they become a giveaway. The two ids are a LINKED PAIR, not independent
+   items, and the serving layer must honour that.
+3. **Per-family depth sizing.** Depth varies from 4 to 24 across the thirteen and cannot be applied
+   as one number. Every signature carries its own figure; serving must respect them individually.
+
+**And a product decision, not a content one: the English T4 ruling.** T4 is served by six of thirteen
+families and holds 18% of items, because the top tier needs unarguable difficulty and difficulty is
+where arguability lives. Either English T4 is a spelling-and-comprehension tier, or T4 is built out
+of COMPREHENSION — the second reviewer's district, where the hard unarguable questions live. To be
+put to the blueprint owner **with the reason, not the number**: the number reads as a shortfall and
+it is a consequence.
+
+**Depth correction on signing (2026-08-08).** The reviewer's recalled depths came from the presented
+sample, not the built banks: word class is **6** (not 4), connectives **6** (not 4) — more than
+signed for, no defect — and tense T2 was **4**, not the 8 signed for. Rather than correct a signature
+downward, the definite-past well was WIDENED to 8 (Two days ago / Last summer / Yesterday morning / A
+week ago), so the signed figure is true. A signature carrying a wrong depth is a defect; checking the
+built bank against the recalled figure is part of signing.
