@@ -391,8 +391,24 @@ applied correctly.
 6. **Tier reach is honest.** SPaG ceilings at T4 (corpus); no family reaches T5. A family
    reaches T1 only where the error can be made genuinely obvious (near-miss 0).
 
-Homophones was rebuilt to all of this and sent for check before the other ten; they get the
-same pass once it is signed — the maths discipline of proving one family before the volume run.
+Homophones was rebuilt to all of this and SIGNED (annie, 2026-08-08, T1–T4) with a bank-depth
+qualification carried on the signature (24 verified sentences, 6/rung → a tier emits six
+distinct items; two sittings exhaust a tier — a serving concern to size before volume, same
+shape as M-place). R13 carries all six rules to the other ten in one pass.
+
+**Two notes for whoever grows a bank (annie, 2026-08-08):**
+- **Rung-zero is structurally the hardest to grow, and matters most.** A 0-near-miss item needs
+  three of four parts with NO homophone, and English function words are dense with them (to/two,
+  for/four, by/buy, in/inn, no/know, one/won, here/hear, week/weak, our/hour, would/wood …). So
+  the T1 bucket will always be thinnest, and it serves the youngest, least secure children, who
+  tolerate repetition worst. Two mitigations: **allow rung-zero parts to be shorter** (a two-word
+  part is easier to keep clean than a four-word one); and **the pair-share cap may need to be a
+  fraction of the available bank, not a fixed third**, because it binds hardest at T1.
+- **Decide the homophone list's edge once, not per sentence.** Weak-form / near-homophone pairs
+  (were/we're/wear) are excluded by the current lookup, so a sentence like "games were played"
+  reads as rung-zero — correct by the lookup, but a child taught were/we're may flag it. Whether
+  the list includes weak-form and near-homophone pairs changes which sentences qualify as clean;
+  make that call once (it is a lookup edit) rather than arguing it per sentence.
 
 ## R12 — Comprehension misconceptions cannot have executors — a property, not a gap
 *David, 2026-08-08, recorded during the English generator build.*
