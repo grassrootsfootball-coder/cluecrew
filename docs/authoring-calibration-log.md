@@ -426,6 +426,17 @@ dozen:
 The test for any proposed trap: *would a taught child hesitate here?* If not, it is not a trap,
 however much it superficially resembles the error pattern.
 
+**RULING (annie, 2026-08-08): rung 3 = three traps among four parts; error items are all-live.**
+An error item spends one part on the error, so at the ceiling its other three parts are all traps
+by definition — 0 clean. Requiring a clean part would force error items down to two traps (rung 2),
+leaving the family no top rung for error items at all; that is a worse ladder, not a stricter one.
+And the all-live item is the correct T4 experience ("every other part looks wrong too"), the thing
+that distinguishes it from T1's "one obvious slip among plain parts". Confirmed for all four signed
+families incl. homophones; no re-sign. **Property to record so tag-exposure figures aren't misread:
+`en-error-spot-guessed-a-part` cannot appear on a top-rung ERROR item (no clean part there), so it
+is only reachable at rungs 0–2 and on N-keyed items. Its exposure legitimately drops off at T4 —
+that is the design, not a break.**
+
 **Where no generative rule exists, use a REVIEWED LIST — and call it a list** (annie, 2026-08-08;
 now the second family to need it). Two of the eleven have no rule: **homophones** ("is a homophone"
 has no cheaper test than membership) and **silent letters** (frequency and position both fail to
