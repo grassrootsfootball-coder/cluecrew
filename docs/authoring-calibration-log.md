@@ -1148,6 +1148,14 @@ kind: an exemption keyed to the headword protects the headword, not its gloss.**
 walk-script hits are FALSE POSITIVES by annie's own `mistake` test — each describes the TEXT, not the
 child's pace: "a happy animal in far too much of a hurry to be polite" (the Mole), "'Smartly' tells
 you he went quickly" (a gloss), "the room's quick view sounds like a fact" (the room's judgement).
-**Role-scoping separates FIELDS, not STANCE** — a walk script legitimately holds both instruction to
-the child and description of the passage, and no mechanical rule tells them apart. So the rule is a
-large improvement (18 false positives → 3) but not a clean one, and the residue is a reviewer call.
+**THE RESIDUAL FINDING — the honest limit of the rule. Role-scoping separates FIELDS, not STANCE.**
+A walk script legitimately holds BOTH instruction to the child AND description of the passage, and no
+mechanical rule tells them apart. The rule is a **large improvement, not a clean one: 18 catches → 3,
+with every vocabulary card surviving.** Any future stance rule will meet the same limit, because the
+distinction it rests on is a judgement about who is being addressed, not a property of the field.
+
+**Resolved by rewording rather than exempting (David, 2026-08-08).** The three were reworded — "in far
+too much of a **rush** to be polite", "he went **at speed**", "the room's **hasty** view" — so the rule
+now fires **ZERO** across all content while still permitting the ten definitions. Rewording beats a
+permanent exception list: the rule keeps guarding against real stance drift, and nothing has to
+remember why three items are allowed to break it. (`scripts/reword-urgency-walkscripts.ts`.)
