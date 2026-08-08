@@ -629,7 +629,7 @@ export const CONTRACTION_BANK: EsSentence[] = [
   { id: 'ct1-youre', klass: "you're", parts: ["You're very kind", 'to lend', 'me your pen', 'today'], errorIndex: 0, wrong: 'Your very kind', intended: 1, nmVerified: [2] }, // your → pen
   { id: 'ct1-were', klass: "we're", parts: ["We're leaving now", 'before it', 'gets dark', 'over there'], errorIndex: 0, wrong: 'Were leaving now', intended: 1, nmVerified: [3] }, // there → locative
   // 2 near-miss — two other parts carry contraction words, each CORRECT for the sentence.
-  { id: 'ct2-there', klass: 'there', parts: ['There stood the girls', 'with their bags', 'and your coat', 'by the gate'], errorIndex: 0, wrong: 'Their stood the girls', intended: 2, nmVerified: [1, 2] }, // their → the girls; your → coat
+  { id: 'ct2-there', klass: 'there', parts: ['There are three children', 'playing with their ball', 'in your garden', 'right now'], errorIndex: 0, wrong: 'Their are three children', intended: 2, nmVerified: [1, 2] }, // key there→their (a real KS2 slip: "their are"); their → the children; your → garden
   { id: 'ct2-wereverb', klass: 'were', parts: ['The girls were happy', "when you're kind", 'and their friends', 'cheer loudly'], errorIndex: 0, wrong: "The girls we're happy", intended: 2, nmVerified: [1, 2] }, // you're → you are; their → the girls
   { id: 'ct2-whose', klass: 'whose', parts: ['Whose turn is it', 'now the girls', 'are sharing their books', 'near your desk'], errorIndex: 0, wrong: "Who's turn is it", intended: 2, nmVerified: [2, 3] }, // their → the girls; your → desk
 ];

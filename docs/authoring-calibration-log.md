@@ -717,3 +717,11 @@ carried in the main verb where a child reads it first.
 - **Speech:** check the CLEAN parts — British allows single or double quotation marks, and
   comma-vs-colon before speech varies, so a clean part holding a punctuation CHOICE is optional,
   not forbidden.
+
+**Possessive family — the optional type must record WHICH reading makes a part arguable (annie
+2026-08-08).** `the girls coats` has three readings — singular possessive (`girl's`), plural
+possessive (`girls'`), attributive plural (`girls` as a noun-modifier) — and they take different
+punctuation. A child defending any of the three is defending something real, so the O-type is not
+binary: it must carry which reading it is, or the `over-applied` tag is as vague as the borrowed
+franchise tags were at the start of the district. Type possessive O sites as `O:sing-poss` /
+`O:plur-poss` / `O:attributive`, so the trap tag says what the child actually did.
