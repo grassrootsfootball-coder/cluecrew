@@ -457,7 +457,23 @@ so the banks are authored to it, not retrofitted:**
   flags it is marked wrong.
 - **Cloze.** R13's spot-rules do not apply (there is no error to spot). The ladder analogue is
   how many options grammatically PARSE in the slot: rung 0 only the key parses; by rung 3 all four
-  parse and only one is right on sense or register — the same derive-and-check discipline.
+  parse and only one is right on sense or register — the same derive-and-check discipline. At rung
+  3 the DECIDING FACTOR (sense / register / collocation) is named per item; if the author cannot
+  write one sentence why the key beats each distractor, the option comes out (the vr-04 rule).
+
+**Comma family — a small bank is a FINDING, not a shortfall (annie, 2026-08-08, recorded before
+the build).** The comma clean-part rule is strict by necessity: a clean part must admit no
+acceptable comma insertion at any position. English rarely forbids a comma outright, so this rule
+may leave the comma family at one or two rungs where the other three punctuation families reach
+four. That is the rule telling the truth about comma placement, not a defect — record it (M-06a:
+fewer rungs, or a single honest tier, stated) so no one later "fixes" comma to match its siblings
+by loosening the very rule that makes it correct.
+
+**Pool sizing carried on the spelling families (annie, 2026-08-08).** An honest small bank beats a
+padded large one: **double letters ships at 4/rung** (16), its key pool restricted to child-used
+words though its trap pool is the full ~30; **silent letters aims at 6/rung** on the 36-word list
+but drops to 5 or 4 if rung-3 cannot be built cross-group; **suffix holds 6/rung**. Bank depth is
+the serving caveat already carried on every SPaG signature.
 
 Homophones was rebuilt to all of this and SIGNED (annie, 2026-08-08, T1–T4) with a bank-depth
 qualification carried on the signature (24 verified sentences, 6/rung → a tier emits six
