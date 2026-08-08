@@ -498,9 +498,12 @@ not the word ("by the river" is optional in one sentence, part of a required lis
 cue-classifier would mis-type trailing adverbs and appositives as forbidden — the exact mis-typed-
 clean-part fault caught in three districts. So each sentence is typed by hand and REVIEWED. To keep
 the 24th sentence typed like the first, the SETTLED CASES (extend as new ones arise):
-- **Required (R) — beyond argument only:** fronted subordinate clause (comma after it); a list's
-  internal commas (between items 1–2, 2–3). Nothing "strongly preferred" — that is a trap in a
-  key's clothes.
+- **Required (R) — beyond argument only:** fronted subordinate CLAUSE — one with a verb (`When the
+  bell rang`, `After we finished lunch`) — takes a required comma; a fronted adverbial PHRASE
+  without a verb (`After the match`, `For the fair`, `In the morning`) is **O, not R** (annie
+  2026-08-08 — the distinction is the verb, and it is subtle enough to state explicitly). Also R:
+  a list's internal commas (between items 1–2, 2–3). Nothing "strongly preferred" — that is a trap
+  in a key's clothes.
 - **Optional (O) — a trap:** trailing prepositional phrase; trailing adverb; the **serial-comma
   slot** (pre-final-conjunction in a list — British: optional, a trap, NEVER the key); a short
   fronted adverbial; **a coordinator joining two INDEPENDENT clauses** (British: optional — "the
@@ -525,6 +528,22 @@ tops at rung 1 unless the key is a LIST (verb inside the list part), which reach
 unreachable. **Comma therefore serves T1–T3, not T4** — an honest ladder outcome of the shape, like
 the collapsed maths families. (Spelling families keep four parts: their task is word-level, so
 mid-phrase splits are readable and acceptable there — tightened only if a reviewer asks.)
+
+**The constituent rule is COMMA-SPECIFIC — do not apply it district-wide (annie 2026-08-08).** It
+exists because comma items are judged at part BOUNDARIES. Spelling items are judged at the WORD, so
+a mid-phrase part (`beyond the`, `on her`) is perfectly readable and its boundary carries nothing;
+double has 0 such splits, suffix 4, silent 5, all on CLEAN parts where nothing rests on the
+boundary. Applying the constituent rule there would regenerate three SIGNED families (moving their
+fingerprints, voiding signatures) for no gain — the rule outside its reason. Left as-is by ruling.
+
+**Two things to hold as the comma bank expands to 24 (annie 2026-08-08).** (1) **Cap the opening
+construction like the errored token (rule 7).** The R-well is narrow — every keyed non-list item
+uses a fronted subordinate clause, so without a cap a bank reads monotonously and teaches "the
+answer is part A". The `diversityKey` is the opening construction (subordinator / list / none). (2)
+**Watch the key-position spread across the full 24, not the 12** — required commas come only from
+fronted clauses (key A) and lists (A or B), so keys structurally cluster at A/B/N; the mitigation
+is an N-heavy bank plus list-at-B items to dilute the A cue. A remains the modal keyed position —
+an inherent property of the R-well, worth stating, not a bug.
 
 **The general lesson (annie, 2026-08-08 — state it this way, it is the reusable part).** "No comma
 is acceptable here" is not a thin property, it is a nearly-EMPTY one *at phrase boundaries*, and a

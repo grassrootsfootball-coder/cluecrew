@@ -599,6 +599,69 @@ const SILENT_V2 = errorSpotFamily({
 });
 
 // ---------------------------------------------------------------------------------------
+// COMMAS — the REFRAME (annie 2026-08-08): "which part NEEDS a comma", not spot-the-mistake
+// (which rests on "no comma is acceptable here", nearly empty at phrase boundaries). THREE parts
+// + N, so every part is a constituent; comma serves T1–T3 (three parts can't hold three optional
+// sites plus a main verb, so rung 3 is unreachable). Site typing is REVIEWED per sentence (the
+// third no-rule case) — R required beyond argument, O optional (a trap), F forbidden. Key = the R
+// part, or N. Ladder = number of O parts (rung 0/1/2). diversityKey = the opening construction,
+// capped like the errored token because the R-well is narrow (fronted clauses + lists only).
+// ---------------------------------------------------------------------------------------
+const COMMA_STEM = 'One part must have a comma but does not. Which part is it? If every part is right, choose N.';
+type CommaSite = 'R' | 'O' | 'F';
+const COMMA_TAG: Record<'O' | 'F', string> = { O: 'en-comma-over-applied', F: 'en-comma-not-a-comma-site' };
+export interface CommaSentence { id: string; open: string; parts: [string, CommaSite][] }
+export const commaRung = (s: CommaSentence): number => s.parts.filter((p) => p[1] === 'O').length;
+export const commaKeyIndex = (s: CommaSentence): number => s.parts.findIndex((p) => p[1] === 'R');
+const commaNm = (tier: Tier): number => tier - 1; // T1→0, T2→1, T3→2
+export const COMMA_BANK: CommaSentence[] = [
+  // rung 0 — one R (fronted CLAUSE) or N, zero O.
+  { id: 'c0-when', open: 'when', parts: [['When the fire alarm rang', 'R'], ['the class left', 'F'], ['the quiet room', 'F']] },
+  { id: 'c0-because', open: 'because', parts: [['Because the bus was late', 'R'], ['we missed', 'F'], ['the early train', 'F']] },
+  { id: 'c0-although', open: 'although', parts: [['Although he was tired', 'R'], ['he finished', 'F'], ['the whole race', 'F']] },
+  { id: 'c0-once', open: 'once', parts: [['Once the film ended', 'R'], ['we cleared', 'F'], ['the small room', 'F']] },
+  { id: 'c0-while', open: 'while', parts: [['While we waited', 'R'], ['she read', 'F'], ['a long book', 'F']] },
+  { id: 'c0-n1', open: 'none', parts: [['The old clock', 'F'], ['filled', 'F'], ['the narrow hallway', 'F']] },
+  { id: 'c0-n2', open: 'none', parts: [['The heavy box', 'F'], ['crushed', 'F'], ['the paper cup', 'F']] },
+  { id: 'c0-n3', open: 'none', parts: [['A kind man', 'F'], ['opened', 'F'], ['the front gate', 'F']] },
+  // rung 1 — one O.
+  { id: 'c1-if', open: 'if', parts: [['If it rains', 'R'], ['we will stay', 'F'], ['in the hall', 'O']] },
+  { id: 'c1-when', open: 'when', parts: [['When the game ended', 'R'], ['the crowd cheered', 'F'], ['for the winners', 'O']] },
+  { id: 'c1-before', open: 'before', parts: [['Before the storm came', 'R'], ['we ran', 'F'], ['to the house', 'O']] },
+  { id: 'c1-since', open: 'since', parts: [['Since nobody replied', 'R'], ['she waited', 'F'], ['by the door', 'O']] },
+  { id: 'c1-as', open: 'as', parts: [['As the sun set', 'R'], ['we walked', 'F'], ['along the beach', 'O']] },
+  { id: 'c1-n1', open: 'none', parts: [['The children', 'F'], ['played games', 'F'], ['in the park', 'O']] },
+  { id: 'c1-n2', open: 'none', parts: [['The dog', 'F'], ['slept quietly', 'F'], ['on the mat', 'O']] },
+  { id: 'c1-n3', open: 'none', parts: [['The man', 'F'], ['read his book', 'F'], ['on the train', 'O']] },
+  // rung 2 — two O. Keyed only via LIST (verb inside the list part); the rest N.
+  { id: 'c2-list1', open: 'list', parts: [['We packed apples', 'R'], ['pears and plums', 'O'], ['for the trip', 'O']] },
+  { id: 'c2-list2', open: 'list', parts: [['For the fair', 'O'], ['we baked cakes', 'R'], ['buns and tarts', 'O']] },
+  { id: 'c2-list3', open: 'list', parts: [['On Friday', 'O'], ['we bought bread', 'R'], ['milk and eggs', 'O']] },
+  { id: 'c2-list4', open: 'list', parts: [['She grew beans', 'R'], ['peas and corn', 'O'], ['in the garden', 'O']] },
+  { id: 'c2-n1', open: 'none', parts: [['The bus stopped', 'F'], ['at the corner', 'O'], ['near the market', 'O']] },
+  { id: 'c2-n2', open: 'none', parts: [['The plane flew', 'F'], ['over the hills', 'O'], ['past the clouds', 'O']] },
+  { id: 'c2-n3', open: 'phrase', parts: [['After the match', 'O'], ['we ate lunch', 'F'], ['by the river', 'O']] },
+  { id: 'c2-n4', open: 'none', parts: [['The river flowed', 'F'], ['under the bridge', 'O'], ['into the lake', 'O']] },
+];
+const COMMA_NEEDS_V2: SpagFamily = {
+  id: 'spag-punct-comma-needs',
+  name: 'Commas (needs a comma)',
+  subtype: 'punctuation',
+  franchise: 'en-comma-subject-verb-split',
+  tierRule: (t) => (([1, 2, 3] as Tier[]).includes(t) ? `Commas — three parts; which part must have a comma? ${commaNm(t)} of the other parts is a place a comma may sit but need not.` : ''),
+  structuralParams: (t) => ({ optionalParts: commaNm(t) }),
+  numberRanges: (t) => ({ segments: [3, 3], optionalParts: [commaNm(t), commaNm(t)] }),
+  draft: (tier, r): SpagItemDraft => {
+    const rung = commaNm(tier);
+    const s = randPick(r, COMMA_BANK.filter((x) => commaRung(x) === rung));
+    const key = commaKeyIndex(s);
+    const opts: SpagOption[] = s.parts.map(([text, site], i) => (i === key ? { value: text, isKey: true } : { value: text, isKey: false, misconceptionId: COMMA_TAG[site as 'O' | 'F'] }));
+    opts.push(key < 0 ? { value: 'No mistake', isKey: true } : { value: 'No mistake', isKey: false, misconceptionId: 'en-n-option-avoidance' });
+    return { stem: COMMA_STEM, options: opts, params: { segments: 3, optionalParts: commaRung(s) }, dedupKey: s.id, diversityKey: s.open };
+  },
+};
+
+// ---------------------------------------------------------------------------------------
 // THE ELEVEN
 // ---------------------------------------------------------------------------------------
 export const SPAG_FAMILIES: SpagFamily[] = [
@@ -611,7 +674,7 @@ export const SPAG_FAMILIES: SpagFamily[] = [
   punctFamily('en-apostrophe-possession', 'Apostrophes', [1, 2, 3, 4]),
   punctFamily('en-terminal-punctuation-blind', 'Terminal and boundary', [2, 3, 4]),
   punctFamily('en-speech-punctuation-inside', 'Speech punctuation', [2, 3, 4]),
-  punctFamily('en-comma-subject-verb-split', 'Commas', [2, 3, 4]),
+  COMMA_NEEDS_V2,
   // Cloze (3)
   clozeFamily('en-word-class-by-ending', 'Word class by job', [1, 2, 3]),
   clozeFamily('en-tense-sequence', 'Tense sequence', [2, 3, 4]),
