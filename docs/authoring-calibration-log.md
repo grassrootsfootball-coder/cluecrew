@@ -937,3 +937,35 @@ finished her homework` and `she finished her homework` are both fine in isolatio
 item MUST contain a forcing marker and **the declared factor must NAME it** — otherwise "grammar"
 gets claimed for items where the grammar does not actually decide. Same shape as the required-site
 test in comma.
+
+**Cloze tiers, ruled (annie, 2026-08-08).** Word class **T2**; tense **T2 + T4** (the T3 gap is
+correct — inventing a rung there would mean a tense that is *preferable* rather than forced, which
+R18 forbids); connectives **T3**; question tags **T2, not T3**. The tags reasoning is worth keeping:
+matching subject, auxiliary and polarity *sounds* harder than a single slot, but the child is
+SELECTING, not deriving — `are you` / `isn't it` / `don't you` are audibly wrong to any native
+speaker before analysis, and tags are among the last things a native speaker gets wrong in speech.
+**Difficulty that looks like it is in the content and is absent in practice — the vr-04 problem
+mirrored.** T2, revisited if serving data shows T2-rate failure; that is measurable, and the
+judgement is a prediction, not a fact.
+
+**Tense's T4 well widened 2 → 7 (2026-08-08), on the two patterns that genuinely FORCE.** Two items
+is a pair, not a tier. Of the three constructions proposed, only one met the forcing test annie
+herself set: `before we reached the station, the train had left` and `after she had finished, she
+went out` both accept the past simple equally ("the train left before we reached the station"), so
+the perfect is PREFERRED, not forced — R18 forbids them; and `she had already eaten when we called`
+is genuinely forced but has only ONE parsing option, making it a T2-shaped item. The two forcing
+patterns, both already in the bank, were extended instead: **(a) coordination with a past-simple
+verb** forces past simple (`the cat ___ out and vanished`); **(b) `by the time` + a completed prior
+event** forces past perfect (`by the time the bus came, we ___ for an hour`). T4 tense is now 7.
+
+**TIER WEIGHTS — for whoever owns the English blueprint, with the REASON, not just the number.**
+Across all thirteen SPaG families: **T1 41 items (23%) · T2 59 (33%) · T3 47 (26%) · T4 33 (18%)**,
+and T4 is served by only **six** families — the four spelling families, speech, and tense.
+**The top tier needs unarguable difficulty, and difficulty is where arguability lives.** Every
+punctuation family capped at T3 because the constructions that would make a T4 item are precisely
+the ones English permits two forms of; spelling reaches T4 because a misspelling is binary at any
+level of difficulty. So the shortfall is a CONSEQUENCE, not a gap, and the fix is not more
+punctuation families. It is either accepting that **English T4 is a spelling-and-comprehension
+tier**, or building T4 out of **comprehension** — the second reviewer's district, where the
+genuinely hard unarguable questions live. A paper weighted to spelling at the top is defensible; one
+that pretends to an even spread it cannot supply is not. **Design question, to be ruled before import.**

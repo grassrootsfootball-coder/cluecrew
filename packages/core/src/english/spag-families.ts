@@ -823,6 +823,11 @@ const TENSE_BANK: ClozeSentence[] = [
   // T4 — two parse; the choice is still GRAMMAR (annie retyped these from sense, 2026-08-08).
   { id: 'tn-bell', klass: 'run', sentence: 'When the bell rang, the class ___ outside and lined up.', key: 'ran', distractors: [{ value: 'had run', misconceptionId: TS }, { value: 'runs', misconceptionId: TS }, { value: 'will run', misconceptionId: TS }], parses: 2, factor: 'grammar', marker: 'past-tense subordinate clause + coordinated past main verb (lined up)' },
   { id: 'tn-bytime', klass: 'start', sentence: 'By the time we arrived, the film ___ without us.', key: 'had started', distractors: [{ value: 'started', misconceptionId: TS }, { value: 'starts', misconceptionId: TS }, { value: 'will start', misconceptionId: TS }], parses: 2, factor: 'grammar', marker: 'by the time (completed prior event forces past perfect)' },
+  { id: 'tn-cat', klass: 'run-out', sentence: 'When she opened the door, the cat ___ out and vanished.', key: 'ran', distractors: [{ value: 'had run', misconceptionId: TS }, { value: 'runs', misconceptionId: TS }, { value: 'will run', misconceptionId: TS }], parses: 2, factor: 'grammar', marker: 'coordination with a past-simple verb (vanished) forces past simple' },
+  { id: 'tn-bus', klass: 'wait', sentence: 'By the time the bus came, we ___ for an hour.', key: 'had waited', distractors: [{ value: 'waited', misconceptionId: TS }, { value: 'wait', misconceptionId: TS }, { value: 'will wait', misconceptionId: TS }], parses: 2, factor: 'grammar', marker: 'by the time + duration (completed prior event forces past perfect)' },
+  { id: 'tn-film', klass: 'walk-home', sentence: 'When the film ended, we ___ home and went to bed.', key: 'walked', distractors: [{ value: 'had walked', misconceptionId: TS }, { value: 'walk', misconceptionId: TS }, { value: 'will walk', misconceptionId: TS }], parses: 2, factor: 'grammar', marker: 'coordination with a past-simple verb (went) forces past simple' },
+  { id: 'tn-teacher', klass: 'copy', sentence: 'By the time the teacher arrived, the class ___ the whole page.', key: 'had copied', distractors: [{ value: 'copied', misconceptionId: TS }, { value: 'copies', misconceptionId: TS }, { value: 'will copy', misconceptionId: TS }], parses: 2, factor: 'grammar', marker: 'by the time (completed prior event forces past perfect)' },
+  { id: 'tn-rain', klass: 'go-out', sentence: 'When the rain stopped, we ___ outside and played.', key: 'went', distractors: [{ value: 'had gone', misconceptionId: TS }, { value: 'go', misconceptionId: TS }, { value: 'will go', misconceptionId: TS }], parses: 2, factor: 'grammar', marker: 'coordination with a past-simple verb (played) forces past simple' },
 ];
 const TENSE_V2 = clozeFamilyV2({
   id: 'spag-cloze-tense', name: 'Tense sequence', franchise: TS, tiers: [2, 4],
@@ -857,8 +862,8 @@ const TAG_BANK: ClozeSentence[] = [
   { id: 'tg-doesnt-she', klass: 'present-simple', sentence: 'She plays the piano, ___?', key: "doesn't she", distractors: [{ value: 'does she', misconceptionId: TG }, { value: "isn't she", misconceptionId: TG }, { value: "hasn't she", misconceptionId: TG }], parses: 1, factor: 'grammar' },
 ];
 const TAGS_V2 = clozeFamilyV2({
-  id: 'spag-cloze-tags', name: 'Question tags', franchise: TG, tiers: [3],
-  bank: TAG_BANK, tierOf: () => 3,
+  id: 'spag-cloze-tags', name: 'Question tags', franchise: TG, tiers: [2],
+  bank: TAG_BANK, tierOf: () => 2,
   rule: () => 'Question tags — the tag must match the subject, the auxiliary and the polarity. Only one option parses.',
 });
 

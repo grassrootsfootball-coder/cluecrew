@@ -26,8 +26,8 @@ describe('SPaG families on the maths engine', () => {
       // Cloze families take their honest bank depth, which differs per tier (R18: no fabricated
       // ladder — tense supplies 4 items at T2 and only 2 at T4).
       const CLOZE: Record<string, Record<number, number>> = {
-        'spag-cloze-word-class': { 2: 6 }, 'spag-cloze-tense': { 2: 4, 4: 2 },
-        'spag-cloze-connectives': { 3: 6 }, 'spag-cloze-tags': { 3: 8 },
+        'spag-cloze-word-class': { 2: 6 }, 'spag-cloze-tense': { 2: 4, 4: 7 },
+        'spag-cloze-connectives': { 3: 6 }, 'spag-cloze-tags': { 2: 8 },
       };
       const base = f.id === 'spag-punct-apostrophe-contraction' ? 3
         : ['spag-spell-double-consonant-boundary', 'spag-punct-comma-needs', 'spag-punct-apostrophe-possessive',
