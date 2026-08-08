@@ -4,10 +4,12 @@ import { assembleSpagItem, generateSpagSample, spagLadderGaps } from './spag-gen
 import { SPAG_FAMILIES as FAMILIES, HOMOPHONE_BANK, nonErrorNearMiss, DOUBLE_BANK, esNonErrorNearMiss, partHasDouble, SUFFIX_BANK, partHasSuffix, SILENT_BANK, partHasSilent, CONTRACTION_BANK, partHasContraction } from './spag-families';
 
 describe('SPaG families on the maths engine', () => {
-  it('is exactly the eleven franchises (4 spelling + 4 punctuation + 3 cloze)', () => {
-    expect(FAMILIES).toHaveLength(11);
+  it('is twelve families (4 spelling + 5 punctuation + 3 cloze) — apostrophe SPLIT in two', () => {
+    // R14: apostrophe holds two different properties and so two question types — contraction is
+    // binary (spot-the-mistake), possessive is permissive (the needs-an-apostrophe reframe).
+    expect(FAMILIES).toHaveLength(12);
     const bySub = FAMILIES.reduce<Record<string, number>>((m, f) => ({ ...m, [f.subtype]: (m[f.subtype] ?? 0) + 1 }), {});
-    expect(bySub).toEqual({ spelling: 4, punctuation: 4, cloze: 3 });
+    expect(bySub).toEqual({ spelling: 4, punctuation: 5, cloze: 3 });
   });
 
   it('every multi-tier family declares a real structural ladder (gate green)', () => {
@@ -19,8 +21,9 @@ describe('SPaG families on the maths engine', () => {
       // Honest per-tier counts: double 4/rung (child-usable key pool); comma 4/tier (the R-well
       // is narrow — rung-2 keyed items are all lists, so the opening-construction cap limits it);
       // the rest 6.
+      // Possessive 4/tier too: the R-well is three narrow well types (R16).
       const n = f.id === 'spag-punct-apostrophe-contraction' ? 3
-        : (f.id === 'spag-spell-double-consonant-boundary' || f.id === 'spag-punct-comma-needs') ? 4 : 6;
+        : ['spag-spell-double-consonant-boundary', 'spag-punct-comma-needs', 'spag-punct-apostrophe-possessive'].includes(f.id) ? 4 : 6;
       for (const t of familyTiers(f)) {
         const items = generateSpagSample(f, t, n, 1);
         expect(items).toHaveLength(n);

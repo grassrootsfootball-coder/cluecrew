@@ -791,3 +791,19 @@ type, the child's reading is what differs:
 Hint reworded (annie): `en-apostrophe-plural-misplaced` → "Ownership can be shown without an
 apostrophe here. Find the part that cannot manage without one." (the drafted "something does belong
 here" was false — the O part is a distractor, nothing needs an apostrophe there).
+
+**MERGED to one O-tag (annie, 2026-08-08).** The collapse above made the attributive/plural split
+cosmetic: in `the teachers lounge` NOTHING belongs to anyone — the plural describes the lounge — so
+both children read a modifier as an owner, differing only in the modifier's number. Same
+misconception with a parameter = **one tag**, `en-apostrophe-attributive`, number as a parameter.
+(Test applied: no second hint could be written that the first does not already say.)
+
+**COVERAGE GAP, recorded not lost — the plural-possessive-placement child.** The child who KNOWS
+possession is involved but cannot place the apostrophe (`girls' coats`) is a real and common error,
+and the reframe cannot reach her: reaching her needs a concrete-possession site, and a concrete
+possession is a second REQUIRED answer (the fault that held four items). She is **out of scope for
+this family, not for the district** — a parent or teacher would reasonably expect an apostrophe
+family to test plural possessives, so the gap is stated rather than left silent.
+**v2 note (annie):** the only frame that can test plural-possessive PLACEMENT without ambiguity asks
+*where the apostrophe goes* rather than which part needs one — "The girls coats were soaked. Which is
+correct: girl's / girls' / girls?" A different shape again; carried to v2.

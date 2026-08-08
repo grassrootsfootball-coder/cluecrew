@@ -703,6 +703,59 @@ const COMMA_NEEDS_V2: SpagFamily = {
 };
 
 // ---------------------------------------------------------------------------------------
+// APOSTROPHE (POSSESSIVE) — the REFRAME "which part needs an apostrophe" (annie 2026-08-08).
+// Spot-the-mistake dies here: a noun-modifier is permissive (`the girls coats` has three readings),
+// so clean parts can't be unimpeachable (R15). THREE parts + N, T1–T3, same shape as comma.
+// TYPING (reviewed per sentence): R = required, and only from the three ratified WELL TYPES —
+// proper name (`Toms bike`), singular determiner + singular noun (`My brothers coat` — the
+// determiner fixes number), irregular plural (`The childrens shoes`, bare plural never right).
+// O = a NATURAL ATTRIBUTIVE noun-modifier (`the teachers lounge`, `the school gate`) — arguable,
+// so no apostrophe is required. A CONCRETE possession (`boys ball`) is never O: it has no reading
+// but ownership, so it would be a second R and a second answer. F = no site at all.
+// Key parts print WITHOUT the apostrophe — identifying the part IS the task.
+// ---------------------------------------------------------------------------------------
+const POSSESSIVE_STEM = 'One part must have an apostrophe but does not. Which part is it? If every part is right, choose N.';
+type PossSite = 'R' | 'O' | 'F';
+const POSS_TAG: Record<'O' | 'F', string> = { O: 'en-apostrophe-attributive', F: 'en-apostrophe-not-a-site' };
+export interface PossSentence { id: string; well: string; parts: [string, PossSite][] }
+export const possRung = (s: PossSentence): number => s.parts.filter((p) => p[1] === 'O').length;
+export const possKeyIndex = (s: PossSentence): number => s.parts.findIndex((p) => p[1] === 'R');
+export const POSSESSIVE_BANK: PossSentence[] = [
+  // rung 0 — one R, zero O. All three well types; R at A and B.
+  { id: 'p0-tom', well: 'name', parts: [['Toms bike', 'R'], ['was chained', 'F'], ['to the rail', 'F']] },
+  { id: 'p0-brother', well: 'det', parts: [['My brothers coat', 'R'], ['hung on', 'F'], ['the hook', 'F']] },
+  { id: 'p0-children', well: 'irreg', parts: [['The childrens shoes', 'R'], ['were left', 'F'], ['in the hall', 'F']] },
+  { id: 'p0-girl', well: 'det', parts: [['We found', 'F'], ['the girls purse', 'R'], ['on the bus', 'F']] },
+  { id: 'p0-teacher', well: 'det', parts: [['She borrowed', 'F'], ['her teachers pen', 'R'], ['that morning', 'F']] },
+  // rung 1 — one O (a natural attributive).
+  { id: 'p1-dog', well: 'det', parts: [['The girls dog', 'R'], ['slept by the kitchen table', 'O'], ['all afternoon', 'F']] },
+  { id: 'p1-ball', well: 'name', parts: [['Toms ball', 'R'], ['rolled under', 'F'], ['the garden shed', 'O']] },
+  { id: 'p1-lounge', well: 'none', parts: [['The teachers lounge', 'O'], ['had new chairs', 'F'], ['this term', 'F']] },
+  { id: 'p1-gate', well: 'none', parts: [['The school gate', 'O'], ['was painted', 'F'], ['last week', 'F']] },
+  // rung 2 — two O. N items carry an O so the child must DECLINE the tempting site.
+  { id: 'p2-barked', well: 'det', parts: [['The girls dog barked', 'R'], ['near the boys club', 'O'], ['by the school gate', 'O']] },
+  { id: 'p2-coat', well: 'det', parts: [['My brothers coat', 'R'], ['hung in the players entrance', 'O'], ['near the changing room', 'O']] },
+  { id: 'p2-shoes', well: 'irreg', parts: [['The childrens shoes', 'R'], ['sat by the changing room', 'O'], ['near the school gate', 'O']] },
+  { id: 'p2-lounge', well: 'none', parts: [['The teachers lounge', 'O'], ['by the bus stop', 'O'], ['was locked', 'F']] },
+];
+const POSSESSIVE_V2: SpagFamily = {
+  id: 'spag-punct-apostrophe-possessive',
+  name: 'Apostrophes (needs an apostrophe)',
+  subtype: 'punctuation',
+  franchise: 'en-apostrophe-possession',
+  tierRule: (t) => (([1, 2, 3] as Tier[]).includes(t) ? `Apostrophes — three parts; which part must have one? ${t - 1} of the other parts is a noun describing a noun, where none is needed.` : ''),
+  structuralParams: (t) => ({ attributiveParts: t - 1 }),
+  numberRanges: (t) => ({ segments: [3, 3], attributiveParts: [t - 1, t - 1] }),
+  draft: (tier, r): SpagItemDraft => {
+    const s = randPick(r, POSSESSIVE_BANK.filter((x) => possRung(x) === tier - 1));
+    const key = possKeyIndex(s);
+    const opts: SpagOption[] = s.parts.map(([text, site], i) => (i === key ? { value: text, isKey: true } : { value: text, isKey: false, misconceptionId: POSS_TAG[site as 'O' | 'F'] }));
+    opts.push(key < 0 ? { value: 'No mistake', isKey: true } : { value: 'No mistake', isKey: false, misconceptionId: 'en-n-option-avoidance' });
+    return { stem: POSSESSIVE_STEM, options: opts, params: { segments: 3, attributiveParts: possRung(s) }, dedupKey: s.id, diversityKey: s.well };
+  },
+};
+
+// ---------------------------------------------------------------------------------------
 // THE ELEVEN
 // ---------------------------------------------------------------------------------------
 export const SPAG_FAMILIES: SpagFamily[] = [
@@ -711,8 +764,9 @@ export const SPAG_FAMILIES: SpagFamily[] = [
   DOUBLE_CONSONANT_V2,
   UNSTRESSED_V2,
   SILENT_V2,
-  // Punctuation (4)
+  // Punctuation (5) — apostrophe SPLIT into contraction (spot-form) + possessive (reframe), R14.
   CONTRACTION_V2,
+  POSSESSIVE_V2,
   punctFamily('en-terminal-punctuation-blind', 'Terminal and boundary', [2, 3, 4]),
   punctFamily('en-speech-punctuation-inside', 'Speech punctuation', [2, 3, 4]),
   COMMA_NEEDS_V2,
