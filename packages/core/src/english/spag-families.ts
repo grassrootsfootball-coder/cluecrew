@@ -507,6 +507,97 @@ const DOUBLE_CONSONANT_V2 = errorSpotFamily({
 });
 export { DOUBLE_BANK, partHasDouble };
 
+// UNSTRESSED SUFFIX VOWEL — near-miss = a part with a correctly-spelled word ending in the
+// ambiguous unstressed suffix a child mis-vowels (-ent/-ant, -ence/-ance, -able/-ible).
+export const partHasSuffix = (part: string): boolean =>
+  part.toLowerCase().split(/\s+/).some((w) => {
+    const c = w.replace(/[^a-z]/g, '');
+    return c.length >= 6 && /(?:ent|ant|ence|ance|able|ible)$/.test(c);
+  });
+export const SUFFIX_BANK: EsSentence[] = [
+  // 0.
+  { id: 'su0-excellent', klass: 'excellent', parts: ['She gave an excellant', 'answer in class', 'and smiled', 'at the teacher'], errorIndex: 0, wrong: 'She gave an excellant', intended: 0 },
+  { id: 'su0-important', klass: 'important', parts: ['He made an importent', 'choice that day', 'and stuck', 'to his plan'], errorIndex: 0, wrong: 'He made an importent', intended: 0 },
+  { id: 'su0-independent', klass: 'independent', parts: ['They felt independant', 'at long last', 'and walked', 'home alone'], errorIndex: 0, wrong: 'They felt independant', intended: 0 },
+  { id: 'su0-relevant', klass: 'relevant', parts: ['The relevent notes', 'were on the desk', 'beside a', 'blue pen'], errorIndex: 0, wrong: 'The relevent notes', intended: 0 },
+  { id: 'su0-obedient', klass: 'obedient', parts: ['She was obediant', 'and very calm', 'all through the', 'busy morning'], errorIndex: 0, wrong: 'She was obediant', intended: 0 },
+  { id: 'su0-assistant', klass: 'assistant', parts: ['The assistent showed', 'us the way in', 'up the stairs', 'and along'], errorIndex: 0, wrong: 'The assistent showed', intended: 0 },
+  // 1.
+  { id: 'su1-excellent', klass: 'excellent', parts: ['She gave an excellant', 'and confident', 'reply that', 'won the prize'], errorIndex: 0, wrong: 'She gave an excellant', intended: 1 },
+  { id: 'su1-important', klass: 'important', parts: ['He made an importent', 'and pleasant', 'start to', 'the new year'], errorIndex: 0, wrong: 'He made an importent', intended: 1 },
+  { id: 'su1-relevant', klass: 'relevant', parts: ['The relevent facts', 'filled a sentence', 'or two', 'on the page'], errorIndex: 0, wrong: 'The relevent facts', intended: 1 },
+  { id: 'su1-independent', klass: 'independent', parts: ['They felt independant', 'and confident', 'as they', 'set off early'], errorIndex: 0, wrong: 'They felt independant', intended: 1 },
+  { id: 'su1-obedient', klass: 'obedient', parts: ['She was obediant', 'and patient', 'while the', 'long queue moved'], errorIndex: 0, wrong: 'She was obediant', intended: 1 },
+  { id: 'su1-assistant', klass: 'assistant', parts: ['The assistent kept', 'a constant watch', 'over the', 'busy front desk'], errorIndex: 0, wrong: 'The assistent kept', intended: 1 },
+  // 2.
+  { id: 'su2-excellent', klass: 'excellent', parts: ['An excellant guide', 'was confident', 'and very pleasant', 'all day'], errorIndex: 0, wrong: 'An excellant guide', intended: 2 },
+  { id: 'su2-important', klass: 'important', parts: ['The importent notes', 'named a distant', 'and silent', 'mountain village'], errorIndex: 0, wrong: 'The importent notes', intended: 2 },
+  { id: 'su2-relevant', klass: 'relevant', parts: ['A relevent point', 'about the sentence', 'and its distance', 'was made'], errorIndex: 0, wrong: 'A relevent point', intended: 2 },
+  { id: 'su2-obedient', klass: 'obedient', parts: ['The obediant pupil', 'gave a confident', 'and pleasant', 'clear reply'], errorIndex: 0, wrong: 'The obediant pupil', intended: 2 },
+  { id: 'su2-assistant', klass: 'assistant', parts: ['An assistent found', 'the constant hum', 'of the distant', 'road tiring'], errorIndex: 0, wrong: 'An assistent found', intended: 2 },
+  { id: 'su2-permanent', klass: 'permanent', parts: ['A permanant mark', 'showed the distance', 'and the silent', 'empty street'], errorIndex: 0, wrong: 'A permanant mark', intended: 2 },
+  // 3.
+  { id: 'su3-excellent', klass: 'excellent', parts: ['An excellant guide', 'gave confident', 'and pleasant', 'patient help'], errorIndex: 0, wrong: 'An excellant guide', intended: 3 },
+  { id: 'su3-important', klass: 'important', parts: ['The importent notes', 'on the sentence', 'and the distance', 'seemed relevant'], errorIndex: 0, wrong: 'The importent notes', intended: 3 },
+  { id: 'su3-relevant', klass: 'relevant', parts: ['A relevent point', 'about patience', 'and constant', 'silent effort'], errorIndex: 0, wrong: 'A relevent point', intended: 3 },
+  { id: 'su3-obedient', klass: 'obedient', parts: ['The obediant class', 'stayed silent', 'and patient', 'every moment'], errorIndex: 0, wrong: 'The obediant class', intended: 3 },
+  { id: 'su3-assistant', klass: 'assistant', parts: ['An assistent brought', 'a pleasant', 'confident', 'constant calm'], errorIndex: 0, wrong: 'An assistent brought', intended: 3 },
+  { id: 'su3-permanent', klass: 'permanent', parts: ['A permanant sign', 'named the distant', 'silent', 'pleasant valley'], errorIndex: 0, wrong: 'A permanant sign', intended: 3 },
+];
+const UNSTRESSED_V2 = errorSpotFamily({
+  id: 'spag-spell-unstressed-suffix-vowel', name: 'Unstressed suffix vowel', subtype: 'spelling',
+  franchise: 'en-unstressed-suffix-vowel', stem: SPELL_STEM, nm: esNm, tiers: [1, 2, 3, 4],
+  bank: SUFFIX_BANK, nearMiss: partHasSuffix,
+});
+
+// SILENT LETTER DROPPED — near-miss = a part with a correctly-spelled silent-letter word. The
+// list is drawn to clear content words (kn-, wr-, -mb, silent b/s/h/t/l/n/c/g/u), deliberately
+// EXCLUDING common function words (would/should/could) and homophone overlaps (know/whole/hour)
+// so the count stays clean — the "decide the list's edge once" note in R13.
+const NEAR_SILENT = new Set<string>([
+  'knee', 'knife', 'knock', 'knight', 'knot', 'wrist', 'wrong', 'wrap', 'comb', 'thumb', 'lamb',
+  'climb', 'doubt', 'debt', 'island', 'honest', 'castle', 'listen', 'whistle', 'fasten', 'calf',
+  'answer', 'sword', 'ghost', 'autumn', 'column', 'muscle', 'guard', 'guest', 'tongue', 'biscuit',
+  'plumber', 'crumb', 'numb', 'solemn', 'wreck', 'wren', 'gnome', 'gnaw',
+]);
+export const partHasSilent = (part: string): boolean =>
+  part.toLowerCase().split(/\s+/).some((w) => NEAR_SILENT.has(w.replace(/[^a-z]/g, '')));
+export const SILENT_BANK: EsSentence[] = [
+  // 0.
+  { id: 'sl0-wednesday', klass: 'wednesday', parts: ['On Wenesday the', 'class lined up', 'in the main hall', 'before lunch'], errorIndex: 0, wrong: 'On Wenesday the', intended: 0 },
+  { id: 'sl0-knife', klass: 'knife', parts: ['He held the nife', 'by its handle', 'and cut', 'the ripe pear'], errorIndex: 0, wrong: 'He held the nife', intended: 0 },
+  { id: 'sl0-wrist', klass: 'wrist', parts: ['She hurt her rist', 'in the match', 'but played', 'on till the end'], errorIndex: 0, wrong: 'She hurt her rist', intended: 0 },
+  { id: 'sl0-doubt', klass: 'doubt', parts: ['There was no dout', 'in her mind', 'about the', 'right way home'], errorIndex: 0, wrong: 'There was no dout', intended: 0 },
+  { id: 'sl0-island', klass: 'island', parts: ['The iland lay', 'far out to sea', 'beyond the', 'grey bay'], errorIndex: 0, wrong: 'The iland lay', intended: 0 },
+  { id: 'sl0-honest', klass: 'honest', parts: ['She gave an onest', 'and calm reply', 'to every', 'tricky part'], errorIndex: 0, wrong: 'She gave an onest', intended: 0 },
+  // 1.
+  { id: 'sl1-wednesday', klass: 'wednesday', parts: ['On Wenesday she', 'hurt her knee', 'during the', 'long race'], errorIndex: 0, wrong: 'On Wenesday she', intended: 1 },
+  { id: 'sl1-knife', klass: 'knife', parts: ['He held the nife', 'and the comb', 'in one', 'small bag'], errorIndex: 0, wrong: 'He held the nife', intended: 1 },
+  { id: 'sl1-wrist', klass: 'wrist', parts: ['She hurt her rist', 'on the castle', 'steps last', 'cold day'], errorIndex: 0, wrong: 'She hurt her rist', intended: 1 },
+  { id: 'sl1-doubt', klass: 'doubt', parts: ['There was no dout', 'the knight would', 'ride at', 'first light'], errorIndex: 0, wrong: 'There was no dout', intended: 1 },
+  { id: 'sl1-island', klass: 'island', parts: ['The iland had', 'a thick thumb', 'of rock', 'at its tip'], errorIndex: 0, wrong: 'The iland had', intended: 1 },
+  { id: 'sl1-honest', klass: 'honest', parts: ['She gave an onest', 'answer to', 'the calm', 'quiet judge'], errorIndex: 0, wrong: 'She gave an onest', intended: 1 },
+  // 2.
+  { id: 'sl2-wednesday', klass: 'wednesday', parts: ['On Wenesday the', 'knight rode past', 'a quiet castle', 'at dawn'], errorIndex: 0, wrong: 'On Wenesday the', intended: 2 },
+  { id: 'sl2-knife', klass: 'knife', parts: ['He held the nife', 'near the comb', 'beside a', 'small lamb'], errorIndex: 0, wrong: 'He held the nife', intended: 2 },
+  { id: 'sl2-wrist', klass: 'wrist', parts: ['She hurt her rist', 'and her knee', 'at the castle', 'gate today'], errorIndex: 0, wrong: 'She hurt her rist', intended: 2 },
+  { id: 'sl2-doubt', klass: 'doubt', parts: ['There was no dout', 'the honest guard', 'saw the knight', 'ride away'], errorIndex: 0, wrong: 'There was no dout', intended: 2 },
+  { id: 'sl2-island', klass: 'island', parts: ['The iland held', 'a silent castle', 'and a lone', 'ghost by night'], errorIndex: 0, wrong: 'The iland held', intended: 2 },
+  { id: 'sl2-honest', klass: 'honest', parts: ['She gave an onest', 'answer to the guard', 'about the', 'broken whistle'], errorIndex: 0, wrong: 'She gave an onest', intended: 2 },
+  // 3.
+  { id: 'sl3-wednesday', klass: 'wednesday', parts: ['On Wenesday the', 'knight hurt his knee', 'near the castle', 'and the guard'], errorIndex: 0, wrong: 'On Wenesday the', intended: 3 },
+  { id: 'sl3-knife', klass: 'knife', parts: ['He held the nife', 'beside the comb', 'the guard', 'and the lamb'], errorIndex: 0, wrong: 'He held the nife', intended: 3 },
+  { id: 'sl3-wrist', klass: 'wrist', parts: ['She hurt her rist', 'her knee and thumb', 'at the castle', 'that autumn'], errorIndex: 0, wrong: 'She hurt her rist', intended: 3 },
+  { id: 'sl3-doubt', klass: 'doubt', parts: ['There was no dout', 'the knight, the guard', 'and the honest', 'guest agreed'], errorIndex: 0, wrong: 'There was no dout', intended: 3 },
+  { id: 'sl3-island', klass: 'island', parts: ['The iland castle', 'hid a silent ghost', 'a knight', 'and a lamb'], errorIndex: 0, wrong: 'The iland castle', intended: 3 },
+  { id: 'sl3-honest', klass: 'honest', parts: ['She gave an onest', 'answer, a comb', 'a guard', 'and a whistle'], errorIndex: 0, wrong: 'She gave an onest', intended: 3 },
+];
+const SILENT_V2 = errorSpotFamily({
+  id: 'spag-spell-silent-letter-dropped', name: 'Silent letters', subtype: 'spelling',
+  franchise: 'en-silent-letter-dropped', stem: SPELL_STEM, nm: esNm, tiers: [1, 2, 3, 4],
+  bank: SILENT_BANK, nearMiss: partHasSilent,
+});
+
 // ---------------------------------------------------------------------------------------
 // THE ELEVEN
 // ---------------------------------------------------------------------------------------
@@ -514,8 +605,8 @@ export const SPAG_FAMILIES: SpagFamily[] = [
   // Spelling (4) — homophones REBUILT (annie 2026-08-08); the other three await the same pass.
   HOMOPHONES_V2,
   DOUBLE_CONSONANT_V2,
-  spellFamily('en-unstressed-suffix-vowel', 'Unstressed suffix vowel', [2, 3, 4]),
-  spellFamily('en-silent-letter-dropped', 'Silent letters', [1, 2]),
+  UNSTRESSED_V2,
+  SILENT_V2,
   // Punctuation (4)
   punctFamily('en-apostrophe-possession', 'Apostrophes', [1, 2, 3, 4]),
   punctFamily('en-terminal-punctuation-blind', 'Terminal and boundary', [2, 3, 4]),

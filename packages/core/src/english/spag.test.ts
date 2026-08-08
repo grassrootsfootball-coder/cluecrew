@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { familyTiers, makeRng } from '../maths/generator';
 import { assembleSpagItem, generateSpagSample, spagLadderGaps } from './spag-generator';
-import { SPAG_FAMILIES as FAMILIES, HOMOPHONE_BANK, nonErrorNearMiss, DOUBLE_BANK, esNonErrorNearMiss, partHasDouble } from './spag-families';
+import { SPAG_FAMILIES as FAMILIES, HOMOPHONE_BANK, nonErrorNearMiss, DOUBLE_BANK, esNonErrorNearMiss, partHasDouble, SUFFIX_BANK, partHasSuffix, SILENT_BANK, partHasSilent } from './spag-families';
 
 describe('SPaG families on the maths engine', () => {
   it('is exactly the eleven franchises (4 spelling + 4 punctuation + 3 cloze)', () => {
@@ -45,10 +45,15 @@ describe('SPaG families on the maths engine', () => {
     expect(buckets).toEqual({ 0: 6, 1: 6, 2: 6, 3: 6 }); // enough at each rung to sample cleanly
   });
 
-  it('double-consonant bank (R13 via the shared factory): near-miss VERIFIED against its own lookup', () => {
-    for (const s of DOUBLE_BANK) expect(esNonErrorNearMiss(s, partHasDouble)).toBe(s.intended);
-    const buckets = DOUBLE_BANK.reduce<Record<number, number>>((m, s) => ({ ...m, [s.intended]: (m[s.intended] ?? 0) + 1 }), {});
-    expect(buckets).toEqual({ 0: 6, 1: 6, 2: 6, 3: 6 });
+  it('spelling banks (R13 via the shared factory): near-miss VERIFIED against each own lookup', () => {
+    const banks: Array<[typeof DOUBLE_BANK, (p: string) => boolean]> = [
+      [DOUBLE_BANK, partHasDouble], [SUFFIX_BANK, partHasSuffix], [SILENT_BANK, partHasSilent],
+    ];
+    for (const [bank, lookup] of banks) {
+      for (const s of bank) expect(esNonErrorNearMiss(s, lookup)).toBe(s.intended);
+      const buckets = bank.reduce<Record<number, number>>((m, s) => ({ ...m, [s.intended]: (m[s.intended] ?? 0) + 1 }), {});
+      expect(buckets).toEqual({ 0: 6, 1: 6, 2: 6, 3: 6 });
+    }
   });
 
   it('homophones (rebuilt): split tags, item-level ladder, no N at T1, no repeated sentence, pair-share', () => {
