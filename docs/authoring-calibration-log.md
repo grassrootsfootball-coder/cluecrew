@@ -824,3 +824,34 @@ found them first. (A rescue exists for the determiner type — make the number e
 part for the child to connect across; not worth it. Two well types plus position movement is
 cleaner.) **Apply this test in the SPEECH probe**, where removing a quotation mark changes which
 words are spoken — the same failure mode.
+
+## R17 — Terminal and speech probes: both keep the spot-form, narrowly
+*Annie's split hypothesis, probed 2026-08-08 (six sentences each). Recorded by David.*
+
+Both families are MIXED as predicted (R15), but unlike apostrophe the arguable half does not
+dominate natural sentences, so neither needs a companion reframe family: the arguable cases are
+EXCLUDED BY A BUILD RULE rather than rehoused. **The district stays at twelve families.**
+
+**SPEECH — every unarguable error requires a mark ALREADY PRESENT.** This is the as-presented rule
+biting harder than in possessive: there the stripped form was ambiguous but still clearly needed a
+mark; here the stripped form may be CORRECT. `She said I am coming home now.` is correct as REPORTED
+speech and wrong only as direct — so an item with no marks carries no unarguable error at all.
+- Unarguable (all need ≥1 existing mark): **missing closing mark** (opening present); **missing
+  opening mark** (closing present); **missing capital** at the start of quoted speech (both present).
+- Arguable, therefore EXCLUDED: **terminal placement at a quote boundary** (British "logical"
+  placement genuinely permits outside) — and excluded from CLEAN parts too, or a child taught
+  "inside" flags a correct part (the comma clean-part failure in miniature).
+- Not an error either way: **single vs double marks** — safe in a clean part.
+- **BUILD RULES:** every item carries at least one existing quotation mark; no clean part places
+  terminal punctuation at a quote boundary.
+
+**TERMINAL — the splice survives; SHORTNESS is what weakens it, not the semicolon.** The semicolon
+defence does not rescue a splice: a child arguing "the comma stands in for a semicolon" is still
+saying the mark must change, and the spot-form asks only WHICH part is wrong, not what the fix is.
+But **short parallel clauses do** rescue it — `It was cold, we stayed in.` is licensed by the
+tricolon convention, while `The rain fell all afternoon, we stayed inside the hall.` is not.
+- Unarguable: **comma splice on long, non-parallel clauses**; **run-on** (no mark); **fragment**
+  after a subordinator.
+- Clean parts are safe: correct terminal punctuation (full stop, or semicolon — Year 6) is never
+  arguable-wrong, so unlike comma there is no optional-site problem.
+- **BUILD RULE:** splice items use clauses of roughly five-plus words, non-parallel in structure.
