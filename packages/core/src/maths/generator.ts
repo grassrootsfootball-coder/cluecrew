@@ -179,6 +179,15 @@ export function familyTiers(family: LadderedFamily): Tier[] {
  * notation gate. Any defect throws — the family cannot emit it.
  */
 export function assembleItem(family: MathsFamily, tier: Tier, r: () => number): GenMathsItem {
+  // A DECLARED LADDER IS A CONSTRAINT, NOT A LABEL — found by the declared-vs-enforced sweep
+  // (annie, 2026-08-08), the same fault already fixed in `assembleSpagItem`. `familyTiers` derives
+  // the ladder from `tierRule`/`collapsed`, and every caller in the repo went through it, so the
+  // ladder held by habit. Nothing made it hold by rule: ten of nineteen families — every collapsed
+  // one — drafted happily at all four tiers they do not claim. A family signed as a fair T2 item
+  // was one direct call away from emitting a T5.
+  if (!familyTiers(family).includes(tier)) {
+    throw new GateError(`${family.id} T${tier}: family declares tiers ${familyTiers(family).map((t) => `T${t}`).join(',')} — this is not one of them`);
+  }
   const d = family.draft(tier, r);
 
   // Key must recompute from its own solution (when one is given).

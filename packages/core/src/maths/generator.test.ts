@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { MATHS_FAMILIES } from './families';
-import { familyExecutorCoverage, familyTiers, generateSample, structuralLadderGaps, type Tier } from './generator';
+import { assembleItem, familyExecutorCoverage, familyTiers, generateSample, makeRng, structuralLadderGaps, type Tier } from './generator';
 import { checkMathsNotation } from './notation';
 
 describe('maths generator — every family emits only gated items', () => {
@@ -41,7 +41,10 @@ describe('maths generator — every family emits only gated items', () => {
     for (const id of ['M-06a', 'M-05a']) {
       const fam = MATHS_FAMILIES.find((f) => f.id === id)!;
       expect(fam.distractorFloor).toBe(2);
-      const item = generateSample(fam, 3, 1, 7)[0]!;
+      // Both are COLLAPSED families, so they are asked at the single tier they declare. This line
+      // read `3` before the ladder was enforced, which asked M-06a (collapsed to T2) for a T3 item
+      // and got one — the test was itself relying on the gap it now helps close.
+      const item = generateSample(fam, familyTiers(fam)[0]!, 1, 7)[0]!;
       expect(item.options.filter((o) => !o.isKey)).toHaveLength(2);
     }
   });
@@ -86,5 +89,22 @@ describe('maths generator — every family emits only gated items', () => {
     const cov = familyExecutorCoverage(MATHS_FAMILIES.find((f) => f.id === 'M-04b')!);
     expect(cov.derived).toContain(16); // reversed-division is gate-verified
     expect(cov.derived).toContain(75);
+  });
+});
+
+/**
+ * The declared-vs-enforced sweep (annie, 2026-08-08). Ten of nineteen families — every collapsed
+ * one — drafted at all four tiers they do not claim, because `familyTiers` was consulted by every
+ * caller but by nothing in the generator itself.
+ */
+describe('a declared ladder is a constraint', () => {
+  it('refuses every tier a family does not declare', () => {
+    for (const family of MATHS_FAMILIES) {
+      const declared = familyTiers(family);
+      for (const tier of [1, 2, 3, 4, 5] as Tier[]) {
+        if (declared.includes(tier)) continue;
+        expect(() => assembleItem(family, tier, makeRng(3))).toThrow(/is not one of them/);
+      }
+    }
   });
 });

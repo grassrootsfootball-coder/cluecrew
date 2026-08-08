@@ -1385,3 +1385,63 @@ specified as outbound-only — "what this repo SENDS is never mixed with what au
 yet four inbound files sit in it (`ENG-004-anne-green-gables.json`, `en-hint-redraft.json`,
 `vr-hint-redrafts.json`, `vr-hint-redrafts-corrective.json`). Not the cause of the ten failures, but
 it is the exact confusion the separate folder exists to prevent.
+
+## R29 — Declared is not enforced: the sweep
+*Annie, 2026-08-08. She asked it as a sweep rather than waiting for a fourth instance. There was a
+fourth, and a fifth.*
+
+**The mechanism, once:** a generator's declaration and its enforcement live in different places, and
+only the DECLARATION is visible in review. A reviewer signs a sample sheet showing tier rules,
+structural parameters and number ranges; whether the generator obeys any of them is a separate
+question that the sheet cannot answer.
+
+**The sweep, complete:**
+
+| declaration | enforced? | where |
+|---|---|---|
+| number ranges | **yes** | `assembleItem` / `assembleSpagItem` — the original lesson |
+| key recomputes from its solution | **yes** | `assembleItem` |
+| house notation (£, °C, cm²) | **yes** | `checkMathsNotation` inside the item gate |
+| every distractor carries a misconception tag | **yes** | `assembleSpagItem` |
+| child-facing text (length, ban list, reading age) | **yes** | `checkItemChildFacing` |
+| **tier ladder — SPaG** | **was NOT** — fixed 2026-08-08 | `tiers` reached only `tierRule` |
+| **tier ladder — MATHS** | **was NOT** — fixed 2026-08-08 | **10 of 19 families**, every collapsed one, drafted at all four tiers they do not claim |
+| **structural parameters** | **NO — still open** | used for sample sheets, ladder-gap checks and the fingerprint; never compared to the emitted item |
+| near-miss count per rung | by construction | the bank's `intended` is verified against a derived property, and drafting selects by rung — sound, but not asserted on the emitted item |
+| diversity / dedup / matched-pair caps | partially | enforced in `generateSpagSample` only; a caller using `assembleSpagItem` directly gets none |
+| serving conditions (R19) | **no owner** | unchanged |
+
+**The maths instance was the largest and the quietest.** Every caller in the repo went through
+`familyTiers`, so the ladder held by habit; nothing made it hold by rule. A family signed as a fair
+T2 item was one direct call away from emitting a T5. The test suite was itself relying on the gap —
+`generateSample(M-06a, 3, …)` asked a family collapsed to T2 for a T3 item and got one.
+
+**`structuralParams` is the one left, and it is left deliberately.** Enforcing it means deciding
+what each parameter MEANS operationally — is `segments: 4` a promise about option count, and is
+`nearMissParts: 3` a promise the emitted item must keep? Those are reviewer questions, not
+engineering ones. It is also the largest remaining exposure, because it is literally the column on
+the sample sheet a signature is given against. **`spag-punct-terminal-boundary` above its ceiling
+emitted items stamped `nearMissParts: 3` whose sentences were the rung-TWO bank entries** — a
+declared parameter describing an item that was never built.
+
+## R30 — The ceiling was the substance of the signature
+*The T4/T5 reproduction, 2026-08-08.*
+
+Annie signed `spag-punct-terminal-boundary` at T1–T3 because rung 3 needs three required-comma parts
+in one sentence and that does not occur without strain. Forced past its ceiling, the family did not
+strain — it **degenerated**:
+
+- **Every item it emitted at T4 and T5 was keyed "No mistake".** The bank tops out at two near-miss
+  parts, so no genuine rung-3 item could be built; the family fell through to its N branch, which
+  draws at rung minus one. A tier whose answer is always the same option is not a hard tier.
+- **T4 and T5 emitted the SAME two items.** Above the ceiling the ladder is one rung, twice.
+- The items carried a structural parameter describing a rung they were not built at (R29).
+
+**No live consequence.** No generated SPaG item has ever been persisted or served: the only callers
+of the generator are three build-time scripts, the web app contains no reference to it, and the 34
+SPaG items in the database are Cowork-authored DRAFTs with zero attempts against them. Confirmed
+rather than assumed, because "build-time only" is exactly the belief that stops being true quietly.
+
+The general point, worth more than the instance: **a reviewer's stated reason for a limit is a
+prediction about what lies beyond it, and it can be tested.** This is the only case in the project
+where that comparison was available, and the prediction was right.
