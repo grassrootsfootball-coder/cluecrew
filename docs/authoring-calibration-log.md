@@ -1177,13 +1177,7 @@ Fixed.
 | the passage's own word | **declare it** in `explanation.quotes`. Do not reword around it. |
 | our paraphrase of the passage | prefer **replacing it with the passage's own words**, then declare. Reword only if no passage phrase fits. |
 | our own instructional word (*semicolon*, *paragraph*, *comparison*) | **reword**. Nothing to declare. |
-| a character's name the item *uses* rather than *quotes* | **reword**. Using a name is not quoting it. |
-
-> **REPO NOTE — the last row and the passage-noun ruling below disagree, and an author reading the
-> table alone will reword a name they could have declared.** The row says a name in use is reworded;
-> the ruling says a passage name may be declared and is then exempt from the ceiling. The ruling is
-> later and more specific, so the implementation follows the ruling. Row left verbatim; flagged for
-> the reviewer to reconcile.
+| a character's name | a character's name from the passage may be declared as a passage noun and is then exempt; a name not in the passage is reworded. |
 
 **Worked examples from this pass:**
 
@@ -1192,9 +1186,10 @@ Fixed.
 - *ENG-001-WIW-14* — "…beside a good storyteller?" `storyteller` was our paraphrase, and it
   is the word R4 already names as this item's teaching case. Replaced with the passage's own
   `exciting stories` and declared, rather than reworded around.
-- *ENG-002-pp-21* — "The words after the semicolon describe Elizabeth." Neither word was
-  quotable away: `semicolon` is ours and `Elizabeth` was a name in use. Both reworded; the
-  nudge now rides on the tested token `spirit`, which R1 already exempts.
+- *ENG-002-pp-21* — "The words after the semicolon describe Elizabeth." `semicolon` is ours and
+  stays as the item's one permitted long word; `Elizabeth` is the passage's name and is DECLARED.
+  (An interim reword removed the name to satisfy a rule that does not apply. Reverted 2026-08-08 —
+  it was a cost paid for nothing, and the original hint is the better one.)
 
 **Passage proper nouns — ruled.** A proper noun that appears in the passage may be
 **declared as a named token** and is then exempt from the vocabulary and long-word ceiling
@@ -1230,3 +1225,29 @@ file; limit 2 holds because only the ceiling filter consults it. Proven both way
 understood immediately."* fails `2 long words (max 1): Elizabeth, immediately` undeclared and passes
 declared, while a banned word in the same sentence still trips. Regression test in
 `content-gates.test.ts` covers both directions so the carve-out cannot quietly widen.
+
+## R24 — A ruling that refines an earlier one EDITS it; it never just appends
+*Annie, 2026-08-08. Recorded by David.*
+
+When a ruling refines an earlier one, **the earlier text is edited**, not left standing beside the
+new one. If the earlier text belongs to someone else, **flag it and get it edited** rather than
+leaving both in the log.
+
+**Why it needs to be a rule: this is the second instance.**
+1. **`en-plausible-not-stated` against `en-motive-invention`** — two entries whose scopes overlapped,
+   so which label an item got depended on which entry was written first. Resolved by scoping them
+   against each other (R21), not by either entry admitting the other existed.
+2. **R23's table against R23's own ruling** — the row said a character's name is reworded; the
+   passage-noun ruling below said it may be declared and exempted. Both were hers, written at
+   different times, and the ruling was the one she meant. An author reading the table alone would
+   reword a name they could declare — which is exactly what happened to `ENG-002-pp-21`, whose hint
+   lost the character's name to satisfy a rule that did not apply, and has now been reverted.
+
+Same shape both times: **a later, more specific statement added without going back to the earlier
+one.** Worth its own rule because the calibration log is now long enough that nobody reads it end to
+end — so a contradiction does not announce itself, it just quietly produces the wrong item.
+
+**The practical test:** before adding a ruling, search the log for what it refines. If the earlier
+text would now mislead someone reading only that entry, edit it. An annotation saying "these two
+disagree" is not enough — it leaves the wrong text in place for whoever reads the table and not the
+note. (This entry supersedes such an annotation, which was added to R23 and has been removed.)
