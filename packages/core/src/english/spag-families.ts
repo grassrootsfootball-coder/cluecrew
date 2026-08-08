@@ -651,7 +651,14 @@ const CONTRACTION_V2 = errorSpotFamily({
 const COMMA_STEM = 'One part must have a comma but does not. Which part is it? If every part is right, choose N.';
 type CommaSite = 'R' | 'O' | 'F';
 const COMMA_TAG: Record<'O' | 'F', string> = { O: 'en-comma-over-applied', F: 'en-comma-not-a-comma-site' };
-export interface CommaSentence { id: string; open: string; parts: [string, CommaSite][] }
+export interface CommaSentence {
+  id: string; open: string; parts: [string, CommaSite][];
+  /** MIRRORED PAIR (R13): the same clause fronted (key A) and trailing (key N). The repetition is
+   *  what teaches the contrast, so it is the district's one sanctioned repeated sentence — but the
+   *  two MUST NOT reach the same child in one session. Marked here so the constraint is at least
+   *  EXPRESSIBLE; it was previously unrepresentable, and a serving layer had nothing to honour. */
+  pairId?: string;
+}
 export const commaRung = (s: CommaSentence): number => s.parts.filter((p) => p[1] === 'O').length;
 export const commaKeyIndex = (s: CommaSentence): number => s.parts.findIndex((p) => p[1] === 'R');
 const commaNm = (tier: Tier): number => tier - 1; // T1→0, T2→1, T3→2
@@ -660,9 +667,9 @@ export const COMMA_BANK: CommaSentence[] = [
   // and an N item with one O is a rung-1 item (annie 2026-08-08).
   { id: 'c0-when', open: 'when', parts: [['When the fire alarm rang', 'R'], ['the class left', 'F'], ['the quiet room', 'F']] },
   { id: 'c0-because', open: 'because', parts: [['Because the bus was late', 'R'], ['we missed', 'F'], ['the early train', 'F']] },
-  { id: 'c0-although', open: 'although', parts: [['Although he was tired', 'R'], ['he finished', 'F'], ['the whole race', 'F']] },
-  { id: 'c0-once', open: 'once', parts: [['Once the film ended', 'R'], ['we cleared', 'F'], ['the small room', 'F']] },
-  { id: 'c0-while', open: 'while', parts: [['While we waited', 'R'], ['she read', 'F'], ['a long book', 'F']] },
+  { id: 'c0-although', open: 'although', pairId: 'mp-race', parts: [['Although he was tired', 'R'], ['he finished', 'F'], ['the whole race', 'F']] },
+  { id: 'c0-once', open: 'once', pairId: 'mp-film', parts: [['Once the film ended', 'R'], ['we cleared', 'F'], ['the small room', 'F']] },
+  { id: 'c0-while', open: 'while', pairId: 'mp-book', parts: [['While we waited', 'R'], ['she read', 'F'], ['a long book', 'F']] },
   { id: 'c0-if', open: 'if', parts: [['If the rain stops', 'R'], ['we will eat', 'F'], ['our packed lunch', 'F']] },
   // RUNG 1 — one O. Keyed = fronted clause + trailing PP (key A). N = a TRAILING subordinate clause
   // (the O — where a child over-applies the fronted-clause rule), so the same subordinators appear
@@ -670,9 +677,9 @@ export const COMMA_BANK: CommaSentence[] = [
   { id: 'c1-before', open: 'before', parts: [['Before the storm came', 'R'], ['we ran', 'F'], ['to the house', 'O']] },
   { id: 'c1-when', open: 'when', parts: [['When the bell rang', 'R'], ['she hurried', 'F'], ['into the hall', 'O']] },
   { id: 'c1-since', open: 'since', parts: [['Since the shop shut', 'R'], ['we walked', 'F'], ['down the road', 'O']] },
-  { id: 'c1-nt1', open: 'none', parts: [['We cleared', 'F'], ['the small room', 'F'], ['once the film ended', 'O']] },
-  { id: 'c1-nt2', open: 'none', parts: [['She read', 'F'], ['a long book', 'F'], ['while we waited', 'O']] },
-  { id: 'c1-nt3', open: 'none', parts: [['He finished', 'F'], ['the whole race', 'F'], ['although he was tired', 'O']] },
+  { id: 'c1-nt1', open: 'none', pairId: 'mp-film', parts: [['We cleared', 'F'], ['the small room', 'F'], ['once the film ended', 'O']] },
+  { id: 'c1-nt2', open: 'none', pairId: 'mp-book', parts: [['She read', 'F'], ['a long book', 'F'], ['while we waited', 'O']] },
+  { id: 'c1-nt3', open: 'none', pairId: 'mp-race', parts: [['He finished', 'F'], ['the whole race', 'F'], ['although he was tired', 'O']] },
   { id: 'c1-np1', open: 'none', parts: [['The children', 'F'], ['played games', 'F'], ['in the park', 'O']] },
   // RUNG 2 — two O. Keyed only via LIST (verb inside the list part); the rest N.
   { id: 'c2-list1', open: 'list', parts: [['We packed apples', 'R'], ['pears and plums', 'O'], ['for the trip', 'O']] },
@@ -698,7 +705,7 @@ const COMMA_NEEDS_V2: SpagFamily = {
     const key = commaKeyIndex(s);
     const opts: SpagOption[] = s.parts.map(([text, site], i) => (i === key ? { value: text, isKey: true } : { value: text, isKey: false, misconceptionId: COMMA_TAG[site as 'O' | 'F'] }));
     opts.push(key < 0 ? { value: 'No mistake', isKey: true } : { value: 'No mistake', isKey: false, misconceptionId: 'en-n-option-avoidance' });
-    return { stem: COMMA_STEM, options: opts, params: { segments: 3, optionalParts: commaRung(s) }, dedupKey: s.id, diversityKey: s.open };
+    return { stem: COMMA_STEM, options: opts, params: { segments: 3, optionalParts: commaRung(s) }, dedupKey: s.id, diversityKey: s.open, pairId: s.pairId };
   },
 };
 

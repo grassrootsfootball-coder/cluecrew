@@ -228,6 +228,6 @@ export const VOCAB_IN_CONTEXT: SpagFamily = {
       const j = Math.floor(r() * (i + 1));
       [opts[i], opts[j]] = [opts[j]!, opts[i]!];
     }
-    return { stem: VOCAB_STEM(v.headword, v.carrier), options: opts, params: { options: 4 }, dedupKey: v.id, diversityKey: v.pairId };
+    return { stem: VOCAB_STEM(v.headword, v.carrier), options: opts, params: { options: 4 }, dedupKey: v.id, diversityKey: v.pairId, pairId: v.pairId };
   },
 };

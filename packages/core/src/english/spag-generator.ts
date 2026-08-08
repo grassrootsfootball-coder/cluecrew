@@ -55,6 +55,9 @@ export interface SpagItemDraft {
   /** The error CLASS being exercised (e.g. the homophone pair). A sample caps any one class to
    *  a stated share so a family samples its space rather than one pair (annie, 2026-08-08). */
   diversityKey?: string;
+  /** Linked-pair id. Two items sharing one MUST NOT reach the same child in a session (comma's
+   *  mirrored pairs; vocabulary's familiar/rare pair). A serving-layer constraint, surfaced here. */
+  pairId?: string;
   /** The corrected key word an error item asks the child to find. Capped to once per sample so
    *  the same misspelling is never the answer twice — a child is not handed one item's key by
    *  another (annie rule 7, 2026-08-08). Absent on N-keyed items (the key is "No mistake"). */
@@ -84,6 +87,7 @@ export interface GenSpagItem {
   dedupKey?: string;
   diversityKey?: string;
   errorTokenKey?: string;
+  pairId?: string;
 }
 
 export class SpagGateError extends Error {}
@@ -127,7 +131,7 @@ export function assembleSpagItem(family: SpagFamily, tier: Tier, r: () => number
   const blocking = failures.filter(isBlocking);
   if (blocking.length) throw new SpagGateError(`${family.id} T${tier}: ${blocking.map((f) => `${f.rule}: ${f.detail}`).join('; ')}`);
 
-  return { familyId: family.id, tier, stem: d.stem, key, options: d.options, params: d.params, dedupKey: d.dedupKey, diversityKey: d.diversityKey, errorTokenKey: d.errorTokenKey };
+  return { familyId: family.id, tier, stem: d.stem, key, options: d.options, params: d.params, dedupKey: d.dedupKey, diversityKey: d.diversityKey, errorTokenKey: d.errorTokenKey, pairId: d.pairId };
 }
 
 /** No single error CLASS (diversityKey) may exceed this share of a sample — so a family samples

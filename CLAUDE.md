@@ -30,6 +30,15 @@ The build is governed by documents, and the documents win arguments.
   inside the one child-facing gate (`checkItemChildFacing`), so every door
   enforces it. An import door NORMALISES then gates; the degree sign is reported,
   never auto-inserted (a bare "C" may be a label).
+- CHANGING A VAULT `likelierKnown` IS A CHANGE TO FAMILY COMPOSITION, NOT A DATA
+  CORRECTION (annie, 2026-08-08, vocabulary-in-context). The field feeds the
+  vocabulary flip AND the guard, which interact: the flip decides which sense an
+  item tests, and the guard (headword vault tier <= 2) decides whether the card
+  may carry a familiar-sense item at all. So editing one value can move a card's
+  TIER, change which HALF of the card survives, and VOID a signed item — `noble`
+  did all three, after it was already built and signed. Anyone extending the
+  vault will assume it is a spelling-correction-grade edit; it is not. Re-run the
+  vocabulary audit and re-sign the affected family after any such change.
 - Content decisions (items, chapters, misconceptions) go through the CMS
   review pipeline; nothing skips the reviewer.
 - A script that applies reviewer decisions RE-EXPORTS the affected artefact as
