@@ -295,7 +295,12 @@ function clozeFamily(franchise: string, name: string, tiers: Tier[]): SpagFamily
 //     range but makes no ladder claim (blind-spot one from the maths pass).
 // Ceiling T4 (SPaG cap, BUILD-DISTRICT-ENGLISH §1) — no T5, by the corpus, not by omission.
 // ---------------------------------------------------------------------------------------
-const SPOT_FALSE_POSITIVE = 'en-error-spot-false-positive';
+// annie's split (2026-08-08): a distractor part built as a NEAR-MISS is picked by a child
+// over-applying a real rule; a PLAIN part is picked by a child who assumes something must be
+// wrong and guesses. The near-miss flag the generator already sets is exactly what separates
+// them, so each gets its own tag and its own hint.
+const SPOT_RULE_OVER_APPLIED = 'en-error-spot-rule-over-applied'; // a near-miss part
+const SPOT_GUESSED = 'en-error-spot-guessed-a-part'; // a plain part
 interface SpotSentence { parts: string[]; errorIndex: number; wrong: string; targetLen: number; nm: number[] }
 // nm = indices of NEAR-MISS parts: correct on the page, but carrying a homophone-family word a
 // child might wrongly flag. Those are the hard false-positive traps the top tiers turn up.
@@ -312,34 +317,55 @@ const HOMOPHONE_BANK: SpotSentence[] = [
   { parts: ['They watched the weather', 'change so fast', 'and grabbed their', 'coats and bags'], errorIndex: 0, wrong: 'They watched the whether', targetLen: 7, nm: [2] },
   { parts: ['The plane flew', 'right through', 'the grey cloud', 'and then stopped'], errorIndex: 1, wrong: 'right threw', targetLen: 5, nm: [0] },
   { parts: ['We rode home', 'past the shops', 'to fetch', 'some warm bread'], errorIndex: 0, wrong: 'We road home', targetLen: 4, nm: [1] },
-  // Two near-miss — T4.
+  // Two near-miss — T3.
   { parts: ['He rode the bike', 'past the shops', 'to meet his aunt', 'by the sea'], errorIndex: 1, wrong: 'passed the shops', targetLen: 6, nm: [0, 3] },
   { parts: ['She knew the ball', 'would roll past', 'the goal line', 'near the road'], errorIndex: 1, wrong: 'would roll passed', targetLen: 6, nm: [0, 3] },
   { parts: ['I heard the horse', 'gallop past', 'the open field', 'where we flew'], errorIndex: 1, wrong: 'gallop passed', targetLen: 6, nm: [0, 3] },
   { parts: ['They sailed through', 'the calm sea', 'past the grey', 'harbour wall'], errorIndex: 0, wrong: 'They sailed threw', targetLen: 5, nm: [1, 2] },
+  // Three near-miss (every other part a trap) — T4.
+  { parts: ['She knew', 'the sea was', 'too rough', 'to sail'], errorIndex: 1, wrong: 'the see was', targetLen: 4, nm: [0, 2, 3] },
+  { parts: ['We rode', 'past the beach', 'to meet', 'our whole class'], errorIndex: 1, wrong: 'passed the beach', targetLen: 6, nm: [0, 2, 3] },
+  { parts: ['We flew', 'past the coast', 'to see', 'the whole bay'], errorIndex: 1, wrong: 'passed the coast', targetLen: 6, nm: [0, 2, 3] },
+  { parts: ['He heard', 'the loud bells', 'ring right', 'through the town'], errorIndex: 2, wrong: 'ring write', targetLen: 5, nm: [0, 1, 3] },
 ];
-function homophoneCfg(tier: Tier): { nKeyed: string; nm: number; nRate: number } {
-  return ({ 1: { nKeyed: 'no', nm: 0, nRate: 0 }, 2: { nKeyed: 'sometimes', nm: 0, nRate: 0.25 }, 3: { nKeyed: 'sometimes', nm: 1, nRate: 0.25 }, 4: { nKeyed: 'often', nm: 2, nRate: 0.4 }, 5: { nKeyed: 'often', nm: 2, nRate: 0.4 } } as const)[tier];
+// The ladder is NEAR-MISS PROXIMITY, and only that (annie, 2026-08-08): near-miss count is
+// visible in the single item a child meets, so it can carry the tiers on its own — T1 0,
+// T2 1, T3 2, T4 3. N-keying is NOT a tier dial: "sometimes/often" are properties of a tier,
+// never of the one item a child sees, so it would collapse T1 and T2 into the same item. It is
+// a SERVING-DISTRIBUTION property instead — a fixed share of every tier's items key "No
+// mistake" — held here as one family constant.
+const HOMOPHONE_N_RATE = 0.2; // serving profile, not a tier parameter
+function homophoneNm(tier: Tier): number {
+  return ({ 1: 0, 2: 1, 3: 2, 4: 3, 5: 3 } as const)[tier];
+}
+/** Tag a correct DISTRACTOR part: a near-miss = over-applied rule, a plain part = a guess. */
+function spotTag(index: number, nm: number[]): string {
+  return nm.includes(index) ? SPOT_RULE_OVER_APPLIED : SPOT_GUESSED;
 }
 const HOMOPHONES_V2: SpagFamily = {
   id: 'spag-spell-homophone-by-sound',
   name: 'Homophones',
   subtype: 'spelling',
   franchise: 'en-homophone-by-sound',
-  tierRule: (t) => (([1, 2, 3, 4] as Tier[]).includes(t) ? `Homophones — one sentence in four parts, spot the wrong-sound spelling (${homophoneCfg(t).nKeyed === 'no' ? 'N never the answer' : 'N sometimes the answer'}, ${homophoneCfg(t).nm} near-miss part${homophoneCfg(t).nm === 1 ? '' : 's'}).` : ''),
-  structuralParams: (t) => ({ nKeyed: homophoneCfg(t).nKeyed, nearMissParts: homophoneCfg(t).nm }),
-  numberRanges: (t) => ({ letters: [3, 7], segments: [4, 4], nearMissParts: [homophoneCfg(t).nm, homophoneCfg(t).nm] }),
+  tierRule: (t) => (([1, 2, 3, 4] as Tier[]).includes(t) ? `Homophones — one sentence in four parts, spot the wrong-sound spelling; ${homophoneNm(t)} of the correct parts is a near-miss trap${homophoneNm(t) === 1 ? '' : 's'}.` : ''),
+  structuralParams: (t) => ({ nearMissParts: homophoneNm(t) }),
+  numberRanges: (t) => ({ letters: [3, 7], segments: [4, 4], nearMissParts: [homophoneNm(t), homophoneNm(t)] }),
   draft: (tier, r): SpagItemDraft => {
-    const cfg = homophoneCfg(tier);
-    const pool = HOMOPHONE_BANK.filter((s) => s.nm.length === cfg.nm);
+    const nm = homophoneNm(tier);
+    const pool = HOMOPHONE_BANK.filter((s) => s.nm.length === nm);
     const s = randPick(r, pool);
-    const nKey = cfg.nRate > 0 && r() < cfg.nRate;
+    const nKey = r() < HOMOPHONE_N_RATE; // uniform across tiers — a distribution, not a ladder rung
     const opts: SpagOption[] = [];
     if (nKey) {
-      s.parts.forEach((p) => opts.push({ value: p, isKey: false, misconceptionId: SPOT_FALSE_POSITIVE }));
+      // No error present, so the error SLOT is now a correct part that still carries its
+      // homophone — a near-miss too. An N-keyed item therefore carries one more near-miss than
+      // its tier's error items and is the hardest variant in the tier (a serving-overlay, not a
+      // rung): every trap is live and the answer is still "No mistake".
+      const nearMiss = [...s.nm, s.errorIndex];
+      s.parts.forEach((p, i) => opts.push({ value: p, isKey: false, misconceptionId: spotTag(i, nearMiss) }));
       opts.push({ value: 'No mistake', isKey: true });
     } else {
-      s.parts.forEach((p, i) => opts.push(i === s.errorIndex ? { value: s.wrong, isKey: true } : { value: p, isKey: false, misconceptionId: SPOT_FALSE_POSITIVE }));
+      s.parts.forEach((p, i) => opts.push(i === s.errorIndex ? { value: s.wrong, isKey: true } : { value: p, isKey: false, misconceptionId: spotTag(i, s.nm) }));
       opts.push({ value: 'No mistake', isKey: false, misconceptionId: 'en-n-option-avoidance' });
     }
     return { stem: SPELL_STEM, options: opts, params: { letters: s.targetLen, segments: 4, nearMissParts: s.nm.length } };

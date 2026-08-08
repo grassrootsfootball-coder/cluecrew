@@ -358,17 +358,23 @@ error**: thinking something is wrong when it isn't. That is a real, nameable mis
 instantiate actively **misdescribes her** and teaches a rule she applied correctly.
 
 **The rules (all eleven SPaG families):**
-1. **Correct-part distractors carry `en-error-spot-false-positive`**, never a franchise tag the
-   part does not instantiate. The `No mistake` option, when a distractor, carries
-   `en-n-option-avoidance`. The keyed error part carries no tag (it is the answer).
+1. **Correct-part distractors carry a false-positive tag split by the near-miss flag** (annie,
+   2026-08-08): a NEAR-MISS part (a real error pattern, correctly used) → `en-error-spot-rule-
+   over-applied`; a PLAIN part → `en-error-spot-guessed-a-part` (a close relative of, and
+   worded as the pair of, `en-n-option-avoidance`). Never a franchise tag the part does not
+   instantiate. `No mistake` as a distractor carries `en-n-option-avoidance`; the keyed error
+   part carries no tag.
 2. **The item is ONE coherent sentence in labelled parts**, exactly one part carrying the
    error — not four unrelated clauses. Parts show in sentence order, never shuffled.
-3. **The ladder is structural** — N-keying and near-miss proximity — **not word length**.
-   Word length may be a bounded range but makes no ladder claim: a `wordBand short→medium`
-   ladder is magnitude wearing a structural name, which the gate passes because it checks the
-   declaration, not whether the declared parameter is structural (blind-spot one, maths pass).
+3. **The ladder is NEAR-MISS PROXIMITY, and only that — 0, 1, 2, 3** (annie's correction,
+   2026-08-08). Near-miss count is visible in the single item a child meets, so it laddens at
+   item level. **N-keying is NOT a tier dial** — "sometimes/often" are properties of a tier,
+   not the one item a child sees, so an N-keying ladder collapses adjacent tiers into identical
+   items (the magnitude problem one level up). N-keying is a **serving-distribution** property,
+   a fixed share of every tier's items, held on the family, out of the tier rule. Word length
+   likewise makes no ladder claim.
 4. **Tier reach is honest.** SPaG ceilings at T4 (corpus); no family reaches T5. A family
-   reaches T1 only where the error can be made genuinely obvious.
+   reaches T1 only where the error can be made genuinely obvious (near-miss 0).
 
 Homophones was rebuilt to this and sent for check before the other ten; they get the same pass
 once it is signed — the maths discipline of proving one family before the volume run.

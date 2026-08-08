@@ -38,24 +38,24 @@ describe('SPaG families on the maths engine', () => {
     expect(() => assembleSpagItem(bad, tier, makeRng(1))).toThrow(/outside stated range/);
   });
 
-  it('homophones (rebuilt): coherent single sentence, false-positive tags, structural ladder', () => {
+  it('homophones (rebuilt): coherent sentence, split false-positive tags, item-level ladder', () => {
     const f = FAMILIES.find((x) => x.id === 'spag-spell-homophone-by-sound')!;
     expect(familyTiers(f)).toEqual([1, 2, 3, 4]); // reaches T1, ceilings at T4 (SPaG cap)
-    const SPELLING_FRANCHISES = ['en-double-consonant-boundary', 'en-unstressed-suffix-vowel', 'en-silent-letter-dropped'];
+    const SPELLING_FRANCHISES = ['en-double-consonant-boundary', 'en-unstressed-suffix-vowel', 'en-silent-letter-dropped', 'en-homophone-by-sound'];
+    const LEGAL = ['en-error-spot-rule-over-applied', 'en-error-spot-guessed-a-part', 'en-n-option-avoidance'];
     for (const t of familyTiers(f)) {
       for (const item of generateSpagSample(f, t, 6, 2)) {
         for (const o of item.options.filter((x) => !x.isKey)) {
-          // a correct part is tagged false-positive, never a mis-describing spelling franchise
-          expect(SPELLING_FRANCHISES).not.toContain(o.misconceptionId);
-          expect(['en-error-spot-false-positive', 'en-n-option-avoidance']).toContain(o.misconceptionId);
+          expect(SPELLING_FRANCHISES).not.toContain(o.misconceptionId); // never a mis-describing franchise
+          expect(LEGAL).toContain(o.misconceptionId);
         }
       }
     }
-    // the ladder is carried by structural dials, and adjacent tiers differ in one
-    const p1 = f.structuralParams!(1), p2 = f.structuralParams!(2), p3 = f.structuralParams!(3), p4 = f.structuralParams!(4);
-    expect(p1.nKeyed).not.toBe(p2.nKeyed); // T1→T2: N-keying
-    expect(p2.nearMissParts).not.toBe(p3.nearMissParts); // T2→T3: proximity
-    expect(p3.nearMissParts).not.toBe(p4.nearMissParts); // T3→T4: proximity
+    // The ladder is near-miss proximity ALONE, distinct at every tier (0,1,2,3) — visible in
+    // the single item a child meets, so T1 and T2 are not the same item with different labels.
+    expect([1, 2, 3, 4].map((t) => f.structuralParams!(t as 1).nearMissParts)).toEqual([0, 1, 2, 3]);
+    // N-keying is NOT a tier parameter (it is a serving distribution) — absent from the ladder.
+    expect(f.structuralParams!(1).nKeyed).toBeUndefined();
   });
 
   it('rejects an untagged distractor (P3)', () => {
