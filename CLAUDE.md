@@ -54,6 +54,12 @@ The build is governed by documents, and the documents win arguments.
   the platform own: status, pool, signatures, misconception library, tiers.
   Before importing a batch, diff it against the DB — if both have moved, the
   gate-forced side exports first and Cowork merges, never the reverse.
+  **Export a MERGE, never a wholesale replace.** The first attempt at this
+  exported the DB state entire and would have destroyed eleven fields of newer
+  Cowork authoring plus R23 quotation declarations on five items the DB never
+  held. Drift is rarely one-directional: check FIELD BY FIELD, and carry back
+  only what a gate forced. A gate failure is the only thing that overrides
+  Cowork's authoring, and the export must say which fields it changed.
 - Content decisions (items, chapters, misconceptions) go through the CMS
   review pipeline; nothing skips the reviewer.
 - A script that applies reviewer decisions RE-EXPORTS the affected artefact as

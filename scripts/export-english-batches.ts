@@ -1,5 +1,13 @@
 /**
- * EXPORT the live DB state for the two English comprehension batches (David, 2026-08-08).
+ * EXPORT the CONVERGED state for the two English comprehension batches (David, 2026-08-08).
+ *
+ * CORRECTED 2026-08-08: an earlier run of this script exported the DB state WHOLESALE. That was
+ * wrong and would have destroyed work. The drift is not one-directional — Cowork holds ELEVEN
+ * fields of newer authoring plus R23 quotation declarations on five items that the DB never had
+ * (`unfastened a rope`, `exciting stories`, `pop!`, `ten thousand a year`, …). Only TWO fields are
+ * gate-forced from this side. So the export is a MERGE, built the way the ownership rule says:
+ * start from COWORK's canonical file, which is authoritative for authored item content, and apply
+ * only the changes a GATE forced here.
  * `pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-english-batches.ts`
  *
  * WHY: the two copies drifted on 13 fields because BOTH were being edited and neither knew —
@@ -36,31 +44,35 @@ async function main(): Promise<void> {
       orderBy: { id: 'asc' },
     });
 
-    const items = rows.map((it) => ({
-      itemId: it.id,
-      questionTypeId: it.questionTypeId,
-      difficultyTier: it.difficultyTier,
-      stem: it.stem,
-      options: it.options.map((o) => ({
-        content: o.content,
-        isCorrect: o.isCorrect,
-        ...(o.misconceptionId ? { misconceptionId: o.misconceptionId } : {}),
-      })),
-      explanation: it.explanation,
-      status: it.status,
-      pool: it.pool,
-    }));
+    // The ONLY fields a gate forced on this side. Everything else stays as Cowork authored it.
+    const GATE_FORCED: Record<string, string[]> = {
+      'ENG-001-WIW-19': ['walkScript'], // R22 urgency: "quickly" -> "at speed"
+      'ENG-002-pp-13': ['walkScript'],  // R22 urgency: "quick view" -> "hasty view"
+      'ENG-002-pp-21': ['hintCore'],    // R23: both long words were ours, so reworded
+    };
+    const byId = new Map(rows.map((r) => [r.id, r]));
+    const applied: string[] = [];
+    const items = (envelope.items as Array<Record<string, any>>).map((src) => {
+      const fields = GATE_FORCED[src.itemId];
+      if (!fields) return src;
+      const db = byId.get(src.itemId);
+      if (!db) return src;
+      const dbEx = (db.explanation ?? {}) as Record<string, unknown>;
+      const ex = { ...(src.explanation ?? {}) };
+      for (const f of fields) {
+        if (typeof dbEx[f] === 'string' && dbEx[f] !== ex[f]) { ex[f] = dbEx[f]; applied.push(`${src.itemId}.${f}`); }
+      }
+      return { ...src, explanation: ex };
+    });
 
     const out = {
       ...envelope,
-      exportedFrom: 'ClueCrew DB — AUTHORITATIVE for these two batches from 2026-08-08',
+      exportedFrom: "Cowork's canonical file, plus ONLY the gate-forced changes from the ClueCrew DB",
       exportedAt: new Date().toISOString(),
-      supersedes: 'the canonical file at ' + canonPath,
-      absorbs: [
-        'role-scoped urgency rewording (R22) — WIW-19, pp-13 walk scripts',
-        'R23 quotation declarations in explanation.quotes — WIW-10, pp-21',
-        'the redrafted pp-21 hint (both long words were ours, so reworded)',
-      ],
+      basedOn: canonPath,
+      gateForcedChangesApplied: applied,
+      preserved: "all of Cowork's newer authoring, including every R23 quotation declaration",
+      note: 'Supersedes the wholesale DB export of the same date, which would have destroyed Cowork R23 work.',
       itemCount: items.length,
       typeCoverage: tally(items.map((i) => i.questionTypeId)),
       tierDistribution: tally(items.map((i) => i.difficultyTier)),
