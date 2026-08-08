@@ -4,12 +4,13 @@ import { assembleSpagItem, generateSpagSample, spagLadderGaps } from './spag-gen
 import { SPAG_FAMILIES as FAMILIES, HOMOPHONE_BANK, nonErrorNearMiss, DOUBLE_BANK, esNonErrorNearMiss, partHasDouble, SUFFIX_BANK, partHasSuffix, SILENT_BANK, partHasSilent, CONTRACTION_BANK, partHasContraction } from './spag-families';
 
 describe('SPaG families on the maths engine', () => {
-  it('is twelve families (4 spelling + 5 punctuation + 3 cloze) — apostrophe SPLIT in two', () => {
-    // R14: apostrophe holds two different properties and so two question types — contraction is
-    // binary (spot-the-mistake), possessive is permissive (the needs-an-apostrophe reframe).
-    expect(FAMILIES).toHaveLength(12);
+  it('is thirteen families (4 spelling + 5 punctuation + 4 cloze) — two families SPLIT in two', () => {
+    // R14: apostrophe holds two properties, so two question types (contraction binary → spot-form;
+    // possessive permissive → reframe). R18: connectives and tags sit at opposite ends of the parse
+    // ladder and test different skills (meaning vs syntax), so they split too.
+    expect(FAMILIES).toHaveLength(13);
     const bySub = FAMILIES.reduce<Record<string, number>>((m, f) => ({ ...m, [f.subtype]: (m[f.subtype] ?? 0) + 1 }), {});
-    expect(bySub).toEqual({ spelling: 4, punctuation: 5, cloze: 3 });
+    expect(bySub).toEqual({ spelling: 4, punctuation: 5, cloze: 4 });
   });
 
   it('every multi-tier family declares a real structural ladder (gate green)', () => {
@@ -22,10 +23,17 @@ describe('SPaG families on the maths engine', () => {
       // is narrow — rung-2 keyed items are all lists, so the opening-construction cap limits it);
       // the rest 6.
       // Possessive 4/tier too: the R-well is three narrow well types (R16).
-      const n = f.id === 'spag-punct-apostrophe-contraction' ? 3
+      // Cloze families take their honest bank depth, which differs per tier (R18: no fabricated
+      // ladder — tense supplies 4 items at T2 and only 2 at T4).
+      const CLOZE: Record<string, Record<number, number>> = {
+        'spag-cloze-word-class': { 2: 6 }, 'spag-cloze-tense': { 2: 4, 4: 2 },
+        'spag-cloze-connectives': { 3: 6 }, 'spag-cloze-tags': { 3: 8 },
+      };
+      const base = f.id === 'spag-punct-apostrophe-contraction' ? 3
         : ['spag-spell-double-consonant-boundary', 'spag-punct-comma-needs', 'spag-punct-apostrophe-possessive',
            'spag-punct-terminal-boundary', 'spag-punct-speech'].includes(f.id) ? 4 : 6;
       for (const t of familyTiers(f)) {
+        const n = CLOZE[f.id]?.[t] ?? base;
         const items = generateSpagSample(f, t, n, 1);
         expect(items).toHaveLength(n);
         for (const item of items) {

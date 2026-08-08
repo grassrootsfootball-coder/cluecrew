@@ -761,6 +761,108 @@ const POSSESSIVE_V2: SpagFamily = {
 };
 
 // ---------------------------------------------------------------------------------------
+// CLOZE (4 families) — R18. No N option, deliberately: in a gap-fill one option is better BY
+// CONSTRUCTION, so "none fits" would either never be the key or concede the item is broken.
+// Every item DECLARES a typed deciding factor. `grammar` and `sense` only — `register` and
+// `collocation` are forbidden, being the dimensions where English permits a second answer.
+// The parse-count ladder is a sound TEST but does not discriminate difficulty here, so each family
+// takes its honest tier(s) rather than a fabricated ladder (annie, 2026-08-08). Distractor
+// closeness is NOT a second dimension: in cloze the distractors ARE the paradigm, so they cannot be
+// tuned without changing what the family tests.
+// ---------------------------------------------------------------------------------------
+const CLOZE_STEM_V2 = 'Choose the word that fits the gap best.';
+export interface ClozeSentence {
+  id: string; klass: string; sentence: string; key: string;
+  distractors: Array<{ value: string; misconceptionId: string }>;
+  /** How many of the four options grammatically PARSE in the slot. */
+  parses: number;
+  /** Ratified deciding factor. `register`/`collocation` are forbidden (R18). */
+  factor: 'grammar' | 'sense';
+  /** For tense: the marker that FORCES the choice. Named, or "grammar" is being over-claimed. */
+  marker?: string;
+}
+function clozeFamilyV2(cfg: { id: string; name: string; franchise: string; tiers: Tier[]; bank: ClozeSentence[]; rule: (t: Tier) => string; tierOf: (s: ClozeSentence) => Tier }): SpagFamily {
+  return {
+    id: cfg.id, name: cfg.name, subtype: 'cloze', franchise: cfg.franchise,
+    tierRule: (t) => (cfg.tiers.includes(t) ? cfg.rule(t) : ''),
+    structuralParams: (t) => ({ optionsThatParse: cfg.bank.filter((s) => cfg.tierOf(s) === t)[0]?.parses ?? 0 }),
+    numberRanges: () => ({ options: [4, 4] }),
+    draft: (tier, r): SpagItemDraft => {
+      const s = randPick(r, cfg.bank.filter((x) => cfg.tierOf(x) === tier));
+      const opts: SpagOption[] = shuffle([
+        { value: s.key, isKey: true },
+        ...s.distractors.map((d) => ({ value: d.value, isKey: false, misconceptionId: d.misconceptionId })),
+      ], r);
+      return { stem: `${CLOZE_STEM_V2}  —  ${s.sentence}`, options: opts, params: { options: 4 }, dedupKey: s.id, diversityKey: s.klass };
+    },
+  };
+}
+
+const WC = 'en-word-class-by-ending';
+const WORD_CLASS_BANK: ClozeSentence[] = [
+  { id: 'wc-quickly', klass: 'quick', sentence: 'She answered the question ___.', key: 'quickly', distractors: [{ value: 'quick', misconceptionId: WC }, { value: 'quickness', misconceptionId: WC }, { value: 'quicken', misconceptionId: WC }], parses: 1, factor: 'grammar' },
+  { id: 'wc-clearly', klass: 'clear', sentence: 'He spoke to the class ___.', key: 'clearly', distractors: [{ value: 'clear', misconceptionId: WC }, { value: 'clearness', misconceptionId: WC }, { value: 'clarity', misconceptionId: WC }], parses: 1, factor: 'grammar' },
+  { id: 'wc-smoothly', klass: 'smooth', sentence: 'The runner moved ___ down the track.', key: 'smoothly', distractors: [{ value: 'smooth', misconceptionId: WC }, { value: 'smoothness', misconceptionId: WC }, { value: 'smoothen', misconceptionId: WC }], parses: 1, factor: 'grammar' },
+  { id: 'wc-carefully', klass: 'careful', sentence: 'She placed the vase ___ on the shelf.', key: 'carefully', distractors: [{ value: 'careful', misconceptionId: WC }, { value: 'carefulness', misconceptionId: WC }, { value: 'care', misconceptionId: WC }], parses: 1, factor: 'grammar' },
+  { id: 'wc-loudly', klass: 'loud', sentence: 'The crowd cheered ___ at the end.', key: 'loudly', distractors: [{ value: 'loud', misconceptionId: WC }, { value: 'loudness', misconceptionId: WC }, { value: 'louden', misconceptionId: WC }], parses: 1, factor: 'grammar' },
+  { id: 'wc-neatly', klass: 'neat', sentence: 'He wrote the answer ___ in his book.', key: 'neatly', distractors: [{ value: 'neat', misconceptionId: WC }, { value: 'neatness', misconceptionId: WC }, { value: 'neaten', misconceptionId: WC }], parses: 1, factor: 'grammar' },
+];
+const WORD_CLASS_V2 = clozeFamilyV2({
+  id: 'spag-cloze-word-class', name: 'Word class by job', franchise: WC, tiers: [2],
+  bank: WORD_CLASS_BANK, tierOf: () => 2,
+  rule: () => 'Word class — choose the form the job in the sentence requires. Single tier: only one form fits a slot, so the parse-count ladder does not climb.',
+});
+
+const TS = 'en-tense-sequence';
+const TENSE_BANK: ClozeSentence[] = [
+  // T2 — one parse; a forcing MARKER rules out the other three on grammar alone.
+  { id: 'tn-yesterday', klass: 'walk', sentence: 'Yesterday we ___ to the park.', key: 'walked', distractors: [{ value: 'walk', misconceptionId: TS }, { value: 'have walked', misconceptionId: TS }, { value: 'will walk', misconceptionId: TS }], parses: 1, factor: 'grammar', marker: 'Yesterday (definite past)' },
+  { id: 'tn-lastnight', klass: 'blow', sentence: 'Last night the wind ___ very loudly.', key: 'blew', distractors: [{ value: 'blows', misconceptionId: TS }, { value: 'has blown', misconceptionId: TS }, { value: 'will blow', misconceptionId: TS }], parses: 1, factor: 'grammar', marker: 'Last night (definite past)' },
+  { id: 'tn-hourago', klass: 'ring', sentence: 'An hour ago the bell ___ for lunch.', key: 'rang', distractors: [{ value: 'rings', misconceptionId: TS }, { value: 'has rung', misconceptionId: TS }, { value: 'will ring', misconceptionId: TS }], parses: 1, factor: 'grammar', marker: 'An hour ago (definite past)' },
+  { id: 'tn-lastweek', klass: 'finish', sentence: 'Last week she ___ her project.', key: 'finished', distractors: [{ value: 'finishes', misconceptionId: TS }, { value: 'has finished', misconceptionId: TS }, { value: 'will finish', misconceptionId: TS }], parses: 1, factor: 'grammar', marker: 'Last week (definite past)' },
+  // T4 — two parse; the choice is still GRAMMAR (annie retyped these from sense, 2026-08-08).
+  { id: 'tn-bell', klass: 'run', sentence: 'When the bell rang, the class ___ outside and lined up.', key: 'ran', distractors: [{ value: 'had run', misconceptionId: TS }, { value: 'runs', misconceptionId: TS }, { value: 'will run', misconceptionId: TS }], parses: 2, factor: 'grammar', marker: 'past-tense subordinate clause + coordinated past main verb (lined up)' },
+  { id: 'tn-bytime', klass: 'start', sentence: 'By the time we arrived, the film ___ without us.', key: 'had started', distractors: [{ value: 'started', misconceptionId: TS }, { value: 'starts', misconceptionId: TS }, { value: 'will start', misconceptionId: TS }], parses: 2, factor: 'grammar', marker: 'by the time (completed prior event forces past perfect)' },
+];
+const TENSE_V2 = clozeFamilyV2({
+  id: 'spag-cloze-tense', name: 'Tense sequence', franchise: TS, tiers: [2, 4],
+  bank: TENSE_BANK, tierOf: (s) => (s.parses === 1 ? 2 : 4),
+  rule: (t) => (t === 2 ? 'Tense — a time marker forces one form; the other three are ungrammatical.' : 'Tense — two forms parse and the sentence syntax decides which is right.'),
+});
+
+const CN = 'en-conjunction-logic';
+const CONNECTIVE_BANK: ClozeSentence[] = [
+  { id: 'cn-because', klass: 'cause', sentence: 'We stayed inside ___ it was raining.', key: 'because', distractors: [{ value: 'but', misconceptionId: CN }, { value: 'so', misconceptionId: CN }, { value: 'or', misconceptionId: CN }], parses: 4, factor: 'sense' },
+  { id: 'cn-but', klass: 'contrast', sentence: 'She was very tired, ___ she kept running.', key: 'but', distractors: [{ value: 'so', misconceptionId: CN }, { value: 'because', misconceptionId: CN }, { value: 'and', misconceptionId: CN }], parses: 4, factor: 'sense' },
+  { id: 'cn-so', klass: 'consequence', sentence: 'The bus was late, ___ we missed the film.', key: 'so', distractors: [{ value: 'but', misconceptionId: CN }, { value: 'because', misconceptionId: CN }, { value: 'or', misconceptionId: CN }], parses: 4, factor: 'sense' },
+  { id: 'cn-or', klass: 'alternative', sentence: 'We can walk to the park, ___ we can take the bus.', key: 'or', distractors: [{ value: 'but', misconceptionId: CN }, { value: 'because', misconceptionId: CN }, { value: 'so', misconceptionId: CN }], parses: 4, factor: 'sense' },
+  { id: 'cn-and', klass: 'sequence', sentence: 'She opened her book, ___ she began to read.', key: 'and', distractors: [{ value: 'but', misconceptionId: CN }, { value: 'or', misconceptionId: CN }, { value: 'because', misconceptionId: CN }], parses: 4, factor: 'sense' },
+  { id: 'cn-because2', klass: 'cause-2', sentence: 'The path was muddy, ___ it had rained all night.', key: 'because', distractors: [{ value: 'but', misconceptionId: CN }, { value: 'or', misconceptionId: CN }, { value: 'so', misconceptionId: CN }], parses: 4, factor: 'sense' },
+];
+const CONNECTIVES_V2 = clozeFamilyV2({
+  id: 'spag-cloze-connectives', name: 'Connectives', franchise: CN, tiers: [3],
+  bank: CONNECTIVE_BANK, tierOf: () => 3,
+  rule: () => 'Connectives — all four parse, so the logical relation decides. Single tier at the top of the parse ladder.',
+});
+
+const TG = 'en-question-tag-polarity';
+const TAG_BANK: ClozeSentence[] = [
+  { id: 'tg-arent-you', klass: 'be-2sg', sentence: 'You are on the last leg, ___?', key: "aren't you", distractors: [{ value: 'are you', misconceptionId: TG }, { value: "isn't it", misconceptionId: TG }, { value: "don't you", misconceptionId: TG }], parses: 1, factor: 'grammar' },
+  { id: 'tg-isnt-he', klass: 'be-3sg', sentence: 'He is coming with us, ___?', key: "isn't he", distractors: [{ value: 'is he', misconceptionId: TG }, { value: "aren't they", misconceptionId: TG }, { value: "doesn't he", misconceptionId: TG }], parses: 1, factor: 'grammar' },
+  { id: 'tg-didnt-she', klass: 'past-simple', sentence: 'She finished her work, ___?', key: "didn't she", distractors: [{ value: 'did she', misconceptionId: TG }, { value: "hasn't she", misconceptionId: TG }, { value: "wasn't she", misconceptionId: TG }], parses: 1, factor: 'grammar' },
+  { id: 'tg-cant-we', klass: 'modal-can', sentence: 'We can go now, ___?', key: "can't we", distractors: [{ value: 'can we', misconceptionId: TG }, { value: "don't we", misconceptionId: TG }, { value: "aren't we", misconceptionId: TG }], parses: 1, factor: 'grammar' },
+  { id: 'tg-wont-they', klass: 'modal-will', sentence: 'They will wait for us, ___?', key: "won't they", distractors: [{ value: 'will they', misconceptionId: TG }, { value: "don't they", misconceptionId: TG }, { value: "aren't they", misconceptionId: TG }], parses: 1, factor: 'grammar' },
+  { id: 'tg-havent-you', klass: 'perfect', sentence: 'You have seen this film, ___?', key: "haven't you", distractors: [{ value: 'have you', misconceptionId: TG }, { value: "didn't you", misconceptionId: TG }, { value: "aren't you", misconceptionId: TG }], parses: 1, factor: 'grammar' },
+  { id: 'tg-wasnt-it', klass: 'be-past', sentence: 'It was very cold, ___?', key: "wasn't it", distractors: [{ value: 'was it', misconceptionId: TG }, { value: "isn't it", misconceptionId: TG }, { value: "didn't it", misconceptionId: TG }], parses: 1, factor: 'grammar' },
+  { id: 'tg-doesnt-she', klass: 'present-simple', sentence: 'She plays the piano, ___?', key: "doesn't she", distractors: [{ value: 'does she', misconceptionId: TG }, { value: "isn't she", misconceptionId: TG }, { value: "hasn't she", misconceptionId: TG }], parses: 1, factor: 'grammar' },
+];
+const TAGS_V2 = clozeFamilyV2({
+  id: 'spag-cloze-tags', name: 'Question tags', franchise: TG, tiers: [3],
+  bank: TAG_BANK, tierOf: () => 3,
+  rule: () => 'Question tags — the tag must match the subject, the auxiliary and the polarity. Only one option parses.',
+});
+
+// ---------------------------------------------------------------------------------------
 // TERMINAL AND BOUNDARY — spot-form, TWO error types (annie, 2026-08-08). RUN-ONS DROPPED: the
 // missing full stop sits at a part JOIN, so nothing is wrong inside either part and a child naming
 // the second part has reasoned identically to one naming the first — a defensible wrong answer with
@@ -856,7 +958,8 @@ export const SPAG_FAMILIES: SpagFamily[] = [
   SPEECH_V2,
   COMMA_NEEDS_V2,
   // Cloze (3)
-  clozeFamily('en-word-class-by-ending', 'Word class by job', [1, 2, 3]),
-  clozeFamily('en-tense-sequence', 'Tense sequence', [2, 3, 4]),
-  clozeFamily('en-conjunction-logic', 'Connectives and tags', [2, 3, 4]),
+  WORD_CLASS_V2,
+  TENSE_V2,
+  CONNECTIVES_V2,
+  TAGS_V2,
 ];
