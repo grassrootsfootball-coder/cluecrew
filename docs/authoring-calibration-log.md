@@ -1062,6 +1062,20 @@ candidate** ("brave and good" may be more available than "from an old family of 
 the reviewer. So the field is 4 wrong in 67 — not systematically exposure-ranked, which is a
 reassuring result for an axis that carries a signature.
 
+**A RARE SENSE THAT IS A LABEL CANNOT BE TESTED AT ALL (annie, 2026-08-08) — the `passive` test.**
+The same argument that corrects `likelierKnown` also DISQUALIFIES some cards. If the rare sense is
+one a child RECOGNISES but cannot USE, an item on it asks her to parse an unfamiliar paraphrase of a
+concept rather than to read a sentence: `passive` = "built so it does not say who acted" is
+metalanguage, and **a T4 vocabulary item must not require metalanguage**. `passive` DROPPED.
+`condemn` stays out for the related reason — BOTH its senses are late, and a card whose two senses
+are both unfamiliar makes no good item at any tier, whichever way the flip points.
+**`noble` was the fifth inverted card** (5 of 67, still not systematic): brave-and-good is the child
+sense, born-into-a-titled-family the Tudor-lesson one. Flipping it moves the aristocratic sense into
+the RARE slot, where it fails this very test — so `noble` is corrected AND re-tiered T3→T2 (defensible:
+brave-and-good is a Year 4 sense), and carries a FAMILIAR-only item. Two consequences worth seeing:
+the flip and the guard interact, so a correction can change which HALF of a card survives; and a card
+may legitimately contribute one item rather than two, in either direction.
+
 **Instrument note.** The option-form audit is a heuristic: it separates "to …" / noun-phrase /
 gerund reliably, but recognises adjective phrases only from a word list, and produced false
 positives three times (`something`, `warm and friendly`, `fully grown and ready`). It catches gross

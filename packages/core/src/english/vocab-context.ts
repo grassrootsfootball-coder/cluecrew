@@ -72,6 +72,13 @@ export const vocabTier = (v: Pick<VocabItem, 'headwordRarity' | 'testedSense'>):
 /** The guard: a card may carry a FAMILIAR-sense item only if the headword is within reach at T2. */
 export const VOCAB_GUARD_OK = (headwordRarity: Tier): boolean => headwordRarity <= 2;
 
+/** A card whose RARE sense is a label a child recognises but cannot USE (the `passive` test): it
+ *  contributes its FAMILIAR-sense item only. Requires the headword to clear the guard. */
+const familiarOnly = (
+  pairId: string, headword: string, headwordRarity: Tier,
+  fam: { carrier: string; key: string; trap: string; wrong: [string, string] },
+): VocabItem[] => [{ id: `${pairId}-fam`, pairId, headword, headwordRarity, testedSense: 'familiar', ...fam }];
+
 /** A card whose headword fails the guard: it contributes its RARE-sense item only. */
 const rareOnly = (
   pairId: string, headword: string, headwordRarity: Tier,
@@ -168,13 +175,17 @@ export const VOCAB_BANK: VocabItem[] = [
     { carrier: 'Repainting the whole school in one weekend was ambitious.', key: 'big and hard to finish', trap: 'eager to do well', wrong: ['badly planned from the start', 'cheaper than everyone expected'] }),
   ...rareOnly('vc-humble', 'humble', 3,
     { carrier: 'The restaurant began as a humble van on the seafront.', key: 'small and not grand', trap: 'not boasting about yourself', wrong: ['busy from the first day', 'run by two brothers'] }),
-  ...rareOnly('vc-noble', 'noble', 3,
-    // Carrier changed to a PERSON: an *act* cannot be aristocratic, so the trap was eliminable on
-    // sense as well as form. A man can be either kind of noble, so both senses stay live.
-    { carrier: 'He was a noble man who gave up his place.', key: 'brave and good', trap: 'born into a titled family', wrong: ['quiet and very modest', 'well known in the town'] }),
+  // noble FLIPPED (annie, 2026-08-08): brave-and-good is the familiar sense, so this is a
+  // FAMILIAR-only card at T2. Its rare (aristocratic) sense is dropped on the `passive` ground —
+  // a Tudor-lesson sense she recognises but cannot use makes an unanswerable item.
+  ...familiarOnly('vc-noble', 'noble', 2,
+    { carrier: 'The crowd cheered his noble gesture.', key: 'brave and good', trap: 'born into a titled family', wrong: ['quiet and very modest', 'well known in the town'] }),
   ...rareOnly('vc-outrageous', 'outrageous', 3,
     { carrier: 'She wore an outrageous hat to the wedding.', key: 'very unusual, so people stare', trap: 'so unfair it makes people angry', wrong: ['borrowed just for the day', 'far too small for her'] }),
-  // The four whose vault `likelierKnown` was corrected B→A first (scripts/fix-vault-likelier-known).
+  // Three of the four whose vault `likelierKnown` was corrected B→A first. `passive` was DROPPED
+  // (annie, 2026-08-08): by the argument that flipped the card, its rare sense is a grammar LABEL a
+  // child recognises rather than a meaning she holds, so the item asks her to parse an unfamiliar
+  // paraphrase — a T4 vocabulary item must not require metalanguage.
   // Built only AFTER the data fix: a card built to a wrong likelierKnown produces an item labelled
   // rare that tests the familiar sense — the shortcut the flip exists to close.
   ...rareOnly('vc-genuine', 'genuine', 3,
@@ -183,8 +194,6 @@ export const VOCAB_BANK: VocabItem[] = [
     { carrier: 'Your ticket is still valid until Friday.', key: 'official and not run out', trap: 'based on good reasons', wrong: ['cheaper than the day rate', 'printed on thin card'] }),
   ...rareOnly('vc-animated', 'animated', 3,
     { carrier: 'They watched an animated film about a fox.', key: 'made from drawings shown quickly', trap: 'full of life and excitement', wrong: ['shot in black and white', 'made for younger children'] }),
-  ...rareOnly('vc-passive', 'passive', 4,
-    { carrier: 'The report was written in the passive throughout.', key: 'built so it does not say who acted', trap: 'accepting whatever happens', wrong: ['written in the past tense', 'kept short and formal'] }),
 ];
 
 // The headword is NAMED in the stem: an option-set item has no bold/markup channel, so "the word in

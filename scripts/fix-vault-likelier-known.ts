@@ -16,6 +16,13 @@
  */
 import { prisma } from '../packages/db/src/index';
 
+// `noble` needs BOTH fields: the flip (A→B) makes "brave and good" the familiar sense, and the
+// re-tier (T3→T2) is what lets it carry a familiar-sense item under the guard — defensible because
+// brave-and-good is a sense a Year 4 child holds (noble knights, a noble thing to do).
+const RETIER: Array<[string, 'A' | 'B', number, string]> = [
+  ['noble', 'B', 2, 'Brave-and-good is the child sense; born-into-a-titled-family is a Tudor-lesson sense she recognises but cannot use. Re-tiered T3→T2 so the familiar sense can carry an item under the guard.'],
+];
+
 const FIX: Array<[string, string]> = [
   ['passive', 'Grammar-label sense is recognised, not usable; "accepting whatever happens" is the sense she has.'],
   ['genuine', '"Real, not fake" is the child sense (genuine leather); honest-about-feelings is the later extension.'],
@@ -29,6 +36,12 @@ async function main(): Promise<void> {
     if (!w) { console.log(`MISSING ${headword}`); continue; }
     await prisma.word.update({ where: { id: w.id }, data: { likelierKnown: 'A', likelierKnownNote: `Corrected B→A (annie, 2026-08-08): ${why}` } });
     console.log(`${headword}: ${w.likelierKnown} → A`);
+  }
+  for (const [headword, lk, tier, why] of RETIER) {
+    const w = await prisma.word.findFirst({ where: { headword } });
+    if (!w) { console.log(`MISSING ${headword}`); continue; }
+    await prisma.word.update({ where: { id: w.id }, data: { likelierKnown: lk, tier, likelierKnownNote: `Corrected (annie, 2026-08-08): ${why}` } });
+    console.log(`${headword}: lk ${w.likelierKnown} → ${lk}, tier T${w.tier} → T${tier}`);
   }
   await prisma.$disconnect();
 }
