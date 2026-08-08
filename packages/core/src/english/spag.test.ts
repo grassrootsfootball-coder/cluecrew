@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { familyTiers, makeRng } from '../maths/generator';
 import { assembleSpagItem, generateSpagSample, spagLadderGaps } from './spag-generator';
-import { SPAG_FAMILIES as FAMILIES, HOMOPHONE_BANK, nonErrorNearMiss, DOUBLE_BANK, esNonErrorNearMiss, partHasDouble, SUFFIX_BANK, partHasSuffix, SILENT_BANK, partHasSilent } from './spag-families';
+import { SPAG_FAMILIES as FAMILIES, HOMOPHONE_BANK, nonErrorNearMiss, DOUBLE_BANK, esNonErrorNearMiss, partHasDouble, SUFFIX_BANK, partHasSuffix, SILENT_BANK, partHasSilent, CONTRACTION_BANK, partHasContraction } from './spag-families';
 
 describe('SPaG families on the maths engine', () => {
   it('is exactly the eleven franchises (4 spelling + 4 punctuation + 3 cloze)', () => {
@@ -61,6 +61,17 @@ describe('SPaG families on the maths engine', () => {
       // rule 7 — the errored token is distinct across the whole family bank
       expect(new Set(bank.map((s) => s.klass)).size).toBe(bank.length);
     }
+  });
+
+  it('contraction: every set-member in a clean part is a REVIEWED near-miss (pair-correctness)', () => {
+    // annie 2026-08-08: a contraction trap word can be genuinely WRONG for the sentence (`they're`
+    // with no plural referent), which the lookup cannot catch — so each is reviewed per sentence
+    // (nmVerified), and the parts the lookup flags in clean positions must exactly equal that set.
+    for (const s of CONTRACTION_BANK) {
+      const flagged = s.parts.map((p, i) => [p, i] as const).filter(([p, i]) => i !== s.errorIndex && partHasContraction(p)).map(([, i]) => i);
+      expect(flagged).toEqual(s.nmVerified ?? []);
+    }
+    expect(new Set(CONTRACTION_BANK.map((s) => s.klass)).size).toBe(CONTRACTION_BANK.length); // rule 7
   });
 
   it('homophones (rebuilt): split tags, item-level ladder, no N at T1, no repeated sentence, pair-share', () => {

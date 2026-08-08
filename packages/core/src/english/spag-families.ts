@@ -415,7 +415,15 @@ const HOMOPHONES_V2: SpagFamily = {
 //   · dedup by sentence + pair/class share cap at sample time (rule 5, in generateSpagSample).
 // A family supplies only its stem, its near-miss LOOKUP, and its verified bank. Homophones
 // stays hand-written (signed 2026-08-08) so its bytes are untouched; new families use this.
-export interface EsSentence { id: string; klass: string; parts: string[]; errorIndex: number; wrong: string; intended: number }
+export interface EsSentence {
+  id: string; klass: string; parts: string[]; errorIndex: number; wrong: string; intended: number;
+  /** Contraction only (annie 2026-08-08): the indices of NON-error parts whose set-member is the
+   *  CORRECT form for THIS sentence — a reviewed per-sentence judgement, because a contraction trap
+   *  word can be genuinely wrong (`they're` with no plural referent), which a word-list lookup
+   *  cannot catch. A CI test asserts this equals the parts the lookup flags, so no set-member in a
+   *  clean part ships unreviewed. */
+  nmVerified?: number[];
+}
 export function esNonErrorNearMiss(s: EsSentence, nearMiss: (p: string) => boolean): number {
   return s.parts.filter((p, i) => i !== s.errorIndex && nearMiss(p)).length;
 }
@@ -611,19 +619,19 @@ export const partHasContraction = (part: string): boolean =>
   part.toLowerCase().split(/\s+/).some((w) => CONTRACTIONS.has(w.replace(/[^a-z]/g, '')));
 export const CONTRACTION_BANK: EsSentence[] = [
   // 0 near-miss — error part CORRECTED; the other three carry no contraction word. Distinct keys.
-  { id: 'ct0-its', klass: "it's", parts: ["It's very cold", 'in the old', 'school hall', 'this week'], errorIndex: 0, wrong: 'Its very cold', intended: 0 },
-  { id: 'ct0-your', klass: 'your', parts: ['Your new book', 'is on the', 'wooden desk', 'by the shelf'], errorIndex: 0, wrong: "You're new book", intended: 0 },
-  { id: 'ct0-whos', klass: "who's", parts: ["Who's coming", 'to the big', 'match', 'this Saturday'], errorIndex: 0, wrong: 'Whose coming', intended: 0 },
-  { id: 'ct0-their', klass: 'their', parts: ['Their coats', 'hung on the', 'pegs', 'all day'], errorIndex: 0, wrong: 'There coats', intended: 0 },
-  // 1 near-miss — one other part carries a contraction word.
-  { id: 'ct1-itsposs', klass: 'its', parts: ['The dog chased its ball', 'across the', 'muddy field', "where they're playing"], errorIndex: 0, wrong: "The dog chased it's ball", intended: 1 },
-  { id: 'ct1-theyre', klass: "they're", parts: ["They're going out", 'to play', 'in your garden', 'after lunch'], errorIndex: 0, wrong: 'Their going out', intended: 1 },
-  { id: 'ct1-youre', klass: "you're", parts: ["You're very kind", 'to lend', 'me your pen', 'today'], errorIndex: 0, wrong: 'Your very kind', intended: 1 },
-  { id: 'ct1-were', klass: "we're", parts: ["We're leaving now", 'before it', 'gets dark', 'over there'], errorIndex: 0, wrong: 'Were leaving now', intended: 1 },
-  // 2 near-miss — two other parts carry contraction words.
-  { id: 'ct2-there', klass: 'there', parts: ['There is your bag', "and it's", 'by their coats', 'on the floor'], errorIndex: 0, wrong: 'Their is your bag', intended: 2 },
-  { id: 'ct2-wereverb', klass: 'were', parts: ['They were happy', "when you're", 'near their friends', 'at school'], errorIndex: 0, wrong: "They we're happy", intended: 2 },
-  { id: 'ct2-whose', klass: 'whose', parts: ['Whose turn is it', "now that they're", 'using your desk', 'today'], errorIndex: 0, wrong: "Who's turn is it", intended: 2 },
+  { id: 'ct0-its', klass: "it's", parts: ["It's very cold", 'in the old', 'school hall', 'this week'], errorIndex: 0, wrong: 'Its very cold', intended: 0, nmVerified: [] },
+  { id: 'ct0-your', klass: 'your', parts: ['Your new book', 'is on the', 'wooden desk', 'by the shelf'], errorIndex: 0, wrong: "You're new book", intended: 0, nmVerified: [] },
+  { id: 'ct0-whos', klass: "who's", parts: ["Who's coming", 'to the big', 'match', 'this Saturday'], errorIndex: 0, wrong: 'Whose coming', intended: 0, nmVerified: [] },
+  { id: 'ct0-their', klass: 'their', parts: ['Their coats', 'hung on the', 'pegs', 'all day'], errorIndex: 0, wrong: 'There coats', intended: 0, nmVerified: [] },
+  // 1 near-miss — one other part carries a contraction word, CORRECT for the sentence (referent present).
+  { id: 'ct1-itsposs', klass: 'its', parts: ['The dog chased its ball', 'near the children', 'in the park', "while they're cheering"], errorIndex: 0, wrong: "The dog chased it's ball", intended: 1, nmVerified: [3] }, // they're → the children (plural)
+  { id: 'ct1-theyre', klass: "they're", parts: ["They're going out", 'to play', 'in your garden', 'after lunch'], errorIndex: 0, wrong: 'Their going out', intended: 1, nmVerified: [2] }, // your → garden
+  { id: 'ct1-youre', klass: "you're", parts: ["You're very kind", 'to lend', 'me your pen', 'today'], errorIndex: 0, wrong: 'Your very kind', intended: 1, nmVerified: [2] }, // your → pen
+  { id: 'ct1-were', klass: "we're", parts: ["We're leaving now", 'before it', 'gets dark', 'over there'], errorIndex: 0, wrong: 'Were leaving now', intended: 1, nmVerified: [3] }, // there → locative
+  // 2 near-miss — two other parts carry contraction words, each CORRECT for the sentence.
+  { id: 'ct2-there', klass: 'there', parts: ['There stood the girls', 'with their bags', 'and your coat', 'by the gate'], errorIndex: 0, wrong: 'Their stood the girls', intended: 2, nmVerified: [1, 2] }, // their → the girls; your → coat
+  { id: 'ct2-wereverb', klass: 'were', parts: ['The girls were happy', "when you're kind", 'and their friends', 'cheer loudly'], errorIndex: 0, wrong: "The girls we're happy", intended: 2, nmVerified: [1, 2] }, // you're → you are; their → the girls
+  { id: 'ct2-whose', klass: 'whose', parts: ['Whose turn is it', 'now the girls', 'are sharing their books', 'near your desk'], errorIndex: 0, wrong: "Who's turn is it", intended: 2, nmVerified: [2, 3] }, // their → the girls; your → desk
 ];
 const CONTRACTION_V2 = errorSpotFamily({
   id: 'spag-punct-apostrophe-contraction', name: 'Apostrophes (contraction)', subtype: 'punctuation',
