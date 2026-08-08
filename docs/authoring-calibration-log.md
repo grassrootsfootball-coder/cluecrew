@@ -1159,3 +1159,23 @@ too much of a **rush** to be polite", "he went **at speed**", "the room's **hast
 now fires **ZERO** across all content while still permitting the ten definitions. Rewording beats a
 permanent exception list: the rule keeps guarding against real stance drift, and nothing has to
 remember why three items are allowed to break it. (`scripts/reword-urgency-walkscripts.ts`.)
+
+## R23 — Declare the passage's word; reword only what is ours
+
+The R4 mechanism now works on walk scripts and hints, not only stems.
+The gate was reading stem.quotes while the contract puts them in
+explanation.quotes, so declarations made in the right place were being
+ignored and passage vocabulary was measured as ours. Fixed.
+
+Consequence for authoring — ask whose word it is before touching it:
+
+| the word is | do this |
+|---|---|
+| the passage's own word | declare it in explanation.quotes. Do not reword around it. |
+| our paraphrase of the passage | prefer replacing it with the passage's own words, then declare. Reword only if no passage phrase fits. |
+| our own instructional word (semicolon, paragraph, comparison) | reword. Nothing to declare. |
+| a character's name the item uses rather than quotes | reword. Using a name is not quoting it. |
+
+Worked example, this session: contemptuous in WIW-10 is the passage's
+word and the item is about it — declared. Semicolon and Elizabeth in
+pp-21 are ours — reworded.
