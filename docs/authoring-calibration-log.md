@@ -1035,6 +1035,18 @@ guard-failing Mode A card, and much less authoring than scoped.
 against a district T4 that was its thinnest tier. A constraint that looked like a cost three rounds
 earlier ended by making the family bigger and filling the tier that needed it.
 
+**PLAUSIBILITY, not just form — the fault the form audit cannot see (annie, 2026-08-08).** In the
+first probe the two non-sense fillers were transparently wrong (`too small to wear` against a carrier
+about savings), so a child who had never met the rare sense could reach the key BY ELIMINATION: the
+item tested whether she could rule out the familiar sense, not whether she knew the rare one. The
+fillers were doing T1 work in a T4 item. **The fix is the fillers, not the trap:** each must be
+plausible AGAINST THE CARRIER — grammatical in the frame and topically consistent — so that every
+wrong option sounds possible until you look properly (the vr-04 distractor-closeness rule). Checked
+across all 35: 18 items had a filler that was ungrammatical in its frame (`quick to count very
+carefully his argument`) or topically disconnected (`heavy to lift` of a tree); all rewritten.
+**No heuristic catches this** — it is a judgement about meaning, and it is where the remaining risk
+in the family sits.
+
 **Instrument note.** The option-form audit is a heuristic: it separates "to …" / noun-phrase /
 gerund reliably, but recognises adjective phrases only from a word list, and produced false
 positives three times (`something`, `warm and friendly`, `fully grown and ready`). It catches gross
