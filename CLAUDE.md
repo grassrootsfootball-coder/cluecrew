@@ -64,6 +64,23 @@ The build is governed by documents, and the documents win arguments.
   object key order, so a raw `JSON.stringify` diff reports permanent false drift
   on any structured field (`quotes`, options). Sort keys before comparing, or a
   synced batch reads as still-drifted and someone re-imports it forever.
+- LIBRARY TEXT: THE DB AUTHORS, COWORK PROPOSES TRANSFORMS (annie, 2026-08-08).
+  "Cowork authors, the DB holds" is about ITEM content and does not reach the
+  misconception library — `childHint` lives on the misconception, which the DB
+  owns. Three copy mismatches in two turns came of the gap. So, explicitly:
+  **the DB holds library text; Cowork proposes changes as a TRANSFORM against
+  quoted DB text, and keeps no local copy to drift from.** A transform survives
+  a stale copy where a rewrite does not — "apply the transform, not the text"
+  is what saved `or sound right` in `vr-form-without-meaning`, and a rewrite is
+  what had lost it. The read path is
+  `scripts/export-misconception-library.ts`, which delivers every entry's
+  current `childHint` verbatim plus a gate verdict; re-run it rather than
+  reusing a download.
+- **QUOTE THE WHOLE FIELD WHEN REPORTING IT.** One of those three mismatches was
+  mine: a sweep report quoted only the FAILING SENTENCE of a hint, and the
+  reviewer reasonably read it as the hint, so the redraft came back missing a
+  leading sentence. When reporting a failure, give the failing fragment AND the
+  whole field it came from — a partial quote becomes someone's source text.
 - Content decisions (items, chapters, misconceptions) go through the CMS
   review pipeline; nothing skips the reviewer.
 - A script that applies reviewer decisions RE-EXPORTS the affected artefact as
