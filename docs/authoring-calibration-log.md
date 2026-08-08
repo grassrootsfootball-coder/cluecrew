@@ -475,6 +475,19 @@ words though its trap pool is the full ~30; **silent letters aims at 6/rung** on
 but drops to 5 or 4 if rung-3 cannot be built cross-group; **suffix holds 6/rung**. Bank depth is
 the serving caveat already carried on every SPaG signature.
 
+**Two things a SPaG signature carries, made explicit (annie, 2026-08-08):**
+1. **Bank depth is a per-family qualification, and the numbers now differ.** Suffix 24 (6/rung),
+   silent 24 or 20 (6 or 5), double 16 (4/rung → four items per tier, so a child sees the whole of
+   double letters in one sitting). The signature warrants that *every item the family can produce
+   is fair at its tier* — NOT that a child can practise it without exhaustion. Each family's depth
+   is **sized before serving**, and it is a different number for each (same shape as M-place).
+2. **The trap definition travels WITH the signature, not three documents away.** The trap principle
+   (a trap is a trap only where a taught child hesitates) is what every ratified definition — and
+   so every signature — rests on, and it is why two of the eleven are lists. So the signature
+   record itself states the family's trap definition, so that a later reader asking "why is `right`
+   clean and `knight` a trap?" finds the answer next to the signature. `apply-spag-signatures.ts`
+   carries each family's one-line trap definition in its signature note.
+
 Homophones was rebuilt to all of this and SIGNED (annie, 2026-08-08, T1–T4) with a bank-depth
 qualification carried on the signature (24 verified sentences, 6/rung → a tier emits six
 distinct items; two sittings exhaust a tier — a serving concern to size before volume, same

@@ -15,7 +15,7 @@ const METHOD = 'written review — SPaG signing sitting 2026-08-08';
 
 // [familyId, signed scope, note]
 const SIGNATURES: Array<[string, string, string]> = [
-  ['spag-spell-homophone-by-sound', 'T1–T4', 'Homophones. SIGNED AS: every item the family emits is a fair item at its tier and the near-miss ladder (0/1/2/3, derived-and-verified) is honest — NOT that a child can practise without repetition. The bank is 24 verified sentences (6 per rung); with dedup-by-sentence a tier emits six distinct items, so two sittings exhaust a tier. Bank depth is a SERVING concern, carried on the family (same shape as the M-place qualification), to be sized before volume. T5 out of scope (SPaG ceiling T4).'],
+  ['spag-spell-homophone-by-sound', 'T1–T4', 'Homophones. TRAP DEFINITION: a part is a near-miss iff a word in it is a standard KS2 homophone (a reviewed list — "is a homophone" has no generative rule); weak-forms/near-homophones/low-frequency (were/we\'re, shore/sure, thyme) excluded. SIGNED AS: every item the family emits is a fair item at its tier and the near-miss ladder (0/1/2/3, derived-and-verified) is honest — NOT that a child can practise without repetition. DEPTH: 24 verified sentences (6/rung) → six distinct items per tier, so two sittings exhaust a tier; a SERVING concern to size before volume (M-place shape). T5 out of scope (SPaG ceiling T4).'],
 ];
 
 async function main(): Promise<void> {
