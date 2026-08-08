@@ -907,3 +907,33 @@ So rung 3 — all four parsing — is reachable only where the decision is gramm
 Expect the three cloze families to land where the punctuation ones did: a real ceiling, stated.
 This also discharges the vr-04 discipline named earlier: if the author cannot write one sentence
 saying why the key beats each distractor, the option comes out — the declared factor IS that sentence.
+
+**THE FOUR STEMS, SETTLED (annie, 2026-08-08).** "Read the sentence." is dropped from the spot stem
+— every item implies it, and it delayed the one word that distinguishes the tasks. `needs` was
+REJECTED in favour of `must have but does not`: the whole reframe rests on required-vs-acceptable,
+and a child reading "needs a comma" as "could take a comma" picks an optional site and is right by
+her own reading — the defensible wrong answer the longer wording closes. Shortness is not worth that.
+1. **SPOT** — "One part has a spelling mistake. Which part is it? If every part is right, choose N."
+2. **COMMA** — "One part must have a comma but does not. Which part is it? If every part is right, choose N."
+3. **APOSTROPHE** — "One part must have an apostrophe but does not. Which part is it? If every part is right, choose N."
+4. **CLOZE** — "Choose the word that fits the gap best."
+The contrast lands at word three: **has** (something is wrong) vs **must** (something is missing),
+with **Choose** at word one. Stems 2 and 3 sharing three words is correct — the task IS the same,
+only the mark differs.
+
+**CLOZE HAS NO N, DELIBERATELY (annie, 2026-08-08).** "None of these fits" is a different claim from
+"every part is right": in a gap-fill one option is better than the others BY CONSTRUCTION. An N
+option would either never be the key — teaching her to ignore it — or be the key sometimes, which
+concedes that no word fits, and then the item is broken. **Serving requirement:** the eleven other
+families render a fifth labelled option and cloze renders four, so the VISUAL difference must carry
+the signal the stem cannot. Verified in the authored corpus (error-spot items hold 5 options with N;
+cloze items hold 3–4 with none), but **no renderer exists for the generated families yet** — this is
+a requirement on the serving build, not yet a verified fact.
+
+**Tense sequence — the factor must be FORCING, not merely preferable (annie, 2026-08-08).** Tense is
+grammatical only where the sentence contains a marker that forces it (`Yesterday`, `By the time the
+bell rang`, a subordinate clause carrying its own tense). Without one it is stylistic: `she has
+finished her homework` and `she finished her homework` are both fine in isolation. So a rung-3 tense
+item MUST contain a forcing marker and **the declared factor must NAME it** — otherwise "grammar"
+gets claimed for items where the grammar does not actually decide. Same shape as the required-site
+test in comma.
