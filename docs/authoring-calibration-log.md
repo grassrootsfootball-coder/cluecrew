@@ -1678,3 +1678,43 @@ instead of counting the log. The engine failures above were sitting in plain sig
 **Step 4 — per-spec servers and databases — is DROPPED.** It was costed against a cause that turned
 out not to exist. Two green deterministic runs is the evidence; if genuine cross-spec coupling ever
 appears, the costing stands and can be revived.
+
+## R39 — Environment-derived where it should be request-derived
+*David, 2026-08-09. The cookie-name bug was one instance; this is the sweep for its class.*
+
+**The pattern: behaviour keyed to the ENVIRONMENT the code was built for, in a place that should ask
+the REQUEST.** It hides for the same reason every time — the two only differ in the mode nobody
+tests.
+
+**The sweep found one more, and it was the mirror of the first.** Both halves of the child session
+were environment-keyed:
+
+- the middleware READ the session cookie under a `__Secure-` name chosen by `NODE_ENV`;
+- both writers SET the cookie's `Secure` flag from `NODE_ENV` too.
+
+Being wrong together is what kept them consistent, and therefore invisible: a production build over
+http wrote a cookie the browser discards and looked for a name nothing had written. Both now derive
+from the request (`x-forwarded-proto` first, then the request's own scheme), through one shared
+`isSecureRequest` + `childCookieOptions` in `lib/child-token.ts` — the duplication is what let the
+two sides drift in the first place.
+
+The residual fallback **fails safe by design**: with no proxy header and no scheme to read, it
+returns *insecure*. A cookie without `Secure` still works over https; a cookie with it vanishes
+silently over http, which is the failure that hid for months.
+
+**Everything else that branches on `NODE_ENV` is dev tooling and stays**: the three debug pages, the
+mascot controller, the service-worker registration, and the chapter cache. None of them decides
+whether a request is authorised. Two adjacent things are deliberate configuration rather than this
+fault, and are named so nobody re-finds them: `PRELAUNCH` in the middleware (a deploy-wide switch,
+correctly not request-derived) and `ADMIN_EMAILS` (env-derived admin bootstrap — intentional, but it
+IS privilege that varies by environment).
+
+**A second class the same run exposed, and it is R35's mirror.** R35 swept for assertions a REAL
+library would falsify. CI's two remaining failures were the opposite: assertions an EMPTY database
+falsifies — `expect(imported).toBe(183)`, the count of one local import, and a vault assertion that
+needs LIVE words CI never has (every imported card is DRAFT by design, which the neighbouring test
+asserts). **Both directions are one fault: an expectation written as a literal instead of derived
+from the system.** Fixed by asserting the invariant — an imported card never serves, at any bank
+size including zero — and by asserting the vault state that MATCHES the journey just taken.
+
+Local: **71 of 71, 1.8 minutes, no retries.**

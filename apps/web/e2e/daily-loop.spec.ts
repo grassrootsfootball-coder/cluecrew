@@ -68,6 +68,7 @@ test('full Daily Loop: HQ → warm-up → case → plain closer → wind-down; m
 
   let lastTick = Date.now();
   let lastBranch = 'start';
+  let sawWordReview = false;
   // Steps are DOM polls, not interactions: a single warm-up item costs 2–4 of
   // them (render → answer → feedback). The budget is only a runaway guard —
   // test.setTimeout(480_000) is the real deadline — so it stays generous even
@@ -161,7 +162,7 @@ test('full Daily Loop: HQ → warm-up → case → plain closer → wind-down; m
       'section.crew-panel button.crew-tap:not(.primary):not([aria-label="Hear it read aloud"])',
     );
     if ((await wordButtons.count()) > 0) {
-      lastBranch = 'word-review'; await tryClick(wordButtons.first());
+      lastBranch = 'word-review'; sawWordReview = true; await tryClick(wordButtons.first());
       continue;
     }
     // Plain closer options (ordered list buttons). Latch here as well as at the
@@ -205,7 +206,17 @@ test('full Daily Loop: HQ → warm-up → case → plain closer → wind-down; m
   );
   expect(redElements).toBe(0);
 
-  // Back at HQ, the vault holds today's words.
+  // Back at HQ, the vault reflects what the loop actually did.
+  //
+  // This asserted `/in the vault/` unconditionally, which requires the loop to have taken its
+  // word-review branch — and that needs LIVE vault words. Every imported card is DRAFT by design
+  // (the word-draft-door spec asserts exactly that), so CI's seeded database has none and the
+  // branch never runs there. The test was reporting the absence of content as a broken vault.
+  //
+  // Either state is correct; which one is not. So assert the page renders the state that MATCHES
+  // the journey just taken.
   await page.goto('/crew/vault');
-  await expect(page.getByText(/in the vault/)).toBeVisible();
+  await expect(
+    page.getByText(sawWordReview ? /in the vault/ : /in the vault|Vault's bare/),
+  ).toBeVisible();
 });

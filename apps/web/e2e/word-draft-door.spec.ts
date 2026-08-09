@@ -93,6 +93,13 @@ test('every imported vault card is DRAFT and names its author', async () => {
   const live = await prisma.word.count({
     where: { authoredBy: 'ai-draft:cowork-okafor-v1', status: 'LIVE' },
   });
-  expect(imported).toBe(183);
+  // Assert the DOOR, not the bank size. `toBe(183)` was the count of one local import: it held on a
+  // machine that had run it and read 0 on CI's freshly seeded database, so the test reported the
+  // absence of content as a broken door. The invariant is true at ANY size, zero included — an
+  // imported card never serves — and when the import HAS run, every card it made is still DRAFT.
+  const draft = await prisma.word.count({
+    where: { authoredBy: 'ai-draft:cowork-okafor-v1', status: 'DRAFT' },
+  });
   expect(live).toBe(0);
+  expect(draft).toBe(imported);
 });

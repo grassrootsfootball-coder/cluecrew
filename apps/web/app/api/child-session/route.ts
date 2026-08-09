@@ -5,7 +5,8 @@ import { currentParent } from '@/lib/auth';
 import { verifyPassword } from '@/lib/passwords';
 import {
   CHILD_TOKEN_COOKIE,
-  CHILD_TOKEN_TTL_SECONDS,
+  childCookieOptions,
+  isSecureRequest,
   signChildToken,
 } from '@/lib/child-token';
 import { clientKey, rateLimit } from '@/lib/rate-limit';
@@ -26,13 +27,7 @@ export async function POST(request: Request) {
 
   const token = await signChildToken({ childId: child.id, parentId: parent.id });
   const response = NextResponse.json({ ok: true, childId: child.id, crewName: child.crewName });
-  response.cookies.set(CHILD_TOKEN_COOKIE, token, {
-    httpOnly: true,
-    sameSite: 'lax',
-    secure: process.env.NODE_ENV === 'production',
-    path: '/',
-    maxAge: CHILD_TOKEN_TTL_SECONDS,
-  });
+  response.cookies.set(CHILD_TOKEN_COOKIE, token, childCookieOptions(isSecureRequest(request.headers, new URL(request.url).protocol)));
   return response;
 }
 

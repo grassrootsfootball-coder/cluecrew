@@ -1,6 +1,6 @@
 'use server';
 
-import { cookies } from 'next/headers';
+import { cookies, headers } from 'next/headers';
 import { redirect } from 'next/navigation';
 import { z } from 'zod';
 import { MAX_CHILD_PROFILES, captureAcademicYear, effectiveYearGroup } from '@cluecrew/core';
@@ -8,7 +8,8 @@ import { logEvent, prisma } from '@cluecrew/db';
 import { currentParent } from '@/lib/auth';
 import {
   CHILD_TOKEN_COOKIE,
-  CHILD_TOKEN_TTL_SECONDS,
+  childCookieOptions,
+  isSecureRequest,
   signChildToken,
 } from '@/lib/child-token';
 import { hashPassword, verifyPassword } from '@/lib/passwords';
@@ -28,13 +29,7 @@ export async function enterCrewAction(formData: FormData): Promise<void> {
   if (!child || child.deletedAt || child.parentId !== parent.id) redirect('/parent/children');
 
   const token = await signChildToken({ childId: child.id, parentId: parent.id });
-  (await cookies()).set(CHILD_TOKEN_COOKIE, token, {
-    httpOnly: true,
-    sameSite: 'lax',
-    secure: process.env.NODE_ENV === 'production',
-    path: '/',
-    maxAge: CHILD_TOKEN_TTL_SECONDS,
-  });
+  (await cookies()).set(CHILD_TOKEN_COOKIE, token, childCookieOptions(isSecureRequest(await headers())));
   redirect('/crew');
 }
 
