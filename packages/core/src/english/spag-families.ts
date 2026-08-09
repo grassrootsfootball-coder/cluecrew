@@ -218,7 +218,11 @@ interface EsConfig {
   noNOption?: boolean;
 }
 function errorSpotFamily(cfg: EsConfig): SpagFamily {
-  const nRate = cfg.nRate ?? 0.2;
+  // A family with no N option can never draw the N branch — otherwise `nRate` falls back to its
+  // 0.2 default and the branch pushes an N-keyed option straight past the declaration. The R31
+  // parameter assertion caught exactly that within minutes of the R33 change, which is the whole
+  // argument for asserting the sheet rather than trusting it.
+  const nRate = cfg.noNOption ? 0 : (cfg.nRate ?? 0.2);
   const trap = (p: string): string => (cfg.nearMiss(p) ? SPOT_RULE_OVER_APPLIED : SPOT_GUESSED);
   return {
     id: cfg.id,
