@@ -192,8 +192,10 @@ jobs:
         working-directory: apps/web
         run: pnpm exec playwright install --with-deps chromium
 
+      # `e2e:only` — the Build step above already produced it, and `pnpm e2e`
+      # (the local one-liner) builds first. Same binary either way.
       - name: E2E (child-token isolation, CSP, daily loop, billing, CMS)
-        run: pnpm e2e
+        run: pnpm --filter @cluecrew/web e2e:only
 
       # Traces and screenshots for the failing tests, so a CI-only failure can
       # be diagnosed from evidence instead of guessed at from a stack trace.

@@ -8,6 +8,19 @@ loadEnv({ path: resolve(process.cwd(), '../../.env') });
 const isDev = process.env.NODE_ENV !== 'production';
 
 /**
+ * APP_ENV REACHES THE CLIENT BUNDLE (2026-08-09).
+ *
+ * The two engine debug harnesses gate themselves on `NEXT_PUBLIC_APP_ENV !== 'staging'` in a
+ * production build. That variable was READ IN TWO PLACES AND SET NOWHERE, so the harnesses could
+ * never render in any production build — and the eight e2e tests that drive them could never pass
+ * in CI, which builds before it runs them. They had been failing since the harnesses were written.
+ *
+ * `APP_ENV` is the single env this repo already uses (dev | staging | production), so the public
+ * mirror is derived from it rather than being a second thing to remember to set.
+ */
+const appEnv = process.env.APP_ENV ?? 'dev';
+
+/**
  * CSP for child-facing /crew routes (S1, BUILD-PHASE-1 §5): no third-party
  * scripts, styles, images, fonts, or connections — every source is 'self'.
  * CI asserts this header and that an injected third-party script is blocked.
@@ -35,6 +48,8 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  // Inlined at build time, so the harness gate can read it in the browser bundle.
+  env: { NEXT_PUBLIC_APP_ENV: appEnv },
   transpilePackages: ['@cluecrew/core', '@cluecrew/db', '@cluecrew/ui'],
   async headers() {
     return [

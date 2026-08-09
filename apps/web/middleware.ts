@@ -48,11 +48,25 @@ export default async function middleware(request: NextRequest) {
     return NextResponse.rewrite(new URL('/holding', request.url));
   }
 
+  // WHICH COOKIE NAME TO LOOK FOR — derived from the REQUEST, not from NODE_ENV (2026-08-09).
+  //
+  // next-auth prefixes the session cookie with `__Secure-` only when the sign-in happened over
+  // https. Keying that off NODE_ENV meant any PRODUCTION BUILD SERVED OVER HTTP looked for the
+  // secure name, found nothing, and read the visitor as having no role at all — at which point
+  // the wall below falls straight through to `next()` and stops refusing anything.
+  //
+  // That is precisely the mode CI builds and runs in, so THE 403 WALL HAS NEVER BEEN EXERCISED
+  // BY CI: `staff-roles` "a REVIEWER token is refused on every excluded route" fails there for
+  // this reason and no other. Real https deployments were unaffected — the names matched — which
+  // is why it stayed invisible.
+  //
+  // x-forwarded-proto first, so a TLS-terminating proxy still reports https to the app.
+  const forwardedProto = request.headers.get('x-forwarded-proto');
+  const protocol = forwardedProto ?? request.nextUrl.protocol.replace(':', '');
   const token = await getToken({
     req: request,
     secret: process.env.AUTH_SECRET,
-    // next-auth v5 cookie naming; secureCookie must match the deployment.
-    secureCookie: process.env.NODE_ENV === 'production',
+    secureCookie: protocol === 'https',
   });
   const role = (token as { staffRole?: string } | null)?.staffRole;
 

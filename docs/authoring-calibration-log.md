@@ -1632,3 +1632,49 @@ family a child meets in a session, that child gets no N exposure in that session
 serving consideration, not a content one** — nothing about the family is wrong; the exposure gap is
 created by what a session happens to contain, so it belongs with the other three R19 conditions that
 still have no owner.
+
+## R38 — The dev server was the flakiness
+*David, 2026-08-09. Steps 1–3 done; step 4 reassessed and dropped.*
+
+**The e2e suite now runs against a production build, with no retries: 71 of 71, twice
+consecutively, in 1.8 minutes — down from ~12 minutes and a failure set that changed every run.**
+
+The diagnosis in the previous entry was WRONG and is corrected here. Different casualties each run
+looked like shared state across 71 tests, and per-spec database isolation was costed at ~2 minutes
+plus real machinery. **It was the dev server's on-demand compilation.** Local used `next dev`, CI
+used `next start`, and the same two specs took 2.2 minutes against one and 15 seconds against the
+other. Nothing was isolated and the coupling vanished.
+
+Worth keeping as a general caution: *a suite that fails differently each run does not necessarily
+have a state problem.* Measure the environment before buying isolation.
+
+**What the faster suite called in, none of it a regression:**
+
+1. **A read-after-write race.** `reviewer-surfaces` asserted a row's status straight after a server
+   action — no UI wait — and lost the race the moment the server got fast. Every other database read
+   in the suite already waits on a UI signal first; this was the one that did not. The first fix was
+   also wrong (it waited on the rejected table, which is ADMIN-ONLY and invisible to the reviewer
+   who just rejected the entry): waiting on something the acting user never renders is how a fix for
+   a race becomes a different failure. It now waits on the redirect.
+2. **`NEXT_PUBLIC_APP_ENV` was read in two places and set nowhere.** Both engine debug harnesses
+   gate themselves on it in a production build, so they could never render in one — and the EIGHT
+   e2e tests driving them could never pass in CI, which builds before it runs. They had been failing
+   since the harnesses were written. `APP_ENV` now feeds it through `next.config`.
+3. **The 403 role wall was inert in any production build served over HTTP.** `middleware.ts` chose
+   its session-cookie name from `NODE_ENV`, so a production build over http looked for the
+   `__Secure-` cookie, found nothing, read the visitor as having no role, and fell through to
+   `next()` — refusing nothing. Real https deployments were unaffected, which is why it stayed
+   invisible; but **CI builds and serves over http, so CI has never once exercised that wall.** The
+   cookie name is now derived from the request protocol (`x-forwarded-proto` first, for a
+   TLS-terminating proxy).
+
+**`retries: 1` is gone.** It was turning the race in (1) green. A retry that absorbs a real failure
+is the same fault as an unread build, one level down.
+
+**A correction I owe on my own reporting:** I twice told David that CI showed only two e2e failures.
+It showed thirteen. GitHub caps the annotation list, and I read the capped list as the complete one
+instead of counting the log. The engine failures above were sitting in plain sight the whole time.
+
+**Step 4 — per-spec servers and databases — is DROPPED.** It was costed against a cause that turned
+out not to exist. Two green deterministic runs is the evidence; if genuine cross-spec coupling ever
+appears, the costing stands and can be revived.

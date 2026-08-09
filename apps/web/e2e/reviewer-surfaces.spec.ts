@@ -94,6 +94,16 @@ test('rejecting takes two clicks, keeps the row, and an admin can restore it', a
 
   // Second click does it — and the row survives.
   await page.getByTestId('confirm-reject-submit').click();
+  // Wait for the action's redirect before reading the database. Reading straight after the click
+  // raced the server action and lost on a production build — it passed against the slow dev server
+  // and failed at 15s-per-suite speed, expecting REJECTED and finding PROPOSED. Every other
+  // database read in this suite already waits on a UI signal first (the restore below says so in
+  // its own comment); this was the one that did not.
+  //
+  // The signal is the REDIRECT, not the rejected table: that table is admin-only, and the reviewer
+  // who just rejected the entry cannot see it. Waiting on something this actor never renders is how
+  // a fix for a race becomes a different failure.
+  await page.waitForURL('**/admin/misconceptions?rejected=1');
   const rejectedRow = await prisma.misconception.findUnique({ where: { id: id! } });
   expect(rejectedRow).not.toBeNull();
   expect(rejectedRow!.status).toBe('REJECTED');

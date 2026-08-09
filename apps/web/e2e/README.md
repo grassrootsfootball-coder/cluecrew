@@ -36,20 +36,32 @@ shelf (`story-flag`), CSP blocking a request (`csp`), a role gate refusing a pag
 a marketing page with no pricing (`demand-test`). Those are true on any database. The test is
 whether a real library could falsify the assertion.
 
-## 2. The suite has ordering-dependent state coupling
+## 2. The suite runs against a production build
 
-Some tests fail only inside a full local run, passing both in isolation and in CI. **Which tests
-those are changes between runs.** Two consecutive clean full runs on the same commit produced
-different casualties — `daily-loop`, `nvr-samples`, `session-integrity` in one; `reviewer-surfaces`,
-`story-flag` in the next — and every one of them passed when run alone.
+`pnpm e2e` builds first and Playwright serves it with `next start` — the same binary CI runs. This
+is not a preference; it was the fix for a whole class of trouble:
 
-So this is not a list of five flaky tests to fix. It is **shared state across the suite**: 71 tests
-against one dev server and one database, where any test can be the victim of what ran before it.
+- **Speed.** The full suite went from ~12 minutes to **1.8**. Dev compiles each route on first hit.
+- **Determinism.** Local and CI now differ in no way that matters, so "passes locally, fails in CI"
+  stopped being a category.
+- **It surfaced faults dev was hiding** — a read-after-write race that only loses on a fast server,
+  and a middleware bug that only appears in a production build (see below).
 
-**They are not treated as findings, but they are not nothing either: a suite that produces a
-different failure set each run cannot be trusted to fail for a real reason later.** If a full run
-reports a failure, re-run that spec alone before believing it. The durable fix is fixture isolation
-per spec, not chasing whichever test lost this time.
+`E2E_DEV=1 pnpm e2e:dev` opts back into the dev server for iterating on one spec.
+
+**Do not add `retries`.** CI used to retry once, and the retry was quietly turning a real race
+green. If a test is flaky, it is telling you something.
+
+### On the ordering-dependent failures this file used to describe
+
+Earlier runs against the dev server produced a different failure set each time — `daily-loop`,
+`nvr-samples`, `session-integrity` in one run; `reviewer-surfaces`, `story-flag` in the next. That
+looked like shared state across the suite and was written up here as such.
+
+**It was not.** Against a production build the suite has run green twice consecutively, 71 for 71,
+with no isolation work of any kind. The instability was the dev server's compile timing, not
+cross-spec coupling — which is worth remembering the next time a suite looks like it needs
+per-spec databases.
 
 ## Locators
 
