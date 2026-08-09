@@ -106,8 +106,11 @@ test('a PROPOSED misconception is unusable until approved; the import → approv
   // The queue grew a BULK approval flow, and the one-at-a-time path it used to show flat now sits
   // inside its own disclosure. The card was being found and reported hidden, not missing — the
   // import had worked all along.
-  await reviewerPage.locator('summary', { hasText: 'Or decide them one at a time' }).click();
-  await expect(reviewerPage.getByTestId(`proposed-${PROPOSED_ID}`)).toBeVisible();
+  // Open the disclosure that actually CONTAINS the card, rather than one matched by its summary
+  // text — the queue has two sibling <details> and matching on prose picked the wrong one.
+  const proposedCard = reviewerPage.getByTestId(`proposed-${PROPOSED_ID}`);
+  await reviewerPage.locator('details', { has: proposedCard }).locator('summary').click();
+  await expect(proposedCard).toBeVisible();
 
   // Un-approved: an item referencing it is rejected server-side.
   const authorPage = await staffContext(browser, author);
@@ -137,7 +140,11 @@ test('a PROPOSED misconception is unusable until approved; the import → approv
     .getByTestId(`proposed-${PROPOSED_ID}`)
     .getByRole('button', { name: /^Approve —/ })
     .click();
-  await expect(reviewerPage.getByTestId('proposed-queue')).not.toBeVisible();
+  // Assert THIS entry left the queue, not that the whole queue vanished. The old assertion only
+  // held on a database with exactly one proposal — it passed in CI's freshly seeded DB and failed
+  // against a real library with thirteen others still pending. What the test is about is that
+  // approval moves this misconception out of the queue, and that is what it now checks.
+  await expect(proposedCard).toHaveCount(0);
 
   await draftItem();
   await authorPage.waitForURL(/\/admin\/items\/(?!new)[A-Za-z0-9]+$/);

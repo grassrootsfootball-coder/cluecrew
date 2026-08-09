@@ -1556,3 +1556,34 @@ and `options` were this: re-pinned at the new fingerprint without re-signing.
 Speech is the worked example on the other side: the child now sees four options where she signed
 five, so its fingerprint moves properly and it is **held MOVED** pending her signature on the new
 sheet. Twelve re-pinned; one held. That asymmetry is the guard working, not failing.
+
+## R35 — A test that asserts on an empty database asserts nothing
+*David, 2026-08-09, after the corpus-gates fix. Swept as a class.*
+
+**CI seeds a fresh database; a developer's machine holds a real library.** An assertion that only
+holds when the test's own row is the only row passes in CI forever and fails the moment it meets
+real content — so it was never testing the system, it was testing emptiness.
+
+The instance: `corpus-gates` asserted that after approving a proposal, *the proposed queue
+disappears*. True on a seeded database with one proposal; false against a library with thirteen
+others still pending. It now asserts what the test is about — that **this** entry left the queue.
+
+**THE SWEEP, as a class rather than an instance: the whole 71-test suite, and this was the only
+one.** Everything that looked like it — `toHaveCount(0)` on a chapter shelf, on card fields, on
+pricing copy — asserts absence caused by BEHAVIOUR (a feature flag, CSP, a role gate, a marketing
+page), which is true on any database. The distinguishing question is not "does this assert
+emptiness" but **"could a real library falsify it"**.
+
+Four safe patterns were already in use and are now written down in `apps/web/e2e/README.md`: scope
+to the row your test created; derive the expectation from the database; assert a floor rather than
+an equality; filter a payload to your own fixture before counting. `entitlements` is the model —
+it counts free-tier cases in the DB and compares, so it cannot go stale.
+
+**Recorded alongside it, because it is the same lesson one level out:** some tests fail only inside
+a full local run, and WHICH ONES CHANGES BETWEEN RUNS. Two consecutive clean runs on the same commit
+gave different casualties — `daily-loop`/`nvr-samples`/`session-integrity`, then
+`reviewer-surfaces`/`story-flag` — each passing alone and in CI. That makes it shared state across
+71 tests on one server and one database, not five flaky tests. Not a finding, but not nothing: a
+suite whose failure set differs each run cannot be trusted to fail for a real reason later. The
+durable fix is per-spec fixture isolation, not chasing whichever test lost this time. Two Playwright runs must never overlap: they share port 3100 and the database, and a
+contended suite once reported per-file durations of 12.8 hours.
