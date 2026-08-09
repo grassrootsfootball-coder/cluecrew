@@ -675,7 +675,7 @@ const WORD_CLASS_V2 = clozeFamilyV2({
 });
 
 const TS = 'en-tense-sequence';
-const TENSE_BANK: ClozeSentence[] = [
+export const TENSE_BANK: ClozeSentence[] = [
   // T2 — one parse; a forcing MARKER rules out the other three on grammar alone.
   { id: 'tn-yesterday', klass: 'walk', sentence: 'Yesterday we ___ to the park.', key: 'walked', distractors: [{ value: 'walk', misconceptionId: TS, parses: false }, { value: 'have walked', misconceptionId: TS, parses: false }, { value: 'will walk', misconceptionId: TS, parses: false }], factor: 'grammar', marker: 'Yesterday (definite past)' },
   { id: 'tn-lastnight', klass: 'blow', sentence: 'Last night the wind ___ very loudly.', key: 'blew', distractors: [{ value: 'blows', misconceptionId: TS, parses: false }, { value: 'has blown', misconceptionId: TS, parses: false }, { value: 'will blow', misconceptionId: TS, parses: false }], factor: 'grammar', marker: 'Last night (definite past)' },

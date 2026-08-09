@@ -1587,3 +1587,48 @@ gave different casualties — `daily-loop`/`nvr-samples`/`session-integrity`, th
 suite whose failure set differs each run cannot be trusted to fail for a real reason later. The
 durable fix is per-spec fixture isolation, not chasing whichever test lost this time. Two Playwright runs must never overlap: they share port 3100 and the database, and a
 contended suite once reported per-file durations of 12.8 hours.
+
+## R36 — An aggregate figure cannot be decomposed into the facts that produced it
+*Annie, 2026-08-09, holding `tn-teacher`. Her rule.*
+
+**The aggregate came FROM the per-option facts; reconstructing them backwards is guesswork
+constrained by arithmetic, and where the arithmetic has more than one solution it is a judgement
+wearing a derivation's clothes.**
+
+The case: R32 needed a per-option `parses` flag, and the bank held only the row-level count. For
+the seven `parses: 2` tense rows I derived which single distractor parses. She ruled **six correct
+and held one** — `tn-teacher` — because the arithmetic admitted two readings: a past perfect key
+with a past simple second parse (which would group it with `tn-bytime` and `tn-bus`), or a simple
+past key where "copied" parses a second way, which is ONE option parsing twice, not two options
+parsing. **She could not settle it from the derivation, which is exactly the point.**
+
+**Same family as R25** — the aggregate was an account of the values, and the values carry the
+signature. R25 says send the value rather than an account of it; R36 says you cannot recover the
+values from the account, however good the arithmetic looks.
+
+*Resolved on the values: the field holds key `had copied` with `copied` as the second parse — the
+first reading, grouping with `tn-bytime` and `tn-bus`. Sent verbatim rather than asserted
+(`tn-teacher-held-dbe2e3354eb1fcee`), because the ruling is hers.*
+
+## R37 — Speech signed, and what a designed-out option means
+*Annie, 2026-08-09.*
+
+**`spag-punct-speech` is SIGNED: T1–T4, four options, no N option.** Held MOVED under R34 as a
+substantive change — the child sees four where she signed five — and now re-signed on the new sheet
+and re-pinned. **All thirteen families are pinned and none reads MOVED.**
+
+Her reason sits on the family itself: a speech item cannot carry an N key, because an N-keyed item
+needs a correctly closed quotation, and that puts a terminal-at-boundary choice into a part the
+child is being told is clean — British usage argues both ways there, so the part is not
+unimpeachable.
+
+**`en-n-option-avoidance` is recorded as UNREACHABLE BY DESIGN in speech, not unused.** The
+distinction is the point: an unused tag invites a later coverage sweep to "fix" the gap by re-adding
+the option. Recorded on the misconception itself, where the sweep will meet it. It stays reachable
+in the other eight spot families, each keying N at a real rate.
+
+**Added to R19's serving conditions, in her framing:** *if speech is ever the only punctuation
+family a child meets in a session, that child gets no N exposure in that session at all.* **A
+serving consideration, not a content one** — nothing about the family is wrong; the exposure gap is
+created by what a session happens to contain, so it belongs with the other three R19 conditions that
+still have no owner.
