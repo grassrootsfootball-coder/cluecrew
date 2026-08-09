@@ -87,7 +87,8 @@
     "export:drop-manifest": "tsx scripts/export-drop-manifest.ts",
     "export:param-sweep": "tsx scripts/export-param-sweep.ts",
     "repin:spag": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/repin-spag-signatures.ts",
-    "export:tn-teacher": "tsx scripts/export-tn-teacher.ts"
+    "export:tn-teacher": "tsx scripts/export-tn-teacher.ts",
+    "state": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/platform-state.ts"
   },
   "devDependencies": {
     "@eslint/js": "^9.20.0",

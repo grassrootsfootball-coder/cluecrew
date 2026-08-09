@@ -1718,3 +1718,36 @@ from the system.** Fixed by asserting the invariant — an imported card never s
 size including zero — and by asserting the vault state that MATCHES the journey just taken.
 
 Local: **71 of 71, 1.8 minutes, no retries.**
+
+## R40 — The ownerless set, measured
+*David, 2026-08-09. Every figure from `pnpm state`; the judgements are named as judgements.*
+
+**CI is green for the first time in this record: 70 e2e, 570 unit, 36 files, both jobs.**
+
+**What has no owner.** R19's three serving conditions were the known set. The sweeps added four
+more, and removed two that looked like gaps and were not.
+
+| # | ownerless | why it has no owner |
+|---|---|---|
+| 1 | **Cloze four-option render** (R19) | Cloze has no N; eleven families render a fifth option. No renderer exists for the generated families, so the signal a child needs is a REQUIREMENT, not a verified fact. |
+| 2 | **Comma mirrored-pair same-session** (R19) | The linked pair is the district's only sanctioned repeat. Served to one child in one session it is a giveaway. Nothing in serving honours `pairId`. |
+| 3 | **Per-family depth sizing** (R19) | Depth runs 6–42 across thirteen families and cannot be one number. Each signature carries its own; serving must respect them individually. |
+| 4 | **Speech-only session → no N exposure** (R37) | Speech now has no N option at all. If it is the only punctuation family in a session, that child meets no "No mistake" decision. A serving consideration, not a content one. |
+| 5 | **19 maths signatures carry no fingerprint** | `AttributionEvent.subjectHash` exists and the maths families sign into it, but no `familyFingerprint` equivalent was ever written for `MathsFamily` — so R31/R34's guard covers SPaG alone. A maths family can move and its signature will not notice. |
+| 6 | **`structuralParams` is asserted for SPaG only** | R31 makes every declared parameter a promise about the emitted item — in `assembleSpagItem`. `assembleItem` (maths, 19 signed families) has no `recomputeParams`. The sheet a maths signature is given against is still unchecked. |
+| 7 | **Two LIVE VR items serve stale walk scripts** | `gen-vr-03-related-words-02` and `-04` name options no longer on the card. `check:db-content` has reported them as SERVING failures throughout. The text is the reviewer's; taking an item out of service is the platform's — which is exactly why neither has done it. |
+| 8 | **`en-vocab-in-context` signature unpinned** | The fourteenth SPaG signature. The family is not in `SPAG_FAMILIES`, so the fingerprint machinery skips it silently — the same shape as #5, one row wide. |
+
+**Two that LOOKED ownerless and are not, recorded so they are not re-found:**
+- **NVR signatures.** All 13 carry `NvrTemplateSignature.sampleSheetHash` — its own dedicated
+  fingerprint column, the mechanism R31 was modelled on. The zero against `nvr-signature` in the
+  attribution table is not a gap; the guard simply lives elsewhere.
+- **`ADMIN_EMAILS`.** Env-derived privilege, but deliberate bootstrap configuration rather than the
+  R39 fault. Named because it reads like one.
+
+**And one item that has no written home at all**, which is its own finding: the "three gates, none
+identical" problem — the platform generator, the platform import door, and Cowork's local screen all
+apply different rules, with the proposed fix being that the platform export its rule set for the
+screen to consume. **It is not in this log.** It was raised in conversation and recorded nowhere, so
+its state cannot be confirmed from the repo. If it is still live it needs an entry; if it was
+settled, the settlement was never written down. Either way it is the argument for this section.
