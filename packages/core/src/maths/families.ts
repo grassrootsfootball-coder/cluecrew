@@ -99,6 +99,13 @@ const rounding: MathsFamily = {
   // different jobs — the larger holds more columns and decides on a digit further from the
   // one being written. The magnitude growth is incidental, not load-bearing.
   structuralParams: (t) => ({ place: ['', '10', '10/100', '100', '100/1000', '1000'][t]! }),
+  // The tier offers a SET of places; the item picks one. The promise is membership, so the
+  // recomputed value is rendered back in the sheet's own notation rather than compared naively.
+  recomputeParams: (item, tier) => {
+    const declared = ['', '10', '10/100', '100', '100/1000', '1000'][tier]!;
+    const used = String(item.operands.place);
+    return { place: declared.split('/').includes(used) ? declared : used };
+  },
   ranges: (t) => ['', '120–980 → 10', '150–980 → 10/100', '1,050–9,800 → 100', '1,050–9,800 → 100/1000', '10,500–98,000 → 1000'][t]!,
   draft: (tier: Tier, r) => {
     const place = randPick(r, ({ 1: [10], 2: [10, 100], 3: [100], 4: [100, 1000], 5: [1000] } as Record<Tier, number[]>)[tier]);
@@ -134,6 +141,12 @@ const timeAndMoney: MathsFamily = {
   // it in TWO parts (pounds AND pence) — an actual second thing the child does, not just a
   // bigger note. T3–T5 is the real step ladder and is unchanged.
   structuralParams: (t) => ({ steps: [0, 1, 1, 2, 2, 3][t]!, kind: ['', 'change', 'change', 'total', 'change', 'change'][t]!, parts: ['', 'one', 'two', 'two', 'two', 'three'][t]! }),
+  // `steps` falls out of the composition: a k-step item leaves k-1 intermediates in
+  // `firstStepResults` by construction, so the step count is recomputable and asserted. `kind / parts` is
+  // NOT on the emitted item and cannot be recomputed from it — by annie's test it is family
+  // metadata, and it is left out of this map deliberately rather than by oversight.
+  recomputeParams: (item) => ({ steps: ((item.operands.firstStepResults as number[] | undefined)?.length ?? 0) + 1 }),
+
   ranges: (t) => ['', 'item £1–£4 whole, £5 note', 'item £1.10–£8.90, £10 note', 'item £2–£6 × 2–4', 'item £2–£6 × 2–4, £20 note', 'items £2–£9, £20 note'][t]!,
   draft: (tier: Tier, r) => {
     if (tier === 1) {
@@ -431,6 +444,20 @@ const columnArithmetic: MathsFamily = {
   // subtraction has the required exchange. Size grows too, but the exchange is what's load-bearing.
   tierRule: (t) => ['', 'no exchange (no borrow)', 'a single borrow', 'several borrows', 'a borrow across a zero', 'a borrow across two zeros'][t]!,
   structuralParams: (t) => ({ exchange: ['', 'none', 'single', 'multiple', 'across-zero', 'across-zeros'][t]! }),
+  // Recomputed with the family's OWN `subInfo` — the same property the draft regenerates against.
+  //
+  // The first version of this re-derived "across-zero" independently and reported 69 disagreements
+  // against a signed sheet. Every one was mine: I counted any zero digit in the minuend, where the
+  // family means a zero column that was ASKED TO LEND. A recompute must recompute the property the
+  // family means, not a plausible second definition of it — a second definition manufactures
+  // findings against the reviewer rather than about the generator (2026-08-09).
+  recomputeParams: (item) => {
+    const info = subInfo(Number(item.operands.a), Number(item.operands.b));
+    const kind = info.borrows === 0 ? 'none'
+      : info.acrossZero ? (String(item.operands.a).split('').filter((d) => d === '0').length >= 2 ? 'across-zeros' : 'across-zero')
+        : info.borrows === 1 ? 'single' : 'multiple';
+    return { exchange: kind };
+  },
   numberRanges: (t) => ({ a: [[0, 20, 100, 1000, 1000, 10000][t]!, [0, 99, 999, 9999, 9999, 99999][t]!] }),
   draft: (tier, r) => {
     const [lo, hi] = [[0, 20, 100, 1000, 1000, 10000][tier]!, [0, 99, 999, 9999, 9999, 99999][tier]!];
@@ -550,6 +577,18 @@ const percentageOfAmount: MathsFamily = {
   shape: 'Percentage of an amount / % change / reverse',
   tierRule: (t) => PCT_TIERS[t].rule,
   structuralParams: (t) => ({ shape: PCT_TIERS[t].shape, band: PCT_TIERS[t].pcts.join(',') }),
+  // `band` is the set of percentages the tier may use; the item picks one, so membership is the
+  // promise. `shape` (of / multiples / change / reverse) is nowhere on the emitted item — metadata.
+  recomputeParams: (item, tier) => {
+    // T4 (`change`) emits {amount, firstStepResults} and does NOT record the percentage it used, so
+    // `band` is unverifiable there — reported rather than papered over. Recording it would mean
+    // adding a `percent` operand to a SIGNED family, and `percent` is executor-visible, so that
+    // could move derived distractor values. That is a reviewer's call, not a sweep's (2026-08-09).
+    if (item.operands.percent === undefined) return {} as Record<string, string | number>;
+    const band = PCT_TIERS[tier].pcts;
+    const used = Number(item.operands.percent);
+    return { band: band.includes(used) ? band.join(',') : String(used) };
+  },
   numberRanges: (t): Record<string, [number, number]> => {
     const c = PCT_TIERS[t];
     return c.shape === 'reverse' ? { part: [c.amtLo, c.amtHi] } : { amount: [c.amtLo * c.step, c.amtHi * c.step] };
@@ -880,6 +919,12 @@ const inverseReasoning: MathsFamily = {
   // claims "order decides" — reverse mean is an extra step back, not an order case.
   tierRule: (t) => ['', 'one operation — division to undo', 'one operation — spot which to undo', 'two operations — take away, then divide', 'two operations — order decides (undo the outside first)', 'reverse mean — recover a value from the average'][t]!,
   structuralParams: (t) => ({ steps: [0, 1, 1, 2, 2, 3][t]!, mode: ['', 'known-op', 'spot-op', 'ordered', 'order-decides', 'reverse-mean'][t]! }),
+  // `steps` falls out of the composition: a k-step item leaves k-1 intermediates in
+  // `firstStepResults` by construction, so the step count is recomputable and asserted. `mode` is
+  // NOT on the emitted item and cannot be recomputed from it — by annie's test it is family
+  // metadata, and it is left out of this map deliberately rather than by oversight.
+  recomputeParams: (item) => ({ steps: ((item.operands.firstStepResults as number[] | undefined)?.length ?? 0) + 1 }),
+
   ranges: (t) => ['', '□ × 2–5, answer 2–9', '□ ?(×/+) 2–9, answer 2–10', '□ × a + b, a 2–4, answer 3–9', '(□ + a) × b, b 2–4, answer 3–8', '5 numbers, mean 4–9, values 1–14'][t]!,
   draft: (tier, r) => {
     if (tier === 1) {

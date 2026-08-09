@@ -88,7 +88,11 @@
     "export:param-sweep": "tsx scripts/export-param-sweep.ts",
     "repin:spag": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/repin-spag-signatures.ts",
     "export:tn-teacher": "tsx scripts/export-tn-teacher.ts",
-    "state": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/platform-state.ts"
+    "state": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/platform-state.ts",
+    "pin:signatures": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/pin-family-signatures.ts",
+    "sweep:maths-params": "tsx scripts/export-maths-param-sweep.ts",
+    "compare:gates": "tsx scripts/compare-gates.ts",
+    "withdraw:stale-scripts": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/withdraw-stale-walkscripts.ts"
   },
   "devDependencies": {
     "@eslint/js": "^9.20.0",

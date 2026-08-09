@@ -96,6 +96,16 @@ export interface MathsFamily {
    */
   structuralParams?: (tier: Tier) => Record<string, string | number>;
   /**
+   * RECOMPUTE the declared structural parameters FROM THE EMITTED ITEM (R31, extended to maths
+   * 2026-08-09). Annie's test: could you recompute this from the emitted item alone? Yes → it is a
+   * promise about the item, so assert it. No → it is family metadata and belongs off the sheet.
+   *
+   * A parameter listed here is checked against `structuralParams` on every draw. A declared
+   * parameter NOT returned here is treated as metadata and skipped — stated per family, so the
+   * distinction is a recorded judgement rather than an omission nobody noticed.
+   */
+  recomputeParams?: (item: GenMathsItem, tier: Tier) => Record<string, string | number>;
+  /**
    * STRUCTURED number ranges, per tier, keyed by operand name: {l: [3, 12], w: [3, 12]}.
    * This is GENERATOR-CONSUMED, not a display label (annie, 2026-08-07: the old `ranges`
    * string was authored by hand and never enforced). assembleItem refuses any item whose
@@ -259,7 +269,28 @@ export function assembleItem(family: MathsFamily, tier: Tier, r: () => number): 
   const blocking = childFacing.filter(isBlocking);
   if (blocking.length) throw new GateError(`${family.id} T${tier}: ${blocking.map((f) => `${f.rule}: ${f.detail}`).join('; ')}`);
 
-  return { familyId: family.id, tier, stem, key: d.keyValue, options, solution: d.solution, operands: d.operands, hint: d.hint };
+  const item: GenMathsItem = { familyId: family.id, tier, stem, key: d.keyValue, options, solution: d.solution, operands: d.operands, hint: d.hint };
+
+  // EVERY DECLARED PARAMETER IS A PROMISE ABOUT THE EMITTED ITEM (R31, extended to maths
+  // 2026-08-09 — the SPaG district got this the day before and maths did not, which was R40 #5/#6).
+  //
+  // The sheet a signature is given against renders `structuralParams`. Until now nothing compared
+  // it to what the generator emitted, so nineteen signed families could say one thing on the sheet
+  // and do another in the item, and only the sheet was ever visible in review. A family that
+  // declares a parameter it cannot recompute is telling us that parameter is not about the item —
+  // annie's test — so it is skipped here and belongs in the family's metadata, not on its sheet.
+  if (family.recomputeParams && family.structuralParams) {
+    const declared = family.structuralParams(tier);
+    const actual = family.recomputeParams(item, tier);
+    for (const k of Object.keys(actual)) {
+      if (!(k in declared)) continue;
+      if (actual[k] !== declared[k]) {
+        throw new GateError(`${family.id} T${tier}: declared ${k}=${String(declared[k])} but the emitted item has ${k}=${String(actual[k])}`);
+      }
+    }
+  }
+
+  return item;
 }
 
 /**

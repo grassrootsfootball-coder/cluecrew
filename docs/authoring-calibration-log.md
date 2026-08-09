@@ -1751,3 +1751,62 @@ apply different rules, with the proposed fix being that the platform export its 
 screen to consume. **It is not in this log.** It was raised in conversation and recorded nowhere, so
 its state cannot be confirmed from the repo. If it is still live it needs an entry; if it was
 settled, the settlement was never written down. Either way it is the argument for this section.
+
+## R41 — The guard reaches the maths district; and the three gates, measured
+*David, 2026-08-09, closing R40 #5–#8 and the item with no written home.*
+
+**Every family signature is now pinned: 19 maths, 14 English, 13 NVR (its own `sampleSheetHash`).**
+`mathsFamilyFingerprint` is deliberately a SECOND function rather than one generic over
+`LadderedFamily` — unifying them would change the SPaG hash and silently un-pin thirteen signatures
+annie ruled on the day before, which is the move R34 forbids. `en-vocab-in-context` is pinned too:
+it satisfies `SpagFamily` but is not IN `SPAG_FAMILIES`, so every sweep keyed on that array had been
+skipping it in silence — not unguarded, but invisible to the thing doing the guarding, which is
+worse because it reports as covered.
+
+**`structuralParams` is now asserted in maths as well as SPaG.** The retrospective sweep over all
+19 signed families: **13,173 items generated, 0 disagreeing with the signed sheet.** Five parameters
+are asserted (`place`, `exchange`, `steps` ×2, `band`); five are named as family metadata by annie's
+test because nothing on the emitted item can recompute them (`kind`, `parts`, `shape` ×2, `mode`).
+
+**One gap reported rather than closed:** M-pct T4 (`change`) emits `{amount, firstStepResults}` and
+does not record the percentage it used, so its `band` claim is unverifiable at that tier. Recording
+it means adding a `percent` operand to a signed family, and `percent` is executor-visible, so it
+could move derived distractor values. That is a reviewer's call.
+
+**A methodological correction worth more than the result.** The first version of M-column's
+recompute re-derived "across-zero" independently and reported **69 disagreements against a signed
+sheet**. Every one was mine: I counted any zero digit in the minuend, where the family means *a zero
+column that was asked to lend*. **A recompute must recompute the property the family MEANS, not a
+plausible second definition of it** — a second definition manufactures findings against the reviewer
+rather than about the generator. It now calls the family's own `subInfo`.
+
+### THE THREE GATES — measured, not assumed
+
+Two of the three are reachable from this repo and were compared by running identical items through
+both (`pnpm compare:gates`). The third is not.
+
+| gate | what it applies | when |
+|---|---|---|
+| **Platform generator** | `checkItemChildFacing` + notation + key-recompute + P3 tags | at production — nothing can be generated that a door would reject |
+| **Platform CMS import** | misconceptions-ACTIVE, maths solution, D7 commerce, similarity. **Not the copy gate** — that fires at the REVIEWED/LIVE doors instead | import lands DRAFT; copy is gated on the way OUT, not IN |
+| **Platform SCRIPT import** (`import-english-items.ts`) | per-field `checkChildFacingText` | at import |
+| **Cowork's local screen** | **UNKNOWN — outside this repo** | — |
+
+**The measured difference:** the script import path takes `explanation.quotes` and validates them
+against the STEM text. A quotation declared on a WALK SCRIPT — which is exactly what R23 exists for —
+is therefore rejected as *"declares a quoted span that is not in the text"*, while the whole-item
+gate passes it correctly. One path implements R23; the other implements a version of R23 that
+predates it.
+
+**The honest limit:** Cowork's screen cannot be inspected from here, so "all three differ" remains
+unverified in its third term. What can be said is that **the two gates inside this repo already
+differ from each other**, which was the premise's weaker form and is now measured rather than
+asserted. The proposed fix — the platform exporting its rule set for the screen to consume — is
+still the right shape, and it now has a first customer inside the repo: the script import path
+should call the same whole-item gate the generator and the publish doors call, rather than its own
+per-field approximation of it.
+
+**R40 #7 closed.** `gen-vr-03-related-words-02` and `-04` are RETIRED. Their walk scripts named
+options no longer on the card, and serving stale text while waiting for a redraft was the wrong side
+of the reviewer/platform split to err on. RETIRED, not deleted — the script survives for the redraft.
+`check:db-content` now reports everything serving as passing the child-facing gates.
