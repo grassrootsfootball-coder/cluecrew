@@ -84,6 +84,11 @@ test('a PROPOSED misconception is unusable until approved; the import → approv
   // Import through the real artefact contract (Addendum E §2).
   const reviewerPage = await staffContext(browser, reviewer);
   await reviewerPage.goto('/admin/misconceptions');
+  // The import form lives inside a collapsed <details> ("Add, edit or import"), so it must be
+  // opened before anything in it is visible — `fill` waits for visibility and would otherwise
+  // time out. The disclosure is the page's, not the test's, so the test opens it rather than
+  // reaching past it.
+  await reviewerPage.locator('summary', { hasText: 'Add, edit or import' }).click();
   await reviewerPage.locator('textarea[name="payload"]').fill(
     JSON.stringify([
       {
@@ -97,7 +102,11 @@ test('a PROPOSED misconception is unusable until approved; the import → approv
       },
     ]),
   );
-  await reviewerPage.getByRole('button', { name: 'Import as PROPOSED' }).click();
+  await reviewerPage.getByRole('button', { name: /^Import as proposals$/ }).click();
+  // The queue grew a BULK approval flow, and the one-at-a-time path it used to show flat now sits
+  // inside its own disclosure. The card was being found and reported hidden, not missing — the
+  // import had worked all along.
+  await reviewerPage.locator('summary', { hasText: 'Or decide them one at a time' }).click();
   await expect(reviewerPage.getByTestId(`proposed-${PROPOSED_ID}`)).toBeVisible();
 
   // Un-approved: an item referencing it is rejected server-side.
@@ -126,7 +135,7 @@ test('a PROPOSED misconception is unusable until approved; the import → approv
   // Approval activates (named, logged) — and the same item now saves.
   await reviewerPage
     .getByTestId(`proposed-${PROPOSED_ID}`)
-    .getByRole('button', { name: 'Approve — activates' })
+    .getByRole('button', { name: /^Approve —/ })
     .click();
   await expect(reviewerPage.getByTestId('proposed-queue')).not.toBeVisible();
 

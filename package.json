@@ -85,7 +85,8 @@
     "audit:signed-depth": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/audit-signed-depth.ts",
     "export:family-status": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-family-status.ts",
     "export:drop-manifest": "tsx scripts/export-drop-manifest.ts",
-    "export:param-sweep": "tsx scripts/export-param-sweep.ts"
+    "export:param-sweep": "tsx scripts/export-param-sweep.ts",
+    "repin:spag": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/repin-spag-signatures.ts"
   },
   "devDependencies": {
     "@eslint/js": "^9.20.0",

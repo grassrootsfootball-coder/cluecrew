@@ -1487,3 +1487,72 @@ their banks, and the N mechanism was correct. No sheet said anything untrue when
    the spot families five". Measured: speech emits a "No mistake" option like every other spot
    family; it is simply never the key (`nRate: 0`). So the child sees five. Reported rather than
    encoded either way.
+
+## R32 — The parses flag: a reviewed judgement per option
+*Annie, 2026-08-09. Built to her two conditions.*
+
+**Every cloze option DECLARES whether it parses in its slot** — a reviewed grammatical judgement per
+option, not a lookup, exactly as comma declares its site typing. Required by the type, so
+completeness is structural rather than remembered. It rides on the emitted option, which is what
+makes `optionsThatParse` recomputable from the item and **returns it to the asserted sheet** under
+R31. The R31 ladder gap in `spag-cloze-tense` is closed by the same move: the dimension that was
+always doing the work is declared again, and asserted this time.
+
+**Her second condition closes the last hole in the cloze design.** The declared deciding factor is
+asserted against the parse count: **if every option parses, grammar cannot be what decides the
+item** — something softer is, and R18 forbids exactly that, register and collocation being the
+dimensions where English permits a second answer. An all-parsing item must declare `sense`; a
+`grammar` claim over four grammatical options is a build failure, not a review note. `register` and
+`collocation` are refused outright.
+
+Nothing in the bank violates it today: word-class, tags and tense-T2 are 1-parse/grammar; tense-T4
+is 2-parse/grammar (the marker forces the choice between two grammatical forms); connectives are
+4-parse/**sense**, which is the safe all-parsing case and the reason the rule is worth having.
+
+**One derivation to check.** The seven `parses: 2` tense rows needed a per-option call the aggregate
+did not carry: which single distractor parses. Derived from the aggregate she already signed plus
+each row's content — the past-form counterpart shares the sentence's past-time frame; the present
+and future forms clash with it. Enumerated per row rather than buried in a rule, so any of the seven
+can be overturned: `tn-bell` had run · `tn-bytime` started · `tn-cat` had run · `tn-bus` waited ·
+`tn-film` had walked · `tn-teacher` copied · `tn-rain` had gone.
+
+## R33 — A never-keyed option is not a neutral one
+*Annie, 2026-08-09. Speech loses its N option.*
+
+**`spag-punct-speech` now shows FOUR options, not five.** Her reasoning, recorded: a speech item
+**cannot** carry an N key, because an N-keyed item needs a correctly closed quotation, and that puts
+a terminal-at-boundary choice into a part the child is being told is clean — British usage argues
+both ways there, so the part is not unimpeachable. That was the finding when the family was signed;
+**the option's absence should follow from it, rather than the option surviving on the card at a zero
+rate.**
+
+**The general argument, which reaches past this family:** a never-keyed option costs a child
+attention on every item, can never reward it, and teaches that "No mistake" is not a real answer —
+the wrong lesson for the ten families where it IS one.
+
+`noNOption` replaces `nRate: 0`, so the absence is declared rather than emergent, and the declared
+`options` count follows from it automatically.
+
+**Both checks she asked for:**
+- **`en-n-option-avoidance` was tagged on the speech N option**, so it does become unreachable
+  *there*. It remains reachable in **eight** other families, each keying N at a real rate
+  (107–534 per ~1,500 draws), so nothing is orphaned platform-wide.
+- **No other family carries an option at a zero rate.** Speech was the only one. The four cloze
+  families carry no N at all, by design (R18).
+
+## R34 — What makes a signature move substantive
+*Annie, 2026-08-09, re-pinning the twelve. Her boundary, recorded because the guard will fire again
+and this is NOT a general licence.*
+
+**Non-substantive** — the surface gained a column describing something **already true of every
+item**. Nothing the reviewer reads differently, nothing a child meets differently. R31's `segments`
+and `options` were this: re-pinned at the new fingerprint without re-signing.
+
+**Substantive, and re-signing is required:**
+- **removing** a column — she signed against something no longer shown;
+- **renaming** one — the next reviewer reads the name;
+- **adding** one describing something **that wasn't true before**.
+
+Speech is the worked example on the other side: the child now sees four options where she signed
+five, so its fingerprint moves properly and it is **held MOVED** pending her signature on the new
+sheet. Twelve re-pinned; one held. That asymmetry is the guard working, not failing.

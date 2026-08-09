@@ -37,6 +37,15 @@ export interface SpagOption {
   isKey: boolean;
   /** Every WRONG option carries the misconception a child executes by choosing it (P3). */
   misconceptionId?: string | null;
+  /**
+   * CLOZE ONLY — does this option produce a GRAMMATICAL sentence in its slot? (annie, R32.)
+   *
+   * A REVIEWED judgement per option, not a lookup: whether a form parses in a given carrier is a
+   * grammatical call, declared per option and checked for completeness — the same treatment comma
+   * gives its site typing. It rides on the emitted option so `optionsThatParse` becomes
+   * recomputable from the item, which is what returns it to the asserted sheet under R31.
+   */
+  parses?: boolean;
 }
 
 export interface SpagItemDraft {

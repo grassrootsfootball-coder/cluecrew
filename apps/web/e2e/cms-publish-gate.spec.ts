@@ -62,14 +62,33 @@ test('publish gate: misconceptions + independent reviewer are hard requirements'
 });
 
 test('bulk-imported ai-draft items land as DRAFT and cannot skip review', async ({ browser }) => {
-  const reviewer = await staffContext(browser, await createStaff('cms-import', 'REVIEWER'));
-  await reviewer.goto('/admin/import');
+  // IMPORTING IS AN AUTHOR ACTION. This test used to sign in as a REVIEWER, and
+  // `bulkImportAction` bounced it to /admin on the role check — `roleAllows` is flat, not
+  // hierarchical, so REVIEWER is not an AUTHOR. The app is right and the test was wrong: the
+  // whole point of the separation is that a reviewer must not author what they later review,
+  // which is the same rule the own-item check enforces one step later.
+  const author = await staffContext(browser, await createStaff('cms-import', 'AUTHOR'));
+  await author.goto('/admin/import');
   // The default payload is an ai-draft example — import it as-is.
-  await reviewer.getByRole('button', { name: 'Import as DRAFT' }).click();
-  await reviewer.waitForURL('**/admin/items?imported=1');
+  await author.getByRole('button', { name: 'Import as DRAFT' }).click();
+  await author.waitForURL('**/admin/items?imported=1');
 
-  await reviewer.goto('/admin/items?status=DRAFT');
-  const row = reviewer.locator('tr', { hasText: 'ai-draft:example-model' }).first();
+  await author.goto('/admin/items?status=DRAFT');
+  const row = author.locator('tr', { hasText: 'ai-draft:example-model' }).first();
   await expect(row).toContainText('DRAFT');
+  await author.context().close();
+});
+
+test('a reviewer cannot bulk-import — the separation is enforced, not assumed', async ({ browser }) => {
+  // The accident above is worth an assertion of its own: the role gate that bounced the old
+  // test IS the separation of duties, and nothing else was checking it.
+  //
+  // It is enforced a step EARLIER than the action — the page itself refuses, so a reviewer never
+  // reaches the button. Asserting the refusal the reviewer actually meets, rather than the
+  // action's redirect, is what makes this a test of the door rather than of my expectation of it.
+  const reviewer = await staffContext(browser, await createStaff('cms-import-denied', 'REVIEWER'));
+  await reviewer.goto('/admin/import');
+  await expect(reviewer.getByText(/outside the reviewer role/i)).toBeVisible();
+  await expect(reviewer.getByRole('button', { name: 'Import as DRAFT' })).toHaveCount(0);
   await reviewer.context().close();
 });

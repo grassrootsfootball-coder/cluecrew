@@ -17,7 +17,7 @@
  * into the key segment. These seed banks are deliberately small and extensible.
  */
 import { randPick, type Tier } from '../maths/generator';
-import type { SpagFamily, SpagItemDraft, SpagOption } from './spag-generator';
+import { SpagGateError, type SpagFamily, type SpagItemDraft, type SpagOption } from './spag-generator';
 
 /** The N option's exact wording. Named once so the R31 recomputation and the drafts cannot drift. */
 const SPOT_N_OPTION = 'No mistake';
@@ -208,6 +208,14 @@ export function esNonErrorNearMiss(s: EsSentence, nearMiss: (p: string) => boole
 interface EsConfig {
   id: string; name: string; subtype: 'spelling' | 'punctuation'; franchise: string; stem: string;
   nm: (tier: Tier) => number; tiers: Tier[]; bank: EsSentence[]; nearMiss: (part: string) => boolean; nRate?: number;
+  /**
+   * R33 — this family carries NO "No mistake" option at all (annie, 2026-08-09).
+   *
+   * Distinct from `nRate: 0`, which kept the option on the card and never keyed it. A never-keyed
+   * option costs a child attention on every item, can never reward it, and teaches that "No
+   * mistake" is not a real answer — the wrong lesson for the ten families where it IS one.
+   */
+  noNOption?: boolean;
 }
 function errorSpotFamily(cfg: EsConfig): SpagFamily {
   const nRate = cfg.nRate ?? 0.2;
@@ -218,7 +226,7 @@ function errorSpotFamily(cfg: EsConfig): SpagFamily {
     subtype: cfg.subtype,
     franchise: cfg.franchise,
     tierRule: (t) => (cfg.tiers.includes(t) ? `${cfg.name} — one sentence in four parts, spot the slip; ${cfg.nm(t)} of the correct parts is a near-miss trap${cfg.nm(t) === 1 ? '' : 's'}.` : ''),
-    structuralParams: (t) => ({ nearMissParts: cfg.nm(t), segments: 4, options: 5 }),
+    structuralParams: (t) => ({ nearMissParts: cfg.nm(t), segments: 4, options: cfg.noNOption ? 4 : 5 }),
     numberRanges: (t) => ({ segments: [4, 4], nearMissParts: [cfg.nm(t), cfg.nm(t)] }),
     // R31 — recomputed from the emitted item, never from the bank row's rung.
     //
@@ -248,7 +256,7 @@ function errorSpotFamily(cfg: EsConfig): SpagFamily {
         nearMiss = s.parts.filter(cfg.nearMiss).length;
       } else {
         s.parts.forEach((p, i) => opts.push(i === s.errorIndex ? { value: s.wrong, isKey: true } : { value: p, isKey: false, misconceptionId: trap(p) }));
-        opts.push({ value: 'No mistake', isKey: false, misconceptionId: 'en-n-option-avoidance' });
+        if (!cfg.noNOption) opts.push({ value: 'No mistake', isKey: false, misconceptionId: 'en-n-option-avoidance' });
         nearMiss = esNonErrorNearMiss(s, cfg.nearMiss);
       }
       return { stem: cfg.stem, options: opts, params: { segments: 4, nearMissParts: nearMiss }, dedupKey: s.id, diversityKey: s.klass, errorTokenKey: wantN ? undefined : s.klass };
@@ -595,51 +603,66 @@ const POSSESSIVE_V2: SpagFamily = {
 const CLOZE_STEM_V2 = 'Choose the word that fits the gap best.';
 export interface ClozeSentence {
   id: string; klass: string; sentence: string; key: string;
-  distractors: Array<{ value: string; misconceptionId: string }>;
-  /** How many of the four options grammatically PARSE in the slot. */
-  parses: number;
+  /**
+   * R32 — every distractor DECLARES whether it parses in this slot. A reviewed grammatical
+   * judgement per option, not a lookup, and required by the type so completeness is structural
+   * rather than remembered. The key always parses: it is the answer.
+   */
+  distractors: Array<{ value: string; misconceptionId: string; parses: boolean }>;
   /** Ratified deciding factor. `register`/`collocation` are forbidden (R18). */
   factor: 'grammar' | 'sense';
   /** For tense: the marker that FORCES the choice. Named, or "grammar" is being over-claimed. */
   marker?: string;
 }
+
+/** Options that parse: the key, plus every distractor declared to. Derived, never asserted. */
+export const clozeParses = (s: ClozeSentence): number => 1 + s.distractors.filter((d) => d.parses).length;
 function clozeFamilyV2(cfg: { id: string; name: string; franchise: string; tiers: Tier[]; bank: ClozeSentence[]; rule: (t: Tier) => string; tierOf: (s: ClozeSentence) => Tier }): SpagFamily {
   return {
     id: cfg.id, name: cfg.name, subtype: 'cloze', franchise: cfg.franchise,
     tierRule: (t) => (cfg.tiers.includes(t) ? cfg.rule(t) : ''),
-    // R31 — `options` is a promise about the item and is asserted. `optionsThatParse` is NOT:
-    // "how many of the four options produce a grammatical sentence" is a reviewed linguistic
-    // judgement, and nothing on the emitted item carries it, so it cannot be recomputed from the
-    // item alone. By her own test it is family metadata, and it moves off the sheet.
-    //
-    // FOR HER RULING: it could become assertable. Comma and possessive pass the test only because
-    // their reviewed site type RIDES ON THE EMITTED OPTION as its misconception tag. Give each
-    // cloze distractor the same treatment — a flag for whether it parses — and the count becomes
-    // recomputable, and the parses/doesn't-parse split becomes a real diagnostic distinction
-    // rather than a bank-row annotation.
-    structuralParams: () => ({ options: 4 }),
-    metadata: (t) => ({ optionsThatParse: cfg.bank.filter((s) => cfg.tierOf(s) === t)[0]?.parses ?? 0 }),
-    recomputeParams: (item) => ({ options: item.options.length }),
+    // R32 — `optionsThatParse` RETURNS to the asserted sheet. It failed R31's recomputability
+    // test only because nothing on the emitted item carried the judgement; now every option
+    // declares whether it parses, that ride-along makes the count recomputable, exactly as comma's
+    // site type does. Nothing else moved off the sheet.
+    structuralParams: (t) => ({ options: 4, optionsThatParse: clozeParses(cfg.bank.filter((x) => cfg.tierOf(x) === t)[0]!) }),
+    recomputeParams: (item) => ({ options: item.options.length, optionsThatParse: item.options.filter((o) => o.parses).length }),
     numberRanges: () => ({ options: [4, 4] }),
     draft: (tier, r): SpagItemDraft => {
       const s = randPick(r, cfg.bank.filter((x) => cfg.tierOf(x) === tier));
+
+      // R32's second condition — the deciding factor must survive the parse count. If EVERY option
+      // is grammatical then grammar cannot be what decides the item; something softer is, and R18
+      // forbids exactly that (register and collocation are the dimensions where English permits a
+      // second answer). So an all-parsing item must declare `sense`, and a `grammar` claim over
+      // four grammatical options is a build failure, not a review note. This is the last hole in
+      // the cloze design: it is how an item decided by register could have been shipped calling
+      // itself grammar.
+      const parses = clozeParses(s);
+      if (s.factor !== 'grammar' && s.factor !== 'sense') {
+        throw new SpagGateError(`${cfg.id}: ${s.id} declares factor "${String(s.factor)}" — only grammar and sense are permitted (R18)`);
+      }
+      if (parses === s.distractors.length + 1 && s.factor === 'grammar') {
+        throw new SpagGateError(`${cfg.id}: ${s.id} says all ${parses} options parse yet claims factor "grammar" — if everything is grammatical, grammar is not what decides it (R18/R32)`);
+      }
+
       const opts: SpagOption[] = shuffle([
-        { value: s.key, isKey: true },
-        ...s.distractors.map((d) => ({ value: d.value, isKey: false, misconceptionId: d.misconceptionId })),
+        { value: s.key, isKey: true, parses: true },
+        ...s.distractors.map((d) => ({ value: d.value, isKey: false, misconceptionId: d.misconceptionId, parses: d.parses })),
       ], r);
-      return { stem: `${CLOZE_STEM_V2}  —  ${s.sentence}`, options: opts, params: { options: 4 }, dedupKey: s.id, diversityKey: s.klass };
+      return { stem: `${CLOZE_STEM_V2}  —  ${s.sentence}`, options: opts, params: { options: 4, optionsThatParse: parses }, dedupKey: s.id, diversityKey: s.klass };
     },
   };
 }
 
 const WC = 'en-word-class-by-ending';
 const WORD_CLASS_BANK: ClozeSentence[] = [
-  { id: 'wc-quickly', klass: 'quick', sentence: 'She answered the question ___.', key: 'quickly', distractors: [{ value: 'quick', misconceptionId: WC }, { value: 'quickness', misconceptionId: WC }, { value: 'quicken', misconceptionId: WC }], parses: 1, factor: 'grammar' },
-  { id: 'wc-clearly', klass: 'clear', sentence: 'He spoke to the class ___.', key: 'clearly', distractors: [{ value: 'clear', misconceptionId: WC }, { value: 'clearness', misconceptionId: WC }, { value: 'clarity', misconceptionId: WC }], parses: 1, factor: 'grammar' },
-  { id: 'wc-smoothly', klass: 'smooth', sentence: 'The runner moved ___ down the track.', key: 'smoothly', distractors: [{ value: 'smooth', misconceptionId: WC }, { value: 'smoothness', misconceptionId: WC }, { value: 'smoothen', misconceptionId: WC }], parses: 1, factor: 'grammar' },
-  { id: 'wc-carefully', klass: 'careful', sentence: 'She placed the vase ___ on the shelf.', key: 'carefully', distractors: [{ value: 'careful', misconceptionId: WC }, { value: 'carefulness', misconceptionId: WC }, { value: 'care', misconceptionId: WC }], parses: 1, factor: 'grammar' },
-  { id: 'wc-loudly', klass: 'loud', sentence: 'The crowd cheered ___ at the end.', key: 'loudly', distractors: [{ value: 'loud', misconceptionId: WC }, { value: 'loudness', misconceptionId: WC }, { value: 'louden', misconceptionId: WC }], parses: 1, factor: 'grammar' },
-  { id: 'wc-neatly', klass: 'neat', sentence: 'He wrote the answer ___ in his book.', key: 'neatly', distractors: [{ value: 'neat', misconceptionId: WC }, { value: 'neatness', misconceptionId: WC }, { value: 'neaten', misconceptionId: WC }], parses: 1, factor: 'grammar' },
+  { id: 'wc-quickly', klass: 'quick', sentence: 'She answered the question ___.', key: 'quickly', distractors: [{ value: 'quick', misconceptionId: WC, parses: false }, { value: 'quickness', misconceptionId: WC, parses: false }, { value: 'quicken', misconceptionId: WC, parses: false }], factor: 'grammar' },
+  { id: 'wc-clearly', klass: 'clear', sentence: 'He spoke to the class ___.', key: 'clearly', distractors: [{ value: 'clear', misconceptionId: WC, parses: false }, { value: 'clearness', misconceptionId: WC, parses: false }, { value: 'clarity', misconceptionId: WC, parses: false }], factor: 'grammar' },
+  { id: 'wc-smoothly', klass: 'smooth', sentence: 'The runner moved ___ down the track.', key: 'smoothly', distractors: [{ value: 'smooth', misconceptionId: WC, parses: false }, { value: 'smoothness', misconceptionId: WC, parses: false }, { value: 'smoothen', misconceptionId: WC, parses: false }], factor: 'grammar' },
+  { id: 'wc-carefully', klass: 'careful', sentence: 'She placed the vase ___ on the shelf.', key: 'carefully', distractors: [{ value: 'careful', misconceptionId: WC, parses: false }, { value: 'carefulness', misconceptionId: WC, parses: false }, { value: 'care', misconceptionId: WC, parses: false }], factor: 'grammar' },
+  { id: 'wc-loudly', klass: 'loud', sentence: 'The crowd cheered ___ at the end.', key: 'loudly', distractors: [{ value: 'loud', misconceptionId: WC, parses: false }, { value: 'loudness', misconceptionId: WC, parses: false }, { value: 'louden', misconceptionId: WC, parses: false }], factor: 'grammar' },
+  { id: 'wc-neatly', klass: 'neat', sentence: 'He wrote the answer ___ in his book.', key: 'neatly', distractors: [{ value: 'neat', misconceptionId: WC, parses: false }, { value: 'neatness', misconceptionId: WC, parses: false }, { value: 'neaten', misconceptionId: WC, parses: false }], factor: 'grammar' },
 ];
 const WORD_CLASS_V2 = clozeFamilyV2({
   id: 'spag-cloze-word-class', name: 'Word class by job', franchise: WC, tiers: [2],
@@ -650,37 +673,37 @@ const WORD_CLASS_V2 = clozeFamilyV2({
 const TS = 'en-tense-sequence';
 const TENSE_BANK: ClozeSentence[] = [
   // T2 — one parse; a forcing MARKER rules out the other three on grammar alone.
-  { id: 'tn-yesterday', klass: 'walk', sentence: 'Yesterday we ___ to the park.', key: 'walked', distractors: [{ value: 'walk', misconceptionId: TS }, { value: 'have walked', misconceptionId: TS }, { value: 'will walk', misconceptionId: TS }], parses: 1, factor: 'grammar', marker: 'Yesterday (definite past)' },
-  { id: 'tn-lastnight', klass: 'blow', sentence: 'Last night the wind ___ very loudly.', key: 'blew', distractors: [{ value: 'blows', misconceptionId: TS }, { value: 'has blown', misconceptionId: TS }, { value: 'will blow', misconceptionId: TS }], parses: 1, factor: 'grammar', marker: 'Last night (definite past)' },
-  { id: 'tn-hourago', klass: 'ring', sentence: 'An hour ago the bell ___ for lunch.', key: 'rang', distractors: [{ value: 'rings', misconceptionId: TS }, { value: 'has rung', misconceptionId: TS }, { value: 'will ring', misconceptionId: TS }], parses: 1, factor: 'grammar', marker: 'An hour ago (definite past)' },
-  { id: 'tn-lastweek', klass: 'finish', sentence: 'Last week she ___ her project.', key: 'finished', distractors: [{ value: 'finishes', misconceptionId: TS }, { value: 'has finished', misconceptionId: TS }, { value: 'will finish', misconceptionId: TS }], parses: 1, factor: 'grammar', marker: 'Last week (definite past)' },
-  { id: 'tn-twodays', klass: 'play', sentence: 'Two days ago the team ___ their final match.', key: 'played', distractors: [{ value: 'plays', misconceptionId: TS }, { value: 'has played', misconceptionId: TS }, { value: 'will play', misconceptionId: TS }], parses: 1, factor: 'grammar', marker: 'Two days ago (definite past)' },
-  { id: 'tn-lastsummer', klass: 'stay', sentence: 'Last summer we ___ beside the sea.', key: 'stayed', distractors: [{ value: 'stay', misconceptionId: TS }, { value: 'have stayed', misconceptionId: TS }, { value: 'will stay', misconceptionId: TS }], parses: 1, factor: 'grammar', marker: 'Last summer (definite past)' },
-  { id: 'tn-yestmorning', klass: 'come', sentence: 'Yesterday morning the postman ___ early.', key: 'came', distractors: [{ value: 'comes', misconceptionId: TS }, { value: 'has come', misconceptionId: TS }, { value: 'will come', misconceptionId: TS }], parses: 1, factor: 'grammar', marker: 'Yesterday morning (definite past)' },
-  { id: 'tn-weekago', klass: 'get', sentence: 'A week ago she ___ a new bike.', key: 'got', distractors: [{ value: 'gets', misconceptionId: TS }, { value: 'has got', misconceptionId: TS }, { value: 'will get', misconceptionId: TS }], parses: 1, factor: 'grammar', marker: 'A week ago (definite past)' },
+  { id: 'tn-yesterday', klass: 'walk', sentence: 'Yesterday we ___ to the park.', key: 'walked', distractors: [{ value: 'walk', misconceptionId: TS, parses: false }, { value: 'have walked', misconceptionId: TS, parses: false }, { value: 'will walk', misconceptionId: TS, parses: false }], factor: 'grammar', marker: 'Yesterday (definite past)' },
+  { id: 'tn-lastnight', klass: 'blow', sentence: 'Last night the wind ___ very loudly.', key: 'blew', distractors: [{ value: 'blows', misconceptionId: TS, parses: false }, { value: 'has blown', misconceptionId: TS, parses: false }, { value: 'will blow', misconceptionId: TS, parses: false }], factor: 'grammar', marker: 'Last night (definite past)' },
+  { id: 'tn-hourago', klass: 'ring', sentence: 'An hour ago the bell ___ for lunch.', key: 'rang', distractors: [{ value: 'rings', misconceptionId: TS, parses: false }, { value: 'has rung', misconceptionId: TS, parses: false }, { value: 'will ring', misconceptionId: TS, parses: false }], factor: 'grammar', marker: 'An hour ago (definite past)' },
+  { id: 'tn-lastweek', klass: 'finish', sentence: 'Last week she ___ her project.', key: 'finished', distractors: [{ value: 'finishes', misconceptionId: TS, parses: false }, { value: 'has finished', misconceptionId: TS, parses: false }, { value: 'will finish', misconceptionId: TS, parses: false }], factor: 'grammar', marker: 'Last week (definite past)' },
+  { id: 'tn-twodays', klass: 'play', sentence: 'Two days ago the team ___ their final match.', key: 'played', distractors: [{ value: 'plays', misconceptionId: TS, parses: false }, { value: 'has played', misconceptionId: TS, parses: false }, { value: 'will play', misconceptionId: TS, parses: false }], factor: 'grammar', marker: 'Two days ago (definite past)' },
+  { id: 'tn-lastsummer', klass: 'stay', sentence: 'Last summer we ___ beside the sea.', key: 'stayed', distractors: [{ value: 'stay', misconceptionId: TS, parses: false }, { value: 'have stayed', misconceptionId: TS, parses: false }, { value: 'will stay', misconceptionId: TS, parses: false }], factor: 'grammar', marker: 'Last summer (definite past)' },
+  { id: 'tn-yestmorning', klass: 'come', sentence: 'Yesterday morning the postman ___ early.', key: 'came', distractors: [{ value: 'comes', misconceptionId: TS, parses: false }, { value: 'has come', misconceptionId: TS, parses: false }, { value: 'will come', misconceptionId: TS, parses: false }], factor: 'grammar', marker: 'Yesterday morning (definite past)' },
+  { id: 'tn-weekago', klass: 'get', sentence: 'A week ago she ___ a new bike.', key: 'got', distractors: [{ value: 'gets', misconceptionId: TS, parses: false }, { value: 'has got', misconceptionId: TS, parses: false }, { value: 'will get', misconceptionId: TS, parses: false }], factor: 'grammar', marker: 'A week ago (definite past)' },
   // T4 — two parse; the choice is still GRAMMAR (annie retyped these from sense, 2026-08-08).
-  { id: 'tn-bell', klass: 'run', sentence: 'When the bell rang, the class ___ outside and lined up.', key: 'ran', distractors: [{ value: 'had run', misconceptionId: TS }, { value: 'runs', misconceptionId: TS }, { value: 'will run', misconceptionId: TS }], parses: 2, factor: 'grammar', marker: 'past-tense subordinate clause + coordinated past main verb (lined up)' },
-  { id: 'tn-bytime', klass: 'start', sentence: 'By the time we arrived, the film ___ without us.', key: 'had started', distractors: [{ value: 'started', misconceptionId: TS }, { value: 'starts', misconceptionId: TS }, { value: 'will start', misconceptionId: TS }], parses: 2, factor: 'grammar', marker: 'by the time (completed prior event forces past perfect)' },
-  { id: 'tn-cat', klass: 'run-out', sentence: 'When she opened the door, the cat ___ out and vanished.', key: 'ran', distractors: [{ value: 'had run', misconceptionId: TS }, { value: 'runs', misconceptionId: TS }, { value: 'will run', misconceptionId: TS }], parses: 2, factor: 'grammar', marker: 'coordination with a past-simple verb (vanished) forces past simple' },
-  { id: 'tn-bus', klass: 'wait', sentence: 'By the time the bus came, we ___ for an hour.', key: 'had waited', distractors: [{ value: 'waited', misconceptionId: TS }, { value: 'wait', misconceptionId: TS }, { value: 'will wait', misconceptionId: TS }], parses: 2, factor: 'grammar', marker: 'by the time + duration (completed prior event forces past perfect)' },
-  { id: 'tn-film', klass: 'walk-home', sentence: 'When the film ended, we ___ home and went to bed.', key: 'walked', distractors: [{ value: 'had walked', misconceptionId: TS }, { value: 'walk', misconceptionId: TS }, { value: 'will walk', misconceptionId: TS }], parses: 2, factor: 'grammar', marker: 'coordination with a past-simple verb (went) forces past simple' },
-  { id: 'tn-teacher', klass: 'copy', sentence: 'By the time the teacher arrived, the class ___ the whole page.', key: 'had copied', distractors: [{ value: 'copied', misconceptionId: TS }, { value: 'copies', misconceptionId: TS }, { value: 'will copy', misconceptionId: TS }], parses: 2, factor: 'grammar', marker: 'by the time (completed prior event forces past perfect)' },
-  { id: 'tn-rain', klass: 'go-out', sentence: 'When the rain stopped, we ___ outside and played.', key: 'went', distractors: [{ value: 'had gone', misconceptionId: TS }, { value: 'go', misconceptionId: TS }, { value: 'will go', misconceptionId: TS }], parses: 2, factor: 'grammar', marker: 'coordination with a past-simple verb (played) forces past simple' },
+  { id: 'tn-bell', klass: 'run', sentence: 'When the bell rang, the class ___ outside and lined up.', key: 'ran', distractors: [{ value: 'had run', misconceptionId: TS, parses: true }, { value: 'runs', misconceptionId: TS, parses: false }, { value: 'will run', misconceptionId: TS, parses: false }], factor: 'grammar', marker: 'past-tense subordinate clause + coordinated past main verb (lined up)' },
+  { id: 'tn-bytime', klass: 'start', sentence: 'By the time we arrived, the film ___ without us.', key: 'had started', distractors: [{ value: 'started', misconceptionId: TS, parses: true }, { value: 'starts', misconceptionId: TS, parses: false }, { value: 'will start', misconceptionId: TS, parses: false }], factor: 'grammar', marker: 'by the time (completed prior event forces past perfect)' },
+  { id: 'tn-cat', klass: 'run-out', sentence: 'When she opened the door, the cat ___ out and vanished.', key: 'ran', distractors: [{ value: 'had run', misconceptionId: TS, parses: true }, { value: 'runs', misconceptionId: TS, parses: false }, { value: 'will run', misconceptionId: TS, parses: false }], factor: 'grammar', marker: 'coordination with a past-simple verb (vanished) forces past simple' },
+  { id: 'tn-bus', klass: 'wait', sentence: 'By the time the bus came, we ___ for an hour.', key: 'had waited', distractors: [{ value: 'waited', misconceptionId: TS, parses: true }, { value: 'wait', misconceptionId: TS, parses: false }, { value: 'will wait', misconceptionId: TS, parses: false }], factor: 'grammar', marker: 'by the time + duration (completed prior event forces past perfect)' },
+  { id: 'tn-film', klass: 'walk-home', sentence: 'When the film ended, we ___ home and went to bed.', key: 'walked', distractors: [{ value: 'had walked', misconceptionId: TS, parses: true }, { value: 'walk', misconceptionId: TS, parses: false }, { value: 'will walk', misconceptionId: TS, parses: false }], factor: 'grammar', marker: 'coordination with a past-simple verb (went) forces past simple' },
+  { id: 'tn-teacher', klass: 'copy', sentence: 'By the time the teacher arrived, the class ___ the whole page.', key: 'had copied', distractors: [{ value: 'copied', misconceptionId: TS, parses: true }, { value: 'copies', misconceptionId: TS, parses: false }, { value: 'will copy', misconceptionId: TS, parses: false }], factor: 'grammar', marker: 'by the time (completed prior event forces past perfect)' },
+  { id: 'tn-rain', klass: 'go-out', sentence: 'When the rain stopped, we ___ outside and played.', key: 'went', distractors: [{ value: 'had gone', misconceptionId: TS, parses: true }, { value: 'go', misconceptionId: TS, parses: false }, { value: 'will go', misconceptionId: TS, parses: false }], factor: 'grammar', marker: 'coordination with a past-simple verb (played) forces past simple' },
 ];
 const TENSE_V2 = clozeFamilyV2({
   id: 'spag-cloze-tense', name: 'Tense sequence', franchise: TS, tiers: [2, 4],
-  bank: TENSE_BANK, tierOf: (s) => (s.parses === 1 ? 2 : 4),
+  bank: TENSE_BANK, tierOf: (s) => (clozeParses(s) === 1 ? 2 : 4),
   rule: (t) => (t === 2 ? 'Tense — a time marker forces one form; the other three are ungrammatical.' : 'Tense — two forms parse and the sentence syntax decides which is right.'),
 });
 
 const CN = 'en-conjunction-logic';
 const CONNECTIVE_BANK: ClozeSentence[] = [
-  { id: 'cn-because', klass: 'cause', sentence: 'We stayed inside ___ it was raining.', key: 'because', distractors: [{ value: 'but', misconceptionId: CN }, { value: 'so', misconceptionId: CN }, { value: 'or', misconceptionId: CN }], parses: 4, factor: 'sense' },
-  { id: 'cn-but', klass: 'contrast', sentence: 'She was very tired, ___ she kept running.', key: 'but', distractors: [{ value: 'so', misconceptionId: CN }, { value: 'because', misconceptionId: CN }, { value: 'and', misconceptionId: CN }], parses: 4, factor: 'sense' },
-  { id: 'cn-so', klass: 'consequence', sentence: 'The bus was late, ___ we missed the film.', key: 'so', distractors: [{ value: 'but', misconceptionId: CN }, { value: 'because', misconceptionId: CN }, { value: 'or', misconceptionId: CN }], parses: 4, factor: 'sense' },
-  { id: 'cn-or', klass: 'alternative', sentence: 'We can walk to the park, ___ we can take the bus.', key: 'or', distractors: [{ value: 'but', misconceptionId: CN }, { value: 'because', misconceptionId: CN }, { value: 'so', misconceptionId: CN }], parses: 4, factor: 'sense' },
-  { id: 'cn-and', klass: 'sequence', sentence: 'She opened her book, ___ she began to read.', key: 'and', distractors: [{ value: 'but', misconceptionId: CN }, { value: 'or', misconceptionId: CN }, { value: 'because', misconceptionId: CN }], parses: 4, factor: 'sense' },
-  { id: 'cn-because2', klass: 'cause-2', sentence: 'The path was muddy, ___ it had rained all night.', key: 'because', distractors: [{ value: 'but', misconceptionId: CN }, { value: 'or', misconceptionId: CN }, { value: 'so', misconceptionId: CN }], parses: 4, factor: 'sense' },
+  { id: 'cn-because', klass: 'cause', sentence: 'We stayed inside ___ it was raining.', key: 'because', distractors: [{ value: 'but', misconceptionId: CN, parses: true }, { value: 'so', misconceptionId: CN, parses: true }, { value: 'or', misconceptionId: CN, parses: true }], factor: 'sense' },
+  { id: 'cn-but', klass: 'contrast', sentence: 'She was very tired, ___ she kept running.', key: 'but', distractors: [{ value: 'so', misconceptionId: CN, parses: true }, { value: 'because', misconceptionId: CN, parses: true }, { value: 'and', misconceptionId: CN, parses: true }], factor: 'sense' },
+  { id: 'cn-so', klass: 'consequence', sentence: 'The bus was late, ___ we missed the film.', key: 'so', distractors: [{ value: 'but', misconceptionId: CN, parses: true }, { value: 'because', misconceptionId: CN, parses: true }, { value: 'or', misconceptionId: CN, parses: true }], factor: 'sense' },
+  { id: 'cn-or', klass: 'alternative', sentence: 'We can walk to the park, ___ we can take the bus.', key: 'or', distractors: [{ value: 'but', misconceptionId: CN, parses: true }, { value: 'because', misconceptionId: CN, parses: true }, { value: 'so', misconceptionId: CN, parses: true }], factor: 'sense' },
+  { id: 'cn-and', klass: 'sequence', sentence: 'She opened her book, ___ she began to read.', key: 'and', distractors: [{ value: 'but', misconceptionId: CN, parses: true }, { value: 'or', misconceptionId: CN, parses: true }, { value: 'because', misconceptionId: CN, parses: true }], factor: 'sense' },
+  { id: 'cn-because2', klass: 'cause-2', sentence: 'The path was muddy, ___ it had rained all night.', key: 'because', distractors: [{ value: 'but', misconceptionId: CN, parses: true }, { value: 'or', misconceptionId: CN, parses: true }, { value: 'so', misconceptionId: CN, parses: true }], factor: 'sense' },
 ];
 const CONNECTIVES_V2 = clozeFamilyV2({
   id: 'spag-cloze-connectives', name: 'Connectives', franchise: CN, tiers: [3],
@@ -690,14 +713,14 @@ const CONNECTIVES_V2 = clozeFamilyV2({
 
 const TG = 'en-question-tag-polarity';
 const TAG_BANK: ClozeSentence[] = [
-  { id: 'tg-arent-you', klass: 'be-2sg', sentence: 'You are on the last leg, ___?', key: "aren't you", distractors: [{ value: 'are you', misconceptionId: TG }, { value: "isn't it", misconceptionId: TG }, { value: "don't you", misconceptionId: TG }], parses: 1, factor: 'grammar' },
-  { id: 'tg-isnt-he', klass: 'be-3sg', sentence: 'He is coming with us, ___?', key: "isn't he", distractors: [{ value: 'is he', misconceptionId: TG }, { value: "aren't they", misconceptionId: TG }, { value: "doesn't he", misconceptionId: TG }], parses: 1, factor: 'grammar' },
-  { id: 'tg-didnt-she', klass: 'past-simple', sentence: 'She finished her work, ___?', key: "didn't she", distractors: [{ value: 'did she', misconceptionId: TG }, { value: "hasn't she", misconceptionId: TG }, { value: "wasn't she", misconceptionId: TG }], parses: 1, factor: 'grammar' },
-  { id: 'tg-cant-we', klass: 'modal-can', sentence: 'We can go now, ___?', key: "can't we", distractors: [{ value: 'can we', misconceptionId: TG }, { value: "don't we", misconceptionId: TG }, { value: "aren't we", misconceptionId: TG }], parses: 1, factor: 'grammar' },
-  { id: 'tg-wont-they', klass: 'modal-will', sentence: 'They will wait for us, ___?', key: "won't they", distractors: [{ value: 'will they', misconceptionId: TG }, { value: "don't they", misconceptionId: TG }, { value: "aren't they", misconceptionId: TG }], parses: 1, factor: 'grammar' },
-  { id: 'tg-havent-you', klass: 'perfect', sentence: 'You have seen this film, ___?', key: "haven't you", distractors: [{ value: 'have you', misconceptionId: TG }, { value: "didn't you", misconceptionId: TG }, { value: "aren't you", misconceptionId: TG }], parses: 1, factor: 'grammar' },
-  { id: 'tg-wasnt-it', klass: 'be-past', sentence: 'It was very cold, ___?', key: "wasn't it", distractors: [{ value: 'was it', misconceptionId: TG }, { value: "isn't it", misconceptionId: TG }, { value: "didn't it", misconceptionId: TG }], parses: 1, factor: 'grammar' },
-  { id: 'tg-doesnt-she', klass: 'present-simple', sentence: 'She plays the piano, ___?', key: "doesn't she", distractors: [{ value: 'does she', misconceptionId: TG }, { value: "isn't she", misconceptionId: TG }, { value: "hasn't she", misconceptionId: TG }], parses: 1, factor: 'grammar' },
+  { id: 'tg-arent-you', klass: 'be-2sg', sentence: 'You are on the last leg, ___?', key: "aren't you", distractors: [{ value: 'are you', misconceptionId: TG, parses: false }, { value: "isn't it", misconceptionId: TG, parses: false }, { value: "don't you", misconceptionId: TG, parses: false }], factor: 'grammar' },
+  { id: 'tg-isnt-he', klass: 'be-3sg', sentence: 'He is coming with us, ___?', key: "isn't he", distractors: [{ value: 'is he', misconceptionId: TG, parses: false }, { value: "aren't they", misconceptionId: TG, parses: false }, { value: "doesn't he", misconceptionId: TG, parses: false }], factor: 'grammar' },
+  { id: 'tg-didnt-she', klass: 'past-simple', sentence: 'She finished her work, ___?', key: "didn't she", distractors: [{ value: 'did she', misconceptionId: TG, parses: false }, { value: "hasn't she", misconceptionId: TG, parses: false }, { value: "wasn't she", misconceptionId: TG, parses: false }], factor: 'grammar' },
+  { id: 'tg-cant-we', klass: 'modal-can', sentence: 'We can go now, ___?', key: "can't we", distractors: [{ value: 'can we', misconceptionId: TG, parses: false }, { value: "don't we", misconceptionId: TG, parses: false }, { value: "aren't we", misconceptionId: TG, parses: false }], factor: 'grammar' },
+  { id: 'tg-wont-they', klass: 'modal-will', sentence: 'They will wait for us, ___?', key: "won't they", distractors: [{ value: 'will they', misconceptionId: TG, parses: false }, { value: "don't they", misconceptionId: TG, parses: false }, { value: "aren't they", misconceptionId: TG, parses: false }], factor: 'grammar' },
+  { id: 'tg-havent-you', klass: 'perfect', sentence: 'You have seen this film, ___?', key: "haven't you", distractors: [{ value: 'have you', misconceptionId: TG, parses: false }, { value: "didn't you", misconceptionId: TG, parses: false }, { value: "aren't you", misconceptionId: TG, parses: false }], factor: 'grammar' },
+  { id: 'tg-wasnt-it', klass: 'be-past', sentence: 'It was very cold, ___?', key: "wasn't it", distractors: [{ value: 'was it', misconceptionId: TG, parses: false }, { value: "isn't it", misconceptionId: TG, parses: false }, { value: "didn't it", misconceptionId: TG, parses: false }], factor: 'grammar' },
+  { id: 'tg-doesnt-she', klass: 'present-simple', sentence: 'She plays the piano, ___?', key: "doesn't she", distractors: [{ value: 'does she', misconceptionId: TG, parses: false }, { value: "isn't she", misconceptionId: TG, parses: false }, { value: "hasn't she", misconceptionId: TG, parses: false }], factor: 'grammar' },
 ];
 const TAGS_V2 = clozeFamilyV2({
   id: 'spag-cloze-tags', name: 'Question tags', franchise: TG, tiers: [2],
@@ -782,7 +805,12 @@ export const SPEECH_BANK: EsSentence[] = [
 const SPEECH_V2 = errorSpotFamily({
   id: 'spag-punct-speech', name: 'Speech punctuation', subtype: 'punctuation',
   franchise: 'en-speech-punctuation-inside', stem: PUNCT_STEM_SPOT, nm: esNm, tiers: [1, 2, 3, 4],
-  bank: SPEECH_BANK, nearMiss: partHasSpeechCue, nRate: 0,
+  // R33 — FOUR options, no N. A speech item CANNOT carry an N key: an N-keyed item needs a
+  // correctly closed quotation, and that puts a terminal-at-boundary choice into a part the child
+  // is being told is clean — British usage argues both ways there, so the part is not
+  // unimpeachable. That was the finding when the family was signed; the option's ABSENCE should
+  // follow from it, rather than the option surviving on the card at a zero rate.
+  bank: SPEECH_BANK, nearMiss: partHasSpeechCue, noNOption: true,
 });
 
 // ---------------------------------------------------------------------------------------
