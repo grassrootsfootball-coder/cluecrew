@@ -1983,3 +1983,61 @@ export (`metadata-params-classified-0dab04e7993d2c80`, removed — nothing on it
 **R41's earlier count is now stale and corrected here rather than re-edited a third time:** "five
 asserted, five metadata" was true on 2026-08-09 before this ruling; it is now ten asserted, zero
 metadata, out of the original ten declared structural parameters across the 19 maths families.
+
+## R46 — Anne's fidelity pass on the ENG-004 pilot: three rulings, one drift caught mid-pass
+*Annie, 2026-08-09, on the twelve-item Anne of Green Gables cluster (R21). Recorded by David.*
+
+**1. AGG-02 walk script REWRITTEN, not the item.** Same key, same distractors. Her diagnosis: the
+script opened on the right anchor — "had he looked he could hardly have failed to notice" frames
+attitude as something SEEN — but closed by pointing straight back at the mental reading it exists to
+exclude ("carries what she was feeling"). Rewritten to close on the looking clause instead:
+
+> Look at lines 6 and 7. Had he looked, Matthew could not have missed her attitude. So expectation
+> describes what her bearing showed, not what she was thinking. All of this is something Matthew
+> would have seen.
+
+"Failed to notice" is reworded to "could not have missed" — R5 discipline: the ban-list word is gone,
+the certainty it carried is not. Verified against `checkItemChildFacing`, the actual production gate,
+not a hand-check: clean.
+
+**2. AGG-06 option D retagged** `en-plausible-not-stated` → `en-motive-invention`. "He wants Marilla
+to drive the horse home" is a WANT, not a stated-or-not fact — the R21 boundary (motive covers a
+reason/intention/wish; plausible-not-stated covers a fact/event). Now shares the tag with option C,
+her example of the boundary rule and the shared-tag rule (R21's gate reversal) working together.
+
+**Found mid-pass, not assumed: option D was already retagged on disk in both copies before this pass
+touched it**, while the item's own `misconceptions` summary array still listed the old tag — a
+per-item aggregate that had drifted from its own source fields, the same shape as the tier-
+distribution bug below. Corrected. The retag itself is not attributed to this session; only the
+summary-array fix is.
+
+**3. AGG-11 confirmed T3** against lines 60-63. The item's own `difficultyTier` was already 3 (the
+2026-08-08 retier), but its `tierRationale` and `notes` still carried the ORIGINAL hedge ("a reviewer
+may judge this T3") and the batch's `lowestConfidence` array still flagged it as an open watch item.
+All three updated to CONFIRMED. **The cluster now has one T4 item (AGG-08), not two** — which surfaced
+a second stale aggregate: the batch's `tierDistribution` field said `{3: 4, 4: 2}` against items whose
+own tiers summed to `{3: 5, 4: 1}`. Recomputed from the items, not hand-edited.
+
+**Correction to the pilot notes.** `ENG-004-PILOT-NOTES.md` claimed two declared quotations cross a
+line break, naming *"more scope for imagination"* (15–16, genuine) and *"her attitude and
+expression"* (6–7, false). Verified against the passage: line 6 ends "...tense rigidity and", line 7
+opens "expectation of her attitude and expression." The word that straddles the boundary is
+*"expectation"*; the quoted phrase itself sits entirely on line 7. Corrected in the notes file.
+Doesn't affect AGG-02's validity, which is [6,7] for the reason recorded in R21 regardless.
+
+**Status confirmed, no file change:** both proposed tags (`en-comparison-vehicle-misread`,
+`en-parallel-read-as-sequence`) stand ready per the batch's own `proposedMisconceptions` block;
+`en-negation-dropped` is correctly filed under `gapsObserved` — an observed gap with no instance in
+this cluster, not a proposal — and stays there, unentered. `en-comparison-vehicle-misread` is already
+ACTIVE in the library; `en-parallel-read-as-sequence` is not yet in the DB. Neither created here — the
+batch is still unimported (0 AGG items in `Item`), and creating a standalone misconception ahead of
+its batch is a step nobody asked for this pass; flagged as the natural next action if the batch is
+formally imported.
+
+**Found, not fixed — two pre-existing blocking gate failures, untouched by this pass:** running the
+whole cluster through `checkItemChildFacing` (the production gate, not a hand-check) turned up
+`AGG-03` (walkScript, 2 long words) and `AGG-08` (stem, "ordinary, extraordinary") already failing.
+Neither is part of this ruling; both are the reviewer's content to fix, reported rather than touched.
+
+Both file copies (`items/` and `to-cluecrew/`) kept identical throughout, per the file-based pilot
+workflow — this batch has never been imported, so there is no DB copy to diverge against yet.
