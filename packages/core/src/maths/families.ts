@@ -141,15 +141,15 @@ const timeAndMoney: MathsFamily = {
   // it in TWO parts (pounds AND pence) — an actual second thing the child does, not just a
   // bigger note. T3–T5 is the real step ladder and is unchanged.
   structuralParams: (t) => ({ steps: [0, 1, 1, 2, 2, 3][t]!, kind: ['', 'change', 'change', 'total', 'change', 'change'][t]!, parts: ['', 'one', 'two', 'two', 'two', 'three'][t]! }),
-  // `steps` falls out of the composition and is asserted. `kind` / `parts` are OPEN, not settled
-  // metadata (annie's correction, 2026-08-09 — R44): the value is known the instant each tier's
-  // branch runs in `draft` below, it is simply never written onto `operands`. T3 (total) and T4
-  // (change) currently emit the IDENTICAL operand shape — `{firstStepResults: [n]}` — so today
-  // there is no signal to recompute from; that is a threading gap, the same shape as
-  // `optionsThatParse` before `parses` existed, not a property of what this family can express.
-  // Not built here because writing it means editing every branch of a SIGNED family, which is a
-  // reviewer's call, not a sweep's — same caution as `percent` on M-pct T4.
-  recomputeParams: (item) => ({ steps: ((item.operands.firstStepResults as number[] | undefined)?.length ?? 0) + 1 }),
+  // `kind` and `parts` PROMOTED to asserted (annie's ruling, 2026-08-09, closing R44): facts always
+  // true of the item, now recorded rather than merely knowable — the `parses` pattern. Each branch
+  // below now writes both directly onto operands. This is also what closes T3-vs-T4's identical-
+  // operand-shape gap: `kind`/`parts` are the signal that was missing, not a derived one.
+  recomputeParams: (item) => ({
+    steps: ((item.operands.firstStepResults as number[] | undefined)?.length ?? 0) + 1,
+    kind: String(item.operands.kind ?? ''),
+    parts: String(item.operands.parts ?? ''),
+  }),
 
   ranges: (t) => ['', 'item £1–£4 whole, £5 note', 'item £1.10–£8.90, £10 note', 'item £2–£6 × 2–4', 'item £2–£6 × 2–4, £20 note', 'items £2–£9, £20 note'][t]!,
   draft: (tier: Tier, r) => {
@@ -161,7 +161,7 @@ const timeAndMoney: MathsFamily = {
       const change = note - cost;
       return {
         stem: `A ${obj} costs ${money(cost)}. You pay with a ${money(note)} note. How much change do you get?`,
-        solution: `${note} - ${cost}`, keyValue: money(change), operands: { a: note, b: cost },
+        solution: `${note} - ${cost}`, keyValue: money(change), operands: { a: note, b: cost, kind: 'change', parts: 'one' },
         hint: 'Take the cost away from the pounds you paid.',
         distractors: [
           { entry: 84, id: ID.addDiff, value: money(note + cost) }, // added instead of subtracting
@@ -177,7 +177,7 @@ const timeAndMoney: MathsFamily = {
       const change = 10 - cost; // ≥ £1.10, has pounds and pence
       return {
         stem: `A ${obj} costs ${money(cost)}. You pay with a ${money(10)} note. How much change do you get?`,
-        solution: `10 - ${cost}`, keyValue: money(change), operands: { a: 10, b: cost },
+        solution: `10 - ${cost}`, keyValue: money(change), operands: { a: 10, b: cost, kind: 'change', parts: 'two' },
         hint: 'Count up to the next pound first. Then count on to ten pounds.',
         distractors: [
           { entry: 84, id: ID.addDiff, value: money(10 + cost) }, // added instead of subtracting
@@ -197,7 +197,7 @@ const timeAndMoney: MathsFamily = {
         stem: `A ${item} costs ${money(unit)}. You buy ${qty} ${item}s and a ${money(extra)} notebook. What is the total?`,
         solution: `${qty} * ${unit} + ${extra}`,
         keyValue: money(key),
-        operands: { firstStepResults: [subtotal] },
+        operands: { kind: 'total', parts: 'two', firstStepResults: [subtotal] },
         hint: 'Work out the pens first. Then add the notebook.',
         distractors: [
           { entry: 0, id: ID.proc, value: money(subtotal), process: true }, // stopped at the pens (derived via firstStepResults)
@@ -217,7 +217,7 @@ const timeAndMoney: MathsFamily = {
         stem: `A ${item} costs ${money(u)}. You buy ${q} ${item}s and pay with a ${money(note)} note. How much change?`,
         solution: `${note} - ${q} * ${u}`,
         keyValue: money(key),
-        operands: { firstStepResults: [sub] },
+        operands: { kind: 'change', parts: 'two', firstStepResults: [sub] },
         hint: 'Work out the cost of the items first. Then take it from the note.',
         distractors: [
           { entry: 0, id: ID.proc, value: money(sub), process: true }, // stopped at the cost (derived)
@@ -240,7 +240,7 @@ const timeAndMoney: MathsFamily = {
       stem: `A ${item} costs ${money(u)} and a ${other} costs ${money(book)}. You buy ${q} ${item}s and one ${other}, and pay with a ${money(note)} note. How much change?`,
       solution: `${note} - (${q} * ${u} + ${book})`,
       keyValue: money(key),
-      operands: { firstStepResults: [pens, spent] },
+      operands: { kind: 'change', parts: 'three', firstStepResults: [pens, spent] },
       hint: 'Add the items up first. Then take the total from the note.',
       distractors: [
         { entry: 0, id: ID.proc, value: money(spent), process: true }, // stopped at the total spent (derived)
@@ -581,20 +581,18 @@ const percentageOfAmount: MathsFamily = {
   shape: 'Percentage of an amount / % change / reverse',
   tierRule: (t) => PCT_TIERS[t].rule,
   structuralParams: (t) => ({ shape: PCT_TIERS[t].shape, band: PCT_TIERS[t].pcts.join(',') }),
-  // `band` is the set of percentages the tier may use; the item picks one, so membership is the
-  // promise. `shape` (of / multiples / change / reverse) is nowhere on the emitted item — metadata.
-  // `percent` is on every tier's operands now (annie's ruling, 2026-08-09 — T4 was the one
-  // holdout, closed by adding it to the `change` branch above). `band` is the set the tier may
-  // use; the item picks one, so membership is the promise.
+  // `percent` is on every tier's operands (annie's ruling, 2026-08-09 — T4 was the one holdout,
+  // closed by adding it to the `change` branch below). `band` is the set the tier may use; the item
+  // picks one, so membership is the promise.
   //
-  // `shape` is OPEN, not settled metadata (annie's correction, 2026-08-09 — R44). `draft` already
-  // holds it in scope as `c.shape` at every return point below — adding `shape: c.shape` to each
-  // branch's operands is a one-line change, not a design limit. Left undone deliberately: it edits
-  // a SIGNED family, and that is hers to rule on, same as `percent` was.
+  // `shape` PROMOTED to asserted (annie's ruling, 2026-08-09, closing R44): a fact ALWAYS true of
+  // the item, now recorded rather than merely knowable. `draft` already holds it in scope as
+  // `c.shape` at every return; each branch below now writes it onto operands. No new executor
+  // input, no risk to derived values — this is the `parses` pattern, not a computation.
   recomputeParams: (item, tier) => {
     const band = PCT_TIERS[tier].pcts;
     const used = Number(item.operands.percent);
-    return { band: band.includes(used) ? band.join(',') : String(used) };
+    return { band: band.includes(used) ? band.join(',') : String(used), shape: String(item.operands.shape ?? '') };
   },
   numberRanges: (t): Record<string, [number, number]> => {
     const c = PCT_TIERS[t];
@@ -622,7 +620,7 @@ const percentageOfAmount: MathsFamily = {
         // nothing moved because of it; the three distractors below (entries 0, 77, 92) have no
         // executor keyed to `percent` or `amount` in this shape, so recording it changes what can be
         // VERIFIED, not what is EMITTED.
-        operands: { amount, percent: pct, firstStepResults: [discount] },
+        operands: { amount, percent: pct, shape: c.shape, firstStepResults: [discount] },
         hint: c.hint,
         distractors: [
           { entry: 0, id: ID.proc, value: money(discount), process: true }, // gave the discount, stopped
@@ -638,7 +636,7 @@ const percentageOfAmount: MathsFamily = {
         stem: `${pct}% of a number is ${part}. What is the number?`,
         solution: `${part} * 100 / ${pct}`,
         keyValue: String(whole),
-        operands: { percent: pct, part },
+        operands: { percent: pct, part, shape: c.shape },
         hint: c.hint,
         distractors: [
           { entry: 92, id: ID.unitarySlip, value: String(part) }, // gave the part back
@@ -653,7 +651,7 @@ const percentageOfAmount: MathsFamily = {
       stem: `What is ${pct}% of ${amount}?`,
       solution: `${pct} * ${amount} / 100`,
       keyValue: String(key),
-      operands: { percent: pct, amount },
+      operands: { percent: pct, amount, shape: c.shape },
       hint: c.hint,
       distractors: [
         { entry: 77, id: ID.pctMoney, value: String(pct) }, // read the percentage as the answer
@@ -808,9 +806,9 @@ const geometryCalculate: MathsFamily = {
   shape: 'Perimeter / area of a rectangle and composite',
   tierRule: (t) => GEOM_TIERS[t].rule,
   structuralParams: (t) => ({ shape: GEOM_TIERS[t].shape }),
-  // `shape` is OPEN, not settled metadata (annie's correction, 2026-08-09 — R44), for the same
-  // reason as M-pct's: `draft` already holds `c.shape` in scope at every return. Left undone for
-  // the same reason — this would edit a signed family.
+  // `shape` PROMOTED to asserted (annie's ruling, 2026-08-09, closing R44) — the same move as
+  // M-pct's: `draft` already holds `c.shape` in scope at every return, each branch now writes it.
+  recomputeParams: (item) => ({ shape: String(item.operands.shape ?? '') }),
   numberRanges: (t) => {
     const c = GEOM_TIERS[t];
     const base: Record<string, [number, number]> = { l: [c.lo, c.hi], w: [c.lo, c.hi] };
@@ -825,7 +823,7 @@ const geometryCalculate: MathsFamily = {
     if (c.shape === 'perimeter') {
       return {
         stem: `A rectangle is ${l} cm long and ${w} cm wide. What is its perimeter in cm?`,
-        solution: `2 * (${l} + ${w})`, keyValue: String(2 * (l + w)), operands: { l, w }, hint: c.hint,
+        solution: `2 * (${l} + ${w})`, keyValue: String(2 * (l + w)), operands: { l, w, shape: c.shape }, hint: c.hint,
         distractors: [
           { entry: 87, id: ID.perimAreaSwap, value: String(l * w) }, // gave the area
           { entry: 88, id: ID.incompletePerim, value: String(l + w) }, // added the two sides once
@@ -836,7 +834,7 @@ const geometryCalculate: MathsFamily = {
     if (c.shape === 'area') {
       return {
         stem: `A rectangle is ${l} cm long and ${w} cm wide. What is its area in cm²?`,
-        solution: `${l} * ${w}`, keyValue: String(l * w), operands: { l, w }, hint: c.hint,
+        solution: `${l} * ${w}`, keyValue: String(l * w), operands: { l, w, shape: c.shape }, hint: c.hint,
         distractors: [
           { entry: 87, id: ID.perimAreaSwap, value: String(2 * (l + w)) }, // gave the perimeter
           { entry: 88, id: ID.incompletePerim, value: String(l + w) }, // added the sides once
@@ -847,9 +845,9 @@ const geometryCalculate: MathsFamily = {
     if (c.shape === 'mixed') {
       const askArea = r() < 0.5;
       return askArea
-        ? { stem: `A rectangle is ${l} cm long and ${w} cm wide. What is its area in cm²?`, solution: `${l} * ${w}`, keyValue: String(l * w), operands: { l, w }, hint: c.hint,
+        ? { stem: `A rectangle is ${l} cm long and ${w} cm wide. What is its area in cm²?`, solution: `${l} * ${w}`, keyValue: String(l * w), operands: { l, w, shape: c.shape }, hint: c.hint,
           distractors: [{ entry: 87, id: ID.perimAreaSwap, value: String(2 * (l + w)) }, { entry: 88, id: ID.incompletePerim, value: String(l + w) }, { entry: 90, id: ID.composite, value: String(l * w + l) }] }
-        : { stem: `A rectangle is ${l} cm long and ${w} cm wide. What is its perimeter in cm?`, solution: `2 * (${l} + ${w})`, keyValue: String(2 * (l + w)), operands: { l, w }, hint: c.hint,
+        : { stem: `A rectangle is ${l} cm long and ${w} cm wide. What is its perimeter in cm?`, solution: `2 * (${l} + ${w})`, keyValue: String(2 * (l + w)), operands: { l, w, shape: c.shape }, hint: c.hint,
           distractors: [{ entry: 87, id: ID.perimAreaSwap, value: String(l * w) }, { entry: 88, id: ID.incompletePerim, value: String(l + w) }, { entry: 70, id: ID.colTotals, value: String(2 * l + w) }] };
     }
     // Composite L-shape: a big rectangle l×w with a smaller a×b corner removed. The
@@ -863,7 +861,7 @@ const geometryCalculate: MathsFamily = {
       const key = bigArea - cutArea;
       return {
         stem: `An L-shape is made from a ${l} cm by ${w} cm rectangle. A ${a} cm by ${b} cm corner is removed. What is the area in cm²?`,
-        solution: `${l} * ${w} - ${a} * ${b}`, keyValue: String(key), operands: { l, w, firstStepResults: [bigArea, cutArea] }, hint: c.hint,
+        solution: `${l} * ${w} - ${a} * ${b}`, keyValue: String(key), operands: { l, w, shape: c.shape, firstStepResults: [bigArea, cutArea] }, hint: c.hint,
         distractors: [
           { entry: 0, id: ID.proc, value: String(bigArea), process: true }, // gave the whole rectangle, forgot the cut
           { entry: 90, id: ID.composite, value: String(bigArea + cutArea) }, // added the corner instead of removing it
@@ -879,7 +877,7 @@ const geometryCalculate: MathsFamily = {
     const key = 2 * (l + w) + 2 * nd;
     return {
       stem: `A rectangle is ${l} cm by ${w} cm. A notch ${nw} cm wide and ${nd} cm deep is cut into one long side. What is the perimeter in cm?`,
-      solution: `2 * (${l} + ${w}) + 2 * ${nd}`, keyValue: String(key), operands: { l, w, nw, nd, firstStepResults: [2 * (l + w), 2 * nd] }, hint: c.hint,
+      solution: `2 * (${l} + ${w}) + 2 * ${nd}`, keyValue: String(key), operands: { l, w, nw, nd, shape: c.shape, firstStepResults: [2 * (l + w), 2 * nd] }, hint: c.hint,
       distractors: [
         { entry: 88, id: ID.incompletePerim, value: String(2 * (l + w)) }, // ignored the notch entirely (the 30/30 trap, now wrong)
         { entry: 90, id: ID.composite, value: String(2 * (l + w) + nd) }, // added the depth once, not twice
@@ -934,14 +932,31 @@ const inverseReasoning: MathsFamily = {
   // claims "order decides" — reverse mean is an extra step back, not an order case.
   tierRule: (t) => ['', 'one operation — division to undo', 'one operation — spot which to undo', 'two operations — take away, then divide', 'two operations — order decides (undo the outside first)', 'reverse mean — recover a value from the average'][t]!,
   structuralParams: (t) => ({ steps: [0, 1, 1, 2, 2, 3][t]!, mode: ['', 'known-op', 'spot-op', 'ordered', 'order-decides', 'reverse-mean'][t]! }),
-  // `steps` falls out of the composition and is asserted. `mode` is OPEN, not settled metadata
-  // (annie's correction, 2026-08-09 — R44): T3 already carries a PARTIAL signal nobody reads — its
-  // `op: 'sub'` field is present only there, so T3 vs T4 is separable today by presence of `op`
-  // alone. T1 vs T2 is the harder case: when T2's coin flip draws 'mult', its operands are BYTE
-  // IDENTICAL to T1's (`{result, c, op: 'mult'}`), so distinguishing those two needs the same
-  // direct-threading fix as `kind`/`parts` above, not a cleverer derivation from what already
-  // exists. Left undone for the same reason — this would edit a signed family.
-  recomputeParams: (item) => ({ steps: ((item.operands.firstStepResults as number[] | undefined)?.length ?? 0) + 1 }),
+  // `mode` SPLITS (annie's ruling, 2026-08-09, closing R44's determinacy question):
+  //
+  //   T3 vs T4 — ASSERTED via the EXISTING `op` field: T3 always carries `op: 'sub'`, T4 never
+  //   carries `op` at all. A real, checkable fact already on the item — no new field needed.
+  //
+  //   T1 vs T2 — checked empirically before writing anything (31/31 sampled T1 operand
+  //   signatures also occur among T2's multiplication draws): when T2's internal coin flip draws
+  //   'mult', its operands are BYTE-IDENTICAL to T1's, `{result, c, op: 'mult'}` — the same
+  //   emitted item is genuinely consistent with two declared tiers, not recoverable in principle
+  //   from what draft already returns. So the fix is a DECLARED FLAG, authored at generation time
+  //   the way comma's site types are authored rather than inferred — `mode` is now written
+  //   directly onto T1's and T2's operands below, a generator addition, not a derivation.
+  //
+  //   T5 — steps alone already uniquely implies it (no other tier reaches steps=3), asserted as a
+  //   direct consequence of the already-asserted `steps` field, not a new judgement call.
+  recomputeParams: (item) => {
+    const steps = ((item.operands.firstStepResults as number[] | undefined)?.length ?? 0) + 1;
+    const declaredMode = item.operands.mode; // T1/T2 only — authored directly, not derived
+    const mode =
+      typeof declaredMode === 'string' ? declaredMode
+        : steps === 2 ? (item.operands.op !== undefined ? 'ordered' : 'order-decides')
+          : steps === 3 ? 'reverse-mean'
+            : undefined;
+    return (mode === undefined ? { steps } : { steps, mode }) as Record<string, string | number>;
+  },
 
   ranges: (t) => ['', '□ × 2–5, answer 2–9', '□ ?(×/+) 2–9, answer 2–10', '□ × a + b, a 2–4, answer 3–9', '(□ + a) × b, b 2–4, answer 3–8', '5 numbers, mean 4–9, values 1–14'][t]!,
   draft: (tier, r) => {
@@ -952,7 +967,7 @@ const inverseReasoning: MathsFamily = {
       const result = q * c;
       return {
         stem: `□ × ${c} = ${result}. What is □?`,
-        solution: `${result} / ${c}`, keyValue: String(q), operands: { result, c, op: 'mult' },
+        solution: `${result} / ${c}`, keyValue: String(q), operands: { result, c, op: 'mult', mode: 'known-op' },
         hint: 'Going backwards undoes the step. Divide where it multiplied.',
         distractors: [
           { entry: 109, id: ID.ranForwards }, // multiplied instead of dividing (derived)
@@ -970,7 +985,7 @@ const inverseReasoning: MathsFamily = {
       return {
         stem: `□ ${mult ? '×' : '+'} ${c} = ${result}. What is □?`,
         solution: mult ? `${result} / ${c}` : `${result} - ${c}`, keyValue: String(q),
-        operands: { result, c, op: mult ? 'mult' : 'add' },
+        operands: { result, c, op: mult ? 'mult' : 'add', mode: 'spot-op' },
         hint: 'Spot the operation, then undo it. Divide undoes times; take away undoes plus.',
         distractors: [
           { entry: 109, id: ID.ranForwards }, // ran the machine forwards (derived: applies the stated op)

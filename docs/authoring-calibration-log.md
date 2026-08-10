@@ -1945,3 +1945,41 @@ directly" (no derivation, nothing to misname) or "calls `<family's own function>
 comment that instead describes independent logic — counts, parses, or classifies the item's fields
 without naming an existing family function it is drawing from — is a class-3 risk and gets checked
 against the family's actual definition before the sweep that uses it is trusted.
+
+## R45 — All five closed; one split by a determinacy check
+*Annie, 2026-08-09. Rulings on R44's four class-B parameters plus M-inverse.mode.*
+
+**M-pct.shape, M-geom.shape, M-money.kind, M-money.parts — PROMOTED.** Each already sat in scope at
+the point of return (`c.shape`, or a tier-indexed literal `draft` could trivially carry), so
+threading it onto the emitted item is the `parses` pattern exactly: a fact always true of the item,
+now recorded rather than merely knowable. No new executor input, no risk to derived values — her
+framing, confirmed by the sweep (0 disagreements).
+
+**M-inverse.mode split, because her determinacy question had two different answers within one
+parameter — checked empirically before writing anything, not assumed:**
+
+- **T3 vs T4 — asserted via the EXISTING `op` field.** T3 alone carries `op: 'sub'`; T4 never carries
+  `op` at all. A real, checkable fact already on the item, no new field needed — same treatment as
+  the four above, by mechanism if not by field.
+- **T1 vs T2 — genuinely indeterminate, not a recording gap.** Sampled 3,000 draws each: **31 of 31
+  T1 operand signatures also occurred among T2's multiplication draws.** When T2's internal coin flip
+  draws 'mult', its operands are byte-identical to T1's — `{result, c, op: 'mult'}` — so the SAME
+  emitted item is consistent with two declared tiers. No amount of future engineering recovers this
+  from what `draft` already returns, because there is nothing there to distinguish. Closed with a
+  **declared flag** at generation time — `mode` is now written directly onto T1's and T2's operands,
+  the same way comma's site types are authored rather than inferred. A generator addition, not a
+  verifier one, as she specified.
+- **T5 — free.** `steps` already uniquely implies it (no other tier reaches steps=3), asserted as a
+  consequence of an already-asserted fact, not a new judgement.
+
+**Retrospective sweep, all five closed: 13,173 items across all 19 signed families, 0 disagreeing.**
+**No signature fingerprint moved** — none of this touched the declared surface a signature hashes
+(`tierRule`/`structuralParams`/`numberRanges`); it only changed what `draft` writes onto the emitted
+item, confirmed against all 19 pinned fingerprints before and after.
+
+Sent as the closure report: `metadata-params-closed-395aa847a8c984b7`, superseding the classification
+export (`metadata-params-classified-0dab04e7993d2c80`, removed — nothing on it remains open).
+
+**R41's earlier count is now stale and corrected here rather than re-edited a third time:** "five
+asserted, five metadata" was true on 2026-08-09 before this ruling; it is now ten asserted, zero
+metadata, out of the original ten declared structural parameters across the 19 maths families.
