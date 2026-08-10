@@ -973,8 +973,9 @@ that pretends to an even spread it cannot supply is not. **Design question, to b
 ## R19 — CONDITIONS ON THE SPaG SIGNATURES (not findings — they need an owner)
 *Annie, 2026-08-08, closing the SPaG district at 13/13 signed. Recorded by David.*
 
-Three requirements accumulated across the build sit on the SERVING and RENDER paths. Each is
-something a signature ASSUMES to be true and cannot itself guarantee, so each needs an owner:
+Four requirements accumulated across the build sit on the SERVING and RENDER paths. Each is
+something a signature or a content finding ASSUMES to be true and cannot itself guarantee, so each
+needs an owner:
 1. **The cloze four-option render.** Cloze has no N, deliberately; the other eleven families render
    a fifth labelled option. The VISUAL difference must carry the signal the stem cannot, or a child
    who has learned that N is always there will hunt for it in a timed test. (Verified true of the
@@ -986,6 +987,12 @@ something a signature ASSUMES to be true and cannot itself guarantee, so each ne
    items, and the serving layer must honour that.
 3. **Per-family depth sizing.** Depth varies from 4 to 24 across the thirteen and cannot be applied
    as one number. Every signature carries its own figure; serving must respect them individually.
+4. **Technique-repetition capping (R49, added 2026-08-11).** Whole-text-purpose T4 items across
+   different passages can share the same underlying device — Wind in the Willows/Jungle Book
+   anthropomorphism, Tom Sawyer/Anne/Christmas Carol "the reader sees what a character cannot,"
+   Canterville/Mill on the Floss register-mismatch. Two items on the same technique must never be
+   drawn into the same mock sitting. Unlike condition 2, this is an open-set TECHNIQUE TAG, not a
+   linked pair — serving needs a technique-key field to constrain against, which does not exist yet.
 
 **And a product decision, not a content one: the English T4 ruling.** T4 is served by six of thirteen
 families and holds 18% of items, because the top tier needs unarguable difficulty and difficulty is
@@ -1117,11 +1124,45 @@ loses the quotation. The distractor was replaced. **Her convention, stated symme
 evidence sits INSIDE the cited window, AND no in-window text supports a distractor.**
 
 **T4 BLUEPRINT RULING (David, 2026-08-08).** English T4 is **spelling, vocabulary, and roughly thirty
-comprehension items** — the blueprint is set against that, not against a 25% comprehension share it
-cannot reach. **The yield finding:** T4 hooks are NOT rare — 12 of 15 extracts carry at least one (a
-double description, a say/do gap, an unreliable observation; 8 strong, 4 moderate, 3 weak). But a
-say/do gap supports **two or three questions, not six**, so fifteen extracts yield ~30 T4 items
-against the ~90 a 25% share would need. **The constraint is hook YIELD, not hook scarcity.**
+comprehension items** — the blueprint is set against that, not against a percentage share.
+
+**CORRECTION (David, 2026-08-11, per R24 — this paragraph originally used "25%" as though it were a
+target; it is not one).** Checked against the platform's own ratified record before writing this
+correction: `content/batch-mix.json`'s `english` pool entry reads, verbatim, **"EMPTY — pending
+BUILD-DISTRICT-ENGLISH. Deliberately carries no mix: the spec is unwritten, so any number here would
+be invention."** That is the census. No English-specific corpus-derived tier distribution exists
+anywhere — `english-question-taxonomy.json` gives QUESTION-TYPE shares (SPaG 56%, retrieval 17.5%,
+etc.) and a tier CEILING finding (no T5, cap at T4), never a T1–T5 percentage mix. The only T1–T5
+percentage figures in the corpus are VR's (`difficulty-map.json`, 400 VR items, PASS 1) and Maths's
+(`maths-topic-tier-map.json`, 1505 parts) — both district-specific, neither English's.
+
+The "25%" this paragraph originally used is **not VR's number carried over** — VR's `specDefault`
+T4 was 20%, and VR has since RATIFIED its own corpus-derived figure (T4=18%, practice and mock), so
+VR itself no longer runs on either 20% or 25%. Checked further before calling it unsourced: the
+`independent-prep` pool's `specDefault` IS `[10, 20, 30, 25, 15]` — **T4=25% exactly**, and its
+status line reads *"UNCHANGED — T3+ centre with a real T5 tail, per the independents evidence.
+CEM-style and independent tracks keep this centre."* ENG-004 is the non-GL/CSSE-style comprehension
+track (graduated analysis ladders reaching T5, per `BUILD-DISTRICT-ENGLISH.md`'s own two-track
+split) — the format `independent-prep` describes, not GL. So 25% most plausibly echoes THIS pool's
+default rather than being invented from nothing.
+
+**That does not make it English's number.** `independent-prep`'s own status says "UNCHANGED… per
+the independents evidence" — evidence about CEM-style MATHS and the independent tracks generally,
+never English specifically, and never corpus-checked the way VR's was (VR's moved because someone
+compared it to `difficulty-map.json`; `independent-prep`'s has not moved because nobody has run the
+equivalent English pass). **The correct sentence is: nobody derived an English tier-mix figure. The
+25% this paragraph used almost certainly echoes the `independent-prep` pool's own pre-corpus
+default — a real file, but a maths/CEM-track default all the same, not an English one — carried
+across by resemblance of FORMAT (non-GL, graduated, T5-reaching) rather than by any evidence about
+English's actual tier shape.**
+
+**The yield finding stands on its own count, not on the withdrawn percentage:** T4 hooks are NOT
+rare — 12 of 15 extracts carry at least one (a double description, a say/do gap, an unreliable
+observation; 8 strong, 4 moderate, 3 weak). But a say/do gap supports **two or three questions, not
+six**, so fifteen extracts yield ~30 T4 items. **The constraint is hook YIELD, not hook scarcity** —
+this holds regardless of what any target percentage says, which is exactly why the blueprint was
+right to set itself against a count (~30 comprehension T4 items) rather than a share of a total that
+was never real.
 
 ## R22 — Urgency language is ROLE-SCOPED, and the headword exemption cannot reach it
 *Annie's principle, ruled by David, 2026-08-08. Recorded by David.*
@@ -2098,3 +2139,63 @@ with standing same-user access to the folder and no direct evidence tying it to 
 The fix in this entry does not depend on ever answering that question — it removes the CLASS of
 vulnerability (an editable file with no lock, no gate, no log) regardless of what caused this one
 instance.
+
+## R48 — English's T4 target has no derivation; the census says so in its own words
+*David, 2026-08-11, ruling on the target's provenance before the shortfall arithmetic is trusted.
+Recorded by David.*
+
+**Every file checked, so the negative is a finding, not a gap left open as a search:**
+
+- `content/batch-mix.json` (the RATIFIED census — Okafor reads only this, never the difficulty map,
+  per Addendum E §2) carries an `english` pool entry whose entire content is:
+  *"EMPTY — pending BUILD-DISTRICT-ENGLISH. Deliberately carries no mix: the spec is unwritten, so
+  any number here would be invention."* This is the platform's own record, already correct, already
+  refusing to invent the figure this log's R21 paragraph then went ahead and used.
+- `difficulty-map.json` — `"campaign": "ClueCrew corpus analysis — PASS 1 (VR)"`, `papersAnalysed`
+  entirely VR papers (`VR_1`, `VR_2`, `VR_3`, `cgp-gl-vr`, `cgp-assess-vr`). Its
+  `overallTierDistributionPct` (9.0/30.2/39.5/**19.2**/2.0) is VR data. VR's `19.2%` T4 is what the
+  user's question named directly.
+- `english-question-taxonomy.json` — the district's actual English corpus evidence. Gives
+  QUESTION-TYPE shares (`classicGLEnglishMixPct`: SPaG 56.3% aggregate, retrieval 17.5%, inference
+  13.6%, etc.) and a tier CEILING finding (`SCP-E-6`: no T5 observed, cap at T4). **Never a T1–T5
+  percentage mix.** Question-type share and tier-difficulty share are different axes; this file
+  answers the first and was never asked the second.
+- `batch-mix-proposal.json` (the working draft the ratified file above was copied from) states it
+  outright: `"ENGLISH": {"note": "No batch mix proposed yet — BUILD-DISTRICT-ENGLISH spec not
+  written."}` — while its `VR` and `MATHS` entries each carry a full corpus-derived proposal with a
+  named rationale (SCP-VR-5, SCP-M-2) and a source file (`difficulty-map.json`,
+  `maths-topic-tier-map.json`).
+
+**What the 20% and 25% figures in circulation actually are, traced precisely rather than assumed:**
+
+| figure | where it's from | is it English's? |
+|---|---|---|
+| **20%** (`cluecrewTargetMix`, the user's figure) | `batch-mix.json`'s `specDefault` for VR — the platform's PRE-CORPUS baseline, superseded once VR ratified its own corpus figure (T4=18%) | No. Not even VR's CURRENT number — VR itself has moved off it. |
+| **25%** (R21's figure, corrected above) | Most plausibly `independent-prep`'s `specDefault` (T4=25%, status "UNCHANGED… per the independents evidence"), the CEM/independent-track default — the format family ENG-004 (non-GL, graduated, T5-reaching) resembles | No. That default is itself uncorroborated by any English-specific pass; it moved across by FORMAT resemblance, not by evidence. |
+
+**The ruling, stated the way it needs to be trusted:** nobody derived an English tier-mix figure.
+Every number attached to "English T4 target" traces to a DIFFERENT district's pre-corpus default,
+carried over by resemblance or convenience, never validated against English's own corpus evidence
+the way VR's and Maths's targets were. This is now the sentence that gates whether the shortfall
+arithmetic in R21's yield finding means anything: it does, because that finding is a raw COUNT
+(~30 T4 items from 15 extracts) that never depended on a percentage; the percentage framing this log
+used alongside it did not.
+
+## R49 — Technique repetition joins the serving conditions list
+*Annie, 2026-08-11, from the T4 purpose bounding rule's own duplication-across-passages finding.
+Recorded by David.*
+
+`T4-PURPOSE-BOUNDING-RULE.md`'s own census: **thirteen viable whole-text-purpose items across the
+extracts carry only nine or ten genuinely distinct techniques.** Named pairs that share a device —
+Wind in the Willows and The Jungle Book (near-identical anthropomorphism items); Tom Sawyer, Anne of
+Green Gables and A Christmas Carol (three variants of "the reader sees what a character cannot");
+Canterville and Mill on the Floss (both register-mismatch comedy).
+
+**Joins R19's list rather than being handled ad hoc once volume starts** — same category as the
+comma mirrored-pair rule: something a CONTENT finding assumes but the SERVING layer must
+independently enforce, and nothing in serving currently reads for it. Two items sharing the same
+underlying technique must never be drawn into the same mock sitting, the same failure mode as the
+comma pair (met together, the pattern becomes a giveaway rather than a test of whether the child can
+find it unprompted). Unlike the comma pair, this is not a linked two-id constraint — it is a
+technique TAG shared across an open set of items across passages, so the serving layer needs a
+technique-key field to constrain against, not a pair id.
