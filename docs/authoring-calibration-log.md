@@ -1768,17 +1768,26 @@ worse because it reports as covered.
 are asserted (`place`, `exchange`, `steps` ×2, `band`); five are named as family metadata by annie's
 test because nothing on the emitted item can recompute them (`kind`, `parts`, `shape` ×2, `mode`).
 
-**One gap reported rather than closed:** M-pct T4 (`change`) emits `{amount, firstStepResults}` and
-does not record the percentage it used, so its `band` claim is unverifiable at that tier. Recording
-it means adding a `percent` operand to a signed family, and `percent` is executor-visible, so it
-could move derived distractor values. That is a reviewer's call.
+**M-pct T4's gap is closed (annie's ruling, 2026-08-09).** T4 (`change`) did not record the
+percentage it used, so `band` was unverifiable there. Her ruling: what moves a distractor is a
+change to EXECUTOR LOGIC, not the presence of a field — `amount` was already on the operand bag and
+nothing moved because of it, and none of T4's three distractors (entries 0, 77, 92) has an executor
+keyed to `percent` or `amount`, so recording it changes what can be VERIFIED, not what is emitted.
+`percent` is now on every tier's operands; `band` asserts across all five; the family's fingerprint
+is unmoved because the surface it hashes is the declared sheet, not the draft function.
 
-**A methodological correction worth more than the result.** The first version of M-column's
-recompute re-derived "across-zero" independently and reported **69 disagreements against a signed
-sheet**. Every one was mine: I counted any zero digit in the minuend, where the family means *a zero
-column that was asked to lend*. **A recompute must recompute the property the family MEANS, not a
-plausible second definition of it** — a second definition manufactures findings against the reviewer
-rather than about the generator. It now calls the family's own `subInfo`.
+**A methodological correction, widened to a general rule (annie's clause, 2026-08-09).** The first
+version of M-column's recompute re-derived "across-zero" independently and reported **69
+disagreements against a signed sheet**. Every one was mine: I counted any zero digit in the minuend,
+where the family means *a zero column that was asked to lend*.
+
+Her rule, wider than the instance: **a recompute must call the family's OWN definition of a
+property, not a second implementation of it.** It is not enough that a fact can be derived from the
+item — the derivation has to be the SAME derivation the family uses, or it is a different fact
+wearing the same name. Where no such function exists to call, the property is not recomputable at
+all, and belongs in metadata rather than in a plausible reconstruction of it. M-column's recompute
+now calls the family's own `subInfo` rather than a second `acrossZero` test; see R43 for the fault
+class this names.
 
 ### THE THREE GATES — measured, not assumed
 
@@ -1846,3 +1855,38 @@ is now settled is the weaker premise: the two doors inside the repo did differ, 
 and CI will say so if they drift. The proposed fix for the third term — the platform exporting its
 rule set for the screen to consume — remains the right shape and remains unbuilt. It is the one part
 of this finding that a repo-side change cannot reach.
+
+## R43 — A taxonomy of guard faults, by how loudly they fail
+*Annie, 2026-08-09. Her framing, after M-column.*
+
+Every fault this week's sweeps have found sorts into one of three classes, and the classes differ
+in how dangerous they are — not in how easy they are to make.
+
+**1. Declaration not enforced.** Something is stated on the sheet and nothing checks it against the
+generator. **SILENT.** Nobody is told anything false; they are told nothing at all, and the sheet
+and the generator can disagree indefinitely with no signal either way. Every instance from R31
+onward: the SPaG tier ladder, the maths tier ladder (10 of 19 families emitting outside their
+declared tiers), `structuralParams` before this week's assertion existed. Found by building the
+check that had been missing, not by anything failing loudly.
+
+**2. A mechanism narrower than the property it claims, and HONEST about the gap.** The check exists
+but says, correctly, "I cannot verify this part." M-pct T4 before annie's ruling: `recomputeParams`
+returned `{}` rather than asserting `band`, because the item genuinely did not record what it would
+need to. The five metadata-only parameters (`kind`, `parts`, `shape` ×2, `mode`) are this class by
+design — named as unrecomputable rather than guessed at. **Reports as a gap, not a defect**, because
+it never claims more than it can support.
+
+**3. A VERIFIER narrower than the property it claims, presented as complete.** The check exists, runs,
+and returns an answer — the WRONG answer, because it implements a different property under the same
+name. My first M-column recompute: it did not say "I cannot verify exchange," it said "exchange is
+X" using a definition the family does not use, and reported 69 REAL SIGNATURES as disagreeing with
+their own sheets. **This is the dangerous class.** Class 1 is silent — nobody is misled, only
+uninformed. Class 3 is confidently loud: it arrives dressed as a finding, with the authority of a
+sweep result, against work a reviewer already signed. A false alarm from a verifier costs more than
+a true gap from an honest one, because the false alarm has to be DISCOVERED as false before anyone
+trusts the sweep again — and every true finding sitting beside it inherits that doubt until it is.
+
+**The guard against class 3, stated once so it generalises past this instance:** a recompute must
+call the family's own definition of a property, not a plausible second implementation of it (R41,
+her clause). Where no such function exists to call, the property belongs in metadata (class 2), not
+in a reconstruction that only class 3 would attempt.

@@ -579,12 +579,10 @@ const percentageOfAmount: MathsFamily = {
   structuralParams: (t) => ({ shape: PCT_TIERS[t].shape, band: PCT_TIERS[t].pcts.join(',') }),
   // `band` is the set of percentages the tier may use; the item picks one, so membership is the
   // promise. `shape` (of / multiples / change / reverse) is nowhere on the emitted item — metadata.
+  // `percent` is on every tier's operands now (annie's ruling, 2026-08-09 — T4 was the one
+  // holdout, closed by adding it to the `change` branch above). `band` is the set the tier may
+  // use; the item picks one, so membership is the promise.
   recomputeParams: (item, tier) => {
-    // T4 (`change`) emits {amount, firstStepResults} and does NOT record the percentage it used, so
-    // `band` is unverifiable there — reported rather than papered over. Recording it would mean
-    // adding a `percent` operand to a SIGNED family, and `percent` is executor-visible, so that
-    // could move derived distractor values. That is a reviewer's call, not a sweep's (2026-08-09).
-    if (item.operands.percent === undefined) return {} as Record<string, string | number>;
     const band = PCT_TIERS[tier].pcts;
     const used = Number(item.operands.percent);
     return { band: band.includes(used) ? band.join(',') : String(used) };
@@ -610,7 +608,12 @@ const percentageOfAmount: MathsFamily = {
         stem: `A coat costs ${money(amount)}. In a sale it is reduced by ${pct}%. What is the new price?`,
         solution: `${amount} - ${pct} * ${amount} / 100`,
         keyValue: money(key),
-        operands: { amount, firstStepResults: [discount] },
+        // `percent` added 2026-08-09 (annie's ruling): what moves a distractor is a change to
+        // EXECUTOR LOGIC, not the presence of a field. `amount` was already on this operand bag and
+        // nothing moved because of it; the three distractors below (entries 0, 77, 92) have no
+        // executor keyed to `percent` or `amount` in this shape, so recording it changes what can be
+        // VERIFIED, not what is EMITTED.
+        operands: { amount, percent: pct, firstStepResults: [discount] },
         hint: c.hint,
         distractors: [
           { entry: 0, id: ID.proc, value: money(discount), process: true }, // gave the discount, stopped
