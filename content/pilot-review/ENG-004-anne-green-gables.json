@@ -1,0 +1,779 @@
+{
+  "batchId": "ENG-004-anne-green-gables",
+  "district": "ENGLISH",
+  "track": "GL",
+  "pool": "PRACTICE",
+  "status": "PILOT CLUSTER — for review before the remaining 19 passages are drafted",
+  "standingFlags": [
+    "PILOT. Twelve items on one passage, per the authoring brief's instruction to draft one passage and stop. The other nineteen are NOT drafted.",
+    "All English misconception ids are approvedBy:null (PROPOSED) in misconception-import.json. Under Addendum E §2 un-approved ids cannot be referenced by live items, so this batch is blocked at import until the reviewer clears the misconception queue. The tagging is what she needs in order to approve.",
+    "Four option slots per item, per the comprehension brief §4. This differs from ENG-001/ENG-002, which ran five. BUILD-DISTRICT-ENGLISH §1 specifies a 23-28 item GL comprehension cluster; the comprehension brief specifies 12 per passage across 20 passages. Recorded, not reconciled — the brief was followed.",
+    "Two distractors carry PROPOSED misconception tags that are not in the library at all (marked tagStatus on the option). They are proposals with evidence, not silent use."
+  ],
+  "itemCount": 12,
+  "passageRef": "stream-a-06-anne-green-gables",
+  "passageWork": "Anne of Green Gables — L. M. Montgomery (1908)",
+  "typeCoverage": {
+    "en-comp-retrieval": 5,
+    "en-comp-vocab": 2,
+    "en-comp-inference": 3,
+    "en-comp-technique": 2
+  },
+  "typeCoverageEvidence": "Derived from corpus english-comprehension-evidence-v2.json questionMixByFamily.GL: retrieval 17.5%, inference 13.6%, vocab 7.8%, technique 4.9% of the paper. Normalised within the comprehension cluster and scaled to 12 items that is 4.8 / 3.7 / 2.1 / 1.3. Authored as 5 / 3 / 2 / 2 — every type within one item of the corpus figure, technique rounded up because it is the type the library has no tags for and the pilot is meant to generate evidence there.",
+  "tierDistribution": {
+    "1": 2,
+    "2": 4,
+    "3": 5,
+    "4": 1
+  },
+  "keyDistribution": {
+    "A": 3,
+    "B": 3,
+    "C": 3,
+    "D": 3
+  },
+  "misconceptionUsage": {
+    "en-plausible-not-stated": 9,
+    "en-wrong-scope-retrieval": 4,
+    "en-minimal-pair-skim": 3,
+    "en-attribute-transfer": 3,
+    "en-motive-invention": 3,
+    "en-cause-agent-swap": 3,
+    "en-extreme-option-pull": 3,
+    "en-vocab-secondary-sense": 2,
+    "en-agent-patient-reversal": 1,
+    "en-comparison-vehicle-misread": 1,
+    "en-emotion-label-approximation": 1,
+    "en-figurative-taken-literally": 1,
+    "en-parallel-read-as-sequence": 1,
+    "en-relation-word-flipped": 1
+  },
+  "clusterOrder": "Follows the passage in order; enforced in code by sorting on first line reference, not by hand.",
+  "verification": {
+    "method": "verify_eng004.py — every line reference and every declared quotation resolved against the passage file programmatically. Nothing checked by eye.",
+    "lineRefsResolved": true,
+    "quotationsVerbatim": true,
+    "quotationsWithinCitedLines": true,
+    "walkOpensInsideCitedWindow": true,
+    "oneKeyPerItem": true,
+    "distractorsDistinctPerItem": true,
+    "banListClean": true,
+    "sentenceCap16Words": "clear (declared quotation spans exempt per R1/R4)",
+    "readingAgeStemAndOptions": "6.1 to 8.9 (target <=9)",
+    "twoPassReview": "Pass 1 mechanical (above). Pass 2 two independent cold reads by reviewers who did not author the items; 14 faults found and fixed across two rounds, including one defensibly-correct option that a fix had itself introduced."
+  },
+  "proposedMisconceptions": {
+    "en-comparison-vehicle-misread": "The child takes the bold or powerful figure a comparison implies as a description of the subject, instead of asking what the comparison measures. Hardest instance: a task 'harder than bearding a lion in its den' read as evidence that the man is daring, when the comparison is measuring how far his dread outruns the danger. DISTINCT FROM en-figurative-taken-literally, where the child believes the compared event really happened; here the child knows it is a comparison and misreads which side of it the subject stands on. DISTINCT FROM en-attribute-transfer, where the attribute moves between two characters named in the passage; here it comes from the comparison itself.",
+    "en-parallel-read-as-sequence": "The child converts two parallel or hypothetical descriptions of one thing into two moments in time, keeping every fact but re-sitting them in sequence. Hardest instance: a passage giving what an ordinary observer 'would have seen' and then what an extraordinary observer 'might have seen', read as the girl changing between the two. DISTINCT FROM en-relation-word-flipped, which is scoped to explicit relation words (contrast, unless, however); here the contrast is carried by parallel grammar and a semicolon, with no relation word to flip. DISTINCT FROM en-chronology-collapse, which concerns causes placed in the wrong order; nothing causal is at stake here."
+  },
+  "gapsObserved": {
+    "en-negation-dropped": "The child reads past a negator and takes the polarity of the surrounding description at face value. Hardest instance is NOT a negator sitting next to its target ('no commonplace soul' is the easy case, since 'no' is adjacent); it is a negator separated from its target, or one negating a comparative. DISTINCT FROM en-relation-word-flipped, which is scoped to relation words (contrast, unless, however), and from en-extreme-option-pull, which owns never/always options. Needed: no library entry covers polarity.",
+    "vocabulary-in-context mechanism scarcity": "Not a misconception. A structural finding: a vocabulary-in-context item's wrong answers are all 'the wrong sense', and the library has exactly one sense tag (en-vocab-secondary-sense). Under the rule that every distractor executes a DIFFERENT misconception, a vocabulary item can carry only one genuinely sense-based distractor; the other two have to run on non-sense mechanisms. Either sub-tag the sense errors (by word-family, by modern usage, by collocation) or allow-list vocabulary items to repeat the sense tag across options. This will bind on all 20 passages, not just this one."
+  },
+  "lowestConfidence": [
+    {
+      "itemId": "ENG-004-AGG-02",
+      "why": "The distractor 'What she thought about waiting' is the closest thing in the set to a defensible wrong answer. The key's own phrase contains 'expectation', which is a mental state, and lines 7-9 describe her waiting mind. The walk now disposes of it by separating what her body showed from what she thought, but a teacher should confirm a Year 5 reader sees that line."
+    },
+    {
+      "itemId": "ENG-004-AGG-07 and ENG-004-AGG-08",
+      "why": "Each carries one distractor on a PROPOSED tag. If the reviewer declines either en-comparison-vehicle-misread or en-parallel-read-as-sequence, that distractor has no honest home in the current library and the option has to be rebuilt rather than retagged."
+    }
+  ],
+  "walkScriptStandard": "R6 (2026-08-03) — four moves: name where to look, give the evidence, land the answer, dispose of the traps. 3-4 sentences, longest 16 words outside declared quotations.",
+  "calibrationRulesApplied": {
+    "R1": "16-word cap applied by content role; declared quotation spans exempt.",
+    "R2": "Over-long stems split into short sentences rather than compressed — see AGG-08.",
+    "R4": "Quote and declare rather than paraphrase. Four items carry declared stem.quotes; all verified verbatim and confirmed to sit on the cited lines.",
+    "R6": "Walk-script house style, four moves, applied to all 12.",
+    "R5": "Applied to the tag histogram: en-plausible-not-stated was NOT retagged to flatten the distribution. Three tags were corrected on accuracy grounds after cold read, which took it from 28% to 25% as a by-product."
+  },
+  "items": [
+    {
+      "questionTypeId": "en-comp-retrieval",
+      "difficultyTier": 1,
+      "tierRationale": "The answer is stated in the same sentence as the question's cue, with no step away from the text.",
+      "stem": {
+        "text": "What did Matthew do when he first saw the girl? (lines 4 to 6)",
+        "quotes": []
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "He slipped past her without looking at her.",
+          "isCorrect": true
+        },
+        {
+          "label": "B",
+          "content": "He noticed her red hair and freckled face.",
+          "isCorrect": false,
+          "misconceptionId": "en-wrong-scope-retrieval",
+          "misconceptionExecution": "True of the description at lines 37 and 38, but line 6 says he did not look at her."
+        },
+        {
+          "label": "C",
+          "content": "He asked her who she was waiting for.",
+          "isCorrect": false,
+          "misconceptionId": "en-plausible-not-stated",
+          "misconceptionExecution": "The natural thing to do, but he says nothing to her until line 64."
+        },
+        {
+          "label": "D",
+          "content": "He slipped past her, glancing at her as he went.",
+          "isCorrect": false,
+          "misconceptionId": "en-minimal-pair-skim",
+          "misconceptionExecution": "Differs from the key by one element: line 5 says without looking at her."
+        }
+      ],
+      "explanation": {
+        "walkScript": "Look at lines 4 to 6. Matthew barely noted that it was a girl. He slipped past her without looking at her. Line 6 says that had he looked, he could hardly have missed her.",
+        "hintCore": "One sentence says what he did and what he did not do."
+      },
+      "passageRef": "stream-a-06-anne-green-gables",
+      "lineRefs": [
+        4,
+        5,
+        6
+      ],
+      "misconceptions": [
+        "en-minimal-pair-skim",
+        "en-plausible-not-stated",
+        "en-wrong-scope-retrieval"
+      ],
+      "authoredBy": "ai-draft:cowork-okafor-v1",
+      "notes": "",
+      "itemId": "ENG-004-AGG-01",
+      "clusterPosition": 1
+    },
+    {
+      "questionTypeId": "en-comp-vocab",
+      "difficultyTier": 3,
+      "tierRationale": "The sense is fixed by the words beside it in the same phrase, split by a line break.",
+      "stem": {
+        "text": "Line 7 speaks of 'her attitude and expression'. What does 'attitude' mean here?",
+        "quotes": [
+          "her attitude and expression"
+        ]
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "How tired she was after her journey.",
+          "isCorrect": false,
+          "misconceptionId": "en-plausible-not-stated",
+          "misconceptionExecution": "A long journey would tire anyone, but the passage never says she looked tired."
+        },
+        {
+          "label": "B",
+          "content": "The way she was holding herself.",
+          "isCorrect": true
+        },
+        {
+          "label": "C",
+          "content": "What she had been told to do.",
+          "isCorrect": false,
+          "misconceptionId": "en-plausible-not-stated",
+          "misconceptionExecution": "Takes the opinion sense of attitude, which this sentence does not fix."
+        },
+        {
+          "label": "D",
+          "content": "How shy and awkward she looked.",
+          "isCorrect": false,
+          "misconceptionId": "en-attribute-transfer",
+          "misconceptionExecution": "Gives the girl Matthew's quality; line 6 gives her tense rigidity, not shyness."
+        }
+      ],
+      "explanation": {
+        "walkScript": "Look at lines 6 and 7. Had he looked, Matthew could not have missed her attitude. So expectation describes what her bearing showed, not what she was thinking. All of this is something Matthew would have seen.",
+        "hintCore": "Ask whether this is something you could see."
+      },
+      "passageRef": "stream-a-06-anne-green-gables",
+      "lineRefs": [
+        6,
+        7
+      ],
+      "misconceptions": [
+        "en-attribute-transfer",
+        "en-plausible-not-stated",
+        "en-vocab-secondary-sense"
+      ],
+      "authoredBy": "ai-draft:cowork-okafor-v1",
+      "notes": "REBUILT (annie 2026-08-08): window [6,7] could not narrow because the quoted phrase sits on line 7 with \"expectation\"; the vocab-secondary-sense distractor had in-window support and was replaced. WALK SCRIPT REWRITTEN (annie, 2026-08-09): the closing sentence pointed back at the mental reading it was meant to exclude (\"carries what she was feeling\"); rewritten to lean on the looking clause instead. Item, key and distractors unchanged.",
+      "itemId": "ENG-004-AGG-02",
+      "clusterPosition": 2
+    },
+    {
+      "questionTypeId": "en-comp-vocab",
+      "difficultyTier": 3,
+      "tierRationale": "A common word in an abstract sense, and the phrase that fixes it runs across a line break.",
+      "stem": {
+        "text": "The girl said there was 'more scope for imagination' outside. What does 'scope' mean here? (lines 15 and 16)",
+        "quotes": [
+          "more scope for imagination"
+        ]
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "Somewhere cooler than the waiting room.",
+          "isCorrect": false,
+          "misconceptionId": "en-plausible-not-stated",
+          "misconceptionExecution": "A real reason to sit outside, but the passage never gives it as hers."
+        },
+        {
+          "label": "B",
+          "content": "A quiet spot away from people.",
+          "isCorrect": false,
+          "misconceptionId": "en-motive-invention",
+          "misconceptionExecution": "Invents a reason for staying outside; the girl gives imagining as her reason."
+        },
+        {
+          "label": "C",
+          "content": "Room for the mind to work.",
+          "isCorrect": true
+        },
+        {
+          "label": "D",
+          "content": "A tool for seeing far away.",
+          "isCorrect": false,
+          "misconceptionId": "en-vocab-secondary-sense",
+          "misconceptionExecution": "Takes the sense heard in telescope and microscope, which this sentence does not fix."
+        }
+      ],
+      "explanation": {
+        "walkScript": "Look at lines 15 and 16. The girl says outside gave 'more scope for imagination'. The words after it tell you what the room is for. It is room for imagining, not a thing you look through.",
+        "hintCore": "Read the whole phrase, not the single word."
+      },
+      "passageRef": "stream-a-06-anne-green-gables",
+      "lineRefs": [
+        15,
+        16
+      ],
+      "misconceptions": [
+        "en-motive-invention",
+        "en-plausible-not-stated",
+        "en-vocab-secondary-sense"
+      ],
+      "authoredBy": "ai-draft:cowork-okafor-v1",
+      "notes": "",
+      "itemId": "ENG-004-AGG-03",
+      "clusterPosition": 3
+    },
+    {
+      "questionTypeId": "en-comp-retrieval",
+      "difficultyTier": 1,
+      "tierRationale": "Matthew states this himself in direct speech, in one short sentence.",
+      "stem": {
+        "text": "Who was Matthew expecting to meet at Bright River? (lines 17 and 18)",
+        "quotes": []
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "A girl, sent over by Mrs Spencer.",
+          "isCorrect": false,
+          "misconceptionId": "en-attribute-transfer",
+          "misconceptionExecution": "Keeps the right person but the wrong value: line 17 says he is not expecting a girl."
+        },
+        {
+          "label": "B",
+          "content": "A boy, sent over by the man at the station.",
+          "isCorrect": false,
+          "misconceptionId": "en-cause-agent-swap",
+          "misconceptionExecution": "Right arrangement, wrong person: line 18 names Mrs Spencer."
+        },
+        {
+          "label": "C",
+          "content": "His sister Marilla, coming in on the train.",
+          "isCorrect": false,
+          "misconceptionId": "en-plausible-not-stated",
+          "misconceptionExecution": "Marilla is named elsewhere, but never as someone arriving by train."
+        },
+        {
+          "label": "D",
+          "content": "A boy, sent over by Mrs Spencer.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "walkScript": "Look at lines 17 and 18. Matthew says he is not expecting a girl. He says it is a boy he has come for. The same two lines name Mrs Spencer as the one bringing him.",
+        "hintCore": "Matthew says out loud who he came for."
+      },
+      "passageRef": "stream-a-06-anne-green-gables",
+      "lineRefs": [
+        17,
+        18
+      ],
+      "misconceptions": [
+        "en-attribute-transfer",
+        "en-cause-agent-swap",
+        "en-plausible-not-stated"
+      ],
+      "authoredBy": "ai-draft:cowork-okafor-v1",
+      "notes": "",
+      "itemId": "ENG-004-AGG-04",
+      "clusterPosition": 4
+    },
+    {
+      "questionTypeId": "en-comp-retrieval",
+      "difficultyTier": 2,
+      "tierRationale": "The answer is stated, but inside a longer speech that also mentions an earlier arrangement.",
+      "stem": {
+        "text": "In lines 20 to 22, what does the stationmaster say Mrs Spencer did at the station?",
+        "quotes": []
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "She came off the train with the girl and left her with him.",
+          "isCorrect": true
+        },
+        {
+          "label": "B",
+          "content": "She waited beside the girl until Matthew came.",
+          "isCorrect": false,
+          "misconceptionId": "en-plausible-not-stated",
+          "misconceptionExecution": "A helpful thing to do, but line 21 says she gave the girl into his charge and went."
+        },
+        {
+          "label": "C",
+          "content": "She was to bring a boy over from Nova Scotia.",
+          "isCorrect": false,
+          "misconceptionId": "en-wrong-scope-retrieval",
+          "misconceptionExecution": "True of the passage, but from line 18 and spoken by Matthew, not by the stationmaster here."
+        },
+        {
+          "label": "D",
+          "content": "She took the girl into her charge from him.",
+          "isCorrect": false,
+          "misconceptionId": "en-agent-patient-reversal",
+          "misconceptionExecution": "Reverses line 21, where she is the one who gives the girl into his charge."
+        }
+      ],
+      "explanation": {
+        "walkScript": "Look at lines 20 and 21. The stationmaster says Mrs Spencer came off the train with the girl. He says she gave the girl into his charge. Keep to what he says here, and to who handed over whom.",
+        "hintCore": "Follow the stationmaster's own words in these lines."
+      },
+      "passageRef": "stream-a-06-anne-green-gables",
+      "lineRefs": [
+        20,
+        21,
+        22
+      ],
+      "misconceptions": [
+        "en-agent-patient-reversal",
+        "en-plausible-not-stated",
+        "en-wrong-scope-retrieval"
+      ],
+      "authoredBy": "ai-draft:cowork-okafor-v1",
+      "notes": "",
+      "itemId": "ENG-004-AGG-05",
+      "clusterPosition": 5
+    },
+    {
+      "questionTypeId": "en-comp-inference",
+      "difficultyTier": 2,
+      "tierRationale": "The feeling is signalled by one word, and the reason has to be worked out from it.",
+      "stem": {
+        "text": "Why does Matthew wish Marilla was there? (lines 24 and 25)",
+        "quotes": []
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "He knows Marilla is the shy one of the two.",
+          "isCorrect": false,
+          "misconceptionId": "en-attribute-transfer",
+          "misconceptionExecution": "Gives Marilla the shyness the preamble gives Matthew."
+        },
+        {
+          "label": "B",
+          "content": "He finds this sort of trouble hard to face alone.",
+          "isCorrect": true
+        },
+        {
+          "label": "C",
+          "content": "He hopes Marilla will send the girl straight back.",
+          "isCorrect": false,
+          "misconceptionId": "en-motive-invention",
+          "misconceptionExecution": "Supplies a motive the passage never gives; line 62 leaves all of that until later."
+        },
+        {
+          "label": "D",
+          "content": "He wants Marilla to drive the horse home.",
+          "isCorrect": false,
+          "misconceptionId": "en-motive-invention",
+          "misconceptionExecution": "Nothing in these lines links Marilla to the horse or the journey."
+        }
+      ],
+      "explanation": {
+        "walkScript": "Look at lines 24 and 25. Matthew speaks helplessly and wishes Marilla could cope. That tells you he does not feel able to sort this out. He wants her for the difficulty itself.",
+        "hintCore": "One word in line 24 tells you how he feels."
+      },
+      "passageRef": "stream-a-06-anne-green-gables",
+      "lineRefs": [
+        24,
+        25
+      ],
+      "misconceptions": [
+        "en-attribute-transfer",
+        "en-motive-invention"
+      ],
+      "authoredBy": "ai-draft:cowork-okafor-v1",
+      "notes": "RETAG CONFIRMED, SUMMARY CORRECTED (annie, 2026-08-09): option D is en-motive-invention — \"wants Marilla to drive the horse home\" is a WANT the text does not give, not a fact/event it does not state — now shares the tag with option C under the rescoped MOTIVE-vs-PLAUSIBLE boundary (R21). The item's own `misconceptions` summary still listed en-plausible-not-stated, which no option executes; corrected to match the options.",
+      "itemId": "ENG-004-AGG-06",
+      "clusterPosition": 6
+    },
+    {
+      "questionTypeId": "en-comp-technique",
+      "difficultyTier": 3,
+      "tierRationale": "The child has to see that a comparison measures a feeling rather than describing a real event.",
+      "stem": {
+        "text": "Line 30 says the task was harder than 'bearding a lion in its den'. Why does the writer compare it to that?",
+        "quotes": [
+          "bearding a lion in its den"
+        ]
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "To show that Matthew is bold, like a lion hunter.",
+          "isCorrect": false,
+          "misconceptionId": "en-comparison-vehicle-misread",
+          "misconceptionExecution": "Takes the daring figure the comparison implies as a description of Matthew, missing that he stands on the frightened side of it.",
+          "tagStatus": "PROPOSED — not in the library; see proposedMisconceptions"
+        },
+        {
+          "label": "B",
+          "content": "To show that Matthew felt sad about the mistake.",
+          "isCorrect": false,
+          "misconceptionId": "en-emotion-label-approximation",
+          "misconceptionExecution": "Picks a neighbouring feeling; lines 29 and 31 point to dread, not sadness."
+        },
+        {
+          "label": "C",
+          "content": "To show how frightening an everyday task felt to shy Matthew.",
+          "isCorrect": true
+        },
+        {
+          "label": "D",
+          "content": "To show that Matthew had once faced real danger.",
+          "isCorrect": false,
+          "misconceptionId": "en-figurative-taken-literally",
+          "misconceptionExecution": "Reads the comparison as something that happened rather than a picture of a feeling."
+        }
+      ],
+      "explanation": {
+        "walkScript": "Look at lines 29 to 31. The writer says the task was harder than 'bearding a lion in its den'. Then he names the task: walk up to a girl. Line 31 says Matthew groaned, so the comparison is measuring his dread.",
+        "hintCore": "Ask what the comparison measures: the task, or the man."
+      },
+      "passageRef": "stream-a-06-anne-green-gables",
+      "lineRefs": [
+        29,
+        30,
+        31
+      ],
+      "misconceptions": [
+        "en-comparison-vehicle-misread",
+        "en-emotion-label-approximation",
+        "en-figurative-taken-literally"
+      ],
+      "authoredBy": "ai-draft:cowork-okafor-v1",
+      "notes": "",
+      "itemId": "ENG-004-AGG-07",
+      "clusterPosition": 7
+    },
+    {
+      "questionTypeId": "en-comp-technique",
+      "difficultyTier": 4,
+      "tierRationale": "Two paragraphs must be held together and read as one deliberate choice about how we see the girl.",
+      "stem": {
+        "text": "The writer describes the girl twice. Lines 35 to 40 give what 'an ordinary observer' would see. Lines 41 to 46 give what 'an extraordinary observer' might see. Why does the writer do this?",
+        "quotes": [
+          "an ordinary observer",
+          "an extraordinary observer"
+        ]
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "To show that the girl changed while she sat waiting.",
+          "isCorrect": false,
+          "misconceptionId": "en-parallel-read-as-sequence",
+          "misconceptionExecution": "Reads two ways of seeing as two moments in time; the passage gives no change.",
+          "tagStatus": "PROPOSED — not in the library; see proposedMisconceptions"
+        },
+        {
+          "label": "B",
+          "content": "To show that Matthew saw both of these things.",
+          "isCorrect": false,
+          "misconceptionId": "en-cause-agent-swap",
+          "misconceptionExecution": "Gives the seeing to Matthew, though line 34 says he was not looking at her."
+        },
+        {
+          "label": "C",
+          "content": "To show that nobody could ever really know her.",
+          "isCorrect": false,
+          "misconceptionId": "en-extreme-option-pull",
+          "misconceptionExecution": "Stretches to nobody and ever where the passage is measured."
+        },
+        {
+          "label": "D",
+          "content": "To show there is far more to the girl than her plain looks.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "walkScript": "Look at line 34, then lines 35 and 41. Line 34 tells you Matthew was not looking at her. The writer then shows the same girl twice, to two different watchers. What changes is the watcher, not the girl.",
+        "hintCore": "Ask what changes between the two descriptions."
+      },
+      "passageRef": "stream-a-06-anne-green-gables",
+      "lineRefs": [
+        33,
+        34,
+        35,
+        41,
+        46
+      ],
+      "misconceptions": [
+        "en-cause-agent-swap",
+        "en-extreme-option-pull",
+        "en-parallel-read-as-sequence"
+      ],
+      "authoredBy": "ai-draft:cowork-okafor-v1",
+      "notes": "",
+      "itemId": "ENG-004-AGG-08",
+      "clusterPosition": 8
+    },
+    {
+      "questionTypeId": "en-comp-retrieval",
+      "difficultyTier": 2,
+      "tierRationale": "Three actions sit in one long sentence, and all three are needed rather than the first.",
+      "stem": {
+        "text": "What does the girl do once she decides Matthew is coming to her? (lines 47 to 49)",
+        "quotes": []
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "She stands up, takes her bag and holds out her hand.",
+          "isCorrect": true
+        },
+        {
+          "label": "B",
+          "content": "She stays sitting and watches him come closer.",
+          "isCorrect": false,
+          "misconceptionId": "en-wrong-scope-retrieval",
+          "misconceptionExecution": "True of line 33, before she stands; the question asks what she does next."
+        },
+        {
+          "label": "C",
+          "content": "She stands up and holds out both her hands.",
+          "isCorrect": false,
+          "misconceptionId": "en-minimal-pair-skim",
+          "misconceptionExecution": "Differs by one detail: line 48 puts the bag in one hand and only the other is held out."
+        },
+        {
+          "label": "D",
+          "content": "She walks along the platform to meet him.",
+          "isCorrect": false,
+          "misconceptionId": "en-plausible-not-stated",
+          "misconceptionExecution": "She stands and waits where she is; line 48 has him come to her."
+        }
+      ],
+      "explanation": {
+        "walkScript": "Look at lines 47 to 49. She stands up as soon as she decides he is coming. One hand takes hold of the carpet-bag. The other hand, and only the other, she holds out to him.",
+        "hintCore": "One sentence holds three things she does."
+      },
+      "passageRef": "stream-a-06-anne-green-gables",
+      "lineRefs": [
+        47,
+        48,
+        49
+      ],
+      "misconceptions": [
+        "en-minimal-pair-skim",
+        "en-plausible-not-stated",
+        "en-wrong-scope-retrieval"
+      ],
+      "authoredBy": "ai-draft:cowork-okafor-v1",
+      "notes": "",
+      "itemId": "ENG-004-AGG-09",
+      "clusterPosition": 9
+    },
+    {
+      "questionTypeId": "en-comp-inference",
+      "difficultyTier": 3,
+      "tierRationale": "Her character has to be read off a plan she describes, with nothing said about her directly.",
+      "stem": {
+        "text": "The girl says she had planned to sleep in a wild cherry-tree. What does this show about her? (lines 51 to 58)",
+        "quotes": []
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "She would rather sleep outside than go to Green Gables.",
+          "isCorrect": false,
+          "misconceptionId": "en-relation-word-flipped",
+          "misconceptionExecution": "Drops the 'if' in line 53; lines 57 and 58 say she expected him to come in the morning."
+        },
+        {
+          "label": "B",
+          "content": "She can turn a hard situation into something lovely.",
+          "isCorrect": true
+        },
+        {
+          "label": "C",
+          "content": "She is never frightened by anything at all.",
+          "isCorrect": false,
+          "misconceptionId": "en-extreme-option-pull",
+          "misconceptionExecution": "Stretches line 55; lines 51 and 52 say she was beginning to be afraid he was not coming."
+        },
+        {
+          "label": "D",
+          "content": "She has slept outdoors many times before.",
+          "isCorrect": false,
+          "misconceptionId": "en-plausible-not-stated",
+          "misconceptionExecution": "She sounds practised, but the passage gives this as a plan, not as something already done."
+        }
+      ],
+      "explanation": {
+        "walkScript": "Look at lines 51 to 58. She was beginning to be afraid nobody was coming. Her plan for that one night was a tree, and she calls it lovely. She still expected him by morning, so it was never a preference.",
+        "hintCore": "Notice what she turns the night into, and what she expected all along."
+      },
+      "passageRef": "stream-a-06-anne-green-gables",
+      "lineRefs": [
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58
+      ],
+      "misconceptions": [
+        "en-extreme-option-pull",
+        "en-plausible-not-stated",
+        "en-relation-word-flipped"
+      ],
+      "authoredBy": "ai-draft:cowork-okafor-v1",
+      "notes": "",
+      "itemId": "ENG-004-AGG-10",
+      "clusterPosition": 10
+    },
+    {
+      "questionTypeId": "en-comp-inference",
+      "difficultyTier": 3,
+      "tierRationale": "The passage states what he does; naming it as kindness chosen over a hard talk is the child's own step. CONFIRMED T3 (annie, 2026-08-09), against lines 60-63 — supersedes the 2026-08-08 retier's pending-review note.",
+      "stem": {
+        "text": "Matthew decides to take the girl home. What does this decision show about him? (lines 59 to 63)",
+        "quotes": []
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "Marilla had told him what to do in this case.",
+          "isCorrect": false,
+          "misconceptionId": "en-cause-agent-swap",
+          "misconceptionExecution": "Moves the decision to Marilla, though line 59 says Matthew decided then and there."
+        },
+        {
+          "label": "B",
+          "content": "He never makes a decision by himself.",
+          "isCorrect": false,
+          "misconceptionId": "en-extreme-option-pull",
+          "misconceptionExecution": "Line 59 shows him deciding by himself, so never cannot hold."
+        },
+        {
+          "label": "C",
+          "content": "He would rather be kind now than face a hard talk.",
+          "isCorrect": true
+        },
+        {
+          "label": "D",
+          "content": "He had always hoped that a girl would come.",
+          "isCorrect": false,
+          "misconceptionId": "en-motive-invention",
+          "misconceptionExecution": "Gives him a wish the passage never states; line 61 still calls it a mistake."
+        }
+      ],
+      "explanation": {
+        "walkScript": "Look at lines 59 to 61. Matthew looks at the child and cannot tell her about the mistake. He decides to take her home and let Marilla say it instead. He chooses the kind thing now and the hard talk later.",
+        "hintCore": "Ask what he chooses to do rather than what he chooses to say."
+      },
+      "passageRef": "stream-a-06-anne-green-gables",
+      "lineRefs": [
+        59,
+        60,
+        61,
+        62,
+        63
+      ],
+      "misconceptions": [
+        "en-cause-agent-swap",
+        "en-extreme-option-pull",
+        "en-motive-invention"
+      ],
+      "authoredBy": "ai-draft:cowork-okafor-v1",
+      "notes": "TIER CONFIRMED (annie, 2026-08-09), against lines 60-63: lines 60-63 state the avoidance plainly; only the relabelling as kindness is inferential, and that step is what makes it T3. The cluster's single T4 item is AGG-08.",
+      "itemId": "ENG-004-AGG-11",
+      "clusterPosition": 11
+    },
+    {
+      "questionTypeId": "en-comp-retrieval",
+      "difficultyTier": 2,
+      "tierRationale": "Two instructions in a short speech; the child has to take both and keep who gives what to whom.",
+      "stem": {
+        "text": "What does Matthew ask the girl to do at the end? (lines 64 and 65)",
+        "quotes": []
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "Go and sit in the ladies' waiting room.",
+          "isCorrect": false,
+          "misconceptionId": "en-wrong-scope-retrieval",
+          "misconceptionExecution": "True of line 14, where the stationmaster asks it; Matthew never does."
+        },
+        {
+          "label": "B",
+          "content": "Come along with him, and carry her own bag.",
+          "isCorrect": false,
+          "misconceptionId": "en-minimal-pair-skim",
+          "misconceptionExecution": "Differs by one detail: line 65 asks her to give him the bag."
+        },
+        {
+          "label": "C",
+          "content": "Tell him her name before they set off.",
+          "isCorrect": false,
+          "misconceptionId": "en-plausible-not-stated",
+          "misconceptionExecution": "A natural next thing to ask, but he never asks it in these lines."
+        },
+        {
+          "label": "D",
+          "content": "Come along with him, and hand him her bag.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": {
+        "walkScript": "Look at lines 64 and 65. He tells her to come along. He then asks her to give him her bag. Both things are asked in the same short speech, and the bag changes hands.",
+        "hintCore": "He asks for two things, not one."
+      },
+      "passageRef": "stream-a-06-anne-green-gables",
+      "lineRefs": [
+        64,
+        65
+      ],
+      "misconceptions": [
+        "en-minimal-pair-skim",
+        "en-plausible-not-stated",
+        "en-wrong-scope-retrieval"
+      ],
+      "authoredBy": "ai-draft:cowork-okafor-v1",
+      "notes": "",
+      "itemId": "ENG-004-AGG-12",
+      "clusterPosition": 12
+    }
+  ]
+}

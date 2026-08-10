@@ -2041,3 +2041,60 @@ Neither is part of this ruling; both are the reviewer's content to fix, reported
 
 Both file copies (`items/` and `to-cluecrew/`) kept identical throughout, per the file-based pilot
 workflow — this batch has never been imported, so there is no DB copy to diverge against yet.
+
+## R47 — Hand-editing reviewed content is not a sanctioned path
+*David, 2026-08-11, ruling on the AGG-06 mystery. Recorded by David.*
+
+**Ruling: harmless that time is not a control.** The AGG-06 investigation found no actor for the
+change and could not rule one in or out. Rather than treat "the value happens to be correct" as
+resolution, the ruling is that the METHOD was the fault regardless of outcome — a direct Python edit
+to a file mid-review is a process violation whether or not it lands on the right content, because
+nothing distinguishes that edit from an unexplained one. This session's own prior turns had been
+doing exactly this: hand-editing `ENG-004-anne-green-gables.json` in `~/Downloads/11+` via ad-hoc
+scripts. That is now closed.
+
+**What's built, not just written down:**
+
+- **One canonical, git-tracked copy.** `content/pilot-review/ENG-004-anne-green-gables.json` (plus
+  `ENG-004-CLUSTER.md`, `ENG-004-PILOT-NOTES.md`). Seeded from the state hash-verified at
+  `749a8a6a13286fce` — the content this log already confirmed as R46's correct outcome — via an
+  explicitly logged bootstrap migration (`scripts/migrate-pilot-to-canonical.ts`), not a silent copy.
+- **Locked at rest.** `chmod 444`. `scripts/lib/pilot-review.ts` is the only code that unlocks it,
+  and only for the duration of one write. **Tested, not assumed:** a direct write attempt against
+  the locked file was run and confirmed `EPERM`.
+- **Gated on write, scoped to what a ruling touches, not the whole batch — a design bug testing
+  found, not one designed in.** The first version gate-checked every item in the file; against a
+  real batch carrying two pre-existing, already-flagged failures (AGG-03, AGG-08) awaiting the
+  reviewer's own redraft, that would have refused every future ruling on this file until those two
+  specific items were fixed by someone else's hand. Rule kept: a ruling may not introduce a new
+  failure on what it touches; it is not required to fix a failure it didn't create.
+  `reportGateStatus` is the read-only counterpart — every item's status, touched or not, so a
+  pre-existing fault stays visible rather than swallowed by the narrower scope.
+- **Logged, append-only, independent of git.** `content/pilot-review/RULING-LOG.jsonl` — every
+  write, who ruled it, who recorded it, what it touched, the gate verdict.
+- **`~/Downloads/11+` demoted to a mirror.** `pnpm export:pilot` generates what Cowork reads, banner-
+  stamped "DO NOT EDIT." `pnpm import:pilot` diffs anything coming back field by field and applies
+  NOTHING automatically — a human reads the diff and applies accepted fields through the sanctioned
+  path. The two old loose copies are `chmod 444`'d and left with a pointer to the new location,
+  rather than deleted — reversible, not destructive, since deletion wasn't what was asked for.
+- **A loud emergency override**, not a silent one: `emergencyOverridePilotFile` requires a `reason`
+  (no default — an empty one throws), prints an unmissable banner, and tags its log entry
+  `emergencyOverride: true` so a future reader can never mistake it for an ordinary ruling.
+
+**Confirmed through the new single path** (`readPilotFile`, not a raw parse): AGG-02's walk script,
+AGG-06's retag and corrected summary array, AGG-11's confirmed T3 and rationale, and the recomputed
+`tierDistribution` all still hold exactly as R46 recorded them. The two pre-existing gate failures on
+AGG-03 and AGG-08 are unchanged and still visible via `reportGateStatus`.
+
+**AGG-03 and AGG-08 are NOT fixed in this pass.** Anne's suggested wording for either redraft does
+not exist in any file this session has access to — checked `ENG-004-PILOT-NOTES.md`, `ENG-004-
+CLUSTER.md`, and the batch file itself. Rather than draft wording and attribute it to her, both are
+held, exactly as `tn-teacher` was held under the same discipline (R36).
+
+**The mystery itself remains open**, and is recorded as open rather than settled: three independent
+read/investigation passes found no actor, ruled out Google Drive (no registered sync roots) and
+iCloud Desktop/Documents sync (doesn't cover `~/Downloads`), found a live Claude Desktop process
+with standing same-user access to the folder and no direct evidence tying it to this specific write.
+The fix in this entry does not depend on ever answering that question — it removes the CLASS of
+vulnerability (an editable file with no lock, no gate, no log) regardless of what caused this one
+instance.

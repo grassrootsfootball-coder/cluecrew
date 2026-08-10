@@ -95,6 +95,20 @@ The build is governed by documents, and the documents win arguments.
   not report "metadata" as if it settles the question.
 - Content decisions (items, chapters, misconceptions) go through the CMS
   review pipeline; nothing skips the reviewer.
+- **PILOT CONTENT UNDER ACTIVE REVIEW HAS ONE WRITE PATH: `scripts/lib/pilot-review.ts`, NEVER A
+  DIRECT EDIT** (David, 2026-08-11). A hand-edit to `ENG-004-anne-green-gables.json` reached the
+  right content by coincidence, not by control — the file changed with no actor attached at all,
+  and the edit was indistinguishable from that. Harmless that time is not a control. The canonical
+  copy lives at `content/pilot-review/` (git-tracked — every change has a commit and a diff),
+  chmod 444 at rest (a direct write gets EPERM, not a silent change), gated on every write through
+  `checkItemChildFacing` for the items a ruling touches, and logged append-only to
+  `content/pilot-review/RULING-LOG.jsonl`. `~/Downloads/11+` holds no source of truth for pilot
+  content: `pnpm export:pilot` generates what Cowork reads, `pnpm import:pilot` diffs anything
+  coming back and applies nothing automatically. An emergency override
+  (`emergencyOverridePilotFile`) exists for a human who must bypass this under time pressure — it
+  is deliberately loud (an unmissable console banner, a required reason, a log entry tagged
+  `emergencyOverride: true`), because the fault being closed was a change nobody could tell apart
+  from noise, and a quiet override would be the same fault again one level up.
 - A script that applies reviewer decisions RE-EXPORTS the affected artefact as
   its final step (David, 2026-08-06, after the seventh stall on a file that
   lagged the DB): the export must FOLLOW the state change automatically, not
