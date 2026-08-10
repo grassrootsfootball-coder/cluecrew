@@ -25,7 +25,7 @@
  */
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
-import { checkChildFacingText, roleForItemStem, type ContentFailure } from '@cluecrew/core';
+import { checkItemChildFacing, type ContentFailure } from '@cluecrew/core';
 import { prisma } from '../packages/db/src/index';
 
 /**
@@ -64,6 +64,15 @@ interface BatchItem {
   quotes?: Array<{ text: string; passageRef?: string; lineRefs?: number[] }>;
   /** Words this item exists to test — exempt from the vocabulary ceiling. */
   testedTokens?: string[];
+  /**
+   * Proper nouns the PASSAGE uses, declared so the vocabulary ceiling steps over them (R23).
+   *
+   * Added 2026-08-09: the field R23 introduced was never accepted by this importer, so a batch
+   * declaring it would have had the declaration silently dropped at the door and the name measured
+   * as ours — the same field-name-mismatch-reads-as-absence defect the `span`/`text` check above
+   * exists to catch, one rule later.
+   */
+  passageNames?: string[];
 }
 interface Batch {
   batchId: string;
@@ -156,25 +165,57 @@ async function main(): Promise<void> {
           quoteFieldFaults.push(`${item.itemId}: declared quote uses "span"; the canonical field is "text"`);
         }
       }
-      const quotedSpans = (item.quotes ?? []).map((quote) => quote.text).filter(Boolean);
+      // BUILD THE ROW FIRST, THEN GATE THE ROW (2026-08-09). The stem and explanation are assembled
+      // here, before the gate, so the gate sees exactly what the database will hold — not the loose
+      // fields it was built from.
+      const stemObject = {
+        prompt,
+        ...(item.passageRef ? { passageRef: item.passageRef } : {}),
+        // A cloze item's citation is a GAP, not a line (renamed 2026-08-02). Resolved as a line
+        // number it was always "in range", so the citation certified itself; the field name is what
+        // stops that happening again.
+        ...(item.lineRefs?.length
+          ? mechanic === 'cloze'
+            ? { gapRef: item.lineRefs[0] }
+            : { lineRefs: item.lineRefs }
+          : {}),
+        ...(item.quotes?.length ? { quotes: item.quotes } : {}),
+        ...(item.testedTokens?.length ? { testedTokens: item.testedTokens } : {}),
+        ...(item.passageNames?.length ? { passageNames: item.passageNames } : {}),
+      };
+      const explanationObject = {
+        ...(item.explanation ?? {}),
+        ...(item.preReview ? { preReview: item.preReview } : {}),
+        ...(lowConfidence.has(item.itemId) ? { lowConfidence: true } : {}),
+      };
+      const optionRows = item.options.map((option) => ({
+        content: { value: option.content, ...(option.label ? { label: option.label } : {}) },
+        isCorrect: option.isCorrect,
+        misconceptionId: option.misconceptionId ?? null,
+      }));
+
+      // ONE GATE, THE SAME ONE (2026-08-09, closing the three-gates finding).
+      //
+      // This path used to call `checkChildFacingText` field by field, and it implemented a
+      // PRE-R23 version of the rule: it handed `explanation.quotes` to the STEM check, so a
+      // quotation declared on a WALK SCRIPT — exactly what R23 exists for — was rejected here as
+      // "declares a quoted span that is not in the text" while the generator and the publish doors
+      // accepted it. Two doors into the same database, disagreeing about the same rule, and only
+      // one of them was ever run against a real batch.
+      //
+      // `checkItemChildFacing` is that one gate: it scopes each declaration to the text it belongs
+      // to, reads `explanation.quotes` for the scripts and `stem.passageNames` for the names, and is
+      // what `assembleSpagItem`, `assembleItem` and every REVIEWED/LIVE door already call.
       gateFailures.push(
-        ...checkChildFacingText({
-          role: roleForItemStem(mechanic),
-          label: `${item.itemId} stem`,
-          text: prompt,
-          quotedSpans,
-          testedTokens: item.testedTokens ?? [],
+        ...checkItemChildFacing({
+          id: item.itemId,
+          stem: stemObject,
+          explanation: explanationObject,
+          mechanic,
+          options: optionRows,
         }),
       );
       for (const option of item.options) {
-        gateFailures.push(
-          ...checkChildFacingText({
-            role: 'item-option',
-            label: `${item.itemId} option ${option.label ?? ''}`.trim(),
-            text: option.content,
-            testedTokens: item.testedTokens ?? [],
-          }),
-        );
         // P3: every wrong option carries a misconception before it can go LIVE.
         if (!option.isCorrect && !option.misconceptionId) {
           missingTags.push(`${item.itemId} option ${option.label ?? '?'}`);
@@ -186,38 +227,12 @@ async function main(): Promise<void> {
           id: item.itemId,
           questionTypeId: item.questionTypeId,
           difficultyTier: item.difficultyTier,
-          // Canonical shapes (ratified 2026-08-02): passageRef and lineRefs
-          // live in the stem for the MC model, in exactly these names.
-          stem: {
-            prompt,
-            ...(item.passageRef ? { passageRef: item.passageRef } : {}),
-            // A cloze item's citation is a GAP, not a line (renamed
-            // 2026-08-02). Resolved as a line number it was always "in
-            // range", so the citation certified itself; the field name is
-            // what stops that happening again.
-            ...(item.lineRefs?.length
-              ? mechanic === 'cloze'
-                ? { gapRef: item.lineRefs[0] }
-                : { lineRefs: item.lineRefs }
-              : {}),
-            ...(item.quotes?.length ? { quotes: item.quotes } : {}),
-            ...(item.testedTokens?.length ? { testedTokens: item.testedTokens } : {}),
-          },
-          explanation: {
-            ...(item.explanation ?? {}),
-            ...(item.preReview ? { preReview: item.preReview } : {}),
-            ...(lowConfidence.has(item.itemId) ? { lowConfidence: true } : {}),
-          },
+          stem: stemObject,
+          explanation: explanationObject,
           status: 'DRAFT',
           pool: (batch.pool as 'PRACTICE' | 'MOCK') ?? 'PRACTICE',
           authoredBy: item.authoredBy ?? 'ai-draft:cowork-okafor-v1',
-          options: {
-            create: item.options.map((option) => ({
-              content: { value: option.content, ...(option.label ? { label: option.label } : {}) },
-              isCorrect: option.isCorrect,
-              misconceptionId: option.misconceptionId ?? null,
-            })),
-          },
+          options: { create: optionRows },
         },
       });
       created += 1;

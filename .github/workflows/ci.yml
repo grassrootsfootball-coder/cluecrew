@@ -109,6 +109,12 @@ jobs:
       - name: NVR generator gates
         run: pnpm check:nvr
 
+      # The two doors into the database must apply the SAME child-facing gate. They did not: the
+      # script importer ran a pre-R23 version that rejected a walk-script quotation the generator
+      # and the publish doors accepted. Fixed 2026-08-09; this keeps them from drifting apart again.
+      - name: Gate parity (generator vs import door)
+        run: pnpm compare:gates
+
       - name: Banned-vocabulary scan
         run: pnpm scan:vocab
 

@@ -1810,3 +1810,39 @@ per-field approximation of it.
 options no longer on the card, and serving stale text while waiting for a redraft was the wrong side
 of the reviewer/platform split to err on. RETIRED, not deleted — the script survives for the redraft.
 `check:db-content` now reports everything serving as passing the child-facing gates.
+
+## R42 — One gate, and two beliefs that were not true
+*David, 2026-08-09, closing the three-gates finding as far as this repo can close it.*
+
+**The script importer now calls `checkItemChildFacing` — the same whole-item gate the generator and
+every REVIEWED/LIVE door already call.** It had been running a pre-R23 version: it handed
+`explanation.quotes` to the STEM check, so a quotation declared on a WALK SCRIPT — exactly what R23
+exists for — was rejected there as *"declares a quoted span that is not in the text"* while the other
+doors accepted it. Two doors into the same database disagreeing about the same rule.
+
+Two things fell out of the fix that are worth recording separately, because both were believed:
+
+**1. "The import door gates copy" was never true.** The CMS bulk import applies
+misconceptions-ACTIVE, the maths solution check, the D7 commerce screen and the similarity gate —
+but NOT the child-facing copy gate. That fires at the REVIEWED and LIVE doors instead. This is
+defensible for a DRAFT holding pen, and the code says so in its own comment ("every door to REVIEWED
+or LIVE calls this"). It is recorded because the belief in circulation was that copy was gated on the
+way IN, and it is gated on the way OUT. Anyone reasoning about what a DRAFT row can contain was
+reasoning from the wrong premise.
+
+**2. `passageNames` was never accepted by the script importer at all.** The field R23 introduced was
+absent from `BatchItem`, so a batch declaring it would have had the declaration dropped silently at
+the door and the name measured as ours — the same defect class as the `span`/`text` mismatch the
+importer already guards against, one rule later. Added.
+
+**The gate parity check is now a CI step** (`pnpm compare:gates`, non-zero on divergence). The
+original divergence survived because nothing compared the two doors; a comparison nobody runs is the
+same fault one level up. The pre-R23 implementation is kept in that script as a third column, so the
+difference stays demonstrable rather than becoming a claim about the past.
+
+**THE THIRD TERM IS STILL OPEN.** Cowork's local screen cannot be inspected from this repo, so
+whether it agrees with the platform is **unverified — not closed, and not assumed either way**. What
+is now settled is the weaker premise: the two doors inside the repo did differ, they no longer do,
+and CI will say so if they drift. The proposed fix for the third term — the platform exporting its
+rule set for the screen to consume — remains the right shape and remains unbuilt. It is the one part
+of this finding that a repo-side change cannot reach.
