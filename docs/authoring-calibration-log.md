@@ -1765,8 +1765,11 @@ worse because it reports as covered.
 
 **`structuralParams` is now asserted in maths as well as SPaG.** The retrospective sweep over all
 19 signed families: **13,173 items generated, 0 disagreeing with the signed sheet.** Five parameters
-are asserted (`place`, `exchange`, `steps` ×2, `band`); five are named as family metadata by annie's
-test because nothing on the emitted item can recompute them (`kind`, `parts`, `shape` ×2, `mode`).
+are asserted (`place`, `exchange`, `steps` ×2, `band`); five (`kind`, `parts`, `shape` ×2, `mode`)
+are metadata rather than asserted — **correction, R44: named as metadata here without saying
+WHICH kind, and every one of the five is open, not settled.** Nothing about any of them is
+unrecoverable by design; each is a fact the family's own drafting logic already knows and simply
+has not written onto the item. See R44 for the class and the reason per parameter.
 
 **M-pct T4's gap is closed (annie's ruling, 2026-08-09).** T4 (`change`) did not record the
 percentage it used, so `band` was unverifiable there. Her ruling: what moves a distractor is a
@@ -1890,3 +1893,55 @@ trusts the sweep again — and every true finding sitting beside it inherits tha
 call the family's own definition of a property, not a plausible second implementation of it (R41,
 her clause). Where no such function exists to call, the property belongs in metadata (class 2), not
 in a reconstruction that only class 3 would attempt.
+
+## R44 — Metadata has two shapes, and "not asserted" is not "settled"
+*Annie, 2026-08-09. Her condition on the five parameters R41 named as metadata.*
+
+**Metadata is not one class.** R31's test — could you recompute this from the emitted item alone? —
+answers "no" for two different reasons, and only one of them is a closed question:
+
+- **A — design.** Nothing about the item, however much engineering effort, could ever disagree with
+  the declaration, because the value is not a computed or drawn fact at all — it is a fixed label
+  the family's own logic never varies within a tier.
+- **B — open.** The value IS known at the exact point the item is built — sitting in scope as a
+  config field, or a literal the branch could trivially carry — and simply is not yet written onto
+  what the item emits. **This is R36's exact shape: `optionsThatParse` was here before `parses` was
+  threaded onto each option.** A class-B parameter is not settled; it is a gap that reads as a
+  decision until someone builds the thread.
+
+**All five of R41's metadata parameters sorted to class B. None is class A.**
+
+| family | param | why it is open, not closed |
+|---|---|---|
+| M-money | `kind` | Known the instant the tier's branch runs; not yet written onto `operands`. T3 (total) and T4 (change) currently emit the IDENTICAL operand shape — `{firstStepResults: [n]}` — which is the gap itself, not proof it cannot close. |
+| M-money | `parts` | Same family, same gap. |
+| M-pct | `shape` | The lowest-effort case: `draft` already holds it in scope as `c.shape` at every return. A one-line addition per branch, not a redesign. |
+| M-geom | `shape` | Same shape of gap — `c.shape` from `GEOM_TIERS[tier]` is already in scope at every branch. |
+| M-inverse | `mode` | Partial evidence already exists and nobody reads it: T3 alone carries `op: 'sub'`, so T3 vs T4 is separable TODAY. T1 vs T2 is harder — when T2's internal coin flip draws 'mult', its operands are byte-identical to T1's, so those two need the same direct-threading fix as `kind`/`parts`. |
+
+Sent to her in full, per-tier, unsummarised: `metadata-params-classified-0dab04e7993d2c80`.
+
+**Corrected on discovery, not left as found:** R41's text and the `recomputeParams` comments beside
+all five parameters in `families.ts` previously said "metadata… by annie's test" with no class
+attached, which reads as settled. Both edited to state the class and cite the evidence. None of the
+five is built — writing the thread means editing a signed family, and that is a reviewer's call,
+the same caution that held `percent` on M-pct T4 until her ruling.
+
+## House rule — a verifier states its source before it runs
+*Annie's standing instruction, 2026-08-09, added alongside R41.*
+
+**Any new verifier, in any district, states which function it calls to define the property it is
+checking.** If the answer is a re-derivation rather than the family's own code, that is flagged
+BEFORE it runs, not after it reports.
+
+The incident this generalises: the first version of M-column's recompute re-implemented
+"across-zero" instead of calling the family's own `subInfo`, and reported 69 disagreements against
+a signed sheet — every one manufactured by the checker, not found in the generator (R41, R43 class
+3). A verifier that names its source is auditable before it runs; one that doesn't is auditable only
+after someone notices its findings look wrong, which is the expensive order to discover it in.
+
+**In practice:** a `recomputeParams` implementation's comment states either "reads `item.operands.X`
+directly" (no derivation, nothing to misname) or "calls `<family's own function>`" by name. A
+comment that instead describes independent logic — counts, parses, or classifies the item's fields
+without naming an existing family function it is drawing from — is a class-3 risk and gets checked
+against the family's actual definition before the sweep that uses it is trusted.

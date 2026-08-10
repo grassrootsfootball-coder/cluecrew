@@ -141,10 +141,14 @@ const timeAndMoney: MathsFamily = {
   // it in TWO parts (pounds AND pence) — an actual second thing the child does, not just a
   // bigger note. T3–T5 is the real step ladder and is unchanged.
   structuralParams: (t) => ({ steps: [0, 1, 1, 2, 2, 3][t]!, kind: ['', 'change', 'change', 'total', 'change', 'change'][t]!, parts: ['', 'one', 'two', 'two', 'two', 'three'][t]! }),
-  // `steps` falls out of the composition: a k-step item leaves k-1 intermediates in
-  // `firstStepResults` by construction, so the step count is recomputable and asserted. `kind / parts` is
-  // NOT on the emitted item and cannot be recomputed from it — by annie's test it is family
-  // metadata, and it is left out of this map deliberately rather than by oversight.
+  // `steps` falls out of the composition and is asserted. `kind` / `parts` are OPEN, not settled
+  // metadata (annie's correction, 2026-08-09 — R44): the value is known the instant each tier's
+  // branch runs in `draft` below, it is simply never written onto `operands`. T3 (total) and T4
+  // (change) currently emit the IDENTICAL operand shape — `{firstStepResults: [n]}` — so today
+  // there is no signal to recompute from; that is a threading gap, the same shape as
+  // `optionsThatParse` before `parses` existed, not a property of what this family can express.
+  // Not built here because writing it means editing every branch of a SIGNED family, which is a
+  // reviewer's call, not a sweep's — same caution as `percent` on M-pct T4.
   recomputeParams: (item) => ({ steps: ((item.operands.firstStepResults as number[] | undefined)?.length ?? 0) + 1 }),
 
   ranges: (t) => ['', 'item £1–£4 whole, £5 note', 'item £1.10–£8.90, £10 note', 'item £2–£6 × 2–4', 'item £2–£6 × 2–4, £20 note', 'items £2–£9, £20 note'][t]!,
@@ -582,6 +586,11 @@ const percentageOfAmount: MathsFamily = {
   // `percent` is on every tier's operands now (annie's ruling, 2026-08-09 — T4 was the one
   // holdout, closed by adding it to the `change` branch above). `band` is the set the tier may
   // use; the item picks one, so membership is the promise.
+  //
+  // `shape` is OPEN, not settled metadata (annie's correction, 2026-08-09 — R44). `draft` already
+  // holds it in scope as `c.shape` at every return point below — adding `shape: c.shape` to each
+  // branch's operands is a one-line change, not a design limit. Left undone deliberately: it edits
+  // a SIGNED family, and that is hers to rule on, same as `percent` was.
   recomputeParams: (item, tier) => {
     const band = PCT_TIERS[tier].pcts;
     const used = Number(item.operands.percent);
@@ -799,6 +808,9 @@ const geometryCalculate: MathsFamily = {
   shape: 'Perimeter / area of a rectangle and composite',
   tierRule: (t) => GEOM_TIERS[t].rule,
   structuralParams: (t) => ({ shape: GEOM_TIERS[t].shape }),
+  // `shape` is OPEN, not settled metadata (annie's correction, 2026-08-09 — R44), for the same
+  // reason as M-pct's: `draft` already holds `c.shape` in scope at every return. Left undone for
+  // the same reason — this would edit a signed family.
   numberRanges: (t) => {
     const c = GEOM_TIERS[t];
     const base: Record<string, [number, number]> = { l: [c.lo, c.hi], w: [c.lo, c.hi] };
@@ -922,10 +934,13 @@ const inverseReasoning: MathsFamily = {
   // claims "order decides" — reverse mean is an extra step back, not an order case.
   tierRule: (t) => ['', 'one operation — division to undo', 'one operation — spot which to undo', 'two operations — take away, then divide', 'two operations — order decides (undo the outside first)', 'reverse mean — recover a value from the average'][t]!,
   structuralParams: (t) => ({ steps: [0, 1, 1, 2, 2, 3][t]!, mode: ['', 'known-op', 'spot-op', 'ordered', 'order-decides', 'reverse-mean'][t]! }),
-  // `steps` falls out of the composition: a k-step item leaves k-1 intermediates in
-  // `firstStepResults` by construction, so the step count is recomputable and asserted. `mode` is
-  // NOT on the emitted item and cannot be recomputed from it — by annie's test it is family
-  // metadata, and it is left out of this map deliberately rather than by oversight.
+  // `steps` falls out of the composition and is asserted. `mode` is OPEN, not settled metadata
+  // (annie's correction, 2026-08-09 — R44): T3 already carries a PARTIAL signal nobody reads — its
+  // `op: 'sub'` field is present only there, so T3 vs T4 is separable today by presence of `op`
+  // alone. T1 vs T2 is the harder case: when T2's coin flip draws 'mult', its operands are BYTE
+  // IDENTICAL to T1's (`{result, c, op: 'mult'}`), so distinguishing those two needs the same
+  // direct-threading fix as `kind`/`parts` above, not a cleverer derivation from what already
+  // exists. Left undone for the same reason — this would edit a signed family.
   recomputeParams: (item) => ({ steps: ((item.operands.firstStepResults as number[] | undefined)?.length ?? 0) + 1 }),
 
   ranges: (t) => ['', '□ × 2–5, answer 2–9', '□ ?(×/+) 2–9, answer 2–10', '□ × a + b, a 2–4, answer 3–9', '(□ + a) × b, b 2–4, answer 3–8', '5 numbers, mean 4–9, values 1–14'][t]!,

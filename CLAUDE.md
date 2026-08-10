@@ -82,6 +82,17 @@ The build is governed by documents, and the documents win arguments.
   generator. A summary is a door into the reviewer's judgement with no guard on
   it — the same fault as the ungated import scripts, one level up. Send the
   export, not the prose; prose may accompany a value, never stand in for it.
+- **A VERIFIER STATES ITS SOURCE BEFORE IT RUNS** (annie's standing instruction, 2026-08-09,
+  alongside R41). Any new `recomputeParams`/`recompute*`-style check, in any district, states which
+  function it calls to define the property it is checking — either "reads the field directly" or
+  "calls `<family's own function>`" by name. A re-derivation instead of the family's own code is
+  flagged BEFORE it runs, not after it reports. The incident: the first version of M-column's
+  recompute reimplemented "across-zero" instead of calling the family's own `subInfo`, and reported
+  69 disagreements against a signed sheet, every one manufactured by the checker. Also from that
+  pass, R44: metadata (a parameter R31 could not assert) is not one class — it is either genuinely
+  unrecoverable BY DESIGN, or a fact the family already knows and simply has not written onto the
+  item, same shape as `optionsThatParse` before `parses` existed. State which, per parameter; do
+  not report "metadata" as if it settles the question.
 - Content decisions (items, chapters, misconceptions) go through the CMS
   review pipeline; nothing skips the reviewer.
 - A script that applies reviewer decisions RE-EXPORTS the affected artefact as

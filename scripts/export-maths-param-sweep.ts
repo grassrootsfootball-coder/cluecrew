@@ -65,9 +65,12 @@ function main(): void {
     `**${disagree.length} disagreeing with the signed sheet**\n\n` +
     `| family | tiers | declared | asserted | metadata only | verdict |\n|---|---|---|---|---|---|\n` +
     rows.map((r) => `| \`${r.id}\` | ${r.tiers.join(',')} | ${r.declared.join(', ') || '—'} | ${r.asserted.join(', ') || '—'} | ${r.metadataOnly.join(', ') || '—'} | ${r.verdict} |`).join('\n') +
-    `\n\n**"Metadata only"** means the parameter is not recomputable from the emitted item, so by\n` +
-    `annie's test it is not a promise about the item and belongs off the sheet. Named per family\n` +
-    `rather than dropped silently — the naming is the judgement.\n`;
+    `\n\n**"Metadata only"** means this run's recompute does not assert the parameter — it is not\n` +
+    `currently a promise about the item. That is NOT the same as settled (R44): the gap may be a\n` +
+    `genuine design limit (class A) or an open threading gap the family already has the data for\n` +
+    `(class B, \`optionsThatParse\`'s shape before \`parses\` existed). Run \`pnpm export:metadata-\n` +
+    `params\` for the per-parameter class and reason — this table only reports which; it does not\n` +
+    `say why.\n`;
 
   mkdirSync(OUT_DIR, { recursive: true });
   const base = stampedName(FAMILY, stamp.sourceHash, '').replace(/\.$/, '');
