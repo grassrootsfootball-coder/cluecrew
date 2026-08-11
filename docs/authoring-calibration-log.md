@@ -2290,10 +2290,27 @@ running directly against `COMMA_BANK` the way `export-param-sweep.ts` runs again
 functions rather than the database — independently actionable ahead of Layer 0, unlike the
 `composeMockPaper` wiring itself.
 
-**Recommendation:** the Layer 1 code is not worth building until Layer 0 is decided — it would sit
-as dead code exactly as unreachable as `pairId` is today, just relocated. The pairId-cardinality
-content audit is worth building regardless of Layer 0, cheaply, since it protects the bank itself
-rather than a serving path that doesn't exist yet.
+**Built (2026-08-11, per Cowork's recommendation):** `pnpm audit:comma-pairs` (`scripts/audit-
+comma-pairs.ts`), CI-wired. Checks three fault modes, each proven to actually fire before being
+trusted — a deliberately broken copy of the bank was run through the logic for each, not just the
+clean bank once:
+
+1. **Orphans** — a `pairId` with one member. Confirmed against a stripped copy.
+2. **Overfull** — a `pairId` with three or more. Confirmed against a copy with a third sentence
+   pointed at an existing `pairId`.
+3. **Same-rung pairs** — added beyond the literal cardinality ask, flagged as an addition rather
+   than folded in silently: R13's own design note is that a mirrored pair is permitted ONLY because
+   it straddles rungs (fronted rung 0, trailing rung 1) — a same-rung pair passes cardinality
+   cleanly while failing the actual reason the repetition was allowed at all. Confirmed against a
+   copy with one half's rung retagged to match the other.
+
+Current bank: **CLEAN, 0 malformed of 3 declared.**
+
+**Layer 0 recorded as the platform decision blocking Layer 1, not as an open engineering task on
+this list.** `composeMockPaper`'s `pairId` wiring stays unbuilt. It is not missing work — it is work
+correctly withheld pending whether generated SPaG content ever gets a review-and-import pipeline at
+all. Building it now would add code with nothing to exercise it, the same unreachable state
+`pairId` is already in, just moved one file over.
 
 ## R52 — English's T4 target: 18%, provisional, range 16–20%
 *Annie, 2026-08-11, supplying the figure R48 found nobody had derived. Recorded by David.*

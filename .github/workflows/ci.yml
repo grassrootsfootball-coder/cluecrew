@@ -147,6 +147,11 @@ jobs:
       - name: Technique-key audit (whole-text-purpose T4 comprehension items)
         run: pnpm audit:technique-keys
 
+      # R51, 2026-08-11: needs no persistence path — runs against COMMA_BANK directly, the same
+      # way export-param-sweep.ts runs against generator functions rather than the database.
+      - name: Comma mirrored-pair cardinality audit
+        run: pnpm audit:comma-pairs
+
       # David's ruling 2026-08-02: a word puzzle's answer is DERIVED from its
       # own rule and counted, never asserted — the same discipline as the
       # Maths computed key. An item with more than one valid answer marks a
