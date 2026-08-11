@@ -2142,7 +2142,8 @@ instance.
 
 ## R48 — English's T4 target has no derivation; the census says so in its own words
 *David, 2026-08-11, ruling on the target's provenance before the shortfall arithmetic is trusted.
-Recorded by David.*
+Recorded by David.* **Superseded as of R52, below — a figure now exists. This entry stays as the
+record of the state before it did: true when written, not the current answer.**
 
 **Every file checked, so the negative is a finding, not a gap left open as a search:**
 
@@ -2293,3 +2294,71 @@ functions rather than the database — independently actionable ahead of Layer 0
 as dead code exactly as unreachable as `pairId` is today, just relocated. The pairId-cardinality
 content audit is worth building regardless of Layer 0, cheaply, since it protects the bank itself
 rather than a serving path that doesn't exist yet.
+
+## R52 — English's T4 target: 18%, provisional, range 16–20%
+*Annie, 2026-08-11, supplying the figure R48 found nobody had derived. Recorded by David.*
+
+**Traced, not asserted.** Two independently authored census documents cross-check to the same
+number without either citing the other:
+
+- `T4-CENSUS.md` (the locatable-span audit, four independent auditors, five passages each): Stream
+  A yields **18 shippable span items across 15 passages.**
+- `AUTHORING-BRIEF-ADDENDUM-19.md` (the whole-text-purpose census): **13 of the 15 extracts support
+  one.**
+
+`(18 + 13) / (15 × 12) = 31 / 180 = 17.22%`. That is Stream A's measured yield — the source R21's
+withdrawn 25% never had (R48) — and 18% is the round provisional figure set against it, with a
+16–20% band for the uncertainty a single stream's count carries.
+
+**The coincidence, named so it is never mistaken for corroboration:** VR's own ratified T4 is 18%
+(`batch-mix.json`, both practice and mock pools — R48). English's Stream-A-derived figure lands on
+the identical number by measuring something else entirely — real GL-format paper analysis for VR,
+a passage-craft census for English. **Two unrelated measurements landing near the same point is not
+one measurement confirming the other.** Recorded explicitly so a future reader does not read the
+match as evidence either way. Superseded for the same reason: neither VR's number nor the
+withdrawn 20%/25% platform defaults contributed anything to 18% — it stands on Stream A alone.
+
+**Two conditions before this can be FINALISED rather than provisional — both hers to check against,
+not to nudge toward:**
+
+1. **Stream B's whole-text pass, recomputed against the same contrast test — not estimated from
+   `craftNotes` structure first.** The trap is real and already visible in the corpus: Stream B's
+   `craftNotes.complication` fields are typically written in exactly the shape the two-halved-
+   contrast test looks for — `stream-b-04`'s reads *"Reuben knows he is leaving... It is never
+   stated. The evidence is behavioural: [six listed behaviours]."* That LOOKS like a ready-made
+   contrast before anyone checks whether it survives the plot-summary test, the three-separate-
+   instances test, or the half-pattern-distractor requirement — the four checks the two-halved
+   test does not, by itself, replace. Estimating Stream B's yield from how its craftNotes read is
+   the same fault R41 already named once: a plausible-looking property check standing in for the
+   family's own definition. The census itself already knows why Stream B is more T4-fertile — its
+   own note: *"every craftNotes.complication was written as 'the character believes X, the
+   evidence says Y' — T4 architecture by design."* Fertile is not the same as checked.
+
+2. **The technique-repetition cap (R49/R50) tested against 18% specifically — and not before the
+   cap and the blueprints exist together.** Her structural point, recorded rather than computed
+   here: **once the cap is enforced, one paper's achievable T4 rate is bounded by how many
+   DISTINCT techniques fall among the passages that specific paper draws from — not by the
+   district average.** A district sitting at a clean 18% can still hand one child a paper drawing
+   three passages that all reduce to the same technique cluster (Tom Sawyer / Anne / A Christmas
+   Carol are already one cluster — R49) and a different child a paper with five genuinely distinct
+   devices. The first paper's ACHIEVABLE T4 rate is capped well below 18% once the cap refuses the
+   second and third repeat; the second could legitimately run higher. **The real range — plausibly
+   10% to 25% per paper against an 18% district figure — is not computed here, on purpose:** it
+   depends on which passages a real blueprint draws from and how the technique registry actually
+   distributes once populated, neither of which exists yet (R50: the registry has zero entries
+   today). Report the ACTUAL spread once the cap and real blueprints exist together. **18% must
+   never be written down as a per-paper expectation — only a district one.**
+
+**House doctrine, hers, recorded because it applies past this one number:** a GENERATED district
+(VR, Maths, NVR) chooses its tier SHAPE as a design decision — the family's `structuralParams`,
+its number ranges, are authored to hit a target. **Comprehension's T4 supply is not that kind of
+knob.** It is a property of WHICH PASSAGES WERE COMMISSIONED, not a fixable gap in the fifteen
+extracts already acquired — Wind in the Willows and Eighty Days yield zero locatable-span T4 items
+each because their narrators gloss their own points, and no amount of drafting effort recovers a
+contrast the prose itself states outright. **The lever is commissioning future passages with the
+contrast structure specified from the start** — `T4-CENSUS.md` already names the specification:
+*"a minimum separation of ~15 numbered lines between the halves of the complication, and prohibit
+narratorial signposting of the gap."* This is flagged for **whoever curates the next passage set**,
+not as an instruction to draft harder against the current fifteen — the nineteen remaining clusters
+are drafted from what exists, per `AUTHORING-BRIEF-ADDENDUM-19.md`; this doctrine governs what gets
+commissioned after them, not what gets extracted from them now.
