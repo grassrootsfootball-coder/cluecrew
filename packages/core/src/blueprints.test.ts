@@ -242,6 +242,90 @@ describe('composeMockPaper', () => {
     // DEFAULT_TIER_SPREAD gives T3 a 0.4 weight → 4 of 10.
     expect(t3).toBe(4);
   });
+
+  // -------------------------------------------------------------------------
+  // R49 — technique-repetition capping. An open-set tag, not a linked pair
+  // (unlike the comma family's pairId): any two items sharing a technique
+  // must never land in the same paper, whether the collision is across two
+  // different type-mix slots or two picks within the SAME slot.
+  // -------------------------------------------------------------------------
+  describe('technique-repetition capping (R49)', () => {
+    const techBlueprint: Blueprint = {
+      ...draftBlueprint,
+      district: 'ENGLISH',
+      sections: [
+        {
+          instructions: 'Read each question. Choose one answer. Mark it clearly.',
+          questionCount: 2,
+          typeMix: { 'en-comp-technique': 2 },
+          minutes: 8,
+        },
+      ],
+    };
+
+    it('never draws two items sharing a techniqueKey into one paper', () => {
+      // Every candidate at the SAME tier so the tier-nearest sort cannot be the reason only one
+      // of each pair gets picked — the exclusion has to be doing the work.
+      const candidates: MockCandidateItem[] = [
+        { id: 't-anthro-1', questionTypeId: 'en-comp-technique', tier: 4, pool: 'MOCK', status: 'LIVE', techniqueKey: 'anthropomorphism-gap' },
+        { id: 't-anthro-2', questionTypeId: 'en-comp-technique', tier: 4, pool: 'MOCK', status: 'LIVE', techniqueKey: 'anthropomorphism-gap' },
+        { id: 't-blindspot-1', questionTypeId: 'en-comp-technique', tier: 4, pool: 'MOCK', status: 'LIVE', techniqueKey: 'character-blind-spot' },
+      ];
+      const composed = composeMockPaper({ blueprint: techBlueprint, candidates, burnedItemIds: new Set(), seed: 'child-1:0' });
+      if (!composed.ok) throw new Error('expected composition to succeed');
+      const drawn = composed.sections[0]!.itemIds;
+      expect(drawn).toHaveLength(2);
+      // The two anthropomorphism-gap items can never BOTH appear.
+      expect(drawn.includes('t-anthro-1') && drawn.includes('t-anthro-2')).toBe(false);
+      // With exactly one non-colliding item per technique available, the draw must be one of each.
+      expect(new Set(drawn.map((id) => (id.startsWith('t-anthro') ? 'anthropomorphism-gap' : 'character-blind-spot'))).size).toBe(2);
+    });
+
+    it('technique exhaustion is a loud shortfall, never a silent same-technique substitution', () => {
+      // Two candidates, but they share a technique — a paper needing 2 distinct items cannot be
+      // built honestly from this pool. Composition must refuse, not quietly serve the collision.
+      const candidates: MockCandidateItem[] = [
+        { id: 't-a', questionTypeId: 'en-comp-technique', tier: 4, pool: 'MOCK', status: 'LIVE', techniqueKey: 'register-mismatch' },
+        { id: 't-b', questionTypeId: 'en-comp-technique', tier: 4, pool: 'MOCK', status: 'LIVE', techniqueKey: 'register-mismatch' },
+      ];
+      const composed = composeMockPaper({ blueprint: techBlueprint, candidates, burnedItemIds: new Set(), seed: 'child-1:0' });
+      expect(composed.ok).toBe(false);
+      if (composed.ok) return;
+      expect(composed.shortfalls).toEqual([{ sectionIndex: 0, questionTypeId: 'en-comp-technique', needed: 2, available: 2 }]);
+    });
+
+    it('a technique already used in an earlier section excludes a match in a later one', () => {
+      const twoSectionBlueprint: Blueprint = {
+        ...techBlueprint,
+        sections: [
+          { instructions: 'Read each question. Choose one answer. Mark it clearly.', questionCount: 1, typeMix: { 'en-comp-technique': 1 }, minutes: 4 },
+          { instructions: 'Same rules as before. Work steadily to the end of the section.', questionCount: 1, typeMix: { 'en-comp-technique': 1 }, minutes: 4 },
+        ],
+      };
+      const candidates: MockCandidateItem[] = [
+        { id: 't-1', questionTypeId: 'en-comp-technique', tier: 4, pool: 'MOCK', status: 'LIVE', techniqueKey: 'register-mismatch' },
+        { id: 't-2', questionTypeId: 'en-comp-technique', tier: 4, pool: 'MOCK', status: 'LIVE', techniqueKey: 'register-mismatch' },
+      ];
+      const composed = composeMockPaper({ blueprint: twoSectionBlueprint, candidates, burnedItemIds: new Set(), seed: 'child-1:0' });
+      // The first section takes one register-mismatch item; the second section's only remaining
+      // candidate collides, so it comes up short even though an item of the right TYPE exists.
+      expect(composed.ok).toBe(false);
+      if (composed.ok) return;
+      expect(composed.shortfalls).toEqual([{ sectionIndex: 1, questionTypeId: 'en-comp-technique', needed: 1, available: 0 }]);
+    });
+
+    it('items with no techniqueKey are never constrained by it', () => {
+      // The overwhelming majority of items (every non-whole-text-purpose shape, every other
+      // district): techniqueKey is absent, and absence must never collide with itself.
+      const candidates: MockCandidateItem[] = [
+        { id: 'plain-1', questionTypeId: 'en-comp-technique', tier: 4, pool: 'MOCK', status: 'LIVE' },
+        { id: 'plain-2', questionTypeId: 'en-comp-technique', tier: 4, pool: 'MOCK', status: 'LIVE' },
+      ];
+      const composed = composeMockPaper({ blueprint: techBlueprint, candidates, burnedItemIds: new Set(), seed: 'child-1:0' });
+      if (!composed.ok) throw new Error('expected composition to succeed — no techniqueKey means nothing to collide on');
+      expect(composed.sections[0]!.itemIds).toHaveLength(2);
+    });
+  });
 });
 
 // ---------------------------------------------------------------------------

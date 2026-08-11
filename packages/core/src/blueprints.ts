@@ -111,6 +111,17 @@ export function isBlueprintVerified(blueprint: Blueprint): boolean {
 // Assembly
 // ---------------------------------------------------------------------------
 
+/**
+ * Reads `stem.techniqueKey` the same defensive way `passageNames`/`testedTokens` are read
+ * elsewhere (item-content-gate.ts) — a loose JSON field, not a strict schema, matching how every
+ * other R23-class declared field on `stem` is handled. One shared function so the DB query that
+ * feeds `composeMockPaper` and any future audit script read the SAME field the SAME way.
+ */
+export function techniqueKeyOf(stem: unknown): string | undefined {
+  const value = (stem as { techniqueKey?: unknown } | null | undefined)?.techniqueKey;
+  return typeof value === 'string' && value.trim() ? value : undefined;
+}
+
 /** What assembly needs to know about an item. Everything else stays behind. */
 export interface MockCandidateItem {
   id: string;
@@ -118,6 +129,18 @@ export interface MockCandidateItem {
   tier: number;
   pool: 'PRACTICE' | 'MOCK';
   status: string;
+  /**
+   * R49 — a whole-text-purpose T4 comprehension item's DEVICE (`stem.techniqueKey`, declared the
+   * same way `passageNames`/`testedTokens` are — an author-set string, not derived). SINGLE value,
+   * not a set: the two-halved-contrast test (`T4-PURPOSE-BOUNDING-RULE.md` §3) produces exactly one
+   * key stated as one contrast per item by construction, and the census names technique CLUSTERS —
+   * every item the census describes belongs to exactly one. A set would model a case the corpus
+   * gives no evidence for.
+   *
+   * Absent on every other item shape (locatable-span T4, T1–T3, every non-English district) — those
+   * have no recurring device to collide on, so there is nothing to exclude against.
+   */
+  techniqueKey?: string;
 }
 
 export interface ComposedPaper {
@@ -240,6 +263,12 @@ export function composeMockPaper(input: {
   const shortfalls: CompositionShortfall[] = [];
   const sections: Array<{ itemIds: string[] }> = [];
   const takenThisPaper = new Set<string>();
+  // R49 — whole-paper, not per-section: two items sharing a technique must never co-occur even
+  // across different sections. Filtered into `available` at the same point as `takenThisPaper`, so
+  // the shortfall check below still guarantees the per-tier draw loop always has enough — a
+  // technique collision that would starve a slot is reported as a shortfall, the same loud failure
+  // as running out of items outright, never a silent same-technique substitution.
+  const techniquesThisPaper = new Set<string>();
 
   blueprint.sections.forEach((section, sectionIndex) => {
     const itemIds: string[] = [];
@@ -249,7 +278,9 @@ export function composeMockPaper(input: {
     }
     for (const [questionTypeId, count] of Object.entries(section.typeMix)) {
       const available = (byType.get(questionTypeId) ?? []).filter(
-        (item) => !takenThisPaper.has(item.id),
+        (item) =>
+          !takenThisPaper.has(item.id) &&
+          !(item.techniqueKey && techniquesThisPaper.has(item.techniqueKey)),
       );
       if (available.length < count) {
         shortfalls.push({ sectionIndex, questionTypeId, needed: count, available: available.length });
@@ -263,14 +294,32 @@ export function composeMockPaper(input: {
         : DEFAULT_TIER_SPREAD;
       const targets = tierTargets(count, spreadRecord);
       const remaining = [...available];
+      let addedForThisType = 0;
       for (const [tier, tierCount] of targets) {
         for (let picked = 0; picked < tierCount; picked++) {
           remaining.sort((a, b) => Math.abs(a.tier - tier) - Math.abs(b.tier - tier));
           const item = remaining.shift();
-          if (!item) break; // count guard above makes this unreachable
+          // R49 — REACHABLE now, unlike the single-constraint version this replaced: the initial
+          // `available.length < count` gate no longer guarantees enough picks on its own, because a
+          // technique match found WITHIN this same type-mix slot (below) can exhaust `remaining`
+          // before every targeted tier is filled. Falls through to the shortfall check after the
+          // loop rather than silently serving fewer than the section asked for.
+          if (!item) break;
           itemIds.push(item.id);
           takenThisPaper.add(item.id);
+          addedForThisType += 1;
+          if (item.techniqueKey) {
+            techniquesThisPaper.add(item.techniqueKey);
+            // A second pick in THIS SAME slot (a section asking for >1 of this type) must not
+            // collide either — the outer `available` filter only ran once, before this loop started.
+            for (let i = remaining.length - 1; i >= 0; i -= 1) {
+              if (remaining[i]!.techniqueKey === item.techniqueKey) remaining.splice(i, 1);
+            }
+          }
         }
+      }
+      if (addedForThisType < count) {
+        shortfalls.push({ sectionIndex, questionTypeId, needed: count, available: available.length });
       }
     }
     sections.push({ itemIds });

@@ -2199,3 +2199,51 @@ comma pair (met together, the pattern becomes a giveaway rather than a test of w
 find it unprompted). Unlike the comma pair, this is not a linked two-id constraint — it is a
 technique TAG shared across an open set of items across passages, so the serving layer needs a
 technique-key field to constrain against, not a pair id.
+
+## R50 — Technique-repetition capping, built
+*David, 2026-08-11, scoping and building R49's field. Recorded by David.*
+
+**Cardinality: a single string, not a set.** The two-halved-contrast test (`T4-PURPOSE-BOUNDING-
+RULE.md` §3) produces exactly one key stated as one contrast per item, by construction, and the
+census names technique CLUSTERS — every item it describes belongs to exactly one device. A set
+would model a case the corpus gives no evidence for; building it now would be designing for a
+hypothetical, which this build avoids elsewhere on purpose.
+
+**Where it lives:** `stem.techniqueKey`, read the same defensive way `passageNames`/`testedTokens`
+already are (`techniqueKeyOf` in `blueprints.ts`, one function so the DB query and any future audit
+read the same field the same way) — no strict schema, matching the existing convention for this
+class of declared field.
+
+**Presence, derived not asserted:** an item is a whole-text-purpose candidate iff
+`difficultyTier === 4` and it carries no `lineRefs` — exactly the bounding rule's own definition
+("no line reference"). No redundant "shape" field was added to encode what's already inferable.
+
+**A scope bug the audit script's own first run caught, not inspection — recorded because it is the
+same shape of mistake as R41's M-column false positive.** The first version filtered candidates on
+`difficultyTier === 4` alone and matched 81 items, nearly all VR (`gen-vr-09-letter-series-08`,
+`bank-vr-04-closest-meaning-32`…). `lineRefs` is an ENGLISH-only stem field, so "T4 with no
+lineRefs" was true of every T4 item in every OTHER district too — not because they're whole-text-
+purpose, but because they have no `lineRefs` field to be absent in the first place. Fixed by scoping
+to `questionTypeId.startsWith('en-comp-')` before the lineRefs test. **Correctly scoped, the real
+count is 1**: `ENG-001-WIW-22`, DRAFT, no techniqueKey — the first real candidate, not yet resolved,
+because assigning it a value is an authoring judgement (which device the item tests), not something
+this pass should invent.
+
+**Mock-assembly enforcement, tested against three shapes:**
+1. Two items sharing a technique never both land in one paper, including two picks within the SAME
+   type-mix slot (the `remaining` list is pruned mid-draw, not just filtered once before it starts).
+2. Technique exhaustion is a loud SHORTFALL — the same alert path as running out of items outright —
+   never a silent same-technique substitution. This required converting a genuinely unreachable
+   `if (!item) break` into a reachable one: adding the constraint mid-loop meant the outer
+   `available.length < count` gate no longer guaranteed enough picks on its own.
+3. A technique used in an EARLIER section excludes a match in a LATER one — the exclusion set is
+   whole-paper, matching how `takenThisPaper` already works, not per-section.
+
+**Registry, not an enum.** `pnpm audit:technique-keys` lists every distinct key in use for a human
+to eyeball for near-duplicate spellings of the same device — no fixed list, because only 3 of the
+census's 9–10 distinct techniques are named so far and a closed enum would reject genuine new ones
+as the nineteen clusters get authored. Same division as R21's tag-scope finding: the machine checks
+presence and format, the reviewer checks whether two keys mean the same thing.
+
+**What this does NOT do:** assign a techniqueKey to any existing item, including `ENG-001-WIW-22`.
+The mechanism is built and tested; the vocabulary gets populated as items are authored.

@@ -20,6 +20,7 @@ import {
   reachableRung,
   childMockResult,
   composeMockPaper,
+  techniqueKeyOf,
   isBlueprintVerified,
   nextMockAllowedAt,
   scoreSitting,
@@ -197,7 +198,7 @@ export async function scheduleMock(
   ];
   const candidates = await prisma.item.findMany({
     where: { questionTypeId: { in: typeIds } },
-    select: { id: true, questionTypeId: true, difficultyTier: true, pool: true, status: true },
+    select: { id: true, questionTypeId: true, difficultyTier: true, pool: true, status: true, stem: true },
   });
 
   const composed = composeMockPaper({
@@ -208,6 +209,9 @@ export async function scheduleMock(
       tier: item.difficultyTier,
       pool: item.pool,
       status: item.status,
+      // R49 — only carries a value on whole-text-purpose T4 comprehension items; absent everywhere
+      // else, which composeMockPaper treats as "nothing to collide on."
+      techniqueKey: techniqueKeyOf(item.stem),
     })),
     burnedItemIds: await burnedFor(childId),
     seed: `${childId}:${sittings.length}`,
