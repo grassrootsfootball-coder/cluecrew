@@ -2247,3 +2247,49 @@ presence and format, the reviewer checks whether two keys mean the same thing.
 
 **What this does NOT do:** assign a techniqueKey to any existing item, including `ENG-001-WIW-22`.
 The mechanism is built and tested; the vocabulary gets populated as items are authored.
+
+## R51 — The comma linked-pair gap, scoped
+*David, 2026-08-11. Flagged twice (R19, R40) without a pass; scoped now so it is a decision rather
+than a third drift.*
+
+**The finding that changes the scope: it isn't gated on `composeMockPaper` at all.** Checked fresh
+rather than assumed — `authoredBy` across every row in `Item` is one of `ai-draft:claude-fable-5`,
+`ai-draft:cowork-vocab-banks`, `ai-draft:cowork-okafor-v1`, `seed`. None is generator output, and
+`comma-questionType` items number **zero**. No script calls `generateSpagSample`/`assembleSpagItem`
+to persist anything — the only callers are sample-sheet and audit exports (build-time, in-memory).
+**This is R30/R40's finding confirmed again, specifically for comma:** the whole SPaG district,
+comma included, has no path into `Item` at all. `pairId`-in-`composeMockPaper` is unreachable code
+today, not a live risk — there is nothing in the pool for it to fail to protect.
+
+**So "closing the gap" is two separable decisions, not one:**
+
+**Layer 0 — does generated SPaG content get a persistence path at all, and when?** Unscoped here on
+purpose: it is a platform decision (build a review-and-import pipeline for generator output, the
+way `ENG-004`'s pilot content has one), not a code task this entry can size. Nothing below matters
+until this is decided.
+
+**Layer 1 — IF Layer 0 happens, closing `pairId` in `composeMockPaper` is cheap, and mechanically
+near-identical to R50's technique-key pass:**
+- `stem.pairId` (single string), read the same defensive way as `techniqueKey` — one shared function.
+- `MockCandidateItem.pairId?: string`, wired through the same DB-query pattern R50 used.
+- The exclusion logic in `composeMockPaper` is THE SAME CODE SHAPE as the technique Set — filter
+  `available` against already-used group values, prune `remaining` mid-draw, fall through to a
+  shortfall (never a silent substitution) if exhausted. **The "exact-pair vs open-set-tag" distinction
+  is a fact about the DATA, not about the algorithm that enforces it** — a Set of "values already
+  used this paper" excludes correctly whether the set of members sharing a value is 2 or 20.
+- Tests mirroring R50's four, minus the "no-key means unconstrained" case (comma items without a
+  `pairId` are simply most of the bank, same as most items have no `techniqueKey`).
+
+**Genuinely different from technique-key, and NOT reusable:** a CONTENT audit verifying every
+`pairId` has exactly two members (an orphan or a triple would be a bank error, not a serving one).
+Checked today: **3 pairs in `COMMA_BANK`, all size-2, no orphans** — clean now, but nothing
+structural keeps it that way as the bank grows, the same "true by luck, not by rule" shape this
+whole pass has been hunting. **This audit needs no persistence path and could be built today**,
+running directly against `COMMA_BANK` the way `export-param-sweep.ts` runs against generator
+functions rather than the database — independently actionable ahead of Layer 0, unlike the
+`composeMockPaper` wiring itself.
+
+**Recommendation:** the Layer 1 code is not worth building until Layer 0 is decided — it would sit
+as dead code exactly as unreachable as `pairId` is today, just relocated. The pairId-cardinality
+content audit is worth building regardless of Layer 0, cheaply, since it protects the bank itself
+rather than a serving path that doesn't exist yet.
