@@ -33,7 +33,15 @@ async function main(): Promise<void> {
   const serving: MathsFailure[] = [];
   const draft: MathsFailure[] = [];
   const reports: MathsFailure[] = [];
+  /**
+   * The SERVING population, counted separately from `items.length`. The pass line
+   * claims that everything serving passes, and `items.length` cannot stand in for
+   * that: a status rename leaves it large while nothing is LIVE, and the gate would
+   * report success having screened no live item at all.
+   */
+  let liveItems = 0;
   for (const item of items) {
+    if (item.status === 'LIVE') liveItems += 1;
     const stem = (item.stem ?? {}) as Record<string, unknown>;
     const key = item.options.find((o) => o.isCorrect);
     const found = checkMathsItem({
@@ -51,7 +59,9 @@ async function main(): Promise<void> {
     }
   }
 
-  console.log(`Derivable maths distractor gate: ${items.length} MATHS item(s) checked.`);
+  console.log(
+    `Derivable maths distractor gate: ${items.length} MATHS item(s) read, ${liveItems} of them LIVE.`,
+  );
 
   // --- Executor coverage over the approved derivable misconceptions --------
   const active = await prisma.misconception.findMany({ where: { district: 'MATHS', status: 'ACTIVE' }, select: { id: true } });
@@ -76,7 +86,12 @@ async function main(): Promise<void> {
     await prisma.$disconnect();
     process.exit(1);
   }
-  console.log('\nEverything serving passes the derivable maths distractor gate.');
+  console.log(
+    `\nAll ${liveItems} LIVE maths item(s) pass the derivable distractor gate.` +
+      (liveItems === 0
+        ? ' NO MATHS ITEM IS LIVE — this gate screened nothing, so it has asserted nothing.'
+        : ''),
+  );
   await prisma.$disconnect();
 }
 

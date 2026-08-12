@@ -37,7 +37,18 @@ async function main(): Promise<void> {
     for (const failure of failures) console.error(`  ${failure}`);
     process.exit(1);
   }
-  console.log(`Solution verification passed (${items.length} MATHS items checked).`);
+  // A printed count was not enough on its own: this gate has reported "0 MATHS items
+  // checked" in every CI run since it was written, and the zero read as a pass because
+  // nothing drew attention to it. No path anywhere creates a MATHS questionType, so the
+  // district has never had a persisted item to verify (audit, 2026-08-12).
+  console.log(
+    `Solution verification passed (${items.length} MATHS items checked).` +
+      (items.length === 0
+        ? '\n  ⚠ NO MATHS ITEM EXISTS IN THE DATABASE — this gate verified nothing. The maths\n' +
+          '    district has generators but no persistence path, so there is nothing here to\n' +
+          '    check. This is a report on the gap, not a pass on the content.'
+        : ''),
+  );
   await prisma.$disconnect();
 }
 

@@ -467,6 +467,26 @@ function scan(
   return violations;
 }
 
+/**
+ * Every declared scope must resolve to at least one file. `collectFiles` returns []
+ * for a path that is not there, so a moved or renamed scope used to yield zero files,
+ * zero violations, and a printed "Banned-vocabulary scan passed" — the scanner
+ * reporting success on a tree it never read (audit, 2026-08-12).
+ */
+const ALL_SCOPES = [...new Set([...EVERYWHERE_SCOPE, ...CHILD_FACING_SCOPE, ...STYLE_SCOPE])];
+const scopeSizes = new Map(ALL_SCOPES.map((scope) => [scope, collectFiles(join(ROOT, scope)).length]));
+const emptyScopes = ALL_SCOPES.filter((scope) => scopeSizes.get(scope) === 0);
+if (emptyScopes.length > 0) {
+  console.error('Banned-vocabulary scan ABORTED: these declared scopes matched no files —\n');
+  for (const scope of emptyScopes) console.error(`  ${scope}`);
+  console.error(
+    '\nA scope that resolves to nothing is scanned clean every run. Either the path moved\n' +
+      '(update the scope) or the content did (say so deliberately). Do not delete the scope.',
+  );
+  process.exit(1);
+}
+const scannedFiles = new Set(ALL_SCOPES.flatMap((scope) => collectFiles(join(ROOT, scope)))).size;
+
 const violations = [
   ...scan(EVERYWHERE_SCOPE, BANNED_EVERYWHERE, 'banned everywhere', { excludePaths: SOURCE_TEXT_PATHS }),
   ...scan(CHILD_FACING_SCOPE, BANNED_CHILD_FACING, 'banned child-facing', {
@@ -516,4 +536,7 @@ if (violations.length > 0) {
   for (const violation of violations) console.error(`  ${violation}\n`);
   process.exit(1);
 }
-console.log('Banned-vocabulary scan passed (manifesto D1/L-laws + Addendum A §1.3).');
+console.log(
+  `Banned-vocabulary scan passed over ${scannedFiles} file(s) across ${ALL_SCOPES.length} scopes ` +
+    '(manifesto D1/L-laws + Addendum A §1.3).',
+);

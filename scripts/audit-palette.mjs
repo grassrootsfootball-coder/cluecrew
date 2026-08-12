@@ -25,7 +25,15 @@ if (Object.keys(color).length !== 8) {
   process.exit(1);
 }
 
-/** The role §6 assigns each token. */
+/**
+ * The role §6 assigns each token. This is a POLICY map, not a copy of the palette —
+ * the hexes come from tokens.ts above and are never restated here. But its KEYS
+ * duplicate the token names, so the two can drift, and the assertion below is what
+ * keeps that drift from being diagnosed by stack trace. A renamed token used to
+ * reach `contrast(color.ink, undefined)` and die inside `rgb()` with a TypeError
+ * pointing at .slice — a real failure, but one that names neither the cause nor
+ * the fix (audit, 2026-08-12).
+ */
 const ROLE = {
   ink: 'text',
   cream: 'background',
@@ -36,6 +44,23 @@ const ROLE = {
   'maths-green': 'accent',
   'english-rose': 'accent',
 };
+
+const tokenNames = new Set(Object.keys(color));
+const roleNames = new Set(Object.keys(ROLE));
+const unroled = [...tokenNames].filter((n) => !roleNames.has(n));
+const orphaned = [...roleNames].filter((n) => !tokenNames.has(n));
+if (unroled.length > 0 || orphaned.length > 0) {
+  console.error('Palette audit ABORTED: tokens.ts and the §6 ROLE map name different tokens.');
+  if (unroled.length > 0) {
+    console.error(`  in tokens.ts but given no role: ${unroled.join(', ')}`);
+    console.error('  → §6 gives every token exactly one job. Add its role to ROLE in this file.');
+  }
+  if (orphaned.length > 0) {
+    console.error(`  given a role but not in tokens.ts: ${orphaned.join(', ')}`);
+    console.error('  → renamed or removed downstream. Update ROLE to match tokens.ts.');
+  }
+  process.exit(1);
+}
 
 const rgb = (hex) => [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16));
 const asHex = ([r, g, b]) =>
@@ -126,6 +151,7 @@ console.log('\nreport only — district accents under colour vision deficiency.'
 console.log('§6 answers this with "colour is never the only carrier of meaning",');
 console.log('which no script can check. The numbers are here to stay honest:\n');
 const districts = names.filter((n) => ROLE[n] === 'accent');
+console.log(`  (${districts.length} accent tokens compared: ${districts.join(', ')})\n`);
 for (const type of ['protanopia', 'deuteranopia', 'tritanopia']) {
   const crowded = [];
   for (let i = 0; i < districts.length; i++) {
@@ -135,7 +161,7 @@ for (const type of ['protanopia', 'deuteranopia', 'tritanopia']) {
     }
   }
   console.log(
-    `  ${type.padEnd(14)} ${crowded.length ? 'crowds: ' + crowded.join(', ') : 'all four stay distinct'}`,
+    `  ${type.padEnd(14)} ${crowded.length ? 'crowds: ' + crowded.join(', ') : `all ${districts.length} stay distinct`}`,
   );
 }
 

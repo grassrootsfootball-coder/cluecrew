@@ -45,6 +45,14 @@ interface Bucket {
 }
 const failures: Bucket = { serving: [], draft: [], warn: [] };
 const counted = { words: 0, items: 0, misconceptions: 0, cases: 0 };
+/**
+ * The pass line makes a claim about the SERVING subset, so that subset's SIZE has to
+ * be visible too. The totals above do not stand in for it: a status rename or a
+ * broken filter leaves them large while the serving population drops to zero, and
+ * the gate would print "everything currently serving passes" having screened nothing.
+ * That is the fail-open shape the import doors were fixed for (R57), one level up.
+ */
+const screened = { words: 0, items: 0, misconceptions: 0, cases: 0 };
 
 function record(isServing: boolean, found: ContentFailure[]): void {
   for (const failure of found) {
@@ -58,7 +66,9 @@ async function main(): Promise<void> {
   // --- Word cards ---------------------------------------------------------
   for (const word of await prisma.word.findMany()) {
     counted.words += 1;
-    record(word.status === 'LIVE', checkWordCard(word));
+    const live = word.status === 'LIVE';
+    if (live) screened.words += 1;
+    record(live, checkWordCard(word));
   }
 
   // --- Items: stems and options, by role ----------------------------------
@@ -66,6 +76,7 @@ async function main(): Promise<void> {
   for (const item of items) {
     counted.items += 1;
     const serving = item.status === 'LIVE';
+    if (serving) screened.items += 1;
     // The ONE shared item gate (packages/core) — the same call the publish door
     // and the import gates make, so this sweep can never read a field a door
     // skips (the vr-06 stem.sentence leak).
@@ -78,8 +89,10 @@ async function main(): Promise<void> {
   // --- Misconception child hints ------------------------------------------
   for (const entry of await prisma.misconception.findMany()) {
     counted.misconceptions += 1;
+    const active = entry.status === 'ACTIVE';
+    if (active) screened.misconceptions += 1;
     record(
-      entry.status === 'ACTIVE',
+      active,
       // A misconception may carry tested tokens — vocabulary its hint is ABOUT
       // (isosceles/equilateral), exempt from the long-word ceiling on that hint.
       checkChildFacingText({ role: 'hint', label: `misconception:${entry.id} childHint`, text: entry.childHint, testedTokens: entry.testedTokens ?? [] }),
@@ -91,6 +104,7 @@ async function main(): Promise<void> {
     counted.cases += 1;
     const intro = (kase.narrativeIntro as { text?: string } | null)?.text;
     if (!intro) continue;
+    screened.cases += 1;
     record(true, checkChildFacingText({ role: 'narrative', label: `case:${kase.id} narrative`, text: intro }));
   }
 
@@ -102,7 +116,11 @@ async function main(): Promise<void> {
 
   console.log(
     `Database content gate: ${counted.words} words · ${counted.items} items · ` +
-      `${counted.misconceptions} misconceptions · ${counted.cases} cases screened.`,
+      `${counted.misconceptions} misconceptions · ${counted.cases} cases read.`,
+  );
+  console.log(
+    `  of those, SERVING: ${screened.words} LIVE words · ${screened.items} LIVE items · ` +
+      `${screened.misconceptions} ACTIVE misconceptions · ${screened.cases} case narratives.`,
   );
 
   if (failures.warn.length > 0) {
@@ -138,7 +156,14 @@ async function main(): Promise<void> {
     process.exit(1);
   }
 
-  console.log('\nEverything currently serving passes the child-facing gates.');
+  const servingTotal =
+    screened.words + screened.items + screened.misconceptions + screened.cases;
+  console.log(
+    `\nAll ${servingTotal} serving row(s) pass the child-facing gates.` +
+      (servingTotal === 0
+        ? ' NOTHING IS SERVING — this gate screened no live content, so it has asserted nothing.'
+        : ''),
+  );
   await prisma.$disconnect();
 }
 
