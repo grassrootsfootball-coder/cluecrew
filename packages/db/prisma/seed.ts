@@ -331,6 +331,78 @@ async function seedWords(): Promise<void> {
   }
 }
 
+/**
+ * THE E2E FIXTURE SET — live rows that exist so no spec has to promote real content.
+ *
+ * The incident: the story e2e needed a LIVE word to assert a tappable word against, reached for
+ * `brave` — a real vault card — and its teardown demoted it. It was caught because someone noticed
+ * a LIVE-word count move, which is not a detection mechanism (David, 2026-08-12).
+ *
+ * A spec needing live data now has live data of its own. These rows are:
+ *   PERMANENT   — seeded, never created or deleted by a spec, so nothing has to clean them up.
+ *   READ-ONLY   — specs assert against them and must never mutate them. `check:e2e-residue`
+ *                 fails if a fixture's status or reviewer moves.
+ *   HONEST      — they pass the same gates as real content, because they ARE live content: a
+ *                 LIVE word is screened by check:db-content and a LIVE item by
+ *                 check:option-positions. A fixture exempt from the gates would be a second,
+ *                 unscreened class of live row, which is the thing the DB gate exists to stop.
+ *
+ * The `zz-e2e-` id prefix sorts them last and marks them unmistakably. It appears ONLY in ids —
+ * never in a headword, definition or stem, because those are child-facing and an id there is an
+ * internal-id leak the scanner would rightly refuse.
+ */
+const E2E_FIXTURE_WORD_ID = 'zz-e2e-fixture-word';
+const E2E_FIXTURE_ITEM_ID = 'zz-e2e-fixture-item';
+
+async function seedE2eFixtures(): Promise<void> {
+  await prisma.word.upsert({
+    where: { id: E2E_FIXTURE_WORD_ID },
+    create: {
+      id: E2E_FIXTURE_WORD_ID,
+      headword: 'lantern',
+      definitionChild: 'A lamp with a handle that you can carry.',
+      sentence: 'She held the lantern up so we could see the path.',
+      tier: 2,
+      status: 'LIVE',
+      authoredBy: 'seed',
+      // `word_live_needs_reviewer` allows authoredBy = 'seed', but naming a reviewer is the
+      // honest form: this row is LIVE on purpose, not LIVE through an exemption.
+      reviewedBy: 'human:fixtures@cluecrew.test',
+    },
+    update: { status: 'LIVE', reviewedBy: 'human:fixtures@cluecrew.test' },
+  });
+
+  await prisma.item.upsert({
+    where: { id: E2E_FIXTURE_ITEM_ID },
+    create: {
+      id: E2E_FIXTURE_ITEM_ID,
+      questionTypeId: 'vr-04-closest-meaning',
+      difficultyTier: 2,
+      stem: { prompt: 'Which word is closest in meaning to brave?' },
+      explanation: {},
+      status: 'LIVE',
+      authoredBy: 'seed',
+      reviewedBy: 'human:fixtures@cluecrew.test',
+    },
+    update: { status: 'LIVE' },
+  });
+  // Key first in storage, matching every other bank — check:option-positions asserts storage
+  // uniformity per bank, so a fixture that broke the convention would fail a real gate.
+  const options = [
+    { id: `${E2E_FIXTURE_ITEM_ID}-a`, content: { value: 'courageous' }, isCorrect: true },
+    { id: `${E2E_FIXTURE_ITEM_ID}-b`, content: { value: 'cautious' }, isCorrect: false },
+    { id: `${E2E_FIXTURE_ITEM_ID}-c`, content: { value: 'curious' }, isCorrect: false },
+    { id: `${E2E_FIXTURE_ITEM_ID}-d`, content: { value: 'clumsy' }, isCorrect: false },
+  ];
+  for (const option of options) {
+    await prisma.itemOption.upsert({
+      where: { id: option.id },
+      create: { ...option, itemId: E2E_FIXTURE_ITEM_ID },
+      update: { content: option.content, isCorrect: option.isCorrect },
+    });
+  }
+}
+
 async function seedCases(): Promise<void> {
   // Read the directory rather than a hardcoded list: a new authored case
   // should appear by dropping the file in, not by also editing the seed.
@@ -588,6 +660,7 @@ async function main(): Promise<void> {
   await seedMisconceptions();
   await seedItems();
   await seedWords();
+  await seedE2eFixtures();
   await seedCases();
   await seedRegions();
   await seedStaff();

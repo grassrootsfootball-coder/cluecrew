@@ -18,84 +18,27 @@
 import { expect, test } from '@playwright/test';
 import { prisma } from '@cluecrew/db';
 import { cleanupFixtures, createFamily, enterCrewMode, parentApi } from './fixtures';
+import { assertServerEnv } from '../playwright.story.config';
 
-/** Matches `clueTap.itemId` in e2e/fixtures/chapters/s1-ch1.json. */
-const CLUE_ITEM = 'e2e-story-clue-item';
-/** Matches the `[[brave]]` marker and `seededWordIds` in the same fixture. */
-const SEEDED_WORD = 'brave';
-
-/** The word's status before this spec touched it, so teardown RESTORES rather than assumes. */
-let priorWord: { status: 'DRAFT' | 'LIVE' | 'RETIRED'; reviewedBy: string | null } | null = null;
+/**
+ * THE SEEDED FIXTURES — read, never written. Both rows are created by the seed
+ * (`seedE2eFixtures`), live permanently, and are asserted against by id. This spec creates
+ * nothing and mutates nothing, which is the point of their existing: it previously reached for
+ * `brave`, a real vault card, and its teardown demoted live content. Caught only because someone
+ * noticed a LIVE-word count move (David, 2026-08-12).
+ */
+const CLUE_ITEM = 'zz-e2e-fixture-item';
+/** The fixture word's HEADWORD — what `[[lantern]]` in the chapter body resolves against. */
+const SEEDED_WORD = 'lantern';
 
 const CORRECT = 'courageous';
 const DISTRACTOR = 'cautious';
 
+test.afterAll(cleanupFixtures);
+
+/** Same reason as the gated spec: prove the adopted server is the one this suite configured. */
 test.beforeAll(async () => {
-  // A LIVE item for the clue-tap. vr-04-closest-meaning is created by the seed, so the
-  // questionType exists in CI; the item itself is ours.
-  await prisma.itemOption.deleteMany({ where: { itemId: CLUE_ITEM } });
-  await prisma.item.deleteMany({ where: { id: CLUE_ITEM } });
-  await prisma.item.create({
-    data: {
-      id: CLUE_ITEM,
-      questionTypeId: 'vr-04-closest-meaning',
-      difficultyTier: 2,
-      stem: { prompt: 'Which word is closest in meaning to brave?' },
-      explanation: {},
-      status: 'LIVE',
-      // `human:e2e-` is not decoration: cleanupFixtures sweeps Item debris BY THIS PREFIX, so a
-      // run that crashes before afterAll still gets collected. An id-scoped delete alone would
-      // leave a LIVE item behind — the failure that once left all 44 LIVE dev items as one test
-      // stem (see fixtures.ts).
-      authoredBy: 'human:e2e-story-lit@cluecrew.test',
-      options: {
-        create: [
-          { content: { value: CORRECT }, isCorrect: true },
-          { content: { value: DISTRACTOR }, isCorrect: false },
-        ],
-      },
-    },
-  });
-
-  // The reader only renders a WordTap for a word that is LIVE in the Vault. `reviewedBy` is
-  // not decoration: the DB enforces `word_live_needs_reviewer` (the Word review door), so a LIVE
-  // word without a reviewer is rejected at the database. The fixture satisfies the real rule
-  // rather than working around it.
-  const before = await prisma.word.findUnique({
-    where: { id: SEEDED_WORD },
-    select: { status: true, reviewedBy: true },
-  });
-  priorWord = before ?? null;
-  await prisma.word.upsert({
-    where: { id: SEEDED_WORD },
-    create: {
-      id: SEEDED_WORD,
-      headword: SEEDED_WORD,
-      definitionChild: 'Willing to do something that frightens you.',
-      sentence: 'She was brave enough to knock on the door.',
-      tier: 2,
-      status: 'LIVE',
-      authoredBy: 'human:e2e-story-lit@cluecrew.test',
-      reviewedBy: 'human:e2e@cluecrew.test',
-    },
-    update: { status: 'LIVE', reviewedBy: 'human:e2e@cluecrew.test' },
-  });
-});
-
-test.afterAll(async () => {
-  await prisma.itemOption.deleteMany({ where: { itemId: CLUE_ITEM } });
-  await prisma.item.deleteMany({ where: { id: CLUE_ITEM } });
-  // Restore what was there. Forcing DRAFT would be a guess: on a dev database `brave` is a real
-  // LIVE vault card, and a test that quietly demotes live content is a test with a side effect.
-  if (priorWord === null) {
-    await prisma.word.deleteMany({ where: { id: SEEDED_WORD } });
-  } else {
-    await prisma.word.updateMany({
-      where: { id: SEEDED_WORD },
-      data: { status: priorWord.status, reviewedBy: priorWord.reviewedBy },
-    });
-  }
-  await cleanupFixtures();
+  await assertServerEnv(`http://localhost:${process.env.E2E_PORT ?? 3101}`, process.env.APP_ENV ?? 'dev');
 });
 
 test('flag on: the shelf lists the chapter, the reader renders it, and the clue-tap answers', async ({

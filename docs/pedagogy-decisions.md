@@ -117,3 +117,67 @@ have the same problem until the style is a document. This is that document.
 The scripts already in the bank were drafted BEFORE this ruling and have not
 been re-checked against it — that is a reviewer pass on the second sitting,
 not something to apply retroactively by script.
+
+## OPEN — awaiting David: the storyWrapper consumer (raised 2026-08-12)
+
+**Status: NOT DECIDED. This is a ruling David owes, recorded here so it stops
+being a silence.**
+
+### The gap
+
+Story Bible v1.2 §9 lists, in **phase 1**: *"Case schema + `storyWrapper`
+(open line, clue-skin labels, close line, season/thread tags)"*. §4 describes
+what consumes it: a Case opens as a season lead, practice items render with
+clue-skinning **in Case mode only** (the frame calls them "the postmarks";
+stems untouched), and the cracked-stamp closes the lead with one story line.
+
+§9's own deferred list — *"Deferred to art arrival / phase 2"* — names avatar
+cosmetic slots, rank-transform outfits, cast art integration, spot
+illustrations, and the signature story cases' bespoke staging. **It does not
+name the storyWrapper consumer.**
+
+What actually shipped: the field. `Case.storyWrapper Json?` exists, the zod
+schema validates it, `seedCases` writes it. **Nothing reads it.** No app code,
+no component, no route. The schema half of a phase-1 item is built and the
+rendering half is not, and no decision was recorded either way.
+
+### Why it needs answering rather than leaving
+
+Zero cases carry a wrapper today, so nothing is broken and nothing is being
+served incorrectly. That is exactly what makes it easy to leave — and why it
+is worth deciding now:
+
+- **The field is authored content.** The first case author to see it in the
+  schema will fill it in, and their open and close lines will go through
+  review, into the database, and render nowhere. Effort spent on content that
+  reaches no child is the specific cost of leaving this open.
+- **The cost of deciding is lowest today.** The shape was tightened on
+  2026-08-12 (shared `season` type, `family` bound to `MECHANIC_FAMILIES`,
+  constrained clue-skin keys, no `caseId` by ruling) precisely because zero
+  wrappers exist. Every one of those constraints becomes a content migration
+  after the first authored wrapper.
+- **A dead field decays into a trusted one.** `Json?` in Prisma holds no
+  shape. `pnpm check:db-content` now re-derives it off the row so a second
+  door cannot write past the gate, but a field nobody reads is a field nobody
+  notices going wrong.
+
+### The three answers available
+
+1. **Build the consumer in phase 1, as §9 says.** Case-mode open/close lines
+   and clue-skin label substitution in the frame. Law 1 holds by construction
+   — the wrapper never touches a stem.
+2. **Defer it explicitly to phase 2**, and add it to §9's deferred list so the
+   bible stops claiming it shipped. The field stays, gated and unauthored,
+   with a note in the case-authoring brief telling authors to leave it empty.
+3. **Drop the field** and re-add it when the consumer is built. Cheapest to
+   reason about; loses the phase-1 schema work, which is small.
+
+**Recommendation: (2).** The consumer is real work with a real design (which
+frame words are skinnable is undecided, and that is a product question, not a
+schema one), and there is no child-facing cost to waiting. What there IS a
+cost to is the bible saying phase 1 delivered something it did not — a
+deferred list that omits a deferred item is how the next reader concludes it
+was built.
+
+Whichever way it goes, `docs/CLUECREW-STORY-BIBLE.md` §9 needs the line, and
+only David amends that document.

@@ -65,10 +65,23 @@ for (const word of wordsFile.words) {
   check(`word:${word.id} sentence`, word.sentence, word.headword, 'word-card');
 }
 
+// Case narrative intros AND the story skin. The wrapper's open/close lines were outside this
+// lint until 2026-08-12 — up to 700 and 240 characters of child-facing story prose with no
+// sentence-length or vocabulary coverage, because this loop stopped at narrativeIntro.text.
+// Clue-skin labels are counted too: a label is the word a child reads in place of the frame's own.
+let storyWrappers = 0;
 for (const file of readdirSync(join(ROOT, 'content/cases'))) {
   if (!file.endsWith('.json')) continue;
   const parsed = JSON.parse(readFileSync(join(ROOT, 'content/cases', file), 'utf8'));
   check(`case:${parsed.case.id} narrative`, parsed.case.narrativeIntro.text);
+  const wrapper = parsed.case.storyWrapper;
+  if (!wrapper) continue;
+  storyWrappers += 1;
+  check(`case:${parsed.case.id} storyWrapper.open`, wrapper.open);
+  check(`case:${parsed.case.id} storyWrapper.close`, wrapper.close);
+  for (const [slot, label] of Object.entries(wrapper.clueSkinLabels ?? {})) {
+    check(`case:${parsed.case.id} storyWrapper.clueSkinLabels.${slot}`, label);
+  }
 }
 
 // Voice packs (Addendum A §1.4) — every authored variant a child hears.
@@ -137,6 +150,14 @@ if (failures.length > 0) {
   for (const failure of failures) console.error(`  ${failure}`);
   process.exit(1);
 }
+// The wrapper count is stated rather than folded into "case narratives", because zero is the
+// number today and a reader has to be able to tell "none authored yet" from "covered" (R60).
 console.log(
-  `Reading-age lint passed (${wordsFile.words.length} words + case narratives + ${voiceLines} voice lines + ${blueprintPages} blueprint instruction pages + ${chapterCount} chapter(s)).`,
+  `Reading-age lint passed (${wordsFile.words.length} words + case narratives + ${storyWrappers} story wrapper(s) + ${voiceLines} voice lines + ${blueprintPages} blueprint instruction pages + ${chapterCount} chapter(s)).`,
 );
+if (storyWrappers === 0) {
+  console.log(
+    '  story wrappers: NONE AUTHORED — the open/close lines are now in scope, but no case carries\n' +
+      '  one yet, so nothing was screened there. This line disappears the day the first one lands.',
+  );
+}

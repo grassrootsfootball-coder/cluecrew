@@ -253,13 +253,23 @@ jobs:
         run: pnpm --filter @cluecrew/web e2e:only
 
       # The LIT half of story mode. The suite above runs with STORY_MODE unset and proves the
-      # surface is dark; that was the only half tested until 2026-08-12. STORY_MODE is read from
-      # the server's environment, so proving both needs two servers — hence a second config on
-      # its own port, with CHAPTERS_DIR pointed at an e2e fixture chapter rather than at the
-      # writer's folder. Verified to FAIL with the flag off and with no chapter present, so a
-      # pass here means the lit path actually rendered.
-      - name: E2E story mode (STORY_MODE=on — shelf, reader, clue-tap)
+      # surface is dark; that was the only half tested until 2026-08-12. STORY_MODE and APP_ENV
+      # are both read from the server's environment, so the lit config owns three servers: one
+      # over an e2e fixture chapter (the clue-tap path), and two over content/chapters differing
+      # only in APP_ENV — which is the whole of the review-status rule, released everywhere and
+      # review outside production. The gated pair is the first-delivery path: the chapters they
+      # serve passed the four content gates above, which run before this step. Verified to FAIL
+      # with the flag off and with no chapter present, so a pass means the lit path rendered.
+      - name: E2E story mode (STORY_MODE=on — shelf, reader, clue-tap, review status)
         run: pnpm --filter @cluecrew/web e2e:story
+
+      # AFTER the suites, because two of its three guards are only meaningful once they have run:
+      # that the seeded zz-e2e-* fixtures were not mutated, and that no row bearing an e2e
+      # provenance marker survived. The third — every creation marker is one cleanupFixtures
+      # actually sweeps — is static, and closes the convention-in-a-comment gap that let
+      # story-lit strand a LIVE item if a run crashed before teardown.
+      - name: E2E fixture guard (fixtures intact, markers sweepable, no residue)
+        run: pnpm check:e2e-fixtures
 
       # Traces and screenshots for the failing tests, so a CI-only failure can
       # be diagnosed from evidence instead of guessed at from a stack trace.

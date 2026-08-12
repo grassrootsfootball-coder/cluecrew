@@ -1,14 +1,31 @@
 Authored chapters land here as `s<season>-ch<n>.json`, one file per chapter,
 matching `chapterFileSchema` in packages/core/src/content-schema.ts.
 
-Deliberately empty: no chapter has been authored yet. Every gate that reads this
-folder declares that emptiness rather than passing silently — `pnpm verify:chapters`
-and `pnpm scan:chapter-style` both say "no chapters yet" (R61).
+No chapter has been AUTHORED yet. Every gate that reads this folder declares an
+empty authored set rather than passing silently (R61).
 
 The moment a file lands here it is held to the full child-facing bar: validate:content
 (schema), scan:vocab (banned vocabulary), check:reading-age (sentence length against the
 chapter's own readingAgeTarget), scan:chapter-style (the Anti-Marker Law), and
 verify:chapters (seeded words resolve, clueTap item is LIVE, released implies audio).
 
-The e2e's chapter is NOT here on purpose — it lives in apps/web/e2e/fixtures/chapters/
-so a test fixture is never mistaken for authored content.
+SEASON `fixture` IS RESERVED, and holds the one file here that is not authored content:
+`s9-ch01-gate-fixture.json`. It exists so the e2e can prove that a GATED chapter renders,
+not merely that the reader renders something — `e2e` is an excluded segment in the
+vocabulary scanner, so a fixture kept under apps/web/e2e reaches the reader without
+passing a single copy gate. This one passes all five, at status `review`, which is both
+the status a writer's first chapter actually has and the reason this file can sit here
+safely: production serves `released` only, so it cannot reach a child. That rule is
+itself asserted, in apps/web/e2e/story-gated-chapter.spec.ts, against two servers.
+
+Its id cannot collide with a real chapter, and the reader prints the season as the
+page's kicker, so anyone who reaches it in staging reads "FIXTURE" above the title.
+
+It points at the PERMANENT seeded fixtures — `zz-e2e-fixture-word` and `zz-e2e-fixture-item`,
+both LIVE, both seeded before the chapter gates run — so it satisfies verify:chapters without
+any spec creating or mutating a row. Never point a chapter here at real vault content: a
+teardown that demotes a real card is the incident those fixtures exist to stop.
+
+story-lit.spec.ts still uses its own chapter under apps/web/e2e/fixtures/chapters/, because it
+still builds its own LIVE rows at test time. Once it points at the seeded fixtures instead,
+that chapter can move here too and the split goes away.

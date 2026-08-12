@@ -27,11 +27,14 @@ import {
   checkBannedVocabulary,
   checkChildFacingText,
   checkItemChildFacing,
+  checkStoryWrapperCopy,
   checkWordCard,
   isBlocking,
+  storyWrapperSchema,
   type ContentFailure,
 } from '@cluecrew/core';
 import { prisma } from '../packages/db/src/index';
+import { declareMayBeEmpty } from './lib/population';
 
 interface Bucket {
   serving: ContentFailure[];
@@ -138,13 +141,46 @@ async function main(): Promise<void> {
   }
 
   // --- Case narrative intros (always serving once the Case exists) --------
+  // …and the story skin beside them. `Case.storyWrapper` is `Json?`, so the DATABASE cannot hold
+  // its shape: the zod schema was enforced at the seed door alone, and a second door — a CMS
+  // route, an import script, a raw update — would have written anything at all and been believed.
+  // That is R57 one level up, and the answer is the same: the shape is re-derived HERE, off the
+  // row itself, so a door that forgets is caught by a gate reading the artefact rather than the
+  // file it was supposed to come from.
+  let wrappers = 0;
   for (const kase of await prisma.case.findMany()) {
     counted.cases += 1;
     const intro = (kase.narrativeIntro as { text?: string } | null)?.text;
-    if (!intro) continue;
-    screened.cases += 1;
-    record(true, checkChildFacingText({ role: 'narrative', label: `case:${kase.id} narrative`, text: intro }));
+    if (intro) {
+      screened.cases += 1;
+      record(true, checkChildFacingText({ role: 'narrative', label: `case:${kase.id} narrative`, text: intro }));
+    }
+    if (kase.storyWrapper === null || kase.storyWrapper === undefined) continue;
+    wrappers += 1;
+    const parsed = storyWrapperSchema.safeParse(kase.storyWrapper);
+    if (!parsed.success) {
+      // A malformed wrapper is SERVING content: it is attached to a case a child can open, and
+      // the reader has no schema of its own to fall back on.
+      for (const issue of parsed.error.issues) {
+        failures.serving.push({
+          where: `case:${kase.id} storyWrapper.${issue.path.join('.') || '(root)'}`,
+          rule: 'placeholder-tag',
+          detail: `${issue.message} — the row does not match storyWrapperSchema, so some door wrote it without the gate.`,
+        });
+      }
+      continue;
+    }
+    record(true, checkStoryWrapperCopy(kase.id, parsed.data));
   }
+  // R61: this population may legitimately be empty, and the reason is printed on every empty run
+  // so "no wrappers authored yet" cannot quietly become "wrappers are checked".
+  declareMayBeEmpty(
+    'check:db-content (story wrappers)',
+    'Case.storyWrapper rows',
+    wrappers,
+    'No case has been authored with a story skin yet (STORY BIBLE §4). The field shipped in phase 1 ' +
+      'and its Case-mode consumer did not — a gap awaiting David\'s ruling, recorded in docs/pedagogy-decisions.md.',
+  );
 
   // Staff-facing strings still obey the everywhere rules (L1/L2/L6): a claim
   // is a claim wherever it is written.

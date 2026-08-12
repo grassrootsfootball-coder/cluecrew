@@ -1,5 +1,7 @@
 import { z } from 'zod';
 import { regionFileSchema } from './regions';
+import { MECHANIC_FAMILIES, familyForType, FAMILY_BY_TYPE } from './families';
+import { checkChildFacingText, checkNoInternalIds } from './content-gates';
 
 /**
  * Schemas for authored content in /content (validated in CI, BUILD-PHASE-1 §2).
@@ -10,6 +12,45 @@ import { regionFileSchema } from './regions';
 
 /** ~30 seconds at a comfortable child reading pace. */
 export const NARRATIVE_MAX_CHARS = 700;
+
+/**
+ * THE SEASON VOCABULARY — ONE TYPE, BOTH SIDES OF THE JOIN (David, 2026-08-12).
+ *
+ * A chapter declares the season it belongs to; a case's `storyWrapper` declares the season its
+ * skin belongs to. Those are the same fact, and until now they were two independent
+ * `z.string().min(1)` fields with nothing comparing them — so a wrapper reading `s3` and a
+ * chapter reading `season-3` would both validate and never meet. Sharing the type is what makes
+ * the join CHECKABLE: same vocabulary on both sides, closed, so a typo is a build failure rather
+ * than a chapter that silently belongs to no season.
+ *
+ * Four seasons because there are four districts (STORY BIBLE §3), one season each. A fifth is a
+ * one-line change here and a decision by David — which is the point of an enum over a free
+ * string: it cannot be added by accident.
+ *
+ * `fixture` is RESERVED and is not a season. It exists so a test chapter can live in
+ * content/chapters and be held to the same gates as authored prose without claiming to be part
+ * of the story: the reader prints the season as the page kicker, so a fixture announces itself.
+ * See content/chapters/.gitkeep.
+ */
+export const seasonSchema = z.enum(['s1', 's2', 's3', 's4', 'fixture']);
+export type Season = z.infer<typeof seasonSchema>;
+
+/**
+ * A clue-skin label KEY names a slot in the CASE-MODE FRAME — the word the frame uses for the
+ * thing on screen, which the season's story renames ("the postmarks"). It is not a content id,
+ * and this is the one field in the wrapper where one could have been smuggled in: the record was
+ * open, so `{"case-vr-08": "the postmarks"}` would have validated.
+ *
+ * Two bounds, because the field is both a key space and child-facing copy:
+ *  - the KEY is a short frame-slot slug, and is refused if it matches our id conventions
+ *    (`checkNoInternalIds`, the canonical rule — not a second copy of it);
+ *  - the VALUE is what a child reads, so it goes through the child-facing gates wherever a door
+ *    handles a wrapper (see `checkStoryWrapperCopy`).
+ *
+ * The key space is deliberately narrower than "a slug": two hyphenated parts at most, so
+ * `case-vr-08` and `vr-04-closest-meaning` cannot be spelled here even before the id rule runs.
+ */
+const CLUE_SKIN_KEY = /^[a-z][a-z0-9]*(?:-[a-z0-9]+)?$/;
 
 const assetRef = z.string().min(1).max(300);
 
@@ -38,6 +79,102 @@ const modeSchema = z.object({
   maxSeconds: z.number().int().positive().optional(),
 });
 
+/**
+ * THE PER-CASE STORY SKIN (STORY BIBLE §4, Law 1): wraps the case, never the items. The open
+ * line sets the season's lead, the close line lands the cracked-stamp, and the clue-skin labels
+ * rename the FRAME's words in Case mode only — stems untouched, item bank unedited.
+ *
+ * TIGHTENED 2026-08-12 (David), deliberately BEFORE the first wrapper is authored. Zero cases
+ * carry one today, so every constraint below rewrites nothing; the same change after S1
+ * authoring is a content migration. What was loose, and now is not:
+ *
+ *   · `season` was a free string on both sides of the join — see `seasonSchema`.
+ *   · `clueSkinLabels` was an open record: any key, any value. It was the one place a case or
+ *     item id could be smuggled in with no gate objecting.
+ *   · the shape was enforced at the seed door alone. It is exported here so a second door has
+ *     one thing to call, and `pnpm check:db-content` re-reads it off the DATABASE ROW, so a
+ *     door that forgets is caught by a gate reading the artefact rather than a copy of it (R57,
+ *     R60 question 3).
+ *
+ * BINDING IS BY FAMILY, NEVER BY CASE ID — AND THE ABSENCE IS A RULING, NOT AN OVERSIGHT.
+ * There is deliberately no `caseId`/`caseIds` field, and one must not be added later by someone
+ * reading the gap as something nobody thought about. A wrapper belongs to the case whose file it
+ * sits in; the outward binding it needs is the FAMILY, because a family is permanent and a case
+ * ordering is not. `orderInDistrict` is unresolved (the next-case selector sorts on it globally,
+ * with no district key, so once a second district is live the walk alternates districts by
+ * construction), and story chapters are permanent artefacts. Binding a chapter's world to case
+ * ids means that unresolved question is settled by rewriting the chapters — which is the cost
+ * this field exists to avoid.
+ */
+export const storyWrapperSchema = z.object({
+  /** The season lead a case opens on. ≤30s of reading, same budget as a narrative intro (D5). */
+  open: z.string().min(1).max(NARRATIVE_MAX_CHARS),
+  /** One story line on the cracked-stamp. */
+  close: z.string().min(1).max(240),
+  /**
+   * frame-slot → the word the season's story uses for it. The key names a slot; the value is
+   * read by a child and is gated as child-facing copy (`checkStoryWrapperCopy`).
+   */
+  clueSkinLabels: z
+    .record(
+      z
+        .string()
+        .regex(
+          CLUE_SKIN_KEY,
+          'a clue-skin key names a frame slot ("envelope", "clue-board"), not a content id',
+        ),
+      z.string().min(1).max(40),
+    )
+    .optional()
+    .superRefine((labels, ctx) => {
+      for (const key of Object.keys(labels ?? {})) {
+        // The canonical id rule, called — not a second copy of it that would drift from it.
+        for (const failure of checkNoInternalIds(`clueSkinLabels key "${key}"`, key)) {
+          ctx.addIssue({ code: z.ZodIssueCode.custom, path: [key], message: failure.detail });
+        }
+      }
+    }),
+  /** Shared with the chapter's own field, so the two sides of the join are comparable. */
+  season: seasonSchema,
+  /**
+   * The mechanic family this skin belongs to (BUILD-PHASE-4 §2). Optional because the registry
+   * covers VR only today — a Maths or NVR case has an engine, not a `MechanicFamily`, and
+   * inventing a value here would be a vocabulary nobody ratified. Where it IS declared,
+   * `caseContentSchema` proves it agrees with the case's own question type.
+   */
+  family: z.enum(MECHANIC_FAMILIES).optional(),
+  /** Season/thread tags (e.g. the Grey Umbrella thread). Free vocabulary, bounded in length. */
+  threadTags: z.array(z.string().min(1).max(40)).default([]),
+});
+
+export type StoryWrapper = z.infer<typeof storyWrapperSchema>;
+
+/**
+ * The wrapper's CHILD-FACING COPY, for every door that handles one.
+ *
+ * The schema above proves the shape; this proves the words. `open` and `close` are prose a child
+ * reads, and until now nothing checked them: `check-reading-age` stopped at `narrativeIntro.text`,
+ * so up to 700 and 240 characters of story copy had no sentence-length or vocabulary coverage.
+ * Clue-skin VALUES are the words a child sees in place of the frame's own, so they are checked
+ * the same way.
+ */
+export function checkStoryWrapperCopy(
+  caseId: string,
+  wrapper: StoryWrapper,
+): ReturnType<typeof checkChildFacingText> {
+  return [
+    ...checkChildFacingText({ role: 'narrative', label: `case:${caseId} storyWrapper.open`, text: wrapper.open }),
+    ...checkChildFacingText({ role: 'narrative', label: `case:${caseId} storyWrapper.close`, text: wrapper.close }),
+    ...Object.entries(wrapper.clueSkinLabels ?? {}).flatMap(([slot, label]) =>
+      checkChildFacingText({
+        role: 'narrative',
+        label: `case:${caseId} storyWrapper.clueSkinLabels.${slot}`,
+        text: label,
+      }),
+    ),
+  ];
+}
+
 export const caseContentSchema = z
   .object({
     id: z.string().regex(/^case-[a-z0-9-]+$/, 'case id must look like "case-vr-08"'),
@@ -62,22 +199,8 @@ export const caseContentSchema = z
       try: modeSchema,
     }),
     orderInDistrict: z.number().int().positive(),
-    /**
-     * The per-case story skin (STORY BIBLE §4, Law 1): wraps the case, never
-     * the items. Open/close lines are authored and scanned; clue-skin labels
-     * rename the FRAME's words in Case mode only ("the postmarks"), stems
-     * untouched. Absent until S1 authoring lands; ignored while the story
-     * flag is off.
-     */
-    storyWrapper: z
-      .object({
-        open: z.string().min(1).max(NARRATIVE_MAX_CHARS),
-        close: z.string().min(1).max(240),
-        clueSkinLabels: z.record(z.string().max(40)).optional(),
-        season: z.string().min(1),
-        threadTags: z.array(z.string()).default([]),
-      })
-      .optional(),
+    /** The per-case story skin. Defined above so a second door has one thing to call (R57). */
+    storyWrapper: storyWrapperSchema.optional(),
   })
   .superRefine((value, ctx) => {
     const watchSeconds = value.modes.watch.maxSeconds;
@@ -87,6 +210,20 @@ export const caseContentSchema = z
         path: ['modes', 'watch', 'maxSeconds'],
         message: 'Watch mode must declare maxSeconds ≤ 90 (P1)',
       });
+    }
+    // A declared family must AGREE with the one the case's question type already implies.
+    // Only VR types are in the registry today, so a Maths or NVR case is skipped rather than
+    // guessed at — an unknown type means "cannot check", never "passes".
+    const declared = value.storyWrapper?.family;
+    if (declared && FAMILY_BY_TYPE[value.questionTypeId]) {
+      const implied = familyForType(value.questionTypeId);
+      if (declared !== implied) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ['storyWrapper', 'family'],
+          message: `storyWrapper.family is "${declared}" but ${value.questionTypeId} is in the "${implied}" family. A wrapper cannot claim a family its own case is not in.`,
+        });
+      }
     }
   });
 
@@ -179,7 +316,8 @@ export const chapterFileSchema = z.object({
     .object({
       id: z.string().regex(/^s\d+-ch\d+$/),
       title: z.string().min(1).max(80),
-      season: z.string().min(1),
+      /** The other side of the join. Shared with `storyWrapper.season` — see `seasonSchema`. */
+      season: seasonSchema,
       trigger: chapterTriggerSchema,
       /** Prose body; seeded Vault words are marked [[like this]]. */
       body: z.string().min(200),
