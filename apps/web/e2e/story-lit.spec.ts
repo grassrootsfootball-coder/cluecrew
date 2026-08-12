@@ -43,7 +43,11 @@ test.beforeAll(async () => {
       stem: { prompt: 'Which word is closest in meaning to brave?' },
       explanation: {},
       status: 'LIVE',
-      authoredBy: 'e2e:story-lit',
+      // `human:e2e-` is not decoration: cleanupFixtures sweeps Item debris BY THIS PREFIX, so a
+      // run that crashes before afterAll still gets collected. An id-scoped delete alone would
+      // leave a LIVE item behind — the failure that once left all 44 LIVE dev items as one test
+      // stem (see fixtures.ts).
+      authoredBy: 'human:e2e-story-lit@cluecrew.test',
       options: {
         create: [
           { content: { value: CORRECT }, isCorrect: true },
@@ -71,7 +75,7 @@ test.beforeAll(async () => {
       sentence: 'She was brave enough to knock on the door.',
       tier: 2,
       status: 'LIVE',
-      authoredBy: 'e2e:story-lit',
+      authoredBy: 'human:e2e-story-lit@cluecrew.test',
       reviewedBy: 'human:e2e@cluecrew.test',
     },
     update: { status: 'LIVE', reviewedBy: 'human:e2e@cluecrew.test' },
