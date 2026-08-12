@@ -142,3 +142,34 @@ export function assertNoReviewedRewrite(outcome: GuardOutcome, door: string): vo
       'review path. Do not relax this guard to make a run go green.',
   );
 }
+
+/**
+ * THE SANCTIONED OVERRIDE — how a reviewer's own ruling still reaches reviewed content.
+ *
+ * The client guard below refuses content writes to reviewed rows. That must not block the review
+ * PIPELINE itself: the CMS, and the scripts that apply a written ruling, exist precisely to change
+ * what a reviewer approved. They declare it, loudly and with a reason, the same shape as
+ * `emergencyOverridePilotFile` — because the fault being closed was a change nobody could tell
+ * apart from noise, and a quiet override would be that fault again one level up.
+ *
+ * Deliberately NOT an allowlist of script names. A door that means to rewrite reviewed content
+ * says so at the point it does it; a list somewhere else drifts from the doors it names (R42).
+ */
+let overrideReason: string | null = null;
+
+export function allowReviewedContentWrites(reason: string): void {
+  if (!reason || reason.trim().length < 12) {
+    throw new Error('allowReviewedContentWrites needs a real reason — name the ruling being applied.');
+  }
+  overrideReason = reason;
+  console.warn(
+    '\n  ⚠ REVIEWED-CONTENT WRITES ENABLED for this run.\n' +
+      `    Reason: ${reason}\n` +
+      '    Every content write to a reviewed row is now permitted. This is the review path doing\n' +
+      "    its job; it is not a way around the guard. If you did not mean to enable it, stop.\n",
+  );
+}
+
+export function reviewedContentWritesAllowed(): string | null {
+  return overrideReason;
+}

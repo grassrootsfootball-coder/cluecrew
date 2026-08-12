@@ -1,4 +1,16 @@
 /**
+ * WRITES UNGUARDED TO REVIEWED CONTENT — read this before re-running it.
+ *
+ * This script transcribes a written ruling into content a reviewer owns, and it does NOT classify
+ * before writing (`packages/db/prisma/reviewed-guard.ts`). That is deliberate: the values here were
+ * authored by a human, not computed, so the guard would refuse the very change the script exists to
+ * apply. What it means for YOU is that re-running this on a database carrying rulings will overwrite
+ * whatever is there now with what is written below — including anything a reviewer has changed since.
+ *
+ * It was written to run ONCE and has already run. Before running it again, check that what it
+ * writes is still the current ruling; if it is not, this will quietly undo the newer one.
+ */
+/**
  * DEPLOY + RECORD the vr-11 bank — `pnpm tsx scripts/deploy-vr11-signoff.ts --apply`.
  *
  * The reviewer independently recomputed both new distractors across all 39 items

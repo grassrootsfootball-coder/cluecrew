@@ -154,8 +154,25 @@ The build is governed by documents, and the documents win arguments.
   Misconception/Case. Only TWO write child-facing content on a routine trigger (CI, every push) —
   `seed.ts` and `generate-content.ts`, both now guarded. Two more run in CI but touch only workflow
   flags (`similarity:scan`, gated on RETRO; `check:word-puzzles`, answer-flag columns) — a
-  different class, not the same risk. The remaining 40 are deliberate: 14 named commands and 26
-  reachable only by script path. None classify before writing, and they are the open surface.
+  different class, not the same risk.
+  **THE TEST IS NOT DELIBERATENESS, IT IS WHO AUTHORED THE VALUE** (annie's narrowing). The seed
+  was deliberate and did its damage on its only run. Measured: of 53 content writers, 42 write
+  REVIEWABLE fields — the number went UP, not down, because most of those scripts exist to change
+  reviewed content, transcribing a ruling into a `childHint`, a `description` or a walk script.
+  They ARE the re-review the guard sends you to do; guarding all 42 would leave thirty doors
+  permanently overridden and the guard decorative. The line that survives: a DERIVATION FUNCTION
+  computed the value (it can change because CODE changed, with no human deciding) → classify
+  before writing; a HUMAN RULING supplied it → no guard, it needs provenance and already has it.
+  Exactly TWO writers compute what they write, and both are guarded. `pnpm check:derived-writes`
+  makes that a property of the WRITE PATH rather than a list: it fails any file that both writes a
+  content table and calls a derivation function without calling `classifyDerivedWrites`, so a new
+  deriving writer fails on the commit that adds it. The 16 one-shot ruling-appliers carry a header
+  saying they write unguarded; that is a warning, not the mechanism.
+  **RECOVERING PRIOR STATE — A METHOD, NOT A ONE-OFF.** Derived values are deterministic functions
+  of code, so GIT IS THE PRIOR STATE: `git worktree add --detach <dir> <commit-at-signing>`, symlink
+  node_modules, run the derivation there, compare with now. That is how the 27 "unmeasurable" seed
+  items became measurable (14 had changed, all by ruling). It answers any derived-value history
+  question, and it is why a lost prior state is usually not lost.
 - Content decisions (items, chapters, misconceptions) go through the CMS
   review pipeline; nothing skips the reviewer.
 - **PILOT CONTENT UNDER ACTIVE REVIEW HAS ONE WRITE PATH: `scripts/lib/pilot-review.ts`, NEVER A

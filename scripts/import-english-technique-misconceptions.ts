@@ -1,4 +1,16 @@
 /**
+ * WRITES UNGUARDED TO REVIEWED CONTENT — read this before re-running it.
+ *
+ * This script transcribes a written ruling into content a reviewer owns, and it does NOT classify
+ * before writing (`packages/db/prisma/reviewed-guard.ts`). That is deliberate: the values here were
+ * authored by a human, not computed, so the guard would refuse the very change the script exists to
+ * apply. What it means for YOU is that re-running this on a database carrying rulings will overwrite
+ * whatever is there now with what is written below — including anything a reviewer has changed since.
+ *
+ * It was written to run ONCE and has already run. Before running it again, check that what it
+ * writes is still the current ruling; if it is not, this will quietly undo the newer one.
+ */
+/**
  * IMPORT annie's six writer's-technique misconceptions + the error-spot false-positive tag.
  * `pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/import-english-technique-misconceptions.ts`
  *

@@ -171,6 +171,12 @@ jobs:
       # The lint reads /content and the scanner reads source files, so an
       # import straight into a table used to evade both. Serving rows fail
       # the build; the DRAFT backlog is reported, not blocking.
+      # "Guarded" as a property of the write path, not a list of files. Any writer that COMPUTES
+      # a child-facing value must classify before writing; transcribing a human ruling needs no
+      # guard. Static, so a new deriving writer fails on the commit that adds it.
+      - name: Derived-write guard (computed values classify before writing)
+        run: pnpm check:derived-writes
+
       - name: Database content gate (child-facing text in the DB)
         run: pnpm check:db-content
 
