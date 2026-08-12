@@ -2574,3 +2574,82 @@ project has added to a stem has hit it. The next one will too, unless the allowl
 the passthrough the CMS door already uses — recorded as the standing fix rather than actioned here,
 since changing what a script importer accepts wholesale is a wider decision than closing the field
 that is live today.
+
+## R56 — Sizing the allowlist-vs-passthrough decision
+*David, 2026-08-12, raising R55's standing recommendation as its own item before acting on it.*
+
+**The question:** if `import-english-items.ts` moved to the passthrough the CMS door already uses,
+what would it newly accept, and does anything rely on the allowlist rejecting an unnamed field
+INTENTIONALLY — as a validation boundary — rather than by accident?
+
+### What the allowlist actually is
+
+Measured across the 737 persisted items: **20 distinct `stem` keys exist; the script importer
+produces 9** (`prompt`, `passageRef`, `lineRefs`, `gapRef`, `quotes`, `testedTokens`,
+`passageNames`, and now `techniqueKey`/`answerShape`).
+
+The other eleven — `words`, `operands`, `series`, `sum`, `code`, `clues`, `question`, `sentence`,
+`stemWord`, `pairA`, `word1`/`word2`, `wordWithGap` — reached the database by **other paths
+entirely**. Traced by author: they belong to `ai-draft:claude-fable-5` (the VR/maths generator via
+`generate-content.ts`) and `seed`. The only author whose items came through this importer,
+`ai-draft:cowork-okafor-v1`, carries exactly the allowlist and nothing else.
+
+So the allowlist has never actually rejected anything that arrived — **it matches its own traffic
+exactly.** The three fields it dropped (R23's `quotes`, R42's `passageNames`, R55's `techniqueKey`)
+were dropped because they were newly introduced and nobody updated the list, not because a batch
+tried to smuggle something past a boundary.
+
+### Does anything rely on the rejection? No — and the boundary people assume it provides is elsewhere
+
+The intuition worth testing was that the allowlist keeps this an ENGLISH importer. **It does not.**
+The district boundary is enforced by two other things: `district: 'ENGLISH'` hard-coded at both the
+question-type upsert and the item create, and a fixed `QUESTION_TYPES` list the mechanic is looked
+up from. The stem allowlist does no validation work that is not already done by those.
+
+Worse, as a boundary it fails in the unsafe direction. Hand this importer a VR batch today and it
+would not refuse it — it would strip `series`/`words`/`code` and **create a structurally broken
+item carrying only a prompt.** Passthrough would let that item arrive intact and fail visibly
+downstream. The allowlist does not prevent wrong-district input; it silently corrupts it.
+
+**Nothing anywhere rejects an unknown stem key.** The CMS `stemSchema` is
+`z.record(z.unknown()).superRefine(...)` — a passthrough that VALIDATES five known keys when present
+(`passageRef`, `lineRefs`, `quotes`, `testedTokens`, `sentence`) and passes everything else through.
+There is no strict schema on `stem` anywhere in the codebase.
+
+### One live asymmetry the sizing surfaced
+
+The CMS door validates **`sentence`**, a key **81 persisted items carry** — and the script importer
+does not accept it at all. English's own R1/R3 make `sentence` the canonical field for error-spot
+and cloze stems ("the sentence IS the format"). So the moment an English batch carries an
+error-spot or cloze item shaped that way, **the script path drops its stem body today**, and the
+two doors disagree about what an English item may even contain. That is R42's finding again, in the
+same file, and it is latent rather than theoretical.
+
+### What changes, and the one interaction worth knowing about
+
+**Newly accepted:** whatever an English batch carries beyond the nine — realistically new English
+fields as they are introduced, which is precisely the class that has been silently lost three times.
+
+**Not newly accepted:** anything district-crossing. The `district: 'ENGLISH'` hard-code and the
+`QUESTION_TYPES` list are untouched by this decision.
+
+**The interaction to know about, flagged rather than blocking:** `fingerprintItem` →
+`normaliseItemText` → `textParts` walks stem VALUES recursively, so any field's value text feeds an
+item's similarity fingerprint. This is **not live on the script path** — it does not fingerprint or
+screen at all, so R55's fix introduced no drift — but it is live on the CMS path, which is already a
+passthrough. The specific consequence worth recording: **`answerShape`'s value would make two items
+sharing an answer shape look MORE textually similar to the fingerprinter** — inflating the score for
+exactly the pair the field exists to tell apart. Two systems designed separately, meeting in one
+JSON column. Not a reason to withhold the change; a reason for whoever wires `answerShape` into
+serving to check whether tag fields belong in the fingerprinted body or beside it.
+
+### Recommendation
+
+**Adopt the CMS's exact pattern — passthrough PLUS validate-known-keys — not a raw passthrough.**
+That removes the silent-drop class permanently, keeps every check the CMS door already performs,
+and makes the two doors agree on what a stem may carry, which has now been the fix for three
+separate findings (R42, R55, and the `sentence` asymmetry above). The cost is one function; the
+allowlist it replaces is protecting nothing that another mechanism does not already protect.
+
+**Not actioned here.** It is a change to what a shared import door accepts, and R55 raised it as
+deserving sizing before doing — this entry is that sizing, not the doing.
