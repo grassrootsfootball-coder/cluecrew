@@ -129,6 +129,33 @@ The build is governed by documents, and the documents win arguments.
   empty run so a temporary gap cannot decay into a green tick. **Every other gate treats an empty
   population as a PIPELINE FAILURE, not a pass** — `requirePopulation()`, same file. A gate calling
   neither has not thought about it, and that is the state this closes.
+- **REVIEWED CONTENT IS IMMUTABLE TO CODE CHANGES, AND THE DENOMINATOR IS WHAT WAS ACTUALLY READ**
+  (annie, 2026-08-12 — R62). Derived option values are a function of a derivation function, so a
+  change to that function rewrites every item it owns, reviewed ones included. `seed:items` and
+  `content:generate` both did this, unconditionally, and `content:generate` deleted and recreated
+  every option. Both now CLASSIFY BEFORE WRITING (`packages/db/prisma/reviewed-guard.ts`): a row is
+  reviewed if LIVE, RETIRED, or carrying any attribution event; reviewed-and-unchanged is a no-op,
+  and reviewed-and-would-change FAILS the whole run before a single write. No warning, no version,
+  no automatic update with a note — anything softer reintroduces the same path with a paper trail,
+  and the trail does not help if nobody reads it before serving.
+  **STATE THE DENOMINATOR YOU READ.** The exposure was 127 derived+reviewed items, but only 100
+  were measurable: a seed run had already overwritten the other 27, so their "no divergence" was
+  trivially true. Report it as 100 measured, 27 reconstructed — never 127 with a caveat. The 27
+  were recovered afterwards by running the derivation from a git worktree at the signing commit,
+  which is the general technique: derived values are deterministic in code, so git IS the prior
+  state. That reconstruction found 14 of 27 changed after their attribution — all by reviewer
+  ruling (direction retired, series re-tiered), none silent.
+  **ZERO DIVERGENCE IS AN OUTCOME, NOT EVIDENCE THE DESIGN HELD.** `distractors.ts` changed ninety
+  minutes AFTER those items were attributed, in a commit touching exactly the four affected
+  families. The coupling was live, unguarded, and exercised the same day; it happened not to alter
+  those values. Anyone skimming "all re-derived clean" will read reassurance about the design, and
+  it is the opposite.
+  **THE EXPOSURE SCALES WITH HOW ORDINARY THE COMMAND IS.** 53 files write to Item/Option/Word/
+  Misconception/Case. Only TWO write child-facing content on a routine trigger (CI, every push) —
+  `seed.ts` and `generate-content.ts`, both now guarded. Two more run in CI but touch only workflow
+  flags (`similarity:scan`, gated on RETRO; `check:word-puzzles`, answer-flag columns) — a
+  different class, not the same risk. The remaining 40 are deliberate: 14 named commands and 26
+  reachable only by script path. None classify before writing, and they are the open surface.
 - Content decisions (items, chapters, misconceptions) go through the CMS
   review pipeline; nothing skips the reviewer.
 - **PILOT CONTENT UNDER ACTIVE REVIEW HAS ONE WRITE PATH: `scripts/lib/pilot-review.ts`, NEVER A
