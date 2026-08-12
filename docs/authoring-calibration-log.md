@@ -2314,6 +2314,9 @@ all. Building it now would add code with nothing to exercise it, the same unreac
 
 ## R52 — English's T4 target: 18%, provisional, range 16–20%
 *Annie, 2026-08-11, supplying the figure R48 found nobody had derived. Recorded by David.*
+**Condition 1 MET by the complete census — see R53. The district figure is now 18.75% measured
+across both streams, not 17.22% from Stream A alone. This entry stays as the record of the
+provisional stage; R53 carries the settled numbers.**
 
 **Traced, not asserted.** Two independently authored census documents cross-check to the same
 number without either citing the other:
@@ -2379,3 +2382,87 @@ narratorial signposting of the gap."* This is flagged for **whoever curates the 
 not as an instruction to draft harder against the current fifteen — the nineteen remaining clusters
 are drafted from what exists, per `AUTHORING-BRIEF-ADDENDUM-19.md`; this doctrine governs what gets
 commissioned after them, not what gets extracted from them now.
+
+## R53 — The district total, and the second registry dimension
+*Annie, 2026-08-11, on the complete census (`T4-CENSUS-COMPLETE.md`, both shapes, all twenty
+passages). Recorded by David.*
+
+### The number, and the shortfall
+
+**45 T4 items across 240 — 18.75%.** Twenty-seven locatable-span, eighteen whole-text purpose;
+every one of the twenty passages yields at least one. Arithmetic re-derived independently from
+`t4-census.json` rather than taken from the prose headline: the per-passage `shippableInOnePaper`
+values sum to **27**, matching the span figure exactly, and `45 / (20 × 12) = 18.75%`.
+
+| stream | passages | span | whole-text | total | share |
+|---|---|---|---|---|---|
+| A (curated extracts) | 15 | 18 | 13 (87%) | 31 | 17.2% |
+| B (commissioned) | 5 | 9 | 5 (100%) | 14 | 23.3% |
+| **district** | **20** | **27** | **18** | **45** | **18.75%** |
+
+**Against the 20% house default: three items short** (`0.20 × 240 = 48`; `48 − 45 = 3`). Recorded
+as the number to close **if** Anne rules the target stays at 20%.
+
+**That "if" is load-bearing and stays open.** Whether 20% is even English's figure is a SEPARATE
+question, already answered once in the negative: R48 established that 20% is VR's superseded
+pre-corpus `specDefault`, that VR itself has since moved off it to a corpus-derived 18%, and that
+no English-specific tier mix has ever existed. The three-item gap is arithmetic against a default
+nobody has yet ruled applies here. **Do not let the shortfall become the argument for the target** —
+that inverts the order R48 was written to protect, and 18.75% measured sits inside R52's provisional
+16–20% band without any items being added at all.
+
+**R52's condition 1 is MET.** Stream B was recomputed against the contrast test rather than
+estimated from `craftNotes` structure — and the prediction R52 made about that trap was confirmed
+firing: see §1b of the authoring brief. The district figure moves from 17.22% (Stream A alone,
+provisional) to **18.75% (both streams, measured)**.
+
+### The second dimension: answer shape
+
+**The finding: two items can carry DIFFERENT technique tags and still be near-duplicates in a
+child's answer booklet, because the technique is what the WRITER did and the answer shape is what
+the CHILD writes down.** The census's own case: `b-01` (the writer never uses the word *wasp*,
+supplying the hum, the counting and the nest instead) and `b-04` (a rule kept for others, broken
+for himself) are genuinely different devices — and both reduce, in the child's hand, to *"the
+writer never names X, but gives you the evidence for X."* R50's registry keys on device. It would
+pass this pair.
+
+**This is a genuine second axis, not a re-cut of the first — and that is the thing to check before
+building, because a re-cut would be cheaper and wrong.** The two axes cross rather than nest:
+- The `claim-contradicted-on-the-page` technique family holds five items (A Christmas Carol,
+  Canterville, Pride and Prejudice, b-03, b-05) — one technique, and the census does not claim they
+  share an answer shape.
+- b-01 and b-04 share an answer shape across two different techniques.
+
+One technique spanning several answer shapes, and one answer shape spanning several techniques.
+Neither field determines the other, so neither can be derived from the other — which is precisely
+why this cannot be solved by renaming or re-clustering `techniqueKey`.
+
+**Scope, same treatment as `techniqueKey` (R49/R50):**
+
+- **`stem.answerShape`, a SINGLE string**, read through a shared `answerShapeOf` beside
+  `techniqueKeyOf` — same defensive JSON read as `passageNames`/`testedTokens`, author-declared,
+  never derived. Single for the same reason `techniqueKey` is: an item has one thing the child
+  writes down. The evidence for a set does not exist in the corpus.
+- **`MockCandidateItem.answerShape?: string`**, wired through the same DB-query pattern R50 used.
+- **The exclusion logic is the SAME CODE SHAPE, and that is the whole economy of this** — R51
+  already established the general form: a `Set` of "values already used this paper," filtered
+  against `available`, pruned from `remaining` mid-draw, falling through to a loud shortfall rather
+  than a silent substitution. `composeMockPaper` would carry **two** such Sets rather than one, not
+  two different algorithms. The R50 tests generalise the same way.
+- **Audit: extend `pnpm audit:technique-keys` to a second registry** rather than writing a new
+  script — presence on every whole-text-purpose T4 item, kebab-case format, and the same
+  open-ended eyeball registry (no enum: the census names one answer shape explicitly and implies
+  others, so a closed list would reject genuine new ones exactly as it would have for techniques).
+- **The cross-tabulation is the new reporting need, and it is what makes the second dimension
+  earn its place:** technique × answer shape, so a reviewer can see a cell holding two items that
+  look distinct on both axes separately but collide on the pair. That table is what neither
+  registry alone can show.
+
+**Not built in this pass.** Same reason as R51's Layer 1: `composeMockPaper` cannot exclude on a
+field no item carries, and today **zero items carry `techniqueKey`** — the registry R50 built is
+empty (its own audit reports `0 distinct techniques in use`). Adding a second empty registry
+alongside the first buys nothing until the nineteen clusters are drafted and both fields get
+populated. **The decision recorded here is the SHAPE**, so that when authoring starts, both fields
+are declared together on the same item in one pass rather than `answerShape` being retrofitted
+across a bank that already exists — which is the expensive order, and the one this entry exists to
+avoid.

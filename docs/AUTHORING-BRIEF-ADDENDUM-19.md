@@ -6,7 +6,14 @@ Three things that came out of the pilot and the T4 census, in the order they bit
 
 ---
 
-## 1. Do NOT use the passages' `questionHooks` as authoring leads
+## 1. Do NOT use a passage's own suggestions as authoring leads
+
+Two fields suggest items. **Neither is one.** They differ in which stream carries them
+and in how they fail, so both are stated — but the restriction is identical, and it is
+the same restriction: **a suggestion field is evidence the passage has something worth
+questioning. It is never the question.**
+
+### 1a. `questionHooks` (Stream A) — T2/T3 only, never T4
 
 **RESTRICTION, not guidance: `questionHooks` are T2/T3 material only. No T4 item may
 be drafted from a `questionHooks` entry, ever, on any of the nineteen remaining
@@ -36,6 +43,37 @@ single span that states its own answer.
 
 Use hooks as evidence that a passage has *content* worth questioning. Find the items by
 reading the passage.
+
+### 1b. `craftNotes.complication` (Stream B) — architecture, never the item
+
+**RESTRICTION, same force as 1a: `craftNotes.complication` is evidence the passage has
+T4 ARCHITECTURE. It is never the item, and it is never a stem to draft against.** Read
+it to know a passage is worth working; find the item by reading the prose.
+
+This field is *more* dangerous than `questionHooks`, not less, because it is usually
+RIGHT about the passage while being wrong about the item — and it is written in almost
+exactly the shape the two-halved-contrast test looks for, so it reads as pre-validated.
+It is not. The complete census checked all five commissioned passages and the field
+**named the wrong item in two of the five, and a non-item in a third**:
+
+- **b-02 (Saltmere)** — the note promises Cal's stated reason undermined by the unsent
+  photograph. That contrast is genuinely in the text and it **fails the plot-summary
+  check**: a child told only the plot reaches "he really went for himself" without
+  reading a line. The real purpose item is invisible to summary — the walk is narrated
+  in the past, but every sentence about something that still exists slips into the
+  present. Eight instances, entirely consistent.
+- **b-01 (wasps)** — the note promises a two-dangers gap between adult and child. The
+  narrator then **states that gap outright at lines 39-40**, which kills it — the same
+  narratorial-signposting failure that killed Wind in the Willows and Eighty Days in
+  Stream A. The surviving item is that the writer never once uses the word *wasp*, and
+  supplies the hum, the counting and the nest instead.
+- **b-03, b-04, b-05** — delivered as promised; b-03's note understates it.
+
+**Two of five wrong, one of which was fatal, from a field that reads as authoritative.**
+The commissioning brief works — every one of the five does support a whole-text item.
+What the field cannot do is tell you *which* item, because the four checks the two-halved
+test does not replace (plot-summary, three separate instances, half-pattern distractor,
+writer-not-story subject) are exactly the ones it has not been through.
 
 ---
 
