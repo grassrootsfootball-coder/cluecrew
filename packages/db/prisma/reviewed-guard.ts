@@ -173,3 +173,97 @@ export function allowReviewedContentWrites(reason: string): void {
 export function reviewedContentWritesAllowed(): string | null {
   return overrideReason;
 }
+
+/* ------------------------------------------------------------------------------------------- */
+
+/**
+ * A SIGNATURE NAMES A PERSON — `recordSignature` is the only way to write one (R65).
+ *
+ * 46 signatures resolved to a role account, not a human, and annie raised it at 13, 33 and 46 —
+ * the one item that gets worse purely by waiting. The backfill fixed the history; this stops the
+ * next one being written the same way. Same shape as the derived-write guard: a property of the
+ * PATH, enforced by `check:signing-doors`, not a policy someone has to remember.
+ */
+export interface SignatureRecord {
+  recordType: string;
+  recordId: string;
+  reviewerId: string;
+  recordedBy: string;
+  method: string;
+  note?: string;
+  subjectHash?: string;
+}
+
+export async function recordSignature(
+  prisma: PrismaClient,
+  signature: SignatureRecord,
+): Promise<void> {
+  const reviewer = await prisma.reviewer.findUnique({ where: { id: signature.reviewerId } });
+  if (!reviewer) {
+    throw new Error(
+      `Refusing to record a signature for unknown reviewer "${signature.reviewerId}". A signature ` +
+        'names a PERSON — create the Reviewer row first, with the evidence for who they are.',
+    );
+  }
+  if (!signature.method || signature.method.trim().length < 8) {
+    throw new Error('Refusing to record a signature with no method — say how the review happened.');
+  }
+  await prisma.attributionEvent.create({
+    data: {
+      recordType: signature.recordType,
+      recordId: signature.recordId,
+      action: 'SIGNED',
+      // `actor` stays the human-readable cache it now is; `reviewerId` carries identity.
+      actor: reviewer.displayName.toLowerCase(),
+      reviewerId: reviewer.id,
+      recordedBy: signature.recordedBy,
+      method: signature.method,
+      note: signature.note ?? null,
+      subjectHash: signature.subjectHash ?? null,
+    },
+  });
+}
+
+/**
+ * THE PAIRED STATEMENT, DERIVED (annie's wording, 2026-08-12 — R65).
+ *
+ * The signature count cannot be printed without the event-log figure beside it, because the two
+ * were reported separately and the gap between them is the finding: 46 signatures look like 46
+ * reviews until you read that only 25 of the events behind them carry a written review.
+ *
+ * Generated rather than hand-written, so it cannot go stale. Her original wording carried a third
+ * clause — that the signatures resolve to a role account. The naming path has fixed that, so the
+ * clause is DROPPED when it stops being true rather than repeated as though nothing changed; when
+ * a signature has no named reviewer it reappears, naming the number.
+ */
+export async function signatureProvenanceStatement(prisma: PrismaClient): Promise<string> {
+  const signatures = await prisma.attributionEvent.count({ where: { action: 'SIGNED' } });
+  // ITEM events, which is the population annie's figures describe (301 at the time of her
+  // statement: 25 + 276). The discriminator is METHOD, not the null-ness of note/field/hash — a
+  // handover row is empty BECAUSE it is a backfill, so method is the cause and the empty columns
+  // are the symptom. Reading the symptom gave 77/484 against her 25/276, which is how this was
+  // caught: a derived figure that disagrees with the reviewer's own is wrong until it is
+  // explained, not published.
+  const events = await prisma.attributionEvent.findMany({
+    where: { recordType: 'item' },
+    select: { method: true },
+  });
+  const backfill = events.filter((e) => /backfill/i.test(e.method ?? '')).length;
+  // A null method is neither a written review nor a backfill. Folding it into "written" would
+  // inflate the very figure this statement exists to keep honest, so it gets its own clause.
+  const unmethodded = events.filter((e) => !e.method).length;
+  const written = events.length - backfill - unmethodded;
+  const unnamed = await prisma.attributionEvent.count({
+    where: { action: 'SIGNED', reviewerId: null },
+  });
+
+  return (
+    `${signatures} generator signatures on record. The attribution log behind them holds ` +
+    `${written} events carrying a written review; the remaining ${backfill} are handover ` +
+    `provenance backfill with null field, note and hash.` +
+    (unmethodded > 0 ? ` ${unmethodded} record no method at all.` : '') +
+    (unnamed > 0
+      ? ` ${unnamed} of the signatures still resolve to a role account rather than a named reviewer.`
+      : '')
+  );
+}

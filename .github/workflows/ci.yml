@@ -179,6 +179,13 @@ jobs:
       # did: R60, R61 and R62 were written into CLAUDE.md and never reached the register, found
       # only because R63 went to cite R62. Asserts the direction that matters: a rule cited as
       # governing must be recorded.
+      # R65: a signature names a PERSON. recordSignature refuses a reviewerId that does not resolve
+      # to a Reviewer row, and this fails any file writing action:'SIGNED' outside that door — the
+      # same shape as check:derived-writes. Stale HISTORICAL exemptions are reported too: two of
+      # the original five named files that only QUERY signatures.
+      - name: Signing doors (a signature names a reviewer)
+        run: pnpm check:signing-doors
+
       - name: Register check (every cited rule has a register entry)
         run: pnpm check:register
 
