@@ -73,6 +73,21 @@ interface BatchItem {
    * exists to catch, one rule later.
    */
   passageNames?: string[];
+  /**
+   * The DEVICE a whole-text-purpose T4 item tests (R49/R50), and the SHAPE of what the child
+   * writes down (R53). `composeMockPaper` excludes on both so one paper never repeats either.
+   *
+   * Added 2026-08-12, and the third instance of exactly one defect: this importer builds `stem`
+   * from an explicit ALLOWLIST, so any declared field not named here is dropped in silence. The
+   * CMS import path does not have this problem — its `stemSchema` is `z.record(z.unknown())`, a
+   * passthrough — so the two doors disagreed about what a stem may carry, which is R42's finding
+   * again. `techniqueKey` had a live consumer already; an author declaring it on one of the
+   * nineteen remaining clusters would have watched it vanish and the repetition cap silently stop
+   * protecting that item. `answerShape` is accepted alongside it per R53's ruling that the two are
+   * declared together in one pass rather than retrofitted across a bank that already exists.
+   */
+  techniqueKey?: string;
+  answerShape?: string;
 }
 interface Batch {
   batchId: string;
@@ -182,6 +197,8 @@ async function main(): Promise<void> {
         ...(item.quotes?.length ? { quotes: item.quotes } : {}),
         ...(item.testedTokens?.length ? { testedTokens: item.testedTokens } : {}),
         ...(item.passageNames?.length ? { passageNames: item.passageNames } : {}),
+        ...(item.techniqueKey ? { techniqueKey: item.techniqueKey } : {}),
+        ...(item.answerShape ? { answerShape: item.answerShape } : {}),
       };
       const explanationObject = {
         ...(item.explanation ?? {}),

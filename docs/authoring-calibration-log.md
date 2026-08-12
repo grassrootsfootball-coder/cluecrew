@@ -2520,3 +2520,57 @@ against the live figure once the cap and real blueprints exist together. 18.75% 
 figure. The per-paper spread is bounded by how many distinct techniques fall among the passages a
 given paper draws from (R49/R50), and R53's answer-shape finding narrows it further. **18.75% must
 never be written down as a per-paper expectation**, exactly as 18% must not have been.
+
+## R55 — pairId's serving wiring is Layer 0-blocked; techniqueKey's was not, and was silently broken
+*David, 2026-08-12, scoping the comma linked-pair gap the way R51 scoped its cardinality audit.*
+
+**The question:** is `composeMockPaper`'s `pairId` exclusion buildable now against `COMMA_BANK`
+directly — the pattern that made the cardinality audit and the technique-key audit buildable ahead
+of any persistence path — or does it depend on the Layer 0 decision?
+
+**Answer: Layer 0, and the distinction is structural rather than a matter of degree.**
+
+The two audits are buildable now because they read AUTHORED SOURCE. `audit:comma-pairs` runs against
+`COMMA_BANK`, a TypeScript constant; `audit:technique-keys` runs against `Item` rows that already
+exist. **`composeMockPaper` reads neither.** Its `candidates` come from `prisma.item.findMany`, so it
+can only exclude on a field that PERSISTED items carry. Measured today: **737 items in `Item`, zero
+carrying `stem.pairId`** — and none can, because comma items are generator output and generated SPaG
+has no persistence path at all. That is not a missing field in an importer; there is no importer.
+Building the wiring would produce code as unreachable as `pairId` is now, relocated one file over.
+**Correctly withheld, unchanged.**
+
+**But the comparison case did not survive the same check, and that is the finding.** R51 and R53
+both reasoned that `techniqueKey`'s wiring was worth building while `pairId`'s was not, on the
+grounds that comprehension items have a live import path. They do — `import-english-items.ts`, which
+put the 78 English items in the database. **It does not carry `techniqueKey`.** The importer builds
+`stem` from an explicit ALLOWLIST, so a declared `techniqueKey` was dropped in silence at the door.
+
+**This is the third instance of one defect**, and the second time this exact file has produced it:
+- R23's `quotes` — declared in the right place, read from the wrong one.
+- R42's `passageNames` — the field R23 introduced, never added to this importer's allowlist.
+- Now `techniqueKey` — same allowlist, same silence.
+
+And it is R42's OTHER finding as well: **the two import doors disagreed again.** The CMS path's
+`stemSchema` is `z.record(z.unknown())` — a passthrough that preserves any stem field — while the
+script path enumerates. So the same authored item keeps `techniqueKey` through one door and loses it
+through the other. R42 closed the doors' disagreement about the child-facing GATE; this is the same
+two-doors shape one level down, in what a stem is permitted to carry.
+
+**Fixed, with `answerShape` accepted alongside it** per R53's ruling that the two are declared
+together in one pass rather than retrofitted across a bank that already exists. Verified by threading
+a batch item carrying both through the importer's own `stemObject` construction and reading it back
+with `techniqueKeyOf`, including a JSON round trip to match how Prisma stores it.
+
+**What this would have cost if it had gone unfound:** the nineteen remaining clusters begin drafting
+against a brief that now instructs authors to declare a technique on every whole-text-purpose T4
+item (R49/R50). Every one of those declarations would have vanished at import, `composeMockPaper`
+would have found nothing to exclude on, and the repetition cap would have reported itself working
+while protecting nothing — an empty registry being indistinguishable from a registry whose contents
+were thrown away at the door.
+
+**The general shape, worth stating because it is now three-for-three:** an explicit allowlist that
+silently drops what it does not name is a gate that fails OPEN and reports success. Every field this
+project has added to a stem has hit it. The next one will too, unless the allowlist is replaced by
+the passthrough the CMS door already uses — recorded as the standing fix rather than actioned here,
+since changing what a script importer accepts wholesale is a wider decision than closing the field
+that is live today.
