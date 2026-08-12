@@ -20,49 +20,14 @@
  */
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
-import { MATHS_FAMILIES } from '../packages/core/src/maths/families';
-import { assembleItem, familyTiers, makeRng, GateError } from '../packages/core/src/maths/generator';
 import { artefactStamp, deliver, stampHeader, stampedName } from './lib/export-destination';
+import { sweepMathsFamilies } from './lib/param-sweep';
 
 const OUT_DIR = resolve(import.meta.dirname, '../content/exports');
 const FAMILY = 'maths-param-sweep';
-const DRAWS = 400;
 
 function main(): void {
-  const rows = MATHS_FAMILIES.map((f) => {
-    const declaredKeys = f.structuralParams ? Object.keys(f.structuralParams(familyTiers(f)[0]!)) : [];
-    const mismatches = new Map<string, number>();
-    let emissions = 0;
-    const recomputed = new Set<string>();
-    for (const tier of familyTiers(f)) {
-      const r = makeRng(9001 + tier);
-      for (let i = 0; i < DRAWS; i += 1) {
-        try {
-          const item = assembleItem(f, tier, r);
-          emissions += 1;
-          if (f.recomputeParams) Object.keys(f.recomputeParams(item, tier)).forEach((k) => recomputed.add(k));
-        } catch (e) {
-          // A GateError naming a declared parameter IS the disagreement; anything else is a
-          // legitimate refusal (range, key recompute, notation) and not this sweep's business.
-          const msg = e instanceof GateError ? e.message : '';
-          if (/but the emitted item has/.test(msg)) mismatches.set(msg, (mismatches.get(msg) ?? 0) + 1);
-        }
-      }
-    }
-    const metadata = declaredKeys.filter((k) => !recomputed.has(k));
-    return {
-      id: f.id,
-      tiers: familyTiers(f).map((t) => `T${t}`),
-      declared: declaredKeys,
-      asserted: [...recomputed].sort(),
-      metadataOnly: metadata,
-      emissions,
-      verdict: emissions === 0
-        ? 'BLIND'
-        : mismatches.size ? 'DISAGREES' : declaredKeys.length === 0 ? 'NONE-DECLARED' : metadata.length ? 'PARTIAL' : 'ASSERTED',
-      mismatches: [...mismatches].map(([detail, count]) => ({ detail, count })),
-    };
-  });
+  const rows = sweepMathsFamilies();
 
   /**
    * CANARY — things this sweep must find before it is allowed to report.

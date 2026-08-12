@@ -126,6 +126,17 @@ jobs:
       - name: Signed-family fingerprints (nothing moved since signing)
         run: pnpm verify:fingerprints
 
+      # Annie's condition, 2026-08-12, and it runs on the SAME trigger as the step above on
+      # purpose. A fingerprint guards the DECLARED SURFACE and cannot see emitted behaviour:
+      # replacing a family's generator body does not move its hash, and
+      # spag-punct-terminal-boundary is the proof — surface intact, T4/T5 items outside its own
+      # ladder. The sweeps are the only instrument for that, and they had run twice in this
+      # project's history, both times because someone asked. ~4.5s for ~35,000 emitted items
+      # across both districts. Asserts only; the reviewer artefacts still come from
+      # `sweep:maths-params` / `export:param-sweep`, which call the same functions (R42).
+      - name: Parameter sweeps (emitted behaviour matches the signed sheets)
+        run: pnpm verify:param-sweeps
+
       # The two doors into the database must apply the SAME child-facing gate. They did not: the
       # script importer ran a pre-R23 version that rejected a walk-script quotation the generator
       # and the publish doors accepted. Fixed 2026-08-09; this keeps them from drifting apart again.

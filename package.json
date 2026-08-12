@@ -90,6 +90,7 @@
     "export:tn-teacher": "tsx scripts/export-tn-teacher.ts",
     "state": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/platform-state.ts",
     "retire:reviewer-latest": "tsx scripts/retire-reviewer-latest.ts",
+    "verify:param-sweeps": "tsx scripts/verify-param-sweeps.ts",
     "verify:fingerprints": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/verify-family-fingerprints.ts",
     "pin:signatures": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/pin-family-signatures.ts",
     "sweep:maths-params": "tsx scripts/export-maths-param-sweep.ts",

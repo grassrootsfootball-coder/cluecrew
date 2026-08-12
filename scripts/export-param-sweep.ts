@@ -11,66 +11,14 @@
  */
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
-import { SPAG_FAMILIES } from '../packages/core/src/english/spag-families';
-import { assembleSpagItem, SpagGateError } from '../packages/core/src/english/spag-generator';
-import { spagFamilyTiers } from '../packages/core/src/english/spag-fingerprint';
-import { makeRng } from '../packages/core/src/maths/generator';
 import { artefactStamp, deliver, stampHeader, stampedName } from './lib/export-destination';
+import { sweepSpagFamilies } from './lib/param-sweep';
 
 const OUT_DIR = resolve(import.meta.dirname, '../content/exports');
 const FAMILY_FILE = 'spag-param-sweep';
-const DRAWS = 600;
-
-interface Row {
-  id: string;
-  swept: boolean;
-  tiers: string[];
-  declared: Record<string, Record<string, string | number>>;
-  metadata: Record<string, Record<string, string | number>>;
-  emissions: number;
-  mismatches: Array<{ tier: number; detail: string; count: number }>;
-}
 
 function main(): void {
-  const rows: Row[] = [];
-  for (const family of SPAG_FAMILIES) {
-    const tiers = spagFamilyTiers(family);
-    const declared: Row['declared'] = {};
-    const metadata: Row['metadata'] = {};
-    for (const t of tiers) {
-      declared[`T${t}`] = family.structuralParams(t);
-      if (family.metadata) metadata[`T${t}`] = family.metadata(t);
-    }
-    const mismatch = new Map<string, { tier: number; detail: string; count: number }>();
-    let emissions = 0;
-    for (const tier of tiers) {
-      const r = makeRng(4242 + tier);
-      for (let i = 0; i < DRAWS; i += 1) {
-        try {
-          assembleSpagItem(family, tier, r);
-          emissions += 1;
-        } catch (e) {
-          // Only a PARAMETER disagreement is a sweep finding. A gate refusal (a draw that failed
-          // the child-facing check, a duplicate) is the generator working, not a false sheet.
-          const msg = e instanceof SpagGateError ? e.message : String(e);
-          if (/declared .* but the emitted item has|cannot recompute it/.test(msg)) {
-            const k = `${tier}|${msg}`;
-            const prev = mismatch.get(k);
-            mismatch.set(k, { tier, detail: msg, count: (prev?.count ?? 0) + 1 });
-          }
-        }
-      }
-    }
-    rows.push({
-      id: family.id,
-      swept: Boolean(family.recomputeParams),
-      tiers: tiers.map((t) => `T${t}`),
-      declared,
-      metadata,
-      emissions,
-      mismatches: [...mismatch.values()],
-    });
-  }
+  const rows = sweepSpagFamilies();
 
   const generatedAt = new Date().toISOString();
   const stamp = artefactStamp(rows, generatedAt, 'content', 'every SPaG family swept for disagreement between its declared parameters and the items it emits');
