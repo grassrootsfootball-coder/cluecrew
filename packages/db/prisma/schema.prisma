@@ -409,6 +409,7 @@ model Misconception {
   // approval names both and that they differ — self-recording would launder
   // an admin's own approval into a reviewer's name.
   /**
+   * /**
    * /** "human:<email>" — the ADMIN who entered a decision made elsewhere.
    */
   recordedBy     String?
@@ -462,6 +463,13 @@ enum AttributionAction {
 model AttributionEvent {
   id          String            @id @default(cuid())
   /**
+   * THE NAMED REVIEWER (R65). Nullable because 609 events pre-date it and are resolved by the
+   * evidence-backed backfill, not by a guess. New SIGNED events cannot be written without it —
+   * see `recordSignature` and `check:signing-doors`.
+   */
+  reviewerId  String?
+  reviewer    Reviewer?         @relation(fields: [reviewerId], references: [id])
+  /**
    * "misconception" | "item" | "nvr-signature" | "word"
    */
   recordType  String
@@ -471,7 +479,11 @@ model AttributionEvent {
   recordId    String
   action      AttributionAction
   /**
-   * the INDIVIDUAL — "previous-reviewer" | "current-reviewer" | "unattributed"
+   * DEPRECATED AS AN IDENTITY, KEPT AS A CACHE (R65). Holds whatever was recorded at the time —
+   * a role placeholder ("current-reviewer"), a bare name ("annie"), or an email. Deliberately NOT
+   * rewritten: these placeholders and the `actor-identity` REASSIGNED events that resolve them are
+   * the EVIDENCE for the R65 backfill, and normalising this column would destroy the record being
+   * used to justify it. Read `reviewerId` for identity; read this only for what was first written.
    */
   actor       String
   /**
@@ -1075,4 +1087,48 @@ model FamilyBankSignature {
    */
   recordedBy  String
   notes       String?
+}
+
+// THE NAMED REVIEWER (David + annie, 2026-08-12 — R65).
+//
+// `AttributionEvent.actor` was a free string holding three different kinds of thing: a role
+// placeholder ("current-reviewer", 462 events), a bare name ("annie", "joan"), and an email.
+// Resolution ran through `actor-identity` REASSIGNED events mapping placeholder → name. That was
+// a real mechanism and it worked, but a BARE NAME is neither stable nor unique: a name change
+// means rewriting 462 rows or adding a second hop, and a second Anne collides in silence. Sixteen
+// clusters are about to produce more signatures, and this is the one item that gets worse purely
+// by waiting — annie has raised it at 13, 33 and 46 signatures.
+//
+// TIME-SCOPED, NOT GLOBAL. The existing mapping asserts "current-reviewer = annie" for all time.
+// True today and silently wrong the day a third reviewer arrives, because the placeholder is a
+// ROLE and roles are handed over. `heldFrom`/`heldUntil` bound the claim to the window in which
+// it is true, so resolving an event means asking who held the role WHEN THE EVENT HAPPENED.
+model Reviewer {
+  /**
+   * Stable and opaque — never a name, so a name change is a display edit and nothing else.
+   */
+  id            String    @id
+  /**
+   * What a human reads. Free to change; nothing keys on it.
+   */
+  displayName   String
+  /**
+   * The `actor` placeholder this reviewer resolves ("current-reviewer"), if any. Null for a
+   * reviewer who was always named directly.
+   */
+  resolvesActor String?
+  /**
+   * The window in which this reviewer held that role. heldUntil null = still holds it.
+   */
+  heldFrom      DateTime
+  heldUntil     DateTime?
+  /**
+   * Why this mapping is believed — the evidence, not a description.
+   */
+  evidence      String?
+  createdAt     DateTime  @default(now())
+
+  events AttributionEvent[]
+
+  @@index([resolvesActor, heldFrom])
 }
