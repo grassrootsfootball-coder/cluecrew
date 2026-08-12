@@ -17,11 +17,78 @@
  * batch file and its review pack can never be confused for one another.
  */
 import { createHash } from 'node:crypto';
-import { copyFileSync, mkdirSync, readdirSync, rmSync } from 'node:fs';
-import { basename, join } from 'node:path';
+import { copyFileSync, existsSync, mkdirSync, readFileSync, readdirSync, rmSync, statSync } from 'node:fs';
+import { basename, join, resolve } from 'node:path';
 
 /** Confirmed with David, 2026-08-02: Cowork reads the ~/Downloads/11+/ tree. */
 export const OUTBOUND_DIR = '/Users/davidb/Downloads/11+/from-cluecrew';
+
+/**
+ * RETIRE A DROP TREE NOTHING WRITES TO ANY MORE.
+ *
+ * A delivery folder no export still targets is the worst kind of stale: every file in it reads
+ * as current, nothing updates it, and nobody can tell by looking. `~/Downloads/reviewer-latest`
+ * was one — a fixed-filename-era tree that stopped receiving deliveries when everything moved to
+ * OUTBOUND_DIR, leaving twenty-one files still captioned "latest" by their own README.
+ *
+ * REFUSES RATHER THAN ASSUMES, which is the point. A file is removed only when it is ACCOUNTED
+ * FOR, one of three ways:
+ *   DUPLICATE   — byte-identical to a same-named file in the live outbound folder.
+ *   SUPERSEDED  — outbound holds a same-family file carrying a different content hash.
+ *   REGENERABLE — the caller names the command that rebuilds it.
+ * Anything else is KEPT and reported. Deleting a file nobody can reproduce is not tidying, and a
+ * cleanup that cannot say why each file went is the same unattributable change R47 closed.
+ */
+export function retireDropTree(
+  dir: string,
+  regenerable: Record<string, string> = {},
+): { removed: Array<{ name: string; why: string }>; kept: Array<{ name: string; why: string }> } {
+  if (resolve(dir) === resolve(OUTBOUND_DIR)) {
+    throw new Error('retireDropTree refuses to clear the LIVE outbound folder.');
+  }
+  const removed: Array<{ name: string; why: string }> = [];
+  const kept: Array<{ name: string; why: string }> = [];
+  const outbound = readdirSync(OUTBOUND_DIR);
+
+  const walk = (current: string, prefix: string): void => {
+    for (const entry of readdirSync(current)) {
+      const full = join(current, entry);
+      const label = prefix ? `${prefix}/${entry}` : entry;
+      if (statSync(full).isDirectory()) {
+        walk(full, label);
+        if (readdirSync(full).length === 0) {
+          rmSync(full, { recursive: true });
+          removed.push({ name: `${label}/`, why: 'directory emptied' });
+        }
+        continue;
+      }
+      const twin = join(OUTBOUND_DIR, entry);
+      if (existsSync(twin) && readFileSync(twin).equals(readFileSync(full))) {
+        rmSync(full);
+        removed.push({ name: label, why: 'DUPLICATE — byte-identical copy live in outbound' });
+        continue;
+      }
+      // Same family (the name with its 16-hex hash and extension stripped), different hash.
+      const family = entry.replace(/-[0-9a-f]{16}(?=[.-]|$)/, '').replace(/\.[^.]+$/, '');
+      const newer = outbound.find(
+        (o) => o !== entry && o.startsWith(`${family}-`) && /[0-9a-f]{16}/.test(o),
+      );
+      if (newer) {
+        rmSync(full);
+        removed.push({ name: label, why: `SUPERSEDED — outbound holds ${newer}` });
+        continue;
+      }
+      if (regenerable[entry]) {
+        rmSync(full);
+        removed.push({ name: label, why: `REGENERABLE — rebuild with \`${regenerable[entry]}\`` });
+        continue;
+      }
+      kept.push({ name: label, why: 'UNACCOUNTED — no outbound copy, nothing supersedes it, no rebuild command' });
+    }
+  };
+  walk(dir, '');
+  return { removed, kept };
+}
 
 /**
  * The content hash goes IN the filename (David's ruling, 2026-08-02), so copies
