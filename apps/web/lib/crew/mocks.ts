@@ -21,6 +21,7 @@ import {
   childMockResult,
   composeMockPaper,
   techniqueKeyOf,
+  pairIdOf,
   isBlueprintVerified,
   nextMockAllowedAt,
   scoreSitting,
@@ -212,6 +213,8 @@ export async function scheduleMock(
       // R49 — only carries a value on whole-text-purpose T4 comprehension items; absent everywhere
       // else, which composeMockPaper treats as "nothing to collide on."
       techniqueKey: techniqueKeyOf(item.stem),
+      // R19 #2 / R59 — the comma family's mirrored-pair id. Absent on everything else, same as above.
+      pairId: pairIdOf(item.stem),
     })),
     burnedItemIds: await burnedFor(childId),
     seed: `${childId}:${sittings.length}`,

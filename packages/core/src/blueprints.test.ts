@@ -314,6 +314,47 @@ describe('composeMockPaper', () => {
       expect(composed.shortfalls).toEqual([{ sectionIndex: 1, questionTypeId: 'en-comp-technique', needed: 1, available: 0 }]);
     });
 
+    it('never draws both halves of a linked pair into one paper (R19 #2 / R59)', () => {
+      // The comma family's mirrored pair: same clause fronted (keyed) and trailing (keyed N).
+      // Same tier throughout, so the tier sort cannot be what separates them.
+      const candidates: MockCandidateItem[] = [
+        { id: 'c0-although', questionTypeId: 'en-comp-technique', tier: 4, pool: 'MOCK', status: 'LIVE', pairId: 'mp-race' },
+        { id: 'c1-nt3', questionTypeId: 'en-comp-technique', tier: 4, pool: 'MOCK', status: 'LIVE', pairId: 'mp-race' },
+        { id: 'c0-once', questionTypeId: 'en-comp-technique', tier: 4, pool: 'MOCK', status: 'LIVE', pairId: 'mp-film' },
+      ];
+      const composed = composeMockPaper({ blueprint: techBlueprint, candidates, burnedItemIds: new Set(), seed: 'child-1:0' });
+      if (!composed.ok) throw new Error('expected composition to succeed');
+      const drawn = composed.sections[0]!.itemIds;
+      expect(drawn).toHaveLength(2);
+      expect(drawn.includes('c0-although') && drawn.includes('c1-nt3')).toBe(false);
+    });
+
+    it('a linked pair exhausting a slot is a loud shortfall, not a silent both-halves draw', () => {
+      const candidates: MockCandidateItem[] = [
+        { id: 'c0-while', questionTypeId: 'en-comp-technique', tier: 4, pool: 'MOCK', status: 'LIVE', pairId: 'mp-book' },
+        { id: 'c1-nt2', questionTypeId: 'en-comp-technique', tier: 4, pool: 'MOCK', status: 'LIVE', pairId: 'mp-book' },
+      ];
+      const composed = composeMockPaper({ blueprint: techBlueprint, candidates, burnedItemIds: new Set(), seed: 'child-1:0' });
+      expect(composed.ok).toBe(false);
+      if (composed.ok) return;
+      expect(composed.shortfalls).toEqual([{ sectionIndex: 0, questionTypeId: 'en-comp-technique', needed: 2, available: 2 }]);
+    });
+
+    it('the two dimensions are independent — a technique match and a pair match both exclude', () => {
+      // Distinct pairIds but a shared technique, and vice versa: each dimension bites on its own.
+      const candidates: MockCandidateItem[] = [
+        { id: 'a', questionTypeId: 'en-comp-technique', tier: 4, pool: 'MOCK', status: 'LIVE', pairId: 'p1', techniqueKey: 'shared' },
+        { id: 'b', questionTypeId: 'en-comp-technique', tier: 4, pool: 'MOCK', status: 'LIVE', pairId: 'p2', techniqueKey: 'shared' },
+        { id: 'c', questionTypeId: 'en-comp-technique', tier: 4, pool: 'MOCK', status: 'LIVE', pairId: 'p3', techniqueKey: 'distinct' },
+      ];
+      const composed = composeMockPaper({ blueprint: techBlueprint, candidates, burnedItemIds: new Set(), seed: 'child-1:0' });
+      if (!composed.ok) throw new Error('expected composition to succeed');
+      const drawn = composed.sections[0]!.itemIds;
+      // a and b share a technique, so they cannot co-occur even though their pairIds differ.
+      expect(drawn.includes('a') && drawn.includes('b')).toBe(false);
+      expect(drawn).toContain('c');
+    });
+
     it('items with no techniqueKey are never constrained by it', () => {
       // The overwhelming majority of items (every non-whole-text-purpose shape, every other
       // district): techniqueKey is absent, and absence must never collide with itself.

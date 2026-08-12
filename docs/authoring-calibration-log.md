@@ -2722,3 +2722,56 @@ beside; `stem` being an open JSON object with no migration cost is the argument 
 why they are there now. **Two systems designed separately, meeting in one JSON column.** Whoever
 wires the serving exclusion should rule on it then, with the registry populated, rather than now
 with both registries empty.
+
+## R59 — The comma linked-pair wiring, built. R55's premise had been removed by R57.
+*David, 2026-08-12. Re-scoped on request; the answer changed, and it changed because of work done
+in between.*
+
+**Neither option as posed, and the first is a category error worth naming.** "Buildable against
+`COMMA_BANK` directly" is what made the two AUDITS buildable — they check authored source.
+`composeMockPaper` reads `prisma.item.findMany`. A serving function cannot be built against a bank,
+because it excludes among what is PERSISTED, not among what was authored. That distinction is the
+one R51 drew and it still holds.
+
+**On Layer 0: R55 said blocked. That was true when written, and my own R57 work removed the
+premise.** Measured now rather than restated:
+
+- The English importer's `QUESTION_TYPES` includes **`en-spag-punct-spot`** — the type a comma item
+  is. It was never comprehension-only.
+- Post-R57 that door is passthrough-plus-validate, so **a declared `stem.pairId` now survives
+  import** — verified directly, schema accepts it.
+
+So the blocker changed CHARACTER, from structural to ordinary:
+
+| | R55 (2026-08-12, earlier) | R59 (now) |
+|---|---|---|
+| generated comma items | no persistence path | unchanged — still Layer 0 |
+| **authored** comma items | allowlist dropped `pairId` | **path open** |
+| what blocks the wiring | a platform decision | nothing — only that no item carries it yet |
+
+**That is exactly `techniqueKey`'s status, whose wiring IS built (R50) with zero items carrying it.**
+Withholding one while building the other, when both have open paths and empty populations, is an
+inconsistency that would itself have become a finding. **Built.**
+
+**The honest asymmetry, stated because it is the one argument against:** the brief instructs authors
+to declare `techniqueKey` on the nineteen clusters, so planned work will populate it. Nothing
+schedules hand-authored mirrored comma pairs. The path is open; no one is walking it. That makes
+this weaker than R50's case — but the failure mode of NOT building is silent: the moment anyone
+authors a linked pair, R19 #2 goes unenforced with nothing reporting it, which is the shape this
+whole sequence has been closing.
+
+**Generalised rather than duplicated.** The second exclusion is not a second Set and a second loop —
+`composeMockPaper` now carries a small **dimension table** (`{name, of, used}`), because R51
+established these are one algorithm over different data and R53 has already scoped a third
+(`answerShape`). The third is a row, not a third copy. All 27 pre-existing technique tests pass
+through the generalised path unchanged, which is what proves the generalisation was a refactor.
+
+**Three tests added:** both halves of a pair never co-occur; pair exhaustion is a loud SHORTFALL, not
+a silent both-halves draw; and the two dimensions are INDEPENDENT — a shared technique excludes even
+when `pairId`s differ, and vice versa. 577 tests pass.
+
+**Correcting my own record:** R51 ruled this "not worth building until Layer 0 is decided… dead code
+exactly as unreachable as `pairId` is today." That reasoning was sound on its premise and the premise
+is gone — not because Layer 0 was decided, but because a different fix (R57) opened the door
+incidentally. **A withheld decision should be re-checked when the thing it was waiting on changes,
+even when what changed was not the thing it was waiting FOR.**

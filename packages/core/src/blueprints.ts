@@ -122,6 +122,12 @@ export function techniqueKeyOf(stem: unknown): string | undefined {
   return typeof value === 'string' && value.trim() ? value : undefined;
 }
 
+/** Reads `stem.pairId` the same defensive way `techniqueKeyOf` reads its field. */
+export function pairIdOf(stem: unknown): string | undefined {
+  const value = (stem as { pairId?: unknown } | null | undefined)?.pairId;
+  return typeof value === 'string' && value.trim() ? value : undefined;
+}
+
 /** What assembly needs to know about an item. Everything else stays behind. */
 export interface MockCandidateItem {
   id: string;
@@ -141,6 +147,18 @@ export interface MockCandidateItem {
    * have no recurring device to collide on, so there is nothing to exclude against.
    */
   techniqueKey?: string;
+  /**
+   * R19 #2 / R59 — the LINKED PAIR id. The comma family's mirrored pairs (`mp-race`, `mp-film`,
+   * `mp-book`) are the district's one sanctioned repeated sentence: the same clause fronted (keyed)
+   * and trailing (keyed N), allowed because the repetition teaches the contrast. Met together in
+   * one paper they become a giveaway instead, so the two ids are a LINKED PAIR, not independent
+   * items.
+   *
+   * Excluded by the same mechanism as `techniqueKey`, because the exact-pair-versus-open-set
+   * distinction is a fact about the DATA, not about the algorithm (R51): a Set of values already
+   * used excludes correctly whether the group has two members or twenty.
+   */
+  pairId?: string;
 }
 
 export interface ComposedPaper {
@@ -263,12 +281,32 @@ export function composeMockPaper(input: {
   const shortfalls: CompositionShortfall[] = [];
   const sections: Array<{ itemIds: string[] }> = [];
   const takenThisPaper = new Set<string>();
-  // R49 — whole-paper, not per-section: two items sharing a technique must never co-occur even
+  // WHOLE-PAPER EXCLUSION DIMENSIONS (R49 technique, R19 #2 / R59 linked pair).
+  //
+  // Whole-paper, not per-section: two items colliding on any of these must never co-occur even
   // across different sections. Filtered into `available` at the same point as `takenThisPaper`, so
-  // the shortfall check below still guarantees the per-tier draw loop always has enough — a
-  // technique collision that would starve a slot is reported as a shortfall, the same loud failure
-  // as running out of items outright, never a silent same-technique substitution.
-  const techniquesThisPaper = new Set<string>();
+  // the shortfall check still guarantees the per-tier draw loop has enough — a collision that would
+  // starve a slot is reported as a SHORTFALL, the same loud failure as running out of items
+  // outright, never a silent same-technique or same-pair substitution.
+  //
+  // A TABLE rather than one Set per dimension, because R51 established these are one algorithm over
+  // different data, and R53 has already scoped a third (`answerShape`) — so the third is a row here,
+  // not a third copy of the same loop.
+  const dimensions: Array<{ name: string; of: (item: MockCandidateItem) => string | undefined; used: Set<string> }> = [
+    { name: 'technique', of: (item) => item.techniqueKey, used: new Set() },
+    { name: 'linked pair', of: (item) => item.pairId, used: new Set() },
+  ];
+  const collides = (item: MockCandidateItem): boolean =>
+    dimensions.some((d) => {
+      const value = d.of(item);
+      return value !== undefined && d.used.has(value);
+    });
+  const recordDimensions = (item: MockCandidateItem): void => {
+    for (const d of dimensions) {
+      const value = d.of(item);
+      if (value !== undefined) d.used.add(value);
+    }
+  };
 
   blueprint.sections.forEach((section, sectionIndex) => {
     const itemIds: string[] = [];
@@ -278,9 +316,7 @@ export function composeMockPaper(input: {
     }
     for (const [questionTypeId, count] of Object.entries(section.typeMix)) {
       const available = (byType.get(questionTypeId) ?? []).filter(
-        (item) =>
-          !takenThisPaper.has(item.id) &&
-          !(item.techniqueKey && techniquesThisPaper.has(item.techniqueKey)),
+        (item) => !takenThisPaper.has(item.id) && !collides(item),
       );
       if (available.length < count) {
         shortfalls.push({ sectionIndex, questionTypeId, needed: count, available: available.length });
@@ -308,13 +344,11 @@ export function composeMockPaper(input: {
           itemIds.push(item.id);
           takenThisPaper.add(item.id);
           addedForThisType += 1;
-          if (item.techniqueKey) {
-            techniquesThisPaper.add(item.techniqueKey);
-            // A second pick in THIS SAME slot (a section asking for >1 of this type) must not
-            // collide either — the outer `available` filter only ran once, before this loop started.
-            for (let i = remaining.length - 1; i >= 0; i -= 1) {
-              if (remaining[i]!.techniqueKey === item.techniqueKey) remaining.splice(i, 1);
-            }
+          recordDimensions(item);
+          // A second pick in THIS SAME slot (a section asking for >1 of this type) must not collide
+          // either — the outer `available` filter only ran once, before this loop started.
+          for (let i = remaining.length - 1; i >= 0; i -= 1) {
+            if (collides(remaining[i]!)) remaining.splice(i, 1);
           }
         }
       }
