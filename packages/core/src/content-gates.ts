@@ -79,7 +79,7 @@ export const ROLE_RULES: Record<ContentRole, RoleRules> = {
 
 export interface ContentFailure {
   where: string;
-  rule: 'sentence-length' | 'long-words' | 'banned-vocabulary' | 'internal-id-leak' | 'us-spelling' | 'notation';
+  rule: 'sentence-length' | 'long-words' | 'banned-vocabulary' | 'internal-id-leak' | 'us-spelling' | 'notation' | 'placeholder-tag';
   detail: string;
   /**
    * Absent means 'error' — every rule that existed before UK spelling arrived
@@ -653,4 +653,68 @@ export function checkWordCardImagePrompts(card: {
   return parts.flatMap(([field, text]) =>
     text ? checkBannedVocabulary(`word:${card.id} ${field}`, text, 'child-facing', card.headword) : [],
   );
+}
+
+/**
+ * A MISCONCEPTION WITHOUT A DESCRIPTION AND A HINT IS A PLACEHOLDER, NOT A PROPOSAL
+ * (annie, 2026-08-12). Refused at CREATION, never at use.
+ *
+ * The evidence is a drift nobody could see while it happened: undescribed tags carried 9% of
+ * distractors across four clusters, then 29% across the next four, with nothing about the passages
+ * changing. Nothing about the content explains a figure tripling — the tag itself does. An id with
+ * no description cannot REFUSE a use, because there is no stated meaning to contradict, so it
+ * becomes the sink for anything that needs a name and has not earned one. Every use is locally
+ * reasonable and the aggregate is a library with a hole in it.
+ *
+ * Refusing at use would be too late twice over: the tag already exists to be reached for, and the
+ * refusal lands on whoever is authoring an item rather than on whoever left the placeholder.
+ *
+ * The floor is deliberately far below anything authored. Across the 270 entries that existed when
+ * this landed, the shortest description was 25 characters ("Swapping the definitions.") and the
+ * shortest hint 40 ("You found a twin — now find the reverse."). Twelve is not a quality bar and
+ * is not meant to be one — a reviewer judges quality. It is the line under which a value cannot
+ * be a statement about a child's thinking at all: it catches the empty string, the whitespace, and
+ * "TBD"/"TODO"/"n/a"/"?" without ever reaching for a legitimately terse entry.
+ *
+ * The DATABASE enforces the same rule (`misconception_needs_description_and_hint`), because there
+ * are twenty-odd creation doors and a rule that lives in each of them is a rule that drifts — R42
+ * and R57, five times over. This function exists so a human at the CMS door gets a sentence
+ * explaining the refusal instead of a constraint-violation stack trace.
+ */
+export const MISCONCEPTION_MIN_CHARS = 12;
+
+export function checkMisconceptionProposal(entry: {
+  id: string;
+  description: string;
+  childHint: string;
+}): ContentFailure[] {
+  const failures: ContentFailure[] = [];
+  const fields: Array<['description' | 'childHint', string]> = [
+    ['description', entry.description ?? ''],
+    ['childHint', entry.childHint ?? ''],
+  ];
+  for (const [field, raw] of fields) {
+    const value = String(raw).trim();
+    if (value.length === 0) {
+      failures.push({
+        where: `misconception:${entry.id} ${field}`,
+        rule: 'placeholder-tag',
+        detail:
+          `${field} is empty. A misconception id with no ${field} is a placeholder, not a ` +
+          'proposal — it cannot refuse a use, so it becomes the sink for anything needing a name.',
+      });
+      continue;
+    }
+    if (value.length < MISCONCEPTION_MIN_CHARS) {
+      failures.push({
+        where: `misconception:${entry.id} ${field}`,
+        rule: 'placeholder-tag',
+        detail:
+          `${field} is ${value.length} characters ("${value}") — below the ${MISCONCEPTION_MIN_CHARS}-character ` +
+          'floor under which a value cannot be a statement about a child\'s thinking. Say what the ' +
+          'child did, or do not create the tag yet.',
+      });
+    }
+  }
+  return failures;
 }

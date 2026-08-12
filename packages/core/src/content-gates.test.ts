@@ -11,6 +11,7 @@ import {
   roleForItemStem,
   checkWordCardImagePrompts,
   headwordIsBanned,
+  checkMisconceptionProposal,
 } from './content-gates';
 
 const LONG =
@@ -525,5 +526,58 @@ describe('R23 — declared passage proper nouns', () => {
       checkChildFacingText({ role: 'item-stem', label: 'T', text: 'Elizabeth got the wrong answer.', passageNames: ['Elizabeth'] })
         .some((f) => f.rule === 'banned-vocabulary'),
     ).toBe(true);
+  });
+});
+
+describe('checkMisconceptionProposal — a placeholder is not a proposal', () => {
+  const ok = {
+    id: 'vr-surface-match',
+    description: 'Chose the option that looks similar rather than the one that means the same.',
+    childHint: 'Look at what the words MEAN, not how they look.',
+  };
+
+  it('accepts an entry that says what the child did', () => {
+    expect(checkMisconceptionProposal(ok)).toEqual([]);
+  });
+
+  it('refuses an empty description', () => {
+    const found = checkMisconceptionProposal({ ...ok, description: '' });
+    expect(found).toHaveLength(1);
+    expect(found[0]!.rule).toBe('placeholder-tag');
+    expect(found[0]!.where).toContain('description');
+  });
+
+  it('refuses an empty childHint', () => {
+    const found = checkMisconceptionProposal({ ...ok, childHint: '' });
+    expect(found).toHaveLength(1);
+    expect(found[0]!.where).toContain('childHint');
+  });
+
+  it('refuses whitespace, which is empty wearing a disguise', () => {
+    expect(checkMisconceptionProposal({ ...ok, description: '   \n  ' })).toHaveLength(1);
+  });
+
+  it('refuses the placeholder tokens people actually type', () => {
+    for (const token of ['TBD', 'TODO', 'n/a', '?', '-', 'xxx']) {
+      expect(
+        checkMisconceptionProposal({ ...ok, description: token }),
+        `"${token}" must not pass as a description`,
+      ).toHaveLength(1);
+    }
+  });
+
+  it('reports BOTH fields when both are missing, so one fix does not reveal another', () => {
+    expect(checkMisconceptionProposal({ ...ok, description: '', childHint: '' })).toHaveLength(2);
+  });
+
+  it('does not reach for a legitimately terse entry', () => {
+    // The shortest real entries when this landed: 25 chars of description, 40 of hint.
+    expect(
+      checkMisconceptionProposal({
+        id: 'maths-20-factors-vs-multiples',
+        description: 'Swapping the definitions.',
+        childHint: 'You found a twin — now find the reverse.',
+      }),
+    ).toEqual([]);
   });
 });

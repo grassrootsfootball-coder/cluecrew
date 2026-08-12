@@ -62,7 +62,45 @@ function record(isServing: boolean, found: ContentFailure[]): void {
 }
 
 
+/**
+ * THE CONTENT RULES THAT LIVE IN THE DATABASE, ASSERTED HERE SO THEY CANNOT BE DROPPED QUIETLY.
+ *
+ * Two rules are enforced by CHECK constraints rather than by application code, because each has
+ * too many creation doors for a per-door rule to survive (R42/R57):
+ *   word_live_needs_reviewer                  — a LIVE word needs a named reviewer.
+ *   misconception_needs_description_and_hint  — a placeholder is not a proposal (annie, 2026-08-12).
+ *
+ * A constraint is invisible in the Prisma schema, so nothing else in CI would notice its removal:
+ * a migration that drops one leaves every gate green while the rule silently stops existing. This
+ * is the canary for that — it fails if the constraint is not on the table.
+ */
+const REQUIRED_CONSTRAINTS = [
+  'word_live_needs_reviewer',
+  'misconception_needs_description_and_hint',
+];
+
+async function assertConstraints(): Promise<void> {
+  const rows = await prisma.$queryRaw<Array<{ conname: string }>>`
+    SELECT conname FROM pg_constraint WHERE contype = 'c'
+  `;
+  const present = new Set(rows.map((r) => r.conname));
+  const missing = REQUIRED_CONSTRAINTS.filter((name) => !present.has(name));
+  if (missing.length > 0) {
+    console.error('DATABASE CONTENT CONSTRAINTS MISSING — a rule has been dropped:');
+    for (const name of missing) console.error(`  ${name}`);
+    console.error(
+      'These are enforced in the database precisely because they have too many creation doors\n' +
+        'to be enforced per-door. Without them the rule does not exist anywhere. Restore the\n' +
+        'constraint in a migration; do not delete this check.',
+    );
+    await prisma.$disconnect();
+    process.exit(1);
+  }
+  console.log(`Database content constraints present: ${REQUIRED_CONSTRAINTS.join(', ')}.`);
+}
+
 async function main(): Promise<void> {
+  await assertConstraints();
   // --- Word cards ---------------------------------------------------------
   for (const word of await prisma.word.findMany()) {
     counted.words += 1;

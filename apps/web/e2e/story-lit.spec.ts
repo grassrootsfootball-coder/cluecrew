@@ -24,6 +24,9 @@ const CLUE_ITEM = 'e2e-story-clue-item';
 /** Matches the `[[brave]]` marker and `seededWordIds` in the same fixture. */
 const SEEDED_WORD = 'brave';
 
+/** The word's status before this spec touched it, so teardown RESTORES rather than assumes. */
+let priorWord: { status: 'DRAFT' | 'LIVE' | 'RETIRED'; reviewedBy: string | null } | null = null;
+
 const CORRECT = 'courageous';
 const DISTRACTOR = 'cautious';
 
@@ -54,6 +57,11 @@ test.beforeAll(async () => {
   // not decoration: the DB enforces `word_live_needs_reviewer` (the Word review door), so a LIVE
   // word without a reviewer is rejected at the database. The fixture satisfies the real rule
   // rather than working around it.
+  const before = await prisma.word.findUnique({
+    where: { id: SEEDED_WORD },
+    select: { status: true, reviewedBy: true },
+  });
+  priorWord = before ?? null;
   await prisma.word.upsert({
     where: { id: SEEDED_WORD },
     create: {
@@ -73,7 +81,16 @@ test.beforeAll(async () => {
 test.afterAll(async () => {
   await prisma.itemOption.deleteMany({ where: { itemId: CLUE_ITEM } });
   await prisma.item.deleteMany({ where: { id: CLUE_ITEM } });
-  await prisma.word.updateMany({ where: { id: SEEDED_WORD }, data: { status: 'DRAFT' } });
+  // Restore what was there. Forcing DRAFT would be a guess: on a dev database `brave` is a real
+  // LIVE vault card, and a test that quietly demotes live content is a test with a side effect.
+  if (priorWord === null) {
+    await prisma.word.deleteMany({ where: { id: SEEDED_WORD } });
+  } else {
+    await prisma.word.updateMany({
+      where: { id: SEEDED_WORD },
+      data: { status: priorWord.status, reviewedBy: priorWord.reviewedBy },
+    });
+  }
   await cleanupFixtures();
 });
 

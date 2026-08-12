@@ -1,7 +1,7 @@
 'use server';
 
 import { redirect } from 'next/navigation';
-import { checkWordCard, misconceptionImportSchema } from '@cluecrew/core';
+import { checkMisconceptionProposal, checkWordCard, misconceptionImportSchema } from '@cluecrew/core';
 import { z } from 'zod';
 import { prisma, recordMisconceptionApprovals } from '@cluecrew/db';
 import { currentStaff, recordAudit, roleAllows } from '@/lib/staff';
@@ -117,6 +117,16 @@ export async function importMisconceptionsAction(formData: FormData): Promise<vo
   }
   if (entries.length === 0 || entries.length > 200) {
     redirect('/admin/misconceptions?error=invalid-import');
+  }
+
+  // A PLACEHOLDER IS NOT A PROPOSAL (annie, 2026-08-12). Refused at creation: an id with no
+  // stated meaning cannot refuse a use later, so it becomes the sink for anything needing a name
+  // — undescribed tags went from 9% of distractors to 29% with nothing about the passages
+  // changing. The DATABASE enforces the same rule for the twenty-odd other creation doors; this
+  // check is here so a reviewer gets a sentence rather than a constraint violation.
+  const placeholders = entries.flatMap((entry) => checkMisconceptionProposal(entry));
+  if (placeholders.length > 0) {
+    redirect(`/admin/misconceptions?error=placeholder-entries&n=${placeholders.length}`);
   }
 
   let imported = 0;
