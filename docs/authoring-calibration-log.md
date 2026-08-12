@@ -2776,6 +2776,68 @@ is gone — not because Layer 0 was decided, but because a different fix (R57) o
 incidentally. **A withheld decision should be re-checked when the thing it was waiting on changes,
 even when what changed was not the thing it was waiting FOR.**
 
+## R60 — A count is necessary but not sufficient: a zero has to be LOUD, not merely visible
+*annie, 2026-08-12. Backfilled into the register 2026-08-12 — recorded in CLAUDE.md at the time
+and not here, which is the gap R64 closes.*
+
+Every check and every export states the size of the population it actually screened, and when that
+population is EMPTY it says so in terms that cannot be read as a pass. **A printed figure alone
+does not do this.** `verify:solutions` printed "0 MATHS items checked" in every CI run since it was
+written; the zero was in the log every time and still read as a pass, because nothing in the line
+said that nothing had been checked.
+
+Three questions, asked of any check BEFORE trusting a green:
+
+1. What does it print when it sees nothing, and is that distinguishable from a clean pass?
+2. Does it know anything it MUST find — a canary that fails if the check goes blind?
+3. **Is it reading the artefact, or a copy of it?** Weight this one; it is R57's finding in
+   checking clothes.
+
+A verdict that is legitimate for a considered gap is the worst possible default for a blind run:
+the maths param sweep scored PARTIAL on nineteen families that emitted nothing, PARTIAL meaning
+"a recorded judgement", under a "0 disagreeing" headline. An export that delivers must also REFUSE
+to supersede a good artefact with a blind one.
+
+## R61 — The fourth register shape: a check named for a population the pipeline never produces
+*annie, 2026-08-12. Backfilled 2026-08-12.*
+
+The other three blind-check shapes are faults in the check: wrong scope, a stale proxy, an
+unreported denominator. **This one is not.** The check is correctly written and points at something
+that has never existed, so its empty run is GENUINELY CORRECT — and neither of R60's first two
+questions catches it, because a canary cannot fire on a population that is legitimately absent and
+a printed count of zero is the true number.
+
+`verify:solutions` and `check:maths-distractors` are the instance: both correct, both screening a
+MATHS item bank that no code path creates.
+
+**The guard is a DECLARATION, not an inference.** Any gate whose population could legitimately be
+empty says so explicitly, once, in writing, with the reason — `declareMayBeEmpty()` in
+`scripts/lib/population.ts`, which reprints that reason on every empty run so a temporary gap
+cannot decay into a green tick. **Every other gate treats an empty population as a PIPELINE
+FAILURE** — `requirePopulation()`. A gate calling neither has not thought about it.
+
+## R62 — Reviewed content is immutable to code changes
+*annie, 2026-08-12. Backfilled 2026-08-12. R63 narrows WHICH writers this binds.*
+
+Derived option values are a function of a derivation function, so a change to that function
+rewrites every item it owns, reviewed ones included. `seed:items` and `content:generate` both did
+this unconditionally, and `content:generate` deleted and recreated every option.
+
+Both now CLASSIFY BEFORE WRITING (`packages/db/prisma/reviewed-guard.ts`). A row is reviewed if
+LIVE, RETIRED, or carrying any attribution event. Reviewed-and-unchanged is a no-op; reviewed-and-
+would-change FAILS the whole run before a single write, so a refusal leaves the database exactly as
+it was. **No warning, no version, no automatic update with a note** — anything softer reintroduces
+the same path with a paper trail, and the trail does not help if nobody reads it before serving.
+
+**State the denominator you read.** The exposure was 127 derived+reviewed items, but only 100 were
+measurable: a seed run had already overwritten the other 27, so their "no divergence" was trivially
+true. Report it as 100 measured, 27 reconstructed — never 127 with a caveat.
+
+**Zero divergence is an OUTCOME, not evidence the design held.** `distractors.ts` changed ninety
+minutes AFTER those items were attributed, in a commit touching exactly the four affected families.
+The coupling was live, unguarded, and exercised the same day; it happened not to alter those values.
+Anyone skimming "all re-derived clean" reads reassurance about the design, and it is the opposite.
+
 ## R63 — Which writers need the guard: who authored the value, not how the command is invoked
 *Anne + David, 2026-08-12. Three criteria were proposed in sequence; this is the third, and the
 only one that is a FACT ABOUT THE CODE rather than a judgement about behaviour.*

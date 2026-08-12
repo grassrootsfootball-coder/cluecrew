@@ -14,6 +14,13 @@ The build is governed by documents, and the documents win arguments.
    `docs/LIVE-LAUNCH-PACK-V3.md` + `docs/LAUNCH-PACK-V3.1-TEACHING-ENGINE.md`
    for the public page.
 
+**Where a ruling lives.** `docs/authoring-calibration-log.md` is THE REGISTER — the numbered
+record, one `## R<n>` heading per ruling, with the reasoning and the evidence. This file carries the
+operative TEXT of the rules that recur, because a rule reduced to "see R57" is a rule nobody has in
+context at the moment they would break it. Both therefore hold content, and they can drift: R60–R62
+were written here and never reached the register. `pnpm check:register` now fails if a rule cited
+here has no register entry. A ruling goes to the register FIRST; it comes here only if it recurs.
+
 **House rules that recur:**
 - All child-facing strings pass `pnpm scan:vocab` and the reading-age lint;
   never exempt a scanner hit — reword it.
