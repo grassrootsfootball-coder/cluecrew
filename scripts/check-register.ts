@@ -20,9 +20,25 @@
  * reverse is deliberately not asserted — the register holds sixty-odd rulings and only the ones
  * that recur belong in a session-start file, so "in the register but not in CLAUDE.md" is the
  * normal case, not a fault.
+ *
+ * FOUR ROUTES, because the first version watched ONE and its green tick stood for more than it
+ * covered. R64 and R65 were committed and left unregistered hours after R64 closed exactly this
+ * failure, and this check passed throughout: they were cited in COMMIT MESSAGES, and it only read
+ * CLAUDE.md. Measured, the routes and what each carries:
+ *
+ *   1. CLAUDE.md            — 13 rule numbers
+ *   2. source comments      — 36
+ *   3. commit messages      — 56, the widest by far, and the one that was invisible
+ *   4. docs outside the register — 3
+ *
+ * ROUTE 3 NEEDS GIT HISTORY, and `actions/checkout` clones shallow by default — one commit. CI now
+ * sets `fetch-depth: 0` so the route is genuinely covered. When history is unavailable anyway the
+ * check SAYS the route was not read rather than skipping it quietly, because a route silently
+ * dropped is how this blind spot happened in the first place (R60).
  */
-import { readFileSync } from 'node:fs';
-import { resolve } from 'node:path';
+import { execFileSync } from 'node:child_process';
+import { readFileSync, readdirSync } from 'node:fs';
+import { join, resolve } from 'node:path';
 import { requirePopulation } from './lib/population';
 
 const ROOT = resolve(import.meta.dirname, '..');
@@ -36,12 +52,77 @@ function main(): void {
   const recorded = new Set(
     [...register.matchAll(/^## R(\d+)\b/gm)].map((m) => Number(m[1])),
   );
-  const cited = new Set([...houseRules.matchAll(/\bR(\d+)\b/g)].map((m) => Number(m[1])));
+
+  /** Two-digit-plus only outside CLAUDE.md: bare `R1`-style matches catch far too much prose. */
+  const cite = (text: string, minDigits: number): number[] =>
+    [...text.matchAll(new RegExp(`\\bR(\\d{${minDigits},})\\b`, 'g'))].map((m) => Number(m[1]));
+
+  const routes: Array<{ name: string; numbers: number[]; read: boolean; why?: string }> = [];
+  routes.push({ name: 'CLAUDE.md', numbers: cite(houseRules, 1), read: true });
+
+  // Source comments.
+  const sourceFiles: string[] = [];
+  const walk = (dir: string): void => {
+    for (const entry of readdirSync(dir, { withFileTypes: true })) {
+      if (entry.isDirectory()) {
+        if (['node_modules', '.next', 'migrations', '.git'].includes(entry.name)) continue;
+        walk(join(dir, entry.name));
+      } else if (/\.(ts|tsx|mjs)$/.test(entry.name)) sourceFiles.push(join(dir, entry.name));
+    }
+  };
+  for (const d of ['scripts', 'packages', 'apps']) walk(resolve(ROOT, d));
+  routes.push({
+    name: 'source comments',
+    numbers: sourceFiles.flatMap((f) => cite(readFileSync(f, 'utf8'), 2)),
+    read: true,
+  });
+
+  // Docs other than the register itself.
+  const docs = readdirSync(resolve(ROOT, 'docs')).filter((f) => f.endsWith('.md') && !REGISTER.endsWith(f));
+  routes.push({
+    name: 'docs (excl. register)',
+    numbers: docs.flatMap((f) => cite(readFileSync(resolve(ROOT, 'docs', f), 'utf8'), 2)),
+    read: true,
+  });
+
+  // Commit messages — the route that was invisible, and the widest.
+  let log = '';
+  let logRead = true;
+  let why: string | undefined;
+  try {
+    const shallow = execFileSync('git', ['rev-parse', '--is-shallow-repository'], { cwd: ROOT }).toString().trim();
+    if (shallow === 'true') {
+      logRead = false;
+      why = 'the clone is SHALLOW — set fetch-depth: 0 on actions/checkout to cover this route';
+    } else {
+      log = execFileSync('git', ['log', '--format=%B'], { cwd: ROOT, maxBuffer: 64 * 1024 * 1024 }).toString();
+    }
+  } catch {
+    logRead = false;
+    why = 'git is unavailable here';
+  }
+  routes.push({ name: 'commit messages', numbers: cite(log, 2), read: logRead, why });
+
+  const cited = new Set(routes.filter((r) => r.read).flatMap((r) => r.numbers));
 
   requirePopulation('check:register', {
     'register entries': recorded.size,
-    'rule numbers cited in CLAUDE.md': cited.size,
+    'rule numbers cited across readable routes': cited.size,
   });
+
+  for (const r of routes) {
+    console.log(
+      `    ${r.read ? 'read     ' : 'NOT READ '} ${r.name.padEnd(24)} ` +
+        (r.read ? `${new Set(r.numbers).size} rule number(s)` : `— ${r.why}`),
+    );
+  }
+  const unread = routes.filter((r) => !r.read);
+  if (unread.length > 0) {
+    console.log(
+      `  ⚠ ${unread.length} route(s) NOT READ: ${unread.map((r) => r.name).join(', ')}. This pass does\n` +
+        '    not cover them, so a rule cited only there would not be seen. Not a pass over them.',
+    );
+  }
 
   // CANARY: the highest recorded number must be reachable, or a parser that silently stopped
   // matching headings would report an empty register and pass everything by vacuum.
@@ -52,16 +133,15 @@ function main(): void {
   }
 
   const uncited = [...cited].filter((n) => !recorded.has(n)).sort((a, b) => a - b);
+  const routeOf = (n: number): string =>
+    routes.filter((r) => r.read && r.numbers.includes(n)).map((r) => r.name).join(', ');
   const gaps = Array.from({ length: highest }, (_, i) => i + 1).filter((n) => !recorded.has(n));
 
-  console.log(
-    `  register R1–R${highest}: ${recorded.size} entries, ${gaps.length} gap(s). ` +
-      `CLAUDE.md cites ${cited.size} rule number(s).`,
-  );
+  console.log(`  register R1–R${highest}: ${recorded.size} entries, ${gaps.length} gap(s).`);
 
   const failures: string[] = [];
   for (const n of uncited) {
-    failures.push(`R${n} is cited as a governing rule in ${HOUSE_RULES} but has no "## R${n}" entry in ${REGISTER}`);
+    failures.push(`R${n} is cited (${routeOf(n)}) but has no "## R${n}" entry in ${REGISTER}`);
   }
   if (gaps.length > 0) {
     // A gap is not automatically a fault — a number can be withdrawn — but it must be visible.

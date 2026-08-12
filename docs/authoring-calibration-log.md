@@ -3093,3 +3093,49 @@ and a reviewer who believes a ruling is on record will not repeat it.
 No mechanism proposed here. The fix is a process change about where rulings are made, not something
 this repo can enforce on itself, and inventing a check that cannot see the input would be the blind
 gate R61 describes.
+
+## R69 — A ruling can be "entered" in one library and absent from the other
+*David, 2026-08-12. Found while registering R66; reported, not fixed.*
+
+R66 records five library entries as **APPROVED AND ENTERED**. Measured against this database, all
+five are **ABSENT**:
+
+| id | in DB | ruling says |
+|---|---|---|
+| `en-within-span-wrong-element` | absent | approved and entered, 36 distractors |
+| `en-negation-dropped` | absent | approved and entered, 19 distractors |
+| `en-vocab-dominant-sense-imported` | absent | approved and entered, 19 census rows |
+| `en-vocab-neighbouring-sense` | absent | approved and entered, 12 |
+| `en-vocab-form-lookalike` | absent | approved and entered, 4 |
+| `en-coordination-wrong-conjunct` | absent | commissioned, not yet drafted — correctly absent |
+
+Every tag the ruling cites as ALREADY EXISTING is present and ACTIVE here — `en-attribute-transfer`,
+`en-cause-agent-swap`, `en-wrong-scope-retrieval`, `en-relation-word-flipped`,
+`en-inference-literal-lookalike`, `vr02-surface-link`. So the database is not stale in general; it
+is missing exactly the five the ruling created.
+
+**"Entered" was true of Cowork's library and false here.** That is a delivery gap between a ruling
+and the content it governs, and its cost is specific: **a reviewer can believe a decision is live
+when it is not.** Annie ruled on 36 + 19 distractors' worth of tagging; none of it can be applied
+in this repo until the entries exist, and the two confirmed retags (ENG-008-RC-05, ENG-006-TM-02)
+are blocked behind them.
+
+This is R68's shape with the direction reversed. R68 is a ruling that never arrives; this is a
+ruling that arrives as a RECORD while the content it authorises does not. Both are silent, and both
+leave the reviewer believing the work is done.
+
+**Not fixed here, deliberately.** Creating the five is a content write against a ruling, and three
+of the five (`en-vocab-dominant-sense-imported`, `en-vocab-neighbouring-sense`,
+`en-coordination-wrong-conjunct`) have no `childHint` in the ruling at all — R66 supplies hint text
+only for `en-within-span-wrong-element` and, in passing, `en-vocab-form-lookalike`. Drafting the
+missing three would be authoring, not transcription.
+
+**The R62 interaction is the guard working.** The database CHECK constraint
+`misconception_needs_description_and_hint` will REFUSE three of the five for want of a hint. That is
+correct and should not be relaxed to land them: an entry with no hint is the placeholder R62 exists
+to keep out, and "Annie approved the tag" is not the same as "Annie wrote the hint".
+
+**Open question for the reviewer, not answered here:** whether the five should be created as
+PROPOSED with the two known hints and three awaiting text, or held entire until all five have hints.
+The first makes the approval visible and the gap explicit; the second keeps the library uniformly
+complete. Either is defensible and it is her call, not a script's.

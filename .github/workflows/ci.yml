@@ -33,7 +33,13 @@ jobs:
       CRON_SECRET: ci-only-cron-secret
 
     steps:
+      # Full history: check:register reads COMMIT MESSAGES as one of the four routes a rule
+      # citation arrives by — the widest of them, and the one that was invisible when R64 and R65
+      # went unregistered. A shallow clone would leave that route unread, and the check would say
+      # so rather than pass over it silently, but reading it is better than reporting it missing.
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
 
       - uses: pnpm/action-setup@v6
 
