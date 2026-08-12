@@ -17,6 +17,7 @@ import {
   batchMixFileSchema,
   blueprintFileSchema,
   caseFileSchema,
+  chapterFileSchema,
   examTechniqueTreeFileSchema,
   isBlueprintVerified,
   mathsPlanFileSchema,
@@ -104,6 +105,11 @@ const passageFileSchema = z.object({
 
 const anyContentFile = z.discriminatedUnion('kind', [
   passageFileSchema,
+  // `chapter` was in packages/core's own union from the start but was dropped when this second
+  // union was built for voice packs, so the FIRST chapter a writer landed failed here with
+  // "Invalid discriminator value" — an error pointing at the chapter instead of at this list.
+  // R42 again: two doors that enumerate separately WILL drift (2026-08-12).
+  chapterFileSchema,
   batchMixFileSchema,
   nvrGeneratorConfigFileSchema,
   wordFileSchema,

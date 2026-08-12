@@ -1,0 +1,26 @@
+{
+  "kind": "chapter",
+  "chapter": {
+    "id": "s1-ch1",
+    "title": "The Test Chapter",
+    "season": "s1",
+    "trigger": { "kind": "rank", "rank": "TRAINEE" },
+    "body": "The office was quiet. Rain tapped on the window in a slow, steady beat.\n\nA folder sat on the desk. Someone had left it there, squared to the edge.\n\nInside was a single sheet of paper. The handwriting was small and very neat.\n\nYou read it twice. The second time, one word stood out.\n\nIt was a [[brave]] thing to write down. Whoever wrote it knew the risk.\n\nYou put the sheet back and closed the folder. Then you sat down to think.\n\nThe rain kept on. Somewhere below, a door opened and shut again.",
+    "seededWordIds": ["brave"],
+    "audioRef": "/audio/story/s1-ch1.mp3",
+    "spotImage": null,
+    "readingAgeTarget": 9,
+    "status": "released",
+    "choice": {
+      "id": "ch1-desk",
+      "prompt": "What do you do next?",
+      "options": ["Open the folder again.", "Go and find the caretaker."]
+    },
+    "clueTap": {
+      "itemId": "e2e-story-clue-item",
+      "engineFamily": "vr-04-closest-meaning",
+      "prompt": "One word in the note is doing the work. Which is closest in meaning?"
+    },
+    "styleDismissals": []
+  }
+}

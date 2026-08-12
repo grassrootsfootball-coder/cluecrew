@@ -10,6 +10,7 @@
     "e2e": "APP_ENV=staging pnpm build && playwright test",
     "test": "vitest run lib",
     "e2e:only": "playwright test",
+    "e2e:story": "E2E_PORT=3101 playwright test -c playwright.story.config.ts",
     "e2e:dev": "E2E_DEV=1 playwright test"
   },
   "dependencies": {

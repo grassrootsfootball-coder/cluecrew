@@ -12,6 +12,10 @@ const PORT = Number(process.env.E2E_PORT ?? 3100);
 
 export default defineConfig({
   testDir: './e2e',
+  // story-lit.spec.ts needs STORY_MODE=on and runs under playwright.story.config.ts. This suite
+  // deliberately runs with the flag UNSET — story-flag.spec.ts asserts that — so the lit spec
+  // would fail here for the right reason and the wrong purpose.
+  testIgnore: /story-lit\.spec\.ts/,
   fullyParallel: false,
   workers: 1,
   timeout: 60_000,

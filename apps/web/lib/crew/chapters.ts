@@ -11,7 +11,15 @@ import { chapterFileSchema, type ChapterFile } from '@cluecrew/core';
 
 export type Chapter = ChapterFile['chapter'];
 
-const CHAPTERS_DIR = resolve(process.cwd(), '../../content/chapters');
+/**
+ * Authored chapters live in content/chapters. CHAPTERS_DIR overrides that for the flag-ON e2e,
+ * which needs a chapter on disk before the server boots and must not put one into the writer's
+ * folder to get it: a test fixture in content/ would be gated, scanned and shipped as if it were
+ * authored content. Server-side only, and unset everywhere except that one Playwright config.
+ */
+const CHAPTERS_DIR = process.env.CHAPTERS_DIR
+  ? resolve(process.env.CHAPTERS_DIR)
+  : resolve(process.cwd(), '../../content/chapters');
 
 let cache: Chapter[] | null = null;
 

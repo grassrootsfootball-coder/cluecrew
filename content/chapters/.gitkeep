@@ -1,0 +1,14 @@
+Authored chapters land here as `s<season>-ch<n>.json`, one file per chapter,
+matching `chapterFileSchema` in packages/core/src/content-schema.ts.
+
+Deliberately empty: no chapter has been authored yet. Every gate that reads this
+folder declares that emptiness rather than passing silently — `pnpm verify:chapters`
+and `pnpm scan:chapter-style` both say "no chapters yet" (R61).
+
+The moment a file lands here it is held to the full child-facing bar: validate:content
+(schema), scan:vocab (banned vocabulary), check:reading-age (sentence length against the
+chapter's own readingAgeTarget), scan:chapter-style (the Anti-Marker Law), and
+verify:chapters (seeded words resolve, clueTap item is LIVE, released implies audio).
+
+The e2e's chapter is NOT here on purpose — it lives in apps/web/e2e/fixtures/chapters/
+so a test fixture is never mistaken for authored content.
