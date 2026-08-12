@@ -101,6 +101,21 @@ The build is governed by documents, and the documents win arguments.
   R55 `techniqueKey`, and `sentence` latent on 81 items) before the mechanism itself was removed.
   Two doors that enumerate separately WILL drift — that is R42's finding and it recurred in R55,
   where the CMS door passed a stem through while the script door stripped it.
+- **A COUNT IS NECESSARY BUT NOT SUFFICIENT — A ZERO HAS TO BE LOUD, NOT MERELY VISIBLE**
+  (annie, 2026-08-12 — R60). Every check and every export states the size of the population it
+  actually screened, and when that population is EMPTY it says so in terms that cannot be read as
+  a pass. A printed figure alone does not do this: `verify:solutions` printed "0 MATHS items
+  checked" in every CI run since it was written, the zero was right there in the log every time,
+  and it still read as a pass — because nothing in the line said that nothing had been checked.
+  No path anywhere creates a MATHS `questionType`, so that gate and `check:maths-distractors`
+  have never screened a single item. Three questions settle it, asked of any check BEFORE trusting
+  a green: (1) what does it print when it sees nothing, and is that distinguishable from a clean
+  pass? (2) does it know anything it MUST find — a canary that fails if the check goes blind?
+  (3) is it reading the artefact, or a copy of it? Question 3 is the one to weight; it is R57's
+  finding in checking clothes. A verdict that is legitimate for a considered gap is the worst
+  possible default for a blind run — the maths param sweep scored PARTIAL on nineteen families
+  that emitted nothing, PARTIAL meaning "a recorded judgement", under a "0 disagreeing" headline.
+  An export that delivers must also REFUSE to supersede a good artefact with a blind one.
 - Content decisions (items, chapters, misconceptions) go through the CMS
   review pipeline; nothing skips the reviewer.
 - **PILOT CONTENT UNDER ACTIVE REVIEW HAS ONE WRITE PATH: `scripts/lib/pilot-review.ts`, NEVER A
