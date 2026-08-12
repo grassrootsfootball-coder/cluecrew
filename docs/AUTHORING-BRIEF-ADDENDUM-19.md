@@ -63,12 +63,15 @@ field cannot tell you is *which* item — because the four checks the two-halved
 not replace (plot-summary, three separate instances, half-pattern distractor,
 writer-not-story subject) are exactly the ones it has never been through.
 
-> **On the failure rate.** The reviewer's ruling cites 60% (three of five). The census's
-> itemised bullets support **two of five (40%)** — b-01 and b-02 fail, and b-03/b-04/b-05
-> are explicitly cleared as "delivered as promised." The census's summary sentence
-> ("the wrong item in two of the five, and a non-item in one") reads either way. Flagged
-> rather than silently resolved; **the restriction is identical at either figure**, and
-> both are high enough that the field cannot be drafted against.
+**The rate: two of five — 40% of the commissioned passages.** b-01 and b-02 fail;
+b-03, b-04 and b-05 are delivered as promised.
+
+> *Settled 2026-08-11.* The census's summary sentence — "the wrong item in two of the
+> five, and a non-item in one" — reads as either two or three depending on whether the
+> non-item is one OF the two or a third case. Its itemised bullets resolve it: only
+> b-01 and b-02 fail, and the other three are explicitly cleared. **40% is the figure
+> the evidence shows, so 40% is the figure quoted.** The restriction is unchanged — it
+> was never contingent on which of the two readings held.
 
 ---
 
