@@ -134,6 +134,14 @@ jobs:
       # project's history, both times because someone asked. ~4.5s for ~35,000 emitted items
       # across both districts. Asserts only; the reviewer artefacts still come from
       # `sweep:maths-params` / `export:param-sweep`, which call the same functions (R42).
+      # The third leg (annie, 2026-08-12). The fingerprint guards the declared surface and the
+      # sweeps guard emitted behaviour; neither sees the SENTENCES. Per-entry hashes, so an EDIT
+      # or REMOVAL of a signed sentence VOIDS the signature and needs a ruling (R34), while an
+      # ADDITION does not void but moves familyDepth and is reported as a depth re-check.
+      # Guards generator banks only — DB-authored comprehension items are a different mechanism.
+      - name: Signed-family bank content (the sentences themselves)
+        run: pnpm verify:bank-content
+
       # Self-test first, same idiom as the chapter scanner. The success report NAMES the maths
       # families the sweep is out of scope for; a passing run that lost that line would read as
       # coverage of all 19 when the gate asserts about 6. The self-test fails if the scope goes.

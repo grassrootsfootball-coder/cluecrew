@@ -134,10 +134,11 @@ async function main(): Promise<void> {
   console.log(
     'Scope: the DECLARED SURFACE only (tier rules, structural parameters, ranges). Generator\n' +
       'behaviour and bank content are NOT hashed — an unmoved fingerprint says nothing about them.\n' +
-      'EMITTED BEHAVIOUR is guarded separately by `pnpm verify:param-sweeps`, which runs in CI on\n' +
-      'this same trigger (annie, 2026-08-12) — read the two together, never this one alone.\n' +
-      'BANK CONTENT has no signature-level guard at all: extending a family\'s bank moves neither\n' +
-      'the fingerprint nor a sweep verdict. That gap is open and is not covered by either gate.',
+      'The other two legs run in CI on this same trigger, and all three must be read together:\n' +
+      '  EMITTED BEHAVIOUR — `pnpm verify:param-sweeps`\n' +
+      '  BANK CONTENT     — `pnpm verify:bank-content` (per entry; an edit or removal voids a\n' +
+      '                     signature, an addition moves depth)\n' +
+      'No one of the three covers another. None covers DB-authored comprehension items.',
   );
 
   if (orphans.length > 0) {

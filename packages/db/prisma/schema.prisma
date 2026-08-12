@@ -52,10 +52,10 @@ model ParentAccount {
 }
 
 model ChildProfile {
-  id        String  @id @default(cuid())
-  parentId  String
-  parent    ParentAccount @relation(fields: [parentId], references: [id], onDelete: Cascade)
-  crewName  String // first name or nickname ONLY — no surname field exists
+  id                   String        @id @default(cuid())
+  parentId             String
+  parent               ParentAccount @relation(fields: [parentId], references: [id], onDelete: Cascade)
+  crewName             String // first name or nickname ONLY — no surname field exists
   // ADDENDUM-D §1: the year model. A static year group goes stale every
   // 1 September, so the effective year group is ALWAYS derived —
   // yearGroupAtCapture + (currentAcademicYear − capturedAcademicYear),
@@ -63,23 +63,23 @@ model ChildProfile {
   yearGroupAtCapture   Int // Years 3–6 at the moment of capture
   capturedAcademicYear Int // e.g. 2026 = academic year 2026/27
   examYear             Int? // e.g. 2028 — drives programme pacing
-  settings  Json // accessibility prefs: reducedMotion, dyslexiaFont, audioDefault
-  rank      Rank    @default(TRAINEE)
+  settings             Json // accessibility prefs: reducedMotion, dyslexiaFont, audioDefault
+  rank                 Rank          @default(TRAINEE)
   // Streak weeks earned (rank input). Forgiveness days are never stored —
   // they are computed transiently and invisible by design (D2).
-  streakWeeks Int   @default(0)
+  streakWeeks          Int           @default(0)
   // The single permitted mode pointer (L2 firewall): a UI convenience only.
   // No other mode-choice data may ever be stored — reviewer instruction:
   // reject any PR adding a learner-profile column or score here. See
   // packages/core/src/modes.ts for the full firewall text.
-  lastUsedMode String?
+  lastUsedMode         String?
 
-  caseFiles       CaseFile[]
-  wordVault       WordVaultEntry[]
-  attempts        Attempt[]
-  sessions        Session[]
-  reviewSchedules ReviewSchedule[]
-  mockSittings    MockSitting[]
+  caseFiles          CaseFile[]
+  wordVault          WordVaultEntry[]
+  attempts           Attempt[]
+  sessions           Session[]
+  reviewSchedules    ReviewSchedule[]
+  mockSittings       MockSitting[]
   readinessSnapshots ReadinessSnapshot[]
   reviewRecordings   ReviewRecording[]
 
@@ -166,19 +166,19 @@ model WebhookEvent {
 }
 
 model BursaryApplication {
-  id           String        @id @default(cuid())
-  parentId     String
-  parent       ParentAccount @relation(fields: [parentId], references: [id], onDelete: Cascade)
-  status       BursaryStatus @default(RECEIVED)
-  confirmation String // "fsm" | "pupil_premium" — self-confirmation basis
+  id              String        @id @default(cuid())
+  parentId        String
+  parent          ParentAccount @relation(fields: [parentId], references: [id], onDelete: Cascade)
+  status          BursaryStatus @default(RECEIVED)
+  confirmation    String // "fsm" | "pupil_premium" — self-confirmation basis
   // Evidence is AES-256-GCM encrypted at rest and hard-deleted 30 days after decision (§6).
-  evidence     Bytes?
-  evidenceName String?
-  evidenceMime String?
-  decidedAt    DateTime?
-  decidedById  String?
+  evidence        Bytes?
+  evidenceName    String?
+  evidenceMime    String?
+  decidedAt       DateTime?
+  decidedById     String?
   evidencePurgeAt DateTime?
-  createdAt    DateTime      @default(now())
+  createdAt       DateTime      @default(now())
 
   @@index([status, createdAt])
 }
@@ -207,7 +207,7 @@ model AdminAuditLog {
 // Region Registry (BUILD-PHASE-2 §3.3): seeded from /content/regions.json,
 // maintained via the admin CMS with source URL + last-verified date.
 model Region {
-  id               String   @id // code slug, e.g. "kent"
+  id               String     @id // code slug, e.g. "kent"
   name             String
   examFormat       String // gl-style | csse | set | school-specific | mixed | unknown
   formatSummary    String
@@ -217,7 +217,7 @@ model Region {
   notes            String?
   sourceUrl        String
   lastVerified     DateTime
-  updatedAt        DateTime @updatedAt
+  updatedAt        DateTime   @updatedAt
 }
 
 // ---------- Item bank (§3.3) ----------
@@ -240,43 +240,43 @@ enum District {
 }
 
 model Item {
-  id                   String       @id @default(cuid())
-  questionTypeId       String
-  questionType         QuestionType @relation(fields: [questionTypeId], references: [id])
-  difficultyTier       Int // 1–5 authored estimate; live calibration adjusts calibratedDifficulty
-  calibratedDifficulty Float? // updated nightly from attempt data
-  stem                 Json // structured content, never HTML strings
-  options              ItemOption[]
-  explanation          Json // per-mode explanation asset refs (watch/walk/see/hear)
-  status               ItemStatus   @default(DRAFT) // DRAFT → REVIEWED → LIVE → RETIRED
+  id                      String                   @id @default(cuid())
+  questionTypeId          String
+  questionType            QuestionType             @relation(fields: [questionTypeId], references: [id])
+  difficultyTier          Int // 1–5 authored estimate; live calibration adjusts calibratedDifficulty
+  calibratedDifficulty    Float? // updated nightly from attempt data
+  stem                    Json // structured content, never HTML strings
+  options                 ItemOption[]
+  explanation             Json // per-mode explanation asset refs (watch/walk/see/hear)
+  status                  ItemStatus               @default(DRAFT) // DRAFT → REVIEWED → LIVE → RETIRED
   // ADDENDUM-B §1: which serving world this item belongs to. MOCK items are
   // new volume on top of the practice gates, never a reclassification of
   // practice items a child may already have met.
-  pool                 ItemPool     @default(PRACTICE)
-  authoredBy           String // "human:<name>" | "ai-draft:<model>" | "seed" — provenance is mandatory
-  reviewedBy           String? // human reviewer name; REQUIRED before LIVE (P3, AI-QC)
-  reviewNotes          String? // reviewer feedback when an item is returned to DRAFT
+  pool                    ItemPool                 @default(PRACTICE)
+  authoredBy              String // "human:<name>" | "ai-draft:<model>" | "seed" — provenance is mandatory
+  reviewedBy              String? // human reviewer name; REQUIRED before LIVE (P3, AI-QC)
+  reviewNotes             String? // reviewer feedback when an item is returned to DRAFT
   // Verbal-decision provenance, same rule as Misconception above: whose
   // judgement (`reviewedBy`) is never merged with who entered it
   // (`reviewRecordedBy`). CHECK-constrained in the migration.
-  reviewRecordedBy     String?
-  reviewMethod         String?
-  reviewRecordNote     String?
+  reviewRecordedBy        String?
+  reviewMethod            String?
+  reviewRecordNote        String?
   // Set by the nightly calibration job when calibrated difficulty drifts
   // ≥1.5 tiers from the authored tier — the live QC net (Phase 3 §2).
-  calibrationFlaggedAt DateTime?
+  calibrationFlaggedAt    DateTime?
   // ADDENDUM-E §3: the similarity gate. A flagged item is blocked from
   // REVIEWED until a reviewer clears it with a note — the gate protects
   // against derivation; the reviewer judges coincidence. Score only, never
   // matched text.
-  similarityFlaggedAt  DateTime?
-  similarityScore      Float?
+  similarityFlaggedAt     DateTime?
+  similarityScore         Float?
   // BUILD-DISTRICT-MATHS §5: the machine-verifiable key. REQUIRED for every
   // MATHS-district item (CI + import both enforce); the correct option is
   // computed from this expression, never asserted. VR items carry null.
-  solution             String?
-  similarityClearedBy  String?
-  similarityClearNote  String?
+  solution                String?
+  similarityClearedBy     String?
+  similarityClearNote     String?
   // THE ANSWERABILITY FLAG (David's ruling, 2026-08-02). Set by
   // `pnpm check:word-puzzles` when an item's own rule does not produce its
   // key — no valid answer, or a different one. That is not a style problem
@@ -286,14 +286,14 @@ model Item {
   // Deliberately UNLIKE similarityFlaggedAt, which a reviewer may clear with
   // a note. There is no clearing field here. The flag goes when the item is
   // fixed and the gate stops setting it, and by no other route.
-  answerFlaggedAt      DateTime?
-  answerFlagNote       String?
+  answerFlaggedAt         DateTime?
+  answerFlagNote          String?
   // BUILD-DISTRICT-ENGLISH §3: the Selective track's open-response half.
   // Present only on open-response items; GL-track English items are MC and
   // carry options like every other district.
-  englishOpenResponse  EnglishOpenResponse?
+  englishOpenResponse     EnglishOpenResponse?
   englishUnmatchedAnswers EnglishUnmatchedAnswer[]
-  createdAt            DateTime     @default(now())
+  createdAt               DateTime                 @default(now())
 
   @@index([questionTypeId, status, pool])
 }
@@ -322,15 +322,15 @@ enum MockSittingStatus {
 }
 
 model ItemOption {
-  id              String         @id @default(cuid())
+  id              String          @id @default(cuid())
   itemId          String
-  item            Item           @relation(fields: [itemId], references: [id], onDelete: Cascade)
+  item            Item            @relation(fields: [itemId], references: [id], onDelete: Cascade)
   content         Json
   isCorrect       Boolean
   // The single legacy tag. Kept as the TOPIC tag's cache; the two-role model
   // below is the source of truth for maths (annie, 2026-08-06).
   misconceptionId String? // REQUIRED on every incorrect option before item goes LIVE (P3)
-  misconception   Misconception? @relation(fields: [misconceptionId], references: [id])
+  misconception   Misconception?  @relation(fields: [misconceptionId], references: [id])
   tags            ItemOptionTag[]
 }
 
@@ -372,25 +372,35 @@ enum MisconceptionStatus {
 }
 
 model Misconception {
-  id          String       @id // slug: "vr-analogy-surface-match"
-  district    District
-  description String // teacher-facing
-  childHint   String // the authored hint shown when this distractor is chosen
-  status      MisconceptionStatus @default(ACTIVE)
-  /** "ai-corpus:v1" for corpus-proposed entries (Addendum E §2). */
-  proposedBy  String?
-  /** Corpus pattern reference — an opaque citation id, never source text. */
-  sourcePattern String?
-  /** The reviewer's own grouping of a seed misconception (e.g. the six KS2
-   *  maths strands). Editorial provenance, not a serving field. */
-  category    String?
-  /** Vocabulary this misconception's hint is ABOUT (e.g. "isosceles",
-   *  "equilateral") — exempt from the long-word ceiling on THIS hint only,
-   *  the same bounding as headwordInOwnCard. Read by every gate that screens
-   *  the hint, so the exemption is stored once and honoured everywhere. */
-  testedTokens String[]
-  /** "human:<email>" — the REVIEWER whose judgement this is. Approval activates. */
-  approvedBy  String?
+  id             String                @id // slug: "vr-analogy-surface-match"
+  district       District
+  description    String // teacher-facing
+  childHint      String // the authored hint shown when this distractor is chosen
+  status         MisconceptionStatus   @default(ACTIVE)
+  /**
+   * "ai-corpus:v1" for corpus-proposed entries (Addendum E §2).
+   */
+  proposedBy     String?
+  /**
+   * Corpus pattern reference — an opaque citation id, never source text.
+   */
+  sourcePattern  String?
+  /**
+   * The reviewer's own grouping of a seed misconception (e.g. the six KS2
+   * maths strands). Editorial provenance, not a serving field.
+   */
+  category       String?
+  /**
+   * Vocabulary this misconception's hint is ABOUT (e.g. "isosceles",
+   * "equilateral") — exempt from the long-word ceiling on THIS hint only,
+   * the same bounding as headwordInOwnCard. Read by every gate that screens
+   * the hint, so the exemption is stored once and honoured everywhere.
+   */
+  testedTokens   String[]
+  /**
+   * "human:<email>" — the REVIEWER whose judgement this is. Approval activates.
+   */
+  approvedBy     String?
   // Verbal-decision provenance (David's ruling, 2026-08-02). A reviewer may
   // decide in a sitting and an admin may enter it afterwards. The two are
   // different people doing different things and the record must never merge
@@ -398,30 +408,38 @@ model Misconception {
   // it in. A CHECK constraint in the migration enforces that a recorded
   // approval names both and that they differ — self-recording would launder
   // an admin's own approval into a reviewer's name.
-  /** "human:<email>" — the ADMIN who entered a decision made elsewhere. */
-  recordedBy  String?
-  /** e.g. "verbal — sitting #1, 2026-08-01", or absent when done in-platform. */
+  /**
+   * /** "human:<email>" — the ADMIN who entered a decision made elsewhere.
+   */
+  recordedBy     String?
+  /**
+   * e.g. "verbal — sitting #1, 2026-08-01", or absent when done in-platform.
+   */
   approvalMethod String?
-  /** What the reviewer actually said — the only place nuance survives. */
+  /**
+   * What the reviewer actually said — the only place nuance survives.
+   */
   approvalNote   String?
-  /** "human:<email>" — who rejected it, kept so a restore has a history. */
+  /**
+   * "human:<email>" — who rejected it, kept so a restore has a history.
+   */
   rejectedBy     String?
   rejectedAt     DateTime?
   rejectionNote  String?
   // Teach-Back content (Phase 3 §6): authored working steps, the index of the
   // step containing the slip, and authored correction options. The engine
   // never generates text (S3) — evaluation is deterministic.
-  teachback   Json?
-  options     ItemOption[]
-  optionTags  ItemOptionTag[]
+  teachback      Json?
+  options        ItemOption[]
+  optionTags     ItemOptionTag[]
   // The two-ids AXIS (annie, 2026-08-06): PROCESS ids (PROC-01, #71/#72/#99/#100)
   // are cross-topic and own the child-facing hint; null/absent means a TOPIC id.
-  axis        MisconceptionTagRole?
+  axis           MisconceptionTagRole?
   // Added 2026-08-06: the reviewer-handover audit could not be timelined
   // because these rows had no birth date. Existing rows stamp the migration
   // time, not their true authorship — the real epoch lives in AttributionEvent.
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @default(now()) @updatedAt
+  createdAt      DateTime              @default(now())
+  updatedAt      DateTime              @default(now()) @updatedAt
 }
 
 // Reviewer-handover attribution (2026-08-06). approvedBy/signedBy name a single
@@ -442,39 +460,46 @@ enum AttributionAction {
 }
 
 model AttributionEvent {
-  id         String            @id @default(cuid())
-  /** "misconception" | "item" | "nvr-signature" | "word" */
-  recordType String
-  /** target id; composite keys use "templateId@version" */
-  recordId   String
-  action     AttributionAction
-  /** the INDIVIDUAL — "previous-reviewer" | "current-reviewer" | "unattributed" */
-  actor      String
-  /** who typed it in — David. The working half of the design, kept explicit. */
-  recordedBy String
-  /** which field this touch changed, e.g. "description" */
-  field      String?
-  note       String?
-  method     String?
+  id          String            @id @default(cuid())
+  /**
+   * "misconception" | "item" | "nvr-signature" | "word"
+   */
+  recordType  String
+  /**
+   * target id; composite keys use "templateId@version"
+   */
+  recordId    String
+  action      AttributionAction
+  /**
+   * the INDIVIDUAL — "previous-reviewer" | "current-reviewer" | "unattributed"
+   */
+  actor       String
+  /**
+   * who typed it in — David. The working half of the design, kept explicit.
+   */
+  recordedBy  String
+  /**
+   * which field this touch changed, e.g. "description"
+   */
+  field       String?
+  note        String?
+  method      String?
   /**
    * FINGERPRINT OF THE THING SIGNED (annie, 2026-08-08) — the same guard that
    * made the NVR signatures work (`NvrTemplateSignature.sampleSheetHash`).
-   *
    * A SIGNED event's `note` carries figures about what was signed: the depth of
    * a family, the ladder it exercises, the size of its bank. Those are prose.
    * Regenerate the family — widen a bank, re-tier a rung — and the note goes on
    * asserting the old numbers with nothing to contradict it. The signature then
    * describes a family that no longer exists, and reads as though it still does.
-   *
    * This column pins it: the hash of the family's generator surface (tier rules,
    * structural parameters, ranges, bank content) as it stood at signing. If the
    * family moves, `pnpm audit:signed-depth` reports the signature as describing
    * a superseded version rather than leaving the reviewer to notice.
-   *
    * Null on events that sign no generated artefact (a misconception approval).
    */
   subjectHash String?
-  at         DateTime          @default(now())
+  at          DateTime          @default(now())
 
   @@index([recordType, recordId])
   @@index([actor])
@@ -498,39 +523,63 @@ model AttributionEvent {
 // go LIVE: no acceptable answers, an out-of-range tariff, or a GRADUATED item
 // with an incomplete ladder are all refusals.
 model EnglishOpenResponse {
-  itemId String @id
-  item   Item   @relation(fields: [itemId], references: [id], onDelete: Cascade)
-  /** The curated extract this question reads (Stream A/B/C, §6). */
-  passageRef String
-  /** [{ from, to }] — "lines 12–18", as the papers phrase it. */
-  lineRefs   Json
-  /** 1–12 marks. The range is enforced by the core publish gate. */
-  tariff         Int
-  /** Papers routinely state "give two reasons". */
-  requiredPoints Int?
-  /** [{ text, tolerance, barredNearMisses, conceptSets, pointId, rung,
-   *  feedback, misconceptionId }] — validated by openResponseItemSchema. */
+  itemId            String             @id
+  item              Item               @relation(fields: [itemId], references: [id], onDelete: Cascade)
+  /**
+   * The curated extract this question reads (Stream A/B/C, §6).
+   */
+  passageRef        String
+  /**
+   * [{ from, to }] — "lines 12–18", as the papers phrase it.
+   */
+  lineRefs          Json
+  /**
+   * 1–12 marks. The range is enforced by the core publish gate.
+   */
+  tariff            Int
+  /**
+   * Papers routinely state "give two reasons".
+   */
+  requiredPoints    Int?
+  /**
+   * [{ text, tolerance, barredNearMisses, conceptSets, pointId, rung,
+   * feedback, misconceptionId }] — validated by openResponseItemSchema.
+   */
   acceptableAnswers Json
   creditModel       EnglishCreditModel @default(POINT)
-  /** [{ level, descriptor, exampleAnswer, marks }] — one per ladder rung,
-   *  required in full for GRADUATED credit (§4, gate #1). */
+  /**
+   * [{ level, descriptor, exampleAnswer, marks }] — one per ladder rung,
+   * required in full for GRADUATED credit (§4, gate #1).
+   */
   bands             Json
-  /** Unsupported general answers hit a ceiling. */
-  evidenceCapRule   Boolean @default(false)
-  /** Lifting from the passage scores zero on these. */
-  ownWordsRequired  Boolean @default(false)
-  /** CSSE-style embedded accuracy mark, scored and reported separately. */
+  /**
+   * Unsupported general answers hit a ceiling.
+   */
+  evidenceCapRule   Boolean            @default(false)
+  /**
+   * Lifting from the passage scores zero on these.
+   */
+  ownWordsRequired  Boolean            @default(false)
+  /**
+   * CSSE-style embedded accuracy mark, scored and reported separately.
+   */
   spagRider         Int?
-  /** Authored, neutral, never a criticism — gate #9 refuses the item without
-   *  it, because a bare number is not something a child can be shown. */
+  /**
+   * Authored, neutral, never a criticism — gate #9 refuses the item without
+   * it, because a bare number is not something a child can be shown.
+   */
   spagRiderLabel    String?
-  /** [{ kind, barredSpellings }] — authored checks only; there is no
-   *  dictionary and no invented judgement of a child's spelling. */
+  /**
+   * [{ kind, barredSpellings }] — authored checks only; there is no
+   * dictionary and no invented judgement of a child's spelling.
+   */
   spagRiderChecks   Json?
-  /** §3: misconceptions tag ANSWER PATTERNS, not options. Ids reference
-   *  Misconception rows, which carry their own PROPOSED → ACTIVE door. */
+  /**
+   * §3: misconceptions tag ANSWER PATTERNS, not options. Ids reference
+   * Misconception rows, which carry their own PROPOSED → ACTIVE door.
+   */
   misconceptionIds  String[]
-  createdAt DateTime @default(now())
+  createdAt         DateTime           @default(now())
 }
 
 enum EnglishCreditModel {
@@ -567,23 +616,33 @@ enum EnglishCreditModel {
 // and the purge date. This needs a DPIA §2 inventory row before the district
 // serves a real child.
 model EnglishUnmatchedAnswer {
-  id     String @id @default(cuid())
-  itemId String
-  item   Item   @relation(fields: [itemId], references: [id], onDelete: Cascade)
-  /** Normalised + redacted; never the raw keystrokes. */
+  id               String              @id @default(cuid())
+  itemId           String
+  item             Item                @relation(fields: [itemId], references: [id], onDelete: Cascade)
+  /**
+   * Normalised + redacted; never the raw keystrokes.
+   */
   normalisedAnswer String
   tokenCount       Int
-  /** Best coverage of any authored answer — how near a miss it was. */
+  /**
+   * Best coverage of any authored answer — how near a miss it was.
+   */
   bestCoverage     Float
-  /** CompareReason values from the engine — enums, never a sentence. */
+  /**
+   * CompareReason values from the engine — enums, never a sentence.
+   */
   reasons          String[]
-  status     EnglishSampleStatus @default(SAMPLED)
-  /** "human:<email>" — set when a reviewer acts on the sample. */
-  reviewedBy String?
-  reviewNote String?
-  createdAt  DateTime @default(now())
-  /** Set on write; the purge job deletes on this date regardless. */
-  purgeAt    DateTime
+  status           EnglishSampleStatus @default(SAMPLED)
+  /**
+   * "human:<email>" — set when a reviewer acts on the sample.
+   */
+  reviewedBy       String?
+  reviewNote       String?
+  createdAt        DateTime            @default(now())
+  /**
+   * Set on write; the purge job deletes on this date regardless.
+   */
+  purgeAt          DateTime
 
   @@index([itemId, status, createdAt])
   @@index([purgeAt])
@@ -606,7 +665,7 @@ model Case {
   // AMENDMENT-1 §5.1: the free Crew tier's open cases — the genuine front
   // door, pedagogy never crippled. Selection ratified by David + reviewer;
   // default is the first two per engine family by orderInDistrict.
-  freeTier        Boolean    @default(false)
+  freeTier        Boolean      @default(false)
   // STORY BIBLE v1.2 §9 (phase 1, feature-flagged): the per-case story skin —
   // open/close lines + clue-skin labels. Law 1: wraps the case, never items.
   storyWrapper    Json?
@@ -614,23 +673,23 @@ model Case {
 }
 
 model CaseFile {
-  id           String       @id @default(cuid())
-  childId      String
-  child        ChildProfile @relation(fields: [childId], references: [id], onDelete: Cascade)
-  caseId       String
-  case         Case         @relation(fields: [caseId], references: [id])
-  masteryLevel Float        @default(0) // 0–1; mastery model in /packages/core
-  solvedAt     DateTime? // case "cracked"
-  taughtBackAt DateTime? // Teach-Back badge (Phase 3 §6)
+  id              String       @id @default(cuid())
+  childId         String
+  child           ChildProfile @relation(fields: [childId], references: [id], onDelete: Cascade)
+  caseId          String
+  case            Case         @relation(fields: [caseId], references: [id])
+  masteryLevel    Float        @default(0) // 0–1; mastery model in /packages/core
+  solvedAt        DateTime? // case "cracked"
+  taughtBackAt    DateTime? // Teach-Back badge (Phase 3 §6)
   lastPracticedAt DateTime? // drives lazy mastery decay (Phase 3 §1)
   // Adaptivity persistence (Phase 3 §2): estimate + rolling outcome window
   // survive across sessions. These are engine state, not analytics.
-  tierEstimate Int @default(2)
-  recentOutcomes Json @default("[]")
-  attemptCount Int @default(0)
+  tierEstimate    Int          @default(2)
+  recentOutcomes  Json         @default("[]")
+  attemptCount    Int          @default(0)
   // When the case opened for this child — the new-case pacing signal
   // (Addendum D §2). Backfilled with the migration date for older rows.
-  createdAt DateTime @default(now())
+  createdAt       DateTime     @default(now())
 
   @@unique([childId, caseId])
 }
@@ -679,7 +738,7 @@ enum WordStatus {
 }
 
 model Word {
-  id              String           @id // slug of the word
+  id              String     @id // slug of the word
   headword        String
   definitionChild String // authored, reading age ≤9 (sense A)
   sentence        String
@@ -687,10 +746,14 @@ model Word {
   imageRef        String?
   tier            Int // frequency/difficulty tier 1–5
   // Fails closed: a row written without an explicit status cannot be served.
-  status          WordStatus       @default(DRAFT)
-  /** "seed" | "ai-draft:<model>" | "human:<email>" — provenance is mandatory. */
+  status          WordStatus @default(DRAFT)
+  /**
+   * "seed" | "ai-draft:<model>" | "human:<email>" — provenance is mandatory.
+   */
   authoredBy      String?
-  /** "human:<email>" — set by reviewer approval; required before LIVE. */
+  /**
+   * "human:<email>" — set by reviewer approval; required before LIVE.
+   */
   reviewedBy      String?
 
   // --- Polysemy (the "Two Meanings" pool source) --------------------------
@@ -698,25 +761,35 @@ model Word {
   // one: it is the raw material for two-meanings questions, and the child
   // must meet both senses honestly. senseB is CHECK-constrained to exist
   // whenever twoMeanings is true.
-  twoMeanings      Boolean @default(false)
-  wordClass        String?
-  senseBDefinition String?
-  senseBSentence   String?
-  senseBWordClass  String?
-  /** "A" | "B" — which sense a child is likelier to already hold. */
+  twoMeanings       Boolean @default(false)
+  wordClass         String?
+  senseBDefinition  String?
+  senseBSentence    String?
+  senseBWordClass   String?
+  /**
+   * "A" | "B" — which sense a child is likelier to already hold.
+   */
   likelierKnown     String?
   likelierKnownNote String?
 
-  /** The incoming cards carry a LIST of families; rootFamily keeps the first. */
-  rootFamilies String[] @default([])
-  imagePrompt  String?
-  imagePromptB String?
-  /** The authoring pass's own verdict, kept as provenance, never as approval. */
+  /**
+   * The incoming cards carry a LIST of families; rootFamily keeps the first.
+   */
+  rootFamilies     String[] @default([])
+  imagePrompt      String?
+  imagePromptB     String?
+  /**
+   * The authoring pass's own verdict, kept as provenance, never as approval.
+   */
   preReviewVerdict String?
-  /** Set when this card replaced an earlier one: the old values and the ruling. */
-  supersedeNote String?
-  /** Reviewer feedback when a card is returned for redraft (mirrors Item). */
-  reviewNotes   String?
+  /**
+   * Set when this card replaced an earlier one: the old values and the ruling.
+   */
+  supersedeNote    String?
+  /**
+   * Reviewer feedback when a card is returned for redraft (mirrors Item).
+   */
+  reviewNotes      String?
 
   vaultEntries WordVaultEntry[]
 
@@ -745,13 +818,13 @@ model Session {
   secondsActive Int          @default(0) // 15-min cap enforcement (D2) reads this
   // Serialized engine state (packages/core session reducer). The engine is
   // pure; this row is just its persistence.
-  engineState Json?
+  engineState   Json?
   // Optimistic concurrency for engineState. Every read carries this number and
   // every write requires it to be unchanged, so two overlapping requests can
   // no longer both read the same state, both mutate it, and both save — which
   // silently discarded whichever landed first. The loser is told (409) and the
   // client reloads the real activity. See apps/web/lib/crew/orchestrator.ts.
-  stateVersion Int @default(0)
+  stateVersion  Int          @default(0)
 }
 
 // ADDENDUM-B §5: one sat (or scheduled) mock paper. Feeds parent reporting,
@@ -763,20 +836,28 @@ model Session {
 // video addressed to the PARENT about the child, never child-facing, checked
 // before release. Videos deleted 12 months after the subscription ends.
 model ReviewRecording {
-  id        String       @id @default(cuid())
-  childId   String
-  child     ChildProfile @relation(fields: [childId], references: [id], onDelete: Cascade)
-  /** The month this review covers, e.g. "2026-08". One per child per month. */
-  month     String
-  /** Reference into private media storage — never a public URL. */
-  videoRef  String?
-  /** Teacher self-attestation against the recording checklist (§3). */
+  id                  String                @id @default(cuid())
+  childId             String
+  child               ChildProfile          @relation(fields: [childId], references: [id], onDelete: Cascade)
+  /**
+   * The month this review covers, e.g. "2026-08". One per child per month.
+   */
+  month               String
+  /**
+   * Reference into private media storage — never a public URL.
+   */
+  videoRef            String?
+  /**
+   * Teacher self-attestation against the recording checklist (§3).
+   */
   checklistAttestedBy String?
-  /** DSL/admin spot-check before release. */
-  spotCheckedBy String?
-  status    ReviewRecordingStatus @default(QUEUED)
-  releasedAt DateTime?
-  createdAt DateTime @default(now())
+  /**
+   * DSL/admin spot-check before release.
+   */
+  spotCheckedBy       String?
+  status              ReviewRecordingStatus @default(QUEUED)
+  releasedAt          DateTime?
+  createdAt           DateTime              @default(now())
 
   @@unique([childId, month])
   @@index([status, createdAt])
@@ -799,24 +880,24 @@ enum ReviewRecordingStatus {
 // 12 months post-launch — the privacy notice states this and ops runs it.
 
 model WaitlistSignup {
-  id          String    @id @default(cuid())
-  email       String    @unique
-  regionCode  String?
-  yearGroup   Int?
+  id           String    @id @default(cuid())
+  email        String    @unique
+  regionCode   String?
+  yearGroup    Int?
   // UTM source per §4 (fb-kent, org-bucks, …) — measurement, never marketing.
-  src         String?
+  src          String?
   // Which capture box (V2 §2: demo-end | region-decoder | sticky | hero;
   // V3 adds founding-reserve) — buyer temperatures differ and the mix is
   // itself a finding.
-  source      String?
+  source       String?
   // Founding-rate reserve fields (LIVE-LAUNCH-PACK-V3 §1 Step 2): explicitly
   // NOT a payment; the rate is honoured at checkout opening. name is only
   // ever collected on the reserve path.
-  name        String?
+  name         String?
   reservedTier String?
-  tokenHash   String    @unique
-  confirmedAt DateTime?
-  createdAt   DateTime  @default(now())
+  tokenHash    String    @unique
+  confirmedAt  DateTime?
+  createdAt    DateTime  @default(now())
 }
 
 // Staff invites (Phase 2 §5, 2026-08-01): an admin adds email + role; the
@@ -848,23 +929,23 @@ model PlusWaitlistEntry {
 }
 
 model MockSitting {
-  id          String            @id @default(cuid())
-  childId     String
-  child       ChildProfile      @relation(fields: [childId], references: [id], onDelete: Cascade)
-  blueprintId String // /content/blueprints/<id>.json — content, not a table
+  id             String            @id @default(cuid())
+  childId        String
+  child          ChildProfile      @relation(fields: [childId], references: [id], onDelete: Cascade)
+  blueprintId    String // /content/blueprints/<id>.json — content, not a table
   // Per-section composition fixed at scheduling: [{ itemIds: string[] }, …].
   // Which of these burn for the child depends on status + sectionTimings:
   // COMPLETED burns all; ABANDONED burns only sections with a startedAt (§3).
-  servedItemIds Json
+  servedItemIds  Json
   // Per section: { startedAt?: ISO, endedAt?: ISO, secondsUsed?: number }.
   sectionTimings Json
   // { [itemId]: { optionId, correct, answeredAt } } — graded server-side; the
   // child's device never receives an isCorrect flag during the sitting.
-  responses Json
-  status    MockSittingStatus @default(SCHEDULED)
+  responses      Json
+  status         MockSittingStatus @default(SCHEDULED)
   // Same optimistic-concurrency guard the Session rows carry, same rationale.
-  stateVersion Int      @default(0)
-  createdAt    DateTime @default(now())
+  stateVersion   Int               @default(0)
+  createdAt      DateTime          @default(now())
 
   @@index([childId, blueprintId, status])
   @@index([childId, createdAt])
@@ -878,19 +959,25 @@ model MockSitting {
 // treats the signature as voided. Unsigned versions cannot serve (core
 // serving door + CI check both enforce).
 model NvrTemplateSignature {
-  templateId  String
-  version     Int
-  fingerprint String
-  /** "human:<email>" — the specialist reviewer who signed this version. */
-  signedBy    String
-  signedAt    DateTime @default(now())
-  /** contentHash of the 30-per-tier sample sheets the reviewer inspected —
-   *  the archived artefact is reproducible byte-for-byte from
-   *  (templateId, version), this hash proves what was seen (§4.2). */
-  sampleSheetHash String
-  /** Set by the quarterly drift check (§4.3). */
+  templateId       String
+  version          Int
+  fingerprint      String
+  /**
+   * "human:<email>" — the specialist reviewer who signed this version.
+   */
+  signedBy         String
+  signedAt         DateTime  @default(now())
+  /**
+   * contentHash of the 30-per-tier sample sheets the reviewer inspected —
+   * the archived artefact is reproducible byte-for-byte from
+   * (templateId, version), this hash proves what was seen (§4.2).
+   */
+  sampleSheetHash  String
+  /**
+   * Set by the quarterly drift check (§4.3).
+   */
   lastDriftCheckAt DateTime?
-  notes       String?
+  notes            String?
 
   @@id([templateId, version])
 }
@@ -900,18 +987,18 @@ model NvrTemplateSignature {
 // parent readiness meter and the L1 evidence base. Percentages of coverage,
 // never a judgement of the child; the child never sees any of it (§6).
 model ReadinessSnapshot {
-  id          String       @id @default(cuid())
-  childId     String
-  child       ChildProfile @relation(fields: [childId], references: [id], onDelete: Cascade)
-  district    String // 'VR' | 'MATHS' | …
-  blueprintId String
-  coveragePct Int // % of blueprint types at "taught and progressing" (≥0.55)
-  crackedPct  Int // % of district cases cracked (≥0.8)
-  transferPct Int // rolling Boss Round accuracy, last 20 items
-  tier        Int // current adaptive tier estimate for context
+  id              String       @id @default(cuid())
+  childId         String
+  child           ChildProfile @relation(fields: [childId], references: [id], onDelete: Cascade)
+  district        String // 'VR' | 'MATHS' | …
+  blueprintId     String
+  coveragePct     Int // % of blueprint types at "taught and progressing" (≥0.55)
+  crackedPct      Int // % of district cases cracked (≥0.8)
+  transferPct     Int // rolling Boss Round accuracy, last 20 items
+  tier            Int // current adaptive tier estimate for context
   // The D §2 matrix column in force when this was computed.
   intensityColumn String
-  computedAt      DateTime @default(now())
+  computedAt      DateTime     @default(now())
 
   @@index([childId, district, computedAt])
 }
@@ -948,4 +1035,44 @@ model AggregateDailyStat {
   correct        Int
 
   @@unique([district, questionTypeId, day])
+}
+
+// THE THIRD LEG OF THE SIGNATURE GUARD (annie, 2026-08-12).
+//
+// AttributionEvent.subjectHash pins a family's DECLARED SURFACE; verify:param-sweeps guards
+// EMITTED BEHAVIOUR. Neither sees BANK CONTENT — extending a family's bank moves neither, and
+// the bank IS the sentences a child reads.
+//
+// Deliberately its own table rather than another column on AttributionEvent, for the reason
+// option A was rejected: folding the bank into the family fingerprint would change every existing
+// hash and silently un-pin all fourteen English signatures, which is the refactor R34 forbids and
+// why mathsFamilyFingerprint was kept separate from familyFingerprint.
+//
+// entryHashes holds a hash PER BANK ENTRY, keyed by the entry's stable id, so the verifier can
+// tell an EDIT or REMOVAL (voids the signature — the reviewer signed those sentences) from an
+// ADDITION (ordinary authoring; does not void, but moves familyDepth, so it forces a depth
+// re-check). One bank-wide hash could not make that distinction.
+model FamilyBankSignature {
+  /**
+   * The signed family this bank belongs to, e.g. "spag-punct-terminal-boundary".
+   */
+  familyId    String   @id
+  /**
+   * The constant in packages/core, e.g. "TERMINAL_BANK" — recorded so a rename is visible.
+   */
+  bankName    String
+  /**
+   * Order-independent hash of the whole bank as it stood when recorded.
+   */
+  bankHash    String
+  /**
+   * { [entryId]: entryHash } — what makes EDITED/REMOVED distinguishable from ADDED.
+   */
+  entryHashes Json
+  recordedAt  DateTime @default(now())
+  /**
+   * Who ran the pinning.
+   */
+  recordedBy  String
+  notes       String?
 }

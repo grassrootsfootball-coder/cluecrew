@@ -660,7 +660,7 @@ function clozeFamilyV2(cfg: { id: string; name: string; franchise: string; tiers
 }
 
 const WC = 'en-word-class-by-ending';
-const WORD_CLASS_BANK: ClozeSentence[] = [
+export const WORD_CLASS_BANK: ClozeSentence[] = [
   { id: 'wc-quickly', klass: 'quick', sentence: 'She answered the question ___.', key: 'quickly', distractors: [{ value: 'quick', misconceptionId: WC, parses: false }, { value: 'quickness', misconceptionId: WC, parses: false }, { value: 'quicken', misconceptionId: WC, parses: false }], factor: 'grammar' },
   { id: 'wc-clearly', klass: 'clear', sentence: 'He spoke to the class ___.', key: 'clearly', distractors: [{ value: 'clear', misconceptionId: WC, parses: false }, { value: 'clearness', misconceptionId: WC, parses: false }, { value: 'clarity', misconceptionId: WC, parses: false }], factor: 'grammar' },
   { id: 'wc-smoothly', klass: 'smooth', sentence: 'The runner moved ___ down the track.', key: 'smoothly', distractors: [{ value: 'smooth', misconceptionId: WC, parses: false }, { value: 'smoothness', misconceptionId: WC, parses: false }, { value: 'smoothen', misconceptionId: WC, parses: false }], factor: 'grammar' },
@@ -701,7 +701,7 @@ const TENSE_V2 = clozeFamilyV2({
 });
 
 const CN = 'en-conjunction-logic';
-const CONNECTIVE_BANK: ClozeSentence[] = [
+export const CONNECTIVE_BANK: ClozeSentence[] = [
   { id: 'cn-because', klass: 'cause', sentence: 'We stayed inside ___ it was raining.', key: 'because', distractors: [{ value: 'but', misconceptionId: CN, parses: true }, { value: 'so', misconceptionId: CN, parses: true }, { value: 'or', misconceptionId: CN, parses: true }], factor: 'sense' },
   { id: 'cn-but', klass: 'contrast', sentence: 'She was very tired, ___ she kept running.', key: 'but', distractors: [{ value: 'so', misconceptionId: CN, parses: true }, { value: 'because', misconceptionId: CN, parses: true }, { value: 'and', misconceptionId: CN, parses: true }], factor: 'sense' },
   { id: 'cn-so', klass: 'consequence', sentence: 'The bus was late, ___ we missed the film.', key: 'so', distractors: [{ value: 'but', misconceptionId: CN, parses: true }, { value: 'because', misconceptionId: CN, parses: true }, { value: 'or', misconceptionId: CN, parses: true }], factor: 'sense' },
@@ -716,7 +716,7 @@ const CONNECTIVES_V2 = clozeFamilyV2({
 });
 
 const TG = 'en-question-tag-polarity';
-const TAG_BANK: ClozeSentence[] = [
+export const TAG_BANK: ClozeSentence[] = [
   { id: 'tg-arent-you', klass: 'be-2sg', sentence: 'You are on the last leg, ___?', key: "aren't you", distractors: [{ value: 'are you', misconceptionId: TG, parses: false }, { value: "isn't it", misconceptionId: TG, parses: false }, { value: "don't you", misconceptionId: TG, parses: false }], factor: 'grammar' },
   { id: 'tg-isnt-he', klass: 'be-3sg', sentence: 'He is coming with us, ___?', key: "isn't he", distractors: [{ value: 'is he', misconceptionId: TG, parses: false }, { value: "aren't they", misconceptionId: TG, parses: false }, { value: "doesn't he", misconceptionId: TG, parses: false }], factor: 'grammar' },
   { id: 'tg-didnt-she', klass: 'past-simple', sentence: 'She finished her work, ___?', key: "didn't she", distractors: [{ value: 'did she', misconceptionId: TG, parses: false }, { value: "hasn't she", misconceptionId: TG, parses: false }, { value: "wasn't she", misconceptionId: TG, parses: false }], factor: 'grammar' },
