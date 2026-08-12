@@ -25,7 +25,7 @@
  */
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
-import { checkItemChildFacing, type ContentFailure } from '@cluecrew/core';
+import { checkItemChildFacing, stemSchema, type ContentFailure } from '@cluecrew/core';
 import { prisma } from '../packages/db/src/index';
 
 /**
@@ -156,6 +156,7 @@ async function main(): Promise<void> {
   const gateFailures: ContentFailure[] = [];
   const missingTags: string[] = [];
   const quoteFieldFaults: string[] = [];
+  const stemShapeFaults: string[] = [];
 
   for (const batch of batches) {
     for (const item of batch.items) {
@@ -183,7 +184,19 @@ async function main(): Promise<void> {
       // BUILD THE ROW FIRST, THEN GATE THE ROW (2026-08-09). The stem and explanation are assembled
       // here, before the gate, so the gate sees exactly what the database will hold — not the loose
       // fields it was built from.
+      // PASSTHROUGH PLUS VALIDATE-KNOWN-KEYS (R57). `text` and `prompt` are excluded from the
+      // spread deliberately — that is a RENAME to the canonical `prompt` below, not a drop —
+      // and everything else the batch declared inside `stem` is carried through untouched. This
+      // replaced an allowlist that silently discarded any field it could not name, which lost a
+      // declared field four times (R23 `quotes`, R42 `passageNames`, R55 `techniqueKey`, and the
+      // latent `sentence` gap R56 measured on 81 live items). The shape is then checked by the
+      // SHARED `stemSchema` the CMS door uses, so the two doors cannot disagree about what a stem
+      // may carry — which is what they were doing until now.
+      const declaredStemFields = { ...item.stem };
+      delete declaredStemFields.text; // renamed to the canonical `prompt` below — a rename, not a drop
+      delete declaredStemFields.prompt; // normalised below from whichever of the two the batch used
       const stemObject = {
+        ...declaredStemFields,
         prompt,
         ...(item.passageRef ? { passageRef: item.passageRef } : {}),
         // A cloze item's citation is a GAP, not a line (renamed 2026-08-02). Resolved as a line
@@ -200,6 +213,16 @@ async function main(): Promise<void> {
         ...(item.techniqueKey ? { techniqueKey: item.techniqueKey } : {}),
         ...(item.answerShape ? { answerShape: item.answerShape } : {}),
       };
+
+      // Validated, not filtered: an unknown key passes, a KNOWN key of the wrong shape is reported
+      // rather than written. Reported like every other fault in this importer — loudly, at the end,
+      // never silently dropped, which is the whole point of replacing the allowlist.
+      const stemCheck = stemSchema.safeParse(stemObject);
+      if (!stemCheck.success) {
+        for (const issue of stemCheck.error.issues) {
+          stemShapeFaults.push(`${item.itemId} stem.${issue.path.join('.')}: ${issue.message}`);
+        }
+      }
       const explanationObject = {
         ...(item.explanation ?? {}),
         ...(item.preReview ? { preReview: item.preReview } : {}),
@@ -267,6 +290,11 @@ async function main(): Promise<void> {
   if (quoteFieldFaults.length > 0) {
     console.log(`\nDECLARED QUOTES THAT WOULD HAVE BEEN LOST (${quoteFieldFaults.length}):`);
     for (const fault of quoteFieldFaults) console.log(`  ✗ ${fault}`);
+  }
+
+  if (stemShapeFaults.length > 0) {
+    console.log(`\nSTEM SHAPE FAULTS (${stemShapeFaults.length}) — a KNOWN key of the wrong shape:`);
+    for (const fault of stemShapeFaults) console.log(`  ✗ ${fault}`);
   }
 
   if (gateFailures.length > 0) {

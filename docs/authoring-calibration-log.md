@@ -2653,3 +2653,72 @@ allowlist it replaces is protecting nothing that another mechanism does not alre
 
 **Not actioned here.** It is a change to what a shared import door accepts, and R55 raised it as
 deserving sizing before doing — this entry is that sizing, not the doing.
+
+## R57 — Passthrough plus validate-known-keys is the standard for every import path
+*David, 2026-08-12, adopting R56's recommendation. Recorded by David.*
+
+**The rule, and it is a STANDARD rather than a correction to one file:**
+
+> An import door VALIDATES a stem; it never FILTERS one. Every key the schema knows is checked when
+> present. Every key it does not know passes through untouched. A door that drops what it cannot
+> name is a gate that fails OPEN and reports success.
+
+**Built as one shared definition, not two that agree today.** `stemSchema` moved out of
+`apps/web/lib/actions/admin-items.ts` into **`packages/core/src/item-stem.ts`**, and both doors now
+import it. It MOVED rather than being copied, deliberately: two doors that enumerate separately
+drift, which is precisely what R55 found between these two. One definition is what makes them agree
+by construction instead of by coincidence — the same fix shape as R42's `checkItemChildFacing`
+unification, one level down.
+
+The script importer now spreads whatever the batch declared inside `stem`, then validates. `text`
+and `prompt` are excluded from the spread because that is a RENAME to the canonical `prompt`, not a
+drop — stated in the code so a later reader does not mistake it for the fault being fixed.
+
+**Verified against all four cases rather than assumed:**
+1. `sentence` survives — the live gap R56 measured on 81 items, closed before an English error-spot
+   or cloze batch hit it.
+2. An unknown field survives and validates — the passthrough half genuinely works.
+3. A KNOWN key of the wrong shape is REPORTED, not written — validation is not weakened, and a
+   malformed `lineRefs` still names the superseded `{from,to}` shape.
+4. `passageNames` and `techniqueKey` — two of the four fields lost historically — both survive.
+
+CMS behaviour is unchanged: its five e2e specs pass, which is what proves the move was a move.
+
+**Why this is the standard and not a one-off.** It is the FOURTH time this exact shape has closed a
+finding, and each time the previous fix was correct but too narrow:
+
+| finding | what was lost | the fix then |
+|---|---|---|
+| R23 | `quotes` | read from the right field |
+| R42 | `passageNames` | add it to the allowlist |
+| R55 | `techniqueKey` | add it to the allowlist |
+| R56/R57 | `sentence` (latent, 81 items) | **stop having an allowlist** |
+
+The first three each fixed the instance and left the mechanism. This one removes the mechanism, so
+the fifth field does not need a fifth ruling. **Any future import path validates by calling
+`stemSchema`, never by re-listing the fields it expects** — that is the durable half of this entry.
+
+## R58 — Open: does a tag field belong in the fingerprinted body, or beside it?
+*Raised by David, 2026-08-12, from R56's sizing. Not blocking anything now.*
+
+`fingerprintItem` → `normaliseItemText` → `textParts` walks stem VALUES recursively, so **any field's
+value text feeds an item's similarity fingerprint.** That is correct for prose and wrong for tags,
+and `answerShape` is the case where it bites:
+
+**Two items sharing an `answerShape` would look MORE textually similar to the fingerprinter —
+inflating the similarity score for exactly the pair the field exists to tell apart.** The field's
+whole purpose (R53) is to mark items that are distinct in prose but collide in what the child
+writes; the fingerprinter would read the shared tag as evidence the prose is similar too.
+
+**Not live, and the reasons matter for whoever picks this up:** the script import path does not
+fingerprint or screen at all, so R55's and R57's changes introduced no drift. The CMS path does
+fingerprint, and has always been a passthrough — so this interaction predates both, and no item
+carries `techniqueKey` or `answerShape` yet.
+
+**The question to answer before `answerShape` is wired into serving:** does a machine tag belong
+inside `stem` — the fingerprinted body — or beside it in a column of its own? Both fields are
+authored metadata about the item rather than content a child reads, which is an argument for
+beside; `stem` being an open JSON object with no migration cost is the argument for inside, and is
+why they are there now. **Two systems designed separately, meeting in one JSON column.** Whoever
+wires the serving exclusion should rule on it then, with the registry populated, rather than now
+with both registries empty.

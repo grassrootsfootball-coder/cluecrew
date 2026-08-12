@@ -93,6 +93,14 @@ The build is governed by documents, and the documents win arguments.
   unrecoverable BY DESIGN, or a fact the family already knows and simply has not written onto the
   item, same shape as `optionsThatParse` before `parses` existed. State which, per parameter; do
   not report "metadata" as if it settles the question.
+- **AN IMPORT DOOR VALIDATES A STEM; IT NEVER FILTERS ONE** (David, 2026-08-12 — R57). Every key
+  the schema knows is checked when present; every key it does not know PASSES THROUGH. Call the
+  shared `stemSchema` in `packages/core/src/item-stem.ts` — never re-list the fields a door
+  expects. An allowlist that drops what it cannot name is a gate that fails OPEN and reports
+  success: it silently destroyed a declared field four times (R23 `quotes`, R42 `passageNames`,
+  R55 `techniqueKey`, and `sentence` latent on 81 items) before the mechanism itself was removed.
+  Two doors that enumerate separately WILL drift — that is R42's finding and it recurred in R55,
+  where the CMS door passed a stem through while the script door stripped it.
 - Content decisions (items, chapters, misconceptions) go through the CMS
   review pipeline; nothing skips the reviewer.
 - **PILOT CONTENT UNDER ACTIVE REVIEW HAS ONE WRITE PATH: `scripts/lib/pilot-review.ts`, NEVER A

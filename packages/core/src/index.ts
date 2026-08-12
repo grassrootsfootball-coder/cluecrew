@@ -36,3 +36,4 @@ export * from './maths';
 export * from './vr/distractors';
 export * from './vr/vr04';
 export * from './item-content-gate';
+export * from './item-stem';
