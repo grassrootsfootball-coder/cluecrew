@@ -2314,9 +2314,11 @@ all. Building it now would add code with nothing to exercise it, the same unreac
 
 ## R52 — English's T4 target: 18%, provisional, range 16–20%
 *Annie, 2026-08-11, supplying the figure R48 found nobody had derived. Recorded by David.*
-**Condition 1 MET by the complete census — see R53. The district figure is now 18.75% measured
-across both streams, not 17.22% from Stream A alone. This entry stays as the record of the
-provisional stage; R53 carries the settled numbers.**
+**SUPERSEDED — the live ruling is R54 (18.75%, measured, no range). Condition 1 was met by the
+complete census (R53): the district figure is 18.75% measured across both streams, not 17.22% from
+Stream A alone, and the 16–20% band recorded here is RETIRED TO HISTORICAL rather than narrowed.
+This entry stays as the record of the provisional stage — true when written, superseded twice
+since. Read R53 for the numbers and R54 for the ruling.**
 
 **Traced, not asserted.** Two independently authored census documents cross-check to the same
 number without either citing the other:
@@ -2408,12 +2410,12 @@ question, already answered once in the negative: R48 established that 20% is VR'
 pre-corpus `specDefault`, that VR itself has since moved off it to a corpus-derived 18%, and that
 no English-specific tier mix has ever existed. The three-item gap is arithmetic against a default
 nobody has yet ruled applies here. **Do not let the shortfall become the argument for the target** —
-that inverts the order R48 was written to protect, and 18.75% measured sits inside R52's provisional
-16–20% band without any items being added at all.
+that inverts the order R48 was written to protect, and 18.75% measured sat inside R52's then-live
+16–20% band without any items being added at all. *(That band is now retired — R54.)*
 
 **R52's condition 1 is MET.** Stream B was recomputed against the contrast test rather than
 estimated from `craftNotes` structure — and the prediction R52 made about that trap was confirmed
-firing: see §1b of the authoring brief. The district figure moves from 17.22% (Stream A alone,
+firing: see §1 of the authoring brief. The district figure moves from 17.22% (Stream A alone,
 provisional) to **18.75% (both streams, measured)**.
 
 ### The second dimension: answer shape
@@ -2466,3 +2468,55 @@ populated. **The decision recorded here is the SHAPE**, so that when authoring s
 are declared together on the same item in one pass rather than `answerShape` being retrofitted
 across a bank that already exists — which is the expensive order, and the one this entry exists to
 avoid.
+
+## R54 — English's T4 target: 18.75%, measured, live. The range is retired.
+*Annie's final ruling, 2026-08-11. Recorded by David. Supersedes R52; the numbers are R53's.*
+
+**The target is 18.75% — the measured district figure, not a round number set against it.** Live
+as of this entry. `45 T4 items / 240` across twenty passages, both shapes, every passage yielding
+at least one (R53, arithmetic re-derived from `t4-census.json` rather than taken from a headline).
+
+**The 16–20% range is RETIRED TO HISTORICAL.** It is not narrowed, not tightened, not kept as a
+tolerance — it stops being a live instrument. Her reasoning, recorded because the reasoning is the
+part that generalises:
+
+> The range was a hedge for a state that no longer exists. It was set when only Stream A had been
+> honestly counted, and its width was the uncertainty a single stream's count carries. Stream B has
+> now been counted the same way, so the thing the hedge was hedging against is gone.
+>
+> **A live range invites the same failure as a point target, with two numbers to be tempted by
+> instead of one.** A range does not prevent drafting-to-the-number; it widens the target you can
+> draft to, and it supplies a floor to settle for and a ceiling to claim. The measured figure has
+> the property neither a point target nor a range has: **it is a description of what the passages
+> actually yielded, so it moves only when the content moves.**
+
+**The sequence, so the history is legible rather than three entries to reconcile:**
+
+| entry | figure | status |
+|---|---|---|
+| **R48** | *no figure exists* | Historical. Established 20%/25% were other districts' defaults; no English tier mix had ever been derived. |
+| **R52** | 18%, provisional, range 16–20% | Superseded. Stream A alone (17.22%), rounded, hedged for the missing stream. |
+| **R53** | 45/240 = 18.75%, measured | The numbers. Both streams, both shapes, arithmetic verified. |
+| **R54** | **18.75%, measured, LIVE. No range.** | **Current.** |
+
+**What this settles about the three-item shortfall (R53).** It does not close it — it reframes what
+closing would mean. The gap was arithmetic against a 20% default that R48 showed was never
+English's, and the target is now the measured figure, so **there is no shortfall against the live
+target: 18.75% IS the yield.** The three-item figure survives only as the answer to a conditional
+nobody has ruled in favour of — *if* 20% were imposed as English's target, three items would close
+it. Recorded, not pursued. R53's warning stands and is now structural rather than advisory: the
+shortfall cannot become the argument for the target, because the target no longer references it.
+
+**The doctrine this rests on is R52's, unchanged and now load-bearing:** comprehension's T4 supply
+is a property of which passages were commissioned, not a knob content work can turn on the existing
+twenty. A measured target is the honest expression of that — it reports the yield rather than
+setting a quota against it. **The lever remains commissioning** (`T4-CENSUS.md`'s specification:
+minimum ~15 numbered lines between the halves of a complication, no narratorial signposting of the
+gap), and the figure will move when the next passage set lands, because the content moved — which
+is the only reason it should ever move.
+
+**Still open, unchanged by this ruling:** R52's condition 2 — the technique-repetition cap tested
+against the live figure once the cap and real blueprints exist together. 18.75% is a DISTRICT
+figure. The per-paper spread is bounded by how many distinct techniques fall among the passages a
+given paper draws from (R49/R50), and R53's answer-shape finding narrows it further. **18.75% must
+never be written down as a per-paper expectation**, exactly as 18% must not have been.
