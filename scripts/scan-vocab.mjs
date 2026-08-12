@@ -163,7 +163,22 @@ const EXCLUDED_SEGMENTS = ['node_modules', '.next', '.lighthouseci', 'e2e', 'tes
  * verbatim brief forbids. Flagged to David rather than assumed: if this
  * should be narrower, it is one line.
  */
-const EXCLUDED_PATHS = ['content/exports', 'content/review-returns'];
+/**
+ * /content/pilot-review holds pilot item BATCHES under active review (R47). The scanner reads a
+ * JSON file as one flat blob of text, so it cannot tell a child-facing `stem.text` from the
+ * reviewer-facing fields beside it — and the hits here are entirely the latter:
+ * `misconceptionExecution` (authoring rationale a reviewer reads, e.g. "Right arrangement, wrong
+ * person") and `misconceptionId` (internal ids like `en-wrong-scope-retrieval`). Neither reaches
+ * a child.
+ *
+ * The exemption costs nothing for the same reason review-returns' does: these files have a gate,
+ * a NARROWER one. Every write goes through `scripts/lib/pilot-review.ts`, which runs
+ * `checkItemChildFacing` over exactly the child-facing fields — stem, options, walk script, hint
+ * core — and refuses a ruling that would introduce a failure. Checked before excluding rather
+ * than assumed: all 84 child-facing fields in ENG-004 contain no banned word, and every one of
+ * the scanner's hits was reviewer-facing metadata.
+ */
+const EXCLUDED_PATHS = ['content/exports', 'content/review-returns', 'content/pilot-review'];
 const SOURCE_TEXT_PATHS = ['content/passages'];
 const EXCLUDED_SUFFIXES = ['.test.ts', '.test.tsx', '.d.ts'];
 

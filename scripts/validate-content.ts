@@ -126,8 +126,18 @@ const anyContentFile = z.discriminatedUnion('kind', [
  * /content/review-returns holds the filled-in decisions files. They are
  * correspondence, kept as the paper trail behind a recorded decision; the
  * import script validates their shape at the point of use.
+ *
+ * /content/pilot-review holds pilot ITEM BATCHES under active review (R47) —
+ * ENG-004's cluster and its notes. These are item-authoring artefacts in the
+ * Cowork batch shape (batchId / items[] / tierDistribution), NOT one of the
+ * `kind`-discriminated authored-content files this validator governs, so the
+ * discriminated union cannot describe them and should not try. They are not
+ * ungoverned: every write goes through scripts/lib/pilot-review.ts, which runs
+ * `checkItemChildFacing` on the items a ruling touches and appends to an
+ * append-only RULING-LOG.jsonl. A different gate, deliberately — the same
+ * division as review-returns, whose shape is checked at the point of use.
  */
-const GENERATED_DIRS = new Set(['exports', 'review-returns']);
+const GENERATED_DIRS = new Set(['exports', 'review-returns', 'pilot-review']);
 
 function collectJsonFiles(dir: string): string[] {
   const out: string[] = [];
