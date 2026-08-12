@@ -101,6 +101,14 @@ jobs:
       - name: Content schema validation
         run: pnpm validate:content
 
+      # Guards the exclusion the two steps above depend on. content/pilot-review lives inside
+      # content/, so both scanners walk it, and neither can describe an item batch — the
+      # exclusion was added after CI had been red for eight commits, and its failure pointed at
+      # the wrong fix. Drives both scanners end to end against a planted canary, and checks the
+      # canary still bites before trusting that it didn't.
+      - name: Pilot-review exclusion guard
+        run: pnpm check:pilot-exclusion
+
       # BUILD-DISTRICT-NVR gates 2/5/6/7: determinism, density caps,
       # colourblind safety over ~2,000 sampled items, disjoint seed ranges,
       # and plan-versus-generator agreement. Deliberately bad fixtures prove

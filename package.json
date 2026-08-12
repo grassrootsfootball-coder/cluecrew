@@ -97,7 +97,8 @@
     "export:pilot": "tsx scripts/export-pilot-for-cowork.ts",
     "import:pilot": "tsx scripts/import-pilot-from-cowork.ts",
     "audit:technique-keys": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/audit-technique-keys.ts",
-    "audit:comma-pairs": "tsx scripts/audit-comma-pairs.ts"
+    "audit:comma-pairs": "tsx scripts/audit-comma-pairs.ts",
+    "check:pilot-exclusion": "tsx scripts/check-pilot-review-excluded.ts"
   },
   "devDependencies": {
     "@eslint/js": "^9.20.0",
