@@ -2775,3 +2775,66 @@ exactly as unreachable as `pairId` is today." That reasoning was sound on its pr
 is gone — not because Layer 0 was decided, but because a different fix (R57) opened the door
 incidentally. **A withheld decision should be re-checked when the thing it was waiting on changes,
 even when what changed was not the thing it was waiting FOR.**
+
+## R63 — Which writers need the guard: who authored the value, not how the command is invoked
+*Anne + David, 2026-08-12. Three criteria were proposed in sequence; this is the third, and the
+only one that is a FACT ABOUT THE CODE rather than a judgement about behaviour.*
+
+**The register catches up first.** R60 (a zero must be loud), R61 (the fourth register shape) and
+R62 (reviewed content is immutable to code changes) were recorded in `CLAUDE.md` and not here. They
+are house rules that recur, which is why they landed there — but a ruling belongs in the register
+too, and three in a row went unrecorded. Cross-referenced now; this entry assumes R62.
+
+### The three criteria, and why the first two fail
+
+| | criterion | what it decides on | why it fails |
+|---|---|---|---|
+| 1 | **How deliberate the command is** (mine) | intent of the person running it | `seed:items` was deliberate and did its damage on its only run. The person meant to run the seed; they did not mean to rewrite reviewed items. Intent is not about the write. |
+| 2 | **Whether it writes reviewable content** (Anne's narrowing) | the FIELDS touched | Measured: **42 of 53** writers touch reviewable fields — the number went UP. Most exist precisely to change reviewed content, transcribing a ruling into a `childHint`, a `description`, a walk script. They ARE the re-review the guard sends you to do. |
+| 3 | **Who authored the value** | where the value CAME FROM | Holds. See below. |
+
+Criterion 2's failure is the instructive one. It is not that the measurement disappointed; it is
+that guarding all 42 would have left thirty-odd doors permanently running with the override on,
+**which makes the override the norm and the guard decorative** — a guard nobody can pass without
+disabling is a guard that gets disabled.
+
+### The criterion
+
+> **A DERIVATION FUNCTION computed the value** → it can change because CODE changed, with no human
+> deciding anything. Must CLASSIFY BEFORE WRITING (`classifyDerivedWrites`).
+>
+> **A HUMAN RULING supplied the value** → it changes because a reviewer said so. Needs PROVENANCE,
+> not a guard, and already has provenance.
+
+It is a fact about the code — does this file call a derivation function? — so it can be READ rather
+than judged. That is the whole difference from criteria 1 and 2, both of which needed someone to
+decide how a command would be used or how important a field was.
+
+**On that line the number collapses: exactly TWO writers compute what they write** — `seed.ts` and
+`generate-content.ts` — and both were already guarded by R62. A third candidate,
+`import-english-items.ts`, NAMES `assembleItem` in a comment rather than calling it, which is why
+the checker strips comments and strings before matching.
+
+### The mechanism follows from the criterion being a code fact
+
+`pnpm check:derived-writes` fails any file that both writes a content table and calls a derivation
+function without calling `classifyDerivedWrites`. **"Guarded" becomes a property of the write path
+rather than an entry on a list of forty files someone has to keep current** — a new deriving writer
+fails on the commit that adds it, not on the day it rewrites something a reviewer approved.
+
+Its canary earned itself immediately: the first version looked for the derivation functions in
+`packages/core` only, and `seedDerived` is a local helper in `seed.ts`. It reported the function
+missing and ABORTED rather than reading every writer as non-deriving — the blind-run failure of R60
+question 2, caught by the guard against it.
+
+The 16 one-shot ruling-appliers carry a header saying they write unguarded and that re-running one
+on a database carrying rulings can quietly undo a newer one. **A warning, explicitly not the
+mechanism** — it informs whoever reads before running, and protects nothing on its own.
+
+### Method recorded alongside: git recovers a lost prior state
+
+Derived values are deterministic functions of code, so **git IS the prior state**. A worktree at the
+signing commit, run against operands the database still holds, reconstructs what a derivation
+produced then. That is how the 27 seed items I had called "unmeasurable" became measurable — 14 had
+changed, all by reviewer ruling, none silent. It answers any derived-value history question, and it
+is why a lost prior state is usually not lost.

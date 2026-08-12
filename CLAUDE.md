@@ -155,7 +155,8 @@ The build is governed by documents, and the documents win arguments.
   `seed.ts` and `generate-content.ts`, both now guarded. Two more run in CI but touch only workflow
   flags (`similarity:scan`, gated on RETRO; `check:word-puzzles`, answer-flag columns) — a
   different class, not the same risk.
-  **THE TEST IS NOT DELIBERATENESS, IT IS WHO AUTHORED THE VALUE** (annie's narrowing). The seed
+  **THE TEST IS NOT DELIBERATENESS, IT IS WHO AUTHORED THE VALUE** (R63, the third criterion and
+  the only one that is a fact about the CODE rather than a judgement about behaviour). The seed
   was deliberate and did its damage on its only run. Measured: of 53 content writers, 42 write
   REVIEWABLE fields — the number went UP, not down, because most of those scripts exist to change
   reviewed content, transcribing a ruling into a `childHint`, a `description` or a walk script.
