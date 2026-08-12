@@ -33,6 +33,36 @@ function gateChildHint(data: unknown, op: string): void {
   }
 }
 
+/**
+ * EXPORT-ON-CHANGE (R66 follow-on, 2026-08-13). The disk copy is a DERIVATIVE, not a fifth opinion.
+ *
+ * Four misconception-library snapshots were in play at once — the platform's, Cowork's staging
+ * copy, an 81-entry file on David's disk, and a 44-entry English staging file — and the 81-entry
+ * one was silently consulted for a whole verification round. Its verdicts were real and scoped to
+ * a library predating the ruling under test.
+ *
+ * The complete fix is the gates reading the platform directly; they cannot, being pure-Python file
+ * readers with no route to this database. This is the available half: any write to Misconception
+ * marks the exported copies stale, so a copy can be old but never SILENTLY old. Same write-path
+ * shape as R62 — the property lives where the write happens, not in a habit of remembering.
+ *
+ * Deliberately a FLAG, not an inline re-export. Re-exporting inside a query extension would run a
+ * second query inside every write, and a failed export would then fail the write that triggered
+ * it — a library edit rolled back because a file could not be written is a worse fault than a
+ * stale file. `pnpm export:gate-library` and `pnpm export:comprehension-library` are the doors;
+ * this makes their absence visible.
+ */
+let misconceptionWritesSinceExport = 0;
+
+export function noteMisconceptionWrite(): void {
+  misconceptionWritesSinceExport += 1;
+}
+
+/** Non-zero means an exported library copy is stale. Read by `check:gate-library-fresh`. */
+export function misconceptionWritesPending(): number {
+  return misconceptionWritesSinceExport;
+}
+
 const globalForPrisma = globalThis as unknown as { prisma?: PrismaClient };
 
 const baseClient = globalForPrisma.prisma ?? new PrismaClient();
@@ -40,11 +70,12 @@ const baseClient = globalForPrisma.prisma ?? new PrismaClient();
 export const prisma = baseClient.$extends({
   query: {
     misconception: {
-      create({ args, query }) { gateChildHint(args.data, 'create'); return query(args); },
-      update({ args, query }) { gateChildHint({ ...(args.data as object), id: (args.where as { id?: string }).id }, 'update'); return query(args); },
+      create({ args, query }) { gateChildHint(args.data, 'create'); noteMisconceptionWrite(); return query(args); },
+      update({ args, query }) { gateChildHint({ ...(args.data as object), id: (args.where as { id?: string }).id }, 'update'); noteMisconceptionWrite(); return query(args); },
       upsert({ args, query }) {
         gateChildHint(args.create, 'create');
         gateChildHint({ ...(args.update as object), id: (args.where as { id?: string }).id }, 'update');
+        noteMisconceptionWrite();
         return query(args);
       },
     },

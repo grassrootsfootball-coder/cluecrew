@@ -198,6 +198,13 @@ jobs:
       - name: Derived-write guard (computed values classify before writing)
         run: pnpm check:derived-writes
 
+      # The English cluster gates are pure-Python file readers with no route to this database, so
+      # they read an exported library copy. A copy that drifts is how an 81-entry snapshot came to
+      # be consulted for a whole verification round — real verdicts, scoped to a library predating
+      # the ruling under test. This compares the copies to the DB; it never repairs them.
+      - name: Exported gate libraries match the database
+        run: pnpm check:gate-library-fresh
+
       - name: Database content gate (child-facing text in the DB)
         run: pnpm check:db-content
 
