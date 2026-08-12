@@ -8,6 +8,7 @@
  */
 import { checkSolution } from '@cluecrew/core';
 import { prisma } from '../packages/db/src/index';
+import { declareMayBeEmpty } from './lib/population';
 
 async function main(): Promise<void> {
   const items = await prisma.item.findMany({
@@ -37,17 +38,17 @@ async function main(): Promise<void> {
     for (const failure of failures) console.error(`  ${failure}`);
     process.exit(1);
   }
-  // A printed count was not enough on its own: this gate has reported "0 MATHS items
-  // checked" in every CI run since it was written, and the zero read as a pass because
-  // nothing drew attention to it. No path anywhere creates a MATHS questionType, so the
-  // district has never had a persisted item to verify (audit, 2026-08-12).
-  console.log(
-    `Solution verification passed (${items.length} MATHS items checked).` +
-      (items.length === 0
-        ? '\n  ⚠ NO MATHS ITEM EXISTS IN THE DATABASE — this gate verified nothing. The maths\n' +
-          '    district has generators but no persistence path, so there is nothing here to\n' +
-          '    check. This is a report on the gap, not a pass on the content.'
-        : ''),
+  // R61: this gate is named for a population the pipeline has never produced. A printed count
+  // did not save it — "0 MATHS items checked" appeared in every CI run and still read as a pass.
+  // The emptiness is legitimate (there is genuinely nothing to verify), so it is DECLARED rather
+  // than treated as a pipeline failure, and the reason prints on every empty run.
+  declareMayBeEmpty(
+    'Solution verification (Maths)',
+    'MATHS items',
+    items.length,
+    'No code path creates a MATHS questionType — only misconceptions carry district MATHS. The ' +
+      'district has generators (13,173 items sweep clean in memory) but no persistence path, so ' +
+      'no maths item has ever reached the database. Remove this declaration the moment one does.',
   );
   await prisma.$disconnect();
 }

@@ -116,6 +116,19 @@ The build is governed by documents, and the documents win arguments.
   possible default for a blind run — the maths param sweep scored PARTIAL on nineteen families
   that emitted nothing, PARTIAL meaning "a recorded judgement", under a "0 disagreeing" headline.
   An export that delivers must also REFUSE to supersede a good artefact with a blind one.
+- **THE FOURTH REGISTER SHAPE: A CHECK NAMED FOR A POPULATION THE PIPELINE NEVER PRODUCES**
+  (annie, 2026-08-12 — R61). The other three blind-check shapes are all faults in the check:
+  wrong scope, a stale proxy, an unreported denominator. This one is not. The check is CORRECTLY
+  WRITTEN and points at something that has never existed, so its empty run is GENUINELY CORRECT —
+  and neither of R60's first two questions catches it, because a canary cannot fire on a
+  population that is legitimately absent and a printed count of zero is the true number.
+  `verify:solutions` and `check:maths-distractors` are the instance: both correct, both screening
+  a MATHS item bank no code path creates. **The guard is a DECLARATION, not an inference.** Any
+  gate whose population could legitimately be empty says so explicitly, once, in writing, with the
+  reason — `declareMayBeEmpty()` in `scripts/lib/population.ts`, which prints that reason on every
+  empty run so a temporary gap cannot decay into a green tick. **Every other gate treats an empty
+  population as a PIPELINE FAILURE, not a pass** — `requirePopulation()`, same file. A gate calling
+  neither has not thought about it, and that is the state this closes.
 - Content decisions (items, chapters, misconceptions) go through the CMS
   review pipeline; nothing skips the reviewer.
 - **PILOT CONTENT UNDER ACTIVE REVIEW HAS ONE WRITE PATH: `scripts/lib/pilot-review.ts`, NEVER A

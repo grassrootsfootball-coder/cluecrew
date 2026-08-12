@@ -16,6 +16,7 @@
  * authored source — regardless of whether generated content ever reaches a child.
  */
 import { COMMA_BANK } from '../packages/core/src/english/spag-families';
+import { requirePopulation } from './lib/population';
 
 function main(): void {
   const byPair = new Map<string, string[]>();
@@ -28,6 +29,7 @@ function main(): void {
   const overfull = [...byPair].filter(([, ids]) => ids.length > 2);
   const clean = [...byPair].filter(([, ids]) => ids.length === 2);
 
+  requirePopulation('audit:comma-pairs', { 'COMMA_BANK sentences': COMMA_BANK.length });
   console.log(`${COMMA_BANK.length} sentences · ${byPair.size} declared pairId(s)`);
   console.log(`${clean.length} clean (exactly 2 members)`);
   for (const [pairId, ids] of clean) console.log(`  ${pairId}: ${ids.join(', ')}`);

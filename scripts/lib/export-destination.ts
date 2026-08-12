@@ -58,7 +58,11 @@ export function deliver(sourcePath: string, family?: string): string {
     const hash = name.match(/-([0-9a-f]{16})(?:[.-]|$)/)?.[1];
     for (const existing of readdirSync(OUTBOUND_DIR)) {
       if (existing === name) continue;
-      if (!existing.startsWith(`${family}-`)) continue;
+      // `family-<hash>.ext` is the stamped form; `family.ext` is the LEGACY unstamped one an
+      // export wrote before it came through this door. Matching only on `family-` let those
+      // legacy files survive every supersede, so a fixed-name copy sat alongside the stamped
+      // one indefinitely — the stale file this function exists to remove (2026-08-12).
+      if (!existing.startsWith(`${family}-`) && !existing.startsWith(`${family}.`)) continue;
       if (hash && existing.includes(hash)) continue; // a sibling of the current version
       rmSync(join(OUTBOUND_DIR, existing));
       console.log(`  superseded → removed stale ${existing}`);

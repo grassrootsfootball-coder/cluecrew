@@ -15,6 +15,7 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { checkLineRefs, type LineRefFailure, type CitablePassage } from '@cluecrew/core';
 import { prisma } from '../packages/db/src/index';
+import { requirePopulation } from './lib/population';
 
 const PASSAGE_DIR = resolve(import.meta.dirname, '../content/passages');
 
@@ -91,6 +92,7 @@ async function main(): Promise<void> {
     }
   }
 
+  requirePopulation('check:line-refs', { passages: passages.size, 'items citing a passage': checked });
   console.log(
     `Line-reference gate: ${passages.size} passages · ${checked} item(s) citing a passage · ` +
       `${citing} explanation field(s) naming a line.`,

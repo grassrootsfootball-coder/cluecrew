@@ -19,6 +19,7 @@
  */
 import { checkVrDistractors, type VrGatableItem, type VrOperands } from '@cluecrew/core';
 import { prisma } from '../packages/db/src/index';
+import { requirePopulation } from './lib/population';
 
 function selfTest(): void {
   console.log('SELF-TEST — the gate must FLAG these:\n');
@@ -103,6 +104,7 @@ async function main(): Promise<void> {
     if (!failures.some((f) => f.rule === 'uncovered') && operands) verified += 1;
   }
 
+  requirePopulation('check:vr-distractors', { 'VR items': items.length });
   console.log(`VR distractor gate: ${items.length} items screened · ${verified} derivation-verified · ${uncovered.length} uncovered (no operands).`);
   if (uncovered.length) {
     console.log(`\nUncovered (legacy/seed items, executable tags but no operands) — not failed:`);

@@ -23,6 +23,7 @@ import {
   type MathsFailure,
 } from '@cluecrew/core';
 import { prisma } from '../packages/db/src/index';
+import { declareMayBeEmpty } from './lib/population';
 
 async function main(): Promise<void> {
   const items = await prisma.item.findMany({
@@ -59,8 +60,14 @@ async function main(): Promise<void> {
     }
   }
 
-  console.log(
-    `Derivable maths distractor gate: ${items.length} MATHS item(s) read, ${liveItems} of them LIVE.`,
+  // R61: same fourth-register case as verify:solutions — correctly written, pointing at a
+  // population no code path produces. Declared, with the reason printed on every empty run.
+  declareMayBeEmpty(
+    'Derivable maths distractor gate',
+    `MATHS items (${liveItems} LIVE)`,
+    items.length,
+    'No code path creates a MATHS questionType, so no maths item has ever reached the database. ' +
+      'This gate has never screened one. Remove this declaration the moment a maths item persists.',
   );
 
   // --- Executor coverage over the approved derivable misconceptions --------

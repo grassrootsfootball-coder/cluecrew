@@ -24,6 +24,7 @@ import {
   type WordPuzzleFailure,
 } from '@cluecrew/core';
 import { prisma } from '../packages/db/src/index';
+import { requirePopulation } from './lib/population';
 
 const WORDLIST = resolve(import.meta.dirname, '../content/wordlists/en-lower.txt');
 const isWord = makeLexicon(readFileSync(WORDLIST, 'utf8').split('\n').filter(Boolean));
@@ -97,6 +98,8 @@ async function main(): Promise<void> {
     include: { options: true },
     orderBy: { id: 'asc' },
   });
+
+  requirePopulation('check:word-puzzles', { 'word-puzzle items': items.length });
 
   let checked = 0;
   for (const item of items) {

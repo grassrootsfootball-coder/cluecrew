@@ -9,11 +9,20 @@
  *
  * `pnpm tsx scripts/export-maths-calibration-plain.ts` — writes to the reviewer trees.
  */
-import { writeFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync } from 'node:fs';
+import { join, resolve } from 'node:path';
 import { buildCalibration, additionIdFor } from './lib/maths-calibration-source';
+import { artefactStamp, deliver, stampedName } from './lib/export-destination';
 import { prisma } from '../packages/db/src/index';
 
-const OUT_DIRS = ['/Users/davidb/Downloads/11+/from-cluecrew', '/Users/davidb/Downloads/reviewer-latest'];
+/**
+ * Delivered through the ONE door (`lib/export-destination.ts`). This used to write a FIXED
+ * filename into two hardcoded absolute Downloads paths inside a try/catch that logged "skip" —
+ * a non-delivery that exited 0, with no hash to tell a stale copy from a fresh one. Same
+ * silent-non-delivery class as export-vr07-vr11-new.ts; both fixed 2026-08-12.
+ */
+const OUT_DIR = resolve(import.meta.dirname, '../content/exports');
+const FAMILY = 'maths-calibration-plain';
 
 async function main(): Promise<void> {
   const { items, families } = buildCalibration();
@@ -66,9 +75,25 @@ async function main(): Promise<void> {
   for (const m of bare) L.push(`   ${m.id} ${/#\d+/.exec(m.sourcePattern ?? '')?.[0] ?? ''}: ${m.description}`);
 
   const text = L.join('\n') + '\n';
-  for (const dir of OUT_DIRS) {
-    try { writeFileSync(`${dir}/maths-calibration-plain.txt`, text); } catch (e) { console.error(`skip ${dir}: ${(e as Error).message}`); }
+
+  // R60: refuse to deliver a sheet built from nothing. The misconception query and the
+  // calibration source both have to have produced something for this pack to mean anything.
+  if (ms.length === 0 || items.length === 0) {
+    console.error(
+      `MATHS CALIBRATION EXPORT ABORTED: ${ms.length} ACTIVE maths misconceptions, ` +
+        `${items.length} calibration items — nothing delivered.\n` +
+        'Neither population may legitimately be empty: an empty run means the query or the\n' +
+        'calibration source is broken, not that there is nothing to calibrate.',
+    );
+    await prisma.$disconnect();
+    process.exit(1);
   }
+
+  const stamp = artefactStamp(text, new Date().toISOString(), 'mixed', 'the maths calibration pack — item ids, bundles and misconception descriptions');
+  mkdirSync(OUT_DIR, { recursive: true });
+  const path = join(OUT_DIR, stampedName(FAMILY, stamp.sourceHash, 'txt'));
+  writeFileSync(path, text);
+  deliver(path, FAMILY);
   console.log(`[${Buffer.byteLength(text)} bytes] ids=${idCount.size} bundled=${bundled.length} bare=${bare.length}`);
   await prisma.$disconnect();
 }

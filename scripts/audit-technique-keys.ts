@@ -22,6 +22,7 @@
  */
 import { techniqueKeyOf } from '../packages/core/src/index';
 import { prisma } from '../packages/db/src/index';
+import { declareMayBeEmpty, requirePopulation } from './lib/population';
 
 const SLUG = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 
@@ -58,6 +59,14 @@ async function main(): Promise<void> {
     (registry.get(key) ?? registry.set(key, []).get(key)!).push(item.id);
   }
 
+  // The T4 en-comp pool must exist; how many of those are whole-text candidates legitimately
+  // varies — a cluster where every T4 item cites lines yields none, and that is a real answer.
+  requirePopulation('audit:technique-keys', { 'T4 en-comp items': items.length });
+  declareMayBeEmpty(
+    'audit:technique-keys', 'whole-text-purpose T4 candidates', candidates.length,
+    'A candidate is a T4 en-comp item carrying no lineRefs. A cluster whose T4 items all cite '
+    + 'lines legitimately produces none, so zero here is a finding about the cluster, not a blind run.',
+  );
   console.log(`${candidates.length} whole-text-purpose T4 candidates (T4, no lineRefs)`);
   console.log(`${missing.length} missing techniqueKey — ${servingMissing.length} SERVING, ${draftMissing.length} DRAFT`);
   if (servingMissing.length) console.log('  SERVING, missing:', servingMissing.map((i) => i.id).join(', '));

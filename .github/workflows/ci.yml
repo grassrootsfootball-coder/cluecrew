@@ -117,6 +117,15 @@ jobs:
       - name: NVR generator gates
         run: pnpm check:nvr
 
+      # Anne's question, 2026-08-12: has anything signed moved since signing, and how would we
+      # know? Recomputes all 33 family fingerprints against the hash recorded at signing, from
+      # BOTH ends — a family-side walk cannot see a signature whose family left the array it
+      # walks, which is how en-vocab-in-context stayed invisible. Carries its own canary: if a
+      # fingerprint function stops responding to the surface it hashes, every family would read
+      # "unmoved" forever. Scope is the declared surface only; see the script header.
+      - name: Signed-family fingerprints (nothing moved since signing)
+        run: pnpm verify:fingerprints
+
       # The two doors into the database must apply the SAME child-facing gate. They did not: the
       # script importer ran a pre-R23 version that rejected a walk-script quotation the generator
       # and the publish doors accepted. Fixed 2026-08-09; this keeps them from drifting apart again.

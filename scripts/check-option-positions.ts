@@ -25,6 +25,7 @@
  */
 import { shuffleOptionsForChild } from '../apps/web/lib/crew/shuffle';
 import { prisma } from '../packages/db/src/index';
+import { requirePopulation } from './lib/population';
 
 const SYNTHETIC_CHILDREN = Array.from({ length: 300 }, (_, i) => `probe-child-${i}`);
 /** A served position may exceed its chance share by at most this before failing.
@@ -146,6 +147,8 @@ async function main(): Promise<void> {
     list.push({ id: item.id, options: item.options });
     byBank.set(item.questionTypeId, list);
   }
+
+  requirePopulation('check:option-positions', { 'LIVE multiple-choice items': items.length, banks: byBank.size });
 
   const reports = [...byBank.entries()].sort((a, b) => a[0].localeCompare(b[0])).map(([bank, list]) => assessBank(bank, list));
   const failed = report(reports);

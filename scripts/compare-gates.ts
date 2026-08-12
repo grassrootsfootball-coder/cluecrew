@@ -6,6 +6,7 @@
  * REPO and reports where the verdicts differ, rather than asserting that they do.
  */
 import { checkChildFacingText, checkItemChildFacing, isBlocking, roleForItemStem } from '../packages/core/src/index';
+import { requirePopulation } from './lib/population';
 
 interface Probe { name: string; item: { id: string; stem: Record<string, unknown>; explanation: Record<string, unknown>; mechanic: string; options: Array<{ content: { value: string } }> } }
 
@@ -83,6 +84,7 @@ for (const p of PROBES) {
   console.log(`  script import (today)     : ${b.length ? b.join(' | ') : 'clean'}`);
   console.log(`  script import (pre-R23)   : ${old.length ? old.join(' | ') : 'clean'}`);
 }
+requirePopulation('compare:gates', { probes: PROBES.length });
 console.log(`\n${PROBES.length} probes · ${differing} where the two reachable gates disagree`);
 console.log('Cowork\'s local screen is the THIRD term and is outside this repo — unverified, not closed.');
 

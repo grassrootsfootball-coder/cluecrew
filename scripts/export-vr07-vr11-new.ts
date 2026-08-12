@@ -11,11 +11,22 @@
  *
  * `pnpm tsx scripts/export-vr07-vr11-new.ts`
  */
-import { writeFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync } from 'node:fs';
+import { join, resolve } from 'node:path';
 import { GENERATORS } from '../packages/db/prisma/generate-content';
 import { numberSeriesItems } from '../packages/db/prisma/seed';
+import { artefactStamp, deliver, stampedName } from './lib/export-destination';
 
-const OUT_DIRS = ['/Users/davidb/Downloads/11+/from-cluecrew', '/Users/davidb/Downloads/reviewer-latest'];
+/**
+ * Delivered through the ONE door (`lib/export-destination.ts`), not by writing to Downloads.
+ * This script used to `writeFileSync` a FIXED filename into two hardcoded absolute paths inside
+ * a try/catch that logged "skip" and carried on — so a missing directory produced a non-delivery
+ * that still exited 0, and a fixed name meant a stale file was indistinguishable from a fresh
+ * one. That is the silent-non-delivery class that cost ten rounds. `deliver()` throws instead of
+ * warning, and the content hash in the name lets it supersede its own stale copies.
+ */
+const OUT_DIR = resolve(import.meta.dirname, '../content/exports');
+const FAMILY = 'vr07-vr11-rebuilt';
 const short = (m?: string | null) => (m ?? '').replace(/^vr07-/, '').replace(/^vr-series-/, '');
 
 function opts(list: Array<{ content: unknown; isCorrect: boolean; mid?: string; misconceptionId?: string | null }>): string {
@@ -64,9 +75,20 @@ function main(): void {
   }
 
   const text = L.join('\n') + '\n';
-  for (const dir of OUT_DIRS) {
-    try { writeFileSync(`${dir}/vr07-vr11-rebuilt.txt`, text); } catch (e) { console.error(`skip ${dir}: ${(e as Error).message}`); }
+
+  // R60: an export states the size of what it actually carried, and refuses to deliver nothing.
+  if (v7.length === 0 && v11gen.length === 0 && v11seed.length === 0) {
+    console.error('VR07/VR11 EXPORT ABORTED: no items in any of the three groups — nothing delivered.');
+    console.error('This export has no legitimately-empty population; an empty run means the');
+    console.error('generators or the seed are not producing, not that there is nothing to send.');
+    process.exit(1);
   }
+
+  const stamp = artefactStamp(text, new Date().toISOString(), 'content', 'the rebuilt vr-07 and vr-11 items for review');
+  mkdirSync(OUT_DIR, { recursive: true });
+  const path = join(OUT_DIR, stampedName(FAMILY, stamp.sourceHash, 'txt'));
+  writeFileSync(path, text);
+  deliver(path, FAMILY);
   console.log(`[${Buffer.byteLength(text)} bytes] vr07=${v7.length} vr11gen=${v11gen.length} vr11seed=${v11seed.length}`);
 }
 
