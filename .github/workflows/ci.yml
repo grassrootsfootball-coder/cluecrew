@@ -134,8 +134,11 @@ jobs:
       # project's history, both times because someone asked. ~4.5s for ~35,000 emitted items
       # across both districts. Asserts only; the reviewer artefacts still come from
       # `sweep:maths-params` / `export:param-sweep`, which call the same functions (R42).
+      # Self-test first, same idiom as the chapter scanner. The success report NAMES the maths
+      # families the sweep is out of scope for; a passing run that lost that line would read as
+      # coverage of all 19 when the gate asserts about 6. The self-test fails if the scope goes.
       - name: Parameter sweeps (emitted behaviour matches the signed sheets)
-        run: pnpm verify:param-sweeps
+        run: pnpm verify:param-sweeps --self-test && pnpm verify:param-sweeps
 
       # The two doors into the database must apply the SAME child-facing gate. They did not: the
       # script importer ran a pre-R23 version that rejected a walk-script quotation the generator

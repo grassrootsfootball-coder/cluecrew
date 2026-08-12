@@ -23,7 +23,75 @@
  *               sweep's own rule: an unchecked family and a clean one must never read alike.
  */
 import { requirePopulation } from './lib/population';
-import { sweepMathsFamilies, sweepSpagFamilies, MATHS_DRAWS, SPAG_DRAWS } from './lib/param-sweep';
+import {
+  sweepMathsFamilies,
+  sweepSpagFamilies,
+  MATHS_DRAWS,
+  SPAG_DRAWS,
+  type MathsSweepRow,
+  type SpagSweepRow,
+} from './lib/param-sweep';
+
+/**
+ * THE SUCCESS REPORT, BUILT WHERE IT CAN BE INTERROGATED (David, 2026-08-12).
+ *
+ * The out-of-scope line is the part that matters most and the part most likely to be lost: a
+ * passing run that omits it reads as full coverage over all 19 maths families, when the gate
+ * actually asserts about the 6 that declare structural parameters. So the report is a pure
+ * function of the sweep rows, and `--self-test` proves it still names the out-of-scope families
+ * and their count before the real run is trusted. Refactor the wording freely; the self-test
+ * fails if the SCOPE disappears.
+ */
+export function successReport(maths: MathsSweepRow[], spag: SpagSweepRow[]): string {
+  const asserted = maths.filter((r) => r.verdict === 'ASSERTED').length;
+  const partial = maths.filter((r) => r.verdict === 'PARTIAL').length;
+  const outOfScope = maths.filter((r) => r.verdict === 'NONE-DECLARED');
+  const inScope = maths.length - outOfScope.length;
+
+  let report =
+    '\nEmitted behaviour clean: 0 disagreements, 0 blind families, 0 unswept.\n' +
+    `  maths verdicts: ${asserted} ASSERTED · ${partial} PARTIAL · ${outOfScope.length} NONE-DECLARED.\n` +
+    `  IN SCOPE: ${inScope} of ${maths.length} maths families · ${spag.length} of ${spag.length} SPaG families.`;
+
+  if (outOfScope.length > 0) {
+    report +=
+      `\n  OUT OF SCOPE — NOT CLEARED: ${outOfScope.length} maths families declare no structural\n` +
+      '  parameters, so this gate asserted NOTHING about what they emit, either way. A pass here\n' +
+      '  is not coverage of them:\n' +
+      `    ${outOfScope.map((r) => r.id).join(', ')}`;
+  }
+  return report;
+}
+
+/** Proves the report still carries its scope before any real run is trusted. */
+function selfTest(): void {
+  const row = (id: string, verdict: MathsSweepRow['verdict']): MathsSweepRow => ({
+    id, tiers: ['T1'], declared: [], asserted: [], metadataOnly: [], emissions: 1, verdict, mismatches: [],
+  });
+  const withGap = successReport(
+    [row('M-a', 'ASSERTED'), row('M-b', 'NONE-DECLARED'), row('M-c', 'NONE-DECLARED')],
+    [],
+  );
+  const problems: string[] = [];
+  if (!/OUT OF SCOPE/.test(withGap)) problems.push('the report no longer names families as out of scope');
+  if (!/NOT CLEARED/.test(withGap)) problems.push('the report no longer says out-of-scope families are not cleared');
+  if (!withGap.includes('M-b') || !withGap.includes('M-c')) problems.push('the report no longer NAMES the out-of-scope families');
+  if (!/IN SCOPE: 1 of 3/.test(withGap)) problems.push('the report no longer states how many of the total are in scope');
+
+  const noGap = successReport([row('M-a', 'ASSERTED')], []);
+  if (/OUT OF SCOPE/.test(noGap)) problems.push('the report claims families are out of scope when none are');
+
+  if (problems.length > 0) {
+    console.error('verify:param-sweeps SELF-TEST FAILED — the success report lost its scope statement:');
+    for (const p of problems) console.error(`  ✗ ${p}`);
+    console.error(
+      '\nA passing run that omits the scope reads as coverage of all 19 maths families, when the\n' +
+        'gate asserts about the 6 that declare structural parameters. Restore the scope, not this test.',
+    );
+    process.exit(1);
+  }
+  console.log('verify:param-sweeps self-test passed: the success report names its out-of-scope families and refuses to imply coverage of them.');
+}
 
 function main(): void {
   const maths = sweepMathsFamilies();
@@ -72,10 +140,6 @@ function main(): void {
     failures.push('maths: NO family recomputed a single parameter — the recompute mechanism is dead');
   }
 
-  const asserted = maths.filter((r) => r.verdict === 'ASSERTED').length;
-  const partial = maths.filter((r) => r.verdict === 'PARTIAL').length;
-  const noneDeclared = maths.filter((r) => r.verdict === 'NONE-DECLARED').length;
-
   if (failures.length > 0) {
     console.error(`\nPARAMETER SWEEP GATE FAILED — ${failures.length} finding(s):`);
     for (const f of failures) console.error(`  ✗ ${f}`);
@@ -87,12 +151,8 @@ function main(): void {
     process.exit(1);
   }
 
-  console.log(
-    `\nEmitted behaviour clean: 0 disagreements, 0 blind families, 0 unswept.\n` +
-      `  maths verdicts: ${asserted} ASSERTED · ${partial} PARTIAL · ${noneDeclared} NONE-DECLARED.\n` +
-      `  NONE-DECLARED families declare no structural parameters, so this gate asserts nothing\n` +
-      `  about them either way — they are out of scope here, not cleared by it.`,
-  );
+  console.log(successReport(maths, spag));
 }
 
-main();
+if (process.argv.includes('--self-test')) selfTest();
+else main();
