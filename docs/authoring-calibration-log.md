@@ -2900,3 +2900,196 @@ signing commit, run against operands the database still holds, reconstructs what
 produced then. That is how the 27 seed items I had called "unmeasurable" became measurable — 14 had
 changed, all by reviewer ruling, none silent. It answers any derived-value history question, and it
 is why a lost prior state is usually not lost.
+
+## R64 — The register is the destination; CLAUDE.md is what a session loads
+*David, 2026-08-12.*
+
+Two files hold rulings and they do different jobs. This log is THE REGISTER — the numbered record,
+one `## R<n>` heading per ruling, with the reasoning and the evidence. `CLAUDE.md` is loaded at
+session start and carries the operative TEXT of the rules that recur, because a rule reduced to
+"see R57" is a rule nobody has in context at the moment they would break it.
+
+Both therefore hold content, so they can drift — and did: **R60, R61 and R62 were written into
+CLAUDE.md and never reached the register.** Three consecutive rulings, found only because R63 went
+to cite R62 and the heading was not there. Measured at the time: the register ran R1–R63 with
+exactly those three gaps and no other divergence in either direction.
+
+`pnpm check:register` now fails if a rule cited in CLAUDE.md has no register entry. The reverse is
+deliberately NOT asserted — the register holds sixty-odd rulings and only the recurring ones belong
+in a session-start file, so "in the register but not in CLAUDE.md" is the normal case. Numbering
+gaps are reported but do not fail: a number can be withdrawn deliberately.
+
+**The ordering is the part that prevents recurrence: a ruling goes to the REGISTER FIRST, and
+comes to CLAUDE.md only if it recurs.** All three lost rulings were written as house rules first.
+
+## R65 — A signature names a person
+*David + annie, 2026-08-12. Three commits: schema, evidence-backed backfill, door guard.*
+
+46 generator signatures resolved to a role account rather than a human. annie raised it at 13, 33
+and 46 signatures — **the one item that gets worse purely by waiting**, and the sixteen clusters
+will produce more.
+
+**Schema.** A `Reviewer` table with an opaque stable id and a display name nothing keys on, plus a
+nullable `reviewerId` on `AttributionEvent`. A bare name is neither stable (a name change means
+rewriting 462 rows) nor unique (a second Anne collides silently). `heldFrom`/`heldUntil` are
+TIME-SCOPED so a third reviewer inheriting the `current-reviewer` placeholder cannot retroactively
+claim these events. `actor` is DEPRECATED IN PLACE, not normalised: the placeholders and the
+`actor-identity` REASSIGNED events resolving them are the EVIDENCE for the backfill.
+
+**The backfill argument**, re-checked at run time rather than asserted in prose:
+
+1. All 46 SIGNED events carry `actor: 'current-reviewer'`. Not most — all.
+2. An explicit `actor-identity` REASSIGNED event (2026-08-06) maps `current-reviewer` → annie. A
+   recorded mapping, not an inference.
+3. NONE of joan's 97 `previous-reviewer` events is a SIGNED event, so the ambiguity the
+   placeholders create does not reach the thing being backfilled.
+
+Result: 462 → Annie (46 SIGNED), 97 → Joan (0 SIGNED), 0 signatures unnamed.
+
+**A correction forced by measurement.** Selection was scoped by DATE as well as placeholder, on the
+assumption the two reviewers occupied different windows. They do not: joan's events span
+13:24:01.242–.361 and annie's begin at 13:24:01.278 — **they interleave inside 120 milliseconds**,
+because one backfill pass wrote both. `at` is when an event was RECORDED, not when the work
+happened. Selection is by placeholder alone.
+
+**The door.** `recordSignature` refuses a `reviewerId` that does not resolve to a Reviewer row;
+`check:signing-doors` makes that a property of the WRITE PATH. Detection failed in both directions
+first — the bare literal called a READER a signing door, and requiring a `data:` payload found ZERO
+writers and printed success. Inverted rule: a SIGNED literal is a write unless it sits in a `where:`
+clause. Two of five HISTORICAL exemptions named files that only query; stale exemptions are now
+reported.
+
+**The paired statement is generated**, so the signature count cannot be printed without the
+event-log figure beside it. Its first version disagreed with annie's own figures because it read the
+SYMPTOM (null note/field/hash) instead of the CAUSE (method) — a derived figure that disagrees with
+the reviewer's is wrong until explained, not published.
+
+## R66 — Five library entries approved, two more commissioned
+*Ruled by Annie, 2026-08-12, on two proposals and a sense-error census covering eight comprehension
+clusters. Recorded verbatim.*
+
+### APPROVED AND ENTERED
+
+**`en-within-span-wrong-element`** (36 distractors, all eight clusters)
+
+The option states something true inside the cited window and answers a different question. Approved
+because the discriminating property is a conjunction — true, inside, irrelevant — where each half
+alone belongs to an existing tag. Boundary against `en-wrong-scope-retrieval` settles by location;
+ENG-011-CV-08 carries one of each and fixes the line. Wrong-speaker retained as a named sub-route:
+"check whose words these are" is close enough to share the parent hint.
+
+Child hint: **"This one is in the lines. Check it answers the question you were asked."**
+
+Annie's note on why it works — it names the failure of the verification move the child already has.
+Her strategy is "is this in the passage", that strategy returns yes, and the hint tells her the
+strategy is insufficient rather than telling her she was careless.
+
+**`en-negation-dropped`** (19 distractors, all eight clusters)
+
+The passage carries an explicit negative and the option states the affirmative. 17 of 19 fit
+exactly. Boundary against `en-relation-word-flipped`: a relation word joins two propositions, a
+negative operates on one. ENG-012-ML-06 is the worked case.
+
+**Three sense entries**, scoped to the ERROR and explicitly not to `en-comp-vocab`:
+
+| entry | census rows |
+|---|---|
+| `en-vocab-dominant-sense-imported` | 19 of 39 |
+| `en-vocab-neighbouring-sense` | 12 |
+| `en-vocab-form-lookalike` | 4 |
+
+**Scoping ruling: a tag describing an error that occurs across question types must not be scoped to
+one.** This is the corollary of the earlier `en-inference-literal-lookalike` ruling — that one says a
+tag scoped to one type must not stretch to another.
+
+Form-lookalike is the sharpest of the three and would have been approved alone. Its hint — "read it
+letter by letter and check it is the same word" — is orthographic where the other two are
+contextual, and no tag carries both. `vr02-surface-link` exists independently in VR describing the
+same child, which is convergent evidence a single-strand census cannot produce.
+
+The S1/S2 boundary is acknowledged soft — a second reader would move rows across it — and approved
+anyway, because the two hints differ: S1's child is told the commonest meaning isn't the live one,
+S2's is told several meanings fit and the context decides.
+
+### COMMISSIONED, NOT YET DRAFTED
+
+**`en-coordination-wrong-conjunct`** — promoted from a sub-route to its own entry. Where the target
+word sits in a coordination (X and Y, X as Y, X as well as Y) the child attaches the meaning to the
+wrong conjunct. Five instances across four clusters, executions naming the connective independently.
+Ground for promotion: **the cure is syntactic where the parent's is semantic, and one hint cannot
+serve both.**
+
+**A whole-text absence entry**, separate from `en-negation-dropped`. "Find the small negative word in
+the line" is actively wrong advice where no such word exists; whole-text T4 items were borrowing the
+tag for a whole-text absence.
+
+### RETAGS CONFIRMED
+
+- ENG-008-RC-05 → `en-attribute-transfer` (two elements, attributes swapped)
+- ENG-006-TM-02 → `en-cause-agent-swap` (wrong performer)
+
+**Both tags existed at drafting time and were passed over for one with no description to fail
+against.**
+
+- ENG-006-TM-04 → cold read rather than an asserted retag. An outcome inverted by implication rather
+  than by a dropped word may not have a home yet.
+
+### OBSERVED, NOT PROPOSED
+
+S4 part-of-speech slip (n=2) and S5 right-sense-stock-instance (n=1), logged against their items. A
+third instance promotes S4.
+
+Annie's note: the grammatical cure argument is real and it will likely come. **Proposing from n=2
+and n=1 is the scarcity error running forward** — inventing categories the content hasn't
+demonstrated, so the next enumeration has something to reach for.
+
+## R67 — An undescribed tag drifts only if its mechanism has loose edges
+*Annie, 2026-08-12. Evidence: the per-cluster distribution below, from Cowork's eight-cluster tag
+census. Recorded verbatim.*
+
+Two tags shipped with no library entry across the same eight clusters. Neither had a description or
+a child hint. **Their behaviour was opposite.**
+
+| tag | per-cluster distribution | total |
+|---|---|---|
+| `en-within-span-wrong-element` | 1, 1, 1, 3 → 8, 5, 9, 8 | 36 uses |
+| `en-negation-dropped` | 1 to 4 per cluster throughout | 19 uses |
+
+Nothing about the passages changed between the fourth and fifth clusters. **So the absence of a
+description is not sufficient to cause drift.**
+
+The distinguishing property is the MECHANISM, not the record. A dropped negative is a single
+checkable event — the passage carries an explicit negative and the option states the affirmative.
+There is no adjacent error it can quietly absorb, so it stayed a real single thing without an entry
+holding it. "True inside the window and answering a different question" has loose edges: attribute
+transfer, agent reversal and wrong-scope retrieval all sit near it, and with no description to refuse
+a use it took them.
+
+**Diagnostic, for the next gap: an undescribed tag is dangerous in proportion to how much
+neighbouring territory its mechanism touches. A tightly-bounded mechanism survives the absence of an
+entry; a broad one becomes the sink for whatever needs a name. Prioritise describing the loose
+ones.**
+
+This refines R62's placeholder rule rather than contradicting it. R62 refuses an undescribed tag at
+CREATION regardless of mechanism, because you cannot know in advance which side of this line a new
+tag falls on. R67 says where to spend effort on the ones already shipped.
+
+## R68 — The register's completeness depends on a human relay, which is R64 one level up
+*David, 2026-08-12.*
+
+R66 and R67 record rulings made in a conversation this repo cannot see. They reached the register
+because someone relayed them verbatim. **Nothing would have surfaced their absence** — the register
+has no way to know a ruling was made, so an unrelayed ruling is indistinguishable from no ruling.
+
+That is the R64 shape one level up. R64 closed drift between two files this repo holds and can
+compare. This is drift between the repo and a conversation outside it, where the comparison is not
+available to either side: `check:register` verifies that a rule CITED here is RECORDED here, and
+cannot know about a rule that was never cited because it never arrived.
+
+**It will recur unless rulings route through Code by default rather than by memory.** The failure is
+silent and the cost compounds — R66 alone carries five approvals, two commissions and three retags,
+and a reviewer who believes a ruling is on record will not repeat it.
+
+No mechanism proposed here. The fix is a process change about where rulings are made, not something
+this repo can enforce on itself, and inventing a check that cannot see the input would be the blind
+gate R61 describes.
