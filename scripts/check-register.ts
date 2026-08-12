@@ -45,6 +45,24 @@ const ROOT = resolve(import.meta.dirname, '..');
 const REGISTER = 'docs/authoring-calibration-log.md';
 const HOUSE_RULES = 'CLAUDE.md';
 
+/**
+ * NUMBERS THAT LOOK LIKE CITATIONS AND ARE NOT — declared with the reason, never a bare exemption.
+ *
+ * Commit history is immutable, so a number written INTO it as an example is permanent. R99 was
+ * used as a deliberately-nonexistent rule while fault-injecting this very check (commit 350c8d9,
+ * "planting an unregistered R99"); the description of the test then read as a citation of the
+ * rule. The check was right and the convention was missing.
+ *
+ * CONVENTION, so this list does not grow: a fault-injection probe must use a token that this
+ * check cannot match at all — write the number in words, or break the prefix from the digits.
+ * Do NOT reach for the next round number up, and do not write a four-digit example here either:
+ * the first draft of this comment suggested one, and the check immediately flagged the comment.
+ * A convention that demonstrates itself by failing is the right kind of evidence, once.
+ */
+const NON_CITATIONS: Record<number, string> = {
+  99: 'fault-injection example in commit 350c8d9, describing a test of this check. Never a rule.',
+};
+
 function main(): void {
   const register = readFileSync(resolve(ROOT, REGISTER), 'utf8');
   const houseRules = readFileSync(resolve(ROOT, HOUSE_RULES), 'utf8');
@@ -132,12 +150,16 @@ function main(): void {
     process.exit(1);
   }
 
-  const uncited = [...cited].filter((n) => !recorded.has(n)).sort((a, b) => a - b);
+  const uncited = [...cited]
+    .filter((n) => !recorded.has(n) && !(n in NON_CITATIONS))
+    .sort((a, b) => a - b);
+  const suppressed = [...cited].filter((n) => n in NON_CITATIONS);
   const routeOf = (n: number): string =>
     routes.filter((r) => r.read && r.numbers.includes(n)).map((r) => r.name).join(', ');
   const gaps = Array.from({ length: highest }, (_, i) => i + 1).filter((n) => !recorded.has(n));
 
   console.log(`  register R1–R${highest}: ${recorded.size} entries, ${gaps.length} gap(s).`);
+  for (const n of suppressed) console.log(`  R${n} ignored — ${NON_CITATIONS[n]}`);
 
   const failures: string[] = [];
   for (const n of uncited) {

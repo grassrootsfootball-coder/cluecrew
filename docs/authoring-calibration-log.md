@@ -3139,3 +3139,63 @@ to keep out, and "Annie approved the tag" is not the same as "Annie wrote the hi
 PROPOSED with the two known hints and three awaiting text, or held entire until all five have hints.
 The first makes the approval visible and the gap explicit; the second keeps the library uniformly
 complete. Either is defensible and it is her call, not a script's.
+
+## R70 — The coaching test moves to the second read as Q7, and the validator refuses to claim it
+*Ratified by Annie, 2026-08-12. Recorded before the test is built, so it cannot be built into the
+wrong place.*
+
+The coaching test comes OFF the validator entirely and onto the SECOND READ as **Q7**. The
+validator's part is the opposite of running it: **it refuses any entry that claims the test was
+automated.**
+
+**Annie's reasoning, which is the stronger half of the pair: a human test carrying a machine's
+signature is worse than no test, because it LOOKS DISCHARGED.** No test at all leaves a visible
+gap that someone eventually fills. A test recorded as automated closes the gap in the record while
+leaving it open in fact, and nothing downstream has any reason to look again.
+
+That is the same shape as a green tick standing for more than it covers (R60), and as the register's
+"0 MATHS items checked" reading as a pass. The failure is never the missing check; it is the
+CLAIM about the missing check, which is what stops anyone from noticing.
+
+**Status: not built.** Nothing in this repo runs a coaching test today, which is why this is
+recorded now — the natural place to put a new check is the validator, and that is exactly where it
+must not go. When Q7 is built, the validator gains a REFUSAL, not a rule.
+
+## R71 — A convincing near-hit is worse than an empty result
+*Ratified by Annie, 2026-08-12. General principle with the specific instance attached, because a
+general caution would not have saved anyone.*
+
+**A sound search returning a convincing near-hit is worse than one returning nothing.** An empty
+result prompts a second look. A result SHAPED LIKE THE ANSWER ends the enquiry, and everything
+downstream inherits a premise nobody tested.
+
+### The specific version, which is the part that has teeth
+
+The five values were sought as `category`. **They exist nowhere as `category`.** What the search
+found instead was `content/review-returns/r1-stem-audit-2026-08-02.json`, which carries a
+PAPER-SECTION taxonomy under `role` — a different field, answering a different question — and it
+shares two of the five values.
+
+Verified independently while recording this. The `role` field carries exactly three values:
+
+| value | n |
+|---|---|
+| `comprehension` | 44 |
+| `error-spot` | 18 |
+| `cloze` | 16 |
+
+Two of those (`comprehension`, `error-spot`) also appear as real `category` values on English
+misconceptions, which is precisely what makes the near-hit convincing: the overlap is genuine, the
+field is not.
+
+**Why a general caution would not have helped.** "Check your source" is advice nobody acts on when
+the result already looks right. What breaks the chain is the SPECIFIC pairing — this taxonomy, that
+field, those two shared values — because the next person searching for a category vocabulary will
+land on the same file and needs to recognise it by name rather than by suspicion.
+
+### The connection to R60 question 3
+
+R60 asks of any check: *is it reading the artefact, or a copy of it?* This is that question one
+level earlier, applied to a SEARCH rather than a check — is it reading the field, or a field that
+looks like it? A near-hit under a different key is a copy of the answer, and it fails the same way:
+convincingly, and with nothing downstream aware that a premise went untested.
