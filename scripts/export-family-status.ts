@@ -20,6 +20,7 @@
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { MATHS_FAMILIES } from '../packages/core/src/maths/families';
+import { mathsFamilyFingerprint } from '../packages/core/src/maths/fingerprint';
 import { familyTiers } from '../packages/core/src/maths/generator';
 import { SPAG_FAMILIES } from '../packages/core/src/english/spag-families';
 import { familyDepth, familyFingerprint, spagFamilyTiers } from '../packages/core/src/english/spag-fingerprint';
@@ -49,15 +50,22 @@ export async function buildFamilyStatusSource(prisma: typeof defaultPrisma): Pro
   const rows: Row[] = [];
   for (const f of MATHS_FAMILIES) {
     const ev = sig.get(f.id);
+    // COMPUTED, not asserted. This branch used to hardcode `pin: 'n/a'` with a note that maths
+    // families had no fingerprint — true when written, false from the moment
+    // `mathsFamilyFingerprint` landed and all 19 signatures were pinned. The artefact went on
+    // reporting "19 signed with no fingerprint available" about 19 signatures that were pinned,
+    // and the claim was unfalsifiable because nothing recomputed it. The SPaG branch below has
+    // always computed this; two branches where one derives and one declares WILL drift (R42).
+    const fp = mathsFamilyFingerprint(f);
     rows.push({
       id: f.id,
       district: 'MATHS',
       tiers: familyTiers(f).map((t) => `T${t}`).join(','),
       built: true,
       signed: Boolean(ev),
-      // Maths families have no fingerprint yet — their surface is not hashed here, so a signature
-      // cannot be checked against them. Stated, not glossed: an unmeasured guard is not a guard.
-      pin: 'n/a',
+      pin: !ev ? 'n/a' : !ev.subjectHash ? 'unpinned' : ev.subjectHash === fp ? 'pinned-ok' : 'moved',
+      // Genuinely unavailable rather than unmeasured: maths has no `familyDepth` equivalent — no
+      // generate-to-exhaustion count exists for these families. A real n/a, so it stays null.
       depth: null,
     });
   }
@@ -101,7 +109,7 @@ async function main(): Promise<void> {
     `# Family status — generated\n\n${stampHeader(stamp, 'md')}\n\n` +
     `${counts.total} families · ${counts.built} built · ${counts.signed} signed · ${counts.unsigned} unsigned · ` +
     `${counts.moved} moved since signing · ${counts.unpinned} signed but unpinned · ` +
-    `${counts.notFingerprinted} signed with no fingerprint available (maths — its generator surface is not hashed yet).\n\n` +
+    `${counts.notFingerprinted} signed with no fingerprint available.\n\n` +
     `"Moved" means the family's generator surface no longer matches the fingerprint recorded when it\n` +
     `was signed: the signature describes a version that no longer exists. "Depth" is measured by\n` +
     `generating to exhaustion, not read off a bank, so it counts ITEMS — an N-keyed family yields two\n` +
