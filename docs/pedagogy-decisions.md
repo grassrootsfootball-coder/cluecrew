@@ -181,3 +181,54 @@ was built.
 
 Whichever way it goes, `docs/CLUECREW-STORY-BIBLE.md` §9 needs the line, and
 only David amends that document.
+
+## OPEN — awaiting David: `clueTap.engineFamily` (raised 2026-08-12)
+
+**Status: NOT DECIDED, but no longer unguarded.** The same shape as the
+storyWrapper entry above, one level down, and recorded here so it does not stay
+a smaller instance of a ruling already made.
+
+### What it is
+
+`chapter.clueTap.engineFamily` is authored on every chapter that carries a
+clue-tap. **No code reads it** — not the reader, not the component, not the API
+route. It was `z.string().min(1)`, so `wordweb`, `vr-04-closest-meaning` and
+`banana` were equally legal, and the first chapter to carry one duly wrote a
+question-type id into a field named for a family.
+
+It is also **redundant**: the item's own `questionTypeId` already implies the
+family, so nothing about it is a fact only the author knows.
+
+### What was done now, and what is still open
+
+Constrained rather than dropped, pending the ruling:
+
+- the value is `MECHANIC_FAMILIES`, **optional** — only VR has that vocabulary,
+  and a Maths or NVR clue-tap has an engine, not a `MechanicFamily`;
+- `pnpm verify:chapters` already fetches the item, so the declaration is
+  **proved** against `familyForType(item.questionTypeId)` rather than trusted.
+  A wrong-but-legal family now fails the gate by name.
+
+That makes it safe to author against. It does not answer whether it should
+exist.
+
+### The three answers available
+
+1. **Give it a consumer.** The plausible one: a writer picks a clue by family
+   ("a WORD WEB clue here"), and production resolves a real `itemId` at serve
+   time from the family plus the child's tier. That is the design already
+   recommended for chapter authoring — point at a family, never at an item id —
+   and under it `engineFamily` becomes the load-bearing field and `itemId`
+   becomes the derived one, which is the opposite of today's shape.
+2. **Keep it as authoring metadata**, checked but unread, and say so — the same
+   status as `Walk-it`'s `voicedBy`.
+3. **Drop it.** It is derivable from the item, so nothing is lost but the
+   author's statement of intent.
+
+**Recommendation: (1), decided before Phase 2 authoring.** 28 chapters will
+carry a clue-tap each, and the choice between "the chapter names an item" and
+"the chapter names a family" changes what a writer delivers. Deciding after the
+chapters are written means rewriting them — which is the same trap as binding a
+wrapper to case ids, and it is why `storyWrapper` has no `caseId` field.
+
+If the answer is (2) or (3), this entry is the record that it was asked.

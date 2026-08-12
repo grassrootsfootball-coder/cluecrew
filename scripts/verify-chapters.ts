@@ -12,7 +12,7 @@
  */
 import { readdirSync, readFileSync, existsSync } from 'node:fs';
 import { join, resolve } from 'node:path';
-import { chapterFileSchema } from '@cluecrew/core';
+import { chapterFileSchema, FAMILY_BY_TYPE, familyForType } from '@cluecrew/core';
 import { prisma } from '../packages/db/src/index';
 
 async function main(): Promise<void> {
@@ -42,6 +42,21 @@ async function main(): Promise<void> {
       if (!item) failures.push(`${chapter.id}: clueTap item ${chapter.clueTap.itemId} does not exist`);
       else if (item.status !== 'LIVE')
         failures.push(`${chapter.id}: clueTap item ${chapter.clueTap.itemId} is ${item.status}, not LIVE`);
+      // `engineFamily` is declared by the author and read by no code (2026-08-12). A field
+      // nothing consumes cannot be trusted, so it is proved instead: the item is already
+      // fetched here, and its question type implies the family. Only VR types are in the
+      // registry, so a Maths or NVR item is skipped rather than guessed at — an unknown type
+      // means "cannot check", never "passes".
+      const declaredFamily = chapter.clueTap.engineFamily;
+      if (item && declaredFamily && FAMILY_BY_TYPE[item.questionTypeId]) {
+        const implied = familyForType(item.questionTypeId);
+        if (declaredFamily !== implied) {
+          failures.push(
+            `${chapter.id}: clueTap.engineFamily is "${declaredFamily}" but ${chapter.clueTap.itemId} ` +
+              `(${item.questionTypeId}) is in the "${implied}" family`,
+          );
+        }
+      }
     }
     if (chapter.status === 'released' && !chapter.audioRef) {
       failures.push(`${chapter.id}: released without audio (Law 4)`);

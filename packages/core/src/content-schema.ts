@@ -340,7 +340,25 @@ export const chapterFileSchema = z.object({
       clueTap: z
         .object({
           itemId: z.string().min(1),
-          engineFamily: z.string().min(1),
+          /**
+           * THE SAME SHAPE AS `storyWrapper`, ONE LEVEL DOWN (David, 2026-08-12) — declared,
+           * authored, and read by nothing. It was `z.string().min(1)`, so `wordweb`,
+           * `vr-04-closest-meaning` and `banana` were equally legal, and the first chapter to
+           * carry one wrote a question-type id into a field named for a family.
+           *
+           * Constrained rather than dropped, on the same reasoning as `storyWrapper.family`: the
+           * value is a real fact about the clue a chapter points at, and a writer choosing a
+           * clue by family is the interface the story actually wants. OPTIONAL because only VR
+           * has this vocabulary — a Maths or NVR clue-tap has an engine, not a `MechanicFamily`.
+           *
+           * It is also REDUNDANT: the item's own question type already implies the family. So it
+           * is not trusted, it is CHECKED — `pnpm verify:chapters` fetches the item anyway and
+           * proves the declaration agrees with `familyForType(item.questionTypeId)`. A field that
+           * nothing reads and nothing checks is a field that quietly goes wrong; this one is now
+           * checked, and whether it should exist at all is a ruling recorded in
+           * docs/pedagogy-decisions.md.
+           */
+          engineFamily: z.enum(MECHANIC_FAMILIES).optional(),
           prompt: z.string().min(1).max(200),
         })
         .optional(),

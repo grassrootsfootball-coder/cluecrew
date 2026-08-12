@@ -9,6 +9,7 @@
 import { readdirSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { hash } from '@node-rs/argon2';
+import { assertNoReviewedRewrite, classifyDerivedWrites } from './reviewed-guard';
 import { FAMILY_BY_TYPE, buildDerivedVrDistractors, caseFileSchema, regionFileSchema, vrLetterOf, wordFileSchema, type VrOperands } from '@cluecrew/core';
 import { prisma } from '../src/index';
 
@@ -297,7 +298,29 @@ async function seedMisconceptions(): Promise<void> {
 async function seedItems(): Promise<void> {
   const items = [...numberSeriesItems(), ...letterSeriesItems(), ...moveLetterItems()];
   if (items.length !== 40) throw new Error(`Expected 40 seed items, got ${items.length}`);
+
+  /**
+   * REVIEWED CONTENT IS IMMUTABLE TO CODE CHANGES. This upsert's `update` clause rewrites `stem`
+   * and every option unconditionally, and those values come out of `buildDerivedVrDistractors` —
+   * so a change to that function silently rewrites items a reviewer approved. It did: seed-vr09-12
+   * and -13 were APPROVED, a seed run re-derived their options, and their reviewed walk scripts
+   * were left naming options that no longer existed.
+   *
+   * Classified BEFORE anything is written, so a refusal leaves the database untouched rather than
+   * half-applied. An unchanged re-derivation is a no-op, which is what keeps the seed re-runnable.
+   */
+  const outcome = await classifyDerivedWrites(prisma, items.map((item) => ({
+    id: item.id,
+    stem: item.stem,
+    options: item.options.map((o) => ({ content: o.content, isCorrect: o.isCorrect, misconceptionId: o.misconceptionId })),
+  })));
+  assertNoReviewedRewrite(outcome, 'seed:items');
+  const writable = new Set(outcome.writable);
+
   for (const item of items) {
+    // Reviewed and unchanged: nothing to write, and writing anyway would touch `updatedAt` on a
+    // row a reviewer owns for no reason.
+    if (!writable.has(item.id)) continue;
     await prisma.item.upsert({
       where: { id: item.id },
       create: {

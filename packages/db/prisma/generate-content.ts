@@ -12,6 +12,7 @@
  */
 import { prisma } from '../src/index';
 import { deductionTier, isCommon, vocabTier, vocabTierOfSet } from './difficulty';
+import { assertNoReviewedRewrite, classifyDerivedWrites } from './reviewed-guard';
 import { buildDerivedVrDistractors, checkVr04Row, flagNearSynonymHeadwords, selectVr04Distractors, type VrOperands, type Vr04Diagnosis, type Vr04Row } from '@cluecrew/core';
 
 /**
@@ -1265,8 +1266,34 @@ async function main(): Promise<void> {
   for (const [typeId, generate] of Object.entries(GENERATORS)) {
     if (SUPERSEDED_BY_BANK.has(typeId)) continue;
     const misconceptions = M[typeId]!;
-    for (const item of generate()) {
-      const id = `gen-${typeId}-${String(item.n).padStart(2, '0')}`;
+    /**
+     * REVIEWED CONTENT IS IMMUTABLE TO CODE CHANGES (annie, 2026-08-12).
+     *
+     * This loop is the more destructive of the two derived-write doors: it rewrites `stem` and
+     * then DELETES AND RECREATES every option, unconditionally, on every item it owns — including
+     * the 100 that a reviewer has approved. The values come from the district's derivation
+     * functions, so a change to one of those rewrites approved content with nothing to notice.
+     *
+     * Classified before any write, so a refusal leaves the database untouched. Unchanged
+     * re-derivations are no-ops, which is what keeps `content:generate` idempotent and re-runnable.
+     */
+    const batch = [...generate()].map((item) => ({
+      item,
+      id: `gen-${typeId}-${String(item.n).padStart(2, '0')}`,
+    }));
+    const outcome = await classifyDerivedWrites(
+      prisma,
+      batch.map(({ item, id }) => ({
+        id,
+        stem: item.stem,
+        options: item.options.map((option) => ({ content: option.content, isCorrect: option.isCorrect })),
+      })),
+    );
+    assertNoReviewedRewrite(outcome, `content:generate ${typeId}`);
+    const writable = new Set(outcome.writable);
+
+    for (const { item, id } of batch) {
+      if (!writable.has(id)) continue;
       await prisma.item.upsert({
         where: { id },
         create: {

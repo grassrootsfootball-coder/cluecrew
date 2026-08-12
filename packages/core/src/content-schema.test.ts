@@ -153,6 +153,35 @@ describe('story wrapper schema', () => {
   });
 });
 
+describe('chapter clue-tap', () => {
+  const chapter = (clueTap: Record<string, unknown>) => ({
+    kind: 'chapter',
+    chapter: {
+      id: 's1-ch01',
+      title: 'A Chapter',
+      season: 's1',
+      trigger: { kind: 'rank', rank: 'TRAINEE' },
+      body: 'x'.repeat(250),
+      seededWordIds: [],
+      audioRef: null,
+      spotImage: null,
+      clueTap,
+    },
+  });
+
+  it('takes a mechanic family, not a question type — the value the field is named for', () => {
+    const prompt = 'Want to try it?';
+    expect(chapterFileSchema.safeParse(chapter({ itemId: 'i', engineFamily: 'wordweb', prompt })).success).toBe(true);
+    // The value the first authored chapter actually carried, before this was constrained.
+    expect(
+      chapterFileSchema.safeParse(chapter({ itemId: 'i', engineFamily: 'vr-04-closest-meaning', prompt })).success,
+    ).toBe(false);
+    // Optional: only VR has this vocabulary, so a Maths or NVR clue-tap declares nothing rather
+    // than inventing a value.
+    expect(chapterFileSchema.safeParse(chapter({ itemId: 'i', prompt })).success).toBe(true);
+  });
+});
+
 describe('word content schema', () => {
   it('accepts a valid word file', () => {
     const parsed = wordFileSchema.safeParse({
