@@ -3199,3 +3199,46 @@ R60 asks of any check: *is it reading the artefact, or a copy of it?* This is th
 level earlier, applied to a SEARCH rather than a check — is it reading the field, or a field that
 looks like it? A near-hit under a different key is a copy of the answer, and it fails the same way:
 convincingly, and with nothing downstream aware that a premise went untested.
+
+## R72 — "Unresolvable by design" is a gate concept the schema does not share
+*David, 2026-08-13. Found by a write, which is the problem.*
+
+A declared absence at the gate is a BROKEN REFERENCE at the database, and nothing said so until a
+write discovered it.
+
+`en-vocab-dominant-sense` is held out by ruling (R66): the tag is right, the hint is unverified, and
+the entry enters only when its hint can be read from a stored field. Four gates were taught to
+treat that absence as a decision rather than a fault — `HELD_OUT` in the resolver, read by
+`verify_clusters` and `verify_enumeration`, reported every run with its ground.
+
+`ItemOption.misconceptionId` is a **foreign key**. Ten cluster distractors carry that tag, and the
+database cannot store any of them:
+
+```
+code: P2003 | meta: {"constraint":"ItemOption_misconceptionId_fkey"}
+```
+
+**The gates model a held-out entry as an absence with a reason. The schema models it as a
+reference to nothing.** Both are correct about their own artefact, and neither knew about the
+other — so a batch that passed all four gates failed on its first write.
+
+**The cost was a half-applied import.** The first attempt looped item by item with no pre-flight:
+one item written, then the violation, and a batch neither in nor out. Rewritten to CLASSIFY BEFORE
+WRITING and to write in ONE transaction — the `reviewed-guard` pattern, which existed and which I
+had not applied to my own import.
+
+**The ruling on the ten** (David, 2026-08-13): HOLD THEM WHOLE, do not null the tag. The diagnosis
+is what Annie ruled on; nulling would make ten correctly-tagged items look untagged, and the
+difference between "no diagnosis" and "diagnosis awaiting a transcription check" is the entire
+content of the ruling. A split cluster is acceptable — these are DRAFT items awaiting review, not
+serving content, and the ten are identifiable by tag, so nothing is lost by waiting.
+
+**What the gates should do about it.** A gate that declares an id held out knows something the
+schema will refuse. It should SAY SO — name the items that cannot be written and why — rather than
+leaving a write to discover it. Any future held-out entry hits this identically, and the second
+time it happens it will not be new information.
+
+**A measurement worth keeping.** 96 drafted, 81 writable, 5 gate-held, 10 tag-held, and the two
+held classes were fully DISJOINT — the expectation had been 86 writable, assuming the five gate
+hits sat inside the ten. They did not. Two independent hold reasons do not overlap just because
+both are small; count them, do not subtract them from each other.

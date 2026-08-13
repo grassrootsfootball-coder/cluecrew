@@ -42,6 +42,7 @@
     "check:db-content": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-db-content.ts",
     "export:review-pack": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-review-pack.ts",
     "import:review-decisions": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/import-review-decisions.ts",
+    "import:clusters": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/import-english-clusters.ts",
     "import:english-items": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/import-english-items.ts",
     "export:hints-to-reword": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-hints-to-reword.ts",
     "export:walk-scripts": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-walk-scripts.ts",
