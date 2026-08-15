@@ -30,7 +30,11 @@
  * a reader of the log — or a future audit — cannot mistake it for an ordinary ruling. Loud, not
  * silent, is the whole point: the earlier fault was a change nobody could tell apart from noise.
  */
-import { chmodSync, appendFileSync, existsSync, readFileSync, writeFileSync } from 'node:fs';
+import { chmodSync, appendFileSync, existsSync, readFileSync } from 'node:fs';
+// ATOMIC: temp file plus rename. writeFileSync truncates before it writes, so a process killed
+// mid-call leaves an authored item record truncated — the head -50 BrokenPipe class. The rename
+// makes the write all-or-nothing; the dated per-item notes remain the resume path (David, 2026-08-13).
+import { atomicWriteFileSync } from './atomic-write';
 import { join, resolve } from 'node:path';
 import { checkItemChildFacing, isBlocking } from '../../packages/core/src/index';
 
@@ -141,7 +145,7 @@ export function withPilotFile(
           blocked.map((b) => `${b.itemId} [${b.failures.join('; ')}]`).join(' | '),
       );
     }
-    writeFileSync(path, JSON.stringify(batch, null, 2));
+    atomicWriteFileSync(path, JSON.stringify(batch, null, 2), READ_ONLY);
   } finally {
     chmodSync(path, READ_ONLY);
   }
@@ -179,7 +183,7 @@ export function withPilotTextFile(
   try {
     const current = readFileSync(path, 'utf8');
     if (!current.includes(oldText)) throw new Error(`${filename}: expected text not found — refusing a blind write`);
-    writeFileSync(path, current.replace(oldText, newText));
+    atomicWriteFileSync(path, current.replace(oldText, newText), READ_ONLY);
   } finally {
     chmodSync(path, READ_ONLY);
   }

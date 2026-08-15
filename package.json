@@ -99,6 +99,7 @@
     "verify:bank-content": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/verify-bank-content.ts",
     "backfill:reviewers": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/backfill-reviewer-identity.ts",
     "check:signing-doors": "tsx scripts/check-signing-doors.ts",
+    "check:n-option-precondition": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-n-option-precondition.ts",
     "check:register": "tsx scripts/check-register.ts",
     "check:derived-writes": "tsx scripts/check-derived-writes.ts",
     "check:e2e-fixtures": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-e2e-fixtures.ts",
