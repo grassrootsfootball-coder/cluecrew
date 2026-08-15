@@ -37,6 +37,7 @@ async function main(): Promise<void> {
   let citing = 0;
 
   const items = await prisma.item.findMany({ include: { questionType: true } });
+  const absent: string[] = [];
   for (const item of items) {
     const stem = (item.stem ?? {}) as Record<string, unknown>;
     const passageRef = stem.passageRef as string | undefined;
@@ -45,9 +46,23 @@ async function main(): Promise<void> {
     const passage = passages.get(passageRef);
     const lineRefs = Array.isArray(stem.lineRefs) ? (stem.lineRefs as number[]) : [];
     const gapRef = typeof stem.gapRef === 'number' ? stem.gapRef : undefined;
-    const declaredQuotes = Array.isArray(stem.quotes)
-      ? (stem.quotes as Array<{ text?: string }>).map((quote) => quote.text ?? '').filter(Boolean)
-      : [];
+    // A declared quote with NO text is a malformed declaration, not an empty one. `?? ''` then
+    // `.filter(Boolean)` silently discarded it, so a broken quotes entry read as "no quotes".
+    const rawQuotes = Array.isArray(stem.quotes) ? (stem.quotes as Array<{ text?: unknown }>) : [];
+    const textlessQuotes = rawQuotes.filter((q) => typeof q.text !== 'string' || !q.text.trim()).length;
+    if (textlessQuotes > 0) {
+      absent.push(`${item.id}: ${textlessQuotes} declared quote(s) carry no text`);
+    }
+    const declaredQuotes = rawQuotes
+      .filter((q): q is { text: string } => typeof q.text === 'string' && q.text.trim().length > 0)
+      .map((q) => q.text);
+
+    // The prompt is the text every citation in this stem is checked against. Missing is a fault.
+    const prompt = typeof stem.prompt === 'string' ? stem.prompt : null;
+    if (prompt === null) {
+      absent.push(`${item.id}: stem.prompt is absent or not a string — nothing to check citations against`);
+      continue;
+    }
     const bucket = item.status === 'LIVE' ? serving : draft;
 
     // R23 limit 1 — a declared passage NAME must actually be the passage's name. Verified here,
@@ -77,7 +92,11 @@ async function main(): Promise<void> {
         passage,
         lineRefs,
         gapRef,
-        text: (stem.prompt as string) ?? '',
+        // ABSENCE FAILS, IT DOES NOT READ AS EMPTY (David, 2026-08-13). This was
+        // `(stem.prompt as string) ?? ''`: an item with no prompt handed the citation gate an
+        // empty string, which cites nothing, so it passed. This is the gate for the whole
+        // citation programme and it was reading a missing prompt as a clean one.
+        text: prompt,
         declaredQuotes,
       }),
     );
@@ -97,6 +116,18 @@ async function main(): Promise<void> {
     `Line-reference gate: ${passages.size} passages · ${checked} item(s) citing a passage · ` +
       `${citing} explanation field(s) naming a line.`,
   );
+
+  // ABSENT FIELDS FAIL. A stem the gate could not read is not a stem the gate cleared, and the
+  // count above must not be quoted as coverage of it.
+  if (absent.length > 0) {
+    console.error(`\n${absent.length} item(s) could not be checked — a field the gate reads is ABSENT:`);
+    for (const a of absent) console.error(`  x ${a}`);
+    console.error(
+      '\nAbsence is not emptiness. These items were skipped, not passed, and the figure above\n' +
+        'does not cover them. Fix the stem or withdraw the item; do not default the field.',
+    );
+    process.exitCode = 1;
+  }
 
   const report = (name: string, failures: LineRefFailure[]): void => {
     if (failures.length === 0) return;

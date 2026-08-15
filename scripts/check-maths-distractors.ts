@@ -25,12 +25,22 @@ import {
 import { prisma } from '../packages/db/src/index';
 import { declareMayBeEmpty } from './lib/population';
 
+/** An option's value, or null when the field is ABSENT. Never coerces to a string. */
+function optionValue(content: unknown): string | null {
+  if (content && typeof content === 'object' && 'value' in content) {
+    const v = (content as { value: unknown }).value;
+    return v === null || v === undefined ? null : String(v);
+  }
+  return null;
+}
+
 async function main(): Promise<void> {
   const items = await prisma.item.findMany({
     where: { questionType: { district: 'MATHS' } },
     include: { options: true },
   });
 
+  const unreadable: string[] = [];
   const serving: MathsFailure[] = [];
   const draft: MathsFailure[] = [];
   const reports: MathsFailure[] = [];
@@ -45,14 +55,28 @@ async function main(): Promise<void> {
     if (item.status === 'LIVE') liveItems += 1;
     const stem = (item.stem ?? {}) as Record<string, unknown>;
     const key = item.options.find((o) => o.isCorrect);
+
+    // ABSENCE FAILS, IT DOES NOT READ AS EMPTY (David, 2026-08-13). Both reads below were
+    // `.value ?? ''`. An option stored in the wrong envelope — a bare string, say — yields
+    // undefined, became '', and the gate compared '' against the executed misconception and
+    // found nothing to object to. That is how 340 mis-shaped options passed three gates.
+    const keyValue = key ? optionValue(key.content) : null;
+    const badValues = item.options.filter((o) => optionValue(o.content) === null).length;
+    if (!key || keyValue === null || badValues > 0) {
+      unreadable.push(
+        `${item.id}: ${!key ? 'no key' : keyValue === null ? 'key has no readable value' : ''}` +
+          `${badValues > 0 ? `${!key || keyValue === null ? '; ' : ''}${badValues} option(s) with no readable value` : ''}`,
+      );
+      continue;
+    }
     const found = checkMathsItem({
       id: item.id,
       solution: item.solution,
-      keyValue: String((key?.content as { value?: unknown })?.value ?? ''),
+      keyValue: keyValue!,
       operands: (stem.operands as Record<string, number | number[] | string>) ?? {},
       distractors: item.options
         .filter((o) => !o.isCorrect)
-        .map((o) => ({ value: String((o.content as { value?: unknown }).value ?? ''), misconceptionId: o.misconceptionId })),
+        .map((o) => ({ value: optionValue(o.content)!, misconceptionId: o.misconceptionId })),
     });
     for (const f of found) {
       if (f.severity === 'report') reports.push(f);
@@ -69,6 +93,13 @@ async function main(): Promise<void> {
     'No code path creates a MATHS questionType, so no maths item has ever reached the database. ' +
       'This gate has never screened one. Remove this declaration the moment a maths item persists.',
   );
+
+  if (unreadable.length > 0) {
+    console.error(`\n${unreadable.length} item(s) could not be read — an option field is ABSENT:`);
+    for (const u of unreadable) console.error(`  x ${u}`);
+    console.error('Absence is not emptiness. These were skipped, not cleared.');
+    process.exitCode = 1;
+  }
 
   // --- Executor coverage over the approved derivable misconceptions --------
   const active = await prisma.misconception.findMany({ where: { district: 'MATHS', status: 'ACTIVE' }, select: { id: true } });
