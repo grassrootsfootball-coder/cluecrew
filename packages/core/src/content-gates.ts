@@ -559,6 +559,19 @@ export function checkChildFacingText(input: {
    * quotation stays fully in scope on all three.
    */
   quotedSpans?: readonly string[];
+  /**
+   * PER-CEILING EXEMPTION, from each quote's own `exemptFrom` (David's ruling, 2026-08-16).
+   *
+   * `exemptFrom` names WHICH child-facing ceilings a given quotation is exempt from — it exists
+   * because the source text may exceed a cap we set for our own writing, and when a child reads
+   * Grahame she reads Grahame. Rewording him is not a fix.
+   *
+   * Supplied, each list is honoured exactly and only for the quotations that named that ceiling.
+   * Omitted, `quotedSpans` applies to all three, which is the behaviour every existing caller
+   * relies on. EVERYTHING AROUND THE QUOTATION STAYS CAPPED either way: a stem is not exempt
+   * because it contains an exempt quote — only the quoted span is masked.
+   */
+  exemptSpans?: { sentenceCap?: readonly string[]; banList?: readonly string[]; vocabularyCeiling?: readonly string[] };
   /** Words this item tests. Exempt from the VOCABULARY CEILING only. */
   testedTokens?: readonly string[];
   /** Proper nouns the PASSAGE uses (R23). Exempt from the ceiling only; verified against the
@@ -571,8 +584,10 @@ export function checkChildFacingText(input: {
       input.label,
       input.text,
       input.exemptStem,
-      input.testedTokens ?? [],
-      input.quotedSpans ?? [],
+      // The vocabulary ceiling lives inside the reading-age check alongside the sentence cap, so
+      // a span exempt from either is passed here; the ceiling's own exemption rides testedTokens.
+      [...(input.testedTokens ?? []), ...(input.exemptSpans?.vocabularyCeiling ?? [])],
+      input.exemptSpans?.sentenceCap ?? input.quotedSpans ?? [],
       input.passageNames ?? [],
     ),
     ...checkBannedVocabulary(
@@ -580,7 +595,7 @@ export function checkChildFacingText(input: {
       input.text,
       'child-facing',
       input.headwordInOwnCard,
-      input.quotedSpans ?? [],
+      input.exemptSpans?.banList ?? input.quotedSpans ?? [],
       input.role,
     ),
     ...checkNoInternalIds(input.label, input.text),

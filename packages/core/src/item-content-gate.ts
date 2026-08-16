@@ -57,14 +57,42 @@ export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
   const failures: ContentFailure[] = [];
   const stem = (item.stem ?? {}) as Record<string, unknown>;
   const stemRole = roleForItemStem(item.mechanic);
-  const stemQuotes = Array.isArray(stem.quotes)
-    ? (stem.quotes as Array<{ text?: string }>).map((q) => q.text ?? '').filter(Boolean)
+  /**
+   * DECLARED QUOTATIONS, AND WHICH CEILINGS EACH ONE IS EXEMPT FROM.
+   *
+   * `exemptFrom` sat in the declarative-field registry and was READ BY NOTHING. Two ENG-001 items
+   * declared it and were refused anyway, three times, on a sentence that is Grahame's own prose —
+   * a refusal loop neither side could break, because the door refused a declaration it was built
+   * to honour and never said so. That is this thread's shape, in a gate.
+   *
+   * A bare-string quote (R78) declares a text and not a place and names no ceilings; it keeps the
+   * default, which is exempt from all three.
+   */
+  const stemQuoteObjects = Array.isArray(stem.quotes)
+    ? (stem.quotes as Array<unknown>).map((q) => (typeof q === 'string' ? { text: q } : q as { text?: string; exemptFrom?: string[] }))
     : [];
+  const stemQuotes = stemQuoteObjects.map((q) => q.text ?? '').filter(Boolean);
+  const declaresExemptFrom = stemQuoteObjects.some((q) => Array.isArray(q.exemptFrom));
+  const spansExemptFrom = (ceiling: string): string[] => stemQuoteObjects
+    .filter((q) => !Array.isArray(q.exemptFrom) || q.exemptFrom.includes(ceiling))
+    .map((q) => q.text ?? '')
+    .filter(Boolean);
+  const stemExemptSpans = declaresExemptFrom
+    ? {
+      sentenceCap: spansExemptFrom('sentenceCap'),
+      banList: spansExemptFrom('banList'),
+      vocabularyCeiling: spansExemptFrom('vocabularyCeiling'),
+    }
+    : undefined;
   const testedTokens = Array.isArray(stem.testedTokens) ? (stem.testedTokens as string[]) : [];
   // R23 — proper nouns the passage itself uses, declared on the stem, exempt from the ceiling only.
   const passageNames = Array.isArray(stem.passageNames) ? (stem.passageNames as string[]) : [];
 
-  // Every stem string. Only the prompt carries the declared quotes.
+  /** The stem fields a declared quotation can appear in: the prose, and the declaration itself. */
+  const carriesQuotes = (path: string): boolean =>
+    path === 'prompt' || path === 'text' || /^quotes\[\d+\]\.text$/.test(path);
+
+  // Every stem string. The prose and the quote declarations carry the declared quotes.
   for (const [path, text] of textsFrom(item.stem, '')) {
     // A carrier sentence disambiguates a meaning and can run long, so it takes
     // the word-card role (no length cap; the vocabulary ceiling ≤9 still holds,
@@ -77,7 +105,16 @@ export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
         role,
         label: `item:${item.id} stem.${path}`,
         text,
-        quotedSpans: path === 'prompt' ? stemQuotes : [],
+        // BOTH NAMES. This read `path === 'prompt'` while Cowork authors `stem.text` and R79 ruled
+        // text wins, so on every migrated item the declared quotes were passed to NOTHING and the
+        // exemption could not apply however it was declared.
+        // BOTH NAMES, AND THE QUOTE'S OWN FIELD. This read `path === 'prompt'` while Cowork
+        // authors `stem.text` and R79 ruled text wins, so on every migrated item the declared
+        // quotes were passed to NOTHING. And `textsFrom` walks the stem object, so it screens
+        // `quotes[0].text` as its own string — the quotation checked with no exemption, which left
+        // a 20-word fault standing on a span declared exempt from the sentence cap.
+        quotedSpans: carriesQuotes(path) ? stemQuotes : [],
+        exemptSpans: carriesQuotes(path) ? stemExemptSpans : undefined,
         testedTokens,
         passageNames,
       }),

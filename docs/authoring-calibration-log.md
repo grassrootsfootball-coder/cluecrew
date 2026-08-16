@@ -4115,6 +4115,22 @@ No exception was needed on the way in. It was reported as 17 words against a 16-
 per SENTENCE and her field is two sentences of 7 and 10 words, as her own note in the document says.
 The gate returned 0 blocking. Nothing was exempted, amended, or asked of her.
 
+## R102 — exemptFrom was in the registry and read by nothing
+*David's ruling, 2026-08-16. One line for the record, not an investigation.*
+
+`stem.quotes[].exemptFrom` names which child-facing ceilings a quotation is exempt from, because
+the source text may exceed a cap we set for our own writing — when a child reads Grahame she reads
+Grahame, and rewording him is not a fix. **The field sat in the declarative-field registry and was
+read by NOTHING**: no file in `packages/core` mentioned it but the registry itself. Two ENG-001
+items declared it and were refused three times on a sentence that is Grahame's own prose, and
+neither side could break the loop — Cowork re-emitted what was already correct, my door refused a
+declaration it was built to honour, and the receipt that would have said so did not exist yet.
+
+`checkItemChildFacing` now reads it and skips only the NAMED ceilings, for the declared quotation
+only; everything around the quotation stays capped. Two further faults surfaced doing it, both the
+same two-name shape: the gate passed quotes only when the stem field was called `prompt` while R79
+ruled `text` wins, and it screened `quotes[0].text` as its own string with no exemption at all.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 
