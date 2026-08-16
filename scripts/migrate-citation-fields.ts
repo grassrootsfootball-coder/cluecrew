@@ -12,6 +12,10 @@
  *      it held nothing, because the manifest probe searched the stem as a fallback.
  *   3. `stem.lineRefs` → `Item.lineRefs`. A LEVEL difference against Cowork, which holds it at item
  *      level. Item level wins.
+ *   4. `stem.prompt` → `stem.text`. The FOURTH two-name collision, and the one that settled the
+ *      pattern: WHATEVER COWORK AUTHORS IS THE NAME. Cowork holds `stem.text` on 354 of 354.
+ *   5. `draftSelfAssessment.verdict` → `handoffState`, inside the stored JSON. A verdict is what a
+ *      reviewer returns; the name asserted a state its writer could not confer.
  *
  * IT REFUSES RATHER THAN MERGES. If both the source and the destination hold a value and they
  * disagree, that is two different claims about the same fact and no script should pick one. The
@@ -43,6 +47,7 @@ interface Plan {
   explanation: Record<string, unknown>;
   itemLineRefs?: unknown;
   itemTestedTokens?: unknown;
+  assessment?: Record<string, unknown>;
   applied: string[];
 }
 
@@ -50,7 +55,7 @@ async function main(): Promise<void> {
   const write = process.argv.includes('--write');
   const items = await prisma.item.findMany({
     where: { id: { startsWith: 'ENG-' } },
-    select: { id: true, stem: true, explanation: true, lineRefs: true, testedTokens: true },
+    select: { id: true, stem: true, explanation: true, lineRefs: true, testedTokens: true, draftSelfAssessment: true },
     orderBy: { id: 'asc' },
   });
   requirePopulation('migrate:citations', { 'ENG items': items.length });
@@ -102,6 +107,30 @@ async function main(): Promise<void> {
       }
     }
 
+    // 4. stem.prompt -> stem.text. Cowork authors `text` on 354 of 354, and the pattern across all
+    // four collisions is now settled: whatever Cowork authors is the name.
+    if (typeof stem.prompt === 'string') {
+      if (typeof stem.text === 'string' && stem.text !== stem.prompt) {
+        conflicts.push(`${it.id}: stem.prompt and stem.text both present and different`);
+      } else {
+        stem.text = stem.prompt;
+        delete stem.prompt;
+        plan.applied.push('prompt->text');
+      }
+    }
+
+    // 5. verdict -> handoffState, inside the stored assessment.
+    const dsa = it.draftSelfAssessment as Record<string, unknown> | null;
+    if (dsa && typeof dsa === 'object' && 'verdict' in dsa) {
+      const { verdict, ...rest } = dsa;
+      if ('handoffState' in rest && rest.handoffState !== verdict) {
+        conflicts.push(`${it.id}: assessment holds verdict ${String(verdict)} and handoffState ${String(rest.handoffState)}`);
+      } else {
+        plan.assessment = { ...rest, handoffState: verdict };
+        plan.applied.push('verdict->handoffState');
+      }
+    }
+
     if (plan.applied.length) plans.push(plan);
   }
 
@@ -110,6 +139,8 @@ async function main(): Promise<void> {
   console.log(`  atLines -> lineRefs (explanation quotes): ${count('atLines->lineRefs')}`);
   console.log(`  stem.testedTokens -> Item.testedTokens:   ${count('testedTokens->item')}`);
   console.log(`  stem.lineRefs -> Item.lineRefs:           ${count('lineRefs->item')}`);
+  console.log(`  stem.prompt -> stem.text:                 ${count('prompt->text')}`);
+  console.log(`  verdict -> handoffState:                  ${count('verdict->handoffState')}`);
   console.log(`  items to touch: ${plans.length}`);
 
   if (conflicts.length > 0) {
@@ -139,6 +170,7 @@ async function main(): Promise<void> {
       // writing null over a value the migration did not source.
       ...(p.itemLineRefs !== undefined ? { lineRefs: p.itemLineRefs as object } : {}),
       ...(p.itemTestedTokens !== undefined ? { testedTokens: p.itemTestedTokens as object } : {}),
+      ...(p.assessment !== undefined ? { draftSelfAssessment: p.assessment as object } : {}),
     },
   })));
   for (const p of plans) {
@@ -159,7 +191,7 @@ async function main(): Promise<void> {
   // either alone would leave the duplication this exists to end.
   const after = await prisma.item.findMany({
     where: { id: { in: plans.map((p) => p.id) } },
-    select: { id: true, stem: true, explanation: true, lineRefs: true, testedTokens: true },
+    select: { id: true, stem: true, explanation: true, lineRefs: true, testedTokens: true, draftSelfAssessment: true },
   });
   const byId = new Map(plans.map((p) => [p.id, p]));
   let ok = 0;
@@ -173,8 +205,13 @@ async function main(): Promise<void> {
       || (stem.lineRefs === undefined && canonical(r.lineRefs) === canonical(p.itemLineRefs));
     const ttOk = p.itemTestedTokens === undefined
       || (stem.testedTokens === undefined && canonical(r.testedTokens) === canonical(p.itemTestedTokens));
-    if (noAtLines && lrOk && ttOk) ok += 1;
-    else failed.push(`${r.id}: atLines gone=${noAtLines} lineRefs=${lrOk} testedTokens=${ttOk}`);
+    const promptOk = !p.applied.includes('prompt->text')
+      || (stem.prompt === undefined && typeof stem.text === 'string');
+    const dsa = r.draftSelfAssessment as Record<string, unknown> | null;
+    const hsOk = !p.applied.includes('verdict->handoffState')
+      || (dsa !== null && !('verdict' in dsa) && typeof dsa.handoffState === 'string');
+    if (noAtLines && lrOk && ttOk && promptOk && hsOk) ok += 1;
+    else failed.push(`${r.id}: atLines gone=${noAtLines} lineRefs=${lrOk} testedTokens=${ttOk} prompt=${promptOk} handoff=${hsOk}`);
   }
   console.log(`\nVERIFIED by re-reading all ${after.length} migrated rows:`);
   console.log(`  destination holds the value AND the source is gone: ${ok} of ${after.length}`);

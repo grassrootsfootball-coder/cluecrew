@@ -14,7 +14,7 @@
  * NOT A REVIEW QUERY. It answers "does this claim still describe its subject", never "has this
  * been reviewed" — and it is a declared door in `check:review-queries` on exactly that basis.
  */
-import { preReviewSubjectHash, readPreReview } from '../packages/core/src/index';
+import { draftAssessmentSubjectHash, readDraftSelfAssessment } from '../packages/core/src/index';
 import { Prisma, prisma } from '../packages/db/src/index';
 import { requirePopulation } from './lib/population';
 
@@ -26,7 +26,7 @@ async function main(): Promise<void> {
   const items = await prisma.item.findMany({
     // Prisma.DbNull, not `null`: on a Json column a bare null is the JSON value null, not
     // SQL NULL. It happened to return the right 78 rows; the type was telling the truth anyway.
-    where: { authoringPreReview: { not: Prisma.DbNull } },
+    where: { draftSelfAssessment: { not: Prisma.DbNull } },
     include: { options: { orderBy: { id: 'asc' } } },
     orderBy: { id: 'asc' },
   });
@@ -39,16 +39,16 @@ async function main(): Promise<void> {
   const noHash: string[] = [];
   const unreadable: string[] = [];
   for (const it of items) {
-    if (readPreReview(it.authoringPreReview) === null) { unreadable.push(it.id); continue; }
-    if (!it.authoringPreReviewHash) { noHash.push(it.id); continue; }
+    if (readDraftSelfAssessment(it.draftSelfAssessment) === null) { unreadable.push(it.id); continue; }
+    if (!it.draftSelfAssessmentHash) { noHash.push(it.id); continue; }
     const stem = (it.stem ?? {}) as Record<string, unknown>;
     const prompt = typeof stem.prompt === 'string' ? stem.prompt
       : typeof stem.text === 'string' ? stem.text : null;
-    const now = preReviewSubjectHash({
+    const now = draftAssessmentSubjectHash({
       prompt, tier: it.difficultyTier,
       options: it.options.map((o) => ({ text: textOf(o.content), isCorrect: o.isCorrect })),
     });
-    if (now !== it.authoringPreReviewHash) superseded.push(it.id);
+    if (now !== it.draftSelfAssessmentHash) superseded.push(it.id);
   }
 
   console.log(`check:pre-review-subject: ${items.length} item(s) hold an authoring pre-review.`);

@@ -89,7 +89,7 @@ export const COWORK_ITEM_KEYS: Readonly<Record<CoworkLevel, readonly CoworkKeyRu
     {
       key: 'preReview',
       disposition: 'MAPPED',
-      carriedAt: 'Item.authoringPreReview (+ authoringPreReviewHash, computed here)',
+      carriedAt: 'Item.draftSelfAssessment (+ draftSelfAssessmentHash, computed here)',
       // AUTHORING METADATA, not review. Both of Cowork's verdict values mean a human has not
       // looked. check:review-queries fences the column off from anything answering "has this
       // been reviewed"; the name alone is not the control.

@@ -1,7 +1,7 @@
 /**
  * CARRY COWORK'S preReview ONTO THE 78 ITEMS — `pnpm backfill:pre-review [--write]`
  *
- * It lands on `Item.authoringPreReview`, which is not `reviewedBy`, not `reviewRecordedBy` and
+ * It lands on `Item.draftSelfAssessment`, which is not `reviewedBy`, not `reviewRecordedBy` and
  * nothing `recordSignature` writes. `pnpm check:review-queries` is what enforces that; this door
  * is declared there.
  *
@@ -20,7 +20,7 @@
 import { createHash } from 'node:crypto';
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
-import { preReviewSubjectHash, readPreReview, unknownCoworkKeys } from '../packages/core/src/index';
+import { draftAssessmentSubjectHash, readDraftSelfAssessment, unknownCoworkKeys } from '../packages/core/src/index';
 import { prisma } from '../packages/db/src/index';
 
 const SEARCH = ['/Users/davidb/Downloads/11+', '/Users/davidb/Downloads/11+/items', '/Users/davidb/Downloads/11+/from-cluecrew'];
@@ -106,14 +106,14 @@ async function main(): Promise<void> {
   let unreadable = 0;
   for (const r of rows) {
     const claim = claims.get(r.id)!;
-    if (readPreReview(claim.pr) === null) { unreadable += 1; continue; }
-    if (r.authoringPreReview !== null) { alreadyHeld += 1; continue; }
+    if (readDraftSelfAssessment(claim.pr) === null) { unreadable += 1; continue; }
+    if (r.draftSelfAssessment !== null) { alreadyHeld += 1; continue; }
     const stem = (r.stem ?? {}) as Record<string, unknown>;
     const prompt = typeof stem.prompt === 'string' ? stem.prompt
       : typeof stem.text === 'string' ? stem.text : null;
     updates.push({
       id: r.id, pr: claim.pr,
-      hash: preReviewSubjectHash({
+      hash: draftAssessmentSubjectHash({
         prompt, tier: r.difficultyTier,
         options: r.options.map((o) => ({ text: textOf(o.content), isCorrect: o.isCorrect })),
       }),
@@ -135,7 +135,7 @@ async function main(): Promise<void> {
 
   await prisma.$transaction(updates.map((u) => prisma.item.update({
     where: { id: u.id },
-    data: { authoringPreReview: u.pr as object, authoringPreReviewHash: u.hash },
+    data: { draftSelfAssessment: u.pr as object, draftSelfAssessmentHash: u.hash },
   })));
   for (const u of updates) {
     await prisma.attributionEvent.create({
@@ -143,7 +143,7 @@ async function main(): Promise<void> {
         recordType: 'item', recordId: u.id, action: 'AMENDED',
         // NOT a review event. No reviewerId, and the note says what the field is so nobody reads
         // this event as the item having been looked at by a person.
-        actor: DAVID, recordedBy: DAVID, field: 'authoringPreReview',
+        actor: DAVID, recordedBy: DAVID, field: 'draftSelfAssessment',
         method: 'Cowork pre-review carried across, 2026-08-16',
         note:
           'Stored a DRAFTING AGENT\'S assessment of its own work as authoring metadata, with a ' +
@@ -160,14 +160,14 @@ async function main(): Promise<void> {
   // the ruling is about, instead of asserting it in a comment while doing the opposite.
   const after = await prisma.item.findMany({
     where: { id: { in: updates.map((u) => u.id) } },
-    select: { id: true, authoringPreReview: true, authoringPreReviewHash: true },
+    select: { id: true, draftSelfAssessment: true, draftSelfAssessmentHash: true },
   });
   const reviewState = await prisma.item.findMany({
     where: { id: { in: updates.map((u) => u.id) } },
     select: { id: true, reviewedBy: true, status: true },
   });
   const byId = new Map(updates.map((u) => [u.id, u]));
-  const held = after.filter((r) => r.authoringPreReview !== null && r.authoringPreReviewHash === byId.get(r.id)!.hash);
+  const held = after.filter((r) => r.draftSelfAssessment !== null && r.draftSelfAssessmentHash === byId.get(r.id)!.hash);
   console.log(`\nVERIFIED by re-reading all ${after.length} rows:`);
   console.log(`  holding the claim with its subject hash: ${held.length} of ${after.length}`);
   console.log(`  still DRAFT: ${reviewState.filter((r) => r.status === 'DRAFT').length} of ${reviewState.length}`);

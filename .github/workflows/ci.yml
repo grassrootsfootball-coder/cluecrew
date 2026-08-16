@@ -231,8 +231,8 @@ jobs:
       - name: Review queries (a self-assessment is not a sign-off)
         run: pnpm check:review-queries
 
-      - name: Pre-review subject (a claim still describes its item)
-        run: pnpm check:pre-review-subject
+      - name: Draft self-assessment subject (a claim still describes its item)
+        run: pnpm check:draft-assessment
 
       # THE MANIFEST GUARD. Fails on REGRESSION -- a declarative field this store carried is
       # carried less, or is carried somewhere else -- never on the 20-field backlog, which would

@@ -3458,3 +3458,79 @@ and one gate knowing one of them.
 rather than `{text, …}` — the identical fault as the 340 bare-string options, in a different field,
 from the same importer passing Cowork's shape straight through. Invisible until the gate could reach
 those items at all. Reported, not normalised: Cowork owns the quote envelope.
+
+## R78 — A reader scoped to one store reports the other store's convention as a defect
+*Cowork, ratified by David, 2026-08-16. The near miss is the entry.*
+
+10 quotes in this store are stored as BARE STRINGS rather than `{text, …}`. `check:line-refs`
+reported all 10 as "declared quote(s) carry no text", and I proposed normalising them — the same
+repair that was correct for the 340 bare-string options.
+
+**It would have been wrong.** Cowork's CHECK 8 documents a bare string in a quotes array as a
+DECLARED CONVENTION: it declares A TEXT AND NOT A PLACE, and is checked for PRESENCE ONLY, because
+no citation was claimed. 63 exist across the district. Normalising would have destroyed the
+distinction between "quotes this text at these lines" and "quotes this text, claiming no place" —
+inventing a claim its author did not make.
+
+**What settles convention against leak, when you can only see one store:** across every source file
+and every stored row, each quotes array is UNIFORMLY one shape or the other. **Zero arrays mix.** An
+accidental shape leak is arbitrary; a form is consistent at the boundary that carries meaning. That
+test is available without asking, and I did not apply it before proposing the repair.
+
+Delivery 51's lesson, restated: **a reader scoped to one cluster reports the convention as a
+defect.** Scoped to one STORE it does the same thing. The gate now counts placeless quotes and
+reports them as present-only; a malformed OBJECT with no usable `text` is still a fault.
+
+## R79 — Whatever Cowork authors is the name
+*David, 2026-08-16, on the fourth two-name collision.*
+
+`stem.prompt` against `stem.text`. Cowork holds `text` on 354 of 354. Ruled: TEXT WINS, migrate the
+78 prompt-named rows, and the gate reads one name. That is four collisions — `atLines`/`lineRefs`,
+`stem.testedTokens`/`testedTokens`, `passageId`/`passageRef`, `prompt`/`text` — and the pattern is
+now a rule rather than four separate rulings.
+
+**RENAMES, because a name can assert a state its writer could not confer.** `preReview` →
+`draftSelfAssessment`; `verdict` → `handoffState`. "preReview" places the claim on the review
+timeline and "verdict" is what a reviewer returns — both restate, as identifiers, the exact
+conflation the column exists to prevent. **My own `authoringPreReview` still said preReview**: the
+prefix named the class and left the confusion intact underneath it. The vintage names are still
+READ, because every file delivered before the rename says `verdict` and a reader that knew only the
+new name would report 78 readable claims as unreadable — R57's shape in vocabulary.
+
+**`draftingOrder` → `draftingMethod` was a rename AND a correction of my reading.** I had proposed
+dropping the field as "the order the drafting pass wrote items in". Every value is the string
+`"mechanism-first (Addendum 20)"`, and it equals `orderAnchor` on 0 of 60 here and 0 of 251 across
+the district. A column built to the old name would have rejected or corrupted all 251. **I proposed
+an exception from the field's NAME without reading its VALUES.**
+
+**THE `before` DISPUTE, SETTLED BY SEARCHING.** Cowork ruled `stemRedraft.why` crosses and `before`
+does not, being recoverable from the 2026-08-02 snapshots. Searching every file on disk for each of
+the five `before` texts: WIW-18 is in the Aug-2 batch file; pp-19 is in the Aug-2 review pack and
+walk-script export; pp-08 is in a calibration-log section and an authoring skill doc. **pp-11 and
+pp-16 appear in no artefact that is not itself a copy of `stemRedraft`.** Cowork's premise holds for
+two of five and mine held for two of five — **each side was right about a different subset, and
+both would have been acting on a general belief.** Promotion to ARCHIVE cannot save pp-11 and pp-16
+because no snapshot holds them, so David's disjunction resolves one way: `before` crosses. Stored as
+`beforePreservedPendingRuling`, so the carriage stays visibly provisional rather than being quietly
+reclassified as content.
+
+## R80 — A boundary whose clock is wrong reports guilt, not uncertainty
+*2026-08-16, found on the write boundary's first real run.*
+
+`check:outside-writes` reported **345 UNATTRIBUTED WRITES**. Every one was false.
+
+`ContentWriteLog.at` defaulted to `CURRENT_TIMESTAMP`, a timestamptz, stored into a naive
+`TIMESTAMP(3)`. The session runs BST, so every logged write landed **one hour ahead** of the
+`AttributionEvent` recording the same act, and the fifteen-minute match window caught none of them.
+
+**The failure mode is the point.** A instrument with a skewed clock does not report "unknown" or
+"cannot tell". It reports, in its own words, "a change nobody decided" — 345 times, about work that
+was fully attributed, in the same run where it correctly printed its own denominator and its own
+unresolvable class. Everything else about the check was honest. **Ordinary correctness of the thing
+being measured against is a precondition for any of that honesty to mean anything.**
+
+Fixed at source (`now() AT TIME ZONE 'UTC'`, set explicitly in the trigger rather than left to the
+column default) and the existing rows corrected by a uniform offset. That UPDATE is the one and only
+mutation of an append-only table, and it is a CLOCK CORRECTION, not a prune: no row added, removed,
+or changed in WHAT it says happened — only in the convention it says it in. After the fix: 342
+attributed, 3 unattributed, and the 3 are the canary scratch row that is unattributed by design.

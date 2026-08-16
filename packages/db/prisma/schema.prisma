@@ -302,7 +302,13 @@ model Item {
   // distinct from [] (declared empty).
   lineRefs                Json?
   testedTokens            Json?
-  // COWORK'S preReview — A DRAFTING AGENT'S ASSESSMENT OF ITS OWN WORK, on 78 items.
+  // COWORK'S draftSelfAssessment — A DRAFTING AGENT'S ASSESSMENT OF ITS OWN WORK, on 78 items.
+  //
+  // RENAMED FROM preReview/authoringPreReview (Cowork, ratified by David 2026-08-16). The test is
+  // whether the NAME ASSERTS A STATE THE WRITER COULD NOT CONFER: "preReview" positions the claim
+  // on the review timeline, which is precisely the conflation being prevented, and my own
+  // `authoringPreReview` still said preReview. Its `verdict` is likewise `handoffState` now — a
+  // verdict is something a reviewer returns.
   //
   // NOT REVIEW, AND DELIBERATELY NOT NAMED AS IF IT WERE (David, 2026-08-16). Both verdict values
   // Cowork emits — PASS_TO_HUMAN and FIXED_THEN_PASS — terminate in "a human has not looked yet".
@@ -316,12 +322,26 @@ model Item {
   // Three of its rubric keys (readingAge, banList, keyVerified) are RE-DERIVABLE by gates this
   // repo already runs. Stored on nobody's authority is fine; mistaken later for findings is not,
   // so anything surfacing them must mark them as claims — see describePreReview in packages/core.
-  authoringPreReview      Json?
+  draftSelfAssessment     Json?
   // WHAT THE CLAIM WAS ABOUT. Cowork's version asserts nothing about what it assessed, so it
   // survives any later edit to the item — the exact failure subjectHash was added to prevent on
   // AttributionEvent. Carrying it across unfixed would import a known defect, so this side
   // computes one over the stem, the options in stored order and the tier.
-  authoringPreReviewHash  String?
+  draftSelfAssessmentHash String?
+  // THE NINE CONTENT KEYS, carried before the loose files go (David, 2026-08-16). Each holds a
+  // fact that exists nowhere else; `passageId` and `lineRef` were the only two of the eleven that
+  // proved VINTAGE — 22/22 identical to passageRef and lineRefs — and those two do not cross.
+  itemModel               String? // "MC" and similar — what kind of item this is
+  passageFlag             String? // an OPEN action on the source passage, not a note about the item
+  r4Note                  String? // why this item's stem was rebuilt under R4
+  banListException        Json? // { word, basis, needsReviewerRuling } — can BLOCK an item
+  banListExceptionResolved String?
+  importDoorFix           Json? // { round, fault, fix, before } — a citation error and its repair
+  stemRedraft             Json? // { rules, why, before } — see the note in the migration
+  // RENAMED FROM draftingOrder, and the rename was a live defect (Cowork, 2026-08-16): all 251
+  // values are METHOD-LABEL STRINGS and agree with orderAnchor on 0 of 251. A column built to the
+  // old name would have rejected or corrupted every one of them.
+  draftingMethod          String?
   // COWORK'S AUTHORING PROVENANCE, carried because the platform's claim rests on it (David,
   // 2026-08-16, revising his own earlier ruling). He had scoped carriage to the 39 DECLARATIVE
   // fields; Cowork's PROVENANCE classification was correct on its own terms and the line was
@@ -1195,6 +1215,16 @@ model Reviewer {
 /// ruling behind it.
 ///
 /// APPEND-ONLY BY DESIGN. Nothing updates or deletes a row here; the triggers only insert.
+///
+/// IT KEPT LOCAL TIME FOR ITS FIRST TWO HOURS. `CURRENT_TIMESTAMP` is a timestamptz and this is a
+/// naive TIMESTAMP(3), so every logged write landed an hour ahead of the AttributionEvent
+/// recording the same act. check:outside-writes matched none of them and reported 345 UNATTRIBUTED
+/// WRITES -- every one false, every one phrased as "a change nobody decided". A boundary whose
+/// clock disagrees with the record it is compared against does not report uncertainty; it reports
+/// GUILT, confidently, about work that was fully attributed. Corrected by a uniform offset in
+/// 20260816125500_write_log_utc -- the one mutation of this table, and a clock correction rather
+/// than a prune: no row added, removed, or changed in WHAT it says, only in the convention it
+/// says it in.
 /// Recorded because it happened: the trigger canary that proved this table works then DELETED its
 /// own four log rows, before that rule was settled. Two rows it could not match by id survive and
 /// show in `check:outside-writes` as unresolvable. Reported rather than tidied away — a boundary

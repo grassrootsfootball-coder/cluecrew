@@ -1,10 +1,18 @@
 /**
- * COWORK'S preReview — AUTHORING METADATA, AND STRUCTURALLY NOT A SIGN-OFF.
+ * COWORK'S draftSelfAssessment — AUTHORING METADATA, AND STRUCTURALLY NOT A SIGN-OFF.
+ *
+ * RENAMED FROM preReview/verdict (Cowork, ratified 2026-08-16). The test is whether the NAME
+ * ASSERTS A STATE THE WRITER COULD NOT CONFER. "preReview" places the claim on the review
+ * timeline; "verdict" is what a reviewer returns. My own `authoringPreReview` still said
+ * preReview — the prefix named the class and left the conflation intact underneath it.
+ *
+ * THE VINTAGE NAMES ARE STILL READ. Every file delivered before the rename says `verdict`, and a
+ * reader that only knows the new name would report 78 unreadable claims and call it a clean gate.
  *
  * A drafting agent's assessment of its own work, on 78 items. David's ruling, 2026-08-16: it
  * crosses, on the item, **structurally unreachable from the reviewer path**.
  *
- * THE VOCABULARY ANSWERS THE QUESTION AGAINST ITSELF. Both verdict values terminate in *a human
+ * THE VOCABULARY ANSWERS THE QUESTION AGAINST ITSELF. Both handoff states terminate in *a human
  * has not looked yet*. `PASS_TO_HUMAN` is a READINESS CLAIM from the opposite end of the process
  * from Annie's ratification — not a lesser sign-off, and it must never be readable as one. Model
  * the two as one thing and an agent's self-assessment looks like a reviewer's sign-off in the
@@ -26,8 +34,8 @@
 import { createHash } from 'node:crypto';
 
 /** The only two values Cowork emits, over all 78 items: 62 and 16 respectively. */
-export const PRE_REVIEW_VERDICTS = ['PASS_TO_HUMAN', 'FIXED_THEN_PASS'] as const;
-export type PreReviewVerdict = (typeof PRE_REVIEW_VERDICTS)[number];
+export const HANDOFF_STATES = ['PASS_TO_HUMAN', 'FIXED_THEN_PASS'] as const;
+export type HandoffState = (typeof HANDOFF_STATES)[number];
 
 /**
  * RUBRIC KEYS THIS REPO CAN RE-DERIVE, and the gate that does it.
@@ -49,7 +57,7 @@ export const REDERIVABLE_RUBRIC_KEYS: Readonly<Record<string, string>> = {
  */
 export const JUDGEMENT_RUBRIC_KEYS = ['distractorsExecute', 'tierFit', 'fairness'] as const;
 
-export interface PreReviewRubric {
+export interface DraftAssessmentRubric {
   keyVerified?: boolean;
   distractorsExecute?: boolean;
   readingAge?: number;
@@ -58,9 +66,9 @@ export interface PreReviewRubric {
   banList?: string;
 }
 
-export interface AuthoringPreReview {
-  verdict: PreReviewVerdict;
-  rubric: PreReviewRubric;
+export interface DraftSelfAssessment {
+  handoffState: HandoffState;
+  rubric: DraftAssessmentRubric;
   notes?: string;
 }
 
@@ -75,7 +83,7 @@ export interface AuthoringPreReview {
  *
  * Order-insensitive on object keys, because Postgres JSONB does not preserve them.
  */
-export function preReviewSubjectHash(item: {
+export function draftAssessmentSubjectHash(item: {
   prompt: string | null;
   tier: number;
   options: Array<{ text: string; isCorrect: boolean }>;
@@ -89,13 +97,17 @@ export function preReviewSubjectHash(item: {
 }
 
 /** A parsed pre-review, or null. Never throws — an unreadable claim is an absent claim. */
-export function readPreReview(v: unknown): AuthoringPreReview | null {
+export function readDraftSelfAssessment(v: unknown): DraftSelfAssessment | null {
   if (!v || typeof v !== 'object') return null;
   const o = v as Record<string, unknown>;
-  if (!PRE_REVIEW_VERDICTS.includes(o.verdict as PreReviewVerdict)) return null;
+  // The new name first, the pre-rename name second. Not a permissive fallback: `verdict` is what
+  // every file delivered before 2026-08-16 says, and refusing it would report 78 readable claims
+  // as unreadable — a gate going blind on a rename, which is R57's shape in vocabulary.
+  const state = o.handoffState ?? o.verdict;
+  if (!HANDOFF_STATES.includes(state as HandoffState)) return null;
   return {
-    verdict: o.verdict as PreReviewVerdict,
-    rubric: (o.rubric ?? {}) as PreReviewRubric,
+    handoffState: state as HandoffState,
+    rubric: (o.rubric ?? {}) as DraftAssessmentRubric,
     ...(typeof o.notes === 'string' ? { notes: o.notes } : {}),
   };
 }
@@ -104,9 +116,9 @@ export function readPreReview(v: unknown): AuthoringPreReview | null {
  * How to render it wherever it is surfaced. The markings travel WITH the value: a rubric key
  * printed bare is the thing the ruling forbids, and a constant nobody calls does not prevent it.
  */
-export function describePreReview(p: AuthoringPreReview): string[] {
+export function describeDraftSelfAssessment(p: DraftSelfAssessment): string[] {
   const out = [
-    `verdict ${p.verdict} — an AUTHORING readiness claim. It means a human has NOT reviewed this item.`,
+    `handoffState ${p.handoffState} — an AUTHORING readiness claim. It means a human has NOT reviewed this item.`,
   ];
   for (const [k, v] of Object.entries(p.rubric)) {
     const gate = REDERIVABLE_RUBRIC_KEYS[k];

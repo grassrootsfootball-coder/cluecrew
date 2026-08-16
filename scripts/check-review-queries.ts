@@ -16,7 +16,7 @@
  *   A — the column may be named only in a DECLARED DOOR. A file that touches it without being
  *       listed here has not been thought about.
  *   B — no LINE may bind it to a review-decision symbol, DOOR OR NOT. `reviewed: !!item
- *       .authoringPreReview` is the failure; a declared door that grows one is the exact confusion
+ *       .draftSelfAssessment` is the failure; a declared door that grows one is the exact confusion
  *       the ruling forbids, and leg A would wave it through on the strength of its own listing.
  *
  * LEG B IS LINE-LEVEL, NOT FILE-LEVEL, AND THAT WAS A CORRECTION. File-level cried wolf on its
@@ -34,8 +34,12 @@ import { extname, join, relative, resolve } from 'node:path';
 
 const ROOT = resolve(import.meta.dirname, '..');
 
-/** The column, and Cowork's own path for it. Both are the thing being fenced. */
-export const PRE_REVIEW_SYMBOLS = ['authoringPreReview', 'authoringPreReviewHash'] as const;
+/**
+ * The columns being fenced. The pre-rename names are deliberately NOT here: the columns were
+ * RENAMED, not duplicated, so nothing can read `authoringPreReview` — and listing a name that
+ * cannot exist would make the gate's own empty-screen refusal unreachable.
+ */
+export const DRAFT_ASSESSMENT_SYMBOLS = ['draftSelfAssessment', 'draftSelfAssessmentHash'] as const;
 
 /**
  * Symbols that mean "a human reviewer decided something". A file naming one of these and the
@@ -57,19 +61,34 @@ export const REVIEW_DECISION_SYMBOLS = [
  */
 export const DECLARED_DOORS: Readonly<Record<string, string>> = {
   'packages/db/prisma/schema.prisma': 'declares the columns',
-  'scripts/backfill-pre-review.ts': 'the import door — writes the claim and its subject hash',
-  'scripts/check-pre-review-subject.ts': 'reports claims describing an item that has since moved',
+  'scripts/backfill-draft-assessment.ts': 'the import door — writes the claim and its subject hash',
+  'scripts/check-draft-assessment-subject.ts': 'reports claims describing an item that has since moved',
   'scripts/check-review-queries.ts': 'this gate',
+  'packages/core/src/english/declarative-fields.ts': 'names the field paths the manifest tracks; reads no value',
+  'scripts/migrate-citation-fields.ts': 'migrated verdict -> handoffState inside the stored assessment',
+  'packages/core/src/english/draft-self-assessment.test.ts': 'the canary — names the column in synthetic sources it feeds to this gate',
   'packages/core/src/english/cowork-item-keys.ts': 'names the column as the carriage destination for Cowork\'s preReview key',
-  'packages/db/prisma/migrations/20260816112113_authoring_pre_review/migration.sql': 'the migration that added them',
+  'packages/db/prisma/migrations/20260816120000_cowork_renames_and_content_keys/migration.sql': 'the rename to draftSelfAssessment',
   'scripts/emit-item-manifest.ts': 'records presence for the manifest; reads no value',
 };
 
 export interface Violation { file: string; leg: 'A' | 'B'; detail: string }
 
+/** Line comments, block-comment bodies and JSDoc continuation lines. */
+const stripComments = (text: string): string =>
+  text
+    .split('\n')
+    .map((l) => l.replace(/\/\/.*$/, ''))
+    .filter((l) => !/^\s*(\*|\/\*)/.test(l))
+    .join('\n');
+
 /** Leg A and leg B over one file's text. Exported so the canary can drive it directly. */
 export function inspectSource(file: string, text: string): Violation[] {
-  const names = PRE_REVIEW_SYMBOLS.filter((s) => text.includes(s));
+  // COMMENTS ARE NOT READERS, on either leg. Leg A stripped nothing at first and flagged the
+  // module whose header sentence explains what the column is — the file most obliged to say the
+  // name was the one the gate objected to. Prose cannot read a column any more than it can bind one.
+  const code = stripComments(text);
+  const names = DRAFT_ASSESSMENT_SYMBOLS.filter((s) => code.includes(s));
   if (names.length === 0) return [];
   const out: Violation[] = [];
   if (!(file in DECLARED_DOORS)) {
@@ -78,15 +97,13 @@ export function inspectSource(file: string, text: string): Violation[] {
   // LINE-LEVEL: the column BOUND to a review symbol in one expression, which is the construct
   // that makes a self-assessment answer a question about a reviewer.
   text.split('\n').forEach((line, i) => {
-    // Comments are excluded: prose cannot bind anything, and the sentence explaining that the
-    // column is NOT reviewedBy is exactly the sentence a file like this should contain.
-    const code = line.replace(/\/\/.*$/, '').replace(/^\s*\*.*$/, '').replace(/^\s*\/\*.*$/, '');
-    if (!PRE_REVIEW_SYMBOLS.some((s) => code.includes(s))) return;
-    const review = REVIEW_DECISION_SYMBOLS.filter((s) => code.includes(s));
+    const bare = stripComments(line);
+    if (!DRAFT_ASSESSMENT_SYMBOLS.some((s) => bare.includes(s))) return;
+    const review = REVIEW_DECISION_SYMBOLS.filter((s) => bare.includes(s));
     if (review.length > 0) {
       out.push({
         file, leg: 'B',
-        detail: `line ${i + 1} binds the pre-review column to ${review.join(', ')}: ${code.trim().slice(0, 90)}`,
+        detail: `line ${i + 1} binds the draft-assessment column to ${review.join(', ')}: ${bare.trim().slice(0, 90)}`,
       });
     }
   });
@@ -110,12 +127,12 @@ function main(): void {
   for (const abs of files) {
     const rel = relative(ROOT, abs);
     const text = readFileSync(abs, 'utf8');
-    if (PRE_REVIEW_SYMBOLS.some((s) => text.includes(s))) touching.push(rel);
+    if (DRAFT_ASSESSMENT_SYMBOLS.some((s) => text.includes(s))) touching.push(rel);
     violations.push(...inspectSource(rel, text));
   }
 
   // R60: state the population, and make an empty one impossible to read as a pass.
-  console.log(`check:review-queries: screened ${files.length} source file(s); ${touching.length} name the pre-review column.`);
+  console.log(`check:review-queries: screened ${files.length} source file(s); ${touching.length} name the draft-assessment column.`);
   if (touching.length === 0) {
     console.error('\nREFUSED — NOT ONE FILE names the column. The gate screened nothing.');
     console.error('Either the migration has not been applied or the symbol was renamed and this');
@@ -138,8 +155,8 @@ function main(): void {
   if (violations.length > 0) {
     console.error(`\n${violations.length} violation(s):`);
     for (const v of violations) console.error(`  x [leg ${v.leg}] ${v.file}: ${v.detail}`);
-    console.error('\nCowork\'s preReview is a drafting agent assessing its own work. Both its verdict');
-    console.error('values mean a human has NOT looked. Nothing answering "has this been reviewed" may');
+    console.error('\nCowork\'s draftSelfAssessment is a drafting agent assessing its own work. Both its');
+    console.error('handoff states mean a human has NOT looked. Nothing answering "has this been reviewed" may');
     console.error('read it — read the reviewer path (AttributionEvent.reviewerId, Reviewer) instead.');
     process.exit(1);
   }

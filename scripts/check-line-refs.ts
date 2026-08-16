@@ -35,6 +35,8 @@ async function main(): Promise<void> {
   const draft: LineRefFailure[] = [];
   let checked = 0;
   let citing = 0;
+  /** Bare-string quotes: present, deliberately unplaced, and counted rather than silently skipped. */
+  let placeless = 0;
 
   const items = await prisma.item.findMany({ include: { questionType: true } });
   const absent: string[] = [];
@@ -44,18 +46,45 @@ async function main(): Promise<void> {
     if (!passageRef) continue;
     checked += 1;
     const passage = passages.get(passageRef);
-    const lineRefs = Array.isArray(stem.lineRefs) ? (stem.lineRefs as number[]) : [];
+    // ITEM LEVEL, with the stem as the pre-migration fallback. R77 moved lineRefs off the stem
+    // and this gate went on reading `stem.lineRefs` — it found an empty array on every row and
+    // silently checked no citations at all, while still printing "146 items citing a passage".
+    // A migration that empties a field must be followed to every reader of it.
+    const itemRefs = Array.isArray(item.lineRefs) ? (item.lineRefs as number[]) : null;
+    const lineRefs = itemRefs ?? (Array.isArray(stem.lineRefs) ? (stem.lineRefs as number[]) : []);
     const gapRef = typeof stem.gapRef === 'number' ? stem.gapRef : undefined;
-    // A declared quote with NO text is a malformed declaration, not an empty one. `?? ''` then
-    // `.filter(Boolean)` silently discarded it, so a broken quotes entry read as "no quotes".
-    const rawQuotes = Array.isArray(stem.quotes) ? (stem.quotes as Array<{ text?: unknown }>) : [];
-    const textlessQuotes = rawQuotes.filter((q) => typeof q.text !== 'string' || !q.text.trim()).length;
+    /**
+     * A BARE STRING IN A QUOTES ARRAY IS A DECLARED CONVENTION, NOT A MALFORMED OBJECT.
+     *
+     * Cowork's CHECK 8 documents it: a bare string declares A TEXT AND NOT A PLACE, and is checked
+     * for PRESENCE ONLY — there is no citation to verify because none was claimed. 63 of them exist
+     * across the district; this store holds 10, and every quotes array on both sides is uniformly
+     * one shape or the other, never mixed. That consistency is what distinguishes a form from a leak.
+     *
+     * This gate reported all 10 as "declared quote(s) carry no text" — a reader scoped to one store
+     * calling a convention a defect, which is Delivery 51's lesson exactly. The near-miss was
+     * NORMALISING them, which would have destroyed the distinction between "quotes this text at
+     * these lines" and "quotes this text, claiming no place".
+     *
+     * A malformed OBJECT — one with no usable `text` — is still a fault, and still fails.
+     */
+    const rawQuotes = Array.isArray(stem.quotes) ? (stem.quotes as Array<unknown>) : [];
+    const placelessQuotes = rawQuotes.filter((q) => typeof q === 'string' && q.trim().length > 0).length;
+    const textlessQuotes = rawQuotes.filter(
+      (q) => typeof q !== 'string' && (typeof (q as { text?: unknown })?.text !== 'string'
+        || !String((q as { text?: unknown }).text).trim()),
+    ).length;
     if (textlessQuotes > 0) {
       absent.push(`${item.id}: ${textlessQuotes} declared quote(s) carry no text`);
     }
+    // Only PLACED quotes are checked against lines. A bare string declares no place, so verifying
+    // it against a line range would be inventing a claim its author did not make.
     const declaredQuotes = rawQuotes
-      .filter((q): q is { text: string } => typeof q.text === 'string' && q.text.trim().length > 0)
+      .filter((q): q is { text: string } =>
+        typeof q === 'object' && q !== null && typeof (q as { text?: unknown }).text === 'string'
+        && String((q as { text: string }).text).trim().length > 0)
       .map((q) => q.text);
+    placeless += placelessQuotes;
 
     // The prompt is the text every citation in this stem is checked against. Missing is a fault.
     //
@@ -121,7 +150,7 @@ async function main(): Promise<void> {
   requirePopulation('check:line-refs', { passages: passages.size, 'items citing a passage': checked });
   console.log(
     `Line-reference gate: ${passages.size} passages · ${checked} item(s) citing a passage · ` +
-      `${citing} explanation field(s) naming a line.`,
+      `${citing} explanation field(s) naming a line · ${placeless} placeless quote(s) present-only (Cowork CHECK 8).`,
   );
 
   // ABSENT FIELDS FAIL. A stem the gate could not read is not a stem the gate cleared, and the

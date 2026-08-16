@@ -43,14 +43,14 @@ export const DECLARATIVE_FIELDS: readonly DeclarativeField[] = [
   { path: 'orderAnchor', coworkCount: 263, weight: 'normal',
     note: 'ENG-001 and ENG-002 predate it; the gate reports NOT RUN rather than passing it.' },
   { path: 'itemModel', coworkCount: 79, weight: 'normal' },
-  { path: 'preReview.verdict', coworkCount: 78, weight: 'critical',
+  { path: 'draftSelfAssessment.handoffState', coworkCount: 78, weight: 'critical',
     note: 'A stored REVIEW OUTCOME. Two stores can hold the same item and disagree about whether it has been passed. The platform’s provenance claim.' },
-  { path: 'preReview.rubric.banList', coworkCount: 78, weight: 'critical' },
-  { path: 'preReview.rubric.distractorsExecute', coworkCount: 78, weight: 'critical' },
-  { path: 'preReview.rubric.fairness', coworkCount: 78, weight: 'critical' },
-  { path: 'preReview.rubric.keyVerified', coworkCount: 78, weight: 'critical' },
-  { path: 'preReview.rubric.readingAge', coworkCount: 78, weight: 'critical' },
-  { path: 'preReview.rubric.tierFit', coworkCount: 78, weight: 'critical' },
+  { path: 'draftSelfAssessment.rubric.banList', coworkCount: 78, weight: 'critical' },
+  { path: 'draftSelfAssessment.rubric.distractorsExecute', coworkCount: 78, weight: 'critical' },
+  { path: 'draftSelfAssessment.rubric.fairness', coworkCount: 78, weight: 'critical' },
+  { path: 'draftSelfAssessment.rubric.keyVerified', coworkCount: 78, weight: 'critical' },
+  { path: 'draftSelfAssessment.rubric.readingAge', coworkCount: 78, weight: 'critical' },
+  { path: 'draftSelfAssessment.rubric.tierFit', coworkCount: 78, weight: 'critical' },
   { path: 'stem.answerShape', coworkCount: 32, weight: 'high',
     note: 'The shape the key must take. The surface gate reads it; an importer that drops it drops the rule.' },
   { path: 'stem.techniqueKey', coworkCount: 32, weight: 'high',
@@ -155,6 +155,19 @@ export const PROVENANCE_FIELDS: readonly DeclarativeField[] = [
     note: 'Per-mechanism evidence at item level: which mechanism each distractor executes and why.' },
   { path: 'options[].misconceptionExecution', coworkCount: 282, weight: 'high',
     note: 'The affordance test’s output, per option. The first thing a reviewer asks to see.' },
+  // THE NINE CONTENT KEYS (David, 2026-08-16). Each holds a fact that exists nowhere else, and
+  // each is tracked here for one reason: a field not in the manifest is not in the baseline, and a
+  // field not in the baseline can be lost again with nothing noticing.
+  // itemModel and passageFlag are already in the 39 above; listing them again here made the
+  // manifest emit two rows for one field. Only the keys the 39 does NOT name belong in this list.
+  { path: 'r4Note', coworkCount: 1, weight: 'normal',
+    note: 'Why this item’s stem was rebuilt under R4. The rule is in the register; this application of it is not.' },
+  { path: 'importDoorFix', coworkCount: 4, weight: 'high',
+    note: 'A citation error and its repair, carrying the prior text.' },
+  { path: 'stemRedraft', coworkCount: 5, weight: 'high',
+    note: 'why CROSSES by ruling; before is preserved because 2 of 5 exist in no other artefact at all.' },
+  { path: 'draftingMethod', coworkCount: 251, weight: 'high',
+    note: 'RENAMED from draftingOrder, and the old name was a live defect: all 251 values are method-label strings and agree with orderAnchor on 0 of 251.' },
 ] as const;
 
 export const MODELLED_PATHS: ReadonlySet<string> = new Set(MODELLED_FIELDS.map((f) => f.path));
