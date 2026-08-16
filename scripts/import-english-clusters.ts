@@ -12,6 +12,13 @@
  *                rewording is Cowork's (it authors). Reported for return, not imported.
  *   TAG-HELD   — carries a tag the library deliberately does not hold. See below.
  *
+ * A FOURTH REFUSAL, ABOVE ALL THREE CLASSES: AN UNRECOGNISED KEY STOPS THE RUN. This importer
+ * declared an interface of six fields and wrote five, so ten item-level keys went in one side and
+ * came out of neither — `lineRefs`, `orderAnchor`, `passageRef`, `mechanismLedger` among them,
+ * with nothing reporting it. R57 a fifth time. The key registry lives in `packages/core`
+ * (`cowork-item-keys.ts`) so this door and the CMS door cannot drift apart, and a field Cowork
+ * adds next month stops the pipeline instead of vanishing from it (David, 2026-08-13).
+ *
  * WHY TAG-HELD ITEMS ARE HELD WHOLE AND NOT IMPORTED WITH A NULL TAG (David's ruling, 2026-08-13):
  * the diagnosis is what Annie ruled on. The tag is RIGHT and the hint is unverified, which is why
  * the entry is held. Nulling it would make ten correctly-tagged items look untagged, and the
@@ -19,15 +26,48 @@
  * content of the ruling.
  */
 import { readFileSync } from 'node:fs';
-import { checkItemChildFacing, isBlocking } from '../packages/core/src/index';
+import {
+  DECLARED_LOSSES,
+  checkItemChildFacing,
+  isBlocking,
+  unknownCoworkKeys,
+} from '../packages/core/src/index';
 import { prisma } from '../packages/db/src/index';
 
 const DIR = '/Users/davidb/Downloads/11+/from-cluecrew';
 const CLUSTERS = ['005', '006', '007', '008', '009', '010', '011', '012'];
 
-interface Draft { itemId: string; questionTypeId: string; difficultyTier: number;
-  stem: unknown; explanation?: unknown;
-  options: Array<{ content: unknown; isCorrect: boolean; misconceptionId?: string }>; }
+/**
+ * DELIBERATELY LOOSE. The old interface named six fields and became the filter — typing the shape
+ * tightly is what made ten keys invisible. The registry decides what is known; this only names
+ * what the importer must reach for directly.
+ */
+interface Draft {
+  itemId: string; questionTypeId: string; difficultyTier: number;
+  stem: Record<string, unknown>; explanation?: Record<string, unknown>; authoredBy?: string;
+  passageRef?: unknown; lineRefs?: unknown; orderAnchor?: unknown;
+  options: Array<{ label?: string; content: unknown; isCorrect: boolean; misconceptionId?: string }>;
+  [key: string]: unknown;
+}
+
+/** The option envelope this store stores. Cowork owns the text; the shape is ours. */
+const optionContent = (o: Draft['options'][number], i: number): { label: string; value: string } => ({
+  label: o.label ?? ['A', 'B', 'C', 'D', 'E', 'F'][i] ?? String(i),
+  value: typeof o.content === 'string' ? o.content : String((o.content as { value?: unknown })?.value ?? ''),
+});
+
+/**
+ * The item-level declarative fields, carried onto the stem because no column holds them yet.
+ * The manifest reports WHERE each one landed, so the item-level migration stays measurable
+ * rather than assumed. Absence stays absent — an undefined field is not written as null.
+ */
+function carriedStem(it: Draft): Record<string, unknown> {
+  const stem = { ...it.stem };
+  for (const k of ['passageRef', 'lineRefs', 'orderAnchor'] as const) {
+    if (it[k] !== undefined && it[k] !== null) stem[k] = it[k];
+  }
+  return stem;
+}
 
 async function main(): Promise<void> {
   const write = process.argv.includes('--write');
@@ -44,6 +84,28 @@ async function main(): Promise<void> {
   const gateHeld: Array<{ id: string; detail: string }> = [];
   const tagHeld: Array<{ id: string; tags: string[] }> = [];
   const already: string[] = [];
+
+  /**
+   * THE UNRECOGNISED-KEY REFUSAL, run over every draft BEFORE anything else is decided. It stops
+   * the whole run rather than skipping an item: skipping is the behaviour that lost the fields.
+   */
+  const unknown = drafts.flatMap((d) => unknownCoworkKeys(d as unknown as Record<string, unknown>));
+  if (unknown.length > 0) {
+    const byKey = new Map<string, string[]>();
+    for (const u of unknown) {
+      const k = `${u.level}.${u.key}`;
+      byKey.set(k, [...(byKey.get(k) ?? []), u.itemId]);
+    }
+    console.error(`\nREFUSED — ${byKey.size} key(s) the registry does not name, on ${unknown.length} occurrence(s):`);
+    for (const [k, ids] of [...byKey].sort()) {
+      console.error(`  x ${k}  on ${ids.length} item(s), first ${ids[0]}`);
+    }
+    console.error('\nNothing was read further and nothing was written. Add each key to');
+    console.error('packages/core/src/english/cowork-item-keys.ts with a disposition — a key with no');
+    console.error('decision recorded against it is how ten fields were lost silently.');
+    await prisma.$disconnect();
+    process.exit(1);
+  }
 
   for (const it of drafts) {
     if (present.has(it.itemId)) { already.push(it.itemId); continue; }
@@ -74,14 +136,19 @@ async function main(): Promise<void> {
     for (const t of tagHeld) console.log(`  · ${t.id}: ${t.tags.join(', ')}`);
   }
 
+  console.log('\nDECLARED LOSSES — recognised, deliberately not stored, and unruled:');
+  for (const l of DECLARED_LOSSES) console.log(`  ! ${l.level}.${l.key}: ${l.reason}`);
+
   if (!write) { console.log('\nDry run. Re-run with --write to apply.'); await prisma.$disconnect(); return; }
 
   // ONE TRANSACTION. Either every writable item lands or none does.
   await prisma.$transaction(writable.map((it) => prisma.item.create({
     data: { id: it.itemId, questionTypeId: it.questionTypeId, difficultyTier: it.difficultyTier,
-      stem: it.stem as object, explanation: (it.explanation ?? {}) as object,
-      status: 'DRAFT', authoredBy: 'ai-draft:cowork-okafor-v1',
-      options: { create: it.options.map((o) => ({ content: o.content as object, isCorrect: o.isCorrect,
+      stem: carriedStem(it) as object, explanation: (it.explanation ?? {}) as object,
+      // READ, not asserted. This was the literal 'ai-draft:cowork-okafor-v1', which matched the
+      // file on all 96 — a guess that happened to be right, writing a provenance column.
+      status: 'DRAFT', authoredBy: it.authoredBy ?? 'ai-draft:cowork-okafor-v1',
+      options: { create: it.options.map((o, i) => ({ content: optionContent(o, i), isCorrect: o.isCorrect,
         misconceptionId: o.isCorrect ? null : (o.misconceptionId ?? null) })) } },
   })));
   console.log(`\nLANDED ${writable.length} item(s) as DRAFT in one transaction.`);
