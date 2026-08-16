@@ -168,6 +168,13 @@ export const COWORK_ITEM_KEYS: Readonly<Record<CoworkLevel, readonly CoworkKeyRu
   ],
   explanation: [
     { key: 'walkScript', disposition: 'MAPPED', carriedAt: 'explanation.walkScript' },
+    {
+      key: '_previousWalkScript',
+      disposition: 'NOT_CARRIED',
+      ruling: 'PROPOSED',
+      reason: 'The walk script a redraft replaced. Underscore-prefixed by Cowork; the current script '
+        + 'is the claim and the supersession belongs in an attribution event.',
+    },
     { key: 'hintCore', disposition: 'MAPPED', carriedAt: 'explanation.hintCore' },
     { key: 'quotes', disposition: 'MAPPED', carriedAt: 'explanation.quotes' },
   ],

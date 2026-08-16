@@ -4131,6 +4131,25 @@ only; everything around the quotation stays capped. Two further faults surfaced 
 same two-name shape: the gate passed quotes only when the stem field was called `prompt` while R79
 ruled `text` wins, and it screened `quotes[0].text` as its own string with no exemption at all.
 
+## R103 — R79 migrated the data; the consumers did not follow
+*David, 2026-08-16. One sweep, one count, no repair.*
+
+R79 ruled `stem.text` wins and `migrate:citations` moved the field on every ENG row. FOUR consumers
+never followed, and all four were found one at a time, by a refusal each: the exemption read, the
+declared-quote pass, `textsFrom`'s treatment of `quotes[].text`, and the quote-presence check.
+
+**The sweep, so the rest is a number rather than a series of surprises: 49 files name a stem
+`prompt`. 22 read it WITHOUT also reading `text`. Of those, 8 can touch an English item** — three
+serving components (`plain-item`, `engines/shared`, `mock-runner`) and five scripts
+(`backfill-segments-in-options`, `compare-gates`, `export-review-pack`, `export-walk-scripts`,
+`fix-quotations-and-gaprefs`). The other 14 are VR, NVR or story fixtures, where `prompt` is still
+the authored name and nothing migrated.
+
+Counted, not repaired. Three of the eight are on the child's serving path, which is the half that
+matters; a stem that renders empty to a child is not the same fault as an export that omits a
+column, and they should not be fixed as one batch. **R86 in a field name: a migration is not
+complete until every reader has moved, and the readers are found by scanning, not by remembering.**
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 
