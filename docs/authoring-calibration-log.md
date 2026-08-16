@@ -5044,6 +5044,56 @@ comments before matching, so a script that only DISCUSSES `approvalNote` no long
 it. It is still text and not a parse — a field name in a string literal would pass — and the output
 says so on every run rather than leaving a reader to assume more rigour than there is.
 
+## R130 — Tranched shipping, the sentence landing, and the note-vs-tag check outside English
+*Annie's replacement for the bracket, 2026-08-16: 27 whole-text T4s plus 60 stratified items, shipped per cluster.*
+
+**1. LIVE IS PER-ITEM. There is no cluster object and nothing to build.** The bank already holds 298
+LIVE beside 729 DRAFT, so shipping ENG-028 and ENG-001 and nothing else is publishing those 34 rows
+and leaving the rest. Tranched shipping needs no mechanism; it needs a WHERE clause.
+
+The thing that does not yet exist is a per-cluster GATE — one command that says "this cluster is
+clean and here is what it would publish". Every check today reports district-wide, which is the right
+default and the wrong shape for shipping one cluster at a time. Small, and not yet built.
+
+**2. THE SCOPING SENTENCE IS IN**, ruled by her as her own 8 August ruling applied to this entry:
+
+> *Scoped to the ERROR, not to vocabulary items: it occurs wherever a word's sense is load-bearing,
+> including on technique stems.*
+
+126 characters, read from Cowork's emission BY STRUCTURE and never retyped, and applied only after
+asserting their description is ours plus a clean suffix — a difference that was not a pure addition
+would have meant something else had changed and would have stopped the run.
+
+**3. `ENG-001-WIW-14` OPTION B RETAGGED** `en-attribute-transfer` → `en-comparison-vehicle-misread`,
+with an AttributionEvent naming her as actor, David as recorder, and the reason: its own execution
+note described a vehicle-to-subject move while the tag said between-characters. A ruling, attributed
+— not a repair, and not silent.
+
+**4. HER FINDING COSTS ALMOST NOTHING TO RUN AND CANNOT RUN AT ALL, AND BOTH ARE TRUE.**
+
+A note contradicting its own tag is mechanically detectable — she is right, and Cowork's English sweep
+proves it. The cost outside English is not the check. It is that **there are no notes to check.**
+
+| district | tagged options | with an execution note |
+|---|---|---|
+| ENGLISH | 1166 | **1047 (90%)** |
+| VR | 1612 | **0** |
+| NVR | 0 tagged | — |
+| MATHS | 0 tagged | — |
+
+`misconceptionExecution` is an English-district field. **VR has 1,612 tagged options and not one
+note**; NVR and Maths have no tagged options at all, so there is nothing on either side to compare.
+So the honest cost is: **£0 of engineering and 1,612 authored notes** — a content programme, not a
+check. And it is worth saying which way that cuts: VR is the district with 298 LIVE items, so the
+undetectable-by-construction fault she found in English is undetectable across the only district
+currently in front of children, and would stay so until every one of those options carries a
+statement of what it executes.
+
+**THE NUMBER THAT MATTERS IS HERS: two category-2 faults in 34 items — 10% — on the only fault that
+cannot be recovered after publication**, found by neither a scan nor a cold read. Every instrument in
+this repo screens structure, provenance and delivery. **None of them can see a second defensible
+answer**, and the measured rate at which a qualified reader finds one is one item in seventeen.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 
