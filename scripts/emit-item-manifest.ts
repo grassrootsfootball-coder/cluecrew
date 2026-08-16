@@ -35,7 +35,11 @@ import {
   DECLARATIVE_FIELDS,
   MODELLED_FIELDS,
   MODELLED_PATHS,
+  PROVENANCE_FIELDS,
 } from '../packages/core/src/english/declarative-fields';
+
+/** Everything the manifest tracks: the 39 declarative plus the provenance fields ruled to cross. */
+const TRACKED_FIELDS = [...DECLARATIVE_FIELDS, ...PROVENANCE_FIELDS];
 
 const DEST = process.env.MANIFEST_PATH
   ?? resolve(import.meta.dirname, '../content/exports/MANIFEST-PLATFORM-STORE.json');
@@ -114,7 +118,7 @@ function probe(
    */
   const seg = bare.split('.');
   const root = seg[0]!;
-  const hasStemTwin = DECLARATIVE_FIELDS.some((f) => f.path.replace(/\[\]$/, '') === `stem.${bare}`);
+  const hasStemTwin = TRACKED_FIELDS.some((f) => f.path.replace(/\[\]$/, '') === `stem.${bare}`);
   const holders = hasStemTwin
     ? ([['item', ctx.top]] as const)
     : ([['item', ctx.top], ['stem', ctx.stem]] as const);
@@ -176,7 +180,7 @@ async function main(): Promise<void> {
       // Presence + location for all 39. `null` foundAt means ABSENT HERE — not DROPPED; the diff
       // decides that, because DROPPED and EMPTY are indistinguishable from one side.
       declarative: Object.fromEntries(
-        DECLARATIVE_FIELDS.map((f) => [
+        TRACKED_FIELDS.map((f) => [
           f.path,
           probe(f.path, {
             top: it as unknown as Record<string, unknown>,
@@ -218,7 +222,7 @@ async function main(): Promise<void> {
      * ONE LINE PER DECLARATIVE FIELD: how many rows here carry it, against Cowork's count, and
      * where. This is the object the comparison reads; `rows[].declarative` is the evidence under it.
      */
-    declarativeFields: DECLARATIVE_FIELDS.map((f) => {
+    declarativeFields: TRACKED_FIELDS.map((f) => {
       const carrying = rows.filter((r) => r.declarative[f.path]?.present);
       const locations = [...new Set(carrying.map((r) => r.declarative[f.path]!.foundAt!))].sort();
       return {
@@ -228,6 +232,7 @@ async function main(): Promise<void> {
         platformCount: carrying.length,
         foundAt: locations,
         modelled: MODELLED_PATHS.has(f.path),
+        class: DECLARATIVE_FIELDS.includes(f) ? 'declarative' : 'provenance',
         note: f.note ?? null,
       };
     }),

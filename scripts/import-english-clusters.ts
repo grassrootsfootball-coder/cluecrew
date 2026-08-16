@@ -27,7 +27,7 @@
  */
 import { readFileSync } from 'node:fs';
 import {
-  DECLARED_LOSSES,
+  PROPOSED_EXCEPTIONS,
   checkItemChildFacing,
   isBlocking,
   unknownCoworkKeys,
@@ -46,7 +46,8 @@ interface Draft {
   itemId: string; questionTypeId: string; difficultyTier: number;
   stem: Record<string, unknown>; explanation?: Record<string, unknown>; authoredBy?: string;
   passageRef?: unknown; lineRefs?: unknown; orderAnchor?: unknown;
-  options: Array<{ label?: string; content: unknown; isCorrect: boolean; misconceptionId?: string }>;
+  options: Array<{ label?: string; content: unknown; isCorrect: boolean; misconceptionId?: string;
+    senseTarget?: string; misconceptionExecution?: string }>;
   [key: string]: unknown;
 }
 
@@ -136,8 +137,10 @@ async function main(): Promise<void> {
     for (const t of tagHeld) console.log(`  · ${t.id}: ${t.tags.join(', ')}`);
   }
 
-  console.log('\nDECLARED LOSSES — recognised, deliberately not stored, and unruled:');
-  for (const l of DECLARED_LOSSES) console.log(`  ! ${l.level}.${l.key}: ${l.reason}`);
+  // Everything Cowork holds crosses unless a reason can be named. These are the named reasons —
+  // the list to bring to a ruling is the EXCEPTIONS, never the inclusions.
+  console.log(`\nPROPOSED EXCEPTIONS — ${PROPOSED_EXCEPTIONS.length} key(s) proposed as NOT crossing, awaiting a ruling:`);
+  for (const l of PROPOSED_EXCEPTIONS) console.log(`  ? ${l.level}.${l.key}: ${l.reason}`);
 
   if (!write) { console.log('\nDry run. Re-run with --write to apply.'); await prisma.$disconnect(); return; }
 
@@ -145,11 +148,18 @@ async function main(): Promise<void> {
   await prisma.$transaction(writable.map((it) => prisma.item.create({
     data: { id: it.itemId, questionTypeId: it.questionTypeId, difficultyTier: it.difficultyTier,
       stem: carriedStem(it) as object, explanation: (it.explanation ?? {}) as object,
+      // Provenance crosses. Absence stays absent — an undefined field is written as null, never
+      // as an empty string, so "not stated" and "stated as nothing" stay distinguishable.
+      tierRationale: (it.tierRationale as string | undefined) ?? null,
+      sourcedFrom: (it.sourcedFrom as string | undefined) ?? null,
+      mechanismLedger: (it.mechanismLedger ?? null) as object | null,
       // READ, not asserted. This was the literal 'ai-draft:cowork-okafor-v1', which matched the
       // file on all 96 — a guess that happened to be right, writing a provenance column.
       status: 'DRAFT', authoredBy: it.authoredBy ?? 'ai-draft:cowork-okafor-v1',
       options: { create: it.options.map((o, i) => ({ content: optionContent(o, i), isCorrect: o.isCorrect,
-        misconceptionId: o.isCorrect ? null : (o.misconceptionId ?? null) })) } },
+        misconceptionId: o.isCorrect ? null : (o.misconceptionId ?? null),
+        senseTarget: o.senseTarget ?? null,
+        misconceptionExecution: o.misconceptionExecution ?? null })) } },
   })));
   console.log(`\nLANDED ${writable.length} item(s) as DRAFT in one transaction.`);
   await prisma.$disconnect();

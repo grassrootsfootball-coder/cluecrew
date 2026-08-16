@@ -118,6 +118,14 @@ export const MODELLED_FIELDS: readonly ModelledField[] = [
       'the relation is per-option and populated on 164 of 164 ENG items.',
   },
   {
+    path: 'options[].senseTarget',
+    carriedBy: 'ItemOption.senseTarget',
+    verifiedBy:
+      'Columned on David’s ruling (2026-08-16) rather than left to a schema decision made under ' +
+      'the pressure of a blocked import. The migration is applied and the column exists; no ' +
+      'source delivered so far carries a value, so it is unpopulated rather than unrepresentable.',
+  },
+  {
     path: 'options[].secondaryMisconceptionId',
     carriedBy: 'ItemOptionTag (optionId, misconceptionId, role) with @@unique([optionId, role])',
     verifiedBy:
@@ -126,6 +134,27 @@ export const MODELLED_FIELDS: readonly ModelledField[] = [
       'unpopulated rather than unrepresentable. Reporting it DROPPED would put schema work on ' +
       'the list that is already done.',
   },
+] as const;
+
+/**
+ * FIELDS COWORK CLASSIFIED PROVENANCE OR CONTENT THAT CROSS ANYWAY.
+ *
+ * David scoped carriage to the 39 DECLARATIVE fields and then revised it (2026-08-16): Cowork's
+ * PROVENANCE classification was correct on its own terms and the line was drawn in the wrong
+ * place, because PROVENANCE IS WHAT THE PLATFORM'S CLAIM RESTS ON. `misconceptionExecution` is
+ * the affordance test's output — why this distractor executes this error — and the first thing a
+ * reviewer asks to see.
+ *
+ * They are in the manifest for one reason: a field that is not in the manifest is not in the
+ * baseline, and a field that is not in the baseline can be lost again without the guard noticing.
+ */
+export const PROVENANCE_FIELDS: readonly DeclarativeField[] = [
+  { path: 'tierRationale', coworkCount: 354, weight: 'high', note: 'Why this item sits at this tier.' },
+  { path: 'sourcedFrom', coworkCount: 354, weight: 'high', note: 'What the authoring pass read to write it.' },
+  { path: 'mechanismLedger', coworkCount: 60, weight: 'high',
+    note: 'Per-mechanism evidence at item level: which mechanism each distractor executes and why.' },
+  { path: 'options[].misconceptionExecution', coworkCount: 282, weight: 'high',
+    note: 'The affordance test’s output, per option. The first thing a reviewer asks to see.' },
 ] as const;
 
 export const MODELLED_PATHS: ReadonlySet<string> = new Set(MODELLED_FIELDS.map((f) => f.path));

@@ -11,9 +11,15 @@
  * rather than vanish from it (David, 2026-08-13) — an allowlist that drops what it cannot name is
  * a gate that fails OPEN and reports success.
  *
- * NOT_CARRIED IS A DECISION WITH A REASON, NOT A SHRUG. Each one states why, and the importer
- * prints the substantive ones as declared losses so they stay visible for a ruling instead of
- * decaying into "the importer has always done that".
+ * THE CARRIAGE RULE (David, 2026-08-16, revising his own earlier ruling): EVERYTHING COWORK HOLDS
+ * CROSSES, EXCEPT WHERE A REASON CAN BE NAMED FOR WHY IT SHOULD NOT. He had scoped carriage to the
+ * 39 DECLARATIVE fields; Cowork's PROVENANCE classification was correct on its own terms and the
+ * line was drawn in the wrong place, because provenance is what the platform's claim rests on.
+ *
+ * So NOT_CARRIED is the exceptional case and it must justify itself. Each one names its reason and
+ * carries a RULING — `RULED` where David has decided, `PROPOSED` where this side is proposing the
+ * exception and has not been ruled on. The importer prints the PROPOSED ones on every run: the
+ * list to bring him is the EXCEPTIONS, never the inclusions.
  *
  * ONE REGISTRY, BOTH DOORS. Two doors that enumerate separately WILL drift — R42's finding, which
  * recurred in R55 where the CMS door passed a stem through while the script door stripped it.
@@ -35,10 +41,11 @@ export interface CoworkKeyRule {
   /** Why it is not stored. Required for NOT_CARRIED. */
   reason?: string;
   /**
-   * A NOT_CARRIED key holding real authored content, as opposed to drafting scaffolding.
-   * Printed as a declared loss on every run so it stays a live question.
+   * Required on NOT_CARRIED. `RULED` — David has decided this field does not cross. `PROPOSED` —
+   * this side proposes the exception on the stated reason and awaits a ruling. `MODELLED` — not a
+   * judgement at all: the fact is held here in another shape, verified against the data.
    */
-  substantiveLoss?: boolean;
+  ruling?: 'RULED' | 'PROPOSED' | 'MODELLED';
 }
 
 export type CoworkLevel = 'item' | 'stem' | 'explanation' | 'options[]';
@@ -73,33 +80,32 @@ export const COWORK_ITEM_KEYS: Readonly<Record<CoworkLevel, readonly CoworkKeyRu
     {
       key: 'misconceptions',
       disposition: 'NOT_CARRIED',
+      ruling: 'MODELLED',
       reason:
         'MODELLED per-option as ItemOption.misconceptionId. Verified against the data, not the ' +
         'shape: on 96 of 96 items this array equals the set of option misconceptionIds exactly, ' +
         'so it is the same fact and not a superset.',
     },
+    { key: 'tierRationale', disposition: 'MAPPED', carriedAt: 'Item.tierRationale' },
+    { key: 'sourcedFrom', disposition: 'MAPPED', carriedAt: 'Item.sourcedFrom' },
+    { key: 'mechanismLedger', disposition: 'MAPPED', carriedAt: 'Item.mechanismLedger' },
     {
-      key: 'tierRationale',
+      key: 'notes',
       disposition: 'NOT_CARRIED',
-      reason: 'PROVENANCE class. No column holds it and carriage of provenance is unruled.',
-      substantiveLoss: true,
-    },
-    {
-      key: 'sourcedFrom',
-      disposition: 'NOT_CARRIED',
-      reason: 'PROVENANCE class. No column holds it and carriage of provenance is unruled.',
-      substantiveLoss: true,
-    },
-    {
-      key: 'mechanismLedger',
-      disposition: 'NOT_CARRIED',
+      ruling: 'PROPOSED',
       reason:
-        'Per-mechanism EVIDENCE, on 60 items — the authoring pass’s reasoning for each ' +
-        'distractor. Substantive, unruled, and no column holds it.',
-      substantiveLoss: true,
+        'Drafting scratch, non-empty on 16 items. Proposed as an exception because it is the ' +
+        'authoring pass talking to itself, not a claim about the item. If any of the 16 turn out ' +
+        'to carry a judgement, this is wrong and the field crosses.',
     },
-    { key: 'notes', disposition: 'NOT_CARRIED', reason: 'Drafting scratch; non-empty on 16 items.' },
-    { key: 'draftingOrder', disposition: 'NOT_CARRIED', reason: 'Ordering scaffolding internal to the drafting pass.' },
+    {
+      key: 'draftingOrder',
+      disposition: 'NOT_CARRIED',
+      ruling: 'PROPOSED',
+      reason:
+        'The order the drafting pass wrote items in, on 60. Distinct from orderAnchor, which is ' +
+        'the item’s position in the cluster and DOES cross. This one describes the pass, not the item.',
+    },
   ],
   stem: [
     { key: 'text', disposition: 'MAPPED', carriedAt: 'stem.text' },
@@ -123,16 +129,27 @@ export const COWORK_ITEM_KEYS: Readonly<Record<CoworkLevel, readonly CoworkKeyRu
     { key: 'misconceptionId', disposition: 'MAPPED', carriedAt: 'ItemOption.misconceptionId' },
     {
       key: 'misconceptionExecution',
-      disposition: 'NOT_CARRIED',
-      reason:
-        'How THIS distractor executes its misconception, on 282 options. Distinct from the ' +
-        'library’s childHint, which the DB owns; this is per-option and unruled.',
-      substantiveLoss: true,
+      disposition: 'MAPPED',
+      carriedAt: 'ItemOption.misconceptionExecution',
+      // The affordance test's output and the first thing a reviewer asks to see. Reviewer-facing,
+      // never child-facing — distinct from the library's childHint, which the DB owns.
+    },
+    {
+      key: 'senseTarget',
+      disposition: 'MAPPED',
+      carriedAt: 'ItemOption.senseTarget',
+      // One of the 39, weighted critical. CHECK 10 holds an entire tag on it, and without it a
+      // vocabulary item is unshippable while reading perfectly. Columned before ENG-013 arrives
+      // rather than under the pressure of a blocked import (David, 2026-08-16).
     },
     {
       key: '_previousMisconceptionId',
       disposition: 'NOT_CARRIED',
-      reason: 'Drafting history of a retag, on 26 options. Underscore-prefixed by Cowork.',
+      ruling: 'PROPOSED',
+      reason:
+        'The tag a retag replaced, on 26 options. Proposed as an exception because the CURRENT ' +
+        'tag is the claim and the supersession belongs in an attribution event, not a shadow ' +
+        'column. Cowork marks it internal with an underscore.',
     },
   ],
 } as const;
@@ -177,7 +194,20 @@ export function unknownCoworkKeys(item: Record<string, unknown>): UnknownKey[] {
   return out;
 }
 
-/** The NOT_CARRIED keys holding real authored content — printed on every run, never inferred. */
-export const DECLARED_LOSSES: readonly (CoworkKeyRule & { level: CoworkLevel })[] = (
+/**
+ * THE EXCEPTIONS TO BRING HIM — every key proposed as not crossing, with its named reason.
+ * Printed on every import run. The inclusions are not a list anyone needs to read; the exceptions
+ * are the whole decision.
+ */
+export const PROPOSED_EXCEPTIONS: readonly (CoworkKeyRule & { level: CoworkLevel })[] = (
   Object.entries(COWORK_ITEM_KEYS) as Array<[CoworkLevel, readonly CoworkKeyRule[]]>
-).flatMap(([level, rules]) => rules.filter((r) => r.substantiveLoss).map((r) => ({ ...r, level })));
+).flatMap(([level, rules]) => rules.filter((r) => r.ruling === 'PROPOSED').map((r) => ({ ...r, level })));
+
+/** Every key that crosses, and where it lands. The guard reads this to know what to protect. */
+export const CARRIED_PATHS: readonly { path: string; carriedAt: string }[] = (
+  Object.entries(COWORK_ITEM_KEYS) as Array<[CoworkLevel, readonly CoworkKeyRule[]]>
+).flatMap(([level, rules]) =>
+  rules
+    .filter((r) => r.disposition !== 'NOT_CARRIED')
+    .map((r) => ({ path: level === 'item' ? r.key : `${level}.${r.key}`, carriedAt: r.carriedAt! })),
+);

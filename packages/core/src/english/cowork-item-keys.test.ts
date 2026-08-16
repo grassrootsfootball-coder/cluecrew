@@ -7,7 +7,7 @@
  * reviewed row (David, 2026-08-13).
  */
 import { describe, expect, it } from 'vitest';
-import { COWORK_ITEM_KEYS, DECLARED_LOSSES, unknownCoworkKeys } from './cowork-item-keys';
+import { COWORK_ITEM_KEYS, PROPOSED_EXCEPTIONS, unknownCoworkKeys } from './cowork-item-keys';
 
 const draft = (): Record<string, unknown> => ({
   itemId: 'SCRATCH-01',
@@ -29,7 +29,9 @@ describe('unknownCoworkKeys', () => {
     ['item', (d: Record<string, unknown>) => ({ ...d, coworkAddedNextMonth: 1 })],
     ['stem', (d: Record<string, unknown>) => ({ ...d, stem: { ...(d.stem as object), newStemFlag: true } })],
     ['explanation', (d: Record<string, unknown>) => ({ ...d, explanation: { ...(d.explanation as object), quotesV2: [] } })],
-    ['options[]', (d: Record<string, unknown>) => ({ ...d, options: [{ label: 'A', content: 'a', isCorrect: true, senseTarget: 'x' }] })],
+    // Not senseTarget: that WAS this case until it was columned on 2026-08-16, and the test went
+    // red rather than quietly passing. A canary has to name a key nothing will ever register.
+    ['options[]', (d: Record<string, unknown>) => ({ ...d, options: [{ label: 'A', content: 'a', isCorrect: true, optionFieldAddedNextMonth: 'x' }] })],
   ])('refuses an unregistered key at %s level', (level, mutate) => {
     const found = unknownCoworkKeys(mutate(draft()));
     expect(found).toHaveLength(1);
@@ -44,21 +46,27 @@ describe('unknownCoworkKeys', () => {
 });
 
 describe('the registry itself', () => {
-  it('gives every NOT_CARRIED key a reason, and every stored key a destination', () => {
+  // The carriage rule made concrete: a key that does not cross must justify itself, and the
+  // justification is a REASON plus a RULING. A NOT_CARRIED entry with neither is a silent drop
+  // with extra steps.
+  it('gives every NOT_CARRIED key a reason AND a ruling, and every carried key a destination', () => {
     for (const [level, rules] of Object.entries(COWORK_ITEM_KEYS)) {
       for (const r of rules) {
-        if (r.disposition === 'NOT_CARRIED') expect(r.reason, `${level}.${r.key}`).toBeTruthy();
-        else expect(r.carriedAt, `${level}.${r.key}`).toBeTruthy();
+        if (r.disposition === 'NOT_CARRIED') {
+          expect(r.reason, `${level}.${r.key}`).toBeTruthy();
+          expect(r.ruling, `${level}.${r.key}`).toBeTruthy();
+        } else {
+          expect(r.carriedAt, `${level}.${r.key}`).toBeTruthy();
+        }
       }
     }
   });
 
-  it('reports the substantive losses so they cannot decay into silence', () => {
-    expect(DECLARED_LOSSES.map((l) => `${l.level}.${l.key}`)).toEqual([
-      'item.tierRationale',
-      'item.sourcedFrom',
-      'item.mechanismLedger',
-      'options[].misconceptionExecution',
+  it('brings the exceptions, not the inclusions', () => {
+    expect(PROPOSED_EXCEPTIONS.map((l: { level: string; key: string }) => `${l.level}.${l.key}`)).toEqual([
+      'item.notes',
+      'item.draftingOrder',
+      'options[]._previousMisconceptionId',
     ]);
   });
 });

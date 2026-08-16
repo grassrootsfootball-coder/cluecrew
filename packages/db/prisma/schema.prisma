@@ -293,6 +293,16 @@ model Item {
   // carry options like every other district.
   englishOpenResponse     EnglishOpenResponse?
   englishUnmatchedAnswers EnglishUnmatchedAnswer[]
+  // COWORK'S AUTHORING PROVENANCE, carried because the platform's claim rests on it (David,
+  // 2026-08-16, revising his own earlier ruling). He had scoped carriage to the 39 DECLARATIVE
+  // fields; Cowork's PROVENANCE classification was correct on its own terms and the line was
+  // drawn in the wrong place. Reviewer-facing, never child-facing — no scanner scope includes
+  // these and none should.
+  tierRationale           String? // why this item sits at this tier
+  sourcedFrom             String? // what the authoring pass read to write it
+  // The affordance test's output at item level: which mechanism each distractor executes and the
+  // evidence for it. Structured, one entry per mechanism.
+  mechanismLedger         Json?
   createdAt               DateTime                 @default(now())
 
   @@index([questionTypeId, status, pool])
@@ -331,6 +341,14 @@ model ItemOption {
   // below is the source of truth for maths (annie, 2026-08-06).
   misconceptionId String? // REQUIRED on every incorrect option before item goes LIVE (P3)
   misconception   Misconception?  @relation(fields: [misconceptionId], references: [id])
+  // WHICH SENSE OF THE HEADWORD THIS OPTION TESTS. CHECK 10 holds an entire tag on it, and
+  // without it a vocabulary item is UNSHIPPABLE while reading perfectly — the hint cannot be
+  // built from a stored field. One of the 39 declarative fields, weighted critical.
+  senseTarget     String?
+  // Why THIS distractor executes THIS misconception. The affordance test's output, and the first
+  // thing a reviewer asks to see. Distinct from the library's childHint, which the DB owns and
+  // which is child-facing; this is per-option and reviewer-facing.
+  misconceptionExecution String?
   tags            ItemOptionTag[]
 }
 

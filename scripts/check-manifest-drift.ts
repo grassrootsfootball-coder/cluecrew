@@ -25,7 +25,14 @@
  */
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { DECLARATIVE_FIELDS, MODELLED_PATHS } from '../packages/core/src/english/declarative-fields';
+import {
+  DECLARATIVE_FIELDS,
+  MODELLED_PATHS,
+  PROVENANCE_FIELDS,
+} from '../packages/core/src/english/declarative-fields';
+
+/** The 39 declarative plus the provenance fields David ruled must cross. */
+const TRACKED_FIELDS = [...DECLARATIVE_FIELDS, ...PROVENANCE_FIELDS];
 
 const PLATFORM = process.env.MANIFEST_PATH
   ?? resolve(import.meta.dirname, '../content/exports/MANIFEST-PLATFORM-STORE.json');
@@ -68,7 +75,7 @@ function main(): void {
 
   // --- STATE PER FIELD -------------------------------------------------------------------
   const rows = platform.declarativeFields;
-  const declared = new Map(DECLARATIVE_FIELDS.map((f) => [f.path, f]));
+  const declared = new Map(TRACKED_FIELDS.map((f) => [f.path, f]));
   const states = rows.map((r) => {
     const state: AbsenceState =
       r.platformCount > 0 ? 'CARRIED'
@@ -81,7 +88,7 @@ function main(): void {
   // A field the emitter reports that the registry does not declare, or the reverse. Either way
   // the two have drifted and the comparison is running on a list nobody agreed.
   const unlisted = rows.filter((r) => !declared.has(r.path)).map((r) => r.path);
-  const unemitted = DECLARATIVE_FIELDS.filter((f) => !rows.some((r) => r.path === f.path)).map((f) => f.path);
+  const unemitted = TRACKED_FIELDS.filter((f) => !rows.some((r) => r.path === f.path)).map((f) => f.path);
   if (unlisted.length || unemitted.length) {
     console.error('\nREFUSED — the manifest and the field registry disagree about which fields exist:');
     for (const p of unlisted) console.error(`  x emitted but not declared: ${p}`);
@@ -90,7 +97,7 @@ function main(): void {
   }
 
   const byState = (s: AbsenceState) => states.filter((r) => r.state === s);
-  console.log(`\n${states.length} declarative fields: ${byState('CARRIED').length} CARRIED · `
+  console.log(`\n${states.length} tracked fields (${DECLARATIVE_FIELDS.length} declarative + ${PROVENANCE_FIELDS.length} provenance): ${byState('CARRIED').length} CARRIED · `
     + `${byState('MODELLED').length} MODELLED · ${byState('DROPPED').length} DROPPED · ${byState('EMPTY').length} EMPTY`);
   const criticalDropped = byState('DROPPED').filter((r) => r.weight === 'critical');
   if (criticalDropped.length) {
