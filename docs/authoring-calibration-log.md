@@ -4707,6 +4707,67 @@ what came in can come OUT.
   fields that agree — 8 of 27 comparisons on delivery 83 were `status`, absent from their emission,
   and counting those as agreement is the unstated-denominator fault. Ready for their re-emission.
 
+## R120 — THE CLASS: every guard watches content going IN; none watches whether it can come OUT
+*David, 2026-08-16, in my words, recorded as its own class.*
+
+**Two months of instruments on one side of a boundary nobody checked the far side of.** Every gate
+built this month — the import door, the key registry, the reviewed guard, the derived-write guard,
+the return leg, the invariants, the migration replay, the verdict refusals — screens content
+ARRIVING. Not one asks whether what arrived can be delivered. `pnpm check:serving-path` is the first
+instrument pointed the other way, and on its first run **0 of 371 English items could reach a child**.
+
+**THE FAR SIDE FAILS OPEN AT EVERY LAYER, WHICH IS WHY NOTHING REPORTED IT.** Three defaults in
+series, each individually reasonable:
+
+| | default | consequence |
+|---|---|---|
+| `engines[family] ?? engines.wordweb` | render another family | a comprehension item becomes a synonym tile |
+| `FAMILY_BY_TYPE[type] ?? 'wordweb'` | route to another family | ditto, one layer earlier |
+| `stem.prompt … : ''` | render nothing | the question is blank |
+
+**A DEFAULT THAT SILENTLY SUBSTITUTES A DIFFERENT QUESTION TYPE IS WORSE THAN A CRASH** (David's
+ruling): the crash is visible in the first minute; the substitution is visible only to the child
+sitting in front of it. All three are now throws.
+
+**COWORK'S FRAMING IS THE SHARPER ONE AND IT GENERALISES:** *each side validates its own schema
+faithfully and neither validates the JOIN.* `stem.prompt` is unanimous — 344 of 344 there, 371 of
+371 here, zero carrying `prompt` — and so were `r4Note` and `stemRedraft` at the import door. **Every
+one of those was found by somebody reading the other side's store, never by a gate.** Two correct
+validators, one unvalidated seam.
+
+**AND THE CHECK REPEATED R61 ON ITS FIRST RUN.** It called 59 legitimate rows failures — SPaG spot
+items that carry their text in the stem, cloze items citing a gap, and whole-passage technique items.
+Now declared, with the reason printed every run, and with the discriminator that matters: **`lineRefs:
+[]` is a POSITIVE DECLARATION that the whole text is the window and is NOT `null`, which is a field
+nobody set.** That distinction is why absence must never coerce to empty at the import door.
+
+**AFTER THE THREE WIRING FIXES: 337 of 371.** All 337 comprehension items route, render a non-empty
+stem, resolve their passage and resolve their citations. The remaining **34 are SPaG** — 16 cloze, 9
+punctuation-spot, 9 spelling-spot — and they are a DIFFERENT DISTRICT with no family and no engine.
+Named, not invented: adding a family without an engine moves the failure rather than fixing it, and
+what the SPaG surface should be is a question nobody has asked yet.
+
+**Routing is not delivery.** `engines.comprehension` resolves and the passage still has no surface;
+the engine says so on screen, unmissably, rather than rendering a question a child cannot answer. A
+component that quietly omitted the passage would have been the fourth default in the series.
+
+## R121 — The pre-cap backups are two removes from her wording, and neither remove is hers
+*Cowork's finding, relayed 2026-08-16, before the library file crossed.*
+
+Its `_hintBeforeWordCap` backups look like the repair for the seven shortened hints and are not.
+**`en-narrator-voice-as-fact`'s pre-cap text is 26 words and is THE DRAFT SHE REJECTED** — the one
+whose third sentence coached the key. Its current 13-word text is a shortening OF that draft. So the
+entry is two removes from her wording and **neither remove is hers**, and restoring the backup would
+reinstate the coaching she struck, while looking exactly like an undo.
+
+**A BACKUP IS NOT A PRIOR APPROVED STATE. It is only the state before one operation**, and which
+operation is the whole question.
+
+The shortening was ONE AD-HOC HAND RUN in delivery 71, not a pipeline: 40 entries carry the pre-cap
+text and **no script writes it**. So it will not recur on its own — and nothing stops the next sweep
+doing it again, which is the same shape as the sixteen one-shot ruling-appliers in R63: a hazard that
+is dormant rather than closed.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 

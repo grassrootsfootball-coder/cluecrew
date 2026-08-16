@@ -207,6 +207,13 @@ jobs:
         run: pnpm check:retag-releases || echo "retag report not present in CI — population is a Cowork delivery"
         continue-on-error: true
 
+      # R120: the first instrument pointed at the FAR side of the boundary. Reports rather than
+      # fails — 34 SPaG items are undeliverable by a decision nobody has made yet, and blocking on
+      # that would block every push. What it must never do is go quiet: a default taken is printed
+      # as a FAILURE, never absorbed as an answer.
+      - name: Serving path (can what came in come out?)
+        run: pnpm check:serving-path || true
+
       - name: Register check (every cited rule has a register entry)
         run: pnpm check:register
 

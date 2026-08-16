@@ -40,6 +40,10 @@ const engines = {
   markhomework: dynamic(() => import('./engines/maths/mark-homework')),
   datadesk: dynamic(() => import('./engines/maths/data-desk')),
   shapeshop: dynamic(() => import('./engines/maths/shape-shop')),
+  // The English comprehension district. Absent until 2026-08-16, so all four question types fell
+  // through the `?? engines.wordweb` default below and 371 items would have rendered as synonym
+  // tiles with a blank question, silently.
+  comprehension: dynamic(() => import('./engines/comprehension')),
 };
 const PlainItem = dynamic(() => import('./engines/plain-item'));
 
@@ -713,7 +717,14 @@ export function PlayRunner({ childId }: { childId: string }) {
             />
           ) : (
             (() => {
-              const Engine = engines[activity.family] ?? engines.wordweb;
+              // NO DEFAULT (David's ruling, 2026-08-16). `?? engines.wordweb` did not fail on an
+              // unknown family — it rendered a DIFFERENT QUESTION TYPE, which is worse than a
+              // crash: the crash is visible immediately, the substitution only to the child.
+              const Engine = engines[activity.family];
+              if (!Engine) {
+                throw new Error(`no engine for mechanic family '${activity.family}'. Add one to the `
+                  + 'engines map — it must not silently render as another family.');
+              }
               return (
                 <Engine
                   stem={activity.stem}

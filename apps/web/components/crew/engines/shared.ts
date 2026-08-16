@@ -30,8 +30,25 @@ export function optionLabel(content: unknown): string {
   return JSON.stringify(record);
 }
 
+/**
+ * The question a child reads. `text` FIRST (R79: whatever Cowork authors is the name), `prompt`
+ * second for the VR/NVR families where `prompt` is still the authored field.
+ *
+ * This returned `stem.prompt ?? ''` while all 371 English items carried `stem.text`, so every one of
+ * them would have rendered with NO QUESTION and nothing would have said so. Unanimous on both sides:
+ * 344 of 344 in Cowork's store, 371 of 371 here, zero carrying `prompt`. Not a near miss.
+ *
+ * IT NO LONGER RETURNS AN EMPTY STRING SILENTLY. A stem with neither field is a fault in the item,
+ * and returning '' let it reach a child as a blank question. The caller gets a thrown error instead:
+ * a crash is recoverable and a blank question in an exam is not.
+ */
 export function stemText(stem: Record<string, unknown>): string {
-  return typeof stem.prompt === 'string' ? stem.prompt : '';
+  if (typeof stem.text === 'string' && stem.text.trim()) return stem.text;
+  if (typeof stem.prompt === 'string' && stem.prompt.trim()) return stem.prompt;
+  throw new Error(
+    `stem has neither a non-empty 'text' nor 'prompt' — it carries: ${Object.keys(stem).join(', ') || '(nothing)'}. `
+    + 'Refusing to render a blank question.',
+  );
 }
 
 /** How a given option should render once the answer is in. */

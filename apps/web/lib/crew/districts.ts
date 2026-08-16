@@ -46,6 +46,12 @@ export const QUARTERS: Record<MechanicFamily, Quarter> = {
     name: 'The Deduction Den',
     blurb: 'Clues on the table. Cross off what they rule out.',
   },
+  // The English district. Child-facing copy: reading age <=9, in-world, short (Addendum A §1.1).
+  comprehension: {
+    family: 'comprehension',
+    name: 'The Reading Room',
+    blurb: 'A story on the desk. Every answer is somewhere in the lines.',
+  },
 };
 
 /** Quarter order across the map — gentlest work first. */
