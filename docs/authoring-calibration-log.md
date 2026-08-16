@@ -4343,6 +4343,52 @@ items sit in exactly that state. Three codes now, three instructions, identical 
 behaviour is unchanged and only the reason it gives is split, because the reason is the whole of
 what the reader does next.
 
+## R110 — Every retag on record, and the two claims that must not share a verdict
+*David, 2026-08-16, on Annie's generalisation: moving a dependency does not discharge it.*
+
+**THE SWEEP. 36 retags. 19 RELEASED, 17 NOT.** Cowork's `RETAGDEPENDENCYREPORT.txt` supplies the
+population — the retag history lives in `_previousMisconceptionId`/`_previousMechanism`, which are
+PROPOSED exceptions here and do not cross, so that half is genuinely theirs. Its STATE column is not:
+in its own words, *"what CODE HAS SAID, relayed in conversation… every state here is REPORTED, not
+read"*, and twelve of its rows were UNKNOWN for that reason alone. `pnpm check:retag-releases`
+resolves every successor against the library table.
+
+**All twelve UNKNOWNs resolved, and they split six-six** — the exact shape that makes an UNKNOWN
+column dangerous, because either half alone would have been a safe guess and neither is:
+
+| successor | retags | state |
+|---|---|---|
+| `en-vocab-dominant-sense` | 13 | ACTIVE |
+| `en-wrong-scope-retrieval`, `en-plausible-not-stated`, `en-cause-agent-swap`, `en-attribute-transfer` | 6 | ACTIVE |
+| `en-vocab-neighbouring-sense`, `en-coordination-wrong-conjunct`, `en-vocab-form-lookalike`, `en-within-span-wrong-element`, `en-whole-text-absence-asserted` | 17 | **PROPOSED** |
+
+**Zero contradictions between the two stores, and every retag with an option to check against
+LANDED here.** So the reporting was the whole fault: the moves were real and correctly applied, and
+seventeen of them were described as releases while moving a row from a tag that blocks it onto a tag
+that blocks it. **All seventeen land on entries in the approval batch**, so her nine signatures
+discharge every one — which is the answer to her generalisation. Moving a dependency did not
+discharge it; it queued it behind the same nine.
+
+**THE APPROVAL CLAIM, MARKED AND NOT WITHDRAWN.** Seven entries name her as approver; exactly one
+(`en-vocab-dominant-sense`) rests on an artefact she wrote. RULED: `approvalAuthorKind` goes to
+UNKNOWN on the other six. **`approvedBy` STANDS and this script does not write it.**
+
+That asymmetry is the ruling's content. R108 took authorship to UNKNOWN because nothing supported
+it. Approval gets the same *treatment* and the opposite *verdict*, because **withdrawing a record of
+her approval on an absence is the delivery-58 error** — an absence of evidence read as evidence of
+absence, against her own work. Two of the six are the successors `WIW-04` and `WIW-11` were retagged
+onto, so R105 and this are one fact met from two directions.
+
+The sheet says: *recorded as approved by you on the authoring side — no artefact found, please
+confirm or correct*, and explicitly **not** that the entry is unapproved. The first draft of that
+line said "you are on record as approved **here**", which is false — this store holds `approvedBy:
+null` for all six and the claim lives on the drafting side. **A second unsupported claim, made in the
+act of marking the first.** Corrected before delivery; naming it because that is three times in one
+day that prose ran ahead of what was measured.
+
+Cowork ran the authorship search independently on its own roots and reached the same finding. Two
+sides, two disks, no artefact. That is convergent and it is still not proof she did not write them.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 

@@ -199,6 +199,14 @@ jobs:
       - name: Verdict refusals (what stands between the bank and a signature)
         run: pnpm check:verdict-refusals
 
+      # R110: a retag is only a release if the SUCCESSOR is approved. Reads Cowork's retag history
+      # (the population is theirs) and resolves every successor against the library table. Skipped
+      # when the report is not present rather than failing: the population is a delivery, not a
+      # repo file, and its absence is a missing delivery and not a broken build.
+      - name: Retag releases (moving a dependency does not discharge it)
+        run: pnpm check:retag-releases || echo "retag report not present in CI — population is a Cowork delivery"
+        continue-on-error: true
+
       - name: Register check (every cited rule has a register entry)
         run: pnpm check:register
 

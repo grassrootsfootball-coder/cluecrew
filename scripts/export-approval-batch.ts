@@ -207,17 +207,35 @@ function renderPaper(
       } else {
         L.push(`> **The hint below is OURS** — written by ${String(prov.hintAuthoredBy ?? 'the drafting side')} `
           + `(${String(prov.hintAuthorKind ?? 'kind not stated')}), ${String(prov.hintSource ?? 'source not stated')}. `
-          + 'Review it as ours. Any claim that you approved it once is recorded below and is not '
-          + 'asserted here.');
+          + 'Review it as ours.');
       }
       L.push('>');
+      // THE APPROVAL CLAIM GETS THE SAME TREATMENT AS AUTHORSHIP AND NOT THE SAME VERDICT (R110).
+      // Authorship went UNKNOWN because nothing supports it. Approval is MARKED unknown and NOT
+      // withdrawn, because withdrawing a record of her approval on an absence is the delivery-58
+      // error running the other way. The sheet must not tell her six entries carry her approval
+      // when nothing shows she gave it, and must not tell her they are unapproved either.
+      if (prov.approvalAuthorKind === 'UNKNOWN') {
+        // WHICH SIDE RECORDS IT. The claim is on the AUTHORING side; this store has approvedBy
+        // null. Writing "you are on record here" would be a second unsupported claim in the act of
+        // marking the first, which is the whole fault this sheet is correcting.
+        L.push('> **Recorded as approved by you on the authoring side — no artefact found. Please '
+          + 'confirm or correct.** The drafting side records this entry as approved by you, and that '
+          + 'record STANDS; we have not withdrawn it. Two things we cannot show: this store holds no '
+          + 'approval for it at all (see below), and neither side holds a document of yours recording '
+          + 'one — the claim traces to a single sentence in the drafting side\'s own metadata. **We '
+          + 'are not saying it is unapproved.** We are saying we cannot evidence it, and one line from '
+          + 'you settles it either way.');
+        L.push('>');
+      }
       L.push(`> **Approval on record here: ${String(prov.approvalKind ?? 'not stated')}.** `
         + String(prov.approvalNote ?? ''));
       // Anything already rendered above is excluded, or it prints a second time. The authorship
       // note ran to a full paragraph and appeared THREE times on one page before these were added.
       const shown = new Set(['state', 'hintAuthorKind', 'hintAuthoredBy', 'hintSource', 'approvalKind',
         'approvalNote', 'declarationSources', 'declaredBy', 'recordedOn', 'approvedBy',
-        'hintAuthorshipNote', 'hintAuthorshipRuledOn', 'hintAuthorKindWasClaimedAs', 'hintAuthoredByWasClaimedAs']);
+        'hintAuthorshipNote', 'hintAuthorshipRuledOn', 'hintAuthorKindWasClaimedAs', 'hintAuthoredByWasClaimedAs',
+        'approvalAuthorKind', 'approvalAuthorshipNote', 'approvalAuthorshipRuledOn']);
       const rest = Object.entries(prov).filter(([k]) => !shown.has(k));
       if (rest.length) L.push(`>\n> *Also recorded:* ${rest.map(([k, v]) => `${k}=${JSON.stringify(v)}`).join('; ')}`);
       const src = prov.declarationSources as Array<{ file: string; sha256: string }> | undefined;
@@ -255,10 +273,20 @@ function renderPaper(
 
   L.push('## What approving all nine does, and what it does not');
   L.push('');
-  L.push(`Approving all nine releases **${itemsAffected} items** from the tag route. It does NOT make`);
-  L.push('them signed, and it is not everything standing in the way — `pnpm check:verdict-refusals`');
-  L.push('measures the rest against the store, including eleven items on a RETIRED tag, which is a');
-  L.push('retagging job on our side and not yours, and four held on child-facing copy.');
+  L.push(`Approving all nine releases **${itemsAffected} items** from the tag route — 96% of the 224`);
+  L.push('English items that would refuse a verdict today. It does NOT make them signed, and it is');
+  L.push('not everything standing in the way. Measured against the store: eleven items sit on a');
+  L.push('RETIRED tag, which is a retagging job on our side and not yours, and four are held on');
+  L.push('child-facing copy. Six items are on both a tag you release and a fault we fix, so neither');
+  L.push('of us clears them alone.');
+  L.push('');
+  L.push('**It also settles seventeen retags.** Thirty-six options in the bank have been moved from');
+  L.push('one diagnosis to another. Nineteen landed on an approved entry and are clear. The other');
+  L.push('seventeen landed on one of the entries on this sheet — so they were moved off a tag that');
+  L.push('blocked them and onto a tag that blocks them, and were reported as released. Your nine');
+  L.push('signatures are what actually discharges them. Nothing else on this sheet depends on that');
+  L.push('and you do not need to check it: it is recorded here so the word "retagged" is not read as');
+  L.push('"resolved" a second time.');
   L.push('');
   L.push('**Status:** ______________________________________________');
   L.push('');
