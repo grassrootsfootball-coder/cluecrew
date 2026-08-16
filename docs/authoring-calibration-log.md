@@ -4517,6 +4517,74 @@ whose drafted hint she rejected for telling a child to read aloud in a room wher
 the entry does not cross, the two sides hold different libraries and her correction exists on one
 side only.
 
+## R115 — A ruling channel that cannot name the ruler, and the count that did not reconcile
+*David, 2026-08-16.*
+
+**THE NINE, BY `hintAuthorKind`. THE ANSWER IS 2 PERSON / 7 AGENT — and NEITHER reported figure was
+right, including mine.**
+
+| entry | kind | authored by |
+|---|---|---|
+| `en-within-span-wrong-element` | AGENT | ai-draft:cowork-okafor-v1 |
+| `en-negation-dropped` | AGENT | ai-draft:cowork-okafor-v1 |
+| `en-vocab-neighbouring-sense` | AGENT | ai-draft:cowork-okafor-v1 |
+| `en-vocab-form-lookalike` | AGENT | ai-draft:cowork-okafor-v1 |
+| `en-whole-text-absence-asserted` | AGENT | ai-draft:cowork-okafor-v1 |
+| `en-coordination-wrong-conjunct` | AGENT | ai-draft:cowork-okafor-v1 |
+| `en-determiner-omitted` | **PERSON** | Annie |
+| `en-narrator-voice-as-fact` | **PERSON** | Annie |
+| `en-relative-pronoun-choice` | AGENT | ai-draft:cowork-okafor-v1 |
+
+**The reconciliation, and there are three things in it, not two.**
+1. `en-determiner-omitted` — PERSON, ours only. Cowork holds 8 of the 9. Explains one.
+2. **`en-relative-pronoun-choice` — Cowork says PERSON, the store says AGENT, and the store is
+   right.** Her return, section 3: *"APPROVED AS WRITTEN, with a note. Both fields approved."* She
+   did not rewrite it. **A note SHE wrote, attached to a hint the drafting side wrote, has been read
+   as her authorship of the hint** — R94's conflation once more, this time from involvement rather
+   than from a machine verdict. Cowork was right to refuse to guess which two.
+3. **The "3 PERSON" was mine and it was wrong**: it counted `en-vocab-dominant-sense`, which is a
+   tenth entry and not on the sheet. Three parties, three counts, none of them matching, and only
+   one of them read from a store.
+
+**THE NAMING PATH — AND THE INSTRUCTION WAS RIGHT ABOUT THE GAP AND INCOMPLETE ABOUT THE FIX.**
+
+Setting `staffEmail` alone makes the door name **whoever is logged in**, and the person at that
+keyboard is DAVID TRANSCRIBING ANNIE'S PAPER RULINGS. **She never signs in.** Inferring the reviewer
+from the session names the transcriber — the gap the door was built to close, one layer in, exactly
+as he put it, but reached from the workflow rather than from the credential.
+
+So both halves:
+- `rev-0001` → `staff-reviewer@cluecrew.test`, verified by re-reading. **With a standing caveat
+  printed on every run: that is a SHARED SEED ROLE ACCOUNT — R94's 463 rows — so anyone holding the
+  login now signs as Annie.** Correct for dev, wrong for anything real; a named reviewer needs her
+  own account before this writes outside development.
+- `rev-0002` (Joan) gets NO email. Held since 2026-08-06, no second reviewer account exists, and an
+  invented address would bind signatures to a person who cannot hold them. Reported, not guessed.
+- **The door no longer depends on either.** It takes an EXPLICIT reviewer selection: whose judgement
+  from the form, who typed it from the session, never merged. A chosen reviewer that does not
+  resolve is a REFUSAL, not a fallback to nobody — writing the return anyway would produce the exact
+  artefact this door exists to prevent, a ruling naming no one.
+
+**ONE RETURN DOCUMENT CONFIRMED, NAMING HER.**
+`return-approval-batch-nine-english-library-entr-2026-08-16-14e6efcb8e11d956.md`, 1,990 bytes,
+sha256 `14e6efcb…c335`. The AttributionEvent resolves `rev-0001` → "Annie" through the relation,
+`recordedBy` stays `human:david@cluecrew.test`, and the hash on the event equals the hash of the
+bytes on disk. Her standing note is in it, in her words, under an authored-field heading — including
+the sentence that caused the door to exist.
+
+Still not verified: the web submit itself, which needs a sign-in I do not perform. The resolution,
+writer, hash and event were run through the door's own code path; the form and the redirect were not.
+
+**AND THE DOOR HAD INVENTED A SECOND DIRECTORY FOR AN EXISTING CLASS.** It wrote to
+`content/reviewer-returns`, ONE LETTER from `content/review-returns`, which has held reviewer
+copy-coming-back since 5 August. `scan:vocab` caught it within the minute: the old path is already
+excluded — *"copy coming BACK, quoted verbatim as the reviewer wrote it"* — and the new one was not,
+so **her own reasoning was flagged for the word "error" in reviewer prose**. A SCOPE fault, not a
+wording fault, and the distinction is the point: the house rule is that a scanner hit is reworded and
+never exempted, but rewording HER text to satisfy a gate aimed at children is the single thing this
+channel exists to prevent. Moved to the existing directory rather than adding a fourth exclusion —
+two paths for one concept will drift, which is R57 in a filename.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 

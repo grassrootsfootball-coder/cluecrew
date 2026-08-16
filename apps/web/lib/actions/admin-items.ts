@@ -194,10 +194,24 @@ export async function markReviewedAction(formData: FormData): Promise<void> {
   // to evidence. Reasoning is OPTIONAL and its absence is RECORDED as an absence, never elided: a
   // verdict given without a reason is a fact about the verdict.
   const reasoning = String(formData.get('reasoning') ?? '').trim();
-  const reviewer = await prisma.reviewer.findFirst({
-    where: { staffEmail: staff.email.toLowerCase(), heldUntil: null },
-    select: { id: true, displayName: true },
-  });
+  // WHOSE JUDGEMENT IT IS COMES FROM THE FORM, NOT THE LOGIN (R115). Annie reviews on paper and
+  // never signs in; the person at this keyboard is David transcribing her ruling. Inferring the
+  // reviewer from the session would name the transcriber, and a ruling channel that cannot name the
+  // ruler is the gap it was built to close. Falls back to the signed-in account's own Reviewer row
+  // when nothing is chosen, so a reviewer ruling on her own work is unaffected.
+  const chosenReviewerId = String(formData.get('reviewerId') ?? '').trim();
+  const reviewer = chosenReviewerId
+    ? await prisma.reviewer.findFirst({
+      where: { id: chosenReviewerId, heldUntil: null }, select: { id: true, displayName: true },
+    })
+    : await prisma.reviewer.findFirst({
+      where: { staffEmail: staff.email.toLowerCase(), heldUntil: null },
+      select: { id: true, displayName: true },
+    });
+  // A CHOSEN REVIEWER THAT DOES NOT RESOLVE IS A REFUSAL, not a silent fallback to nobody. Writing
+  // the return anyway would produce exactly the artefact this door exists to prevent: a ruling
+  // naming no one.
+  if (chosenReviewerId && !reviewer) redirect(`/admin/items/${itemId}?error=not-a-named-reviewer`);
   const at = new Date().toISOString();
   const written = writeReviewerReturn({
     reviewerName: reviewer?.displayName ?? staff.email,

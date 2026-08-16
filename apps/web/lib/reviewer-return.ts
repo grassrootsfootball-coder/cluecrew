@@ -16,7 +16,19 @@ import { renderReviewerReturn, reviewerReturnBasename, type ReviewerReturnInput 
  * a commit has a diff, a date and an author, which is exactly what the six approvals we spent two
  * days failing to evidence did not have.
  */
-const RETURNS_DIR = resolve(process.cwd(), '../../content/reviewer-returns');
+/**
+ * `content/review-returns` — THE EXISTING DIRECTORY FOR THIS EXACT CLASS, not a new one. The first
+ * version of this wrote to `content/reviewer-returns`, one letter apart from a directory that has
+ * held reviewer copy-coming-back since 5 August. Two paths for one concept WILL drift (R57's shape
+ * in a filename), and the scanner proved it immediately: the existing path is already excluded from
+ * the child-facing vocabulary scan — "copy coming BACK, quoted verbatim as the reviewer wrote it" —
+ * and the new one was not, so her own reasoning was flagged for the word "error" in reviewer prose.
+ *
+ * That hit was a SCOPE fault and not a wording fault, and the difference matters: the house rule is
+ * that a scanner hit is reworded and never exempted, but rewording HER text to satisfy a gate aimed
+ * at children is the one thing this whole channel exists to prevent.
+ */
+const RETURNS_DIR = resolve(process.cwd(), '../../content/review-returns');
 
 export interface WrittenReturn { file: string; sha256: string; bytes: number }
 

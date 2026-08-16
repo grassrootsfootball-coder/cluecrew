@@ -64,6 +64,12 @@ export default async function ItemDetailPage({
   // nothing and let the layout own the signed-out view.
   if (!staff) return null;
 
+  // The reviewers a ruling can be attributed to. HELD reviewers are excluded: a signature must
+  // name someone who can currently hold one.
+  const reviewers = await prisma.reviewer.findMany({
+    where: { heldUntil: null }, select: { id: true, displayName: true }, orderBy: { id: 'asc' },
+  });
+
   const item = await prisma.item.findUnique({
     where: { id },
     include: { options: true, questionType: true },
@@ -198,8 +204,17 @@ export default async function ItemDetailPage({
               <form className="cc-form" action={markReviewedAction} style={{ marginBottom: '0.75rem' }}>
                 <input type="hidden" name="itemId" value={item.id} />
                 <label>
-                  Your reasoning (authored field — written verbatim into the return document)
-                  <textarea name="reasoning" rows={3} placeholder="Why this item passes, in your words. Optional; an empty field is recorded as empty." />
+                  Whose ruling is this?
+                  <select name="reviewerId" defaultValue="">
+                    <option value="">Mine (the signed-in reviewer)</option>
+                    {reviewers.map((r) => (
+                      <option key={r.id} value={r.id}>{r.displayName} ({r.id})</option>
+                    ))}
+                  </select>
+                </label>
+                <label>
+                  Their reasoning (authored field — written verbatim into the return document)
+                  <textarea name="reasoning" rows={3} placeholder="Why this item passes, in their words. Optional; an empty field is recorded as empty." />
                 </label>
                 <button className="cc-button" type="submit">
                   Mark REVIEWED
