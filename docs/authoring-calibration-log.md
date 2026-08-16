@@ -5151,7 +5151,8 @@ distractor authored, every one carrying a statement of what it executes.
 So her check is not UNRUN on VR; in that form it is **INAPPLICABLE**. A note cannot contradict its tag
 where no note was written. **But the fault it detects has a VR twin that nothing screens: a generator
 producing an option that does not execute the tag it was asked for.** That is re-derive-and-compare,
-not read-and-compare — different check, same question, and the 381 AUTHORED VR options have neither.
+not read-and-compare — different check, same question, and the authored VR options have neither.
+(FIGURE CORRECTED — R144: 314 uncovered, not 381; 67 already pass the value gate.)
 VR holds all the LIVE items, so this is the district in front of children.
 
 **3. THE PER-CLUSTER GATE, AND THE FIRST TWO CLUSTERS ARE LIVE.**
@@ -5206,7 +5207,8 @@ agrees with itself. Recording those is the prerequisite, and it is a migration p
 1,231 rows, not a check.
 
 **The honest summary of the district in front of children:** 1,612 tagged VR options; 1,231 generated
-with no recorded input to re-derive from; 381 authored with no statement of what they execute; her
+with no recorded input to re-derive from; 381 authored, of which 314 have no statement of what they
+execute and 67 already pass the value gate (R144); her
 check inapplicable to the first group and starved on the second. **Neither half is screened for the
 one fault that cannot be recovered after publication.**
 
@@ -5255,7 +5257,14 @@ each; item-level `r4Note` and `tierRationale` — 0 of 145 each.
 **Same exposure as English, no instrument.** English's 1,047 notes are what made her comparison
 possible and what found `WIW-14 B`; these 381 are authored the same way and have nothing to compare.
 They are also not reachable by R134's audit, which screens the 13 executors — an authored option has
-no executor. **So the 381 sit outside both checks**: too authored for the executor audit, too
+no executor. **CORRECTED 2026-08-16 — R144: THE UNCOVERED SET IS 314, NOT 381, AND 188 OF THOSE ARE
+LIVE, NOT "99 items' worth".** `vr-09-letter-series` (39) and `vr-11-number-series` (28) carry an
+EXECUTABLE tag AND `stem.operands`, so `check:vr-distractors` already derives all 67 — they are inside
+its 127 derivation-verified. Of the remaining 314, only **188 options on 74 items** are LIVE
+(`vr-04-closest-meaning` 120 on 40, `vr-06-missing-word` 68 on 34); `vr-02` and `vr-08` are entirely
+DRAFT. I quoted 381 and 145 all evening. The wrong figure stays below.
+
+**So the 381 sit outside both checks**: too authored for the executor audit, too
 note-less for the note comparison.
 
 Counted and logged, not built.
@@ -5483,6 +5492,50 @@ generator change that PREDATES a reviewed row. **200 of 514 rows are protected b
 values legitimately, so a divergence on them is the guard working and not a finding, and a change
 before protection is indistinguishable from one after. The two classes are counted apart and never
 merged, because a single total would be the unit-mismatch fault of R140 in a different costume.
+
+## R144 — A note makes an option READABLE, not CHECKABLE
+*David, 2026-08-16. Scoped, and nothing built.*
+
+**WHERE A TAG NAMES A JUDGEMENT RATHER THAN A COMPUTATION, NO FIELD CLOSES THE GAP.** That is the
+entry; the population is only the occasion for it.
+
+314 authored VR options sit outside every mechanical check, **188 of them LIVE across 74 items** —
+`vr-04-closest-meaning` and `vr-06-missing-word`. Their tags are `vr04-opposite-pull`,
+`vr04-associated-not-same`, `vr06-ignores-sentence`: a near-synonym that pulls the wrong way, an
+associate offered as an equivalent, a word that ignores its carrier sentence. **There is no value to
+derive.** You cannot compute the near-synonym a ten-year-old reaches for; that is a judgement about a
+lexicon and a child, which is exactly why `vr-04` became a typed constructor generating to diagnosis
+rather than an executor.
+
+So a note would make those 188 options **readable by a reviewer** and would not make them
+**checkable**. **314 authored notes to enable a comparison that still ends in a human is the expensive
+route to where a cold read arrives directly** — 74 items read, against 314 fields written to support
+an instrument that cannot conclude on its own.
+
+**BOTH IMPORTS WERE REFUSED, AND THE SECOND IS THE EVENING'S OTHER MISTAKE AVOIDED:**
+- **English's `misconceptionExecution`** — the right shape for a district whose errors are
+  interpretive and whose options are hand-authored one at a time. VR's live gap is vocabulary
+  judgement; the field would carry prose nothing can check.
+- **An executor declaration** — impossible for 275 of the 314, not merely expensive. Only the three
+  `vr-move-letter-*-invalid` tags (39 options, **all DRAFT**) are mechanically decidable, and against
+  a lexicon as a VALIDITY test rather than a value derivation: a different gate from the one the
+  generated options pass, buying nothing in front of children.
+
+**That second refusal is the same error as R142's, four hours later: a mechanism carried across a
+district boundary without checking the boundary held.** NVR's seed model onto VR at nine o'clock;
+Maths-and-VR's executor model onto VR's vocabulary banks at one. **Twice in one evening, and caught
+both times by the same question — what does this district actually have?** Asking it is cheap and
+neither instance would have survived asking it first.
+
+**WHAT THE POPULATION IS, since the classes are different problems:** 275 options are BANK-IMPORTED —
+cases the generators deliberately no longer produce (`SUPERSEDED_BY_BANK` for `vr-02`/`vr-06`, and
+`vr-04` left the set to become a typed constructor). 106 are `seed` items predating the generators. Of
+the seed set, 67 already pass the value gate.
+
+**IT GOES TO HER, NOT INTO A BUILD.** These 74 items are the only live content in the project with no
+mechanical screen; the reason is that their errors are judgements; the honest options are a sample
+cold read or accepting the exposure. **Her own measured rate — two category-2 faults in 34 items —
+predicts roughly seven of the 74 carrying a second defensible answer.**
 
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
