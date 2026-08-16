@@ -22,10 +22,20 @@ async function assertMisconceptionsActive(
   const ids = [...new Set(options.map((option) => option.misconceptionId).filter(Boolean))] as string[];
   if (ids.length === 0) return null;
   const rows = await prisma.misconception.findMany({ where: { id: { in: ids } }, select: { id: true, status: true } });
+  const byId = new Map(rows.map((r) => [r.id, r.status]));
   // The DECISION is `inactiveMisconceptions` in core, so the district survey screens on the same
   // rule this door enforces. A tag with no row at all is inactive here, as it was under the count.
-  const inactive = inactiveMisconceptions(options, new Map(rows.map((r) => [r.id, r.status])));
-  return inactive.length === 0 ? null : 'unapproved-misconception';
+  const inactive = inactiveMisconceptions(options, byId);
+  if (inactive.length === 0) return null;
+  // ONE ROUTE, THREE CAUSES (David's ruling, 2026-08-16 — R106). This returned
+  // `unapproved-misconception` for all three, and the message a reviewer then read told her to
+  // approve the tag in the queue. For a RETIRED tag that instruction is WRONG and the tag is not in
+  // the queue to approve — the item needs retagging, which is not her job at all. Eleven English
+  // items are in exactly that state. The door still refuses identically; only the reason it gives
+  // is split, because the reason is the whole of what the reviewer does next.
+  if (inactive.some((id) => !byId.has(id))) return 'unknown-misconception';
+  if (inactive.some((id) => byId.get(id) === 'RETIRED')) return 'retired-misconception';
+  return 'unapproved-misconception';
 }
 
 const optionSchema = z.object({
@@ -75,8 +85,9 @@ export async function createItemAction(formData: FormData): Promise<void> {
   if (!staff || !roleAllows(staff.effectiveRole, ['AUTHOR'])) redirect('/admin');
 
   const parsed = parseItemForm(formData);
-  if (await assertMisconceptionsActive(parsed.options)) {
-    redirect('/admin/items/new?error=unapproved-misconception');
+  const newTagFault = await assertMisconceptionsActive(parsed.options);
+  if (newTagFault) {
+    redirect(`/admin/items/new?error=${newTagFault}`);
   }
   const item = await prisma.item.create({
     data: {
@@ -108,9 +119,8 @@ export async function updateItemAction(formData: FormData): Promise<void> {
   if (item.status === 'LIVE' || item.status === 'RETIRED') redirect(`/admin/items/${itemId}?error=locked`);
 
   const parsed = parseItemForm(formData);
-  if (await assertMisconceptionsActive(parsed.options)) {
-    redirect(`/admin/items/${itemId}?error=unapproved-misconception`);
-  }
+  const editTagFault = await assertMisconceptionsActive(parsed.options);
+  if (editTagFault) redirect(`/admin/items/${itemId}?error=${editTagFault}`);
   await prisma.$transaction([
     prisma.itemOption.deleteMany({ where: { itemId } }),
     prisma.item.update({
@@ -172,9 +182,8 @@ export async function markReviewedAction(formData: FormData): Promise<void> {
   }
   const failure = publishBlockers(item.options, `human:${staff.email}`, item.authoredBy, item.answerFlaggedAt);
   if (failure) redirect(`/admin/items/${itemId}?error=${failure}`);
-  if (await assertMisconceptionsActive(item.options)) {
-    redirect(`/admin/items/${itemId}?error=unapproved-misconception`);
-  }
+  const reviewTagFault = await assertMisconceptionsActive(item.options);
+  if (reviewTagFault) redirect(`/admin/items/${itemId}?error=${reviewTagFault}`);
   if (childFacingBlock(item)) redirect(`/admin/items/${itemId}?error=child-facing-copy`);
 
   await prisma.item.update({
@@ -280,9 +289,8 @@ export async function bulkImportAction(formData: FormData): Promise<void> {
 
   // ADDENDUM-E §2: un-approved misconception ids are rejected at the door.
   const allOptions = items.flatMap((entry) => entry.options);
-  if (await assertMisconceptionsActive(allOptions)) {
-    redirect('/admin/import?error=unapproved-misconception');
-  }
+  const allTagFault = await assertMisconceptionsActive(allOptions);
+  if (allTagFault) redirect(`/admin/import?error=${allTagFault}`);
 
   // BUILD-DISTRICT-MATHS §5: a MATHS item's key is COMPUTED from its
   // solution expression. Missing or mismatching solutions reject the whole
@@ -471,10 +479,8 @@ export async function bulkRecordItemReviewsAction(formData: FormData): Promise<v
     }
     const copyBlock = childFacingBlock(item);
     if (copyBlock) { skipped.push(`${itemId.slice(0, 8)}: child-facing copy — ${copyBlock}`); continue; }
-    if (await assertMisconceptionsActive(item.options)) {
-      skipped.push(`${itemId.slice(0, 8)}: uses an unapproved misconception`);
-      continue;
-    }
+    const bulkTagFault = await assertMisconceptionsActive(item.options);
+    if (bulkTagFault) { skipped.push(`${itemId.slice(0, 8)}: ${bulkTagFault}`); continue; }
     await prisma.item.update({
       where: { id: itemId },
       data: {
@@ -541,10 +547,8 @@ export async function bulkMarkReviewedAction(formData: FormData): Promise<void> 
     }
     const copyBlock = childFacingBlock(item);
     if (copyBlock) { skipped.push(`${itemId.slice(0, 8)}: child-facing copy — ${copyBlock}`); continue; }
-    if (await assertMisconceptionsActive(item.options)) {
-      skipped.push(`${itemId.slice(0, 8)}: uses a misconception you have not approved yet`);
-      continue;
-    }
+    const markTagFault = await assertMisconceptionsActive(item.options);
+    if (markTagFault) { skipped.push(`${itemId.slice(0, 8)}: ${markTagFault}`); continue; }
     await prisma.item.update({
       where: { id: itemId },
       data: { status: 'REVIEWED', reviewedBy, reviewMethod: 'in-platform', reviewNotes: null },
@@ -599,9 +603,8 @@ export async function signItemAction(formData: FormData): Promise<void> {
 
   if (item.status !== 'REVIEWED') redirect(`/admin/items/${itemId}?error=not-reviewed`);
   if (item.authoredBy === `human:${staff.email}`) redirect(`/admin/items/${itemId}?error=own-item`);
-  if (await assertMisconceptionsActive(item.options)) {
-    redirect(`/admin/items/${itemId}?error=unapproved-misconception`);
-  }
+  const signTagFault = await assertMisconceptionsActive(item.options);
+  if (signTagFault) redirect(`/admin/items/${itemId}?error=${signTagFault}`);
 
   // WHAT IS BEING SIGNED, fingerprinted now. Same subject the draft self-assessment pins: the
   // child-facing item plus its tier.
