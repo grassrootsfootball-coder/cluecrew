@@ -210,6 +210,15 @@ here has no register entry. A ruling goes to the register FIRST; it comes here o
   Retiring the ENG-001/002 copies removed the ability to RECOMPUTE the WIW-18/pp-19 disagreement;
   the hashes are in the ledger and the values in R82, but a record is not a recomputation. Derive
   the reader map by SCANNING for the source roots, never a hand-kept list (R57).
+- **THE RETURN LEG: AN UNTRAVELLED PATH AND AN ABSENT PATH ARE THE SAME THING** (David, 2026-08-16
+  — R88). Every guard here watches Cowork's content reaching the database; ANNIE'S RULINGS TRAVEL
+  THE OTHER WAY and that direction had never carried anything. 274 library entries crossed in one
+  go, and the export still dropped 16 of the row's 22 columns including `approvalNote` — the field
+  holding her discriminator between two entries a drafter must choose between, which Cowork was
+  meanwhile rediscovering by cold read. `pnpm check:return-leg` reports CARRIED / STALE / NOT
+  CARRIED per class and reads what an export carries OUT OF ITS SOURCE, never a declared list.
+  Currently 1 of 6 carried. Also: an artefact's stamp must be computed from the SAME projection it
+  delivers — this one was not, so two materially different files shipped under one name.
 - Content decisions (items, chapters, misconceptions) go through the CMS
   review pipeline; nothing skips the reviewer.
 - **PILOT CONTENT UNDER ACTIVE REVIEW HAS ONE WRITE PATH: `scripts/lib/pilot-review.ts`, NEVER A

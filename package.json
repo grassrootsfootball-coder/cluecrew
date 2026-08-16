@@ -105,6 +105,7 @@
     "retire:loose": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/retire-loose-copies.ts",
     "carry:quotes": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/carry-quote-declarations.ts",
     "carry:content-keys": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/carry-content-keys.ts",
+    "check:return-leg": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-return-leg.ts",
     "check:outside-writes": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-outside-writes.ts",
     "check:review-queries": "tsx scripts/check-review-queries.ts",
     "backfill:draft-assessment": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/backfill-draft-assessment.ts",

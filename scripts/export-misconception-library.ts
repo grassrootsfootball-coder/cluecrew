@@ -28,14 +28,31 @@ const FAMILY = 'misconception-library-current';
  * file says about an entry without changing the entry's text at all.
  */
 export async function buildMisconceptionLibrarySource(prisma: typeof defaultPrisma): Promise<unknown> {
-  const rows = await prisma.misconception.findMany({ orderBy: [{ district: 'asc' }, { id: 'asc' }] });
-  return rows.map((m) => ({ id: m.id, district: m.district, status: m.status, description: m.description, childHint: String(m.childHint ?? '') }));
+  return (await libraryEntries(prisma)).map(({ gate, ...rest }) => rest);
 }
 
-async function main(): Promise<void> {
-  const prisma = defaultPrisma;
+/**
+ * THE STAMP MUST COVER WHAT IS DELIVERED, and for one run it did not.
+ *
+ * This builder projected FIVE fields while the delivered entries carried seventeen, so adding
+ * `approvalNote` and the rest of the reviewer's own words changed the payload and left the
+ * filename hash IDENTICAL — `6d3c109008854e71` on two materially different files. The name is the
+ * thing every comparison in this repo cites; a name that does not move when the content moves is
+ * a comparison that reports agreement between two different artefacts.
+ *
+ * Both now derive from one function. The gate VERDICT is excluded from the stamp deliberately: it
+ * is computed from the hint at export time, so including it would make the artefact's identity
+ * depend on the checker rather than on the content — the same coupling R62 closed for derived
+ * values, one level up.
+ */
+
+/**
+ * THE ONE PROJECTION. Both the delivered entries and the stamp source come from here, so a field
+ * added to the delivery cannot leave the artefact's identity unchanged.
+ */
+async function libraryEntries(prisma: typeof defaultPrisma) {
   const rows = await prisma.misconception.findMany({ orderBy: [{ district: 'asc' }, { id: 'asc' }] });
-  const entries = rows.map((m) => {
+  return rows.map((m) => {
     const hint = String(m.childHint ?? '');
     const failures = hint
       ? checkChildFacingText({ role: 'hint', label: m.id, text: hint, testedTokens: m.testedTokens ?? [] }).filter(isBlocking)
@@ -47,8 +64,33 @@ async function main(): Promise<void> {
       description: m.description,
       childHint: hint,               // VERBATIM — quote this when proposing a transform
       gate: failures.length ? failures.map((f) => f.detail) : 'clean',
+      // THE REVIEWER'S OWN WORDS, which this export dropped until 2026-08-16. It carried 6 of the
+      // 22 fields the row holds and named none of the reviewer-authored ones — R57 on the RETURN
+      // leg, where nobody had been looking at all.
+      //
+      // `approvalNote` is the sharp case. Annie's entry for en-comparison-vehicle-misread carries
+      // the DISCRIMINATOR — "attribute-transfer moves a quality BETWEEN CHARACTERS; this moves it
+      // from a comparison's VEHICLE to its SUBJECT. Different remedies, different hints." Cowork
+      // spent a run discovering by cold read that attribute-transfer was being used where it does
+      // not fit. She wrote the answer on 8 August and the export was not carrying the field.
+      approvalNote: m.approvalNote,
+      approvalMethod: m.approvalMethod,
+      approvedBy: m.approvedBy,
+      proposedBy: m.proposedBy,
+      rejectionNote: m.rejectionNote,
+      rejectedBy: m.rejectedBy,
+      category: m.category,
+      axis: m.axis,
+      sourcePattern: m.sourcePattern,
+      teachback: m.teachback,
+      testedTokens: m.testedTokens,
     };
   });
+}
+
+async function main(): Promise<void> {
+  const prisma = defaultPrisma;
+  const entries = await libraryEntries(prisma);
 
   const generatedAt = new Date().toISOString();
   const stamp = artefactStamp(

@@ -213,6 +213,13 @@ jobs:
       - name: Typecheck the root scripts
         run: pnpm typecheck:scripts
 
+      # THE RETURN LEG. Every other guard watches Cowork's content arriving; this watches what the
+      # platform holds that the authoring side works against and has never received. Reports rather
+      # than blocks -- the absent paths are unbuilt work, not a regression, and a step red from its
+      # first run is muted within a week.
+      - name: Return leg (reviewer judgement the authoring side cannot see)
+        run: pnpm check:return-leg
+
       # THE WRITE BOUNDARY. Database TRIGGERS record every mutation of a content table, so
       # application code cannot opt out -- a write from a script, from Prisma Studio, from psql or
       # from another agent lands identically. This compares that record against AttributionEvent

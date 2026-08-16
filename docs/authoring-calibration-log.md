@@ -3741,3 +3741,98 @@ the anchor matches exactly the expected number of times; a deliberate no-op must
 as `declareMayBeEmpty`. A non-unique anchor fails even with `required=False`, because an anchor that
 is not unique edited something else as well. `edit_file` is all-or-nothing: a partially applied set
 of edits is the half-applied import in a text editor.
+
+## R88 — The return leg was never built, and one export claiming to carry the library dropped the reviewer's words
+*David, 2026-08-16. "That is not a delivery lag. It is a whole direction of the pipeline that has never carried anything."*
+
+Every ruling in this thread has been about Cowork's content reaching the database — the manifest,
+the key registry, the field baseline, the write boundary. **Annie's rulings travel the other way.**
+274 library entries crossed in one go on 2026-08-16, which means **every entry she has ever written
+was in the same position as the one that exposed it.**
+
+**AND RUNNING THE PATH WAS NOT ENOUGH.** The export delivered SIX of the twenty-two columns the row
+holds — `id, district, status, description, childHint, gate` — and named none of the
+reviewer-authored ones. R57 on the return leg, where nobody had been looking at all. So after the
+first delivery, `approvalNote` still had not crossed.
+
+The cost is specific and it was being paid in real time. `en-comparison-vehicle-misread` carries
+Annie's discriminator: *attribute-transfer moves a quality BETWEEN CHARACTERS; this moves it from a
+comparison's VEHICLE to its SUBJECT. Different remedies, different hints.* **Cowork spent a run
+discovering by cold read that attribute-transfer was being used where it does not fit.** She wrote
+the answer on 8 August. 0 options in this store carry the tag, so every use of it was on the
+authoring side, working from a name alone.
+
+**THE STAMP DID NOT MOVE WHEN THE PAYLOAD DID.** The artefact's identifying hash was computed from a
+FIVE-field projection while the delivery carried seventeen, so adding the reviewer's words produced
+a materially different file under an identical name — `6d3c109008854e71` twice. The name is what
+every comparison in this repo cites; a name that does not move when the content moves is a
+comparison reporting agreement between two different artefacts. Both now derive from one projection.
+The gate VERDICT is excluded from the stamp deliberately, so the artefact's identity depends on the
+content and not on the checker (R62, one level up).
+
+**`pnpm check:return-leg` is the outbound guard's mirror.** Three states, and the middle one is
+treated as seriously as the last, because AN UNTRAVELLED PATH AND AN ABSENT PATH ARE THE SAME
+THING: CARRIED, STALE, NOT CARRIED. Whether an export carries a field is READ OUT OF ITS SOURCE,
+never declared — a hand-kept list of what an export carries is the allowlist that fails open, and it
+is precisely how this export came to claim it delivered the library while dropping her words.
+
+**The first run: 1 CARRIED, 0 STALE, 5 NOT CARRIED.** And the one that is carried is the one fixed
+that morning.
+
+| class | rows | state |
+|---|---|---|
+| Misconception approvals — boundary notes, method, approver | 171 | CARRIED (as of today) |
+| Item review notes — why an item was returned | 301 | NOT CARRIED |
+| Attribution events — the reasoning behind every named ruling | 202 | NOT CARRIED |
+| Word review notes — vocabulary card rulings | 14 | NOT CARRIED |
+| Item answer flags — the gate says the child cannot answer it | 8 | NOT CARRIED |
+| Reviewer identity — who holds the role, since when, on what evidence | 2 | NOT CARRIED |
+
+The 202 attribution notes are the largest body of reviewer prose in the store and the record of WHY
+each decision went the way it did. The 8 answer flags are UNCLEARABLE BY DESIGN — the child cannot
+answer the item and only the author can fix it — and the author cannot see them. It reports rather
+than blocks: these are unbuilt work, not a regression, and a gate red from its first run is muted
+within a week.
+
+## R89 — The proposal path exists and is already carrying traffic
+*Answering David's question, 2026-08-16.*
+
+A Cowork-authored entry does NOT have to arrive approved. `MisconceptionStatus.PROPOSED` exists, and
+**19 entries sit in it right now — 8 of them proposed by `ai-draft:cowork-okafor-v1`**, with
+`approvedBy` null on all 19. So the inbound half of the return leg's mirror is built and exercised;
+this is the one direction that was not broken.
+
+The only schema condition is the one from R85: `description` and `childHint` both NOT NULL and at
+least 12 non-blank characters. A proposal needs a hedged hint, not no hint.
+
+The reviewer-facing half exists too and follows R25 — `export-proposed-misconceptions.ts` sends
+every entry's `description` and `childHint` VERBATIM FROM THE FIELD, because a ratification is made
+against those strings and not against an account of them. Delivered: 19 entries,
+`misconceptions-proposed-queue-cd38f828a7918d3e.json`.
+
+So `en-gesture-function-misread` has a route: Cowork creates it PROPOSED with its hedged hint and
+its one confirmed instance, the queue export carries it to Annie verbatim, and her ruling comes back
+through the approval door that sets `approvedBy`, `approvalMethod` and `approvalNote`. **This side
+builds nothing and rules nothing** — the entry needs Annie, and the platform's job is to carry it
+without touching it.
+
+## R90 — A broken instrument found a real regression by failing visibly, and that is luck
+*2026-08-16. Recorded as luck so it is not mistaken for design.*
+
+`str.replace` silently no-opped on a mismatched anchor and the `attractorLine`/`defeaterLine`
+columns were never added to the schema. The migration run that should have carried them therefore
+had nothing to carry — and came out holding an unrelated `ALTER COLUMN "at" SET DEFAULT
+CURRENT_TIMESTAMP`. **That is how Prisma's revert of the R80 clock fix was discovered.**
+
+Nothing detected it. No check watched for it. It surfaced because a DIFFERENT fault produced an
+empty migration, and an empty migration is short enough to read. Had the schema edit applied
+normally, the revert would have been one line inside a migration doing real work, and it would have
+shipped unnoticed — reintroducing the local-time default that produced 345 false "a change nobody
+decided" reports, forty minutes after the entry describing them was written.
+
+**Two lessons, and the second is the one that generalises.** First: the silent no-op is still a
+fault, and it is now closed (R87). Second: **a fault found by luck is an UNMONITORED failure mode,
+not a solved one.** The question after any lucky catch is what would have caught it on purpose, and
+the honest answer here is nothing — no check compares a hand-written migration's intent against what
+the generator later does to the same column. That gap is open, and naming it is the point of this
+entry.
