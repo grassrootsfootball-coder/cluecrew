@@ -26,7 +26,8 @@
  * content of the ruling.
  */
 import { execFileSync } from 'node:child_process';
-import { readFileSync } from 'node:fs';
+import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { join, resolve } from 'node:path';
 import {
   PROPOSED_EXCEPTIONS,
   checkItemChildFacing,
@@ -34,6 +35,7 @@ import {
   unknownCoworkKeys,
 } from '../packages/core/src/index';
 import { Prisma, prisma } from '../packages/db/src/index';
+import { artefactStamp, deliver, stampedName } from './lib/export-destination';
 
 const DIR = '/Users/davidb/Downloads/11+/from-cluecrew';
 const CLUSTERS = ['005', '006', '007', '008', '009', '010', '011', '012'];
@@ -118,6 +120,54 @@ function payloadHash(path: string): string {
     + 's=json.dumps(d["payload"],sort_keys=True,separators=(",",":"),ensure_ascii=False).encode();'
     + 'print(hashlib.sha256(s).hexdigest())';
   return execFileSync('python3', ['-c', src, path], { encoding: 'utf8' }).trim();
+}
+
+const RECEIPT_DIR = resolve(import.meta.dirname, '../content/exports');
+
+/**
+ * THE REFUSAL RECEIPT — every id this door turned away, and why.
+ *
+ * A refusal used to reach stdout and nowhere else. Cowork emitted 344 items, 330 landed, 14 were
+ * refused, and NOTHING told it which: a re-emission was silently partial by default, and its only
+ * route to knowing was diffing manifests and reading absence as evidence — the inference that
+ * already produced one false correction.
+ *
+ * Deliberately small. Not a schema change, not a state on the row, not a class in
+ * `check:return-leg`: a file naming the id, the door, and the reason. Written on EVERY run and
+ * labelled with its mode, so a dry run cannot be mistaken for a record of what actually happened.
+ */
+function writeReceipt(r: {
+  mode: 'applied' | 'dry-run'; files: string[];
+  gateHeld: Array<{ id: string; detail: string }>; tagHeld: Array<{ id: string; tags: string[] }>;
+  duplicatesDropped: number; drafted: number; writable: number;
+}): void {
+  const refusals = [
+    ...r.gateHeld.map((g) => ({ itemId: g.id, door: 'checkItemChildFacing', reason: g.detail })),
+    ...r.tagHeld.map((t) => ({
+      itemId: t.id, door: 'misconception library',
+      reason: `tagged ${t.tags.join(', ')}, which the library does not hold`,
+    })),
+  ].sort((a, b) => a.itemId.localeCompare(b.itemId));
+
+  const generatedAt = new Date().toISOString();
+  const stamp = artefactStamp(refusals, generatedAt, 'status', 'every item this import refused, with the door and the reason', ['refusals']);
+  const body = {
+    kind: 'import-receipt',
+    mode: r.mode,
+    note: r.mode === 'dry-run'
+      ? 'DRY RUN — nothing was written. This is what WOULD be refused, not what was.'
+      : 'Applied. These ids were refused at the door and did NOT land; everything else did.',
+    generatedAt,
+    stamp,
+    sourceFiles: r.files.map((f) => f.split('/').pop()),
+    counts: { drafted: r.drafted, landed: r.writable, refused: refusals.length, duplicatesDropped: r.duplicatesDropped },
+    refusals,
+  };
+  mkdirSync(RECEIPT_DIR, { recursive: true });
+  const path = join(RECEIPT_DIR, stampedName('import-receipt', stamp.sourceHash, 'json'));
+  writeFileSync(path, JSON.stringify(body, null, 2));
+  deliver(path, 'import-receipt');
+  console.log(`\nReceipt: ${refusals.length} refusal(s) named for Cowork (${r.mode}).`);
 }
 
 async function main(): Promise<void> {
@@ -214,6 +264,8 @@ async function main(): Promise<void> {
   // the list to bring to a ruling is the EXCEPTIONS, never the inclusions.
   console.log(`\nPROPOSED EXCEPTIONS — ${PROPOSED_EXCEPTIONS.length} key(s) proposed as NOT crossing, awaiting a ruling:`);
   for (const l of PROPOSED_EXCEPTIONS) console.log(`  ? ${l.level}.${l.key}: ${l.reason}`);
+
+  writeReceipt({ mode: write ? 'applied' : 'dry-run', files, gateHeld, tagHeld, duplicatesDropped: dropped, drafted: drafts.length, writable: writable.length });
 
   if (!write) { console.log('\nDry run. Re-run with --write to apply.'); await prisma.$disconnect(); return; }
 
