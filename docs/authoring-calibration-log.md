@@ -5094,6 +5094,38 @@ cannot be recovered after publication**, found by neither a scan nor a cold read
 this repo screens structure, provenance and delivery. **None of them can see a second defensible
 answer**, and the measured rate at which a qualified reader finds one is one item in seventeen.
 
+## R131 — A restated approval outranks a recovered one
+*Annie, 2026-08-16. `annie-parallel-read-as-sequence.md`, sha256 `6bd1a2b0b45d522f`.*
+
+Approved 8 August. **No row existed in EITHER store.** She has rewritten it fresh rather than
+allowing either side to reconstruct it, and attached the ruling that matters more than the entry:
+
+> *If a copy of the original turns up later and differs, this version is the one that was approved,
+> because this is the one that exists.*
+
+**A RESTATED APPROVAL OUTRANKS A RECOVERED ONE.** That settles a CLASS, not this instance: it says
+what to do with every lost ruling this project finds later, and it removes the tempting move —
+treating a recovered artefact as more authentic than a living statement from the person who made the
+decision. Recorded on the entry so it travels with it.
+
+Created ACTIVE, `proposedBy`/`approvedBy` `reviewer:rev-0001`, `recordedBy` David, `approvalMethod`
+naming the document and its hash. `description` (413 ch), `childHint` (106 ch) and `boundaries`
+(923 ch) extracted from her file **by document structure and verified byte-identical after the
+write** — never retyped.
+
+**A COLUMN HAD TO BE ADDED TO HOLD HER BOUNDARY CLAUSES.** `boundaries` did not exist here. Cowork's
+library shape has carried it for months, so every boundary clause she has ever written either sat
+squeezed inside `approvalNote` or did not cross at all. **R88's class is literally named
+"Misconception approvals — BOUNDARY NOTES, method, approver" and the boundary half had nowhere to
+land** — the check reported the class CARRIED because the export named the fields the schema had,
+and the schema was the thing missing. A check can only verify the columns that exist.
+
+**AND THE ITEM THE ENTRY WAS PROPOSED ON IS NOT IN THIS STORE.** `ENG-004-AGG-08` is absent: ENG-004
+holds AGG-01 to AGG-12 with **08 missing**. So the tag that has resolved to nothing since 13 August
+resolved to nothing here for a second, independent reason — there was no row to carry it. The entry
+now exists and **0 options reference it**. The item is the gap, not the tag, and that is in the
+emission rather than left for Cowork to discover.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 

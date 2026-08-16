@@ -518,6 +518,17 @@ model Misconception {
    */
   approvalNote   String?
   /**
+   * THE DISCRIMINATORS AGAINST NEIGHBOURING ENTRIES, in the reviewer's own words.
+   *
+   * Cowork's library shape has carried this field for months; this store never had a column for it,
+   * so a boundary clause either sat inside `approvalNote` or did not cross at all. R88's class is
+   * literally named "Misconception approvals — BOUNDARY NOTES, method, approver", and the boundary
+   * half had nowhere to land. `en-comparison-vehicle-misread`'s vehicle/subject clause took eight
+   * days to reach the drafting side and then immediately found a mislabelled option in a signed
+   * cluster; that is what this column is for.
+   */
+  boundaries     String?
+  /**
    * "human:<email>" — who rejected it, kept so a restore has a history.
    */
   rejectedBy     String?
