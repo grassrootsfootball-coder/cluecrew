@@ -178,7 +178,14 @@ const EXCLUDED_SEGMENTS = ['node_modules', '.next', '.lighthouseci', 'e2e', 'tes
  * than assumed: all 84 child-facing fields in ENG-004 contain no banned word, and every one of
  * the scanner's hits was reviewer-facing metadata.
  */
-const EXCLUDED_PATHS = ['content/exports', 'content/review-returns', 'content/pilot-review'];
+/**
+ * /content/blind-keys holds the opaque-id → row → TAG mapping for a blind declaration pack. It is
+ * internal ids and nothing else — `en-within-span-wrong-element` tripped the child-facing ban on
+ * "wrong". Same class as review-returns: never reaches a child, and it must not be reworded because
+ * it is a key into stored rows. It is also the one file that must NOT be delivered, so it is the
+ * furthest thing from child copy in the repository.
+ */
+const EXCLUDED_PATHS = ['content/exports', 'content/review-returns', 'content/pilot-review', 'content/blind-keys'];
 const SOURCE_TEXT_PATHS = ['content/passages'];
 const EXCLUDED_SUFFIXES = ['.test.ts', '.test.tsx', '.d.ts'];
 

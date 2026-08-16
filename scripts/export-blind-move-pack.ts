@@ -130,13 +130,52 @@ async function main(): Promise<void> {
   writeFileSync(path, JSON.stringify({ ...payload, stamp }, null, 1));
   deliver(path, `blind-move-pack-${cluster.toLowerCase()}`);
 
+  /**
+   * THE CONTROLS — options whose tag is ALREADY VERIFIED CORRECT, recorded in the key and NOT marked
+   * in the pack (David's ruling, from Cowork's proposal, 2026-08-16).
+   *
+   * They separate two zeros that otherwise look identical:
+   *   · declarations AGREE on the controls  -> the vocabulary is usable, so a zero elsewhere means
+   *     the cluster is clean;
+   *   · declarations DISAGREE on the controls too -> the field cannot express these errors and every
+   *     declaration is a shrug.
+   *
+   * Without them a null result cannot be told apart from an instrument that does not work, and a
+   * ruling on 900 hours would rest on which of those it was.
+   *
+   * NOT PLANTED — known-good. These carry `en-attribute-transfer` and survived Cowork's sweep of all
+   * 44 carriers against her vehicle/subject boundary, which found exactly one wrong (`WIW-14 B`, a
+   * different cluster). Any option on Cowork's stated-recognition list is EXCLUDED: an option it
+   * expects to recognise cannot serve as evidence that a blind reading works.
+   */
+  const RECOGNISED = new Set(['pp-05', 'pp-08', 'pp-11', 'pp-12', 'pp-13', 'pp-17', 'pp-19', 'pp-20', 'pp-21']);
+  const VERIFIED_TAGS = new Set(['en-attribute-transfer', 'en-comparison-vehicle-misread']);
+  const controls = key.filter((k) =>
+    k.misconceptionId !== null
+    && VERIFIED_TAGS.has(k.misconceptionId)
+    && ![...RECOGNISED].some((r) => k.itemId.endsWith(r)));
+
   // THE KEY IS NOT DELIVERED. It is the only thing that can align a declaration to a stored row.
   mkdirSync(KEYS_DIR, { recursive: true });
   const keyPath = join(KEYS_DIR, `${cluster.toLowerCase()}-blind-key.json`);
-  writeFileSync(keyPath, JSON.stringify({ cluster, salt, generatedAt, mapping: key }, null, 1));
+  writeFileSync(keyPath, JSON.stringify({
+    cluster, salt, generatedAt, mapping: key,
+    controls: {
+      note: 'Tags already verified correct against the reviewer\'s boundaries. Not marked in the pack. '
+        + 'Agreement here says the vocabulary is usable; disagreement here says every declaration is a shrug.',
+      basis: 'en-attribute-transfer carriers that survived the 44-carrier vehicle/subject boundary sweep '
+        + '(which found one wrong, in another cluster). Options on Cowork\'s stated-recognition list excluded.',
+      limit: 'ALL ON ONE TRIPLE (quality/character/character). They test whether the vocabulary can express '
+        + 'THAT move, not whether it can express every move — a real limit on what agreement here proves.',
+      opaqueIds: controls.map((c) => c.opaqueId),
+      rows: controls.map((c) => `${c.itemId} ${c.label} ${c.misconceptionId}`),
+    },
+  }, null, 1));
 
   console.log(`\n${entries.length} items · ${requested} declarations requested · ${passages.size} passage(s) carried`);
   console.log(`  tags stripped: ${key.filter((k) => k.misconceptionId).length} misconceptionId values held back`);
+  console.log(`  CONTROLS: ${controls.length} known-good option(s), recorded in the key and unmarked in the pack`);
+  for (const c of controls) console.log(`      ${c.itemId} ${c.label}  ${c.misconceptionId}`);
   console.log(`  key (NOT delivered): ${keyPath}`);
   console.log(`  the key is the only way to align a declaration to a row — keep it on this side.`);
   await prisma.$disconnect();

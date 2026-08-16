@@ -5632,6 +5632,38 @@ genuine blind read produces hesitation where two triples both fit; a sighted rea
 everywhere. **A distribution with no low-confidence rows is itself a signal** — so the pack asks Cowork
 not to smooth it, because a field whose purpose is unstated gets rounded up.
 
+**THE CONTROLS — Cowork's proposal, and they close the gap the design still had.** Six options whose
+tags are ALREADY VERIFIED CORRECT sit in the pack unmarked. Without them, two outcomes are
+indistinguishable and a ruling on 900 hours would rest on which one it was:
+
+| result on the controls | what a zero elsewhere means |
+|---|---|
+| declarations AGREE | the vocabulary is usable — the cluster is clean |
+| declarations DISAGREE | the field cannot express these errors — **every declaration is a shrug** |
+
+**Not planted, known-good.** They carry `en-attribute-transfer` and survived Cowork's sweep of all 44
+carriers against her vehicle/subject boundary, which found exactly one wrong and it was in another
+cluster. **Any option on Cowork's stated-recognition list is excluded** — `pp-12` was a candidate and
+was dropped, because an option the drafter expects to recognise cannot be evidence that a blind
+reading works.
+
+**6 of 90, and the count is in this report and not in the pack.** Enough to read: six agreements is a
+usable vocabulary, three or more disagreements is a shrug. Few enough not to dominate.
+
+**THEIR LIMIT, STATED IN THE KEY: all six are the SAME TRIPLE** (`quality/character/character`). They
+test whether the vocabulary can express THAT move, not whether it can express every move. It is the
+only verified-correct set ENG-002 has — the delivery-83 retags were also verified against each
+option's own note, and every one of them is on the recognition list.
+
+**Cowork will flag recognition per option regardless of blinding**, having named nine in advance:
+pp-05, -08, -11, -12, -13, -17, -19, -20, -21, most from work done today. **A recognised option's
+declaration is not evidence either way**, so the readable population is what remains after both
+exclusions.
+
+`content/blind-keys/` is excluded from the vocabulary scanner: it holds internal tag ids
+(`en-within-span-wrong-element` tripped the child-facing ban on "wrong") and is the one file that must
+never be delivered.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 
