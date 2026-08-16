@@ -71,6 +71,7 @@ describe('the registry itself', () => {
       'item._previousOrderAnchor',
       'item.notes',
       'item.draftingOrder',
+      'stem._previousQuotes',
       'explanation._previousWalkScript',
       'options[].tagStatus_SHAPE_UNRESOLVED',
       'options[]._previousValue',

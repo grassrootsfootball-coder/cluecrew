@@ -4615,6 +4615,48 @@ It prints on every CI run rather than at set-up, because **a caveat that appeare
 output on the day it was created is true, recorded, and unread at the moment it matters** — which is
 the same failure as the hard-coded 172 and Cowork's `approvedBy`, in a warning rather than a claim.
 
+## R117 — Zero refusals; two artefacts under one name; and the cap already rewrote seven hints
+*2026-08-16. Delivery 83, both payloads verified 64/64.*
+
+**THE NUMBER IS ZERO. 371 of 371 English items would take a verdict today.** All fifteen landed
+(the door refused first on `stem._previousQuotes`, R57's mechanism a seventh time), and the six
+successors Cowork could not state are all ACTIVE — every one of the 15 distinct tags across those
+items resolves ACTIVE, none missing, none retired.
+
+**THE HASH DISAGREEMENT DOES NOT EXIST. THERE ARE TWO DOCUMENTS AND I GAVE THEM THE SAME NAME.**
+
+| file | bytes | sha256 | whose |
+|---|---|---|---|
+| `annie-approval-batch-return.md` | 4,614 | `f92d4bae…` | **hers** — she wrote it, I read it |
+| `return-approval-batch-…-14e6efcb….md` | 1,990 | `14e6efcb…` | **the door's** — it wrote it, about the same nine entries |
+
+Both hashes are correct for their own bytes. Cowork holds `14e6efcb…` because that is the file I
+SENT it; it has never had her document at all. **Nothing re-serialised.** Its inference was
+reasonable and wrong, and the cause is mine: I named the door's output "reviewer return", the phrase
+her file already used, so two artefacts arrived under one name — which is the day's theme
+(`en-relative-pronoun-choice`, the 172, `approvedBy`) landing in my own naming.
+
+**AND THE GENERAL ANSWER, SO IT IS NOT LUCK: a payload hash is over the canonical serialisation of
+the payload OBJECT — `sort_keys=True`, compact separators, UTF-8 — and NEVER over the file.** That is
+precisely what makes it survive re-serialisation, re-indentation, and any reformatting of the
+container. Both d83 payloads verified 64/64 through that mechanism while their FILENAMES lost every
+hyphen in transit. A file hash would have failed; the payload hash cannot notice.
+
+**THE 16-WORD CAP HAS ALREADY SILENTLY REWRITTEN SEVEN HINTS.** The library comparison — a
+VERIFICATION, not an import, because the DB authors library text — found **7 of 9 childHints differ**,
+and every one of Cowork's is shorter and sits at 13-16 words. Ours are 17-23.
+
+**She approved OUR wording.** The paper sheet rendered `childHint` from this store verbatim; that is
+the string she read and ruled on. So Cowork's copies are **unapproved shortenings of text she
+approved** — produced by the same 16-word cap David has just ruled does not govern her wording, and
+the cap did to seven entries silently what it would have done to `en-determiner-omitted` visibly.
+
+**The worst of the seven is `en-narrator-voice-as-fact`.** Cowork's copy reads *"…or what the room
+decided?"* — **the coaching she struck.** She rejected the drafted hint precisely because its third
+sentence named the reporting and so handed the child the answer. Their store still contains the
+fault, one shortening later, and their own note asks for her wording as a field because the
+transcription route is closed. It is in the export they now hold.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 

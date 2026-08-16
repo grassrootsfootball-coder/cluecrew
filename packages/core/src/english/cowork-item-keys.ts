@@ -168,6 +168,14 @@ export const COWORK_ITEM_KEYS: Readonly<Record<CoworkLevel, readonly CoworkKeyRu
     { key: 'text', disposition: 'MAPPED', carriedAt: 'stem.text' },
     { key: 'prompt', disposition: 'MAPPED', carriedAt: 'stem.prompt' },
     { key: 'quotes', disposition: 'MAPPED', carriedAt: 'stem.quotes' },
+    {
+      key: '_previousQuotes',
+      disposition: 'NOT_CARRIED',
+      ruling: 'PROPOSED',
+      reason: 'The declared quotation spans a repair replaced, on 4 items (the mis-declared spans '
+        + 'that failed the child-facing gate). Same class as every other _previous shadow: the '
+        + 'current declaration is the claim and the supersession belongs in an attribution event.',
+    },
     { key: 'testedTokens', disposition: 'MAPPED', carriedAt: 'stem.testedTokens' },
     { key: 'techniqueKey', disposition: 'MAPPED', carriedAt: 'stem.techniqueKey' },
     { key: 'answerShape', disposition: 'MAPPED', carriedAt: 'stem.answerShape' },
