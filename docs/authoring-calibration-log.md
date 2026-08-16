@@ -3514,23 +3514,53 @@ because no snapshot holds them, so David's disjunction resolves one way: `before
 `beforePreservedPendingRuling`, so the carriage stays visibly provisional rather than being quietly
 reclassified as content.
 
-## R80 — A boundary whose clock is wrong reports guilt, not uncertainty
-*2026-08-16, found on the write boundary's first real run.*
+## R80 — A CORRECT INSTRUMENT READING A WRONG CLOCK
+*2026-08-16. The write boundary's first real run. David: "the finding of the week."*
+
+**THE GENERALISATION, which is the reason this entry sits where it does: a correct instrument
+reading a wrong clock is INDISTINGUISHABLE from a correct instrument reading a true fault, and
+NOTHING INSIDE THE INSTRUMENT CAN TELL THEM APART.** Every honesty mechanism in this repo was
+working, and the number was still wrong.
 
 `check:outside-writes` reported **345 UNATTRIBUTED WRITES**. Every one was false.
 
-`ContentWriteLog.at` defaulted to `CURRENT_TIMESTAMP`, a timestamptz, stored into a naive
-`TIMESTAMP(3)`. The session runs BST, so every logged write landed **one hour ahead** of the
+`ContentWriteLog.at` defaulted to `CURRENT_TIMESTAMP` — a `timestamptz` — stored into a naive
+`TIMESTAMP(3)`. The session runs BST, so every logged write landed **exactly one hour ahead** of the
 `AttributionEvent` recording the same act, and the fifteen-minute match window caught none of them.
 
-**The failure mode is the point.** A instrument with a skewed clock does not report "unknown" or
-"cannot tell". It reports, in its own words, "a change nobody decided" — 345 times, about work that
-was fully attributed, in the same run where it correctly printed its own denominator and its own
-unresolvable class. Everything else about the check was honest. **Ordinary correctness of the thing
-being measured against is a precondition for any of that honesty to mean anything.**
+**The failure mode is the entry.** An instrument with a skewed clock does not report "unknown", or
+"cannot tell", or "out of range". It reports, in its own words, **"a change nobody decided"** — 345
+times, about work that was fully attributed, *in the same run where it correctly printed its own
+denominator, correctly declared the boundary's install date as a permanent bound, and correctly
+separated out its unresolvable class*. Every discipline this repo has built was operating, and each
+one made the wrong number more credible rather than less.
 
-Fixed at source (`now() AT TIME ZONE 'UTC'`, set explicitly in the trigger rather than left to the
-column default) and the existing rows corrected by a uniform offset. That UPDATE is the one and only
-mutation of an append-only table, and it is a CLOCK CORRECTION, not a prune: no row added, removed,
-or changed in WHAT it says happened — only in the convention it says it in. After the fix: 342
-attributed, 3 unattributed, and the 3 are the canary scratch row that is unattributed by design.
+So the R60 questions do not reach this. A check can state its population, know what it must find,
+and read the artefact rather than a copy, and still be wrong about every row — because all three
+questions are about the instrument, and this is about what the instrument is measured AGAINST. The
+fourth question: **is the thing I am comparing to keeping the same clock, the same units and the
+same convention as the thing I am measuring?**
+
+**THE CORRECTION, recorded rather than adjusted silently.** Migration
+`20260816125500_write_log_utc`, applied 2026-08-16:
+  · the trigger now writes `now() AT TIME ZONE 'UTC'`, set EXPLICITLY in the insert rather than left
+    to the column default — the default was what was wrong, and a trigger relying on it inherits
+    whatever the next migration does to it;
+  · every row written before that migration was corrected by a **uniform offset of −1 hour**
+    (`now() - (now() AT TIME ZONE 'UTC')`, which was BST at the time of application), total across
+    the table because every row predated the fix.
+
+**This is the one and only mutation of an append-only table.** It is a CLOCK CORRECTION, not a
+prune: no row added, no row removed, and no row changed in WHAT it says happened — only in the
+convention it says it in. After the fix: 342 attributed, 3 unattributed, and the 3 are the canary
+scratch row that is unattributed by design.
+
+**THE SAME SHAPE HAPPENED TWICE IN ONE TURN, and the second one is the cheaper lesson.**
+`check:line-refs` read `stem.lineRefs` for an hour after R77's migration moved that field to
+`Item.lineRefs`. It found an empty array on every row, checked **no citations at all**, and went on
+printing "146 items citing a passage" — a true count of items it was not checking. Same structure:
+the instrument was correct, its reference had moved underneath it, and its output stayed confident
+and specific. **A MIGRATION AND ITS CONSUMERS ARE ONE CHANGE.** A field that moves is not migrated
+until every reader of it has moved; the field being empty is not an error state anything reports,
+because an empty list is a legitimate value.
+

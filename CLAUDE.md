@@ -181,6 +181,22 @@ here has no register entry. A ruling goes to the register FIRST; it comes here o
   node_modules, run the derivation there, compare with now. That is how the 27 "unmeasurable" seed
   items became measurable (14 had changed, all by ruling). It answers any derived-value history
   question, and it is why a lost prior state is usually not lost.
+- **A CORRECT INSTRUMENT READING A WRONG CLOCK IS INDISTINGUISHABLE FROM A CORRECT INSTRUMENT
+  READING A TRUE FAULT** (2026-08-16 — R80). `check:outside-writes` reported 345 UNATTRIBUTED
+  WRITES — "a change nobody decided", 345 times, about work that was fully attributed. The write
+  log defaulted to `CURRENT_TIMESTAMP` (a `timestamptz`) stored into a naive `TIMESTAMP(3)`; the
+  session runs BST, so every logged write landed exactly an hour ahead of the AttributionEvent for
+  the same act. It printed its own denominator correctly, declared its permanent bound correctly,
+  and separated its unresolvable class correctly — **every discipline here was operating, and each
+  one made the wrong number more credible.** R60's three questions do not reach this: they are all
+  about the instrument, and this is about what the instrument is measured AGAINST. So there is a
+  fourth: **is the thing I am comparing to keeping the same clock, units and convention as the
+  thing I am measuring?** Store UTC explicitly at the write site (`now() AT TIME ZONE 'UTC'` in the
+  trigger body, never left to a column default). And **A MIGRATION AND ITS CONSUMERS ARE ONE
+  CHANGE**: the same turn moved `lineRefs` to item level and left `check:line-refs` reading
+  `stem.lineRefs`, where it found an empty array on every row, checked NO citations, and went on
+  printing "146 items citing a passage". A field that moves is not migrated until every reader has
+  moved — an empty list is a legitimate value, so nothing reports it.
 - Content decisions (items, chapters, misconceptions) go through the CMS
   review pipeline; nothing skips the reviewer.
 - **PILOT CONTENT UNDER ACTIVE REVIEW HAS ONE WRITE PATH: `scripts/lib/pilot-review.ts`, NEVER A
