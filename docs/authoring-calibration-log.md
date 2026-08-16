@@ -4657,6 +4657,56 @@ sentence named the reporting and so handed the child the answer. Their store sti
 fault, one shortening later, and their own note asks for her wording as a field because the
 transcription route is closed. It is in the export they now hold.
 
+## R118 — Nothing between a signed bank and a child is content
+*David, 2026-08-16: "what is left in the serving path."*
+
+Zero items refuse a verdict. **Zero items can reach a child, and not one of the reasons is an item.**
+Traced from `orchestrator.ts` outward:
+
+**1. NO ENGLISH ITEM IS SERVABLE AT ALL.** `itemPool` takes `status: 'LIVE', pool: 'PRACTICE'`. All
+371 are `DRAFT`. In dev it falls back to any-status, so the rest of this is reachable in dev and
+nothing is reachable in production.
+
+**2. NO COMPREHENSION ENGINE EXISTS.** The `engines` map in `play-runner.tsx` holds five VR families
+and five Maths; there is no comprehension entry. Routing is `engines[activity.family] ?? engines.wordweb`,
+and `FAMILY_BY_TYPE` in `packages/core/src/families.ts` names **21 VR question types and no `en-comp-*`
+type**, so `familyForType` returns its `?? 'wordweb'` default. **A comprehension item would render in
+the Word Web engine** — a synonym tile — and the fallback means it does so silently.
+
+**3. THE STEM WOULD BE BLANK.** `stemText()` returns `stem.prompt` or `''`, and all 371 items carry
+`stem.text` (R103). Wordweb, the engine the fallback selects, calls exactly that. So the child would
+see options and no question.
+
+**4. THE PASSAGE HAS NO DELIVERY PATH — and this is the one that is not a wiring fault.**
+`grep -r passage` over `apps/web/app/crew` and `apps/web/components/crew` returns **nothing**. The 21
+extracts sit in `content/passages/`, every item carries `passageRef` and `lineRefs`, `Item.lineRefs`
+was migrated to item level under R77 — and no child-facing surface reads any of it. **A comprehension
+item without its passage is not a degraded question, it is not a question**, and unlike 1-3 there is
+no existing component to point at a different field.
+
+**THE SHAPE OF THE FINDING: EVERY LAYER FAILS OPEN.** `?? engines.wordweb`, `?? 'wordweb'`, and
+`: ''` are three defaults in series, and none of them raises. The bank could be signed, published and
+LIVE, and a child would get a blank-stemmed synonym tile with no passage — with nothing in any log
+saying so. It is R60's family in the serving path: **correct code, true report, and nothing stating
+that nothing happened.** Every guard built this month watches content going IN; none watches whether
+what came in can come OUT.
+
+`en-determiner-omitted` at 20 words stands unreworded — her wording, her call.
+
+## R119 — R57 a seventh time, and a check that compares before it trusts
+*2026-08-16, one line each.*
+
+- **`stem._previousQuotes` refused delivery 83 at the door**, on 4 items — the shadow of the quoted
+  spans the reworded items replaced. Declared NOT_CARRIED/PROPOSED like every other `_previous`.
+  Seventh outing; the mechanism has now caught a field on every delivery that carried a new one.
+- **The naming collision, and no more than this:** two documents, one name. Cowork inferred
+  re-serialisation from a hash difference that was two different files. Reasonable inference,
+  avoidable cause — I gave the door's output the phrase her own file used.
+- **`pnpm check:library-agreement`** compares an emission from Cowork against this store and NEVER
+  writes, because the DB authors library text. It reports fields THEY DID NOT STATE separately from
+  fields that agree — 8 of 27 comparisons on delivery 83 were `status`, absent from their emission,
+  and counting those as agreement is the unstated-denominator fault. Ready for their re-emission.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 
