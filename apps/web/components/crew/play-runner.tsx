@@ -46,6 +46,7 @@ const engines = {
   comprehension: dynamic(() => import('./engines/comprehension')),
 };
 const PlainItem = dynamic(() => import('./engines/plain-item'));
+import type { PassageView } from './engines/comprehension';
 
 type Activity =
   | { kind: 'no_session' }
@@ -64,6 +65,8 @@ type Activity =
       rail: 'stage' | 'corner' | 'none';
       stem: Record<string, unknown>;
       options: Array<{ id: string; content: unknown }>;
+      /** Comprehension only. The extract stays on screen while she answers (R122). */
+      passage?: PassageView;
     };
 
 interface AnswerResult {
@@ -733,6 +736,8 @@ export function PlayRunner({ childId }: { childId: string }) {
                   selected={selected}
                   onSelect={setSelected}
                   outcome={outcome}
+                  // Comprehension only; every other engine ignores it.
+                  passage={activity.passage}
                 />
               );
             })()

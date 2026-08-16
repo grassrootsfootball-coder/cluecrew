@@ -1,43 +1,148 @@
 'use client';
 
 /**
- * COMPREHENSION (English district) — the question and its options.
+ * COMPREHENSION (English district) — the passage, then the question.
  *
- * **THIS DOES NOT RENDER THE PASSAGE, AND THAT IS DELIBERATE.** The passage surface is the one
- * thing between a signed bank and a child that is NOT a wiring fault, and it is being scoped as a
- * question for David to rule on before it is built: what a child sees, how the numbered lines are
- * shown, where the item sits, and how the cited window is made findable.
+ * **DAVID'S THREE RULINGS, 2026-08-16, and each one is load-bearing:**
  *
- * So this component completes the ROUTING — `engines.comprehension` now resolves, and a
- * comprehension item no longer falls through `?? engines.wordweb` into a synonym tile with a blank
- * question. It does not complete the DELIVERY.
+ * 1. **THE PASSAGE STAYS VISIBLE THROUGHOUT AND NEVER COLLAPSES.** An 11+ paper has the text in
+ *    front of the child while she answers. Collapsing it makes a comprehension question a MEMORY
+ *    question, which is a different skill and not the one being tested.
+ * 2. **THE CITED WINDOW IS HIGHLIGHTED FROM THE START, and the "go to lines" control stays as well
+ *    — the highlight says where, the control takes her there.** Beyond kindness: every hint we ship
+ *    says "read line 8", and the affordance test that placed every distractor in this bank was run
+ *    on the premise that the child is IN that window. A child hunting for lines 29 to 33 is being
+ *    tested on scrolling.
+ * 3. **The window is HIGHLIGHTED, never ISOLATED.** The whole passage stays readable, because a
+ *    retrieval item's distractors are routinely true elsewhere in the text — hiding the rest would
+ *    turn a wrong-scope distractor into an unanswerable one.
  *
- * IT SAYS SO ON SCREEN RATHER THAN LOOKING FINISHED. An item that needs a passage and has none
- * renders a visible, unmissable notice instead of a question a child cannot answer. That is the
- * whole finding this district produced: three defaults in series, each individually reasonable,
- * which together let an undeliverable item look delivered. A component that silently omitted the
- * passage would be the fourth.
+ * **ONE SCROLLING COLUMN, NOT SIDE BY SIDE.** At 375px there is no side, and a layout that only
+ * works on a desk is not the exam room. The passage takes its own scroll region with the item
+ * beneath it, so the text can be scrolled without the question leaving the screen.
+ *
+ * **AND IT REFUSES RATHER THAN DEGRADES.** An item that cites a passage it cannot load renders an
+ * unmissable notice and does not present itself as answerable. The whole finding of this district
+ * was three silent fallbacks letting an undeliverable item look delivered; a blank space where the
+ * passage should be would be the fourth.
  */
+import { useCallback, useRef } from 'react';
 import { OptionButton } from './option-button';
 import { optionLabel, outcomeFor, stemText, type EngineProps } from './shared';
+import { shortRange } from '@/lib/crew/cited-lines';
 
-export default function ComprehensionEngine({ stem, options, selected, onSelect, outcome }: EngineProps) {
+export interface PassageView {
+  id: string;
+  title: string | null;
+  lines: Array<{ n: number | null; text: string }>;
+  citedLines: number[];
+}
+
+export default function ComprehensionEngine({
+  stem, options, selected, onSelect, outcome, passage,
+}: EngineProps & { passage?: PassageView }) {
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+  const firstCitedRef = useRef<HTMLParagraphElement | null>(null);
+
+  const cited = new Set(passage?.citedLines ?? []);
+  // `[]` declares the WHOLE passage as the window (R120) — a positive statement, not an absence.
+  const wholePassage = passage != null && cited.size === 0;
+
+  const goToLines = useCallback(() => {
+    const target = firstCitedRef.current;
+    const box = scrollRef.current;
+    if (!target || !box) return;
+    box.scrollTo({ top: target.offsetTop - box.offsetTop - 12, behavior: 'smooth' });
+  }, []);
+
   const needsPassage = typeof stem.passageRef === 'string' && stem.passageRef.length > 0;
-  const lineRefs = Array.isArray(stem.lineRefs) ? (stem.lineRefs as number[]) : null;
+  if (needsPassage && !passage) {
+    return (
+      <p
+        data-testid="comprehension-passage-missing"
+        style={{
+          border: '2px solid #b00', padding: '0.75rem', borderRadius: 8,
+          background: '#fff4f4', color: '#7a0000', fontWeight: 600,
+        }}
+      >
+        This question is about a story, and the story is not here. Do not answer it yet.
+      </p>
+    );
+  }
+
+  let seenFirstCited = false;
 
   return (
     <div>
-      {needsPassage ? (
-        <p
-          data-testid="comprehension-passage-missing"
-          style={{
-            border: '2px solid #b00', padding: '0.75rem', borderRadius: 8,
-            background: '#fff4f4', color: '#7a0000', fontWeight: 600,
-          }}
-        >
-          This question is about a passage, and the passage is not on screen yet. Do not answer it.
-          {lineRefs?.length ? ` It asks about line${lineRefs.length > 1 ? 's' : ''} ${lineRefs.join(', ')}.` : ''}
-        </p>
+      {passage ? (
+        <section aria-label="The passage" style={{ marginBottom: '0.9rem' }}>
+          <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.6rem', flexWrap: 'wrap', marginBottom: '0.35rem' }}>
+            {passage.title ? <strong style={{ fontSize: '1.05rem' }}>{passage.title}</strong> : null}
+            {cited.size > 0 ? (
+              <button
+                type="button"
+                onClick={goToLines}
+                data-testid="go-to-lines"
+                className="cc-button"
+                style={{ padding: '0.25rem 0.6rem', fontSize: '0.9rem' }}
+              >
+                Go to {cited.size === 1 ? 'line' : 'lines'} {shortRange(passage.citedLines)}
+              </button>
+            ) : null}
+            {wholePassage ? (
+              <span className="cc-muted" style={{ fontSize: '0.9rem' }}>This one is about the whole story.</span>
+            ) : null}
+          </div>
+
+          {/*
+            OWN SCROLL REGION. The passage scrolls inside this box; the question below never leaves
+            the screen. `max-height` in `vh` so a long extract does not push the item off a phone.
+          */}
+          <div
+            ref={scrollRef}
+            data-testid="passage-scroll"
+            style={{
+              maxHeight: '46vh', overflowY: 'auto', padding: '0.6rem 0.7rem',
+              border: '1px solid #d8d8d8', borderRadius: 8, background: '#fffdf8',
+              fontSize: '1.02rem', lineHeight: 1.55,
+            }}
+          >
+            {passage.lines.map((line, i) => {
+              // A BLANK SEPARATOR IS A PARAGRAPH BREAK, not a line. It carries no number in the
+              // data and gets none here — a real paper does not number the white space either.
+              if (line.n === null && line.text.trim() === '') {
+                return <div key={`sep-${i}`} style={{ height: '0.6rem' }} aria-hidden="true" />;
+              }
+              const isCited = line.n !== null && cited.has(line.n);
+              const isFirstCited = isCited && !seenFirstCited && (seenFirstCited = true);
+              return (
+                <p
+                  key={line.n ?? `x-${i}`}
+                  ref={isFirstCited ? firstCitedRef : undefined}
+                  style={{
+                    margin: 0, display: 'flex', gap: '0.7rem',
+                    // HIGHLIGHTED, NEVER ISOLATED. Every line stays readable and legible; the
+                    // window is marked with a background and a rule, not by hiding its neighbours.
+                    background: isCited ? '#fff3c4' : 'transparent',
+                    borderLeft: isCited ? '3px solid #d9a400' : '3px solid transparent',
+                    paddingLeft: '0.35rem',
+                  }}
+                >
+                  <span
+                    aria-hidden="true"
+                    style={{
+                      minWidth: '2.1rem', textAlign: 'right', color: '#8a8a8a',
+                      fontVariantNumeric: 'tabular-nums', userSelect: 'none',
+                    }}
+                  >
+                    {line.n ?? ''}
+                  </span>
+                  <span>{line.text}</span>
+                </p>
+              );
+            })}
+          </div>
+        </section>
       ) : null}
 
       <p style={{ fontSize: '1.15rem' }}>{stemText(stem)}</p>

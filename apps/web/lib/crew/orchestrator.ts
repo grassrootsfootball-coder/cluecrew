@@ -36,6 +36,8 @@ import {
 } from '@cluecrew/core';
 import { logEvent, prisma, Prisma } from '@cluecrew/db';
 import type { MechanicFamily } from '@cluecrew/core';
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
 import { fluencyRound } from '@/lib/crew/fluency';
 import { mathsFamilyForType, type MathsFamily } from '@/lib/crew/maths';
 import { buildReplay } from '@/lib/crew/replay';
@@ -419,6 +421,23 @@ export type ActivityPayload =
       rail: 'stage' | 'corner' | 'none';
       stem: unknown;
       options: Array<{ id: string; content: unknown }>;
+      /**
+       * THE PASSAGE, for comprehension items only. Loaded server-side from `content/passages` and
+       * sent whole: David's ruling, 2026-08-16 — **the text stays in front of the child while she
+       * answers.** Collapsing it turns a comprehension question into a memory question, which is a
+       * different skill and not the one being tested.
+       *
+       * `citedLines` is the window the item names. Highlighted from the start, never isolated:
+       * every hint we ship says "read line 8", and the affordance test that placed every distractor
+       * was run on the premise that the child is IN that window. A child hunting for lines 29 to 33
+       * is being tested on scrolling.
+       */
+      passage?: {
+        id: string;
+        title: string | null;
+        lines: Array<{ n: number | null; text: string }>;
+        citedLines: number[];
+      };
     };
 
 /**
@@ -674,13 +693,21 @@ async function serveItem(
   // Maths types (mq-*) resolve through the district registry; core's VR map
   // stays untouched (BUILD-DISTRICT-MATHS: no core changes beyond spec'd
   // integration points).
-  let family: MechanicFamily | MathsFamily = familyForType(input.questionTypeId);
+  // MATHS RESOLVES FIRST. `familyForType` now THROWS on an unmapped type rather than defaulting to
+  // wordweb (R120), and no `mq-*` type is in core's VR map — it never was, the default was carrying
+  // them. Asking core first would now throw on every Maths item. Resolve the district that owns the
+  // type, then fall back to core only for the types core actually holds.
+  let family: MechanicFamily | MathsFamily;
   if (input.questionTypeId.startsWith('mq-')) {
     const questionType = await prisma.questionType.findUnique({
       where: { id: input.questionTypeId },
       select: { mechanic: true },
     });
-    family = mathsFamilyForType(input.questionTypeId, questionType?.mechanic) ?? family;
+    const maths = mathsFamilyForType(input.questionTypeId, questionType?.mechanic);
+    if (!maths) throw new Error(`no maths family for '${input.questionTypeId}' — it must not become a VR type`);
+    family = maths;
+  } else {
+    family = familyForType(input.questionTypeId);
   }
   const plain = input.activityKind === 'closer';
   // Authored order never leaves the server: seeded on (childId, itemId) so
@@ -727,7 +754,46 @@ async function serveItem(
       : 'none',
     stem: item.stem,
     options: options.map((option) => ({ id: option.id, content: option.content })),
+    // THE PASSAGE TRAVELS WITH THE ITEM. Loaded here, server-side, because the extract is a file
+    // and the engine is a client component — and because a comprehension item without its passage
+    // is not a degraded question, it is not a question.
+    ...(family === 'comprehension' ? { passage: loadPassageFor(item) } : {}),
   };
+}
+
+/**
+ * The extract an item cites, read from `content/passages` at serve time.
+ *
+ * RETURNS UNDEFINED RATHER THAN A PLACEHOLDER when the passage cannot be found. The engine renders
+ * an unmissable notice for that case and refuses to present the question as answerable — the whole
+ * finding of this district is that three silent fallbacks let an undeliverable item look delivered,
+ * and a stub passage would be the fourth.
+ */
+function loadPassageFor(item: { stem: unknown; lineRefs: unknown }): {
+  id: string; title: string | null;
+  lines: Array<{ n: number | null; text: string }>; citedLines: number[];
+} | undefined {
+  const stem = (item.stem ?? {}) as Record<string, unknown>;
+  const ref = typeof stem.passageRef === 'string' ? stem.passageRef : null;
+  if (!ref) return undefined;
+  // Refuse anything that is not a bare slug: this value reaches the filesystem.
+  if (!/^[a-z0-9-]+$/.test(ref)) return undefined;
+  try {
+    const raw = readFileSync(resolve(process.cwd(), '../../content/passages', `${ref}.json`), 'utf8');
+    const parsed = JSON.parse(raw) as {
+      sceneTitle?: string; numberedLines?: Array<{ n?: number | null; text?: string }>;
+    };
+    return {
+      id: ref,
+      title: typeof parsed.sceneTitle === 'string' ? parsed.sceneTitle : null,
+      lines: (parsed.numberedLines ?? []).map((l) => ({ n: l.n ?? null, text: l.text ?? '' })),
+      // `[]` DECLARES the whole passage as the window (R120) — no line is singled out, and that is
+      // a positive statement rather than an absent one.
+      citedLines: Array.isArray(item.lineRefs) ? (item.lineRefs as unknown[]).map(Number).filter((n) => !Number.isNaN(n)) : [],
+    };
+  } catch {
+    return undefined;
+  }
 }
 
 export interface AnswerResult {

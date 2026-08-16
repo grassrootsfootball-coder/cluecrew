@@ -4768,6 +4768,47 @@ text and **no script writes it**. So it will not recur on its own — and nothin
 doing it again, which is the same shape as the sixteen one-shot ruling-appliers in R63: a hazard that
 is dormant rather than closed.
 
+## R122 — The passage surface, and the ruling whose premise did not hold
+*David's three rulings, 2026-08-16. Built as scoped.*
+
+**RULING 3 WAS AIMED AT A REAL HAZARD AND ITS PREMISE WAS WRONG, MEASURED BEFORE IMPLEMENTING.**
+`n: null` was ruled a passage fault — an extract never fully numbered, leaving citations measured
+against a line index with holes. **All 507 `n: null` lines across all 29 passages carry `text: ""`.
+They are blank PARAGRAPH SEPARATORS, and every passage numbers contiguously 1..N with no gaps.** A
+real paper does not number white space either. Failing 27 of 29 passages for that would have been
+R61 a third time in one file, in the check written to apply R61.
+
+So the assertion built is the one the ruling was aiming at, pointed at what would actually produce a
+holey index: **numbers must run contiguously from 1, and an unnumbered line must be BLANK.** An
+unnumbered line carrying TEXT is the real fault — content no citation can reach. 29 of 29 sound.
+
+**THE SURFACE, TO RULINGS 1 AND 2.** One scrolling column: passage in its own scroll region, item
+beneath, never side by side — at 375px there is no side, and a layout that only works on a desk is
+not the exam room. The passage NEVER COLLAPSES, because collapsing it makes a comprehension question
+a memory question, a different skill from the one being tested. The cited window is highlighted from
+the start AND carries a "go to lines" control: the highlight says where, the control takes her there.
+Highlighted, never ISOLATED — a retrieval item's distractors are routinely true elsewhere in the
+text, and hiding the rest would turn a wrong-scope distractor into an unanswerable one.
+
+**AND IT REFUSES RATHER THAN DEGRADES.** An item citing a passage that will not load renders an
+unmissable notice and does not present itself as answerable. This district's whole finding was three
+silent fallbacks letting an undeliverable item look delivered; a blank space where the passage
+belongs would have been the fourth.
+
+**A REGRESSION I INTRODUCED AND CAUGHT.** Removing the `?? 'wordweb'` default from `familyForType`
+broke every MATHS item: the orchestrator called core first and overrode for `mq-*` afterwards, so
+the default had been silently carrying an entire district. Maths now resolves through its own
+registry first and throws if that fails. **The default was load-bearing in a place nobody had
+looked, which is what a default that never raises does.**
+
+**WHAT IS NOT VERIFIED:** the surface in a browser. `/crew` requires a child session and the debug
+route sits under it. Typecheck, the pure line-naming logic (5 tests) and the serving-path check are
+green; the rendering is not visually confirmed. Also found, PRE-EXISTING and not mine: the NVR debug
+harness has been failing to build since `aee00d5` — a client page imports the `@cluecrew/core`
+barrel, which reaches `draft-self-assessment.ts` and `node:crypto`. **A server-only module pulled
+into a client bundle through a barrel: it typechecks and fails at build**, which is the same seam
+Cowork named — each side correct, the join unvalidated.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 

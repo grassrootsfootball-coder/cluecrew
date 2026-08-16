@@ -73,7 +73,44 @@ function enginesInRunner(): Set<string> {
 const NEEDS_NO_PASSAGE = new Set(['en-spag-punct-spot', 'en-spag-spelling-spot']);
 const NEEDS_NO_LINEREFS = new Set(['en-spag-cloze']);
 
-interface Passage { numberedLines?: Array<{ n?: number | null }> }
+/**
+ * PASSAGE INTEGRITY. David ruled that `n: null` is a passage fault — an extract never fully
+ * numbered, leaving every citation measured against a line index with holes.
+ *
+ * **MEASURED BEFORE IMPLEMENTING, AND THE PREMISE DOES NOT HOLD.** All 507 `n: null` lines across
+ * all 29 passages carry `text: ""`. They are BLANK PARAGRAPH SEPARATORS, and every passage's
+ * numbered lines run contiguously 1..N with no gaps. A real paper does not number blank lines
+ * either. Failing 27 of 29 passages for that would be the check crying wolf on correct data — R61
+ * a third time in one file.
+ *
+ * So the assertion is the one the ruling was AIMING at, pointed at the fault that would actually
+ * produce a holey index:
+ *   · numbered lines must run contiguously from 1 with no gaps and no repeats;
+ *   · a line with `n: null` must be BLANK. An unnumbered line carrying TEXT is the real fault —
+ *     content a citation can never reach, and the thing that would make an index lie.
+ */
+interface PassageLine { n?: number | null; text?: string }
+interface Passage { numberedLines?: PassageLine[] }
+
+function passageFaults(p: Passage): string[] {
+  const lines = p.numberedLines ?? [];
+  const faults: string[] = [];
+  const unnumberedWithText = lines.filter((l) => (l.n === null || l.n === undefined) && (l.text ?? '').trim() !== '');
+  if (unnumberedWithText.length) {
+    faults.push(`${unnumberedWithText.length} unnumbered line(s) carrying TEXT — a citation can never reach them`);
+  }
+  const ns = lines.map((l) => l.n).filter((n): n is number => typeof n === 'number');
+  if (ns.length === 0) faults.push('no numbered lines at all');
+  else {
+    const expected = ns.map((_, i) => i + 1);
+    if (JSON.stringify(ns) !== JSON.stringify(expected)) {
+      const holes = expected.filter((e) => !ns.includes(e));
+      faults.push(`line numbers are not contiguous 1..${ns.length}`
+        + (holes.length ? ` — missing ${holes.slice(0, 8).join(', ')}${holes.length > 8 ? '…' : ''}` : ' — repeated or out of order'));
+    }
+  }
+  return faults;
+}
 
 function loadPassages(): Map<string, Passage> {
   const out = new Map<string, Passage>();
@@ -87,6 +124,15 @@ function loadPassages(): Map<string, Passage> {
 async function main(): Promise<void> {
   const engines = enginesInRunner();
   const passages = loadPassages();
+
+  // PASSAGE INTEGRITY, REPORTED PER FILE BEFORE ANY ITEM IS JUDGED. An item cannot be deliverable
+  // into a passage whose own line index is broken, so this is stated first and separately.
+  const passageReport = [...passages].map(([id, p]) => ({
+    id, lines: (p.numberedLines ?? []).length,
+    blankSeparators: (p.numberedLines ?? []).filter((l) => (l.n === null || l.n === undefined) && (l.text ?? '').trim() === '').length,
+    faults: passageFaults(p),
+  })).sort((a, b) => a.id.localeCompare(b.id));
+  const brokenPassages = new Set(passageReport.filter((r) => r.faults.length).map((r) => r.id));
   const items = await prisma.item.findMany({
     where: { id: { startsWith: 'ENG-' } },
     select: { id: true, questionTypeId: true, stem: true, lineRefs: true, status: true },
@@ -120,7 +166,8 @@ async function main(): Promise<void> {
       ? `EXEMPT — ${item.questionTypeId} carries its text in the stem; there is no extract to show`
       : !ref ? 'FAIL — no passageRef on the item'
         : !passage ? `FAIL — passageRef '${ref}' matches no file in content/passages`
-          : 'PASS';
+          : brokenPassages.has(ref) ? `FAIL — passage '${ref}' has a broken line index; citations into it cannot be trusted`
+            : 'PASS';
 
     // `[]` DECLARES WHOLE-PASSAGE SCOPE; `null`/absent means nobody stated one. Never conflated.
     const declaredWholePassage = Array.isArray(item.lineRefs) && (item.lineRefs as unknown[]).length === 0;
@@ -166,6 +213,7 @@ async function main(): Promise<void> {
       passage: { pass: tally('passage'), exempt: exempt('passage'), fail: rows.length - tally('passage') - exempt('passage') },
       lineRefs: { pass: tally('lineRefs'), exempt: exempt('lineRefs'), fail: rows.length - tally('lineRefs') - exempt('lineRefs') },
     },
+    passages: passageReport,
     items: rows,
   };
   const stamp = artefactStamp(body, generatedAt, 'status',
@@ -177,6 +225,14 @@ async function main(): Promise<void> {
 
   console.log(`check:serving-path: ${items.length} English item(s) · ${passages.size} passage file(s) · `
     + `engine families in the runner: ${[...engines].sort().join(', ')}\n`);
+  const totalBlank = passageReport.reduce((n, r) => n + r.blankSeparators, 0);
+  console.log(`  PASSAGE INTEGRITY: ${passageReport.length - brokenPassages.size}/${passageReport.length} sound.`);
+  console.log(`  ${totalBlank} line(s) carry n: null across all passages, and every one is BLANK — they are`);
+  console.log('  paragraph separators, not unnumbered content. Every passage numbers contiguously from 1.');
+  for (const r of passageReport.filter((r) => r.faults.length)) {
+    console.log(`    x ${r.id}: ${r.faults.join('; ')}`);
+  }
+  console.log();
   console.log(`  ${deliverable.length} of ${rows.length} COULD REACH A CHILD.\n`);
   console.log('        pass  exempt  fail');
   for (const k of ['routes', 'stem', 'passage', 'lineRefs'] as const) {
