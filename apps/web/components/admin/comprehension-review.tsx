@@ -87,18 +87,23 @@ export function ComprehensionReview({
           cannot be checked against anything.
         </p>
       ) : null}
+      {/*
+        * KEYED ON INDEX, NOT ON `n`. 13 of 73 lines in one passage carry `n: null` — blank lines
+        * and scene breaks — so keying on `n` collided on null and React warned on every render.
+        * The index is unique; the number is what the reader sees.
+        */}
       {lines ? (
         <ol data-testid="passage-lines" style={{ listStyle: 'none', paddingLeft: 0 }}>
-          {lines.map((l) => (
+          {lines.map((l, i) => (
             <li
-              key={l.n}
+              key={i}
               data-cited={cited.has(l.n) ? 'yes' : 'no'}
               style={{
                 background: cited.has(l.n) ? 'rgba(255,214,102,0.35)' : undefined,
                 padding: '0.1rem 0.3rem',
               }}
             >
-              <code style={{ opacity: 0.6 }}>{String(l.n).padStart(3, ' ')}</code> {l.text}
+              <code style={{ opacity: 0.6 }}>{l.n == null ? '   ' : String(l.n).padStart(3, ' ')}</code> {l.text}
             </li>
           ))}
         </ol>

@@ -64,6 +64,8 @@ describe('the registry itself', () => {
 
   it('brings the exceptions, not the inclusions', () => {
     expect(PROPOSED_EXCEPTIONS.map((l: { level: string; key: string }) => `${l.level}.${l.key}`)).toEqual([
+      'item.draftingMethod_SHAPE_NOTE',
+      'item._previousOrderAnchor',
       'item.notes',
       'item.draftingOrder',
       'options[]._previousMisconceptionId',

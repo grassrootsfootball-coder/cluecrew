@@ -106,6 +106,7 @@
     "carry:quotes": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/carry-quote-declarations.ts",
     "carry:content-keys": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/carry-content-keys.ts",
     "export:reviewer-record": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-reviewer-record.ts",
+    "export:approval-batch": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-approval-batch.ts",
     "export:answer-flags": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-answer-flags.ts",
     "check:stamp-covers-payload": "tsx scripts/check-stamp-covers-payload.ts",
     "backfill:text-provenance": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/backfill-text-provenance.ts",

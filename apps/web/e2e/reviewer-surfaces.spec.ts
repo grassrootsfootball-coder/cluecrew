@@ -197,3 +197,61 @@ test('an English item shows its passage, cited lines, tagged distractors and hin
   await expect(page.locator('[data-correct="yes"]')).toHaveCount(1);
   await expect(surface).toContainText('Child sees:');
 });
+
+/**
+ * THE ONLY PATH THAT MATTERS: open a packet cluster, read one item on the surface, record a
+ * verdict, and see what lands. Never exercised before — Annie has signed VR, NVR, maths and SpaG
+ * and there are zero SIGNED events on ENG.
+ */
+test('a reviewer opens ENG-028, reads an item and records a verdict', async ({ browser }) => {
+  const reviewer = await createStaff(`rs-sign-${Date.now()}`, 'REVIEWER');
+  const page = await staffContext(browser, reviewer);
+
+  // 1. THE CLUSTER FILTER — she opens one packet cluster, not a bank of 337.
+  await page.goto('/admin/items?cluster=ENG-028');
+  const links = page.locator('a[href*="/admin/items/ENG-028"]');
+  await expect(links.first()).toBeVisible();
+
+  // ENG-028 is the packet cluster; ENG-001 is the one whose tags are all ACTIVE. Walk BOTH, so
+  // the run separates "the path does not work" from "these nine tags are not approved yet".
+  const packet = await prisma.item.findFirstOrThrow({
+    where: { id: { startsWith: 'ENG-028' }, status: 'DRAFT' },
+    orderBy: { clusterPosition: 'asc' },
+  });
+  const approvedTags = await prisma.item.findFirstOrThrow({
+    where: { id: { startsWith: 'ENG-001' }, status: 'DRAFT' },
+    orderBy: { clusterPosition: 'asc' },
+  });
+
+  for (const target of [packet, approvedTags]) {
+  // 2. THE SURFACE — the item as she has to judge it.
+  await page.goto(`/admin/items/${target.id}`);
+  await expect(page.getByTestId('comprehension-review')).toBeVisible();
+  await expect(page.getByTestId('passage-lines').locator('li').first()).toBeVisible();
+  await expect(page.getByTestId('review-options')).toBeVisible();
+
+  // 3. THE VERDICT.
+  await page.waitForLoadState('networkidle');
+  const posts: string[] = [];
+  page.on('response', (r) => { if (r.request().method() === 'POST') posts.push(`${r.status()} ${r.url()}`); });
+  page.on('console', (m) => { if (m.type() === 'error') posts.push(`console: ${m.text().slice(0, 120)}`); });
+  await page.getByRole('button', { name: 'Mark REVIEWED' }).click();
+  await page.waitForTimeout(2500);
+  console.log(`  click produced: ${posts.length ? posts.join(' | ') : 'NO POST AT ALL'}`);
+  console.log(`  url after: ${page.url()}`);
+
+
+  const after = await prisma.item.findUniqueOrThrow({ where: { id: target.id } });
+  const blocked = new URL(page.url()).searchParams.get('error');
+  console.log(`\nAFTER THE VERDICT on ${target.id}: status=${after.status} reviewedBy=${after.reviewedBy ?? 'null'} blockedBy=${blocked ?? 'nothing'}`);
+
+  // 4. WHAT LANDS IN THE RECORD. Reported, not asserted: this is the question being answered.
+  const events = await prisma.attributionEvent.findMany({ where: { recordType: 'item', recordId: target.id } });
+  const signed = events.filter((e) => e.action === 'SIGNED');
+  console.log(`\nVERDICT ON ${target.id}: status=${after.status} reviewedBy=${after.reviewedBy}`);
+  console.log(`  attribution events: ${events.length} · SIGNED: ${signed.length} · with reviewerId: ${signed.filter((e) => e.reviewerId).length}`);
+
+  // Leave the bank as it was.
+  await prisma.item.update({ where: { id: target.id }, data: { status: 'DRAFT', reviewedBy: null } });
+  }
+});
