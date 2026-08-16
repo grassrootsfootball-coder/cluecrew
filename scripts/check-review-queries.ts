@@ -64,6 +64,7 @@ export const DECLARED_DOORS: Readonly<Record<string, string>> = {
   'scripts/backfill-draft-assessment.ts': 'the import door — writes the claim and its subject hash',
   'scripts/check-draft-assessment-subject.ts': 'reports claims describing an item that has since moved',
   'scripts/check-review-queries.ts': 'this gate',
+  'scripts/retire-loose-copies.ts': 'names the column as a carriage destination when clearing a loose file; reads no value',
   'packages/core/src/english/declarative-fields.ts': 'names the field paths the manifest tracks; reads no value',
   'scripts/migrate-citation-fields.ts': 'migrated verdict -> handoffState inside the stored assessment',
   'packages/core/src/english/draft-self-assessment.test.ts': 'the canary — names the column in synthetic sources it feeds to this gate',

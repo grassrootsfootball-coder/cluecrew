@@ -3564,3 +3564,36 @@ and specific. **A MIGRATION AND ITS CONSUMERS ARE ONE CHANGE.** A field that mov
 until every reader of it has moved; the field being empty is not an error state anything reports,
 because an empty list is a legitimate value.
 
+
+## R81 — Retiring the loose copies, and what refused to go
+*David, 2026-08-16. "The loose files can go. Explicit path, verified per file, hashes recorded."*
+
+`~/Downloads/11+` is a TRANSFER AREA holding no source of truth, and it had accumulated multiple
+copies of the same deliveries at different hashes — three of ENG-001 disagreeing on 22 of 22 items,
+two vintages each of `eng005` and `eng007` declaring quotes on DIFFERENT items.
+
+**Nothing was deleted that was not demonstrably held.** Per file, before any removal: every
+`itemId` present in the database; every key the registry knows either CARRIED, declared VINTAGE, or
+a declared exception; and any key the registry does not name AT ALL blocks the file, because nobody
+has decided about it. **The check runs against the DATABASE, not the manifest** — this is the last
+moment the content exists in two places, and comparing a copy against a derivative of itself proves
+nothing (R57's finding in disposal clothing).
+
+**6 of 20 retired. 14 refused, and the refusals are the useful half:**
+  · nine files hold the **10 tag-held items** (`en-vocab-dominant-sense`) that R72 held whole and
+    never imported. Those items exist ONLY in those files. The hold is still standing, so the files
+    stand with it — a deletion policy that ignored an existing hold would have quietly executed it.
+  · `ENG-004-anne-green-gables.json` — 12 pilot items, plus an undecided `options[].tagStatus`.
+  · `enumeration-reopened.json` and `walk-scripts-english-2026-08-02.json` — 8 and 10 undecided keys
+    each, including `currentWalkScript` and `rewrittenWalkScript`, which are content nobody has
+    ruled on.
+
+**THE LEDGER IS WRITTEN BEFORE THE DELETION, not after.** `content/exports/RETIRED-LOOSE-COPIES
+.json` records each file's path, sha256, byte size, item ids and verdict — and the kept files with
+their blockers. If the removal were interrupted, the record still says what was there; the reverse
+order leaves a gap nobody can reconstruct.
+
+Verified by RE-READING each path acted on, never by counting survivors: 6 of 6 confirmed gone, 14 of
+14 confirmed present, 164 ENG items in the database after. Before the deletion, the five
+`stemRedraft.before` texts were read back from the database individually — pp-11 and pp-16 among
+them, the two that exist in no snapshot (R79).
