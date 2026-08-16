@@ -5353,6 +5353,76 @@ be stale shorthand from the corpus import rather than live constraints. What is 
 entry and the generator disagree about where the error occurs**, which is exactly the class she asked
 to be run — and NVR is signed, so which side moves is hers.
 
+## R140 — The audit's only findings were artefacts of its own unit
+*David, 2026-08-16. Six SpaG signatures, eight days, no repair to the content.*
+
+**All six of the "stated depth does not equal generable depth" findings were the check comparing
+SENTENCES against ITEMS.** Every one of the reviewer's figures is exactly the family's bank size, and
+she named the unit each time — *"24 verified sentences (6/rung)"*, *"12 sentences, 4/rung"*, *"11
+keys, 3–4/tier"*. Measured, six for six:
+
+| family | note says | bank | items |
+|---|---|---|---|
+| `spag-spell-homophone-by-sound` | 24 | **24** | 42 |
+| `spag-spell-unstressed-suffix-vowel` | 24 | **24** | 42 |
+| `spag-spell-silent-letter-dropped` | 24 | **24** | 41 |
+| `spag-spell-double-consonant-boundary` | 16 | **16** | 27 |
+| `spag-punct-terminal-boundary` | 12 | **12** | 16 |
+| `spag-punct-apostrophe-contraction` | 11 | **11** | 19 |
+
+**Neither DRIFT nor WRONG-AT-SIGNING.** Not drift: every fingerprint matches today. Not wrong at
+signing: every figure was correct in the unit stated. `familyDepth` generates to exhaustion and counts
+distinct items, and an N-keyed family yields two per sentence.
+
+**A CHECK WHOSE SOLE OUTPUT IS AN ARTEFACT OF ITS OWN UNIT IS WORSE THAN ONE THAT FINDS NOTHING**,
+because the nothing is honest. It now prints both figures labelled and reconciles against either;
+0 of 13 flagged.
+
+**AND THE REAL FINDING IS THE DECISION MADE FROM THE NUMBER, NOT THE NUMBER.** Her notes carry
+judgements — *"exhausted in one sitting"*, *"two sittings exhaust a tier"*, *"SIZE BEFORE SERVING"* —
+and **exhaustibility needs the ITEM figure while she was given SENTENCES**. On the six N-keyed
+families items run **1.33× to 1.75×** the bank:
+
+| family | sentences | items | ratio |
+|---|---|---|---|
+| `spag-spell-homophone-by-sound` | 24 | 42 | **1.75×** |
+| `spag-spell-unstressed-suffix-vowel` | 24 | 42 | **1.75×** |
+| `spag-punct-apostrophe-contraction` | 11 | 19 | **1.73×** |
+| `spag-spell-silent-letter-dropped` | 24 | 41 | **1.71×** |
+| `spag-spell-double-consonant-boundary` | 16 | 27 | **1.69×** |
+| `spag-punct-terminal-boundary` | 12 | 16 | **1.33×** |
+| `spag-punct-apostrophe-possessive` | 13 | 13 | 1.00× |
+| `spag-punct-speech` | 16 | 16 | 1.00× |
+| `spag-punct-comma-needs` | 21 | 21 | 1.00× |
+| the four cloze families | — | 6, 15, 6, 8 | not banked |
+
+**The depths are right; the calls made from them may not be.** Every family she judged exhaustible has
+roughly half again the depth she was told. Hers to re-make, and the fifth item for the tranche return.
+
+## R141 — Correct, complete, unreachable: the fourth instance tonight
+*David, 2026-08-16. One sweep, no repair.*
+
+The diagnosis was already made. `scripts/export-spag-depth-both-figures.ts` opens: *"Annie is
+restating every signed depth note in ITEMS rather than SENTENCES, so she needs both figures side by
+side."* **The artefact that settles this was built and was unreachable** — no `package.json` entry, and
+a docstring naming `pnpm export:spag-depth`, a command that did not exist. So the audit went on
+generating the false finding beside a script that explained it.
+
+Same family as `mathsFamilyFingerprint` missing from the core barrel, two hours apart: **correct,
+complete, and not reachable by the person who needed it.** Wired now.
+
+**THE SWEEP — 181 scripts, 11 docstring references naming a `pnpm` command that does not exist:**
+
+| script | names |
+|---|---|
+| `export-terminal-over-ceiling.ts` | `pnpm export:terminal-over-ceiling` |
+| `sign-speech-family.ts` | `pnpm sign:speech` |
+| `backfill-draft-assessment.ts` | `pnpm backfill:pre-review` |
+| `check-draft-assessment-subject.ts` | `pnpm backfill:pre-review`, `pnpm check:pre-review-subject` |
+| 5 others (`apply-maths-annie-pass`, `deploy-vr03/07/11-signoff`, `export-maths-calibration-plain`, `export-vr07-vr11-new`) | `pnpm tsx` — a generic invocation, not a missing entry |
+
+**Six are real: four scripts naming five commands that do not exist.** Counted, not repaired.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 

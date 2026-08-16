@@ -22,7 +22,11 @@
  * Reports only; it never edits a note. A signed figure is the reviewer's, and correcting it is her
  * call — this says which ones need her.
  */
-import { SPAG_FAMILIES } from '../packages/core/src/english/spag-families';
+import {
+  SPAG_FAMILIES,
+  HOMOPHONE_BANK, DOUBLE_BANK, SUFFIX_BANK, SILENT_BANK,
+  CONTRACTION_BANK, POSSESSIVE_BANK, COMMA_BANK, TERMINAL_BANK, SPEECH_BANK,
+} from '../packages/core/src/english/spag-families';
 import { familyDepth, familyFingerprint, spagFamilyTiers } from '../packages/core/src/english/spag-fingerprint';
 import { prisma } from '../packages/db/src/index';
 
@@ -42,9 +46,41 @@ function statedDepth(note: string): string | null {
  * contain the generable TOTAL, or they account for every PER-TIER figure. Anything narrower
  * reports the reviewer's own correct notes as faults, which is how a check loses its authority.
  */
-function reconciles(stated: string, depth: { perTier: Record<string, number>; total: number }): boolean {
+/**
+ * THE STATED FIGURE COUNTS SENTENCES; THIS COUNTED ITEMS; NOTHING SAID SO (David, 2026-08-16).
+ *
+ * For eight days this reported six signatures as "stated depth does not equal generable depth" —
+ * the only findings it has ever produced in any district, and **all six were artefacts of its own
+ * unit.** Every one of the reviewer's figures is exactly the family's BANK SENTENCE count, and she
+ * named the unit each time: *"24 verified sentences (6/rung)"*, *"12 sentences, 4/rung"*, *"11 keys,
+ * 3–4/tier"*. `familyDepth` generates to exhaustion and counts distinct ITEMS, and an N-keyed family
+ * yields two items per sentence, so items exceed sentences at every tier above the first.
+ *
+ * **A check whose sole output is an artefact of its own unit is worse than one that finds nothing**,
+ * because the nothing is honest. It now reports BOTH figures, labelled, and reconciles against
+ * either — a note is only flagged when it matches neither the bank nor the generable count.
+ */
+/** Bank sizes from the banks themselves — the unit the signed notes actually count. */
+const BANKS: Record<string, number> = {
+  'spag-spell-homophone-by-sound': HOMOPHONE_BANK.length,
+  'spag-spell-double-consonant-boundary': DOUBLE_BANK.length,
+  'spag-spell-unstressed-suffix-vowel': SUFFIX_BANK.length,
+  'spag-spell-silent-letter-dropped': SILENT_BANK.length,
+  'spag-punct-apostrophe-contraction': CONTRACTION_BANK.length,
+  'spag-punct-apostrophe-possessive': POSSESSIVE_BANK.length,
+  'spag-punct-comma-needs': COMMA_BANK.length,
+  'spag-punct-terminal-boundary': TERMINAL_BANK.length,
+  'spag-punct-speech': SPEECH_BANK.length,
+};
+
+function reconciles(
+  stated: string,
+  depth: { perTier: Record<string, number>; total: number },
+  bank: number | null,
+): boolean {
   const numbers = new Set((stated.match(/\d+/g) ?? []).map(Number));
   if (numbers.has(depth.total)) return true;
+  if (bank !== null && numbers.has(bank)) return true;
   return Object.values(depth.perTier).every((n) => numbers.has(n));
 }
 
@@ -91,10 +127,15 @@ async function main(): Promise<void> {
     if (!stated) {
       note = 'signature states no depth figure';
       noFigure += 1;
-    } else if (reconciles(stated, depth)) {
-      note = `note "${stated}" reconciles with ${depth.total} generable`;
+    } else if (reconciles(stated, depth, BANKS[family.id] ?? null)) {
+      const b = BANKS[family.id] ?? null;
+      const unit = b !== null && new Set((stated.match(/\d+/g) ?? []).map(Number)).has(b) && b !== depth.total
+        ? `bank sentences (${b}); ${depth.total} generable items`
+        : `${depth.total} generable items`;
+      note = `note "${stated}" reconciles with ${unit}`;
     } else {
-      note = `note says "${stated}" · generator produces ${depth.total} across ${tiers} ${JSON.stringify(depth.perTier)}`;
+      note = `note says "${stated}" · bank ${BANKS[family.id] ?? 'n/a'} sentences · `
+        + `${depth.total} generable items across ${tiers} ${JSON.stringify(depth.perTier)}`;
       unitMismatch += 1;
     }
     rows.push(`  ${verdict.padEnd(16)} ${family.id.padEnd(38)} ${note}`);
