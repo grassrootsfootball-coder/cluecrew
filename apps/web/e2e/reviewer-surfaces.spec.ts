@@ -255,3 +255,41 @@ test('a reviewer opens ENG-028, reads an item and records a verdict', async ({ b
   await prisma.item.update({ where: { id: target.id }, data: { status: 'DRAFT', reviewedBy: null } });
   }
 });
+
+/**
+ * THE SIGN TEST. One item on ENG-028, end to end: open, verdict, SIGNED event with a reviewerId.
+ * Reports pass or fail; it does not paper over either.
+ */
+test('SIGN TEST: ENG-028 item reaches a SIGNED event with a reviewerId', async ({ browser }) => {
+  const reviewer = await createStaff(`rs-signtest-${Date.now()}`, 'REVIEWER');
+  const page = await staffContext(browser, reviewer);
+  const target = await prisma.item.findFirstOrThrow({
+    where: { id: { startsWith: 'ENG-028' }, status: 'DRAFT' },
+    orderBy: { clusterPosition: 'asc' },
+  });
+
+  await page.goto(`/admin/items/${target.id}`);
+  await expect(page.getByTestId('comprehension-review')).toBeVisible();
+  await page.waitForLoadState('networkidle');
+  await page.getByRole('button', { name: 'Mark REVIEWED' }).click();
+  await page.waitForTimeout(2000);
+
+  const after = await prisma.item.findUniqueOrThrow({ where: { id: target.id } });
+  const blocked = new URL(page.url()).searchParams.get('error');
+  const signed = await prisma.attributionEvent.findMany({
+    where: { recordType: 'item', recordId: target.id, action: 'SIGNED' },
+  });
+  const reviewerRows = await prisma.reviewer.count();
+
+  const verdictLanded = after.status === 'REVIEWED';
+  const signatureLanded = signed.length > 0 && signed.every((e) => e.reviewerId !== null);
+  console.log(`\nSIGN TEST on ${target.id}`);
+  console.log(`  verdict recorded: ${verdictLanded ? 'PASS' : `FAIL — blocked by ${blocked ?? 'nothing'}`}`);
+  console.log(`  SIGNED event with reviewerId: ${signatureLanded ? 'PASS' : `FAIL — ${signed.length} SIGNED event(s)`}`);
+  console.log(`  Reviewer rows a signature could name: ${reviewerRows}`);
+  console.log(`  OVERALL: ${verdictLanded && signatureLanded ? 'PASS' : 'FAIL'}`);
+
+  if (after.status !== 'DRAFT') {
+    await prisma.item.update({ where: { id: target.id }, data: { status: 'DRAFT', reviewedBy: null } });
+  }
+});
