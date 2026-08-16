@@ -122,13 +122,66 @@ async function populations(): Promise<ReturnPath[]> {
 }
 
 /** Whether an export NAMES a field, read out of its source. Never declared here. */
+/**
+ * COMMENTS ARE STRIPPED BEFORE MATCHING (2026-08-16).
+ *
+ * This was `text.includes(f)` over raw source, so a script that only MENTIONED `approvalNote` in a
+ * comment counted as carrying it. `export-misconception-library.ts` both discusses and selects every
+ * field, so the check was right about the file it screens — for real reasons, and it would have been
+ * right by luck about a file that merely talked about the column. A substring is not a fact about a
+ * script (R123, inside the return-leg check).
+ *
+ * Stripping comments does not make this a parse. It is still a text test and it can still be fooled
+ * by a field name in a string literal — which is why the OUTPUT states the limit rather than leaving
+ * a reader to assume more rigour than there is.
+ */
 function carriedBy(script: string | null, fields: string[]): { carries: string[]; missing: string[] } {
   if (!script || !existsSync(join(SCRIPTS, script))) return { carries: [], missing: fields };
-  const text = readFileSync(join(SCRIPTS, script), 'utf8');
+  const code = readFileSync(join(SCRIPTS, script), 'utf8')
+    .replace(/\/\*[\s\S]*?\*\//g, ' ')
+    .replace(/(^|[^:])\/\/[^\n]*/g, '$1 ');
   return {
-    carries: fields.filter((f) => text.includes(f)),
-    missing: fields.filter((f) => !text.includes(f)),
+    carries: fields.filter((f) => code.includes(f)),
+    missing: fields.filter((f) => !code.includes(f)),
   };
+}
+
+/**
+ * WHAT ACTUALLY CROSSED, not what the registered code could have carried (David's ruling,
+ * 2026-08-16). ONE RULE, not the general case: **an emission is measured, not just the code that
+ * could have made it.**
+ *
+ * The eleven-entry file was a one-off script hand-listing ten of twenty-one columns. It was not a
+ * registered export, so this check had nothing to look at and the class stayed CARRIED on the
+ * strength of a script that was not the one used — not "it would have passed", but "it never saw
+ * it", which is worse and is the finding.
+ *
+ * So an emission DECLARES its class and its columns in its own `transferStamp`, and a class whose
+ * most recent emission carried FEWER columns than its registered export is REFUSED. An emission that
+ * declares no class is reported as unmeasurable rather than assumed fine.
+ */
+interface EmissionClaim { file: string; cls: string; columns: string[]; at: Date }
+
+function emissionsInDelivery(): { claims: EmissionClaim[]; undeclared: string[] } {
+  const claims: EmissionClaim[] = [];
+  const undeclared: string[] = [];
+  const DELIVERY = DELIVERY_DIRS.find((d) => existsSync(d));
+  if (!DELIVERY) return { claims, undeclared };
+  for (const f of readdirSync(DELIVERY).filter((f) => f.endsWith('.json'))) {
+    let parsed: { transferStamp?: { returnLegClass?: string; direction?: string }; payload?: { columnsCarried?: string[] } };
+    try { parsed = JSON.parse(readFileSync(join(DELIVERY!, f), 'utf8')); } catch { continue; }
+    // DIRECTION FIRST. This folder holds traffic BOTH WAYS, and Cowork's inbound deliveries also
+    // carry a transferStamp — counting those as our undeclared emissions would report their file
+    // shape as our fault. Only what leaves here is ours to measure.
+    if (!parsed.transferStamp?.direction?.startsWith('CLUECREW ->')) continue;
+    const cls = parsed.transferStamp.returnLegClass;
+    if (!cls) { undeclared.push(f); continue; }
+    claims.push({
+      file: f, cls, columns: parsed.payload?.columnsCarried ?? [],
+      at: statSync(join(DELIVERY!, f)).mtime,
+    });
+  }
+  return { claims, undeclared };
 }
 
 /** The most recent delivery of a family, by mtime. */
@@ -149,6 +202,7 @@ function lastDelivered(family: string | null): { at: Date; name: string } | null
 async function main(): Promise<void> {
   const paths = await populations();
   requirePopulation('check:return-leg', { 'reviewer-authored content classes': paths.length });
+  const emissions = emissionsInDelivery();
 
   let carried = 0;
   let stale = 0;
@@ -167,7 +221,17 @@ async function main(): Promise<void> {
     // delivery against. Its CARRIED is a weaker claim than the others and must not read the same:
     // it says the artefact exists, not that it is current.
     const blindToStaleness = isCarried && p.newest === null;
-    const state = !isCarried ? 'NOT CARRIED' : isStale ? 'STALE' : blindToStaleness ? 'CARRIED?' : 'CARRIED';
+    // AN EMISSION UNDERCUTS THE CODE. If the most recent file declaring this class carried fewer
+    // columns than the registered export names, the class is SHORT-EMITTED whatever the script says.
+    const mine = emissions.claims.filter((e) => e.cls === p.cls).sort((a, b) => +b.at - +a.at)[0];
+    const shortBy = mine ? p.fields.filter((f) => !mine.columns.includes(f)) : [];
+    const state = !isCarried ? 'NOT CARRIED'
+      : shortBy.length ? 'SHORT-EMITTED'
+        : isStale ? 'STALE' : blindToStaleness ? 'CARRIED?' : 'CARRIED';
+    if (shortBy.length) {
+      console.log(`  ! ${p.cls}`);
+      console.log(`      last emission ${mine!.file} carried ${mine!.columns.length} column(s) and is MISSING: ${shortBy.join(', ')}`);
+    }
     if (state === 'CARRIED') carried += 1;
     else if (state === 'CARRIED?') blind += 1;
     else if (state === 'STALE') stale += 1;
@@ -201,7 +265,17 @@ async function main(): Promise<void> {
     console.log('  is current. The artefact exists; that is all the verdict means.');
   }
   if (absent > 0 || stale > 0 || blind > 0) {
-    console.log('\nAn untravelled path and an absent path are the same thing. Every class above that is');
+    console.log(`\n  EMISSIONS MEASURED: ${emissions.claims.length} file(s) declare a return-leg class.`);
+  if (emissions.undeclared.length) {
+    console.log(`  ${emissions.undeclared.length} emitted file(s) declare NO class and cannot be measured:`);
+    for (const u of emissions.undeclared.slice(0, 12)) console.log(`      ? ${u}`);
+    console.log('      An undeclared emission is unmeasurable, NOT clean. Add `returnLegClass` and');
+    console.log('      `columnsCarried` to its transferStamp so what crossed can be checked.');
+  }
+  console.log('  LIMIT: the script test strips comments but is still TEXT, not a parse — a field name');
+  console.log('  inside a string literal would pass. The emission test above is the load-bearing one.');
+
+  console.log('\nAn untravelled path and an absent path are the same thing. Every class above that is');
     console.log('not CARRIED is reviewer judgement the authoring side is working without, or working');
     console.log('from without knowing whether it is current.');
   }

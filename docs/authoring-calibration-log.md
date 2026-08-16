@@ -4989,6 +4989,61 @@ arriving file CONTAINS. Both halves here are about the sender's code. The receiv
 one — Cowork noticed the discriminator was missing — which is the same way every join fault in this
 project has been found: by somebody reading the other side's store, never by a gate.
 
+## R128 — WIW-14 B: a note that argued against its own label for months
+*Cowork's sweep, 2026-08-16. The payoff, and it is one.*
+
+Her boundary sentence — *attribute-transfer moves a quality BETWEEN CHARACTERS; this moves it from a
+comparison's VEHICLE to its SUBJECT* — crossed on 16 August. Cowork swept all 44
+`en-attribute-transfer` carriers against it and found **one**: `ENG-001-WIW-14` option B, whose own
+`misconceptionExecution` describes a vehicle-to-subject move while its tag says between-characters.
+
+**The note has been arguing against its label since the item was drafted, and nothing on either side
+could see it.** Not the gate, which checks that a tag EXISTS and is ACTIVE, not what it MEANS. Not the
+cold reads, which read items rather than comparing a note to its tag. The discriminator that makes the
+disagreement legible existed only in the reviewer's approval note, in a column that had never
+crossed — so the fault was undetectable by construction rather than by oversight.
+
+**EIGHT DAYS between her writing that discriminator (8 August) and it reaching the store that drafts
+against it (16 August)**, and the only reason it took eight rather than indefinitely is that someone
+asked why the return leg had never carried anything.
+
+**IT IS NOT BEING RETAGGED.** ENG-001 is signed, the item is in her packet, and this is a READING
+rather than a repair — an execution note and a tag disagreeing is a judgement about which is right,
+which is hers. Recording it as a finding and leaving the row alone is the whole of the correct
+response.
+
+**What this measures: the value of a single field crossing.** One sentence, one column, one direction
+of travel that had never carried anything — and the first thing it did on arrival was find a
+mislabelled option in a signed cluster that four independent cold reads had passed over.
+
+## R129 — An emission is measured, not just the code that could have made it
+*David's ruling, 2026-08-16. One rule, not the general case.*
+
+`check:return-leg` verified that the REGISTERED EXPORT for a class names every reviewer-authored
+column. It could not see an emission that was not that export — which is how a hand-listed one-off
+carrying 10 of 21 columns crossed while the class stayed CARRIED. **Not "it would have passed": it
+never saw it.**
+
+Now: an emission DECLARES `returnLegClass` and `columnsCarried` in its own `transferStamp`, and a
+class whose most recent emission carries fewer columns than its registered export names is
+**SHORT-EMITTED** — a fourth state beside CARRIED, STALE and NOT CARRIED. **An emission that declares
+no class is reported as UNMEASURABLE, not as clean.** Verified by declaring the partial's true ten
+columns and watching the class flip to SHORT-EMITTED naming all four missing fields.
+
+Two things the build taught:
+- **DIRECTION FIRST.** The delivery folder carries traffic BOTH WAYS and Cowork's inbound files also
+  have a `transferStamp`. The first version counted eight of THEIR deliveries as OUR undeclared
+  emissions — reporting their file shape as our fault. Only what leaves here is ours to measure.
+- **A SUPERSEDED ARTEFACT IN THE DELIVERY FOLDER IS ITSELF THE HAZARD.** The check judged the class
+  on the partial because I had edited it most recently. The right answer was not smarter tie-breaking
+  but removing it: a superseded file sitting where the recipient looks is one they can pick up, and
+  the export machinery already prunes stale artefacts for exactly this reason.
+
+**And the substring test is fixed and its remaining limit is PRINTED.** `carriedBy` now strips
+comments before matching, so a script that only DISCUSSES `approvalNote` no longer counts as carrying
+it. It is still text and not a parse — a field name in a string literal would pass — and the output
+says so on every run rather than leaving a reader to assume more rigour than there is.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 
