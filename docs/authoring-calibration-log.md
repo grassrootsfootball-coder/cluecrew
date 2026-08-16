@@ -3675,6 +3675,16 @@ The read path already existed and had not been run since the entry was written:
 `scripts/export-misconception-library.ts`. Run, delivered, stale copy pruned — 274 entries,
 sha `6d3c109008854e71`. A one-direction rule needs the direction to actually be travelled.
 
+> **⚠ THIS HASH IS AMBIGUOUS AND IS LEFT AS WRITTEN.** `6d3c109008854e71` names TWO materially
+> different files: the six-field projection delivered when this entry was written, and the
+> seventeen-field one delivered an hour later after `approvalNote` was added. The stamp was computed
+> over a projection rather than over the payload, so it did not move (R88). **The entry is marked,
+> not repointed** — silently rewriting it to `af7d1a75ad843996` would make a record of what was
+> verified into a record of what was verified later, which is the failure the marking exists to
+> prevent. What this entry actually verified was the SIX-FIELD delivery, which did not carry the
+> reviewer's words. Commit `441d84d` cites the same hash with the same ambiguity and cannot be
+> edited; this note is its correction too.
+
 ## R85 — A platform constraint and a reviewer ruling independently producing the same refusal
 *2026-08-16. The first time this has happened, and it is worth naming.*
 
@@ -3836,3 +3846,104 @@ not a solved one.** The question after any lucky catch is what would have caught
 the honest answer here is nothing — no check compares a hand-written migration's intent against what
 the generator later does to the same column. That gap is open, and naming it is the point of this
 entry.
+
+## R91 — The eight answerability flags, and the four classes behind them
+*David, 2026-08-16. "The eight answer flags go first. Not last on a list of six."*
+
+Eight items in the bank that a child cannot answer, each carrying a recorded verdict saying so, and
+the verdict had never reached anyone who could act on it. `answerFlaggedAt` is deliberately unlike
+`similarityFlaggedAt`: THERE IS NO CLEARING FIELD. The flag goes when the item is fixed and the gate
+stops setting it, and by no other route. So it is the one verdict in the store that only the AUTHOR
+can discharge — and the author could not see it.
+
+**One correction to my own report.** I described these as items Annie had marked. They are set by
+`pnpm check:word-puzzles`, which executes the item's own rule and compares the result against its
+key. A MACHINE verdict under David's 2026-08-02 ruling, not a reviewer's prose. Eight machine
+findings travelling under a reviewer's authority would be R75's conflation in a new place, so the
+export says which it is, in the artefact.
+
+All eight are `gen-vr-*` word puzzles, all DRAFT: three where `CHAIR/MOP admits NO valid move`, two
+where the key is `C` but the only valid move is `E`, two where the key is `S` but the only valid
+move is `H`, and one where the key is `PEAR` but the only hidden word is `airs`. Delivered with the
+note verbatim AND the stem and every option, because "key is C but the only valid move is E" cannot
+be acted on without the item it describes.
+
+Then, in the ruled order: **reviewer identity (2)** — first of the four, and structurally so, because
+every one of the 202 rulings below is signed by an id that means nothing without those two rows;
+**ruling notes (202)**; **item review notes (301)**, carrying `reviewedBy` and `reviewRecordedBy`
+together so the whose-judgement/who-typed-it distinction survives the crossing; **word review notes
+(14)**. Four separate artefacts, not one bundle, so one class can go STALE without the others hiding
+behind it. `check:return-leg` now reports 6 CARRIED of 6 — but see the qualifier below.
+
+**A CARRIED THAT CANNOT GO STALE IS A WEAKER CLAIM AND MUST NOT READ THE SAME.** Two classes have no
+content timestamp to measure a delivery against, so nothing could ever report them stale. They are
+`CARRIED?` — the artefact exists, and that is all the verdict means. Both timestamps are printed on
+every row so a reader can see the comparison happened rather than trusting the verdict for it.
+
+## R92 — Three guesses at one question, and the answer was that shape cannot tell you
+*2026-08-16, building the check that answers "what else is named by a hash over a projection".*
+
+`check:stamp-covers-payload` recomputes each delivered artefact's stamp FROM ITS OWN PAYLOAD and
+compares it to the hash the artefact carries — the property stated as a fact about the file rather
+than as a reading of the code, because reading five exporters goes stale on the next edit.
+
+It took four attempts, and the failures are the entry:
+
+  1. It read a payload key literally named `entries` — and reported FIVE artefacts clean while
+     SKIPPING the misconception library, the artefact the whole check exists because of. R60 with
+     the paint still wet.
+  2. It read the stamp only at `body.stamp`, while the library and the proposed queue spread those
+     fields FLAT at the top level. Both were skipped, and skipped INVISIBLY, because the skip list
+     was keyed off the same field that was missing. Population 5 → 31 when fixed.
+  3. It then took the FIRST top-level array as the payload, and produced two confident MISMATCHED
+     verdicts against artefacts with two arrays each — it had hashed `signedTiers` instead of
+     `emitted`, and `comparators` instead of `held`.
+  4. Restricted to the ONLY array, it accused `tn-teacher-held` — whose payload is `held` AND
+     `comparators`, an object and an array together.
+
+**Three false accusations from three guesses at the same question, which IS the answer: SHAPE
+CANNOT TELL YOU WHAT THE PAYLOAD IS.** The check now screens only artefacts with exactly one
+non-envelope key and NAMES the other 38 as unscreened. The durable fix is a declaration from the
+exporter — `stampedOver: 'entries'` — and it is unbuilt.
+
+Result: 14 screened, 11 covering exactly what they ship, 3 UNVERIFIED status/mixed projections, 0
+mismatched, 38 unscreened. The library is UNVERIFIED BY DESIGN: its stamp deliberately excludes the
+`gate` verdict so the artefact's identity depends on content and not on the checker. The original
+fault is closed — `approvalNote` is in the stamp source, so a change to the reviewer's words now
+moves the name.
+
+**The ambiguous citation is MARKED, NOT REPOINTED.** `6d3c109008854e71` names two files. R84's line
+carries a marker saying so and stays as written; silently rewriting it to `af7d1a75ad843996` would
+turn a record of what was verified into a record of what was verified LATER. Commit `441d84d` cites
+the same hash and cannot be edited; the marker is its correction too. Nothing on Cowork's side cites
+it — the superseded file was pruned on delivery, so the ambiguity is contained to this repo's records.
+
+## R93 — Costing the migration-intent gap
+*David, 2026-08-16: "you named it open, so scope it."*
+
+Nothing compares a hand-written migration's INTENT against what the generator later does to the same
+column. Prisma reverted the R80 clock fix on the next routine `migrate dev`, and it was caught only
+because a broken edit tool made that migration short enough to read (R90).
+
+**The exposure, measured:** 43 migrations, of which **6 contain SQL Prisma cannot express** —
+7 `CHECK` constraints, 4 `CREATE TRIGGER`, 2 `CREATE OR REPLACE FUNCTION`, 4 `AT TIME ZONE`, 2
+`DROP DEFAULT`. Every one of those is a fact about the database that the Prisma schema does not
+know, which is exactly the set Prisma can silently overwrite.
+
+**The shape David proposed is right: a post-migration assertion on the columns a hand-written
+migration touched.** Concretely — a `packages/db/prisma/invariants.sql` holding one assertion per
+hand-written fact (`ContentWriteLog.at` has no default; `log_content_write` contains `AT TIME ZONE
+'UTC'`; the `Misconception` length CHECK exists; the four content triggers exist), run after every
+migrate as `pnpm check:db-invariants`.
+
+**Cost:** the assertions are ~40 lines of SQL over `information_schema` and `pg_proc`, plus a ~60
+line runner and a CI step. The real cost is not the code — it is that **every future hand-written
+migration must add its assertion, or the file becomes a list of the things we happened to think of
+in August.** That is the same maintenance burden as `DECLARED_DOORS` and `KNOWN_UNTYPED`, and both
+of those are held honest by a staleness rule: an entry that no longer applies FAILS. The same rule
+works here — an assertion naming a column that no longer exists should fail rather than pass
+vacuously.
+
+**Not built this turn**, and the gap stays open and named. The one-line version of why it matters:
+the six migrations above are the only place in this repo where the database knows something the
+schema does not, and the generator's job is to make the database match the schema.

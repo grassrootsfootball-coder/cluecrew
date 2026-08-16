@@ -76,7 +76,7 @@ async function populations(): Promise<ReturnPath[]> {
     {
       cls: 'Item review notes — why an item was returned or how it was recorded',
       fields: ['reviewNotes', 'reviewRecordNote', 'reviewMethod'],
-      exportScript: null, family: null,
+      exportScript: 'export-reviewer-record.ts', family: 'item-review-notes',
       rows: itemReview,
       newest: await newestOf(itemReview, () => prisma.item.findFirst({
         where: { OR: [{ reviewNotes: { not: null } }, { reviewRecordNote: { not: null } }] },
@@ -87,7 +87,7 @@ async function populations(): Promise<ReturnPath[]> {
     {
       cls: 'Item answer flags — the gate said the item has no valid answer',
       fields: ['answerFlagNote'],
-      exportScript: null, family: null,
+      exportScript: 'export-answer-flags.ts', family: 'answer-flags-open',
       rows: itemFlags,
       newest: await newestOf(itemFlags, () => prisma.item.findFirst({
         where: { answerFlagNote: { not: null } }, orderBy: { createdAt: 'desc' }, select: { createdAt: true },
@@ -97,14 +97,14 @@ async function populations(): Promise<ReturnPath[]> {
     {
       cls: 'Word review notes — vocabulary card rulings',
       fields: ['reviewNotes'],
-      exportScript: null, family: null,
+      exportScript: 'export-reviewer-record.ts', family: 'word-review-notes',
       rows: wordReview, newest: null,
       why: 'A card ruling a drafter would otherwise rediscover.',
     },
     {
       cls: 'Attribution events — the reasoning attached to every named ruling',
       fields: ['note', 'method'],
-      exportScript: null, family: null,
+      exportScript: 'export-reviewer-record.ts', family: 'ruling-notes',
       rows: events,
       newest: await newestOf(events, () => prisma.attributionEvent.findFirst({
         where: { note: { not: null }, reviewerId: { not: null } }, orderBy: { at: 'desc' }, select: { at: true },
@@ -114,7 +114,7 @@ async function populations(): Promise<ReturnPath[]> {
     {
       cls: 'Reviewer identity — who holds the role, since when, on what evidence',
       fields: ['displayName', 'heldFrom', 'heldUntil', 'evidence'],
-      exportScript: null, family: null,
+      exportScript: 'export-reviewer-record.ts', family: 'reviewer-identity',
       rows: reviewers, newest: null,
       why: 'A ruling attributed to "current-reviewer" cannot be resolved to a person on the authoring side.',
     },
@@ -153,6 +153,8 @@ async function main(): Promise<void> {
   let carried = 0;
   let stale = 0;
   let absent = 0;
+  /** Delivered, but with no content timestamp to measure freshness against. */
+  let blind = 0;
 
   console.log('THE RETURN LEG — what the platform holds that the authoring side works against.\n');
   for (const p of paths) {
@@ -161,8 +163,15 @@ async function main(): Promise<void> {
     const isCarried = p.exportScript !== null && missing.length === 0 && delivered !== null;
     const isStale = isCarried && p.newest !== null && delivered !== null && p.newest > delivered.at;
 
-    const state = !isCarried ? 'NOT CARRIED' : isStale ? 'STALE' : 'CARRIED';
-    if (state === 'CARRIED') carried += 1; else if (state === 'STALE') stale += 1; else absent += 1;
+    // A class with no content timestamp can NEVER go STALE — there is nothing to compare the
+    // delivery against. Its CARRIED is a weaker claim than the others and must not read the same:
+    // it says the artefact exists, not that it is current.
+    const blindToStaleness = isCarried && p.newest === null;
+    const state = !isCarried ? 'NOT CARRIED' : isStale ? 'STALE' : blindToStaleness ? 'CARRIED?' : 'CARRIED';
+    if (state === 'CARRIED') carried += 1;
+    else if (state === 'CARRIED?') blind += 1;
+    else if (state === 'STALE') stale += 1;
+    else absent += 1;
 
     console.log(`  ${state.padEnd(11)} ${p.cls}`);
     console.log(`              ${p.rows} row(s) hold it · ${p.why}`);
@@ -171,16 +180,30 @@ async function main(): Promise<void> {
     } else {
       console.log(`              via scripts/${p.exportScript}`);
       if (missing.length) console.log(`              export does NOT name: ${missing.join(', ')}`);
-      if (delivered) console.log(`              last delivered ${delivered.at.toISOString()} as ${delivered.name}`);
+      if (delivered) {
+        console.log(`              last delivered ${delivered.at.toISOString()} as ${delivered.name}`);
+        // BOTH SIDES OF THE COMPARISON, printed. The STALE leg has never fired, so a bare CARRIED
+        // asserts only that the code took that branch. Showing the two timestamps it compared lets
+        // a reader see the comparison happened, rather than trusting the verdict for it.
+        console.log(`              newest content ${p.newest ? p.newest.toISOString() : '(no timestamp available for this class)'}`
+          + (p.newest ? ` — ${p.newest > delivered.at ? 'AFTER' : 'before'} the delivery` : ''));
+      }
       else console.log('              NEVER DELIVERED — the path exists and has not been travelled.');
     }
   }
 
-  console.log(`\n${carried} carried · ${stale} stale · ${absent} not carried, of ${paths.length} classes.`);
-  if (absent > 0 || stale > 0) {
+  console.log(
+    `\n${carried} carried · ${blind} carried but blind to staleness · ${stale} stale · `
+    + `${absent} not carried, of ${paths.length} classes.`,
+  );
+  if (blind > 0) {
+    console.log('  A CARRIED? class has no content timestamp, so nothing can tell whether its delivery');
+    console.log('  is current. The artefact exists; that is all the verdict means.');
+  }
+  if (absent > 0 || stale > 0 || blind > 0) {
     console.log('\nAn untravelled path and an absent path are the same thing. Every class above that is');
-    console.log('not CARRIED is a body of reviewer judgement the authoring side is working without —');
-    console.log('and it will rediscover it by cold read, or not at all.');
+    console.log('not CARRIED is reviewer judgement the authoring side is working without, or working');
+    console.log('from without knowing whether it is current.');
   }
   // REPORTS, never blocks. The absent paths are unbuilt work, not a regression: failing CI on them
   // would be red from the first run and muted within a week, which is how the outbound backlog was

@@ -220,6 +220,13 @@ jobs:
       - name: Return leg (reviewer judgement the authoring side cannot see)
         run: pnpm check:return-leg
 
+      # AN ARTEFACT'S NAME MUST IDENTIFY ITS PAYLOAD. The misconception library shipped two
+      # materially different files under one hash because the stamp was computed over a five-field
+      # projection while the file carried seventeen. This recomputes each artefact's stamp from its
+      # own payload. It NAMES what it could not screen rather than counting it as passing.
+      - name: Stamp covers payload (a name that moves when the content moves)
+        run: pnpm check:stamp-covers-payload
+
       # THE WRITE BOUNDARY. Database TRIGGERS record every mutation of a content table, so
       # application code cannot opt out -- a write from a script, from Prisma Studio, from psql or
       # from another agent lands identically. This compares that record against AttributionEvent
