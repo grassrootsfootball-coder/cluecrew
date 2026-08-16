@@ -5298,6 +5298,61 @@ district filter, so it genuinely screens all 332 live items across both district
 maths; its query does not. **A district named in a comment is not a district in a WHERE clause** —
 which is why this list was built from filters rather than from what each file talks about.
 
+## R138 — The signed-depth audit reaches 14 of 46 signatures; NVR's 13 hold
+*David, 2026-08-16. Report, do not fix.*
+
+**IT IS BLIND TO MORE THAN THE 13.** `audit:signed-depth` fetches
+`recordType: { contains: 'template-family' }` — 19 `maths-template-family` + 14 `spag-template-family`
+— and then **iterates `SPAG_FAMILIES` only**. So of 46 SIGNED events in the store:
+
+| recordType | count | screened |
+|---|---|---|
+| `spag-template-family` | 14 | yes (13 families reported) |
+| `maths-template-family` | 19 | **fetched and never iterated** |
+| `nvr-signature` | 13 | **never fetched** |
+| `item` | 2 | out of scope by design |
+
+**Annie's second named artefact reaches 14 of 46.** The filter is only half the fault: widening it to
+match `nvr-signature` would still change nothing, because the loop is over a hard-coded SPaG family
+list. **A check can be scoped twice — once by its query and once by its loop — and fixing the query
+alone would have produced a wider fetch and the same output**, which is the more dangerous repair.
+
+**RUN AGAINST NVR, THE 13 HOLD.** Asked the question NVR can actually answer, using the artefact it
+records: does each signature's `fingerprint` still match the template it names, at the version it
+names? **13 of 13 HOLD** — no fingerprint moved, no version moved, no template gone, and 0 signatures
+whose `sampleSheetHash` differs from the fingerprint (`record-nvr-signoff` writes them equal, so a
+difference would mean one had moved). Nothing found, and now it has been looked at.
+
+## R139 — NVR generators against their descriptions: coverage exact, three scopes exceeded
+*2026-08-16. The audit that found `vr07-value-slip`, pointed at NVR. Report, do not repair.*
+
+Generated 780 items across all 13 templates and 5 tiers and read what they actually emit — the ids
+live inside builder bodies, so parsing the templates as data finds nothing (my first attempt returned
+0 emitted ids and would have read as "no generator emits anything").
+
+**COVERAGE IS EXACT: 22 ids emitted, 22 library entries, zero orphans in either direction.** No entry
+nothing emits, no emitted id without a row. Better than VR, which had 13 executors against a library
+that also carries semantic entries.
+
+**BUT THREE DESCRIPTIONS NAME A NARROWER SCOPE THAN THE GENERATORS USE** — the same shape as
+`vr07-value-slip`, where the code implements a superset of what the entry says:
+
+| entry | description says | emitted by |
+|---|---|---|
+| `nvr-transform-not-applied` | *"the option most resembling **C** untransformed (types: **analogy**)"* | folding-punch, machine-analogy, machine-series, turntable-reflection, turntable-rotation |
+| `nvr-series-phase-slip` | *"(types: **series**)"* | machine-analogy, machine-matrix, machine-series, turntable-rotation |
+| `nvr-wrong-mirror-axis` | *"(types: **reflection tasks**)"* | folding-plans, folding-punch, turntable-reflection |
+
+`C` is analogy notation — A:B::C:? — and there is no C in a series, a reflection or a punch task.
+`nvr-rotation-wrong-direction`'s own description distinguishes itself from *"the magnitude slip of
+series-phase-slip"*, so phase-slip is doing rotation-magnitude work on `turntable-rotation` that its
+`(types: series)` scope does not cover.
+
+**This is a READING and not a proof**, and the distinction matters: the parenthetical type-scopes may
+be stale shorthand from the corpus import rather than live constraints. What is certain is that **the
+entry and the generator disagree about where the error occurs**, which is exactly the class she asked
+to be run — and NVR is signed, so which side moves is hers.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 
