@@ -205,6 +205,18 @@ jobs:
       - name: Exported gate libraries match the database
         run: pnpm check:gate-library-fresh
 
+      # THE MANIFEST GUARD. Fails on REGRESSION -- a declarative field this store carried is
+      # carried less, or is carried somewhere else -- never on the 20-field backlog, which would
+      # be red from the first run and muted within a week. Also refuses when the manifest and the
+      # field registry disagree about which fields exist.
+      #
+      # DELIBERATELY NOT PRECEDED BY `emit:manifest`. The CI database holds only the Phase 1
+      # synthetic VR items, so re-emitting here would describe a DIFFERENT STORE and report every
+      # field as lost. This screens the committed artefact and the registry against each other;
+      # it says nothing about whether that artefact is current, and prints as much.
+      - name: Manifest drift (a declarative field is not lost silently)
+        run: pnpm check:manifest-drift
+
       - name: Database content gate (child-facing text in the DB)
         run: pnpm check:db-content
 
