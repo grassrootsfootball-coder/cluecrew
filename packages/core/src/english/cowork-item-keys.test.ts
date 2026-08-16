@@ -67,11 +67,16 @@ describe('the registry itself', () => {
       'item.banListException_SHAPE_NOTE',
       'item.draftingMethod_SHAPE_NOTE',
       'item._previousMisconceptionsArray',
+      'item._previousLineRefs',
       'item._previousOrderAnchor',
       'item.notes',
       'item.draftingOrder',
       'explanation._previousWalkScript',
       'options[].tagStatus_SHAPE_UNRESOLVED',
+      'options[]._previousValue',
+      'options[]._previousExecution',
+      'options[]._previousAttractorLine',
+      'options[]._previousWindowClass',
       'options[]._previousMisconceptionId',
     ]);
   });

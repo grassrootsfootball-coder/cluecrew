@@ -132,6 +132,14 @@ export const COWORK_ITEM_KEYS: Readonly<Record<CoworkLevel, readonly CoworkKeyRu
         + 'tags are the claim and the supersession belongs in an attribution event.',
     },
     {
+      key: '_previousLineRefs',
+      disposition: 'NOT_CARRIED',
+      ruling: 'PROPOSED',
+      reason: 'The citation window a reviewer ruling replaced, on 1 item (WIW-12, [29] -> 29-33). '
+        + 'Same class as the other _previous shadows: the CURRENT window is the claim and the '
+        + 'supersession belongs in an attribution event.',
+    },
+    {
       key: '_previousOrderAnchor',
       disposition: 'NOT_CARRIED',
       ruling: 'PROPOSED',
@@ -212,6 +220,35 @@ export const COWORK_ITEM_KEYS: Readonly<Record<CoworkLevel, readonly CoworkKeyRu
       // One of the 39, weighted critical. CHECK 10 holds an entire tag on it, and without it a
       // vocabulary item is unshippable while reading perfectly. Columned before ENG-013 arrives
       // rather than under the pressure of a blocked import (David, 2026-08-16).
+    },
+    {
+      key: '_previousValue',
+      disposition: 'NOT_CARRIED',
+      ruling: 'PROPOSED',
+      reason: 'The option TEXT a reviewer ruling replaced, on 2 options (WIW-12 B, WIW-16 A). The '
+        + 'current text is the claim. Weightier than the other shadows — this one is child-facing '
+        + 'and is what the reviewer actually struck — so it is named for a ruling, not assumed.',
+    },
+    {
+      key: '_previousExecution',
+      disposition: 'NOT_CARRIED',
+      ruling: 'PROPOSED',
+      reason: 'The execution note that went with the replaced option text, on 2 options. Reviewer-'
+        + 'facing, superseded by the note now on the option.',
+    },
+    {
+      key: '_previousAttractorLine',
+      disposition: 'NOT_CARRIED',
+      ruling: 'PROPOSED',
+      reason: 'The Addendum 36 attractor line a replacement re-measured, on 1 option (WIW-16 A, '
+        + '52 -> null under the CONTENT NOWHERE ruling). The current measurement is the claim.',
+    },
+    {
+      key: '_previousWindowClass',
+      disposition: 'NOT_CARRIED',
+      ruling: 'PROPOSED',
+      reason: 'The Addendum 36 window class a replacement re-measured, on 1 option (WIW-16 A, '
+        + 'ENTRAPMENT -> NOISE). The current measurement is the claim.',
     },
     {
       key: '_previousMisconceptionId',

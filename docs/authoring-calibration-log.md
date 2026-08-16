@@ -4150,6 +4150,63 @@ matters; a stem that renders empty to a child is not the same fault as an export
 column, and they should not be fixed as one batch. **R86 in a field name: a migration is not
 complete until every reader has moved, and the readers are found by scanning, not by remembering.**
 
+## R104 — Four defect rulings, and the one category that cannot be recovered
+*David relaying Annie, 2026-08-16. Against the KNOWN DEFECTS sheet attached to the ENG-028/ENG-001 packet.*
+
+- **Row 9 (295 options in ENG-001/002/003 with no execution note) is CLOSED PERMANENTLY.** Her
+  ruling: it is VINTAGE, not loss, and back-writing the notes would produce **reconstructions
+  rather than records**. Drop the row from the sheet. This is the strongest version of the point
+  the sheet was already making in its own words and did not act on: a field introduced after a
+  cluster was drafted has no true value for that cluster, and inventing one puts a fabricated
+  provenance where an honest absence was.
+- **Row 5 (31 notes needing a reader) stays open.** It is the half of the same family that CAN be
+  written truthfully, because the reasoning exists — it is in the walk-through — and a reader is
+  moving it, not inventing it. The two rows were paired in the sheet and are not the same ruling.
+- **Row 2 is the ONLY unrecoverable category: nothing ships with a second defensible answer.**
+  Everything else on the sheet is repairable after publication; a second correct answer is not,
+  because the child who defended it was right and the mark said otherwise. Two options
+  (`ENG-002-pp-19` C, `ENG-002-pp-23` B), both already held from every packet.
+- **Row 8: the nine entries go to her.** See R105 for the count, which is not 172.
+
+## R105 — The retag landed, and moved two items from one unapproved tag onto another
+*2026-08-16, delivery 77. Seven ENG-001 items, applied with `--replace`.*
+
+Verified 64/64 against the payload hash the file declares, all seven rows DRAFT with **zero
+attribution events**, so nothing reviewed was destroyed by the replace. Five keys were refused at
+the door first (`item._previousLineRefs`, `options[]._previousValue`, `_previousExecution`,
+`_previousAttractorLine`, `_previousWindowClass`) and declared as PROPOSED exceptions — R57's
+mechanism doing exactly its job for the sixth time, this time on the way IN rather than after.
+
+**THE RETAG DID NOT DO WHAT THE SHEET SAYS IT DID.** Row 7 reports five of six retagged off the
+retired name, one left. True. But a retag is only a release if the SUCCESSOR is approved, and two
+of the successors are not:
+
+| item | was | now | still refused? |
+|---|---|---|---|
+| WIW-08, -17, -20 | `en-vocab-secondary-sense` RETIRED | `en-vocab-dominant-sense` ACTIVE | released |
+| WIW-04 | `en-vocab-secondary-sense` RETIRED | `en-vocab-neighbouring-sense` PROPOSED | still refused |
+| WIW-11 | `en-vocab-secondary-sense` RETIRED | `en-vocab-form-lookalike` PROPOSED | still refused |
+
+ENG-001 went from 19 distinct tags to 21, and from 10 items a verdict would refuse to 8. Net
+progress, and two of the six moved sideways rather than out. **A RETAG OFF A RETIRED ENTRY ONTO A
+PROPOSED ONE IS NOT A RELEASE, IT IS A CHANGE OF WHICH APPROVAL IS OUTSTANDING** — and it reads
+as a release in every account of it, including the sheet's.
+
+**THE COUNT IS 215, NOT 172.** Row 8 asserts 172 in capitals. `pnpm export:approval-batch`, reading
+the store, screens 9 PROPOSED English entries carrying **215 items** — the same nine entries, a
+different denominator, and the number is the size of the decision being put in front of her. The
+sheet's own note explains why its figure moved once (the `en-vocab-dominant-sense` release moved
+nobody) and does not reach a 43-item gap. Ours is measured and re-exported; theirs is asserted.
+Not resolved here — reported, with the artefact.
+
+**AND THE RETIREMENT WAS ONLY EVER WORKED THROUGH ENG-001.** `en-vocab-secondary-sense` is RETIRED
+and still tagged on **11 options across 11 items**. One is WIW-19 B, which the sheet names and
+reports to her unplaced. **The other ten are in clusters no sheet mentions**: `ENG-002-pp-05`,
+`-08`, `-13`, `-19`, `-20`, `-21`; `ENG-004-AGG-02`, `-AGG-03`; `ENG-012-ML-02`; `ENG-020-HD-07`.
+A retired tag refuses a verdict exactly as an unapproved one does, so those ten items are held and
+nothing says so. Found by asking the store for every non-ACTIVE tag rather than by reading the row
+about ENG-001 — R86's shape again: the sheet is not the population.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 
