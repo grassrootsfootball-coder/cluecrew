@@ -13,9 +13,15 @@
  */
 import { readFileSync, readdirSync } from 'node:fs';
 import { join, resolve } from 'node:path';
-import { checkLineRefs, type LineRefFailure, type CitablePassage } from '@cluecrew/core';
+import {
+  checkAttractorDefeater,
+  checkLineRefs,
+  quoteLinesOutsideWindow,
+  type CitablePassage,
+  type LineRefFailure,
+} from '@cluecrew/core';
 import { prisma } from '../packages/db/src/index';
-import { requirePopulation } from './lib/population';
+import { declareMayBeEmpty, requirePopulation } from './lib/population';
 
 const PASSAGE_DIR = resolve(import.meta.dirname, '../content/passages');
 
@@ -37,8 +43,15 @@ async function main(): Promise<void> {
   let citing = 0;
   /** Bare-string quotes: present, deliberately unplaced, and counted rather than silently skipped. */
   let placeless = 0;
+  /** CHECK 11 violations: a quote span reaching outside its item's window. */
+  let containmentFailures = 0;
+  /** Quote spans actually screened for containment — a zero here is not a pass. */
+  let containmentChecked = 0;
+  /** Addendum 36 pairs actually screened, and the rules they broke. */
+  let adChecked = 0;
+  let adFailures = 0;
 
-  const items = await prisma.item.findMany({ include: { questionType: true } });
+  const items = await prisma.item.findMany({ include: { questionType: true, options: true } });
   const absent: string[] = [];
   for (const item of items) {
     const stem = (item.stem ?? {}) as Record<string, unknown>;
@@ -77,6 +90,35 @@ async function main(): Promise<void> {
     if (textlessQuotes > 0) {
       absent.push(`${item.id}: ${textlessQuotes} declared quote(s) carry no text`);
     }
+    // CHECK 11 — CONTAINMENT, NOT EQUALITY. The quote span must sit INSIDE the item window; the
+    // two are different facts and agreed on six items by coincidence.
+    for (const q of rawQuotes) {
+      if (typeof q !== 'object' || q === null) continue;
+      const qr = (q as { lineRefs?: unknown }).lineRefs;
+      if (lineRefs.length && Array.isArray(qr) && qr.length) containmentChecked += 1;
+      const outside = quoteLinesOutsideWindow(lineRefs, Array.isArray(qr) ? (qr as number[]) : null);
+      if (outside.length > 0) {
+        containmentFailures += 1;
+        bucket.push({
+          where: `item:${item.id} stem.quotes`,
+          rule: 'quote-span-not-contained',
+          detail: `quote cites line(s) ${outside.join(', ')}, which are outside the item window ${lineRefs.join(', ')}`,
+        });
+      }
+    }
+
+    // ADDENDUM 36 — the attractor/defeater pair on each option's execution note.
+    for (const o of item.options) {
+      if (o.attractorLine == null && o.defeaterLine == null) continue;
+      adChecked += 1;
+      for (const reason of checkAttractorDefeater({
+        itemLineRefs: lineRefs, attractorLine: o.attractorLine, defeaterLine: o.defeaterLine,
+      })) {
+        adFailures += 1;
+        bucket.push({ where: `item:${item.id} option ${o.id}`, rule: 'attractor-defeater', detail: reason });
+      }
+    }
+
     // Only PLACED quotes are checked against lines. A bare string declares no place, so verifying
     // it against a line range would be inventing a claim its author did not make.
     const declaredQuotes = rawQuotes
@@ -151,7 +193,25 @@ async function main(): Promise<void> {
   console.log(
     `Line-reference gate: ${passages.size} passages · ${checked} item(s) citing a passage · ` +
       `${citing} explanation field(s) naming a line · ${placeless} placeless quote(s) present-only (Cowork CHECK 8).`,
+    );
+    console.log(
+      `  CHECK 11 containment: ${containmentChecked} quote span(s) screened against an item window · `
+      + `${containmentFailures} reaching outside it`
+      + (containmentChecked === 0 ? ' — NOTHING WAS SCREENED, so this asserts nothing.' : '.'),
   );
+
+  // R61: a population that may LEGITIMATELY be empty says so once, in writing, with the reason,
+  // printed on every empty run so a temporary gap cannot decay into a green tick.
+  declareMayBeEmpty(
+    'Addendum 36 attractor/defeater',
+    'options carrying an attractor/defeater pair',
+    adChecked,
+    'The columns landed 2026-08-16 and the backfill is scoped separately — no option carries a pair '
+      + 'yet. Remove this declaration the moment the first one does.',
+  );
+  if (adFailures > 0) {
+    console.log(`  Addendum 36: ${adFailures} broken rule(s) across ${adChecked} screened pair(s).`);
+  }
 
   // ABSENT FIELDS FAIL. A stem the gate could not read is not a stem the gate cleared, and the
   // count above must not be quoted as coverage of it.

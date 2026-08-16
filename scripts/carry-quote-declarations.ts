@@ -18,6 +18,14 @@
  * A BARE STRING IS A DECLARED CONVENTION (R78) and is carried as-is. It declares a text and not a
  * place; converting it to an object here would invent a claim its author did not make.
  *
+ * QUOTE-LEVEL `lineRefs` IS THIS STORE'S TO HOLD, and that is a RULING rather than a precedence.
+ * It names WHERE THE QUOTATION SITS; the item-level field is the item's WINDOW. Cowork's copies
+ * repeat the window onto the quote, and the two agreed on six items by COINCIDENCE. CHECK 11 is
+ * therefore CONTAINMENT, not equality (David, 2026-08-16): the quote span must sit INSIDE the
+ * window. All 8 stored spans are contained, so the two fields this script held on WIW-18 and pp-19
+ * are RELEASED with the stored values — they were the correct ones, and an equality check would
+ * have called the narrower, truer value the defect.
+ *
  * IT NEVER DELETES AND NEVER OVERWRITES. A quote present here and absent from the source is
  * reported, never removed. A FIELD present on both sides and disagreeing is HELD — reported and
  * left alone — while the fields that are merely ABSENT are carried. Holding the whole item instead
@@ -127,6 +135,12 @@ async function main(): Promise<void> {
   const orphaned: string[] = [];
   /** Fields present on both sides and disagreeing: held, reported, never written. */
   const held: string[] = [];
+  /**
+   * Fields this store OWNS by ruling. A difference here is not a disagreement to hold — it is the
+   * two stores meaning different things by one name, already settled.
+   */
+  const dbAuthoritative = new Set(['lineRefs']);
+  const resolved: string[] = [];
   let fieldsAdded = 0;
   let quotesAdded = 0;
 
@@ -160,6 +174,12 @@ async function main(): Promise<void> {
         for (const [k, v] of Object.entries(w as Record<string, unknown>)) {
           if (v === undefined || v === null) continue;
           if (merged[k] === undefined) { merged[k] = v; added.push(k); }
+          else if (canonical(merged[k]) !== canonical(v) && dbAuthoritative.has(k)) {
+            resolved.push(
+              `${row.id}.${key}.quotes["${text.slice(0, 24)}…"].${k}: keeping ${canonical(merged[k])} `
+              + `over ${canonical(v)} — quote span, not item window (CHECK 11 containment)`,
+            );
+          }
           else if (canonical(merged[k]) !== canonical(v)) {
             held.push(
               `${row.id}.${key}.quotes["${text.slice(0, 24)}…"].${k}: `
@@ -191,6 +211,10 @@ async function main(): Promise<void> {
   if (orphaned.length) {
     console.log(`\n${orphaned.length} stored quote(s) have no counterpart in the source — reported, never removed:`);
     for (const o of orphaned.slice(0, 8)) console.log(`  ? ${o}`);
+  }
+  if (resolved.length > 0) {
+    console.log(`\n${resolved.length} difference(s) settled by ruling, not held:`);
+    for (const r of resolved) console.log(`  = ${r}`);
   }
   if (held.length > 0) {
     console.log(`\n${held.length} field(s) present on BOTH sides and disagreeing — HELD, not written:`);

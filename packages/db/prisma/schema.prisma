@@ -398,6 +398,15 @@ model ItemOption {
   // thing a reviewer asks to see. Distinct from the library's childHint, which the DB owns and
   // which is child-facing; this is per-option and reviewer-facing.
   misconceptionExecution String?
+  // ADDENDUM 36 — THE TWO LINES THE EXECUTION NOTE TURNS ON.
+  //   attractorLine  the line that makes this distractor attractive: what the child latches onto.
+  //   defeaterLine   the line that defeats it: what a correct reading uses to rule it out.
+  // Three rules, enforced by `checkAttractorDefeater` inside the line-reference gate: both present
+  // or neither; both inside the ITEM's lineRefs window; and the defeater NOT BEFORE the attractor
+  // — a defeater earlier in the passage than the thing it defeats is not a defeater, it is a line
+  // the child had already read and passed.
+  attractorLine   Int?
+  defeaterLine    Int?
   tags            ItemOptionTag[]
 }
 
@@ -1246,7 +1255,13 @@ model ContentWriteLog {
   applicationName String
   /// Groups every row written in one transaction, so a single door's batch reads as one act.
   txId            String
-  at              DateTime @default(now())
+  // NO @default. Prisma cannot express `now() AT TIME ZONE 'UTC'`, so it saw its own `@default
+  // (now())` as truth and silently reverted the column default to CURRENT_TIMESTAMP on the very
+  // next `migrate dev` — reintroducing the local-time source of R80's 345 false reports. Nothing
+  // broke, ONLY because the trigger sets `at` explicitly rather than relying on the default; that
+  // explicitness was the note in R80 and this is what it was for. The default is now removed
+  // entirely, so there is no local-time fallback left for Prisma or anyone else to restore.
+  at              DateTime
 
   @@index([tableName, recordId])
   @@index([at])

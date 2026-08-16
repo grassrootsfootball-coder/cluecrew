@@ -66,6 +66,72 @@ export interface CitablePassage {
   gapCount?: number;
 }
 
+/**
+ * CHECK 11: A QUOTE SPAN IS CONTAINED IN THE ITEM WINDOW — IT IS NOT EQUAL TO IT.
+ *
+ * Quote-level `lineRefs` names WHERE THE QUOTATION SITS. Item-level `lineRefs` is the item's
+ * WINDOW — the span the disposals live in. Two different facts, and they agreed on six items by
+ * COINCIDENCE, which is exactly how a subset case establishes a rule that is wrong everywhere else.
+ *
+ * The evidence that settled it: this store held [56,57] for a quote whose item window is
+ * [56..62], and [57,58] against a window of [57,58,59]. Cowork's copies repeated the window onto
+ * the quote. An equality check passes the second and fails the first, and would have made the
+ * narrower — correct — value look like the defect.
+ *
+ * Cowork predicted this and built its check to FAIL rather than let the first subset case settle
+ * the rule silently. It worked, and this is the rule it was holding the door open for.
+ *
+ * Returns the lines that fall OUTSIDE the window. Empty means contained.
+ */
+export function quoteLinesOutsideWindow(
+  itemLineRefs: readonly number[] | null | undefined,
+  quoteLineRefs: readonly number[] | null | undefined,
+): number[] {
+  // No window declared is not a violation — there is nothing to be contained IN. An item with no
+  // window and a quote with lines is a different fault, and belongs to whatever checks the window.
+  if (!itemLineRefs?.length || !quoteLineRefs?.length) return [];
+  const window = new Set(itemLineRefs);
+  return [...quoteLineRefs].filter((n) => !window.has(n)).sort((a, b) => a - b);
+}
+
+/**
+ * ADDENDUM 36: THE ATTRACTOR AND THE DEFEATER.
+ *
+ * `attractorLine` is the line that makes a distractor attractive — what the child latches onto.
+ * `defeaterLine` is the line a correct reading uses to rule it out. Three rules:
+ *
+ *   1. BOTH OR NEITHER. Half the pair states an attraction with no defeat, or a defeat with
+ *      nothing to defeat; either is a claim that cannot be checked or acted on.
+ *   2. BOTH INSIDE THE ITEM'S WINDOW. A line outside `lineRefs` sends a reviewer to text the item
+ *      does not cover — the same fault the line-reference gate exists for, one level in.
+ *   3. THE DEFEATER IS NOT BEFORE THE ATTRACTOR. A defeater earlier in the passage than the thing
+ *      it defeats is not a defeater: it is a line the child had already read and passed. EQUAL is
+ *      allowed — one line can carry both the pull and the correction.
+ *
+ * Returns a reason per broken rule, empty when the pair is sound or absent.
+ */
+export function checkAttractorDefeater(input: {
+  itemLineRefs?: readonly number[] | null;
+  attractorLine?: number | null;
+  defeaterLine?: number | null;
+}): string[] {
+  const { itemLineRefs, attractorLine: a, defeaterLine: d } = input;
+  const out: string[] = [];
+  if (a == null && d == null) return out;
+  if (a == null || d == null) {
+    out.push(`only ${a == null ? 'defeaterLine' : 'attractorLine'} is set — both are required or neither`);
+    return out;
+  }
+  if (itemLineRefs?.length) {
+    const window = new Set(itemLineRefs);
+    if (!window.has(a)) out.push(`attractorLine ${a} is outside the item window ${itemLineRefs.join(', ')}`);
+    if (!window.has(d)) out.push(`defeaterLine ${d} is outside the item window ${itemLineRefs.join(', ')}`);
+  }
+  // Equal is legitimate; strictly earlier is not.
+  if (d < a) out.push(`defeaterLine ${d} comes before attractorLine ${a}`);
+  return out;
+}
+
 export interface LineRefFailure {
   where: string;
   rule:
@@ -73,6 +139,8 @@ export interface LineRefFailure {
     | 'line-out-of-range'
     | 'quote-not-verbatim'
     | 'quote-not-at-cited-lines'
+    | 'quote-span-not-contained'
+    | 'attractor-defeater'
     | 'citation-unit';
   detail: string;
 }

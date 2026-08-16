@@ -3597,3 +3597,50 @@ Verified by RE-READING each path acted on, never by counting survivors: 6 of 6 c
 14 confirmed present, 164 ENG items in the database after. Before the deletion, the five
 `stemRedraft.before` texts were read back from the database individually — pp-11 and pp-16 among
 them, the two that exist in no snapshot (R79).
+
+## R82 — CHECK 11 is containment, not equality
+*David, 2026-08-16. Cowork predicted it and built the check to fail rather than let a subset settle it.*
+
+Quote-level `lineRefs` names WHERE THE QUOTATION SITS. Item-level `lineRefs` is the item's WINDOW —
+the span the disposals live in. **Two different facts that agreed on six items by coincidence.**
+
+The two held fields settled it. This store held `[56,57]` against a window of `[56..62]`, and
+`[57,58]` against `[57,58,59]`; Cowork's copies repeated the window onto the quote. **An equality
+check passes the second and fails the first** — it would have called the narrower, truer value the
+defect, and the first subset case would have established the rule silently for everything after.
+
+The rule is CONTAINMENT: the quote span must sit inside the item window, never equal it.
+`quoteLinesOutsideWindow` in `packages/core/src/line-refs.ts`, run inside the line-reference gate,
+which reports how many spans it screened so a zero cannot read as a pass. 8 screened, 0 outside.
+The two held fields are RELEASED with the stored values.
+
+**A CONSEQUENCE OF ORDERING, recorded because it is a cost.** The loose copies were retired before
+this release, so `carry:quotes` can no longer recompute that disagreement — the source side is gone.
+The hashes are in `RETIRED-LOOSE-COPIES.json` and the values are in this entry, but the comparison
+itself is no longer re-runnable. Retire a copy and you retire the ability to re-derive every
+comparison that used it.
+
+## R83 — Prisma reverted the clock fix forty minutes after R80 was written
+*2026-08-16, on the very next `migrate dev`.*
+
+R80 fixed `ContentWriteLog.at` to store UTC and corrected the rows. The next routine `prisma migrate
+dev` — run to add unrelated columns — emitted `ALTER COLUMN "at" SET DEFAULT CURRENT_TIMESTAMP` and
+**put the local-time default straight back**.
+
+Nothing in the schema was wrong. Prisma cannot express `now() AT TIME ZONE 'UTC'`, so it read its
+own `@default(now())` as the truth, saw the database disagreeing, and corrected the database. **A
+hand-written migration is not durable against a generator that believes it owns the column.**
+
+**NOTHING BROKE, AND ONLY FOR ONE REASON:** the trigger sets `at` explicitly rather than relying on
+the default. That explicitness was a note in R80 — "set explicitly in the trigger body rather than
+left to the column default, because the default was what was wrong, and a trigger relying on it
+inherits whatever the next migration does to it." The next migration is exactly what happened.
+
+**The fix is REMOVAL, not restoration.** Setting the default back to UTC drifts again on the next
+`migrate dev`. The default is dropped entirely and `@default(now())` removed from the model, so
+there is no local-time fallback left for anyone to restore: the trigger supplies the value, and an
+insert that does not is an error rather than a silently-local row.
+
+**The general form:** when a hand-written migration and a generator disagree about a column, the
+generator wins on a schedule nobody is watching. Either express it in the generator's language, or
+remove the thing it thinks it owns.

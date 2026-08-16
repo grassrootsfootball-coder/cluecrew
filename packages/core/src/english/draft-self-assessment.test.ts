@@ -8,6 +8,7 @@
  */
 import { describe, expect, it } from 'vitest';
 import { inspectSource } from '../../../../scripts/check-review-queries';
+import { checkAttractorDefeater, quoteLinesOutsideWindow } from '../line-refs';
 import { describeDraftSelfAssessment, draftAssessmentSubjectHash, readDraftSelfAssessment } from './draft-self-assessment';
 
 const item = {
@@ -128,5 +129,69 @@ describe('check:review-queries legs', () => {
       `// ${COL} is not ${REV} and never will be`,
     );
     expect(v).toEqual([]);
+  });
+});
+
+describe('CHECK 11 — containment, not equality', () => {
+  // The two cases that settled the rule. An EQUALITY check passes the second and fails the first,
+  // making the narrower — correct — value look like the defect.
+  it('accepts a quote span narrower than the item window', () => {
+    expect(quoteLinesOutsideWindow([56, 57, 58, 59, 60, 61, 62], [56, 57])).toEqual([]);
+    expect(quoteLinesOutsideWindow([57, 58, 59], [57, 58])).toEqual([]);
+  });
+
+  it('accepts a span equal to the window', () => {
+    expect(quoteLinesOutsideWindow([4, 5], [4, 5])).toEqual([]);
+  });
+
+  it('names every line that reaches outside the window', () => {
+    expect(quoteLinesOutsideWindow([4, 5, 6], [5, 9, 3])).toEqual([3, 9]);
+  });
+
+  // No window is not a violation: there is nothing to be contained IN, and reporting one here
+  // would put the missing-window fault on the quote that did nothing wrong.
+  it.each([[null, [1, 2]], [[1, 2], null], [[], [1]], [[1], []]])(
+    'reports nothing when a side is absent or empty (%s, %s)', (win, q) => {
+      expect(quoteLinesOutsideWindow(win as number[] | null, q as number[] | null)).toEqual([]);
+    },
+  );
+});
+
+describe('Addendum 36 — attractor and defeater', () => {
+  const window = [10, 11, 12, 13];
+
+  it('accepts a sound pair inside the window', () => {
+    expect(checkAttractorDefeater({ itemLineRefs: window, attractorLine: 11, defeaterLine: 13 })).toEqual([]);
+  });
+
+  // One line can carry both the pull and the correction, so EQUAL is legitimate.
+  it('accepts attractor and defeater on the same line', () => {
+    expect(checkAttractorDefeater({ itemLineRefs: window, attractorLine: 12, defeaterLine: 12 })).toEqual([]);
+  });
+
+  it('accepts an absent pair — the backfill is scoped separately', () => {
+    expect(checkAttractorDefeater({ itemLineRefs: window })).toEqual([]);
+  });
+
+  it.each([
+    ['only the attractor', { attractorLine: 11 }, 'both are required'],
+    ['only the defeater', { defeaterLine: 11 }, 'both are required'],
+  ])('refuses %s', (_l, partial, expected) => {
+    expect(checkAttractorDefeater({ itemLineRefs: window, ...partial }).join(' ')).toContain(expected);
+  });
+
+  it('refuses a line outside the item window', () => {
+    const out = checkAttractorDefeater({ itemLineRefs: window, attractorLine: 9, defeaterLine: 13 });
+    expect(out.join(' ')).toContain('attractorLine 9 is outside');
+  });
+
+  // A defeater the child had already read and passed is not a defeater.
+  it('refuses a defeater before its attractor', () => {
+    expect(checkAttractorDefeater({ itemLineRefs: window, attractorLine: 13, defeaterLine: 11 }).join(' '))
+      .toContain('comes before');
+  });
+
+  it('still checks ordering when the item declares no window', () => {
+    expect(checkAttractorDefeater({ attractorLine: 13, defeaterLine: 11 })).toHaveLength(1);
   });
 });
