@@ -5126,6 +5126,50 @@ resolved to nothing here for a second, independent reason — there was no row t
 now exists and **0 options reference it**. The item is the gap, not the tag, and that is in the
 emission rather than left for Cowork to discover.
 
+## R132 — Where AGG-08 went, why VR has no notes, and the first two clusters LIVE
+*2026-08-16.*
+
+**1. `ENG-004-AGG-08` WAS REFUSED AT THE DOOR — TWICE, AND THE SECOND REASON IS THE ONE TO SEE.**
+Both refusals are in the receipts, so nothing was dropped or unemitted:
+- `misconception library` — *tagged `en-parallel-read-as-sequence`, which the library does not hold.*
+  **Now resolved: the entry exists (R131).**
+- `checkItemChildFacing` — *`[long-words]` 2 long words (max 1): 'ordinary, 'extraordinary.*
+
+The second still stands, and it is worth stating plainly: **the gate refused the item for containing
+the two words its own diagnosis is built on.** Her restatement turns on lines 35-40 giving what an
+ORDINARY observer would see and 41-46 what an EXTRAORDINARY one might — same girl, same moment, two
+watchers. The mechanism IS the pair. A long-word ceiling applied to a stem cannot know that, and
+rewording it would remove the item. Hers to rule: a declared exception, or the item goes.
+
+**2. THE VR NOTE GAP IS A DECISION, AND ONE WHOSE CONSEQUENCE WAS NEVER FACED.**
+**76% of VR's tagged options are GENERATED** (`gen-` ids, 1231 of 1612) — built by
+`buildDerivedVrDistractors` from a named misconception. There was never a per-option note because
+there was never a per-option authoring ACT: the generator was told to produce a step-direction error
+and did, so the tag IS the derivation. English is the opposite — **0 of 1166 generated**, every
+distractor authored, every one carrying a statement of what it executes.
+
+So her check is not UNRUN on VR; in that form it is **INAPPLICABLE**. A note cannot contradict its tag
+where no note was written. **But the fault it detects has a VR twin that nothing screens: a generator
+producing an option that does not execute the tag it was asked for.** That is re-derive-and-compare,
+not read-and-compare — different check, same question, and the 381 AUTHORED VR options have neither.
+VR holds all the LIVE items, so this is the district in front of children.
+
+**3. THE PER-CLUSTER GATE, AND THE FIRST TWO CLUSTERS ARE LIVE.**
+`pnpm check:cluster <id> [--publish]` asks both halves at once — can every item RECEIVE A VERDICT
+(the door's own `publishBlockers`, `inactiveMisconceptions`, `checkItemChildFacing`) and can every
+item BE DELIVERED (routes, stem, passage, citations). **An item that cannot be delivered is not
+shippable however clean its content is** — R120's finding made into a precondition rather than a
+report.
+
+**A cluster ships whole or not at all**, because a child meets it whole. Verified in both directions
+before publishing anything: ENG-003 refuses on 34 items (`no-family:en-spag-*`), and a cluster name
+matching nothing REFUSES as a typo rather than passing as an empty clean set.
+
+**ENG-028 (12) and ENG-001 (22) are LIVE** — 34 items, each with an AttributionEvent naming the
+tranched-shipping ruling, serving order preserved. **The first English items ever to reach a child.**
+337 remain DRAFT, and 337 of 371 could be delivered, which is now two different numbers about two
+different things and both are true.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 
