@@ -4091,6 +4091,8 @@ confirming the transfer file's claim. **268 of 274 remain UNKNOWN**, and they sa
 - `clusterPosition` and `options[].tagStatus` were on the carriage list and had no columns; added, and the import refused until they did.
 - Item order is `Item.clusterPosition`, backfilled on all 174 and applied in `itemPool` before any take, so a partial serve keeps relative order.
 - The 463 `human:staff-reviewer` rows touch **0 ENG items**. Parked.
+- Misconception-reject e2e times out on `waitForURL('**?rejected=1')`; reproduces on the pre-change tree, so not from the signature work. Cause unknown. Logged, not chased.
+- Every server action redirected unconditionally after a write and none re-read it — a swallowed error still rendered as success. Fixed on the item doors; the finding is the pattern, not the Prisma client.
 
 ## R99 — The migration history did not rebuild the database, and every check reads the database
 *2026-08-16, found by Prisma refusing to migrate.*
