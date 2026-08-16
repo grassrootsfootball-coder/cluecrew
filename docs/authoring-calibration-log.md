@@ -4207,6 +4207,73 @@ A retired tag refuses a verdict exactly as an unapproved one does, so those ten 
 nothing says so. Found by asking the store for every non-ACTIVE tag rather than by reading the row
 about ENG-001 — R86's shape again: the sheet is not the population.
 
+## R106 — The number between here and a signed bank, measured instead of assembled
+*David, 2026-08-16. "Every account of it so far has been assembled from sheets rather than from the store."*
+
+**224 of 371 English items would refuse a verdict today. 147 would take one.** `pnpm
+check:verdict-refusals`, screening the store.
+
+Three sheets had been answering this between them and none of them was answering it: row 8 counted
+unapproved tags (172, wrong by 43), row 7 counted the retired one in ENG-001 (1 of 6, true of that
+cluster and silent about ten more), row 3 counted weak distractors (not a refusal at all). Different
+populations, none of them the door.
+
+**THE CHECK CALLS THE DOOR'S OWN CODE, WHICH REQUIRED MOVING IT** (R41). `publishBlockers` was
+private inside `admin-items.ts`, so any district survey had to reimplement its four conditions —
+the M-column fault exactly, and it would have been reported as a measurement of the door. It now
+lives in `packages/core/src/verdict-blockers.ts` and both call it; `assertMisconceptionsActive`
+likewise decides through the shared `inactiveMisconceptions`.
+
+| route | items | whose |
+|---|---|---|
+| `tag-proposed` | 215 | hers — the approval batch releases them |
+| `tag-retired` | 11 | Cowork's — the items need retagging |
+| `child-facing-copy` | 4 | Cowork's — reword, never exempt |
+| `no-correct-option`, `missing-misconceptions`, `tag-missing`, `similarity-review` | 0 | measured clean |
+| `unanswerable` | **NOT SCREENED** | — |
+
+**ONE ROUTE IN CODE, THREE CAUSES IN THE STORE.** The door collapses PROPOSED, RETIRED and
+no-row-at-all into one string, `unapproved-misconception`. They are three different jobs belonging
+to two different people, and a single number tells the reviewer the wrong thing about her own
+workload. Split at the report, not at the door.
+
+**AND THE CHECK'S OWN ZEROS NEEDED R60 TURNED ON THEM.** Four of eight routes came back zero on the
+first run and they were not the same kind of zero. `unanswerable` depends on `check:word-puzzles`,
+which names ten VR `questionTypeId`s explicitly — **no English item can ever carry that flag**, so
+its zero is guaranteed by scope and would read as a clean bill for a test never administered. It
+now prints `NOT SCREENED`. `similarity-review` looked identical and was not: the scan filters on
+status only, so English is in scope, and it screened 729 unpublished items against 2114 fingerprints
+for 0 — the flag COLUMN is empty bank-wide only because CI runs without `RETRO`, which is what
+writes flags. Screen clean and column empty are different facts and only one is a finding; the
+route now records which. **R61's fourth shape found inside a check written to apply R61.**
+
+**Six items fail more than one route**, so fixing the first would not release them — the thing a
+short-circuiting door cannot show and the reason this one does not short-circuit.
+
+## R107 — The approval batch goes to her on paper, and 209 of the 215 are her own sentences
+*David, 2026-08-16. Her defect ruling 8.*
+
+`export:approval-batch` now emits the sheet as well as the JSON — same nine entries, same order,
+same strings, **one projection under one hash** (R88: the fault it names is a stamp computed from
+something other than what shipped). She reviews on paper and never signs in, so the JSON was never
+a delivery to her; it was a delivery about her decision.
+
+**THE EXPORT'S OWN PROSE CARRIED THE WRONG NUMBER, HARD-CODED.** Its `note` field read "Nine
+entries, 172 items" as a literal while the code three lines below counted 215 and printed it. The
+artefact contradicted itself and the prose is the half a reader believes. Computed now.
+
+**209 OF THE 215 HANG ON TWO ENTRIES WHOSE HINTS ARE RECORDED AS HER OWN WORDS.**
+`en-within-span-wrong-element` (174) and `en-negation-dropped` (35) both carry
+`hintAuthorKind: PERSON, hintAuthoredBy: Annie`. Four entries are Cowork's (55 items) and three
+have no provenance at all (3 items) and say UNKNOWN rather than nothing (R98). So the batch is
+overwhelmingly a request that she confirm sentences she wrote — which is a different act from
+reviewing ours, and the sheet has to say which it is asking for on each entry, because **a hint we
+wrote and she approved unchanged is indistinguishable from one she wrote.**
+
+The first rendering printed the provenance object raw. On paper that buried the authorship line
+inside a serialised blob — R98's failure mode one layer out: the record was TRUE and unreadable,
+and unreadable is how a true record gets corrected to a false one.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 

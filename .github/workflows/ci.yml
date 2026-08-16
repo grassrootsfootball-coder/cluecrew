@@ -192,6 +192,13 @@ jobs:
       - name: Signing doors (a signature names a reviewer)
         run: pnpm check:signing-doors
 
+      # R106: the door's own blockers, run over the whole district. It REPORTS rather than fails —
+      # 224 refusals is the current true state and blocking on it would block every push until the
+      # reviewer has ruled. What it must not do is go quiet: a route it cannot screen prints
+      # NOT SCREENED rather than 0.
+      - name: Verdict refusals (what stands between the bank and a signature)
+        run: pnpm check:verdict-refusals
+
       - name: Register check (every cited rule has a register entry)
         run: pnpm check:register
 

@@ -2,7 +2,7 @@
 
 import { redirect } from 'next/navigation';
 import { z } from 'zod';
-import { checkItemChildFacing, checkSolution, draftAssessmentSubjectHash, fingerprintItem, isBlocking, mathsPlanFileSchema, screenAgainstIndex, stemSchema } from '@cluecrew/core';
+import { checkItemChildFacing, checkSolution, draftAssessmentSubjectHash, fingerprintItem, inactiveMisconceptions, isBlocking, mathsPlanFileSchema, publishBlockers, screenAgainstIndex, stemSchema } from '@cluecrew/core';
 import mathsPlanContent from '../../../../content/maths-district-plan.json';
 
 const mathsPlan = mathsPlanFileSchema.parse(mathsPlanContent);
@@ -21,8 +21,11 @@ async function assertMisconceptionsActive(
 ): Promise<string | null> {
   const ids = [...new Set(options.map((option) => option.misconceptionId).filter(Boolean))] as string[];
   if (ids.length === 0) return null;
-  const active = await prisma.misconception.count({ where: { id: { in: ids }, status: 'ACTIVE' } });
-  return active === ids.length ? null : 'unapproved-misconception';
+  const rows = await prisma.misconception.findMany({ where: { id: { in: ids } }, select: { id: true, status: true } });
+  // The DECISION is `inactiveMisconceptions` in core, so the district survey screens on the same
+  // rule this door enforces. A tag with no row at all is inactive here, as it was under the count.
+  const inactive = inactiveMisconceptions(options, new Map(rows.map((r) => [r.id, r.status])));
+  return inactive.length === 0 ? null : 'unapproved-misconception';
 }
 
 const optionSchema = z.object({
@@ -197,35 +200,11 @@ export async function returnWithNotesAction(formData: FormData): Promise<void> {
   redirect(`/admin/items/${itemId}`);
 }
 
-function publishBlockers(
-  options: Array<{ isCorrect: boolean; misconceptionId: string | null }>,
-  reviewer: string | null,
-  authoredBy: string,
-  /**
-   * THE ANSWERABILITY FLAG (David's ruling, 2026-08-02). Set by
-   * `pnpm check:word-puzzles` when an item's own stated rule does not produce
-   * its key — no valid answer at all, or a different one.
-   *
-   * There is no clearing path and that is deliberate. A similarity flag is a
-   * judgement a reviewer can make: coincidence or derivation. This is not a
-   * judgement. The child cannot answer the question correctly, so a signature
-   * saying otherwise would only record that someone did not check. The flag
-   * lifts when the item is fixed and the gate stops setting it.
-   *
-   * Checked in `publishBlockers` rather than at each call site because all
-   * three routes to REVIEWED already run this, and a fourth route added later
-   * gets it for free.
-   */
-  answerFlaggedAt?: Date | null,
-): string | null {
-  if (answerFlaggedAt) return 'unanswerable';
-  if (!options.some((option) => option.isCorrect)) return 'no-correct-option';
-  if (options.some((option) => !option.isCorrect && !option.misconceptionId)) {
-    return 'missing-misconceptions';
-  }
-  if (reviewer && reviewer === authoredBy) return 'own-item';
-  return null;
-}
+/**
+ * `publishBlockers` MOVED TO `@cluecrew/core` (2026-08-16). It was private here, so the only way to
+ * ask "how many items would refuse a verdict district-wide" was to reimplement its conditions —
+ * R41's fault exactly. The door and any checker now call the same function.
+ */
 
 /**
  * The child-facing COPY gate for a whole item — the same `checkItemChildFacing`
