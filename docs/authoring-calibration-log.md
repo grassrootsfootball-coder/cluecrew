@@ -3327,3 +3327,88 @@ is ruled. That is the mechanism working, not a bug to route around.
 **A GUESS THAT HAPPENS TO BE RIGHT IS STILL A GUESS.** The importer wrote the literal
 `'ai-draft:cowork-okafor-v1'` into `authoredBy`, a provenance column, ignoring the field in the
 source. It matched on all 96. It now reads the field.
+
+## R75 — Two things are both called review, and only one of them is a person
+*David, 2026-08-16.*
+
+Cowork stores a `preReview` on 78 items. Its verdict takes exactly two values: `PASS_TO_HUMAN`
+(62) and `FIXED_THEN_PASS` (16). **Both terminate in "a human has not looked yet."** It is a
+drafting agent's assessment of its own work — a READINESS claim from the opposite end of the
+process from Annie's ratification, not a lesser sign-off, and it must never be readable as one.
+Model the two as one thing and an agent's self-assessment looks like a reviewer's sign-off in the
+store that ships. That is the worst failure available here.
+
+**The ruling:** it crosses, as AUTHORING METADATA, structurally unreachable from the reviewer path.
+`Item.authoringPreReview` — not `reviewedBy`, not `reviewRecordedBy`, nothing `recordSignature`
+writes.
+
+**Three things the reviewer path has that it does not**, none incidental. NO ACTOR: it names no
+agent, no version, no instance, so the naming path has nothing to resolve. NO SEPARATION of whose
+judgement from who recorded it — the working half of that design. NO SUBJECT: it asserts nothing
+about what it assessed, so it survives any later edit, which is the exact failure `subjectHash` was
+added to prevent on `AttributionEvent`. Carrying that across unfixed would import a known defect,
+so this side computes one over the stem, the options in stored order with their key flags, and the
+tier. `check:pre-review-subject` reports a superseded claim and REFUSES TO REPAIR IT — re-hashing
+would make the claim true by moving its subject.
+
+**CAREFUL NAMING IS NOT A CONTROL.** `check:review-queries` is, in the shape of
+`check:signing-doors`: leg A, the column may be named only in a declared door, and a STALE door
+refuses too, because an exemption nobody can see is a hole; leg B, no line may bind it to a
+review-decision symbol, door or not. An empty screen refuses: if no file names the column, the
+symbol was renamed and the gate watches a name that does not exist.
+
+**Leg B was file-level first and cried wolf** — it flagged the schema for declaring both columns in
+one model, flagged the gate for listing the symbols as data, and flagged the import door for
+selecting `reviewedBy` to prove it had changed no review state. Three true statements, none of them
+the fault; the same shape as the bare-literal version of `check:signing-doors`. Narrowed to
+line-level, it then caught a real line in my own import door, which read the claim and the review
+state in one select. Split into two queries: they are different facts from different sources, and
+the code now expresses the separation instead of asserting it in a comment while doing the opposite.
+
+**THE RE-DERIVABLE RUBRIC KEYS ARE MARKED, AND THE MARKING TRAVELS WITH THE VALUE.** `readingAge`,
+`banList` and `keyVerified` are computed by gates this repo already runs, so `describePreReview`
+names the gate beside each one. Stored on nobody's authority is fine; mistaken later for findings is
+not — a bare `readingAge: 7.6` reads exactly like a measurement.
+
+**Said plainly, because it was better than assumed:** the naming path is in good shape. Two
+reviewers with evidence, `heldFrom`/`heldUntil` bounding the window, 46 signatures all carrying a
+`reviewerId`, one door with a gate on it. And: 164 English items, all DRAFT, `reviewedBy` on 0, not
+one SIGNED event. That is correct, and it is also the whole remaining distance.
+
+## R76 — A boundary that only catches writes made through the boundary
+*David, 2026-08-16, from a fault found by a refusal rather than by reading.*
+
+Two of 715 stored options carried NO label. The letter is derived at render time from position, so
+both items read perfectly, no gate had anything to object to, and both survived every check in the
+repo. Neither carried an attribution event. No script in this repo writes a single option's content
+except the normalisation pass, which always writes a label. No commit references either id.
+
+**The write was not suspicious. It was UNACCOUNTABLE**, which is worse: nothing could say what did
+it, or when, or whether anything else went with it.
+
+**So the boundary is a database TRIGGER, not a wrapper.** `ContentWriteLog` records every INSERT,
+UPDATE and DELETE on `Item`, `ItemOption`, `Misconception` and `Word`, with the columns that
+actually changed, the database user, the client's `application_name` and the transaction id.
+Application code cannot opt out of a trigger, which is the whole point — a write from a script,
+from Prisma Studio, from psql or from another agent entirely lands identically. An UPDATE that
+changes nothing is still recorded, with an empty column list: "something wrote here and changed
+nothing" is a different fact from "nothing wrote here".
+
+`check:outside-writes` compares that record against `AttributionEvent` and names any write with no
+ruling behind it. It fails on reviewed content and reports on DRAFT.
+
+**THE DENOMINATOR IS THE BOUNDARY'S AGE, AND IT PRINTS ON EVERY RUN.** Every write before
+2026-08-16 is invisible to it and always will be — including the two unlabelled options that
+prompted it. "0 unattributed writes" without that sentence would be the most misleading true
+statement available.
+
+**A third class, and it is permanent.** A write to an option that has since been deleted cannot be
+resolved to an item, because the log names the option and there is nothing left to look it up
+against. Reported as UNRESOLVABLE rather than counted either way — and the pass line then says
+"every RESOLVABLE write", never the bare version. Two writes I could not screen and a clean-sounding
+headline is precisely R60.
+
+**Recorded because it happened:** the canary that proved the trigger works then deleted its own four
+log rows, before append-only was settled. Two rows it could not match by id survive and show as
+unresolvable. A boundary whose first act was an undeclared prune of itself belongs in writing rather
+than tidied away.

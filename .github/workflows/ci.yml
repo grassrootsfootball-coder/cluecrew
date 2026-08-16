@@ -205,6 +205,15 @@ jobs:
       - name: Exported gate libraries match the database
         run: pnpm check:gate-library-fresh
 
+      # THE WRITE BOUNDARY. Database TRIGGERS record every mutation of a content table, so
+      # application code cannot opt out -- a write from a script, from Prisma Studio, from psql or
+      # from another agent lands identically. This compares that record against AttributionEvent
+      # and names any write with no ruling behind it. It FAILS only on reviewed content; an
+      # unattributed write to a DRAFT row is reported. It also states the boundary's install date
+      # on every run, because every write before that is invisible to it and always will be.
+      - name: Outside writes (a change nobody decided)
+        run: pnpm check:outside-writes
+
       # TWO THINGS ARE BOTH CALLED REVIEW. Cowork's preReview is a drafting agent assessing its
       # own work -- both its verdict values mean a human has NOT looked -- and Annie's ratification
       # resolves to a named individual through the naming path. Model them as one and a

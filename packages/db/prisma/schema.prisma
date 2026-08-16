@@ -1170,3 +1170,45 @@ model Reviewer {
 
   @@index([resolvesActor, heldFrom])
 }
+
+/// THE WRITE-BOUNDARY RECORD — every mutation of a content table, written by a database TRIGGER.
+///
+/// Not a convention and not a wrapper: application code cannot opt out of it, because it is not
+/// application code. A write from a script, from Prisma Studio, from psql or from another agent
+/// entirely lands here identically.
+///
+/// WHY IT EXISTS AS A ROW RATHER THAN A RULE. Two of 715 stored options were found carrying no
+/// label. The letter is derived at render time from position, so both items read perfectly and no
+/// gate had anything to object to; neither carried an attribution event, no script in this repo
+/// writes a single option's content except the normalisation pass, and no commit referenced either
+/// id. The write was UNATTRIBUTABLE — not suspicious, simply unaccountable. `pnpm
+/// check:outside-writes` compares this record against AttributionEvent and names any write with no
+/// ruling behind it.
+///
+/// APPEND-ONLY BY DESIGN. Nothing updates or deletes a row here; the triggers only insert.
+/// Recorded because it happened: the trigger canary that proved this table works then DELETED its
+/// own four log rows, before that rule was settled. Two rows it could not match by id survive and
+/// show in `check:outside-writes` as unresolvable. Reported rather than tidied away — a boundary
+/// whose first act was an undeclared prune of itself is worth having in writing.
+model ContentWriteLog {
+  id              BigInt   @id @default(autoincrement())
+  /// "Item" | "ItemOption" | "Misconception" | "Word"
+  tableName       String
+  recordId        String
+  /// INSERT | UPDATE | DELETE
+  op              String
+  /// On UPDATE, the columns whose value actually changed. Empty on INSERT and DELETE, and an
+  /// UPDATE that changed nothing is recorded with an empty list rather than dropped.
+  changedColumns  String[]
+  /// Who the DATABASE thinks did it, and what the client called itself. Both are advisory --
+  /// application_name is set by the client -- but an unattributable write with a name on it is a
+  /// far shorter search than one without.
+  dbUser          String
+  applicationName String
+  /// Groups every row written in one transaction, so a single door's batch reads as one act.
+  txId            String
+  at              DateTime @default(now())
+
+  @@index([tableName, recordId])
+  @@index([at])
+}
