@@ -4031,3 +4031,75 @@ Reconstructing only `sourceHash` and `snapshotOf` from the flat shape DROPPED th
 and the artefact fell back to the heuristic — which then read `stampedOver` itself as part of the
 payload it was meant to describe. 12 of 14 screened artefacts now cover exactly what they ship; 38
 remain unscreened and named.
+
+## R97 — The two cannot be identified, because this store records no approval at all
+*David's question, 2026-08-16. Answered by reading the rows.*
+
+The question was which two of seven library entries record a person's approval where a machine
+drafted to her ruling. **The answer inverts the premise twice.**
+
+**FIRST: THE SPLIT IS 2 PERSON / 5 MACHINE, NOT 5 / 2.** Cowork's own `_meta.hintProvenance`, on
+three files I hold and can quote:
+  · `PLATFORM-IMPORT-english-misconceptions` (sha `293148522d245026`): *"TWO entries carry Annie's
+    approved hint text VERBATIM… FIVE carry hints I drafted."*
+  · `PLATFORM-IMPORT-BATCH-1` (sha `ee4bc48d5ce18153`) names them individually: within-span and
+    negation-dropped are Anne's own words; neighbouring-sense and form-lookalike are drafts she
+    approved unchanged.
+  · `PLATFORM-IMPORT-BATCH-2` (sha `dcaf4b228ff0a722`): both drafts, approved unchanged.
+
+So it IS recoverable — from Cowork's side, in files Cowork wrote. Whether Cowork still holds them
+is a different question from whether they ever existed.
+
+**SECOND, AND THIS IS THE ONE THAT MATTERS: THERE ARE NO FALSE APPROVALS IN THIS LIBRARY, BECAUSE
+THERE ARE NO APPROVALS.** All six of the seven present here carry `approvedBy: null`,
+`recordedBy: null`, `approvalMethod: null`, `approvalNote: null`, status PROPOSED,
+`proposedBy: ai-draft:cowork-okafor-v1`, and **zero attribution events between them**. The seventh,
+`en-vocab-dominant-sense`, is absent entirely (R85).
+
+The `approvedBy: Anne` exists only in the transfer file. **It never crossed.** The platform library
+never asserted it, so no row here carries a reviewer's approval that a reviewer did not give — the
+loaded gun was in the file, and the door held. That is the import door being conservative and it is
+worth saying plainly, because the same file has now produced three faults and this is the first
+thing about it that went right.
+
+**THE DISTINCTION THAT WAS MISSING IS REAL EVEN SO.** "Drafted by the agent, approved unchanged"
+IS the reviewer's approval — she approved. It is not her authorship. Both read identically as
+`approvedBy: Anne`, and that is what nothing could tell apart.
+
+## R98 — Provenance on the row, and UNKNOWN is not ABSENT
+*David, 2026-08-16, as the general repair.*
+
+`Misconception.textProvenance` records where the text came from, who authored it, who approved it,
+by what method, on what date, **and which of those are machine and which are person**.
+
+**NULL MEANS UNKNOWN, NEVER ABSENT.** Cowork corrected a TRUE record of Annie's approval to false
+because it looked on its own disk, found nothing, and treated silence as evidence. The export now
+emits `{state: 'UNKNOWN'}` for a row with nothing recorded, so an entry whose source cannot be seen
+reads as unknown rather than unsourced — the same distinction as `CARRIED?` on the return leg, and
+the same one as R60's loud zero.
+
+Six rows recorded from Cowork's quoted, hashed declarations: 2 PERSON, 4 MACHINE. Each row also
+records that **this store holds no approval for it**, so the provenance cannot later be read as
+confirming the transfer file's claim. **268 of 274 remain UNKNOWN**, and they say so.
+
+## R99 — The migration history did not rebuild the database, and every check reads the database
+*2026-08-16, found by Prisma refusing to migrate.*
+
+I hand-picked two migration timestamps and got them the wrong way round.
+`20260816122500_addendum_36_and_write_log_no_default` DROPS the default on `ContentWriteLog.at`;
+`20260816125500_write_log_utc` SETS it. Replaying the history therefore converges on the UTC
+expression default, while the live database has none.
+
+**THE LIVE DATABASE WAS RIGHT AND THE HISTORY WAS WRONG, WHICH IS THE WORSE DIRECTION.** Every
+check in this repo reads the live database. `check:db-invariants` — written that same hour, for
+exactly this class of fault — reported 13 of 13 holding, and **a database rebuilt from migrations
+would have failed that very invariant.** The instrument was sound and the thing it measures had
+quietly stopped being reproducible.
+
+R80's family again, one layer further out: not a wrong clock, but a wrong RECORD of how the state
+came to be. `pnpm check:migration-replay` (`prisma migrate diff --from-migrations … --exit-code`)
+now asserts that history rebuilds the live schema, and it is in CI ahead of the invariants it
+protects. Corrected by restating the DROP last — R83's decision, in the right order this time.
+
+Found because Prisma refused to run a routine migration, which is luck of the R90 kind: a tool
+declining to proceed is not a check, and nothing was watching this until now.

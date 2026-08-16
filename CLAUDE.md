@@ -232,6 +232,18 @@ here has no register entry. A ruling goes to the register FIRST; it comes here o
   one of them on a routine `migrate dev` and only luck caught it. `pnpm check:db-invariants` asserts
   each fact AND requires that every hand-written fact HAVE an assertion, so the next hand-written
   migration cannot land unasserted. A stale invariant fails rather than passing vacuously.
+- **UNKNOWN IS NOT ABSENT, ON A ROW AS MUCH AS IN A COUNT** (David, 2026-08-16 — R98). Every
+  library entry carries `textProvenance`: where the text came from, who authored it, who approved
+  it, by what method, on what date, and WHICH OF THOSE ARE MACHINE AND WHICH ARE PERSON. A hint the
+  reviewer wrote and a hint an agent wrote that she approved unchanged are both `approvedBy: Anne`
+  and only one is in her words. A row with nothing recorded exports as `{state: 'UNKNOWN'}`, never
+  as unsourced — Cowork corrected a TRUE record of her approval to false by finding nothing on its
+  own disk and reading the silence as evidence. 6 of 274 recorded; the rest say UNKNOWN.
+- **THE MIGRATION HISTORY MUST REBUILD THE LIVE SCHEMA** (2026-08-16 — R99). Two hand-picked
+  timestamps went in the wrong order, so replaying history converged on a default the database did
+  not have. EVERY CHECK HERE READS THE LIVE DATABASE, so `check:db-invariants` passed 13 of 13
+  while a database rebuilt from migrations would have failed that same invariant. `pnpm
+  check:migration-replay` asserts it, ahead of the invariants it protects.
 - Content decisions (items, chapters, misconceptions) go through the CMS
   review pipeline; nothing skips the reviewer.
 - **PILOT CONTENT UNDER ACTIVE REVIEW HAS ONE WRITE PATH: `scripts/lib/pilot-review.ts`, NEVER A

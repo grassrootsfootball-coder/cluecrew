@@ -507,6 +507,19 @@ model Misconception {
   // step containing the slip, and authored correction options. The engine
   // never generates text (S3) — evaluation is deterministic.
   teachback      Json?
+  /// PROVENANCE OF THE TEXT ON THIS ROW (David, 2026-08-16). Where the text came from, who
+  /// authored it, who approved it, by what method, on what date — and WHICH OF THOSE ARE MACHINE
+  /// AND WHICH ARE PERSON.
+  ///
+  /// The distinction it exists to hold: a hint Anne WROTE and a hint a drafting agent wrote that
+  /// Anne APPROVED UNCHANGED are both approved by her, and only one is in her words. Nothing in
+  /// this row could tell them apart, and `approvedBy: Anne` reads identically for both.
+  ///
+  /// NULL MEANS UNKNOWN, NEVER ABSENT. Cowork corrected a TRUE record of Annie's approval to false
+  /// because it looked on its own disk, found nothing, and treated absence as evidence. An entry
+  /// whose source cannot be seen is UNKNOWN — the same distinction as CARRIED? on the return leg.
+  /// `state: 'RECORDED'` is the only value that asserts anything.
+  textProvenance Json?
   options        ItemOption[]
   optionTags     ItemOptionTag[]
   // The two-ids AXIS (annie, 2026-08-06): PROCESS ids (PROC-01, #71/#72/#99/#100)

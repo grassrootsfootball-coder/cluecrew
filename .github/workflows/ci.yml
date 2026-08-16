@@ -232,6 +232,14 @@ jobs:
       # routine `migrate dev` can silently overwrite. It already overwrote one (R83). Two halves:
       # every invariant must hold, and every hand-written fact must HAVE an invariant, so the next
       # hand-written migration cannot land unasserted.
+      # THE HISTORY MUST REBUILD THE STATE. Two hand-picked migration timestamps went in the wrong
+      # order -- the DROP DEFAULT dated earlier than the SET -- so replaying history converged on a
+      # default the live database did not have. Every check here reads the LIVE database, so
+      # check:db-invariants passed 13 of 13 while a database rebuilt from migrations would have
+      # failed that exact invariant. The record must reproduce the state it describes.
+      - name: Migration replay (history rebuilds the live schema)
+        run: pnpm check:migration-replay
+
       - name: Database invariants (what Prisma can silently overwrite)
         run: pnpm check:db-invariants
 

@@ -87,6 +87,11 @@ async function libraryEntries(prisma: typeof defaultPrisma) {
       sourcePattern: m.sourcePattern,
       teachback: m.teachback,
       testedTokens: m.testedTokens,
+      // PROVENANCE OF THE TEXT. Absent means UNKNOWN, never absent — an entry whose source this
+      // store cannot see is one nobody should treat as unsourced. That distinction is the whole
+      // repair: Cowork corrected a true record of Annie's approval to false because it found
+      // nothing on its own disk and read the silence as evidence.
+      textProvenance: m.textProvenance ?? { state: 'UNKNOWN', note: 'no provenance recorded on this row' },
     };
   });
 }
