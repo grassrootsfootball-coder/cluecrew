@@ -52,7 +52,21 @@ export default function ComprehensionEngine({
     const target = firstCitedRef.current;
     const box = scrollRef.current;
     if (!target || !box) return;
-    box.scrollTo({ top: target.offsetTop - box.offsetTop - 12, behavior: 'smooth' });
+    // A little above the first cited line, so she sees the line before it and knows where she is.
+    //
+    // BEHAVIOUR IS CHOSEN, NOT ASSUMED. `smooth` is ignored outright in some engines and settings —
+    // it moved nothing at all in verification while `auto` scrolled correctly — and reduced motion
+    // is a core feature here, not an add-on (D4). So: instant when motion is reduced OR when smooth
+    // is unavailable, and the scroll is CONFIRMED afterwards rather than trusted. A control that
+    // silently does nothing is the failure this whole district is about.
+    const top = Math.max(0, target.offsetTop - 12);
+    const reduced = typeof matchMedia === 'function'
+      && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    box.scrollTo({ top, behavior: reduced ? 'auto' : 'smooth' });
+    // If nothing has moved shortly after, the smooth path was ignored: land her there anyway.
+    window.setTimeout(() => {
+      if (box.scrollTop < top - 24) box.scrollTop = top;
+    }, 400);
   }, []);
 
   const needsPassage = typeof stem.passageRef === 'string' && stem.passageRef.length > 0;
@@ -70,7 +84,20 @@ export default function ComprehensionEngine({
     );
   }
 
-  let seenFirstCited = false;
+  /**
+   * WHICH LINE THE CONTROL SCROLLS TO, COMPUTED PURELY AND BEFORE RENDER.
+   *
+   * The first version decided this DURING the map, with `!seen && (seen = true)` — a mutation in
+   * render to pick which element got the ref. It typechecked, it read correctly, and the ref was
+   * never attached, so "go to lines" silently did nothing: `goToLines` returned early on a null ref
+   * and the passage sat still. Found by tapping it in a browser and watching `scrollTop` stay at 0.
+   *
+   * Mutating during render is unsafe under React's double-render, and the failure mode is exactly
+   * the one this district keeps producing: correct-looking code that quietly does nothing.
+   */
+  const firstCitedIndex = passage
+    ? passage.lines.findIndex((l) => l.n !== null && cited.has(l.n))
+    : -1;
 
   return (
     <div>
@@ -102,6 +129,12 @@ export default function ComprehensionEngine({
             ref={scrollRef}
             data-testid="passage-scroll"
             style={{
+              // `position: relative` IS LOAD-BEARING, not decoration. `offsetTop` is measured from
+              // the nearest POSITIONED ancestor, and without this the cited line's offset was
+              // measured against something outside the box — so "go to lines" computed a target of
+              // roughly zero and scrolled nowhere. It looked correct in every static check and
+              // failed only when tapped.
+              position: 'relative',
               maxHeight: '46vh', overflowY: 'auto', padding: '0.6rem 0.7rem',
               border: '1px solid #d8d8d8', borderRadius: 8, background: '#fffdf8',
               fontSize: '1.02rem', lineHeight: 1.55,
@@ -114,11 +147,10 @@ export default function ComprehensionEngine({
                 return <div key={`sep-${i}`} style={{ height: '0.6rem' }} aria-hidden="true" />;
               }
               const isCited = line.n !== null && cited.has(line.n);
-              const isFirstCited = isCited && !seenFirstCited && (seenFirstCited = true);
               return (
                 <p
                   key={line.n ?? `x-${i}`}
-                  ref={isFirstCited ? firstCitedRef : undefined}
+                  ref={i === firstCitedIndex ? firstCitedRef : undefined}
                   style={{
                     margin: 0, display: 'flex', gap: '0.7rem',
                     // HIGHLIGHTED, NEVER ISOLATED. Every line stays readable and legible; the

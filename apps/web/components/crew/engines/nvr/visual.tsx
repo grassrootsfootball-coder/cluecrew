@@ -12,7 +12,11 @@
  * the child payload (core serving.childPayload), which carries no key and no
  * misconception tags.
  */
-import { renderVisual, type NvrDecoration, type Visual } from '@cluecrew/core';
+// Deep imports, not the barrel: `@cluecrew/core` re-exports a module that imports `node:crypto`,
+// which cannot be bundled for the browser. Typechecks either way; only the build knows (R123).
+import { renderVisual } from '@cluecrew/core/nvr/svg';
+import type { NvrDecoration } from '@cluecrew/core/nvr/templates';
+import type { Visual } from '@cluecrew/core/nvr/grammar';
 import { OptionButton } from '../option-button';
 import { outcomeFor, type EngineProps, type ItemOptionView } from '../shared';
 

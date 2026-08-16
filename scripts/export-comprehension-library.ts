@@ -36,9 +36,53 @@ export async function exportComprehensionLibrary(): Promise<{ count: number; pat
     orderBy: { id: 'asc' },
     select: { id: true, status: true, description: true, childHint: true, category: true },
   });
-  const comprehension = rows.filter(
-    (r) => r.id.startsWith('en-') && !SPAG.some((s) => r.id.includes(s)),
-  );
+  /**
+   * CLASSIFIED BY CARRIER, NEVER BY ID (David's ruling, 2026-08-16). See below for what the id
+   * string cost.
+   *
+   * This read `r.id.includes(s)` over a list containing `'relative-pronoun'`, so
+   * `en-relative-pronoun-choice` — a COMPREHENSION entry the reviewer approved on 16 August — was
+   * classified SPaG and silently dropped. She approved an entry that then never crossed, and it was
+   * found by Cowork noticing the sheet named something the export did not contain.
+   *
+   * A substring test cannot tell a category from a word that happens to appear inside an id, and it
+   * fails SILENTLY and OUTWARD: it removes rows without reporting that it removed them. R57's shape
+   * in a filter — the door that drops what it cannot name.
+   *
+   * Whole-segment matching: `en-relative-pronoun-choice` splits to
+   * [relative, pronoun, choice] and never matches the segment `relative-pronoun` as a unit unless
+   * the id genuinely carries it as consecutive segments... so the list is matched against the id's
+   * SEGMENT RUNS, and every exclusion is REPORTED by id rather than made quietly.
+   */
+  // WHAT AN ENTRY IS, IS WHAT CARRIES IT. The id list was wrong in BOTH directions on the same
+  // sheet: it dropped `en-relative-pronoun-choice` because the string contains "relative-pronoun",
+  // and it KEPT `en-determiner-omitted` because no string matched — and both are carried only by
+  // `en-spag-cloze` items. One entry the reviewer approved never crossed; another crossed into the
+  // wrong library carrying her own rewritten hint. A substring is not a fact about an entry.
+  const carriers = await prisma.itemOption.findMany({
+    where: { misconceptionId: { in: rows.map((r) => r.id) } },
+    select: { misconceptionId: true, item: { select: { questionTypeId: true } } },
+  });
+  const typesByTag = new Map<string, Set<string>>();
+  for (const c of carriers) {
+    const s = typesByTag.get(c.misconceptionId!) ?? new Set<string>();
+    s.add(c.item.questionTypeId);
+    typesByTag.set(c.misconceptionId!, s);
+  }
+  /** Comprehension if ANY comprehension item carries it. An uncarried entry falls back to the id. */
+  const isComprehension = (id: string): boolean => {
+    const types = typesByTag.get(id);
+    if (types?.size) return [...types].some((t) => t.startsWith('en-comp'));
+    return !SPAG.some((s) => id.includes(s));
+  };
+  const comprehension = rows.filter((r) => r.id.startsWith('en-') && isComprehension(r.id));
+  const excluded = rows.filter((r) => r.id.startsWith('en-') && !isComprehension(r.id));
+  // EVERY EXCLUSION NAMED, EVERY RUN. A filter that drops rows without saying so is R57 in a filter.
+  console.log(`  excluded (${excluded.length}) — SPaG by carrier, or uncarried and SPaG by id:`);
+  for (const e of excluded) {
+    const t = typesByTag.get(e.id);
+    console.log(`    - ${e.id}${t?.size ? `  (carried by ${[...t].join(', ')})` : '  (no carrier — classified by id)'}`);
+  }
   const body = {
     kind: 'comprehension-library-current',
     source: 'cluecrew-platform-db',

@@ -11,12 +11,18 @@
  * DECLARES the whole text as the window), and an item whose passage cannot be loaded, which must
  * refuse rather than render a question a child cannot answer.
  *
- * Dev and staging only: engineering scaffolding, not authored content, and no child route links here.
+ * OUTSIDE `/crew` DELIBERATELY. The crew layout gates on a child cookie, so a harness placed under
+ * it cannot be opened without a child session — which is why the NVR gate-1 harness has been
+ * unreachable as well as unbuildable. Scaffolding that needs a login to look at is scaffolding
+ * nobody looks at. Gated on ENVIRONMENT instead: 404 in production, and it imports the crew
+ * stylesheet directly so what renders here is what the child sees.
  */
+import { notFound } from 'next/navigation';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { prisma } from '@cluecrew/db';
 import { ComprehensionHarness } from './harness';
+import '../../crew/crew.css';
 
 export const dynamic = 'force-dynamic';
 
@@ -34,6 +40,8 @@ function loadPassage(ref: string, lineRefs: number[]) {
 }
 
 export default async function ComprehensionDebugPage() {
+  if (process.env.APP_ENV === 'production') notFound();
+
   // A cited-window item, and a whole-passage item, taken from the bank as they stand.
   const items = await prisma.item.findMany({
     where: { id: { in: ['ENG-001-WIW-12', 'ENG-001-WIW-22'] } },

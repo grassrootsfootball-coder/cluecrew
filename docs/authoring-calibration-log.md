@@ -4809,6 +4809,58 @@ barrel, which reaches `draft-self-assessment.ts` and `node:crypto`. **A server-o
 into a client bundle through a barrel: it typechecks and fails at build**, which is the same seam
 Cowork named — each side correct, the join unvalidated.
 
+## R123 — Two entries misfiled by a substring, in opposite directions, on the same sheet
+*David, 2026-08-16. Classified by carrier; the id string is not a fact about an entry.*
+
+`export:comprehension-library` classified by `id.includes(...)` against a SPaG word list. **It was
+wrong in BOTH directions on the same approval sheet:**
+
+| entry | what the id did | carried by | truth |
+|---|---|---|---|
+| `en-relative-pronoun-choice` | DROPPED — the string contains "relative-pronoun" | `en-spag-cloze` ×3 | SPaG. Correctly excluded, for the wrong reason. |
+| `en-determiner-omitted` | KEPT — no string matched | `en-spag-cloze` ×1 | **SPaG. Wrongly included.** |
+
+The second is the one that cost something: it crossed to Cowork as a comprehension entry **carrying
+the hint she rewrote in her own words**, and the first never crossed at all despite her approving it.
+One entry lost, one entry misdelivered, from the same line of code.
+
+**A SUBSTRING IS NOT A FACT ABOUT AN ENTRY. What an entry IS, is what carries it.** Classification is
+now by carrier — comprehension if any `en-comp-*` item carries it, with the id list surviving only as
+a fallback for entries nothing carries yet. 38 entries, down from 39.
+
+**AND THE SHEET'S SCOPE WAS THE SAME FAULT ONE LAYER UP.** The approval batch selects "PROPOSED
+English entries carrying items" and does not distinguish districts, which is how two SPaG entries
+reached a comprehension reviewer. Checked by carrier across all nine: exactly those two.
+
+**HER APPROVAL TRAVELS WITH THE ENTRY, NOT THE FILE** (David's ruling). She read the description and
+the hint and ruled on both; her `whom` note is about the entry rather than its district. **Approval
+is of the entry, not of the document it was rendered in.**
+
+Every exclusion is now printed by id with its carriers on every run. A filter that drops rows without
+saying so is R57 in a filter — and it fails OUTWARD, removing without reporting.
+
+## R124 — The control that highlighted correctly and went nowhere
+*2026-08-16. Verified in a browser, twice, because the first verification was of the wrong half.*
+
+The passage surface passed every static check while its one interactive control did nothing.
+`behavior: 'smooth'` **moves nothing at all** in the verification engine — `scrollTop` stayed at 0
+across an 800ms wait — while `behavior: 'auto'` scrolled correctly to the same target. Not a
+reduced-motion setting: `prefers-reduced-motion` was false.
+
+**I diagnosed it wrong first.** I decided the ref was unattached because I was mutating a variable
+during render to choose which line got it — real, worth fixing, and NOT the cause. The fix landed and
+the control still did not move. **A plausible cause that is genuinely a defect is the most expensive
+kind of wrong answer, because fixing it feels like progress.** The measurement that settled it was
+two lines: call `scrollTo` with each behaviour and read `scrollTop`.
+
+Now: motion honoured when the browser allows it, instant when reduced motion is set, **and the scroll
+CONFIRMED 400ms later and forced if nothing moved.** A control that silently does nothing is this
+district's whole failure mode, arriving one last time in the last thing built.
+
+**Verified at 375px:** window 29-33 highlighted on load, tap lands line 29 at the top of the region,
+all 67 lines still rendered, lines above still reachable, whole-passage items get no control, a
+missing passage refuses. The parts that were never true before today.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 

@@ -20,7 +20,9 @@
  * (Addendum A §2.5).
  */
 import { useState } from 'react';
-import { reflect, reflectHorizontal, rotate, type Visual } from '@cluecrew/core';
+// Deep imports, not the barrel: `@cluecrew/core` re-exports a module that imports `node:crypto`,
+// which cannot be bundled for the browser. Typechecks either way; only the build knows (R123).
+import { reflect, reflectHorizontal, rotate, type Visual } from '@cluecrew/core/nvr/grammar';
 import { NvrOptions, NvrPanels, NvrTool, readStem } from './visual';
 import type { EngineProps } from '../shared';
 

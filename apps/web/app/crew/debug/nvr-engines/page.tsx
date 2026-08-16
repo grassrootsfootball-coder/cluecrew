@@ -17,7 +17,13 @@
  */
 import dynamic from 'next/dynamic';
 import { useMemo, useState } from 'react';
-import { childPayload, seedFor, templateById } from '@cluecrew/core';
+// DEEP IMPORTS, NOT THE BARREL. `@cluecrew/core` re-exports `english/draft-self-assessment`, which
+// imports `node:crypto` — so a CLIENT page pulling the barrel drags a server-only module into the
+// browser bundle. It typechecks and fails at BUILD, which is why this harness has been unusable
+// since aee00d5 and why nobody noticed: nothing typechecks a bundle boundary.
+import { childPayload } from '@cluecrew/core/nvr/serving';
+import { seedFor } from '@cluecrew/core/nvr/config';
+import { templateById } from '@cluecrew/core/nvr/templates';
 import type { EngineProps } from '@/components/crew/engines/shared';
 
 const ENGINES = {

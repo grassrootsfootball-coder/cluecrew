@@ -25,7 +25,10 @@
  * (Addendum A §2.5).
  */
 import { useMemo, useState } from 'react';
-import type { NvrDecoration, Visual } from '@cluecrew/core';
+// Deep imports, not the barrel: `@cluecrew/core` re-exports a module that imports `node:crypto`,
+// which cannot be bundled for the browser. Typechecks either way; only the build knows (R123).
+import type { NvrDecoration } from '@cluecrew/core/nvr/templates';
+import type { Visual } from '@cluecrew/core/nvr/grammar';
 import { NvrOptions, NvrPanels, NvrTool, NvrVisual, readStem, type PanelRing } from './visual';
 import type { EngineProps } from '../shared';
 
