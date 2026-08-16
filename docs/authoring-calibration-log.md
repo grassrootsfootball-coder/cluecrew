@@ -5537,6 +5537,57 @@ mechanical screen; the reason is that their errors are judgements; the honest op
 cold read or accepting the exposure. **Her own measured rate — two category-2 faults in 34 items —
 predicts roughly seven of the 74 carrying a second defensible answer.**
 
+## R145 — The move field's library half: 62% null, five collisions, no additions
+*David, 2026-08-16. Cowork's proposal, library side only, ~68 triples. The finding is what filling it taught.*
+
+**1. HOW MANY TAKE A TRIPLE: 26 of 68. Null is 62%, and Cowork predicted the wrong family.**
+It expected most of the TECHNIQUE family to be null. Technique is mostly a displacement — writer's
+purpose read as character's state, device named instead of its work, effect located in the wrong
+window. **The null majority is the ORTHOGRAPHIC and GRAMMATICAL families**: spelling, punctuation,
+agreement, tags, question tags, determiners. Nothing moves in those — a form is chosen wrongly, or
+omitted. Right prediction, wrong district within the library, and the field covers a minority either
+way.
+
+**2. FIVE TRIPLES ARE SHARED, AND FOUR OF THE FIVE ARE THE VOCABULARY BEING TOO COARSE:**
+
+| triple | entries |
+|---|---|
+| `sense/whole-text/window` | **4** — dominant-sense, neighbouring-sense, form-lookalike, not-this-word |
+| `time/window/window` | 2 — chronology-collapse, parallel-read-as-sequence |
+| `event/character/character` | 2 — agent-patient-reversal, cause-agent-swap |
+| `event/reader/whole-text` | 2 — plausible-not-stated, whole-text-absence-asserted |
+| `purpose/writer/question` | 2 — label-not-effect, generic-effect |
+
+**The four vocabulary entries collapsing to one triple is the shape failing where it is needed most.**
+Those four are precisely the family the reviewer spent two days separating — dominant versus
+neighbouring is *which sense arrives first for a child*, form-lookalike is *a different word
+entirely*. Cowork names this limit itself: *"it does not help where the disagreement is about degree
+rather than structure"*. Measured, that limit costs four of the twenty-six.
+
+`chronology-collapse` vs `parallel-read-as-sequence` is the same collapse in miniature — one invents
+an order where the text gives none, the other misorders two real events, and `time/window/window`
+cannot tell them apart.
+
+**3. THE CLOSED LISTS HELD. ZERO ADDITIONS.** All 26 triples came from Cowork's nine `what` values and
+eleven roles with nothing forced. That is the strongest result here: **the list did not grow by a
+third while being filled, so it is a vocabulary and not free text with extra steps.**
+
+**4. NO TRIPLE CONTRADICTED ITS OWN DESCRIPTION.** WIW-14's fault did not recur at library level. One
+near-miss worth recording: `en-subject-verb-agreement-by-proximity` reads like a displacement — the
+verb agrees with the wrong noun — and is not. The controller is never IDENTIFIED, so nothing is
+relocated; writing the triple is what forced that distinction, which is the field doing its work in
+the direction Cowork intended.
+
+**THE VERDICT ON THE SHAPE: it separates the two entries it was built to separate**
+(`quality/character/character` against `quality/vehicle/subject`, one glance apart) **and it cannot
+separate the four it most needs to.** So it is real and it is partial.
+
+**WHAT THAT MEANS FOR THE 900 HOURS, and it is David's call not mine:** the option-side field would be
+checkable against 26 of 68 entries, and blind on the vocabulary family carrying the most items in the
+bank. A cheaper reading is available first — the library half now exists, so the two-triple comparison
+can be run against ANY option whose tag is one of the 26 the moment a single option declares one.
+**The proof of value does not need 900 hours; it needs one cluster's worth of `moveClaimed`.**
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 

@@ -25,3 +25,4 @@ export * from './vocab-context';
 export * from './cowork-item-keys';
 export * from './declarative-fields';
 export * from './draft-self-assessment';
+export * from './move-declaration';

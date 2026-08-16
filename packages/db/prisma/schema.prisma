@@ -529,6 +529,17 @@ model Misconception {
    */
   boundaries     String?
   /**
+   * THE MOVE DECLARATION (Cowork's proposal, 2026-08-16 — library half only).
+   *
+   * `{ kind: 'displacement', what, from, to }` from closed lists, or
+   * `{ kind: 'not-displacement', reason }` where the error is not a displacement.
+   *
+   * NULL MEANS NOT YET DECLARED and is a third state, not a synonym for the second. Collapsing
+   * "nobody looked" into "looked, and it is not one" is R98 in a new column, and since
+   * not-displacement is expected to be the majority it must not be the silent value.
+   */
+  move           Json?
+  /**
    * "human:<email>" — who rejected it, kept so a restore has a history.
    */
   rejectedBy     String?
