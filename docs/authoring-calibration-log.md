@@ -4082,6 +4082,39 @@ Six rows recorded from Cowork's quoted, hashed declarations: 2 PERSON, 4 MACHINE
 records that **this store holds no approval for it**, so the provenance cannot later be read as
 confirming the transfer file's claim. **268 of 274 remain UNKNOWN**, and they say so.
 
+## R101 — The hold caught a real error, and being faithful was not the point
+*2026-08-16. Her hold of 2026-08-13, lifted by the artefact she wrote.*
+
+`en-vocab-dominant-sense`'s hint entered by being READ from `annie-eng028-return.md`
+(sha `2575946944cc0f41`, section 1, "hint (authored field)") — an artefact SHE WROTE, which is what
+her protocol required. 93 characters, never retyped, never normalised. Cowork extracted it
+independently and the two extractions are identical.
+
+**TWO TRANSCRIPTIONS WERE ON RECORD AND THEY BEHAVE DIFFERENTLY. Both facts matter and neither
+replaces the other:**
+
+  · `_supersededHint` — *"…Read the words either side of it and check that meaning still works
+    there."* — **differs from her field at offset 36.** That was the DRAFTED hint, and the words
+    after offset 36 are `en-vocab-neighbouring-sense`'s direction. Her `hintRuling` names exactly
+    that erosion: the dominant-sense child has ONE meaning and does not know a competition exists,
+    so sending her to adjacent words sends her to check something she has no reason to doubt.
+    **The ruling caught a live error in a hint that would otherwise have shipped.**
+
+  · `_transcribedHintWithdrawn` — **matches her field exactly, no differing offset.** It was a
+    FAITHFUL transcription of her replacement, withdrawn on protocol grounds rather than because it
+    was wrong.
+
+**THE SECOND IS THE ONE THAT VINDICATES THE PROTOCOL, NOT THE FIRST.** A hold that only ever
+refuses wrong transcriptions is a spell-check. Hers refused a transcription that turned out to be
+CORRECT, for three months, on the ground that its correctness could not be established from inside
+the transcription — which is R25 stated exactly: *if my typing is faithful she learns nothing; if it
+is unfaithful she confirms the error.* The faithful copy proves the discipline was not paranoia; the
+drafted one proves it was not ceremony either.
+
+No exception was needed on the way in. It was reported as 17 words against a 16-word cap; the cap is
+per SENTENCE and her field is two sentences of 7 and 10 words, as her own note in the document says.
+The gate returned 0 blocking. Nothing was exempted, amended, or asked of her.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 
