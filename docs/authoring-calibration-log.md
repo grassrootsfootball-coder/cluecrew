@@ -4915,6 +4915,29 @@ the reviewer on **8 August** and never delivered in the eight days since, becaus
 no path until 16 August. Ten are ACTIVE and **one is REJECTED**, which is why status travels with
 them: an entry the drafting side does not hold is not the same as an entry it may use.
 
+## R125b — R88 repeated by hand, on the day it was recorded
+*2026-08-16.*
+
+The eleven-entry emission to Cowork carried **10 of 21 columns**, hand-listed. It dropped
+`approvalNote` on six entries, including the vehicle/subject boundary discriminator on
+`en-comparison-vehicle-misread` that four cold reads had rebuilt from nothing — **which is R88's
+finding exactly, reproduced by hand in a fresh script the same day R88's lesson was applied
+elsewhere.**
+
+The two losses worth marking beside it are a PAIR that only functions as one:
+`en-technique-label-not-effect` (*"if a device is named, tag THIS"*) and `en-technique-generic-effect`
+(*"use THIS only when no device is named"*) — each note names the other as its alternative, and
+**neither side held either half.** A discriminator split across two rows is lost entirely when a
+projection drops the column, not half-lost.
+
+**A HAND-LISTED PROJECTION IS A PROJECTION.** Re-emitted with every column and no `select`. The
+sending side does not get to decide which columns matter, and the moment it writes a field list it
+has decided.
+
+Also: `en-parallel-read-as-sequence`, approved in the same 8 August sitting, **is in neither store**.
+Not held here under any status. A lost approval rather than an undelivered one — it goes back to her
+to restate, and nothing on either side may reconstruct it.
+
 ## R126 — Two faults inside the check written to catch them
 *2026-08-16, recorded together because they are one lesson twice.*
 
@@ -4935,6 +4958,36 @@ Both are the same shape as R61 and R120: an instrument that is correct about the
 pointed at and wrong about what it was looking at. **The distance between "nothing is there" and "I
 could not see it" is the whole of it**, and it has now appeared in a population check, a route check,
 and a field comparison.
+
+## R127 — The return-leg check verifies columns, and could not have seen the emission that lost them
+*David, 2026-08-16. "Does it verify COLUMNS, or only that a class crossed?"*
+
+**IT VERIFIES COLUMNS — and it would NOT have caught this.** Both halves matter and they point at
+different gaps.
+
+**It does check fields.** `carriedBy(script, fields)` requires the export named for a class to
+mention every reviewer-authored column — `approvalNote`, `approvalMethod`, `approvedBy`,
+`rejectionNote`, `teachback` for the misconception class — and reports CARRIED / STALE / NOT CARRIED
+per class. `export-misconception-library.ts` genuinely selects all five. So the DECLARED path is
+sound and the class is honestly CARRIED.
+
+**But it checks THE REGISTERED SCRIPT, not the emission that shipped.** My eleven-entry file was a
+one-off script in `/tmp`, hand-listing ten columns. **It is not a registered export, so the check had
+nothing to look at** — the class stayed CARRIED on the strength of a script that was not the one used.
+Green, correct, and about a different artefact than the one that crossed. **The same shape as R63's
+sixteen one-shot ruling-appliers: the guarded path is guarded and the ad-hoc path beside it is not,
+and the ad-hoc path is the one that gets used under time pressure.**
+
+**A second, smaller weakness in the same function:** `text.includes(f)` is a substring test over the
+script's SOURCE. A file mentioning `approvalNote` only in a COMMENT passes. `export-misconception-
+library.ts` happens to both discuss and select it — so the check is currently right by luck about a
+file it is right about for real reasons. R123's lesson (a substring is not a fact) inside the
+return-leg check.
+
+**What this does not reach, and should be said rather than implied:** nothing verifies what an
+arriving file CONTAINS. Both halves here are about the sender's code. The receiving side caught this
+one — Cowork noticed the discriminator was missing — which is the same way every join fault in this
+project has been found: by somebody reading the other side's store, never by a gate.
 
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
