@@ -77,6 +77,7 @@
     "export:vr-misconception-defs": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-vr-misconception-defs.ts",
     "export:vr-reimport-bundle": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-vr-reimport-bundle.ts",
     "check:option-positions": "pnpm exec tsx scripts/check-option-positions.ts --self-test && pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-option-positions.ts",
+    "export:blind-move-pack": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-blind-move-pack.ts",
     "apply:move-declarations": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/apply-move-declarations.ts",
     "check:vr-rederive": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-vr-rederive.ts",
     "check:vr-distractors": "pnpm exec tsx scripts/check-vr-distractors.ts --self-test && pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-vr-distractors.ts",

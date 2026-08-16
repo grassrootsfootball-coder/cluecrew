@@ -5588,6 +5588,50 @@ bank. A cheaper reading is available first — the library half now exists, so t
 can be run against ANY option whose tag is one of the 26 the moment a single option declares one.
 **The proof of value does not need 900 hours; it needs one cluster's worth of `moveClaimed`.**
 
+## R146 — The blind move pack: what can be stripped, and what cannot be enforced
+*David, 2026-08-16. ENG-002, 90 declarations. Emitted, nothing compared yet.*
+
+**THE CLUSTER, CHOSEN ON THE PRIOR RATHER THAN ON INSTINCT.** ENG-002 carries **33 options tagged
+`en-wrong-scope-retrieval` or `en-plausible-not-stated`** — the two broad tags where a disagreement is
+likeliest — against 13 for the next cluster. 75 of its 90 tagged distractors carry a triple, a better
+ratio than ENG-001's 63 of 88, and all 23 items are DRAFT so nothing live rides on the result.
+
+**WHY NOT ENG-001, WHICH WAS THE INSTINCT:** `WIW-14 B` was retagged four hours earlier on her
+boundary ruling, so it now reads `quality/vehicle/subject` against a tag declaring the same. **The
+case the field was built from agrees with itself; the comparison cannot re-find it.** A null on
+ENG-001 could not be distinguished from an instrument that does not bite — ruling on 900 hours from an
+unfalsifiable zero.
+
+**AND THE PLANTED-POSITIVE FIX WAS REFUSED, RIGHTLY.** Declaring WIW-14 B's pre-retag intent would
+test whether the MECHANISM fires, with a value supplied by the people who know what it should say.
+What is worth 900 hours is whether **a drafter's honest declaration disagrees with a wrong tag**, and
+a value we supply cannot show that.
+
+**WHAT THE PACK STRIPS, VERIFIED RATHER THAN ASSERTED:** no `misconceptionId` and no
+`misconceptionExecution` anywhere in the file; option ids opaque (salted sha256); option order
+shuffled on the salt; 90 tag values held back. The key mapping opaque id → row → tag is written to
+`content/blind-keys/` and **is not delivered** — confirmed absent from the delivery folder, and it is
+the only artefact that can align a return to a stored row.
+
+**WHAT IS CARRIED AND WHY:** the passage with all 85 numbered lines, each item's cited window, and
+**which option is correct** — a reader must know the right answer to say what a distractor displaces,
+and the key is not a diagnosis. `questionTypeId` is carried and is not a leak: a vocabulary stem
+announces itself in its own words.
+
+**THE BLIND IS PROCEDURAL AND THE PACK SAYS SO IN ITS OWN TEXT.** Cowork holds every item and option
+text matches trivially. Stripping raises the cost of accidental sighting and does nothing against
+deliberate lookup. **It depends on a commitment neither side can verify**, and the pack asks Cowork to
+say plainly if it cannot declare blind rather than pretend — that answer costs nothing and is worth
+having.
+
+**RECALL IS UNSOLVABLE BY CLUSTER CHOICE.** Cowork drafted every cluster in the bank; there is no
+unread-by-the-drafter option, only degrees of staleness, and ENG-002 is weeks old rather than days.
+
+**CONFIDENCE IS EVIDENCE ABOUT THE BLIND, NOT ABOUT THE DRAFTER**, and the pack says that too. A
+genuine blind read produces hesitation where two triples both fit; a sighted read agrees smoothly
+everywhere. **A distribution with no low-confidence rows is itself a signal** — so the pack asks Cowork
+not to smooth it, because a field whose purpose is unstated gets rounded up.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 
