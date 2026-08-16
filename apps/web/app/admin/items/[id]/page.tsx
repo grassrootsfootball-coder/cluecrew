@@ -16,6 +16,8 @@ import { shuffleOptionsForChild } from '@/lib/crew/shuffle';
 import { optionLabel } from '@/components/crew/engines/shared';
 
 const ERROR_COPY: Record<string, string> = {
+  'write-did-not-land':
+    'Blocked: the change did not reach the record. Nothing was saved — do not treat this item as changed.',
   'signature-did-not-land':
     'Blocked: the signature did not reach the record. Nothing was signed — do not treat this item as signed.',
   'not-a-named-reviewer':

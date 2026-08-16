@@ -6,7 +6,7 @@ import { checkItemChildFacing, checkSolution, draftAssessmentSubjectHash, finger
 import mathsPlanContent from '../../../../content/maths-district-plan.json';
 
 const mathsPlan = mathsPlanFileSchema.parse(mathsPlanContent);
-import { prisma, recordSignature } from '@cluecrew/db';
+import { prisma, recordSignature, type ItemStatus } from '@cluecrew/db';
 import { similarityIndexSource } from '@/lib/similarity-index';
 import { currentStaff, recordAudit, roleAllows } from '@/lib/staff';
 import { validateVerbalRecord } from '@/lib/review-provenance';
@@ -135,6 +135,23 @@ export async function updateItemAction(formData: FormData): Promise<void> {
 }
 
 /** Reviewer marks REVIEWED — must be a different person from the author (§5). */
+/**
+ * CONFIRM THE WRITE BEFORE REPORTING SUCCESS.
+ *
+ * The redirect is what a reviewer reads as "done". It fired cleanly for a signature action that
+ * had THROWN and written nothing — Next.js swallowed a PrismaClientValidationError and still
+ * navigated, so the form submitted, the page changed, and no error appeared. She would have signed
+ * a cluster and seen nothing wrong.
+ *
+ * Every action here ends in an unconditional redirect after a write and none of them re-read what
+ * they claim to have written, so any of them can report success on a path that wrote nothing. This
+ * re-reads the row and redirects with `write-did-not-land` when it did not.
+ */
+async function confirmItemStatus(itemId: string, expected: ItemStatus): Promise<void> {
+  const row = await prisma.item.findUnique({ where: { id: itemId }, select: { status: true } });
+  if (row?.status !== expected) redirect(`/admin/items/${itemId}?error=write-did-not-land`);
+}
+
 export async function markReviewedAction(formData: FormData): Promise<void> {
   const staff = await currentStaff();
   if (!staff || !roleAllows(staff.effectiveRole, ['REVIEWER'])) redirect('/admin');
@@ -161,6 +178,7 @@ export async function markReviewedAction(formData: FormData): Promise<void> {
     where: { id: itemId },
     data: { status: 'REVIEWED', reviewedBy: `human:${staff.email}`, reviewNotes: null },
   });
+  await confirmItemStatus(itemId, 'REVIEWED');
   await recordAudit(staff.id, 'item.review', 'Item', itemId);
   redirect(`/admin/items/${itemId}`);
 }
@@ -245,6 +263,7 @@ export async function publishItemAction(formData: FormData): Promise<void> {
   if (childFacingBlock(item)) redirect(`/admin/items/${itemId}?error=child-facing-copy`);
 
   await prisma.item.update({ where: { id: itemId }, data: { status: 'LIVE' } });
+  await confirmItemStatus(itemId, 'LIVE');
   await recordAudit(staff.id, 'item.publish', 'Item', itemId);
   redirect(`/admin/items/${itemId}`);
 }
@@ -254,6 +273,7 @@ export async function retireItemAction(formData: FormData): Promise<void> {
   if (!staff || !roleAllows(staff.effectiveRole, ['REVIEWER'])) redirect('/admin');
   const itemId = z.string().min(1).parse(formData.get('itemId'));
   await prisma.item.update({ where: { id: itemId }, data: { status: 'RETIRED' } });
+  await confirmItemStatus(itemId, 'RETIRED');
   await recordAudit(staff.id, 'item.retire', 'Item', itemId);
   redirect(`/admin/items/${itemId}`);
 }
