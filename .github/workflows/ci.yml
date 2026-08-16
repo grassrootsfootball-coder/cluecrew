@@ -214,6 +214,12 @@ jobs:
       - name: Serving path (can what came in come out?)
         run: pnpm check:serving-path || true
 
+      # R143: a generator moving under stored rows. Blocks, because an unprotected divergence means
+      # the generator changed and nobody noticed — and it needs no baseline, so it is true from the
+      # first run rather than from the first backfill.
+      - name: VR re-derivation (generators still produce what is stored)
+        run: pnpm check:vr-rederive
+
       # R132: the shipped clusters, gated as they were shipped. These two are LIVE and in front of
       # children, so a change that would make either unshippable must fail the build rather than be
       # reported — the only checks here that block, because they are the only ones about live content.

@@ -5182,6 +5182,15 @@ So her comparison has nothing to reach on VR at all — not a different field na
 convention, nothing. Every VR distractor's reason for existing is either in a generator function or
 nowhere.
 
+**CORRECTED 2026-08-16 — R142. EVERYTHING IN THE PARAGRAPH BELOW IS NVR'S MODEL APPLIED TO VR,
+WHERE IT DOES NOT HOLD.** VR generators take NO SEED: `GENERATORS[typeId]()` enumerates, `item.n` is
+the ordinal, the id is `gen-${typeId}-${n}`, and the complete derivation input `(typeId, n)` is
+therefore IN THE PRIMARY KEY. There is no seed, no template version and no parameter bag to record.
+All 514 stored `gen-vr` items reproduce identically from today's generators. **A fault class carried
+across a district boundary without checking that the boundary held** — `seedFor(kind, ordinal)` is
+NVR's mechanism and I wrote it about VR. The wrong text is left standing below because a corrected
+register that hides what it corrected teaches nothing.
+
 **AND THE RE-DERIVE TWIN COSTS MORE THAN IT LOOKS, BECAUSE THE INPUT IS NOT RECORDED.** A generated
 item stores its OUTPUT — `gen-vr-03-related-words-02` holds `pairA`, `stemWord`, `prompt` — and no
 column holds the SEED, the template version, or the parameters that produced it. `seedFor(kind,
@@ -5422,6 +5431,58 @@ complete, and not reachable by the person who needed it.** Wired now.
 | 5 others (`apply-maths-annie-pass`, `deploy-vr03/07/11-signoff`, `export-maths-calibration-plain`, `export-vr07-vr11-new`) | `pnpm tsx` — a generic invocation, not a missing entry |
 
 **Six are real: four scripts naming five commands that do not exist.** Counted, not repaired.
+
+## R142 — A fabricated 90% divergence, sufficient on its own to justify the schema change
+*David, 2026-08-16. The near-miss is worth more than the check that came out of it.*
+
+Scoping the VR seed backfill, the first re-derivation reported **464 of 514 stored items diverging
+from today's generators** — a 90% rate, exactly the evidence a migration needed, arriving precisely
+when it was wanted.
+
+**It was `JSON.stringify` against JSONB key order.** Every one of the 464 was identical in content:
+`{"pairA":…,"prompt":…}` against `{"prompt":…,"pairA":…}`. The trap is documented in CLAUDE.md in
+terms — *"Postgres JSONB does not preserve object key order, so a raw `JSON.stringify` diff reports
+permanent false drift"* — and **this is the second time I have hit it in one session.**
+
+**WHAT SAVED IT WAS READING ONE DIFF INSTEAD OF TRUSTING THE COUNT.** Nothing structural: no gate, no
+review, no second pair of eyes. One `console.log` of a single row, printed because 90% seemed high
+rather than because anything required it.
+
+**THE RULE THAT GENERALISES: a measurement that confirms the thing you are about to build is the
+measurement to distrust.** This one confirmed it at 90%, on the turn the schema change was being
+scoped, and every incentive pointed at accepting it. The register is full of instruments that went
+quiet when they should have spoken; this is the opposite failure and the more dangerous one, because
+a false positive that agrees with you does not feel like a fault at all.
+
+**AND THE CORRECTED FINDING KILLED THE MIGRATION.** 514 of 514 reproduce identically. VR generators
+take no seed — the derivation input is `(typeId, n)` and both are in the id — so there was never
+anything to back-fill. R133 is corrected in place: it applied NVR's seeded model to VR, **a fault
+class carried across a district boundary without checking the boundary held.** Recommended against
+the schema change and David accepted; the wrong version stays visible above the correction.
+
+**RECORDED SO THE ABSENCE DOES NOT SPEAK FOR ITSELF** (David: R98 at the level of the register). *We
+looked and there was nothing* and *nobody looked* read identically a month from now. We looked. The
+provenance gap did not exist.
+
+## R143 — `check:vr-rederive`: the check that needed no columns
+*2026-08-16. Wired, and its limit prints beside its number.*
+
+514 of 514 generated VR items reproduce identically. It needs no seed column, no template version and
+no backfill, because the enumeration is stable rather than seeded — which makes it **stronger than a
+seed-based check would have been: it works retroactively over every row already in the store, with no
+baseline needing to have been captured first.**
+
+It catches a generator changing AT ALL, not merely one changing after a backfill. **Verified by fault
+injection on an unprotected DRAFT row** — never a reviewed one — which it flagged by id and field and
+failed the build on; restored, and the restoration confirmed by re-reading the row rather than by
+re-running the count.
+
+**ITS LIMIT IS IN ITS OWN OUTPUT, WITH THE POPULATION THE CONDITION COVERS:** it cannot see a
+generator change that PREDATES a reviewed row. **200 of 514 rows are protected by
+`classifyDerivedWrites`** — LIVE, RETIRED, or carrying an attribution event. Those keep their stored
+values legitimately, so a divergence on them is the guard working and not a finding, and a change
+before protection is indistinguishable from one after. The two classes are counted apart and never
+merged, because a single total would be the unit-mismatch fault of R140 in a different costume.
 
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
