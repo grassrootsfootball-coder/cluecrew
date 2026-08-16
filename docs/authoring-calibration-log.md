@@ -4389,6 +4389,75 @@ day that prose ran ahead of what was measured.
 Cowork ran the authorship search independently on its own roots and reached the same finding. Two
 sides, two disks, no artefact. That is convergent and it is still not proof she did not write them.
 
+## R111 — All nine approved, and 224 refusals become 15
+*Annie's approval-batch return, 2026-08-16. `annie-approval-batch-return.md`, sha256 `f92d4bae97ea248e`.*
+
+**SHE SETTLED THE AUTHORSHIP AND THE ANSWER WAS THE ONE THE AMBIGUITY SUSPECTED.** In her words:
+*"'Her proposals' meant proposals written TO me, not BY me… Not authorship unknown. Known, and not
+mine."* Entries 1-6 are `hintAuthorKind: AGENT`, authored by the drafting side, approved by her —
+she read the drafts, tested the boundary clauses, rejected two first drafts and approved the
+redrafts. **UNKNOWN was the right state to HOLD and the wrong state to KEEP**, and that distinction
+is the whole value of R108: holding it is what made the question askable.
+
+**THE APPROVALS WERE ALWAYS REAL.** Her note: *"The approvals are real. They were given in the review
+conversation, item by item, with reasons. What does not exist is an artefact… The absence is in the
+recording, not in the decision."* Which vindicates the ruling that `approvedBy` STANDS. Withdrawing
+it would have been a false negative on work she had actually done.
+
+**TWO DEPARTURES FROM THE INSTRUCTION, MADE OPENLY:**
+1. **The artefact is THIS return, not the ENG-028 one.** The instruction named
+   `annie-eng028-return.md`; that document is about `en-vocab-dominant-sense` and does not mention
+   these six. Pointing a provenance record at a document that does not contain the claim is the
+   exact fault of the preceding two days.
+2. **Entries 7 and 8 are PERSON/Annie, not AGENT.** The ruling covered 1-6 and was silent on these,
+   but she REWROTE both hints in her own file, so they are hers by the same test that makes
+   `en-vocab-dominant-sense` hers. Her section 1 calls that entry "the only hint in the English
+   library that is" hers; her own section 3 makes it three. Sequence, not contradiction.
+
+**HER TWO REWRITES, READ FROM HER FILE BY DOCUMENT STRUCTURE AND NEVER RETYPED** (her condition of
+signature). Both catch a fault no gate here has:
+- `en-determiner-omitted`: the drafted hint said *"Read the line aloud and listen."* **A child
+  sitting an 11+ paper cannot read aloud** — the only hint in the library asking her to do something
+  the room forbids. 81 → 86 chars.
+- `en-narrator-voice-as-fact`: the drafted hint's third sentence *coached the key*, naming the
+  reporting to a child whose error IS taking a report as fact. 140 → 54 chars, three sentences to
+  one. Her general rule, stated: an entry about mistaking a reported opinion for fact cannot have a
+  hint that names the reporting.
+
+Both pass `checkChildFacingText` with zero faults.
+
+**THE NUMBER: 224 → 15.** And the arithmetic is not 224 − 215 = 9, which is what the batch's own
+size predicts. **Six items carried a tag she released AND a fault of ours**, so they were in both
+populations; only 209 items had tag-proposed as their ONLY blocker. What remains is 11 `tag-retired`
+and 4 `child-facing-copy` — all ours, all disjoint now, `0 items failing more than one route`.
+**All 36 retags are released**, the 17 discharged by these signatures exactly as predicted.
+
+**A CHECK THAT CRIED WOLF ON ITS OWN GOOD NEWS.** The moment the nine went ACTIVE,
+`check:retag-releases` reported *11 CONTRADICTIONS between the two stores* — Cowork's report is a
+point-in-time file and this reads live state, so PROPOSED-then-ACTIVE is the expected direction of
+travel, not a disagreement. Now reported as OVERTAKEN. A stale artefact and a contradiction are not
+the same finding, and conflating them would have had someone chase eleven phantom disagreements
+created by success.
+
+Also caught: `pnpm scan:vocab` failed on the word "guarantee" in a comment I wrote this session.
+Reworded, never exempted.
+
+## R112 — Every approval in this project was given in conversation
+*Annie's standing point, 2026-08-16: "That will keep happening until rulings have a channel."*
+
+The ENG-028 return is the FIRST artefact carrying a ruling of hers. Every approval before it —
+including the six the last two days were spent trying to evidence — was given in the review
+conversation and recorded nowhere. **The attribution gap she raised in August, arriving at the one
+place it bites: a decision that was made, cannot be evidenced, and can only be settled by asking the
+person who made it.**
+
+**What it would take, in one line: the reviewer surface writes her return document on submit — the
+same authored-field shape she has now used twice — so a ruling becomes a file at the moment it is
+made, instead of a reconstruction afterwards.** Everything needed already exists: the shape is
+proven, `recordSignature` has the naming path, and `check:return-leg` measures whether a class
+crosses. What is missing is that no door WRITES the artefact; they all write state and leave the
+reasoning in the conversation.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 

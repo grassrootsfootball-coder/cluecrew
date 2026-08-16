@@ -570,7 +570,7 @@ export async function bulkMarkReviewedAction(formData: FormData): Promise<void> 
  * David's ruling, 2026-08-16. Recording a signature later by script is exactly the
  * machine-verdict-under-a-person's-authority conflation this repo has spent two weeks naming, and
  * every one of the 46 existing signatures took that route. This gives the web path the same
- * guarantees the script path has:
+ * protections the script path has:
  *
  *   · REVIEWER RESOLVED THROUGH THE NAMING PATH. The signed-in staff account must match a
  *     `Reviewer` row by `staffEmail`. No match, no signature — a role account can never sign.

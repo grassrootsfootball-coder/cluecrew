@@ -90,8 +90,17 @@ async function main(): Promise<void> {
       released: ourState === 'ACTIVE',
       // Their state vs ours. UNKNOWN on their side is not a disagreement — it is the absence this
       // sweep exists to fill — so it is counted separately from a genuine contradiction.
+      // A DISAGREEMENT AND A STALE ARTEFACT ARE NOT THE SAME THING, and the first version of this
+      // called both CONTRADICTS. The moment the reviewer approved nine entries, eleven rows flipped
+      // to "contradiction" without anything being wrong — their report is a point-in-time file and
+      // this reads live state. PROPOSED-then-ACTIVE is the expected direction of travel and is
+      // reported as OVERTAKEN; only a difference that cannot be explained by an approval since is a
+      // genuine disagreement. A check that cries wolf on its own good news gets ignored.
       stateAgreement: r.theirState === 'UNKNOWN' ? 'THEY HAD NO STATE'
-        : r.theirState === ourState ? 'AGREES' : `CONTRADICTS — they said ${r.theirState}, store says ${ourState}`,
+        : r.theirState === ourState ? 'AGREES'
+          : r.theirState === 'PROPOSED' && ourState === 'ACTIVE'
+            ? `OVERTAKEN — they said PROPOSED, approved since; store says ACTIVE`
+            : `CONTRADICTS — they said ${r.theirState}, store says ${ourState}`,
       landed,
     };
   });
@@ -100,6 +109,7 @@ async function main(): Promise<void> {
   const notReleased = resolved.filter((r) => !r.released);
   const filledIn = resolved.filter((r) => r.theirState === 'UNKNOWN');
   const contradictions = resolved.filter((r) => r.stateAgreement.startsWith('CONTRADICTS'));
+  const overtaken = resolved.filter((r) => r.stateAgreement.startsWith('OVERTAKEN'));
   const notLanded = resolved.filter((r) => r.landed.startsWith('DISAGREES') || r.landed === 'OPTION NOT FOUND');
 
   const bySuccessor = new Map<string, { state: string; count: number; items: string[] }>();
@@ -122,6 +132,7 @@ async function main(): Promise<void> {
       released: released.length,
       notReleased: notReleased.length,
       theyHadNoState: filledIn.length,
+      overtakenByAnApprovalSince: overtaken.length,
       contradictions: contradictions.length,
       retagsThatDidNotLandHere: notLanded.length,
     },
@@ -155,6 +166,9 @@ async function main(): Promise<void> {
   for (const [id, v] of [...bySuccessor].filter(([, v]) => v.state)) {
     const theirs = resolved.filter((r) => r.dependsOn === id && r.theirState === 'UNKNOWN');
     if (theirs.length) console.log(`      ${String(theirs.length).padStart(2)}  ${id.padEnd(34)} -> ${v.state}`);
+  }
+  if (overtaken.length) {
+    console.log(`\n  ${overtaken.length} row(s) OVERTAKEN — their report predates an approval, not a disagreement.`);
   }
   if (contradictions.length) {
     console.log(`\n  ${contradictions.length} CONTRADICTION(S) between the two stores:`);
