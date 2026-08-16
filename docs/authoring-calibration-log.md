@@ -4861,6 +4861,44 @@ district's whole failure mode, arriving one last time in the last thing built.
 all 67 lines still rendered, lines above still reachable, whole-passage items get no control, a
 missing passage refuses. The parts that were never true before today.
 
+## R125 — The comparison had only ever been run on the field a child reads
+*David, 2026-08-16. Delivery 88, payload verified 64/64 over all 28 shared entries.*
+
+**12 differ over 58 comparisons.** 11 childHints, all shorter on the drafting side, all the same cap
+sweep. And **one description** — which is the finding, because **no comparison between these two
+stores had ever looked at a description.**
+
+`en-vocab-dominant-sense` carries a third sentence there that this store has never held:
+
+> *Scoped to the ERROR, not to vocabulary items: it occurs wherever a word's sense is load-bearing,
+> including on technique stems.*
+
+Ours ends at "…displaced it." **And that missing sentence is the entire justification for a placement
+in the SERVING store**: `ENG-002-pp-13` is an `en-comp-technique` item whose option D carries
+`en-vocab-dominant-sense`. Under our description that placement is unexplained; under theirs it is
+correct. **The hints were hiding it** — every previous comparison ran on `childHint`, the field a
+child reads, and a description is what a DRAFTER reads to decide whether a tag fits.
+
+**Two stores applying different rules while reporting the same tag.** The sentence has no provenance
+on our side: `en-vocab-dominant-sense` was already ACTIVE before the approval batch, so it never
+appeared on a sheet, and nothing records whether the scoping was ruled or assumed. That is the
+reviewer's to settle, and it is the gate's outstanding delivery-52 problem with its cause finally
+named.
+
+**TWO FAULTS IN MY OWN CHECK, BOTH THE SAME SHAPE IT WAS BUILT TO CATCH.**
+1. It read only `libraryEntries`; this delivery used `entries`, so `requirePopulation` aborted on a
+   population that was fully present. **The refusal was right and the reason was wrong** — an
+   unrecognised shape is not an empty one, and it now tries every known key and NAMES the one that
+   answered.
+2. It counted `status: null` as 28 disagreements. They sent hints and descriptions only; **null is
+   NOT-STATED, not a value.** The unstated-denominator fault, arriving inside the check written to
+   avoid it, as `null` rather than as `undefined`.
+
+**THE ELEVEN CROSSED** (`d8ffb208d588dee5`), including `en-comparison-vehicle-misread` — approved by
+the reviewer on **8 August** and never delivered in the eight days since, because the return leg had
+no path until 16 August. Ten are ACTIVE and **one is REJECTED**, which is why status travels with
+them: an entry the drafting side does not hold is not the same as an entry it may use.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 

@@ -19,14 +19,38 @@ import { readFileSync } from 'node:fs';
 import { prisma } from '../packages/db/src/index';
 import { requirePopulation } from './lib/population';
 
+/**
+ * DESCRIPTION IS COMPARED, AND UNTIL NOW IT NEVER WAS.
+ *
+ * Every comparison between the two stores has been run on `childHint` — the field a child reads —
+ * and `description` was assumed to follow. It does not: `en-vocab-dominant-sense` carries a SCOPING
+ * SENTENCE on the drafting side that this store has never held, and that sentence is the entire
+ * justification for a tag placement in the SERVING store. **The hints were hiding it.**
+ *
+ * A description is not decoration. It is what a drafter reads to decide whether a tag fits, so a
+ * sentence present on one side and absent on the other means the two stores are applying different
+ * rules while reporting the same tag.
+ */
 const COMPARED = ['childHint', 'description', 'status'] as const;
 
 async function main(): Promise<void> {
   const path = process.argv[2];
   if (!path) { console.error('usage: pnpm check:library-agreement <their-emission.json>'); process.exit(1); }
   const raw = JSON.parse(readFileSync(path, 'utf8')) as Record<string, unknown>;
-  const payload = (raw.payload ?? raw) as { libraryEntries?: Array<Record<string, unknown>> };
-  const theirs = payload.libraryEntries ?? [];
+  // THEIR KEY IS NOT OURS TO ASSUME. Deliveries have used `libraryEntries`, `entries` and
+  // `misconceptions`; reading only one and finding nothing would report an empty screen as a
+  // problem with them. Every known shape is tried and the one that answered is NAMED in the output,
+  // so a future rename surfaces as an unrecognised shape rather than as a silent zero.
+  const payload = (raw.payload ?? raw) as Record<string, unknown>;
+  const SHAPES = ['libraryEntries', 'entries', 'misconceptions'] as const;
+  const key = SHAPES.find((k) => Array.isArray(payload[k]) && (payload[k] as unknown[]).length > 0);
+  if (!key) {
+    console.error(`REFUSED: no recognised entry list. Tried ${SHAPES.join(', ')}; payload carries `
+      + `${Object.keys(payload).join(', ')}. An unrecognised shape is not an empty one.`);
+    process.exit(1);
+  }
+  console.log(`Reading their entries from \`${key}\`.`);
+  const theirs = payload[key] as Array<Record<string, unknown>>;
   requirePopulation('check:library-agreement', { 'entries in their emission': theirs.length });
 
   const ids = theirs.map((e) => String(e.id));
@@ -42,7 +66,10 @@ async function main(): Promise<void> {
     const o = byId.get(id);
     if (!o) { missing.push(id); continue; }
     for (const f of COMPARED) {
-      if (t[f] === undefined) { notStated.push(`${id}.${f}`); continue; }
+      // NULL IS NOT-STATED, NOT A VALUE. This emission carries `status: null` on all 28 because it
+      // sent hints and descriptions only — counting those as 28 disagreements would be the
+      // unstated-denominator fault arriving inside the check written to avoid it.
+      if (t[f] === undefined || t[f] === null) { notStated.push(`${id}.${f}`); continue; }
       if (JSON.stringify(t[f]) !== JSON.stringify(o[f])) {
         differ.push(`${id}.${f}`);
         console.log(`\n${id}.${f}`);
