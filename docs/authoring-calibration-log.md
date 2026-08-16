@@ -5204,6 +5204,100 @@ one fault that cannot be recovered after publication.**
 `ENG-004-AGG-08` goes to her — the long-word refusal on *ordinary* / *extraordinary*, which are the
 pair her own restatement turns on. Declared exception or the item goes; nobody here rewords it.
 
+## R134 — The executor audit run against VR: thirteen executors, one disagreement, twenty-five live options
+*Annie's ruling, 2026-08-16: for generated distractors the tag and the value come from the same source and cannot disagree — but does the executor implement what the description NAMES?*
+
+**IT COULD BE RUN AND IT HAD NOT BEEN.** VR carries 13 executors in `VR_EXECUTORS`, every one with an
+ACTIVE library row. Twelve implement what their description says. **One does not:**
+
+> `vr07-value-slip` — *"Substituted one letter with the NEIGHBOURING value."*
+
+The executor swaps the target letter's value for **ANY other letter's value in the expression**, not a
+neighbouring one. On `P=2, Q=5, R=9 / P+Q+R` it produces six values where a neighbouring reading
+produces a handful. **The executor implements a SUPERSET of what the description names**, so an option
+can be tagged `value-slip`, carry a value the executor genuinely produces, and still not be the error
+the entry describes.
+
+**25 options carry it and ALL 25 ARE ON LIVE ITEMS.** VR is the district that was live before today,
+so this is a wrong description against a live tag, in front of children now.
+
+**IT IS NOT A WRONG OPTION.** The gate `check:vr-distractors` verifies the value against the executor,
+so every one of the 25 carries a value that error really produces. What is wrong is the ENTRY: the
+description is narrower than the code, and the child-facing `childHint` — *"Write each letter's number
+above it before you add"* — happens to be correct for both readings, which is why nothing surfaced it.
+**A narrow description over a broad executor is invisible to every value-based check by construction.**
+
+Whether the description widens or the executor narrows is a reviewer's decision, not ours: it changes
+what the tag MEANS and therefore what the 25 items are evidence of.
+
+**And her framing is the transferable half:** the note-vs-tag check does not apply to generated
+distractors because tag and value share a source — but **description-vs-executor** is the same
+question asked of the source itself, and it is the only one of the two that can be asked of a
+generated district at all.
+
+## R135 — The 400-odd authored VR options, counted exactly and logged
+*Annie, 2026-08-16: recorded as a gap rather than folded into the 1,612. Do not build.*
+
+**EXACTLY 381 authored VR options carry a tag** (`itemId` not `gen-`), across **145 distinct items,
+99 of them LIVE**. They carry **nothing note-shaped on any field**: `misconceptionExecution`,
+`senseTarget`, `attractorQuote`, `defeaterQuote`, `a36Note`, `windowClass`, `tagStatus` — 0 of 381
+each; item-level `r4Note` and `tierRationale` — 0 of 145 each.
+
+**Same exposure as English, no instrument.** English's 1,047 notes are what made her comparison
+possible and what found `WIW-14 B`; these 381 are authored the same way and have nothing to compare.
+They are also not reachable by R134's audit, which screens the 13 executors — an authored option has
+no executor. **So the 381 sit outside both checks**: too authored for the executor audit, too
+note-less for the note comparison.
+
+Counted and logged, not built.
+
+## R136 — The multi-quote gate: broken since it was written, findable only by an item needing two
+*2026-08-16, found while confirming her AGG-08 ruling.*
+
+**EVERY STEM DECLARING TWO OR MORE QUOTATIONS FAILED, ALWAYS.** `textsFrom` walks the stem object, so
+`quotes[0].text` is screened as its own string — and the gate passed it ALL declared spans, asking
+whether quote 1's span appeared inside quote 0's text. It cannot. Each quote reported the others as
+broken, with the message *"declares a quoted span that is not in the text"*, **which reads as bad
+authoring rather than as the gate comparing a span against the wrong string.**
+
+**WHY IT STAYED HIDDEN, WHICH IS THE DURABLE HALF: one quotation always worked.** The mechanism looked
+sound under every test anyone would naturally write, and was untestable by the only kind of item that
+exercises it. It was found by USING it — trying to apply her ruling to an item that needs exactly two
+spans — not by checking it. A defect whose trigger is "two of the thing" is invisible to a suite built
+on one of the thing.
+
+Fixed: a quote's own field carries only itself. Her ruling then holds exactly as she stated it —
+declaring the passage's own words clears AGG-08 with **no new rule and no declared exception**.
+
+**And her reason is the one to keep:** *a declared exception is something someone has to remember; a
+quotation declaration is a fact about the item.* The first decays, the second is checkable.
+
+## R137 — Audits that exist and have never been pointed at a district they could run on
+*David, 2026-08-16. One list, no builds.*
+
+Derived by reading each check's actual population filter, not its prose.
+
+**1. `audit:signed-depth` — 13 NVR signatures, never screened.** It filters
+`recordType: { contains: 'template-family' }`, which catches `maths-template-family` (19) and
+`spag-template-family` (14). **`nvr-signature` (13) does not contain that string and has never been
+seen by it** — and NVR is precisely the district whose signatures carry a `sampleSheetHash`, so it is
+the one where "does this signature still describe the family" is most answerable. Annie's second named
+artefact, blind to a third of the signatures it exists for.
+
+**2. Description-vs-executor — ran on Maths' 18, never on VR's 13 until today.** R134 is that run: 13
+executors, one disagreement, 25 live options. NVR generators have the same shape and have never been
+asked the question either.
+
+**3. `verify:solutions` and `check:maths-distractors` — still screening nothing, and now provably.**
+Declared under R61 as pointed at a MATHS item bank no code path creates. Confirmed again here: LIVE
+items are **ENGLISH (34) and VR (298) only** — there are no MATHS items at all, in any status. The
+declaration holds and the population is still zero.
+
+**Not on the list, checked and cleared:** `check:option-positions` reads `status: 'LIVE'` with no
+district filter, so it genuinely screens all 332 live items across both districts. Its prose mentions
+maths; its query does not. **A district named in a comment is not a district in a WHERE clause** —
+which is why this list was built from filters rather than from what each file talks about.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 

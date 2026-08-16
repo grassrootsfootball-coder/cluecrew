@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { checkItemChildFacing, type GatableItem } from './item-content-gate';
+import { isBlocking } from './content-gates';
 
 /**
  * A carrier sentence (vr-04 tiers 4-5; vr-06's cloze sentence) disambiguates a
@@ -64,5 +65,38 @@ describe('carrier sentence takes the word-card role', () => {
       },
     });
     expect(failures.filter((f) => f.rule === 'sentence-length')).toEqual([]);
+  });
+});
+
+describe('multi-quote stems (R136)', () => {
+  const base = {
+    id: 'T', mechanic: 'select-one',
+    explanation: { walkScript: 'Look at line 35.', hintCore: 'Who is looking?' },
+    options: [
+      { content: { label: 'A', value: 'One.' }, isCorrect: false },
+      { content: { label: 'B', value: 'Two.' }, isCorrect: true },
+    ],
+  };
+
+  it('accepts a stem declaring TWO quotations — each quote field carries only itself', () => {
+    // Broken since the mechanism was written: screening `quotes[0].text` was passed EVERY declared
+    // span, so quote 1's span was sought inside quote 0's text and reported as not in it. One
+    // quotation always worked, which is why nothing caught it.
+    const faults = checkItemChildFacing({
+      ...base,
+      stem: {
+        text: 'Line 35 says an ordinary observer and line 41 an extraordinary observer. Why?',
+        quotes: [{ text: 'an ordinary observer' }, { text: 'an extraordinary observer' }],
+      },
+    }).filter(isBlocking);
+    expect(faults).toEqual([]);
+  });
+
+  it('still reports a declared span that really is absent from the stem', () => {
+    const faults = checkItemChildFacing({
+      ...base,
+      stem: { text: 'Line 35 says an ordinary observer. Why?', quotes: [{ text: 'a nonexistent span' }] },
+    }).filter(isBlocking);
+    expect(faults.some((f) => f.detail.includes('not in the text'))).toBe(true);
   });
 });

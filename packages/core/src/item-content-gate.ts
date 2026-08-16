@@ -92,6 +92,29 @@ export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
   const carriesQuotes = (path: string): boolean =>
     path === 'prompt' || path === 'text' || /^quotes\[\d+\]\.text$/.test(path);
 
+  /**
+   * WHICH SPANS APPLY TO THIS FIELD — and a quote's OWN field carries ONLY ITSELF.
+   *
+   * This passed EVERY declared span to every quote field, so screening `quotes[0].text` asked
+   * whether quote 1's span appeared inside quote 0's text. It cannot. **Every stem declaring two or
+   * more quotations therefore failed, always, with each quote reporting the others as broken spans**
+   * — and the message said "declares a quoted span that is not in the text", which reads as bad
+   * authoring rather than as the gate comparing a span against the wrong string.
+   *
+   * Found while confirming the reviewer's AGG-08 ruling, which needs exactly two: *an ordinary
+   * observer* (line 35) and *an extraordinary observer* (line 41). One quotation always worked, so
+   * the mechanism looked sound and was untestable by the item that needed it.
+   */
+  const spansFor = (path: string): readonly string[] => {
+    const own = /^quotes\[(\d+)\]\.text$/.exec(path);
+    if (own) {
+      const q = stemQuoteObjects[Number(own[1])];
+      const text = q?.text;
+      return typeof text === 'string' && text ? [text] : [];
+    }
+    return stemQuotes;
+  };
+
   // Every stem string. The prose and the quote declarations carry the declared quotes.
   for (const [path, text] of textsFrom(item.stem, '')) {
     // A carrier sentence disambiguates a meaning and can run long, so it takes
@@ -113,7 +136,7 @@ export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
         // quotes were passed to NOTHING. And `textsFrom` walks the stem object, so it screens
         // `quotes[0].text` as its own string — the quotation checked with no exemption, which left
         // a 20-word fault standing on a span declared exempt from the sentence cap.
-        quotedSpans: carriesQuotes(path) ? stemQuotes : [],
+        quotedSpans: carriesQuotes(path) ? spansFor(path) : [],
         exemptSpans: carriesQuotes(path) ? stemExemptSpans : undefined,
         testedTokens,
         passageNames,
