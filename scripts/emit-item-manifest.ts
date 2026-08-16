@@ -76,6 +76,22 @@ function probe(
 
   // Name the COLUMN, not its table. A shared label reads as a shared carrier to the collapse
   // check below — and it caught exactly that here on its first run.
+  /**
+   * Cowork's `preReview.*` lands on `Item.authoringPreReview` — a DIFFERENT NAME on purpose, so
+   * nothing reads a drafting agent's self-assessment as a sign-off. The probe must know that: a
+   * generic search for `preReview` finds nothing and would report seven fields as lost when they
+   * are carried, which is the manifest lying in the direction that manufactures work.
+   */
+  if (bare.startsWith('preReview')) {
+    const held = ctx.top.authoringPreReview;
+    if (!held || typeof held !== 'object') return { present: false, foundAt: null };
+    let cur: unknown = held;
+    for (const k of bare.split('.').slice(1)) {
+      if (!has(cur, k)) return { present: false, foundAt: null };
+      cur = (cur as Record<string, unknown>)[k];
+    }
+    return { present: true, foundAt: `Item.authoringPreReview.${bare.split('.').slice(1).join('.')}` };
+  }
   if (bare === 'difficultyTier') return { present: true, foundAt: 'Item.difficultyTier' };
   if (bare === 'questionTypeId') return { present: true, foundAt: 'Item.questionTypeId' };
   if (path === 'misconceptions[]') {

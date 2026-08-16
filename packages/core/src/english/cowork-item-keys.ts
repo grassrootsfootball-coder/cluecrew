@@ -86,6 +86,14 @@ export const COWORK_ITEM_KEYS: Readonly<Record<CoworkLevel, readonly CoworkKeyRu
         'shape: on 96 of 96 items this array equals the set of option misconceptionIds exactly, ' +
         'so it is the same fact and not a superset.',
     },
+    {
+      key: 'preReview',
+      disposition: 'MAPPED',
+      carriedAt: 'Item.authoringPreReview (+ authoringPreReviewHash, computed here)',
+      // AUTHORING METADATA, not review. Both of Cowork's verdict values mean a human has not
+      // looked. check:review-queries fences the column off from anything answering "has this
+      // been reviewed"; the name alone is not the control.
+    },
     { key: 'tierRationale', disposition: 'MAPPED', carriedAt: 'Item.tierRationale' },
     { key: 'sourcedFrom', disposition: 'MAPPED', carriedAt: 'Item.sourcedFrom' },
     { key: 'mechanismLedger', disposition: 'MAPPED', carriedAt: 'Item.mechanismLedger' },

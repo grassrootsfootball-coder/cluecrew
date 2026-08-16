@@ -293,6 +293,26 @@ model Item {
   // carry options like every other district.
   englishOpenResponse     EnglishOpenResponse?
   englishUnmatchedAnswers EnglishUnmatchedAnswer[]
+  // COWORK'S preReview — A DRAFTING AGENT'S ASSESSMENT OF ITS OWN WORK, on 78 items.
+  //
+  // NOT REVIEW, AND DELIBERATELY NOT NAMED AS IF IT WERE (David, 2026-08-16). Both verdict values
+  // Cowork emits — PASS_TO_HUMAN and FIXED_THEN_PASS — terminate in "a human has not looked yet".
+  // It is a READINESS claim from the opposite end of the process from a reviewer's ratification.
+  //
+  // STRUCTURALLY UNREACHABLE FROM THE REVIEWER PATH. It is not reviewedBy, not reviewRecordedBy,
+  // and nothing recordSignature writes. NO QUERY THAT ANSWERS "has this been reviewed" MAY READ
+  // IT — enforced by `pnpm check:review-queries`, the same way check:signing-doors enforces its
+  // door. Careful naming is not a control; the gate is.
+  //
+  // Three of its rubric keys (readingAge, banList, keyVerified) are RE-DERIVABLE by gates this
+  // repo already runs. Stored on nobody's authority is fine; mistaken later for findings is not,
+  // so anything surfacing them must mark them as claims — see describePreReview in packages/core.
+  authoringPreReview      Json?
+  // WHAT THE CLAIM WAS ABOUT. Cowork's version asserts nothing about what it assessed, so it
+  // survives any later edit to the item — the exact failure subjectHash was added to prevent on
+  // AttributionEvent. Carrying it across unfixed would import a known defect, so this side
+  // computes one over the stem, the options in stored order and the tier.
+  authoringPreReviewHash  String?
   // COWORK'S AUTHORING PROVENANCE, carried because the platform's claim rests on it (David,
   // 2026-08-16, revising his own earlier ruling). He had scoped carriage to the 39 DECLARATIVE
   // fields; Cowork's PROVENANCE classification was correct on its own terms and the line was

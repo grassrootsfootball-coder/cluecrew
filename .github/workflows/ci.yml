@@ -205,6 +205,18 @@ jobs:
       - name: Exported gate libraries match the database
         run: pnpm check:gate-library-fresh
 
+      # TWO THINGS ARE BOTH CALLED REVIEW. Cowork's preReview is a drafting agent assessing its
+      # own work -- both its verdict values mean a human has NOT looked -- and Annie's ratification
+      # resolves to a named individual through the naming path. Model them as one and a
+      # self-assessment looks like a sign-off in the store that ships. This fences the column off
+      # statically, the same way check:signing-doors fences its door. The subject check reports a
+      # claim still attached to an item that has since moved.
+      - name: Review queries (a self-assessment is not a sign-off)
+        run: pnpm check:review-queries
+
+      - name: Pre-review subject (a claim still describes its item)
+        run: pnpm check:pre-review-subject
+
       # THE MANIFEST GUARD. Fails on REGRESSION -- a declarative field this store carried is
       # carried less, or is carried somewhere else -- never on the 20-field backlog, which would
       # be red from the first run and muted within a week. Also refuses when the manifest and the
