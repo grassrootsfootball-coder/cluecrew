@@ -66,6 +66,7 @@ describe('the registry itself', () => {
     expect(PROPOSED_EXCEPTIONS.map((l: { level: string; key: string }) => `${l.level}.${l.key}`)).toEqual([
       'item.banListException_SHAPE_NOTE',
       'item.draftingMethod_SHAPE_NOTE',
+      'item._previousMisconceptionsArray',
       'item._previousOrderAnchor',
       'item.notes',
       'item.draftingOrder',

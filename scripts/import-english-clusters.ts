@@ -164,10 +164,15 @@ function writeReceipt(r: {
     refusals,
   };
   mkdirSync(RECEIPT_DIR, { recursive: true });
-  const path = join(RECEIPT_DIR, stampedName('import-receipt', stamp.sourceHash, 'json'));
+  // NAMED FOR THE IMPORT IT BELONGS TO. Cowork reads a file David moves across, so the name has
+  // to say which run produced it without opening it: the deliveries, the mode, and the stamp.
+  const label = r.files.map((f) => f.split('/').pop()!.replace(/\.json$/, '')).join('+').slice(0, 60);
+  const base = `import-receipt-${label}-${r.mode}`;
+  const path = join(RECEIPT_DIR, stampedName(base, stamp.sourceHash, 'json'));
   writeFileSync(path, JSON.stringify(body, null, 2));
-  deliver(path, 'import-receipt');
-  console.log(`\nReceipt: ${refusals.length} refusal(s) named for Cowork (${r.mode}).`);
+  deliver(path, base);
+  console.log(`\nReceipt: ${refusals.length} refusal(s) named for Cowork (${r.mode}) -> ${path.split('/').pop()}`);
+  console.log('  Move it to Cowork\'s from-cluecrew/ as import-receipt.json — it reads that path.');
 }
 
 async function main(): Promise<void> {

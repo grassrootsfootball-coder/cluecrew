@@ -125,6 +125,13 @@ export const COWORK_ITEM_KEYS: Readonly<Record<CoworkLevel, readonly CoworkKeyRu
       reason: 'A note about the SHAPE of draftingMethod, not a fact about the item.',
     },
     {
+      key: '_previousMisconceptionsArray',
+      disposition: 'NOT_CARRIED',
+      ruling: 'PROPOSED',
+      reason: 'The tag list a retag replaced, on 1 item. Underscore-prefixed by Cowork; the current '
+        + 'tags are the claim and the supersession belongs in an attribution event.',
+    },
+    {
       key: '_previousOrderAnchor',
       disposition: 'NOT_CARRIED',
       ruling: 'PROPOSED',
