@@ -71,7 +71,11 @@ const optionContent = (o: Draft['options'][number], i: number): { label: string;
  */
 function carriedStem(it: Draft): Record<string, unknown> {
   const stem = { ...it.stem };
-  for (const k of ['passageRef', 'lineRefs', 'orderAnchor'] as const) {
+  // lineRefs is NOT here: R77 ruled it ITEM level and migrate:citations moved it off the stem.
+  // Carrying it back onto the stem left `Item.lineRefs` null on every re-imported row, so the
+  // store and the file disagreed about the citation window on 25 of 22 ENG-001 comparisons while
+  // both actually held the same numbers in different places.
+  for (const k of ['passageRef', 'orderAnchor'] as const) {
     if (it[k] !== undefined && it[k] !== null) stem[k] = it[k];
   }
   return stem;
@@ -223,6 +227,7 @@ async function main(): Promise<void> {
       stem: carriedStem(it) as object, explanation: (it.explanation ?? {}) as object,
       // Provenance crosses. Absence stays absent — an undefined field is written as null, never
       // as an empty string, so "not stated" and "stated as nothing" stay distinguishable.
+      lineRefs: (it.lineRefs ?? Prisma.DbNull) as Prisma.InputJsonValue,
       clusterPosition: (it.clusterPosition as number | undefined) ?? null,
       draftingMethod: ((it.draftingMethod ?? it.draftingOrder) as string | undefined) ?? null,
       itemModel: (it.itemModel as string | undefined) ?? null,
