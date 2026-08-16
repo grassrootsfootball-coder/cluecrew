@@ -219,6 +219,19 @@ here has no register entry. A ruling goes to the register FIRST; it comes here o
   CARRIED per class and reads what an export carries OUT OF ITS SOURCE, never a declared list.
   Currently 1 of 6 carried. Also: an artefact's stamp must be computed from the SAME projection it
   delivers — this one was not, so two materially different files shipped under one name.
+- **A MACHINE VERDICT MUST NOT WEAR A PERSON'S NAME** (David, 2026-08-16 — R94). A ruling said
+  Annie had marked eight items a child cannot answer; `check:word-puzzles` had, by executing each
+  item's own rule against its key. The ruling was issued without the row having been read, I
+  repeated it, and it was one delivery from a register entry. **R75's conflation arriving through
+  the RULING CHANNEL, which nothing on either side screens.** `pnpm check:authority-shape` screens
+  the store both ways and prints that limit: it found 0 machine verdicts wearing a person's
+  authority and 463 rows carrying `human:staff-reviewer@cluecrew.test`, which resolves to no
+  Reviewer row — the same conflation reversed, and far larger. It cannot screen prose.
+- **WHAT PRISMA CAN SILENTLY OVERWRITE MUST BE ASSERTED** (2026-08-16 — R95). Six migrations hold
+  SQL Prisma cannot express (triggers, functions, named CHECKs, expression defaults); it reverted
+  one of them on a routine `migrate dev` and only luck caught it. `pnpm check:db-invariants` asserts
+  each fact AND requires that every hand-written fact HAVE an assertion, so the next hand-written
+  migration cannot land unasserted. A stale invariant fails rather than passing vacuously.
 - Content decisions (items, chapters, misconceptions) go through the CMS
   review pipeline; nothing skips the reviewer.
 - **PILOT CONTENT UNDER ACTIVE REVIEW HAS ONE WRITE PATH: `scripts/lib/pilot-review.ts`, NEVER A

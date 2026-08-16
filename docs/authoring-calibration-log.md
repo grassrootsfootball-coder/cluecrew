@@ -3947,3 +3947,87 @@ vacuously.
 **Not built this turn**, and the gap stays open and named. The one-line version of why it matters:
 the six migrations above are the only place in this repo where the database knows something the
 schema does not, and the generator's job is to make the database match the schema.
+
+## R94 — Authority conflation arriving through the ruling channel
+*David, 2026-08-16, correcting himself. The origin is the entry.*
+
+**David's ruling said Annie had marked eight items a child cannot answer. She had not.**
+`check:word-puzzles` sets `answerFlagNote` by executing the item's own rule against its key. He
+issued the ruling without having seen the row; I repeated it in a report; it was one delivery from
+a register entry recording eight machine findings under a reviewer's authority. R75's conflation —
+the whole subject of which is that an agent's verdict must never read as a reviewer's — arriving
+**through the ruling channel itself**, which is the one route nothing on either side screens.
+
+It was caught by someone going and looking. Not by a gate.
+
+**THE SWEEP, and its result is not the one the instrument first suggested.** A regex over `actor`,
+`recordedBy`, `reviewerId`, `approvalMethod` and 1,235 attribution events found ZERO machine-shaped
+authorities. That was a weak instrument answering a question it could not reach, because **the eight
+were never wrong in the data.** `answerFlagNote` has no reviewer field beside it, by design; all
+eight rows carry `reviewedBy` null. The store was right the whole time and the conflation lived
+entirely in prose.
+
+`check:authority-shape` now screens both directions and says that limit in its own output:
+  · **0 machine verdicts wearing a person's authority.** 9 machine-set findings, none beside a
+    reviewer attribution.
+  · **463 rows carry a person-shaped authority that resolves to NO `Reviewer` row** —
+    `human:staff-reviewer@cluecrew.test`, on 301 items via `reviewedBy` and 162 misconceptions via
+    `approvedBy`, and on zero attribution events. It reads as a named individual and is not one.
+    **That is the same conflation with the arrow reversed**, and it is the larger population by two
+    orders of magnitude. Not resolved here: whether that id is a person, a role, or a seed artefact
+    is a question for David, and guessing would be the fault repeating.
+
+**The limit is printed on every run: this screens the STORE, not the PROSE.** The one instance we
+have was correct in every row and wrong in a ruling, a report and nearly a register entry.
+
+## R95 — The invariants file, built, and what it caught in its first minute
+*David, 2026-08-16: "your objection is the argument for building it now."*
+
+The objection was that the file becomes a list of what we thought of in August. The answer was
+already in this district twice — `DECLARED_DOORS` and `KNOWN_UNTYPED` both FAIL on a stale entry —
+so `check:db-invariants` has two halves and the second is the one that matters:
+
+  1. **13 assertions**, each naming the fact and the reason. An invariant whose object no longer
+     exists FAILS rather than passing vacuously.
+  2. **COVERAGE, extracted from the migration SQL.** Every trigger, function, named CHECK and
+     expression default across 43 migrations is matched against an invariant, and **a hand-written
+     migration touching an unasserted object fails the check** — so the next one cannot land
+     unasserted. Scanned, never hand-kept (R57).
+
+**The canary reintroduced R83's exact regression** — `ALTER COLUMN "at" SET DEFAULT
+CURRENT_TIMESTAMP` — and the check went from 13 of 13 to 12 of 13, naming the column and the
+reason. Restored, and green again. A gate that has never failed has asserted nothing.
+
+**Its first run over-reported, and the fix is a distinction worth keeping.** It flagged
+`ContentWriteLog.changedColumns` as an unasserted hand-written fact. It was not: a bare `DROP
+DEFAULT` is **Prisma's own vocabulary**, emitted whenever a model's default changes, and that line
+came from a generated migration doing its job. The same statement inside a migration that also
+carries a trigger, a function, a named CHECK or an expression default IS somebody deciding
+something — R83's fix was exactly that. So the extractor scopes bare `DROP DEFAULT` to hand-written
+migrations. 13 facts, 13 asserted, 0 unasserted.
+
+## R96 — `stampedOver`, and a reversal about what an artefact's identity may depend on
+*2026-08-16, closing R92.*
+
+Three guesses at "which part of the body is the payload" produced three false accusations, and the
+answer was that shape cannot tell you — **the exporter can**. `ArtefactStamp.stampedOver` names the
+keys the hash was computed over. Optional, so the artefacts that predate it stay readable, and their
+absence reports as UNSCREENED rather than as a pass.
+
+**THE REVERSAL.** The misconception library's stamp deliberately EXCLUDED the gate verdict, on the
+argument that an artefact's identity should not depend on the checker (R62's coupling, one level
+up). That argument is sound and the consequence was worse than the coupling: the stamp covered
+something other than the payload, so this artefact — the one the entire hash collision came from —
+was the one thing `check:stamp-covers-payload` could never verify. The verdict is now in the stamp.
+It costs nothing real, since `gate` is computed from `childHint` which the stamp already covers.
+**Being VERIFIABLE beats being purely derived.**
+
+The library's name moved `af7d1a75ad843996` → `ab381a4e7f68634d` when the projection was corrected,
+which is the property working: a name that moves when the content moves.
+
+Fixing the declaration then exposed one more instance of the two-shapes fault that has now run
+through this whole thread. Some exports nest the stamp under `stamp`; others spread its fields FLAT.
+Reconstructing only `sourceHash` and `snapshotOf` from the flat shape DROPPED the new declaration,
+and the artefact fell back to the heuristic — which then read `stampedOver` itself as part of the
+payload it was meant to describe. 12 of 14 screened artefacts now cover exactly what they ship; 38
+remain unscreened and named.

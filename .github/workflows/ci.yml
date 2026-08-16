@@ -227,6 +227,20 @@ jobs:
       - name: Stamp covers payload (a name that moves when the content moves)
         run: pnpm check:stamp-covers-payload
 
+      # THE DATABASE FACTS PRISMA DOES NOT KNOW. Six migrations hold SQL Prisma cannot express --
+      # triggers, functions, named CHECKs, expression defaults -- and that set is exactly what a
+      # routine `migrate dev` can silently overwrite. It already overwrote one (R83). Two halves:
+      # every invariant must hold, and every hand-written fact must HAVE an invariant, so the next
+      # hand-written migration cannot land unasserted.
+      - name: Database invariants (what Prisma can silently overwrite)
+        run: pnpm check:db-invariants
+
+      # A MACHINE VERDICT MUST NOT WEAR A PERSON'S NAME, nor a person's verdict a machine's. Screens
+      # the store in both directions; it cannot screen prose, and says so, because the one instance
+      # we have was right in every row and wrong in a ruling.
+      - name: Authority shape (whose verdict is this)
+        run: pnpm check:authority-shape
+
       # THE WRITE BOUNDARY. Database TRIGGERS record every mutation of a content table, so
       # application code cannot opt out -- a write from a script, from Prisma Studio, from psql or
       # from another agent lands identically. This compares that record against AttributionEvent

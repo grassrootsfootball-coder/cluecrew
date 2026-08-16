@@ -28,7 +28,7 @@ const FAMILY = 'misconception-library-current';
  * file says about an entry without changing the entry's text at all.
  */
 export async function buildMisconceptionLibrarySource(prisma: typeof defaultPrisma): Promise<unknown> {
-  return (await libraryEntries(prisma)).map(({ gate, ...rest }) => rest);
+  return libraryEntries(prisma);
 }
 
 /**
@@ -40,10 +40,13 @@ export async function buildMisconceptionLibrarySource(prisma: typeof defaultPris
  * thing every comparison in this repo cites; a name that does not move when the content moves is
  * a comparison that reports agreement between two different artefacts.
  *
- * Both now derive from one function. The gate VERDICT is excluded from the stamp deliberately: it
- * is computed from the hint at export time, so including it would make the artefact's identity
- * depend on the checker rather than on the content — the same coupling R62 closed for derived
- * values, one level up.
+ * Both now derive from one function, INCLUDING the gate verdict — and that is a reversal. It was
+ * excluded at first, on the argument that an artefact's identity should not depend on the checker
+ * (R62's coupling, one level up). The consequence was that the stamp covered something other than
+ * the payload, so `check:stamp-covers-payload` could never verify this artefact, and the fault of
+ * two files under one name could recur here undetected. The theoretical coupling costs nothing
+ * real: `gate` is computed from `childHint`, which is already in the stamp, so including it adds
+ * redundancy rather than new authority. Being VERIFIABLE beats being purely derived.
  */
 
 /**
@@ -98,6 +101,7 @@ async function main(): Promise<void> {
     generatedAt,
     'mixed',
     'every misconception, with its verbatim childHint (content) and its status and gate verdict (status)',
+    ['entries'],
   );
   const out = {
     kind: 'misconception-library-current',

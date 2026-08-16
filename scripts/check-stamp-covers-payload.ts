@@ -44,6 +44,7 @@ const DELIVERY_DIRS = ['/Users/davidb/Downloads/11+/from-cluecrew'];
 const ENVELOPE_KEYS = new Set([
   'kind', 'generatedAt', 'sourceHash', 'snapshotOf', 'describes', 'staleness', 'note', 'exportedAt',
   'count', 'counts', 'byDistrict', 'stamp', 'source', 'reason', 'schema', 'emittedAt', 'byCluster',
+  'stampedOver',
 ]);
 
 /** The same canonicalisation `freshnessStamp` uses, so a recomputation is comparable. */
@@ -82,10 +83,17 @@ function main(): void {
       // the same field that was missing. Fourth instance of a reader knowing one of two live names
       // (stem.prompt/stem.text was the third), and the first where the miss hid itself.
       const nested = body.stamp as { sourceHash?: string; snapshotOf?: string } | undefined;
-      const stamp: { sourceHash?: string; snapshotOf?: string } | undefined =
+      const stamp: { sourceHash?: string; snapshotOf?: string; stampedOver?: unknown } | undefined =
         nested?.sourceHash ? nested
           : typeof body.sourceHash === 'string'
-            ? { sourceHash: body.sourceHash, snapshotOf: body.snapshotOf as string | undefined }
+            // The flat shape spreads EVERY stamp field at the top level, `stampedOver` included.
+            // Reconstructing only two of them dropped the declaration and sent the artefact back
+            // to the heuristic — which then read `stampedOver` itself as part of the payload.
+            ? {
+              sourceHash: body.sourceHash,
+              snapshotOf: body.snapshotOf as string | undefined,
+              stampedOver: body.stampedOver,
+            }
             : undefined;
       // THE PAYLOAD IS FOUND, NOT NAMED. The first version read only a key called `entries` and
       // reported five artefacts clean — SKIPPING the misconception library, which names its array
@@ -97,6 +105,31 @@ function main(): void {
       // instead of `held`. A check that names the wrong slice and calls the artefact broken is the
       // cry-wolf failure that gets a gate switched off; an unscreenable artefact must say so
       // instead of guessing.
+      // THE EXPORTER'S DECLARATION WINS. `stampedOver` names the keys the hash was computed over,
+      // which is the fact no amount of shape-reading could recover — three guesses at it produced
+      // three false accusations (R92). Absent, the timid heuristic below still applies, and an
+      // artefact it cannot resolve is reported UNSCREENED rather than judged.
+      const declared = (stamp as { stampedOver?: unknown } | undefined)?.stampedOver;
+      if (Array.isArray(declared) && declared.length > 0 && declared.every((k) => typeof k === 'string')) {
+        const missing = (declared as string[]).filter((k) => !(k in body));
+        if (missing.length) {
+          skipped.push(`${name} — declares stampedOver ${declared.join(', ')} but the body has no ${missing.join(', ')}`);
+          continue;
+        }
+        scanned += 1;
+        const source = declared.length === 1 ? body[(declared as string[])[0]!]
+          : Object.fromEntries((declared as string[]).map((k) => [k, body[k]]));
+        const row: Row = {
+          file: name, snapshotOf: stamp!.snapshotOf ?? '(undeclared)',
+          carried: stamp!.sourceHash!, recomputed: hashOf(source),
+          entries: Array.isArray(source) ? source.length : 1,
+        };
+        if (row.carried === row.recomputed) covered.push(row);
+        else if (row.snapshotOf === 'content') mismatched.push(row);
+        else unverified.push(row);
+        continue;
+      }
+
       const payloadKeys = Object.keys(body).filter((k) => !ENVELOPE_KEYS.has(k));
       if (!stamp?.sourceHash && payloadKeys.length) {
         skipped.push(`${name} — carries a payload but no stamp this check can read`);

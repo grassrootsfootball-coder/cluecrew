@@ -75,6 +75,7 @@ async function main(): Promise<void> {
     generatedAt,
     'content',
     'every open answerability flag, with the gate\'s note verbatim and the item it describes',
+    ['entries'],
   );
   const out = {
     kind: 'answer-flags-open',

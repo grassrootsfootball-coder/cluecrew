@@ -128,7 +128,7 @@ async function main(): Promise<void> {
   mkdirSync(OUT_DIR, { recursive: true });
   const generatedAt = new Date().toISOString();
   for (const a of artefacts) {
-    const stamp = artefactStamp(a.entries, generatedAt, 'content', a.note);
+    const stamp = artefactStamp(a.entries, generatedAt, 'content', a.note, ['entries']);
     const body = { kind: a.family, note: a.note, generatedAt, stamp, count: a.entries.length, entries: a.entries };
     const path = join(OUT_DIR, stampedName(a.family, stamp.sourceHash, 'json'));
     writeFileSync(path, JSON.stringify(body, null, 2));

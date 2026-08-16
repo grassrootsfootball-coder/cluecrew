@@ -108,6 +108,8 @@
     "export:reviewer-record": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-reviewer-record.ts",
     "export:answer-flags": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-answer-flags.ts",
     "check:stamp-covers-payload": "tsx scripts/check-stamp-covers-payload.ts",
+    "check:db-invariants": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-db-invariants.ts",
+    "check:authority-shape": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-authority-shape.ts",
     "check:return-leg": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-return-leg.ts",
     "check:outside-writes": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-outside-writes.ts",
     "check:review-queries": "tsx scripts/check-review-queries.ts",

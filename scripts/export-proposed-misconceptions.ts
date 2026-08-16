@@ -55,7 +55,7 @@ async function main(): Promise<void> {
     };
   });
   const generatedAt = new Date().toISOString();
-  const stamp = artefactStamp(await buildProposedQueueSource(prisma), generatedAt, 'status', 'every misconception whose status is PROPOSED');
+  const stamp = artefactStamp(await buildProposedQueueSource(prisma), generatedAt, 'status', 'every misconception whose status is PROPOSED', ['entries']);
   const out = {
     kind: 'misconceptions-proposed-queue',
     ...stamp,

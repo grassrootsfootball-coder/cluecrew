@@ -194,6 +194,18 @@ export interface ArtefactStamp extends FreshnessStamp {
   snapshotOf: SnapshotOf;
   /** Plain-English name of the thing described, for the human-readable header. */
   describes: string;
+  /**
+   * WHICH TOP-LEVEL KEY (or keys) THE `sourceHash` WAS COMPUTED OVER.
+   *
+   * `check:stamp-covers-payload` recomputes the hash from the artefact and compares. It cannot
+   * infer which part of the body is the payload, and three attempts to guess from SHAPE produced
+   * three false accusations: the first array, the only array, and one artefact whose payload is an
+   * object AND an array together. Shape cannot tell you; the exporter can.
+   *
+   * Optional so the 38 artefacts that predate it stay readable, and their absence is reported as
+   * UNSCREENED rather than as a pass — an undeclared artefact is one nothing can verify.
+   */
+  stampedOver?: readonly string[];
 }
 
 /**
@@ -239,6 +251,10 @@ export function artefactStamp(
   generatedAt: string,
   snapshotOf: SnapshotOf,
   describes: string,
+  stampedOver?: readonly string[],
 ): ArtefactStamp {
-  return { ...freshnessStamp(source, generatedAt), snapshotOf, describes };
+  return {
+    ...freshnessStamp(source, generatedAt), snapshotOf, describes,
+    ...(stampedOver ? { stampedOver } : {}),
+  };
 }
