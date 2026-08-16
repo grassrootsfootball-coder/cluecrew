@@ -4585,6 +4585,36 @@ never exempted, but rewording HER text to satisfy a gate aimed at children is th
 channel exists to prevent. Moved to the existing directory rather than adding a fourth exclusion —
 two paths for one concept will drift, which is R57 in a filename.
 
+## R116 — Involvement read as authorship, and a person wearing a role's login
+*David, 2026-08-16. One line, no sweep — and the caveat made permanent.*
+
+**NOTHING ELSE IS MARKED PERSON ON THE STRENGTH OF A COMMENT.** Two entries in the whole library
+carry `hintAuthorKind: PERSON` — `en-determiner-omitted` and `en-narrator-voice-as-fact` — and both
+name the same artefact, `annie-approval-batch-return.md` (`f92d4bae97ea248e`), in which she
+demonstrably rejected a draft and wrote a replacement. Neither rests on a comment.
+
+**BUT THE DENOMINATOR IS 9, NOT 277.** Only 9 of 277 library entries carry ANY `textProvenance`;
+**268 have none at all**, so for those the question cannot be asked — not "no", but "unaskable". The
+one-line answer is clean and it covers 3% of the library. Recording the figure because a clean
+answer over an unstated denominator is how 172 happened.
+
+`en-relative-pronoun-choice` remains the instance, and it is Cowork's row rather than ours: **she
+wrote a NOTE attached to a hint the drafting side wrote, and the note became her authorship of the
+hint.** R94's conflation arriving from INVOLVEMENT — the reviewer touched it, so the reviewer is
+recorded as having made it. Nothing on either side screens for that, and nothing here can: it is a
+judgement about what a person did, from a record that only says they were present.
+
+**THE 463-ROW CAVEAT IS NOW PRINTED EVERY RUN, NOT ONCE.** `check:authority-shape` gains a third
+shape. The first two are a machine verdict wearing a person's name, and a person-shaped string
+resolving to nobody. This is neither: **the Reviewer row is real, the person is real, and the ACCOUNT
+is shared**, so every holder of one login signs as one named individual. Nothing else in the check
+catches it, because every row it produces resolves correctly — R94's conflation with the direction
+reversed. There a role string wore a person's shape; here a person wears a role's login.
+
+It prints on every CI run rather than at set-up, because **a caveat that appeared in a single console
+output on the day it was created is true, recorded, and unread at the moment it matters** — which is
+the same failure as the hard-coded 172 and Cowork's `approvedBy`, in a warning rather than a claim.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 

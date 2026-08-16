@@ -103,6 +103,35 @@ async function main(): Promise<void> {
     console.log('    row, or declare what it actually is in DECLARED_NON_INDIVIDUAL with a reason.');
   }
 
+  /**
+   * THE THIRD SHAPE: A NAMED PERSON BOUND TO A SHARED CREDENTIAL (R116).
+   *
+   * The other two are a machine verdict wearing a person's name, and a person-shaped string that
+   * resolves to nobody. This is neither: the Reviewer row is real, the person is real, and the
+   * ACCOUNT is shared — so every holder of one login signs as one named individual. R94's
+   * conflation with the direction reversed, and nothing above catches it because every row it
+   * produces resolves correctly.
+   *
+   * Printed EVERY RUN and not once at set-up time, because a caveat that appeared in a single
+   * console output on the day it was created is exactly the kind of warning that is true, recorded,
+   * and unread at the moment it matters.
+   */
+  const shared = await prisma.reviewer.findMany({
+    where: { staffEmail: { not: null }, heldUntil: null },
+    select: { id: true, displayName: true, staffEmail: true },
+  });
+  const roleAccounts = shared.filter((r) => /^staff-[a-z]+@/.test(r.staffEmail ?? ''));
+  if (roleAccounts.length) {
+    console.log(`\n  ${roleAccounts.length} NAMED REVIEWER(S) BOUND TO A SHARED ROLE ACCOUNT:`);
+    for (const r of roleAccounts) {
+      console.log(`    ! ${r.displayName} (${r.id}) signs as ${r.staffEmail}`);
+    }
+    console.log('    ANYONE HOLDING THAT LOGIN SIGNS AS THAT PERSON. Correct for development and');
+    console.log('    wrong for anything real: a named reviewer needs her own account before any');
+    console.log('    door writes a signature outside dev. This is the 463-row conflation reversed —');
+    console.log('    there a role string wore a person\'s shape; here a person wears a role\'s login.');
+  }
+
   console.log('\n  THIS SCREENS THE STORE, NOT THE PROSE. The one instance we have — eight gate-set');
   console.log('  flags described as a reviewer\'s — was correct in every row and wrong in a ruling,');
   console.log('  a report and nearly a register entry. Nothing here can see that channel.');
