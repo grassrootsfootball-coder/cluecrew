@@ -95,9 +95,26 @@ export const COWORK_ITEM_KEYS: Readonly<Record<CoworkLevel, readonly CoworkKeyRu
       // been reviewed"; the name alone is not the control.
     },
     { key: 'clusterPosition', disposition: 'MAPPED', carriedAt: 'Item.clusterPosition — serve order, file position' },
+    // Cowork now sends the POST-RENAME names (R79). `draftingOrder` above stays for the older
+    // deliveries; both land on the same column.
+    { key: 'draftingMethod', disposition: 'MAPPED', carriedAt: 'Item.draftingMethod' },
+    { key: 'itemModel', disposition: 'MAPPED', carriedAt: 'Item.itemModel' },
     { key: 'tierRationale', disposition: 'MAPPED', carriedAt: 'Item.tierRationale' },
     { key: 'sourcedFrom', disposition: 'MAPPED', carriedAt: 'Item.sourcedFrom' },
     { key: 'mechanismLedger', disposition: 'MAPPED', carriedAt: 'Item.mechanismLedger' },
+    {
+      key: 'draftingMethod_SHAPE_NOTE',
+      disposition: 'NOT_CARRIED',
+      ruling: 'PROPOSED',
+      reason: 'A note about the SHAPE of draftingMethod, not a fact about the item.',
+    },
+    {
+      key: '_previousOrderAnchor',
+      disposition: 'NOT_CARRIED',
+      ruling: 'PROPOSED',
+      reason: 'Drafting history of a re-anchor, on 1 item. Underscore-prefixed by Cowork; the '
+        + 'current anchor is the claim and the supersession belongs in an attribution event.',
+    },
     {
       key: 'notes',
       disposition: 'NOT_CARRIED',
@@ -144,6 +161,14 @@ export const COWORK_ITEM_KEYS: Readonly<Record<CoworkLevel, readonly CoworkKeyRu
       // never child-facing — distinct from the library's childHint, which the DB owns.
     },
     { key: 'tagStatus', disposition: 'MAPPED', carriedAt: 'ItemOption.tagStatus' },
+    { key: 'value', disposition: 'MAPPED', carriedAt: 'ItemOption.content.value' },
+    { key: 'attractorLine', disposition: 'MAPPED', carriedAt: 'ItemOption.attractorLine' },
+    { key: 'defeaterLine', disposition: 'MAPPED', carriedAt: 'ItemOption.defeaterLine' },
+    { key: 'attractorQuote', disposition: 'MAPPED', carriedAt: 'ItemOption.attractorQuote' },
+    { key: 'defeaterQuote', disposition: 'MAPPED', carriedAt: 'ItemOption.defeaterQuote' },
+    { key: 'windowClass', disposition: 'MAPPED', carriedAt: 'ItemOption.windowClass' },
+    { key: 'a36Note', disposition: 'MAPPED', carriedAt: 'ItemOption.a36Note' },
+    { key: 'defeatedByAbsence', disposition: 'MAPPED', carriedAt: 'ItemOption.defeatedByAbsence' },
     {
       key: 'senseTarget',
       disposition: 'MAPPED',

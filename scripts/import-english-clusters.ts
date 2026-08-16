@@ -25,6 +25,7 @@
  * distinction between "no diagnosis" and "diagnosis awaiting a transcription check" is the whole
  * content of the ruling.
  */
+import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import {
   PROPOSED_EXCEPTIONS,
@@ -46,15 +47,21 @@ interface Draft {
   itemId: string; questionTypeId: string; difficultyTier: number;
   stem: Record<string, unknown>; explanation?: Record<string, unknown>; authoredBy?: string;
   passageRef?: unknown; lineRefs?: unknown; orderAnchor?: unknown;
-  options: Array<{ label?: string; content: unknown; isCorrect: boolean; misconceptionId?: string;
-    senseTarget?: string; misconceptionExecution?: string; tagStatus?: string }>;
+  options: Array<{ label?: string; content?: unknown; value?: string; isCorrect: boolean;
+    misconceptionId?: string; senseTarget?: string; misconceptionExecution?: string; tagStatus?: string;
+    attractorLine?: number; defeaterLine?: number; attractorQuote?: string; defeaterQuote?: string;
+    windowClass?: string; a36Note?: string; defeatedByAbsence?: boolean }>;
   [key: string]: unknown;
 }
 
 /** The option envelope this store stores. Cowork owns the text; the shape is ours. */
 const optionContent = (o: Draft['options'][number], i: number): { label: string; value: string } => ({
   label: o.label ?? ['A', 'B', 'C', 'D', 'E', 'F'][i] ?? String(i),
-  value: typeof o.content === 'string' ? o.content : String((o.content as { value?: unknown })?.value ?? ''),
+  // Two live shapes: `content` (a string or {value}) and a top-level `value`. Reading only one
+  // would store an empty option and no gate would see it (R57's shape, in the envelope).
+  value: typeof o.value === 'string' ? o.value
+    : typeof o.content === 'string' ? o.content
+      : String((o.content as { value?: unknown })?.value ?? ''),
 });
 
 /**
@@ -70,12 +77,44 @@ function carriedStem(it: Draft): Record<string, unknown> {
   return stem;
 }
 
+/**
+ * A delivery is either a bare `{items}` or a `{transferStamp, payload}` envelope. The stamp's
+ * sha256 is over the PAYLOAD serialised with sorted keys and no spaces — a mismatch REFUSES the
+ * file rather than importing content whose transfer cannot be vouched for.
+ */
+function readDelivery(path: string): Draft[] {
+  const raw = readFileSync(path, 'utf8');
+  const parsed = JSON.parse(raw) as { items?: unknown; transferStamp?: { sha256?: string }; payload?: { items?: unknown } };
+  if (!parsed.transferStamp) return (parsed.items ?? []) as Draft[];
+  const ser = JSON.stringify(parsed.payload, (_k, v: unknown) => v, 0);
+  void ser;
+  const canonical = stableStringify(parsed.payload);
+  const got = createHash('sha256').update(canonical, 'utf8').digest('hex');
+  if (got !== parsed.transferStamp.sha256) {
+    console.error(`REFUSED — ${path}: transfer stamp ${parsed.transferStamp.sha256?.slice(0, 16)} but payload hashes ${got.slice(0, 16)}`);
+    process.exit(1);
+  }
+  return (parsed.payload?.items ?? []) as Draft[];
+}
+
+/** Python's `sort_keys=True, separators=(',',':')`, which is what the stamp was computed with. */
+function stableStringify(v: unknown): string {
+  if (Array.isArray(v)) return `[${v.map(stableStringify).join(',')}]`;
+  if (v && typeof v === 'object') {
+    return `{${Object.keys(v as object).sort()
+      .map((k) => `${JSON.stringify(k)}:${stableStringify((v as Record<string, unknown>)[k])}`)
+      .join(',')}}`;
+  }
+  return JSON.stringify(v) ?? 'null';
+}
+
 async function main(): Promise<void> {
   const write = process.argv.includes('--write');
   // `--file <path>` imports one delivery instead of the eight clusters, same door, same gate.
   const fileArg = process.argv.indexOf('--file');
-  const drafts: Draft[] = fileArg > -1
-    ? (JSON.parse(readFileSync(process.argv[fileArg + 1]!, 'utf8')).items as Draft[])
+  const files = fileArg > -1 ? process.argv.slice(fileArg + 1).filter((a) => !a.startsWith('--')) : [];
+  const drafts: Draft[] = files.length
+    ? files.flatMap((f) => readDelivery(f))
     : CLUSTERS.flatMap((c) =>
       (JSON.parse(readFileSync(`${DIR}/eng${c}-draft.json`, 'utf8')).items as Draft[]));
 
@@ -116,8 +155,14 @@ async function main(): Promise<void> {
     if (present.has(it.itemId)) { already.push(it.itemId); continue; }
     const mechanic = types.get(it.questionTypeId);
     if (!mechanic) { gateHeld.push({ id: it.itemId, detail: `questionType ${it.questionTypeId} does not exist` }); continue; }
+    // GATE THE ENVELOPE THIS STORE USES, not the one the delivery happens to arrive in. The gate
+    // reads `content.value`; this delivery carries a top-level `value`, so handing it the raw
+    // options threw on every item. Normalise first, gate second, write third — the same order the
+    // door already applies to everything else.
     const faults = checkItemChildFacing({ id: it.itemId, stem: it.stem, explanation: it.explanation ?? {},
-      mechanic, options: it.options }).filter(isBlocking);
+      mechanic,
+      options: it.options.map((o, i) => ({ ...o, content: optionContent(o, i) })),
+    }).filter(isBlocking);
     const missingTags = [...new Set(it.options
       .filter((o) => !o.isCorrect && o.misconceptionId && !known.has(o.misconceptionId))
       .map((o) => o.misconceptionId!))];
@@ -155,6 +200,8 @@ async function main(): Promise<void> {
       // Provenance crosses. Absence stays absent — an undefined field is written as null, never
       // as an empty string, so "not stated" and "stated as nothing" stay distinguishable.
       clusterPosition: (it.clusterPosition as number | undefined) ?? null,
+      draftingMethod: ((it.draftingMethod ?? it.draftingOrder) as string | undefined) ?? null,
+      itemModel: (it.itemModel as string | undefined) ?? null,
       tierRationale: (it.tierRationale as string | undefined) ?? null,
       sourcedFrom: (it.sourcedFrom as string | undefined) ?? null,
       // Prisma.DbNull, not JS null: on a Json column a bare null is the JSON VALUE null, which is
@@ -167,7 +214,11 @@ async function main(): Promise<void> {
         misconceptionId: o.isCorrect ? null : (o.misconceptionId ?? null),
         senseTarget: o.senseTarget ?? null,
         misconceptionExecution: o.misconceptionExecution ?? null,
-        tagStatus: o.tagStatus ?? null })) } },
+        tagStatus: o.tagStatus ?? null,
+        attractorLine: o.attractorLine ?? null, defeaterLine: o.defeaterLine ?? null,
+        attractorQuote: o.attractorQuote ?? null, defeaterQuote: o.defeaterQuote ?? null,
+        windowClass: o.windowClass ?? null, a36Note: o.a36Note ?? null,
+        defeatedByAbsence: o.defeatedByAbsence ?? null })) } },
   })));
   console.log(`\nLANDED ${writable.length} item(s) as DRAFT in one transaction.`);
   await prisma.$disconnect();

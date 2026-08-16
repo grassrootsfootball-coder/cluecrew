@@ -413,6 +413,14 @@ model ItemOption {
   tagStatus       String?
   attractorLine   Int?
   defeaterLine    Int?
+  /// ADDENDUM 36 continued: the quoted text at each line, the window class, and the authoring
+  /// note. `defeatedByAbsence` marks a distractor defeated by something the passage does NOT say,
+  /// which has no defeater line to point at.
+  attractorQuote     String?
+  defeaterQuote      String?
+  windowClass        String?
+  a36Note            String?
+  defeatedByAbsence  Boolean?
   tags            ItemOptionTag[]
 }
 
