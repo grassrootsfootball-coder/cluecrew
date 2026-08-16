@@ -626,6 +626,14 @@ export async function signItemAction(formData: FormData): Promise<void> {
     note: `Signed in-platform on the comprehension review surface by ${reviewer!.displayName}.`,
     subjectHash,
   });
+  // CONFIRM THE WRITE BEFORE REDIRECTING. The redirect is what the reviewer reads as success, and
+  // it fired cleanly for an action that had thrown and written nothing: Next.js swallowed a
+  // PrismaClientValidationError and still navigated. She would have signed a cluster and seen
+  // nothing wrong. A door that reports success must re-read what it claims to have written.
+  const landed = await prisma.attributionEvent.count({
+    where: { recordType: 'item', recordId: itemId, action: 'SIGNED' },
+  });
+  if (landed === 0) redirect(`/admin/items/${itemId}?error=signature-did-not-land`);
   await recordAudit(staff.id, 'item.sign', 'Item', itemId);
   redirect(`/admin/items/${itemId}`);
 }

@@ -64,10 +64,12 @@ describe('the registry itself', () => {
 
   it('brings the exceptions, not the inclusions', () => {
     expect(PROPOSED_EXCEPTIONS.map((l: { level: string; key: string }) => `${l.level}.${l.key}`)).toEqual([
+      'item.banListException_SHAPE_NOTE',
       'item.draftingMethod_SHAPE_NOTE',
       'item._previousOrderAnchor',
       'item.notes',
       'item.draftingOrder',
+      'options[].tagStatus_SHAPE_UNRESOLVED',
       'options[]._previousMisconceptionId',
     ]);
   });

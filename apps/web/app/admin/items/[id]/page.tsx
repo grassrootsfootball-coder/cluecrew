@@ -16,6 +16,8 @@ import { shuffleOptionsForChild } from '@/lib/crew/shuffle';
 import { optionLabel } from '@/components/crew/engines/shared';
 
 const ERROR_COPY: Record<string, string> = {
+  'signature-did-not-land':
+    'Blocked: the signature did not reach the record. Nothing was signed — do not treat this item as signed.',
   'not-a-named-reviewer':
     'Blocked: this staff account does not resolve to a named reviewer. A signature names a PERSON — link the account to a Reviewer row first (R65).',
   'missing-misconceptions':
