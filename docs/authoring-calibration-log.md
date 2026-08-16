@@ -3242,3 +3242,88 @@ time it happens it will not be new information.
 held classes were fully DISJOINT — the expectation had been 86 writable, assuming the five gate
 hits sat inside the ten. They did not. Two independent hold reasons do not overlap just because
 both are small; count them, do not subtract them from each other.
+
+## R73 — Two stores can hold identical text and disagree about what the item IS
+*David, 2026-08-13. Found by accident, which is the whole finding.*
+
+A hash comparison over stems and options is not a comparison of items. `segmentsInOptions` is the
+case that proved it: on 18 ENG-003 error-spot items the stem ends "…choose N." and the sentence
+lives in the options. A renderer that does not read the flag lays those four options out as
+independent choices, and **the child reads a different question**. The stem text is byte-identical
+across both stores throughout. Every hash matches. Nothing would have reported it.
+
+It was found by asking an unrelated question about stem form. That is not a mechanism.
+
+**The ruling.** `segmentsInOptions` goes into the manifest schema and is BACKFILLED on the 18
+error-spot rows — scoped by MECHANIC, never an id list. And Cowork is asked what OTHER declarative
+fields exist, because a field found by accident implies a class found by nothing.
+
+**The class turned out to be 39.** Cowork scanned 26 files over 354 items and hand-classified 70
+field paths: 39 DECLARATIVE, 22 PROVENANCE, 9 CONTENT. All 39 are carried in `cowork-manifest-v1`
+(David: versioning the manifest later costs more than carrying fields now). 18 are carried by this
+store, 20 are DROPPED, 1 is MODELLED — and 10 of the dropped are weighted CRITICAL, including all
+seven `preReview.*` on 78 items, which is a stored REVIEW OUTCOME and therefore the platform's own
+provenance claim.
+
+**THREE ABSENCE STATES, AND THEY ARE A PROPERTY OF THE DIFF.** DROPPED (the other store has it,
+this one lost it), MODELLED (held here in a different shape), EMPTY (neither holds it). An emitter
+reading one store can only ever say "absent here" — it cannot distinguish DROPPED from EMPTY, and
+an emitter that guessed would manufacture a state it cannot observe. So the emitter records
+PRESENCE and LOCATION; the comparison assigns the state. *(David's original instruction was for the
+emitter to classify; he withdrew it on this reasoning — "your redesign is right and my instruction
+was wrong".)*
+
+**MODELLED IS DECLARED, NEVER INFERRED, AND THE NEAR MISS IS WHY.** A field misfiled DROPPED puts
+phantom work on the list; misfiled MODELLED it HIDES A REAL LOSS, and that direction is worse.
+`preReviewVerdict` EXISTS as a column — **on `Word`**, meaning the authoring pass's verdict on a
+vocabulary card. A grep for the name would have filed `preReview.verdict` as MODELLED and hidden a
+real loss on 78 items. It is DROPPED. Each MODELLED entry now names the column or table that
+carries the fact and how that was established, by reading the enclosing model.
+
+That is the **third name collision across two models this month**: `atLines`/`lineRefs`,
+`stem.testedTokens`/`testedTokens`, and now `preReviewVerdict`. A matching name is not evidence.
+
+**LOCATION IS PART OF THE RECORD.** `lineRefs` sits at item level on Cowork and nested in the stem
+here. A presence-only boolean reports that as agreement. The manifest records WHERE each field was
+found, which is what makes the queued migration measurable rather than assumed — and it caught two
+faults in its own first runs: a generic probe that searched the stem as a fallback COLLAPSED
+`testedTokens[]` into `stem.testedTokens[]`, reporting the ruled winner as present while it held
+nothing; and a collapse check added afterwards immediately caught `difficultyTier` and
+`questionTypeId` both emitting the literal label `'Item column'` — one fact reported as two.
+
+## R74 — An allowlist that drops what it cannot name is R57 in a new coat
+*David, 2026-08-13. The fifth recurrence.*
+
+R57 ruled that an import door VALIDATES a stem and never FILTERS one, after an allowlist silently
+destroyed a declared field four times. The cluster importer then did it a fifth time, and I wrote
+it: an interface of six fields, five of them written. Ten item-level keys went in one side of the
+door and came out of neither — `lineRefs`, `orderAnchor`, `passageRef`, `tierRationale`,
+`sourcedFrom`, `mechanismLedger`, `misconceptions`, `notes`, `draftingOrder`, `authoredBy` — plus
+two more on the options. **All 86 items it landed were missing all three of the fields the manifest
+later ruled must be carried.** Nothing reported it; the import printed a clean summary.
+
+**THE FIX IS A REFUSAL, NOT A LONGER LIST.** A longer list is the same mechanism with a later
+failure date. `packages/core/src/english/cowork-item-keys.ts` names every key at all four levels
+with a DISPOSITION — MAPPED, CARRIED (stating where it actually lands), or NOT_CARRIED (with a
+required reason). **A key the registry does not name STOPS THE RUN**, before anything else is read.
+It does not skip the item, which is the behaviour that lost the fields. A field Cowork adds next
+month must stop the pipeline rather than vanish from it.
+
+In `packages/core` because two doors that enumerate separately WILL drift — R42's finding, which
+recurred in R55 where the CMS door passed a stem through while the script door stripped it.
+
+**ITS FIRST REAL RUN REFUSED NOTHING, AND THEREFORE PROVED NOTHING** (R60 question 2). The eight
+cluster files carry no unregistered key. Eight tests are the canary, one per level, on synthetic
+objects — fault injection goes on a scratch row, never a reviewed one.
+
+**NOT_CARRIED IS A DECISION WITH A REASON, NOT A SHRUG.** Four keys are recognised, deliberately
+not stored, and UNRULED — they print on every run so they stay a live question instead of decaying
+into "the importer has always done that": `item.tierRationale`, `item.sourcedFrom`,
+`item.mechanismLedger` (per-mechanism evidence on 60 items) and `options[].misconceptionExecution`
+(282 options). `options[].senseTarget` is deliberately absent from the registry altogether: it is
+one of the 39, weighted CRITICAL, and no column holds it, so a batch carrying it REFUSES until that
+is ruled. That is the mechanism working, not a bug to route around.
+
+**A GUESS THAT HAPPENS TO BE RIGHT IS STILL A GUESS.** The importer wrote the literal
+`'ai-draft:cowork-okafor-v1'` into `authoredBy`, a provenance column, ignoring the field in the
+source. It matched on all 96. It now reads the field.
