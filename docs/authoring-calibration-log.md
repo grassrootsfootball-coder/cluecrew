@@ -4458,6 +4458,65 @@ proven, `recordSignature` has the naming path, and `check:return-leg` measures w
 crosses. What is missing is that no door WRITES the artefact; they all write state and leave the
 reasoning in the conversation.
 
+## R113 — The return-document door: a ruling becomes a file at the moment it is made
+*David, 2026-08-16, on Annie's standing point: "That will keep happening until rulings have a channel."*
+
+She raised the attribution gap in August. It cost four corrections in two days — the hard-coded 172,
+Cowork's `approvedBy`, `hintAuthoredBy`, and my own "on record as approved **here**" — and it cost
+two days of trying to evidence six approvals she had genuinely given. Her diagnosis, exactly right:
+*"The approvals are real… What does not exist is an artefact. The absence is in the recording, not
+in the decision."*
+
+**THE GAP IS A PROPERTY OF THE CODE, NOT OF ANYONE'S DILIGENCE. Every door here writes STATE and
+leaves the REASONING in the conversation** — `status` moves, `approvedBy` gets a name, an
+AttributionEvent records that a thing happened, and the WHY, the only part a later reader cannot
+reconstruct, is nowhere. Nothing wrote the artefact.
+
+**BUILT SMALL, AS SCOPED. One door.** `markReviewedAction` — the FIRST verdict, which everything
+downstream is gated behind:
+- `renderReviewerReturn` in `packages/core` is PURE: no clock, no filesystem, no database. The
+  caller passes `at`. That is what makes it testable and what keeps the hash honest.
+- `writeReviewerReturn` hashes **the exact string handed to `writeFileSync`** — not a second render,
+  not the input, not a re-read. R88's fault was a stamp from a different projection than the one
+  delivered; here it would put a reviewer's name on a document she never saw. Verified end to end:
+  recorded hash equals the hash of the bytes on disk.
+- `AttributionEvent.returnArtefact` pins `{file, sha256, bytes}` to the event. Null means NO
+  ARTEFACT, which is the true state for all 609 prior events and must never read as "no reasoning
+  was given".
+- `content/reviewer-returns/` is git-tracked. That is most of the value: a ruling in a commit has a
+  diff, a date and an author, which is precisely what the six approvals did not have.
+
+**THE SHAPE IS HERS AND IS REPRODUCED DELIBERATELY.** Her two returns share a structure that survived
+two agent-to-agent transfers without drift: an authored field marked as authored, a ruling per
+subject rather than a status flag, and the reasoning travelling with the verdict.
+`en-vocab-dominant-sense` is the only hint that survived the drift which caught everything else, and
+it survived because it arrived in this shape.
+
+**ABSENCE IS RENDERED, NEVER ELIDED.** A verdict with no reason prints the heading and says the door
+accepted it without one — "no reason given" and "reason not asked for" are different facts. An empty
+return renders **"This document should not exist"** rather than a blank page that reads like a
+completed review (R60, in a document).
+
+**WHAT IS NOT VERIFIED, STATED PLAINLY:** the web submit itself. The admin surface needs a staff
+sign-in and I do not enter credentials. Renderer, writer, hash and schema are verified by test and
+by direct call; the form-to-database path is not. Also: NEITHER `Reviewer` ROW HAS A `staffEmail`, so
+today the door would write `reviewerId: UNRESOLVED` — honest, and it means the naming path is not yet
+connected at this door even though `signItemAction` has it.
+
+## R114 — After the nine signatures: the fifteen that are ours
+*2026-08-16.*
+
+`pnpm export:cowork-workorder`. **11 retags, 4 rewordings, 0 items on both routes** — so each is
+exactly one pass and neither job blocks the other. All eleven retags are off the same tag
+(`en-vocab-secondary-sense`, RETIRED), and each carries the option's own `misconceptionExecution`
+note, because the successor has to match what the option EXECUTES rather than what is nearest. All
+four rewordings are the same fault: a declared quoted span that is not in the text.
+
+It also carries `en-determiner-omitted`, which this store holds and Cowork's 88 do not — **the entry
+whose drafted hint she rejected for telling a child to read aloud in a room where she cannot.** If
+the entry does not cross, the two sides hold different libraries and her correction exists on one
+side only.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 

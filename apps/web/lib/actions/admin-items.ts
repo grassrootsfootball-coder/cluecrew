@@ -10,6 +10,7 @@ import { prisma, recordSignature, type ItemStatus } from '@cluecrew/db';
 import { similarityIndexSource } from '@/lib/similarity-index';
 import { currentStaff, recordAudit, roleAllows } from '@/lib/staff';
 import { validateVerbalRecord } from '@/lib/review-provenance';
+import { writeReviewerReturn } from '@/lib/reviewer-return';
 
 /**
  * ADDENDUM-E §2: a misconception must be ACTIVE before any item may reference
@@ -186,12 +187,52 @@ export async function markReviewedAction(formData: FormData): Promise<void> {
   if (reviewTagFault) redirect(`/admin/items/${itemId}?error=${reviewTagFault}`);
   if (childFacingBlock(item)) redirect(`/admin/items/${itemId}?error=child-facing-copy`);
 
+  // THE RULING BECOMES A FILE HERE (R113). Her reasoning is an AUTHORED FIELD: written down at the
+  // moment of the verdict, hashed over the bytes written, and pinned to the attribution event. Every
+  // other door in this repo writes state and leaves the reasoning in the conversation, which is the
+  // one part a later reader cannot reconstruct — and is why six real approvals took two days to fail
+  // to evidence. Reasoning is OPTIONAL and its absence is RECORDED as an absence, never elided: a
+  // verdict given without a reason is a fact about the verdict.
+  const reasoning = String(formData.get('reasoning') ?? '').trim();
+  const reviewer = await prisma.reviewer.findFirst({
+    where: { staffEmail: staff.email.toLowerCase(), heldUntil: null },
+    select: { id: true, displayName: true },
+  });
+  const at = new Date().toISOString();
+  const written = writeReviewerReturn({
+    reviewerName: reviewer?.displayName ?? staff.email,
+    reviewerId: reviewer?.id ?? 'UNRESOLVED — this staff account matches no Reviewer row',
+    recordedBy: `human:${staff.email}`,
+    scope: itemId,
+    at,
+    rulings: [{ subject: itemId, verdict: 'REVIEWED', reasoning, changedFrom: item.status, changedTo: 'REVIEWED' }],
+  });
+
   await prisma.item.update({
     where: { id: itemId },
     data: { status: 'REVIEWED', reviewedBy: `human:${staff.email}`, reviewNotes: null },
   });
   await confirmItemStatus(itemId, 'REVIEWED');
-  await recordAudit(staff.id, 'item.review', 'Item', itemId);
+  await prisma.attributionEvent.create({
+    data: {
+      reviewerId: reviewer?.id ?? null,
+      // APPROVED, not a new enum value: marking REVIEWED is the reviewer approving the item for
+      // the next stage, and `method` carries which door it came through.
+      recordType: 'item', recordId: itemId, action: 'APPROVED',
+      actor: reviewer?.displayName ?? `human:${staff.email}`,
+      recordedBy: `human:${staff.email}`,
+      note: reasoning || null,
+      method: 'in-platform review door',
+      returnArtefact: { ...written },
+    },
+  });
+  // RE-READ WHAT WAS CLAIMED before the redirect the reviewer reads as success. A swallowed error
+  // that still navigated cleanly is how a signature door reported a write it had never made.
+  const landed = await prisma.attributionEvent.count({
+    where: { recordType: 'item', recordId: itemId, action: 'APPROVED' },
+  });
+  if (landed === 0) redirect(`/admin/items/${itemId}?error=review-did-not-land`);
+  await recordAudit(staff.id, 'item.review', 'Item', itemId, { returnArtefact: written.file });
   redirect(`/admin/items/${itemId}`);
 }
 

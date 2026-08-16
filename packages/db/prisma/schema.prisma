@@ -620,6 +620,19 @@ model AttributionEvent {
    * Null on events that sign no generated artefact (a misconception approval).
    */
   subjectHash String?
+  /**
+   * THE RETURN DOCUMENT THIS VERDICT WAS RECORDED IN (R113). `{ file, sha256, bytes }`.
+   *
+   * Every door here wrote STATE and left the REASONING in the conversation — which is the only part
+   * a later reader cannot reconstruct, and the gap Annie named in August and again on 2026-08-16:
+   * "That will keep happening until rulings have a channel." Two days went on trying to evidence
+   * six approvals she had genuinely given, because no file recorded them.
+   *
+   * Null on every event written before the door existed, and null on doors that do not yet write
+   * one. Null therefore means NO ARTEFACT, which is the true state for those events and must never
+   * be read as "reasoning was not given" — see `check:return-leg`.
+   */
+  returnArtefact Json?
   at          DateTime          @default(now())
 
   @@index([recordType, recordId])

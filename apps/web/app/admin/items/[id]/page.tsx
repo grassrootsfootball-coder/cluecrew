@@ -188,8 +188,19 @@ export default async function ItemDetailPage({
           ) : null}
           {item.status === 'DRAFT' ? (
             <>
-              <form action={markReviewedAction} style={{ display: 'inline-block', marginRight: '0.75rem' }}>
+              {/*
+                * THE RETURN-DOCUMENT DOOR (R113). The reasoning box is an AUTHORED FIELD: whatever
+                * is typed here is written verbatim into a return document at the moment of the
+                * verdict, hashed, and pinned to the attribution event. It is optional, and leaving
+                * it empty is RECORDED as empty rather than omitted — a verdict given without a
+                * reason is a fact about the verdict, and the two must stay distinguishable.
+                */}
+              <form className="cc-form" action={markReviewedAction} style={{ marginBottom: '0.75rem' }}>
                 <input type="hidden" name="itemId" value={item.id} />
+                <label>
+                  Your reasoning (authored field — written verbatim into the return document)
+                  <textarea name="reasoning" rows={3} placeholder="Why this item passes, in your words. Optional; an empty field is recorded as empty." />
+                </label>
                 <button className="cc-button" type="submit">
                   Mark REVIEWED
                 </button>
