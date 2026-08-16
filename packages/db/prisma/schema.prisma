@@ -459,6 +459,12 @@ enum MisconceptionStatus {
   // evidence with no undo; now it changes a status that an admin can put
   // back. REJECTED is as unusable by items as PROPOSED — only ACTIVE serves.
   REJECTED
+  // RETIRED (David's ruling, 2026-08-16): an entry that WAS active and has been superseded.
+  // Distinct from REJECTED, which was never approved. Cowork held this as a `retired` object while
+  // this store read `status`, so a retirement was invisible here and six ENG-001 items in the
+  // reviewer's packet rendered their tag as ACTIVE. Like PROPOSED and REJECTED, RETIRED does not
+  // serve.
+  RETIRED
 }
 
 model Misconception {
@@ -1229,6 +1235,15 @@ model Reviewer {
    * Why this mapping is believed — the evidence, not a description.
    */
   evidence      String?
+  /// THE STAFF ACCOUNT THIS REVIEWER SIGNS FROM (David's ruling, 2026-08-16, wiring the web
+  /// signature door). A signature is a named individual's judgement recorded AT THE MOMENT SHE
+  /// GIVES IT; recording it later by script is the machine-verdict-under-a-person's-authority
+  /// conflation, and all 46 existing signatures took that route.
+  ///
+  /// This is the naming path for the web door: a signed-in staff account resolves to a Reviewer
+  /// row through this column or the action REFUSES. It is never a role account — an unmatched
+  /// staff member cannot sign, by design.
+  staffEmail    String?   @unique
   createdAt     DateTime  @default(now())
 
   events AttributionEvent[]

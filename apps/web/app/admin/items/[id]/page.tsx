@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { prisma } from '@cluecrew/db';
 import {
   markReviewedAction,
+  signItemAction,
   publishItemAction,
   retireItemAction,
   returnWithNotesAction,
@@ -15,6 +16,8 @@ import { shuffleOptionsForChild } from '@/lib/crew/shuffle';
 import { optionLabel } from '@/components/crew/engines/shared';
 
 const ERROR_COPY: Record<string, string> = {
+  'not-a-named-reviewer':
+    'Blocked: this staff account does not resolve to a named reviewer. A signature names a PERSON — link the account to a Reviewer row first (R65).',
   'missing-misconceptions':
     'Blocked: every incorrect option must map to a tagged misconception before this item can go LIVE (P3).',
   'not-reviewed': 'Blocked: the item must be marked REVIEWED by a reviewer first.',
@@ -157,6 +160,20 @@ export default async function ItemDetailPage({
       {canReview ? (
         <div className="cc-card">
           <h2 style={{ marginTop: 0 }}>Review actions</h2>
+          {/*
+            * THE SIGNATURE. Separate act from the verdict: REVIEWED says she has read it, SIGNED
+            * says she stands behind it as a named individual. recordSignature is the only writer.
+            */}
+          {item.status === 'REVIEWED' && canReview ? (
+            <form className="cc-form" action={signItemAction} data-testid="sign-form">
+              <input type="hidden" name="itemId" value={item.id} />
+              <label>
+                How the review happened
+                <input name="method" defaultValue="in-platform comprehension review surface" required minLength={8} />
+              </label>
+              <button className="cc-button" type="submit">Sign as reviewer</button>
+            </form>
+          ) : null}
           {item.status === 'DRAFT' ? (
             <>
               <form action={markReviewedAction} style={{ display: 'inline-block', marginRight: '0.75rem' }}>

@@ -25,7 +25,7 @@
  * distinction between "no diagnosis" and "diagnosis awaiting a transcription check" is the whole
  * content of the ruling.
  */
-import { createHash } from 'node:crypto';
+import { execFileSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
 import {
   PROPOSED_EXCEPTIONS,
@@ -88,8 +88,7 @@ function readDelivery(path: string): Draft[] {
   if (!parsed.transferStamp) return (parsed.items ?? []) as Draft[];
   const ser = JSON.stringify(parsed.payload, (_k, v: unknown) => v, 0);
   void ser;
-  const canonical = stableStringify(parsed.payload);
-  const got = createHash('sha256').update(canonical, 'utf8').digest('hex');
+  const got = payloadHash(path);
   if (got !== parsed.transferStamp.sha256) {
     console.error(`REFUSED — ${path}: transfer stamp ${parsed.transferStamp.sha256?.slice(0, 16)} but payload hashes ${got.slice(0, 16)}`);
     process.exit(1);
@@ -97,15 +96,24 @@ function readDelivery(path: string): Draft[] {
   return (parsed.payload?.items ?? []) as Draft[];
 }
 
-/** Python's `sort_keys=True, separators=(',',':')`, which is what the stamp was computed with. */
-function stableStringify(v: unknown): string {
-  if (Array.isArray(v)) return `[${v.map(stableStringify).join(',')}]`;
-  if (v && typeof v === 'object') {
-    return `{${Object.keys(v as object).sort()
-      .map((k) => `${JSON.stringify(k)}:${stableStringify((v as Record<string, unknown>)[k])}`)
-      .join(',')}}`;
-  }
-  return JSON.stringify(v) ?? 'null';
+/**
+ * THE STAMP'S OWN ALGORITHM, RUN BY THE INTERPRETER THAT DEFINES IT.
+ *
+ * The stamp is sha256 of the payload serialised with Python's `sort_keys=True,
+ * separators=(",",":")`. A JavaScript reimplementation cannot be exact: `JSON.parse` turns the
+ * literal `8.0` into the Number 8, and Python re-emits `8.0` where JS emits `8`. One float in
+ * ENG001 was enough to make a good delivery hash differently and be refused.
+ *
+ * Numbers are the visible case; there is no reason to believe they are the only one. So the check
+ * calls Python rather than imitating it — the declared algorithm, not a second implementation of
+ * it that has to be kept in step.
+ */
+function payloadHash(path: string): string {
+  const src = 'import json,hashlib,sys;'
+    + 'd=json.load(open(sys.argv[1]));'
+    + 's=json.dumps(d["payload"],sort_keys=True,separators=(",",":"),ensure_ascii=False).encode();'
+    + 'print(hashlib.sha256(s).hexdigest())';
+  return execFileSync('python3', ['-c', src, path], { encoding: 'utf8' }).trim();
 }
 
 async function main(): Promise<void> {
@@ -151,8 +159,12 @@ async function main(): Promise<void> {
     process.exit(1);
   }
 
+  // `--replace`: a re-emission SUPERSEDES the delivery of the same name (David, 2026-08-16).
+  // Replace, never merge — the existing row is deleted and rebuilt from the new payload, so a
+  // field the re-emission drops does not survive from the old one.
+  const replace = process.argv.includes('--replace');
   for (const it of drafts) {
-    if (present.has(it.itemId)) { already.push(it.itemId); continue; }
+    if (present.has(it.itemId) && !replace) { already.push(it.itemId); continue; }
     const mechanic = types.get(it.questionTypeId);
     if (!mechanic) { gateHeld.push({ id: it.itemId, detail: `questionType ${it.questionTypeId} does not exist` }); continue; }
     // GATE THE ENVELOPE THIS STORE USES, not the one the delivery happens to arrive in. The gate
@@ -194,7 +206,11 @@ async function main(): Promise<void> {
   if (!write) { console.log('\nDry run. Re-run with --write to apply.'); await prisma.$disconnect(); return; }
 
   // ONE TRANSACTION. Either every writable item lands or none does.
-  await prisma.$transaction(writable.map((it) => prisma.item.create({
+  await prisma.$transaction([
+    ...(replace
+      ? [prisma.item.deleteMany({ where: { id: { in: writable.filter((w) => present.has(w.itemId)).map((w) => w.itemId) } } })]
+      : []),
+    ...writable.map((it) => prisma.item.create({
     data: { id: it.itemId, questionTypeId: it.questionTypeId, difficultyTier: it.difficultyTier,
       stem: carriedStem(it) as object, explanation: (it.explanation ?? {}) as object,
       // Provenance crosses. Absence stays absent — an undefined field is written as null, never
@@ -202,6 +218,14 @@ async function main(): Promise<void> {
       clusterPosition: (it.clusterPosition as number | undefined) ?? null,
       draftingMethod: ((it.draftingMethod ?? it.draftingOrder) as string | undefined) ?? null,
       itemModel: (it.itemModel as string | undefined) ?? null,
+      passageFlag: (it.passageFlag as string | undefined) ?? null,
+      r4Note: (it.r4Note as string | undefined) ?? null,
+      banListExceptionResolved: (it.banListExceptionResolved as string | undefined) ?? null,
+      banListException: (it.banListException ?? Prisma.DbNull) as Prisma.InputJsonValue,
+      stemRedraft: (it.stemRedraft ?? Prisma.DbNull) as Prisma.InputJsonValue,
+      importDoorFix: (it.importDoorFix ?? Prisma.DbNull) as Prisma.InputJsonValue,
+      testedTokens: (it.testedTokens ?? Prisma.DbNull) as Prisma.InputJsonValue,
+      draftSelfAssessment: (it.draftSelfAssessment ?? Prisma.DbNull) as Prisma.InputJsonValue,
       tierRationale: (it.tierRationale as string | undefined) ?? null,
       sourcedFrom: (it.sourcedFrom as string | undefined) ?? null,
       // Prisma.DbNull, not JS null: on a Json column a bare null is the JSON VALUE null, which is
@@ -219,7 +243,8 @@ async function main(): Promise<void> {
         attractorQuote: o.attractorQuote ?? null, defeaterQuote: o.defeaterQuote ?? null,
         windowClass: o.windowClass ?? null, a36Note: o.a36Note ?? null,
         defeatedByAbsence: o.defeatedByAbsence ?? null })) } },
-  })));
+    })),
+  ]);
   console.log(`\nLANDED ${writable.length} item(s) as DRAFT in one transaction.`);
   await prisma.$disconnect();
 }

@@ -263,10 +263,16 @@ test('a reviewer opens ENG-028, reads an item and records a verdict', async ({ b
 test('SIGN TEST: ENG-028 item reaches a SIGNED event with a reviewerId', async ({ browser }) => {
   const reviewer = await createStaff(`rs-signtest-${Date.now()}`, 'REVIEWER');
   const page = await staffContext(browser, reviewer);
-  const target = await prisma.item.findFirstOrThrow({
-    where: { id: { startsWith: 'ENG-028' }, status: 'DRAFT' },
-    orderBy: { clusterPosition: 'asc' },
-  });
+  // THE NAMING PATH. The staff account must resolve to a Reviewer row or the door refuses; this
+  // is the link an admin makes once, not something the action invents.
+  const previous = await prisma.reviewer.findUnique({ where: { id: 'rev-0001' } });
+  await prisma.reviewer.update({ where: { id: 'rev-0001' }, data: { staffEmail: reviewer.email.toLowerCase() } });
+  // ENG-028-PR-02 is the packet item; ENG-001-WIW-15 is a DRAFT English item whose distractors
+  // are ALL tagged ACTIVE. Walking both separates "the door does not work" from "these tags are
+  // not approved yet" — the door is ruled to refuse an unapproved tag, so the packet item SHOULD
+  // stop at the verdict until Annie approves the nine.
+  const which = process.env.SIGN_TARGET ?? 'ENG-028-PR-02';
+  const target = await prisma.item.findFirstOrThrow({ where: { id: which } });
 
   await page.goto(`/admin/items/${target.id}`);
   await expect(page.getByTestId('comprehension-review')).toBeVisible();
@@ -274,12 +280,29 @@ test('SIGN TEST: ENG-028 item reaches a SIGNED event with a reviewerId', async (
   await page.getByRole('button', { name: 'Mark REVIEWED' }).click();
   await page.waitForTimeout(2000);
 
-  const after = await prisma.item.findUniqueOrThrow({ where: { id: target.id } });
+  const mid = await prisma.item.findUniqueOrThrow({ where: { id: target.id } });
   const blocked = new URL(page.url()).searchParams.get('error');
+
+  // THE SIGNATURE, a separate act from the verdict.
+  if (mid.status === 'REVIEWED') {
+    // The sign form only renders once the item IS REVIEWED, so reload before reaching for it.
+    await page.goto(`/admin/items/${target.id}`);
+    await page.waitForLoadState('networkidle');
+    await page.getByTestId('sign-form').getByRole('button', { name: 'Sign as reviewer' }).click();
+    await page.waitForTimeout(2500);
+    console.log(`  sign click url: ${page.url()}`);
+  }
+  const after = mid;
   const signed = await prisma.attributionEvent.findMany({
     where: { recordType: 'item', recordId: target.id, action: 'SIGNED' },
+    include: { reviewer: true },
   });
   const reviewerRows = await prisma.reviewer.count();
+  const sig = signed[0];
+  console.log(`  reviewerId resolves to: ${sig?.reviewer?.displayName ?? 'FAIL — no signature'}`);
+  console.log(`  recordedBy separate:    ${sig ? (sig.recordedBy !== sig.reviewerId ? 'PASS' : 'FAIL') : 'FAIL'}`);
+  console.log(`  subjectHash pinned:     ${sig?.subjectHash ? `PASS ${sig.subjectHash.slice(0, 16)}` : 'FAIL'}`);
+  await prisma.reviewer.update({ where: { id: 'rev-0001' }, data: { staffEmail: previous?.staffEmail ?? null } });
 
   const verdictLanded = after.status === 'REVIEWED';
   const signatureLanded = signed.length > 0 && signed.every((e) => e.reviewerId !== null);
@@ -289,7 +312,7 @@ test('SIGN TEST: ENG-028 item reaches a SIGNED event with a reviewerId', async (
   console.log(`  Reviewer rows a signature could name: ${reviewerRows}`);
   console.log(`  OVERALL: ${verdictLanded && signatureLanded ? 'PASS' : 'FAIL'}`);
 
-  if (after.status !== 'DRAFT') {
+  if (mid.status !== 'DRAFT') {
     await prisma.item.update({ where: { id: target.id }, data: { status: 'DRAFT', reviewedBy: null } });
   }
 });

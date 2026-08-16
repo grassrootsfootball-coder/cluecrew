@@ -102,3 +102,10 @@ export async function logEvent(event: AnalyticsEvent): Promise<void> {
     },
   });
 }
+
+/**
+ * THE SIGNING DOOR, re-exported so the web app can reach it. `recordSignature` is the ONLY
+ * writer of a SIGNED event (R65) and `check:signing-doors` enforces that; a caller that could
+ * not import it would have written the event itself, which is the fault being prevented.
+ */
+export { recordSignature, type SignatureRecord } from '../prisma/reviewed-guard';

@@ -99,6 +99,22 @@ export const COWORK_ITEM_KEYS: Readonly<Record<CoworkLevel, readonly CoworkKeyRu
     // deliveries; both land on the same column.
     { key: 'draftingMethod', disposition: 'MAPPED', carriedAt: 'Item.draftingMethod' },
     { key: 'itemModel', disposition: 'MAPPED', carriedAt: 'Item.itemModel' },
+    // Carried by the backfill since 2026-08-16; the IMPORT door never named them, so a re-emission
+    // that includes them was refused. Same columns, now reachable from both routes.
+    { key: 'banListException', disposition: 'MAPPED', carriedAt: 'Item.banListException' },
+    { key: 'banListExceptionResolved', disposition: 'MAPPED', carriedAt: 'Item.banListExceptionResolved' },
+    { key: 'passageFlag', disposition: 'MAPPED', carriedAt: 'Item.passageFlag' },
+    { key: 'r4Note', disposition: 'MAPPED', carriedAt: 'Item.r4Note' },
+    { key: 'stemRedraft', disposition: 'MAPPED', carriedAt: 'Item.stemRedraft' },
+    { key: 'testedTokens', disposition: 'MAPPED', carriedAt: 'Item.testedTokens' },
+    { key: 'importDoorFix', disposition: 'MAPPED', carriedAt: 'Item.importDoorFix' },
+    { key: 'draftSelfAssessment', disposition: 'MAPPED', carriedAt: 'Item.draftSelfAssessment' },
+    {
+      key: 'banListException_SHAPE_NOTE',
+      disposition: 'NOT_CARRIED',
+      ruling: 'PROPOSED',
+      reason: 'A note about the SHAPE of banListException, not a fact about the item.',
+    },
     { key: 'tierRationale', disposition: 'MAPPED', carriedAt: 'Item.tierRationale' },
     { key: 'sourcedFrom', disposition: 'MAPPED', carriedAt: 'Item.sourcedFrom' },
     { key: 'mechanismLedger', disposition: 'MAPPED', carriedAt: 'Item.mechanismLedger' },
@@ -161,6 +177,12 @@ export const COWORK_ITEM_KEYS: Readonly<Record<CoworkLevel, readonly CoworkKeyRu
       // never child-facing — distinct from the library's childHint, which the DB owns.
     },
     { key: 'tagStatus', disposition: 'MAPPED', carriedAt: 'ItemOption.tagStatus' },
+    {
+      key: 'tagStatus_SHAPE_UNRESOLVED',
+      disposition: 'NOT_CARRIED',
+      ruling: 'PROPOSED',
+      reason: 'A note that the tagStatus shape is unresolved, not a fact about the option.',
+    },
     { key: 'value', disposition: 'MAPPED', carriedAt: 'ItemOption.content.value' },
     { key: 'attractorLine', disposition: 'MAPPED', carriedAt: 'ItemOption.attractorLine' },
     { key: 'defeaterLine', disposition: 'MAPPED', carriedAt: 'ItemOption.defeaterLine' },

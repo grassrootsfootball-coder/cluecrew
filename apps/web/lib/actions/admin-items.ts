@@ -2,11 +2,11 @@
 
 import { redirect } from 'next/navigation';
 import { z } from 'zod';
-import { checkItemChildFacing, checkSolution, fingerprintItem, isBlocking, mathsPlanFileSchema, screenAgainstIndex, stemSchema } from '@cluecrew/core';
+import { checkItemChildFacing, checkSolution, draftAssessmentSubjectHash, fingerprintItem, isBlocking, mathsPlanFileSchema, screenAgainstIndex, stemSchema } from '@cluecrew/core';
 import mathsPlanContent from '../../../../content/maths-district-plan.json';
 
 const mathsPlan = mathsPlanFileSchema.parse(mathsPlanContent);
-import { prisma } from '@cluecrew/db';
+import { prisma, recordSignature } from '@cluecrew/db';
 import { similarityIndexSource } from '@/lib/similarity-index';
 import { currentStaff, recordAudit, roleAllows } from '@/lib/staff';
 import { validateVerbalRecord } from '@/lib/review-provenance';
@@ -559,4 +559,73 @@ export async function bulkMarkReviewedAction(formData: FormData): Promise<void> 
       skipped.length ? `&skipped=${encodeURIComponent(skipped.join(' · '))}` : ''
     }`,
   );
+}
+
+/**
+ * THE WEB SIGNATURE DOOR — a named individual's judgement, recorded AT THE MOMENT SHE GIVES IT.
+ *
+ * David's ruling, 2026-08-16. Recording a signature later by script is exactly the
+ * machine-verdict-under-a-person's-authority conflation this repo has spent two weeks naming, and
+ * every one of the 46 existing signatures took that route. This gives the web path the same
+ * guarantees the script path has:
+ *
+ *   · REVIEWER RESOLVED THROUGH THE NAMING PATH. The signed-in staff account must match a
+ *     `Reviewer` row by `staffEmail`. No match, no signature — a role account can never sign.
+ *   · recordedBy SEPARATE FROM reviewerId. Whose judgement it was is never merged with who typed
+ *     it, even when they are the same person at the same keyboard.
+ *   · subjectHash PINNED AT SIGNING, over the stem, the options in stored order with their key
+ *     flags, and the tier. Change the item afterwards and the signature reads SUPERSEDED rather
+ *     than going on describing an item that no longer exists.
+ *   · recordSignature IS THE ONLY WRITER. This action never touches AttributionEvent itself, so
+ *     `check:signing-doors` keeps holding.
+ *   · IT REFUSES AN UNAPPROVED TAG. A signature over an item tagged against a misconception nobody
+ *     has approved would be signing someone else's unfinished decision.
+ */
+export async function signItemAction(formData: FormData): Promise<void> {
+  const staff = await currentStaff();
+  if (!staff || !roleAllows(staff.effectiveRole, ['REVIEWER'])) redirect('/admin');
+
+  const itemId = z.string().min(1).parse(formData.get('itemId'));
+  const method = z.string().trim().min(8).parse(formData.get('method'));
+  const item = await prisma.item.findUniqueOrThrow({
+    where: { id: itemId },
+    include: { options: { orderBy: { id: 'asc' } } },
+  });
+
+  // THE NAMING PATH. A signature names a person, so the staff account must resolve to one.
+  const reviewer = await prisma.reviewer.findFirst({
+    where: { staffEmail: staff.email.toLowerCase(), heldUntil: null },
+  });
+  if (!reviewer) redirect(`/admin/items/${itemId}?error=not-a-named-reviewer`);
+
+  if (item.status !== 'REVIEWED') redirect(`/admin/items/${itemId}?error=not-reviewed`);
+  if (item.authoredBy === `human:${staff.email}`) redirect(`/admin/items/${itemId}?error=own-item`);
+  if (await assertMisconceptionsActive(item.options)) {
+    redirect(`/admin/items/${itemId}?error=unapproved-misconception`);
+  }
+
+  // WHAT IS BEING SIGNED, fingerprinted now. Same subject the draft self-assessment pins: the
+  // child-facing item plus its tier.
+  const stem = (item.stem ?? {}) as Record<string, unknown>;
+  const subjectHash = draftAssessmentSubjectHash({
+    prompt: typeof stem.text === 'string' ? stem.text : typeof stem.prompt === 'string' ? stem.prompt : null,
+    tier: item.difficultyTier,
+    options: item.options.map((o) => ({
+      text: typeof o.content === 'string' ? o.content : String((o.content as { value?: unknown })?.value ?? ''),
+      isCorrect: o.isCorrect,
+    })),
+  });
+
+  await recordSignature(prisma, {
+    recordType: 'item',
+    recordId: itemId,
+    reviewerId: reviewer!.id,
+    // Whose judgement, and who typed it — never merged, even when they are the same person.
+    recordedBy: `human:${staff.email}`,
+    method,
+    note: `Signed in-platform on the comprehension review surface by ${reviewer!.displayName}.`,
+    subjectHash,
+  });
+  await recordAudit(staff.id, 'item.sign', 'Item', itemId);
+  redirect(`/admin/items/${itemId}`);
 }

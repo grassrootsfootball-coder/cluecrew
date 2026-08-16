@@ -32,9 +32,9 @@ export interface NvrSignature {
 
 export interface MisconceptionState {
   id: string;
-  /** Only ACTIVE serves. PROPOSED is awaiting a reviewer; REJECTED was
-   *  refused by one and kept (soft reject) — both are equally unusable. */
-  status: 'PROPOSED' | 'ACTIVE' | 'REJECTED';
+  /** Only ACTIVE serves. PROPOSED is awaiting a reviewer; REJECTED was refused by one and kept
+   *  (soft reject); RETIRED was active and has been superseded. All three are equally unusable. */
+  status: 'PROPOSED' | 'ACTIVE' | 'REJECTED' | 'RETIRED';
 }
 
 export type ServeRefusal =
