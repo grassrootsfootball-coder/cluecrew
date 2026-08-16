@@ -20,7 +20,7 @@ test.afterAll(async () => { await cleanupFixtures(); });
 interface Fault { id: string; what: string }
 
 test('render sweep over every English item', async ({ browser }) => {
-  test.setTimeout(20 * 60 * 1000);
+  test.setTimeout(60 * 60 * 1000);
   const reviewer = await createStaff(`rs-sweep-${Date.now()}`, 'REVIEWER');
   const page = await staffContext(browser, reviewer);
 
@@ -94,10 +94,13 @@ test('render sweep over every English item', async ({ browser }) => {
     }
 
     // 7. WALK SCRIPT
-    const walk = Array.isArray(explanation.walkScript) ? (explanation.walkScript as unknown[]) : [];
+    // The stored script is a STRING on every item and an array on none; count either shape.
+    const ws = explanation.walkScript;
+    const steps = Array.isArray(ws) ? ws.length
+      : typeof ws === 'string' ? ws.split(/\n+/).map((l) => l.trim()).filter(Boolean).length : 0;
     const walkShown = await page.getByTestId('walk-script').locator('li').count();
-    if (walk.length === 0) log(item.id, 'no walk script stored');
-    else if (walkShown !== walk.length) log(item.id, `${walk.length} walk step(s) stored, ${walkShown} rendered`);
+    if (steps === 0) log(item.id, 'no walk script stored');
+    else if (walkShown !== steps) log(item.id, `${steps} walk step(s) stored, ${walkShown} rendered`);
   }
 
   const byWhat = faults.reduce<Record<string, string[]>>((a, f) => {

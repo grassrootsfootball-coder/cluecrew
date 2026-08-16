@@ -68,6 +68,12 @@ export function ComprehensionReview({
   const lines = passageRef ? loadLines(passageRef) : null;
   const quotes = Array.isArray(stem.quotes) ? (stem.quotes as unknown[]) : [];
   const walk = explanation.walkScript;
+  const walkSteps: string[] = Array.isArray(walk)
+    ? (walk as unknown[]).map((s) => (typeof s === 'string' ? s : String((s as { text?: unknown })?.text ?? JSON.stringify(s))))
+    // A string script is one step per line — split so the reviewer reads it as the child is walked
+    // through it, not as one paragraph.
+    : typeof walk === 'string' ? walk.split(/\n+/).map((l) => l.trim()).filter(Boolean)
+      : [];
 
   return (
     <section className="cc-card" data-testid="comprehension-review">
@@ -156,13 +162,15 @@ export function ComprehensionReview({
       </table>
 
       {/* THE WALK SCRIPT, which is what the child is taken through after answering. */}
+      {/*
+        * TWO SHAPES, BOTH LIVE. The walk script is a STRING on every stored item and an array on
+        * none of them; reading only the array showed "none recorded" on all 277 for a script that
+        * exists. Annie would have read that as a defect in the item rather than in the screen,
+        * which is the whole reason this sweep ran before she sat down.
+        */}
       <h3>Walk script</h3>
-      {Array.isArray(walk) && walk.length ? (
-        <ol data-testid="walk-script">
-          {(walk as unknown[]).map((s, i) => (
-            <li key={i}>{typeof s === 'string' ? s : String((s as { text?: unknown })?.text ?? JSON.stringify(s))}</li>
-          ))}
-        </ol>
+      {walkSteps.length ? (
+        <ol data-testid="walk-script">{walkSteps.map((s, i) => <li key={i}>{s}</li>)}</ol>
       ) : (
         <p><em>none recorded</em></p>
       )}

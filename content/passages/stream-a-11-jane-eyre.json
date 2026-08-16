@@ -1,14 +1,12 @@
 {
-  "kind": "passage",
   "id": "stream-a-11-jane-eyre",
-  "stream": "A (public-domain curated)",
+  "sourceFile": "jane-eyre.txt",
   "work": {
     "author": "Charlotte Brontë",
     "title": "Jane Eyre",
     "firstPublished": 1847,
     "authorDied": 1855
   },
-  "commissioned": false,
   "copyrightCheck": {
     "rule": "UK: life of author + 70 years",
     "authorDied": 1855,
@@ -16,10 +14,136 @@
     "verdict": "public domain in the UK",
     "sourceEdition": "Project Gutenberg eBook #1260, public domain"
   },
-  "provenance": "Originally curated for ClueCrew from Project Gutenberg public-domain texts. NOT derived from any corpus exam paper; extract range chosen independently and checked against the similarity index.",
   "sceneTitle": "The Rider on the Icy Lane",
-  "preamble": "Jane is a young governess at Thornfield Hall, a big lonely house in the country. On a freezing afternoon in January she sets off to walk to the village of Hay to post a letter for her employer's housekeeper.",
-  "body": "This lane inclined up-hill all the way to Hay; having reached the middle, I sat down on a stile which led thence into a field. Gathering my mantle about me, and sheltering my hands in my muff, I did not feel the cold, though it froze keenly; as was attested by a sheet of ice covering the causeway, where a little brooklet, now congealed, had overflowed after a rapid thaw some days since. From my seat I could look down on Thornfield: the grey and battlemented hall was the principal object in the vale below me; its woods and dark rookery rose against the west. I lingered till the sun went down amongst the trees, and sank crimson and clear behind them. I then turned eastward.\n\nThe din was on the causeway: a horse was coming; the windings of the lane yet hid it, but it approached. I was just leaving the stile; yet, as the path was narrow, I sat still to let it go by. In those days I was young, and all sorts of fancies bright and dark tenanted my mind: the memories of nursery stories were there amongst other rubbish; and when they recurred, maturing youth added to them a vigour and vividness beyond what childhood could give. As this horse approached, and as I watched for it to appear through the dusk, I remembered certain of Bessie’s tales, wherein figured a North-of-England spirit called a “Gytrash,” which, in the form of horse, mule, or large dog, haunted solitary ways, and sometimes came upon belated travellers, as this horse was now coming upon me.\n\nIt was very near, but not yet in sight; when, in addition to the tramp, tramp, I heard a rush under the hedge, and close down by the hazel stems glided a great dog, whose black and white colour made him a distinct object against the trees. It was exactly one form of Bessie’s Gytrash—a lion-like creature with long hair and a huge head: it passed me, however, quietly enough; not staying to look up, with strange pretercanine eyes, in my face, as I half expected it would. The horse followed,—a tall steed, and on its back a rider. The man, the human being, broke the spell at once. No Gytrash was this,—only a traveller taking the short cut to Millcote. He passed, and I went on; a few steps, and I turned: a sliding sound and an exclamation of “What the deuce is to do now?” and a clattering tumble, arrested my attention. Man and horse were down; they had slipped on the sheet of ice which glazed the causeway. The dog came bounding back, and seeing his master in a predicament, and hearing the horse groan, barked till the evening hills echoed the sound, which was deep in proportion to his magnitude. He snuffed round the prostrate group, and then he ran up to me; it was all he could do,—there was no other help at hand to summon. I obeyed him, and walked down to the traveller, by this time struggling himself free of his steed. His efforts were so vigorous, I thought he could not be much hurt; but I asked him the question—\n\n“Are you injured, sir?”\n\n“Can I do anything?” I asked again.\n\n“You must just stand on one side,” he answered as he rose, first to his knees, and then to his feet. I did; whereupon began a heaving, stamping, clattering process, accompanied by a barking and baying which removed me effectually some yards’ distance; but I would not be driven quite away till I saw the event. This was finally fortunate; the horse was re-established, and the dog was silenced with a “Down, Pilot!” The traveller now, stooping, felt his foot and leg, as if trying whether they were sound; apparently something ailed them, for he halted to the stile whence I had just risen, and sat down.\n\nI was in the mood for being useful, or at least officious, I think, for I now drew near him again.\n\n“If you are hurt, and want help, sir, I can fetch some one either from Thornfield Hall or from Hay.”\n\n“Thank you: I shall do: I have no broken bones,—only a sprain;” and again he stood up and tried his foot, but the result extorted an involuntary “Ugh!”\n\nSomething of daylight still lingered, and the moon was waxing bright: I could see him plainly. His figure was enveloped in a riding cloak, fur collared and steel clasped; its details were not apparent, but I traced the general points of middle height and considerable breadth of chest. He had a dark face, with stern features and a heavy brow; his eyes and gathered eyebrows looked ireful and thwarted just now; he was past youth, but had not reached middle-age; perhaps he might be thirty-five. I felt no fear of him, and but little shyness.\n\n“I cannot think of leaving you, sir, at so late an hour, in this solitary lane, till I see you are fit to mount your horse.”\n\n“I should think you ought to be at home yourself,” said he, “if you have a home in this neighbourhood: where do you come from?”\n\n“From just below; and I am not at all afraid of being out late when it is moonlight: I will run over to Hay for you with pleasure, if you wish it: indeed, I am going there to post a letter.”\n\n“You live just below—do you mean at that house with the battlements?” pointing to Thornfield Hall, on which the moon cast a hoary gleam, bringing it out distinct and pale from the woods that, by contrast with the western sky, now seemed one mass of shadow.\n\n“Yes, sir.”\n\n“Whose house is it?”\n\n“Mr. Rochester’s.”\n\n“Do you know Mr. Rochester?”\n\n“No, I have never seen him.”\n\n“He is not resident, then?”\n\n“No.”\n\n“Can you tell me where he is?”\n\n“I cannot.”\n\n“You are not a servant at the hall, of course. You are—” He stopped, ran his eye over my dress, which, as usual, was quite simple: a black merino cloak, a black beaver bonnet; neither of them half fine enough for a lady’s-maid. He seemed puzzled to decide what I was; I helped him.\n\n“I am the governess.”\n\n“Ah, the governess!” he repeated; “deuce take me, if I had not forgotten! The governess!” and again my raiment underwent scrutiny. In two minutes he rose from the stile: his face expressed pain when he tried to move.",
+  "preamble": "Jane is a young governess at Thornfield Hall, a big lonely house in the country. On a freezing afternoon in January she sets off up the lane that climbs from the house to the village of Hay, to post a letter for her employer’s housekeeper.",
+  "extract": "This lane inclined up-hill all the way to Hay; having reached the middle, I sat down on a stile which led thence into a field. Gathering my mantle about me, and sheltering my hands in my muff, I did not feel the cold, though it froze keenly; as was attested by a sheet of ice covering the causeway, where a little brooklet, now congealed, had overflowed after a rapid thaw some days since. From my seat I could look down on Thornfield: the grey and battlemented hall was the principal object in the vale below me; its woods and dark rookery rose against the west. I lingered till the sun went down amongst the trees, and sank crimson and clear behind them. I then turned eastward.\n\nThe din was on the causeway: a horse was coming; the windings of the lane yet hid it, but it approached. I was just leaving the stile; yet, as the path was narrow, I sat still to let it go by. In those days I was young, and all sorts of fancies bright and dark tenanted my mind: the memories of nursery stories were there amongst other rubbish; and when they recurred, maturing youth added to them a vigour and vividness beyond what childhood could give. As this horse approached, and as I watched for it to appear through the dusk, I remembered certain of Bessie’s tales, wherein figured a North-of- England spirit called a “Gytrash,” which, in the form of horse, mule, or large dog, haunted solitary ways, and sometimes came upon belated travellers, as this horse was now coming upon me.\n\nIt was very near, but not yet in sight; when, in addition to the tramp, tramp, I heard a rush under the hedge, and close down by the hazel stems glided a great dog, whose black and white colour made him a distinct object against the trees. It was exactly one form of Bessie’s Gytrash—a lion-like creature with long hair and a huge head: it passed me, however, quietly enough; not staying to look up, with strange pretercanine eyes, in my face, as I half expected it would. The horse followed,—a tall steed, and on its back a rider. The man, the human being, broke the spell at once. No Gytrash was this,—only a traveller taking the short cut to Millcote. He passed, and I went on; a few steps, and I turned: a sliding sound and an exclamation of “What the deuce is to do now?” and a clattering tumble, arrested my attention. Man and horse were down; they had slipped on the sheet of ice which glazed the causeway. The dog came bounding back, and seeing his master in a predicament, and hearing the horse groan, barked till the evening hills echoed the sound, which was deep in proportion to his magnitude. He snuffed round the prostrate group, and then he ran up to me; it was all he could do,—there was no other help at hand to summon. I obeyed him, and walked down to the traveller, by this time struggling himself free of his steed. His efforts were so vigorous, I thought he could not be much hurt; but I asked him the question—\n\n“Are you injured, sir?”\n\n“Can I do anything?” I asked again.\n\n“You must just stand on one side,” he answered as he rose, first to his knees, and then to his feet. I did; whereupon began a heaving, stamping, clattering process, accompanied by a barking and baying which removed me effectually some yards’ distance; but I would not be driven quite away till I saw the event. This was finally fortunate; the horse was re-established, and the dog was silenced with a “Down, Pilot!” The traveller now, stooping, felt his foot and leg, as if trying whether they were sound; apparently something ailed them, for he halted to the stile whence I had just risen, and sat down.\n\nI was in the mood for being useful, or at least officious, I think, for I now drew near him again.\n\n“If you are hurt, and want help, sir, I can fetch some one either from Thornfield Hall or from Hay.”\n\n“Thank you: I shall do: I have no broken bones,—only a sprain;” and again he stood up and tried his foot, but the result extorted an involuntary “Ugh!”\n\nSomething of daylight still lingered, and the moon was waxing bright: I could see him plainly. His figure was enveloped in a riding cloak, fur collared and steel clasped; its details were not apparent, but I traced the general points of middle height and considerable breadth of chest. He had a dark face, with stern features and a heavy brow; his eyes and gathered eyebrows looked ireful and thwarted just now; he was past youth, but had not reached middle-age; perhaps he might be thirty-five. I felt no fear of him, and but little shyness.\n\nIf even this stranger had smiled and been good-humoured to me when I addressed him; if he had put off my offer of assistance gaily and with thanks, I should have gone on my way and not felt any vocation to renew inquiries: but the frown, the roughness of the traveller, set me at my ease: I retained my station when he waved to me to go, and announced—\n\n“I cannot think of leaving you, sir, at so late an hour, in this solitary lane, till I see you are fit to mount your horse.”\n\n“I should think you ought to be at home yourself,” said he, “if you have a home in this neighbourhood: where do you come from?”\n\n“From just below; and I am not at all afraid of being out late when it is moonlight: I will run over to Hay for you with pleasure, if you wish it: indeed, I am going there to post a letter.”\n\n“You live just below—do you mean at that house with the battlements?” pointing to Thornfield Hall, on which the moon cast a hoary gleam, bringing it out distinct and pale from the woods that, by contrast with the western sky, now seemed one mass of shadow.\n\n“Yes, sir.”\n\n“Whose house is it?”\n\n“Mr. Rochester’s.”\n\n“Do you know Mr. Rochester?”\n\n“No, I have never seen him.”\n\n“He is not resident, then?”\n\n“No.”\n\n“Can you tell me where he is?”\n\n“I cannot.”\n\n“You are not a servant at the hall, of course. You are—” He stopped, ran his eye over my dress, which, as usual, was quite simple: a black merino cloak, a black beaver bonnet; neither of them half fine enough for a lady’s-maid. He seemed puzzled to decide what I was; I helped him.\n\n“I am the governess.”\n\n“Ah, the governess!” he repeated; “deuce take me, if I had not forgotten! The governess!” and again my raiment underwent scrutiny. In two minutes he rose from the stile: his face expressed pain when he tried to move.",
+  "editorialCuts": [
+    "Removed one sentence of Jane's speculation about goblins inhabiting the bodies of beasts, which interrupts the arrival of the horse and rider.",
+    "Removed the second half of the paragraph describing the traveller, in which Jane reflects at length on how she would have behaved towards a handsome young gentleman.",
+    "Removed a one-line aside in which Jane thinks the fallen rider may have been swearing.",
+    "Removed a one-line aside noting that the traveller had hardly looked in Jane's direction before.",
+    "RESTORED the paragraph in which the traveller waves Jane away and she keeps her place. Cutting it had left \"I cannot think of leaving you, sir\" answering a dismissal that was not in the extract — a reply whose prompt had been cut, which is the Rebecca fault one passage later. 60 words, ruled 2026-08-13.",
+    "NOT RESTORED, AND THE FAULT IS RECORDED IN TWO HALVES. The paragraph introducing the noise on the causeway stays cut. (a) Line 9 opens \"The din\" with no din before it: an unexplained definite article, which a child reads past. (b) Line 19 says \"in addition to the tramp, tramp\" — quoting the CUT paragraph's own phrase back at a reader who has never seen it, which is worse, because a child asked what it refers to has no answer anywhere in the passage. See authoringBars."
+  ],
+  "metadata": {
+    "wordCount": 1162,
+    "estReadingAge": "12-14",
+    "genre": "gothic-suspense",
+    "person": "first",
+    "tense": "past",
+    "domain": "a winter walk in an English country lane; a fallen horse and rider at dusk",
+    "extractOrComplete": "extract",
+    "lineCount": 89,
+    "wordCountMeasure": "words-alnum-runs-v1",
+    "wordCountField": "extract"
+  },
+  "wordVaultCandidates": [
+    {
+      "word": "attested",
+      "senseInPassage": "shown or proved to be true",
+      "polysemous": true,
+      "otherCommonSense": "to state formally that something is true, as a witness signing a document",
+      "estTier": 4,
+      "whyValuable": "The passage uses the 'provides evidence of' sense, which pupils must read out of the sentence rather than recall.",
+      "anchoredAs": "attested",
+      "anchoredAtLine": 3,
+      "anchorNote": "verbatim. Written mechanically 2026-08-15 by ruling: the word occurs EXACTLY ONCE in the passage, so no reading is involved in choosing the instance."
+    },
+    {
+      "word": "waxing",
+      "senseInPassage": "growing brighter and larger (of the moon)",
+      "polysemous": true,
+      "otherCommonSense": "wax as a substance, or to wax a floor or a car",
+      "estTier": 4,
+      "whyValuable": "The everyday noun sense is much commoner, so the verb sense here is a clean discriminator.",
+      "anchoredAs": "waxing",
+      "anchoredAtLine": 51,
+      "anchorNote": "verbatim. Written mechanically 2026-08-15 by ruling: the word occurs EXACTLY ONCE in the passage, so no reading is involved in choosing the instance."
+    },
+    {
+      "word": "event",
+      "senseInPassage": "the outcome or result of what was happening",
+      "polysemous": true,
+      "otherCommonSense": "a happening or occasion, such as a sports event",
+      "estTier": 3,
+      "whyValuable": "A very familiar word used in an archaic secondary sense that context alone supplies.",
+      "anchoredAs": "event",
+      "anchoredAtLine": 41,
+      "anchorNote": "verbatim. Written mechanically 2026-08-15 by ruling: the word occurs EXACTLY ONCE in the passage, so no reading is involved in choosing the instance."
+    },
+    {
+      "word": "spell",
+      "senseInPassage": "an enchantment or magical hold on the imagination",
+      "polysemous": true,
+      "otherCommonSense": "to spell a word letter by letter; a short period of time",
+      "estTier": 2,
+      "whyValuable": "Three common senses compete, and only the passage decides which is meant.",
+      "anchoredAs": "spell",
+      "anchoredAtLine": 25,
+      "anchorNote": "verbatim. Written mechanically 2026-08-15 by ruling: the word occurs EXACTLY ONCE in the passage, so no reading is involved in choosing the instance."
+    },
+    {
+      "word": "officious",
+      "senseInPassage": "pushing help on someone who has not asked for it",
+      "polysemous": true,
+      "otherCommonSense": "often confused with 'official', meaning formal or authorised",
+      "estTier": 5,
+      "whyValuable": "A classic near-homophone trap that also carries Jane's self-mocking tone.",
+      "anchoredAs": "officious",
+      "anchoredAtLine": 45,
+      "anchorNote": "verbatim. Written mechanically 2026-08-15 by ruling: the word occurs EXACTLY ONCE in the passage, so no reading is involved in choosing the instance."
+    },
+    {
+      "word": "prostrate",
+      "senseInPassage": "lying flat on the ground",
+      "polysemous": true,
+      "otherCommonSense": "overwhelmed or completely worn out",
+      "estTier": 5,
+      "whyValuable": "The literal sense is recoverable from the fallen horse and rider, giving a well-anchored inference.",
+      "anchoredAs": "prostrate",
+      "anchoredAtLine": 32,
+      "anchorNote": "verbatim. Written mechanically 2026-08-15 by ruling: the word occurs EXACTLY ONCE in the passage, so no reading is involved in choosing the instance."
+    },
+    {
+      "word": "congealed",
+      "senseInPassage": "frozen solid; thickened and set",
+      "polysemous": false,
+      "otherCommonSense": null,
+      "estTier": 5,
+      "whyValuable": "High-value Tier 5 word whose meaning is fully supplied by the surrounding frost imagery.",
+      "anchoredAs": "congealed",
+      "anchoredAtLine": 4,
+      "anchorNote": "verbatim. Written mechanically 2026-08-15 by ruling: the word occurs EXACTLY ONCE in the passage, so no reading is involved in choosing the instance."
+    },
+    {
+      "word": "resident",
+      "senseInPassage": "living in a place (used as an adjective)",
+      "polysemous": true,
+      "otherCommonSense": "a noun meaning a person who lives somewhere",
+      "estTier": 3,
+      "whyValuable": "Pupils almost always meet this as a noun; the adjective use here shifts the grammar as well as the sense.",
+      "anchoredAs": "resident",
+      "anchoredAtLine": 78,
+      "anchorNote": "verbatim. Written mechanically 2026-08-15 by ruling: the word occurs EXACTLY ONCE in the passage, so no reading is involved in choosing the instance."
+    },
+    {
+      "word": "halted",
+      "senseInPassage": "walked with a limp",
+      "polysemous": true,
+      "otherCommonSense": "stopped, came to a standstill",
+      "estTier": 4,
+      "whyValuable": "The stopping sense is overwhelmingly the one a child meets, and the passage uses the older sense of moving lamely. Lines 43 and 44 supply the displacement — he feels his foot and leg, something ails them, and then he halts TO the stile, which a stopping cannot do.",
+      "anchoredAs": "halted",
+      "anchoredAtLine": 44,
+      "anchorNote": "verbatim. Written mechanically 2026-08-15 by ruling: the word occurs EXACTLY ONCE in the passage, so no reading is involved in choosing the instance."
+    }
+  ],
+  "contentFlags": [
+    "A horse slips on ice and falls with its rider; the horse groans and the man sprains his ankle. No lasting harm and no blood. Recommendation: keep - this is the mildest possible peril and drives the whole scene.",
+    "A girl alone at dusk speaks to a strange man. He is gruff but entirely correct, she states plainly that she feels no fear, and the exchange is public-spirited helpfulness. Recommendation: keep.",
+    "The traveller uses a very mild period oath twice. Jane's separate aside about his possible swearing has been cut. Recommendation: keep as printed."
+  ],
+  "curationNotes": "Chosen over the red-room episode as instructed: this is Jane's first meeting with Rochester, which delivers gothic atmosphere (the Gytrash, the frozen lane, the moonlit stranger) with no terror at all. The extract stops on the reveal - she names herself as the governess and he reacts oddly to a household he claims to be a stranger to - so the dramatic irony is available to inference items without the reader needing to know the novel.",
   "numberedLines": [
     {
       "n": 1,
@@ -358,11 +482,41 @@
     },
     {
       "n": 58,
-      "text": "“I cannot think of leaving you, sir, at so late an hour, in this solitary lane, till I",
+      "text": "If even this stranger had smiled and been good-humoured to me when I addressed him; if",
       "label": ""
     },
     {
       "n": 59,
+      "text": "he had put off my offer of assistance gaily and with thanks, I should have gone on my",
+      "label": ""
+    },
+    {
+      "n": 60,
+      "text": "way and not felt any vocation to renew inquiries: but the frown, the roughness of the",
+      "label": "60"
+    },
+    {
+      "n": 61,
+      "text": "traveller, set me at my ease: I retained my station when he waved to me to go, and",
+      "label": ""
+    },
+    {
+      "n": 62,
+      "text": "announced—",
+      "label": ""
+    },
+    {
+      "n": null,
+      "text": "",
+      "label": ""
+    },
+    {
+      "n": 63,
+      "text": "“I cannot think of leaving you, sir, at so late an hour, in this solitary lane, till I",
+      "label": ""
+    },
+    {
+      "n": 64,
       "text": "see you are fit to mount your horse.”",
       "label": ""
     },
@@ -372,12 +526,12 @@
       "label": ""
     },
     {
-      "n": 60,
+      "n": 65,
       "text": "“I should think you ought to be at home yourself,” said he, “if you have a home in this",
-      "label": "60"
+      "label": "65"
     },
     {
-      "n": 61,
+      "n": 66,
       "text": "neighbourhood: where do you come from?”",
       "label": ""
     },
@@ -387,17 +541,17 @@
       "label": ""
     },
     {
-      "n": 62,
+      "n": 67,
       "text": "“From just below; and I am not at all afraid of being out late when it is moonlight: I",
       "label": ""
     },
     {
-      "n": 63,
+      "n": 68,
       "text": "will run over to Hay for you with pleasure, if you wish it: indeed, I am going there to",
       "label": ""
     },
     {
-      "n": 64,
+      "n": 69,
       "text": "post a letter.”",
       "label": ""
     },
@@ -407,17 +561,17 @@
       "label": ""
     },
     {
-      "n": 65,
+      "n": 70,
       "text": "“You live just below—do you mean at that house with the battlements?” pointing to",
-      "label": "65"
+      "label": "70"
     },
     {
-      "n": 66,
+      "n": 71,
       "text": "Thornfield Hall, on which the moon cast a hoary gleam, bringing it out distinct and pale",
       "label": ""
     },
     {
-      "n": 67,
+      "n": 72,
       "text": "from the woods that, by contrast with the western sky, now seemed one mass of shadow.",
       "label": ""
     },
@@ -427,7 +581,7 @@
       "label": ""
     },
     {
-      "n": 68,
+      "n": 73,
       "text": "“Yes, sir.”",
       "label": ""
     },
@@ -437,7 +591,7 @@
       "label": ""
     },
     {
-      "n": 69,
+      "n": 74,
       "text": "“Whose house is it?”",
       "label": ""
     },
@@ -447,58 +601,8 @@
       "label": ""
     },
     {
-      "n": 70,
-      "text": "“Mr. Rochester’s.”",
-      "label": "70"
-    },
-    {
-      "n": null,
-      "text": "",
-      "label": ""
-    },
-    {
-      "n": 71,
-      "text": "“Do you know Mr. Rochester?”",
-      "label": ""
-    },
-    {
-      "n": null,
-      "text": "",
-      "label": ""
-    },
-    {
-      "n": 72,
-      "text": "“No, I have never seen him.”",
-      "label": ""
-    },
-    {
-      "n": null,
-      "text": "",
-      "label": ""
-    },
-    {
-      "n": 73,
-      "text": "“He is not resident, then?”",
-      "label": ""
-    },
-    {
-      "n": null,
-      "text": "",
-      "label": ""
-    },
-    {
-      "n": 74,
-      "text": "“No.”",
-      "label": ""
-    },
-    {
-      "n": null,
-      "text": "",
-      "label": ""
-    },
-    {
       "n": 75,
-      "text": "“Can you tell me where he is?”",
+      "text": "“Mr. Rochester’s.”",
       "label": "75"
     },
     {
@@ -508,7 +612,7 @@
     },
     {
       "n": 76,
-      "text": "“I cannot.”",
+      "text": "“Do you know Mr. Rochester?”",
       "label": ""
     },
     {
@@ -518,22 +622,37 @@
     },
     {
       "n": 77,
-      "text": "“You are not a servant at the hall, of course. You are—” He stopped, ran his eye over my",
+      "text": "“No, I have never seen him.”",
+      "label": ""
+    },
+    {
+      "n": null,
+      "text": "",
       "label": ""
     },
     {
       "n": 78,
-      "text": "dress, which, as usual, was quite simple: a black merino cloak, a black beaver bonnet;",
+      "text": "“He is not resident, then?”",
+      "label": ""
+    },
+    {
+      "n": null,
+      "text": "",
       "label": ""
     },
     {
       "n": 79,
-      "text": "neither of them half fine enough for a lady’s-maid. He seemed puzzled to decide what I",
+      "text": "“No.”",
+      "label": ""
+    },
+    {
+      "n": null,
+      "text": "",
       "label": ""
     },
     {
       "n": 80,
-      "text": "was; I helped him.",
+      "text": "“Can you tell me where he is?”",
       "label": "80"
     },
     {
@@ -543,7 +662,7 @@
     },
     {
       "n": 81,
-      "text": "“I am the governess.”",
+      "text": "“I cannot.”",
       "label": ""
     },
     {
@@ -553,37 +672,64 @@
     },
     {
       "n": 82,
-      "text": "“Ah, the governess!” he repeated; “deuce take me, if I had not forgotten! The",
+      "text": "“You are not a servant at the hall, of course. You are—” He stopped, ran his eye over my",
       "label": ""
     },
     {
       "n": 83,
-      "text": "governess!” and again my raiment underwent scrutiny. In two minutes he rose from the",
+      "text": "dress, which, as usual, was quite simple: a black merino cloak, a black beaver bonnet;",
       "label": ""
     },
     {
       "n": 84,
+      "text": "neither of them half fine enough for a lady’s-maid. He seemed puzzled to decide what I",
+      "label": ""
+    },
+    {
+      "n": 85,
+      "text": "was; I helped him.",
+      "label": "85"
+    },
+    {
+      "n": null,
+      "text": "",
+      "label": ""
+    },
+    {
+      "n": 86,
+      "text": "“I am the governess.”",
+      "label": ""
+    },
+    {
+      "n": null,
+      "text": "",
+      "label": ""
+    },
+    {
+      "n": 87,
+      "text": "“Ah, the governess!” he repeated; “deuce take me, if I had not forgotten! The",
+      "label": ""
+    },
+    {
+      "n": 88,
+      "text": "governess!” and again my raiment underwent scrutiny. In two minutes he rose from the",
+      "label": ""
+    },
+    {
+      "n": 89,
       "text": "stile: his face expressed pain when he tried to move.",
       "label": ""
     }
   ],
-  "metadata": {
-    "wordCount": 1092,
-    "estReadingAge": "12-14",
-    "genre": "gothic-suspense",
-    "person": "first",
-    "tense": "past",
-    "domain": "a winter walk in an English country lane; a fallen horse and rider at dusk",
-    "extractOrComplete": "extract",
-    "lineCount": 84
+  "similarityCheck": {
+    "indexedPapersCompared": 112,
+    "shingleCount": 1100,
+    "hits": [],
+    "verdict": "PASS",
+    "method": "5-word shingles, md5/48bit, same pipeline as the batch freshness gate"
   },
-  "editorialCuts": [
-    "Removed one sentence of Jane's speculation about goblins inhabiting the bodies of beasts, which interrupts the arrival of the horse and rider.",
-    "Removed the second half of the paragraph describing the traveller, in which Jane reflects at length on how she would have behaved towards a handsome young gentleman.",
-    "Removed a short reflective paragraph about the stranger's frown and roughness putting Jane at her ease.",
-    "Removed a one-line aside in which Jane thinks the fallen rider may have been swearing.",
-    "Removed a one-line aside noting that the traveller had hardly looked in Jane's direction before."
-  ],
+  "stream": "A (public-domain curated)",
+  "provenance": "Originally curated for ClueCrew from Project Gutenberg public-domain texts. NOT derived from any corpus exam paper; extract range chosen independently and checked against the similarity index.",
   "verbatimVerification": {
     "spansChecked": 26,
     "spansFound": 26,
@@ -591,11 +737,70 @@
     "breaksOnlyAtDocumentedCutSeams": true,
     "note": "Every 8-word span that did not match the source falls exactly at a documented editorial-cut seam, where two separately-verbatim spans were joined. Text within each retained span is 100% verbatim against the Project Gutenberg source."
   },
-  "similarityCheck": {
-    "indexedPapersCompared": 112,
-    "shingleCount": 1100,
-    "hits": [],
-    "verdict": "PASS",
-    "method": "5-word shingles, md5/48bit, same pipeline as the batch freshness gate"
+  "textNormalisations": {
+    "declaredOn": "2026-08-13",
+    "appliesTo": "every verbatim figure in this file",
+    "reading": "Verbatim means VERBATIM UNDER THESE NORMALISATIONS. A figure quoted without them is approximate and does not say so.",
+    "normalisations": [
+      {
+        "normalisation": "NONE",
+        "instances": 0,
+        "note": "Checked and nothing to declare. Recorded rather than omitted: a passage silently without this field is indistinguishable from one nobody checked."
+      }
+    ]
+  },
+  "authoringBars": [
+    {
+      "line": 19,
+      "bar": "No item may ask what \"the tramp, tramp\" refers to, or quote it. The phrase is a back-reference to a cut paragraph and has no antecedent in the extract.",
+      "ruledOn": "2026-08-13"
+    },
+    {
+      "line": 36,
+      "bar": "No item may ask what the traveller replied to \"Are you injured, sir?\". The line explaining his silence was cut, so the extract shows two questions and no answer.",
+      "ruledOn": "2026-08-13"
+    }
+  ],
+  "band": {
+    "band": "CSSE",
+    "floor": 900,
+    "ceiling": 1100,
+    "readingAge": "12-14",
+    "basis": "ratified",
+    "why": "RATIFIED 2026-08-14 under Option B. The band stopped being derived from reading age, because reading age describes a passage and a band instructs a commission, and deriving the instruction from the description is backwards. This passage was never assigned a band at commission. The reading-age reconstruction — estReadingAge contained in exactly one band definition — says which band it would have been, and the passage's own length agrees. That agreement is accepted ONCE, here, as the assignment. It is evidence ratified, not a rule applied, and the reconstruction is not consulted for anything commissioned after this date.",
+    "reconstructionEvidence": "estReadingAge '12-14' is contained in the CSSE band definition and in no other; length 1162 is OVER by 62",
+    "reconstructionIsNotTheRule": "reconstruct_band_from_reading_age() refuses for any passage outside the ratified fourteen. Bands are declared at commission from 2026-08-14."
+  },
+  "bandException": {
+    "band": "CSSE 900-1100",
+    "actual": 1162,
+    "over": 62,
+    "pct": "5.6%",
+    "measure": "words-alnum-runs-v1",
+    "status": "DECLARED 2026-08-14, LATE — it has been over since 13 August",
+    "correctionNotice": "Restoring source paragraph 932 added 74 words to an extract already at 1,093, and nobody checked the band, because the band was not a field. THIS IS THE INSTANCE OF THE ESTIMATE PATTERN THAT DID NOT SURVIVE ON ITS REASON — not because the reason was weak but because NO REASON WAS OFFERED. Bevis and Christmas Carol both held on arguments their numbers were only illustrating; here there was no argument about length at all, since nobody knew there was a length question.",
+    "wantsARuling": "Declare 62, or trim. The restore itself is not in question."
+  },
+  "barredFault": {
+    "fault": "\"The din\" at line 9 and \"the tramp, tramp\" at line 19, both back-references to the cut paragraph that introduced the noise",
+    "contentObjection": "NONE. Source paragraph 921 is a boy's description of a noise on a lane. Nothing in it was cut for content; it was cut for length.",
+    "lengthObjection": "74 words onto an extract already 62 OVER the CSSE ceiling. Restoring puts it at 1,236, 136 over, 12.4%. This is the one of the three where the objection is genuinely and only about size.",
+    "costWords": 74,
+    "after": 1236,
+    "bandPosition": "OVER the CSSE ceiling by 136",
+    "measure": "words-alnum-runs-v1",
+    "split": "2026-08-14, ruled: the welded sentence is the fault. Content and length are separate objections and only one of them is arithmetic."
+  },
+  "authoringCopy": {
+    "strippedFields": [
+      "questionHooks"
+    ],
+    "reason": "Addendum 19 §1 and the T4 sourcing rule, made structural rather than procedural. Curation copy retains them.",
+    "curationCopy": "/home/claude/passages/stream-a/stream-a-11-jane-eyre.json",
+    "flaggedNotStripped": [
+      "wordVaultCandidates"
+    ],
+    "subKeysStripped": [],
+    "keptByRuling": []
   }
 }

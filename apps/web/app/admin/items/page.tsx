@@ -16,9 +16,11 @@ export default async function ItemsPage({
     reviewed?: string;
     skipped?: string;
     error?: string;
+    /** Cluster prefix, e.g. ENG-028 — the reviewer opens one packet cluster at a time. */
+    cluster?: string;
   }>;
 }) {
-  const { status, imported, flagged, reviewed, skipped, error } = await searchParams;
+  const { status, imported, flagged, reviewed, skipped, error, cluster } = await searchParams;
   const filter = STATUSES.includes(status as ItemStatus) ? (status as ItemStatus) : undefined;
   const staff = await currentStaff();
 
@@ -27,9 +29,12 @@ export default async function ItemsPage({
       ...(filter ? { status: filter } : {}),
       // Calibration QC queue (Phase 3 §2): drifted ≥1.5 tiers from authored.
       ...(flagged ? { calibrationFlaggedAt: { not: null } } : {}),
+      // ONE CLUSTER AT A TIME. Annie opens a packet cluster, not a bank of 337.
+      ...(cluster ? { id: { startsWith: cluster } } : {}),
     },
     include: { questionType: true, options: true },
-    orderBy: { createdAt: 'desc' },
+    // Serve order within a cluster is file position, so the queue reads in the order she expects.
+    orderBy: cluster ? [{ clusterPosition: 'asc' }, { id: 'asc' }] : { createdAt: 'desc' },
     take: 200,
   });
 
