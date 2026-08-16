@@ -4879,11 +4879,27 @@ in the SERVING store**: `ENG-002-pp-13` is an `en-comp-technique` item whose opt
 correct. **The hints were hiding it** — every previous comparison ran on `childHint`, the field a
 child reads, and a description is what a DRAFTER reads to decide whether a tag fits.
 
-**Two stores applying different rules while reporting the same tag.** The sentence has no provenance
-on our side: `en-vocab-dominant-sense` was already ACTIVE before the approval batch, so it never
-appeared on a sheet, and nothing records whether the scoping was ruled or assumed. That is the
-reviewer's to settle, and it is the gate's outstanding delivery-52 problem with its cause finally
-named.
+**Two stores applying different rules while reporting the same tag.**
+
+**CORRECTED, 2026-08-16 — I READ TWO FAULTS ON ONE ITEM AS ONE FAULT.** This entry first said the
+missing sentence was "the gate's outstanding delivery-52 problem with its cause finally named". It is
+not. On `ENG-002-pp-13` (`lineRefs [41,42,43]`):
+- **option D** carries `en-vocab-dominant-sense` — *decided* read as "made a decision" rather than
+  "settled upon" — a sense error on a technique stem, which is exactly what the scoping sentence
+  describes. **It passes.**
+- **option E** carries `en-wrong-scope-retrieval`, and its own note puts the defeater on **line 41,
+  INSIDE the item's cited window**. A wrong-scope tag requires the true detail to sit OUTSIDE the
+  window. **That is the delivery-52 gate problem, and it has nothing to do with the description.**
+
+Two faults on one item, one of them not a fault, read as a single thing because they were found in
+the same lookup. David caught it via Cowork's trace.
+
+**AND THE SENTENCE IS COWORK'S AND UNRULED.** Traced by Cowork: written in its own proposal document,
+**reasoning FROM her ruling rather than reporting one**, never in the batch that went to her, and
+carrying `approvedBy: Anne` the whole way. So it is a PROPOSAL and goes to her as one. **It is not
+being added to our description before she rules** — adding a scoping sentence to a live entry on the
+strength of another agent's inference is the fault this whole run has been closing, in its purest
+form: an unruled claim wearing an approval it never had.
 
 **TWO FAULTS IN MY OWN CHECK, BOTH THE SAME SHAPE IT WAS BUILT TO CATCH.**
 1. It read only `libraryEntries`; this delivery used `entries`, so `requirePopulation` aborted on a
@@ -4898,6 +4914,27 @@ named.
 the reviewer on **8 August** and never delivered in the eight days since, because the return leg had
 no path until 16 August. Ten are ACTIVE and **one is REJECTED**, which is why status travels with
 them: an entry the drafting side does not hold is not the same as an entry it may use.
+
+## R126 — Two faults inside the check written to catch them
+*2026-08-16, recorded together because they are one lesson twice.*
+
+`check:library-agreement` exists to stop an unstated field being read as an agreeing one. It failed
+that test twice in one run, on the same delivery:
+
+1. **AN UNRECOGNISED SHAPE IS NOT AN EMPTY ONE.** It read only `libraryEntries`; delivery 88 used
+   `entries`. `requirePopulation` aborted — correctly, loudly, and **for the wrong reason**, telling
+   me the population was empty when all 28 rows were present. A refusal that is right about the
+   verdict and wrong about the cause sends the next person to the wrong side. It now tries every
+   known key and NAMES the one that answered, so a rename surfaces as an unrecognised shape.
+2. **NULL IS NOT-STATED, NOT A VALUE.** It counted `status: null` as 28 disagreements. They had sent
+   hints and descriptions only. The check already handled `undefined`; absence arrived as `null` and
+   walked straight past. **The unstated-denominator fault, inside the check built to avoid it,
+   wearing a different type.**
+
+Both are the same shape as R61 and R120: an instrument that is correct about the thing it was
+pointed at and wrong about what it was looking at. **The distance between "nothing is there" and "I
+could not see it" is the whole of it**, and it has now appeared in a population check, a route check,
+and a field comparison.
 
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
