@@ -4274,8 +4274,79 @@ The first rendering printed the provenance object raw. On paper that buried the 
 inside a serialised blob — R98's failure mode one layer out: the record was TRUE and unreadable,
 and unreadable is how a true record gets corrected to a false one.
 
+## R108 — R98 inverted: unknown recorded as HER, at the field that decides what a child is taught
+*David, 2026-08-16, on Annie's standing rule. She asked for this before she would open the batch.*
+
+Her rule, from `en-vocab-dominant-sense`: **read the hint from the stored field with the tool, never
+confirm it from a quote — a confirmation from a transcription tests nothing.** She applied it to the
+two entries the batch said were hers, on the grounds that if they entered the store the way that one
+did they may carry the same drift.
+
+**FIRST: THE TOOL DOES NOT EXIST HERE.** `compare_stored_hint.py` is named in Cowork's authoring
+documents and was never delivered; a whole-filesystem `find` returns nothing. The comparison was run
+by hand to the same discipline — dump each `childHint` from the field to a file, extract the
+candidate source by document STRUCTURE, byte-compare, never retype. Saying "I ran the tool" would
+have been the precise class of claim she was testing for.
+
+**THE TEXT IS CLEAN. THE AUTHORSHIP IS NOT.**
+
+| entry | stored | source | |
+|---|---|---|---|
+| `en-within-span-wrong-element` | 71 ch `a167954591f9` | 71 ch `a167954591f9` | identical byte for byte |
+| `en-negation-dropped` | 95 ch `893241c07185` | 95 ch `9a2159f861a5` | `*not*` stored as `'not'` |
+
+The second is the finding a byte comparison exists for: **markdown emphasis silently read as
+apostrophes at import**, in a field declared carried verbatim. Small, real, invisible to any check
+that compares meaning.
+
+**BOTH TEXTS COME FROM `LIB-PROPOSAL-*.md`, UNDER THE HEADING "## 3. Proposed child hint".** Those
+are documents the drafting side wrote TO her. The entire basis for `hintAuthorKind: PERSON,
+hintAuthoredBy: Annie` was one free-text sentence in another agent's metadata: *"Two are Anne's own
+text quoted verbatim from her proposals"*. **"Her proposals" carries the whole claim and is
+ambiguous exactly where it matters** — proposals BY her, or TO her. Every artefact here says the
+latter. 1,738 text artefacts scanned across Downloads, `content/` and `docs/`; no document authored
+by her contains either string. Two artefacts of hers exist on this disk — `annie-eng028-return.md`
+and `annie-maths-families.md` — and neither carries these. (I first reported ONE, and overstated the
+thinness of the record by a third; the base is small, and that is the finding, so its size has to be
+right.)
+
+**RULED: both go to her marked AUTHORSHIP UNKNOWN.** Not as her words. Nothing is marked as hers
+without an authored artefact of hers carrying the text — today that is `en-vocab-dominant-sense`
+alone, and it is already ACTIVE and not on the sheet. So **nothing on the batch is marked as hers,
+she reads all nine as new, and that is more work than she was promised and the only honest version.**
+
+**THE FIX IS IN THE STORE, NOT THE SHEET.** The paper batch RENDERS `textProvenance`, so correcting
+the rendering would have left the store still claiming PERSON/Annie and the next export saying it
+again. The superseded claim is kept beside the correction (`hintAuthorKindWasClaimedAs`), because a
+correction that erases what it corrected leaves her ruling unreadable later. **UNKNOWN here is not a
+denial** — it records that nothing available can tell, which she can settle in one sentence nobody
+else can supply.
+
+**THIS IS R98 RUNNING BACKWARDS.** R98 was written because Cowork read silence as evidence and
+corrected a TRUE record of her approval to false. This is the same mechanism in the other direction:
+an absence of evidence recorded as HER authorship, at the field that decides what a child is taught
+after a wrong answer. And I built it into the delivery — the sheet told her in bold, on 209 of 215
+items, that she was confirming her own wording. Held before it went.
+
+**THIRD INSTANCE OF ONE FAULT IN TWO DAYS**: the hard-coded `172`, Cowork's `approvedBy`, and now
+`hintAuthoredBy`. Each a claim in prose, derived from nothing, believed because it was written down.
+**The prose is the half a reader believes, and none of these three was computed from anything.**
+
+## R109 — One route, three causes, and only one of them is hers
+*David, 2026-08-16, ratifying R106's proposal.*
+
+`assertMisconceptionsActive` returned `unapproved-misconception` for PROPOSED, RETIRED and
+no-library-row-at-all, and the message a reviewer then read said: *approve them in the misconception
+queue first*. **For a RETIRED tag that instruction is wrong and the tag is not in the queue to
+approve** — the option needs retagging onto a successor, which is not her job at all. Eleven English
+items sit in exactly that state. Three codes now, three instructions, identical refusal: the door's
+behaviour is unchanged and only the reason it gives is split, because the reason is the whole of
+what the reader does next.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
+
+- `export-approval-batch` carried **"Nine entries, 172 items" as a hard-coded literal** in its own `note` field while the code three lines below counted 215 and printed it — the artefact contradicting itself, and the prose is the half a reader believes. Same fault as Cowork's `approvedBy`, in our artefact: not derived from anything. Computed now. One line, no sweep (David, 2026-08-16).
 
 - ENG-013 to ENG-022 (120 items) and ENG-002-pp-23: **no source on this disk**, so 378 is unreachable from here; 174 of 378 held.
 - ENG-004: 12 drafted, **10 landed**, 2 gate-held on the long-word ceiling (AGG-03, AGG-08), 1 tag-held on `en-parallel-read-as-sequence`.

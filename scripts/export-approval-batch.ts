@@ -19,7 +19,8 @@ import { requirePopulation } from './lib/population';
 const OUT_DIR = resolve(import.meta.dirname, '../content/exports');
 const FAMILY = 'approval-batch-english';
 
-async function main(): Promise<void> {
+/** Reusable: an apply script calls this directly rather than duplicating the export. */
+export async function exportApprovalBatch(): Promise<void> {
   const items = await prisma.item.findMany({
     where: { id: { startsWith: 'ENG-' } },
     select: { id: true, options: { select: { misconceptionId: true } } },
@@ -89,10 +90,13 @@ async function main(): Promise<void> {
 
   console.log(`${entries.length} entries · ${itemsAffected} items affected`);
   for (const e of entries) console.log(`  ${String(e.itemsCarryingThisTag).padStart(3)}  ${e.id}`);
-  await prisma.$disconnect();
 }
 
-void main();
+// Run directly (`pnpm export:approval-batch`) but NOT when imported by an apply script, which owns
+// the connection and calls the function as its final step.
+if (process.argv[1]?.endsWith('export-approval-batch.ts')) {
+  void exportApprovalBatch().then(() => prisma.$disconnect());
+}
 
 /**
  * THE PAPER SHEET. Same nine entries, same order, same strings — a rendering, never a re-derivation.
@@ -130,6 +134,18 @@ function renderPaper(
   L.push('approving these strings, not an account of them. Write over either one and what you write');
   L.push('is what enters the library — it will not be retyped, normalised or tidied on our side.');
   L.push('');
+  L.push('**READ ALL NINE AS NEW.** An earlier version of this sheet marked two entries — 209 of the');
+  L.push('215 items — as your own wording, so that you could confirm them rather than review them.');
+  L.push('We could not support that claim: the text matches a document the drafting side wrote TO');
+  L.push('you, and the only evidence it was yours was one ambiguous sentence in another agent\'s');
+  L.push('metadata. Both are now marked AUTHORSHIP UNKNOWN. **This is more work than the sheet you');
+  L.push('were promised, and it is the only honest version.**');
+  L.push('');
+  L.push('**Nothing on this sheet is marked as yours.** Two are AUTHORSHIP UNKNOWN, four are ours,');
+  L.push('three have no provenance recorded at all. Across the whole library exactly one entry is');
+  L.push('marked as your wording — `en-vocab-dominant-sense` — because we hold your ENG-028 return');
+  L.push('carrying that sentence. It is already approved and is not on this sheet.');
+  L.push('');
   L.push(`*Generated ${generatedAt} · artefact ${sourceHash} · ordered by how many items each releases.*`);
   L.push('');
   L.push('---');
@@ -148,7 +164,7 @@ function renderPaper(
   entries.forEach((e, i) => {
     L.push(`## ${i + 1}. \`${e.id}\``);
     L.push('');
-    L.push(`**${e.itemsCarryingThisTag} item${e.itemsCarryingThisTag === 1 ? '' : 's'} carry this tag.**`
+    L.push(`**${e.itemsCarryingThisTag} ${e.itemsCarryingThisTag === 1 ? 'item carries' : 'items carry'} this tag.**`
       + (e.category ? ` Category: ${e.category}.` : '')
       + (e.proposedBy ? ` Proposed by ${e.proposedBy}.` : ''));
     L.push('');
@@ -162,22 +178,46 @@ function renderPaper(
     // one. Anything the shape does not cover still prints, so nothing is dropped for not fitting.
     const prov = e.textProvenance as Record<string, unknown> | null;
     if (prov?.state === 'UNKNOWN') {
-      L.push(`> **Who wrote this text: UNKNOWN.** ${String(prov.note ?? 'No provenance recorded on this row.')} `
+      const un = String(prov.note ?? 'No provenance recorded on this row.').replace(/\.?$/, '.');
+      const unSentence = un.charAt(0).toUpperCase() + un.slice(1);
+      L.push(`> **Who wrote this text: UNKNOWN.** ${unSentence} `
         + 'Not "nobody" and not "us" — unrecorded. If either field below is already in your words, '
         + 'say so and it will be recorded as yours.');
     } else if (prov) {
-      const person = prov.hintAuthorKind === 'PERSON';
-      L.push(person
-        ? `> **The hint below is recorded as YOUR OWN WORDS** — authored by ${String(prov.hintAuthoredBy)}, `
-          + `${String(prov.hintSource ?? 'source not stated')}. If that is right, you are being asked to `
-          + 'confirm your own sentence, not to review ours. If it is not right, say so — a hint we wrote '
-          + 'and you approved unchanged looks identical to one you wrote, and only you can tell them apart.'
-        : `> **The hint below was written by ${String(prov.hintAuthoredBy ?? 'an agent')}** `
-          + `(${String(prov.hintAuthorKind ?? 'kind not stated')}), ${String(prov.hintSource ?? 'source not stated')}.`);
+      // THREE STATES, AND ONLY ONE OF THEM MAY SAY "YOURS" (David's ruling, 2026-08-16 — R108).
+      // This sheet told her in bold that 209 of 215 items rested on her own wording, on the strength
+      // of one ambiguous sentence in another agent's metadata. Nothing is marked as hers now unless
+      // an authored artefact of hers exists carrying the text — today that is one entry.
+      const kind = prov.hintAuthorKind;
+      if (kind === 'PERSON') {
+        L.push('> **The hint below is recorded as YOUR OWN WORDS** — authored by '
+          + `${String(prov.hintAuthoredBy)}, ${String(prov.hintSource ?? 'source not stated')}. `
+          + 'We hold the document it came from, so this is a confirmation of your own sentence '
+          + 'rather than a review of ours.');
+      } else if (kind === 'UNKNOWN' && prov.hintAuthorshipNote) {
+        // The stored note opens with its own label; printing both gave "AUTHORSHIP UNKNOWN.
+        // AUTHORSHIP UNKNOWN." on the page. The field is the value and is not edited — the
+        // DUPLICATED LABEL is dropped for the heading, never the sentence.
+        const note = String(prov.hintAuthorshipNote).replace(/^AUTHORSHIP UNKNOWN\.\s*/, '');
+        L.push(`> **AUTHORSHIP UNKNOWN.** ${note}`);
+        L.push('>');
+        L.push('> **So read this hint as new.** We previously recorded it as yours and we could not '
+          + 'support that. If you recognise the sentence as your own, one line saying so settles it '
+          + 'and nobody else can supply that line.');
+      } else {
+        L.push(`> **The hint below is OURS** — written by ${String(prov.hintAuthoredBy ?? 'the drafting side')} `
+          + `(${String(prov.hintAuthorKind ?? 'kind not stated')}), ${String(prov.hintSource ?? 'source not stated')}. `
+          + 'Review it as ours. Any claim that you approved it once is recorded below and is not '
+          + 'asserted here.');
+      }
       L.push('>');
       L.push(`> **Approval on record here: ${String(prov.approvalKind ?? 'not stated')}.** `
         + String(prov.approvalNote ?? ''));
-      const shown = new Set(['state', 'hintAuthorKind', 'hintAuthoredBy', 'hintSource', 'approvalKind', 'approvalNote', 'declarationSources', 'declaredBy', 'recordedOn', 'approvedBy']);
+      // Anything already rendered above is excluded, or it prints a second time. The authorship
+      // note ran to a full paragraph and appeared THREE times on one page before these were added.
+      const shown = new Set(['state', 'hintAuthorKind', 'hintAuthoredBy', 'hintSource', 'approvalKind',
+        'approvalNote', 'declarationSources', 'declaredBy', 'recordedOn', 'approvedBy',
+        'hintAuthorshipNote', 'hintAuthorshipRuledOn', 'hintAuthorKindWasClaimedAs', 'hintAuthoredByWasClaimedAs']);
       const rest = Object.entries(prov).filter(([k]) => !shown.has(k));
       if (rest.length) L.push(`>\n> *Also recorded:* ${rest.map(([k, v]) => `${k}=${JSON.stringify(v)}`).join('; ')}`);
       const src = prov.declarationSources as Array<{ file: string; sha256: string }> | undefined;
