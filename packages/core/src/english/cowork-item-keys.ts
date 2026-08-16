@@ -94,6 +94,7 @@ export const COWORK_ITEM_KEYS: Readonly<Record<CoworkLevel, readonly CoworkKeyRu
       // looked. check:review-queries fences the column off from anything answering "has this
       // been reviewed"; the name alone is not the control.
     },
+    { key: 'clusterPosition', disposition: 'MAPPED', carriedAt: 'Item.clusterPosition — serve order, file position' },
     { key: 'tierRationale', disposition: 'MAPPED', carriedAt: 'Item.tierRationale' },
     { key: 'sourcedFrom', disposition: 'MAPPED', carriedAt: 'Item.sourcedFrom' },
     { key: 'mechanismLedger', disposition: 'MAPPED', carriedAt: 'Item.mechanismLedger' },
@@ -142,6 +143,7 @@ export const COWORK_ITEM_KEYS: Readonly<Record<CoworkLevel, readonly CoworkKeyRu
       // The affordance test's output and the first thing a reviewer asks to see. Reviewer-facing,
       // never child-facing — distinct from the library's childHint, which the DB owns.
     },
+    { key: 'tagStatus', disposition: 'MAPPED', carriedAt: 'ItemOption.tagStatus' },
     {
       key: 'senseTarget',
       disposition: 'MAPPED',

@@ -9,6 +9,7 @@ import {
   clearSimilarityAction,
 } from '@/lib/actions/admin-items';
 import { ItemFormFields } from '@/components/item-form';
+import { ComprehensionReview } from '@/components/admin/comprehension-review';
 import { currentStaff, roleAllows } from '@/lib/staff';
 import { shuffleOptionsForChild } from '@/lib/crew/shuffle';
 import { optionLabel } from '@/components/crew/engines/shared';
@@ -54,6 +55,19 @@ export default async function ItemDetailPage({
   });
   if (!item) notFound();
 
+  // THE COMPREHENSION REVIEW SURFACE. An English item cannot be judged from options alone: the
+  // reviewer needs the passage it cites, the error each distractor executes, and what the child is
+  // told. Loaded only for English items so nothing else pays for it.
+  const isEnglish = item.questionType.district === 'ENGLISH';
+  const tagIds = item.options.map((o) => o.misconceptionId).filter((m): m is string => m !== null);
+  const hintRows = isEnglish && tagIds.length
+    ? await prisma.misconception.findMany({
+      where: { id: { in: tagIds } },
+      select: { id: true, childHint: true, description: true, status: true },
+    })
+    : [];
+  const hints = Object.fromEntries(hintRows.map((h) => [h.id, h]));
+
   const questionTypes = await prisma.questionType.findMany({ orderBy: { id: 'asc' } });
   const canReview = roleAllows(staff.effectiveRole, ['REVIEWER']);
   const editable = item.status === 'DRAFT' || item.status === 'REVIEWED';
@@ -68,6 +82,7 @@ export default async function ItemDetailPage({
         {item.reviewedBy ? ` · reviewed by ${item.reviewedBy}` : ''}
       </p>
       {error ? <p role="alert">{ERROR_COPY[error] ?? 'That action was blocked.'}</p> : null}
+      {isEnglish ? <ComprehensionReview item={item} hints={hints} /> : null}
       {item.reviewNotes ? (
         <div className="cc-card">
           <strong>Returned with notes:</strong> {item.reviewNotes}

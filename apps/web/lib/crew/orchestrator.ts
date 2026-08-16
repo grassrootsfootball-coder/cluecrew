@@ -186,14 +186,20 @@ async function drainAndLog(childId: string, state: PersistedState): Promise<void
  * filter is the second layer, core is the load-bearing one.
  */
 async function itemPool(questionTypeId: string) {
+  // ORDER IS FILE POSITION (David, 2026-08-16). Taken from Cowork's manifest into
+  // `clusterPosition`, served in that order and never shuffled; a partial serve preserves relative
+  // order because the sort is stable and applied before any take.
+  const order = [{ clusterPosition: 'asc' as const }, { id: 'asc' as const }];
   const live = await prisma.item.findMany({
     where: { questionTypeId, status: 'LIVE', pool: 'PRACTICE' },
     include: { options: true },
+    orderBy: order,
   });
   if (live.length > 0 || process.env.APP_ENV === 'production') return live;
   return prisma.item.findMany({
     where: { questionTypeId, pool: 'PRACTICE' },
     include: { options: true },
+    orderBy: order,
   });
 }
 

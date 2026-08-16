@@ -173,3 +173,27 @@ test('approving lands back at the queue, not the top of the page', async ({ brow
   // queue heading must be on screen without scrolling.
   await expect(page.locator('#queue')).toBeInViewport();
 });
+
+/**
+ * THE COMPREHENSION REVIEW SURFACE. Annie has signed VR, NVR, maths and SpaG and has never seen a
+ * comprehension item; there are zero SIGNED events on ENG. The verdict actions already existed —
+ * what did not was anything rendering the item as she has to judge it: the passage it cites, the
+ * error each distractor executes, and what the child is told.
+ */
+test('an English item shows its passage, cited lines, tagged distractors and hint', async ({ browser }) => {
+  const reviewer = await createStaff(`rs-eng-${Date.now()}`, 'REVIEWER');
+  const page = await staffContext(browser, reviewer);
+  await page.goto('/admin/items/ENG-005-BB-01');
+
+  const surface = page.getByTestId('comprehension-review');
+  await expect(surface).toBeVisible();
+
+  // The passage, with the item's cited window marked — a citation cannot be judged without it.
+  await expect(page.getByTestId('passage-lines')).toBeVisible();
+  await expect(page.locator('[data-cited="yes"]')).toHaveCount(2); // lineRefs [2, 3]
+
+  // Every option, with the misconception it executes and the hint the child would see.
+  await expect(page.getByTestId('review-options')).toBeVisible();
+  await expect(page.locator('[data-correct="yes"]')).toHaveCount(1);
+  await expect(surface).toContainText('Child sees:');
+});

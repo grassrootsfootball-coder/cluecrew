@@ -47,7 +47,7 @@ interface Draft {
   stem: Record<string, unknown>; explanation?: Record<string, unknown>; authoredBy?: string;
   passageRef?: unknown; lineRefs?: unknown; orderAnchor?: unknown;
   options: Array<{ label?: string; content: unknown; isCorrect: boolean; misconceptionId?: string;
-    senseTarget?: string; misconceptionExecution?: string }>;
+    senseTarget?: string; misconceptionExecution?: string; tagStatus?: string }>;
   [key: string]: unknown;
 }
 
@@ -72,8 +72,12 @@ function carriedStem(it: Draft): Record<string, unknown> {
 
 async function main(): Promise<void> {
   const write = process.argv.includes('--write');
-  const drafts: Draft[] = CLUSTERS.flatMap((c) =>
-    (JSON.parse(readFileSync(`${DIR}/eng${c}-draft.json`, 'utf8')).items as Draft[]));
+  // `--file <path>` imports one delivery instead of the eight clusters, same door, same gate.
+  const fileArg = process.argv.indexOf('--file');
+  const drafts: Draft[] = fileArg > -1
+    ? (JSON.parse(readFileSync(process.argv[fileArg + 1]!, 'utf8')).items as Draft[])
+    : CLUSTERS.flatMap((c) =>
+      (JSON.parse(readFileSync(`${DIR}/eng${c}-draft.json`, 'utf8')).items as Draft[]));
 
   const known = new Set((await prisma.misconception.findMany({ select: { id: true } })).map((m) => m.id));
   const types = new Map((await prisma.questionType.findMany({ select: { id: true, mechanic: true } }))
@@ -150,6 +154,7 @@ async function main(): Promise<void> {
       stem: carriedStem(it) as object, explanation: (it.explanation ?? {}) as object,
       // Provenance crosses. Absence stays absent — an undefined field is written as null, never
       // as an empty string, so "not stated" and "stated as nothing" stay distinguishable.
+      clusterPosition: (it.clusterPosition as number | undefined) ?? null,
       tierRationale: (it.tierRationale as string | undefined) ?? null,
       sourcedFrom: (it.sourcedFrom as string | undefined) ?? null,
       // Prisma.DbNull, not JS null: on a Json column a bare null is the JSON VALUE null, which is
@@ -161,7 +166,8 @@ async function main(): Promise<void> {
       options: { create: it.options.map((o, i) => ({ content: optionContent(o, i), isCorrect: o.isCorrect,
         misconceptionId: o.isCorrect ? null : (o.misconceptionId ?? null),
         senseTarget: o.senseTarget ?? null,
-        misconceptionExecution: o.misconceptionExecution ?? null })) } },
+        misconceptionExecution: o.misconceptionExecution ?? null,
+        tagStatus: o.tagStatus ?? null })) } },
   })));
   console.log(`\nLANDED ${writable.length} item(s) as DRAFT in one transaction.`);
   await prisma.$disconnect();

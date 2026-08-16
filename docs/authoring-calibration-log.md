@@ -4082,6 +4082,16 @@ Six rows recorded from Cowork's quoted, hashed declarations: 2 PERSON, 4 MACHINE
 records that **this store holds no approval for it**, so the provenance cannot later be read as
 confirming the transfer file's claim. **268 of 274 remain UNKNOWN**, and they say so.
 
+## R100 — Faults logged, one line each
+*2026-08-16. Delivery pass: logged, not investigated.*
+
+- ENG-013 to ENG-022 (120 items) and ENG-002-pp-23: **no source on this disk**, so 378 is unreachable from here; 174 of 378 held.
+- ENG-004: 12 drafted, **10 landed**, 2 gate-held on the long-word ceiling (AGG-03, AGG-08), 1 tag-held on `en-parallel-read-as-sequence`.
+- The ten tag-held cluster items stay held: `en-vocab-dominant-sense` cannot cross (R85).
+- `clusterPosition` and `options[].tagStatus` were on the carriage list and had no columns; added, and the import refused until they did.
+- Item order is `Item.clusterPosition`, backfilled on all 174 and applied in `itemPool` before any take, so a partial serve keeps relative order.
+- The 463 `human:staff-reviewer` rows touch **0 ENG items**. Parked.
+
 ## R99 — The migration history did not rebuild the database, and every check reads the database
 *2026-08-16, found by Prisma refusing to migrate.*
 

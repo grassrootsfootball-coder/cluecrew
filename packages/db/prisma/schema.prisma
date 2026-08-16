@@ -342,6 +342,10 @@ model Item {
   // values are METHOD-LABEL STRINGS and agree with orderAnchor on 0 of 251. A column built to the
   // old name would have rejected or corrupted every one of them.
   draftingMethod          String?
+  /// ITEM ORDER IS FILE POSITION, which is what it has always been (David, 2026-08-16). Taken from
+  /// Cowork's manifest, served in that order, never shuffled; a partial serve preserves relative
+  /// order.
+  clusterPosition         Int?
   // COWORK'S AUTHORING PROVENANCE, carried because the platform's claim rests on it (David,
   // 2026-08-16, revising his own earlier ruling). He had scoped carriage to the 39 DECLARATIVE
   // fields; Cowork's PROVENANCE classification was correct on its own terms and the line was
@@ -405,6 +409,8 @@ model ItemOption {
   // or neither; both inside the ITEM's lineRefs window; and the defeater NOT BEFORE the attractor
   // — a defeater earlier in the passage than the thing it defeats is not a defeater, it is a line
   // the child had already read and passed.
+  /// Marks a tag PROVISIONAL. An importer that drops it imports a provisional tag as a settled one.
+  tagStatus       String?
   attractorLine   Int?
   defeaterLine    Int?
   tags            ItemOptionTag[]
