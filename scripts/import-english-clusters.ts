@@ -121,10 +121,18 @@ async function main(): Promise<void> {
   // `--file <path>` imports one delivery instead of the eight clusters, same door, same gate.
   const fileArg = process.argv.indexOf('--file');
   const files = fileArg > -1 ? process.argv.slice(fileArg + 1).filter((a) => !a.startsWith('--')) : [];
-  const drafts: Draft[] = files.length
+  const raw: Draft[] = files.length
     ? files.flatMap((f) => readDelivery(f))
     : CLUSTERS.flatMap((c) =>
       (JSON.parse(readFileSync(`${DIR}/eng${c}-draft.json`, 'utf8')).items as Draft[]));
+  // ONE ROW PER ITEM ID, LAST FILE WINS. ENG-002-pp-23 arrives in both its own delivery and the
+  // ENG002 re-emission; creating it twice failed the primary key and took the whole batch with it.
+  // A later file supersedes an earlier one, which is the same precedence the re-emissions carry.
+  const deduped = new Map<string, Draft>();
+  for (const d of raw) deduped.set(String(d.itemId), d);
+  const dropped = raw.length - deduped.size;
+  if (dropped > 0) console.log(`  ${dropped} duplicate item id(s) across deliveries; later file wins.`);
+  const drafts: Draft[] = [...deduped.values()];
 
   const known = new Set((await prisma.misconception.findMany({ select: { id: true } })).map((m) => m.id));
   const types = new Map((await prisma.questionType.findMany({ select: { id: true, mechanic: true } }))
