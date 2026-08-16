@@ -1,0 +1,21 @@
+{
+  // ROOT SCRIPTS WERE NEVER TYPECHECKED. `pnpm typecheck` runs `pnpm -r`, which visits workspace
+  // PACKAGES; scripts/ is in none of them, so ~90 files that write to the database sat outside
+  // every type check in the repo. Three calls to requirePopulation passed three arguments to a
+  // two-argument function and shipped clean — one of them inside check:outside-writes, an
+  // instrument built to catch exactly this class of silent wrongness. It also caught a real
+  // defect in the cluster importer that had not run yet: JS null written to a nullable Json
+  // column, which is the JSON value null rather than no value at all.
+  //
+  // A RATCHET, NOT A CLEAN SWEEP. 24 pre-existing files carry 65 errors between them. Fixing
+  // them all in the same pass as the work that found them would bury both. They are excluded BY
+  // NAME here, so every other script — and every NEW script — is checked from now on, and the
+  // list can only shrink. A permanently red step gets muted within a week and then guards
+  // nothing, which is the lesson already on record from leg B of check:review-queries.
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "typeRoots": ["./node_modules/@types", "./node_modules/.pnpm/node_modules/@types"]
+  },
+  "include": ["scripts/**/*.ts"]
+}

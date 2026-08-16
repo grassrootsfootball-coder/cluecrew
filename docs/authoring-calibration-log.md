@@ -3412,3 +3412,49 @@ headline is precisely R60.
 log rows, before append-only was settled. Two rows it could not match by id survive and show as
 unresolvable. A boundary whose first act was an undeclared prune of itself belongs in writing rather
 than tidied away.
+
+## R77 — The three citation migrations, and the check that had never run on any of it
+*David, 2026-08-16.*
+
+Three rulings applied together, because they touch the same rows and a half-migrated store is worse
+than either state: `explanation.quotes[].atLines` → `lineRefs` (7, a NAME collision), `stem
+.testedTokens` → `Item.testedTokens` (9, a LEVEL collision with the item-level field of the same
+name), `stem.lineRefs` → `Item.lineRefs` (129, a LEVEL difference against Cowork). 131 items
+touched, verified by re-reading all 131: the destination holds the value AND the source is gone,
+because either alone leaves the duplication the migration exists to end.
+
+The destinations are `Json?`, not `Int[]`/`String[]`. A Prisma scalar list CANNOT BE NULL — it
+defaults to `[]`, which would collapse "this item declares no lines" into "this item cites
+nothing". Same rule as `?? ''`; the type system offered the coercion and it had to be declined.
+
+**The manifest guard caught all three as regressions, which is correct.** Two source-side losses and
+a carrier move are exactly what it watches for. The workflow is `--accept` a new baseline, not a
+softer guard.
+
+**ROOT SCRIPTS WERE NEVER TYPECHECKED.** `pnpm typecheck` runs `pnpm -r`, which visits workspace
+PACKAGES; `scripts/` is in none of them. About 90 files that write to the database sat outside every
+type check in the repo. Three calls to `requirePopulation` passed three arguments to a two-argument
+function and shipped clean — **one of them inside `check:outside-writes`, an instrument built to
+catch exactly this class of silent wrongness.** It also caught a real defect in the cluster importer
+that had not yet run: JS `null` written to a nullable Json column, which is the JSON VALUE null
+rather than no value at all.
+
+Closed as a RATCHET, not a clean sweep: 24 pre-existing files carry 66 errors and are on a declared
+list; everything else, and everything new, is checked. **A file that starts typechecking must come
+OFF the list or the run fails** — otherwise the list grows into an exemption nobody revisits, which
+is the stale-door fault from R75. `tsconfig exclude` cannot do this (tsc still checks an excluded
+file when an included one imports it), so the errors are filtered by file after the fact, which also
+prints the size of the backlog on every run instead of hiding it in a config.
+
+**A GATE THAT NAMES ONE OF TWO LIVE FIELD NAMES SCREENS THE HALF IT HAPPENS TO KNOW.**
+`check:line-refs` read `stem.prompt`. 96 of 164 ENG items carry `stem.text` — the cluster door's
+name — so it could not check a single one of them. It said so loudly rather than passing them,
+which is the R60 fix from earlier working as intended. Reading both names took it from 96 unscreened
+to 10, and from 27 explanation citations checked to 92. The same collision class as
+`atLines`/`lineRefs`, one layer down: not two stores disagreeing, but one store holding both names
+and one gate knowing one of them.
+
+**What the newly-reachable items then revealed:** 10 declared quotes are stored as BARE STRINGS
+rather than `{text, …}` — the identical fault as the 340 bare-string options, in a different field,
+from the same importer passing Cowork's shape straight through. Invisible until the gate could reach
+those items at all. Reported, not normalised: Cowork owns the quote envelope.

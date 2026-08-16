@@ -205,6 +205,14 @@ jobs:
       - name: Exported gate libraries match the database
         run: pnpm check:gate-library-fresh
 
+      # ROOT SCRIPTS WERE NEVER TYPECHECKED -- `pnpm -r` visits workspace PACKAGES and scripts/ is
+      # in none of them, so ~90 files that write to the database sat outside every type check.
+      # Three wrong call signatures had shipped clean, one of them inside check:outside-writes.
+      # A RATCHET: 24 pre-existing files are on a declared list, everything else is checked, and a
+      # file that starts typechecking must come OFF the list or this fails.
+      - name: Typecheck the root scripts
+        run: pnpm typecheck:scripts
+
       # THE WRITE BOUNDARY. Database TRIGGERS record every mutation of a content table, so
       # application code cannot opt out -- a write from a script, from Prisma Studio, from psql or
       # from another agent lands identically. This compares that record against AttributionEvent

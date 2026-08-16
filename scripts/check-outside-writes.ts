@@ -38,7 +38,7 @@ async function main(): Promise<void> {
 
   // Not a population that may legitimately be empty: the triggers fire on every content write, so
   // an empty log after any content work means they are not installed on this database.
-  requirePopulation('Outside-write detection', 'logged content writes', writes.length);
+  requirePopulation('check:outside-writes', { 'logged content writes': writes.length });
 
   // An option write is a write to its item. A deleted option cannot be resolved after the fact —
   // reported as its own class rather than counted either way.

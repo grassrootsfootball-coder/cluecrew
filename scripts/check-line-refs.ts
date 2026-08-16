@@ -58,9 +58,16 @@ async function main(): Promise<void> {
       .map((q) => q.text);
 
     // The prompt is the text every citation in this stem is checked against. Missing is a fault.
-    const prompt = typeof stem.prompt === 'string' ? stem.prompt : null;
+    //
+    // BOTH NAMES, because the store holds both. This gate read only `stem.prompt` and 96 of 164
+    // ENG items carry `stem.text` — the cluster door's name — so it could not check a single one
+    // of them. It said so loudly rather than passing them, which is the fixed behaviour working;
+    // but a gate that names one of two live field names screens the half it happens to know. That
+    // is the same collision class as atLines/lineRefs, one layer down.
+    const prompt = typeof stem.prompt === 'string' ? stem.prompt
+      : typeof stem.text === 'string' ? stem.text : null;
     if (prompt === null) {
-      absent.push(`${item.id}: stem.prompt is absent or not a string — nothing to check citations against`);
+      absent.push(`${item.id}: neither stem.prompt nor stem.text is a string — nothing to check citations against`);
       continue;
     }
     const bucket = item.status === 'LIVE' ? serving : draft;

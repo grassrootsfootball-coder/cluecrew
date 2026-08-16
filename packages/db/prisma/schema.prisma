@@ -293,6 +293,15 @@ model Item {
   // carry options like every other district.
   englishOpenResponse     EnglishOpenResponse?
   englishUnmatchedAnswers EnglishUnmatchedAnswer[]
+  // ITEM-LEVEL CITATION AND TOKEN FIELDS. Cowork holds both at item level and this store held
+  // them nested in the stem; David ruled item level wins, and these are the destination.
+  //
+  // Json? RATHER THAN Int[]/String[], DELIBERATELY. A Prisma scalar list cannot be null — it
+  // defaults to an empty array, which would collapse "this item declares no lines" into "this
+  // item cites nothing", the exact coercion the absence rule forbids. Json? keeps null (absent)
+  // distinct from [] (declared empty).
+  lineRefs                Json?
+  testedTokens            Json?
   // COWORK'S preReview — A DRAFTING AGENT'S ASSESSMENT OF ITS OWN WORK, on 78 items.
   //
   // NOT REVIEW, AND DELIBERATELY NOT NAMED AS IF IT WERE (David, 2026-08-16). Both verdict values
@@ -1199,7 +1208,7 @@ model ContentWriteLog {
   op              String
   /// On UPDATE, the columns whose value actually changed. Empty on INSERT and DELETE, and an
   /// UPDATE that changed nothing is recorded with an empty list rather than dropped.
-  changedColumns  String[]
+  changedColumns  String[] @default([])
   /// Who the DATABASE thinks did it, and what the client called itself. Both are advisory --
   /// application_name is set by the client -- but an unattributable write with a name on it is a
   /// far shorter search than one without.

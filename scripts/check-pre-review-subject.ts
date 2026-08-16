@@ -15,7 +15,7 @@
  * been reviewed" — and it is a declared door in `check:review-queries` on exactly that basis.
  */
 import { preReviewSubjectHash, readPreReview } from '../packages/core/src/index';
-import { prisma } from '../packages/db/src/index';
+import { Prisma, prisma } from '../packages/db/src/index';
 import { requirePopulation } from './lib/population';
 
 const textOf = (c: unknown): string =>
@@ -24,18 +24,16 @@ const textOf = (c: unknown): string =>
 
 async function main(): Promise<void> {
   const items = await prisma.item.findMany({
-    where: { authoringPreReview: { not: null } },
+    // Prisma.DbNull, not `null`: on a Json column a bare null is the JSON value null, not
+    // SQL NULL. It happened to return the right 78 rows; the type was telling the truth anyway.
+    where: { authoringPreReview: { not: Prisma.DbNull } },
     include: { options: { orderBy: { id: 'asc' } } },
     orderBy: { id: 'asc' },
   });
 
   // Not a population that may legitimately be empty: 78 items hold a claim. An empty run means
   // the column was renamed or the backfill was reverted, and either is a pipeline failure.
-  requirePopulation(
-    'Authoring pre-review subject check',
-    'items holding an authoring pre-review',
-    items.length,
-  );
+  requirePopulation('check:pre-review-subject', { 'items holding an authoring pre-review': items.length });
 
   const superseded: string[] = [];
   const noHash: string[] = [];

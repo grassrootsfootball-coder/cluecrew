@@ -32,7 +32,7 @@ import {
   isBlocking,
   unknownCoworkKeys,
 } from '../packages/core/src/index';
-import { prisma } from '../packages/db/src/index';
+import { Prisma, prisma } from '../packages/db/src/index';
 
 const DIR = '/Users/davidb/Downloads/11+/from-cluecrew';
 const CLUSTERS = ['005', '006', '007', '008', '009', '010', '011', '012'];
@@ -152,7 +152,9 @@ async function main(): Promise<void> {
       // as an empty string, so "not stated" and "stated as nothing" stay distinguishable.
       tierRationale: (it.tierRationale as string | undefined) ?? null,
       sourcedFrom: (it.sourcedFrom as string | undefined) ?? null,
-      mechanismLedger: (it.mechanismLedger ?? null) as object | null,
+      // Prisma.DbNull, not JS null: on a Json column a bare null is the JSON VALUE null, which is
+      // not the same as no value at all. Absence must stay absence — the same rule as `?? ''`.
+      mechanismLedger: (it.mechanismLedger ?? Prisma.DbNull) as Prisma.InputJsonValue,
       // READ, not asserted. This was the literal 'ai-draft:cowork-okafor-v1', which matched the
       // file on all 96 — a guess that happened to be right, writing a provenance column.
       status: 'DRAFT', authoredBy: it.authoredBy ?? 'ai-draft:cowork-okafor-v1',
