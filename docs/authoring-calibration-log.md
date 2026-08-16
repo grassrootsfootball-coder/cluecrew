@@ -5170,6 +5170,40 @@ tranched-shipping ruling, serving order preserved. **The first English items eve
 337 remain DRAFT, and 337 of 371 could be delivered, which is now two different numbers about two
 different things and both are true.
 
+## R133 — The VR twin, scoped: no note under any name, and no seed to re-derive from
+*David, 2026-08-16. Scoping, not building. VR is signed and live; this is not urgent and it is not nothing.*
+
+**THE 381 AUTHORED VR OPTIONS CARRY NOTHING NOTE-SHAPED UNDER ANY NAME. Zero, on every field:**
+`misconceptionExecution`, `senseTarget`, `attractorQuote`, `defeaterQuote`, `a36Note`, `windowClass`,
+`tagStatus` — 0 of 381 each. Item-level free text on their 145 items: `r4Note` 0, `tierRationale` 0.
+**99 of those 145 items are LIVE.**
+
+So her comparison has nothing to reach on VR at all — not a different field name, not a partial
+convention, nothing. Every VR distractor's reason for existing is either in a generator function or
+nowhere.
+
+**AND THE RE-DERIVE TWIN COSTS MORE THAN IT LOOKS, BECAUSE THE INPUT IS NOT RECORDED.** A generated
+item stores its OUTPUT — `gen-vr-03-related-words-02` holds `pairA`, `stemWord`, `prompt` — and no
+column holds the SEED, the template version, or the parameters that produced it. `seedFor(kind,
+ordinal)` is deterministic and the ordinal is recoverable from the id, so the derivation is
+reconstructible **by convention rather than by record**: re-running depends on the id's shape and the
+generator's current code both still meaning what they meant at generation. R62's technique (git as
+the prior state) applies, and it is the same weakness R62 named — the prior state is recoverable
+because nothing has broken yet, not because it was written down.
+
+**One line, as asked: the re-derive check is cheap to write and unsound until generated items record
+their seed and template version** — otherwise it compares today's generator against today's ids and
+agrees with itself. Recording those is the prerequisite, and it is a migration plus a backfill of
+1,231 rows, not a check.
+
+**The honest summary of the district in front of children:** 1,612 tagged VR options; 1,231 generated
+with no recorded input to re-derive from; 381 authored with no statement of what they execute; her
+check inapplicable to the first group and starved on the second. **Neither half is screened for the
+one fault that cannot be recovered after publication.**
+
+`ENG-004-AGG-08` goes to her — the long-word refusal on *ordinary* / *extraordinary*, which are the
+pair her own restatement turns on. Declared exception or the item goes; nobody here rewords it.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 
