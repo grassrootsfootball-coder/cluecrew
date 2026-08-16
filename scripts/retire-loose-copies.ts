@@ -19,6 +19,19 @@
  * deletion is interrupted the ledger still says what was there; the reverse order would leave a
  * gap nobody could reconstruct.
  *
+ * A FILE IS NOT JUST ITS CONTENT — IT IS EVERY CHECK THAT READS IT (David, 2026-08-16). Retiring
+ * the ENG-001/002 copies removed the ability to RECOMPUTE the WIW-18/pp-19 quote disagreement:
+ * `carry:quotes` can no longer see the other side. The hashes are in this ledger and the values are
+ * in R82, but a record is not a recomputation, and nothing announced that the comparison was about
+ * to become unrunnable.
+ *
+ * So before anything is retired, every file states WHICH COMPARISONS READ IT, and which of those it
+ * is the SOLE INPUT to. The reader map is derived by SCANNING `scripts/` for the source roots each
+ * one reads, not from a hand-kept list — a hand-kept list of readers is the same allowlist that
+ * fails open, one level up (R57). SOLE-INPUT status is stated loudly and recorded in the ledger; it
+ * does not block, because the content was verified held and it is the COMPARISON that is being
+ * given up, deliberately.
+ *
  * IT VERIFIES BY RE-READING WHAT IT ACTED ON. A zero from a failed command and a zero from a
  * successful one look identical (David, 2026-08-13), so each path is re-stat'ed after removal
  * rather than the survivors being counted.
@@ -77,6 +90,33 @@ const NOT_A_LOSS: Readonly<Record<string, string>> = {
 interface Candidate {
   path: string; sha: string; bytes: number; itemIds: string[];
   blockers: string[];
+  /** Scripts that read this file's directory. */
+  readers: string[];
+  /** Readers for which this file is the ONLY remaining input in scope. */
+  soleInputFor: string[];
+}
+
+/**
+ * WHICH SCRIPTS READ WHICH SOURCE ROOTS, read out of the scripts themselves.
+ *
+ * A script "reads" a candidate when it names the candidate's directory as a literal. Coarse on
+ * purpose: over-reporting a reader costs a line of output, while missing one costs a comparison
+ * nobody knew they were destroying.
+ */
+function readerMap(): Map<string, Set<string>> {
+  const dir = resolve(import.meta.dirname);
+  const out = new Map<string, Set<string>>();
+  for (const name of readdirSync(dir)) {
+    if (!name.endsWith('.ts')) continue;
+    const text = readFileSync(join(dir, name), 'utf8');
+    for (const root of ROOTS) {
+      if (!text.includes(root)) continue;
+      const set = out.get(root) ?? new Set<string>();
+      set.add(`scripts/${name}`);
+      out.set(root, set);
+    }
+  }
+  return out;
 }
 
 async function main(): Promise<void> {
@@ -103,10 +143,23 @@ async function main(): Promise<void> {
       candidates.push({
         path, sha: createHash('sha256').update(raw).digest('hex'),
         bytes: statSync(path).size, itemIds: [...new Set(ids)], blockers: [],
+        readers: [], soleInputFor: [],
       });
     }
   }
   requirePopulation('retire:loose', { 'loose files carrying ENG items': candidates.length });
+
+  // WHAT EACH FILE IS AN INPUT TO, and what it is the LAST input to.
+  const readers = readerMap();
+  for (const c of candidates) {
+    const dir = dirname(c.path);
+    c.readers = [...(readers.get(dir) ?? [])].filter((r) => !r.endsWith('retire-loose-copies.ts')).sort();
+    // Sole input for a reader when no OTHER candidate in that reader's roots survives this run.
+    c.soleInputFor = c.readers.filter((r) => {
+      const otherRoots = ROOTS.filter((root) => readers.get(root)?.has(r));
+      return !candidates.some((o) => o !== c && otherRoots.includes(dirname(o.path)));
+    });
+  }
 
   const inDb = new Set((await prisma.item.findMany({
     where: { id: { startsWith: 'ENG-' } }, select: { id: true },
@@ -137,10 +190,19 @@ async function main(): Promise<void> {
   console.log(`${candidates.length} loose file(s) carry ENG items · ${clear.length} clear to retire · ${kept.length} kept\n`);
   for (const c of clear) {
     console.log(`  RETIRE  ${c.sha.slice(0, 16)}  ${c.itemIds.length.toString().padStart(2)} items  ${c.bytes.toString().padStart(6)}B  ${c.path}`);
+    console.log(`            read by: ${c.readers.length ? c.readers.join(', ') : '(no script reads this directory)'}`);
+    if (c.soleInputFor.length) {
+      console.log(`            SOLE INPUT for ${c.soleInputFor.join(', ')} — retiring this file retires`);
+      console.log('            those comparisons. A record is not a recomputation.');
+    }
   }
   for (const c of kept) {
     console.log(`  KEEP    ${c.sha.slice(0, 16)}  ${c.path}`);
     for (const b of c.blockers) console.log(`            ${b}`);
+    // Stated for KEPT files too, not only for the ones about to go. The moment to know what a file
+    // is the last input to is BEFORE it is a candidate, not in the run that removes it.
+    console.log(`            read by: ${c.readers.length ? c.readers.join(', ') : '(no script reads this directory)'}`);
+    if (c.soleInputFor.length) console.log(`            SOLE INPUT for ${c.soleInputFor.join(', ')}`);
   }
 
   if (!write) {
@@ -163,7 +225,10 @@ async function main(): Promise<void> {
       '~/Downloads/11+ is a transfer area holding no source of truth. Each file below was verified '
       + 'against the DATABASE — every itemId present, every key carried, vintage or a declared '
       + 'exception — before removal.',
-    retired: clear.map((c) => ({ path: c.path, sha256: c.sha, bytes: c.bytes, itemIds: c.itemIds })),
+    retired: clear.map((c) => ({
+      path: c.path, sha256: c.sha, bytes: c.bytes, itemIds: c.itemIds,
+      readBy: c.readers, soleInputFor: c.soleInputFor,
+    })),
     kept: kept.map((c) => ({ path: c.path, sha256: c.sha, blockers: c.blockers })),
   }, null, 2));
   console.log(`\nLedger written to ${LEDGER} BEFORE any deletion.`);

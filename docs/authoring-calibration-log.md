@@ -3644,3 +3644,100 @@ insert that does not is an error rather than a silently-local row.
 **The general form:** when a hand-written migration and a generator disagree about a column, the
 generator wins on a schedule nobody is watching. Either express it in the generator's language, or
 remove the thing it thinks it owns.
+
+## R84 — A live library entry whose text the authoring side has never seen
+*David's question, 2026-08-16. Answered by dumping the row.*
+
+`en-comparison-vehicle-misread` is ACTIVE here and Cowork holds only a bare string in a header. The
+row says where it came from:
+
+```
+proposedBy       current-reviewer        approvedBy   current-reviewer
+recordedBy       human:david@cluecrew.test
+approvalMethod   written review — ENG-004 comprehension pilot, annie 2026-08-08
+childHint        "Find what is being compared to what. The meaning belongs to the first thing."
+approvalNote     BOUNDARY vs en-attribute-transfer: both put a quality on the wrong holder.
+                 Attribute-transfer moves it BETWEEN CHARACTERS; this moves it from a comparison's
+                 VEHICLE to its SUBJECT. Different remedies, different hints.
+```
+
+One AUTHORED attribution event, `reviewerId` rev-0001. So it was **written platform-side from
+Annie's written review**, which is correct and is exactly what CLAUDE.md requires — *the DB authors
+library text, Cowork proposes transforms*. **The fault is not authorship, it is DELIVERY.** Cowork's
+drafters have been tagging items against an entry whose description, hint and boundary note they
+have never received, and the boundary note is precisely what a drafter needs in order to tag
+`en-attribute-transfer` correctly instead.
+
+Note the number that makes this concrete: **0 options in this store carry the tag.** Every use of it
+is on the authoring side, working from a name alone.
+
+The read path already existed and had not been run since the entry was written:
+`scripts/export-misconception-library.ts`. Run, delivered, stale copy pruned — 274 entries,
+sha `6d3c109008854e71`. A one-direction rule needs the direction to actually be travelled.
+
+## R85 — A platform constraint and a reviewer ruling independently producing the same refusal
+*2026-08-16. The first time this has happened, and it is worth naming.*
+
+`en-vocab-dominant-sense` cannot cross, for two reasons arrived at separately:
+
+  · **Anne's protocol** (R25, at the one entry whose failure mode is her name on words she did not
+    write): the hint enters by being READ FROM A STORED FIELD, never retyped from a message. A
+    confirmation obtained from a transcription tests nothing — if the typing is faithful she learns
+    nothing, and if it is unfaithful she confirms the error.
+  · **The schema**: `childHint` is `NOT NULL` with `CHECK (length(btrim(childHint)) >= 12)`. An
+    entry with no hint is not storable.
+
+Neither knows about the other. One is a judgement about how a reviewer's words may be obtained; the
+other is a column definition. **They refuse the same import for different reasons and arrive at the
+same place.**
+
+This is the exact inverse of R72, where the gates modelled a held-out entry as a reasoned absence
+and the schema modelled it as a broken foreign key — two systems disagreeing, discovered by a write.
+Here they agree, and the agreement is evidence the rule is real rather than an artefact of one
+mechanism. **Where a constraint and a ruling converge without coordination, trust the refusal.**
+
+CHECK 10 being green at 28 of 28 closes the REASON for the hold; it does not supply the hint text.
+The entry stays out until the hint exists as a stored value.
+
+## R86 — A file is not its content; it is every check that reads it
+*David, 2026-08-16, generalising a cost I recorded.*
+
+Retiring the ENG-001/002 copies removed the ability to RECOMPUTE the WIW-18/pp-19 quote-lineRefs
+disagreement. `carry:quotes` can no longer see the other side. The hashes are in the ledger and the
+values are in R82 — **but a record is not a recomputation**, and nothing announced that the
+comparison was about to become unrunnable. The verification asked only "is this content held
+elsewhere", which it was.
+
+So `retire:loose` now states, for EVERY file and not only the ones about to go, which scripts read
+it and which of those it is the SOLE INPUT to. The reader map is derived by SCANNING `scripts/` for
+the source roots each one names, never from a hand-kept list — a hand-kept list of readers is the
+allowlist that fails open, one level up (R57). Sole-input status is printed and recorded in the
+ledger. It does not block: the content is verified held, and the COMPARISON is what is being given
+up, deliberately rather than accidentally.
+
+**The moment to know what a file is the last input to is BEFORE it becomes a candidate**, which is
+why kept files carry the statement too.
+
+## R87 — The third mechanism this month that reports success on doing nothing
+*David, 2026-08-16.*
+
+`str.replace` returns the string unchanged when the anchor does not match. It does not raise, does
+not warn, and the script exits 0. **Twice in one turn** an edit silently no-opped and every
+downstream check stayed green — because a check cannot see an edit that was never made:
+
+  · the Addendum 36 empty-population declaration was never inserted into `check-line-refs.ts`, while
+    `typecheck:scripts` passed cleanly over the file it was supposed to be in;
+  · the `attractorLine`/`defeaterLine` columns were never added to the schema, and the migration
+    that should have carried them emitted an unrelated `ALTER` instead — **which is how Prisma's
+    revert of the R80 clock fix came to be found at all: by accident, in an empty migration.**
+
+Same family as `verify:solutions` printing "0 MATHS items checked" (R60) and a gate whose empty
+population nobody declared (R61). The operation is CORRECT, the report is TRUE, and neither says
+that nothing happened.
+
+`tools/edit.py`: **asserting is the default and not-asserting needs a name.** `sub()` raises unless
+the anchor matches exactly the expected number of times; a deliberate no-op must pass
+`required=False`, a word someone types on purpose and a reviewer sees in the diff — the same shape
+as `declareMayBeEmpty`. A non-unique anchor fails even with `required=False`, because an anchor that
+is not unique edited something else as well. `edit_file` is all-or-nothing: a partially applied set
+of edits is the half-applied import in a text editor.

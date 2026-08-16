@@ -197,6 +197,19 @@ here has no register entry. A ruling goes to the register FIRST; it comes here o
   `stem.lineRefs`, where it found an empty array on every row, checked NO citations, and went on
   printing "146 items citing a passage". A field that moves is not migrated until every reader has
   moved — an empty list is a legitimate value, so nothing reports it.
+- **ASSERTING IS THE DEFAULT; NOT-ASSERTING NEEDS A NAME** (2026-08-16 — R87). `str.replace` on a
+  mismatched anchor returns the string unchanged, raises nothing, and exits 0 — twice in one turn
+  an edit silently no-opped and every downstream check stayed green, because a check cannot see an
+  edit that was never made. Use `tools/edit.py`: `sub()` raises unless the anchor matches exactly
+  the expected number of times, a deliberate no-op must say `required=False`, a non-unique anchor
+  fails even then (it edited something else as well), and `edit_file` is all-or-nothing. Third
+  mechanism this month in the family of R60/R61: the operation is CORRECT, the report is TRUE, and
+  neither says that nothing happened.
+- **A FILE IS NOT ITS CONTENT — IT IS EVERY CHECK THAT READS IT** (David, 2026-08-16 — R86). Before
+  retiring any artefact, state which scripts read it and which of those it is the SOLE INPUT to.
+  Retiring the ENG-001/002 copies removed the ability to RECOMPUTE the WIW-18/pp-19 disagreement;
+  the hashes are in the ledger and the values in R82, but a record is not a recomputation. Derive
+  the reader map by SCANNING for the source roots, never a hand-kept list (R57).
 - Content decisions (items, chapters, misconceptions) go through the CMS
   review pipeline; nothing skips the reviewer.
 - **PILOT CONTENT UNDER ACTIVE REVIEW HAS ONE WRITE PATH: `scripts/lib/pilot-review.ts`, NEVER A
