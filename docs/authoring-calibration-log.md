@@ -6099,6 +6099,61 @@ number the diagnosis has no site for. 62 half-filled options sit on LIVE items.
 Still not repaired — the Addendum 36 rules remain hers to rule on, and this is the evidence for that
 ruling rather than a licence to act on it.
 
+## R158 — The declaration owns a taught word; and the fourth mechanism reads nothing
+*Annie's ruling via David, 2026-08-17. Two mechanisms over one word, and neither gate could name which carried it.*
+
+**THE FOURTH MECHANISM, AND IT IS WORSE HERE THAN COWORK REPORTED.** Cowork found eleven items
+declaring an item-level `testedTokens` that nothing reads. This store holds **13**, and:
+
+| | count |
+|---|---|
+| items with `Item.testedTokens` (the column) | **13** |
+| items with `stem.testedTokens` (what the gate reads) | **0** |
+| carrying both | **0** |
+
+**`checkItemChildFacing` reads `stem.testedTokens` and NOTHING reads the column.** Not one of the 13
+is exempted by it — `pp-21 ["spirit"]`, `RC-07 ["agitation"]`, `JE-09 ["officious"]`, `ML-02
+["booty"]` and nine more. **An exemption nobody consults is not a third layer of protection; it is a
+fourth thing that looks like one**, and it is the field that reads as safe to keep when either side
+trims what it believes is redundant.
+
+**WHICH MECHANISM IS LOAD-BEARING, measured on both named items with four variants each:**
+
+| | TS-10 | pp-19 |
+|---|---|---|
+| declaration only | **passes** | **passes** |
+| `testedTokens` only | **FAILS** | **FAILS** |
+
+The declaration carries 100% on this side, and the `testedTokens`-only row is measuring an empty set
+because neither item holds one. **The mirror is exact and inverted: Cowork's gate consults
+`testedTokens` FIRST so a cleared word never reaches the declaration; mine UNIONED them so neither
+could be named.** Her ruling settles it — a declaration cites a passage line and is checkable, a
+token list is bare — and the union is worse than the ordering, because an ordering at least has a
+defined winner.
+
+Implemented: the declaration is consulted first (its spans are masked out of the text before the
+scan, so a declaration-carried word never reaches the token filter at all), a word cleared by
+`testedTokens` ALONE is reported as a **warning naming the mechanism**, and the exemption still
+stands. **0 newly pass, 0 newly fail** over 1,032 items — as predicted, since both currently suffice.
+
+**TWO FAULTS OF MINE IN THE IMPLEMENTATION, BOTH CAUGHT BY MEASURING RATHER THAN REASONING:**
+1. **The first warning fired on "the", "is", "to"** — 16 on one item. I recorded every token-list
+   match before checking whether the word was ever LONG, so it counted matches against the list
+   rather than exemptions that did any work. **A number that looks alarming and is an artefact of its
+   own filter order.**
+2. **It fired on WORD CARDS**, where the headword IS the source and `testedTokens` is the designed
+   and only mechanism — there is no passage to cite, so "unsourced" is false there. Scoped out. Two
+   existing tests caught it, and they were right to.
+
+The surviving warnings are single real words: `Rikki-tikki`, `extinguisher`, `fifteen-minute`,
+`somebody` — taught words resting on an unsourced list, one of them on a LIVE item.
+
+**And the WIW-19 correction belongs beside the eight:** I read `stem.quotes`, found null, and reported
+*"nothing is being exempted"* as a fact about the ITEM. It carries `explanation.quotes` — one
+declaration, four ceilings, used in both `walkScript` and `hintCore`, which is Cowork's "twice". **One
+field read and reported as the whole item**, which is the same shape as the eight and the same shape
+as `check:line-refs` reading `stem.lineRefs` after R77 moved it.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 

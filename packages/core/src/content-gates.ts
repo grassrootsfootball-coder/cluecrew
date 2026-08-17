@@ -278,14 +278,37 @@ export function checkReadingAge(
   }
 
   const stem = exemptStem.toLowerCase().slice(0, 6);
+  /** Words cleared by `testedTokens` alone — no declaration covered them. Reported, not failed. */
+  const tokenOnly: string[] = [];
   const longWords = ourWording
     .split(/\s+/)
     .filter(Boolean)
     .filter((word) => {
       const cleaned = word.toLowerCase().replace(/[^a-z]/g, '');
       if (stem && cleaned.startsWith(stem)) return false;
-      // The word under test is the question, not a reading-load problem.
-      if (isTestedToken(word, testedTokens)) return false;
+      /**
+       * THE DECLARATION OWNS A TAUGHT WORD; `testedTokens` IS SUBORDINATE (David's ruling,
+       * 2026-08-17).
+       *
+       * A declaration is a FACT ABOUT THE ITEM — it cites a passage line and is checkable.
+       * `testedTokens` is a bare word list with no source. Where both cover a word, the checkable
+       * one carries it. The declaration is consulted FIRST because its spans are masked out of
+       * `ourWording` above, so a declaration-carried word never reaches this filter at all.
+       *
+       * A word arriving HERE is therefore one NO declaration covers, and clearing it on
+       * `testedTokens` alone means an exemption is resting on an unsourced list. That is recorded
+       * as a WARNING rather than passed silently — the state we have just found is invisible on
+       * both sides, where two mechanisms cover one word and neither gate can say which is
+       * load-bearing.
+       */
+      // LENGTH FIRST. The first version recorded every `testedTokens` match regardless of length,
+      // so "the", "is" and "to" were reported as long words exempted by an unsourced list — 16 of
+      // them on one item. The warning measured matches against the token list, not exemptions that
+      // did any work. A number that looks alarming and is an artefact of its own filter order.
+      if (isTestedToken(word, testedTokens)) {
+        if (syllables(cleaned) >= 4) tokenOnly.push(word);
+        return false;
+      }
       // A declared passage name is the passage's word, not ours (R23).
       if (isTestedToken(word, passageNames)) return false;
       return syllables(cleaned) >= 4;
@@ -295,6 +318,21 @@ export function checkReadingAge(
       where: label,
       rule: 'long-words',
       detail: `${longWords.length} long words (max ${rules.maxLongWords}): ${longWords.join(', ')}`,
+    });
+  }
+  // WHICH MECHANISM FIRED, reported per word. A union has no defined winner and cannot be
+  // diagnosed; an ordering can be read. Non-blocking: the exemption is real, its SOURCE is not.
+  // SCOPED TO ROLES WHERE A DECLARATION IS EVEN POSSIBLE. On a WORD CARD the headword is the
+  // card's own subject and `testedTokens` is the designed and only mechanism — there is no passage
+  // to cite, so "unsourced" is false there and the warning is noise. The ruling is about a taught
+  // word that a declaration COULD have carried.
+  if (tokenOnly.length > 0 && role !== 'word-card') {
+    failures.push({
+      where: label,
+      rule: 'long-words',
+      severity: 'warning',
+      detail: `${tokenOnly.length} long word(s) exempted by testedTokens ALONE, with no declaration `
+        + `covering them: ${[...new Set(tokenOnly)].join(', ')} — an unsourced exemption`,
     });
   }
   return failures;

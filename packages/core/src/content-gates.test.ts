@@ -6,6 +6,7 @@ import {
   checkChildFacingText,
   checkNoInternalIds,
   checkReadingAge,
+  isBlocking,
   checkWordCard,
   isTestedToken,
   roleForItemStem,
@@ -384,9 +385,19 @@ describe('the tested-token exemption (David’s ruling, 2026-08-02)', () => {
   const SPELLING = 'The librarian showed us the new dictionery, explained the temporary shelves and left.';
 
   it('the words an item tests do not count against its vocabulary ceiling', () => {
-    expect(
-      checkReadingAge('item-stem-proofread', 'x', SPELLING, '', ['dictionery', 'dictionary', 'temporary']),
-    ).toEqual([]);
+    const out = checkReadingAge('item-stem-proofread', 'x', SPELLING, '', ['dictionery', 'dictionary', 'temporary']);
+    // STILL NO BLOCKING FAILURE — that is what the exemption is for and it is unchanged.
+    expect(out.filter(isBlocking)).toEqual([]);
+  });
+
+  it('but names testedTokens as the SOURCE of the exemption, since no declaration covered it (R158)', () => {
+    // The declaration owns a taught word and `testedTokens` is subordinate. Where a word is cleared
+    // by the token list ALONE, the exemption is resting on a bare list with no source — real, and
+    // now visible. A warning, never a failure: the exemption stands, its provenance is the finding.
+    const out = checkReadingAge('item-stem-proofread', 'x', SPELLING, '', ['dictionery', 'dictionary', 'temporary']);
+    const warn = out.filter((f) => f.severity === 'warning' && f.detail.includes('testedTokens ALONE'));
+    expect(warn).toHaveLength(1);
+    expect(warn[0]!.detail).toContain('dictionery');
   });
 
   it('without the declaration they still count', () => {
