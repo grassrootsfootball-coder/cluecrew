@@ -6154,6 +6154,56 @@ declaration, four ceilings, used in both `walkScript` and `hintCore`, which is C
 field read and reported as the whole item**, which is the same shape as the eight and the same shape
 as `check:line-refs` reading `stem.lineRefs` after R77 moved it.
 
+## R159 — The unsourced-exemption population is ZERO, and my warning manufactured six
+*David, 2026-08-17. Separate the repairs before either.*
+
+**THE SIX SURVIVORS WERE ALL THE INSTRUMENT. Every one is exempted by OPTION WORDS.**
+
+`scriptTested = [...testedTokens, ...optionWords]` — a walk script may legitimately name an option's
+own words, and I had MERGED that derived list into the authored one. So the warning could not tell
+*"resting on a bare list nobody sourced"* from *"naming the option printed on the card"*, and reported
+six items whose exemption was the option list doing exactly its job:
+
+| item | word | in an option |
+|---|---|---|
+| RT-04 | Everything | *"…with everything smoothed down."* |
+| RT-10 / RT-11 | Rikki-tikki | *"…made Rikki-tikki jump back."* |
+| BF-09 | extinguisher | *"The extinguisher by the double doors."* |
+| AL-01 | fifteen-minute | *"It is a fifteen-minute walk…"* |
+| PR-05 | somebody | *"Waited about near somebody…"* |
+
+**An option word IS sourced** — the option is on the card and checkable — so it is now passed as
+`derivedTokens` and never warned about. **After the fix: 0 items exempted by an authored list alone.
+The unsourced-exemption population is empty**, and the split into "declarable" and "nothing to
+declare" was a split of a set that does not exist.
+
+**THIRD SELF-CAUGHT FAULT IN ONE IMPLEMENTATION, and all three are one fault:** recording a match
+against a MERGED list without checking which member matched, then which word it was, then which role
+it was in. *"The, is, to"* (length unchecked), word cards (role unchecked), option words (source
+unchecked). **A merged list cannot name its winner — which is the finding the ruling was made about,
+committed three times inside the implementation of the ruling.**
+
+**THE THIRTEEN: the column is load-bearing for NOTHING, and one item has zero headroom.**
+
+All 13 pass at **0 blocking, 0 warnings**, with `Item.testedTokens` unread. Of their 15 words: 8 are
+too short to trip any ceiling; 5 are covered by option words; 1 by a declaration (`RC-07`
+*agitation*). **One is covered by nothing — `ENG-003-A-SP-06` *"Dictionary"*, in its walk script —
+and that item passes because the word FITS THE ROLE'S SINGLE LONG-WORD ALLOWANCE**, not because
+anything exempts it. Exactly the distinction asked for: **passing because it never trips, not because
+it is exempted.**
+
+So the column is safe to delete and **`SP-06` has zero headroom**: nothing changes today, and one more
+long word in that walk script fails it with no exemption to fall back on. Recorded rather than
+deleted — the ruling was to check first, and the check says delete is safe *and* names the one item
+that would notice.
+
+**ONE FIELD READ, REPORTED AS THE WHOLE THING — three instances, named together** (David, 2026-08-17):
+`check:line-refs` read `stem.lineRefs` after R77 moved it to the item and checked no citations at all;
+I read `stem.quotes` on `WIW-19`, found null, and reported *"nothing is being exempted"* about an item
+carrying `explanation.quotes`; and `checkItemChildFacing` reads `stem.testedTokens` while 13 items
+carry `Item.testedTokens`. **Same shape every time: a field moved or was added at a second level, one
+reader kept reading the first, and the answer it gave was well-formed and about the wrong object.**
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 

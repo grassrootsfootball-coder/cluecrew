@@ -238,6 +238,14 @@ export function checkReadingAge(
    * whose word it is — the same discipline the quotation rule rests on.
    */
   passageNames: readonly string[] = [],
+  /**
+   * DERIVED, NOT AUTHORED, AND THEREFORE SOURCED. A walk script may name an option's own words; the
+   * option is on the card and is checkable, so this is NOT an unsourced exemption and must not be
+   * warned about. Kept SEPARATE from `testedTokens` so the warning names the real mechanism —
+   * merging them is what made the first version report six items whose exemption was the option
+   * list doing exactly its job. Last in the list so positional callers are unaffected.
+   */
+  derivedTokens: readonly string[] = [],
 ): ContentFailure[] {
   const rules = ROLE_RULES[role] ?? ROLE_RULES['item-stem'];
   const failures: ContentFailure[] = [];
@@ -305,6 +313,9 @@ export function checkReadingAge(
       // so "the", "is" and "to" were reported as long words exempted by an unsourced list — 16 of
       // them on one item. The warning measured matches against the token list, not exemptions that
       // did any work. A number that looks alarming and is an artefact of its own filter order.
+      // SOURCED: the word is an option's own. Exempt, and nothing to report.
+      if (isTestedToken(word, derivedTokens)) return false;
+      // UNSOURCED: cleared by an authored bare list with no declaration behind it.
       if (isTestedToken(word, testedTokens)) {
         if (syllables(cleaned) >= 4) tokenOnly.push(word);
         return false;
@@ -610,6 +621,8 @@ export function checkChildFacingText(input: {
    * because it contains an exempt quote — only the quoted span is masked.
    */
   exemptSpans?: { sentenceCap?: readonly string[]; banList?: readonly string[]; vocabularyCeiling?: readonly string[] };
+  /** Option words a script may legitimately name — sourced, never warned about (R158). */
+  derivedTokens?: readonly string[];
   /** Words this item tests. Exempt from the VOCABULARY CEILING only. */
   testedTokens?: readonly string[];
   /** Proper nouns the PASSAGE uses (R23). Exempt from the ceiling only; verified against the
@@ -627,6 +640,7 @@ export function checkChildFacingText(input: {
       [...(input.testedTokens ?? []), ...(input.exemptSpans?.vocabularyCeiling ?? [])],
       input.exemptSpans?.sentenceCap ?? input.quotedSpans ?? [],
       input.passageNames ?? [],
+      input.derivedTokens ?? [],
     ),
     ...checkBannedVocabulary(
       input.label,

@@ -152,7 +152,11 @@ export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
     const v = (o.content as { value?: unknown }).value;
     return (Array.isArray(v) ? v : [v]).flatMap((x) => String(x ?? '').split(/\s+/)).filter(Boolean);
   });
-  const scriptTested = [...testedTokens, ...optionWords];
+  // OPTION WORDS ARE DERIVED, NOT AUTHORED (R158). They were merged into `testedTokens` here, so a
+  // script naming an option's own word looked identical to one resting on a bare authored list —
+  // which is how the first warning reported six items whose exemption was the option list working
+  // exactly as designed. Passed separately so the warning can name the real mechanism.
+  const scriptTested = testedTokens;
   // Quotations declared ON THE EXPLANATION. The authoring contract puts a walk script's quoted
   // spans in `explanation.quotes` — where they are USED — but this gate previously read only
   // `stem.quotes`, so an R4 declaration on a walk script was silently invisible and the passage's
@@ -172,6 +176,7 @@ export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
         text,
         quotedSpans: spansPresentIn(text, declaredForScripts),
         testedTokens: scriptTested,
+        derivedTokens: optionWords,
         passageNames,
       }),
     );
