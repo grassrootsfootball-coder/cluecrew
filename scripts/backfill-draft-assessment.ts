@@ -1,5 +1,5 @@
 /**
- * CARRY COWORK'S preReview ONTO THE 78 ITEMS — `pnpm backfill:pre-review [--write]`
+ * CARRY COWORK'S preReview ONTO THE 78 ITEMS — `pnpm backfill:draft-assessment [--write]`
  *
  * It lands on `Item.draftSelfAssessment`, which is not `reviewedBy`, not `reviewRecordedBy` and
  * nothing `recordSignature` writes. `pnpm check:review-queries` is what enforces that; this door

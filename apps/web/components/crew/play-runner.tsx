@@ -44,6 +44,12 @@ const engines = {
   // through the `?? engines.wordweb` default below and 371 items would have rendered as synonym
   // tiles with a blank question, silently.
   comprehension: dynamic(() => import('./engines/comprehension')),
+  // SPaG. `cloze` reuses the word-web renderer deliberately: with no words, groups or carrier
+  // sentence on the stem it degrades to stem-plus-options, which is exactly what a cloze item is.
+  // A separate FAMILY (its own quarter and affirmations) with a shared COMPONENT — reuse where the
+  // interaction is the same, a new component only where it genuinely differs.
+  cloze: dynamic(() => import('./engines/wordweb')),
+  errorspot: dynamic(() => import('./engines/errorspot')),
 };
 const PlainItem = dynamic(() => import('./engines/plain-item'));
 import type { PassageView } from './engines/comprehension';

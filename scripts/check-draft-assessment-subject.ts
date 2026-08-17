@@ -1,5 +1,5 @@
 /**
- * A PRE-REVIEW THAT DESCRIBES AN ITEM THAT HAS SINCE MOVED — `pnpm check:pre-review-subject`
+ * A PRE-REVIEW THAT DESCRIBES AN ITEM THAT HAS SINCE MOVED — `pnpm check:draft-assessment`
  *
  * Cowork's `preReview` asserts nothing about WHAT it assessed, so it survives any later edit and
  * goes on making its claim about an item that no longer exists. That is the exact failure
@@ -33,7 +33,7 @@ async function main(): Promise<void> {
 
   // Not a population that may legitimately be empty: 78 items hold a claim. An empty run means
   // the column was renamed or the backfill was reverted, and either is a pipeline failure.
-  requirePopulation('check:pre-review-subject', { 'items holding an authoring pre-review': items.length });
+  requirePopulation('check:draft-assessment', { 'items holding an authoring pre-review': items.length });
 
   const superseded: string[] = [];
   const noHash: string[] = [];
@@ -51,7 +51,7 @@ async function main(): Promise<void> {
     if (now !== it.draftSelfAssessmentHash) superseded.push(it.id);
   }
 
-  console.log(`check:pre-review-subject: ${items.length} item(s) hold an authoring pre-review.`);
+  console.log(`check:draft-assessment: ${items.length} item(s) hold an authoring pre-review.`);
   console.log(`  still describing their subject: ${items.length - superseded.length - noHash.length - unreadable.length}`);
 
   if (unreadable.length > 0) {
@@ -63,7 +63,7 @@ async function main(): Promise<void> {
     // An unfingerprinted claim is Cowork's defect reproduced here — a claim with no subject.
     console.error(`\n${noHash.length} claim(s) carry NO subject hash, so nothing can say what they were about:`);
     for (const id of noHash) console.error(`  x ${id}`);
-    console.error('This is the imported defect, not a new one. Re-run `pnpm backfill:pre-review`.');
+    console.error('This is the imported defect, not a new one. Re-run `pnpm backfill:draft-assessment`.');
     process.exitCode = 1;
   }
   if (superseded.length > 0) {

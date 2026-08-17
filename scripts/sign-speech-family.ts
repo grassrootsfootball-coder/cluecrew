@@ -1,5 +1,10 @@
 /**
- * SPEECH SIGNED ON THE NEW SHEET — `pnpm sign:speech`
+ * SPEECH SIGNED ON THE NEW SHEET — one-shot, run by path, DELIBERATELY NOT A `pnpm` COMMAND.
+ *
+ * It re-records and re-pins a reviewer's signature. A named command invites a second run, and a
+ * second run would overwrite a signature with today's fingerprint as though she had signed today.
+ * The docstring named `pnpm sign:speech`, which does not exist; the honest repair is to delete the
+ * reference rather than create the command (David, 2026-08-17).
  *
  * Annie, 2026-08-09. `spag-punct-speech` was held MOVED under R34 because removing its N option is
  * substantive: the child now sees four options where she signed five. She has signed the new sheet,

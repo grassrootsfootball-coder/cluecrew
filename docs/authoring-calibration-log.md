@@ -5812,6 +5812,51 @@ over-counts **44 of 67 declaring stems by up to two words** — its cap is stric
 implements. Ruled fixed; no verdicts change. **Both sides had a gate quietly stricter than its own
 rule, found on the same evening, neither by the gate.**
 
+## R151 — The SpaG surface: two families, one component, and a layout that took four attempts
+*David's ruling, 2026-08-17. Built cheap as scoped. 372 of 372 English items can now reach a child.*
+
+**TWO FAMILIES, NOT THREE.** `punct-spot` and `spelling-spot` are ONE interaction — a sentence split
+across the options with an N verdict — differing only in which mistake class the stem names. Cloze is
+a different interaction: the sentence is in the stem with a gap, the options are candidate fillers.
+
+**CLOZE COST NOTHING BUT REGISTRY.** It is a select-one, and `wordweb` with no words, groups or
+carrier sentence degrades to exactly stem-plus-options. **A separate FAMILY with a shared COMPONENT**
+— its own quarter and affirmations so a child meets "The Gap Yard" rather than "The Word Web", while
+reusing a renderer that already does the job. Reuse where the interaction is the same; a new
+component only where it genuinely differs.
+
+**THE BOUNDARY PROBLEM WAS THE WHOLE DESIGN AND IT DID NOT RESOLVE BY REASONING.** Four attempts,
+each looked at in a browser at 375px rather than argued about:
+
+1. **48px line box, no padding** — target met, leading 2.6× the font, and the sentence read as an
+   airy STACK. The exact failure the inline layout existed to prevent.
+2. **A thin vertical rule between segments** — at 375px these segments are 30-45 characters, so most
+   of them START a line, and a `::before` separator renders at the left margin and reads as a
+   **BULLET**. It made the sentence look MORE like a list. The author's punctuation cannot carry it
+   either: `spelling-spot` segment 1 has no trailing comma.
+3. **1.75 line-height + 4px vertical padding to reach 48px** — the tinted runs OVERLAPPED each other
+   vertically, because padding on an inline box collides when it exceeds the leading.
+4. **Block below 600px, inline above.** Landed.
+
+**THE RESOLUTION IS A FACT ABOUT THE CONTENT, NOT A COMPROMISE.** These segments each take a full
+line at 375px ANYWAY, so fighting for inline flow buys nothing that is visible on a phone. Block
+rows there — unambiguous boundaries, a real 48px target, no overlap, and the sentence carried by
+reading order and the author's own commas. Inline above 600px, where segments genuinely sit side by
+side and it flows as prose. Verified at both widths: 4 rows at 375px, `segmentsShareALine: true` at
+900px, no overlap and no borders at either.
+
+**N IS SET APART BY POSITION AND SHAPE, AND NO LABEL EXPLAINS IT.** Its own line beneath the
+sentence, a bordered pill against untinted runs — a different kind of object, said by the layout. A
+sentence explaining that N is not part of the sentence would be an admission the layout had failed.
+
+**372 OF 372 CAN REACH A CHILD**, up from 337. **ENG-003 gates CLEAN on its first ever run** — 34
+items, 0 blocked, the first honest statement about whether those items can be delivered. Not
+published: that is a shipping decision, not a build one.
+
+**And the engine refuses rather than pretends:** an item without `segmentsInOptions` falls back to
+plain tiles, because rendering a non-segmented item as a sentence in pieces would be a lie about the
+authored shape.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 

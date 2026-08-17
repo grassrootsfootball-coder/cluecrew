@@ -7,7 +7,10 @@
 export const MECHANIC_FAMILIES = ['code', 'stowaway', 'wordweb', 'bridge', 'deduction',
   // The English comprehension district. A sixth family because it is a genuinely different
   // interaction: a passage on screen with the question read against it, not a tile of options.
-  'comprehension'] as const;
+  'comprehension',
+  // SPaG. `cloze` is a select-one and needs no new renderer; `errorspot` needs the only genuinely
+  // new interaction in the district — the options ARE the sentence, in order.
+  'cloze', 'errorspot'] as const;
 export type MechanicFamily = (typeof MECHANIC_FAMILIES)[number];
 
 export const FAMILY_BY_TYPE: Record<string, MechanicFamily> = {
@@ -39,6 +42,13 @@ export const FAMILY_BY_TYPE: Record<string, MechanicFamily> = {
   'en-comp-inference': 'comprehension',
   'en-comp-vocab': 'comprehension',
   'en-comp-technique': 'comprehension',
+  // THE SPaG DISTRICT. Two families, not three: `punct-spot` and `spelling-spot` are the SAME
+  // interaction — a sentence split across the options with an N verdict — differing only in which
+  // mistake class the stem names. Cloze is a different interaction: the sentence is in the stem
+  // with a gap, and the options are candidate fillers.
+  'en-spag-cloze': 'cloze',
+  'en-spag-punct-spot': 'errorspot',
+  'en-spag-spelling-spot': 'errorspot',
 };
 
 /**
@@ -83,4 +93,6 @@ export const FAMILY_AFFIRMATIONS: Record<MechanicFamily, string[]> = {
   // Comprehension praises going BACK TO THE LINES, which is the method every one of its
   // misconceptions is a failure to use. Reading age <=9, vocab-scanned like the rest.
   comprehension: ['You went back to the lines!', 'You checked what the passage really says!', 'You read it again before you chose!'],
+  cloze: ['You listened to how the whole sentence sounds!', 'You tried it in the gap before you chose!', 'You matched the tense!'],
+  errorspot: ['You found the part that was wrong!', 'You checked every part before you chose!', 'You read it right to the end!'],
 };

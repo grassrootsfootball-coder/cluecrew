@@ -110,6 +110,7 @@
     "carry:content-keys": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/carry-content-keys.ts",
     "export:reviewer-record": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-reviewer-record.ts",
     "export:cowork-workorder": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-cowork-workorder.ts",
+    "export:terminal-over-ceiling": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-terminal-over-ceiling.ts",
     "export:spag-depth": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-spag-depth-both-figures.ts",
     "export:approval-batch": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-approval-batch.ts",
     "export:answer-flags": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-answer-flags.ts",

@@ -52,6 +52,16 @@ export const QUARTERS: Record<MechanicFamily, Quarter> = {
     name: 'The Reading Room',
     blurb: 'A story on the desk. Every answer is somewhere in the lines.',
   },
+  cloze: {
+    family: 'cloze',
+    name: 'The Gap Yard',
+    blurb: 'One word missing. Only one of them sounds right.',
+  },
+  errorspot: {
+    family: 'errorspot',
+    name: 'The Fix-It Shop',
+    blurb: 'One part of the sentence is wrong. Find it, or say it is all fine.',
+  },
 };
 
 /** Quarter order across the map — gentlest work first. */
