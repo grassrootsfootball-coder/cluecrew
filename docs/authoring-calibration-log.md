@@ -5812,6 +5812,35 @@ over-counts **44 of 67 declaring stems by up to two words** — its cap is stric
 implements. Ruled fixed; no verdicts change. **Both sides had a gate quietly stricter than its own
 rule, found on the same evening, neither by the gate.**
 
+## R150 — Six docstring references, repaired per script rather than uniformly
+*David, 2026-08-17. "Wire them or delete the reference, per script, whichever is true."*
+
+**FOUR SCRIPTS, FOUR DIFFERENT TRUTHS.** The uniform repair — wire all six — would have been wrong
+three times out of four:
+
+| script | what was true | done |
+|---|---|---|
+| `backfill-draft-assessment.ts` | **stale name.** Wired as `backfill:draft-assessment`; the docstring said `backfill:pre-review` | docstring corrected |
+| `check-draft-assessment-subject.ts` | **stale name.** Wired as `check:draft-assessment` | docstring corrected |
+| `export-terminal-over-ceiling.ts` | **genuinely unwired**, and a repeatable diagnostic | wired; ran clean |
+| `sign-speech-family.ts` | **genuinely unwired, and must stay so** | reference deleted |
+
+**`sign-speech-family` is the one that must not be wired.** It re-records and re-pins a reviewer's
+signature. A named command invites a second run, and a second run would stamp today's fingerprint as
+though she had signed today. **Deleting the reference is the repair; creating the command would be
+the fault** — the same class as R63's one-shot ruling-appliers, which are run by path for exactly
+this reason.
+
+**AND TWO OF THEM WERE WORSE THAN A DOCSTRING.** `check-draft-assessment-subject` named the
+non-existent commands in its `requirePopulation` label AND in its failure message — so an operator
+hitting the failure was told to *"Re-run `pnpm backfill:pre-review`"*, a command that does not exist,
+**at the moment they most needed a working instruction.** A stale docstring is read once; a stale
+error message is read under pressure.
+
+**The sweep's two remaining hits are false positives, checked rather than assumed:**
+`export:metadata-params` exists and my regex clipped it at a string-concatenation line break;
+`sign:speech` now appears only in the sentence explaining why it does not exist.
+
 ## R151 — The SpaG surface: two families, one component, and a layout that took four attempts
 *David's ruling, 2026-08-17. Built cheap as scoped. 372 of 372 English items can now reach a child.*
 
