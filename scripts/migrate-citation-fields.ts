@@ -46,7 +46,6 @@ interface Plan {
   stem: Record<string, unknown>;
   explanation: Record<string, unknown>;
   itemLineRefs?: unknown;
-  itemTestedTokens?: unknown;
   assessment?: Record<string, unknown>;
   applied: string[];
 }
@@ -55,7 +54,8 @@ async function main(): Promise<void> {
   const write = process.argv.includes('--write');
   const items = await prisma.item.findMany({
     where: { id: { startsWith: 'ENG-' } },
-    select: { id: true, stem: true, explanation: true, lineRefs: true, testedTokens: true, draftSelfAssessment: true },
+    // `testedTokens` dropped from Item (R159/R160) — the destination column no longer exists.
+    select: { id: true, stem: true, explanation: true, lineRefs: true, draftSelfAssessment: true },
     orderBy: { id: 'asc' },
   });
   requirePopulation('migrate:citations', { 'ENG items': items.length });
@@ -85,16 +85,18 @@ async function main(): Promise<void> {
       if (touched) plan.applied.push('atLines->lineRefs');
     }
 
-    // 2. stem.testedTokens -> Item.testedTokens
-    if (stem.testedTokens !== undefined && stem.testedTokens !== null) {
-      if (it.testedTokens !== null && canonical(it.testedTokens) !== canonical(stem.testedTokens)) {
-        conflicts.push(`${it.id}: stem.testedTokens ${canonical(stem.testedTokens)} vs item ${canonical(it.testedTokens)}`);
-      } else {
-        plan.itemTestedTokens = stem.testedTokens;
-        delete stem.testedTokens;
-        plan.applied.push('testedTokens->item');
-      }
-    }
+    /**
+     * 2. `stem.testedTokens -> Item.testedTokens` — ARM RETIRED 2026-08-17.
+     *
+     * The DESTINATION no longer exists: `Item.testedTokens` was dropped under R159 because 13 items
+     * carried it and nothing read it. This one-shot migration has already run; there is nothing left
+     * for this arm to move and nowhere to move it to.
+     *
+     * FOUND BY `typecheck:scripts` AFTER THE DROP, NOT BY A SCAN OF MY OWN. **A file is every check
+     * that reads it (R86), and I dropped a column without asking who read it** — the same fault the
+     * drop was fixing, one level up. Four separate references in this one file, surfaced one
+     * compile error at a time.
+     */
 
     // 3. stem.lineRefs -> Item.lineRefs
     if (stem.lineRefs !== undefined && stem.lineRefs !== null) {
@@ -169,7 +171,6 @@ async function main(): Promise<void> {
       // Only set what this plan moved. `?? undefined` leaves the column untouched rather than
       // writing null over a value the migration did not source.
       ...(p.itemLineRefs !== undefined ? { lineRefs: p.itemLineRefs as object } : {}),
-      ...(p.itemTestedTokens !== undefined ? { testedTokens: p.itemTestedTokens as object } : {}),
       ...(p.assessment !== undefined ? { draftSelfAssessment: p.assessment as object } : {}),
     },
   })));
@@ -191,7 +192,8 @@ async function main(): Promise<void> {
   // either alone would leave the duplication this exists to end.
   const after = await prisma.item.findMany({
     where: { id: { in: plans.map((p) => p.id) } },
-    select: { id: true, stem: true, explanation: true, lineRefs: true, testedTokens: true, draftSelfAssessment: true },
+    // `testedTokens` dropped from Item (R159/R160) — the destination column no longer exists.
+    select: { id: true, stem: true, explanation: true, lineRefs: true, draftSelfAssessment: true },
   });
   const byId = new Map(plans.map((p) => [p.id, p]));
   let ok = 0;
@@ -203,8 +205,20 @@ async function main(): Promise<void> {
     const noAtLines = !Array.isArray(exp.quotes) || !exp.quotes.some((q) => q && typeof q === 'object' && 'atLines' in q);
     const lrOk = p.itemLineRefs === undefined
       || (stem.lineRefs === undefined && canonical(r.lineRefs) === canonical(p.itemLineRefs));
-    const ttOk = p.itemTestedTokens === undefined
-      || (stem.testedTokens === undefined && canonical(r.testedTokens) === canonical(p.itemTestedTokens));
+    /**
+     * `Item.testedTokens` WAS DROPPED (R159/R160), so this verification arm can no longer read it.
+     *
+     * This is a ONE-SHOT migration verifier that has already run; the arm asserted that a token list
+     * moved off the stem and onto the item. Both halves of that are now gone — the destination
+     * column no longer exists — so the assertion is unmakeable rather than failing. It reports what
+     * it can still verify: the STEM no longer carries the field, which is the half that survives.
+     *
+     * Found by `typecheck:scripts` after the drop, not by a scan of my own. **A file is every check
+     * that reads it (R86), and I dropped a column without asking who read it** — the same fault the
+     * drop was fixing, one level up.
+     */
+    // The arm is retired; all that remains verifiable is that the SOURCE is gone from the stem.
+    const ttOk = stem.testedTokens === undefined;
     const promptOk = !p.applied.includes('prompt->text')
       || (stem.prompt === undefined && typeof stem.text === 'string');
     const dsa = r.draftSelfAssessment as Record<string, unknown> | null;

@@ -6420,6 +6420,21 @@ sentence is already in the stem. So a wrong `gapRef` is currently inert and cann
 means writing it twice, and the migration is the moment the field becomes assertable. One line, on a
 real field, against a count the vehicle already declares.
 
+**AND THE DROP HAD FOUR READERS I DID NOT SCAN FOR (R86, on my own change).** `typecheck:scripts`
+surfaced them ONE COMPILE ERROR AT A TIME after the column was gone: two `select` clauses and two
+verification arms in `migrate-citation-fields.ts`, and — the one that matters — **a WRITE in the
+import door.** `Item.testedTokens` was a declared carriage destination, so dropping it silently broke
+the path for a field Cowork still sends.
+
+**R86 says a file is every check that reads it, and I dropped a column without asking who read it —
+the same fault the drop was fixing, one level up.** Found by a type system rather than by me.
+
+Resolved honestly rather than by deletion: the registry now declares `item.testedTokens` as
+**NOT_CARRIED / PROPOSED**, so it appears in the import door's exceptions list awaiting a ruling.
+**`stem.testedTokens` still crosses and is still read** — only the item-level duplicate is affected,
+and the ruling that removed the column was about a dead READER, not about the field being unwanted.
+If item-level tokens should carry, the column comes back and this reverts.
+
 **Worth noting alongside: cloze items carry a `passageRef` the child never sees.** Not a fault — the
 sentence is in the stem and the vehicle is context for the author — but it is why these 16 sat in a
 passage-anchored gate's population for months while contributing nothing to it.

@@ -106,7 +106,20 @@ export const COWORK_ITEM_KEYS: Readonly<Record<CoworkLevel, readonly CoworkKeyRu
     { key: 'passageFlag', disposition: 'MAPPED', carriedAt: 'Item.passageFlag' },
     { key: 'r4Note', disposition: 'MAPPED', carriedAt: 'Item.r4Note' },
     { key: 'stemRedraft', disposition: 'MAPPED', carriedAt: 'Item.stemRedraft' },
-    { key: 'testedTokens', disposition: 'MAPPED', carriedAt: 'Item.testedTokens' },
+    {
+      key: 'testedTokens',
+      disposition: 'NOT_CARRIED',
+      ruling: 'PROPOSED',
+      reason:
+        'ITEM-LEVEL ONLY. `Item.testedTokens` was DROPPED under R159 — 13 items carried it and '
+        + 'NOTHING read it, because `checkItemChildFacing` reads `stem.testedTokens`. So the '
+        + 'destination no longer exists and this key has nowhere to land. **The STEM-level '
+        + '`stem.testedTokens` still crosses and is still read**; only the item-level duplicate is '
+        + 'affected. Proposed as an exception rather than silently dropped: the field is a real '
+        + 'declaration on Cowork\'s side and the ruling that removed its column here was about a '
+        + 'dead reader, not about the field being unwanted. If item-level tokens should carry, the '
+        + 'column comes back and this reverts.',
+    },
     { key: 'importDoorFix', disposition: 'MAPPED', carriedAt: 'Item.importDoorFix' },
     { key: 'draftSelfAssessment', disposition: 'MAPPED', carriedAt: 'Item.draftSelfAssessment' },
     {

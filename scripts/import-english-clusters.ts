@@ -294,7 +294,6 @@ async function main(): Promise<void> {
       banListException: (it.banListException ?? Prisma.DbNull) as Prisma.InputJsonValue,
       stemRedraft: (it.stemRedraft ?? Prisma.DbNull) as Prisma.InputJsonValue,
       importDoorFix: (it.importDoorFix ?? Prisma.DbNull) as Prisma.InputJsonValue,
-      testedTokens: (it.testedTokens ?? Prisma.DbNull) as Prisma.InputJsonValue,
       draftSelfAssessment: (it.draftSelfAssessment ?? Prisma.DbNull) as Prisma.InputJsonValue,
       tierRationale: (it.tierRationale as string | undefined) ?? null,
       sourcedFrom: (it.sourcedFrom as string | undefined) ?? null,
