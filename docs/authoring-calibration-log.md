@@ -5664,6 +5664,72 @@ exclusions.
 (`en-within-span-wrong-element` tripped the child-facing ban on "wrong") and is the one file that must
 never be delivered.
 
+## R147 — The controls answered it: 1 of 6, and the field does not hold
+*David, 2026-08-16. ENG-002 blind return scored against the key. The 900 hours are not spent.*
+
+**THE CONTROLS FIRST, BECAUSE THEY DECIDE WHAT EVERY OTHER NUMBER MEANS. ONE OF SIX AGREES.**
+
+| item | entry | declared blind | conf |
+|---|---|---|---|
+| pp-01 B | `quality/character/character` | `quality/character/character` | low |
+| pp-02 D | `quality/character/character` | `referent/character/character` | low |
+| pp-03 C | `quality/character/character` | `event/character/character` | high |
+| pp-04 C | `quality/character/character` | `event/window/window` | medium |
+| pp-09 A | `quality/character/character` | `event/character/character` | medium |
+| pp-10 D | `quality/character/character` | `event/character/character` | high |
+
+These six are not planted and not hard: `en-attribute-transfer` carriers that survived the reviewer's
+own 44-carrier boundary sweep. **A blind reader given a known-good tag reproduces its triple once in
+six.** Under the ruling agreed before the pack was sent, that is the second branch: **the field cannot
+express these errors, and every declaration in the return is a shrug.** A zero elsewhere would have
+meant nothing, and this is exactly the outcome the controls existed to make distinguishable.
+
+**THE READABLE POPULATION CONFIRMS IT.** 74 rows after removing 6 controls and 10 recognised:
+**5 agree, 69 disagree — 6.8%.** And the recognised rows, where Cowork admits it knew the option,
+**disagree 10 of 10** — the drafter's own memory of an item does not reproduce the entry's triple
+either.
+
+**WHERE IT FAILS IS NOT ONE SLOT, WHICH KILLS THE OBVIOUS REPAIR.** Over 53 triple-vs-triple
+comparisons: **3 agree on all three, 13 differ on `what` only, 13 differ on the roles only, 24 differ
+on both.** Had the roles reproduced and only `what` slipped, the vocabulary could be narrowed. They do
+not. The commonest substitutions are `referent → event`, `event → sense`, `quality → event`;
+`whole-text → window` and `character → window` on the destination. **Both halves are unstable
+independently.**
+
+**AND THE VOCABULARY IS NOT CLOSED — IT IS A CLOSED LIST PLUS A PRIVATE INTERPRETATION.** Cowork
+supplied four readings it needed to declare at all: `window` = the cited lines, `whole-text` = the
+passage OUTSIDE that window, `question` = a category mismatch, and `to` = character for an inner
+state, window for a fact. **67 of 90 declarations depend on `to: question` or the character/window
+split.** Those readings are not in the enum, were never agreed, and without them the triples are
+uninterpretable. **Zero additions was never evidence the list was sufficient**: I added nothing
+because I authored both the list and the entries, and Cowork added nothing because it left slots
+empty and wrote the missing axes into an interpretation instead.
+
+**DAVID'S TWO RULINGS, RECORDED:**
+- **`from: reader` for invented content — REJECTED**, Cowork's reasoning upheld. If `reader` means
+  "the child supplied it", every `plausible-not-stated` option carries it and the triple stops
+  carrying information. **A negative fact is not a role.** The notDisplacement rows stand.
+- **The undeclared readings are a FINDING, not a fix.** Scored as stated, and the 67 is the size of
+  the gap between the list and its use.
+
+**ONE FIGURE CORRECTED: 16 notDisplacement rows, not 11.** Cowork's own prose says *"11 of the 16 are
+invention-shaped and would flip if the reading were ratified; the other 5 are degree, scope, negation
+or over-reach"* — the 11 is the subset that turns on the rejected reading, and 16 is the count. The
+ruling reaches all 16.
+
+**THE BLIND HELD, on the only evidence available.** Confidence came back **33 low, 51 medium, 6 high**
+— a genuinely hesitant distribution, which is what a blind read produces and what a sighted one does
+not. Cowork also stated its method: declared without opening its ENG-002 store, without reading a
+resolver constant naming an ENG-002 tag, without running a gate. **A commitment and not a proof**, in
+its own words, and the confidence shape is consistent with it.
+
+**THE VERDICT.** The field cannot separate the two entries it was built to separate — one control in
+six, and `quality/character/character` read as `event/character/character` three times. **It is not
+worth Cowork's ~900 drafter-hours, and one cluster of 90 declarations bought that answer.** The
+library half stays: 26 triples over 68 entries are a real description of what those entries do, and
+the four-way collapse and the zero-additions result are still true statements about the vocabulary —
+they are simply not evidence that a second party can reproduce it.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 
