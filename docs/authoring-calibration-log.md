@@ -5886,8 +5886,23 @@ published: that is a shipping decision, not a build one.
 plain tiles, because rendering a non-segmented item as a sentence in pieces would be a lie about the
 authored shape.
 
+**THE 35px TARGET AT 900px IS LEFT AND LEFT FLAGGED** (David, 2026-08-17). Touch widths get 48px;
+pointer widths get 35px against a 24px guideline. Defensible and different, and **worth having said
+rather than silently meeting one number and not the other** — a surface that reports "48px met"
+without naming where is the shape of every other fault recorded tonight.
+
+**ENG-003 IS NOT PUBLISHED AND STAYS UNPUBLISHED** (David's ruling, 2026-08-17). It gates clean, and
+**that is a statement about DELIVERY, not about CONTENT.** Annie has never seen a SpaG item in the
+reviewer surface, ENG-003 was in neither packet, and its 34 items are the only English content
+carrying a rendering nobody has reviewed. **A green delivery gate is not a review**, and shipping on
+one would be the whole month's lesson inverted: an instrument's pass read as a person's judgement.
+It joins the tranche return as the seventh item — the surface exists, the items can be delivered, and
+she has not seen it.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
+
+- `check:register` caught a citation to **R150, an entry that was never written** — I referenced it in a commit message and moved on. **A register with a citation to nothing is the same shape as everything else tonight**: a claim with no artefact behind it, believed because it was written down. Caught by the instrument rather than by me, which is the difference between this one and the 172.
 
 - `export-approval-batch` carried **"Nine entries, 172 items" as a hard-coded literal** in its own `note` field while the code three lines below counted 215 and printed it — the artefact contradicting itself, and the prose is the half a reader believes. Same fault as Cowork's `approvedBy`, in our artefact: not derived from anything. Computed now. One line, no sweep (David, 2026-08-16).
 
