@@ -19,6 +19,7 @@ export * from './passages';
  *  rule-driven error franchises as generator families on the shared ladder/range engine. */
 export * from './spag-generator';
 export * from './spag-families';
+export * from './item-kinds';
 /** Vocabulary-in-context — semi-generable from the two-sense vault via the vr04 screen. */
 export * from './vocab-in-context';
 export * from './vocab-context';

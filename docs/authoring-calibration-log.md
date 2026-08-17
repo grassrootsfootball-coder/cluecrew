@@ -6371,6 +6371,59 @@ will hold what `stem.gapRef` already holds here. The thing worth doing on this s
 a repair — **when `gapIndex` arrives, decide whether a cloze gap should be CHECKED at all**, because
 today nothing verifies that gap 4 exists in a passage with three gaps.
 
+## R165 — The kind system adopted, and `check:line-refs` says all three causes
+*Annie's ruling, 2026-08-17. Cowork's vocabulary; this is the reconciliation, not a second one.*
+
+**FIVE PROPERTIES PER KIND** — `passageAnchored`, `singlePrefix`, `canonicalIds`, `mechanismLedger`,
+`windowedItems` — in `packages/core/src/english/item-kinds.ts`. A cluster declares its kind, a check
+declares which kinds it governs, and **a check ABSENT from the map governs EVERYTHING.**
+
+**That default is the whole safety property.** Forgetting to declare makes a check BROADER, never
+blinder — applies until ruled otherwise, never the reverse. It is the inverse of every failure in this
+register, where an undeclared scope silently narrowed one.
+
+`spag` declares all five `false`, and the reason is worth stating: **`false` means DO NOT ASSUME, not
+"never true".** Sixteen of ENG-003's items carry a `passageRef` and the kind still says
+`passageAnchored: false`, because the kind is mixed — cloze cites a passage and a GAP, the two spot
+mechanics carry their sentence in the stem and cite nothing.
+
+**`check:line-refs` NOW PRINTS THE THREE CAUSES AS THREE LINES:**
+
+```
+29 passages · 338 item(s) carrying a passage, of which 313 CITE LINES this gate can verify.
+  25 in scope and CITING NOTHING — carried a passageRef, cited no line, so nothing was verified.
+  34 NOT APPLICABLE by declared kind — this check governs comprehension, and these are outside it
+     BY DECLARATION rather than by falling through a guard.
+```
+
+The numbers reconcile against the old output exactly: 354 minus the 16 cloze now declared
+not-applicable is 338; 41 citing nothing minus the same 16 is 25. **Nothing moved except what the
+report can say.** And the headline no longer calls 338 items "citing a passage" when 313 do.
+
+## R166 — The cloze gap check: worth having, and cheap — one line
+*David, 2026-08-17: "against is fine."*
+
+**Worth having, and it is one comparison the data already supports.** Every cloze vehicle declares
+`gapCount` in its own passage file, so the check is `gapRef >= 1 && gapRef <= passage.gapCount`.
+**Measured now: 16 of 16 in range, 0 faults** — so it buys no repair today.
+
+**The argument FOR is not the current state, it is that the gap number is CHILD-FACING.** The stem
+reads *"Gap 1. Choose the words that fit best."* A `gapRef` disagreeing with its vehicle sends a child
+to a gap that is not there, and **nothing checks it at all today** — the value is read by two
+malformation fixtures and a comment (R164).
+
+**The argument AGAINST, stated because it is real:** nothing serves `gapRef`. The cloze surface routes
+to the shared renderer and shows stem-plus-options; the child never sees the vehicle, because the
+sentence is already in the stem. So a wrong `gapRef` is currently inert and cannot reach anyone.
+
+**Recommendation: build it WHEN `gapIndex` lands, not before.** Writing it against `stem.gapRef`
+means writing it twice, and the migration is the moment the field becomes assertable. One line, on a
+real field, against a count the vehicle already declares.
+
+**Worth noting alongside: cloze items carry a `passageRef` the child never sees.** Not a fault — the
+sentence is in the stem and the vehicle is context for the author — but it is why these 16 sat in a
+passage-anchored gate's population for months while contributing nothing to it.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 

@@ -20,6 +20,7 @@ import {
   type CitablePassage,
   type LineRefFailure,
 } from '@cluecrew/core';
+import { CHECK_GOVERNS, checkGoverns, kindOfItem } from '../packages/core/src/index';
 import { prisma } from '../packages/db/src/index';
 import { declareMayBeEmpty, requirePopulation } from './lib/population';
 
@@ -53,11 +54,32 @@ async function main(): Promise<void> {
 
   const items = await prisma.item.findMany({ include: { questionType: true, options: true } });
   const absent: string[] = [];
+  /**
+   * THE THREE CAUSES, COUNTED APART (R165). This loop opened `if (!passageRef) continue` and skipped
+   * 18 of ENG-003's items in silence — not exempt, not unscreened, named nowhere. `continue` is the
+   * `|| true` of a loop body.
+   *
+   * NOT APPLICABLE is now a stated verdict, from the declared kind: this check governs
+   * `comprehension` only, and a SPaG item is outside its remit BY DECLARATION rather than by
+   * falling through a guard.
+   */
+  const notApplicable: string[] = [];
+  const inScopeCitingNothing: string[] = [];
   for (const item of items) {
     const stem = (item.stem ?? {}) as Record<string, unknown>;
     const passageRef = stem.passageRef as string | undefined;
+    // KIND FIRST. A check absent from the map governs everything; this one declares comprehension.
+    if (item.id.startsWith('ENG-') && !checkGoverns('check:line-refs', kindOfItem(item.id))) {
+      notApplicable.push(item.id);
+      continue;
+    }
     if (!passageRef) continue;
     checked += 1;
+    // IN THE POPULATION AND VERIFYING NOTHING. Counted apart from an item that cites and resolves —
+    // the headline called all 354 "items citing a passage" while 313 cited anything.
+    const citesLines = (Array.isArray(item.lineRefs) && (item.lineRefs as unknown[]).length > 0)
+      || (Array.isArray(stem.lineRefs) && (stem.lineRefs as unknown[]).length > 0);
+    if (!citesLines) inScopeCitingNothing.push(item.id);
     const passage = passages.get(passageRef);
     // ITEM LEVEL, with the stem as the pre-migration fallback. R77 moved lineRefs off the stem
     // and this gate went on reading `stem.lineRefs` — it found an empty array on every row and
@@ -200,11 +222,29 @@ async function main(): Promise<void> {
     }
   }
 
-  requirePopulation('check:line-refs', { passages: passages.size, 'items citing a passage': checked });
+  requirePopulation('check:line-refs', { passages: passages.size, 'items with a passage': checked });
+  /**
+   * THREE CAUSES, THREE LINES (David's ruling, 2026-08-17). The headline called all 354 "items
+   * citing a passage" when 313 cited anything, 41 were in the population citing nothing, and 18
+   * were outside it without a word.
+   */
+  const actuallyCiting = checked - inScopeCitingNothing.length;
   console.log(
-    `Line-reference gate: ${passages.size} passages · ${checked} item(s) citing a passage · ` +
-      `${citing} explanation field(s) naming a line · ${placeless} placeless quote(s) present-only (Cowork CHECK 8).`,
-    );
+    `Line-reference gate: ${passages.size} passages · ${checked} item(s) carrying a passage, `
+    + `of which ${actuallyCiting} CITE LINES this gate can verify.`,
+  );
+  console.log(
+    `  ${inScopeCitingNothing.length} in scope and CITING NOTHING — carried a passageRef, cited no `
+    + 'line, so nothing about them was verified here.',
+  );
+  console.log(
+    `  ${notApplicable.length} NOT APPLICABLE by declared kind — this check governs `
+    + `${(CHECK_GOVERNS['check:line-refs'] ?? ['every kind']).join(', ')}, and these are outside it `
+    + 'BY DECLARATION rather than by falling through a guard.',
+  );
+  console.log(
+    `  ${citing} explanation field(s) naming a line · ${placeless} placeless quote(s) present-only (Cowork CHECK 8).`,
+  );
     console.log(
       `  CHECK 11 containment: ${containmentChecked} quote span(s) screened against an item window · `
       + `${containmentFailures} reaching outside it`
