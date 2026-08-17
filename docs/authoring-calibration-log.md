@@ -5775,6 +5775,43 @@ explanation quotes are offered to explanation fields and to nothing else. `stem.
 fields, walk scripts and now options; `explanation.quotes` reaches walk scripts only. Not fixed, and
 not a fault today because no stem quotes a walk script.
 
+## R149 — Changing an instrument that already reports failures: baseline first, standing
+*David's standing ruling, 2026-08-16. `pnpm gate:baseline`.*
+
+**ANY CHANGE TO AN INSTRUMENT WHOSE OUTPUT IS ALREADY NON-ZERO IS MEASURED AGAINST A BASELINE
+CAPTURED BEFORE THE EDIT.** Not a rule about gates. A rule about **changing an instrument that
+already has a non-zero output**, where a re-run gives a total and no way to tell which rows are new.
+
+Twice in one evening a correct-looking change to `checkItemChildFacing` produced faults that looked
+like content defects and were mine:
+- the multi-quote gate — every stem declaring two spans reported the others as broken;
+- `exemptSpans` passed raw while `quotedSpans` was filtered — **six items newly failed, two of them
+  LIVE, on a signed cluster.**
+
+Both said *"declares a quoted span that is not in the text"*, **a sentence that reads as bad
+authoring.** With 49 already blocked, the after-run says 55 and points at nothing. **Without a
+baseline the next move is reading the content instead of reading your own diff** — and the content
+was correct both times.
+
+**IT IS R142 IN A THIRD COSTUME: TRUST THE DIFF, NOT THE COUNT.** There it was a fabricated 90%
+divergence that confirmed the schema change being scoped; here it is six fabricated content faults
+that confirm a gate is now stricter. **A measurement that agrees with what you just did is the one to
+distrust**, and in all three cases one row read by hand settled it.
+
+**MADE CHEAP RATHER THAN LEFT AS DISCIPLINE**, because a rule needing bespoke scripting each time is a
+rule nobody follows at eleven at night: `pnpm gate:baseline capture <file>` before, again after,
+`diff` between. It reports newly-pass, newly-fail and same-item-different-faults, prints the fault
+lines either side, and **says NOTHING MOVED when nothing moved**. It also refuses to compare
+snapshots whose populations differ — a moved population is not a row-for-row comparison.
+
+Verified by replaying tonight: fed the real before/after it reproduces all six, and fed the corrected
+pair it reports nothing moved.
+
+**COWORK FOUND THE MIRROR IN ITS OWN GATE.** `strip_q` leaves enclosing quote marks standing, so it
+over-counts **44 of 67 declaring stems by up to two words** — its cap is stricter than the rule it
+implements. Ruled fixed; no verdicts change. **Both sides had a gate quietly stricter than its own
+rule, found on the same evening, neither by the gate.**
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 

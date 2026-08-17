@@ -244,6 +244,17 @@ here has no register entry. A ruling goes to the register FIRST; it comes here o
   not have. EVERY CHECK HERE READS THE LIVE DATABASE, so `check:db-invariants` passed 13 of 13
   while a database rebuilt from migrations would have failed that same invariant. `pnpm
   check:migration-replay` asserts it, ahead of the invariants it protects.
+- **CHANGING AN INSTRUMENT THAT ALREADY REPORTS FAILURES: BASELINE BEFORE THE EDIT** (David,
+  2026-08-16 — R149). Any change to a gate, check or scanner whose output is already non-zero is
+  measured against a snapshot captured BEFORE the change: `pnpm gate:baseline capture <file>`, make
+  the change, capture again, `pnpm gate:baseline diff <before> <after>`. A re-run alone gives a
+  TOTAL — 49 became 55 — and no way to tell which rows are new, so the next move is reading content
+  instead of reading your own diff. Twice in one evening a change to `checkItemChildFacing` produced
+  faults that looked like content defects and were the instrument: the multi-quote gate, and
+  `exemptSpans` passed raw while `quotedSpans` was filtered (six items newly failed, two LIVE, on a
+  signed cluster). Both reported *"declares a quoted span that is not in the text"*, which reads as
+  bad authoring. This is R142's lesson — **trust the diff, not the count; a measurement that agrees
+  with what you just did is the one to distrust.**
 - Content decisions (items, chapters, misconceptions) go through the CMS
   review pipeline; nothing skips the reviewer.
 - **PILOT CONTENT UNDER ACTIVE REVIEW HAS ONE WRITE PATH: `scripts/lib/pilot-review.ts`, NEVER A

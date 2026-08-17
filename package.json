@@ -129,6 +129,7 @@
     "backfill:reviewers": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/backfill-reviewer-identity.ts",
     "check:signing-doors": "tsx scripts/check-signing-doors.ts",
     "check:n-option-precondition": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-n-option-precondition.ts",
+    "gate:baseline": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/gate-baseline.ts",
     "check:cluster": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-cluster.ts",
     "check:serving-path": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-serving-path.ts",
     "check:library-agreement": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-library-agreement.ts",
