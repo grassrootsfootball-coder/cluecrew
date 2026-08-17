@@ -199,20 +199,18 @@ jobs:
       - name: Verdict refusals (what stands between the bank and a signature)
         run: pnpm check:verdict-refusals
 
-      # R110: a retag is only a release if the SUCCESSOR is approved. Reads Cowork's retag history
-      # (the population is theirs) and resolves every successor against the library table. Skipped
-      # when the report is not present rather than failing: the population is a delivery, not a
-      # repo file, and its absence is a missing delivery and not a broken build.
+      # R110/R155: a retag is only a release if the SUCCESSOR is approved. The tolerance for an
+      # absent delivery is now INSIDE the step, declared, and prints UNMEASURABLE — so this line
+      # carries no exception and a reader of the yaml is not required to know why one was there.
       - name: Retag releases (moving a dependency does not discharge it)
-        run: pnpm check:retag-releases || echo "retag report not present in CI — population is a Cowork delivery"
-        continue-on-error: true
+        run: pnpm check:retag-releases
 
-      # R120: the first instrument pointed at the FAR side of the boundary. Reports rather than
-      # fails — 34 SPaG items are undeliverable by a decision nobody has made yet, and blocking on
-      # that would block every push. What it must never do is go quiet: a default taken is printed
-      # as a FAILURE, never absorbed as an answer.
+      # R120, and it BLOCKS as of R155. The `|| true` was added when 34 SPaG items were
+      # undeliverable by a decision nobody had made; that decision is made and all 372 are
+      # deliverable, so the tolerance has outlived its reason. A step that tolerates a condition
+      # after the condition is gone is a step nobody can fail.
       - name: Serving path (can what came in come out?)
-        run: pnpm check:serving-path || true
+        run: pnpm check:serving-path
 
       # R143: a generator moving under stored rows. Blocks, because an unprotected divergence means
       # the generator changed and nobody noticed — and it needs no baseline, so it is true from the

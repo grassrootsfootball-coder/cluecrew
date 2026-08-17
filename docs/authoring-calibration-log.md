@@ -5964,10 +5964,14 @@ Every other blindness in this register is a check looking at the wrong thing —
 proxy, unreported denominator, a population nothing creates. This one never looked at all, and the
 distance between "0 findings" and "0 lines executed" is invisible unless someone reads the log.
 
-**ASKED ONCE, AS RULED — AND THE ANSWER CORRECTS MY OWN FRAMING.** 71 CI steps: **69 fail the build**
-on any non-zero exit, crash included. So `check:line-refs` did NOT report green — **CI has been RED on
-that step for six days and nobody read it.** That is a different fault from a green tick and the
-weaker one to have: the signal was there and unattended.
+**ASKED ONCE, AS RULED — AND IT IS NOT A GREEN-TICK PROBLEM.** 71 CI steps: **69 fail the build** on
+any non-zero exit, crash included. So `check:line-refs` did NOT report green. **CI has been RED on
+that step for six days and nobody read it.**
+
+**THAT IS THE WEAKER FAULT AND THE MORE USEFUL ONE** (David, 2026-08-17): the signal was there and
+unattended, **and no amount of fail-closed design fixes it.** Every mechanism in this register makes
+a check speak; none makes anyone listen. A red step nobody reads is worth exactly what a green one
+would have been.
 
 **The two steps that genuinely report green whatever happens are BOTH MINE, added this session:**
 `check:serving-path` (`|| true`) and `check:retag-releases` (`continue-on-error`). I wrote them hours
@@ -5998,6 +6002,36 @@ passage, declared, and doing exactly what R23 built them to do.
 also failed for an unrelated reason, and would have under-reported; computing the delta fault-by-fault
 catches an exempted word on an item failing for something else. Worth stating because a screen that
 silently drops its hardest rows is the fault this register is mostly about.
+
+## R155 — Fixing my own two: the tolerance belongs in the step, not on the CI line
+*David's ruling, 2026-08-17. 71 of 71 CI steps now fail the build.*
+
+The only two steps that reported green whatever happened were mine, written this session. Both
+defensible when written; both the shape this register spends a hundred entries on.
+
+**`check:serving-path` — `|| true` REMOVED, and the reason is that its reason expired.** It was added
+when 34 SPaG items were undeliverable by a decision nobody had made, and blocking on that would have
+blocked every push. That decision is made and **all 372 are deliverable**, so the tolerance outlived
+the condition. **A step that tolerates a condition after the condition is gone is a step nobody can
+fail** — and nothing would have prompted a review of the exception, because an exception produces no
+output.
+
+**`check:retag-releases` — the tolerance MOVED INSIDE the step and is now declared.** Its population
+is a Cowork delivery (`RETAGDEPENDENCYREPORT.txt`), absent in a clean checkout because the retag
+history lives in their store. That is a missing delivery, not a broken build — a real reason, and
+`continue-on-error: true` on the workflow line was the wrong place to put it. **A reader of the yaml
+could not tell a tolerated absence from a swallowed crash.**
+
+Now the step itself reports `UNMEASURABLE`, says why in five lines, states that **NOTHING WAS
+SCREENED**, and **exits zero deliberately**. Every other failure — an unparseable row, a real
+disagreement — still exits 1. **Verified by moving the file away and running it**, not by reading the
+code.
+
+**THE GENERAL FORM, which is what makes this more than two repairs:** if a step must tolerate an
+incomplete population, the tolerance goes where the REASON is. In the step it is declared, printed on
+every run, and reviewable; at the CI line it is invisible, unexplained, and indistinguishable from a
+crash being swallowed. It is `declareMayBeEmpty()` (R61) applied one level out — to the exit code
+rather than to the population.
 
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*

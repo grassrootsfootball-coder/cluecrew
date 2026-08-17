@@ -20,7 +20,7 @@
  * what an option is believed to depend on now. Our store says what it does depend on. A retag that
  * was authored but never crossed looks identical, from their side, to one that did.
  */
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { prisma } from '../packages/db/src/index';
 import { artefactStamp, deliver, stampedName } from './lib/export-destination';
@@ -49,6 +49,30 @@ function parseReport(text: string): { rows: Row[]; unparsed: string[] } {
 }
 
 async function main(): Promise<void> {
+  /**
+   * THE TOLERANCE IS DECLARED HERE, NOT BOLTED ON AT THE CI LINE (David's ruling, 2026-08-17 — R155).
+   *
+   * The population is a COWORK DELIVERY, not a repo file: `RETAGDEPENDENCYREPORT.txt` is the retag
+   * history, which lives in their store because the shadow fields do not cross. In a clean checkout
+   * it is absent, and that is a MISSING DELIVERY rather than a broken build.
+   *
+   * This used to be a `continue-on-error: true` on the workflow step — defensible, and invisible to
+   * anyone reading the yaml, who could not tell a tolerated absence from a swallowed crash. **A step
+   * that reports green whatever happens is the shape this register spends a hundred entries on**, so
+   * the tolerance now lives where the reason lives: it reports UNMEASURABLE, says why, and exits ZERO
+   * DELIBERATELY. Every other failure — an unparseable row, a real disagreement — still exits 1.
+   */
+  if (!existsSync(REPORT)) {
+    console.log(`check:retag-releases: UNMEASURABLE — no retag report at ${REPORT}.`);
+    console.log('  The population is a Cowork delivery, not a repo file: the retag history lives in');
+    console.log('  their store because `_previousMisconceptionId` is a PROPOSED exception here and');
+    console.log('  does not cross. An absent delivery is a missing delivery, NOT a clean sweep, and');
+    console.log('  NOTHING WAS SCREENED. Exiting 0 deliberately, declared in this file rather than');
+    console.log('  tolerated at the CI line where the reason would be invisible.');
+    await prisma.$disconnect();
+    return;
+  }
+
   const { rows, unparsed } = parseReport(readFileSync(REPORT, 'utf8'));
   requirePopulation('check:retag-releases', { 'retags in the report': rows.length });
   if (unparsed.length) {
