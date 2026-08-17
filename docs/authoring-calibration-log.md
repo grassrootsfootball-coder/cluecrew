@@ -5973,6 +5973,17 @@ unattended, **and no amount of fail-closed design fixes it.** Every mechanism in
 a check speak; none makes anyone listen. A red step nobody reads is worth exactly what a green one
 would have been.
 
+**AND HOW "THE EIGHT" HAPPENED, which is the same fault in prose** (Annie, 2026-08-17). The sweep
+found **299 undeclared reproductions** and, separately, **seven items surviving on declarations**.
+Between those two true measurements, *"eight carrying a word the gates would refuse"* became *"eight
+surviving on a declaration nobody made"* — **a true statement and a false one collapsed into one
+sentence, and nobody noticed because the sentence is plausible under both readings.** Every
+mechanical version of this distinction is already built and holding: `check:library-agreement`
+reports fields THEY DID NOT STATE apart from fields that AGREE; the move field carries three states
+rather than a silent null; `check:vr-rederive` counts guarded divergence apart from unguarded. **The
+distinction survives in code and dissolves in prose, between two people, in one sentence neither
+wrote down.** It reached the reviewer as a request for a list that did not exist.
+
 **The two steps that genuinely report green whatever happens are BOTH MINE, added this session:**
 `check:serving-path` (`|| true`) and `check:retag-releases` (`continue-on-error`). I wrote them hours
 after recording R60 and R61, for defensible reasons — an incomplete population and a delivery-dependent
