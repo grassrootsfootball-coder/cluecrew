@@ -66,16 +66,30 @@ const s = (value: number | string): string => String(value);
  * nothing to slip) — which the gate treats as "this tag is not derivable here".
  */
 export const VR_EXECUTORS: Record<string, (op: VrOperands) => string[] | null> = {
-  // vr-07 — a wrong value comes from ONE letter read as another letter's value.
+  /**
+   * vr-07 — a letter read off the NEIGHBOURING ROW of the code table.
+   *
+   * NARROWED ON THE REVIEWER'S RULING (Annie, 2026-08-17). It substituted the value of ANY other
+   * letter in the table, which is **a random draw and no hint reaches it**. Her reasoning: a child
+   * misreading a code table SLIPS ONE ROW, and that is a mechanism a hint can teach against. The
+   * entry's description — *"Substituted one letter with the neighbouring value"* — was right and the
+   * code was wider than it; **the executor moved to the description, not the description to the
+   * code**, because the description names a teachable error and the code named an accident.
+   *
+   * Key order in `values` IS the table's row order, so the neighbours of a letter are the keys
+   * either side of it.
+   */
   'vr07-value-slip': (op) => {
     if (!op.values || !op.expr) return null;
     const correct = evalCode(op.expr, op.values);
-    const letters = Object.keys(op.values);
+    const rows = Object.keys(op.values);
     const used = [...new Set((op.expr.match(/[A-Za-z]+/g) ?? []))];
     const out = new Set<string>();
     for (const target of used) {
-      for (const source of letters) {
-        if (source === target) continue;
+      const at = rows.indexOf(target);
+      if (at < 0) continue;
+      for (const source of [rows[at - 1], rows[at + 1]]) {
+        if (!source || source === target) continue;
         const swapped = { ...op.values, [target]: op.values[source]! };
         const value = evalCode(op.expr, swapped);
         if (value !== null && value !== correct) out.add(s(value));

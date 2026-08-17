@@ -231,6 +231,65 @@ export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
     }
   }
 
+  /**
+   * A DECLARED SPAN MUST BE PRESENT IN THE FIELD THAT DECLARES IT (Annie's ruling, 2026-08-17).
+   *
+   * CHECK 8 asks whether a span is in the PASSAGE and never whether it lives where it CLAIMS to.
+   * That is what let a stem declaration exempt text elsewhere, and **the widened option exemption
+   * inherits the hole unless it is closed here** — a span declared on the stem now reaches every
+   * option, so an unresolvable declaration silently exempts words in fields it was never about.
+   *
+   * The stem's own prose is already covered: `invalidQuotedSpans` reports a span missing from
+   * `stem.text`. The hole is `spansPresentIn`, which FILTERS to what is present and therefore
+   * SILENTLY DROPS a span that resolves nowhere — correct for a script that simply did not quote
+   * that line, and wrong for a declaration that resolves in no field of the item at all.
+   *
+   * So: a declared span that appears in NO child-facing field of this item is reported. It cannot
+   * be exempting anything, and a declaration that exempts nothing is either a typo or a workaround.
+   */
+  /**
+   * A SPAN THAT CITES A PLACE IS EXCLUDED, AND THIS CHECK NEARLY SHIPPED WITHOUT THAT.
+   *
+   * The first version reported `ENG-002-pp-12` — an R4 declaration carrying `lineRefs: [39, 40]`
+   * whose walk script PARAPHRASES rather than quotes. It resolves in no field of the item, and it
+   * is entirely correct: the span sits in the passage ACROSS the line break (`…danced only` /
+   * `once with Mrs. Hurst…`), which is what its lineRefs say. **This function is pure over the item
+   * and cannot see the passage**, so it cannot tell a workaround from a correct citation — and
+   * calling the second one a fault is R149 firing on the check written to apply R149.
+   *
+   * So the rule is scoped to what this function CAN judge: a span declared with NO claimed
+   * location is an exemption for this item's own text, and must resolve in it. A span carrying
+   * `lineRefs`/`passageRef` is a citation of the passage, and belongs to `check:line-refs`
+   * (CHECK 11 containment), which holds the passage and can verify it.
+   */
+  const claimsAPlace = (q: unknown): boolean =>
+    typeof q === 'object' && q !== null
+    && (Array.isArray((q as { lineRefs?: unknown }).lineRefs)
+      || typeof (q as { passageRef?: unknown }).passageRef === 'string');
+  const placelessDeclared = [
+    ...stemQuoteObjects.filter((q) => !claimsAPlace(q)).map((q) => q.text ?? ''),
+    ...(Array.isArray(explanation.quotes) ? (explanation.quotes as Array<{ text?: string }>) : [])
+      .filter((q) => !claimsAPlace(q)).map((q) => q.text ?? ''),
+  ];
+  const declaredSpans = [...new Set(placelessDeclared)].filter((q) => q.trim().length >= 3);
+  if (declaredSpans.length > 0) {
+    const everyField = [
+      ...[...textsFrom(item.stem, '')].map(([, t]) => t),
+      ...['walkScript', 'walk', 'hintCore'].map((f) => explanation[f]).filter((t): t is string => typeof t === 'string'),
+      ...item.options.flatMap((o) => [...textsFrom(o.content, '')].map(([, t]) => t)),
+    ].join('\n');
+    for (const span of declaredSpans) {
+      if (!everyField.includes(span.trim())) {
+        failures.push({
+          where: `item:${item.id} ${stemQuotes.includes(span) ? 'stem' : 'explanation'}.quotes`,
+          rule: 'banned-vocabulary',
+          detail: `declares a span that appears in NO field of this item: "${span.slice(0, 40)}" — `
+            + 'a declaration that exempts nothing is a typo or a workaround',
+        });
+      }
+    }
+  }
+
   // House notation over EVERY child-facing string — stem, options (single tokens
   // too), and the walk script/hint. Money on £, temperatures with the degree sign,
   // areas/volumes with a real superscript. A word or ascii form is a defect: the

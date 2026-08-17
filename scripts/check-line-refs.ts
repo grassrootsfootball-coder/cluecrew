@@ -107,6 +107,19 @@ async function main(): Promise<void> {
       }
     }
 
+    /**
+     * `bucket` IS DECLARED HERE BECAUSE THE ADDENDUM 36 LOOP BELOW USES IT.
+     *
+     * It was declared 26 lines further down, after this loop — a temporal dead zone, so
+     * `check:line-refs` THREW on its first item and **has not run since commit 30d5f33**, the
+     * commit that added the Addendum 36 loop. It is in CI, and a crashing step is not a passing
+     * one; nothing reported it because the failure was a stack trace rather than a finding.
+     *
+     * Found while deferring passage-citation verification TO this check (R152) — which is the
+     * only reason anyone ran it.
+     */
+    const bucket = item.status === 'LIVE' ? serving : draft;
+
     // ADDENDUM 36 — the attractor/defeater pair on each option's execution note.
     for (const o of item.options) {
       if (o.attractorLine == null && o.defeaterLine == null) continue;
@@ -141,8 +154,6 @@ async function main(): Promise<void> {
       absent.push(`${item.id}: neither stem.prompt nor stem.text is a string — nothing to check citations against`);
       continue;
     }
-    const bucket = item.status === 'LIVE' ? serving : draft;
-
     // R23 limit 1 — a declared passage NAME must actually be the passage's name. Verified here,
     // against the passage file, exactly as a quotation is. A name we invent for a worked example
     // is our word and gets reworded; declaring it must not be a way to smuggle one past the

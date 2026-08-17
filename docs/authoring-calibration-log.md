@@ -5899,6 +5899,57 @@ one would be the whole month's lesson inverted: an instrument's pass read as a p
 It joins the tranche return as the seventh item — the surface exists, the items can be delivered, and
 she has not seen it.
 
+## R152 — Four rulings applied, and a check that had been dead in CI since 16 August
+*Annie via David, 2026-08-17.*
+
+**1. `vr07-value-slip`: THE EXECUTOR MOVED TO THE DESCRIPTION, not the description to the code.**
+Her reasoning is the part to keep: **a child misreading a code table SLIPS ONE ROW, which a hint can
+teach against; substituting an arbitrary other letter's value is a random draw and no hint reaches
+it.** The description was right and the code was wider than it. Narrowed to neighbouring rows —
+`values` key order IS the table's row order.
+
+**Her August verification confirmed independently: 25 of 25 live options are still produced by the
+narrowed executor.** Every one was an adjacent-row slip; the extra range was never exercised. Nothing
+re-reviewed, nothing re-signed.
+
+**2. THE THREE NVR ENTRIES WIDENED, and recorded as an entry-scope correction in a signed district.**
+All three parentheticals were wrong scope claims. **An error is scoped by its CONDITION, not by the
+template family that first produced it** — wherever a transform is stated, wherever a cycle repeats,
+wherever a mirror line is given. The 13 signatures stand: what was signed is the template and its
+samples, and no item, sample or generated value moves. Each entry carries a `SCOPE CORRECTED` note in
+`approvalNote`, visible to whoever reads a signature next. **Not a silent tidy.**
+
+**3. THE LOCATION HALF, and the check I nearly shipped was wrong.** `spansPresentIn` FILTERS to
+present spans, so a declaration resolving nowhere was silently dropped — and the widened option
+exemption would have inherited that. Now reported.
+
+**But the first version flagged `ENG-002-pp-12`, and that row was correct.** Its R4 declaration cites
+`lineRefs: [39, 40]`, and the span sits in the passage ACROSS the line break (`…danced only` /
+`once with Mrs. Hurst…`); the walk script paraphrases rather than quotes. **`checkItemChildFacing` is
+pure over the item and cannot see the passage, so it cannot tell a workaround from a correct
+citation.** Scoped to what it can judge: a PLACELESS declaration must resolve in the item; one
+carrying `lineRefs`/`passageRef` belongs to `check:line-refs`. **R149 firing on the check written to
+apply R149**, caught by the baseline diff.
+
+**AND DEFERRING TO `check:line-refs` IS WHY ANYONE RAN IT: IT HAS BEEN CRASHING SINCE `30d5f33`.**
+`bucket` was used 26 lines before its declaration — a temporal dead zone, thrown on the first item.
+**It is a CI step, and a crashing step is not a passing one**; nothing reported it because the output
+was a stack trace rather than a finding. Six days dead, in the gate that verifies where a child is
+sent.
+
+**REVIVED, IT REPORTS 794 BROKEN OF 864 PAIRS — 92% — INCLUDING 83 ON SERVING CONTENT.** I am not
+reporting those as content faults, because a 92% rate is R140's signal that the rule is the artefact:
+- *"both are required or neither"* contradicts the authored convention. `attractorLine: null` is a
+  POSITIVE declaration under Addendum 36's CONTENT NOWHERE ruling, and `defeaterLine: null` with
+  `defeatedByAbsence: true` is another. 693 of the 794 are `A-set / D-null / absence=null` — a
+  half-filled legacy backfill, not a defect.
+- *"defeaterLine comes before attractorLine"* assumes passage order is reasoning order. A child can
+  be pulled by line 36 and defeated by line 22.
+
+**83 of those sit on ENG-001 and ENG-028 — clusters she has read twice, which gate clean on
+`check:cluster`.** The rules need her ruling before the numbers mean anything, and **the check is
+left failing rather than quietly made to pass.**
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 

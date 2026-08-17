@@ -140,3 +140,37 @@ describe('option branch takes the stem branch\'s arguments (R148)', () => {
     expect(faults).toEqual([]);
   });
 });
+
+describe('a placeless declaration must resolve in the item (R152)', () => {
+  const base = { id: 'T', mechanic: 'select-one' };
+  const opts = [
+    { content: { label: 'A', value: 'One.' }, isCorrect: false },
+    { content: { label: 'B', value: 'Two.' }, isCorrect: true },
+  ];
+
+  it('reports an explanation span that resolves in NO field and claims no place', () => {
+    const faults = checkItemChildFacing({
+      ...base,
+      explanation: { walkScript: 'Look at line 41.', hintCore: 'Who?', quotes: [{ text: 'a span from another page' }] },
+      stem: { text: 'Read line 41. Why?' },
+      options: opts,
+    }).filter(isBlocking);
+    expect(faults.some((f) => f.detail.includes('appears in NO field'))).toBe(true);
+  });
+
+  it('does NOT report a span that cites a place — that is check:line-refs\' job', () => {
+    // ENG-002-pp-12 is the real case: an R4 declaration with lineRefs [39,40] whose walk script
+    // paraphrases. The span sits in the passage ACROSS a line break. This function is pure over the
+    // item and cannot see the passage, so it must not judge a citation it cannot verify.
+    const faults = checkItemChildFacing({
+      ...base,
+      explanation: {
+        walkScript: 'Look at line 41.', hintCore: 'Who?',
+        quotes: [{ text: 'a span from another page', lineRefs: [39, 40] }],
+      },
+      stem: { text: 'Read line 41. Why?' },
+      options: opts,
+    }).filter(isBlocking);
+    expect(faults.some((f) => f.detail.includes('appears in NO field'))).toBe(false);
+  });
+});
