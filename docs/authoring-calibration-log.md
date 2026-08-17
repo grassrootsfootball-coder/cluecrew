@@ -6044,6 +6044,61 @@ every run, and reviewable; at the CI line it is invisible, unexplained, and indi
 crash being swallowed. It is `declareMayBeEmpty()` (R61) applied one level out — to the exit code
 rather than to the population.
 
+## R156 — Two counts agreeing is not evidence the populations match; and mine matched anyway
+*Annie, 2026-08-17. Stating both rather than reconciling is why this surfaced.*
+
+**THE LISTS ARE IDENTICAL.** Her seven and mine are the same seven items, one role each:
+`ENG-001-WIW-10`, `ENG-001-WIW-14`, `ENG-002-pp-17`, `ENG-002-pp-19`, `ENG-004-AGG-03`,
+`ENG-004-AGG-08`, `ENG-014-TS-10`. **`TS-10` IS in mine** — it is not a live item outside the
+child-safety population. `WIW-19` is in neither, and its gate state confirms why: **0 blocking with
+declarations and 0 without, `stem.quotes` null. Nothing is being exempted, so it cannot be in a
+population defined by exemption.**
+
+**The "eight roles across six items with WIW-19 carrying two" was not my report**, and none of the
+four candidate explanations is true — the file I sent lists seven numbered items and seven `FIELD`
+rows, and contains no occurrence of `WIW-19`. Checked against the artefact rather than against my
+memory of it, which is the only reason it is settleable.
+
+**HER LESSON STANDS AND IS SHARPENED BY THE OUTCOME: two counts agreeing is not evidence the
+populations match.** Here two counts agreed AND the populations matched — but that was discovered,
+not assumed, and the discovery cost one query. **The counts agreeing would have been equally
+consistent with `TS-10` missing and something else present.** Stating both lists rather than
+reconciling to one number is what made the difference visible in either direction.
+
+**THE SECOND TIME ON THIS SAME LIST**, and both times the same shape: a number passed between three
+parties, plausible under two readings, believed because it was arithmetically consistent.
+
+## R157 — Within-span is one-ended by site and two-halved by content
+*Annie's ruling, 2026-08-17. The requirement is Cowork's; the principle settles one of mine.*
+
+**Her definition, and the framing was wrong rather than compromised:** *true, inside, irrelevant.*
+Only the first has a location. `wrong-scope` has TWO SITES — true at line X outside, answer at line Y
+inside. **Within-span's second half is a RELATION** — the option answers a different question — and
+the answer's location is the KEY's business, established by the walk script. **Asking the distractor
+note to carry it is asking the note to prove the key.**
+
+So the note needs the line where the option is true, plus a prose clause naming what it answers
+instead. Check for a *"rather than"* / *"instead of"* clause; **do not demand a number.**
+
+**`WITHIN_SPAN_SECOND_END_OPEN` IS NOT MINE TO CLOSE** — no check here requires a within-span note to
+name a second location, and the classification lives in Cowork's store. Said rather than built,
+because producing a change to look responsive would be the fault this register is about.
+
+**BUT HER REASONING SETTLES MY OPEN ADDENDUM 36 QUESTION** (R152), which is the same principle
+wearing a column name. `checkAttractorDefeater`'s *"both are required or neither"* demands a
+`defeaterLine` — a NUMBER — for exactly the population whose second half is a relation. Measured:
+
+- **748 of 864** options with an Addendum 36 line are half-filled and fire the rule.
+- **163 of those are `en-within-span-wrong-element`** — the largest single tag.
+- **101 of the 163 ALREADY CARRY a "rather than" or "instead of" clause** in their execution note.
+
+**Her test, the one that closed the 22: when a requirement fails a population whose notes already say
+the right thing, the requirement is wrong.** 62% here, and the rule is asking those notes for a
+number the diagnosis has no site for. 62 half-filled options sit on LIVE items.
+
+Still not repaired — the Addendum 36 rules remain hers to rule on, and this is the evidence for that
+ruling rather than a licence to act on it.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 
