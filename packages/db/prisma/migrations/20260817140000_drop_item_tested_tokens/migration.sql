@@ -1,0 +1,15 @@
+-- DROP `Item.testedTokens` (R159, David's ruling 2026-08-17).
+--
+-- It carried words on 13 items and NOTHING READ IT: `checkItemChildFacing` reads
+-- `stem.testedTokens`, which 0 items carried. A field that reads as protection and provides none is
+-- worse than absent — it is the one anyone trimming what looks redundant would keep.
+--
+-- CLEARED BEFORE DROPPING, per the ruling to check first. Of its 15 words: 8 never trip a ceiling,
+-- 5 are covered by option words, 1 by a declaration (ENG-008-RC-07 "agitation"), and 1 is covered by
+-- nothing — ENG-003-A-SP-06 "Dictionary", which passes on the role's single long-word allowance
+-- rather than on any exemption, and is recorded as a ninth ZERO-HEADROOM item beside the eight.
+-- All 13 items pass at 0 blocking and 0 warnings with the column already unread.
+--
+-- Misconception.testedTokens is a DIFFERENT column on a DIFFERENT table, never ruled on, and is not
+-- touched here.
+ALTER TABLE "Item" DROP COLUMN "testedTokens";

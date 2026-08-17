@@ -301,7 +301,17 @@ model Item {
   // item cites nothing", the exact coercion the absence rule forbids. Json? keeps null (absent)
   // distinct from [] (declared empty).
   lineRefs                Json?
-  testedTokens            Json?
+  /**
+   * `Item.testedTokens` REMOVED 2026-08-17 (R159, David's ruling). It carried words on 13 items and
+   * NOTHING READ IT — `checkItemChildFacing` reads `stem.testedTokens`, which 0 items carried. The
+   * check that cleared the deletion: of its 15 words, 8 never trip a ceiling, 5 are covered by
+   * option words, 1 by a declaration, and 1 (`ENG-003-A-SP-06` "Dictionary") is covered by nothing
+   * and passes on the role's long-word allowance rather than on any exemption — recorded as a ninth
+   * zero-headroom item beside the eight.
+   *
+   * A field that reads as protection and provides none is worse than absent: it is the one anyone
+   * trimming what looks redundant would keep.
+   */
   // COWORK'S draftSelfAssessment — A DRAFTING AGENT'S ASSESSMENT OF ITS OWN WORK, on 78 items.
   //
   // RENAMED FROM preReview/authoringPreReview (Cowork, ratified by David 2026-08-16). The test is
@@ -491,6 +501,12 @@ model Misconception {
    * "equilateral") — exempt from the long-word ceiling on THIS hint only,
    * the same bounding as headwordInOwnCard. Read by every gate that screens
    * the hint, so the exemption is stored once and honoured everywhere.
+   *
+   * RESTORED 2026-08-17. Deleted by an edit whose anchor guard I had disabled with
+   * `required=False` while removing `Item.testedTokens` — a different column, on a different table,
+   * never ruled on, holding 7 non-null values. `prisma migrate dev` refused and named it, which is
+   * the only reason it was caught. R87's escape hatch used carelessly does exactly what R87 exists
+   * to prevent.
    */
   testedTokens   String[]
   /**

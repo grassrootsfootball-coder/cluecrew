@@ -5770,6 +5770,13 @@ declarable, and **nobody is declaring them.** Cowork's recommendation stands on 
 that means nothing. The eight zero-headroom items become fixable by hand if they ever need it. They
 do not need it today.
 
+**A NINTH ZERO-HEADROOM ITEM, found by the R159 sweep and recorded here with the eight:**
+`ENG-003-A-SP-06` — **"Dictionary" in its walk script, covered by nothing.** Not by an option word
+(*"dictionery"* is the option; *"Dictionary"* is not), not by a declaration, and not by
+`Item.testedTokens`, which nothing reads. **It passes because it FITS the role's single long-word
+allowance, not because anything exempts it** — and it therefore has no headroom at all: one more long
+word in that walk script fails it with nothing to fall back on. Recorded, not repaired.
+
 **THE ONE-DIRECTIONAL GAP STAYS OPEN AND STAYS NAMED, so it is not discovered later as new:**
 explanation quotes are offered to explanation fields and to nothing else. `stem.quotes` reaches stem
 fields, walk scripts and now options; `explanation.quotes` reaches walk scripts only. Not fixed, and
@@ -6157,6 +6164,20 @@ as `check:line-refs` reading `stem.lineRefs` after R77 moved it.
 ## R159 — The unsourced-exemption population is ZERO, and my warning manufactured six
 *David, 2026-08-17. Separate the repairs before either.*
 
+**A MERGED LIST CANNOT NAME ITS WINNER — AND I COMMITTED THAT AT THREE DEPTHS INSIDE THE
+IMPLEMENTATION OF THE RULING MADE ABOUT EXACTLY THAT.** Recording a match against a merged list
+without checking **which member matched**, then **which word it was**, then **which role it was in**:
+
+1. *"the, is, to"* reported as exempted long words — length unchecked.
+2. Word cards warned, where `testedTokens` is the designed and only mechanism — role unchecked.
+3. Option words reported as an unsourced list — source unchecked.
+
+**The union-versus-ordering ruling was right, and the implementation proved it the hard way, on
+itself, three times.** Each fault was the same fault at one more level of the thing I was fixing.
+
+**AND THE POPULATION IS ZERO. My split was of a set that does not exist** — I would have taken both
+halves of "declarable" and "nothing to declare", and neither was real.
+
 **THE SIX SURVIVORS WERE ALL THE INSTRUMENT. Every one is exempted by OPTION WORDS.**
 
 `scriptTested = [...testedTokens, ...optionWords]` — a walk script may legitimately name an option's
@@ -6203,6 +6224,35 @@ I read `stem.quotes` on `WIW-19`, found null, and reported *"nothing is being ex
 carrying `explanation.quotes`; and `checkItemChildFacing` reads `stem.testedTokens` while 13 items
 carry `Item.testedTokens`. **Same shape every time: a field moved or was added at a second level, one
 reader kept reading the first, and the answer it gave was well-formed and about the wrong object.**
+
+## R160 — I disabled the guard and it deleted the wrong column
+*2026-08-17, deleting `Item.testedTokens`. Caught by Prisma naming the table.*
+
+**`required=False` IS AN ESCAPE HATCH AND I USED IT CARELESSLY ON THE FIRST ATTEMPT.** The anchor was
+`  testedTokens   String[]` — which is **`Misconception.testedTokens`**, a different column on a
+different table, never ruled on, carrying values. `edit_file` matched it and removed it **silently**,
+because I had told it not to assert.
+
+**The only thing that caught it was `prisma migrate dev` refusing and NAMING THE TABLE:**
+*"about to drop the column `testedTokens` on the **Misconception** table, which still contains 7
+non-null values."* Not a check of mine. Not a review. A tool declining to do something destructive
+and saying what it would have destroyed.
+
+**R87 EXISTS BECAUSE `str.replace` SILENTLY NO-OPS. `required=False` REINTRODUCES EXACTLY THAT** —
+and the failure is worse in this direction: a silent no-op leaves the file correct, while a silent
+match on the wrong anchor leaves it confidently wrong. **The guard did its job every other time
+today**, refusing a non-unique `border-radius` anchor and a mistyped `.crew-seg` anchor, writing
+nothing both times. The one edit where I switched it off is the one that did damage.
+
+Restored, with the reason recorded on the field. Verified: the column is back, its data never left
+(no migration ran against it), and the live schema now lacks `Item.testedTokens` and nothing else.
+`check:migration-replay` and `check:db-invariants` both hold.
+
+**THE DROP ITSELF WENT AHEAD AS RULED**, hand-written because `migrate dev` cannot confirm a
+data-loss drop non-interactively — and the SQL carries the clearance in its own comment: 8 words never
+trip, 5 covered by option words, 1 by a declaration, 1 (`ENG-003-A-SP-06` "Dictionary") covered by
+nothing and passing on the role's allowance. **Recorded as a ninth zero-headroom item beside the
+eight.**
 
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
