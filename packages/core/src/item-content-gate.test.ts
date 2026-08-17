@@ -100,3 +100,43 @@ describe('multi-quote stems (R136)', () => {
     expect(faults.some((f) => f.detail.includes('not in the text'))).toBe(true);
   });
 });
+
+describe('option branch takes the stem branch\'s arguments (R148)', () => {
+  const base = {
+    id: 'T', mechanic: 'select-one',
+    explanation: { walkScript: 'Look at line 41.', hintCore: 'Who?' },
+  };
+  const QUOTE = 'an ordinary observer and an extraordinary observer';
+  const opts = (v: string) => [
+    { content: { label: 'A', value: v }, isCorrect: false },
+    { content: { label: 'B', value: 'Two.' }, isCorrect: true },
+  ];
+
+  it('a stem-declared span covers an option that reproduces it', () => {
+    const faults = checkItemChildFacing({
+      ...base,
+      stem: { text: `Line 41 says ${QUOTE}. Why?`, quotes: [{ text: QUOTE }] },
+      options: opts(`He is ${QUOTE}.`),
+    }).filter(isBlocking);
+    expect(faults).toEqual([]);
+  });
+
+  it('an UNDECLARED span in an option still blocks — the exemption is not a blanket', () => {
+    const faults = checkItemChildFacing({
+      ...base, stem: { text: 'Line 41. Why?' }, options: opts(`He is ${QUOTE}.`),
+    }).filter(isBlocking);
+    expect(faults.some((f) => f.rule === 'long-words')).toBe(true);
+  });
+
+  it('a stem span the option does not use is NOT reported against it', () => {
+    // Both quotedSpans and exemptSpans are filtered to what is present. Filtering only the first
+    // made six items newly fail with "declares a quoted span that is not in the text" — the ban
+    // list had received the raw stem list and judged it against an option it was never about.
+    const faults = checkItemChildFacing({
+      ...base,
+      stem: { text: `Line 41 says ${QUOTE}. Why?`, quotes: [{ text: QUOTE }] },
+      options: opts('Something else entirely.'),
+    }).filter(isBlocking);
+    expect(faults).toEqual([]);
+  });
+});

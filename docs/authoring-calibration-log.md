@@ -5730,6 +5730,51 @@ library half stays: 26 triples over 68 entries are a real description of what th
 the four-way collapse and the zero-additions result are still true statements about the vocabulary —
 they are simply not evidence that a second party can reproduce it.
 
+## R148 — The option branch took one argument where the stem branch took four
+*David's ruling, 2026-08-16. Cowork's question, and the asymmetry decided it.*
+
+**IS THE EXEMPTION MEANT TO TRAVEL FROM `stem.quotes` TO OPTION TEXT? It was not travelling, and
+that was an accident.** The option loop passed `testedTokens` alone — no `quotedSpans`, no
+`exemptSpans`, no `passageNames` — so an option reproducing a span declared on its own stem was
+blocked **identically** to one where nothing was declared at all: same rule, same wording, no way to
+tell them apart.
+
+**`passageNames` is what settles it as accident rather than design.** That field exists so a
+child-facing string may name a character the passage names. **There is no reading under which an
+option may say *Bingley* only by luck of it being short.** The branch was written before the
+declaration machinery and never revisited.
+
+Now takes the same four. Spans are filtered to those actually present in the option
+(`spansPresentIn`, as the walk scripts already are), because a span this option did not use is not a
+broken claim.
+
+**RE-RUN OVER 1,032 ITEMS: 0 newly pass, 0 newly fail, 0 changed faults, 49 blocked before and after.**
+David predicted zero and was right — and predicted the blanking behaviour might bite the other way,
+which is worth recording as the thing that did NOT happen: **no item newly failed because an option
+declaration merged two sentences.**
+
+**BUT THE FIRST RUN SAID SIX NEWLY FAILED, AND ALL SIX WERE MINE.** `ENG-001-WIW-14`, `-WIW-18`
+(both LIVE), `ENG-002-pp-11`, `-13`, `-17`, `-19`, every one reporting *"declares a quoted span that
+is not in the text"*. **I filtered `quotedSpans` and left `exemptSpans` raw**, so the ban-list check
+received the whole stem list and judged it against an option it was never about. **The same shape as
+the multi-quote fault four hours earlier: a declared list compared against a string it was not a
+claim about** — and it would have read as six real content faults, two of them on live items, if the
+before/after had not been captured.
+
+**Taking the baseline BEFORE the edit is what made that legible.** A re-run alone would have shown 55
+blocked items and no way to tell which were new.
+
+**WHAT THE RULING DOES NOT DO, recorded because it will be misread later:** it makes the 266
+declarable, and **nobody is declaring them.** Cowork's recommendation stands on its own reasoning —
+296 of 297 are borrowings rather than quotations, and a script-written declaration is a true claim
+that means nothing. The eight zero-headroom items become fixable by hand if they ever need it. They
+do not need it today.
+
+**THE ONE-DIRECTIONAL GAP STAYS OPEN AND STAYS NAMED, so it is not discovered later as new:**
+explanation quotes are offered to explanation fields and to nothing else. `stem.quotes` reaches stem
+fields, walk scripts and now options; `explanation.quotes` reaches walk scripts only. Not fixed, and
+not a fault today because no stem quotes a walk script.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 

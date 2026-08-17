@@ -188,11 +188,45 @@ export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
     }
   }
 
-  // Every option value.
+  /**
+   * EVERY OPTION VALUE — AND THE SAME FOUR ARGUMENTS THE STEM BRANCH TAKES (David's ruling,
+   * 2026-08-16).
+   *
+   * This loop passed `testedTokens` alone: no `quotedSpans`, no `exemptSpans`, no `passageNames`. So
+   * an option reproducing a span DECLARED ON ITS OWN STEM was blocked identically to one where
+   * nothing was declared at all — same rule, same wording, no way to tell the two apart.
+   *
+   * **AN ACCIDENT, NOT A DESIGN, AND `passageNames` IS WHAT SETTLES IT.** That field exists so a
+   * child-facing string may name a character the passage names. There is no reading under which an
+   * option may say *Bingley* only by luck of it being short. This branch was written before the
+   * declaration machinery and never revisited, which is why it took one argument where the stem
+   * branch takes four.
+   *
+   * SPANS ARE FILTERED TO THOSE ACTUALLY IN THIS OPTION (`spansPresentIn`, as the walk scripts
+   * already are). The declaration was made about the stem; a span this option did not use is not a
+   * broken claim, and passing the raw list would report every unused quote as a fault on every
+   * option — the ENG-002-pp-17 shape.
+   */
   for (const option of item.options) {
     for (const [path, text] of textsFrom(option.content, '')) {
       failures.push(
-        ...checkChildFacingText({ role: 'item-option', label: `item:${item.id} option.${path}`, text, testedTokens }),
+        ...checkChildFacingText({
+          role: 'item-option',
+          label: `item:${item.id} option.${path}`,
+          text,
+          quotedSpans: spansPresentIn(text, stemQuotes),
+          // FILTERED TOO, PER CEILING. `quotedSpans` was filtered and this was not, so the ban-list
+          // check received the RAW stem list and reported every span the option did not use as
+          // "not in the text" — six items newly failed, all of them false. The same shape as the
+          // multi-quote fault: a declared list compared against a string it was never about.
+          exemptSpans: stemExemptSpans && {
+            sentenceCap: spansPresentIn(text, stemExemptSpans.sentenceCap ?? []),
+            banList: spansPresentIn(text, stemExemptSpans.banList ?? []),
+            vocabularyCeiling: spansPresentIn(text, stemExemptSpans.vocabularyCeiling ?? []),
+          },
+          testedTokens,
+          passageNames,
+        }),
       );
     }
   }
