@@ -5950,6 +5950,55 @@ reporting those as content faults, because a 92% rate is R140's signal that the 
 `check:cluster`.** The rules need her ruling before the numbers mean anything, and **the check is
 left failing rather than quietly made to pass.**
 
+## R153 — A step that cannot run and a step that finds nothing are the same colour
+*Annie's ruling, 2026-08-17. Recorded above the 794, which is where she put it.*
+
+**`check:line-refs` threw on its first item for six days**, in CI, in the gate that verifies where a
+child is sent. `bucket` used 26 lines before its declaration — a temporal dead zone, introduced by
+the commit that added the Addendum 36 loop. **Nothing reported it because the output was a stack
+trace rather than a finding**, and it was only run at all because R152 deferred passage-citation
+verification to it.
+
+**THE CLASS: a step that CANNOT RUN and a step that FINDS NOTHING are indistinguishable at a glance.**
+Every other blindness in this register is a check looking at the wrong thing — wrong scope, stale
+proxy, unreported denominator, a population nothing creates. This one never looked at all, and the
+distance between "0 findings" and "0 lines executed" is invisible unless someone reads the log.
+
+**ASKED ONCE, AS RULED — AND THE ANSWER CORRECTS MY OWN FRAMING.** 71 CI steps: **69 fail the build**
+on any non-zero exit, crash included. So `check:line-refs` did NOT report green — **CI has been RED on
+that step for six days and nobody read it.** That is a different fault from a green tick and the
+weaker one to have: the signal was there and unattended.
+
+**The two steps that genuinely report green whatever happens are BOTH MINE, added this session:**
+`check:serving-path` (`|| true`) and `check:retag-releases` (`continue-on-error`). I wrote them hours
+after recording R60 and R61, for defensible reasons — an incomplete population and a delivery-dependent
+input — and they are still the only two places where a crash is indistinguishable from a pass. **The
+reasons were good and the shape is the one the register spends a hundred entries on.** Left as they
+are and named here, because a fail-open step nobody has written down is the actual hazard.
+
+## R154 — Seven, not eight, and every one of them resolves
+*For the reviewer, 2026-08-17. `gate-risk-declarations-for-annie.txt`.*
+
+372 English items screened by running the real gate twice — declarations honoured, then stripped —
+and reporting the difference. **Seven items pass the child-facing gate ONLY because a declaration
+exempts a word the ceiling exists to exclude.** Two are LIVE (`ENG-001-WIW-10`, `ENG-001-WIW-14`).
+
+**The count is SEVEN and she asked for eight**, which is stated rather than reconciled to her number:
+the eighth may be a row I cannot see, a different definition of the risk, or a miscount on either
+side. The seven are listed with the field, the rule that would fire, the run as a child reads it, the
+word, and the passage line it is claimed from.
+
+**AND THE HEADLINE FINDING IS THAT NONE OF THEM IS THE FAULT SHE DESCRIBED.** Her framing was *"a word
+the reading-age gate exists to exclude, exempted by a declaration nobody made."* **Every one of the
+seven declarations resolves**: `contemptuous` at line 23, `fastidious` at 57, `ordinary`/
+`extraordinary` at 35 and 41, `imagination` at 16, `alacrity` at 53. These are quotations of the
+passage, declared, and doing exactly what R23 built them to do.
+
+**The per-fault comparison is why the number is trustworthy.** The first pass excluded any item that
+also failed for an unrelated reason, and would have under-reported; computing the delta fault-by-fault
+catches an exempted word on an item failing for something else. Worth stating because a screen that
+silently drops its hardest rows is the fault this register is mostly about.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 
