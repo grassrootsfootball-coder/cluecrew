@@ -6316,6 +6316,61 @@ for a reason nobody chose" is a hypothesis that costs one query to refute and wo
 invisible from either side alone — Cowork's pattern is widening, and only this store knows whether
 this store cares.
 
+## R163 — ENG-003 gates clean, and 18 of its 34 items are silently outside the gate
+*Annie's ruling on item kind as a declared property, 2026-08-17. The other half of the id-shape question, and this half is not clean.*
+
+**THE ID SHAPE WAS NOT THE REASON (R162). THIS IS PART OF THE REASON.**
+
+`check:line-refs` opens with `if (!passageRef) continue;` — **18 of ENG-003's 34 items have no
+`passageRef` and are skipped without a word.** Not reported as exempt, not counted as unscreened, not
+named anywhere in its output: `PU-01…09` and `SP-01…09` appear nowhere, in any category.
+
+**And the 16 that ARE in the population contribute nothing to what it verifies.** They carry a
+`passageRef`, so they are counted in *"354 items citing a passage"* — but `lineRefs` is **null on all
+34 ENG-003 items**, so they cite no lines. **Of the 354, only 313 cite anything; 41 are in the
+population and citing nothing**, and the headline calls all 354 "items citing a passage".
+
+So ENG-003's clean gate has three different causes and the report separates none of them:
+- **18 items** genuinely outside a passage-based check, silently;
+- **16 items** inside its population and contributing no citation to check;
+- **34 items** outside every ledger-based check (`mechanismLedger` is null on all of them).
+
+**IT IS ALSO NOT WRONG — WHICH IS THE POINT.** A punctuation-spot item has no passage by design and a
+cloze cites a gap, not a line. **NOT APPLICABLE is the correct verdict for all 18, and the gate has no
+way to say it.** Her ruling is the fix: a check DECLARES which item kinds it governs, a cluster
+DECLARES its kind, and not-applicable becomes a stated verdict rather than a `continue`.
+
+**This is R61 with the polarity reversed.** R61 was a check correctly finding nothing in a population
+that legitimately does not exist, and the fix was `declareMayBeEmpty()`. Here the population exists,
+the check is correct to ignore it, **and the silence is indistinguishable from coverage.** `continue`
+is the `|| true` of a loop body.
+
+Reported, not repaired: the declaration is Cowork's ruling to land on both sides and a unilateral
+kinds vocabulary here would be a second thing to reconcile.
+
+## R164 — `gapIndex`: the stores already disagree, and the migration closes it
+*Cowork, 2026-08-17. Sixteen cloze items hold a gap index in `lineRefs` — on their side.*
+
+**NOT ON THIS SIDE.** All 16 cloze items here carry `lineRefs: null` and the gap in
+**`stem.gapRef`** (`ENG-003-A-CZ-A1 gapRef=1`, `CZ-B4 gapRef=4`). The value never entered `lineRefs`
+in this store.
+
+**So nothing breaks when it moves, and nothing starts working — because nothing here reads it.**
+`stem.gapRef` is referenced in exactly two scripts: `audit-declarations.ts`, which tests its
+MALFORMATIONS as fixtures (`gapRef → gapRefs`, `gapRef: 99`), and a comment in
+`import-english-items.ts` naming *"the cloze lineRefs/gapRef mismatch"* as a known defect class.
+**No gate reads it, and the SpaG cloze engine renders stem-plus-options without it.**
+
+**Her point stands exactly and is confirmed from this side: a window check against gap 3 passes or
+fails for reasons unconnected to anything.** Here it does not even do that — it passes because
+`lineRefs` is null, so there is no window to check. The gate reaches those 16 items and verifies
+nothing about them, which is R163's second cause on the same rows.
+
+**The migration brings the two stores INTO agreement** rather than away from it: Cowork's `gapIndex`
+will hold what `stem.gapRef` already holds here. The thing worth doing on this side is the reverse of
+a repair — **when `gapIndex` arrives, decide whether a cloze gap should be CHECKED at all**, because
+today nothing verifies that gap 4 exists in a passage with three gaps.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 
