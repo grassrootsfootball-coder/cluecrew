@@ -6254,6 +6254,56 @@ trip, 5 covered by option words, 1 by a declaration, 1 (`ENG-003-A-SP-06` "Dicti
 nothing and passing on the role's allowance. **Recorded as a ninth zero-headroom item beside the
 eight.**
 
+## R161 — REFUSALS_NOT_CHECKS: the refusal knows what the check was not asking
+*Cowork's formulation, recorded here because two of the five instances are mine.*
+
+**A CHECK runs where someone remembered to put it and answers the question it was written for. A
+REFUSAL fires at the moment of the destructive act, on the real arguments, and must NAME WHAT IT IS
+PROTECTING IN ORDER TO REFUSE — so it reports the blast radius for free.**
+
+Five this week, and in every one the refusal knew something no check was asking:
+
+| refusal | what it named that nothing was checking |
+|---|---|
+| `prisma migrate dev` | **the TABLE** — that my edit had removed `Misconception.testedTokens`, not `Item`'s, and that it held 7 non-null values (R160) |
+| the import door on `AGG-08` | **the WORDS** — *ordinary, extraordinary* — which turned out to be the passage's own, and the pair her entry turns on |
+| the gate on `ML-02` | **the missing vault entry**, so a dominant-sense claim had no evidence behind it |
+| `tools/edit.py` ×2 | **the anchor count** — 3 matches for `border-radius: 4px`, 0 for a mistyped `.crew-seg` — writing nothing both times |
+| the dependent-without-bearing assert | **a half-updated population**, refusing before it could be reported as complete |
+
+**MINE ARE THE IMPORT DOOR AND `tools/edit.py`**, and the second is the sharpest instance in both
+directions: it refused correctly twice today, and the one edit where I DISABLED it deleted the wrong
+column silently. **The same mechanism, proving the rule by working and by being switched off, within
+an hour.**
+
+**Why this outranks a check, stated as the design consequence:** a check must be pointed at a
+population somebody predicted. A refusal is standing in the path of the act itself, so it cannot be
+pointed at the wrong population — the arguments in front of it ARE the population. That is why
+`prisma` could name a table nobody was thinking about, and why every instrument in this register that
+went quiet went quiet by being aimed somewhere else.
+
+## R162 — ENG-003's id shape, checked before it was assumed
+*Cowork, 2026-08-17: the SpaG registry pattern is widening; 34 items may be passing for a reason nobody chose.*
+
+**Checked, and nothing on this side parses an English id positionally.** The bank genuinely holds two
+shapes — **338 items at 4 segments** (`ENG-001-WIW-01`) and **34 at 5** (`ENG-003-A-CZ-A1`, where the
+tail is a grid reference rather than an index) — and every path that touches them is shape-agnostic:
+
+- `check:cluster` scopes with `startsWith('ENG-003-')`, which is prefix matching, not segmentation.
+- Ordering comes from **stored `clusterPosition`**, populated on all 34, never derived from the id.
+- The only regexes over English ids are two **filename** filters (`/^ENG-\d+.*\.json$/`), permissive
+  by the `.*`.
+- `itemId.slice(0, 8)` in the admin actions is display truncation in a skip message, not parsing.
+
+**So ENG-003 passes for a reason that WAS chosen** — prefix scope and a stored position — rather than
+by accident of the ids happening to fit. Reported rather than repaired, because there is nothing to
+repair.
+
+**Worth keeping: the question was worth asking even though the answer was clean.** "34 items passing
+for a reason nobody chose" is a hypothesis that costs one query to refute and would have been
+invisible from either side alone — Cowork's pattern is widening, and only this store knows whether
+this store cares.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 
