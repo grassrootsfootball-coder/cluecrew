@@ -6531,6 +6531,39 @@ instant: there is no cost to failing loudly, and a gap number is CHILD-FACING �
 verified clean. **A restore that changes more than it restores is not a restore**, and `content/passages`
 is the one directory whose contents must not be altered by us at all.
 
+## R169 — Every signature that carries a figure names its unit: 33 of 33
+*Annie's rule, 2026-08-17: a figure carried on a signature names its unit, because a signature is read by someone who was not in the conversation.*
+
+**COUNTED ACROSS ALL 61 SIGNATURES** — 46 AttributionEvents plus 15 `NvrTemplateSignature` rows:
+
+| | count |
+|---|---|
+| carry a QUANTITY figure | **33** |
+| of those, name a unit | **33** |
+| **bare number, no unit** | **0** |
+| carry no quantity figure at all | 28 |
+
+**The six SpaG depth notes are not a residue — they are the rule already being followed.** Every one
+reads *"24 verified sentences (6/rung)"*, *"12 sentences, 4/rung"*, *"11 keys, 3–4/tier"*. R140 found
+the AUDIT comparing sentences against items; **the notes themselves named their unit correctly the
+whole time.** The fault was never in the signatures.
+
+**AND MY FIRST COUNT WAS WRONG IN THE SAME WAY R168 WAS, ONE HOUR LATER.** It reported **13 NVR
+signatures carrying a bare number** — every one of which reads *"I confirm the folding-net template at
+fingerprint `16e5d71d8aed4552` … written review 2026-08-…"*. **The only digits are a HASH and a DATE.**
+Neither is a quantity and neither needs a unit; my matcher counted "contains a digit" and called it "carries
+a figure".
+
+**Third instance today of an instrument measuring something ADJACENT to the property under test** —
+counting `___` instead of `___(n)___`, matching a merged token list without checking which member
+matched, and now counting digits instead of quantities. **Each time the number was alarming, precise,
+and about the wrong thing**, and each time the only thing that caught it was reading the rows the
+number was built from.
+
+The corrected matcher strips fingerprints, ISO dates, bare years and `@version` before asking whether
+a figure is present. Reported, not built into a check: the answer is 0 and a gate over a clean
+population of 61 is not worth a CI step.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 
