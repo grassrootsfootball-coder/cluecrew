@@ -6439,6 +6439,45 @@ If item-level tokens should carry, the column comes back and this reverts.
 sentence is in the stem and the vehicle is context for the author — but it is why these 16 sat in a
 passage-anchored gate's population for months while contributing nothing to it.
 
+## R167 — `carriedAt` was prose, and two stale destinations were invisible by reading
+*David's ruling, 2026-08-17. Both entries corrected as one ruling, and the field type with them.*
+
+**THE JOIN NOBODY WAS CHECKING.** The registry says where each of Cowork's fields lands; the schema
+says which columns exist; **nothing connected them.** Two entries were wrong and neither could be
+seen by reading:
+
+| entry | said | truth |
+|---|---|---|
+| `item.testedTokens` | `Item.testedTokens` | **column DROPPED** (R159). Found by a compile error on a WRITE in the import door — it was a **declared carriage destination**, so the drop silently broke the path for a field Cowork still sends. |
+| `lineRefs` | `stem.lineRefs`, *"migration is queued"* | **R77 MOVED it** to `Item.lineRefs` and the door has written there since. The registry described the pre-migration destination. |
+
+**A destination that does not exist, one that moved, and one that is fine look identical when all
+three are sentences.** Structured — `{kind, table, column, path}` — they become one assertion.
+
+**50 destinations, all resolving.** `lineRefs` corrected to `col('Item','lineRefs')` **openly**, with
+the old claim recorded on it: correcting a declaration quietly is what the registry exists to prevent.
+
+**THE TWO FAILURES ARE CAUGHT BY DIFFERENT ARMS, WHICH IS WHY BOTH EXIST.** Fault-injected:
+- a **dropped or renamed** column fails the forward arm — *"1 destination that does not exist"*;
+- a **moved** column does NOT fail it — reverting `lineRefs` to `stem.lineRefs` still resolves,
+  because `Item.stem` exists and the path inside it is data. **It fails the REVERSE arm instead:**
+  *"Item.lineRefs neither declared nor platform-owned."* A one-armed check would have caught the
+  column I dropped and missed the one R77 moved.
+
+**THE 17 PLATFORM-OWNED COLUMNS ARE DECLARED, so their absence reads as a decision.** The database is
+authoritative for status, pool, review provenance, similarity and calibration, and a carriage
+registry has no business naming them. Listed in `PLATFORM_OWNED` rather than left as unexplained
+gaps someone reads as missing coverage.
+
+**AND THE LIMIT PRINTS EVERY RUN: this asserts a destination RESOLVES, never that it is the RIGHT
+one.** `Item.lineRefs` and `Item.passageFlag` both exist; only a reader knows which a field belongs
+in. The registry being wrong about WHICH column is still invisible.
+
+**One line rather than an entry: my own join query reported three false positives** — two `carriedAt`
+strings carrying trailing prose, two JSON paths read as columns. **A matcher over prose finds what
+prose lets it find**, which is the same fault as the free-text field, one layer up, and it is why the
+JSON-path case is now expressed rather than written into a sentence.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 

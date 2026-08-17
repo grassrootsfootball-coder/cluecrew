@@ -33,11 +33,54 @@ export type KeyDisposition =
   /** Deliberately not stored. `reason` is required and is the whole content of the decision. */
   | 'NOT_CARRIED';
 
+/**
+ * WHERE A VALUE LANDS — STRUCTURED, NOT PROSE (David's ruling, 2026-08-17).
+ *
+ * `carriedAt` was a free-text string, and that is why two stale destinations were invisible:
+ * `Item.testedTokens` named a column that had been DROPPED, and `lineRefs` named `stem.lineRefs`
+ * after R77 moved it to `Item.lineRefs` — the door writing to the new place while the registry
+ * still described the old one. **Neither could be seen by reading the registry**, which is the
+ * finding: a destination that does not exist and a destination that moved look exactly like a
+ * destination that is fine, when both are sentences.
+ *
+ * Structured, they become one check: **every destination must resolve against the live schema.**
+ *
+ * The JSON-path case is EXPRESSED rather than written into prose — `stem.text` is a path inside
+ * `Item.stem`, not a column called `stem.text`, and a matcher over prose could not tell those
+ * apart. That was the third instance of the same fault, one layer up: my own join query reported
+ * three false positives because it matched strings, two of which carried trailing commentary and
+ * two of which were paths.
+ */
+export type Destination =
+  /** A column of its own. `Item.draftingMethod`. */
+  | { kind: 'column'; table: DestTable; column: string; note?: string }
+  /** A path inside a JSON column. `Item.stem` → `text`. */
+  | { kind: 'json'; table: DestTable; column: string; path: string; note?: string }
+  /** A relation rather than a column on this row. `ItemOption` rows hanging off the item. */
+  | { kind: 'relation'; table: DestTable; note?: string };
+
+export type DestTable = 'Item' | 'ItemOption';
+
+export const col = (table: DestTable, column: string, note?: string): Destination =>
+  ({ kind: 'column', table, column, ...(note ? { note } : {}) });
+export const json = (table: DestTable, column: string, path: string, note?: string): Destination =>
+  ({ kind: 'json', table, column, path, ...(note ? { note } : {}) });
+export const relation = (table: DestTable, note?: string): Destination =>
+  ({ kind: 'relation', table, ...(note ? { note } : {}) });
+
+/** Human-readable, for reports. Derived FROM the structure, never the source of it. */
+export function destinationLabel(d: Destination): string {
+  const base = d.kind === 'json' ? `${d.table}.${d.column}.${d.path}`
+    : d.kind === 'relation' ? `${d.table} rows`
+      : `${d.table}.${d.column}`;
+  return d.note ? `${base} — ${d.note}` : base;
+}
+
 export interface CoworkKeyRule {
   key: string;
   disposition: KeyDisposition;
   /** Where the value ends up. Required for MAPPED and CARRIED. */
-  carriedAt?: string;
+  carriedAt?: Destination;
   /** Why it is not stored. Required for NOT_CARRIED. */
   reason?: string;
   /**
@@ -52,16 +95,16 @@ export type CoworkLevel = 'item' | 'stem' | 'explanation' | 'options[]';
 
 export const COWORK_ITEM_KEYS: Readonly<Record<CoworkLevel, readonly CoworkKeyRule[]>> = {
   item: [
-    { key: 'itemId', disposition: 'MAPPED', carriedAt: 'Item.id' },
-    { key: 'questionTypeId', disposition: 'MAPPED', carriedAt: 'Item.questionTypeId' },
-    { key: 'difficultyTier', disposition: 'MAPPED', carriedAt: 'Item.difficultyTier' },
-    { key: 'stem', disposition: 'MAPPED', carriedAt: 'Item.stem' },
-    { key: 'explanation', disposition: 'MAPPED', carriedAt: 'Item.explanation' },
-    { key: 'options', disposition: 'MAPPED', carriedAt: 'ItemOption rows' },
+    { key: 'itemId', disposition: 'MAPPED', carriedAt: col('Item', 'id') },
+    { key: 'questionTypeId', disposition: 'MAPPED', carriedAt: col('Item', 'questionTypeId') },
+    { key: 'difficultyTier', disposition: 'MAPPED', carriedAt: col('Item', 'difficultyTier') },
+    { key: 'stem', disposition: 'MAPPED', carriedAt: col('Item', 'stem') },
+    { key: 'explanation', disposition: 'MAPPED', carriedAt: col('Item', 'explanation') },
+    { key: 'options', disposition: 'MAPPED', carriedAt: relation('ItemOption') },
     {
       key: 'authoredBy',
       disposition: 'MAPPED',
-      carriedAt: 'Item.authoredBy',
+      carriedAt: col('Item', 'authoredBy'),
       // The importer used to hardcode 'ai-draft:cowork-okafor-v1' and ignore this field. It
       // happened to be the value in all 96 files, so a guess that matched hid the fact that a
       // provenance column was being written from a literal rather than from the source.
@@ -69,14 +112,23 @@ export const COWORK_ITEM_KEYS: Readonly<Record<CoworkLevel, readonly CoworkKeyRu
     {
       key: 'passageRef',
       disposition: 'CARRIED',
-      carriedAt: 'stem.passageRef — item level on Cowork; the manifest reports the difference',
+      carriedAt: json('Item', 'stem', 'passageRef', 'item level on Cowork; the manifest reports the difference'),
     },
     {
       key: 'lineRefs',
-      disposition: 'CARRIED',
-      carriedAt: 'stem.lineRefs — RULED item level; migration is queued and measured by the manifest',
+      /**
+       * CORRECTED 2026-08-17 (David's ruling). This named `stem.lineRefs` and said the migration was
+       * "queued" — **R77 moved it to `Item.lineRefs` and the import door has written there since.**
+       * The registry described the pre-migration destination while the door used the new one, and
+       * nothing connected the two, so it read as current for as long as it was prose.
+       *
+       * Corrected openly rather than quietly: a declaration changed in silence is what the registry
+       * exists to prevent.
+       */
+      disposition: 'MAPPED',
+      carriedAt: col('Item', 'lineRefs', 'R77 moved this off the stem; the door writes here'),
     },
-    { key: 'orderAnchor', disposition: 'CARRIED', carriedAt: 'stem.orderAnchor' },
+    { key: 'orderAnchor', disposition: 'CARRIED', carriedAt: json('Item', 'stem', 'orderAnchor') },
     {
       key: 'misconceptions',
       disposition: 'NOT_CARRIED',
@@ -89,23 +141,23 @@ export const COWORK_ITEM_KEYS: Readonly<Record<CoworkLevel, readonly CoworkKeyRu
     {
       key: 'preReview',
       disposition: 'MAPPED',
-      carriedAt: 'Item.draftSelfAssessment (+ draftSelfAssessmentHash, computed here)',
+      carriedAt: col('Item', 'draftSelfAssessment', '+ draftSelfAssessmentHash, computed here'),
       // AUTHORING METADATA, not review. Both of Cowork's verdict values mean a human has not
       // looked. check:review-queries fences the column off from anything answering "has this
       // been reviewed"; the name alone is not the control.
     },
-    { key: 'clusterPosition', disposition: 'MAPPED', carriedAt: 'Item.clusterPosition — serve order, file position' },
+    { key: 'clusterPosition', disposition: 'MAPPED', carriedAt: col('Item', 'clusterPosition', 'serve order, file position') },
     // Cowork now sends the POST-RENAME names (R79). `draftingOrder` above stays for the older
     // deliveries; both land on the same column.
-    { key: 'draftingMethod', disposition: 'MAPPED', carriedAt: 'Item.draftingMethod' },
-    { key: 'itemModel', disposition: 'MAPPED', carriedAt: 'Item.itemModel' },
+    { key: 'draftingMethod', disposition: 'MAPPED', carriedAt: col('Item', 'draftingMethod') },
+    { key: 'itemModel', disposition: 'MAPPED', carriedAt: col('Item', 'itemModel') },
     // Carried by the backfill since 2026-08-16; the IMPORT door never named them, so a re-emission
     // that includes them was refused. Same columns, now reachable from both routes.
-    { key: 'banListException', disposition: 'MAPPED', carriedAt: 'Item.banListException' },
-    { key: 'banListExceptionResolved', disposition: 'MAPPED', carriedAt: 'Item.banListExceptionResolved' },
-    { key: 'passageFlag', disposition: 'MAPPED', carriedAt: 'Item.passageFlag' },
-    { key: 'r4Note', disposition: 'MAPPED', carriedAt: 'Item.r4Note' },
-    { key: 'stemRedraft', disposition: 'MAPPED', carriedAt: 'Item.stemRedraft' },
+    { key: 'banListException', disposition: 'MAPPED', carriedAt: col('Item', 'banListException') },
+    { key: 'banListExceptionResolved', disposition: 'MAPPED', carriedAt: col('Item', 'banListExceptionResolved') },
+    { key: 'passageFlag', disposition: 'MAPPED', carriedAt: col('Item', 'passageFlag') },
+    { key: 'r4Note', disposition: 'MAPPED', carriedAt: col('Item', 'r4Note') },
+    { key: 'stemRedraft', disposition: 'MAPPED', carriedAt: col('Item', 'stemRedraft') },
     {
       key: 'testedTokens',
       disposition: 'NOT_CARRIED',
@@ -120,17 +172,17 @@ export const COWORK_ITEM_KEYS: Readonly<Record<CoworkLevel, readonly CoworkKeyRu
         + 'dead reader, not about the field being unwanted. If item-level tokens should carry, the '
         + 'column comes back and this reverts.',
     },
-    { key: 'importDoorFix', disposition: 'MAPPED', carriedAt: 'Item.importDoorFix' },
-    { key: 'draftSelfAssessment', disposition: 'MAPPED', carriedAt: 'Item.draftSelfAssessment' },
+    { key: 'importDoorFix', disposition: 'MAPPED', carriedAt: col('Item', 'importDoorFix') },
+    { key: 'draftSelfAssessment', disposition: 'MAPPED', carriedAt: col('Item', 'draftSelfAssessment') },
     {
       key: 'banListException_SHAPE_NOTE',
       disposition: 'NOT_CARRIED',
       ruling: 'PROPOSED',
       reason: 'A note about the SHAPE of banListException, not a fact about the item.',
     },
-    { key: 'tierRationale', disposition: 'MAPPED', carriedAt: 'Item.tierRationale' },
-    { key: 'sourcedFrom', disposition: 'MAPPED', carriedAt: 'Item.sourcedFrom' },
-    { key: 'mechanismLedger', disposition: 'MAPPED', carriedAt: 'Item.mechanismLedger' },
+    { key: 'tierRationale', disposition: 'MAPPED', carriedAt: col('Item', 'tierRationale') },
+    { key: 'sourcedFrom', disposition: 'MAPPED', carriedAt: col('Item', 'sourcedFrom') },
+    { key: 'mechanismLedger', disposition: 'MAPPED', carriedAt: col('Item', 'mechanismLedger') },
     {
       key: 'draftingMethod_SHAPE_NOTE',
       disposition: 'NOT_CARRIED',
@@ -178,9 +230,9 @@ export const COWORK_ITEM_KEYS: Readonly<Record<CoworkLevel, readonly CoworkKeyRu
     },
   ],
   stem: [
-    { key: 'text', disposition: 'MAPPED', carriedAt: 'stem.text' },
-    { key: 'prompt', disposition: 'MAPPED', carriedAt: 'stem.prompt' },
-    { key: 'quotes', disposition: 'MAPPED', carriedAt: 'stem.quotes' },
+    { key: 'text', disposition: 'MAPPED', carriedAt: json('Item', 'stem', 'text') },
+    { key: 'prompt', disposition: 'MAPPED', carriedAt: json('Item', 'stem', 'prompt') },
+    { key: 'quotes', disposition: 'MAPPED', carriedAt: json('Item', 'stem', 'quotes') },
     {
       key: '_previousQuotes',
       disposition: 'NOT_CARRIED',
@@ -189,14 +241,14 @@ export const COWORK_ITEM_KEYS: Readonly<Record<CoworkLevel, readonly CoworkKeyRu
         + 'that failed the child-facing gate). Same class as every other _previous shadow: the '
         + 'current declaration is the claim and the supersession belongs in an attribution event.',
     },
-    { key: 'testedTokens', disposition: 'MAPPED', carriedAt: 'stem.testedTokens' },
-    { key: 'techniqueKey', disposition: 'MAPPED', carriedAt: 'stem.techniqueKey' },
-    { key: 'answerShape', disposition: 'MAPPED', carriedAt: 'stem.answerShape' },
-    { key: 'segmentsInOptions', disposition: 'MAPPED', carriedAt: 'stem.segmentsInOptions' },
-    { key: 'passageNames', disposition: 'MAPPED', carriedAt: 'stem.passageNames' },
+    { key: 'testedTokens', disposition: 'MAPPED', carriedAt: json('Item', 'stem', 'testedTokens') },
+    { key: 'techniqueKey', disposition: 'MAPPED', carriedAt: json('Item', 'stem', 'techniqueKey') },
+    { key: 'answerShape', disposition: 'MAPPED', carriedAt: json('Item', 'stem', 'answerShape') },
+    { key: 'segmentsInOptions', disposition: 'MAPPED', carriedAt: json('Item', 'stem', 'segmentsInOptions') },
+    { key: 'passageNames', disposition: 'MAPPED', carriedAt: json('Item', 'stem', 'passageNames') },
   ],
   explanation: [
-    { key: 'walkScript', disposition: 'MAPPED', carriedAt: 'explanation.walkScript' },
+    { key: 'walkScript', disposition: 'MAPPED', carriedAt: json('Item', 'explanation', 'walkScript') },
     {
       key: '_previousWalkScript',
       disposition: 'NOT_CARRIED',
@@ -204,40 +256,40 @@ export const COWORK_ITEM_KEYS: Readonly<Record<CoworkLevel, readonly CoworkKeyRu
       reason: 'The walk script a redraft replaced. Underscore-prefixed by Cowork; the current script '
         + 'is the claim and the supersession belongs in an attribution event.',
     },
-    { key: 'hintCore', disposition: 'MAPPED', carriedAt: 'explanation.hintCore' },
-    { key: 'quotes', disposition: 'MAPPED', carriedAt: 'explanation.quotes' },
+    { key: 'hintCore', disposition: 'MAPPED', carriedAt: json('Item', 'explanation', 'hintCore') },
+    { key: 'quotes', disposition: 'MAPPED', carriedAt: json('Item', 'explanation', 'quotes') },
   ],
   'options[]': [
-    { key: 'label', disposition: 'MAPPED', carriedAt: 'ItemOption.content.label' },
-    { key: 'content', disposition: 'MAPPED', carriedAt: 'ItemOption.content.value' },
-    { key: 'isCorrect', disposition: 'MAPPED', carriedAt: 'ItemOption.isCorrect' },
-    { key: 'misconceptionId', disposition: 'MAPPED', carriedAt: 'ItemOption.misconceptionId' },
+    { key: 'label', disposition: 'MAPPED', carriedAt: json('ItemOption', 'content', 'label') },
+    { key: 'content', disposition: 'MAPPED', carriedAt: json('ItemOption', 'content', 'value') },
+    { key: 'isCorrect', disposition: 'MAPPED', carriedAt: col('ItemOption', 'isCorrect') },
+    { key: 'misconceptionId', disposition: 'MAPPED', carriedAt: col('ItemOption', 'misconceptionId') },
     {
       key: 'misconceptionExecution',
       disposition: 'MAPPED',
-      carriedAt: 'ItemOption.misconceptionExecution',
+      carriedAt: col('ItemOption', 'misconceptionExecution'),
       // The affordance test's output and the first thing a reviewer asks to see. Reviewer-facing,
       // never child-facing — distinct from the library's childHint, which the DB owns.
     },
-    { key: 'tagStatus', disposition: 'MAPPED', carriedAt: 'ItemOption.tagStatus' },
+    { key: 'tagStatus', disposition: 'MAPPED', carriedAt: col('ItemOption', 'tagStatus') },
     {
       key: 'tagStatus_SHAPE_UNRESOLVED',
       disposition: 'NOT_CARRIED',
       ruling: 'PROPOSED',
       reason: 'A note that the tagStatus shape is unresolved, not a fact about the option.',
     },
-    { key: 'value', disposition: 'MAPPED', carriedAt: 'ItemOption.content.value' },
-    { key: 'attractorLine', disposition: 'MAPPED', carriedAt: 'ItemOption.attractorLine' },
-    { key: 'defeaterLine', disposition: 'MAPPED', carriedAt: 'ItemOption.defeaterLine' },
-    { key: 'attractorQuote', disposition: 'MAPPED', carriedAt: 'ItemOption.attractorQuote' },
-    { key: 'defeaterQuote', disposition: 'MAPPED', carriedAt: 'ItemOption.defeaterQuote' },
-    { key: 'windowClass', disposition: 'MAPPED', carriedAt: 'ItemOption.windowClass' },
-    { key: 'a36Note', disposition: 'MAPPED', carriedAt: 'ItemOption.a36Note' },
-    { key: 'defeatedByAbsence', disposition: 'MAPPED', carriedAt: 'ItemOption.defeatedByAbsence' },
+    { key: 'value', disposition: 'MAPPED', carriedAt: json('ItemOption', 'content', 'value') },
+    { key: 'attractorLine', disposition: 'MAPPED', carriedAt: col('ItemOption', 'attractorLine') },
+    { key: 'defeaterLine', disposition: 'MAPPED', carriedAt: col('ItemOption', 'defeaterLine') },
+    { key: 'attractorQuote', disposition: 'MAPPED', carriedAt: col('ItemOption', 'attractorQuote') },
+    { key: 'defeaterQuote', disposition: 'MAPPED', carriedAt: col('ItemOption', 'defeaterQuote') },
+    { key: 'windowClass', disposition: 'MAPPED', carriedAt: col('ItemOption', 'windowClass') },
+    { key: 'a36Note', disposition: 'MAPPED', carriedAt: col('ItemOption', 'a36Note') },
+    { key: 'defeatedByAbsence', disposition: 'MAPPED', carriedAt: col('ItemOption', 'defeatedByAbsence') },
     {
       key: 'senseTarget',
       disposition: 'MAPPED',
-      carriedAt: 'ItemOption.senseTarget',
+      carriedAt: col('ItemOption', 'senseTarget'),
       // One of the 39, weighted critical. CHECK 10 holds an entire tag on it, and without it a
       // vocabulary item is unshippable while reading perfectly. Columned before ENG-013 arrives
       // rather than under the pressure of a blocked import (David, 2026-08-16).
@@ -333,7 +385,7 @@ export const PROPOSED_EXCEPTIONS: readonly (CoworkKeyRule & { level: CoworkLevel
 ).flatMap(([level, rules]) => rules.filter((r) => r.ruling === 'PROPOSED').map((r) => ({ ...r, level })));
 
 /** Every key that crosses, and where it lands. The guard reads this to know what to protect. */
-export const CARRIED_PATHS: readonly { path: string; carriedAt: string }[] = (
+export const CARRIED_PATHS: readonly { path: string; carriedAt: Destination }[] = (
   Object.entries(COWORK_ITEM_KEYS) as Array<[CoworkLevel, readonly CoworkKeyRule[]]>
 ).flatMap(([level, rules]) =>
   rules

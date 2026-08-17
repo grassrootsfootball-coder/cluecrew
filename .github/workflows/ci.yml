@@ -224,6 +224,12 @@ jobs:
       - name: Shipped clusters stay shippable
         run: pnpm check:cluster ENG-028 && pnpm check:cluster ENG-001
 
+      # R167: every declared carriage destination must resolve against the live schema. Blocks —
+      # a destination that was dropped or that moved is a broken path for a field Cowork still sends,
+      # and both were invisible for weeks while `carriedAt` was prose.
+      - name: Carriage destinations resolve
+        run: pnpm check:carriage-schema
+
       - name: Register check (every cited rule has a register entry)
         run: pnpm check:register
 
