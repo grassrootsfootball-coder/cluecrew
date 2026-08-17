@@ -6257,9 +6257,21 @@ eight.**
 ## R161 — REFUSALS_NOT_CHECKS: the refusal knows what the check was not asking
 *Cowork's formulation, recorded here because two of the five instances are mine.*
 
-**A CHECK runs where someone remembered to put it and answers the question it was written for. A
-REFUSAL fires at the moment of the destructive act, on the real arguments, and must NAME WHAT IT IS
-PROTECTING IN ORDER TO REFUSE — so it reports the blast radius for free.**
+**A CHECK MUST BE POINTED AT A POPULATION SOMEBODY PREDICTED. A REFUSAL STANDS IN THE PATH OF THE
+ACT, SO THE ARGUMENTS IN FRONT OF IT ARE THE POPULATION — AND IT CANNOT BE AIMED AT THE WRONG ONE.**
+
+**That is the inverse of every instrument in this register that went quiet, and all of them went
+quiet by being aimed somewhere else.** Ten entries about checks looking in the wrong place —
+`verify:solutions` at a MATHS bank no path creates, `check:line-refs` at `stem.lineRefs` after R77
+moved it, `check:maths-distractors` at a population that has never existed, the executor audit never
+pointed at VR, `audit:signed-depth` reaching 14 of 46 signatures, `check:library-agreement` reading
+one key name, my own gate reading `stem.testedTokens` while 13 items carried the column. **And the
+mechanism that structurally cannot have that failure mode was in the toolchain the whole time.**
+
+Cowork's formulation, which follows from it: a check runs where someone remembered to put it and
+answers the question it was written for; a refusal fires at the moment of the destructive act, on the
+real arguments, and **must name what it is protecting in order to refuse — so it reports the blast
+radius for free.**
 
 Five this week, and in every one the refusal knew something no check was asking:
 
