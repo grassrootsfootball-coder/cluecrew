@@ -230,6 +230,12 @@ jobs:
       - name: Carriage destinations resolve
         run: pnpm check:carriage-schema
 
+      # R168: a cloze item claiming a gap that does not exist, two items claiming one gap, or a
+      # vehicle whose declared gapCount has drifted from its own text. Blocks: the gap number is
+      # child-facing, the population is 16, and the check is instant.
+      - name: Cloze gaps (claimed once, and present in the text)
+        run: pnpm check:cloze-gaps
+
       - name: Register check (every cited rule has a register entry)
         run: pnpm check:register
 

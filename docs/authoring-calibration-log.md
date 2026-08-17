@@ -6484,6 +6484,53 @@ strings carrying trailing prose, two JSON paths read as columns. **A matcher ove
 prose lets it find**, which is the same fault as the free-text field, one layer up, and it is why the
 JSON-path case is now expressed rather than written into a sentence.
 
+## R168 — The cloze gap check: three arms, all proven, and it buys nothing today
+*David, 2026-08-17. Cowork added arm 2 and arm 3; both earn their place.*
+
+**ALL THREE ARMS FAULT-INJECTED AND EACH CATCHES ITS OWN CASE**, on scratch DRAFT rows and a
+restorable count, every change re-read afterwards:
+
+| arm | injected | caught |
+|---|---|---|
+| **1 RANGE** | `gapRef: 99` | *"claims gap 99; the vehicle carries markers [1..8]"* |
+| **2 UNIQUENESS** | two items claiming gap 2 | *"gap …#2 claimed by 2 items"* |
+| **3 AGAINST THE TEXT** | `gapCount: 9` | *"declares gapCount 9, text carries 8 marker(s)"* |
+
+**ARM 2 IS COWORK'S AND RANGE ALONE CANNOT REPLACE IT:** two items both claiming gap 3 are both in
+range, and a gap answered twice is a gap one of them is wrong about.
+
+**ARM 3 IS THE ONE THIS WEEK ARGUES FOR.** `gapCount` is a number in the vehicle's own file; counting
+the markers checks the declaration against the thing it describes. **A declared number checked against
+nothing is the shape every entry above is about.**
+
+**AND THE MARKER IS `___(1)___`, SO COUNTING `___` DOUBLES IT** — 16 in an 8-gap vehicle, measured
+and printed on every run beside the true count. Cowork caught it before reporting a disagreement that
+does not exist. **The compound-signal fault again: an instrument measuring something ADJACENT to the
+property under test**, and the third time this month that a naive matcher counted the wrong thing.
+
+**`gapIndex` HAS NOT CROSSED TO THIS STORE. 0 of 16 carry it; all 16 still carry `gapRef`.** The check
+reads either and **NAMES WHICH ON EVERY RUN** — verified by injection: setting `gapIndex` on one row
+flipped the line to *"1 via stem.gapIndex · 15 via stem.gapRef"*. That is R164 and R167 built in
+rather than learned again: **a reader that does not say which field it read cannot tell you the
+migration has not crossed**, and this is the field whose migration is in flight right now.
+
+**WHAT IT CATCHES THAT NOTHING CATCHES TODAY:** a cloze item pointing at a gap that is not in its
+vehicle, two items answering the same gap, and a vehicle whose declared `gapCount` has drifted from
+its own text. **Nothing screened any of those** — `gapRef` was read by two malformation fixtures and
+a comment (R164), and `check:line-refs` declares cloze NOT APPLICABLE by kind (R165).
+
+**IS IT WORTH BLOCKING ON? Yes, and its value is entirely PROSPECTIVE — stated rather than assumed.**
+16 of 16 are clean, so it buys **no repair today**. What it buys is that the next authored cloze item
+cannot claim a gap that does not exist, and the next vehicle edit cannot move a marker without the
+count following. Blocking rather than reporting because the population is 16 and the check is
+instant: there is no cost to failing loudly, and a gap number is CHILD-FACING — the stem reads
+*"Gap 1. Choose the words that fit best."*
+
+**One line, on myself: restoring a test edit with `json.dump` reformatted the entire vehicle file** —
+66 lines changed on verbatim literature to put one number back. Restored with `git checkout` and
+verified clean. **A restore that changes more than it restores is not a restore**, and `content/passages`
+is the one directory whose contents must not be altered by us at all.
+
 ## R100 — Faults logged, one line each
 *2026-08-16. Delivery pass: logged, not investigated.*
 
