@@ -6457,6 +6457,12 @@ three are sentences.** Structured — `{kind, table, column, path}` — they bec
 **50 destinations, all resolving.** `lineRefs` corrected to `col('Item','lineRefs')` **openly**, with
 the old claim recorded on it: correcting a declaration quietly is what the registry exists to prevent.
 
+**THE GENERAL SHAPE: A JOIN CHECK NEEDS BOTH DIRECTIONS, BECAUSE "DECLARED BUT ABSENT" AND "PRESENT
+BUT UNDECLARED" ARE DIFFERENT FAILURES — AND THE SECOND IS WHERE A MIGRATION HIDES.** A dropped field
+announces itself the moment anything reads it. A MOVED field leaves both sides individually valid:
+the declaration still resolves against something, the column still exists, and only the pairing is
+wrong. Nothing looking in one direction can see it.
+
 **THE TWO FAILURES ARE CAUGHT BY DIFFERENT ARMS, WHICH IS WHY BOTH EXIST.** Fault-injected:
 - a **dropped or renamed** column fails the forward arm — *"1 destination that does not exist"*;
 - a **moved** column does NOT fail it — reverting `lineRefs` to `stem.lineRefs` still resolves,
