@@ -11521,3 +11521,60 @@ pair this ruling is about** — so the test was encoding the token count, not th
 its own name, and only by accident. R263: the ruling is about the property, not the string it was
 first observed on. The fixture now uses two genuinely distinct long words, preserving the test's
 stated intent, and a second case asserts the pair counts as one.
+
+## R339 — Converging the sentence cap: the arithmetic decides nothing, the declaration decides everything
+
+**2026-08-20. Cowork's gate strips a declared span before counting; ours counts it as one unit
+(R337). Asked to converge or say why not.**
+
+**Converge — and the direction is Cowork adopting ours**, because Annie's ruling explicitly overturned
+strip-to-zero as *"flattering the number the other way"*, and a gate quietly reverting a three-day-old
+reviewer decision is what R62 refuses. **We WERE Cowork's rule until 19 August**; this is not two
+designs meeting, it is one design that got a ruling with the other store holding the pre-ruling
+version.
+
+**Measured over all 90 texts carrying a declared span: 0 verdict differences, and 0 texts at the band
+where a difference could exist.** The two rules can disagree in exactly one circumstance — our own
+wording at *precisely* 16 words with a span alongside. At 15 both pass, at 17 both fail. **The
+disagreement has nowhere to stand.** Adopting therefore costs nothing today, and the band is one word
+wide, so it will bite.
+
+**AND THE ARITHMETIC IS NOT WHAT FORCED THE REWORD, WHICH IS THE FINDING.** Both stores stripped
+spans identically on 17 August — *the same rule* — so the cap rule cannot explain a disagreement on
+that date. **It was the DECLARATION.** Four texts in this store have their verdict decided by the
+declaration alone, swinging 11–14 words: `ENG-001-WIW-14` (8 declared / 22 undeclared, **LIVE**),
+`ENG-002-pp-17` (7/19), `ENG-003-A-CZ-A1` (6/20), `ENG-003-A-CZ-B1` (6/17). Cowork held a declaration
+we did not; **both gates were correct and were reading different rows.**
+
+**So converging the RULE converges an arithmetic that changes nothing, and converging the DECLARATION
+SETS is what stops the gates disagreeing.** No mechanism compares them in either direction — R88's
+return leg in different clothes. Requested from Cowork alongside the rule: its declaration set as item
+id, field and span text.
+
+**Correction to R337's own report.** I wrote that the cap ruling *"unblocks nothing today"*. True of
+R337, and wrong to leave standing alone: **the declarations (R331) unblocked four texts, one LIVE.**
+The two landed in the same act and will be remembered as one. **The declaration is the mechanism that
+does the work; the counting rule only says what to do once it is there.**
+
+## R340 — The content standard has to cover what is never chosen, not only what is cut
+
+**David's, 2026-08-20, arising from the eight removals in Cowork's `activeRemovalsForContent`.**
+
+Six of the eight are **avoidances, not cuts**: a scene not chosen, an extract begun after something,
+a work rejected in favour of another. Four name racial or ethnic content as the thing avoided. All
+eight sit in a manifest field **with no author and no date**.
+
+**A cut and an avoidance are different acts and only one of them has a subject.** A cut changes a
+passage a child reads, and something remains to inspect. **An avoidance decides which passage exists
+at all — so it is invisible to every gate we have, because the gates read what is there.** It is
+closer to a commissioning policy than to a content flag, and it currently has no record of who
+decided it or against what.
+
+**The standard, when written, must therefore cover both limbs** — what may be cut from a passage, and
+what may cause a passage not to be chosen — and the second has the larger consequences and the weaker
+record. Annie's two conditions point the same way and are adopted as scope: **it must cover the
+corpus we might ADD rather than only the one we hold**, and **it must name who may judge**.
+
+**This is David's to write, with Annie's reading. Nothing here authors it**, and the standing
+instruction not to author a protective list is unchanged — recording the required SCOPE is not
+drafting the standard, and the distinction is the point.

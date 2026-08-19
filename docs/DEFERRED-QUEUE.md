@@ -50,6 +50,20 @@ key is hers and it is three days old.
 
 ---
 
+## D3 — The declaration SETS are not compared in either direction
+
+**Owner: Cowork and this store jointly. Opened 2026-08-20 alongside R339.**
+
+Both gates key on a declared quoted span, and neither store can see the other's declarations. Four
+texts here have their pass/fail decided by the declaration alone, swinging 11 to 14 words, one of them
+LIVE. **Two correct gates reading different rows will refuse each other's items forever**, and
+converging the counting rule does not touch it.
+
+**What moves it:** Cowork's declaration set arriving as item id, field and span text — requested
+alongside the cap rule — and a diff in both directions after it lands.
+
+---
+
 ## How an entry leaves
 
 Ruled on, or measured and dismissed. **An entry that is simply old does not leave**, and this file
