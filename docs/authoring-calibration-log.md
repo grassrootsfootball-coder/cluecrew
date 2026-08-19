@@ -11560,9 +11560,16 @@ does the work; the counting rule only says what to do once it is there.**
 
 **David's, 2026-08-20, arising from the eight removals in Cowork's `activeRemovalsForContent`.**
 
-Six of the eight are **avoidances, not cuts**: a scene not chosen, an extract begun after something,
-a work rejected in favour of another. Four name racial or ethnic content as the thing avoided. All
-eight sit in a manifest field **with no author and no date**.
+**All eight carry an avoidance**; four ALSO carry a cut; **none is a cut alone**. **Five** name
+racial or ethnic content. All eight sit in a manifest field **with no author and no date**.
+
+**Both of those figures correct my own first count**, which said "six of the eight are avoidances,
+not cuts" and "four name racial or ethnic content". The error was reading the entries as a summary
+instead of marking each against both limbs: Tom Sawyer and Eighty Days were filed as avoidance-only
+when both say *"cut"* in their own text, and Mill on the Floss's ethnic slur was missed entirely.
+**The avoidance limb is not a subset here, it is universal**, which sharpens this entry rather than
+softening it — and the correction only surfaced because the delivery marks the split PER ENTRY,
+which a prose summary of the same eight had not forced anyone to do.
 
 **A cut and an avoidance are different acts and only one of them has a subject.** A cut changes a
 passage a child reads, and something remains to inspect. **An avoidance decides which passage exists
@@ -11621,3 +11628,37 @@ investigated on purpose.
 calls the gate's own `textsFrom` (R41 — a verifier states its source; R57 — never re-list the fields
 a door reads), skipping `_previous*` history. The two labels are now distinct facts: `ITEM NOT IN
 THIS STORE` versus `SPAN IN NO TEXT ON THIS CONTAINER`.
+
+## R342 — Five artefacts reported as sent were `cp`ed past the delivery door, and two of them never existed as separate files
+
+**David, 2026-08-20. Two artefacts reported as sent had not arrived, and the arrival rule applies:
+staged is not crossed (R255).**
+
+**They were not even staged properly.** `deliver()` copies, hashes the staged BYTES, writes a
+`.sha256` sidecar and counts the queue. I used `cp` and `writeFileSync`, which does the copy and
+none of the rest. Every correctly-staged artefact in the outbound folder carries a sidecar; my five
+carried none — so there was **no digest for Cowork to quote back**, which is the only way arrival is
+ever confirmed. **The mechanism existed, was written for exactly this, and I went around it.**
+
+**And I wrote "Delivered" and "sent".** Both are claims this side cannot make. `deliver()` prints
+`STAGED` and says so in its own output; writing something stronger than the tool's own word is the
+record running ahead of the act.
+
+**THE SECOND FAULT IS SIMPLER AND WORSE: TWO ARTEFACTS WERE ONE FILE.** The eight removals were
+appended to the flag file, so an instruction to send two things produced one, and a reader looking
+for the second found nothing rather than finding it misplaced. **An absent artefact and an absent
+path are the same thing** (R88) — a reader cannot discover what was folded into something else.
+
+**A third, found while repairing the first two: `check:declaration-sets` had the same fault**, one
+day old. It wrote its export straight into the outbound folder with `writeFileSync`. Now built to
+`content/exports/` and staged through `deliver()` like everything else.
+
+**What the repaired delivery adds, beyond the digests.** The flag file now carries **both passages
+complete and asserted complete** — the build compares emitted text to source and fails on any
+difference. Annie reads a flag against the passage it describes, so a flag file without the text is
+a verdict with the evidence withheld; it can be agreed with but not CHECKED. And the eight removals
+are marked **per entry** for cut versus avoidance rather than summarised underneath.
+
+**Marking per entry corrected the summary twice** — see R340. Both errors survived a prose summary
+of the same eight sentences and died the moment each entry had to be marked individually. **That is
+the argument for per-entry marking, not a footnote to it.**

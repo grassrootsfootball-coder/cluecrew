@@ -25,12 +25,16 @@
  * someone else's backlog is switched off within a week. What it must never do is stay invisible.
  */
 import { existsSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { textsFrom } from '../packages/core/src/item-content-gate';
 import { prisma } from '../packages/db/src/index';
-import { OUTBOUND_DIR } from './lib/export-destination';
+import { deliver, OUTBOUND_DIR } from './lib/export-destination';
 
 const MAX_SENTENCE_WORDS = 16;
+
+/** Repo root from THIS FILE, never `process.cwd()` — pnpm --filter runs this from `packages/db`. */
+const REPO_ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 
 export interface Declaration {
   itemId: string;
@@ -218,22 +222,26 @@ async function main() {
 
   // THE RETURN LEG TRAVELS WHETHER OR NOT THEIRS HAS (R88). Ours is exported on every run, so the
   // comparison is never blocked on both sides at once.
-  const outPath = join(OUTBOUND_DIR, 'declaration-set-cluecrew.json');
-  if (existsSync(OUTBOUND_DIR)) {
-    writeFileSync(
-      outPath,
-      JSON.stringify(
-        {
-          note: 'Every quoted span declared in the ClueCrew store, for both-directions comparison (R341).',
-          generatedAt: new Date().toISOString().slice(0, 10),
-          count: ours.length,
-          declarations: [...ours].sort((a, b) => full(a).localeCompare(full(b))),
-        },
-        null,
-        2,
-      ) + '\n',
-    );
-  }
+  //
+  // **STAGED THROUGH `deliver()`, NOT WRITTEN INTO THE OUTBOUND FOLDER** (R255/R265). The first
+  // version of this line did the latter, which put a file there with no staging record and no byte
+  // digest for the other store to quote back — an artefact that cannot be verified as arrived in
+  // either direction. That is the same fault as reporting "sent" for a `cp`, one level up: the
+  // mechanism was available and not used.
+  const localPath = join(REPO_ROOT, 'content/exports/declaration-set-cluecrew.json');
+  writeFileSync(
+    localPath,
+    JSON.stringify(
+      {
+        note: 'Every quoted span declared in the ClueCrew store, for both-directions comparison (R341).',
+        count: ours.length,
+        declarations: [...ours].sort((a, b) => full(a).localeCompare(full(b))),
+      },
+      null,
+      2,
+    ) + '\n',
+  );
+  const outPath = existsSync(OUTBOUND_DIR) ? deliver(localPath) : localPath;
 
   // An explicit path overrides the scan, so the fault-injection below can prove this check bites
   // without writing a synthetic artefact into the shared inbound channel.
