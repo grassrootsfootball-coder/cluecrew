@@ -313,6 +313,15 @@ jobs:
       - name: Return leg (reviewer judgement the authoring side cannot see)
         run: pnpm check:return-leg
 
+      # BOTH STORES GATE ON A DECLARED QUOTED SPAN AND NEITHER CAN SEE THE OTHER'S DECLARATIONS.
+      # R339 found four texts here whose pass/fail turns on the declaration alone, swinging 11-14
+      # words, one LIVE -- Cowork held a declaration we did not, and both gates were correct while
+      # reading different rows. Fails on ACTIVE (a verdict differs today, so one store is refusing
+      # what the other serves) and reports LATENT, which needs Cowork to act. Until their set
+      # arrives it prints NOT RECEIVED, never "0 divergences".
+      - name: Declaration sets (do both stores declare the same spans?)
+        run: pnpm check:declaration-sets
+
       # AN ARTEFACT'S NAME MUST IDENTIFY ITS PAYLOAD. The misconception library shipped two
       # materially different files under one hash because the stamp was computed over a five-field
       # projection while the file carried seventeen. This recomputes each artefact's stamp from its

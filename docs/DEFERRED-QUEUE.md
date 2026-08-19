@@ -59,8 +59,19 @@ texts here have their pass/fail decided by the declaration alone, swinging 11 to
 LIVE. **Two correct gates reading different rows will refuse each other's items forever**, and
 converging the counting rule does not touch it.
 
+**Opened as its own thread on 2026-08-20 and now runnable**: `pnpm check:declaration-sets` (R341).
+It exports our 157 declarations on every run so the return leg travels regardless, prints
+**NOT RECEIVED** rather than a zero until Cowork's set lands, and compares in **both directions**
+plus the third class a one-way diff misses — same item and field, different span text, where both
+stores believe they have declared the same thing.
+
+**Each divergence is classified ACTIVE or LATENT.** The four R339 found are only the ones sitting at
+a cap boundary; a divergence on a comfortably short sentence agrees today **by length, not by rule**,
+and becomes active the moment someone edits that sentence — with nothing to connect the edit to the
+refusal that follows.
+
 **What moves it:** Cowork's declaration set arriving as item id, field and span text — requested
-alongside the cap rule — and a diff in both directions after it lands.
+alongside the cap rule. The check runs itself once it does.
 
 ---
 

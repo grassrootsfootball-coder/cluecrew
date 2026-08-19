@@ -11578,3 +11578,46 @@ corpus we might ADD rather than only the one we hold**, and **it must name who m
 **This is David's to write, with Annie's reading. Nothing here authors it**, and the standing
 instruction not to author a protective list is unchanged — recording the required SCOPE is not
 drafting the standard, and the distinction is the point.
+
+## R341 — The declaration-set comparison, opened as its own thread; and the four are only the boundary cases
+
+**David's instruction, 2026-08-20, opening D3.** `pnpm check:declaration-sets`. Both stores gate on a
+DECLARED quoted span and neither can see the other's declarations. It compares item id, field and span
+text, **in both directions**, and runs itself when Cowork's set arrives.
+
+**THE FOUR FROM R339 ARE NOT THE POPULATION — THEY ARE THE ONES THAT HAPPEN TO SIT AT A CAP
+BOUNDARY.** A divergence on a comfortably short sentence passes on both sides today and is no less a
+divergence; the two gates agree **by sentence length, not by rule**. So every divergence is reported
+and each is classified: `ACTIVE` (a verdict differs today) or `LATENT` (agrees for no reason). **A
+latent divergence becomes active the day someone edits the sentence** — an ordinary thing to do to a
+stem — and nothing would connect that edit to the refusal that follows.
+
+**Three classes, because a one-directional diff misses the third:** declared here and absent there,
+declared there and absent here, and **same item and field with different span text** — the worst of
+the three, because both stores believe they have declared the same thing.
+
+**It fails on ACTIVE and reports on LATENT.** An active divergence means one store is refusing an
+item the other serves, which is a present fault. A latent one needs Cowork to act, and a step red
+from a queue we cannot clear is muted within a week (`check:staging-queue`'s finding).
+
+**It prints NOT RECEIVED, never "0 divergences"** (R60). A comparison with one side missing asserts
+nothing, and the only wrong thing that run could do is print a number that reads like agreement.
+**Our 157 declarations export on every run** so the return leg travels whether or not theirs has
+(R88) — the comparison is never blocked on both sides at once.
+
+**AND THE FAULT INJECTION FOUND A REAL BUG IN THE CHECK, WHICH IS THE ENTRY'S POINT.** Four faults
+were planted, one per class plus a known-ACTIVE and a known-LATENT; all four were found. But one was
+labelled **"TEXT NOT IN THIS STORE"** for an item that is plainly in the store. The reader took
+`container.text`, and **`explanation` has no `text` key** — its child-facing strings are `hintCore`
+and `walkScript` — so every explanation-side declaration was reported as a missing item.
+
+**That is a claim about the STORE reporting a fact about my READ: R173's exact shape, committed
+inside the check written to close the divergence R339 found.** Nothing but the injection would have
+caught it, because the wrong label sat beside three correctly-found faults and the run as a whole
+agreed with what I expected — R173's transferable half, that a confirming result has to be
+investigated on purpose.
+
+**The repair is to stop naming fields at all:** `consequenceOf` now takes the whole container and
+calls the gate's own `textsFrom` (R41 — a verifier states its source; R57 — never re-list the fields
+a door reads), skipping `_previous*` history. The two labels are now distinct facts: `ITEM NOT IN
+THIS STORE` versus `SPAN IN NO TEXT ON THIS CONTAINER`.
