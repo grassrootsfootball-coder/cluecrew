@@ -1,0 +1,35 @@
+{
+  "kind": "case",
+  "case": {
+    "id": "case-en-01",
+    "questionTypeId": "en-comp-retrieval",
+    "title": "The Written Clue",
+    "narrativeIntro": {
+      "text": "Every clue is already on the page. You just have to find it. Read the lines again and point to the exact words. A good detective never guesses when the answer is written down.",
+      "skippable": true
+    },
+    "modes": {
+      "watch": {
+        "kind": "video",
+        "assetRef": "placeholder/en-01/watch.mp4",
+        "maxSeconds": 90
+      },
+      "walk": {
+        "kind": "faded-example",
+        "assetRef": "placeholder/en-01/walk.json"
+      },
+      "see": {
+        "kind": "visual",
+        "assetRef": "placeholder/en-01/see.json"
+      },
+      "hear": {
+        "kind": "audio",
+        "assetRef": "placeholder/en-01/hear.mp3"
+      },
+      "try": {
+        "kind": "practice"
+      }
+    },
+    "orderInDistrict": 22
+  }
+}

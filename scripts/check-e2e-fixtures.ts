@@ -96,7 +96,7 @@ async function main(): Promise<void> {
   const word = await prisma.word.findUnique({ where: { id: FIXTURES.word.id } });
   const item = await prisma.item.findUnique({
     where: { id: FIXTURES.item.id },
-    include: { options: true },
+    include: { options: { orderBy: { id: 'asc' } } },
   });
   if (!word) failures.push(`fixture word ${FIXTURES.word.id} is MISSING — re-run the seed`);
   else {

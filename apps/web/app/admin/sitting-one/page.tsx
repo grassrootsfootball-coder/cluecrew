@@ -1,3 +1,4 @@
+import { NVR_TEMPLATES } from '@cluecrew/core';
 import { prisma } from '@cluecrew/db';
 import batchMix from '../../../../../content/batch-mix.json';
 import nvrConfig from '../../../../../content/nvr-generator-config.json';
@@ -14,7 +15,25 @@ export default async function SittingOnePage() {
   const staff = await currentStaff();
   if (!staff) return null;
 
-  const proposed = await prisma.misconception.count({ where: { status: 'PROPOSED' } });
+  /**
+   * DERIVE BOTH HALVES OR NEITHER (David's ruling, 2026-08-17 — R179).
+   *
+   * This read `count()` and the sentence then hard-coded the split as "(18 VR + 19 NVR from the
+   * corpus passes)". It has been rendering **"10 PROPOSED entries (18 VR + 19 NVR)"** to staff for
+   * weeks. **That is not a stale number — it is a LIVE number vouching for a DEAD one**, and the
+   * live half lending its credibility to the half beside it is exactly why nobody read the sentence
+   * as broken. Both halves now come from one query, so they cannot disagree.
+   */
+  const proposedByDistrict = await prisma.misconception.groupBy({
+    by: ['district'],
+    where: { status: 'PROPOSED' },
+    _count: true,
+  });
+  const proposed = proposedByDistrict.reduce((n, row) => n + row._count, 0);
+  const proposedSplit = proposedByDistrict
+    .map((row) => `${row._count} ${row.district}`)
+    .sort()
+    .join(' + ');
   const reviewedItems = await prisma.item.count({ where: { status: 'REVIEWED' } });
   const draftItems = await prisma.item.count({ where: { status: 'DRAFT' } });
   // Pools carry different shapes now that the NVR and English pools have
@@ -76,8 +95,9 @@ export default async function SittingOnePage() {
       <div className="cc-card">
         <h2 style={{ marginTop: 0 }}>3 · The misconception queue</h2>
         <p>
-          <strong>{proposed} PROPOSED</strong> entries (18 VR + 19 NVR from the corpus passes)
-          await your approval in <a href="/admin/misconceptions">the misconception queue</a>.
+          <strong>{proposed} PROPOSED</strong> {proposed === 1 ? 'entry' : 'entries'}
+          {proposedSplit ? ` (${proposedSplit})` : ''} await your approval in{' '}
+          <a href="/admin/misconceptions">the misconception queue</a>.
           Unapproved entries are structurally unusable by any item.
         </p>
       </div>
@@ -100,8 +120,12 @@ export default async function SittingOnePage() {
       <div className="cc-card">
         <h2 style={{ marginTop: 0 }}>5 · NVR generator sign-off</h2>
         <p>
-          The NVR district reviews GENERATORS, not items (BUILD-DISTRICT-NVR §4). Thirteen
-          templates, <strong>30 stratified samples per tier</strong>, keys marked and every
+          {/* Derived from NVR_TEMPLATES, the array the generator itself walks (R179). It said
+              "Thirteen" and happened to be right; unverified is the state that produced the two
+              above it. */}
+          The NVR district reviews GENERATORS, not items (BUILD-DISTRICT-NVR §4).{' '}
+          {NVR_TEMPLATES.length} templates, <strong>30 stratified samples per tier</strong>, keys
+          marked and every
           distractor&apos;s misconception id on the page:{' '}
           <a href="/admin/nvr-samples">the sample sheets</a>. Each sheet prints for signing and
           carries its own contentHash plus the templateFingerprint, so what you signed stays

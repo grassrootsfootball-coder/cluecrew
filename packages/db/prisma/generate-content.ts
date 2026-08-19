@@ -1257,6 +1257,16 @@ async function main(): Promise<void> {
   // Skipped here so a re-seed cannot resurrect the old procedurally-generated items
   // alongside the imported bank. vr-04 LEFT this set (annie, 2026-08-06): it is now
   // a typed constructor (closestMeaningTyped, generate-to-diagnosis), not a bank.
+  //
+  // **AND THAT IS EXACTLY WHAT LEAVING THIS SET DOES — IT RESURRECTS THE PARALLEL SET** (R170).
+  // Removing vr-04 from here did not make the constructor replace the bank; it made it generate
+  // AGAIN, beside it. 40 `gen-` (DRAFT) and 40 `bank-` (LIVE) now share one questionTypeId, 39
+  // headwords appear in both, and 16 pairs disagree about the key. Two of those disagreements are
+  // reviewer rulings from August sitting in the DRAFT half while the fault serves LIVE.
+  // **A CONSTRUCTOR THAT SUPERSEDES BY INTENT AND NOT BY ID SUPERSEDES NOTHING.** Before taking a
+  // type out of this set, say which ids the constructor will own and what happens to the rows it
+  // was authored to replace — no guard here can ask that, because superseding is a fact about
+  // content and every guard is a fact about a write.
   const SUPERSEDED_BY_BANK = new Set([
     'vr-02-two-odd-ones-out',
     'vr-06-missing-word',

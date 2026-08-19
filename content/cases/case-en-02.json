@@ -1,0 +1,35 @@
+{
+  "kind": "case",
+  "case": {
+    "id": "case-en-02",
+    "questionTypeId": "en-comp-inference",
+    "title": "What the Page Won't Say",
+    "narrativeIntro": {
+      "text": "Some clues are never written down. The writer leaves them just under the words. Read what is there, then work out what is not. Say what the lines show you, not what you hope.",
+      "skippable": true
+    },
+    "modes": {
+      "watch": {
+        "kind": "video",
+        "assetRef": "placeholder/en-02/watch.mp4",
+        "maxSeconds": 90
+      },
+      "walk": {
+        "kind": "faded-example",
+        "assetRef": "placeholder/en-02/walk.json"
+      },
+      "see": {
+        "kind": "visual",
+        "assetRef": "placeholder/en-02/see.json"
+      },
+      "hear": {
+        "kind": "audio",
+        "assetRef": "placeholder/en-02/hear.mp3"
+      },
+      "try": {
+        "kind": "practice"
+      }
+    },
+    "orderInDistrict": 23
+  }
+}

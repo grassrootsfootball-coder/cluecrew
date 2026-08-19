@@ -32,7 +32,7 @@ export default async function ItemsPage({
       // ONE CLUSTER AT A TIME. Annie opens a packet cluster, not a bank of 337.
       ...(cluster ? { id: { startsWith: cluster } } : {}),
     },
-    include: { questionType: true, options: true },
+    include: { questionType: true, options: { orderBy: { id: 'asc' } } },
     // Serve order within a cluster is file position, so the queue reads in the order she expects.
     orderBy: cluster ? [{ clusterPosition: 'asc' }, { id: 'asc' }] : { createdAt: 'desc' },
     take: 200,

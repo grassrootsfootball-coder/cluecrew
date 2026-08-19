@@ -6531,6 +6531,2120 @@ instant: there is no cost to failing loudly, and a gap number is CHILD-FACING �
 verified clean. **A restore that changes more than it restores is not a restore**, and `content/passages`
 is the one directory whose contents must not be altered by us at all.
 
+## R184 — "LIVE" has meant three things: PUBLISHED, SERVABLE, REACHABLE
+*David's ruling, 2026-08-17. "Annie has been triaging severity on the strongest reading and getting
+the weakest facts."*
+
+Told an item was "live", the reviewer reasonably understood **a child is meeting this**. All that had
+been established was **a reviewer signed it off**. Three words, used in every check output, every
+report, and here:
+
+| word | means | a fact about |
+|---|---|---|
+| **PUBLISHED** | `status: LIVE` — a reviewer signed it off | review |
+| **SERVABLE** | PUBLISHED and `pool: PRACTICE` — `itemPool` would return it | the pool |
+| **REACHABLE** | SERVABLE and a door names its question type | the product |
+
+`status: LIVE` **keeps its name as a column** — it is the first sense and the right word for it.
+Nothing else says "live" without saying which.
+
+**DELIVERABLE IS NOT A FOURTH SENSE AND NOT ON THIS LADDER**, which corrects David's framing of
+"deliverable and reachable are two of the three". `check:serving-path` asks whether an item RENDERS
+— routes, stem, passage, citations. That is a property of the item's CONTENT and is **orthogonal**: a
+DRAFT item can be deliverable, and a REACHABLE item can be undeliverable. Two vocabularies, two
+questions, reported separately (R171). REACHABLE is the third sense; deliverable is a different axis.
+
+**THE CENSUS, ALL DISTRICTS:**
+
+| district | items | PUBLISHED | SERVABLE | REACHABLE |
+|---|---:|---:|---:|---:|
+| ENGLISH | 372 | 34 | 34 | 34 |
+| VR | 660 | 298 | 298 | 298 |
+| **ALL** | **1032** | **332** | **332** | **332** |
+
+**THE THREE AGREE TODAY, AND THAT IS THE CONDITION UNDER WHICH THE CONFLATION SURVIVED.** This
+morning they read **332 / 332 / 298** — the 34 English items were PUBLISHED and SERVABLE and reached
+nobody, because no Case named their question type. Four Case rows closed the gap by evening. A
+report that had printed one number all day would have been right twice and wrong once and said the
+same thing every time.
+
+The triad prints from one function (`servingSensesBanner`, packages/core) so it cannot drift between
+reports, and the census prints its own limits: REACHABLE here means A CASE NAMES THE TYPE — it does
+not account for the child's TIER (a free-tier child reaches only the free set) nor for mock papers,
+which are a separate door.
+
+## R220 — The eight are library rows HERE; the null figures with their denominators; and a walk budget I refused to fit to its own cases
+*Annie's 142 rulings and the seventh return's open questions, 2026-08-19.*
+
+**1. THE EIGHT VR REPLACEMENTS HAVE A TARGET, AND IT IS THIS STORE.** Cowork found zero of her
+eight in its misconception library and concluded they name ITEM hints. **All eight are
+MISCONCEPTION LIBRARY ROWS here** — ACTIVE, `approvedBy` null, and every one tagged on options
+serving live VR items:
+
+| her id | here | options carrying it |
+|---|---|---|
+| `vr-letter-series-off-by-one` | ACTIVE | vr-09-letter-series |
+| `vr-series-off-by-one` | ACTIVE | 39 · vr-11-number-series |
+| `vr-series-step-carryover` | ACTIVE | 26 · vr-11 |
+| **`vr-series-sum-of-last-two`** | **ACTIVE** | **13 · vr-11** |
+| `vr01-first-word-only` | ACTIVE | 11 · vr-01-insert-letter |
+| `vr04-opposite-pull` | ACTIVE | 40 · vr-04-closest-meaning |
+| `vr12-meaning-not-word` | ACTIVE | 50 · vr-12-compound-words |
+| `vr15-first-mention` | ACTIVE | 18 · vr-15-reading-information |
+
+**Zero are carried inside any item's stem or explanation** — they are library hints, not item hints.
+**And `vr-series-sum-of-last-two`, which is nowhere on Cowork's side, is here with 13 carriers.**
+Cowork's finding was correct about ITS store and wrong as an inference about where they belong.
+**Her file lands here.**
+
+**2. THE NULL FIGURES, EACH WITH THE POPULATION IT IS COUNTED OVER, ADJUSTED TOWARD NOBODY:**
+
+| counted over | this store |
+|---|---:|
+| library rows, all statuses | 278 |
+| `approvedBy` null, **all statuses** | **83** |
+| `approvedBy` null, **ACTIVE only** | **72** |
+| null, VR, all statuses | **66** |
+| null, VR, ACTIVE only | 56 |
+| null, ENGLISH / MATHS / NVR | 3 / 14 / **0** |
+
+Against Cowork's 77-overall-and-18-VR and Annie's 83-and-7. **Three figures, three populations, and
+the denominators are the whole disagreement** — 83 matches her overall exactly, and none of the
+three VR figures matches any other. Unreconciled, as ruled.
+
+**3. HER TWO 142 CHECKS BUILT — `pnpm check:spot-shape`, 18 segmented items screened.**
+- **The N option is excluded from the COMPARISON, never the item.** 18 N options excluded, **72
+  segments actually compared**. Excluding the item would have screened ZERO of 18, since every spot
+  item has an N — the empty-population silent pass in a new coat, exactly as she named it.
+- **The walk is measured PER PART**, because an N-keyed walk must visit every part before concluding.
+
+**AND I REFUSED TO FIT THE BUDGET TO ITS OWN CASES.** My first formula was `parts + 1`, which
+**passed SP-09's five and failed PU-09's six** — splitting a pair she ruled identical, so the
+formula was wrong. Widening it until both fit would be *"a rule fitted to the cases it then
+judges"*, delivery 38's own finding. So the check implements the MEASURE she ruled (sentences per
+part: SP-09 1.25, PU-09 1.50, every other item 1.00) and the threshold of 2 is **declared as mine
+and provisional** in the source — she ruled the measure, not the number, and anything ≥ 1.5 leaves
+both her items where she put them. 0 faults.
+
+**4. THE A8 ASSERT ALREADY EXISTS AND IS DISTRICT-GENERAL — verified rather than rebuilt.**
+Fault-injected: moving the span without its declaration produced *"declares a quoted span that is
+not in the text"*. It lives in `checkItemChildFacing` in packages/core, which **every** door wraps,
+so a span and its exemption are one change everywhere and not only in ENG-003. Her ruling asked for
+an assert rather than a register line; the assert was already the thing that caught it, and a second
+one would have been a duplicate gate.
+
+## R219 — The surface answers six hints: no annotation exists anywhere, the rail is family-gated, and two hints name what their own screen withholds
+*Annie's seventh return, 2026-08-19. "Nothing in the data shows this and only the screen will."*
+
+**THE ANSWER, FROM THE RENDERED SURFACE.**
+
+**1. THERE IS NO ANNOTATION AFFORDANCE OF ANY KIND, ANYWHERE.** No canvas, no drawing, no marking,
+no highlighting — swept across every crew component and lib. The only `markup` in the codebase is
+NVR's SVG *display*. **So `circle the signs`, `tick each one as you go`, `write each letter's number
+above it` and `draw the arrow` instruct four acts a child cannot perform on the screen.**
+
+**2. THE ALPHABET RAIL EXISTS, AND IS GATED BY FAMILY.** `railAvailable`: `code` always; `stowaway`
+on two types only; **everything else never** — and only `code.tsx` and `stowaway.tsx` mount it. So:
+
+| hint | type | family | rail on screen? |
+|---|---|---|---|
+| "Follow the arrows" | vr-09-letter-series | code | **yes** |
+| "Circle the signs first" | vr-07-letters-for-numbers | code | yes |
+| "Write each letter's number above it" | vr-07 | code | yes |
+| "Tick each one as you go" | vr-07 | code | yes |
+| **"Use the Alphabet Rail — count each hop"** | vr-14-letter-connections | **bridge** | **NO** |
+| "Draw the arrow" | vr-14 | bridge | NO |
+
+**`vr14-step-size` names the Alphabet Rail on a screen that has no Alphabet Rail.** Capitalised as a
+named tool, on the one family that never mounts it.
+
+**3. AND THE TWO RENDERS SHOW SOMETHING NEITHER STORE ASKED ABOUT — the faults are not all the same
+fault.**
+- **vr-07 (rail present):** the card ALREADY prints `P → 2   Q → 5   R → 4` above the expression.
+  *"Write each letter's number above it"* asks her to do a thing **the card has already done**. Not
+  impossible — REDUNDANT. A child who follows it looks for somewhere to write and finds the answer
+  already written.
+- **vr-14 (no rail):** the card draws two arcs — and `bridge.tsx` renders them as plain
+  `<path d="M5 25 Q45 -8 85 25">` with **no marker, no arrowhead**. *"Draw the arrow: which way did
+  the first pair travel?"* asks for **precisely the information the drawing withholds**: the arc is
+  there, its DIRECTION is not. The hint names the one property the picture omits.
+
+Rendered at 375px through the real engines, real rail, real not-yet panel, delivered as
+`vr-hint-375px-<itemId>.png`. **No review furniture inside the card frame** — the heading sits
+outside the captured element and the item id is in the FILENAME. That is the N-badge lesson and the
+orange-banner lesson, applied before she had to ask a third time.
+
+**THE 22 SENT FOR HER READ, AND THE JOIN RUNS THE OTHER WAY** — `nvr-22-for-her-read-…json`. She
+holds a RECORD of approving 22, not an artefact, and **sending a recollection as data is the
+transcription fault in a new place**. So this store sends its 22 with what it records and what it
+does not: all 22 carry `human:staff-reviewer@cluecrew.test`, person-shaped, resolving to no Reviewer
+row. **Her expectation travels with the file**: both stores may be right and her approvals recorded
+nowhere — in which case the repair is not a merge but a re-approval on reading, **the only route
+producing a signature that resolves to a person.** The nine cap-rewritten rows are flagged in place.
+
+## R218 — Maths is reachable by nobody because no door exists; `axis` is a column here, not their file; Gap N out with its assert
+*Annie's order continued, 2026-08-19, with two census questions folded in.*
+
+**1. THE MATHS QUESTION — THE SCOPE SHAPE THAT TURNED SEVEN INTO 24, AND THE ANSWER IS ZERO FOR A
+STRUCTURAL REASON.** Counted **without reference to any approval field**, since Cowork has none on
+its 472 maths rows (absent, not null — a null-sweep is blind there and would report zero for the
+wrong reason):
+
+| | |
+|---|---:|
+| MATHS library rows here | **111** (109 ACTIVE, 2 REJECTED) |
+| carrying an approver value | 97 · null 14 |
+| **MATHS question types in this store** | **0** |
+| Cases naming a MATHS question type | **0** |
+| options carrying a MATHS tag | **0** |
+| REACHABLE(free) / REACHABLE(paid) | **0 / 0** |
+
+**No door exists.** Not "no approved door" — no MATHS question type has ever been created here, so
+no Case can name one and no item can carry a maths tag. **111 authored maths misconceptions and not
+one is attached to anything.** A canary confirms the query returns a reachable tag elsewhere, so the
+zero is measured. This is R61's shape at district scale: a whole district's library, gated and
+signed, pointing at a population the pipeline has never produced.
+
+**2. THE `axis` DEPENDENCY — NO, AND THE REASON MATTERS.** `axis` is a FIRST-CLASS COLUMN in this
+schema (`Misconception.axis`, `MisconceptionTagRole?`), carrying annie's own 2026-08-06 two-ids
+ruling in its comment. Four scripts read it — `export-maths-executor-coverage`,
+`export-misconception-library`, `export-maths-misconceptions`, `apply-maths-library-sitting` — and
+**every one reads the COLUMN, never `libaxis`.** `twoTagRule` likewise: `export-maths-misconceptions`
+CONSTRUCTS it (deriving `processIds` from the column) and emits it; nothing here consumes theirs.
+**So retiring `libaxis` breaks no reader on this side.** But the same two names now exist in both
+stores meaning close to the same thing, which is the house fault one more time — and worth saying
+before somebody joins them.
+
+**3. GAP N IS OUT OF ALL SIXTEEN STEMS, WITH THE ASSERT, AS ONE ACT.** Stems now read *"Choose the
+words that fit best."* **The removal and the assert were never alternatives** (her words): removing
+the prose copy leaves FOUR internal copies — `stem.gapIndex`, `stem.quotes[].gapIndex`,
+`stem.passageRef`, `stem.quotes[].passageRef` — **measured at 16 of 16 each, not assumed**. Taking
+out the fifth without asserting the other four would trade one visible duplicate for four invisible
+ones.
+
+The applier asserts before it writes: every copy must agree, the prose copy being removed must agree
+with `gapIndex` (else it is a disagreement being deleted rather than a duplicate), and **a stem
+carrying no number fails loudly** — after this change `gapIndex` is the only place the number lives,
+so its absence is not a missing field but an unanswerable item. **All sixteen agreed; fault-injected
+to prove the assert bites** — `quotes[].gapIndex = 99` on B5 produced *"99 disagrees with
+stem.gapIndex 5"* and exit 1. Restored; `check:db-content` and `check:cloze-gaps` green.
+
+**RECORDED FROM THE A8 SEQUENCE, as instructed: A SPAN AND ITS EXEMPTION ARE ONE CHANGE.** Neither
+the ruling nor either store's plan named the declaration; the gate did.
+
+## R217 — The 23 read out in full; the A8 span found FROM THE GAP; and a ruled span that orphaned its own exemption
+*Annie's sixth return, 2026-08-19. The 23 is the finding of the delivery and it changes the shape of
+the exposure question.*
+
+**THE 23, DELIVERED AS TEXT AND NOT AS A COUNT** — `unapproved-hints-reachable-free-…json`, every id
+with the hint a child actually meets, the items and free-tier Cases that reach it, and its
+provenance. **Nothing pulled**: her ruling on the seventeen governs — a hint is seen only AFTER a
+wrong answer, so pulling it may cost more than the fault does.
+
+**THE DOOR IS NOT THE ENGLISH PAIR. It is TEN VR free-tier Cases** — `case-vr-01` The Extra Guest,
+`-03` The Bridge Builder, `-04` The Word Twins, `-06` The Gap in the Report, `-07` The Price of
+Letters, `-09` The Alphabet Trail, `-11` The Counting Culprit, `-12` The Joining Job, `-14` The Same
+Jump, `-15` The Locked Room. **`case-en-01` and `case-en-04` reach ZERO of the 23.** So this is the
+floor-of-two set that predates the English pair (R177), in the district serving longest — and every
+one of the four zero measurements was of a population that had nothing to do with it.
+
+**THE 22/22, HELD AND NOT ATTRIBUTED** (David's instruction, and R94's rule): *this store records
+that all 22 NVR rows were approved, and does not record BY WHOM in a way that resolves to her.* The
+value on all 22 is `human:staff-reviewer@cluecrew.test`, person-shaped and resolving to no Reviewer
+row. **And the population disagreement is stated rather than reconciled: her 37 is not this store's
+population — VR+NVR nulls here are 66, all VR, zero NVR.** Two stores counting different populations
+is the house fault.
+
+**A6 AND A8 FAILED MY STRIP PROPERTY AND HER READING WAS THE AUTHORITY — AND ON A8 THE REASON IS NOW
+VISIBLE.** The A8 carrier BEGAN IN THE PREVIOUS SCENE, on `“They might,” he agreed.` — which is why
+it carried quotation marks and why my checker read the vehicle as unquoted at the gap. **Her forward
+extension removed the cause, not the symptom**: after it, A8's carrier is narrative, has no marks,
+and the property holds. **15 of 16 now, A6 alone outstanding, unchanged as ruled.**
+
+**THE PARAGRAPH IS FOUND FROM THE GAP, AND COWORK'S WARNING WAS THE WHOLE DIFFICULTY.** Its first
+attempt took the paragraph start from the START OF THE CURRENT SPAN and still crossed the scene
+break — because the current span begins in the previous scene, so its start is on the wrong side of
+the break. Derived here from the vehicle's own `___(8)___` marker, both bounds from the gap, and
+**asserted against her ruled text before writing**: derivation and ruling matched exactly, character
+for character.
+
+**AND THE RULED SPAN ORPHANED ITS OWN R23 EXEMPTION — CAUGHT IN SECONDS BY A GATE WIDENED TWO DAYS
+AGO.** The stem declares its carrier as the vehicle's own sentence so the child-facing cap does not
+measure it as our wording. Moving the span left that declaration naming text that no longer existed,
+and `check:db-content` — holding ENG-003 blocking-grade since R209 — failed the item immediately:
+*"declares a quoted span that is not in the text"*. **A span and its exemption are ONE change**
+(R80's rule, in a new place). Neither the ruling nor either store's plan mentioned the declaration;
+the gate did. That is R209's widening paying for itself, on the first ruled content change after it.
+
+## R216 — Her 22 landed here; 23 unapproved hints ARE child-reachable; and five passes gave five numbers where a direct measurement gave one
+*Annie's sixth return, 2026-08-19. Her carrier measurement supersedes mine whole.*
+
+**THE CARRIER COUNT IS HERS AND MINE IS WITHDRAWN.** She measured presented carrier against declared
+span, item by item over sixteen: **nine add a wrapper the span does not have, seven carry the
+vehicle's own marks, nothing unresolved.** Cowork's 9/7/0 confirmed. My 6/7/3 and every pass after it
+are superseded.
+
+**THE SEQUENCE, RECORDED AS THE FINDING IT IS: FIVE PASSES, FIVE NUMBERS.** –/11/–, then 6/10/3,
+then 4/10/2, then 4/10/2 again by a different probe, then 3/13/0 by the exact gap-marker method —
+**each pass a better instrument, each a different answer, and the last still wrong** because dialogue
+breaks naive sentence-splitting (`“They might,” he agreed.` cuts at the full stop and loses its
+opening quote). A sixth tuning would have been a sixth number. **The only thing I produced that was
+worth reporting was the AGREEMENT**: three methods over sixteen, fifteen agreeing, exactly one
+disputed — and the disputed one was `A6`, which her direct measurement resolves. **Beside her note
+that her own first probe returned sixteen unresolved and that sixteen of sixteen is a broken
+instrument rather than a result.** Both halves of that lesson are the same: a measurement of the
+thing beats any number of measurements of a proxy.
+
+**BUILT: the nine stripped, no replacement device**, and the property asserted over all sixteen
+rather than the nine touched — *a mark appears in a cloze stem IFF it appears in the vehicle at that
+span*. **14 of 16 hold. A6 and A8 do not, BY MY CHECKER** — and my checker inherits the exact
+sentence-splitting flaw above, so on those two **her reading is the authority and mine is the suspect
+instrument.** Reported as a disagreement for her, never reconciled toward either side.
+
+---
+
+**MEASUREMENT 1 — HER 22 LANDED, AND THE FORGERY FRAMING REACHES THE NINE.**
+She asked whether her 22 NVR approvals never landed, or landed on a different population.
+
+| | |
+|---|---|
+| NVR library rows in this store | **22** |
+| of those, carrying an approver value | **22 — every one; zero null** |
+| the 9 rewritten NVR rows | **9 of 9** carry an approver AND an attribution event |
+| the 8 rewritten VR rows | 8 of 8 likewise |
+
+**Her 22 and this store's 22 are the same count over the same district.** By her own logic — *"if a
+rewritten NVR row is among my 22, then it was signed, the field is simply empty"* — **the framing
+reaches all nine**, and the annotation she ruled would have been right for those rows.
+
+**THE ONE THING THAT MUST NOT BE OVERCLAIMED (R94):** the approver value on all 22 is
+`human:staff-reviewer@cluecrew.test`, which `check:authority-shape` reports as **person-shaped and
+resolving to NO Reviewer row** (463 rows carry it). So this store records that the rows WERE
+approved and does not record BY WHOM in a way that resolves to her. The 22/22 coincidence is strong
+and is hers to confirm; I am not writing her name onto a placeholder.
+
+**AND HER 37 IS NOT THIS STORE'S POPULATION EITHER.** VR+NVR nulls here: **66, all VR, zero NVR.**
+Another one-description-two-stores, the same class as the child_gate dates.
+
+**MEASUREMENT 2 — 23 UNAPPROVED HINTS ARE CHILD-REACHABLE, AND THIS ONE IS NOT ZERO.**
+
+| district | nulls | tagged | SERVABLE | REACH(paid) | REACH(free) |
+|---|---:|---:|---:|---:|---:|
+| ENGLISH | 3 | 0 | 0 | 0 | 0 |
+| MATHS | 14 | 0 | 0 | 0 | 0 |
+| **VR** | **66** | **50** | **23** | **23** | **23** |
+| **ALL** | **83** | **50** | **23** | **23** | **23** |
+
+**Twenty-three hints that no approver value stands behind are reachable by a free child today**, all
+in VR — the district serving longest. The 24 measured zero and that was worth knowing; **this
+population is larger, it is not zero, and it is the one that matters.** (83 here against her 77 of
+100: different stores, different populations, never added — the arithmetic warning now in the record
+beside the child_gate dates and the seven-versus-24.)
+
+## R215 — one-id-two-texts-is-a-population-question: the CZ lookup answered, and a carrier audit that moved four times
+*Annie's fifth return via David, 2026-08-19. Named, not numbered — the amendment's own rule, since
+its header ran a day ahead of its arrival.*
+
+**THE OUTSTANDING LOOKUP, ANSWERED: CZ-A4 OPENS WITH ONE QUOTATION MARK.** `U+201C` then `I a…`.
+**All 16 cloze carriers open with exactly one**, zero doubled, and **all 16 match the second-return
+batch byte-for-byte** — so this store's copies are POST-repair, not stale. Cowork's conditional
+("if your copies are stale your 3 unresolved collapse") does not fire: the unresolved were an
+instrument fault of mine, not staleness.
+
+**AND THE AUDIT MOVED FOUR TIMES, WHICH IS THE ENTRY.** Against Cowork's 7 / 9 / 0:
+
+| pass | method | speech / narrative / unresolved |
+|---|---|---|
+| 1 | first run after the gap, "unquoted" conflated with "not found" | – / 11 / – |
+| 2 | same, buckets separated | 6 / 10 / 3 |
+| 3 | 12-char minimum probe | 6 / 7 / 3 → then 4 / 10 / 2 on the post-repair store |
+| 4 | LONGEST run, not the first | 4 / 10 / 2 |
+| 5 | **exact: located by the vehicle's own `___(N)___` marker, no probe at all** | 3 / 13 / 0 |
+
+**Every pass was a better instrument and every pass gave a different answer**, and the last one is
+still wrong in a way I can name: dialogue breaks naive sentence-splitting, so `“They might,” he
+agreed.` is cut at the full stop and the opening quote falls outside the window. **A fifth tuning
+would have been a sixth number.**
+
+**SO THE ANSWER IS NOT A NUMBER, IT IS AN AGREEMENT.** Three independent methods run over every
+item: **15 of 16 agree — 5 SPEECH, 10 NARRATIVE — and exactly one is DISPUTED, `ENG-003-A-CZ-A6`.**
+That is reportable in a way none of the four counts was. **Against Cowork's 7 / 9 / 0 the difference
+stands as the finding and is NOT adjusted toward it** (David's instruction, and the whole reason
+both halves run independently).
+
+**THE `Anne` HYPOTHESIS, TESTED AND REFUTED ON THIS SIDE.** Cowork proposed that `Anne` — retired as
+an alias by the merge ruling — is the fourth parked value, which would have been parked under
+exactly that description. Enumerated over every person-bearing column: **0 values match Anne-not-
+Annie**, in `Misconception.approvedBy`, `Item.reviewedBy` or `Word.reviewedBy`. Consistent with R198:
+neither name has ever been an approver VALUE here. **The fourth parked value is not `Anne` in THIS
+store; whether it is one in Cowork's is Cowork's to test, not inferrable from here.**
+
+**THE ENUMERATION, ALL ROWS:** `Misconception.approvedBy` — `human:staff-reviewer@cluecrew.test`
+162, null 83, `current-reviewer` 22, `reviewer:rev-0001` 10, `rev-0001` 1 (278 total).
+`Item.reviewedBy` — null 730, `human:staff-reviewer@cluecrew.test` 301, `human:fixtures@…` 1.
+**ARITHMETIC WARNING: `current-reviewer` stands at 22 HERE against Cowork's ten dropping to eight.
+Different populations, and the two counts must never be added** — which is the same class as the
+child_gate date and the seven-versus-24: one name over two stores, read as one number.
+
+## R214 — a-rewrite-passes-for-the-author: the trim proved dead at one door, and the restore was dead with it
+*Annie's fifth return, 2026-08-19, relayed by David. Her sequence governs and item 1 gates the rest.
+Cited by NAME because ordinals move.*
+
+**PROVED DEAD, AT THE ONE DOOR.** The disable went on the WRITE and not the threshold, and not into
+~30 writers either: into the single extended Prisma client in `packages/db` that every one of them
+imports. Unbypassable, one place, and a new writer is guarded on the commit that adds it. Four
+behaviours, each fault-injected against a live approved row:
+
+| the write | result |
+|---|---|
+| fit-to-cap shortening of approved text (the loop's own write) | **THROWS** |
+| restore of a longer pre-cap string | **ALLOWED**, over-length reported |
+| a SECOND cap after a restore — Annie's exact window | **THROWS** — before 21w → after 16w, 5 lost |
+| `updateMany` carrying `childHint` | **THROWS** — no per-row before-value to compare |
+
+**AND THE SECOND HALF WAS FOUND BY TESTING THE RESTORE, NOT BY READING THE RULING.** With the
+anti-trim guard in, the re-cap threw — **and so did the restore**, because the pre-existing
+child-facing gate refuses any hint failing the cap, and pre-cap text is over-length BY DEFINITION.
+**The trim was dead and the ruling's own remedy was dead with it.** *"Refuses and reports
+over-length, never trims"* means the refusal is of the TRIM, not of the TEXT: on text carrying an
+approval marker the cap now REPORTS to stderr and stands aside; on unapproved text it still blocks,
+which is the door doing its job for new drafting. **A ruling can be implemented exactly and still
+not work, and only running it finds that.**
+
+**THE EXPOSURE, SIZED (her item 2 — to size, not to gate).**
+
+| district | of 24 | tagged on an option | SERVABLE | REACHABLE(paid) | REACHABLE(free) |
+|---|---:|---:|---:|---:|---:|
+| ENGLISH | 7 | 6 | 0 | 0 | 0 |
+| NVR | 9 | 0 | 0 | 0 | 0 |
+| VR | 8 | 0 | 0 | 0 | 0 |
+| **ALL** | **24** | **6** | **0** | **0** | **0** |
+
+**No child is reading a shortened hint carrying her approval**, the seventeen VR and NVR rows
+included. All 24 options carrying these tags sit on DRAFT items. The zero is a measurement, not an
+empty population — a canary confirms the query returns true for a genuinely reachable tag.
+
+**THE SIX DELETED WITNESSES: 5 OF 6 RECOVERED ON THIS SIDE, 3 OF THEM TWICE OVER.** Their pre-cap
+text was said to survive nowhere. It survives here — in the pinned import artefacts (R203), the
+files kept because a hash proves identity and nothing proves vintage:
+- **RECOVERED, TWO INDEPENDENT SOURCES** (pinned witness and this database agree byte-for-byte,
+  both longer than the capped text, both predating the sweep): `en-negation-dropped` (17w vs capped
+  15w), `en-vocab-neighbouring-sense` (19 vs 15), `en-vocab-form-lookalike` (19 vs 14).
+- **RECOVERED, ONE SOURCE** (pinned witness holds a longer text; this database differs, so which is
+  the pre-cap original is HERS to settle): `en-coordination-wrong-conjunct` (21 vs 16),
+  `en-whole-text-absence-asserted` (23 vs 16).
+- **NOT RECOVERED**: `en-narrator-voice-as-fact` — absent from every pinned witness, and this
+  store's text is 11w against a capped 13w, so it is not the pre-cap either. **Redraft as new work,
+  per her ruling** — it does not stand under her name on the strength of a capped string.
+
+**THE PINS PAID FOR THEMSELVES IN TWO DAYS.** They were kept on 2026-08-17 as the only witness to
+Cowork's pre-rename state, for a question about NAMES. They have now answered a different question
+nobody had asked yet, about TEXT. R207's half-measurable finding, demonstrated: which questions an
+era will face is hindsight, and that is exactly why the vintage is worth keeping when it is cheap.
+
+**Delivered as `fifth-return-code-half-…json`, with the four-times-asked answer STATED rather than
+computed: the UNBOUNDED row is SP-08 D, `en-unstressed-suffix-vowel`.** Its ruling is read from her
+third return section 5, never from a relay.
+
+## R213 — The trim was a LOOP, not a line: located on this side, disabled on the write, and no child is reading a shortened hint
+*David, 2026-08-19, per Cowork's specification. Cowork proved it is not on its side — 0 of 6
+childHint writers shorten by word count. It is here.*
+
+**1. LOCATED — AND IT IS WHY TWO STORES SEARCHED FOR A FUNCTION AND NEITHER FOUND ONE.**
+`export:hints-to-reword` selects every ACTIVE hint failing the 16-word child-facing cap and hands
+it out to be reworded. **Its own page header says so in its own words: *"These are hints you
+approved on the written review."*** The rewording happens off-store; a shorter value comes back
+through an importer. **Nomination → rewrite elsewhere → import.** The cap chose the victims, a
+human or agent did the cutting, no step looked like a trim, and nothing in either store was a
+truncating function. There are three such nominators (`export:hints-to-reword` and its `-maths`,
+`-nvr` siblings) and **6 of 7 hint importers carry no word-loss guard** — only
+`import-en-hint-redraft.ts` refuses on words lost, and it was written for one entry.
+
+**2. DISABLED ON THE WRITE, NOT ON THE THRESHOLD** (Cowork's specification, correct and adopted:
+raising the limit or exempting a batch leaves the mechanism intact and only moves the next victim).
+`packages/core/src/approved-text-guard.ts` — `refuseApprovedTrim` returns a refusal when a write
+would SHORTEN text carrying an approval marker (`approvedBy`, `textProvenance.hintAuthoredBy`,
+`.hintAuthority`, `.approvedByPerson`). **Lengthening and equal-length rewording are NOT refused:**
+the fault is words disappearing from text a person approved, and a redraft she asked for is why the
+path exists.
+
+**PROVED BEFORE ANY HINT WRITE OPENS**, by fault injection on a real approved row
+(`maths-49-universal-symmetry`, marker present):
+- fit-to-cap shortening (exactly the write the loop made) → **REFUSED, 4 words**;
+- same-length reword → **ALLOWED**;
+- identical shortening on unapproved text → **ALLOWED** (the guard is scoped to approval, not to
+  length).
+
+**And the nomination end is closed at source:** the exporters now split approved from unapproved.
+Live run — MATHS: **1 failing, 0 nominated, 1 REFUSED** with its over-length named
+(`maths-49-universal-symmetry`, two long words); ENGLISH: 0 failing. **The one hint the loop would
+have fed to a rewriter today is refused instead.**
+
+**3. THE 24 ROWS, ON THIS SIDE — AND THE NUMBER THAT MATTERS MOST IS ZERO.**
+
+| | |
+|---|---|
+| STORED here | **24 of 24**, all ACTIVE |
+| tagged on any option | 6 of 24, on **24 options, every one on a DRAFT item** |
+| SERVABLE | **0** |
+| **REACHABLE(free) / REACHABLE(paid)** | **0 / 0** |
+
+**No child is reading a shortened hint carrying Annie's approval.** The zero is a measurement, not
+an empty population: a canary confirms the query returns true for a genuinely reachable tag
+(`vr14-step-direction` on `vr-14-letter-connections`, named by a Case).
+
+**AND THIS STORE'S TEXT MATCHES NEITHER OF COWORK'S VALUES ON 14 OF 24.** Against Cowork's
+enumeration: **1** matches its REWRITTEN value, **9** match its PRE-CAP value, **14** match
+neither; by length, **6 longer than pre-cap, 9 equal, 9 shorter**. So this store was not the sweep's
+victim — its hints have moved separately, through their own redrafts and rulings. **The two stores
+disagree about 23 of 24 approved hints**, which is a larger finding than the trim and belongs to
+whoever reconciles the library.
+
+**4. THE STAMP POPULATION, SCOPED NOT REPAIRED** (David: report, don't fix).
+**5 of 26 exporters stamp their own `body`**, which contains `generatedAt`, so `sourceHash` is a RUN
+ID rather than a content hash: `check-serving-path`, `check-retag-releases`,
+`check-verdict-refusals`, `export-cowork-workorder`, `export-for-cowork` (3 calls). The other 21
+stamp a narrower projection (`entries`, `rows`, `refusals`, `payload`) and are true content hashes.
+**7 delivered artefacts now in evidence carry a run id where a content hash is implied** —
+`serving-path-english`, `retag-releases-english`, `verdict-refusals-english`,
+`reviewer-identity-disambiguation`, `vr04-disagreeing-keys`, `eng003-spag-current`,
+`check-db-content-eng003`.
+**COST OF THE FIX: five call sites**, each passing the already-declared projection instead of
+`body` (`artefactStamp(rows, …)` where `stampedOver: ['rows']` is already written beside it) — plus
+one line in `check:stamp-covers-payload` so a `status` projection whose mismatch is explained by
+`generatedAt` alone stops being absorbed by the design allowance. **Every re-run of those seven
+supersedes the last by name whether or not anything moved** — identical content producing different
+hashes is precisely the property that stops two stores agreeing they hold the same file.
+
+## R212 — Four surface faults from four renders, and the fourth measurement was the instrument three times
+*David, 2026-08-19, reading my own four renders. None is an item fault; all four are SURFACE faults —
+the review scope that exists because of the gold window. **Measured and reported; nothing changed.***
+
+**1. THE N MISMATCH — 18 of 18, and the letter reaches no screen at all.** Every spot stem ends
+*"If every part is right, choose N."* Every N-labelled option renders **"No mistake"**. Labels
+(A–D, N) exist on all 18 items and **no engine prints one**: error-spot reads `content.label` only
+to CLASSIFY the verdict option, and renders `content.value` — so the child is told to choose a
+letter that is nowhere on her screen. The shuffle does not save it either way: R192 excludes
+segmented items and R199 fixes id order to label order, so the verdict is stably LAST and stably
+unlabelled. Two exits, both child-facing wording, hers: the option shows its letter, or the stem
+stops naming one.
+
+**2. MY "LOOKS IDENTICAL ACROSS BOTH SPaG FAMILIES" DOES NOT SURVIVE ITS OWN RENDERS.** Error-spot:
+italic, unquoted, tinted band. Cloze: upright, tinted band, **wrapped in quotation marks**. The
+marks are **STORED, 16 of 16** — the renderer prints the string it is given and adds nothing; my
+answer to "stored or added" is STORED, so they did not survive a wrapper strip, they were never
+stripped because nothing strips them.
+**And the substantive fault David predicted is real anyway, now evidenced against the vehicles:**
+of the 16 quote-wrapped carriers, **6 are quoted in the vehicle too** (speech, correctly marked)
+and **7 are NARRATIVE there** — the stem asserts speech on a sentence the source does not quote
+(A1, A2, A5, B1, B4, B6, B8). **3 UNRESOLVED**, and that is an instrument limit, not a finding.
+Owner: authored stem text, so Cowork and Annie — not a renderer strip.
+
+**THE INSTRUMENT WAS THE FAULT THREE TIMES IN ONE MEASUREMENT**, which is the entry's second half.
+First pass conflated "unquoted in the vehicle" with "probe not found" and reported **11**. Second
+pass separated them and reported **10** — still wrong, because a SHORT probe makes `indexOf`
+meaningless: CZ-B7's probe was the EMPTY STRING (its carrier opens on the gap), matching position
+0; CZ-B5's was `"The"`, matching the first "The" anywhere. Both scored as NARRATIVE. Requiring a
+12-character probe gives **7 narrative, 6 speech, 3 unresolved**. **11 → 10 → 7, and only the last
+is a measurement**; the first two were the tool measuring itself. R173's family, three times inside
+one answer.
+
+**3. "HERE IS THE WHOLE SENTENCE" IS WRONG ON CLOZE, and I put it there.** Annie ruled that line for
+the SPOT families' sentence-under-test; on cloze the sentence is not whole by construction — a gap
+is exactly what it is missing. **Proposed for her ruling: no caption on cloze.** The spot families
+need one because four tappable rows must be introduced as one sentence; a cloze carrier is a single
+block under an instruction that already says what to do, so a caption adds a claim ("whole") that
+is false, or a hedge ("nearly whole") that teaches nothing. If she wants one, the honest form names
+the gap rather than the sentence — *"One word is missing here."* — but the proposal is NONE.
+
+**4. "GAP 5" IS AUTHORED STEM PROSE, NOT a bookkeeping field reaching the surface.** 16 of 16 cloze
+stems OPEN with `"Gap N."` in `stem.text`, and on 16 of 16 that N equals `stem.gapIndex`. So it is
+Cowork's and Annie's, not a ruling about field leakage — **and the duplication is the thing to
+watch**: the same number in prose and in a field, agreeing today, with nothing asserting they agree.
+CZ-B5 shows "Gap 5" above a carrier with ONE visible blank, so the number locates a gap in the
+VEHICLE while the child sees one gap on the card — a locator for a frame she is not looking at.
+
+**THE EMISSION'S VINTAGE — POST-REPAIR, settled by CONTENT and not by clock.** `generatedAt`
+01:15:59Z against the import's last write 01:13:24Z; and re-running the emitter now yields **rows
+byte-identical, 0 of 34 differing**. It describes post-repair rows and is sound evidence.
+**But the re-run produced a DIFFERENT FILENAME HASH on identical content** — because
+`artefactStamp(body, …)` hashes `body`, and `body` contains `generatedAt`. So `sourceHash` is a RUN
+id, not a content hash, on every exporter that stamps its own body while declaring
+`stampedOver: ['rows']`. `check:stamp-covers-payload` SEES the mismatch and files it under *"a
+status projection is allowed to differ by design"* — **the right observation absorbed by the wrong
+reason**, and the supersede-by-name mechanism churns a new file per run whether or not anything
+moved. Reported, not repaired: it touches every stamped exporter.
+
+## R211 — PR-06 released by her fourth return; the second-return batch lands 34; the Gap Yard surface built for her read
+*Annie's fourth return (`annie-eng003-fourth-return.md`, sha256 3724df8f2c6c1678…, pinned in
+content/evidence), 2026-08-19. Her words, verbatim, which were the lift condition: "Receipt is
+confirmed by this document, which was the release condition. PR-06 is released."*
+
+**THE LIFT.** ENG-028-PR-06 out of `SERVING_HOLDS` — and INTO `LIFTED_HOLDS`, full record kept: a
+hold that vanishes is a silent lift, and the silent rename is why nothing leaves that file
+unrecorded. The premise flipped with it: it now guards the RECORD of the lift (re-hold or demotion
+without a ruling, or the LIFTED_HOLDS record disappearing, breaks CI). **Deltas, measured:**
+SERVABLE 331 → 332, REACHABLE(paid) 331 → 332, REACHABLE(free) 313 → 314; PUBLISHED unchanged.
+Defect 24 dissolved end to end, in her words.
+
+**THE SECOND-RETURN BATCH: 34 drafted · 34 landed · 0 refused · 0 gate-held** (`--replace`; the
+seven ids clear on her verified evidence). The door earned its keep four times on the way:
+- **R57 refused eleven unregistered keys in two waves** — each now carries a disposition in the
+  registry: `gapIndex` and `correctionOf` CARRIED onto the stem; `hintAuthoredBy` +
+  `hintAuthority` carried AS A PAIR (a name that crossed without its authority would be R203's
+  bare-name fault imported fresh); `secondaryMisconceptionId` NOT_CARRIED/PROPOSED — one-diagnosis-
+  per-option is the ruled model and a second tag is a schema ruling, not a door improvisation;
+  five `_previous*`/migration shadows NOT_CARRIED/PROPOSED, retag-history class.
+- **The registry declared `gapIndex` CARRIED before the door performed it** — first post-import
+  `check:cloze-gaps` read "16 with neither", 16 faults. **A registry row is a claim about the DOOR,
+  and only the door can make it true** (R80's shape, caught by the check built for it). Door fixed,
+  re-imported: "16 via stem.gapIndex", 0 faults.
+- **R199's id-from-label rule added to THIS door too** — `--replace` rebuilds options, and minted
+  cuids would have reset segment order to creation-order luck. 18/18 reconstruct, verified.
+- The stems now read "may have" on 18 of 18 spot items; `check:db-content` 773 serving rows pass.
+
+**HER TWO RIDERS ON ROW 23:**
+1. `errorspot-pu-02-375px-repaired-store.png` — regenerated FROM THE REPAIRED STORE, showing the
+   served "may have" stem. Named distinctly: regenerated is fine, silently different is not.
+2. **The scope-note line is CHILD-FACING** — a child sees it on every SpaG item — so it now does a
+   child's job, in her words: **"Here is the whole sentence."** It reads as the caption of the
+   sentence block in both SpaG families.
+
+**THE CLOZE SPLIT, BUILT.** The renderer splits the stored stem at its first separator: instruction
+as the question line, carrier as its own block — the same visual grammar as the error-spot sentence
+preview, so "the sentence you are working on" looks identical in both SpaG families. A stem with no
+separator renders whole, unchanged. New harness at `debug/cloze`; **three renders at 375px delivered
+(CZ-A1, CZ-B1, CZ-B5) — her read of that surface is what stands between the Gap Yard opening and
+today.**
+
+**Amendment §5 applied to the owed emission**: re-emitted as `check-db-content-eng003-…json`,
+labelled by INSTRUMENT, stating that `child_gate(cowork)` is a separate value if she wants both;
+the class-named file removed as superseded.
+
+**Recorded on her ruling, no action:** the layout's unmarked prose is accepted as an improvement
+over her sketch, not drift — no pre-chunking; the gold-window lesson carried forward.
+
+## R210 — the-merge-ruling-lands
+*ANNE-ANNIE-MERGE-RULING.md, David, 2026-08-19. Cited here by FILENAME, and this rule by its NAME —
+`the-merge-ruling-lands` — because ordinals move (the ruling's own §7). First arrival 01:20,
+2026-08-19; no earlier crossing (absent from every prior Downloads sweep).
+sha256 `036bdf84cac0f5c74daf95fa061e7c86bdaa6e9334bc8600c67785060a62aee2`.*
+
+**THE RULING:** Anne and Annie are one person — canonicalReviewerName **Annie**, alias Anne retired,
+identityStatus RULED-SAME-PERSON. No approval weakened, strengthened or reopened. Cowork's six
+renamed entries stand as **correct by this ruling, not by the accident that produced them** —
+recordBasis APPROVED-BY-ANNIE-PER-MERGE-RULING, enumerated on its side by property against the
+pinned import file.
+
+**EXECUTED HERE, EACH ACT NAMING THE DOCUMENT AND ITS HASH:**
+- **Moves 1–3 (R200's stated plan, verbatim), applied 6 of 6, 0 refused.** The six enumerated BY
+  PROPERTY against the pinned batch artefact (`approvalAuthorshipNote` beginning "APPROVAL
+  AUTHORSHIP UNKNOWN") — never from a remembered list (§3, R178). Per entry: an `AMENDED`
+  AttributionEvent citing the artefact by name and hash (actor David, the writer naming itself and
+  its authority); `identityResolution` added beside the doubt on the row; one sentence APPENDED to
+  `approvalNote` — the original never-crossed sentence stays visible above its own correction.
+- **Move 4: nothing else moved, and re-verified** — `check:authority-shape`: 0 machine verdicts
+  wearing a person's authority, unchanged; `approvedBy` values untouched.
+- **§4: the pin is PERMANENT-EVIDENCE, liftedBy NOTHING** — recorded on the witness entry itself:
+  superseded as authority, retained as evidence without expiry; outranking is not erasure. The
+  ruling document joins the witness list (it sat in bare ~/Downloads while six events cited its
+  hash — R204's exposure, closed the day it opened).
+- **§5: the parked values are UNPARKED, and none is resolved tonight** — unparked means may now be
+  resolved, one named act each. Awaiting acts on this side: `human:staff-reviewer@cluecrew.test`
+  (463 rows), `current-reviewer` (22, partially retired by her approval-on-reading, the endorsed
+  model), `rev-0001` (1). **§5 says four; only three are enumerable from this store's census** —
+  the fourth is not named here rather than guessed (R178).
+
+**MOVES 5 AND 6: REFUSED, NOT ADAPTED (§6), and the refusal is the finding.** Their target — the
+28-field restructure population measured in R203, and the refusing reader designed in the same
+pass — no longer matches its description, in three ways moves 1–3 themselves caused or exposed:
+(1) six doubt-fields the restructure would encode as PENDING are now SETTLED — the reader's own
+exemplar of PENDING was "the Anne/Annie artefact", which no longer pends; (2) the appends changed
+six fields' content under the measured population; (3) `identityResolution` is a NESTED name-
+bearing shape the hedge sweep cannot read — the measuring instrument under-reads the store it
+would be restructuring. The design pass re-scopes over post-ruling state, then rules.
+
+## R209 — Her read passed; the N badge was the framework; and the two answers that release PR-06
+*Annie's read of the TI-05 surface, 2026-08-19: the layout passes both conditions. Seven asks,
+answered and built.*
+
+**1. THE N BADGE — packet furniture, not a live control, and not even ours.** It is the **Next.js
+dev-mode devtools button**: a `nextjs-portal` shadow-DOM element the framework mounts under
+`next dev` only. It records nothing, tapping it opens framework debug UI, no production build
+mounts it, and no child can ever meet it. Not a SpaG leak — comprehension still has no N option;
+the resemblance to the error-spot verdict pill was typography. **Disabled for renders**
+(`devIndicators: false`), all stills regenerated clean — it had been occluding "Ready" in three
+frames of a review artefact, and a reviewer should never have to ask which parts of a screenshot
+are real.
+
+**2. THE FIFTH STILL** — TI-05 scrolled back to span 1 after the second tap, **span 1 still
+marked** — delivered. Cumulative marking is now shown, not asserted. Both release answers are with
+David in writing; `SERVING_HOLDS.liftedBy` amended to the ruled condition: release on his
+confirmation of receipt.
+
+**3. RECORD HYGIENE — the unit correction is applied to R208 in place**: seven to eight NUMBERED
+passage lines at 375px, not "twenty lines". The original figure was true only in wrapped screen
+lines and named no unit — R168/R169's fault, committed inside the register entry about the
+viewport, hours after counting signature units.
+
+**4. THE CHILD GATE OVER ENG-003, WIDENED AND RUN.** The cluster sat in `check:db-content`'s DRAFT
+backlog — 34 rows never HELD to the gate, blocking nothing. Now `ENG-003` gates blocking-grade
+while DRAFT (a bank one signature from a child gates as if serving, BEFORE the signature): serving
+population 739 → **773, all pass**. One advisory stands: `ENG-003-A-SP-07` carries "practise" in an
+option and its walk script — **correct as the verb**, flagged only by the sense-dependent UK
+spelling check on the very item that teaches the spelling. Hers to confirm through Cowork's return
+path; not a rewording.
+
+**5. THE SENTENCE-VISIBLE ERROR-SPOT LAYOUT (her row 23).** Below 600px the segments are
+full-width rows — three inline attempts at 375px are documented in crew.css and none survives the
+48px target — so the ROWS carry the choosing and a new element carries the reading: **the sentence
+as continuous read-only prose above the rows**, authored order (safe since R192 serves segments
+unshuffled), hidden at ≥600px where the segments already read inline. `PU-02` and `PU-06` rendered
+at 375px for her read; **the eighteen error-spot items stay child-unreachable until it passes.**
+
+**6. THE TWO CLOZE CONFIRMATIONS, ONE LINE EACH.**
+- **The renderer does NOT split: it prints the stored string whole, separator included** — cloze
+  reuses the word-web renderer, whose `stemText` renders `stem.text` verbatim, em-dash and all. A
+  fix is a build awaiting her read of the cloze surface; the confirmation is the honest no.
+- **Row 17 measured the superseded 2-Aug file.** `ENG003spagsetA.json` carries `lineRefs: [gap]` on
+  all 16 cloze items; the DATABASE has `lineRefs` empty on all 16 and the gap number in the stem.
+  **The ruled geometry is applied**: `stem.gapRef → stem.gapIndex` on all 16 (16 migrated, 0
+  refused), `check:cloze-gaps` now reads "16 via stem.gapIndex", 0 faults — and every `gapRef`
+  reader moved with the field (import door writes `gapIndex`; `check:line-refs` reads either,
+  preferring the ruled name; serving-path wording updated). R80: a migration and its consumers are
+  one change.
+
+**7. THE DUP TAXONOMY RULING, RECORDED WITHOUT FABRICATION.** `en-spag-cloze` enters as the third
+dup-by-construction type, keyed on question type — every item on one vehicle shares its carrier
+text by design. Declared in `packages/core/src/dup-by-construction.ts`. **The first two members are
+NOT named there**: the taxonomy is Cowork's artefact and its earlier members never crossed; writing
+my guess into a constant would be a fabricated fact wearing a schema (R178). They join by import
+when the taxonomy crosses, and any consumer of the list is told it is PARTIAL.
+
+**Pre-existing, not tonight's:** `check:line-refs` fails on ENG-028-PR-11's attractor-only options
+— the stale-`attractorLine` class Cowork is fixing rule-first. Verified failing before these
+changes (git-stash bisect), unchanged by them.
+
+## R208 — The hold at the door, the passage-primary layout, and defect 24 dissolved
+*Annie's rulings, 2026-08-19, relayed by David. One urgent action, one build, one protocol change.*
+
+**1. ENG-028-PR-06 IS HELD FROM SERVING — AT THE DOOR, NOT BY STATUS.** `status: LIVE` records that
+a reviewer signed the item off and that fact has not changed; demoting it would erase a review fact
+to express a serving fact — R184's conflation committed in the write direction. Mechanism:
+`SERVING_HOLDS` in packages/core, consulted by **both** doors (`itemPool`, `composeMockPaper`) and
+by `check:serving-path`'s census, so SERVABLE reports what the doors DO. Every hold names its lift
+condition by construction (`liftedBy` required — a hold with no address is a PENDING with no
+`awaiting`, R207). **Ruled exempt from the merge gate; applied immediately.**
+
+**MEASURED DELTAS** (before → after, from the census):
+
+| | PUBLISHED | SERVABLE | REACH(paid) | REACH(free) |
+|---|---|---|---|---|
+| ENGLISH | 34 → **34** | 34 → **33** | 34 → **33** | 16 → **15** |
+| ALL | 332 → **332** | 332 → **331** | 332 → **331** | 314 → **313** |
+
+PUBLISHED unchanged, everything above it down exactly one, both populations. The R195/R208 premise
+in `check:expiring-claims` now guards the HOLD: it breaks on a silent lift, or if anyone expresses
+the hold through status after all.
+
+**2. THE PASSAGE-PRIMARY LAYOUT — none of the seven scoped options; the eighth is the ruling.**
+The passage owns the viewport (**CORRECTED 2026-08-19, R209: seven to eight NUMBERED PASSAGE
+LINES at 375px** — the original "20 lines" was true only of WRAPPED SCREEN LINES and named no unit,
+the R168/R169 fault in this register's own entry; Annie's fifteen-to-twenty named no unit either,
+and seven to eight numbered lines meets the ruling. `min(64vh, 520px)`); the question
+is a **persistent collapsed drawer** beneath it; **scrolling is a property of reading, not of the
+item** — nothing declared, no re-tier. Composition with R174: on a multi-span item the tap
+NAVIGATES — targets computed from the item's cited lines as contiguous runs, **never from scroll
+position**; marks accumulate one-way. Verified on the rendered surface at 375px: arrival shows
+nothing marked and the drawer collapsed; tap 1 marks lines 18–26 and advances the control to
+"43 to 49 (2 of 2)"; tap 2 marks all 16 cumulatively; the cycle returns. **DEFECT 24 IS DISSOLVED
+BY THIS RULING, NOT FIXED** — the 26 two-span items were unservable against a 5-line window, and
+there is no 5-line window. This entry is the pointer; the defect is not restated.
+
+**3. THE FIRST BUILD IS THE REFERENCE RENDER: ENG-013-TI-05** — two-span (18–26, 43–49) plus a
+wrong-scope distractor, so it exercises the tap composition and the drawer together. Four renders
+at 375px delivered for Annie: arrival, after tap 1, after tap 2, drawer open. **PR-06 returns to
+serving the day her read of that render passes, and not before** — that is the hold's `liftedBy`,
+verbatim.
+
+**4. PROTOCOL IN FORCE: two-span items are reviewed on the RENDERED surface at 375px from here
+on.** The gold window was found by looking at a screen; the viewport fault was found by measuring
+one; nothing in the data would have found either.
+
+**Incidental:** the vocabulary scanner flagged the R203 witness files — quoted history it can
+neither fix nor should read. `content/evidence` joins the excluded paths with the reason in place:
+a witness hit is a fact about HISTORY, and rewording one is impossible without breaking the pin the
+file exists to keep.
+
+## R207 — PENDING carries its address; the unanswerable-question test is half measurable; and one R206 claim corrected to UNKNOWABLE
+*David's rulings, 2026-08-18.*
+
+**1. PENDING IS A STRUCTURED VALUE, NOT A SECOND FIELD — decided on the project's own rule.** A
+state with no address is a premise with no address, and a sibling field would recreate the exact
+fault R203 closed: a reader fetching the state gets `PENDING` and no address. So the qualifier
+lives IN the value:
+
+```
+{ state: 'PENDING', awaiting: '<artefact | ruling | actor, named>', setBy: 'R###', on: '<date>' }
+```
+
+Reader refuses a `PENDING` without `awaiting`. And the time-bound is now checkable BY
+CONSTRUCTION: `on` plus `setBy` make "a PENDING older than the ruling that set it" a query, not a
+memory. On the merge worklist with the three values, as scoped.
+
+**2. "WHAT QUESTIONS DOES THIS FILE UNIQUELY ANSWER" — HALF MEASURABLE, AND THE HALVES ARE
+DIFFERENT KINDS.** A file is a witness of (subject, VINTAGE). Which questions will ever be ASKED of
+an era is hindsight, permanently — the nine mattered only because a recorded 24 later disagreed
+with a measured 33, and nothing at 12:09 on the 16th could have predicted that. **That half stays a
+cost.** But WHETHER any other artefact witnesses the same subjects, and at what vintages, is
+computable at retirement time — and that is the half that decides whether an era becomes
+unanswerable. `retire-loose-copies` now records, per retired file: **`mtimeAtRetirement`** (the
+vintage — the first ledger kept the hash and dropped the WHEN), and **`survivingWitnesses`** — every
+artefact under the transfer area, content/exports and content/evidence that mentions any of the
+same ids, with its own mtime — so the era gap a removal creates is recorded at the only moment it
+is computable. The measurable half became mechanism; the hindsight half is named as hindsight.
+
+**3. CORRECTION TO R206, and it is the strongest argument for the mtime field.** R206 said the two
+retired originals *"would have settled the nine."* **That claim is UNKNOWABLE, not true.** Settling
+the nine needs a witness dated BETWEEN the 8-Aug absorption and the 16-Aug emission; the retired
+files' dates went unrecorded — the ledger kept `sha256` and dropped `mtime` — so whether either sat
+inside that window cannot now be established by anyone. Not "no": unknowable, which is worse, and
+is exactly the class of loss the new field closes.
+
+## R206 — The converted stems enumerated from two pinned witnesses: 33 measured against a recorded 24, with the difference localised to nine ids
+*David's question, 2026-08-18, blocking a second cold read stalled since delivery 51: can this store
+name the 24 converted stems? Cowork's store cannot — 5 of 378 items carry a `_previous*` field and
+none is in the set.*
+
+**THE WRITE LOG CANNOT ANSWER — AND THAT NULL IS ITSELF PRECISE.** No logged write on ENG-001/002
+has ever changed `stem` or `lineRefs` (every 16-Aug import was a stem NO-OP: the values already
+matched). So the conversion crossed before the log began, in the permanently invisible window.
+
+**THE ARTEFACTS CAN.** Two witness pairs survive on this side:
+- **PRE**: the 8 Aug merge exports (`english-batch-eng-001…ba33a61…`, `…eng-002…5b78fdb…`, both in
+  git) — the exports Cowork ABSORBED as single source, so a fair proxy for its own pre-conversion
+  copies;
+- **POST**: Cowork's own emissions of 16 Aug 16:51 (`ENG001.json`/`ENG002.json`, payload intact);
+- corroborated by the **2 Aug review pack**, where none of the four named items cited lines in
+  prose, and the citation lived only in the metadata field.
+
+Discriminator: the stem TEXT names no line in the pre witness and names one in the post
+(`/\blines?\s+\d/i`). **The conversion added the citation to the PROSE — the field had carried it
+since 2 Aug.**
+
+**MEASURED: 33 stems gained a prose citation — 13 in ENG-001, 20 in ENG-002 — with all four named
+items inside, and exactly ONE single-line citation among them (`WIW-12 [29]`), matching delivery
+38's "the only 1-line citation among the 24".** Both witness pairs give the same 33.
+
+**33 AGAINST A RECORDED 24, AND THE DIFFERENCE HAS A CANDIDATE INSIDE DELIVERY 38 ITSELF.** Either
+the 24 was wrong when written — a count in prose beside a derived one, the shape Cowork's register
+already holds three times — or nine of the 33 gained citations by a different act in the same
+window. **Delivery 38 carries a nine: "243 checked, 9 exempt" under the stem-citation exemption.**
+If Cowork's nine-exempt list is a subset of the 33, the conversion set is the other 24 and both
+records are right. That intersection is Cowork's to run; the exemption list never crossed.
+Delivered as `converted-stems-enumeration-5b3f3378b4c8e001.json` — **the cold read is unblocked
+either way**, since the population now exists as a list with its uncertainty localised to nine
+named candidates rather than existing as a number.
+
+**AND R86 GETS ITS PROOF BY COSTING SOMETHING.** The retired originals were deleted by
+`retire-loose-copies` (unlinkSync, 12:09 16 Aug) after verification against the database — correct
+by its own rules, and it destroyed the two files that would have settled the nine from this side.
+Hashes survive; a hash cannot be diffed. *A file is every check that reads it* — and every question
+that will ever be asked of it.
+
+## R205 — Absence-as-a-claim: available, cheap, and on the merge worklist as move six
+*Cowork's extension of the bare-name rule, 2026-08-17: qualifier-in-the-key covers "value present,
+fact doubtful" and does nothing for "value absent, fetcher confident" — a key that is not there
+cannot carry a qualifier, and null versus not-present read identically once a fetcher supplies its
+own default. Its remedy: the schema refuses on a missing key, where absence is a claim.*
+
+**AVAILABLE, AND CHEAP — MEASURED, NOT ASSUMED.** The worklist fields all live inside
+`textProvenance`, and its complete consumer set is **eight files, all scripts**: three live
+exporters (`export-misconception-library`, `export-approval-batch`, `export-cowork-workorder`),
+three one-shot ruling appliers (done), one backfill (done), one check. **Nothing child- or
+parent-facing reads it.** So a refusing reader touches THREE live call sites, and a refusal in an
+exporter is not a burden to absorb — it is the behaviour R173 already requires of them. No consumer
+needs to survive a throw; the throw is the point.
+
+**THE OBJECT LEVEL ALREADY HAS THE PATTERN AND THE KEY LEVEL DOES NOT.** R98 declared block-level
+absence: an entry with no `textProvenance` exports as `{state: 'UNKNOWN'}`, never as unsourced, and
+both live exporters do it (`?? { state: 'UNKNOWN', note: … }`). But INSIDE a present block, nothing
+distinguishes `approvedByPerson: null` (a fact: there is no approving person) from `approvedByPerson`
+absent (not a fact: nobody recorded one) — and `export-cowork-workorder` passes the raw block
+through, so the distinction dies at the first defaulted fetch on either side.
+
+**WHICH FIELDS, FROM THE 30-FIELD WORKLIST:** the four claim-bearing pairs — `approvedByPerson` /
+`approvalAuthorKind`, `hintAuthoredBy` / `hintAuthorKind` — where absent and null mean different
+things and only null is a fact about the world. NOT the `WasClaimedAs` fields (they exist only where
+a claim was corrected — absence is the normal state), and not the notes (commentary, no reader
+should fetch them for facts).
+
+**THE SHAPE: one shared `readTextProvenance()` in packages/core** — for a `state: 'RECORDED'` block,
+the four claim-bearing keys must be PRESENT, as a value, an explicit `null`, or an explicit
+`'UNRECORDED'`; a missing key REFUSES with the key named. `show()` refusing on `bandException`,
+generalised, exactly as Cowork scoped it.
+
+**ON THE MERGE WORKLIST AS MOVE SIX**, not built now: the refusing reader's contract should land in
+the same design pass as the `WasClaimedAs` generalisation (move five's restructure), so the schema is
+designed once. Building it against the current field names would mean designing it twice.
+
+**AND DAVID'S LINE GETS ITS OWN SENTENCE, BECAUSE IT NAMES A CLASS:** *this project has checked what
+its artefacts SAY and not, until now, that they are THERE.* `check:stamp-covers-payload` verifies
+content, `check:export-freshness` verifies currency, `check:witnesses` is the first thing that
+verifies EXISTENCE — and it found nine citations pointing at bare ~/Downloads on its second run.
+A pin with no reader is a citation to nothing.
+
+## R204 — The same-place-hash question: one scoped instance, and the answer found her approval artefact unguarded in bare ~/Downloads
+*David's question, 2026-08-17: does anything else depend on a hash read from the same place as the
+thing it verifies?*
+
+**ONE INSTANCE OF THE SHAPE EXISTS, AND ITS CLAIM IS SCOPED TO WHAT SAME-PLACE COMPARISON CAN
+PROVE.** `check:stamp-covers-payload` recomputes a stamp from an artefact's own entries and compares
+it to the `sourceHash` the same file carries. That proves the stamp was computed over what shipped —
+internal consistency, R88's fault — and CANNOT prove freshness, because a regenerated file agrees
+with itself. Freshness is covered separately and independently (`check:export-freshness`, DB against
+file). The shape is present, the claim says only what it can, and the independent check covers the
+half it cannot. Everything else verified is independent: `check:draft-assessment` compares a DB pin
+against the item's CURRENT stem and options; family fingerprints compare DB rows against code;
+`check:witnesses` compares literals against disk, by design (R203).
+
+**AND THE SWEEP FOUND THE INVERSE FAULT: PINS WITH NO READER, POINTING AT FILES IN BARE
+~/Downloads.** Her approval-batch return — **the first and only artefact evidencing her approvals of
+the nine English entries, hash-pinned on all nine `textProvenance.approvalArtefact` rows** — sat at
+`~/Downloads/annie-approval-batch-return.md`, one directory MORE exposed than the import files had
+been, with nothing verifying the pin. The ENG-028 return sat beside it, pinned in an
+AttributionEvent. **Nine rows cited a document, nothing checked it existed, and it lived in the most
+cleanup-prone directory on the machine.** Both now have canonical copies in `content/evidence/`
+(git-tracked, chmod 444) and both hashes are asserted by `check:witnesses` in CI — **five witnesses
+held, all byte-identical to their pins.**
+
+**THE R25 BOUNDARY, RULED AND WRITTEN INTO CLAUDE.md** (David: the bare names are the worse half,
+and both stores have been moving things out of prose into fields all week on the opposite
+assumption): **where the value is a NAME and the fact is DOUBT, a bare value asserts the thing the
+doubt denies.** The `WasClaimedAs` pattern generalises at the merge, as scoped — qualifier in the
+field name or in the same value, never one field over.
+
+## R203 — The hedge sweep: 30 name-carrying fields, and only two of them would survive the reader that just misread one
+*David's ruling, 2026-08-17, after R202 demonstrated the failure mode: a hedge in prose beside a
+name vanishes when the name is matched.*
+
+**THE COUNT, SWEPT BY VALUE ACROSS THE STORE:**
+
+| shape | count | where |
+|---|---:|---|
+| **hedged PROSE carrying a name** — meaning depends on the sentence | **15** | `textProvenance.approvalNote` (6), `textProvenance.approvalAuthorshipNote` (6), `Misconception.approvalNote` (3) |
+| **BARE NAME in a value field** — the hedge lives in a SIBLING field | **15** | `approvedByPerson` (10), `hintAuthoredBy` (3), `hintAuthoredByWasClaimedAs` (2) |
+
+**WHICH SURVIVE A NAME-MATCHER: two of thirty.** The 15 prose hedges do not — a matcher extracts the
+name and discards the sentence, which is exactly what happened to `approvalAuthorshipNote` (R202).
+The bare-name fields are WORSE, not better: `approvedByPerson: "Annie"` hands a reader a clean,
+unqualified name while the doubt sits in a different field entirely — a reader of the FIELD gets no
+hedge at all. **The two survivors are the two `hintAuthoredByWasClaimedAs`**, because there the
+qualifier is IN THE KEY: a reader that respects field names cannot take the value as an assertion.
+The store invented the right shape once, on 2026-08-16, and used it twice.
+
+**THE STRUCTURAL ANSWER IS AVAILABLE, AND HALF-BUILT.** `textProvenance` is our own JSON and already
+carries enum-shaped state (`state: RECORDED/UNKNOWN`, `approvalKind: "NONE RECORDED HERE"`,
+`approvalAuthorKind: PERSON`) on 7 of 278 entries. What is missing is the BINDING: a state enum
+adjacent to a name does not qualify the name for a reader that fetches one field. The available fix
+is the `WasClaimedAs` pattern generalised — **the qualifier lives in the field name or in the same
+value, never one field over**: `approvalAuthorship: "UNKNOWN"` as an enum AND the name field renamed
+to carry its epistemic status (`approvedByPersonPerArtefact`, `recordedAsApprovedBy`), so no single
+read returns an unhedged name.
+
+**NOT APPLIED NOW.** The six entries are frozen pending the artefact (R200 held), and this sweep is
+the worklist for the merge's execution — David's added move: the rename recorded as an event with
+its cause, so the third reader meets a documented change. When R200 executes, the 28 non-surviving
+fields are the population to restructure.
+
+---
+
+**AND THE WITNESSES ARE NOW LOAD-BEARING BY MECHANISM, NOT BY REQUEST.** The three PLATFORM-IMPORT
+files are the only record of what Cowork's library claimed before its normalisation overwrote it —
+they sat in ~/Downloads, one cleanup away from nothing. Now: canonical copies in
+`content/evidence/`, **git-tracked, chmod 444**, and `pnpm check:witnesses` asserts in CI that each
+exists and still matches the hash pinned in `declarationSources` at import — hashes restated as
+LITERALS in the check, deliberately, because a database that lost the pin and a file that drifted
+would otherwise agree with each other (R80's independent clock). A retirement sweep that removes one
+fails CI with the sentence: *this is not a stale copy — it is the only record of a state that no
+longer exists anywhere.*
+
+## R202 — Confirmed: a file crossed at 19:10 carrying "approved by Annie" on exactly the six, and the sentence was mine
+*Cowork's hypothesis, put to this store as a question: did anything cross between 18:04 and 20:12 on
+2026-08-16 carrying a name in an approver position on those six ids? **Confirmed — not ruled out.***
+
+**THE FILE: `approval-batch-english-96b04e0b2d993975.json` (and its `.md` twin), delivered
+19:10:33 — inside the window.** Nine entries. On **exactly the six that were renamed**, its
+`textProvenance.approvalAuthorshipNote` reads:
+
+> *"APPROVAL AUTHORSHIP UNKNOWN. This entry is recorded as approved by **Annie** and that record
+> STANDS — it is not withdrawn…"*
+
+On the other three of the nine — `en-determiner-omitted`, `en-narrator-voice-as-fact`,
+`en-relative-pronoun-choice`, the ones her batch return names — **the string "Annie" does not appear
+at all.** Six of six carry it; zero of three do. The selectivity of the rename is the selectivity of
+the file.
+
+Two earlier partial crossings, for completeness: the 17:48 library export carried
+`hintAuthoredBy: "Annie"` on two of the six (the then-current value, corrected to
+`ai-draft:cowork-okafor-v1` + `WasClaimedAs` at 18:02/18:09), and the 18:14 dominant-sense hint file
+mentions her in `hintProvenance`. Neither covers all six; the 19:10 batch is the only file in the
+window that does.
+
+**THE SENTENCE WAS MINE, AND IT WAS WRITTEN TO RECORD UNCERTAINTY.** `approvalAuthorshipNote` is the
+2026-08-16 annotation marking approval authorship UNKNOWN — the most carefully hedged text in the
+store. Read by a machine on the other side, the hedge vanished and *"recorded as approved by Annie"*
+remained. **A note recording doubt about an approval was consumed as an authority statement about
+the approver** — R94's fault arriving through the document channel: prose carrying a person's name,
+read by something that cannot read the sentence around it.
+
+**AND THE NORMALISATION DESTROYED ITS OWN EVIDENCE.** Overwriting `approvedBy: Anne` with `Annie`
+erased, in Cowork's live library, the very value that showed what its transfer file had claimed —
+which is why it could no longer tell its register figure from a drift. The pinned import file
+(R201) is now the only witness to its own prior state, and it is on THIS side.
+
+**WHAT IS CONFIRMED AND WHAT REMAINS COWORK'S:** confirmed — the file, the time, the content, the
+exact-six selectivity, all from artefacts on disk. Not confirmable from here — that Cowork's writer
+read THIS file and acted on it; that last step is its read log to close. But the window matches, the
+id set matches 6/6 with 0/3 on the controls, the direction matches, and no other file in the window
+carries a name in an approver position on all six.
+
+**It would not have felt like a rename** (David's framing, borne out): from Cowork's side it was
+reconciling a local field to a document from the side that owns attribution. Six entries, one
+direction, no ruling, no record — the shape now has its mechanism.
+
+## R201 — No rename here; the register figure was RIGHT when written; so the rename happened on Cowork's side, unrecorded
+*David's question, 2026-08-17, before the merge: did six library entries change an approver name?
+Searched by value, any field, any date, both directions.*
+
+**IN THIS STORE: NO RENAME, AND THE ANSWER IS BETTER THAN UNKNOWN.**
+
+- `approvedBy` on the six changed **once** in the visible log: **2026-08-16 18:19:56**, the
+  approval-batch application — `null → reviewer:rev-0001`, alongside `status`. **An id, not a name.
+  Neither name has ever been an approver value here** (R198's census, re-confirmed).
+- Every name-field write on the six sits inside the log window and is accounted for: 14:39
+  (`textProvenance` first recorded, actor david), 15:56 (childHint/description, the R88 return-leg
+  work), 18:02 and 18:09 (`textProvenance` amendments), 18:19:56 (the approval), 21:12 (the `move`
+  field). **Zero events anywhere, full history, whose text pairs the two names with a rename shape.**
+- **The pre-log window is BOUNDED, not assumed** (the log starts 2026-08-16, so before that is
+  formally UNKNOWN — but the 14:39 `textProvenance` write contemporaneously RECORDS the prior state:
+  *"status PROPOSED, approvedBy null, and no attribution event."* A recorded prior state is not a
+  log, but it is a witness, and it says there was nothing to rename.
+
+**FOR COWORK'S DICHOTOMY: THE HASH DECIDES IT, AND THE ANSWER IS THE FIRST BRANCH.**
+
+`PLATFORM-IMPORT-english-misconceptions.json` still matches its import-time hash
+(`293148522d245026`) byte for byte, and it carries **exactly seven `approvedBy: "Anne"`, zero
+Annie** — naming the six entries annotated here **plus `en-vocab-dominant-sense`**. So:
+
+- **Cowork's register figure was RIGHT when written.** Seven is what its library said on 2026-08-12
+  (file delivered 23:19 that night), proven by an artefact pinned at import on this side.
+- Its library today holds 1 Anne + 7 Annie ⇒ **six entries were renamed Anne → Annie in Cowork's
+  store, between 2026-08-12 and today, with no stamp and no rename record.** The date and actor are
+  not in my store to give — the write happened in theirs — but the WINDOW is, and the seventh entry
+  (the one plausibly still reading Anne) is `en-vocab-dominant-sense`.
+
+**THE FINDING UNDER THE FINDING: THIS IS WHAT STAMPS ARE FOR.** Cowork could not distinguish "the
+register was wrong" from "the library changed" because nothing on its side pins either. This side
+could, in one hash comparison, because the import door recorded what it read. The renames themselves
+are almost certainly benign — someone normalising toward the name she signs with — but **six
+provenance-bearing values changed with nothing anybody can point to**, in the store that is
+authoritative for authored content, during the week both sides were building attribution machinery.
+That goes back to Cowork as its finding to run down, with the pinned file as the fixed point.
+
+**Merge plan held, as ruled** — R200's four moves stay a plan until the artefact arrives.
+
+## R200 — Anne and Annie settled as one person; the disambiguation crosses; the six annotations wait for the artefact
+*Settled by David, 2026-08-17: same person. She signs Annie; he wrote Anne into briefs and addenda
+from August. A written confirmation is in preparation so the merge has an artefact.*
+
+**NOTHING TO MERGE ON THIS SIDE**, as R198 established: neither name has ever been an approver value,
+and the six Anne rows are quotations of Cowork's string, already marked not asserted.
+
+**THE DISAMBIGUATION CROSSED ANYWAY — `reviewer-identity-disambiguation` in `export:for-cowork` —
+because the fact being settled does not fix the channel, and the channel is the finding.** It was
+settled HERE on 2026-08-16 and never reached Cowork, because it lives in exactly the two classes
+`check:return-leg` reports STALE. The payload carries: the settlement (David, artefact PENDING), the
+full `approvedBy` census showing neither name ever approves, the six Anne rows verbatim with a note
+that they are a true record of 2026-08-16 and not current doubt, and the R88 statement of why it is
+being sent before the confirmation lands.
+
+**WHAT CHANGES WHEN THE ARTEFACT ARRIVES — stated now, ruled then (David's instruction).** The six
+annotations say *"Cowork's transfer file carries approvedBy: Anne; that claim never crossed and is
+not asserted here"* — exactly right when written, and stale in the OTHER direction once the identity
+is confirmed: they will read as doubt about a settled fact. When the document lands I would:
+
+1. **Append, never rewrite** — a new `AMENDED` AttributionEvent per entry citing the confirmation
+   artefact by name and hash, on the same six `textProvenance` fields. The existing notes are a true
+   record of what had crossed on 2026-08-16; editing them would falsify the history the register
+   exists to keep.
+2. **Add one field, `identityResolution`**, to the six `textProvenance` objects:
+   `{"anneIsAnnie": true, "settledBy": "David", "artefact": "<file>", "sha256": "<hash>", "on": "<date>"}` —
+   so a reader of the ROW gets the resolution beside the doubt, not in a separate table (the rule
+   that a value carries its own context, R25's shape).
+3. **`approvalNote` gains one appended sentence**, quoting the artefact: the claim that "never
+   crossed" has now crossed, and where. Appended with the date, so the original sentence and its
+   correction are both visible.
+4. **Nothing else moves.** `approvedBy` values stay as they are — they never carried either name, so
+   the identity resolution does not touch them. `check:authority-shape` re-runs to confirm 0 machine
+   verdicts wearing a person's name, unchanged.
+
+Not pre-empted: none of the four is done. They are written here so the ruling, when it comes, is
+over a stated plan rather than a fresh proposal.
+
+## R199 — MIXED-STORAGE stops failing on a dead reason; the two real exposures are what the gate now says
+*David's ruling, 2026-08-17: "the gate stops failing on a reason that no longer holds and reports the
+two real exposures instead; the id/label agreement gets asserted in the import door and in CI."*
+
+**THE GATE.** `check:option-positions` no longer fails on MIXED-STORAGE. Its stated reason — *"no
+single invariant for the shuffle to rely on"* — is FALSE since R187/R189: the shuffle is seeded and
+measured uniform, its input sealed to id order, so stored position cannot leak into served position
+at all. The four English banks print as `·mixed-storage`, reported with the real exposure named: **an
+unshuffled review pack over a key-first bank shows an unmissable all-A column — which is how this
+class was caught — and over a mixed bank the same broken pack looks plausibly random.**
+`export-nvr-signoff` still derives its key letter from the stored index. Only SERVED-MODAL, the fault
+that reaches a child, fails CI.
+
+**THE IMPORT DOOR** derives the option id FROM THE LABEL whenever a stem declares
+`segmentsInOptions` (`<itemId>-OPT-<label>`), so id order equals label order **by construction**, and
+REFUSES an unlabelled option on a segmented item — the label is the order a child reads the sentence
+in, and without it there is nothing to derive from. Other items keep auto-minted ids: nothing reads
+their stored order, and a convention nobody depends on is a second thing to keep true.
+
+**THE CI ARM** (arm 3 of the same gate) asserts id order equals label order for every item declaring
+`segmentsInOptions` — over ALL statuses, not just LIVE, because ENG-003 is DRAFT and an item that
+would scramble on publication is worth catching before it publishes. Currently 18/18 reconstruct.
+**Fault-injected**: renaming one option id to sort last produced
+`ENG-003-A-PU-05: id order BCDNA, label order ABCDN` and a red gate; restored, green.
+
+The exit line now states the boundary: *"MIXED-STORAGE alone does not fail: it costs a review-pack
+tell, not a child anything."* A verdict that changed meaning states its new meaning where the verdict
+prints (R60's discipline, applied to a PASS).
+
+## R198 — "Anne" appears six times in this store and is never asserted: it is Cowork being quoted
+*David, 2026-08-17: "Cowork's store carries both names and cannot say whether they are one person.
+Does anything in your store carry Anne?"*
+
+**219 rows carry one of the two names: 213 Annie, 6 Anne.** The six are the whole answer.
+
+| | |
+|---|---|
+| **where** | `AttributionEvent` notes only — never an actor, an approver, a signer or a `reviewedBy` |
+| **which act** | `AMENDED` on `textProvenance`, six misconception entries |
+| **actor** | `human:david@cluecrew.test` |
+| **when** | **2026-08-16, 14:39:51** — all six inside one second, one act |
+| **entries** | `en-within-span-wrong-element`, `en-vocab-neighbouring-sense`, `en-vocab-form-lookalike`, `en-whole-text-absence-asserted`, `en-negation-dropped`, `en-coordination-wrong-conjunct` |
+
+**AND THE SENTENCE THAT CARRIES THE NAME IS A QUOTATION, NOT A CLAIM.** The note reads *'Both
+readings of "approvedBy: Anne" were indistinguishable before this'* — the string is Cowork's, quoted.
+Inside the `textProvenance` those entries now carry, "Anne" appears only in `hintSource` and
+`approvalNote`, both explicitly marked:
+
+> *"Cowork's transfer file carries approvedBy: Anne; that claim never crossed and is not asserted
+> here."*
+
+The same rows carry `approvedByPerson: "Annie"` and the artefact `annie-approval-batch-return.md`.
+And across the whole library, `approvedBy` takes five values — `human:staff-reviewer@cluecrew.test`
+(162), null (83), `current-reviewer` (22), `reviewer:rev-0001` (10), `rev-0001` (1). **Neither name
+is ever an approver value.**
+
+**SO THIS STORE ALREADY DISTINGUISHES THEM, AND COWORK CANNOT SEE THAT IT DOES.** The disambiguation
+was settled here on 2026-08-16 and lives in exactly two places: the misconception `approvalNote`, and
+the AttributionEvent notes. `check:return-leg` reports both as **STALE** — "Misconception approvals —
+boundary notes, method, approver" and "Attribution events — the reasoning attached to every named
+ruling". **R88 again, and this time the thing that did not cross is the answer to the question being
+asked.** Cowork is deriving from its own file that two names might be two people, while the sentence
+saying otherwise sits one un-travelled export away.
+
+**NOT RESOLVED HERE, BECAUSE IT IS NOT MINE TO RESOLVE.** Nothing in this store asserts that Anne and
+Annie are one person; it asserts only that Cowork's `approvedBy: Anne` never crossed. Whether they
+are the same person is a fact about a person, and the only two candidates for settling it are David
+and the reviewer.
+
+## R197 — Something does read storage order, and one of the readers is a day old
+*David, 2026-08-17: "does anything downstream read storage order now that the shuffle is sealed and
+error-spot is excluded? If nothing reads it, MIXED-STORAGE is a convention violation with no
+consequence."*
+
+**Something does, and it is R192 — the exclusion built yesterday evening.**
+
+**WHAT KEY-FIRST BUYS IN VR** (from the gate's own header, not paraphrased): the incident was a
+reviewer seeing the key at A on every item of an audit sample, because the **PACK printed stored
+order** without the serving shuffle. Uniform storage is what made that visible: an unshuffled pack
+over a key-first bank shows an unmissable all-A column. **Over a MIXED bank the same broken pack
+looks plausibly random** — so mixed storage does not create a serving fault, it removes the tell that
+catches a pack fault by eye. `export-nvr-signoff.ts` still derives its key letter from the stored
+index.
+
+**AND THE NEW READER.** Error-spot is now served UNSHUFFLED, so its served order **is** the stored
+order — sealed to `id asc` by R187. Measured: **18 of 18 spot items have id order equal to authored
+label order**, so the sentence reconstructs correctly today. **Nothing asserts it.** A re-import
+minting option ids in another order would scramble the sentence with no shuffle involved — the R191
+fault by a second route, and past the guard written for the first.
+
+So MIXED-STORAGE is **not** consequence-free, but the consequences are not the ones the gate names.
+Its stated reason — *"no single invariant for the shuffle to rely on"* — is now false: the shuffle is
+uniform (R189) and seeded, and stored order cannot leak into served position at all. The real
+exposures are a review-pack tell and an unasserted error-spot dependency, and neither is what fails.
+
+Reported, not changed: whether the gate should stop failing on English, and whether the error-spot
+id/label agreement becomes an assertion, are two decisions and both are David's.
+
+## R196 — A ruling's premise declares beside the copy claims, and nothing else was built
+*David's ruling, 2026-08-17, adopting the narrow option: "No premise register. Your own argument is
+the one that decides it — a third instrument doing what the first already does, in a register with
+enough entries about second copies of things that already existed."*
+
+**THE SCOPE, MEASURED AGAINST R175–R194 RATHER THAN GUESSED.** Classified by hand — my judgement,
+not a script's — on one test: *would the ruling need revisiting if this fact flipped?*
+
+| bucket | count | |
+|---|---:|---|
+| **A — ruling with a checkable, load-bearing premise** | **2** | R192, R194 |
+| B — ruling resting on judgement, taste or discipline | 7 | R175, R176, R177, R178, R182, R184, R190 |
+| C — finding, or a mechanism that already checks itself | 11 | R179–R181, R183, R185–R189, R191, R193 |
+
+**2 of 20, and bucket B is the interesting one: A GOOD RULING OFTEN SURVIVES ITS OWN PREMISE ON
+PURPOSE.** R177 was motivated by family counts and was then built to be independent of them, so
+flipping the premise does not void it. R178 is a discipline; adding a tier called Squad would not
+disturb it. R184 and R190 are vocabulary. Those are not gaps in coverage — they are rulings with no
+premise to guard, and a general mechanism would have spent most of its effort on them.
+
+**Cowork converged from the other end: 11 of 49 by its count, against 2 of 20 by mine** — the same
+order of magnitude, reached independently, and it found a false premise the same way, **by asking
+rather than by auditing.**
+
+**WHAT A RECORDABLE PREMISE HAS TO BE.** A FACT, not a reason ("`case-en-04` is not in the free set",
+never "quarantining one item of twenty-six is theatre"). LOAD-BEARING, so flipping it reopens the
+ruling. RESOLVABLE against the store or the code. And STANDING rather than point-in-time — *"no child
+has played these ten items"* was true when checked and can never be re-checked, because children play
+things later; it can be recorded but not watched.
+
+**BUILT: NOTHING.** `check-expiring-claims.ts` already had the shape — `where` / `says` / `owner` /
+`breaksWhen` / `check()`, with `quotes` optional since R181 for claims that are properties rather
+than sentences. A premise is that entry with `premiseFor` naming the ruling, and no `quotes`, so it
+takes no part in the public-copy scan and cannot orphan against it. Output tags every line `[COPY]`
+or `[PREMISE R###]`.
+
+**THE FIRST ENTRY IS RETROSPECTIVE AND IS THE INSTANCE THAT PRODUCED THE MECHANISM:**
+*"ENG-028-PR-06 is reachable by a FREE child."* **Asserted TRUE now, where it was false this
+afternoon.** Fault-injected: moving `case-en-04` back to paid breaks it with *"the item is
+REACHABLE(paid) only, which is the ground R195 was written to replace"* — and breaks the founding
+page's "Twelve full cases" in the same run, from one flipped row.
+
+**THE n=2 CAVEAT IS PART OF THE FINDING AND STAYS IN THE RECORD.** Both premise-failures observed
+today land in bucket A **by construction, because only a checkable premise can visibly fail.** Two is
+not a rate. Nothing here is evidence about how often a premise goes stale, and this entry must not be
+read as any.
+
+## R195 — ENG-028-PR-06 stays, on new ground: the ruling held and its reasoning did not
+*David's ruling, 2026-08-17. "Record that the reasoning changed rather than that the ruling held."*
+
+**THE AFTERNOON'S GROUND IS VOID.** ENG-028-PR-06 was left in place because *"the item is behind the
+paid tier already"* — `case-en-04` was paid. R194 made `case-en-04` FREE, so the item is
+REACHABLE(free) and that sentence is no longer true of anything.
+
+**WHAT REPLACES IT:** the two-span fault is with Annie as one of seven scoped options and is
+**unrepaired on all 26 items**. Pulling one item out of a free case to quarantine a fault present in
+twenty-five others is theatre — it changes what one child meets and nothing about the fault. **All 26
+move together, whichever way she rules.**
+
+**THE ENTRY IS THE FORM, NOT THE OUTCOME.** Both rulings say "stays" and they are not the same
+ruling: one rests on a fact that has since flipped, the other on the shape of the open question. A
+register that recorded only the verdict would show an unbroken line and conceal that the reasoning
+underneath it was replaced — **the same fault as a passing check that has gone blind**, in the record
+rather than in an instrument.
+
+## R194 — The free English pair is chosen, not inherited — and it changes the ENG-028-PR-06 ruling
+*David's ruling, 2026-08-17: "the free pair should be chosen rather than inherited: one strand a
+child can get purchase on immediately, and one that shows what the district actually does."*
+
+`FREE_TIER_CASES.ENGLISH` becomes **`case-en-01` (retrieval)** and **`case-en-04` (technique)**.
+`case-en-02` (inference) and `case-en-03` (vocabulary) are paid. **The second entry in that
+enumerated set a person selected**, written in `seed.ts` rather than computed, because it is a
+decision and not a derivation.
+
+**NOBODY HAD PLAYED ANYTHING ABOUT TO BECOME PAID — checked BEFORE writing, which was the
+condition.** 0 attempts on the 10 items leaving the free set, 0 CaseFiles on `case-en-02` or
+`case-en-03`. Had there been one, this would have stopped here.
+
+**WHAT MOVED:**
+
+| | count | items |
+|---|---:|---|
+| **become REACHABLE(free)** | 6 | ENG-001-WIW-05, -13, -16, -22, ENG-028-PR-06, ENG-028-PR-12 |
+| **leave REACHABLE(free)** | 10 | ENG-001-WIW-03, -07, -10, -14, -18, -21, ENG-028-PR-03, -08, -09, -11 |
+
+REACHABLE(free) English **20 → 16**; all-district **318 → 314**. REACHABLE(paid) unchanged at 332,
+free-tier case count unchanged at 12, families unchanged at 6 — so the founding page's *"Twelve full
+cases across six question families"* still holds and `check:expiring-claims` stays green. A one-for-
+one swap that keeps every declared public claim true was not designed for; it was checked.
+
+**AND IT VOIDS THE REASONING BEHIND AN EARLIER RULING, WHICH IS THE PART TO CARRY.**
+
+`ENG-028-PR-06` — the two-span item needing **30 consecutive lines on a window that holds 5 to 7**
+(R185) — was left in place on 2026-08-17 on the explicit ground that *"the item is behind the paid
+tier already"*. **`case-en-04` is now free, so ENG-028-PR-06 is REACHABLE(free) as of this ruling**,
+and `ENG-028-PR-12` joins it. The decision was sound on the facts of the hour and this ruling changed
+one of them, from the other end of the system.
+
+**A DECISION AND ITS PREMISE ARE TWO FACTS, AND ONLY ONE OF THEM WAS WRITTEN DOWN.** Nothing links a
+recorded ruling to the conditions it rested on, so a later change cannot know what it invalidates —
+the same shape as R86 (a file is every check that reads it) and R180 (a claim true when written),
+now applied to RULINGS. This one was caught because the two rulings landed hours apart in one
+conversation. That is not a mechanism.
+
+Not repaired: whether ENG-028-PR-06 now comes out is David's, and it is the question he answered
+"stays" to under different facts.
+
+## R193 — The fourteen: the free/paid split is a by-product of case ORDER, not a decision
+*David: "Name the fourteen — I want to know whether that split is deliberate."*
+
+**It is not deliberate. Nobody chose these fourteen; they are what the floor-of-two left over.**
+
+| question type | items | behind | free? |
+|---|---:|---|---|
+| `en-comp-vocab` | 8 | `case-en-03` "The Word in Disguise" | **no** |
+| `en-comp-technique` | 6 | `case-en-04` "The Writer's Fingerprint" | **no** |
+
+`en-comp-vocab` — ENG-001-WIW-04 (T2), -08 (T3), -11 (T3), -17 (T3), -19 (T3), -20 (T2),
+ENG-028-PR-01 (T2), ENG-028-PR-05 (T3).
+`en-comp-technique` — ENG-001-WIW-05 (T3), -13 (T3), -16 (T3), -22 (T4), ENG-028-PR-06 (T4),
+ENG-028-PR-12 (T4).
+
+**THE SPLIT IS `orderInDistrict`, AND NOTHING ELSE.** The free set is a floor of two per district
+(R177) and the two English cases that met it are `case-en-01` and `case-en-02` — chosen because they
+were written first, which was because I wrote retrieval and inference before vocabulary and
+technique, which was alphabetical accident in a scripted loop. **No pedagogical property of these
+fourteen items put them behind the paywall.**
+
+**AND THE SPLIT LANDS ON THE TWO HARDEST STRANDS.** All 6 technique items and 8 vocab items are
+paid; retrieval and inference are free. Technique carries **every T4 in the reachable English bank**
+and vocabulary-in-context is the strand with the two-part screen and the tiering guard. So a free
+child meets the two most tractable comprehension strands and none of the writer's-technique work —
+**an outcome nobody selected, arrived at by which file was authored first.**
+
+That is R177's finding recurring one level down: the free tier's SHAPE was never decided, and now
+neither was its CONTENT. Reported, not changed — which two English cases are free is David's ruling.
+
+## R192 — Error-spot excluded from the shuffle, keyed on the structure not the name
+*David's ruling: "The options are the sentence… a shuffled sentence is not a harder item — it is not
+the item."*
+
+**KEYED ON `stem.segmentsInOptions`, NOT ON A QUESTION-TYPE NAME.** That is the authored declaration
+that the options ARE the sentence in order — the same field the renderer already uses to decide
+whether to lay them out as prose. A list of type ids would have to be found and edited by whoever
+adds the next such family, and would not be: R57's allowlist that drops what it cannot name. Cloze
+is the other candidate and Cowork reports it shuffles safely — its options are word choices, not
+pieces of the carrier — so it is untouched and verified still shuffling.
+
+**THE GUARD LIVES INSIDE THE ONE CANONICAL FUNCTION, AND `stem` IS REQUIRED, NOT OPTIONAL.** An
+optional parameter would let a call site that forgot it fall through to shuffling — the gate failing
+OPEN, silently, on exactly the items it exists to protect. Made required, **the type checker walked
+all six call sites including the tests**, which is the mechanism doing the remembering.
+
+**VERIFIED, NOT ASSERTED:**
+- 18 of 18 spot items declare `segmentsInOptions` — the structural key covers the whole population;
+- 500 synthetic children against `ENG-003-A-PU-05`: **every one now sees the authored sentence
+  order**;
+- cloze unaffected — 20 distinct orders across 40 children;
+- three new tests, including one that a **missing or malformed stem fails CLOSED** (only an explicit
+  `segmentsInOptions: true` suppresses the shuffle; `undefined`, `null`, `{}`, `'true'` and `1` all
+  still shuffle).
+
+**NOTHING SHIPPED. This is the first finding in this project that arrived before the items** — ENG-003
+is DRAFT, REACHABLE(free) 0, REACHABLE(paid) 0, and neither SpaG quarter is ordered. Every other
+entry in this register is a repair.
+
+## R191 — Error-spot is NOT excluded from the shuffle: 18 items would ship scrambled
+*Cowork's dichotomy, answered from the code path before ENG-003 publishes.*
+
+**NOT EXCLUDED.** The serving path shuffles at ONE site, unconditionally — no branch on family,
+question type, or `segmentsInOptions`, and zero occurrences of `segmentsInOptions` / `errorspot` /
+`spag` anywhere in the orchestrator, the shuffle or the mock composer. Error-spot options are
+consecutive segments of one sentence and the renderer lays them out in the order it RECEIVES them.
+
+Shown, not reasoned — `ENG-003-A-PU-05`, as three children would meet it:
+
+```
+AUTHORED:  The childrens' coats were still on the pegs, so Miss Reid checked the
+           caretaker's office, found the keys in the drawer and unlocked the hall doors.
+child A :  (survives — 1 chance in 24)
+child B :  so Miss Reid checked the caretaker's office, found the keys in the drawer
+           The childrens' coats were still on the pegs, and unlocked the hall doors.
+child C :  found the keys in the drawer so Miss Reid checked the caretaker's office,
+           The childrens' coats were still on the pegs, and unlocked the hall doors.
+```
+
+**So Cowork's second branch holds: 18 items are destroyed, not leaning.** For roughly 23 of every 24
+children the sentence they are asked to find a punctuation error in is not a sentence.
+
+**AND THE A-LEAN GETS THE SAME REPRIEVE THE D-LEAN GOT.** The 11-of-15-keys-at-A finding
+(p = 0.00012) is a fact about the authored bank — a drafting habit worth correcting at source — and
+NOT a child-facing exploit, because no child sees stored order. The dichotomy's first branch is
+simply not the world we are in.
+
+**NOTHING HAS SHIPPED: ENG-003 is DRAFT, REACHABLE(free) 0, REACHABLE(paid) 0**, and neither SpaG
+quarter is in `QUARTER_ORDER`. This is a before-it-ships finding, which is what it was asked as.
+Not repaired — excluding a family from the shuffle, or authoring the segments to carry their own
+order, is a ruling.
+
+## R190 — REACHABLE names who
+*Cowork's correction, adopted.*
+
+**Reachability is a property of an item AND a population, so a bare "REACHABLE" is the old word at
+one remove** — it sounds settled and hides the same ambiguity one level down. **The instance was
+mine, in the document making this argument**: it called `ENG-028-PR-06` "LIVE and reachable today"
+and gave the counter-example two lines later. It sits behind `case-en-04`, which is paid.
+
+`REACHABLE(free)` and `REACHABLE(paid)`, in the shared banner so both sides read the same words.
+
+| district | items | PUBLISHED | SERVABLE | REACH(paid) | REACH(free) |
+|---|---:|---:|---:|---:|---:|
+| ENGLISH | 372 | 34 | 34 | 34 | **20** |
+| VR | 660 | 298 | 298 | 298 | 298 |
+| **ALL** | **1032** | **332** | **332** | **332** | **318** |
+
+**THE SPLIT IMMEDIATELY EARNED ITSELF.** PUBLISHED, SERVABLE and REACHABLE(paid) all read 332 and
+agree; **REACHABLE(free) reads 318**. Fourteen items a paying child meets and a free child cannot —
+invisible for as long as one word stood for both populations. R184's own lesson landing on R184.
+
+## R189 — The permutation is uniform: the D-consequence does not come back
+*Cowork's question, and the only thing that could have reinstated the exploit.*
+
+"Seeded on `childId:itemId`" gives stability and per-child variation and says **nothing about
+uniformity** — a seeded ROTATION satisfies both and would carry a stored lean straight into a served
+one. Confirmed both ways:
+
+- **RNG**: mulberry32 (a full 32-bit state PRNG), driving a **complete Fisher–Yates** — the loop runs
+  `index` from `n-1` down to 1 and swaps with `floor(random() * (index + 1))`, the correct unbiased
+  form. Not a rotation, not a partial pass.
+- **EMPIRICALLY**, 20,000 synthetic child ids against one 5-option item:
+
+| position | count | share | deviation |
+|---|---:|---:|---:|
+| A | 4018 | 20.09% | +0.45% |
+| B | 3967 | 19.84% | −0.83% |
+| C | 4075 | 20.38% | +1.88% |
+| D | 3938 | 19.69% | −1.55% |
+| E | 4002 | 20.01% | +0.05% |
+
+χ² = **2.72** on 4 df, against a 5% critical value of 9.49. Uniform.
+
+**So the D-finding's reprieve stands: a stored lean does not survive into any child's screen.**
+
+## R188 — The unordered-include check, and 16 more reads it found
+*David's ruling: "nothing else stops the next one re-opening it silently."*
+
+`pnpm check:unordered-includes` fails any list-valued relation read without an `orderBy`. **It reads
+EVERY relation, not only `options`** — the fault is Prisma's default, not a fact about that relation,
+and a check named for the instance would miss the next one.
+
+It found **16 more** beyond the ten sealed under R187 — every one in `scripts/` and the e2e sweep,
+including four other CHECKS and three exporters. **An export whose option order flips reads as
+content drift**, which is the false-drift problem CLAUDE.md already documents for JSONB key order,
+arriving by a second route. All 16 sealed; the gate is green across 433 files and 18 include blocks.
+
+**TWO FAULTS OF MINE ON ITS FIRST RUNS, BOTH THE INSTRUMENT:**
+- **It failed ITSELF** — its own docstring quotes `include: { options: true }` as the example of the
+  fault. Comments are now stripped whitespace-preservingly, so line numbers stay true. R181's
+  measured narrowing arriving unbidden in the very next check: a gate that flags prose about the
+  fault is a gate someone switches off.
+- **I called zero findings an empty POPULATION** and reached for `declareMayBeEmpty`. The population
+  is the source files, asserted by `requirePopulation`; the hits are the findings. Declaring findings
+  "legitimately empty" would announce that nothing was screened on the run where everything was —
+  R61 misapplied by the person who wrote R61's helper into this repo.
+
+Limit printed every run: it asserts an order was ASKED FOR, never that it is TOTAL. An `orderBy`
+leaving ties reads as clean here.
+
+## R187 — Sealed, and the letters changed once for everyone on 2026-08-17
+*David's ruling: "That is the cost of having the property at all, and paying it now costs less than
+paying it after more children have played more items."*
+
+**`orderBy: { id: 'asc' }` on EVERY options relation read — 10 reads across 6 files**, not only the
+four that shuffle. A reader that does not shuffle today can start to; sealing the four would leave
+the property depending on which reader you happened to use.
+
+| file | reads |
+|---|---:|
+| `lib/crew/orchestrator.ts` (itemPool, both branches) | 2 |
+| `lib/actions/admin-items.ts` | 4 |
+| `lib/crew/mocks.ts` | 1 |
+| `app/api/story/[childId]/clue-tap/[itemId]/route.ts` | 1 |
+| `app/admin/items/[id]/page.tsx` (CMS review preview) | 1 |
+| `app/admin/items/page.tsx` | 1 |
+
+Verified after: **0 of 1032 items** serve an order differing from id order, and re-running the
+fixture write that re-permuted every letter under R186 now leaves the order **unchanged**.
+
+---
+
+**THE ONE-TIME EVENT, RECORDED AS ONE.**
+
+**On 2026-08-17 the option letters changed, once, for every child, on 20 items.** A child who
+noticed would have been right, and nothing else in the system would have explained it.
+
+**20 of 1032 items** were stored in a physical order that differed from id order and therefore
+re-permute; the other 1012 already matched and are unaffected. By type:
+`vr-08-move-letter` 8, `vr-09-letter-series` 4, `en-comp-inference` 2, `vr-04-closest-meaning` 2,
+`en-comp-technique` 1, `vr-05-hidden-word` 1, `vr-11-number-series` 1, `vr-14-letter-connections` 1.
+
+**THE COUNT IS A FACT ABOUT THIS STORE, NOT ABOUT PRODUCTION** (R60's denominator discipline). 20 is
+the number of items whose physical row order had drifted HERE, in a database that has taken 5
+attempts from 2 children. Production has its own physical order and its own — almost certainly
+larger — count, because every option write since its last seed has moved a row. **The seal is
+correct there too; the number is not transferable and must be measured on that store before anyone
+quotes it.**
+
+---
+
+**AND THE T4 KEY-POSITION FINDING: THE MEASUREMENT STANDS, ITS STATED CONSEQUENCE WAS WRONG.**
+
+David's reading is right and this confirms it from the code path. The shuffle is seeded on
+`${childId}:${itemId}`, so **the permutation is per child**. A statement about stored order — "22 of
+26 keys sit at D" — is a fact about the AUTHORED BANK and about no child's screen.
+
+- **What it was measuring, and it is worth having:** a DRAFTING HABIT. A drafter reaching for the
+  last slot repeatedly is a real pattern in the authored artefact, visible to a reviewer reading
+  sheets, and worth correcting at source.
+- **What it was NOT measuring:** anything a child can exploit. **Annie was told that a child who
+  learns "the last option is the answer" clears 22 of 26. She cannot.** No child ever sees stored
+  order; each sees her own permutation, and position in the store carries no information about
+  position on her screen.
+
+**The finding survives; the consequence attached to it does not, and the consequence is what a
+severity judgement was made on.** That is R184's fault in a different costume — a true statement
+about one layer, reported in the vocabulary of another.
+
+## R186 — The shuffle has no occasion term, and its determinism is not sealed
+*Settled from the code path, 2026-08-17, after the rendered surface could only answer half of it.*
+
+**THE SEED IS `${childId}:${itemId}`.** No occasion component. **By design a child meets the same
+item with the same letters forever**, and different children see different orders. That is the
+answer to the question as asked, and it is the answer the T4 key-position programme needs.
+
+**BUT THE DESIGN IS NOT WHAT SHIPS, BECAUSE THE INPUT ORDER IS NOT SPECIFIED.** Fisher–Yates is
+deterministic in (seed, INPUT ORDER). Every call site feeds it `include: { options: true }` — **no
+`orderBy` on the relation.** The `orderBy` in `itemPool` sorts ITEMS. So the array arrives in
+Postgres physical row order, which no query guarantees and which any write disturbs.
+
+**DEMONSTRATED, NOT ARGUED** (on the e2e fixture, whose values were left identical):
+
+```
+option order BEFORE       : em-a em-b em-c em-d
+  letters a child sees    : em-d em-c em-b em-a
+option order AFTER a write: em-b em-c em-d em-a
+  letters a child sees    : em-a em-d em-c em-b
+```
+
+**One UPDATE to one option — writing back the value it already had — moved every letter.**
+
+**CONSEQUENCE FOR THE PROGRAMME, WHICH IS WHY DAVID ASKED.** Key position is stable per child until
+ANY option row of that item is written, and then it re-permutes silently for every child at once.
+The 42 ruling-appliers that touch options — a retag, a misconception id, a copy fix — each do this
+as a side effect nobody has ever seen. **So the programme measures something real, inside a window
+whose boundaries nothing records.** A key-position finding is only interpretable if no option write
+occurred between the serve and the measurement, and there is no way today to establish that.
+
+**AND IT READS AS FINE RIGHT NOW.** Measured before the injection: 0 of 10 items had a served option
+order differing from id order, and the same read twice was identical. **The physical order happens to
+match id order today**, so nothing is visibly wrong until a write lands. R173's class exactly — the
+instrument agrees, and the agreement is the camouflage.
+
+Not repaired: an `orderBy: { id: 'asc' }` on each relation read would seal it, but changing the input
+order CHANGES EVERY CHILD'S LETTERS ON EVERY ITEM ONCE, which is a re-serve of the whole bank and a
+ruling rather than a patch.
+
+## R185 — Three render questions: one answered, one a hard fault, one a fault I built today
+*Annie's fourth scope, 2026-08-17. "What does the RENDERING do that the item was relying on the child
+to do?" Answered from the rendered surface, not from the component source — the gold window was
+visible in the source too and nobody saw it there.*
+
+**1. IS OPTION ORDER STABLE ACROSS A SESSION? — HALF ANSWERED, AND THE OTHER HALF IS NOT ANSWERABLE
+FROM THE RENDER.** The same pending activity, fetched five times from the serving endpoint, returned
+**identical option order 5/5**. So it is not re-shuffled per REQUEST. Whether the same item served on
+a LATER OCCASION carries the same letters could not be established: the session refuses to re-serve
+an answered item, and a cross-child call with this child's token returns nothing. **The function is
+named `shuffleOptionsForChild` and that is exactly the evidence I am not allowed to use** (R178 — a
+name recalled is not a fact read). Stated as open rather than inferred; it needs a second child token
+or a controlled replay, which is a thing to build, not a thing to assume.
+
+**2. DOES THE PASSAGE SCROLL INDEPENDENTLY OF THE OPTIONS? — YES, AND IT IS A HARD FAULT FOR 26
+ITEMS.** The passage has its own `overflow-y:auto` region at `max-height: 46vh`; the options sit
+below it in page flow. Measured from the render: **the box shows 7 numbered lines on desktop and 5 at
+375px.**
+
+**26 comprehension items cite MORE THAN ONE span**, and the distance between first and last cited
+line runs from **14 to 76 consecutive lines**:
+
+| item | spans | lines that must be on screen at once |
+|---|---|---:|
+| ENG-004-AGG-08 | 33-35, 41, 46 | 14 |
+| ENG-028-PR-06 (**LIVE**) | 21-22, 48-50 | 30 |
+| ENG-023-RT-02 | 8-12, 69-72 | 65 |
+| ENG-021-ED-02 | 7-8, 81-82 | 76 |
+
+**NOT ONE OF THE 26 CAN SHOW BOTH SPANS AT ONCE — the smallest needs 14 lines and the window holds
+5 to 7.** An item asking a child to hold two parts of a text together is, on this surface, an item
+asking her to hold one span in memory while she scrolls to the other. **That is a memory task, which
+is the exact fault the "passage never collapses" ruling was made to prevent** (2026-08-16, ruling 1)
+— prevented at the whole-passage level and reintroduced at the span level, by a viewport.
+One of the 26 is LIVE and reachable today.
+
+**3. DOES ANYTHING DISTINGUISH A T4 ON SCREEN? — YES, AND I BUILT IT THIS EVENING.**
+
+| tier | items | option counts | avg stem chars | whole-passage |
+|---|---:|---|---:|---:|
+| T1 | 31 | 4, 5 | 67 | 0 |
+| T2 | 109 | 4, 5 | 68 | 0 |
+| T3 | 148 | 3, 4, 5 | 79 | 0 |
+| **T4** | **50** | 4, 5 | **91** | **25** |
+
+Option count does not distinguish (T3 carries the only 3-option items). Stem length correlates
+weakly. **But `lineRefs []` — which renders "This one is about the whole story." — occurs on 25
+items and every single one is a T4.** Seeing that sentence identifies a T4 with **100% precision**
+and 50% recall, and all 25 are `en-comp-technique`.
+
+**THE SCOPE NOTE I ADDED TODAY UNDER R175 IS A DIFFICULTY TELL.** It was built to stop an absent
+control reading as a broken one, which it does. It also hands a child a reliable signal that this is
+one of the hard ones, which no item ever intended to give her — **a rendering doing something the
+item was relying on the child not to know.** Annie's question found it in one pass; the gold window
+took a coincidence. Reported, not repaired: whether to reword it, hide it, or give the other tiers a
+whole-passage population is authoring plus a ruling, not a component edit.
+
+**AND A FOURTH, FOUND WHILE ANSWERING:** the comprehension debug harness — the surface a reviewer
+would use to check exactly this — still described the window as *"Highlighted on load"* three hours
+after R174 moved it onto the tap. Corrected. A staff-facing sentence describing behaviour that had
+changed underneath it, in the instrument for checking that behaviour.
+
+## R183 — The founding copy corrected, and a state claim that can only be asserted in one direction
+*David's copy, 2026-08-17, applied verbatim. Both sentences declared so the scanner holds them.*
+
+Two public sentences were stale, both found by instruments built the same evening, neither
+discoverable by reading:
+
+| | was | now |
+|---|---|---|
+| "What's live today" | named Verbal Reasoning only; listed English under **"Then:"** as unlanded | names English comprehension as opening now, with the first cases free |
+| "What do I get free?" | **Ten** cases across **five** families | **Twelve** across **six** |
+
+**FOUR CLAIMS NOW DECLARED ON THAT PAGE, AND ONE OF THEM IS ONLY HALF-COVERED.**
+*"English comprehension is opening now, with the first cases free."* is a STATE claim, and David
+asked the right question of it: can it carry an assertion, because it is the sentence most likely to
+be wrong later, in either direction.
+
+**It can, in one direction only, and the declaration says which:**
+- **ASSERTED** — English has at least one free-tier case. False means the page offers a parent
+  something a free child cannot open, which is the costly direction.
+- **NOT ASSERTABLE FROM THE STORE** — the word *"opening"*. A district that has FINISHED opening
+  satisfies "at least one free case" perfectly, so no query can tell you the sentence has gone from
+  true to merely dated. **That half is a decision, not a row**, and nothing here will ever see it.
+
+Declaring the covered half and NAMING the uncovered half is the whole point: a claim listed as
+"declared" that silently covers only part of its own failure surface is R61's shape wearing a green
+tick. The `breaksWhen` line carries the limit so it prints beside the claim on every run.
+
+**"Twelve full cases across six question families" is DERIVED AND EXPECTED TO MOVE** — a fifth
+English case going free, SpaG opening a seventh family, or the floor changing. Fault-injected:
+flipping `case-en-03` to free-tier produced *"13 free cases, the page says Twelve"* immediately, and
+re-seeding restored it.
+
+All five declared claims HOLD; the scan covers 10 of 10; `check:expiring-claims` exits 0 for the
+first time.
+
+## R182 — "19 NVR" was never true: a claim that was wrong when typed, not one that aged
+*David's ruling, 2026-08-17: separate this from the "Five corners" class rather than filing it with
+them.*
+
+The two classes share a hiding place and nothing else.
+
+| | "Five corners" · `casesTotal: 21` · "all 21 question types" | **"18 VR + 19 NVR"** |
+|---|---|---|
+| when written | **TRUE** | **FALSE** |
+| what changed | the world moved past it | nothing — there were never 19 |
+| what would have caught it | nothing, until the world moved | **reading the store once, ever** |
+| why it survived | correct copy is never reported | the live number beside it |
+
+**THE SHARED HIDING PLACE IS THE ONLY THING IN COMMON, AND IT PROTECTED BOTH EQUALLY.** `{proposed}`
+was read from the store on every render and `18 VR + 19 NVR` was typed once, in the same sentence.
+The live half does not merely fail to check the dead half — **it vouches for it**, because a reader
+who sees a number that is obviously current reads the whole sentence as current. The store holds
+**ZERO** NVR misconceptions in any status; there has never been a moment when 19 was right.
+
+**WHY THE DISTINCTION MATTERS FOR THE GUARD.** R180's declared-claim assertions catch the aged
+class: they run every day and fire on the day the world moves. **They would not have caught this
+one** — a claim false from birth needs checking at the moment of WRITING, and the only instrument
+that reaches that moment is R178's rule in CLAUDE.md: look the fact up in the source that defines it,
+before you type it. **Same sentence, two faults, two different guards** — one mechanical and running
+daily, one a discipline at the keyboard. Filing them together would have hidden that the mechanical
+guard has no reach into half of it.
+
+## R181 — Making the declaration required instead of remembered: a scan that fails on undeclared public claims
+*David's ruling, 2026-08-17: "the check is only as good as the discipline of declaring, which is the
+same shape as the carriage registry before it was structured — is there an equivalent here? If it is
+cheap, build it. If it needs a parser over prose, say so."*
+
+**IT IS CHEAP, AND IT NEEDS NO PROSE PARSER.** The copy is JSX and TypeScript's own parser returns
+`JsxText` nodes exactly. Better: `{expr}` is a `JsxExpression` and NOT `JsxText`, so **a derived
+number is invisible to the scan by construction** — which is the correct semantics, because a derived
+number cannot rot.
+
+**THE NARROWING WAS MEASURED IN THREE STEPS, NOT GUESSED**, because a gate that cries wolf gets
+switched off:
+
+| filter | hits | what it was catching |
+|---|---:|---|
+| any number in public JSX text | **77** | "the 11+", "15 calm minutes", "one toggle", "30 days" |
+| + must QUANTIFY one of our own nouns | **16** | still "one detective Case", "one thing to try" |
+| + drop "one"/"two" (the indefinite article, measured) | **10** | **zero false positives** |
+
+**AND IT FOUND A SECOND STALE PUBLIC CLAIM ON ITS FIRST NARROWED RUN**: *"**Ten** full cases across
+the **five** question families"* — **12 free cases across 6 families**, wrong on both numbers, made
+so by today's own wiring. That is two broken public claims found by an instrument built this evening,
+neither of which anyone would have seen.
+
+**THREE FIRST-RUN FAILURES WERE THE INSTRUMENT, NOT THE COPY** — in the check written to close R180,
+which is R173 arriving in its own countermeasure:
+1. **case** — the declaration said "five ways", the heading says "Five ways into every concept";
+2. **entities** — the source carries `&apos;`, the reader sees an apostrophe;
+3. **ORPHANED against raw file text** — it reported both founding claims as no-longer-on-the-page
+   while both were plainly there, because `<strong>Live now:</strong> Verbal Reasoning…` puts a TAG
+   inside the sentence, so it is never a contiguous substring of the source. Matching now runs
+   against the CONCATENATED `JsxText` per file — what a reader actually sees, which is the only text
+   a copy claim can live in.
+
+A fourth was a design error, not a bug: `says` was carrying both a QUOTE and a PROPERTY. "The section
+names VR and no other district" is not a string on any page and orphaned every run. Quotable copy is
+now `quotes`; a property carries none and is never orphan-checked.
+
+**BOTH DIRECTIONS FAIL.** An undeclared quantity claim fails; a declaration quoting copy that has
+been reworded fails as ORPHANED. **Fault-injected to prove it bites** — changing one declaration's
+quote to "six ways" produced 5 UNDECLARED and 1 ORPHANED immediately.
+
+**THE LIMIT PRINTS EVERY RUN:** JSX text on public marketing pages only. A claim in a signed-in
+surface, in an image, or assembled by string concatenation is not seen.
+
+## R180 — A claim that is true when written is the one that rots silently, so the list has to be able to fail
+*David's ruling, 2026-08-17: leave the founding page's "all 21" and FLAG it — public marketing copy,
+currently true, his to change. "Add it to whatever list you keep of claims that will silently become
+false."*
+
+**A MARKDOWN LIST WOULD HAVE BEEN THE SAME INSTRUMENT AS THE COMMENT IT REPLACED** — correct, true,
+and silent. So the list is `scripts/check-expiring-claims.ts` and every entry carries an ASSERTION,
+an OWNER and a `breaksWhen` written for whoever reads the failure. It runs in CI beside every other
+gate. A claim that cannot be asserted is declared UNVERIFIABLE with its reason, never listed as if
+covered (R61).
+
+**AND IT BROKE ON ITS FIRST RUN, ON SOMETHING TODAY'S WORK CAUSED.** Two claims live on the founding
+page's *"What's live today"*:
+
+| claim | state |
+|---|---|
+| *"all **21** GL-style question types"* | **HOLDS** — store has 21; breaks on a 22nd |
+| the section names **Verbal Reasoning and no other district** | **BROKEN** — `ENGLISH now has free-tier cases` |
+
+The second was not a prediction. **`case-en-01` and `case-en-02` went free-tier today**, so a
+district is live and free right now and the public section listing what is live does not mention it.
+David said English going on sale is "a decision I am now close to making" — the copy went stale
+before the decision, from the wiring, and **only the assertion turned that into something anyone
+would see.** Owner is David; the check names him and does not touch the copy.
+
+**THE LIMIT PRINTS ON EVERY RUN AND IS THE IMPORTANT PART: IT CHECKS DECLARED CLAIMS AND FINDS
+NONE.** A number added to public copy without a declaration is still invisible. This file is the net;
+the discipline is the CLAUDE.md rule above it.
+
+**ALSO REPAIRED, under R179.** `sitting-one/page.tsx` rendered *"**10** PROPOSED entries (**18** VR +
+**19** NVR)"* — a live number vouching for a dead one, in the same sentence, disagreeing by 27, for
+weeks in front of staff. Both halves now come from one `groupBy`, so they cannot disagree; it reads
+*"10 PROPOSED entries (10 VR)"* — and the truth was worse than the drift, because **the hard-coded
+split claimed 19 NVR entries when there are ZERO**. The neighbouring *"Thirteen templates"* was
+verified TRUE against `NVR_TEMPLATES` (13) and then derived from the same array the generator walks,
+because unverified is the state that produced the other two.
+
+**VERIFICATION LIMIT, STATED.** `/admin/sitting-one` is behind staff sign-in with 2FA, which I did
+not perform. The data is verified (10 PROPOSED, all VR, 0 NVR; `NVR_TEMPLATES.length === 13`) and the
+composition typechecks. **The rendered page is unverified**, the same real gap as the parent view.
+
+## R179 — How many other numbers are hard-coded and labelled with a district: three real, one already false
+*David's question, 2026-08-17, after the third instance ("Five corners", `casesTotal: 21` labelled
+"VR cases"). Asked once, answered by scanning `apps/web` for a district word sharing a line with a
+bare number, outside comments.*
+
+**8 lines matched; 3 are false positives** (a form's `minLength={8}`, a test's `describe(... §3)`, a
+card's section number "5 · NVR generator sign-off"). Of the rest:
+
+| where | claim | state |
+|---|---|---|
+| [`founding/page.tsx:142`](apps/web/app/founding/page.tsx) | *"Verbal Reasoning — all **21** GL-style question types"* | **TRUE today** (store has 21) — and PUBLIC |
+| [`admin/sitting-one/page.tsx:79`](apps/web/app/admin/sitting-one/page.tsx) | *"**{proposed}** PROPOSED entries (**18** VR + **19** NVR)"* | **ALREADY FALSE** — renders "10 PROPOSED (18 VR + 19 NVR)" |
+| [`admin/sitting-one/page.tsx:103`](apps/web/app/admin/sitting-one/page.tsx) | *"**Thirteen** templates"* (NVR) | unverified here |
+
+**THE SITTING-ONE LINE IS THE INSTRUCTIVE ONE: A LIVE NUMBER SITTING NEXT TO A DEAD ONE.**
+`{proposed}` is read from the store on every render; `18 VR + 19 NVR` was typed once. They are in the
+same sentence and they disagree by 27, and the page has been rendering that contradiction to staff
+without anyone reading it as broken — **because the live half looks authoritative and lends its
+credibility to the half beside it.**
+
+**THE FOUNDING PAGE IS THE HIGHEST-STAKES AND IS CURRENTLY CORRECT**, which is exactly the condition
+under which this class survives: "all 21" is true, so nothing reports it, and it becomes false the
+day a 22nd type lands or English goes on sale. Same shape as "Five corners", which was also true when
+written.
+
+Reported, not repaired — one line on the founding page is a marketing decision and one on
+sitting-one is David's call.
+
+## R178 — "Squad" — the fabricated fact that would have reached a customer
+*David's ruling, 2026-08-17. Third fabricated fact in prose this week, and the first that would have
+been read by a paying parent.*
+
+Proposing the parent view, I wrote the status line as *"2 open on Crew · 2 more on **Squad**"*.
+**There is no Squad.** The tiers are `CREW` (free, no Subscription row) and `FULL_24 / FULL_12 /
+FULL_ROLLING / PLUS_ROLLING / SUMMER`. **David approved the proposal in a ruling without checking
+it**, and it was caught only because writing the actual string sent me to the enum first.
+
+**THE SERIES: 172 → `approvedBy` → Squad.** Three invented facts in prose in one week. The first two
+were internal — a count and an attribution. **This one was customer-facing copy on a billing-adjacent
+screen, approved and queued to ship.** Prose is the one artefact in this repo with no gate on it: the
+scanners read child-facing strings, the register checks rule numbers, `check:authority-shape` screens
+the store — **nothing screens a sentence in a proposal**, and a proposal is where rulings come from.
+
+**THE GUARD IS THE ONE THAT CAUGHT IT: READ THE ENUM, NOT THE MEMORY OF IT.** Any name of a tier, a
+status, a district, a family or a role that appears in prose is looked up in the source that defines
+it, at the moment of writing, every time. Not recalled, not inferred from a sibling, not carried
+forward from an earlier message in the same conversation. The cost is one grep; the failure mode is a
+confident, plausible, wholly invented name in a customer's hands.
+
+## R177 — The free tier is a floor of two cases per district; the shape had never been decided, only deviated from
+*David's ruling, 2026-08-17, after the measurement in R176.*
+
+**"Two cases per engine family" is replaced by "a floor of TWO CASES PER DISTRICT, with per-case
+exclusions and additions recorded."** The formula degenerated when the family count changed: across
+VR's five families it is a SAMPLING rule (show a child every kind of work the district does); in
+English's single family it is a QUANTITY rule (show a child two cases). Same words, different
+instrument — and English drew 2 of 4 cases, 20 of 34 items, from a rule never pointed at a one-family
+district.
+
+**NOBODY HAD EVER DECIDED WHAT THE FREE TIER IS. THEY DECIDED WHAT TO KEEP OUT OF IT.** VR's ten is
+the formula's NINE, plus a hand-added tenth, minus three held out — **four of ten slots are human
+decisions with written reasons; the other six are a shape nobody ratified.**
+
+**SO THE SET IS ENUMERATED AND THE RULE IS A FLOOR.** `FREE_TIER_CASES` in `seed.ts` is
+authoritative — a HUMAN RULING, not a computed value, which also moves this write off the derived
+path entirely (R63: the test is who authored the value). VR's ten are recorded as **exclusions from
+the full set, not deviations from a formula**; re-deriving them would discard four real decisions.
+Every reason survives verbatim from the 2026-08-02 rulings — only the framing changed.
+
+**A LIST IS ONLY SAFER THAN A FORMULA IF SOMETHING CHECKS IT.** Three assertions REFUSE the run
+before any write: an id that does not exist, a case both listed and excluded, and a district below
+the floor. **Fault-injected to prove they fire** — all three reported together and the seed threw
+without touching the database. A district with fewer cases than the floor is reported as a content
+gap rather than a failure.
+
+**THE SET IS BYTE-IDENTICAL ACROSS THE CHANGE: 12 of 12, same ids** (R149 — the diff, never the
+total). Output now states the shape it enforced: `12 (floor of 2 per district) · VR 10/21 ·
+ENGLISH 2/4 · 3 excluded by ruling`.
+
+## R176 — The parent view names what exists; and the free-tier rule has never been decided, only deviated from
+*David's ruling, 2026-08-17. Built as proposed: per-district, names what exists, never on the child's
+map, does not itemise the locked cases.*
+
+**BUILT.** `districts: DistrictAvailability[]` on the parent dashboard, under *"What's in each
+subject"*:
+
+| | free (CREW) | paid |
+|---|---|---|
+| English | 4 cases, **2 open on Crew** | 4 cases, all open |
+| Verbal Reasoning | 21 cases, **10 open on Crew** | 21 cases, all open |
+
+Three properties, and the third is the one that decides the tone. **Per DISTRICT, never
+whole-account** — "12 of 25" hides that VR is nearly all open and English is half, and the question
+a parent asks is per-subject. **Never on the child's map** — D7 stays exactly as it is, because a
+locked case looking like an unwritten one protects HER, mid-session; the same silence tells a PARENT
+the district is half-BUILT when it is fully built and half-SOLD. **And it does not itemise the locked
+cases**: naming them turns a status line into a sales page, and this screen is where a parent checks
+on their child.
+
+`openCaseIds` is called, never re-derived (R41): if entitlement logic changes, this line changes with
+it or not at all. District comes from the QuestionType join, not from parsing `case-en-01` — a prefix
+convention is not a schema (R57).
+
+**AND IT FOUND A SECOND STALE NUMBER OF THE SAME CLASS AS "FIVE CORNERS".** `runway.casesTotal` was
+hard-coded **21**, rendered as *"N of 21 **VR** cases cracked"*, with 25 cases across two districts.
+Third instance today of a figure in copy that is a claim about data with no way to stay true.
+
+---
+
+**THE MEASUREMENT DAVID ASKED FOR BEFORE RULING, AND IT ANSWERS A DIFFERENT QUESTION THAN THE ONE
+POSED.** He asked: was VR's split chosen and English's derived? Read from the store:
+
+- **Only TWO districts have ever existed.** MATHS and NVR hold no QuestionType rows at all, so the
+  rule has never run anywhere else. There is no five-district comparison to make.
+- **VR: 21 cases, 10 free, 5 families.** The pure rule yields NINE — `deduction` has a single case.
+  Four of the ten slots carry an explicit human decision: three HELD OUT with written reasons
+  (`case-vr-05` four gate-clean items against a floor of fifteen; `case-vr-10` the same 25 analogies
+  as `case-vr-03`; `case-vr-02` an unkeyable select-two answer) and one hand-added tenth
+  (`case-vr-11`, so the free tier always contains a case with LIVE items).
+- **ENGLISH: 4 cases, 2 free, 1 family. Pure rule, zero exceptions, nobody looked.**
+
+**So the dichotomy does not hold, and the truth is worse than either branch.** VR's ten was not
+chosen either — what was chosen was **three exclusions and one addition**. Nobody has ever decided
+that "two per engine family" is what a free tier should be; they decided which cases to keep OUT of
+it. **The SHAPE has never been ruled on, only deviated from.**
+
+**AND THE RULE CHANGES MEANING WHEN THE FAMILY COUNT CHANGES.** In VR — five families — "two per
+family" is a SAMPLING rule: show a child every kind of work the district does. In English — one
+family — it degenerates into a QUANTITY rule: show a child two cases. **Same words, different
+instrument**, and English got 20 of 34 items from a rule that was never pointed at a one-family
+district. R42's shape running the other way, and this time the result is arbitrary rather than
+correct.
+
+**NOT RULED, NOT CHANGED** — read only, as instructed. The parent view now publishes these numbers,
+so the shape is decidable rather than invisible, which is the whole reason for measuring first.
+
+**VERIFICATION LIMIT, STATED.** The parent dashboard sits behind a password sign-in, which I did not
+perform. Verified: the composition typechecks, and the numbers were computed from the same Case /
+QuestionType / `freeTier` inputs the function reads, for both tiers. **The rendered page is
+unverified** — that is a real gap and it is not the same as a green check.
+
+## R175 — The control's place is never empty, and the split is what the child can SEE, not what the row declares
+*David's ruling, 2026-08-17, following R174. Once the highlight moved onto the control, the control
+became the thing a child taps to find out where to look — so its absence had to mean something.*
+
+**THE COUNT, CORRECTED FROM THE STORE.** Cowork reported 60 items with no cited window, splitting
+26 / 34. Read directly: **59**, splitting **25 / 34**. The 25 are all `en-comp-technique` carrying
+`lineRefs []`; the 34 are ENG-003 carrying `lineRefs` null. Not a material difference to the ruling,
+recorded because a number relayed and a number read are different things (R25).
+
+**THE 34 SPLIT 16 / 18 BY `passageRef` — AND THAT SPLIT DOES NOT REACH THE CHILD.** Cloze names a
+vehicle passage; the two spot families name nothing. But **a cloze stem carries its own sentence
+inline** (*"…the field had flooded on Thursday, `___` the caretaker…"*) and **the vehicle is never
+rendered**. From the child's side both are "the text is on the card". So one line serves all 34, and
+**the line that separates the copy is WHAT SHE CAN SEE, not what the row declares** — the answer to
+"one line or two?" is two lines, but not across the boundary the data suggested.
+
+**AND ONE OF THE THREE STATES WAS NEVER MISSING.** *"This one is about the whole story."* has
+rendered for the 25 since the surface was built, in the control's own row. The premise that an absent
+control is indistinguishable from a failure to load was true for **34** items, not 59 — the SpaG
+half, where no passage region renders at all and there was therefore no place a control would sit.
+
+**BUILT:** `scope-note.tsx`, one component, two declared states, **words in one place because three
+engines render them**. Comprehension owns the passage surface; cloze reuses the word-web renderer;
+error-spot has its own. Three copies of a sentence in three files is exactly the drift R42/R55/R57
+closed, and a scope note saying different things in different engines would be worse than none.
+
+**THE CLOZE GATE IS THE RISK AND IT WAS MEASURED, NOT ASSUMED.** `cloze` reuses `wordweb`, so
+anything added there reaches all 21 VR types. The note is gated on `gapIndex`/`gapRef` — the one
+property true of every cloze item and nothing else in that engine. Verified against the store before
+trusting it: **16 items carry a gap reference, all 16 `en-spag-cloze`, zero VR.** Both field names
+are accepted because that migration is mid-crossing.
+
+Verified on both surfaces: the error-spot harness renders the note on all four items, and on the
+comprehension harness the whole-text item shows the note in the same flex row as the title while the
+windowed item beside it shows the button. **Exactly one of the two, never neither.**
+
+## R174 — The gold marks one wrong answer, not a region: highlight on tap, not on arrival
+*David's ruling, 2026-08-17, REVERSING his own ruling of 2026-08-16. Decided by Cowork's measurement
+of the bank, not by preference.*
+
+**85 OF 85 WINDOWED ITEMS HAVE THE WRONG-SCOPE OPTION AS THE ONLY OPTION THE WINDOW DISPOSES OF.**
+So a highlight drawn before the child reads does not shade a region — **it marks exactly one wrong
+answer, every time.** `en-wrong-scope-retrieval` is an option true in a part of the passage she was
+not sent to; gold on the window answers it by interface.
+
+**THE MECHANISM IS NARROWER THAN EITHER OBVIOUS READING, AND THAT IS WHAT SETTLES IT.** Not that she
+does not KNOW the window — the stem says *"Read lines 3 to 4"* in words, and always did. Not that
+she has to LOCATE it — that is the control's job and it may keep doing it. **It is that she must
+APPLY the window to the passage herself, and pre-drawn gold applies it for her.** Tapping is her
+doing the applying; the mark becomes the result of an act rather than a condition of the screen.
+
+**IMPLEMENTED:** no highlight on arrival; the control scrolls AND marks; the 2 whole-text items
+(`lineRefs []`) render no control and are unchanged. The mark is one-way — once applied it stays, so
+it cannot be lost by looking away. `setWindowApplied(true)` runs BEFORE the early return on a missing
+ref: a ref that is not there is a reason not to scroll, never a reason to leave the window unmarked.
+
+**IT ALSO FIXES A SEPARATE FAULT.** The control was inert on 5 of 34 items — those whose window sits
+in the opening view, where the gold was already drawn and there was nothing to scroll to. On
+tap-to-highlight it does something on **all 32 windowed items**, including WIW-01.
+
+**THE REVIEWER SURFACE KEEPS THE ALWAYS-ON HIGHLIGHT** and is deliberately not changed: she is
+judging whether the citation is right, not answering the item. Two e2e specs assert it there
+(`data-cited="yes"` on `/admin/items/<id>`) and neither reads the child engine — checked before the
+edit, not after (R86).
+
+**AND THE VERIFICATION CAUGHT A FOURTH INSTRUMENT FAULT IN ONE DAY.** `computer left_click` on the
+control changed nothing, twice, and the screenshots were identical — which reads exactly like a
+feature that does not work. **The click was not landing on the button at all.** A DOM click gave
+`goldLines 0 → 2` immediately. This retroactively voids ONE of the two legs under the earlier
+"inert on five items" finding: the pixel-identical screenshots proved nothing, because no tap
+occurred. The finding still stands on its other leg — `isCited` was a pure function of `citedLines`
+with no tap state anywhere in the component, which is a fact about the SOURCE and needs no click.
+**Two independent legs is why the conclusion survived the bad one**, and that is the whole argument
+for not resting a finding on a single measurement.
+
+## R173 — A measurement that confirms you gets no scrutiny: the third instance this week
+*David's ruling, 2026-08-17. The register is aimed entirely at measurements that go quiet, and this
+is the class that goes quiet by AGREEING.*
+
+Building R171's reachability reader, the blueprint parser read the file WRAPPER (`{kind, blueprint}`)
+instead of `.blueprint`, found no `sections`, and reported **"0 of 4 wired blueprints name an English
+type."** That answer was **correct** — and it was reached from a **failed read**. It survived review
+for one reason: **it agreed with what I had concluded ten minutes earlier**, so I read it as
+confirmation instead of as output.
+
+**THREE INSTANCES THIS WEEK, ALL THE SAME SHAPE:**
+
+| | the measurement | why it went unscrutinised |
+|---|---|---|
+| **464 of 514** | a coverage figure that matched the expected shortfall | it agreed with the estimate |
+| **six newly-failing items** | a gate change that produced faults reading as bad authoring | the count moved the way a fix should move it |
+| **0 of 4 blueprints** | a true number from a parser that read the wrong object | it agreed with the conclusion it was built to support |
+
+**THE OTHER SHAPES IN THIS REGISTER ARE ABOUT INSTRUMENTS THAT SAY NOTHING** — R60's zero, R61's
+absent population, R87's silent no-op, R80's wrong clock. **This one is about an instrument that says
+the right thing for the wrong reason, and the agreement IS the camouflage.** R142 named it once as a
+one-off; three instances in a week make it a class.
+
+**THE GUARD IS STRUCTURAL, NOT VIGILANCE.** A reader now REFUSES a shape it cannot parse rather than
+reporting the empty result — `throw` on no `sections`, not `?? []`. An empty result from a broken
+reader and a true empty are indistinguishable downstream, and the moment the true answer happens to
+be empty, nothing will ever surface the break. **Scrutinise agreement at least as hard as surprise:
+a disagreeing number gets investigated for free, and a confirming one has to be investigated on
+purpose.**
+
+## R172 — One Case row is the whole minimum for PLAY, and not enough to FIND: the fourth stop
+*David's ruling, 2026-08-17. The first English item ever served to a child in this product.*
+
+**BOTH FACTS ARE TRUE AND THEY ARE DIFFERENT FACTS.** R171 named three stops. There is a fourth, and
+it separates two things that had been running together all day:
+
+- **PLAYING a case needs a Case row and nothing else.** The orchestrator's `prisma.case.findMany()`
+  is **not** district-filtered, so a Case naming `en-comp-retrieval` enters the focus-case rotation
+  the moment it exists and `itemPool` returns the LIVE + PRACTICE items already sitting there.
+- **FINDING it needs three more things.** `district/page.tsx` queried `district: 'VR'`, and
+  `locations` is built from that result — so the case would have been **playable and invisible**, a
+  state nothing would have reported. `QUARTER_ORDER` is the second (a quarter declared in `QUARTERS`
+  and absent from the ORDER renders nowhere), and the lede hard-coded **"Five corners."**
+
+**WHAT SHIPPED:** `content/cases/case-en-01.json` — *The Written Clue*, `en-comp-retrieval`,
+`orderInDistrict` 22, serving the 10 LIVE + PRACTICE items of ENG-001 and ENG-028. `freeTier` came
+out **true by derivation, not by hand**: the seed's rule is "first two cases per engine family", and
+comprehension is a new family — the encoded rule did the right thing without being told about English.
+`comprehension` added to `QUARTER_ORDER`; `cloze` and `errorspot` deliberately NOT added, because
+ENG-003's 34 SpaG items are all DRAFT and both quarters would be an empty room with a name on the door.
+
+**AND THE TITLE HAD NEVER BEEN LINTED.** `check-reading-age` walked `content/cases` and went straight
+to `narrativeIntro.text`. **The case title is the first child-facing English string a child reads —
+it is the name on the map — and 21 VR titles had been shipping unscreened.** The same shape as the
+story-wrapper gap two lines above it in the same loop: a field that was always child-facing, never
+screened, invisible because everything the loop DID screen passed. Now 22 titles and narratives, and
+the count is stated rather than the word "narratives" standing in for a number (R60).
+
+**VERIFIED BY REACHING ONE, NOT BY CHECKING A QUERY.** Session opened as `seed-child-alex`, The
+Reading Room found on the map, *The Written Clue* opened, warm-up and vault rails played through,
+and **`ENG-001-WIW-01` rendered with its passage, its numbered lines, and lines 1–4 highlighted from
+load.** Answered correctly; the attempt is in the table. Every ruling from this week was visible on
+that one screen: the passage stayed up, the window was gold before anything was tapped, and
+*"Go to lines 1 to 4"* sat beside the title.
+
+## R171 — Deliverable and reachable are two properties, and the check that measured one named the other
+*David's ruling, 2026-08-17, minutes after R170 was recorded.*
+
+`check:serving-path` printed **"372 of 372 COULD REACH A CHILD"** while **not one English item was
+reachable by any route in the product.** The four legs were right — routes to an engine, renders a
+stem, resolves a passage, resolves its citations. **The sentence was not.**
+
+- **DELIVERABLE** is a property of the ITEM: hand it to the runner and something correct appears.
+- **REACHABLE** is a property of the PLATFORM: some door will actually select it. Nothing about the
+  item can establish it, and an item can be green on all four legs and unreachable forever.
+
+**R170 IN MY OWN CHECK, THE SAME EVENING.** There, a constructor superseded by intent and not by id.
+Here, a check measured the near leg and named the far one. **The shared shape: the instrument is
+correct and the property it reports is one nobody measured.** It is not enough for a check's tests
+to pass; the SENTENCE it prints is an assertion and needs the same scrutiny as the assertions it makes.
+
+**THE THREE STOPS, now read on every run and never asserted:**
+
+| stop | state |
+|---|---|
+| **Cases** — `itemPool` only ever sees the focus Case's `questionTypeId` | **0 of 21** name an English type |
+| **Blueprints** — `composeMockPaper` is gated on the wired set | **0 of 4** (`gl-vr-*`, `gl-maths-*`) name an English type |
+| **`QUARTER_ORDER`** — `groupIntoQuarters` maps over the ORDER, not `QUARTERS` | **0 of 3** English quarters appear in it |
+
+**EXIT STATUS FOLLOWS DELIVERABILITY ALONE.** Reachability is a platform state, not an item fault,
+and a permanently red step teaches people to skip it — so the check says in terms that cannot be
+misread that **a green exit means deliverable, never reachable.**
+
+**AND THE FIX ALMOST SHIPPED WITH THE FAULT IT WAS FIXING.** The blueprint reader read the file
+WRAPPER (`{kind, blueprint}`) instead of `.blueprint`, found no `sections`, and reported *0 of 4
+name an English type* — **the right answer, from a failed read.** It now REFUSES an unparseable
+shape rather than counting it as zero, because a zero from a broken reader is indistinguishable
+from a true zero, and this one would have been believed: it agreed with what I had just concluded.
+R142 exactly — the measurement that agrees with you is the one to distrust.
+
+**R149 held.** Baseline captured before the change, diffed after: **49 → 49 blocked, 0 newly PASS,
+0 newly FAIL, 0 changed faults.** The legs did not move; only the sentence did, which is what was
+ruled.
+
+## R170 — The vr-04 constructor never replaced the bank; it built a second population beside it, and both of her August rulings are sitting in the half that does not serve
+*David relaying Annie, 2026-08-17, after the 30-item VR sample returned 0 of 30. She carried forward
+two items from August that she says have not shipped: `obedient → dutiful` (key rarer than its
+headword) and `exhausted → tired` (key weaker than its headword).*
+
+**BOTH RULINGS WERE IMPLEMENTED. NEITHER SHIPPED.** Read from the store, not relayed:
+
+| headword | id | status | key |
+|---|---|---|---|
+| obedient | `bank-vr-04-closest-meaning-23` | **LIVE** | **dutiful** ← the fault |
+| obedient | `gen-vr-04-closest-meaning-23` | DRAFT | well-behaved ← the fix |
+| exhausted | `bank-vr-04-closest-meaning-30` | **LIVE** | **tired** ← the fault |
+| exhausted | `gen-vr-04-closest-meaning-28` | DRAFT | drained ← the fix |
+
+**ANSWER TO THE QUESTION ASKED: the typed constructor has never run over a bank item. It only ever
+emitted its own.** `vr-04-closest-meaning` holds **80 items under one `questionTypeId`** — 40
+`gen-` (`ai-draft:claude-fable-5`, all DRAFT) and 40 `bank-` (`ai-draft:cowork-vocab-banks`, all
+LIVE). **39 of the 40 headwords appear in BOTH, and on 16 of those the two populations disagree
+about the key** (`sturdy`: tough/strong · `bold`: brave/daring · `feeble`: frail/weak).
+
+**THE LINE THAT DID IT** is `SUPERSEDED_BY_BANK` in `packages/db/prisma/generate-content.ts`.
+Removing `vr-04` from that set when it became a typed constructor (2026-08-06) let the constructor
+GENERATE again. It did not delete or rewrite anything: `seed`/`content:generate` own `gen-` ids,
+the bank import owns `bank-` ids, and **no writer's key space overlaps the other's**, so the
+re-authoring landed cleanly beside the content it was authored to replace and nothing anywhere
+compared them.
+
+**WHY EVERY GUARD PASSED.** R62's classifier asks *would this write change a reviewed value* — it
+would not, because the constructor never touches a reviewed row. `check:derived-writes` asks
+*does a deriving writer classify* — it does. **Both are correct, and both are about the WRITE.
+Nothing asks whether the thing being written is a SECOND COPY of something already serving.** The
+new shape, and it is not in the register: a re-authoring that supersedes by INTENT and not by ID
+is invisible to every check here, because superseding is a fact about content and every guard we
+have is a fact about a write. The reviewer found it by reading thirty items and recognising two
+she had already ruled on.
+
+**AND IT COULD ONLY BE FOUND FROM THE SERVED SIDE.** The 30-item sample drew `bank-` ids because
+those are the LIVE ones. A sample drawn from the constructor — the natural place to check whether a
+ruling was applied — would have shown both fixes present and correct.
+
+**NOT REPAIRED IN THIS ENTRY.** Which of the 16 disagreeing pairs is right is authoring, and the
+`gen-` half has never been reviewed. It goes back as a question, not a merge.
+
+**HER TWO CLOSEST CALLS, NOTED NOT HELD** (David, 2026-08-17 — for whoever extends the family).
+Both are `vr-06-missing-word`, and **both labels name the DISTRACTOR that nearly works**, not the key:
+
+- **CONSUME** — `bank-vr-06-missing-word-18`, packet item 23. *"So many tricky rules began to
+  CON\_\_\_E the new pupil on her very first day."* Key **FUS** (confuse); distractor **SUM** makes
+  CONSUME, a real word that reads passably in the frame. Held: *confuse* is what "so many tricky
+  rules" does to a pupil.
+- **SERIOUS** — `bank-vr-06-missing-word-34`, packet item 28. *"Dad was so \_\_\_IOUS about the broken
+  window that he shouted and stamped his feet."* Key **FUR** (furious); distractor **SER** makes
+  SERIOUS, also a real word in frame. Held: the shouting and stamping carry it.
+
+Both survive because the SENTENCE decides, not the fragment — the family's own mechanism working at
+its tightest. **These are the two thinnest margins in the 30 and the pattern to watch when extending:
+a distractor whose letters make a real word that the frame does not quite exclude.** The other 44
+unscreened live VR items stand on her ruling; the 74 close.
+
 ## R169 — Every signature that carries a figure names its unit: 33 of 33
 *Annie's rule, 2026-08-17: a figure carried on a signature names its unit, because a signature is read by someone who was not in the conversation.*
 
@@ -6601,3 +8715,2809 @@ protects. Corrected by restating the DROP last — R83's decision, in the right 
 
 Found because Prisma refused to run a routine migration, which is luck of the R90 kind: a tool
 declining to proceed is not a check, and nothing was watching this until now.
+
+## R221 — walkScript measured: no child path reads it, the Walk mode is a built shell, and the control lives in a different closure
+*Annie's eighth return, 2026-08-19. She ruled walkScript child-facing UNTIL MEASURED and asked for
+the measurement BEFORE the pin's scope is set, not after.*
+
+**THE ANSWER: no. Not on any surface a child can reach, today.** 704 items carry a non-empty
+`walkScript`, 331 of them LIVE. The text reaches exactly one screen and it is a staff one —
+`apps/web/components/admin/comprehension-review.tsx:70`.
+
+**Where it stops, leg by leg.** The child's item payload is enumerated literally in `serveItem`:
+`stem`, `options` (id + content), `passage`, plus `rail`/`round`/`family`/`plain`. **No
+`explanation`** — and since `walkScript` lives inside that JSON column, nothing carries it out. The
+miss payload returns `childHint`, `replaySteps`, `cracked`, `bonusWord`. `replaySteps` looks like
+the leak and is not: `buildReplay` composes those lines from the item's **`solution`** and a
+hard-coded template, taking one id (`replayTemplate`) from the explanation blob and nothing else.
+**The step-by-step text a child reads after a miss is generated, not authored.**
+
+**THE CONDITION THAT MAKES THIS ROT, AND IT IS NOT HYPOTHETICAL.** Walk mode exists in the data
+model — 19 Cases declare `{kind: 'faded-example', assetRef: 'placeholder/…/walk.json'}` — and
+**nothing in the app reads `assetRef` at all.** Tapping the way-in button calls `modeApi('walk',
+'open')` then `'complete')` and reloads; no walk content renders. So the surface is a BUILT SHELL
+with a placeholder slot, and 704 authored walk scripts are the obvious thing to put in it. Her
+default of reachable-until-measured is right, and the measurement's own answer is *"not yet"*.
+
+**SO THE MEASUREMENT IS A CHECK, NOT A REPORT** — `pnpm check:walkscript-reach`, in CI. A grep
+result is R180's claim that is true when written and silent afterwards.
+
+**IT DERIVES THE FILE SET AND DOES NOT LIST IT** (R57). The claim is not "no file mentions
+walkScript" — a dozen scripts do, all staff-side. It is "no file that can reach a child's browser
+reads it", so `scripts/lib/import-closure.ts` walks the import graph from the child's entry points
+(`app/crew/**`, `app/api/story/**`). A new module joins the closure on the commit that imports it.
+
+**THE FIRST RUN FAILED ITS OWN GUARD, AND THAT IS THE ENTRY.** It reported **four walkScript
+readers "on the child's path"** — from a closure that did not contain the orchestrator or the play
+runner at all, because `@/` is the app's own tsconfig alias and my resolver treated it as an
+external package. R173 exactly: a failed read returning a confident number. It was caught by
+`MUST_CONTAIN`, which names two files the closure cannot legitimately lack. **A closure check
+without a must-contain list is a check that passes hardest when it is broken.**
+
+**THE POSITIVE CONTROL IS THE SAME TOKEN IN A DIFFERENT CLOSURE** (R60 q2). "walkScript is not in
+the child closure" and "the scanner cannot see the token" are indistinguishable outputs. So the
+ADMIN closure is walked with the identical matcher, where the field IS rendered; if that side ever
+returns zero the check FAILS rather than reporting a clean child surface. It finds 5.
+
+**AND A PACKAGE HIT IS THE OPPOSITE FINDING FROM AN APP HIT.** Three shared-package files read
+`walkScript` and all three SCREEN it — `item-content-gate.ts` gathers it into the child-facing gate,
+which is the ruling being enforced. A check that flagged its own guard rails would be gone in a
+week, so package readers are declared with what they do, and a new one fails until someone writes
+down which kind it is.
+
+Fault-injected before trusting: a `walkScript` read added to `apps/web/lib/crew/replay.ts` fails
+with the file and line.
+
+## R222 — I fabricated seven of eight ids into a data field, then argued from their absence
+*The cross-store census, 2026-08-19.*
+
+Building the census, I needed Annie's eight VR replacement ids to mark which served hints Cowork
+reported it could not find. **I wrote them from memory. Seven of the eight were invented.**
+
+The census caught it in its first run: seven of my recalled ids are tagged on **no LIVE VR item at
+all**, and one (`vr-form-without-meaning`) is not a VR entry. Had they merely existed, the file
+would have shipped reading *"all eight served, exactly as reported"* — **R173's confirming result,
+where the agreement is the camouflage.** The disagreement is the only reason this was caught.
+
+**R178 SAID PROSE. THIS WAS A CONST.** The rule was written for a sentence in a proposal, and its
+guard — read the name from the source that defines it — is not weaker inside a `const` array. It is
+STRONGER, because prose gets read by a human and a data field goes straight into a delivered
+artefact. The rule's scope was too narrow and this is its correction: **any id, name or enum value,
+in prose OR in a literal, is looked up at the moment of writing.**
+
+**THEN I MADE IT WORSE, AND THAT HALF IS THE MORE USEFUL ONE.** Catching the fabrication, I wrote
+into the file that the eight ids "were never written to an artefact in this store" and cut the list
+to the single id David had named this turn. **They were written down — in this register, at R220,
+by me, one turn earlier.** I had searched `content/evidence/` and `content/exports/` and read the
+silence as proof, which is R86 (*a file is not its content, it is every place that holds it*) and
+R98 (*unknown is not absent*) in one move. **A correction issued at speed is not automatically a
+correction**, and the second error was better-argued than the first.
+
+Corrected: all eight are served, all eight are absent from Cowork's library, together carrying
+**208 option-tags across LIVE VR items**.
+
+## R223 — `requirePopulation` accepted a call that named no population, printed "screened .", and passed
+*Found while building the tranche export, 2026-08-19.*
+
+The signature is `requirePopulation(gate, Record<string, number>)`. I called it three times with a
+bare number. `Object.entries(23)` is `[]`, so the empty-check found nothing empty, the line printed
+as **`null-approver tranche: screened .`** — no count, no name, no denominator — and the gate
+returned clean.
+
+**This is the file's own subject matter, inside the file.** R60 exists because a check must not be
+able to report a pass while screening nothing; R61 put a declaration in front of any legitimately
+empty population. Neither reaches a call that names **no population at all**, because both are
+about the SIZE of a population and this one had no entries to size. TypeScript caught it — and only
+because `typecheck:scripts` covers this directory; the runtime was happy.
+
+Now `requirePopulation` throws on an empty record. The three calls are fixed and print real
+denominators (704 · 25 · 332 · 83).
+
+## R224 — The Alphabet Rail on two STOWAWAY types: the family is ruled, the two ids are inherited, and only one of them reaches a child
+*Annie's eighth return, 2026-08-19: "a scaffold that appears on a family nobody put it on deserves
+an explanation of how, because scaffolds do the child's work and the ones that arrive unasked are
+the ones nobody sized."*
+
+**HOW THEY ACQUIRED IT: from the spec, at family level.** BUILD-PHASE-4 §3 says the rail is
+*"Available in every CODEBREAKER and relevant STOWAWAY case"*. So the mount on `stowaway` is
+**ruled** — it is not a stowaway at all, it is written down.
+
+**WHAT WAS NOT RULED IS THE WORD "RELEVANT".** The spec never says which stowaway types are the
+relevant ones. `railAvailable` implements it as a two-id literal — `vr-08-move-letter`,
+`vr-01-insert-letter` — introduced in `0f6cd37`, the original Phase 4 district build, in a commit
+that names the rail among twenty other things and cites no ruling for the selection. **Ruled at the
+family, inherited at the id.** Nobody sized the two.
+
+**AND THE SELECTION DOES NOT SURVIVE BEING LOOKED AT.** Five stowaway types exist:
+
+| type | rail | LIVE items |
+|---|---|---:|
+| `vr-01-insert-letter` | **yes** | **25** |
+| `vr-08-move-letter` | **yes** | **0** (38 items, none LIVE) |
+| `vr-06-missing-word` | no | 34 |
+| `vr-05-hidden-word` | no | 0 |
+| `vr-20-complete-the-word` | no | 0 |
+
+**The rail reaches a child on exactly ONE stowaway type, and the other type it is declared on has
+no LIVE items at all.** Meanwhile `vr-06-missing-word`, with 34 LIVE items, has no rail and nobody
+asked whether it should.
+
+**WHAT THE SCAFFOLD ACTUALLY OFFERS, against what the item asks.** The rail does two things: pick
+two letters and it counts the jumps between them, or flip to the reverse alphabet. That is a
+*code* tool — alphabet distance and mirroring. `vr-01-insert-letter` asks the child to find the
+letter that ends one word and begins the next, where alphabet distance is irrelevant. **So it
+cannot do the child's work on this type; it is furniture that does not apply** — a milder fault
+than the one she named, and a different one: a child taught that the rail is the tool for hard
+items will reach for it on an item it cannot help. Related and already recorded: `vr14-step-size`
+names the Alphabet Rail in a hint on a screen that has no rail.
+
+Reported, not repaired — which types carry the rail is hers or David's, not mine.
+
+## R225 — Seven third-text rows settled by reading, and the reason is the record
+*Annie's eighth return, 2026-08-19.*
+
+She approved all 22 under her own name **on reading** — eleven as written, eleven amended — rather
+than by recognition. Seven of the as-written eleven are the third-text rows, where this store's
+text and Cowork's restore diverged and neither side could say which was signed. Reading them
+settles it: **the serving text is hers now by approval, whatever its history, on all seven.**
+
+**HER REASON IS PART OF THE RECORD.** Several of the seven read exactly like her voice — and that
+is the evidence she REFUSED to use, because fluent text passing for its author is the fault
+demonstrated twice this week: the six renamed entries (R202), and my seven fabricated ids two hours
+ago (R222). **Recognition is not provenance.** A record keeping only the verdict would leave the
+next reader free to close the next join by recognising a voice, which is the thing she declined to
+do.
+
+Both texts now sit on each row in `textProvenance`: the serving text VERBATIM as what serves and is
+approved, and Cowork's restore named as **the record of what was signed** — with
+`textHeldInThisStore: false` and its state written as UNHELD rather than omitted, because a
+provenance field that quietly drops the other side relaunders the same ambiguity one level down
+(R98). **The divergence is declared, not latent.** `childHint` is unchanged on all seven: she
+approved them as written, so no child-facing text moved.
+
+**A SIDE FINDING WORTH ITS OWN LINE.** Setting `approvedBy` meant choosing a shape, and this store
+records the same person **five ways**: `human:staff-reviewer@cluecrew.test` (162), `(null)` (83),
+`current-reviewer` (22), `reviewer:rev-0001` (10), `rev-0001` (1). `check:authority-shape` screens
+only values beginning `human:`, so three of the five shapes pass it without inspection. Written
+here as `reviewer:rev-0001`, the form that resolves to her Reviewer row by id.
+
+## R226 — The census: 26 served VR hints, 8 of them in only one store, and the ordering Cowork cannot compute
+*Annie's eighth return, 2026-08-19: same id, every store, texts side by side; my half runs
+independently of Cowork's, and the difference is the finding.*
+
+**THE COUNT SHE ASKED FOR: 8 of 26.** Of the 26 misconception hints served on the 298 LIVE VR
+items, **eight exist in only one store** — Cowork searched its library for those ids and found none
+of them. They carry **208 option-tags between them**, from `vr04-opposite-pull` at 40 items down to
+`vr01-first-word-only` at 11. `vr-series-sum-of-last-two`, the one David named, is reachable by a
+free child across 13 items and is absent from Cowork entirely.
+
+**23 of the 26 have no recorded approver** — the same 23 already delivered as reachable text, which
+is a real cross-check: two derivations, one number.
+
+**THE TRANCHE, IN REACHABLE ORDER** (`pnpm` export delivered): 83 rows with no recorded approver —
+**23 REACHABLE(free), 0 REACHABLE(paid), 0 SERVABLE, 60 NOT SERVED.** Ordered free-first, then
+widest exposure first within a rank, because a hint with no approver is a different size of problem
+depending on whether a child can meet it tonight. Cowork ordered its tranche by a declared proxy
+and said so; reachability is not visible from there. **The limit travels with the ordering**: this
+is `check:serving-path`'s definition — a Case row names the item's question type, split on
+`Case.freeTier`, the column `entitlements.ts` actually reads — and it is not a claim that any child
+met any of these hints on any day.
+
+## R227 — The target store settled: all seventeen ids are rows here, and the writes land here
+*David's relay, 2026-08-19. Nine of Cowork's writes were blocked on this.*
+
+**17 of 17 asked-about ids resolve to a Misconception row in THIS store** — Annie's eight VR
+replacements and the nine blocked writes. `vr-series-sum-of-last-two`: **yes, it exists here** —
+ACTIVE, `approvedBy` null, **13 LIVE carrier items** on `vr-11-number-series`, and absent from
+Cowork entirely.
+
+The nine split cleanly by district. The three NVR ids (`nvr-net-duplicated-face`,
+`nvr-partial-reflection`, `nvr-rotation-wrong-direction`) are ACTIVE with **0 LIVE carriers** —
+NVR serves no items yet — and carry the `human:staff-reviewer@cluecrew.test` login. The six VR ids
+(`vr-letter-series-direction`, three `vr07-*`, two `vr14-*`) are ACTIVE, `approvedBy` null, and
+carry **186 LIVE options between them**, `vr14-step-size` alone on 50.
+
+**THE FILE REPORTS ONE SIDE AS FACT AND THE OTHER AS TESTIMONY.** `heldHere` is read from the
+table; `heldInCowork` is REPORTED-BY-COWORK or UNKNOWN and is never computed from here. That
+distinction is the whole of R220's lesson — Cowork's finding was right about its own store and
+wrong as an inference about where the rows belong, and the symmetric mistake from this side would
+be just as easy to make.
+
+## R228 — `check:authority-shape` screened one shape while four walked past it
+*David, 2026-08-19: "an allow-list keyed on one shape while four others walk past it."*
+
+The guard was `who.startsWith('human:')`. **Everything not shaped like an email returned before any
+test ran.** The store records the same person five ways — `human:staff-reviewer@…` (456 rows),
+`current-reviewer` (22), `reviewer:rev-0001` (17), `rev-0001` (1), and null — so **three of the
+five shapes were never inspected**, and the check's headline number described one shape while
+reporting as though it described the column.
+
+**IT IS R57 WEARING CHECKING CLOTHES.** An import door that drops what it cannot name fails open
+and reports success; a screen that skips what it cannot name does the same thing one level up. The
+fix is the same one: classify EVERY value, and let nothing pass for having an unfamiliar prefix.
+Now a value is clean only if it RESOLVES to a Reviewer row (by id, by `reviewer:` prefix, or by
+`resolvesActor`) or is DECLARED.
+
+**THE WIDENING FOUND A SECOND FAULT THE FIRST SHAPE COULD NOT SEE.** Every one of the three
+skipped shapes resolves correctly, so no unresolvable-authority count moves — but **one person is
+written three ways**, and no single predicate answers *"what did Annie approve"*. Not a name that
+means nothing; a person who means several names. The check now reports it.
+
+**AND MY FIRST VERSION OF THAT REPORT UNDERCOUNTED HER OWN SHAPES.** It grouped by a formatted
+display string that included the resolution route (`…via actor 'current-reviewer'`), so one
+reviewer split into two people and it printed **2 ways** where the answer is **3**. A key built out
+of display text. Caught by reading the output against the census immediately above it, which is the
+only reason it did not ship as the finding.
+
+Baselined before the edit and diffed after, per R149 — though `gate:baseline` snapshots ITEM
+faults and does not fit a check that reports authority values, so the output was captured to a file
+and diffed directly. **A second class of non-zero gate the baseline tool does not cover**, worth
+knowing before the next one is changed.
+
+## R229 — The population nobody had counted: declared, validated at the door, consumed by nothing
+*David, 2026-08-19, from two findings of mine landing the same day.*
+
+Walk mode is a finished shell whose `assetRef` nothing reads (R221). The MATHS gates screen a
+question type no code path creates (R61). **Both are a built half waiting on a half that was never
+built, and NEITHER SURFACED THROUGH A CHECK** — one fell out of a reachability measurement, the
+other out of a declaration audit. Nothing anywhere asked *what do we declare that we never read?*
+
+`pnpm check:declared-unread` asks it. **428 schema fields, 125 Case mode declarations:**
+
+| verdict | fields |
+|---|---:|
+| SERVED — the product consumes it | 395 |
+| **VALIDATED-ONLY — checked in, read by nothing** | **1** |
+| TOOLING-ONLY — only a check or export reads it | 16 |
+| **DEAD — nothing anywhere** | **16** |
+
+**THE MODE SYSTEM IS THE HEADLINE.** 100 declared `assetRef`s: VALIDATED-ONLY. Of five mode kinds,
+**3 are provably undispatched** and the remaining two (`practice`, `visual`) match string literals
+in unrelated code — a debug page's seed and an NVR template's `identity` parameter — so by manual
+inspection **no runtime path dispatches on a mode kind at all.** Five modes per Case, twenty-five
+Cases, validated on the way in and consumed by nobody. `Case.storyWrapper` is the same shape and
+was not previously known.
+
+**THE CHECK TAUGHT ME THE CLASS BY GETTING IT WRONG TWICE, AND BOTH ERRORS ARE THE ENTRY.**
+
+*First:* one corpus, so it scanned its own source and cleared `assetRef` as READ — **read by the
+file reporting on it**. A scanner that counts its own mentions clears every field it discusses.
+
+*Second, and this is the real distinction:* with the scanner excluded, `assetRef` still read SERVED
+— from `content-schema.ts`, the zod schema that VALIDATES it. **A validator is not a consumer.** A
+field checked at the door and read by nothing is exactly the population being counted, so a check
+that treats validation as use hides the finding inside its own measurement. Hence three corpora:
+runtime consumers, declaration sites (schemas, types, tests), tooling.
+
+*Third:* classified as bare words, four of five mode kinds came back SERVED on collisions with
+ordinary English. **Every one of those clears was false.** Mode kinds are string literals and are
+now matched as literals — which still cannot separate a mode kind from any other literal of the
+same value, and that limit is printed rather than papered over.
+
+**THE METHOD'S ERROR RUNS ONE WAY AND THE CHECK SAYS SO.** Whole-word matching is generous: common
+names match unrelated code. **Everything it names is unread with high confidence; what it clears is
+NOT thereby proven read.** The honest next version resolves property access per type. This is not
+that, and it does not pretend to be.
+
+**IT FAILS ON ANYTHING NEW, ON THE `typecheck:scripts` MODEL.** The 16 existing entries are a named
+backlog printed in full every run — never reduced to a count, because a known list that shrinks to
+a number is a green tick with a footnote. Fault-injected: a new unread column fails the run.
+
+## R230 — The two one-source rows are not a length pair, and the question being asked was the wrong one
+*The queue, 2026-08-19.*
+
+Recorded as *"pinned witness holds a LONGER text; this database differs, so which is the pre-cap
+original is HERS to settle"* — 21-versus-16, 23-versus-16. Reading the two texts against each
+other: **they are the same length and they say different things.**
+
+| id | this database | the pinned witness |
+|---|---|---|
+| `en-coordination-wrong-conjunct` | 21w — *which of the two the question is asking about* | 21w — *joined by 'and' or 'as well as'; two different things* |
+| `en-whole-text-absence-asserted` | 23w — *choose a line number for the option you like* | 23w — *before you say the writer told you this, look right through* |
+
+**Neither is a capped form of the other. They are independent drafts and the word-cap sweep never
+touched this pair.** So the question she was about to be asked — *which is the original before it
+was shortened*, a factual question a length comparison could support — is not the question the
+evidence poses. The real one is **which of these two hints should a child read**, an authoring
+judgement and hers alone. Sending the first question with the second question's evidence would have
+got an answer to neither.
+
+**AND THE 24 RESTORE POINTS THE OTHER WAY.** Checked against the store rather than assumed: **this
+database already holds the longer pre-cap text on five of the six recovered rows.** The restore is
+not a write here — it is a delivery to Cowork, whose copies are the capped ones. Both witness files
+agree with each other byte-for-byte on the two rows above, which is why the disagreement is with
+this database and not among the pins.
+
+## R231 — The two dedupes are two texts on one row, not two rows, so what was owed was the record
+*David named them, 2026-08-19: `en-subject-verb-agreement-by-proximity` and
+`en-comparative-superlative-form`. Annie's approved queue text survives, the capped library text is
+superseded.*
+
+**Checked before writing: BOTH ROWS ALREADY CARRY THE SURVIVING QUEUE TEXT.** There is no duplicate
+row to retire — the duplication is two TEXTS for one id, the capped one surviving only in
+historical library exports and as `hintCore` on the carrier items. So the general rule David states
+(a retired row keeps its text and gains a field naming the entry that superseded it) **has no
+instance here**, and inventing one would have meant retiring a row that does not exist.
+
+What was actually outstanding: **nothing anywhere recorded that a text had been superseded, or by
+what.** Now written into `textProvenance` on both rows, with the superseded string VERBATIM (R25) —
+a description of a string retired for its wording cannot stand in for the string.
+
+| id | survives (queue) | superseded (capped) |
+|---|---|---|
+| `en-subject-verb-agreement-by-proximity` | *"Find the word the sentence is really about…"* 21w | *"Cross out the of-part, then match the verb to what is left."* 12w |
+| `en-comparative-superlative-form` | *"Comparing two, or more than two?…"* 20w | *"Two things take -er. Three or more take -est…"* 13w |
+
+The applier REFUSES if a row still carries the superseded text — it records a completed dedupe and
+must not be mistaken for one that performs it.
+
+**And David's framing of my own refusal is the reusable half:** declining to reconstruct the two ids
+from memory was right, and naming them was the artefact that unblocked it. R222 one week old and
+already load-bearing.
+
+## R232 — Walk costed before it is built, and the content does not fit the mode as declared
+*David's ruling, 2026-08-19: the mode system gets built, Walk first, one Case first — with the
+costing landing before the build starts.*
+
+**TWO OF MY OWN NUMBERS WERE WRONG AND ARE CORRECTED HERE.** "Nineteen Cases declare the mode" was
+a count of grep-matched lines, not Case files: **it is 25 of 25.** And the check cleared `assetRef`
+as READ twice before it was right — first **from its own source**, then from **the zod schema that
+validates it**. *A validator is not a consumer*, and a check that treats validation as use hides the
+population inside its own measurement.
+
+**1. NO DISPATCHER EXISTS FOR ANY KIND.** Walk is not a special case; the first kind built has to
+build the mechanism. The mode's BOOKKEEPING is complete — `MODES`, `isMode`, `pickModeToResurface`,
+a working session route recording open/complete/decline — but nothing maps kind → renderer. Today
+the way-in button calls `open` then `complete` and reloads. **The mode is opened and completed with
+nothing shown**, which is exactly how it came to look built.
+
+**2. `assetRef` POINTS AT NOTHING.** 100 declared, every value a placeholder path, **zero asset
+files anywhere in the repo.** So the choice is not plumbing: either Walk reads an asset (25 files
+that do not exist, and the 670 scripts stay outside) or Walk reads item rows (the scripts become the
+content, `assetRef` stays declared and unread). The second is the ruling's own logic and far
+cheaper, but it moves a mode's source of truth from a per-Case asset to per-item DB content — a
+change to what a mode IS.
+
+**3. THE INTERSECTION, AND THE MISMATCH.** 704 items carry a script; **670 sit on a type some Walk
+Case opens; 331 of those are LIVE.** All 670 are strings, **none with any step structure at all** —
+splitting on newlines gives exactly 1 for every one, min 1, median 1, max 1. As prose: 3–4
+sentences, median 141 characters.
+
+**They are worked solutions. The mode declares `faded-example`, and the Daily Loop already promises
+the child *"one together, then one where you finish it, then one that's all yours."*** A faded
+example is a three-item sequence with decreasing scaffolding; what exists is one explanation of one
+item's answer. **No transformation turns one into the other — the fading content was never
+written.** Either Walk is redefined as a worked solution (the 670 fit with zero transformation) or
+the faded example stands and needs new authoring. **Recommended: the first, with the narrowing
+stated openly rather than absorbed** — otherwise the specification quietly bends to fit whatever
+content happens to exist, which is the failure mode this whole register is about.
+
+**4. THE GATES ARE MOSTLY ALREADY IN FORCE.** `walkScript` is inside `checkItemChildFacing`, so the
+scanners, the reading-age cap and the quoted-span rules already screen it. **`check:walkscript-reach`
+will INVERT** — it asserts today that no child path reads the field, and wiring Walk breaks it by
+design. That is the mechanism working, not a nuisance.
+
+**5. THE FOUR OTHER KINDS, STATES RECORDED, NONE REMOVED.** `try` is **already backed** — it
+declares no assetRef because practice IS the Daily Loop. `hear` has no audio but a working
+on-device speech path, a substitute route rather than the declared one. **`watch` and `see` have
+nothing behind them at all** — no video, no scripts, no storyboards, and nothing visual for VR or
+English. **75 assetRefs across three kinds point at files nobody has authored.** That is a
+different decision from Walk's and should be taken as one. Recorded in `MODE_KIND_STATE` so the
+check prints each kind's state every run.
+
+**6. THE REVIEW IS THE LONGER HALF, AND IT GATES SERVING.** The scripts have never been ruled
+child-facing *because they were measured unreachable*; building Walk flips them to actually
+child-facing. **Cowork's zero em dashes and zero shouts across 378 is a machine screen for two
+faults and is not a reviewer read** — it says nothing about a script that coaches the key, names an
+absent scaffold, or misreads the line it cites, all of which have been found by reading in this
+district. Treating it as the read would be R94's shape exactly.
+
+**Sized: 10 scripts for `case-en-01`, 34 for all four English Walk Cases, 331 for every LIVE
+script.** The one-Case scope is what makes it affordable. Build against the ten, put the ten in
+front of Annie at 375px, and let her read gate the serving — ENG-003's order, for ENG-003's reason.
+
+## R233 — The error-spot rebuild was already built; what those eighteen items wait on is a reviewer read
+*The queue, 2026-08-19.*
+
+Reported as *"the only remaining build between them and children"*, and it is not a build. Both
+halves have been in the tree since R209: the component renders the sentence as continuous
+read-only prose (`aria-hidden`, authored order, safe since R192 serves segments unshuffled), and
+`crew.css` switches segments to full-width block rows below 600px.
+
+**Verified in the browser rather than from the source**, at 375px: preview `display: block`, every
+segment 327px wide, heights 50–82px — **the 48px target is met**, including on the segment that
+wraps to two lines. Screenshots taken for her read.
+
+**So the eighteen error-spot items are child-unreachable pending ANNIE'S READ, not pending code.**
+Worth stating plainly because a queue item described as a build gets an engineer, and this one needs
+a reviewer — and it has been sitting behind the wrong noun for several deliveries.
+
+One stale artefact found: the component's own doc comment still describes a `::before` vertical
+rule between segments as "the whole design". That separator no longer exists in `crew.css`; the
+block layout replaced it. R80's *a migration and its consumers are one change*, in documentation
+form — harmless here, and the next person to read that comment would have looked for a rule that
+is not there.
+
+## R234 — Canonical authority form: proposed, not applied, because 456 of the rows are a LOGIN and not a judgement
+*David, 2026-08-19: "a fix waiting on a decision about canonical form — propose one, don't apply it."*
+
+**The proposal: `reviewer:<reviewerId>`.** Explicit about what it is, resolvable by id without
+knowing the actor-placeholder history, and already the most-used non-login form.
+
+**The safe half is 40 rows.** `current-reviewer` (22), `reviewer:rev-0001` (17) and `rev-0001` (1)
+all resolve to the same Reviewer row today, so unifying them changes no fact — it changes only
+whether one predicate can find them. That is the whole benefit and it is real: no single query
+currently answers *what did Annie approve*.
+
+**THE 456 ARE NOT SAFE AND THAT IS THE DECISION.** `human:staff-reviewer@cluecrew.test` is a
+**shared login**, and the check already prints the reverse conflation: *anyone holding that account
+signs as that person*. The string records "signed via the staff-reviewer account" — it does not
+record that Annie judged the row. **Rewriting those 456 to `reviewer:rev-0001` would manufacture 456
+personal attributions from an account name**, which is precisely the fault R94 named, committed at
+scale and with a migration to make it look deliberate.
+
+So either (a) a ruling that the account was hers alone across the period, converting the 456 with
+that ruling as authority and named in each row; or (b) a distinct non-person form —
+`account:staff-reviewer` — that says what the value actually is and leaves the personal question
+open where it currently stands open. **(b) is what the evidence supports and (a) is what is
+probably true**, which is exactly why it needs a person to rule it rather than a script to assume it.
+
+Not applied. Awaiting the ruling.
+
+## R235 — One clause, eighteen items, and a queue entry named for the wrong thing
+*Annie's fifth return §3, never written until 2026-08-19.*
+
+All eighteen error-spot stems now end *"If every part is right, choose No mistake."* The child was
+looking at a button reading **No mistake** and a stem saying **choose N** — the same option named
+two ways, one of them not on the screen.
+
+**THE EIGHTEEN SAT BEHIND A QUEUE ENTRY NAMED FOR THE LAYOUT.** The layout was built (R209),
+verified at 375px (R233), and was never the fault. **A queue item named for the wrong thing gets
+the wrong worker**: this needed no engineer and no second render, and it waited on both for several
+deliveries. That is the transferable half — the noun on a queue entry decides who picks it up.
+
+Written all-or-nothing: the clause asserted on all 18 stems before any row was touched, the N option
+asserted to read exactly *"No mistake"* on all 18 (the new clause must not name a button that says
+something else), each new stem through `checkItemChildFacing` before it landed, and **18 of 18 read
+back from the store** carrying it. `_previousText` deliberately untouched — a Cowork shadow field,
+disposition NOT_CARRIED; writing to it starts maintaining a history we have ruled we do not hold.
+
+**THE DELTAS ARE ZERO ON EVERY SERVING SENSE, AND THAT IS THE FINDING.** STORED 18 · PUBLISHED 0 ·
+SERVABLE 0 · REACHABLE 0. The clause was the CONTENT blocker, not the serving blocker. Two things
+still stand: the eighteen are DRAFT, and — **newly measured — NO CASE NAMES EITHER ERROR-SPOT
+QUESTION TYPE.** At LIVE they would be PUBLISHED and SERVABLE and reachable by nobody.
+
+## R236 — The 34 orphans are not scattered; they are the whole SpaG family, and no Case opens any of it
+*Annie flagged the small population, 2026-08-19: "small-n is where a population error hides."*
+
+She was right and the error was the opposite of the expected one. The 34 items carrying a
+`walkScript` on a question type no Case opens are not 34 oddities:
+
+| type | items | status |
+|---|---:|---|
+| `en-spag-cloze` | 16 | all DRAFT |
+| `en-spag-spelling-spot` | 9 | all DRAFT |
+| `en-spag-punct-spot` | 9 | all DRAFT |
+
+**Three question types have no Case row. All three are SpaG. They are the only three of 28.**
+
+So the 34 and the eighteen's zero REACHABLE are **the same fact seen twice** — once from the walk
+costing, once from a stem edit — and neither surfaced it as one thing until they were put side by
+side. **The SpaG district has content and no door.** 34 items, 18 of them the error-spot set now
+waiting only on a reviewer read.
+
+## R237 — Walk built: the dispatcher, the loud branch, and the copy corrected in the same act
+*David's ruling, 2026-08-19, endorsing all four costing questions plus Annie's addition.*
+
+**THE FIRST THING IN THE PRODUCT THAT DISPATCHES ON A MODE KIND.** `ModePanel` switches on kind
+with an exhaustiveness check, so a kind added to the schema and not to the switch fails the build
+rather than falling through a default.
+
+**THE LOUD BRANCH IS THE POINT** (Annie: the most important small thing in the costing). The fault
+was never that four kinds are unbuilt — it is that **an unbuilt kind was indistinguishable from a
+built one at every layer**: in the Case files, in the API, and on screen. `UnbuiltMode` renders a
+named, testable statement that a kind has no renderer. A child never meets it; a developer or a
+reviewer meets it immediately.
+
+**THE COPY CHANGED WITH THE BUILD, NOT AFTER IT.** `MODE_BLURBS.walk` promised *"We'll do one
+together, then one where you finish it, then one that's all yours"* — a faded example, true of
+nothing, since no such content was ever written. Shipping that beside a worked-solution renderer
+would make the product **promise a child something it does not do**, which is worse than the silent
+unbuilt mode it replaces. Proposed wording: *"I'll show you how I worked this one out. One bit at a
+time, then you try the next."* Hint-class string, goes to Annie with the ten scripts — proposed, not
+settled.
+
+**SERVING IS GATED ON A REVIEWER READ AND THE GATE IS AT THE DOOR.** `WALK_APPROVED_ITEM_IDS` is
+**empty by design**; the route checks `walkScriptMayServe` BEFORE reading the row, so no unread
+script can leave the server. A client-side gate would be a suggestion. An approved id carrying no
+script returns 500, never an empty success — approved-and-empty is a contradiction, not a quiet
+no-content case.
+
+**`check:walkscript-reach` WAS NARROWED, NOT DELETED.** It asserted that no child path reads
+walkScript — true while unreachable, and false by design from this commit. **A check an intended
+change falsifies is narrowed or deleted, and deleting it would have removed the only guard on what
+now matters**: that every reader routes through the approval gate. Fault-injected — an ungated
+reader fails with the file named.
+
+**AND WIRING IT FOUND THAT THE CLOSURE WAS MISSING THE CHILD'S OWN API.** `CHILD_ROOTS` listed
+`app/crew` and `app/api/story` and **not `app/api/crew`** — unnoticed because nothing in it read
+walkScript. The Walk door was the first thing that did, and it reported as *"declared but not in the
+closure"* rather than as a leak. A root list is an enumeration and enumerations drift (R42/R57).
+
+**A COMMENT IS NOT A READER.** Writing the note explaining this check into `play-runner.tsx` made
+that file "read the explanation blob" — prose about code counted as code, the same class as mode
+kinds cleared by collisions with ordinary English. Comments are stripped before matching now.
+
+## R238 — The reading-age lint has never opened a `.tsx`
+*Found while gating the new Walk copy, 2026-08-19.*
+
+`scan:vocab` covers `apps/web/components/crew`. **The reading-age lint does not** — it reads
+`content/` JSON only: words, cases, voice packs, blueprints, chapters. It has never opened a
+component file.
+
+So every child-facing string authored inline in a component — the five `MODE_BLURBS`, the scope
+notes, the walk panel's copy — is **vocabulary-scanned and not reading-age screened**. Measured: 29
+child-facing-shaped literals across 42 crew component files, all outside the cap.
+
+**Sentences over the 16-word cap: 0.** So the exposure today is nil — and **that is an outcome, not
+evidence the design held** (R62). The gate's population simply excludes a whole surface, and it has
+been clean by authoring habit rather than by anything checking. The five mode blurbs are the newest
+members of that unscreened set, including one written today.
+
+## R239 — Confirming a write means reading the row, and saying what never arrived
+*Annie's confirmation request, 2026-08-19 — a write-back check, not a report.*
+
+Every value read back from the store after the fact, so a write that silently did not happen (R87)
+appears as a missing value rather than a confident summary of an intention.
+
+- **The nine resolved rows: 9 of 9 CONFIRMED** — seven third-text rows plus the two dedupes, each
+  carrying `reviewer:rev-0001` and a recorded `textProvenance`.
+- **The eight VR replacements: 0 of 8 written, and this is correct.** All eight rows are here,
+  ACTIVE, with live carriers — **but the REPLACEMENT TEXT has never crossed to this store and no
+  artefact here holds it.** Writing an approval onto a row whose replacement text never arrived
+  would record a decision nobody made about a value nobody sent.
+- **The eleven amended NVR hints: NOT HELD.** Her eighth return recorded eleven approved WITH
+  AMENDMENTS; the amended text did not cross. **The seven approved AS WRITTEN could be completed
+  precisely because they needed no text** — which is the cleanest possible illustration of the
+  difference. Send the eleven values and they are one write.
+
+## R240 — The four-word vocabulary, answering Cowork's boundary question
+*Open since Cowork asked which sense a LIVE figure carries.*
+
+**Every crossing figure from here names one of four**, per `packages/core/src/serving-senses.ts`:
+
+| word | means | what it is a fact about |
+|---|---|---|
+| **STORED** | a row exists at any status | the database |
+| **PUBLISHED** | `status = LIVE` | the item |
+| **SERVABLE** | LIVE and not stopped by a serving hold | the door |
+| **REACHABLE(free/paid)** | a Case row names its question type, split on `Case.freeTier` | the platform |
+
+**Answering per figure, for the figures now in flight:** *332 LIVE items* is PUBLISHED. *298 LIVE VR
+items* is PUBLISHED. *26 hints served on LIVE VR items* and *23 with no recorded approver* are
+REACHABLE(free) — they sit on the ten free VR Cases. *704 / 670 / 331 walk scripts* are STORED,
+STORED, and PUBLISHED respectively — **none is REACHABLE, because the approval set is empty.** *18
+error-spot items* are STORED only. *34 SpaG items* are STORED only, and cannot be REACHABLE at any
+status while no Case names their types.
+
+**The limit travels with the word**: REACHABLE means *a Case names the type*. It is not a claim that
+a child met the thing on any day.
+
+## R241 — Ordering the unserved by carrier count, because zero is not a tiebreak
+*Annie, 2026-08-19.*
+
+The tranche sorted its 60 NOT SERVED rows alphabetically — their LIVE carrier count is zero for all
+of them, so the tiebreak fell through to the id. **A meaningless order looked like a considered
+one.** An unserved entry tagged on forty items is a different risk from one tagged on two: neither
+reaches a child today, and one is forty items away from doing so.
+
+They now rank by carrier count across EVERY status — the number that says how much content waits on
+them. The front of that queue is four entries at 50 items each (`vr02-partial-group`,
+`vr16-synonym-pull`, `vr17-arith-slip`, `vr21-associated-not-same`), where alphabetical order put
+`en-`-prefixed entries carrying a handful.
+
+## R242 — The reading-age lint has never opened a `.tsx`, and now does
+*David's ruling, 2026-08-19, from R238's measurement.*
+
+It read `content/` JSON only — words, cases, voice packs, blueprints, chapters. **Every child-facing
+string authored INLINE in a component was outside it**: the five mode blurbs, the scope notes, the
+Walk copy written the same morning. `scan:vocab` covered them; the reading-age cap never had.
+
+**NEWLY COVERED: 35 component copy strings across 57 crew component files** (`apps/web/components/
+crew` and `apps/web/app/crew`). All 35 pass. **That zero is an outcome, not evidence the design
+held** (R62) — the surface was clean by authoring habit, with nothing checking it.
+
+**A SHAPE TEST, NOT A LIST** (R57). Copy is a quoted string of ≥25 characters containing a space and
+ending on `.`, `?` or `!`. Identifiers, class names, test ids, URLs and template expressions fail
+the shape. A hand-kept list of "the strings that matter" drifts on the first commit; the shape does
+not. **Comments are stripped first** — prose about a string would otherwise be linted as the string,
+which is R243 in miniature.
+
+**AND IT REFUSES A ZERO** (R60): these surfaces contain copy, so zero matches means the shape test
+has stopped matching, not that the copy is gone. Fault-injected: a 24-word blurb fails with the file
+and the sentence named.
+
+Admin and debug pages stay out — staff-facing copy is not held to a child's reading age.
+
+## R243 — Two faults in the reach check, and both are about what a scan is looking at
+*Found while wiring Walk, 2026-08-19. Each is small and each has a general form.*
+
+**1. `app/api/crew` WAS NEVER IN THE CHILD'S ENTRY POINTS.** `CHILD_ROOTS` listed `app/crew` and
+`app/api/story`. **The child's own API was missing from the closure called "the child's entry
+points"** — and it went unnoticed for the check's whole life because nothing under it read
+`walkScript`. The Walk door was the first thing that did, and it surfaced as *"declared but not in
+the closure"* rather than as a leak, purely by luck of which side of the declaration it landed on.
+**A root list is an enumeration, and enumerations drift** (R42, R57): the closure was derived from
+its roots, which is right, and the roots were hand-listed, which is the same fault one level up.
+
+**2. A COMMENT IS NOT A READER.** Writing the note that explains this check into `play-runner.tsx`
+made that file read the explanation blob — **prose ABOUT code counted as code**, and the check
+demanded a declaration for a sentence. Same family as the mode kinds cleared by collisions with
+ordinary English (R229): a whole-word matcher cannot tell a sentence from a statement. Comments are
+stripped before matching, in this check and in the reading-age lint.
+
+The pairing is the useful part. One is *the scan did not look where it should*; the other is *the
+scan looked at something that was not code*. **Both are false readings that a green tick would have
+carried**, and neither is about the property being tested.
+
+## R244 — The SpaG door restated: the wiring is still an afternoon and is no longer the blocker
+*David, 2026-08-19: "the SpaG door is now the whole blocker and it is mine to rule, so cost it."*
+
+**THE WIRING FIGURE STANDS** — three Case rows, two `QUARTER_ORDER` entries. Two corrections around
+it:
+
+**The QUARTER_ORDER omission was never an oversight.** `districts.ts` already carries the decision:
+*"`cloze` and `errorspot` stay OUT… both quarters would be an empty room with a name on the door.
+They are ordered the day their items publish."* The `QUARTERS` entries exist — **The Gap Yard** and
+**The Fix-It Shop**, named, blurbed, unreachable.
+
+**AND I OVER-REPORTED A BLOCKER AN HOUR EARLIER.** I said all 34 items carry an untagged option.
+They do — **it is the CORRECT option**, which legitimately has no misconception. Counting incorrect
+options instead: **153 options, 119 incorrect, 0 untagged.** I counted the wrong denominator and it
+manufactured a gate failure that does not exist, on the same day I recorded three other people's
+denominator errors.
+
+**MEASURED, ALL 34 PASS EVERY MACHINE GATE**: `publishBlockers` returns `none` on 34 of 34;
+`checkItemChildFacing` gives 0 blocking faults on 34 of 34; the 21 misconceptions they tag are 21
+ACTIVE with 21 approvers. **Nothing mechanical stands between these items and REVIEWED. A person
+does.**
+
+**THE SEQUENCE, AND WHAT EACH STEP WAITS ON.** (1) Reviewer read → REVIEWED — *waits on Annie*, and
+`publishBlockers` refuses `own-item`, so it cannot be done from this side under any account. (2)
+Publish → LIVE, one action per item. (3) Three Case rows at `orderInDistrict` 26–28 (1–25 all in
+use) — buildable now, deliberately held. (4) Two `QUARTER_ORDER` entries — held until (2) by the
+written decision, and **this is the step that makes the English half of the map exist**. (5) The
+free-tier call — *David's*; English already meets the floor of two, so the three default to paid.
+
+**THE COST MOVED FROM CODE TO READING.** Steps 3 and 4 are still the afternoon. The blocker is a
+34-item review that cannot start until she has the **sixteen cloze items rendered at 375px** beside
+the error-spot pair already sent — otherwise the read stalls halfway through its own packet.
+
+**AND THE MODE NUMBER GROWS WITH THE DOOR.** Three new Cases add fifteen mode declarations and
+twelve more `assetRef` paths pointing at files nobody has authored, while the decision on `watch`
+and `see` is open. Not a reason to hold the door; a reason to know the number is moving.
+
+## R245 — I was asked to send eleven values this store does not hold
+*2026-08-19.*
+
+The instruction was to send Cowork "the eleven amended NVR values so its write can complete". **This
+store does not hold them.** Her eighth return recorded eleven of twenty-two approved WITH
+AMENDMENTS; the amended text never crossed and no artefact here carries it. **Sending eleven strings
+under that name would mean sending this store's current text as though it were her amendment** —
+R222 exactly, one week old, and this time invited by the instruction rather than by my own memory.
+
+What was sent instead is what the house rule says Cowork actually needs: **all 22 NVR entries,
+`childHint` verbatim, with each one's settled state and gate verdict** — because the DB authors
+library text and Cowork proposes TRANSFORMS against quoted DB text, keeping no local copy to drift
+from. If Cowork's blocked write is a transform against this store's text, it is unblocked. **If it
+genuinely needs Annie's eleven amended strings, neither store has them and she is the only source —
+which is a finding to put to her, not a delay to absorb.**
+
+22 entries, 7 settled by her eighth return, 22 carrying an approver, 0 failing the gate.
+
+**The eight VR replacements stay correctly at zero**, on the same principle from the other
+direction: writing approval onto a row whose replacement text never arrived would record a decision
+nobody made about a value nobody sent.
+
+## R246 — The copy I wrote to replace a false promise smuggled the same promise back in
+*Annie's refusal, 2026-08-19, relayed by David. Her reasons are the entry.*
+
+Walk's blurb promised a faded example that was true of nothing. I replaced it with *"I'll show you
+how I worked this one out. One bit at a time, then you try the next."* **Refused, on three counts,
+and every one is a thing I had just measured:**
+
+- **"One bit at a time" promises step structure the content does not have.** All 670 scripts are
+  single strings — one step, by my own measurement, reported in the costing hours earlier.
+- **"Then you try the next" promises a NEXT ITEM** — the three-item sequence Walk had just been
+  ruled not to be.
+- **"I'll show you" proposes a PERSONA.** Nothing else a child reads in this product speaks in the
+  first person. That is a product decision, and taking it inside a mode fix is how a product
+  decision comes to be made by nobody. Flagged, not taken.
+
+**THE GENERAL FORM: COPY REWRITTEN *AFTER* A NARROWING DRIFTS BACK TOWARD WHAT IT REPLACED.** I
+narrowed the mode and then wrote the line, so the line was written against the old shape still in my
+head — *the faded example walked back in wearing plainer clothes.* The copy has to be rewritten **as
+part of** the narrowing, in the same thought, or the old promise survives in gentler words. This is
+the R149 family — a measurement that agrees with what you just did is the one to distrust — moved
+into authoring.
+
+**AND HER WORDING TURNED ON A FACT NEITHER OF US HAD CHECKED: does the child get another attempt at
+that item after the walk?** She authored two lines and made the choice depend on the answer.
+Measured: **NO.** On every submission, miss included, the item id is appended to
+`focus.servedItemIds` (`packages/core/src/session.ts:433`), and **both** selection paths exclude
+that set — the preferred one and the recency-relaxed fallback (`orchestrator.ts:663`, `:674`). The
+item cannot return in that session.
+
+So the line is her second: **"Here is how this one works out. Read it through whenever you are
+ready."** Her first — *"…then try it again"* — would have promised a retry the product does not
+offer, which is the same fault as the one being fixed. **Two of the three copy candidates on this
+line, mine and one of hers, were false in the same way and for the same reason: neither was written
+against a measurement of what happens next.**
+
+Sent with the ten scripts, with my refused draft and her reasons in the file, because the reasoning
+is more use to her than the outcome.
+
+## R247 — The vocabulary scanner had never opened `apps/web/lib/crew`, where the district map's copy lives
+*Found by authoring a Case intro, 2026-08-19.*
+
+Writing `case-en-05`'s narrative intro, the scanner caught my draft: *"can look right and still be
+wrong"* — `wrong` is banned child-facing under D1. Reworded to *"still have a slip in it"*, never
+exempted.
+
+**Then the same banned word turned out to be already live, one directory over, unscanned.**
+`QUARTERS.errorspot.blurb` in `apps/web/lib/crew/districts.ts` reads *"One part of the sentence is
+wrong"* — **the name and blurb of every quarter a child reads on the district map live in this
+file, and `CHILD_FACING_SCOPE` had never included it.**
+
+**Second unscanned child-facing surface in one day** (R242: the reading-age lint had never opened a
+`.tsx`), found the same way — by authoring something new and watching which gate objected. **A gate
+that catches your draft while missing the shipped string beside it is the shape to look for**, and
+neither of these was found by auditing the gates; both were found by using them.
+
+Widened, and the widening brought one false positive that is worth its own rule: the orchestrator's
+`console.error('readiness snapshot failed', …)`. **A server diagnostic is not child copy, and the
+distinction is structural** — a `console.*` call or a thrown Error is staff-facing BY SHAPE, never
+by an author's claim. Flagging those would train everyone to ignore the rule, which is the reasoning
+already written into the id-leak narrowing in the same file.
+
+Fault-injected both ways: restoring `wrong` to the blurb fails the scan with the file and line.
+320 files across 10 scopes now pass.
+
+## R248 — The first SpaG door: one type, one Case, and its copy is a reviewer step
+*David's ruling with Annie's two constraints, 2026-08-19.*
+
+**One type, not three. A spot type, not cloze** — the sixteen cloze items are still held on her
+rulings, so cloze would be the dishonest first door. Of the two spot types, **`en-spag-punct-spot`**,
+because its items are the ones she already has renders for (PU-02 and PU-06 at 375px in the built
+row-23 layout). Spelling-spot's nine would need their own renders first.
+
+**One Case row: `case-en-05`, `orderInDistrict` 26** (1–25 all in use; English holds 22–25).
+**Paid** — English already meets the floor of two, and a third free Case is a pricing decision David
+declined to make to solve a content problem.
+
+**AND STEP 3 IS A REVIEWER STEP, NOT AN AFTERNOON.** A Case's title and narrative intro are
+child-facing content — *a child reads "The Extra Guest"* — so they go to Annie for reading like any
+other authored string. My costing had step 3 as pure wiring, which was wrong in exactly the way the
+error-spot queue entry was wrong (R235): **a step named for its code half gets estimated at its code
+half.** Proposed: **"The Missing Mark"**, with a four-sentence intro whose last line names the *No
+mistake* option in the child's own frame, because all nine items carry it and the stem now says so
+in words (her fifth return §3, written today).
+
+Both delivered for her read, with the scanner's catch of my own draft written into the file.
+
+## R249 — Three denominator errors in one day, which is a finding about how figures get built
+*David, 2026-08-19: "worth keeping visible."*
+
+The correction: **153 options, 119 incorrect, 0 incorrect untagged** — and the untagged one was the
+CORRECT option, which legitimately has none. I had reported all 34 SpaG items as carrying an
+untagged option and called it a publish blocker. It was not one; `publishBlockers` returns `none` on
+34 of 34.
+
+**Three in a day, and they are three different mistakes, which is the point:**
+
+1. **The wrong denominator entirely** — counting options where I needed incorrect options, so a
+   universal property of correct answers read as a universal fault.
+2. **A count of matched lines standing in for a count of things** — "nineteen Cases declare the
+   mode" was grep output; the answer is 25 of 25 (R232).
+3. **A recalled list standing in for a looked-up one** — seven of eight ids invented, then an
+   absence argued from a search of two directories that were not the only place holding them
+   (R222).
+
+**None was a calculation error. All three were errors in what was being counted**, which no
+arithmetic check catches and no reviewer can see from the figure alone. The common cause is the
+same each time: a number produced as a by-product of doing something else, then quoted as though it
+had been produced on purpose. **The habit that fixes it is stating the population in the same breath
+as the figure** — which is R60's discipline turned on my own prose rather than on a gate's output.
+
+## R250 — Where the eleven amended NVR hints actually are
+*Cowork's write-back, relayed 2026-08-19, correcting my characterisation.*
+
+I reported the eleven as a blocked write and said *"neither store has them and she is the only
+source"*. **Half right, and the wrong half matters.**
+
+**Cowork's write-back shows eleven landed there character-for-character against her eighth return.**
+So the file DID cross, and the text DOES exist as an artefact. **The gap is between this store and
+Cowork's, not between the product and Annie.** She is not the only source; Cowork is a source, and
+the return leg from Cowork to here is the thing that has never carried this.
+
+That is R88 exactly, in the direction R88 named: every guard here watches content flowing INTO this
+database, and the path back out of Cowork's store has carried almost nothing. My phrasing turned a
+**transport gap** into a **provenance gap**, which sends the question to the reviewer when it should
+have gone to the other store — and asking a reviewer to re-supply text she has already supplied is
+the most expensive possible way to be wrong about where a file is.
+
+What was sent stands and was the right delivery regardless: all 22 NVR entries, `childHint`
+verbatim, settled state and gate verdict, so a transform can be proposed against quoted text. What
+changes is the ASK — **Cowork returns its eleven, they are diffed against these 22, and no reviewer
+time is spent.**
+
+The eight VR replacements stay correctly at zero, and that reasoning is unaffected: writing approval
+onto a row whose replacement text never arrived records a decision nobody made.
+
+## R251 — The zero-option pinned last, and the ruling reached 24 LIVE items nobody was looking at
+*Annie's ruling, 2026-08-19. A serving condition, not a layout note.*
+
+`A2` and `B8` carry **"no word is needed"** as their last option. That is a **verdict about the
+sentence**, not a candidate word — and **cloze options shuffle**. The day the shuffle runs, a child
+opens a card whose first choice is *no word is needed* before she has read a single candidate: a
+judgement offered before there is anything to judge.
+
+**HER REASON FOR WANTING AN ASSERT RATHER THAN A DRAWING IS THE ENTRY.** It is last on both cards
+TODAY, in authored order. **The property holds by accident of authoring**, and an accident is not a
+guarantee — which is exactly why a render proves nothing here and a check proves it for every child.
+
+**WHY IT WAS MISSED: N LOOKED HANDLED AND WAS HANDLED BY SOMETHING ELSE.** `shuffleOptionsForChild`
+exempts error-spot wholesale via `segmentsInOptions`, so N never reached the shuffle at all. Cloze
+was left shuffling on the stated reasoning that *"its options are word choices, not pieces of the
+carrier"* — true of fourteen of the sixteen, and **these two are the counter-example the sentence
+did not anticipate.** A family-wide exemption looked like an option-level rule.
+
+Fixed at the option level with **one predicate for both** (`isVerdictOption` = N or zero-option), so
+the next family carrying a verdict cannot be pinned for one shape and not the other.
+
+**AND THE RULING WAS MUCH LARGER THAN THE TWO CARDS IT WAS WRITTEN ABOUT.** Screening all 1032
+items: **59 carry a verdict option, 41 of them on a SHUFFLING family, and 24 of those are LIVE on
+free-tier question types** — `vr-09-letter-series` (10), `vr-14-letter-connections` (10),
+`vr-01-insert-letter` (4). **Those 24 were serving N in shuffled positions to real children
+today.** Fault injection puts the number at 5828 mis-positioned draws across 200 synthetic
+children. Annie ruled about two DRAFT cloze cards and the ruling repaired a live VR fault nobody
+had looked for — **the general form was already true and only the instance was new.**
+
+Asserted by `pnpm check:verdict-option-last`, which runs the SERVING function rather than a copy
+(R60 q3), requires the verdict-carrying population to be non-empty, and **requires a control: at
+least one such item on a shuffling family**, because an item on an exempt family satisfies the
+property trivially and a run seeing only those would report a guarantee it never tested.
+
+## R252 — The SpaG blocker was transcription: a signature that exists as a document and not as a value
+*David, 2026-08-19. The third time this week.*
+
+All 34 SpaG items are signed — her fourth return, §1: *"ENG-003 set A stands at 34 of 34 signed."*
+`reviewedBy` read **0 of 34** because the signature lives in a return document and not in the field
+the CMS reads. **I costed the blocker as a 34-item reviewer read. It was a transcription.**
+
+**HER NAME IS NOT WRITTEN BY A HAND THAT IS NOT HERS.** `reviewedBy` now carries a POINTER TO THE
+READING — `return:content/evidence/annie-eng003-fourth-return.md#3724df8f2c6c1678` — never the
+string "Annie". A bare name there would assert she operated the CMS, which she did not; **the
+pointer asserts exactly what happened, that a signature exists elsewhere and this row cites it.**
+R203 in a fixed column: where the value is a name and the fact is *a record of a name*, the bare
+value asserts the thing the record does not. `reviewRecordedBy` carries the hand that typed it.
+
+**THE HASH IS RECOMPUTED, NEVER COPIED**, and the applier asserts the document still contains the
+claim before writing — a transcription quoting a hash from prose records only that someone believed
+what the prose said, which is the same fault one level down. 34 written, 34 read back.
+
+**NOT PUBLISHED.** `publishBlockers` refuses `own-item`, so someone other than the author walks the
+34 through the review path. This only makes the signature visible to it.
+
+## R253 — Her line in writing: no review furniture on a served surface
+*Annie, 2026-08-19, after the N badge: "the ruled-note banner must not exist on the served surface."*
+
+Now `pnpm check:no-review-furniture`. Furniture is anything on the card for a reviewer rather than
+the child — a ruling note, an internal item id, a status pill, a reviewer badge. **A child who sees
+a mark she cannot act on learns that some marks on the card are not for her**, which is the one
+habit an exam surface must not teach.
+
+**MY FIRST MATCHER REPORTED SIX FAULTS AND ALL SIX WERE DATA.** It searched raw source across the
+closure and found `ruled:` in a const and `action: 'SIGNED'` in a Prisma query — **server code that
+renders nothing.** Matching source where the property is about rendered output is the third version
+in three days of one mistake: a comment counted as a reader (R243), a mode kind cleared by a
+collision with ordinary English (R229), and now enum values read as screen text. **Three instances
+makes it a class to design against rather than a bug to fix again**: when the property is about what
+a child SEES, the matcher must look at what reaches the DOM — `.tsx` only, JSX text nodes and
+rendering attributes — never at the file.
+
+**AND THE CONTROL IS A SAMPLE, NOT A PAGE.** The debug renders had their banner removed on her
+instruction, so no live furniture remains to prove the matcher can see any. **A control that depends
+on the fault still existing somewhere disappears the moment the codebase gets it right** — so the
+matcher is fired at a synthetic sample instead, and fails if it does not catch three of its four
+markers. Fault-injected: a reviewer note added to a crew component fails with the file and line.
+
+## R254 — A control that depends on a live instance disappears the moment the codebase gets it right
+*David, 2026-08-19, generalising a point I made about one check and had not applied to the others.*
+
+Writing `check:no-review-furniture` I found that its control could not rest on a live banner,
+because the banners had been REMOVED on Annie's instruction — so the matcher was fired at a
+synthetic sample instead. **I did not go back and look at the controls I had already written.**
+
+**SURVEYED: 41 check scripts, and only FOUR name a control at all.** (A regex first reported eight;
+four of those matched the word "control" in prose, which is R253's matcher fault surviving one more
+day.) Of the four real ones, **three rested on a live instance and only the newest was synthetic:**
+
+| check | its control was | why that fails |
+|---|---|---|
+| `check:verdict-option-last` | ≥1 verdict item on a shuffling family | retire the two cloze cards, or move the N-carrying VR types onto an exempt family, and the requirement is silently unmeetable while the check passes |
+| `check:errorspot-preview` | ≥1 LIVE item carrying fragile punctuation | reword or retire the eighteen and the control evaporates |
+| `check:walkscript-reach` | walkScript readers in the ADMIN closure | the day `comprehension-review.tsx` stops rendering it, the check reports a clean child surface while proving nothing |
+| `check:no-review-furniture` | a synthetic sample | survives |
+
+**THE FAILURE DIRECTION IS THE WORST ONE AVAILABLE.** These controls do not break loudly when their
+instance goes; they become **unsatisfiable requirements on a population that no longer exists**, and
+the check goes on printing a pass. It is R61's absent population — but arriving through the guard
+rather than through the subject, which is why R60's three questions do not reach it.
+
+All three converted. Each now fires its mechanism at a FIXTURE — a synthetic verdict option pushed
+through the real shuffle, a synthetic segment set through the real join, a synthetic source file
+through the real matcher — and **the live count is kept, demoted from control to COVERAGE**, which
+is the thing it was always actually reporting. Fault-injected: each synthetic control fails when its
+mechanism is removed.
+
+**THE RULE: a control asserts that the instrument works. A live instance asserts how much of the
+bank the instrument touched. They are different facts and only the first may gate a pass.**
+
+33 checks name no control at all, which is the backlog this survey exposes rather than closes.
+
+## R255 — 267 artefacts staged, zero arrived: `deliver()` writes to a folder, not to Cowork
+*Cowork's measurement, relayed 2026-08-19: 30 files in its uploads, zero from this store, searched by content as well as by name.*
+
+`deliver()` describes itself as **"the ONLY delivery path"** and it copies a file into
+`~/Downloads/11+/from-cluecrew/`. **That folder now holds 267 files and Cowork has received none of
+them.** The only place any serving value of ours appears on its side is inside Annie's eighth
+return, where she quotes one — **her transcription, not our artefact.**
+
+**THE WORD "DELIVERY" WAS DOING TWO JOBS AND ONLY ONE OF THEM IS TRUE.** The function guarantees
+staging: one current version per family, superseded copies pruned, throws rather than warns. It
+guarantees nothing about arrival, because the last hop is a human upload and no code can see it.
+Every "delivered →" line I have printed this week was accurate about the copy and silent about the
+crossing, and **I read my own success line as arrival for days.**
+
+This is R88 with the ending sharpened. R88 found the return leg carried almost nothing and built
+`check:return-leg` to watch what an export carries OUT OF ITS SOURCE. **It measures the payload and
+cannot measure the transit**, so a file that is complete, correct, stamped, pruned and never
+uploaded passes every guard we have.
+
+The consequence was not abstract: **six NVR rows are unsigned and the milestone withdrawn, 19 down
+to 13**, because Cowork's script opened by asserting no file of ours was present, the assert held,
+and Annie's fallback applied. **Their assert did its job perfectly. Ours had nothing to say.**
+Cowork's diff slot reads NOT RUN rather than filled, and stays that way until the file arrives.
+
+The 22 have now been sent by the channel that actually reaches David — 13455 bytes, sha256
+`12a8b4cf77b4d944430c45a2e9c380b1a3d9e2f8375190499bda5a84deb8b52b` — rather than copied to a folder
+and called delivered. **The distinction to hold: STAGED is a fact about this machine; ARRIVED is a
+fact about the other store, and only the other store can report it.** Nothing here should print the
+word "delivered" for the first of those again.
+
+## R256 — Two fields that read as something they are not: a truncated projection digest, and a count named for a person
+*Cowork's flags on our file, 2026-08-19. Neither is a fault; both are a reader being misled by a name.*
+
+**`sourceHash` IS a sha256 and is neither of the two things the name suggests.** It is TRUNCATED to
+16 characters and taken over the DECLARED PROJECTION, not the file bytes. A receiving store cannot
+tell any of that from the value. The stamp now carries `hashSpec` — algorithm, digest length, what
+it is over — and `fileDigest: null` **by construction, stated rather than absent, because a file
+cannot contain its own digest.**
+
+**`carryingAnnie: 7` was a label, not a measurement.** The approver field on those rows reads
+`reviewer:rev-0001`; the name "Annie" appears nowhere in the file as an approver value, and the
+count was taken from a settled-state SENTENCE I had written rather than from the field. **R94's
+shape one level up — reported in a denominator instead of a row.** Renamed to
+`carryingApproverValue_reviewerRev0001`, which is what it counts.
+
+**AND THE IDENTITY QUESTION IS ANSWERED WITH ITS SCOPE.** Is `reviewer:rev-0001` the Annie who signs
+the returns? **Not measurable from either file** — Cowork is right — and **measurable in this
+store**, where the Reviewer row maps `rev-0001` to the display name Annie and the merge ruling makes
+Annie canonical. So: RESOLVED HERE, UNRESOLVED BETWEEN THE STORES, with the caution that the row
+binds to a shared role account, so anyone holding that login signs as her. Neither store should
+infer it from the other's file.
+
+## R257 — The anti-trim guard could not tell the approver's own redraft from a machine trim
+*2026-08-19, found by Annie's eleven arriving.*
+
+The refusal message has always named its own exception: *"if this text must change, it changes by
+THE APPROVER'S OWN REDRAFT, recorded as her act."* **There was no way to say that.** So her amended
+`nvr-code-nearest-box-copy` — her authored string, verified against her own return by hash — was
+refused, because her redraft is one word shorter than the text it replaces.
+
+**AN APPROVER'S SHORTER REDRAFT AND A FIT-TO-CAP TRIM ARE THE SAME SHAPE. The difference is not in
+the text; it is in WHO AUTHORED THE NEW STRING**, which only the caller knows. So the caller may
+declare it, and the declaration is deliberately expensive: it must name the reviewer identity AND an
+authority containing a real sha256, it is shape-checked (`approverRedraft: true` alone will not do
+it), and it travels **on the write itself** — in the same `textProvenance` the row will carry — so
+it cannot be declared out of band. A caller that omits it gets the refusal, which is every ordinary
+write. Fault-injected: an undeclared two-word cut is still refused.
+
+This is `emergencyOverridePilotFile`'s pattern — an exception a human types on purpose, carrying its
+reason into the record — rather than a flag that quietly widens the gate.
+
+## R258 — The eleven wrote, one held, and the held row is a contradiction between two stores' readings
+*Cowork's ELEVENTOCODE.json, 2026-08-19.*
+
+Ten of eleven amended and read back. **The eleventh refused itself, exactly where Cowork predicted
+from the opposite end**: `nvr-count-by-glance` holds text matching neither her `previous` nor her
+amendment. Two stores measuring the same divergence from opposite ends and landing on the same row
+is the strongest evidence either could produce.
+
+**AND HELD IS NOT REFUSED, WHICH REQUIRED CHANGING MY OWN DISCIPLINE.** The first run stopped all
+eleven under all-or-nothing (R87). That guard exists to stop a write landing in a state matching
+neither before nor intent — **it was never a reason to hold ten clean rows hostage to one contested
+one.** Unexpected conditions still refuse the batch; a declared, matching, single-row divergence is
+now HELD and reported with all three texts.
+
+**THE CONTRADICTION IS THE FINDING.** `nvr-count-by-glance` is the only member of my seven
+third-text rows that also appears in Cowork's eleven amended. **David's relay places it in her
+APPROVED-AS-WRITTEN list; Cowork's file places it in her AMENDED list; both cite her eighth
+return.** Two stores read one document into two different columns, and neither is obviously wrong.
+Hers to settle. The other six of my seven are exactly the six unsigned, and they owe this store's
+serving text — which is the transport gap (R255), not a disagreement.
+
+## R259 — A punctuation error on a child's screen, and the denominator that says it is not systemic
+*Annie, 2026-08-19.*
+
+`ENG-001-WIW-09`'s walk script closed a quotation with an exclamation mark and put a full stop
+outside it — `road!'.` — **from a product that sells punctuation**, and precisely the fault
+`en-spag-punct-spot` asks a child to catch.
+
+Fixed. **Then hunted: 704 walk scripts screened for a doubled terminal mark across a closing quote.
+ONE instance, hers.** The denominator is the point — a single fault is worth fixing, a single fault
+ACROSS A SCREENED POPULATION says the class is not systemic and no sweep is owed. Reporting the fix
+without the hunt would have left that unknown; reporting the hunt without the denominator would have
+been R249's mistake again.
+
+Her semicolon note taken with no action: WIW-02's is correct, Year 6 meets semicolons, one in ten is
+not a register problem.
+
+## R260 — Both Case strings asserted a mistake exists, on a nine-item set where one item has none
+*Annie's amendments, 2026-08-19.*
+
+Title **"The Missing Mark" → "The Mark Out of Place"**: nothing in the nine is missing — PU-02's
+fault is a WRONG mark and PU-06's a MISPLACED one. Intro *"One mark is out of place"* → **"A mark
+MAY be out of place."** Map blurb *"One part of the sentence has a slip in it"* → **"One part of the
+sentence MAY have a slip in it."**
+
+**ONE FAULT, THREE STRINGS: ASSERTING THE MISTAKE EXISTS.** `PU-09` is the item on which nothing is
+out of place — the *No mistake* answer is correct there — so every one of those strings told a child
+something false before she read the sentence, and told it hardest on the one item she most needed to
+approach openly.
+
+**IT IS THE FIFTH-RETURN STEM CONTRADICTION REAPPEARING AT CASE LEVEL, IN THE SAME PACKET AS THE
+STEM FIX.** Her §3 ruling made the stem say *"If every part is right, choose No mistake"*; I wrote
+that clause across all eighteen stems and then, in the same delivery, authored a title, an intro and
+a blurb that each contradicted it. **The ruling was in front of me and I applied it to the field it
+named and to nothing else.** A ruling is about a PROPERTY, not about the string it was first
+observed on.
+
+## R261 — Every child-facing surface and its scanner coverage, and the reader that tripped on prose again
+*Annie's list, 2026-08-19: "what else is child-facing and outside every scanner's scope."*
+
+`pnpm check:child-surface-scope`. **13 surfaces, 0 covered by no scanner at all, 6 partially
+covered.** The remaining gaps are honest ones: the district map is vocabulary-scanned but still
+outside the reading-age cap; generated NVR prompts and seeded copy likewise; passages are
+deliberately exempt from both caps as pre-1950 source text.
+
+**THREE SCOPE FINDINGS IN A WEEK AND ALL THREE WERE FOUND BY USING A GATE, NOT AUDITING ONE** — the
+walk scripts, the `.tsx` literals, the district map. This table is the audit that should have found
+them, and its limit is printed every run: **it is hand-enumerated, so a surface nobody has thought
+of is invisible to it exactly as it was to the scanners.**
+
+**AND IT GOT ITS FIRST ANSWER WRONG, FOR THE FOURTH TIME THIS WEEK IN THE SAME WAY.** It reads the
+scanners' own scope arrays rather than a copy — right — but read them from RAW SOURCE, and an
+apostrophe in a comment I had written hours earlier (*"the district map's own copy"*) opened a
+phantom string literal. The parser returned three real scopes and four fragments of English, and the
+table reported `content` and `apps/web/lib/crew` as UNSCANNED when both are in scope. **A reader
+confused by prose — R243, R229, R253, and now the check written to enumerate the others.** Comments
+stripped, and any parsed entry containing whitespace now throws as a corrupt read rather than
+silently becoming a coverage gap.
+
+## R262 — Four walks that taught the error their item catches
+*Annie's refusal, 2026-08-19. Six of the ten approved; Walk may serve them.*
+
+`ENG-028` PR-02, PR-04, PR-07 and PR-10 share one shape: **line N says, line N says, line N says,
+stop.** Three citations, no conclusion, and nothing telling the child which line answers the
+question or why. On PR-07 two of three sentences are about a bolt and a door where the question asks
+about the mower; PR-04 opens on the day of the holidays where the question asks WHY she reached into
+the nettles.
+
+**HER DIAGNOSIS IS THE PART TO KEEP: a walk that recites the lines nearest the cited range
+demonstrates RETRIEVAL BY PROXIMITY, which is one of the errors these items are built to catch.** A
+child following it faithfully would answer the next one wrong by the method the walk modelled.
+**PR-02 is one sentence away** — the material was right and the conclusion was missing.
+
+The six approved share one structure: go to the line that BEARS on the question, say what it says,
+**state the answer**, dispose of the near-misses in a clause. Four repairs drafted to that model,
+all passing the gate, **proposed and not written** — walk scripts are item content and Walk serves
+only from the approved set, so writing them would change nothing a child meets while spending her
+authority for her.
+
+## R263 — A RULING IS ABOUT A PROPERTY, NOT ABOUT THE STRING IT WAS FIRST OBSERVED ON
+*David, 2026-08-19, on my Case-copy delivery. **This one belongs high in the register.***
+
+Annie's fifth return §3 ruled the error-spot stems must end *"If every part is right, choose No
+mistake."* I wrote that clause across all eighteen stems. **Then, in the same delivery, I authored a
+Case title, a narrative intro and a district-map blurb that each contradicted it** — *"The Missing
+Mark"*, *"One mark is out of place"*, *"One part of the sentence has a slip in it"*. Every one
+asserts a mistake exists, on a nine-item set where **`PU-09` is the item on which nothing is out of
+place** and *No mistake* is the correct answer.
+
+**THE RULING WAS IN FRONT OF ME AND I APPLIED IT TO THE FIELD IT NAMED AND TO NOTHING ELSE.** Her
+correction is one sentence and it is the rule: *a ruling is about a PROPERTY, not about the string
+it was first observed on.* The property is **do not tell a child a fault exists before she has
+looked**. The stem was where it was first observed; it was never the extent of it.
+
+**IT IS THE ACCIDENTAL-COVERAGE RULE FROM THE OTHER DIRECTION.** R251: N looked handled because a
+family-wide exemption happened to cover it, so a rule LOOKED wider than it was. Here a rule WAS
+wider than the field it was written against, and I read it at its narrowest. Both are failures to
+ask *what is the property, and where else does it hold* — and the two together are why neither
+"apply it literally" nor "apply it broadly" is the discipline. **Name the property, then find its
+population.**
+
+Cost if it had shipped: a child meeting `PU-09` would have been told three times, before reading a
+word, that something was wrong with a sentence that is correct.
+
+## R264 — The SpaG door is open: nine LIVE, the quarter ordered, in one act
+*David's ruling, 2026-08-19. The last step before a child could reach a SpaG item.*
+
+**STORED 9 · PUBLISHED 9 · SERVABLE 9 · REACHABLE(paid) 9 · REACHABLE(free) 0.** English
+REACHABLE(paid) moves 34 → 43. The Fix-It Shop renders with one of two locations open and nine LIVE
+items behind it.
+
+**THE TWO MOVED TOGETHER BECAUSE BOTH HALF-STATES ARE WORSE THAN EITHER END.** Ordering the quarter
+with the items DRAFT puts a named, empty room on the map — the fault `districts.ts` warns about in
+writing. Publishing without ordering it leaves nine LIVE items behind a room that renders nowhere.
+So the file edit and the transaction are one operation, and a failure in the second reverts the
+first.
+
+Every gate re-ran AT THE DOOR — blockers and `checkItemChildFacing` on all nine — because clean an
+hour ago is not clean now, and a publish trusting an earlier reading is `verify:solutions` wearing a
+publish button. Signatures recorded through `recordSignature`, which refuses an unknown reviewer:
+`rev-0001`, recorded by another hand, method naming her return and its sha256. **`reviewedBy` stays
+a pointer to the document, never her name** (R252).
+
+**TWO FAULTS OF MINE INSIDE THE ACT, AND BOTH ARE THE WEEK'S CLASS.**
+
+*The idempotency guard refused the act before it had run once.* It asked whether the file contained
+`'errorspot',` — which it does, in `QUARTERS`, as `family: 'errorspot',`. **Matching the file where
+the property is about one structure inside it**: the fifth instance this week of a matcher reading
+the wrong thing. Cut to the structure before matching.
+
+*And I ordered the quarter in the wrong place.* I anchored the insertion on the line that was
+convenient and put an English quarter **second, between two VR quarters** — against the rule stated
+in the paragraph directly above it, that the map runs gentlest-first with English after VR. **An
+anchor chosen for the edit is not an argument about the order.** Moved to last, after The Reading
+Room.
+
+The Gap Yard stays out: the sixteen cloze items are still DRAFT, and the same reasoning that made
+this act correct makes ordering that one wrong today.
+
+## R265 — The sweep that would have shipped 95 defects, all of them the instrument
+*Annie's hunt, completed 2026-08-19.*
+
+**THE ANSWER: no class exists. 704 walk scripts, ZERO real faults, and hers is fixed.**
+
+**One pattern is not a sweep.** The first hunt tested exactly the shape she found — which can only
+ever confirm the instance already in hand, R173's confirming result in hunting clothes. So five
+neighbouring shapes were tested alongside it. **They produced 95 hits and every single one was
+correct punctuation:**
+
+- **56** quoted PHRASES whose full stop rightly sits outside the quotation — *'all over his black
+  fur'. So it is…* The pattern described right punctuation, not wrong.
+- **3** answer-letters legitimately opening a sentence in lower case — *d makes bread and ding.* The
+  letter is the thing under test; capitalising it would change the answer.
+- **36** scripts whose apostrophes a quote-parity count cannot tell from quotation marks. Any
+  contraction reads as unbalanced.
+
+**Shipping the raw matches would have put 95 instrument faults into a reviewer's queue** — R149 at
+scale, and precisely how a reviewer learns to stop trusting a report. So each class now carries the
+VERDICT OF READING ITS HITS, not the count of them, and the file separates `count` from
+`faultCount`. **A broader sweep is more likely to be wrong, not less, and the width has to be paid
+for by inspection.**
+
+## R266 — Closing `fileDigest: null`: a sidecar, because a file cannot describe itself
+*Cowork's flag closed, 2026-08-19.*
+
+`hashSpec.fileDigest` was honestly null — a file cannot contain its own digest — and the honest
+declaration left a real hole: **a projection digest is computed from rows before the bytes exist, so
+it cannot detect a file that arrived truncated or re-encoded.** Cowork was computing its own on
+receipt and neither side carried one to compare.
+
+Now `deliver()` takes a sha256 **over the bytes of the staged file, after it is closed**, and writes
+it to a `.sha256` sidecar beside it. **A sidecar is the only shape that works**: outside the file,
+it can describe the file completely. The receiving store hashes what it holds and compares two
+numbers.
+
+The projection digest stays and keeps its job — it answers *"is this artefact built from current
+data"*, which a byte digest cannot. **Two digests answering two questions, each declared.**
+
+## R267 — `nvr-count-by-glance`: both stores cite the same return and hold different strings
+*Sent to Annie, 2026-08-19.*
+
+This store: *"Touch each mark with your pencil as you count."* Cowork: *"Count each mark one at a
+time."* Second sentence identical in both; the divergence is entirely in the first. **Both stores
+mark the row settled by her eighth return** — Cowork's file places it among the eleven amended,
+signed and hash-verified; this store's record places it among the approved-as-written.
+
+**Ten of Cowork's eleven applied here without incident, `previous` matching exactly. This is the
+eleventh** — the single row where two stores read one document into two columns. No comparison
+between them can settle it, because each side's confidence rests on the same return read
+differently. **Both cannot be what she settled**, and that sentence is the whole delivery.
+
+Untouched in both stores until she says which serves.
+
+## R268 — Two faults inside one act, and the second is about judgement rather than matching
+*2026-08-19, in the SpaG publish.*
+
+**THE FIFTH MATCHER INSTANCE THIS WEEK.** The idempotency guard asked whether `districts.ts`
+contained `'errorspot',`. It does — in `QUARTERS`, as `family: 'errorspot',` — so **the act refused
+itself as already-run before it had run once.** Matching the file where the property is about one
+structure inside it. The others: a comment counted as a reader (R243), a mode kind cleared by
+collision with ordinary English (R229), enum values read as screen text (R253), an apostrophe in a
+comment opening a phantom string literal (R261). **Cut to the structure before you match** is now
+the rule, and five instances is enough to stop calling it a bug.
+
+**AND THE SECOND IS NOT A MATCHER FAULT AT ALL, WHICH IS WHY IT NEEDS ITS OWN LINE.** I inserted
+`errorspot` into `QUARTER_ORDER` at the anchor that was convenient — directly after `'stowaway'` —
+putting **an English quarter second, between two VR quarters**, against the rule stated in the
+paragraph immediately above it: the map runs gentlest-first, with English after VR.
+
+**An anchor chosen for the edit is not an argument about the order.** Nothing matched wrongly here;
+the tool did exactly what I asked. I chose where to write by what was easy to write against, and a
+mechanical convenience silently became a decision about what a child sees first. Moved to last,
+after The Reading Room. **The map is now Stowaway Alley → The Word Web → Codebreaker Lane → Bridge
+Street → The Deduction Den → The Reading Room → The Fix-It Shop.**
+
+## R269 — Two VR items served a wrong key for eleven returns, and the typed constructor never ran over the bank
+*Annie's twelfth return, 2026-08-19.*
+
+**Both LIVE, both REACHABLE(free) through `case-vr-04`, both PRACTICE pool:**
+
+| id | stem | key | the fault |
+|---|---|---|---|
+| `bank-vr-04-closest-meaning-23` | obedient | **dutiful** | key rarer than the headword |
+| `bank-vr-04-closest-meaning-30` | exhausted | **tired** | key weaker than the stem |
+
+Distractors on both: one `vr04-opposite-pull`, two `vr04-associated-not-same`. `reviewedBy` on both
+is `human:staff-reviewer@cluecrew.test` — the shared login, which is R271's subject.
+
+**THE vr-04 ANSWER, OWED SINCE THE FIRST DELIVERY: NO. The typed constructor never ran over the
+bank items, and there is no filename because there is no run.** Measured:
+
+| group | items | status | distinct misconception types |
+|---|---:|---|---|
+| `bank-` | 40 | **all LIVE** | **2** — `associated-not-same` (80), `opposite-pull` (40) |
+| `gen-` | 40 | all DRAFT | **5** — wrong-strength, wrong-shade, one-feature-only, keeps-the-same-company, the-other-meaning |
+
+The forty items a child meets carry a mechanical **one-opposite-plus-two-associates** pattern. The
+constructor's typed output sits entirely in DRAFT. **That is the whole explanation of both faults:
+the checks that would ask "is the key rarer than the headword" live in the constructor, and the
+constructor never touched these rows.**
+
+**AND THE REASON NOBODY NOTICED IS THE REUSABLE HALF.** These two never depended on vr-04's sixteen.
+They were discussed as part of a cluster whose missing vehicle was the interesting problem, and
+**the missing vehicle was easier to discuss than the fault it was meant to carry.** A blocked thing
+attracts the attention; the thing it was blocking sits in front of children.
+
+## R270 — Four rulings built, and a widened gate that had to learn a file is not a surface
+*Annie's twelfth return, 2026-08-19.*
+
+**1. WALK SERVES TEN OF TEN ON `case-en-01`.** The four repairs approved and written; the ids added
+to the approved set. All four are `en-comp-retrieval` under the `ENG-028` prefix — the same Case, a
+different passage, which I had to look up rather than infer.
+
+**2. `nvr-count-by-glance`: Cowork holds what she settled.** *"Count each mark one at a time."*
+**Her reason is the pencil**: the served surface has no annotation affordance, so touch-counting
+**instructs an act a child cannot perform.** A hint naming an unavailable tool does not merely fail
+to help — it tells a child she is doing it wrong when she is doing the only thing available. Same
+family as `vr14-step-size` naming a rail on a screen with no rail (R224).
+
+**3. `en-error-spot-false-positive` HAS A REFUSAL STATE IN CODE.** Her words: *a rejection that is
+only in a table is the retirement-with-no-reader fault again.* The row was REJECTED with a note and
+nothing stopped it being emitted again — the next person to build an emission had to REMEMBER. Now
+`refuseMisconception` returns a REASON AND A SUCCESSOR, not a boolean, and it runs inside
+`checkItemChildFacing`, the one gate every door calls. **A refusal without a successor is a dead
+end a caller routes around.** Fault-injected: an option tagged with it fails with the replacement
+ids named.
+
+**4. THE THREE SCANNER GAPS CLOSED** — district map, generated NVR prompts, seeded copy. Passages
+stay exempt, which is a decision and not a gap.
+
+**AND THE WIDENING TAUGHT THE GATE SOMETHING IT DID NOT KNOW: A FILE IS NOT A SURFACE.** Adding
+`packages/db/prisma` flagged five sentences, and the longest were misconception `description`
+fields — **teacher-facing by schema, where a 30-word sentence is correct and capping it would be
+the fault.** A blanket file scan cannot tell those from a stem six lines away. So the lint now runs
+in two modes: **keyed** in data files (lint only values under child-facing keys), **shape-based** in
+components (JSX text has no key). One rule would have either missed the stems or capped the teacher
+notes.
+
+Under the corrected scope it found **one real fault**: a seeded `vr-08-move-letter` prompt at 17
+words against a cap of 16. Reworded, never exempted. Coverage moved from 36 strings across 57 files
+to **98 across 84**.
+
+## R271 — A signature must resolve to a person, and neither option is free
+*Annie's forward ruling, 2026-08-19, which she says outranks the seventeen rows it came from.*
+
+`rev-0001` binds to a shared login, so **anyone holding it signs as that row.** She has ruled
+`rev-0001` is not a person and **the seventeen stay unattributed: the account signed, the person is
+unrecorded.** The ruling's force is forward — until one of two things is true, every future approval
+through that login carries the same defect **while looking resolved**.
+
+**Option A — the shared account stops signing.** One refusal in `recordSignature`, the same shape as
+its existing unknown-reviewer refusal. No migration. **But it stops Annie signing until she has her
+own account**, so between the refusal landing and the account existing, no approval can be recorded
+at all. Buys: the defect cannot recur, by construction.
+
+**Option B — every signing event records the person alongside the account.** One required field, one
+additive column, no outage. **But a required field is not a verified one** — it converts *an account
+signed* into *an account signed and someone asserted a name*, which is better and is not proof.
+
+**Recommended: B now, A next, and they are not alternatives.** B closes the forward defect this
+week with no outage, which is what the ruling requires. A makes it structurally impossible and needs
+an account to exist first. **A alone risks an outage on the reviewer who is mid-queue; B alone
+leaves a name nothing verifies, which would eventually be read as proof.**
+
+Neither backfills the seventeen. No schema recovers who was at the keyboard, and **recording a name
+now would be inventing evidence — the fault one level above the one being fixed.**
+
+## R272 — A sweep named for a field can only ever clear that field
+*Cowork found `ENG-003-A-PU-06`'s fault by screening every string field on every row. Mine screened
+a population. 2026-08-19.*
+
+**THE FIELD DOES NOT EXIST IN THIS STORE, AND THE METHOD STILL WINS.** `misconceptionAttractor` is
+Cowork's name for what maps here to `ItemOption.attractorQuote`, and **PU-06's is null** — this
+store holds no value on that row, so the doubled `““…”?”.` is a corruption on Cowork's side of a
+string that is correct here. Answering David's questions in order:
+
+**Does the field reach a child's screen? NO.** `serveItem` returns `options.map(o => ({id, content}))`
+— `attractorQuote` never leaves the server. It is authoring metadata.
+
+**Fixed either way?** Nothing to fix on the row: null. So the fix was the screen. **819 options
+store-wide carry an `attractorQuote`, 85 of them on LIVE items, and `checkItemChildFacing` reads the
+field ZERO TIMES.** All 819 screened against the four punctuation classes: **0 faults.**
+
+**Does any other LIVE item behind that door carry a fault in an unscreened field? NO.** 341 LIVE
+items behind a Case door, **5238 string fields**, walked to every nested leaf: **0 faults.**
+
+**AND THE STRUCTURAL FINDING IS THE 70.** Seventy distinct paths on those rows sit OUTSIDE
+`checkItemChildFacing` — `explanation.walkScriptBatch`, `reviewMethod`, `mechanismLedger[].evidence`,
+`options[].misconceptionExecution` and 66 more, 297 rows deep in some cases. Most are staff metadata
+and correctly out. **The point is that until this ran, nobody could say which.**
+
+**THE RULE.** My hunt cleared 704 walk scripts and was true only of walk scripts — the same shape as
+the reading-age lint that never opened a `.tsx` (R242) and the scanner that never opened `lib/crew`
+(R247). **The remedy is not a longer list of fields; it is to stop naming fields.** Walk the row,
+take every string however nested, screen all of them. `pnpm check:every-string-field`, in CI.
+
+**Cowork's method was better than mine and the reason is worth stating plainly:** I screened where I
+had already been looking, and it screened everywhere. A population is chosen; a surface area is
+discovered.
+
+## R273 — 704 against 378: both right, about different populations, and a 6-item residue only Cowork can explain
+*David, 2026-08-19: reconcile, and do not adjust toward either.*
+
+**MY 704 COUNTS ITEMS, NOT SCRIPTS, NOT ROWS — across BOTH districts.** Broken down:
+
+| | items | statuses |
+|---|---:|---|
+| **ENGLISH** (`ENG-` prefix, `ai-draft:cowork-okafor-v1`) | **372** | 329 DRAFT · 43 LIVE |
+| **VR** (`gen-` 225, `bank-` 80, `seed-` 27) | **332** | 297 LIVE · 31 DRAFT · 4 RETIRED |
+| **total** | **704** | |
+
+Distinct script TEXTS: **703** — one pair of items shares a script, so the item count and the text
+count are not the same number, and 704 is the ITEM count.
+
+**THE RECONCILIATION: 704 − 378 IS ALMOST ENTIRELY A DISTRICT COWORK DOES NOT HOLD.** All 372 of my
+English items carry a non-empty walk script — no empty strings, no absent keys, measured. **332 of
+my 704 are VR**, authored here (`claude-fable-5`, `cowork-vocab-banks`, `seed`), and Cowork's store
+holds no VR items at all. **Both numbers are right about different populations**, which is this
+project's most common shape.
+
+**THE RESIDUE IS SIX AND IT IS REAL.** My English figure is 372; Cowork measures 378 across both its
+file scopes. **Six items it holds that this store does not, or holds under different ids** — not
+determinable from this side, and not to be adjusted toward. It is the only genuinely open number in
+the reconciliation.
+
+**THE COSTINGS RESTATED BY POPULATION**, since every one of them was quoted as a single figure:
+
+| figure | as reported | ENGLISH | VR |
+|---|---:|---:|---:|
+| carrying a walk script | 704 | 372 | 332 |
+| on a type a Case opens | 679 | 347 | 332 |
+| LIVE behind a door | 340 | 43 | 297 |
+
+The Walk costing's "670 / 331" was measured before `case-en-05` opened and three English items
+published; the current figures are 679 and 340. **A costing quoted as one number over two districts
+cannot be checked by the store that holds one of them** — that is the reusable half.
+
+## R274 — Seventy paths, a disposition each, and my sixth instrument fault of the week
+*David, 2026-08-19: "until each is declared in or out, 'correctly out' is an assumption."*
+
+Every unscreened path now carries a disposition, and an undeclared one **fails the run**. Final
+counts: **45 staff · 14 child · 3 undecided · 0 undeclared.**
+
+**THE THREE UNDECIDED, NAMED RATHER THAN ASSUMED:** `options[].attractorQuote` (819 values
+store-wide, 85 on LIVE items), `options[].defeaterQuote`, and `stem.words[]`. The first two are the
+field Cowork's PU-06 fault lives in (R272) — authoring metadata that quotes source text, never
+served, and nobody has ruled whether a corrupted quote in them is a defect that matters.
+
+**AND THE CLASSIFICATION EXPOSED THAT MY OWN SCREENED SET WAS A GUESS.** I listed nine paths as
+"what the gate reads" and the check duly reported **eighteen child-facing fields as unscreened** —
+`stem.word1`, `stem.code.P`, `stem.series[]` and the rest. **Every one was wrong.**
+`checkItemChildFacing` calls `textsFrom(item.stem, '')`, which **walks the whole object recursively
+and names no key at all**. What it skips is any string WITHOUT A SPACE — deliberately, because a
+single word is a headword or a code letter under test and capping it would cap the answer.
+
+So the 14 child-facing paths outside the gate are **single-token-only fields the gate skips BY
+DESIGN**, not gaps. The set is now the gate's own rule, called rather than restated.
+
+**Sixth instrument fault this week, and the first where I had already written the remedy down:**
+*a verifier states its source before it runs, and calls the family's own function rather than
+re-deriving the property.* I re-derived it, in a check whose entire purpose was to find what other
+people's checks had missed.
+
+## R275 — The punctuation sweep is mine, and its denominator is the number now in question
+*David's correction of his own attribution, 2026-08-19.*
+
+**Cowork never held that sweep and never ran it.** It is mine: six fault classes across every walk
+script, restated here under my name with my denominator.
+
+**704 items, ENGLISH 372 / VR 332.** Real faults: **zero** — one instance ever
+(`ENG-001-WIW-09`), fixed. The 95 raw hits were all instrument (R265).
+
+**IF THE POPULATION IS 378, THE COVERAGE CLAIM CHANGES EVEN THOUGH THE ZERO MAY NOT.** The sweep
+screened what this store holds. If Cowork holds six English items this store does not, **those six
+were never screened by it** — the zero is true of 704 and says nothing about the six. A denominator
+is not a footnote on a result; it is the boundary of what the result is about, and *"no class
+exists"* is only as wide as the population it ran over.
+
+## R276 — The vr-04 two-fault measurement cannot be made from this store's data
+*Annie's twelfth return, owed. 2026-08-19.*
+
+Her two faults are **key rarer than the headword** (`obedient → dutiful`) and **key weaker than the
+stem** (`exhausted → tired`). Both need a signal over the words themselves — frequency for the
+first, intensity for the second.
+
+**MEASURED: of the 40 bank pairs, exactly ONE has both words in the Word vault.** 301 vault
+entries, and 39 of 40 pairs have only one side present or neither. The one measurable pair is
+`bold(t2) → brave(t1)`, where the key is COMMONER than the headword, which is the correct direction.
+
+**So the measurement is not available and I am not substituting a judgement dressed as one.** Naming
+the other 38 by eye would produce a list with the authority of a measurement and the reliability of
+an opinion — R249's family, one level up. All forty stem→key pairs are delivered as data for her
+read, and what is owed is a signal: either the vault extended to cover both sides of every pair, or
+a frequency source declared and cited.
+
+**The swap costing follows the same fact.** Replacing the bank's generic tagging with the typed
+constructor's output is not a re-tag — it is a re-derivation of 40 LIVE, reviewed, free-tier items,
+which `classifyDerivedWrites` refuses by design (R62). **The cost is 40 items back through review,
+not a script run**, and the two faulty keys are content decisions the constructor cannot make
+without the frequency signal that does not exist yet.
+
+## R277 — The six, made findable rather than counted
+*David, 2026-08-19: find them, and do not adjust toward Cowork's number.*
+
+My 372 English ids are delivered for Cowork to diff against its 378. **372 items, all 372 carrying a
+non-empty script, 372 distinct script hashes.**
+
+**AN ID LIST CANNOT FIND AN ITEM HELD UNDER A DIFFERENT ID**, which is one of the three candidate
+explanations, so every row carries **a sha256 of the script text** and its opening words alongside
+the id. The three cases now separate on receipt: an id present there and absent here is a crossing
+that never happened; **a hash matching under a different id is a renaming**; neither matching is
+genuine absence. **The file is built so the answer distinguishes the cases rather than counting
+them again.**
+
+The scoping rule travels with it — *a non-empty string after trimming, or a non-empty array* — and
+this store has **no empty-string or missing-key population at all**, so no scoping choice available
+here could move 372.
+
+**AND THE SWEEP'S ZERO IS NOW BOUNDED ON THE ARTEFACT ITSELF.** *"The population is this store's
+704. If six English items sit outside it, THEY WERE NEVER SCREENED HERE, and 'no class exists' is
+only as wide as this run."* The zero may still hold for those six; the sweep cannot say so. A
+denominator is the boundary of what a result is about, and it belongs in the file rather than in the
+message that carried it.
+
+## R278 — Costings are quoted by population, because a store holding one district cannot check one number
+*David, 2026-08-19. Walk costing reissued.*
+
+| figure | first costing | now | ENGLISH | VR |
+|---|---:|---:|---:|---:|
+| carrying a walk script | 704 | 704 | **372** | **332** |
+| on a type a Case opens | 670 | **679** | 347 | 332 |
+| LIVE behind that door | 331 | **340** | **43** | 297 |
+
+670→679 and 331→340 are `case-en-05` opening and nine punct-spot items publishing, both after the
+first costing was written.
+
+**THE SPLIT CHANGES NOTHING ABOUT WALK AND EVERYTHING ABOUT WHO CAN CHECK IT.** The next scope
+decision reads **"43 English or 297 VR"**, not "340" — and those are different projects. The VR
+scripts have never had a reviewer read at all, and at 297 they are an order of magnitude more review
+than the English set. **That was invisible while the figure was one number.**
+
+The general rule: **a figure spanning two stores' populations is quoted split, or the store holding
+one half cannot check its half.** Cowork could not have found the 372/378 residue from 704, and
+neither could I.
+
+## R279 — The vr-04 frequency signal: two routes, and the recommendation splits them
+*Annie's twelfth return, costed 2026-08-19.*
+
+**Measured: 78 distinct stem+key words across the forty pairs, 40 in the vault, 38 MISSING. For a
+complete check including distractors: 185 words, 144 missing.** That second row is the one that
+matters — her two faults need stem-versus-key, but the fault CLASS needs distractors too, because
+*a distractor commoner than the key* is the same defect wearing different clothes. **38 words buys
+her question; 144 buys the check.**
+
+**ROUTE A — extend the vault.** 38 (or 144) headwords authored, tiered, reviewed; no code, since
+`Word.tier` exists. Measures tier difference using **the same signal the product uses to choose
+words for a child**, so an item cannot be fair by one standard and unfair by the other. **Risk: 38
+new tierings authored to settle a question about tiering is close to marking one's own homework.**
+
+**ROUTE B — declare and cite an external frequency source.** No authoring; the cost is licensing and
+the corpus-firewall ruling. Measures rank difference across all forty pairs and all 144 distractors
+at once, **independent of our tiering**, so it can also show where our tiers disagree with usage.
+**Risk: a frequency list ranks FORMS, not SENSES.** `fair` is common; `fair` meaning *just* is not —
+and on a district built around the two-part sense screen, a sense-blind signal is confidently wrong
+about exactly the pairs that matter most.
+
+**Recommended: B for the measurement, A for the serving.** They answer different questions. Her
+question — *is this key rarer than its headword* — is about English, not about our tiering. Route A
+is worth doing anyway because 38 missing headwords is a gap in served content, but using it to
+answer this means authoring the evidence that decides the case.
+
+**Neither escapes the sense problem**, and on a pair turning on which sense is meant, both narrow
+the field rather than settling it.
+
+## R280 — The three undecided paths ask about kind, not about past signatures
+*David's framing, 2026-08-19, sent to Annie.*
+
+Seventy paths, sixty-seven of which classify themselves: 45 review bookkeeping, 14 child-facing
+fields the gate skips because they hold single words. **Three do not, and two are where the PU-06
+fault lives.**
+
+`options[].attractorQuote` (819 values, 85 LIVE) and `options[].defeaterQuote` **never leave the
+server** — and both **quote passage text**, so a corruption in them is wrong the way a mis-cited
+line is wrong: not because a child sees it, but because it is a record of what the passage says and
+later work reads it as one. The question put to her is **whether a quotation of source text is
+child-facing BY KIND, wherever it sits.**
+
+`stem.words[]` is the sharp one. **A child reads every value in it**, and the gate walks the field
+and skips them all for want of a space — deliberately, because the word is the thing under test.
+**So it is child-facing and unscreened by design, and the question is not whether to screen it but
+which rules apply to a word chosen to be hard.** The ban list plausibly should; the reading-age cap
+plausibly should not; nobody has said.
+
+**Her scope ruling is not reopened by any of this** — a signature covers what was put in front of
+her. This asks about the KIND of field, which is a forward question and hers.
+
+## R281 — `en-comparison-vehicle-misread` is a REPAIR: one carrier is reachable today
+*Annie's held row, answered in one lookup, 2026-08-19.*
+
+| carrier | status | Case | verdict |
+|---|---|---|---|
+| **`ENG-001-WIW-14`** | **LIVE** | `case-en-02` (paid) | **REACHABLE(paid)** |
+| `ENG-004-AGG-07` | DRAFT | `case-en-04` (free) | NO — not published |
+
+**A child on a paid plan can meet the refused hint today**, through *What the Page Won't Say*. Not
+free-tier, so one door rather than two. Stored text: *"Find what is being compared to what. The
+meaning belongs to the first thing."* — ACTIVE, `approvedBy: current-reviewer`, which resolves to
+`rev-0001` and therefore to the shared account: **R271's defect sitting on a row she is actively
+repairing.**
+
+The second carrier being DRAFT-behind-a-FREE-door is the more interesting half: it will become
+reachable by a FREE child the moment `ENG-004` publishes, so a repair now prevents a wider exposure
+later rather than only closing the current one.
+
+## R282 — The frequency source proposed, and the licence deliberately NOT asserted
+*David's ruling: Route B for the measurement, and he rules on the named source rather than the route.*
+
+**Proposed: SUBTLEX-UK** (van Heuven, Mandera, Keuleers & Brysbaert, 2014) — British English,
+subtitle-derived, ~160k forms, on the **Zipf scale**, which is log-scaled against corpus size so
+that *"is A rarer than B"* is a subtraction and the threshold is one number a reviewer can argue
+with rather than a formula. British variety is the reason it beats the American and book-corpus
+alternatives for an 11+ product.
+
+**AND ITS LICENCE IS NOT ASSERTED, WHICH IS THE POINT OF THE PROPOSAL.** SUBTLEX-UK is distributed
+for research through the authors' pages; whether that permits **redistribution inside a commercial
+product's repository** is a question about specific terms. **A licence claim written from memory is
+the same failure as an id written from memory** (R222), and it would be a worse one — an id fails
+loudly on the next query, a licence fails quietly for a year. So the proposal names the source,
+names the scale, and lists what ruling on it REQUIRES: retrieve the terms, read them, vendor and pin
+only if they permit it.
+
+**Nothing has been downloaded.** Acquiring corpus-derived data before the firewall ruling exists is
+precisely what Addendum E is for.
+
+Fallbacks in order: **Children's Printed Word Database** (UK, child-corpus — the most relevant to
+our reader, and thinnest at exactly the tier-4/5 words vr-04 turns on), **Google Books Ngrams**
+(CC BY 3.0, unambiguously redistributable, book-weighted and historically skewed), **`wordfreq`**
+(MIT code, mixed data licences — moves the question rather than answering it).
+
+**What the firewall ruling must cover**, stated rather than inferred: aggregate statistics are not
+source text; firewall depth is unchanged because the list informs a CHECK and never reaches the
+generator; it is pinned and cited like any artefact; and it may NOT be used to select or generate
+item content.
+
+## R283 — The sense limit is in the code before the data is
+*David's ruling, 2026-08-19: recorded as a limit BEFORE the source arrives, not after.*
+
+`packages/core/src/frequency-signal.ts` exists with **no source installed and nothing measured**.
+That is deliberate: **a limit written after a measurement lands is a caveat nobody reads; a limit
+written into the emitter is a sentence every run has to carry.**
+
+**THE SENSE FLAGS OUTRANK THE NUMBER, in that order, in code.** `classifyFrequencyPair` returns
+`UNSETTLED BY FREQUENCY` whenever either word is multi-sense, **however large the Zipf gap** — so a
+big number on a two-sense word can never be read as a strong result. `FREQUENCY_SIGNAL_LIMIT` is a
+required field on every comparison, not a doc comment: *the measurement narrows the field and a
+reviewer settles it.*
+
+The threshold is a **parameter, not a constant** — it belongs to whoever rules the source, and it is
+argued about rather than inherited.
+
+**This is R263 applied forward for once.** A ruling is about a property, not the string it was first
+observed on: the property is *a form-ranking signal cannot settle a sense question*, and it is
+written where the next person will meet it rather than where it was first noticed.
+
+## R284 — The Walk scope decision is Annie's, and the split is what makes it a decision
+*David, 2026-08-19.*
+
+The next Walk scope reads **43 English or 297 VR** — and **the VR scripts have never been through a
+reviewer read at all.** At 297 that is an order of magnitude more review than the English set, and
+it is a different project rather than a bigger one.
+
+**It was invisible while the figure was one number (340).** The costing that anchored the Walk build
+quoted 331, and a single figure spanning two districts hid the fact that one district's half had
+never been reviewed while the other's was ten scripts from done.
+
+**The decision is hers, not David's**, because it is a review-capacity question dressed as a scope
+question — which is the thing the split made visible.
+
+## R285 — Her replacement written, and three stores agreed on the bytes before a word moved
+*Annie's fifteenth return §3, executed 2026-08-19.*
+
+`en-comparison-vehicle-misread` now serves **"Find the two things being compared. The one being
+described is the one that matters."**
+
+**TAKEN FROM HER FILE, NOT FROM A MESSAGE, AND PARSED RATHER THAN RETYPED.** The applier reads the
+string out of `annie-fifteenth-return.md` at run time and **asserts the file's sha256 against the
+digest Cowork independently computed over the same bytes** — `6f7fdd87…`, matching. Cowork reports
+the row **BOTH-PRESENT-AND-MATCHED**: she carried the string she replaced as well as the one she
+wrote, **so the transition is provable against her own file rather than against either store's
+memory.** That is the first row to come back that way, and it is the shape every replacement should
+take.
+
+**WHAT SHE REFUSED, RECORDED AS THE REASON.** The stored second sentence — *"The meaning belongs to
+the first thing"* — asserts a POSITIONAL rule and **is false whenever the comparison is inverted.**
+*Her voice was like gravel* works; *like gravel, her voice scraped at him* **sends the child to
+gravel, which is the exact error the entry exists to block.** The property is which thing is being
+described, not which comes first.
+
+**A REPAIR, NOT A CORRECTION** (R281), and the second carrier makes it more than that: `ENG-004-AGG-07`
+is DRAFT behind a FREE door, so writing now closes a wider exposure before it opens.
+
+Through the approved-redraft path (R257) — the replacement is shorter, so the anti-trim guard would
+have refused it as a machine trim without her declared authority.
+
+**AND THE ROW CARRIED HER OWN DEFECT.** `approvedBy` read `current-reviewer`, resolving to `rev-0001`
+and therefore to the shared account: **her forward ruling on signatures sitting on the row she was
+repairing.** Recorded on the row as `signatureResolvesTo: AN ACCOUNT, NOT A PERSON`, with the note
+that this write does not close R271.
+
+## R286 — SUBTLEX-UK has no licence, and absence of a licence is not permission
+*Retrieved and read 2026-08-19, per David's ruling that the licence is the decision.*
+
+Both official surfaces read — the Nottingham download page and the Shiny interface. **Neither
+carries a licence.** No licence type, no copyright statement, no terms of use, no redistribution
+grant, no commercial clause. **The single stated condition is CITATION** of the 2014 paper.
+
+**So redistribution inside this repository is not REFUSED — it is UNESTABLISHED**, and the
+difference is worth a field rather than a sentence: rights are reserved by default, a citation
+request is an academic norm rather than a licence, and an unestablished right is recoverable by
+asking where a refused one is not. **Nothing downloaded.**
+
+**THE MIDDLE ROUTE IS THE ONE WORTH SEEING.** *Using* the data on a machine and *shipping it in a
+repository* are different acts, and **only the second needs a grant.** A build-time fetch — file
+local, digest pinned in the repo, data never committed — is not redistribution and buys the
+measurement now. Its cost is precise: **the check cannot run in CI without the file, so its result
+is a local artefact rather than a gate** — and this project has spent a month learning what a check
+nobody can run is worth.
+
+**The alternatives, with the trade David reserved:** the Children's Printed Word Database is **UK and
+child-derived — the closest thing to our reader — and thins at exactly tier 4–5**, where
+`obedient/dutiful` and `exhausted/tired` sit. Google Books Ngrams is **CC BY 3.0 and unambiguous**,
+and measures a different population of English than an 11+ child inhabits. **The child-derived
+source is right about the reader and weakest where the question is hardest; the clean-licensed one
+is available today and is answering about the wrong readers.**
+
+**Recommended: ask, and fetch locally meanwhile.** Falling to a weaker source before sending an
+email would be paying a real cost to avoid one.
+
+**The corpus-firewall ruling is MADE and is now on the row in code**: aggregate statistics are not
+source text; firewall depth unchanged because the list informs a check and never reaches the
+generator; pinned and cited like any artefact; **and it may not be used to select or generate item
+content — it measures items that already exist.**
+
+## R287 — Nothing reads a hint out of an item file: five rewrites, not a migration
+*Cowork's dereferencing proposal, answered 2026-08-19.*
+
+**ZERO CONSUMERS ON THIS SIDE.** Every reader of `childHint` traced to its actual source:
+
+| consumer | source | affected |
+|---|---|---|
+| the renderer (`orchestrator.ts:940`) | prisma lookup on Misconception | no |
+| the admin reviewer surface | props from a prisma query at `admin/items/[id]/page.tsx:90` | no |
+| `export-review-pack.ts` | DB | no |
+| `vr-pack-render.ts`, `pilot-review.ts` | never touch the field | no |
+| `import-english-items.ts:138` | a batch file's `proposedMisconceptions[]` block | **no — different mechanism** |
+
+**No option-level or item-level hint reader exists anywhere**, and **no item file in this repo embeds
+a `childHint`** — every JSON under `content/` outside exports and evidence was walked; the only
+`.description` hits are `complicationSeparation.description` on passage files. The inbound Cowork
+item file carries **36 `misconceptionId` values on options and zero hints**, which is already the
+shape being proposed.
+
+**ONE THING TO PRESERVE, AND IT IS EASY TO CONFLATE WITH WHAT IS BEING REMOVED.**
+`proposedMisconceptions[]` is a batch-level block that **proposes NEW library rows**, create-if-
+absent — not an embedded copy of an existing one. It is how a misconception enters the library at
+all. Dereferencing removes the per-option copies and **leaves that block alone**, or new-entry
+proposal breaks silently and nothing reports it.
+
+**And my own first classifier was wrong**, which is worth one line: it called
+`comprehension-review.tsx` FILE-backed because the component contains no `prisma.` call. It is a
+client component receiving props from a server query. **Asking "does this file mention prisma"
+answers a question about the file, not about the data** — the same shape as the five matcher faults,
+in a census rather than a scan.
+
+## R288 — walkScript has a declared reachability state, and it is three conditions in gating order
+*Cowork's blocker on Debt 2's split, 2026-08-19. Confirmed: yes.*
+
+The 378 held-until-reachable entries need a surface to be held AGAINST, **and a surface whose state
+nobody can name is one nothing can be held against.** `walkScriptReachability()` names it, from three
+independent conditions in the order they gate — so a held entry cites WHICH condition it waits on
+rather than "not yet":
+
+| state | meaning | items | ENGLISH | VR |
+|---|---|---:|---:|---:|
+| `NOT_PUBLISHED` | DRAFT; nothing downstream matters yet | **364** | 329 | 35 |
+| `AWAITING_REVIEWER_READ` | LIVE, behind a door, no reviewer has read the script | **330** | 33 | **297** |
+| `REACHABLE` | LIVE, door, and in the approved set | **10** | 10 | 0 |
+| `NO_DOOR` | LIVE but no Case names its type | 0 | — | — |
+
+**THE STATE CHANGES AS WALK WIDENS, WHICH IS THE POINT.** Each id added to the approved set moves
+exactly those items from `AWAITING_REVIEWER_READ` to `REACHABLE` and moves nothing else — so a held
+entry is re-evaluated by RE-RUNNING this, not by re-reading a ruling.
+
+**And the split it unblocks is visible in the table.** `AWAITING_REVIEWER_READ` is **33 English
+against 297 VR** — the same asymmetry the population split exposed (R284), now attached to a state
+name rather than to a costing paragraph.
+
+## R289 — The local route built, the enquiry drafted, and the one thing I cannot do
+*David's ruling, 2026-08-19: send the enquiry and fetch locally in parallel.*
+
+**FETCHED LOCALLY: the mechanism, not the data.** `data/frequency/` is gitignored to everything but
+its own README, **git-confirmed** — the bytes cannot enter the repository, so the redistribution
+question never arises. The digest pins in committed source (`expectedDigest`), which is the half
+that can be shared without a licence. One command, run by a person, documented in
+`data/frequency/SOURCE.md` with the citation and the firewall boundary beside it.
+
+**I have not pulled the file.** The mechanism is what was missing; the fetch is a person's command
+and putting a 190 MB download inside an agent's turn — into a repo where a mistake commits it — buys
+nothing the ignore rule does not already guarantee.
+
+**THE MEASUREMENT DECLARES ITSELF LOCAL, IN CODE.** `measurementStatus: 'LOCAL — not a gate, and
+not run in CI, until a licence answer lands'`, and `FREQUENCY_UNMEASURED` is the string a check must
+print when the file is absent: *"UNMEASURED — this is NOT a pass and NOT a zero: nothing was
+compared."* R60's discipline written before the first run rather than after it.
+
+**I CANNOT SEND THE ENQUIRY.** No mail capability, and sending correspondence on David's behalf is
+not mine to do. It is drafted in full and staged — the narrow use stated, the two questions asked
+(commercial use; redistribution-in-repo versus fetch-by-digest), and the promise that the data will
+never generate or select content.
+
+**And the licence line stays a field**: `licenceState: 'UNESTABLISHED'`, not refused. **An
+unestablished right is recoverable by asking and a refused one is not**, and a reader six months on
+will act differently on the two words.
+
+## R290 — The skip changed basis from a proxy to a declaration, and my first list was another proxy
+*Annie's ruling, 2026-08-19: `stem.words[]` takes the ban list, not the cap; skip by declared field.*
+
+**Her reasoning is the entry.** Absence of a space was a proxy for *is a headword*, **any single-word
+value anywhere got the same free pass** including ones that should be capped, and **proxies drift,
+which this project has paid for four times.** A declared field list drifts too — but it drifts
+VISIBLY, because a new field is absent from the list and gets screened. **A proxy fails silently
+toward permissiveness; a list fails loudly toward strictness.**
+
+**IT IMMEDIATELY CAUGHT WHAT THE PROXY HAD BEEN HIDING:** two DRAFT option values, *"careless"* and
+*"weak"*, both on the voice ban list, both unscreened for their whole life because they are one word.
+
+**AND MY FIRST FIELD LIST WAS ITSELF A PROXY**, caught by the R149 baseline diff before it shipped.
+I declared `value` a token field — and an option's `value` is a single word on a VR card and **a
+full sentence on a comprehension one.** That exempted every option value in the store from the
+sentence cap, and two UK-spelling rows silently stopped being reported. **I replaced a proxy for
+"is a headword" with a field list that was also one.** A field belongs there only when EVERY value
+it can hold is a token, whatever the item type.
+
+## R291 — Quote fields are a third class, and the check found two drifts no sweep could
+*Annie's ruling, 2026-08-19. The axis was wrong.*
+
+**Extending the child-facing gate over the quote fields would have run the reading-age cap and the
+ban list across quoted Victorian prose and failed Grahame on every line.** They are not child-facing
+— a child never sees them — and they are not staff prose either. **They are a record of what the
+passage says, and the only property that means anything is whether they still say it.**
+
+`pnpm check:source-quotes`: exact match against the declared passage, **within the item's declared
+lines**. **980 quotes across 29 passages; 948 match.** And it is stronger than the sweep it
+replaces, exactly as she said: **a doubled opening mark is not in the source**, so PU-06 fails
+without anyone having named the shape.
+
+**TWO GENUINE DRIFTS, NEITHER FINDABLE BY PATTERN:**
+- `ENG-001-WIW-18` (LIVE) quotes *"it's all very well"*; the passage reads **"its"**. Grahame has
+  the apostrophe, so the TRANSCRIPTION may be what dropped it — and correcting the quote would bury
+  the error in the passage.
+- `ENG-025-LW-09` (DRAFT) quotes *"then take a quiet minute"*; Alcott reads **"than"**. **A
+  one-word drift.** No punctuation sweep would ever have found it.
+
+Plus **30 quotes citing text outside their item's own `lineRefs`** — reported as a backlog, because
+a defeater one line outside may be correct authoring or a mis-cited window and the check cannot
+tell those apart.
+
+**THREE REFUSALS TAUGHT ME THREE PASSAGE SHAPES.** The reader threw on `extract`-less cloze
+vehicles, then on `body`-less stream-B files. Each refusal was correct and each taught me a shape I
+did not know the corpus had. **A `?? ''` would have screened 819 quotes against an empty string and
+reported every one as NOT IN THE SOURCE.**
+
+**AND I RE-DERIVED LINE NUMBERS THE FILES ALREADY DECLARE.** My first window split the extract on
+newlines — 32 of them — against **83 declared `numberedLines`**, and reported eleven LIVE quotes as
+outside their window. Every one was the instrument. *A verifier calls the family's own function
+rather than re-deriving the property*, twice in two turns.
+
+## R292 — The tier requirement is right and its population is not `stem.words[]`
+*Annie's addition, 2026-08-19: a headword served to a child must carry a tier.*
+
+**Enforcing it today refuses 25 headwords on LIVE reachable items, and all 25 are
+`vr-12-compound-words`** — "tooth", "rain", "butter", "skate", "water", "farm", "arm", "bed", "day",
+"foot" and fifteen more. **Compound PARTS, deliberately easy, not headwords in her sense at all.**
+
+| headwords served on LIVE items | 65 |
+|---|---:|
+| with a LIVE vault tier | 25 |
+| vault entry exists, not LIVE | 15 |
+| no vault entry at all | **25** |
+
+**`stem.words[]` is doing two jobs**, and the requirement enforced as written would block
+twenty-five items over words nobody would ever tier while leaving the vr-04 headwords it exists for
+untouched. The rule stands; **the population needs naming before the rule can be a gate**, and that
+is the same shape as R61 — a check pointed at a population that is not the one the rule is about.
+
+## R293 — One VR Case, ten scripts, and a render I nearly sent unstyled
+*Annie's ruling, 2026-08-19: one Case first, exactly as English went. Do not scope the 297.*
+
+`case-vr-04` — the largest free-tier VR bank, **and the same bank carrying the two faulty keys**, so
+one read covers both surfaces. Ten scripts, all passing the gate, all four sentences.
+
+**Her sampling argument is the reusable half:** six of the English ten passed and four were not walks
+at all, **and the four shared one shape across one bank.** If a VR bank carries a shape fault, ten
+scripts finds it and **297 finds it 297 times.**
+
+**AND THE RENDER NEARLY MISREPRESENTED THE SURFACE.** My first Walk-panel harness sat outside the
+crew route group, so it never loaded `crew.css` and rendered the panel unstyled — no rule, no
+padding, a bare paragraph and a bare button. **I nearly sent that to a reviewer as what a child
+sees.** A render that misrepresents the surface is worse than no render at all: it invites a ruling
+about a layout that does not exist. The harness imports the stylesheet now, and the attached render
+is the real one — worked solution behind a green rule, *Next bit* to the last sentence, then
+*Got it*.
+
+## R294 — `stem.words[]` does three jobs; her rule survives the split and its refusal changes shape
+*David's ruling, 2026-08-19: propose the split, then report what it refuses.*
+
+**MEASURED ACROSS 205 ITEMS, THE FIELD CARRIES THREE KINDS:**
+
+| role | types | words/item |
+|---|---|---:|
+| `headword-under-test` | vr-04, vr-16, vr-21 | 1 |
+| `components` | vr-12, vr-13 | 1–2 |
+| `set-members` | vr-02 | 5 |
+
+**Her rule belongs to the first and only the first.** A compound part is raw material — knowing
+"tooth" is not the test — and requiring a tier for it is **not a weaker version of her rule, it is a
+rule about a different property.** `set-members` is genuinely undecided and is NAMED: five words to
+classify, individual difficulty matters, but "the headword" does not exist there.
+
+**DECLARED PER TYPE, AND AN UNDECLARED TYPE REFUSES THE RUN.** Not inferred from the type id (R57).
+**There is no safe default:** guess `components` and a vocabulary family silently leaves scope;
+guess `headword-under-test` and a compound bank is blocked over words nobody would tier. **Where
+every default is wrong, refuse.** Fault-injected.
+
+**AND THE REFUSAL CHANGED KIND, NOT JUST SIZE:**
+
+| | before | after |
+|---|---:|---:|
+| items refused | 25 | **0** |
+| no vault entry at all | 25 | **0** |
+| **entry exists but is DRAFT** | 15 | **15** |
+
+The 25 were all compound parts and were never in the population. **What remains is fifteen
+headwords whose tier is AUTHORED AND UNPUBLISHED** — `fair` (1), `hollow` (1), `rapid` (2), `bold`
+(2), `hostile` (3) and ten more. **The judgement exists; the published record does not.** The check
+reports the two classes separately because **a missing entry is an authoring job and a DRAFT entry
+is a publication job**, and one number would have hidden which — the same reason R62 insisted on
+stating the denominator you actually read.
+
+**A SIDE FINDING WORTH THE LINE:** those fifteen are the cheapest progress available on the
+frequency question. A published tier is a signal the product already uses to choose words for a
+child, so publishing them turns fifteen of the forty vr-04 pairs from unmeasurable to measurable
+**with no external source, no licence and no new judgement.** It does not settle the route; it
+shrinks what the route must carry.
+
+## R295 — A file that declares a property should be asked, not measured
+*The instrument faults inside `check:source-quotes`, 2026-08-19 — David's framing.*
+
+**THE `?? ''` THAT WOULD HAVE SCREENED 819 QUOTES AGAINST AN EMPTY STRING.** The passage reader
+threw on cloze vehicles (no `extract`), then on stream-B files (no `body`). **Each refusal was
+correct and each taught me a shape I did not know the corpus had** — three shapes, discovered by
+being refused three times. A defaulting reader would have reported **every quote in the store as NOT
+IN THE SOURCE**, and the number would have been so large it would have read as a data disaster
+rather than as a broken reader.
+
+**AND I RE-DERIVED LINE NUMBERS THE FILES ALREADY DECLARE.** My window split the extract on newlines
+— **32 of them — against 83 declared `numberedLines`** — so `lineRefs [5,6,7,8,9]` indexed into
+different text entirely and **eleven LIVE quotes were reported outside their window.** Every one was
+the instrument.
+
+**The rule, in David's words: a file that declares a property should be ASKED, not MEASURED.** Line
+numbers are an authored fact about a passage, not an artefact of where the newlines fell. This is
+the standing instruction — *a verifier calls the family's own function rather than re-deriving the
+property* — arriving twice in two turns, and it is now the third distinct form: don't re-derive from
+code (R41), don't re-derive from a proxy (R290), **don't re-derive what the data itself states.**
+
+## R296 — A render that misrepresents the surface is worse than none
+*2026-08-19, the Walk panel.*
+
+The Walk harness sat outside the crew route group, so it never loaded `crew.css` and rendered the
+panel unstyled — bare paragraph, bare button, no rule, no padding. **I nearly sent it to a reviewer
+as what a child sees.**
+
+**The cost of sending it would not have been a wasted look; it would have been a RULING ABOUT A
+LAYOUT THAT DOES NOT EXIST.** She rules on renders. A render is evidence, and evidence assembled
+wrongly does not merely fail to inform — it produces decisions that then have to be unwound, and the
+unwinding costs more than the render did. Same family as R80's wrong clock: every discipline
+operating, and the artefact still describing something that was never there.
+
+The harness imports the stylesheet now, and the check that the panel carries no review furniture
+(R253) covers the harness page too — so the two ways a render can lie, wrong styling and staff
+furniture leaking in, are both closed.
+
+## R297 — The fifteen are a REVIEW, not a confirmation, and my "no new judgement" was wrong
+*David's question, 2026-08-19: does a published tier on an already-authored judgement need a fresh read?*
+
+**A FRESH REVIEW, and the rows say so themselves:**
+
+- `authoredBy: ai-draft:cowork-okafor-v1` — **the tier was drafted by a machine.**
+- `preReviewVerdict: PASS_TO_HUMAN` — the draft pipeline's own verdict is that a person must look.
+- **ZERO attribution events across all 183 DRAFT vault rows.** No human has ever signed one.
+
+So *"the judgement exists"* is true only in the sense that a draft carries a number. **Nobody has
+judged it.** I wrote **"no new judgement"** about this work and it was wrong: publishing a
+machine-drafted tier IS the judgement, made for the first time.
+
+**AND THE READ IS WIDER THAN THE TIER.** Each row carries `definitionChild` and `sentence`, both
+child-facing and both served on the Word card. **Fifteen reads of three child-facing fields each,
+not fifteen confirmations** — and the pack already found one blocking fault: `futile`'s definition
+reads *"certain to fail"*, and **fail is banned child-facing under D1.**
+
+**THE REUSABLE FORM: "already authored" is not a claim about a PERSON until a person is named.** A
+populated field and a made decision look identical in a table, and the difference is an attribution
+event. The whole R94/R271 thread is this same distinction — here it arrived as a work estimate,
+where the wrong answer would have converted fifteen reviews into fifteen rubber stamps.
+
+## R298 — The vault covers stems and not keys: fifteen publications buy ONE measurable pair
+*Measured 2026-08-19, correcting a claim I made and David repeated.*
+
+**I SAID: publishing the fifteen turns fifteen of the forty vr-04 pairs from unmeasurable to
+measurable. MEASURED: it turns ONE.**
+
+| of the 40 bank pairs | |
+|---|---:|
+| both sides have a vault entry | **1** |
+| stem only | **39** |
+| key only | 0 |
+| neither | 0 |
+
+**All 40 stems have entries. Exactly one KEY does — `brave`, and it is only there because it is
+itself another item's stem.** The vault was built from headwords, so it covers the words items ASK
+ABOUT and not the words items ANSWER WITH. **No number of stem publications can fix that**, and
+39 keys need entries before the pairs can be ranked at all.
+
+**THE ERROR SHAPE: I COUNTED THE POPULATION I HAD JUST MEASURED AND ASSUMED IT WAS THE ONE THAT
+MATTERED.** Fifteen unpublished stem tiers is a true and useful number; *fifteen measurable pairs*
+is a different quantity that happens to share its size, and I carried the first across into the
+second without re-deriving it. **A pair needs two sides and I checked one** — R249's family
+(errors in what is being counted, not in the arithmetic), now on its fourth instance.
+
+All forty pairs delivered with the unmeasurable named rather than absent, per her condition, and
+**no threshold set or defaulted** — she sets it after seeing the distribution.
+
+## R299 — Where every default is wrong, refuse
+*David, 2026-08-19, on the undeclared-type refusal. Worth its own line.*
+
+`stem.words[]` carries headwords, components and set-members. An undeclared word-bearing type
+**fails the run** rather than falling to either side, because **both defaults are wrong in opposite
+directions**: guess `components` and a vocabulary family silently leaves the tier rule's scope;
+guess `headword-under-test` and a compound bank is blocked over words nobody would tier.
+
+**The general form: a default is a decision made in advance by whoever wrote the code, on behalf of
+a case they have not seen.** Where the cases genuinely differ in kind, that decision cannot be
+right, and the honest move is to make the next person state which kind they have. It is the same
+instinct as `declareMayBeEmpty` (R61) and `requirePopulation` — **a silence that has to be broken
+before the run continues.**
+
+## R300 — Don't re-derive from code, from a proxy, or from what the data states
+*David, 2026-08-19: the third form closes the set.*
+
+Three ways to re-derive a property someone has already established, all now seen:
+
+1. **From code** (R41) — the M-column recompute reimplemented "across-zero" instead of calling the
+   family's own `subInfo`, and reported 69 disagreements against a signed sheet, every one
+   manufactured.
+2. **From a proxy** (R290) — "has no space" stood in for "is a headword", so every single-word value
+   anywhere got the same free pass, and my replacement field list was another proxy.
+3. **From what the data itself states** (R295) — the quote window split an extract on newlines, 32
+   of them, against **83 declared `numberedLines`**, and reported eleven LIVE quotes as
+   out-of-window. Every one was the instrument.
+
+**A file that declares a property should be ASKED, not MEASURED.** The three share one cause: a
+derivation is cheaper to write than a lookup, and it is wrong in a way that looks like a finding.
+**All three produced confident numbers about content that was fine** — which is why the rule is
+worth stating as a set rather than as three incidents.
+
+## R301 — The six are found: six items that never crossed, from five different banks
+*The diff run against Cowork's 378, 2026-08-19.*
+
+**ZERO IDS EXIST ONLY IN THIS STORE.** All 372 of mine appear in Cowork's 378, so the residue is
+**not a renaming** — it is six items Cowork holds that never arrived: `ENG-015-CC-12`,
+`ENG-018-RB-01`, `ENG-018-RB-11`, `ENG-019-BV-02`, `ENG-023-RT-08`, `ENG-027-RR-08`.
+
+**SIX ITEMS ACROSS FIVE DRAFT BANKS, so it is not one lost file.** Six single items, each missing
+from a batch that otherwise arrived intact — **a per-item drop, not a per-batch one**, which is a
+narrower and more traceable fault than a missing delivery.
+
+**AND IT BOUNDS MY OWN SWEEP.** The punctuation sweep's zero was over 704. **These six were never
+screened**, so *"no class exists"* remains true of what ran and silent about them.
+
+**FOUR SHARED IDS DISAGREE, ONE-DIRECTIONALLY:** `ENG-028-PR-02/04/07/10`, the four walk repairs
+Annie approved and this store wrote today. Cowork holds the pre-repair text — expected drift with a
+known cause and a return leg already staged.
+
+**A CROSS-STORE INSTRUMENT NOTE WORTH ACTING ON BEFORE IT MATTERS.** Cowork hashes script text
+**with whitespace collapsed**; this store hashed it **raw**. They agreed on 368 of 372 anyway —
+which tells us the scripts carry no internal whitespace runs — but **the two normalisations are not
+the same rule**, and a future whitespace-only divergence would read as a content difference on one
+side and not the other. That is R80's shape waiting to happen: two correct instruments keeping
+different conventions, agreeing today by luck of the data.
+
+## R302 — The key gap is a district job, not a vr-04 one
+*David's scoping question, 2026-08-19.*
+
+**The vault was built from headwords, so it covers what items ASK ABOUT and not what they ANSWER
+WITH — and that hole is in every vocabulary bank, not just vr-04.**
+
+| type | items (LIVE) | distinct keys (on LIVE) | **keys with no vault row** |
+|---|---:|---:|---:|
+| `vr-04-closest-meaning` | 81 (41) | 56 (40) | **55 (39 on LIVE)** |
+| `vr-16-opposite-meaning` | 25 (0) | 25 (0) | **24 (0 on LIVE)** |
+| `vr-21-same-meaning` | 25 (0) | 25 (0) | **18 (0 on LIVE)** |
+
+**DISTINCT WORDS TO AUTHOR: 95 across the district; 39 of them on LIVE items.**
+
+**So the 39 is the LIVE slice of a 95-word district job**, and scoping it as a vr-04 task would
+have authored 39 words and left the same hole in two banks that publish next. The three types share
+one cause and should be filled once.
+
+Note the asymmetry inside it: `vr-21-same-meaning` is missing 18 of 25 keys where the others are
+missing nearly all — **its keys are commoner words that happen to be in the vault already**, which
+is itself a weak signal that its key selection runs easier than vr-04's.
+
+## R303 — A read pack must not carry a blocker the gate already found
+*David, 2026-08-19: fix `futile` before the pack reaches her.*
+
+`futile`'s child definition read *"certain to fail, so not worth doing at all"* — and **fail is
+banned child-facing under D1**. The gate had already caught it, and the pack was about to carry it
+to a reviewer.
+
+**Sending it would have spent her attention on something a machine had found**, which inverts what a
+review pack is for: the gate exists to clear the mechanical faults so the reviewer's time goes on
+the judgements only she can make. **A pack containing a known blocker is a gate failure dressed as a
+review request.**
+
+**THE SMALLEST CHANGE THAT CLEARS THE BAN**: only the banned clause moved — *fail* to *come to
+nothing* — so what she reads is the drafter's definition minus the one word the gate refuses. A
+wholesale redraft would have put my authoring in front of her under a machine's name, and she would
+have been reviewing me while believing she was reviewing the draft. The change is named in the pack.
+
+Row was DRAFT and unsigned, so no approval was overwritten. Fifteen definitions and fifteen
+sentences now pass the gate.
+
+## R304 — The six were REFUSED, recorded, and never read again
+*The per-item drop traced, 2026-08-19.*
+
+**Nothing skipped them silently. `checkItemChildFacing` refused all six at import** — four US
+spellings (`favoring`, `traveling`, `fibers`, `realized`) and two banned words (*"behind"* in a
+progress sense, *"quick"*) — and `import-english-clusters` printed each with its reason and wrote it
+into a receipt. **The bank files are complete: 12 items each, all present.**
+
+**THE GATE WORKED, THE RECEIPT WORKED, AND NOBODY READ THE RECEIPT.** That is the whole fault. A
+refusal recorded in a file no check opens is **invisible from the moment it is written**, and this
+divergence read as a mystery across an entire exchange — two stores comparing censuses, a residue
+of six, a per-item-versus-per-batch hypothesis — when the answer had been sitting in
+`content/exports/import-receipt-*.json` the whole time.
+
+**It is R269 in its original form**: *a rejection that lives only in a table is the
+retirement-with-no-reader fault.* Annie ruled that about a REJECTED misconception status. **The same
+shape had already happened to six items and neither store had noticed.**
+
+`pnpm check:import-refusals` is the reader those receipts never had: **15 receipts, 18 items ever
+refused, 12 since reworded and returned, 6 still absent.** The 12 matter as much as the 6 — **the
+return process demonstrably works**, so this is six items that fell out of a working loop, not a
+broken one. It reports and never fails: a red build over another store's backlog would be switched
+off within a week.
+
+Five of the six screened against the punctuation classes from their bank files: **zero faults**.
+`ENG-019-BV-02`'s bank is not on disk here, so it stays **named as unscreened rather than counted
+as clean.**
+
+## R305 — Two correct instruments agreeing by luck of the data
+*The hash convergence, 2026-08-19.*
+
+Cowork hashed walk scripts **whitespace-collapsed**; this store hashed them **raw**. They agreed on
+**368 of 372** — and only because the scripts happen to carry no internal whitespace runs today.
+**The first script that wraps a line would have read as a content difference on one side and not the
+other**, in a diff whose entire purpose is telling content differences from id differences.
+
+**COWORK'S RULE ADOPTED, not mine, and the reason is not seniority.** Line-wrapping is a
+presentation artefact of a FILE; **a content hash should not move when a file is reflowed.** Raw
+hashing makes a hash of the text and its formatting together, which is the wrong object.
+
+Declared in `hashSpec` on the census so the convergence is a fact the receiving store can check
+rather than a claim it has to trust. **R80's shape caught before it fired** — two instruments, both
+correct, keeping different conventions, agreeing today for a reason that is about the data rather
+than about either rule.
+
+## R306 — The key gap is 95 words and the cost is review, not authoring
+*Scoped as a district job, 2026-08-19.*
+
+**95 distinct key words across three vocabulary types have no vault entry; 39 are on LIVE items.**
+`vr-04` 55 missing, `vr-16` 24, `vr-21` 18. **The vault was built from headwords, so it covers what
+items ASK ABOUT and not what they ANSWER WITH** — one cause, three banks, and scoping it as the
+vr-04 39 would author 39 words and leave the identical hole in two banks that publish next.
+
+**EVERY ONE OF THE 95 IS CHILD-FACING CONTENT.** A Word row carries `definitionChild` and
+`sentence`, both served on the card, so **all 95 need Annie's read exactly as ENG-003 did and the
+cost is dominated by review.** The fifteen already-drafted headwords are the calibration sample: if
+fifteen reads take a sitting, ninety-five take six or seven.
+
+**AND THE vr-21 ASYMMETRY IS A LEAD, NOT JUST A BACKLOG ENTRY.** It is missing 18 of 25 where the
+others miss nearly all — **its keys are commoner words already in the vault.** Since vr-04's actual
+fault is *keys rarer than their headwords*, **vr-21's key selection may be the model rather than
+another queue item.** Reading its 25 pairs as a comparison costs one sitting and could change how
+the other 95 are chosen.
+
+## R307 — Only the banned clause moves
+*David's rule, 2026-08-19, from the `futile` fix.*
+
+A gate-held child-facing string is repaired by **changing only what the gate refuses.** `futile`'s
+definition lost *fail* and kept everything else.
+
+**A wholesale redraft would have put my authoring in front of the reviewer under a machine's name,
+and she would have been reviewing me while believing she was reviewing the draft.** That is worse
+than the original fault: the fault was one banned word a scanner catches, and the substitution is an
+undetectable change of author inside a review.
+
+**And the pack rule beside it: a read pack must never carry a blocker the gate already found.** The
+gate exists to clear mechanical faults so a reviewer's time goes on the judgements only she can
+make. **A pack containing a known blocker is a gate failure dressed as a review request.**
+
+## R308 — The card/key join: 32, not 8, and the eight were the fifteen she read
+*Annie's ruling, 2026-08-19. It should have existed before the first card was written.*
+
+Every one of **301 vault rows** joined against **131 vocabulary items**: 84 items have a card for
+their headword, 47 do not. **32 findings across 32 distinct items — 15 on LIVE items, 17 on LIVE
+cards.** She found eight, and **the eight were the fifteen she happened to read.**
+
+| band | count | meaning |
+|---|---:|---|
+| CONTAINS | 29 | the key appears in the card as a whole word — `hollow` → *"Empty inside"* |
+| VARIANT | 3 | a morphological form — `generous` → *"Happy to share and **give**"* against key *giving* |
+
+**AND THE THIRD BAND IS THE HONEST LIMIT, PRINTED RATHER THAN DISCOVERED.** A card reading *"to
+keep something out of sight"* answers `conceal → hide` perfectly and **shares no string with it**.
+Containment cannot see a paraphrase and no tightening of the matcher will change that — it is a
+property of the question, not a gap in the check.
+
+**VARIANT CAME BACK 0 AND THE CONTROL CAUGHT IT.** My stemmer required a 4-character remainder, and
+`hiding` minus `ing` is three — so it could not match `hiding` to `hide` **and would have shipped
+"no morphological variants exist" as a finding.** A zero from a matcher that cannot fire is
+indistinguishable from a true zero. Three fixtures now gate the run.
+
+## R309 — Two Walk answers, and the harness was showing her the panel alone
+*Annie's questions, 2026-08-19.*
+
+**Does the served panel show the item's stem and options? YES.** In `play-runner`, the item
+`<section>` and the feedback `<section>` are siblings — only the submit button is hidden after an
+outcome — so **the card stays on screen with its stem and options while the Walk panel is open
+below it.**
+
+**Does it show the passage? YES**, for comprehension: `passage={activity.passage}` is on the engine
+in that same section, and the passage travels with the item.
+
+**BUT THE HARNESS WAS SHOWING HER THE PANEL ALONE**, and that is my fault to state plainly. Her
+inference from it was exactly right — *"Go straight to line 1"* citing a line that is not on the
+screen is the circle-and-tick fault in a new place. **It is not true of the product and it was true
+of the render I sent**, which is R296 landing twice: a render that misrepresents the surface invites
+a ruling about a layout that does not exist.
+
+## R310 — "Got it" is a claim collected from the only way out
+*Annie's ruling, 2026-08-19.*
+
+**A child who has not understood taps it because there is no alternative**, so whatever it records
+is not comprehension. **A claim must never be collected from the one control a child cannot avoid.**
+
+It is a dismiss, so it is named as one: **`Close`**. The test id moves with it (`walk-close`), and
+the panel now asserts nothing about the child and records nothing. If a comprehension signal is
+wanted here it needs a second control and a real choice between them.
+
+The harness furniture — the page title and *"Approved to serve: 10 script(s)"* — **must not ship,
+in writing, per the N badge.** It sits outside the panel frame on a `/debug` route that
+`check:no-review-furniture` treats as staff and the child closure never reaches, **so the guarantee
+is the closure rather than anyone remembering this.**
+
+## R311 — The definition house style: a gloss, not a sentence
+*David's ruling, 2026-08-19, taking Annie's preference as house style.*
+
+**A lower-case fragment with no terminal stop**, because the card reads as **a gloss under a
+headword** — the headword is already there and the definition completes it, so sentence-casing a
+completion makes one card read as two statements.
+
+**Applied across all 301 rows: 157 changed** (118 LIVE, 39 DRAFT); 144 were already in house style.
+Lengths ran 1 to 18 words, median 8.
+
+**IT IS A REGISTER CHANGE AND THE APPLIER ASSERTS THAT BEFORE WRITING.** Only the first character's
+case and a trailing stop move; every row is checked to be identical once case and terminal
+punctuation are normalised, and the run refuses on any row where it is not. **So a reviewer
+comparing before and after checks one property rather than re-reading 157 definitions** — the same
+discipline as the `futile` fix (R307). Proper nouns and *I* keep their capital: lower-casing them
+would be a spelling error dressed as a house style.
+
+## R312 — The reissued six carry the same text, and six false digest alarms were mine
+*The reissue imported, 2026-08-19.*
+
+**ALL SIX WERE HELD AGAIN, WITH THE IDENTICAL FAULTS.** `favoring`, `traveling`, `fibers`,
+`realized`, *"behind"*, *"quick"* — every one still present. **The file says reissued; the content
+is not reworded.** The door refused them a second time for the same reasons, which is the door
+working.
+
+**AND MY FIRST RUN REPORTED ALL SIX DIGESTS AS MISMATCHED, WHICH WAS MY INSTRUMENT.** I recomputed
+over `JSON.stringify(item)`. **Cowork's file declares its spec in `digestSpec`**: each item object,
+`sort_keys=True separators=(",",":")`, UTF-8. Under the declared spec **all six match exactly.**
+
+**Six false alarms about a file that was intact — R295 in the same turn it was registered.** The
+spec was in the file and I measured instead of asking. The importer now recomputes under Cowork's
+canonical form and **throws on a real mismatch** rather than shrugging past it.
+
+## R313 — vr-21 staged as a model question, not a queue entry
+*2026-08-19.*
+
+vr-21 is missing 18 of 25 keys where vr-04 misses 55 of 56 and vr-16 misses 24 of 25 — **its keys
+are commoner words already in the vault.** Since vr-04's fault is *keys rarer than their headwords*,
+**vr-21 may be selecting keys by a rule worth copying.**
+
+Its 25 pairs are staged with the question stated rather than the conclusion: **is it choosing keys
+by a better rule, or does it simply run over an easier word list?** One is a model for the other 95;
+the other is a coincidence someone would otherwise build a theory on. Seven of its keys are in the
+vault and **none of the 25 pairs is measurable yet** — the stems are the gap there, which is itself
+a difference from vr-04 worth her eye.
+
+## R314 — All 32 held, and holding a card does not stop its item serving
+*Annie's ruling generalised, 2026-08-19: do not publish a Word card whose definition contains the
+key of any item it serves.*
+
+**32 findings, 20 distinct cards held, 12 of them LIVE.** Not the eight she read.
+
+**WHAT A HOLD DOES, MEASURED FROM THE SERVING CODE RATHER THAN ASSUMED.** `collectCards` reads the
+`Word` table where status is LIVE; items read `Item`. **There is no join between them at serving
+time.** So a hold removes the card from the vault collect pool and from the word-review distractor
+pool, **and does not stop the vocabulary item serving** — the 15 LIVE items keep running.
+
+**AND THAT IS THE SAFE DIRECTION, WHICH IS WHY IT IS WORTH STATING.** The leak runs card → item: a
+child who has collected the card can answer from memory. **Withdrawing the card closes the leak and
+leaves the question intact.** A child in the meantime meets the item *without having been handed its
+answer*, which is what the item was written to ask. Holding the ITEM instead would have removed a
+sound question to fix a card.
+
+**HELD AT THE DOOR, NOT DEMOTED BY STATUS** (the R208 shape). A card's status records a REVIEW
+decision; a hold records a SERVING one. These cards were properly approved **for what they say** and
+are withdrawn **for what they reveal**, and collapsing the two would lose that distinction on the
+row.
+
+## R315 — Twenty redrafts against `humble`, and none published on the redraft alone
+*2026-08-19.*
+
+Her model — *"not boasting about yourself, even when you have done well"* — **teaches the word
+without ever reaching for `modest`**, and that is the whole standard: define from the child's side,
+never through the option the item is asking her to pick.
+
+Twenty redrafts, **gated twice**: against the child-facing rules, and against the property that
+caused the hold — **no redraft may contain its key or a morphological variant.** All twenty pass
+both, so no redraft reintroduces the leak it was written to close.
+
+**NONE IS WRITTEN, AND THE REASON IS THE FINDING ITSELF.** These are unsigned cards. **A populated
+field is not a decision** — a machine-drafted definition and an approved one are indistinguishable
+in a table, which is exactly what produced the fifteen-reads-not-confirmations answer (R297).
+Writing my redraft in would repeat that mistake one turn after recording it, and she would be
+reviewing me while believing she was reviewing the card (R307).
+
+## R316 — The third band is a limit; the 47 are fine, and one of them is a fixture
+*2026-08-19.*
+
+**A paraphrase that does the item's work is invisible to containment and always will be.** *"to keep
+something out of sight"* answers `conceal → hide` perfectly and shares no string with it. **No
+tightening reaches it — it is a property of the question, not a gap in the check**, and it is named
+as a limit rather than filed as a backlog. **84 items are joined to a card, 40 LIVE**, and those 40
+need a reviewer pass on that property specifically.
+
+**THE 47 WITH NO CARD: 46 ARE DRAFT AND ONE IS A FIXTURE.** All 46 sit on `vr-16` (22) and `vr-21`
+(23), neither of which has published, so "no card" is expected there. The single LIVE one is
+**`zz-e2e-fixture-item`**, whose stem carries its headword in the prompt text rather than in
+`stem.words[]` — **not a missing card, a fixture with a different stem shape**, and the only reason
+the number was not zero.
+
+**So all 47 are currently fine, and the question goes live the day vr-16 or vr-21 publishes** — at
+which point 45 items need cards, which is the 95-word district job (R306) seen from the item side.
+**Nothing told those two states apart until now**, which was David's point.
+
+## R317 — Three zero-shaped faults in one week, and a control caught the third
+*2026-08-19.*
+
+**`VARIANT: 0` from a stemmer that could not fire.** It required a 4-character remainder, and
+`hiding` minus `ing` is three — so it would have shipped **"no morphological variants exist"** as a
+finding, when the true count is 3. Three fixtures now gate the run, and the check refuses rather
+than reports if they do not all fire.
+
+**It is the third this week and they share one shape:** the walkScript sweep's zero bounded by a
+population it had not screened (R275), `check:no-review-furniture`'s control that would evaporate
+the day the codebase got it right (R254), and now a matcher whose zero meant it was blind. **A zero
+is the only result that looks identical whether the instrument worked or not**, which is why every
+one of them needs a control that fires on a fixture rather than on the data.
+
+## R318 — Six digest mismatches reported against an intact file, one hour after registering the rule
+*2026-08-19.*
+
+`REISSUE-SIX-ITEMS.json` **declares its own digest spec**: each item object, `sort_keys=True
+separators=(",",":")`, UTF-8, **per item, not per file**. I recomputed over `JSON.stringify(item)`
+and reported **all six as mismatched**. Under the declared spec **all six match exactly.**
+
+**R295 was registered one hour earlier: a file that declares a property should be ASKED, not
+MEASURED.** I had written the rule about line numbers and did not apply it to hashing — **the rule
+was about the class and I read it as being about the instance**, which is R263's fault (a ruling is
+about a property, not the string it was first observed on) turned on my own register entry.
+
+**And the content finding stands and needs saying plainly: the reissue carries the same text.** All
+six still hold on the identical faults — `favoring`, `traveling`, `fibers`, `realized`, *"behind"*,
+*"quick"*. **The file says reissued and the content is not reworded.** The transfer is verified
+intact; what crossed was the original items under a new name.
+
+## R319 — Not two ban lists: one rule and a pattern bug on my side
+*David, 2026-08-19: the emitting side cannot reproduce your refusal, so it cannot fix it.*
+
+`ENG-015-CC-12` was refused for **"behind"** on *"he looks behind the door"*. Cowork bans `behind`
+only in the falling-behind stance — **and so do I.** The rule is the same on both sides. **My
+implementation over-matched.**
+
+One branch read `(you|he|she|they|we) … (is|are|was|were|feel|look|looks|seem) … behind` with **no
+constraint on what follows**, so a rule written for *"she is behind"* caught *"he looks behind the
+door"*. **The emitting store could not reproduce the refusal because there was nothing to reproduce.**
+
+**Fixed:** the copula branch requires `behind` to END the clause — a progress *behind* takes no
+object — and perception verbs leave that branch, being direction rather than progress. Eleven
+fixtures; **no serving row changed**; `ENG-015-CC-12` now imports.
+
+**THE TRANSFERABLE HALF: A REFUSAL THE OTHER SIDE CANNOT REPRODUCE IS A CLAIM ABOUT MY INSTRUMENT,
+NOT ABOUT THEIR CONTENT.** Six weeks of that item sitting outside the store, and the diagnostic was
+available the moment someone asked *"can you reproduce this?"* — which nothing in the exchange
+required either side to ask. The list is now emitted with every pattern and band so the comparison
+can be made rather than assumed.
+
+## R320 — Quoted spans exempt, per field, refusing where undeclared — and it unblocks nothing
+*David's ruling, 2026-08-19.*
+
+**A quotation records what a source says; changing it to satisfy our house rules makes the record
+false** — and Annie has already ruled these source-of-truth fields, checked by exact match (R291).
+A field cannot be both *"must match the source exactly"* and *"must obey our spelling"* when the
+source is an American novel of 1903.
+
+Built on `attractorQuote`, `defeaterQuote` and declared passage spans. **Undeclared refuses**
+(R299). **Narrow by design:** it lifts the BAN LIST and the US-SPELLING check — rules about OUR
+VOICE — and lifts neither the reading-age cap nor the long-word ceiling nor the id-leak rule, which
+are rules about **what a child can read**. A quotation is not our voice; it is exactly as hard to
+read as any other sentence.
+
+**AND IT UNBLOCKS ZERO OF THE FIVE, WHICH IS THE FINDING.** All five refusals sit in AUTHORED fields
+— four in `walkScript`, one in `option.value`. **But four are quotations EMBEDDED INSIDE an authored
+field**: *…line 3 answers the stem: **'Mr. Jeremiah Cobb was favoring the horses as much'**.*
+
+**The mechanism for that already exists and the items do not use it.** `checkChildFacingText`
+accepts `quotedSpans`; declaring the span clears the refusal — verified, 1 fault undeclared, 0
+declared. **So the fix is neither a reword nor a field exemption: it is the item declaring the span
+it is already quoting.** A field-level exemption cannot reach a quotation inside a sentence, and
+noticing that is the difference between shipping the ruling and shipping something that looks like
+it.
+
+`ENG-023-RT-08` is the exception: *"with fibers"* is an OPTION VALUE, our wording, so `fibres` is a
+genuine correction.
+
+## R321 — Eight refusals the exemption does not touch, and why that is correct
+*2026-08-19.*
+
+Four on sentence length (`ENG-001-WIW-03`, `-14`, `-18`, `ENG-002-pp-17`) and four on long words or
+the library (`ENG-002-pp-19`, `ENG-004-AGG-03`, `-08`, `ENG-014-TS-10`). **The quoted-span exemption
+touches none of them, by design.**
+
+The line is worth stating because it will be asked again: **the exemption lifts rules about OUR
+VOICE and never rules about A CHILD'S READING.** We may not impose our spelling on Kate Douglas
+Wiggin — but a 24-word sentence is 24 words whoever wrote it, and a child meeting it in a quotation
+is in exactly the position she would be in meeting it in ours. **A quotation is a defence against a
+house-style rule and never against a comprehension one.**
+
+All eight remain outstanding on their own merits, and all eight are still going out.
+
+## R322 — `ENG-019-BV-02`: the banned word is the object of study
+*Escalated to Annie, 2026-08-19.*
+
+The stem asks **why Bevis says *"There, if you had run quick!"*** — so `quick` is **what the item is
+about**. There is no wording to change without changing the question.
+
+**A span declaration would clear the gate, and that is precisely why it must not be applied without
+her.** The question is not *can we exempt this string* — the machinery would, silently and
+immediately. It is **whether an item may quote a banned word as its subject**, which is a decision
+about what the product is willing to put in front of a child in order to teach about it.
+
+**The easy availability of the technical answer is the reason to be careful**, not a reason to
+proceed: the gate would go green and nobody would ever be asked.
+
+## R323 — Direction declared per bank, because the same number means opposite things
+*Annie's ruling, 2026-08-19, before any frequency measurement runs.*
+
+**`vr-04`'s construct is decode-the-hard-word**, so a key rarer than its stem is a fault — the item
+has asked the child to decode twice. **`vr-21`'s construct is recognise-the-rarer-synonym**, so the
+identical relation is the point.
+
+**Without the declaration a frequency signal reads against no stated expectation**, and would
+condemn one bank and endorse another for the same measurement. **That is worse than no signal: a
+number with no direction looks like evidence and is a coin toss.** It is the R263 shape in
+measurement clothes — a property judged by the instance it was first observed on.
+
+Declared in `bank-direction.ts`, **beside the construct it is a fact about**, and an undeclared bank
+returns null so the caller stops rather than guessing (R299).
+
+**AND vr-16 IS REPORTED AS A MEASUREMENT, WHICH IS THAT IT CANNOT BE MADE.** Its construct is
+antonymy, where difficulty may sit in the RELATION rather than in either word's rarity — a genuine
+question, not an oversight. **24 of its 25 pairs have no card for the key**, so the tier signal
+reports on one. Named in `UNDECLARED_BANKS` with that reason. **An honest "not measurable" is a
+finding; a guessed direction would have been a fabrication with a number attached.**
+
+## R324 — `en-vocab-secondary-sense`: 55, 10, 16 and 0 are four populations, all correct
+*Settled 2026-08-19 rather than absorbed.*
+
+**In this store: RETIRED, zero direct carriers, zero tag carriers. The retag ran here.** Successors
+carry 43 / 28 / 20.
+
+| figure | what it counted |
+|---|---|
+| **55** | Cowork's carriers, `BACKLOG-STRATIFIED-THE-65`, ITS store |
+| **10** | defect row 12, an earlier smaller measurement on the same side |
+| **16 district-wide / 12 in scope** | the cold-read brief's grandfathered-by-vintage list |
+| **0** | this store, post-retag |
+
+**Annie's ruling — a retirement and its retag are one act — is satisfied here and not there**, and
+the discrepancy is BETWEEN STORES rather than within one. Cowork's 55 against its own 10 cannot be
+reconciled from this side and is not guessed at. **What is settled is that this store has nothing to
+retag**, and the 55 items needing per-option sense decisions are Cowork's.
+
+**Four numbers, four populations, none wrong** — the shape this project meets most often, and the
+reason "settle it rather than absorb it" is a standing instruction rather than an occasional one.
+
+## R325 — The eight were refused once, fixed, and returned
+*2026-08-19.*
+
+**All eight are in this store and all eight pass the gate today** — three LIVE, five DRAFT. They are
+among the **twelve already returned** (R304), not among the six outstanding. The premise that they
+were still going out was wrong, and the receipts settle it: each was refused exactly once, with its
+reason, and each came back.
+
+**THE QUOTED/AUTHORED SPLIT, PER ITEM, BECAUSE IT CANNOT BE DONE PER RULE.** Six of the eight had
+the offending text wholly or partly **inside a quotation** — `WIW-03`, `-14`, `-18` and `pp-17` on
+sentence length with the long sentence being Grahame's or Austen's; `pp-19` and `AGG-03` carrying
+the long word **both bare and quoted**, which is the case a per-rule answer cannot express.
+`AGG-08` is a library question and not text at all.
+
+**Her line is the standard: a cap on our prose is not a cap on Kipling.** And the two
+both-bare-and-quoted items are why the split had to be reported per item — the same word, twice, on
+opposite sides of the ruling.
+
+## R326 — The recognition test is staged, not judged
+*Annie's narrowed standard, 2026-08-19.*
+
+**Not "does the card answer the item in different words" but "does answering from the card require
+any step beyond recognition?"** The narrowing matters: a card that makes a child hold two senses
+apart is doing the item's teaching; a card she can recognise the answer in is doing its work.
+
+40 LIVE items joined to a card: **19 already held for a string match, 21 for her judgement alone.**
+Flagged cases sort first so the read starts where the faults are.
+
+**NOT JUDGED HERE, AND THE REASON IS THE RULING ITSELF.** She says it is answerable by a reader in
+seconds. **A machine judging it would substitute a string test for the judgement she named** — which
+is precisely the substitution that produced 32 findings where she had found 8, and precisely the one
+that cannot find the 33rd.
+
+## R327 — The two rows, with the constructor's own verdict as the evidence
+*Annie's instruction, asked four times, answered 2026-08-19.*
+
+**`bank-vr-04-closest-meaning-23`: obedient → dutiful. Proposed key `well-behaved`.**
+**`bank-vr-04-closest-meaning-30`: exhausted → tired. Proposed key `worn out`.**
+
+**NEITHER PROPOSAL IS MY INVENTION, AND THE PROVENANCE IS THE STRONGEST PART.** The typed
+constructor's parallel items already carry the answers: `gen-vr-04-closest-meaning-23` has
+`well-behaved` as its key for `obedient`; **`gen-vr-04-closest-meaning-28` has `drained` as its key
+for `exhausted` and tags `tired` at `vr04-wrong-strength`.**
+
+**The constructor had already ruled `tired` a DISTRACTOR for `exhausted`, on the exact intensity
+ground she names — and the live item serves that distractor as its key.** That is R269 restated:
+the constructor never ran over the bank, so the bank kept a key the constructor would have rejected.
+
+**AND THE DIRECTION CHECK RETURNS UNMEASURABLE ON BOTH PROPOSALS.** `vr-04` expects a key commoner
+than its stem (R323). `obedient` is t3 and `exhausted` t4; **`well-behaved`, `worn out`, `good` and
+`drained` have no vault entry**, and no frequency source is installed. **Saying the candidates
+satisfy the direction would be an opinion wearing a measurement's clothes** — they are editorial
+proposals with the constructor's agreement as their only external support, and they are marked as
+such.
+
+## R328 — Nothing screens a passage for suitability, and 26 written judgements are unread
+*Reported, not proposed, 2026-08-19. Confirmed independently against Cowork.*
+
+**Six checks read `content/passages` — line refs, cloze gaps, verbatim integrity, source quotes,
+serving path, and the vocabulary scan. Not one screens content for suitability.**
+
+**26 ban-list rules, ZERO protective**, matching Cowork's count exactly. No rule mentions race,
+violence, slurs, harm or period attitude. **The list is a VOICE list** — it bans *fail*, *wrong*,
+*weak*, *guarantee*, *learning style* — built to keep our tone right, and never to keep a child
+safe. Those are different jobs and only one of them has ever been done.
+
+**AND THE NEAR-MISS IS THE SHARPEST PART.** `contentFlags` exists on **26 of 29 passages**, carrying
+authored prose exactly on this subject — a horse falling on ice, a girl alone at dusk with a strange
+man, a comic metaphor about slaughtering innocents — **each with a Recommendation.** **Nothing reads
+the field.** Twenty-six considered judgements about content suitability, written down by whoever
+curated the passages, and no code path opens them.
+
+**It is the retirement-with-no-reader fault (R269) on the most consequential field yet**, and it is
+**the first gap this project has found by ASKING rather than by breaking.** No list authored: what
+the product will and will not serve is a governance decision, David's with Annie's reading behind
+it.
+
+## R329 — 62 undeclared quotations: a future refusal and an unverified quote at once
+*Annie's §4, measured 2026-08-19.*
+
+**62 undeclared quotations across 48 items, 12 on LIVE items** — 33 in `walkScript`, 26 in
+`stem.text`, 3 in `hintCore` — against **33 spans already declared.** The mechanism is used on about
+a third of what it covers.
+
+**Each is two problems wearing one shape.** It **refuses the next time a rule tightens** — `favoring`
+sat in a walkScript for weeks and became a refusal only when the US-spelling rule reached that
+field, so every undeclared quotation is a future refusal waiting on an unrelated change. **And
+nothing verifies it against the source**, because `check:source-quotes` reads only the fields Annie
+named, so an embedded quotation can drift from its passage silently — the exact fault that check
+exists to catch elsewhere.
+
+**The mechanism has existed all along and is unused.** Declaring the span both exempts it from our
+house rules and brings it under the source check. **Nothing was missing but the declaration**, which
+is the third time this month a fix has turned out to be a field nobody filled in.
+
+## R330 — Two faults under one id, seen apart
+*Annie's instruction on `ENG-004-AGG-08`, 2026-08-19.*
+
+**The text refusal**: `'ordinary` and `'extraordinary` in *"The writer shows the girl to an
+'ordinary observer', then to an 'extraordinary observer'."* — **both quoted, and quoted because the
+contrast between them IS the question.**
+
+**The library refusal**: tagged `en-parallel-read-as-sequence`, **which the library does not hold.**
+Nothing to do with the text.
+
+**Counted once and repaired once, they would have looked like one fault with one fix.** They are
+two faults needing two different people — one a reviewer's ruling on whether a cap applies to a
+quoted contrast, the other a library decision about a missing entry. **A single id is not a single
+problem**, and an item's refusal list is a list rather than a verdict.
+
+The eight are given as **verbatim strings with field and cap**, because — her words — a cap and an
+id cannot tell you whether a sentence is readable.
+
+## R331 — The 62 spans declared, and the claim made true rather than softened
+*Annie's §4, applied 2026-08-19.*
+
+**49 items gained 62 span declarations. No text moved** — not one character of any stem, hint or
+walk script. A declaration is a statement ABOUT text that is already there, so a reviewer comparing
+before and after sees the same words with a record attached. Undeclared quotations: **62 → 0.**
+
+**AND I DESCRIBED IT AS TURNING A FUTURE REFUSAL INTO A *VERIFIED* QUOTATION, WHICH WAS HALF UNTRUE
+WHEN WRITTEN.** `check:source-quotes` read only `attractorQuote` and `defeaterQuote`, so the 62 new
+spans were **exempted from our house rules and verified against the passage by nothing.**
+
+**An exemption without a verification is strictly worse than neither**: the text stops being
+screened for our rules and gains no check that it still matches its source. The check now reads
+`explanation.quotes` too — **1053 quotes checked, up from 980** — so the claim is true rather than
+softened in prose.
+
+**THE BACKLOG WENT 30 → 31 AND THE CONTENT DID NOT CHANGE: THE POPULATION DID.** One of the newly
+covered spans cites text outside its item's `lineRefs`. **A backlog that grows because the
+denominator grew is a different event from one that grows because content got worse**, and the
+constant carries that reason — recording the number alone would have made the two indistinguishable
+the next time somebody read it. R62's discipline on a threshold rather than on a report.
+
+## R332 — 61 flags on 26 passages, two of them reachable, and nobody recorded who judged
+*Emitted for Annie, 2026-08-19. No check built, deliberately.*
+
+**THE FIGURE CARRIED IN WAS WRONG AND IS CORRECTED: 26 PASSAGES CARRYING 61 FLAGS**, not 26 flags.
+`stream-b-01` carries three.
+
+**AND ONLY TWO PASSAGES ARE REACHABLE BY A CHILD TODAY** — `stream-a-03-wind-in-willows` (22 LIVE
+items) and `stream-b-01` (12), both REACHABLE(free). The other 27 sit behind DRAFT items. **So 61
+judgements exist and six of them govern anything a child can meet.** That is the scoping fact the
+raw count hides.
+
+**WHAT NOBODY RECORDED:** no field names who authored a flag; no timestamp; **zero attribution
+events for `recordType: 'Passage'` in the whole store**; and no code path reads the field. The
+judgements are real, considered, and anonymous.
+
+**THE THREE UNFLAGGED PASSAGES ARE NOT ONE CASE.** Two are the ENG-003 cloze vehicles —
+commissioned originals, *"not adapted from any source"* — where flagging nothing is plausible.
+**The third is `stream-a-02-railway-children`: E. Nesbit, 1906, curated from Gutenberg, and the only
+ADAPTED CLASSIC in the store with no content flag at all** when all 26 of its peers have one. That
+is the row where *judged clean or nobody looked* has weight, and **nothing distinguishes the two** —
+this project's standing finding, arriving on the field that decides what a child reads.
+
+**NO CHECK BUILT, ON DAVID'S RULING AND IT IS THE right one.** A check over flags whose standard is
+unstated would **enforce whatever the flags happen to say — turning one curator's unrecorded
+judgement into the product's policy by the act of automating it.** The standard is the thing that
+does not exist, and a mechanism cannot supply it.
+
+## R333 — Four flags govern a serving surface, not six, and 57 are background
+*David's reachability-first ordering, applied 2026-08-19.*
+
+**TWO COUNT CORRECTIONS IN TWO TURNS ON THE SAME POPULATION.** Carried in as *"26 contentFlags"* —
+it is **26 passages carrying 61 flags**. Then carried in as *"6 reachable flags"* — **it is FOUR**:
+one on `stream-a-03-wind-in-willows` (22 LIVE items, 10 free-tier), three on `stream-b-01` (12 LIVE,
+6 free-tier). I stated six without counting them.
+
+**57 flags across 24 passages are background** — every one behind DRAFT items, none governing
+anything a child meets, each becoming a read-first the day its bank publishes.
+
+**Nobody had scoped this population**, which is why the raw 61 looked like the number: her
+reachability-first ordering has been applied to every other queue in this project and never to
+this one, because nobody had asked which passages actually serve.
+
+## R334 — `railway-children` goes to her UNJUDGED, which is not the same artefact as CLEAN
+*David's ruling, 2026-08-19: do not flag it.*
+
+**THREE PASSAGES CARRY NO FLAGS AND THEY ARE THREE DIFFERENT STATES.** The two cloze vehicles have
+**no `contentFlags` field at all**; `stream-a-02-railway-children` has the field **present and
+empty**. The other 26 are populated. **An empty array is what a curator writes having looked and
+found nothing, AND what a template writes having never been filled**, and it is the only adapted
+classic in that state.
+
+**EVERY OTHER ASSESSMENT THE PASSAGE COULD CARRY, IT CARRIES, AND ALL PASS**: copyright (PD from
+1995), similarity (112 papers, 943 shingles, no hits), verbatim (26 of 26 spans, 100%), band
+(ratified). **And `curationNotes` is substantial and entirely about FIT** — the scene was chosen
+over the red-petticoat episode because that one cannot be cut to the word band without losing the
+landslide or the rescue. **A recorded judgement about length and shape, silent on content.**
+
+**THE INFERENCE IS STATED AS INFERENCE.** That every neighbour is recorded and this one is empty is
+**evidence, not proof** — consistent with a curator who screened a gentle domestic scene and found
+nothing, and equally consistent with a field nobody reached. **`editorialCuts` is `[]` too, and
+there the empty array IS corroborated** by *"needs no cuts at all"* in the note. **No such sentence
+exists for content**, and that asymmetry is the closest thing to a finding available.
+
+**Twelve items cite it, `ENG-008-RC-01`–`12`, all DRAFT, none reachable.** So it is worth resolving
+now rather than urgently: **before publication the cost is a reading; after publication it is a
+withdrawal.**
+
+**Not flagged, because flagging it would BE the judgement.** If it was never judged it needs a first
+one; if it was judged it needs the record nobody wrote. **Both are the same act by her and neither
+is available to anyone else.**
+
+## R335 — No parser: a shape problem underneath a standard problem
+*David's ruling, 2026-08-19.*
+
+The 61 flags come in two shapes — **16 structured** (`{element, recommendation, reason}`) and
+**45 prose** (*"…Recommendation: keep. It is brief comic rudeness…"*). A parser is the obvious next
+build and it is the wrong one.
+
+**Parsing `Recommendation: keep` today would silently miss the next author**, who will write
+*"Recommend keeping"* or put the verdict first — and the parser would report that flag as having no
+recommendation, or worse, as having none needed. **A shape problem underneath a standard problem
+resolves in that order**: the standard says what a flag must state, and the shape follows from it.
+Building the parser first fixes the shape to whatever the flags happen to look like now, which is
+the same fault as building the check — **automation converting one curator's habit into the
+product's grammar.**
+
+## R336 — Two authored vocabulary keys, and a provisional value carries its return condition on the row
+
+**2026-08-19. Annie, vr-04 closest-meaning bank. Asked four times before it was done.**
+
+`bank-vr-04-closest-meaning-23` (obedient) takes **`well-behaved`**, replacing `dutiful`.
+`bank-vr-04-closest-meaning-30` (exhausted) takes **`worn out`**, replacing `tired`.
+Authored by Annie, applied through the written-review path, `reviewedBy: reviewer:rev-0001`.
+
+**Both are PROVISIONAL AGAINST DIRECTION and the row says so.** R323 declared vr-04's direction as
+key-commoner-than-stem, and that is UNVERIFIED for both replacements: neither has a vault entry and
+no frequency source is installed (SUBLEX-UK remains UNESTABLISHED, not refused — the enquiry is
+drafted and unsent). The row carries the qualifier and the **return condition**: these keys go back
+to Annie the day a frequency signal lands, and if either is still rarer than its stem she chooses
+again.
+
+**The rule this instances: a provisional value with a named return condition is a decision; the same
+value without one is a guess that will be read as a decision.** R203's placement applies — the
+qualifier is in the field (`provisionalAgainstDirection`, `r4Note`), never one field over in prose.
+
+**Two improvements were deliberately NOT made, and both are hers, not mine.** `tired` is not added as
+a `vr04-wrong-strength` distractor on `-30`; `well-behaved` being the only hyphenated option among
+three single words is not addressed. Each improves a sound option set rather than repairing the
+fault, and each would re-derive a LIVE reviewed item — the coupling R62 refuses. Routed to their own
+queues.
+
+## R337 — A declared quoted span counts as ONE unit against the sentence cap, not zero
+
+**2026-08-19. Annie, every district.** Implemented on the **span declaration**, never on quotation
+marks — a rule keyed on punctuation hands the exemption to anyone who types an apostrophe, and the
+62 spans declared under R335 are what make it checkable at all.
+
+Previously a declared span was **stripped entirely** and counted as zero, which flattered the number
+in the other direction. It now collapses to a single word-shaped token, so a 22-word stem carrying a
+14-word quotation measures 9 — not 22, and not 8.
+
+**The vocabulary ceiling still removes the span completely**, unchanged and deliberately different: a
+hard word inside a quotation is the source's, and we are not answerable for Grahame's vocabulary.
+Two caps, two treatments of the same span, because they are asking different questions — the
+sentence cap asks how much a child must hold at once (a quotation is one thing to hold), the
+vocabulary ceiling asks what we chose to put in front of her (nothing, if it is quoted).
+
+**What it unblocks today: NOTHING, and the zero is the finding.** Of the 25 items failing
+sentence-length store-wide, **zero carry a declared span** — the rule only reaches a quotation that
+has been declared, and the failing items are not among the 113 items now carrying declarations.
+Its value is **entirely prospective**, which is not the same as a rule that does nothing, and saying
+so plainly is what stops a true zero being read as a failed ruling (R60).
+
+## R338 — The long-word ceiling counts distinct headwords, not tokens
+
+**2026-08-19. Annie, every district.** `imagination` / `imagining` share a root and are **one**
+demand on a child. `ordinary` inside `extraordinary` is **one** hard word — and on `ENG-004-AGG-08`
+removing either would delete the question, which is built on the contrast between them.
+
+**Counting tokens made the gate measure REPETITION, which costs a child nothing, instead of VARIETY,
+which is the entire point of a vocabulary ceiling.** A stem that uses one hard word four times was
+scored as four times the load of a stem using it once, and a stem using four different hard words
+scored the same as both.
+
+Implemented as conservative root-grouping plus a containment rule (a shorter word wholly inside a
+longer one is the same demand; the longer is kept). The failure detail reports **both** figures —
+*"2 distinct long word(s) … counted from 4 token(s)"* — so a reviewer sees the rule operating rather
+than inferring it from a number that moved.
+
+**Store-wide it unblocks one item** (long-words failures 3 → 2 in the DRAFT backlog, 1 remaining
+store-wide).
+
+**And it exposed a test that was asserting the wrong thing.** `item-content-gate.test.ts` carried a
+case named for the undeclared-span rule and proved it with **the exact `ordinary`/`extraordinary`
+pair this ruling is about** — so the test was encoding the token count, not the exemption rule in
+its own name, and only by accident. R263: the ruling is about the property, not the string it was
+first observed on. The fixture now uses two genuinely distinct long words, preserving the test's
+stated intent, and a second case asserts the pair counts as one.

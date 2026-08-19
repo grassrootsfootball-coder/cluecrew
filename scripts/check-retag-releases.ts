@@ -88,7 +88,7 @@ async function main(): Promise<void> {
   // What each named option ACTUALLY depends on in this store, so "landed" is measured not assumed.
   const items = await prisma.item.findMany({
     where: { id: { in: [...new Set(rows.map((r) => r.itemId))] } },
-    include: { options: true },
+    include: { options: { orderBy: { id: 'asc' } } },
   });
   const optionTag = new Map<string, string | null>();
   const itemsPresent = new Set(items.map((i) => i.id));

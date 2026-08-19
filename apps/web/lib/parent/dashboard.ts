@@ -7,9 +7,21 @@
 import { ENGINE_CONFIG, RANKS, RANK_REQUIREMENTS, computeStreak, type Rank } from '@cluecrew/core';
 import { prisma } from '@cluecrew/db';
 import { mondayOf } from '@/lib/crew/orchestrator';
+import { openCaseIds } from '@/lib/entitlements';
 import { supportFor, wordConversationPrompt } from './action-library';
 
 const DAY_MS = 86_400_000;
+
+/**
+ * District enum -> what a parent calls the subject. Not the child's quarter names (The Reading Room,
+ * Codebreaker Lane) — those are the in-world map and mean nothing on a billing-adjacent screen.
+ * A district absent from here falls back to its own id rather than vanishing: a subject nobody has
+ * named yet is still a subject the parent is paying for (R61).
+ */
+const DISTRICT_LABEL: Record<string, string> = {
+  VR: 'Verbal Reasoning',
+  ENGLISH: 'English',
+};
 export const GENTLE_WEEKLY_TARGET = 5;
 
 export interface TypeInsight {
@@ -19,6 +31,22 @@ export interface TypeInsight {
   action: string;
   /** Behind-a-tap detail for parents who want it. */
   masteryPercent: number;
+}
+
+/**
+ * WHAT EXISTS IN A DISTRICT, AND HOW MUCH OF IT THIS CHILD CAN OPEN (David's ruling, 2026-08-17 —
+ * R176). Per DISTRICT, never whole-account: a single "12 of 25 cases open" hides that VR is nearly
+ * all open and English is half, and the question a parent is actually asking is per-subject — *is my
+ * child getting English out of this?*
+ */
+export interface DistrictAvailability {
+  /** Plain English, not the enum and not the child's in-world quarter name. */
+  label: string;
+  /** Every case that EXISTS here. The honest denominator. */
+  casesTotal: number;
+  /** How many this child can open right now. */
+  casesOpen: number;
+  allOpen: boolean;
 }
 
 export interface ChildDashboard {
@@ -31,9 +59,20 @@ export interface ChildDashboard {
   developing: TypeInsight[];
   wordsThisWeek: Array<{ headword: string; definitionChild: string }>;
   wordPrompt: string;
+  /**
+   * NOT ON THE CHILD'S MAP, EVER. D7 keeps a locked case indistinguishable from an unwritten one
+   * there, and that protection is for HER, mid-session. It is the wrong rule in the parent's
+   * context, where the same silence says the English district is half-BUILT when it is fully built
+   * and half-SOLD.
+   *
+   * AND IT DOES NOT ITEMISE THE LOCKED CASES. Naming them turns a status line into a sales page,
+   * and this dashboard is where a parent checks on their child, not where we sell to them.
+   */
+  districts: DistrictAvailability[];
   runway: {
     monthsToExam: number | null;
     casesCracked: number;
+    /** DERIVED. It read a hard-coded 21 until 2026-08-17, when there were 25. */
     casesTotal: number;
     nextMilestone: string;
   };
@@ -68,6 +107,17 @@ export async function parentDashboard(parentId: string): Promise<ChildDashboard[
   const eightWeeksAgo = new Date(now.getTime() - 8 * 7 * DAY_MS);
 
   const dashboards: ChildDashboard[] = [];
+  /**
+   * READ ONCE, OUTSIDE THE LOOP: which district each case belongs to. Joined through QuestionType
+   * rather than parsed from the case id — `case-en-01` looks parseable and a prefix convention is
+   * not a schema (R57).
+   */
+  const allCases = await prisma.case.findMany({ select: { id: true, questionTypeId: true } });
+  const typeDistrict = new Map(
+    (await prisma.questionType.findMany({ select: { id: true, district: true } }))
+      .map((t) => [t.id, String(t.district)]),
+  );
+
   for (const child of children) {
     const [sessions, caseFiles, weekWords, taughtBackCount] = await Promise.all([
       prisma.session.findMany({
@@ -136,6 +186,30 @@ export async function parentDashboard(parentId: string): Promise<ChildDashboard[
       ? Math.max(0, Math.round((Date.UTC(child.examYear, 8, 1) - now.getTime()) / (30.44 * DAY_MS)))
       : null;
 
+    /**
+     * WHAT THIS CHILD CAN OPEN, from `openCaseIds` — the SAME function the district page and the
+     * orchestrator use, never a re-derivation of the tier rule (R41). If entitlement logic changes,
+     * this line changes with it or not at all; it cannot drift into telling a parent something the
+     * product does not do.
+     */
+    const open = await openCaseIds(child.id);
+    const perDistrict = new Map<string, { total: number; open: number }>();
+    for (const row of allCases) {
+      const d = typeDistrict.get(row.questionTypeId) ?? '(unassigned)';
+      const e = perDistrict.get(d) ?? { total: 0, open: 0 };
+      e.total += 1;
+      if (open === 'all' || open.has(row.id)) e.open += 1;
+      perDistrict.set(d, e);
+    }
+    const districts = [...perDistrict]
+      .map(([d, v]) => ({
+        label: DISTRICT_LABEL[d] ?? d,
+        casesTotal: v.total,
+        casesOpen: v.open,
+        allOpen: v.open === v.total,
+      }))
+      .sort((a, b) => a.label.localeCompare(b.label));
+
     dashboards.push({
       childId: child.id,
       crewName: child.crewName,
@@ -152,10 +226,13 @@ export async function parentDashboard(parentId: string): Promise<ChildDashboard[
         weekWords.map((entry) => entry.word.headword),
         weekWords.find((entry) => entry.word.rootFamily)?.word.rootFamily ?? null,
       ),
+      districts,
       runway: {
         monthsToExam,
         casesCracked: caseFiles.filter((caseFile) => caseFile.solvedAt).length,
-        casesTotal: 21,
+        // DERIVED. Hard-coded 21 until 2026-08-17, by which time there were 25 across two
+        // districts — the same shape as the district lede that said "Five corners" (R172).
+        casesTotal: allCases.length,
         nextMilestone: nextMilestone(child.rank, caseFiles.filter((c) => c.solvedAt).length, child.streakWeeks, taughtBackCount),
       },
     });

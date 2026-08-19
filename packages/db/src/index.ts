@@ -1,5 +1,5 @@
 import { PrismaClient } from '@prisma/client';
-import { assertEvent, checkChildFacingText, isBlocking, type AnalyticsEvent } from '@cluecrew/core';
+import { assertEvent, carriesApprovalMarker, checkChildFacingText, isBlocking, refuseApprovedTrim, type AnalyticsEvent } from '@cluecrew/core';
 
 /**
  * THE IMPORT PATH RUNS THE SAME CHECK AS THE GENERATOR PATH (annie's ruling, 2026-08-08).
@@ -15,7 +15,22 @@ import { assertEvent, checkChildFacingText, isBlocking, type AnalyticsEvent } fr
  * A blocking failure throws rather than writing, because a hint is serving content the moment its
  * misconception is ACTIVE.
  */
-function gateChildHint(data: unknown, op: string): void {
+/**
+ * THE CAP REPORTS OVER-LENGTH ON APPROVED TEXT; IT BLOCKS ONLY UNAPPROVED TEXT (Annie's fifth
+ * return, 2026-08-19 — R214).
+ *
+ * **THIS HALF WAS FOUND BY TESTING THE RESTORE, NOT BY READING THE RULING.** With the anti-trim
+ * guard in place, the re-cap threw correctly — and so did the RESTORE, because this gate refuses
+ * any hint failing the child-facing rules, and pre-cap text is over-length BY DEFINITION. So the
+ * ruling's own remedy could not have been written through the ordinary client: the trim was dead
+ * and the restore was dead with it.
+ *
+ * "Refuses and reports over-length, never trims" means the refusal is of the TRIM, not of the TEXT.
+ * On approved text this now REPORTS to stderr and allows the write — the reviewer's words go in as
+ * she wrote them, and the over-length is on the record where a person can read it. On unapproved
+ * text it still throws: that is the door doing its job for new drafting.
+ */
+function gateChildHint(data: unknown, op: string, approved = false): void {
   const row = data as { id?: string; childHint?: unknown; testedTokens?: unknown } | null | undefined;
   const hint = row?.childHint;
   if (typeof hint !== 'string' || !hint.trim()) return;
@@ -25,12 +40,20 @@ function gateChildHint(data: unknown, op: string): void {
     text: hint,
     testedTokens: Array.isArray(row?.testedTokens) ? (row?.testedTokens as string[]) : [],
   }).filter(isBlocking);
-  if (failures.length) {
-    throw new Error(
-      `Refusing to ${op} misconception ${row?.id ?? ''}: its childHint fails the child-facing gate — ` +
-        failures.map((f) => f.detail).join('; '),
+  if (!failures.length) return;
+  if (approved) {
+    console.error(
+      `OVER-LENGTH, REPORTED NOT BLOCKED (R214) — misconception ${row?.id ?? ''}: `
+      + `${failures.map((f) => f.detail).join('; ')}\n`
+      + '  This text carries an approval marker, so the cap reports and stands aside. It is the '
+      + 'reviewer\'s wording; shortening it to fit is the fault this rule exists to stop.',
     );
+    return;
   }
+  throw new Error(
+    `Refusing to ${op} misconception ${row?.id ?? ''}: its childHint fails the child-facing gate — ` +
+      failures.map((f) => f.detail).join('; '),
+  );
 }
 
 /**
@@ -67,14 +90,84 @@ const globalForPrisma = globalThis as unknown as { prisma?: PrismaClient };
 
 const baseClient = globalForPrisma.prisma ?? new PrismaClient();
 
+/**
+ * APPROVED TEXT IS NEVER SHORTENED — ENFORCED AT THE ONE DOOR (Annie's fifth return, 2026-08-19 —
+ * R214). The ruling says the disable goes ON THE WRITE. There are ~30 files that write `childHint`
+ * and wiring each is a list to maintain, so it goes HERE, in the single extended client every one
+ * of them imports: unbypassable, one place, and a new writer is guarded on the commit that adds it.
+ *
+ * **THIS IS WHAT MAKES THE RESTORE SAFE.** Annie ruled the 24 pre-cap strings restored, and a
+ * restore into a live trim loop would re-cap the row and overwrite the witness with the capped text
+ * as its own pre-cap — destroying the only evidence and making the second cap unprovable. The
+ * restore LENGTHENS, so it passes; a re-cap SHORTENS, so it throws. The window Annie identified
+ * cannot open.
+ *
+ * It reads the row's CURRENT value and markers before allowing the write — one extra SELECT on a
+ * hint update, which is the correct price for the property.
+ */
+async function refuseTrimOfApprovedHint(
+  where: { id?: string } | undefined,
+  data: Record<string, unknown> | undefined,
+): Promise<boolean> {
+  const id = where?.id;
+  const next = data?.childHint;
+  if (!id || typeof next !== 'string') return false;
+  const before = await baseClient.misconception.findUnique({
+    where: { id },
+    select: { childHint: true, approvedBy: true, textProvenance: true },
+  });
+  if (!before) return false;
+  const approved = carriesApprovalMarker({ approvedBy: before.approvedBy, textProvenance: before.textProvenance });
+  /*
+   * THE DECLARATION TRAVELS ON THE WRITE ITSELF (R257). A caller writing the approver's own
+   * redraft puts her authority into `textProvenance` in the SAME update — the document and its
+   * hash — and the guard reads it from there. It cannot be declared out of band, and a write that
+   * does not carry it gets the refusal, which is every ordinary write.
+   */
+  const declared = (data?.textProvenance ?? null) as { approvedByPerson?: unknown; authority?: unknown } | null;
+  const refusal = refuseApprovedTrim({
+    id, before: before.childHint, after: next,
+    row: { approvedBy: before.approvedBy, textProvenance: before.textProvenance },
+    approverRedraft: declared
+      ? { approvedBy: declared.approvedByPerson, authority: declared.authority }
+      : undefined,
+  });
+  if (refusal) {
+    throw new Error(
+      `${refusal.id}.${refusal.field}: ${refusal.reason}\n`
+      + `  before ${refusal.beforeWords}w -> after ${refusal.afterWords}w (${refusal.lost} lost)\n`
+      + '  Enforced at the client (R214): the cap reports over-length, it never trims.',
+    );
+  }
+  return approved;
+}
+
 export const prisma = baseClient.$extends({
   query: {
     misconception: {
       create({ args, query }) { gateChildHint(args.data, 'create'); noteMisconceptionWrite(); return query(args); },
-      update({ args, query }) { gateChildHint({ ...(args.data as object), id: (args.where as { id?: string }).id }, 'update'); noteMisconceptionWrite(); return query(args); },
-      upsert({ args, query }) {
+      async update({ args, query }) {
+        const approved = await refuseTrimOfApprovedHint(args.where as { id?: string }, args.data as Record<string, unknown>);
+        gateChildHint({ ...(args.data as object), id: (args.where as { id?: string }).id }, 'update', approved);
+        noteMisconceptionWrite();
+        return query(args);
+      },
+      async upsert({ args, query }) {
+        const approved = await refuseTrimOfApprovedHint(args.where as { id?: string }, args.update as Record<string, unknown>);
         gateChildHint(args.create, 'create');
-        gateChildHint({ ...(args.update as object), id: (args.where as { id?: string }).id }, 'update');
+        gateChildHint({ ...(args.update as object), id: (args.where as { id?: string }).id }, 'update', approved);
+        noteMisconceptionWrite();
+        return query(args);
+      },
+      async updateMany({ args, query }) {
+        // A bulk hint write cannot name one row's before-value; refuse the SHAPE rather than
+        // guess. Nothing in this repo writes childHint through updateMany today.
+        if ((args.data as Record<string, unknown>)?.childHint !== undefined) {
+          throw new Error(
+            'updateMany may not write childHint (R214): approved text is guarded per row, and a '
+            + 'bulk write has no per-row before-value to compare. Write each row by id.',
+          );
+        }
         noteMisconceptionWrite();
         return query(args);
       },

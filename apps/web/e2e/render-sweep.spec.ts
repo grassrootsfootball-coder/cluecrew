@@ -26,7 +26,7 @@ test('render sweep over every English item', async ({ browser }) => {
 
   const items = await prisma.item.findMany({
     where: { id: { startsWith: 'ENG-' } },
-    include: { options: true },
+    include: { options: { orderBy: { id: 'asc' } } },
     orderBy: [{ id: 'asc' }],
   });
   // Packet clusters first.

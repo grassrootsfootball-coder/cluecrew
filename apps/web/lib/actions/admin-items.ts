@@ -171,7 +171,7 @@ export async function markReviewedAction(formData: FormData): Promise<void> {
   if (!staff || !roleAllows(staff.effectiveRole, ['REVIEWER'])) redirect('/admin');
 
   const itemId = z.string().min(1).parse(formData.get('itemId'));
-  const item = await prisma.item.findUniqueOrThrow({ where: { id: itemId }, include: { options: true, questionType: true } });
+  const item = await prisma.item.findUniqueOrThrow({ where: { id: itemId }, include: { options: { orderBy: { id: 'asc' } }, questionType: true } });
 
   if (item.authoredBy === `human:${staff.email}`) {
     redirect(`/admin/items/${itemId}?error=own-item`);
@@ -296,7 +296,7 @@ export async function publishItemAction(formData: FormData): Promise<void> {
   if (!staff || !roleAllows(staff.effectiveRole, ['REVIEWER'])) redirect('/admin');
 
   const itemId = z.string().min(1).parse(formData.get('itemId'));
-  const item = await prisma.item.findUniqueOrThrow({ where: { id: itemId }, include: { options: true, questionType: true } });
+  const item = await prisma.item.findUniqueOrThrow({ where: { id: itemId }, include: { options: { orderBy: { id: 'asc' } }, questionType: true } });
 
   if (item.status !== 'REVIEWED' || !item.reviewedBy) {
     redirect(`/admin/items/${itemId}?error=not-reviewed`);
@@ -514,7 +514,7 @@ export async function bulkRecordItemReviewsAction(formData: FormData): Promise<v
   let recorded = 0;
   const skipped: string[] = [];
   for (const itemId of itemIds) {
-    const item = await prisma.item.findUnique({ where: { id: itemId }, include: { options: true, questionType: true } });
+    const item = await prisma.item.findUnique({ where: { id: itemId }, include: { options: { orderBy: { id: 'asc' } }, questionType: true } });
     if (!item || item.status !== 'DRAFT') {
       skipped.push(`${itemId.slice(0, 8)}: not a draft`);
       continue;
@@ -582,7 +582,7 @@ export async function bulkMarkReviewedAction(formData: FormData): Promise<void> 
   const skipped: string[] = [];
 
   for (const itemId of itemIds) {
-    const item = await prisma.item.findUnique({ where: { id: itemId }, include: { options: true, questionType: true } });
+    const item = await prisma.item.findUnique({ where: { id: itemId }, include: { options: { orderBy: { id: 'asc' } }, questionType: true } });
     if (!item || item.status !== 'DRAFT') {
       skipped.push(`${itemId.slice(0, 8)}: not a draft`);
       continue;

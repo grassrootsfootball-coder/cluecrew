@@ -35,6 +35,7 @@
  * the layout had failed.
  */
 import { OptionButton } from './option-button';
+import { ScopeNote } from './scope-note';
 import { optionLabel, outcomeFor, stemText, type EngineProps } from './shared';
 
 /** The verdict option: authored as label `N`, and never part of the reconstructed sentence. */
@@ -57,6 +58,7 @@ export default function ErrorSpotEngine({ stem, options, selected, onSelect, out
     return (
       <div>
         <p style={{ fontSize: '1.15rem' }}>{stemText(stem)}</p>
+        <p style={{ margin: '0 0 0.6rem' }}><ScopeNote kind="on-the-card" /></p>
         <div role="group" aria-label="Answer choices">
           {rows.map((r) => (
             <OptionButton
@@ -74,6 +76,37 @@ export default function ErrorSpotEngine({ stem, options, selected, onSelect, out
   return (
     <div>
       <p style={{ fontSize: '1.05rem' }}>{stemText(stem)}</p>
+      {/*
+        NO PASSAGE, NO CONTROL, SO THE NOTE TAKES THE CONTROL'S PLACE (R175). A child arriving from
+        a comprehension item has just learned that the way to find out where to look is to tap the
+        button beside the title. There is no button here and no title; the note says why.
+      */}
+      <p style={{ margin: '0 0 0.6rem' }}><ScopeNote kind="on-the-card" /></p>
+
+      {/*
+        THE SENTENCE, VISIBLE AS A SENTENCE, AT EVERY WIDTH (Annie's row 23; R209). Below 600px the
+        tappable segments are full-width rows — three inline attempts at that width are documented
+        in crew.css, and none survives the 48px target — so the ROWS carry the choosing and THIS
+        carries the reading: the sentence as continuous read-only prose, authored order (safe since
+        R192 serves segments unshuffled). Hidden at >=600px, where the segments themselves read
+        inline and a second copy would be noise. aria-hidden: a screen reader already receives the
+        sentence once, through the group below.
+      */}
+      <p
+        className="crew-errorspot-sentence-preview"
+        data-testid="errorspot-sentence-preview"
+        aria-hidden="true"
+      >
+        {/*
+          THE PREVIEW CARRIES THE SENTENCE'S REAL PUNCTUATION AND MUST NEVER NORMALISE IT (Annie,
+          2026-08-19). The segment values are joined and NOTHING ELSE happens to them: no quote
+          straightening, no spacing repair, no trimming of a stray mark. On these items the
+          punctuation IS the question — PU-06 turns on a question mark sitting OUTSIDE a closing
+          quote, and a tidy-up that "fixed" it would delete the item while leaving it on screen
+          looking correct. Any future formatting of this line is a content change, not a style one.
+        */}
+        {segments.map((s) => s.value).join(' ')}
+      </p>
 
       {/*
         THE SENTENCE. One paragraph, segments inline in authored order, wrapping naturally. The

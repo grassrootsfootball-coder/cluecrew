@@ -216,6 +216,35 @@ async function main(): Promise<void> {
     return;
   }
 
+  /**
+   * WHAT THIS RETIREMENT MAKES UNANSWERABLE — the measurable half (David's ruling, 2026-08-18 —
+   * R207). A file is a witness of (subject, VINTAGE), and the questions it uniquely answers are
+   * the eras it solely witnesses. WHICH questions will ever be asked is hindsight and stays a
+   * cost; WHETHER any other artefact witnesses the same ids is computable NOW, and the first
+   * retirement proved the price of not computing it: the ledger recorded hash and dropped mtime,
+   * so whether the retired ENG-001 originals could have settled a nine-item ambiguity is now
+   * UNKNOWABLE — not "no", unknowable, which is worse.
+   */
+  const WITNESS_ROOTS = ['/Users/davidb/Downloads/11+', resolve(import.meta.dirname, '../content/exports'), resolve(import.meta.dirname, '../content/evidence')];
+  const witnessScan = (ids: string[], selfPath: string) => {
+    const survivors: Array<{ path: string; mtime: string; sharedIds: number }> = [];
+    const walk = (dir: string): void => {
+      if (!existsSync(dir)) return;
+      for (const e of readdirSync(dir)) {
+        const p = join(dir, e);
+        try {
+          if (statSync(p).isDirectory()) { walk(p); continue; }
+          if (p === selfPath || !/\.(json|html|txt|md)$/.test(p)) continue;
+          const text = readFileSync(p, 'utf8');
+          const shared = ids.filter((id) => text.includes(id)).length;
+          if (shared > 0) survivors.push({ path: p, mtime: statSync(p).mtime.toISOString(), sharedIds: shared });
+        } catch { /* an unreadable candidate is not a witness */ }
+      }
+    };
+    for (const r of WITNESS_ROOTS) walk(r);
+    return survivors.sort((a, b) => a.mtime.localeCompare(b.mtime));
+  };
+
   // LEDGER FIRST. If the deletion is interrupted, the record still says what was there.
   mkdirSync(dirname(LEDGER), { recursive: true });
   writeFileSync(LEDGER, JSON.stringify({
@@ -227,7 +256,12 @@ async function main(): Promise<void> {
       + 'exception — before removal.',
     retired: clear.map((c) => ({
       path: c.path, sha256: c.sha, bytes: c.bytes, itemIds: c.itemIds,
+      // THE VINTAGE. A witness is (subject, WHEN); the first ledger kept only the subject.
+      mtimeAtRetirement: existsSync(c.path) ? statSync(c.path).mtime.toISOString() : null,
       readBy: c.readers, soleInputFor: c.soleInputFor,
+      // Every surviving artefact that mentions any of the same ids, with ITS vintage — so the era
+      // gap this removal creates is recorded at the only moment it is computable.
+      survivingWitnesses: witnessScan(c.itemIds, c.path),
     })),
     kept: kept.map((c) => ({ path: c.path, sha256: c.sha, blockers: c.blockers })),
   }, null, 2));

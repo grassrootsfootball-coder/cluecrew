@@ -204,7 +204,7 @@ async function main(): Promise<void> {
         // stops that happening again.
         ...(item.lineRefs?.length
           ? mechanic === 'cloze'
-            ? { gapRef: item.lineRefs[0] }
+            ? { gapIndex: item.lineRefs[0] }  // the ruled name (R209): a gap index is not a line reference
             : { lineRefs: item.lineRefs }
           : {}),
         ...(item.quotes?.length ? { quotes: item.quotes } : {}),
@@ -228,11 +228,38 @@ async function main(): Promise<void> {
         ...(item.preReview ? { preReview: item.preReview } : {}),
         ...(lowConfidence.has(item.itemId) ? { lowConfidence: true } : {}),
       };
+      /**
+       * ID ORDER MUST EQUAL LABEL ORDER WHEN THE OPTIONS ARE THE SENTENCE (David's ruling,
+       * 2026-08-17 — R199).
+       *
+       * R192 excluded `segmentsInOptions` items from the shuffle, so their SERVED order is now the
+       * STORED order, sealed to `id asc` by R187. Ids were auto-minted cuids, which happen to sort
+       * into insertion order — **the sentence reconstructs today by luck, not by construction**, and
+       * a re-import minting them differently would scramble it with no shuffle involved: R191's
+       * fault by a second route, past the guard written for the first.
+       *
+       * So for these items the id is DERIVED FROM THE LABEL and the property holds by construction.
+       * Asserting alone would have been a gate failing on something no author could fix — cuid order
+       * is not theirs to control. Every other item keeps auto-minted ids: nothing reads their stored
+       * order, and inventing a convention for them would be a second thing to keep true.
+       */
+      const segmented = (stemObject as { segmentsInOptions?: unknown }).segmentsInOptions === true;
       const optionRows = item.options.map((option) => ({
+        ...(segmented && option.label ? { id: `${item.itemId}-OPT-${option.label}` } : {}),
         content: { value: option.content, ...(option.label ? { label: option.label } : {}) },
         isCorrect: option.isCorrect,
         misconceptionId: option.misconceptionId ?? null,
       }));
+      if (segmented) {
+        const missing = item.options.filter((o) => !o.label);
+        if (missing.length) {
+          throw new Error(
+            `${item.itemId}: declares segmentsInOptions but ${missing.length} option(s) carry no label. `
+            + 'The label IS the order a child reads the sentence in; without it there is nothing to '
+            + 'derive an id from and the segments would serve in an arbitrary order.',
+          );
+        }
+      }
 
       // ONE GATE, THE SAME ONE (2026-08-09, closing the three-gates finding).
       //

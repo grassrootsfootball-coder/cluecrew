@@ -1,0 +1,147 @@
+{
+ "_meta": {
+  "kind": "misconception-platform-import",
+  "district": "ENGLISH",
+  "batch": 1,
+  "count": 4,
+  "status": "PROPOSED",
+  "category": "null on every row \u2014 see categoryNote; the axis is unsettled and the field is nullable and reviewer-facing",
+  "importOrder": "THIS FILE BEFORE THE EIGHT CLUSTER JSONS. 54 of 282 distractors across ENG-005..012 reference these four ids; a missing row is what orphans them.",
+  "hintProvenance": "All four hints are approved. Two are Anne's own text quoted verbatim from her proposals (within-span, negation-dropped); two are my drafts she approved unchanged (neighbouring-sense, form-lookalike).",
+  "hintTests": "Every hint passes both standing tests \u2014 DIRECTION (mechanised, verify_import.py fails if any two entries agree) and COACHED KEY (not mechanisable; a reader asks what the sentence makes the child do and whether that is the opposite of the mistake). Recorded per entry so an author amending one meets the tests in the row. See AUTHORING-BRIEF-ADDENDUM-25.md."
+ },
+ "misconceptions": [
+  {
+   "id": "en-within-span-wrong-element",
+   "category": null,
+   "status": "PROPOSED",
+   "axis": "TOPIC",
+   "distractorClass": "derivable",
+   "description": "The option states something that is true inside the cited window and answers a different question from the one asked. The child has located the right lines and taken the wrong element out of them. A named sub-route is the WRONG SPEAKER: the material is inside the window but belongs to the other party in an exchange \u2014 one child's answer offered where the other child's instruction was asked for. The cure is the same, so the sub-route shares the hint.",
+   "childHint": "This one is in the lines. Check it answers the question you were asked.",
+   "boundaries": "Against en-wrong-scope-retrieval the test is LOCATION: outside the stem's named window is wrong-scope, inside it is this. Against en-plausible-not-stated the test is TRUTH: those options are absent from the passage, these are present in it. Against en-inference-literal-lookalike the test is WHAT THE OPTION IS MADE OF: literal-lookalike reuses the wording of the window as its answer; these are usually reworded and are wrong because of the relation they stand in to the question. Against en-attribute-transfer and en-agent-patient-reversal the test is WHETHER A RELATION IS SCRAMBLED: two things swapping properties or roles is transfer or reversal; one true thing offered in place of another true thing, with no swap, is this. Against en-coordination-wrong-conjunct the test is WHETHER A CONNECTIVE DID THE WORK: if the option is true of the other half of a named coordination, it is that entry.",
+   "hintStatus": "APPROVED_VERBATIM",
+   "district": "ENGLISH",
+   "approvedBy": "Anne",
+   "sourcePattern": "in-use-before-entry:30-distractors-across-ENG-005-to-ENG-012",
+   "hintDirection": "back to the question that was asked",
+   "categoryNote": "WITHDRAWN, and null rather than guessed. I proposed a fresh six-value vocabulary because I searched every artefact I hold and found no English entry carrying a category. That search was sound and its conclusion was not: misconception-import.json is an IMPORT STAGING FILE, not a DB export, and it drops the field. The platform's entries carry an existing partial vocabulary \u2014 writers-technique, punctuation, error-spot, vocabulary, comprehension \u2014 which I could not see and reported as absent. Anne's ruling: two partial vocabularies disagreeing is worse than one incomplete vocabulary, and you get there by treating an existing partial as if it were not there. That is exactly what I did. The field is nullable and reviewer-facing, so these import without it.",
+   "importPriority": "R67. This is the tag that drifted 1,1,1,3 to 8,5,9,8 across eight clusters on nothing but a wording habit \u2014 ten of twelve executions written to one sentence pattern, because there was no description to refuse a use. Its hint is approved. Every day it sits without a body is another delivery in which a habit is the only thing doing the refusing. It goes in first and alone if anything blocks the rest.",
+   "hintTests": {
+    "directionTest": {
+     "rule": "No hint may send the child where a sibling already sends her.",
+     "direction": "back to the question that was asked",
+     "result": "PASS \u2014 no other entry sends the child here.",
+     "mechanised": true,
+     "limit": "catches IDENTICAL directions, not CONVERGENT ones. The rejected dominant-sense draft would have passed a strict-equality test while doing the erosion it was rejected for. Blunt case mechanical, near-miss human."
+    },
+    "coachedKeyTest": {
+     "rule": "A hint blocks the error the entry names; it does not coach the key.",
+     "result": "BLOCKS: the child has verified the option IS in the passage and stopped there; the hint sends her to the question she was actually asked. Does not coach the key.",
+     "mechanised": false,
+     "why": "Not mechanisable. A blocking and a coaching hint can be identical in every measurable property; the difference is which way the instruction runs relative to the error, and the error lives in the description rather than in the hint. A proxy would pass things it should not, and a passing proxy is believed.",
+     "runBy": "second cold read"
+    }
+   }
+  },
+  {
+   "id": "en-negation-dropped",
+   "category": null,
+   "status": "PROPOSED",
+   "axis": "TOPIC",
+   "distractorClass": "derivable",
+   "description": "The passage carries an explicit negative \u2014 no, not, never, nothing, without, could not, sha'n't \u2014 and the option states the affirmative. The child has read the content words of the sentence and dropped the word that reverses them. Requires a negative WORD in a named line; a negation sustained across a whole text with no such word is en-whole-text-absence-asserted.",
+   "childHint": "Find the small negative word in the line before you decide. One 'not' changes the whole answer.",
+   "boundaries": "Against en-relation-word-flipped the test is WHAT THE DROPPED WORD DOES: a relation word joins two propositions and flipping it rearranges how they relate; a negative operates on one proposition and dropping it inverts that proposition's truth. Against en-extreme-option-pull the test is DIRECTION: that entry ADDS an absolute the text does not carry, this one REMOVES one it does. Against en-plausible-not-stated the test is whether the passage addresses the point at all: here it addresses it and says no. Against en-minimal-pair-skim the test is WHOSE PROPERTY IT IS: that is a property of the option set, this is a property of one option against the passage. Against en-whole-text-absence-asserted the test is WHETHER A NEGATIVE WORD EXISTS TO DROP.",
+   "hintStatus": "APPROVED_VERBATIM",
+   "district": "ENGLISH",
+   "approvedBy": "Anne",
+   "sourcePattern": "in-use-before-entry:18-distractors-across-ENG-005-to-ENG-012",
+   "hintDirection": "to a negative word inside the named line",
+   "categoryNote": "WITHDRAWN, and null rather than guessed. I proposed a fresh six-value vocabulary because I searched every artefact I hold and found no English entry carrying a category. That search was sound and its conclusion was not: misconception-import.json is an IMPORT STAGING FILE, not a DB export, and it drops the field. The platform's entries carry an existing partial vocabulary \u2014 writers-technique, punctuation, error-spot, vocabulary, comprehension \u2014 which I could not see and reported as absent. Anne's ruling: two partial vocabularies disagreeing is worse than one incomplete vocabulary, and you get there by treating an existing partial as if it were not there. That is exactly what I did. The field is nullable and reviewer-facing, so these import without it.",
+   "hintTests": {
+    "directionTest": {
+     "rule": "No hint may send the child where a sibling already sends her.",
+     "direction": "to a negative word inside the named line",
+     "result": "PASS \u2014 no other entry sends the child here.",
+     "mechanised": true,
+     "limit": "catches IDENTICAL directions, not CONVERGENT ones. The rejected dominant-sense draft would have passed a strict-equality test while doing the erosion it was rejected for. Blunt case mechanical, near-miss human."
+    },
+    "coachedKeyTest": {
+     "rule": "A hint blocks the error the entry names; it does not coach the key.",
+     "result": "BLOCKS: the child has read the content words and skipped the negative; the hint sends her back for the word she skipped. Does not coach the key.",
+     "mechanised": false,
+     "why": "Not mechanisable. A blocking and a coaching hint can be identical in every measurable property; the difference is which way the instruction runs relative to the error, and the error lives in the description rather than in the hint. A proxy would pass things it should not, and a passing proxy is believed.",
+     "runBy": "second cold read"
+    }
+   }
+  },
+  {
+   "id": "en-vocab-neighbouring-sense",
+   "category": null,
+   "status": "PROPOSED",
+   "axis": "TOPIC",
+   "distractorClass": "derivable",
+   "description": "The child chooses another genuine sense of the same word \u2014 neither the commonest one nor the one the passage fixes. The option is defensible in isolation and is ruled out only by the surrounding text, so the child gets no signal that anything is wrong. Scoped to the ERROR, not to vocabulary items.",
+   "childHint": "More than one meaning fits this word. Find the words nearby that decide which one it has to be.",
+   "boundaries": "Against en-vocab-dominant-sense the test is WHICH SENSE ARRIVES FIRST: the commonest is dominant, any other real sense is this. Against en-vocab-form-lookalike the test is WHETHER THE MEANING BELONGS TO THIS WORD AT ALL: here it does. An item may legitimately carry BOTH this and en-vocab-dominant-sense, because a word with three live senses affords both by construction \u2014 that is what ENG-007-LP-10 needed a duplicate-tag allowance for before the sense tag subdivided.",
+   "hintStatus": "APPROVED_AS_DRAFTED",
+   "district": "ENGLISH",
+   "approvedBy": "Anne",
+   "supersedes": "en-vocab-secondary-sense",
+   "sourcePattern": "census:12-of-39-en-vocab-secondary-sense-distractors-district-wide",
+   "hintDirection": "to the neighbouring words",
+   "categoryNote": "WITHDRAWN, and null rather than guessed. I proposed a fresh six-value vocabulary because I searched every artefact I hold and found no English entry carrying a category. That search was sound and its conclusion was not: misconception-import.json is an IMPORT STAGING FILE, not a DB export, and it drops the field. The platform's entries carry an existing partial vocabulary \u2014 writers-technique, punctuation, error-spot, vocabulary, comprehension \u2014 which I could not see and reported as absent. Anne's ruling: two partial vocabularies disagreeing is worse than one incomplete vocabulary, and you get there by treating an existing partial as if it were not there. That is exactly what I did. The field is nullable and reviewer-facing, so these import without it.",
+   "hintTests": {
+    "directionTest": {
+     "rule": "No hint may send the child where a sibling already sends her.",
+     "direction": "to the neighbouring words",
+     "result": "PASS \u2014 no other entry sends the child here.",
+     "mechanised": true,
+     "limit": "catches IDENTICAL directions, not CONVERGENT ones. The rejected dominant-sense draft would have passed a strict-equality test while doing the erosion it was rejected for. Blunt case mechanical, near-miss human."
+    },
+    "coachedKeyTest": {
+     "rule": "A hint blocks the error the entry names; it does not coach the key.",
+     "result": "BLOCKS: the child has several meanings live and picked one; the hint sends her to the words that adjudicate. Does not coach the key \u2014 it does not say which meaning wins.",
+     "mechanised": false,
+     "why": "Not mechanisable. A blocking and a coaching hint can be identical in every measurable property; the difference is which way the instruction runs relative to the error, and the error lives in the description rather than in the hint. A proxy would pass things it should not, and a passing proxy is believed.",
+     "runBy": "second cold read"
+    }
+   }
+  },
+  {
+   "id": "en-vocab-form-lookalike",
+   "category": null,
+   "status": "PROPOSED",
+   "axis": "TOPIC",
+   "distractorClass": "derivable",
+   "description": "The meaning the child chooses belongs to a DIFFERENT WORD that the target resembles in form, or to a morpheme she has met in other words. She has not chosen among the target's senses at all \u2014 she has misidentified the word. Scoped to the ERROR, not to vocabulary items.",
+   "childHint": "This word looks like one you know. Read it letter by letter and check it is the same word.",
+   "boundaries": "Against both sense entries the test is WHETHER THE MEANING BELONGS TO THIS WORD AT ALL: there it does, here it does not. The hint for the two sense entries \u2014 find the words nearby that decide which meaning \u2014 is ACTIVELY WRONG here, because nothing nearby can help a child who is reading the wrong word. The remedy is orthographic, not contextual, which is why this cannot be a clause on either of them.",
+   "hintStatus": "APPROVED_AS_DRAFTED",
+   "district": "ENGLISH",
+   "approvedBy": "Anne",
+   "supersedes": "en-vocab-secondary-sense",
+   "sourcePattern": "census:4-of-39-en-vocab-secondary-sense-distractors; sibling of vr02-surface-link, arrived at independently in the VR district",
+   "hintRuling": "Anne confirmed the property this entry was split out for: nothing in the hint points outward at context, and 'read it letter by letter' is immediately actionable. It reads nothing like its siblings, which is what matters.",
+   "hintDirection": "to the spelling of the word itself",
+   "categoryNote": "WITHDRAWN, and null rather than guessed. I proposed a fresh six-value vocabulary because I searched every artefact I hold and found no English entry carrying a category. That search was sound and its conclusion was not: misconception-import.json is an IMPORT STAGING FILE, not a DB export, and it drops the field. The platform's entries carry an existing partial vocabulary \u2014 writers-technique, punctuation, error-spot, vocabulary, comprehension \u2014 which I could not see and reported as absent. Anne's ruling: two partial vocabularies disagreeing is worse than one incomplete vocabulary, and you get there by treating an existing partial as if it were not there. That is exactly what I did. The field is nullable and reviewer-facing, so these import without it.",
+   "hintTests": {
+    "directionTest": {
+     "rule": "No hint may send the child where a sibling already sends her.",
+     "direction": "to the spelling of the word itself",
+     "result": "PASS \u2014 no other entry sends the child here.",
+     "mechanised": true,
+     "limit": "catches IDENTICAL directions, not CONVERGENT ones. The rejected dominant-sense draft would have passed a strict-equality test while doing the erosion it was rejected for. Blunt case mechanical, near-miss human."
+    },
+    "coachedKeyTest": {
+     "rule": "A hint blocks the error the entry names; it does not coach the key.",
+     "result": "BLOCKS: the child has misread the word; the hint sends her to the spelling. Does not coach the key \u2014 it says nothing about meaning at all, which is the point.",
+     "mechanised": false,
+     "why": "Not mechanisable. A blocking and a coaching hint can be identical in every measurable property; the difference is which way the instruction runs relative to the error, and the error lives in the description rather than in the hint. A proxy would pass things it should not, and a passing proxy is believed.",
+     "runBy": "second cold read"
+    }
+   }
+  }
+ ]
+}

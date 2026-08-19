@@ -75,7 +75,7 @@ async function main(): Promise<void> {
   const checks = await Promise.all(
     batch.items.map(async (rawEntry) => {
       const entry = { ...rawEntry, newScript: rawEntry.shortScript ?? rawEntry.newScript ?? '' };
-      const item = await prisma.item.findUnique({ where: { id: entry.itemId }, include: { options: true } });
+      const item = await prisma.item.findUnique({ where: { id: entry.itemId }, include: { options: { orderBy: { id: 'asc' } } } });
       const explanation = (item?.explanation ?? {}) as Record<string, unknown>;
       const stem = (item?.stem ?? {}) as Record<string, unknown>;
       const quotedSpans = Array.isArray(stem.quotes)

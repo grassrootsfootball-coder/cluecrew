@@ -140,15 +140,16 @@ export default async function FoundingPage({
             <h2>What&apos;s live today</h2>
             <p data-testid="live-now">
               <strong>Live now:</strong> Verbal Reasoning — all 21 GL-style question types, taught
-              five ways, free to start.
+              five ways, free to start. English comprehension is opening now, with the first cases
+              free.
             </p>
             <p>
-              <strong>Opening next:</strong> Full programmes with the complete VR case library and
-              paced plans to your exam year.
+              <strong>Opening next:</strong> More English, and full programmes with the complete case
+              library and paced plans to your exam year.
             </p>
             <p>
-              <strong>Then:</strong> Maths (the Workshop), Non-Verbal Reasoning, English — in that
-              order, included in Full Crew as they land, at the same price.
+              <strong>Then:</strong> Maths (the Workshop) and Non-Verbal Reasoning — included in Full
+              Crew as they land, at the same price.
             </p>
             <p className="cc-muted">
               <em>
@@ -245,7 +246,7 @@ export default async function FoundingPage({
               schools do change providers.
             </p>
             <p>
-              <em>What do I get free?</em> Ten full cases across the five question families, every
+              <em>What do I get free?</em> Twelve full cases across six question families, every
               one taught all five ways, daily word collecting, and a weekly exam-style Boss Round.
               No card, no clock, no ads — ever.
             </p>

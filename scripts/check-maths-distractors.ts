@@ -37,7 +37,7 @@ function optionValue(content: unknown): string | null {
 async function main(): Promise<void> {
   const items = await prisma.item.findMany({
     where: { questionType: { district: 'MATHS' } },
-    include: { options: true },
+    include: { options: { orderBy: { id: 'asc' } } },
   });
 
   const unreadable: string[] = [];

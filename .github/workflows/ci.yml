@@ -236,6 +236,55 @@ jobs:
       - name: Cloze gaps (claimed once, and present in the text)
         run: pnpm check:cloze-gaps
 
+      # Annie ruled walkScript child-facing UNTIL MEASURED, and the measurement is that no
+      # apps/web path a child can reach reads it. That is true today and would stop being true
+      # the first time someone wires the authored walk into the Walk mode shell, which is built
+      # and empty and is the obvious place it will go. A grep result rots; this does not.
+      - name: walkScript reachability (the measurement, kept honest)
+        run: pnpm check:walkscript-reach
+
+      # The population Walk mode and the maths gates are both instances of: something declared,
+      # validated at the door, and consumed by nothing. Fails on a NEW one; prints the backlog in
+      # full every run so a known list cannot decay into a green tick.
+      - name: Declared but unread (what we name and never consume)
+        run: pnpm check:declared-unread
+
+      # The preview repeats the sentence under test. A normaliser that "tidied" its punctuation
+      # would delete the question while leaving something on screen that still looks like one.
+      - name: Error-spot preview is verbatim
+        run: pnpm check:errorspot-preview
+
+      # A verdict option ("no mistake", "no word is needed") judges the whole rather than offering
+      # a candidate. Pinned last on every card, asserted through the real shuffle over 200 children
+      # — the property holds by authoring accident today and the shuffle is free to break it.
+      - name: Verdict options are served last
+        run: pnpm check:verdict-option-last
+
+      # Annie's line, in writing and asserted: no ruled-note banner, status pill or reviewer badge
+      # on any surface a child can reach.
+      - name: No review furniture on a served surface
+        run: pnpm check:no-review-furniture
+
+      # Cowork's method, adopted after it found what a population-named sweep could not: walk every
+      # LIVE row behind a Case door and screen EVERY string it holds, however deeply nested. A
+      # sweep named for a field can only ever clear that field.
+      - name: Every string field on every served row
+        run: pnpm check:every-string-field
+
+      # Quote fields are a THIRD CLASS: not child-facing (the reading-age cap over quoted Victorian
+      # prose would fail Grahame on every line), not staff prose either — a record of what the
+      # passage says, checked by exact match against it. Stronger than a punctuation sweep: a
+      # doubled opening mark is not in the source, so it fails without anyone naming the shape.
+      - name: Source-of-truth quotes match the passage
+        run: pnpm check:source-quotes
+
+      # A headword served to a child carries a tier — on the population the rule was written for.
+      # stem.words[] does three jobs; an undeclared word-bearing type fails, because every default
+      # is wrong: guess components and a vocabulary family leaves scope, guess headword and a
+      # compound bank is blocked over words nobody would tier.
+      - name: Served headwords carry a tier
+        run: pnpm check:headword-tiers
+
       - name: Register check (every cited rule has a register entry)
         run: pnpm check:register
 
@@ -357,8 +406,20 @@ jobs:
       # printed stored (key-first) order without the per-child serving shuffle.
       # This gate makes the safety standing: every bank uniform in storage, and
       # no bank's SERVED key position above chance through the real shuffle.
-      - name: Option-position gate (key position uniform in storage, fair when served)
+      # The stated safety changed under R199: storage uniformity is REPORTED (it costs a
+      # review-pack tell, not a child anything); SERVED fairness and segment order are what fail.
+      - name: Option-position gate (served key fair; segmented items reconstruct)
         run: pnpm check:option-positions
+
+      # No list-valued relation is read without an orderBy — physical row order is not an
+      # order, and one UPDATE re-permuted every child's letters before this existed (R186-R188).
+      - name: Unordered-include gate
+        run: pnpm check:unordered-includes
+
+      # The three PLATFORM-IMPORT files are the only record of what Cowork's library claimed
+      # before its own normalisation overwrote it (R201/R202). Not copies — witnesses (R203).
+      - name: Pinned witnesses present and unaltered
+        run: pnpm check:witnesses
 
       # Every MATHS item's key is computed from its solution expression —
       # a wrong key fails the build (BUILD-DISTRICT-MATHS §5, gate #3).

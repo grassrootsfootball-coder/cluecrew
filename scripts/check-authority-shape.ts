@@ -78,10 +78,45 @@ async function main(): Promise<void> {
     }
   }
 
-  // --- 2. A PERSON-SHAPED AUTHORITY THAT RESOLVES TO NOBODY --------------------------------
+  // --- 2. EVERY AUTHORITY VALUE, WHATEVER ITS SHAPE ----------------------------------------
+  /**
+   * **THIS SCREENED ONE SHAPE AND FOUR WALKED PAST IT** (David, 2026-08-19 — R228). The guard was
+   * `who.startsWith('human:')`, so only the email form was ever inspected. The store records the
+   * SAME PERSON five ways — `human:staff-reviewer@…`, `reviewer:rev-0001`, `rev-0001`,
+   * `current-reviewer`, and null — and three of those five were skipped before any test ran.
+   * **An allow-list keyed on one shape is not a screen; it is a screen with four doors beside it**,
+   * and it is R57's finding (a door that drops what it cannot name) wearing checking clothes.
+   *
+   * Inverted: EVERY non-null value in an authority column is classified and counted. A value is
+   * clean only if it RESOLVES to a Reviewer row or is DECLARED. Nothing passes for having an
+   * unfamiliar prefix.
+   */
   const unresolved = new Map<string, { rows: number; where: Set<string> }>();
+  const everyValue = new Map<string, { rows: number; where: Set<string>; resolvesTo: { id: string; label: string; via: string } | null }>();
+
+  /**
+   * The shapes a value can resolve through, each named. `reviewer:<id>` and a bare `<id>` both
+   * point at a Reviewer row; `<resolvesActor>` is the placeholder a row maps to a person.
+   */
+  // Returns the PERSON, not a sentence about the person. The first version returned a formatted
+  // string including the route ('via actor …'), so grouping by it split one reviewer into two
+  // people and under-reported her shapes as 2 when they are 3 — a key built out of display text.
+  const resolveWho = (who: string): { id: string; label: string; via: string } | null => {
+    const bare = who.startsWith('reviewer:') ? who.slice('reviewer:'.length) : who;
+    const byId = reviewers.find((r) => r.id === bare);
+    if (byId) return { id: byId.id, label: `${byId.displayName} (${byId.id})`, via: who === bare ? 'bare id' : 'reviewer: prefix' };
+    const byActor = reviewers.find((r) => r.resolvesActor === who);
+    if (byActor) return { id: byActor.id, label: `${byActor.displayName} (${byActor.id})`, via: `actor '${who}'` };
+    return null;
+  };
+
   const note = (who: string | null, where: string): void => {
-    if (!who || !who.startsWith('human:') || resolvable.has(who) || who in DECLARED_NON_INDIVIDUAL) return;
+    if (!who) return;
+    const resolvesTo = resolveWho(who);
+    const seen = everyValue.get(who) ?? { rows: 0, where: new Set<string>(), resolvesTo };
+    seen.rows += 1; seen.where.add(where);
+    everyValue.set(who, seen);
+    if (resolvesTo !== null || who in DECLARED_NON_INDIVIDUAL) return;
     const e = unresolved.get(who) ?? { rows: 0, where: new Set<string>() };
     e.rows += 1; e.where.add(where);
     unresolved.set(who, e);
@@ -93,14 +128,47 @@ async function main(): Promise<void> {
   console.log(`  ${wearing.length} wearing a reviewer's authority`);
   for (const w of wearing) console.error(`    x ${w}`);
 
+  // The census first, so the denominator is visible before any verdict about part of it.
+  console.log(`\n  EVERY distinct authority value: ${everyValue.size}`);
+  for (const [who, e] of [...everyValue].sort((a, b) => b[1].rows - a[1].rows)) {
+    const verdict = e.resolvesTo ? `-> ${e.resolvesTo.label} via ${e.resolvesTo.via}` : who in DECLARED_NON_INDIVIDUAL ? '-> DECLARED not an individual' : '-> RESOLVES TO NOBODY';
+    console.log(`    ${String(e.rows).padStart(4)} ${who.padEnd(38)} ${verdict}`);
+  }
+
+  /**
+   * ONE PERSON UNDER SEVERAL SHAPES IS ITS OWN FAULT. Every value below resolves correctly, so the
+   * check above is silent on it — and a store that records the same reviewer five ways cannot be
+   * queried for "what did she approve" by any single predicate. It is the conflation family again:
+   * not a name that means nothing, a person who means several names.
+   */
+  const byPerson = new Map<string, string[]>();
+  for (const [who, e] of everyValue) {
+    if (!e.resolvesTo) continue;
+    const list = byPerson.get(e.resolvesTo.label) ?? [];
+    list.push(who);
+    byPerson.set(e.resolvesTo.label, list);
+  }
+  const multiShaped = [...byPerson].filter(([, shapes]) => shapes.length > 1);
+  if (multiShaped.length > 0) {
+    console.log(`\n  ${multiShaped.length} PERSON(S) RECORDED UNDER MORE THAN ONE SHAPE:`);
+    for (const [person, shapes] of multiShaped) {
+      console.log(`    ! ${person} is written ${shapes.length} ways: ${shapes.sort().join(', ')}`);
+    }
+    console.log('    No single predicate answers "what did this person approve". Pick one shape per');
+    console.log('    person and migrate the rest, or the question stays unanswerable by query.');
+  }
+
   const total = [...unresolved.values()].reduce((a, e) => a + e.rows, 0);
-  console.log(`\n  person-shaped authorities resolving to NO Reviewer row: ${unresolved.size} distinct, ${total} row(s)`);
+  console.log(`\n  authority values resolving to NO Reviewer row: ${unresolved.size} distinct, ${total} row(s)`);
   for (const [who, e] of [...unresolved].sort((a, b) => b[1].rows - a[1].rows)) {
     console.log(`    ? ${who} — ${e.rows} row(s) via ${[...e.where].join(', ')}`);
   }
   if (unresolved.size > 0) {
-    console.log('    Each reads as a named individual and matches no reviewer. Either add the Reviewer');
-    console.log('    row, or declare what it actually is in DECLARED_NON_INDIVIDUAL with a reason.');
+    console.log('    Each names an authority and matches no reviewer. Either add the Reviewer row,');
+    console.log('    or declare what it actually is in DECLARED_NON_INDIVIDUAL with a reason.');
+    console.log('    NOTE: this now screens EVERY shape, not just `human:` — four shapes used to pass');
+    console.log('    without inspection, which is why the distinct count can rise without anything');
+    console.log('    in the store having changed.');
   }
 
   /**

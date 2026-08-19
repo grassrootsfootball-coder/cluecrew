@@ -258,11 +258,33 @@ export function checkReadingAge(
   // Stripped rather than blanked: a quote ending in a full stop would
   // otherwise cut our sentence in two and the halves would each look short,
   // which flatters the count instead of measuring it.
+  /**
+   * **A QUOTED SPAN COUNTS AS ONE UNIT AGAINST THE SENTENCE CAP, NOT ZERO** (Annie's ruling,
+   * 2026-08-19 — R337). Her reason: **the cap exists so we do not make the question harder to read
+   * than the text it is about**, and a sentence quoted from the item's OWN passage cannot be harder
+   * to read than the passage. But it is not free either — the child still reads it — so it counts
+   * once, as the single object it is.
+   *
+   * Previously the span was stripped entirely, which counted it as zero and flattered the number
+   * the other way. `QUOTE_UNIT` is a single word-shaped token, so a 22-word stem carrying a
+   * 14-word quotation measures as 9 rather than 22 or 8.
+   *
+   * **IT RIDES ON THE DECLARATION AND NEVER ON QUOTATION MARKS.** An undeclared quotation must not
+   * silently earn this — the 62 spans declared on 2026-08-19 (R331) are what makes the rule
+   * checkable at all, and a rule keyed on punctuation would hand the exemption to anyone who typed
+   * an apostrophe.
+   *
+   * The VOCABULARY ceiling still sees the span removed entirely, which is unchanged: a hard word
+   * inside a quotation is the source's, and we are not answerable for Grahame's vocabulary.
+   */
+  const QUOTE_UNIT = 'quotation';
   let ourWording = text;
+  let vocabularyWording = text;
   for (const span of quotedSpans) {
     const trimmed = span.trim();
     if (trimmed.length >= 3 && ourWording.includes(trimmed)) {
-      ourWording = ourWording.split(trimmed).join(' ');
+      ourWording = ourWording.split(trimmed).join(` ${QUOTE_UNIT} `);
+      vocabularyWording = vocabularyWording.split(trimmed).join(' ');
     }
   }
 
@@ -288,7 +310,7 @@ export function checkReadingAge(
   const stem = exemptStem.toLowerCase().slice(0, 6);
   /** Words cleared by `testedTokens` alone — no declaration covered them. Reported, not failed. */
   const tokenOnly: string[] = [];
-  const longWords = ourWording
+  const longWords = vocabularyWording
     .split(/\s+/)
     .filter(Boolean)
     .filter((word) => {
@@ -324,11 +346,53 @@ export function checkReadingAge(
       if (isTestedToken(word, passageNames)) return false;
       return syllables(cleaned) >= 4;
     });
-  if (longWords.length > rules.maxLongWords) {
+  /**
+   * **THE CEILING COUNTS DISTINCT HEADWORDS, NOT TOKENS** (Annie's ruling, 2026-08-19 — R338).
+   *
+   * **One hard word met twice is one hard word**, and **a word inside another is not two.**
+   * `imagination` / `imagining` share a root and are one demand on the child. `ordinary` sitting
+   * inside `extraordinary` is not two hard words — and on `ENG-004-AGG-08` **taking one of that
+   * pair out would delete the question**, which is built on the contrast between them.
+   *
+   * Counting tokens made the gate measure REPETITION, which costs a child nothing, instead of
+   * VARIETY, which is what a vocabulary ceiling is about.
+   *
+   * Grouped by a conservative root: lower-cased, stripped, common suffixes removed. Words that do
+   * not share a root still count separately, and a word containing another counts once for the
+   * longer form — the shorter is a substring, not a second demand.
+   */
+  const rootOf = (word: string): string => {
+    let w = word.toLowerCase().replace(/[^a-z]/g, '');
+    for (const s of ['ational', 'ation', 'ings', 'ing', 'ies', 'ied', 'est', 'ers', 'er', 'ed', 'es', 'ly', 's']) {
+      if (w.length - s.length >= 4 && w.endsWith(s)) { w = w.slice(0, -s.length); break; }
+    }
+    return w.replace(/([^aeiou])\1$/, '$1').replace(/e$/, '');
+  };
+  const distinctRoots = new Map<string, string>();
+  for (const word of longWords) {
+    const root = rootOf(word);
+    // A shorter word wholly inside a longer one is the same demand: keep the longer as the name.
+    const containing = [...distinctRoots.keys()].find((k) => k.includes(root) || root.includes(k));
+    if (containing) {
+      if (root.length > containing.length) {
+        distinctRoots.delete(containing);
+        distinctRoots.set(root, word);
+      }
+      continue;
+    }
+    distinctRoots.set(root, word);
+  }
+  const distinctLongWords = [...distinctRoots.values()];
+
+  if (distinctLongWords.length > rules.maxLongWords) {
     failures.push({
       where: label,
       rule: 'long-words',
-      detail: `${longWords.length} long words (max ${rules.maxLongWords}): ${longWords.join(', ')}`,
+      detail: `${distinctLongWords.length} distinct long word(s) (max ${rules.maxLongWords}): `
+        + `${distinctLongWords.join(', ')}`
+        + (longWords.length !== distinctLongWords.length
+          ? ` — counted from ${longWords.length} token(s); repeats and shared roots count once (R338)`
+          : ''),
     });
   }
   // WHICH MECHANISM FIRED, reported per word. A union has no defined winner and cannot be

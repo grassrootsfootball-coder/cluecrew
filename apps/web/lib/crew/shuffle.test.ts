@@ -14,18 +14,49 @@ const OPTIONS: TestOption[] = [
   { id: 'opt-d', isCorrect: false, misconceptionId: 'm-carryover' },
 ];
 
+/** A stem that declares nothing: the ordinary case, where options carry no authored order. */
+const STEM_SHUFFLED = { prompt: 'which one?' };
+/** An error-spot stem: the options ARE the sentence, in order (R192). */
+const STEM_ORDERED = { prompt: 'find the mistake', segmentsInOptions: true };
+
 describe('shuffleOptionsForChild', () => {
+  it('NEVER shuffles options that are ordered by construction (R192)', () => {
+    // The whole finding: error-spot options joined in order reconstruct a sentence, so a shuffle
+    // does not make the item harder — it destroys it. Keyed on the structural property, so a new
+    // family declaring `segmentsInOptions` is protected without this file being edited.
+    for (const child of ['child-a', 'child-b', 'child-zzz', 'child-0007']) {
+      expect(shuffleOptionsForChild(OPTIONS, child, 'item-spot', STEM_ORDERED).map((o) => o.id))
+        .toEqual(OPTIONS.map((o) => o.id));
+    }
+  });
+
+  it('still shuffles when the stem declares no construction order', () => {
+    const orders = new Set(
+      Array.from({ length: 40 }, (_, i) =>
+        shuffleOptionsForChild(OPTIONS, `child-${i}`, 'item-1', STEM_SHUFFLED).map((o) => o.id).join()),
+    );
+    expect(orders.size).toBeGreaterThan(1);
+  });
+
+  it('treats a missing or malformed stem as SHUFFLE, never as ordered', () => {
+    // Fails closed for the ordinary case: only an explicit `segmentsInOptions: true` suppresses it.
+    for (const stem of [undefined, null, {}, { segmentsInOptions: 'true' }, { segmentsInOptions: 1 }]) {
+      expect(shuffleOptionsForChild(OPTIONS, 'child-a', 'item-1', stem).map((o) => o.id))
+        .toEqual(shuffleOptionsForChild(OPTIONS, 'child-a', 'item-1', STEM_SHUFFLED).map((o) => o.id));
+    }
+  });
+
   it('is stable for the same child across revisits', () => {
-    const first = shuffleOptionsForChild(OPTIONS, 'child-a', 'item-1').map((option) => option.id);
+    const first = shuffleOptionsForChild(OPTIONS, 'child-a', 'item-1', STEM_SHUFFLED).map((option) => option.id);
     for (let run = 0; run < 20; run++) {
-      expect(shuffleOptionsForChild(OPTIONS, 'child-a', 'item-1').map((option) => option.id)).toEqual(first);
+      expect(shuffleOptionsForChild(OPTIONS, 'child-a', 'item-1', STEM_SHUFFLED).map((option) => option.id)).toEqual(first);
     }
   });
 
   it('differs between children (and between items for the same child)', () => {
     const orders = new Set(
       Array.from({ length: 40 }, (_, index) =>
-        shuffleOptionsForChild(OPTIONS, `child-${index}`, 'item-1')
+        shuffleOptionsForChild(OPTIONS, `child-${index}`, 'item-1', STEM_SHUFFLED)
           .map((option) => option.id)
           .join(','),
       ),
@@ -35,7 +66,7 @@ describe('shuffleOptionsForChild', () => {
 
     const acrossItems = new Set(
       Array.from({ length: 40 }, (_, index) =>
-        shuffleOptionsForChild(OPTIONS, 'child-a', `item-${index}`)
+        shuffleOptionsForChild(OPTIONS, 'child-a', `item-${index}`, STEM_SHUFFLED)
           .map((option) => option.id)
           .join(','),
       ),
@@ -45,7 +76,7 @@ describe('shuffleOptionsForChild', () => {
 
   it('does not leave the correct option in authored-first position for every child', () => {
     const firstPositions = Array.from({ length: 60 }, (_, index) =>
-      shuffleOptionsForChild(OPTIONS, `child-${index}`, 'item-42')[0]!.id,
+      shuffleOptionsForChild(OPTIONS, `child-${index}`, 'item-42', STEM_SHUFFLED)[0]!.id,
     );
     const correctFirstCount = firstPositions.filter((id) => id === 'opt-correct').length;
     expect(correctFirstCount).toBeLessThan(30); // ≈15 expected of 60
@@ -64,7 +95,7 @@ describe('shuffleOptionsForChild', () => {
   it('tracks the correct option through attempt recording: grading by id survives any order', () => {
     // Mirrors submitAnswer: pending.options is the SHUFFLED list; the chosen
     // option is looked up by id — order carries no meaning.
-    const pendingOptions = shuffleOptionsForChild(OPTIONS, 'child-x', 'item-9');
+    const pendingOptions = shuffleOptionsForChild(OPTIONS, 'child-x', 'item-9', STEM_SHUFFLED);
     const gradeAnswer = (optionId: string) => {
       const chosen = pendingOptions.find((option) => option.id === optionId);
       return { correct: chosen?.isCorrect === true, misconceptionId: chosen?.misconceptionId ?? null };

@@ -19,11 +19,11 @@ export async function GET(
   const scope = await requireChildScope(childId);
   if (!scope.ok) return NextResponse.json({ error: scope.error }, { status: scope.status });
 
-  const item = await prisma.item.findUnique({ where: { id: itemId }, include: { options: true } });
+  const item = await prisma.item.findUnique({ where: { id: itemId }, include: { options: { orderBy: { id: 'asc' } } } });
   if (!item || item.status !== 'LIVE') {
     return NextResponse.json({ error: 'not_found' }, { status: 404 });
   }
-  const options = shuffleOptionsForChild(item.options, childId, item.id);
+  const options = shuffleOptionsForChild(item.options, childId, item.id, item.stem);
   const correct = options.find((option) => option.isCorrect);
   return NextResponse.json({
     stem: item.stem,

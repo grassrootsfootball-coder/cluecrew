@@ -30,6 +30,7 @@ import {
   completeTeachback,
   INITIAL_REVIEW_STATE,
   ENGINE_CONFIG,
+  isHeldFromServing,
   type Mode,
   type SessionState,
   type TeachbackContent,
@@ -192,17 +193,20 @@ async function itemPool(questionTypeId: string) {
   // `clusterPosition`, served in that order and never shuffled; a partial serve preserves relative
   // order because the sort is stable and applied before any take.
   const order = [{ clusterPosition: 'asc' as const }, { id: 'asc' as const }];
-  const live = await prisma.item.findMany({
+  // A SERVING HOLD stops an item at this door without touching its status (R208): PUBLISHED
+  // records the review and has not changed; SERVABLE is what changes. Filtered in code, not in
+  // the where-clause, so the hold list stays one importable fact both doors and the census share.
+  const live = (await prisma.item.findMany({
     where: { questionTypeId, status: 'LIVE', pool: 'PRACTICE' },
-    include: { options: true },
+    include: { options: { orderBy: { id: 'asc' } } },
     orderBy: order,
-  });
+  })).filter((item) => !isHeldFromServing(item.id));
   if (live.length > 0 || process.env.APP_ENV === 'production') return live;
-  return prisma.item.findMany({
+  return (await prisma.item.findMany({
     where: { questionTypeId, pool: 'PRACTICE' },
-    include: { options: true },
+    include: { options: { orderBy: { id: 'asc' } } },
     orderBy: order,
-  });
+  })).filter((item) => !isHeldFromServing(item.id));
 }
 
 async function modesOpenedFor(childId: string, caseId: string): Promise<Mode[]> {
@@ -712,7 +716,7 @@ async function serveItem(
   const plain = input.activityKind === 'closer';
   // Authored order never leaves the server: seeded on (childId, itemId) so
   // the order is stable for this child but differs between children.
-  const options = shuffleOptionsForChild(item.options, childId, item.id);
+  const options = shuffleOptionsForChild(item.options, childId, item.id, item.stem);
 
   serve(state, {
     kind: 'item',

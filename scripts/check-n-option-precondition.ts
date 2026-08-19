@@ -24,7 +24,7 @@ async function main(): Promise<void> {
     select: { id: true, itemId: true },
   });
   const itemIds = [...new Set(carriers.map((c) => c.itemId))];
-  const items = await prisma.item.findMany({ where: { id: { in: itemIds } }, include: { options: true } });
+  const items = await prisma.item.findMany({ where: { id: { in: itemIds } }, include: { options: { orderBy: { id: 'asc' } } } });
 
   requirePopulation('check:n-option-precondition', {
     [`options tagged ${TAG}`]: carriers.length,

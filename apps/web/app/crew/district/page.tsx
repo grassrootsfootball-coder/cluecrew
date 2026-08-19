@@ -4,11 +4,18 @@ import { groupIntoQuarters, type Location } from '@/lib/crew/districts';
 import { VOICE } from '@/lib/voice';
 
 /**
- * The VR District map (BUILD-PHASE-4 §6): a neighbourhood of five quarters,
- * one per mechanic family, with every one of the 21 question types placed in
- * its own. Cases whose files are not yet written still hold their location —
- * the district reads as a whole place rather than a broken list of the few
- * cases that happen to exist.
+ * The district map (BUILD-PHASE-4 §6): a neighbourhood of quarters, one per
+ * mechanic family, with every question type placed in its own. Cases whose
+ * files are not yet written still hold their location — the district reads as
+ * a whole place rather than a broken list of the few cases that happen to
+ * exist.
+ *
+ * **THE QUERY WAS `district: 'VR'` UNTIL 2026-08-17** (R171, stop 4 — the one
+ * that gates FINDING a case rather than playing it). `locations` is built from
+ * this result, so an English question type could not appear on the map however
+ * many of its items were LIVE, and a Case row alone would have been playable
+ * and unfindable. Both districts are read now; a district with no ordered
+ * quarter still draws nothing, which is `QUARTER_ORDER`'s job, not this query's.
  */
 export default async function DistrictPage() {
   const child = await childFromCookie();
@@ -18,7 +25,10 @@ export default async function DistrictPage() {
   if (!child) return null;
 
   const [questionTypes, allCases, caseFiles, open] = await Promise.all([
-    prisma.questionType.findMany({ where: { district: 'VR' }, orderBy: { id: 'asc' } }),
+    prisma.questionType.findMany({
+      where: { district: { in: ['VR', 'ENGLISH'] } },
+      orderBy: { id: 'asc' },
+    }),
     prisma.case.findMany(),
     prisma.caseFile.findMany({ where: { childId: child.id } }),
     (await import('@/lib/entitlements')).openCaseIds(child.id),
@@ -54,7 +64,7 @@ export default async function DistrictPage() {
 
   return (
     <main className="crew-stage">
-      <h1>The VR District</h1>
+      <h1>The District</h1>
       <p className="crew-lede">
         {crackedTotal === 0 ? VOICE.districtNothingCracked : VOICE.districtIntro}
       </p>

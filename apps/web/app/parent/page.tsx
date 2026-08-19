@@ -211,9 +211,32 @@ export default async function ParentDashboardPage() {
             {child.runway.monthsToExam !== null
               ? `${child.runway.monthsToExam} months to the test window. `
               : 'Set an exam year in Children to see the runway. '}
-            {child.runway.casesCracked} of {child.runway.casesTotal} VR cases cracked.{' '}
+            {child.runway.casesCracked} of {child.runway.casesTotal} cases cracked.{' '}
             {child.runway.nextMilestone}
           </p>
+          ) : null}
+
+          {/*
+            WHAT EXISTS, PER SUBJECT (R176). The child's map deliberately cannot tell a locked case
+            from an unwritten one — D7, and right, because that protects HER mid-session. Here the
+            same silence would tell a parent the English district is half-BUILT when it is fully
+            built and half-SOLD. So this names the honest denominator and stops: no case titles, no
+            upgrade button, no price. A parent checks on their child here.
+          */}
+          {fullDepth ? <h3>What&apos;s in each subject</h3> : null}
+          {fullDepth ? (
+            <ul data-testid="district-availability">
+              {child.districts.map((district) => (
+                <li key={district.label}>
+                  <strong>{district.label}</strong>
+                  {' — '}
+                  {district.casesTotal} case{district.casesTotal === 1 ? '' : 's'}
+                  {district.allOpen
+                    ? ', all open.'
+                    : `, ${district.casesOpen} open on Crew.`}
+                </li>
+              ))}
+            </ul>
           ) : null}
         </section>
         );

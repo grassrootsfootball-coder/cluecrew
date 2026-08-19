@@ -36,7 +36,7 @@ async function main(): Promise<void> {
   const warnings: ContentFailure[] = [];
 
   for (const entry of flat) {
-    const item = await prisma.item.findUnique({ where: { id: entry.itemId }, include: { options: true } });
+    const item = await prisma.item.findUnique({ where: { id: entry.itemId }, include: { options: { orderBy: { id: 'asc' } } } });
     if (!item) { missing.push(entry.itemId); continue; }
     const explanation = (item.explanation ?? {}) as Record<string, unknown>;
     if (typeof explanation.walkScriptBy === 'string') { protectedScripts.push(entry.itemId); continue; }

@@ -48,6 +48,15 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  /**
+   * THE FLOATING "N" IN ANNIE'S TI-05 STILLS (R209). Next.js's dev-tools button — framework
+   * furniture that exists only under `next dev`, rendered into a shadow-DOM portal. Not a product
+   * control: it records nothing, no child can ever meet it (production builds never mount it), and
+   * comprehension has no N option — the resemblance to the error-spot verdict pill was a
+   * coincidence of typography. Off, because review stills are read as the child's surface and a
+   * reviewer should never have to ask which parts of a screenshot are real.
+   */
+  devIndicators: false,
   // Inlined at build time, so the harness gate can read it in the browser bundle.
   env: { NEXT_PUBLIC_APP_ENV: appEnv },
   transpilePackages: ['@cluecrew/core', '@cluecrew/db', '@cluecrew/ui'],

@@ -80,6 +80,14 @@ function carriedStem(it: Draft): Record<string, unknown> {
   for (const k of ['passageRef', 'orderAnchor'] as const) {
     if (it[k] !== undefined && it[k] !== null) stem[k] = it[k];
   }
+  /**
+   * gapIndex: ITEM level on Cowork, STEM level here (Annie's field-geometry ruling, 2026-08-19 —
+   * R209). The registry declared this carriage before the door performed it, and check:cloze-gaps
+   * caught the gap on the first post-import run: "16 with neither". A registry row is a claim
+   * about the DOOR, and only the door can make it true.
+   */
+  if (it.gapIndex !== undefined && it.gapIndex !== null) stem.gapIndex = it.gapIndex;
+  if (it.correctionOf !== undefined && it.correctionOf !== null) stem.correctionOf = it.correctionOf;
   return stem;
 }
 
@@ -303,7 +311,16 @@ async function main(): Promise<void> {
       // READ, not asserted. This was the literal 'ai-draft:cowork-okafor-v1', which matched the
       // file on all 96 — a guess that happened to be right, writing a provenance column.
       status: 'DRAFT', authoredBy: it.authoredBy ?? 'ai-draft:cowork-okafor-v1',
-      options: { create: it.options.map((o, i) => ({ content: optionContent(o, i), isCorrect: o.isCorrect,
+      /**
+       * ID ORDER MUST EQUAL LABEL ORDER WHEN THE OPTIONS ARE THE SENTENCE (R199), IN THIS DOOR TOO.
+       * `--replace` deletes and rebuilds options, so auto-minted cuids would reset segment order to
+       * creation-order luck — the exact luck R199 closed in the items door. Same rule, same shape:
+       * segmented items derive the option id from the label; everything else keeps minted ids.
+       */
+      options: { create: it.options.map((o, i) => ({
+        ...(((it.stem as { segmentsInOptions?: unknown })?.segmentsInOptions === true && optionContent(o, i).label)
+          ? { id: `${it.itemId}-OPT-${optionContent(o, i).label}` } : {}),
+        content: optionContent(o, i), isCorrect: o.isCorrect,
         misconceptionId: o.isCorrect ? null : (o.misconceptionId ?? null),
         senseTarget: o.senseTarget ?? null,
         misconceptionExecution: o.misconceptionExecution ?? null,

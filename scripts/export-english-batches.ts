@@ -40,7 +40,7 @@ async function main(): Promise<void> {
     const envelope = JSON.parse(readFileSync(canonPath, 'utf8')) as Record<string, unknown>;
     const rows = await prisma.item.findMany({
       where: { id: { startsWith: `${prefix}-` } },
-      include: { options: true },
+      include: { options: { orderBy: { id: 'asc' } } },
       orderBy: { id: 'asc' },
     });
 

@@ -2,6 +2,18 @@
 // states; it makes NO pedagogical decisions. That boundary is the anti-drift
 // line for the whole child app.
 export * from './config';
+export * from './serving-senses';
+export * from './frequency-signal';
+export * from './quoted-field-exemption';
+export * from './refused-misconceptions';
+export * from './walk-approval';
+export * from './words-role';
+export * from './bank-direction';
+export * from './card-holds';
+export * from './serving-holds';
+export * from './dup-by-construction';
+export * from './approved-text-guard';
+export * from './english/spot-shape';
 export * from './events';
 export * from './ranks';
 export * from './mastery';

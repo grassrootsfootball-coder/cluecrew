@@ -31,6 +31,7 @@ import {
   type SectionTiming,
   type Stage1Report,
 } from '@cluecrew/core';
+import { isHeldFromServing } from '@cluecrew/core';
 import { logEvent, prisma, Prisma, type MockSitting } from '@cluecrew/db';
 import { shuffleOptionsForChild } from '@/lib/crew/shuffle';
 
@@ -201,10 +202,12 @@ export async function scheduleMock(
     where: { questionTypeId: { in: typeIds } },
     select: { id: true, questionTypeId: true, difficultyTier: true, pool: true, status: true, stem: true },
   });
+  // The mock door honours serving holds too (R208): held at the door, status untouched.
+  const servableCandidates = candidates.filter((item) => !isHeldFromServing(item.id));
 
   const composed = composeMockPaper({
     blueprint,
-    candidates: candidates.map((item) => ({
+    candidates: servableCandidates.map((item) => ({
       id: item.id,
       questionTypeId: item.questionTypeId,
       tier: item.difficultyTier,
@@ -346,7 +349,7 @@ export async function sittingView(childId: string): Promise<SittingView> {
     const sectionItems = served(sitting)[active]!.itemIds;
     const rows = await prisma.item.findMany({
       where: { id: { in: sectionItems } },
-      include: { options: true },
+      include: { options: { orderBy: { id: 'asc' } } },
     });
     const byId = new Map(rows.map((row) => [row.id, row]));
     const answered = responses(sitting);
@@ -364,7 +367,7 @@ export async function sittingView(childId: string): Promise<SittingView> {
         return {
           itemId,
           stem: row.stem,
-          options: shuffleOptionsForChild(row.options, childId, itemId).map((option) => ({
+          options: shuffleOptionsForChild(row.options, childId, itemId, row.stem).map((option) => ({
             id: option.id,
             content: option.content,
           })),

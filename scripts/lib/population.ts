@@ -27,6 +27,17 @@
  * @param populations what it screened, by name — `{ 'English items': 412, banks: 7 }`
  */
 export function requirePopulation(gate: string, populations: Record<string, number>): void {
+  // A CALL THAT NAMES NO POPULATION IS NOT A PASS. Three calls in one turn passed a bare number
+  // where the record belongs; `Object.entries(23)` is `[]`, so every one of them found nothing
+  // empty, printed the truncated line "screened ." and returned clean. TypeScript caught it — but
+  // only because scripts are typechecked, and this is the exact shape the file exists to refuse:
+  // an operation that is correct, a report that is true, and neither saying nothing was screened.
+  if (Object.keys(populations).length === 0) {
+    throw new Error(
+      `${gate} ABORTED — requirePopulation was called with no named population. ` +
+        'Pass a record of name → size. A gate that screens nothing must say so, not print an empty list.',
+    );
+  }
   const empty = Object.entries(populations).filter(([, size]) => size === 0);
   const described = Object.entries(populations)
     .map(([name, size]) => `${size} ${name}`)

@@ -15,11 +15,18 @@ export const dynamic = 'force-dynamic';
 export default async function ErrorSpotDebugPage() {
   if (process.env.APP_ENV === 'production') notFound();
 
+  // PU-02 and PU-06 are pinned first: the pair Annie reads at 375px for the sentence-visible
+  // layout (R209) — the eighteen error-spot items are not child-reachable until that read passes.
   const items = await prisma.item.findMany({
-    where: { questionTypeId: { in: ['en-spag-punct-spot', 'en-spag-spelling-spot'] } },
+    where: {
+      OR: [
+        { id: { in: ['ENG-003-A-PU-02', 'ENG-003-A-PU-06'] } },
+        { questionTypeId: { in: ['en-spag-punct-spot', 'en-spag-spelling-spot'] } },
+      ],
+    },
     include: { options: { orderBy: { id: 'asc' } } },
     orderBy: { id: 'asc' },
-    take: 4,
+    take: 6,
   });
 
   return (

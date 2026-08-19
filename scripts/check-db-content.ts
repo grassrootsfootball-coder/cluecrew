@@ -113,10 +113,18 @@ async function main(): Promise<void> {
   }
 
   // --- Items: stems and options, by role ----------------------------------
-  const items = await prisma.item.findMany({ include: { options: true, questionType: true } });
+  const items = await prisma.item.findMany({ include: { options: { orderBy: { id: 'asc' } }, questionType: true } });
   for (const item of items) {
     counted.items += 1;
-    const serving = item.status === 'LIVE';
+    /**
+     * ENG-003 GATES BLOCKING-GRADE WHILE STILL DRAFT (Annie's ruling, 2026-08-19 — R209). The
+     * cluster is packet-and-render ready and publication waits only on her reads, so its 34 rows
+     * sat in the DRAFT backlog — 34 rows that had never been HELD to the child gate, visible in
+     * the backlog totals and blocking nothing. A bank one signature from a child gates as if
+     * serving, BEFORE the signature: this precedes any ENG-003 reachability regardless of it.
+     */
+    const prePublication = item.id.startsWith('ENG-003');
+    const serving = item.status === 'LIVE' || prePublication;
     if (serving) screened.items += 1;
     // The ONE shared item gate (packages/core) — the same call the publish door
     // and the import gates make, so this sweep can never read a field a door

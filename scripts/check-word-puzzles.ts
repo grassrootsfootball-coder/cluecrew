@@ -95,7 +95,7 @@ const defects = new Map<string, string>();
 async function main(): Promise<void> {
   const items = await prisma.item.findMany({
     where: { questionTypeId: { in: ['vr-01-insert-letter', 'vr-08-move-letter', 'vr-13-make-a-word', 'vr-05-hidden-word', 'vr-07-letters-for-numbers', 'vr-09-letter-series', 'vr-11-number-series', 'vr-06-missing-word', 'vr-15-reading-information', 'vr-12-compound-words'] } },
-    include: { options: true },
+    include: { options: { orderBy: { id: 'asc' } } },
     orderBy: { id: 'asc' },
   });
 

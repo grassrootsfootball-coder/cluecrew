@@ -13,7 +13,7 @@ import { declareMayBeEmpty } from './lib/population';
 async function main(): Promise<void> {
   const items = await prisma.item.findMany({
     where: { questionType: { district: 'MATHS' }, status: { not: 'RETIRED' } },
-    include: { options: true },
+    include: { options: { orderBy: { id: 'asc' } } },
   });
 
   const failures: string[] = [];

@@ -27,7 +27,7 @@ async function main(): Promise<void> {
 
   const items = await prisma.item.findMany({
     where: { questionTypeId: 'vr-07-letters-for-numbers' },
-    include: { options: true },
+    include: { options: { orderBy: { id: 'asc' } } },
     orderBy: { id: 'asc' },
   });
 

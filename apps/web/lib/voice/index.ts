@@ -79,7 +79,10 @@ export const VOICE = {
   // Uses the board, which the world already has; it used to invent a "Chief",
   // a character no one had sanctioned (manifesto §10).
   caseNotWritten: 'Not on the board yet.',
-  districtIntro: 'Five corners. Every door is a case you can take.',
+  // The count came out on 2026-08-17: it said FIVE while the map drew five, and the sixth quarter
+  // (the Reading Room) would have made the lede wrong the moment it was ordered. A number in copy
+  // is a claim about data, and this one had no way to stay true.
+  districtIntro: 'Every door is a case you can take.',
   // Orientation — open on a first visit, tucked away after that. Reading age
   // ≤9, ≤30 seconds, and it never gates anything (D5).
   // The child's own case file. Self-referential only — no other child is ever

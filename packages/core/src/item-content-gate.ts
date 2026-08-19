@@ -17,6 +17,7 @@
  * Declared quotations and tested tokens are honoured exactly as elsewhere.
  */
 import { checkChildFacingText, spansPresentIn, type ContentFailure } from './content-gates';
+import { refusalMessage, refusedInOptions } from './refused-misconceptions';
 import { roleForItemStem } from './content-gates';
 import { checkMathsNotation } from './maths/notation';
 import { lettersNamedNotOnCard, wordOptionsNamedNotOnCard } from './word-puzzles';
@@ -32,10 +33,55 @@ function everyString(value: unknown, path: string): Array<[string, string]> {
   return [];
 }
 
-/** Every readable string in a Json value, path-labelled. A lone word (no space)
- *  is a token, not prose, and is skipped — matching the serving sweep. */
+/**
+ * THE FIELDS WHOSE VALUES ARE HEADWORDS OR TOKENS, DECLARED BY NAME (Annie's ruling, 2026-08-19 —
+ * R290). These skip the SENTENCE-LENGTH cap; they do not skip the ban list.
+ *
+ * **THE SKIP USED TO BE "HAS NO SPACE", AND THAT WAS A PROXY FOR "IS A HEADWORD".** Her reasoning:
+ * absence of a space is a proxy, **any single-word value anywhere currently gets the same free
+ * pass** — including ones that should be capped — and **proxies drift, which this project has paid
+ * for four times.** A declared field list drifts too, but it drifts VISIBLY: a new field is absent
+ * from the list and gets screened, which is the safe direction. A proxy fails silently toward
+ * permissiveness, which is the other one.
+ */
+const TOKEN_FIELDS = new Set([
+  'words', 'stemWord', 'word1', 'word2', 'sum', 'series', 'pairA', 'clues',
+  'code', 'P', 'Q', 'R', 'S',
+  // `testedTokens` is a DECLARED LIST OF TOKENS — the field name is the declaration, and every
+  // value it can hold is one whatever the item type. It names words already exempt from the
+  // ceilings; screening the exemption list itself would cap the very words it exempts.
+  'testedTokens',
+]);
+/*
+ * **`value` AND `label` ARE DELIBERATELY ABSENT, AND MY FIRST LIST HAD THEM.** An option's `value`
+ * is a single word on a VR card and a FULL SENTENCE on a comprehension one — the same field name
+ * carrying two kinds of content. Declaring it a token field exempted every option value in the
+ * store from the sentence cap, and the baseline diff caught it immediately: two UK-spelling rows
+ * silently stopped being reported.
+ *
+ * That is the exact failure her ruling is about, committed while implementing her ruling: I
+ * replaced a proxy for "is a headword" with a field list that was ALSO a proxy for it. A field
+ * belongs here only when EVERY value it can hold is a token, whatever the item type.
+ */
+
+/** The last path segment, with any array index stripped: `stem.words[3]` -> `words`. */
+function fieldOf(path: string): string {
+  const last = path.split('.').pop() ?? '';
+  return last.replace(/\[\d+\]$/, '');
+}
+
+/**
+ * Every readable string in a Json value, path-labelled.
+ *
+ * **A value is skipped when its FIELD is declared a token field — not when it happens to lack a
+ * space** (R290). A multi-word value in a token field is still a token by declaration (`stem.sum`
+ * holds "3 + 4"); a single word in an undeclared field is now screened, where before it was not.
+ */
 export function textsFrom(value: unknown, path: string): Array<[string, string]> {
-  if (typeof value === 'string') return value.trim().includes(' ') ? [[path, value]] : [];
+  if (typeof value === 'string') {
+    if (TOKEN_FIELDS.has(fieldOf(path))) return [];
+    return value.trim() !== '' ? [[path, value]] : [];
+  }
   if (Array.isArray(value)) return value.flatMap((entry, i) => textsFrom(entry, `${path}[${i}]`));
   if (value && typeof value === 'object') {
     return Object.entries(value as Record<string, unknown>).flatMap(([k, entry]) =>
@@ -55,6 +101,23 @@ export interface GatableItem {
 
 export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
   const failures: ContentFailure[] = [];
+
+  /*
+   * REFUSED MISCONCEPTIONS, AT THE ONE GATE EVERY DOOR CALLS (R269). A rejection recorded only as
+   * a row status depends on whoever builds the next emission remembering to pull it by hand.
+   * Here it cannot be forgotten: any item tagged with a refused entry fails at whichever door it
+   * arrives through, and the message names the successor so the refusal is actionable rather than
+   * a dead end.
+   */
+  // GatableItem declares options as `{ content: unknown }[]`; the refusal check reads only the
+  // tag. Narrowed here rather than widening the shared type, which every door depends on.
+  for (const refusal of refusedInOptions((item.options ?? []) as ReadonlyArray<{ misconceptionId?: string | null }>)) {
+    failures.push({
+      where: `${item.id}:options`,
+      rule: 'banned-vocabulary',
+      detail: refusalMessage(refusal),
+    });
+  }
   const stem = (item.stem ?? {}) as Record<string, unknown>;
   const stemRole = roleForItemStem(item.mechanic);
   /**

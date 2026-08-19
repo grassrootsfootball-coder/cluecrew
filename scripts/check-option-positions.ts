@@ -8,10 +8,19 @@
  * serving path applies — so children were never affected. This gate makes that
  * safety a standing, checked property instead of a convention people remember:
  *
- *   1. STORAGE UNIFORMITY. Within every bank (a questionType's LIVE items) the
- *      key must sit at the SAME stored index for every item. A bank that mixes
- *      stored key positions has no single invariant for the shuffle to rely on
- *      and no canonical order for a pack to trust — so it fails.
+ *   1. STORAGE UNIFORMITY — **REPORTED, NO LONGER A FAILURE** (David's ruling,
+ *      2026-08-17 — R199). The stated reason, *"no single invariant for the
+ *      shuffle to rely on"*, IS NOW FALSE: the shuffle is seeded on
+ *      `childId:itemId` and measured uniform (R189, chi-square 2.72 on 4 df),
+ *      and its input is sealed to `id asc` (R187), so **stored order cannot
+ *      leak into served position at all**. Four English banks fail this arm and
+ *      no child is affected by any of it.
+ *
+ *      What mixed storage DOES cost is the TELL. The incident below was caught
+ *      because an unshuffled pack over a key-first bank shows an unmissable
+ *      all-A column; over a MIXED bank the same broken pack looks plausibly
+ *      random. So this arm now reports the exposure and names it, and a
+ *      convention violation with no consequence for a child does not fail CI.
  *
  *   2. SERVED FAIRNESS. The one shuffle a child is served through
  *      (shuffleOptionsForChild, seeded on childId:itemId) is simulated over many
@@ -32,6 +41,38 @@ const SYNTHETIC_CHILDREN = Array.from({ length: 300 }, (_, i) => `probe-child-${
  * The correct shuffle sits ~0 above chance; a no-op shuffle sits far above it. */
 const TOLERANCE = 0.12;
 
+/**
+ * ARM 3 — SEGMENT ORDER (David's ruling, 2026-08-17 — R199). The second real exposure, and the one
+ * that IS a child-facing fault if it breaks.
+ *
+ * R192 excludes `segmentsInOptions` items from the shuffle, so their SERVED order is their STORED
+ * order. The options are consecutive pieces of one sentence and the label is the order a child reads
+ * them in, so **id order must equal label order or the sentence does not reconstruct** — with no
+ * shuffle involved, past the guard written for the shuffle. It held on 18 of 18 by luck before the
+ * import door was made to derive the id from the label; this asserts it for every item, including
+ * any that predate that door.
+ */
+interface SegmentOrderFault { itemId: string; idOrder: string; labelOrder: string }
+
+async function checkSegmentOrder(): Promise<{ screened: number; faults: SegmentOrderFault[] }> {
+  const items = await prisma.item.findMany({
+    where: { options: { some: {} } },
+    include: { options: { orderBy: { id: 'asc' } } },
+    orderBy: { id: 'asc' },
+  });
+  const segmented = items.filter(
+    (i) => ((i.stem ?? {}) as { segmentsInOptions?: unknown }).segmentsInOptions === true,
+  );
+  const label = (o: { content: unknown }) => String((o.content as { label?: unknown })?.label ?? '');
+  const faults: SegmentOrderFault[] = [];
+  for (const item of segmented) {
+    const idOrder = item.options.map(label).join('');
+    const labelOrder = [...item.options].map(label).sort().join('');
+    if (idOrder !== labelOrder) faults.push({ itemId: item.id, idOrder, labelOrder });
+  }
+  return { screened: segmented.length, faults };
+}
+
 interface OptionRow {
   id: string;
   isCorrect: boolean;
@@ -49,7 +90,7 @@ interface BankReport {
 }
 
 /** Assess one bank: storage uniformity + served fairness. Pure over its items. */
-function assessBank(bank: string, items: Array<{ id: string; options: OptionRow[] }>): BankReport {
+function assessBank(bank: string, items: Array<{ id: string; stem: unknown; options: OptionRow[] }>): BankReport {
   const storedIndexHistogram: Record<number, number> = {};
   for (const item of items) {
     const stored = item.options.findIndex((o) => o.isCorrect);
@@ -64,7 +105,11 @@ function assessBank(bank: string, items: Array<{ id: string; options: OptionRow[
   for (const item of items) {
     expectedSum += 1 / item.options.length;
     for (const child of SYNTHETIC_CHILDREN) {
-      const shuffled = shuffleOptionsForChild(item.options, child, item.id);
+      // R192 — the stem is REQUIRED, and passing it is not a formality here: an item whose options
+      // are ordered by construction is NOT shuffled, so simulating it with a shuffle would report a
+      // served distribution no child can ever see. This checker measures the SERVED position, so it
+      // has to model the same exclusion the serving path applies.
+      const shuffled = shuffleOptionsForChild(item.options, child, item.id, item.stem);
       const index = shuffled.findIndex((o) => o.isCorrect);
       servedCount[index] = (servedCount[index] ?? 0) + 1;
       draws += 1;
@@ -96,14 +141,28 @@ function report(reports: BankReport[]): boolean {
     for (const [idx, c] of Object.entries(r.storedIndexHistogram)) overallStored[Number(idx)] = (overallStored[Number(idx)] ?? 0) + c;
     total += r.n;
     const storedText = Object.entries(r.storedIndexHistogram).sort((a, b) => Number(a[0]) - Number(b[0])).map(([p, c]) => `pos${p}:${c}`).join(' ');
-    const flags = `${r.storageUniform ? '' : ' ✗MIXED-STORAGE'}${r.servedFair ? '' : ` ✗SERVED-MODAL ${(100 * r.servedMaxShare).toFixed(0)}% > ${(100 * r.servedExpectedMax).toFixed(0)}%`}`;
-    if (!r.storageUniform || !r.servedFair) failed = true;
+    // MIXED-STORAGE is reported, never fatal (R199): it costs a review-pack TELL, not a child
+    // anything. Only SERVED-MODAL — a shuffle that parks the key — reaches a child, and only it fails.
+    const flags = `${r.storageUniform ? '' : ' ·mixed-storage'}${r.servedFair ? '' : ` ✗SERVED-MODAL ${(100 * r.servedMaxShare).toFixed(0)}% > ${(100 * r.servedExpectedMax).toFixed(0)}%`}`;
+    if (!r.servedFair) failed = true;
     console.log(`${r.bank.padEnd(30)} | ${String(r.n).padStart(2)} | ${storedText.padEnd(21)} | ${fmtShare(r.servedShare)}${flags}`);
   }
   console.log(
     `\nAll ${total} items: stored ${Object.entries(overallStored).sort((a, b) => Number(a[0]) - Number(b[0])).map(([p, c]) => `pos${p}:${c} (${(100 * c / total).toFixed(0)}%)`).join(' ')}`,
   );
   console.log('Stored key-first is the authored convention; the child is served the shuffle, not the stored order.');
+
+  const mixed = reports.filter((r) => !r.storageUniform);
+  if (mixed.length) {
+    console.log(`\n  ${mixed.length} bank(s) with MIXED stored key positions — REPORTED, NOT FAILED (R199):`);
+    for (const r of mixed) console.log(`    · ${r.bank}`);
+    console.log('    No child is affected: the shuffle is uniform (R189) and its input is sealed to');
+    console.log('    id order (R187), so stored position cannot leak into served position.');
+    console.log('    THE EXPOSURE IS A REVIEW-PACK TELL. An unshuffled pack over a key-first bank shows');
+    console.log('    an unmissable all-A column — which is how this class was caught. Over a mixed bank');
+    console.log('    the same broken pack looks plausibly random. `export-nvr-signoff` still derives its');
+    console.log('    key letter from the stored index.');
+  }
   return failed;
 }
 
@@ -112,8 +171,8 @@ function selfTest(): void {
   console.log('SELF-TEST — the gate must FAIL these:\n');
   // Mixed storage: keys at different stored indices within one bank.
   const mixed = assessBank('fixture-mixed-storage', [
-    { id: 'a', options: [{ id: 'a0', isCorrect: true }, { id: 'a1', isCorrect: false }, { id: 'a2', isCorrect: false }] },
-    { id: 'b', options: [{ id: 'b0', isCorrect: false }, { id: 'b1', isCorrect: true }, { id: 'b2', isCorrect: false }] },
+    { id: 'a', stem: {}, options: [{ id: 'a0', isCorrect: true }, { id: 'a1', isCorrect: false }, { id: 'a2', isCorrect: false }] },
+    { id: 'b', stem: {}, options: [{ id: 'b0', isCorrect: false }, { id: 'b1', isCorrect: true }, { id: 'b2', isCorrect: false }] },
   ]);
   // A no-op shuffle can't be injected here, but a single-option-"bank" and a
   // bank whose items all key-first still get served fairly by the real shuffle;
@@ -139,12 +198,12 @@ async function main(): Promise<void> {
     include: { options: { orderBy: { id: 'asc' }, select: { id: true, isCorrect: true } } },
     orderBy: { id: 'asc' },
   });
-  const byBank = new Map<string, Array<{ id: string; options: OptionRow[] }>>();
+  const byBank = new Map<string, Array<{ id: string; stem: unknown; options: OptionRow[] }>>();
   for (const item of items) {
     // Only multiple-choice items have a meaningful key position.
     if (item.options.length < 2 || !item.options.some((o) => o.isCorrect)) continue;
     const list = byBank.get(item.questionTypeId) ?? [];
-    list.push({ id: item.id, options: item.options });
+    list.push({ id: item.id, stem: item.stem, options: item.options });
     byBank.set(item.questionTypeId, list);
   }
 
@@ -153,12 +212,28 @@ async function main(): Promise<void> {
   const reports = [...byBank.entries()].sort((a, b) => a[0].localeCompare(b[0])).map(([bank, list]) => assessBank(bank, list));
   const failed = report(reports);
 
+  // ARM 3 — the segment-order assertion, over EVERY item declaring segmentsInOptions rather than
+  // only LIVE ones: ENG-003 is DRAFT, and an item that would scramble on publication is worth
+  // catching before it publishes. R191 arrived before the items; this keeps that.
+  const seg = await checkSegmentOrder();
+  console.log(`\n  SEGMENT ORDER — ${seg.screened} item(s) declare segmentsInOptions and are served`);
+  console.log('  UNSHUFFLED (R192), so their stored id order IS the order a child reads.');
+  if (seg.faults.length === 0) {
+    console.log(`    ${seg.screened}/${seg.screened} have id order equal to label order: every sentence reconstructs.`);
+  } else {
+    console.log(`    ${seg.faults.length} ITEM(S) WOULD SERVE A SCRAMBLED SENTENCE:`);
+    for (const f of seg.faults) console.log(`      x ${f.itemId}: id order ${f.idOrder}, label order ${f.labelOrder}`);
+  }
+
   await prisma.$disconnect();
-  if (failed) {
-    console.error('\nOption-position gate FAILED — a bank has mixed stored key positions or a served key position above chance.');
+  if (failed || seg.faults.length > 0) {
+    console.error('\nOption-position gate FAILED — a served key position above chance, or a segmented');
+    console.error('item whose stored order would scramble its sentence. MIXED-STORAGE alone does NOT');
+    console.error('fail: it costs a review-pack tell, not a child anything (R199).');
     process.exit(1);
   }
-  console.log('\nOption-position gate passed: every bank is uniform in storage and fair when served.');
+  console.log('\nOption-position gate passed: every bank is fair when SERVED, and every segmented item');
+  console.log('reconstructs its sentence in stored order. Storage uniformity is reported above, not gated.');
 }
 
 void main();

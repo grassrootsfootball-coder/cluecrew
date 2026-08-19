@@ -89,6 +89,12 @@ here has no register entry. A ruling goes to the register FIRST; it comes here o
   generator. A summary is a door into the reviewer's judgement with no guard on
   it — the same fault as the ungated import scripts, one level up. Send the
   export, not the prose; prose may accompany a value, never stand in for it.
+  **THE BOUNDARY (R203/R204): where the value is a NAME and the fact is DOUBT, a bare value asserts
+  the thing the doubt denies.** A reader of `approvedByPerson: "Annie"` gets a clean name and no
+  doubt at all, where a reader of hedged prose at least meets a sentence it might parse — the value
+  field is the WORSE half there, backwards from this rule's instinct, and both stores spent a week
+  moving things out of prose into fields on that instinct. The qualifier goes in the field name or
+  in the same value (`hintAuthoredByWasClaimedAs`), never one field over.
 - **A VERIFIER STATES ITS SOURCE BEFORE IT RUNS** (annie's standing instruction, 2026-08-09,
   alongside R41). Any new `recomputeParams`/`recompute*`-style check, in any district, states which
   function it calls to define the property it is checking — either "reads the field directly" or
@@ -255,6 +261,36 @@ here has no register entry. A ruling goes to the register FIRST; it comes here o
   signed cluster). Both reported *"declares a quoted span that is not in the text"*, which reads as
   bad authoring. This is R142's lesson — **trust the diff, not the count; a measurement that agrees
   with what you just did is the one to distrust.**
+- **A READER REFUSES A SHAPE IT CANNOT PARSE; IT NEVER RETURNS EMPTY** (David, 2026-08-17 — R173).
+  An empty result from a broken reader and a true empty are INDISTINGUISHABLE DOWNSTREAM, so `?? []`
+  on a failed parse launders a bug into a fact. Throw, and name the shape you expected. The instance:
+  a blueprint reader read the file WRAPPER (`{kind, blueprint}`) instead of `.blueprint`, found no
+  `sections`, and reported *"0 of 4 wired blueprints name an English type"* — **the right answer,
+  from a failed read**, in the very check being written to close R171.
+  **THE TRANSFERABLE HALF: A DISAGREEING NUMBER GETS INVESTIGATED FOR FREE; A CONFIRMING ONE HAS TO
+  BE INVESTIGATED ON PURPOSE.** Every other entry in this register is an instrument that says
+  NOTHING — R60's zero, R61's absent population, R87's silent no-op, R80's wrong clock. **This one
+  says the RIGHT THING FOR THE WRONG REASON, and the agreement is the camouflage.** Three instances
+  in one week (the 464-of-514, the six newly-failing items, the 0-of-4 blueprints) make it a class,
+  not a one-off. Scrutinise agreement at least as hard as surprise, and put the guard in the CODE —
+  vigilance is not a mechanism.
+- **A NAME IN PROSE IS LOOKED UP, NEVER RECALLED** (David, 2026-08-17 — R178). Any tier, status,
+  district, family or role name that appears in prose is read from the source that DEFINES it, at
+  the moment of writing. Not recalled, not inferred from a sibling, not carried forward from earlier
+  in the same conversation. **Prose is the only artefact here with no gate on it** — the scanners
+  read child-facing strings, `check:register` reads rule numbers, `check:authority-shape` reads the
+  store, and nothing reads a sentence in a proposal. **Proposals are where rulings come from**, so an
+  invented name in one becomes a ruling and then ships. The instance: a parent-facing status line
+  proposed as *"2 more on Squad"*. There is no Squad — the tiers are `CREW` and
+  `FULL_24/FULL_12/FULL_ROLLING/PLUS_ROLLING/SUMMER`. It was approved in a ruling and caught only
+  because writing the real string sent me to the enum. Third fabricated fact in prose that week
+  (a count, an attribution, then this) and the first that would have reached a customer. The cost of
+  the guard is one grep.
+- **A CLAIM THAT IS TRUE WHEN WRITTEN IS THE ONE THAT ROTS SILENTLY** — declare it in
+  `scripts/check-expiring-claims.ts` (R180). "Five corners", `casesTotal: 21` labelled "VR cases",
+  and "all 21 GL-style question types" were each correct on the day and invisible afterwards, because
+  **nothing reports a sentence that is right**. Any number or district name in public or staff copy
+  that is a claim about our own data gets a declared assertion with an owner, or gets derived.
 - Content decisions (items, chapters, misconceptions) go through the CMS
   review pipeline; nothing skips the reviewer.
 - **PILOT CONTENT UNDER ACTIVE REVIEW HAS ONE WRITE PATH: `scripts/lib/pilot-review.ts`, NEVER A

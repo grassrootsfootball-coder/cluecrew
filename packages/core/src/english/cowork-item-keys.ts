@@ -147,6 +147,34 @@ export const COWORK_ITEM_KEYS: Readonly<Record<CoworkLevel, readonly CoworkKeyRu
       // been reviewed"; the name alone is not the control.
     },
     { key: 'clusterPosition', disposition: 'MAPPED', carriedAt: col('Item', 'clusterPosition', 'serve order, file position') },
+    {
+      /** Names the item this one corrects (second return, 2026-08-19: SP-06). Provenance a reader
+       * of the ROW should meet, so it rides the stem rather than living only in a receipt. */
+      key: 'correctionOf',
+      disposition: 'CARRIED',
+      carriedAt: json('Item', 'stem', 'correctionOf', 'second-return provenance; arrived 2026-08-19'),
+    },
+    {
+      /**
+       * ITEM-LEVEL on Cowork since its gapRef->gapIndex migration; STEM-LEVEL here by Annie's
+       * field-geometry ruling applied 2026-08-19 (R209): a gap index is not a line reference,
+       * `lineRefs` empty on cloze, the gap number lives at stem.gapIndex. The door NORMALISES the
+       * level and never the value (R57's boundary: validate and place, don't rewrite).
+       */
+      key: 'gapIndex',
+      disposition: 'CARRIED',
+      carriedAt: json('Item', 'stem', 'gapIndex', 'item level on Cowork; stem level here, ruled 2026-08-19'),
+    },
+    {
+      /** Cowork's marker that the gap number was migrated out of lineRefs (16 cloze items).
+       * Migration shadow: both sides applied the ruled geometry independently and each records its
+       * own act (here: R209 + write-log rows). Carrying the other side's marker would be a second
+       * copy of a fact this store already holds. */
+      key: '_migratedFromLineRefs',
+      disposition: 'NOT_CARRIED',
+      ruling: 'PROPOSED',
+      reason: 'Migration shadow; this store records its own migration as R209 + write-log rows.',
+    },
     // Cowork now sends the POST-RENAME names (R79). `draftingOrder` above stays for the older
     // deliveries; both land on the same column.
     { key: 'draftingMethod', disposition: 'MAPPED', carriedAt: col('Item', 'draftingMethod') },
@@ -234,6 +262,23 @@ export const COWORK_ITEM_KEYS: Readonly<Record<CoworkLevel, readonly CoworkKeyRu
     { key: 'prompt', disposition: 'MAPPED', carriedAt: json('Item', 'stem', 'prompt') },
     { key: 'quotes', disposition: 'MAPPED', carriedAt: json('Item', 'stem', 'quotes') },
     {
+      /** The pre-repair stem text, second return (26 items). Retag-history class: the history
+       * lives in Cowork's store; shadow fields do not cross (the _previousMisconceptionId
+       * precedent, R105 sweep). */
+      key: '_previousText',
+      disposition: 'NOT_CARRIED',
+      ruling: 'PROPOSED',
+      reason: 'Shadow history of the 2026-08-19 stem repairs ("has" -> "may have" et al). The '
+        + 'repair history lives in Cowork\'s store; this side holds the CURRENT text and the '
+        + 'batch file itself remains on disk as the witness.',
+    },
+    {
+      key: '_previousText2',
+      disposition: 'NOT_CARRIED',
+      ruling: 'PROPOSED',
+      reason: 'Second-generation shadow of the same class as _previousText, on 3 cloze items.',
+    },
+    {
       key: '_previousQuotes',
       disposition: 'NOT_CARRIED',
       ruling: 'PROPOSED',
@@ -250,6 +295,35 @@ export const COWORK_ITEM_KEYS: Readonly<Record<CoworkLevel, readonly CoworkKeyRu
   explanation: [
     { key: 'walkScript', disposition: 'MAPPED', carriedAt: json('Item', 'explanation', 'walkScript') },
     {
+      /**
+       * WHO WROTE THE HINT, WITH ITS AUTHORITY BESIDE IT — the pair arrives together (second
+       * return, 7 items) and is carried together: hintAuthoredBy is a NAME, hintAuthority is the
+       * artefact+hash that makes the name checkable. A name that crossed without its authority
+       * would be the bare-name fault (R203) imported fresh.
+       */
+      key: '_previousHintCore',
+      disposition: 'NOT_CARRIED',
+      ruling: 'PROPOSED',
+      reason: 'Shadow of the repaired hint text (4 items). Repair history lives in Cowork\'s '
+        + 'store; the batch file on disk is the witness.',
+    },
+    {
+      key: '_previousHintCore2',
+      disposition: 'NOT_CARRIED',
+      ruling: 'PROPOSED',
+      reason: 'Second-generation shadow of the same class, 7 items.',
+    },
+    {
+      key: 'hintAuthoredBy',
+      disposition: 'CARRIED',
+      carriedAt: json('Item', 'explanation', 'hintAuthoredBy', 'paired with hintAuthority below'),
+    },
+    {
+      key: 'hintAuthority',
+      disposition: 'CARRIED',
+      carriedAt: json('Item', 'explanation', 'hintAuthority', 'the artefact+sha256 behind hintAuthoredBy'),
+    },
+    {
       key: '_previousWalkScript',
       disposition: 'NOT_CARRIED',
       ruling: 'PROPOSED',
@@ -264,6 +338,20 @@ export const COWORK_ITEM_KEYS: Readonly<Record<CoworkLevel, readonly CoworkKeyRu
     { key: 'content', disposition: 'MAPPED', carriedAt: json('ItemOption', 'content', 'value') },
     { key: 'isCorrect', disposition: 'MAPPED', carriedAt: col('ItemOption', 'isCorrect') },
     { key: 'misconceptionId', disposition: 'MAPPED', carriedAt: col('ItemOption', 'misconceptionId') },
+    {
+      /**
+       * A SECOND live tag per option (second return, 12 options). No column holds it and a second
+       * tag is a SCHEMA decision, not an import-door improvisation — the platform's option model
+       * is deliberately one-diagnosis-per-option, and widening that silently at the door would be
+       * a model change nobody ruled. PROPOSED to David; the batch file on disk is the witness and
+       * the door prints this exception on every run, so the gap cannot decay into silence.
+       */
+      key: 'secondaryMisconceptionId',
+      disposition: 'NOT_CARRIED',
+      ruling: 'PROPOSED',
+      reason: 'No column; one-diagnosis-per-option is the ruled option model. A second tag needs '
+        + 'a schema ruling, not a door improvisation. Witness: the second-return batch file.',
+    },
     {
       key: 'misconceptionExecution',
       disposition: 'MAPPED',

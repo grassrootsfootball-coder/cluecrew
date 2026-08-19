@@ -72,7 +72,7 @@ export default async function ItemDetailPage({
 
   const item = await prisma.item.findUnique({
     where: { id },
-    include: { options: true, questionType: true },
+    include: { options: { orderBy: { id: 'asc' } }, questionType: true },
   });
   if (!item) notFound();
 
@@ -165,7 +165,7 @@ export default async function ItemDetailPage({
           uses your reviewer seed; each child sees their own stable order.
         </p>
         <ol style={{ listStyle: 'none', paddingLeft: 0 }}>
-          {shuffleOptionsForChild(item.options, staff.id, item.id).map((option, index) => (
+          {shuffleOptionsForChild(item.options, staff.id, item.id, item.stem).map((option, index) => (
             <li key={option.id} style={{ margin: '0.3rem 0' }}>
               <span className="cc-muted">{String.fromCharCode(65 + index)}.</span>{' '}
               {optionLabel(option.content)}

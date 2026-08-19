@@ -1,0 +1,35 @@
+{
+  "kind": "case",
+  "case": {
+    "id": "case-en-03",
+    "questionTypeId": "en-comp-vocab",
+    "title": "The Word in Disguise",
+    "narrativeIntro": {
+      "text": "A word can mean one thing here and something else on the next page. Do not trust the meaning you know best. Look at the words sitting around it. They tell you which one is at work.",
+      "skippable": true
+    },
+    "modes": {
+      "watch": {
+        "kind": "video",
+        "assetRef": "placeholder/en-03/watch.mp4",
+        "maxSeconds": 90
+      },
+      "walk": {
+        "kind": "faded-example",
+        "assetRef": "placeholder/en-03/walk.json"
+      },
+      "see": {
+        "kind": "visual",
+        "assetRef": "placeholder/en-03/see.json"
+      },
+      "hear": {
+        "kind": "audio",
+        "assetRef": "placeholder/en-03/hear.mp3"
+      },
+      "try": {
+        "kind": "practice"
+      }
+    },
+    "orderInDistrict": 24
+  }
+}

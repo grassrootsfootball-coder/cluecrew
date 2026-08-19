@@ -39,7 +39,7 @@ async function main(): Promise<void> {
   let publishedTotal = 0;
 
   for (const kase of cases) {
-    const items = await prisma.item.findMany({ where: { questionTypeId: kase.questionTypeId }, include: { options: true, questionType: true } });
+    const items = await prisma.item.findMany({ where: { questionTypeId: kase.questionTypeId }, include: { options: { orderBy: { id: 'asc' } }, questionType: true } });
     let published = 0; let refused = 0;
     for (const item of items) {
       if (item.status === 'LIVE') continue; // already live, leave it

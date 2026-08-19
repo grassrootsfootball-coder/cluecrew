@@ -93,7 +93,33 @@ interface EndResult {
 
 const MODE_BLURBS: Record<string, string> = {
   watch: 'Watch me walk the trail, one clue at a time. Notice how each step follows the last.',
-  walk: "We'll do one together, then one where you finish it, then one that's all yours.",
+  /*
+   * WALK'S PROMISE CHANGED WITH WALK'S BUILD, IN THE SAME ACT (David's ruling, 2026-08-19), AND
+   * MY FIRST REWRITE SMUGGLED THE OLD PROMISE BACK IN.
+   *
+   * The original read: "We'll do one together, then one where you finish it, then one that's all
+   * yours." A FADED EXAMPLE, true of nothing — the 670 scripts are worked solutions, three or four
+   * sentences, no fading (R232).
+   *
+   * My replacement — "One bit at a time, then you try the next" — was refused, and the reasons are
+   * the useful part. **"One bit at a time" promises step structure the content does not have**: all
+   * 670 are single strings, one step by measurement. **"Then you try the next" promises a NEXT
+   * ITEM**, which is the three-item sequence Walk was just ruled not to be. The faded example
+   * walked back in wearing plainer clothes — **what happens when copy is rewritten AFTER a
+   * narrowing instead of as part of it.**
+   *
+   * It also quietly proposed a PERSONA. "I'll show you" makes the system speak in the first person,
+   * and nothing else a child reads in this product does. That is a product decision, and taking it
+   * inside a mode fix is how a product decision gets made by nobody. Flagged, not taken.
+   *
+   * THE LINE BELOW IS ANNIE'S, and which of her two it is turns on a measured fact: after the walk,
+   * the child does NOT get another attempt at that item. On every submission, miss included, the
+   * item id is appended to `focus.servedItemIds` (packages/core/src/session.ts), and BOTH selection
+   * paths in the orchestrator exclude that set — the preferred one and the recency-relaxed
+   * fallback. So "try it again" would be false, and this is the line for a child who will not see
+   * the item again.
+   */
+  walk: 'Here is how this one works out. Read it through whenever you are ready.',
   see: "Here it is as a picture. Move through it slowly and you'll see the pattern.",
   hear: 'Close your eyes if you like. Listen to how the clue is built, piece by piece.',
   try: 'Straight to the magnifying glass. You can always come back for another way in.',

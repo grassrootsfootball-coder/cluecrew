@@ -62,8 +62,17 @@ describe('the registry itself', () => {
     }
   });
 
+  /**
+   * A REGISTRY AND ITS EXPECTATION ARE ONE CHANGE (R80). Six keys were added to the registry —
+   * `_migratedFromLineRefs`, the two `_previousText` generations, the two `_previousHintCore`
+   * generations and `secondaryMisconceptionId` — and this list did not move with them, so the
+   * suite failed on a registry that was correct. The list is deliberately exhaustive rather than a
+   * count: the whole point of the assertion is that a new NOT_CARRIED key is a decision somebody
+   * makes on purpose and sees in a diff, which a length check would not give.
+   */
   it('brings the exceptions, not the inclusions', () => {
     expect(PROPOSED_EXCEPTIONS.map((l: { level: string; key: string }) => `${l.level}.${l.key}`)).toEqual([
+      'item._migratedFromLineRefs',
       'item.testedTokens',
       'item.banListException_SHAPE_NOTE',
       'item.draftingMethod_SHAPE_NOTE',
@@ -72,8 +81,13 @@ describe('the registry itself', () => {
       'item._previousOrderAnchor',
       'item.notes',
       'item.draftingOrder',
+      'stem._previousText',
+      'stem._previousText2',
       'stem._previousQuotes',
+      'explanation._previousHintCore',
+      'explanation._previousHintCore2',
       'explanation._previousWalkScript',
+      'options[].secondaryMisconceptionId',
       'options[].tagStatus_SHAPE_UNRESOLVED',
       'options[]._previousValue',
       'options[]._previousExecution',

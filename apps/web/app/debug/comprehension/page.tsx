@@ -42,9 +42,11 @@ function loadPassage(ref: string, lineRefs: number[]) {
 export default async function ComprehensionDebugPage() {
   if (process.env.APP_ENV === 'production') notFound();
 
-  // A cited-window item, and a whole-passage item, taken from the bank as they stand.
+  // A cited-window item, a whole-passage item, and the R208 reference item: ENG-013-TI-05 is
+  // TWO-SPAN (lines 18-26 and 43-49) plus a wrong-scope distractor, so it exercises the tap
+  // navigation and the drawer together — the composition Annie reads at 375px before PR-06 returns.
   const items = await prisma.item.findMany({
-    where: { id: { in: ['ENG-001-WIW-12', 'ENG-001-WIW-22'] } },
+    where: { id: { in: ['ENG-013-TI-05', 'ENG-001-WIW-12', 'ENG-001-WIW-22'] } },
     include: { options: { orderBy: { id: 'asc' } } },
   });
 
@@ -54,7 +56,10 @@ export default async function ComprehensionDebugPage() {
     return {
       id: item.id,
       note: lineRefs.length
-        ? `Cited window: lines ${lineRefs.join(', ')}. Highlighted on load; "go to lines" scrolls to it.`
+        // R174 moved the highlight onto the tap. This description said "Highlighted on load" for
+        // three hours afterwards — a staff-facing sentence describing behaviour that had changed
+        // underneath it, in the harness a reviewer would use to check that very behaviour.
+        ? `Cited window: lines ${lineRefs.join(', ')}. "go to lines" scrolls to it AND marks it; nothing is marked on arrival.`
         : 'lineRefs [] — DECLARES the whole passage as the window. No line singled out.',
       stem,
       options: item.options.map((o) => ({ id: o.id, content: o.content })),

@@ -1,6 +1,24 @@
 /**
  * CAN THIS ITEM REACH A CHILD? — `pnpm check:serving-path`
  *
+ * **DELIVERABLE AND REACHABLE ARE TWO PROPERTIES, AND THIS CHECK COLLAPSED THEM** (David's ruling,
+ * 2026-08-17 — R171). It printed *"372 of 372 COULD REACH A CHILD"* while **no English item was
+ * reachable by any route in the product.** The four legs were right; the sentence was not.
+ *
+ *   · DELIVERABLE is a property of the ITEM: hand it to the runner and something correct appears.
+ *     Routes to an engine, renders a stem, resolves a passage, resolves its citations.
+ *   · REACHABLE is a property of the PLATFORM: some door will actually select it. Nothing about the
+ *     item can establish it, and an item can be perfect on all four legs and unreachable forever.
+ *
+ * R170 in this file, minutes after recording R170. There it was a constructor that superseded by
+ * intent and not by id; here it is a check that measured the near leg and named the far one. **The
+ * shared shape: the instrument was correct, and the property it reported was one nobody measured.**
+ *
+ * So the two are reported SEPARATELY and the reachability half names its three stops by reading
+ * them, never by assertion. Exit status still follows DELIVERABILITY alone — reachability is a
+ * platform state and not an item fault, and a permanently red CI step teaches people to skip it —
+ * so the summary says in terms which cannot be misread that a green exit means deliverable ONLY.
+ *
  * Every guard built this month watches content going IN. **None watches whether what came in can
  * come OUT.** Two months of instruments on one side of a boundary nobody checked the far side of —
  * and on the far side, four things stand between a signed bank and a child, none of which is
@@ -33,8 +51,9 @@
 import { readFileSync, readdirSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { mkdirSync, writeFileSync } from 'node:fs';
-import { FAMILY_BY_TYPE } from '../packages/core/src/index';
+import { FAMILY_BY_TYPE, SERVING_HOLDS, isHeldFromServing, servingSensesBanner } from '../packages/core/src/index';
 import { stemText } from '../apps/web/components/crew/engines/shared';
+import { QUARTER_ORDER } from '../apps/web/lib/crew/districts';
 import { prisma } from '../packages/db/src/index';
 import { artefactStamp, deliver, stampedName } from './lib/export-destination';
 import { requirePopulation } from './lib/population';
@@ -42,6 +61,8 @@ import { requirePopulation } from './lib/population';
 const OUT_DIR = resolve(import.meta.dirname, '../content/exports');
 const PASSAGES = resolve(import.meta.dirname, '../content/passages');
 const RUNNER = resolve(import.meta.dirname, '../apps/web/components/crew/play-runner.tsx');
+const MOCKS = resolve(import.meta.dirname, '../apps/web/lib/crew/mocks.ts');
+const BLUEPRINTS = resolve(import.meta.dirname, '../content/blueprints');
 const FAMILY = 'serving-path-english';
 
 /** Families with an engine, read from the runner's own map rather than kept by hand (R57). */
@@ -50,6 +71,85 @@ function enginesInRunner(): Set<string> {
   const block = src.split('const engines = {')[1]?.split('};')[0];
   if (!block) throw new Error('could not find the engines map in play-runner.tsx — refusing to guess');
   return new Set([...block.matchAll(/^\s*([a-zA-Z0-9_]+)\s*:/gm)].map((m) => m[1]!));
+}
+
+/**
+ * THE THREE STOPS BETWEEN A DELIVERABLE ITEM AND A CHILD, each read from its own source (R57).
+ *
+ * There are exactly TWO doors in the product that select an item for a child — `itemPool` in the
+ * orchestrator (gated on the focus Case's questionTypeId) and `composeMockPaper` (gated on the
+ * wired blueprints) — plus the district map, which decides whether a quarter is drawn at all. An
+ * item passes all four legs above and is still met by nobody unless one of these names it.
+ *
+ * NOTHING HERE IS HAND-KEPT. Cases come from the table, blueprints from the import list in
+ * `mocks.ts` (a JSON file in content/blueprints that nothing imports is NOT wired, and listing the
+ * directory would report it as though it were), quarters from `QUARTER_ORDER` itself.
+ */
+interface Reachability {
+  englishQuestionTypes: string[];
+  casesTotal: number;
+  casesNamingEnglish: string[];
+  blueprintsWired: Array<{ file: string; district: string; questionTypes: number; namesEnglishType: boolean }>;
+  quarterOrder: string[];
+  englishQuarters: string[];
+  englishQuartersOrdered: string[];
+  reachable: boolean;
+}
+
+async function reachability(englishTypes: Set<string>): Promise<Reachability> {
+  const cases = await prisma.case.findMany({ select: { questionTypeId: true } });
+  const casesNamingEnglish = cases.filter((c) => englishTypes.has(c.questionTypeId)).map((c) => c.questionTypeId);
+
+  // The blueprints ACTUALLY WIRED, read from the import list in mocks.ts rather than the directory.
+  const mocksSrc = readFileSync(MOCKS, 'utf8');
+  const wiredFiles = [...mocksSrc.matchAll(/from '[^']*content\/blueprints\/([\w-]+)\.json'/g)].map((m) => m[1]!);
+  if (wiredFiles.length === 0) {
+    throw new Error('no blueprint imports found in mocks.ts — refusing to report "0 English blueprints" from a failed parse');
+  }
+  //
+  // THE FILE WRAPS THE BLUEPRINT: `{ kind, blueprint: { district, sections } }`, exactly as
+  // `blueprintFileSchema.parse(file).blueprint` unwraps it in mocks.ts. The first version of this
+  // read the WRAPPER, found no `sections`, and reported *0 of 4 name an English type* — **the right
+  // answer, reached from a failed read.** A shape it cannot parse is refused rather than counted as
+  // zero, because a zero from a broken reader is indistinguishable from a true zero and this one
+  // would have been believed.
+  const blueprintsWired = wiredFiles.map((file) => {
+    const raw = JSON.parse(readFileSync(join(BLUEPRINTS, `${file}.json`), 'utf8')) as Record<string, unknown>;
+    const bp = (raw.blueprint ?? raw) as { district?: string; sections?: Array<{ typeMix?: Record<string, unknown> }> };
+    if (!Array.isArray(bp.sections) || bp.sections.length === 0) {
+      throw new Error(
+        `blueprint ${file}.json: no sections found at .blueprint.sections — refusing to report `
+        + '"names no English type" from a shape this could not read.',
+      );
+    }
+    const types = bp.sections.flatMap((s) => Object.keys(s.typeMix ?? {}));
+    return {
+      file,
+      district: bp.district ?? '(none)',
+      questionTypes: types.length,
+      namesEnglishType: types.some((t) => englishTypes.has(t)),
+    };
+  });
+
+  // A quarter DECLARED in QUARTERS but absent from QUARTER_ORDER renders nowhere: `groupIntoQuarters`
+  // maps over the ORDER, so the declaration alone puts nothing on a child's map.
+  const mapped = [...englishTypes]
+    .map((t) => FAMILY_BY_TYPE[t] as string | undefined)
+    .filter((f): f is string => typeof f === 'string');
+  const englishQuarters: string[] = [...new Set(mapped)];
+  const quarterOrder = [...QUARTER_ORDER] as string[];
+  const englishQuartersOrdered = englishQuarters.filter((q) => quarterOrder.includes(q));
+
+  return {
+    englishQuestionTypes: [...englishTypes].sort(),
+    casesTotal: cases.length,
+    casesNamingEnglish,
+    blueprintsWired,
+    quarterOrder,
+    englishQuarters: englishQuarters.sort(),
+    englishQuartersOrdered,
+    reachable: casesNamingEnglish.length > 0 || blueprintsWired.some((b) => b.namesEnglishType),
+  };
 }
 
 /**
@@ -177,7 +277,7 @@ async function main(): Promise<void> {
     const lineRefsOk = NEEDS_NO_PASSAGE.has(item.questionTypeId)
       ? `EXEMPT — ${item.questionTypeId} has no passage to cite into`
       : NEEDS_NO_LINEREFS.has(item.questionTypeId)
-        ? `EXEMPT — ${item.questionTypeId} cites a gap (stem.gapRef), not lines`
+        ? `EXEMPT — ${item.questionTypeId} cites a gap (stem.gapIndex), not lines`
         : declaredWholePassage
           ? 'EXEMPT — lineRefs [] declares the whole passage as the window'
           : !passage ? 'FAIL — no passage to resolve against'
@@ -196,6 +296,8 @@ async function main(): Promise<void> {
   const tally = (k: 'routes' | 'stem' | 'passage' | 'lineRefs') => rows.filter((r) => r[k] === 'PASS').length;
   const exempt = (k: 'routes' | 'stem' | 'passage' | 'lineRefs') => rows.filter((r) => r[k].startsWith('EXEMPT')).length;
 
+  const reach = await reachability(new Set(items.map((i) => i.questionTypeId)));
+
   const generatedAt = new Date().toISOString();
   const body = {
     kind: FAMILY,
@@ -205,6 +307,14 @@ async function main(): Promise<void> {
       + 'item renders as a blank-stemmed synonym tile with no passage and nothing reports it.',
     generatedAt,
     denominator: { englishItems: items.length, passageFiles: passages.size, engineFamilies: [...engines].sort() },
+    reachability: {
+      ...reach,
+      note:
+        'DELIVERABLE is a property of the ITEM; REACHABLE is a property of the PLATFORM. An item can '
+        + 'pass all four legs and be met by nobody. Two doors select items for a child — itemPool '
+        + '(gated on the focus Case) and composeMockPaper (gated on the wired blueprints) — and the '
+        + 'district map decides whether a quarter is drawn at all.',
+    },
     headline: {
       deliverable: deliverable.length,
       undeliverable: rows.length - deliverable.length,
@@ -223,6 +333,63 @@ async function main(): Promise<void> {
   writeFileSync(path, JSON.stringify({ ...body, stamp }, null, 2));
   deliver(path, FAMILY);
 
+  /**
+    * THE THREE SENSES FIRST, ACROSS ALL DISTRICTS (R184). This check screens ENGLISH; the census is
+    * DELIBERATELY WIDER and says so, because the word being disambiguated was used about the whole
+    * bank. Printing a narrower population under the same word would be the fault again.
+    */
+  const senseTypes = await prisma.questionType.findMany({ select: { id: true, district: true } });
+  const senseDistrict = new Map(senseTypes.map((t) => [t.id, String(t.district)]));
+  const allCaseRows = await prisma.case.findMany({ select: { questionTypeId: true, freeTier: true } });
+  const casedTypes = new Set(allCaseRows.map((c) => c.questionTypeId));
+  const freeCasedTypes = new Set(allCaseRows.filter((c) => c.freeTier).map((c) => c.questionTypeId));
+  const allItems = await prisma.item.findMany({ select: { id: true, questionTypeId: true, status: true, pool: true } });
+  const census = new Map<string, { total: number; published: number; servable: number; reachablePaid: number; reachableFree: number }>();
+  for (const it of allItems) {
+    const d = senseDistrict.get(it.questionTypeId) ?? '(no type row)';
+    const e = census.get(d) ?? { total: 0, published: 0, servable: 0, reachablePaid: 0, reachableFree: 0 };
+    e.total += 1;
+    if (it.status === 'LIVE') {
+      e.published += 1;
+      // A serving hold stops SERVABLE and everything above it, and leaves PUBLISHED true (R208):
+      // the census reads the same list the doors read, so this column reports what the doors DO.
+      if (it.pool === 'PRACTICE' && !isHeldFromServing((it as { id?: string }).id ?? '')) {
+        e.servable += 1;
+        if (casedTypes.has(it.questionTypeId)) e.reachablePaid += 1;
+        if (freeCasedTypes.has(it.questionTypeId)) e.reachableFree += 1;
+      }
+    }
+    census.set(d, e);
+  }
+  const sum = (k: 'total' | 'published' | 'servable' | 'reachablePaid' | 'reachableFree') =>
+    [...census.values()].reduce((n, v) => n + v[k], 0);
+
+  console.log(servingSensesBanner());
+  console.log(`\n  CENSUS — ALL DISTRICTS, all ${sum('total')} items (wider than the ${items.length} screened below):\n`);
+  console.log(`    ${'district'.padEnd(14)}${'items'.padStart(8)}${'PUBLISHED'.padStart(11)}${'SERVABLE'.padStart(10)}${'REACH(paid)'.padStart(12)}${'REACH(free)'.padStart(12)}`);
+  for (const [d, v] of [...census].sort()) {
+    console.log(`    ${d.padEnd(14)}${String(v.total).padStart(8)}${String(v.published).padStart(11)}`
+      + `${String(v.servable).padStart(10)}${String(v.reachablePaid).padStart(12)}${String(v.reachableFree).padStart(12)}`);
+  }
+  console.log(`    ${'ALL'.padEnd(14)}${String(sum('total')).padStart(8)}${String(sum('published')).padStart(11)}`
+    + `${String(sum('servable')).padStart(10)}${String(sum('reachablePaid')).padStart(12)}${String(sum('reachableFree')).padStart(12)}`);
+  if (SERVING_HOLDS.length) {
+    console.log(`\n    ${SERVING_HOLDS.length} SERVING HOLD(S) — PUBLISHED stands, SERVABLE stopped at the door (R208):`);
+    for (const h of SERVING_HOLDS) {
+      console.log(`      · ${h.itemId} — held by ${h.heldBy}, ${h.on}`);
+      console.log(`        lifts when: ${h.liftedBy}`);
+    }
+  }
+  if (sum('published') === sum('reachablePaid')) {
+    console.log('\n    PUBLISHED, SERVABLE and REACHABLE(paid) agree today. THAT IS A FACT ABOUT TODAY,');
+    console.log('    not a reason to stop naming which: they read 332 / 332 / 298 this morning, before');
+    console.log('    four Case rows landed. REACHABLE(free) is the one that still disagrees, and it was');
+    console.log('    invisible while a single "REACHABLE" stood for both populations.');
+  }
+  console.log('\n    LIMIT: both REACHABLE columns mean A CASE NAMES THE TYPE, now split by whether that');
+  console.log('    Case is in the free set. Neither accounts for MOCK PAPERS, a separate door drawing on');
+  console.log('    blueprints — and no blueprint names an English type, so that door adds nothing here.\n');
+
   console.log(`check:serving-path: ${items.length} English item(s) · ${passages.size} passage file(s) · `
     + `engine families in the runner: ${[...engines].sort().join(', ')}\n`);
   const totalBlank = passageReport.reduce((n, r) => n + r.blankSeparators, 0);
@@ -233,7 +400,11 @@ async function main(): Promise<void> {
     console.log(`    x ${r.id}: ${r.faults.join('; ')}`);
   }
   console.log();
-  console.log(`  ${deliverable.length} of ${rows.length} COULD REACH A CHILD.\n`);
+  // THE SENTENCE THIS CHECK GOT WRONG (R171). It says what it screened, and no more than that.
+  console.log(`  ${deliverable.length} of ${rows.length} ARE DELIVERABLE — each routes to an engine, renders a`);
+  console.log('  stem, resolves its passage and resolves its citations. THAT IS A PROPERTY OF THE ITEM:');
+  console.log('  hand it to the runner and something correct appears. It is NOT a statement that anything');
+  console.log('  will hand it to the runner.\n');
   console.log('        pass  exempt  fail');
   for (const k of ['routes', 'stem', 'passage', 'lineRefs'] as const) {
     const f = rows.length - tally(k) - exempt(k);
@@ -242,6 +413,36 @@ async function main(): Promise<void> {
   console.log('\n  EXEMPT is declared, never inferred: SPaG spot items carry their text in the stem,');
   console.log('  cloze cites a gap, and lineRefs [] declares the whole passage as the window — which');
   console.log('  is a positive statement and is NOT the same as null, where nobody stated one.');
+  // ---- REACHABILITY, REPORTED SEPARATELY AND NEVER FOLDED INTO THE ABOVE ----
+  console.log(`\n  REACHABLE? Three stops stand between a deliverable item and a child, and every one`);
+  console.log('  is read here rather than asserted.\n');
+  const stop = (ok: boolean) => (ok ? ' ' : 'x');
+  console.log(`   ${stop(reach.casesNamingEnglish.length > 0)} 1. CASES — ${reach.casesNamingEnglish.length} of ${reach.casesTotal} Case row(s) name an English question type.`);
+  console.log(`        itemPool only ever sees the focus Case's questionTypeId, so a type no Case names`);
+  console.log('        is never asked for, whatever its status or pool.');
+  const engBp = reach.blueprintsWired.filter((b) => b.namesEnglishType);
+  console.log(`   ${stop(engBp.length > 0)} 2. BLUEPRINTS — ${engBp.length} of ${reach.blueprintsWired.length} wired mock blueprint(s) name an English type:`);
+  for (const b of reach.blueprintsWired) {
+    console.log(`        ${b.namesEnglishType ? '·' : ' '} ${b.file.padEnd(20)} district ${String(b.district).padEnd(8)} ${b.questionTypes} question type(s)`);
+  }
+  console.log('        Read from the import list in mocks.ts: a blueprint file nothing imports is not');
+  console.log('        wired, and listing the directory would report it as though it were.');
+  console.log(`   ${stop(reach.englishQuartersOrdered.length > 0)} 3. QUARTER_ORDER — ${reach.englishQuartersOrdered.length} of ${reach.englishQuarters.length} English quarter(s) appear in it.`);
+  console.log(`        declared: ${reach.englishQuarters.join(', ') || '(none)'}`);
+  console.log(`        ordered:  ${reach.quarterOrder.join(', ')}`);
+  console.log('        groupIntoQuarters maps over the ORDER, so a quarter declared in QUARTERS but');
+  console.log('        absent from QUARTER_ORDER puts nothing on a child\'s map.');
+  if (!reach.reachable) {
+    console.log(`\n  ==> NOT REACHABLE. No door in the product can select any of these ${rows.length} items.`);
+    console.log('      Deliverable and reachable are two properties. Every row above is green on the');
+    console.log('      first and this line is the second, and it is the one a child experiences.');
+  } else {
+    console.log('\n  ==> REACHABLE by at least one door. Which items, and how often, is not asserted here.');
+  }
+  console.log('\n  EXIT STATUS FOLLOWS DELIVERABILITY ONLY. Reachability is a platform state, not an item');
+  console.log('  fault, and a step that is permanently red teaches people to skip it. A GREEN EXIT FROM');
+  console.log('  THIS CHECK MEANS DELIVERABLE, NEVER REACHABLE.');
+
   const firstFail = (k: 'routes' | 'stem' | 'passage' | 'lineRefs') =>
     rows.find((r) => r[k] !== 'PASS' && !r[k].startsWith('EXEMPT'))?.[k];
   console.log('\n  First failure of each kind, in full:');

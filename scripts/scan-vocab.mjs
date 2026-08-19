@@ -104,6 +104,11 @@ const EVERYWHERE_SCOPE = [
 const CHILD_FACING_SCOPE = [
   'apps/web/app/crew',
   'apps/web/components/crew',
+  // ADDED 2026-08-19 (R247). The district map's own copy lives here — QUARTERS carries the name
+  // and blurb of every quarter a child reads on the map — and this scope had never included it.
+  // Found by authoring a Case intro: my draft was caught for a banned word that was ALREADY
+  // sitting unscanned in the Fix-It Shop blurb one directory over.
+  'apps/web/lib/crew',
   'content',
   'packages/db/prisma/seed.ts',
   // Generated NVR prompts are child-facing copy that no author will ever
@@ -127,6 +132,7 @@ const STYLE_SCOPE = ['apps/web', 'packages/ui/src'];
 const CHILD_COPY_SCOPE = [
   'apps/web/app/crew',
   'apps/web/components/crew',
+  'apps/web/lib/crew',
   'packages/core/src/nvr',
   'content/voice',
   'content/words',
@@ -185,7 +191,11 @@ const EXCLUDED_SEGMENTS = ['node_modules', '.next', '.lighthouseci', 'e2e', 'tes
  * it is a key into stored rows. It is also the one file that must NOT be delivered, so it is the
  * furthest thing from child copy in the repository.
  */
-const EXCLUDED_PATHS = ['content/exports', 'content/review-returns', 'content/pilot-review', 'content/blind-keys'];
+// /content/evidence holds WITNESSES (R203): byte-pinned records of another store's past state,
+// chmod 444 and hash-asserted by check:witnesses. A scanner hit in one is a fact about HISTORY —
+// and rewording it is not merely wrong, it is impossible without breaking the pin the file exists
+// to keep. Nothing in the directory reaches a child by any path.
+const EXCLUDED_PATHS = ['content/exports', 'content/review-returns', 'content/pilot-review', 'content/blind-keys', 'content/evidence'];
 const SOURCE_TEXT_PATHS = ['content/passages'];
 const EXCLUDED_SUFFIXES = ['.test.ts', '.test.tsx', '.d.ts'];
 
@@ -422,6 +432,21 @@ function scan(
     const lines = readFileSync(file, 'utf8').split('\n');
     lines.forEach((line, index) => {
       if (line.includes('vocab-ok')) return;
+      /*
+       * A SERVER DIAGNOSTIC IS NOT CHILD COPY, AND THE DISTINCTION IS STRUCTURAL (R247).
+       *
+       * Widening this scan to `apps/web/lib/crew` brought the district map's blurbs into scope —
+       * the fault worth catching — and brought the orchestrator's `console.error` strings with
+       * them. `console.error('readiness snapshot failed', …)` is a line no child will ever see,
+       * and flagging it would train everyone to ignore the rule, which is the reasoning already
+       * written into the id-leak narrowing below.
+       *
+       * Structural, never a comment marker: a `console.*` call or a thrown Error is staff-facing
+       * BY SHAPE. Nothing here lets an author exempt a real string by claiming it is a log.
+       */
+      const trimmed = line.trim();
+      if (/^console\.(log|info|warn|error|debug)\s*\(/.test(trimmed)) return;
+      if (/throw new (Error|TypeError|RangeError)\s*\(/.test(trimmed)) return;
       // The exemption covers the quoted SPAN, not the line it sits on: a
       // stem and the quote it discusses share a line in single-line JSON, and
       // skipping the whole line would exempt our own wording along with the

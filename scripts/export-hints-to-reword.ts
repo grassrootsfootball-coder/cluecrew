@@ -14,7 +14,7 @@
  */
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
-import { checkChildFacingText } from '@cluecrew/core';
+import { carriesApprovalMarker, checkChildFacingText } from '@cluecrew/core';
 import { deliver } from './lib/export-destination';
 import { prisma } from '../packages/db/src/index';
 
@@ -32,7 +32,19 @@ async function main(): Promise<void> {
     orderBy: { id: 'asc' },
   });
 
-  const rows = active
+  /**
+   * APPROVED TEXT IS REPORTED OVER-LENGTH, NEVER NOMINATED FOR SHORTENING (R213).
+   *
+   * **THIS EXPORT WAS THE FIRST HALF OF THE TRIM.** It selected every ACTIVE hint failing the
+   * 16-word cap and handed it out to be reworded — the header below still says, in its own words,
+   * *"These are hints you approved on the written review"*. The cap chose the victims; the cutting
+   * happened off-store; a shorter value came back through an importer. No step looked like a trim,
+   * which is why two stores searched for a truncating function and neither found one.
+   *
+   * Split at the source: an entry carrying an approval marker goes to the REFUSED list, which
+   * names the over-length and stops. Only unapproved text can still be nominated.
+   */
+  const failing = active
     .map((entry) => ({
       entry,
       faults: checkChildFacingText({
@@ -42,6 +54,17 @@ async function main(): Promise<void> {
       }),
     }))
     .filter((row) => row.faults.length > 0);
+
+  const refused = failing.filter((row) => carriesApprovalMarker(row.entry));
+  const rows = failing.filter((row) => !carriesApprovalMarker(row.entry));
+
+  console.log(`export:hints-to-reword (${DISTRICT}): ${failing.length} hint(s) fail the gate.`);
+  console.log(`  ${rows.length} nominated for rewording (no approval marker)`);
+  console.log(`  ${refused.length} REFUSED — approved text, reported over-length and NOT nominated (R213):`);
+  for (const r of refused) {
+    console.log(`    x ${r.entry.id}: ${r.faults.map((f) => f.detail).join('; ')}`);
+    console.log('      Approved text changes by the approver\'s own redraft, recorded as her act.');
+  }
 
   // How many items would show each hint — a hint on twenty items matters
   // more than one on none, and the reviewer should know which is which.

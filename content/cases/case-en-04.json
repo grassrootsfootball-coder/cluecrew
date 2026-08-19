@@ -1,0 +1,35 @@
+{
+  "kind": "case",
+  "case": {
+    "id": "case-en-04",
+    "questionTypeId": "en-comp-technique",
+    "title": "The Writer's Fingerprint",
+    "narrativeIntro": {
+      "text": "Every writer leaves marks on the page. A short sentence that makes you stop. A word picked to make you feel cold. Find the mark first. Then say what job it was doing.",
+      "skippable": true
+    },
+    "modes": {
+      "watch": {
+        "kind": "video",
+        "assetRef": "placeholder/en-04/watch.mp4",
+        "maxSeconds": 90
+      },
+      "walk": {
+        "kind": "faded-example",
+        "assetRef": "placeholder/en-04/walk.json"
+      },
+      "see": {
+        "kind": "visual",
+        "assetRef": "placeholder/en-04/see.json"
+      },
+      "hear": {
+        "kind": "audio",
+        "assetRef": "placeholder/en-04/hear.mp3"
+      },
+      "try": {
+        "kind": "practice"
+      }
+    },
+    "orderInDistrict": 25
+  }
+}

@@ -52,7 +52,7 @@ async function main(): Promise<void> {
   let adChecked = 0;
   let adFailures = 0;
 
-  const items = await prisma.item.findMany({ include: { questionType: true, options: true } });
+  const items = await prisma.item.findMany({ include: { questionType: true, options: { orderBy: { id: 'asc' } } } });
   const absent: string[] = [];
   /**
    * THE THREE CAUSES, COUNTED APART (R165). This loop opened `if (!passageRef) continue` and skipped
@@ -87,7 +87,9 @@ async function main(): Promise<void> {
     // A migration that empties a field must be followed to every reader of it.
     const itemRefs = Array.isArray(item.lineRefs) ? (item.lineRefs as number[]) : null;
     const lineRefs = itemRefs ?? (Array.isArray(stem.lineRefs) ? (stem.lineRefs as number[]) : []);
-    const gapRef = typeof stem.gapRef === 'number' ? stem.gapRef : undefined;
+    // gapIndex is the ruled name (R209); gapRef accepted while any old artefact still carries it.
+    const gapRef = typeof stem.gapIndex === 'number' ? stem.gapIndex
+      : typeof stem.gapRef === 'number' ? stem.gapRef : undefined;
     /**
      * A BARE STRING IN A QUOTES ARRAY IS A DECLARED CONVENTION, NOT A MALFORMED OBJECT.
      *

@@ -121,11 +121,31 @@ describe('option branch takes the stem branch\'s arguments (R148)', () => {
     expect(faults).toEqual([]);
   });
 
+  /**
+   * **THE FIXTURE CHANGED, THE INTENT DID NOT** (R338). This case asserted that an undeclared span
+   * still blocks, and proved it with `an ordinary observer and an extraordinary observer` — **the
+   * exact pair Annie ruled on**: `ordinary` inside `extraordinary` is ONE hard word, not two, and
+   * taking either out would delete the question that contrast asks.
+   *
+   * So the old fixture no longer produces a long-words fault, and it should not. **The test was
+   * encoding the token count, not the exemption rule it is named for** — and only by accident,
+   * because the pair it reached for happened to be a repeat. Two genuinely distinct long words
+   * prove the same property without depending on a counting rule that has since been ruled wrong.
+   */
+  const TWO_DISTINCT = 'an extraordinary observer and a magnificent inheritance';
+
   it('an UNDECLARED span in an option still blocks — the exemption is not a blanket', () => {
+    const faults = checkItemChildFacing({
+      ...base, stem: { text: 'Line 41. Why?' }, options: opts(`He is ${TWO_DISTINCT}.`),
+    }).filter(isBlocking);
+    expect(faults.some((f) => f.rule === 'long-words')).toBe(true);
+  });
+
+  it('the ordinary/extraordinary pair is ONE hard word, not two (R338)', () => {
     const faults = checkItemChildFacing({
       ...base, stem: { text: 'Line 41. Why?' }, options: opts(`He is ${QUOTE}.`),
     }).filter(isBlocking);
-    expect(faults.some((f) => f.rule === 'long-words')).toBe(true);
+    expect(faults.some((f) => f.rule === 'long-words')).toBe(false);
   });
 
   it('a stem span the option does not use is NOT reported against it', () => {

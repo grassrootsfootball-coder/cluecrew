@@ -27,7 +27,7 @@ async function main(): Promise<void> {
 
   const items = await prisma.item.findMany({
     where: { questionType: { mechanic: 'error-spot' } },
-    include: { options: true, questionType: true },
+    include: { options: { orderBy: { id: 'asc' } }, questionType: true },
     orderBy: { id: 'asc' },
   });
 
@@ -81,7 +81,7 @@ async function main(): Promise<void> {
   // VERIFY BY RE-READING THE THING ACTED ON, never by counting what is left.
   const after = await prisma.item.findMany({
     where: { questionType: { mechanic: 'error-spot' } },
-    include: { options: true }, orderBy: { id: 'asc' },
+    include: { options: { orderBy: { id: 'asc' } } }, orderBy: { id: 'asc' },
   });
   let declared = 0, textUnchanged = 0;
   const before = new Map(items.map((it) => [it.id, String(((it.stem ?? {}) as { prompt?: unknown }).prompt ?? '')]));

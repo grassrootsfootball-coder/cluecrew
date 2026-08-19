@@ -17,7 +17,7 @@
  * batch file and its review pack can never be confused for one another.
  */
 import { createHash } from 'node:crypto';
-import { copyFileSync, existsSync, mkdirSync, readFileSync, readdirSync, rmSync, statSync } from 'node:fs';
+import { copyFileSync, existsSync, mkdirSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { basename, join, resolve } from 'node:path';
 
 /** Confirmed with David, 2026-08-02: Cowork reads the ~/Downloads/11+/ tree. */
@@ -103,10 +103,20 @@ export function stampedName(base: string, sourceHash: string, ext: string): stri
 }
 
 /**
- * Copies a generated file to the outbound folder — the ONLY delivery path.
- * (Manual copies to Downloads root are what let a stale file reach Cowork; they
- * are banned.) Throws rather than warns: a silent delivery failure is the whole
- * problem this exists to fix.
+ * Copies a generated file to the outbound folder — **the only STAGING path.**
+ *
+ * **IT DOES NOT DELIVER AND IT NO LONGER SAYS THAT IT DOES** (2026-08-19 — R255). This function
+ * described itself as "the ONLY delivery path" and printed `delivered → …`, and for months that
+ * line was read — by me, every day — as arrival. **267 files had accumulated in that folder and
+ * Cowork had received one of them, ever.** Six NVR rows went unsigned and a milestone was withdrawn
+ * because a file this function reported as delivered had never crossed.
+ *
+ * What it guarantees is real and is only half: one current version per family, superseded copies
+ * pruned, throws rather than warns. **The last hop is a human upload, which no code here can see.**
+ *
+ * **STAGED is a fact about this machine. ARRIVED is a fact about the other store, and only the
+ * other store can report it** — via an inbound artefact naming the file, which is what
+ * `acknowledgedFiles()` reads. Nothing in this module may print a word that reads as arrival.
  *
  * `family` is the base name without the hash (e.g. "vr-free-ten"). When given,
  * every same-family outbound file whose CONTENT HASH differs from this file's —
@@ -136,8 +146,81 @@ export function deliver(sourcePath: string, family?: string): string {
     }
   }
   copyFileSync(sourcePath, target);
-  console.log(`  delivered → ${target}`);
+  /*
+   * **A SENDING REPORT SAYS STAGED WITH A HASH; THE RECEIVING STORE REPORTS ARRIVAL BY NAMING THE
+   * HASH IT HOLDS** (Annie's operational ruling, 2026-08-19 — R255). Anything else is a record
+   * running ahead of an act.
+   *
+   * The hash printed here is the sha256 OF THE FILE AS STAGED — not the stamp's truncated
+   * projection digest (R256), which cannot serve this purpose because a file cannot contain its
+   * own digest. This is the value the other store quotes back, and the two stores agree on a
+   * delivery only when the same 64 characters appear on both sides.
+   */
+  /*
+   * **THE BYTE DIGEST IS WRITTEN, NOT ONLY PRINTED** (Cowork's flag closed, 2026-08-19 — R265).
+   *
+   * `hashSpec.fileDigest` is null by construction — a file cannot contain its own digest — and the
+   * honest declaration of that left a real gap: a projection digest **cannot detect a file that
+   * arrived truncated or re-encoded**, because it is computed from rows before the bytes exist.
+   * Cowork was computing its own on receipt and neither side carried one to compare.
+   *
+   * So the digest is taken over the BYTES OF THE STAGED FILE, after it is closed, and written to a
+   * SIDECAR beside it. A sidecar is the only shape that works: it is outside the file, so it can
+   * describe the file completely. The receiving store hashes what it holds and compares two
+   * numbers, and a truncated or re-encoded arrival stops being invisible.
+   */
+  const fileDigest = createHash('sha256').update(readFileSync(target)).digest('hex');
+  writeFileSync(`${target}.sha256`, `${fileDigest}  ${name}\n`);
+  const queued = readdirSync(OUTBOUND_DIR).filter((f) => !f.endsWith('.sha256')).length;
+  console.log(`  STAGED  ${basename(target)}`);
+  console.log(`  sha256  ${fileDigest}  (over the FILE BYTES; also written to ${basename(target)}.sha256)`);
+  console.log(`  path    ${target}`);
+  console.log(`  ${queued} file(s) staged. ARRIVAL IS NOT A FACT THIS SIDE CAN REPORT — it is confirmed`);
+  console.log('  only when the other store names this sha256 in something it sends back.');
   return target;
+}
+
+/**
+ * THE ACKNOWLEDGEMENT LEDGER — the only thing that can turn STAGED into ARRIVED.
+ *
+ * A staged file that has never been acknowledged is a QUEUE, and its length is a number nobody was
+ * keeping. This reads the INBOUND artefacts — the files the other store sends us — and collects
+ * every outbound filename they name. **Only the receiving store can say a file arrived**, so the
+ * evidence has to come from something it wrote, never from anything on this side.
+ *
+ * A name appearing anywhere in an inbound artefact counts. That is generous on purpose: the risk
+ * worth engineering against is a file believed delivered that never crossed, and a false
+ * ACKNOWLEDGED reads as "we are done" while a false UNACKNOWLEDGED merely asks someone to check.
+ */
+export function acknowledgedFiles(inboundDirs: readonly string[]): Set<string> {
+  const named = new Set<string>();
+  for (const dir of inboundDirs) {
+    let entries: string[];
+    try { entries = readdirSync(dir); } catch { continue; }
+    for (const entry of entries) {
+      const full = join(dir, entry);
+      let text: string;
+      try {
+        if (!statSync(full).isFile()) continue;
+        text = readFileSync(full, 'utf8');
+      } catch { continue; }
+      for (const m of text.matchAll(/[A-Za-z0-9._-]+\.(?:json|md|html|csv|pdf)\b/g)) named.add(m[0]);
+    }
+  }
+  return named;
+}
+
+/** Every file staged for the other store, with whether anything it sent back names it. */
+export function stagingQueue(inboundDirs: readonly string[]): {
+  staged: string[]; acknowledged: string[]; unacknowledged: string[];
+} {
+  const acked = acknowledgedFiles(inboundDirs);
+  const staged = readdirSync(OUTBOUND_DIR).filter((f) => !f.startsWith('.')).sort();
+  return {
+    staged,
+    acknowledged: staged.filter((f) => acked.has(f)),
+    unacknowledged: staged.filter((f) => !acked.has(f)),
+  };
 }
 
 
@@ -158,6 +241,23 @@ export function deliver(sourcePath: string, family?: string): string {
 export interface FreshnessStamp {
   generatedAt: string;
   sourceHash: string;
+  /**
+   * WHAT `sourceHash` ACTUALLY IS, CARRIED BESIDE IT (Cowork's flag, 2026-08-19 — R256).
+   *
+   * A field named `sourceHash` holding sixteen hex characters **will be read as a sha256 of the
+   * file**, and a receiving store cannot tell from the value whether it is one. Ours is a sha256
+   * and is neither of the two things that name suggests: it is TRUNCATED to 16 characters, and it
+   * is taken over the DECLARED PROJECTION rather than over the file bytes.
+   *
+   * **A file cannot contain its own digest**, so `fileDigest` is null by construction and says so
+   * rather than being absent — the receiving store computes that itself if it wants one.
+   */
+  hashSpec: {
+    algorithm: 'sha256';
+    digestChars: number;
+    over: string;
+    fileDigest: null;
+  };
 }
 
 /**
@@ -240,9 +340,21 @@ function canonical(value: unknown): unknown {
   return value;
 }
 
+const HASH_CHARS = 16;
+
 export function freshnessStamp(source: unknown, generatedAt: string): FreshnessStamp {
-  const hash = createHash('sha256').update(JSON.stringify(canonical(source))).digest('hex').slice(0, 16);
-  return { generatedAt, sourceHash: hash };
+  const hash = createHash('sha256').update(JSON.stringify(canonical(source)))
+    .digest('hex').slice(0, HASH_CHARS);
+  return {
+    generatedAt,
+    sourceHash: hash,
+    hashSpec: {
+      algorithm: 'sha256',
+      digestChars: HASH_CHARS,
+      over: 'the canonicalised declared projection named in stampedOver — NOT the file bytes',
+      fileDigest: null,
+    },
+  };
 }
 
 /** A freshness stamp that also declares what it is a snapshot of (see `SnapshotOf`). */

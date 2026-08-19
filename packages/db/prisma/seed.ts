@@ -253,7 +253,8 @@ function moveLetterItems(): SeedItem[] {
       questionTypeId: vrTypeId(8, 'move-letter'),
       difficultyTier: 1 + (i % 5),
       stem: {
-        prompt: 'Move one letter from the first word to the second word so that both make new words.',
+        // 17 words before the reading-age cap reached this file (R270). Reworded, never exempted.
+        prompt: 'Move one letter from the first word to the second so both make new words.',
         word1: pair.word1,
         word2: pair.word2,
       },
@@ -456,59 +457,139 @@ async function seedCases(): Promise<void> {
     });
   }
 
-  // AMENDMENT-1 §5.1: the free Crew tier's default selection — the first two
-  // cases per engine family by orderInDistrict (10 in all). David + reviewer
-  // ratify or adjust; the seed re-derives the DEFAULT on every run, so a
-  // hand-ratified change should be made HERE, not in the database.
-  const allCases = await prisma.case.findMany({ orderBy: { orderInDistrict: 'asc' } });
-  const byFamily = new Map<string, string[]>();
   /**
-   * HELD OUT OF THE FREE TIER (David's ruling, 2026-08-02).
+   * THE FREE TIER IS A FLOOR OF TWO CASES PER DISTRICT (David's ruling, 2026-08-17 — R177).
+   * AMENDMENT-1 §5.1, restated. This replaces "the first two cases of each engine family".
    *
-   * `case-vr-05` (Hidden Word) has four gate-clean items against a floor of
-   * fifteen. Fourteen of its twenty-five admit a second word at a join, so a
-   * child who reads correctly can be marked wrong. Four out of fifteen is
-   * authoring a case, not fixing one, and it goes to the paid tier once
-   * rebuilt properly.
+   * **NOBODY HAD EVER DECIDED WHAT THE FREE TIER IS. THEY DECIDED WHAT TO KEEP OUT OF IT.** The old
+   * formula was never chosen as a shape — it was a default that three exclusions and one addition
+   * were then argued against, one case at a time, each with a written reason. Measuring it exposed
+   * that: VR's ten is the formula's NINE plus a hand-added tenth, minus three held out, so four of
+   * the ten slots are human decisions and the other six are a rule nobody ratified.
    *
-   * Held out HERE, in the derivation, rather than by hard-coding its
-   * replacement: the rule is still "the first two cases of each family in
-   * district order", so skipping vr-05 selects vr-06 on its own. Encoding the
-   * ruling rather than its consequence means the next case to be held out —
-   * or vr-05's return — needs one line, not a re-derivation by hand.
+   * **AND THE FORMULA CHANGED MEANING WHEN THE FAMILY COUNT CHANGED.** Across VR's five families
+   * "two per family" is a SAMPLING rule — show a child every kind of work the district does. In
+   * English's single family it degenerates into a QUANTITY rule — show a child two cases. Same
+   * words, different instrument, and English drew 2 of 4 cases (20 of 34 items) from a rule that
+   * was never pointed at a one-family district. A structural rule reached a population nobody
+   * aimed it at, and this time the result was arbitrary rather than correct.
    *
-   * `case-vr-10` (Word Connections) FOLDED (David's ruling, 2026-08-02): it is
-   * the same 25 analogies as `case-vr-03`, differing only in tag names (Entry
-   * 27), so it adds nothing to the free tier. Both are the bridge family;
-   * skipping vr-10 makes the rule select the next bridge case in district
-   * order, `case-vr-14` (Letter Connections) — a LETTER analogy against
-   * vr-03's word analogy, so the family shows its range instead of running the
-   * same mechanic twice (the vr-06 reasoning, applied again).
+   * **SO THE SET IS NOW ENUMERATED AND THE RULE IS A FLOOR.** The list below is authoritative — a
+   * HUMAN RULING, not a computed value — and the floor is the invariant it must satisfy. That also
+   * moves this write off the derived path entirely (R63: the test is who authored the value), which
+   * is why no `classifyDerivedWrites` guard belongs on it.
+   *
+   * **VR'S TEN ARE RECORDED AS EXCLUSIONS FROM THE FULL SET, NOT AS DEVIATIONS FROM A FORMULA.**
+   * Re-deriving them to a shape nobody chose would discard four real decisions.
    */
-  // `case-vr-02` (Two Odd Ones Out) HELD OUT (David's ruling, 2026-08-02): the
-   // oddOnesOut generator writes its answer as a {pair} with no `value`, against
-   // a select-two mechanic, so every value-based consumer reads it as unkeyable
-   // and it cannot be scored as served. Out until the interaction is rebuilt.
-   const HELD_OUT_OF_FREE_TIER = new Set(['case-vr-05', 'case-vr-10', 'case-vr-02']);
+  const FREE_TIER_FLOOR_PER_DISTRICT = 2;
 
-  for (const caseRow of allCases) {
-    if (HELD_OUT_OF_FREE_TIER.has(caseRow.id)) continue;
-    const family = FAMILY_BY_TYPE[caseRow.questionTypeId] ?? 'wordweb';
-    const list = byFamily.get(family) ?? [];
-    if (list.length < 2) {
-      list.push(caseRow.id);
-      byFamily.set(family, list);
+  /**
+   * WHY EACH EXCLUDED CASE IS OUT. Every reason survives from the 2026-08-02 rulings; only the
+   * framing changed. These are cases that would otherwise be free, kept out one at a time.
+   */
+  const EXCLUDED_FROM_FREE_TIER: Array<{ id: string; reason: string }> = [
+    {
+      id: 'case-vr-05',
+      reason:
+        'Hidden Word: four gate-clean items against a floor of fifteen. Fourteen of its twenty-five '
+        + 'admit a second word at a join, so a child who reads correctly can still lose the mark. '
+        + 'That is authoring a case, not fixing one — it returns once rebuilt.',
+    },
+    {
+      id: 'case-vr-10',
+      reason:
+        'Word Connections: the same 25 analogies as case-vr-03, differing only in tag names '
+        + '(Entry 27), so it adds nothing. case-vr-14 carries a LETTER analogy against vr-03\'s WORD '
+        + 'analogy, so the free set shows range instead of running one mechanic twice.',
+    },
+    {
+      id: 'case-vr-02',
+      reason:
+        'Two Odd Ones Out: the generator writes its answer as a {pair} with no `value` against a '
+        + 'select-two mechanic, so every value-based consumer reads it as unkeyable and it cannot be '
+        + 'scored as served. Out until the interaction is rebuilt.',
+    },
+  ];
+
+  /**
+   * THE FREE SET, ENUMERATED PER DISTRICT.
+   *
+   * VR's ten: the eight that survive the exclusions above, plus `case-vr-11` (The Counting Culprit),
+   * added by hand on 2026-08-01 because it is the flagship case with LIVE items — so the free tier
+   * always contains a case a production child can genuinely play.
+   *
+   * ENGLISH's two: **CHOSEN, 2026-08-17 (R194) — the second entry in this set a person selected.**
+   * They were `case-en-01` and `case-en-02` by accident: the floor took the first two by
+   * `orderInDistrict`, and that order was the order the authoring loop ran. No property of the
+   * items decided it, and it landed badly — technique carries EVERY T4 in the reachable English
+   * bank and vocabulary carries the two-part screen, so a free child met the two most tractable
+   * strands and none of the writer's-technique work.
+   *
+   * The pair is now chosen on what it shows a child: **`case-en-01` (retrieval)** — a strand she can
+   * get purchase on immediately — and **`case-en-04` (technique)** — the one that shows what the
+   * district actually does. `case-en-02` (inference) and `case-en-03` (vocabulary) are paid. That is
+   * a DECISION, not a derivation, which is why it is written here and not computed.
+   */
+  const FREE_TIER_CASES: Record<string, string[]> = {
+    VR: [
+      'case-vr-01', 'case-vr-03', 'case-vr-04', 'case-vr-06', 'case-vr-07',
+      'case-vr-09', 'case-vr-11', 'case-vr-12', 'case-vr-14', 'case-vr-15',
+    ],
+    ENGLISH: ['case-en-01', 'case-en-04'],
+  };
+
+  const allCases = await prisma.case.findMany({
+    include: { questionType: { select: { district: true } } },
+    orderBy: { orderInDistrict: 'asc' },
+  });
+  const districtOf = new Map(allCases.map((c) => [c.id, String(c.questionType.district)]));
+  const freeTierIds = [...new Set(Object.values(FREE_TIER_CASES).flat())];
+
+  /**
+   * THE ENUMERATION IS ASSERTED, NEVER TRUSTED. A list is only safer than a formula if something
+   * checks it — an id that no longer exists, a case excluded and listed at once, or a district that
+   * has quietly dropped below the floor are all invisible in a literal. Each REFUSES the run.
+   */
+  const excludedIds = new Set(EXCLUDED_FROM_FREE_TIER.map((e) => e.id));
+  const problems: string[] = [];
+  for (const id of freeTierIds) {
+    if (!districtOf.has(id)) problems.push(`free-tier case '${id}' does not exist`);
+    if (excludedIds.has(id)) problems.push(`'${id}' is both listed free and excluded`);
+  }
+  for (const e of EXCLUDED_FROM_FREE_TIER) {
+    if (!districtOf.has(e.id)) problems.push(`excluded case '${e.id}' does not exist`);
+  }
+  const perDistrict = new Map<string, { total: number; free: number }>();
+  for (const c of allCases) {
+    const d = String(c.questionType.district);
+    const e = perDistrict.get(d) ?? { total: 0, free: 0 };
+    e.total += 1;
+    if (freeTierIds.includes(c.id)) e.free += 1;
+    perDistrict.set(d, e);
+  }
+  for (const [d, v] of perDistrict) {
+    // A district with fewer cases than the floor cannot meet it; that is a content gap, not a
+    // tier fault, and it says so rather than failing.
+    const required = Math.min(FREE_TIER_FLOOR_PER_DISTRICT, v.total);
+    if (v.free < required) {
+      problems.push(`district ${d} has ${v.free} free case(s), below the floor of ${required} (${v.total} exist)`);
     }
   }
-  // The tenth (David, 2026-08-01): the derived rule yields 9 because the
-  // deduction family has a single case. The Counting Culprit (Number Series)
-  // completes the ten — it is the flagship case with LIVE items, so the free
-  // tier always contains a case a production child can genuinely play.
-  const TENTH_FREE_CASE = 'case-vr-11';
-  const freeTierIds = [...new Set([...byFamily.values()].flat().concat(TENTH_FREE_CASE))];
+  if (problems.length) {
+    throw new Error(
+      `Free-tier set is inconsistent — refusing to write it:\n  ${problems.join('\n  ')}\n`
+      + 'The list in seed.ts is a human ruling; fix it there, never in the database.',
+    );
+  }
+
   await prisma.case.updateMany({ data: { freeTier: false } });
   await prisma.case.updateMany({ where: { id: { in: freeTierIds } }, data: { freeTier: true } });
-  console.log(`Free-tier cases (Amendment 1 default): ${freeTierIds.length}`);
+  console.log(
+    `Free-tier cases: ${freeTierIds.length} (floor of ${FREE_TIER_FLOOR_PER_DISTRICT} per district) · `
+    + [...perDistrict].map(([d, v]) => `${d} ${v.free}/${v.total}`).join(' · ')
+    + ` · ${EXCLUDED_FROM_FREE_TIER.length} excluded by ruling`,
+  );
 }
 
 async function seedRegions(): Promise<void> {

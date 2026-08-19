@@ -1767,7 +1767,25 @@
    above, where segments genuinely sit side by side and the sentence flows. At narrow widths the
    sentence reading is carried by reading order and the author's own punctuation.
 */
+/* The read-only sentence above the segment rows (R209, Annie's row 23): shown ONLY where the
+   segments stack as blocks and stop reading as prose. At >=600px the segments read inline and a
+   second copy of the sentence would be noise. */
+/* UPRIGHT, NOT ITALIC (Annie's read of the 375px renders, 2026-08-19). The preview repeats words
+   the child is about to meet again in the rows below, and setting the two copies in DIFFERENT FACES
+   makes the pair harder to hold, not easier — four lines of italic at 375px is the worst version of
+   that for exactly the child who needs the preview most. The rule and the tint already say "this is
+   a different kind of thing"; the face was doing a job that was already done. */
+.crew-errorspot-sentence-preview {
+  display: none;
+  font-size: 1.1rem;
+  line-height: 1.55;
+  margin: 0 0 0.6rem;
+  padding: 0.5rem 0.6rem;
+  border-left: 3px solid var(--cc-amber);
+  background: color-mix(in srgb, var(--cc-amber) 8%, transparent);
+}
 @media (max-width: 599px) {
+  .crew-errorspot-sentence-preview { display: block; }
   .crew-seg {
     display: block;
     width: 100%;

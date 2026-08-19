@@ -1,0 +1,35 @@
+{
+  "kind": "case",
+  "case": {
+    "id": "case-en-05",
+    "questionTypeId": "en-spag-punct-spot",
+    "title": "The Mark Out of Place",
+    "narrativeIntro": {
+      "text": "A sentence can look right and still have a slip in it. A mark may be out of place. Read every part before you choose. If they are all correct, say so.",
+      "skippable": true
+    },
+    "modes": {
+      "watch": {
+        "kind": "video",
+        "assetRef": "placeholder/en-05/watch.mp4",
+        "maxSeconds": 90
+      },
+      "walk": {
+        "kind": "faded-example",
+        "assetRef": "placeholder/en-05/walk.json"
+      },
+      "see": {
+        "kind": "visual",
+        "assetRef": "placeholder/en-05/see.json"
+      },
+      "hear": {
+        "kind": "audio",
+        "assetRef": "placeholder/en-05/hear.mp3"
+      },
+      "try": {
+        "kind": "practice"
+      }
+    },
+    "orderInDistrict": 26
+  }
+}
