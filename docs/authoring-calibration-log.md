@@ -11745,3 +11745,111 @@ thing the doubt denies.
 **No mechanism is proposed for this one, and that is deliberate.** `check:authority-shape` screens
 the store and states that it cannot screen prose; nothing has changed about that. This is a written
 rule for a channel with no gate, which is what the register is for.
+
+## R345 — No readability formula. If one is ever built, it measures DECODING, is called decoding, and is never printed as a reading age
+
+**Annie's ruling, 2026-08-20, with two passages as her evidence. Applies to every district and to
+every future instrument.**
+
+**Her evidence, in her terms.** `stream-a-03-wind-in-willows` reads **eleven to thirteen**: long
+stacked sentences, words a Year 6 will not hold. The **commissioned** passage has short sentences
+and plain words, so **every formula will call it easy — and it is not**. Decoding **nine or ten**;
+comprehension **twelve or more**, because almost everything that matters is implied.
+
+**The general shape: a formula measures DECODING. The §6 band is about COMPREHENSION. They come
+apart hardest on exactly the modern commissioned prose this product writes for itself.** Sentence
+length and syllable counts are the inputs every readability formula has; inference load is an input
+none of them has. Commissioned prose is written short and plain ON PURPOSE and carries its meaning
+underneath, so the formula reads the surface it was designed to read and gets the wrong answer in
+the one place we most need the right one.
+
+**The instruction if an instrument is ever built:** build it for **decoding**, **call it decoding**,
+and **never print it as a reading age**. *"The day it is, that passage ships labelled easier than a
+passage a child can actually read."*
+
+**This is a naming rule with a serving consequence, not a modelling preference.** A number beside a
+passage becomes that passage's reading age whatever the column heading says — the heading is read
+once and the number is read every time. **The failure is not a wrong estimate; it is a right
+estimate of the wrong quantity, wearing the name of the quantity somebody needed.** That is R80's
+shape in an instrument nobody has built yet, and this ruling exists to stop it being built.
+
+**IMPLEMENTED, NOT MERELY RECORDED.** The fifteen-passage pack carries **no readability figure
+anywhere** and says so in its own text. The commissioning `band` is shown per passage and labelled
+as what it is — a LENGTH band with a reading-age range attached at commission, never a judgement
+made by reading. **A pack that printed a number would have anchored every verdict in it**, which is
+the ruling being broken by the artefact that transmits it.
+
+**A consequence worth ruling on: the verdict shape.** Her own evidence is that one number cannot
+hold both, and whichever it holds it will be read as the other. So the pack PROPOSES two fields —
+`decodingAge` and `comprehensionAge`, with a `why` — and says explicitly that where the two are far
+apart, **the gap is a fact about the passage worth keeping, not a discrepancy to resolve.** Proposed
+from her evidence; hers to replace.
+
+## R346 — Two flag faults recorded on the rows, unrepaired, both found by reading the flag against its text
+
+**David, 2026-08-20.** Neither is reachable by any check here, and that is the finding as much as
+the faults are: **no scanner reads a flag's REASON against a passage's PROSE.**
+
+**`stream-a-03-wind-in-willows`, flag 1** — *"the rabbit is unhurt"*. The text says *"He was bowled
+over in an instant by the impatient and contemptuous Mole"* and **never returns to him**; the Mole
+goes on to chaff *"the other rabbits"*. **A fair inference is written as an observation.** It is a
+reasonable reading — but the flag's verdict RESTS on it, offering "unhurt" as the reason the scene
+is comic rather than cruel. An inference load-bearing for a verdict should be visible as one.
+
+**`stream-b-01`, flag 3** — *"It is never named or used, only reached for"*. The child says
+***"Don't get the spray."*** It is named, in dialogue, at the turn of the scene — the most prominent
+moment in the passage. The *"or used"* half holds; the *"never named"* half is wrong on the page.
+**The verdict may well survive the correction** — being named is not being used — but it is
+currently resting on a reason that is not true.
+
+**RECORDED, NOT REPAIRED, and the distinction is the ruling.** Rewriting either flag would put an
+agent's words into a field that reads as a reviewer's judgement (R94) **and would erase the evidence
+that the flag was written that way.** `contentFlags` is untouched on both rows — verified by hashing
+the array before and after. A sibling `flagRecordFaults` carries what reading found, with
+`ruledOn: null`, because nobody has decided anything (R98: UNKNOWN written as UNKNOWN, never as
+absence). The write asserts the flag still contains the quoted phrase and refuses if it does not — a
+fault recorded against text that has since changed is a fault about whatever is there now.
+
+## R347 — A conditional recommendation whose condition is never met is not a kept passage; it is an unkept one that reads as kept
+
+**David, 2026-08-20.** `pnpm report:conditional-flags`. **9 of 61 flags carry a directive**, across
+7 passages.
+
+**A flag saying "keep" is a verdict. A flag saying "keep, AND do not let any question ask pupils to
+state the reason" is a verdict PLUS a mitigation** — and the mitigation is the half that has to
+reach an author. **This population is a different thing from the population of flags**, and it is
+the one where a verdict shipped and its condition did not.
+
+**The instance is the most reachable passage in the store.** `stream-a-03-wind-in-willows` sits
+behind **22 LIVE items** and its flag ends *"a teacher note could point out that the Mole is being
+cheeky, not admirable."* **No teacher note exists.** The condition was never met and nothing
+noticed, **because no field holds it and no code reads it** — the condition exists only inside the
+sentence that states the verdict, so a reader who acts on the verdict has already read past it.
+
+**Reported, not gated.** The standard these flags are judged against does not exist, and a gate
+would enforce a rule nobody has written.
+
+**Its bound, stated** (R60): recommendations are PROSE, so conditionality is found by keyword —
+directive words that tell a later reader to do or not do something. That over-calls and under-calls.
+**9 is a floor, not a census.** And **the correct repair is not a better pattern**: it is a
+recommendation being a FIELD with a condition slot and a met/unmet state rather than a sentence.
+That is a governance decision and nothing here takes it.
+
+## R348 — Normalise a field path to its container BEFORE the set arrives, not after it reports total disagreement
+
+**2026-08-20.** Cowork's declaration set is announced as **97 spans, 89 items, 29 banks, with
+per-span digests and DOTTED FIELD PATHS** (`stem.text`, `explanation.walkScript`). Ours keys on the
+CONTAINER (`stem`, `explanation`). **Both name the same thing at different depths.**
+
+**Left unnormalised, `check:declaration-sets` would have reported 314 divergences on first contact —
+every one of their 97 absent from ours and all 157 of ours absent from theirs** — and the headline
+would have been total disagreement between two stores that may largely agree. **A reader that
+cannot parse, reporting a fact about the content** (R173), on the check's first real run, about the
+very thing it was built to measure.
+
+**The fix is one line and the timing is the entry.** The shape was ANNOUNCED before the set arrived,
+and the announcement is a thing you can act on — a mismatch found by reading a description costs a
+regex, and the same mismatch found by running the check costs an investigation into 314 phantom
+divergences and a message to the other store about a disagreement that does not exist. Fault-tested
+by re-expressing all 157 of our own spans in the announced shape: **0 divergences, where the
+unnormalised reader gave 314.**

@@ -556,7 +556,7 @@
   "verbatimVerification": {
     "spansChecked": 26,
     "spansFound": 26,
-    "pct": 100.0,
+    "pct": 100,
     "breaksOnlyAtDocumentedCutSeams": true,
     "note": "Every 8-word span that did not match the source falls exactly at a documented editorial-cut seam, where two separately-verbatim spans were joined. Text within each retained span is 100% verbatim against the Project Gutenberg source."
   },
@@ -619,5 +619,20 @@
     ],
     "subKeysStripped": [],
     "keptByRuling": []
-  }
+  },
+  "flagRecordFaults": [
+    {
+      "flagIndex": 0,
+      "asDeliveredAs": "flag 1 of 4 in FOUR-REACHABLE-FLAGS-WITH-PASSAGES.md",
+      "fault": "A FAIR INFERENCE IS WRITTEN AS AN OBSERVATION.",
+      "theFlagSays": "the rabbit is unhurt",
+      "theTextSays": "\"He was bowled over in an instant by the impatient and contemptuous Mole\" — and the text never returns to him. The Mole goes on to chaff \"the other rabbits as they peeped hurriedly from their holes\"; the elderly rabbit at the gap is not mentioned again.",
+      "why": "That he is unhurt is a reasonable reading — the tone is farcical and nothing suggests injury — but it is a READING, and the flag states it as a fact about the page. The distinction matters because the flag's verdict rests on it: \"the rabbit is unhurt\" is offered as the reason the scene is comic rather than cruel. An inference load-bearing for a verdict should be visible as an inference.",
+      "disposition": "RECORDED, NOT REPAIRED — the flag text is unchanged",
+      "foundBy": "David, 2026-08-20, by reading the flag against the passage it describes",
+      "foundHow": "reading — no check here can reach either fault",
+      "ruledOn": null,
+      "ruledOnNote": "Nobody has decided what to do about this. Whether the verdict survives the correction is the reviewer's."
+    }
+  ]
 }

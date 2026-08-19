@@ -87,6 +87,21 @@ export async function ourDeclarationSet(): Promise<Declaration[]> {
   return out;
 }
 
+/**
+ * **A FIELD PATH IS NORMALISED TO ITS CONTAINER.** Cowork's set uses DOTTED PATHS
+ * (`stem.text`, `explanation.walkScript`, `stem.quotes[0].text`); ours keys on the container the
+ * declaration lives on (`stem`, `explanation`). Both name the same thing at different depths.
+ *
+ * **Left unnormalised this would have reported every one of their 97 spans as a divergence** — a
+ * check whose first real run accuses the other store of holding nothing in common, which is the
+ * shape of R173: a reader that cannot parse, reporting a fact about the content. The consequence
+ * runs the other way too, and is worse: our 157 would ALL read as absent from theirs, and the
+ * headline would be total disagreement between two stores that may largely agree.
+ */
+function containerOf(fieldPath: string): string {
+  return fieldPath.split(/[.[]/)[0].trim();
+}
+
 /** Cowork's set, as delivered. Same refusal discipline: an unknown wrapper throws. */
 export function readCoworkSet(path: string): Declaration[] {
   const raw: unknown = JSON.parse(readFileSync(path, 'utf8'));
@@ -113,7 +128,7 @@ export function readCoworkSet(path: string): Declaration[] {
           '  Expected string itemId, field and spanText. Got: ' + JSON.stringify(r)?.slice(0, 160),
       );
     }
-    return { itemId, field, spanText: spanText.trim() };
+    return { itemId, field: containerOf(field), spanText: spanText.trim() };
   });
 }
 
