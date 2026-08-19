@@ -268,9 +268,20 @@ async function main() {
   for (const d of ours) ourByKey.set(key(d), [...(ourByKey.get(key(d)) ?? []), d]);
   for (const d of theirs) theirByKey.set(key(d), [...(theirByKey.get(key(d)) ?? []), d]);
 
-  const hereOnly = ours.filter((d) => !theirFull.has(full(d)) && !theirByKey.has(key(d)));
-  const thereOnly = theirs.filter((d) => !ourFull.has(full(d)) && !ourByKey.has(key(d)));
-  const textDiffers = ours.filter((d) => !theirFull.has(full(d)) && theirByKey.has(key(d)));
+  /**
+   * **THE THIRD CLASS IS SYMMETRIC, AND THE FIRST VERSION MADE IT ONE-WAY** — the exact fault it
+   * exists to catch, one level up. It read `textDiffers` from OUR side only, so a span COWORK
+   * declares on a field we also declare, where our own spans all match, fell through every filter:
+   * not `hereOnly` (they have the key), not `thereOnly` (we have the key), not `textDiffers` (our
+   * spans were all present in theirs). **A field both stores declare is exactly where a one-way
+   * read looks complete**, which is why the class is worse than either absence.
+   *
+   * So the comparison is a set difference on span text IN BOTH DIRECTIONS, per field.
+   */
+  const hereOnly = ours.filter((d) => !theirByKey.has(key(d)));
+  const thereOnly = theirs.filter((d) => !ourByKey.has(key(d)));
+  const textDiffersOurs = ours.filter((d) => theirByKey.has(key(d)) && !theirFull.has(full(d)));
+  const textDiffersTheirs = theirs.filter((d) => ourByKey.has(key(d)) && !ourFull.has(full(d)));
 
   const describe = (label: string, rows: Declaration[], side: 'ours' | 'theirs') => {
     console.log(`\n${label}: ${rows.length}`);
@@ -291,15 +302,16 @@ async function main() {
   console.log(
     `check:declaration-sets: compared ${ours.length} declaration(s) here against ${theirs.length} from ${theirPath}.`,
   );
-  describe('DECLARED HERE, ABSENT THERE', hereOnly, 'ours');
-  describe('DECLARED THERE, ABSENT HERE', thereOnly, 'theirs');
-  describe('SAME FIELD, DIFFERENT SPAN TEXT', textDiffers, 'ours');
+  describe('FIELD DECLARED HERE, NOT DECLARED THERE AT ALL', hereOnly, 'ours');
+  describe('FIELD DECLARED THERE, NOT DECLARED HERE AT ALL', thereOnly, 'theirs');
+  describe('SAME FIELD, SPAN TEXT WE HOLD AND THEY DO NOT', textDiffersOurs, 'ours');
+  describe('SAME FIELD, SPAN TEXT THEY HOLD AND WE DO NOT', textDiffersTheirs, 'theirs');
 
-  const active = [...hereOnly, ...textDiffers].filter((d) => {
+  const active = [...hereOnly, ...textDiffersOurs, ...textDiffersTheirs].filter((d) => {
     const c = containerFor.get(key(d));
     return c ? consequenceOf(c.container, d.spanText) === 'ACTIVE' : false;
   }).length;
-  const total = hereOnly.length + thereOnly.length + textDiffers.length;
+  const total = hereOnly.length + thereOnly.length + textDiffersOurs.length + textDiffersTheirs.length;
   console.log(
     `\nTOTAL DIVERGENCES: ${total} — ${active} ACTIVE (a verdict differs today), ${total - active} LATENT or unmeasurable here.\n` +
       '  A LATENT divergence is two gates agreeing by sentence length, not by rule. It becomes\n' +

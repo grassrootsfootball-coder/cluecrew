@@ -31,6 +31,7 @@
     "check:every-string-field": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-every-string-field.ts",
     "check:child-surface-scope": "tsx scripts/check-child-surface-scope.ts",
     "check:staging-queue": "tsx scripts/check-staging-queue.ts",
+    "check:outbound-sidecars": "tsx scripts/check-outbound-sidecars.ts",
     "check:no-review-furniture": "tsx scripts/check-no-review-furniture.ts",
     "check:verdict-option-last": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-verdict-option-last.ts",
     "check:errorspot-preview": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-errorspot-preview-verbatim.ts",

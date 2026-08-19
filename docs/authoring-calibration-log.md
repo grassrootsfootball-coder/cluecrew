@@ -11603,6 +11603,16 @@ stem — and nothing would connect that edit to the refusal that follows.
 declared there and absent here, and **same item and field with different span text** — the worst of
 the three, because both stores believe they have declared the same thing.
 
+**CORRECTED 2026-08-20: THE THIRD CLASS WAS ITSELF ONE-WAY, WHICH IS THE FAULT IT EXISTS TO CATCH,
+ONE LEVEL UP.** Asked to confirm the class was in the check, I read the code rather than answering
+from what I had written, and found it compared span text FROM OUR SIDE ONLY. A span **Cowork**
+declares on a field we also declare — where every one of our own spans matches theirs — fell through
+every filter: not absent-there (they hold the key), not absent-here (we hold it), not
+different-text (our spans were all present in theirs). **A field both stores declare is exactly
+where a one-way read looks complete.** Now a set difference on span text in BOTH directions, per
+field, reported as four classes rather than three. Fault-injected with that precise case: the old
+code reported 0 divergences, the new code reports 1.
+
 **It fails on ACTIVE and reports on LATENT.** An active divergence means one store is refusing an
 item the other serves, which is a present fault. A latent one needs Cowork to act, and a step red
 from a queue we cannot clear is muted within a week (`check:staging-queue`'s finding).
@@ -11662,3 +11672,76 @@ are marked **per entry** for cut versus avoidance rather than summarised underne
 **Marking per entry corrected the summary twice** — see R340. Both errors survived a prose summary
 of the same eight sentences and died the moment each entry had to be marked individually. **That is
 the argument for per-entry marking, not a footnote to it.**
+
+## R343 — A directory the other side reads needs a guard on what ENTERS it, not only on what changes
+
+**David's ruling, 2026-08-20, after R342.** `pnpm check:outbound-sidecars`.
+
+**`cp` into the outbound folder was indistinguishable from a delivery, and the only tell was a
+missing sidecar that nothing read.** `deliver()` copies, hashes the staged BYTES, writes a `.sha256`
+sidecar and counts the queue; a `cp` does the first and none of the rest. Five artefacts went that
+way in two days. **This closes the CLASS rather than the five instances** — the instances were
+already repaired, and repairing instances is what leaves the next one to be found by the person it
+inconveniences.
+
+**It is the freshness check's shape, one step earlier.** Every guard here watched content moving
+BETWEEN stores; none watched the folder the movement passes through. A guard on what changes inside
+a directory does not see a file that simply appears in it.
+
+**Four findings; two fail.**
+
+| finding | fails | what it is |
+|---|---|---|
+| `BYPASS` | **yes** | staged after the door began writing sidecars, and has none — a `cp` |
+| `OVERWRITTEN` | **yes** | sidecar present, bytes no longer match it — a `cp` ONTO a real delivery |
+| `PRE-MECHANISM` | no | staged before sidecars existed; legitimately has none |
+| `ORPHAN SIDECAR` | no | a digest whose file is gone, usually a supersede |
+
+**`OVERWRITTEN` is the worst of the four and the one a sidecar-existence check alone would miss:**
+the sidecar still LOOKS like proof, so the other store compares its bytes against a digest for
+content nobody holds any more. **A stale receipt is worse than no receipt.**
+
+**THE CUTOFF IS DERIVED, NOT CHOSEN.** `SIDECARS_SINCE` is the instant `deliver()` began writing
+sidecars — commit `7dffe51`, 2026-08-19 23:59:07 +0100, found with `git log -S`. A hand-picked date
+would be a guess about where the backlog stops; this is the fact itself. It carries its OFFSET, so
+the comparison against a filesystem mtime is between two absolute instants (R80) — the session runs
+BST, and a bare local date would misfile every artefact staged in the last hour of 19 August.
+
+**Current state: 308 staged, 18 with digests, 290 PRE-MECHANISM, 0 bypassed.** The 290 are printed
+by date on every run so a dated backlog cannot decay into a green tick (R61); none of them can be
+verified as arrived in either direction.
+
+**WHAT IT CANNOT SCREEN, STATED** (R60, R94): a `cp` accompanied by a hand-written matching sidecar
+passes. That is not an accidental bypass, it is a forgery, and no check on this side can tell it
+from a delivery. **This catches the mechanism being SKIPPED, not the mechanism being FAKED**, and a
+guard that hides its bound is worse than none.
+
+Fault-injected on all three live classes: a `cp` straight in, a `cp` onto a real delivery, and a
+file removed from under its sidecar. All three reported by name.
+
+## R344 — The tool's own word is the value; anything stronger is a claim the sending side cannot make
+
+**David's ruling, 2026-08-20, beside R255.** `deliver()` prints `STAGED`. I wrote **"Delivered"** and
+**"sent"**.
+
+**R255 was already in force and was overridden by prose.** That is the whole finding. The rule that
+only the receiving store can report arrival did not fail — it was correctly implemented, correctly
+printed, and then restated one line later in a stronger word that no mechanism screens. **The gap is
+not between the rule and the code; it is between the code's output and my summary of it**, and R178
+already named prose as the only artefact here with no gate on it.
+
+**The rule: when a tool states the status of an act, that word is the VALUE (R25). Report it, do not
+paraphrase it upward.** `STAGED` does not become `delivered` because the copy succeeded, a
+`PROPOSED` row does not become `approved` because it looks right, and a `PROVISIONAL` key does not
+become `authored` because the reviewer named it. **Every one of those is a promotion by summary, and
+the summary is where the promotion is invisible** — the field still says the true thing.
+
+**Why it recurs:** the stronger word is the one that describes what you MEANT to do. Writing
+"delivered" after a successful copy is not carelessness about the fact, it is accuracy about the
+intention — which is exactly why it does not feel like an error while it is being written. R203's
+boundary is the same shape from the other side: where a value carries doubt, a bare name asserts the
+thing the doubt denies.
+
+**No mechanism is proposed for this one, and that is deliberate.** `check:authority-shape` screens
+the store and states that it cannot screen prose; nothing has changed about that. This is a written
+rule for a channel with no gate, which is what the register is for.
