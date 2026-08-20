@@ -90,6 +90,11 @@ const VERDICT_SHAPE = [
   '| `comprehensionAge` | can a child of this age understand what the passage is doing |',
   '| `why` | in your words — the gap between them is the interesting part |',
   '',
+  '**NEITHER COLUMN IS A READING AGE AND NEITHER MAY BE PRINTED AS ONE.** Not in an export, not in a',
+  'staff view, not in a parent view, not as a fallback when only one number is available. **If only',
+  'one of the two can be shown, none is shown** — a lone number in either column is the single-number',
+  'failure your ruling is about, arriving through the door marked "we only had room for one".',
+  '',
   '**Where the two are far apart, that gap is a fact about the passage worth keeping**, not a',
   'discrepancy to resolve. It is the whole of what your ruling found.',
   '',
@@ -99,9 +104,14 @@ const VERDICT_SHAPE = [
 
 function buildFifteen(ps: Passage[]): string {
   const out: string[] = [
-    '# Fifteen Stream A passages, for reading-age verdicts',
+    '# Fifteen Stream A passages, for decoding and comprehension verdicts',
     '',
     '**20 August 2026. For Annie.**',
+    '',
+    '**This was asked for as a reading-age pack and is not called one, which is your ruling applied to',
+    'its own carrier.** If the pack is titled by the quantity you ruled does not exist, every verdict',
+    'inside it is written toward that quantity. The request keeps its name in conversation; the',
+    'artefact takes the name of what it actually asks for.',
     '',
     `**${ps.length} passages, every one carrying no reading verdict** — \`authoringRead\` is null on all`,
     'fifteen. The other six Stream A passages have been read and are not in this pack.',
@@ -204,7 +214,7 @@ if (unread.length !== 15) {
 const railway = unread.find((p) => p.id === 'stream-a-02-railway-children');
 if (!railway) throw new Error('deliver-reading-age-pack ABORTED — railway-children not among the unread fifteen.');
 
-const packPath = join(REPO_ROOT, 'content/exports/FIFTEEN-PASSAGES-READING-AGE.md');
+const packPath = join(REPO_ROOT, 'content/exports/FIFTEEN-PASSAGES-DECODING-AND-COMPREHENSION.md');
 const railPath = join(REPO_ROOT, 'content/exports/RAILWAY-CHILDREN-UNJUDGED.md');
 writeFileSync(packPath, buildFifteen(unread));
 writeFileSync(railPath, buildRailway(railway));

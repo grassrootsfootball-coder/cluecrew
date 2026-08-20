@@ -11853,3 +11853,72 @@ regex, and the same mismatch found by running the check costs an investigation i
 divergences and a message to the other store about a disagreement that does not exist. Fault-tested
 by re-expressing all 157 of our own spans in the announced shape: **0 divergences, where the
 unnormalised reader gave 314.**
+
+## R349 — THE CLASS: nothing reads a judgement's REASON against the text it judges
+
+**David, 2026-08-20, generalising from R346's two faults. Recorded because this is the gap the
+standard will have to say something about.**
+
+**Both faults were found by a person reading the flag against the passage. Neither is reachable by
+any instrument on either side, and no instrument is proposed here** — because naming the class
+honestly is the prerequisite for anyone deciding whether one is possible.
+
+**What every check here actually screens.** The scanners read child-facing STRINGS for banned
+vocabulary, reading age, notation, id leaks. `check:line-refs` compares a citation to a passage.
+`check:source-quotes` compares a declared span to its source. `check:authority-shape` reads the
+store's attribution columns. **Every one of them compares a value to a rule, or a value to another
+value. Not one of them compares a CLAIM to the TEXT IT IS A CLAIM ABOUT.**
+
+**So a whole class of judgement is unscreened, and it is the class that carries the most weight per
+sentence:**
+
+- a flag's `reason` — *"the rabbit is unhurt"*, when the text bowls him over and never returns
+- a flag's `element` — a description of what is in a passage
+- a `curationNote`, an `editorialNote`, a `why` on a band
+- a misconception's `description` against the items tagged with it
+- a walk script's account of a line against that line
+
+**These are all PROSE ABOUT A TEXT, and they are all checked the same way: by someone reading both.**
+That is not a gap in coverage, it is a gap in KIND — no amount of extending the existing scanners
+reaches it, because they are string-shaped and this is comparison-shaped.
+
+**Why it is the dangerous class.** A wrong string fails a gate. **A wrong claim about a text passes
+every gate and then becomes the reason for a verdict.** In both instances the faulty clause was
+load-bearing: *"the rabbit is unhurt"* is offered as the reason the scene is comic rather than cruel,
+and *"never named"* is offered as the reason the insecticide is acceptable. **The verdict survives
+in the store while the reason for it is false, and nothing anywhere records the discrepancy.**
+
+**The R173 connection, which is why this is worth a number.** R173 said a disagreeing number gets
+investigated for free and a confirming one has to be investigated on purpose. **This class is the
+same asymmetry in prose**: a flag whose reason sounds right is never checked against the text,
+because it sounds right. Both of these read perfectly well until someone opened the passage.
+
+**Recorded, not repaired, with `ruledOn: null` on both rows** — nobody has decided whether either
+verdict survives its correction, and that is a reviewer's call, not a repair.
+
+**What the standard has to say something about**, stated as the open question rather than answered:
+when a flag's reason makes a factual claim about the passage, **is that claim part of the judgement
+(so correcting it reopens the verdict) or part of the explanation (so correcting it does not)?**
+R346's two cases point opposite ways — the rabbit claim looks load-bearing and the naming claim
+looks recoverable — and nothing currently distinguishes them.
+
+## R350 — The pack is not called a reading-age pack, and the two columns may never be printed as one
+
+**Annie's ruling extended by David, 2026-08-20, following R345.**
+
+**Neither `decodingAge` nor `comprehensionAge` is a reading age, and neither may be printed as one** —
+not in an export, not in a staff view, not in a parent view, and **not as a fallback when only one
+number is available. If only one of the two can be shown, none is shown.** A lone number in either
+column is the single-number failure R345 is about, arriving through the door marked *"we only had
+room for one"*, which is the door it will actually arrive through.
+
+**The pack was requested as a reading-age pack and is not called one.** The title was changed to
+*"for decoding and comprehension verdicts"*, because **a pack titled by the quantity the ruling says
+does not exist writes every verdict inside it toward that quantity.** The request keeps its name in
+conversation; the artefact takes the name of what it actually asks for. The filename changed with
+it — a name that does not identify its payload is R88's fault in a title.
+
+**The two-number shape goes as a PROPOSAL and it is hers to replace or ratify.** It is derived from
+her own evidence — decoding nine or ten against comprehension twelve or more, on one passage — and
+derivation from evidence is not the same as a decision. **Where the two numbers are far apart, the
+gap is a fact about the passage worth keeping, not a discrepancy to resolve.**
