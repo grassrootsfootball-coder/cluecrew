@@ -62,7 +62,19 @@ async function main() {
       'NOT "does the card answer the item in different words" — but "does answering from the card require any step beyond recognition?" A card a child can simply recognise the answer in is doing the item\'s work.',
     whyThisIsStagedAndNotJudged:
       'She says it is answerable by a reader in seconds. A machine judging it would substitute a string test for the judgement she named.',
-    readingOrder: 'The 20 already held for a string match come first, so the read starts where the faults are.',
+    /**
+     * **DERIVED, NOT TYPED.** This sentence read *"The 20 already held…"* while `denominators`
+     * three lines below DERIVED the same quantity and got **19**. The data was self-consistent
+     * (19 + 21 = 40); only the sentence disagreed, and it was going to a reviewer as a description
+     * of the order she was about to read in.
+     *
+     * **Correcting 20 to 19 would have been the wrong fix**: the next change to the card-hold set
+     * rots it again, silently, exactly as this one rotted. A number in prose that describes our own
+     * data is derived or it is declared (R180) — never both typed and computed in the same object.
+     */
+    readingOrder:
+      `The ${rows.filter((r) => r.alreadyFlagged).length} already held for a string match come first, `
+      + 'so the read starts where the faults are.',
     denominators: {
       liveVocabularyItems: vocab.length,
       joinedToACard: joined.length,
@@ -72,8 +84,18 @@ async function main() {
     rows,
   };
 
+  /**
+   * **STAMPED OVER EVERY FIELD THE FILE DELIVERS, NOT JUST `rows`** (R88).
+   *
+   * The stamp covered `rows` alone while the file also carried `readingOrder`, `herStandard` and
+   * `denominators`. So the prose fix above changed the payload and would NOT have changed the
+   * stamp or the filename — **two materially different files under one name**, which is the precise
+   * fault R88 recorded against the misconception library. It was live here and unnoticed because
+   * nothing had yet edited the prose without touching a row.
+   */
   const stamp = artefactStamp(payload, new Date().toISOString(), 'content',
-    'the 40 LIVE card-joined vocabulary items with card, key and distractors, flagged cases first', ['rows']);
+    'the 40 LIVE card-joined vocabulary items with card, key and distractors, flagged cases first',
+    ['what', 'herStandard', 'whyThisIsStagedAndNotJudged', 'readingOrder', 'denominators', 'rows']);
   mkdirSync(OUT_DIR, { recursive: true });
   const path = join(OUT_DIR, stampedName(FAMILY, stamp.sourceHash, 'json'));
   writeFileSync(path, JSON.stringify({ stamp, ...payload }, null, 2));

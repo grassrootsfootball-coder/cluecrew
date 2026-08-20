@@ -12293,3 +12293,73 @@ the statement that its divergence count is not trustworthy until the join key is
 ruled (R359: container-only), so that caveat resolves for this row**: joined on `options`, which this
 store declares nothing under, so it lands in *declared there, not here* — **which is true, and is a
 reader gap on this side rather than a content disagreement** (R360).
+
+## R365 — The prose number is derived, and fixing it exposed a stamp that did not cover its own file
+
+**David, 2026-08-21.** `recognition-test-for-annie` said *"The 20 already held for a string match come
+first"* while `denominators`, three lines below in the same object, **derived** the same quantity and
+got **19**. The data was self-consistent (19 held + 21 remaining = 40); **only the sentence
+disagreed**, and it was going to the reviewer as a description of the order she was about to read in.
+
+**IT WAS NOT CORRECTED TO 19.** The sentence now derives its number from the rows, like the
+denominator beside it. **Typing 19 would rot again the next time the card-hold set moves**, silently,
+exactly as 20 rotted — R180's finding, in an object that was already computing the right answer one
+field away. **A number in prose describing our own data is derived or declared, never both typed and
+computed in the same payload.**
+
+**AND THE FIX EXPOSED A LARGER FAULT THAN THE ONE IT REPAIRED.** The stamp was computed over `rows`
+alone (`stampedOver: ['rows']`) while the file delivers `what`, `herStandard`,
+`whyThisIsStagedAndNotJudged`, `readingOrder`, `denominators` **and** `rows`. **So the prose change
+altered the payload and would NOT have moved the stamp or the stamped filename — two materially
+different files under one name**, which is precisely the fault R88 recorded against the misconception
+library. **It was live here and invisible because nothing had yet edited the prose without touching a
+row.**
+
+The stamp now covers every field the file delivers; `8399589fc16b8189` became `b8c8e3ccad8ddf8f`, and
+`deliver()` removed the superseded file and its sidecar rather than leaving them alongside. **Nothing
+in the 40 rows changed** — same items, same order, flagged cases still first.
+
+**The general rule: `stampedOver` is the file's whole payload, or the name is a claim about part of
+it.** A projection narrower than the delivery is a name that cannot detect a change to what was
+delivered.
+
+## R366 — vr-16's 25 pairs do not exist, and the register line that says they do is about vr-21
+
+**David, 2026-08-21: say it plainly in the delivery rather than leaving it as an absence.**
+
+**No artefact anywhere carries vr-16's 25 pairs.** Not omitted from a delivery — never created. Its
+items exist only as `gen-vr-16-opposite-meaning-*` (25, with **no `bank-` rows at all**), and its
+direction is recorded as **UNDECLARED — refuses**. **The pairs were never measurable to stage**, so
+there was nothing to put in a file.
+
+**THE NEAR-MISS IS THE ENTRY.** The register line a reader would reasonably rely on says *"Its 25
+pairs are staged with the question stated rather than the conclusion"* — and **that sentence is about
+vr-21**, sitting three lines below one that names vr-04, vr-16 and vr-21 together, in the same entry.
+Both banks have 25 pairs. Both are discussed in the same paragraph. **One is staged and one has never
+existed.**
+
+**A near-miss from an ADJACENT LINE is how a relayed figure gets made** — not from misremembering,
+but from reading the right entry and taking the wrong sentence out of it. R178 says a name in prose
+is looked up rather than recalled; this is the failure mode that survives that discipline, because
+the lookup *succeeds* and lands one line off.
+
+**It was caught by reading the ARTEFACT rather than the register** — the same order that caught
+R365's 20-versus-19, and the same order that has caught every prose fault this week. **The register
+records what was decided; only the artefact records what exists.**
+
+## R367 — A row is not a delivery
+
+**David, 2026-08-21, on the flag-fault record.** The two faults of R346 were recorded on the passage
+rows, correctly and durably, in `flagRecordFaults` with `ruledOn: null`. **And nothing carried them
+out.** The record existed and **could not be read by the person it was for.**
+
+**Storing a finding and delivering it are different acts, and completing the first feels like
+completing both** — the row is written, the field is right, the check passes. R356's class from the
+inside: an artefact that describes an act is not the act; here, **a record of a finding is not the
+finding reaching anyone.**
+
+`FLAG-FAULTS-ON-THE-ROWS.md` is derived from the rows rather than retyped, and **it refuses to build
+when `flagRecordFaults` is empty**. An empty page reporting that nothing was found is **the opposite
+of the truth**, and it is the same shape as a zero that cannot be told from a check that never ran
+(R60) — a delivery that renders successfully while carrying nothing is the most convincing possible
+report of a clean result.
