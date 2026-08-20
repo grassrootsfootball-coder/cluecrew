@@ -339,6 +339,15 @@ jobs:
       - name: Item population (an item named there with no row here)
         run: pnpm check:item-population
 
+      # AN ARTEFACT THAT DESCRIBES AN ACT IS NOT THE ACT. Every guard here watches whether content
+      # ARRIVES correctly; none watched whether a named, staged, agreed act COMPLETED.
+      # REISSUESIXITEMS.json named six items, one landed, five did not, and the only thing that
+      # noticed was a check built for something else. Fails ONLY on UNDISPOSED -- an id that is
+      # neither imported nor refused-with-a-reason. A legitimately-held item keeping this red is
+      # how it would get muted inside a week.
+      - name: Reissue completion (did a described act actually complete?)
+        run: pnpm check:reissue-completion
+
       # AN ARTEFACT'S NAME MUST IDENTIFY ITS PAYLOAD. The misconception library shipped two
       # materially different files under one hash because the stamp was computed over a five-field
       # projection while the file carried seventeen. This recomputes each artefact's stamp from its

@@ -12067,3 +12067,73 @@ printed as a COUNT, never as a finding**, because it measures the instrument and
 
 The id pattern is DERIVED from our own 1033 ids (R57) — every distinct id shape becomes a matcher, so
 a family added tomorrow is scanned tomorrow rather than falling silently outside a hand-written list.
+
+## R356 — An artefact that describes an act is not the act
+
+**David, 2026-08-20.** `pnpm check:reissue-completion`.
+
+**Every guard here watches whether content ARRIVES CORRECTLY** — import gates, per-item digests,
+outbound sidecars, declaration sets, the staging queue. **None watched whether a described act
+COMPLETED.** `REISSUESIXITEMS.json` named six items on 19 August. One landed. Five did not. The
+artefact sat in the inbound folder for a month asserting they had been sent, and **the only thing
+that noticed was `check:item-population` — a check built for a different question, which found one
+of the five by accident because it happened to carry two declarations.**
+
+**The class is wider than reissues: migrations, retag lists, ratify-and-write acts — anything whose
+whole content is a promise that N things will be true afterwards.** A file that says *"these six are
+reissued"* is evidence of an intention, not of a state, and nothing in this repo has ever read one
+as a claim to be checked.
+
+**EVERY ID CARRIES A DISPOSITION, AND THAT IS WHAT MAKES THE CHECK SURVIVABLE.**
+
+| disposition | meaning |
+|---|---|
+| `IMPORTED` | the id is in the item table; the act completed for this id |
+| `REFUSED` | absent, AND a ledger entry records why, with a date and who can repair it |
+| `UNDISPOSED` | absent, and **nothing says why** — the only failure |
+
+**A reissue can legitimately not complete**, and `ENG-019-BV-02` is that case: held at the door for a
+fault only Cowork can repair. **Without the REFUSED state, one correctly-held item would keep this
+check permanently red, and it would be muted inside a week** — the failure mode already named twice
+on this board (`check:staging-queue`, `check:declaration-sets`). **UNDISPOSED is exactly the state
+the five were in**: not imported, not refused, not recorded, with an artefact on disk asserting
+otherwise.
+
+The refusal reasons are written **from the gate's own output**, never typed by hand (R25), and the
+ledger records `repairableBy` per row. A reissue artefact is recognised by SHAPE — a row carrying
+both an item id and an item body, so a delivery is checked and a report is not — never by filename.
+
+## R357 — The five hold on the identical faults, and my first harness manufactured twelve more
+
+**2026-08-20. Asked to import four and hold one. All five are held, and the four are held for the
+reason R312 already recorded on 19 August.**
+
+**The instruction rests on a premise the data does not support, so it is reported rather than
+executed.** The four carry the same US spellings they were refused for the first time: `favoring`
+(RB-01), `traveling` (RB-11), `fibers` (RT-08), `realized` (RR-08), each in an authored
+`walkScript` or option value — **our voice, undeclared, exactly as R312 found.** *"The file says
+reissued and the content is not reworded."* `ENG-015-CC-12` became importable only because R319
+fixed a PATTERN BUG ON OUR SIDE, not because anything was reworded. **Nothing has changed for the
+other five since.**
+
+**Importing them would mean bypassing `checkItemChildFacing`, and rewording them is Cowork's act**
+(CLAUDE.md: one direction only for authored content). **So all five are recorded as REFUSED with the
+gate's own reason** — which is the disposition R356 exists to provide, and a legitimate outcome
+rather than a stall.
+
+**AND MY FIRST HARNESS HELD ALL FIVE FOR TWELVE FAULTS THAT WERE NOT THERE.** I built the gate call
+by hand and passed the WHOLE option object as `content`, so `textsFrom` walked every authoring key:
+US spellings inside `attractorQuote` (a source-of-truth field), id leaks inside `misconceptionId`,
+21-word sentences inside a reviewer's `a36Note`. **The real door builds `content: { value, label? }`
+and routes `misconceptionId` to its own column; authoring metadata never enters the gate.**
+
+**Every one of those twelve read exactly like a content defect.** R149's finding reached from the
+other side — and the tell was not the output, which was plausible, but David naming four items my
+harness had held. **A second door disagreeing with the governing one is the precise fault
+`checkItemChildFacing` was centralised to end** (`import-english-items.ts:265` says so in its own
+comment), and I reintroduced it by rebuilding the call instead of copying it.
+
+**What Cowork is owed is narrow and actionable**: four items need `walkScript` reworded or the span
+declared (R320's mechanism — a US spelling inside a DECLARED quotation is the source's, not ours);
+BV-02 needs the splice repaired, since its stem declares `["There"]` while Cowork's own declaration
+set holds `"There,"` and `"if you had run quick!"`.
