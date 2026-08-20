@@ -12005,3 +12005,65 @@ NOT reconciled"*. **113 was our distinct-ITEM count; 97 is their SPAN count — 
 disagreeing measurements.** The comparable pairs are **157 spans against 97**, and **113 items
 against 89**. Nothing was wrong on either side; a number crossed without its unit attached, which is
 R203's shape in a relayed figure.
+
+## R354 — The join's first run is CONFIRMED-BY-INSPECTION, not CARRIED
+
+**Cowork's caveat, 2026-08-20, and it applies to this register as much as to its own.**
+
+R351 settled the join key on the finding that **both sides emit depth 1**. That finding is true and
+**it is not vouched for by either artefact.** Ours was read from an emission that PREDATES the shape
+block, plus a read of the emitter source (`ourDeclarationSet` builds `field` from a literal
+two-element loop). Theirs was read by counting 97 rows in a file that carries no shape block at all.
+**Both are inspections. Neither is a declaration.**
+
+**The distinction is the same one this register keeps making about arrival** (R255) **and about
+prose overriding a rule** (R344): *a fact established by looking is not a fact the artefact states.*
+An inspection is valid on the day it is made, by the person who made it, about the bytes in front of
+them. It does not travel, it does not survive the next emission, and **nothing re-checks it.**
+
+So the status is recorded as **CONFIRMED-BY-INSPECTION**, and the upgrade condition is written down:
+**only the NEXT emission from each side gets to say its shape is in the file.** Ours now carries the
+derived block (R352) and will qualify on its next run; Cowork's qualifies when it adopts one.
+
+**Recording it this way costs nothing today and is the only thing that will be legible in a month**,
+when the depth-1 claim is load-bearing for a join key nobody remembers choosing.
+
+## R355 — The item populations differ by FIVE, and all five are the same known event nothing was watching
+
+**David, 2026-08-20.** `pnpm check:item-population`. Asked because `check:declaration-sets` found
+`ENG-019-BV-02` **by accident** — it compares declarations, and that item happened to carry two.
+
+**It is not the only one. There are five**, each named in Cowork artefacts with no row in this store:
+
+| item | siblings here |
+|---|---|
+| `ENG-018-RB-01` | RB-02 … RB-12 present, this one absent |
+| `ENG-018-RB-11` | same family, same shape |
+| `ENG-019-BV-02` | BV-01 … BV-12 present, this one absent |
+| `ENG-023-RT-08` | RT-01 … RT-12 present, this one absent |
+| `ENG-027-RR-08` | RR-01 … RR-12 present, this one absent |
+
+**Every one is a single missing member of a family otherwise complete here** — which is what a
+failed per-item import looks like, and nothing like drift.
+
+**AND THEY RECONCILE EXACTLY TO A KNOWN BACKLOG.** `REISSUESIXITEMS.json` names six items reissued
+after they were found never to have crossed. **`ENG-015-CC-12` landed on 2026-08-19 after the
+ban-list fix. The other five never did**, and the reissue file has sat in the inbound folder since,
+its own header stating *"zero ids exist only on Code's side, so this is a one-directional loss."*
+
+**So the finding is not five mystery items. It is that a reissue nobody was watching land did not
+land, and the only thing that noticed was a check built for something else.** Every guard here
+watches content ARRIVING correctly; **none watched whether a named, staged, agreed reissue actually
+completed.** That is R88's return leg pointing inward — an untravelled path and an absent path are
+the same thing, and this one was travelled halfway.
+
+**THE BOUND, STATED, BECAUSE IT IS MOST OF THE CHECK'S HONESTY.** It compares our item table against
+every item id appearing in any Cowork artefact we hold. **That is not Cowork's item population.** An
+item Cowork holds that appears in none of the artefacts it has sent is invisible here and always will
+be — **only Cowork can report Cowork's population**, exactly as only the receiving store can report
+arrival. So the two directions are labelled differently and only one is a finding:
+`THEIRS_NOT_OURS` is real (they named it, so it exists there); **`OURS_NOT_MENTIONED` is 270 and is
+printed as a COUNT, never as a finding**, because it measures the instrument and not the content.
+
+The id pattern is DERIVED from our own 1033 ids (R57) — every distinct id shape becomes a matcher, so
+a family added tomorrow is scanned tomorrow rather than falling silently outside a hand-written list.

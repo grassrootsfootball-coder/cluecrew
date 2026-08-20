@@ -140,6 +140,7 @@
     "check:authority-shape": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-authority-shape.ts",
     "check:return-leg": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-return-leg.ts",
     "check:declaration-sets": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-declaration-sets.ts",
+    "check:item-population": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-item-population.ts",
     "check:outside-writes": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-outside-writes.ts",
     "check:review-queries": "tsx scripts/check-review-queries.ts",
     "backfill:draft-assessment": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/backfill-draft-assessment.ts",
