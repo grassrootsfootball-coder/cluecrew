@@ -142,6 +142,7 @@
     "check:declaration-sets": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-declaration-sets.ts",
     "check:item-population": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-item-population.ts",
     "check:reissue-completion": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-reissue-completion.ts",
+    "check:superseded-inside-field": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-superseded-inside-field.ts",
     "check:outside-writes": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-outside-writes.ts",
     "check:review-queries": "tsx scripts/check-review-queries.ts",
     "backfill:draft-assessment": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/backfill-draft-assessment.ts",

@@ -64,6 +64,24 @@ const TOKEN_FIELDS = new Set([
  * belongs here only when EVERY value it can hold is a token, whatever the item type.
  */
 
+/**
+ * **A SUPERSEDED VALUE STORED INSIDE THE FIELD IT SUPERSEDES IS READ AS LIVE BY ANYTHING WALKING
+ * THAT FIELD** (David, 2026-08-21 — R358, the fault found on Cowork's side and present here).
+ *
+ * `_previousText`, `_previousWalkScript`, `_previousHintCore`, `_previousQuotes` and their kind sit
+ * as SIBLINGS of the value they replaced — inside `stem`, inside `explanation` — so `textsFrom`
+ * walked them and this gate screened the OLD text as though a child would read it. **A reword that
+ * successfully removed a banned word would keep failing on the copy of the pre-reword text kept
+ * beside it**, and the failure would read as a live content defect.
+ *
+ * 36 rows carry one, across six field names. **Zero blocking failures are raised on one today, and
+ * that is an outcome rather than evidence the design held** (R62): the coupling is live, unguarded,
+ * and simply has not been exercised. The right shape is Cowork's — stamps OUTSIDE the field they
+ * supersede — and `check:superseded-inside-field` reports the 36 as the population to move. Until
+ * they move, the gate refuses to read them.
+ */
+const isSuperseded = (path: string) => path.split('.').some((seg) => seg.startsWith('_'));
+
 /** The last path segment, with any array index stripped: `stem.words[3]` -> `words`. */
 function fieldOf(path: string): string {
   const last = path.split('.').pop() ?? '';
@@ -80,6 +98,7 @@ function fieldOf(path: string): string {
 export function textsFrom(value: unknown, path: string): Array<[string, string]> {
   if (typeof value === 'string') {
     if (TOKEN_FIELDS.has(fieldOf(path))) return [];
+    if (isSuperseded(path)) return [];
     return value.trim() !== '' ? [[path, value]] : [];
   }
   if (Array.isArray(value)) return value.flatMap((entry, i) => textsFrom(entry, `${path}[${i}]`));

@@ -12137,3 +12137,159 @@ comment), and I reintroduced it by rebuilding the call instead of copying it.
 declared (R320's mechanism — a US spelling inside a DECLARED quotation is the source's, not ours);
 BV-02 needs the splice repaired, since its stem declares `["There"]` while Cowork's own declaration
 set holds `"There,"` and `"if you had run quick!"`.
+
+## R358 — A superseded value stored inside the field it supersedes is read as live
+
+**David, 2026-08-21, relaying Cowork's finding — the same fault present on both sides.**
+
+`_previousText` sits inside `stem` beside `text`. `_previousWalkScript` sits inside `explanation`
+beside `walkScript`. **Anything walking the container reads the superseded value as live, and the
+child-facing gate walks exactly those containers.** A reword that successfully removed a banned word
+would keep failing on the copy of the pre-reword text kept beside it — **and the failure would read
+as a live content defect**, which is how it manufactured a cross-store divergence that did not exist.
+
+**36 items, six shapes**: `stem._previousText` (26, beside live `text`), `stem._previousQuotes` (4),
+`explanation._previousHintCore` (7 + 4), `explanation._previousWalkScript` (3, all **LIVE**),
+`stem._previousText2` (3).
+
+**ZERO BLOCKING FAILURES ARE RAISED ON ONE TODAY, AND THAT IS AN OUTCOME, NOT EVIDENCE THE DESIGN
+HELD** (R62). Baselined before and after the repair: **nothing moved, 0 newly pass, 0 newly fail.**
+The coupling is live, unguarded, and simply has not been exercised — which is exactly the state
+`distractors.ts` was in when R62 was written.
+
+**The gate now refuses to read them** (`isSuperseded` in `item-content-gate.ts`, skipping any path
+segment beginning `_`). **That is a READER-SIDE SKIP AND NOT A REPAIR**: the next reader written
+against `stem` walks them again. `pnpm check:superseded-inside-field` reports the 36 as the
+population to move, and the right shape is Cowork's — stamps OUTSIDE the container, in a
+`_superseded` sibling of the field rather than inside it. Reported and not failed, because these are
+real history and moving them is a migration with reviewed content on the other side.
+
+## R359 — The join key stays CONTAINER-ONLY, because an index is not an identity
+
+**David, 2026-08-21, reopening R351 on new data.** Cowork's current emission is **97 rows, 96 at
+depth 1 and one at depth 2** — `ENG-018-RB-01` field `options[2]`, the `favoring` declaration.
+
+**Ruling: container-only. Not full path, and not full path with index normalisation.**
+
+**An index is not stable across a reorder**, and option order is a thing this product deliberately
+changes — `pinVerdictOptionsLast` reorders options at serve time, and a shuffle is seeded per
+occasion. So a class-three comparison keyed on `options[2]` would report a divergence **caused by
+option ordering**, in the class that exists to catch two stores disagreeing about the same span.
+That is a manufactured conflict, which R353 has already recorded once this week.
+
+**Index normalisation (`options[2]` → `options[]`) is better and still wrong here**, for a reason
+that is specific rather than general: **it buys sub-field precision this store cannot use.** Our
+option content carries exactly two keys across all 3820 options — `value` and `label` — and **zero
+options carry a `quotes` array**. There is nothing at option level for a finer key to distinguish,
+so the precision would be bought entirely on credit against a shape that does not exist (R61).
+
+**Revisit when option-level declarations have a storage shape here.** At that point index
+normalisation becomes the right key, and this entry is the record of why it was not chosen earlier.
+
+## R360 — The four cannot be re-gated, because no artefact on this side carries their current bodies
+
+**2026-08-21. Asked to re-run the door against the current items and report per item.**
+
+**I cannot, and saying so is the report.** What arrived is a DECLARATION SET and a MANIFEST. The
+declaration set carries spans and digests; the manifest carries `stem.text` hashes, tags, tiers and
+held flags. **Neither carries the item bodies the gate screens**, and the only bodies here are the
+stale `REISSUESIXITEMS.json`. Re-running the door against those would report the stale emission's
+faults as current, which is the thing being corrected.
+
+**What the current artefacts DO establish**, and it is worth having:
+
+- **`ENG-018-RB-01`'s `favoring` is now DECLARED**, at `options[2]`, verbatim in its passage.
+- Three of the five appear in delivery 41's manifest with **`held: null`** — not held on Cowork's
+  side — and their `stem.text` hashes are **unchanged** from the stale bodies. The refusals were in
+  `walkScript` and option values, which the manifest does not hash, so this settles the stem only.
+- **`ENG-023-RT-08` and `ENG-027-RR-08` are not in delivery 41's manifest at all.**
+
+**AND THERE IS A BLOCKER ON MY SIDE THAT NO REWORDING ON THEIRS WILL CLEAR.** `checkItemChildFacing`
+reads declarations from `stem.quotes` and `explanation.quotes`. **The option loop consults
+`stemQuotes` and nothing else — there is no option-level declaration reader.** So RB-01's
+declaration at `options[2]` is invisible to our door, and the item would bounce again on a fault
+Cowork has already fixed.
+
+**This is R23's finding one field over.** R23 extended the gate to read `explanation.quotes` because
+*"a declaration must live where the span is USED"* — a quotation on a walk script was silently
+invisible when only `stem.quotes` was read. **Options were never added.** The repair is the same
+repair, and it needs a storage shape agreed rather than invented here: either Cowork declares on
+`stem.quotes` (which the option loop already consults) or `option.content.quotes` is added and read.
+**I recommend the second on R23's own reasoning, and it is a joint decision, so it is proposed and
+not built.**
+
+## R361 — Call the gate, never rebuild it: enforceable here, and scoped
+
+**David, 2026-08-21.** Registered on Cowork's side as DECLARED rather than enforced, deliberately,
+since nothing there can assert a claim about this store. **Here it is enforceable, and R357 is the
+case for it** — a hand-built gate call held five items for twelve faults that were not there.
+
+**The check cannot be written usefully today, and the reason is the design, not the effort.** There
+is no shared builder to assert against: `import-english-items.ts` constructs its `optionRows` inline,
+and every other caller does the same. A check asserting *"nobody constructs a gate input by hand"*
+would fail every existing call site, including the governing one.
+
+**So the order is: extract `gateInputFromItem()` into `packages/core` first, migrate the call sites
+to it, THEN assert that every `checkItemChildFacing` call passes its output.** That final assertion
+is cheap and static — a scan for the call, checking its argument is the builder's result. Scoped and
+not built, with the sequence recorded so it is not attempted in the wrong order.
+
+## R362 — Control-class audit: three assert the instrument FIRES, one asserts it stays silent
+
+**David, 2026-08-21.** Quiet controls read empty input as a pass; flipping controls invert on a clean
+store. **Audited all four named controls for which kind each is.**
+
+| control | input | asserts | kind |
+|---|---|---|---|
+| `check-card-gives-key` `CONTROLS` | literal `[key, text]` pairs | the variant matcher **fires** | fixture, catches blindness |
+| `check-no-review-furniture` `CONTROL_SAMPLE` | literal string | the furniture detector **fires** | fixture, catches blindness |
+| `check-pilot-review-excluded` `CANARY` | a synthetic file it creates | the exclusion **fires** | fixture, catches blindness |
+| `audit-declarations` control probe | literal `GOOD_QUOTE` | the gate raises **NOTHING** | fixture, **QUIET** |
+
+**No control asserts a fault's presence in the LIVE STORE**, which is the flipping kind and the one
+that inverts the day the store is cleaned. All four run against fixtures, so none can be broken by
+repairing content — that is what the earlier conversion from live instances bought.
+
+**But the fourth cannot catch a blind instrument, and that is worth stating rather than counting it
+as a fourth control.** `audit-declarations`'s control passes when a well-formed declaration produces
+no failure. **If the gate stopped firing entirely, that control would still report `CONTROL OK`** —
+it is R60's question 2 answered in the negative. A clean-input control proves the instrument is not
+over-firing; only a planted-fault control proves it is working at all. **The audit needs one of
+each, and it has one.**
+
+## R363 — The archival flag must travel DOWN the walk, and two leaf tests survive here
+
+**Cowork's finding, 2026-08-21, transferred and checked here.** Their sweep tested the archival
+prefix on the LEAF key, so it never saw inside a stamp block whose leaves are `was` and `why`. Their
+fix carries the flag down the walk.
+
+**Mine already does**, and it is worth recording why rather than claiming luck: `isSuperseded` tests
+**every path segment** — `path.split('.').some((seg) => seg.startsWith('_'))` — so `_superseded.was`
+is skipped on its container, not on its leaf. Verified against the nested shape.
+
+**TWO LEAF TESTS DO SURVIVE, and one of them is wrong for nested paths.**
+
+- `item-content-gate.ts` `fieldOf` → `TOKEN_FIELDS`. Leaf-only, and correct for its purpose: a token
+  field is a property of the field itself, not of the container it sits in.
+- `quoted-field-exemption.ts` `quotedFieldVerdict`. **Leaf-only and wrong for a nested path**:
+  `explanation.quotes[0].text` resolves to leaf `text` → *"AUTHORED — in scope"*, when the text of a
+  declared quotation is a record of a source and the container is what says so.
+
+**It has NO CALLERS.** Exported, tested, and used by nothing — so the fault is latent, not live, and
+the gate's own `carriesQuotes` special-cases `quotes[n].text` correctly on its own path. **Recorded
+rather than repaired**, because a fix to an uncalled function is unverifiable in use, and the shape
+that will call it is the option-level declaration reader R360 leaves open.
+
+## R364 — The join re-run against `17826947194973dd`: the numbers are unchanged and one is now explained
+
+**2026-08-21. Cowork's current declaration set, joined.**
+
+**64 divergences, 1 ACTIVE — identical to the run against the previous emission.** The two repairs
+both stores now hold did not move the join, because neither touched a span either store declares.
+
+**One row is now explained rather than merely reported.** The single depth-2 path — `options[2]` on
+`ENG-018-RB-01`, the `favoring` declaration — is reported by name under DEEPER-THAN-CONTAINER, with
+the statement that its divergence count is not trustworthy until the join key is ruled. **It is now
+ruled (R359: container-only), so that caveat resolves for this row**: joined on `options`, which this
+store declares nothing under, so it lands in *declared there, not here* — **which is true, and is a
+reader gap on this side rather than a content disagreement** (R360).
