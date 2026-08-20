@@ -12598,3 +12598,44 @@ green and only one stays green.** A reader that names its key is safe against a 
 anywhere; a reader that descends is safe only until one appears in its path. **`isSuperseded` (R358)
 guards this side's walk, and that is a guard on the READER, which is the kind that survives** — but it
 is one reader, and the finding is about thirty-two.
+
+## R377 — The claim ledger as a delivery: the whole population, ordered, not the reachable part
+
+**Annie, 2026-08-21.** `pnpm deliver:claim-ledger`. **A summary tells her the size of the job without
+letting her start it** — R367 one level on: a row is not a delivery, and neither is a console table.
+
+**THE FILE CARRIES ALL 1,092 CLAIMS, NOT THE REACHABLE 443, AND SAYS SO ON ITS FACE.** Emitting the
+reachable subset under a name that says *ledger* would be **the population question in a new place**:
+a file that reads complete and is not. **The ordering does the work truncation would have done** —
+four tranches by reachability (3 / 73 / 367 / 649), so the read starts where the children are and
+stops wherever she stops, with nothing missing from the file to be surprised by later.
+
+Each row carries the claim, **the text it is a claim about**, the reachability, and a comparison slot.
+Walk scripts get their cited passage lines; misconception descriptions get the option values tagged
+with them; passage-borne claims name their passage, delivered whole elsewhere.
+
+**AND THE FIRST BUILD WAS A SUMMARY WEARING A DELIVERY'S NAME.** It resolved only cited passage lines,
+so **640 of 705 walk scripts rendered as "not resolvable" — 86% of the ledger.** A reader cannot
+compare a claim against a blank. **It was also wrong on its own terms**: a VR walk script — *"Fearless
+carries that very meaning. Cowardly is its opposite"* — is a claim about the OPTIONS, which sit on the
+same row. Cited lines where a passage is declared, **the item's own stem and options otherwise**;
+unresolvable now means the store genuinely holds neither. **287 remain, down from 943.**
+
+**And an unresolved row says WHICH KIND of unresolved it is**, because one sentence for both is the
+conflation the ledger exists to undo: **178 misconceptions have NOTHING TAGGED WITH THEM** — a
+description of how children go wrong, carried by no option a child can choose, which is a finding and
+not a gap — and **109 passage-borne claims reference a passage delivered whole elsewhere**, rather
+than putting the same 900 words in this file 109 times.
+
+## R378 — A second artefact was asked for and not named
+
+**2026-08-21.** The instruction opened *"artefacts for Annie, neither of which exists as a file"* and
+then specified one — the claim ledger. **The second is not described anywhere in the request.**
+
+**Recorded rather than guessed.** The candidates from the standing list are all plausible and none is
+indicated: the fifteen decoding/comprehension verdicts as they return, the fifty-five remaining flags,
+the nine conditional flags awaiting owners and dates, the 41 checks with no control. **Building the
+one I judged most likely would be the fabrication-from-an-adjacent-line fault of R366**, where the
+lookup succeeds and lands one off — and here there is no line to land on at all.
+
+The ledger is delivered. **The second waits on being named.**
