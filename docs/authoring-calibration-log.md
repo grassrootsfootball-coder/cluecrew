@@ -11922,3 +11922,86 @@ it — a name that does not identify its payload is R88's fault in a title.
 her own evidence — decoding nine or ten against comprehension twelve or more, on one passage — and
 derivation from evidence is not the same as a decision. **Where the two numbers are far apart, the
 gap is a fact about the passage worth keeping, not a discrepancy to resolve.**
+
+## R351 — The join compares containers, and says so whenever that loses information
+
+**David's question, 2026-08-20, asked and settled BEFORE the first join rather than after it
+reported.**
+
+**Both stores emit depth 1**: ours **by construction** — `field` comes from a literal two-element
+loop and cannot be deeper without a code change — and Cowork's **by observation** across its 97 rows.
+So the choice was being made on data that does not exercise it, which is the only condition under
+which it can be made calmly.
+
+**Joining on the FULL PATH is wrong**: our side cannot emit one, so any deeper path the other store
+ever sends is unmatched — R348's 314-divergence failure, one level down.
+
+**Joining on the CONTAINER is right today and carries the inverse risk**: `stem.text` and
+`stem.prompt` collapse to one key, so a span declared against a different sub-field reads as the same
+field. **That converts a class-1 or class-2 divergence into class 3, or into agreement — and class 3
+is what the whole check exists to catch.**
+
+**So: normalise for the join, carry `fieldPath` UNNORMALISED on every row, and report the moment
+either side emits depth > 1** — naming the affected rows and saying plainly that their divergence
+counts are not trustworthy until the join key is ruled on. **A normalisation nobody can see is
+indistinguishable from data that never needed it**, and the run now states which of the two it is
+looking at every time.
+
+## R352 — A derived shape block: the emission states its own structure, computed by the walk that produced the rows
+
+**Cowork's proposal, adopted on both sides, 2026-08-20.**
+
+**A shape computed FROM the rows cannot drift from the rows.** An announcement in a message can: it
+is written once, by hand, about data that changes afterwards, and it is known only to whoever read
+that message. **The shape block survives a reader who never saw the announcement — which is every
+future reader.**
+
+Nothing in it is hand-listed: key names come from the rows' own keys, the depth histogram and the
+distinct paths from the values. It carries `rowCount`, `rowKeys`, `distinctItems`, `fieldPathDepths`,
+`distinctFieldPaths`, the `joinKey` and its stated caveat.
+
+**And the check reads shape BEFORE rows.** If two emissions disagree about their own structure,
+every row-level number is a consequence of that disagreement rather than a finding about content —
+**reporting divergences first presents a structural mismatch as a content dispute, which is the most
+expensive way for two stores to argue.** Cowork's first set carries no shape block; that is reported
+as a fact about the artefact, not a failure.
+
+## R353 — The join ran: 95 of 97 agree, the disagreement is one-directional, and every apparent conflict was manufactured by the display
+
+**2026-08-20. Cowork's set arrived mid-run and the reader REFUSED it** — its rows sit at `spans`, not
+`declarations`, and `readCoworkSet` threw naming the eight top-level keys it found instead of
+returning empty. **That refusal is why the first join was correct rather than reporting 97 phantom
+absences** (R173 working as designed). `spans` was then ADDED to the recognised row keys, after being
+seen — never guessed.
+
+**The result: 64 divergences of 157 vs 97, and not one of them is a contradiction.**
+
+| class | count |
+|---|---:|
+| field declared here, not there at all | 56 |
+| field declared there, not here at all | **2** |
+| same field, an extra span held here only | 6 |
+| same field, an extra span held there only | 0 |
+
+**95 of their 97 spans match ours exactly.** The two that do not are both on `ENG-019-BV-02` — **an
+item this store does not hold at all** (we have `ENG-019-BV-09` through `-12`). **The declaration
+comparison found a missing ITEM, which is not what it was built to look for.**
+
+**EVERY APPARENT CONFLICT WAS THE DISPLAY, AND CATCHING THAT COST ONE QUERY.** The six class-3 rows
+rendered as *we declare "trotted as one trots…" / they declare "exciting stories"* — two stores
+disagreeing about one span. **They are not: both spans are ours, on a field where they hold one and
+we hold two.** In all six, their span is present in our set. The report now prints the other side's
+span **only when we genuinely do not hold it**, and the class is renamed to *an extra span held here
+only*. **A manufactured conflict, in the class the check exists to catch, is worse than no report.**
+
+**A hypothesis of mine was refuted by the data and is recorded because the refutation is the useful
+part.** Seeing `"stupid"` and `"contemptuous"` against our full quotations, I proposed that the two
+stores declare different THINGS — they the exempted word, we the citation. **The counts refute it:
+48 of their 97 are single words and 47 of our 157 are, and 47 of those 48 match exactly.** The
+populations are the same kind; ours is simply larger.
+
+**And their `againstCode` note reconciles.** Cowork records that *"a figure of 113 was relayed and is
+NOT reconciled"*. **113 was our distinct-ITEM count; 97 is their SPAN count — different units, not
+disagreeing measurements.** The comparable pairs are **157 spans against 97**, and **113 items
+against 89**. Nothing was wrong on either side; a number crossed without its unit attached, which is
+R203's shape in a relayed figure.

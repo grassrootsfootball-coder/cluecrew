@@ -38,13 +38,99 @@ const REPO_ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 
 export interface Declaration {
   itemId: string;
-  /** The container the declaration lives on — `stem` or `explanation`. */
+  /** The container the declaration lives on — `stem` or `explanation`. The JOIN KEY. */
   field: string;
+  /**
+   * The path exactly as the emitting store wrote it, before normalisation. Carried so the join can
+   * normalise WITHOUT the normalisation being invisible — see `reportDepth`.
+   */
+  fieldPath: string;
   spanText: string;
 }
 
 const key = (d: Declaration) => `${d.itemId} ${d.field}`;
 const full = (d: Declaration) => `${key(d)} ${d.spanText}`;
+
+/** Segments in a dotted/indexed field path: `stem` -> 1, `stem.quotes[0].text` -> 3. */
+const depthOf = (fieldPath: string) => fieldPath.split(/[.[]/).filter(Boolean).length;
+
+/**
+ * **THE JOIN COMPARES CONTAINERS, AND SAYS SO WHENEVER THAT LOSES INFORMATION** (David's question,
+ * 2026-08-20 — R351, settled BEFORE the first join rather than after it reported).
+ *
+ * Both stores emit depth 1 today: ours by CONSTRUCTION (`field` comes from a literal two-element
+ * loop and cannot be deeper without a code change), Cowork's by OBSERVATION across its 97 rows. So
+ * the choice is being made on data that does not yet exercise it, and it can only be made safely by
+ * making the losing case LOUD rather than by picking the option that looks more precise.
+ *
+ * **Joining on the FULL PATH is wrong**: our side cannot emit one, so every deeper path the other
+ * store ever sends becomes a field neither absent-here nor absent-there but simply unmatched — the
+ * 314-divergence failure of R348, arriving one level down.
+ *
+ * **Joining on the CONTAINER is right today and has the inverse risk**: `stem.text` and
+ * `stem.prompt` collapse to one key, so a span declared against a DIFFERENT sub-field reads as the
+ * same field. **That silently converts a class-1 or class-2 divergence into class 3, or into
+ * agreement — and class 3 is what the whole check exists to catch.**
+ *
+ * So: normalise for the join, carry `fieldPath` unnormalised on every row, and report the moment
+ * either side emits depth > 1. **A normalisation nobody can see is indistinguishable from data that
+ * never needed it.**
+ */
+function reportDepth(rows: readonly Declaration[], side: string): number {
+  const deep = rows.filter((d) => depthOf(d.fieldPath) > 1);
+  if (deep.length === 0) return 0;
+  console.log(
+    `\nDEEPER-THAN-CONTAINER PATHS (${side}): ${deep.length}\n` +
+      '  The join compares CONTAINERS, so these were matched on their first segment and any\n' +
+      '  sub-field distinction was discarded. Two spans on different sub-fields of one container\n' +
+      '  are indistinguishable to this comparison, which can hide an absence or manufacture a\n' +
+      '  same-field-different-text finding. **The divergence counts below are not trustworthy for\n' +
+      '  these rows until the join key is ruled on.**',
+  );
+  for (const d of deep.slice(0, 20)) console.log(`  ${d.itemId}  ${d.fieldPath}  ->  joined as ${d.field}`);
+  if (deep.length > 20) console.log(`  … and ${deep.length - 20} more`);
+  return deep.length;
+}
+
+/**
+ * The emission's own shape, DERIVED AT WRITE TIME BY THE SAME WALK THAT PRODUCED THE ROWS
+ * (Cowork's proposal, adopted both sides — R352).
+ *
+ * **A shape block computed from the rows cannot drift from the rows.** An announcement in a message
+ * can: it is written once, by hand, about data that changes afterwards, and it is read by whoever
+ * happened to receive that message. This is read off the artefact itself, so it survives a reader
+ * who never saw the announcement — which is every future reader.
+ *
+ * Nothing here is hand-listed. Key names come from the rows' own keys; the depth histogram and the
+ * distinct paths come from the values.
+ */
+function derivedShape(rows: readonly Declaration[]): Record<string, unknown> {
+  const keys = new Set<string>();
+  for (const r of rows) for (const k of Object.keys(r)) keys.add(k);
+  const depths: Record<string, number> = {};
+  const paths = new Set<string>();
+  for (const r of rows) {
+    paths.add(r.fieldPath);
+    const d = String(depthOf(r.fieldPath));
+    depths[d] = (depths[d] ?? 0) + 1;
+  }
+  return {
+    derivedBy: 'check-declaration-sets.ts — the same walk that produced the rows, at write time',
+    whyDerived:
+      'A shape computed from the rows cannot drift from the rows. An announcement in a message can, ' +
+      'and is only known to whoever read that message.',
+    rowCount: rows.length,
+    rowKeys: [...keys].sort(),
+    distinctItems: new Set(rows.map((r) => r.itemId)).size,
+    fieldPathDepths: depths,
+    distinctFieldPaths: [...paths].sort(),
+    joinKey: 'itemId + first segment of the field path (the CONTAINER)',
+    joinKeyCaveat:
+      'Sub-field distinctions below the container are discarded by the join. Both stores emit ' +
+      'depth 1 today; a deeper path is reported, never silently normalised.',
+    spanTextEncoding: 'exact substring of some text on the container, whitespace-trimmed at both ends',
+  };
+}
 
 /**
  * A quote entry is EITHER a bare string OR an object carrying `text`. Both shapes are live in this
@@ -80,7 +166,11 @@ export async function ourDeclarationSet(): Promise<Declaration[]> {
       }
       for (const entry of quotes) {
         const spanText = spanTextOf(entry, `${item.id}.${field}.quotes`);
-        if (spanText.trim().length > 0) out.push({ itemId: item.id, field, spanText: spanText.trim() });
+        // `field` is a literal from the loop above, so OUR depth is 1 by construction — recorded
+        // as `fieldPath` all the same, because "it cannot happen" is not a thing an artefact says.
+        if (spanText.trim().length > 0) {
+          out.push({ itemId: item.id, field, fieldPath: field, spanText: spanText.trim() });
+        }
       }
     }
   }
@@ -105,15 +195,20 @@ function containerOf(fieldPath: string): string {
 /** Cowork's set, as delivered. Same refusal discipline: an unknown wrapper throws. */
 export function readCoworkSet(path: string): Declaration[] {
   const raw: unknown = JSON.parse(readFileSync(path, 'utf8'));
+  // Row-carrying keys we have actually seen, in the order we prefer them. `spans` is Cowork's
+  // (2026-08-20); `declarations` is ours. A new one is ADDED here after being seen, never guessed —
+  // and an unrecognised wrapper still throws naming what it got, which is how this file was read
+  // correctly on its first arrival instead of reporting 97 phantom absences.
+  const ROW_KEYS = ['declarations', 'spans'] as const;
   const rows = Array.isArray(raw)
     ? raw
-    : raw && typeof raw === 'object' && Array.isArray((raw as { declarations?: unknown }).declarations)
-      ? (raw as { declarations: unknown[] }).declarations
+    : raw && typeof raw === 'object'
+      ? (ROW_KEYS.map((k) => (raw as Record<string, unknown>)[k]).find(Array.isArray) as unknown[] | undefined) ?? null
       : null;
   if (rows === null) {
     throw new Error(
       `check:declaration-sets ABORTED — cannot read ${path}.\n` +
-        "  Expected a top-level array, or an object with a 'declarations' array.\n" +
+        `  Expected a top-level array, or an object carrying one of: ${ROW_KEYS.join(', ')}.\n` +
         `  Got top-level keys: ${raw && typeof raw === 'object' ? Object.keys(raw).join(', ') : typeof raw}.`,
     );
   }
@@ -128,7 +223,7 @@ export function readCoworkSet(path: string): Declaration[] {
           '  Expected string itemId, field and spanText. Got: ' + JSON.stringify(r)?.slice(0, 160),
       );
     }
-    return { itemId, field: containerOf(field), spanText: spanText.trim() };
+    return { itemId, field: containerOf(field), fieldPath: field, spanText: spanText.trim() };
   });
 }
 
@@ -176,6 +271,16 @@ export function consequenceOf(
     if (withIt !== without) return 'ACTIVE';
   }
   return 'LATENT';
+}
+
+/** Their emission's own shape block, if it carries one. Absent is a fact, not a failure. */
+function coworkShape(path: string): Record<string, unknown> | null {
+  const raw: unknown = JSON.parse(readFileSync(path, 'utf8'));
+  if (raw && typeof raw === 'object' && !Array.isArray(raw)) {
+    const s = (raw as { shape?: unknown }).shape;
+    if (s && typeof s === 'object') return s as Record<string, unknown>;
+  }
+  return null;
 }
 
 /** Inbound artefacts land here. Derived by scanning, never hand-listed (R57). */
@@ -249,6 +354,7 @@ async function main() {
     JSON.stringify(
       {
         note: 'Every quoted span declared in the ClueCrew store, for both-directions comparison (R341).',
+        shape: derivedShape(ours),
         count: ours.length,
         declarations: [...ours].sort((a, b) => full(a).localeCompare(full(b))),
       },
@@ -306,9 +412,22 @@ async function main() {
       const status = c ? c.status : '—';
       console.log(`  [${consequence}] ${d.itemId}.${d.field} (${status})`);
       console.log(`      ${side === 'ours' ? 'we declare' : 'they declare'}: "${d.spanText.slice(0, 80)}"`);
-      if (side === 'ours' && theirByKey.has(key(d))) {
-        for (const other of theirByKey.get(key(d)) ?? []) {
-          console.log(`      they declare: "${other.spanText.slice(0, 80)}"`);
+      /**
+       * **ONLY PRINT THE OTHER SIDE'S SPAN WHEN IT IS GENUINELY ABSENT HERE.**
+       *
+       * The first version printed every span the other store held on the same field, directly
+       * beneath ours. On the real data that rendered as *we declare "trotted as one trots…" /
+       * they declare "exciting stories"* — which reads as two stores disagreeing about one
+       * span, and is nothing of the kind: both spans are ours, on a field where they hold one
+       * and we hold two. **Every one of the six looked like a conflict and none was.**
+       *
+       * A true one-sided extra is a real finding; a rival-versions display is a manufactured
+       * one, and it is manufactured in the class the check exists to catch.
+       */
+      const counterparts = (theirByKey.get(key(d)) ?? []).filter((o) => !ourFull.has(full(o)));
+      if (side === 'ours' && counterparts.length > 0) {
+        for (const other of counterparts) {
+          console.log(`      they declare, and we do NOT hold it: "${other.spanText.slice(0, 80)}"`);
         }
       }
     }
@@ -317,10 +436,45 @@ async function main() {
   console.log(
     `check:declaration-sets: compared ${ours.length} declaration(s) here against ${theirs.length} from ${theirPath}.`,
   );
+
+  /**
+   * **SHAPE BEFORE ROWS** (R352). If the two emissions disagree about their own structure, every
+   * row-level number below is a consequence of that disagreement rather than a finding about
+   * content — and reporting divergences first would present a structural mismatch as a content
+   * dispute, which is the most expensive way for two stores to argue.
+   */
+  const theirShape = coworkShape(theirPath);
+  if (theirShape === null) {
+    console.log(
+      '\n  Their emission carries NO derived shape block. Ours does. Row comparison proceeds, but\n' +
+        '  nothing on their side states its own structure, so a change to it would arrive silently.',
+    );
+  } else {
+    const ourShape = derivedShape(ours);
+    const differing = ['rowKeys', 'fieldPathDepths', 'distinctFieldPaths', 'joinKey']
+      .filter((k) => JSON.stringify(theirShape[k]) !== JSON.stringify(ourShape[k]) && theirShape[k] !== undefined);
+    console.log(
+      differing.length === 0
+        ? '\n  SHAPE AGREES on every field both emissions declare.'
+        : `\n  SHAPE DIFFERS on: ${differing.join(', ')} — read this before the row counts below.`,
+    );
+    for (const k of differing) {
+      console.log(`    ${k}\n      ours:   ${JSON.stringify(ourShape[k])}\n      theirs: ${JSON.stringify(theirShape[k])}`);
+    }
+  }
+
+  const deepOurs = reportDepth(ours, 'ours');
+  const deepTheirs = reportDepth(theirs, 'theirs');
+  if (deepOurs === 0 && deepTheirs === 0) {
+    console.log(
+      '\n  Field paths: all depth 1 on both sides, so the container join discards nothing. Ours is\n' +
+        '  depth 1 BY CONSTRUCTION and theirs by observation — the second can change without notice.',
+    );
+  }
   describe('FIELD DECLARED HERE, NOT DECLARED THERE AT ALL', hereOnly, 'ours');
   describe('FIELD DECLARED THERE, NOT DECLARED HERE AT ALL', thereOnly, 'theirs');
-  describe('SAME FIELD, SPAN TEXT WE HOLD AND THEY DO NOT', textDiffersOurs, 'ours');
-  describe('SAME FIELD, SPAN TEXT THEY HOLD AND WE DO NOT', textDiffersTheirs, 'theirs');
+  describe('SAME FIELD, AN EXTRA SPAN HELD HERE ONLY', textDiffersOurs, 'ours');
+  describe('SAME FIELD, AN EXTRA SPAN HELD THERE ONLY', textDiffersTheirs, 'theirs');
 
   const active = [...hereOnly, ...textDiffersOurs, ...textDiffersTheirs].filter((d) => {
     const c = containerFor.get(key(d));
