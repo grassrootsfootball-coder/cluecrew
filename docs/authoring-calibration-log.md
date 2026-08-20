@@ -12811,3 +12811,46 @@ were held there.
 that skips archival keys on the walk, called `isSuperseded` here"* survives a rename on either side;
 *"`isSuperseded`"* does not. This is R178's look-it-up rule at a boundary where the lookup cannot be
 performed — **the register can only be checked against the store that wrote it.**
+
+## R386 — Three ledger versions overwrote each other under one name, on the artefact whose whole content is a reading order
+
+**David, 2026-08-21: which ledger head is on this side, and was the superseded one removed?**
+
+**It was never a supersede, because the name never moved.** `CLAIM-LEDGER-FULL-POPULATION.md` shipped
+as a FIXED filename delivered with no family, so `deliver()` copied over it. **Three materially
+different versions occupied that one name in sequence:**
+
+| digest | what it was |
+|---|---|
+| `cc29b834…` | first build — 943 of 1,092 rows unresolvable |
+| `7bfaf302…` | resolution repaired, unresolved rows split by kind |
+| `1e3b9269…` | reachability corrected from all-carriers to LIVE carriers |
+
+**No superseded file was left alongside — and no supersede was recorded either.** Overwriting in
+place leaves no trace of what was there, which is why this looked correct at every step: **updating a
+file and replacing it with a different artefact are the same operation when the name is fixed.**
+
+**IT IS R88'S FAULT AND THIS IS THE WORST ARTEFACT TO HAVE IT ON, WHICH IS DAVID'S POINT.** The
+ledger's whole content is a READING ORDER. An earlier version crossing sends her through the
+population in a sequence since corrected — `en-plausible-not-stated` first at a count that was wrong
+by a factor of eight — and **nothing on either side would say so**, because both files answer to one
+name. The reissue-completion class, on an artefact that is nothing but an ordering.
+
+**The recognition test got this right and the difference was invisible**: its name carried a digest,
+so a content change moved the name and `deliver(path, FAMILY)` removed the old one where a reader
+could see it happen. This one did not, and nothing compared the two habits.
+
+**Now stamped over the whole payload and delivered with a family**:
+`claim-ledger-full-population-413c740af3bcf764.md`, 765,409 bytes,
+sha256 `cff0c1160570c3461ee2e7ee0cf47028ace4b6022a2dba4c3492b662d114a297`. The fixed-name file and its
+sidecar are removed from outbound.
+
+**The twenty-row sample is a SEPARATE file and the note to her was right**:
+`LEDGER-HEAD-EN-PLAUSIBLE-NOT-STATED.md`, 5,534 bytes, `65aaba25e9df6d79…`, 20 rows. **And it states
+27, not 209** — it was built from a fresh LIVE-only query, so it never carried the count fault that
+the ledger's ordering did. **The derived artefact was right while the one it derived from was wrong**,
+which is how the fault was found at all (R382).
+
+**The general rule this closes: a delivered artefact's NAME carries its content digest, or an update
+and a replacement are indistinguishable to everyone downstream.** A fixed name is only safe for a file
+whose content never changes, and there is no such file here.

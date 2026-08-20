@@ -21,7 +21,7 @@ import { readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { prisma } from '../packages/db/src/index';
-import { deliver } from './lib/export-destination';
+import { artefactStamp, deliver, stampedName } from './lib/export-destination';
 import { requirePopulation } from './lib/population';
 
 const REPO_ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -279,9 +279,29 @@ async function main() {
     out.push('`[ ] compared`  ·  `who:` ______  ·  `when:` ______  ·  `verdict:` ______', '');
   });
 
-  const path = join(REPO_ROOT, 'content/exports/CLAIM-LEDGER-FULL-POPULATION.md');
-  writeFileSync(path, out.join('\n'));
-  deliver(path);
+  /**
+   * **THE NAME CARRIES THE CONTENT HASH, AND IT DID NOT** (R386).
+   *
+   * This shipped as a FIXED filename delivered with no family, so three materially different
+   * versions overwrote each other under one name — `cc29b834`, `7bfaf302`, `1e3b9269` — **with no
+   * supersede record and no way for the receiving store to tell which it holds.** That is R88's
+   * fault, and it is worst on this artefact of all: **the whole content is a reading ORDER**, so an
+   * earlier version crossing sends her through the population in a sequence that has since been
+   * corrected, and nothing on either side would say so.
+   *
+   * The recognition test got this right because its name carried a digest; this one did not, and the
+   * difference was invisible precisely because overwriting in place always looks like updating.
+   * Stamped over the WHOLE payload (R365), and delivered with a family so `deliver()` removes the
+   * superseded file rather than leaving it alongside.
+   */
+  const payload = { note: 'The claim ledger: every claim about a text, ordered by reachability.', rows };
+  const stamp = artefactStamp(payload, new Date().toISOString(), 'content',
+    'every claim about a text in the store, with the text it is a claim about, ordered by reachability',
+    ['note', 'rows']);
+  const FAMILY = 'claim-ledger-full-population';
+  const path = join(REPO_ROOT, 'content/exports', stampedName(FAMILY, stamp.sourceHash, 'md'));
+  writeFileSync(path, `<!-- stamp ${JSON.stringify(stamp)} -->\n` + out.join('\n'));
+  deliver(path, FAMILY);
   console.log(`\n${rows.length} claims emitted · ${reachable.length} reachable · ${rows.length - reachable.length} stored.`);
   await prisma.$disconnect();
 }
