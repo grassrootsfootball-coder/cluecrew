@@ -165,12 +165,21 @@ async function main() {
 
   const miscs = await prisma.misconception.findMany({ select: { id: true, description: true } });
   const taggedValues = new Map<string, string[]>();
+  /**
+   * **REACHABILITY IS LIVE CARRIERS, NOT ALL CARRIERS.** The first version counted every tagged
+   * option whatever its status and put the total in a column headed LIVE — so
+   * `en-plausible-not-stated` read as **209 LIVE** when 27 of its carriers are LIVE and 182 are
+   * DRAFT. **A number labelled with a qualifier it does not have**, which is the 20-against-19 fault
+   * in a column heading, in the artefact that orders her whole reading queue.
+   */
+  const liveCarriers = new Map<string, number>();
   for (const i of items) {
     for (const o of i.options) {
       const m = (o as { misconceptionId?: string | null }).misconceptionId;
       if (!m) continue;
       const v = ((o as { content?: { value?: unknown } }).content ?? {}).value;
-      taggedValues.set(m, [...(taggedValues.get(m) ?? []), `  ${i.id}: ${typeof v === 'string' ? v : JSON.stringify(v)}`]);
+      taggedValues.set(m, [...(taggedValues.get(m) ?? []), `  ${i.id} (${i.status}): ${typeof v === 'string' ? v : JSON.stringify(v)}`]);
+      if (i.status === 'LIVE') liveCarriers.set(m, (liveCarriers.get(m) ?? 0) + 1);
     }
   }
   for (const m of miscs) {
@@ -178,9 +187,10 @@ async function main() {
     const tagged = taggedValues.get(m.id) ?? [];
     rows.push({
       claimId: `${m.id}#description`, kind: 'misconception vs tagged items', claim: m.description,
-      aboutLabel: `the ${tagged.length} option(s) tagged with it`,
+      aboutLabel: `the ${tagged.length} option(s) tagged with it, ${liveCarriers.get(m.id) ?? 0} of them LIVE`,
       about: tagged.length > 0 ? tagged.slice(0, 24).join('\n') + (tagged.length > 24 ? `\n  … and ${tagged.length - 24} more` : '') : null,
-      reachable: tagged.length, status: tagged.length > 0 ? 'REACHABLE' : 'stored',
+      reachable: liveCarriers.get(m.id) ?? 0,
+      status: (liveCarriers.get(m.id) ?? 0) > 0 ? 'REACHABLE' : tagged.length > 0 ? 'tagged but none LIVE' : 'stored',
     });
   }
 

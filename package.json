@@ -142,6 +142,7 @@
     "check:db-invariants": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-db-invariants.ts",
     "check:authority-shape": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-authority-shape.ts",
     "check:return-leg": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-return-leg.ts",
+    "check:declaration-schema": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-declaration-schema.ts",
     "check:declaration-sets": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-declaration-sets.ts",
     "check:item-population": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-item-population.ts",
     "check:reissue-completion": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-reissue-completion.ts",

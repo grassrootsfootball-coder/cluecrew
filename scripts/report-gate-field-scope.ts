@@ -58,7 +58,23 @@ async function main() {
   const norm = (p: string) => p.replace(/\[\d+\]/g, '[]');
   for (const i of items) {
     for (const [p] of textsFrom(i.stem, 'stem')) screened.set(norm(p), (screened.get(norm(p)) ?? 0) + 1);
-    for (const [p] of textsFrom(i.explanation, 'explanation')) screened.set(norm(p), (screened.get(norm(p)) ?? 0) + 1);
+    /**
+     * **THE GATE DOES NOT WALK `explanation` — IT READS THREE NAMED FIELDS.** The first version of
+     * this report called `textsFrom` on the explanation object, which is what the gate does for the
+     * STEM and for option content but NOT for the explanation, whose loop is
+     * `for (const field of ['walkScript', 'walk', 'hintCore'])`.
+     *
+     * **So it reported `walkScriptBatch`, `walkScriptStatus`, `hintAuthority` and `hintAuthoredBy`
+     * as screened when the gate has never touched them** — 678 values, four of the eleven paths in
+     * the not-served column, and the measurement went to a reviewer as evidence for a ruling.
+     * R41's fault: a verifier that re-derived the property instead of calling the family's own code.
+     */
+    for (const field of ['walkScript', 'walk', 'hintCore'] as const) {
+      const t = (i.explanation as Record<string, unknown> | null)?.[field];
+      if (typeof t === 'string' && t.trim()) {
+        screened.set(`explanation.${field}`, (screened.get(`explanation.${field}`) ?? 0) + 1);
+      }
+    }
     for (const o of i.options) {
       for (const [p] of textsFrom((o as { content?: unknown }).content, 'option')) {
         screened.set(norm(p), (screened.get(norm(p)) ?? 0) + 1);

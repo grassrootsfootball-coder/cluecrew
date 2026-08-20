@@ -12639,3 +12639,97 @@ one I judged most likely would be the fabrication-from-an-adjacent-line fault of
 lookup succeeds and lands one off — and here there is no line to land on at all.
 
 The ledger is delivered. **The second waits on being named.**
+
+## R379 — Two lookups from the serving code, and both settle a question my own documents left open
+
+**David, 2026-08-21: report the path, not the conclusion.**
+
+**LOOKUP 1 — the hint a child sees on a miss comes from the LIBRARY, not from `hintCore`.**
+
+`play-runner.tsx:806` renders `feedback.childHint` ← `orchestrator.ts:1065` returns it ←
+**`orchestrator.ts:940`: `childHint = misconception?.childHint`** ← `:939`
+`prisma.misconception.findUnique({ where: { id: chosen.misconceptionId } })`, gated on
+`!correct && chosen?.misconceptionId`. **`explanation.hintCore` appears nowhere on that path.**
+
+Measured on the nine LIVE punctuation items: **all 9 carry a `hintCore`; all 36 wrong options carry a
+`misconceptionId`; all 6 misconceptions carry a `childHint`.** So the child reliably sees the library
+text and never the item's own. `ENG-003-A-PU-02` serves *"If the SPOKEN words are the question, the
+mark lives inside the speech marks"* while its own **"Does your voice go up at the end? Then it needs
+a question mark"** has never reached anyone. **373 authored values are unwired, seven of them hers.**
+
+**LOOKUP 2 — the door refuses `explanation.walkScript`, and the declaration sits somewhere else.**
+
+`favoring` occurs **twice** in `ENG-018-RB-01`: in `options[2].misconceptionExecution`, **which the
+door does not screen**, and in `explanation.walkScript`, **which it does**. Cowork's declaration is at
+`options[2]` — **aimed at the occurrence that was never refused.**
+
+**So no new storage shape is needed.** The refused occurrence is on the explanation, and its
+declaration belongs in `explanation.quotes`, **which the door already reads**. R373's joint proposal
+is WITHDRAWN.
+
+**AND BOTH MY DOCUMENTS WERE HALF-RIGHT, WHICH IS WORSE THAN ONE BEING WRONG.** The scope paper said
+the door's refusals were `walkScript` and `option.value` — true. The declaration paper said `favoring`
+is declared where the door cannot see it — also true. **Neither noticed they were describing two
+different occurrences of one word**, and a reader holding both would conclude the door refuses what
+the declaration covers. She was right not to rule over the gap.
+
+## R380 — The ban list's scope, narrowed, with the schema check shipped in the same act
+
+**Annie's ruling, 2026-08-21.** `packages/core/src/ban-list-scope.ts`, `pnpm check:declaration-schema`.
+
+**In scope: the served paths and class 3. Nothing else.**
+
+**Provenance and workflow are OUT, with `correctionOf` as the decisive case** — *"a field whose job is
+to record a fault will contain the fault, so a gate banning the word from the field that records it
+makes the record impossible."* Not a tolerance: a contradiction. The field cannot do its job and pass.
+
+**Machine declarations are OUT, under a rider that OUTRANKS the ruling: removing a check must not
+leave a field with none.** *"A field nobody checks is how the word cap ran for a month."* So
+`check:declaration-schema` ships in the same commit and asks what actually applies to a declaration —
+**is the shape valid, does the declared span exist in a text on its own container, does the exemption
+name a rule that exists** (register-derived, never hand-listed). **28 faults on first run**, all one
+class: declarations resolving to no text on their container.
+
+**`hintCore` is class 3 whatever Lookup 1 says** — authored for a child, gated as child-facing, in
+scope **because the day something serves it the gate is what stands between the authoring and the
+child.** `walkScript`'s case exactly, one field over, invisible because the gate treated it as served.
+
+**Baselined before and after (R149): NOTHING MOVED.** No existing failure sat on an out-of-scope
+field, so the narrowing is correct and currently unexercised — an outcome, not a vindication (R62).
+
+**AND THE MEASUREMENT THAT PRODUCED THE RULING WAS ITSELF WRONG, CORRECTED HERE.** It reported **35
+screened paths**; the true figure is **25**. It called `textsFrom` on the explanation object, which is
+what the gate does for the stem and for option content **but NOT for the explanation**, whose loop
+reads three named fields. So `walkScriptBatch`, `walkScriptStatus`, `hintAuthority` and
+`hintAuthoredBy` — 678 values, four of the eleven in the not-served column — **were reported as
+screened when the gate has never touched them.** R41's fault: a verifier re-deriving the property
+instead of calling the family's own code, in evidence that went to a reviewer for a ruling.
+
+## R381 — Wind in the Willows: KEEP with the condition WAIVED, and the queue entry is not a condition
+
+**Annie, 2026-08-21.** Not `KEEP_IF`, and not a parked row. **`KEEP`, with the condition recorded
+`WAIVED` and its reason on the row**: no accompanying-material channel exists, and the passage is
+acceptable without the note — *"Grahame's own narration already calls the Mole impatient and
+contemptuous."* The 22 LIVE items serve, and nothing is outstanding against them.
+
+**Separately, and deliberately not as a condition: `teacherNoteQueue` position 1.** If a teacher-note
+channel is ever built, this passage is first. **A queue entry is a plan; a condition is an obligation
+on a verdict.** Recording the plan as a condition would have re-created the unmet backlog the whole
+schema exists to end — one waived condition and one queue row, not one parked condition doing both.
+
+## R382 — The ledger's reachability column counted carriers of every status and called them LIVE
+
+**2026-08-21, found by building the head she asked for.** `en-plausible-not-stated` ordered first at
+**209 LIVE**. It has **27 LIVE carriers.** The other 182 are DRAFT.
+
+**A number labelled with a qualifier it does not have** — the 20-against-19 fault in a column heading,
+**in the artefact that orders her entire reading queue.** Every misconception row was ordered by total
+carriers under a LIVE label, so the queue was sorted by the wrong quantity from the top down.
+
+Corrected: reachability is LIVE carriers, the row states both (`the 209 option(s) tagged with it, 27
+of them LIVE`), and a third status appears — **`tagged but none LIVE`**, which is neither reachable
+nor unstored and had no name before. **The population moved: 397 reachable, 695 stored** (was
+443/649).
+
+**It was found by building the twenty-row head**, not by reading the ledger — the artefact that
+carried the fault could not show it, and the one derived from it did on the first run.

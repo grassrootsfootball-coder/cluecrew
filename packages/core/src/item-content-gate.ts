@@ -16,6 +16,7 @@
  *     long-word ceiling and the script checked for stale option references.
  * Declared quotations and tested tokens are honoured exactly as elsewhere.
  */
+import { banListApplies } from './ban-list-scope';
 import { checkChildFacingText, spansPresentIn, type ContentFailure } from './content-gates';
 import { refusalMessage, refusedInOptions } from './refused-misconceptions';
 import { roleForItemStem } from './content-gates';
@@ -197,8 +198,16 @@ export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
     return stemQuotes;
   };
 
+  /**
+   * **THE BAN LIST RUNS ON THE SERVED PATHS AND ON CLASS 3, AND NOTHING ELSE** (Annie, R379).
+   * Provenance and workflow are out — `correctionOf` is the decisive case, since a field whose job
+   * is to record a fault will contain the fault. Machine declarations are out and
+   * `check:declaration-schema` owns them instead, shipped in the same act: **removing a check must
+   * not leave a field with none.**
+   */
   // Every stem string. The prose and the quote declarations carry the declared quotes.
   for (const [path, text] of textsFrom(item.stem, '')) {
+    if (!banListApplies(`stem.${path}`)) continue;
     // A carrier sentence disambiguates a meaning and can run long, so it takes
     // the word-card role (no length cap; the vocabulary ceiling ≤9 still holds,
     // and the headword stays exempt via testedTokens). Every other stem field
@@ -296,6 +305,7 @@ export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
    */
   for (const option of item.options) {
     for (const [path, text] of textsFrom(option.content, '')) {
+      if (!banListApplies(`option.${path}`)) continue;
       failures.push(
         ...checkChildFacingText({
           role: 'item-option',

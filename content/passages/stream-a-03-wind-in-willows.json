@@ -636,5 +636,28 @@
       "ruling": "VERDICT STANDS, REASON REWRITTEN. Annie, twenty-second return.",
       "replacedWith": "the text does not return to him, and the tone is farcical rather than cruel"
     }
-  ]
+  ],
+  "flagVerdicts": [
+    {
+      "flagIndex": 0,
+      "verdict": "KEEP",
+      "condition": {
+        "obligation": "A teacher note points out that the Mole is being cheeky, not admirable.",
+        "kind": "ACCOMPANYING_MATERIAL",
+        "owner": "reviewer:rev-0001",
+        "reviewBy": "2026-08-21",
+        "state": "WAIVED",
+        "metBy": null,
+        "ruledBy": "Annie, twenty-second return, 2026-08-21",
+        "waivedWhy": "No accompanying-material channel exists, and the passage is acceptable without the note. Grahame’s own narration already calls the Mole impatient and contemptuous."
+      },
+      "ruledOn": "2026-08-21",
+      "note": "KEEP, not KEEP_IF: the condition is WAIVED with its reason, not parked. The 22 LIVE items serve."
+    }
+  ],
+  "teacherNoteQueue": {
+    "position": 1,
+    "why": "Not a condition on this passage. If a teacher-note channel is ever built, this passage is first in the queue.",
+    "recordedOn": "2026-08-21"
+  }
 }
