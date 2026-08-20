@@ -12733,3 +12733,81 @@ nor unstored and had no name before. **The population moved: 397 reachable, 695 
 
 **It was found by building the twenty-row head**, not by reading the ledger — the artefact that
 carried the fault could not show it, and the one derived from it did on the first run.
+
+## R383 — RB-01: the door refused a LIVE field, and on Cowork's current item it refuses nothing
+
+**David, 2026-08-21: check which occurrence, before anything else.**
+
+**Neither branch of the question holds, because the two stores are gating different versions.**
+
+**This store's copy has no stamp block anywhere in the item.** `explanation` carries exactly
+`walkScript` and `hintCore`. The door refused **`explanation.walkScript`**, and the value it saw is:
+
+> *"Line 3 says he was **favoring** the horses as much as possible. The same sentence says he never
+> lost sight of one thing. Lines 3 and 4 name it: he carried the mail."*
+
+**A live, unstamped field. Not a stamp read.** The only bundle carrying item bodies on this side is
+the stale `REISSUESIXITEMS.json`, which holds the UNREWORDED walk script.
+
+**And the decisive test: on Cowork's current shape, this door PASSES the item.** Reconstructed — walk
+script reworded, prior text in `_rewordBefore` — and gated: **0 blocking failures.** Because
+`isSuperseded` (R358) skips the stamp, and **`misconceptionExecution` is a field the door does not
+screen at all.**
+
+**So the option-declaration question evaporates on the current item.** Shape A is not needed. A
+declaration in `explanation.quotes` is not needed. **There is nothing left to refuse.** R373 stays
+withdrawn, now on stronger ground than R379 gave it.
+
+**AND THE TWENTY-NINE-READERS FINDING DID ARRIVE HERE — ALREADY GUARDED.** Had `isSuperseded` not
+landed three days ago, the reconstructed item would have failed on `_rewordBefore.was`: the reworded
+field clean, the refusal reading as a live content defect, and the reword looking like it had not
+worked. **A guard written for one reason caught a different fault before it was raised** — which is
+the argument for guarding the READER rather than the data, and the only reason this store agrees with
+Cowork's account today.
+
+## R384 — `hintCore` is a review job, not a plumbing job, and the number says which
+
+**2026-08-21, costed and not built.** 373 authored values wired to nothing (R379).
+
+| | |
+|---|---:|
+| items carrying a `hintCore` | 373 |
+| of those LIVE | **43** |
+| LIVE ones whose wrong options route to a library hint | **43** |
+| LIVE ones with **no** library hint behind any wrong option | **0** |
+| library hints reachable from LIVE items | 28 |
+| reached **only** from items carrying a `hintCore` | **28** |
+
+**THE FALLBACK POPULATION IS EMPTY.** A plumbing job is one where some items have their own hint and
+others fall through; **that case does not exist here.** Wherever an item hint is reachable, a library
+hint is already there. So the build is one conditional in `orchestrator.ts:940` and it **displaces all
+28 reachable library hints at once** — every one approved text, with no partial rollout.
+
+**The two hints are not competing versions of one thing, which is why the store cannot decide it.**
+`ENG-003-A-PU-02` serves *"If the SPOKEN words are the question, the mark lives inside the speech
+marks"* while its own unread hint reads **"Does your voice go up at the end? Then it needs a question
+mark."** **The first names the rule; the second names what the child can do.** Two different teaching
+acts, and which belongs at a miss is a judgement about teaching, not about plumbing.
+
+**And it compounds: 330 of the 373 sit on DRAFT items.** Deciding now costs one ruling; deciding after
+the DRAFT backlog publishes costs the same ruling against eight times the content.
+
+## R385 — Three names agreed to and not held; none is reconciled
+
+**David, 2026-08-21.** Cowork holds **no `quotedFieldVerdict`, no `isSuperseded`, and 29 gates rather
+than 25.** Each time **the shape was right and the name was wrong.**
+
+**A name agreed to but not held produces a register entry pointing at nothing** — the same fault as an
+authority string citing a filename that never existed on either side. The entry reads as a shared
+mechanism; the grep on the other store returns empty; and the reader concludes the mechanism is
+missing rather than differently named.
+
+**None is reconciled, and that is the ruling rather than a deferral.** Renaming either side to match
+would make one store's code answer to the other store's vocabulary, and **the shapes already agree —
+it is only the labels that do not.** What must stop is citing a name across the boundary as though it
+were held there.
+
+**The discipline that follows: a cross-store citation names the SHAPE and the store.** *"the guard
+that skips archival keys on the walk, called `isSuperseded` here"* survives a rename on either side;
+*"`isSuperseded`"* does not. This is R178's look-it-up rule at a boundary where the lookup cannot be
+performed — **the register can only be checked against the store that wrote it.**
