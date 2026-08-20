@@ -12529,3 +12529,72 @@ the storage shape here is the two-way editing that produced the reissue.
 Two shapes proposed, **A recommended** — `option.quotes` mirroring stem and explanation, R23's rule
 applied unchanged. **Until it is agreed, `ENG-018-RB-01` stays REFUSED with its reason recorded**,
 which is R356's disposition working rather than a stall.
+
+## R374 — The door screens 35 paths and a child reads 24; the shape build is HELD on Annie's ruling
+
+**Cowork's scoping question, 2026-08-21.** `pnpm report:gate-field-scope`.
+
+**`misconceptionExecution` is rationale, not served text. If the ban list should not run on rationale,
+the door was asking about a field it does not serve** — and the option-declaration storage shape
+(R373) may not need building at all. **The shape build is HELD pending her ruling.**
+
+**The door screens 35 distinct paths. 11 are read by no child-facing path — 1,295 values.**
+
+**AND `misconceptionExecution` IS IN NEITHER LIST, WHICH CORRECTS THE PREMISE OF THE QUESTION.** The
+door does not screen it: the real import path builds `content: { value, label }` and routes
+`misconceptionId` to its own column. **The refusal that raised this came from the harness I built by
+hand (R357), not from the door.** The door's own refusals on those five were `walkScript` and
+`option.value`, both served. So the ban-list-on-rationale question is real and general, and the case
+that prompted it is not an instance of it.
+
+**THE FINDING THAT IS NOT ABOUT THE BAN LIST: `explanation.hintCore`, 373 values, is read only by a
+STAFF screen.** No child path reads it. That is either rationale, or **an unwired hint — content
+authored for a child, gated for a child, and never plumbed to one.** **Those are opposite conclusions
+and nothing in the store distinguishes them.** It is `walkScript` before Walk was built, and it has
+gone unnoticed precisely because the gate has been treating it as served all along.
+
+**THREE STATES, NOT TWO**, which is why the question cannot be answered by a served/not-served split:
+**RATIONALE** (provenance and workflow — `hintAuthority`, `walkScriptBatch`); **STRUCTURE**
+(machine-readable declarations — `answerShape`, `exemptFrom`, where a reading-age cap is close to
+meaningless); and **AUTHORED-FOR-A-CHILD BUT UNSERVED** (`hintCore`), **where gating is right even
+though nothing serves it, because the day something does, the gate is what stands between the
+authoring and the child.**
+
+The served column is a NAME SCAN and stated as a proxy (R60): it can over-report a name in a comment
+and under-report a field read through a spread.
+
+## R375 — 41 of 54 checks name no control of either kind
+
+**David, 2026-08-21, extending R371.** Audited every standing check for whether it carries a control.
+
+**13 of 54 name one. 41 name none** — no clean-input probe, no planted fault, nothing that would
+notice the check going blind.
+
+**The kind split cannot be read off a grep, and saying so is part of the finding.** The keyword scan
+misclassified `check-card-gives-key`, whose `CONTROLS` assert the matcher **fires** on fixtures — a
+planted-fault control by behaviour and a clean-input one by vocabulary. **Of the four read closely
+(R362), three assert firing and one asserted silence**; the remaining nine need reading, not grepping.
+
+**The number that is safe to state is 41.** Those checks are trusted entirely on the assumption that
+they still run, and R371 proved that assumption is exactly what a clean-input control cannot test.
+Recorded as a population, not a work order — a control per check is only worth adding where the check
+going blind would be costly, and that is a judgement per check.
+
+## R376 — Cowork's noun correction: 36 shapes against 36 stamps, and the number is doing unearned work
+
+**2026-08-21. Accepted and NOT reconciled.**
+
+I reported **36 stamps**; Cowork reads **36 shapes**. **Different nouns, and the matching number is
+doing work it has not earned** — two counts that agree by coincidence read as one measurement
+confirmed twice. **They are not to be reconciled**, because reconciling them would produce a single
+figure that is true of neither.
+
+**And its stamp-reachability measurement is the one to carry: 29 of 32 readers descend without
+skipping underscore keys.** Nothing mis-resolves today **only because the declaration readers take
+`q['text']` by name rather than taking whatever key they find.**
+
+**So the three are guarded by HOW THEY READ, and the 29 by WHERE THE STAMPS HAPPEN TO BE. Both read
+green and only one stays green.** A reader that names its key is safe against a stamp block appearing
+anywhere; a reader that descends is safe only until one appears in its path. **`isSuperseded` (R358)
+guards this side's walk, and that is a guard on the READER, which is the kind that survives** — but it
+is one reader, and the finding is about thirty-two.

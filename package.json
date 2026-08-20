@@ -32,6 +32,7 @@
     "check:child-surface-scope": "tsx scripts/check-child-surface-scope.ts",
     "check:staging-queue": "tsx scripts/check-staging-queue.ts",
     "check:outbound-sidecars": "tsx scripts/check-outbound-sidecars.ts",
+    "report:gate-field-scope": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/report-gate-field-scope.ts",
     "report:claim-ledger": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/report-claim-ledger.ts",
     "report:conditional-flags": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/report-conditional-flags.ts",
     "check:no-review-furniture": "tsx scripts/check-no-review-furniture.ts",
