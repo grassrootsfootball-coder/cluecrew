@@ -12854,3 +12854,32 @@ which is how the fault was found at all (R382).
 **The general rule this closes: a delivered artefact's NAME carries its content digest, or an update
 and a replacement are indistinguishable to everyone downstream.** A fixed name is only safe for a file
 whose content never changes, and there is no such file here.
+
+## R387 — The twenty are LIVE and staged; but at 27 a sample of twenty is a census
+
+**David, 2026-08-21: say which of three things the twenty rows are, and check the sampling frame.**
+
+**They are the first: a staged artefact with its own digest.**
+`LEDGER-HEAD-EN-PLAUSIBLE-NOT-STATED.md`, 5,534 bytes,
+`65aaba25e9df6d793c0ac5bcb115b73cbecf466004cd8e72e78b148d89bccac1`, 20 rows, sidecar matching. Not a
+section inside the ledger, and not run-only output.
+
+**AND THE FRAME IS RIGHT, VERIFIED FROM THE FILE RATHER THAN FROM THE SCRIPT'S INTENT.** The twenty
+item ids were extracted from the staged artefact and looked up: **20 of 20 resolve, and every one is
+LIVE.** They were drawn from the 27, not the 209 — the head was built from a fresh LIVE-only query
+after the count fault, which is also why it stated 27 while the ledger it derived from ordered on 209.
+
+**BUT THE SAMPLING RATIONALE NO LONGER HOLDS, AND THAT IS THE FINDING.** *"A description either fits
+them or it does not, and twenty will show which"* is a judgement about a sample — **and it was
+calibrated against 209, where twenty is a tenth.** Against the true population of 27, **twenty is 74%
+and the gap between "twenty" and "all" is seven rows.** The sample is not a sample.
+
+**A count correction can invalidate the REASONING that was built on the wrong count, not only the
+number.** The instruction survived the correction unchanged and looked unaffected, because twenty of
+twenty-seven is a perfectly sensible-looking request — **nothing about it reads as broken.** That is
+the same shape as R365's prose number: the figure moved and the sentence resting on it did not.
+
+**Staged as a companion, not a replacement**: `EN-PLAUSIBLE-NOT-STATED-REMAINING-LIVE.md`, 2,728
+bytes, `c913116538bb76a0…`, carrying the other **7**. The twenty stand exactly as delivered. At this
+size the choice between reading twenty and reading all costs almost nothing — **which is the fact
+worth having, rather than the seven rows.**
