@@ -4,6 +4,7 @@
 export * from './config';
 export * from './serving-senses';
 export * from './frequency-signal';
+export * from './conditional-recommendation';
 export * from './quoted-field-exemption';
 export * from './refused-misconceptions';
 export * from './walk-approval';

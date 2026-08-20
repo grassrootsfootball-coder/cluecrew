@@ -12363,3 +12363,169 @@ when `flagRecordFaults` is empty**. An empty page reporting that nothing was fou
 of the truth**, and it is the same shape as a zero that cannot be told from a check that never ran
 (R60) — a delivery that renders successfully while carrying nothing is the most convincing possible
 report of a clean result.
+
+## R368 — The conditional-recommendation schema: four decisions, and the two-verdict split that dissolved the expensive question
+
+**Annie's ruling, 2026-08-21.** `packages/core/src/conditional-recommendation.ts`.
+
+**Three agreed as proposed.** `KEEP_IF` is its own verdict — *"the mitigation sits exactly where a
+reader stops reading; a separate word is the whole mechanism and a boolean beside KEEP would be
+skippable in the way prose is."* `UNMET` is the written default — *"the empty-array problem in a new
+field, and an unmet condition and an unexamined one must not share a representation."* `WAIVED`
+requires a reason — *"a waiver without one is a silent keep with extra steps."*
+
+**HER ADDITION, AND IT IS THE ONE THAT MAKES THE OTHER THREE WORK: the condition names who can meet
+it.** *"A teacher note points out that the Mole is being cheeky"* has no owner, and **an obligation
+with nobody to meet it is UNMET BY CONSTRUCTION FOREVER.** `owner` is required and a condition
+proposed without one is **refused at authoring** — *"otherwise the backlog is guaranteed rather than
+possible."* Enforced in `refuseFlagAtAuthoring`, at the only point where the person who knows the
+answer is present.
+
+**THE TWO-VERDICT SPLIT DISSOLVED THE EXPENSIVE QUESTION RATHER THAN COMPROMISING ON IT.** The
+proposed `kind` enum classified by where the obligation LANDS — useful for routing, and it *"does not
+answer the question that matters, which is whether the passage is acceptable without the condition."*
+
+- **`KEEP_IF`** — the condition IMPROVES a passage that is already acceptable.
+- **`RETIRE_UNLESS`** — the passage is NOT acceptable without it.
+- **Serving blocks on `RETIRE_UNLESS` only** — *"the honest version of the position that makes
+  conditions load-bearing, applied only where they are."*
+- **Publishing blocks on both**, so the population stops growing.
+
+**`stream-a-03-wind-in-willows` is ruled `KEEP_IF` and its 22 LIVE items keep serving.** *"A child
+reading the Mole being rude and jeering does not need a note to survive it, and Grahame's own
+narration already calls him impatient and contemptuous. The note improves the passage; it is not what
+makes it acceptable."* **The expensive case was settled by ruling on the passage rather than by
+choosing a policy compromise, which is the right order** — I had costed three positions and
+recommended the middle one, and she moved the question instead of answering it.
+
+**HER RIDER: each existing UNMET condition takes a date** on which it is met, waived with a reason,
+or **the verdict reopens** — *"a backlog with no date is the thing everyone learns to ignore."*
+`reviewBy` is required and `verdictReopens()` is a state change, not a warning.
+
+**AND HER OWN RULE BLOCKS APPLYING HER OWN RULING, WHICH IS THE MECHANISM WORKING.** Wind in the
+Willows cannot be re-expressed as a structured `KEEP_IF` today: `owner` and `reviewBy` are required,
+she has ruled the verdict and not named either, and `refuseFlagAtAuthoring` refuses it. **Inventing an
+owner to make the ruling applicable is exactly the fault the field exists to prevent.** The nine
+re-express when she supplies owners and dates; the machine converts none of them (R347).
+
+## R369 — Both verdicts stand, both reasons rewritten in her words
+
+**Annie, 2026-08-21, twenty-second return.** The two faults of R346 are ruled.
+
+**Wind in the Willows, flag 1.** Verdict stands; it rests on tone, *"and Grahame supplies the tone
+himself."* *the rabbit is unhurt* → **"the text does not return to him, and the tone is farcical
+rather than cruel."** *"That says what is on the page and stops offering a reading as an
+observation."*
+
+**`stream-b-01`, flag 3.** Verdict stands and **the corrected reason is a better reason.** *It is
+never named or used, only reached for* → **"it is named once, by the child, and never used, and it is
+the pressure that makes Priya finally speak."** *"Being named at the turn of the scene is what gives
+the moment its force, so the corrected fact supports the keep more strongly than the false one did."*
+
+**Both replacements are READ FROM HER FILE, never retyped** (R25) — the script locates her authored
+clause in her return and refuses if it cannot find it verbatim, and refuses again if the row no longer
+contains the faulty text she read. `flagRecordFaults` keeps its entry and gains `ruledOn`, so the row
+carries the fault, the ruling and the date rather than a clean surface with no history.
+
+## R370 — The claim ledger: count what cannot be checked
+
+**Annie's ruling, 2026-08-21.** `pnpm report:claim-ledger`.
+
+**She has ruled R349's gap unclosable by any instrument, and the ledger exists because of that rather
+than in spite of it.** *"Comparing a claim to a text is reading, and a machine doing it would be
+substituting a string test for a judgement — which is the substitution that found thirty-two where I
+found eight and cannot find the thirty-third."*
+
+**So it counts; it does not check.** *"What can be built is not a check but a ledger. Which claims has
+a reader compared with their text, when, and who. Then the population of unchecked claims is
+countable, orderable by reachability, and visible as a number instead of being invisible as a kind.
+That is the same move as the pin, one level up, and it is the only honest instrument for a property
+whose only instrument is a person."*
+
+**SCOPED ACROSS THE WHOLE CLASS, not the 61** — hers: *"curation notes, band justifications,
+misconception descriptions against their tagged items, walk scripts against their cited lines. Every
+one of those is a claim about a text."*
+
+| kind | total | compared | UNREAD & REACHABLE |
+|---|---:|---:|---:|
+| walk script vs cited lines | 705 | 0 | 340 |
+| misconception vs tagged items | 278 | 0 | 100 |
+| flag reason | 61 | 0 | 1 |
+| band justification | 27 | 0 | 1 |
+| curation note | 21 | 0 | 1 |
+| **TOTAL** | **1092** | **0** | **443** |
+
+**The 61 were 6% of it.** The read is ordered by reachability and starts at
+`en-plausible-not-stated#description` — **209 LIVE options carry it**, and nobody has compared its
+description with a single one of them.
+
+**A ledger row is written by a person who has read both, never by the script.** The claims population
+must not be empty (`requirePopulation`); the LEDGER legitimately is, on day one, and says so with its
+reason (`declareMayBeEmpty`) — an empty ledger is a true report of an unstarted read, which is the
+number this exists to make visible.
+
+## R371 — A clean-input control cannot detect a blind gate
+
+**David, 2026-08-21.** `audit-declarations` ran fourteen probes and one control. **The control fed
+CLEAN input and asserted the gate raised nothing.**
+
+**That proves the instrument is not OVER-firing and nothing else. A gate that had stopped firing
+entirely would report `CONTROL OK`** — and every `SILENT` verdict above it, which reads as *"this
+declaration is unenforced"*, would actually mean *"the gate is dead"*.
+
+**A clean-input control proves the instrument is not over-firing; only a planted-fault control proves
+it works at all. The audit needs one of each and had one.**
+
+Added: a probe carrying **a banned word in plain authored text, no declaration anywhere** — a fault
+the gate cannot legitimately miss — with `firesOnFault: true`, whose pass condition is INVERTED:
+silence is the failure.
+
+**Fault-injected to prove the pair is real.** With `checkChildFacingText` stubbed to return `[]`:
+both clean-input controls still reported **`CONTROL OK`**, and the new one reported **`CONTROL FAILED
+— GATE IS BLIND`**. That is the demonstration, not the reasoning.
+
+## R372 — The strike test: a reason is load-bearing where the verdict falls without it
+
+**Annie's ruling, 2026-08-21. Registered as hers.**
+
+R349 asked whether a factual claim inside a flag's reason is part of the JUDGEMENT or part of the
+EXPLANATION, and reported that the two cases pointed opposite ways. **They do not. The test is a
+procedure rather than a taxonomy.**
+
+**A claim is load-bearing if striking it leaves the verdict unsupported. So strike it and read what
+remains.**
+
+- Strike *the rabbit is unhurt* → *brief comic rudeness, the tone farcical rather than cruel.* The
+  verdict stands. **The claim was OFFERED as load-bearing and is not.**
+- Strike *never named* → *never used, only reached for, and the pressure that makes Priya speak.* The
+  verdict stands.
+
+**Both are explanation. Both survive. The cases point the same way once the test is applied rather
+than the phrasing compared** — which is the correction to my own report, and the reason a procedure
+beats a taxonomy: I compared how the two clauses were WORDED and got two answers.
+
+**AND THE TEST EARNS ITS KEEP ON THE CASE IT FAILS.** *"If striking a claim leaves nothing, the
+verdict rested on that claim and correcting it reopens the verdict. If striking EVERY claim leaves the
+verdict standing, the reason was decorative and the verdict rests on the judge's unstated axis, which
+is the actual disease. The strike test detects both, and it is the one thing on this list a reader can
+apply in seconds."*
+
+## R373 — The option-declaration blocker is joint, and goes to both sides unbuilt
+
+**2026-08-21.** `ENG-018-RB-01`'s `favoring` is declared at `options[2]`, verbatim in its passage —
+**and this door cannot see it.** `checkItemChildFacing`'s option loop consults `stemQuotes` alone;
+there is no option-level declaration reader. **The item bounces on a fault Cowork has already fixed,
+and no further rewording there clears it.**
+
+**This is R23's finding one field over.** R23 extended the gate to read `explanation.quotes` because a
+quotation declared on a walk script was invisible when only `stem.quotes` was read, and its rule was
+**a declaration must live where the span is USED.** Options were never added.
+
+**Neither side can settle it alone**, which is why it is staged as a proposal rather than built:
+Cowork cannot, because the reader is here; we cannot, because **zero of 3820 options carry a `quotes`
+array**, so building the reader now is a reader for a population no path creates (R61) and inventing
+the storage shape here is the two-way editing that produced the reissue.
+
+Two shapes proposed, **A recommended** — `option.quotes` mirroring stem and explanation, R23's rule
+applied unchanged. **Until it is agreed, `ENG-018-RB-01` stays REFUSED with its reason recorded**,
+which is R356's disposition working rather than a stall.

@@ -49,12 +49,26 @@ const cloze = JSON.parse(
 
 type Outcome = 'REPORTED' | 'FAILS CLOSED' | 'SILENT';
 
+/**
+ * **TWO CONTROL KINDS, AND THIS AUDIT HAD ONLY ONE** (David, 2026-08-21 — R371).
+ *
+ *   `control: true`        CLEAN input, asserts the gate raises NOTHING. Proves it is not
+ *                          OVER-firing. **Cannot detect a gate that has stopped firing at all** —
+ *                          a blind gate passes this control every time, reporting CONTROL OK.
+ *   `firesOnFault: true`   PLANTED fault, asserts the gate DOES raise. Proves it is working.
+ *
+ * **A clean-input control proves the instrument is not over-firing; only a planted-fault control
+ * proves it works at all. The audit needs one of each and had one.** Every probe below reports
+ * SILENT / FAILS CLOSED / REPORTED against a gate assumed to be alive, and that assumption was the
+ * single thing nothing tested.
+ */
 interface Probe {
   field: string;
   malformation: string;
-  /** A control asserts the declaration WORKS. Silence is the pass there, so
-   *  it must not be counted as a finding. */
+  /** CLEAN input: asserts the gate stays silent. Proves it is not over-firing, and nothing more. */
   control?: boolean;
+  /** PLANTED fault: asserts the gate FIRES. The only probe here that can catch a blind gate. */
+  firesOnFault?: boolean;
   /** What the declaration is FOR — an exemption, an obligation, or both. */
   carries: 'exemption' | 'obligation' | 'both';
   run: () => { names: boolean; anyFailure: boolean; detail: string };
@@ -245,9 +259,29 @@ const PROBES: Probe[] = [
     carries: 'obligation',
     run: () => stemGates({ quotedSpans: [GOOD_QUOTE] }),
   },
+  {
+    /**
+     * **THE PLANTED-FAULT CONTROL (R371).** Every other probe here asks what the gate says about a
+     * malformed DECLARATION, and the clean-input control asks whether it stays quiet on a good one.
+     * **None of them notices if the gate has stopped speaking altogether** — a blind gate scores
+     * SILENT on the probes (read as a finding about declarations) and CONTROL OK on the control.
+     *
+     * This plants a fault the gate cannot legitimately miss: a banned word, undeclared, in plain
+     * authored text. If this reports nothing, the audit above it is measuring nothing, and every
+     * SILENT in it means "the gate is dead" rather than "this declaration is unenforced".
+     */
+    field: '— the gate itself —',
+    malformation: 'PLANTED FAULT: a banned word in plain authored text, no declaration anywhere',
+    carries: 'both',
+    firesOnFault: true,
+    run: () => stemGates({ text: 'You are behind the other children and that is a problem.' }),
+  },
 ];
 
 function outcome(probe: Probe, result: { names: boolean; anyFailure: boolean }): Outcome | 'CONTROL OK' {
+  // A planted-fault control INVERTS: silence is the failure, because silence is what a blind gate
+  // produces. This is the only row in the audit whose pass depends on the gate doing something.
+  if (probe.firesOnFault) return result.anyFailure ? 'CONTROL OK' : 'CONTROL FAILED — GATE IS BLIND' as Outcome;
   if (probe.control) return result.anyFailure ? 'CONTROL FAILED' as Outcome : 'CONTROL OK';
   if (result.names) return 'REPORTED';
   return result.anyFailure ? 'FAILS CLOSED' : 'SILENT';
