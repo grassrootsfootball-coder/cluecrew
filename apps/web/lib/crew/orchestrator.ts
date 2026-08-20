@@ -36,7 +36,7 @@ import {
   type TeachbackContent,
 } from '@cluecrew/core';
 import { logEvent, prisma, Prisma } from '@cluecrew/db';
-import type { MechanicFamily } from '@cluecrew/core';
+import { hintToServe, type HintSource, type MechanicFamily } from '@cluecrew/core';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { fluencyRound } from '@/lib/crew/fluency';
@@ -935,9 +935,20 @@ export async function submitAnswer(
   const chosen = pending.options.find((option) => option.id === body.optionId);
   const correct = chosen?.isCorrect === true;
   let childHint: string | undefined;
-  if (!correct && chosen?.misconceptionId) {
-    const misconception = await prisma.misconception.findUnique({ where: { id: chosen.misconceptionId } });
-    childHint = misconception?.childHint;
+  if (!correct) {
+    /**
+     * **AN ITEM HINT SERVES ONLY IF A NAMED REVIEWER HAS READ IT** (Annie, R388). Otherwise the
+     * library hint serves exactly as before. 7 of 373 are read; the other 366 reach nobody on the
+     * strength of this wiring. Where an item hint does serve it SUPERSEDES — one hint, not two.
+     */
+    const misconception = chosen?.misconceptionId
+      ? await prisma.misconception.findUnique({ where: { id: chosen.misconceptionId } })
+      : null;
+    const missed = await prisma.item.findUnique({
+      where: { id: pending.itemId },
+      select: { explanation: true },
+    });
+    childHint = hintToServe(missed?.explanation as HintSource | null, misconception?.childHint);
   }
   // Worked-example replay (ratified addition): only after a miss, only from
   // the item's own solution expression, only through authored templates.

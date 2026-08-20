@@ -12883,3 +12883,84 @@ the same shape as R365's prose number: the figure moved and the sentence resting
 bytes, `c913116538bb76a0…`, carrying the other **7**. The twenty stand exactly as delivered. At this
 size the choice between reading twenty and reading all costs almost nothing — **which is the fact
 worth having, rather than the seven rows.**
+
+## R388 — `hintCore` plumbed with its gate in the same act: read serves, unread does not
+
+**Annie's ruling, 2026-08-21.** `packages/core/src/item-hint.ts`, wired at `orchestrator.ts:940`.
+
+**An item hint serves ONLY if a named reviewer has read it; otherwise the library hint serves exactly
+as today.** 7 of 373 carry `hintAuthoredBy` **and** `hintAuthority`; **none of the other 366 reaches a
+child on the strength of being plumbed.** Nothing regresses, nothing unread ships, and **the backlog
+drains by READING rather than by outage — the pin applied at the moment a field is wired rather than
+after.**
+
+**BOTH a name and an authority are required.** A bare name is an assertion; a bare citation is
+unattributed. That is R94's conflation moved into a serving decision, where it would put an agent's
+words in front of a child under a reviewer's authority.
+
+**WHERE IT SERVES, IT SUPERSEDES — one hint, not two.** Her reason: *an item hint is authored knowing
+that item's actual options and actual trap, while a library hint must be true of every carrier.* A
+child who has just got something wrong is least able to read two things.
+
+**THE GATE IS THE WIRING, NOT A STEP AFTER IT.** Plumbing first and gating later would put 366 unread
+strings one deploy away from a child, and the gap between those two commits is exactly where this
+content escapes.
+
+**Today it changes nothing a child sees, and that is by construction rather than by luck: all seven
+attested items are DRAFT.** The 43 LIVE hint-carrying items continue to serve the library hint. The
+wiring begins to matter on the day those seven publish — **which is the correct order, since the
+alternative is a rule that arrives after the content it governs.** 8 tests.
+
+## R389 — Cowork's reachability test applied here: `stem.text` and `stem.prompt` are EARNED, the rest are INFERRED
+
+**Cowork's test, 2026-08-21: does a reachability entry NAME WHO ESTABLISHED IT, or argue from
+likeness? The second is a guess wearing a declaration's clothes.**
+
+**Applied to my own entries, and it does not flatter them.** `SERVED_PATHS` was built from a NAME SCAN
+over the child surface — a grep for each leaf name. **That is inference, and 23 paths were declared on
+it.** The column heading said *"in scope beyond argument"*, which is the exact sentence Cowork warns
+about.
+
+**EARNED, traced this turn to a render:**
+- **`stem.text` and `stem.prompt`** — `play-runner.tsx:741` calls `stemText()`, which reads
+  `stem.text` then `stem.prompt` at `engines/shared.ts:45-47` and **THROWS if neither is present**.
+  A named function on a child path that refuses rather than defaulting: reachability established by
+  reading the code, not by resemblance.
+- **`option.content.value`** — `engines/errorspot.tsx:49` projects `content.value` into `raw` and
+  renders it at `:68`, `:134`, `:150`.
+- **`explanation.walkScript`** — the Walk mode dispatcher, built and traced.
+- **`explanation.hintCore`** — traced to a STAFF screen only, which is how the unwiring was found.
+
+**INFERRED, and now labelled as such:** the remaining ~19 paths in `SERVED_PATHS` — `stem.sentence`,
+`stem.code.*`, `stem.question`, `stem.wordWithGap`, `stem.techniqueKey`, `stem.operands.kind`,
+`stem.passageRef`, the `quotes[]` fields, `option.label`, `explanation.note`. **Every one rests on a
+grep hit and none names who established it.**
+
+**And the test earns its keep on the entry it caught: `hintCore` was declared REACHABLE from
+resemblance to `walkScript`** — the item-level form of the same string — and it is not served at all.
+**A likeness argument produced a declaration that was exactly wrong**, on 373 values, for as long as
+anyone had been reading it.
+
+**THE RULE: a reachability entry names the reader and the path, or it is marked INFERRED.** Not
+removed — an inferred entry is still the best guess available — but never presented as a state. And
+**a store does not declare reachability for a surface it cannot observe**: that is a claim, not a
+state, and it is why this list is mine to hold rather than Cowork's.
+
+## R390 — What this turn did not reach
+
+**Recorded rather than left silent** (R356: an artefact that describes an act is not the act, and a
+turn that describes a plan is not the work).
+
+- **`en-contradicted-by-the-text` is NOT drafted.** Her scope is recorded — *chooses an option the
+  passage explicitly denies, rather than one it merely fails to support* — and the definition and
+  child hint are owed, with seven retags waiting on her approval of them.
+- **The retags for five vocabulary and three technique options are NOT proposed.** She rules each when
+  proposed; nothing has been put to her.
+- **The stamp question stays OPEN and does not close with RB-01.** Her line stands: *a door reading a
+  stamp is a door reading history as though it were content.* The reconstruction shows the guard holds
+  in `textsFrom`; **whether the other twenty-nine readers on this side would is unestablished**, and
+  R376 already recorded that they are guarded by where the stamps happen to be rather than by how they
+  read.
+- **The 378-against-373 stands unreconciled**, nouns named, as does the cross-store name discipline:
+  **cite the shape and the store, never the bare name**, since the lookup cannot be performed across
+  the boundary (R385).

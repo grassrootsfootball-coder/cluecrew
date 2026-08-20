@@ -6,6 +6,7 @@ export * from './serving-senses';
 export * from './frequency-signal';
 export * from './ban-list-scope';
 export * from './conditional-recommendation';
+export * from './item-hint';
 export * from './quoted-field-exemption';
 export * from './refused-misconceptions';
 export * from './walk-approval';
