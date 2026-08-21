@@ -13872,3 +13872,41 @@ same meaning in the wrong grammatical shape.
 **One carrier. A small gap, and it waits behind everything else.** Not reached across to the English
 entry — a VR distractor mechanism belongs in a VR entry, and borrowing an English one to cover it is
 the tag-family erosion R393 names.
+
+## R437 — 326 staged, 0 digests ever quoted back, 268 never acknowledged in any form
+
+**David, 2026-08-21: the last unmeasured population in the delivery chain.** Measured now.
+
+| | |
+|---|---:|
+| files staged | **326** |
+| **digest quoted back by the other store** | **0** |
+| filename named in anything inbound | 58 |
+| **never acknowledged, any form** | **268 (82%)** |
+
+**By age**: 47 at 14–29 days, 75 at 7–13, 69 at 3–6, 70 at 1–2, 7 today. **Oldest:
+`passage-integrity-audit-2026-08-02.json`, 19 days.**
+
+**THE ZERO IN THE SECOND ROW IS THE FINDING.** Every artefact this session carries a `.sha256`
+sidecar precisely so the receiving store can quote it back — **and not one digest has ever been
+quoted back.** The mechanism built for confirming arrival has produced **no evidence whatsoever**,
+and nothing reported that until it was counted. The 58 are filename mentions, a weaker signal: a
+filename can be named in a message by someone who never opened the file.
+
+**AND "STAGED AND CURRENT" IS A DESCRIPTION OF MY DISK.** I reported
+`recognition-test-for-annie-b8c8e3ccad8ddf8f.json` as staged and current on two separate deliveries.
+**It has not crossed once since the ledger-head session.** Both reports were true and neither was
+about the channel.
+
+**This is the shape that hid the six missing items and the five unlanded reissues**, and it is R403's
+finding one layer out: **a file staged, re-reported as current on each later delivery, and never
+crossed — the report true every time while the content never moves.** Ten of thirteen amendments
+never landing was the same fault inside the store; this is it in the corridor.
+
+**It cannot be closed from this side.** Arrival is reportable only by the receiver (R255). **What this
+side can stop doing is describing its own folder as though it described the other store's** — which
+is why every delivery note from here now carries first-presentation against re-presentation, the
+split that made this visible on the seven and has now made it visible on the queue.
+
+**A re-stage is not a crossing, and re-staging a file that never crossed changes nothing but its
+timestamp.**
