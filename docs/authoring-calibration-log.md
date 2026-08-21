@@ -14960,3 +14960,75 @@ sufficient.
 
 **The permanent shape change (R486) is what makes the NEXT result mean something** — and this entry
 exists so the next clean run is not read as the second of two, when it will be the first.
+
+## R495 — A VALUE CARRIES THE PROPERTY THAT DECIDES HOW IT MAY BE USED
+
+**Annie's rule, 2026-08-21, registered ABOVE its four instances so the next one is a fifth instance
+rather than a new rule.**
+
+> **An approval carries WHERE THE STRING WAS READ.
+> A number carries WHAT IT COUNTED.
+> An assert carries HOW ITS INVARIANT WAS DERIVED.
+> A match carries WHAT KIND OF MATCH IT IS.**
+
+**Each is the same rule.** A bare value is usable in ways its provenance forbids, and **the property
+that forbids them is known at the moment the value is produced and discarded there.** Every instance
+below cost a wrong number reported as a measurement.
+
+| instance | the property dropped | what it cost |
+|---|---|---|
+| **approval** (R25, R397) | where the string was read | a hint retyped from memory; a citation naming the wrong return |
+| **number** (R475, R494) | what it counted | *"leaks nothing"* over a DRAFT-only filter; four clean cards read as four measurements |
+| **assert** (R490, R492) | how the invariant was derived | *"off-by-one is the lower side"* — read off results, false, would have fired constantly |
+| **match** (R495, below) | what kind of match | seven still-read snapshots that were three, then one |
+
+**THE NEXT ONE IS A FIFTH INSTANCE.** The rule is not *"record provenance"* — it is that **the value
+and the property travel together or the property is lost**, and every one of these was lost at the
+moment of production rather than in transit.
+
+## R496 — A match carries its kind, applied to every matcher
+
+**`scripts/lib/match-kind.ts`.** Five kinds — `IMPORT`, `PATH_CONSTANT`, `PROSE`, `REGISTER`,
+`FILENAME_ONLY` — plus a **direction read from the path** (`INBOUND` / `OUTBOUND` / `LOCAL`), and an
+`isInput` flag that is **false for `PROSE` and `REGISTER` by construction.**
+
+**A boolean cannot distinguish an input from a mention, and the scan already knew.** *This file is
+imported by a script* and *this file is cited in a register footnote* were the same `true`.
+
+**IT WOULD HAVE MADE THE SEVEN A ONE ON THE FIRST RUN.** R479 said seven; R489 cut it to three by
+reading what read them; R491 cut it to one by noticing two were our own outbound artefacts. **All
+three narrowings were recoverable at match time**, and each intermediate number was reported to a
+reviewer as a measurement first.
+
+**Applied to every matcher, not just the reader scan** — her point that the list of five is five
+different instruments, and the match is the cheap one because the information is present exactly
+where it is thrown away. `describeMatches` prints the kinds beside the count, **so a count cannot
+ship without them.** 5 tests.
+
+## R497 — The three faces are three ledger ROWS, not a class
+
+**Her correction, and it changes what gets built.**
+
+The paraphrase band, the pointing band and the asserts row are **not three faces of one property.**
+They are **three more entries in the claim ledger**, alongside walk scripts against their cited lines
+and flag reasons against their passages.
+
+**A PROPERTY WITH THREE NAMED FACES INVITES THREE INSTRUMENTS.** Naming it as a class is an
+invitation to build a paraphrase checker, a pointing checker and an assert checker — three machines
+substituting for the reading, which is the substitution R349 ruled unclosable.
+
+**It needs ONE LEDGER AND A READER.** Folded in as rows: the claim, the text it is a claim about, the
+reachability, and a comparison slot. **The ledger already has that shape and did not need extending**
+— which is the test of whether something is a new kind, and none of these is.
+
+## R498 — Nothing is queued for her; the next two deliveries are hers
+
+**Both remaining items are on her disk**: the fifteen-passage pack (held since her twenty-second
+return) and the conditional flags. **She is not waiting on either store.**
+
+**AND THE QUEUE RULE, kept explicit while she reads: only something REACHING A CHILD jumps the
+queue.** Nothing else does — **including a good finding.**
+
+That is the discipline this whole session repeatedly failed: instrument findings were real, one of
+them serious, and each was justified on its own turn while the reading queue did not move for three
+of them. **A finding about a check is not urgent because it is true.**
