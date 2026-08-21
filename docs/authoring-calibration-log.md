@@ -14736,3 +14736,74 @@ tests containment, so it will pass.
 close is not a substring question, and building a synonym-distance test would be a machine
 substituting for the reading (R349). **Recorded as the gate's declared limit rather than as a gap to
 close** — the near-miss band is hers, and knowing which band a case sits in is what the gate buys.
+
+## R482 — The gate refused her `hostile` replacement on its first real use, by the mechanism it exists for
+
+**2026-08-21.** `stoic` → *taking what comes without ever making a fuss* **passes on both items its
+card serves.**
+
+**`hostile` → *cold, and quick to take against you* PASSES on `bank-vr-04-closest-meaning-17` — the
+item whose option set she was given — and COLLIDES on `gen-vr-04-closest-meaning-17`, which the same
+card also serves and whose distractor set contains `cold`.**
+
+**She tested against the option sets she was given. The card serves two items.** That is precisely the
+gap R472 was built to close — *a phrase innocent on one item is a giveaway on another* — and **it
+closed it on its first real use, on a reviewer's own authored replacement.**
+
+**The gate earned its scope in one run.** A key-only check would have passed it; a single-item
+option-set check would have passed it; only *every item the card serves* catches it.
+
+**And her prediction on `exhausted` was exact**, made without seeing the row: her card serves
+`bank-vr-04-closest-meaning-30` and `gen-vr-04-closest-meaning-28`, and the second carries `tired` as
+a distractor. **Confirmed — card *so tired that you have nothing left*, distractor `tired`.**
+
+## R483 — The pointing question has no instrument, on the distractor side as on the key side
+
+**Her second question, recorded as a standing property rather than as this instance: DOES THE CARD
+POINT AT ANY OPTION OTHER THAN THE KEY?**
+
+**This gate tests CONTAINMENT and cannot judge pointing.** *Taking what comes* is close in sense to
+`hardship` without sharing a word; *quick to take against you* may point at `rude`. **Reported to her
+undecided, per her condition.**
+
+**IT IS THE DISTRACTOR SIDE OF THE RECOGNITION TEST, AND IT HAS NO INSTRUMENT — in the same way the
+PARAPHRASE BAND on the key side has none** (R440: *not clear* / *unclear* was correctly unfound by
+containment). **The two gaps are the same gap on two sides of one item**, and naming them as one
+property is worth more than either instance.
+
+**A synonym-distance test would be a machine substituting for the reading** (R349). So this is a
+DECLARED LIMIT of the gate, not a gap to close — and knowing which band a case sits in is the whole of
+what the gate buys.
+
+## R484 — The forty-two are PINNED AS EVIDENCE, and the block is the source from here
+
+**Her ruling, 2026-08-21, and it is the cheaper form of R474.**
+
+**A row-wise write from a stale file still needs somebody to know which rows are stale** — and a file
+cannot say that about itself. **The amendment block is per-row, dated and sourced precisely because it
+can.**
+
+So the 42 snapshots are **EVIDENCE, not SOURCES**: readable for what was proposed and when, never
+written from. **The block is the source from here**, and the seven still-read files (R479) are the
+ones where that change actually bites.
+
+**This is cheaper than row-wise reconciliation and strictly safer**: row-wise still requires a
+per-row staleness judgement that nothing can automate, whereas pinning the snapshots removes the class
+rather than managing it.
+
+## R485 — Her correction on the step-1 assert: right for the wrong reason is a different claim
+
+**Recorded because the distinction is the point.**
+
+**The collision is real because THE GENERATOR PERMITS IT — not because `off-by-one` is always the
+upper side.** It is offered **both** sides as candidates; the five observed items take `answer − 1`
+by selection, not by rule.
+
+**She was right that the assert is owed, and the reason she first gave was not the reason it is
+owed.** Those are different claims, and conflating them would have produced an assert testing the
+wrong invariant — *"off-by-one must be the lower side"* rather than *"off-by-one must not select
+`answer + step` on a step-1 series"*. **The first is false and would fire constantly; the second is
+true and has never fired.**
+
+**A correct conclusion from a wrong premise builds the wrong instrument**, and it is caught only by
+reading the generator rather than the outcome.
