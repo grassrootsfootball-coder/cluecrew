@@ -13777,3 +13777,98 @@ landing check — has no purchase on a third of the child-facing sentences in th
 in code; and the question *"what else is there"* turned sixteen strings into fifty-three. **Reported,
 not repaired — the scope decision is hers and David's, and authoring a governance rule for
 fifty-three unreviewed child-facing strings is not a repair.**
+
+## R431 — Her description and her hint on the entry; the proposal's becomes a boundary clause
+
+**Annie's twenty-fifth return, applied 2026-08-21.** `en-contradicted-by-the-text` carries **her**
+description and **her** hint, both already in place. **The proposal's wording is now the entry's FIRST
+BOUNDARY CLAUSE** rather than a competing description:
+
+> *Distinguished from a plausible option the passage never states: here the passage states the
+> contrary. Negation-dropped loses a WORD; this loses a CLAIM, and the option may share no wording
+> with the line that refutes it.*
+
+**Her reason is a rule about descriptions: a description that argues its own boundaries is doing two
+jobs.** One says what the error IS; the other says what it is NOT. Collapsing them makes a description
+that reads as a definition and behaves as a comparison, and a tagger reaching for it gets both at once
+without knowing which is load-bearing.
+
+**AND THE PROVENANCE IS RECORDED SO NOBODY RECONCILES IT LATER BY PICKING THE NEWER FILE.** The
+proposal predates her ruling crossing; **file order would resolve it backwards**, which is exactly how
+a superseded wording gets restored by someone tidying.
+
+## R432 — The boundary clause settled a case its own author called contestable
+
+**Annie, 2026-08-21.** `ENG-005-BB-06` option A — *"He was not frightened by the falling tree."* —
+moves from `en-relation-word-flipped` to **`en-negation-dropped`**.
+
+**The test was the boundary clause itself**: negation-dropped loses a **word**; contradicted loses a
+**claim**, and the option may share no wording with the line that refutes it. Here **the option reads
+*not frightened* and so does the line** — a dropped word, not a denied claim.
+
+**A boundary clause good enough to settle a case its author called contestable is a well-drawn
+boundary**, and that is the test worth keeping: not whether a boundary sounds principled, but whether
+it decides an instance the person who wrote it could not.
+
+`ENG-004-AGG-01` option B — *"He noticed her red hair and freckled face."* — confirmed under
+`en-wrong-scope-retrieval` by her general rule; it was already there.
+
+## R433 — The dual-mechanism rule, with its fallback
+
+**Annie, 2026-08-21.** Where a distractor pulls by two mechanisms, tag the one the child's error
+actually turns on. **And the fallback is the part that matters: if neither hint accounts for the pull,
+the distractor needs an entry that does.**
+
+**That fallback is how `en-contradicted-by-the-text` came to exist.** Seven options pulled by something
+neither `en-plausible-not-stated` nor any neighbouring tag explained, and the resolution was **a new
+entry rather than a better argument for an existing one.**
+
+**The rule refuses the comfortable move**: choosing the least-wrong existing tag is always available
+and always looks like a decision. **A tag that does not account for the pull is a tag that will send
+the child somewhere useless**, and the library growing is the correct outcome rather than a failure of
+economy.
+
+## R434 — Source resolves to a digest; the filename is a convenience
+
+**Annie, 2026-08-21.** **38 return files, 35 distinct digests. Three digests carry two filenames
+each** — `annie-eighteenth-return`, `annie-eng003-fifth-return`, `annie-twentieth-return`, each with a
+` (1)` duplicate.
+
+**So a source field resolving by NAME resolves to two files, and only the digest is single-valued.**
+Harmless today and **an ambiguous middle step later**: the moment anyone re-saves under a variant name,
+a citation has two answers and no way to say which.
+
+**The digest is the identity; the filename is a label on it.** `RETURN-DIGESTS.md` publishes the table
+by digest rather than by name, so the duplication is visible in the artefact's own ordering rather
+than discoverable by someone who happens to sort it.
+
+## R435 — Her predictor, computed: 30 predate, 27 postdate, and the split is the finding
+
+**Cheap, so computed; the reordering is NOT built.** For each entry with LIVE carriers, does the
+description predate its first carrier?
+
+**58 rows: 30 PREDATE, 27 POSTDATE, 1 same day.** **Almost exactly half the reachable library was
+written for items that already existed.**
+
+The most-postdating are all VR, all +10 days, and several are large: `vr12-meaning-not-word` (50 LIVE),
+`vr-series-off-by-one` (39), `vr07-value-slip` (25).
+
+**A description written AFTER its carriers can be fitted to them** — it describes what the options
+happen to be rather than predicting what a child will do — **and that is exactly the property her
+recognition test is looking for.** A description written BEFORE is a hypothesis the items were
+authored against.
+
+**The reordering is hers to ask for. This is the number, not the artefact.**
+
+## R436 — The VR library has nothing for a synonym in the wrong word class
+
+**One lookup, and the gap is real. 0 of 77 VR entries name word class or part of speech.**
+
+`bank-vr-04-closest-meaning-15` (**LIVE**): key **brave**, distractor **dare** — a synonym in the
+wrong word class, an adjective answered with a verb. **It is tagged `vr04-associated-not-same`, which
+records something that did not happen**: *dare* and *brave* are not merely associated, they are the
+same meaning in the wrong grammatical shape.
+
+**One carrier. A small gap, and it waits behind everything else.** Not reached across to the English
+entry — a VR distractor mechanism belongs in a VR entry, and borrowing an English one to cover it is
+the tag-family erosion R393 names.
