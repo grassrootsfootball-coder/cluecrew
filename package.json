@@ -30,6 +30,7 @@
     "check:source-quotes": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-source-of-truth-quotes.ts",
     "check:every-string-field": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-every-string-field.ts",
     "check:child-surface-scope": "tsx scripts/check-child-surface-scope.ts",
+    "check:step1-collision": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-step1-collision.ts",
     "check:card-option-set": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-card-option-set.ts",
     "check:key-change-cards": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-key-change-cards.ts",
     "check:manifest-diff": "tsx scripts/check-manifest-diff.ts",

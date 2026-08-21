@@ -14671,3 +14671,68 @@ do."* — is **a genuine second sense of *hover***, so it belongs under `en-voca
 history.** R470 withdrew a claim about what a ruling had done to a citation; this is a claim about
 what the option means. **Withdrawing an entry does not retract every observation made while writing
 it** — and separating the two is why the withdrawal could be clean.
+
+## R478 — The step-1 assert: zero occurrences, and the reason it is owed on its face
+
+**Built 2026-08-21.** `pnpm check:step1-collision`. **0 collisions over 5 step-1 items, and the
+docstring and the output both say the zero is EXPECTED rather than reassuring.**
+
+The generator returns `off-by-one` as **both** `answer + 1` and `answer − 1`; `step-repeat` takes
+`answer + step`, which on a step-1 series **is** `answer + 1`. **All five avoid it because the
+selector happened to take `answer − 1`, and nothing chooses that side.**
+
+**A check that has never fired over a fault that has never occurred is indistinguishable from one
+pointed at nothing** (R421 applied forward rather than backward). So the run prints the before-count,
+the mechanism, and why zero is the number to expect — **a green tick here means the selector is still
+taking the other side, not that the collision is impossible.**
+
+## R479 — The forty-two by disposition: seven are still inputs, thirty-three are only misleading
+
+**Annie, 2026-08-21: a stale snapshot nobody opens is a different risk from one that is still an
+input, and only the second can overwrite a decision.** Measured by scanning repo source for each
+filename.
+
+| | |
+|---|---:|
+| **STILL AN INPUT** | **7** |
+| variant/duplicate of one that is read | 2 |
+| never read by anything in the repo | **33** |
+
+**The seven**: `REISSUESIXITEMS.json`, `WSREDRAFT1.json`, `card-redrafts-for-annie-…json`,
+`comprehension-library-current.json`, `eng028-walk-repairs-…json`, `misconceptionimport (1).json`,
+`misconceptionimport.json`.
+
+**`card-redrafts-for-annie` is the one that already did it**, putting her rejected `chilly` wording
+back over her authored one.
+
+**The 33 cannot overwrite anything** — they can only mislead a reader who finds them, which is a real
+but smaller and slower fault. **The row-wise rule (R474) is owed to the seven; the two variants are
+owed it too and would be missed by any check matching exact filenames**, which is the duplicate-name
+fault of R434 arriving in a different population.
+
+## R480 — The gate's whole-store number, stated plainly
+
+**84 item-and-card pairs. ZERO key leaks. FIVE distractor leaks. That is the whole population.**
+
+**The twenty redrafts closed all fourteen key leaks** — the fault that opened this thread, from 28
+collisions to 14 to 0 across two writes.
+
+The five remaining are **three that were always there** (`huge`/big, `exhausted`/tired,
+`trivial`/small) and **two created today by redrafts** (`hostile`/enemy, `stoic`/pain).
+
+**Worth stating as a number rather than as progress**: the key-leak class is closed and the
+distractor class is open, five wide, and two of the five are a repair's own regression.
+
+## R481 — A near collision is outside this gate, and `stoic` is the case
+
+**Her note, 2026-08-21.** `stoic`'s replacement needs the gate too, because **`trouble` against
+`hardship` is close.**
+
+The current card carries *pain* **and** *trouble*; the option set carries *pain* **and** *hardship*.
+**A replacement that keeps *trouble* moves from an exact collision to a near one** — and this gate
+tests containment, so it will pass.
+
+**The gate catches what it was built to catch and the residue is a judgement**: how close is too
+close is not a substring question, and building a synonym-distance test would be a machine
+substituting for the reading (R349). **Recorded as the gate's declared limit rather than as a gap to
+close** — the near-miss band is hers, and knowing which band a case sits in is what the gate buys.
