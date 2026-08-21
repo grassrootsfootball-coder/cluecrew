@@ -13094,3 +13094,76 @@ drafting to propose a hint; the hint is authored in the **twenty-fifth**.
 catch, because a retyped value has no citation to be wrong about. **The guard refused to write her
 words under the wrong authority**, which is a narrower and more useful thing than refusing to write
 the wrong words. R366's adjacent-line fault, caught by a mechanism rather than by a reader.
+
+## R395 — ACTIVE-BUT-UNREACHED: the hint gate is a state, not a fact about today
+
+**Annie, 2026-08-21.** `pnpm check:hint-gate-state`. **A gate that is correct and does nothing reads
+identically to a gate that is working.**
+
+R388 serves an item hint only where a named reviewer has read it. **It serves none — and the rule
+refuses nothing.** The read hints and the reachable items are **disjoint populations**: her seven sit
+on two spelling-spot and five cloze items, **and neither type has a door.** So the gate wires a field,
+finds no read hint on any reachable item, and falls through to the library hint on all nine.
+
+**Recorded as a STATE with its reason**: `ACTIVE-BUT-UNREACHED`, flipping to `ACTIVE-AND-SERVING` the
+moment a read hint lands on a reachable item — by a ruling on one of the nine, or by a door opening
+for spelling-spot or cloze. **Both are outstanding work and the check names them**, so *"no item hint
+served"* can never be read as *"the gate declined to serve one"*.
+
+**The nine are sent verbatim for her ruling** — `NINE-PUNCT-HINTS-FOR-RULING.md`, `a07fc1c2c72f70f8…`
+— each with its item, its unread hint, and the library hint a child sees today. **Not objecting to
+the rest is not an approval**: no id, no string quoted, no artefact cited is the shape she refused
+from both stores this week, and thirty-four read with seven replaced leaves twenty-seven unruled
+rather than approved.
+
+**And the check's own first run printed five item ids as though they were five TYPES** —
+`ENG-003-A-CZ-B3` has no trailing number to strip, so a lazy regex reported the population's shape
+wrongly in the line whose entire job is naming it. Fixed to match the type.
+
+## R396 — Classifying by the question rather than by the error
+
+**Annie, 2026-08-21, and it is measure-the-property-under-test arriving in taxonomy.**
+
+**The stem's type is not the error's type.** I proposed polysemy tags for three options that are not a
+sense of their word at all, **because the stems were vocabulary stems** — I classified by what the
+question asks rather than by what the child did wrong.
+
+**`ENG-001-WIW-11` proves it from the other side**: a vocabulary stem whose distractor is a **motive
+invention**, correctly staying under `en-plausible-not-stated`. **The two errors run in opposite
+directions from the same premise** — a vocabulary stem can carry a non-vocabulary error, and a
+vocabulary error can appear on a stem that is not asking about a word. `en-vocab-dominant-sense`'s own
+scope note already said so: *scoped to the ERROR, not to vocabulary items.*
+
+**A tag names what went wrong in the child's head, never what the question was about.**
+
+## R397 — A citation is a second and independent assertion
+
+**Annie, 2026-08-21, and she owns the wrong return number as hers rather than the guard's.**
+
+The apply script located her hint **in her file** and aborted: the string was right, **the citation was
+wrong** — the twenty-fourth return, where the hint is authored in the twenty-fifth.
+
+**The whole value of the form is having two claims that can disagree.** A retyped value is ONE claim
+and can only be checked against itself. A value plus its citation is TWO, and **the disagreement is
+the finding whichever of them turns out to be wrong** — here the citation, once the string that
+disagreed with it was located.
+
+**So a citation is not decoration on a value and not provenance for the record.** It is a second
+measurement of the same fact, and its worth is exactly that it can fail independently.
+
+## R398 — A hint is written for a population, so its strongest claim must be true of its weakest member
+
+**Annie's hint rule, 2026-08-21, in its practical form.**
+
+> **Write it after reading the carriers, or write it weak enough to survive the ones you have not
+> read.**
+
+My three drafts each said more than the population supports. *"Says the opposite"* **overstates on
+PR-09**, where the wasps have not moved away but **multiplied in the same square of air** — different,
+not opposite. *"The line that disagrees"* leaves the referent implicit **for the reader least able to
+supply one.** Each was accurate on the carriers I had in mind and wrong on the one I had not read.
+
+**Her own words on the choice she made: worse prose and truer.** *"One line in the passage says
+something different"* is flatter than any of the three and true on all six. **A hint is not a sentence
+about an error; it is a sentence that must hold across every child who meets it**, and the strongest
+phrasing is reliably the one that fails first.
