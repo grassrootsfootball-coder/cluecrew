@@ -13320,3 +13320,57 @@ living in prose is what R25 exists to refuse.
 
 **It also names the scope it does not search** — Word cards and VR hints — which is how the three
 remaining absences read as a gap rather than as a pass.
+
+## R407 — The sweep: one instance, and it is the one already known
+
+**David, 2026-08-21.** `pnpm check:reasoning-premises`. **32 returns swept against every authored
+wording and its date. One finding: the twenty-fourth**, already confirmed.
+
+**The test:** a return quotes a string as being IN FORCE; if that string is an authored wording from
+an EARLIER return that had not landed, **the premise was false when written.**
+
+**Her twenty-fourth quotes her own seventeenth-return wording as the hint in force and reasons from
+it about seven carriers.** It had never been written.
+
+**AND THE REASONING SURVIVES, WHICH IS THE DISTINCTION WORTH KEEPING.** Her finding rested on **what
+the hint ASKS** — it sends a child hunting for a line that cannot exist, and she learns the
+instruction does not work rather than that her answer was unsupported. **Both strings ask it.**
+*"Point to the line that proves it"* sends her hunting exactly as *"find the line that proves it"*
+does. **A conclusion resting on the ERROR survives a false premise; one resting on the WORDING may
+not** — and hers rested on the error.
+
+**Its bound, because a clean sweep is worth exactly what its method is worth** (R60): it sees a
+quoted string matchable to the authored set, in her quotation shapes. **A premise quoted correctly,
+paraphrased, or reasoned from without being quoted is invisible.** *No further instance FOUND*, never
+*no further instance EXISTS*.
+
+**And the reason she could not have caught it herself belongs in the entry:** she has no way to check
+whether the premise under her own conclusion was ever true. **She wrote a wording, read it back in her
+own record, and the record was right about what she decided and silent about whether it took effect.**
+Only this store can see the difference, and until today nothing here was looking either.
+
+## R408 — Out-of-scope and not-applied are indistinguishable unless the scope is named
+
+**David, 2026-08-21.** `check:amendments-landed` reported a **Word card definition** and a **VR hint**
+as ABSENT. They are real amendments with real targets — **in stores the check was not searching.**
+
+**A count that does not name its scope makes those two states identical**, and the wrong one is the
+one a reader assumes: ABSENT reads as *nobody applied it*, when it may mean *nobody looked there*.
+
+Word cards are now searched (1,613 store rows). **VR hint text remains out, and the check declares it
+on every run** rather than in a comment — so the two remaining absences read as a known gap rather
+than as a backlog.
+
+## R409 — A correction inside a covering note is a note, not a delivery
+
+**Annie's rule, applied to the return it corrects, 2026-08-21.**
+`CORRECTION-TO-YOUR-TWENTYFOURTH-RETURN.md` is staged **on its own**.
+
+**A correction folded into a summary of other work reaches whoever reads the summary to the end** —
+which is R367's *a row is not a delivery* at one more remove: the correction exists, is accurate, and
+is positioned where the person it concerns may never arrive at it. **A correction to a reviewer's own
+reasoning is the last thing that should travel as an appendix.**
+
+It states plainly what was wrong (the premise), what survives (the reasoning, because it rested on the
+error), what does not (any inference from the wording itself), that the sweep found no further
+instance, and **why she could not have caught it from her side.**

@@ -31,15 +31,31 @@ async function main() {
 
   const lib = await prisma.misconception.findMany({ select: { id: true, childHint: true } });
   const items = await prisma.item.findMany({ select: { id: true, status: true, explanation: true } });
+  /**
+   * **THE SCOPE IS NAMED, BECAUSE OUT-OF-SCOPE AND NOT-APPLIED LOOK IDENTICAL IN A COUNT THAT DOES
+   * NOT NAME IT** (David, 2026-08-21). The first version searched misconception hints and item
+   * `hintCore` only, and reported a Word card definition and a VR hint as ABSENT — they are real
+   * amendments with real targets, in stores it was not looking at. Word cards are now searched;
+   * **VR hints remain OUT and are declared so on the face of every run.**
+   */
+  const words = await prisma.word.findMany({ select: { id: true, definitionChild: true } }).catch(() => []);
   const haystack = [
     ...lib.map((m) => ({ where: `library:${m.id}`, text: m.childHint ?? '' })),
     ...items.map((i) => ({ where: `item:${i.id}(${i.status})`, text: String((i.explanation as { hintCore?: unknown })?.hintCore ?? '') })),
+    ...words.map((w) => ({ where: `word:${w.id}`, text: String((w as { definitionChild?: unknown }).definitionChild ?? '') })),
   ];
 
   requirePopulation('check:amendments-landed', {
     'return file(s)': files.length,
     'authored wording(s) found': found.length,
+    'store row(s) searched': haystack.length,
   });
+  console.log(
+    '\n  SCOPE: misconception childHint, item hintCore, Word definitionChild.\n' +
+      '  NOT SEARCHED: VR hint text. An amendment whose target is a VR hint reports ABSENT here and\n' +
+      '  may well have landed — out-of-scope and not-applied are indistinguishable unless the scope\n' +
+      '  is named, which is why it is named on every run.',
+  );
 
   const byFile = new Map<string, { landed: string[]; absent: string[] }>();
   for (const a of found) {
