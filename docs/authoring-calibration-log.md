@@ -14040,3 +14040,76 @@ the supersede visible on her side.**
 
 **Named explicitly in the delivery, both digests side by side**, because a supersede the receiver
 cannot see is not a supersede.
+
+## R445 — The manifest diff runs after every delivery, and the two numbers measure different things
+
+**Annie, 2026-08-21. `pnpm check:manifest-diff`.** It is **the only instrument either side has that
+can produce the third column** — artefacts on her disk never staged here. No single-sided count sees
+them.
+
+**Current: 58 crossed, 268 staged-not-crossed, 68 hers alone**, over 126 of her digests and 326
+staged artefacts.
+
+**AND THE BOUND IS ON ITS FACE, because the two numbers were being read as one.**
+`check:staging-queue` measures the **ACKNOWLEDGEMENT** channel — has anything inbound ever named this
+file. This measures **CROSSING** — does the receiver's manifest carry these bytes. **A file can be
+crossed and unacknowledged**, and two of two she checked were exactly that: **counted absent because
+a twenty-four-character prefix cannot match a sha256.** Her digests are full length from the
+thirty-fourth return onward, so the comparison now resolves by value.
+
+**The 267 was never a crossing figure.** It measured the weaker channel and was reported as though it
+measured the stronger one.
+
+## R446 — The key-change trigger, narrow and built; and `requirePopulation` caught my scope query
+
+**`pnpm check:key-change-cards`. One item, one comparison, at the point where the person changing the
+key is present.**
+
+**`exhausted` is the case: she authored `worn out` as the key in her twentieth return, the containment
+check that found thirty-two had ALREADY RUN, and nothing re-examined the card** — which still said
+*completely worn out*. **The repair to the item opened a leak on the card that serves it, and the
+check was correct and simply ran before the change.** A gate that passes at time T says nothing about
+time T+1 when the thing it measured is what moved.
+
+**AND THE FIRST RUN WAS REFUSED BY `requirePopulation`.** I read the headword from `stem.headword` /
+`stem.word`; it is **`stem.words[0]`**. The population came back **empty** and the run **aborted**
+rather than printing a clean zero over nothing — **R61 operating exactly as written**, on a check
+whose scope query was wrong in a way no output would have shown.
+
+## R447 — What the WIDER reopening would cost, since obedient and exhausted both deserved it
+
+**Her generalisation, costed and NOT built.** A key change also moves:
+
+- **the DIRECTION measurement** — vr-04 expects a key commoner than its stem (R323), and both
+  `obedient` and `exhausted` are PROVISIONAL against an unverified direction (R336). **A key change
+  invalidates a direction judgement that was made about the old key.**
+- **the DISTRACTOR SET's fairness** — the remaining options were authored to be wrong against the OLD
+  key. `tired` became a free string when `worn out` replaced it, and is now the textbook wrong-strength
+  distractor nobody has ruled on (D1).
+- **any HINT that names the answer** — an item hint written for the old key can describe a route to a
+  word that is no longer correct.
+
+**The cost is not the checks; it is that three of the four have no automatic test.** The card
+comparison is mechanical. **Direction needs a frequency source that is UNESTABLISHED. Distractor
+fairness is a reviewer judgement. A hint naming the answer is the claim-against-text class R349 ruled
+unclosable by any instrument.**
+
+**So a full reopening on key change is ONE machine check and THREE reviewer reads**, and building it
+as an automatic trigger would produce a queue of reviewer work with no reviewer attached — **which is
+the conditional-flag backlog again, generated automatically.** Recorded as the cost; the ruling is
+hers.
+
+## R448 — The sixty-eight sent, and the citation problem is why
+
+**`THE-SIXTY-EIGHT.md`, `480d027bfa578efd…`. 65 from the other store, 2 hers, 1 unknown.**
+
+**Her returns cite these by digest, so the citations resolve against her disk and against nothing
+else.** A population that reached a reviewer by a route neither store records is **where a ruling
+comes to rest on something nobody can find later** — the citation is valid, checkable by her, and
+unresolvable by anyone else.
+
+**65 of 68 never routed through here**, so *"she has what we sent"* is wrong in both directions. The
+one unknown is the superseded ledger.
+
+**Full digests are given so a citation resolves by value**, which is also the repair for the two files
+that read as absent when they had crossed.
