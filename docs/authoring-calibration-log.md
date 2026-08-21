@@ -14490,3 +14490,91 @@ row measured her consistency rather than the tag's fitness.** She said so hersel
 **Recorded as UNTESTED.** Not a defect and not a pass — **a reading whose population is entirely the
 reader's own prior decisions cannot disconfirm them.** Nothing to do but wait for the entry to acquire
 options assigned by somebody else.
+
+## R467 — Never batch-write an approved artefact: read each row from the return that authored it
+
+**David's ruling, 2026-08-21, after I put a rejected proposal back over her authored wording.**
+
+**An approved artefact is a SNAPSHOT WITH A DATE, and any row a later return touched is superseded
+inside it.** The file is not wrong; it is **older than some of its own rows**, and nothing in it says
+which.
+
+**The guard is the one every other card write this session used**: locate the wording IN THE RETURN
+that authored it, refuse if it is not there verbatim (R25/R397). The one write that skipped it read a
+proposals file and asserted nothing about provenance — **and a proposals file is exactly the artefact
+whose rows a ruling most often overrides.**
+
+**AND IT IS NOT THE ONLY ONE. 42 approved-content snapshots sit in the inbound folder, and EVERY ONE
+has at least one later return.** The oldest carry 43 returns behind them:
+`misconceptionimport (1).json` (71 rows, 1 August), `WSREDRAFT1.json` (2 August), eight `engNNNdraft`
+files of 12 rows each (12 August), `PLATFORMIMPORT*` (12 August).
+
+**So the exposure is not one file.** Any batch write from any of them would carry the same fault, and
+**none of them records which of its rows a subsequent ruling has settled.** The redraft file was
+merely the one I ran.
+
+## R468 — Run both card checks AFTER every card write, because a pre-write run measures the wrong population
+
+**David, 2026-08-21, recorded as a rule rather than as this instance.**
+
+**A check that runs before a write measures the population the write is about to change.** Two proofs
+from one session:
+
+- **`jovial` prompted the mirror check and no longer appears in it** — its redraft closed
+  *cheerful and friendly* before the check ran. **The instance that motivated the check was gone by
+  the time it executed.**
+- **Two of the five distractor leaks sit on cards redrafted in this same session** — the redraft that
+  closed a key leak **opened a distractor leak on the same card.**
+
+**So a card write can create the fault the other check looks for**, and running either check first
+answers a question about a store that no longer exists. **Both run after every card write**, and the
+population is stated each time.
+
+## R469 — The five distractor leaks, and which two I made
+
+| item | headword | card | distractor | origin |
+|---|---|---|---|---|
+| `bank-vr-04-closest-meaning-17` **LIVE** | hostile | *behaving towards you as an enemy would* | **enemy** | **CREATED THIS SESSION** |
+| `bank-vr-04-closest-meaning-34` **LIVE** | stoic | *putting up with pain or trouble without complaining about it* | **pain** | pre-existing |
+| `gen-vr-04-closest-meaning-24` | trivial | *so small that it hardly matters* | **small** | **CREATED THIS SESSION** |
+| `gen-vr-04-closest-meaning-08` | huge | *very, very big* | **big** | pre-existing |
+| `gen-vr-04-closest-meaning-28` | exhausted | *so tired that you have nothing left* | **tired** | pre-existing |
+
+**Two are mine, both from redrafts written today**, and they are a different fault from the three that
+were always there: **a redraft that trades one leak for another is a regression introduced by a
+repair**, and it is invisible to anyone comparing the card against the key alone.
+
+**THE REPAIR IS NOT WRITTEN HERE.** Card wording is authored content and the two I created are no more
+mine to re-author than the three I did not — **re-authoring my own regression without a ruling is the
+same act that put `chilly` back.** The five go to her with their origins marked; `exhausted`'s
+*tired* is the distractor D1 already flagged and nobody has ruled.
+
+## R470 — R460 WITHDRAWN on its face
+
+**Not amended. Withdrawn.**
+
+R460 claimed a citation of hers had been *"retired by her own later ruling"* — that PR-05 dropped off
+the both-tags list because the twenty-fifth return retagged it.
+
+**Nothing was retired and nothing was stale.** PR-05 **carries `en-vocab-not-this-word` exactly as she
+wrote it, and carries `en-vocab-dominant-sense` on a different option.** It fails the both-tags query
+because **it has never carried `en-vocab-neighbouring-sense`** — a fact about the item, not an effect
+of any ruling.
+
+**The mechanism R460 describes may exist. This was not an instance of it**, and the entry was a
+mismatch diagnosed as a mechanism — **the more expensive error of the two, because a named class
+recruits later evidence to itself.**
+
+## R471 — One clause short, and a clause is what a ruling gets made from
+
+**The contradiction diagnosis, recorded on its own line because the shape is general.**
+
+**The query was sound. The set difference was correct. The sentence dropped the narrowing.**
+
+*A headword absent from a DRAFT-ONLY leak set is absent because it does not leak, OR because its card
+is not DRAFT.* I collapsed both into the first, then added *"so the hold is wider than the fault,
+which is the safe direction"* — **a reassurance built on the half I had not checked.**
+
+**Not stale, not a different check, not a wrong query.** A correct computation over a narrowed
+population, reported in a sentence that did not carry the narrowing — **and the reassurance is what
+made it dangerous, because it told the reader not to look.**
