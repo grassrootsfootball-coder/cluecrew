@@ -12964,3 +12964,49 @@ turn that describes a plan is not the work).
 - **The 378-against-373 stands unreconciled**, nouns named, as does the cross-store name discipline:
   **cite the shape and the store, never the bare name**, since the lookup cannot be performed across
   the boundary (R385).
+
+## R391 — `en-contradicted-by-the-text` drafted; and the eight retags proposed, none assigned
+
+**Annie's twenty-fourth return, 2026-08-21. Drafted for approval; nothing written to the library.**
+Staged: `EN-CONTRADICTED-BY-THE-TEXT-DRAFT.md`, `a6c8d3e43d231f6a…`.
+
+**Description, her scope verbatim:** *chooses an option the passage explicitly denies, rather than one
+it merely fails to support.*
+
+**Three child-hint drafts, all three passing the gate, with A recommended:** *"The passage says the
+opposite. Go back and find the line that disagrees."* Her reason is the argument for it — **a child
+who picks one of these has missed a line, not invented one** — and A tells her a line exists and sends
+her to it. B (*contradicted by it*) is the most precise and the most abstract, at the moment she is
+least able to follow an abstraction. C risks sending her back to the options rather than the passage.
+
+**WHAT A DELIBERATELY DOES NOT SAY.** `en-plausible-not-stated` ends *"point to the line that proves
+it"* — go and find evidence. **For this error the evidence is already there and says the opposite**, so
+an instruction to hunt for support is the same wrong turn one step later. **A hint written for one
+error is not neutral on the other; it is actively wrong on it**, which is why this leads the queue
+rather than sitting in it.
+
+**Her finding, restated because it is about a child and not a taxonomy:** on seven of twenty-seven
+carriers the most carried hint in the product sends a child hunting for a line that **cannot exist**,
+and when she fails to find it **she learns the instruction does not work** rather than that her answer
+was unsupported.
+
+**The eight retags are PROPOSED WITH THEIR REASONING, never assigned.** Five vocabulary split
+dominant-sense (*carol* as a church bell, *stern* as a cushioned seat — the everyday sense displacing
+the one on the page) from neighbouring-sense (*made fast* as waving — an adjacent sense of the same
+phrase). **`en-vocab-form-lookalike` is proposed for none of the five**, and the reason is stated:
+nothing here turns on a word that merely LOOKS like another, and offering a tag where it does not
+apply is how a family of tags stops meaning anything.
+
+**`ENG-001-WIW-22` is flagged as the least confident, in her own direction.** She noted it contradicts
+the page — the animals ARE called Mole and Rat — so it has a foot in group three. It is proposed as
+`en-technique-device-confusion` because the STEM asks what the writer is doing; **if she reads it the
+other way it joins the seven and becomes eight.** Naming my own weakest proposal is cheaper than her
+finding it.
+
+**And every option is QUOTED, not described** (R25). The first build carried five rows reading
+*"(carrier as tagged)"* — a placeholder standing where a value belongs, in a proposal whose entire
+purpose is that she can rule on the text. Filled from the rows before delivery; **0 placeholders
+remain**, asserted rather than assumed.
+
+**`en-plausible-not-stated` keeps its description and hint unchanged**, per her ruling: for the ten it
+fits, it is exact.
