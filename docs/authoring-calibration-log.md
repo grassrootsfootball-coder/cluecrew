@@ -13229,3 +13229,50 @@ defensible from the two strings alone and wrong half the time; the item settled 
 `en-apostrophe-possession`**, the same as C and D. **A child choosing *No mistake* has not made an
 apostrophe error — she has failed to find one.** That is the N-option question arriving on a different
 item from the one it was raised about.
+
+## R403 — Not partly-applied batches: whole returns whose amendments never crossed, 9 of 13
+
+**David, 2026-08-21: measure the partly-applied population.** `pnpm check:amendments-landed`.
+**The measurement contradicts the premise, and the truth is simpler and worse.**
+
+**13 authored wordings across 7 returns. 4 landed, 9 did not. ZERO returns are PARTLY landed.** The
+four that landed are the twenty-seventh return, applied an hour ago; **every earlier return scored
+NONE.** So the 18 August half-application is the exception, not the pattern —
+`en-apostrophe-possession` holds its amendment because a different act wrote it, not because that
+batch half-succeeded.
+
+**THE HIGHEST-IMPACT ONE IS `en-plausible-not-stated`, THE MOST CARRIED HINT IN THE PRODUCT.** She
+authored *"Sounding sensible is not enough. Find the line that proves it."* in the seventeenth return.
+**The store serves, on eleven LIVE carriers, `"Sounding sensible isn't enough — point to the line that
+proves it."`** — a contraction she removed, an em dash she removed, and *point to* where she wrote
+*find*.
+
+**And in her twenty-fourth return she QUOTES HER OWN WORDING AS THE HINT IN FORCE**, and reasons from
+it about what a child meets on seven carriers. **It has never been in force.** Her reasoning survives —
+it was about the error, not the string — but **the reviewer was reading her own decision back out of a
+store that never took it**, which is the failure this whole week has been about, arriving on the
+person the guards exist to serve.
+
+**Its bound is stated and it matters** (R60): the check reads the shapes her returns use
+(`- authored: **…**`). **An amendment in running prose is invisible, so 9 is a floor** — and the
+invisible ones are the likeliest to have been missed, because a value living in prose is what R25
+exists to refuse. **It FAILS rather than reports**: an unapplied amendment is a decision that did not
+take effect, not a queue and not a fact about a human channel.
+
+**`en-terminal-punctuation-blind` is the third dashed hint, found by asking about the PROPERTY rather
+than the two named instances** — same dash, same nine LIVE items, never raised by anyone.
+
+## R404 — A check disagreeing with a delivery note before the note went out
+
+**2026-08-21.** The PU delivery said **eight** LIVE items would serve their own hint. **Seven** do:
+nine minus PU-08, ruled to the library, and PU-03, held. **I counted RULINGS rather than reading what
+each one decided** — R396's fault in arithmetic, on the same day it was registered.
+
+**`check:hint-gate-state` printed seven while the delivery said eight, and it printed it first.** The
+instrument and the prose disagreed **before the prose crossed**, which is the only sequence in which
+that disagreement is cheap. Prose is the artefact with no gate on it (R178); the nearest thing to a
+gate is a check that measures the same quantity the prose asserts and is read before it ships.
+
+**The general shape worth keeping: where a delivery states a number the store can compute, compute it
+and compare, in the act of writing rather than after.** Not a new mechanism — `check:hint-gate-state`
+already existed for a different reason — but a habit of reading the instrument before the sentence.
