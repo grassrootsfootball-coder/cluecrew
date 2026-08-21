@@ -14807,3 +14807,87 @@ true and has never fired.**
 
 **A correct conclusion from a wrong premise builds the wrong instrument**, and it is caught only by
 reading the generator rather than the outcome.
+
+## R486 — Every card row carries every option set the card serves. Permanent shape change
+
+**Her ruling, 2026-08-21.** **A card row carries the option sets of EVERY item that card serves, not
+the set of the item that prompted the row.**
+
+**`exhausted` alone is eight strings across two items for one card**, and authoring against one set
+was never going to hold. **This is a permanent change to the artefact shape, not a fix for these
+four** — the artefact was giving her a partial view of the thing she was authoring against, and every
+card in the store serves more than one item.
+
+## R487 — All four pass on every item, and the prediction of a refusal was wrong for an instructive reason
+
+**Her four, gated against every item each card serves:**
+
+| card | items served | verdict |
+|---|---:|---|
+| `hostile` → *set against you before you have said a word* | 2 | **CLEAN on both** |
+| `exhausted` → *completely out of energy after a long effort* | 2 | **CLEAN on both** |
+| `huge` → *far larger than you would expect* | 2 | **CLEAN on both** |
+| `trivial` → *it hardly matters at all* | 2 | **CLEAN on both** |
+
+**She expected at least one back and none collided.** For `hostile` she had **both** option sets after
+the last refusal, so she authored against complete information. **For the other three she held one set
+each and the second happened not to collide** — clean by margin rather than by design, which is the
+distinction the new artefact shape removes. **All four written and CONFIRMED by direct read.**
+
+## R488 — The `-30` swap inside the reopening that already exists
+
+**`bank-vr-04-closest-meaning-30`**: `marathon` out, `tired` in, tagged `vr04-wrong-strength`.
+
+**worn out** (key) · **rested** (opposite pull) · **tired** (intensity near-miss) · **sleep**
+(associate). Confirmed by direct read.
+
+**Her reasoning is the reusable half: the item is ALREADY OPEN** — the key changed when she authored
+`worn out`, and her thirty-sixth-return ruling reopened it. **An improvement inside a reopening that
+exists costs nothing; the same improvement later costs a second reopening.** And **`marathon` rather
+than `sleep` because two associates is one too many, and `marathon` is the further from the word** —
+a reason about the option set's shape rather than about either option alone.
+
+## R489 — Four of the seven were never inputs: I had counted my own citations
+
+**Her question — disconnected or merely marked — answered by reading what actually reads them.**
+
+| file | read by |
+|---|---|
+| `REISSUESIXITEMS.json` | **3 scripts + CI** |
+| `comprehension-library-current.json` | **2 scripts** |
+| `eng028-walk-repairs-…json` | **1 script** |
+| `WSREDRAFT1.json` | *the register only* |
+| `card-redrafts-for-annie-…json` | *the register only* |
+| `misconceptionimport.json` | *the register + corpus-decisions* |
+| `misconceptionimport (1).json` | *the register only* |
+
+**Only THREE have a code reader.** The other four appear in repo source **because I cited them in the
+register** — my scan matched filename mentions and counted my own footnotes as read paths. **R479's
+seven is four.**
+
+**AND THE FILE THAT ACTUALLY OVERWROTE HER HAS NO CODE READER AT ALL.**
+`card-redrafts-for-annie-…json` was read **by me, by hand, in a one-off script I wrote and deleted.**
+
+**So a pin would not have stopped it.** Her disjunction — disconnected or merely marked — **does not
+reach the case that caused the harm**, because the read was ad-hoc and no state on the file is
+consulted by a script that does not exist yet. **The danger was not a standing reader. It was me
+opening a file and writing from it**, which only the rule (R484: the block is the source) prevents.
+
+## R490 — Both asserts would have looked like working asserts on the day they were written
+
+**Her invariant point, recorded as its own entry.**
+
+*"`off-by-one` must be the LOWER side"* — read off **results**, true of all five observed items, and
+**false**. It would have fired constantly the first time the selector took the other candidate, and
+every firing would have been a false alarm about correct content.
+
+*"`off-by-one` must not select `answer + step` on a step-1 series"* — read off the **mechanism**, true,
+and has never fired.
+
+**BOTH WOULD HAVE LOOKED LIKE WORKING ASSERTS ON THE DAY THEY WERE WRITTEN.** Both pass on the current
+store. Nothing in the output distinguishes them; **only the derivation does.**
+
+**That is the claim-against-the-text discipline reaching code** (R349). An assert read off results is
+a claim about the data that happens to hold; an assert read off the mechanism is a claim about what
+the code can produce. **The first is a description wearing an invariant's clothes**, and it is
+indistinguishable from the second until the day the data moves.
