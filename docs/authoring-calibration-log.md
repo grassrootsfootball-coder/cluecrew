@@ -13167,3 +13167,65 @@ supply one.** Each was accurate on the carriers I had in mind and wrong on the o
 something different"* is flatter than any of the three and true on all six. **A hint is not a sentence
 about an error; it is a sentence that must hold across every child who meets it**, and the strongest
 phrasing is reliably the one that fails first.
+
+## R399 — The eight rulings applied, and the gate is ACTIVE-AND-SERVING
+
+**Annie's twenty-seventh return, 2026-08-21.** PU-02, PU-04, PU-09 approved as written; PU-01, PU-05,
+PU-06, PU-07 replaced with her authored wordings, **read from her file and gated clean**; PU-03 held;
+**PU-08 RECORDED AS RULED to the library hint.**
+
+**PU-08 is the one that needed a record rather than a silence.** A deliberate decision not to serve an
+item hint produces a state **identical to a hint nobody has looked at** — `hintServes: 'library'` with
+her reason on the row is the only thing that distinguishes them. R98's shape in a serving decision.
+
+**Gate state: `ACTIVE-BUT-UNREACHED` → `ACTIVE-AND-SERVING`, seven LIVE items.** Nine minus PU-08 and
+PU-03. **I wrote eight in the delivery and the gate's own count corrected it before it crossed** —
+counting rulings rather than reading what each one decided, which is R396 in arithmetic.
+
+## R400 — An item hint earns its place by saying something the library hint cannot
+
+**Annie's criterion, 2026-08-21, and it decides the remaining 366.**
+
+Not *is it good prose*, not *is it correct* — **is it saying something the shared hint cannot say?**
+PU-02 earns it: *"Does your voice go up at the end?"* is a test for an interrogative that a hint
+covering every terminal-punctuation error cannot name. **PU-08 does not**, so it rules to the library
+and the row says so.
+
+**HER PU-06 / PU-09 PAIR IS THE RULE'S OWN GUARD, and it is why this is not a word count.** Both are
+**thirteen words**. She **split PU-06** and **approved PU-09**. PU-06 was one sentence with the
+instruction tacked on the end, so splitting lands the instruction where a child can act on it; PU-09
+reads as one thing. **The rule is readability, not arithmetic** — and a criterion stated without a
+same-length pair going opposite ways would have been implemented as a length cap within a week.
+
+## R401 — One amendment written, one not: the store was half-amended and both readings were wrong
+
+**2026-08-21.** Two library hints were reported as still carrying em dashes she amended on the 18th.
+The proposed explanations were *never written* or *built from a store that has not taken them*.
+**Neither. `en-apostrophe-possession` HOLDS her amendment; `en-paired-punctuation` does NOT.**
+
+**A half-applied batch is invisible to both explanations, because each assumes the batch is a unit.**
+The ruling file was an accurate picture of a store where one of two landed — so the file was right,
+the store is inconsistent, and no amount of reasoning about provenance would have found it. **Only the
+lookup did.**
+
+**And it found a third nobody named**: `en-terminal-punctuation-blind` — *"Read aloud — where your
+voice stops or asks…"*. **All three serve on the nine LIVE items.** Asking about two returned a
+population of three, which is the argument for querying the property rather than the instances.
+
+## R402 — PU-03: the hint is right and the note is wrong
+
+**2026-08-21.** Her 19 August note records PU-03's fault as a **comma splice**; its hint is an
+its-and-it's hint. She refused to rule between them without seeing the item — correctly, since the
+answer was not derivable from either.
+
+**The key is option A, `It's fur was still damp,` — an its-and-it's error.** The hint describes its own
+item exactly. **The note recorded the wrong fault**, and PU-03 is **not** the first hint in the bank
+that fails to describe its item.
+
+**The refusal to rule was what produced the right answer.** A ruling either way would have been
+defensible from the two strings alone and wrong half the time; the item settled it in one line.
+
+**One thing the lookup turned up that nobody asked for: PU-03's N option is tagged
+`en-apostrophe-possession`**, the same as C and D. **A child choosing *No mistake* has not made an
+apostrophe error — she has failed to find one.** That is the N-option question arriving on a different
+item from the one it was raised about.
