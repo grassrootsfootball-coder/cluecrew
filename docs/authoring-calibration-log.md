@@ -13985,3 +13985,58 @@ with the other two** (R336), and the three move together when it lands.
 Each needs **one hop and no more**. They are **where the next leak appears if a key is ever changed** —
 **which is exactly what happened to `exhausted`.** Recording a thin pass is recording a prediction,
 and this one has already come true once.
+
+## R442 — The 68 resolved: 67 are the other store's, and the superseded worry is an instance
+
+**2026-08-21.** Of the 68 artefacts on her disk with no matching digest here:
+
+- **67 are files the OTHER STORE sent her** — we hold the same bytes inbound. **They never routed
+  through this store at all**, so their absence from our staging is correct rather than a gap.
+- **1 is the superseded ledger.**
+
+**I called it a class and it is an instance.** The diff says **nothing else on her disk is an
+out-of-date copy of something we have since corrected** — which is worth having as a measured fact
+rather than as a relief, because *"there is probably more of this"* is the kind of claim that survives
+indefinitely without ever being checked.
+
+**And the 67 are a finding of their own shape**: a third of what she holds arrived without passing
+through here, so any reasoning of the form *"she has what we sent"* is wrong in both directions.
+
+## R443 — Two instruments over one queue: 364/54 against 325/58
+
+**Both ran. They disagree, and neither is wrong.**
+
+`check:staging-queue`: **364 staged, 54 acknowledged.** Digest diff against her manifest: **325
+staged, 58 crossed.**
+
+**The standing check counts `.sha256` SIDECARS as staged files**, inflating the population by roughly
+the number of correctly-delivered artefacts — **so the queue looks worse the more carefully things are
+delivered.** And it reads acknowledgement from **filenames mentioned in anything inbound**, which a
+message can do without the file ever being opened.
+
+**The diff counts distinct CONTENT and matches on VALUE**, against a manifest the receiver computed.
+Only one of these is a statement about her disk.
+
+**AND MY OWN HAND COUNT REACHED 58 BY THE WEAKER METHOD.** Reporting that as agreement with the digest
+diff would have retired the question — **the same number by a weaker method is not a second
+measurement**, and two instruments agreeing is only evidence when they are measuring the same thing.
+R173's confirming-result fault, avoided by noticing the methods differed rather than by the numbers
+disagreeing.
+
+## R444 — Cross the corrected ledger before anything else, because it ranks everything after it
+
+**2026-08-21.** She is reading from `7bfaf302…`, ordered by **total carriers under a LIVE label** —
+`en-plausible-not-stated` at its head at **209 when its LIVE reach is 27.**
+
+**Every row below it is ranked on the number she asked not to be given**, on the artefact **whose only
+content is an ordering.** A wrong ordering does not just misplace one row; it makes every reading
+below it cost more than it should, which is why this crosses ahead of the 278 build.
+
+**And the two files have DIFFERENT NAMES**, because the corrected one carries its content hash (R386).
+**So nothing on her disk marks the copy she holds as superseded, and the replacement does not sort
+next to it.** The fix that stopped two artefacts sharing one name has the side effect that a
+superseded file no longer collides with its replacement — **the collision was the only thing making
+the supersede visible on her side.**
+
+**Named explicitly in the delivery, both digests side by side**, because a supersede the receiver
+cannot see is not a supersede.
