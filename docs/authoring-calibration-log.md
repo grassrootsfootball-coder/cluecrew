@@ -13374,3 +13374,74 @@ reasoning is the last thing that should travel as an appendix.**
 It states plainly what was wrong (the premise), what survives (the reasoning, because it rested on the
 error), what does not (any inference from the wording itself), that the sweep found no further
 instance, and **why she could not have caught it from her side.**
+
+## R410 — The check was blind to an entire amendment shape: 33 wordings, not 13; 23 absent, not 9
+
+**David, 2026-08-21: find what it matched on before applying anything else from it.**
+
+**Two faults, and the second was mine in prose.**
+
+**1. The extractor read ONE shape.** Her returns use a labelled form (`- authored: **…**`) **and an
+inline form**: `` - `entry-id`, replacing *old text*: **new text** `` — which her eighteenth return
+uses **throughout**. The check extracted one amendment from a return carrying **nine**, so eight were
+**invisible rather than absent**. Both shapes are read now, and the matching is **exact rather than
+`includes`** — a substring match reports a landing whenever her wording sits inside a longer stored
+string, which is exactly what a partial application looks like.
+
+**Population: 33 authored wordings across 8 returns. 10 landed, 23 absent.** The nine were twenty-three.
+
+**2. R401's claim that `en-apostrophe-possession` HOLDS her amendment is WRONG, and it was my prose,
+not the check.** I judged it landed because it carried **no em dash** — a proxy for her amendment
+rather than a comparison with it. Her eighteenth-return wording is *"Ask whose it is. An owner needs
+an apostrophe. Try swapping in 'it is'."*; the store held *"Ask: whose is it? Owners need
+apostrophes…"*, **the pre-amendment string she quotes as the thing being replaced.**
+
+**A CHECK REPORTING A FALSE LANDING IS WORSE THAN ONE REPORTING AN ABSENCE: an absence gets worked
+and a false landing closes the row.** R401's half-amended-store finding is withdrawn — the store was
+not half-amended, the instrument was half-sighted.
+
+## R411 — The N sweep: the property, and both ways of scoping it wrong
+
+**Annie's fifth-return ruling reached eighteen stems and nothing else**, so any string still naming a
+letter sends a child to find something not on her screen. **The stems were the population somebody
+pointed at; the letter is the property.**
+
+**Scoping to stems finds what was already fixed. Scoping to every string finds the property where it
+legitimately occurs** — the first run flagged VR letter-series items where **N is a genuine letter of
+the alphabet**, a real option value with a walk script correctly naming it. **Too wide and too narrow
+are equally useless, and only the middle scope is the ruling's own**: items that carry a verdict
+option.
+
+**Result: 18 items carry one, 155 child-facing strings on them, and NONE names a lone letter N.** Her
+four authored replacements closed the last of them — `SP-07` and `en-n-option-avoidance` both said
+*"N"* until an hour ago.
+
+## R412 — Four applied, and asserted by reading the row rather than by the instrument that missed them
+
+**Annie's twenty-eighth return, applied 2026-08-21**, authority carrying the return's sha256
+`c0169214b2047ecd…`. `ENG-003-A-SP-07`, `en-terminal-punctuation-blind`, `en-n-option-avoidance`, and
+`en-apostrophe-possession` **re-issued because it never landed.**
+
+**Each asserted AFTER writing by reading the row back — deliberately not with
+`check:amendments-landed`, which is the instrument that missed them.** Confirming a repair with the
+tool whose blind spot caused it is the tool grading its own blind spot; four CONFIRMED, read from the
+store directly.
+
+## R413 — PU-03: an existing rule settled a new instance without a new ruling
+
+**Annie, 2026-08-21.** Its hint is approved as written, **and its N tag is correct as it stands.**
+
+Under her **sixth-return ruling** the verdict option carries **the family of the keyed error**. PU-03's
+key is an its-and-it's error, and `en-apostrophe-possession` covers that **by its own text**. So the
+tag I flagged as an anomaly is the rule operating.
+
+**Recorded because the class matters more than the case: a question that looks new and is answered by
+a rule already written.** I reported it as *"the N-option question arriving on a different item"* — a
+new instance needing a ruling. **It needed a lookup.** The register's value is not only that rulings
+are recorded but that a recorded ruling can close a question without being re-litigated, and the way
+to find out is to look before raising it.
+
+**Her note for the N entry, recorded now so it is not rediscovered:** SP-07's item hint and the new
+library hint now say nearly the same thing, so **by her own PU-08 criterion the item hint does not
+earn its place there.** SP-07 is DRAFT, so nothing turns on it today; **when it comes up for a serving
+decision the answer is the library.**

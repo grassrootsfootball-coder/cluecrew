@@ -19,14 +19,34 @@ import { prisma } from '../packages/db/src/index';
 import { requirePopulation } from './lib/population';
 
 const RETURNS = '/Users/davidb/Downloads';
-const AUTHORED = /^\s*[-*]?\s*(?:authored|Authored|replacement)\s*:\s*\*\*(.+?)\*\*/gm;
+/**
+ * **TWO SHAPES, AND MISSING ONE MADE THE CHECK REPORT A FALSE LANDING.**
+ *
+ * The labelled form — `- authored: **…**` — and the INLINE form her eighteenth return uses
+ * throughout: `` - `entry-id`, replacing *old text*: **new text** ``. The first version read only
+ * the labelled form, so it extracted ONE amendment from a return carrying many, and every
+ * unextracted amendment was invisible rather than absent.
+ *
+ * **A check that cannot see an amendment reports the return as clean**, which is worse than
+ * reporting it missing: an absence gets worked and a false landing closes the row.
+ */
+const AUTHORED_SHAPES = [
+  /^\s*[-*]?\s*(?:authored|Authored|replacement)\s*:\s*\*\*(.+?)\*\*/gm,
+  /replacing\s+\*[^*]+\*\s*:\s*\*\*(.+?)\*\*/gms,
+];
 
 async function main() {
   const files = readdirSync(RETURNS).filter((f) => /^annie-.*return.*\.md$/.test(f)).sort();
   const found: Array<{ file: string; text: string }> = [];
   for (const f of files) {
     const body = readFileSync(join(RETURNS, f), 'utf8');
-    for (const m of body.matchAll(AUTHORED)) found.push({ file: f, text: m[1].trim().replace(/\.$/, '') });
+    for (const re of AUTHORED_SHAPES) {
+      re.lastIndex = 0;
+      for (const m of body.matchAll(re)) {
+        const text = m[1].replace(/\s*\n\s*/g, ' ').trim().replace(/\.$/, '');
+        if (!found.some((x) => x.file === f && x.text === text)) found.push({ file: f, text });
+      }
+    }
   }
 
   const lib = await prisma.misconception.findMany({ select: { id: true, childHint: true } });
@@ -59,7 +79,13 @@ async function main() {
 
   const byFile = new Map<string, { landed: string[]; absent: string[] }>();
   for (const a of found) {
-    const hit = haystack.find((h) => h.text.includes(a.text));
+    /**
+      * **EXACT, NOT SUBSTRING.** `includes` reports a landing whenever her wording happens to sit
+      * inside a longer stored string — which is precisely what a PARTIAL application looks like.
+      * Normalised for the trailing full stop the extractor strips, and for nothing else.
+      */
+    const norm = (s: string) => s.trim().replace(/\.$/, '');
+    const hit = haystack.find((h) => norm(h.text) === norm(a.text));
     const e = byFile.get(a.file) ?? { landed: [], absent: [] };
     (hit ? e.landed : e.absent).push(a.text);
     byFile.set(a.file, e);

@@ -147,6 +147,7 @@
     "check:declaration-schema": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-declaration-schema.ts",
     "check:declaration-sets": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-declaration-sets.ts",
     "check:hint-gate-state": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-hint-gate-state.ts",
+    "check:lone-letter-n": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-lone-letter-n.ts",
     "check:item-population": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-item-population.ts",
     "check:reissue-completion": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-reissue-completion.ts",
     "check:superseded-inside-field": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-superseded-inside-field.ts",
