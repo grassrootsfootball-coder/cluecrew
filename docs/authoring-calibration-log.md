@@ -13636,3 +13636,78 @@ was mine.** She would rather that were recorded than be credited with it.
 evidence for who decides what, and a reviewer credited with an engineering diagnosis is the same
 conflation as a machine verdict wearing a person's name (R94) — **running the other way, and just as
 corrosive, because it inflates her record with work she did not do and hides the fault in mine.**
+
+## R425 — The Fix-It Shop serves her wording: the twelfth-return amendment landed
+
+**Annie, 2026-08-21, and it closes in a line as she said it would.**
+
+**`case-en-05` — "The Mark Out of Place" — `narrativeIntro.text`, quoted from the store and rendered
+at `apps/web/app/crew/case/[caseId]/page.tsx:34`:**
+
+> *"A sentence can look right and still have a slip in it. A mark may be out of place. Read every part
+> before you choose. If they are all correct, say so."*
+
+**Her amended wording, verbatim. `"One mark is out of place"` appears in no Case row.** The stem
+contradiction is not live: the Case does not assert one misplaced mark across nine items one of which
+has none.
+
+**AND THE MAP BLURBS ARE IN SOURCE, NOT THE STORE** — `apps/web/lib/crew/districts.ts`, hardcoded.
+**That is why R422's 392-string sweep did not find them**: it read `content/` and Case rows, and the
+blurbs are a FOURTH population in TypeScript. The SpaG blurb reads *"One part of the sentence may have
+a slip in it. Find it, or say it is all fine."* — **16 strings, 0 naming a lone letter.**
+
+**The storage question answered itself on the way, and the answer was a population nobody had
+counted.** Asking *"what does a child see"* rather than *"where does the string live"* found a store
+that two sweeps had missed — because a sweep goes where you point it and a rendering goes where the
+code goes.
+
+## R426 — `vr14-step-size`: three questions, and the third is the one that mattered
+
+**Annie's framing, 2026-08-21: an unapplied amendment leaves one string wrong, a MISAPPLIED one leaves
+two — and the second is a string she never wrote for the population now carrying it.**
+
+1. **Does the row hold her wording?** Yes — *"Count each hop along the alphabet. Say the number of
+   steps out loud."*
+2. **Is it the row she named?** `vr14-step-size`, district **VR**, description *"Counted the jump one
+   letter short or long."* — the step-size misconception, matching her eighth-return context.
+3. **Created or overwritten?** **Neither.** `createdAt` **2026-08-06**, `updatedAt` **2026-08-21** —
+   the row **pre-existed by fifteen days**, seeded by `generate-content.ts`. **No library entry was
+   created with no proposal behind it, and nothing lost its text.**
+
+**50 carriers, all 50 LIVE** — the largest reachable population touched this session, and it was the
+one I had twice called out of reach.
+
+## R427 — Target-dropping is the live defect, and it is in the CHECK
+
+**Annie's disjunction, 2026-08-21, and the second branch is the true one.**
+
+Her inline form carries the target at the head of the line:
+`` - `en-attribute-transfer`, replacing *old*: **new** ``. **So format-blindness cannot explain the
+orphan — the id was right there.**
+
+**The check's inline pattern is `/replacing\s+\*[^*]+\*\s*:\s*\*\*(.+?)\*\*/gms` — ONE capture group,
+the authored wording. It never captures the backticked id at all.** Every inline amendment reaches
+`check:amendments-landed` **with its target discarded**, by construction.
+
+**The apply script uses a DIFFERENT regex that DOES capture the id** — which is why it placed six
+targets the check could not. **Two regexes over one source, disagreeing about what a record contains.**
+
+**So the two defects are separate and only one is fixed.** Format-blindness (R415) lost whole returns
+and is repaired. **Target-dropping is LIVE in the check**, and it produces orphans **that look like
+author error** — which is exactly what `en-attribute-transfer` looked like for three counts, until she
+named its target in a sentence.
+
+**The distinction matters because they fail differently: format-blindness under-reports and looks like
+a clean return; target-dropping reports the row and misattributes its cause to the author.** The
+second is worse and it is the one still standing.
+
+## R428 — The ninety-seven is neither total nor LIVE
+
+**Checked first, as instructed.** `en-attribute-transfer`: **39 DRAFT + 4 LIVE = 43 total.**
+
+**97 matches neither figure**, so it is **not** the ordering fault that made `en-plausible-not-stated`
+read as 209 — that was total-under-a-LIVE-label, and this is not that shape. It came from the tranche
+document rather than from her.
+
+**Recorded as unexplained rather than reconciled.** A number that matches no quantity this store can
+compute is a lookup into the document that produced it, and that document is not read here.
