@@ -14578,3 +14578,96 @@ which is the safe direction"* — **a reassurance built on the half I had not ch
 **Not stale, not a different check, not a wrong query.** A correct computation over a narrowed
 population, reported in a sentence that did not carry the narrowing — **and the reassurance is what
 made it dangerous, because it told the reader not to look.**
+
+## R472 — The whole-option-set gate, and her two are REFUSED
+
+**Annie's condition, built before either amendment was written.** `pnpm check:card-option-set`. **A
+card is gated against the KEY and EVERY DISTRACTOR, on every item the card serves** — a card serving
+four items is gated against four option sets, because a phrase innocent on one is a giveaway on
+another.
+
+**The gate she specified on the eighteenth checked one property of four**, and every redraft passed
+it while two of today's opened a distractor leak on the same card.
+
+**Store-wide: 84 item-and-card pairs. KEY in card: 0. DISTRACTOR in card: 5.** The twenty redrafts
+closed all fourteen key leaks; **the distractor population is the whole one, not a subset** — the
+three on DRAFT cards plus the two created today, and nothing else.
+
+**HER TWO ARE REFUSED, both on the collision she ruled on:**
+
+| `hostile` | card *behaving towards you as an enemy would* | key **unfriendly** · distractors **friendly**, **enemy**, **argument** |
+| `stoic` | card *putting up with pain or trouble without complaining about it* | key **unemotional** · distractors **emotional**, **pain**, **hardship** |
+
+Both LIVE. **Her reason for the condition holds exactly: it would be a poor moment to author into the
+fault she has just ruled on**, and the gate stopped it rather than a reader noticing afterwards.
+
+## R473 — The off-by-one side is NOT chosen; the collision is one generation away
+
+**Her cheap question, answered from the generator rather than assumed.**
+
+```
+'vr-letter-series-off-by-one': (op) => [vrLetterOf(op.answer + 1), vrLetterOf(op.answer - 1)]
+'vr-letter-series-step-repeat': (op) => [vrLetterOf(op.answer + op.step)]
+```
+
+**`off-by-one` returns BOTH sides as candidates.** `step-repeat` returns `answer + step`. **On a
+step-1 series that is `answer + 1` — which is one of off-by-one's two candidates.**
+
+**So the two tags CAN produce the identical letter, and the five observed step-1 items avoid it only
+because the selector happened to take `answer − 1`.** That is a fact about selection, not about
+design: **nothing in the generator prevents it.**
+
+**Her condition applies: it happens to, so the assert is owed even though the population is currently
+zero.** The invariant is *on a step-1 series, `off-by-one` must not select `answer + step`* — and the
+zero it will report needs its before-count and its reason on its face (R421), because a check that has
+never fired over a fault that has never occurred is indistinguishable from one pointed at nothing.
+
+## R474 — The batch-write ruling: row-wise against the latest decision, never file-wise
+
+**David, 2026-08-21.** A write across an approved artefact is **row-wise against the latest decision
+for each row**, never file-wise. **The amendment block is the instrument for it** — per-row, dated and
+sourced, so each row carries its own provenance and a later ruling supersedes one row without
+invalidating the file.
+
+**42 approved-content snapshots are in the inbound folder and EVERY ONE has a later return** — the
+oldest carrying 43. `misconceptionimport (1).json` (71 rows, 1 August), `WSREDRAFT1.json`, eight
+`engNNNdraft` files, the `PLATFORMIMPORT*` set. **None records which of its rows a subsequent ruling
+has settled**, so the exposure is every one of them and the redraft file was only the one I ran.
+
+## R475 — An absence from a filtered population carries the filter's meaning as well as the property's
+
+**Her rule, 2026-08-21.** **Every *"not in the list"* claim inherits the list's scope.**
+
+*Not in the DRAFT-card leak set* means **does not leak, OR is not a DRAFT card** — and a sentence
+saying *"leaks nothing"* has silently discarded the second. **The property and the filter are both in
+the absence and only one is usually spoken.**
+
+**AND THIS ONE RAN IN THE SAFE DIRECTION, WHICH IS WHAT MADE IT COMFORTABLE TO ACCEPT.** *"The hold is
+wider than the fault"* is the reassuring reading, so nothing in it invited a second look — **a
+filtered absence that happens to flatter the store is the hardest kind to catch**, because the check
+that would find it is the one nobody feels the need to run.
+
+## R476 — UNTESTED is a state, not a stage
+
+**Her rule, 2026-08-21.** **A reading whose population is entirely the reader's own prior decisions
+cannot disconfirm them.**
+
+`en-vocab-not-this-word` is UNTESTED — **not pending, not partially done, not awaiting more of the
+same reading.** More rows of her own assignments would not move it, and a stage implies progress
+toward a verdict that this population cannot deliver.
+
+**It leaves UNTESTED only when the entry acquires options assigned by somebody else.** Recording it as
+a stage would put it in a queue that could be worked; **recording it as a state says the work is not
+available yet**, which is the true and less comfortable thing.
+
+## R477 — PR-05's dominant-sense option: her PROPOSAL, recorded and not applied
+
+**She proposes rather than assigns**, and the distinction is honoured: **nothing is written.**
+
+`ENG-028-PR-05`'s `en-vocab-dominant-sense` option — *"Waited about near somebody, unsure what to
+do."* — is **a genuine second sense of *hover***, so it belongs under `en-vocab-neighbouring-sense`.
+
+**The finding survives R470's withdrawal because it is about the ITEM rather than about the tag's
+history.** R470 withdrew a claim about what a ruling had done to a citation; this is a claim about
+what the option means. **Withdrawing an entry does not retract every observation made while writing
+it** — and separating the two is why the withdrawal could be clean.
