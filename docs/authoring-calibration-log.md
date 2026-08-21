@@ -13010,3 +13010,87 @@ remain**, asserted rather than assumed.
 
 **`en-plausible-not-stated` keeps its description and hint unchanged**, per her ruling: for the ten it
 fits, it is exact.
+
+## R392 — `en-contradicted-by-the-text` written with her hint, and all 27 carriers assigned
+
+**Annie's twenty-fifth return, 2026-08-21. Applied.**
+
+**Description** (her scope verbatim): *Chooses an option the passage explicitly denies, rather than one
+it merely fails to support.* **Child hint, HERS:** *"One line in the passage says something different.
+Go back and find it."*
+
+**HER REASONS AGAINST ALL THREE OF MY DRAFTS, RECORDED BECAUSE THEY ARE THE RULE.** *"the line that
+disagrees"* **leaves the referent implicit for the reader least able to supply one** — disagrees with
+what? A child who has just missed a line cannot resolve a pronoun-shaped gap. And *"says the
+opposite"* **overstates on PR-09**, where the wasps have not moved away but **multiplied in the same
+square of air**: not the opposite, something different. **Her wording is weaker on purpose, and the
+weaker claim is the true one on every carrier.** My drafts were each accurate on the cases I had in
+mind and wrong on the case I had not read.
+
+**All 27 assigned. Six by her reading go where I did not propose:**
+
+| entry | LIVE carriers |
+|---|---:|
+| `en-plausible-not-stated` | **11** (was 27) |
+| `en-contradicted-by-the-text` | **6** (new) |
+| `en-wrong-scope-retrieval` | +3 |
+| `en-vocab-not-this-word` | **3** — against my proposal |
+| `en-vocab-dominant-sense` | 1 |
+| `en-technique-effect-mislocated` | 2 |
+| `en-technique-device-confusion` | 1 |
+
+**`ENG-001-WIW-12` is OUT of contradicted** — the text says a river and **never denies he had seen a
+meadow**, so *"a great meadow"* is a real detail supplied where it does not belong. It joins WIW-01
+and WIW-09 under `en-wrong-scope-retrieval`, whose own description already covers them: *answers from
+a true detail in the wrong part of the passage.* **Two she had left unplaced were closed by an entry
+that already existed** — the gap was in the reading, not in the library.
+
+**`ENG-001-WIW-11` STAYS**: the row does mean an argument, so **the sense is right and the invented
+rabbits are the error.** Not a vocabulary fault.
+
+**AND THREE OF MY FOUR VOCABULARY PROPOSALS WERE WRONG, EACH IN THE SAME WAY.** I offered
+dominant-sense for *carol*→"a church bell" and *stern*→"a cushioned seat", and neighbouring-sense for
+*hovered*→"straight line". **None of the three options is a SENSE of its word at all.** A bell does not
+carol; the dominant sense of *stern* is severe; straight-line motion is the **absence** of hovering.
+`en-vocab-not-this-word` is the entry, and it exists. **I reached for the polysemy tags because the
+stems were vocabulary stems — classifying by the QUESTION rather than by the ERROR**, which is the
+fault the dominant-sense entry's own scope note warns about in the opposite direction.
+
+**Flagged before writing rather than after, per her instruction**, along with one noted tension on the
+call I did agree with: *waved* is not a sense of *made fast* by the letter of the description; it
+works because the dominant sense of *fast* arrives first and produces a quick gesture.
+
+## R393 — Her form-lookalike paragraph, rated above the assignments it governs
+
+**Annie, 2026-08-21, and she rates it higher than the five calls it decided.**
+
+> Nothing here turns on a word that merely looks like another, and offering a tag where it does not
+> apply is how a family of tags stops meaning anything.
+
+**The failure it names is not a wrong tag — it is a tag family losing its edges.** `dominant-sense`,
+`neighbouring-sense` and `form-lookalike` only mean anything while each is refused where it does not
+fit. **Offer the third whenever the first two are uncertain and all three collapse into "vocabulary
+error"**, at which point the library has one tag wearing three names and no way to notice.
+
+**It generalises past vocabulary and past this store.** Any tag family with adjacent members degrades
+by generosity rather than by error: nobody assigns a badly wrong tag, they assign a nearly-right one,
+and the family's boundaries erode from the inside where no check is looking. **`check:authority-shape`
+screens who says a thing and `check:declaration-schema` screens whether a declaration resolves;
+nothing screens whether a taxonomy still distinguishes.**
+
+**And her boundary rule, which decided WIW-22:** where an option is both a wrong account of the device
+and false on the page, **the STEM decides** — it asks what the writer is doing, so the technique entry
+holds. I had flagged WIW-22 as my least confident and offered that it might become an eighth
+contradicted item; **she ruled the boundary rather than the instance**, which is why it settles the
+next one as well.
+
+## R394 — The read-from-her-file guard caught a mis-citation on its first run
+
+**2026-08-21.** The apply script locates her authored hint **in her file** and refuses if it is not
+there verbatim (R25). Pointed at the **twenty-fourth** return, it **ABORTED**: the twenty-fourth asked
+drafting to propose a hint; the hint is authored in the **twenty-fifth**.
+
+**The string was correct and the citation was wrong** — exactly the shape that a retyped value cannot
+catch, because a retyped value has no citation to be wrong about. **The guard refused to write her
+words under the wrong authority**, which is a narrower and more useful thing than refusing to write
+the wrong words. R366's adjacent-line fault, caught by a mechanism rather than by a reader.
