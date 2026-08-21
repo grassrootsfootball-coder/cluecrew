@@ -14113,3 +14113,100 @@ one unknown is the superseded ledger.
 
 **Full digests are given so a citation resolves by value**, which is also the repair for the two files
 that read as absent when they had crossed.
+
+## R449 — The overlap settled by id: 14 of 28 are a decided population waiting on a write
+
+**Annie, 2026-08-21: settle it by id rather than by count, because thirty-two minus four is suggestive
+and not a measurement.** Settled.
+
+**The 28 split exactly 14 / 14 by CARD status — and the halves take her two different branches.**
+
+**The 14 on HELD (DRAFT) cards sit on 8 headwords, and ALL EIGHT are in her eighteenth-return held
+list**: `amend`, `amiable`, `bold`, `genuine`, `hollow`, `hostile`, `transparent`, `trivial`. **Zero
+outside it.**
+
+**So her first branch is the live one: this is a population she has already decided, waiting on a
+write.** The redrafts were never applied **because the cards are held**, and the leak persists as a
+consequence of the hold rather than of anything unreviewed. **The action is a WRITE and a HOLD-LIFT,
+not a read.**
+
+**Three of her held cards leak nothing** — `swift`, `tidy`, `timid` — so the hold is wider than the
+fault, which is the correct direction for a hold to be wrong in.
+
+**The 14 on LIVE cards are the non-overlapping half and take her second branch: they go to her in the
+recognition-test format, one pass.** She ruled both branches in advance, so nothing waits on another
+exchange — **the value of ruling ahead is visible here as a turn that did not happen.**
+
+**And none of the five she redrafted appears in the 28**, which confirms by absence that the write
+landed: `abundant`, `exhausted`, `melancholy`, `notorious`, `vague` all closed their own leaks.
+
+## R450 — A key change reopens the item; serving continues; publication blocks until signed
+
+**Annie's ruling, 2026-08-21, and it reuses the conditional-flag schema unchanged.**
+
+**Blocking SERVING would keep a faulty key in front of children while the repair waited** — worse than
+the fault the block prevents. So: **the item keeps serving, and publication of anything on that item
+blocks until the reopening is signed.**
+
+**The reopening record takes `owner`, `reviewBy`, `state`, and is REFUSED AT AUTHORING without an
+owner** — the same three fields and the same refusal as R368, **so there is no new machinery.**
+
+**THE SHAPE THAT MAKES IT WORK: three judgements become ONE reopening with ONE owner, rather than
+three queues with none.** R447 costed the wider version as one machine check and three reviewer reads
+and warned it would generate a reviewer queue with nobody attached. **Her ruling dissolves that by
+making the reopening the unit** — direction, distractor fairness and hint-names-the-answer are things
+the owner reads, not things that each spawn a row.
+
+**The narrow card check stays automatic because it has an answer.** A check with a machine answer
+runs; a judgement without one gets an owner and a date. **That is the line, and it is a property of
+the question rather than of the effort.**
+
+## R451 — The circular route: two of the sixty-eight are hers, returned to her as uploads
+
+**Recorded, not fixed.** Two of the 68 artefacts on her disk with no matching digest here are **her
+own** — the handover that opened this work, and her seventeenth return.
+
+**A return of hers went out, came back, and is now cited in a diff as a file of unknown provenance.**
+The route neither store records is **not only inbound — it is CIRCULAR.**
+
+**A citation chain passing through an unrecorded route is only as good as whoever remembers the
+path.** Her seventeenth return is the document that authored the `en-plausible-not-stated` wording
+whose non-landing took a week to find; **it is now on her disk as an artefact this store cannot
+account for**, and the only thing connecting it to its own history is memory.
+
+**Recording rather than repairing is her call and it is the right one**: repairing it means inventing
+a provenance record for a route that had none, which would be a reconstruction wearing a receipt's
+clothes.
+
+## R452 — Luck is not corroboration
+
+**Annie's rule, 2026-08-21.** Two methods agreeing is evidence **only if both are independent and
+sound**. A weak method landing on a strong method's answer is **one measurement and one coincidence**.
+
+**The instance: my hand count reached 58 by filename matching; the digest diff reached 58 by value.**
+Reporting the agreement would have retired the question, and **the weaker number was not made better
+by matching the better one.**
+
+**IT IS INVISIBLE BECAUSE AGREEMENT LOOKS LIKE CONFIRMATION FROM EITHER SIDE.** Nothing in the output
+distinguishes two sound instruments concurring from one sound instrument and one that happened to
+land nearby — **the numbers are identical and only the methods differ.** So the check is on the
+METHODS, before the numbers are compared, and it cannot be done afterwards.
+
+**A number that agrees with a better number is not thereby a better number.**
+
+## R453 — The aborted zero: the rule caught a QUERY, which is the only place it can catch anything
+
+**Her filing of it, 2026-08-21, and it is the first time a zero has been PREVENTED rather than
+diagnosed.**
+
+`check:key-change-cards` read the headword from `stem.headword`; it is `stem.words[0]`. **The
+population came back empty and `requirePopulation` aborted the run** — before any output, before any
+report, before the zero could be written down and reasoned from.
+
+**Every previous instance in this register was a zero DIAGNOSED after the fact**: R60's *"0 MATHS
+items checked"* ran green in CI for weeks; R61's absent population; R173's *"0 of 4 blueprints"*. Each
+was found by someone going back to a number that had already been believed.
+
+**This one never became a number.** The rule caught a **scope query**, which is the only thing it can
+catch — **a wrong query and a true empty produce identical output, so the only moment they are
+distinguishable is before the output exists.**
