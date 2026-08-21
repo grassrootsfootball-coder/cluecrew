@@ -14397,3 +14397,96 @@ at all**, and they need opposite actions — apply the hold, or read the cards.
 `fourteen-live-card-leaks-for-annie-7ce5cfbca49b1c50.json`, `742095d968b914ca…`. **`swift`, `tidy` and
 `timid` are among them**, so branch (b) is already answerable from what she holds; branch (a) needs
 her to say the hold was ruled.
+
+## R462 — The swift/tidy/timid contradiction: same check, different population, unqualified sentence
+
+**Both artefacts came from one query. Neither was stale and neither used a different check.**
+
+The overlap report compared her eleven held headwords against **the DRAFT-CARD leak set only** —
+`held − draftLeaks` — and printed the remainder as *"three of her held cards leak nothing."* **The set
+difference was correct. The sentence describing it was not.**
+
+**A headword absent from the DRAFT-card leak set is absent for either of two reasons: it does not
+leak, or its card is not DRAFT.** I collapsed both into the first and added *"so the hold is wider
+than the fault, which is the safe direction"* — **a reassurance built on the half of the ambiguity I
+had not checked.**
+
+**The fourteen-card file scoped by CARD STATUS instead** and found them leaking on LIVE cards. **Same
+data, same predicate, one population narrowed and the narrowing dropped from the prose.**
+
+**SHE NEARLY LIFTED THREE LEAKING CARDS ON A SENTENCE**, and that is the cost worth recording: the
+query was sound, the report was one clause short, and a clause is what a ruling is made from.
+
+## R463 — Both lookups settled, and one corrects R460
+
+**PR-05's retag LANDED.** It carries `en-vocab-not-this-word` on *"Moved in a straight line towards
+the lid."* — exactly as written — **and it still carries `en-vocab-dominant-sense` on a DIFFERENT
+option**, *"Waited about near somebody, unsure what to do."*
+
+**So R460 is wrong.** I concluded her PR-05 citation had been *"retired by her own later ruling"*. It
+was not: **PR-05 fails the both-tags query because it has never carried `en-vocab-neighbouring-sense`
+at all.** My retag touched a third option and left the dominant-sense tag untouched. **A citation that
+looked retired by a later ruling was simply about a different pair of tags** — and I diagnosed a
+mechanism where there was only a mismatch. The class R460 names may still be real; **this is no longer
+an instance of it.**
+
+**The five step-1 items carry NO duplicate option values, and neither branch of the disjunction
+holds.** On `A,B,C,D → E`: `off-by-one` is **D** (one short) and `step-repeat` is **F** (step applied
+twice). **Different letters, different mechanisms, both correctly computed.** A step of 1 does not
+collapse the two tags, because one lands short of the key and the other past it. **The concern was
+sound in form and empty in fact**, which the arithmetic settles without a reading.
+
+## R464 — Twenty redrafts written, and I overwrote her authored `chilly` with the proposal she rejected
+
+**12 written and confirmed, 8 already applied.** Six were LIVE and leaking to a child today: `ancient`,
+`benevolent`, `conceal`, `shiny`, `swift`, `timid`, plus `jovial`, `luminous`, `sturdy`, `tidy`,
+`generous`.
+
+**AND I OVERWROTE `chilly`.** The redraft file carries `proposed: "cool enough that you would want a
+coat"` — **the wording her eighteenth return explicitly overrode**, authoring *"enough to make you
+reach for your coat"* instead. I had applied her version in R419. **Writing the whole file put the
+rejected proposal back.**
+
+**RESTORED and confirmed by direct read.**
+
+**This is R431's fault committed, not avoided.** That entry records that a proposal predates the
+ruling that supersedes it, and that **file order resolves it backwards** — and then I ran a proposal
+file over the store without checking which rows a later ruling had already settled. **A batch write
+across an approved artefact does not know which of its rows have been superseded by a decision made
+after it.** The redraft file is not wrong; it is *older than two of its own rows*.
+
+**The guard that would have caught it exists and was not used**: every previous card write in this
+session read her authored wording FROM HER RETURN and refused if absent. This one read a proposals
+file and asserted nothing about provenance.
+
+## R465 — The mirror check: does the card contain a DISTRACTOR. Five, two LIVE
+
+**`jovial` is why** — card *cheerful and friendly*, key *cheerful*, distractor *friendly*. **A
+category 2 manufactured by the card rather than the item**, a class that did not exist before.
+
+**Five, of which two are LIVE:**
+
+| item | headword | card | distractor |
+|---|---|---|---|
+| `bank-vr-04-closest-meaning-17` **LIVE** | hostile | *behaving towards you as an enemy would* | **enemy** |
+| `bank-vr-04-closest-meaning-34` **LIVE** | stoic | *putting up with pain or trouble without complaining* | **pain** |
+| `gen-vr-04-closest-meaning-08` | huge | *very, very big* | **big** |
+| `gen-vr-04-closest-meaning-28` | exhausted | *so tired that you have nothing left* | **tired** |
+| `gen-vr-04-closest-meaning-24` | trivial | *so small that it hardly matters* | **small** |
+
+**Two of the five are on cards I redrafted in this session** — `hostile` and `trivial` — so **the
+redraft that closed a key leak opened a distractor leak on the same card.** `exhausted`'s is the
+`tired` distractor D1 flagged and nobody has ruled.
+
+**`jovial` no longer appears**, because its redraft replaced *cheerful and friendly* — **the instance
+that prompted the check is the one the write closed**, which is why the check has to run after the
+write rather than before it.
+
+## R466 — `en-vocab-not-this-word` is UNTESTED, not passed
+
+**All three members of its fit reading were her own assignments from the twenty-fifth return, so the
+row measured her consistency rather than the tag's fitness.** She said so herself.
+
+**Recorded as UNTESTED.** Not a defect and not a pass — **a reading whose population is entirely the
+reader's own prior decisions cannot disconfirm them.** Nothing to do but wait for the entry to acquire
+options assigned by somebody else.
