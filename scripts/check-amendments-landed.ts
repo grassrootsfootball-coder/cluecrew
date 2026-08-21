@@ -71,10 +71,11 @@ async function main() {
     'store row(s) searched': haystack.length,
   });
   console.log(
-    '\n  SCOPE: misconception childHint, item hintCore, Word definitionChild.\n' +
-      '  NOT SEARCHED: VR hint text. An amendment whose target is a VR hint reports ABSENT here and\n' +
-      '  may well have landed — out-of-scope and not-applied are indistinguishable unless the scope\n' +
-      '  is named, which is why it is named on every run.',
+    '\n  SCOPE: misconception childHint (VR entries included), item hintCore, Word definitionChild.\n' +
+      '  The earlier "VR hint text is out of scope" line was WRONG: `vr14-step-size` and\n' +
+      '  `vr-letter-series-direction` are misconception rows and were always in scope. The exclusion\n' +
+      '  was mine, and it read as a property of the store — which is the same fault as calling a\n' +
+      '  target absent when it lives in a table the WRITER, not the reader, was not touching.',
   );
 
   const byFile = new Map<string, { landed: string[]; absent: string[] }>();

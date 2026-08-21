@@ -13524,3 +13524,40 @@ twenty-fourth.** The answer held under a doubled input, which is worth more than
 
 **And the sweep still carries the bound it always had** (R60): it sees a quoted string matchable to
 the authored set, in her quotation shapes. **No further instance FOUND.**
+
+## R419 — Three of the five were never out of reach; the exclusion was mine, twice
+
+**2026-08-21. 31 of 33 landed. The three "unreachable" amendments were all reachable.**
+
+- **`vr14-step-size`** — *"Use the Alphabet Rail — count each hop out loud."* → **her wording.**
+- **`vr-letter-series-direction`** — *"…Follow the arrows."* → **her wording.**
+- **`chilly`** — Word row `definitionChild: "quite cold"` → **"enough to make you reach for your
+  coat"**, which is exactly the string her return names as being replaced.
+
+**All three CONFIRMED by direct read.**
+
+**I DECLARED THEM OUT OF REACH TWICE, ON TWO DIFFERENT WRONG GROUNDS.**
+
+**First: "VR hint text is a store the check does not search."** `vr14-step-size` is a **misconception
+row**, seeded by `generate-content.ts`. It was always in scope; the check reported it ABSENT because
+it *was* absent. **I read a true ABSENT and invented a scope gap to explain it** — the reverse of
+R417, where I read a clean string and invented a landing.
+
+**Second: "`chilly` names a target the library does not hold — a finding, not a row to invent."** The
+row exists, in `Word`. **The check searched that table; my APPLY script did not.** So the target was
+present, visible to the reader, and unreachable only to the writer — **and I reported the writer's
+blind spot as a fact about the store.**
+
+**THE SHAPE: A SCOPE CLAIM IS AN ASSERTION ABOUT AN INSTRUMENT, AND IT GETS STATED AS AN ASSERTION
+ABOUT THE WORLD.** *"Out of scope"* reads as *"the amendment has nowhere to go"*, when it means
+*"I did not look"* or *"I could not write there"* — and those three states have identical outputs.
+**Both of mine were the second kind, and both closed a row that should have stayed open.**
+
+**Two remain, and this time the reason is checkable:** *"Two people are being described. Check which
+one each detail belongs to"* appears twice (duplicate return files, one amendment) with **no target
+recoverable from its context.** She wrote it and knows which entry it amends; **reconstructing a
+reviewer's target by inference is exactly what neither store should do with her wording.** It goes
+back to her, unresolved, rather than applied to a guess.
+
+**Counted-again is not progress, and three of these were counted three times before anyone tried to
+write them.** The counting was correct every time; nothing in it was going to become an application.
