@@ -25,7 +25,16 @@ import { join } from 'node:path';
 import { requirePopulation } from './lib/population';
 
 const RETURNS = '/Users/davidb/Downloads';
-const AUTHORED = /^\s*[-*]?\s*(?:authored|Authored|replacement)\s*:\s*\*\*(.+?)\*\*/gm;
+/**
+ * **BOTH SHAPES.** The first version read only the labelled form and tracked 17 of 33 wordings — so
+ * the sweep's INPUT was under half the population while its LOGIC was sound. Those decay
+ * differently: a wrong-logic check is wrong forever, a wrong-input check is right about a smaller
+ * world and its answer moves when the input is corrected. This is a re-run of the second kind.
+ */
+const AUTHORED_SHAPES = [
+  /^\s*[-*]?\s*(?:authored|Authored|replacement)\s*:\s*\*\*(.+?)\*\*/gm,
+  /replacing\s+\*[^*]+\*\s*:\s*\*\*(.+?)\*\*/gms,
+];
 /** Shapes in which a return quotes a string as CURRENTLY IN FORCE. */
 const QUOTED_AS_LIVE = [
   /(?:hint|it|which)\s+(?:I amended\s+)?reads:\s*\*\*(.+?)\*\*/gi,
@@ -43,7 +52,12 @@ function main() {
   const authored: Array<{ text: string; file: string; when: Date }> = [];
   for (const { f, when } of files) {
     const body = readFileSync(join(RETURNS, f), 'utf8');
-    for (const m of body.matchAll(AUTHORED)) authored.push({ text: m[1].trim().replace(/\.$/, ''), file: f, when });
+    for (const re of AUTHORED_SHAPES) {
+      re.lastIndex = 0;
+      for (const m of body.matchAll(re)) {
+        authored.push({ text: m[1].replace(/\s*\n\s*/g, ' ').trim().replace(/\.$/, ''), file: f, when });
+      }
+    }
   }
 
   requirePopulation('check:reasoning-premises', {

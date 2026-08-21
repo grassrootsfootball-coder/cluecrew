@@ -13445,3 +13445,82 @@ to find out is to look before raising it.
 library hint now say nearly the same thing, so **by her own PU-08 criterion the item hint does not
 earn its place there.** SP-07 is DRAFT, so nothing turns on it today; **when it comes up for a serving
 decision the answer is the library.**
+
+## R414 — Applied largest carrier first; 28 of 33 landed; five remain and each is named
+
+**2026-08-21.** Six library entries applied, largest carrier count first, each with its before-value
+and **each asserted by reading the row back** — never with `check:amendments-landed`, which produced
+the false landing these writes correct. **6 of 6 CONFIRMED.**
+
+`en-relation-word-flipped` (28 carriers), `en-extreme-option-pull` (26, 6 LIVE),
+`en-agent-patient-reversal` (24), `en-homophone-by-sound` (12), **`en-paired-punctuation` (9 LIVE of
+9 — every carrier reachable)**, `en-evidence-vividness-bias` (2 LIVE).
+
+**28 of 33 landed. FIVE REMAIN, and none is unapplied by choice:**
+
+- **`chilly` — NO SUCH LIBRARY ENTRY.** Her amendment names a target the misconception library does
+  not hold; it is a **Word card definition**. Reported, never created: **an amendment to an entry
+  that does not exist is a finding, not a row to invent.**
+- **`vr14-step-size`** — a VR hint, in the store this check declares out of scope.
+- **`"Two people are being described…"`** — extracted with no machine-recoverable target.
+
+**Absent and counted is better than absent and unchecked** — but only just, and these have now been
+counted three times. **They need a target resolved by reading, which is the work, not the report.**
+
+## R415 — An extractor that reads one of a source's shapes reports A population, not THE population
+
+**David, 2026-08-21, and it is a shape rather than an instance.**
+
+**It reports it as a COUNT, which is indistinguishable from a measurement.** *"13 authored wordings"*
+reads as the number that exist. It was the number one regex could see, and the real figure was **33**.
+
+**THE CORRECTED FORM: a parser over an author's prose STATES WHICH SHAPES IT RECOGNISES, and a shape
+it does not recognise FAILS rather than yields nothing.** Silence on an unrecognised shape is the
+same fault as `?? []` on a failed parse (R173) — a reader that cannot parse, reporting a fact about
+the content.
+
+**And the shape carried the TARGET as well as the wording.** The inline form is
+`` - `entry-id`, replacing *old*: **new** ``: missing it lost the id too, which is why the first pass
+had wordings it could not place. **A shape is not a formatting variant; it is a different record with
+different fields.**
+
+## R416 — `includes()` for equality, inside the check built to catch unapplied decisions
+
+**David, 2026-08-21.**
+
+**A containment test cannot distinguish APPLIED from PARTLY APPLIED** — and partly applied is the
+exact state the check exists to find. Her wording sitting inside a longer stored string is what a
+half-application looks like, and `includes` calls it a landing.
+
+**The check reported a false landing in the one place a false landing is most expensive**: an absence
+gets worked, a false landing closes the row. Now exact, normalised only for the trailing full stop
+the extractor strips.
+
+## R417 — R401 withdrawn, and its cause is the shape worth keeping
+
+**A landing judged by THE ABSENCE OF A FAULT rather than by THE PRESENCE OF THE CORRECTION.** I read
+`en-apostrophe-possession`, saw **no em dash**, and concluded her amendment had landed. The store held
+the pre-amendment string she quotes as the thing being replaced.
+
+**That is the clean-input control, one level up** (R371): it proves the instrument is not over-firing
+and proves nothing about whether it works. *No dash* is consistent with her amendment having landed
+**and** with a text that never had a dash — and only comparing against **her actual wording**
+distinguishes them.
+
+**The generalisation: verify a correction by matching the corrected text, never by failing to find the
+fault it corrected.** Every fault has more than one absent state.
+
+## R418 — The sweep re-run: input wrong, not logic wrong, and the answer did not move
+
+**David, 2026-08-21: say which on the face of it, because those decay differently.**
+
+**The sweep's LOGIC was sound and its INPUT was under half the population** — it tracked 17 of 33
+wordings, carrying the same shape-blindness as R415 in a second script. **A wrong-logic check is
+wrong forever; a wrong-input check is right about a smaller world, and its answer moves when the input
+is corrected.**
+
+Corrected to both shapes: **33 of 33 tracked. The finding is unchanged — one instance, the
+twenty-fourth.** The answer held under a doubled input, which is worth more than the original run.
+
+**And the sweep still carries the bound it always had** (R60): it sees a quoted string matchable to
+the authored set, in her quotation shapes. **No further instance FOUND.**
