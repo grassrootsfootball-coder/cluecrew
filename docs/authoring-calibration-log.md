@@ -13910,3 +13910,78 @@ split that made this visible on the seven and has now made it visible on the que
 
 **A re-stage is not a crossing, and re-staging a file that never crossed changes nothing but its
 timestamp.**
+
+## R438 — The queue is a difference, not an argument: 58 crossed, 267 not, 68 hers alone
+
+**Her held manifest, 2026-08-21 — 127 files with full digests, the mirror of the staged list.**
+Diffed by VALUE, so the queue stops being two stores asserting at each other.
+
+| state | count |
+|---|---:|
+| **CROSSED** — digest on both sides | **58** |
+| **STAGED-NOT-CROSSED** | **267** |
+| **ON HER DISK, NOT STAGED HERE** | **68** |
+
+**The third column is the one no single-sided count could produce**, and it carries the finding:
+**she holds `CLAIM-LEDGER-FULL-POPULATION.md` at `7bfaf302…` — the PRE-CORRECTION ledger**, ordered
+by total-carriers-under-a-LIVE-label. `en-plausible-not-stated` sits at its head at eight times its
+true reach. **The corrected version never crossed**, so **her reading queue is ordered by the wrong
+quantity right now** — R386's three-versions-under-one-name, landing.
+
+**And her fourth state is the one both sides mis-named**: the recognition test was **crossed and
+unread for a day**, and this side called that *staged* while that side called it *missing*. **Crossed
+and unread is neither.** A manifest can say a file arrived; it cannot say it was read, and her
+manifest says so on its own face.
+
+**58 crossed of 325 staged is 18%.** The earlier hand count reported 58 as *"filename named in
+something inbound"* — the same number by a weaker method, which is luck rather than corroboration.
+
+## R439 — Her five card redrafts applied; the fifth is a leak the repair itself created
+
+**Annie's thirty-fourth return, applied 2026-08-21**, authority `0f68a1e18a42cca7…`. All five read
+from her fixed-shape amendment block and **CONFIRMED by direct read**.
+
+| card | before | after |
+|---|---|---|
+| `abundant` | *there is plenty of it* | *more of it than you could need* |
+| `exhausted` | *completely worn out* | *so tired that you have nothing left* |
+| `melancholy` | *a gentle, thoughtful sadness* | *a quiet, thoughtful kind of unhappiness* |
+| `notorious` | *famous for something bad* | *well known, and not for anything good* |
+| `vague` | *not clear or exact enough to be much use* | *said so loosely that nobody could act on it* |
+
+**`exhausted` is the one she says to look at hardest, because she made it.** She authored *worn out*
+as the key in her twentieth return; **the containment check that found thirty-two ran BEFORE her key
+landed**, so nothing caught that the card already said *completely worn out*. **The repair to the item
+created a leak on the card that serves it.**
+
+**The repair is on the CARD, not the key** — *worn out* remains the right answer for *exhausted*, and
+the card should stop saying it. **A fix that is correct in isolation can open a fault in the thing it
+sits next to, and a check that ran before the fix cannot see it.**
+
+## R440 — Why the containment check missed four of five: it was right about all of them
+
+**Not a tightening opportunity. This is the population the check DECLARED unreachable, arriving with
+names.**
+
+- `abundant` — **plenty / plentiful**: one root with a suffix, not a substring in the direction tested.
+- `melancholy` — **sadness / sad**: same.
+- `notorious` — **famous / infamous**: same, and the affix is a prefix.
+- `vague` — **not clear / unclear**: **the paraphrase band**, which no containment test reaches at all.
+
+**Only `exhausted` was a true containment case, and it was invisible for a different reason: timing.**
+
+**Four of five were correctly not found, and the check said in advance it could not find them.** The
+instrument's declared limit turned out to be exactly its real limit — **which is rarer and more useful
+than a limit discovered by failure**, and it is the argument for stating a bound rather than reporting
+a number.
+
+## R441 — `gloomy` is the third vr-04 direction fault, and not a card fault
+
+**`gloomy` takes `dismal`, which is rarer than its headword** — the same fault as `obedient` and
+`exhausted`, on a third item. **Not a card fault**, so no redraft. It **waits for the frequency signal
+with the other two** (R336), and the three move together when it lands.
+
+**And four pass thinly, recorded rather than redrafted: `huge`, `rapid`, `jubilant`, `reluctant`.**
+Each needs **one hop and no more**. They are **where the next leak appears if a key is ever changed** —
+**which is exactly what happened to `exhausted`.** Recording a thin pass is recording a prediction,
+and this one has already come true once.
