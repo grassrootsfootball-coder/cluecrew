@@ -13561,3 +13561,78 @@ back to her, unresolved, rather than applied to a guess.
 
 **Counted-again is not progress, and three of these were counted three times before anyone tried to
 write them.** The counting was correct every time; nothing in it was going to become an application.
+
+## R420 — `en-attribute-transfer` applied: the orphan had a target all along
+
+**Annie named it, 2026-08-21.** *"Two people are being described. Check which one each detail belongs
+to."* — her eighteenth return, replacing the version with the dash and the tick.
+
+**BEFORE:** *"Two people are being described — before you tick, check which one each detail belongs
+to."* **4 LIVE of 43 carriers.** CONFIRMED by direct read.
+
+**I reported it as having no machine-recoverable target and sent it back to her.** That was right as
+far as it went — reconstructing a reviewer's target by inference is what neither store should do —
+**but she could name it in a sentence, because she wrote it.** The lesson is not that I should have
+inferred: it is that **an unresolvable-by-machine target is a question for the author, asked
+immediately, not a row that waits.** It waited through three counts.
+
+**Her carrier figure and mine differ** (97 against 43) and are **not reconciled** — different nouns,
+possibly all-status against a narrower set. Recorded as unreconciled rather than averaged.
+
+## R421 — A zero carries its before-count, or it reads as evidence nothing was wrong
+
+**Annie, 2026-08-21, and it is R60 applied to TIME rather than to population.**
+
+`check:lone-letter-n` reports **0**. **She found TWO by reading, four returns apart, and the sweep
+first ran an hour after the second was repaired.** A zero with no history is indistinguishable from a
+population that never had the fault.
+
+**The check now prints its before-count on every clean run**: 2, found by reading, `ENG-003-A-SP-07`
+and `en-n-option-avoidance`, both repaired 2026-08-21 — and states plainly that **the zero is a
+confirmation rather than a discovery, and that it found neither instance.**
+
+**A check may not report a zero without saying what it counted over, and "over what" includes "since
+when".**
+
+## R422 — The two unmeasured populations: 392 strings, 0 naming a letter
+
+**Annie, 2026-08-21: measure their absence rather than assume it.** Neither carries a verdict option,
+and both are child-facing English that could name a letter.
+
+- **Case titles, narrative intros, district map blurbs in `content/`: 366 strings, 0 hits.**
+- **Case rows in the store: 26 title/intro/blurb strings, 0 hits.**
+
+**Her point about her own evidence is the reason this needed running.** She authored the Fix-It Shop
+intro and its map blurb with no N in either, **and said plainly that is evidence of what she decided,
+not of what the store holds.** After ten of thirteen amendments turned out never to have landed,
+**an author's memory of what she wrote is no longer evidence about the store** — that is the week's
+finding applied to her own testimony, by her.
+
+**And the lookup could not locate a Fix-It Shop string in either place**, which is reported rather
+than resolved: 0 hits over 392 strings is a real measurement, and "the case she named is not among
+them" is a separate fact that needs its own answer.
+
+## R423 — The two shapes are not formatting variants: one carries the target, the other does not
+
+**Annie's correction to R415, 2026-08-21.**
+
+The inline form is `` - `entry-id`, replacing *old*: **new** ``. The labelled form is
+`- authored: **new**`. **The first carries the TARGET; the second does not.**
+
+**So the instrument was reading the record with FEWER FIELDS and treating the other as noise** — and
+that is why the first pass produced wordings it could not place. **A shape is not a rendering of one
+record; it is a different record.** Reading only the poorer one loses the field that makes the rest
+actionable, which is worse than losing rows: it converts applicable amendments into orphans.
+
+**A parser over an author's prose names which forms it recognises ON EVERY RUN. The count is
+meaningless without it, and an unrecognised shape FAILS rather than yields nothing.**
+
+## R424 — Her attribution correction, recorded as she put it
+
+**Annie, 2026-08-21.** She saw the string was wrong. **The diagnosis of why the check said otherwise
+was mine.** She would rather that were recorded than be credited with it.
+
+**Recorded as she put it, and the reason it matters here specifically:** this register is the
+evidence for who decides what, and a reviewer credited with an engineering diagnosis is the same
+conflation as a machine verdict wearing a person's name (R94) — **running the other way, and just as
+corrosive, because it inflates her record with work she did not do and hides the fault in mine.**

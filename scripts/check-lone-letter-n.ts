@@ -69,7 +69,21 @@ async function main() {
 
   const hits = rows.filter((r) => LONE_N.test(r.text));
   if (hits.length === 0) {
-    console.log('\ncheck:lone-letter-n: no child-facing string names a lone letter N.');
+    /**
+     * **THE ZERO CARRIES ITS BEFORE-COUNT, OR IN A MONTH IT READS AS EVIDENCE NOTHING WAS EVER
+     * WRONG** (Annie, 2026-08-21). She found TWO by reading, four returns apart, and this sweep
+     * first ran an hour after the second was repaired. **A zero with no history is
+     * indistinguishable from a population that never had the fault** — R60's discipline applied to
+     * TIME rather than to population: a check may not report a zero without saying what it counted
+     * over, and "over what" includes "since when".
+     */
+    console.log(
+      '\ncheck:lone-letter-n: 0 child-facing strings name a lone letter N.\n' +
+        '  BEFORE-COUNT: 2, found by reading rather than by this check — `ENG-003-A-SP-07` and\n' +
+        '  `en-n-option-avoidance`, four returns apart, both repaired 2026-08-21.\n' +
+        '  This sweep first ran AFTER the second repair. **The zero is a confirmation, not a\n' +
+        '  discovery**, and it did not find either instance.',
+    );
     await prisma.$disconnect();
     return;
   }
