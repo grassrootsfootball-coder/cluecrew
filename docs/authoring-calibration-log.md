@@ -13276,3 +13276,47 @@ gate is a check that measures the same quantity the prose asserts and is read be
 **The general shape worth keeping: where a delivery states a number the store can compute, compute it
 and compare, in the act of writing rather than after.** Not a new mechanism — `check:hint-gate-state`
 already existed for a different reason — but a habit of reading the instrument before the sentence.
+
+## R405 — The seven applied with their before-values, and the trim guard was right to refuse me twice
+
+**2026-08-21.** Her unlanded amendments are **ruled decisions that never took effect**, and every day
+one sat unapplied a child met a string a reviewer had replaced. Applied, each with its before-value.
+
+**The largest: `en-plausible-not-stated`, 11 LIVE of 193 carriers.**
+`"Sounding sensible isn't enough — point to the line that proves it."` →
+**`"Sounding sensible is not enough. Find the line that proves it."`**
+
+Also `en-determiner-omitted`, `en-technique-device-confusion` (1 LIVE),
+`en-technique-intent-as-character`, `en-technique-structure-effect-blind`,
+`en-article-definiteness` (3 carriers), `en-modal-conditional-form` (3 carriers).
+
+**THE TRIM GUARD REFUSED TWICE AND WAS CORRECT BOTH TIMES.** Her wording is **one word shorter** than
+the stored text — **and a shortening is exactly what a fit-to-cap rewrite looks like** (R213). The
+guard cannot tell an approver's redraft from a machine trim by comparing strings; **only by who is
+writing**. First refusal: no declaration at all — correct, that is every ordinary write. Second: a
+declaration naming her but citing a document with **no hash**, so `isApproverRedraft` refused it as
+uncheckable.
+
+**The fix was to make the authority true rather than to weaken the guard**: the return's filename and
+its **sha256, computed from the file at write time**. R397's second-assertion rule enforced in code —
+a citation that cannot be checked is not a citation, and the guard says so by refusing it.
+
+**Three amendments remain absent and they are OUT OF THIS CHECK'S SCOPE, not unapplied by choice**:
+*"enough to make you reach for your coat"* is a **Word card definition** (`chilly`), and *"Count each
+hop along the alphabet…"* is a **VR hint**. The check searches misconception hints and item
+`hintCore`; **those two stores are not in it.** Reported as a scope gap rather than closed silently —
+the amendments are real and their targets are elsewhere.
+
+## R406 — `check:amendments-landed` is standing, and it runs on every delivery
+
+**David, 2026-08-21.** A return's authored wordings are DECISIONS, **and nothing on either side
+asserted they reached the store.** Now in CI.
+
+It reads every return's authored strings and **fails on absence**, because an unapplied amendment is
+a decision that did not take effect — not a queue, and not a fact about a human channel. **Its bound
+stays on its face** (R60): it reads the shapes her returns use, so **an amendment in running prose is
+invisible and the count is a floor** — and those are the likeliest to have been missed, since a value
+living in prose is what R25 exists to refuse.
+
+**It also names the scope it does not search** — Word cards and VR hints — which is how the three
+remaining absences read as a gap rather than as a pass.

@@ -348,6 +348,14 @@ jobs:
       - name: Reissue completion (did a described act actually complete?)
         run: pnpm check:reissue-completion
 
+      # A RETURN'S AUTHORED WORDINGS ARE DECISIONS, AND NOTHING ASSERTED THEY REACHED THE STORE.
+      # 9 of 13 never did; the most carried hint in the product served a string she had replaced,
+      # and she reasoned in a later return from her own wording as though it were in force. Whole
+      # returns were the unit that failed, not half-batches. Bound on its face: it reads the shapes
+      # her returns use, so an amendment in running prose is invisible and the count is a floor.
+      - name: Amendments landed (did her rulings reach the store?)
+        run: pnpm check:amendments-landed
+
       # AN ARTEFACT'S NAME MUST IDENTIFY ITS PAYLOAD. The misconception library shipped two
       # materially different files under one hash because the stamp was computed over a five-field
       # projection while the file carried seventeen. This recomputes each artefact's stamp from its
