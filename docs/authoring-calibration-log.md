@@ -14263,3 +14263,65 @@ saying the redrafts satisfy what the hold was for.
 not need a lift — **they need the hold she ruled to actually reach them.** She named them held; the
 store has them serving. **Carrying them "into the lift" is exactly backwards**, and it is the
 correction R454 forces: they are not held-and-harmless, they are leaking-and-live.
+
+## R456 — Two amendments applied, and the pair proves the failure was PER-AMENDMENT
+
+**Annie's thirty-seventh return, applied 2026-08-21**, authority sha256 `…`, both **CONFIRMED by
+direct read**. Her before-values are quoted verbatim including their dashes — **the dash is inside the
+string being replaced, so preserving it is what makes the match checkable.**
+
+- **`vr-letter-series-off-by-one`** (**36 LIVE**), hint: *"So close — use the alphabet line and count
+  each letter out loud."* → **"Count along the alphabet again. Land one letter at a time."**
+  Replaced in her **seventh** return. **Never landed.**
+- **`en-vocab-neighbouring-sense`** (3 LIVE), **description, not hint** — gains the clause that the
+  tag *holds only where the surrounding text fixes the sense decisively. Where it does not, the option
+  is a defensible second answer and the item is faulty rather than hard.*
+
+**THE PAIR IS THE MEASUREMENT.** `vr-letter-series-off-by-one` (seventh return) never landed;
+**`vr-letter-series-direction` carries her eighth-return replacement correctly.** Adjacent returns,
+adjacent entries in one family, **one landed and one did not.**
+
+**So the failure was PER-AMENDMENT, not per-return.** R403 concluded the unit that failed was the
+whole return — *"zero returns are PARTLY landed"* — and this pair refutes it for that period: two
+amendments a day apart on sibling entries diverged. **The per-return conclusion was true of the
+population then visible and false as a general claim**, which is R415's shape arriving in a finding
+rather than in an instrument.
+
+## R457 — Three computable queries, and her own later ruling moved one of her examples
+
+**Q1 — items carrying BOTH `en-vocab-dominant-sense` and `en-vocab-neighbouring-sense`: 16, of which
+3 are LIVE.** At most one can be right, because only one sense is the commonest, **and if the key
+holds it, neither is.** Hers to rule which have the dominant sense as their key.
+
+**She named PR-01 and PR-05. PR-01 is on the list; PR-05 is NOT** — because **her own twenty-fifth
+return retagged PR-05 to `en-vocab-not-this-word`**, so it no longer carries both. **A reviewer's
+example can be retired by her own later ruling**, and the citation survives the retirement looking
+intact.
+
+**Q2 — 36 LIVE letter-series items, all with a readable series. FIVE have a step of 1**:
+`gen-vr-09-letter-series-01`, `-10`, `-13`, `-22`, `-25`. On a step-1 series **`off-by-one` and
+`step-repeat` name the same letter**, so one distractor on each of the five is filed under an entry
+that cannot be distinguished from its sibling **on that item**. **Direction collisions: 0.**
+
+**Q3 — the three `en-vocab-not-this-word` options are exactly the three she assigned in her
+twenty-fifth return**: `ENG-001-WIW-08`, `ENG-001-WIW-20`, `ENG-028-PR-05`. **A row read for fit where
+every member is the reader's own assignment measures her consistency, not the tag's** — and she has
+said so herself, which is the only reason the verdict is worth the paper.
+
+## R458 — The family row showed no stem, so the reading was reconstruction
+
+**Her finding about my artefact, 2026-08-21.**
+
+`LEDGER-BY-FAMILY-TWO-READINGS.md` rendered *"Which letter comes next in the series?"* and **nothing
+else.** That is a template, not a stem. **The series is in `stem.series` and my renderer read
+`stem.text`, `stem.prompt`, `stem.sentence` and stopped** — three fields chosen by habit, and the
+one carrying the item's content was not among them.
+
+**So she derived the construction from the keys and the distractors, because she had to.** She
+recovered *key I step 2, off-by-one J = key+1, step-repeat K = key+step* by arithmetic on four rows —
+**work the artefact should have done, and evidence she should not have had to manufacture.**
+
+**THE RULE: the next family row carries whatever a child SEES, or the reading is reconstruction
+rather than reading.** Not the fields I expect to be there — **the rendered surface.** This is R389's
+earned-versus-inferred distinction inside my own deliverable: I inferred which fields carry the stem
+and shipped the inference to a reviewer as the stem.
