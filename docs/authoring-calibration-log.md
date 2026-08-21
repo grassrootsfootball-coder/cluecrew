@@ -13711,3 +13711,69 @@ document rather than from her.
 
 **Recorded as unexplained rather than reconciled.** A number that matches no quantity this store can
 compute is a lookup into the document that produced it, and that document is not read here.
+
+## R429 — One reader of a return, because two parsers over one format will disagree
+
+**Annie, 2026-08-21: the two regexes are the finding rather than the bug.**
+
+`check:amendments-landed` and `apply-all-unlanded` both read her returns and **disagreed about what a
+record contains** — the apply script captured the target id, the check discarded it **by
+construction**. So every inline amendment the check ever reported was reported **without a target**,
+and the disagreement made a correctly-formed amendment look like author error for three counts.
+
+**`scripts/lib/return-amendments.ts` is now the one reader, imported by both.** The shapes are
+DECLARED and **printed on every run**:
+
+```
+INLINE_WITH_TARGET: - `entry-id`, replacing *old text*: **new text**
+LABELLED:           - authored: **new text**   (no target carried)
+```
+
+**A richer record supersedes the same wording read by a poorer shape**, so an amendment carrying its
+target is never demoted to an orphan by the order the patterns happen to run in.
+
+**AND THE TARGET NOW SCOPES THE MATCH.** Comparing a wording against the whole store answers *"does
+this string exist somewhere"*; comparing it against **its own row** answers *"did this amendment
+reach its target"*. The first is the weaker question, and a wording that happened to match another
+entry would have reported a landing on the wrong row.
+
+**Re-run over the whole population: 33 wordings, 33 landed, 0 absent.** The number did not move — but
+**what it means did**: previously *these strings exist somewhere in the store*, now *each amendment is
+on the row it names*. The population was right and the property being measured was not.
+
+## R430 — The fourth population: 53 child-facing sentences hardcoded in TypeScript
+
+**Annie, 2026-08-21: the question is not those sixteen but what else is there.**
+
+**53 child-facing sentences live in `.ts`/`.tsx` under the crew surface**, across 71 files —
+**reachable by a child, invisible to every sweep this session ran**, because `content/` and the store
+are where sweeps get pointed and these are in code.
+
+| file | sentences |
+|---|---:|
+| `components/crew/engines/nvr/folding-room.tsx` | 11 |
+| `lib/crew/districts.ts` | 8 |
+| `components/crew/engines/nvr/lineup.tsx` | 7 |
+| `app/crew/debug/maths-engines/page.tsx` | 5 |
+| `lib/crew/bar-model.ts` | 4 |
+| `components/crew/play-runner.tsx` | 4 |
+| …and seven more | 14 |
+
+**These are not labels. They are teaching text**: *"The story has more quantities than your model —
+what else does it mention?"*, *"Your model has more bars than the story needs. Which one is doing no
+work?"*, *"No tools in here, Detective. Just you — which is plenty."*
+
+**Three things follow, and none is that the strings are wrong.**
+
+**They carry EM DASHES** — the fault she has been amending out of the library for a fortnight, live in
+strings no ban-list scan reaches, because `scan:vocab` reads declared file scopes and the reading-age
+lint reads the store.
+
+**They have no reviewer, no provenance, and no amendment path.** A return cannot amend them: there is
+no id to name and no row to write. **Her whole amendment mechanism — authored wording, target,
+landing check — has no purchase on a third of the child-facing sentences in the product.**
+
+**And the map blurbs found this population by accident.** She asked what a child SEES; the answer was
+in code; and the question *"what else is there"* turned sixteen strings into fifty-three. **Reported,
+not repaired — the scope decision is hers and David's, and authoring a governance rule for
+fifty-three unreviewed child-facing strings is not a repair.**

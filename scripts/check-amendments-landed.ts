@@ -16,6 +16,7 @@
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { prisma } from '../packages/db/src/index';
+import { describeShapes, readAmendments } from './lib/return-amendments';
 import { requirePopulation } from './lib/population';
 
 const RETURNS = '/Users/davidb/Downloads';
@@ -30,24 +31,13 @@ const RETURNS = '/Users/davidb/Downloads';
  * **A check that cannot see an amendment reports the return as clean**, which is worse than
  * reporting it missing: an absence gets worked and a false landing closes the row.
  */
-const AUTHORED_SHAPES = [
-  /^\s*[-*]?\s*(?:authored|Authored|replacement)\s*:\s*\*\*(.+?)\*\*/gm,
-  /replacing\s+\*[^*]+\*\s*:\s*\*\*(.+?)\*\*/gms,
-];
+// ONE READER (R429). This script and `apply-all-unlanded` import the same parser, so they cannot
+// disagree about what a record contains — which is what orphaned `en-attribute-transfer`.
 
 async function main() {
-  const files = readdirSync(RETURNS).filter((f) => /^annie-.*return.*\.md$/.test(f)).sort();
-  const found: Array<{ file: string; text: string }> = [];
-  for (const f of files) {
-    const body = readFileSync(join(RETURNS, f), 'utf8');
-    for (const re of AUTHORED_SHAPES) {
-      re.lastIndex = 0;
-      for (const m of body.matchAll(re)) {
-        const text = m[1].replace(/\s*\n\s*/g, ' ').trim().replace(/\.$/, '');
-        if (!found.some((x) => x.file === f && x.text === text)) found.push({ file: f, text });
-      }
-    }
-  }
+  const { amendments, files } = readAmendments(RETURNS);
+  const found = amendments.map((a) => ({ file: a.file, text: a.authored, targetId: a.targetId }));
+  console.log(`  SHAPES READ:\n${describeShapes()}`);
 
   const lib = await prisma.misconception.findMany({ select: { id: true, childHint: true } });
   const items = await prisma.item.findMany({ select: { id: true, status: true, explanation: true } });
@@ -86,7 +76,14 @@ async function main() {
       * Normalised for the trailing full stop the extractor strips, and for nothing else.
       */
     const norm = (s: string) => s.trim().replace(/\.$/, '');
-    const hit = haystack.find((h) => norm(h.text) === norm(a.text));
+    /**
+      * **THE TARGET IS USED WHERE THE SHAPE CARRIES ONE.** Matching by wording alone across the
+      * whole store answers "does this string exist somewhere", which is a weaker question than
+      * "did this amendment reach ITS row" — and a wording that happens to match another entry
+      * would report a landing on the wrong row.
+      */
+    const scoped = a.targetId ? haystack.filter((h) => h.where.endsWith(`:${a.targetId}`)) : haystack;
+    const hit = scoped.find((h) => norm(h.text) === norm(a.text));
     const e = byFile.get(a.file) ?? { landed: [], absent: [] };
     (hit ? e.landed : e.absent).push(a.text);
     byFile.set(a.file, e);
