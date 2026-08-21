@@ -14891,3 +14891,72 @@ store. Nothing in the output distinguishes them; **only the derivation does.**
 a claim about the data that happens to hold; an assert read off the mechanism is a claim about what
 the code can produce. **The first is a description wearing an invariant's clothes**, and it is
 indistinguishable from the second until the day the data moves.
+
+## R491 — The write paths cut, and the sentence sits beside the act
+
+**Cut 2026-08-21**: `import-reissued-items.ts` and `import-reissued-six.ts` no longer write from
+`REISSUESIXITEMS.json`. Both report; neither applies. **A snapshot is evidence, not a source** (R484).
+
+**AND THE SENTENCE IS ON THE RECORD BESIDE THE ACT, IN BOTH FILES: this addresses a smaller risk than
+the one that already fired.** The file that overwrote her `chilly` wording had **no standing reader
+at all** — it was read by hand, in a one-off script written and deleted in the same minute. **Cutting
+declared readers does not reach that case.**
+
+**Her reason for insisting: a repair that fixes the neighbouring case and READS AS fixing THE case is
+worse than no repair, and this one is only safe because that sentence sits beside it.** Without it,
+the register would show a write path closed on the file class that caused the harm — and it is not
+that class.
+
+**AND THE OTHER TWO WERE MISCLASSIFIED AGAIN.** `comprehension-library-current.json` and
+`eng028-walk-repairs-…json` are **our own OUTBOUND artefacts** — one written by
+`export-comprehension-library.ts` and freshness-checked, one read from `content/exports/`. **Neither
+is an inbound snapshot.** They were in the population because my scan matched filenames without
+asking which direction the file travelled.
+
+**So R479's seven became three (R489) and is now ONE.** Three narrowings, each one my own
+classification error, and **each was reported as a measurement before it was corrected.**
+
+## R492 — The asserts row, recorded in the claim ledger and NOT built
+
+**Population: every assert in both stores.** The claim is the **invariant**; the text it is a claim
+about is the **mechanism**; the comparison is **reading one against the other**.
+
+**Recorded now so it is not discovered in a month as a new kind, because it is not one.** It is
+R349's class — a claim about a text, checkable only by reading both — with code as the text. **The
+paraphrase band, the pointing band and the asserts row are three faces of one property**, and naming
+the third before it is met is cheaper than meeting it and naming it again.
+
+**And the row's own property, hers: AN ASSERT SHOULD SAY HOW ITS INVARIANT WAS DERIVED** — from the
+MECHANISM or from the OUTCOMES. **A check that cannot say is in the first class until somebody reads
+the code**, which makes provenance the field that decides whether the row needs a reading at all.
+
+## R493 — When the distractor class hits zero, both clauses go in one sentence
+
+**Her instruction, recorded BEFORE the closure so it cannot ship without its second half.**
+
+**Clause one: it closes on CONTAINMENT, which is what the gate tests.**
+
+**Clause two: the POINTING band has no instrument, and exactly TWO cases are ruled** — `stoic` by her
+own test, `hostile` by replacing the card rather than judging it. **Every other card in the store is
+unread on that property.**
+
+**Closed on what a machine can see, unopened on what a reader must.**
+
+**It is the thirty-two and the third band again** (R440), and a zero shipped without the second clause
+**will be read as complete** — which is the specific failure, not a general caution. The first clause
+is true and the second is what makes it not misleading.
+
+## R494 — One measurement and two coincidences: the prediction was not tested
+
+**Her correction on the four, and it stands as the record.**
+
+All four passed on every item. **But only `hostile` was authored against complete information** — she
+had both option sets after the previous refusal. **`exhausted`, `huge` and `trivial` were authored
+against one set each, and the second set happened not to collide.**
+
+**So the run was ONE MEASUREMENT AND TWO COINCIDENCES**, and her prediction that at least one would
+come back **was not tested.** A clean result from a partial input is not evidence the input was
+sufficient.
+
+**The permanent shape change (R486) is what makes the NEXT result mean something** — and this entry
+exists so the next clean run is not read as the second of two, when it will be the first.

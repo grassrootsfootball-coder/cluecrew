@@ -13,7 +13,18 @@ import { checkItemChildFacing, isBlocking } from '../packages/core/src/index';
 import { prisma } from '../packages/db/src/index';
 
 const SOURCE = '/Users/davidb/Downloads/REISSUESIXITEMS.json';
-const APPLY = process.argv.includes('--apply');
+/**
+ * **THE WRITE PATH IS CUT (R491). This reads a SNAPSHOT, and a snapshot is EVIDENCE, not a source**
+ * (R484). It may report what the file names and what the store holds; it may not write from it,
+ * because a file cannot say which of its rows a later ruling has settled.
+ *
+ * **AND THIS ADDRESSES A SMALLER RISK THAN THE ONE THAT ALREADY FIRED.** The file that overwrote her
+ * `chilly` wording had NO standing reader at all — it was read by hand, in a one-off script written
+ * and deleted in the same minute. **Cutting a declared reader does not reach that**, and a repair
+ * that fixes the neighbouring case while reading as fixing THE case is worse than no repair. This
+ * one is only safe because that sentence sits beside it.
+ */
+const APPLY = false; // cut: see above. Was `process.argv.includes('--apply')`.
 
 /** Cowork's spec: sha256 over each ITEM object, `sort_keys=True separators=(',',':')`, UTF-8. */
 function canonical(value: unknown): string {

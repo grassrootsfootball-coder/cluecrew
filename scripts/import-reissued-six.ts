@@ -64,7 +64,20 @@ async function main() {
   console.log(`reissued ${rows.length} · WRITABLE ${writable.length} · held ${held.length}`);
   for (const h of held) console.log(`  ✗ ${h}`);
 
-  if (writable.length === 0) { await prisma.$disconnect(); return; }
+  /**
+   * **THE WRITE PATH IS CUT (R491).** This reads a SNAPSHOT, and a snapshot is EVIDENCE (R484): it
+   * may report what the file names against what the store holds, never write from it, because a
+   * file cannot say which of its rows a later ruling has settled.
+   *
+   * **THIS ADDRESSES A SMALLER RISK THAN THE ONE THAT ALREADY FIRED.** The file that overwrote her
+   * `chilly` wording had no standing reader — it was read by hand in a script written and deleted
+   * in one minute. Cutting declared readers does not reach that, and **a repair that fixes the
+   * neighbouring case while reading as fixing THE case is worse than no repair.**
+   */
+  console.log('\n  WRITE PATH CUT — this reports only. A snapshot is evidence, not a source (R484).');
+  await prisma.$disconnect();
+  return;
+  // eslint-disable-next-line no-unreachable
   await prisma.$transaction(writable.map(({ id, it }) => prisma.item.create({
     data: {
       id, questionTypeId: String(it.questionTypeId), difficultyTier: Number(it.difficultyTier ?? 3),
