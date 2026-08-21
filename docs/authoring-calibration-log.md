@@ -14210,3 +14210,56 @@ was found by someone going back to a number that had already been believed.
 **This one never became a number.** The rule caught a **scope query**, which is the only thing it can
 catch — **a wrong query and a true empty produce identical output, so the only moment they are
 distinguishable is before the output exists.**
+
+## R454 — The fourteen LIVE-card leaks staged; and `swift`, `tidy`, `timid` invert my last report
+
+**Staged: `fourteen-live-card-leaks-for-annie-7ce5cfbca49b1c50.json`, `742095d968b914ca…`.** Fourteen
+rows in the recognition-test shape — headword, card status, card text, key, distractors, her standard.
+**No flagged-first split**, and the file says why: all fourteen carry the same fault shape, found by
+the same comparison, so ordering by headword is the only ordering that means anything here.
+
+**AND THREE OF THEM CORRECT WHAT I REPORTED LAST TURN.** I said *"three of her held cards leak
+nothing — `swift`, `tidy`, `timid` — so the hold is wider than the fault."* **That is wrong in both
+halves.**
+
+| headword | card status | card text | key |
+|---|---|---|---|
+| `swift` | **LIVE** | *very fast* | fast |
+| `tidy` | **LIVE** | *neat, with everything in its place* | neat |
+| `timid` | **LIVE** | *shy and easily frightened* | shy |
+
+**They leak, and their cards are LIVE.** Her eighteenth-return list names eleven headwords; **eight
+have DRAFT cards and three do not.** So the hold she ruled reached eight of eleven, and **three cards
+she named are still serving with the key inside the card text.**
+
+**My error was reading "in her held list" as "held in the store".** I derived the no-leak claim from a
+set difference between her list and the DRAFT-card leak set — and a headword absent from the
+DRAFT-card set can be absent because it does not leak **or because its card is not DRAFT.** Two states,
+one absence, and I named the wrong one.
+
+**The safe-direction reading is therefore also wrong: the hold is NARROWER than the fault, not wider.**
+Three leaking cards are LIVE. That is the unsafe direction, and I reported its opposite with an
+argument for why it was fine.
+
+## R455 — The write and the hold-lift are two acts, and only one of them is mine
+
+**The fourteen on held cards: eight headwords, redrafts already approved in her eighteenth return.**
+
+**THE WRITE** is one act and mechanical: apply the eight approved redrafts to their `definitionChild`
+fields, read from her return with its digest as authority, each asserted by reading the row back —
+the same path as the five cards in R439, which ran clean. **The card texts above are the pre-redraft
+values, so the write has somewhere to land and the leak closes with it.**
+
+**THE HOLD-LIFT is a separate act and it is HERS.** A hold is a reviewer state; lifting it is a
+judgement that the reason for the hold is gone. **Writing the redraft removes the fault; it does not
+remove the hold, and nothing here should treat one as implying the other** — that is the two-way
+editing line in a different field, and a store that lifts its own holds when it thinks it has fixed
+the cause has no hold mechanism at all.
+
+**So: two acts, in order, with the second not mine.** The write can proceed now. The lift waits on her
+saying the redrafts satisfy what the hold was for.
+
+**And the three LIVE ones are a THIRD act, in the opposite direction.** `swift`, `tidy`, `timid` do
+not need a lift — **they need the hold she ruled to actually reach them.** She named them held; the
+store has them serving. **Carrying them "into the lift" is exactly backwards**, and it is the
+correction R454 forces: they are not held-and-harmless, they are leaking-and-live.
