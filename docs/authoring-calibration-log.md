@@ -14325,3 +14325,75 @@ recovered *key I step 2, off-by-one J = key+1, step-repeat K = key+step* by arit
 rather than reading.** Not the fields I expect to be there — **the rendered surface.** This is R389's
 earned-versus-inferred distinction inside my own deliverable: I inferred which fields carry the stem
 and shipped the inference to a reviewer as the stem.
+
+## R459 — R403's per-return conclusion, corrected on the entry with the population that produced it
+
+**Overturned by R456, and recorded here rather than folded into a query.**
+
+**R403 concluded that the unit which failed was the WHOLE RETURN** — *"zero returns are PARTLY
+landed"*. **That was drawn from 13 visible authored wordings against 33 real ones** (R410: the
+extractor read one of two shapes). **A conclusion about whether returns land partially, drawn from a
+population in which 20 of 33 amendments were invisible, could not have found a partial landing.**
+
+**The refutation is a sibling pair**: `vr-letter-series-off-by-one` (seventh return) never landed;
+`vr-letter-series-direction` (eighth return) landed correctly. **Adjacent returns, adjacent entries in
+one family, opposite outcomes.** The failure was **per-amendment**.
+
+**A RULE DRAWN FROM A PARTIAL POPULATION READS AS A MEASUREMENT FOREVER OTHERWISE.** R403 states a
+figure (13), a finding (zero partial), and a conclusion (the return is the unit) — and **nothing in
+that sequence reveals that the first number was 40% of the real one.** The correction has to sit on
+the entry, with both population sizes, or the next reader takes the conclusion and not the
+denominator.
+
+## R460 — A citation outliving the ruling that retired it, and no instrument on either side
+
+**Annie named PR-01 and PR-05 as the two items carrying both a dominant-sense and a
+neighbouring-sense distractor. PR-01 is on the list; PR-05 is not** — because **her own twenty-fifth
+return retagged PR-05 to `en-vocab-not-this-word`.**
+
+**Her citation was correct when written and was retired by her own later decision.** Nothing links
+them: the retag record does not know which citations relied on the old tag, and the citation does not
+know it has been superseded. **Both artefacts are internally consistent and jointly wrong.**
+
+**NEITHER STORE HAS AN INSTRUMENT FOR THIS.** `check:amendments-landed` asks whether a decision
+reached the store. `check:reasoning-premises` asks whether a return reasoned from a string that was
+never in it. **Neither asks whether a still-true-looking citation was invalidated by a LATER ruling of
+the same author** — and the shape is worse than a stale premise because **the citing document needs no
+correction at all**: it was right, and something moved underneath it.
+
+**Recorded as a class with no instrument**, which is the honest state. The only thing that caught this
+one was running her query rather than accepting her example.
+
+## R461 — The eight redrafts written; the hold untouched; and what a hold that reaches nothing is doing
+
+**Written 2026-08-21** from `card-redrafts-for-annie-9f844232ca66815f.json`, authority
+`f326808929a44690…`, **all eight CONFIRMED by direct read** — `amend`, `amiable`, `bold`, `genuine`,
+`hollow`, `hostile`, `transparent`, `trivial`. **Every card is STILL DRAFT: the write did not touch
+the hold**, which is R455's two-acts line executed rather than asserted.
+
+**`check:key-change-cards` now reports 6, down from 28.**
+
+**AND THE THREE THAT NEED THE HOLD TO REACH THEM: the phrase covers two states and only she can rule
+which applies.**
+
+`swift`, `tidy`, `timid` are named in her eighteenth-return held list. **Their cards are LIVE and they
+leak.** So either:
+
+**(a) THE HOLD WAS RULED AND NEVER APPLIED.** She decided eleven; eight were written to DRAFT and
+three were not. Then the store has been serving three cards a reviewer withdrew, and **the gap is an
+unexecuted decision** — the same class as the twenty-three amendments that never landed, in a status
+column instead of a text field.
+
+**(b) THE HOLD WAS NEVER RULED FOR THEM.** They appear in a sentence listing candidates rather than in
+a decision, and eight of eleven being DRAFT is a coincidence of two overlapping sets. Then nothing is
+outstanding and **the three are simply leaking LIVE cards awaiting her verdict, exactly like the other
+eleven in the fourteen.**
+
+**The store cannot distinguish these**, because a card that was never held and a card whose hold was
+never applied are both LIVE with no record either way. **(a) is an unexecuted ruling; (b) is no ruling
+at all**, and they need opposite actions — apply the hold, or read the cards.
+
+**The fourteen LIVE-card rows are staged for that reading**:
+`fourteen-live-card-leaks-for-annie-7ce5cfbca49b1c50.json`, `742095d968b914ca…`. **`swift`, `tidy` and
+`timid` are among them**, so branch (b) is already answerable from what she holds; branch (a) needs
+her to say the hold was ruled.
