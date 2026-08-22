@@ -15800,3 +15800,105 @@ the head of a fix order she had been asked to act on.
 
 **Twenty-one artefacts carry the option set. Ten do not** — six key-only, four sibling-only and all
 four of those maths.
+
+## R539 — Her hint stands; mine differed and my reasoning was wrong
+
+**`en-unstressed-medial-vowel` is written with HER hint from the fifty-third block**, authority
+carrying that return's digest, **CONFIRMED by direct read.** `SP-08` retagged, confirmed.
+
+> **A quiet middle vowel is still a letter. Say the word in parts and choose it.**
+
+**It differs from my recommendation, and it differs in the direction I argued against.** I wrote
+*"Your ear will not help here. Picture the word written down."* and defended it on the grounds that
+**none of my drafts sounded it out, which I called the point of the split.**
+
+**Hers says to say the word in parts.** So the split is not sound-versus-sight — **it is which sound
+move**: the suffix hint shifts stress to a family word, and hers breaks the word into parts, **which
+is the spelling pattern arriving through the ear rather than instead of it.**
+
+**I had the ruling right and the reason wrong**, and her own ground is better than mine: she overruled
+her third-return widening **by citing a ruling she made four returns after it**, on
+`en-spelling-form-lookalike` — *a child cannot separate them by saying them aloud, which is exactly why
+the remediation differs and why this is a split rather than a widen.*
+
+**And the entry id is hers too**: `en-unstressed-medial-vowel`, not my `en-mid-word-unstressed-vowel`.
+
+## R540 — A template is the set it can produce, and I invented a member of one
+
+**Fourth home for the rule**: an option needs its key and siblings, a card needs every item it serves,
+a label needs the element it names, **a template needs its values.**
+
+**AND MY RENDERED EXAMPLE WAS A VALUE THAT DOES NOT EXIST.** I wrote *"Streak lantern: lit"*. The union
+is `'alive' | 'rekindled'`. **There is no `lit`** — I invented a plausible member while demonstrating a
+set I had not read, which is the fault of approving one member, committed inside the sending meant to
+show it.
+
+**The two closed sets, complete:**
+- `pose.tag` — **5**: celebrating, curious, pointing, thinking, waiting. **The set is not uniform in
+  kind**: *curious* and *thinking* describe a friend, *pointing* and *waiting* describe what a drawing
+  is doing.
+- `streak.state` — **2**: alive, rekindled.
+
+**The open sets are bounded by data**: 301 headwords for the two card labels, per-item labels for the
+data desk, four shapes for the bar (singular/plural × mystery), and four numeric frames.
+
+**Two refusals on their face, recorded:** *Streak lantern: alive* is **machine syntax spoken aloud** —
+a field name, a colon, a value — where a label is a sentence somebody says. And *hover definition* has
+**no verb, no article, and names an act she cannot perform**, since there is no hover on a phone: **the
+circle-and-tick fault in the ear**, spoken to the child least able to see what the surface offers.
+
+## R541 — `check-child-surface-scope` rescoped, and modality is declared
+
+**Her ruling: a scan named for a surface either covers it or is renamed, because a NAME THAT ASSERTS A
+SCOPE IT DOES NOT HAVE RETIRES THE QUESTION.** Nobody audits the coverage of a thing called *every
+surface a child reads*.
+
+**Rescoped in place with the gap stated**: it covered what a child READS and never what a child HEARS.
+
+**Third time this fortnight a word has carried more than the field behind it** — `ratified` meaning
+length-ratified (R500), `LIVE` meaning three things (R184), and now a scan title meaning one modality.
+
+**Every child-facing scan declares its modality**, because modality is the free dimension — exactly as
+route was inside her specification (R531) and direction and format inside a match (R517).
+
+## R542 — The four sibling-only maths artefacts show no option at all
+
+**Fifth misclassification.** `export-maths-executor-coverage`, `export-maths-gap-families`,
+`export-maths-misconceptions`, `export-nvr-hints-to-reword` — **zero option-value references between
+them.** They render distractor **counts** and families. My detector matched the word *distractor*.
+
+**So the ten is six, and all six are key-only** — `export-cowork-workorder` (never staged),
+`export-eng028-walk-repairs`, `export-fifteen-headwords-for-annie`, `export-vr07-vr11-new`,
+`export-walk-ten-for-annie`, `export-walk-vr-ten`.
+
+**Her ordering ruling is unaffected and now moot**: with a key and no siblings she can judge once the
+set arrives; with siblings and no key a wrong guess **inverts every verdict on that item**. **There are
+no sibling-only artefacts** — so the dangerous class is empty and the six are the safe kind.
+
+**And her reading of why all four sat in maths stands even though the four dissolved.** No reviewer, no
+approval field until this week, no declaration until yesterday — **the same fact twice rather than a
+coincidence** — and it is why maths artefacts were the ones my detector could misread without anyone
+noticing.
+
+## R543 — Every unverified population is an UPPER BOUND, not an estimate
+
+**Her finding, and it is a direction rather than modesty about counting.**
+
+**The inflation that puts errors at the head of an ordering also puts them in the sum.**
+
+| population | as first reported | after verification |
+|---|---:|---:|
+| non-compliant artefacts | 22 | 12 → **10 → 6** |
+| still-read snapshots | 7 | 3 → **1** |
+| `en-plausible-not-stated` carriers | 209 | **27** |
+| `en-attribute-transfer` carriers | 97 | **43** |
+| scans with risky patterns | 8 | **5** |
+| risky patterns | 44 | **14** |
+| vowel-entry carriers | 8 | **3** |
+
+**Every one shrank. None has ever grown.**
+
+**The mechanism is that a pattern which over-matches produces both the wrong head and the wrong
+total**, and the head gets corrected because somebody acts on it while the total is only ever quoted.
+**So a verified count is a floor and an unverified one is a ceiling**, and the gap between them is
+whatever the pattern could not distinguish.

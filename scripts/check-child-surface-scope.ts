@@ -1,4 +1,18 @@
 /**
+ * EVERY SURFACE A CHILD *READS* — AND THE NAME IS THE FINDING (Annie, 2026-08-21 — R541).
+ *
+ * **RESCOPED, NOT RENAMED-AWAY.** This covered surfaces a child READS. It never covered what a child
+ * HEARS: an aria-label reached the ear and no scan in the store read an attribute except
+ * `check:no-review-furniture`, whose pattern missed every interpolated one.
+ *
+ * **A name that asserts a scope it does not have RETIRES THE QUESTION** — nobody audits the coverage
+ * of a thing called *every surface a child reads*. Third time this fortnight a word has carried more
+ * than the field behind it: `ratified` meaning length-ratified (R500), `LIVE` meaning three things
+ * (R184), and now a scan title meaning one modality.
+ *
+ * **MODALITY IS DECLARED, because it is the free dimension** — exactly as route was inside her
+ * specification (R531) and direction and format were inside a match (R517).
+ *
  * EVERY SURFACE A CHILD READS, AND WHICH SCANNER COVERS IT — Annie's list, 2026-08-19.
  *
  * **THREE SCOPE FINDINGS IN ONE WEEK, ALL FOUND THE SAME WAY.** The walk scripts (unreachable, so
