@@ -17599,3 +17599,28 @@ gap at 23). Its content is the ban-list scope ruling, read by the amendment read
 touching `stream-a-02` are read-only exporters, and the passage file's last commit (76fb9c7, 11:57
 today) predates this thread. She reported it crossed; Cowork's inbound log is empty; **this disk
 confirms her — the file exists here with a digest she can verify.**
+
+## R622 — PR-04's half emitted; the package's writes verified and re-provenanced; the reference set re-cut
+
+**ITEM 1.** `pr04-serving-row-ae3b7410cd656e08.json`, `fbb08f6b…ceda4` — every field verbatim with
+its read address. This store serves: stem *"Look at lines 13 to 15. Why was Priya reaching into the
+nettles?"*, hintCore *"The humming came after, not before."*, `_previousHintCore` **null** — no stamp,
+consistent with never having received the 16 August rewrite. **One observation, no conclusion**: the
+bank's ruling describes the replacement stem as carrying the FIRST reach, and this store's stem does
+not — suggestive that the stem move was missed along with the hint move, and the bank's half decides.
+The item is LIVE and a stem serves to every child.
+
+**ITEM 2.** The contraction entry and the B7 retag were already rows here (the earlier relay);
+the package's field digests were verified over THIS store's bytes — `descriptionSha256 bb5fcaba…`,
+`childHintSha256 3a0da907…`, both matching, so the row's text is character-identical to what she
+approved from the draft `7a31b669…`. The row's provenance now carries the package's authority
+(her fifteenth return, `6f7fdd87…`; text from the draft; carried by `5d6e9fdf…`, delivery 101),
+prior citation preserved. Read back: `Youre` → `en-contraction-apostrophe` (ACTIVE) → serves
+*"Two words squeezed into one leave letters out…"*. **B7 is DRAFT — no child reaches the row.**
+
+**ITEM 3.** `served-wordings-english-6497c4f2598df0bb.json`, `095cd38e…fd417` — 72 rows against the
+current library: wrong-scope carries the seventy-eighth's wording, the contraction entry is a row.
+**And the third wrong-file glob of this session preceded it**: `sorted(glob)[-1]` picked the OLD
+emission (`c…` sorts after `6…`), which printed the pre-amendment wrong-scope string as "now" —
+caught because the store was read beside it and the two disagreed (R599's re-run discipline). The
+superseded emission is PRUNED from both directories so no glob can find it again.
