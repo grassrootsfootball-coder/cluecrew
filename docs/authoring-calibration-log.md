@@ -15944,3 +15944,77 @@ bit* to *Close* is the only signal the walk has ended.
 **No verdict from here on whether this is ten strings or a fourth review scope. She cannot tell that
 from where she is, and neither can anyone else** — which is why the two transcripts are the whole
 delivery.
+
+## R546 — Line 3 does not contain the sentence, and the preview is the repair
+
+**Her question, answered in one line: NO.** Transcript line 3 is *"The sentence, in four parts. Choose
+the part with the mistake."* — **a description of the sentence, not the sentence.**
+
+**So my commentary was wrong.** I wrote that the sentence is *"announced twice: once as the group's
+name, then segment by segment"*. **It is announced once**, as four button labels. **With the preview
+`aria-hidden`, a child never hears the sentence as continuous prose at any width.**
+
+**And the preview's own comment gave the false reason**: *"a screen reader already receives the
+sentence once, through the group below."* **It does not.** The group's name describes the sentence; the
+buttons carry its pieces.
+
+**HER RULING: THE PREVIEW IS NOT DECORATION, IT IS THE REPAIR.** It exists because below 600px the
+segments cannot read inline — **the same deficit exists in the ear at every width**, and the element
+that fixes it was hidden from the only reader who always has it. `aria-hidden` removed.
+
+## R547 — Focus moves to the sentence, because the sentence is the content
+
+**Applied.** Each tap added a paragraph above the button and announced nothing; a child heard no change
+until she moved focus back up herself.
+
+**Not a live region.** The newest sentence takes focus with `tabIndex={-1}` — programmatic focus
+without entering the tab order, so a child tabbing through still meets only the button.
+
+**Her reason is the shape: the sentence is the CONTENT and the button is the MECHANISM.** Focus goes to
+the content, **and then the ending is a PLACE she arrives at rather than a label changing under her
+focus.** A live region would have announced the new text while leaving her standing on a button whose
+name had silently changed.
+
+## R548 — The persona arrived undecided, in the quietest possible place
+
+***Walk this one with me* is a first person in an accessible name.** She refused the persona in the
+Daily Loop copy and ruled it a product decision to be taken deliberately rather than inside a mode fix.
+
+**It was ruled nowhere.** It appears in no return except the one flagging it, in no register entry, and
+**it entered in commit `7dffe51` — mine — when I built the panel.** I introduced a refused persona into
+the first thing a child using a screen reader hears from that surface.
+
+**REMOVED, NOT REWORDED.** The only other candidate string, `'Walk through it with me'`, **carries the
+same first person**, so there is no approved non-persona name to fall back to — **and authoring one
+here would be the same act again.** The `role="group"` and its name are gone; the paragraphs read as
+paragraphs, and a name can be added when one is authored.
+
+## R549 — Where a visual distinction carries meaning, the same meaning is carried in structure or words
+
+**Her general form, recorded above the four repairs.** **Not the same appearance — the same MEANING.**
+
+The errorspot verdict is the case: a pill on its own line, and the code says *"the layout says
+'different kind of thing' so no sentence has to."* **The structure already carries it** — the verdict
+sits outside the `role="group"`, so a boundary is announced. **Checked rather than changed.** The
+design was right and only its comment assumed a modality.
+
+**The rule refuses two wrong repairs.** Reproducing the appearance in words — *"and separately, a fifth
+option"* — restates the layout rather than its meaning. And lengthening the button's label restates
+what the stem already said. **Structure carries a boundary better than any sentence, and it was already
+there.**
+
+## R550 — Not every hidden element needs its label written as content
+
+**What the lantern taught, and it is the opposite of the mascot's repair.**
+
+**Some need the label REMOVED so the content can speak.** `role="img"` suppressed *"Lantern's still
+lit."* — a sentence already written, already approved, sitting immediately beside it. **The repair was
+deletion, and the content was never missing.**
+
+**The mascot needed the same deletion for the opposite reason**: there was no content, and the label
+was manufacturing some.
+
+**So `aria-hidden` and a removed label look identical in the diff and mean opposite things.** One says
+*this element has nothing to say*; the other says *this element's children are already saying it.*
+**A rule of the form "hidden elements need labels" produces the first repair correctly and the second
+one backwards.**

@@ -19,7 +19,7 @@
  */
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 interface WalkContent {
   itemId: string;
@@ -31,6 +31,12 @@ interface WalkContent {
 export function WalkPanel({ itemId, childId, onDone }: { itemId: string; childId: string; onDone: () => void }) {
   const [content, setContent] = useState<WalkContent | null>(null);
   const [shown, setShown] = useState(1);
+  /**
+   * Focus the newest revealed sentence (R547). `-1` so it takes focus programmatically without
+   * entering the tab order — a child tabbing through the panel still meets only the button.
+   */
+  const latest = useRef<HTMLParagraphElement>(null);
+  useEffect(() => { latest.current?.focus(); }, [shown]);
   const [failed, setFailed] = useState(false);
 
   useEffect(() => {
@@ -63,9 +69,36 @@ export function WalkPanel({ itemId, childId, onDone }: { itemId: string; childId
 
   const all = shown >= content.sentences.length;
   return (
-    <div className="crew-replay" role="group" aria-label="Walk this one with me" data-testid="walk-panel">
+    /*
+     * **THE GROUP NAME IS REMOVED, NOT REWORDED** (Annie, 2026-08-21 — R548). *Walk this one with
+     * me* is a FIRST PERSON in an accessible name — the persona she refused in the Daily Loop copy
+     * and ruled should be taken deliberately rather than inside a mode fix. **It was taken inside an
+     * accessible name**, which is the quietest possible place for it and the first thing a child
+     * using a screen reader hears from this panel.
+     *
+     * It was ruled nowhere. It entered in commit `7dffe51`, mine, when this panel was built.
+     * **The only other candidate string, `'Walk through it with me'`, carries the same first
+     * person**, so there is no approved non-persona name to fall back to — and authoring one here
+     * would be the same act again. The group and its name are removed; the paragraphs read as
+     * paragraphs, and a name can be added when one is authored.
+     */
+    <div className="crew-replay" data-testid="walk-panel">
+      {/*
+        **FOCUS MOVES TO THE NEW SENTENCE; NO LIVE REGION** (Annie, 2026-08-21 — R547). Each tap
+        added a paragraph ABOVE the button and announced nothing, so a child heard no change until
+        she moved focus back up herself. **The sentence is the content and the button is the
+        mechanism** — so focus goes to the content, and the ending becomes A PLACE she arrives at
+        rather than a label changing under her focus.
+      */}
       {content.sentences.slice(0, shown).map((line, i) => (
-        <p key={i} style={{ margin: '0.35rem 0' }}>{line}</p>
+        <p
+          key={i}
+          ref={i === shown - 1 ? latest : undefined}
+          tabIndex={i === shown - 1 ? -1 : undefined}
+          style={{ margin: '0.35rem 0' }}
+        >
+          {line}
+        </p>
       ))}
       {/*
         **"GOT IT" WAS THE WRONG BUTTON AND IT IS RULED OUT** (Annie, 2026-08-19 — R310). A child who

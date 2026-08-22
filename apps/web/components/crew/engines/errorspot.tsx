@@ -89,13 +89,19 @@ export default function ErrorSpotEngine({ stem, options, selected, onSelect, out
         in crew.css, and none survives the 48px target — so the ROWS carry the choosing and THIS
         carries the reading: the sentence as continuous read-only prose, authored order (safe since
         R192 serves segments unshuffled). Hidden at >=600px, where the segments themselves read
-        inline and a second copy would be noise. aria-hidden: a screen reader already receives the
-        sentence once, through the group below.
+        inline and a second copy would be noise.
+
+        **THE PREVIEW IS NOT DECORATION, IT IS THE REPAIR** (Annie, 2026-08-21 — R546). It was
+        `aria-hidden` on the reasoning that "a screen reader already receives the sentence once,
+        through the group below". **It does not.** The group's name is *"The sentence, in four
+        parts…"* — a DESCRIPTION of the sentence, not the sentence — so with the preview hidden a
+        child heard the words only as four separate button labels and **never as continuous prose**.
+        That is the same deficit the preview exists to repair below 600px, arriving in the ear at
+        every width.
       */}
       <p
         className="crew-errorspot-sentence-preview"
         data-testid="errorspot-sentence-preview"
-        aria-hidden="true"
       >
         {/*
           THE PREVIEW CARRIES THE SENTENCE'S REAL PUNCTUATION AND MUST NEVER NORMALISE IT (Annie,
