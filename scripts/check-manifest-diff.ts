@@ -127,7 +127,8 @@ function main() {
       '  a file can be CROSSED and UNACKNOWLEDGED, and a truncated digest cannot match a sha256.',
   );
   if (notCrossed.length > 0) {
-    console.log(`\n  oldest staged-not-crossed: ${notCrossed[0][1].days}d  ${notCrossed[0][1].file}`);
+    const oldest = notCrossed[0]?.[1];
+    if (oldest) console.log(`\n  oldest staged-not-crossed: ${oldest.days}d  ${oldest.file}`);
     for (const [, v] of notCrossed.slice(0, 8)) console.log(`      ${String(v.days).padStart(2)}d  ${v.file}`);
   }
   inbound();
