@@ -17510,3 +17510,43 @@ derives from the resolver at emit time and ruling 1 changed the resolver's answe
 staged 28-row file would have crossed a row her own approval had already retired. New pair:
 `exposure-live-asserting-entries-ce04619cac8fbf4d.json` (`11a68819…`) + cover (`0e7a9ef2…`), both
 STAGED, not crossed.
+
+## R618 — The non-ACTIVE entries carry nothing; the resolver's status filter is PROPOSED, not written
+
+**Count first: `en-error-spot-false-positive` (REJECTED) and `en-vocab-secondary-sense` (RETIRED)
+have ZERO carriers.** No option anywhere holds either tag, so no rejected or retired wording is
+reachable by a child today and nothing takes an R498 flag. The hole in the resolver is real and
+currently empty.
+
+**THE DESIGN (no write until ruled):**
+
+- **The resolver returns the library hint only from an ACTIVE entry.** A tag resolving to a
+  non-ACTIVE entry serves as if the option were UNTAGGED — the child gets nothing rather than a
+  wording a reviewer rejected. **The fallthrough is named: `undefined`, the same value an untagged
+  option already produces**, chosen because it is the one state every caller already handles.
+- **It cannot fall through silently.** The resolver's choice type grows a reason —
+  `why: 'tag resolves to a RETIRED/REJECTED entry'` — so serving-nothing-by-status is
+  distinguishable from serving-nothing-by-untagged in any transcript or log, and R601's fault (two
+  states, one output) is not rebuilt into the fix.
+- **The check with no input:** `check:non-active-carriers` — every option whose tag resolves
+  non-ACTIVE. Its population CAN legitimately be empty (it is today), so it calls
+  `declareMayBeEmpty` with the reason printed on every run, and asserts the SCREENED denominator
+  (options with tags) non-empty — the R582 shape, so a broken query cannot read as a clean bank.
+
+## R619 — WIW-19 re-landed in the standing shape; the wrong-scope amendment landed on the row's true text
+
+**Annie's provenance condition: the row reads as the first of twenty-three, and the twenty-two are
+compared against exactly this row.** Field by field, the one-shot's row DIFFERED from the standing
+path in `hintAuthority` — the one-shot embedded a quoted clause
+(`…("WIW-19 is the best of the nine"), sha256 …`) where `itemHintRulingPatch` writes `file, sha256`.
+**Re-landed through the shared function**: `hintAuthoredBy: "Annie"`,
+`hintAuthority: "annie-seventieth-return.md, sha256 535eeb43…"`, verdict APPROVED_AS_WRITTEN, still
+serves. The first of twenty-three now IS the standing shape rather than a near miss of it.
+
+**The wrong-scope collision closes on a verbatim match.** The serving store's text immediately
+before the seventy-eighth amendment — read from `Misconception.childHint` at apply time and printed
+by the apply run — was *"Check the line numbers and read just that part again. A true fact from
+somewhere else does not answer this question."* **Character-for-character equal to her `replaced:`
+line.** Her amendment landed on the row's true text; the authoring store's differing wording is
+superseded, and no third text was in play. (Her seventy-eighth also authors its target as
+`library:en-wrong-scope-retrieval` — the kind-first syntax, first use in the wild.)
