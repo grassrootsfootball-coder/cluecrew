@@ -32,6 +32,7 @@ function main() {
   const reported: string[] = [];
   const landed: string[] = [];
   const splits: string[] = [];
+  const declaredByKind = new Map<string, number>();
 
   for (const f of files) {
     const p = JSON.parse(readFileSync(join(PASSAGES, f), 'utf8')) as Record<string, unknown>;
@@ -40,6 +41,7 @@ function main() {
     legacyStrings += r.legacy.strings;
     legacyObjects += r.legacy.objects;
     for (const x of r.refusals) refusals.push(`  ${x.code}  ${x.where}\n      ${x.detail}`);
+    for (const dcl of r.declared) declaredByKind.set(dcl.kind, (declaredByKind.get(dcl.kind) ?? 0) + 1);
     reported.push(...r.reported.map((s) => `  ${s}`));
     for (const sf of r.standardFlags) {
       const conv = sf.convertedBy ? `  converted by ${sf.convertedBy}` : `  judgedBy ${sf.judgedBy}`;
@@ -67,6 +69,9 @@ function main() {
     + `      ${legacyStrings} [unit: legacy STRING flags] + ${legacyObjects} [unit: legacy pre-standard OBJECT flags]\n`
     + `      = ${legacyStrings + legacyObjects} [unit: legacy flags, whole — the authoring store's unit]`,
   );
+  if (declaredByKind.size > 0) {
+    console.log(`\n  DECLARED strikes, by kind [unit: flags]: ${[...declaredByKind].sort().map(([k, v]) => `${k} ${v}`).join(' · ')}`);
+  }
   if (splits.length > 0) {
     // "second object OF THE SPLIT" marks the pair's second member; the FIRST member's note also
     // contains "second object" ("…second object below shares…"), which made 2 splits print as 4.

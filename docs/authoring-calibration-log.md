@@ -17957,3 +17957,37 @@ preserved whole where it can never serve. **Census: 47 [legacy STRING flags] + 8
 OBJECT flags] = 55 [whole], units on the face.** Both strikes confirmed on her lines — vindication
 [47, 48], ends-safely [59, 60, 61] — and the lander's `None` litter in the lines arrays cleaned in
 the same pass.
+
+## R636 — The strike states unify; seven land; one flag refused to her on an uncrossed ruling;
+the glossary channel exists and stops one surface short
+
+**ITEM 1.** Two completion states, per her ruling replacing her own accretion: **SPAN, minimal
+(R635), or DECLARED(kind)** — kinds absence, item-set, whole-passage-tone; an unknown kind refuses
+with *"a new KIND is her ruling, not a write"*; the retired `ABSENCE-CLAIM-NO-SPAN` is honoured as
+an alias of DECLARED(absence) so her ninety-third block form is never refused retroactively, and
+the **4 existing rows migrated with stamps preserved**. The standing run reports declarations by
+kind, unit on its face: `absence 7 · whole-passage-tone 1`.
+
+**ITEM 2.** Seven of eight objects landed plus the reclassification — Jane Eyre 3 (the oath-axis
+avoidance counting toward its axis per the table's derivation note), Baskervilles 2, P&P 2 + the
+idiom flag OUT to `readingSupport` with `movedFrom`. Two SPAN completions cut minimal from this
+store's bytes with readings carried (`ninetysixth-landing-e61fde455ca11130.json`, `a989531d…`):
+the girl's own *"not at all afraid"* sentence, and Elizabeth telling the story *"with great
+spirit"*. **The eighth flag REFUSED TO HER, and the refusal is the door working**:
+`crime-as-background` is not in the signed 19-axis table, and its creating ruling — her block calls
+this *"second member on its first day"* — is in a return that has not crossed (the ninety-fourth is
+absent; `check:return-sequence` will show the gap). **The refusal was made PER-FLAG** after the
+first attempt refused the whole passage — holding her two valid Baskervilles judgements hostage to
+a crossing gap — so the convict flag stays out with its legacy string undisplaced, and the door's
+own text routes the question. **Census: 39 + 8 = 47 [units on face]; 17 standard; splits 2.**
+
+**ITEM 3 — THE GLOSSARY CHANNEL, ANSWERED FROM THE CODE.** It EXISTS, three surfaces and one gap:
+`apps/web/components/crew/story/word-tap.tsx` (a tappable word in chapter prose opening a small
+definition card — glossary-shaped exactly), `apps/web/app/crew/vault/page.tsx` (the Word Vault,
+collected cards on shelves), `apps/web/app/admin/words/page.tsx` (the authoring door), plus the
+`word-card` ContentRole in the gate and passages' own `wordVaultCandidates` field. **The gap: the
+COMPREHENSION passage surface (`components/crew/engines/comprehension.tsx`) has no word-card
+wiring** — WordTap serves story chapters only. So her note's suggestion is ACTIONABLE — a word card
+on the idiom lands in an existing authoring door and an existing child surface — but reaching it
+FROM THE PASSAGE a child is reading is one wiring that does not exist yet. Not the
+described-channel class; a channel one room away.

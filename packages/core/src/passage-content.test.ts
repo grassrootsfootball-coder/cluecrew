@@ -172,3 +172,31 @@ describe('the second-pass form rulings (ninety-third §2)', () => {
     expect(r.reported.some((s) => s.includes('PENDING-BYTES'))).toBe(true);
   });
 });
+
+describe('the unified strike states (ninety-sixth §1)', () => {
+  const BASE = {
+    axis: 'period-attitudes-and-prejudice', element: 'x', severity: 'mild', disposition: 'keep',
+    condition: null, conditionMetBy: null, reason: 'Presented comically rather than approvingly.',
+    judgedBy: 'UNRECORDED', judgedAt: 'UNRECORDED', convertedBy: 'Annie', convertedAt: '2026-08-22',
+    loadBearing: true,
+  };
+  it('DECLARED(whole-passage-tone) is valid, counted by kind, reported every run', () => {
+    const r = readContentFlags({ id: 'p', contentFlags: [{ ...BASE, strike: 'DECLARED(whole-passage-tone)' }], extract: 't' });
+    expect(r.refusals).toHaveLength(0);
+    expect(r.declared).toEqual([{ where: 'p contentFlags[0]', kind: 'whole-passage-tone' }]);
+  });
+  it('an unknown kind refuses, and the refusal says a new kind is her ruling, not a write', () => {
+    const r = readContentFlags({ id: 'p', contentFlags: [{ ...BASE, strike: 'DECLARED(vibes)' }], extract: 't' });
+    expect(r.refusals[0]?.detail).toContain('A new KIND is her ruling, not a write');
+  });
+  it('the retired ABSENCE-CLAIM-NO-SPAN is honoured as DECLARED(absence) and marked awaiting migration', () => {
+    const r = readContentFlags({ id: 'p', contentFlags: [{ ...BASE, strike: 'ABSENCE-CLAIM-NO-SPAN' }], extract: 't' });
+    expect(r.refusals).toHaveLength(0);
+    expect(r.declared[0]?.kind).toBe('absence');
+    expect(r.reported.some((s) => s.includes('retired alias'))).toBe(true);
+  });
+  it('SPAN PENDING-BYTES is the pending state under the unified naming too', () => {
+    const r = readContentFlags({ id: 'p', contentFlags: [{ ...BASE, strike: 'SPAN PENDING-BYTES: she states plainly' }] });
+    expect(r.refusals).toHaveLength(0);
+  });
+});

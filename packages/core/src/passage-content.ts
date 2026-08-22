@@ -92,7 +92,16 @@ export interface StandardFlag {
    *                            passage is present; the verbatim gate completes it at landing;
    *                            refuses only when the passage IS present and the span still pends.
    */
-  strike?: { span: string; lines: number[] } | 'ABSENCE-CLAIM-NO-SPAN' | 'PENDING-BYTES' | string;
+  /**
+   * **TWO COMPLETION STATES, NOT FOUR (her ninety-sixth §1, replacing her own accretion).** A strike
+   * COMPLETES as a SPAN — `{ span, lines }`, minimal per R635 — or DECLARES as `DECLARED(<kind>)`
+   * with its kind on the row: absence, item-set, whole-passage-tone. *"The declaration carries its
+   * kind for the same reason a match does"* — and the next undeclarable claim adds a KIND, not a
+   * state. `PENDING-BYTES`/`SPAN PENDING-BYTES: …` remains the awaiting-passage state, and the
+   * retired `ABSENCE-CLAIM-NO-SPAN` is accepted as an alias of DECLARED(absence), reported as
+   * awaiting migration, so her ninety-third block form is never refused retroactively.
+   */
+  strike?: { span: string; lines: number[] } | string;
   /** Conversion provenance (her five rulings): the conversion is HER act, the original judgement
    *  stays UNRECORDED, and the prose travels inside the object as its only provenance. */
   convertedBy?: string;
@@ -115,6 +124,9 @@ export interface FlagRefusal {
   detail: string;
 }
 
+/** The declaration kinds her rulings hold. The next undeclarable claim adds a kind BY RULING. */
+export const DECLARED_KINDS: readonly string[] = ['absence', 'item-set', 'whole-passage-tone'] as const;
+
 export interface FlagReport {
   /** Flags in the standard's object shape that parsed. */
   standardFlags: StandardFlag[];
@@ -124,6 +136,8 @@ export interface FlagReport {
   refusals: FlagRefusal[];
   /** §5's visible-not-refused class: an assertive reason carrying loadBearing: false. */
   reported: string[];
+  /** Every DECLARED strike, with its kind — the standing run reports declarations BY KIND. */
+  declared: Array<{ where: string; kind: string }>;
 }
 
 const DISPOSITIONS = new Set(['keep', 'keep-conditional', 'cut', 'refer']);
@@ -144,18 +158,18 @@ export function readContentFlags(
   const id = typeof passage.id === 'string' ? passage.id : '(unnamed passage)';
   const raw = passage.contentFlags;
   if (raw === undefined || raw === null) {
-    return { standardFlags: [], legacy: { strings: 0, objects: 0 }, refusals: [], reported: [] };
+    return { standardFlags: [], legacy: { strings: 0, objects: 0 }, refusals: [], reported: [], declared: [] };
   }
   if (!Array.isArray(raw)) {
     // A reader refuses a shape it cannot parse; it never returns empty (R173).
     return {
       standardFlags: [], legacy: { strings: 0, objects: 0 },
       refusals: [{ code: 'UNPARSEABLE_FLAG', where: id, detail: `contentFlags is ${typeof raw}, not an array — refusing the shape, not returning empty` }],
-      reported: [],
+      reported: [], declared: [],
     };
   }
 
-  const out: FlagReport = { standardFlags: [], legacy: { strings: 0, objects: 0 }, refusals: [], reported: [] };
+  const out: FlagReport = { standardFlags: [], legacy: { strings: 0, objects: 0 }, refusals: [], reported: [], declared: [] };
   const extract = typeof passage.extract === 'string' ? passage.extract.replace(/\r\n/g, '\n') : null;
 
   raw.forEach((f, n) => {
@@ -236,10 +250,23 @@ export function readContentFlags(
     }
     // ---- §5: the strike test, now three states. ----
     if (o.loadBearing === true) {
-      if (o.strike === 'ABSENCE-CLAIM-NO-SPAN') {
-        // Valid, visible, never refused. An absence claim is load-bearing and unstrikeable.
-        out.reported.push(`${where}: ABSENCE-CLAIM-NO-SPAN — a load-bearing absence claim the strike test cannot quote a span for. Reported every run; the standard says what it cannot check.`);
-      } else if (typeof o.strike === 'string' && o.strike.startsWith('PENDING-BYTES')) {
+      const declared = typeof o.strike === 'string' ? /^DECLARED\(([a-z-]+)\)$/.exec(o.strike) : null;
+      if (declared) {
+        const kind = declared[1] as string;
+        if (!DECLARED_KINDS.includes(kind)) {
+          out.refusals.push({
+            code: 'UNPARSEABLE_FLAG', where,
+            detail: `DECLARED(${kind}) — "${kind}" is not a declaration kind this standard holds (${DECLARED_KINDS.join(', ')}). A new KIND is her ruling, not a write.`,
+          });
+          return;
+        }
+        out.declared.push({ where, kind });
+        out.reported.push(`${where}: DECLARED(${kind}) — a load-bearing claim with no minimal span; its kind travels on the row. Reported every run.`);
+      } else if (o.strike === 'ABSENCE-CLAIM-NO-SPAN') {
+        // Retired alias of DECLARED(absence): honoured, counted with the declarations, and marked.
+        out.declared.push({ where, kind: 'absence' });
+        out.reported.push(`${where}: ABSENCE-CLAIM-NO-SPAN (retired alias of DECLARED(absence)) — awaiting migration on the row.`);
+      } else if (typeof o.strike === 'string' && (o.strike.startsWith('PENDING-BYTES') || o.strike.startsWith('SPAN PENDING-BYTES'))) {
         if (extract !== null) {
           out.refusals.push({
             code: 'STRIKE_SPAN_DRIFTED', where,
