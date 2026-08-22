@@ -18074,3 +18074,41 @@ receiver confirms, **and this says how a document keeps testifying after both** 
 typed version of the same sentence, and this return's ten-versus-eleven was settled by the same
 rule the day after she stated it. **The idiom card stays DRAFT (verified this turn) until her
 sign-off block crosses; the wiring ships nothing a child can tap before then.**
+
+## R641 — Every field but sourceProse is a live claim held to the bytes (her rule, full width)
+
+> **In a converted object, `sourceProse` is the archive and every other field is a live claim held
+> to the bytes.**
+
+**The widening of the ninety-fifth's rule** (the reason field is a live claim), premised on her own
+double self-application: **the element against Kipling's bytes** — *half drowned* was the legacy
+flagger's plausible paraphrase, the passage says *half choked*, and re-publishing it was
+*"the rabbit-is-unhurt fault one field over"* — and **the count against her own PR-07 precedent** —
+*resolved within four sentences* is a count claim the provided span cannot verify, the count was
+never load-bearing, *swiftly* is; amended to *resolved at once*, which the span supports on its
+face. Second legacy claim to fail against bytes in two landings, both caught because the lander
+reports discrepancies rather than smoothing them.
+
+**Executed this turn under byte-asserts**: element and reason amended with priors stamped; the
+Maggie strike TRIMMED to the reconciliation clause (the tears sentence and the how-could-she-help-it
+clause released — corroboration, not claim), lines [73]; the two empty line arrays repaired —
+**and writing Darzee's lines found the sentence completing on line 53: the line-13 class, visible
+only because the lines were written.** The note-versus-artefact discrepancy she flagged travels
+corrected on this turn's execution record. The four-sentence reading resolved by AMENDMENT, not a
+wider span — *"widening the span to verify a count I am deleting would be completing a citation for
+a claim that should not exist."*
+
+## R642 — The idiom card goes LIVE through three gates, and the middle one was the database's own
+
+**Her sign-off condition ran and reported clean**: the amended card (antecedent fixed through the
+authoring door, gate-passed, prior stamped in reviewNotes) against the FULL option set of all
+twenty-three P&P items — 113 options, key + siblings via `threePartSet` — **0 hits** on either
+test: no option turns on *disgust* or the idiom, no option's content is contained in the card.
+`idiom-card-containment-run-60272b1d4271e88e.json`, the run her sign-off completes on.
+
+**AND THE STATUS FLIP WAS REFUSED BY THE DATABASE ITSELF**: `word_live_needs_reviewer` (the R95
+family — hand-written SQL asserted against Prisma's amnesia) blocked `status: LIVE` with no
+reviewer on the row. **The constraint was demanding exactly what the moment was: her sign-off,
+recorded in the review door's own fields** — `reviewedBy: Annie`, the return and digest in
+reviewNotes — not a side note. The card serves; the first occupant of the new channel is signed,
+and its provenance is ordinary, which was the commission.
