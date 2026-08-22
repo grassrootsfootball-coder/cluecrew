@@ -17931,3 +17931,29 @@ without its unit invites every reader to guess the subtraction. The census lines
 `[unit: …]` on their face and print both renderings: `48 [legacy STRING flags] + 8 [legacy
 pre-standard OBJECT flags] = 56 [legacy flags, whole — the authoring store's unit]`. Kin to R591
 (language claiming a stronger population): a bare number claims whatever unit the reader assumes.
+
+## R635 — A strike span is MINIMAL, and her amendment closes the doubled row
+
+**HER RULING: a strike span is the least content whose removal breaks the claim, and the completion
+of record is the single span.** The ground is the strike test's own logic: *"a span that covers the
+whole case is a citation that cannot fail"* — strike eight lines spanning every vindication and you
+have struck the episode, so the test can never show the claim unsupported. **The empty-population
+rule arriving on citations**, her fourth instance of the class, caught at the first landing that
+could have carried it: the readings artefact completed the vindication with ONE span (47–48) and its
+excluded runner-up reasoned; the batch artefact completed the same claim with EIGHT lines including
+the excluded one. The single span is of record; **the eight lines are corroboration, recorded under
+that word, where they cannot be mistaken for the citation** — now a field on the flag itself.
+
+**HER SECOND RULING: the reason field is a live claim; `sourceProse` is the archive.** Her faithful
+conversion reproduced *"the rabbit is unhurt"* — a clause her own twenty-second had struck as an
+inference written as observation. *"Reproducing a known-false clause in a field the standard treats
+as a live assertion is not fidelity, it is re-publication."* Amended here: reason asserted equal to
+her replaced string byte-for-byte, her authored clause written, the displaced text stamped.
+
+**AND THE DOUBLED ROW IS CLOSED.** The legacy string — asserted byte-equal to the traced string
+first; a third text would have refused — is displaced with the trace artefact (`28f3cea8…`) named as
+its record: the conversion as amended is the flag of record, and the mangled write's evidence is
+preserved whole where it can never serve. **Census: 47 [legacy STRING flags] + 8 [pre-standard
+OBJECT flags] = 55 [whole], units on the face.** Both strikes confirmed on her lines — vindication
+[47, 48], ends-safely [59, 60, 61] — and the lander's `None` litter in the lines arrays cleaned in
+the same pass.
