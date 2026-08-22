@@ -365,6 +365,22 @@ here has no register entry. A ruling goes to the register FIRST; it comes here o
   withheld-because-decided serve identically — same output, same `chooseHint` verdict — so a
   recorded decision is the only thing separating them. Any population offered for review excludes
   rows carrying a decision and reports them separately with the ruling verbatim.
+- **A VERDICT THAT CHANGES WHEN THE INSTRUMENT IS REPAIRED IS A FAULT IN THE INSTRUMENT** (Annie,
+  2026-08-22 — R599). If the data were wrong the verdict would be STABLE across the repair. Four
+  amendments were declared OUT OF SCOPE, then one fix later reported ABSENT, while the store held
+  them verbatim throughout — the verdict moved and the rows did not. **Only visible to somebody who
+  RE-RUNS rather than stopping at the first fix.** Sibling to R149 and R173, and cheaper than both:
+  it needs no baseline and no suspicion, only running the thing twice.
+- **AMENDMENT TARGETS ARE KIND-FIRST** (Annie, 2026-08-22 — R598): `library:<id>`,
+  `item:<id>:<field>`, `word-card:<headword>`, `surface:<what>`. A field with three syntaxes is three
+  fields wearing one name, and a parser must pick one and be wrong about the others. Already-written
+  targets are PARSED, NEVER REWRITTEN — rewriting is a second wording under one id, once per row —
+  and `targetSyntaxCensus()` prints canonical/legacy counts on every run, because a silent normaliser
+  is how three syntaxes stayed invisible.
+- **A DECISION NOTHING READS IS NOT A DECISION** (Annie, PU-08 — R601). A ruling recorded in a field
+  no code consults produces output identical to the absence of a ruling. `pnpm check:decision-visible`
+  reports READ vs UNREAD across the decision-bearing keys in the store. UNREAD is correct for
+  provenance and is the fault for anything a person treats as deciding something.
 - Content decisions (items, chapters, misconceptions) go through the CMS
   review pipeline; nothing skips the reviewer.
 - **PILOT CONTENT UNDER ACTIVE REVIEW HAS ONE WRITE PATH: `scripts/lib/pilot-review.ts`, NEVER A

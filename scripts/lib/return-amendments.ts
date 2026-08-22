@@ -116,7 +116,44 @@ export const SHAPES = [
  * Everything but the last is a STORE target. The rule is the id SHAPE after the qualifier and the
  * parenthetical come off — never the presence of a colon or a bracket, which are punctuation.
  */
+/**
+ * **KIND FIRST, FROM HERE (Annie, 2026-08-22 — R598).** The canonical target syntax names what kind
+ * of thing it points at before it names which one:
+ *
+ *     library:<entry-id>          a misconception's childHint
+ *     item:<item-id>:<field>      a field on an item, e.g. item:ENG-001-WIW-20:hintCore
+ *     word-card:<headword>        a Word row's definitionChild
+ *     surface:<what>              a string in the product; not a store row
+ *
+ * **HER CASE FOR IT IS A CENSUS: 23 bare ids, 15 with a colon, 15 with a space, 1 parenthetical, 1
+ * with no id at all.** (This disk holds 18 / 15 / 8 / 1 — the difference is the nine returns that
+ * never crossed, and the two categories that match exactly are the ones those returns do not touch.)
+ * **A field with three syntaxes is three fields wearing one name, and any parser must pick one and
+ * be wrong about the others** — which happened twice inside a single repair: the space form was
+ * classified SURFACE and declared out of scope, then reported ABSENT while the store held it.
+ *
+ * **THE FORTY-TWO ALREADY WRITTEN STAY AS THEY ARE.** Rewriting them would be a second wording under
+ * one id, forty-two times over — the exact fault the amendment block exists to prevent. So the
+ * legacy syntaxes are parsed by a branch that SAYS SO ON ITS FACE rather than being silently
+ * normalised, because a silent normaliser is how three syntaxes became invisible in the first place.
+ */
+function resolveCanonical(raw: string): { kind: 'STORE' | 'SURFACE'; id: string | null; fieldNote: string | null } | null {
+  const m = /^(library|item|word-card|surface):(.+)$/i.exec(raw.trim());
+  if (!m) return null;
+  const [, kindWord, rest] = m as unknown as [string, string, string];
+  const kind = kindWord.toLowerCase();
+  if (kind === 'surface') return { kind: 'SURFACE', id: null, fieldNote: null };
+  if (kind === 'item') {
+    const parts = rest.split(':').map((p) => p.trim());
+    return { kind: 'STORE', id: parts[0] ?? null, fieldNote: parts[1] ?? null };
+  }
+  return { kind: 'STORE', id: rest.trim(), fieldNote: kind === 'word-card' ? 'definitionChild' : null };
+}
+
 function resolveTarget(raw: string): { kind: 'STORE' | 'SURFACE'; id: string | null; fieldNote: string | null } {
+  const canonical = resolveCanonical(raw);
+  if (canonical) return canonical;
+  /* ---- LEGACY BRANCH. Everything below parses a syntax that is no longer authored. ---- */
   /**
    * **`ENG-001-WIW-20 hintCore` — AN ITEM ID FOLLOWED BY A FIELD NAME.** It contains a space, so the
    * first version classified it SURFACE and the run printed *"declared OUT OF SCOPE"* over four
@@ -206,6 +243,32 @@ export function declaredCounts(dir: string): Array<{ file: string; declared: num
     }
   }
   return out;
+}
+
+/**
+ * **THE TARGET-SYNTAX CENSUS, PRINTED SO THE LEGACY POPULATION CANNOT GO QUIET.** A silent
+ * normaliser is how three syntaxes wearing one field name stayed invisible; a count on every run is
+ * the opposite of that. CANONICAL is kind-first (R598); LEGACY is the forty-two already authored,
+ * which are parsed and never rewritten.
+ */
+export function targetSyntaxCensus(dir: string): string {
+  const { amendments } = readAmendments(dir);
+  const counts = { canonical: 0, bareId: 0, spaceField: 0, parenthetical: 0, noTarget: 0 };
+  for (const a of amendments) {
+    const t = a.target;
+    if (t === null) counts.noTarget++;
+    else if (/^(library|item|word-card|surface):/i.test(t)) counts.canonical++;
+    else if (/\(/.test(t)) counts.parenthetical++;
+    else if (/\s/.test(t)) counts.spaceField++;
+    else counts.bareId++;
+  }
+  const legacy = counts.bareId + counts.spaceField + counts.parenthetical;
+  return `  TARGET SYNTAX — canonical ${counts.canonical}, LEGACY ${legacy}`
+    + ` (bare id ${counts.bareId}, id+space+field ${counts.spaceField}, parenthetical ${counts.parenthetical}),`
+    + ` no target ${counts.noTarget}.\n`
+    + '  Legacy targets are PARSED AND NEVER REWRITTEN: rewriting them would be a second wording\n'
+    + '  under one id, once per row — the fault the amendment block exists to prevent. Canonical is\n'
+    + '  kind-first: library: / item:<id>:<field> / word-card: / surface: (R598).';
 }
 
 export function describeShapes(): string {

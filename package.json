@@ -152,6 +152,8 @@
     "deliver:library-carriers": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/deliver-library-hints-with-carriers.ts",
     "deliver:attribute-transfer": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/deliver-attribute-transfer-carriers.ts",
     "check:description-branches": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-description-hint-branches.ts",
+    "check:decision-visible": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-decision-visible.ts",
+    "check:hint-house-form": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-hint-house-form.ts",
     "check:hint-asserts-feature": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-hint-asserts-feature.ts",
     "check:hint-locator": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-hint-locator.ts",
     "check:field-reads": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-field-reads.ts",

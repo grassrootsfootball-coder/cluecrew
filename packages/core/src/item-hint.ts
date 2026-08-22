@@ -22,6 +22,12 @@ export interface HintSource {
   hintAuthoredBy?: unknown;
   /** Where the reading is recorded, so the attribution can be checked rather than trusted. */
   hintAuthority?: unknown;
+  /**
+   * An explicit ruling about WHICH hint serves. `'library'` withholds the item hint however well
+   * attested it becomes — a decision that must outrank the authorship fields, or improving the
+   * wording silently overturns the ruling against serving it (R601).
+   */
+  hintServes?: unknown;
 }
 
 export type HintChoice =
@@ -37,6 +43,24 @@ export function chooseHint(explanation: HintSource | null | undefined): HintChoi
   const e = explanation ?? {};
   const text = typeof e.hintCore === 'string' ? e.hintCore.trim() : '';
   if (text === '') return { serves: 'library', why: 'no item hint' };
+
+  /**
+   * **AN EXPLICIT RULING TO WITHHOLD OUTRANKS THE AUTHORSHIP FIELDS (Annie, PU-08 — R601).**
+   *
+   * `ENG-003-A-PU-08` carries `hintServes: 'library'` and `hintRuledBy: 'Annie'` — *"The library
+   * hint is better here. An item hint earns its place by saying something the general one cannot."*
+   * **Nothing read that field.** The row served the library hint anyway, but only because its
+   * authorship fields happened to be absent — **the decision and the outcome agreed by accident.**
+   *
+   * **And the accident was one amendment from breaking.** Applying an amendment to an item hint sets
+   * `hintAuthoredBy` and `hintAuthority`, which is exactly how four hints moved into service this
+   * week. Amend PU-08's wording without noticing, and her ruling to withhold it is silently
+   * overridden by the act of improving the text she ruled against serving.
+   */
+  const ruledServes = typeof e.hintServes === 'string' ? e.hintServes.trim() : '';
+  if (ruledServes === 'library') {
+    return { serves: 'library', why: 'ruled to serve the library hint on this item' };
+  }
 
   const readBy = typeof e.hintAuthoredBy === 'string' ? e.hintAuthoredBy.trim() : '';
   const authority = typeof e.hintAuthority === 'string' ? e.hintAuthority.trim() : '';

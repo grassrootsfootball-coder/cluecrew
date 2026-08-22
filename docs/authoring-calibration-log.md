@@ -17068,3 +17068,126 @@ somebody read the rows before sending them, and **the number alone would not hav
 half and looks like a complete answer** — because **a subset of a real population is
 indistinguishable from that population when you cannot see what was excluded.** Every row it returns
 is correct. Nothing in the output is wrong. The only evidence of the fault is outside the output.
+
+## R596 — The house form, measured before it becomes a rule
+
+> **An item hint names what a WRONG ANSWER is doing, rather than what the right one is.**
+
+**Descriptive before prescriptive, which is why it was measured first.** A rule read off good
+practice survives arguments a rule invented in a meeting does not.
+
+`pnpm check:hint-house-form`: **8 of 12 in the PR series take the shape by a conservative proxy** —
+option deixis, or a negation applied to a candidate reading. *"Priya is not what changed."* *"A count
+is not what she notices."* *"One of these adds a telling the story never does."* The proxy is a
+FLOOR: it cannot see a hint that names a wrong move without negating anything, so `PR-11`
+(*"Something changes between swatting and stopping"*) does not count and arguably should.
+
+**HER COUNT WAS THIRTEEN AND THE SERIES HAS TWELVE ITEMS.** Reported rather than reconciled: no
+detector reaches thirteen in a population of twelve, and widening one until it did would be fitting
+the instrument to the expected answer. Same class as her manifest header — **a count from
+recollection, in a document written to replace recollection.**
+
+**The amended hints that failed did so by describing the key**, not by taking the form: `WIW-05`
+restated it, `WIW-12` pointed at the sentence holding it. **The form and the failure are the same
+axis seen from two ends** — naming the wrong answer keeps a hint away from the right one.
+
+## R597 — Two diseases, one word, two reviews
+
+    ITEM HINTS     fail at roughly one third. Written by somebody looking at ONE item.
+                   Shouted capitals, dashes, coaching the key, asserting things about the option set.
+    LIBRARY HINTS  fail at roughly two thirds. Written by somebody looking at NO item.
+                   Generality, and assertions about populations their authors could not see.
+
+**Neither rate is a judgement about its author.** They are diseases of different vantage points, and
+**a single "hint review" would have mixed them** — which is what R572's split prevented, arriving now
+with rates attached. Standing output on `check:hint-house-form`.
+
+**AND THE PR-07 FAULT IS THE FIRST AUTHORED INSTANCE OF HER OWN RULE.** *"Two of these are reasons no
+line gives"* asserts a COUNT over the option set. The item has three distractors and three are
+arguable. **A child who counts and gets three has been told something false by the hint meant to help
+her — and she is the careful child, the one the T4s exist for.** Her rule, two returns earlier: **an
+assertion in a hint is checked against what the child can choose.** Now checked on every run against
+the real option set: 3 count-claims live, all *"one of these"*, all against 3 distractors.
+
+## R598 — Kind first, and the legacy branch says so on its face
+
+**The canonical target syntax names WHAT KIND of thing it points at before WHICH one:**
+
+    library:<entry-id>        item:<item-id>:<field>        word-card:<headword>        surface:<what>
+
+**HER CENSUS IS THE CASE: 23 bare ids, 15 with a colon, 15 with a space, 1 parenthetical, 1 with no
+id.** *"A field with three syntaxes is three fields wearing one name, and any parser must pick one
+and be wrong about the others."* **It happened twice inside a single repair** (R594): the space form
+was classified SURFACE and declared out of scope, then reported ABSENT while the store held it.
+
+**THE ALREADY-WRITTEN TARGETS STAY AS THEY ARE.** Rewriting them would be a second wording under one
+id, once per row — the exact fault the block exists to prevent. So the legacy syntaxes are parsed by
+a branch that **says so on its face**, and `targetSyntaxCensus()` prints the split on every run:
+canonical 15, legacy 46, no target 18. **A silent normaliser is how three syntaxes wearing one name
+stayed invisible; a count on every run is the opposite of that.**
+
+**AND THE TWO CENSUSES DIFFER BY EXACTLY THE CROSSING GAP.** This disk holds 18 bare / 15 colon /
+8 space / 1 parenthetical against her 23 / 15 / 15 / 1. **The two categories that match exactly are
+the ones the nine uncrossed returns do not touch**, and 5 + 7 + 1 is the thirteen amendments those
+returns carry. The syntax census independently confirms the gap is transport and nothing else.
+
+## R599 — A verdict that changes when the instrument is repaired is a fault in the INSTRUMENT
+
+**Hers, and it would have caught both faults of R594 in one step.**
+
+> **If the data were wrong, the verdict would be stable across the repair.**
+
+Her four item-hint amendments were declared OUT OF SCOPE. One fix later they were ABSENT. **Neither
+verdict was about the data — the store held those wordings verbatim throughout — and the tell is that
+the verdict MOVED while the rows did not.**
+
+**It is only visible to somebody who RE-RUNS rather than stopping at the first fix.** A repair that
+turns a reassuring verdict into an alarming one feels like progress and reads like discovery; the
+question that separates them is whether the underlying rows changed. **They had not.**
+
+Sibling to R149 (baseline before changing an instrument) and R173 (the right answer for the wrong
+reason), and sharper than both, because it needs no baseline and no suspicion — **only the discipline
+of running the thing twice.**
+
+## R600 — The unification half, above the refusal half, in her order
+
+**Four amendments moved into service as a CONSEQUENCE of being applied**, not as a separate act.
+Applying an item-hint amendment sets `hintAuthoredBy` and `hintAuthority`, which is exactly what
+`chooseHint` requires — **so ruling a wording is what makes it reach a child.** `WIW-20`, `WIW-22`,
+`PR-01`, `PR-03`: 7 serving became 11.
+
+**That removes the class of approved-but-not-serving entirely — the state she chased for four
+returns.** A hint she had read and approved could previously sit unserved because the approval lived
+in prose and the serving gate read fields.
+
+**HER ORDER, AND IT IS THE POINT:**
+
+    the REFUSAL half   stops unread text reaching a child.
+    the UNIFICATION half stops read text failing to.
+
+**She puts the second first.** The refusal half is the one everybody builds, because its failure is
+visible and blameable — a child got something nobody checked. **The unification half fails silently
+in the other direction**: work is done, approved, recorded, and never reaches anybody, and nothing
+anywhere reports it. **Four returns of chasing is what that costs.**
+
+## R601 — PU-08 generalised: a decision nothing reads is not a decision
+
+**`hintServes: 'library'` was read by no code at all.** PU-08 served the library hint anyway — but
+**only because its authorship fields happened to be absent. The decision and the outcome agreed by
+accident.**
+
+**And the accident was one amendment from breaking.** Applying an amendment sets both authorship
+fields — that is R600, and it is how four hints moved into service this week. **Amend PU-08's wording
+without noticing, and her ruling to withhold it is silently overturned by the act of improving the
+text she ruled against serving.** `chooseHint` now honours an explicit ruling above the authorship
+fields, says WHY, and a test asserts the ruling survives amendment.
+
+**THE GENERAL SHAPE IS MECHANICALLY CHECKABLE.** `pnpm check:decision-visible` enumerates the
+decision-bearing keys actually present in the store and asks whether any code reads them.
+**2 READ, 9 UNREAD.**
+
+**UNREAD IS NOT AUTOMATICALLY A FAULT and the check never says it is.** Provenance is SUPPOSED to be
+inert — nothing should branch on `hintAuthority`. **The fault is a field a human treats as a DECISION
+while the system treats it as a comment**, and separating those two is a reading. The check names the
+classes and reports its own bound: it matches the key NAME as a literal, so a computed key reads as
+UNREAD, and UNREAD is a candidate list rather than a verdict.

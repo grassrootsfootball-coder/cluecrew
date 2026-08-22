@@ -16,7 +16,7 @@
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { prisma } from '../packages/db/src/index';
-import { declaredCounts, describeShapes, readAmendments } from './lib/return-amendments';
+import { declaredCounts, describeShapes, readAmendments, targetSyntaxCensus } from './lib/return-amendments';
 import { requirePopulation } from './lib/population';
 
 const RETURNS = '/Users/davidb/Downloads';
@@ -49,6 +49,7 @@ async function main() {
     // a true-looking count produced by a field that was never carried.
     .map((a) => ({ file: a.file, text: a.authored, targetId: a.targetId, when: a.when }));
   console.log(`  SHAPES READ:\n${describeShapes()}`);
+  console.log(targetSyntaxCensus(RETURNS));
 
   /**
    * **THE READER IS MEASURED AGAINST THE AUTHOR'S OWN COUNT BEFORE IT REPORTS ANYTHING.** Her block

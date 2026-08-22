@@ -47,4 +47,39 @@ describe('an item hint serves only if a named reviewer has read it', () => {
   it('an unread item hint with no library hint serves nothing, rather than serving the unread text', () => {
     expect(hintToServe({ hintCore: 'unread' }, null)).toBeUndefined();
   });
+
+  /**
+   * PU-08 (R601). Her ruling is `hintServes: 'library'` — the item hint is good and the general one
+   * is better here. Nothing read that field, and the row served the library hint only because its
+   * authorship fields were absent: **the decision and the outcome agreed by accident.**
+   */
+  describe('an explicit ruling to withhold outranks the authorship fields (PU-08, R601)', () => {
+    const RULED = {
+      hintCore: 'The item hint she ruled against serving.',
+      hintServes: 'library',
+      hintAuthoredBy: 'Annie',
+      hintAuthority: 'annie-return.md, sha256 deadbeef',
+    };
+
+    it('withholds the item hint even when it is fully attested', () => {
+      const choice = chooseHint(RULED);
+      expect(choice.serves).toBe('library');
+      expect(hintToServe(RULED, LIB)).toBe(LIB);
+    });
+
+    it('says WHY, so a ruling is never mistaken for an unread field', () => {
+      const choice = chooseHint(RULED);
+      expect(choice.serves === 'library' && choice.why).toBe('ruled to serve the library hint on this item');
+    });
+
+    /**
+     * The hazard this closes. Applying an amendment to an item hint SETS both authorship fields —
+     * it is how four hints moved into service this week. Without this, improving the wording of a
+     * hint she ruled against serving would silently overturn the ruling.
+     */
+    it('survives the act of amending the wording, which is what would have broken it', () => {
+      const amended = { ...RULED, hintCore: 'A better wording, applied by an amendment.' };
+      expect(chooseHint(amended).serves).toBe('library');
+    });
+  });
 });
