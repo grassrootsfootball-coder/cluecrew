@@ -15528,3 +15528,51 @@ non-empty case R522 says nothing can catch.
 knowing which have already drifted would produce a new set of numbers with no way to tell which
 changed because the code changed and which because the pattern did.** The order to fix them is by
 what their output is used for, and the top three are used for populations.
+
+## R524 — The drift measured before the rewrite: one of three is already wrong
+
+**Her instruction: diff, do not rewrite.** Strict pattern beside tolerant, same population, **no new
+baseline.**
+
+| scan | pattern | strict | tolerant | verdict |
+|---|---|---:|---:|---|
+| `check-no-review-furniture` | JSX text between tags | 3153 | 3153 | **no drift** |
+| `check-no-review-furniture` | **attribute strings** | **50** | **60** | **DRIFT — misses 10** |
+| `check-declared-unread` | Prisma model blocks | 37 | 37 | **no drift** |
+
+**`check-walkscript-reach` has no risky pattern at all.** Its eleven were **string literals containing
+a slash** — `'apps/'`, `'/api/'`, path constants — **counted as regexes by my detector.** So the
+eight-scan figure is itself inflated, and the top of the order was wrong for the third time in three
+turns.
+
+**THE ONE REAL DRIFT: `check-no-review-furniture` cannot see 10 of 60 attribute strings — 17% of its
+own population.** All ten are **template literals**: `aria-label={`Word card: ${headword}. Tap to
+flip.`}`. Its pattern requires a plain quoted value, so **every interpolated aria-label in the crew
+surface is invisible to it.**
+
+**These are child-facing strings on a check built to screen child-facing strings for reviewer
+furniture** — `mascot.tsx`, `play-runner.tsx`, `vault-card.tsx`, `crew/page.tsx`, four maths engines.
+**The check reports a population and has never included them.**
+
+**The diff cost one run and produced no baseline**, which is the whole argument for it: had I rewritten
+all three, the attribute count would have moved from 50 to 60 **and nothing would have said whether
+the ten were newly written or newly visible.**
+
+## R525 — An entry used to look forward, for the first time
+
+**Her prediction named where R517 would fire next, before anyone looked: source varies in formatting
+by nature, so a pattern over source that assumes a line shape assumes the least stable property source
+has.**
+
+**It fired at eight scans and forty-four patterns on the first check** — and then at one live drift of
+17% inside the first three examined.
+
+**THAT IS A DIFFERENT ACT FROM EXPLAINING A FAULT AFTER IT OCCURRED**, which is what every other entry
+in this register does. R517 was written from four faults already made; **this used R517 to say where
+the fifth would be, and the fifth was there.**
+
+**Marked as such because the register has never been used this way**, and because a rule that predicts
+is doing something a rule that explains is not — **it can be wrong in advance, which is the only way
+to find out whether it is a rule or a description of four things that happened.**
+
+**It was not wrong.**
