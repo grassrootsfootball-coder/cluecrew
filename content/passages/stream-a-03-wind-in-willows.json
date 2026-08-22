@@ -644,22 +644,28 @@
       "flagIndex": 0,
       "verdict": "KEEP",
       "condition": {
-        "obligation": "A teacher note points out that the Mole is being cheeky, not admirable.",
+        "obligation": "A teacher note accompanies the passage.",
         "kind": "ACCOMPANYING_MATERIAL",
-        "owner": "reviewer:rev-0001",
+        "owner": "Annie",
         "reviewBy": "2026-08-21",
         "state": "WAIVED",
         "metBy": null,
-        "ruledBy": "Annie, twenty-second return, 2026-08-21",
-        "waivedWhy": "No accompanying-material channel exists, and the passage is acceptable without the note. Grahame’s own narration already calls the Mole impatient and contemptuous."
+        "ruledBy": "Annie",
+        "waivedWhy": "No teacher-note channel exists. Waived as ONE decision across all three, not three decisions."
       },
       "ruledOn": "2026-08-21",
-      "note": "KEEP, not KEEP_IF: the condition is WAIVED with its reason, not parked. The 22 LIVE items serve."
+      "oneDecisionAcross": [
+        "stream-a-03-wind-in-willows",
+        "stream-a-13-pride-prejudice",
+        "stream-a-15-jungle-book"
+      ],
+      "authority": "annie-forty-fifth ruling, relayed 2026-08-21; return digest 459cf401dd4a0d90784f2d4f7d775d0719c309e9fd629d5323acf04f3acf57b4"
     }
   ],
   "teacherNoteQueue": {
     "position": 1,
-    "why": "Not a condition on this passage. If a teacher-note channel is ever built, this passage is first in the queue.",
+    "ofQueue": 3,
+    "why": "Not a condition. If a teacher-note channel is ever built, these three go in this order.",
     "recordedOn": "2026-08-21"
   },
   "authoringRead": {

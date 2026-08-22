@@ -691,7 +691,7 @@
   "verbatimVerification": {
     "spansChecked": 180,
     "spansFound": 180,
-    "pct": 100.0,
+    "pct": 100,
     "breaksOnlyAtDocumentedCutSeams": true,
     "note": "Every 8-word span that does not match the source falls at a documented cut seam, where two separately-verbatim paragraphs were placed side by side. Text within each retained paragraph is 100% verbatim against the Project Gutenberg source.",
     "unmatchedSpans": []
@@ -737,5 +737,24 @@
     "keptByRuling": [
       "complicationSeparation.description"
     ]
-  }
+  },
+  "flagVerdicts": [
+    {
+      "flagIndex": 0,
+      "verdict": "KEEP_IF",
+      "condition": {
+        "obligation": "The reason is stated.",
+        "kind": "ACCOMPANYING_MATERIAL",
+        "owner": "Annie",
+        "reviewBy": "2026-08-21",
+        "state": "MET",
+        "metBy": "the recommendation's own text — it states the reason in the same sentence",
+        "ruledBy": "Annie",
+        "waivedWhy": null
+      },
+      "ruledOn": "2026-08-21",
+      "note": "A condition satisfied at the moment it was written is still a condition, and is recorded MET rather than quietly dropped.",
+      "authority": "annie-forty-fifth ruling, relayed 2026-08-21; return digest 459cf401dd4a0d90784f2d4f7d775d0719c309e9fd629d5323acf04f3acf57b4"
+    }
+  ]
 }

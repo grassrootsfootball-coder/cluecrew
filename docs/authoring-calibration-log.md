@@ -15108,3 +15108,81 @@ misconception — her fourteen is the pack's highest, and the free-indirect open
 an item testing it must make the voice question **answerable from the lines** rather than from knowing
 the novel. **The one item that exists asks about the whole passage instead**, which is the design
 question rather than the passage question, exactly as she framed it.
+
+## R503 — It is a DISTRACTOR, the wrong document is mine, and my doubt about it was wrong too
+
+**The row settles it.** `ENG-002-pp-23` (DRAFT):
+
+| | option | tag |
+|---|---|---|
+| **KEY** | **We are told what others say of them, but never whether the writer agrees.** | *null* |
+| | We are told what the writer thinks, and not only what the room says. | `en-narrator-voice-as-fact` |
+| | We are shown what they do, but never told whether the writer approves. | `en-plausible-not-stated` |
+| | We are given only Elizabeth's view, and no other opinion is ever allowed. | `en-extreme-option-pull` |
+
+**A DISTRACTOR.** So `en-narrator-voice-as-fact` **has one carrier**, and the no-carrier-at-all branch
+does not apply.
+
+**THE WRONG DOCUMENT IS MINE.** `narrator-redraft-proposal-0413f8eef6a156f8.json`, staged 20 August,
+records the string as *"key: …"* — and **she approved the entry's hint quoting that proposal.** A hint
+was approved against a carrier my own artefact had misdescribed.
+
+**AND MY READING OF THE OPTION YESTERDAY WAS ALSO WRONG, FOR THE SAME REASON.** I said it was *"a claim
+about narrative technique, not a child mistaking a crowd's opinion for a fact."* **Against the key it
+is exactly the entry's error**: the key says the writer's agreement is withheld, the distractor says
+the writer's own view is given. **That is mistaking whose voice is speaking, precisely.**
+
+**I read an option without its option set — twice, on the same row, in the same week the whole-option-
+set gate was built for exactly that.** The instrument existed; I did not use it on prose.
+
+**The entry stays recorded as UNSERVED rather than covered**, per her instruction: one carrier, DRAFT,
+nothing reachable.
+
+## R504 — The nine ruled: population 9 → 2
+
+**Her rulings, applied 2026-08-21.**
+
+**TWO genuine conditions, both `KEEP_IF`, both owned, both due before the first item on that passage
+publishes** — the owner is *the author of items on this passage*, which is a role that exists rather
+than a name that might not:
+- **`stream-b-04`** — no question may ask pupils to state the reason, only to notice something is
+  being kept back.
+- **`stream-b-05`** — **there are no mark schemes, so the obligation falls where the equivalent
+  lives: the KEY must be a noticing and not a diagnosis.** A condition relocated to the artefact that
+  actually exists, rather than waived for want of the one named.
+
+**ONE met by its own text** — `stream-a-16-little-women`, `state: MET`, `metBy` the recommendation's
+own sentence. **A condition satisfied at the moment it was written is still a condition and is
+recorded MET rather than quietly dropped**, which is the difference between a discharged obligation
+and one nobody ever had.
+
+**THREE waived as ONE decision, not three** — `stream-a-03`, `stream-a-13`, `stream-a-15`, all wanting
+a teacher note with no channel. Verdict `KEEP`, condition `WAIVED`, reason recorded, `oneDecisionAcross`
+naming all three. **One queue entry in that order if a channel is ever built.**
+
+**THREE reclassified out of the conditions population entirely** — `stream-a-05`, `stream-a-09`
+(warnings that a scan may over-fire) and `stream-b-02` (*"may wish to"* — an invitation). Moved to
+`reviewerNote` with `movedFrom` recorded.
+
+**A NOTE IN AN OBLIGATION FIELD IS AN OBLIGATION NOBODY WILL DISCHARGE**, and **three of nine sitting
+in a conditions population is how a two-row backlog looked like a nine-row one.** The count was never
+the problem; the field was.
+
+## R505 — Her item specification for the entry, recorded whether or not it is ever built
+
+**The error to test: a sentence that reports a verdict without naming the judge, WHERE THE HIDING IS
+VISIBLE IN THE WORDS.**
+
+**The anchor: *He was discovered to be proud*.** The passive hides the discoverer **and the tell is on
+the page in `discovered`** — a child can find it without knowing the novel.
+
+**The easier start: *Everybody hoped he would never come there again*** — because the sentence names
+its judge.
+
+**REFUSED: an item built on *his character was decided*.** Free indirect at full strength, **no marker
+in the sentence**, so a child would need the whole paragraph and a feel for Austen. **That is a
+literature seminar rather than a comprehension item** — and the line she draws is not about difficulty
+but about whether the evidence is *in the sentence a child is pointed at*.
+
+**Recorded whether or not it is built**, because the specification is the reusable half: **the tell
+must be on the page.**

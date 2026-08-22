@@ -690,5 +690,34 @@
     "readOn": "2026-08-21",
     "authority": "annie-fortyfourth-return.md, read from the file, sha256 459cf401dd4a0d90784f2d4f7d775d0719c309e9fd629d5323acf04f3acf57b4",
     "artefactRead": "FIFTEEN-PASSAGES-DECODING-AND-COMPREHENSION.md, e7c32416bdf9381d57890eed5db442a863b5bf4dc9cb70ec2d241f01bd53fbd1"
+  },
+  "flagVerdicts": [
+    {
+      "flagIndex": 0,
+      "verdict": "KEEP",
+      "condition": {
+        "obligation": "A teacher note accompanies the passage.",
+        "kind": "ACCOMPANYING_MATERIAL",
+        "owner": "Annie",
+        "reviewBy": "2026-08-21",
+        "state": "WAIVED",
+        "metBy": null,
+        "ruledBy": "Annie",
+        "waivedWhy": "No teacher-note channel exists. Waived as ONE decision across all three, not three decisions."
+      },
+      "ruledOn": "2026-08-21",
+      "oneDecisionAcross": [
+        "stream-a-03-wind-in-willows",
+        "stream-a-13-pride-prejudice",
+        "stream-a-15-jungle-book"
+      ],
+      "authority": "annie-forty-fifth ruling, relayed 2026-08-21; return digest 459cf401dd4a0d90784f2d4f7d775d0719c309e9fd629d5323acf04f3acf57b4"
+    }
+  ],
+  "teacherNoteQueue": {
+    "position": 3,
+    "ofQueue": 3,
+    "why": "Not a condition. If a teacher-note channel is ever built, these three go in this order.",
+    "recordedOn": "2026-08-21"
   }
 }
