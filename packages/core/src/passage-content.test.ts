@@ -139,3 +139,36 @@ describe('converted flags and §2 (do not invent provenance backwards)', () => {
     expect(r.refusals[0]?.code).toBe('UNJUDGED_FLAG');
   });
 });
+
+describe('the second-pass form rulings (ninety-third §2)', () => {
+  const BASE = {
+    axis: 'unkindness-and-mockery', element: 'x', severity: 'mild', disposition: 'keep',
+    condition: 'a teacher note could point this out', reason: 'r',
+    judgedBy: 'UNRECORDED', judgedAt: 'UNRECORDED', convertedBy: 'Annie', convertedAt: '2026-08-22',
+  };
+  it('a WAIVED conditionMetBy with date, name and reason discharges at write AND at use, and is reported', () => {
+    const flag = { ...BASE, conditionMetBy: 'WAIVED 2026-08-21 by Annie: no accompanying-material channel exists' };
+    const atUse = readContentFlags({ id: 'p', contentFlags: [flag], extract: 't' }, { enforceUse: true });
+    expect(atUse.refusals).toHaveLength(0);
+    expect(atUse.reported.some((s) => s.includes('WAIVED condition'))).toBe(true);
+  });
+  it('a WAIVED without its date, name and reason refuses — a waiver without them is a silent keep', () => {
+    const flag = { ...BASE, conditionMetBy: 'WAIVED because it seemed fine' };
+    const r = readContentFlags({ id: 'p', contentFlags: [flag], extract: 't' });
+    expect(r.refusals[0]?.code).toBe('CONDITION_MISSING');
+  });
+  it('a note field with movedFrom passes as a known key — an obligation nobody will discharge lives nowhere', () => {
+    const flag = { ...BASE, condition: null, conditionMetBy: null,
+      note: 'a reviewer may flag it (movedFrom: condition; reclassified, Annie, forty-fifth return)' };
+    const r = readContentFlags({ id: 'p', contentFlags: [flag], extract: 't' });
+    expect(r.refusals).toHaveLength(0);
+    expect(r.standardFlags[0]?.note).toContain('movedFrom');
+  });
+  it('a prefixed PENDING-BYTES ("PENDING-BYTES: <claim>") is the pending state, not a drifted span', () => {
+    const flag = { ...BASE, condition: null, conditionMetBy: null, loadBearing: true,
+      strike: 'PENDING-BYTES: the rabbit is unhurt' };
+    const r = readContentFlags({ id: 'p', contentFlags: [flag] });
+    expect(r.refusals).toHaveLength(0);
+    expect(r.reported.some((s) => s.includes('PENDING-BYTES'))).toBe(true);
+  });
+});

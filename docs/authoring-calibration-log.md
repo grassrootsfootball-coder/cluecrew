@@ -17845,3 +17845,60 @@ two judgements all along.**
 **One R591 caught on the run's own face**: the reported block's header claimed *"assertive reason,
 loadBearing false"* over lines that were absence claims — one class's name over three classes'
 members. The header now defers to the lines, which each name their own.
+
+## R630 — An extraction that cuts must print its cut (her truncation finding, registered as ruled)
+
+**She nearly legislated for a gap her own instrument created.** Her extraction cut every legacy flag
+at 155 characters; a Wind in the Willows reason lived past the cut; a form ruling for "reasonless
+legacy flags" was drafted — **and withdrawn unused only because she re-read the full prose before
+writing the objects.**
+
+**The rule: an extraction that truncates prints its truncation on the artefact's face** — the cut
+length, and per row whether the row was cut — because **a gap an instrument created is
+indistinguishable from a gap in the world until the cut is visible.** Kin to R568 (the keys before
+the values) and R595 (a subset indistinguishable from its population): all three are instruments
+whose output is correct row-by-row while silently smaller than the source.
+
+## R631 — A check that writes is a second write, and this one duplicated three rows
+
+**Mine.** The ninety-third's lander ran clean; I then ran it a second time as an "idempotence
+check" — **which was not a check but a second WRITE**, and it duplicated every landed flag on three
+passages. The standing run showed the damage immediately (six split objects where four exist; two
+Tom Sawyer absences where one exists), which is the only good part.
+
+Repaired by de-duplication with the counts printed (5→3, 4→2, 2→1), and **the lander now carries the
+guard it shipped without**: it refuses to land objects already present, and says ALREADY LANDED.
+Verified by running it a third time — three ALREADY lines, nothing written. **A check reads. A
+writer that is safe to re-run is one that was BUILT to refuse its own repetition, never one assumed
+to be.** R87's family, one door up: the first run was correct, the report was true, and nothing said
+the second run was a different kind of act.
+
+## R632 — The five landed, two strikes completed as citations, and one legacy string refused
+displacement for a real reason
+
+**Her five conversions landed through the door**, parsed from the block's own JSON. The reader
+carries her second-pass form rulings: **a WAIVED `conditionMetBy` with date, name and reason is a
+discharged condition** — valid at write and at use, reported every run so waivers stay visible, and
+refusing when the waiver lacks its three parts; **a `note` with `movedFrom` is a known key** — an
+obligation nobody will discharge does not sit in an obligation field.
+
+**THE STRIKE COMPLETIONS ARE CITATIONS, EACH READING CARRIED FOR HER CHECK**
+(`ninetythird-strike-readings-643e977f378f79c0.json`, `61fbc455…`): *"immediately vindicates the
+horse"* completed to the toll-man's revelation — **"immediately" is what selects it**, and the
+runner-up ("wiser than we were") supports her SHAMING clause, which is not the strike's claim;
+*"ends safely at home"* to the hall-door arrival; *"the rabbit is unhurt"* completed as
+ABSENCE-CLAIM-NO-SPAN **per her own black-beauty split**. A claim the lander could not place would
+have refused with candidate lines quoted — a guessed citation is the line-13 class at birth.
+
+**AND THE BYTE-GUARD FOUND A THIRD TEXT.** WiW's legacy string was NOT displaced: this store's copy
+reads *"the text does not return to him, and the tone is farcical rather than cruel and the tone is
+farcical rather than cruel"* — **a different load-bearing claim than her sourceProse's "the rabbit
+is unhurt", plus a doubled clause that is the signature of a mangled edit on this side.** The string
+stays on the row beside her conversions until ruled; deleting it would destroy the evidence of the
+divergence it constitutes.
+
+**THE STANDING RUN: 10 standard flags, 48 legacy strings, 8 pre-standard objects, 2 splits on its
+face.** Not the predicted 46 strings, and the two facts are stated rather than reconciled: five
+objects displace at most four strings (one pair shares a prose), and WiW's string refused
+displacement on the divergence above. **47 was the arithmetic ceiling; 48 is the measured count;
+the gap between them is a finding, not an error to smooth.**

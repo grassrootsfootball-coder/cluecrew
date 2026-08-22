@@ -92,13 +92,19 @@ export interface StandardFlag {
    *                            passage is present; the verbatim gate completes it at landing;
    *                            refuses only when the passage IS present and the span still pends.
    */
-  strike?: { span: string; lines: number[] } | 'ABSENCE-CLAIM-NO-SPAN' | 'PENDING-BYTES';
+  strike?: { span: string; lines: number[] } | 'ABSENCE-CLAIM-NO-SPAN' | 'PENDING-BYTES' | string;
   /** Conversion provenance (her five rulings): the conversion is HER act, the original judgement
    *  stays UNRECORDED, and the prose travels inside the object as its only provenance. */
   convertedBy?: string;
   convertedAt?: string;
   sourceProse?: string;
   splitNote?: string;
+  /**
+   * A NOTE IS NOT AN OBLIGATION (her ninety-third §2): prose a legacy flag carried that was RULED a
+   * note rather than a condition converts here, with its `movedFrom` recorded inside it — *"a note
+   * in an obligation field is an obligation nobody will discharge."*
+   */
+  note?: string;
   /** Unknown keys pass through (R57). */
   [key: string]: unknown;
 }
@@ -203,6 +209,24 @@ export function readContentFlags(
       out.refusals.push({ code: 'CONDITION_MISSING', where, detail: 'keep-conditional with a null condition refuses at write — a condition that lives nowhere cannot be met.' });
       return;
     }
+    /**
+     * **A WAIVER IS A WAY A CONDITION WAS DISCHARGED, AND THE FIELD FOR DISCHARGED CONDITIONS IS
+     * WHERE IT BELONGS** (her ninety-third §2). `conditionMetBy` opening `WAIVED` discharges the
+     * condition at write AND at use — valid only with a date, a MAY_JUDGE name and a reason, and
+     * REPORTED in every run so waivers stay visible rather than passing as ordinary discharges.
+     */
+    const metBy = typeof o.conditionMetBy === 'string' ? o.conditionMetBy : '';
+    if (/^WAIVED\b/.test(metBy)) {
+      const m = /^WAIVED\s+(\d{4}-\d{2}-\d{2})\s+by\s+([A-Za-z][\w-]*)\s*:\s*(\S.*)$/.exec(metBy);
+      if (!m || !MAY_JUDGE.includes(m[2] as string)) {
+        out.refusals.push({
+          code: 'CONDITION_MISSING', where,
+          detail: `conditionMetBy opens WAIVED but does not carry a date, a MAY_JUDGE name and a reason ("WAIVED <date> by <name>: <reason>") — a waiver without those is a silent keep with extra steps.`,
+        });
+        return;
+      }
+      out.reported.push(`${where}: WAIVED condition — "${String(o.condition ?? '').slice(0, 60)}…" discharged by waiver (${m[1]}, ${m[2]}). Visible every run.`);
+    }
     if (opts.enforceUse && o.condition && (o.conditionMetBy === null || o.conditionMetBy === undefined || String(o.conditionMetBy).trim() === '')) {
       out.refusals.push({
         code: 'CONDITION_MISSING', where,
@@ -215,7 +239,7 @@ export function readContentFlags(
       if (o.strike === 'ABSENCE-CLAIM-NO-SPAN') {
         // Valid, visible, never refused. An absence claim is load-bearing and unstrikeable.
         out.reported.push(`${where}: ABSENCE-CLAIM-NO-SPAN — a load-bearing absence claim the strike test cannot quote a span for. Reported every run; the standard says what it cannot check.`);
-      } else if (o.strike === 'PENDING-BYTES') {
+      } else if (typeof o.strike === 'string' && o.strike.startsWith('PENDING-BYTES')) {
         if (extract !== null) {
           out.refusals.push({
             code: 'STRIKE_SPAN_DRIFTED', where,
