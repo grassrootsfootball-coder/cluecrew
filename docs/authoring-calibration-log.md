@@ -16092,3 +16092,62 @@ instead of a gap. Yes wants a scope — **which surfaces, in what voice, and who
 the instinct producing *walk this one with me* and *I'll show you how I worked this out* is trying to
 make a product that talks to a nine-year-old sound like a person, **and that is not a bad instinct to
 have arrive unruled twice.**
+
+## R555 — The first-person scanner, built to the scope rather than to the pronoun
+
+**David's ruling, 2026-08-21.** `pnpm check:first-person`. **Refused** in accessible names, group
+labels, button labels and status text. **Permitted** in mode and hint copy **only where a reviewer's
+authority is on the string.** **A first-person string with no reviewer citation is refused wherever it
+sits.**
+
+**Current state: 0 refused, 0 permitted.** Nothing in the product speaks in the first person, and now
+by ruling rather than by accident.
+
+**THE CONSEQUENCE FOR SOURCE IS TOTAL AND DELIBERATE.** No string in a `.tsx` file can carry a
+reviewer citation, because **there is no field to carry one** — so every first-person string in source
+is refused by the provenance rule even where position would permit it. **That is the scope working:
+both arrivals were in source, both unreviewable, both in the quietest place available.**
+
+**TWO EXCLUSIONS, BOTH FOUND BY RUNNING IT, AND BOTH ARE R320 AND R349 REACHING A NEW SCANNER.**
+
+**A quotation is not the product speaking.** *"Go and fetch my fishing-rod"* is Bevis; *"what do I see
+at the bottom but a heap of rolls"* is Dickens. Quoted spans are stripped before matching.
+
+**The analytic `we` is a comprehension convention, not a persona.** *"we are never told what it is"*
+means *the text does not say*. **Reported separately, never refused** — and **the scope does not
+distinguish them in writing, which is a gap for the ruling rather than for the check.**
+
+**AND `walkScript` IS OUT OF SCOPE, WHICH THE CHECK SAYS ON ITS FACE.** 43 walk scripts carry a
+first-person or analytic token and **a pronoun test cannot separate the product's voice from what it
+reports**: `I` is **a letter** in every VR series script (*"so I moves one on to J"*), and reported
+speech arrives unquoted (*"Line 22 says and I have"*). **Whose voice a sentence is in is a reading, not
+a match** — the pointing band and the paraphrase band in a third place.
+
+## R556 — Seventy child-facing strings sit in source, outside copy review
+
+**The surfaces the instinct goes to when reviewed copy is closed to it. 72 files scanned.**
+
+| strings | surface |
+|---:|---|
+| **32** | accessible names (`aria-label`, `alt`, `title`) |
+| **19** | headings |
+| **16** | plain paragraph literals |
+| 2 | button labels |
+| 1 | status / live region |
+| 0 | placeholders |
+
+**70 distinct strings, none of which has a reviewer, a provenance field, or an amendment path.** A
+return cannot amend any of them: **there is no id to name and no row to write.**
+
+**IS THE LIST COMPLETE? NO, AND THE HONEST ANSWER IS THAT IT CANNOT BE MADE COMPLETE BY THIS METHOD.**
+It finds string literals in six syntactic positions. **It cannot see** a string built by
+concatenation, one held in a constant and rendered elsewhere, one reaching the surface through a
+helper, or any string in a file outside the four crew directories.
+
+**So 70 is a floor** (R543: every unverified population is an upper bound — **and this one is the
+opposite, because the method under-matches rather than over-matching**). The two arrivals that
+prompted the ruling were both **accessible names**, which is the largest row.
+
+**What the scope buys is not coverage — it is that the largest and quietest surface now has a rule on
+it.** The 19 headings and 16 paragraphs remain unreviewed, and naming them is the finding rather than
+the repair.

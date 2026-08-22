@@ -33,6 +33,7 @@
     "check:step1-collision": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-step1-collision.ts",
     "check:proposal-carriers": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-proposal-carriers.ts",
     "check:widened-without-hint": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-widened-without-hint.ts",
+    "check:first-person": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-first-person.ts",
     "check:card-option-set": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-card-option-set.ts",
     "check:key-change-cards": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-key-change-cards.ts",
     "check:manifest-diff": "tsx scripts/check-manifest-diff.ts",
