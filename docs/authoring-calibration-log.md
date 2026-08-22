@@ -15453,3 +15453,78 @@ output, which is exactly the case the guard cannot reach.
 
 **So the guard covers the empty case completely and the wrong-but-nonempty case not at all**, and
 R517 is what covers the second.
+
+## R520 — Scan-output rows join the claim ledger
+
+**Her ruling, 2026-08-21.** **A scan's classification is a CLAIM, the object is the ARTEFACT, and the
+comparison is OPENING IT.** Same kind as every row already in the ledger.
+
+**The only reason they were not there is that a table does not read like a claim.** *"key-only"* in a
+column reads as a measurement; written out it is *"this artefact shows an option without its
+siblings"* — **a sentence about a file, checkable only by opening the file**, which is the ledger's
+definition exactly.
+
+**And the session proves the population is live**: `export-review-pack` was classified key-only and
+renders every option with its key. **Three such misclassifications in two turns, each reported as a
+measurement, each settled by opening the file.**
+
+## R521 — The ledger's proportionate form: read what you will act on
+
+**Recorded with the scan rows because the population is now large and the useful part is not.**
+
+**Read the rows you will act on — always a handful, always the ones that matter — and let the rest sit
+COUNTED AND UNREAD.**
+
+**The ledger is not a work queue and completing it was never the goal.** 1,092 claims plus scan
+outputs is a population to draw from, and **its value is that a row can be found when it matters, not
+that every row is read.** An unread row is not a debt; it is a claim nobody has needed to check.
+
+**This is what stops the ledger becoming the backlog it was built to measure** — the failure it would
+otherwise repeat is the conditional-flag population, where nine rows in an obligation field read as
+nine obligations and were two.
+
+## R522 — The guard's bound is PERMANENT, not current
+
+**Both catches empty. All three uncaught faults non-empty. That ratio is a property, not a state.**
+
+**A wrong pattern that FINDS SOMETHING looks exactly like a right pattern that finds something.** No
+count separates them — both produce a plausible number. No emptiness test reaches them — neither is
+empty. **And a second pattern is only a second belief about the same property**, which is why writing
+one is not a check.
+
+**`requirePopulation` covers the empty case COMPLETELY and the wrong-but-nonempty case NOT AT ALL**,
+and no extension of it can change that: it asks whether anything could have been found, and something
+was.
+
+**So the second case has no instrument and is not going to get one.** R517 — carry everything to the
+point of decision — is not a mitigation of this bound but the only thing that operates on the other
+side of it: **it prevents the narrowing rather than detecting its consequence.**
+
+## R523 — Her prediction: source varies in formatting by nature, and eight scans assume it does not
+
+**Not a new rule — a prediction about R517, naming where it fires next.**
+
+**A pattern over SOURCE that assumes a line shape is assuming the least stable property source has.**
+Formatting is the one thing a linter, a refactor or a hand edit changes freely and silently.
+
+**Checked, as she asked. EIGHT scans read source with line-shape-assuming patterns — 44 patterns
+between them:**
+
+| risky | scan |
+|---:|---|
+| 11 | `check-walkscript-reach` |
+| 10 | `check-declared-unread` |
+| 10 | `check-no-review-furniture` |
+| 5 | `check-signing-doors` |
+| 3 | `check-unordered-includes` |
+| 2 | `check-register`, `report-gate-field-scope` |
+| 1 | `check-derived-writes` |
+
+**The three largest are the ones whose output is a population count** — reach, declared-unread,
+review-furniture — **so a formatting change moves a number rather than breaking a run.** That is the
+non-empty case R522 says nothing can catch.
+
+**Reported, not repaired.** Forty-four patterns is not a turn's work, and **rewriting them without
+knowing which have already drifted would produce a new set of numbers with no way to tell which
+changed because the code changed and which because the pattern did.** The order to fix them is by
+what their output is used for, and the top three are used for populations.
