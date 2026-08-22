@@ -17902,3 +17902,32 @@ face.** Not the predicted 46 strings, and the two facts are stated rather than r
 objects displace at most four strings (one pair shares a prose), and WiW's string refused
 displacement on the divergence above. **47 was the arithmetic ceiling; 48 is the measured count;
 the gap between them is a finding, not an error to smooth.**
+
+## R633 — The doubled clause traced to its write, proven by reconstruction, held for her ruling
+
+**The write**: `apply-annie-reason-rewrites.ts`, executing her twenty-second return, did
+`flags[0].replace('the rabbit is unhurt', <her authored clause>)`. **Her clause was authored for the
+WHOLE reason clause** — *"the rabbit is unhurt and the tone is farcical rather than cruel"* — and
+itself carries the tone half. **The script's anchor was the sub-clause**, so the row kept its own
+tail and the tone clause survived twice. **The doubling was IN THE WRITE, not the source**: her file
+is clean, the pre-write row is clean (it is the sourceProse her ninety-third quotes), and
+`original.replace(anchor, herClause) === row` **byte for byte** — a reconstruction, not a story.
+
+**R87's family, one step on**: the script guarded that the anchor was PRESENT and could not see that
+the replacement OVERLAPPED the row's remainder. An anchor carrying less than the edit's true span is
+the same fault whether the result is a silent no-op (R87) or a silent doubling (this).
+
+**And the trace found the second divergence**: the authoring store's copy still reads *"the rabbit
+is unhurt"* — her twenty-second rewrite landed only here, and doubled. **Two stores, two texts, both
+wrong differently: theirs lacks her ruling, ours mangled it.** The row is HELD untouched beside her
+two landed conversions — `wiw-doubled-clause-trace-535c7dbbd8f1c85a.json` (`28f3cea8…`) carries the
+full string, the trace and the stamp — and **nothing further lands on stream-a-03 until she rules.**
+
+## R634 — A number travels with its unit
+
+This census printed legacy split by shape; the authoring store counts legacy whole. **Both right,
+and the desk reconciled them by hand once** — which is once per reader forever, because a number
+without its unit invites every reader to guess the subtraction. The census lines now carry
+`[unit: …]` on their face and print both renderings: `48 [legacy STRING flags] + 8 [legacy
+pre-standard OBJECT flags] = 56 [legacy flags, whole — the authoring store's unit]`. Kin to R591
+(language claiming a stronger population): a bare number claims whatever unit the reader assumes.

@@ -55,9 +55,17 @@ function main() {
     + 'flags have been unfrozen since. Zero arrivals is the door having been shut, not the door '
     + 'working; the screened denominator above is asserted separately.');
   if (standard > 0) for (const l of landed) console.log(l);
+  /**
+   * **A NUMBER THAT TRAVELS WITHOUT ITS UNIT GETS RECONCILED BY HAND EVERY TIME** (David,
+   * 2026-08-22 — R634). This census splits legacy by shape; the authoring store counts legacy
+   * WHOLE. Both are right, the desk reconciled them once, and the fix is that the line carries both
+   * figures WITH both units so no reader ever subtracts on a guess.
+   */
   console.log(
     `  LEGACY census — counted, NEVER refused (the standard does not decide the twenty-six, and this\n`
-    + `  reader does not either): ${legacyStrings} string flag(s), ${legacyObjects} pre-standard object flag(s).`,
+    + `  reader does not either):\n`
+    + `      ${legacyStrings} [unit: legacy STRING flags] + ${legacyObjects} [unit: legacy pre-standard OBJECT flags]\n`
+    + `      = ${legacyStrings + legacyObjects} [unit: legacy flags, whole — the authoring store's unit]`,
   );
   if (splits.length > 0) {
     // "second object OF THE SPLIT" marks the pair's second member; the FIRST member's note also
