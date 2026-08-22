@@ -15186,3 +15186,91 @@ but about whether the evidence is *in the sentence a child is pointed at*.
 
 **Recorded whether or not it is built**, because the specification is the reusable half: **the tell
 must be on the page.**
+
+## R506 — The whole-option-set rule is a READING rule, refiled; and her ruling against herself
+
+**Refiled from R472.** It was recorded as a rule about cards. **It is a rule about reading an
+option**, and the card gate is one instance of it.
+
+**HER RULING AGAINST HERSELF: she does not rule on an option that arrives without its key and its
+full option set.** She had already applied it to me twice; she now binds herself, which is what makes
+it a reading rule rather than an authoring one.
+
+**So every artefact that sends her an option sends its key and its siblings.** The card rows do this
+since R486. **The tag and ledger rows do not.**
+
+**AND R503 IS THE PROOF THAT IT IS NOT A CARD RULE.** I read `ENG-002-pp-23`'s option alone and called
+it *"a claim about narrative technique, not a child mistaking a crowd's opinion for a fact."* **Against
+its key it is exactly the entry's error** — the key withholds the writer's agreement, the distractor
+supplies it. **A prose reading, not a card, and the same fault.**
+
+## R507 — Thirty-two reviewer-facing artefacts show an option; eleven carry the set
+
+**Measured, not assumed.**
+
+| | count |
+|---|---:|
+| carry **key + siblings** | **11** |
+| carry the **key only** | **7** |
+| carry **neither** | **15** |
+
+**Twenty-two of thirty-two would be refused under her own rule.** The seven key-only include
+`export-review-pack`, `export-vr-review-pack`, `export-vr04-forty-ranks` and the three walk packs —
+**all reviewer-facing by name.** The fifteen carrying neither include `export-reviewer-status` and
+`export-tn-teacher`.
+
+**This is a shape change across the board, not a card fix**, and **it is cheaper than the
+alternative**: she will refuse to rule otherwise, correctly, and a refusal costs a delivery round
+trip where the shape change costs one edit per exporter.
+
+**The bound**: this is a source scan for `isCorrect` and sibling-mapping in each exporter, so it can
+over-report (a file that touches `isCorrect` for another reason) and under-report (an exporter that
+carries the set through a helper). **It orders the work; it does not certify any single artefact.**
+
+## R508 — The proposal-carrier check: a proposal naming a key is making a checkable claim
+
+**`pnpm check:proposal-carriers`. One line: read the row.**
+
+**944 artefacts scanned, 2 key-claims found, 2 MISDESCRIBED — both in
+`narrator-redraft-proposal-0413f8eef6a156f8.json`, mine.** It claims
+`ENG-002-pp-23 key: "We are told what the writer thinks…"`; **the row's key is *"We are told what
+others say of them, but never whether the writer agrees"*, and the claimed string is a DISTRACTOR.**
+
+**It would have stopped this at the source rather than five days later** — and in between, a hint was
+approved through it.
+
+**It is the claim ledger with a PROPOSAL as the text and ONE ROW as the object**, and it belongs in
+code rather than in a reading **because the object is a database row rather than prose.** That is the
+line between the ledger's rows and this check: not importance, but whether the thing being compared
+can be queried.
+
+**AND `requirePopulation` ABORTED THE FIRST RUN.** My pattern demanded a quote immediately after
+`key:`; inside JSON the claim reads `key: \"…\"` and the next character is a **backslash**. It screened
+944 artefacts, found **zero**, and **the run aborted rather than printing that zero** — R453 a second
+time in one session, both times a wrong scope query caught before it became a number.
+
+## R509 — The hint survived by luck, and that is the finding rather than the survival
+
+**`en-narrator-voice-as-fact`'s hint blocks the error the entry actually names — and it was approved
+through a false account of the item it serves.**
+
+**Reaching a right wording through a wrong premise is clean by margin.** The proposal said the string
+was the key; it is a distractor; **the hint would have been approved differently had the account been
+right**, and it happens to work anyway.
+
+**Letting the surviving wording read as the premise holding is the fault she is guarding against**,
+and it is R494's shape on a hint instead of a card: **a clean result from a wrong input is not evidence
+the input was sound.**
+
+## R510 — Two things AVAILABLE rather than owed
+
+**The item specification exists and nothing is queued against it** (R505). **If an item on that entry
+is ever commissioned it does not need re-deriving** — the anchor, the easier start and the refusal are
+recorded, and *the tell must be on the page* is the reusable line.
+
+**And Pride and Prejudice's twenty-three items now carry her reading.** `passageReadingContext` is
+attached to all 23 rows — decoding 12, comprehension **14**, with the note that they were **authored
+before anybody had measured this passage**, and `NOT_A_READING_AGE` travelling with the figures.
+
+**None is LIVE.** So her fourteen **arrives with them when they are read** rather than after — which
+is the whole point of attaching it to the rows instead of recording it beside them.
