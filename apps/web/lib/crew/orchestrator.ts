@@ -761,8 +761,28 @@ async function serveItem(
     // THE PASSAGE TRAVELS WITH THE ITEM. Loaded here, server-side, because the extract is a file
     // and the engine is a client component — and because a comprehension item without its passage
     // is not a degraded question, it is not a question.
-    ...(family === 'comprehension' ? { passage: loadPassageFor(item) } : {}),
+    ...(family === 'comprehension' ? { passage: await withVaultWords(loadPassageFor(item)) } : {}),
   };
+}
+
+/**
+ * **VAULT WORDS ON THE PASSAGE (David, 2026-08-22 — R638).** The comprehension surface gains
+ * WordTap for passage-linked vault words. **The signature gate is the Word review door, not this
+ * wiring**: only a `status: LIVE` Word row serves, so nothing a child can tap goes live unsigned —
+ * the card's provenance is ordinary (authored through admin/words, reviewed like every Word), and
+ * this function is a JOIN, not a door. The link is derived, never hand-kept (R57): the passage's
+ * own `wordVaultCandidates` name the headwords; the Word table decides which are servable.
+ */
+async function withVaultWords<T extends { vaultCandidates?: string[] } | undefined>(passage: T):
+Promise<(Omit<NonNullable<T>, 'vaultCandidates'> & { vaultWords: Array<{ id: string; headword: string; definitionChild: string }> }) | undefined> {
+  if (!passage) return undefined;
+  const { vaultCandidates, ...rest } = passage;
+  const names = (vaultCandidates ?? []).filter((w) => typeof w === 'string' && w.trim() !== '');
+  const words = names.length === 0 ? [] : await prisma.word.findMany({
+    where: { headword: { in: names }, status: 'LIVE' },
+    select: { id: true, headword: true, definitionChild: true },
+  });
+  return { ...(rest as Omit<NonNullable<T>, 'vaultCandidates'>), vaultWords: words };
 }
 
 /**
@@ -775,7 +795,7 @@ async function serveItem(
  */
 function loadPassageFor(item: { stem: unknown; lineRefs: unknown }): {
   id: string; title: string | null;
-  lines: Array<{ n: number | null; text: string }>; citedLines: number[];
+  lines: Array<{ n: number | null; text: string }>; citedLines: number[]; vaultCandidates: string[];
 } | undefined {
   const stem = (item.stem ?? {}) as Record<string, unknown>;
   const ref = typeof stem.passageRef === 'string' ? stem.passageRef : null;
@@ -786,11 +806,17 @@ function loadPassageFor(item: { stem: unknown; lineRefs: unknown }): {
     const raw = readFileSync(resolve(process.cwd(), '../../content/passages', `${ref}.json`), 'utf8');
     const parsed = JSON.parse(raw) as {
       sceneTitle?: string; numberedLines?: Array<{ n?: number | null; text?: string }>;
+      wordVaultCandidates?: Array<{ word?: string; anchoredAs?: string }>;
     };
     return {
       id: ref,
       title: typeof parsed.sceneTitle === 'string' ? parsed.sceneTitle : null,
       lines: (parsed.numberedLines ?? []).map((l) => ({ n: l.n ?? null, text: l.text ?? '' })),
+      // The passage's own candidate list names the headwords; the Word table (LIVE only) decides
+      // which serve. Candidates are a fact about the passage; servability is the review door's.
+      vaultCandidates: (parsed.wordVaultCandidates ?? [])
+        .map((c) => (typeof c.anchoredAs === 'string' ? c.anchoredAs : c.word))
+        .filter((w): w is string => typeof w === 'string'),
       // `[]` DECLARES the whole passage as the window (R120) — no line is singled out, and that is
       // a positive statement rather than an absent one.
       citedLines: Array.isArray(item.lineRefs) ? (item.lineRefs as unknown[]).map(Number).filter((n) => !Number.isNaN(n)) : [],

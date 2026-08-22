@@ -17991,3 +17991,36 @@ wiring** — WordTap serves story chapters only. So her note's suggestion is ACT
 on the idiom lands in an existing authoring door and an existing child surface — but reaching it
 FROM THE PASSAGE a child is reading is one wiring that does not exist yet. Not the
 described-channel class; a channel one room away.
+
+## R637 — The ninety-seventh's nine land whole; the first CUT; the third species counted
+
+All nine through the door, per-flag: no refusals — the ninety-fourth gap caught nothing here
+beyond the convict flag, every axis tabled. **The first CUT-disposition object is in the corpus**
+(the colonial clause: an avoidance now a judgement in the standard's own shape), the boundary
+avoidance rides its note counting toward BOTH axes (her third species: *a boundary placed to
+exclude content is a judgement about that content*), the half-drowned split lands as split four —
+**our face shows 3; her running 4 includes the uncrossed ninety-fourth's, the census confirming
+the gap again** — and the Hindu-god waiver reports on every run. Four minimal spans cut from the
+bytes with readings carried (`ninetyseventh-landing-eb872489130131a7.json`), including one
+discrepancy reported rather than smoothed: **the bytes say "half choked" where the legacy prose
+says "half drowned"** — the resolution is the same either way and the difference is hers to see.
+The band claim stays in sourceProse, as she ruled: a suitability judgement by an unrecorded judge
+is not re-published in a live field. **Census: 31 + 8 = 39 [units on face]; 26 standard; DECLARED
+absence 10 · whole-passage-tone 1.**
+
+## R638 — WordTap reaches the passage, and the gate demonstrated itself on its first occupant
+
+**The wiring, smallest honest diff**: `loadPassageFor` surfaces the passage's own
+`wordVaultCandidates` (derived, never hand-kept — R57); `withVaultWords` joins them against the
+Word table **LIVE rows only**; `PassageView.vaultWords` carries them; the comprehension surface
+renders the first whole-word occurrence per line as the SAME WordTap the story chapters use — one
+component in a second room, not a second component. The matcher is a pure lib function
+(`vault-word-match.ts`) with four tests: passage bytes win over headword casing, no firing inside
+another word, phrase headwords whole, first-match-wins.
+
+**THE SIGNATURE GATE IS THE WORD REVIEW DOOR, NOT THE WIRING.** Only `status: LIVE` serves, so
+nothing a child can tap goes live unsigned — and the idiom card proves it: `gave a disgust`
+(P&P line 34, the period displeasure sense against the modern revulsion) is DRAFTED through the
+ordinary door, gate-passed, staged for her sign-off (`IDIOM-CARD-FOR-SIGNOFF.md`) — **and does not
+serve, because it is DRAFT.** The gate demonstrating itself on its first occupant is the wiring's
+acceptance test.

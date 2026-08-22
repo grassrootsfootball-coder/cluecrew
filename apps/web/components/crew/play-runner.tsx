@@ -770,6 +770,7 @@ export function PlayRunner({ childId }: { childId: string }) {
                   outcome={outcome}
                   // Comprehension only; every other engine ignores it.
                   passage={activity.passage}
+                  childId={childId}
                 />
               );
             })()

@@ -54,17 +54,47 @@ import { OptionButton } from './option-button';
 import { optionLabel, outcomeFor, stemText, type EngineProps } from './shared';
 import { shortRange } from '@/lib/crew/cited-lines';
 import { ScopeNote } from './scope-note';
+import { WordTap } from '../story/word-tap';
+import { firstVaultWordMatch } from '@/lib/crew/vault-word-match';
 
 export interface PassageView {
   id: string;
   title: string | null;
   lines: Array<{ n: number | null; text: string }>;
   citedLines: number[];
+  /**
+   * Vault words linked to THIS passage, LIVE rows only (R638). The signature gate is the Word
+   * review door: this surface renders whatever it is given and is never the thing that decides
+   * what a child may tap.
+   */
+  vaultWords?: Array<{ id: string; headword: string; definitionChild: string }>;
+}
+
+/**
+ * A passage line with its vault words tappable (R638). First whole-word occurrence per line, case
+ * kept from the passage bytes — the line's text is never altered, only wrapped. Reading feeds
+ * collecting, exactly as WordTap already does in story chapters; this is the same component in a
+ * second room, not a second component.
+ */
+function LineWithVaultWords({ text, words, childId }: {
+  text: string;
+  words: Array<{ id: string; headword: string; definitionChild: string }>;
+  childId: string;
+}) {
+  const hit = firstVaultWordMatch(text, words);
+  if (!hit) return <span>{text}</span>;
+  return (
+    <span>
+      {text.slice(0, hit.index)}
+      <WordTap childId={childId} word={{ id: hit.word.id, headword: hit.matched, definitionChild: hit.word.definitionChild }} />
+      {text.slice(hit.index + hit.matched.length)}
+    </span>
+  );
 }
 
 export default function ComprehensionEngine({
-  stem, options, selected, onSelect, outcome, passage,
-}: EngineProps & { passage?: PassageView }) {
+  stem, options, selected, onSelect, outcome, passage, childId,
+}: EngineProps & { passage?: PassageView; childId?: string }) {
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const spanFirstRefs = useRef<Array<HTMLParagraphElement | null>>([]);
   /**
@@ -242,7 +272,9 @@ export default function ComprehensionEngine({
                   >
                     {line.n ?? ''}
                   </span>
-                  <span>{line.text}</span>
+                  {childId && (passage.vaultWords?.length ?? 0) > 0
+                    ? <LineWithVaultWords text={line.text} words={passage.vaultWords ?? []} childId={childId} />
+                    : <span>{line.text}</span>}
                 </p>
               );
             })}
