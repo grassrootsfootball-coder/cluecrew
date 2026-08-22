@@ -16,7 +16,7 @@
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { prisma } from '../packages/db/src/index';
-import { describeShapes, readAmendments } from './lib/return-amendments';
+import { declaredCounts, describeShapes, readAmendments } from './lib/return-amendments';
 import { requirePopulation } from './lib/population';
 
 const RETURNS = '/Users/davidb/Downloads';
@@ -36,8 +36,41 @@ const RETURNS = '/Users/davidb/Downloads';
 
 async function main() {
   const { amendments, files } = readAmendments(RETURNS);
-  const found = amendments.map((a) => ({ file: a.file, text: a.authored, targetId: a.targetId }));
+  /**
+   * **SURFACE amendments are declared OUT, never counted absent.** A group label is not a row in any
+   * table this check reads, so searching for it finds nothing and reports the true absence of a
+   * thing that was never here — the R60 fault wearing a correct answer.
+   */
+  const surface = amendments.filter((a) => a.kind === 'SURFACE');
+  const found = amendments
+    .filter((a) => a.kind === 'STORE')
+    // `when` travels with the row. The first version of the SUPERSEDED test dropped it here and
+    // compared against `undefined`, so every comparison was false and the class reported zero —
+    // a true-looking count produced by a field that was never carried.
+    .map((a) => ({ file: a.file, text: a.authored, targetId: a.targetId, when: a.when }));
   console.log(`  SHAPES READ:\n${describeShapes()}`);
+
+  /**
+   * **THE READER IS MEASURED AGAINST THE AUTHOR'S OWN COUNT BEFORE IT REPORTS ANYTHING.** Her block
+   * declares how many amendments it carries. Extracting fewer is a READER FAULT, and it is the one
+   * fault here no downstream check can ever see: an amendment that is not read is not absent, it is
+   * INVISIBLE, and invisible reads as landed.
+   */
+  const declared = declaredCounts(RETURNS);
+  const shortfalls = declared
+    .map((d) => ({ ...d, read: amendments.filter((a) => a.file === d.file).length }))
+    .filter((d) => d.read < d.declared);
+  if (shortfalls.length > 0) {
+    console.error(`\n  READER FAULT — ${shortfalls.length} return(s) declare more than was extracted.`);
+    for (const s of shortfalls) {
+      console.error(`    ${s.file}: block declares ${s.declared}, reader found ${s.read}`);
+    }
+    console.error(
+      '  **Nothing below this line can be trusted for these returns.** An unread amendment is not\n'
+      + '  reported absent — it is not reported at all, and the return prints as FULLY LANDED.',
+    );
+    process.exitCode = 1;
+  }
 
   const lib = await prisma.misconception.findMany({ select: { id: true, childHint: true } });
   const items = await prisma.item.findMany({ select: { id: true, status: true, explanation: true } });
@@ -69,13 +102,15 @@ async function main() {
   );
 
   const byFile = new Map<string, { landed: string[]; absent: string[] }>();
+  const unlanded: Array<{ file: string; text: string; targetId: string | null; when: Date }> = [];
+  /** One normaliser for every comparison here — two would disagree, which is R429's whole finding. */
+  const norm = (s: string) => s.trim().replace(/\.$/, '');
   for (const a of found) {
     /**
       * **EXACT, NOT SUBSTRING.** `includes` reports a landing whenever her wording happens to sit
       * inside a longer stored string — which is precisely what a PARTIAL application looks like.
       * Normalised for the trailing full stop the extractor strips, and for nothing else.
       */
-    const norm = (s: string) => s.trim().replace(/\.$/, '');
     /**
       * **THE TARGET IS USED WHERE THE SHAPE CARRIES ONE.** Matching by wording alone across the
       * whole store answers "does this string exist somewhere", which is a weaker question than
@@ -87,18 +122,76 @@ async function main() {
     const e = byFile.get(a.file) ?? { landed: [], absent: [] };
     (hit ? e.landed : e.absent).push(a.text);
     byFile.set(a.file, e);
+    if (!hit && a.targetId) unlanded.push(a);
   }
+
+  /**
+   * **SUPERSEDED IS NOT ABSENT, AND CONFLATING THEM MANUFACTURES WORK.** She amended `hostile`
+   * three times across the thirty-ninth, fortieth and forty-first returns. The forty-first landed;
+   * the two earlier wordings are not in the store and never should be. Reporting them as ABSENT
+   * says two of her rulings were dropped, when what happened is that she changed her mind twice and
+   * the store holds her latest word — **the outcome the whole return leg exists to produce.**
+   *
+   * The test is the TARGET, not the wording: another amendment to the SAME row, from a LATER
+   * return, that DID land. Anything else is genuinely absent.
+   */
+  const landedByTarget = new Map<string, Date>();
+  for (const a of amendments) {
+    if (!a.targetId) continue;
+    const scoped = haystack.filter((h) => h.where.endsWith(`:${a.targetId}`));
+    if (!scoped.some((h) => norm(h.text) === norm(a.authored))) continue;
+    const prev = landedByTarget.get(a.targetId);
+    if (!prev || a.when > prev) landedByTarget.set(a.targetId, a.when);
+  }
+  const superseded = unlanded.filter((a) => {
+    const t = landedByTarget.get(a.targetId as string);
+    return t !== undefined && t > a.when;
+  });
+  const supersededSet = new Set(superseded.map((a) => `${a.file}|${a.text}`));
+  const trulyAbsent = unlanded.filter((a) => !supersededSet.has(`${a.file}|${a.text}`));
+  /**
+   * **A THIRD CLASS, AND IT IS NOT A ROUNDING ERROR.** An amendment read from a shape that carries
+   * no target cannot be scoped to a row, so "not found anywhere in the store" is the strongest thing
+   * that can be said about it — and that is weaker than ABSENT. Counted separately, or the three
+   * numbers do not add up and someone reconciles them by picking one.
+   */
+  const unplaceable = [...byFile.values()].reduce((n, e) => n + e.absent.length, 0) - unlanded.length;
 
   const partial: string[] = [];
   console.log('');
+  console.log(
+    `  SUPERSEDED — an EARLIER wording for a row whose LATER amendment did land: ${superseded.length}\n`
+    + '  Not absent, and not work. She changed her mind and the store holds her latest word.'
+    + superseded.map((s) => `\n      ${s.file} — ${s.targetId}: "${s.authored}"`).join('') + '\n',
+  );
   for (const [file, e] of [...byFile].sort()) {
     const state = e.absent.length === 0 ? 'FULLY LANDED' : e.landed.length === 0 ? 'NONE LANDED  ' : 'PARTLY LANDED';
     if (state === 'PARTLY LANDED') partial.push(file);
-    console.log(`  ${state}  ${file}  (${e.landed.length} in, ${e.absent.length} absent)`);
-    for (const t of e.absent) console.log(`      ABSENT: "${t}"`);
+    console.log(`  ${state}  ${file}  (${e.landed.length} in, ${e.absent.length} not in the store)`);
+      for (const t of e.absent) {
+      // The row list carries the SAME three labels as the summary. A list that says ABSENT while
+      // the total says UNPLACEABLE invites the reader to reconcile them by choosing one.
+      const tag = superseded.some((s) => s.file === file && s.text === t)
+        ? 'SUPERSEDED '
+        : unlanded.some((u) => u.file === file && u.text === t)
+          ? 'ABSENT     '
+          : 'UNPLACEABLE';
+      console.log(`      ${tag}: "${t}"`);
+    }
   }
 
-  const absent = [...byFile.values()].reduce((n, e) => n + e.absent.length, 0);
+  const absent = trulyAbsent.length;
+  const absentIncludingSuperseded = [...byFile.values()].reduce((n, e) => n + e.absent.length, 0);
+  console.log(
+    `\n  ${absentIncludingSuperseded} wording(s) are not in the store, and they are three things:\n`
+    + `      ${superseded.length} SUPERSEDED  — a later amendment to the same row DID land\n`
+    + `      ${unplaceable} UNPLACEABLE — read from a shape carrying no target, so unscopeable to a row\n`
+    + `      ${absent} ABSENT      — a ruling with a named row, and the row does not hold it`,
+  );
+  console.log(
+    `\n  SURFACE amendment(s), declared OUT OF SCOPE and NOT counted above: ${surface.length}`
+    + surface.map((s) => `\n      ${s.file} — ${s.target}: "${s.authored}"`).join(''),
+  );
   console.log(
     `\n  ${found.length} authored wording(s) across ${byFile.size} return(s): ` +
       `${found.length - absent} landed, ${absent} absent.\n` +

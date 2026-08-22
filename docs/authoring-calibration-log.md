@@ -16345,3 +16345,105 @@ reading act and *see* in *see the shape* is not, **and a match cannot tell them 
 file. **Every NVR hint instructs a visual act by construction** — the district is about shapes — so the
 question is not a defect list but **whether that district is servable to her at all.** Asking it is the
 deliverable; answering it is not mine.
+
+## R568 — Print the keys present before reading the values (Annie's rule)
+
+**A null from a renamed field and a null from an empty field are the same value.**
+
+She read all thirty-six rows of `unread-item-hints-for-annie` — not the head, every row — found
+`hintCore` null on each, and concluded the population was thirty-six items with **no** hint. The
+reading was correct and the conclusion followed from it. The field was there, under `itsOwnHint`,
+in the same object, one line away, because I had renamed it for readability in a delivery to the
+person whose every ruling uses the original name (R564).
+
+**THE CARE WAS REAL AND IT WAS SPENT ON THE WRONG AXIS.** Checking every row tests whether the value
+is missing *somewhere*. **It cannot test whether the NAME is right, because a rename is uniform** —
+the answer is identical on every row, so no amount of row-wise thoroughness separates it from an
+empty field. **The keys present are a different measurement, and it is one line.**
+
+`readFieldsByName()` in `scripts/lib/field-read.ts` prints the union of keys actually present with
+their row counts, then reports each requested name as present-and-non-empty, present-and-empty, or
+**NOT A KEY ON ANY ROW — which THROWS.** A name on zero rows is not an empty population, and
+`requirePopulation` cannot see it: that guard counts rows and cannot tell that they are the wrong
+rows.
+
+**IT PAID ON ITS FIRST RUN.** One line —
+`walkScript(340) walkScriptBatch(297) hintCore(43) hintAuthority(8) hintAuthoredBy(7)` — carries the
+whole 43 − 7 = 36 arithmetic that took a return, a correction and a reconciliation to establish, and
+shows an asymmetry nobody had asked about: **8 items carry `hintAuthority` and 7 carry
+`hintAuthoredBy`**, and `chooseHint` requires both.
+
+**THE POPULATION: 34 delivery scripts read a JSON column field by name; 1 carries the guard.**
+`pnpm check:field-reads` derives that population (R57) and **ratchets on a FLOOR rather than failing
+thirty-four scripts on its first run** — a check that is red on the day it lands gets muted inside a
+week, which this board has named three times. The floor names no script, so it cannot bless one.
+
+## R569 — A match carries what it matched on, and that is provenance in its smallest useful form
+
+**What made `ENGLISH-HINTS-INSTRUCTING-A-VISUAL-ACT.md` readable was one column: the matched word,
+marked on every row.**
+
+Without it she would have had to reconstruct, for each of thirty rows, why that row was in the file —
+and the reconstruction is the expensive half, because *see* in *see the line* is a reading act and
+*see* in *see the shape* is not. **With it, half the file resolved to no in seconds.**
+
+This is the same rule as R472's option sets, R555's element-and-what-it-does, and R560's four fields,
+**reduced to its smallest instance: a match that carries its own evidence.** The general form is
+**A RESULT TRAVELS WITH THE THING THAT PRODUCED IT** — a matched word, a quoted span, a computed
+value's inputs. A row that says only *this matched* asks the reader to re-run the matcher by hand,
+which is the R25 fault (an account instead of the value) arriving inside a delivery that is otherwise
+exemplary.
+
+## R570 — The amendment reader knew one of her four shapes, and both sides shared the edit that hid it
+
+**`en-repetition-purpose` and `en-motive-invention` held the wordings she REPLACED**, in returns
+reported applied. Neither had landed, and `check:amendments-landed` reported both returns FULLY
+LANDED — because it never read the amendments at all.
+
+**FOUR SHAPES, ONE READ.**
+
+- `BLOCK` — the indented `AMENDMENTS` block, `target:` / `replaced:` / `authored:`, **no bold**.
+  **She has used it for twenty-eight returns.** Both existing shapes require `**`, so every one was
+  invisible. The fifty-first return's own block declares `count: 13`; the reader found **nought**.
+- `LABELLED` with a **line wrap**. Her returns hard-wrap near ninety columns, so a long authored
+  wording closes its `**` on the next line, and `.` cannot cross a newline. The seventeenth return
+  carries three; this found one and called the return fully landed.
+- `HEADED_LABELLED` — the target sitting in the bolded heading one line above. Those amendments were
+  read but reported UNPLACEABLE, which is strictly weaker than absent and reads as an unfixable limit
+  rather than an unread line.
+
+**AND `apply-all-unlanded.ts` KEPT ITS OWN REGEX — R429 recurring inside the ruling that named it.**
+That entry created the shared reader *because two parsers over one format disagree eventually*, and
+the apply script never imported it. **The second parser survived the ruling about second parsers.**
+
+**THE NORMALISER WAS EDITING HER TEXT, AND BOTH SIDES AGREED BECAUSE THEY SHARED THE MUTILATION.**
+`tidy()` unwrapped lines *and stripped a trailing full stop*. The second half is not normalisation —
+it is a silent edit to an authored value, and `checkChildFacingText` requires a child-facing sentence
+to end on a full stop. So eleven rows whose stored text was **already correct** read as different and
+were queued to be rewritten **without their full stop**, including `en-plausible-not-stated` — 193
+carriers, 11 LIVE, the most-carried hint in the product. The check could not see it because its own
+comparison stripped the stop too. **NORMALISE WHERE YOU COMPARE; NEVER WHERE YOU READ.**
+
+**THREE CLASSES, NOT ONE.** *Not in the store* was reported as ABSENT and is three different facts:
+**SUPERSEDED** (a later amendment to the same row did land — she changed her mind, and rewriting the
+earlier wording would run the return leg backwards), **UNPLACEABLE** (read from a shape carrying no
+target), **ABSENT** (a named row that does not hold her ruling). Reporting the first as absent
+manufactures work and would have undone three of her decisions.
+
+**AND THE PARENTHETICAL NAMES THE FIELD.** `en-vocab-neighbouring-sense (description, not hint)` — the
+first `resolveTarget` stripped the bracket to get a clean id, aiming an adult-facing description at
+`childHint`. It aborted on the gate, which is luck: **had it read like a hint it would have been
+written where a child sees it.** Then the guard against it, `/hint/i.test('description, not hint')`,
+returned **true** — matching the field she was *excluding*. Her form is `<field>, not <other field>`;
+the field is the part before the comma.
+
+**THE GUARD IS HER OWN COUNT.** `declaredCounts()` reads `count: N` from her block and fails when the
+reader extracts fewer. `describeShapes()` printed the shapes truthfully on every run — R60's
+discipline, working exactly as designed — **and it could not help, because nothing compared the
+declared shapes to the shapes the source actually used.** A count comes from the other side of that
+gap.
+
+**OUTCOME: 33 → 71 wordings read; 15 genuinely-absent library hints written and confirmed by reading
+each row back; not-in-the-store 25 → 10.** Residual: **4 word-card definitions** (`stoic` ×2, `shiny`,
+`luminous`) and **1 description field**, all in tables `apply-all-unlanded` does not own — reported,
+not written, because a writer that reaches past its own table is the fault this register opened with.

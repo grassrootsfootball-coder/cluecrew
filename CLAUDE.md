@@ -291,6 +291,21 @@ here has no register entry. A ruling goes to the register FIRST; it comes here o
   and "all 21 GL-style question types" were each correct on the day and invisible afterwards, because
   **nothing reports a sentence that is right**. Any number or district name in public or staff copy
   that is a claim about our own data gets a declared assertion with an owner, or gets derived.
+- **PRINT THE KEYS PRESENT BEFORE READING THE VALUES** (Annie, 2026-08-22 — R568). Any delivery
+  that pulls a named field out of a JSON column calls `readFieldsByName` (`scripts/lib/field-read.ts`)
+  FIRST: it prints every key actually present with its row count, then reports each requested name,
+  and THROWS when a name is on no row at all. **A null from a renamed field and a null from an empty
+  field are the same value**, so reading every row cannot tell them apart — a rename is uniform, and
+  the answer is identical on every row. She read all thirty-six rows of a delivery, found `hintCore`
+  null on each, and correctly concluded the items carried no hint; the value was there under a name
+  I had changed for readability. `requirePopulation` does not reach this — it counts rows and cannot
+  see that they are the wrong rows. **And normalise where you COMPARE, never where you READ**: the
+  amendment reader stripped a trailing full stop as it read, which queued eleven already-correct
+  library hints to be rewritten without theirs (R570).
+- **A MATCH CARRIES WHAT IT MATCHED ON** (2026-08-22 — R569). Any file delivering matched rows marks
+  the matching evidence on each row — the word, the span, the value. Without it the reader
+  reconstructs the matcher by hand for every row, which is the expensive half; with it, half a file
+  resolves in seconds. The smallest form of "a result travels with the thing that produced it".
 - Content decisions (items, chapters, misconceptions) go through the CMS
   review pipeline; nothing skips the reviewer.
 - **PILOT CONTENT UNDER ACTIVE REVIEW HAS ONE WRITE PATH: `scripts/lib/pilot-review.ts`, NEVER A

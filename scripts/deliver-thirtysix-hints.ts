@@ -14,10 +14,20 @@ import { fileURLToPath } from 'node:url';
 import { chooseHint } from '../packages/core/src/index';
 import { prisma } from '../packages/db/src/index';
 import { artefactStamp, deliver, stampedName } from './lib/export-destination';
+import { readFieldsByName } from './lib/field-read';
 import { requirePopulation } from './lib/population';
 
 const REPO = join(dirname(fileURLToPath(import.meta.url)), '..');
 const FAMILY = 'unread-item-hints-for-annie';
+/**
+ * **SHE READS NINE AT A TIME, SO SHE IS SENT NINE AT A TIME.** Sending all thirty-six and leaving
+ * her to slice them makes the boundary hers to keep track of across four sittings — and a boundary
+ * held in someone's head is the thing that silently moves. `--batch 2` emits rows 10-18 of the same
+ * deterministic id sort, and names the batch on the face of the artefact.
+ */
+const BATCH_SIZE = 9;
+const batchArg = process.argv.indexOf('--batch');
+const BATCH = batchArg === -1 ? null : Number(process.argv[batchArg + 1]);
 
 async function main() {
   const items = await prisma.item.findMany({ where: { status: 'LIVE' }, include: { options: true } });
@@ -29,6 +39,17 @@ async function main() {
   const lib = new Map(
     (await prisma.misconception.findMany({ where: { id: { in: [...libIds] } }, select: { id: true, childHint: true } }))
       .map((m) => [m.id, m.childHint]),
+  );
+
+  /**
+   * **THE KEYS BEFORE THE VALUES (R568).** This delivery is where the fault happened, so it is the
+   * first place the guard goes. It reads three names out of `explanation`; if any of them is not a
+   * key on a single row, the run STOPS rather than emitting thirty-six nulls that look like data.
+   */
+  readFieldsByName(
+    'deliver:thirtysix-hints / item.explanation',
+    items.map((i) => (i.explanation ?? {}) as Record<string, unknown>),
+    ['hintCore', 'hintAuthoredBy', 'hintAuthority'],
   );
 
   const rows = items
@@ -69,21 +90,49 @@ async function main() {
 
   requirePopulation('deliver:thirtysix-hints', { 'LIVE item(s)': items.length, 'unread hint-carrying row(s)': rows.length });
 
+  const batches = Math.ceil(rows.length / BATCH_SIZE);
+  if (BATCH !== null && (!Number.isInteger(BATCH) || BATCH < 1 || BATCH > batches)) {
+    throw new Error(`--batch ${process.argv[batchArg + 1]} is out of range: ${rows.length} row(s) make ${batches} batch(es).`);
+  }
+  const slice = BATCH === null ? rows : rows.slice((BATCH - 1) * BATCH_SIZE, BATCH * BATCH_SIZE);
+  const family = BATCH === null ? FAMILY : `${FAMILY}-batch-${BATCH}`;
+
   const payload = {
     what: 'The 36 LIVE items that CARRY an authored hintCore which is not yet served. These are a READ, not an authoring job — every row already has a hint. (The 298 LIVE items with NO hintCore are a different population and are not here.)',
     theFourThings: 'the item and its stem; its options with the KEY marked; its own hintCore; and the library hint(s) it would replace.',
     whyBoth: 'A hint that is worse than the general one it replaces is a regression dressed as specificity, and that is invisible without both strings.',
     howServingWorks: 'An item hint serves only where a named reviewer has read it. Ruling one makes it serve; ruling none changes nothing.',
     denominators: { liveItems: items.length, carryingAnUnreadHint: rows.length },
-    rows,
+    /**
+     * **THE BATCH NAMES ITS OWN PLACE IN THE WHOLE.** Which rows these are, out of how many, and
+     * which remain — so a batch read out of order cannot be mistaken for the population.
+     */
+    thisBatch: BATCH === null
+      ? { of: 'all', rows: rows.length }
+      : {
+        batch: BATCH,
+        of: batches,
+        rowsInThisBatch: slice.length,
+        rowsBefore: (BATCH - 1) * BATCH_SIZE,
+        rowsAfter: Math.max(0, rows.length - BATCH * BATCH_SIZE),
+        itemIds: slice.map((r) => r.itemId),
+      },
+    /**
+     * **THE LIBRARY HINTS BELOW ARE HER AMENDED WORDINGS AS OF THIS STAMP.** Fifteen library entries
+     * changed on 22 August when amendments that had been reported applied turned out never to have
+     * landed. A batch read against an older file would be comparing her item hint to a library hint
+     * she has since replaced.
+     */
+    libraryTextAsOf: '2026-08-22, after the fifteen unlanded amendments were written',
+    rows: slice,
   };
   const stamp = artefactStamp(payload, new Date().toISOString(), 'content',
     'LIVE items whose own hint is authored and not yet served, with their option sets and the library hints they would replace',
-    ['what', 'theFourThings', 'whyBoth', 'howServingWorks', 'denominators', 'rows']);
-  const path = join(REPO, 'content/exports', stampedName(FAMILY, stamp.sourceHash, 'json'));
+    ['what', 'theFourThings', 'whyBoth', 'howServingWorks', 'denominators', 'thisBatch', 'libraryTextAsOf', 'rows']);
+  const path = join(REPO, 'content/exports', stampedName(family, stamp.sourceHash, 'json'));
   writeFileSync(path, JSON.stringify({ stamp, ...payload }, null, 2));
-  deliver(path, FAMILY);
-  console.log(`\n${rows.length} row(s) emitted.`);
+  deliver(path, family);
+  console.log(`\n${slice.length} row(s) emitted${BATCH === null ? '' : ` (batch ${BATCH} of ${batches})`}.`);
   await prisma.$disconnect();
 }
 
