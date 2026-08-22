@@ -15798,6 +15798,15 @@ was thinking of.
 producing a number I reported as a measurement before it was corrected**, and each correction moving
 the head of a fix order she had been asked to act on.
 
+**FIFTH (R546-era): a field RENAMED for readability** — `itsOwnHint` for `hintCore` — so a lookup by
+the name every ruling uses returned undefined on all thirty-six rows. The pattern was a name.
+
+**SIXTH (2026-08-22): `export-vr07-vr11-new` filed as key-only.** The detector looked for
+`options.map`; the helper says `list.map`, inside an `opts()` function that already marked the key
+with `*` and appended every tag. **It had carried all three parts of the set the whole time**, and it
+sat on a fix list for two turns. Sixth in the family and the same sentence describes every one of
+them: **the pattern carried less than the source.**
+
 **Twenty-one artefacts carry the option set. Ten do not** — six key-only, four sibling-only and all
 four of those maths.
 
@@ -16575,9 +16584,14 @@ other three rows were never confirmed; all sat in batches she had not read.
 
 **THE BOUND TRAVELS AS A COUNT, NOT A CAVEAT (her instruction).** `check:hint-locator` prints, every
 run: **7 hints contain a quoted string — the population, and findable. 29 point by DESCRIBING —
-unfindable.** An earlier draft also tried every 3-gram of the hint, which quietly widened the
-population past the one she bounded and would have made *"unfindable where it describes"* untrue on
-the face of the run. **Quoted spans only.** 1 candidate: `WIW-12`.
+unfindable.** 1 candidate: `WIW-12`.
+
+**THE 3-GRAM DRAFT IS RECORDED AS REFUSED, not merely absent.** An earlier version also tried every
+3-gram of the hint against the passage — more matches, better-looking recall. **It widened the
+population past the bound she set**, and the run would then have printed *"unfindable where it
+describes"* while quietly searching hints that describe. **A check that breaks its own stated bound
+is worse than one that misses**, because the bound is the only thing the reader is trusting. Quoted
+spans only.
 
 ## R575 — A queue that can run in any order yields to a queue that cannot start
 
@@ -16589,3 +16603,81 @@ I had filed the six key-only exporters as tidiness and put them behind the remai
 passes. **They are what unblocks half the hint corpus**, and the item passes lose nothing by waiting,
 because nothing about them is ordered. **The right question is not which job is more valuable but
 which queue is blocked**, and only one of them was.
+
+## R576 — `en-attribute-transfer`: the hint fits none of its LIVE carriers, and half its own definition
+
+**The item artefact found it; only the library reading sizes it.** `threePartSet` put the tag's own
+wording beside the option it tags, and the wording was *"Two people are being described. Check which
+one each detail belongs to."* on an option about **painting a house**.
+
+**One carrier is a defect. 43 carriers with no two people is a different fact**, and the difference
+is the whole question she asked: **wrong for a few, or general to none?** Neither.
+
+    43 carriers, 4 LIVE.
+    17 of 43 signal two or more named people.  26 do not.
+    ALL FOUR LIVE CARRIERS name at most one person.
+    en-comp-vocab      0 of 8 signal two or more.
+    en-comp-technique  0 of 3.
+    en-comp-retrieval  9 of 23.     en-comp-inference  8 of 9.
+
+**It fails by question type rather than at random.** On a vocabulary or technique item there are no
+characters at all, so the hint does not merely fail to help — **it instructs an act the item does not
+contain.** On an inference item it nearly always fits. **The wording belongs to one of the four types
+it serves.**
+
+**AND THE ENTRY CONTRADICTS ITS OWN HINT WITHOUT ANY CARRIER BEING READ.** The description: *"Assigns
+one character's described attribute to another, OR THE RIGHT ATTRIBUTE AT THE WRONG VALUE."* **The
+second branch needs no second person.** The hint covers one half of its own definition — a fact about
+two fields sitting in one row, and nothing was comparing them.
+
+**The signal counts NAMES, not people**, and says so on every row with the names it found: it cannot
+see *the older rabbit* or *her mother*. A miss is a row to read, never a verdict.
+
+## R577 — The general shape: a hint that ASSERTS a feature makes a testable claim
+
+**The library-fit reading with a machine-findable subset, and the bound is the locator's bound in a
+new place.** A library hint fails by generality — but a hint that asserts something ABOUT THE ITEM
+makes a claim that is true of a carrier or is not.
+
+**THREE FINDINGS, and the two classes are never added together.**
+
+- `en-attribute-transfer` asserts A PAIR OF PEOPLE — **26 of 43 lack it, 4 LIVE.** CANDIDATE: rests
+  on a name-counting proxy, named on the row.
+- `en-negation-dropped` asserts A NEGATIVE — **4 of 36 lack it, 0 LIVE.** FINDABLE.
+- `en-wrong-scope-retrieval` asserts LINE REFERENCES — **2 of 86 lack it, 1 LIVE.** FINDABLE, and
+  small: this hint very nearly does fit.
+
+**THE FIRST NEGATION NUMBER WAS 23 OF 36, AND IT WAS MANUFACTURED BY SCOPE.** The hint says *"find
+the small negative word IN THE LINE"* — the word is in the TEXT, and I scanned the stem and options
+only. **23 → 4, and 1 LIVE → 0.** R453 again: a wrong scope produces a real-looking count, and this
+one was caught before it was reported rather than after.
+
+**THE BOUND, AS A COUNT, ON EVERY RUN:** 5 English hints assert a feature this can test — the
+population. 1 asserts something NOT SCREENED (a comparison is a technique reading; a list in an
+option set is not a list in the text). **64 describe a MOVE and assert nothing about the item, so
+there is nothing to test a carrier against** — unfindable, and that is the ordinary case rather than
+a gap.
+
+## R578 — Compliant by absence: a script that never completes is never wrong
+
+**`export-cowork-workorder` sat on a fix list for four turns labelled UNTESTED, never staged.** The
+label was treated as a pending task. **It was the symptom.**
+
+`requirePopulation` was asserting that items NEED WORK, so **a clean bank aborted the export.** The
+script had never once completed, and a script that never completes produces no artefact, fails no
+downstream check, and appears in no fault list. **Its absence read as compliance for four turns.**
+
+The repair is the population rule in its own instrument:
+
+    SCREENED population  asserted NON-EMPTY — zero screened would mean a broken query.
+    OUTPUT population    declared possibly-empty, WITH A REASON.
+    DENOMINATOR          printed beside the empty output on every run.
+
+**"0 items need work" and "nothing was examined" are the same line without the denominator** — which
+is R60 exactly, arriving inside the guard that R60 built. `requirePopulation` does not know which of
+an instrument's two populations it has been pointed at, and pointing it at the output rather than the
+input converts a clean result into a crash.
+
+**The transferable half: a never-run script is invisible to every check that reads OUTPUT.** Nothing
+here screens for a script that always aborts, and 330 DRAFT items were being screened by nobody while
+the fix list recorded the script as merely untested.
