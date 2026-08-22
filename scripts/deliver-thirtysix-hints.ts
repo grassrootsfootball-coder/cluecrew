@@ -53,8 +53,13 @@ async function main() {
             libraryHintItWouldReplace: o.isCorrect ? null : (lib.get((o as { misconceptionId?: string }).misconceptionId ?? '') ?? null),
           };
         }),
-        itsOwnHint: String(e.hintCore),
-        theLibraryHintsItWouldReplace: [...new Set(i.options.filter((o) => !o.isCorrect)
+        /**
+         * **THE FIELD KEEPS ITS NAME** (R564). I renamed it `itsOwnHint` for readability, so a
+         * lookup of `hintCore` — the name every ruling and every register entry uses — returned
+         * undefined on all 36 rows. The value was present; the name she reads by was not.
+         */
+        hintCore: String(e.hintCore),
+        libraryHintsItWouldReplace: [...new Set(i.options.filter((o) => !o.isCorrect)
           .map((o) => lib.get((o as { misconceptionId?: string }).misconceptionId ?? ''))
           .filter((h): h is string => Boolean(h)))],
         herQuestion: 'Is the item hint better than the library hint it displaces on this item?',
@@ -65,7 +70,7 @@ async function main() {
   requirePopulation('deliver:thirtysix-hints', { 'LIVE item(s)': items.length, 'unread hint-carrying row(s)': rows.length });
 
   const payload = {
-    what: 'Every LIVE item carrying its own hint that a child does not yet receive, with the four things needed to rule it.',
+    what: 'The 36 LIVE items that CARRY an authored hintCore which is not yet served. These are a READ, not an authoring job — every row already has a hint. (The 298 LIVE items with NO hintCore are a different population and are not here.)',
     theFourThings: 'the item and its stem; its options with the KEY marked; its own hintCore; and the library hint(s) it would replace.',
     whyBoth: 'A hint that is worse than the general one it replaces is a regression dressed as specificity, and that is invisible without both strings.',
     howServingWorks: 'An item hint serves only where a named reviewer has read it. Ruling one makes it serve; ruling none changes nothing.',

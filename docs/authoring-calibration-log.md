@@ -16280,3 +16280,68 @@ to every existing channel is a governance act, not a commit.
 **THE RULE BITES ON A NEW CHANNEL.** One line at the moment of building, **which is the only moment it
 is cheap** — and it gets ahead of R559's mechanism rather than chasing it, because the low ground is
 created before anything flows into it.
+
+## R564 — I renamed the field, so a lookup by its own name returned nothing on 36 of 36
+
+**Her report: `hintCore` is null on thirty-six of thirty-six, checked row by row.** **It is not null —
+I renamed it.** The rows carried `itsOwnHint`, so `row.hintCore` was `undefined` on every one, and the
+values were present the whole time: *"The very first line names the morning. Start there."*
+
+**A FIELD RENAMED IN AN ARTEFACT IS A FIELD ABSENT TO ANYONE WHO KNOWS IT.** I renamed it for
+readability, in a delivery to the person whose every ruling uses the original name. **Restored**, and
+re-staged as `unread-item-hints-for-annie-bf31491e2bb99b50.json`, `f71b1c98e781bc9a…` — **0 nulls
+across 36.**
+
+**AND THE FIGURES RECONCILE, WHICH SETTLES WHAT KIND OF ACT THIS IS.** 1033 items, 341 LIVE. **373
+carry a hintCore, 43 of those LIVE, 14 read (7 LIVE) — and 43 − 7 = 36.**
+
+**So the 36 are LIVE items that ALREADY CARRY an authored hint awaiting a read. They are a READ, not
+an authoring job**, and her nine-at-a-time rate applies at reading speed. **The LIVE items with no item
+hint are a different population of 298**, not here, and not what she was sent.
+
+## R565 — The group label asserted a mistake exists, on an item where there is not one
+
+**Her fifth-return ruling removed that assertion from all eighteen stems.** The group label survived
+it: *"The sentence, in four parts. **Choose the part with the mistake.**"*
+
+**`ENG-003-A-PU-09`'s key is `No mistake`.** The label told a child to choose the part with the mistake
+on an item whose answer is that there is not one — **while the stem beside it reads *"One part MAY have
+a punctuation mistake… If every part is right, choose No mistake."***
+
+**THE STEMS WERE CORRECTED IN THE REVIEWED CHANNEL AND THE COPY SURVIVED IN THE UNREVIEWED ONE** — not
+because anybody moved it, but because **nothing looked there when the eighteen were fixed.** R559's
+mechanism arriving on schedule, on the surface where it was predicted.
+
+**Her amendment loses the instruction rather than gaining a hedge**: `"The sentence, in four parts."`
+The stem already instructs; the label describes the container — the same shape as `How this one works
+out`.
+
+**THE AUDIT SHE ASKED FOR: 62 accessible names, group labels and status strings screened across every
+child surface. ZERO others assert a fault exists.** The full set is delivered for her reading, because
+a match tests one ruling and she has made many.
+
+## R566 — The doubling is deliberate, recorded before somebody tidies it
+
+**Reading is parallel and listening is serial.** A child hears the sentence whole (the preview), then
+hears it again in four parts (the buttons) — **twenty-two words twice, at speaking speed.**
+
+**That is the right cost, because the alternative is never hearing it whole.** A sighted child takes
+the sentence in at a glance and the segments are simply how she chooses; a listening child has no
+glance, and without the preview the sentence exists for her only as four disconnected button labels.
+
+**RECORDED BEFORE SOMEBODY TIDIES IT, because removing it for tidiness and removing it for her look
+identical in a diff.** Third instance of that shape — after the two byte-identical `aria-hidden`
+deletions (R552) and the PU-08 library ruling (R399).
+
+## R567 — English hints instructing a visual act: 8 library, 22 item
+
+**English only.** `ENGLISH-HINTS-INSTRUCTING-A-VISUAL-ACT.md`, `c30350186144204e…`. **8 of 70 English
+library hints** and **22 English item hints** carry a word instructing a visual act.
+
+**The matched word is marked on every row because the judgement is hers**: *see* in *see the line* is a
+reading act and *see* in *see the shape* is not, **and a match cannot tell them apart.**
+
+**AND NVR IS RAISED OUT LOUD RATHER THAN DISCOVERED, which is what she asked for.** It is not in the
+file. **Every NVR hint instructs a visual act by construction** — the district is about shapes — so the
+question is not a defect list but **whether that district is servable to her at all.** Asking it is the
+deliverable; answering it is not mine.

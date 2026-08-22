@@ -123,7 +123,17 @@ export default function ErrorSpotEngine({ stem, options, selected, onSelect, out
         className="crew-errorspot"
         data-testid="errorspot-sentence"
         role="group"
-        aria-label="The sentence, in four parts. Choose the part with the mistake."
+        /*
+         * **THE INSTRUCTION IS LOST, NOT HEDGED** (Annie, 2026-08-22 — R565). It read *"…Choose the
+         * part with the mistake."* — which ASSERTS A MISTAKE EXISTS, the assertion she ruled out of
+         * all eighteen stems in her fifth return. **On `PU-09` the key is `No mistake`**, so the
+         * label told a child to choose a part with a mistake where there is none.
+         *
+         * **The stems were corrected in the reviewed channel and this survived in the unreviewed
+         * one** — not because anybody moved it, but because nothing looked here when the eighteen
+         * were fixed (R559). The stem already instructs; the label describes the container.
+         */
+        aria-label="The sentence, in four parts."
         style={{ fontSize: '1.15rem', lineHeight: 1.75, margin: '0.4rem 0 0.9rem' }}
       >
         {segments.map((s, i) => (
