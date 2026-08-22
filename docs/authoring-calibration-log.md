@@ -15714,3 +15714,89 @@ obligations nobody has agreed.
 **This is the conditional-flag failure with the numbers reversed** — there, nine rows in an obligation
 field read as nine obligations and were two. **Here, forty-four rows in a report must not become
 forty-four rows in a queue**, and the difference is entirely which field they sit in.
+
+## R534 — An aria-label is judged against the element it labels: the whole-option-set rule in its third home
+
+**Her condition, 2026-08-21.** *play* on a button that starts a round is right and *play* on a button
+that opens a vault is wrong, **and the string alone cannot tell her which.**
+
+**Third home for one rule**: an option needs its key and siblings (R472/R506), a claim needs the text
+it is about (R349), **and a label needs the thing it names.** Each time the value alone was thought
+sufficient and each time the judgement was impossible without its object.
+
+**Re-sent with the element and what it does** — `TEN-HEARD-STRINGS-WITH-THEIR-ELEMENTS.md`,
+`5664df15cb3ad261…`. **The elements change the reading on six of ten.**
+
+**3 is load-bearing**: the lantern emoji is `aria-hidden`, so *"Streak lantern: lit"* is the lantern's
+**only voice** — whatever it says is what a child gets. **2 is decorative**, and *thinking* is an
+animation tag on a `role="img"`. Same fault in the string, **different consequence entirely**, and
+only the element separates them.
+
+**5 duplicates its own visible text in different words. 6 is a `role="dialog"` whose accessible name
+is two nouns.** **7 and 8 describe the object and omit what it is for.**
+
+## R535 — The split applied; the widening withdrawn the day it landed
+
+**`en-unstressed-suffix-vowel` narrowed back to suffix cases, confirmed by direct read. The
+third-return widening is WITHDRAWN and recorded as withdrawn** — it landed this morning after months
+of not landing and came out the same day, which is the correct outcome and a strange-looking one.
+
+**Its hint is unchanged and now matches its scope.**
+
+**`en-mid-word-unstressed-vowel` drafted for approval** with four gated hints and **A recommended** —
+*Your ear will not help here. Picture the word written down.* **All four say the same thing and only A
+says what to do next**; the others name outcomes a child who could reach them would not have needed.
+
+**AND NONE OF THEM SOUNDS IT OUT, WHICH IS THE POINT OF THE SPLIT.** The parent's remediation is the
+**stress shift**; here **there is no stress to shift to** — no family word puts stress on the middle
+`e` of *register*. **A hint inheriting the parent's method would send a child to a family word that
+does not exist.** The remediation is the spelling pattern, and the hint has to carry that.
+
+`SP-08` retags **on approval, not before**; `SP-02` and `SP-06` stay under the narrowed entry.
+
+## R536 — Internal consistency is evidence that nothing has changed, not that anything is right
+
+**The finding the failed amendment demonstrates, which had no name.**
+
+**A consistency check compares a row against itself.** `en-unstressed-suffix-vowel` was *internally
+consistent* — narrow description, matching hint — **and it was consistent BECAUSE the widening had
+failed.** The mismatch was between her intent and the row, **and no check compares those**.
+
+**So a row can be tidy for the worst reason: nothing reached it.** An entry whose amendment landed and
+whose hint was then left behind looks *inconsistent* and gets found; an entry whose amendment never
+landed looks *clean*.
+
+**AND THE TIDIER IT LOOKS, THE LESS ANYTHING WILL ASK.** Consistency is the property most likely to be
+read as health and least likely to prompt a lookup — which is why the 44 flagged by
+`check:widened-without-hint` are a better population than the entries it passed.
+
+## R537 — Her fifty-first amendment withdrawn, and the staleness rule that goes with it
+
+**`en-subject-verb-agreement-by-proximity` needed no amendment.** The store had already replaced *cross
+out the of-part* with *Find the word the sentence is really about* — **her seventh-return rule applied
+by somebody else, without the entry being revisited.**
+
+**Her rule: when she checks an artefact for staleness she checks it against THE STORE, because her
+record is a list of her own decisions and silent about everybody else's.**
+
+**A reviewer's own record is the one artefact guaranteed to omit every change she did not make** — and
+it is also the one she will reach for first, because it is hers and it is complete about the thing she
+was thinking of.
+
+## R538 — Four misclassifications in four turns, each from a pattern carrying less than the source
+
+**All three heads of the fix order turned out compliant**, for three different pattern faults:
+
+| turn | fault | cost |
+|---|---|---|
+| 1 | a slash inside a **string literal** counted as a regex | eight scans and 44 patterns; really five and 14 |
+| 2 | **whitespace** between `options` and `.map` | `export-review-pack` (7 staged) called non-compliant |
+| 3 | a second **key-marker name** — `isKey` beside `isCorrect` | `export-maths-review-pack` called non-compliant |
+| 4 | quote **serialisation** — `\"` in JSON | 944 artefacts, zero matches |
+
+**Each is R517: a pattern carrying less than the source did.** Four in four turns, **every one
+producing a number I reported as a measurement before it was corrected**, and each correction moving
+the head of a fix order she had been asked to act on.
+
+**Twenty-one artefacts carry the option set. Ten do not** — six key-only, four sibling-only and all
+four of those maths.
