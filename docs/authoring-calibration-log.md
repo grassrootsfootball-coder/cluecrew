@@ -18034,10 +18034,12 @@ discipline applied at the one moment typing could creep in. Her mechanism note s
 *"an arrival the table could not place became a ruling rather than a drafter's guess, and the table
 grew by exactly one row with a name and a date on it."*
 
-**HER PROSE SAYS TEN; HER BLOCK HOLDS ELEVEN** (1+3+2+2+3), and her own tripwire rule decided it:
-the block note's arithmetic ("ten objects plus one table row = 11 amendments") balances only at
-eleven objects... no — it balances at ten. **The derived count is eleven, the typed count ten, the
-disagreement is REPORTED on the landing artefact and the derived number governed the landing.**
+**HER PROSE SAYS TEN; HER BLOCK HOLDS ELEVEN OBJECTS** (1+3+2+2+3), and no typed figure survives
+the recomputation: `count: 11` balances with ten objects plus the table row, the prose says ten
+objects, and the block itself parses to eleven — so eleven objects plus the row makes TWELVE acts
+under a declared eleven. **Every typed number here disagrees with the derived one somewhere; the
+derived count governed the landing and the disagreement travels on the artefact** — her tripwire
+rule, firing on the very return that preceded its registration.
 
 **ELEVEN LANDED across five passages** — the tenth conditional (the Bible-catalogue's checkable
 authoring constraint, found by reading where the keyword census could not: *"the census was a floor
