@@ -99,7 +99,7 @@ export const SHAPES = [
      * return whose own block declares `count: 13`, of which this reader found nought.
      */
     re: /^[ \t]+target:[ \t]*(.+)\n[ \t]+replaced:[ \t]*(.+)\n[ \t]+authored:[ \t]*(.+)$/gm,
-    read: (m: RegExpMatchArray) => ({ target: m[1].trim(), replacing: m[2].trim(), authored: m[3] }),
+    read: (m: RegExpMatchArray) => ({ target: (m[1] ?? '').trim(), replacing: (m[2] ?? '').trim(), authored: m[3] ?? '' }),
   },
 ] as const;
 
@@ -120,7 +120,7 @@ function resolveTarget(raw: string): { kind: 'STORE' | 'SURFACE'; id: string | n
   const paren = /\(([^)]*)\)\s*$/.exec(raw);
   const bare = raw.replace(/\s*\([^)]*\)\s*$/, '').trim();
   const afterQualifier = bare.includes(':') ? bare.slice(bare.lastIndexOf(':') + 1).trim() : bare;
-  const fieldNote = paren ? paren[1].trim() : null;
+  const fieldNote = paren?.[1] ? paren[1].trim() : null;
   return /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(afterQualifier) && !afterQualifier.includes(' ')
     ? { kind: 'STORE', id: afterQualifier, fieldNote }
     : { kind: 'SURFACE', id: null, fieldNote };
@@ -155,7 +155,7 @@ export function readAmendments(dir: string): { amendments: Amendment[]; files: s
       shape.re.lastIndex = 0;
       for (const m of body.matchAll(shape.re)) {
         const r = shape.read(m as RegExpMatchArray);
-        const authored = tidy(r.authored);
+        const authored = tidy(r.authored ?? '');
         const key = `${f}|${authored}`;
         const existing = byKey.get(key);
         // A record WITH a target supersedes the same wording read without one.

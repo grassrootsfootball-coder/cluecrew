@@ -25,6 +25,7 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { checkChildFacingText, isBlocking } from '../packages/core/src/index';
 import { artefactStamp, deliver, stampedName } from './lib/export-destination';
+import { threePartSet } from './lib/option-set';
 import { prisma } from '../packages/db/src/index';
 import { requirePopulation } from './lib/population';
 
@@ -61,10 +62,15 @@ async function main() {
   const ids = Object.keys(REPAIRS);
   const items = await prisma.item.findMany({
     where: { id: { in: ids } },
-    select: { id: true, status: true, stem: true, explanation: true, options: { select: { content: true, isCorrect: true } } },
+    select: { id: true, status: true, stem: true, explanation: true, options: { select: { content: true, isCorrect: true, misconceptionId: true } } },
     orderBy: { id: 'asc' },
   });
   requirePopulation('ENG-028 walk repairs', { 'ids asked about': ids.length, 'rows found': items.length });
+
+  /** The third part of the set (R573): a tag id is a name, its childHint is the value. */
+  const lib = new Map((await prisma.misconception.findMany({ select: { id: true, childHint: true } }))
+    .map((m) => [m.id, m.childHint]));
+
 
   const repairs = items.map((item) => {
     const r = REPAIRS[item.id]!;
@@ -73,7 +79,8 @@ async function main() {
       itemId: item.id,
       status: item.status,
       stem: ((item.stem ?? {}) as { text?: string }).text ?? null,
-      key: ((item.options.find((o) => o.isCorrect)?.content ?? {}) as { value?: string }).value ?? null,
+      // Three parts, written out: the key, its siblings, and their tags (R573).
+      theSet: threePartSet(item.options, lib),
       current: String(((item.explanation ?? {}) as Record<string, unknown>).walkScript ?? ''),
       proposed: r.proposed,
       whatWasCut: r.cut,

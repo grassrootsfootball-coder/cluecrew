@@ -247,6 +247,15 @@ export function checkReadingAge(
    */
   derivedTokens: readonly string[] = [],
 ): ContentFailure[] {
+  /**
+   * **THE FALLBACK IS DELIBERATE AND SAFE BY CONSTRUCTION — I tried to replace it with a throw and
+   * `content-gates.test.ts` refused the change** (*"an unclassified role falls back to the STRICTEST
+   * rules, never the loosest"*). An unrecognised role can therefore only ever be gated MORE harshly,
+   * so a divergence between roles cannot turn this into a lax verdict. That answers the objection
+   * that sent me here: `apply-all-unlanded` passed `'misconception-hint'`, which is not a role, and
+   * every verdict it got was correct — `hint` and `item-stem` carry identical rules, and even if
+   * they had not, the fallback errs the safe way. The caller was fixed; this was not the fault.
+   */
   const rules = ROLE_RULES[role] ?? ROLE_RULES['item-stem'];
   const failures: ContentFailure[] = [];
 

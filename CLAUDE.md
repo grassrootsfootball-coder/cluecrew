@@ -316,6 +316,14 @@ here has no register entry. A ruling goes to the register FIRST; it comes here o
   (`deliver-thirtysix-hints.ts`), and a library-hint row carries every item the entry lands on
   (`deliver-library-hints-with-carriers.ts`). The key-only exporters are an item-level defect and are
   not on the library path at all.
+- **THE SET IS THREE PARTS, NOT TWO: THE KEY, ITS SIBLINGS, AND THEIR TAGS** (Annie, 2026-08-22 —
+  R573). Any artefact putting options in front of a reader names all three; "the option set" hides
+  the third, and the next thing built to satisfy that phrase will build what the phrase says. Call
+  `threePartSet` (`scripts/lib/option-set.ts`) — never re-assemble it per script (R429). The tag's
+  own `childHint` travels beside the tag id, because an id is a name and the wording a child would
+  receive is the value (R25). On `ENG-001-WIW-10` the tags are what identify the likely wrong answer:
+  one option carries `en-extreme-option-pull` where every sibling carries something milder, and
+  without that there are two readings and no reason to prefer either.
 - Content decisions (items, chapters, misconceptions) go through the CMS
   review pipeline; nothing skips the reviewer.
 - **PILOT CONTENT UNDER ACTIVE REVIEW HAS ONE WRITE PATH: `scripts/lib/pilot-review.ts`, NEVER A

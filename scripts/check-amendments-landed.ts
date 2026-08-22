@@ -162,7 +162,9 @@ async function main() {
   console.log(
     `  SUPERSEDED — an EARLIER wording for a row whose LATER amendment did land: ${superseded.length}\n`
     + '  Not absent, and not work. She changed her mind and the store holds her latest word.'
-    + superseded.map((s) => `\n      ${s.file} — ${s.targetId}: "${s.authored}"`).join('') + '\n',
+    // `.text` — these rows are the projection, not the amendment. Reading `.authored` here printed
+    // "undefined" for every superseded row: R568's own fault, in the turn after building its guard.
+    + superseded.map((s) => `\n      ${s.file} — ${s.targetId}: "${s.text}"`).join('') + '\n',
   );
   for (const [file, e] of [...byFile].sort()) {
     const state = e.absent.length === 0 ? 'FULLY LANDED' : e.landed.length === 0 ? 'NONE LANDED  ' : 'PARTLY LANDED';

@@ -16509,3 +16509,83 @@ option the entry tags. **52 entries, ordered by carrier count, because fit is ha
 widest.** `en-plausible-not-stated` reaches **193 items across 4 question types** on one sentence;
 that is 193 chances for a fit to fail, and it is where *"does it fit them all"* stops being
 rhetorical.
+
+## R573 — The set is three parts, not two: the key, its siblings, and THEIR TAGS
+
+**"Send the option set" hides the third part, and the next thing built to satisfy the phrase will
+build what the phrase says.** So the parts are named on the face of the artefact.
+
+**HER INSTANCE, AND IT IS DECISIVE.** `ENG-001-WIW-10` asks what the Mole's treatment of the rabbits
+shows about him; the hint is *"Find the two words the writer uses to describe the Mole in this bit."*
+**Two words, two readings, and no reason to prefer either** — until the tags are present:
+
+        "He is frightened of the older rabbit."         en-emotion-label-approximation
+        "He is so excited that he will not stop…"       KEY
+        "He is a cruel animal who is always unkind."    en-extreme-option-pull   <- the one
+        "He is rushing home to get his dinner."         en-motive-invention
+        "He is sorry at once for knocking the rabbit…"  en-plausible-not-stated
+
+**Option C carries the extreme where every sibling carries something milder.** The tags are not
+metadata about the set; they are the half that answers her question.
+
+`threePartSet()` in `scripts/lib/option-set.ts` is the single builder — six hand-written shapes would
+be R429's two-parsers fault in a new place — and it carries **the tag's own `childHint` beside the
+tag id**, because an id is a name and the wording a child receives is the value (R25).
+
+**THE SIX, RESOLVED — AND ONLY FOUR OF THEM WERE THE THING THEY WERE FILED AS.**
+
+- Genuinely key-only, now three-part: `export-walk-ten-for-annie`, `export-walk-vr-ten`,
+  `export-eng028-walk-repairs`, `export-fifteen-headwords-for-annie`.
+- **`export-vr07-vr11-new` was never key-only.** Its `opts()` already marked the key with `*` and
+  appended every tag. **Sixth pattern misclassification of this kind**: the detector looked for
+  `options.map` and the helper says `list.map`. The pattern carried less than the source, again.
+- **`export-cowork-workorder` was aborting on `requirePopulation`, which is why it had never once
+  been staged.** The guard sat on the WRONG POPULATION — it asserted that items NEED WORK, so **a
+  clean bank failed the export.** 330 DRAFT English items are screened and none needs anything.
+  The screened population is now the one asserted non-empty (zero screened WOULD be a broken
+  pipeline); the output population is `declareMayBeEmpty` with the denominator printed beside it,
+  because *"0 items need work"* and *"nothing was examined"* are the same line without it.
+
+**And the first three-part artefact found a library fit failure on sight**: `en-attribute-transfer`'s
+hint — *"Two people are being described. Check which one each detail belongs to."* — lands on an
+option about painting a house, where there are no two people at all. **The item-level artefact
+surfaced a library-level fault, because the tag's wording was finally beside the option it tags.**
+
+## R574 — The locator, split out of "coaching", which is a word for an outcome
+
+**She split the check and the split is why it is buildable.** *Coaching* names an OUTCOME — the child
+is handed the answer — and **two unrelated mechanisms produce it**:
+
+    SHAPE A  RESTATEMENT  the hint says the key again in other words.
+                          WIW-05: "The words keep going and going. So does the climb."
+                          key   : "To show the climb went on and on and was hard work."
+    SHAPE B  THE LOCATOR  the hint quotes a phrase; the phrase locates a sentence; the key is in it.
+                          WIW-12: quotes 'never in his life' -> "Never in his life had he seen a
+                          river before…", and the key is "A river."
+
+**A restatement and a pointer have nothing in common except their effect**, and one word over both is
+why she would have refused the whole check. Shape B is a LOOKUP at every step and every input is
+stored — passages, keys, quoted spans. **Shape A is a reading and stays reader-only.**
+
+**THE CONTAINMENT ROUTE IS RETIRED, and why matters more than that it is gone.** It scored `WIW-05`
+at 0.20 on the shared word `climb` — but `climb` is the TOPIC, not the answer, so it fired on a word
+the hint could not avoid using. **It found a real fault by a mechanism that was not the fault's
+mechanism** — R173's shape — and keeping it would have made the restatement band look covered. Its
+other three rows were never confirmed; all sat in batches she had not read.
+
+**THE BOUND TRAVELS AS A COUNT, NOT A CAVEAT (her instruction).** `check:hint-locator` prints, every
+run: **7 hints contain a quoted string — the population, and findable. 29 point by DESCRIBING —
+unfindable.** An earlier draft also tried every 3-gram of the hint, which quietly widened the
+population past the one she bounded and would have made *"unfindable where it describes"* untrue on
+the face of the run. **Quoted spans only.** 1 candidate: `WIW-12`.
+
+## R575 — A queue that can run in any order yields to a queue that cannot start
+
+**Her scheduling, and it reverses an order I had defended.** The item-hint queue needs the KEY, which
+it has, **so it runs now with nothing owed** and its passes may be taken in any order. The
+library-hint queue needs the CARRIERS — **so it has not started, rather than been deferred.**
+
+I had filed the six key-only exporters as tidiness and put them behind the remaining item-hint
+passes. **They are what unblocks half the hint corpus**, and the item passes lose nothing by waiting,
+because nothing about them is ordered. **The right question is not which job is more valuable but
+which queue is blocked**, and only one of them was.

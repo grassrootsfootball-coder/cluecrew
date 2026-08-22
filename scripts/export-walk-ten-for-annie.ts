@@ -20,6 +20,7 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { checkChildFacingText, isBlocking } from '../packages/core/src/index';
 import { artefactStamp, deliver, stampedName } from './lib/export-destination';
+import { threePartSet } from './lib/option-set';
 import { prisma } from '../packages/db/src/index';
 import { requirePopulation } from './lib/population';
 
@@ -39,7 +40,7 @@ async function main() {
   const kase = await prisma.case.findUniqueOrThrow({ where: { id: CASE_ID }, select: { id: true, questionTypeId: true, title: true } });
   const items = await prisma.item.findMany({
     where: { questionTypeId: kase.questionTypeId, status: 'LIVE' },
-    select: { id: true, stem: true, explanation: true, options: { select: { content: true, isCorrect: true } } },
+    select: { id: true, stem: true, explanation: true, options: { select: { content: true, isCorrect: true, misconceptionId: true } } },
     orderBy: { id: 'asc' },
   });
   const withScript = items.filter((i) => {
@@ -48,17 +49,25 @@ async function main() {
   });
   requirePopulation('walk ten', { 'LIVE items in the case': items.length, 'carrying a walk script': withScript.length });
 
+  /**
+   * **THE THIRD PART OF THE SET (R573).** A tag id is a name; the wording a child would actually
+   * receive is the value, so the library is loaded once and travels with every tag.
+   */
+  const libRows = await prisma.misconception.findMany({ select: { id: true, childHint: true } });
+  const lib = new Map(libRows.map((m) => [m.id, m.childHint]));
+
   const copyFaults = checkChildFacingText({ role: 'hint', label: 'MODE_BLURBS.walk', text: NEW_COPY });
 
   const scripts = withScript.map((item) => {
     const script = String(((item.explanation ?? {}) as Record<string, unknown>).walkScript);
     const faults = checkChildFacingText({ role: 'hint', label: `${item.id}.walkScript`, text: script });
-    const key = item.options.find((o) => o.isCorrect)?.content as { value?: string } | undefined;
+    const theSet = threePartSet(item.options, lib);
     return {
       itemId: item.id,
       // The child's question, so a script can be read against what it is explaining.
       stem: ((item.stem ?? {}) as { text?: string }).text ?? null,
-      key: key?.value ?? null,
+      // Three parts, written out: the key, its siblings, and their tags (R573).
+      theSet,
       // R25 — verbatim, exactly as it would reach a child.
       walkScript: script,
       asServed: sentences(script),

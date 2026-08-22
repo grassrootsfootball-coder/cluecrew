@@ -13,6 +13,7 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { checkChildFacingText, isBlocking } from '../packages/core/src/index';
 import { artefactStamp, deliver, stampedName } from './lib/export-destination';
+import { threePartSet } from './lib/option-set';
 import { prisma } from '../packages/db/src/index';
 import { requirePopulation } from './lib/population';
 
@@ -35,9 +36,12 @@ async function main() {
 
   const items = await prisma.item.findMany({
     where: { questionTypeId: chosen.questionTypeId, status: 'LIVE' },
-    select: { id: true, stem: true, explanation: true, options: { select: { content: true, isCorrect: true } } },
+    select: { id: true, stem: true, explanation: true, options: { select: { content: true, isCorrect: true, misconceptionId: true } } },
     orderBy: { id: 'asc' },
   });
+  /** The third part of the set (R573): a tag id is a name, its childHint is the value. */
+  const lib = new Map((await prisma.misconception.findMany({ select: { id: true, childHint: true } }))
+    .map((m) => [m.id, m.childHint]));
   const withScript = items.filter((i) => typeof ((i.explanation ?? {}) as Record<string, unknown>).walkScript === 'string');
   const ten = withScript.slice(0, 10);
   requirePopulation('VR walk ten', { 'LIVE items in the chosen Case': items.length, 'carrying a script': withScript.length });
@@ -50,7 +54,8 @@ async function main() {
       itemId: item.id,
       stemWords: stem.words ?? null,
       stemPrompt: stem.prompt ?? null,
-      key: ((item.options.find((o) => o.isCorrect)?.content ?? {}) as { value?: string }).value ?? null,
+      // Three parts, written out: the key, its siblings, and their tags (R573).
+      theSet: threePartSet(item.options, lib),
       walkScript: script,
       asServed: sentences(script),
       sentenceCount: sentences(script).length,
@@ -73,7 +78,7 @@ async function main() {
   };
 
   const stamp = artefactStamp(payload, new Date().toISOString(), 'content',
-    "the first ten VR walk scripts verbatim with their stems, keys and gate verdicts", ['scripts']);
+    "the first ten VR walk scripts verbatim with their stems, their key-siblings-and-tags, and gate verdicts", ['scripts']);
   mkdirSync(OUT_DIR, { recursive: true });
   const path = join(OUT_DIR, stampedName(FAMILY, stamp.sourceHash, 'json'));
   writeFileSync(path, JSON.stringify({ stamp, ...payload }, null, 2));

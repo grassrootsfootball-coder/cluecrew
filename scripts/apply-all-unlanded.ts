@@ -45,7 +45,7 @@ async function main() {
      * the guard passed the one row it existed to stop. The field she names is the part before the
      * comma or the `not`; everything after it is the field she is ruling OUT.
      */
-    const namedField = a.fieldNote ? a.fieldNote.split(/,|\bnot\b/)[0].trim() : null;
+    const namedField = a.fieldNote ? (a.fieldNote.split(/,|\bnot\b/)[0] ?? '').trim() : null;
     if (namedField && !/^hint\b/i.test(namedField)) {
       otherField.push({ id: a.targetId, authored: a.authored, file: a.file, fieldNote: a.fieldNote as string });
       continue;
@@ -121,7 +121,10 @@ async function main() {
   }
 
   for (const a of todo) {
-    const gate = checkChildFacingText({ role: 'misconception-hint', label: a.id, text: a.authored }).filter(isBlocking);
+    // `misconception-hint` is not a ContentRole and never was: it fell through to `item-stem`'s
+    // rules, which are byte-identical to `hint`'s, so no verdict here was ever wrong. The silence
+    // was the fault — see the throw in `content-gates.ts`.
+    const gate = checkChildFacingText({ role: 'hint', label: a.id, text: a.authored }).filter(isBlocking);
     if (gate.length) throw new Error(`ABORTED — ${a.id} fails the gate: ${gate.map((f) => f.detail).join('; ')}`);
   }
 

@@ -18,8 +18,9 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { checkItemChildFacing, inactiveMisconceptions, isBlocking } from '../packages/core/src/index';
 import { prisma } from '../packages/db/src/index';
+import { threePartSet } from './lib/option-set';
 import { artefactStamp, deliver, stampedName } from './lib/export-destination';
-import { requirePopulation } from './lib/population';
+import { declareMayBeEmpty, requirePopulation } from './lib/population';
 
 const OUT_DIR = resolve(import.meta.dirname, '../content/exports');
 const FAMILY = 'cowork-workorder-english';
@@ -31,8 +32,10 @@ async function main(): Promise<void> {
     include: { options: { orderBy: { id: 'asc' } }, questionType: { select: { mechanic: true } } },
     orderBy: { id: 'asc' },
   });
-  const lib = await prisma.misconception.findMany({ select: { id: true, status: true } });
+  const lib = await prisma.misconception.findMany({ select: { id: true, status: true, childHint: true } });
   const statusById = new Map(lib.map((m) => [m.id, m.status]));
+  /** The third part of the set (R573): a tag id is a name, its childHint is the value. */
+  const hintById = new Map(lib.map((m) => [m.id, m.childHint]));
 
   const retags: unknown[] = [];
   const rewordings: unknown[] = [];
@@ -47,6 +50,12 @@ async function main(): Promise<void> {
         value: (opt.content as { value?: string })?.value,
         route: 'tag-retired',
         retiredTag: id,
+        /**
+         * **THE WHOLE SET, BECAUSE A RETAG CANNOT BE JUDGED FROM ONE OPTION (R573).** The successor
+         * tag has to fit this option AND not collide with what its siblings already carry, and
+         * neither of those is visible from the row alone. Key, siblings, and their tags.
+         */
+        theSet: threePartSet(item.options, hintById),
         // The option's own note names what it executes; the successor has to match that, not the
         // tag it happens to be nearest. This is the field that decided WIW-04 vs WIW-11.
         executionNote: opt.misconceptionExecution,
@@ -68,10 +77,25 @@ async function main(): Promise<void> {
     }
   }
 
+  /**
+   * **TWO POPULATIONS, AND THE GUARD BELONGED ON ONLY ONE OF THEM.** `requirePopulation` was
+   * asserting that items NEED WORK — so a clean bank aborted the export, which is why this script
+   * was never once staged. **330 DRAFT English items are screened and none of them needs anything;
+   * that is the bank being clean, not the pipeline being broken.**
+   *
+   * The SCREENED population is the one that must never be empty: zero items screened would mean the
+   * query, the scope or the pipeline had failed, and R61 is explicit that such a gate treats empty
+   * as a failure. The OUTPUT population is legitimately empty and is declared so, with the screened
+   * denominator printed beside it — because "0 items need work" and "nothing was examined" are the
+   * same line unless the denominator is on it.
+   */
   requirePopulation('export:cowork-workorder', {
     'DRAFT English items screened': items.length,
-    'items needing work': retags.length + rewordings.length,
   });
+  declareMayBeEmpty('export:cowork-workorder', 'item(s) needing work', retags.length + rewordings.length,
+    `A work order with nothing on it is a legitimate outcome: ${items.length} DRAFT English items were `
+    + 'screened, none carries a RETIRED tag and none fails the child-facing gate. The screened count '
+    + 'is asserted separately and non-empty, so an empty output cannot be a broken query.');
 
   const entry = await prisma.misconception.findUniqueOrThrow({ where: { id: MISSING_ENTRY } });
   const onBothRoutes = retags

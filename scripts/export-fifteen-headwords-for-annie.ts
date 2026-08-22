@@ -21,6 +21,7 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { checkChildFacingText, isBlocking, tierRequirementApplies } from '../packages/core/src/index';
 import { artefactStamp, deliver, stampedName } from './lib/export-destination';
+import { threePartSet } from './lib/option-set';
 import { prisma } from '../packages/db/src/index';
 import { requirePopulation } from './lib/population';
 
@@ -30,10 +31,16 @@ const FAMILY = 'fifteen-headwords-for-annie';
 async function main() {
   const items = await prisma.item.findMany({
     where: { status: 'LIVE' },
-    select: { id: true, questionTypeId: true, stem: true, options: { select: { content: true, isCorrect: true } } },
+    select: { id: true, questionTypeId: true, stem: true, options: { select: { content: true, isCorrect: true, misconceptionId: true } } },
     orderBy: { id: 'asc' },
   });
   const headwordItems = items.filter((i) => tierRequirementApplies(i.questionTypeId) === true);
+  /**
+   * **THE THIRD PART OF THE SET (R573).** A tag id is a name; the wording a child would actually
+   * receive is the value, so the library is loaded once and travels with every tag.
+   */
+  const libRows = await prisma.misconception.findMany({ select: { id: true, childHint: true } });
+  const lib = new Map(libRows.map((m) => [m.id, m.childHint]));
   const words = await prisma.word.findMany();
   const vault = new Map(words.map((w) => [w.headword.toLowerCase(), w]));
 
@@ -41,7 +48,8 @@ async function main() {
     const stem = String((((item.stem as { words?: unknown[] }).words ?? [])[0] ?? '')).toLowerCase();
     const entry = vault.get(stem);
     if (!entry || entry.status === 'LIVE') return [];
-    const key = ((item.options.find((o) => o.isCorrect)?.content ?? {}) as { value?: string }).value ?? null;
+    const theSet = threePartSet(item.options, lib);
+    const key = theSet.key?.value ?? null;
     const gate = (text: string, role: 'word-card' | 'hint') =>
       checkChildFacingText({ role, label: `${entry.headword}`, text, headwordInOwnCard: entry.headword })
         .filter(isBlocking).map((f) => `${f.rule}: ${f.detail}`);
