@@ -90,7 +90,8 @@ for (const [pid, entry] of perPassage) {
    */
   const admissible: Array<Record<string, unknown>> = [];
   for (const f of entry.flags) {
-    const solo = readContentFlags({ id: pid, contentFlags: [f], extract: (passage as { extract?: unknown }).extract }, { enforceUse: true });
+    const ex = (passage as { extract?: unknown }).extract;
+    const solo = readContentFlags({ id: pid, contentFlags: [f], extract: typeof ex === 'string' ? ex : undefined }, { enforceUse: true });
     if (solo.refusals.length > 0) {
       for (const r of solo.refusals) results.push(`${pid}: FLAG REFUSED TO HER (${String(f.axis)}) — ${r.code}: ${r.detail}`);
       continue;
