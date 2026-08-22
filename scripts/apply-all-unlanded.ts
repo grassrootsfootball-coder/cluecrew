@@ -10,13 +10,48 @@
 import { createHash } from 'node:crypto';
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
-import { checkChildFacingText, isBlocking } from '../packages/core/src/index';
+import { checkChildFacingText, isBlocking, itemHintRulingPatch } from '../packages/core/src/index';
 import { prisma } from '../packages/db/src/index';
 import { readAmendments } from './lib/return-amendments';
 
 const RETURNS = '/Users/davidb/Downloads';
 const APPLY = process.argv.includes('--apply');
 const TODAY = new Date().toISOString().slice(0, 10);
+
+/**
+ * **THE ONE WRITE SITE FOR AN ITEM-HINT RULING (David's ruling 2, 2026-08-22 — R617).**
+ *
+ * The old shape had two write sites — this path for text changes, and a hand-written one-shot each
+ * time a ruling approved a wording as it stood — because line 170's guard skipped the WHOLE write
+ * when `before === authored`. **That guard was half right: refusing to rewrite unchanged text is
+ * idempotence, and it stays. Skipping the AUTHORSHIP write was the fault** — an approval is a
+ * decision whose whole content is that the text should stand, and it records like one.
+ *
+ *   text differs   -> gate the new wording, supersede (`_previousHintCore`), write text + authorship.
+ *   text unchanged -> write authorship ONLY. The wording was ruled, not merely left alone.
+ *   no such item   -> reported. **A ruling is never silently skipped** — every ruling produces one
+ *                     printed outcome line, which is what the test asserts.
+ */
+async function applyItemHintRuling(h: { id: string; authored: string; file: string }): Promise<string> {
+  const item = await prisma.item.findUnique({ where: { id: h.id }, select: { explanation: true } });
+  if (!item) return `  NO SUCH ITEM  ${h.id} — ruling NOT applied, and said so rather than skipped`;
+  const e = (item.explanation ?? {}) as Record<string, unknown>;
+  const before = typeof e.hintCore === 'string' ? e.hintCore : null;
+
+  const digest = createHash('sha256').update(readFileSync(join(RETURNS, h.file))).digest('hex');
+  const r = itemHintRulingPatch(e, h.authored, 'Annie', `${h.file}, sha256 ${digest}`);
+
+  if (r.gateRequired) {
+    const g = checkChildFacingText({ role: 'hint', label: `${h.id}.hintCore`, text: h.authored }).filter(isBlocking);
+    if (g.length) throw new Error(`ABORTED — ${h.id} hint fails the gate: ${g.map((f) => f.detail).join('; ')}`);
+  }
+
+  const lines = `  ITEM HINT     ${h.id}  [${r.verdict}]\n      BEFORE: ${JSON.stringify(before)}\n      AFTER : ${JSON.stringify(h.authored)}`;
+  if (!APPLY) return lines;
+
+  await prisma.item.update({ where: { id: h.id }, data: { explanation: { ...e, ...r.patch } as object } });
+  return lines;
+}
 
 async function main() {
   /**
@@ -163,28 +198,8 @@ async function main() {
    * so the old string is kept for provenance without ever reaching a child again.
    */
   for (const h of itemHints) {
-    const item = await prisma.item.findUnique({ where: { id: h.id }, select: { explanation: true } });
-    if (!item) { console.log(`  NO SUCH ITEM  ${h.id}`); continue; }
-    const e = (item.explanation ?? {}) as Record<string, unknown>;
-    const before = typeof e.hintCore === 'string' ? e.hintCore : null;
-    if (before === h.authored) { console.log(`  ALREADY       ${h.id}`); continue; }
-    const g = checkChildFacingText({ role: 'hint', label: `${h.id}.hintCore`, text: h.authored }).filter(isBlocking);
-    if (g.length) throw new Error(`ABORTED — ${h.id} hint fails the gate: ${g.map((f) => f.detail).join('; ')}`);
-    console.log(`  ITEM HINT     ${h.id}\n      BEFORE: ${JSON.stringify(before)}\n      AFTER : ${JSON.stringify(h.authored)}`);
-    if (!APPLY) continue;
-    const digest = createHash('sha256').update(readFileSync(join(RETURNS, h.file))).digest('hex');
-    await prisma.item.update({
-      where: { id: h.id },
-      data: {
-        explanation: {
-          ...e,
-          hintCore: h.authored,
-          ...(before ? { _previousHintCore: before } : {}),
-          hintAuthoredBy: 'Annie',
-          hintAuthority: `${h.file}, sha256 ${digest}`,
-        },
-      },
-    });
+    const outcome = await applyItemHintRuling(h);
+    console.log(outcome);
   }
 
   if (!APPLY) { console.log('\nREPORT ONLY.'); await prisma.$disconnect(); return; }
