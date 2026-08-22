@@ -52,10 +52,15 @@ export default async function CrewHqPage() {
           <p style={{ margin: '0.2rem 0' }}>
             <strong>{crew.rankLabel}</strong>
             {' · '}
-            {/* role="img": aria-label on a generic span is prohibited and
-                would be discarded, leaving the lantern silent (its emoji is
-                aria-hidden). */}
-            <span role="img" aria-label={`Streak lantern: ${crew.streak.state}`}>
+            {/*
+              THE LABEL WAS THE CONTENT, AND IT WAS SUPPRESSING THE VOICE LINE (Annie, R544).
+              `role="img"` + `aria-label` makes a reader announce the LABEL and ignore the
+              children entirely — so a child heard "Streak lantern: alive" and never heard
+              "Lantern's still lit.", which is the authored sentence sitting right there.
+              The emoji is decorative and stays hidden; the voice line is the content and now
+              reaches the ear exactly as it reaches the eye.
+            */}
+            <span>
               <span className="crew-lantern" aria-hidden>
                 🏮
               </span>{' '}

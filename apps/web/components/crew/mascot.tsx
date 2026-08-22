@@ -56,13 +56,19 @@ export function Mascot({ size = 96 }: { size?: number }) {
     return () => window.clearInterval(timer);
   }, [state]);
 
+  /*
+   * THE FAULT IS NOT THAT THE SENTENCE IS POOR, IT IS THAT THE SENTENCE EXISTS (Annie, R544).
+   * The mascot is decoration. With `role="img"` and a label it announced an animation tag —
+   * "Your detective friend is pointing" — EVERY TIME THE POSE CHANGED, interrupting whatever a
+   * child was listening to. It carries no information she needs and no action she can take.
+   * `aria-hidden` is the repair: decoration announces nothing.
+   */
   return (
     <div
       ref={wrapper}
       className={`crew-mascot${breaking ? ' idle-break' : ''}`}
       style={{ transform: `rotate(${tilt * 0.5}deg)` }}
-      aria-label={`Your detective friend is ${pose.tag}`}
-      role="img"
+      aria-hidden
       data-mascot-state={state}
     >
       <svg viewBox="0 0 100 110" width={size} height={size * 1.1}>

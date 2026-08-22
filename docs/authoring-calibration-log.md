@@ -15902,3 +15902,45 @@ noticing.
 total**, and the head gets corrected because somebody acts on it while the total is only ever quoted.
 **So a verified count is a floor and an unverified one is a ceiling**, and the gap between them is
 whatever the pattern could not distinguish.
+
+## R544 — The two repairs the element inverts: one label is the content, one should not exist
+
+**Her ruling, applied 2026-08-21. Opposite acts on one fault, and only the element separates them.**
+
+**THE LANTERN — the label was the content, and it was SUPPRESSING the authored voice line.**
+`role="img"` plus `aria-label` makes a reader announce the **label** and **ignore the children
+entirely**. So a child heard *"Streak lantern: alive"* and **never heard *"Lantern's still lit."*** —
+the authored sentence sitting immediately beside it, written for exactly this moment.
+
+**That is worse than the machine syntax I reported.** The fault was not a poor label; it was a label
+**replacing** a good sentence. The emoji stays `aria-hidden`, the `role="img"` and the label are gone,
+**and the voice line now reaches the ear exactly as it reaches the eye.**
+
+**THE MASCOT — the fault is not that the sentence is poor, it is that the sentence exists.** It is
+decoration. With `role="img"` and a label it announced an animation tag — *"Your detective friend is
+pointing"* — **every time the pose changed**, on a 20-second idle timer, **interrupting whatever a
+child was listening to.** It carries no information she needs and no act she can take. **`aria-hidden`
+is the repair: decoration announces nothing.**
+
+**Two labels, one fault, opposite repairs — and the string alone chooses neither.**
+
+## R545 — Two transcripts, in announcement order
+
+**Staged: `TWO-SCREEN-READER-TRANSCRIPTS.md`, `f318b31ebc3af9f5…`. Not an audit, and it must not
+become one.**
+
+**`ENG-003-A-PU-02`.** The sentence is announced **twice** — once as the group's name, then segment by
+segment as four buttons. The visible preview is `aria-hidden`, so it is not a third reading.
+
+**And the verdict option is announced as an eighth button with no framing.** On screen it is a pill on
+its own line, and the code says so explicitly: *the layout says "different kind of thing" so no
+sentence has to.* **In the ear there is no layout** — it follows *"and her pencil case."* as though it
+were a fifth part of the sentence. **The design's own reasoning names the modality it assumed.**
+
+**The walk panel.** Each tap adds a paragraph **above** the button, and **there is no live region** —
+so a child hears nothing change until she moves focus back up. The button's label changing from *Next
+bit* to *Close* is the only signal the walk has ended.
+
+**No verdict from here on whether this is ten strings or a fourth review scope. She cannot tell that
+from where she is, and neither can anyone else** — which is why the two transcripts are the whole
+delivery.
