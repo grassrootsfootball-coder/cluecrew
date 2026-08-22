@@ -17624,3 +17624,36 @@ current library: wrong-scope carries the seventy-eighth's wording, the contracti
 emission (`c…` sorts after `6…`), which printed the pre-amendment wrong-scope string as "now" —
 caught because the store was read beside it and the two disagreed (R599's re-run discipline). The
 superseded emission is PRUNED from both directories so no glob can find it again.
+
+## R623 — PR-04 off the door; the repair landed except where she had already spoken; the sixty-fourth's seven
+
+**ITEM 1.** `ENG-028-PR-04: LIVE → DRAFT`, first act, read back from `Item.status`. Ground: the
+serving stem was the bank's stamped PRE-repair stem, under which option A is a second defensible
+correct answer (delivery 73 rationale; her eng028 return had HELD PR-04 for exactly this).
+
+**ITEM 2.** From the bank emission (`853a93c4…`, digest-verified): `stem.text` and
+`options[A].misconceptionExecution` landed, each asserted equal to the bank's stamped PREVIOUS value
+before writing, each read back EQUAL to the bank's current. `hintCore` NOT written, as ruled — both
+known texts condemned, her third pending, hint unserved.
+
+**walkScript REFUSED, and the precondition is what found why.** The serving row holds a THIRD text —
+neither the bank's previous nor its current — and it is **the eng028 walk repair Annie reviewed**,
+applied by `apply-approved-walk-repairs.ts`: a LATER wording already free of the AFTER misreading.
+Writing the bank's 16 August text over it would have replaced a reviewer-approved string with an
+older one. **The bank's row and the serving row now deliberately differ on this field**, recorded on
+the row itself (`_walkScriptKeptBecause`), and the diff between the stores is the record of a
+supersession rather than a miss.
+
+**ITEM 3.** The sixty-fourth's seven landed through the standing path — WIW-03, WIW-05, PU-07
+REPLACED then APPROVED_AS_WRITTEN (all three serve their item hint; **PU-07 is LIVE**, on the open
+door), four library wordings confirmed by direct read. **The newly-crossed returns brought eleven
+more, 15 of 15 confirmed** — the missing-returns backlog draining through the standing path on the
+turn it arrived.
+
+**ITEM 4.** The asserting population re-derived after the amendments: **the proxy says 14, the desk
+says 6, and the two are different instruments.** The clause detector OVER-reports by design (R607) —
+*"Being in the lines is not enough"* still trips the deixis pattern after her amendment turned its
+teeth into a move. The exposure list is emitted against the 14 — a SUPERSET, so it is an upper
+bound: `exposure-live-asserting-entries-6f49067ca96f38cc.json`, `6861ba66…92ed`, **17 LIVE items**
+(21 → 17: the three item hints that moved into service, and PR-04 leaving LIVE). Every row marks
+which entries it joined on, so filtering to any six is one pass with no re-derivation.

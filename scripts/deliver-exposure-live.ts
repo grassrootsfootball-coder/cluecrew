@@ -27,7 +27,9 @@ const FAMILY = 'exposure-live-asserting-entries';
  * Read from the staged carrier artefact rather than re-deriving, so this file and that one cannot
  * disagree about the population's definition.
  */
-const CARRIER_FILE = join(REPO, 'content/exports/library-hints-with-carriers-1559323e937b2a07.json');
+// Re-pointed after the sixty-fourth's amendments landed: eleven asserting clauses became moves,
+// so the population re-derived 15 -> 6 and the old file would have joined against nine ghosts.
+const CARRIER_FILE = join(REPO, 'content/exports/library-hints-with-carriers-dbd7f1242338eff1.json');
 
 async function main() {
   const carrierDoc = JSON.parse(readFileSync(CARRIER_FILE, 'utf8')) as {
