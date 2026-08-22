@@ -16151,3 +16151,70 @@ prompted the ruling were both **accessible names**, which is the largest row.
 **What the scope buys is not coverage — it is that the largest and quietest surface now has a rule on
 it.** The 19 headings and 16 paragraphs remain unreviewed, and naming them is the finding rather than
 the repair.
+
+## R557 — The permission withdrawn: first person refused everywhere, in two kinds
+
+**David, 2026-08-21. The scope becomes a specification.** First person is refused **everywhere today**,
+and `check:first-person` distinguishes the two refusals rather than flattening them:
+
+**PERMANENT** — accessible names, group labels, button labels, status text. **A persona has no place
+in a control's name whatever is decided about voice.**
+
+**PENDING** — mode and hint copy, refused **until a body decision exists**, and **the refusal says so
+on its face**: *"PENDING, not banned… a hold on an open question."*
+
+**A REFUSAL THAT HIDES ITS OWN REASON IS HOW A PENDING DECISION BECOMES A PERMANENT ONE NOBODY EVER
+MADE.** The scanner's message is the only place a future author meets this, and *"refused"* alone
+would retire the question exactly as a scan name retires a scope (R541).
+
+**The Daily Loop line stays third person as she wrote it**, and `How this one works out` stands.
+
+## R558 — The fourth mechanism is plumbing, and the plumbing is done
+
+**Where the read-gate stands: `ACTIVE-AND-SERVING`.** Seven LIVE items serve their own hint — the nine
+punctuation items minus PU-08 (ruled to the library) and PU-03 (held, then approved).
+
+| | |
+|---|---:|
+| items carrying a `hintCore` | 373 |
+| of those LIVE | 43 |
+| read by a named reviewer | 14 (7 LIVE) |
+| **LIVE, carrying a hint, still unread** | **36** |
+
+**THE GATE IS NOT THE OBSTACLE. IT ALREADY FLIPPED**, the moment she ruled nine strings.
+
+**Serving the rest costs nothing to build.** Each of the 36 becomes served **by being read** — no
+deploy, no schema, no decision beyond the hint. **And there is no fallback case anywhere**: all 43
+route to a library hint on every wrong option, so every read is a straight replacement of a shared
+hint by a specific one. **At her rate — nine in one pass — the 36 is four passes.**
+
+**AND THIS IS THE GAP THE PRONOUN WAS BEING ASKED TO FILL.** A library hint is written to be true of
+every carrier of a tag, so on any particular item it is **general by construction**. The item's own
+hint is the specific thing and **it sat authored and unread**: `PU-02` served the general sentence
+while its own reached nobody until four days ago.
+
+**A voice is not what makes a hint specific. A hint written for the item is.**
+
+## R559 — A forbidden thing relocates to the channel where nobody looks
+
+**Her generalisation, and it reaches much further than persona.**
+
+**Copy flows to the least-reviewed channel the way water finds low ground, and forbidding it in the
+reviewed channels only steepens the slope.**
+
+**So a rule that forbids without providing a permitted route pushes the thing into the unwatched
+channel** — and the repair is **a route plus a gate**, never a prohibition alone.
+
+**The ten aria-labels are that mechanism's output, by drift rather than intent.** Nobody decided to put
+product voice in accessible names. **The reviewed channels were closed and that one was open**, and it
+had no reviewer, no provenance field and no amendment path — which is what made it the low ground.
+
+**The pattern is already in this register three times over and was never named**: the conditional-flag
+obligations that lived in a recommendation sentence because no field existed for them (R347); the
+hand-assembled proposals whose claims about rows nothing could re-derive (R516); the seventy source
+strings outside copy review (R556). **Each is content arriving in the only channel that would take it.**
+
+**And the corollary is the operational half: when a rule is written, the question is not only what it
+forbids but WHERE THE THING IT FORBIDS WILL GO INSTEAD.** R557's pending refusal is written to that —
+it names the open decision rather than closing the channel silently, so the next author meets a
+question rather than a wall.

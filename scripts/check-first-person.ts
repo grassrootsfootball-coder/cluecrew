@@ -4,10 +4,16 @@
  * **Built to the scope rather than to the pronoun.** The pronoun is not the fault; the fault is a
  * persona arriving where nobody reviews copy.
  *
- *   REFUSED POSITIONS  accessible names, group labels, button labels, status text.
- *   PERMITTED POSITIONS  mode and hint copy — **and only where a reviewer's authority is on the
- *                        string.**
- *   EVERYWHERE          a first-person string with NO reviewer citation is refused.
+ * **THE PERMISSION IS WITHDRAWN AND THE SCOPE IS NOW A SPECIFICATION** (David, 2026-08-21 — R557).
+ * First person is refused EVERYWHERE today, and the two refusals differ in KIND:
+ *
+ *   PERMANENT   accessible names, group labels, button labels, status text. A persona has no place
+ *               in a control's name whatever is decided about voice.
+ *   PENDING     mode and hint copy — refused UNTIL A BODY DECISION EXISTS, and the refusal SAYS SO.
+ *
+ * **The pending refusal must not read as a ban on the pronoun.** It is a hold on an undecided
+ * question, and a refusal that hides its own reason is how a pending decision becomes a permanent
+ * one nobody ever made.
  *
  * **THE CONSEQUENCE FOR SOURCE IS TOTAL AND DELIBERATE: no string in a `.tsx` file can carry a
  * reviewer citation, because there is no field to carry one.** So every first-person string in
@@ -98,10 +104,10 @@ async function main() {
     if (!m.childHint) continue;
     screenedStore++;
     if (!FIRST_PERSON.test(unquoted(m.childHint))) continue;
-    const cited = Boolean((m.textProvenance as { approvedByPerson?: unknown; authority?: unknown } | null)?.authority);
     refusals.push(
       `  library:${m.id}\n      hint copy: "${m.childHint}"\n`
-      + `      ${cited ? 'PERMITTED — a reviewer\'s authority is on the string.' : 'REFUSED — first person with no reviewer citation.'}`,
+      + '      REFUSED — PENDING, not banned. Hint copy is a permitted POSITION and the permission is\n'
+      + '      withdrawn until a body decision on voice exists (R557). A hold on an open question.',
     );
   }
   for (const i of items) {
@@ -125,10 +131,9 @@ async function main() {
       if (typeof s !== 'string' || !s.trim()) continue;
       screenedStore++;
       if (!FIRST_PERSON.test(unquoted(s))) { if (ANALYTIC_WE.test(unquoted(s))) analytic.push(`${i.id}.${field}`); continue; }
-      const cited = typeof e.hintAuthority === 'string' && e.hintAuthority.trim() !== '';
       refusals.push(
         `  ${i.id}.${field}\n      "${s.slice(0, 90)}"\n`
-        + `      ${cited && field === 'hintCore' ? 'PERMITTED — a reviewer\'s authority is on the string.' : 'REFUSED — first person with no reviewer citation.'}`,
+        + '      REFUSED — PENDING, not banned. Awaiting a body decision on voice (R557).',
       );
     }
   }
