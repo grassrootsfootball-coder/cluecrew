@@ -17716,6 +17716,9 @@ the derivation drops it without being told to (`exposure-live-…-a935bafb7144cb
 
 **And the id-divergence fact for the split's record: `en-spelling-form-lookalike` has NEVER been
 carried by any option in this store** — 0 current tags, 0 mentions in any item or option JSON
-including superseded stamps, 0 rows in the append-only write log (whole-row cast), 0 in repo
-artefacts. Whatever routing the authoring store's split record specifies, it starts from a store
-that has never written that id anywhere.
+including superseded stamps, 0 rows in the append-only write log (whole-row cast). **One repo
+mention exists and it is prose, not a write**: the evidence copy of her eng003 FOURTH return uses
+the id — so the name originates in HER prose months before the split, and the authoring store
+presumably adopted it from there while this store's row kept `en-vocab-form-lookalike`. The
+divergence is older than the split. Whatever routing the split record specifies, it starts from a
+store that has never WRITTEN that id — but not from one that never met it.
