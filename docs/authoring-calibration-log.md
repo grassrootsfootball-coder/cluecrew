@@ -17446,3 +17446,35 @@ a pattern carrying less than the source.** *"the commonest"* against *"the word'
 sense"* — a possessive broke the match, the zero would have read as *no other tag asserts
 uniqueness*, and it was caught by reading the description rather than trusting the pattern. The
 pattern family now has eight members and one sentence still covers them all.
+
+## R616 — The standing path cannot carry an approve-as-written, and the exposure list follows
+
+**David's two questions, answered from the code rather than from the week's behaviour.**
+
+**ONE: the write site.** The standing path that sets `hintAuthoredBy`/`hintAuthority` on an item is
+`apply-all-unlanded.ts:177-185`, fed only by amendments the shared reader extracts. **It is NOT
+reachable from a ruling that changes no text**: line 170 — `if (before === h.authored) { ALREADY;
+continue; }` — skips the whole write, authorship included. The guard is right about idempotence and
+wrong about rulings: **it conflates "nothing to write" with "nothing ruled".** An
+approved-as-written verdict has travelled only through hand-written one-shots
+(`apply-annie-27th-hints.ts:70`, verdict `APPROVED`), never through the standing path. **"Approved
+as written, no amendment" is exactly the ruling shape the standing machinery cannot carry.**
+
+**TWO: the serving path.** `item-hint.ts:38-45` — hint text present, authorship unset →
+`{ serves: 'library' }`; `hintToServe` (line 57) returns the tag's library hint, or NOTHING when the
+chosen option is untagged. Caller: `orchestrator.ts:944-951`, which resolves
+`chosen.misconceptionId` against prisma at request time — **there is no separate serving snapshot.**
+
+**THE EXPOSURE, AS AN UPPER BOUND: 310 items, 28 LIVE.** Every item whose `hintCore` exists but does
+not serve, carrying a distractor tagged with one of the 15 entries that assert something about the
+item. A child missing on those options receives the asserting library hint while an authored item
+hint sits unserved beside it. By entry, LIVE options: `en-wrong-scope-retrieval` 20,
+`en-within-span-wrong-element` 13, `en-inference-literal-lookalike` 6, `en-vocab-dominant-sense` 6,
+`en-motive-invention` 5, `en-contradicted-by-the-text` 5, `en-attribute-transfer` 3,
+`en-vocab-neighbouring-sense` 3, `en-comparison-vehicle-misread` 1, `en-vocab-form-lookalike` 1.
+
+**NOT VERIFIED, and why the count is a bound:** which of the 310 were "approved as written by
+Annie" — prose approvals are not machine-readable (R178's gap), nine returns have not crossed, and
+the 15-entry list rests on the aboutThisItem proxy, which over-reports by design. The bound is
+therefore every EXPOSED item, of which the approved-as-written are the subset that is also a
+completed act nobody carried.
