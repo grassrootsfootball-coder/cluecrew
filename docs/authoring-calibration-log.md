@@ -15360,3 +15360,96 @@ matches were imports and which were footnotes.
 
 **And it was caught by `requirePopulation`, not by the pattern.** The zero was refused before it
 became a number, which is the only reason this is a register entry rather than a clean result.
+
+## R515 — The top two of my fix order were already compliant; the scan misclassified them
+
+**`export-review-pack` renders every option with the key marked and the distractors beside it. So
+does `export-vr-review-pack`. Both were classified KEY-ONLY.**
+
+**The source reads `item.options` newline `.map(`**, and my pattern was `options\.map` — no whitespace
+tolerated. **The same fault as R514, in the scan that produced the order she was asked to fix in.**
+
+**Corrected: 13 carry the set (was 11), 5 are key-only (was 7), and 12 ask for a verdict while
+non-compliant (was 14).** The two removed are **seven and four staged instances — eleven of
+twenty-eight, the head of the order.**
+
+**So the fix order's first entry is now `export-maths-review-pack` (4).** And **the change she asked
+for first did not need making**, which is the third time in two turns that a pattern written for one
+formatting has produced a number reported as a measurement.
+
+**The pattern is now the finding rather than the instance.** Three in two turns: a quote after `key:`
+that is a backslash in JSON; `options.map` that is `options\n.map`; and before those, a filename match
+that was a footnote. **Each was a single pattern over a population that varies in a dimension the
+pattern did not carry.**
+
+## R516 — The hand-made mark, unforgeable by absence
+
+**`scripts/lib/assembly-mark.ts`.** Three states — `GENERATED_FROM_ROWS`, `ASSEMBLED_BY_HAND`,
+`GENERATED_THEN_EDITED` — with a `readAs` line that prints **where she reads it**, not only in a stamp.
+
+**Her reason: a generated artefact's claims about the store CAN BE WRONG AND CAN BE CHECKED, because
+there is a query behind them to re-run. A hand-assembled one's cannot be checked at all.**
+`narrator-redraft-proposal-0413f8ee` claimed a key that is a distractor, **and nothing could
+re-derive that claim because no query produced it.**
+
+**Meeting a claim about a key in a hand-assembled document should tell her she is reading somebody's
+ACCOUNT rather than the store.** The field is a warning at the moment of reading, not provenance for
+the record.
+
+**UNFORGEABLE BY ABSENCE: no field means HAND-ASSEMBLED.** The default is the unsafe reading, because
+the safe one would let an unmarked hand-written file pass as generated — **and a hand-written document
+is precisely the one nobody remembers to mark.** An unknown value falls to HAND as well; **only an
+explicit generated declaration reads as generated.**
+
+`GENERATED_THEN_EDITED` reads as an account too, because **the edit is the unverifiable part and it is
+not separable from the rest.** 5 tests.
+
+## R517 — Do not narrow the data before the operation that needs it
+
+**Her rule, REPLACING *"a match carries its kind"* — which was one instance stated as the rule.**
+
+> **Carry everything to the point of decision and discard after.**
+
+**The operational half is her reason: the discard always happens before anybody knows what the
+decision will need, and the information is never expensive to keep and always expensive to recover.**
+
+**The four instances:**
+
+| instance | narrowed too early | cost |
+|---|---|---|
+| **direction** never asked | inbound/outbound dropped at match time | two outbound artefacts counted as stale inbound snapshots |
+| **footnotes** counted as readers | import-vs-mention dropped at match time | seven still-read files that were one |
+| **serialisation** not carried | JSON-vs-markdown dropped before matching | 944 artefacts, zero matches, a wrong pattern indistinguishable from a clean store |
+| **formatting** not tolerated | `options\n.map` unmatched | the top two of a fix order misreported as non-compliant |
+
+**Every one discarded something free and recovered it at the cost of a wrong number already
+reported.**
+
+## R518 — `export-cowork-workorder` is UNTESTED, not compliant
+
+**Never staged. Zero uses and zero faults look identical.**
+
+**The same word as `en-vocab-not-this-word` (R476): a STATE, not a stage. It did not pass — it was
+never asked.**
+
+**And it is last in the fix order for the right reason**: not because it is least bad, but because
+**there is no occasion behind it.** An artefact that has never carried a verdict cannot have carried
+one badly, and fixing it first would be work ordered by severity in a list ordered by use.
+
+## R519 — Why the guard has caught two where no pattern has caught its own
+
+**A wrong pattern's output over a clean population is INDISTINGUISHABLE from a right pattern's.** Zero
+key-claims because the regex was wrong, and zero key-claims because nobody quotes keys, **produce the
+identical result.** Nothing in the output could ever have shown it.
+
+**`requirePopulation` does not ask WHAT WAS FOUND. It asks WHETHER ANYTHING COULD HAVE BEEN.** That is
+a question about the query rather than the result, and it is the only question whose answer differs
+between the two cases.
+
+**Both catches this session were scope queries, not results**: `stem.headword` where the store has
+`stem.words[0]`, and a quote where JSON has a backslash. **Neither would have been found by reading
+the output, however carefully** — and the three uncaught pattern faults above all produced NON-zero
+output, which is exactly the case the guard cannot reach.
+
+**So the guard covers the empty case completely and the wrong-but-nonempty case not at all**, and
+R517 is what covers the second.
