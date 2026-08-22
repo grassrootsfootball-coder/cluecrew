@@ -354,6 +354,17 @@ here has no register entry. A ruling goes to the register FIRST; it comes here o
   thirds of carriers have one, are the same defect. When a printed sentence and its test disagree,
   the sentence changes — and the wrong word is always the one that makes the claim sound settled.
   This is R586 turned on our own instruments rather than on the corpus.
+- **A SUBSET OF A REAL POPULATION IS INDISTINGUISHABLE FROM THAT POPULATION WHEN YOU CANNOT SEE WHAT
+  WAS EXCLUDED** (Annie, 2026-08-22 — R595). Every row a blind signal returns is correct and nothing
+  in its output is wrong; **the only evidence of the fault is outside the output.** A morpheme signal
+  with suffixes and no prefixes returned 11 of 20 instead of 13 — and at 11 the argument runs that
+  the id should follow the larger population rather than the accurate name, so **a signal defect
+  nearly changed a naming decision rather than a count.** Read the rows before sending them; the
+  number alone cannot show this.
+- **A RULED ROW IS NOT AN UNREAD ROW** (Annie, 2026-08-22 — R593). Withheld-because-undecided and
+  withheld-because-decided serve identically — same output, same `chooseHint` verdict — so a
+  recorded decision is the only thing separating them. Any population offered for review excludes
+  rows carrying a decision and reports them separately with the ruling verbatim.
 - Content decisions (items, chapters, misconceptions) go through the CMS
   review pipeline; nothing skips the reviewer.
 - **PILOT CONTENT UNDER ACTIVE REVIEW HAS ONE WRITE PATH: `scripts/lib/pilot-review.ts`, NEVER A

@@ -52,11 +52,27 @@ async function main() {
     ['hintCore', 'hintAuthoredBy', 'hintAuthority'],
   );
 
-  const rows = items
-    .filter((i) => {
-      const h = (i.explanation as { hintCore?: unknown } | null)?.hintCore;
-      return typeof h === 'string' && h.trim() !== '' && chooseHint(i.explanation as never).serves === 'library';
-    })
+  /**
+   * **A RULED ROW IS NOT AN UNREAD ROW (Annie's PU-08 question — R593).** `ENG-003-A-PU-08` carries
+   * `hintRuledBy: "Annie"`, `hintServes: "library"` and her reasoning — **a DECISION to leave the
+   * item hint unserved.** It reaches a child exactly as an unread hint does, so it sat in this
+   * population for four batches indistinguishable from a field nobody had looked at.
+   *
+   * **The two states are opposite and the serving behaviour is identical**, which is the whole class:
+   * withheld-because-undecided and withheld-because-decided produce the same output. Only a recorded
+   * decision separates them, and only a reader looking for one would find it.
+   */
+  const isRuled = (e: unknown) => {
+    const x = (e ?? {}) as Record<string, unknown>;
+    return typeof x.hintRuledBy === 'string' && String(x.hintRuledBy).trim() !== '';
+  };
+  const unserved = items.filter((i) => {
+    const h = (i.explanation as { hintCore?: unknown } | null)?.hintCore;
+    return typeof h === 'string' && h.trim() !== '' && chooseHint(i.explanation as never).serves === 'library';
+  });
+  const ruled = unserved.filter((i) => isRuled(i.explanation));
+  const rows = unserved
+    .filter((i) => !isRuled(i.explanation))
     .map((i) => {
       const e = (i.explanation ?? {}) as Record<string, unknown>;
       const key = i.options.find((o) => o.isCorrect);
@@ -102,7 +118,19 @@ async function main() {
     theFourThings: 'the item and its stem; its options with the KEY marked; its own hintCore; and the library hint(s) it would replace.',
     whyBoth: 'A hint that is worse than the general one it replaces is a regression dressed as specificity, and that is invisible without both strings.',
     howServingWorks: 'An item hint serves only where a named reviewer has read it. Ruling one makes it serve; ruling none changes nothing.',
-    denominators: { liveItems: items.length, carryingAnUnreadHint: rows.length },
+    denominators: {
+      liveItems: items.length,
+      carryingAnUnreadHint: rows.length,
+      alreadyRuledUnserved: ruled.length,
+      ruledRows: ruled.map((i) => ({
+        itemId: i.id,
+        ruledBy: String((i.explanation as Record<string, unknown>).hintRuledBy),
+        serves: String((i.explanation as Record<string, unknown>).hintServes ?? ''),
+        ruling: String((i.explanation as Record<string, unknown>).hintRuling ?? ''),
+      })),
+      note: 'A RULED row is excluded from the unread population. It is withheld BY DECISION, and a '
+        + 'decision and an unread field serve identically — only the record separates them.',
+    },
     /**
      * **THE BATCH NAMES ITS OWN PLACE IN THE WHOLE.** Which rows these are, out of how many, and
      * which remain — so a batch read out of order cannot be mistaken for the population.

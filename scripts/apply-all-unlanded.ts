@@ -31,6 +31,12 @@ async function main() {
   const seen = new Set<string>();
   const found: Array<{ id: string; authored: string; file: string; when: Date }> = [];
   const otherField: Array<{ id: string; authored: string; file: string; fieldNote: string }> = [];
+  /**
+   * **ITEM HINTS ROUTE HERE, and they were being declared out of scope.** Her target shape for an
+   * item hint is `ENG-001-WIW-20 hintCore` — an id and a field. It is a STORE row in a table this
+   * script's own scope names, and four of her wordings sat under a reassuring OUT OF SCOPE line.
+   */
+  const itemHints: Array<{ id: string; authored: string; file: string }> = [];
   for (const a of amendments) {
     if (a.kind !== 'STORE' || !a.targetId) continue;
     /**
@@ -45,6 +51,10 @@ async function main() {
      * the guard passed the one row it existed to stop. The field she names is the part before the
      * comma or the `not`; everything after it is the field she is ruling OUT.
      */
+    if (/^ENG-|^VR-|^MA-/i.test(a.targetId) && /^hintCore$/i.test(a.fieldNote ?? '')) {
+      itemHints.push({ id: a.targetId, authored: a.authored, file: a.file });
+      continue;
+    }
     const namedField = a.fieldNote ? (a.fieldNote.split(/,|\bnot\b/)[0] ?? '').trim() : null;
     if (namedField && !/^hint\b/i.test(namedField)) {
       otherField.push({ id: a.targetId, authored: a.authored, file: a.file, fieldNote: a.fieldNote as string });
@@ -142,6 +152,36 @@ async function main() {
           state: 'RECORDED', approvedByPerson: 'Annie',
           authority: `${a.file}, read from the file, sha256 ${digest}`,
           appliedOn: TODAY, note: 'Ruled when written; absent from the store until now (R403/R410).',
+        },
+      },
+    });
+  }
+
+  /**
+   * **AN ITEM HINT SUPERSEDES, IT DOES NOT APPEND (R388).** The replaced wording moves to
+   * `_previousHintCore`, which `textsFrom` treats as superseded and the child-facing gate skips —
+   * so the old string is kept for provenance without ever reaching a child again.
+   */
+  for (const h of itemHints) {
+    const item = await prisma.item.findUnique({ where: { id: h.id }, select: { explanation: true } });
+    if (!item) { console.log(`  NO SUCH ITEM  ${h.id}`); continue; }
+    const e = (item.explanation ?? {}) as Record<string, unknown>;
+    const before = typeof e.hintCore === 'string' ? e.hintCore : null;
+    if (before === h.authored) { console.log(`  ALREADY       ${h.id}`); continue; }
+    const g = checkChildFacingText({ role: 'hint', label: `${h.id}.hintCore`, text: h.authored }).filter(isBlocking);
+    if (g.length) throw new Error(`ABORTED — ${h.id} hint fails the gate: ${g.map((f) => f.detail).join('; ')}`);
+    console.log(`  ITEM HINT     ${h.id}\n      BEFORE: ${JSON.stringify(before)}\n      AFTER : ${JSON.stringify(h.authored)}`);
+    if (!APPLY) continue;
+    const digest = createHash('sha256').update(readFileSync(join(RETURNS, h.file))).digest('hex');
+    await prisma.item.update({
+      where: { id: h.id },
+      data: {
+        explanation: {
+          ...e,
+          hintCore: h.authored,
+          ...(before ? { _previousHintCore: before } : {}),
+          hintAuthoredBy: 'Annie',
+          hintAuthority: `${h.file}, sha256 ${digest}`,
         },
       },
     });

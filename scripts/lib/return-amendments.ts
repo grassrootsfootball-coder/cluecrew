@@ -117,6 +117,15 @@ export const SHAPES = [
  * parenthetical come off — never the presence of a colon or a bracket, which are punctuation.
  */
 function resolveTarget(raw: string): { kind: 'STORE' | 'SURFACE'; id: string | null; fieldNote: string | null } {
+  /**
+   * **`ENG-001-WIW-20 hintCore` — AN ITEM ID FOLLOWED BY A FIELD NAME.** It contains a space, so the
+   * first version classified it SURFACE and the run printed *"declared OUT OF SCOPE"* over four
+   * amendments to `item.explanation.hintCore` — a table this check's own scope line names. **The
+   * sentence was reassuring and wrong**, which is the R173 camouflage: an unrecognised shape landing
+   * in the not-our-problem bucket reads exactly like a considered exclusion.
+   */
+  const itemField = /^([A-Z]{2,}[A-Z0-9-]*\d)\s+([A-Za-z][A-Za-z0-9_]*)$/.exec(raw.trim());
+  if (itemField) return { kind: 'STORE', id: itemField[1] as string, fieldNote: itemField[2] as string };
   const paren = /\(([^)]*)\)\s*$/.exec(raw);
   const bare = raw.replace(/\s*\([^)]*\)\s*$/, '').trim();
   const afterQualifier = bare.includes(':') ? bare.slice(bare.lastIndexOf(':') + 1).trim() : bare;

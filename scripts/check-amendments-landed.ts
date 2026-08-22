@@ -82,10 +82,19 @@ async function main() {
    * **VR hints remain OUT and are declared so on the face of every run.**
    */
   const words = await prisma.word.findMany({ select: { id: true, definitionChild: true } }).catch(() => []);
+  /**
+   * **EVERY ROW CARRIES ITS ID AS A FIELD, because the scoping matched on a string suffix and an
+   * item row could never satisfy it.** `where` was `item:ENG-001-WIW-20(LIVE)`, and the scope test
+   * was `where.endsWith(':' + targetId)` — true for a library row, true for a word row, and **false
+   * for every item that has ever existed**, because the status suffix sits after the id. So an item
+   * hint amendment could not be reported LANDED under any circumstances: it was either filed SURFACE
+   * and declared out of scope, or filed STORE and reported ABSENT while the store held it verbatim.
+   * Both readings were reassuring and wrong in opposite directions.
+   */
   const haystack = [
-    ...lib.map((m) => ({ where: `library:${m.id}`, text: m.childHint ?? '' })),
-    ...items.map((i) => ({ where: `item:${i.id}(${i.status})`, text: String((i.explanation as { hintCore?: unknown })?.hintCore ?? '') })),
-    ...words.map((w) => ({ where: `word:${w.id}`, text: String((w as { definitionChild?: unknown }).definitionChild ?? '') })),
+    ...lib.map((m) => ({ id: m.id, where: `library:${m.id}`, text: m.childHint ?? '' })),
+    ...items.map((i) => ({ id: i.id, where: `item:${i.id}(${i.status})`, text: String((i.explanation as { hintCore?: unknown })?.hintCore ?? '') })),
+    ...words.map((w) => ({ id: w.id, where: `word:${w.id}`, text: String((w as { definitionChild?: unknown }).definitionChild ?? '') })),
   ];
 
   requirePopulation('check:amendments-landed', {
@@ -117,7 +126,7 @@ async function main() {
       * "did this amendment reach ITS row" — and a wording that happens to match another entry
       * would report a landing on the wrong row.
       */
-    const scoped = a.targetId ? haystack.filter((h) => h.where.endsWith(`:${a.targetId}`)) : haystack;
+    const scoped = a.targetId ? haystack.filter((h) => h.id === a.targetId) : haystack;
     const hit = scoped.find((h) => norm(h.text) === norm(a.text));
     const e = byFile.get(a.file) ?? { landed: [], absent: [] };
     (hit ? e.landed : e.absent).push(a.text);
@@ -138,7 +147,7 @@ async function main() {
   const landedByTarget = new Map<string, Date>();
   for (const a of amendments) {
     if (!a.targetId) continue;
-    const scoped = haystack.filter((h) => h.where.endsWith(`:${a.targetId}`));
+    const scoped = haystack.filter((h) => h.id === a.targetId);
     if (!scoped.some((h) => norm(h.text) === norm(a.authored))) continue;
     const prev = landedByTarget.get(a.targetId);
     if (!prev || a.when > prev) landedByTarget.set(a.targetId, a.when);

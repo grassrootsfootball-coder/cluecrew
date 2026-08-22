@@ -16977,3 +16977,94 @@ wider than the thing standing behind it.**
 It is R586 (assert or describe) turned on our own instruments rather than on the corpus. A check that
 says *every* where it tested *most* is a hint that says *two people* where two thirds have one —
 **and in both cases the wrong word is the one that makes the claim sound settled.**
+
+## R592 — The split written, and one row left visibly unplaced
+
+**`en-vocab-form-lookalike` keeps its id, its hint and six carriers** — `rogue`/*rough*,
+`covet`/*cover*, `wont`/*won't*, `sullen`/*sullied*, `stitch`, `order`. **Every one is a different
+word the target resembles**, which is what the id says and what *read it letter by letter* reaches.
+
+**Thirteen move to `en-vocab-built-from-parts`**, her hint verbatim from the block: *"The parts of a
+word do not always add up. Check the whole word in the sentence."* `tolerable` as *toler* + *-able*,
+`stranger` as *strange* + *-er*, `misgave` as *mis* + *gave*, and ten more. **She has not mistaken
+which word it is. She has taken it apart** — reading `stranger` letter by letter gives `stranger`,
+because the letters were never the problem.
+
+**`ENG-001-WIW-11` IS LEFT VISIBLY UNPLACED, and that is the entry's other half.** *Moving a boat
+along with oars* for *the row* is a homograph — a different word with the same spelling, **neither a
+resemblance nor a misparse.** It carries `unplacedBySplit` with her reasoning and her return's
+digest, so it reads as a decision. *"One row, and I would rather leave it visibly unplaced than push
+it into whichever branch is nearest."*
+
+**HER LISTS ARE THE AUTHORITY AND THE RESOLUTION IS ASSERTED.** The writer resolves each headword she
+named to exactly one carrier and **fails the whole run** on any headword matching none or several, on
+any carrier in neither list, and on any total other than 13 / 6 / 1. **A split that silently placed
+twelve would look exactly like one that placed thirteen.** Read back after writing: 7 and 13.
+
+## R593 — A ruled row is not an unread row, and they serve identically
+
+**Her PU-08 question, asked of all thirty-six: which are already ruled, and is any other
+decision-to-leave-unserved sitting there looking like a field nobody has read?**
+
+**Exactly one, and it is PU-08 itself.** `ENG-003-A-PU-08` carries `hintRuledBy: "Annie"`,
+`hintServes: "library"` and her reasoning: *"The library hint is better here. An item hint earns its
+place by saying something the general one cannot."*
+
+**WITHHELD-BECAUSE-UNDECIDED AND WITHHELD-BECAUSE-DECIDED PRODUCE IDENTICAL OUTPUT.** The child gets
+the library hint either way, `chooseHint` returns `library` either way, and the row sat in the unread
+population for four batches indistinguishable from a field nobody had looked at. **Only a recorded
+decision separates them, and only a reader looking for one would find it.**
+
+The delivery now excludes ruled rows and reports them in its denominators with the ruling verbatim.
+**The unread population is 31, not 36** — 43 carry a hint, 11 now serve, 1 is ruled.
+
+**And four moved into service this turn.** Her seventieth-return amendments to `WIW-20`, `WIW-22`,
+`PR-01` and `PR-03` set both `hintAuthoredBy` and `hintAuthority`, which is what `chooseHint`
+requires — **so ruling a wording is what makes it reach a child**, exactly as R388 specifies, and it
+happened as a side effect of applying an amendment rather than as a separate act.
+
+## R594 — An item-hint amendment could never have been reported landed, in two independent ways
+
+**Both faults were reassuring, and they were reassuring in opposite directions.**
+
+**ONE: the target shape was unrecognised, so it was declared OUT OF SCOPE.** Her form for an item
+hint is `ENG-001-WIW-20 hintCore` — an id and a field. It contains a space, so `resolveTarget`
+classified it SURFACE, and four amendments to `item.explanation.hintCore` printed under a line
+reading *"declared OUT OF SCOPE and NOT counted"* — **a table the check's own scope line names.**
+
+**TWO: the scoping test could not match an item row even once.** The haystack key was
+`item:ENG-001-WIW-20(LIVE)` and the test was `where.endsWith(':' + targetId)`. True for a library
+row, true for a word row, **false for every item that has ever existed**, because the status suffix
+sits after the id. So the moment the first fault was fixed, the same four wordings were reported
+ABSENT **while the store held them verbatim.**
+
+**Out of scope and absent are opposite claims and both were false.** Every row now carries its id as
+a field and the scope test compares ids. It is R57 in a comparison: a key assembled for display was
+being parsed for meaning.
+
+## R595 — Memory in a manifest header, and a subset that looks like a population
+
+**Two faults from opposite sides of the same week, and hers is the sharper.**
+
+**SHE PUT RECOLLECTION IN THE HEADER OF A MANIFEST.** *"I generated that table from my own disk and
+then wrote a header from memory of the sequence. The manifest exists to replace recollection with
+digests, and I put recollection in the first thing a reader reads."* The prose names nine files, the
+table carries six. **And the header is the part that gets read** — a reader who takes *the first
+seven are named for the cluster* on trust never opens the table. **The digests underneath do not
+reach the sentence above them.**
+
+**HER OWN CHECK WAS CORRECTLY SCOPED AND STILL REPORTED THE WRONG THING.** She reported her side
+complete, and meant complete over the numbered population — **true, and exactly the kind of true
+sentence she has been refusing from everyone else all fortnight.** The unnumbered
+`annie-merge-ack-and-gap-yard-note.md` was invisible to it by construction.
+
+**AND THE SIGNAL DEFECT NEARLY CHANGED A NAMING DECISION RATHER THAN A COUNT.** At eleven of twenty
+the morpheme branch is a bare majority; at thirteen it is nearly two thirds. **The split holds either
+way, but the sizing decides which branch keeps the id** — at eleven the argument runs that the id
+should follow the larger population rather than the accurate name. It was caught only because
+somebody read the rows before sending them, and **the number alone would not have shown it.**
+
+**THE GENERAL FORM, and it is the one to keep: a signal blind to half a morphology returns a smaller
+half and looks like a complete answer** — because **a subset of a real population is
+indistinguishable from that population when you cannot see what was excluded.** Every row it returns
+is correct. Nothing in the output is wrong. The only evidence of the fault is outside the output.
