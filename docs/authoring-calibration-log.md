@@ -18112,3 +18112,37 @@ reviewer on the row. **The constraint was demanding exactly what the moment was:
 recorded in the review door's own fields** — `reviewedBy: Annie`, the return and digest in
 reviewNotes — not a side note. The card serves; the first occupant of the new channel is signed,
 and its provenance is ordinary, which was the commission.
+
+## R643 — Form ruling ten folded; the audit; and my repair papered her conceded drift before finding it
+
+**FORM RULING TEN (hers, hundredth §1)**: `sourceProse` seeds from the legacy row's BYTES at
+landing — *"an archive that passed through anybody is not an archive."* Her own concession is the
+premise: she flattened the catalogue's em dashes to commas by house-rule reflex, in the one field
+the house rule exempts. The hundredth's seven landed under it (Little Women 3 — the second CUT
+object and the first moderate severities; Cranford 2; Heidi 2 — **including the first PREAMBLE
+strike**: the twelfth conditional's met-claim completed as a span against the preamble bytes,
+carrying `field: 'preamble'` as its address where numbered spans carry lines). The rejection aside
+is stamped `rejectionAsideClass: FIRST MEMBER` on its row, findable without re-reading prose;
+whether rejections get their own record stays routed to David.
+
+**THE AUDIT, AND WHAT IT TOOK TO MAKE ITS ZERO HONEST.** Three instrument faults of mine, each
+found by the audit disagreeing with something:
+
+1. **The pairing scored positional characters** and matched Sir Henry's flag to the convict's
+   string — opcodes about a comparison nobody meant. Re-paired by token overlap, with sub-50%
+   pairs refusing to emit opcodes at all.
+2. **The rerun landers had CLOBBERED the displacement stamps** — each rerun wrote its key over the
+   first run's, losing the original displaced lists. Restored from the flags' own sourceProse
+   where the landing guard had proven byte-equality; landers now key stamps per run.
+3. **And the restoration PAPERED HER CONCEDED DRIFT**: on christmas-carol the em-dash legacy string
+   still sat on the row — her comma copy had never displaced anything — and my repair inserted the
+   comma copy into the stamps, making the audit read byte-true. **The audit's zero was
+   manufactured by the repair that preceded it.** Found by asking why the one drift she PROMISED
+   did not appear (R173's discipline: the number that agrees is the one to distrust). Truly
+   repaired: archive re-seeded from the em-dash bytes, her copy kept as `_sourceProseAsReturned`,
+   the legacy string displaced with its own stamp — and every other repaired passage screened for
+   the same fault: **exactly one papered case existed, and it was hers.**
+
+**FINAL: 39 archives compared · 8 seeded-from-bytes · 0 drifted · 0 unmatched** — with the one-sided
+zero stated on the run: a copy that drifted identically in both places would read clean. Census:
+45 standard · 13 + 8 = 21 [units] · 20 passages landed, 6 remain.

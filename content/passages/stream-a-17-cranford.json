@@ -1,551 +1,603 @@
 {
-  "id": "stream-a-17-cranford",
-  "sourceFile": "cranford.txt (Project Gutenberg)",
-  "work": {
-    "author": "Elizabeth Gaskell",
-    "title": "Cranford",
-    "firstPublished": 1853,
-    "authorDied": 1865
+ "id": "stream-a-17-cranford",
+ "sourceFile": "cranford.txt (Project Gutenberg)",
+ "work": {
+  "author": "Elizabeth Gaskell",
+  "title": "Cranford",
+  "firstPublished": 1853,
+  "authorDied": 1865
+ },
+ "copyrightCheck": {
+  "rule": "UK: life of author + 70 years",
+  "authorDied": 1865,
+  "pdInUkFrom": 1936,
+  "verdict": "public domain in the UK",
+  "sourceEdition": "Project Gutenberg eBook #394, public domain"
+ },
+ "sceneTitle": "Boz and Doctor Johnson",
+ "preamble": "Mary Smith is staying in the little town of Cranford, where the ladies run things and few men live. Captain Brown is a retired soldier who has come to the town, and Miss Jenkyns is the rector’s daughter and its leading lady. It is evening, the ladies of Cranford are at a card party, and the supper trays have already been round once.",
+ "extract": "When the trays re-appeared with biscuits and wine, punctually at a quarter to nine, there was conversation, comparing of cards, and talking over tricks; but by-and-by Captain Brown sported a bit of literature.\n\n“Have you seen any numbers of ‘The Pickwick Papers’?” said he. (They were then publishing in parts.) “Capital thing!”\n\nNow Miss Jenkyns was daughter of a deceased rector of Cranford; and, on the strength of a number of manuscript sermons, and a pretty good library of divinity, considered herself literary, and looked upon any conversation about books as a challenge to her. So she answered and said, “Yes, she had seen them; indeed, she might say she had read them.”\n\n“And what do you think of them?” exclaimed Captain Brown. “Aren’t they famously good?”\n\nSo urged Miss Jenkyns could not but speak.\n\n“I must say, I don’t think they are by any means equal to Dr Johnson. Still, perhaps, the author is young. Let him persevere, and who knows what he may become if he will take the great Doctor for his model?” This was evidently too much for Captain Brown to take placidly; and I saw the words on the tip of his tongue before Miss Jenkyns had finished her sentence.\n\n“It is quite a different sort of thing, my dear madam,” he began.\n\n“I am quite aware of that,” returned she. “And I make allowances, Captain Brown.”\n\n“Just allow me to read you a scene out of this month’s number,” pleaded he. “I had it only this morning, and I don’t think the company can have read it yet.”\n\n“As you please,” said she, settling herself with an air of resignation. He read the account of the “swarry” which Sam Weller gave at Bath. Some of us laughed heartily. _I_ did not dare, because I was staying in the house. Miss Jenkyns sat in patient gravity. When it was ended, she turned to me, and said with mild dignity—\n\n“Fetch me ‘Rasselas,’ my dear, out of the book-room.”\n\nWhen I had brought it to her, she turned to Captain Brown—\n\n“Now allow _me_ to read you a scene, and then the present company can judge between your favourite, Mr Boz, and Dr Johnson.”\n\nShe read one of the conversations between Rasselas and Imlac, in a high-pitched, majestic voice: and when she had ended, she said, “I imagine I am now justified in my preference of Dr Johnson as a writer of fiction.” The Captain screwed his lips up, and drummed on the table, but he did not speak. She thought she would give him a finishing blow or two.\n\n“I consider it vulgar, and below the dignity of literature, to publish in numbers.”\n\n“How was the _Rambler_ published, ma’am?” asked Captain Brown in a low voice, which I think Miss Jenkyns could not have heard.\n\n“Dr Johnson’s style is a model for young beginners. My father recommended it to me when I began to write letters—I have formed my own style upon it; I recommend it to your favourite.”\n\n“I should be very sorry for him to exchange his style for any such pompous writing,” said Captain Brown.\n\nMiss Jenkyns felt this as a personal affront, in a way of which the Captain had not dreamed. Epistolary writing she and her friends considered as her _forte_. Many a copy of many a letter have I seen written and corrected on the slate, before she “seized the half-hour just previous to post-time to assure” her friends of this or of that; and Dr Johnson was, as she said, her model in these compositions. She drew herself up with dignity, and only replied to Captain Brown’s last remark by saying, with marked emphasis on every syllable, “I prefer Dr Johnson to Mr Boz.”\n\nIt is said—I won’t vouch for the fact—that Captain Brown was heard to say, _sotto voce_, “D—n Dr Johnson!” If he did, he was penitent afterwards, as he showed by going to stand near Miss Jenkyns’ arm-chair, and endeavouring to beguile her into conversation on some more pleasing subject. But she was inexorable. The next day she made the remark I have mentioned about Miss Jessie’s dimples.",
+ "editorialCuts": [
+  "Removed the paragraph on Miss Jessie Brown’s shopkeeper uncle and Miss Jenkyns’s attempt to drown the subject, which needs the family back-story this extract does not introduce.",
+  "Removed two illustration captions carried in the source text as bracketed lines. One of these — index 51, \"[Picture: Endeavouring to beguile her into conversation]\" — was the only internal gap in the selection. REVERSED 2026-08-13, AND THE EARLIER REASONING WITH IT. This field used to argue that the tier machinery should count the caption as a cut, on the ground that \"a gap it cannot read is a gap it must not excuse\". Pride and Prejudice showed that wrong: Gutenberg splits an Austen paragraph MID-SENTENCE to insert an illustration block, so counting caption paragraphs turned one authorial paragraph into a five-paragraph join and sent a reader hunting for four cuts that never happened. Caption blocks are now found structurally, by their opening and closing brackets, and excluded from gap counting. This selection has ZERO internal cuts and zero prose seams.",
+  "Removed the long paragraph on how the Cranford ladies managed Captain Brown at their parties — 539 words of social back-story that would have taken the extract past 1,200 words on its own. The scene now opens at the card table.",
+  "REVERSED a cut. Two paragraphs from the churchyard were added to bring the extract from 693 to 863 words and then removed again: they were padding to reach a band, and they left a hard seam from a churchyard straight to a supper tray with nothing between."
+ ],
+ "boundaryTrims": {
+  "front": "Begins at 'When the trays re-appeared'. Nothing trimmed inside the paragraph; the 're-' is answered by the preamble.",
+  "back": "Ends on Miss Jenkyns declining to be beguiled. Whole paragraph; nothing trimmed."
+ },
+ "metadata": {
+  "wordCount": 697,
+  "estReadingAge": "11-13",
+  "genre": "social-comedy",
+  "person": "first",
+  "tense": "past",
+  "domain": "a card party in a small town, and a quarrel about books",
+  "extractOrComplete": "extract",
+  "lineCount": 54,
+  "wordCountMeasure": "words-alnum-runs-v1",
+  "wordCountField": "extract"
+ },
+ "wordVaultCandidates": [
+  {
+   "word": "sported",
+   "senseInPassage": "brought out and showed off",
+   "polysemous": true,
+   "otherCommonSense": "played, or took part in games",
+   "estTier": 3,
+   "whyValuable": "The showing-off sense is invisible to a reader who only knows the games one, and the context clue is the whole sentence around it.",
+   "anchoredAs": "sported",
+   "anchoredAtLine": 3,
+   "anchorNote": "verbatim. Written mechanically 2026-08-15 by ruling: the word occurs EXACTLY ONCE in the passage, so no reading is involved in choosing the instance."
   },
-  "copyrightCheck": {
-    "rule": "UK: life of author + 70 years",
-    "authorDied": 1865,
-    "pdInUkFrom": 1936,
-    "verdict": "public domain in the UK",
-    "sourceEdition": "Project Gutenberg eBook #394, public domain"
+  {
+   "word": "resignation",
+   "senseInPassage": "putting up with something unwillingly",
+   "polysemous": true,
+   "otherCommonSense": "giving up a job",
+   "estTier": 3,
+   "whyValuable": "Dominant-sense work: the job sense is much the commoner for a child, and nothing in the line is about work.",
+   "anchoredAs": "resignation",
+   "anchoredAtLine": 22,
+   "anchorNote": "verbatim. Written mechanically 2026-08-15 by ruling: the word occurs EXACTLY ONCE in the passage, so no reading is involved in choosing the instance."
   },
-  "sceneTitle": "Boz and Doctor Johnson",
-  "preamble": "Mary Smith is staying in the little town of Cranford, where the ladies run things and few men live. Captain Brown is a retired soldier who has come to the town, and Miss Jenkyns is the rector’s daughter and its leading lady. It is evening, the ladies of Cranford are at a card party, and the supper trays have already been round once.",
-  "extract": "When the trays re-appeared with biscuits and wine, punctually at a quarter to nine, there was conversation, comparing of cards, and talking over tricks; but by-and-by Captain Brown sported a bit of literature.\n\n“Have you seen any numbers of ‘The Pickwick Papers’?” said he. (They were then publishing in parts.) “Capital thing!”\n\nNow Miss Jenkyns was daughter of a deceased rector of Cranford; and, on the strength of a number of manuscript sermons, and a pretty good library of divinity, considered herself literary, and looked upon any conversation about books as a challenge to her. So she answered and said, “Yes, she had seen them; indeed, she might say she had read them.”\n\n“And what do you think of them?” exclaimed Captain Brown. “Aren’t they famously good?”\n\nSo urged Miss Jenkyns could not but speak.\n\n“I must say, I don’t think they are by any means equal to Dr Johnson. Still, perhaps, the author is young. Let him persevere, and who knows what he may become if he will take the great Doctor for his model?” This was evidently too much for Captain Brown to take placidly; and I saw the words on the tip of his tongue before Miss Jenkyns had finished her sentence.\n\n“It is quite a different sort of thing, my dear madam,” he began.\n\n“I am quite aware of that,” returned she. “And I make allowances, Captain Brown.”\n\n“Just allow me to read you a scene out of this month’s number,” pleaded he. “I had it only this morning, and I don’t think the company can have read it yet.”\n\n“As you please,” said she, settling herself with an air of resignation. He read the account of the “swarry” which Sam Weller gave at Bath. Some of us laughed heartily. _I_ did not dare, because I was staying in the house. Miss Jenkyns sat in patient gravity. When it was ended, she turned to me, and said with mild dignity—\n\n“Fetch me ‘Rasselas,’ my dear, out of the book-room.”\n\nWhen I had brought it to her, she turned to Captain Brown—\n\n“Now allow _me_ to read you a scene, and then the present company can judge between your favourite, Mr Boz, and Dr Johnson.”\n\nShe read one of the conversations between Rasselas and Imlac, in a high-pitched, majestic voice: and when she had ended, she said, “I imagine I am now justified in my preference of Dr Johnson as a writer of fiction.” The Captain screwed his lips up, and drummed on the table, but he did not speak. She thought she would give him a finishing blow or two.\n\n“I consider it vulgar, and below the dignity of literature, to publish in numbers.”\n\n“How was the _Rambler_ published, ma’am?” asked Captain Brown in a low voice, which I think Miss Jenkyns could not have heard.\n\n“Dr Johnson’s style is a model for young beginners. My father recommended it to me when I began to write letters—I have formed my own style upon it; I recommend it to your favourite.”\n\n“I should be very sorry for him to exchange his style for any such pompous writing,” said Captain Brown.\n\nMiss Jenkyns felt this as a personal affront, in a way of which the Captain had not dreamed. Epistolary writing she and her friends considered as her _forte_. Many a copy of many a letter have I seen written and corrected on the slate, before she “seized the half-hour just previous to post-time to assure” her friends of this or of that; and Dr Johnson was, as she said, her model in these compositions. She drew herself up with dignity, and only replied to Captain Brown’s last remark by saying, with marked emphasis on every syllable, “I prefer Dr Johnson to Mr Boz.”\n\nIt is said—I won’t vouch for the fact—that Captain Brown was heard to say, _sotto voce_, “D—n Dr Johnson!” If he did, he was penitent afterwards, as he showed by going to stand near Miss Jenkyns’ arm-chair, and endeavouring to beguile her into conversation on some more pleasing subject. But she was inexorable. The next day she made the remark I have mentioned about Miss Jessie’s dimples.",
-  "editorialCuts": [
-    "Removed the paragraph on Miss Jessie Brown’s shopkeeper uncle and Miss Jenkyns’s attempt to drown the subject, which needs the family back-story this extract does not introduce.",
-    "Removed two illustration captions carried in the source text as bracketed lines. One of these — index 51, \"[Picture: Endeavouring to beguile her into conversation]\" — was the only internal gap in the selection. REVERSED 2026-08-13, AND THE EARLIER REASONING WITH IT. This field used to argue that the tier machinery should count the caption as a cut, on the ground that \"a gap it cannot read is a gap it must not excuse\". Pride and Prejudice showed that wrong: Gutenberg splits an Austen paragraph MID-SENTENCE to insert an illustration block, so counting caption paragraphs turned one authorial paragraph into a five-paragraph join and sent a reader hunting for four cuts that never happened. Caption blocks are now found structurally, by their opening and closing brackets, and excluded from gap counting. This selection has ZERO internal cuts and zero prose seams.",
-    "Removed the long paragraph on how the Cranford ladies managed Captain Brown at their parties — 539 words of social back-story that would have taken the extract past 1,200 words on its own. The scene now opens at the card table.",
-    "REVERSED a cut. Two paragraphs from the churchyard were added to bring the extract from 693 to 863 words and then removed again: they were padding to reach a band, and they left a hard seam from a churchyard straight to a supper tray with nothing between."
+  {
+   "word": "placidly",
+   "senseInPassage": "calmly, without protest",
+   "polysemous": false,
+   "otherCommonSense": "",
+   "estTier": 2,
+   "whyValuable": "The sense is fixed by what happens next, so it rewards reading on.",
+   "anchoredAs": "placidly",
+   "anchoredAtLine": 16,
+   "anchorNote": "verbatim. Written mechanically 2026-08-15 by ruling: the word occurs EXACTLY ONCE in the passage, so no reading is involved in choosing the instance."
+  },
+  {
+   "word": "penitent",
+   "senseInPassage": "sorry for what he had done",
+   "polysemous": false,
+   "otherCommonSense": "",
+   "estTier": 3,
+   "whyValuable": "Morphologically transparent to nobody, and the next clause acts it out rather than defining it.",
+   "anchoredAs": "penitent",
+   "anchoredAtLine": 51,
+   "anchorNote": "verbatim. Written mechanically 2026-08-15 by ruling: the word occurs EXACTLY ONCE in the passage, so no reading is involved in choosing the instance."
+  }
+ ],
+ "contentFlags": [
+  {
+   "axis": "oaths-and-swearing",
+   "element": "Captain Brown reported as having sworn under his breath, printed in the source as a dash",
+   "severity": "mild",
+   "disposition": "keep",
+   "condition": null,
+   "conditionMetBy": null,
+   "reason": "The narrator explicitly refuses to vouch for it, which is the point of the sentence, and no word is spelled.",
+   "loadBearing": true,
+   "strike": {
+    "span": "”\n\nIt is said—I won’t vouch for the fact—that Captain Brown was heard to say, _sotto voce_, “D—n Dr Johnson!” If he did, he was penitent afterwards, as he showed by going to stand near Miss Jenkyns’ arm-chair, and endeavouring to beguile her into conversation on some more pleasing subject.",
+    "lines": [
+     50,
+     51,
+     52,
+     53
+    ]
+   },
+   "judgedBy": "UNRECORDED",
+   "judgedAt": "UNRECORDED",
+   "convertedBy": "Annie",
+   "convertedAt": "2026-08-22",
+   "sourceProse": "Captain Brown is reported as having sworn under his breath, printed in the source as a dash. Recommendation: keep. The narrator explicitly refuses to vouch for it, which is the point of the sentence, and no word is spelled.",
+   "_sourceProseAsReturned": "VERBATIM-AT-LANDING from the legacy bytes",
+   "_sourceProseSeededBy": "VERBATIM-AT-LANDING from the legacy row's bytes, annie-hundredth-return (1).md, sha256 5d1f1d21098eee0d22be1dcc96a8809b1bb1e49fc82513c05709e20b732cefcb §1 — an archive that passed through anybody is not an archive",
+   "strikeNote": "completed from: the narrator's refusal to vouch. The no-word-spelled clause is DECLARED(absence), reported"
+  },
+  {
+   "axis": "unkindness-and-mockery",
+   "element": "a quarrel about the merits of two writers",
+   "severity": "mild",
+   "disposition": "keep",
+   "condition": null,
+   "conditionMetBy": null,
+   "reason": "Entirely verbal; no distress, no physical threat.",
+   "loadBearing": true,
+   "strike": "DECLARED(absence)",
+   "judgedBy": "UNRECORDED",
+   "judgedAt": "UNRECORDED",
+   "convertedBy": "Annie",
+   "convertedAt": "2026-08-22",
+   "sourceProse": "The quarrel is about the merits of two writers and stays entirely verbal. Recommendation: keep; no distress, no physical threat.",
+   "_sourceProseAsReturned": "VERBATIM-AT-LANDING from the legacy bytes",
+   "_sourceProseSeededBy": "VERBATIM-AT-LANDING from the legacy row's bytes, annie-hundredth-return (1).md, sha256 5d1f1d21098eee0d22be1dcc96a8809b1bb1e49fc82513c05709e20b732cefcb §1 — an archive that passed through anybody is not an archive"
+  }
+ ],
+ "curationNotes": "Chosen over the death of Captain Brown at the railway line, which is the chapter’s other famous scene and turns on a child in front of a train. This one is a social contest carried out entirely in politeness, which is what makes it a comprehension passage rather than an event. Chosen over the Alderney-cow scene for the same reason and because the cow has a stronger claim on the reader than either person does. BAND NOTE: 693 words at RA 11-13 — mid short set, not the CSSE band this passage was commissioned under. Reaching 900+ meant either restoring the Miss Jessie paragraph (two relatives the extract never uses) or the churchyard pair (a seam). Both are padding to hit a number, which is the distractor-slot fault wearing a different hat. The CSSE quota goes to the Haggard and one other.",
+ "bandException": null,
+ "complicationSeparation": {
+  "description": "Miss Jenkyns’s first slight to Boz, against the affront that finally lands and the reply it produces.",
+  "halfAAnchor": "by any means equal to Dr Johnson",
+  "halfBAnchor": "personal affront",
+  "sceneBeatBetween": "the two readings-aloud, Sam Weller against Rasselas",
+  "halfALine": 13,
+  "halfBLine": 43,
+  "linesApart": 29,
+  "floor": 15,
+  "verdict": "PASS",
+  "descriptionIsAKnownHook": "KEPT DELIBERATELY, RULED 2026-08-14. This field STATES THE RELATION and therefore hands a drafter the T4 key. That is a fault by the test the Stream-B anchors were built to pass — learn where to look, not what the answer is — and it is NOT being repaired. Removing it would destroy a baseline and change retrospectively what four already-built clusters mean. The divergence is recorded as a controlled comparison instead: see complication_find_rate.py, arm 1. Any NEW Stream-A passage should carry anchors without a description."
+ },
+ "narratorialSignposting": {
+  "verdict": "PASS, with one sentence flagged and kept",
+  "closest": "Miss Jenkyns felt this as a personal affront, in a way of which the Captain had not dreamed.",
+  "reading": "That sentence explains one moment; it does not name the method the passage runs on, which is a narrator who reports a contest and never takes a side. She never says she is not taking a side. Kept because it is load-bearing plot and cutting it would leave the affront unmotivated — but it is a strong lead for any item on why the offence lands, and an author should not build a T4 on it."
+ },
+ "authoringRead": {
+  "openingReference": "FAULT FOUND, FIXED IN THE PREAMBLE. The extract opens \"When the trays re-appeared with biscuits and wine\" — a definite noun phrase and a re-, both pointing at a first appearance that is outside the extract. Nothing inside resolves them. The preamble now carries it (\"the supper trays have already been round once\"), which is what a preamble is for; the alternative was starting a paragraph later and losing the card table entirely. No other opening reference is unresolved: Captain Brown and Miss Jenkyns are both named in the first two paragraphs and both are in the preamble.",
+  "seams": "ONE INDEX GAP, ZERO PROSE SEAMS. The gap at 50->52 removes the illustration caption \"[Picture: Endeavouring to beguile her into conversation]\", which is not part of the narrative and was never read as prose. The join reads \"She thought she would give him a finishing blow or two.\" -> \"I consider it vulgar, and below the dignity of literature, to publish in numbers.\" — the blow follows the intention directly, and reads better without a caption between them. The name-bearing-cut detector fires here on \"Endeavouring\", a sentence-initial gerund inside a caption; it is a false positive of the over-inclusive rule and the pronoun pass was run anyway.",
+  "secondRead": "SECOND PASS, WALKING THE SEAM AND THE REVERSAL. Required because the trimming detector fires on this cut list, and it fires correctly: this is the passage whose recorded fault was CREATED by chasing a word count. The pass confirmed the reversal actually landed in the selection rather than only in the note — \"churchyard\" occurs zero times in the shipped 693 words, and the supper tray at line 1 is the scene’s own opening rather than a join. It also re-walked every paragraph boundary in reading order looking for a change of room or hour that no sentence carries: none. The extract is one continuous evening in one room.",
+  "pronounResolution": "Every paragraph-opening pronoun resolved against the extract alone. The only cut the detector reads as removing a name is the caption, so there is no genuine name-bearing cut to chase; the pass was run regardless and found the one real risk elsewhere — \"she\" opening the final sentence (\"But she was...\") follows a clause naming Miss Jenkyns’ arm-chair and resolves to Miss Jenkyns, not to the nearer noun."
+ },
+ "authoringReadTier": {
+  "internalCuts": 0,
+  "tier": 0,
+  "trimmedForBand": true,
+  "subParagraphEdits": false,
+  "tierForcedByFidelity": false,
+  "bandPhrasesMatched": [
+   "band",
+   "to reach",
+   "words on its own"
   ],
-  "boundaryTrims": {
-    "front": "Begins at 'When the trays re-appeared'. Nothing trimmed inside the paragraph; the 're-' is answered by the preamble.",
-    "back": "Ends on Miss Jenkyns declining to be beguiled. Whole paragraph; nothing trimmed."
-  },
-  "metadata": {
-    "wordCount": 697,
-    "estReadingAge": "11-13",
-    "genre": "social-comedy",
-    "person": "first",
-    "tense": "past",
-    "domain": "a card party in a small town, and a quarrel about books",
-    "extractOrComplete": "extract",
-    "lineCount": 54,
-    "wordCountMeasure": "words-alnum-runs-v1",
-    "wordCountField": "extract"
-  },
-  "wordVaultCandidates": [
-    {
-      "word": "sported",
-      "senseInPassage": "brought out and showed off",
-      "polysemous": true,
-      "otherCommonSense": "played, or took part in games",
-      "estTier": 3,
-      "whyValuable": "The showing-off sense is invisible to a reader who only knows the games one, and the context clue is the whole sentence around it.",
-      "anchoredAs": "sported",
-      "anchoredAtLine": 3,
-      "anchorNote": "verbatim. Written mechanically 2026-08-15 by ruling: the word occurs EXACTLY ONCE in the passage, so no reading is involved in choosing the instance."
-    },
-    {
-      "word": "resignation",
-      "senseInPassage": "putting up with something unwillingly",
-      "polysemous": true,
-      "otherCommonSense": "giving up a job",
-      "estTier": 3,
-      "whyValuable": "Dominant-sense work: the job sense is much the commoner for a child, and nothing in the line is about work.",
-      "anchoredAs": "resignation",
-      "anchoredAtLine": 22,
-      "anchorNote": "verbatim. Written mechanically 2026-08-15 by ruling: the word occurs EXACTLY ONCE in the passage, so no reading is involved in choosing the instance."
-    },
-    {
-      "word": "placidly",
-      "senseInPassage": "calmly, without protest",
-      "polysemous": false,
-      "otherCommonSense": "",
-      "estTier": 2,
-      "whyValuable": "The sense is fixed by what happens next, so it rewards reading on.",
-      "anchoredAs": "placidly",
-      "anchoredAtLine": 16,
-      "anchorNote": "verbatim. Written mechanically 2026-08-15 by ruling: the word occurs EXACTLY ONCE in the passage, so no reading is involved in choosing the instance."
-    },
-    {
-      "word": "penitent",
-      "senseInPassage": "sorry for what he had done",
-      "polysemous": false,
-      "otherCommonSense": "",
-      "estTier": 3,
-      "whyValuable": "Morphologically transparent to nobody, and the next clause acts it out rather than defining it.",
-      "anchoredAs": "penitent",
-      "anchoredAtLine": 51,
-      "anchorNote": "verbatim. Written mechanically 2026-08-15 by ruling: the word occurs EXACTLY ONCE in the passage, so no reading is involved in choosing the instance."
-    }
+  "tierBumpedByTrimming": false,
+  "trimmingBumpSuppressedContiguous": true,
+  "nameBearingCuts": {},
+  "pronounResolutionMandatory": false,
+  "answeredBeyondTier": [
+   "seams",
+   "secondRead"
   ],
-  "contentFlags": [
+  "note": "Answered questions its tier does not require. Harmless, but on a contiguous extract a seam finding is a claim about nothing."
+ },
+ "numberedLines": [
+  {
+   "n": 1,
+   "text": "When the trays re-appeared with biscuits and wine, punctually at a quarter to nine,",
+   "label": ""
+  },
+  {
+   "n": 2,
+   "text": "there was conversation, comparing of cards, and talking over tricks; but by-and-by",
+   "label": ""
+  },
+  {
+   "n": 3,
+   "text": "Captain Brown sported a bit of literature.",
+   "label": ""
+  },
+  {
+   "n": null,
+   "text": "",
+   "label": ""
+  },
+  {
+   "n": 4,
+   "text": "“Have you seen any numbers of ‘The Pickwick Papers’?” said he. (They were then",
+   "label": ""
+  },
+  {
+   "n": 5,
+   "text": "publishing in parts.) “Capital thing!”",
+   "label": "5"
+  },
+  {
+   "n": null,
+   "text": "",
+   "label": ""
+  },
+  {
+   "n": 6,
+   "text": "Now Miss Jenkyns was daughter of a deceased rector of Cranford; and, on the strength",
+   "label": ""
+  },
+  {
+   "n": 7,
+   "text": "of a number of manuscript sermons, and a pretty good library of divinity, considered",
+   "label": ""
+  },
+  {
+   "n": 8,
+   "text": "herself literary, and looked upon any conversation about books as a challenge to her.",
+   "label": ""
+  },
+  {
+   "n": 9,
+   "text": "So she answered and said, “Yes, she had seen them; indeed, she might say she had read",
+   "label": ""
+  },
+  {
+   "n": 10,
+   "text": "them.”",
+   "label": "10"
+  },
+  {
+   "n": null,
+   "text": "",
+   "label": ""
+  },
+  {
+   "n": 11,
+   "text": "“And what do you think of them?” exclaimed Captain Brown. “Aren’t they famously good?”",
+   "label": ""
+  },
+  {
+   "n": null,
+   "text": "",
+   "label": ""
+  },
+  {
+   "n": 12,
+   "text": "So urged Miss Jenkyns could not but speak.",
+   "label": ""
+  },
+  {
+   "n": null,
+   "text": "",
+   "label": ""
+  },
+  {
+   "n": 13,
+   "text": "“I must say, I don’t think they are by any means equal to Dr Johnson. Still, perhaps,",
+   "label": ""
+  },
+  {
+   "n": 14,
+   "text": "the author is young. Let him persevere, and who knows what he may become if he will",
+   "label": ""
+  },
+  {
+   "n": 15,
+   "text": "take the great Doctor for his model?” This was evidently too much for Captain Brown to",
+   "label": "15"
+  },
+  {
+   "n": 16,
+   "text": "take placidly; and I saw the words on the tip of his tongue before Miss Jenkyns had",
+   "label": ""
+  },
+  {
+   "n": 17,
+   "text": "finished her sentence.",
+   "label": ""
+  },
+  {
+   "n": null,
+   "text": "",
+   "label": ""
+  },
+  {
+   "n": 18,
+   "text": "“It is quite a different sort of thing, my dear madam,” he began.",
+   "label": ""
+  },
+  {
+   "n": null,
+   "text": "",
+   "label": ""
+  },
+  {
+   "n": 19,
+   "text": "“I am quite aware of that,” returned she. “And I make allowances, Captain Brown.”",
+   "label": ""
+  },
+  {
+   "n": null,
+   "text": "",
+   "label": ""
+  },
+  {
+   "n": 20,
+   "text": "“Just allow me to read you a scene out of this month’s number,” pleaded he. “I had it",
+   "label": "20"
+  },
+  {
+   "n": 21,
+   "text": "only this morning, and I don’t think the company can have read it yet.”",
+   "label": ""
+  },
+  {
+   "n": null,
+   "text": "",
+   "label": ""
+  },
+  {
+   "n": 22,
+   "text": "“As you please,” said she, settling herself with an air of resignation. He read the",
+   "label": ""
+  },
+  {
+   "n": 23,
+   "text": "account of the “swarry” which Sam Weller gave at Bath. Some of us laughed heartily.",
+   "label": ""
+  },
+  {
+   "n": 24,
+   "text": "_I_ did not dare, because I was staying in the house. Miss Jenkyns sat in patient",
+   "label": ""
+  },
+  {
+   "n": 25,
+   "text": "gravity. When it was ended, she turned to me, and said with mild dignity—",
+   "label": "25"
+  },
+  {
+   "n": null,
+   "text": "",
+   "label": ""
+  },
+  {
+   "n": 26,
+   "text": "“Fetch me ‘Rasselas,’ my dear, out of the book-room.”",
+   "label": ""
+  },
+  {
+   "n": null,
+   "text": "",
+   "label": ""
+  },
+  {
+   "n": 27,
+   "text": "When I had brought it to her, she turned to Captain Brown—",
+   "label": ""
+  },
+  {
+   "n": null,
+   "text": "",
+   "label": ""
+  },
+  {
+   "n": 28,
+   "text": "“Now allow _me_ to read you a scene, and then the present company can judge between",
+   "label": ""
+  },
+  {
+   "n": 29,
+   "text": "your favourite, Mr Boz, and Dr Johnson.”",
+   "label": ""
+  },
+  {
+   "n": null,
+   "text": "",
+   "label": ""
+  },
+  {
+   "n": 30,
+   "text": "She read one of the conversations between Rasselas and Imlac, in a high-pitched,",
+   "label": "30"
+  },
+  {
+   "n": 31,
+   "text": "majestic voice: and when she had ended, she said, “I imagine I am now justified in my",
+   "label": ""
+  },
+  {
+   "n": 32,
+   "text": "preference of Dr Johnson as a writer of fiction.” The Captain screwed his lips up, and",
+   "label": ""
+  },
+  {
+   "n": 33,
+   "text": "drummed on the table, but he did not speak. She thought she would give him a finishing",
+   "label": ""
+  },
+  {
+   "n": 34,
+   "text": "blow or two.",
+   "label": ""
+  },
+  {
+   "n": null,
+   "text": "",
+   "label": ""
+  },
+  {
+   "n": 35,
+   "text": "“I consider it vulgar, and below the dignity of literature, to publish in numbers.”",
+   "label": "35"
+  },
+  {
+   "n": null,
+   "text": "",
+   "label": ""
+  },
+  {
+   "n": 36,
+   "text": "“How was the _Rambler_ published, ma’am?” asked Captain Brown in a low voice, which I",
+   "label": ""
+  },
+  {
+   "n": 37,
+   "text": "think Miss Jenkyns could not have heard.",
+   "label": ""
+  },
+  {
+   "n": null,
+   "text": "",
+   "label": ""
+  },
+  {
+   "n": 38,
+   "text": "“Dr Johnson’s style is a model for young beginners. My father recommended it to me",
+   "label": ""
+  },
+  {
+   "n": 39,
+   "text": "when I began to write letters—I have formed my own style upon it; I recommend it to",
+   "label": ""
+  },
+  {
+   "n": 40,
+   "text": "your favourite.”",
+   "label": "40"
+  },
+  {
+   "n": null,
+   "text": "",
+   "label": ""
+  },
+  {
+   "n": 41,
+   "text": "“I should be very sorry for him to exchange his style for any such pompous writing,”",
+   "label": ""
+  },
+  {
+   "n": 42,
+   "text": "said Captain Brown.",
+   "label": ""
+  },
+  {
+   "n": null,
+   "text": "",
+   "label": ""
+  },
+  {
+   "n": 43,
+   "text": "Miss Jenkyns felt this as a personal affront, in a way of which the Captain had not",
+   "label": ""
+  },
+  {
+   "n": 44,
+   "text": "dreamed. Epistolary writing she and her friends considered as her _forte_. Many a copy",
+   "label": ""
+  },
+  {
+   "n": 45,
+   "text": "of many a letter have I seen written and corrected on the slate, before she “seized",
+   "label": "45"
+  },
+  {
+   "n": 46,
+   "text": "the half-hour just previous to post-time to assure” her friends of this or of that;",
+   "label": ""
+  },
+  {
+   "n": 47,
+   "text": "and Dr Johnson was, as she said, her model in these compositions. She drew herself up",
+   "label": ""
+  },
+  {
+   "n": 48,
+   "text": "with dignity, and only replied to Captain Brown’s last remark by saying, with marked",
+   "label": ""
+  },
+  {
+   "n": 49,
+   "text": "emphasis on every syllable, “I prefer Dr Johnson to Mr Boz.”",
+   "label": ""
+  },
+  {
+   "n": null,
+   "text": "",
+   "label": ""
+  },
+  {
+   "n": 50,
+   "text": "It is said—I won’t vouch for the fact—that Captain Brown was heard to say, _sotto",
+   "label": "50"
+  },
+  {
+   "n": 51,
+   "text": "voce_, “D—n Dr Johnson!” If he did, he was penitent afterwards, as he showed by going",
+   "label": ""
+  },
+  {
+   "n": 52,
+   "text": "to stand near Miss Jenkyns’ arm-chair, and endeavouring to beguile her into",
+   "label": ""
+  },
+  {
+   "n": 53,
+   "text": "conversation on some more pleasing subject. But she was inexorable. The next day she",
+   "label": ""
+  },
+  {
+   "n": 54,
+   "text": "made the remark I have mentioned about Miss Jessie’s dimples.",
+   "label": ""
+  }
+ ],
+ "similarityCheck": {
+  "indexedExtractsCompared": 20,
+  "shingleCount": 689,
+  "hits": 0,
+  "hitGrams": [],
+  "contentBearingHits": [],
+  "verdict": "PASS",
+  "verdictRule": "every hit is listed; a hit counts toward REVIEW only if its 5-gram carries two or more content words. Function-word runs are reported and do not trigger review.",
+  "method": "5-word shingles, md5/48bit, against every extract already in the bank"
+ },
+ "stream": "A",
+ "provenance": "Original curation from a Project Gutenberg public-domain text. NOT derived from any corpus exam paper; extract range chosen independently and checked against the bank.",
+ "verbatimVerification": {
+  "spansChecked": 145,
+  "spansFound": 145,
+  "pct": 100,
+  "breaksOnlyAtDocumentedCutSeams": true,
+  "note": "Every 8-word span that does not match the source falls at a documented cut seam, where two separately-verbatim paragraphs were placed side by side. Text within each retained paragraph is 100% verbatim against the Project Gutenberg source.",
+  "unmatchedSpans": []
+ },
+ "band": {
+  "band": "short",
+  "floor": 600,
+  "ceiling": 950,
+  "readingAge": "10-13",
+  "basis": "declared",
+  "why": "RULED 2026-08-14, correcting the commission record; see band.correctionToCommission",
+  "correctionToCommission": "PASSAGE-COMMISSION-16-21.md assigns Cranford to the CSSE band. It was delivered at 697 words. The ruling that closed the commission then stated that NOTHING in the bank sat at 900-1100 with RA 12-14, and commissioned Prisoner of Zenda to fill the slot — a statement that is only true if Cranford had already stopped being the CSSE passage. So the band moved when the passage was delivered and the move was never written down. 697 is comfortably inside short, 600-950, and the passage reads at 11-13, which fits the short definition and not the CSSE one. The 203-word \"shortfall\" was never a shortfall; it was an unrecorded reassignment."
+ },
+ "authoringBars": [],
+ "authoringCopy": {
+  "strippedFields": [
+   "questionHooks"
+  ],
+  "reason": "Addendum 19 §1 and the T4 sourcing rule, made structural rather than procedural. Curation copy retains them.",
+  "curationCopy": "/home/claude/passages/stream-a/stream-a-17-cranford.json",
+  "flaggedNotStripped": [
+   "wordVaultCandidates"
+  ],
+  "subKeysStripped": [
+   "authoringRead.t4Affordance"
+  ],
+  "keptByRuling": [
+   "complicationSeparation.description"
+  ]
+ },
+ "_displacedLegacyFlags": {
+  "hundredth": {
+   "displaced": [
     "Captain Brown is reported as having sworn under his breath, printed in the source as a dash. Recommendation: keep. The narrator explicitly refuses to vouch for it, which is the point of the sentence, and no word is spelled.",
     "The quarrel is about the merits of two writers and stays entirely verbal. Recommendation: keep; no distress, no physical threat."
-  ],
-  "curationNotes": "Chosen over the death of Captain Brown at the railway line, which is the chapter’s other famous scene and turns on a child in front of a train. This one is a social contest carried out entirely in politeness, which is what makes it a comprehension passage rather than an event. Chosen over the Alderney-cow scene for the same reason and because the cow has a stronger claim on the reader than either person does. BAND NOTE: 693 words at RA 11-13 — mid short set, not the CSSE band this passage was commissioned under. Reaching 900+ meant either restoring the Miss Jessie paragraph (two relatives the extract never uses) or the churchyard pair (a seam). Both are padding to hit a number, which is the distractor-slot fault wearing a different hat. The CSSE quota goes to the Haggard and one other.",
-  "bandException": null,
-  "complicationSeparation": {
-    "description": "Miss Jenkyns’s first slight to Boz, against the affront that finally lands and the reply it produces.",
-    "halfAAnchor": "by any means equal to Dr Johnson",
-    "halfBAnchor": "personal affront",
-    "sceneBeatBetween": "the two readings-aloud, Sam Weller against Rasselas",
-    "halfALine": 13,
-    "halfBLine": 43,
-    "linesApart": 29,
-    "floor": 15,
-    "verdict": "PASS",
-    "descriptionIsAKnownHook": "KEPT DELIBERATELY, RULED 2026-08-14. This field STATES THE RELATION and therefore hands a drafter the T4 key. That is a fault by the test the Stream-B anchors were built to pass — learn where to look, not what the answer is — and it is NOT being repaired. Removing it would destroy a baseline and change retrospectively what four already-built clusters mean. The divergence is recorded as a controlled comparison instead: see complication_find_rate.py, arm 1. Any NEW Stream-A passage should carry anchors without a description."
-  },
-  "narratorialSignposting": {
-    "verdict": "PASS, with one sentence flagged and kept",
-    "closest": "Miss Jenkyns felt this as a personal affront, in a way of which the Captain had not dreamed.",
-    "reading": "That sentence explains one moment; it does not name the method the passage runs on, which is a narrator who reports a contest and never takes a side. She never says she is not taking a side. Kept because it is load-bearing plot and cutting it would leave the affront unmotivated — but it is a strong lead for any item on why the offence lands, and an author should not build a T4 on it."
-  },
-  "authoringRead": {
-    "openingReference": "FAULT FOUND, FIXED IN THE PREAMBLE. The extract opens \"When the trays re-appeared with biscuits and wine\" — a definite noun phrase and a re-, both pointing at a first appearance that is outside the extract. Nothing inside resolves them. The preamble now carries it (\"the supper trays have already been round once\"), which is what a preamble is for; the alternative was starting a paragraph later and losing the card table entirely. No other opening reference is unresolved: Captain Brown and Miss Jenkyns are both named in the first two paragraphs and both are in the preamble.",
-    "seams": "ONE INDEX GAP, ZERO PROSE SEAMS. The gap at 50->52 removes the illustration caption \"[Picture: Endeavouring to beguile her into conversation]\", which is not part of the narrative and was never read as prose. The join reads \"She thought she would give him a finishing blow or two.\" -> \"I consider it vulgar, and below the dignity of literature, to publish in numbers.\" — the blow follows the intention directly, and reads better without a caption between them. The name-bearing-cut detector fires here on \"Endeavouring\", a sentence-initial gerund inside a caption; it is a false positive of the over-inclusive rule and the pronoun pass was run anyway.",
-    "secondRead": "SECOND PASS, WALKING THE SEAM AND THE REVERSAL. Required because the trimming detector fires on this cut list, and it fires correctly: this is the passage whose recorded fault was CREATED by chasing a word count. The pass confirmed the reversal actually landed in the selection rather than only in the note — \"churchyard\" occurs zero times in the shipped 693 words, and the supper tray at line 1 is the scene’s own opening rather than a join. It also re-walked every paragraph boundary in reading order looking for a change of room or hour that no sentence carries: none. The extract is one continuous evening in one room.",
-    "pronounResolution": "Every paragraph-opening pronoun resolved against the extract alone. The only cut the detector reads as removing a name is the caption, so there is no genuine name-bearing cut to chase; the pass was run regardless and found the one real risk elsewhere — \"she\" opening the final sentence (\"But she was...\") follows a clause naming Miss Jenkyns’ arm-chair and resolves to Miss Jenkyns, not to the nearer noun."
-  },
-  "authoringReadTier": {
-    "internalCuts": 0,
-    "tier": 0,
-    "trimmedForBand": true,
-    "subParagraphEdits": false,
-    "tierForcedByFidelity": false,
-    "bandPhrasesMatched": [
-      "band",
-      "to reach",
-      "words on its own"
-    ],
-    "tierBumpedByTrimming": false,
-    "trimmingBumpSuppressedContiguous": true,
-    "nameBearingCuts": {},
-    "pronounResolutionMandatory": false,
-    "answeredBeyondTier": [
-      "seams",
-      "secondRead"
-    ],
-    "note": "Answered questions its tier does not require. Harmless, but on a contiguous extract a seam finding is a claim about nothing."
-  },
-  "numberedLines": [
-    {
-      "n": 1,
-      "text": "When the trays re-appeared with biscuits and wine, punctually at a quarter to nine,",
-      "label": ""
-    },
-    {
-      "n": 2,
-      "text": "there was conversation, comparing of cards, and talking over tricks; but by-and-by",
-      "label": ""
-    },
-    {
-      "n": 3,
-      "text": "Captain Brown sported a bit of literature.",
-      "label": ""
-    },
-    {
-      "n": null,
-      "text": "",
-      "label": ""
-    },
-    {
-      "n": 4,
-      "text": "“Have you seen any numbers of ‘The Pickwick Papers’?” said he. (They were then",
-      "label": ""
-    },
-    {
-      "n": 5,
-      "text": "publishing in parts.) “Capital thing!”",
-      "label": "5"
-    },
-    {
-      "n": null,
-      "text": "",
-      "label": ""
-    },
-    {
-      "n": 6,
-      "text": "Now Miss Jenkyns was daughter of a deceased rector of Cranford; and, on the strength",
-      "label": ""
-    },
-    {
-      "n": 7,
-      "text": "of a number of manuscript sermons, and a pretty good library of divinity, considered",
-      "label": ""
-    },
-    {
-      "n": 8,
-      "text": "herself literary, and looked upon any conversation about books as a challenge to her.",
-      "label": ""
-    },
-    {
-      "n": 9,
-      "text": "So she answered and said, “Yes, she had seen them; indeed, she might say she had read",
-      "label": ""
-    },
-    {
-      "n": 10,
-      "text": "them.”",
-      "label": "10"
-    },
-    {
-      "n": null,
-      "text": "",
-      "label": ""
-    },
-    {
-      "n": 11,
-      "text": "“And what do you think of them?” exclaimed Captain Brown. “Aren’t they famously good?”",
-      "label": ""
-    },
-    {
-      "n": null,
-      "text": "",
-      "label": ""
-    },
-    {
-      "n": 12,
-      "text": "So urged Miss Jenkyns could not but speak.",
-      "label": ""
-    },
-    {
-      "n": null,
-      "text": "",
-      "label": ""
-    },
-    {
-      "n": 13,
-      "text": "“I must say, I don’t think they are by any means equal to Dr Johnson. Still, perhaps,",
-      "label": ""
-    },
-    {
-      "n": 14,
-      "text": "the author is young. Let him persevere, and who knows what he may become if he will",
-      "label": ""
-    },
-    {
-      "n": 15,
-      "text": "take the great Doctor for his model?” This was evidently too much for Captain Brown to",
-      "label": "15"
-    },
-    {
-      "n": 16,
-      "text": "take placidly; and I saw the words on the tip of his tongue before Miss Jenkyns had",
-      "label": ""
-    },
-    {
-      "n": 17,
-      "text": "finished her sentence.",
-      "label": ""
-    },
-    {
-      "n": null,
-      "text": "",
-      "label": ""
-    },
-    {
-      "n": 18,
-      "text": "“It is quite a different sort of thing, my dear madam,” he began.",
-      "label": ""
-    },
-    {
-      "n": null,
-      "text": "",
-      "label": ""
-    },
-    {
-      "n": 19,
-      "text": "“I am quite aware of that,” returned she. “And I make allowances, Captain Brown.”",
-      "label": ""
-    },
-    {
-      "n": null,
-      "text": "",
-      "label": ""
-    },
-    {
-      "n": 20,
-      "text": "“Just allow me to read you a scene out of this month’s number,” pleaded he. “I had it",
-      "label": "20"
-    },
-    {
-      "n": 21,
-      "text": "only this morning, and I don’t think the company can have read it yet.”",
-      "label": ""
-    },
-    {
-      "n": null,
-      "text": "",
-      "label": ""
-    },
-    {
-      "n": 22,
-      "text": "“As you please,” said she, settling herself with an air of resignation. He read the",
-      "label": ""
-    },
-    {
-      "n": 23,
-      "text": "account of the “swarry” which Sam Weller gave at Bath. Some of us laughed heartily.",
-      "label": ""
-    },
-    {
-      "n": 24,
-      "text": "_I_ did not dare, because I was staying in the house. Miss Jenkyns sat in patient",
-      "label": ""
-    },
-    {
-      "n": 25,
-      "text": "gravity. When it was ended, she turned to me, and said with mild dignity—",
-      "label": "25"
-    },
-    {
-      "n": null,
-      "text": "",
-      "label": ""
-    },
-    {
-      "n": 26,
-      "text": "“Fetch me ‘Rasselas,’ my dear, out of the book-room.”",
-      "label": ""
-    },
-    {
-      "n": null,
-      "text": "",
-      "label": ""
-    },
-    {
-      "n": 27,
-      "text": "When I had brought it to her, she turned to Captain Brown—",
-      "label": ""
-    },
-    {
-      "n": null,
-      "text": "",
-      "label": ""
-    },
-    {
-      "n": 28,
-      "text": "“Now allow _me_ to read you a scene, and then the present company can judge between",
-      "label": ""
-    },
-    {
-      "n": 29,
-      "text": "your favourite, Mr Boz, and Dr Johnson.”",
-      "label": ""
-    },
-    {
-      "n": null,
-      "text": "",
-      "label": ""
-    },
-    {
-      "n": 30,
-      "text": "She read one of the conversations between Rasselas and Imlac, in a high-pitched,",
-      "label": "30"
-    },
-    {
-      "n": 31,
-      "text": "majestic voice: and when she had ended, she said, “I imagine I am now justified in my",
-      "label": ""
-    },
-    {
-      "n": 32,
-      "text": "preference of Dr Johnson as a writer of fiction.” The Captain screwed his lips up, and",
-      "label": ""
-    },
-    {
-      "n": 33,
-      "text": "drummed on the table, but he did not speak. She thought she would give him a finishing",
-      "label": ""
-    },
-    {
-      "n": 34,
-      "text": "blow or two.",
-      "label": ""
-    },
-    {
-      "n": null,
-      "text": "",
-      "label": ""
-    },
-    {
-      "n": 35,
-      "text": "“I consider it vulgar, and below the dignity of literature, to publish in numbers.”",
-      "label": "35"
-    },
-    {
-      "n": null,
-      "text": "",
-      "label": ""
-    },
-    {
-      "n": 36,
-      "text": "“How was the _Rambler_ published, ma’am?” asked Captain Brown in a low voice, which I",
-      "label": ""
-    },
-    {
-      "n": 37,
-      "text": "think Miss Jenkyns could not have heard.",
-      "label": ""
-    },
-    {
-      "n": null,
-      "text": "",
-      "label": ""
-    },
-    {
-      "n": 38,
-      "text": "“Dr Johnson’s style is a model for young beginners. My father recommended it to me",
-      "label": ""
-    },
-    {
-      "n": 39,
-      "text": "when I began to write letters—I have formed my own style upon it; I recommend it to",
-      "label": ""
-    },
-    {
-      "n": 40,
-      "text": "your favourite.”",
-      "label": "40"
-    },
-    {
-      "n": null,
-      "text": "",
-      "label": ""
-    },
-    {
-      "n": 41,
-      "text": "“I should be very sorry for him to exchange his style for any such pompous writing,”",
-      "label": ""
-    },
-    {
-      "n": 42,
-      "text": "said Captain Brown.",
-      "label": ""
-    },
-    {
-      "n": null,
-      "text": "",
-      "label": ""
-    },
-    {
-      "n": 43,
-      "text": "Miss Jenkyns felt this as a personal affront, in a way of which the Captain had not",
-      "label": ""
-    },
-    {
-      "n": 44,
-      "text": "dreamed. Epistolary writing she and her friends considered as her _forte_. Many a copy",
-      "label": ""
-    },
-    {
-      "n": 45,
-      "text": "of many a letter have I seen written and corrected on the slate, before she “seized",
-      "label": "45"
-    },
-    {
-      "n": 46,
-      "text": "the half-hour just previous to post-time to assure” her friends of this or of that;",
-      "label": ""
-    },
-    {
-      "n": 47,
-      "text": "and Dr Johnson was, as she said, her model in these compositions. She drew herself up",
-      "label": ""
-    },
-    {
-      "n": 48,
-      "text": "with dignity, and only replied to Captain Brown’s last remark by saying, with marked",
-      "label": ""
-    },
-    {
-      "n": 49,
-      "text": "emphasis on every syllable, “I prefer Dr Johnson to Mr Boz.”",
-      "label": ""
-    },
-    {
-      "n": null,
-      "text": "",
-      "label": ""
-    },
-    {
-      "n": 50,
-      "text": "It is said—I won’t vouch for the fact—that Captain Brown was heard to say, _sotto",
-      "label": "50"
-    },
-    {
-      "n": 51,
-      "text": "voce_, “D—n Dr Johnson!” If he did, he was penitent afterwards, as he showed by going",
-      "label": ""
-    },
-    {
-      "n": 52,
-      "text": "to stand near Miss Jenkyns’ arm-chair, and endeavouring to beguile her into",
-      "label": ""
-    },
-    {
-      "n": 53,
-      "text": "conversation on some more pleasing subject. But she was inexorable. The next day she",
-      "label": ""
-    },
-    {
-      "n": 54,
-      "text": "made the remark I have mentioned about Miss Jessie’s dimples.",
-      "label": ""
-    }
-  ],
-  "similarityCheck": {
-    "indexedExtractsCompared": 20,
-    "shingleCount": 689,
-    "hits": 0,
-    "hitGrams": [],
-    "contentBearingHits": [],
-    "verdict": "PASS",
-    "verdictRule": "every hit is listed; a hit counts toward REVIEW only if its 5-gram carries two or more content words. Function-word runs are reported and do not trigger review.",
-    "method": "5-word shingles, md5/48bit, against every extract already in the bank"
-  },
-  "stream": "A",
-  "provenance": "Original curation from a Project Gutenberg public-domain text. NOT derived from any corpus exam paper; extract range chosen independently and checked against the bank.",
-  "verbatimVerification": {
-    "spansChecked": 145,
-    "spansFound": 145,
-    "pct": 100.0,
-    "breaksOnlyAtDocumentedCutSeams": true,
-    "note": "Every 8-word span that does not match the source falls at a documented cut seam, where two separately-verbatim paragraphs were placed side by side. Text within each retained paragraph is 100% verbatim against the Project Gutenberg source.",
-    "unmatchedSpans": []
-  },
-  "band": {
-    "band": "short",
-    "floor": 600,
-    "ceiling": 950,
-    "readingAge": "10-13",
-    "basis": "declared",
-    "why": "RULED 2026-08-14, correcting the commission record; see band.correctionToCommission",
-    "correctionToCommission": "PASSAGE-COMMISSION-16-21.md assigns Cranford to the CSSE band. It was delivered at 697 words. The ruling that closed the commission then stated that NOTHING in the bank sat at 900-1100 with RA 12-14, and commissioned Prisoner of Zenda to fill the slot — a statement that is only true if Cranford had already stopped being the CSSE passage. So the band moved when the passage was delivered and the move was never written down. 697 is comfortably inside short, 600-950, and the passage reads at 11-13, which fits the short definition and not the CSSE one. The 203-word \"shortfall\" was never a shortfall; it was an unrecorded reassignment."
-  },
-  "authoringBars": [],
-  "authoringCopy": {
-    "strippedFields": [
-      "questionHooks"
-    ],
-    "reason": "Addendum 19 §1 and the T4 sourcing rule, made structural rather than procedural. Curation copy retains them.",
-    "curationCopy": "/home/claude/passages/stream-a/stream-a-17-cranford.json",
-    "flaggedNotStripped": [
-      "wordVaultCandidates"
-    ],
-    "subKeysStripped": [
-      "authoringRead.t4Affordance"
-    ],
-    "keptByRuling": [
-      "complicationSeparation.description"
-    ]
+   ],
+   "by": "annie-hundredth-return.md, sha256 5d1f1d21098eee0d22be1dcc96a8809b1bb1e49fc82513c05709e20b732cefcb"
   }
+ }
 }

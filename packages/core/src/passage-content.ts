@@ -163,7 +163,7 @@ const ASSERTIVE = /\b(the (text|narrative|passage|poem) |immediately |makes clea
  * belongs to the authoring/export caller and not to the write door.
  */
 export function readContentFlags(
-  passage: { id?: unknown; contentFlags?: unknown; extract?: unknown },
+  passage: { id?: unknown; contentFlags?: unknown; extract?: unknown; preamble?: unknown },
   opts: { enforceUse?: boolean } = {},
 ): FlagReport {
   const id = typeof passage.id === 'string' ? passage.id : '(unnamed passage)';
@@ -182,6 +182,13 @@ export function readContentFlags(
 
   const out: FlagReport = { standardFlags: [], legacy: { strings: 0, objects: 0 }, refusals: [], reported: [], declared: [] };
   const extract = typeof passage.extract === 'string' ? passage.extract.replace(/\r\n/g, '\n') : null;
+  /**
+   * **THE PREAMBLE IS PASSAGE BYTES A CHILD SEES**, and Heidi's twelfth conditional is the case: its
+   * met-claim ("the preamble names her as Heidi") completes as a span against the PREAMBLE, which is
+   * unnumbered — so such a strike carries `field: 'preamble'` as its address where numbered spans
+   * carry lines. The verbatim gate accepts either home; a span in neither refuses as before.
+   */
+  const preamble = typeof passage.preamble === 'string' ? passage.preamble.replace(/\r\n/g, '\n') : null;
 
   raw.forEach((f, n) => {
     const where = `${id} contentFlags[${n}]`;
@@ -298,7 +305,8 @@ export function readContentFlags(
       } else {
         const strike = o.strike as { span?: unknown; lines?: unknown } | undefined;
         const span = typeof strike?.span === 'string' ? strike.span.replace(/\r\n/g, '\n') : null;
-        if (!span || extract === null || !extract.includes(span)) {
+        const inBytes = span !== null && ((extract !== null && extract.includes(span)) || (preamble !== null && preamble.includes(span)));
+        if (!span || !inBytes) {
           out.refusals.push({
             code: 'STRIKE_SPAN_DRIFTED', where,
             detail: `loadBearing flag whose strike.span is ${span === null ? 'absent' : 'not verbatim in the passage'} — the disposition rests on the claim, and the claim rests on this span.`,
