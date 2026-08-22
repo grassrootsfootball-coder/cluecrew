@@ -60,7 +60,9 @@ function main() {
     + `  reader does not either): ${legacyStrings} string flag(s), ${legacyObjects} pre-standard object flag(s).`,
   );
   if (splits.length > 0) {
-    const pairs = splits.filter((s) => s.includes('second object')).length;
+    // "second object OF THE SPLIT" marks the pair's second member; the FIRST member's note also
+    // contains "second object" ("…second object below shares…"), which made 2 splits print as 4.
+    const pairs = splits.filter((s) => /second object of the split/.test(s)).length;
     console.log(`\n  SPLITS — her number to watch (a split is a legacy flag that was two judgements all along): ${pairs} split(s), ${splits.length} object(s)`);
     for (const s of splits) console.log(s);
   }
