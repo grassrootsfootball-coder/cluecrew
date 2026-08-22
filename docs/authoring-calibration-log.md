@@ -17478,3 +17478,35 @@ Annie" — prose approvals are not machine-readable (R178's gap), nine returns h
 the 15-entry list rests on the aboutThisItem proxy, which over-reports by design. The bound is
 therefore every EXPOSED item, of which the approved-as-written are the subset that is also a
 completed act nobody carried.
+
+## R617 — The approve-as-written path, built on David's authorisation, with WIW-19 as its acceptance
+
+**Ruling 1 executed first.** One-shot on the 27th-hints precedent: `ENG-001-WIW-19`, verdict
+APPROVED, no text change, authority `annie-seventieth-return.md` (*"WIW-19 is the best of the
+nine"*), sha256 `535eeb43…`. Read back through the serving path: **every wrong answer serves
+*"He 'unfastened a rope' earlier. What would he do with it now?"* and no library hint is reachable
+on the item** — which also retires the double-tag hazard in the ear (R609's item served the same
+commonest-sense wording on two options; now neither is reachable).
+
+**The one-shot's own assert refused a true file first**: the guard string lacked her bold markers —
+`**WIW-19**` — and aborted against the return that carries exactly the approval it checked for.
+R87's mechanism working: a loud wrong-anchor failure instead of a silent wrong write.
+
+**Ruling 2: one write site.** `itemHintRulingPatch` (`packages/core/src/item-hint-ruling.ts`) is the
+pure half; `apply-all-unlanded.ts` is its only caller. Text differing → gate, supersede, write text
+plus authorship. **Text unchanged → authorship only: an approval is a decision whose whole content
+is that the text should stand, and it records like one.** The line-170 guard's correct half survives
+as the ABSENCE of a text patch; its fault — skipping the write entirely — is gone. Five tests hold
+the two properties: `before === authored` still sets both fields, and a ruling is never a no-op.
+**The path proved itself on its first report run**: six previously-landed wordings now classify
+`APPROVED_AS_WRITTEN` where the old path printed `ALREADY` and skipped.
+
+**Ruling 3: the Fix-It Shop's nine LIVE items against the 28-list — INTERSECTION EMPTY**, both sides
+read rather than recalled (the store for the nine, the staged artefact's bytes for the list). The
+door's standing condition holds; nothing closes.
+
+**And the exposure list was re-emitted before crossing: 28 → 27, WIW-19 dropped**, because the list
+derives from the resolver at emit time and ruling 1 changed the resolver's answer. Shipping the
+staged 28-row file would have crossed a row her own approval had already retired. New pair:
+`exposure-live-asserting-entries-ce04619cac8fbf4d.json` (`11a68819…`) + cover (`0e7a9ef2…`), both
+STAGED, not crossed.
