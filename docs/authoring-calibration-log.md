@@ -16218,3 +16218,65 @@ strings outside copy review (R556). **Each is content arriving in the only chann
 forbids but WHERE THE THING IT FORBIDS WILL GO INSTEAD.** R557's pending refusal is written to that —
 it names the open decision rather than closing the channel silently, so the next author meets a
 question rather than a wall.
+
+## R560 — A replacement needs the thing it replaces: sixth home for the rule
+
+**Her standing ruling, 2026-08-22.** The thirty-six re-presented as
+`unread-item-hints-for-annie-6c5150db96cb3f0b.json`, `4c26be993aaa889d…` — **each row carrying all
+four required things**: the item and its stem, its options **with the key marked**, its own
+`hintCore`, and **the library hint(s) it would replace**, per option.
+
+**A hint that is worse than the general one it replaces is a REGRESSION DRESSED AS SPECIFICITY**, and
+that is invisible without both strings.
+
+**Sixth home for one rule.** An option needs its key and siblings; a card needs every item it serves;
+a label needs its element; a template needs its values; a claim needs its text; **a replacement needs
+the thing it replaces.** **Nothing is judged out of the set it belongs to, and the sender always holds
+the set** — which is the half that makes it the sender's obligation rather than the reader's request.
+
+## R561 — Twelve staged since her manifest, and the manifest has an age too
+
+**Nothing has crossed since her held manifest was taken at 21:15 on 21 August.** Twelve artefacts
+staged after it — the transcripts, the ten heard strings, the templates, the vowel split, the
+narrator carriers, the read-gate report, and the thirty-six.
+
+**AND THE DIFF CANNOT TELL *NOT CROSSED* FROM *CROSSED AFTER THE MANIFEST WAS TAKEN*.** Her manifest
+is a snapshot with a timestamp, so **everything staged after it reads as absent whether or not it
+arrived.**
+
+**That is her taken-against ruling arriving on the manifest itself** — an artefact assembled from more
+than one moment carries the age of its oldest part, and the oldest part of this comparison is the
+manifest. **A manifest needs its own taken-against line as much as a transcript does.**
+
+## R562 — The transcript re-rendered, and my first one omitted a boundary that was there
+
+**`PU-02-TRANSCRIPT-RERENDERED.md`, `81f3edde33a2589c…`, with a taken-against block: build `852ed8f`,
+gate `ACTIVE-AND-SERVING`, row digest `58258ff99d867781…`.**
+
+**Three lines changed.** The preview is no longer hidden, so **line 3 is the sentence as continuous
+prose** — heard before it is heard as four buttons. **Line 11 is her hint**, not the library's.
+
+**And line 9 — *"Group end"* — was always in the DOM and my first transcript omitted it**, which made
+the verdict read as a fifth part of the sentence. **The structure was right and the transcript was
+wrong**, and I reported the structure as the fault.
+
+**From now every transcript carries the taken-against block**: build, gate state, and the digest of the
+row it announced. **Mine was a rendering of the product as it stood before the gate flipped**, and
+nothing on its face said so.
+
+## R563 — When a channel is created, its reviewer is created with it
+
+**Her forward prediction, built into the act.** `pnpm check:channel-has-reviewer`. **A channel is any
+file putting a literal sentence in front of a child**; its reviewer is one line at the top:
+`// COPY-REVIEW: <who rules the strings here, and where that is recorded>`.
+
+**The walk panel is the evidence**: built this fortnight, and a refused persona was in its group label
+within days — **not because anyone decided to put it there, but because it was new, and new means
+unwatched.**
+
+**Current state: 28 channels, 0 with a declared reviewer.** Reports rather than fails — assigning one
+to every existing channel is a governance act, not a commit.
+
+**THE RULE BITES ON A NEW CHANNEL.** One line at the moment of building, **which is the only moment it
+is cheap** — and it gets ahead of R559's mechanism rather than chasing it, because the low ground is
+created before anything flows into it.
