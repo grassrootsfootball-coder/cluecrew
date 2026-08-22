@@ -39,6 +39,28 @@ const BATCH = batchArg === -1 ? null : Number(process.argv[batchArg + 1]);
 /** English only. NVR and maths take separate questions and she has not asked for them. */
 const ENGLISH = /^(ENG|en-)/;
 
+/**
+ * **ASSERTION FIRST, GENERALITY SECOND (Annie, 2026-08-22 — R607).**
+ *
+ * A clause is a MOVE if it tells the child what to do — an imperative, or a question. Anything else
+ * is an ASSERTION: a declarative claim about the item the hint has landed on. *"Two people are being
+ * described"* is an assertion. *"Check which one each detail belongs to"* is a move. **The same
+ * sentence carried both, and only one of them was false on 26 of 43 carriers.**
+ *
+ * The imperative list is a proxy and is named as one: a clause opening with a verb this list does
+ * not hold reads as an assertion, so this OVER-reports rather than under-reports.
+ */
+const IMPERATIVE = new RegExp('^(check|find|read|ask|look|say|listen|count|picture|pick|notice|watch'
+  + '|stretch|ignore|give|keep|match|start|go|use|try|remember|choose|decide|think|follow|do not|don|never'
+  + '|put|take|write|say|spot|test|compare|reread|re-read)\\b', 'i');
+
+function clauses(hint: string): Array<{ text: string; kind: 'MOVE' | 'ASSERTION' }> {
+  return hint.split(/(?<=[.!?])\s+/).map((s) => s.trim()).filter(Boolean).map((text) => ({
+    text,
+    kind: text.endsWith('?') || IMPERATIVE.test(text) ? 'MOVE' as const : 'ASSERTION' as const,
+  }));
+}
+
 async function main() {
   const items = await prisma.item.findMany({ include: { options: true } });
   const lib = await prisma.misconception.findMany({ select: { id: true, childHint: true, description: true } });
@@ -78,10 +100,36 @@ async function main() {
     .map((m) => {
       const cs = carriersOf.get(m.id) ?? [];
       const live = cs.filter((c) => c.status === 'LIVE');
+      const parts = clauses(String(m.childHint ?? ''));
+      const asserting = parts.filter((p) => p.kind === 'ASSERTION');
       return {
         entryId: m.id,
         childHint: String(m.childHint ?? ''),
-        herQuestion: 'Does this one wording fit every item below, or is it general enough to fit anything?',
+        /**
+         * **THE READING LOOKS FOR ASSERTION FIRST.** Generality is the failure this KIND is exposed
+         * to — a library hint does not know which item it lands on, so a wording wide enough to fit
+         * everything is the standing risk. **Assertion is the failure it HAS**: a clause claiming a
+         * feature of the item is either true of every carrier or it is false on some, and that is
+         * decidable rather than a matter of taste. They are different readings and this row puts the
+         * decidable one first.
+         */
+        /**
+         * **TWO KINDS OF ASSERTION, AND ONLY ONE CAN BE FALSE ON A CARRIER.** *"Sounding sensible is
+         * not enough"* is a general truth — it holds wherever the entry lands. *"Two people are
+         * being described"* is a claim about THIS item, and 26 of 43 carriers have one person.
+         * Marked by deixis and by a present-tense description of item content; a proxy, and the
+         * clause text is on the row so a disagreement costs one look (R569).
+         */
+        theAssertingClauses: asserting.map((p) => ({
+          clause: p.text,
+          aboutThisItem: /\b(this|these|here|the passage|the text|the lines?|the sentence|the option|the writer|being described|being compared)\b/i.test(p.text)
+            || /\b(is|are)\s+being\b/i.test(p.text),
+        })),
+        theMoveClauses: parts.filter((p) => p.kind === 'MOVE').map((p) => p.text),
+        herFirstQuestion: asserting.length > 0
+          ? 'ASSERTION: is every clause above TRUE of every carrier listed below? A clause claiming a feature the item lacks instructs an act the item does not contain.'
+          : 'No asserting clause found — this hint only tells the child what to do, so it cannot be false about an item. Read it for GENERALITY instead.',
+        herSecondQuestion: 'GENERALITY: does this one wording fit every item below, or is it wide enough to fit anything?',
         carrierCount: cs.length,
         liveCarrierCount: live.length,
         /** The distinct question types it lands on — one wording across many types is the fit risk. */
@@ -105,10 +153,16 @@ async function main() {
 
   const payload = {
     what: 'English library hints, each with EVERY item it lands on. The FIT reading.',
-    theQuestionThisKindTakes: 'A library hint is read against its carriers and asked whether it fits them all. It is NOT read against a key — it does not know which item it will land on, which is exactly why it cannot coach one.',
-    theCharacteristicFailure: 'Generality. A wording that fits every carrier because it says almost nothing is the library-side equivalent of coaching, and it is invisible from any single item.',
+    theReadingIsTwoPasses: {
+      first: 'ASSERTION — a clause claiming a feature of the item it lands on. Decidable: it is true of every carrier or it is false on some. `theAssertingClauses` is marked on every row.',
+      second: 'GENERALITY — does one wording fit them all, or is it wide enough to fit anything? A reading, not a test.',
+      whyThatOrder: 'GENERALITY IS THE FAILURE THIS KIND IS EXPOSED TO; ASSERTION IS THE FAILURE IT HAS. A library hint cannot see its carriers, so breadth is its standing risk and a claim about the item is its standing fault. The second needs judgement and the first needs a comparison, so the comparison goes first.',
+    },
+    theQuestionThisKindTakes: 'A library hint is read against its carriers. It is NOT read against a key — it does not know which item it will land on, which is exactly why it cannot coach one.',
     whyNotOptionSets: 'An option set answers the ITEM-hint question. This row does not want one — it wants the items the entry reaches. The six key-only exporters are an item-level defect and were never on this path.',
     ordering: 'By carrier count, biggest first. Fit is hardest where reach is widest.',
+    theClauseMarking: 'Every asserting clause is marked on its row, the same shape as the visual-act file. The marking is what made that one readable: without it a reader reconstructs the matcher for every row, which is the expensive half.',
+    theTwoKindsOfAssertion: 'A GENERAL TRUTH holds wherever the entry lands and cannot be false on a carrier. A CLAIM ABOUT THIS ITEM can be, and is the decidable one — `aboutThisItem: true` marks it. The clause-level detector OVER-reports assertions by design: a clause opening with a verb the imperative list does not hold reads as an assertion, so a false positive is a row to skim rather than a fault to miss.',
     denominators: { englishEntriesWithCarriers: rows.length, itemsScanned: items.length },
     thisBatch: BATCH === null
       ? { of: 'all', rows: rows.length }

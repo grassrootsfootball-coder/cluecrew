@@ -17288,3 +17288,89 @@ either. Thirteen was neither figure; it was a third set nobody had stated.
 thirteen would have fitted itself to a number that was not a measurement of anything — and it would
 then have agreed, which is the camouflage R173 names. **The proxy agreed with her strict count on the
 one series where both were computed, and it agreed because neither had been adjusted to the other.**
+
+## R607 — The library reading is two passes, and assertion goes first
+
+> **Generality is the failure this KIND is exposed to. Assertion is the failure it HAS.**
+
+A library hint cannot see its carriers, so **breadth is its standing risk** — a wording wide enough
+to fit everything. But a clause claiming a feature of the item is **either true of every carrier or
+false on some**, and that is decidable rather than a matter of taste. **The comparison goes before
+the judgement**, so the brief was rewritten: `theAssertingClauses` first, generality second.
+
+**A clause is a MOVE if it is an imperative or a question. Anything else is an ASSERTION.**
+`en-attribute-transfer` carries one of each in one sentence: *"Check which one each detail belongs
+to"* survives all 43 carriers; *"Two people are being described"* is false on 26.
+
+**41 of 53 English library hints carry an asserting clause. 15 assert something ABOUT THE ITEM**, and
+those are the decidable ones — *"This one is in the lines"* (174 carriers), *"Some options just copy
+words from the passage"* (115), *"Two people are being described"* (43). **The rest are general
+truths**: *"Sounding sensible is not enough"* holds wherever the entry lands and cannot be false on a
+carrier.
+
+**THE CLAUSE IS MARKED ON EVERY ROW — the shape that made the visual-act file readable** (R569).
+And the detector OVER-reports by design: a clause opening with a verb the imperative list does not
+hold reads as an assertion, so **a false positive is a row to skim rather than a fault to miss.**
+
+**Four of five amendments in one batch of nine is not a rate. It is a signal**, and this is the
+measurement it asked for.
+
+## R608 — Two fields carrying one decision present as two ambiguous fields
+
+**Hers, and it names a fault neither field's kind could explain.** `hintRuling` and `hintServes` were
+written as a pair; the classifier could sort neither, because **one decision split across two fields
+looks like two half-decisions.**
+
+    hintServes   THE DIRECTIVE. The only field that changes what a child receives.
+    hintRuling   ITS REASON, in her words. Nothing branches on it and nothing should.
+    hintRuledBy  who ruled.
+
+**The fault was the split, not either field's kind.** Declared in `HintSource` so the next reader
+meets the subordination where the field is defined rather than inferring it from behaviour.
+
+**And `approvedNotByRecognition` is a RECORD: nothing can defy it.** With both ruled, **AMBIGUOUS is
+0** — the class exists to carry what must reach her, and it is empty because she emptied it.
+
+**One DECISION remains unread: `unplacedBySplit`**, written by the split and acted on by nothing. It
+reaches a reviewer through the carrier delivery and never through the product, which is correct for a
+decision about review — but the check cannot compute that distinction (R604) and reports it as
+ignored. **Named here rather than fixed by a class the instrument cannot support.**
+
+## R609 — A tag that can only sit once, sitting twice
+
+**`ENG-001-WIW-19` carries `en-vocab-dominant-sense` on two options** — *"Went across very quickly"*
+and *"Waved to the Mole from the boat"* — and **only one option can hold a word's commonest sense.**
+She found it by reading, so the population was unknown.
+
+**It is one.** 300 (item, tag) pairs place one tag on more than one option, across **30 distinct
+tags** — and most are legitimate: `en-conjunction-logic` on three conjunctions is the item working as
+designed. **The narrow question is which tags are SINGULAR BY DEFINITION**, and that is answerable
+from the entry's own description: **1 of 30 asserts uniqueness in its own words, and it is hers.**
+
+**AND THE FIRST RUN RETURNED ZERO.** The detector looked for *"the commonest"*; the description says
+*"the word's commonest everyday sense"*, and the possessive broke the match. **A zero that would have
+read as "no other tag asserts uniqueness"** — R453, caught at the query by reading the description
+rather than trusting the pattern.
+
+## R610 — `check the line numbers`, on stems that have none
+
+**`en-wrong-scope-retrieval` reaches 86 carriers and its hint says *"Check the line numbers and read
+just that part again."*** **2 carriers have no line reference in the stem and none in `lineRefs`** —
+`ENG-001-WIW-22` (LIVE) and `ENG-006-TM-12` (DRAFT). **On those the hint instructs something that is
+not on the child's screen**, which is the circle-and-tick fault in its third form: not an act the
+surface withholds, and not an act she cannot do, but **an act with no object.**
+
+**AND THE LIVE ONE IS COVERED BY LUCK.** `WIW-22`'s own hint now serves — because she amended its
+wording two hours ago in the seventieth return, which set the authorship fields (R600). **Her
+amendment closed a hazard neither of us was looking at**, and if she had amended any other item this
+would be live.
+
+## R611 — Her replacement for `en-attribute-transfer` is in the sixty-eighth, which never crossed
+
+**Recorded rather than re-issued.** The wording currently in the store is the one she replaced. Her
+replacement is in the amendment block of `annie-sixtyeighth-return.md`, one of the nine files the
+manifest diff names as never having arrived.
+
+**Third wording in three turns known to exist, correctly formed, and unreadable from here** — after
+the three of the sixty-fifth. **Re-issuing would create a second wording under one id**, which is the
+fault the block exists to prevent, so it waits.

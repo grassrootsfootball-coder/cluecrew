@@ -70,6 +70,18 @@ function kindOf(key: string): { kind: FieldKind; why: string } {
   if (/(serves|unplaced|waived|declined|withheld|override|refused|verdict|disposition|exempt|cleared)/i.test(key)) {
     return { kind: 'DECISION', why: 'an imperative — says what should happen, so it can be obeyed or ignored' };
   }
+  /**
+   * **THE TWO SHE RULED (R608), and the shape of the first one is the lesson.** `hintRuling` and
+   * `hintServes` are ONE decision split across two fields, and a pair like that presents as two
+   * ambiguous fields rather than one directive and its reason. **The fault was the split, not either
+   * field's kind.** `hintServes` is the directive; `hintRuling` is the reason and is a record.
+   */
+  if (/^hintRuling$/.test(key)) {
+    return { kind: 'RECORD', why: 'the REASON for hintServes, not a second decision (Annie, R608)' };
+  }
+  if (/^approvedNotByRecognition$/.test(key)) {
+    return { kind: 'RECORD', why: 'a record — nothing can defy it (Annie, R608)' };
+  }
   return { kind: 'AMBIGUOUS', why: 'neither a plain record nor a plain imperative — hers to rule' };
 }
 

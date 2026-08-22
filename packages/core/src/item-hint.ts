@@ -23,11 +23,23 @@ export interface HintSource {
   /** Where the reading is recorded, so the attribution can be checked rather than trusted. */
   hintAuthority?: unknown;
   /**
-   * An explicit ruling about WHICH hint serves. `'library'` withholds the item hint however well
-   * attested it becomes — a decision that must outrank the authorship fields, or improving the
-   * wording silently overturns the ruling against serving it (R601).
+   * **THE DIRECTIVE.** An explicit ruling about WHICH hint serves. `'library'` withholds the item
+   * hint however well attested it becomes — a decision that must outrank the authorship fields, or
+   * improving the wording silently overturns the ruling against serving it (R601).
+   *
+   * **`hintRuling` IS ITS REASON, NOT A SECOND DECISION** (Annie, 2026-08-22 — R608). The two were
+   * written as a pair and read as two decisions, which is why the classifier could not sort either:
+   * one decision split across two fields presents as two ambiguous ones. **The directive is here.**
+   * `hintRuling` carries the prose that explains it and is never consulted; `hintRuledBy` records
+   * who. Only this field changes what a child receives.
    */
   hintServes?: unknown;
+  /**
+   * **A RECORD, subordinate to `hintServes`.** Her reasoning for the directive above, in her words —
+   * *"The library hint is better here. An item hint earns its place by saying something the general
+   * one cannot."* Nothing branches on it and nothing should: a reason cannot be disobeyed.
+   */
+  hintRuling?: unknown;
 }
 
 export type HintChoice =

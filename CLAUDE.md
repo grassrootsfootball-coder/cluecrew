@@ -377,6 +377,14 @@ here has no register entry. A ruling goes to the register FIRST; it comes here o
   targets are PARSED, NEVER REWRITTEN — rewriting is a second wording under one id, once per row —
   and `targetSyntaxCensus()` prints canonical/legacy counts on every run, because a silent normaliser
   is how three syntaxes stayed invisible.
+- **ONE DECISION IN TWO FIELDS PRESENTS AS TWO AMBIGUOUS FIELDS** (Annie, 2026-08-22 — R608). When
+  a directive and its reason are written as a pair, neither sorts: name one as THE DIRECTIVE at its
+  definition and say on the other that it is the reason. `hintServes` is the directive; `hintRuling`
+  is its reason and nothing branches on it. **The fault is the split, not either field's kind.**
+- **THE LIBRARY-HINT READING IS TWO PASSES, ASSERTION FIRST** (Annie, 2026-08-22 — R607). A clause
+  claiming a feature of the item is decidable — true of every carrier or false on some. Generality is
+  a judgement. **Generality is the failure the kind is exposed to; assertion is the failure it has**,
+  so the comparison goes before the judgement, and the asserting clause is marked on every row.
 - **A FIELD IS A DECISION IF IT CAN BE DISOBEYED** (Annie, 2026-08-22 — R604). Names, dates, digests
   and methods are RECORDS — nothing reading them is correct. Imperatives and evaluations are
   DECISIONS — one nothing reads is being ignored by default. Anything else is AMBIGUOUS and goes to
