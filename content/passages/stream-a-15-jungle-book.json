@@ -618,7 +618,7 @@
   "verbatimVerification": {
     "spansChecked": 26,
     "spansFound": 26,
-    "pct": 100.0,
+    "pct": 100,
     "breaksOnlyAtDocumentedCutSeams": true,
     "note": "Every 8-word span that did not match the source falls exactly at a documented editorial-cut seam, where two separately-verbatim spans were joined. Text within each retained span is 100% verbatim against the Project Gutenberg source."
   },
@@ -650,9 +650,11 @@
     "floor": 600,
     "ceiling": 950,
     "readingAge": "10-13",
-    "basis": "declared",
+    "basis": "length-ratified; reading NOT ratified",
     "why": "DECLARED 2026-08-14. Not derived — reading age cannot discriminate at 12-13, where the two band definitions overlap, so no reconstruction was available and none was invented.",
-    "reasoning": "At RA 12-13, with a whole-text architecture built on STATED GENERAL LAWS about mongooses that the narrator then illustrates without comment, this is short-set material with a length problem. It is not CSSE material. AND THE ALTERNATIVE WAS REFUSED FOR A REASON WORTH KEEPING: assigning it CSSE would put 1,068 inside 900-1100 and the exception would simply disappear. Choosing the band so the number comes out right is the length-decides-the-band circularity approached from the other side — instead of reading the band off the length, you pick the band that flatters it."
+    "reasoning": "At RA 12-13, with a whole-text architecture built on STATED GENERAL LAWS about mongooses that the narrator then illustrates without comment, this is short-set material with a length problem. It is not CSSE material. AND THE ALTERNATIVE WAS REFUSED FOR A REASON WORTH KEEPING: assigning it CSSE would put 1,068 inside 900-1100 and the exception would simply disappear. Choosing the band so the number comes out right is the length-decides-the-band circularity approached from the other side — instead of reading the band off the length, you pick the band that flatters it.",
+    "basisCorrection": "A LENGTH was ratified, a READING was not. The reading-age range on this band was assumed at commission and never read against the passage — the two claims were only distinguishable once somebody read them (R500).",
+    "previousBasis": "declared"
   },
   "bandException": {
     "band": "short 600-950",
@@ -676,5 +678,17 @@
     ],
     "subKeysStripped": [],
     "keptByRuling": []
+  },
+  "authoringRead": {
+    "decodingAge": 10,
+    "comprehensionAge": 10,
+    "NOT_A_READING_AGE": "Neither column is a reading age and neither may be printed as one. If only one can be shown, none is shown (R350).",
+    "method": "Decoding is vocabulary load, sentence length and clause depth. Comprehension is how much of what matters is implied rather than stated.",
+    "calibration": "Both columns are her judgement and neither is a measurement. Fifteen readings by one reader in one sitting carry that reader's calibration; a second reader disagreeing by a year on several is information about the SCALE rather than about either reader.",
+    "disputeFirst": "The six where the columns come apart — those are the ones the pack exists to expose.",
+    "readBy": "Annie",
+    "readOn": "2026-08-21",
+    "authority": "annie-fortyfourth-return.md, read from the file, sha256 459cf401dd4a0d90784f2d4f7d775d0719c309e9fd629d5323acf04f3acf57b4",
+    "artefactRead": "FIFTEEN-PASSAGES-DECODING-AND-COMPREHENSION.md, e7c32416bdf9381d57890eed5db442a863b5bf4dc9cb70ec2d241f01bd53fbd1"
   }
 }

@@ -15032,3 +15032,79 @@ queue.** Nothing else does — **including a good finding.**
 That is the discipline this whole session repeatedly failed: instrument findings were real, one of
 them serious, and each was justified on its own turn while the reading queue did not move for three
 of them. **A finding about a check is not urgent because it is true.**
+
+## R499 — The fifteen recorded, both columns, method beside them, neither printable as a reading age
+
+**Annie's forty-fourth return, 2026-08-21.** Written to all fifteen passage rows, authority
+`annie-fortyfourth-return.md` with its digest. **The two-column shape is accepted as proposed.**
+
+| | passage | dec | com | | | passage | dec | com |
+|---|---|---:|---:|---|---|---|---:|---:|
+| 1 | Treasure Island | 12 | 11 | | 9 | Eighty Days | 10 | **13** |
+| 2 | Railway Children | 10 | 11 | | 10 | Three Men in a Boat | 10 | **12** |
+| 3 | Wind in the Willows | 12 | 11 | | 11 | Jane Eyre | **13** | 12 |
+| 4 | Black Beauty | 10 | 11 | | 12 | Hound of the Baskervilles | **13** | 11 |
+| 5 | Tom Sawyer | 11 | 12 | | 13 | **Pride and Prejudice** | 12 | **14** |
+| 6 | Anne of Green Gables | 11 | **13** | | 14 | Mill on the Floss | 11 | **13** |
+| 7 | Canterville Ghost | 12 | **13** | | 15 | Jungle Book | 10 | 10 |
+| 8 | A Christmas Carol | 13 | 13 | | | | | |
+
+**Every row carries `NOT_A_READING_AGE` as a field**, not as a note: *neither column is a reading age
+and neither may be printed as one; if only one can be shown, none is shown.* **The condition is on the
+row, so a reader who never sees this entry still meets it.**
+
+**And her calibration travels with the numbers**: both columns are her judgement and neither is a
+measurement; fifteen readings by one reader in one sitting carry that reader's calibration; **a second
+reader disagreeing by a year on several is information about the SCALE rather than about either
+reader.** The row names where to dispute first — **the six where the columns come apart**.
+
+**Nine of fifteen sit within a year on both columns. The six that do not are the ones a single number
+would have misfiled**, which is the pack's whole purpose discharged.
+
+## R500 — A length was ratified; a reading was not
+
+**The band's `basis` said `ratified`. It was ratified as a LENGTH.** The reading-age range attached to
+it was **assumed at commission and never read against the passage** — and the two claims were
+indistinguishable in one field until somebody read them.
+
+Corrected on all fifteen rows to **`length-ratified; reading NOT ratified`**, with the prior value
+kept.
+
+**PRIDE AND PREJUDICE IS THE FIRST VISIBLE DISAGREEMENT: comprehension FOURTEEN against a ten-to-
+thirteen commission.** The commission's upper bound is exceeded by a year, **and it was invisible
+while nobody had read the passages** — the band asserted a reading nobody had performed, in a word
+(`ratified`) that means somebody had.
+
+**A field carrying two claims under one word records the weaker one and reports the stronger.**
+
+## R501 — The two axes: the easiest passage carries the longest content flag
+
+**Recorded BEFORE somebody infers one from the other.**
+
+**The Jungle Book is the easiest passage in the pack on BOTH columns — decoding 10, comprehension 10,
+the only row where both are the lowest — and it carries the longest, most careful content flag in the
+store**, the peril-level ruling that stops the extract at confrontation.
+
+**Content difficulty and reading difficulty are unrelated axes. Nothing follows from the coincidence
+except that neither may be derived from the other.**
+
+The inference it forecloses runs both ways: *a heavily flagged passage must be demanding* and *an easy
+passage needs little screening*. **Both are available, both are wrong, and the one row where they
+would be most tempting is the one that disproves them.**
+
+## R502 — `en-narrator-voice-as-fact` has ONE carrier, DRAFT, and it may not be the error
+
+**Reported before ruling**, staged as `PP-NARRATOR-VOICE-CARRIERS.md`, `d5d2547e6bc18c1e…`.
+
+**One carrier store-wide: `ENG-002-pp-23`, DRAFT.** Nothing reachable turns on the ruling today.
+
+**AND THE CARRIER'S OPTION MAY NOT BE THE ERROR THE ENTRY NAMES.** The stem asks *how we learn what
+the people in it are like* — a whole-passage technique question — and the tagged option is *"We are
+told what the writer thinks, and not only what the room says."* **That is a claim about narrative
+technique, not a child mistaking a crowd's opinion for a settled fact.**
+
+**So her question sharpens rather than resolves.** If the passage's comprehension load IS the
+misconception — her fourteen is the pack's highest, and the free-indirect opening is her reason — then
+an item testing it must make the voice question **answerable from the lines** rather than from knowing
+the novel. **The one item that exists asks about the whole passage instead**, which is the design
+question rather than the passage question, exactly as she framed it.

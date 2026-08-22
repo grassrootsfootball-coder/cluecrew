@@ -543,7 +543,7 @@
   "verbatimVerification": {
     "spansChecked": 26,
     "spansFound": 26,
-    "pct": 100.0,
+    "pct": 100,
     "breaksOnlyAtDocumentedCutSeams": true,
     "note": "Every 8-word span that did not match the source falls exactly at a documented editorial-cut seam, where two separately-verbatim spans were joined. Text within each retained span is 100% verbatim against the Project Gutenberg source."
   },
@@ -572,10 +572,12 @@
     "floor": 600,
     "ceiling": 950,
     "readingAge": "10-13",
-    "basis": "ratified",
+    "basis": "length-ratified; reading NOT ratified",
     "why": "RATIFIED 2026-08-14 under Option B. The band stopped being derived from reading age, because reading age describes a passage and a band instructs a commission, and deriving the instruction from the description is backwards. This passage was never assigned a band at commission. The reading-age reconstruction — estReadingAge contained in exactly one band definition — says which band it would have been, and the passage's own length agrees. That agreement is accepted ONCE, here, as the assignment. It is evidence ratified, not a rule applied, and the reconstruction is not consulted for anything commissioned after this date.",
     "reconstructionEvidence": "estReadingAge '10-13' is contained in the short band definition and in no other; length 948 is in band",
-    "reconstructionIsNotTheRule": "reconstruct_band_from_reading_age() refuses for any passage outside the ratified fourteen. Bands are declared at commission from 2026-08-14."
+    "reconstructionIsNotTheRule": "reconstruct_band_from_reading_age() refuses for any passage outside the ratified fourteen. Bands are declared at commission from 2026-08-14.",
+    "basisCorrection": "A LENGTH was ratified, a READING was not. The reading-age range on this band was assumed at commission and never read against the passage — the two claims were only distinguishable once somebody read them (R500).",
+    "previousBasis": "ratified"
   },
   "authoringCopy": {
     "strippedFields": [
@@ -588,5 +590,17 @@
     ],
     "subKeysStripped": [],
     "keptByRuling": []
+  },
+  "authoringRead": {
+    "decodingAge": 10,
+    "comprehensionAge": 12,
+    "NOT_A_READING_AGE": "Neither column is a reading age and neither may be printed as one. If only one can be shown, none is shown (R350).",
+    "method": "Decoding is vocabulary load, sentence length and clause depth. Comprehension is how much of what matters is implied rather than stated.",
+    "calibration": "Both columns are her judgement and neither is a measurement. Fifteen readings by one reader in one sitting carry that reader's calibration; a second reader disagreeing by a year on several is information about the SCALE rather than about either reader.",
+    "disputeFirst": "The six where the columns come apart — those are the ones the pack exists to expose.",
+    "readBy": "Annie",
+    "readOn": "2026-08-21",
+    "authority": "annie-fortyfourth-return.md, read from the file, sha256 459cf401dd4a0d90784f2d4f7d775d0719c309e9fd629d5323acf04f3acf57b4",
+    "artefactRead": "FIFTEEN-PASSAGES-DECODING-AND-COMPREHENSION.md, e7c32416bdf9381d57890eed5db442a863b5bf4dc9cb70ec2d241f01bd53fbd1"
   }
 }
