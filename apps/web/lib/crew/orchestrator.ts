@@ -36,7 +36,7 @@ import {
   type TeachbackContent,
 } from '@cluecrew/core';
 import { logEvent, prisma, Prisma } from '@cluecrew/db';
-import { hintToServe, type HintSource, type MechanicFamily } from '@cluecrew/core';
+import { hintToServe, resolveLibraryHint, type HintSource, type MechanicFamily } from '@cluecrew/core';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { fluencyRound } from '@/lib/crew/fluency';
@@ -948,7 +948,9 @@ export async function submitAnswer(
       where: { id: pending.itemId },
       select: { explanation: true },
     });
-    childHint = hintToServe(missed?.explanation as HintSource | null, misconception?.childHint);
+    // The status filter (R618, approved): a RETIRED/REJECTED entry's wording never reaches a
+    // child — the option serves as if untagged, and the two nothings stay distinguishable.
+    childHint = hintToServe(missed?.explanation as HintSource | null, resolveLibraryHint(misconception).text);
   }
   // Worked-example replay (ratified addition): only after a miss, only from
   // the item's own solution expression, only through authored templates.

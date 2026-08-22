@@ -92,6 +92,30 @@ export function chooseHint(explanation: HintSource | null | undefined): HintChoi
   return { serves: 'item', text, readBy, authority };
 }
 
+/**
+ * **THE STATUS FILTER (David's approval of the R618 design, 2026-08-22).** The resolver serves a
+ * library hint only from an ACTIVE entry. A tag resolving to a RETIRED or REJECTED entry serves as
+ * if the option were UNTAGGED — the child gets nothing rather than a wording a reviewer rejected —
+ * and **the two nothings are distinguishable**: `why` says which, so serving-nothing-by-status can
+ * never be mistaken for serving-nothing-by-untagged in a transcript (R601: two states must not
+ * share an output).
+ */
+export type LibraryResolution =
+  | { text: string; why: 'ACTIVE entry' }
+  | { text: undefined; why: 'option untagged or entry missing' | 'tag resolves to a RETIRED/REJECTED entry' };
+
+export function resolveLibraryHint(
+  entry: { status?: unknown; childHint?: unknown } | null | undefined,
+): LibraryResolution {
+  if (!entry || typeof entry.childHint !== 'string' || entry.childHint.trim() === '') {
+    return { text: undefined, why: 'option untagged or entry missing' };
+  }
+  if (entry.status !== 'ACTIVE') {
+    return { text: undefined, why: 'tag resolves to a RETIRED/REJECTED entry' };
+  }
+  return { text: entry.childHint, why: 'ACTIVE entry' };
+}
+
 /** The string to serve, given the item's explanation and the library hint behind the chosen option. */
 export function hintToServe(
   explanation: HintSource | null | undefined,

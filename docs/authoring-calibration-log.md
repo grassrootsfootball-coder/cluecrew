@@ -17550,3 +17550,27 @@ somewhere else does not answer this question."* **Character-for-character equal 
 line.** Her amendment landed on the row's true text; the authoring store's differing wording is
 superseded, and no third text was in play. (Her seventy-eighth also authors its target as
 `library:en-wrong-scope-retrieval` — the kind-first syntax, first use in the wild.)
+
+## R620 — The status filter built as approved, and the confirmation shipped as bytes
+
+**The filter (David's approval of R618's design).** `resolveLibraryHint` in
+`packages/core/src/item-hint.ts`: an ACTIVE entry serves its hint; RETIRED/REJECTED serves
+`undefined` — the untagged fallthrough, chosen because every caller already handles it — with
+`why: 'tag resolves to a RETIRED/REJECTED entry'`, so **the two nothings stay distinguishable**
+(R601's condition, honoured inside the fix). Wired at `orchestrator.ts:951`. Four tests, including
+the end-to-end: a child on a rejected tag gets nothing, never the rejected wording. 703 green.
+
+**`check:non-active-carriers`**: 2784 tagged options screened (asserted non-empty), 0 carrying a
+non-ACTIVE tag — **declared legitimately empty with the reason printed**, the R582 shape, so the
+empty day this was born on cannot decay into a silent green.
+
+**The wrong-scope confirmation is an artefact, not a paragraph** —
+`wrong-scope-landing-confirmation-81dc1dd3f9c34d79.json`, `8c5a2faf…`. It carries the pre-write
+string verbatim with BOTH its read addresses (the apply run's BEFORE line, and the reference set
+emitted before the write — `f2a72111…`, same row), her `replaced` string with its address, the
+equality stated as a computed boolean the emitter ABORTS on rather than asserts, and the post-write
+string now serving. **Cowork compares bytes; nobody relays a paragraph.**
+
+**And the crossing moved legs.** The shared path dropped the same artefacts twice; everything
+attached to a message this turn arrived and verified. Same files, same digests, attached — the
+digests are the invariant and the leg is whatever delivers them.

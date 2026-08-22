@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { chooseHint, hintToServe } from './item-hint';
+import { chooseHint, hintToServe, resolveLibraryHint } from './item-hint';
 
 const READ = {
   hintCore: 'Does your voice go up at the end? Then it needs a question mark.',
@@ -81,5 +81,32 @@ describe('an item hint serves only if a named reviewer has read it', () => {
       const amended = { ...RULED, hintCore: 'A better wording, applied by an amendment.' };
       expect(chooseHint(amended).serves).toBe('library');
     });
+  });
+});
+
+describe('the status filter: a non-ACTIVE entry serves nothing, distinguishably (R618, approved)', () => {
+  const ENTRY = { status: 'ACTIVE', childHint: 'The library hint.' };
+
+  it('an ACTIVE entry serves its hint', () => {
+    expect(resolveLibraryHint(ENTRY)).toEqual({ text: 'The library hint.', why: 'ACTIVE entry' });
+  });
+
+  it('a RETIRED or REJECTED entry serves undefined — the untagged fallthrough, by design', () => {
+    for (const status of ['RETIRED', 'REJECTED']) {
+      const r = resolveLibraryHint({ ...ENTRY, status });
+      expect(r.text).toBeUndefined();
+      expect(r.why).toBe('tag resolves to a RETIRED/REJECTED entry');
+    }
+  });
+
+  it('the two nothings are distinguishable — status is never mistaken for untagged', () => {
+    const byStatus = resolveLibraryHint({ ...ENTRY, status: 'RETIRED' });
+    const untagged = resolveLibraryHint(null);
+    expect(byStatus.text).toBe(untagged.text);
+    expect(byStatus.why).not.toBe(untagged.why);
+  });
+
+  it('end to end: a child on a retired tag gets nothing, not the rejected wording', () => {
+    expect(hintToServe({ hintCore: 'unread' }, resolveLibraryHint({ ...ENTRY, status: 'REJECTED' }).text)).toBeUndefined();
   });
 });
