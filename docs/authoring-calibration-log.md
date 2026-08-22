@@ -17722,3 +17722,37 @@ the id — so the name originates in HER prose months before the split, and the 
 presumably adopted it from there while this store's row kept `en-vocab-form-lookalike`. The
 divergence is older than the split. Whatever routing the split record specifies, it starts from a
 store that has never WRITTEN that id — but not from one that never met it.
+
+## R626 — The sixty-fifth crosses at last; ten land; the split entry exists; exposure reaches six
+
+**All three artefacts digest-confirmed**: eighty-ninth `a51e2126…`, **sixty-fifth `0cd56a05…` — the
+document that was missing everywhere, finally on this disk with exactly the digest she declared
+twenty-four returns ago** — and the split record `eb2a1ba6…`.
+
+**ITEM 1.** The eighty-ninth's seven landed APPROVED_AS_WRITTEN, byte-guarded, all seven now
+`chooseHint: item` — including **ENG-028-PR-02, the approval her finding recovered**: the
+seventieth's third slot was PR-02, typed as WIW-02, absent from every drain since. Her second
+finding stands with it: **declared-equals-collected verifies HOW MANY, not WHICH — a count check
+cannot catch an identity error.**
+
+**ITEM 2.** The sixty-fifth's three landed REPLACED: WIW-10 (*"He is not thinking about the rabbits
+at all…"*), WIW-12 (*"The question asks what he had never seen. Not what he saw that day."*), WIW-13
+(the dash split to a full stop). All three serve. **The wordings reported missing for six turns
+landed within minutes of the file crossing** — the block parsed first time, as she said it would.
+
+**ITEM 3.** WIW-02's `hintAuthority` already cites the eighty-seventh — this session's landing
+superseded the mis-attributed seventieth citation before the finding arrived. No repair needed;
+reported rather than re-written.
+
+**ITEM 4.** `en-spelling-form-lookalike` created from the split record, byte-guarded — hint and
+description byte-equal to the record's strings — authority her ENG-003 fifth return at the record's
+digest, provenance carrying the SPLIT-not-rename ruling (from `en-homophone-by-sound`; quiet/quite
+is form, not sound). **SP-01 (ENG-003-A-SP-01) is DRAFT; its quiet/quite option still carries
+`en-homophone-by-sound` and would serve the homophone hint.** The creation ruling says *"SP-01 B
+retags when it lands"* — **the condition is now met and the retag is NOT executed**, because it was
+not in the instruction; flagged rather than assumed.
+
+**ITEM 5. EXPOSURE: 15 → 6** — `exposure-live-asserting-entries-c1687c7e2448138a.json`,
+`e2a52eb9…d867`. The six are WIW-11, 14, 15, 16, 17, 18 — **exactly the sixty-fifth's six
+approvals-as-written, pending her confirmations**, which is the residue predicted before the count
+was taken. The drain and the exposure list now agree from opposite directions.
