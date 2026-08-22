@@ -18,6 +18,72 @@ import { requirePopulation } from './lib/population';
 const OUT = '/Users/davidb/Downloads/11+/from-cluecrew';
 const DOWN = '/Users/davidb/Downloads';
 const MANIFEST = join(DOWN, 'annie-held-manifest.md');
+/**
+ * **THE MIRROR: what SHE has produced.** The held manifest answers *did our artefacts reach her*.
+ * This one answers *did hers reach us*, and until it existed the inbound gap could only be inferred
+ * from ordinals — seven numbers with no file, cause unknown. **With it the gap is a LIST, by digest.**
+ */
+const OUTPUTS_MANIFEST = join(DOWN, 'annie-outputs-manifest.md');
+
+/** One parser for both manifests. Two would disagree eventually, which is R429. */
+function parseManifest(path: string): Map<string, string> | null {
+  let text: string;
+  try { text = readFileSync(path, 'utf8'); } catch { return null; }
+  const out = new Map<string, string>();
+  for (const m of text.matchAll(/^\|\s*`([a-f0-9]{64})`\s*\|\s*`([^`]+)`/gm)) out.set(m[1] as string, m[2] as string);
+  return out;
+}
+
+/**
+ * THE INBOUND LEG, BY DIGEST. Her outputs manifest against the files actually on this disk.
+ *
+ *   HERS, NOT HERE        a file she has produced that never crossed. **The list the ordinal gap
+ *                         could only guess at.**
+ *   HERE, DIGEST DIFFERS  same name, different bytes — the worst state, because every reader here
+ *                         would treat it as arrived.
+ *   HERE, NOT ON HER LIST a file this store holds that her manifest does not claim.
+ */
+function inbound(): void {
+  const hers = parseManifest(OUTPUTS_MANIFEST);
+  if (!hers) {
+    console.log(
+      `\n  INBOUND: NO OUTPUTS MANIFEST at ${OUTPUTS_MANIFEST}. Nothing compared, which is NOT\n`
+      + '  "0 divergences" — the inbound gap falls back to an inference from ordinals.',
+    );
+    return;
+  }
+  const byName = new Map<string, string>();
+  for (const [d, f] of hers) byName.set(f, d);
+
+  const hereByDigest = new Map<string, string>();
+  const hereByName = new Map<string, string>();
+  for (const f of readdirSync(DOWN)) {
+    let st;
+    try { st = statSync(join(DOWN, f)); } catch { continue; }
+    if (!st.isFile() || !/\.(md|json|txt|jsonl)$/i.test(f)) continue;
+    const d = createHash('sha256').update(readFileSync(join(DOWN, f))).digest('hex');
+    hereByDigest.set(d, f);
+    hereByName.set(f, d);
+  }
+
+  const notHere = [...hers].filter(([d]) => !hereByDigest.has(d));
+  const differs = notHere.filter(([, f]) => hereByName.has(f));
+  const absent = notHere.filter(([, f]) => !hereByName.has(f));
+  const hereNotClaimed = [...hereByName].filter(([f, d]) => !hers.has(d) && !byName.has(f) && /^annie-/.test(f));
+
+  console.log(
+    `\n  INBOUND, BY DIGEST — her outputs manifest against this disk.\n`
+    + `  she has produced           : ${hers.size}\n`
+    + `  CROSSED (bytes both sides) : ${hers.size - notHere.length}\n`
+    + `  HERS, NEVER ARRIVED        : ${absent.length}\n`
+    + `  HERE BUT DIGEST DIFFERS    : ${differs.length}\n`
+    + `  HERE, NOT ON HER LIST      : ${hereNotClaimed.length}`,
+  );
+  for (const [, f] of absent.sort((a, b) => a[1].localeCompare(b[1]))) console.error(`      NEVER ARRIVED  ${f}`);
+  for (const [, f] of differs) console.error(`      DIGEST DIFFERS ${f} — same name, different bytes`);
+  for (const [f] of hereNotClaimed) console.log(`      NOT CLAIMED    ${f}`);
+  if (absent.length + differs.length > 0) process.exitCode = 1;
+}
 
 function main() {
   let manifest: string;
@@ -30,8 +96,7 @@ function main() {
     );
     return;
   }
-  const held = new Map<string, string>();
-  for (const m of manifest.matchAll(/^\|\s*`([a-f0-9]{64})`\s*\|\s*`([^`]+)`/gm)) held.set(m[1], m[2]);
+  const held = parseManifest(MANIFEST) as Map<string, string>;
 
   const staged = new Map<string, { file: string; days: number }>();
   const now = Date.now();
@@ -63,7 +128,9 @@ function main() {
   );
   if (notCrossed.length > 0) {
     console.log(`\n  oldest staged-not-crossed: ${notCrossed[0][1].days}d  ${notCrossed[0][1].file}`);
+    for (const [, v] of notCrossed.slice(0, 8)) console.log(`      ${String(v.days).padStart(2)}d  ${v.file}`);
   }
+  inbound();
 }
 
 main();

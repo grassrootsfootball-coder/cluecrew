@@ -26,39 +26,8 @@
  * Every row is a CANDIDATE. Whether a hint must cover both branches is her judgement (R94).
  */
 import { prisma } from '../packages/db/src/index';
+import { branches, contentWords } from './lib/description-branches';
 import { requirePopulation } from './lib/population';
-
-const STOP = new Set(
-  ('a an the and or but of in on at to for from with is are was were be been being it its this that these'
-  + ' those what which who whom how why when where do does did not no so as if then than you your he she'
-  + ' they them his her their there here one two more most just also very can could would should will'
-  + ' about into out up down over under again still had has have chooses choose picks pick child').split(' '),
-);
-const contentWords = (s: string) => [...new Set(
-  s.toLowerCase().replace(/[^a-z0-9' ]/g, ' ').split(/\s+/).filter((w) => w.length > 3 && !STOP.has(w)),
-)];
-
-/**
- * **A DISJUNCTION, NOT EVERY `or`.** *"Grouped by look or sound"* is one case worded twice; the
- * branches must each stand as a case, which is what the length floor tests. A comma before `or`
- * is her form for the real thing and is accepted at a lower floor.
- */
-function branches(description: string): string[] | null {
-  /**
-   * **COMMA-OR ONLY, WITHIN ONE SENTENCE — and the bare-`or` version is recorded as refused.**
-   * Allowing any ` or ` raised recall and destroyed the thing the count is for. It split
-   * *"the spelling or punctuation error"* — one noun phrase — and it split ACROSS SENTENCES, so
-   * `en-article-definiteness` reported its trailing *"Distinct from en-a-an-by-spelling"* note as an
-   * unaddressed branch. Two of three English findings were the splitter, not the entry.
-   *
-   * `, or ` is her form for a real second case, and `en-attribute-transfer` uses it. A tight
-   * findable population with its size printed beats a loose one that needs a reader to sort.
-   */
-  const firstSentence = description.split(/(?<=[.!?])\s+/)[0] ?? description;
-  const commaOr = firstSentence.split(/,\s+or\s+/i);
-  if (commaOr.length >= 2 && commaOr.every((b) => contentWords(b).length >= 2)) return commaOr;
-  return null;
-}
 
 async function main() {
   const lib = await prisma.misconception.findMany({ select: { id: true, childHint: true, description: true } });

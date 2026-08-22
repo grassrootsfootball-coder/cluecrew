@@ -16869,3 +16869,111 @@ to a reader checking whether the hint was good advice.
 hint can face: outward to the child, and inward to the items. She stated the first about children a
 fortnight before the second arrived about carriers, and did not connect them until both were on the
 board.
+
+## R587 — Both legs by digest: the gap becomes a list
+
+**`check:manifest-diff` now runs both directions against a manifest, one parser for both.**
+
+    OUTBOUND  her held manifest against what is staged here.
+    INBOUND   her outputs manifest against what is on this disk.
+              70 produced · 61 CROSSED · 9 NEVER ARRIVED · 0 digest-differs · 10 here-not-claimed.
+
+**The nine, named rather than inferred:** returns 59, 60, 61, 63, 64, 65, 66, 68 — **and
+`annie-merge-ack-and-gap-yard-note.md`, which is unnumbered.** The ordinal check could never have
+found that one. **An ordinal gap finds numbered absences; a manifest finds absences.** Both were
+needed and the cheaper one came first, which is the right order and not the same as sufficiency.
+
+**THE FAILURE IS ENTIRELY IN THE CROSSING, and that is now established rather than assumed.** Her
+side: 61 numbered returns, complete from the eighth to the sixty-eighth, no gaps, **all fifty
+amendments correctly formed.** Nothing was unwritten, nothing misnumbered, no block malformed.
+
+**THE FIRST SEVEN ARE NAMED FOR THEIR CLUSTER, NOT BY ORDINAL** — `eng003-set-a`, `eng003-second`
+through `eng003-seventh`, `eng028`, the approval batch — which is why her count reads 61 rather than
+68, and why `check:return-sequence` reports everything below 8 as UNKNOWN. **She has named the naming
+as hers to fix so the check needs no special case**, which is the right repair: a special case in the
+checker would make the inconsistency permanent and invisible.
+
+**AND HER MANIFEST'S PROSE AND ITS OWN TABLE DISAGREE.** The prose names nine files as the first
+seven; the table carries six of them. `annie-eng003-set-a-return.md`, `annie-eng028-return.md` and
+`annie-approval-batch-return.md` are on this disk and not in her table. **R580 arriving in the
+manifest that was written to close R579** — a description and a list, in one document, disagreeing.
+
+## R588 — While the channel is down: rulings can be authored, writes should wait
+
+**Hers, and it is proportionate rather than cautious.**
+
+> **A ruling made on a stale picture is a ruling she can revisit. A write made on a stale ruling is a
+> change to a store.**
+
+The asymmetry is the whole argument: one is reversible by its author, the other is not reversible by
+anyone without a second act.
+
+**AND THE SIZE OF THE STALENESS IS KNOWN AND LARGE.** The eight returns that have not crossed contain
+**the persona decline, four structural transcript rulings, twelve amendments and a re-prioritisation.**
+**This store's last complete view of her is the fifty-eighth return.** Anything written against that
+state is written against a picture missing all of it.
+
+**Neither store knows by how much its picture of the other is frozen** — divergence accumulating in
+both directions at once, invisibly, which is STAGED-versus-ARRIVED at its worst: not one file
+missing, but two counterparts each reasoning about a version of the other that has moved.
+
+## R589 — `en-vocab-form-lookalike` is a SPLIT, and the branch the hint cannot reach is the larger one
+
+    description: "a DIFFERENT WORD the target resembles, or A MORPHEME she has met in other words"
+    childHint  : "This word looks like one you know. Read it letter by letter…"
+
+**Letter-by-letter reaches the first branch and cannot reach the second.** *Wont* against *won't* is
+settled by reading the letters. **`stranger` read as `strange` + `er` is not: reading the letters
+gives the same letters, and the fault is in how they were parsed.**
+
+**Two branches, two moves — a SPLIT rather than a merged hint, by her own unstressed-vowel ruling: a
+tag chooses one hint and one hint names one move.** She will not author either half without the
+carriers, which is the rule she set herself last turn meeting its first test.
+
+**20 carriers, 1 LIVE, all `en-comp-vocab`. The form signal: MORPHEME 13, LOOKALIKE 6, 1 unquoted —
+so the branch her hint cannot reach is nearly two thirds of the population.**
+
+**TWO SIGNAL DEFECTS, BOTH FOUND BY READING THE ROWS BEFORE SENDING THEM, AND BOTH MOVED THE COUNT.**
+
+- **Prefixes were missing.** `misgave`, whose distractor is *"handed him something by mistake"*, is
+  `mis-` + `gave` — a morpheme fault through and through, signalled LOOKALIKE because nothing looked
+  at the front of the word.
+- **The headword was the first quoted span, not the one the question asks about.** A vocabulary stem
+  quotes the passage line AND the word; `ENG-002-pp-20` returned `". What does"` — a fragment.
+  `tolerable` is `toler` + `-able`, and its distractor *"good at putting up with things"* is exactly
+  that parse.
+
+**MORPHEME 11 → 13.** A branch count is the thing she is about to author against, and a signal blind
+to half the morphology would have handed her a smaller half than the corpus holds.
+
+## R590 — Two widenings refused this fortnight, and nobody gets credit for a check they did not ship
+
+**Hers, and it is about where the instinct runs.**
+
+- The locator's **three-word-window** draft: more matches, and it would have searched hints that
+  describe while the run printed *"unfindable where it describes"*.
+- The description splitter's **bare `or`**: more findings, and two of three English ones were the
+  splitter rather than the entry.
+
+**Both would have raised the count and falsified a printed sentence.** Both were refused on the BOUND
+rather than accepted on the recall.
+
+**The instinct runs toward recall**, because a bigger number looks like a better check and a refused
+widening leaves nothing behind to point at. **Nobody gets credit for a check they did not ship** —
+which is exactly why it is worth writing down that it was refused, twice, and why.
+
+## R591 — Language claiming a stronger population than the thing behind it
+
+**Her strongest note, and it makes two of this week's faults one fault.**
+
+    "the feature is present in EVERY carrier in en-comp-inference"    a report, where the test was 8 of 9
+    "Two people are being described."                                 a hint, where 26 of 43 have none
+
+**The first was corrected from *every* to *most* with the printed sentence changed to match. The
+second is her own hint, and it asserted a population its author could not see.** One is a string in a
+check and one is a string a child reads, and **they are the same defect: language whose scope is
+wider than the thing standing behind it.**
+
+It is R586 (assert or describe) turned on our own instruments rather than on the corpus. A check that
+says *every* where it tested *most* is a hint that says *two people* where two thirds have one —
+**and in both cases the wrong word is the one that makes the claim sound settled.**

@@ -342,6 +342,18 @@ here has no register entry. A ruling goes to the register FIRST; it comes here o
   carrier has (R576)** — the same fault facing outward to the child and inward to the items.
   `pnpm check:hint-asserts-feature` finds the assertions; a by-type zero in it is a finding about the
   WORDING and never about the TAGGING (R585), and reading it otherwise retags correct items.
+- **WHILE THE REVIEWER CHANNEL IS DOWN: RULINGS CAN BE AUTHORED, WRITES SHOULD WAIT** (Annie,
+  2026-08-22 — R588). A ruling made on a stale picture is a ruling she can revisit; **a write made on
+  a stale ruling is a change to a store.** Check both legs before writing anything content-bearing:
+  `pnpm check:manifest-diff` (both directions by digest, against her held and outputs manifests),
+  `pnpm check:return-sequence` (numbered gaps), `pnpm check:arrival-confirmed` (staged artefacts she
+  has confirmed by quoting a digest — 15 of 351). An ordinal gap finds NUMBERED absences; only a
+  manifest finds absences.
+- **LANGUAGE CLAIMING A STRONGER POPULATION THAN THE THING BEHIND IT** (Annie, 2026-08-22 — R591).
+  A check that prints *every* where it tested *most*, and a hint that says *two people* where two
+  thirds of carriers have one, are the same defect. When a printed sentence and its test disagree,
+  the sentence changes — and the wrong word is always the one that makes the claim sound settled.
+  This is R586 turned on our own instruments rather than on the corpus.
 - Content decisions (items, chapters, misconceptions) go through the CMS
   review pipeline; nothing skips the reviewer.
 - **PILOT CONTENT UNDER ACTIVE REVIEW HAS ONE WRITE PATH: `scripts/lib/pilot-review.ts`, NEVER A
