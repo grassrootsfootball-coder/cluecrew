@@ -32,7 +32,17 @@ export interface HintSource {
 
 export type HintChoice =
   | { serves: 'item'; text: string; readBy: string; authority: string }
-  | { serves: 'library'; why: 'no item hint' | 'item hint not read by a named reviewer' };
+  | {
+    serves: 'library';
+    /**
+     * The reasons are a closed union on purpose: a caller can branch on WHY the library hint won,
+     * and a free-form string would let three reasons become one. `ruled to serve…` is the only one
+     * that is a DECISION rather than a shortfall (R601).
+     */
+    why: 'no item hint'
+      | 'item hint not read by a named reviewer'
+      | 'ruled to serve the library hint on this item';
+  };
 
 /**
  * **A NAME, AND A PLACE THE READING IS RECORDED.** Both, because a bare name is an assertion and a
