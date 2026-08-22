@@ -31,6 +31,7 @@ function main() {
   const refusals: string[] = [];
   const reported: string[] = [];
   const landed: string[] = [];
+  const splits: string[] = [];
 
   for (const f of files) {
     const p = JSON.parse(readFileSync(join(PASSAGES, f), 'utf8')) as Record<string, unknown>;
@@ -40,7 +41,12 @@ function main() {
     legacyObjects += r.legacy.objects;
     for (const x of r.refusals) refusals.push(`  ${x.code}  ${x.where}\n      ${x.detail}`);
     reported.push(...r.reported.map((s) => `  ${s}`));
-    for (const sf of r.standardFlags) landed.push(`  ${String(p.id)}  ${sf.axis}  [${sf.disposition}]  judgedBy ${sf.judgedBy}`);
+    for (const sf of r.standardFlags) {
+      const conv = sf.convertedBy ? `  converted by ${sf.convertedBy}` : `  judgedBy ${sf.judgedBy}`;
+      landed.push(`  ${String(p.id)}  ${sf.axis}  [${sf.disposition}]${conv}${sf.splitNote ? '  [SPLIT]' : ''}`);
+      // Her number to watch: every split found is a legacy flag that was two judgements all along.
+      if (sf.splitNote) splits.push(`  ${String(p.id)}  ${sf.axis} — ${sf.splitNote}`);
+    }
   }
 
   console.log(`\n  ${files.length} passages screened · ${canary.detail} — canary held`);
@@ -53,8 +59,14 @@ function main() {
     `  LEGACY census — counted, NEVER refused (the standard does not decide the twenty-six, and this\n`
     + `  reader does not either): ${legacyStrings} string flag(s), ${legacyObjects} pre-standard object flag(s).`,
   );
+  if (splits.length > 0) {
+    console.log(`\n  SPLITS — her number to watch (a split is a legacy flag that was two judgements all along): ${splits.length} object(s) from split conversions`);
+    for (const s of splits) console.log(s);
+  }
   if (reported.length > 0) {
-    console.log(`\n  REPORTED, not refused (§5 — assertive reason, loadBearing false): ${reported.length}`);
+    // Three reported classes share this block — absence claims, pending bytes, assertive-not-load-
+    // bearing — and each line names its own; a header claiming one class over all three is R591.
+    console.log(`\n  REPORTED, not refused (§5 — each line names its class): ${reported.length}`);
     for (const s of reported) console.log(s);
   }
   if (refusals.length > 0) {

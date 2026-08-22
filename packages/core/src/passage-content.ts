@@ -80,7 +80,25 @@ export interface StandardFlag {
   judgedBy: string;
   judgedAt: string;
   loadBearing?: boolean;
-  strike?: { span: string; lines: number[] };
+  /**
+   * Three states (her ninety-second, §1):
+   *   { span, lines }          a presence claim, completed — byte-verbatim at the gate.
+   *   'ABSENCE-CLAIM-NO-SPAN'  a load-bearing ABSENCE claim — *no approving comment*, *no violence
+   *                            on the page*. The strike test cannot quote a span supporting an
+   *                            absence, so it is REPORTED in every run and never refused —
+   *                            section 3's honesty clause arriving in section 5: the standard says
+   *                            what it cannot check rather than implying coverage.
+   *   'PENDING-BYTES'          a presence claim whose passage has not crossed. Valid until the
+   *                            passage is present; the verbatim gate completes it at landing;
+   *                            refuses only when the passage IS present and the span still pends.
+   */
+  strike?: { span: string; lines: number[] } | 'ABSENCE-CLAIM-NO-SPAN' | 'PENDING-BYTES';
+  /** Conversion provenance (her five rulings): the conversion is HER act, the original judgement
+   *  stays UNRECORDED, and the prose travels inside the object as its only provenance. */
+  convertedBy?: string;
+  convertedAt?: string;
+  sourceProse?: string;
+  splitNote?: string;
   /** Unknown keys pass through (R57). */
   [key: string]: unknown;
 }
@@ -154,10 +172,21 @@ export function readContentFlags(
       return;
     }
     // ---- §2: a name from MAY_JUDGE. A role-word is not a name. ----
-    if (typeof o.judgedBy !== 'string' || !MAY_JUDGE.includes(o.judgedBy)) {
+    /**
+     * **A CONVERTED FLAG'S ORIGINAL JUDGEMENT IS UNRECORDED, AND REFUSING THAT WOULD INVENT
+     * PROVENANCE BACKWARDS** (her ninety-second §1). Her rulings: the conversion is HER act; the
+     * fields it adds carry `convertedBy: Annie`; *"I am not claiming the original judge assigned
+     * this axis. I am assigning it now, under my name."* So `judgedBy: "UNRECORDED"` is accepted
+     * exactly when `convertedBy` is a MAY_JUDGE name — the judgement §2 requires is the
+     * conversion's, and it is named. UNRECORDED with no named converter refuses as before.
+     */
+    const judgedOk = typeof o.judgedBy === 'string' && MAY_JUDGE.includes(o.judgedBy);
+    const convertedOk = o.judgedBy === 'UNRECORDED'
+      && typeof o.convertedBy === 'string' && MAY_JUDGE.includes(o.convertedBy);
+    if (!judgedOk && !convertedOk) {
       out.refusals.push({
         code: 'UNJUDGED_FLAG', where,
-        detail: `judgedBy is ${JSON.stringify(o.judgedBy ?? null)} — a content judgement carries a NAME from MAY_JUDGE (${MAY_JUDGE.join(', ')}); a role-word refuses identically.`,
+        detail: `judgedBy is ${JSON.stringify(o.judgedBy ?? null)} — a content judgement carries a NAME from MAY_JUDGE (${MAY_JUDGE.join(', ')}); a role-word refuses identically. (A converted flag may carry judgedBy UNRECORDED only beside a convertedBy from MAY_JUDGE.)`,
       });
       return;
     }
@@ -181,16 +210,30 @@ export function readContentFlags(
       });
       return;
     }
-    // ---- §5: the strike test. ----
+    // ---- §5: the strike test, now three states. ----
     if (o.loadBearing === true) {
-      const strike = o.strike as { span?: unknown; lines?: unknown } | undefined;
-      const span = typeof strike?.span === 'string' ? strike.span.replace(/\r\n/g, '\n') : null;
-      if (!span || extract === null || !extract.includes(span)) {
-        out.refusals.push({
-          code: 'STRIKE_SPAN_DRIFTED', where,
-          detail: `loadBearing flag whose strike.span is ${span === null ? 'absent' : 'not verbatim in the passage'} — the disposition rests on the claim, and the claim rests on this span.`,
-        });
-        return;
+      if (o.strike === 'ABSENCE-CLAIM-NO-SPAN') {
+        // Valid, visible, never refused. An absence claim is load-bearing and unstrikeable.
+        out.reported.push(`${where}: ABSENCE-CLAIM-NO-SPAN — a load-bearing absence claim the strike test cannot quote a span for. Reported every run; the standard says what it cannot check.`);
+      } else if (o.strike === 'PENDING-BYTES') {
+        if (extract !== null) {
+          out.refusals.push({
+            code: 'STRIKE_SPAN_DRIFTED', where,
+            detail: 'strike is PENDING-BYTES but the passage IS present — the verbatim gate completes a pending span at landing, so a span still pending beside its own bytes is a landing that skipped the gate.',
+          });
+          return;
+        }
+        out.reported.push(`${where}: PENDING-BYTES — presence claim awaiting its passage; completes at the verbatim gate on landing.`);
+      } else {
+        const strike = o.strike as { span?: unknown; lines?: unknown } | undefined;
+        const span = typeof strike?.span === 'string' ? strike.span.replace(/\r\n/g, '\n') : null;
+        if (!span || extract === null || !extract.includes(span)) {
+          out.refusals.push({
+            code: 'STRIKE_SPAN_DRIFTED', where,
+            detail: `loadBearing flag whose strike.span is ${span === null ? 'absent' : 'not verbatim in the passage'} — the disposition rests on the claim, and the claim rests on this span.`,
+          });
+          return;
+        }
       }
     } else if (typeof o.reason === 'string' && ASSERTIVE.test(o.reason)) {
       // Reported every run, never refused: a judgement somebody made, kept visible (§5).

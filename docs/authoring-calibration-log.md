@@ -17817,3 +17817,31 @@ landing, axes from her table — written only after `readContentFlags` accepted 
 the load-bearing strike span taken from THIS store's extract bytes. The standing run now prints
 them as its first arrivals, and *"refused nothing"* no longer carries the not-a-pass rider, because
 it is finally a sentence about input.
+
+## R629 — The two strike states, the conversion form, and the census that decrements
+
+**HER FIVE CONVERSION RULINGS govern the fifty-nine to come, and the reader now enforces the ones a
+reader can:** the prose travels inside the object (`sourceProse` — the only provenance these flags
+have); the conversion is HER act and the original judgement stays UNRECORDED; two axes in one prose
+split into two objects sharing one `sourceProse`, noted; absence claims carry
+**`ABSENCE-CLAIM-NO-SPAN`** — load-bearing, unstrikeable, reported every run and never refused,
+*"section 3's honesty clause arriving in section 5"*; presence claims awaiting their passage carry
+**`PENDING-BYTES`**, valid until the bytes exist, completing at the verbatim gate on landing, and
+**refusing when the passage IS present and the span still pends — a landing that skipped the gate.**
+
+**AND §2 MET THE CONVERSIONS BEFORE THEY LANDED**: her objects carry `judgedBy: "UNRECORDED"`, which
+the judge gate would have refused — and refusing would invent provenance backwards. Ruled from her
+own words: UNRECORDED is accepted exactly when `convertedBy` is a MAY_JUDGE name, because the
+judgement §2 requires is the conversion's, and it is named. Sixteen reader tests, six new.
+
+**THE THREE TREASURE-ISLAND CONVERSIONS LANDED THROUGH THE DOOR**, her objects parsed from the
+block's own JSON — never re-typed — with a byte-guard proving each displaced legacy string equals
+her `sourceProse` verbatim, so the displacement destroys nothing the objects do not hold. The
+standing run reads exactly the predicted state: **5 standard-shape flags, 51 legacy strings
+(53 − 2), 8 pre-standard objects, the split visible on its face** — two objects marked [SPLIT]
+sharing flag 1's prose, her number to watch, because **every split found is a legacy flag that was
+two judgements all along.**
+
+**One R591 caught on the run's own face**: the reported block's header claimed *"assertive reason,
+loadBearing false"* over lines that were absence claims — one class's name over three classes'
+members. The header now defers to the lines, which each name their own.

@@ -84,3 +84,58 @@ describe('the contentFlags reader (R627/R628, standard DRAFT-1)', () => {
     expect(r.refusals[0]?.detail).toContain('refusing the shape, not returning empty');
   });
 });
+
+describe('her two strike states (ninety-second return §1)', () => {
+  const BASE = {
+    axis: 'alcohol', element: 'rum', severity: 'mild', disposition: 'keep',
+    condition: null, conditionMetBy: null, reason: 'Incidental period detail with no approving comment.',
+    judgedBy: 'Annie', judgedAt: '2026-08-22',
+  };
+
+  it('ABSENCE-CLAIM-NO-SPAN on a load-bearing flag is valid, REPORTED every run, never refused', () => {
+    const r = readContentFlags({ id: 'p', contentFlags: [{ ...BASE, loadBearing: true, strike: 'ABSENCE-CLAIM-NO-SPAN' }], extract: 'text' });
+    expect(r.refusals).toHaveLength(0);
+    expect(r.standardFlags).toHaveLength(1);
+    expect(r.reported.some((s) => s.includes('ABSENCE-CLAIM-NO-SPAN'))).toBe(true);
+  });
+
+  it('PENDING-BYTES is valid while the passage is absent, and reported as awaiting it', () => {
+    const r = readContentFlags({ id: 'p', contentFlags: [{ ...BASE, loadBearing: true, strike: 'PENDING-BYTES' }] });
+    expect(r.refusals).toHaveLength(0);
+    expect(r.reported.some((s) => s.includes('PENDING-BYTES'))).toBe(true);
+  });
+
+  it('PENDING-BYTES refuses when the passage IS present — a landing that skipped the gate', () => {
+    const r = readContentFlags({ id: 'p', contentFlags: [{ ...BASE, loadBearing: true, strike: 'PENDING-BYTES' }], extract: 'the bytes are here' });
+    expect(r.refusals[0]?.code).toBe('STRIKE_SPAN_DRIFTED');
+    expect(r.refusals[0]?.detail).toContain('skipped the gate');
+  });
+
+  it('a converted object counts as standard-shape, so the legacy census decrements as conversions land', () => {
+    const converted = { ...BASE, loadBearing: true, strike: 'ABSENCE-CLAIM-NO-SPAN',
+      judgedBy: 'Annie', convertedBy: 'Annie', convertedAt: '2026-08-22',
+      sourceProse: 'the original string verbatim', splitNote: 'one of two' };
+    const r = readContentFlags({ id: 'p', contentFlags: [converted, 'a still-legacy string'], extract: 't' });
+    expect(r.standardFlags).toHaveLength(1);
+    expect(r.legacy.strings).toBe(1);
+    expect(r.standardFlags[0]?.sourceProse).toBe('the original string verbatim');
+  });
+});
+
+describe('converted flags and §2 (do not invent provenance backwards)', () => {
+  const CONV = {
+    axis: 'alcohol', element: 'rum', severity: 'mild', disposition: 'keep',
+    condition: null, conditionMetBy: null, reason: 'Incidental period detail.',
+    judgedBy: 'UNRECORDED', judgedAt: 'UNRECORDED',
+    convertedBy: 'Annie', convertedAt: '2026-08-22', sourceProse: 'the original',
+  };
+  it('judgedBy UNRECORDED is accepted beside a convertedBy from MAY_JUDGE — the conversion is the judged act', () => {
+    const r = readContentFlags({ id: 'p', contentFlags: [CONV], extract: 't' });
+    expect(r.refusals).toHaveLength(0);
+    expect(r.standardFlags).toHaveLength(1);
+  });
+  it('UNRECORDED with no named converter refuses as before', () => {
+    const r = readContentFlags({ id: 'p', contentFlags: [{ ...CONV, convertedBy: undefined }], extract: 't' });
+    expect(r.refusals[0]?.code).toBe('UNJUDGED_FLAG');
+  });
+});
