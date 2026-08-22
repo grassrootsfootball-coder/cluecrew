@@ -159,6 +159,20 @@ async function main() {
       whyThatOrder: 'GENERALITY IS THE FAILURE THIS KIND IS EXPOSED TO; ASSERTION IS THE FAILURE IT HAS. A library hint cannot see its carriers, so breadth is its standing risk and a claim about the item is its standing fault. The second needs judgement and the first needs a comparison, so the comparison goes first.',
     },
     theQuestionThisKindTakes: 'A library hint is read against its carriers. It is NOT read against a key — it does not know which item it will land on, which is exactly why it cannot coach one.',
+    /**
+     * **HER STRUCTURAL TEST — THE REPAIR, NOT JUST THE DIAGNOSIS (R612).** A library hint may point
+     * only at what the ERROR ITSELF GUARANTEES is present on every carrier. `en-extreme-option-pull`
+     * is the model: the error is choosing an option that overreaches, so every carrier — by the
+     * definition of the error — has an option with a strongest word, and "Check the strongest word
+     * in the option" points at something that cannot be absent. "Two people are being described"
+     * points at a fact about the PASSAGE, which the error guarantees nothing about.
+     */
+    theStructuralTest: {
+      askOfEachEntry: 'What does this ERROR guarantee is present on every item that carries it? That — and only that — is what the replacement hint may point at.',
+      theModel: 'en-extreme-option-pull: "Does the passage really go that far? Check the strongest word in the option." The error IS choosing an overreaching option, so a strongest word exists on every carrier by definition. The hint cannot be false anywhere its tag is right.',
+      whereNothingIsGuaranteed: 'The hint names a MOVE and asserts nothing. An error that guarantees no shared feature cannot support an assertion, and a move is true wherever the move is right.',
+      appliedToTheFifteen: 'For each row whose asserting clause is aboutThisItem: state what the error guarantees, then check the clause points at that and not at the passage, the characters, or the layout — none of which the tag controls.',
+    },
     whyNotOptionSets: 'An option set answers the ITEM-hint question. This row does not want one — it wants the items the entry reaches. The six key-only exporters are an item-level defect and were never on this path.',
     ordering: 'By carrier count, biggest first. Fit is hardest where reach is widest.',
     theClauseMarking: 'Every asserting clause is marked on its row, the same shape as the visual-act file. The marking is what made that one readable: without it a reader reconstructs the matcher for every row, which is the expensive half.',

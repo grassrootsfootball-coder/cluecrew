@@ -17374,3 +17374,75 @@ manifest diff names as never having arrived.
 **Third wording in three turns known to exist, correctly formed, and unreadable from here** — after
 the three of the sixty-fifth. **Re-issuing would create a second wording under one id**, which is the
 fault the block exists to prevent, so it waits.
+
+## R612 — The structural test: a library hint points at what the error guarantees
+
+**Hers, and it is the REPAIR where R607 was the diagnosis.**
+
+> **A library hint may point only at something that exists BY DEFINITION on every carrier of that
+> error.** Ask of each entry: what does this error GUARANTEE is present? That is what the
+> replacement points at. **Where nothing is guaranteed, the hint names a move and asserts nothing.**
+
+**`en-extreme-option-pull` is the model**: *"Does the passage really go that far? Check the strongest
+word in the option."* The error IS choosing an overreaching option, so a strongest word exists on
+every carrier **by the definition of the error** — the hint cannot be false anywhere its tag is
+right. *"Two people are being described"* points at a fact about the PASSAGE, which the error
+guarantees nothing about. **The difference between the two is not care or quality; it is what the
+assertion is anchored to.**
+
+In the brief as `theStructuralTest`, applied to the fifteen aboutThisItem rows.
+
+## R613 — The authoring position: the entry above the eight instances
+
+**The fault in the failing library hints is not carelessness and not generality.** It is that **a
+library hint is written while looking at ONE carrier** — the first, usually — **and no amount of care
+fixes it, because the author cannot see the carriers that do not exist yet.**
+
+She said it of herself (R581): *"I was writing a hint for ninety-seven carriers I had not seen."*
+The structural test (R612) is the escape: **what the error guarantees is knowable WITHOUT seeing the
+carriers**, because it follows from the error's definition rather than from any instance. An author
+who anchors to the guarantee is immune to the position; an author who anchors to the carrier in front
+of them writes `two people` because the carrier in front of them had two people.
+
+**AND THE SAME TURN PRODUCED A NEW INSTANCE OF THE CLASS `check:reissue-completion` EXISTS FOR.**
+`en-contraction-apostrophe` was approved in the eng003-third return — *"approved as written…
+CZ-B7 D retags on its write; the row becomes servable when the entry lands"* — **and the entry never
+landed.** The draft sat on disk, the approval sat in the return, and CZ-B7's `Youre` sat under
+`en-apostrophe-possession`, whose hint's third sentence — *"Try swapping in 'it is'"* — does nothing
+for *you're*. **Retagged on the entry's write, weeks late, as her original ruling specified.
+Amending the possession hint to cover it would have fixed the symptom, kept the fault, and broken
+the hint for the possessive carriers it fits** — R607's assertion fault manufactured on purpose.
+
+## R614 — The entry most exposed to a mistag, delivered with the second sense named
+
+**Her point: `en-vocab-neighbouring-sense`'s hint asserts a property of the WORD — *"More than one
+meaning fits this word"* — so it is only true WHILE THE TAGGING IS RIGHT.** A mistag under most
+entries gets an irrelevant move; **a mistag here gets a false assertion about the child's own word**,
+told to a child who is holding a one-sense word and being sent to choose among its meanings.
+
+`neighbouring-sense-carriers-38c7216fa1a86585.json`: **29 carriers, 4 LIVE, 0 without a quoted
+headword** — each row naming the word, the key sense, and **the second sense the tag claims**, so a
+mistag is visible rather than inferred. The naming is mechanical (the tagged option IS the claimed
+sense); the judgement of whether it is a real sense of the same word is hers.
+
+`ENG-001-WIW-19` shows the format working on sight: *"Went without any food"* on *made fast* is a
+sense of a DIFFERENT PARSE — *fast* the noun, not *made fast* the verb phrase — which is exactly the
+mistag shape the delivery exists to surface. Flagged as a candidate on its row; the call is hers.
+
+## R615 — The WIW-22 luck, plainly
+
+**`ENG-001-WIW-22` is one of two carriers of `en-wrong-scope-retrieval` whose stem has no line
+numbers, and it is LIVE. The library hint that says *"Check the line numbers"* does not reach a child
+on it — because its own item hint serves. And its own item hint serves because she amended its
+wording two hours before the fault was found**, which set `hintAuthoredBy` and `hintAuthority`
+(R600).
+
+**Her amendment closed a hazard neither of us was looking at. Had she amended any other item, a LIVE
+child-facing hint would currently instruct an act with no object on screen.** Recorded as luck,
+because writing it down as anything else would let it read as a control.
+
+**And the second zero-caught-at-the-query this week (R609's detector, after R453's scope): both from
+a pattern carrying less than the source.** *"the commonest"* against *"the word's commonest everyday
+sense"* — a possessive broke the match, the zero would have read as *no other tag asserts
+uniqueness*, and it was caught by reading the description rather than trusting the pattern. The
+pattern family now has eight members and one sentence still covers them all.
