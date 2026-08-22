@@ -27,9 +27,11 @@ const SCRIPTS = join(dirname(fileURLToPath(import.meta.url)));
 
 /**
  * **THE FLOOR MOVES UP AND NEVER DOWN.** Raise it in the same commit that guards a delivery.
- * Currently 1: `deliver-thirtysix-hints.ts`, the delivery the fault happened in.
+ * Currently 2: `deliver-thirtysix-hints.ts` (where the fault happened) and
+ * `deliver-library-hints-with-carriers.ts` (built after the rule, so it carried the guard from its
+ * first line — which is the only way a backlog of thirty-three ever gets smaller).
  */
-const FLOOR = 1;
+const FLOOR = 2;
 
 /** A cast applied to a JSON column — the idiom by which this codebase reads a field by name. */
 const READS_BY_NAME = /\b(explanation|stem|content|textProvenance|mechanic)\b[^\n]{0,60}\bas\b/;
