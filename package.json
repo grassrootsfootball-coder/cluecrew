@@ -149,6 +149,8 @@
     "check:migration-replay": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- sh -c 'prisma migrate diff --from-migrations prisma/migrations --to-schema-datasource prisma/schema.prisma --shadow-database-url \"$SHADOW_DATABASE_URL\" --exit-code'",
     "check:db-invariants": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-db-invariants.ts",
     "check:reasoning-premises": "tsx scripts/check-reasoning-premises.ts",
+    "deliver:library-carriers": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/deliver-library-hints-with-carriers.ts",
+    "check:hint-coaching": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-hint-coaching.ts",
     "check:field-reads": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-field-reads.ts",
     "check:amendments-landed": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-amendments-landed.ts",
     "check:authority-shape": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-authority-shape.ts",

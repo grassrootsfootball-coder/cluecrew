@@ -16447,3 +16447,65 @@ gap.
 each row back; not-in-the-store 25 → 10.** Residual: **4 word-card definitions** (`stoic` ×2, `shiny`,
 `luminous`) and **1 description field**, all in tables `apply-all-unlanded` does not own — reported,
 not written, because a writer that reaches past its own table is the fault this register opened with.
+
+## R571 — Candidate coaching is measurable by two routes, and the third band is not
+
+**Her question: can a check find a hint that gives its own key away — and if it can only find
+containment, say that, because the pointing band has been ruled unreachable before.**
+
+**Both routes reach, and NEITHER ALONE would have found both known cases.**
+
+- **CONTAINMENT** — the hint reuses the key's own content words. `WIW-05`: *"…So does the climb."*
+  against key *"To show the climb went on and on and was hard work."* Shared: `climb`. Score 0.20.
+- **ANCHORED POINTING** — the hint quotes a phrase; the phrase locates a sentence in the passage;
+  **the key's content is in that sentence.** `WIW-12`: the hint quotes *'never in his life'*, which
+  lands on *"Never in his life had he seen a river before…"*, and the key is *"A river."*
+
+**`WIW-12` SHARES NOT ONE CONTENT WORD WITH ITS KEY — containment scores it 0.00.** It is invisible
+to the obvious check and it is the *clearer* of the two faults. A single-route detector would have
+found one of two and looked like it worked, which is the shape this register keeps meeting.
+
+**WHAT IS NOT REACHABLE, AND IT IS NOT CLAIMED: pointing by DESCRIBING rather than quoting.**
+*"Read the sentence that comes just before he throws the brush down"* carries no locatable anchor;
+matching a description to a moment is a reading, not a lookup. **13 of 36 hints are in that band and
+the count is printed on every run**, so an empty pointing result can never read as a clean bank.
+**`WIW-10` — one of the three she amended — is in that band.** The check did not surface it and says
+so.
+
+**5 candidates from 36: 1 by pointing, 4 by containment.** Two are her confirmed faults; **three sit
+in batches she has not read, so the precision of this check is UNMEASURED, not measured-good.**
+Every row is a candidate marked with what it matched on (R569) — the verdict is hers (R94).
+
+**And the same run answered a question nobody asked**: scanning the 36 for her `WIW-03` shouted-capital
+fault found **2 of 36** — `WIW-03`, which she ruled, and **`WIW-20`, in batch 3, unread.** A ruling
+applied to its population rather than its row.
+
+## R572 — Item hints and library hints take different questions, so the artefacts differ
+
+**She has ruled the review split by KIND, and the split is structural rather than a quality
+difference between the two.**
+
+    AN ITEM HINT    is read against its KEY      — does it give the answer away?
+    A LIBRARY HINT  is read against its CARRIERS — does one wording fit them all?
+
+**The characteristic failures follow from the definitions.** An item hint is written by somebody
+looking at a single item, and **the sentence that settles that item is the sentence that contains the
+answer** — so it coaches. **A library hint cannot make that mistake**, because it does not know which
+item it will land on; its failure is the opposite one, generality so wide it fits everything and
+helps nobody. Two of five item-hint faults so far are coaching; seven of nine library hints on those
+same items are one generic *check the line numbers*. **Two characteristic failures, not a league
+table.**
+
+**WHICH MOVES THE SIX KEY-ONLY EXPORTERS OFF THIS PATH ENTIRELY.** A key without its siblings is a
+defect in an ITEM-level artefact (R472), and the library-hint fit reading was being held behind them.
+It does not want an option set. **It wants the items the entry lands on — and no exporter produced
+those.** `export-misconception-library` delivers every entry's verbatim `childHint` plus a gate
+verdict, which is the transform read, and carries no carriers. **The reading was not deferred. It had
+no artefact.**
+
+`pnpm deliver:library-carriers` is it: every English library entry with at least one carrier, each
+carrying every item it lands on — the item's stem, its status, its question type, and the exact
+option the entry tags. **52 entries, ordered by carrier count, because fit is hardest where reach is
+widest.** `en-plausible-not-stated` reaches **193 items across 4 question types** on one sentence;
+that is 193 chances for a fit to fail, and it is where *"does it fit them all"* stops being
+rhetorical.

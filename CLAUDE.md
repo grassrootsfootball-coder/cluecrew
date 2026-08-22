@@ -306,6 +306,16 @@ here has no register entry. A ruling goes to the register FIRST; it comes here o
   the matching evidence on each row — the word, the span, the value. Without it the reader
   reconstructs the matcher by hand for every row, which is the expensive half; with it, half a file
   resolves in seconds. The smallest form of "a result travels with the thing that produced it".
+- **HINT REVIEW SPLITS BY KIND, AND THE ARTEFACTS DIFFER** (Annie, 2026-08-22 — R572). An ITEM hint
+  is read against its KEY and asked whether it gives it away; a LIBRARY hint is read against its
+  CARRIERS and asked whether one wording fits them all. The characteristic failures follow from the
+  definitions and are not a quality gap: an item hint is written by somebody looking at one item, and
+  the sentence that settles that item is the sentence containing the answer, so it COACHES — while a
+  library hint cannot make that mistake, because it does not know which item it will land on, so its
+  failure is GENERALITY. So an item-hint row carries the key and the full option set
+  (`deliver-thirtysix-hints.ts`), and a library-hint row carries every item the entry lands on
+  (`deliver-library-hints-with-carriers.ts`). The key-only exporters are an item-level defect and are
+  not on the library path at all.
 - Content decisions (items, chapters, misconceptions) go through the CMS
   review pipeline; nothing skips the reviewer.
 - **PILOT CONTENT UNDER ACTIVE REVIEW HAS ONE WRITE PATH: `scripts/lib/pilot-review.ts`, NEVER A
