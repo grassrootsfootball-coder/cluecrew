@@ -77,12 +77,20 @@ export function WalkPanel({ itemId, childId, onDone }: { itemId: string; childId
      * using a screen reader hears from this panel.
      *
      * It was ruled nowhere. It entered in commit `7dffe51`, mine, when this panel was built.
-     * **The only other candidate string, `'Walk through it with me'`, carries the same first
-     * person**, so there is no approved non-persona name to fall back to — and authoring one here
-     * would be the same act again. The group and its name are removed; the paragraphs read as
-     * paragraphs, and a name can be added when one is authored.
+     *
+     * **`How this one works out` is hers, authored in her fifty-eighth block from the Daily Loop
+     * line already approved.** No first person, no promise about structure, and it describes the
+     * CONTAINER rather than addressing the child. She declined to author into the gap on the
+     * grounds that a new string would be the same act one turn later with her name on it.
+     *
+     * **The persona decision itself is still open and still David's** (R554).
      */
-    <div className="crew-replay" data-testid="walk-panel">
+    <div
+      className="crew-replay"
+      role="group"
+      aria-label="How this one works out"
+      data-testid="walk-panel"
+    >
       {/*
         **FOCUS MOVES TO THE NEW SENTENCE; NO LIVE REGION** (Annie, 2026-08-21 — R547). Each tap
         added a paragraph ABOVE the button and announced nothing, so a child heard no change until

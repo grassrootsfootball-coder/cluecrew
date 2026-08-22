@@ -16018,3 +16018,77 @@ was manufacturing some.
 *this element has nothing to say*; the other says *this element's children are already saying it.*
 **A rule of the form "hidden elements need labels" produces the first repair correctly and the second
 one backwards.**
+
+## R551 — Code comments join the claim ledger
+
+**Her ruling.** **The object is the ANNOUNCEMENT ORDER. The comparison is a TRANSCRIPT. The transcript
+took one document to produce.**
+
+Two comments this week asserted a property of a surface and were wrong about it:
+
+- the errorspot preview: *"a screen reader already receives the sentence once, through the group
+  below"* — **it does not**, the group's name describes the sentence rather than carrying it;
+- the errorspot verdict: *"the layout says 'different kind of thing' so no sentence has to"* —
+  **correct on screen, and the structure happened to carry it in the ear too, which the comment did
+  not claim and did not check.**
+
+**BOTH WROTE THEIR ASSUMPTION DOWN AT THE MOMENT IT WAS MADE, WHICH IS MORE HONEST THAN MOST DESIGN
+REASONING EVER GETS.** The fault is not that somebody assumed. **It is that nothing read the
+assumptions back against the surface** — and a comment asserting a fact about what a child perceives
+is a claim about a text with code as the text, which is the ledger's shape exactly.
+
+**Cheap, because the comparison already exists**: one transcript settled both.
+
+## R552 — Identical acts with opposite reasons: the reason goes where the act is
+
+**Her rule.** **The two deletions are byte-identical.** The lantern's label was **suppressing content
+that existed**; the mascot's was **manufacturing content that did not.**
+
+**A diff cannot carry that, and a rule reasoning from the ACT gets one right and the other backwards.**
+*"Hidden elements need labels"* repairs the mascot correctly and re-breaks the lantern.
+
+**So the reason goes where the act is** — in the code, beside the deletion, not only in a register
+entry a future reader may not reach.
+
+**Third instance of the shape**: the **PU-08 library ruling** (a decision not to serve, recorded so it
+could not read as an omission — R399) and the **hold lifted deliberately rather than by inheritance**
+(R455). **All three are acts whose meaning is invisible in their result.**
+
+## R553 — Check rather than follow: twice this week a sound thing was nearly moved
+
+**Her note.** She ruled a change to something **already correct** — the errorspot verdict's group
+boundary — and **had the ruling been implemented rather than checked, something sound would have been
+moved for a reason that did not apply to it.**
+
+**Twice this week.** The other was `export-review-pack`, first in a fix order she was asked to act on
+and **already compliant**; three of that order's heads were.
+
+**The general form: a ruling names a property, and the check asks whether THIS instance already has
+it.** Implementing directly assumes the instance is an example of the fault, **which is exactly what a
+misclassification supplies** — and five of those this fortnight all pointed at things that turned out
+correct.
+
+## R554 — The persona decision is David's, and declining it into silence is not deciding it
+
+**Recorded because it has now been refused once and arrived anyway twice.**
+
+She refused first person in the **Daily Loop copy** and ruled it a product decision to be taken
+deliberately rather than inside a mode fix. **It then entered as `Walk this one with me`** — a group
+label, **the first thing a child using a screen reader hears from that surface.** Removed twice, and
+**the only other candidate string, `Walk through it with me`, carries the same first person.**
+
+**The walk panel now reads `How this one works out`**, hers, from the Daily Loop line already approved
+— **and she declined to author a replacement into the gap on the grounds that it would be the same act
+one turn later with her name on it.**
+
+**HER POINT: the third time it arrives it will be somewhere neither of them is looking**, and the
+pattern is that **it arrives in the quietest available place rather than in copy anyone reviews.**
+
+**The question, and it is David's: does anything in this product speak to a child in the first
+person?** Nothing does **right now, by accident rather than by ruling.**
+
+**Neither answer is the safe one.** No wants writing down, so an authoring instinct meets a rule
+instead of a gap. Yes wants a scope — **which surfaces, in what voice, and who authors it** — because
+the instinct producing *walk this one with me* and *I'll show you how I worked this out* is trying to
+make a product that talks to a nine-year-old sound like a person, **and that is not a bad instinct to
+have arrive unruled twice.**
