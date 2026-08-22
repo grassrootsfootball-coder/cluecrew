@@ -151,11 +151,37 @@ async function main() {
       });
       if (lacking.length === 0) continue;
       const live = lacking.filter((i) => i.status === 'LIVE');
+      /**
+       * **BY QUESTION TYPE, BECAUSE FAILING SYSTEMATICALLY IS A DIFFERENT FAULT FROM FAILING AT
+       * RANDOM (Annie, R581).** A hint that misses a scattered few of its carriers is a hint that is
+       * slightly loose. **A hint that fits every inference item and no vocabulary item at all was
+       * written for one of the types its tag serves** — the tag spans four, and the wording belongs
+       * to one. The second is repaired by scoping or by splitting the entry; the first is repaired
+       * by rewording. The counts tell them apart and a total cannot.
+       */
+      const types = [...new Set(carriers.map((i) => i.questionTypeId))].sort();
+      const byType = types.map((t) => {
+        const all = carriers.filter((i) => i.questionTypeId === t).length;
+        const has = all - lacking.filter((i) => i.questionTypeId === t).length;
+        return { t, has, all };
+      });
+      const nonePresent = byType.filter((b) => b.has === 0);
+      // A MAJORITY, not unanimity. Inference is 8 of 9, and requiring 9 of 9 hid the very shape
+      // this exists to name — one strict clause turning a real pattern into no output at all.
+      const allPresent = byType.filter((b) => b.has > 0 && b.has / b.all >= 0.5);
       findings.push(
         `  ${f.kind === 'FINDABLE' ? 'LACKS THE FEATURE' : 'CANDIDATE        '}  ${m.id}  asserts ${f.name}`
         + `\n      hint: ${hint}`
         + `\n      ${lacking.length} of ${carriers.length} carrier(s) lack it — ${live.length} of them LIVE`
         + `\n      first few: ${lacking.slice(0, 5).map((i) => i.id).join(', ')}`
+        + `\n      BY QUESTION TYPE (carriers HAVING the feature):`
+        + byType.map((b) => `\n            ${b.t.padEnd(22)} ${b.has} of ${b.all}`).join('')
+        + (types.length > 1 && nonePresent.length > 0 && allPresent.length > 0
+          ? `\n      SYSTEMATIC, NOT SCATTERED: the feature is absent from EVERY carrier in `
+            + `${nonePresent.map((b) => b.t).join(', ')}, and present in MOST carriers in `
+            + `${allPresent.map((b) => `${b.t} (${b.has}/${b.all})`).join(', ')}. This wording was `
+            + `written for one of the ${types.length} question types its tag serves.`
+          : '')
         + `\n      how tested: ${f.why}`,
       );
     }
@@ -163,6 +189,26 @@ async function main() {
 
   console.log(`\n${findings.length} FINDING(S) — each a row worth her reading, never a verdict.\n`);
   for (const l of findings) console.log(`${l}\n`);
+  /**
+   * **THE POPULATION FOR THE SAME SHAPE ELSEWHERE — a population, never a finding.** An entry whose
+   * carriers span several question types is a CANDIDATE for a wording that fits one of them; whether
+   * it does is a reading, and only the assert-a-feature subset above is decided by looking.
+   */
+  const spanning = lib
+    .filter((m) => m.id.startsWith('en-'))
+    .map((m) => ({
+      id: m.id,
+      types: [...new Set(items.filter((i) => i.options.some((o) => (o as { misconceptionId?: string | null }).misconceptionId === m.id))
+        .map((i) => i.questionTypeId))],
+    }))
+    .filter((x) => x.types.length >= 2);
+  console.log(
+    `  ENTRIES WHOSE CARRIERS SPAN SEVERAL QUESTION TYPES: ${spanning.length} English entr(ies).\n`
+    + '  A POPULATION, NOT A FINDING — a tag serving four types may still have one wording that fits\n'
+    + '  all four. Only the rows above are decided by looking; the rest is a reading.\n'
+    + spanning.sort((a, b) => b.types.length - a.types.length).slice(0, 8)
+      .map((x) => `      ${x.id.padEnd(38)} ${x.types.length} type(s)`).join('\n') + '\n',
+  );
   console.log(
     '  THE BOUND, AS A COUNT:\n'
     + `      ${asserting.length} English hint(s) assert a feature this can TEST  — the population.\n`

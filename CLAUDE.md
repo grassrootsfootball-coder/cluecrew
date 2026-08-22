@@ -324,6 +324,14 @@ here has no register entry. A ruling goes to the register FIRST; it comes here o
   receive is the value (R25). On `ENG-001-WIW-10` the tags are what identify the likely wrong answer:
   one option carries `en-extreme-option-pull` where every sibling carries something milder, and
   without that there are two readings and no reason to prefer either.
+- **AN ABSENT RETURN IS NOT REPORTED ABSENT — IT IS NOT REPORTED** (Annie, 2026-08-22 — R579). Every
+  reader here iterates the return files that are PRESENT, so a ruling in a return that did not cross
+  is invisible rather than late. `pnpm check:return-sequence` computes the gap from the ordinals in
+  the filenames — the trick `check:register` has used for rule numbers since R1, never applied to the
+  channel the rules arrive through. Seven returns are currently absent. **The amendment block solved
+  a PARSING problem and does not solve a CROSSING problem**: three authored wordings sat in a
+  correctly-formed, correctly-parseable block for two turns while being reported missing, because
+  the file was not here. A gap is reported, never repaired — only she can send a return.
 - Content decisions (items, chapters, misconceptions) go through the CMS
   review pipeline; nothing skips the reviewer.
 - **PILOT CONTENT UNDER ACTIVE REVIEW HAS ONE WRITE PATH: `scripts/lib/pilot-review.ts`, NEVER A

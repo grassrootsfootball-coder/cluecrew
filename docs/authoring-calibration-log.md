@@ -16681,3 +16681,104 @@ input converts a clean result into a crash.
 **The transferable half: a never-run script is invisible to every check that reads OUTPUT.** Nothing
 here screens for a script that always aborts, and 330 DRAFT items were being screened by nobody while
 the fix list recorded the script as merely untested.
+
+## R579 — The block solved a parsing problem; it does not solve a crossing problem
+
+**Her line, and it is the entry: *a machine-readable record that nobody reads is a prose record with
+extra formatting.*** The amendment block's own failure mode, arriving on the amendment block.
+
+**THE DIAGNOSIS IS CROSSING, NOT READING, AND IT IS PROVED RATHER THAN INFERRED.** The reader parses
+her sixty-seventh return's block, and reads **50 amendments from the indented BLOCK shape** across the
+returns it can see. **`annie-sixtyfifth-return.md` is not on this disk.** The three wordings for
+`WIW-10`, `WIW-12` and `WIW-13` were correctly formed and correctly parseable the whole time; the
+file carrying them never arrived. **She is right to refuse to retype them into prose — typing them
+again is the practice the block replaced.**
+
+**AND THE GAP IS SEVEN, NOT THREE.** Returns **59, 60, 61, 63, 64, 65 and 66** have no file, each
+sitting between two returns that do. `pnpm check:return-sequence` computes it from the ordinals in
+the filenames — the same trick `check:register` has done for rule numbers since R1, never once
+applied to **the channel the rules arrive through.**
+
+**AN ABSENT RETURN IS NOT REPORTED ABSENT — IT IS NOT REPORTED.** Every reader here iterates the
+files that are present, so a ruling in a return that did not cross is not late, it is invisible. That
+is R568's null-from-a-renamed-field one level up: the shape of the evidence makes the missing thing
+and the empty thing identical.
+
+**A gap is reported, never repaired.** Only she can send a return, and only she can say whether a
+number was ever used — an absent number may be a return that did not cross, or a ruling relayed in
+conversation and never written to a file at all. **Both are the same fault from this side.**
+
+**AND THE OUTBOUND LEG FAILED IDENTICALLY IN THE SAME TURN.** Batches three and four and the
+attribute-transfer carriers are all in `from-cluecrew/` with their sidecars, staged at 14:09, 18:04
+and 18:11. **Nothing new is on her disk.** R255 exactly — STAGED is not ARRIVED, and only the
+receiver can report arrival — but this is the first time both directions have failed at once, which
+is what makes it a channel fault rather than an incident.
+
+## R580 — A description naming two branches, and a hint covering one
+
+**Two fields in one row, disagreeing, and nothing was comparing them.**
+
+    en-attribute-transfer
+      description: "Assigns one character's described attribute to another, OR THE RIGHT ATTRIBUTE
+                    AT THE WRONG VALUE."
+      childHint  : "Two people are being described. Check which one each detail belongs to."
+
+**The second branch needs no second person**, and that is established from the two fields without a
+single carrier being read.
+
+**THIS IS NOT THE WIDENED-WITHOUT-HINT CHECK, and the difference is the whole reason it went
+unseen.** Nothing here was widened. **The description was always broader than its hint**, from the
+day both were written — so a change-detector cannot see it, because there was no change. 274 entries
+were audited for drift with this sitting inside one of them.
+
+**2 English findings from a findable population of 15**: `en-attribute-transfer`, and
+`en-vocab-form-lookalike` — whose description names *a different word the target resembles* **or a
+morpheme met in other words**, where the hint says only *"Read it letter by letter."* Letter-by-letter
+reading does not reach a morpheme fault. 4 more in maths.
+
+**THE BARE-`or` SPLITTER IS RECORDED AS REFUSED.** Allowing any ` or ` raised recall and destroyed
+what the count is for: it split *"the spelling or punctuation error"* — one noun phrase — and it split
+ACROSS SENTENCES, reporting `en-article-definiteness`'s trailing *"Distinct from en-a-an-by-spelling"*
+note as an unaddressed branch. **Two of three English findings were the splitter, not the entry.**
+Comma-or, first sentence only. Second bound refused this fortnight for the same reason as the locator's
+three-word window: **a loose population with a stated size is worse than a tight one, because the size
+is what the reader is trusting.**
+
+## R581 — Failing systematically by question type is a different fault from failing at random
+
+**`en-attribute-transfer` serves four question types and its wording belongs to one.**
+
+    en-comp-inference   8 of 9 carriers have two named people
+    en-comp-retrieval   9 of 23
+    en-comp-technique   0 of 3
+    en-comp-vocab       0 of 8
+
+**On a vocabulary or technique item there are no characters at all**, so the hint does not merely
+fail to help — it instructs an act the item does not contain. **A hint that misses a scattered few of
+its carriers is slightly loose; a hint that fits every inference item and no vocabulary item was
+written for one of the types its tag serves.** The first is repaired by rewording, the second by
+scoping or splitting the entry. **A total cannot tell them apart, and the by-type counts are now
+standing output rather than a one-off.**
+
+**She authored it and did not miss it.** *"I wrote at the time that two people assumes exactly two,
+considered widening it, and kept it… I was writing a hint for ninety-seven carriers I had not seen."*
+**The fault is not inattention; it is authoring against an unseen population** — which is the argument
+she has been putting to both stores all fortnight, arriving as an instance of itself.
+
+**THE POPULATION FOR THE SAME SHAPE: 22 English entries whose carriers span two or more question
+types.** A population, never a finding — a tag serving four types may still have one wording that
+fits all four. Only the assert-a-feature subset is decided by looking.
+
+## R582 — A check that cannot fail on a clean population, and one that cannot pass on one
+
+**Hers, and it completes R578 from the other end.** *"A check must be able to fail by finding
+nothing. This one could not pass by finding nothing."*
+
+`export-cowork-workorder` asserted that items NEED WORK, so a clean bank aborted the export — it had
+never once completed, and **compliant by absence** followed. The mirror of the rule this register has
+been applying all fortnight to gates that see an empty population and report a pass.
+
+**Both are one defect: a verdict fixed by the SIZE of a population rather than by its STATE.** A gate
+that cannot fail on a clean bank and a gate that cannot pass on one are measuring the same wrong
+thing. The repair is the same in both directions — assert the SCREENED population non-empty, declare
+the OUTPUT population possibly-empty with a reason, and print the denominator beside it.
