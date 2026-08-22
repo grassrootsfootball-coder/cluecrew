@@ -17756,3 +17756,32 @@ not in the instruction; flagged rather than assumed.
 `e2a52eb9…d867`. The six are WIW-11, 14, 15, 16, 17, 18 — **exactly the sixty-fifth's six
 approvals-as-written, pending her confirmations**, which is the residue predicted before the count
 was taken. The drain and the exposure list now agree from opposite directions.
+
+## R627 — The retag executed on its met condition; the six armed; the reader designed, not built
+
+**ITEM 1.** SP-01 B retagged `en-homophone-by-sound` → `en-spelling-form-lookalike`, executing her
+ENG-003 fifth-return signature — the creation ruling's condition (*"SP-01 B retags when it lands"*)
+was met by the entry landing last turn, and the retag is the same authority the entry carries, not a
+new ruling. Read back: the resolver serves *"Two words can look almost the same. Read the middle
+letters slowly, not the shape."* **SP-01 remains DRAFT** — the whole exchange happened with no child
+in reach.
+
+**ITEM 2 — ARMED, NOT EXECUTED.** Her ninetieth confirms the last six (WIW-11, 14, 15, 16, 17, 18)
+**have not arrived on her disk**. When her confirmations cross: land through the standing path,
+re-emit, and emit the closing artefact — the zero with its denominator, its derivation through the
+resolver, and **the ceiling it closed from: 310**, so the class's arc is numbers with provenance.
+
+**ITEM 3.** The reader design staged for the desk — `CONTENTFLAGS-READER-DESIGN.md`, `0152f0d5…`.
+One reader, three callers (door, standing check, every passage-quoting export — the third is what
+makes `keep-conditional` enforceable at USE). Five refusals named per section; the strike gate is
+the stem quotation mechanism pointed at `contentFlags[].strike`, byte-for-byte at declared lines,
+normalising only at the comparison (R570). The empty-corpus run prints its own bound: 26 screened,
+a 19+7 canary on the axes transcription so a blind reader fails rather than passes, 0 arrivals
+DECLARED under the freeze's reason, and the 61 legacy flags a CENSUS, never refused — the standard
+deliberately does not decide the twenty-six and the reader does not either. **Nothing is built until
+the design returns ruled.**
+
+**And the axes ruling's own principle is worth the register line: an avoidance is a judgement about
+an axis and counts toward it.** The two axes with cuts in their history carry the hardest
+refer-triggers, and the no-member rows have dispositions before their first arrival — requirement
+one doing what it was written for, in her words.
