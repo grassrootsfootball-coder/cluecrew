@@ -112,6 +112,13 @@ async function main() {
       theOptionsCarryingThisEntry: set.siblings.filter((s) => s.tag === ENTRY).map((s) => s.value),
       theSet: set,
       formSignal: headword ? formSignal(headword) : null,
+      /**
+       * **A DELIBERATELY UNPLACED ROW SAYS SO (R604).** `unplacedBySplit` was written by the split
+       * and read by nothing — a decision being ignored by default, in the same turn the check for
+       * that fault was built. A carrier delivered without it invites the reader to re-place a row
+       * somebody already decided to leave alone.
+       */
+      unplacedBySplit: ((i.explanation ?? {}) as Record<string, unknown>).unplacedBySplit ?? null,
     };
   });
 
@@ -135,6 +142,7 @@ async function main() {
       rowsWithNoHeadwordQuoted: rows.length - signalled.length,
     },
     denominators: { carriers: rows.length, liveCarriers: rows.filter((r) => r.status === 'LIVE').length,
+      deliberatelyUnplaced: rows.filter((r) => r.unplacedBySplit !== null).length,
       questionTypes: [...new Set(rows.map((r) => r.questionTypeId))].sort() },
     rows,
   };

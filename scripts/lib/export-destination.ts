@@ -139,7 +139,23 @@ export function deliver(sourcePath: string, family?: string): string {
       // export wrote before it came through this door. Matching only on `family-` let those
       // legacy files survive every supersede, so a fixed-name copy sat alongside the stamped
       // one indefinitely — the stale file this function exists to remove (2026-08-12).
-      if (!existing.startsWith(`${family}-`) && !existing.startsWith(`${family}.`)) continue;
+      /**
+       * **A SUPERSEDED VERSION IS `family-<hash>.ext`. A BATCH IS A DIFFERENT FAMILY (R602).**
+       *
+       * Matching on the bare prefix `family-` made every `unread-item-hints-for-annie-batch-N-<hash>`
+       * look like a stale copy of `unread-item-hints-for-annie`, **and the door deleted all four
+       * batches out of her directory the next time the unbatched file was delivered.** She reported
+       * batches three and four as never arriving; they arrived and were then removed by this
+       * function, which printed `superseded → removed stale` and was believed.
+       *
+       * **A batch is not an older version of the whole — it is a different slice of the same
+       * population**, and the two are indistinguishable to a prefix test. So the segment after
+       * `family-` must BE a content hash, which is what a superseded version always has and what a
+       * batch name never has in that position.
+       */
+      const supersedesStamped = new RegExp(`^${family.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}-[0-9a-f]{16}(?:[.-]|$)`).test(existing);
+      const supersedesLegacy = existing.startsWith(`${family}.`);
+      if (!supersedesStamped && !supersedesLegacy) continue;
       if (hash && existing.includes(hash)) continue; // a sibling of the current version
       rmSync(join(OUTBOUND_DIR, existing));
       console.log(`  superseded → removed stale ${existing}`);

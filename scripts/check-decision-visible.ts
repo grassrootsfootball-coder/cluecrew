@@ -28,9 +28,50 @@ import { requirePopulation } from './lib/population';
 
 const REPO = join(dirname(fileURLToPath(import.meta.url)), '..');
 const SOURCE_ROOTS = ['packages/core/src', 'packages/db/src', 'packages/db/prisma', 'apps/web'];
+/**
+ * **A THIRD STATE WAS BUILT HERE AND REMOVED, and the removal is the entry.** Some decisions have no
+ * business changing what a child is served and every business reaching a reviewer —
+ * `unplacedBySplit` says a row was deliberately left alone. So a "REACHES A REVIEWER ONLY" class
+ * looked right.
+ *
+ * **It cannot be computed.** A grep for the key name in `scripts/` matches the script that WRITES
+ * the field, and the script that CHECKS it, as readily as one that reads it — so the new class
+ * absorbed all seven rows including the four pure records, and the DECISION/AMBIGUOUS/RECORD sort
+ * emptied. **A distinction the instrument cannot make is worse than the bound it replaces**, because
+ * the bound is honest about what it does not know and the new class was not.
+ *
+ * Two states, and the bound printed. `scripts/` is excluded; a field read only there reads as
+ * UNREAD, and that is stated rather than fixed.
+ */
 
 /** A name a person would read as recording a decision rather than a fact. */
 const DECISION_LIKE = /(ruled|ruling|decision|decided|waived|declined|withheld|unplaced|serves|exempt|cleared|override|refused|approved|verdict|disposition)/i;
+
+/**
+ * **HER CRITERION: A FIELD IS A DECISION IF IT CAN BE DISOBEYED (Annie, 2026-08-22 — R604).**
+ *
+ *     RECORD    a name, a date, a digest, a method. It states what happened. Nothing can defy it,
+ *               so nothing reading it is not a fault — inertness is its correct state.
+ *     DECISION  an imperative or an evaluation. It says what SHOULD happen, so code can obey or
+ *               ignore it, and a decision nothing reads is being ignored by default.
+ *     AMBIGUOUS neither shape settles it. **These go to her rather than being ruled here** — she
+ *               expects two or three, and nine undifferentiated rows was the wrong shape of answer.
+ *
+ * Sorting by name is a proxy for sorting by content, and it is named as one.
+ */
+type FieldKind = 'RECORD' | 'DECISION' | 'AMBIGUOUS';
+
+function kindOf(key: string): { kind: FieldKind; why: string } {
+  if (/(digest|sha256|hash)/i.test(key)) return { kind: 'RECORD', why: 'a digest — states what was, cannot be disobeyed' };
+  if (/(edOn|At|Date)$/.test(key)) return { kind: 'RECORD', why: 'a date — states when, cannot be disobeyed' };
+  if (/(By|ByPerson|Name|NameInSourceFile|Method|Authority)$/.test(key)) {
+    return { kind: 'RECORD', why: 'a name or a method — states who or how, cannot be disobeyed' };
+  }
+  if (/(serves|unplaced|waived|declined|withheld|override|refused|verdict|disposition|exempt|cleared)/i.test(key)) {
+    return { kind: 'DECISION', why: 'an imperative — says what should happen, so it can be obeyed or ignored' };
+  }
+  return { kind: 'AMBIGUOUS', why: 'neither a plain record nor a plain imperative — hers to rule' };
+}
 
 function sourceFiles(): string[] {
   const out: string[] = [];
@@ -72,13 +113,14 @@ async function main() {
   const files = sourceFiles();
   const bodies = files.map((f) => ({ f: f.replace(`${REPO}/`, ''), text: readFileSync(f, 'utf8') }));
 
+
   const read: string[] = [];
-  const unread: string[] = [];
+  const unread: Array<{ key: string; rows: number; kind: FieldKind; why: string }> = [];
   for (const [key, rows] of [...present].sort((a, b) => b[1] - a[1])) {
     const hits = bodies.filter((b) => b.text.includes(key)).map((b) => b.f);
-    const line = `      ${key.padEnd(24)} on ${String(rows).padStart(4)} row(s)`;
+    const line = `      ${key.padEnd(26)} on ${String(rows).padStart(4)} row(s)`;
     if (hits.length > 0) read.push(`${line}  READ by ${hits.slice(0, 3).join(', ')}${hits.length > 3 ? ` +${hits.length - 3}` : ''}`);
-    else unread.push(line);
+    else unread.push({ key, rows, ...kindOf(key) });
   }
 
   console.log(`\n  READ — a decision here changes something (${read.length}):`);
@@ -89,9 +131,19 @@ async function main() {
     + '  provenance, which is meant to be inert, and it is the PU-08 fault for anything a person\n'
     + '  treats as deciding something. This names the class; which a field should be is not its call.',
   );
-  for (const l of unread) console.log(l);
+  for (const k of ['DECISION', 'AMBIGUOUS', 'RECORD'] as FieldKind[]) {
+    const rows = unread.filter((u) => u.kind === k);
+    console.log(`\n      ${k} (${rows.length}) — ${k === 'DECISION' ? 'CAN BE DISOBEYED, and is being ignored by default'
+      : k === 'AMBIGUOUS' ? 'HERS TO RULE, not sorted here' : 'inert by design; nothing reading it is correct'}`);
+    for (const u of rows) console.log(`          ${u.key.padEnd(26)} ${String(u.rows).padStart(4)} row(s)  — ${u.why}`);
+  }
   console.log(
     `\n  ${files.length} source file(s) searched across ${SOURCE_ROOTS.join(', ')}.\n`
+    + '  **DO NOT TEST THE OUTCOME — ASK WHAT READS THE FIELD** (Annie, R605). The outcome was correct\n'
+    + '  on every run for six weeks: PU-08 served the library hint exactly as ruled. It did so because\n'
+    + '  its authorship fields were absent, not because anything read `hintServes`. **A decision\n'
+    + '  honoured by accident and a decision honoured by design are indistinguishable from the output,\n'
+    + '  and distinguishable in one grep.**\n'
     + '  BOUND: it looks for the key NAME as a literal. A field read through a computed key, or only\n'
     + '  in scripts/, reads as UNREAD here — so UNREAD is a candidate list, never a verdict.',
   );

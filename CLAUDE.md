@@ -377,6 +377,13 @@ here has no register entry. A ruling goes to the register FIRST; it comes here o
   targets are PARSED, NEVER REWRITTEN — rewriting is a second wording under one id, once per row —
   and `targetSyntaxCensus()` prints canonical/legacy counts on every run, because a silent normaliser
   is how three syntaxes stayed invisible.
+- **A FIELD IS A DECISION IF IT CAN BE DISOBEYED** (Annie, 2026-08-22 — R604). Names, dates, digests
+  and methods are RECORDS — nothing reading them is correct. Imperatives and evaluations are
+  DECISIONS — one nothing reads is being ignored by default. Anything else is AMBIGUOUS and goes to
+  her rather than being ruled here. **And do not test the outcome — ask what READS the field**
+  (R605): `hintServes` was honoured for six weeks by accident, the behaviour was right on every run,
+  and no test of behaviour could have found it. A decision honoured by accident and one honoured by
+  design are indistinguishable from the output and distinguishable in one grep.
 - **A DECISION NOTHING READS IS NOT A DECISION** (Annie, PU-08 — R601). A ruling recorded in a field
   no code consults produces output identical to the absence of a ruling. `pnpm check:decision-visible`
   reports READ vs UNREAD across the decision-bearing keys in the store. UNREAD is correct for

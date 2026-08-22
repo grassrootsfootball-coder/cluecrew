@@ -17191,3 +17191,100 @@ inert — nothing should branch on `hintAuthority`. **The fault is a field a hum
 while the system treats it as a comment**, and separating those two is a reading. The check names the
 classes and reports its own bound: it matches the key NAME as a literal, so a computed key reads as
 UNREAD, and UNREAD is a candidate list rather than a verdict.
+
+## R602 — The delivery door deleted the batches it had just staged
+
+**She reported batches three and four as never arriving. They arrived, and this door removed them.**
+
+`deliver(path, family)` prunes superseded copies by prefix: `existing.startsWith(`${family}-`)`. With
+family `unread-item-hints-for-annie`, **every `unread-item-hints-for-annie-batch-N-<hash>.json`
+matches**, so the next delivery of the unbatched file deleted all four batches out of her directory —
+printing `superseded → removed stale` each time, which is exactly what a correct supersede looks
+like.
+
+**A BATCH IS NOT AN OLDER VERSION OF THE WHOLE. It is a different slice of the same population**, and
+the two are indistinguishable to a prefix test. The repair: the segment after `family-` must BE a
+content hash, which a superseded version always has and a batch name never has in that position.
+
+**AND THIS IS WHY THE OUTBOUND LEG LOOKED LIKE TRANSPORT.** Nine returns genuinely did not cross —
+that is transport. **The batches were a mechanism fault on this side**, and both directions failing
+at once made one look like the other. The manifest diff separated them: it costs one run, and it
+corrected a working figure rather than a record, which is its first such use.
+
+## R603 — One instance found makes the population unknown, not one
+
+**A ruling about eighteen stems survived in a group label, so the first audit screened the surface
+against THAT ruling and reported zero others.** True, and about one ruling. **She has made many.**
+
+`pnpm check:accessible-name-rulings` screens every accessible name, role description, title, label
+prop, button label and status string against every stem ruling expressible as a property of a string:
+**ASSERTS-A-FAULT** (R565), **SHOUTED-CAPITAL** (WIW-03), **DASH-AS-STOP** (house rule),
+**FIRST-PERSON** (R555/R557), **ASSERTS-A-COUNT** (R596).
+
+**49 strings, 5 rulings, 1 hit** — `data-desk.tsx:36`, *"Bar chart — tap a bar to answer"*, a dash in
+a child-facing name. **Reported and NOT rewritten**: her channel is degraded and R588 says writes
+wait, and every other label change this fortnight carried her authored replacement.
+
+**THE FIRST VERSION SCREENED 39 WHERE THE HAND-AUDIT HAD COVERED 62.** A check narrower than the
+audit it replaces reports a smaller clean population and reads as the same assurance — **R595 in a
+scanner.** Widened to 49; the remaining thirteen were headings and paragraphs, **a different class,
+reported rather than absorbed to reach the expected number.**
+
+**The bound is printed: only rulings expressible as a property of a string are here.** Whether a
+label is useful, or names the right group, is a reading. A clean run says these five hold and nothing
+more.
+
+## R604 — A field is a decision if it can be disobeyed
+
+**Her criterion, and it sorted nine undifferentiated rows into the shape she predicted.**
+
+    RECORD     a name, a date, a digest, a method. States what happened. Nothing can defy it, so
+               nothing reading it is CORRECT — inertness is its right state.
+    DECISION   an imperative or an evaluation. Says what SHOULD happen, so code can obey or ignore
+               it, and a decision nothing reads is being ignored by default.
+    AMBIGUOUS  neither shape settles it. **These go to her rather than being ruled here.**
+
+**1 DECISION, 2 AMBIGUOUS, 4 RECORD** — she expected two or three ambiguous, not nine.
+
+- **DECISION: `unplacedBySplit`.** Written by the split this turn, read by nothing. **A decision
+  field created in the same turn as the check for that fault**, which is the fault demonstrating its
+  own ordinariness.
+- **AMBIGUOUS, hers: `approvedNotByRecognition` (7 rows), `hintRuling` (1).**
+
+**A THIRD STATE WAS BUILT AND REMOVED, and the removal belongs here.** "REACHES A REVIEWER ONLY"
+looked right for a decision about review rather than serving. **It cannot be computed**: a grep for
+the key in `scripts/` matches the script that WRITES the field and the check that INSPECTS it as
+readily as one that reads it, so the new class absorbed all seven rows including the four pure
+records and the sort emptied. **A distinction the instrument cannot make is worse than the bound it
+replaces**, because the bound is honest about what it does not know.
+
+## R605 — Do not test the outcome. Ask what reads the field.
+
+**`hintServes` was honoured for six weeks by accident.**
+
+The outcome was correct on every run: PU-08 served the library hint exactly as she ruled. It did so
+because its authorship fields were absent, **not because anything read the field carrying her
+ruling.** No test of behaviour could have found it — the behaviour was right.
+
+**A decision honoured by accident and a decision honoured by design are indistinguishable from the
+output, and distinguishable in one grep.**
+
+**AND THIS IS WHERE THE EXISTING ENTRY LANDS.** *A rule in the register is not a rule in the code
+until something calls it* — arriving here **on a decision FIELD rather than on a rule**, which is the
+more dangerous of the two. **A register entry looks like prose and invites the question "is this
+enforced?". A field looks like state and does not.** `hintRuledBy: "Annie"` reads as settled.
+
+**A decision recorded in a field nothing reads is a note that happens to be true.**
+
+## R606 — The house-form count reconciles as two populations, one unnamed
+
+**Her strict count is 11 of 36 and her inclusive count is 16. In the PR series strict gives 8 of 12 —
+which is this proxy, to the row.**
+
+**There was never a disagreement.** Two counts over different sets, and the set was not named on
+either. Thirteen was neither figure; it was a third set nobody had stated.
+
+**AND IT IS THE ARGUMENT FOR HAVING REFUSED TO WIDEN.** A detector stretched until it reached
+thirteen would have fitted itself to a number that was not a measurement of anything — and it would
+then have agreed, which is the camouflage R173 names. **The proxy agreed with her strict count on the
+one series where both were computed, and it agreed because neither had been adjusted to the other.**
