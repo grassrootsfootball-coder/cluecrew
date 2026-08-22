@@ -17574,3 +17574,28 @@ string now serving. **Cowork compares bytes; nobody relays a paragraph.**
 **And the crossing moved legs.** The shared path dropped the same artefacts twice; everything
 attached to a message this turn arrived and verified. Same files, same digests, attached — the
 digests are the invariant and the leg is whatever delivers them.
+
+## R621 — The six landed under the byte-guard; PR-04 untouched; the twenty-third found on this disk
+
+**ITEM 1.** Six landed through the standing shape — PR-05, 06, 08, 09, 10, 11 — verdict
+APPROVED_AS_WRITTEN, authority `annie-eightyfourth-return.md, sha256 75967df0…` (digest verified
+against her citation before anything ran; the drain file's bytes verified against HER quoted digest
+`8dd1d9e4…` likewise). **The byte-guard compared each row's current `hintCore` against the drain
+string she confirmed before landing — 6 of 6 identical, 0 refused.** All six read back
+`serves: item`. **Exposure re-emitted: 27 → 21**, the exact drop her six predict —
+`exposure-live-asserting-entries-3e1ffda857d2b5b1.json`, `9c581476…`.
+
+**ITEM 2. PR-04 untouched, one fact reported:** this store's `hintCore` is, verbatim,
+**"The humming came after, not before."** — with `hintAuthoredBy: null`, `hintAuthority: null`.
+That string IS her approved string, so on this store's evidence **the bank never moved; the drain
+misquoted** — the three-store picture completes when Cowork's lookup lands, and no act is taken here.
+
+**ITEM 3. The twenty-third return IS on this disk**: `/Users/davidb/Downloads/
+annie-twentythird-return.md`, 8,723 bytes, mtime 2026-08-20 23:16, sha256 **`edb597ec8e76b0bf1783
+b4d66821ebf0b421ac28f4eef2fa09c05e277020c9d9`** — and this store's own `RETURN-DIGESTS.md` already
+carries that exact digest, so it arrived and was catalogued. `check:return-sequence` counts it (no
+gap at 23). Its content is the ban-list scope ruling, read by the amendment readers (zero amendments
+— it authors none). **Nothing here ever wrote to the railway-children passage**: the three scripts
+touching `stream-a-02` are read-only exporters, and the passage file's last commit (76fb9c7, 11:57
+today) predates this thread. She reported it crossed; Cowork's inbound log is empty; **this disk
+confirms her — the file exists here with a digest she can verify.**
