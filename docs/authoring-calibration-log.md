@@ -17690,3 +17690,32 @@ everywhere. And `en-spelling-form-lookalike` does not serve because **no row wit
 this store**: the entry here is `en-vocab-form-lookalike` (6 carriers post-split). An option tagged
 with the authoring store's id would resolve to nothing — an ID DIVERGENCE between stores, not a
 serving fault, and the split's naming argument (R595) is presumably where the two names parted.
+
+## R625 — The third text lands, PR-04 returns LIVE whole, and the widened assert did its work
+
+**Her eighty-eighth (`4677bcb0…`, verified) authored the third text against the bytes**: *"The
+humming started while she reached. It cannot be the reason she reached in."* — derived from
+stream-b-01 line 14, quoted verbatim in her section 1 with the passage digest in the block note.
+
+**THE REPLACED-ASSERT WAS WIDENED TO THE DOCUMENTED PRIORS AND NOTHING ELSE.** Her `replaced` fields
+quote the BANK's strings, which this store never held. Each write asserted its row's own documented
+prior — hintCore: the pre-repair emission string; walkScript: the Annie-approved walk-repair text
+recorded in `_walkScriptKeptBecause` — and **any third text would have refused, because her
+amendment must not paper a genuinely unexplained change.** Both priors held; both landed; the
+displaced walk-repair text is stamped and was emitted verbatim in the report so she sees what her
+own later wording superseded.
+
+**PR-04 IS LIVE AND WHOLE**: stem, hintCore, walkScript all EQUAL to her confirmed strings, read
+back through the serving path; the hint SERVES (`chooseHint: item`); A's execution carries the
+WHILE. **Her catch stands recorded**: the bank's walk cited line 13 for a sentence whose last word
+is line 14's first — *a citation written from the bank's belief about its lines rather than from the
+lines* — caught by reading the bytes, amended with the smallest touch.
+
+**The exposure list re-emitted: 15 rows, PR-04 NOT among them** — it carries a serving hint now, so
+the derivation drops it without being told to (`exposure-live-…-a935bafb7144cbc9.json`).
+
+**And the id-divergence fact for the split's record: `en-spelling-form-lookalike` has NEVER been
+carried by any option in this store** — 0 current tags, 0 mentions in any item or option JSON
+including superseded stamps, 0 rows in the append-only write log (whole-row cast), 0 in repo
+artefacts. Whatever routing the authoring store's split record specifies, it starts from a store
+that has never written that id anywhere.
