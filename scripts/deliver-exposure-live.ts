@@ -18,7 +18,7 @@ import { fileURLToPath } from 'node:url';
 import { chooseHint } from '../packages/core/src/index';
 import { prisma } from '../packages/db/src/index';
 import { artefactStamp, deliver, stampedName } from './lib/export-destination';
-import { requirePopulation } from './lib/population';
+import { declareMayBeEmpty, requirePopulation } from './lib/population';
 
 const REPO = join(dirname(fileURLToPath(import.meta.url)), '..');
 const FAMILY = 'exposure-live-asserting-entries';
@@ -57,11 +57,22 @@ async function main() {
     .filter((r) => r.taggedDistractors.length > 0)
     .sort((a, b) => a.itemId.localeCompare(b.itemId));
 
+  /**
+   * **THE OUTPUT POPULATION IS DECLARED, NOT REQUIRED (R582), AND THE DAY THAT MATTERED WAS THE DAY
+   * THE CLASS CLOSED.** On 22 August the final six landings took exposure to zero and this gate
+   * ABORTED on its own success — a check that cannot pass on a clean population, refusing the very
+   * state the whole drain existed to reach. The SCREENED populations stay asserted non-empty; the
+   * exposed count is an outcome.
+   */
   requirePopulation('deliver:exposure-live', {
     'LIVE item(s)': items.length,
     'asserting entr(ies) joined against': ABOUT.size,
-    'exposed LIVE item(s)': rows.length,
   });
+  declareMayBeEmpty('deliver:exposure-live', 'exposed LIVE item(s)', rows.length,
+    `The class can close: an item leaves this list by its hint actually serving, so zero exposed `
+    + `means every LIVE item carrying an unserved hint beside an asserting entry has been drained. `
+    + `${items.length} LIVE items WERE screened against ${ABOUT.size} entries; the closing state `
+    + 'artefact carries the arc and the derivation.');
 
   const payload = {
     what: 'Every LIVE item whose authored hintCore does NOT serve, carrying a distractor tagged with an entry whose library hint asserts something about the item. A child missing on such an option receives the asserting library hint while an authored item hint sits unserved.',

@@ -17785,3 +17785,35 @@ the design returns ruled.**
 an axis and counts toward it.** The two axes with cuts in their history carry the hardest
 refer-triggers, and the no-member rows have dispositions before their first arrival — requirement
 one doing what it was written for, in her words.
+
+## R628 — Zero from a ceiling of 310, and the reader built into the door it was designed for
+
+**ITEM 1.** The ninety-first's six landed APPROVED_AS_WRITTEN under the byte-guard — WIW-11, 14,
+15, 16, 17, 18, all `chooseHint: item`. **The twenty-three are closed**: every approval now exists
+as a verbatim string in a block, which was true of none of them a week ago.
+
+**And the gate refused its own closing zero.** `deliver:exposure-live` ABORTED at 0 exposed —
+`requirePopulation` on the OUTPUT population, R582's fault firing on the day the class legitimately
+closed: a check that could not pass on a clean population, refusing the state the drain existed to
+reach. Repaired to declare (screened stays asserted), and the closing artefact is the declaration's
+reason: `exposure-closing-state-aedea17c5a4c3fb2.json` — **zero, its denominator (341 LIVE
+screened), its derivation (recomputed from `chooseHint` at emit time — a row leaves only by
+serving), and the arc with every drop's landing named: 310 → 27 → 21 → 17 → 15 → 6 → 0.** Her
+sentence is the spec: *this zero carries its population, its start date, its before-count and its
+instrument.*
+
+**ITEM 2 — BUILT AS DESIGNED, RULED, THEN WRITTEN.** `packages/core/src/passage-content.ts`: the
+axes table transcribed with her ruling's digest and a **19+7 canary that fails every caller rather
+than reporting a clean corpus**; MAY_JUDGE = one name with her bus-factor note; the five refusals
+(§1 unknown-axis routing to the reviewer in its own text; §2 role-word refusing as no-name; §3's
+narrow catchable case with the bound printed; §4 null-condition at write and unmet-condition AT
+USE; §5 strike spans byte-verbatim, assertive-but-not-load-bearing REPORTED never refused). Ten
+tests. `pnpm check:content-flags` standing. The legacy census reads **53 + 8 = 61**, matching the
+standard's own count.
+
+**AND THE FIRST REAL INPUT LANDED THROUGH THE DOOR ON THE RUN THAT PROVED IT.** The two
+railway-children flags — her judgements of 21 August, fields verbatim from the authoring store's
+landing, axes from her table — written only after `readContentFlags` accepted the would-be passage,
+the load-bearing strike span taken from THIS store's extract bytes. The standing run now prints
+them as its first arrivals, and *"refused nothing"* no longer carries the not-a-pass rider, because
+it is finally a sentence about input.
