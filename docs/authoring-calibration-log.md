@@ -17657,3 +17657,36 @@ teeth into a move. The exposure list is emitted against the 14 — a SUPERSET, s
 bound: `exposure-live-asserting-entries-6f49067ca96f38cc.json`, `6861ba66…92ed`, **17 LIVE items**
 (21 → 17: the three item hints that moved into service, and PR-04 leaving LIVE). Every row marks
 which entries it joined on, so filtering to any six is one pass with no re-derivation.
+
+## R624 — The quarantine measured empty and proven empty; two landings; the stem caught in flight
+
+**ITEM 1 — THE QUARANTINE HAS NOTHING TO QUARANTINE, AND THE ZERO IS PROVEN, NOT ASSUMED.**
+`Attempt` holds **0 rows for ENG-028-PR-04, all time** — canary: 5 attempts exist store-wide, the
+newest 17 August, so the table read is live (R60 question 2). No child ever answered the ambiguous
+stem; the poisoned week has no events. **Nothing was marked because nothing exists**, and the
+exclusion was read back from what each consumer computes, not from a marker: calibrate-items has 0
+attempts in its input and `calibratedDifficulty` null; readiness has 0 `boss_case` rows; the review
+queue upsert lives in the answer path (orchestrator.ts:870), which never ran for this item; streaks
+derive from session weeks with no PR-04 contribution; the aggregation table holds 0 buckets. **The
+consumers of miss data are six and are now named** — that list survives the empty window.
+
+**ITEM 2.** WIW-02 and WIW-21 landed APPROVED_AS_WRITTEN, byte-guarded against her CONFIRMATIONS
+strings, authority the eighty-seventh (`b53aa2df…`). Both serve their item hint. **Her stem
+amendment landed on PR-04**: *FIRST* → *first*, replaced-string asserted before the write, prior
+text stamped, item still DRAFT. **First time a fault was amended in flight rather than after
+landing** — her block caught the bank's shout before a child met it.
+
+**ITEM 3 — THE FIFTEEN, BY ENTRY AND RETURN**, so the authoring register closes against a list:
+seventy-sixth — within-span-wrong-element, inference-literal-lookalike, motive-invention,
+chronology-collapse, negation-dropped. seventy-seventh — cause-agent-swap,
+emotion-label-approximation, relation-word-flipped, agent-patient-reversal,
+figurative-taken-literally, minimal-pair-skim. sixty-fourth — homophone-by-sound,
+silent-letter-dropped, technique-generic-effect, technique-structure-effect-blind.
+Reference set re-cut (`served-wordings-english-df580f9a0d1b2ada.json`); exposure re-emitted —
+**17 → 15** (WIW-02 and WIW-21 moving into service), `exposure-live-…-18b7855785cd0f5e.json`.
+
+**ITEM 4.** The sixty-fifth is **not** among the 88 files — still the one document missing
+everywhere. And `en-spelling-form-lookalike` does not serve because **no row with that id exists in
+this store**: the entry here is `en-vocab-form-lookalike` (6 carriers post-split). An option tagged
+with the authoring store's id would resolve to nothing — an ID DIVERGENCE between stores, not a
+serving fault, and the split's naming argument (R595) is presumably where the two names parted.
