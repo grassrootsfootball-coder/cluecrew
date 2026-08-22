@@ -18024,3 +18024,51 @@ nothing a child can tap goes live unsigned — and the idiom card proves it: `ga
 ordinary door, gate-passed, staged for her sign-off (`IDIOM-CARD-FOR-SIGNOFF.md`) — **and does not
 serve, because it is DRAFT.** The gate demonstrating itself on its first occupant is the wiring's
 acceptance test.
+
+## R639 — The ninety-fourth crosses: the table grows by her document, eleven land, the convict releases
+
+**THE TABLE EXTENDED THE NEVER-TYPED WAY.** `crime-as-background` is row twenty, the canary moved
+19+7 → 20+7 with both rulings' digests in its printed detail, and **the landing script parses the
+axis name out of her return's own §2 bytes and asserts it equals the cell** — the never-typed
+discipline applied at the one moment typing could creep in. Her mechanism note stands with it:
+*"an arrival the table could not place became a ruling rather than a drafter's guess, and the table
+grew by exactly one row with a name and a date on it."*
+
+**HER PROSE SAYS TEN; HER BLOCK HOLDS ELEVEN** (1+3+2+2+3), and her own tripwire rule decided it:
+the block note's arithmetic ("ten objects plus one table row = 11 amendments") balances only at
+eleven objects... no — it balances at ten. **The derived count is eleven, the typed count ten, the
+disagreement is REPORTED on the landing artefact and the derived number governed the landing.**
+
+**ELEVEN LANDED across five passages** — the tenth conditional (the Bible-catalogue's checkable
+authoring constraint, found by reading where the keyword census could not: *"the census was a floor
+and the conversion is the census"*) carrying `ITEM-SET-CLAIM`, honoured as the pre-unification form
+of DECLARED(item-set), its met-claim falling due on any new item; five minimal spans cut from the
+bytes (the stain-remover deflation, the breakages joke, Marley's closing line as the stopping
+point, Fogg not betting to win, Podger's mocked mouth); the Canterville murder split lands as split
+four, ruled by her own table naming one flag in two rows. **AND THE CONVICT FLAG RELEASED** — its
+axis now exists, Baskervilles' third flag landed, its legacy string displaced.
+
+**THREE INSTRUMENT FAULTS CAUGHT BY THE DOOR AND THE RUN, owned:** the lander's completion prefix
+missed this return's bare `PENDING-BYTES:` form — **five refusals from the door, every one correct**
+(a span still pending beside its own bytes is a landing that skipped the gate), fixed and re-run;
+the passage-level ALREADY guard then held the five repaired flags hostage to their landed
+batchmates — made per-flag, land-and-say; and the unguarded support array landed the P&P note
+TWICE — deduped, guard added in all three landers.
+
+**THE CENSUS, LEDGERS MEETING, UNITS ON FACES**: 38 standard-shape flags · 21 [legacy STRING] +
+8 [pre-standard OBJECT] = 29 [whole] · DECLARED absence 14 · item-set 1 · whole-passage-tone 1 ·
+**splits 4 [pairs], 8 [objects]** — her running four met, the ledgers agreeing now the gap
+crossed · 14 passages carrying standard flags, twelve remaining · refused nothing, with input.
+
+## R640 — Her tripwire rule, filed in the channel family (her words)
+
+> **Redundant derived numbers are how a loss announces itself: a number that states what it counted
+> can be recomputed, and a recomputation that disagrees locates the gap.**
+
+Filed beside R255 (STAGED is not ARRIVED) and R583 (confirmation by digest), because it is the
+third leg of the same channel discipline: R255 says what a sender cannot claim, R583 says how a
+receiver confirms, **and this says how a document keeps testifying after both** — the drain file's
+`16 + 7 = 23, derived at emit time rather than typed` survived the very staleness that killed the
+typed version of the same sentence, and this return's ten-versus-eleven was settled by the same
+rule the day after she stated it. **The idiom card stays DRAFT (verified this turn) until her
+sign-off block crosses; the wiring ships nothing a child can tap before then.**

@@ -40,6 +40,17 @@ export const CONTENT_AXES: readonly string[] = [
   'romance-and-affection',
   'strangers-and-children',
   'school-authority',
+  /**
+   * **ROW TWENTY, GROWN BY RULING ON THE DOOR'S FIRST UNTABLED ARRIVAL** (her ninety-fourth §2,
+   * sha256 35aa8fb5dd66cae53f381bf8dc35982a96da8d0b8634d0b7a122c3660caece33): robbery, theft and
+   * pursuit mentioned as premise or setting. Keeps when background only, no violence described,
+   * no admiration; refers when depicted, dwelt on or admired; unseen material REFERS like every
+   * row. *"An arrival the table could not place became a ruling rather than a drafter's guess,
+   * and the table grew by exactly one row with a name and a date on it."* The landing script
+   * parses this axis name out of her return's own bytes and asserts it equals this cell — the
+   * never-typed discipline at the only moment typing could have crept in.
+   */
+  'crime-as-background',
 ] as const;
 
 /** Rows with no member anywhere, dispositions existing before their first arrival. All REFER. */
@@ -58,10 +69,10 @@ export const NO_MEMBER_ROWS: readonly string[] = [
  * every caller is blind and must FAIL rather than report a clean corpus.
  */
 export function axesTableCanary(): { holds: boolean; detail: string } {
-  const holds = CONTENT_AXES.length === 19 && NO_MEMBER_ROWS.length === 7;
+  const holds = CONTENT_AXES.length === 20 && NO_MEMBER_ROWS.length === 7;
   return {
     holds,
-    detail: `axes table ${CONTENT_AXES.length}+${NO_MEMBER_ROWS.length} (expected 19+7, per her ruling ${CONTENT_AXES_RULING_SHA256.slice(0, 8)}…)`,
+    detail: `axes table ${CONTENT_AXES.length}+${NO_MEMBER_ROWS.length} (expected 20+7: her signed table ${CONTENT_AXES_RULING_SHA256.slice(0, 8)}… plus crime-as-background, ruled ninety-fourth 35aa8fb5…)`,
   };
 }
 
@@ -266,6 +277,15 @@ export function readContentFlags(
         // Retired alias of DECLARED(absence): honoured, counted with the declarations, and marked.
         out.declared.push({ where, kind: 'absence' });
         out.reported.push(`${where}: ABSENCE-CLAIM-NO-SPAN (retired alias of DECLARED(absence)) — awaiting migration on the row.`);
+      } else if (typeof o.strike === 'string' && o.strike.startsWith('ITEM-SET-CLAIM')) {
+        /**
+         * Pre-unification form from her ninety-fourth (which CROSSED after the ninety-sixth that
+         * unified the states): an item-set claim, checked against the passage's ITEMS rather than
+         * its bytes. Honoured as DECLARED(item-set) — the kind her unification gave it — and the
+         * check-against-items note is the report, because no passage-bytes gate can complete it.
+         */
+        out.declared.push({ where, kind: 'item-set' });
+        out.reported.push(`${where}: ITEM-SET-CLAIM (pre-unification form of DECLARED(item-set)) — checked against the items for the passage, not the passage bytes. Falls due again on any new item.`);
       } else if (typeof o.strike === 'string' && (o.strike.startsWith('PENDING-BYTES') || o.strike.startsWith('SPAN PENDING-BYTES'))) {
         if (extract !== null) {
           out.refusals.push({

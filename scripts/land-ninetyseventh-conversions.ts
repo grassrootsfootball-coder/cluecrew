@@ -124,7 +124,12 @@ for (const [pid, entry] of perPassage) {
   const wouldBe: Record<string, unknown> = {
     ...passage,
     contentFlags: [...kept, ...entry.flags],
-    ...(entry.support.length > 0 ? { readingSupport: [...((passage.readingSupport as unknown[]) ?? []), ...entry.support] } : {}),
+    // The support array carries the same per-entry guard as the flags: land once, skip and say.
+    ...(entry.support.length > 0 ? { readingSupport: (() => {
+      const have = new Set(((passage.readingSupport as unknown[]) ?? []).map((r) => JSON.stringify(Object.entries(r as object).sort())));
+      const fresh = entry.support.filter((r) => !have.has(JSON.stringify(Object.entries(r).sort())));
+      return [...((passage.readingSupport as unknown[]) ?? []), ...fresh];
+    })() } : {}),
     _displacedLegacyFlags: {
       ...((passage._displacedLegacyFlags as object) ?? {}),
       ninetyseventh: { displaced, by: `annie-ninetyseventh-return.md, sha256 ${sha}` },

@@ -77,8 +77,11 @@ for (const [pid, entry] of perPassage) {
   const existing = new Set(((passage.contentFlags as unknown[]) ?? [])
     .filter((f) => f && typeof f === 'object')
     .map((f) => JSON.stringify(Object.entries(f as object).sort())));
+  // Per-flag, like the refusals: already-landed flags skip and say so; the rest still land.
   const already = entry.flags.filter((f) => existing.has(JSON.stringify(Object.entries(f).sort())));
-  if (already.length > 0) { results.push(`${pid}: ALREADY LANDED (${already.length}) — nothing written.`); continue; }
+  if (already.length > 0) results.push(`${pid}: ${already.length} flag(s) ALREADY LANDED — skipped, not rewritten.`);
+  entry.flags = entry.flags.filter((f) => !existing.has(JSON.stringify(Object.entries(f).sort())));
+  if (entry.flags.length === 0 && entry.support.length === 0) continue;
 
   /**
    * **THE REFUSAL IS PER-FLAG, NOT PER-PASSAGE.** The convict flag carries an axis whose creating
@@ -108,7 +111,12 @@ for (const [pid, entry] of perPassage) {
   const wouldBe: Record<string, unknown> = {
     ...passage,
     contentFlags: [...kept, ...entry.flags],
-    ...(entry.support.length > 0 ? { readingSupport: [...((passage.readingSupport as unknown[]) ?? []), ...entry.support] } : {}),
+    // The support array carries the same per-entry guard as the flags: land once, skip and say.
+    ...(entry.support.length > 0 ? { readingSupport: (() => {
+      const have = new Set(((passage.readingSupport as unknown[]) ?? []).map((r) => JSON.stringify(Object.entries(r as object).sort())));
+      const fresh = entry.support.filter((r) => !have.has(JSON.stringify(Object.entries(r).sort())));
+      return [...((passage.readingSupport as unknown[]) ?? []), ...fresh];
+    })() } : {}),
     _displacedLegacyFlags: {
       ...((passage._displacedLegacyFlags as object) ?? {}),
       ninetysixth: { displaced, by: `annie-ninetysixth-return.md, sha256 ${sha}` },

@@ -118,7 +118,6 @@
   }
  ],
  "contentFlags": [
-  "An escaped convict is loose on the moor: armed warders watch the roads and Watson imagines him hiding like a wild beast. The naming of the man, his crime and the phrase about having your throat cut have been cut. What remains is unease, not violence. Recommendation: keep.",
   {
    "axis": "death-and-dying",
    "element": "Sir Henry's low-voiced question implies that his uncle died somewhere on the grounds",
@@ -150,6 +149,24 @@
    "convertedBy": "Annie",
    "convertedAt": "2026-08-22",
    "sourceProse": "Two soldiers with short rifles are seen at the station and one on the skyline. They are guards, not threats, and nothing is fired or threatened. Recommendation: keep."
+  },
+  {
+   "axis": "crime-as-background",
+   "element": "an escaped convict loose on the moor; armed warders watch the roads; Watson imagines him hiding like a wild beast",
+   "severity": "mild",
+   "disposition": "keep",
+   "condition": null,
+   "conditionMetBy": null,
+   "reason": "What remains is unease, not violence.",
+   "loadBearing": true,
+   "strike": "DECLARED(absence)",
+   "note": "avoidances recorded in the legacy prose: the naming of the man, his crime, and the phrase about having your throat cut have been cut. The throat-cut avoidance counts toward violence-between-people per the table's derivation note.",
+   "judgedBy": "UNRECORDED",
+   "judgedAt": "UNRECORDED",
+   "convertedBy": "Annie",
+   "convertedAt": "2026-08-22",
+   "sourceProse": "An escaped convict is loose on the moor: armed warders watch the roads and Watson imagines him hiding like a wild beast. The naming of the man, his crime and the phrase about having your throat cut have been cut. What remains is unease, not violence. Recommendation: keep.",
+   "axisNote": "second member of crime-as-background on its first day"
   }
  ],
  "curationNotes": "Follows the steer: no legend manuscript and no hound, only the journey out and the arrival, ending on the welcome at the door. The extract deliberately begins after Dr Mortimer's speech about Celtic head shapes, which is period racial typology we would not want in a children's paper; starting at the first sight of the moor removes it cleanly without a cut.",
@@ -734,8 +751,7 @@
  "_displacedLegacyFlags": {
   "ninetysixth": {
    "displaced": [
-    "Sir Henry's low-voiced question implies that his uncle died somewhere on the grounds. Nothing is described and the death is never explained. Recommendation: keep - it is one of the best inference anchors in the passage.",
-    "Two soldiers with short rifles are seen at the station and one on the skyline. They are guards, not threats, and nothing is fired or threatened. Recommendation: keep."
+    "An escaped convict is loose on the moor: armed warders watch the roads and Watson imagines him hiding like a wild beast. The naming of the man, his crime and the phrase about having your throat cut have been cut. What remains is unease, not violence. Recommendation: keep."
    ],
    "by": "annie-ninetysixth-return.md, sha256 583e61414cff67d44397f8713d34e9c8edd5fa6c7dd4d5e0b66ed55f6cac22e4"
   }
