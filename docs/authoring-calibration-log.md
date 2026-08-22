@@ -15576,3 +15576,86 @@ is doing something a rule that explains is not — **it can be wrong in advance,
 to find out whether it is a rule or a description of four things that happened.**
 
 **It was not wrong.**
+
+## R526 — The attribute pattern fixed, the ten named, 60 of 60 confirmed
+
+**Before-count 50. After 60. The ten are named in this entry rather than absorbed into the new
+number**, because a count moving 50 → 60 says nothing about whether they were newly written or newly
+visible.
+
+All ten are template literals — `aria-label={\`… ${x} …\`}` — on `mascot.tsx`, `play-runner.tsx`,
+`vault-card.tsx`, `crew/page.tsx`, `word-tap.tsx`, and four maths engines. **Every interpolated
+attribute in the crew surface was invisible to a check built to screen child-facing strings.**
+
+**Re-run: 60 of 60. `check:no-review-furniture` still reports 0 furniture on the child's path**, so
+the ten carry nothing the check exists to find — **which is the outcome, not the vindication** (R494).
+
+## R527 — The corrected detector: five scans, fourteen patterns, not eight and forty-four
+
+**A string literal containing a slash is not a pattern.** The detector counted `'apps/'`, `'/api/'`
+and every path constant as a regex.
+
+**Corrected — a regex literal only where it follows `=`, `(`, `,`, `:`, `[`, `return`, `match`,
+`test`, `exec`, `replace` or `split`:**
+
+| risky | scan |
+|---:|---|
+| 6 | `check-declared-unread` |
+| 3 | `check-signing-doors` |
+| 2 | `check-register`, `check-unordered-includes` |
+| 1 | `check-derived-writes` |
+
+**`check-walkscript-reach` and `check-no-review-furniture` leave the list entirely** — the first had
+no risky pattern at all, the second is now fixed.
+
+**The number the fix order rests on was inflated by roughly three times**, and it is the fourth
+consecutive turn in which a pattern of mine produced a figure reported as a measurement. **The
+detector was itself an instance of the rule it was written to enforce.**
+
+## R528 — The widening had never landed, so the scope fault was not live until today
+
+**Her third return authored the scope correction with its own sha256. The store held the narrow
+description.** Applied now, confirmed by direct read.
+
+**So the fault she describes was NOT live in the store**: the narrow description and the
+ending-stressed hint matched each other, and **the mismatch was between her intent and the row.** It
+is live only now that the widening is in.
+
+**That does not close her question — it dates it.** And it means an entry can be internally consistent
+*because* an amendment failed, which is a way for a store to look correct that no check has a name
+for.
+
+**THREE CARRIERS, NOT EIGHT** — `ENG-003-A-SP-02`, `-06`, `-08`, all DRAFT. **`SP-08` is the mid-word
+case**, the one the widening was written for and the one the hint cannot reach; the other two are
+suffix cases it handles. **The split is one against two**, which is the number her choice turns on.
+
+## R529 — `en-error-spot-false-positive` out of the reading population
+
+**REJECTED, unsigned, ruled never to cross, ZERO carriers — and sitting in an unread reading queue
+carrying a child-facing hint.**
+
+**A rejected entry in a reading queue is a queue that manufactures approvals.** Somebody reading down
+the queue meets a hint, judges it on its merits, and approves a string that was ruled never to cross —
+**and nothing in the row as it reads in a queue says otherwise.**
+
+**Recorded out of the population.** And `en-subject-verb-agreement-by-proximity` needs no amendment:
+**the store no longer says *cross out the of-part*.** A later amendment already replaced it with *Find
+the word the sentence is really about* — **her seventh-return rule applied without the entry being
+revisited**, so the fault she named is already gone and she was reading a stale copy.
+
+## R530 — A description widened without its hint: 44 entries
+
+**Her check, built where a scope correction lands.** `pnpm check:widened-without-hint`. **279 entries
+screened, 44 flagged.**
+
+**A widening is not a bigger version of the same entry. It is a second error under one name**, and a
+hint written for the first fails silently on the second.
+
+Beyond the vowel entry: `en-modal-conditional-form` (*"Mismatches the modal to its if-clause"* — the
+hint covers only the if/would pairing), `nvr-single-axis-fixation` (*"third axes"* — the hint names a
+second and stops).
+
+**Reports, does not fail** — the repair is narrow-back or write-both, and a gate would enforce a choice
+nobody has made. **Bound on its face:** a word-overlap test over prose, over-calling where a hint
+covers a clause in different words and under-calling where it shares a word without reaching the case.
+**44 is a starting population, not a defect count.**

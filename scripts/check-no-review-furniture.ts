@@ -73,7 +73,18 @@ const FURNITURE = [
 function renderedText(src: string): string[] {
   const out: string[] = [];
   for (const m of src.matchAll(/>\s*([^<>{}\n][^<>{}]*?)\s*</g)) out.push(m[1]!);
-  for (const m of src.matchAll(/\b(?:aria-label|title|alt|placeholder)\s*=\s*["']([^"']+)["']/g)) out.push(m[1]!);
+  /**
+   * **THE BRACE AND THE BACKTICK. BEFORE-COUNT 50; AFTER 60** (R526).
+   *
+   * The strict form required a plain quoted value, so **every interpolated attribute was invisible
+   * to a check built to screen child-facing strings** — 10 of 60, all
+   * `aria-label={\`… ${x} …\`}`, on `mascot.tsx`, `play-runner.tsx`, `vault-card.tsx`,
+   * `crew/page.tsx` and four maths engines.
+   *
+   * **The ten are named in R526 rather than absorbed into the new number**, because a count that
+   * moves 50 -> 60 says nothing about whether the ten were newly written or newly visible.
+   */
+  for (const m of src.matchAll(/\b(?:aria-label|title|alt|placeholder)\s*=\s*\{?\s*["'`]([^"'`]+)["'`]/g)) out.push(m[1]!);
   return out.filter((t) => /[a-z]/i.test(t));
 }
 
