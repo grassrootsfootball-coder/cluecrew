@@ -18146,3 +18146,34 @@ found by the audit disagreeing with something:
 **FINAL: 39 archives compared · 8 seeded-from-bytes · 0 drifted · 0 unmatched** — with the one-sided
 zero stated on the run: a copy that drifted identically in both places would read clean. Census:
 45 standard · 13 + 8 = 21 [units] · 20 passages landed, 6 remain.
+
+## R644 — The first item-set claim completes by a reading, and the write path is the decision field's reader
+
+**THE MET-CLAIM GAINS WHAT NO LEGACY MET-CLAIM HAS HAD: A JUDGE.** The Bible-catalogue condition
+moved from *asserted met in the legacy prose, judge UNRECORDED* to **VERIFIED by Annie, 2026-08-22,
+against all twelve ENG-015 items with full option sets** — her return's digest on the row, the prior
+stamped. *"Not one stem quarries the tiles paragraph, not one option names a figure, and not one key
+turns on recognising anybody."* **The condition STANDS and falls due on any new ENG-015 item**, and
+the standing run prints the falls-due line on every pass, so the obligation cannot go quiet — the
+first `DECLARED(item-set)` completed by the only means it can, a reading.
+
+**And her scope discipline travels on the row** (`_verificationScope`): a reading for ONE property;
+twelve items passed one test; **nothing here approves an item** — a verdict that travels wider than
+its reading is the filtered-meaning fault wearing good news.
+
+**HER WRITE-PATH LINE, FILED BESIDE R601 AS ITS REPAIR'S PROOF (her words):**
+
+> **The strongest reader a decision field can have is the write path itself.**
+
+`hintServes` was a decision in a field nothing read. `word_live_needs_reviewer` is the inversion:
+a field the SCHEMA obeys, refusing the very action it exists to authorise until the authority is
+present — her sign-off recorded because the constraint demanded it. And her channel verdict stands
+on the wiring's record: *"a new channel whose first two acts are a refusal and a constraint is a
+channel born governed, which no other channel in this project can say."*
+
+## R645 — The rejections register is drafted; the stamp points at the draft by digest
+
+The class ruling is taken: the register is DRAFTED and sits with Annie for signature. The Little
+Women stamp now points at `b936d7b1a3bf2a5872292328c542d56db1e4686b96bfe5c6a3b8d68ee3f6b9dd`
+rather than at a pending ruling — a pointer to bytes instead of a pointer to a hope — with the
+prior stamp preserved. **Nothing else changes until her signature crosses.**
