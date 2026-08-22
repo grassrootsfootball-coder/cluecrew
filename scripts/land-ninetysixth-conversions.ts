@@ -103,7 +103,7 @@ for (const [pid, entry] of perPassage) {
 
   const legacy = ((passage.contentFlags as unknown[]) ?? []).filter((f) => typeof f === 'string');
   const proses = [...entry.flags, ...entry.support].map((f) => String(f.sourceProse));
-  const displaced = legacy.filter((s) => proses.includes(String(s)));
+  const displaced: unknown[] = legacy.filter((s) => proses.includes(String(s)));
   const kept = ((passage.contentFlags as unknown[]) ?? []).filter((f) => !displaced.includes(f));
   const wouldBe: Record<string, unknown> = {
     ...passage,

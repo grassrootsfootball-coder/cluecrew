@@ -94,7 +94,7 @@ for (const [pid, flags] of perPassage) {
   const legacy = (passage.contentFlags as unknown[]).filter((f) => typeof f === 'string');
   // Byte-guard: every displaced legacy string must be quoted verbatim in a landing sourceProse.
   const proses = flags.map((f) => String(f.sourceProse));
-  const displaced = legacy.filter((s) => proses.includes(String(s)));
+  const displaced: unknown[] = legacy.filter((s) => proses.includes(String(s)));
   const kept = (passage.contentFlags as unknown[]).filter((f) => !displaced.includes(f));
   const wouldBe = {
     ...passage,
