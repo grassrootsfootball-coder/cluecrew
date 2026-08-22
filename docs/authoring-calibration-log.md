@@ -15659,3 +15659,58 @@ second and stops).
 nobody has made. **Bound on its face:** a word-overlap test over prose, over-calling where a hint
 covers a clause in different words and under-calling where it shares a word without reaching the case.
 **44 is a starting population, not a defect count.**
+
+## R531 — Ten strings a child HEARS, and the specification narrowed the route
+
+**Staged: `TEN-STRINGS-A-CHILD-HEARS.md`, `a9ef079d185cc1c9…`.** Sent as **wording, not scan output** —
+each with what it says for a real value, because the read is about the sentence a child hears.
+
+**Two were never written to be heard.** *"Your detective friend is thinking"* reads the mascot's
+internal **pose tag**; *"Streak lantern: lit"* reads a **streak state**. Both are values written for a
+component and spoken to a child. **"hover definition"** has no verb and no article.
+
+**HER SPECIFICATION CORRECTION, AND IT IS WIDER THAN ONE SCAN.** She asked for *every literal string
+that reaches a child's SCREEN*. **An aria-label reaches the ear.**
+
+**`check-no-review-furniture` is the ONLY scan in the store that reads an attribute at all** — and its
+pattern required a plain quoted value. Every other child-facing scan reads **text nodes and store
+fields**: `check-lone-letter-n` screened 155 strings and no attributes; `check-child-surface-scope` is
+titled *every surface a child READS*; `scan:vocab` reads declared file scopes.
+
+**So the ear was not narrowly covered — it was never in scope for anything.**
+
+**THE NARROWING WAS INSIDE THE SPECIFICATION, NOT INSIDE A SCAN.** Route is the free dimension, and it
+was discarded exactly as **direction** and **format** were (R517) — except one word in a sentence did
+it, and every scan written to that sentence inherited it. **A specification narrows once and every
+instrument built from it is narrow.**
+
+**Corrected: every string that reaches a child BY ANY ROUTE.**
+
+## R532 — `export-maths-review-pack` is compliant too: 21 carry the set, not 11
+
+**Fourth misclassification in four turns.** It renders `it.options.map(...)` with **`o.isKey`** marking
+the key. My detector matched only `isCorrect`.
+
+**Corrected with both key-markers tolerated: 21 artefacts carry key + siblings** — was 11, then 13,
+now 21. **Ten remain non-compliant and ask for a verdict**, down from fourteen.
+
+**All three heads of the fix order turned out compliant** — `export-review-pack`, `export-vr-review-pack`,
+`export-maths-review-pack`. **The order was wrong at the top three times, for three different pattern
+faults**: whitespace, then a second key-marker name, having earlier been slash-in-a-string.
+
+**The real remainder splits cleanly**: six carry a key and no siblings (`export-eng028-walk-repairs`,
+`export-fifteen-headwords-for-annie`, `export-one-source-rows`, both walk packs, and the never-staged
+workorder); four carry siblings and no key, all maths.
+
+## R533 — The 44 stays a starting population and does not become a work order
+
+**Her clause applies directly: an unread row is not a debt** (R521).
+
+`check:widened-without-hint` **reports and does not fail**, its bound is on its face, and **44 is the
+size of a population, not a count of defects.** A word-overlap test over prose over-calls and
+under-calls, and turning its output into a queue would convert a measurement into forty-four
+obligations nobody has agreed.
+
+**This is the conditional-flag failure with the numbers reversed** — there, nine rows in an obligation
+field read as nine obligations and were two. **Here, forty-four rows in a report must not become
+forty-four rows in a queue**, and the difference is entirely which field they sit in.
