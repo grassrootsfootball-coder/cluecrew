@@ -15274,3 +15274,89 @@ before anybody had measured this passage**, and `NOT_A_READING_AGE` travelling w
 
 **None is LIVE.** So her fourteen **arrives with them when they are read** rather than after — which
 is the whole point of attaching it to the rows instead of recording it beside them.
+
+## R511 — Narrowed to the ACT, and ordered by how often each has actually carried a verdict
+
+**Her ruling: the refusal is the BACKSTOP; the specification is the POINT.** Every reviewer-facing
+artefact that shows an option shows its key and its siblings. **A rendering change on the sending side
+removes the occasion rather than managing it.**
+
+**AND THE RULE BITES ON THE ACT, NOT THE ARTEFACT.** An option shown for CONTEXT is not refused; the
+rule applies where **a verdict on an option is what is asked for.** So the twenty-two are not one
+population:
+
+| | count |
+|---|---:|
+| **asks for a verdict — the rule bites** | **14** |
+| **offers a READING — the harder half (R512)** | **4** |
+| shows an option for CONTEXT only — not refused | 4 |
+
+**Ordered by how often each has actually carried a verdict** (staged instances), which is the fix
+order:
+
+| staged | | exporter |
+|---:|---|---|
+| **7** | key-only | `export-review-pack` |
+| **4** | neither | `export-maths-review-pack` |
+| **4** | key-only | `export-vr-review-pack` |
+| 2 | neither | `export-maths-gap-families`, `export-nvr-hints-to-reword`, `export-reviewer-status` |
+| 1 | mixed | seven more |
+| **0** | neither | `export-cowork-workorder` |
+
+**Twenty-eight staged instances across the fourteen, and the top three account for fifteen of them.**
+`export-review-pack` alone is seven — **the most-used verdict artefact in the store, carrying the key
+and not the siblings.**
+
+**`export-cowork-workorder` has never been staged**, so it asks for verdicts it has never asked for —
+a fix with no occasion behind it, and last in the order for that reason rather than first because it
+is worst.
+
+## R512 — An artefact that offers a READING of an option carries the set too
+
+**Her correction, and it is the harder half.** **She did not misjudge the option — she RATIFIED A
+READING of it.** The carriers document called it *a claim about narrative technique*; she adopted that
+and built on it **without asking what the key was.**
+
+**So the rule reaches further than artefacts that ASK for a verdict. An artefact that OFFERS a reading
+of an option carries the option set too.**
+
+**A READING ARRIVES ALREADY ARGUED, WHICH IS WHAT MAKES ACCEPTING ONE CHEAPER TO DO WRONG THAN FORMING
+ONE.** A verdict request presents an option and asks; a reading presents an option *and the conclusion*,
+and the reader's work is reduced to assent or objection. **The evidence needed to object is exactly
+what the artefact left out.**
+
+**Four artefacts are in this class**: `export-terminal-over-ceiling`, `export-vr-audit-sample`,
+`export-vr-pattern-sample`, `export-vr04-forty-ranks`. **And the carriers document that caused this was
+not among them** — it was hand-written, which is where the class is least visible.
+
+## R513 — The check's FLOOR is the finding, and it goes on the artefact's face
+
+**944 artefacts, 2 key-claims, 2 wrong. THAT IS NOT A RATE.**
+
+**It says quoting a carrier's key is a practice almost nobody follows** — and **the one file that
+followed it got both wrong**, so **the fault was concentrated rather than distributed.** A hundred
+percent failure over a population of two is a statement about the population, not about the practice.
+
+**The check reaches a proposal that QUOTES a key. It cannot reach one that CHARACTERISES a carrier in
+prose — which is what a proposal normally does.** The carriers document that caused R503 characterised
+rather than quoted, and would not be caught by this check today.
+
+**Worth having and not coverage, and it must say so on its face** — a check whose result is *2 of 2
+wrong* will be read as thorough unless the denominator's smallness is printed beside it.
+
+## R514 — A pattern written for one serialisation fails silently on another
+
+**Her new face of the match rule (R495), and it is the same family as direction-never-asked and
+footnotes-counted-as-readers.**
+
+**A single pattern over a mixed population covers ONE FORMAT while reporting on ALL of them.** My
+key-claim pattern demanded a quote immediately after `key:`. In markdown that is `key: "…"`; **in JSON
+it is `key: \"…\"` and the next character is a backslash.** It screened 944 artefacts across both
+formats and matched **zero**.
+
+**A MATCH NOT CARRYING ITS KIND, WHERE THE KIND IS THE FORMAT.** The scan knew which files were JSON
+and which were markdown, and threw that away before matching — exactly as the reader scan knew which
+matches were imports and which were footnotes.
+
+**And it was caught by `requirePopulation`, not by the pattern.** The zero was refused before it
+became a number, which is the only reason this is a register entry rather than a clean result.
