@@ -16715,6 +16715,7 @@ receiver can report arrival — but this is the first time both directions have 
 is what makes it a channel fault rather than an incident.
 
 ## R580 — A description naming two branches, and a hint covering one
+**Governed by R586 (assert or describe), which was stated after this and above it.**
 
 **Two fields in one row, disagreeing, and nothing was comparing them.**
 
@@ -16745,6 +16746,8 @@ three-word window: **a loose population with a stated size is worse than a tight
 is what the reader is trusting.**
 
 ## R581 — Failing systematically by question type is a different fault from failing at random
+**Governed by R586 (assert or describe). Corrected by R585: the zeros are about the WORDING, never
+the TAGGING — the entry applies to all four types.**
 
 **`en-attribute-transfer` serves four question types and its wording belongs to one.**
 
@@ -16782,3 +16785,87 @@ been applying all fortnight to gates that see an empty population and report a p
 that cannot fail on a clean bank and a gate that cannot pass on one are measuring the same wrong
 thing. The repair is the same in both directions — assert the SCREENED population non-empty, declare
 the OUTPUT population possibly-empty with a reason, and print the denominator beside it.
+
+## R583 — 15 of 351: what "arrived" has actually rested on
+
+**R255 said STAGED is not ARRIVED and only the receiver can report arrival. It never said how the
+report would be RECOGNISED**, so arrival has been inferred from silence for a fortnight — the weakest
+possible evidence, and **the same evidence a total channel failure produces.**
+
+**She has been supplying the proof all along and nothing was reading it.** Her returns open with
+*"Artefacts read, full digests computed here over the bytes"* and quote the filename and a sha256.
+That is a receiver-side confirmation **over the actual bytes**, which is stronger than a delivery
+receipt: it proves she read the same file that was staged, not merely that something was written.
+
+`pnpm check:arrival-confirmed` joins the two sides. **351 staged artefacts; 24 distinct digests she
+has quoted across 65 returns; 15 CONFIRMED.**
+
+    CONFIRMED      15 — a return quotes a digest equal to this file's bytes.
+    NOT CONFIRMED 336 — and this is NOT evidence of non-arrival. She confirms by digest only when
+                        she opens a return with one, which is most turns she does not.
+    UNMATCHED       9 — a digest in a return matching no staged file. She read something this store
+                        cannot identify, and that direction had never been looked at.
+
+**THE CHANNEL FAILED IN BOTH DIRECTIONS IN ONE TURN, and that is what makes it a channel fault rather
+than an incident.** Seven returns absent by ordinal; three artefacts staged with sidecars at 14:09,
+18:04 and 18:11 and nothing new on her disk. Each leg had a rule; neither had an instrument.
+
+**What this cannot do: it reports UNCONFIRMED-arrival, never non-arrival, and they are not the same
+claim.** Confirmation is a thing SHE does, so its absence is a fact about her returns and never about
+the channel. **Silence is still silence. The change is that it is counted rather than read as
+delivery.**
+
+## R584 — The description-hint check is ONE-SIDED, and a clean run means nothing
+
+**Hers.** A contradiction between the two fields is evidence. **Their agreement is evidence of
+nothing, because both can be stale together** — which is precisely what the unlanded-amendment scope
+correction showed: a description and a hint sitting in perfect accord, both wrong, with nothing in
+the accord to say so.
+
+So the check reports FAILURES and says, on a clean run and in the run's own output, that **a clean
+run means nothing**. Otherwise the next reader takes seventy silent rows as seventy checked ones —
+which is R60's fault arriving through the opposite door, an over-reading of a true zero rather than
+an under-reporting of an empty one.
+
+**A passing row is not a checked row.** The line prints whether or not anything is found, because the
+reader who needs it most is the one who arrives on a green day.
+
+## R585 — A zero by question type is a finding about the WORDING, never about the TAGGING
+
+**She nearly over-called this and caught herself, and the correction is worth more than the finding.**
+
+**Zero of eight vocabulary carriers signal two people — and the entry still applies to all eight.**
+On `ENG-001-WIW-17`, asking what *grave* means in *'A grave round face'*, the option **"Dark and
+dirty with earth"** gives the burial sense's attribute to a face. **That is attribute transfer
+exactly, and there is no person in it.**
+
+**The transfer is between THINGS. The hint was written as though it were between people.** So the
+by-type zeros say the carriers lack the feature the HINT asserts; they do not say the entry is
+misapplied, and a reader taking them that way would **retag correctly-tagged items** — repairing the
+half that was right. The check now says so on the row that produces the zero.
+
+## R586 — ASSERT OR DESCRIBE: the governing rule above R580 and R581
+
+**Hers, and it is the rule those two entries are instances of.**
+
+> **A hint that DESCRIBES A MOVE is true wherever the move is right. A hint that ASSERTS A FEATURE
+> must be true of every carrier — and a library hint cannot see its carriers, so an assertion in one
+> is a claim about a population its author cannot see. Prefer the move. Assert only where the
+> assertion IS the teaching.**
+
+*"Check which one each detail belongs to"* is a move, and it survives on all 43 carriers. *"Two people
+are being described"* is an assertion, and it is false on 26 of them. **The same entry, the same
+sentence, and the two halves have different truth conditions** — which is why the fault was invisible
+to a reader checking whether the hint was good advice.
+
+**And it names the pair.** The two ways she has got a hint wrong this week are:
+
+- **instructing a channel not every child has** — *"Picture the word in print"*, which a child who
+  cannot picture it cannot perform (R567);
+- **asserting a feature not every carrier has** — *"Two people are being described"*, on an item
+  about painting a house (R576).
+
+**Both are a hint author writing against a population they cannot see**, from the two directions a
+hint can face: outward to the child, and inward to the items. She stated the first about children a
+fortnight before the second arrived about carriers, and did not connect them until both were on the
+board.

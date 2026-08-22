@@ -181,6 +181,13 @@ async function main() {
             + `${nonePresent.map((b) => b.t).join(', ')}, and present in MOST carriers in `
             + `${allPresent.map((b) => `${b.t} (${b.has}/${b.all})`).join(', ')}. This wording was `
             + `written for one of the ${types.length} question types its tag serves.`
+            + '\n      A FINDING ABOUT THE WORDING, NEVER ABOUT THE TAGGING (Annie, R585).'
+            + '\n            A zero here says the carriers lack the feature the HINT asserts. It does'
+            + '\n            NOT say the entry is misapplied, and reading it that way would retag'
+            + '\n            correctly-tagged items. On ENG-001-WIW-17 the option "Dark and dirty with'
+            + '\n            earth" gives the burial sense\'s attribute to a face — attribute transfer'
+            + '\n            exactly, with no person in it. The transfer is between THINGS, and the'
+            + '\n            hint was written as though it were between people.'
           : '')
         + `\n      how tested: ${f.why}`,
       );

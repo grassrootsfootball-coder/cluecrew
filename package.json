@@ -155,6 +155,7 @@
     "check:hint-asserts-feature": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-hint-asserts-feature.ts",
     "check:hint-locator": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-hint-locator.ts",
     "check:field-reads": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-field-reads.ts",
+    "check:arrival-confirmed": "tsx scripts/check-arrival-confirmed.ts",
     "check:return-sequence": "tsx scripts/check-return-sequence.ts",
     "check:amendments-landed": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-amendments-landed.ts",
     "check:authority-shape": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-authority-shape.ts",

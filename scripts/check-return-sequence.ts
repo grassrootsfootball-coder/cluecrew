@@ -75,7 +75,9 @@ function main() {
     `\n  ${numbered.size} numbered return(s) on disk, ${lowest} to ${highest}.\n`
     + `  ${unnumbered.length} unnumbered (a named series rather than the main sequence): `
     + `${unnumbered.map((f) => f.replace(/^annie-|-return.*$/g, '')).join(', ')}\n`
-    + `  Below ${lowest}: not reported. Nothing says the sequence starts at 1, and inventing a floor\n`
+    + `  Below ${lowest}: NOT REPORTED, and that is a bound rather than a clean result — returns 1 to `
+    + `${lowest - 1} are UNKNOWN, neither absent nor present. Nothing says the sequence starts at 1,\n`
+    + '  and inventing a floor\n'
     + '  would manufacture gaps that were never sent.',
   );
 
@@ -92,7 +94,12 @@ function main() {
   for (const n of missing) {
     const before = [...numbered.keys()].filter((k) => k < n).sort((a, b) => b - a)[0];
     const after = [...numbered.keys()].filter((k) => k > n).sort((a, b) => a - b)[0];
-    console.error(`      return ${n} — absent, between ${before} and ${after}, both present`);
+    console.error(
+      `      return ${n} — absent, between ${before} and ${after}, both present\n`
+      + '            EITHER a return that never crossed, OR a ruling relayed in conversation and\n'
+      + '            never written to a file. **From this side those are the same fault**, and\n'
+      + '            neither was visible until the ordinals were counted.',
+    );
   }
   console.error(
     '\n  **A RULING IN A RETURN THAT DID NOT CROSS IS NOT LATE. IT IS INVISIBLE.** Every reader here\n'

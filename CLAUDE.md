@@ -332,6 +332,16 @@ here has no register entry. A ruling goes to the register FIRST; it comes here o
   a PARSING problem and does not solve a CROSSING problem**: three authored wordings sat in a
   correctly-formed, correctly-parseable block for two turns while being reported missing, because
   the file was not here. A gap is reported, never repaired — only she can send a return.
+- **ASSERT OR DESCRIBE** (Annie, 2026-08-22 — R586). A hint that DESCRIBES A MOVE is true wherever
+  the move is right; a hint that ASSERTS A FEATURE must be true of every carrier — and **a library
+  hint cannot see its carriers, so an assertion in one is a claim about a population its author
+  cannot see.** Prefer the move; assert only where the assertion IS the teaching. `en-attribute-
+  transfer` carries both in one sentence: *"Check which one each detail belongs to"* survives on all
+  43 carriers, *"Two people are being described"* is false on 26. **The two ways a hint has gone
+  wrong here are instructing a channel not every child has (R567) and asserting a feature not every
+  carrier has (R576)** — the same fault facing outward to the child and inward to the items.
+  `pnpm check:hint-asserts-feature` finds the assertions; a by-type zero in it is a finding about the
+  WORDING and never about the TAGGING (R585), and reading it otherwise retags correct items.
 - Content decisions (items, chapters, misconceptions) go through the CMS
   review pipeline; nothing skips the reviewer.
 - **PILOT CONTENT UNDER ACTIVE REVIEW HAS ONE WRITE PATH: `scripts/lib/pilot-review.ts`, NEVER A

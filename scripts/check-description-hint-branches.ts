@@ -91,10 +91,29 @@ async function main() {
     );
   }
 
+  /**
+   * **ONE-SIDED, ON HER RULING (R584). A CONTRADICTION IS EVIDENCE; AN AGREEMENT IS EVIDENCE OF
+   * NOTHING**, because both fields can be stale together — which is exactly what the unlanded-
+   * amendment scope correction showed: a description and a hint can sit in perfect accord and both
+   * be wrong, and nothing in their agreement says otherwise.
+   *
+   * So a passing row is NOT a checked row, and this says so where a reader will meet it, rather than
+   * leaving seventy silent rows to be counted as seventy clean ones.
+   */
   console.log(`\n${findings.length} CANDIDATE(S) — each a row worth her reading, never a verdict.\n`);
   for (const f of findings) console.log(`${f}\n`);
+  if (findings.length === 0) {
+    console.log(
+      '  A CLEAN RUN HERE MEANS NOTHING. This check is ONE-SIDED: a contradiction between the two\n'
+      + '  fields is evidence, and their agreement is evidence of nothing, because BOTH CAN BE STALE\n'
+      + '  TOGETHER. Zero findings says no description was caught contradicting its own hint. It does\n'
+      + '  NOT say the hints fit, and it must never be reported as rows checked.\n',
+    );
+  }
   console.log(
-    '  THE BOUND, AS A COUNT:\n'
+    '  ONE-SIDED: the rows NOT listed above are not passing rows. A description and its hint can\n'
+    + '  agree perfectly and both be wrong, so agreement is not evidence and is never coverage.\n'
+    + '\n  THE BOUND, AS A COUNT:\n'
     + `      ${disjunctive.length} of ${withBoth.length} description(s) state a disjunction — FINDABLE, and the population.\n`
     + `      ${withBoth.length - disjunctive.length} state one case, or state a single case worded twice — UNFINDABLE. There\n`
     + '                                        is no second branch to test the hint against.\n'
