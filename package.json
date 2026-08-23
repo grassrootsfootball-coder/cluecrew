@@ -155,6 +155,7 @@
     "check:description-branches": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-description-hint-branches.ts",
     "check:accessible-name-rulings": "tsx scripts/check-accessible-name-rulings.ts",
     "check:non-active-carriers": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-non-active-carriers.ts",
+    "check:passage-status-divergence": "tsx scripts/check-passage-status-divergence.ts",
     "check:content-flags": "tsx scripts/check-content-flags.ts",
     "check:decision-visible": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-decision-visible.ts",
     "check:hint-house-form": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-hint-house-form.ts",

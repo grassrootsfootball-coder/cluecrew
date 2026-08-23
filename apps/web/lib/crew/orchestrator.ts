@@ -36,7 +36,7 @@ import {
   type TeachbackContent,
 } from '@cluecrew/core';
 import { logEvent, prisma, Prisma } from '@cluecrew/db';
-import { hintToServe, readContentFlags, resolveLibraryHint, type HintSource, type MechanicFamily } from '@cluecrew/core';
+import { hintToServe, resolveLibraryHint, type HintSource, type MechanicFamily } from '@cluecrew/core';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { fluencyRound } from '@/lib/crew/fluency';
@@ -761,7 +761,7 @@ async function serveItem(
     // THE PASSAGE TRAVELS WITH THE ITEM. Loaded here, server-side, because the extract is a file
     // and the engine is a client component — and because a comprehension item without its passage
     // is not a degraded question, it is not a question.
-    ...(family === 'comprehension' ? { passage: await withVaultWords(reportOnlyContentGate(loadPassageFor(item))) } : {}),
+    ...(family === 'comprehension' ? { passage: await withVaultWords(loadPassageFor(item)) } : {}),
   };
 }
 
@@ -772,24 +772,18 @@ async function serveItem(
  * reason, then serving normally regardless. The wire that would make this a real gate is a
  * separate, later act, decided on the blast-radius membership, not on a count.
  */
-function reportOnlyContentGate<T extends { id: string; rawForGate?: Record<string, unknown> } | undefined>(passage: T): T {
-  if (!passage?.rawForGate) return passage;
-  try {
-    const report = readContentFlags(passage.rawForGate, { enforceUse: true });
-    const reasons: string[] = [];
-    for (const f of report.standardFlags) {
-      if (f.disposition === 'refer') reasons.push(`flag ${f.axis} carries disposition REFER`);
-    }
-    for (const r of report.refusals) {
-      if (r.code === 'CONDITION_MISSING') reasons.push(`unmet condition: ${r.detail}`);
-    }
-    for (const reason of reasons) {
-      console.warn(`[content-gate REPORT-ONLY] would refuse ${passage.id}: ${reason} — SERVED NORMALLY`);
-    }
-  } catch {
-    console.warn(`[content-gate REPORT-ONLY] reader threw on ${passage.id} — SERVED NORMALLY; a real gate must decide this case before wiring`);
-  }
-  return passage;
+/**
+ * **ENFORCEMENT IS THROUGH PASSAGE STATE, NOT FLAG EVALUATION** (David's ruling on Annie's 109th
+ * shape, 2026-08-23 — R657). The serve path reads `passageStatus.status` and NOTHING ELSE: it
+ * never evaluates flags and it has nothing that can throw. A judge's disposition moves the status
+ * through the standing path (`scripts/lib/passage-status.ts`) with the authority recorded; this
+ * reader fails CLOSED like Item.status — no explicit SERVABLE, no serving — and the comprehension
+ * engine's refuses-rather-than-degrades notice is the child-facing face of that. The report-only
+ * evaluator that briefly sat here is demoted to `check:passage-status-divergence`, which asserts
+ * on schedule that status and flags agree, and never touches serving.
+ */
+function passageServable(parsed: { passageStatus?: { status?: unknown } }): boolean {
+  return parsed.passageStatus?.status === 'SERVABLE';
 }
 
 /**
@@ -821,7 +815,7 @@ Promise<(Omit<NonNullable<T>, 'vaultCandidates'> & { vaultWords: Array<{ id: str
  * and a stub passage would be the fourth.
  */
 function loadPassageFor(item: { stem: unknown; lineRefs: unknown }): {
-  id: string; title: string | null; rawForGate?: Record<string, unknown>;
+  id: string; title: string | null;
   lines: Array<{ n: number | null; text: string }>; citedLines: number[]; vaultCandidates: string[];
 } | undefined {
   const stem = (item.stem ?? {}) as Record<string, unknown>;
@@ -834,13 +828,13 @@ function loadPassageFor(item: { stem: unknown; lineRefs: unknown }): {
     const parsed = JSON.parse(raw) as {
       sceneTitle?: string; numberedLines?: Array<{ n?: number | null; text?: string }>;
       wordVaultCandidates?: Array<{ word?: string; anchoredAs?: string }>;
-      contentFlags?: unknown; contentScreenings?: unknown; extract?: unknown; text?: unknown;
+      passageStatus?: { status?: unknown };
     };
+    // THE STATUS, AND NOTHING ELSE (R657). Fails closed: no explicit SERVABLE, no passage — and
+    // the comprehension engine's unmissable notice is what a child sees, never a stub.
+    if (!passageServable(parsed)) return undefined;
     return {
       id: ref,
-      // The whole parsed record, for the report-only gate: the gate reads flags and conditions,
-      // and a projection that dropped them would report a clean passage forever (R57).
-      rawForGate: parsed as Record<string, unknown>,
       title: typeof parsed.sceneTitle === 'string' ? parsed.sceneTitle : null,
       lines: (parsed.numberedLines ?? []).map((l) => ({ n: l.n ?? null, text: l.text ?? '' })),
       // The passage's own candidate list names the headwords; the Word table (LIVE only) decides

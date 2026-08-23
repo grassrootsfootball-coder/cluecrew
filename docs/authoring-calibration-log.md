@@ -18462,3 +18462,43 @@ crossed prose figures rested on — the 19:31 reference set, the manufactured-ze
 attached exposure lists among them — **their figures marked UNVERIFIABLE, not reconstructed.**
 `content/exports/` is gitignored, so those prunings are unrecoverable; the moratorium is the only
 retention there is, which is itself evidence for the ruling it awaits.
+
+## R657 — Enforcement through passage state: her shape built, the migration derived, the evaluator demoted
+
+**HER 109TH (`eefd7385…7131`) IS THE RULING'S ARGUMENT**: *"my CUT would change a record and no
+child's morning"* — dispositions read at the door only are R601 at corpus scale, and *"a MAY_JUDGE
+whose verdicts stop nothing is MAY_ADVISE with better paperwork."* David ruled her shape; the
+report-only design that produced the blast radius is retired BY its own answer.
+
+**BUILT**: `passageStatus` on the passage record, in Item's style — **fails closed** (no explicit
+SERVABLE, no serving; the engine's refuses-rather-than-degrades notice is the child-facing face).
+**The serve path reads the status and nothing else** — never evaluates flags, has nothing that can
+throw; `loadPassageFor` returns undefined below SERVABLE. A judge's disposition moves the status
+through `movePassageStatus` (`scripts/lib/passage-status.ts`): expected-prior asserted (a move
+landing on an unexpected state refuses), displaced record stamped, authority recorded — the write
+path as the decision field's reader, her R644 line at corpus scale.
+
+**THE MIGRATION DERIVED, NEVER TYPED**: all 29 passages re-evaluated through
+`readContentFlags(enforceUse)` over their own bytes — **29 SERVABLE, 0 WITHHELD** — the artefact
+(`passage-status-migration-f41ac75f…`) citing the blast radius at `0a39af8c…045c` **as the
+evaluation it re-ran, not as the evaluation it trusts** (R599: if the corpus had moved, the re-run
+would say so and the bytes would win).
+
+**THE EVALUATOR DEMOTED, NAMED FOR WHAT IT CHECKS**: `check:passage-status-divergence` — same
+logic, new job: assert on schedule that every passage's status agrees with what its flags imply,
+fail loudly on any divergence INCLUDING a reader throw (silence on the serve path; a red build
+here), UNSET reported as a migration gap. It never blocks serving. First run: 29 agree, exit 0.
+
+**MAY_JUDGE grows a scope field** — her confirmation landed with the 109th; the field lands with
+the second name, held armed on the constant.
+
+## R658 — Retention ruled: the superseded store is TRACKED
+
+David's ruling, second half decided by the gitignore finding: *"a retention store that git ignores
+is a retention store one clean away from being the fault again."* **Chosen: moved somewhere
+tracked.** `deliver()` now RETAINS superseded artefacts in `content/retention/` (git-tracked,
+`.superseded` suffix) — every retirement gets a commit and a diff, the quotable line an era's prose
+rested on survives both the family-glob and any clean, and the outbound directory still holds
+exactly one current version per family. The moratorium's `.superseded`-in-place interim never
+accumulated a file, so there was nothing to migrate into the store — it opens empty, which for a
+retention store is the only honest opening.

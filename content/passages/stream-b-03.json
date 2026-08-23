@@ -133,7 +133,7 @@
  ],
  "editorialNotes": [
   "Word Vault: replaced 'record' (not anchored in the final text) with 'net'.",
-  "2026-08-15: line 28 `eleven` -> `twelve`. The passage's own count did not reconcile \u2014 seven back of eleven leaves four, and lines 29 to 34 account for five (two on the beam, one on the extinguisher, one through the hatch, one last one). Twelve reconciles and keeps both claims on line 28 true: 7 of 12 is more than half, and it is still what Dilan calls a pass. Commissioned original writing, so no source is violated.",
+  "2026-08-15: line 28 `eleven` -> `twelve`. The passage's own count did not reconcile — seven back of eleven leaves four, and lines 29 to 34 account for five (two on the beam, one on the extinguisher, one through the hatch, one last one). Twelve reconciles and keeps both claims on line 28 true: 7 of 12 is more than half, and it is still what Dilan calls a pass. Commissioned original writing, so no source is violated.",
   "2026-08-15: wordVaultCandidates `still` re-anchored from line 13 to line 22."
  ],
  "numberedLines": [
@@ -447,7 +447,7 @@
   "reading": "Verbatim means VERBATIM UNDER THESE NORMALISATIONS. A figure quoted without them is approximate and does not say so.",
   "normalisations": [
    {
-    "normalisation": "NONE \u2014 commissioned original",
+    "normalisation": "NONE — commissioned original",
     "instances": 0,
     "note": "This passage was written for the bank. There is no source text, so there is nothing to be verbatim against and no normalisation to declare."
    }
@@ -503,7 +503,7 @@
    "questionHooks",
    "craftNotes"
   ],
-  "reason": "Addendum 19 \u00a71 and the T4 sourcing rule, made structural rather than procedural. Curation copy retains them.",
+  "reason": "Addendum 19 §1 and the T4 sourcing rule, made structural rather than procedural. Curation copy retains them.",
   "curationCopy": "/home/claude/passages/stream-b/stream-b-03.json",
   "flaggedNotStripped": [
    "wordVaultCandidates"
@@ -528,10 +528,16 @@
   },
   "hundredandseventh-seat-settlement": {
    "displaced": [
-    "(the leaving-school STANDARD flag, moved to stream-b-04 \u2014 object preserved there with its chain)"
+    "(the leaving-school STANDARD flag, moved to stream-b-04 — object preserved there with its chain)"
    ],
    "by": "annie-107-for-code.md, sha256 b04e432cf22fefb455f70eee76f74641b6a7b2ed257c96c2d21b3803f3778c0b",
    "note": "the seat closed for b-04 on string-identical spans from both stores; the row leaves b-03 by the same displacement path every legacy row left by"
   }
+ },
+ "passageStatus": {
+  "status": "SERVABLE",
+  "movedBy": "migration (derived — the same evaluation the blast radius ran, RE-RUN here)",
+  "authority": "derived at migration 2026-08-23 from readContentFlags(enforceUse) over this passage's own bytes; cites serve-gate-blast-radius-7528744cdf6c9966.json, sha256 0a39af8c358c0375183e909c1416d05edcc1560274acd4a75e5be58d8569045c as the evaluation it re-ran, not as the evaluation it trusts",
+  "at": "2026-08-23"
  }
 }

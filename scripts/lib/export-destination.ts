@@ -18,10 +18,12 @@
  */
 import { createHash } from 'node:crypto';
 import { renameSync, copyFileSync, existsSync, mkdirSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
-import { basename, join, resolve } from 'node:path';
+import { basename, dirname, join, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 /** Confirmed with David, 2026-08-02: Cowork reads the ~/Downloads/11+/ tree. */
 export const OUTBOUND_DIR = '/Users/davidb/Downloads/11+/from-cluecrew';
+const RETENTION_DIR = resolve(dirname(fileURLToPath(import.meta.url)), '../../content/retention');
 
 /**
  * RETIRE A DROP TREE NOTHING WRITES TO ANY MORE.
@@ -158,14 +160,17 @@ export function deliver(sourcePath: string, family?: string): string {
       if (!supersedesStamped && !supersedesLegacy) continue;
       if (hash && existing.includes(hash)) continue; // a sibling of the current version
       /**
-       * **RETENTION MORATORIUM (2026-08-23, pending David's ruling on the R655 pruning class).**
-       * A superseded artefact is MARKED, never deleted: pruning retires the only quotable line the
-       * era's prose rested on, and three crossed figures already sit unverifiable for exactly this
-       * reason. Superseded files move aside under a `.superseded` suffix — out of every
-       * family-glob, present for every provenance question.
+       * **RETENTION, RULED (David, 2026-08-23 — R658): superseded artefacts are RETAINED IN A
+       * TRACKED STORE.** The first moratorium marked them aside inside gitignored directories —
+       * *"a retention store that git ignores is a retention store one clean away from being the
+       * fault again."* Superseded files now MOVE to `content/retention/`, which is git-tracked:
+       * every retirement gets a commit, and the quotable line an era's prose rested on survives
+       * both the family-glob and the clean.
        */
-      renameSync(join(OUTBOUND_DIR, existing), join(OUTBOUND_DIR, `${existing}.superseded`));
-      console.log(`  superseded → MARKED (retained) ${existing}.superseded`);
+      const retained = join(RETENTION_DIR, `${existing}.superseded`);
+      mkdirSync(RETENTION_DIR, { recursive: true });
+      renameSync(join(OUTBOUND_DIR, existing), retained);
+      console.log(`  superseded → RETAINED (tracked) content/retention/${existing}.superseded`);
     }
   }
   copyFileSync(sourcePath, target);
