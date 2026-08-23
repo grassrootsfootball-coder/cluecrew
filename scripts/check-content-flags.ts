@@ -35,6 +35,7 @@ function main() {
   let standard = 0;
   const screenedClean: string[] = [];
   const fallsDue: string[] = [];
+  const heldPlacements: string[] = [];
   const neverScreened: string[] = [];
   let legacyStrings = 0;
   let legacyObjects = 0;
@@ -59,6 +60,10 @@ function main() {
     for (const sf of r.standardFlags) {
       if (typeof sf.conditionMetBy === 'string' && /falls due|STANDING/i.test(sf.conditionMetBy)) {
         fallsDue.push(`  ${String(p.id)}  ${sf.axis} — ${String(sf.condition).slice(0, 76)}`);
+      }
+      // A hold nothing prints goes quiet (R601). Lifted only from her block.
+      if (typeof sf.placementConfirmation === 'string' && sf.placementConfirmation.startsWith('WITH ANNIE')) {
+        heldPlacements.push(`  ${String(p.id)}  ${sf.axis} — placement by content, WITH ANNIE`);
       }
       const conv = sf.convertedBy ? `  converted by ${sf.convertedBy}` : `  judgedBy ${sf.judgedBy}`;
       landed.push(`  ${String(p.id)}  ${sf.axis}  [${sf.disposition}]${conv}${sf.splitNote ? '  [SPLIT]' : ''}`);
@@ -103,6 +108,10 @@ function main() {
    * **THE STANDING OBLIGATIONS, ALL OF THEM, EVERY RUN** — a met condition on a growing item set
    * falls due again on every new item, and an obligation that stops printing goes quiet (R644).
    */
+  if (heldPlacements.length > 0) {
+    console.log(`\n  PLACEMENTS WITH ANNIE — by-content placements held provisional until her block: ${heldPlacements.length} [unit: flags]`);
+    for (const s of heldPlacements) console.log(s);
+  }
   console.log(`\n  STANDING CONDITIONS — fall due on any new item for their passage: ${fallsDue.length} [unit: open conditions]`);
   for (const s of fallsDue) console.log(s);
   console.log(`\n  SCREENED-CLEAN: ${screenedClean.length} [unit: passages with a recorded zero]`);
