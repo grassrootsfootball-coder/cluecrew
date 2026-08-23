@@ -18667,3 +18667,36 @@ on my behalf by the afternoon"* — the fastest round trip a rule has made in th
 sitting proceeds on her side. This store waits as built — the door ready for born-attributed flags,
 the coverage statement's home typed, the two UNRECORDED statuses movable only through
 `movePassageStatus` with her authority. Nothing is owed from this side.
+
+## R665 — The first front-door judgements land; the corpus has no silence left
+
+**Her 115th (sha256 computed here: `365925a887fba181e879abb3c8c2bfac33dbcbe9bd997d88091aa2cbd157d8c5`)
+carried the sitting's first half, and the four entries landed through the door with her name on
+every one from birth** — which nothing in this corpus carried before today.
+
+- **eco-club**: a coverage statement and nothing else — *"the coverage statement carries the whole
+  judgement, which is what it was designed to do for the passage with nothing to flag"* — read
+  whole against all twenty-one axes at `ab870494…`, KEEP, no conditions. The fourth record kind's
+  first occupant arrived one return after its home was built.
+- **sports-day**: coverage + **the corpus's first born-attributed flag** (Priya's grazed knee —
+  physical-peril's keep-pattern exactly, the span cited by verbatim string per the cross-store rule
+  and completed against the body bytes at line 5) + **the first EARNED screening**:
+  distress-and-crying walked closely and clean, the reading stated — *"a zero that surprised the
+  reader, and it earns its row."* KEEP, no conditions.
+
+**THE MAPPING IS ON THE RECORD**: her `kind: "coverage"` and prose `readAgainst` mapped to the
+door's typed shape at landing — the 16-char prefix ASSERTED against the full amended digest (a
+truncated digest is a prefix, not a digest), axesCount from her "all twenty-one axes", her authored
+object preserved whole under `_asAuthored`. And the byte field's THIRD name surfaced on the way:
+the cloze vehicles keep their bytes in `body` — extract, else text, else body, one reader (R598's
+third instalment).
+
+**REFER LIFTED THROUGH THE STANDING PATH**: both UNRECORDED statuses moved to SERVABLE via
+`movePassageStatus`, expected-prior asserted, her authority and verified vehicle digests
+(`79f2fcde…` / `2c59406d…`) on the record, disposition KEEP.
+
+**THE RUNS AFTER**: 29 of 29 SERVABLE, status and flags agree, exit 0. Census: **66 standard flags
+(a printed line) · coverage 2 · screened-clean 3 · NEVER-SCREENED 0** — for the first time since
+the standard was signed, **the corpus contains no silence**: every passage is judged, screened,
+covered, or withheld by name, and the two that entered today came through the front door, before a
+child, with a name, on verified bytes.

@@ -313,8 +313,12 @@ export function readContentFlags(
    * drifted while each caller quietly plumbed its own fallback. One reader, one rule: extract,
    * else text. (R598's two-syntaxes lesson, on the byte field itself.)
    */
+  // THREE byte-field names now — extract (a-stream), text (b/c-streams), body (cloze vehicles) —
+  // each found the same way: a span refusing against bytes present under a name the reader did
+  // not drink from. One reader, one rule (R598's lesson, third instalment).
   const extractRaw = typeof passage.extract === 'string' ? passage.extract
-    : typeof passage.text === 'string' ? passage.text : null;
+    : typeof passage.text === 'string' ? passage.text
+    : typeof (passage as { body?: unknown }).body === 'string' ? (passage as { body: string }).body : null;
   const extract = extractRaw === null ? null : extractRaw.replace(/\r\n/g, '\n');
   /**
    * **THE PREAMBLE IS PASSAGE BYTES A CHILD SEES**, and Heidi's twelfth conditional is the case: its

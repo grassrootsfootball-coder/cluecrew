@@ -56,16 +56,67 @@
   "extractOrComplete": "complete"
  },
  "passageStatus": {
+  "status": "SERVABLE",
+  "movedBy": "Annie (disposition KEEP), executed through the standing path",
+  "authority": "annie-115-for-code.md, sha256 365925a887fba181e879abb3c8c2bfac33dbcbe9bd997d88091aa2cbd157d8c5 (computed here; none declared with the crossing) — coverage against all 21 axes at ab870494…; her verified vehicle digests 79f2fcde…/2c59406d… on the coverage rows; REFER lifts on this block's landing",
+  "at": "2026-08-23",
+  "disposition": "KEEP, no conditions — the first front-door judgements in this corpus"
+ },
+ "_previousPassageStatus": {
   "status": "UNRECORDED",
   "movedBy": "David, ruling of 23 August 2026",
   "authority": "no judgement record exists under the signed standard (passage-content-standard DRAFT-1), whose default for unseen material is REFER — absence reads as REFER. The migration derived SERVABLE from silence, which is the fault this move repairs.",
   "at": "2026-08-23",
   "disposition": "UNRECORDED — never judged; distinct from WITHHELD (judged and stopped). Neither serves."
  },
- "_previousPassageStatus": {
-  "status": "SERVABLE",
-  "movedBy": "migration (derived — the same evaluation the blast radius ran, RE-RUN here)",
-  "authority": "derived at migration 2026-08-23 from readContentFlags(enforceUse) over this passage's own bytes; cites serve-gate-blast-radius-7528744cdf6c9966.json, sha256 0a39af8c358c0375183e909c1416d05edcc1560274acd4a75e5be58d8569045c as the evaluation it re-ran, not as the evaluation it trusts",
-  "at": "2026-08-23"
- }
+ "contentCoverage": [
+  {
+   "kind": "coverage-statement",
+   "readAgainst": "CONTENT_AXES at ab8704949d13a5d5, all twenty-one axes",
+   "membersFound": 1,
+   "screeningsEarned": 1,
+   "disposition": "keep",
+   "conditions": [],
+   "judgedBy": "Annie",
+   "judgedAt": "2026-08-23",
+   "passageDigest": "2c59406d6328f77daf9d6929607bd5e5dfd6dabf6c5fa29e7e37b6deec829d02",
+   "axesTableSha256": "ab8704949d13a5d5f934bfd8a70545d8c877e223b37d71799e76e2b267974a79",
+   "axesCount": 21,
+   "_asAuthored": "{\"kind\":\"coverage\",\"readAgainst\":\"CONTENT_AXES at ab8704949d13a5d5, all twenty-one axes\",\"membersFound\":1,\"screeningsEarned\":1,\"disposition\":\"keep\",\"conditions\":[],\"judgedBy\":\"Annie\",\"judgedAt\":\"2026-08-23\",\"passageDigest\":\"2c59406d6328f77daf9d6929607bd5e5dfd6dabf6c5fa29e7e37b6deec829d02\"}",
+   "_mappedBy": "door-shape mapping at landing (annie-115-for-code.md, sha256 365925a887fba181e879abb3c8c2bfac33dbcbe9bd997d88091aa2cbd157d8c5 (computed here; none declared with the crossing)): kind coverage->coverage-statement; readAgainst prefix ab8704949d13a5d5 asserted against the full amended digest; axesCount 21 from her \"all twenty-one axes\". Every other field hers verbatim."
+  }
+ ],
+ "contentFlags": [
+  {
+   "axis": "physical-peril-no-lasting-harm",
+   "element": "Priya lands badly at the long jump and grazes her knee",
+   "severity": "mild",
+   "disposition": "keep",
+   "condition": null,
+   "conditionMetBy": null,
+   "reason": "One clause, not dwelt on, no distress shown; the text uses it as characterisation of the girl who never worried about anything.",
+   "loadBearing": true,
+   "strike": {
+    "span": "even though she had landed badly and grazed her knee",
+    "lines": [
+     5
+    ],
+    "_citedAsAuthored": "SPAN, cited by verbatim string per the cross-store rule: even though she had landed badly and grazed her knee"
+   },
+   "judgedBy": "Annie",
+   "judgedAt": "2026-08-23"
+  }
+ ],
+ "contentScreenings": [
+  {
+   "kind": "screened-clean",
+   "axes": [
+    "distress-and-crying"
+   ],
+   "scope": "the dread of the relay, the public loss, and the time written on the board he looks at for a long time",
+   "declaration": "Walked closely and clean: the dread is named and survived, the loss is neither softened nor punished, and the closing sentence carries him through it: it was not the win he had wanted, but it was still the best race he had ever run.",
+   "judgedBy": "Annie",
+   "judgedAt": "2026-08-23"
+  }
+ ]
 }
