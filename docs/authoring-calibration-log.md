@@ -18718,3 +18718,24 @@ test, alongside the assertion that no such seat exists today, so the gate is pro
 by data rather than by mood); and a seat entry with the accessibility scope satisfies the type as
 plain data. **The hire is a data change — one seat row, ruled — and nothing else waits on a
 build.** 738 tests.
+
+## R667 — The parked disclosure is LIVE: 24 unapproved VR hint wordings serve children today
+
+**The question answered from the bytes, membership not count**
+(`UNAPPROVED-VRNVR-HINTS-SERVING.json`, `2d390959…6cde7`). **The population derived here is 79,
+not 37** [unit: VR/NVR misconception rows whose textProvenance carries no approver — in all 79 the
+provenance object is EMPTY entirely, so `approvedBy: null` is an export's rendering of total
+absence]. If the desk's 37 is a narrower cut, its definition decides the difference; the serving
+answer holds under any subset.
+
+**24 of the 79 SERVE A CHILD TODAY**, across ten live cases (vr-01, 03, 04, 06, 07, 09, 11, 12,
+14, 15) — among them `vr04-associated-not-same` (40 LIVE items), `vr-series-off-by-one` (39),
+`vr-letter-series-step-repeat` (36), `vr06-ignores-sentence` (34). Every one is a string a child
+reads after a miss, and **no reviewer has ever approved its wording** — the serve path consults
+entry STATUS (the resolver's filter) and never approval, which is how a wording with no provenance
+serves identically to a ruled one. The other 55 do not serve (unreached, or PROPOSED and
+fail-closed under the new default).
+
+**So the parked hint-review disclosure is a live product-honesty question on David's desk, not a
+moot note** — the membership above is what any disclosure or review sitting reads against. No
+build; the notice slot stands correct for the servability wording and waits for it.
