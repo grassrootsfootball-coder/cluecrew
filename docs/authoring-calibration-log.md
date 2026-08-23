@@ -18398,3 +18398,41 @@ not the screened-count line, and I composed the total in the summary. **R649's f
 the message that endorsed R649, one paragraph from citing it.** The two figures read as the same
 corpus; the one-row difference was never in a store. Per-passage membership: 27 passages, 65 rows,
 jungle-book 6 the largest; derivation in the boundary answer staged with this entry.
+
+## R655 — The 65 line closed by membership; a provenance verb is an ungated claim (PROPOSED)
+
+**THE LINE IS CLOSED, CITING THE DIFF ARTEFACT**: `cross-store-65-diff-for-code.json`, sha256
+`7e4e99c74b4d87b3f7b02f24fdee671b22bc08b4db84a5df3dac3b5c27802450` — computed here over the bytes
+before reading, per the rule that a file cannot carry its own digest. Verdict IDENTICAL: 27
+passages seat for seat, no key in one and absent from the other, no value disagreement on any
+shared key, both boundary lists identical in both directions, sums recomputed from memberships.
+**There was never a two-store disagreement.** The R654 addendum stands as written.
+
+**THE LARGER FINDING, AND IT LANDS ON THIS SIDE BECAUSE CLOSING PROSE IS WHERE I WRITE: A
+PROVENANCE VERB IS AN UNGATED CLAIM.** The handover states the two counts *printed* 66 and 65.
+**The 66 was never printed.** A composed number was re-described downstream as a computed one, and
+a session opened believing two runs disagreed. R649 binds numbers in prose; it does not bind the
+verbs qualifying them — *printed*, *derived*, *computed* are claims about provenance, and nothing
+gates them. **The handover is NOT amended: it is a crossed artefact and its error is now
+evidence.**
+
+**PROPOSED, PENDING DAVID** (held as proposed, not applied): *a figure's provenance verb is held to
+the same standard as the figure — "printed" requires a quotable printed line, "derived" requires
+the derivation, and a figure with neither carries no verb at all.*
+
+**THE AUDIT HIS QUESTION ORDERED, against run output and artefact bytes, not memory.**
+POPULATION: every numeric claim in this session's closing prose and register addenda, R648 through
+the R654 addendum. METHOD: each figure sought as a quotable line in (a) the standing check re-run
+now, (b) a staged artefact's bytes on disk, or (c) the test runner's output now.
+
+- **QUOTABLE — the closing-state figures, all of them**: 65 (check line + census artefact + boundary
+  artefact, three independent quotable sources); screenings 2, conditions 3, never-screened 2,
+  splits 5/10, legacy 0+0=0, REPORTED 37, refused-nothing, exit 0 (check re-run lines); the audit's
+  39/8/0 (`sourceprose-audit-ae72a09f…` bytes); tests 730 + 38 (runner output now).
+- **NO QUOTABLE LINE — reported, not corrected in place**: the **66** (already owned, R654
+  addendum); and **R648's mid-session figures** — *52 standard, 31+8=39 legacy, absence 17, tone 4,
+  splits 3*. Those were grepped from live runs at the time, but the runs scrolled and the
+  intermediate artefacts were pruned as superseded, so **no quotable line exists behind them today
+  — their verbs are unverifiable, and under the proposed rule they would carry none.** The class
+  the pruning created is noted: superseding an artefact also retires the only quotable line its
+  era's prose rested on (R86's reader-map lesson, arriving on provenance).
