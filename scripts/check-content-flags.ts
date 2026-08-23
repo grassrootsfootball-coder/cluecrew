@@ -24,6 +24,13 @@ function main() {
     process.exitCode = 1;
     return;
   }
+  /**
+   * **CALIBRATION SPECIMEN (Annie's standing practice, R646): the christmas-carol item-set claim.**
+   * A census ships with its known member and refuses on failing to find it — *"an instrument that
+   * cannot find the fault it was built from has not been built yet."* This census was built while
+   * that flag landed; a run that cannot see it is blind, whatever else it prints.
+   */
+  let specimenSeen = false;
 
   let standard = 0;
   let legacyStrings = 0;
@@ -41,6 +48,7 @@ function main() {
     legacyStrings += r.legacy.strings;
     legacyObjects += r.legacy.objects;
     for (const x of r.refusals) refusals.push(`  ${x.code}  ${x.where}\n      ${x.detail}`);
+    if (f === 'stream-a-08-christmas-carol.json' && r.declared.some((d) => d.kind === 'item-set')) specimenSeen = true;
     for (const dcl of r.declared) declaredByKind.set(dcl.kind, (declaredByKind.get(dcl.kind) ?? 0) + 1);
     reported.push(...r.reported.map((s) => `  ${s}`));
     for (const sf of r.standardFlags) {
@@ -51,7 +59,12 @@ function main() {
     }
   }
 
-  console.log(`\n  ${files.length} passages screened · ${canary.detail} — canary held`);
+  if (!specimenSeen) {
+    console.error('check:content-flags BLIND — the CALIBRATION SPECIMEN (christmas-carol\'s DECLARED(item-set) flag) was not found. The census cannot see its known member; nothing else it prints is trustworthy.');
+    process.exitCode = 1;
+    return;
+  }
+  console.log(`\n  ${files.length} passages screened · ${canary.detail} — canary held · specimen found (christmas-carol item-set)`);
   declareMayBeEmpty('check:content-flags', 'standard-shape flag(s) arrived', standard,
     'The freeze gated corpus writes until the standard was signed, and only the two railway-children '
     + 'flags have been unfrozen since. Zero arrivals is the door having been shut, not the door '

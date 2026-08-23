@@ -18177,3 +18177,38 @@ The class ruling is taken: the register is DRAFTED and sits with Annie for signa
 Women stamp now points at `b936d7b1a3bf2a5872292328c542d56db1e4686b96bfe5c6a3b8d68ee3f6b9dd`
 rather than at a pending ruling — a pointer to bytes instead of a pointer to a hope — with the
 prior stamp preserved. **Nothing else changes until her signature crosses.**
+
+## R646 — The known-member canary is standing practice (her words), and retrofitting it caught two more blind readers
+
+> **Every census ships with its known member, and refuses on failing to find it. An instrument that
+> cannot find the fault it was built from has not been built yet** — and the cheapest possible test
+> is the one specimen you already hold.
+
+Named by her after working three times unnamed: WIW-19 calibrated the findings counter, her drift
+calibrated the archive audit, the blind-beggar seeded the rejections census. **Retrofitted where
+cheap, each census naming its calibration specimen ON ITS FACE, a run that misses it exiting 1:**
+
+- `check:content-flags` — the christmas-carol DECLARED(item-set) flag (beside its 20+7 table canary)
+- `audit:sourceprose` — her catalogue drift: `_sourceProseAsReturned` differing from em-dash bytes
+- `check:amendments-landed` — `en-repetition-purpose`'s landed fifty-first wording
+- `check:return-sequence` — return 23, on this disk with a catalogued digest since 20 August
+
+**AND THE RETROFIT PAID BEFORE THE COMMIT**: wiring the amendments specimen surfaced 29 "absent"
+rows that were the new target kinds out of the check's columns — `passage:` flags, `register:`
+fields, item walkScript/stem.text — now classified OTHER-STORE (verified by their own landers),
+R594's lesson made standing. And **`word-card:<id>:<field>` was globbing the field into the id**,
+so the LANDED idiom-card amendment scoped to a nonexistent row and read ABSENT — a true statement
+about a row that does not exist. Fixed in the resolver; ABSENT is 4, exactly the long-standing
+word-card residue.
+
+## R647 — Forward rejections are born attributed; the temporal clause on UNRECORDED
+
+**Her ruling, recorded**: `rejectedBy: UNRECORDED` is valid ONLY for legacy entries — the register
+does not invent provenance backwards, and entry one's axis carries its true chain (*assigned by
+Cowork at drafting, confirmed by Annie at signature*, her agreement a recorded act rather than the
+signature's reach). **A forward rejection carries a name from the moment of rejection** — the first
+judgement of its kind in this corpus to be born attributed. The register is SIGNED (DRAFT-1 as
+amended, in force per its own release condition); its census carries her floor annotation on its
+face: findable where an aside names, unfindable where it alludes — the locator bound in its fourth
+home. **The Little Women aside stamp moves to the signed register's digest when Cowork's
+confirmation crosses; armed, not executed.**

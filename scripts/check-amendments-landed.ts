@@ -42,8 +42,23 @@ async function main() {
    * thing that was never here — the R60 fault wearing a correct answer.
    */
   const surface = amendments.filter((a) => a.kind === 'SURFACE');
+  /**
+   * **A TARGET NAMING A COLUMN THIS CHECK DOES NOT SEARCH IS OUT OF ITS SCOPE, NOT ABSENT** —
+   * R594's lesson made standing. The searched columns are exactly three: misconception.childHint,
+   * item.explanation.hintCore, word.definitionChild. Passage flags (`passage:…`), register fields
+   * (`register:…`) and item fields outside hintCore (walkScript, stem.text) land through their own
+   * doors and are verified by their own landers; ABSENT here would be a true statement about the
+   * wrong table, indistinguishable from a real miss.
+   */
+  const inScopeField = (a: { target: string | null; fieldNote: string | null }) => {
+    if (a.target && /^(passage|register):/i.test(a.target)) return false;
+    if (!a.fieldNote) return true;
+    const named = (a.fieldNote.split(/,|\bnot\b/)[0] ?? '').trim();
+    return named === '' || /^(hintCore|childHint|definitionChild|hint)$/i.test(named);
+  };
+  const otherStores = amendments.filter((a) => a.kind === 'STORE' && !inScopeField(a));
   const found = amendments
-    .filter((a) => a.kind === 'STORE')
+    .filter((a) => a.kind === 'STORE' && inScopeField(a))
     // `when` travels with the row. The first version of the SUPERSEDED test dropped it here and
     // compared against `undefined`, so every comparison was false and the class reported zero —
     // a true-looking count produced by a field that was never carried.
@@ -56,6 +71,12 @@ async function main() {
    * declares how many amendments it carries. Extracting fewer is a READER FAULT, and it is the one
    * fault here no downstream check can ever see: an amendment that is not read is not absent, it is
    * INVISIBLE, and invisible reads as landed.
+   */
+  /**
+   * **CALIBRATION SPECIMEN (R646): a known LANDED amendment.** `en-repetition-purpose` carries her
+   * fifty-first wording, confirmed by direct read the day it landed. If this check cannot find that
+   * wording in the store, the reader or the scope has gone blind — the exact failure that reported
+   * 33 of 71 wordings while calling every return FULLY LANDED (R570).
    */
   const declared = declaredCounts(RETURNS);
   const shortfalls = declared
@@ -110,6 +131,15 @@ async function main() {
       '  was mine, and it read as a property of the store — which is the same fault as calling a\n' +
       '  target absent when it lives in a table the WRITER, not the reader, was not touching.',
   );
+
+  const SPECIMEN = 'Writers repeat on purpose. Ask what the echo does to the reader.';
+  if (!haystack.some((h) => h.id === 'en-repetition-purpose' && h.text.trim() === SPECIMEN)) {
+    console.error('check:amendments-landed BLIND — the CALIBRATION SPECIMEN (en-repetition-purpose\'s landed fifty-first wording) is not visible to this reader. Nothing below is trustworthy.');
+    process.exitCode = 1;
+    await prisma.$disconnect();
+    return;
+  }
+  console.log('  specimen found: en-repetition-purpose carries the fifty-first wording');
 
   const byFile = new Map<string, { landed: string[]; absent: string[] }>();
   const unlanded: Array<{ file: string; text: string; targetId: string | null; when: Date }> = [];
@@ -199,6 +229,10 @@ async function main() {
     + `      ${superseded.length} SUPERSEDED  — a later amendment to the same row DID land\n`
     + `      ${unplaceable} UNPLACEABLE — read from a shape carrying no target, so unscopeable to a row\n`
     + `      ${absent} ABSENT      — a ruling with a named row, and the row does not hold it`,
+  );
+  console.log(
+    `\n  OTHER-STORE amendment(s) — passage flags, register fields, item fields outside the three\n`
+    + `  searched columns — verified by their own landers, NOT searched here: ${otherStores.length}`,
   );
   console.log(
     `\n  SURFACE amendment(s), declared OUT OF SCOPE and NOT counted above: ${surface.length}`

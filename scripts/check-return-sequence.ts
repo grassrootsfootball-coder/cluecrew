@@ -65,6 +65,18 @@ function main() {
     'carrying a numbered ordinal': numbered.size,
   });
 
+  /**
+   * **CALIBRATION SPECIMEN (R646): return 23.** Known present on this disk with a catalogued digest
+   * (RETURN-DIGESTS.md, edb597ec…) since 20 August, and once reported missing everywhere by a
+   * search that was looking at the wrong store. A sequence reader that cannot see it is blind.
+   */
+  if (!numbered.has(23)) {
+    console.error('check:return-sequence BLIND — the CALIBRATION SPECIMEN (return 23, on this disk since 20 August) is not in the numbered set. The ordinal parser has gone blind; no gap it reports is trustworthy.');
+    process.exitCode = 1;
+    return;
+  }
+  console.log('  specimen found: return 23 in the numbered set');
+
   const seen = [...numbered.keys()].sort((a, b) => a - b);
   const lowest = seen[0] as number;
   const highest = seen[seen.length - 1] as number;

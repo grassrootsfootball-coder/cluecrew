@@ -72,6 +72,23 @@ function main() {
     }
   }
 
+  /**
+   * **CALIBRATION SPECIMEN (R646): her conceded catalogue drift.** The christmas-carol
+   * religious-reference row must carry `_sourceProseAsReturned` (her comma copy) DIFFERING from its
+   * `sourceProse` (the em-dash bytes). That pair is the one drift this audit was built from — and
+   * the run that could not find it was the run measuring the wrong thing (the papered zero, R643).
+   */
+  const cc = JSON.parse(readFileSync(join(PASSAGES, 'stream-a-08-christmas-carol.json'), 'utf8')) as Record<string, unknown>;
+  const specimen = ((cc.contentFlags ?? []) as Array<Record<string, unknown>>).find((f) =>
+    f && typeof f === 'object' && f.axis === 'religious-reference');
+  const specimenHolds = Boolean(specimen && typeof specimen._sourceProseAsReturned === 'string'
+    && typeof specimen.sourceProse === 'string' && specimen._sourceProseAsReturned !== specimen.sourceProse);
+  if (!specimenHolds) {
+    console.error('audit:sourceprose BLIND — the CALIBRATION SPECIMEN (her catalogue drift: _sourceProseAsReturned differing from the em-dash sourceProse) is not where it was left. This audit was built from that drift; a run that cannot see it has not been built yet.');
+    process.exitCode = 1;
+    return;
+  }
+  console.log('  specimen found: the catalogue drift (comma copy preserved beside em-dash bytes)');
   console.log(`\n  ${compared} archive field(s) compared [unit: converted objects with own sourceProse]`);
   console.log(`  ${seededAtLanding} seeded from bytes at landing (form ruling ten) — byte-true by construction`);
   console.log(`  ${drifts.length} DRIFTED — the archive is not the legacy bytes:`);

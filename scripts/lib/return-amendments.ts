@@ -147,7 +147,14 @@ function resolveCanonical(raw: string): { kind: 'STORE' | 'SURFACE'; id: string 
     const parts = rest.split(':').map((p) => p.trim());
     return { kind: 'STORE', id: parts[0] ?? null, fieldNote: parts[1] ?? null };
   }
-  return { kind: 'STORE', id: rest.trim(), fieldNote: kind === 'word-card' ? 'definitionChild' : null };
+  if (kind === 'word-card') {
+    // `word-card:<headword>` and `word-card:<headword>:<field>` are both hers. The first version
+    // globbed the field into the id ('gave-a-disgust:definitionChild'), so a LANDED amendment
+    // scoped to no row and reported ABSENT — a true statement about a row that does not exist.
+    const parts = rest.split(':').map((p) => p.trim());
+    return { kind: 'STORE', id: parts[0] ?? null, fieldNote: parts[1] ?? 'definitionChild' };
+  }
+  return { kind: 'STORE', id: rest.trim(), fieldNote: null };
 }
 
 function resolveTarget(raw: string): { kind: 'STORE' | 'SURFACE'; id: string | null; fieldNote: string | null } {
