@@ -18639,3 +18639,31 @@ the first time. Five new tests; 735 green.
 screened else-chain (a syntax error, loud), and the NEVER-SCREENED definition now excludes
 coverage-holding passages and says so in its unit label — a fourth record kind that did not reach
 the silence definition would have left covered passages counted as silent.
+
+## R664 — Her hundred-and-fourteenth: the set completes, and the desk-holdings rule is named
+
+**Registered from `annie-114-for-code.md`, sha256 computed here:
+`79b7f59b037b79451e92e4bdd7c013260f041d2411f61faae1945719bb45f361` (no digest was declared with
+the crossing; this is the receiving side's record of the bytes it holds). No amendments; no build.**
+
+**THE DESK-HOLDINGS RULE, IN HER WORDS**: *"a digest quoted is not a file held"* — the same cut as
+staged-against-crossed and presented-against-arrived, applied to citations. **A citation is a claim
+of possession**, checkable at the desk because the desk is the only place all routes pass; an
+addendum arriving without its subject is a FINDING, because a pointer that outruns its object is
+how the two-addenda-no-packet state stayed invisible to three careful parties at once.
+
+**AND THE SENTENCE SHE SAYS THE SESSION SHOULD BE REMEMBERED BY**: the serving store owned its
+content-reading; the authoring store owned its prose misparse of its own table; the desk owns
+quoting digests it never held; and the reviewer spent the same session correcting herself in the
+same register — the mis-cited return, the flattened archive, the stripped headings, the undeclared
+units. *"Nobody in this system is above its discipline, and the discipline is why nobody needs to
+be."*
+
+**On the coverage statement**: her zero living somewhere a parser reads is her prose-under-table
+lesson applied to her own newest form within a day — *"minted on my fault Tuesday morning, enforced
+on my behalf by the afternoon"* — the fastest round trip a rule has made in this project.
+
+**State**: the renamed packet is in flight to her; she verifies all three digests on arrival; the
+sitting proceeds on her side. This store waits as built — the door ready for born-attributed flags,
+the coverage statement's home typed, the two UNRECORDED statuses movable only through
+`movePassageStatus` with her authority. Nothing is owed from this side.
