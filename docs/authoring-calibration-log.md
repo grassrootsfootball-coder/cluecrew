@@ -18299,3 +18299,34 @@ their bytes in `text`**. Each caller had quietly plumbed its own fallback (the c
 and went red — and I had reported *"the falls-due lines print on schedule"* over a filtered grep
 that dropped the tail. R598's two-syntaxes lesson on the byte field itself: fixed in the READER,
 once — extract, else text — so no caller plumbs bytes again. 4 of 4 print; exit 0; 730 tests.
+
+## R652 — An extraction carries the grouping key with its rows (her words), and the holds lift twice-grounded
+
+**THE SPECIES' SECOND MEMBER, beside the 155-character truncation (her hundred-and-third's
+self-catch): narrowing the data before the operation that needed it.** Her grep for flag lines
+stripped the population document's grouping headings, *"so membership became inference and my
+inference was wrong twice"* — the document had the placements right on her own disk the whole
+time. **The rule the pair earn, hers verbatim: an extraction carries the grouping key with its
+rows, because rows without their key are a membership question wearing a list's clothes.**
+
+**THE FOUR HOLDS LIFTED FROM HER BLOCK, each on two independent grounds** — the passage bytes AND
+the population document's own headings: hip-joke → b-01, care-home → b-02 (the simile confirmed
+minimal, one clause at line 16), tide → b-02 (the stepping-back span confirmed as the claim's
+hinge), and the moved row the one seat where her inference and the bytes agreed from the start.
+`placementConfirmation` now records the confirmation with both grounds; the PLACEMENTS-WITH-ANNIE
+section leaves the standing run by being empty, which is how a hold should leave.
+
+**THE SECOND SPAN TAKEN AT THE STANDING CHECK-BACK**: *leaves in good time* is a separate locatable
+clause in the original judge's reason — *"I will not trim another judge's field to fit my
+citation"* — and it completes from the bytes: *"I put the phone back in my pocket and started
+counting the posts the other way."*, line 44, the extract's closing act with the light still going.
+
+**AND THE WAIVER REISSUED IN THE DOOR'S FORM**, byte-asserted against her replaced string: the door
+refused its author because *the forty-fifth return* is a pointer, not a date. Her line joins the
+word-card constraint and the wiring's first act on the same list: **the gates now refuse their
+builders, and there is no better evidence that they gate.** (The class-cited waiver form the reader
+learned last turn stays — it was the right repair for reading her existing text, and her reissue
+in the dated form is the right repair for the ROW; both stand.)
+
+**The run after: 65 flags · 0 legacy · 0 holds · 3 standing conditions printing · 2 recorded
+zeros · refused nothing · exit 0 — computed from the check, not from anyone's report of it.**
