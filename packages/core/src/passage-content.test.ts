@@ -14,9 +14,9 @@ const GOOD = {
 };
 
 describe('the contentFlags reader (R627/R628, standard DRAFT-1)', () => {
-  it('the canary holds at 20+7 — her signed 19 plus the ninety-fourth\'s ruled row', () => {
+  it('the canary holds at 21+6 — her amended source: 20 populated + self-harm, six in-row cases with home rows', () => {
     expect(axesTableCanary().holds).toBe(true);
-    expect(axesTableCanary().detail).toContain('20+7');
+    expect(axesTableCanary().detail).toContain('21+6');
   });
 
   it('a standard-shape flag on a ruled axis with a named judge parses', () => {

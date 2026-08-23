@@ -51,28 +51,44 @@ export const CONTENT_AXES: readonly string[] = [
    * never-typed discipline at the only moment typing could have crept in.
    */
   'crime-as-background',
+  /**
+   * **ROW TWENTY-ONE, HER HUNDRED-AND-TWELFTH'S AMENDMENT AT THE SOURCE** (amended ruling document,
+   * sha256 ab8704949d13a5d5f934bfd8a70545d8c877e223b37d71799e76e2b267974a79): self-harm, the
+   * standalone no-member AXIS — *"nothing keeps; the axis exists so its disposition exists before
+   * its first arrival"*; any member refers. Previously it lived only in a prose paragraph under
+   * the table — *"a rule in prose under a table is a rule in nobody's parser"* (her finding) — and
+   * this store's parse HAD read that paragraph as rows, which is why its seven diverged from the
+   * packet's four: three parses of one document that never declared its units.
+   */
+  'self-harm',
 ] as const;
 
-/** Rows with no member anywhere, dispositions existing before their first arrival. All REFER. */
-export const NO_MEMBER_ROWS: readonly string[] = [
-  'on-page death',
-  'racial or ethnic slurs in source',
-  'prejudice as the author\'s own voice',
-  'sexual content beyond formal public affection',
-  'self-harm',
-  'corporal punishment',
-  'a weapon used against a person',
+/**
+ * **NO-MEMBER CASES INSIDE POPULATED ROWS — six, each with its home row** (her hundred-and-twelfth:
+ * units declared at the source; the table is the parse source and the paragraph is DERIVED).
+ * Self-harm left this list by becoming a row. All REFER; dispositions exist before first arrival.
+ */
+export const NO_MEMBER_CASES: ReadonlyArray<{ caseName: string; homeRow: string }> = [
+  { caseName: 'on-page death', homeRow: 'death-and-dying' },
+  { caseName: 'prejudice as the author\'s own voice', homeRow: 'period-attitudes-and-prejudice' },
+  { caseName: 'racial or ethnic slurs in source', homeRow: 'period-attitudes-and-prejudice' },
+  { caseName: 'sexual content beyond formal public affection', homeRow: 'romance-and-affection' },
+  { caseName: 'corporal punishment', homeRow: 'school-authority' },
+  { caseName: 'a weapon used against a person', homeRow: 'weapons' },
 ] as const;
+
+/** @deprecated her hundred-and-twelfth restructured this into a row (self-harm) plus NO_MEMBER_CASES. */
+export const NO_MEMBER_ROWS: readonly string[] = NO_MEMBER_CASES.map((c) => c.caseName);
 
 /**
  * THE CANARY (R61): the transcription must hold exactly 19 populated axes and 7 no-member rows, or
  * every caller is blind and must FAIL rather than report a clean corpus.
  */
 export function axesTableCanary(): { holds: boolean; detail: string } {
-  const holds = CONTENT_AXES.length === 20 && NO_MEMBER_ROWS.length === 7;
+  const holds = CONTENT_AXES.length === 21 && NO_MEMBER_CASES.length === 6;
   return {
     holds,
-    detail: `axes table ${CONTENT_AXES.length}+${NO_MEMBER_ROWS.length} (expected 20+7: her signed table ${CONTENT_AXES_RULING_SHA256.slice(0, 8)}… plus crime-as-background, ruled ninety-fourth 35aa8fb5…)`,
+    detail: `axes table ${CONTENT_AXES.length} rows + ${NO_MEMBER_CASES.length} in-row no-member cases (expected 21+6: her AMENDED ruling ab870494…, units declared at the source — 20 populated + self-harm; six cases each named with its home row)`,
   };
 }
 

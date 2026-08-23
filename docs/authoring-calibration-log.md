@@ -18574,3 +18574,28 @@ landing in `MAY_JUDGE_SEATS`** — the scope field her confirmation added, seats
 the ruling cited. The day the seat is ruled, the run exits 1 with no edit anywhere: machinery that
 records rather than a hand that hurries, her own safeguard shape. Until then the run says on its
 face that its green line is not a pass.
+
+## R662 — Her units fault fixed at the source; this store conforms; the three-way dispute dissolves to parses
+
+**HER HUNDRED-AND-TWELFTH NAMES THE FAULT AS HERS AND THE CLASS AS HER OWN**: the packet's four
+and her seven were parses of one document that never declared its units — four NO-MEMBER texts in
+the table proper, a prose paragraph underneath mixing three units, and **two entries that existed
+nowhere but that paragraph** (self-harm; a weapon used against a person). *"A rule in prose under a
+table is a rule in nobody's parser"* — the note-in-an-obligation-field fault with herself as
+author, and **every store that conformed to her table exactly as instructed was the reader that
+missed it.** Self-harm had no parser-readable row anywhere from the day she ruled it.
+
+**FIXED AT THE SOURCE, ONE CROSSING, ONE DIGEST**: the amended ruling
+(`ab8704949d13a5d5f934bfd8a70545d8c877e223b37d71799e76e2b267974a79`, the for-code copy
+byte-identical to the for-cowork copy) makes self-harm a ROW, marks the weapons against-a-person
+case NO MEMBER in its own cell, and restates the paragraph as DERIVED with units declared — the
+table the parse source, the paragraph its shadow, never the reverse.
+
+**THIS STORE CONFORMS, AND ITS OWN PRIOR DIVERGENCE IS NAMED**: our seven was a parse of her prose
+paragraph AS ROWS — one of the three parses. Now: `CONTENT_AXES` 21 rows (self-harm the
+twenty-first), `NO_MEMBER_CASES` six with home rows, canary **21+6** citing the amended digest,
+`NO_MEMBER_ROWS` deprecated to a derived alias. **Her prediction checked mechanically and
+matched**: twenty-one rows, six in-row cases. The conformed membership is emitted from the runtime
+constants — never parsed from source text (the lesson of the last emission) —
+`serving-axes-conformed-54b94d28…`, file digest `3ebeeabd…0c61` declared at crossing, ready for the
+desk diff and the sitting.
