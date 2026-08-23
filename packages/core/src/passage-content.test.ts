@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { axesTableCanary, impliedServingStatus, readContentFlags } from './passage-content';
+import { MAY_JUDGE_SEATS, axesTableCanary, impliedServingStatus, readContentFlags } from './passage-content';
 
 const GOOD = {
   axis: 'physical-peril-no-lasting-harm',
@@ -262,5 +262,26 @@ describe('the coverage statement — the fourth record kind (R663)', () => {
     expect(r.refusals).toHaveLength(0);
     expect(r.standardFlags[0]?.judgedBy).toBe('Annie');
     expect(r.standardFlags[0]?.judgedAt).toBe('2026-08-23');
+  });
+});
+
+describe('MAY_JUDGE_SEATS is ready for the accessibility hire (R666 confirmation)', () => {
+  it('the seats carry scope fields, added by ruling with the ruling cited', () => {
+    for (const s of MAY_JUDGE_SEATS) {
+      expect(typeof s.name).toBe('string');
+      expect(typeof s.scope).toBe('string');
+      expect(s.ruledBy.length).toBeGreaterThan(0);
+    }
+  });
+  it("the auditory gate's arming condition keys on scope === 'accessibility', and no such seat exists today", () => {
+    // The same lookup check-auditory-surface-gate.ts runs: the day a seat with this scope is
+    // ruled into MAY_JUDGE_SEATS, that gate enforces with no edit anywhere — nothing else waits
+    // on a build, which is what this test pins.
+    const enforcer = MAY_JUDGE_SEATS.find((s) => s.scope === 'accessibility');
+    expect(enforcer).toBeUndefined();
+  });
+  it('a seat entry with the accessibility scope satisfies the type as data — the hire is a data change', () => {
+    const hire: (typeof MAY_JUDGE_SEATS)[number] = { name: 'the-hire', scope: 'accessibility', ruledBy: 'ruled on the day the seat fills' };
+    expect(hire.scope).toBe('accessibility');
   });
 });

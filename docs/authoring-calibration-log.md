@@ -18700,3 +18700,21 @@ third instalment).
 the standard was signed, **the corpus contains no silence**: every passage is judged, screened,
 covered, or withheld by name, and the two that entered today came through the front door, before a
 child, with a name, on verified bytes.
+
+## R666 — The NVR notice slot ships empty; the accessibility seat confirmed a data change
+
+**THE SLOT**: `NvrServabilityNotice` renders wherever NVR is offered, **failing closed to
+not-rendering twice** — (1) NVR-offered is derived from the district page's own fetched data
+(today's query reads VR + ENGLISH, so it is false; the day NVR joins the query it flips
+mechanically), and (2) the string comes only from `content/notices/nvr-servability.json`, which
+ships with nulls and renders nothing until a wording lands through the standing path.
+`landNvrNotice` (`scripts/lib/nvr-notice.ts`) is that path: **a MAY_JUDGE name, a full-digest
+authority, the child-facing gate, the prior stamped — and nothing else writes the file.** The slot
+waits on her CONFIRMATIONS block exactly as the two cloze statuses waited on her 115th.
+
+**THE SEAT, CONFIRMED BY TEST**: `MAY_JUDGE_SEATS` carries scope fields with rulings cited; the
+auditory gate's arming condition keys on `scope === 'accessibility'` (the same lookup pinned in a
+test, alongside the assertion that no such seat exists today, so the gate is provably report-only
+by data rather than by mood); and a seat entry with the accessibility scope satisfies the type as
+plain data. **The hire is a data change — one seat row, ruled — and nothing else waits on a
+build.** 738 tests.

@@ -1,6 +1,7 @@
 import { prisma } from '@cluecrew/db';
 import { childFromCookie } from '@/lib/crew/server';
 import { groupIntoQuarters, type Location } from '@/lib/crew/districts';
+import { NvrServabilityNotice } from '@/components/crew/nvr-servability-notice';
 import { VOICE } from '@/lib/voice';
 
 /**
@@ -62,9 +63,14 @@ export default async function DistrictPage() {
   const quarters = groupIntoQuarters(locations);
   const crackedTotal = locations.filter((location) => location.cracked).length;
 
+  // NVR-offered detection from THIS page's own fetched data (never a separate claim): today the
+  // query reads VR + ENGLISH only, so this is false and the slot renders nothing. The day NVR
+  // joins the query, it flips mechanically — the slot's first fail-closed condition (R666).
+  const nvrOffered = questionTypes.some((qt) => String(qt.district) === 'NVR');
   return (
     <main className="crew-stage">
       <h1>The District</h1>
+      <NvrServabilityNotice nvrOffered={nvrOffered} />
       <p className="crew-lede">
         {crackedTotal === 0 ? VOICE.districtNothingCracked : VOICE.districtIntro}
       </p>
