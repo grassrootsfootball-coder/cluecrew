@@ -18613,3 +18613,29 @@ its author closed it. **This entry's conformance is closed against the verdict; 
 The ENG-003 sitting proceeds on Annie's side; nothing on the serving path changes until her
 rulings on the two cloze passages cross back — **flags land through the door as ever, and the two
 UNRECORDED statuses move only through `movePassageStatus` with her authority recorded.**
+
+## R663 — The coverage statement gets its home; the door confirmed to take born-attributed flags
+
+**HER RULING BUILT: the coverage statement is a record kind in its own right** — read against all
+twenty-one axes at the amended table (`ab870494…`), by a named judge, dated, converting every
+unflagged axis from UNMENTIONED into SCREENED CLEAN BY A NAMED READER. It lands as
+`contentCoverage` beside contentFlags, contentScreenings and readingSupport; **the reader holds
+it** (kind ruled; the table digest and axis count verified — *a reading against a stale or foreign
+table is not coverage of this table*; **born attributed: no UNRECORDED coverage exists**, because
+"read against every axis" is a claim about an act only the actor can make); **the census counts it
+apart** — `COVERAGE STATEMENTS: n [unit: coverage statements — the fourth record kind]`, the
+65-count's boundary discipline. A coverage statement IS a judgement record: a passage holding only
+one is SERVABLE, not UNRECORDED, in `impliedServingStatus`. **When her block for the two cloze
+passages crosses back, the door has somewhere for it to land that is not a prose field.**
+
+**THE CONFIRMATION, AS A TEST RATHER THAN AN ASSURANCE**: a flag carrying `judgedBy: 'Annie'` and
+`judgedAt` from birth — the first in the corpus to arrive with provenance rather than acquire it —
+**parses whole: accepted, both fields intact on the read row, nothing stripped, nothing ignored,
+nothing refused.** The named-judge branch of §2 was always the primary path; UNRECORDED-beside-a-
+converter was the legacy accommodation, and her first crossing exercises the door's front hinge for
+the first time. Five new tests; 735 green.
+
+**One census fault caught in the same pass**: the coverage insertion broke the screened/never-
+screened else-chain (a syntax error, loud), and the NEVER-SCREENED definition now excludes
+coverage-holding passages and says so in its unit label — a fourth record kind that did not reach
+the silence definition would have left covered passages counted as silent.

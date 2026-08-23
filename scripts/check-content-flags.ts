@@ -35,6 +35,7 @@ function main() {
   let standard = 0;
   const screenedClean: string[] = [];
   const fallsDue: string[] = [];
+  const coverageRows: string[] = [];
   const heldPlacements: string[] = [];
   const neverScreened: string[] = [];
   let legacyStrings = 0;
@@ -49,8 +50,9 @@ function main() {
     const p = JSON.parse(readFileSync(join(PASSAGES, f), 'utf8')) as Record<string, unknown>;
     const r = readContentFlags(p);
     standard += r.standardFlags.length;
+    for (const c of r.coverage) coverageRows.push(`${String(p.id)} — read against all ${c.axesCount} axes at ${String(c.axesTableSha256).slice(0, 8)}… by ${c.judgedBy}, ${c.judgedAt}`);
     if (r.screenings.length > 0) screenedClean.push(`${String(p.id)} — ${r.screenings.map((s) => s.axes.join('+')).join('; ')}`);
-    else if (r.standardFlags.length === 0 && r.legacy.strings + r.legacy.objects === 0) neverScreened.push(String(p.id));
+    else if (r.standardFlags.length === 0 && r.coverage.length === 0 && r.legacy.strings + r.legacy.objects === 0) neverScreened.push(String(p.id));
     legacyStrings += r.legacy.strings;
     legacyObjects += r.legacy.objects;
     for (const x of r.refusals) refusals.push(`  ${x.code}  ${x.where}\n      ${x.detail}`);
@@ -114,9 +116,15 @@ function main() {
   }
   console.log(`\n  STANDING CONDITIONS — fall due on any new item for their passage: ${fallsDue.length} [unit: open conditions]`);
   for (const s of fallsDue) console.log(s);
+  /**
+   * THE FOURTH RECORD KIND, COUNTED APART (R663) — the 65-count's boundary discipline: a coverage
+   * statement is not a flag, not a screening, not a note, and its count never folds into theirs.
+   */
+  console.log(`\n  COVERAGE STATEMENTS: ${coverageRows.length} [unit: coverage statements — the fourth record kind, counted apart]`);
+  for (const c of coverageRows) console.log(`      ${c}`);
   console.log(`\n  SCREENED-CLEAN: ${screenedClean.length} [unit: passages with a recorded zero]`);
   for (const s of screenedClean) console.log(`      ${s}`);
-  console.log(`  NEVER-SCREENED: ${neverScreened.length} [unit: passages with no flag, no legacy row and no screening — a silence that means nothing]`);
+  console.log(`  NEVER-SCREENED: ${neverScreened.length} [unit: passages with no flag, no legacy row, no screening and no coverage statement — a silence that means nothing]`);
   for (const s of neverScreened) console.log(`      ${s}`);
   if (splits.length > 0) {
     // "second object OF THE SPLIT" marks the pair's second member; the FIRST member's note also

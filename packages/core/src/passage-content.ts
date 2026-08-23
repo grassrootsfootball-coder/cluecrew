@@ -20,6 +20,10 @@
 export const CONTENT_AXES_RULING_SHA256 =
   '1ef5c77b13359d759295275a3d79e8f95891eddc3794bec77fb3c63e776afab5';
 
+/** The AMENDED ruling (her 112th, units declared at the source) — the table coverage reads against. */
+export const CONTENT_AXES_AMENDED_SHA256 =
+  'ab8704949d13a5d5f934bfd8a70545d8c877e223b37d71799e76e2b267974a79';
+
 export const CONTENT_AXES: readonly string[] = [
   'physical-peril-no-lasting-harm',
   'violence-to-animals',
@@ -180,6 +184,27 @@ export interface ScreeningRecord {
   [key: string]: unknown;
 }
 
+/**
+ * **THE COVERAGE STATEMENT — the fourth record kind (Annie's 113th; David's build, 2026-08-23 —
+ * R663).** A reading against ALL twenty-one axes at the amended table, by a named judge, dated:
+ * it converts every unflagged axis from UNMENTIONED into SCREENED CLEAN BY A NAMED READER. It
+ * lands beside contentFlags, contentScreenings and readingSupport — a record kind of its own,
+ * never a prose field — and the census counts it apart, the 65-count's boundary discipline.
+ *
+ * Born attributed: a coverage statement carries a MAY_JUDGE name and a date FROM BIRTH — there is
+ * no UNRECORDED coverage, because "read against every axis" is a claim about an act only the
+ * actor can make.
+ */
+export interface CoverageStatement {
+  kind: 'coverage-statement';
+  /** The digest of the axes table the reading was made against. A stale table is not coverage. */
+  axesTableSha256: string;
+  axesCount: number;
+  judgedBy: string;
+  judgedAt: string;
+  [key: string]: unknown;
+}
+
 export interface FlagReport {
   /** Flags in the standard's object shape that parsed. */
   standardFlags: StandardFlag[];
@@ -193,6 +218,8 @@ export interface FlagReport {
   declared: Array<{ where: string; kind: string }>;
   /** Screening records (ruling eleven). Validated: kind known, axes tabled, judge named or converted. */
   screenings: ScreeningRecord[];
+  /** Coverage statements (the fourth record kind, R663). Born attributed; table digest verified. */
+  coverage: CoverageStatement[];
 }
 
 const DISPOSITIONS = new Set(['keep', 'keep-conditional', 'cut', 'refer']);
@@ -212,7 +239,7 @@ export function readContentFlags(
 ): FlagReport {
   const id = typeof passage.id === 'string' ? passage.id : '(unnamed passage)';
   const raw = passage.contentFlags;
-  const out: FlagReport = { standardFlags: [], legacy: { strings: 0, objects: 0 }, refusals: [], reported: [], declared: [], screenings: [] };
+  const out: FlagReport = { standardFlags: [], legacy: { strings: 0, objects: 0 }, refusals: [], reported: [], declared: [], screenings: [], coverage: [] };
   // ---- Ruling eleven: screening records, validated apart from flags. ----
   const rawScreenings = passage.contentScreenings;
   if (rawScreenings !== undefined && rawScreenings !== null) {
@@ -243,6 +270,37 @@ export function readContentFlags(
     }
   }
 
+  // ---- The coverage statement: the fourth record kind (R663). ----
+  const rawCoverage = (passage as { contentCoverage?: unknown }).contentCoverage;
+  if (rawCoverage !== undefined && rawCoverage !== null) {
+    if (!Array.isArray(rawCoverage)) {
+      out.refusals.push({ code: 'UNPARSEABLE_FLAG', where: `${id} contentCoverage`, detail: `contentCoverage is ${typeof rawCoverage}, not an array — refusing the shape, not returning empty` });
+    } else {
+      rawCoverage.forEach((c, n) => {
+        const where = `${id} contentCoverage[${n}]`;
+        const o = (c ?? {}) as Record<string, unknown>;
+        if (o.kind !== 'coverage-statement') {
+          out.refusals.push({ code: 'UNPARSEABLE_FLAG', where, detail: `coverage kind ${JSON.stringify(o.kind)} — 'coverage-statement' is the only ruled kind; a new kind is her ruling, not a write.` });
+          return;
+        }
+        if (o.axesTableSha256 !== CONTENT_AXES_AMENDED_SHA256 || o.axesCount !== CONTENT_AXES.length) {
+          out.refusals.push({ code: 'UNPARSEABLE_FLAG', where, detail: `coverage reads against table ${JSON.stringify(o.axesTableSha256).slice(0, 20)}…/${String(o.axesCount)} axes — this store's table is ${CONTENT_AXES_AMENDED_SHA256.slice(0, 8)}…/${CONTENT_AXES.length}. A reading against a stale or foreign table is not coverage of THIS table.` });
+          return;
+        }
+        // BORN ATTRIBUTED: no UNRECORDED coverage — "read against every axis" is a claim about an
+        // act only the actor can make. A name from MAY_JUDGE and a date, from birth.
+        if (typeof o.judgedBy !== 'string' || !MAY_JUDGE.includes(o.judgedBy)) {
+          out.refusals.push({ code: 'UNJUDGED_FLAG', where, detail: 'a coverage statement is born attributed: judgedBy carries a MAY_JUDGE name, never UNRECORDED.' });
+          return;
+        }
+        if (typeof o.judgedAt !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(o.judgedAt)) {
+          out.refusals.push({ code: 'UNJUDGED_FLAG', where, detail: 'a coverage statement carries its date (YYYY-MM-DD) from birth.' });
+          return;
+        }
+        out.coverage.push(o as unknown as CoverageStatement);
+      });
+    }
+  }
   if (raw === undefined || raw === null) return out;
   if (!Array.isArray(raw)) {
     // A reader refuses a shape it cannot parse; it never returns empty (R173).
@@ -430,7 +488,8 @@ export function impliedServingStatus(
   const reasons: string[] = [];
   for (const f of r.standardFlags) if (f.disposition === 'refer') reasons.push(`flag ${f.axis} carries REFER`);
   for (const x of r.refusals) reasons.push(`${x.code}: ${x.detail.slice(0, 80)}`);
-  if (r.standardFlags.length === 0 && r.screenings.length === 0 && r.legacy.strings + r.legacy.objects === 0) {
+  if (r.standardFlags.length === 0 && r.screenings.length === 0 && r.coverage.length === 0
+    && r.legacy.strings + r.legacy.objects === 0) {
     return { implied: 'UNRECORDED', reasons: ['no judgement record under the signed standard — absence reads as REFER'] };
   }
   return { implied: reasons.length === 0 ? 'SERVABLE' : 'WITHHELD', reasons };

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { axesTableCanary, readContentFlags } from './passage-content';
+import { axesTableCanary, impliedServingStatus, readContentFlags } from './passage-content';
 
 const GOOD = {
   axis: 'physical-peril-no-lasting-harm',
@@ -220,5 +220,47 @@ describe('ruling eleven: screening records (hundred-and-third §2)', () => {
   it('an unruled screening kind refuses — a new kind is her ruling, not a write', () => {
     const r = readContentFlags({ id: 'p', contentScreenings: [{ ...SCREEN, kind: 'screened-fine' }], extract: 't' });
     expect(r.refusals[0]?.detail).toContain('her ruling, not a write');
+  });
+});
+
+describe('the coverage statement — the fourth record kind (R663)', () => {
+  const COV = { kind: 'coverage-statement', axesTableSha256: 'ab8704949d13a5d5f934bfd8a70545d8c877e223b37d71799e76e2b267974a79',
+    axesCount: 21, judgedBy: 'Annie', judgedAt: '2026-08-23' };
+
+  it('a coverage statement against the amended table, born attributed, parses as its own kind', () => {
+    const r = readContentFlags({ id: 'p', contentFlags: [], contentCoverage: [COV], extract: 't' } as never);
+    expect(r.coverage).toHaveLength(1);
+    expect(r.refusals).toHaveLength(0);
+  });
+  it('a reading against a stale or foreign table is not coverage of this table', () => {
+    const r = readContentFlags({ id: 'p', contentCoverage: [{ ...COV, axesTableSha256: '1ef5c77b_stale' }], extract: 't' } as never);
+    expect(r.refusals[0]?.detail).toContain('stale or foreign table');
+    const r2 = readContentFlags({ id: 'p', contentCoverage: [{ ...COV, axesCount: 19 }], extract: 't' } as never);
+    expect(r2.refusals).toHaveLength(1);
+  });
+  it('there is no UNRECORDED coverage — born attributed, name and date from birth', () => {
+    const r = readContentFlags({ id: 'p', contentCoverage: [{ ...COV, judgedBy: 'UNRECORDED' }], extract: 't' } as never);
+    expect(r.refusals[0]?.code).toBe('UNJUDGED_FLAG');
+    const r2 = readContentFlags({ id: 'p', contentCoverage: [{ ...COV, judgedAt: 'yesterday' }], extract: 't' } as never);
+    expect(r2.refusals[0]?.detail).toContain('date');
+  });
+  it('a coverage statement IS a judgement record: a passage holding only one is not UNRECORDED', () => {
+    const d = impliedServingStatus({ id: 'p', contentFlags: [], contentCoverage: [COV], extract: 't' } as never);
+    expect(d.implied).toBe('SERVABLE');
+  });
+
+  /**
+   * HER SECOND ITEM, CONFIRMED AS A TEST rather than an assurance: flags arriving with judgedBy
+   * and a date FROM BIRTH — the first in the corpus to do so — are accepted whole. The door
+   * neither strips, ignores, nor refuses the fields.
+   */
+  it('the door accepts a flag born attributed — judgedBy and judgedAt survive the read intact', () => {
+    const flag = { axis: 'physical-peril-no-lasting-harm', element: 'x', severity: 'mild', disposition: 'keep',
+      condition: null, conditionMetBy: null, reason: 'r', loadBearing: false,
+      judgedBy: 'Annie', judgedAt: '2026-08-23' };
+    const r = readContentFlags({ id: 'p', contentFlags: [flag], extract: 't' });
+    expect(r.refusals).toHaveLength(0);
+    expect(r.standardFlags[0]?.judgedBy).toBe('Annie');
+    expect(r.standardFlags[0]?.judgedAt).toBe('2026-08-23');
   });
 });
