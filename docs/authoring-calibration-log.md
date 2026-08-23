@@ -18387,3 +18387,14 @@ culture the register was built to make ordinary."* The conversion is closed ever
 artefact: twenty-six passages, every figure derived, every judgedBy a name or an honest
 UNRECORDED, and the final seat settled by the discipline refusing its own shortcut twice on the
 way.
+
+**R654 addendum — THE 66 WAS IN NEITHER STORE. IT WAS IN MY PROSE (2026-08-23).** The boundary
+question answers with lists: this store's count derives **65 [unit: axis-carrying objects in
+`contentFlags`]** — the 2 screenings (`contentScreenings`) and the 1 reading-support note
+(`readingSupport`) are SEPARATE record kinds outside the unit, exactly as the authoring store
+counts. The check prints 65; the register says 65; **the closing report to David said 66, and that
+number appears in no run output** — my grep that turn captured the b-04 line and the conditions and
+not the screened-count line, and I composed the total in the summary. **R649's fault, committed in
+the message that endorsed R649, one paragraph from citing it.** The two figures read as the same
+corpus; the one-row difference was never in a store. Per-passage membership: 27 passages, 65 rows,
+jungle-book 6 the largest; derivation in the boundary answer staged with this entry.
