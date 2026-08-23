@@ -18330,3 +18330,22 @@ in the dated form is the right repair for the ROW; both stand.)
 
 **The run after: 65 flags · 0 legacy · 0 holds · 3 standing conditions printing · 2 recorded
 zeros · refused nothing · exit 0 — computed from the check, not from anyone's report of it.**
+
+## R653 — The seat re-holds, and the span test lands against my own placement
+
+**HER RETRACTION COVERS ONE SEAT, NOT FOUR.** The leaving-school flag re-holds with the full chain
+stamped — held at landing, lifted on the hundred-and-fifth, RE-HELD on the hundred-and-sixth with
+her retraction quoted (*"claimed the document as a second ground for a seat I had not line-checked
+… verdict travels with its reading"*) — and the standing run prints the hold again, because a hold
+nothing prints goes quiet. The other three seats stand lifted on their two grounds.
+
+**AND THE EVIDENCE SHE ASKED FOR ANSWERS AGAINST ME.** `LEAVING-SCHOOL-SPAN-FOR-ANNIE.json`
+(`04df9c54…`): **b-04's bytes carry the situation** — his own jumper into the charity box,
+*"It won't fit me next year."*, the leaving unstated exactly as the flag's element says, and the
+kept-back on the page in her look held *"a second or two longer than the answer needed"*, lines
+46–49, file digest attached. **b-03 carries no such span**: its two "leav" hits are butterflies in
+nets, and the blue-chair frame my content reading took for a departure is the butterfly incident's
+aftermath. **My hundred-and-fourth's "by content" move was an inference from a frame, not a reading
+of a span** — the very distinction her placement criterion draws — and her armed check caught it on
+its first firing. **The flag is NOT moved: the seat is hers, and it settles on her block**, on this
+quotation plus the authoring store's same one.
