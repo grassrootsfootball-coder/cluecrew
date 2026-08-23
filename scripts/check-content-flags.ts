@@ -34,6 +34,7 @@ function main() {
 
   let standard = 0;
   const screenedClean: string[] = [];
+  const fallsDue: string[] = [];
   const neverScreened: string[] = [];
   let legacyStrings = 0;
   let legacyObjects = 0;
@@ -56,6 +57,9 @@ function main() {
     for (const dcl of r.declared) declaredByKind.set(dcl.kind, (declaredByKind.get(dcl.kind) ?? 0) + 1);
     reported.push(...r.reported.map((s) => `  ${s}`));
     for (const sf of r.standardFlags) {
+      if (typeof sf.conditionMetBy === 'string' && /falls due|STANDING/i.test(sf.conditionMetBy)) {
+        fallsDue.push(`  ${String(p.id)}  ${sf.axis} — ${String(sf.condition).slice(0, 76)}`);
+      }
       const conv = sf.convertedBy ? `  converted by ${sf.convertedBy}` : `  judgedBy ${sf.judgedBy}`;
       landed.push(`  ${String(p.id)}  ${sf.axis}  [${sf.disposition}]${conv}${sf.splitNote ? '  [SPLIT]' : ''}`);
       // Her number to watch: every split found is a legacy flag that was two judgements all along.
@@ -95,6 +99,12 @@ function main() {
    * zero (axes, scope, judge); NEVER-SCREENED is the silence that still means nothing. Reported as
    * distinct populations, units on their faces, so neither silence can borrow the other's credit.
    */
+  /**
+   * **THE STANDING OBLIGATIONS, ALL OF THEM, EVERY RUN** — a met condition on a growing item set
+   * falls due again on every new item, and an obligation that stops printing goes quiet (R644).
+   */
+  console.log(`\n  STANDING CONDITIONS — fall due on any new item for their passage: ${fallsDue.length} [unit: open conditions]`);
+  for (const s of fallsDue) console.log(s);
   console.log(`\n  SCREENED-CLEAN: ${screenedClean.length} [unit: passages with a recorded zero]`);
   for (const s of screenedClean) console.log(`      ${s}`);
   console.log(`  NEVER-SCREENED: ${neverScreened.length} [unit: passages with no flag, no legacy row and no screening — a silence that means nothing]`);

@@ -18247,3 +18247,39 @@ yields 20/6). **It was a count sentence composed in prose and never computed** �
 arriving on numbers: a name in prose is looked up, never recalled, and **a number in prose is
 computed, never composed**. The register's own remaining-count lines now cite their derivation or
 do not ship.
+
+## R650 — The sixty-one are done; the thirteen landed BY CONTENT; and the completion census derives
+
+**FORM RULING TWELVE FOLDED**: nearest-severity with the original preserved (c-01's `negligible` →
+mild, original in sourceProse, noted per column); `originalFields` declared on every field-mapped
+conversion — the b-flags' element and reason are the original judge's words, severity original only
+where the legacy shape carried it. **The second screening record joins** (b-05's family-structure
+declaration — the screened-clean population is two), and the **standing-conditions report prints
+all three obligations every run**, so none can go quiet.
+
+**THE LANDING WAS BY CONTENT, AND THE BYTES OVERRULED BOTH STORES ONCE EACH.** Three of her target
+pids named passages whose text does not carry the flag (grandparent-joke → her b-02, content in
+b-01's mower story; care-home and tide → her b-04, content in b-02's coast story — one story
+holding the lie, the Nan, THE ONE SHORT SIMILE *"the way you agree with the radio"*, and the
+boot). And one row of OURS was misattached: leaving-school sat on b-04 (the Reuben story) while the
+blue-chair story is b-03. **A flag landed on the wrong passage is worse than a refusal**; every
+entry landed where its bytes are, `_movedFromPassage` stamped, and the divergence table travels on
+the landing artefact for the meet.
+
+**TWO LANDER FAULTS OF MINE, BOTH CAUGHT BY THE RUN AND OWNED**: the first pass displaced b-02's
+rows and THEN hit the door's waiver refusal — write-then-gate, leaving a bare row; restored from
+stamps, reordered to gate-then-write. Then the queued displacement **silently no-opped on an
+ORDER-SENSITIVE JSON compare** — the exact fault CLAUDE.md's Cowork rule names — leaving three
+displaced-and-present objects the census caught at "0 legacy" time. Canonical compare in the
+lander; the repair stamp names the fault. (The waiver refusal itself was the reader not knowing
+her CLASS-WAIVER citation form — `WAIVED per the <class> ruling, <name>, <ordinal> return:
+<reason>` — now a second accepted form beside the dated one; both demand a MAY_JUDGE name and a
+reason.)
+
+**THE COMPLETION CENSUS, EVERY FIGURE DERIVED** (`completion-census-f3d87eae91c67d43.json`):
+**65 standard flags · 2 screenings (bevis, b-05) · 5 splits (10 objects) · 2 CUTs · DECLARED
+absence 25, item-set 1, whole-passage-tone 7 · 3 standing conditions · 26 passages with flags ·
+0 legacy remaining [all units on faces] · 0 door refusals.** Her memberships confirm seat by seat:
+five splits, two screenings, two CUTs, the conditional census at twelve. **Every judgedBy in the
+corpus now names a person or says UNRECORDED to a reader's face** — what the standard was signed to
+make true, reached with the totals derived by the door from its own stamps, not typed by anybody.

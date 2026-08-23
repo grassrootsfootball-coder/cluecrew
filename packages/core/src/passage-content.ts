@@ -290,7 +290,15 @@ export function readContentFlags(
      */
     const metBy = typeof o.conditionMetBy === 'string' ? o.conditionMetBy : '';
     if (/^WAIVED\b/.test(metBy)) {
-      const m = /^WAIVED\s+(\d{4}-\d{2}-\d{2})\s+by\s+([A-Za-z][\w-]*)\s*:\s*(\S.*)$/.exec(metBy);
+      /**
+       * Two waiver forms, both hers: the dated form (`WAIVED <date> by <name>: <reason>`, ninety-
+       * third) and the CLASS-WAIVER citation (`WAIVED per the <class> ruling, <name>, <ordinal>
+       * return: <reason>`, hundred-and-fourth) — the date lives in the cited ruling. Both carry a
+       * MAY_JUDGE name and a reason; a waiver with neither refuses as before.
+       */
+      const dated = /^WAIVED\s+(\d{4}-\d{2}-\d{2})\s+by\s+([A-Za-z][\w-]*)\s*:\s*(\S.*)$/.exec(metBy);
+      const classCited = /^WAIVED per the .+ ruling,\s*([A-Za-z][\w-]*),\s*[\w-]+ return\s*:\s*(\S.*)$/.exec(metBy);
+      const m = dated ?? (classCited ? [classCited[0], '(cited ruling)', classCited[1], classCited[2]] as unknown as RegExpExecArray : null);
       if (!m || !MAY_JUDGE.includes(m[2] as string)) {
         out.refusals.push({
           code: 'CONDITION_MISSING', where,
