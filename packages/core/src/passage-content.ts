@@ -180,7 +180,7 @@ const ASSERTIVE = /\b(the (text|narrative|passage|poem) |immediately |makes clea
  * belongs to the authoring/export caller and not to the write door.
  */
 export function readContentFlags(
-  passage: { id?: unknown; contentFlags?: unknown; contentScreenings?: unknown; extract?: unknown; preamble?: unknown },
+  passage: { id?: unknown; contentFlags?: unknown; contentScreenings?: unknown; extract?: unknown; text?: unknown; preamble?: unknown },
   opts: { enforceUse?: boolean } = {},
 ): FlagReport {
   const id = typeof passage.id === 'string' ? passage.id : '(unnamed passage)';
@@ -222,7 +222,15 @@ export function readContentFlags(
     out.refusals.push({ code: 'UNPARSEABLE_FLAG', where: id, detail: `contentFlags is ${typeof raw}, not an array — refusing the shape, not returning empty` });
     return out;
   }
-  const extract = typeof passage.extract === 'string' ? passage.extract.replace(/\r\n/g, '\n') : null;
+  /**
+   * **THE PASSAGE'S BYTES LIVE UNDER TWO NAMES** — `extract` on the adapted a-stream, `text` on the
+   * commissioned b/c-streams — and a reader drinking only from one called every b-stream span
+   * drifted while each caller quietly plumbed its own fallback. One reader, one rule: extract,
+   * else text. (R598's two-syntaxes lesson, on the byte field itself.)
+   */
+  const extractRaw = typeof passage.extract === 'string' ? passage.extract
+    : typeof passage.text === 'string' ? passage.text : null;
+  const extract = extractRaw === null ? null : extractRaw.replace(/\r\n/g, '\n');
   /**
    * **THE PREAMBLE IS PASSAGE BYTES A CHILD SEES**, and Heidi's twelfth conditional is the case: its
    * met-claim ("the preamble names her as Heidi") completes as a span against the PREAMBLE, which is

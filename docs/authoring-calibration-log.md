@@ -18283,3 +18283,19 @@ absence 25, item-set 1, whole-passage-tone 7 · 3 standing conditions · 26 pass
 five splits, two screenings, two CUTs, the conditional census at twelve. **Every judgedBy in the
 corpus now names a person or says UNRECORDED to a reader's face** — what the standard was signed to
 make true, reached with the totals derived by the door from its own stamps, not typed by anybody.
+
+## R651 — The four placements marked WITH ANNIE, and the marking exposed a byte-field blindness
+
+**The three by-content placements and the moved row carry `placementConfirmation: WITH ANNIE` on
+the flags themselves** — provisional until her block confirms, lifted only from her block, the way
+every hold this fortnight has lifted — **and the standing run prints all four every pass**, because
+a hold nothing prints goes quiet (R601).
+
+**AND THE MARKING FOUND A LIVE FAULT**: the report showed 2 of 4, and the missing two were b-02's —
+the standing check had been EXITING 1 since the final landing, refusing b-02's span strikes as
+drifted, because **the reader drinks only from `extract` and the commissioned b/c-streams keep
+their bytes in `text`**. Each caller had quietly plumbed its own fallback (the census passed
+`extract ?? text`; the lander passed `extract: current.text`); the standing check passed neither
+and went red — and I had reported *"the falls-due lines print on schedule"* over a filtered grep
+that dropped the tail. R598's two-syntaxes lesson on the byte field itself: fixed in the READER,
+once — extract, else text — so no caller plumbs bytes again. 4 of 4 print; exit 0; 730 tests.
