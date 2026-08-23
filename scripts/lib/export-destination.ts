@@ -187,7 +187,8 @@ export function deliver(sourcePath: string, family?: string): string {
   /*
    * **THE BYTE DIGEST IS WRITTEN, NOT ONLY PRINTED** (Cowork's flag closed, 2026-08-19 — R265).
    *
-   * `hashSpec.fileDigest` is null by construction — a file cannot contain its own digest — and the
+   * `hashSpec.fileDigest` names the sidecar rather than sitting null — a file cannot contain its
+   * own digest, but a null leaves the crossing bare where a pointer arms it (David, 2026-08-23) — and the
    * honest declaration of that left a real gap: a projection digest **cannot detect a file that
    * arrived truncated or re-encoded**, because it is computed from rows before the bytes exist.
    * Cowork was computing its own on receipt and neither side carried one to compare.
@@ -284,7 +285,12 @@ export interface FreshnessStamp {
     algorithm: 'sha256';
     digestChars: number;
     over: string;
-    fileDigest: null;
+    /**
+     * A file cannot contain its own digest, but `null` left the crossing bare (David, 2026-08-23
+     * — R660): this names WHERE the file digest lives instead. The declared value is the sidecar
+     * and the STAGED line, both computed over the file bytes at delivery.
+     */
+    fileDigest: string;
   };
 }
 
@@ -380,7 +386,7 @@ export function freshnessStamp(source: unknown, generatedAt: string): FreshnessS
       algorithm: 'sha256',
       digestChars: HASH_CHARS,
       over: 'the canonicalised declared projection named in stampedOver — NOT the file bytes',
-      fileDigest: null,
+      fileDigest: 'DECLARED AT CROSSING: the .sha256 sidecar beside this file and the STAGED line, both computed over the file bytes at delivery — a file cannot contain its own digest, and null left the crossing bare',
     },
   };
 }

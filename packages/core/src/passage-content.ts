@@ -383,3 +383,28 @@ export function readContentFlags(
   });
   return out;
 }
+
+/**
+ * **THE SIGNED DEFAULT, CALLABLE (David, 2026-08-23 — R659).** What a passage's judgement record
+ * implies for serving, under the standard's own rule that its default for unseen material is
+ * REFER: **absence of any judgement record reads as REFER.**
+ *
+ *   'SERVABLE'    judged (flags, screenings, or legacy rows awaiting conversion), no REFER, no
+ *                 unmet condition, no refusal.
+ *   'WITHHELD'    judged, and a REFER disposition or an unmet condition stops it.
+ *   'UNRECORDED'  NO judgement record at all — never judged is not clean, it is unseen, and the
+ *                 standard's forward default applies. Distinct from WITHHELD: withheld means
+ *                 judged and stopped; unrecorded means never judged. Neither serves.
+ */
+export function impliedServingStatus(
+  passage: { id?: unknown; contentFlags?: unknown; contentScreenings?: unknown; extract?: unknown; text?: unknown; preamble?: unknown },
+): { implied: 'SERVABLE' | 'WITHHELD' | 'UNRECORDED'; reasons: string[] } {
+  const r = readContentFlags(passage, { enforceUse: true });
+  const reasons: string[] = [];
+  for (const f of r.standardFlags) if (f.disposition === 'refer') reasons.push(`flag ${f.axis} carries REFER`);
+  for (const x of r.refusals) reasons.push(`${x.code}: ${x.detail.slice(0, 80)}`);
+  if (r.standardFlags.length === 0 && r.screenings.length === 0 && r.legacy.strings + r.legacy.objects === 0) {
+    return { implied: 'UNRECORDED', reasons: ['no judgement record under the signed standard — absence reads as REFER'] };
+  }
+  return { implied: reasons.length === 0 ? 'SERVABLE' : 'WITHHELD', reasons };
+}

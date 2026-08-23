@@ -10,7 +10,7 @@
 import { readdirSync, readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { readContentFlags } from '../packages/core/src/index';
+import { impliedServingStatus } from '../packages/core/src/index';
 import { requirePopulation } from './lib/population';
 
 const PASSAGES = join(dirname(fileURLToPath(import.meta.url)), '..', 'content/passages');
@@ -20,21 +20,27 @@ function main() {
   requirePopulation('check:passage-status-divergence', { 'passage file(s)': files.length });
 
   const divergences: string[] = [];
-  let servable = 0; let withheld = 0; let unset = 0;
+  let servable = 0; let withheld = 0; let unrecorded = 0; let unset = 0;
   for (const f of files) {
     const pid = f.replace(/\.json$/, '');
     const p = JSON.parse(readFileSync(join(PASSAGES, f), 'utf8')) as Record<string, unknown>;
     const status = (p.passageStatus as { status?: unknown } | undefined)?.status ?? 'UNSET';
-    if (status === 'SERVABLE') servable++; else if (status === 'WITHHELD') withheld++; else unset++;
+    if (status === 'SERVABLE') servable++;
+    else if (status === 'WITHHELD') withheld++;
+    else if (status === 'UNRECORDED') unrecorded++;
+    else unset++;
 
     let implied: string; let why = '';
     try {
-      const r = readContentFlags(p, { enforceUse: true });
-      const reasons: string[] = [];
-      for (const fl of r.standardFlags) if (fl.disposition === 'refer') reasons.push(`flag ${fl.axis} carries REFER`);
-      for (const x of r.refusals) reasons.push(`${x.code}: ${x.detail.slice(0, 70)}`);
-      implied = reasons.length === 0 ? 'SERVABLE' : 'WITHHELD';
-      why = reasons.join('; ');
+      /**
+       * THE SIGNED DEFAULT, ENFORCED (R659): refuse on REFER, unmet condition, OR absence of any
+       * judgement record — absence reads as REFER under the standard, so **a SERVABLE whose
+       * passage has no judgement record is a divergence this check fails loudly on.** The two
+       * cloze passages sat exactly there: derived SERVABLE from silence.
+       */
+      const d = impliedServingStatus(p);
+      implied = d.implied;
+      why = d.reasons.join('; ');
     } catch (e) {
       divergences.push(`${pid}: READER THREW (${String(e).slice(0, 90)}) — on the serve path this would have been silence; here it is a red build.`);
       continue;
@@ -46,7 +52,7 @@ function main() {
     }
   }
 
-  console.log(`\n  ${files.length} passages: ${servable} SERVABLE · ${withheld} WITHHELD · ${unset} UNSET [units: passages by status]`);
+  console.log(`\n  ${files.length} passages: ${servable} SERVABLE · ${withheld} WITHHELD · ${unrecorded} UNRECORDED · ${unset} UNSET [units: passages by status]`);
   if (divergences.length === 0) {
     console.log('  status and flags agree on every passage. This check never blocks serving; the serve path reads the status alone.');
     return;

@@ -12,7 +12,11 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-export type PassageServingStatus = 'SERVABLE' | 'WITHHELD';
+/**
+ * UNRECORDED minted by David, 2026-08-23, distinct from WITHHELD: **withheld means judged and
+ * stopped; unrecorded means never judged.** Neither serves — the serve path admits SERVABLE alone.
+ */
+export type PassageServingStatus = 'SERVABLE' | 'WITHHELD' | 'UNRECORDED';
 
 export interface PassageStatusRecord {
   status: PassageServingStatus;

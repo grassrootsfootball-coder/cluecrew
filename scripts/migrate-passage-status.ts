@@ -10,7 +10,7 @@
 import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { readContentFlags } from '../packages/core/src/index';
+import { impliedServingStatus } from '../packages/core/src/index';
 import { movePassageStatus } from './lib/passage-status';
 import { artefactStamp, deliver, stampedName } from './lib/export-destination';
 import { requirePopulation } from './lib/population';
@@ -27,17 +27,17 @@ function main() {
   for (const f of files) {
     const pid = f.replace(/\.json$/, '');
     const p = JSON.parse(readFileSync(join(PASSAGES, f), 'utf8')) as Record<string, unknown>;
-    if ((p.passageStatus as { status?: unknown } | undefined)?.status) {
-      rows.push({ passage: pid, derived: 'ALREADY SET — untouched', reasons: [] });
+    const existing = (p.passageStatus as { status?: unknown } | undefined)?.status;
+    if (existing) {
+      rows.push({ passage: pid, derived: `ALREADY SET (${String(existing)}) — untouched`, reasons: [] });
       continue;
     }
-    const r = readContentFlags(p, { enforceUse: true });
-    const reasons: string[] = [];
-    for (const fl of r.standardFlags) if (fl.disposition === 'refer') reasons.push(`flag ${fl.axis} carries REFER`);
-    for (const x of r.refusals) reasons.push(`${x.code}: ${x.detail.slice(0, 80)}`);
-    const derived = reasons.length === 0 ? 'SERVABLE' : 'WITHHELD';
+    // THE SIGNED DEFAULT, CALLABLE (R659): a passage with no judgement record derives UNRECORDED —
+    // never judged is not clean. The first migration derived two cloze passages SERVABLE from
+    // silence, and this is the repair in the deriver rather than only in the rows.
+    const { implied: derived, reasons } = impliedServingStatus(p);
     movePassageStatus(PASSAGES, pid, 'UNSET', {
-      status: derived as 'SERVABLE' | 'WITHHELD',
+      status: derived,
       movedBy: 'migration (derived — the same evaluation the blast radius ran, RE-RUN here)',
       authority: `derived at migration 2026-08-23 from readContentFlags(enforceUse) over this passage's own bytes; cites ${BLAST} as the evaluation it re-ran, not as the evaluation it trusts`,
       at: '2026-08-23',
@@ -51,7 +51,10 @@ function main() {
   console.log(`\n  ${rows.length} passages: ${servable} SERVABLE (derived) · ${withheld.length} WITHHELD`);
   for (const w of withheld) console.log(`    WITHHELD ${w.passage}: ${w.reasons.join('; ')}`);
 
-  const payload = { what: 'The passage-status migration: every status DERIVED from a re-run of the blast-radius evaluation over the passage\'s own bytes. Nothing typed.', citesAsReRun: BLAST, rows };
+  const payload = {
+    what: 'The passage-status migration, CORRECTED EMISSION superseding f41ac75f19b94209 (retained under the retention rule): every status DERIVED via the signed default made callable — a passage with no judgement record derives UNRECORDED, because absence reads as REFER under the standard. The first emission derived the two cloze passages SERVABLE from silence; found on the desk by the gate diff, repaired through movePassageStatus with David\'s authority, and the deriver itself now carries the default.',
+    citesAsReRun: BLAST, rows,
+  };
   const stamp = artefactStamp(payload, new Date().toISOString(), 'content', 'the passage-status migration, derived', ['what', 'citesAsReRun', 'rows']);
   const out = join(REPO, 'content/exports', stampedName('passage-status-migration', stamp.sourceHash, 'json'));
   writeFileSync(out, JSON.stringify({ stamp, ...payload }, null, 2));

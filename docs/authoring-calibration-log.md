@@ -18502,3 +18502,45 @@ rested on survives both the family-glob and any clean, and the outbound director
 exactly one current version per family. The moratorium's `.superseded`-in-place interim never
 accumulated a file, so there was nothing to migrate into the store — it opens empty, which for a
 retention store is the only honest opening.
+
+## R659 — UNRECORDED minted; the signed default made callable; silence never derives clean again
+
+**THE GATE DIFF ON THE DESK FOUND WHAT THE MIGRATION MISSED**: the two cloze passages were never
+judged under the signed standard, and the migration derived them SERVABLE **from silence** — the
+exact fault the standard's REFER-forward default exists to prevent, one layer down. Repaired in
+order:
+
+- **Both rows moved SERVABLE → UNRECORDED through `movePassageStatus`**, David's authority of 23
+  August, priors stamped. **UNRECORDED is a new state, distinct from WITHHELD: withheld means
+  judged and stopped; unrecorded means never judged. Neither serves** — the serve path admits
+  explicit SERVABLE alone.
+- **The migration artefact superseded, retained bytes first**: `f41ac75f…` moved to
+  `content/retention/` (the retention rule's FIRST live use, working), corrected emission
+  `passage-status-migration-b950c1d7…` naming its predecessor's fault on its face.
+- **The signed default is callable**: `impliedServingStatus` in core — SERVABLE / WITHHELD /
+  UNRECORDED, with **absence of any judgement record reading as REFER**. The migration deriver and
+  `check:passage-status-divergence` both call it; the check now fails loudly on a SERVABLE whose
+  passage has no judgement record, and on a reader throw. Run after: **27 SERVABLE · 2 UNRECORDED ·
+  0 UNSET, status and flags agree, exit 0.**
+- **Reachability walked, not recalled** (`UNRECORDED-PASSAGES-REACHABILITY.json`, ids queried):
+  16 items on the two passages, ALL DRAFT, question type `en-spag-cloze` mapping to **no Case row**
+  — two independent walls before a child, plus the passage status itself.
+
+## R660 — The silence-as-clean class, closed by an instrument; the crossing carries its digest
+
+**One report across every content-bearing surface** (`silence-as-clean-class-9c047361…`), verdicts
+from schema defaults and gate code, never recollection: Items, Word cards, item hints and walk
+scripts FAIL CLOSED; passages CLOSED THIS TURN. **Two surfaces still read silence as clean, and
+both repairs are rulings, not writes**:
+
+- **`Misconception.status @default(ACTIVE)`** — a row written without an explicit status SERVES,
+  the inverse of Item and Word; how many of the 269 ACTIVE were explicit versus defaulted is not
+  recoverable from the rows, which is itself the finding. Repair = a schema migration (fails-closed
+  default), David's to rule.
+- **Accessible names / the auditory surface** — the checks report and nothing gates the render; her
+  109th named it. Repair = a build gate, David's to rule.
+
+**And the crossing carries its digest everywhere**: the stamp's `fileDigest: null` now DECLARES
+where the file digest lives (the sidecar and the STAGED line, both over file bytes) — a file cannot
+contain its own digest, but a null left the crossing bare where a pointer arms it. Attachments
+state their digests in their captions, as the last several have.
