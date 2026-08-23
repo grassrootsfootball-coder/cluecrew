@@ -482,7 +482,14 @@ model Misconception {
   district       District
   description    String // teacher-facing
   childHint      String // the authored hint shown when this distractor is chosen
-  status         MisconceptionStatus   @default(ACTIVE)
+  /**
+   * FAILS CLOSED (David's ruling, 2026-08-23 — R661, from the silence-as-clean class report):
+   * a row written without an explicit status was SERVING under @default(ACTIVE) — the inverse of
+   * Item and Word. PROPOSED is the non-serving default ("only ACTIVE serves", above). Standing
+   * rows keep their explicit stored values; whether the 269 ACTIVE were explicit or defaulted is
+   * PERMANENTLY UNRECOVERABLE (the unverifiable-figures ruling) — annotated, never reconstructed.
+   */
+  status         MisconceptionStatus   @default(PROPOSED)
   /**
    * "ai-corpus:v1" for corpus-proposed entries (Addendum E §2).
    */

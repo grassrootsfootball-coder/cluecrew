@@ -80,6 +80,17 @@ export function axesTableCanary(): { holds: boolean; detail: string } {
  *  second name is added by ruling, not by convenience (eighty-fourth return §3). */
 export const MAY_JUDGE: readonly string[] = ['Annie'] as const;
 
+/**
+ * **THE SCOPE FIELD (her confirmation, landed with the 109th; David's arming ruling, 2026-08-23 —
+ * R661).** Each judging seat names WHAT it may judge. The auditory build gate reads this list:
+ * enforcement turns on MECHANICALLY the day a seat with scope 'accessibility' lands — machinery
+ * that records rather than a hand that hurries, her own safeguard shape. Seats are added BY
+ * RULING, with the ruling cited, exactly as names are.
+ */
+export const MAY_JUDGE_SEATS: ReadonlyArray<{ name: string; scope: string; ruledBy: string }> = [
+  { name: 'Annie', scope: 'passage-content', ruledBy: 'passage-content-standard DRAFT-1 §2, signed' },
+] as const;
+
 export interface StandardFlag {
   axis: string;
   element: string;

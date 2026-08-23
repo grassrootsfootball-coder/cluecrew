@@ -18544,3 +18544,33 @@ both repairs are rulings, not writes**:
 where the file digest lives (the sidecar and the STAGED line, both over file bytes) — a file cannot
 contain its own digest, but a null left the crossing bare where a pointer arms it. Attachments
 state their digests in their captions, as the last several have.
+
+## R661 — The table emitted for the diff; the canary's answer; both rulings executed
+
+**THE MEMBERSHIP EMITTED, UNRECONCILED** (`SERVING-SIDE-CONTENT-AXES.json`, final bytes
+`cbb388b8…aa2bb`): 20 member axes + 7 no-member rows, every row with its provenance, the addendum
+row carrying the full chain (ninety-fourth §2, never-typed landing, canary moved in the same
+commit). **The canary asserts 20+7 today, and the answer to the question is NEITHER offered
+state**: the crime-as-background addendum ARRIVED (the ninety-fourth crossed 2026-08-23 after the
+transport gap) and LANDED — never refused by the canary, never lost. If three tables disagree,
+this side's divergence is not the addendum row; the seats say where.
+
+**TWO EMISSION FAULTS OF MINE ON THE WAY, both owned on the artefact's face**: the first build
+REGEXED THE SOURCE and emitted 0 member axes — never parse what you can import — and the
+correction OVERWROTE it under a fixed name, so the garbage bytes escaped retention: **retention
+fires on stamped-name supersession, not same-name overwrite, which is why stamped names exist.**
+
+**RULING 1 EXECUTED — Misconception fails closed**: `@default(ACTIVE)` → `@default(PROPOSED)`
+(migration `20260823153240`, one ALTER; replay clean; invariants hold). Standing rows keep their
+explicit values — 269 ACTIVE serve exactly as yesterday — and **the explicit-versus-defaulted
+question for those 269 is PERMANENTLY UNRECOVERABLE**, recorded under the unverifiable-figures
+ruling in the schema comment itself: annotated, never reconstructed.
+
+**RULING 2 EXECUTED — the auditory build gate, report-only, armed**: `check:auditory-surface-gate`
+walks 191 source files, finds **46 channels carrying accessible strings, 46 with no COPY-REVIEW
+declaration** (the census said 41; the walk found five more — the derived number supersedes the
+carried one). Enforcement is ARMED on a pre-stated condition: **a seat with scope 'accessibility'
+landing in `MAY_JUDGE_SEATS`** — the scope field her confirmation added, seats added by ruling with
+the ruling cited. The day the seat is ruled, the run exits 1 with no edit anywhere: machinery that
+records rather than a hand that hurries, her own safeguard shape. Until then the run says on its
+face that its green line is not a pass.
