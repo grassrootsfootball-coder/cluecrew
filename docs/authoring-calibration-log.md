@@ -18357,3 +18357,33 @@ hundred-and-sixth · settled b-04 on her reading of both spans** — with the b-
 (`LEAVING-SCHOOL-SPAN-FOR-ANNIE.json`, `04df9c54…`) cited as what she read. Executes ONLY from her
 block, like every lift this fortnight; the hold prints until then; the frame-versus-span lesson
 stays filed above, unamended by the settlement.
+
+## R654 — The seat closes on strings both stores quote identically; the transported-numbers rule
+
+**THE ARMED ACT FIRED FROM HER BLOCK.** The leaving-school row moved b-03 → b-04 through the
+standard displacement path — b-03 stamped, previous values kept, the full chain on the flag:
+*landed b-04 · moved to b-03 by content (an inference from a frame, the butterfly incident's
+aftermath) · re-held on her hundred-and-sixth · SETTLED b-04 on her reading of both spans*, her
+block's digest on the settlement. **The citation of record is the three shared sentences** — the
+name line [46], the won't-fit line [47], the look-and-fold sentence [48–49], THIS store's line
+numbers attached — with the set-up line, the lockers-answered-with-jumper-sizes and the football
+sheet **filed under corroboration, where they are excellent and are not the strike.** The standing
+condition prints under b-04 now; never-screened is the two cloze files; **zero holds; exit 0
+computed.**
+
+**HER STANDING RULE, VERBATIM (§3):**
+
+> **Cross-store citations settle on strings, with each store's own line numbers attached, and
+> transported line numbers settle nothing.**
+
+The known one-line offset means a number that crosses a store boundary arrives meaning something
+else — *"the divergence class in its smallest possible form. The quoted string is the invariant,
+and today it carried the whole seat."* Kin to R80 (the same clock) and R591 (units on numbers):
+a line number is a coordinate in ONE store's frame, and the string is frame-free.
+
+**And her closing line belongs with the settlement**: both stores self-corrected in the open this
+session — the register got the concession before it got the verdict, twice — *"which is the
+culture the register was built to make ordinary."* The conversion is closed everywhere by
+artefact: twenty-six passages, every figure derived, every judgedBy a name or an honest
+UNRECORDED, and the final seat settled by the discipline refusing its own shortcut twice on the
+way.

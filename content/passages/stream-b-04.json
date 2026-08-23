@@ -95,7 +95,75 @@
    "anchorNote": "verbatim"
   }
  ],
- "contentFlags": [],
+ "contentFlags": [
+  {
+   "axis": "family-separation-and-absence",
+   "element": "the unstated situation is that the child is leaving the school; no reason given, no home circumstances implied",
+   "severity": "mild",
+   "disposition": "keep",
+   "condition": "no question may ask pupils to state the reason, only to notice that something is being kept back",
+   "conditionMetBy": "STANDING: checked against the item set for this passage; falls due on every new item",
+   "reason": "It stays open to a house move, a change of school or a family change, and nothing distressing is described.",
+   "loadBearing": true,
+   "strike": "DECLARED(absence): nothing distressing described",
+   "judgedBy": "UNRECORDED",
+   "judgedAt": "UNRECORDED",
+   "convertedBy": "Annie",
+   "convertedAt": "2026-08-22",
+   "sourceProse": "The unstated situation is that the child is leaving the school. No reason is given and no home circumstances are implied, so it stays open to a house move, a change of school or a family change. Nothing distressing is described. Recommendation: keep, and do not let any question ask pupils to state the reason, only to notice that something is being kept back.",
+   "_sourceProseSeededBy": "VERBATIM-AT-LANDING from stream-b-04's legacy row bytes, annie-hundredandfourth-return.md, sha256 9bab87a329eb22aa65385ddd74924f25abf5a9a56372a2b48cc815ef8683415a",
+   "_movedFromPassage": null,
+   "placementConfirmation": "SETTLED: stream-b-04, the Reuben story. CHAIN \u2014 landed b-04 (hundred-and-fourth's target) \u00b7 moved to b-03 by content (an inference from a frame, the butterfly incident's aftermath) \u00b7 re-held on her hundred-and-sixth \u00b7 SETTLED b-04 on her reading of both spans, string-identical across the stores (annie-107-for-code.md, sha256 b04e432cf22fefb455f70eee76f74641b6a7b2ed257c96c2d21b3803f3778c0b). b-03 carries no span, both walks, stated plainly.",
+   "_previousPassage": "stream-b-03",
+   "elementCitation": {
+    "citationOfRecord": [
+     {
+      "span": "\"Reuben. This one's got your name in it.\"",
+      "lines": [
+       46
+      ]
+     },
+     {
+      "span": "\"It's all right,\" he said. \"It won't fit me next year.\"",
+      "lines": [
+       47
+      ]
+     },
+     {
+      "span": "She looked at him for a second or two longer than the answer needed. Then she folded it the way he had folded it, low down, underneath, and pressed the flaps of the box shut.",
+      "lines": [
+       48,
+       49
+      ]
+     }
+    ],
+    "rule": "Cross-store citations settle on STRINGS, with each store's own line numbers attached; transported numbers settle nothing (her hundred-and-seventh section 3). These lines are THIS store's.",
+    "corroboration": {
+     "note": "excellent, and not the strike \u2014 filed apart as she ruled",
+     "spans": [
+      {
+       "what": "the set-up line",
+       "span": "Miss Bhatt asked for two volunteers and Reuben's hand went up before he had decided anything about it.",
+       "lines": [
+        1
+       ]
+      },
+      {
+       "what": "the lockers Reuben answers with jumper sizes",
+       "span": "When we're in Year Six,\" Ilya said, \"we get the lockers by the science room. The tall ones. Not those little ones by the gym.\"\n\n\"These are all size nine,\" Reuben said. He had four grey jumpers across his arms, all of them size nine, none of them named.",
+       "lines": []
+      },
+      {
+       "what": "the football sheet with plenty of room at the bottom",
+       "span": "The sheet for September football trials had eleven names on it in eleven different pens. There was plenty of room left at the bottom.",
+       "lines": []
+      }
+     ]
+    },
+    "settledBy": "annie-107-for-code.md, sha256 b04e432cf22fefb455f70eee76f74641b6a7b2ed257c96c2d21b3803f3778c0b"
+   }
+  }
+ ],
  "numberedLines": [
   {
    "n": 1,
@@ -458,7 +526,7 @@
   "reading": "Verbatim means VERBATIM UNDER THESE NORMALISATIONS. A figure quoted without them is approximate and does not say so.",
   "normalisations": [
    {
-    "normalisation": "NONE — commissioned original",
+    "normalisation": "NONE \u2014 commissioned original",
     "instances": 0,
     "note": "This passage was written for the bank. There is no source text, so there is nothing to be verbatim against and no normalisation to declare."
    }
@@ -473,7 +541,7 @@
   "openingReference": "CLEAN, AND THE QUESTION WAS ASKABLE. Line 1 names Miss Bhatt and Reuben in its first eight words. The headnote carries Ilya and the cupboard, and both are re-established inside the text at lines 5 and 3. No definite article does work on first mention.",
   "seams": "VACUOUS BY CONSTRUCTION, and answered rather than skipped. A seam is created by joining two spans that were not adjacent in a source. This text has no source and no cuts, so there is no join anywhere in it and the question cannot have a yes. Recorded because an unanswered question and an unaskable one look identical on a passage record.",
   "pronounResolution": "VACUOUS BY CONSTRUCTION. The rule fires when a cut removes a paragraph naming a person, leaving the next paragraph's pronouns unresolved. Nothing was cut. Every person in this text is introduced by the text.",
-  "itemsLeanOn": "CHECKED AGAINST ENG-007, TWELVE ITEMS. Every window is inside the text and every key is recoverable from its own lines. Two noted: LP-05 asks what \"laughed as well, slightly after her\" suggests, and the key — he was thinking about something else first — rests on a delayed laugh alone, which the line does give. LP-08 asks why the writer ends on \"plenty of room left at the bottom\"; the eleven names in eleven pens at line 38 carry it. Neither leans on the headnote for anything the text does not establish.",
+  "itemsLeanOn": "CHECKED AGAINST ENG-007, TWELVE ITEMS. Every window is inside the text and every key is recoverable from its own lines. Two noted: LP-05 asks what \"laughed as well, slightly after her\" suggests, and the key \u2014 he was thinking about something else first \u2014 rests on a delayed laugh alone, which the line does give. LP-08 asks why the writer ends on \"plenty of room left at the bottom\"; the eleven names in eleven pens at line 38 carry it. Neither leans on the headnote for anything the text does not establish.",
   "readOn": "2026-08-14",
   "readShape": "COMMISSIONED TEXT. No source, no cut list, no trims. seams and pronounResolution cannot have a yes and say so; openingReference CAN, and does on stream-b-02."
  },
@@ -494,7 +562,7 @@
    "ENG-007-LP-06, two-span: the naming rule kept for a girl who left and broken for his own jumper",
    "ENG-007-LP-12, whole-text: no interiority, only his hands and the things he handles"
   ],
-  "status": "PERMANENTLY SPENT — one cluster per passage, and the cluster keys elsewhere.",
+  "status": "PERMANENTLY SPENT \u2014 one cluster per passage, and the cluster keys elsewhere.",
   "cause": "THE DRAFTER COULD NOT SEE IT. The complication is recorded in `craftNotes`, which `make_authoring_copies.py` STRIPS from the copy an author works from, deliberately, because a hook hands over a T4. No field carrying the complication's LOCATION existed for Stream-B until 2026-08-14. This is a consequence of the stripping rule, not an oversight by whoever drafted ENG-007.",
   "recordedOn": "2026-08-14"
  },
@@ -503,7 +571,7 @@
    "questionHooks",
    "craftNotes"
   ],
-  "reason": "Addendum 19 §1 and the T4 sourcing rule, made structural rather than procedural. Curation copy retains them.",
+  "reason": "Addendum 19 \u00a71 and the T4 sourcing rule, made structural rather than procedural. Curation copy retains them.",
   "curationCopy": "/home/claude/passages/stream-b/stream-b-04.json",
   "flaggedNotStripped": [
    "wordVaultCandidates"
