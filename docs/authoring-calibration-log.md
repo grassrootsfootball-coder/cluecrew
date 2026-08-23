@@ -18349,3 +18349,11 @@ aftermath. **My hundred-and-fourth's "by content" move was an inference from a f
 of a span** — the very distinction her placement criterion draws — and her armed check caught it on
 its first firing. **The flag is NOT moved: the seat is hers, and it settles on her block**, on this
 quotation plus the authoring store's same one.
+
+**R653 addendum — THE MOVE, ARMED NOT RUN (David, 2026-08-23).** When her block crosses: the
+leaving-school row moves to `stream-b-04`, `placementConfirmation` carrying the full chain —
+**landed b-04 · moved to b-03 by content (an inference from a frame) · re-held on the
+hundred-and-sixth · settled b-04 on her reading of both spans** — with the b-04 span evidence
+(`LEAVING-SCHOOL-SPAN-FOR-ANNIE.json`, `04df9c54…`) cited as what she read. Executes ONLY from her
+block, like every lift this fortnight; the hold prints until then; the frame-versus-span lesson
+stays filed above, unamended by the settlement.
