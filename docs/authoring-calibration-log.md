@@ -18599,3 +18599,17 @@ matched**: twenty-one rows, six in-row cases. The conformed membership is emitte
 constants — never parsed from source text (the lesson of the last emission) —
 `serving-axes-conformed-54b94d28…`, file digest `3ebeeabd…0c61` declared at crossing, ready for the
 desk diff and the sitting.
+
+**R662 addendum — THE AXES DISPUTE IS CLOSED, CITING THE VERDICT (2026-08-23).**
+`axes-verdict-for-code.json`, sha256
+`952ef32b0aee4860e50cbdac7fbfca8abb87e4a87ddace3d20f758886e22a328`, computed here over the bytes
+before reading. **RECONCILED: every seat identical, all three parties** — axis-row sets and
+in-row case pairs compared per seat, counts recomputed from memberships, this store's emission
+verified in the inputs at its declared digest (`3ebeeabd…0c61`, matched). **Her self-harm test
+passed on both stores: no gap.** The three derivations all shown and all owned — the desk's
+composed figure, the authoring store's misread of its own table, this store's parse of the
+undeclared-units paragraph as rows — and every divergence dissolved into the amended source, as
+its author closed it. **This entry's conformance is closed against the verdict; no build follows.**
+The ENG-003 sitting proceeds on Annie's side; nothing on the serving path changes until her
+rulings on the two cloze passages cross back — **flags land through the door as ever, and the two
+UNRECORDED statuses move only through `movePassageStatus` with her authority recorded.**
