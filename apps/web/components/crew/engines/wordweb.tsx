@@ -4,6 +4,7 @@
 import { OptionButton } from './option-button';
 import { optionLabel, outcomeFor, stemText, type EngineProps } from './shared';
 import { ScopeNote } from './scope-note';
+import { splitCarrierAtGaps } from '../../../lib/crew/cloze-gap';
 
 export default function WordWebEngine({ stem, options, selected, onSelect, outcome }: EngineProps) {
   const words = Array.isArray(stem.words) ? (stem.words as string[]) : null;
@@ -41,8 +42,24 @@ export default function WordWebEngine({ stem, options, selected, onSelect, outco
             <p style={{ fontSize: '1.15rem' }}>{instruction}</p>
             {isCloze ? <p style={{ margin: '0 0 0.6rem' }}><ScopeNote kind="on-the-card" /></p> : null}
             {carrier ? (
+              /**
+               * HER TWO CLOZE RULINGS ON THE SERVING SURFACE (119th thread — R668):
+               * 1. THE EXCERPT IS SET OFF BY THE VEHICLE BLOCK, WITH NO ADDED QUOTATION MARKS —
+               *    this block IS the set-off, and nothing here wraps the carrier in quotes.
+               * 2. EVERY GAP NAMES ITSELF IN THE ACCESSIBILITY CHANNEL by the item's own gapIndex:
+               *    the eye keeps the marker, the ear hears "gap N" instead of underscore noise —
+               *    the marker is aria-hidden and the name is visually hidden, the same doubling
+               *    the error-spot preview earned (R566: reading is parallel, listening is serial).
+               */
               <p className="crew-errorspot-sentence-preview" data-testid="cloze-carrier" style={{ display: 'block' }}>
-                {carrier}
+                {splitCarrierAtGaps(carrier).map((seg, n) => seg.kind === 'text'
+                  ? <span key={n}>{seg.text}</span>
+                  : (
+                    <span key={n}>
+                      <span aria-hidden="true">{seg.marker}</span>
+                      <span className="fd-visually-hidden">{`gap ${typeof stem.gapIndex === 'number' ? stem.gapIndex : seg.printedIndex}`}</span>
+                    </span>
+                  ))}
               </p>
             ) : null}
           </>

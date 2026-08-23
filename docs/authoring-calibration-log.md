@@ -18739,3 +18739,44 @@ fail-closed under the new default).
 **So the parked hint-review disclosure is a live product-honesty question on David's desk, not a
 moot note** — the membership above is what any disclosure or review sitting reads against. No
 build; the notice slot stands correct for the servability wording and waits for it.
+
+## R668 — The 119th executes: the gate refuses its own reviewer, the cloze rulings land, the 24 hold
+
+**Annie's 119th (`annie-119-for-code.md`, sha256
+`87b701afa5cfc3f961f3e220d1540af7fa8c263cc4f6e017bb9fda5c8d82f6c4`, verified over the bytes)
+approved the NVR servability notice AS AMENDED** — her sentence names the exclusion by the form,
+not by the child: *"The non-verbal reasoning questions are made of shapes and pictures that must
+be seen, so this section is not offered in a spoken form."* David's instruction: land it through
+`landNvrNotice`, byte source her AMENDMENTS block, never the staged artefact.
+
+**THE LANDING WAS REFUSED BY THE DOOR, AND THE REFUSAL STANDS.** `landNvrNotice` gates every
+wording through `checkChildFacingText` (role narrative), and her sentence is 24 words against the
+16-word cap — the gate refused the reviewer whose rulings built it. Neither branch out of that is
+this desk's to take: the house rule says never exempt a scanner hit, and rewording her sentence is
+authoring — *one sentence* is a property her own return says survives the amendment, so a split
+changes a claimed property and only she can make it. **The slot stays empty (`text: null`, fails
+closed to not-rendering, exactly as designed) and the collision goes to the desk**: her split, or
+a ruled exemption for this role, or a ruling that product-notice copy is a different role with a
+different cap. The refusal is the mechanism working — the same class as the doors that refused
+their own builders, one seat higher.
+
+**The two cloze rulings landed on the serving surface** (`wordweb.tsx`), discharge diff staged as
+`cloze-rulings-discharge-diff-1a38116305b91b68.json`, file sha256
+`1a38116305b91b688298058b5cdee400cee50905bf29515228210ea886e55a2b`:
+- **No added quotation marks**: the carrier renders bare inside the vehicle block
+  (`data-testid="cloze-carrier"`) — the block IS the set-off. Checked mechanically at emission:
+  the emitter REFUSES if any quotation character, curly or straight, literal or entity, appears in
+  the carrier block's source. An artefact that asserts what its source no longer says is R178 one
+  file over.
+- **Every gap names itself in the ear**: `splitCarrierAtGaps`
+  (`apps/web/lib/crew/cloze-gap.ts`, pure, tested) splits the carrier at `___(n)___`; the marker
+  renders `aria-hidden` beside a visually-hidden `gap N` from the item's own `gapIndex`. The eye
+  keeps the marker; the ear hears the name instead of underscore noise. ENG-003's publication path
+  opens BEHIND this diff, pending the Case-row product decision — nothing here serves yet.
+
+**The 24 hold exactly as they serve.** Zero writes touched any hint wording this turn — the turn's
+write membership is the two render-path files, one test file, one emitter script and its staged
+artefact; the serving-membership export's bytes still read
+`2d3909594513b1e9295cba8e210c41e9f18cfd01d7320b0f03bcd897f606cde7`, unchanged. The nine house-rule
+violations the desk found in the serving wordings are EVIDENCE, and the serving text is what Annie
+must see. Nothing further is emitted on that thread until the desk diff verdict crosses.
