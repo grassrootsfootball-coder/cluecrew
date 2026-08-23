@@ -17,7 +17,7 @@
  * batch file and its review pack can never be confused for one another.
  */
 import { createHash } from 'node:crypto';
-import { copyFileSync, existsSync, mkdirSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
+import { renameSync, copyFileSync, existsSync, mkdirSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { basename, join, resolve } from 'node:path';
 
 /** Confirmed with David, 2026-08-02: Cowork reads the ~/Downloads/11+/ tree. */
@@ -157,8 +157,15 @@ export function deliver(sourcePath: string, family?: string): string {
       const supersedesLegacy = existing.startsWith(`${family}.`);
       if (!supersedesStamped && !supersedesLegacy) continue;
       if (hash && existing.includes(hash)) continue; // a sibling of the current version
-      rmSync(join(OUTBOUND_DIR, existing));
-      console.log(`  superseded → removed stale ${existing}`);
+      /**
+       * **RETENTION MORATORIUM (2026-08-23, pending David's ruling on the R655 pruning class).**
+       * A superseded artefact is MARKED, never deleted: pruning retires the only quotable line the
+       * era's prose rested on, and three crossed figures already sit unverifiable for exactly this
+       * reason. Superseded files move aside under a `.superseded` suffix — out of every
+       * family-glob, present for every provenance question.
+       */
+      renameSync(join(OUTBOUND_DIR, existing), join(OUTBOUND_DIR, `${existing}.superseded`));
+      console.log(`  superseded → MARKED (retained) ${existing}.superseded`);
     }
   }
   copyFileSync(sourcePath, target);

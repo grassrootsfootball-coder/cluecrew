@@ -18436,3 +18436,29 @@ now, (b) a staged artefact's bytes on disk, or (c) the test runner's output now.
   — their verbs are unverifiable, and under the proposed rule they would carry none.** The class
   the pruning created is noted: superseding an artefact also retires the only quotable line its
   era's prose rested on (R86's reader-map lesson, arriving on provenance).
+
+## R656 — The gate in report-only; the blast radius is an empty membership, declared; the moratorium
+
+**THE SERVE PATH NOW CALLS THE READER, AND NOTHING CHANGES FOR A CHILD.** `reportOnlyContentGate`
+in the orchestrator evaluates the candidate rule — *refuse to serve a passage carrying REFER or an
+unmet condition* — logs every would-refuse with passage id and reason, and serves normally
+regardless. A reader throw also logs rather than blocks, flagged as a case the real gate must
+decide before wiring. The wire itself waits on the membership.
+
+**THE BLAST RADIUS, AS MEMBERSHIP** (`serve-gate-blast-radius-7528744cdf6c9966.json`):
+**would-refuse is EMPTY, and the empty is DECLARED with its reason** — every disposition is keep or
+cut, every condition carries a non-empty conditionMetBy, and the three standing conditions are
+discharged-at-present, falling due on NEW items (a future refusal, not a present one). What serving
+touches today, by identity: **stream-a-03-wind-in-willows (22 LIVE items) and stream-b-01 (12), across
+exactly the four live comprehension cases** — so the wire, if ruled, is free TODAY, and the first
+artefact it could ever refuse is a future arrival. **The decision reads identity, not a count**: a
+refusal on either of those two passages would dark a third of the live English bank, and the
+membership is what shows it.
+
+**THE RETENTION MORATORIUM IS IN FORCE** (pending David's ruling on the R655 pruning class):
+`deliver()` marks superseded artefacts aside as `.superseded`, never deletes. **And the report of
+what pruning already cost** (`PRUNED-ARTEFACTS-CROSSED-FIGURES.json`): eight artefacts named that
+crossed prose figures rested on — the 19:31 reference set, the manufactured-zero audit, three
+attached exposure lists among them — **their figures marked UNVERIFIABLE, not reconstructed.**
+`content/exports/` is gitignored, so those prunings are unrecoverable; the moratorium is the only
+retention there is, which is itself evidence for the ruling it awaits.
