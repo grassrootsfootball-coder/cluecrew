@@ -138,6 +138,21 @@ export interface FlagRefusal {
 /** The declaration kinds her rulings hold. The next undeclarable claim adds a kind BY RULING. */
 export const DECLARED_KINDS: readonly string[] = ['absence', 'item-set', 'whole-passage-tone'] as const;
 
+/**
+ * A SCREENING RECORD (form ruling eleven, her hundred-and-third §2): **a clean declaration is a
+ * screening record, never a flag — a flag needs an element, and this line's whole point is that
+ * there is none.** A recorded zero carries what a zero carries: its axes, its scope, its judge.
+ * Until this kind existed the corpus could not tell screened-clean from never-screened apart.
+ */
+export interface ScreeningRecord {
+  kind: string;
+  axes: string[];
+  scope: string;
+  declaration: string;
+  judgedBy: string;
+  [key: string]: unknown;
+}
+
 export interface FlagReport {
   /** Flags in the standard's object shape that parsed. */
   standardFlags: StandardFlag[];
@@ -149,6 +164,8 @@ export interface FlagReport {
   reported: string[];
   /** Every DECLARED strike, with its kind — the standing run reports declarations BY KIND. */
   declared: Array<{ where: string; kind: string }>;
+  /** Screening records (ruling eleven). Validated: kind known, axes tabled, judge named or converted. */
+  screenings: ScreeningRecord[];
 }
 
 const DISPOSITIONS = new Set(['keep', 'keep-conditional', 'cut', 'refer']);
@@ -163,24 +180,48 @@ const ASSERTIVE = /\b(the (text|narrative|passage|poem) |immediately |makes clea
  * belongs to the authoring/export caller and not to the write door.
  */
 export function readContentFlags(
-  passage: { id?: unknown; contentFlags?: unknown; extract?: unknown; preamble?: unknown },
+  passage: { id?: unknown; contentFlags?: unknown; contentScreenings?: unknown; extract?: unknown; preamble?: unknown },
   opts: { enforceUse?: boolean } = {},
 ): FlagReport {
   const id = typeof passage.id === 'string' ? passage.id : '(unnamed passage)';
   const raw = passage.contentFlags;
-  if (raw === undefined || raw === null) {
-    return { standardFlags: [], legacy: { strings: 0, objects: 0 }, refusals: [], reported: [], declared: [] };
-  }
-  if (!Array.isArray(raw)) {
-    // A reader refuses a shape it cannot parse; it never returns empty (R173).
-    return {
-      standardFlags: [], legacy: { strings: 0, objects: 0 },
-      refusals: [{ code: 'UNPARSEABLE_FLAG', where: id, detail: `contentFlags is ${typeof raw}, not an array — refusing the shape, not returning empty` }],
-      reported: [], declared: [],
-    };
+  const out: FlagReport = { standardFlags: [], legacy: { strings: 0, objects: 0 }, refusals: [], reported: [], declared: [], screenings: [] };
+  // ---- Ruling eleven: screening records, validated apart from flags. ----
+  const rawScreenings = passage.contentScreenings;
+  if (rawScreenings !== undefined && rawScreenings !== null) {
+    if (!Array.isArray(rawScreenings)) {
+      out.refusals.push({ code: 'UNPARSEABLE_FLAG', where: `${id} contentScreenings`, detail: `contentScreenings is ${typeof rawScreenings}, not an array — refusing the shape, not returning empty` });
+    } else {
+      rawScreenings.forEach((s, n) => {
+        const where = `${id} contentScreenings[${n}]`;
+        const o = (s ?? {}) as Record<string, unknown>;
+        if (o.kind !== 'screened-clean') {
+          out.refusals.push({ code: 'UNPARSEABLE_FLAG', where, detail: `screening kind ${JSON.stringify(o.kind)} — 'screened-clean' is the only ruled kind; a new kind is her ruling, not a write.` });
+          return;
+        }
+        const axes = Array.isArray(o.axes) ? o.axes.filter((a): a is string => typeof a === 'string') : [];
+        const untabled = axes.filter((a) => !CONTENT_AXES.includes(a));
+        if (axes.length === 0 || untabled.length > 0) {
+          out.refusals.push({ code: 'UNKNOWN_AXIS', where, detail: `a recorded zero carries its axes, and ${untabled.length > 0 ? `${untabled.join(', ')} is not in the table` : 'none are named'}.` });
+          return;
+        }
+        const judgedOk = typeof o.judgedBy === 'string' && (MAY_JUDGE.includes(o.judgedBy)
+          || (o.judgedBy === 'UNRECORDED' && typeof o.convertedBy === 'string' && MAY_JUDGE.includes(o.convertedBy)));
+        if (!judgedOk) {
+          out.refusals.push({ code: 'UNJUDGED_FLAG', where, detail: 'a recorded zero carries its judge — a name, or UNRECORDED beside a converting name.' });
+          return;
+        }
+        out.screenings.push(o as unknown as ScreeningRecord);
+      });
+    }
   }
 
-  const out: FlagReport = { standardFlags: [], legacy: { strings: 0, objects: 0 }, refusals: [], reported: [], declared: [] };
+  if (raw === undefined || raw === null) return out;
+  if (!Array.isArray(raw)) {
+    // A reader refuses a shape it cannot parse; it never returns empty (R173).
+    out.refusals.push({ code: 'UNPARSEABLE_FLAG', where: id, detail: `contentFlags is ${typeof raw}, not an array — refusing the shape, not returning empty` });
+    return out;
+  }
   const extract = typeof passage.extract === 'string' ? passage.extract.replace(/\r\n/g, '\n') : null;
   /**
    * **THE PREAMBLE IS PASSAGE BYTES A CHILD SEES**, and Heidi's twelfth conditional is the case: its
@@ -268,7 +309,11 @@ export function readContentFlags(
     }
     // ---- §5: the strike test, now three states. ----
     if (o.loadBearing === true) {
-      const declared = typeof o.strike === 'string' ? /^DECLARED\(([a-z-]+)\)$/.exec(o.strike) : null;
+      // Her hundred-and-third form carries a trailing clause — `DECLARED(absence): the narrator
+      // never says. The whole-subject clause is DECLARED(whole-passage-tone)` — the FIRST kind is
+      // the strike's state and the rest travels as its note; an anchored $ would have refused the
+      // very rows the state was unified for.
+      const declared = typeof o.strike === 'string' ? /^DECLARED\(([a-z-]+)\)(?::\s|$)/.exec(o.strike) : null;
       if (declared) {
         const kind = declared[1] as string;
         if (!DECLARED_KINDS.includes(kind)) {

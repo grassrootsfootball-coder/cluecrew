@@ -33,6 +33,8 @@ function main() {
   let specimenSeen = false;
 
   let standard = 0;
+  const screenedClean: string[] = [];
+  const neverScreened: string[] = [];
   let legacyStrings = 0;
   let legacyObjects = 0;
   const refusals: string[] = [];
@@ -45,6 +47,8 @@ function main() {
     const p = JSON.parse(readFileSync(join(PASSAGES, f), 'utf8')) as Record<string, unknown>;
     const r = readContentFlags(p);
     standard += r.standardFlags.length;
+    if (r.screenings.length > 0) screenedClean.push(`${String(p.id)} — ${r.screenings.map((s) => s.axes.join('+')).join('; ')}`);
+    else if (r.standardFlags.length === 0 && r.legacy.strings + r.legacy.objects === 0) neverScreened.push(String(p.id));
     legacyStrings += r.legacy.strings;
     legacyObjects += r.legacy.objects;
     for (const x of r.refusals) refusals.push(`  ${x.code}  ${x.where}\n      ${x.detail}`);
@@ -85,6 +89,16 @@ function main() {
   if (declaredByKind.size > 0) {
     console.log(`\n  DECLARED strikes, by kind [unit: flags]: ${[...declaredByKind].sort().map(([k, v]) => `${k} ${v}`).join(' · ')}`);
   }
+  /**
+   * **THE TWO SILENCES, APART (ruling eleven).** A passage with no flags was, until the screening
+   * record existed, one population wearing two meanings. Now: SCREENED-CLEAN carries its recorded
+   * zero (axes, scope, judge); NEVER-SCREENED is the silence that still means nothing. Reported as
+   * distinct populations, units on their faces, so neither silence can borrow the other's credit.
+   */
+  console.log(`\n  SCREENED-CLEAN: ${screenedClean.length} [unit: passages with a recorded zero]`);
+  for (const s of screenedClean) console.log(`      ${s}`);
+  console.log(`  NEVER-SCREENED: ${neverScreened.length} [unit: passages with no flag, no legacy row and no screening — a silence that means nothing]`);
+  for (const s of neverScreened) console.log(`      ${s}`);
   if (splits.length > 0) {
     // "second object OF THE SPLIT" marks the pair's second member; the FIRST member's note also
     // contains "second object" ("…second object below shares…"), which made 2 splits print as 4.

@@ -201,3 +201,24 @@ describe('the unified strike states (ninety-sixth §1)', () => {
     expect(r.refusals).toHaveLength(0);
   });
 });
+
+describe('ruling eleven: screening records (hundred-and-third §2)', () => {
+  const SCREEN = { kind: 'screened-clean', axes: ['violence-between-people'], scope: 'the whole extract',
+    declaration: 'No violence anywhere in the extract.', judgedBy: 'UNRECORDED', convertedBy: 'Annie' };
+  it('a screened-clean record with tabled axes and a converting name parses as a screening, not a flag', () => {
+    const r = readContentFlags({ id: 'p', contentFlags: [], contentScreenings: [SCREEN], extract: 't' });
+    expect(r.screenings).toHaveLength(1);
+    expect(r.standardFlags).toHaveLength(0);
+    expect(r.refusals).toHaveLength(0);
+  });
+  it('a recorded zero carries its axes — an untabled or absent axis refuses', () => {
+    const r = readContentFlags({ id: 'p', contentScreenings: [{ ...SCREEN, axes: ['not-an-axis'] }], extract: 't' });
+    expect(r.refusals[0]?.code).toBe('UNKNOWN_AXIS');
+    const r2 = readContentFlags({ id: 'p', contentScreenings: [{ ...SCREEN, axes: [] }], extract: 't' });
+    expect(r2.refusals[0]?.code).toBe('UNKNOWN_AXIS');
+  });
+  it('an unruled screening kind refuses — a new kind is her ruling, not a write', () => {
+    const r = readContentFlags({ id: 'p', contentScreenings: [{ ...SCREEN, kind: 'screened-fine' }], extract: 't' });
+    expect(r.refusals[0]?.detail).toContain('her ruling, not a write');
+  });
+});

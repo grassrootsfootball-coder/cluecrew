@@ -18212,3 +18212,38 @@ amended, in force per its own release condition); its census carries her floor a
 face: findable where an aside names, unfindable where it alludes — the locator bound in its fourth
 home. **The Little Women aside stamp moves to the signed register's digest when Cowork's
 confirmation crosses; armed, not executed.**
+
+## R648 — Ruling eleven folded: the two silences are now distinguishable states
+
+**A clean declaration converts to a SCREENING RECORD, never a flag** — a flag needs an element, and
+the line's whole point is that there is none. Bevis carries the corpus's first: `screened-clean`,
+axes violence-between-people + physical-peril-no-lasting-harm, scope the whole extract, judge
+UNRECORDED beside `convertedBy: Annie`, sourceProse seeded from the legacy line's bytes. The reader
+validates screenings apart from flags (kind ruled, axes tabled, judge named-or-converted; an
+unruled kind refuses with *a new kind is her ruling, not a write*), and the standing run reports
+**the two silences apart, units on their faces**: `SCREENED-CLEAN: 1 [passages with a recorded
+zero]` · `NEVER-SCREENED: 2 [no flag, no legacy row, no screening — a silence that means nothing]`.
+Until this line the corpus could not tell those apart, and railway-children's other half exists.
+
+**The seven landed** — Bevis 2 (Mark's *“Never.”* completing a one-word strike, minimal by
+arithmetic), Rebecca 2 (with the reading REPORTING that the hushing itself is not visible in the
+extract bytes — hers to read, not smoothed), Zenda 3 (the instant-decision sentence cut from the
+bytes). **Two shape faults caught at the door on the way**: her `DECLARED(kind): <clause>` trailing
+form fell past an anchored `$` and read as a drifted span — the first kind is the state, the rest
+its note — and the screening lander looked for the legacy line before asking whether the screening
+had already landed. **Census: 52 standard · 5 + 8 = 13 [units] · splits 4 · DECLARED absence 17,
+item-set 1, whole-passage-tone 4.**
+
+## R649 — Six against nine: her count was right, and mine was a number composed rather than computed
+
+**The derived membership now: b-01, b-02, b-03, b-04, b-05, c-01 — exactly her six.** Lists, not
+negotiation, and the lists agree.
+
+**AND THE EARLIER FIGURE'S SOURCE IS NAMED, from git rather than memory**: at R643's commit the
+true derivations were **18 passages with standard flags and 9 still carrying legacy rows — her nine
+exactly**. My "20 passages landed, 6 remain" matched NEITHER. It was not the frozen-figure class
+(no prior artefact held it) and not a membership-definition drift (no membership of that store
+yields 20/6). **It was a count sentence composed in prose and never computed** — R178's class
+arriving on numbers: a name in prose is looked up, never recalled, and **a number in prose is
+computed, never composed**. The register's own remaining-count lines now cite their derivation or
+do not ship.
