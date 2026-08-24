@@ -18854,3 +18854,44 @@ with its reason — *"a cap is a rule plus a reason, and a rule applied where it
 hold has become a constant"* — and the notice-gate refusal seated as the fourth builder-refusal:
 *"the gate built from my own hint form refused my own sentence, held its manners, and waited for
 a ruling rather than taking an exit."*
+
+## R671 — The rough-paper rule; her 122nd lands against the eight; the seven close
+
+**The rough-paper rule (Annie's 122nd, `annie-122-for-code.md`, sha256
+`87385d222d63c03918d426ee9b1df753103ad5933441bea18c6b7f14ba4f6696`, verified over the bytes —
+ruled before the verdicts that use it): a hint may instruct rough-paper working; it may not
+instruct marking the stimulus.** In her words: *"Write each letter's number above it"* and *"draw
+the arrow"* are the child's own working on her own rough paper, which every eleven-plus child has
+and every taught method assumes — the working can take whatever channel her working takes.
+*"Circle the signs"* and *"tick each one"* are acts performed on the question itself, which exists
+on a screen the child cannot mark. **"This is act availability beside the channel test's object
+availability: the object of _circle the signs_ is available to every child, and the act is
+available to none of them."** Third member of the family: instructing a channel not every child
+has (R567), asserting a feature not every carrier has (R576/R586), and now instructing an act no
+child can perform on the surface the product offers.
+
+**The landing (`scripts/land-annie-122-eight.ts`, dry then applied, verified by re-read):**
+- **Two amendments** — `vr07-operation-slip` and `vr07-term-dropped`, her authored strings read
+  from her file's AMENDMENTS block, replaced strings asserted byte-identical against the LIVE rows
+  before write (both matched, as the desk pre-verified), priors stamped in `textProvenance`, one
+  AMENDED event each on `rev-0001`. These two rows carry 75 of the batch's 77 live-item touches —
+  her reach note: **the faults were where the children are.**
+- **Five approvals stamped** — `vr14-step-direction`, `vr03-wrong-link`, `vr03-example-anchor`,
+  `vr04-wrong-strength`, `vr03-part-for-kind`: each confirmed string re-asserted byte-identical to
+  serving before stamping `approvedBy: reviewer:rev-0001` (the store's shape for her, per the
+  eleven-amended precedent), APPROVED events recorded. Approval-as-written is not authorship:
+  `authoredBy` stays as held, mostly UNKNOWN (R98). Three rows' prior
+  `human:staff-reviewer@cluecrew.test` (R94's unresolvable value) is recorded in the prior stamp.
+- **One held** — `vr07-value-slip`: her confirmation differs from the serving row by ONE CODEPOINT
+  (serving `letter’s` carries U+2019; her line carries U+0027). Not stamped, not harmonised; her
+  ratification line closes it. The landing script REFUSES if the premise changes.
+- **The nine untouched** — with Annie for re-approval on reading; zero attribution events on them
+  today, asserted before write and verified after.
+
+Landing artefact `annie-122-eight-landing-81f0f59116f331c7.json`, file sha256
+`81f0f59116f331c70c5e35d9134976317973b24d3693341ade493e9d20d4c42f`.
+
+**THE SEVEN ARE CLOSED** against the landing artefact `seven-vr-hints-landing-1f4217a2be4b54ec.json`
+(sha256 `1f4217a2be4b54ec04ba728a14ded2f19e89ce3041349c300d95998a2ef1aa72`): ruled in her seventh,
+served 2026-08-24, closed at the desk against bytes. The effect-date rule (R670) governs any claim
+about what children received before that date.
