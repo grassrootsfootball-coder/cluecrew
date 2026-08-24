@@ -22,6 +22,23 @@ export interface WholenessInput {
   options: Array<{ misconceptionId: string | null; misconceptionExecution: string | null }>;
 }
 
+/**
+ * THE BAR AS RULED (her 144th — R701): stem, options, key, tags, executions landed, the tag's
+ * entry ATTESTED, and a walkScript WHEREVER WALK MODE SERVES the case. **Item hints are not part
+ * of it, BY DESIGN**: for template-generated items the error generates the option, so the tag's
+ * hint is exactly as specific as an item hint could be — the design now written where absence
+ * used to sit. The empty hint-and-walk layer no longer counts against a row on its own.
+ */
+export function walkScriptPresent(explanation: unknown): boolean {
+  if (!explanation || typeof explanation !== 'object') return false;
+  const e = explanation as Record<string, unknown>;
+  for (const key of ['walkScript', 'walk']) {
+    const v = e[key];
+    if (typeof v === 'string' && v.trim() !== '') return true;
+  }
+  return false;
+}
+
 export function hintLayerPresent(explanation: unknown): boolean {
   if (!explanation || typeof explanation !== 'object') return false;
   return Object.values(explanation as Record<string, unknown>).some(
@@ -29,10 +46,10 @@ export function hintLayerPresent(explanation: unknown): boolean {
   );
 }
 
-export function itemWholeness(item: WholenessInput, attestedEntryIds: ReadonlySet<string>) {
+export function itemWholeness(item: WholenessInput, attestedEntryIds: ReadonlySet<string>, walkModeServes: boolean) {
   const tagged = item.options.filter((o) => o.misconceptionId !== null);
   const tagsAttested = tagged.length > 0 && tagged.every((o) => attestedEntryIds.has(o.misconceptionId!));
   const executionsExist = tagged.length > 0 && tagged.every((o) => typeof o.misconceptionExecution === 'string' && o.misconceptionExecution.trim() !== '');
-  const hintLayer = hintLayerPresent(item.explanation);
-  return { tagsAttested, executionsExist, hintLayer, whole: tagsAttested && executionsExist && hintLayer };
+  const walkOk = walkModeServes ? walkScriptPresent(item.explanation) : true;
+  return { tagsAttested, executionsExist, walkOk, whole: tagsAttested && executionsExist && walkOk };
 }

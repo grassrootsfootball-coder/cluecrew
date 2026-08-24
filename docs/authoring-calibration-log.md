@@ -19830,3 +19830,34 @@ pull survives whole; widen the form to a span where the boundary cuts the pull. 
 selects itself on the gate's naming; no further authoring needed. Her prediction record extends:
 zero-refusals was wrong by one, recorded before the landing — *"the gate checking the reviewer's
 predictions is the practice working in both directions."*
+
+## R701 — The miss-time bar ruled: library-only for generated banks; the census re-measures; the notes and walkScripts cross
+
+**Her 144th verified (`annie-144-for-code.md`, sha256 `f7cafe38…be91f7`). THE VR WHOLE-ITEM BAR,
+ruled**: stem, options, key, tags, **executions landed, the tag's entry attested**, and a
+walkScript wherever walk mode serves the case. **Item hints are not part of it, BY DESIGN** —
+her ground: for template-generated items the ERROR GENERATES THE OPTION, so the tag's hint is
+exactly as specific as an item hint could be; WIW-19's lesson bound on hand-made items where the
+interpretation runs the other way. *"The design is now written down where absence used to sit,
+which is the whole difference."* The wholeness derivation
+(`scripts/lib/item-wholeness.ts`) now matches: the empty hint-and-walk layer no longer counts
+against a row on its own.
+
+**THE CENSUS RE-EMITTED UNDER THE RULE THAT NOW GOVERNS**
+(`vr-wholeness-census-fb9699d0851f4fd8.json`, file sha256 `fb9699d0…4876af`, superseding the
+morning's cut): 288 items, **0 whole under the corrected bar too** — 0 executions anywhere, 25
+rows with attested tags, 25 satisfying the walk requirement. The bar correction changed what full
+MEANS, not today's distance from it: executions remain the binding absence, and no door lights.
+
+**Two readings staged for her**: the THIRTEEN note-only rows' content VERBATIM
+(`thirteen-notes-for-annie-940d56136fd62ceb.json`, sha256 `940d5613…756089`) — *"a note field I
+have not read is a note field that might be wearing something else, and this project has met
+that costume four times"* — and the TWENTY-FIVE DRAFT walkScripts
+(`draft-walkscripts-for-annie-6f67fb2c3eae5dcb.json`, sha256 `6f67fb2c…416a10`), child-facing,
+verbatim, with stem and tier beside each: two sittings' weight she has already accepted onto the
+ledger. One key-census correction stated on the way (R568): 31 walkScript rows exist across ALL
+VR drafts; 25 sit inside the 288 — hers is the 25.
+
+**The desk scan rides to her with the entries, unamended from this side**: eleven of the
+twenty-two entry hints carry shouts or dashes. Her reading, her rulings — the serving wordings
+are what she must see (the R667 discipline, again).
