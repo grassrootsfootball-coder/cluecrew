@@ -19529,3 +19529,34 @@ stricter kept because it is the better sentence.
 **And her closing line on the door, kept**: two refusals on opening day, both from gates she
 built, both making the door better — *"that is the system I would have asked for, refusing me
 exactly as often as I deserve."*
+
+## R691 — The case-en-06 arc closes ratified; two standing lines; the board states itself
+
+**The desk ratifies the opening**: twenty-five of twenty-five reach, the arithmetic walked, the
+window priced at 518 seconds, the column-less field carried. The arc — R686 (the faceless row),
+R687 (the door extension), R688 (land-and-refuse), R689 (the doorplate role), R690 (the opening)
+— **closes against the opening artefact**, `case-en-06-door-opening-f0b337029aa02462.json`,
+sha256 `f0b337029aa024626194ece85cac9be36338cfe0a080b1133f8568d3f2656492`.
+
+**Line one — THE FIELD WITHOUT A COLUMN, now a standing note on the item itself**:
+`misconceptionExecutionBasis: "AUTHORED+ENTRY"` is recorded on `ENG-003-A-CZ-A2`'s own row
+(`explanation.fieldWithoutAColumn`, evented), beside the transport event and the artefact — three
+homes, so it cannot quietly vanish. The general rule: **what a door cannot home, it names — and a
+named homeless field gets written somewhere durable on the record it describes, not only in the
+artefact that happened to carry it past.**
+
+**Line two — THE WINDOW MEASUREMENT AS PRECEDENT**: a sequencing gap is closed BY TRANSACTION and
+reported AS A FIGURE. The visible-but-empty window was surfaced before it opened (R689), closed
+by putting every dependent act in one transaction, and priced at 518 seconds — never "briefly",
+never "a short while". A gap that is measured can be judged; a gap that is adjectived cannot.
+
+**THE BOARD, stated from the record and not from memory**: the trial's ARMED GATE (the
+auditory-surface gate, arming mechanically on the accessibility seat) and the STANDING CHECKS —
+plus two residues that are on it whether or not they are wanted:
+1. **R655 remains PROPOSED** — the provenance-verb rule ("printed" requires a quotable printed
+   line) was held pending David's ratification and no ratification is in this record.
+2. **Her hint-review-disclosure truth-status half-question** (118th/119th §3: is the disclosure
+   still true of any surface after the drain, and if so which?) was likely MOOTED by the VR class
+   closure (R674: none of either remain) and the maths closure (R684), **but mooted-by-events was
+   never formally recorded** — one line from the desk closes it the way the bang offer closed.
+Nothing else is open on this side.
