@@ -19072,3 +19072,30 @@ corrected premise now crossing to her.
 
 Verified from the staged artefact's own bytes before crossing: 111 rows, id-sorted, every row
 carrying a non-empty description, distribution as stated.
+
+## R677 — The order's pending line clears on the corrected ground; the order-reasons rule
+
+**Annie's 127th (`annie-127-for-code.md`, sha256
+`1a541d16f3de9ba550887cf3b7d07b186440e9f2d2a1b048a549f232ea443f5c`, verified over the bytes)
+ratifies the maths order's re-grounding, and the PENDING-HER-LINE state clears.** The child-
+exposure premise is withdrawn as false — no maths hint reaches a child today — and the order
+stands on its other leg, in her sentence: **"attestation-before-exposure is strictly better than
+attestation-after, and this is the first class in the project's history that can have it."**
+Nothing competing has a child in it either, so nothing is displaced. The entry closes on
+attestation-before-exposure.
+
+**HER ORDER-REASONS RULE, minted in her words: an order that survives its premise being corrected
+states which leg it now stands on** — so the record reads true. A ruling that quietly keeps its
+conclusion while its stated reason dies is a conclusion with no reason on file; the swap happens
+in the open or the order is standing on nothing anyone can read.
+
+**Also taken in the same return, recorded**: the ghosts and the nulls are ONE population under
+re-approve-on-reading — *"an approval whose approver cannot be resolved and an approval that was
+never recorded differ in their history and not in what they need, which is a reading that ends in
+a name against a hash"* — no edit to the rule. And the tranche arithmetic: 109, ten tranches, the
+last holding one — **"a tranche of one is a tranche"**; the last row gets the same sitting the
+first eleven do, and nothing pads it.
+
+**The channel state**: tranche one (twelve rows, text and description side by side, hash beside
+every string) is cut from the membership emission at the desk and crossed to her; her verdicts
+land through the hash-beside-string door as ever; **tranche two cuts on her word, not before.**
