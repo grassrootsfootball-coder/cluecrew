@@ -845,6 +845,11 @@ model Case {
   // door, pedagogy never crippled. Selection ratified by David + reviewer;
   // default is the first two per engine family by orderInDistrict.
   freeTier        Boolean      @default(false)
+  /// ADDITIONAL question types this case serves beside its primary (David's door-extension
+  /// ruling, 2026-08-24 — R687: case-en-06 maps en-spag-cloze AND en-spag-spelling-spot). READ by
+  /// the orchestrator's itemPool — a mapping nothing reads is not a mapping (R601). The primary
+  /// `questionTypeId` stays the mastery/pacing unit; this widens only the ITEM POOL.
+  mappedQuestionTypeIds String[] @default([])
   // STORY BIBLE v1.2 §9 (phase 1, feature-flagged): the per-case story skin —
   // open/close lines + clue-skin labels. Law 1: wraps the case, never items.
   storyWrapper    Json?

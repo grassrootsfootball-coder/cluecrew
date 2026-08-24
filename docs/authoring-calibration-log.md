@@ -19398,3 +19398,29 @@ files, citing her 115th's landing; and the reviewed-content guard exercised live
 check:derived-writes` exited 0 at report time. **The guard is NAMED EXPLICITLY on the report**:
 "the editorial guard" resolves here to `reviewed-guard.ts` (R62) via check:derived-writes; if the
 desk meant a different instrument, the naming makes the mismatch visible rather than silent.
+
+## R687 — The door extends: case-en-06 maps two question types; the membership re-derives at 25
+
+**David's ruling on the desk's diff verdict.** The CZ-A2 cross-store diff closed clean — A, B, C
+identical on value, correctness and tag; D authoring-only: a known transport, no fork, nothing to
+reconcile. And the naming query closed: `reviewed-guard.ts` through `check:derived-writes` IS the
+instrument the desk meant by "the editorial guard". No mismatch.
+
+**The extension**: case-en-06 maps `en-spag-cloze` AND `en-spag-spelling-spot`; punct-spot stays
+with case-en-05 (serving title "The Mark Out of Place" — the row the desk's "Fix-It Shop" names;
+the DB string is the one reported, R178). **The mapping is a COLUMN the serve path READS, not a
+note**: `Case.mappedQuestionTypeIds` (migration `20260824193009`, additive; replay and invariants
+green), consumed by the orchestrator's `itemPool`, which widens the pool to the mapped set —
+because a mapping nothing reads is not a mapping (R601). **Stated limit, on the report's face**:
+mastery and pacing stay keyed to the primary type; the mapping widens only the item pool. Per-type
+mastery on a two-type case is a separate ruling if the desk wants it.
+
+**The membership re-derived and re-emitted**: `case-en-06-build-report-401db4ba8ba0ef2f.json`,
+file sha256 `401db4ba8ba0ef2fdb9c9627a0b0830ff1ac9141bbc9d5c1f05d883b1fd6633a`, superseding the
+first report (retained with its sidecar). **25 items to en-06** (16 cloze + 9 spelling-spot — the
+nine are NO LONGER HOMELESS, and the report says so on its face), 9 punct-spot with case-en-05.
+Parts one and three stand as first reported per the ruling; the walls were not re-run beyond the
+report's own emission-time assertions, which re-fired on the re-emit and held.
+
+**Part four still waits**: the go comes after Annie's sitting lands the face and rules the tag;
+the CZ-A2 option transport lands BEFORE its item goes LIVE, never with it.

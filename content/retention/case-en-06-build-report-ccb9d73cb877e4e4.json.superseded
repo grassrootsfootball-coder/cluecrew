@@ -1,0 +1,168 @@
+{
+ "kind": "case-en-06-build-report",
+ "what": "Parts one to three of the case-en-06 build: the row created with its face failing closed; the publication membership derived from the rows; the standing walls asserted from bytes and live runs. Part four — publication — executes only on the desk's go; nothing has been flipped LIVE.",
+ "partOne": {
+  "row": "case-en-06 — ENGLISH via en-spag-cloze, PAID (freeTier: false), orderInDistrict 27",
+  "face": "EMPTY, FAILS CLOSED: caseFaceServes (packages/core/src/case-face.ts) keeps the case invisible to every child; the serve path (orchestrator) filters on it; the face lands only through scripts/lib/case-face.ts — MAY_JUDGE name, return digest authority, child-facing gate, prior stamped, event recorded."
+ },
+ "partTwo": {
+  "mapToEn06": {
+   "questionType": "en-spag-cloze",
+   "count": 16,
+   "items": [
+    {
+     "id": "ENG-003-A-CZ-A1",
+     "status": "DRAFT"
+    },
+    {
+     "id": "ENG-003-A-CZ-A2",
+     "status": "DRAFT"
+    },
+    {
+     "id": "ENG-003-A-CZ-A3",
+     "status": "DRAFT"
+    },
+    {
+     "id": "ENG-003-A-CZ-A4",
+     "status": "DRAFT"
+    },
+    {
+     "id": "ENG-003-A-CZ-A5",
+     "status": "DRAFT"
+    },
+    {
+     "id": "ENG-003-A-CZ-A6",
+     "status": "DRAFT"
+    },
+    {
+     "id": "ENG-003-A-CZ-A7",
+     "status": "DRAFT"
+    },
+    {
+     "id": "ENG-003-A-CZ-A8",
+     "status": "DRAFT"
+    },
+    {
+     "id": "ENG-003-A-CZ-B1",
+     "status": "DRAFT"
+    },
+    {
+     "id": "ENG-003-A-CZ-B2",
+     "status": "DRAFT"
+    },
+    {
+     "id": "ENG-003-A-CZ-B3",
+     "status": "DRAFT"
+    },
+    {
+     "id": "ENG-003-A-CZ-B4",
+     "status": "DRAFT"
+    },
+    {
+     "id": "ENG-003-A-CZ-B5",
+     "status": "DRAFT"
+    },
+    {
+     "id": "ENG-003-A-CZ-B6",
+     "status": "DRAFT"
+    },
+    {
+     "id": "ENG-003-A-CZ-B7",
+     "status": "DRAFT"
+    },
+    {
+     "id": "ENG-003-A-CZ-B8",
+     "status": "DRAFT"
+    }
+   ]
+  },
+  "differentHomes": [
+   {
+    "questionType": "en-spag-punct-spot",
+    "count": 9,
+    "existingCase": "case-en-05",
+    "items": [
+     "ENG-003-A-PU-01",
+     "ENG-003-A-PU-02",
+     "ENG-003-A-PU-03",
+     "ENG-003-A-PU-04",
+     "ENG-003-A-PU-05",
+     "ENG-003-A-PU-06",
+     "ENG-003-A-PU-07",
+     "ENG-003-A-PU-08",
+     "ENG-003-A-PU-09"
+    ]
+   },
+   {
+    "questionType": "en-spag-spelling-spot",
+    "count": 9,
+    "existingCase": "NO CASE EXISTS — these items have no home until one is built or ruled",
+    "items": [
+     "ENG-003-A-SP-01",
+     "ENG-003-A-SP-02",
+     "ENG-003-A-SP-03",
+     "ENG-003-A-SP-04",
+     "ENG-003-A-SP-05",
+     "ENG-003-A-SP-06",
+     "ENG-003-A-SP-07",
+     "ENG-003-A-SP-08",
+     "ENG-003-A-SP-09"
+    ]
+   }
+  ],
+  "cza2": {
+   "id": "ENG-003-A-CZ-A2",
+   "status": "DRAFT",
+   "servingOptionCount": 3,
+   "servingOptions": [
+    {
+     "label": "A",
+     "value": "a",
+     "isCorrect": false,
+     "misconceptionId": "en-a-an-by-spelling"
+    },
+    {
+     "label": "B",
+     "value": "an",
+     "isCorrect": true,
+     "misconceptionId": null
+    },
+    {
+     "label": "C",
+     "value": "no word is needed",
+     "isCorrect": false,
+     "misconceptionId": "en-article-definiteness"
+    }
+   ],
+   "factOne": "HOLDS THREE OPTIONS: her fourth (landed authoring-side) needs transport through the standing path before this item can go LIVE.",
+   "factTwo": "THE FOURTH'S NULL TAG BLOCKS LIVE UNTIL ASSIGNED: the transported option must land with its misconception tag assigned, or the item stays unpublishable."
+  }
+ },
+ "partThree": {
+  "clozeRulingsOnServingSurface": {
+   "verdict": "STANDING — asserted from the render-path bytes at report time (this script REFUSES if either is absent)",
+   "noAddedQuotes": "the carrier block contains no quotation character",
+   "gapSelfNaming": "splitCarrierAtGaps + aria-hidden marker + fd-visually-hidden name present",
+   "citing": "the discharge diff, cloze-rulings-discharge-diff-1a38116305b91b68.json, sha256 1a38116305b91b688298058b5cdee400cee50905bf29515228210ea886e55a2b — verified three ways at the desk"
+  },
+  "passagesServable": {
+   "verdict": [
+    {
+     "pid": "cloze-eng003-a-eco-club",
+     "status": "SERVABLE"
+    },
+    {
+     "pid": "cloze-eng003-b-sports-day",
+     "status": "SERVABLE"
+    }
+   ],
+   "citing": "her 115th's landing (annie-115-for-code.md, sha256 365925a8… — the first front-door judgements; both passages KEEP, statuses moved through movePassageStatus with her authority)",
+   "source": "read from content/passages/*.json passageStatus.status at report time"
+  },
+  "editorialGuard": {
+   "verdict": "GREEN — pnpm check:derived-writes exited 0 at report time",
+   "source": "the reviewed-content guard (packages/db/prisma/reviewed-guard.ts, R62) exercised through pnpm check:derived-writes — the write-path property that no deriving writer can rewrite reviewed rows. NAMED EXPLICITLY (R41): if the desk meant a different instrument by 'the editorial guard', this line makes the mismatch visible."
+  }
+ },
+ "partFour": "AWAITING THE DESK'S GO. No item status has moved."
+}

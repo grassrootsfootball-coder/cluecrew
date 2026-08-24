@@ -25,6 +25,11 @@ async function run() {
   const existing = await prisma.case.findUnique({ where: { id: 'case-en-06' } });
   if (existing) {
     console.log('case-en-06 already exists — face state:', existing.title === '' ? 'EMPTY (fails closed)' : `LANDED: ${existing.title}`);
+    // THE DOOR EXTENSION (David's ruling, second emission — R687): en-06 maps spelling-spot too.
+    if (APPLY && !existing.mappedQuestionTypeIds.includes('en-spag-spelling-spot')) {
+      await prisma.case.update({ where: { id: 'case-en-06' }, data: { mappedQuestionTypeIds: ['en-spag-spelling-spot'] } });
+      console.log('  MAPPED  en-spag-spelling-spot onto case-en-06 (read by itemPool)');
+    }
   } else if (APPLY) {
     await prisma.case.create({
       data: {
@@ -52,8 +57,9 @@ async function run() {
   const byType = new Map<string, typeof items>();
   for (const i of items) byType.set(i.questionTypeId, [...(byType.get(i.questionTypeId) ?? []), i]);
 
-  const clozeItems = byType.get('en-spag-cloze') ?? [];
-  const otherHomes = [...byType.entries()].filter(([qt]) => qt !== 'en-spag-cloze');
+  const EN06_TYPES = ['en-spag-cloze', 'en-spag-spelling-spot'];
+  const en06Items = EN06_TYPES.flatMap((qt) => byType.get(qt) ?? []);
+  const otherHomes = [...byType.entries()].filter(([qt]) => !EN06_TYPES.includes(qt));
   const casesByType = new Map(
     (await prisma.case.findMany({ select: { id: true, questionTypeId: true } })).map((c) => [c.questionTypeId, c.id]),
   );
@@ -63,9 +69,11 @@ async function run() {
 
   const membership = {
     mapToEn06: {
-      questionType: 'en-spag-cloze',
-      count: clozeItems.length,
-      items: clozeItems.map((i) => ({ id: i.id, status: i.status })),
+      questionTypes: EN06_TYPES,
+      mapping: 'en-spag-cloze is the PRIMARY (mastery/pacing unit); en-spag-spelling-spot rides the mappedQuestionTypeIds column, read by itemPool (R687). THE NINE SPELLING-SPOT ITEMS ARE NO LONGER HOMELESS — the door extension homes them here.',
+      statedLimit: 'mastery and pacing stay keyed to the primary type; the mapping widens only the item pool. If the desk wants per-type mastery on a two-type case, that is a separate ruling.',
+      count: en06Items.length,
+      items: en06Items.map((i) => ({ id: i.id, questionType: i.questionTypeId, status: i.status })),
     },
     differentHomes: otherHomes.map(([qt, rows]) => ({
       questionType: qt,

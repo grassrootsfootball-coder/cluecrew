@@ -189,6 +189,14 @@ async function drainAndLog(childId: string, state: PersistedState): Promise<void
  * filter is the second layer, core is the load-bearing one.
  */
 async function itemPool(questionTypeId: string) {
+  /**
+   * THE CASE MAPPING IS READ HERE (David's door-extension ruling, 2026-08-24 — R687). A case may
+   * serve additional question types beside its primary (case-en-06: en-spag-cloze AND
+   * en-spag-spelling-spot). The pool widens to the mapped set; mastery and pacing stay keyed to
+   * the primary type — a stated limit on the build report, not a silent one.
+   */
+  const mapping = await prisma.case.findFirst({ where: { questionTypeId }, select: { mappedQuestionTypeIds: true } });
+  const typeIds = [questionTypeId, ...(mapping?.mappedQuestionTypeIds ?? [])];
   // ORDER IS FILE POSITION (David, 2026-08-16). Taken from Cowork's manifest into
   // `clusterPosition`, served in that order and never shuffled; a partial serve preserves relative
   // order because the sort is stable and applied before any take.
@@ -197,13 +205,13 @@ async function itemPool(questionTypeId: string) {
   // records the review and has not changed; SERVABLE is what changes. Filtered in code, not in
   // the where-clause, so the hold list stays one importable fact both doors and the census share.
   const live = (await prisma.item.findMany({
-    where: { questionTypeId, status: 'LIVE', pool: 'PRACTICE' },
+    where: { questionTypeId: { in: typeIds }, status: 'LIVE', pool: 'PRACTICE' },
     include: { options: { orderBy: { id: 'asc' } } },
     orderBy: order,
   })).filter((item) => !isHeldFromServing(item.id));
   if (live.length > 0 || process.env.APP_ENV === 'production') return live;
   return (await prisma.item.findMany({
-    where: { questionTypeId, pool: 'PRACTICE' },
+    where: { questionTypeId: { in: typeIds }, pool: 'PRACTICE' },
     include: { options: { orderBy: { id: 'asc' } } },
     orderBy: order,
   })).filter((item) => !isHeldFromServing(item.id));
