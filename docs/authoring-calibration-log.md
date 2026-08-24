@@ -19769,3 +19769,32 @@ before the landing: ZERO refusals** — *"a prediction the gate can now check me
 the landing artefact reports the count either way. Note: the five demoted WIW rows are among the
 twenty-five's population context; their pairs land the same way and their return to LIVE remains
 the review pipeline's, not the transport's.
+
+## R699 — The door counts whole items only; her census reproduces exactly; the template loses its shout
+
+**Her 142nd verified (`annie-142-for-code.md`, sha256 `e5b87da0…469cc4`). The build change,
+today**: `doorOpensOnThisSection` counts WHOLE items only — **phase-one content verification does
+not light a door.** Wholeness is DERIVED, never flagged (`scripts/lib/item-wholeness.ts`, the
+servableCaseIds shape): a row is whole when every tag points at an ATTESTED entry (exists here,
+ACTIVE, reviewer-stamped), every tagged option's EXECUTION exists, and the hint-and-walk layer is
+PRESENT — so a door lights when the last hollow row fills, and not before. The emitter's trigger
+field now derives from it. Her ground, kept: *"a tag pointing at an unattested entry is a wire
+into a dark room; the entry is what a child meets on a miss"* — a door on signatures over hollow
+items serves a child who misses and meets nothing.
+
+**THE CENSUS REPRODUCES FROM THESE ROWS EXACTLY** (`vr-wholeness-census-74c043aaca2578e7.json`,
+file sha256 `74c043aaca2578e779fa7373a3e1efd4cdce826e1cea9ac6337897d65b06d205`): **0 executions
+in 288, 250 of 288 empty hint layers, 22 distinct tags, exactly 1 attested (vr03-same-topic)** —
+agreement on every figure, two stores, two independent reads, one census. Tag resolution per tag
+on the artefact (which exist here at all, which are attested); per-case wholeness beside it; no
+door lights today — zero of 288 rows are whole, executions the binding absence everywhere.
+
+**The model of full crossed** (`model-of-full-for-annie-0f45527d95ab8f66.json`, sha256
+`0f45527d…2512cb`): the 38 non-empty hint-and-walk rows, verbatim with per-row hashes, as she
+asked for phase two's design ground.
+
+**Her template amendment landed ONCE AT THE TEMPLATE**: the generator string
+(`packages/db/prisma/generate-content.ts`) loses its shouted TWO, and all 25 derived vr-02 rows —
+**her "every vr-02 row" prediction confirmed: 25 of 25 carried it** — amended with the replaced
+prompt byte-asserted per row, one event on the template id. Emphasis-by-capitals, the house
+amendment since the eighteenth return, now unable to regenerate.

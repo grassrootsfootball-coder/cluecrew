@@ -655,7 +655,7 @@ function oddOnesOut(): GenItem[] {
       // which lands with the vr-02 rebuild; until then the words are the honest
       // signal, and it already beats the loop index.
       tier: vocabTierOfSet(words),
-      stem: { prompt: 'Three of these words go together. Which TWO are the odd ones out?', words },
+      stem: { prompt: 'Three of these words go together. Which two are the odd ones out?', words },
       options: [
         { content: { pair: [odd[0], odd[1]] }, isCorrect: true },
         { content: { pair: [odd[0], group[1]] }, isCorrect: false, m: 0 },

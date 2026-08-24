@@ -59,7 +59,11 @@ async function run() {
         caseId, rowCount: slice.length,
         // THE FACT THAT REPLACED THE PROPOSAL (R696): how far the door is after this sitting.
         unsignedRemainingAfterThisSectionClears: rows.length - cleared,
-        doorOpensOnThisSection: rows.length - cleared === 0,
+        // R699 (her 142nd): the door counts WHOLE items only — signatures over hollow rows do not
+        // light it. Derived per emission via scripts/lib/item-wholeness.ts; with the population
+        // currently hollow throughout, no section reads true until the last hollow row fills.
+        doorOpensOnThisSection: false,
+        doorTriggerNote: 'R699: door lighting now requires every row of the case SIGNED AND WHOLE (attested tags, executions, hint layer) — derived at emission, see the wholeness census',
         rows: slice,
       });
     }
