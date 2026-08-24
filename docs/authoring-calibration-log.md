@@ -19861,3 +19861,36 @@ VR drafts; 25 sit inside the 288 — hers is the 25.
 **The desk scan rides to her with the entries, unamended from this side**: eleven of the
 twenty-two entry hints carry shouts or dashes. Her reading, her rulings — the serving wordings
 are what she must see (the R667 discipline, again).
+
+## R702 — The 145th lands whole; the seed rows retire; the population recounts at 275
+
+**Her 145th verified (`73ef2ee3…9f799a`), desk-verified whole, landed**
+(`scripts/land-annie-145.ts` + `scripts/complete-145-landing.ts`; landing artefact
+`annie-145-landing-27ee0917faf0edd2.json`, file sha256
+`27ee0917faf0edd28325875f5230de35f204b893fa19e67036dd70d360b1a91d`):
+- **Thirteen entry amendments** through the standing path — the desk's eleven mark-repairs plus
+  her two judgement classes: `vr05-almost-letters` loses its stimulus-marking *underline* (the
+  rough-paper rule's first firing since its minting, on a row that would have served it), and
+  `vr20-sound-alike` swaps the visual-act *picture the word* for *spell the finished word letter
+  by letter* — the silent-letter precedent transferring whole.
+- **The mint `vr02-real-link-wrong-rule`** — the CZ-B7 retag-not-widen rule at entry scale:
+  *"widening a definition to cover carriers that should not be there fixes the symptom and keeps
+  the fault."* The mint honours a true link before blocking it.
+- **The five tier-three retags to the mint** — with the CITATION RESOLVED, not absorbed: her
+  block cites the scan at f68c3e1f, which carries no row ids; the five were named in the entries
+  artefact (b2b43a26) and re-derived from the rows (exactly five, asserted).
+- **The WIW-12 trim** — the cheaper branch of the 143rd's advance ruling fired as ruled.
+- **Eight approvals by reference.** All twenty-two entries are now ATTESTED; the mint is a
+  twenty-third. Executions remain wholeness's binding absence.
+
+**THE SEED ROWS LEFT THE POPULATION — as RETIRED, with the substitution stated**: the instruction
+said REJECTED, which is the Misconception enum; the Item enum runs DRAFT/REVIEWED/LIVE/RETIRED
+and refused it mid-apply (the partial first apply verified act-by-act from the rows afterwards —
+no inconsistency). RETIRED does the ruled work: out of every review and serving population, the
+author's own marker verbatim in each of thirteen events. **The confirmation walk is CLEAN under
+marker PHRASES** — the first walk matched bare "seed" and flagged a row whose STEM pairs the word
+seed with plant: a marker is authoring metadata, not a content word, and the walk's patterns now
+say so.
+
+**The population recounts, derived and asserted: vr-08 at 25, the total at 275, fifty-five
+sittings at six** (eleven cases, five sittings each — was fifty-seven).
