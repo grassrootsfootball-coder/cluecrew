@@ -19241,3 +19241,41 @@ kept: **"a placeholder in a hash field is a note wearing a citation, and mine ge
 **Running count, derived: 47 of 108 ACTIVE maths rows governed** (four sittings landed; the merge
 holds at 108). Her channel footnote also recorded: the 129th's lost first crossing proved the
 loss-unit sentence before it could be registered — per sitting stays, now with evidence attached.
+
+## R682 — The hybrid ratified; tranche five lands on it; the instance line's third calibration point
+
+**HER HYBRID RATIFICATION, verbatim (her 132nd, `annie-132-for-code.md`, sha256
+`16e8adc4af51f7320818e2871f1c8a73469b4017644e8409c9385af17f67613a`): "an amendment whose replaced
+string is quoted may carry its `replacedSha256` as a reference, under the same fence as the
+reference shape."** Her keyboard reasoning, kept whole: *"the reason is semantic, not convenient:
+an amendment's replaced field is definitionally the row's bytes, per replaced-must-match, so a
+reference resolving to the row's hash names exactly the thing the field exists to name, while a
+literal I paste adds one transcription of a sixty-four-character string by the only keyboard in
+this project that has drifted."* The quoted string stays mandatory (the collision assert refuses
+on bytes), and **hash fields stay literal wherever no verified artefact exists to reference, her
+own file digests included.** Her tally: *"third accidental form, third same-day conversion:
+killed, ratified, ratified, and none of the three decided by silence."*
+
+**Tranche five landed** (`scripts/land-annie-132-tranche-five.ts`, dry then applied; landing
+artefact `annie-132-tranche-five-landing-3c7ea55f754705c2.json`, file sha256
+`3c7ea55f754705c2d15b37aca1771e21136201b87541c340a2af956593f0bc3a`; map
+`tranche-five-expansion-for-code.json` at `def22c6d…fbd5f17`, bytes only): four amendments in the
+hybrid shape asserted three ways — her strings, the map's literals, the live rows — and eight
+approvals by reference, **maths-49's truth-check annotation carried onto its row and into
+provenance** (*symmetry claim checked true among triangles*), her annotation and the map's
+asserted equal before landing. The amendments: two more instruction-bangs quieten (five of the
+habit now, *"one amendment each, zero judgement spent"*), maths-40's flagged dash falls as
+predicted, and maths-46 loses its scolding opener the way maths-10 did — *"the mnemonic it
+introduces needs no introduction."*
+
+**THE INSTANCE LINE'S THIRD CALIBRATION POINT, from maths-40**: its *area of 12 squares* STAYS —
+*"the exercise leaks no perimeter, the child still counts, and a discovery that happens to share
+the item's area is pedagogy aligned, not an answer leaked."* The line now has three points:
+maths-05 fell (instance could be the item's own numbers), maths-16 stood (analogy dressed in its
+own scenario), maths-40 stands (a shared number the child derives is not a leak).
+
+**Parser note recorded**: her reference syntax has settled leaner — `reference: <digest-prefix>
+id <short-id>`, no parentheses — and annotations ride mid-segment before the pipe. The landing
+parser asserts her annotation and the map's agree per row.
+
+**Running count, derived: 59 of 108 ACTIVE maths rows governed** after five sittings.
