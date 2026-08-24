@@ -1,0 +1,1794 @@
+{
+ "kind": "maths-hint-membership",
+ "what": "Every MATHS library row plus every serving maths item-level hint wording, verbatim with per-row sha256, reach as membership, reachable-first. The tranche machinery reads this; the desk cuts tranche one at reading size.",
+ "population": {
+  "libraryRows": 111,
+  "libraryRowsServingToday": 0,
+  "itemHintRowsServing": 0,
+  "mathsItemsRead": 0,
+  "unit": "rows (library) and items (item hints); reach counted in LIVE items and their cases"
+ },
+ "method": "live database read; serving decided by the family's own functions (chooseHint / the ACTIVE-status filter), never a re-derivation; over-cap marking by checkChildFacingText itself",
+ "standingCapNote": "THE SIXTEEN-WORD SENTENCE CAP GATES WRITES, NEVER SERVING (her seventh). A row marked over-cap here serves exactly as it stands; the mark is review material for the next authored change, not a serving defect. Stated here so nobody re-fights it at reading time.",
+ "ordering": "reachable-first: descending LIVE-item reach, then id. Item-hint rows follow the library rows.",
+ "overCapRowCount": 0,
+ "libraryRows": [
+  {
+   "kind": "library",
+   "id": "maths-01-zero-placeholder-missing",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Say the number out loud. Have you left an empty column where a zero needs to stand guard?",
+   "wordingSha256": "1deba9c7b431ae00073ca6d9e1a4ceb0f8890ca63fb8cfbc80372056f1de988d",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-02-zero-placeholder-added-incorrectly",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Check your columns. Hundreds, tens, and ones should only take up three spaces, not four.",
+   "wordingSha256": "6e6e3e5458180b6b440baa0919b6a125efe38dd2f690256e30d3ca039e63aa66",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-03-decimal-alignment",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Line up the decimal points in a perfectly straight line before you start adding.",
+   "wordingSha256": "605a72947c1746b8c9a3b3328b83c63a0363f4edc8e24e05a8339cdff2835613",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-04-longer-decimals-are-larger",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Look at the tenths column first. Which number has more tenths?",
+   "wordingSha256": "2b66821b6c8c4c3708ba2cd900e50a4533b69ab92bd196582ab254affbdee483",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-05-shorter-decimals-are-larger",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Try filling in the empty spaces with a zero. Which is bigger, 0.40 or 0.45?",
+   "wordingSha256": "61e5d51b41f27b6a7eedd18ef076e1b3bc3594590557325f1410a988324f308b",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-06-multiplying-by-10-adds-a-zero",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "When we multiply by 10, the digits move one place to the left. A zero only goes on the end if there are empty spaces before the decimal point!",
+   "wordingSha256": "ac6089275fb0ec089803d2ee755e2495cbb3cf83d04164a1003ee0484f064ce8",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-07-decimals-as-two-separate-whole-numbers",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "The decimal point separates wholes from parts. Compare the parts column by column, starting with the tenths.",
+   "wordingSha256": "afabced507584640b8cc48eaf9e18c2d7425b7be4da2dec9f8625f4c2bb78b4c",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-08-negative-number-inversion",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Picture a thermometer. Which number is colder and further down the scale?",
+   "wordingSha256": "ad453b5c792a39f5598852fdbcce5f8cc1870462270ccc92d3e527b7bd60cc85",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-09-rounding-misdirection",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Look at the next digit door. If it is 5 or more, you need to round up!",
+   "wordingSha256": "5baba8710730d674326b666ae712f6ccdb3bc0b5c80065928dc4c143d9331f58",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-10-rounding-exact-halves",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Remember the rule: if it sits exactly halfway, we always round up to the next number.",
+   "wordingSha256": "ea9dbc947bfa33a178ee76764b5e217d6739649c09fe6c55687254adf014fa50",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-100-steps-out-of-order",
+   "status": "ACTIVE",
+   "approvedBy": null,
+   "wording": "Say the steps out loud in order. Then do them one at a time.",
+   "wordingSha256": "31c2ac783d6b1a38346398a185b7fc72e152cd20dcd803080e12538babb78017",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-101-unlike-denominators-cannot-be-compared",
+   "status": "ACTIVE",
+   "approvedBy": null,
+   "wording": "Any two fractions can be compared. Draw each one and see which covers more.",
+   "wordingSha256": "8336f7a4701edd77642067d90909b85bd6dc5e0e0d6b062145e14c6fa843b1c3",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-102-scaled-by-the-difference",
+   "status": "ACTIVE",
+   "approvedBy": null,
+   "wording": "Multiply by how many you need now. Not by how many more.",
+   "wordingSha256": "85787ac331d778c68a3a06ae2a4299b4c1d5542466ab2bf30389d95ef2486aa6",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-103-scaled-by-the-original-count",
+   "status": "ACTIVE",
+   "approvedBy": null,
+   "wording": "You found one share. Now count how many you need.",
+   "wordingSha256": "cf470b1ca6de1ef10a783b1ddb73299d90962b170b6f821875509bb1d71ce7eb",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-104-gave-a-different-average",
+   "status": "ACTIVE",
+   "approvedBy": null,
+   "wording": "Mean means add them up, then share. Check which one is asked.",
+   "wordingSha256": "d25a22ec9f285c33a66af6b5744960d368c79f7171ae823384401bace1ec1d8a",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-105-divided-by-the-other-quantity",
+   "status": "ACTIVE",
+   "approvedBy": null,
+   "wording": "Match each price to its own pack. Keep the pairs together.",
+   "wordingSha256": "8a4df9b97ca61c5b81339f82a60821cb15d8170220caae963eb8824694b85dba",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-106-always-rounds-down",
+   "status": "ACTIVE",
+   "approvedBy": null,
+   "wording": "Look at the next digit along. It tells you which way to go.",
+   "wordingSha256": "d31f2a9c56d11e33ad3cd59617d0d439311a89cbfe01931f15a9877c1237f42b",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-107-miscounted-across-zero",
+   "status": "ACTIVE",
+   "approvedBy": null,
+   "wording": "Zero is a place you pass, not a step. Count the jumps.",
+   "wordingSha256": "ac9a22a8ae28a5f52e7cb9440be33c3bde8ffd9463fff3c97f2ad0cda5fad5cb",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-108-multiplied-instead-of-dividing-by-a-fraction",
+   "status": "ACTIVE",
+   "approvedBy": null,
+   "wording": "Ask how many fit inside. That is a sharing question, not a times.",
+   "wordingSha256": "c455a0bbe4a2c6dec89722bfecd089470132da51a628074376ac56e0f61d482d",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-109-ran-the-machine-forwards",
+   "status": "ACTIVE",
+   "approvedBy": null,
+   "wording": "Going backwards undoes each step. Take away where it added.",
+   "wordingSha256": "e0b25c81aaa5ac5a90521e3c67fa2f2f66b4179411d9c933ff2e799838a4214b",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-11-commutative-subtraction",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Read the sum from top to bottom. If the top number is smaller, you need to exchange!",
+   "wordingSha256": "804f052d822e320e37a9fc20613c96b47d670de8609e17c895b546467c563da4",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-110-missing-value-equals-the-average",
+   "status": "ACTIVE",
+   "approvedBy": null,
+   "wording": "The mean is what they share out to. One number can sit above or below.",
+   "wordingSha256": "d3b690a3bcd8992c833753458372420ae0e6cd401b0f8f48884abad681eb8e71",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-12-forgetting-to-exchange",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "If the top column does not have enough, you need to exchange from the next one.",
+   "wordingSha256": "2c73e2461ea010027129d885b8cf422d487bba73b0c1b3d0295a94ffd4539fa9",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-13-adding-the-exchange-twice",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Cross out your carried number once you add it. This stops you from counting it again.",
+   "wordingSha256": "d16101c90f8a51b0aa87a41755745512ab6aba6c30f2bc1dd1350511a7efee20",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-14-the-sign-as-the-answer-is",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "The equals sign means \"is exactly the same as\". Both sides of the sign must balance like a set of scales.",
+   "wordingSha256": "9f77375294bfd05d83f5e05c9a131cf71f85087d7549e4e5a8014baee3bb1e63",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-15-multiplication-always-makes-it-bigger",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Multiplying means finding \"groups of\" a number. What happens if you find half a group of something?",
+   "wordingSha256": "fba7bbc1a44da158c7368295e6264009ad26a356e08426ead94ea98db7c8efa2",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-16-reversing-division",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Order matters in division! Are you sharing 12 sweets between 3 people, or 3 sweets between 12 people?",
+   "wordingSha256": "4247d93ccacf6a535902ba01fff2bd023146938fb5c9b38d675ae9b1ae56e21c",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-17-decimal-remainders",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "A remainder is what is left over, but a decimal is a specific fraction. Try writing your remainder as a fraction instead.",
+   "wordingSha256": "099ca6c8dea29eb83e9f2e78aee926d40f3b4281778ad05948ce3806a5145635",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-18-missing-long-multiplication-placeholder",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "You are multiplying by a ten, not a one! What needs to go in the ones column to show this?",
+   "wordingSha256": "7a7deaf3d0175978978ebcf7080429c45f71a75adb6f5fac8b74c3f89907bce7",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-19-context-blind-division",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Look at what the question is asking. If there is a remainder, where will those extra people sit? You might need to round up.",
+   "wordingSha256": "e0ea03b2df6fe94455207163b0b96b12e3e1a1bd2b48260827a69bffce8dca71",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-20-factors-vs-multiples",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Factors fit into the number. Multiples are the times tables that multiply up and away!",
+   "wordingSha256": "3d7cb90b50cc1495e43490335f0bcd218c8f950adf846b4ffe052b226b8c9d23",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-21-larger-denominator-means-larger-fraction",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "The bottom number tells you how many slices the cake is cut into. If you cut it into more slices, what happens to the size of each slice?",
+   "wordingSha256": "f4b087e21d5e5a832d3fa5c29f438d932ec524b8fe4d0c33d4fbbb35ef9d1fb1",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-22-adding-numerators-and-denominators",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "You can only add fractions when the bottom numbers are exactly the same. Find a common denominator first!",
+   "wordingSha256": "6e34fae8e82359c15c8ebebabf57d1147e5f041ee2357bcc227c4f1f1ecd03df",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-23-additive-equivalent-fractions",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Whatever you multiply the top by, you need to multiply the bottom by too.",
+   "wordingSha256": "75f0aa38cac48d005a3c22341b708e24c842f1af315b098ac0157373ea92b4b4",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-24-inverted-fraction-of-an-amount",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Check which number is on top. Turning it over changes the fraction.",
+   "wordingSha256": "6d002ddf702a0d66a52644999d8c4aab8cc817c44ca6d729a68591c042ad22f4",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-25-confusing-thirds-and-tenths",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "0.3 means three-tenths (3/10). Does one-third equal three-tenths?",
+   "wordingSha256": "fa02d9c362dbe7689aec290036d127064dc1544dd4688e0bde8390daa67302b7",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-26-percentage-symbol-as-a-unit",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Percent means \"out of 100\". To turn a decimal into a percentage, you need to multiply it by 100.",
+   "wordingSha256": "f9c3f3f3272670ba4b35a3402ca5d9a17a26587add40d0be137bc58dbe4a2077",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-27-improper-fractions-are-wrong",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Top-heavy fractions are perfectly fine for working out the maths. You only need to turn them back at the very end.",
+   "wordingSha256": "d15ab821f55ecf238fad78373c70143d26b0d747d638d9aaaef29228e239304e",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-28-fractions-as-two-separate-numbers",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "A fraction is a single number. The line in the middle just means \"divide\".",
+   "wordingSha256": "91d9f9a85e59aa77d51279737293f24554c7c0d314419adb6ad9ada653b818a1",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-29-comparing-without-common-denominators",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "You cannot compare them fairly until they are speaking the same language. Make the bottom numbers match first.",
+   "wordingSha256": "8f0779f091a2bbbf52fb0cfd7cf145d048d46833d9a06b71d4c8f2e748a5d93e",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-30-fractions-of-different-wholes",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Fractions show proportions, not exact sizes. A quarter of a small pizza differs from a massive one!",
+   "wordingSha256": "fb17a1a49810b8e91e99460f917f356cec43ec69fecbdeb47576c2753be98bc9",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-31-dropping-the-zero-in-money",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Money always needs two decimal places to show the pennies. Add a placeholder zero!",
+   "wordingSha256": "d088e82fe2ec9a28b88ab957bfe865bb8e828cef9e16a1d768f58bb9640dc892",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-32-base-100-time",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "There are only 60 minutes in an hour. Once you hit 60, you need to roll over into the next hour.",
+   "wordingSha256": "0daac798c5bfde729b8a43a96c24366e82df88737a3e6917d3188a756c923c8d",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-33-12-24-hour-confusion",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "In the 24-hour clock, the day starts at exactly 00:00 (midnight).",
+   "wordingSha256": "b87b1c9876592669e6b3d5d4b1a6ff84fd54e07c13bb827dbf394d365ad2fbab",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-34-starting-measurement-at-1",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Line up the edge of your object with the zero line. Do not start at one.",
+   "wordingSha256": "27b221a2f58b3b4f1e130469ff3b0b40e8c679665722c34768d8502b6a52a884",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-35-assuming-scale-ticks-are-1",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Look at the numbers provided. How much space is between them, and how many jumps are there? Divide the space by the jumps!",
+   "wordingSha256": "1e4f313a4d7f9c388a2a8fb6000fe57602da1b8beed26ae93782b0e80a5381f8",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-36-multiplying-to-convert-to-a-larger-unit",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "A metre is much larger than a centimetre, so you will need fewer of them. If you are going to a larger unit, you need to divide.",
+   "wordingSha256": "adf2cad710bcaca0c5267cfbaa19e70831f9111cd330d112819d510a651729af",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-37-metric-prefix-confusion",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "\"Kilo\" always means one thousand. There are 1,000 grams in a kilogram.",
+   "wordingSha256": "40504c0caaeddb345836ea5980a5aa7c747c51fb93eb9c11be4d7c50e9507371",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-38-perimeter-vs-area-adding",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Perimeter is the fence around the outside (add the sides). Area is the grass inside (multiply the length by the width).",
+   "wordingSha256": "5bf57e5a0e4d06d840286c6663c8b5c009e6a4a4fc13a868134327f0079b30b0",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-39-perimeter-vs-area-multiplying",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "To find the perimeter, imagine walking around the very edge. Add up the whole journey!",
+   "wordingSha256": "1002d19eac575ab7fe0133087351343196f969cdb8602fc7c0f55e701c7e08da",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-40-area-dictates-perimeter",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Try drawing two different shapes with an area of 12 squares. Now count the outside edges of both — are they the same?",
+   "wordingSha256": "71aa60cf8fbeb88a2a9230b027197a23cfe21b345e6c9a6e695ddd38f07efb96",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-41-orientation-changes-shape",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Turn your paper around. A shape keeps its true name no matter which way it is pointing.",
+   "wordingSha256": "28b8a41823f42b5bfc233d013cf41a1857b72c177663071fe9cd80a20f19eeca",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-42-square-rectangle-exclusivity",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "A rectangle has four right angles and opposite equal sides. Does a square have those? Yes! A square is just a very special rectangle.",
+   "wordingSha256": "92ba963c90f49775a2306c217d21d111a9e4db747fbe9e82b07099d059601f18",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-43-line-length-dictates-angle",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "An angle measures the turn between two lines. It does not measure how long they are.",
+   "wordingSha256": "ef884f83c59683b1ed5b66a467607c8f89b9c32f09f6ab95f7ab00bab519b5b6",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-44-reading-the-wrong-protractor-scale",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Look at the angle first. Is it smaller or larger than a perfect right angle (90°)? Use that to choose the right number!",
+   "wordingSha256": "4eb28551d6fca2e5603e4aa9ab3eb30934e20cf640a282ffae87d50e6512339c",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-45-diagonals-as-symmetry",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "If you folded a rectangle along its diagonal line, would the corners match up perfectly?",
+   "wordingSha256": "041895d5f32da5d3b18922f2ac6b80ada9576b0fc1c1f4046ba2899c196a563b",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-46-reversed-coordinates",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Remember the rule. Go along the corridor (x) before you go up the stairs (y).",
+   "wordingSha256": "31dc47d805fb1c61872fa84bc4294d587999cb1c8fb423f811d7e38837627032",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-47-translation-by-gap",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Pick one corner on the first shape. Count the squares to that same corner on the new shape.",
+   "wordingSha256": "702af3c9203ebbccde52c0b8933577af9a6cd02144adc258076ee4ec54efb493",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-48-reflection-as-sliding",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "A mirror flips things backwards. The closest point to the mirror stays closest in the reflection.",
+   "wordingSha256": "b6a5d579fc4f84372afea0e8221a54aebb1910c1fba1aea76ca8613ac9aabc0e",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-49-universal-symmetry",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Only isosceles and equilateral triangles have lines of symmetry. A scalene triangle has none at all!",
+   "wordingSha256": "23fd474059df4259ae6d369266a019b285ed3d830ef029a5c68a5eef40234295",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-50-faces-vs-edges",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "A face is the flat part you can put a sticker on. An edge is the sharp part you could run your finger along.",
+   "wordingSha256": "70b318ef311665156c923bfa6fc508d9c35f545a3bd30ac3af084d009ff14718",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-51-additive-scaling",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Recipes scale up by multiplication. If you double the eggs, you need to double the cakes too!",
+   "wordingSha256": "7e5e186203e6a781bae14f698012ad2e1e4238526f594e3c2ab587496bef303b",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-52-ratio-to-fraction-confusion",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "A fraction is part of the whole. First, add the ratio parts to find the total.",
+   "wordingSha256": "ecbed00089be9f85e48a815deba7cea6a517a2d539d4ba7195d2c91e46230fe9",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-53-ignoring-the-pictogram-key",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Always check the key before you start counting! Sometimes one picture stands for 2, 5, or even 10 things.",
+   "wordingSha256": "b0610894fc12248ecb900e79159fe1ffb36d6b1e9d3835bd3e0e2f19d2a49010",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-54-reading-the-gap",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Follow the flat top of the bar straight across to the axis to read the number.",
+   "wordingSha256": "1c431e4285f5ef32a7e8f149ca90c01d815f363f2473c7f7ed8a7a23641756a4",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-55-ignoring-line-graph-scale-divisions",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Do not just guess where the line sits. Work out exactly what one little square is worth on the axis first.",
+   "wordingSha256": "6eea5e37aa107fe7051e9be859a42c263f79cb6723221d7d8ee695663a6852ad",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-56-incomplete-mean",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "The mean shares things equally. Once you have the total, divide by how many items there are.",
+   "wordingSha256": "e9afc4b931304f523d16d338824815236a198eb87cb3b630eeeeab4c3ce0327c",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-57-mean-vs-median",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "The middle number is the median. To find the mean, you need to add them all up and divide!",
+   "wordingSha256": "024db19bfd5d4babff56102e0d8d7584f5c5edfb752b043b3e59dab2f298d613",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-58-restrictive-mean",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "The mean is an average. Your final answer can be a decimal or a brand new number.",
+   "wordingSha256": "9dfc3e9631b3106544c54d5c32e67061b5b3618ef988c7a4e1ac35e30571f6c2",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-59-fixed-pie-chart-wedges",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "A pie chart only shows fractions of a total. You need to know the grand total before you can figure out what the slices mean!",
+   "wordingSha256": "0afece9ad2747c75d2a9904a4d33b9e5340bbd7cbd67097c43fbfb84fdc1196a",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-60-ignoring-the-outside-of-a-venn-diagram",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Every piece of data needs a home! If it does not fit in a circle, write it outside.",
+   "wordingSha256": "0f6ec28a2bb348e978f6e4e08558ab485afb06f80e107cd426536de4be0a2a20",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-61-reading-the-wrong-place-value-column",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Check the columns carefully. Ones, tens, hundreds, thousands. Which column does that digit actually sit in?",
+   "wordingSha256": "379d5dea69e3c0891f1d066af8614d8d3b1759046dbf7640a89ddd3d2f38d5a4",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-62-reading-a-digit-at-face-value",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Look at where the digit sits. Its position changes its actual value!",
+   "wordingSha256": "13cceceb30c120ca33e1d539e2d83d95a622570a60b29b394842e84d6a492aa5",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-63-misaligned-addition-carry",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Only carry into the very next column on the left. Don't skip a space!",
+   "wordingSha256": "fb066433e6a58a372f22e0611ab4620b4a2db4910389eccf8e1515c9c9cedd1e",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-64-leading-zero-ordering-slip",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "A whole number cannot start with a zero. Pick the next smallest digit to lead.",
+   "wordingSha256": "8ad5f7717af4f44c08f96406f91f5a5e0d838a0cdfa4824a7952063a421ffa63",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-65-incorrect-rounding-place",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Check which place the question asks for. Then look at the digit after it.",
+   "wordingSha256": "867cb614f8aa076827fcb5dfe37bf599495423621650795d9df6d1ff0b76c138",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-66-negative-number-miscount",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Count down past zero. The numbers keep going on the other side.",
+   "wordingSha256": "2061200c09edc1a127718ce9fcc976d5c2b6e72543645c69dab128112d03616b",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-67-dropped-internal-placeholder",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Does a column have nothing in it? Use a zero to hold that empty space!",
+   "wordingSha256": "766485cbb92ce9f3bf85755dd53fb5bd5be6e02fa72a0307338bab577625d47e",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-68-wrong-power-of-ten-scaling",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "One hundred has two zeros. Make sure you divide by 100, not a different number!",
+   "wordingSha256": "35fd4e27902a40ba556d1ef591aaf72b66f47265bdcbe3369a586cce036761b8",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-69-dropped-calculation-carry",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Write your carried numbers clearly, and always remember to add them to the next column.",
+   "wordingSha256": "7323d160abbb7dd023820a0c29c752b5d3de92d589cebe78b445925a850ab9d4",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-70-two-digit-column-totals",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Only one digit can go in each column! Carry the extra over to the left.",
+   "wordingSha256": "12c19a2a29b878a384c9c1af31fe3ab7f4da7bda9ad92e20510021807c250e6c",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-71-forgetting-part-of-a-multi-step-problem",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "List every number the question gives you. Check you have used each one.",
+   "wordingSha256": "f728e2f5c51564d3ad88c5a0fe9cb4d95c2c3cfab252a9cdf76fd5eef8ab4eb2",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-72-wrong-operation-chosen",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Look at the words in the question. Are things getting bigger, smaller, or being shared?",
+   "wordingSha256": "7d337bdd70e83f5bd69bda2b07dd76ac56fca069a56bde9950fbdc293652942b",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-73-digit-by-digit-division",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Leftovers matter! If a column doesn't divide perfectly, carry the remainder to the next digit.",
+   "wordingSha256": "009fccc44061e135ba4a2939b102f4c73529f63a64aa60daa8e612c45faea5ed",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-74-comparing-fractions-incorrectly",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "The top numbers match, so look at the bottoms. Smaller bottoms make bigger pieces.",
+   "wordingSha256": "b283e4482d00660efa2a51f1a9703f7aa1d5fdf9c4d1885f2fca5be322ea59d5",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-75-incomplete-fraction-of-an-amount",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "A fraction is two numbers working together. Use both.",
+   "wordingSha256": "970eb000d090de7940d1bdb897911eb1dd50365f07468a9313a00ece74a3b3c2",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-76-using-a-fraction-upside-down",
+   "status": "REJECTED",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Divide by the bottom number to share. Multiply by the top number for your total.",
+   "wordingSha256": "6d825a0c21e4387bcf57cf734364772a9b2981f11be7ed23cb8874efd71cbbce",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-77-treating-a-percentage-as-money",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Percent means \"out of 100\". It is a proportion, not an exact amount of money!",
+   "wordingSha256": "e723cd474f00a99c1e6cb383d52c2f817493353bab8cca42483ab2216dbb35b9",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-78-percentage-fraction-confusion",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "50% is a half. 25% is exactly half of that, which makes it one quarter!",
+   "wordingSha256": "627caa85667b29a3a28f4b03fc9d980b6c7259ee6ff2b85d68f5e4adbb645874",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-79-dividing-by-a-fraction-error",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Think about it clearly. How many halves can you pour into one whole litre?",
+   "wordingSha256": "8b2865fc2e4b152e90d938964a264eda823e5a35d0012ec5b907f4495dff58cb",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-80-adding-fractions-straight-across",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Make the bottom numbers match first! Once they match, only add the top numbers together.",
+   "wordingSha256": "4aac994cb9e5c3475ecb11287f97f33fb60884725b8cc0f55f9eaad060641494",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-81-forgetting-to-subtract-the-discount",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "You found the discount, well done! Now subtract it from the starting price to finish.",
+   "wordingSha256": "ce5c8ec90efc1781019a3b5091ea369efc5e13ce97f2054378931e40081e20b2",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-82-fraction-of-the-wrong-whole",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Read carefully! Are you finding a fraction of the total, or of what is left?",
+   "wordingSha256": "2d8241b1b13b42b0d7797e80a1f254ed67a03f6de8e8102f56cfd30f8f7f4fcd",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-83-money-place-value-slip",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Always line up the decimal points. Add place-holder zeros so the columns match perfectly.",
+   "wordingSha256": "61708747b53ad88cfa6bc487b8321e96aa79e22a3b1f70e54db17c909ef28d03",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-84-adding-instead-of-finding-the-difference",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Words like \"change\" or \"left\" usually mean subtraction. Take the amount away instead of adding!",
+   "wordingSha256": "c937f0889f4234838a5fa97d969ca88c357bbae4587e8092381e877f4ee71ca2",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-85-miscount-or-rounding-in-measures",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Use multiplication for repeated groups. Take the exact price and multiply by the exact count.",
+   "wordingSha256": "fad878c348af33ba9cef0f61acd7e5447d751cfef7825093b4062ffc66bf7611",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-86-incomplete-money-step",
+   "status": "REJECTED",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Find the cost of every single item together first. Then work out your change.",
+   "wordingSha256": "e0b230cb9dde2eded087b16ee17dfea0cddbeb21d3414cd4e68d68b919db624e",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-87-perimeter-area-swap",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Perimeter is the fence around the edge. Area is the space covering the grass inside.",
+   "wordingSha256": "56fa71f321492e883a58d29a798ed23bf5a3af6163e9625714cd92a048dd4347",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-88-incomplete-perimeter",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Walk all the way round the shape. Count every side once.",
+   "wordingSha256": "10df54a583e5c19e35ad2c9b610014822bcf07b5c438c0cc39823d40686f6509",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-89-wrong-angle-total",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Ask what the angles sit on first. A line is 180, a turn is 360.",
+   "wordingSha256": "6d67c23a877ff27c6f03554b230e196b36c520b6cee9b8ae9181dc68412327c2",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-90-composite-shape-area-slip",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Find the area of the whole block first, then subtract the piece that was cut away.",
+   "wordingSha256": "99b6e3b67cec49692663ae6d4219b39a9e03c87825f8ffe5f73a84f90a4cfa9e",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-91-coordinate-read-slip",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Always read along the corridor (x) before you read up the stairs (y).",
+   "wordingSha256": "6f13b08d8165fe796c43c6e2f4bd35335934ad05608676620c59d15bba0fbd78",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-92-unitary-proportion-slip",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Find the cost of just one first. Then multiply that.",
+   "wordingSha256": "0fac9f95563bc0254291c86df4dee94e7dc39732fa85914300e184cb7455c678",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-93-comparing-prices-ignoring-quantity",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "The packs hold different amounts. Find the price of one first.",
+   "wordingSha256": "5a467db322eea61c1e1439c6fe75f26ff5c40de46cf417ca27eb11fbe2d32026",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-94-incomplete-statistical-total",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Double-check the chart. Have you added together every single row or bar you need?",
+   "wordingSha256": "1f8c89c2af9d93aa3699658ee8b30a482fbbadf2c77fdc90cecb15f4baf61ee2",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-95-reading-the-wrong-statistical-quantity",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Look at the axis labels. Are you counting the right things?",
+   "wordingSha256": "19245c2cd8d5db748522aa3a4e57ef8258efc57a7d17312aacb5915e9fc05b0a",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-96-mean-calculation-slip",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Count how many numbers you added. Divide by that.",
+   "wordingSha256": "0b3845d3bbcebff339443ace9013c754ec6aad24e33a48d36ec0af79c4cc89f6",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-97-missing-value-mean-slip",
+   "status": "ACTIVE",
+   "approvedBy": "human:staff-reviewer@cluecrew.test",
+   "wording": "Work backwards! Multiply the mean by the total number of items to find your grand total.",
+   "wordingSha256": "f37311de141020f8615fa6af2272f57f9aa6a9e3d7f052a2d678faf9dd8d7cab",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-98-digit-dropped-in-column-work",
+   "status": "ACTIVE",
+   "approvedBy": null,
+   "wording": "Line the digits up in their columns. Every digit needs a place.",
+   "wordingSha256": "94f65bb158a5304f330390a5a08adeca8b8758a010406118d9dbfb519b91300a",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-99-rounded-without-compensating",
+   "status": "ACTIVE",
+   "approvedBy": null,
+   "wording": "Rounding helps you check an answer. Work the real numbers out too.",
+   "wordingSha256": "5635cf8d35404531ebb2bda054262806a7d3f4b437c66b8eedb93194876b3e4d",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  },
+  {
+   "kind": "library",
+   "id": "maths-proc-01-stopped-at-the-first-answer",
+   "status": "ACTIVE",
+   "approvedBy": null,
+   "wording": "You found part of it. Now read the question again and finish.",
+   "wordingSha256": "b45e600688344c11a2e9b19241486cba897bcb07ac21c4a333a5530751c9d269",
+   "servesToday": false,
+   "reach": {
+    "liveItems": [],
+    "cases": [],
+    "liveItemCount": 0,
+    "caseCount": 0
+   },
+   "overSixteenWordSentences": []
+  }
+ ],
+ "itemHintRows": []
+}

@@ -19012,3 +19012,39 @@ or emitted a handover at `5c2ed588…`. Scanned every store by digest: the bytes
 this side: the file is Annie's own handover ("Annie's state at close of 22 August 2026, returns
 78 to 104", written unprompted on her channel argument), inbound on the Downloads crossing
 surface, in no staging store here, under no stamped name. Held: yes. Emitted: no.
+
+## R676 — The handover pair resolves; the maths hint membership emits with its two disagreements on its face
+
+**The handover facts, recorded (David, 2026-08-24):** the file on this side's crossing surface at
+`5c2ed588cb5b0269b47f75f5e89fe7764009d138f3f512fa62dbd39f8983b439` is Annie's own handover, v4,
+SUPERSEDED by the v5 that crossed the desk. **This side's Downloads v5 computes to
+`d0031cf18851f4d0be0c2b7b6043faf2105a17f63b603b67801e958cda84a23b` — byte-identical to the crossed
+edition.** Not a third variant; the desk's citation and this disk hold one v5.
+
+**The maths tranche machinery's first emission** (`scripts/emit-maths-hint-membership.ts`):
+`maths-hint-membership-9ce28474eedb6f0b.json`, file sha256
+`9ce28474eedb6f0b6f479f407b7acf8006dce2d2f384b2a20689ae2b05a9596d`. Every MATHS library row with
+wording verbatim, sha256 per row (R672's form), reach as membership, reachable-first, serving
+decided by the family's own functions (`chooseHint`, the ACTIVE filter — R41), the over-cap
+marking by `checkChildFacingText` itself, and the standing cap note on its face: **the sixteen-word
+cap gates writes, never serving (her seventh)** — stated so nobody re-fights it at reading time.
+The desk cuts tranche one from it at reading size.
+
+**Two measured disagreements are ON THE ARTEFACT'S FACE rather than smoothed over:**
+- **THE COUNT: the desk cited 107 library rows; this store measures 111** (109 ACTIVE,
+  2 REJECTED). The membership ships untrimmed — a cited count never edits a measured membership
+  (R595) — and the desk resolves which population its 107 named.
+- **THE SERVING SURFACE IS LEGITIMATELY EMPTY, DECLARED (R61):** the serving store holds ZERO
+  MATHS question types (7 ENGLISH, 21 VR are all that exist), so no maths item exists, zero
+  options tag a maths library id, and **no maths hint reaches a child today**. Every zero reach in
+  the artefact is structural, not a blind scan — R61's fourth shape, declared instead of inferred.
+- The first cut shipped WITHOUT these two statements and was superseded by this one within the
+  turn; retention holds it (`6170db36…` in `content/retention/`). Owned rather than silent.
+
+**The over-cap zero was scrutinised before it shipped (R173: an agreeable zero is investigated on
+purpose):** a deliberately-over-cap canary fires the instrument; the rule distribution over all
+111 rows shows one `long-words` fault and no `sentence-length` fault; the longest sentence in the
+library measures exactly 16 words — at the cap, not over. The zero is the true number; the
+20-held-on-gates population was the seed-era state, since reworded in the maths sittings.
+
+Standing, no act: the case-en-06 build awaits David's instruction; nothing on this side blocks it.
