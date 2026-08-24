@@ -42,6 +42,7 @@ import { resolve } from 'node:path';
 import { fluencyRound } from '@/lib/crew/fluency';
 import { mathsFamilyForType, type MathsFamily } from '@/lib/crew/maths';
 import { buildReplay } from '@/lib/crew/replay';
+import { servableCaseIds } from '@/lib/crew/servable-cases';
 import { shuffleOptionsForChild } from '@/lib/crew/shuffle';
 
 const DAY_MS = 86_400_000;
@@ -274,8 +275,11 @@ export async function startDailyLoop(childId: string, caseIdOverride?: string) {
   // included: a locked case refuses at the API whatever the client sent.
   // A case whose child-facing face has not landed DOES NOT APPEAR, whatever its item states —
   // the face fails closed until an Annie-approved wording lands through the standing path (R686).
+  // And a case whose LIVE POOL IS EMPTY does not exist for a child either (R695): derived from
+  // the pool at request time, so it reappears the moment an item goes LIVE.
+  const servable = await servableCaseIds();
   const cases = (await prisma.case.findMany({ orderBy: { orderInDistrict: 'asc' } })).filter(
-    (candidate) => caseFaceServes(candidate) && (open === 'all' || open.has(candidate.id)),
+    (candidate) => caseFaceServes(candidate) && servable.has(candidate.id) && (open === 'all' || open.has(candidate.id)),
   );
   // New-case pacing (Addendum D §2). A case with no CaseFile is NEW; whether
   // one may open now depends on the column: the final stretch opens none (the

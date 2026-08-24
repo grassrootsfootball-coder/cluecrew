@@ -19645,3 +19645,48 @@ per-row hashes serialises to 0.7 MB, built in memory. NO mechanical ceiling on t
 `deliver()` copies bytes without a size gate. **The ceiling is the reader, not the channel**:
 recommend one full artefact as the population of record (one digest, one loss-unit) with READING
 tranches cut at the desk — the proven maths form.
+
+## R695 — The empty doors hide by derivation; 629 reconciles to 668; reviewedBy settled; the population of record
+
+**ACT ONE — a case with an empty live pool does not exist for a child.** `servableCaseIds`
+(apps/web/lib/crew/servable-cases.ts): DERIVED FROM THE POOL AT REQUEST TIME, never a flag —
+LIVE + PRACTICE over primary AND mapped types, minus serving holds, the same facts `itemPool`
+serves from — so a case reappears the moment an item goes LIVE with nobody remembering to unhide
+it. Wired at ALL THREE surfaces: the orchestrator candidate filter (focus case + session), the
+district map (the D7 quiet-chip path — hidden is indistinguishable from unbuilt), and the case
+page (notFound, as a tier lock answers). Hidden membership: the eleven, all PAID, asserted
+excluded this run. **No paying child can now reach a door that opens onto an ending.**
+
+**ACT TWO — 629 v 668 is DEFINITIONAL, and no write path is leaking.** The audit's 629 was a
+PRIORITY-PARTITION bucket (DRAFT ∧ unsigned ∧ not-already-gate-failing); the five-acts count was
+unpartitioned (all DRAFT ∧ unsigned). **629 + 34 (gate-failing rows also unsigned, claimed by the
+gate bucket first) + 5 (demoted WIW rows, unsigned) = 668 exactly**, memberships on the artefact.
+The R690 rule-units class on a population instead of a cap: one count partitioned, one did not,
+both faithful. Verdict: nothing adds unsigned items outside the review flow.
+
+**ACT THREE — reviewedBy records A REVIEWER SEAT'S JUDGEMENT**, answered from the schema line
+(*"human reviewer name; REQUIRED before LIVE"*, with judgement never merged with who entered it)
+and every writer named: the CMS review pipeline (approve → REVIEWED + reviewedBy; return-to-draft
+→ null + notes; publish gate requires both), five one-shot signoff/publish transcriptions, two
+ruling appliers. NOT author-facing approval — authorship is its own mandatory column. **Cowork's
+question verbatim is NOT HELD here** (cited, never crossed — stated, not paraphrased, R664), and
+Cowork is right that a prior diff measured two words wearing one name.
+
+**ACT FOUR — the population of record**: `door-opening-population-fdafb5f0194317bf.json`, file
+sha256 `fdafb5f0194317bfcf34b2e4a772388a959f1dd2a0aa15f96169cc3bbf2140b4`. 288 unsigned items
+behind the eleven zero-live PAID cases, THIRTY-FOUR twelve-row sittings labelled by case,
+cheapest-first (the ten twenty-fives at 12+12+1 before vr-08's 12+12+12+2), surplus in later
+sections of the same case, nothing padded. Per row: stem, options with tags and executions, the
+explanation object verbatim (hints and walk script), tier, calibrated difficulty, per-row sha256
+with asOf, and REACH filled here — the paid door each row opens. Opening-dozen proposals on
+difficulty spread, marked plainly as proposals: **she reads what she reads, and a door opens on
+twelve signed whichever twelve they are.** One digest, one loss-unit for the fortnight.
+
+**THE INCOMPLETE DECLARATIONS — ruled, not demoted**:
+`incomplete-line-declarations-for-annie-97048009a2ed0134.json`, sha256 `97048009…9cb56b`, carries
+the class to Annie with the check's own words per row and its verdict verbatim (*"a child is
+being sent to the wrong place; fix it or take it out of service"*) — repair or removal, her
+ruling per row. **25 rows, not 30**: the five demoted WIW items left the check's screened
+population when they left LIVE; their faults travel with them into DRAFT, where the review
+pipeline owns them on the way back. Acts report:
+`doors-hidden-and-reconciled-ffa3a8866de98496.json`, sha256 `ffa3a886…0cfd63`.

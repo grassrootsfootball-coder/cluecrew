@@ -30,6 +30,9 @@ export default async function CaseIntroPage({ params }: { params: Promise<{ case
   const { openCaseIds } = await import('@/lib/entitlements');
   const open = await openCaseIds(child.id);
   if (open !== 'all' && !open.has(caseRow.id)) notFound();
+  // R695: an empty-pooled case answers exactly as a tier-locked or unwritten one — notFound.
+  const { servableCaseIds } = await import('@/lib/crew/servable-cases');
+  if (!(await servableCaseIds()).has(caseRow.id)) notFound();
 
   const narrative = (caseRow.narrativeIntro as { text?: string }).text ?? '';
   const lastUsed = child.lastUsedMode as Mode | null;

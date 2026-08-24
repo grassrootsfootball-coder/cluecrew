@@ -38,7 +38,10 @@ export default async function DistrictPage() {
   // yet — by construction, not by styling: dropping it from the open set here
   // sends it down the exact same quiet-chip path as unbuilt content. No
   // child-facing branch anywhere knows why a door is closed.
-  const cases = allCases.filter((row) => open === 'all' || open.has(row.id));
+  // R695 rides the same principle: a case with an EMPTY LIVE POOL drops here too, derived from
+  // the pool at request time — a door that would open onto an ending does not render at all.
+  const servable = await (await import('@/lib/crew/servable-cases')).servableCaseIds();
+  const cases = allCases.filter((row) => servable.has(row.id) && (open === 'all' || open.has(row.id)));
 
   const caseByType = new Map(cases.map((row) => [row.questionTypeId, row]));
   const fileByCase = new Map(caseFiles.map((caseFile) => [caseFile.caseId, caseFile]));
