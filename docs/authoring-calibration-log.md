@@ -19340,3 +19340,30 @@ instance the same small amendment. **One offer stands OPEN on David's desk, hers
 the desk may pre-amend the instruction-bang mark down-class with the diff shown — *"the judgement
 content is zero and my block would still sign each."* Not acted on; a standing offer is not a
 ruling.
+
+## R685 — The maths arc closes ratified; the board empties to three standing items
+
+**The desk ratifies the closure: all fifty-one rows of the final run closed against bytes, the
+106/106 assert confirmed, her 133rd's merge record complete.** The arc's entries — R676 (the
+membership emission), R677 (the order re-grounded), R678–R682 (sittings one through five, the
+trim door, the reference and hybrid shapes), R683 (the remainder ruling), R684 (the closure) —
+**close against this side's own artefact**,
+`maths-class-closure-landing-189dea1b1ee294cb.json`, sha256
+`189dea1b1ee294cbdb7f61ae1bbb430c8d9e723a2bdfdb5e6e2b10f000d9893a`. The register's summary
+figures for the arc are that artefact's derived ones, and nothing later restates them from
+memory (R178: looked up, never recalled).
+
+**The bang offer closes OVERTAKEN-BY-EVENTS**: her 133rd's standing offer — the desk pre-amending
+the instruction-bang mark down-class with the diff shown — was mooted when the remaining sittings
+landed inside her 134th, every bang read and ruled by her own eye. The offer was never acted on
+and now has no population to act on; recorded as closed by events, not by decision.
+
+**The one assignment carried from the arc lands on the AUTHORING side, not here**: the
+compound-description instrument (one entry describing two acts, maths-91's anti-pattern). Nothing
+is owed from this store on it.
+
+**THE BOARD, after the arc** — three standing items and nothing else:
+1. The trial's ARMED GATE: the auditory-surface gate arms mechanically the day a
+   `MAY_JUDGE_SEATS` row lands with the accessibility scope (R666's readiness, unchanged).
+2. The STANDING CHECKS, as ever, on every push.
+3. **case-en-06, ready and awaiting only David's instruction** — nothing on this side blocks it.
