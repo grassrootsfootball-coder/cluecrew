@@ -19206,3 +19206,38 @@ is a story, not a spoiler — why maths-16 stands where maths-05's decimals fell
 **And the pressure refinement from her 129th §3, beside the bang rule**: *"the pressure lives in
 the exclamation, not in need-to; a quiet instruction keeps its words, the same words under a bang
 are a push."* Emphasis and whimsy keep their marks; instructions do not push.
+
+## R681 — The reference shape ratified with its fence; tranche four rides it; the placeholder repairs
+
+**HER RATIFIED FENCE, verbatim (her 131st, `annie-131-for-code.md`, sha256
+`4b9136381ade566751836dca38037bebc171b73bb18b52ad91f4bd7cea5614d5`): "verdicts may take the
+reference shape, artefact digest plus row id, under two conditions and one exclusion. The
+conditions: the artefact's digest is declared verified in the same return, and the id resolves to
+exactly one row in it. The exclusion: any verdict that touches text keeps the quotation shape."**
+An amendment must quote its replaced string with its hash, because the collision assert needs
+bytes to refuse on, and no reference can carry a new wording. Her reasons, kept with the rule:
+the reference shape *"removes my keyboard from the loop entirely, which is the codepoint class
+killed at the root rather than caught at the gate"* — and the ratification exists because *"a form
+used once unratified is a precedent nobody decided."*
+
+**Tranche four landed on the ratified shape**
+(`scripts/land-annie-131-tranche-four.ts`, dry then applied; landing artefact
+`annie-131-tranche-four-landing-138f053ba71e9ea1.json`, file sha256
+`138f053ba71e9ea11c80708d45d5f2fc066b89ce69fd597532bb05d06618d3f8`): two amendments — maths-31
+and maths-35, both ONE CODEPOINT, the instruction-bang class — with the desk map's literal hashes
+(`tranche-four-expansion-for-code.json`, sha256 `9ceeef9b…058700`) asserted against her strings
+AND the live rows; ten approvals by reference, each expanded to full bytes by the map and
+asserted against its live row. The map carried bytes, never verdicts; every verdict cites her
+131st. Her habit finding: third and fourth one-codepoint amendments in two sittings — **"a habit
+is cheaper to fix than a fault: same amendment, every time, no judgement spent."**
+
+**The housekeeping executed as a PROVENANCE REPAIR, not a text write**: her 130th's amendment
+block wrote a placeholder where maths-22's replaced hash belonged; her 131st supplies the literal
+(`6e34fae8…cd03df`) as her authored value. The literal was asserted equal to the replaced-hash
+the 129-130 landing had already recorded on the row, then written into maths-22's provenance with
+the prior placeholder stamped — childHint untouched, one event, field `textProvenance`. Her line,
+kept: **"a placeholder in a hash field is a note wearing a citation, and mine gets no exemption."**
+
+**Running count, derived: 47 of 108 ACTIVE maths rows governed** (four sittings landed; the merge
+holds at 108). Her channel footnote also recorded: the 129th's lost first crossing proved the
+loss-unit sentence before it could be registered — per sitting stays, now with evidence attached.
