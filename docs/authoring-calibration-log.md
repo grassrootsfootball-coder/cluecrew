@@ -19140,3 +19140,24 @@ jump at a time!"* was warmth and stayed; *"you need to round up!"* was pressure 
 register call is per sentence, not per punctuation mark.** The class's opening character, in her
 words: five of twelve amended, all for faults no scan sees — exactly what a staff-reviewer value
 predicts.
+
+## R679 — The tranche cadence changes shape: one sectioned file, her sittings preserved inside it
+
+**The cadence entry updates (David, 2026-08-24).** The remaining eighty-five rows crossed to Annie
+as ONE SECTIONED FILE at
+`851cc51ae835885f369500d8ac2f1b3a4768c618a420a9ed9a47008e6bccb051`, her twelve-row sittings
+preserved inside it. **Releases are no longer gated on the desk cutting per tranche**: her
+verdicts arrive per sitting or batched at her choice, and each return lands through the standing
+path exactly as before — nothing about landing, guards, or artefacts changes. Returns may be
+MULTI-SITTING; the parser treatment is unchanged, because her blocks are per-row regardless of how
+many sittings share a document (the annotation rule of R678 rides along: segments after the hash
+are annotation).
+
+**One count stated from this store's own record rather than absorbed from prose (R654/R664)**:
+this side's landing record holds TRANCHE ONE ONLY — 12 of 109 ACTIVE maths rows stamped
+`reviewer:rev-0001`, twelve events all citing her 128th, and no tranche-two return or landing
+artefact on this side. The desk's "remaining eighty-five" implies a second twelve-row sitting
+complete on her side (12 + 12 + 85 = 109); **its verdicts have not crossed here, and nothing has
+landed for it.** When that return arrives — alone or inside a multi-sitting document — it lands
+through the standing path with the same guards, and the discrepancy resolves to zero on its
+landing artefact.
