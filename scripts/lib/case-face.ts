@@ -25,9 +25,11 @@ export async function landCaseFace(
   if (!/sha256 [0-9a-f]{64}/.test(authority)) {
     throw new Error('landCaseFace REFUSED — the authority names her return by file and full digest, or the landing waits.');
   }
+  // DOORPLATE role (David's ruling, 2026-08-24 — R689): notice-class, no word cap, stance gates.
+  // The first landing attempt ran under 'narrative' and was correctly refused on the role it had.
   const faults = [
-    ...checkChildFacingText({ role: 'narrative', label: `${caseId}.title`, text: face.title }),
-    ...checkChildFacingText({ role: 'narrative', label: `${caseId}.narrativeIntro`, text: face.narrativeText }),
+    ...checkChildFacingText({ role: 'doorplate', label: `${caseId}.title`, text: face.title }),
+    ...checkChildFacingText({ role: 'doorplate', label: `${caseId}.narrativeIntro`, text: face.narrativeText }),
   ].filter(isBlocking);
   if (faults.length > 0) {
     throw new Error(`landCaseFace REFUSED — the wording fails the child-facing gate: ${faults.map((f) => f.detail).join('; ')}`);

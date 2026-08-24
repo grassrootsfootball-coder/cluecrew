@@ -19460,3 +19460,40 @@ correction; the desk states which leg it now stands on). The tag is not landed w
 the transport follows the entry, never precedes it; the item holds at DRAFT.
 
 **Part four still waits.** When the entry lands, the transport follows, then the go.
+
+## R689 — Three rulings land: the cap is per sentence owned, the doorplate role, the fifth shape; the face lands
+
+**Ruling one, recorded with the desk's ownership**: the sixteen-word cap counts PER SENTENCE; the
+gate reads it correctly and the desk's whole-hint framing last turn was wrong and is owned at the
+desk. No instrument changed — the correction is to the prose that described it.
+
+**Ruling two — THE DOORPLATE ROLE**: a case doorplate is notice-class — read once, calmly, an
+explanation not a mid-item hint — her recorded standard binding, no word cap. Implemented as
+`doorplate` in `ContentRole` with the notice standard SPLIT in the open (`checkNoticeStance` /
+`checkNoticeStandard`): the STANCE gates — no apology token, no unscheduled promise, no shouted
+capitals, no em dash, no first person — bind every notice-class role, doorplates included; the
+FORM gates — one sentence, reason present — were the servability notice's own form claims and
+bind the notice role only. **That partition is stated in the role's doc for the desk or the
+reviewer to overrule, not inferred silently.** 750 core tests green, four new: her description
+passes the doorplate role unchanged AND still fails narrative — the ruling moved the doorplate,
+not the cap. The earlier refusal stands as correct on the role it had.
+
+**Ruling three — the FIFTH REFERENCE SHAPE**: ratified for FIELD PATHS that resolve uniquely
+(her 136th's `draft.description`); PROSE LOCATORS refuse ("the quoted row" and its kin). A field
+path is checkable; prose is the only artefact with no gate on it (R178).
+
+**THE FACE LANDED**: `landCaseFace` re-run under the doorplate role — *The Ashline Detective
+Register*, her amended description byte-for-byte from her 136th's block, her name, her return's
+digest as authority; provenance record at `content/case-faces/case-en-06.json`, event on
+rev-0001. The retag landed last turn (R688) and was not re-landed.
+
+**One gap surfaced, not silent**: with the face landed, `caseFaceServes` passes and case-en-06 is
+now VISIBLE in the orchestrator's candidate list while its 25 items are all DRAFT — an empty LIVE
+pool until part four executes. Pre-launch this is a sequencing window, not a child-facing fault;
+if any child session could reach the English district before the go, the window is real and the
+desk should know it exists.
+
+**The go is given, subject to one gate**: her trimmed hint lands FROM HER FILE — the 137th has
+not crossed. When the desk forwards it verified: the entry lands, option D transports with its
+tag, all twenty-five items move DRAFT→LIVE, and ONE artefact covers the whole door opening with
+the reachability arithmetic after publication.

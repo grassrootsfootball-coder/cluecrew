@@ -629,3 +629,21 @@ describe('R669 — the notice role: gates bind by role, and the notice standard 
     expect(checkNoticeStandard('n', 'This must be seen. So it is not offered.').some((f) => f.detail.includes('one sentence'))).toBe(true);
   });
 });
+
+describe('R689 — the doorplate role: notice-class, stance gates, no word cap', () => {
+  const DESC = 'A detective’s register only works if every entry is exact. This case is checking work: short pieces of writing with a spelling to catch, and gaps where you choose the word that fits best. If you are the kind of reader who notices the small thing everyone else walked past, this door is yours.';
+
+  it('her amended description passes the doorplate role unchanged', () => {
+    expect(checkChildFacingText({ role: 'doorplate', label: 'd', text: DESC }).filter(isBlocking)).toEqual([]);
+  });
+  it('the same text still fails the narrative role — the ruling moved the doorplate, not the cap', () => {
+    expect(checkChildFacingText({ role: 'narrative', label: 'd', text: DESC }).filter(isBlocking).length).toBeGreaterThan(0);
+  });
+  it('stance gates still bind a doorplate: an apology refuses', () => {
+    expect(checkChildFacingText({ role: 'doorplate', label: 'd', text: 'Sadly, this case is small.' })
+      .some((f) => f.detail.includes('apology'))).toBe(true);
+  });
+  it('the notice role keeps its form gates: three sentences still refuse as a notice', () => {
+    expect(checkNoticeStandard('n', 'One. Two. Three because reasons.').some((f) => f.detail.includes('one sentence'))).toBe(true);
+  });
+});

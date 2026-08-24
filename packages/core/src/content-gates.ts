@@ -53,7 +53,17 @@ export type ContentRole =
    * mechanically in `checkNoticeStandard`. The ruling arrived when `landNvrNotice` refused
    * Annie's approved sentence at 24 words: correct behaviour on a mis-scoped population.
    */
-  | 'notice';
+  | 'notice'
+  /**
+   * A CASE DOORPLATE — the child-facing name and description on a case's door (David's role
+   * ruling, 2026-08-24 — R689). NOTICE-CLASS: read once, calmly, an explanation not a mid-item
+   * hint — no word cap, bound by the recorded notice standard's STANCE gates (no apology token,
+   * no unscheduled promise, no shouted capitals, no em dash, no first person). The standard's
+   * FORM gates — one sentence, reason present — were the SERVABILITY NOTICE's own form claims
+   * and do not bind a doorplate; that partition is stated here in the open so the desk or the
+   * reviewer can overrule it, not inferred silently at a landing.
+   */
+  | 'doorplate';
 
 /**
  * Which stem role a question type gets, decided by its MECHANIC rather than
@@ -87,6 +97,8 @@ export const ROLE_RULES: Record<ContentRole, RoleRules> = {
   // The notice role (R669): no word cap — a notice states a fact with its reason in the same
   // breath, and the notice standard's own gates bind it instead (checkNoticeStandard).
   notice: { maxSentenceWords: null, maxLongWords: 1 },
+  // The doorplate role (R689): notice-class, no word cap; stance gates only (see the role's doc).
+  doorplate: { maxSentenceWords: null, maxLongWords: 1 },
 };
 
 export interface ContentFailure {
@@ -687,11 +699,14 @@ export function checkBannedVocabulary(
  * These bind the `notice` role INSTEAD of the 16-word cap (David's role ruling, 2026-08-24);
  * the house basics — ban list, internal ids, UK spelling — still run beside them.
  */
-export function checkNoticeStandard(label: string, text: string): ContentFailure[] {
+/**
+ * THE STANCE HALF OF THE NOTICE STANDARD (R689 split): the gates that are form-independent and
+ * bind every notice-class role — doorplates included. The FORM half (one sentence, reason
+ * present) stays in `checkNoticeStandard` and binds the notice role only.
+ */
+export function checkNoticeStance(label: string, text: string): ContentFailure[] {
   const failures: ContentFailure[] = [];
   const fail = (detail: string) => failures.push({ where: label, rule: 'notice-standard', detail });
-  const sentences = text.split(/[.!?]/).map((part) => part.trim()).filter(Boolean);
-  if (sentences.length !== 1) fail(`one sentence required, found ${sentences.length}`);
   const firstPerson = /\b(i|we|our|ours|us|my|me|mine)\b/i.exec(text);
   if (firstPerson) fail(`first person present: "${firstPerson[0]}"`);
   const shouted = /\b[A-Z]{2,}\b/.exec(text);
@@ -701,6 +716,15 @@ export function checkNoticeStandard(label: string, text: string): ContentFailure
   if (apology) fail(`apology token: "${apology[0]}"`);
   const promise = /\b(soon|coming|eventually|later|one day|in (?:the )?future|plan(?:s|ned|ning)? to|hope to|working on|will be (?:added|available)|for now|not yet)\b/i.exec(text);
   if (promise) fail(`unscheduled promise: "${promise[0]}"`);
+  return failures;
+}
+
+/** The full notice standard: the stance gates plus the SERVABILITY NOTICE's form claims. */
+export function checkNoticeStandard(label: string, text: string): ContentFailure[] {
+  const failures = checkNoticeStance(label, text);
+  const fail = (detail: string) => failures.push({ where: label, rule: 'notice-standard', detail });
+  const sentences = text.split(/[.!?]/).map((part) => part.trim()).filter(Boolean);
+  if (sentences.length !== 1) fail(`one sentence required, found ${sentences.length}`);
   if (!/\b(so|because)\b/i.test(text)) fail('no reason present — the child is owed the why in the same breath as the what');
   return failures;
 }
@@ -765,8 +789,10 @@ export function checkChildFacingText(input: {
     ),
     ...checkNoInternalIds(input.label, input.text),
     ...checkUkSpelling(input.label, input.text, input.quotedSpans ?? [], input.testedTokens ?? []),
-    // Gates bind by role (R669): the notice standard's own checks run for the notice role only.
+    // Gates bind by role (R669/R689): the full notice standard binds the notice role; the
+    // doorplate role binds the standard's stance half only.
     ...(input.role === 'notice' ? checkNoticeStandard(input.label, input.text) : []),
+    ...(input.role === 'doorplate' ? checkNoticeStance(input.label, input.text) : []),
   ];
 }
 
