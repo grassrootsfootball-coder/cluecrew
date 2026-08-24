@@ -19690,3 +19690,26 @@ ruling per row. **25 rows, not 30**: the five demoted WIW items left the check's
 population when they left LIVE; their faults travel with them into DRAFT, where the review
 pipeline owns them on the way back. Acts report:
 `doors-hidden-and-reconciled-ffa3a8866de98496.json`, sha256 `ffa3a886…0cfd63`.
+
+## R696 — The proposals struck, the countdown a fact; the publication trigger is mechanical
+
+**The population re-emitted before crossing to Annie**:
+`door-opening-population-b62edf78e99c67d7.json`, file sha256
+`b62edf78e99c67d7bb0858b7d75002205da147d14496e87b387ea79818a92f7a`, superseding the first cut
+(retained with its sidecar). Same 288 rows, same 34 sections, same cheapest-first order — the
+population re-read and ASSERTED equal to the verified 288 before superseding (a re-emission that
+found a moved premise would refuse, not overwrite).
+
+**The opening-dozen proposals are STRUCK, on David's ruling**: a door opens only when its WHOLE
+pool is signed, so a marked twelve proposed a threshold that no longer exists and marked rows in
+a set the reader can see. In their place, **one derived field per section**:
+`unsignedRemainingAfterThisSectionClears` — the case's countdown after that sitting, a fact where
+the proposal stood, and the only number she needs to know how close a door is. The final section
+of every case reads zero and carries `doorOpensOnThisSection: true`.
+
+**THE PUBLICATION TRIGGER IS MECHANICAL**: when a case's unsigned count reaches zero, that case
+is READY TO PUBLISH ON THE DESK'S GO — **never partially, never automatically.** The trigger is a
+derived state, not a flag; the go is a human act, not a consequence. The per-section countdown on
+the artefact is the visible approach to it. The desk's verification of the first cut (288 rows,
+34 sections, eleven cases contiguous, cheapest-first; guard, reconciliation and field answer all
+taken as reported) is recorded here against the superseded digest `fdafb5f0…2140b4`.
