@@ -18922,3 +18922,22 @@ in the approval chain: every future confirmation is checkable at the gate withou
 **Recorded from her §2, no act here**: the nine's serving-text batch has NOT crossed to her disk —
 her reading waits on bytes, and only bytes side by side settle whether what she read in August's
 third week and what serves today are one claim or two. The nine remain untouched on this side.
+
+## R673 — The channel-fault watch reopens conditionally: three names, one payload, two non-arrivals
+
+**Record only, no build (David, 2026-08-24).** Three names have now carried the SAME nine-row
+bytes toward Annie — `vr-nine-batch-for-annie.json`, `annie-nine-rows-resend.json`,
+`nine-rows-third-crossing.json`, all at `ba0c9fe1…0e24` (digest as the desk states it) — with
+**two confirmed non-arrivals by her digest scan**. Her 123rd's §2 is the receiving-side record of
+the same gap: the newest file on her disk remained the VR drain batch.
+
+**The condition, pre-stated before the outcome is known**: if the third crossing ALSO fails as an
+attachment while its inline twin arrives, the fault has a SECOND MODE — **the Annie attach leg**,
+distinct from the same-name multi-recipient mode already on the watch. Distinct names rule out the
+name-collision explanation for the third failure, which is what makes the third crossing a test
+and not a retry. The desk reports the outcome next turn; nothing on this side moves until it does.
+
+The serving side's emission offer (the nine's current serving text with per-row hashes) is
+declined with thanks: **the desk holds the bytes and the batch carries the hashes** — a second
+emitter would put two sources of one payload in flight across a channel already under suspicion,
+which is the two-way-editing fault in transport clothes.
