@@ -19607,3 +19607,41 @@ carried by no LIVE option** (membership by district on the artefact). Every ques
 render family (no authoring-plus-build gap for existing types); 13 engine components, 5 walk
 modes, named from the code. Scope held: ChildProfile, Session and Attempt rows EXIST on this side
 — stated and stopped; Subscription is present and empty; demand not inferred from content.
+
+## R694 — Five acts, one run: six demotions, the empty paid doors traced, the queue priced
+
+**One run, one artefact** (`scripts/five-acts-one-run.ts`, dry then applied;
+`five-acts-788c8bf1c79b9e54.json`, file sha256
+`788c8bf1c79b9e54f6d116cc7c4e0775ccb864da2ced6ac2313ad5b9c589c84f`). Writes limited to the two
+authorised demotion classes; everything else derivation.
+
+**THE ARTEFACT'S LEAD (act three): the eleven empty PAID doors are REACHABLE AND BROKEN for a
+paying user, traced from the code.** All eleven render (faces landed, `caseFaceServes` passes,
+paid `openCaseIds` returns 'all'); all open (the child's own pick is honoured AND the default
+focus-case path — first un-cracked by order — delivers her to case-vr-02, order 2, the moment she
+cracks vr-01's 25); the pool returns empty in production; the surface neither crashes nor hangs —
+**the case opens and immediately ends the session with nothing served.** A paying child meets a
+door that opens onto an ending. Exposure bounded by who holds a paid child account (scope held).
+
+**Acts one and two — SIX demotions, LIVE→DRAFT, events recorded, no repairs (the repairs are
+Annie's)**: the lead `bank-vr-04-closest-meaning-30` (stale walk script naming an option not on
+the card), plus FIVE from the class walk — `ENG-001-WIW-01/02/03/08/10`, each citing a line
+outside its item's window: a reference to a line the item no longer carries, found by
+`check:line-refs`, the citation check's own run. The walk is clean beyond the six (population:
+all 366 LIVE at run start; methods: `checkItemChildFacing` + `check:line-refs`). **One boundary
+stated, not demoted**: 30 items carry INCOMPLETE line declarations (one of the pair set) — the
+standing check fails them with *"a child is being sent to the wrong place; fix it or take it out
+of service"*, but incompleteness is not a script-row disagreement, so it sits outside the
+authorised class; membership on the artefact, the demote-or-repair ruling is the desk's.
+LIVE after the run: 360.
+
+**Act four — the queue, ordered by what opens doors**: eleven VR question types sit at ZERO live
+with their whole pools unsigned (vr-08 heads it: 38 unsigned behind a zero door); each such
+sitting OPENS A PAID DOOR, where the deepening sittings extend live cases. Full grouping on the
+artefact with representatives per group.
+
+**Act five — the batching ceiling, MEASURED not guessed**: the full 629-row review packet with
+per-row hashes serialises to 0.7 MB, built in memory. NO mechanical ceiling on this side —
+`deliver()` copies bytes without a size gate. **The ceiling is the reader, not the channel**:
+recommend one full artefact as the population of record (one digest, one loss-unit) with READING
+tranches cut at the desk — the proven maths form.
