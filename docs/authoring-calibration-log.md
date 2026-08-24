@@ -18895,3 +18895,30 @@ Landing artefact `annie-122-eight-landing-81f0f59116f331c7.json`, file sha256
 (sha256 `1f4217a2be4b54ec04ba728a14ded2f19e89ce3041349c300d95998a2ef1aa72`): ruled in her seventh,
 served 2026-08-24, closed at the desk against bytes. The effect-date rule (R670) governs any claim
 about what children received before that date.
+
+## R672 — The hold closes at the codepoint; a confirmation carries the row's serving hash
+
+**Annie's 123rd (`annie-123-for-code.md`, sha256
+`9cc4e6a570b696a82ec94f18e43c3f4700dc36ae61ad65456fb1f97afa16f4f9`, verified over the bytes)
+ratifies `vr07-value-slip` against the SERVING BYTES at the row's hash `523d8b502f53e243…`, curly
+apostrophe and all.** Her words: her confirmation string passed through her own typing — exactly
+what *prose re-typesets* predicts — and **"a signature is bytes, and nobody tidies bytes under
+somebody else's name."** The stamp landed only after the live row's hash was asserted against the
+ratified hash (`scripts/close-vr07-value-slip-hold.ts`, dry then applied, verified by re-read):
+`approvedBy: reviewer:rev-0001`, her ratification line quoted verbatim in `textProvenance`, one
+APPROVED event. The 122 lander's refuse-if-premise-changes guard did its job and RETIRES with the
+hold — its header now says DISCHARGED, because a re-run would re-assert a closed hold.
+
+**HER CONFIRMATION-FORM RULE: a confirmation of a serving string carries the row's serving hash
+beside the string. The string is for the reader, the hash is for the gate — and where her typing
+and the row disagree at a codepoint, the hash names which one she signed.** Applied retroactively
+in the same return to the batch of eight, and all eight attachments VERIFIED here: six against the
+live serving rows (each live hash begins her declared prefix), two — the amendments — against the
+pre-amendment before-hashes in the 122 landing record, since an amendment attaches beside the
+bytes she read, which the amendment then replaced. The serving side's landing artefacts already
+carry per-row hashes, so the rule costs nothing on this side and closes the last transcription gap
+in the approval chain: every future confirmation is checkable at the gate without a byte crossing.
+
+**Recorded from her §2, no act here**: the nine's serving-text batch has NOT crossed to her disk —
+her reading waits on bytes, and only bytes side by side settle whether what she read in August's
+third week and what serves today are one claim or two. The nine remain untouched on this side.

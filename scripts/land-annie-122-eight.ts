@@ -1,6 +1,12 @@
 /**
  * HER 122ND AGAINST THE EIGHT (David, 2026-08-24 — R671).
  *
+ * **DISCHARGED — DO NOT RE-RUN.** The one hold this script maintained (vr07-value-slip, the
+ * apostrophe codepoint) closed with her 123rd: the approval attaches to the serving bytes at the
+ * row's hash (`scripts/close-vr07-value-slip-hold.ts`, R672). The refuse-if-premise-changes guard
+ * below did its job — it held the row unstamped and unharmonised until her ratification — and is
+ * retired with the hold. A re-run now would re-assert a closed hold and re-write landed rows.
+ *
  * Two amendments land through the standing path (same shape as the seven's transport): her
  * authored strings read from HER FILE's AMENDMENTS block, the replaced strings asserted against
  * the LIVE rows before write, priors stamped, events recorded. Five approvals stamp after each
