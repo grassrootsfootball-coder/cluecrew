@@ -19279,3 +19279,22 @@ id <short-id>`, no parentheses — and annotations ride mid-segment before the p
 parser asserts her annotation and the map's agree per row.
 
 **Running count, derived: 59 of 108 ACTIVE maths rows governed** after five sittings.
+
+## R683 — The remainder rules as one document: sittings seven to ten, one run, one artefact
+
+**David's ruling (2026-08-24), recorded ahead of the crossing.** The remainder of the maths class
+returns as a SINGLE DOCUMENT covering sittings seven to ten, with a STANDING DECLARATION at its
+head that satisfies the R681 fence for the whole run — one declaration that the 851cc51a file's
+digest is verified, covering every reference-shape verdict in the document — **and curing the
+132nd and 133rd retroactively**, whose per-return fence declarations the standing head absorbs.
+Expect one large return; **land it in one run, one artefact back.** The loss-unit rule (R680)
+stands re-scoped by this ruling for the run's tail: the ruling is David's to make, and the
+document is one loss-unit by his decision, recorded here in the open (R677's discipline — the
+order states which leg it stands on).
+
+**This store's record at the ruling, stated from the rows (R654)**: sittings ONE THROUGH FIVE
+landed (returns 128 through 132; 59 of 108 ACTIVE governed). **No 133rd has crossed here** — the
+sitting-six return exists on the desk's numbering and is expected to cross alone or with the
+remainder document; its verdicts land through the standing path when its bytes arrive, and the
+retroactive cure is recorded against the standing declaration's own text at that landing, not
+before (a cure quoted is not a cure held).
