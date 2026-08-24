@@ -19713,3 +19713,30 @@ derived state, not a flag; the go is a human act, not a consequence. The per-sec
 the artefact is the visible approach to it. The desk's verification of the first cut (288 rows,
 34 sections, eleven cases contiguous, cheapest-first; guard, reconciliation and field answer all
 taken as reported) is recorded here against the superseded digest `fdafb5f0…2140b4`.
+
+## R697 — Sitting size six for item rows (Annie's ruling); Cowork's prerequisites discharge; the doors confirmation
+
+**THE SITTING SIZE FOR ITEM ROWS IS SIX, ruled by Annie**: an item is four times a hint-row's
+reading, and **the maths twelve was sized for two-string rows** — a wording and a description —
+where an item row carries a stem, an option set with tags and executions, hints and a walk
+script. The unit rides with the rule (R690): twelve was never "the sitting size", it was the
+sitting size FOR TWO-STRING ROWS. The desk's recut of the second-cut population at six is made at
+the desk FROM THIS SIDE'S ROWS, byte-identical per row, 57 sittings (ten cases at ceil(25/6)=5
+plus vr-08 at ceil(38/6)=7); this side re-emits nothing — the population of record stands at
+`b62edf78…a92f7a` and the recut is a desk reading-cut of it, the proven form.
+
+**Cowork's two prerequisites both discharge** (its partition schema accepted): the reconciliation
+artefact (`doors-hidden-and-reconciled-ffa3a8866de98496.json`, sha256 `ffa3a886…0cfd63` — 629,
+668 and 288 explained rather than asserted) and the id list
+(`unsigned-ids-for-cowork-6a31738838bbb041.json`, file sha256
+`6a31738838bbb04112aa3f9abc55304044afe73f89cc2fffb3f052817308e3e8`): **668 ids only, no wordings,
+no state, as it asked** — read from the live rows, with every cited source file's digest declared
+inline and RECOMPUTED over held bytes before declaration, and the door population's 288 asserted
+a subset of the list before staging.
+
+**The confirmation for Annie rides the same artefact**: the eleven doors closed at
+2026-08-24T21:57:27+01:00 (commit `ac6041b`, the guard landing at all three serving surfaces),
+and **reopening is DERIVED, not flagged** — the pool is read at request time, so a door reopens
+the moment a LIVE item exists behind it, with no flag for anyone to remember. She ruled twice for
+a repair already executed; the record now shows she was **answered by act rather than by luck** —
+the act preceded the rulings, and the order is written down.
