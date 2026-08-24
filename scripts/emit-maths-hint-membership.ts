@@ -37,7 +37,9 @@ function capMarks(label: string, text: string) {
 async function run() {
   const lib = await prisma.misconception.findMany({
     where: { district: 'MATHS' },
-    select: { id: true, childHint: true, status: true, approvedBy: true },
+    // Description beside the wording: her seventh's delivery form is text and description side by
+    // side, and the tranche cannot cut without it (the desk's addition, second emission).
+    select: { id: true, childHint: true, description: true, status: true, approvedBy: true },
   });
   requirePopulation(lib, 'MATHS library rows — the maths misconception library must not be empty');
   const byStatus = lib.reduce((a: Record<string, number>, r) => ((a[r.status] = (a[r.status] ?? 0) + 1), a), {});
@@ -88,12 +90,18 @@ async function run() {
     const cases = [...(r?.cases ?? [])].sort();
     return {
       kind: 'library', id: m.id, status: m.status, approvedBy: m.approvedBy,
+      description: m.description,
       wording: m.childHint, wordingSha256: sha256(m.childHint),
       servesToday: m.status === 'ACTIVE' && liveItems.length > 0,
       reach: { liveItems, cases, liveItemCount: liveItems.length, caseCount: cases.length },
       overSixteenWordSentences: capMarks(m.id, m.childHint),
     };
-  }).sort((a, b) => b.reach.liveItemCount - a.reach.liveItemCount || a.id.localeCompare(b.id));
+  }).sort((a, b) => a.id.localeCompare(b.id));
+
+  // DERIVED, never copied: the approvedBy distribution over the ACTIVE rows, so the artefact she
+  // reads against states what the field actually holds.
+  const activeApprovedBy = libraryRows.filter((r) => r.status === 'ACTIVE')
+    .reduce((a: Record<string, number>, r) => { const k = r.approvedBy ?? 'null'; a[k] = (a[k] ?? 0) + 1; return a; }, {});
 
   const servingLibrary = libraryRows.filter((r) => r.servesToday).length;
   const overCap = [...libraryRows, ...itemHintRows].filter((r) => (r.overSixteenWordSentences as string[]).length > 0).length;
@@ -115,7 +123,8 @@ async function run() {
     },
     method: "live database read; serving decided by the family's own functions (chooseHint / the ACTIVE-status filter), never a re-derivation; over-cap marking by checkChildFacingText itself",
     standingCapNote: 'THE SIXTEEN-WORD SENTENCE CAP GATES WRITES, NEVER SERVING (her seventh). A row marked over-cap here serves exactly as it stands; the mark is review material for the next authored change, not a serving defect. Stated here so nobody re-fights it at reading time.',
-    ordering: 'reachable-first: descending LIVE-item reach, then id. Item-hint rows follow the library rows.',
+    ordering: 'DETERMINISTIC BY ID, and the criterion is stated because the alternative would be composed: reach is uniformly zero (the serving surface is structurally empty, below), so reachable-first ordering would order 111 equal keys by accident and present the accident as meaning. Id order is the only ordering the data itself supplies. Item-hint rows would follow the library rows; today there are none.',
+    approvedByDistributionOverActive: activeApprovedBy,
     overCapRowCount: overCap,
     libraryRows,
     itemHintRows,

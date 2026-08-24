@@ -19048,3 +19048,27 @@ library measures exactly 16 words — at the cap, not over. The zero is the true
 20-held-on-gates population was the seed-era state, since reworded in the maths sittings.
 
 Standing, no act: the case-en-06 build awaits David's instruction; nothing on this side blocks it.
+
+## R676 addendum — Both disagreements resolve; the membership re-emits in her seventh's delivery form
+
+**The desk resolved both statements the first emission carried**: the 111 partitions as her 107
+plus her two ruled-in orphans (= 109 ACTIVE, the reading population) plus 2 REJECTED (excluded —
+their rejection is their ruling); and the structurally-empty serving surface is CONFIRMED as the
+corrected premise now crossing to her.
+
+**Re-emitted for a desk under-specification, not a fault here**:
+`maths-hint-membership-61b6b68ec668c1f2.json`, file sha256
+`61b6b68ec668c1f2df5a9801c8b5eb005cc014d10def6bbb0bf849c4e3a4cf46`, superseding the first cut
+(retained: `9ce28474…` file and sidecar in `content/retention/`). Three changes, each on the face:
+- **The misconception `description` beside each wording** — her seventh's delivery form is text
+  and description side by side, and the tranche cannot cut without it.
+- **Ordering is DETERMINISTIC BY ID and the criterion is stated**: reach is uniformly zero, so
+  reachable-first would order 111 equal keys by accident and present the accident as meaning; id
+  order is the only ordering the data itself supplies.
+- **The `approvedBy` distribution over the 109 ACTIVE, DERIVED from the rows and not copied**:
+  95 `human:staff-reviewer@cluecrew.test` (the R94 ghost that resolves to no Reviewer row) and
+  14 null — matching the desk's cited 95/14 exactly, so the artefact she reads against states
+  what the field actually holds.
+
+Verified from the staged artefact's own bytes before crossing: 111 rows, id-sorted, every row
+carrying a non-empty description, distribution as stated.
