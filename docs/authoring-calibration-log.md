@@ -19298,3 +19298,45 @@ sitting-six return exists on the desk's numbering and is expected to cross alone
 remainder document; its verdicts land through the standing path when its bytes arrive, and the
 retroactive cure is recorded against the standing declaration's own text at that landing, not
 before (a cure quoted is not a cure held).
+
+## R684 — The maths class closes: ten sittings, three merges, 106 of 106, every figure derived
+
+**One run, strict order held** (`scripts/land-annie-133-134-closure.ts`, dry then applied; closure
+artefact `maths-class-closure-landing-189dea1b1ee294cb.json`, file sha256
+`189dea1b1ee294cbdb7f61ae1bbb430c8d9e723a2bdfdb5e6e2b10f000d9893a`):
+
+**1 — The 133rd (sitting six), from the RESEND** (`836e3eb3…d83c0b`; the first crossing was lost
+and this store's record was right — the channel's third loss, each caught by the same method).
+Four amendments and eight approvals, byte source THE VERIFIED FILE ITSELF: this side holds
+`maths-tranches-three-to-ten-for-annie.json` and its bytes recompute to `851cc51a…cb051` exactly,
+so her references expanded from the file both parties verified. **The fence cure was QUOTED FROM
+HER ACTUAL TEXT** — the 134th's head declaration extracted from its verified bytes and recorded
+on every cured row's provenance, as R683 required: a cure held, not quoted. maths-50's annotation
+carried (*the corpus's most screen-reader-ready sentence*, flagged for the specialist seat).
+
+**2 — The 134th's thirty-seven** (`de974b5a…299278`) via the remainder map (`b2fdf564…de14f0`,
+bytes only): ten amendments, twenty-seven approvals, all under the head declaration with the
+settled bare `id <short-id>` syntax, uniqueness asserted per line, annotations normalised at the
+COMPARE (R568's discipline — the map carried full verdict segments, her lines carried clauses).
+
+**3 — The two merges** (David, on her routed directions), zero-carrier walks on both faces at
+landing: `maths-87` RETIRED into the 38/39 pair — her direction REVERSED from 106's: *the general
+only names, the specific pair diagnoses*; and `maths-91` RETIRED into `maths-46`, its second act
+recorded **UNENTERED** on the retirement — it earns its own entry only when a carrier exists.
+Text approvals stand on both retired rows. Her 133rd's merge-record request is answered on the
+artefact's face: the 106 record restated with retired-into, by-whose-ruling, when, and the fate
+of the text approval.
+
+**THE CLOSURE, DERIVED AND ASSERTED**: 106 STANDING, 106 GOVERNED, 3 RETIRED — the run REFUSES
+to declare closure on any other numbers, and the artefact's every figure is read from the live
+rows after the writes. Partition: ten sittings (12×6 + 12+12+12+1) = 109 ruled; three doublings
+retired at zero carriers = 106. Effect date for the entire class: 2026-08-24 (R670). Her
+sentence, the class's epitaph: **"the class that began the week with ninety-five unresolvable
+approvals and fourteen nulls ends it with none of either."**
+
+**Her findings, kept**: the doubling watch paid three times in one class; the authoring had
+HABITS, not faults — instruction-bangs eleven, scold-openers four, contractions two, every
+instance the same small amendment. **One offer stands OPEN on David's desk, hers from the 133rd**:
+the desk may pre-amend the instruction-bang mark down-class with the diff shown — *"the judgement
+content is zero and my block would still sign each."* Not acted on; a standing offer is not a
+ruling.
