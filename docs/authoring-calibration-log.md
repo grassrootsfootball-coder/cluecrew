@@ -18815,3 +18815,42 @@ render path is unchanged and still fails closed; NVR is not offered today, so no
 (`1a38116305b91b688298058b5cdee400cee50905bf29515228210ea886e55a2b`) is verified three ways and
 ENG-003's publication path is acknowledged OPEN behind it; the Case-row build instruction follows
 in David's next send once the product ruling is confirmed.
+
+## R670 — The seven transported; a ruling's effect date is its serving date
+
+**The pending entry releases against the landing artefact
+`seven-vr-hints-landing-1f4217a2be4b54ec.json`, file sha256
+`1f4217a2be4b54ec04ba728a14ded2f19e89ce3041349c300d95998a2ef1aa72`**, which crosses with per-row
+before/after strings AND hashes so the desk can close the seven against bytes. Seven VR library
+hints authored in Annie's ENG-003 seventh return (`eba01cb7…ed6f14`) were in effect on one store
+and never where it mattered — children heard the pre-amendment texts throughout. All three inbound
+artefacts digest-verified over the bytes: her 121st (`89a78a56…5b6297`), the authoring emission
+(`9fdb094f…7abd770`), the desk verdict (`17f7129d…54be0e` — located BY digest, since a digest
+quoted is not a file held, R664).
+
+**Her effect-date rule, in her words: "a ruling's effect date is its serving date, not its
+authoring date."** Anything that reasoned from her seventh's wordings being live — a profile, a
+count, a claim about what children have been receiving since some date — inherits a correction.
+**"Ruled-but-never-served now sits beside approved-but-inert as the second way a ruling silently
+fails to reach a child, and both were found by the same method: two stores made to state what they
+hold, and a desk that diffs rather than trusts."**
+
+**The transport's guards** (`scripts/transport-seven-vr-hints.ts`): wordings read verbatim from
+the EMISSION, never the verdict's prose; each re-hashed against its declared `wordingSha256` AND
+the verdict's `authoredSha256`; each serving row's current bytes required to hash to the verdict's
+`servingSha256` — a verdict is about the bytes it read, so moved serving bytes REFUSE the
+transport rather than landing on top of them; membership asserted equal across both files and
+disjoint from the nine and the eight before any write. Landed through the standing path: gated as
+child-facing, `textProvenance` RECORDED with her as author and approver and the effect-date
+distinction written in, priors stamped inside the provenance, one AMENDED AttributionEvent per row
+carrying `rev-0001`. Verified by RE-READ of the live rows after the write (R599's discipline):
+7 of 7 serve her bytes, 7 events, 7 priors.
+
+**Untouched, asserted then verified: the nine await one crossing; the eight are with Annie.**
+Zero writes outside the seven.
+
+**Her 121st also records**: the reseal re-crossed at `d32e2bc2…769799`; the role ruling endorsed
+with its reason — *"a cap is a rule plus a reason, and a rule applied where its reason does not
+hold has become a constant"* — and the notice-gate refusal seated as the fourth builder-refusal:
+*"the gate built from my own hint form refused my own sentence, held its manners, and waited for
+a ruling rather than taking an exit."*
