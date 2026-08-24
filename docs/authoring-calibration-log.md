@@ -18780,3 +18780,38 @@ artefact; the serving-membership export's bytes still read
 `2d3909594513b1e9295cba8e210c41e9f18cfd01d7320b0f03bcd897f606cde7`, unchanged. The nine house-rule
 violations the desk found in the serving wordings are EVIDENCE, and the serving text is what Annie
 must see. Nothing further is emitted on that thread until the desk diff verdict crosses.
+
+## R669 — Gates bind by role: the refusal was correct behaviour on a mis-scoped population
+
+**David's role ruling (2026-08-24), taken: child-facing text carries a role, and gates bind by
+role.** The 16-word cap binds the hint role; the NOTICE role is bound by the recorded standard's
+own gates — no apology token, no unscheduled promise, reason present, house basics — with no word
+cap. The entry, in his words: **the door refused the reviewer, took neither exit, and reported.
+That is the entry.** The instrument was correct and its population was mis-scoped: a servability
+notice is not a hint, and running it under a hint-class cap asked the wrong question of the right
+sentence.
+
+**The implementation**: `notice` joins `ContentRole`; `ROLE_RULES.notice` carries no sentence cap;
+`checkNoticeStandard` (packages/core/src/content-gates.ts) implements the standard's gates
+MECHANICALLY AND VERBATIM from the artefact Annie judged — `nvr-notice-redraft-for-annie.json`,
+sha256 `9061bb94decc8a0aa89167a5309da434a8f6b308d0043814332f2581bc0b1ca6`, whose
+`complianceAsserted` line enumerates them: *no first person, no shouted capitals, one sentence, no
+em dash, no apology token, no unscheduled promise, a reason present ("so …")*. Read from the
+recorded standard, never invented (R178). Wired into `checkChildFacingText` so the gate binds by
+role inside the one gate, and `landNvrNotice` moved from `narrative` to `notice`. **Baseline
+(R149): the change is purely additive — the membership of callers passing the notice role is
+exactly one, the lander itself, so no standing verdict moved.** 744 core tests pass, seven new:
+her sentence passes the notice role AND still fails the hint role, which is the ruling in test
+form — the cap moved off the notice, not off the corpus.
+
+**Her sentence then landed unchanged, byte source the 119th's AMENDMENTS block** (digest
+`87b701afa5cfc3f961f3e220d1540af7fa8c263cc4f6e017bb9fda5c8d82f6c4` verified over the bytes),
+never the staged artefact: `content/notices/nvr-servability.json` now carries the wording, her
+name, and her return as authority, landed 2026-08-24. No `_previous` stamp because the prior
+record was the EMPTY sentinel, not a wording — the lander stamps real priors only. The slot's
+render path is unchanged and still fails closed; NVR is not offered today, so nothing renders yet.
+
+**The desk's acknowledgements, recorded**: the discharge diff
+(`1a38116305b91b688298058b5cdee400cee50905bf29515228210ea886e55a2b`) is verified three ways and
+ENG-003's publication path is acknowledged OPEN behind it; the Case-row build instruction follows
+in David's next send once the product ruling is confirmed.

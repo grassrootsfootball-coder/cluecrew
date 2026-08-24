@@ -17,7 +17,10 @@ export function landNvrNotice(repoRoot: string, text: string, approvedBy: string
   if (!/sha256 [0-9a-f]{64}/.test(authority)) {
     throw new Error('landNvrNotice REFUSED — the authority names her return by file and full digest, or the landing waits.');
   }
-  const faults = checkChildFacingText({ role: 'narrative', label: 'nvr-servability-notice', text }).filter(isBlocking);
+  // The NOTICE role (David's role ruling, 2026-08-24 — R669): gates bind by role. The 16-word
+  // cap does not bind a notice; the notice standard's own mechanical gates (no apology token,
+  // no unscheduled promise, reason present) run instead, beside the house basics.
+  const faults = checkChildFacingText({ role: 'notice', label: 'nvr-servability-notice', text }).filter(isBlocking);
   if (faults.length > 0) {
     throw new Error(`landNvrNotice REFUSED — the wording fails the child-facing gate: ${faults.map((f) => f.detail).join('; ')}`);
   }

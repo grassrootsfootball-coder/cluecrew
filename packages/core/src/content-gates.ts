@@ -44,7 +44,16 @@ export type ContentRole =
   /** The hint shown when a child picks a distractor. Short by nature: capped. */
   | 'hint'
   /** Case narrative and voice lines: capped. */
-  | 'narrative';
+  | 'narrative'
+  /**
+   * A PRODUCT NOTICE — a servability statement the platform addresses to the child or the family
+   * (David's role ruling, 2026-08-24 — R669). Gates bind BY ROLE, and the 16-word cap does not
+   * bind this one: the notice role is bound by the recorded notice standard's own gates —
+   * no apology token, no unscheduled promise, reason present, plus the house basics — checked
+   * mechanically in `checkNoticeStandard`. The ruling arrived when `landNvrNotice` refused
+   * Annie's approved sentence at 24 words: correct behaviour on a mis-scoped population.
+   */
+  | 'notice';
 
 /**
  * Which stem role a question type gets, decided by its MECHANIC rather than
@@ -75,11 +84,14 @@ export const ROLE_RULES: Record<ContentRole, RoleRules> = {
   // a long sentence. The vocabulary ceiling still holds — that is what
   // "reading age ≤9" actually protects.
   'word-card': { maxSentenceWords: null, maxLongWords: 1 },
+  // The notice role (R669): no word cap — a notice states a fact with its reason in the same
+  // breath, and the notice standard's own gates bind it instead (checkNoticeStandard).
+  notice: { maxSentenceWords: null, maxLongWords: 1 },
 };
 
 export interface ContentFailure {
   where: string;
-  rule: 'sentence-length' | 'long-words' | 'banned-vocabulary' | 'internal-id-leak' | 'us-spelling' | 'notation' | 'placeholder-tag';
+  rule: 'sentence-length' | 'long-words' | 'banned-vocabulary' | 'internal-id-leak' | 'us-spelling' | 'notation' | 'placeholder-tag' | 'notice-standard';
   detail: string;
   /**
    * Absent means 'error' — every rule that existed before UK spelling arrived
@@ -665,6 +677,34 @@ export function checkBannedVocabulary(
   return failures;
 }
 
+/**
+ * THE NOTICE STANDARD'S GATES, MECHANICAL AND VERBATIM FROM THE RECORDED STANDARD (R669).
+ *
+ * The source is `nvr-notice-redraft-for-annie.json` (sha256 `9061bb94decc8a0aa89167a5309da434a…`,
+ * the artefact Annie judged in her 119th), whose `complianceAsserted` line enumerates them:
+ * *"no first person, no shouted capitals, one sentence, no em dash, no apology token, no
+ * unscheduled promise, a reason present ("so …") — all mechanical, none eyeballed."*
+ * These bind the `notice` role INSTEAD of the 16-word cap (David's role ruling, 2026-08-24);
+ * the house basics — ban list, internal ids, UK spelling — still run beside them.
+ */
+export function checkNoticeStandard(label: string, text: string): ContentFailure[] {
+  const failures: ContentFailure[] = [];
+  const fail = (detail: string) => failures.push({ where: label, rule: 'notice-standard', detail });
+  const sentences = text.split(/[.!?]/).map((part) => part.trim()).filter(Boolean);
+  if (sentences.length !== 1) fail(`one sentence required, found ${sentences.length}`);
+  const firstPerson = /\b(i|we|our|ours|us|my|me|mine)\b/i.exec(text);
+  if (firstPerson) fail(`first person present: "${firstPerson[0]}"`);
+  const shouted = /\b[A-Z]{2,}\b/.exec(text);
+  if (shouted) fail(`shouted capitals: "${shouted[0]}"`);
+  if (/[—–]/.test(text)) fail('em dash present');
+  const apology = /\b(sorry|apologis\w*|apologiz\w*|apolog\w*|unfortunately|regret\w*|sadly|afraid)\b/i.exec(text);
+  if (apology) fail(`apology token: "${apology[0]}"`);
+  const promise = /\b(soon|coming|eventually|later|one day|in (?:the )?future|plan(?:s|ned|ning)? to|hope to|working on|will be (?:added|available)|for now|not yet)\b/i.exec(text);
+  if (promise) fail(`unscheduled promise: "${promise[0]}"`);
+  if (!/\b(so|because)\b/i.test(text)) fail('no reason present — the child is owed the why in the same breath as the what');
+  return failures;
+}
+
 /** Both gates at once: what a publish door needs to ask. */
 export function checkChildFacingText(input: {
   role: ContentRole;
@@ -725,6 +765,8 @@ export function checkChildFacingText(input: {
     ),
     ...checkNoInternalIds(input.label, input.text),
     ...checkUkSpelling(input.label, input.text, input.quotedSpans ?? [], input.testedTokens ?? []),
+    // Gates bind by role (R669): the notice standard's own checks run for the notice role only.
+    ...(input.role === 'notice' ? checkNoticeStandard(input.label, input.text) : []),
   ];
 }
 

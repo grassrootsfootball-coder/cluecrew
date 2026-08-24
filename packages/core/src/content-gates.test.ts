@@ -13,6 +13,7 @@ import {
   checkWordCardImagePrompts,
   headwordIsBanned,
   checkMisconceptionProposal,
+  checkNoticeStandard,
 } from './content-gates';
 
 const LONG =
@@ -590,5 +591,41 @@ describe('checkMisconceptionProposal — a placeholder is not a proposal', () =>
         childHint: 'You found a twin — now find the reverse.',
       }),
     ).toEqual([]);
+  });
+});
+
+describe('R669 — the notice role: gates bind by role, and the notice standard binds this one', () => {
+  const HER_SENTENCE =
+    'The non-verbal reasoning questions are made of shapes and pictures that must be seen, so this section is not offered in a spoken form.';
+
+  it("Annie's approved sentence passes the notice role unchanged — the refusal was a mis-scoped population, not a bad wording", () => {
+    expect(checkChildFacingText({ role: 'notice', label: 'n', text: HER_SENTENCE }).filter(isBlocking)).toEqual([]);
+  });
+
+  it('the 16-word cap still binds the hint role — the ruling moved the notice, not the cap', () => {
+    const faults = checkChildFacingText({ role: 'hint', label: 'n', text: HER_SENTENCE }).filter(isBlocking);
+    expect(faults.some((f) => f.rule === 'sentence-length')).toBe(true);
+  });
+
+  it('an apology token refuses', () => {
+    expect(checkNoticeStandard('n', 'Sadly, this section is not offered in a spoken form, so it must be seen.')
+      .some((f) => f.detail.includes('apology'))).toBe(true);
+  });
+
+  it('an unscheduled promise refuses', () => {
+    expect(checkNoticeStandard('n', 'A spoken form is coming soon, so please wait.')
+      .some((f) => f.detail.includes('promise'))).toBe(true);
+  });
+
+  it('a notice without a reason refuses — the child is owed the why', () => {
+    expect(checkNoticeStandard('n', 'This section is not offered in a spoken form.')
+      .some((f) => f.detail.includes('reason'))).toBe(true);
+  });
+
+  it('first person, shouted capitals, an em dash, and a second sentence each refuse', () => {
+    expect(checkNoticeStandard('n', 'We do not offer this section because it must be seen.').length).toBeGreaterThan(0);
+    expect(checkNoticeStandard('n', 'This section is NOT offered because it must be seen.').length).toBeGreaterThan(0);
+    expect(checkNoticeStandard('n', 'This section must be seen — so it is not spoken.').length).toBeGreaterThan(0);
+    expect(checkNoticeStandard('n', 'This must be seen. So it is not offered.').some((f) => f.detail.includes('one sentence'))).toBe(true);
   });
 });
