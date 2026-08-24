@@ -19894,3 +19894,40 @@ say so.
 
 **The population recounts, derived and asserted: vr-08 at 25, the total at 275, fifty-five
 sittings at six** (eleven cases, five sittings each — was fifty-seven).
+
+## R703 — The estate walk finds twenty-seven more; twenty-five were LIVE; never-shippable becomes a state
+
+**THE LEAD, outranking the turn's own landing**: the estate-wide walk her 146th ordered found
+**FORTY marker rows in 1,033, not thirteen** — beyond the vr-08 seeds: `seed-vr09-01..13` and
+`seed-vr11-01..14`, and **twenty-five of them were LIVE and SERVING through case-vr-09 and
+case-vr-11, carrying their author's own never-ship marker verbatim in their note fields.**
+The 25 are HELD AT THE SERVING DOOR as of this landing — `SERVING_HOLDS` (R208: LIVE stays true,
+serving stops, lift condition named: David's ruling on this membership — NEVER_SHIPPABLE or an
+explicit release). Both cases retain 25 genuine LIVE rows each and stay servable on real content;
+the two RETIRED vr-09 seeds already served nobody. **Her sentence was the prophecy: "rules about
+reading notes exist because nothing else does" — and nothing else did, for twenty-five serving
+rows, until a status existed to read.**
+
+**NEVER-SHIPPABLE IS NOW A STATE THE TRIGGER READS** (migration `20260824214549`, replay green):
+`ItemStatus.NEVER_SHIPPABLE`, outside every review population, serving pool, and door trigger by
+the same status filters everything already keys on. The thirteen vr-08 seeds moved
+RETIRED→NEVER_SHIPPABLE, their true name now that it exists, events on each.
+
+**Her 146th landed in full** (`annie-146-landing-56046030e22b8ca6.json`, file sha256
+`56046030e22b8ca6ed8e91dd4f1e514770d65ef01032fd025aff81f8249ec898`): nine walk amendments by
+SUBSTRING-ASSERT (each replaced sentence required exactly once in the live script, R87's
+discipline on prose), covering her three persona rows, four truth wobbles, the template escape
+(*"a walk that does not name its words walks nothing"*) and the capital; sixteen walks approved
+by reference, `walkScriptStatus` and approver stamped on each.
+
+**My two findings, in my own words as instructed:**
+- **A MARKER IS AUTHORING METADATA, NOT A CONTENT WORD.** The first walk matched bare "seed" and
+  accused an item whose stem teaches seed/plant. A marker scanner matches phrases an author would
+  write ABOUT a row, never words a child would read IN one — and when a marker matters enough to
+  scan for, it matters enough to be a state instead.
+- **A RULING APPLIED IN TWO PLACES OF THREE IS A RULING WITH A HOLE IN IT.** The seed ruling
+  removed thirteen rows from one population because that population was the one under review —
+  while twenty-five rows in the same costume went on serving children two cases over. The ruling
+  was right and its scope was an accident of where the reviewer happened to be reading. A ruling
+  about a CLASS walks the whole estate the day it is made, or the unwalked remainder is where the
+  class keeps living.

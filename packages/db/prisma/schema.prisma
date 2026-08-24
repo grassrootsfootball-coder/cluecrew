@@ -376,6 +376,12 @@ enum ItemStatus {
   REVIEWED
   LIVE
   RETIRED
+  /// NEVER SHIPPABLE AS A STATE, NOT A SENTENCE IN A NOTE (Annie's 146th, David's ruling,
+  /// 2026-08-24 — R703). Thirteen synthetic seed rows sat in a child-facing review population
+  /// wearing item ids, caught only because a reviewer read a note field. A row in this state is
+  /// outside every review population, every serving pool, and every door trigger — and the
+  /// TRIGGER READS THE STATE, never a marker phrase.
+  NEVER_SHIPPABLE
 }
 
 // ADDENDUM-B §1: mock items are held out from practice, permanently. A mock
