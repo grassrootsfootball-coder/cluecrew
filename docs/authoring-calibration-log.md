@@ -19560,3 +19560,23 @@ plus two residues that are on it whether or not they are wanted:
    closure (R674: none of either remain) and the maths closure (R684), **but mooted-by-events was
    never formally recorded** — one line from the desk closes it the way the bang offer closed.
 Nothing else is open on this side.
+
+## R692 — R655 comes into force; the disclosure closes mooted; the board is clean
+
+**R655 IS IN FORCE, ratified by David with RETENTION attached**: a provenance verb carries the
+same discipline as the number it qualifies — "printed" requires a quotable printed line, and the
+same holds for every verb that claims a source ("measured", "derived", "computed", "verified").
+**Session-close prose, addenda and handovers are AUTHORED OUTPUT under the same gate** — the
+closing paragraph is not a softer register than the artefact it describes, and retention applies:
+the artefact behind a provenance verb is kept, because a verb whose artefact was pruned is a
+claim with nothing behind it (the unverifiable-figures class, R658's reason re-applied).
+
+**The hint-review disclosure is CLOSED, MOOTED BY EVENTS**, on the stated ground: the VR class
+ended with none of either (R674 — every approval a name against a hash) and the maths class after
+it (R684). Her half-question from the 118th/119th has its truth-status: the disclosure is true of
+NO surface, because the population it disclosed no longer exists. Parked is no longer a quieter
+word for anything.
+
+**THE BOARD**: the trial's armed gate (the auditory-surface gate, arming mechanically on the
+accessibility seat) and the standing checks. Nothing else. Stated from the record, which now
+agrees with the desk.
