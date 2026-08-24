@@ -57,3 +57,4 @@ export * from './verdict-blockers';
 export * from './reviewer-return';
 export * from './english/n-option';
 export * from './passage-content';
+export * from './case-face';

@@ -19367,3 +19367,34 @@ is owed from this store on it.
    `MAY_JUDGE_SEATS` row lands with the accessibility scope (R666's readiness, unchanged).
 2. The STANDING CHECKS, as ever, on every push.
 3. **case-en-06, ready and awaiting only David's instruction** — nothing on this side blocks it.
+
+## R686 — case-en-06: the row lands with its face failing closed; the membership and walls reported
+
+**David's build instruction, parts one to three executed; part four — publication — waits on the
+desk's go and nothing has flipped LIVE.** Build report staged as
+`case-en-06-build-report-ccb9d73cb877e4e4.json`, file sha256
+`ccb9d73cb877e4e4dc7d857b62e78870cb74ea408e6b178c6591d4779c9d4147`.
+
+**Part one — the row, face failing closed.** `case-en-06`: ENGLISH via `en-spag-cloze`, PAID
+(`freeTier: false`), orderInDistrict 27, title EMPTY. The NVR-notice pattern applied to cases:
+`caseFaceServes` (packages/core/src/case-face.ts) is the ONE definition of "the face is landed",
+the orchestrator's case query filters on it, and **an empty-faced case does not appear to any
+child regardless of item states.** The face lands only through `scripts/lib/case-face.ts` —
+MAY_JUDGE name, return digest as authority, child-facing gate on title AND narrative, prior
+stamped to the git-tracked `content/case-faces/` record, event on rev-0001. 746 core tests green
+including the new predicate's.
+
+**Part two — the membership, derived from the rows.** The 34 signed ENG-003 items partition:
+**16 map to en-spag-cloze** (case-en-06's population), 9 to en-spag-punct-spot (existing home:
+case-en-05), and **9 to en-spag-spelling-spot, which has NO CASE — those items have no home until
+one is built or ruled.** `ENG-003-A-CZ-A2`: DRAFT, **three serving options** (a / an / no word is
+needed) — so her fourth, landed authoring-side, needs transport through the standing path before
+LIVE; and **the fourth's null tag blocks LIVE until assigned.** Both facts on the report per row.
+
+**Part three — the walls, derived not recalled, each naming its source (R41).** Both cloze
+rulings asserted from the render-path BYTES at report time (the script REFUSES if either is
+absent), citing the discharge diff at `1a381163…e55a2b`; both passages read SERVABLE from their
+files, citing her 115th's landing; and the reviewed-content guard exercised live — `pnpm
+check:derived-writes` exited 0 at report time. **The guard is NAMED EXPLICITLY on the report**:
+"the editorial guard" resolves here to `reviewed-guard.ts` (R62) via check:derived-writes; if the
+desk meant a different instrument, the naming makes the mismatch visible rather than silent.

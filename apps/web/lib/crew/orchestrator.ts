@@ -36,7 +36,7 @@ import {
   type TeachbackContent,
 } from '@cluecrew/core';
 import { logEvent, prisma, Prisma } from '@cluecrew/db';
-import { hintToServe, resolveLibraryHint, type HintSource, type MechanicFamily } from '@cluecrew/core';
+import { caseFaceServes, hintToServe, resolveLibraryHint, type HintSource, type MechanicFamily } from '@cluecrew/core';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { fluencyRound } from '@/lib/crew/fluency';
@@ -264,8 +264,10 @@ export async function startDailyLoop(childId: string, caseIdOverride?: string) {
   const caseFileByCase = new Map(caseFiles.map((caseFile) => [caseFile.caseId, caseFile]));
   // Only cases this child's tier opens are candidates — the child's own pick
   // included: a locked case refuses at the API whatever the client sent.
+  // A case whose child-facing face has not landed DOES NOT APPEAR, whatever its item states —
+  // the face fails closed until an Annie-approved wording lands through the standing path (R686).
   const cases = (await prisma.case.findMany({ orderBy: { orderInDistrict: 'asc' } })).filter(
-    (candidate) => open === 'all' || open.has(candidate.id),
+    (candidate) => caseFaceServes(candidate) && (open === 'all' || open.has(candidate.id)),
   );
   // New-case pacing (Addendum D §2). A case with no CaseFile is NEW; whether
   // one may open now depends on the column: the final stretch opens none (the
