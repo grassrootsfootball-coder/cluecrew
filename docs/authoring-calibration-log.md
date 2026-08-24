@@ -19798,3 +19798,35 @@ asked for phase two's design ground.
 **her "every vr-02 row" prediction confirmed: 25 of 25 carried it** — amended with the replaced
 prompt byte-asserted per row, one event on the template id. Emphasis-by-capitals, the house
 amendment since the eighteenth return, now unable to regenerate.
+
+## R700 — Phase two supplies from this side: the twenty-two cross, and the entry answers against itself
+
+**Both inbound files verified** (her 143rd `f52bff35…156fa4`; the id extraction `ae988f65…f3b2a3`
+— cut at the desk from this side's census, since Annie named families and only the population
+held ids: neither store held both halves). **The desk finding confirmed from the rows before
+emission: all 22 tags resolve to entries HERE and none on the authoring side — the VR library is
+the serving store's, so phase two is suppliable from Code.**
+
+**The twenty-two crossed** (`twentytwo-vr-entries-for-annie-b2b43a264c284ee0.json`, file sha256
+`b2b43a264c284ee02029f2a1bce325c827d4699ad63ff8ba35308b6951db300a`): each entry with description,
+child hint, approval state and the rows carrying it; **vr03-same-topic marked ATTESTED as the
+known member she judges the twenty-one against.**
+
+**Her two questions answered from the entries and rows, both halves on one desk:**
+- **vr02-surface-link covers NEITHER reading she offered exactly**: its text is *"Grouped by look
+  or sound instead of meaning"* — wider than initial sounds (look is covered) but about the FORM
+  OF THE WORDS, and semantic pulls are what *"instead of meaning"* excludes. Trumpet-balloon and
+  knife-thorn share no look and no sound; on the entry as written, the deferred assignments are
+  LOOSE.
+- **And the answer generalises past her two: ALL FIVE tier-three surface-link assignments fail
+  the entry's text** (blown, pierces, gives-light, pourable-liquid, the -15 pair) — the entry
+  supports every tier-one/two assignment and none of tier three. Either the definition widens by
+  her authoring, or five rows retag — her ruling, with the evidence in front of her. Observed in
+  passing on the artefact: the entry's own childHint carries a shouted MEAN, noted, not amended.
+
+**WIW-12 stands ARMED on her both-branch ruling**: when Cowork's twenty-five cross, the gate
+refuses as designed and NAMES where the boundary falls — trim to the line-30 portion where the
+pull survives whole; widen the form to a span where the boundary cuts the pull. The branch
+selects itself on the gate's naming; no further authoring needed. Her prediction record extends:
+zero-refusals was wrong by one, recorded before the landing — *"the gate checking the reviewer's
+predictions is the practice working in both directions."*
