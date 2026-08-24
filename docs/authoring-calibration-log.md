@@ -19740,3 +19740,32 @@ and **reopening is DERIVED, not flagged** — the pool is read at request time, 
 the moment a LIVE item exists behind it, with no flag for anyone to remember. She ruled twice for
 a repair already executed; the record now shows she was **answered by act rather than by luck** —
 the act preceded the rulings, and the order is written down.
+
+## R698 — Closed-by-state confirmed with its timestamp; the divergence class; the transport armed
+
+**Her 141st verified (`annie-141-for-code.md`, sha256
+`f1e30d3b9f98dedeb7cce5c9f80e3c181b0d4a9ca53025f982a68a071e4790de`).**
+
+**CLOSED-BY-STATE, CONFIRMED — her words with this side's timestamp beside them**: *"accepted as
+executed; derived at request time, wired at every surface"* — the doors having closed at
+2026-08-24T21:57:27+01:00 (commit `ac6041b`), before her ruling arrived. Her grace note, kept:
+**"the act outranks the telling, and a system where the repair beats the recommendation to the
+desk is the system working."** And her fifty-seven checked before trusted: case-contiguous
+sections at six give ten fives and one seven — *"the honest number fell out of the material's own
+boundaries."*
+
+**THE CLASS FINDING, hers, in her words**: the twenty-five line declarations are *"not
+repair-or-remove but divergence: serving holds half of what authoring holds whole; the completion
+existed before the question did."* The rule that follows, David's framing beside hers:
+**incomplete-on-one-side is DIVERGENCE, not incompleteness, and the check that finds it should
+ask the other store before it proposes a repair.** The check's "fix it or take it out of service"
+was a true verdict about a false population — the fix already existed, one store over.
+
+**THE TRANSPORT IS ARMED, NOT RUN**: all twenty-five ruled COMPLETE BY TRANSPORT, her 141st as
+authority. When Cowork's pairs cross: the whole pair lands on each serving row through the
+standing path, **each quote byte-verified against the passage at the landing gate**; a pair whose
+quote fails REFUSES and comes back named; removal arises only then. **Her prediction is on record
+before the landing: ZERO refusals** — *"a prediction the gate can now check me against"* — and
+the landing artefact reports the count either way. Note: the five demoted WIW rows are among the
+twenty-five's population context; their pairs land the same way and their return to LIVE remains
+the review pipeline's, not the transport's.
