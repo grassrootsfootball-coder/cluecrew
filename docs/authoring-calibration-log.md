@@ -19424,3 +19424,39 @@ report's own emission-time assertions, which re-fired on the re-emit and held.
 
 **Part four still waits**: the go comes after Annie's sitting lands the face and rules the tag;
 the CZ-A2 option transport lands BEFORE its item goes LIVE, never with it.
+
+## R688 — Her 136th: the retag lands, the face refuses at its own door, and both desk predictions correct
+
+**Her 136th verified (`annie-136-for-code.md`, sha256
+`5c029056066d3d6d13d68abbbea0671b0e401c9cece636d0dfb464b09d78d9b1`); landing artefact
+`annie-136-landing-e2be2254823df735.json`, file sha256
+`e2be2254823df735b1bd497d91fc5d3446583fbc04dc9adb830e97ccf7fae524`. Every door was DRY-TESTED
+before any act, and the doors disagreed with BOTH of the desk's predictions — the artefact
+reports what the doors actually said.**
+
+**LANDED — the WIW-19 retag** (hybrid shape, replaced tag AND execution asserted against the live
+row): option B moves `en-vocab-neighbouring-sense` → `en-vocab-form-lookalike`, execution clause
+corrected to her wording — *a different word that shares the spelling* — on the dictionary test,
+not etymology. Verified by re-read; event on rev-0001. **The oldest hold on the board releases**,
+and with it all three of WIW-19's mistags are ruled. Her tag-separation rule recorded in the
+desk's words she adopted: **a tag that cannot separate two acts diagnoses neither.**
+
+**REFUSED — the case face, by its own gate, and the refusal is the gate working**: her amended
+description carries sentences of 24 and 20 words against the narrative role's 16-word cap.
+`landCaseFace` was attempted as instructed and refused; NEITHER exit was taken — no exemption, no
+rewording of her text. The name was NOT landed alone: `caseFaceServes` keys on the title, so a
+name-only landing would open the door with an empty doorplate — not ruled, not done. The face
+stays EMPTY, the case invisible. **Resolution is the desk's**: her split, or a role ruling — the
+doorplate may be notice-class under R669's own reasoning (read once, calmly, an explanation, a
+parent often beside her), but assigning a role is a ruling, not a landing-time convenience.
+Fifth builder-refusal, second on the reviewer's own prose.
+
+**HELD, WITH ITS PREMISE CORRECTED — the CZ-A2 entry, tag, transport, and DRAFT status.** The
+desk's stated ground — *"her hint is seventeen words against the cap, so the entry's write will
+refuse at the gate"* — is CORRECTED by a dry run of the gate's own function: the hint PASSES
+(sentences of 6 and 11 words; seventeen is the whole-hint count and the cap is per sentence).
+The hold stands on the desk's instruction alone (R677: the order survives its premise's
+correction; the desk states which leg it now stands on). The tag is not landed without its entry;
+the transport follows the entry, never precedes it; the item holds at DRAFT.
+
+**Part four still waits.** When the entry lands, the transport follows, then the go.
