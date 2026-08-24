@@ -18987,3 +18987,28 @@ is the codepoint lesson applied before it could recur.
 And her method note on the batch, kept for the instrument file: the desk's scan and her reading
 agreed exactly — *"two instruments, one verdict, arrived at independently, which is what agreement
 is worth when it happens"* — the R173 scrutiny of agreement, passed rather than failed this time.
+
+## R675 — A denormalised column is a cache of provenance, aligned by transcription, never a second judgement
+
+**The rule, minted on the cache repair the desk endorsed (David, 2026-08-24, beside R674's
+landing): a denormalised column is a CACHE of provenance, aligned by TRANSCRIPTION, never a
+second judgement.** The instance: the seven transported rows held her approval in
+`textProvenance` and in AMENDED events on rev-0001, while the `approvedBy` column read null — the
+record and its cache disagreed, and the repair copied the record into the cache. What the rule
+forbids is the tempting extra step: minting an APPROVED event to "complete" the repair would have
+been a machine verdict wearing her name (R94) — the alignment writes only what the record already
+holds, and adds no act to the history. The test for which side is the record: the one carrying
+the authority citation and the date; the cache is whichever copy exists for readers' convenience.
+
+**The desk ratifies the closure**: the nine closed against bytes at the desk, nine of nine, and
+the class-closure declaration on `annie-125-nine-landing-51c3d4e7e035f878.json` stands as the
+record — 24 of 24 governed.
+
+**A holdings answer, recorded because it was answered by computation and not memory (R664's
+discipline exercised in the direction it was built for)**: the desk asked whether this side holds
+or emitted a handover at `5c2ed588…`. Scanned every store by digest: the bytes ARE held —
+`~/Downloads/CLUECREW-HANDOVER (4).md`, full digest
+`5c2ed588cb5b0269b47f75f5e89fe7764009d138f3f512fa62dbd39f8983b439` — and were NOT emitted from
+this side: the file is Annie's own handover ("Annie's state at close of 22 August 2026, returns
+78 to 104", written unprompted on her channel argument), inbound on the Downloads crossing
+surface, in no staging store here, under no stamped name. Held: yes. Emitted: no.
