@@ -19161,3 +19161,48 @@ complete on her side (12 + 12 + 85 = 109); **its verdicts have not crossed here,
 landed for it.** When that return arrives — alone or inside a multi-sitting document — it lands
 through the standing path with the same guards, and the discrepancy resolves to zero on its
 landing artefact.
+
+## R680 — Tranches two and three land with the merge between them; the loss-unit rule and the instance line
+
+**Strict order held** (`scripts/land-annie-129-130.ts`, dry then applied; landing artefact
+`annie-129-130-landing-7a261cb9f794ed84.json`, file sha256
+`7a261cb9f794ed84d0743a38140278cc95bf33a07ef9f1b92976a7afd6ce6edc`):
+
+**A — her 129th, from the RESEND** (`annie-129-for-code-resend.md`, sha256 `ac26b59a…4078d3`; the
+first crossing was lost and this store's tranche-one-only record was RIGHT — R679's discrepancy
+resolved to the channel, not the record). Two amendments (maths-11's pressure-and-imprecision,
+maths-110's one-word truth repair), ten approvals including maths-106's with its annotation
+carried (*text approved; entry routed as a doubling merge candidate with maths-09*).
+
+**B — the merge, under David's ruling on her doubling finding**: `maths-106-always-rounds-down`
+RETIRED into `maths-09-rounding-misdirection`, the survivor asserted standing on its landed
+tranche-one wording before the retire, and **the zero-carrier state WALKED at landing, not
+recalled: 0 options reference either id.** Her register line, now priced by its own instance:
+**"a doubling merged before its first carrier costs one ruling; after, it costs a retag census."**
+Her text-verdict/entry-verdict distinction is on the row: the retired entry's wording stays
+approved as text on its merits; whichever id survives can carry either sentence.
+
+**C — her 130th via the expansion map** (`tranche-three-expansion-for-code.json`, sha256
+`8aee99ae…d4be68`): **the map carries BYTES, never verdicts** — her 130th approves by reference to
+the verified 851cc51a file, the desk expands each verdict to its full row hash, and the landing
+asserted her strings, the map's bytes, and the live rows against each other, three ways. One
+amendment (maths-22: one codepoint, the bang becomes a full stop — the per-sentence rule at its
+purest), eleven approvals at full hashes. Every verdict cites her 130th.
+
+**Verified by re-read: 35 of 108 ACTIVE maths rows now governed** (36 ruled across three tranches,
+one retired by merge; 109 became 108 by the retirement).
+
+**HER LOSS-UNIT RULE, in her words**: *"A return is this project's write-source and its loss-unit,
+and the outbound channel still crosses one file at a time: one return holding three sittings makes
+one loss eat three sittings' verdicts."* Returns stay per sitting; sittings run back to back —
+**"smaller loss-units, same speed."** Twelve stays as sitting size: renegotiating a committed size
+mid-class for convenience is *"answer-shopping's gentle cousin."*
+
+**THE INSTANCE LINE, refined on maths-16 and now precise enough to apply down-class, in her
+words**: *"An instance that could be the served item's own numbers risks answering the item; an
+analogy dressed in its own scenario teaches without leaking."* Twelve sweets between three people
+is a story, not a spoiler — why maths-16 stands where maths-05's decimals fell.
+
+**And the pressure refinement from her 129th §3, beside the bang rule**: *"the pressure lives in
+the exclamation, not in need-to; a quiet instruction keeps its words, the same words under a bang
+are a push."* Emphasis and whimsy keep their marks; instructions do not push.
