@@ -19580,3 +19580,30 @@ word for anything.
 **THE BOARD**: the trial's armed gate (the auditory-surface gate, arming mechanically on the
 accessibility seat) and the standing checks. Nothing else. Stated from the record, which now
 agrees with the desk.
+
+## R693 — The estate audit: one lead, and the picture nobody had
+
+**Report only, zero writes** (`scripts/audit-estate.ts`; artefact
+`estate-audit-12a506a26f93e584.json`, file sha256
+`12a506a26f93e584197b599750f7700459b083aea3aff607985f911767d5da1e`). Population: 1,033 items,
+28 question types, 27 cases, 284 library rows — one findMany pass per table, every figure derived
+at run time, UNDECIDED where not derivable.
+
+**THE LEAD, outranking the audit as ruled**: `bank-vr-04-closest-meaning-30` is LIVE and FAILS
+the child-facing gate TODAY — *"names option(s) not on the card: marathon — script is stale
+against the current item."* A walk script referencing an option the card no longer carries, on a
+serving vr-04 item. Surfaced, not repaired — this audit writes nothing; the repair is the desk's
+next instruction.
+
+**The picture**: 663 of 1,033 items are DRAFT (64%). The partition, priority-ordered and
+disjoint: **34 fail a gate** (each row carries which gate), **629 are UNSIGNED** (reviewedBy
+null — the overwhelming reason this estate serves nobody), 0 orphaned-from-surface, 0 no-case,
+0 never-published, 0 underivable. SUPERSEDED reported UNDECIDED: no Item column records it.
+**11 of 28 question types own items no child can meet** — all VR, all with PAID cases standing
+on ZERO LIVE pools (vr-02/05/08/10/13/16/17/18/19/20/21). **16 of 27 cases are thin or empty**:
+eleven VR cases at zero, the five English comprehension/SPaG cases at 6–10 LIVE items each; the
+Ashline Detective Register's 25 is the deepest case in the product. **189 ACTIVE library rows are
+carried by no LIVE option** (membership by district on the artefact). Every question type has a
+render family (no authoring-plus-build gap for existing types); 13 engine components, 5 walk
+modes, named from the code. Scope held: ChildProfile, Session and Attempt rows EXIST on this side
+— stated and stopped; Subscription is present and empty; demand not inferred from content.
