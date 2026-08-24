@@ -19497,3 +19497,35 @@ desk should know it exists.
 not crossed. When the desk forwards it verified: the entry lands, option D transports with its
 tag, all twenty-five items move DRAFT→LIVE, and ONE artefact covers the whole door opening with
 the reachability arithmetic after publication.
+
+## R690 — The door opens in one transaction; her rule-units finding
+
+**Part four executed on David's go** (`scripts/execute-part-four.ts`, dry then applied; opening
+artefact `case-en-06-door-opening-f0b337029aa02462.json`, file sha256
+`f0b337029aa024626194ece85cac9be36338cfe0a080b1133f8568d3f2656492`). Both returns verified over
+the bytes (137th `096f7738…b0a4d97`, 138th `90fc7f98…164ef5`). **One prisma transaction**: the
+entry `en-article-avoids-the-sound-choice` landed FROM HER 137TH'S FILE — the trim's replaced
+string asserted exact against the 136th's mint, the mint's own hint stamped as prior — then
+option D transported WITH its tag (bytes verified against the authoring emission's per-option
+digest `8643fc1a…`, recomputed here before the write), then all twenty-five items DRAFT→LIVE.
+Events throughout; the trimmed hint gated clean (16 words, per-sentence unit, as ruled).
+
+**The visible-but-empty window, measured as instructed: 518 seconds** — face landed
+20:10:27Z, LIVE at 20:19:05Z. The R689 surfaced gap is closed and its duration is a figure, not
+an impression. **The reachability arithmetic, walked from the rows after publication: 25 of 25
+published items reach a child through case-en-06 (PAID), 16 cloze + 9 spelling-spot, CZ-A2
+serving four options** — the artefact REFUSES to ship on any smaller number, and it shipped.
+One field carried, not dropped: `misconceptionExecutionBasis` ("AUTHORED+ENTRY") has no column
+here; it rides in the event note and on the artefact's face, stated.
+
+**HER RULE-UNITS FINDING, in her words (138th): "a rule without its declared unit is two rules
+wearing one name."** Two stores enforced one cap in two units — per sentence and per hint — and
+both were faithfully enforcing something; **the fault sat in the rule's statement, not in either
+gate.** The unit is now ruled into the rule itself, and the class joins the
+transported-line-numbers family (R654): **"a value that crosses a boundary without its unit
+arrives meaning something else."** Her trim stands on merit regardless — both versions legal, the
+stricter kept because it is the better sentence.
+
+**And her closing line on the door, kept**: two refusals on opening day, both from gates she
+built, both making the door better — *"that is the system I would have asked for, refusing me
+exactly as often as I deserve."*
