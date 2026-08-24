@@ -19099,3 +19099,44 @@ first eleven do, and nothing pads it.
 **The channel state**: tranche one (twelve rows, text and description side by side, hash beside
 every string) is cut from the membership emission at the desk and crossed to her; her verdicts
 land through the hash-beside-string door as ever; **tranche two cuts on her word, not before.**
+
+## R678 — Tranche one lands; the trim door asks for the approver's declaration and gets it; her two findings
+
+**Her 128th (`annie-128-for-code.md`, sha256
+`1cb71b4f158f57197b0ae8734846037b1a0a343597efdb3bf9e65c7b1b60a5ae`, verified over the bytes)
+landed in full** (`scripts/land-annie-128-tranche-one.ts`, dry then applied): five amendments with
+her declared `replacedSha256` asserted against her string AND the live row, priors stamped,
+AMENDED events on rev-0001; seven approvals against serving bytes, string and hash prefix per row.
+**Verified by re-read: 12 of 12, twelve events from her 128th, no duplicates.** Landing artefact
+`annie-128-tranche-one-landing-5d6585123310fbda.json`, file sha256
+`5d6585123310fbda1e096a283505d49e803b1ebb3c2127d456d921e7c4822b1d`. Tranche 1 of 10 over the 109.
+
+**The R213/R257 trim door fired on the first apply and was answered with the declaration it
+exists for**: several of her redrafts are SHORTER than the approved text they replace, and the
+client-level guard refuses a shortening write unless the write itself declares the new string is
+the approver's own — `textProvenance.approvedByPerson` plus her document and digest. The
+declaration was added AS the guard's contract specifies; the gate was not widened. The refused
+first attempt left no partial writes (the door throws before the update) — verified by the
+duplicate-event check.
+
+**Parsing note honoured (David's)**: her maths-08 confirmation carries a fourth segment after the
+hash. Segments after the hash are ANNOTATION — parsed, carried onto the landing row and into the
+row's provenance, never refused, never edited.
+
+**Her two findings, registered:**
+- **THE DRIFT CATCH (rule:first-person-pending)**: two legacy rows carried `we` and *"would have
+  become the persona's first instances by legacy accident rather than by the decision. My
+  amendments remove both, which keeps the decision genuinely pending instead of made by drift,
+  and the body can still decide it either way on its own day."* A pending decision is not a
+  vacuum a legacy row may quietly fill.
+- **THE IMAGERY CLAUSE (maths-08), her reason quoted whole for the accessibility seat's future
+  re-read**: *"`maths-08`'s 'picture a thermometer' passes the channel test under the imagery
+  clause: imagery is not sight, a thermometer is a felt and known object, and cold-and-further-down
+  is a model a blind child owns as fully as any other. The reason is on the record for the seat
+  that will know better than I do."*
+
+**And her standing note for tranches two to ten**: the bang distinction holds unchanged — *"one
+jump at a time!"* was warmth and stayed; *"you need to round up!"* was pressure and went. **The
+register call is per sentence, not per punctuation mark.** The class's opening character, in her
+words: five of twelve amended, all for faults no scan sees — exactly what a staff-reviewer value
+predicts.
