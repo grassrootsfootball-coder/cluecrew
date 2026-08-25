@@ -19966,3 +19966,12 @@ every one now in a non-serving state, the class CLOSED BY STATE; placeholder tok
 the R65 `current-reviewer` placeholder — **21 library rows**. Each membership on the artefact:
 any ruling scoped to where someone happened to be reading is now findable for the cost of a
 query, and the walk is repeatable.
+
+**R704 correction, same turn, own fault**: the placeholder class's two library rows are FALSE
+POSITIVES — `maths-67-dropped-internal-placeholder` and `maths-31-dropping-the-zero-in-money`
+carry "placeholder" as PLACE-VALUE CONTENT (the zero-placeholder misconception a child is taught),
+not as authoring metadata. **The walk broke the finding it was built on one turn after it was
+registered** — a marker is authoring metadata, not a content word, and a marker scanner that
+matches a content word accuses the curriculum of being a costume. The item-side zero and the
+never/ghost/current classes stand; the placeholder class's library membership corrects to ZERO,
+and the next walk's placeholder pattern must exclude content fields where the word is the maths.
