@@ -20140,3 +20140,52 @@ row that does resolve: `tierRationale`, `sourcedFrom`, `mechanismLedger`, `attra
 `lineRefs` is filled. For `import-nvr-reworded-hints`, the description column is populated from
 other paths, and whether this import's descriptions differ cannot be decided without a per-row
 diff of the source — stated, not approximated.
+
+## R709 — The reissue was refused, not lost; the group rules cross; the six strip; 13 and 16 are units
+
+**THE REISSUE OUTRANKS THE REST, AND THE ANSWER IS NOT A LOSS: the five were NEVER IMPORTED —
+HELD AT THE GATE, each for a named content fault that still stands.** Derived from the rows and
+the door, never inferred: 0 item rows, 0 attribution events, 0 admin-audit rows, 0 content-write-log
+rows; **each cluster carries a HOLE exactly at the reissued slot with every sibling present**
+(ENG-018 holds RB-02…RB-10 and RB-12; ENG-019 lacks only BV-02; ENG-023 only RT-08; ENG-027 only
+RR-08) — so they were not imported under other ids. **And the door re-stated its refusal THIS
+TURN**, `import-reissued-items.ts` run report-only: `ENG-018-RB-01` US spelling *favoring*,
+`ENG-018-RB-11` *traveling*, `ENG-019-BV-02` banned *quick* under the no-urgency stance,
+`ENG-023-RT-08` *fibers* in an option value, `ENG-027-RR-08` *realized*. The sixth,
+`ENG-015-CC-12`, passed the same gate and landed 2026-08-19 (one INSERT, no events) — three days
+after its siblings, so its presence is the path working on the one row that passed, not evidence
+the reissue landed. `import-reissued-six.ts` could never have landed any of them: its write path
+is UNCONDITIONALLY CUT under R491/R484. **Limits stated first**: the write log cannot see before
+2026-08-16T11:27:29Z, so a removal earlier than that would leave no trace in it — what rules
+removal out within coverage is that 1,400 Item DELETEs ARE logged and none names these five, and
+no INSERT for them exists at all.
+
+**THE CLASS, and it is the inverse of the field-without-a-column**: **a refusal that is reported
+but not routed is indistinguishable from a success nobody checked.** The door did everything
+right — it named five faults, on every run, for six days. There the door was silent and the loss
+invisible; here the door spoke and no one was listening. A reissue everyone believed landed is
+worse than a dropped field precisely because the evidence was sitting in the console.
+
+**The units reconciliation (R690's class, recorded as such, not as divergence)**: Cowork walks
+BANK FILES — vr02-bank 13 + vr02-fixes 3 = **16**; this side walks SERVING ROWS — **13**, and
+vr02-fixes has no serving rows of its own. Same corpus, two units, both counts correct in their
+own unit. **Both stores independently found the same three key-sharing failures (items 15, 18 and
+22), including the 22 no reading had named** — the test converging from two directions on a row
+neither reviewer had looked at.
+
+**The six unruled letter-count rows STRIPPED** on David's ruling that letter-count is refused full
+stop: items 20, 21, 22, 23, 24, 25, tags to null, seats empty, verdicts recorded beside the
+drafter's claim. **Row 22 also fails the key-sharing test** — key `cat-dog`, both three letters —
+and is the only one of the six that does; the other five strip on the class ruling alone, and the
+artefact says which ground each rests on.
+
+**THE TWENTY-FIVE GROUP RULES CROSSED VERBATIM** from `Item.drafterNote`, with each row's words,
+key, distractors and tags beside its rule. Her ground: *"everything I have judged in case-vr-02 I
+judged by reconstructing the group rule from the five words… the rule was sitting on the bank row
+the whole time, and neither the serving store nor I could see it."* She re-reads the eighteen
+against the rules rather than trusting the reconstructions — and the three empty seats cannot be
+authored honestly until the rule they must be wrong about is stated.
+
+**Her import ruling, recorded**: *an import that cannot carry a field names it at the door, and a
+field named at the door is a finding, not a footnote* — already implemented at the vr-banks door
+(R707), and now with its reason on the register.
