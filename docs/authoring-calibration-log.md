@@ -19931,3 +19931,38 @@ by reference, `walkScriptStatus` and approver stamped on each.
   was right and its scope was an accident of where the reviewer happened to be reading. A ruling
   about a CLASS walks the whole estate the day it is made, or the unwalked remainder is where the
   class keeps living.
+
+## R704 — The twenty-five enter the state; the generator names a position, not a pull; the marker classes walk
+
+**The twenty-five moved LIVE → NEVER_SHIPPABLE** on David's ruling (sha256 `24982012…98b1db6`),
+membership per the 146 landing, events on each — **and the holds LIFTED INTO THE STATE, never
+into service**: all twenty-five records moved to LIFTED_HOLDS citing the ruling digest, and
+SERVING_HOLDS is empty again as a fact. **Both cases confirmed at exactly twenty-five genuine
+LIVE rows after the move** — the seeds are gone from every filter by STATE now, not by hold.
+
+**Her 147th landed** (`annie-147-for-code.md`, sha256 `e61baa5a…42fe039`; landing artefact
+`annie-147-landing-d6d645e7f37ca5b3.json`, file sha256 `d6d645e7…985cff1`): the mint's
+description WIDENED from shared property to genuine link — her "at zero carriers" read precisely
+on the artefact as zero LIVE carriers, the five DRAFT carriers stated beside it; **the 13/14
+retags arrived ALREADY IN AUTHORED STATE** — the 145th's five-row sweep had carried both to the
+mint before her per-row ruling crossed; convergent, no write, the reconciliation recorded (R599's
+re-run discipline); row 16's surface-link confirmed on its merits, evented.
+
+**THE GENERATOR ANSWERED THE THREE PULLS FROM ITS OWN CODE, and the answer ends the question:
+it names a POSITION, not a pull.** `oddOnesOut()` builds every row from one template —
+[key] [mixed, m:0] [group-pair, m:1] [mixed, m:0] — where m indexes [partial-group,
+surface-link]. **The surface-link tag was an INDEX applied to whatever pair the category
+arithmetic produced**; at tiers one and two the arithmetic happened to yield initial-sound pairs
+and the tag happened true; at tiers three and four the coincidence ran out. Rows 15 and 18 pair
+two group members; row 17's pair shares nothing; no drafter-intended pull exists to cross. **Per
+her ruling the branch selects itself: THE THREE OPTIONS RE-AUTHOR.** No tag proposed from this
+side; the rows cannot pass phase two on these options. (The a36 lesson at generator scale: the
+attractor is where the drafter judges the pull to be — and this drafter was a loop index.)
+
+**THE MARKER-CLASS WALK, estate-wide, every ruled class**: never-shippable markers — 40 carriers,
+every one now in a non-serving state, the class CLOSED BY STATE; placeholder tokens — 0 items,
+**2 library rows** (membership on the artefact); the R94 ghost reviewer — **299 items carry
+`human:staff-reviewer@cluecrew.test` in reviewedBy and 45 library rows in approvedBy**;
+the R65 `current-reviewer` placeholder — **21 library rows**. Each membership on the artefact:
+any ruling scoped to where someone happened to be reading is now findable for the cost of a
+query, and the walk is repeatable.
