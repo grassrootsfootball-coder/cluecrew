@@ -20004,3 +20004,41 @@ five; what differs is whether a pull EXISTS IN THE WORDS. Four do — trumpet-ba
 knife-thorn (pierce), candle-mirror (reflection), juice-paint (pourable), each read per row by
 her 145th/147th — and **row 15's duck-crow rests on the loop index alone: two group members, no
 link beyond membership. It JOINS THE RE-AUTHORING**; the set is rows 15, 17, 18, option D each.
+
+## R706 — The drafter's pull existed all along: R704 corrected at the builder, the strip refused, the declarations cross
+
+**THE PREMISE CORRECTION, owned before anything landed**: R704's "the generator names a position,
+not a pull" was the right-shaped answer about the WRONG BUILDER — `oddOnesOut()` built the
+REMOVED `gen-*` items, and the serving `bank-vr-02-*` rows came through `import-vr-banks.ts` from
+the AUTHORED bank `vr02-bank.json` (sha256 `7ce96804…8de3f076`, provenance
+`ai-draft:cowork-vocab-banks`), **where the drafter DECLARED a pull per option** — and the import
+carried `misconceptionId` and SILENTLY DROPPED the `misconception` rationale field: no column held
+it, and this door did not name what it could not home (against R691's rule; the class's second
+instance, this one years quieter). **The R173 class exactly: the template shape coinciding is what
+made the wrong attribution look verified; the CATEGORIES words failing to match is what broke it
+open.** Her 149th's positional-fill finding stands TRUE OF THE gen-* ROWS and does not reach
+these; her suspension was reasoned on this side's mis-attribution, which is owned here.
+
+**THE DECLARED PULLS, verbatim from the bank**: duck-crow *"grouped by letter-count (both have
+four letters) instead of meaning; both are birds"*; oval-star *"by letter-count (both have four
+letters)"*; cow-hen *"by letter-count (both have three letters)"*. **LETTER-COUNT — a look-class
+pull she has not ruled out.** So the 147th's own rule selects the branch on the corrected
+premise: **the declarations CROSS TO HER PER ROW, and the tag-strip does NOT execute** — David's
+row-15 strip instruction rested on "no pull findable", and the pull has been found; per R677 the
+order's premise is corrected and the ruling returns to her with the drafter's claim in front of
+her. Whether letter-count is a pull a child actually feels is exactly the judgement the a36
+discipline routes to the reviewer. Artefact:
+`vr02-pulls-found-and-crossing-ecd4da8fd3d0e75b.json`, file sha256
+`ecd4da8fd3d0e75b96c7745dfdfe0080d31465252f71fcdcd31c470055386f4a` — the three rows whole (stems,
+the bank's own group rules, every option, the declared pulls) for Annie AND for Cowork, whose
+named blocker (no bank-vr-02 content to read) clears with it.
+
+**Rows 11–14 stand as David lifted them** — retags standing on pulls findable in the words,
+awaiting her per-row confirmation — with the drafter's own rationale now crossing BESIDE each,
+so her confirmation reads the words and the claim together. Events on all four.
+
+**THE CAPABILITY-STATEMENT FORM, registered as ruled**: state what the tables CANNOT show before
+stating what they show, and let the reader judge whether the limit bites. A count from a table
+that cannot see certain events is a bound, not a number, and which bound it is changes what any
+reading may claim (her words: *"nobody characterises what children met until the bytes say it"*).
+The form binds every future emission that answers a question with counts.
