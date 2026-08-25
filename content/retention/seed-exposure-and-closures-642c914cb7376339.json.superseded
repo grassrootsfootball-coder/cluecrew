@@ -1,0 +1,1700 @@
+{
+ "kind": "seed-exposure-and-closures",
+ "what": "The twenty-five seed rows verbatim with per-row serve records; the two RETIRED rows ruled into the state so the forty closes as a set; the tier-three five answered word by word.",
+ "authority": "annie-148-for-code.md, sha256 c1fac28d0c4ceebf767932424b98934b072b38fd3d1911c334e309b539fba5cc",
+ "capabilityStatement": {
+  "whatTheTablesCanShow": "Attempt rows record ANSWERED serves: per item — how many answers, by how many distinct children, over what date range, with correct/incorrect split. Those figures are exact, derived from the rows.",
+  "whatTheTablesCannotShow": "A serve that was DISPLAYED but never answered leaves NO queryable row: the pending activity lives only in Session.engineState and is overwritten by the next serve; no item_served event exists (the Event table records attempt_submitted, mode_opened and kin, not serves). So the counts below are a LOWER BOUND on exposure: every answered meeting is counted; a child who saw a seed row and abandoned the screen is invisible. Stated, not approximated."
+ },
+ "exposureSummary": {
+  "totalAnsweredServes": 3,
+  "distinctChildrenAcrossAllTwentyFive": 1,
+  "readingNote": "whether the exposure class reopens is her reading of the verbatim content below against these counts — nothing here judges it."
+ },
+ "theTwentyFive": [
+  {
+   "id": "seed-vr09-01",
+   "questionType": "vr-09-letter-series",
+   "tier": 1,
+   "stemVerbatim": {
+    "prompt": "Which letter comes next in the series?",
+    "series": [
+     "A",
+     "C",
+     "E",
+     "G"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 2,
+     "first": 0,
+     "answer": 8
+    }
+   },
+   "optionsVerbatim": [
+    {
+     "content": {
+      "value": "Y"
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-letter-series-direction"
+    },
+    {
+     "content": {
+      "value": "J"
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-letter-series-off-by-one"
+    },
+    {
+     "content": {
+      "value": "I"
+     },
+     "isCorrect": true,
+     "misconceptionId": null
+    },
+    {
+     "content": {
+      "value": "K"
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-letter-series-step-repeat"
+    }
+   ],
+   "key": {
+    "content": {
+     "value": "I"
+    }
+   },
+   "explanationVerbatim": {
+    "note": "synthetic seed item — never shippable",
+    "walkScript": "Start with the hop A to C. Every hop adds two to the letter. That drops I right after G. H stops a letter short, K overshoots, and E turns back.",
+    "walkScriptBatch": "VR-WALKSCRIPTS-FREE-TEN",
+    "walkScriptStatus": "DRAFT"
+   },
+   "serveRecord": {
+    "answeredServes": 0,
+    "distinctChildren": 0,
+    "dateRange": "NONE",
+    "answeredCorrect": 0,
+    "answeredIncorrect": 0
+   }
+  },
+  {
+   "id": "seed-vr09-02",
+   "questionType": "vr-09-letter-series",
+   "tier": 2,
+   "stemVerbatim": {
+    "prompt": "Which letter comes next in the series?",
+    "series": [
+     "B",
+     "E",
+     "H",
+     "K"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 3,
+     "first": 1,
+     "answer": 13
+    }
+   },
+   "optionsVerbatim": [
+    {
+     "content": {
+      "value": "N"
+     },
+     "isCorrect": true,
+     "misconceptionId": null
+    },
+    {
+     "content": {
+      "value": "Q"
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-letter-series-step-repeat"
+    },
+    {
+     "content": {
+      "value": "Y"
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-letter-series-direction"
+    },
+    {
+     "content": {
+      "value": "O"
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-letter-series-off-by-one"
+    }
+   ],
+   "key": {
+    "content": {
+     "value": "N"
+    }
+   },
+   "explanationVerbatim": {
+    "note": "synthetic seed item — never shippable",
+    "walkScript": "Put your eye on B and E. One letter to the next spans three places. Move three on from K to N. Q jumps too far, M falls short, and H slides down.",
+    "walkScriptBatch": "VR-WALKSCRIPTS-FREE-TEN",
+    "walkScriptStatus": "DRAFT"
+   },
+   "serveRecord": {
+    "answeredServes": 0,
+    "distinctChildren": 0,
+    "dateRange": "NONE",
+    "answeredCorrect": 0,
+    "answeredIncorrect": 0
+   }
+  },
+  {
+   "id": "seed-vr09-03",
+   "questionType": "vr-09-letter-series",
+   "tier": 3,
+   "stemVerbatim": {
+    "prompt": "Which letter comes next in the series?",
+    "series": [
+     "C",
+     "G",
+     "K",
+     "O"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 4,
+     "first": 2,
+     "answer": 18
+    }
+   },
+   "optionsVerbatim": [
+    {
+     "content": {
+      "value": "S"
+     },
+     "isCorrect": true,
+     "misconceptionId": null
+    },
+    {
+     "content": {
+      "value": "W"
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-letter-series-step-repeat"
+    },
+    {
+     "content": {
+      "value": "Y"
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-letter-series-direction"
+    },
+    {
+     "content": {
+      "value": "T"
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-letter-series-off-by-one"
+    }
+   ],
+   "key": {
+    "content": {
+     "value": "S"
+    }
+   },
+   "explanationVerbatim": {
+    "note": "synthetic seed item — never shippable",
+    "walkScript": "See how C grows into G. The step is four letters. The stop past O is S. R lands just before S; W overshoots and K reverses.",
+    "walkScriptBatch": "VR-WALKSCRIPTS-FREE-TEN",
+    "walkScriptStatus": "DRAFT"
+   },
+   "serveRecord": {
+    "answeredServes": 0,
+    "distinctChildren": 0,
+    "dateRange": "NONE",
+    "answeredCorrect": 0,
+    "answeredIncorrect": 0
+   }
+  },
+  {
+   "id": "seed-vr09-04",
+   "questionType": "vr-09-letter-series",
+   "tier": 4,
+   "stemVerbatim": {
+    "prompt": "Which letter comes next in the series?",
+    "series": [
+     "D",
+     "F",
+     "H",
+     "J"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 2,
+     "first": 3,
+     "answer": 11
+    }
+   },
+   "optionsVerbatim": [
+    {
+     "content": {
+      "value": "L"
+     },
+     "isCorrect": true,
+     "misconceptionId": null
+    },
+    {
+     "content": {
+      "value": "N"
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-letter-series-step-repeat"
+    },
+    {
+     "content": {
+      "value": "B"
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-letter-series-direction"
+    },
+    {
+     "content": {
+      "value": "M"
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-letter-series-off-by-one"
+    }
+   ],
+   "key": {
+    "content": {
+     "value": "L"
+    }
+   },
+   "explanationVerbatim": {
+    "note": "synthetic seed item — never shippable",
+    "walkScript": "Measure the step F to H. The count rises by two. So the trail carries on to L. H heads backward, N doubles the step, and K comes up short.",
+    "walkScriptBatch": "VR-WALKSCRIPTS-FREE-TEN",
+    "walkScriptStatus": "DRAFT"
+   },
+   "serveRecord": {
+    "answeredServes": 0,
+    "distinctChildren": 0,
+    "dateRange": "NONE",
+    "answeredCorrect": 0,
+    "answeredIncorrect": 0
+   }
+  },
+  {
+   "id": "seed-vr09-05",
+   "questionType": "vr-09-letter-series",
+   "tier": 5,
+   "stemVerbatim": {
+    "prompt": "Which letter comes next in the series?",
+    "series": [
+     "E",
+     "H",
+     "K",
+     "N"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 3,
+     "first": 4,
+     "answer": 16
+    }
+   },
+   "optionsVerbatim": [
+    {
+     "content": {
+      "value": "Q"
+     },
+     "isCorrect": true,
+     "misconceptionId": null
+    },
+    {
+     "content": {
+      "value": "T"
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-letter-series-step-repeat"
+    },
+    {
+     "content": {
+      "value": "B"
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-letter-series-direction"
+    },
+    {
+     "content": {
+      "value": "R"
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-letter-series-off-by-one"
+    }
+   ],
+   "key": {
+    "content": {
+     "value": "Q"
+    }
+   },
+   "explanationVerbatim": {
+    "note": "synthetic seed item — never shippable",
+    "walkScript": "Begin at the pair E and H. The rule adds three letters to each one. Three steps past N is Q. Stopping at P is one shy, T is one long, and K retreats.",
+    "walkScriptBatch": "VR-WALKSCRIPTS-FREE-TEN",
+    "walkScriptStatus": "DRAFT"
+   },
+   "serveRecord": {
+    "answeredServes": 0,
+    "distinctChildren": 0,
+    "dateRange": "NONE",
+    "answeredCorrect": 0,
+    "answeredIncorrect": 0
+   }
+  },
+  {
+   "id": "seed-vr09-06",
+   "questionType": "vr-09-letter-series",
+   "tier": 1,
+   "stemVerbatim": {
+    "prompt": "Which letter comes next in the series?",
+    "series": [
+     "A",
+     "E",
+     "I",
+     "M"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 4,
+     "first": 0,
+     "answer": 16
+    }
+   },
+   "optionsVerbatim": [
+    {
+     "content": {
+      "value": "W"
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-letter-series-direction"
+    },
+    {
+     "content": {
+      "value": "Q"
+     },
+     "isCorrect": true,
+     "misconceptionId": null
+    },
+    {
+     "content": {
+      "value": "U"
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-letter-series-step-repeat"
+    },
+    {
+     "content": {
+      "value": "R"
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-letter-series-off-by-one"
+    }
+   ],
+   "key": {
+    "content": {
+     "value": "Q"
+    }
+   },
+   "explanationVerbatim": {
+    "note": "synthetic seed item — never shippable",
+    "walkScript": "Trace the move I to M. It climbs four places onward. From M, go four more to find Q. U sails past, I drops back, and P pulls up early.",
+    "walkScriptBatch": "VR-WALKSCRIPTS-FREE-TEN",
+    "walkScriptStatus": "DRAFT"
+   },
+   "serveRecord": {
+    "answeredServes": 0,
+    "distinctChildren": 0,
+    "dateRange": "NONE",
+    "answeredCorrect": 0,
+    "answeredIncorrect": 0
+   }
+  },
+  {
+   "id": "seed-vr09-07",
+   "questionType": "vr-09-letter-series",
+   "tier": 2,
+   "stemVerbatim": {
+    "prompt": "Which letter comes next in the series?",
+    "series": [
+     "B",
+     "D",
+     "F",
+     "H"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 2,
+     "first": 1,
+     "answer": 9
+    }
+   },
+   "optionsVerbatim": [
+    {
+     "content": {
+      "value": "L"
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-letter-series-step-repeat"
+    },
+    {
+     "content": {
+      "value": "Z"
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-letter-series-direction"
+    },
+    {
+     "content": {
+      "value": "K"
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-letter-series-off-by-one"
+    },
+    {
+     "content": {
+      "value": "J"
+     },
+     "isCorrect": true,
+     "misconceptionId": null
+    }
+   ],
+   "key": {
+    "content": {
+     "value": "J"
+    }
+   },
+   "explanationVerbatim": {
+    "note": "synthetic seed item — never shippable",
+    "walkScript": "Notice the space B to D. You go up two letters. Count two from H for J. I stops a letter short, L overshoots, and F turns back.",
+    "walkScriptBatch": "VR-WALKSCRIPTS-FREE-TEN",
+    "walkScriptStatus": "DRAFT"
+   },
+   "serveRecord": {
+    "answeredServes": 0,
+    "distinctChildren": 0,
+    "dateRange": "NONE",
+    "answeredCorrect": 0,
+    "answeredIncorrect": 0
+   }
+  },
+  {
+   "id": "seed-vr09-08",
+   "questionType": "vr-09-letter-series",
+   "tier": 3,
+   "stemVerbatim": {
+    "prompt": "Which letter comes next in the series?",
+    "series": [
+     "C",
+     "F",
+     "I",
+     "L"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 3,
+     "first": 2,
+     "answer": 14
+    }
+   },
+   "optionsVerbatim": [
+    {
+     "content": {
+      "value": "O"
+     },
+     "isCorrect": true,
+     "misconceptionId": null
+    },
+    {
+     "content": {
+      "value": "R"
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-letter-series-step-repeat"
+    },
+    {
+     "content": {
+      "value": "Z"
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-letter-series-direction"
+    },
+    {
+     "content": {
+      "value": "P"
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-letter-series-off-by-one"
+    }
+   ],
+   "key": {
+    "content": {
+     "value": "O"
+    }
+   },
+   "explanationVerbatim": {
+    "note": "synthetic seed item — never shippable",
+    "walkScript": "Look at the gap C to F. Each letter moves forward three places. After L, count three to O. R jumps too far, N falls short, and I slides down.",
+    "walkScriptBatch": "VR-WALKSCRIPTS-FREE-TEN",
+    "walkScriptStatus": "DRAFT"
+   },
+   "serveRecord": {
+    "answeredServes": 0,
+    "distinctChildren": 0,
+    "dateRange": "NONE",
+    "answeredCorrect": 0,
+    "answeredIncorrect": 0
+   }
+  },
+  {
+   "id": "seed-vr09-09",
+   "questionType": "vr-09-letter-series",
+   "tier": 4,
+   "stemVerbatim": {
+    "prompt": "Which letter comes next in the series?",
+    "series": [
+     "D",
+     "H",
+     "L",
+     "P"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 4,
+     "first": 3,
+     "answer": 19
+    }
+   },
+   "optionsVerbatim": [
+    {
+     "content": {
+      "value": "T"
+     },
+     "isCorrect": true,
+     "misconceptionId": null
+    },
+    {
+     "content": {
+      "value": "Z"
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-letter-series-direction"
+    },
+    {
+     "content": {
+      "value": "U"
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-letter-series-off-by-one"
+    },
+    {
+     "content": {
+      "value": "X"
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-letter-series-step-repeat"
+    }
+   ],
+   "key": {
+    "content": {
+     "value": "T"
+    }
+   },
+   "explanationVerbatim": {
+    "note": "synthetic seed item — never shippable",
+    "walkScript": "Start with the hop D to H. Every hop adds four to the letter. That drops T right after P. S lands just before T; X overshoots and L reverses.",
+    "walkScriptBatch": "VR-WALKSCRIPTS-FREE-TEN",
+    "walkScriptStatus": "DRAFT"
+   },
+   "serveRecord": {
+    "answeredServes": 0,
+    "distinctChildren": 0,
+    "dateRange": "NONE",
+    "answeredCorrect": 0,
+    "answeredIncorrect": 0
+   }
+  },
+  {
+   "id": "seed-vr09-10",
+   "questionType": "vr-09-letter-series",
+   "tier": 5,
+   "stemVerbatim": {
+    "prompt": "Which letter comes next in the series?",
+    "series": [
+     "E",
+     "G",
+     "I",
+     "K"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 2,
+     "first": 4,
+     "answer": 12
+    }
+   },
+   "optionsVerbatim": [
+    {
+     "content": {
+      "value": "M"
+     },
+     "isCorrect": true,
+     "misconceptionId": null
+    },
+    {
+     "content": {
+      "value": "O"
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-letter-series-step-repeat"
+    },
+    {
+     "content": {
+      "value": "C"
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-letter-series-direction"
+    },
+    {
+     "content": {
+      "value": "N"
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-letter-series-off-by-one"
+    }
+   ],
+   "key": {
+    "content": {
+     "value": "M"
+    }
+   },
+   "explanationVerbatim": {
+    "note": "synthetic seed item — never shippable",
+    "walkScript": "Put your eye on E and G. One letter to the next spans two places. Move two on from K to M. I heads backward, O doubles the step, and L comes up short.",
+    "walkScriptBatch": "VR-WALKSCRIPTS-FREE-TEN",
+    "walkScriptStatus": "DRAFT"
+   },
+   "serveRecord": {
+    "answeredServes": 0,
+    "distinctChildren": 0,
+    "dateRange": "NONE",
+    "answeredCorrect": 0,
+    "answeredIncorrect": 0
+   }
+  },
+  {
+   "id": "seed-vr09-11",
+   "questionType": "vr-09-letter-series",
+   "tier": 1,
+   "stemVerbatim": {
+    "prompt": "Which letter comes next in the series?",
+    "series": [
+     "A",
+     "D",
+     "G",
+     "J"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 3,
+     "first": 0,
+     "answer": 12
+    }
+   },
+   "optionsVerbatim": [
+    {
+     "content": {
+      "value": "M"
+     },
+     "isCorrect": true,
+     "misconceptionId": null
+    },
+    {
+     "content": {
+      "value": "P"
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-letter-series-step-repeat"
+    },
+    {
+     "content": {
+      "value": "X"
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-letter-series-direction"
+    },
+    {
+     "content": {
+      "value": "N"
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-letter-series-off-by-one"
+    }
+   ],
+   "key": {
+    "content": {
+     "value": "M"
+    }
+   },
+   "explanationVerbatim": {
+    "note": "synthetic seed item — never shippable",
+    "walkScript": "See how A grows into D. The step is three letters. The stop past J is M. Stopping at L is one shy, P is one long, and G retreats.",
+    "walkScriptBatch": "VR-WALKSCRIPTS-FREE-TEN",
+    "walkScriptStatus": "DRAFT"
+   },
+   "serveRecord": {
+    "answeredServes": 0,
+    "distinctChildren": 0,
+    "dateRange": "NONE",
+    "answeredCorrect": 0,
+    "answeredIncorrect": 0
+   }
+  },
+  {
+   "id": "seed-vr11-01",
+   "questionType": "vr-11-number-series",
+   "tier": 3,
+   "stemVerbatim": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     3,
+     5,
+     9,
+     15
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 15,
+     "step": 2,
+     "first": 3,
+     "answer": 23,
+     "prevStep": 6
+    }
+   },
+   "optionsVerbatim": [
+    {
+     "content": {
+      "value": 23
+     },
+     "isCorrect": true,
+     "misconceptionId": null
+    },
+    {
+     "content": {
+      "value": 21
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-series-step-carryover"
+    },
+    {
+     "content": {
+      "value": 24
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-series-off-by-one"
+    }
+   ],
+   "key": {
+    "content": {
+     "value": 23
+    }
+   },
+   "explanationVerbatim": {
+    "note": "synthetic seed item — never shippable",
+    "walkScript": "Look at 3 and 5. Each gap adds one more: 2, 3, 4. A gap of 5 grows 12 to 17. Here 16 and 18 land either side; 7 counts backward.",
+    "walkScriptBatch": "VR-WALKSCRIPTS-FREE-TEN",
+    "walkScriptStatus": "DRAFT"
+   },
+   "serveRecord": {
+    "answeredServes": 1,
+    "distinctChildren": 1,
+    "dateRange": "2026-07-27T17:38:44.818Z … 2026-07-27T17:38:44.818Z",
+    "answeredCorrect": 1,
+    "answeredIncorrect": 0
+   }
+  },
+  {
+   "id": "seed-vr11-02",
+   "questionType": "vr-11-number-series",
+   "tier": 3,
+   "stemVerbatim": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     4,
+     7,
+     12,
+     19
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 19,
+     "step": 3,
+     "first": 4,
+     "answer": 28,
+     "prevStep": 7
+    }
+   },
+   "optionsVerbatim": [
+    {
+     "content": {
+      "value": 28
+     },
+     "isCorrect": true,
+     "misconceptionId": null
+    },
+    {
+     "content": {
+      "value": 26
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-series-step-carryover"
+    },
+    {
+     "content": {
+      "value": 29
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-series-off-by-one"
+    }
+   ],
+   "key": {
+    "content": {
+     "value": 28
+    }
+   },
+   "explanationVerbatim": {
+    "note": "synthetic seed item — never shippable",
+    "walkScript": "Begin at 4 and 7. The gaps grow: 3, 4, 5. Add 6 to 16 for 22. Then 21 and 23 miss by one; 10 runs backward.",
+    "walkScriptBatch": "VR-WALKSCRIPTS-FREE-TEN",
+    "walkScriptStatus": "DRAFT"
+   },
+   "serveRecord": {
+    "answeredServes": 1,
+    "distinctChildren": 1,
+    "dateRange": "2026-07-27T17:38:44.821Z … 2026-07-27T17:38:44.821Z",
+    "answeredCorrect": 0,
+    "answeredIncorrect": 1
+   }
+  },
+  {
+   "id": "seed-vr11-03",
+   "questionType": "vr-11-number-series",
+   "tier": 3,
+   "stemVerbatim": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     5,
+     9,
+     15,
+     23
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 23,
+     "step": 4,
+     "first": 5,
+     "answer": 33,
+     "prevStep": 8
+    }
+   },
+   "optionsVerbatim": [
+    {
+     "content": {
+      "value": 33
+     },
+     "isCorrect": true,
+     "misconceptionId": null
+    },
+    {
+     "content": {
+      "value": 31
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-series-step-carryover"
+    },
+    {
+     "content": {
+      "value": 34
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-series-off-by-one"
+    }
+   ],
+   "key": {
+    "content": {
+     "value": 33
+    }
+   },
+   "explanationVerbatim": {
+    "note": "synthetic seed item — never shippable",
+    "walkScript": "Point to 5 and 9. Each jump climbs one: 4, 5, 6. A jump of 7 turns 20 into 27. Beside it 26 and 28 drift one off; 13 counts down.",
+    "walkScriptBatch": "VR-WALKSCRIPTS-FREE-TEN",
+    "walkScriptStatus": "DRAFT"
+   },
+   "serveRecord": {
+    "answeredServes": 1,
+    "distinctChildren": 1,
+    "dateRange": "2026-07-27T17:38:44.822Z … 2026-07-27T17:38:44.822Z",
+    "answeredCorrect": 1,
+    "answeredIncorrect": 0
+   }
+  },
+  {
+   "id": "seed-vr11-04",
+   "questionType": "vr-11-number-series",
+   "tier": 3,
+   "stemVerbatim": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     6,
+     11,
+     18,
+     27
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 27,
+     "step": 5,
+     "first": 6,
+     "answer": 38,
+     "prevStep": 9
+    }
+   },
+   "optionsVerbatim": [
+    {
+     "content": {
+      "value": 38
+     },
+     "isCorrect": true,
+     "misconceptionId": null
+    },
+    {
+     "content": {
+      "value": 36
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-series-step-carryover"
+    },
+    {
+     "content": {
+      "value": 39
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-series-off-by-one"
+    }
+   ],
+   "key": {
+    "content": {
+     "value": 38
+    }
+   },
+   "explanationVerbatim": {
+    "note": "synthetic seed item — never shippable",
+    "walkScript": "Read 6, 11, 17 first. The gaps widen: 5, 6, 7. So 24 plus 8 makes 32. Here 31 and 33 sit either side; 16 flips around.",
+    "walkScriptBatch": "VR-WALKSCRIPTS-FREE-TEN",
+    "walkScriptStatus": "DRAFT"
+   },
+   "serveRecord": {
+    "answeredServes": 0,
+    "distinctChildren": 0,
+    "dateRange": "NONE",
+    "answeredCorrect": 0,
+    "answeredIncorrect": 0
+   }
+  },
+  {
+   "id": "seed-vr11-05",
+   "questionType": "vr-11-number-series",
+   "tier": 3,
+   "stemVerbatim": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     7,
+     9,
+     13,
+     19
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 19,
+     "step": 2,
+     "first": 7,
+     "answer": 27,
+     "prevStep": 6
+    }
+   },
+   "optionsVerbatim": [
+    {
+     "content": {
+      "value": 27
+     },
+     "isCorrect": true,
+     "misconceptionId": null
+    },
+    {
+     "content": {
+      "value": 25
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-series-step-carryover"
+    },
+    {
+     "content": {
+      "value": 28
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-series-off-by-one"
+    }
+   ],
+   "key": {
+    "content": {
+     "value": 27
+    }
+   },
+   "explanationVerbatim": {
+    "note": "synthetic seed item — never shippable",
+    "walkScript": "Look at the step from 7 to 9. Each gap gains one: 2, 3, 4. A gap of 5 brings 16 to 21. Both 20 and 22 miss by a place; 11 goes backward.",
+    "walkScriptBatch": "VR-WALKSCRIPTS-FREE-TEN",
+    "walkScriptStatus": "DRAFT"
+   },
+   "serveRecord": {
+    "answeredServes": 0,
+    "distinctChildren": 0,
+    "dateRange": "NONE",
+    "answeredCorrect": 0,
+    "answeredIncorrect": 0
+   }
+  },
+  {
+   "id": "seed-vr11-06",
+   "questionType": "vr-11-number-series",
+   "tier": 3,
+   "stemVerbatim": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     8,
+     11,
+     16,
+     23
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 23,
+     "step": 3,
+     "first": 8,
+     "answer": 32,
+     "prevStep": 7
+    }
+   },
+   "optionsVerbatim": [
+    {
+     "content": {
+      "value": 32
+     },
+     "isCorrect": true,
+     "misconceptionId": null
+    },
+    {
+     "content": {
+      "value": 30
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-series-step-carryover"
+    },
+    {
+     "content": {
+      "value": 33
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-series-off-by-one"
+    }
+   ],
+   "key": {
+    "content": {
+     "value": 32
+    }
+   },
+   "explanationVerbatim": {
+    "note": "synthetic seed item — never shippable",
+    "walkScript": "Start at 8 and 11. The gaps step up: 3, 4, 5. Add 6 to 20 for 26. Nearby 25 and 27 land one away; 14 turns backward.",
+    "walkScriptBatch": "VR-WALKSCRIPTS-FREE-TEN",
+    "walkScriptStatus": "DRAFT"
+   },
+   "serveRecord": {
+    "answeredServes": 0,
+    "distinctChildren": 0,
+    "dateRange": "NONE",
+    "answeredCorrect": 0,
+    "answeredIncorrect": 0
+   }
+  },
+  {
+   "id": "seed-vr11-07",
+   "questionType": "vr-11-number-series",
+   "tier": 3,
+   "stemVerbatim": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     9,
+     13,
+     19,
+     27
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 27,
+     "step": 4,
+     "first": 9,
+     "answer": 37,
+     "prevStep": 8
+    }
+   },
+   "optionsVerbatim": [
+    {
+     "content": {
+      "value": 35
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-series-step-carryover"
+    },
+    {
+     "content": {
+      "value": 38
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-series-off-by-one"
+    },
+    {
+     "content": {
+      "value": 37
+     },
+     "isCorrect": true,
+     "misconceptionId": null
+    }
+   ],
+   "key": {
+    "content": {
+     "value": 37
+    }
+   },
+   "explanationVerbatim": {
+    "note": "synthetic seed item — never shippable",
+    "walkScript": "See 9 then 13. Each leap grows one: 4, 5, 6. A leap of 7 lifts 24 to 31. Then 30 and 32 slip one off; 17 runs back.",
+    "walkScriptBatch": "VR-WALKSCRIPTS-FREE-TEN",
+    "walkScriptStatus": "DRAFT"
+   },
+   "serveRecord": {
+    "answeredServes": 0,
+    "distinctChildren": 0,
+    "dateRange": "NONE",
+    "answeredCorrect": 0,
+    "answeredIncorrect": 0
+   }
+  },
+  {
+   "id": "seed-vr11-08",
+   "questionType": "vr-11-number-series",
+   "tier": 4,
+   "stemVerbatim": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     10,
+     15,
+     23,
+     34
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 34,
+     "step": 5,
+     "first": 10,
+     "answer": 48,
+     "prevStep": 11
+    }
+   },
+   "optionsVerbatim": [
+    {
+     "content": {
+      "value": 48
+     },
+     "isCorrect": true,
+     "misconceptionId": null
+    },
+    {
+     "content": {
+      "value": 45
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-series-step-carryover"
+    },
+    {
+     "content": {
+      "value": 49
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-series-off-by-one"
+    }
+   ],
+   "key": {
+    "content": {
+     "value": 48
+    }
+   },
+   "explanationVerbatim": {
+    "note": "synthetic seed item — never shippable",
+    "walkScript": "Find the gap 10 to 15. The gaps swell: 5, 6, 7. Add 8 to 28 for 36. Here 35 and 37 sit a step off; 20 counts down.",
+    "walkScriptBatch": "VR-WALKSCRIPTS-FREE-TEN",
+    "walkScriptStatus": "DRAFT"
+   },
+   "serveRecord": {
+    "answeredServes": 0,
+    "distinctChildren": 0,
+    "dateRange": "NONE",
+    "answeredCorrect": 0,
+    "answeredIncorrect": 0
+   }
+  },
+  {
+   "id": "seed-vr11-09",
+   "questionType": "vr-11-number-series",
+   "tier": 4,
+   "stemVerbatim": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     11,
+     13,
+     18,
+     26
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 26,
+     "step": 2,
+     "first": 11,
+     "answer": 37,
+     "prevStep": 8
+    }
+   },
+   "optionsVerbatim": [
+    {
+     "content": {
+      "value": 37
+     },
+     "isCorrect": true,
+     "misconceptionId": null
+    },
+    {
+     "content": {
+      "value": 34
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-series-step-carryover"
+    },
+    {
+     "content": {
+      "value": 38
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-series-off-by-one"
+    }
+   ],
+   "key": {
+    "content": {
+     "value": 37
+    }
+   },
+   "explanationVerbatim": {
+    "note": "synthetic seed item — never shippable",
+    "walkScript": "Point to 11 and 13. Each gap adds one: 2, 3, 4. A gap of 5 makes 25. Both 24 and 26 miss by one; 15 heads backward.",
+    "walkScriptBatch": "VR-WALKSCRIPTS-FREE-TEN",
+    "walkScriptStatus": "DRAFT"
+   },
+   "serveRecord": {
+    "answeredServes": 0,
+    "distinctChildren": 0,
+    "dateRange": "NONE",
+    "answeredCorrect": 0,
+    "answeredIncorrect": 0
+   }
+  },
+  {
+   "id": "seed-vr11-10",
+   "questionType": "vr-11-number-series",
+   "tier": 4,
+   "stemVerbatim": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     12,
+     15,
+     21,
+     30
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 30,
+     "step": 3,
+     "first": 12,
+     "answer": 42,
+     "prevStep": 9
+    }
+   },
+   "optionsVerbatim": [
+    {
+     "content": {
+      "value": 42
+     },
+     "isCorrect": true,
+     "misconceptionId": null
+    },
+    {
+     "content": {
+      "value": 39
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-series-step-carryover"
+    },
+    {
+     "content": {
+      "value": 43
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-series-off-by-one"
+    }
+   ],
+   "key": {
+    "content": {
+     "value": 42
+    }
+   },
+   "explanationVerbatim": {
+    "note": "synthetic seed item — never shippable",
+    "walkScript": "Read 12 and 15 across. The gaps build: 3, 4, 5. So 24 plus 6 lands on 30. Beside it 29 and 31 land either side; 18 slides back.",
+    "walkScriptBatch": "VR-WALKSCRIPTS-FREE-TEN",
+    "walkScriptStatus": "DRAFT"
+   },
+   "serveRecord": {
+    "answeredServes": 0,
+    "distinctChildren": 0,
+    "dateRange": "NONE",
+    "answeredCorrect": 0,
+    "answeredIncorrect": 0
+   }
+  },
+  {
+   "id": "seed-vr11-11",
+   "questionType": "vr-11-number-series",
+   "tier": 4,
+   "stemVerbatim": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     13,
+     17,
+     24,
+     34
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 34,
+     "step": 4,
+     "first": 13,
+     "answer": 47,
+     "prevStep": 10
+    }
+   },
+   "optionsVerbatim": [
+    {
+     "content": {
+      "value": 47
+     },
+     "isCorrect": true,
+     "misconceptionId": null
+    },
+    {
+     "content": {
+      "value": 44
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-series-step-carryover"
+    },
+    {
+     "content": {
+      "value": 48
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-series-off-by-one"
+    }
+   ],
+   "key": {
+    "content": {
+     "value": 47
+    }
+   },
+   "explanationVerbatim": {
+    "note": "synthetic seed item — never shippable",
+    "walkScript": "Look at 13 and 17. Each jump climbs: 4, 5, 6. A jump of 7 makes 28 into 35. Here 34 and 36 drift one off; 21 flips over.",
+    "walkScriptBatch": "VR-WALKSCRIPTS-FREE-TEN",
+    "walkScriptStatus": "DRAFT"
+   },
+   "serveRecord": {
+    "answeredServes": 0,
+    "distinctChildren": 0,
+    "dateRange": "NONE",
+    "answeredCorrect": 0,
+    "answeredIncorrect": 0
+   }
+  },
+  {
+   "id": "seed-vr11-12",
+   "questionType": "vr-11-number-series",
+   "tier": 4,
+   "stemVerbatim": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     14,
+     19,
+     27,
+     38
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 38,
+     "step": 5,
+     "first": 14,
+     "answer": 52,
+     "prevStep": 11
+    }
+   },
+   "optionsVerbatim": [
+    {
+     "content": {
+      "value": 52
+     },
+     "isCorrect": true,
+     "misconceptionId": null
+    },
+    {
+     "content": {
+      "value": 49
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-series-step-carryover"
+    },
+    {
+     "content": {
+      "value": 53
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-series-off-by-one"
+    }
+   ],
+   "key": {
+    "content": {
+     "value": 52
+    }
+   },
+   "explanationVerbatim": {
+    "note": "synthetic seed item — never shippable",
+    "walkScript": "Begin with 14 and 19. The gaps widen: 5, 6, 7. Add 8 to 32 for 40. Then 39 and 41 miss either side; 24 turns around.",
+    "walkScriptBatch": "VR-WALKSCRIPTS-FREE-TEN",
+    "walkScriptStatus": "DRAFT"
+   },
+   "serveRecord": {
+    "answeredServes": 0,
+    "distinctChildren": 0,
+    "dateRange": "NONE",
+    "answeredCorrect": 0,
+    "answeredIncorrect": 0
+   }
+  },
+  {
+   "id": "seed-vr11-13",
+   "questionType": "vr-11-number-series",
+   "tier": 4,
+   "stemVerbatim": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     15,
+     17,
+     22,
+     30
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 30,
+     "step": 2,
+     "first": 15,
+     "answer": 41,
+     "prevStep": 8
+    }
+   },
+   "optionsVerbatim": [
+    {
+     "content": {
+      "value": 41
+     },
+     "isCorrect": true,
+     "misconceptionId": null
+    },
+    {
+     "content": {
+      "value": 38
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-series-step-carryover"
+    },
+    {
+     "content": {
+      "value": 42
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-series-off-by-one"
+    }
+   ],
+   "key": {
+    "content": {
+     "value": 41
+    }
+   },
+   "explanationVerbatim": {
+    "note": "synthetic seed item — never shippable",
+    "walkScript": "See the step from 15 to 17. Each gap gains one: 2, 3, 4. A gap of 5 brings 24 to 29. Both 28 and 30 sit one off; 19 counts back.",
+    "walkScriptBatch": "VR-WALKSCRIPTS-FREE-TEN",
+    "walkScriptStatus": "DRAFT"
+   },
+   "serveRecord": {
+    "answeredServes": 0,
+    "distinctChildren": 0,
+    "dateRange": "NONE",
+    "answeredCorrect": 0,
+    "answeredIncorrect": 0
+   }
+  },
+  {
+   "id": "seed-vr11-14",
+   "questionType": "vr-11-number-series",
+   "tier": 4,
+   "stemVerbatim": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     16,
+     19,
+     25,
+     34
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 34,
+     "step": 3,
+     "first": 16,
+     "answer": 46,
+     "prevStep": 9
+    }
+   },
+   "optionsVerbatim": [
+    {
+     "content": {
+      "value": 46
+     },
+     "isCorrect": true,
+     "misconceptionId": null
+    },
+    {
+     "content": {
+      "value": 43
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-series-step-carryover"
+    },
+    {
+     "content": {
+      "value": 47
+     },
+     "isCorrect": false,
+     "misconceptionId": "vr-series-off-by-one"
+    }
+   ],
+   "key": {
+    "content": {
+     "value": 46
+    }
+   },
+   "explanationVerbatim": {
+    "note": "synthetic seed item — never shippable",
+    "walkScript": "Point to 16 and 19. The gaps grow: 3, 4, 5. Add 6 to 28 for 34. Nearby 33 and 35 land one away; 22 turns back.",
+    "walkScriptBatch": "VR-WALKSCRIPTS-FREE-TEN",
+    "walkScriptStatus": "DRAFT"
+   },
+   "serveRecord": {
+    "answeredServes": 0,
+    "distinctChildren": 0,
+    "dateRange": "NONE",
+    "answeredCorrect": 0,
+    "answeredIncorrect": 0
+   }
+  }
+ ],
+ "theFortyCloses": {
+  "thirteen": "seed-vr08-01..13 — NEVER_SHIPPABLE (R703)",
+  "twentyFive": "seed-vr09-01..11 + seed-vr11-01..14 — NEVER_SHIPPABLE (R704)",
+  "theTwo": [
+   {
+    "id": "seed-vr09-12",
+    "case": "case-vr-09 (vr-09-letter-series)",
+    "priorState": "RETIRED in both walks",
+    "newState": "NEVER_SHIPPABLE",
+    "answeredServes": "included in the pair figure below"
+   },
+   {
+    "id": "seed-vr09-13",
+    "case": "case-vr-09 (vr-09-letter-series)",
+    "priorState": "RETIRED in both walks",
+    "newState": "NEVER_SHIPPABLE",
+    "answeredServes": "included in the pair figure below"
+   }
+  ],
+  "theTwoAnsweredServes": 0,
+  "sum": "13 + 25 + 2 = 40. The forty is a closed set."
+ },
+ "theTierThreeFive": {
+  "question": "if the generator names no pull for 15/17/18, it names none for the tier-three five either — which stand on the words and which on the index?",
+  "answer": "The generator named the same position for all five; what differs is whether a pull EXISTS IN THE WORDS for her reading to verify. Four do; one does not.",
+  "perRow": [
+   {
+    "id": "bank-vr-02-two-odd-ones-out-11",
+    "pair": "trumpet-balloon",
+    "verdict": "PULL FINDABLE IN THE WORDS: both are blown — a genuine association, the mint's class; her 145th read exactly this pull per row. Stands on the words, not the index."
+   },
+   {
+    "id": "bank-vr-02-two-odd-ones-out-12",
+    "pair": "knife-thorn",
+    "verdict": "PULL FINDABLE IN THE WORDS: both pierce — genuine association; her 145th read it per row. Stands."
+   },
+   {
+    "id": "bank-vr-02-two-odd-ones-out-13",
+    "pair": "candle-mirror",
+    "verdict": "PULL FINDABLE IN THE WORDS: reflection-and-light association; her 147th read it per row. Stands."
+   },
+   {
+    "id": "bank-vr-02-two-odd-ones-out-14",
+    "pair": "juice-paint",
+    "verdict": "PULL FINDABLE IN THE WORDS: shared pourability; her 147th read it per row. Stands."
+   },
+   {
+    "id": "bank-vr-02-two-odd-ones-out-15",
+    "pair": "duck-crow",
+    "verdict": "RESTS ON THE LOOP INDEX ALONE: two group members (birds), no link beyond group membership — no pull in the words, none in the code. JOINS THE RE-AUTHORING with rows 17 and 18."
+   }
+  ],
+  "reAuthoringSet": "bank-vr-02-two-odd-ones-out-15, -17, -18 (option D each)"
+ }
+}

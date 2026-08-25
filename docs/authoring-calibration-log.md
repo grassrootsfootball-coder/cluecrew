@@ -19975,3 +19975,32 @@ registered** — a marker is authoring metadata, not a content word, and a marke
 matches a content word accuses the curriculum of being a costume. The item-side zero and the
 never/ghost/current classes stand; the placeholder class's library membership corrects to ZERO,
 and the next walk's placeholder pattern must exclude content fields where the word is the maths.
+
+## R705 — The exposure question answered from the bytes: no real child exists to have been exposed
+
+**Her 148th verified (`c1fac28d…9fba5cc`); the emission at
+`seed-exposure-and-closures-2ebed0f4324e14dc.json`, file sha256
+`2ebed0f4324e14dc7159254595eaaf22736653df1dda5d1dcf44aaed7af5805a` (first cut superseded with
+retention when the identity derivation was added — the artefact that decides an exposure question
+carries WHO the counts are about, not only how many).**
+
+**THE EXPOSURE, derived and bounded**: across all twenty-five rows — content verbatim on the
+artefact, every option with its correctness flag, key, hints — the Attempt table shows THREE
+answered serves by ONE distinct child, all on 2026-07-27, four milliseconds apart. **The one
+child is `seed-child-alex`, the seeded dev fixture, and the ChildProfile table holds ONLY the two
+seeded fixtures — no real child exists in this database at all.** Every answered serve of a seed
+row is seeded data, not a hand on a screen. **The capability boundary stated, never approximated
+(R60's question one, answered before it was asked)**: Attempts record ANSWERED serves only; a
+displayed-but-unanswered screen leaves no queryable row (no item_served event exists), so the
+counts are a floor — but the floor's population is bounded by the identity fact above. The
+reading is hers; the identity is arithmetic.
+
+**The forty closes as a set**: 13 (R703) + 25 (R704) + **seed-vr09-12/13 ruled RETIRED →
+NEVER_SHIPPABLE this run** (same marker, same class, one word for one fact; zero attempts on the
+pair) = 40, every id in a stated state.
+
+**The tier-three five, answered word by word**: the generator named the same position for all
+five; what differs is whether a pull EXISTS IN THE WORDS. Four do — trumpet-balloon (blown),
+knife-thorn (pierce), candle-mirror (reflection), juice-paint (pourable), each read per row by
+her 145th/147th — and **row 15's duck-crow rests on the loop index alone: two group members, no
+link beyond membership. It JOINS THE RE-AUTHORING**; the set is rows 15, 17, 18, option D each.

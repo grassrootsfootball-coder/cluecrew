@@ -1,0 +1,246 @@
+{
+ "kind": "vr-wholeness-census",
+ "what": "The gap as a figure: per-case wholeness over the 288, tags resolved against this store, her census checked against these rows.",
+ "authority": "annie-142-for-code.md, sha256 e5b87da0517339aeefb8487ff96be6ac28312455d30a7c226d14cfa176469cc4",
+ "wholenessDefinition": "derived per row (scripts/lib/item-wholeness.ts): every tag attested (exists, ACTIVE, reviewer-stamped) AND every tagged option carries an execution AND the hint-and-walk layer is non-empty. Phase-one content verification does not light a door (R699).",
+ "herCensus": {
+  "executions": 0,
+  "emptyLayers": 250,
+  "of": 288,
+  "distinctTags": 22,
+  "attestedTags": 1
+ },
+ "thisStore": {
+  "executions": 0,
+  "emptyLayers": 250,
+  "of": 288,
+  "distinctTags": 22,
+  "attestedTags": 1
+ },
+ "verdict": "AGREEMENT: her census reproduces from these rows exactly — 0 executions, 250 of 288 empty layers, 22 distinct tags, 1 attested.",
+ "perCase": [
+  {
+   "caseId": "case-vr-10",
+   "items": 25,
+   "whole": 0,
+   "withExecutions": 0,
+   "nonEmptyHintLayer": 25,
+   "doorLightsToday": false
+  },
+  {
+   "caseId": "case-vr-13",
+   "items": 25,
+   "whole": 0,
+   "withExecutions": 0,
+   "nonEmptyHintLayer": 0,
+   "doorLightsToday": false
+  },
+  {
+   "caseId": "case-vr-02",
+   "items": 25,
+   "whole": 0,
+   "withExecutions": 0,
+   "nonEmptyHintLayer": 0,
+   "doorLightsToday": false
+  },
+  {
+   "caseId": "case-vr-08",
+   "items": 38,
+   "whole": 0,
+   "withExecutions": 0,
+   "nonEmptyHintLayer": 13,
+   "doorLightsToday": false
+  },
+  {
+   "caseId": "case-vr-05",
+   "items": 25,
+   "whole": 0,
+   "withExecutions": 0,
+   "nonEmptyHintLayer": 0,
+   "doorLightsToday": false
+  },
+  {
+   "caseId": "case-vr-19",
+   "items": 25,
+   "whole": 0,
+   "withExecutions": 0,
+   "nonEmptyHintLayer": 0,
+   "doorLightsToday": false
+  },
+  {
+   "caseId": "case-vr-20",
+   "items": 25,
+   "whole": 0,
+   "withExecutions": 0,
+   "nonEmptyHintLayer": 0,
+   "doorLightsToday": false
+  },
+  {
+   "caseId": "case-vr-16",
+   "items": 25,
+   "whole": 0,
+   "withExecutions": 0,
+   "nonEmptyHintLayer": 0,
+   "doorLightsToday": false
+  },
+  {
+   "caseId": "case-vr-21",
+   "items": 25,
+   "whole": 0,
+   "withExecutions": 0,
+   "nonEmptyHintLayer": 0,
+   "doorLightsToday": false
+  },
+  {
+   "caseId": "case-vr-17",
+   "items": 25,
+   "whole": 0,
+   "withExecutions": 0,
+   "nonEmptyHintLayer": 0,
+   "doorLightsToday": false
+  },
+  {
+   "caseId": "case-vr-18",
+   "items": 25,
+   "whole": 0,
+   "withExecutions": 0,
+   "nonEmptyHintLayer": 0,
+   "doorLightsToday": false
+  }
+ ],
+ "tagResolution": [
+  {
+   "tag": "vr-move-letter-both-invalid",
+   "rowsCarryingIt": 13,
+   "existsOnThisSide": true,
+   "attested": false
+  },
+  {
+   "tag": "vr-move-letter-first-word-invalid",
+   "rowsCarryingIt": 38,
+   "existsOnThisSide": true,
+   "attested": false
+  },
+  {
+   "tag": "vr-move-letter-second-word-invalid",
+   "rowsCarryingIt": 38,
+   "existsOnThisSide": true,
+   "attested": false
+  },
+  {
+   "tag": "vr02-partial-group",
+   "rowsCarryingIt": 50,
+   "existsOnThisSide": true,
+   "attested": false
+  },
+  {
+   "tag": "vr02-surface-link",
+   "rowsCarryingIt": 25,
+   "existsOnThisSide": true,
+   "attested": false
+  },
+  {
+   "tag": "vr03-same-topic",
+   "rowsCarryingIt": 50,
+   "existsOnThisSide": true,
+   "attested": true
+  },
+  {
+   "tag": "vr05-almost-letters",
+   "rowsCarryingIt": 25,
+   "existsOnThisSide": true,
+   "attested": false
+  },
+  {
+   "tag": "vr05-single-word-only",
+   "rowsCarryingIt": 25,
+   "existsOnThisSide": true,
+   "attested": false
+  },
+  {
+   "tag": "vr13-not-a-word",
+   "rowsCarryingIt": 25,
+   "existsOnThisSide": true,
+   "attested": false
+  },
+  {
+   "tag": "vr13-wrong-pieces",
+   "rowsCarryingIt": 25,
+   "existsOnThisSide": true,
+   "attested": false
+  },
+  {
+   "tag": "vr16-loose-opposite",
+   "rowsCarryingIt": 25,
+   "existsOnThisSide": true,
+   "attested": false
+  },
+  {
+   "tag": "vr16-synonym-pull",
+   "rowsCarryingIt": 50,
+   "existsOnThisSide": true,
+   "attested": false
+  },
+  {
+   "tag": "vr17-arith-slip",
+   "rowsCarryingIt": 50,
+   "existsOnThisSide": true,
+   "attested": false
+  },
+  {
+   "tag": "vr17-one-side-only",
+   "rowsCarryingIt": 25,
+   "existsOnThisSide": true,
+   "attested": false
+  },
+  {
+   "tag": "vr18-partial-rule",
+   "rowsCarryingIt": 25,
+   "existsOnThisSide": true,
+   "attested": false
+  },
+  {
+   "tag": "vr18-rule-swap",
+   "rowsCarryingIt": 25,
+   "existsOnThisSide": true,
+   "attested": false
+  },
+  {
+   "tag": "vr19-letter-order",
+   "rowsCarryingIt": 25,
+   "existsOnThisSide": true,
+   "attested": false
+  },
+  {
+   "tag": "vr19-shared-letter-miss",
+   "rowsCarryingIt": 25,
+   "existsOnThisSide": true,
+   "attested": false
+  },
+  {
+   "tag": "vr20-common-letter",
+   "rowsCarryingIt": 25,
+   "existsOnThisSide": true,
+   "attested": false
+  },
+  {
+   "tag": "vr20-sound-alike",
+   "rowsCarryingIt": 25,
+   "existsOnThisSide": true,
+   "attested": false
+  },
+  {
+   "tag": "vr21-associated-not-same",
+   "rowsCarryingIt": 50,
+   "existsOnThisSide": true,
+   "attested": false
+  },
+  {
+   "tag": "vr21-too-strong",
+   "rowsCarryingIt": 25,
+   "existsOnThisSide": true,
+   "attested": false
+  }
+ ],
+ "doorState": "no door lights today: zero of 288 rows are whole (executions are the binding absence everywhere)."
+}
