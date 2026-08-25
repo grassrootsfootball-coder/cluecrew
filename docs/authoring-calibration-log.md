@@ -20042,3 +20042,49 @@ stating what they show, and let the reader judge whether the limit bites. A coun
 that cannot see certain events is a bound, not a number, and which bound it is changes what any
 reading may claim (her words: *"nobody characterises what children met until the bytes say it"*).
 The form binds every future emission that answers a question with counts.
+
+## R707 — The import fault at its own door; the class walked; the drafter's claim gets a home
+
+**THE UNIFIED FINDING, taken and derived from the bank bytes: ALL SEVEN DECLARED RATIONALES ARE
+LETTER-COUNT** — trumpet-balloon (seven letters), knife-thorn (five), candle-mirror (six),
+juice-paint (five), duck-crow (four), oval-star (four), cow-hen (three). **The associations read
+in the words — blown, pierce, reflection, pourable — were the READER'S on all four rows; the
+drafter claimed one mechanical rule seven times.** So her four confirmations and this side's three
+crossings are ONE QUESTION: is letter-count a pull a child feels? The artefact frames it as one;
+nothing here rules on it.
+
+**The import fault registered at its own door**: `import-vr-banks.ts` carried `misconceptionId`
+and dropped `misconception` — the drafter's sentence — because **no scalar column existed to hold
+it**, and nothing named the drop at the crossing. Now the door DECLARES the field, LANDS it, and
+**prints every key it cannot home with a row count**: what a door cannot home, it names (R691),
+applied at the door that broke it.
+
+**THE CLASS WALKED ESTATE-WIDE** (`import-drop-walk-and-rationale-home-c5c94c28c5962ded.json`,
+file sha256 `c5c94c28c5962ded9d8f05e2daa5d83a9f96106d755ebcd1dc76bb72e5d676fe`), limits stated
+BEFORE figures per R706's form: 22 of 29 importers are UNDECIDABLE — this side does not hold their
+source, and a file not held cannot be diffed; content-versus-metadata is a read, not a derivation.
+**The instrument matched its own false negatives TWICE before reporting** (R173): `prisma.<model>`
+accessors supply bare tokens, which made `import-vr-banks` read CLEAN of the very key it dropped,
+and the RELATION field `ItemOption.misconception` made a rationale with no scalar column read as
+having one. Both corrected; the walk then found its own instance — the canary this instrument
+needed. **Sharpest class in the membership — fields whose column already existed and were not
+named**: `import-reissued-six` (a36Note, attractorLine, attractorQuote, misconceptionExecution,
+mechanismLedger, sourcedFrom, tierRationale, windowClass), `import-reissued-items` (six),
+`import-pilot-from-cowork` (twelve, though that door diffs by design), `import-nvr-reworded-hints`
+(description). Reads for the desk to order, not repairs made here.
+
+**THE HOME**: `ItemOption.drafterDeclaredPull` (migration `20260825201437`, additive; replay and
+invariants green). **The name carries the doubt (R203)** — what a DRAFTER CLAIMED, never what a
+reviewer attested — and it is deliberately NOT `misconceptionExecution`, because filling the
+gated field from a bank would manufacture wholeness out of a machine's claim. **155 options now
+carry their drafter's rationale beside the tag; VR executions remain 0 and no door moves.** The
+next reviewer reads the claim beside the tag rather than through an archaeology.
+
+**Two own faults, both caught before they reached a store, both recorded**: a stray comma left a
+HOLE in `LIFTED_HOLDS` last turn — 750 tests passed over it and `tsc` caught it, which is the
+type-checker earning its place in the gate set. And the backfill's first matcher compared
+`words ?? frame` on vr-06 rows that carry NEITHER, so **two undefineds compared equal and every
+bank row matched the same serving row** — 78 rationales silently unhomed, and a wrong-row write
+one collision away. The matcher now REFUSES an unidentifiable stem and refuses a non-unique
+match. Found only because the dry run ran first: **a match on the agreement of two absences is
+the same nothing this entire thread has been about.**

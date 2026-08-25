@@ -43,7 +43,6 @@ export const LIFTED_HOLDS: readonly (ServingHold & { liftedOn: string; liftedByA
     liftedOn: '2026-08-19',
     liftedByArtefact: 'annie-eng003-fourth-return.md sha256 3724df8f2c6c1678…',
   },
-,
   {
     itemId: 'seed-vr09-01',
     heldBy: "David's estate-walk instruction, executed 2026-08-24 (the lead outranks the audit)",

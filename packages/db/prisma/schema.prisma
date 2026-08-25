@@ -418,6 +418,18 @@ model ItemOption {
   // thing a reviewer asks to see. Distinct from the library's childHint, which the DB owns and
   // which is child-facing; this is per-option and reviewer-facing.
   misconceptionExecution String?
+  /// THE DRAFTER'S DECLARED PULL, verbatim from the authored source (David's ruling on her 149th,
+  /// 2026-08-24 — R707). The vr-02 bank declared, per option, WHY the distractor attracts
+  /// ("Grouped 'duck' and 'crow' by letter-count…"), `import-vr-banks.ts` carried the tag and
+  /// dropped the sentence — no column held it — and nothing said so at the crossing. A reviewer
+  /// then spent three returns reconstructing pulls by archaeology.
+  ///
+  /// THE NAME CARRIES THE DOUBT (R203/R204): this is what a DRAFTER CLAIMED, never what a
+  /// reviewer attested. It is deliberately NOT `misconceptionExecution` — an execution is the
+  /// gated, attested account the CZ-A2 discipline held an item at DRAFT for, and filling that
+  /// field from a bank would manufacture wholeness (R701's bar) out of a machine's claim.
+  /// Nothing in the wholeness derivation reads this column, by design.
+  drafterDeclaredPull    String?
   // ADDENDUM 36 — THE TWO LINES THE EXECUTION NOTE TURNS ON.
   //   attractorLine  the line that makes this distractor attractive: what the child latches onto.
   //   defeaterLine   the line that defeats it: what a correct reading uses to rule it out.

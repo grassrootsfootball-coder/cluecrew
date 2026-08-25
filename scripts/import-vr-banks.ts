@@ -29,7 +29,13 @@ const BANKS: Array<{ file: string; questionTypeId: string }> = [
   { file: 'vr02-bank.json', questionTypeId: 'vr-02-two-odd-ones-out' },
 ];
 
-interface BankOption { value: unknown; isKey?: boolean; misconceptionId?: string }
+/**
+ * THE DOOR NOW READS THE DRAFTER'S RATIONALE (R707). `misconception` — the drafter's sentence
+ * saying WHY this distractor attracts — was in every bank row from the first import, was never
+ * declared here, and was dropped silently because no column held it. A reviewer reconstructed
+ * those pulls by archaeology across three returns.
+ */
+interface BankOption { value: unknown; isKey?: boolean; misconceptionId?: string; misconception?: string }
 interface BankItem { tier: number; target?: string; prompt?: string; stem?: Record<string, unknown>; frame?: string; options: BankOption[] }
 
 const DRY = process.argv.includes('--dry-run');
@@ -46,6 +52,30 @@ async function main(): Promise<void> {
     const disagreements: string[] = [];
 
     // Referenced misconceptions must exist (FK).
+    /**
+     * WHAT THIS DOOR CANNOT HOME, IT NAMES (R691, applied at the door that broke it — R707).
+     * Every key present in the authored bank is checked against the keys this importer knows.
+     * An unknown key is PRINTED, per key with a row count, so a field with nowhere to land can
+     * never again be dropped in silence.
+     */
+    const KNOWN = new Set(['bank', 'itemCount', 'tierDistribution', 'items', 'reviewPasses',
+      'tier', 'target', 'prompt', 'stem', 'frame', 'options', 'note', 'words', 'sentence',
+      'value', 'isKey', 'misconceptionId', 'misconception']);
+    const unhomed = new Map<string, number>();
+    const noteKeys = (o: unknown) => {
+      if (Array.isArray(o)) { o.forEach(noteKeys); return; }
+      if (!o || typeof o !== 'object') return;
+      for (const [k, v] of Object.entries(o as Record<string, unknown>)) {
+        if (!KNOWN.has(k)) unhomed.set(k, (unhomed.get(k) ?? 0) + 1);
+        noteKeys(v);
+      }
+    };
+    noteKeys(bank);
+    if (unhomed.size > 0) {
+      console.log(`  ! ${questionTypeId}: KEYS THIS DOOR CANNOT HOME — ${[...unhomed].map(([k, n]) => `${k} (${n})`).join(', ')}`);
+      console.log('    Named, not dropped in silence (R707). A key that carries authored content needs a column or a ruling.');
+    }
+
     const refIds = [...new Set(bank.items.flatMap((it) => it.options.map((o) => o.misconceptionId).filter(Boolean)))] as string[];
     const present = new Set((await prisma.misconception.findMany({ where: { id: { in: refIds } }, select: { id: true } })).map((m) => m.id));
     const missing = refIds.filter((id) => !present.has(id));
@@ -93,6 +123,8 @@ async function main(): Promise<void> {
                 content: { value: o.value },
                 isCorrect: Boolean(o.isKey),
                 misconceptionId: o.misconceptionId && present.has(o.misconceptionId) ? o.misconceptionId : null,
+                // The drafter's claim, verbatim and unattested — never an execution (R707).
+                drafterDeclaredPull: o.misconception ?? null,
               })),
             },
           },
