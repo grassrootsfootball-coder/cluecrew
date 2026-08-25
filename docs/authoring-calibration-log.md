@@ -20088,3 +20088,55 @@ bank row matched the same serving row** — 78 rationales silently unhomed, and 
 one collision away. The matcher now REFUSES an unidentifiable stem and refuses a non-unique
 match. Found only because the dry run ran first: **a match on the agreement of two absences is
 the same nothing this entire thread has been about.**
+
+## R708 — Letter-count refused; her key-sharing test run estate-wide; the note homed; three reads
+
+**Her 151st verified (`ba664c01…220ed5`) and Cowork's audit (`433a4995…8d3edb32`), taken as
+candidates, not claims. Landing artefact `annie-151-landing-b8ddfc5667dcb5d8.json`, file sha256
+`b8ddfc5667dcb5d8dd1aa5459f0d25cc29e0ae0e1b1efe7197aa534800d8b4ab`.**
+
+**HER RULING: letter-count is not a pull a child feels** — *"counting characters is an act she
+must decide to perform, and nothing in a verbal-reasoning stem invites it"* — refused further on
+the bank's own numbers, where equal-length pairs include the keys. **The seven landed**: four
+tags CONFIRMED on their pulls (blown, pierce, reflection, pourability) with the drafter's
+declaration recorded as OVERRULED WITH REASON in a new companion column; three options STRIPPED
+to null, seats empty pending an authored distractor naming an act a child performs;
+`vr02-surface-link` confirmed unchanged — *"an entry that describes the right answer diagnoses
+nothing."*
+
+**THE VERDICT GETS A COLUMN BESIDE THE CLAIM**: `ItemOption.drafterDeclaredPullVerdict`
+(migration `20260825202331`, additive, replay and invariants green). A reader meeting
+`drafterDeclaredPull` alone meets an unrefuted assertion — the archaeology fault one field over.
+Null means NOT YET RULED, never accepted.
+
+**HER MINTED TEST, RUN OVER EVERY RATIONALE THIS SIDE HOLDS — 155 options, all decidable after
+the claim shapes were widened** (a dry run had put three real claims in an undecidable bucket for
+punctuation; "both three letters" and the COMPOUND "both start with p, four letters" are claim
+shapes the bank actually writes). Classes: 80 vr-06 qualified claims, 50 partial-group, 13
+letter-count, 10 shared-initial, 2 compound. **THREE FAIL HER TEST — the key also satisfies the
+claimed property**: `bank-vr-02-…-15` (key bee-bat, 3/3), `-18` (key deer-wolf, 4/4), and **`-22`
+(hen-dog claimed, key cat-dog 3/3) — an instance her spot-check did not name.** The 80 vr-06
+claims PASS ONLY ON THEIR QUALIFIER: *"makes a real word"* is shared with the key and *"that does
+not fit the sentence"* is what discriminates — reported as its own class for her ruling rather
+than scored. **Stated boundary: this test measures the KEY-SHARING property she minted, not her
+wider observation that half the pairs in a set share equal length; the latter is a different
+measure and this artefact does not conflate them.**
+
+**HER RULING REACHES FURTHER THAN THE SEVEN**: **13 vr-02 rows carry a letter-count declaration,
+not 7.** Six rows beyond the ruled seven rest on a declaration whose class she has now refused.
+NOT ACTED ON — no authority covers them — and named precisely so a ruling is not scoped to where
+someone happened to be reading (R703).
+
+**item.note HOMED**: `Item.drafterNote`, 25 vr-02 group rules and 40 vr-06 construction notes
+landed — **the field Cowork could not author against, and the blocker it named**. Same discipline:
+a drafter's claim, not an attestation, and the wholeness derivation does not read it.
+
+**THE THREE ORDERED READS, with a denominator correction on the way**: the six reissued ids
+resolve to **ONE** item on this side (`ENG-015-CC-12`, DRAFT); five — `ENG-018-RB-01`,
+`ENG-018-RB-11`, `ENG-019-BV-02`, `ENG-023-RT-08`, `ENG-027-RR-08` — **do not exist here at all**,
+which is a larger finding than the dropped fields and is stated rather than smoothed. On the one
+row that does resolve: `tierRationale`, `sourcedFrom`, `mechanismLedger`, `attractorLine`,
+`attractorQuote`, `a36Note`, `windowClass` and `misconceptionExecution` ALL STILL SIT EMPTY;
+`lineRefs` is filled. For `import-nvr-reworded-hints`, the description column is populated from
+other paths, and whether this import's descriptions differ cannot be decided without a per-row
+diff of the source — stated, not approximated.

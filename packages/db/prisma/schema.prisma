@@ -301,6 +301,15 @@ model Item {
   // item cites nothing", the exact coercion the absence rule forbids. Json? keeps null (absent)
   // distinct from [] (declared empty).
   lineRefs                Json?
+  /// THE DRAFTER'S NOTE FROM THE AUTHORED BANK, verbatim (David's ruling on her 151st — R708).
+  /// On vr-02 rows it holds THE GROUP RULE ("Group = birds (robin, duck, crow). Odd pair = …");
+  /// on vr-06 rows a construction note ("Distractors build SHORT and SHINY."). It existed on
+  /// every bank row and on no serving row, which is precisely the blocker Cowork named: nobody
+  /// could author a distractor against a group whose rule the serving row does not carry.
+  ///
+  /// Same discipline as `ItemOption.drafterDeclaredPull`: A DRAFTER'S CLAIM, NOT AN ATTESTATION,
+  /// and nothing in the wholeness derivation reads it.
+  drafterNote             String?
   /**
    * `Item.testedTokens` REMOVED 2026-08-17 (R159, David's ruling). It carried words on 13 items and
    * NOTHING READ IT — `checkItemChildFacing` reads `stem.testedTokens`, which 0 items carried. The
@@ -430,6 +439,11 @@ model ItemOption {
   /// field from a bank would manufacture wholeness (R701's bar) out of a machine's claim.
   /// Nothing in the wholeness derivation reads this column, by design.
   drafterDeclaredPull    String?
+  /// THE REVIEWER'S RULING ON THAT CLAIM (Annie's 151st, David's ruling — R708). The claim and
+  /// its verdict live side by side, because a reader who meets `drafterDeclaredPull` alone meets
+  /// an unrefuted assertion — the archaeology fault one field over. Null means NOT YET RULED,
+  /// never "accepted": absence is not approval (R98).
+  drafterDeclaredPullVerdict String?
   // ADDENDUM 36 — THE TWO LINES THE EXECUTION NOTE TURNS ON.
   //   attractorLine  the line that makes this distractor attractive: what the child latches onto.
   //   defeaterLine   the line that defeats it: what a correct reading uses to rule it out.
