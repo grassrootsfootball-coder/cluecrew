@@ -8,6 +8,7 @@ import { NOTATION_BEARING_PATHS, capitalRunIsExempt, checkItemChildFacing, gapMa
 import { prisma } from '../packages/db/src/index';
 import { assertFixture } from './lib/carried-fixture';
 import { deliver, stampedName } from './lib/export-destination';
+import { findingsDigest } from './lib/findings-digest';
 
 const REPO = join(__dirname, '..');
 const APPLY = process.argv.includes('--apply');
@@ -127,8 +128,9 @@ async function run() {
     if (Array.isArray(o)) return `[${o.map(canonical).join(',')}]`;
     return `{${Object.keys(o as object).sort().map((k) => `${JSON.stringify(k)}:${canonical((o as Record<string, unknown>)[k])}`).join(',')}}`;
   };
-  const findingsSha256 = sha256(canonical({ predicate: payload.THE_PREDICATE_FINDING, substitution: payload.theSubstitution, optionValues: payload.THE_OPTION_VALUE_RULING, forCowork: payload.forCowork }));
-  const artefact = { ...payload, findingsSha256, howToCheckThisOnArrival: { subtree: '{predicate, substitution, optionValues, forCowork}', spec: 'sha256 over json.dumps(subtree, sort_keys=True, separators=(",",":"), ensure_ascii=False).encode("utf-8") (R729)', fileDigest: 'staging line and .sha256 sidecar' } };
+  // R752: the subtree is named by the DOCUMENT'S OWN top-level keys; findingsDigest throws
+  // if any named key is not present, so an alias fails here rather than at the far door.
+  const artefact = { ...payload, ...findingsDigest(payload, ['THE_PREDICATE_FINDING', 'theSubstitution', 'THE_OPTION_VALUE_RULING', 'forCowork']) };
   const json = JSON.stringify(artefact, null, 1) + '\n';
   if (APPLY) {
     const name = stampedName('annie-161-landing', sha256(json).slice(0, 16), 'json');

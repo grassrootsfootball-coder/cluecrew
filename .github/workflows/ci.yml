@@ -285,6 +285,9 @@ jobs:
       - name: Served headwords carry a tier
         run: pnpm check:headword-tiers
 
+      - name: Staged artefacts match the digests they crossed under (R754)
+        run: pnpm check:staged-digests
+
       - name: Register check (every cited rule has a register entry)
         run: pnpm check:register
 

@@ -10,6 +10,7 @@ import { checkChildFacingText, checkItemChildFacing, isBlocking } from '../packa
 import { prisma } from '../packages/db/src/index';
 import { assertFixture } from './lib/carried-fixture';
 import { deliver, stampedName } from './lib/export-destination';
+import { findingsDigest } from './lib/findings-digest';
 
 const REPO = join(__dirname, '..');
 const sha256 = (s: string) => createHash('sha256').update(s).digest('hex');
@@ -106,20 +107,9 @@ async function run() {
     if (Array.isArray(o)) return `[${o.map(canonical).join(',')}]`;
     return `{${Object.keys(o as object).sort().map((k) => `${JSON.stringify(k)}:${canonical((o as Record<string, unknown>)[k])}`).join(',')}}`;
   };
-  const findingsSha256 = sha256(canonical({
-    one: payload.ANSWER_ONE_theJoinsWithPrompts,
-    two: payload.ANSWER_TWO_theTwoStraightQuotes,
-    three: payload.ANSWER_THREE_theScreen,
-  }));
-  const artefact = {
-    ...payload,
-    findingsSha256,
-    howToCheckThisOnArrival: {
-      subtree: '{one: ANSWER_ONE_theJoinsWithPrompts, two: ANSWER_TWO_theTwoStraightQuotes, three: ANSWER_THREE_theScreen}',
-      spec: 'sha256 over json.dumps(subtree, sort_keys=True, separators=(",",":"), ensure_ascii=False).encode("utf-8") — the convention named, because the default escapes the em dashes and moves the digest (R729).',
-      fileDigest: 'in the staging line and the .sha256 sidecar — a file cannot carry its own.',
-    },
-  };
+  // R752: the subtree is named by the DOCUMENT'S OWN top-level keys; findingsDigest throws
+  // if any named key is not present, so an alias fails here rather than at the far door.
+  const artefact = { ...payload, ...findingsDigest(payload, ['ANSWER_ONE_theJoinsWithPrompts', 'ANSWER_TWO_theTwoStraightQuotes', 'ANSWER_THREE_theScreen']) };
   const json = JSON.stringify(artefact, null, 1) + '\n';
   const name = stampedName('walkscript-screen-recross', sha256(json).slice(0, 16), 'json');
   writeFileSync(join(REPO, 'content/exports', name), json);

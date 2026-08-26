@@ -173,15 +173,31 @@ function markIfUnfixtured(sourcePath: string): void {
 }
 
 
-/** Re-derives a stamped name from the file's ACTUAL bytes, renaming if the mark changed them. */
+/**
+ * Re-derives a stamped name from the file's ACTUAL bytes, renaming if the mark changed them.
+ *
+ * **THE PREFIX COMES FROM THE FILENAME, NEVER FROM THE FAMILY LABEL** (R754). The first version
+ * built its pattern out of `family` and returned the path UNCHANGED AND SILENT when the two
+ * disagreed — so `deliver(…, 'boundary-conformance-cases')` on a file named
+ * `boundary-conformance-cases-for-cowork-<hash>.json` skipped the restamp, and the artefact
+ * staged under a name claiming a hash its bytes did not have. That is exactly the R731 fault this
+ * function exists to prevent, re-entering through the function itself, by the R87 route: an
+ * operation that is correct, a report that is true, and neither saying that nothing happened.
+ * A stamped-looking name is now restamped on its OWN prefix whatever the label says, and a label
+ * that does not match its file is reported rather than obeyed.
+ */
 function restampToContent(sourcePath: string, family?: string): string {
-  if (!family || !sourcePath.endsWith('.json')) return sourcePath;
+  if (!sourcePath.endsWith('.json')) return sourcePath;
   const current = basename(sourcePath);
-  const stamped = new RegExp(`^${family.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}-([0-9a-f]{16})\\.json$`).exec(current);
+  const stamped = /^(.*)-([0-9a-f]{16})\.json$/.exec(current);
   if (!stamped) return sourcePath;
+  const [, prefix, claimed] = stamped;
+  if (family && prefix !== family) {
+    console.log(`  note: staged name's prefix is "${prefix}" while deliver() was told the family is "${family}". Restamping on the NAME's prefix; the retention match uses the family (R754).`);
+  }
   const actual = createHash('sha256').update(readFileSync(sourcePath)).digest('hex').slice(0, 16);
-  if (actual === stamped[1]) return sourcePath;
-  const renamed = join(dirname(sourcePath), `${family}-${actual}.json`);
+  if (actual === claimed) return sourcePath;
+  const renamed = join(dirname(sourcePath), `${prefix}-${actual}.json`);
   renameSync(sourcePath, renamed);
   console.log(`  restamped → ${basename(renamed)} (the mark changed the bytes; the name now agrees with them)`);
   return renamed;

@@ -21049,3 +21049,87 @@ round trip proves consistency, not identity. **Checked here**: the 65 before-ima
 R746 came from landing artefacts recording the ACTUAL prior strings, each hash verifying against
 its own bytes, none reconstructed. This side is clean on the rule and the check is recorded rather
 than the assumption.
+
+## R751 — The forty hold: the frame has no accessible text, and that is the answer
+
+Annie flagged that **the frame-versus-prose split may be an accessibility difference wearing a
+quality one**, and that staging the forty without that fact risks her ruling the accessible form
+out of the corpus. David held the forty until each row carries its frame's accessible text, or
+states that none exists.
+
+**None exists, on all forty.** Every `vr-06-missing-word` stem holds exactly two keys — `prompt`
+and `sentence` — and no accessibility-shaped field exists anywhere on the type: no `accessibleText`,
+no spoken form, no `ariaLabel`, no `alt`. The renderer adds none: `engines/stowaway.tsx` gives the
+sentence a bare `<p>`. Its `Word` component *does* carry `role="img"` with an `aria-label`, and
+that is the letter-tile path; the vr-06 sentence does not use it. So the one surface that could
+speak the frame is not on this row's path.
+
+**The consequence for her ruling, stated rather than assumed**: the frame/prose distinction both
+stores have been ruling on is, today, VISUAL ONLY. A child using a screen reader receives the same
+undifferentiated character stream for the frame as for the prose around it, so the exemption that
+protects the diagram protects nothing they can hear — how `SH___` is voiced is the reader's
+punctuation setting, which the product neither sets nor knows. **That does not make the ruling
+wrong** — a diagram a sighted child reads is still a diagram — but the accessible form has never
+existed rather than having been ruled against, and her flag is correct on the evidence. What would
+change it is an authored spoken form per row saying what the frame IS. This store does not author
+it. Crossed as `frame-accessible-text` (findings `90af1b57…`), one row per item.
+
+## R752 — A digest names the keys as they appear in the file
+
+`findingsSha256` crossed with `subtree: '{control, summary, divergence, strings}'` over a document
+whose keys are `THE_CONTROL_ANSWERS_FIRST`, `theSummary`,
+`THE_DIVERGENCE_IS_IN_gapMarkerSpans_NOT_IN_THE_PREDICATE`, `strings`. **Cowork verified it by
+guessing among four candidate readings; one reproduced.** It got the right answer by luck, and the
+next reader guesses wrong and refuses an honest artefact — the expensive direction, because a false
+refusal costs a crossing and a crossing costs days here.
+
+R729 named the SERIALISATION so the far side computes the same number over the same bytes. This is
+the other half: **name the SELECTION.** A spec has both or it has neither, because a reader who
+cannot assemble the subtree never reaches the question of how to serialise it.
+
+The selection is no longer written by hand. `findingsDigest(payload, keys)` in
+`scripts/lib/findings-digest.ts` takes the literal key names, **THROWS if any is not a top-level key
+of the payload** — so an alias fails at the emitting door rather than at the receiving one — and
+returns the `howToCheckThisOnArrival` block, so the names declared are necessarily the names hashed.
+Three emitters carried aliases (`emit-port-crossing-half`, `land-annie-161`, `screen-walkscripts`);
+`emit-predicate-verdicts` and the membership crossing were already correct. The port half re-crossed
+as `d6899c72…` and its digest now reproduces mechanically from its own declaration.
+
+## R753 — A case block riding inside a larger artefact shares that artefact's fate
+
+The eight boundary cases were authored at R745 and put inside the membership crossing, where they
+**twice failed to arrive**: Cowork reports the crossed membership still holds its original eleven,
+and aliased `frameTokenSpans`/`isExemptByFrame` rather than deleting them because *a migration
+proved against the wrong fixture is proved against nothing*. So they cross alone, small enough to be
+run rather than read (`boundary-conformance-cases-for-cowork`, `164c68d1…`), with Cowork's own eight
+run through this implementation in the same file — the thing that lets its alias names go, since it
+cannot prove its port against cases it authored itself. **All eight of its expectations reproduce
+here, span for span.**
+
+**And its suite caught a class mine lacks.** *TWO marks in one string* — `"From SH___ to ___AN."` —
+is a case **a single-match implementation passes every one of my eight and fails**. My four span
+cases each carry exactly one mark. So the suite I authored to close a blind-agreement finding was
+itself blind, one axis over: **a boundary suite is not finished when it reaches the boundary.** Mine
+reached the seam between letters and underscores, which was the disagreement, and never asked
+whether there could be TWO seams. **Coverage of a class is not coverage of its cardinality.** The
+case is carried as the ninth, credited to Cowork.
+
+## R754 — The name is not a verification surface; the sidecar is
+
+`restampToContent` built its pattern out of the `family` label and **returned the path unchanged and
+silent when the label and the filename disagreed**. So `deliver(…, 'boundary-conformance-cases')` on
+`boundary-conformance-cases-for-cowork-<hash>.json` skipped the restamp, and the artefact staged
+under a name claiming a hash its bytes did not have — the R731 fault re-entering through the
+function built to prevent it, by the R87 route: an operation that is correct, a report that is true,
+and neither saying that nothing happened. The prefix now comes from the FILENAME, and a label that
+does not match its file is reported rather than obeyed.
+
+**Then the sweep, and the number to distrust.** 117 of 168 stamped names at the door disagree with
+their bytes. That reads as catastrophic and is not: **the 16 hex in a stamped name is not one
+convention.** Some emitters stamp the file digest, others a payload digest or a batch id — one stamp
+sits on TEN files, which no file digest could. My sweep had assumed uniformity and found a fault in
+its own premise (R173, on my own instrument). **Every sidecar agrees with its bytes: 109 of 109,
+zero disagreements.** So the sidecar is the only verification surface here and is the one with a
+guard on it — `pnpm check:staged-digests`, which asserts the sidecar and explicitly does NOT check
+the name, saying so on every run. 126 older artefacts carry no sidecar: unverifiable, which is a
+different thing from corrupted, and reported as its own line.
