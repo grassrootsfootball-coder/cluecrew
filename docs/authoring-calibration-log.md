@@ -21614,3 +21614,55 @@ supplies neither. R25: send the value, not an account of it. **A count IS an acc
 most compressed account there is, and compressing it is exactly what strips the predicate off.
 The rule that follows: **a count crosses with the predicate that selected it, or it does not
 cross.** Not the label, not the class name — the predicate, in terms someone could re-run.
+
+## R774 — "The other file" named no file, and one half was my export again
+
+The drift artefact said *the other file* nine times and named none, so the thread could not route.
+Cowork searched its entire authored corpus and found every id family clean — **and that is correct
+and fully compatible with my finding. Both were true and they were about different disks.** There
+is no id fault on its side.
+
+**The warning landed exactly where the desk aimed it: one half is again this store's own export.**
+Both drifting families pair a file in `~/Downloads/11+/from-cluecrew` — the outbound directory,
+mirroring the database — against one in `~/Downloads/11+/items`. **Second time in this thread an
+unnamed pair turned out to have my own export as one side**, and both times the unnamed side was
+mine. Every file now crosses with its path, sha256, byte length, mtime and which side it is:
+`eng005-draft.json` `cce6e657dd73bec2` (mine) against `46bc68843de6bd8c`; `eng007-draft.json`
+`a833e502949dcc30` (mine) against `066ef66ccd47a917`.
+
+**And naming them dissolved the class.** It is not a numbering drift. In ENG-005-BB the two files
+share **8 stems of 12 and differ by FOUR each way**; in ENG-007-LP, 7 shared and five each way.
+One of the four on my side sits at position 02 — *"Read lines 6 to 8… 'good substantial rails'"* —
+and pushes the seven shared questions below it down by one. **The off-by-one run is a CONSEQUENCE
+of a replaced question, not an id bookkeeping error**, and the ten unmatched stems are the
+four-each-way tails: they match no id anywhere because they exist on one side only. The desk was
+right that they belong to the same event; they were never a separate class.
+
+**So the single edit is not an insertion into a numbering — it is a REVISION OF THE SET**, four
+questions swapped for four others, one landing at position 2. Hunting one insertion before BB-02
+finds the symptom: that is merely where the divergence first shows, and three more sit below it at
+09, 10 and 12. Every row in both families was created in ONE database transaction, so the database
+did not drift either — it holds one version faithfully, and the choice of version happened upstream
+of the import.
+
+**Which revision is right is a content question about eight replaced questions, not a numbering
+fix**, and nothing was renumbered.
+
+## R775 — The label-reference check on the executions: zero at risk, and my first predicate was wrong
+
+Before any execution can be released, it must survive a relabelling — an execution reading *"option
+B is wrong because…"* becomes false the moment B is a different sentence. **Measured across all 343
+authored executions: 0 reference a letter or an ordinal AS AN OPTION.** Nine say *"this option"*,
+which points at the row it is attached to and survives any relabelling. 334 reference neither.
+
+**The first pass reported 15 and was wrong**, because the predicate matched prose rather than
+references: *"the last of a bridge"* is not an ordinal position, and *"this option"* is
+self-reference, not a label. Both were counted. **The number that changed was mine, and it changed
+because I stated the predicate and then read the rows it selected** — which is R773's own rule
+turned on the check written to satisfy R773.
+
+**The nineteen are cleared on THIS question and still blocked on another.** No execution anywhere
+carries a label dependency, so relabelling is not what stops them. What stops them is that **0 of
+343 authored executions sit on a CORRECT option** — the authoring convention puts them only on
+distractors — so the nineteen have no legitimate home on a key regardless of how the option-set
+question is settled. They stay reversed.
