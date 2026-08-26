@@ -1,0 +1,4334 @@
+{
+ "kind": "key-disagreements-for-annie",
+ "what": "Items carried by two or more authored files whose copies disagree. Both readings side by side, per label, with which each file calls correct.",
+ "THE_RULING_THIS_SERVES": "David, 26 August: the key disagreements go to Annie, not to a directory ruling. A disagreement about which answer is right is a content question, and the reviewer is the only party who can settle it. Nothing lands until she rules.",
+ "WHY_NOT_A_DIRECTORY_RULING": "I proposed naming an authoritative directory and unblocking the import on it. That decides which FILE wins; it does not decide which ANSWER is right. It would have settled 48 content questions by provenance — picking whichever answer sat in the folder somebody named.",
+ "THE_FIGURE_CORRECTED": {
+  "asIStatedIt": "48 key disagreements over 36 items",
+  "correctly": "48 key disagreements over 24 items",
+  "whatThe36Was": "items disagreeing about ANYTHING — 24 about which answer is right, 12 about wording only. I attached the wider item count to the narrower pair count. Same shape as the 553: a true number under a label that widened it."
+ },
+ "THE_COUNTS": {
+  "itemsInTwoOrMoreAuthoredFiles": 104,
+  "itemsDisagreeingAboutWHICHISCORRECT": 24,
+  "itemsDisagreeingAboutWORDINGONLY": 12,
+  "keyDisagreementPairs": 48
+ },
+ "NOTHING_LANDED": "this script writes nothing. The 19 reversed misconceptionExecution values stay reversed and re-land only under whichever reading she confirms.",
+ "ITEMS_DISAGREEING_ABOUT_THE_ANSWER": [
+  {
+   "itemId": "ENG-006-TM-01",
+   "classification": "DISAGREES ABOUT WHICH ANSWER IS RIGHT",
+   "filesCarryingThisItem": [
+    "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+    "~/Downloads/11+/items/eng006-draft.json"
+   ],
+   "WHICH_EACH_FILE_CALLS_CORRECT": {
+    "~/Downloads/11+/from-cluecrew/eng006-draft.json": [
+     "A"
+    ],
+    "~/Downloads/11+/items/eng006-draft.json": [
+     "B"
+    ]
+   },
+   "perLabel": [
+    {
+     "label": "A",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "A great deal of noisy fuss.",
+       "isCorrect": true
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "A crowd of people arriving at once.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "B",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "A long argument between two people.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "A great deal of noisy fuss.",
+       "isCorrect": true
+      }
+     ]
+    },
+    {
+     "label": "C",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "A slow and careful piece of work.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "A long argument between two people.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "D",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "A crowd of people arriving at once.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "A slow and careful piece of work.",
+       "isCorrect": false
+      }
+     ]
+    }
+   ],
+   "theServingRow": {
+    "NOT_A_VOTE": "what a child meets today. A fact she needs; not evidence about which copy is right.",
+    "status": "DRAFT",
+    "options": [
+     {
+      "label": "B",
+      "value": "A long argument between two people.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "C",
+      "value": "A slow and careful piece of work.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "D",
+      "value": "A crowd of people arriving at once.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "A",
+      "value": "A great deal of noisy fuss.",
+      "isCorrect": true,
+      "carriesExecution": false
+     }
+    ]
+   },
+   "rowSha256": "78c2545c137100c8211f307f0727cea878f4a9f79f7baefbc16d72e79f6eae4a",
+   "rowSha256Spec": "sha256 over this row serialised as JSON with sorted keys, separators (\",\",\":\"), ensure_ascii false, WITHOUT the rowSha256 and rowSha256Spec fields, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-006-TM-02",
+   "classification": "DISAGREES ABOUT WHICH ANSWER IS RIGHT",
+   "filesCarryingThisItem": [
+    "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+    "~/Downloads/11+/items/eng006-draft.json"
+   ],
+   "WHICH_EACH_FILE_CALLS_CORRECT": {
+    "~/Downloads/11+/from-cluecrew/eng006-draft.json": [
+     "B"
+    ],
+    "~/Downloads/11+/items/eng006-draft.json": [
+     "C"
+    ]
+   },
+   "perLabel": [
+    {
+     "label": "A",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "Fetches the step-ladder and a kitchen-chair.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "That Aunt Podger will decide where it goes.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "B",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "Sends the girl out for nails, then a boy after her.",
+       "isCorrect": true
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "That he will send out for a man to do it.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "C",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "Measures the wall to find where the nail goes.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "That he will do all of it himself.",
+       "isCorrect": true
+      }
+     ]
+    },
+    {
+     "label": "D",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "Sends the girl for nails and goes with her.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "That the frame-maker left the job half done.",
+       "isCorrect": false
+      }
+     ]
+    }
+   ],
+   "theServingRow": {
+    "NOT_A_VOTE": "what a child meets today. A fact she needs; not evidence about which copy is right.",
+    "status": "DRAFT",
+    "options": [
+     {
+      "label": "A",
+      "value": "Fetches the step-ladder and a kitchen-chair.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "C",
+      "value": "Measures the wall to find where the nail goes.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "D",
+      "value": "Sends the girl for nails and goes with her.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "B",
+      "value": "Sends the girl out for nails, then a boy after her.",
+      "isCorrect": true,
+      "carriesExecution": false
+     }
+    ]
+   },
+   "rowSha256": "edfae563d80e3a589f421d091434cca3bb04596cf098bc2c08bcb84a85dd2815",
+   "rowSha256Spec": "sha256 over this row serialised as JSON with sorted keys, separators (\",\",\":\"), ensure_ascii false, WITHOUT the rowSha256 and rowSha256Spec fields, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-006-TM-03",
+   "classification": "DISAGREES ABOUT WHICH ANSWER IS RIGHT",
+   "filesCarryingThisItem": [
+    "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+    "~/Downloads/11+/items/eng006-draft.json"
+   ],
+   "WHICH_EACH_FILE_CALLS_CORRECT": {
+    "~/Downloads/11+/from-cluecrew/eng006-draft.json": [
+     "C"
+    ],
+    "~/Downloads/11+/items/eng006-draft.json": [
+     "D"
+    ]
+   },
+   "perLabel": [
+    {
+     "label": "A",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": false,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "To borrow his step-ladder.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "To borrow his step-ladder.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "B",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "To tell him that Pa's leg is better.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "To ask how his leg is getting on.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "C",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "To borrow his spirit-level.",
+       "isCorrect": true
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "To fetch a bit of picture-cord.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "D",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "To fetch a bit of picture-cord.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "To borrow his spirit-level.",
+       "isCorrect": true
+      }
+     ]
+    }
+   ],
+   "theServingRow": {
+    "NOT_A_VOTE": "what a child meets today. A fact she needs; not evidence about which copy is right.",
+    "status": "DRAFT",
+    "options": [
+     {
+      "label": "A",
+      "value": "To borrow his step-ladder.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "B",
+      "value": "To tell him that Pa's leg is better.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "D",
+      "value": "To fetch a bit of picture-cord.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "C",
+      "value": "To borrow his spirit-level.",
+      "isCorrect": true,
+      "carriesExecution": false
+     }
+    ]
+   },
+   "rowSha256": "46a5fb51ad8606c3507a469ae8b5ea8a0933d5c0413e0ed48c81a0fe0064afe6",
+   "rowSha256Spec": "sha256 over this row serialised as JSON with sorted keys, separators (\",\",\":\"), ensure_ascii false, WITHOUT the rowSha256 and rowSha256Spec fields, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-006-TM-04",
+   "classification": "DISAGREES ABOUT WHICH ANSWER IS RIGHT",
+   "filesCarryingThisItem": [
+    "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+    "~/Downloads/11+/items/eng006-draft.json"
+   ],
+   "WHICH_EACH_FILE_CALLS_CORRECT": {
+    "~/Downloads/11+/from-cluecrew/eng006-draft.json": [
+     "D"
+    ],
+    "~/Downloads/11+/items/eng006-draft.json": [
+     "A"
+    ]
+   },
+   "perLabel": [
+    {
+     "label": "A",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "He hangs it crooked and has to start again.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "He drops it, the frame comes off, and he cuts himself.",
+       "isCorrect": true
+      }
+     ]
+    },
+    {
+     "label": "B",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "He drops the hammer on somebody's toes.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "He hangs it crooked and has to start again.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "C",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "He drops it and the glass stays whole.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "He drops the hammer on somebody's toes.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "D",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "He drops it, the frame comes off, and he cuts himself.",
+       "isCorrect": true
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "He drops it and the glass stays whole.",
+       "isCorrect": false
+      }
+     ]
+    }
+   ],
+   "theServingRow": {
+    "NOT_A_VOTE": "what a child meets today. A fact she needs; not evidence about which copy is right.",
+    "status": "DRAFT",
+    "options": [
+     {
+      "label": "A",
+      "value": "He hangs it crooked and has to start again.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "B",
+      "value": "He drops the hammer on somebody's toes.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "C",
+      "value": "He drops it and the glass stays whole.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "D",
+      "value": "He drops it, the frame comes off, and he cuts himself.",
+      "isCorrect": true,
+      "carriesExecution": false
+     }
+    ]
+   },
+   "rowSha256": "3e12207df37d73613453cab85ed7b466bd940a57509b292a432ec651968e0b87",
+   "rowSha256Spec": "sha256 over this row serialised as JSON with sorted keys, separators (\",\",\":\"), ensure_ascii false, WITHOUT the rowSha256 and rowSha256Spec fields, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-006-TM-05",
+   "classification": "DISAGREES ABOUT WHICH ANSWER IS RIGHT",
+   "filesCarryingThisItem": [
+    "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+    "~/Downloads/11+/items/eng006-draft.json"
+   ],
+   "WHICH_EACH_FILE_CALLS_CORRECT": {
+    "~/Downloads/11+/from-cluecrew/eng006-draft.json": [
+     "A"
+    ],
+    "~/Downloads/11+/items/eng006-draft.json": [
+     "B"
+    ]
+   },
+   "perLabel": [
+    {
+     "label": "A",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "Because his handkerchief is in the coat, and nobody knows where the coat is.",
+       "isCorrect": true
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "Because he has cut himself and needs a bandage first.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "B",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "Because Uncle Podger tells them to stop and help him.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "Because his handkerchief is in the coat, and nobody knows where the coat is.",
+       "isCorrect": true
+      }
+     ]
+    },
+    {
+     "label": "C",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "Because the tools had not been brought into the room yet.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "Because Uncle Podger tells them to stop and help him.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "D",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "Because he goes out of the room to see to his cut.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "Because the tools had not been brought into the room yet.",
+       "isCorrect": false
+      }
+     ]
+    }
+   ],
+   "theServingRow": {
+    "NOT_A_VOTE": "what a child meets today. A fact she needs; not evidence about which copy is right.",
+    "status": "DRAFT",
+    "options": [
+     {
+      "label": "B",
+      "value": "Because Uncle Podger tells them to stop and help him.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "C",
+      "value": "Because the tools had not been brought into the room yet.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "D",
+      "value": "Because he goes out of the room to see to his cut.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "A",
+      "value": "Because his handkerchief is in the coat, and nobody knows where the coat is.",
+      "isCorrect": true,
+      "carriesExecution": false
+     }
+    ]
+   },
+   "rowSha256": "7892bb7c0253e4b55f3c9ba4dff29efb49a3d8f8bead14c8eae7a76622ac345f",
+   "rowSha256Spec": "sha256 over this row serialised as JSON with sorted keys, separators (\",\",\":\"), ensure_ascii false, WITHOUT the rowSha256 and rowSha256Spec fields, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-006-TM-06",
+   "classification": "DISAGREES ABOUT WHICH ANSWER IS RIGHT",
+   "filesCarryingThisItem": [
+    "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+    "~/Downloads/11+/items/eng006-draft.json"
+   ],
+   "WHICH_EACH_FILE_CALLS_CORRECT": {
+    "~/Downloads/11+/from-cluecrew/eng006-draft.json": [
+     "B"
+    ],
+    "~/Downloads/11+/items/eng006-draft.json": [
+     "C"
+    ]
+   },
+   "perLabel": [
+    {
+     "label": "A",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "The family are eager to learn how to hang a picture.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "Uncle Podger cannot manage without a great deal of help.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "B",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "A tiny job has taken over the whole household.",
+       "isCorrect": true
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "The picture is very heavy and needs several people.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "C",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "The family were too busy to watch him properly.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "A tiny job has taken over the whole household.",
+       "isCorrect": true
+      }
+     ]
+    },
+    {
+     "label": "D",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "The picture is very heavy and needs several people.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "The family are eager to learn how to hang a picture.",
+       "isCorrect": false
+      }
+     ]
+    }
+   ],
+   "theServingRow": {
+    "NOT_A_VOTE": "what a child meets today. A fact she needs; not evidence about which copy is right.",
+    "status": "DRAFT",
+    "options": [
+     {
+      "label": "A",
+      "value": "The family are eager to learn how to hang a picture.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "C",
+      "value": "The family were too busy to watch him properly.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "D",
+      "value": "The picture is very heavy and needs several people.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "B",
+      "value": "A tiny job has taken over the whole household.",
+      "isCorrect": true,
+      "carriesExecution": false
+     }
+    ]
+   },
+   "rowSha256": "185385c204fcf77d7f2d08f1a30d1445b1c8386af1f16f1cf4e8cc968bd4e726",
+   "rowSha256Spec": "sha256 over this row serialised as JSON with sorted keys, separators (\",\",\":\"), ensure_ascii false, WITHOUT the rowSha256 and rowSha256Spec fields, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-006-TM-07",
+   "classification": "DISAGREES ABOUT WHICH ANSWER IS RIGHT",
+   "filesCarryingThisItem": [
+    "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+    "~/Downloads/11+/items/eng006-draft.json"
+   ],
+   "WHICH_EACH_FILE_CALLS_CORRECT": {
+    "~/Downloads/11+/from-cluecrew/eng006-draft.json": [
+     "C"
+    ],
+    "~/Downloads/11+/items/eng006-draft.json": [
+     "D"
+    ]
+   },
+   "perLabel": [
+    {
+     "label": "A",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": false,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "To show the family were well organised.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "To show the family were well organised.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "B",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": false,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "To show how long the job took to finish.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "To show how long the job took to finish.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "C",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "To make the crowd grow bigger with every word.",
+       "isCorrect": true
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "To help the reader remember all their names.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "D",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "To help the reader remember all their names.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "To make the crowd grow bigger with every word.",
+       "isCorrect": true
+      }
+     ]
+    }
+   ],
+   "theServingRow": {
+    "NOT_A_VOTE": "what a child meets today. A fact she needs; not evidence about which copy is right.",
+    "status": "DRAFT",
+    "options": [
+     {
+      "label": "A",
+      "value": "To show the family were well organised.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "B",
+      "value": "To show how long the job took to finish.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "D",
+      "value": "To help the reader remember all their names.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "C",
+      "value": "To make the crowd grow bigger with every word.",
+      "isCorrect": true,
+      "carriesExecution": false
+     }
+    ]
+   },
+   "rowSha256": "3603a73c48d68f20485d1a986c2dbac8bdc025caf8d3982ccf0803a4629a4357",
+   "rowSha256Spec": "sha256 over this row serialised as JSON with sorted keys, separators (\",\",\":\"), ensure_ascii false, WITHOUT the rowSha256 and rowSha256Spec fields, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-006-TM-08",
+   "classification": "DISAGREES ABOUT WHICH ANSWER IS RIGHT",
+   "filesCarryingThisItem": [
+    "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+    "~/Downloads/11+/items/eng006-draft.json"
+   ],
+   "WHICH_EACH_FILE_CALLS_CORRECT": {
+    "~/Downloads/11+/from-cluecrew/eng006-draft.json": [
+     "D"
+    ],
+    "~/Downloads/11+/items/eng006-draft.json": [
+     "A"
+    ]
+   },
+   "perLabel": [
+    {
+     "label": "A",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "A law about how the job has to be done.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "A tool for measuring length.",
+       "isCorrect": true
+      }
+     ]
+    },
+    {
+     "label": "B",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "A line drawn on the wall to work from.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "A law about how the job has to be done.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "C",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "A habit he always follows when working.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "A line drawn on the wall to work from.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "D",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "A tool for measuring length.",
+       "isCorrect": true
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "A habit he always follows when working.",
+       "isCorrect": false
+      }
+     ]
+    }
+   ],
+   "theServingRow": {
+    "NOT_A_VOTE": "what a child meets today. A fact she needs; not evidence about which copy is right.",
+    "status": "DRAFT",
+    "options": [
+     {
+      "label": "A",
+      "value": "A law about how the job has to be done.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "B",
+      "value": "A line drawn on the wall to work from.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "C",
+      "value": "A habit he always follows when working.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "D",
+      "value": "A tool for measuring length.",
+      "isCorrect": true,
+      "carriesExecution": false
+     }
+    ]
+   },
+   "rowSha256": "c92a5ff785395fcd80bfbd556f526c93a2e90249926689b8d1e601d1754b4b5d",
+   "rowSha256Spec": "sha256 over this row serialised as JSON with sorted keys, separators (\",\",\":\"), ensure_ascii false, WITHOUT the rowSha256 and rowSha256Spec fields, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-006-TM-09",
+   "classification": "DISAGREES ABOUT WHICH ANSWER IS RIGHT",
+   "filesCarryingThisItem": [
+    "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+    "~/Downloads/11+/items/eng006-draft.json"
+   ],
+   "WHICH_EACH_FILE_CALLS_CORRECT": {
+    "~/Downloads/11+/from-cluecrew/eng006-draft.json": [
+     "A"
+    ],
+    "~/Downloads/11+/items/eng006-draft.json": [
+     "B"
+    ]
+   },
+   "perLabel": [
+    {
+     "label": "A",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "The piano.",
+       "isCorrect": true
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "Somebody's toes, with a yell.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "B",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "The kitchen-chair he had been standing on.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "The piano.",
+       "isCorrect": true
+      }
+     ]
+    },
+    {
+     "label": "C",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "The charwoman's corns.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "The kitchen-chair he had been standing on.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "D",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "Somebody's toes, with a yell.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "The charwoman's corns.",
+       "isCorrect": false
+      }
+     ]
+    }
+   ],
+   "theServingRow": {
+    "NOT_A_VOTE": "what a child meets today. A fact she needs; not evidence about which copy is right.",
+    "status": "DRAFT",
+    "options": [
+     {
+      "label": "B",
+      "value": "The kitchen-chair he had been standing on.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "A",
+      "value": "The piano.",
+      "isCorrect": true,
+      "carriesExecution": false
+     },
+     {
+      "label": "C",
+      "value": "The charwoman's corns.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "D",
+      "value": "Somebody's toes, with a yell.",
+      "isCorrect": false,
+      "carriesExecution": true
+     }
+    ]
+   },
+   "rowSha256": "f0b85f95f5c92222703bd5b726e85de0f1ad902b625faefdeb2c31320fc2e6d4",
+   "rowSha256Spec": "sha256 over this row serialised as JSON with sorted keys, separators (\",\",\":\"), ensure_ascii false, WITHOUT the rowSha256 and rowSha256Spec fields, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-006-TM-10",
+   "classification": "DISAGREES ABOUT WHICH ANSWER IS RIGHT",
+   "filesCarryingThisItem": [
+    "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+    "~/Downloads/11+/items/eng006-draft.json"
+   ],
+   "WHICH_EACH_FILE_CALLS_CORRECT": {
+    "~/Downloads/11+/from-cluecrew/eng006-draft.json": [
+     "B"
+    ],
+    "~/Downloads/11+/items/eng006-draft.json": [
+     "C"
+    ]
+   },
+   "perLabel": [
+    {
+     "label": "A",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "Ask Uncle Podger to let her hang the picture instead.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "Send for a man to come and do it properly.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "B",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "Go and stay with her mother while the job is done.",
+       "isCorrect": true
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "Hide the hammer so he cannot start at all.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "C",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "Send for a man to come and do it properly.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "Go and stay with her mother while the job is done.",
+       "isCorrect": true
+      }
+     ]
+    },
+    {
+     "label": "D",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "Hide the hammer so he cannot start at all.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "Ask Uncle Podger to let her hang the picture instead.",
+       "isCorrect": false
+      }
+     ]
+    }
+   ],
+   "theServingRow": {
+    "NOT_A_VOTE": "what a child meets today. A fact she needs; not evidence about which copy is right.",
+    "status": "DRAFT",
+    "options": [
+     {
+      "label": "A",
+      "value": "Ask Uncle Podger to let her hang the picture instead.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "C",
+      "value": "Send for a man to come and do it properly.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "D",
+      "value": "Hide the hammer so he cannot start at all.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "B",
+      "value": "Go and stay with her mother while the job is done.",
+      "isCorrect": true,
+      "carriesExecution": false
+     }
+    ]
+   },
+   "rowSha256": "3d08a12021063bbdacf927d43bb65ae8b8f676bfab737cd532723e62882bcd35",
+   "rowSha256Spec": "sha256 over this row serialised as JSON with sorted keys, separators (\",\",\":\"), ensure_ascii false, WITHOUT the rowSha256 and rowSha256Spec fields, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-006-TM-11",
+   "classification": "DISAGREES ABOUT WHICH ANSWER IS RIGHT",
+   "filesCarryingThisItem": [
+    "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+    "~/Downloads/11+/items/eng006-draft.json"
+   ],
+   "WHICH_EACH_FILE_CALLS_CORRECT": {
+    "~/Downloads/11+/from-cluecrew/eng006-draft.json": [
+     "C"
+    ],
+    "~/Downloads/11+/items/eng006-draft.json": [
+     "D"
+    ]
+   },
+   "perLabel": [
+    {
+     "label": "A",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "He has learned, as he did not know then, that the job was hard.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "He has learned that the job was harder than he expected.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "B",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "He is pleased, and glad they all helped so much at the end.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "He is pleased the family helped him finish it.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "C",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "He thinks of it as a success, exactly as he did at the start.",
+       "isCorrect": true
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "He is boasting to hide how badly it went.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "D",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "He is boasting to them, and hiding it, because it went so badly.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "He thinks of it as a success, exactly as he did at the start.",
+       "isCorrect": true
+      }
+     ]
+    }
+   ],
+   "theServingRow": {
+    "NOT_A_VOTE": "what a child meets today. A fact she needs; not evidence about which copy is right.",
+    "status": "DRAFT",
+    "options": [
+     {
+      "label": "A",
+      "value": "He has learned, as he did not know then, that the job was hard.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "B",
+      "value": "He is pleased, and glad they all helped so much at the end.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "D",
+      "value": "He is boasting to them, and hiding it, because it went so badly.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "C",
+      "value": "He thinks of it as a success, exactly as he did at the start.",
+      "isCorrect": true,
+      "carriesExecution": false
+     }
+    ]
+   },
+   "rowSha256": "dba92a1782a6a6eddf6702a36459ccaa85c3a45db3fb463087dfad8716c5ab75",
+   "rowSha256Spec": "sha256 over this row serialised as JSON with sorted keys, separators (\",\",\":\"), ensure_ascii false, WITHOUT the rowSha256 and rowSha256Spec fields, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-006-TM-12",
+   "classification": "DISAGREES ABOUT WHICH ANSWER IS RIGHT",
+   "filesCarryingThisItem": [
+    "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+    "~/Downloads/11+/items/eng006-draft.json"
+   ],
+   "WHICH_EACH_FILE_CALLS_CORRECT": {
+    "~/Downloads/11+/from-cluecrew/eng006-draft.json": [
+     "D"
+    ],
+    "~/Downloads/11+/items/eng006-draft.json": [
+     "A"
+    ]
+   },
+   "perLabel": [
+    {
+     "label": "A",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "It is not one clear memory, but a guess at what may have happened.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "It is not one day at all, but what happened every single time.",
+       "isCorrect": true
+      }
+     ]
+    },
+    {
+     "label": "B",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "It tells us the picture was never hung, though he says it was.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "It tells us the writer is not sure it really happened.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "C",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "It tells us the story is remembered years after it all happened.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "It tells us the picture was never actually hung.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "D",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+       "content": "It is not one day at all, but what happened every single time.",
+       "isCorrect": true
+      },
+      {
+       "file": "~/Downloads/11+/items/eng006-draft.json",
+       "content": "It tells us the story is being remembered years afterwards.",
+       "isCorrect": false
+      }
+     ]
+    }
+   ],
+   "theServingRow": {
+    "NOT_A_VOTE": "what a child meets today. A fact she needs; not evidence about which copy is right.",
+    "status": "DRAFT",
+    "options": [
+     {
+      "label": "A",
+      "value": "It is not one clear memory, but a guess at what may have happened.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "B",
+      "value": "It tells us the picture was never hung, though he says it was.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "C",
+      "value": "It tells us the story is remembered years after it all happened.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "D",
+      "value": "It is not one day at all, but what happened every single time.",
+      "isCorrect": true,
+      "carriesExecution": false
+     }
+    ]
+   },
+   "rowSha256": "99cc232a062111678d9564d6967323ff713c19a74a9f8267c796ada91a695dbc",
+   "rowSha256Spec": "sha256 over this row serialised as JSON with sorted keys, separators (\",\",\":\"), ensure_ascii false, WITHOUT the rowSha256 and rowSha256Spec fields, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-007-LP-01",
+   "classification": "DISAGREES ABOUT WHICH ANSWER IS RIGHT",
+   "filesCarryingThisItem": [
+    "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+    "~/Downloads/11+/items/eng007-draft.json"
+   ],
+   "WHICH_EACH_FILE_CALLS_CORRECT": {
+    "~/Downloads/11+/from-cluecrew/eng007-draft.json": [
+     "A"
+    ],
+    "~/Downloads/11+/items/eng007-draft.json": [
+     "C"
+    ]
+   },
+   "perLabel": [
+    {
+     "label": "A",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "Anything with the sole coming off it.",
+       "isCorrect": true
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "Anything going to the charity collection.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "B",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "Anything with no name in it.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "Anything that smelled of chlorine.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "C",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "Anything going to the charity collection.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "Anything with the sole coming off it.",
+       "isCorrect": true
+      }
+     ]
+    },
+    {
+     "label": "D",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "Anything that smelled of chlorine.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "Anything with no name in it.",
+       "isCorrect": false
+      }
+     ]
+    }
+   ],
+   "theServingRow": {
+    "NOT_A_VOTE": "what a child meets today. A fact she needs; not evidence about which copy is right.",
+    "status": "DRAFT",
+    "options": [
+     {
+      "label": "B",
+      "value": "Anything with no name in it.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "C",
+      "value": "Anything going to the charity collection.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "D",
+      "value": "Anything that smelled of chlorine.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "A",
+      "value": "Anything with the sole coming off it.",
+      "isCorrect": true,
+      "carriesExecution": false
+     }
+    ]
+   },
+   "rowSha256": "da16fe5f67ff60ac581f2cb658054e37926084eaeb7476c1a053b5d1af53c937",
+   "rowSha256Spec": "sha256 over this row serialised as JSON with sorted keys, separators (\",\",\":\"), ensure_ascii false, WITHOUT the rowSha256 and rowSha256Spec fields, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-007-LP-02",
+   "classification": "DISAGREES ABOUT WHICH ANSWER IS RIGHT",
+   "filesCarryingThisItem": [
+    "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+    "~/Downloads/11+/items/eng007-draft.json"
+   ],
+   "WHICH_EACH_FILE_CALLS_CORRECT": {
+    "~/Downloads/11+/from-cluecrew/eng007-draft.json": [
+     "B"
+    ],
+    "~/Downloads/11+/items/eng007-draft.json": [
+     "D"
+    ]
+   },
+   "perLabel": [
+    {
+     "label": "A",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "Both show he is annoyed with Ilya.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "He did not know the girl had left in Year Four.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "B",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "Both are about the sorting, not about next year.",
+       "isCorrect": true
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "He was working faster than Ilya and made a mistake.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "C",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "Both show he has not been listening.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "He wanted to keep the cardigan for himself.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "D",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "Both show he wants the tall lockers too.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "He would rather try to return a thing than give it away.",
+       "isCorrect": true
+      }
+     ]
+    }
+   ],
+   "theServingRow": {
+    "NOT_A_VOTE": "what a child meets today. A fact she needs; not evidence about which copy is right.",
+    "status": "DRAFT",
+    "options": [
+     {
+      "label": "A",
+      "value": "Both show he is annoyed with Ilya.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "C",
+      "value": "Both show he has not been listening.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "D",
+      "value": "Both show he wants the tall lockers too.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "B",
+      "value": "Both are about the sorting, not about next year.",
+      "isCorrect": true,
+      "carriesExecution": false
+     }
+    ]
+   },
+   "rowSha256": "0c284dbef4d763167dcfefccc624f092e4dc8e21ac460cef50096a42ee60cd84",
+   "rowSha256Spec": "sha256 over this row serialised as JSON with sorted keys, separators (\",\",\":\"), ensure_ascii false, WITHOUT the rowSha256 and rowSha256Spec fields, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-007-LP-03",
+   "classification": "DISAGREES ABOUT WHICH ANSWER IS RIGHT",
+   "filesCarryingThisItem": [
+    "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+    "~/Downloads/11+/items/eng007-draft.json"
+   ],
+   "WHICH_EACH_FILE_CALLS_CORRECT": {
+    "~/Downloads/11+/from-cluecrew/eng007-draft.json": [
+     "C"
+    ],
+    "~/Downloads/11+/items/eng007-draft.json": [
+     "A"
+    ]
+   },
+   "perLabel": [
+    {
+     "label": "A",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "Died, the way a living thing does.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "Gone dry and crumbly with age.",
+       "isCorrect": true
+      }
+     ]
+    },
+    {
+     "label": "B",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "Been lost somewhere in the cupboard.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "Died, the way a living thing does.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "C",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "Gone dry and crumbly with age.",
+       "isCorrect": true
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "Been lost somewhere in the cupboard.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "D",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "Been worn out by too much swimming.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "Been thrown away by its owner.",
+       "isCorrect": false
+      }
+     ]
+    }
+   ],
+   "theServingRow": {
+    "NOT_A_VOTE": "what a child meets today. A fact she needs; not evidence about which copy is right.",
+    "status": "DRAFT",
+    "options": [
+     {
+      "label": "A",
+      "value": "Died, the way a living thing does.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "B",
+      "value": "Been lost somewhere in the cupboard.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "C",
+      "value": "Gone dry and crumbly with age.",
+      "isCorrect": true,
+      "carriesExecution": false
+     },
+     {
+      "label": "D",
+      "value": "Been worn out by too much swimming.",
+      "isCorrect": false,
+      "carriesExecution": true
+     }
+    ]
+   },
+   "rowSha256": "c3dc8f84990d87f4a9849cd37978ffff936cce4c6e10a3a14c0739c6f197097f",
+   "rowSha256Spec": "sha256 over this row serialised as JSON with sorted keys, separators (\",\",\":\"), ensure_ascii false, WITHOUT the rowSha256 and rowSha256Spec fields, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-007-LP-04",
+   "classification": "DISAGREES ABOUT WHICH ANSWER IS RIGHT",
+   "filesCarryingThisItem": [
+    "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+    "~/Downloads/11+/items/eng007-draft.json"
+   ],
+   "WHICH_EACH_FILE_CALLS_CORRECT": {
+    "~/Downloads/11+/from-cluecrew/eng007-draft.json": [
+     "D"
+    ],
+    "~/Downloads/11+/items/eng007-draft.json": [
+     "B"
+    ]
+   },
+   "perLabel": [
+    {
+     "label": "A",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "They are sorted again at the school on Friday.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "She said she did not really know.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "B",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "They go to families who need them nearby.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "They go to a warehouse, then out to shops.",
+       "isCorrect": true
+      }
+     ]
+    },
+    {
+     "label": "C",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "She said she did not really know.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "They are sorted again at the school on Friday.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "D",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "They go to a warehouse, then out to shops.",
+       "isCorrect": true
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "They go to families who need them nearby.",
+       "isCorrect": false
+      }
+     ]
+    }
+   ],
+   "theServingRow": {
+    "NOT_A_VOTE": "what a child meets today. A fact she needs; not evidence about which copy is right.",
+    "status": "DRAFT",
+    "options": [
+     {
+      "label": "A",
+      "value": "They are sorted again at the school on Friday.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "B",
+      "value": "They go to families who need them nearby.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "C",
+      "value": "She said she did not really know.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "D",
+      "value": "They go to a warehouse, then out to shops.",
+      "isCorrect": true,
+      "carriesExecution": false
+     }
+    ]
+   },
+   "rowSha256": "b9921f2a9ae676e32fbce475618af35b655a1f92690ed0df66d43eaeddd1b11c",
+   "rowSha256Spec": "sha256 over this row serialised as JSON with sorted keys, separators (\",\",\":\"), ensure_ascii false, WITHOUT the rowSha256 and rowSha256Spec fields, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-007-LP-05",
+   "classification": "DISAGREES ABOUT WHICH ANSWER IS RIGHT",
+   "filesCarryingThisItem": [
+    "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+    "~/Downloads/11+/items/eng007-draft.json"
+   ],
+   "WHICH_EACH_FILE_CALLS_CORRECT": {
+    "~/Downloads/11+/from-cluecrew/eng007-draft.json": [
+     "A"
+    ],
+    "~/Downloads/11+/items/eng007-draft.json": [
+     "C"
+    ]
+   },
+   "perLabel": [
+    {
+     "label": "A",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "He was thinking about something else first.",
+       "isCorrect": true
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "He could not hear her properly across the room.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "B",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "He was waiting for her to tell him the answer.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "He was laughing at Ilya instead.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "C",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "He could not hear her properly across the room.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "He was thinking about something else first.",
+       "isCorrect": true
+      }
+     ]
+    },
+    {
+     "label": "D",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "He was laughing at Ilya instead.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "He had not found the joke funny at all.",
+       "isCorrect": false
+      }
+     ]
+    }
+   ],
+   "theServingRow": {
+    "NOT_A_VOTE": "what a child meets today. A fact she needs; not evidence about which copy is right.",
+    "status": "DRAFT",
+    "options": [
+     {
+      "label": "B",
+      "value": "He was waiting for her to tell him the answer.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "C",
+      "value": "He could not hear her properly across the room.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "D",
+      "value": "He was laughing at Ilya instead.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "A",
+      "value": "He was thinking about something else first.",
+      "isCorrect": true,
+      "carriesExecution": false
+     }
+    ]
+   },
+   "rowSha256": "bdedd74a3eda290f212529c0b7e4437d9e70b21129a0c9e790201488bc2cd335",
+   "rowSha256Spec": "sha256 over this row serialised as JSON with sorted keys, separators (\",\",\":\"), ensure_ascii false, WITHOUT the rowSha256 and rowSha256Spec fields, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-007-LP-06",
+   "classification": "DISAGREES ABOUT WHICH ANSWER IS RIGHT",
+   "filesCarryingThisItem": [
+    "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+    "~/Downloads/11+/items/eng007-draft.json"
+   ],
+   "WHICH_EACH_FILE_CALLS_CORRECT": {
+    "~/Downloads/11+/from-cluecrew/eng007-draft.json": [
+     "B"
+    ],
+    "~/Downloads/11+/items/eng007-draft.json": [
+     "D"
+    ]
+   },
+   "perLabel": [
+    {
+     "label": "A",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "He stops taking care by the end and forgets what he set out to do.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "Say something is true when others doubt it.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "B",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "He keeps the rule for everyone else and breaks it for himself.",
+       "isCorrect": true
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "Ask for money back for something lost.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "C",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "He could not tell whose the jumper was, so he put it in the box.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "Wash and mend something worn out.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "D",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "He thinks the jumper too worn for anybody to want it back.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "Say that something is yours and take it.",
+       "isCorrect": true
+      }
+     ]
+    }
+   ],
+   "theServingRow": {
+    "NOT_A_VOTE": "what a child meets today. A fact she needs; not evidence about which copy is right.",
+    "status": "DRAFT",
+    "options": [
+     {
+      "label": "A",
+      "value": "He stops taking care by the end and forgets what he set out to do.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "C",
+      "value": "He could not tell whose the jumper was, so he put it in the box.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "D",
+      "value": "He thinks the jumper too worn for anybody to want it back.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "B",
+      "value": "He keeps the rule for everyone else and breaks it for himself.",
+      "isCorrect": true,
+      "carriesExecution": false
+     }
+    ]
+   },
+   "rowSha256": "1f57198d6590347e3c3215de4b7cb4a06a0a39afdebdd0b2024183e6066ee556",
+   "rowSha256Spec": "sha256 over this row serialised as JSON with sorted keys, separators (\",\",\":\"), ensure_ascii false, WITHOUT the rowSha256 and rowSha256Spec fields, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-007-LP-07",
+   "classification": "DISAGREES ABOUT WHICH ANSWER IS RIGHT",
+   "filesCarryingThisItem": [
+    "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+    "~/Downloads/11+/items/eng007-draft.json"
+   ],
+   "WHICH_EACH_FILE_CALLS_CORRECT": {
+    "~/Downloads/11+/from-cluecrew/eng007-draft.json": [
+     "C"
+    ],
+    "~/Downloads/11+/items/eng007-draft.json": [
+     "A"
+    ]
+   },
+   "perLabel": [
+    {
+     "label": "A",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "Read it and then put it away again.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "Put it in the Friday box, low down, and pressed it flat.",
+       "isCorrect": true
+      }
+     ]
+    },
+    {
+     "label": "B",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "Put it in the Friday box with the jumper.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "Put it in the returns box, because it had a name in it.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "C",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "Looked at its edge and put it back unopened.",
+       "isCorrect": true
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "Put it in the bin bag, because the cuffs had gone thin.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "D",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "Showed it to Ilya when he came back.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "Folded it and gave it to Miss Bhatt.",
+       "isCorrect": false
+      }
+     ]
+    }
+   ],
+   "theServingRow": {
+    "NOT_A_VOTE": "what a child meets today. A fact she needs; not evidence about which copy is right.",
+    "status": "DRAFT",
+    "options": [
+     {
+      "label": "A",
+      "value": "Read it and then put it away again.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "B",
+      "value": "Put it in the Friday box with the jumper.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "C",
+      "value": "Looked at its edge and put it back unopened.",
+      "isCorrect": true,
+      "carriesExecution": false
+     },
+     {
+      "label": "D",
+      "value": "Showed it to Ilya when he came back.",
+      "isCorrect": false,
+      "carriesExecution": true
+     }
+    ]
+   },
+   "rowSha256": "b5af1321a47cbf019d20e161c1916694f1a079bf8f778be984291cd959748dc7",
+   "rowSha256Spec": "sha256 over this row serialised as JSON with sorted keys, separators (\",\",\":\"), ensure_ascii false, WITHOUT the rowSha256 and rowSha256Spec fields, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-007-LP-08",
+   "classification": "DISAGREES ABOUT WHICH ANSWER IS RIGHT",
+   "filesCarryingThisItem": [
+    "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+    "~/Downloads/11+/items/eng007-draft.json"
+   ],
+   "WHICH_EACH_FILE_CALLS_CORRECT": {
+    "~/Downloads/11+/from-cluecrew/eng007-draft.json": [
+     "D"
+    ],
+    "~/Downloads/11+/items/eng007-draft.json": [
+     "B"
+    ]
+   },
+   "perLabel": [
+    {
+     "label": "A",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "To show the team still needs more players.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "He thinks the jumper is too worn to be worth returning.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "B",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "To show that nobody at the school wants to play.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "He keeps the rule for everyone else and breaks it for himself.",
+       "isCorrect": true
+      }
+     ]
+    },
+    {
+     "label": "C",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "To show that eleven people used eleven different pens.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "He has grown careless by the end of the afternoon.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "D",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "It leaves us looking at the empty space, not the names.",
+       "isCorrect": true
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "He does not recognise his own mother's handwriting.",
+       "isCorrect": false
+      }
+     ]
+    }
+   ],
+   "theServingRow": {
+    "NOT_A_VOTE": "what a child meets today. A fact she needs; not evidence about which copy is right.",
+    "status": "DRAFT",
+    "options": [
+     {
+      "label": "A",
+      "value": "To show the team still needs more players.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "B",
+      "value": "To show that nobody at the school wants to play.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "C",
+      "value": "To show that eleven people used eleven different pens.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "D",
+      "value": "It leaves us looking at the empty space, not the names.",
+      "isCorrect": true,
+      "carriesExecution": false
+     }
+    ]
+   },
+   "rowSha256": "d177f993a1876bd37f71582f87bd67992a15ef750fd5902d70ffdf59db8b3a53",
+   "rowSha256Spec": "sha256 over this row serialised as JSON with sorted keys, separators (\",\",\":\"), ensure_ascii false, WITHOUT the rowSha256 and rowSha256Spec fields, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-007-LP-09",
+   "classification": "DISAGREES ABOUT WHICH ANSWER IS RIGHT",
+   "filesCarryingThisItem": [
+    "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+    "~/Downloads/11+/items/eng007-draft.json"
+   ],
+   "WHICH_EACH_FILE_CALLS_CORRECT": {
+    "~/Downloads/11+/from-cluecrew/eng007-draft.json": [
+     "A"
+    ],
+    "~/Downloads/11+/items/eng007-draft.json": [
+     "C"
+    ]
+   },
+   "perLabel": [
+    {
+     "label": "A",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "They can do it on Monday and miss spellings.",
+       "isCorrect": true
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "Put it in the Friday box with the jumper.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "B",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "Miss Bhatt wants it done before Friday.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "Showed it to Ilya when he came back.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "C",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "It has already been cleared by somebody else.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "Looked at its edge and put it back unopened.",
+       "isCorrect": true
+      }
+     ]
+    },
+    {
+     "label": "D",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "They will do it instead of going to Whitby.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "Read it and then put it away again.",
+       "isCorrect": false
+      }
+     ]
+    }
+   ],
+   "theServingRow": {
+    "NOT_A_VOTE": "what a child meets today. A fact she needs; not evidence about which copy is right.",
+    "status": "DRAFT",
+    "options": [
+     {
+      "label": "B",
+      "value": "Miss Bhatt wants it done before Friday.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "C",
+      "value": "It has already been cleared by somebody else.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "D",
+      "value": "They will do it instead of going to Whitby.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "A",
+      "value": "They can do it on Monday and miss spellings.",
+      "isCorrect": true,
+      "carriesExecution": false
+     }
+    ]
+   },
+   "rowSha256": "1fbea56fa63f3a4b4e5d9d03f931adf0dbd69e2aecca626f5311abacb5fecf97",
+   "rowSha256Spec": "sha256 over this row serialised as JSON with sorted keys, separators (\",\",\":\"), ensure_ascii false, WITHOUT the rowSha256 and rowSha256Spec fields, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-007-LP-10",
+   "classification": "DISAGREES ABOUT WHICH ANSWER IS RIGHT",
+   "filesCarryingThisItem": [
+    "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+    "~/Downloads/11+/items/eng007-draft.json"
+   ],
+   "WHICH_EACH_FILE_CALLS_CORRECT": {
+    "~/Downloads/11+/from-cluecrew/eng007-draft.json": [
+     "B"
+    ],
+    "~/Downloads/11+/items/eng007-draft.json": [
+     "D"
+    ]
+   },
+   "perLabel": [
+    {
+     "label": "A",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "A thin coat of paint or dust.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "The football team still needs more players.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "B",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "The things lying across the top.",
+       "isCorrect": true
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "Reuben has already written his name on it.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "C",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "A hen that lays eggs.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "Nobody at the school wants to play in September.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "D",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "A list of what is in the box.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "There is a space Reuben is not going to fill.",
+       "isCorrect": true
+      }
+     ]
+    }
+   ],
+   "theServingRow": {
+    "NOT_A_VOTE": "what a child meets today. A fact she needs; not evidence about which copy is right.",
+    "status": "DRAFT",
+    "options": [
+     {
+      "label": "A",
+      "value": "A thin coat of paint or dust.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "C",
+      "value": "A hen that lays eggs.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "D",
+      "value": "A list of what is in the box.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "B",
+      "value": "The things lying across the top.",
+      "isCorrect": true,
+      "carriesExecution": false
+     }
+    ]
+   },
+   "rowSha256": "1d9abf0cdb9d253501e7a49839b60594c4d1fd60daec15b1d331b0e83d56ca0b",
+   "rowSha256Spec": "sha256 over this row serialised as JSON with sorted keys, separators (\",\",\":\"), ensure_ascii false, WITHOUT the rowSha256 and rowSha256Spec fields, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-007-LP-11",
+   "classification": "DISAGREES ABOUT WHICH ANSWER IS RIGHT",
+   "filesCarryingThisItem": [
+    "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+    "~/Downloads/11+/items/eng007-draft.json"
+   ],
+   "WHICH_EACH_FILE_CALLS_CORRECT": {
+    "~/Downloads/11+/from-cluecrew/eng007-draft.json": [
+     "C"
+    ],
+    "~/Downloads/11+/items/eng007-draft.json": [
+     "A"
+    ]
+   },
+   "perLabel": [
+    {
+     "label": "A",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "She is waiting for him to say sorry for the mistake.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "She does not believe his reason, but lets it stand.",
+       "isCorrect": true
+      }
+     ]
+    },
+    {
+     "label": "B",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "She has not understood what he said.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "She is waiting for him to say sorry for the mistake.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "C",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "She does not believe his reason, but lets it stand.",
+       "isCorrect": true
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "She has not understood what he said.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "D",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": false,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "She is cross that he has wasted the afternoon.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "She is cross that he has wasted the afternoon.",
+       "isCorrect": false
+      }
+     ]
+    }
+   ],
+   "theServingRow": {
+    "NOT_A_VOTE": "what a child meets today. A fact she needs; not evidence about which copy is right.",
+    "status": "DRAFT",
+    "options": [
+     {
+      "label": "A",
+      "value": "She is waiting for him to say sorry for the mistake.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "B",
+      "value": "She has not understood what he said.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "C",
+      "value": "She does not believe his reason, but lets it stand.",
+      "isCorrect": true,
+      "carriesExecution": false
+     },
+     {
+      "label": "D",
+      "value": "She is cross that he has wasted the afternoon.",
+      "isCorrect": false,
+      "carriesExecution": true
+     }
+    ]
+   },
+   "rowSha256": "f84c2493f460cb52b671d7b02d959f06885a43c950f73ccb9a0a149064a1c9a5",
+   "rowSha256Spec": "sha256 over this row serialised as JSON with sorted keys, separators (\",\",\":\"), ensure_ascii false, WITHOUT the rowSha256 and rowSha256Spec fields, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-007-LP-12",
+   "classification": "DISAGREES ABOUT WHICH ANSWER IS RIGHT",
+   "filesCarryingThisItem": [
+    "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+    "~/Downloads/11+/items/eng007-draft.json"
+   ],
+   "WHICH_EACH_FILE_CALLS_CORRECT": {
+    "~/Downloads/11+/from-cluecrew/eng007-draft.json": [
+     "D"
+    ],
+    "~/Downloads/11+/items/eng007-draft.json": [
+     "B"
+    ]
+   },
+   "perLabel": [
+    {
+     "label": "A",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "The writer tells us he is sad, and then shows us only the reasons for it.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "He describes lots of old clothes to fill out the story.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "B",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "We get no feelings from him at all, only what his friend Ilya says.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "We get no thoughts from him, only his hands and the things he handles.",
+       "isCorrect": true
+      }
+     ]
+    },
+    {
+     "label": "C",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "He describes only the old clothes, and so we get nothing else.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "The writer tells us he is sad about leaving.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "D",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": true,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+       "content": "We get no thoughts from him, only his hands and the things he handles.",
+       "isCorrect": true
+      },
+      {
+       "file": "~/Downloads/11+/items/eng007-draft.json",
+       "content": "His friend Ilya says what is troubling him.",
+       "isCorrect": false
+      }
+     ]
+    }
+   ],
+   "theServingRow": {
+    "NOT_A_VOTE": "what a child meets today. A fact she needs; not evidence about which copy is right.",
+    "status": "DRAFT",
+    "options": [
+     {
+      "label": "A",
+      "value": "The writer tells us he is sad, and then shows us only the reasons for it.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "B",
+      "value": "We get no feelings from him at all, only what his friend Ilya says.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "C",
+      "value": "He describes only the old clothes, and so we get nothing else.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "D",
+      "value": "We get no thoughts from him, only his hands and the things he handles.",
+      "isCorrect": true,
+      "carriesExecution": false
+     }
+    ]
+   },
+   "rowSha256": "31fa85c841e380c727a5dd66f930b434427b7c2bdf8518f443b8ec26a434f8cf",
+   "rowSha256Spec": "sha256 over this row serialised as JSON with sorted keys, separators (\",\",\":\"), ensure_ascii false, WITHOUT the rowSha256 and rowSha256Spec fields, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  }
+ ],
+ "ITEMS_DISAGREEING_ABOUT_WORDING_ONLY": [
+  {
+   "itemId": "ENG-004-AGG-02",
+   "classification": "DISAGREES ABOUT WORDING ONLY",
+   "filesCarryingThisItem": [
+    "content/pilot-review/ENG-004-anne-green-gables.json",
+    "~/Downloads/11+/from-cluecrew/ENG004annegreengables.json",
+    "~/Downloads/11+/items/ENG-004-anne-green-gables.json",
+    "~/Downloads/11+/to-cluecrew/ENG-004-anne-green-gables.json"
+   ],
+   "WHICH_EACH_FILE_CALLS_CORRECT": {
+    "content/pilot-review/ENG-004-anne-green-gables.json": [
+     "B"
+    ],
+    "~/Downloads/11+/from-cluecrew/ENG004annegreengables.json": [
+     "B"
+    ],
+    "~/Downloads/11+/items/ENG-004-anne-green-gables.json": [
+     "B"
+    ],
+    "~/Downloads/11+/to-cluecrew/ENG-004-anne-green-gables.json": [
+     "B"
+    ]
+   },
+   "perLabel": [
+    {
+     "label": "A",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": false,
+     "eachFileSays": [
+      {
+       "file": "content/pilot-review/ENG-004-anne-green-gables.json",
+       "content": "How tired she was after her journey.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/from-cluecrew/ENG004annegreengables.json",
+       "content": "How tired she was after her journey.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/ENG-004-anne-green-gables.json",
+       "content": "How tired she was after her journey.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/to-cluecrew/ENG-004-anne-green-gables.json",
+       "content": "How tired she was after her journey.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "B",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": false,
+     "eachFileSays": [
+      {
+       "file": "content/pilot-review/ENG-004-anne-green-gables.json",
+       "content": "The way she was holding herself.",
+       "isCorrect": true
+      },
+      {
+       "file": "~/Downloads/11+/from-cluecrew/ENG004annegreengables.json",
+       "content": "The way she was holding herself.",
+       "isCorrect": true
+      },
+      {
+       "file": "~/Downloads/11+/items/ENG-004-anne-green-gables.json",
+       "content": "The way she was holding herself.",
+       "isCorrect": true
+      },
+      {
+       "file": "~/Downloads/11+/to-cluecrew/ENG-004-anne-green-gables.json",
+       "content": "The way she was holding herself.",
+       "isCorrect": true
+      }
+     ]
+    },
+    {
+     "label": "C",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "content/pilot-review/ENG-004-anne-green-gables.json",
+       "content": "What she had been told to do.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/from-cluecrew/ENG004annegreengables.json",
+       "content": "What she thought about waiting.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/ENG-004-anne-green-gables.json",
+       "content": "What she had been told to do.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/to-cluecrew/ENG-004-anne-green-gables.json",
+       "content": "What she had been told to do.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "D",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": false,
+     "eachFileSays": [
+      {
+       "file": "content/pilot-review/ENG-004-anne-green-gables.json",
+       "content": "How shy and awkward she looked.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/from-cluecrew/ENG004annegreengables.json",
+       "content": "How shy and awkward she looked.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/ENG-004-anne-green-gables.json",
+       "content": "How shy and awkward she looked.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/to-cluecrew/ENG-004-anne-green-gables.json",
+       "content": "How shy and awkward she looked.",
+       "isCorrect": false
+      }
+     ]
+    }
+   ],
+   "theServingRow": {
+    "NOT_A_VOTE": "what a child meets today. A fact she needs; not evidence about which copy is right.",
+    "status": "DRAFT",
+    "options": [
+     {
+      "label": "A",
+      "value": "How tired she was after her journey.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "B",
+      "value": "The way she was holding herself.",
+      "isCorrect": true,
+      "carriesExecution": false
+     },
+     {
+      "label": "C",
+      "value": "What she thought about waiting.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "D",
+      "value": "How shy and awkward she looked.",
+      "isCorrect": false,
+      "carriesExecution": true
+     }
+    ]
+   },
+   "rowSha256": "757986eede5b0310eceb06f5794ac9ef6f32c9f0d162f7e5ffe8f523c1eb8d0c",
+   "rowSha256Spec": "sha256 over this row serialised as JSON with sorted keys, separators (\",\",\":\"), ensure_ascii false, WITHOUT the rowSha256 and rowSha256Spec fields, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-005-BB-02",
+   "classification": "DISAGREES ABOUT WORDING ONLY",
+   "filesCarryingThisItem": [
+    "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+    "~/Downloads/11+/items/eng005-draft.json"
+   ],
+   "WHICH_EACH_FILE_CALLS_CORRECT": {
+    "~/Downloads/11+/from-cluecrew/eng005-draft.json": [
+     "B"
+    ],
+    "~/Downloads/11+/items/eng005-draft.json": [
+     "B"
+    ]
+   },
+   "perLabel": [
+    {
+     "label": "A",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "Very large in amount.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "It had covered the meadows so the road was shut.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "B",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "Strong and solidly built.",
+       "isCorrect": true
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "It was rising fast, and he feared a bad night.",
+       "isCorrect": true
+      }
+     ]
+    },
+    {
+     "label": "C",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "Newly put up that year.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "It had already broken the wooden bridge.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "D",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "Painted so they could be seen.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "It was falling now that the rain had stopped.",
+       "isCorrect": false
+      }
+     ]
+    }
+   ],
+   "theServingRow": {
+    "NOT_A_VOTE": "what a child meets today. A fact she needs; not evidence about which copy is right.",
+    "status": "DRAFT",
+    "options": [
+     {
+      "label": "A",
+      "value": "Very large in amount.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "B",
+      "value": "Strong and solidly built.",
+      "isCorrect": true,
+      "carriesExecution": false
+     },
+     {
+      "label": "C",
+      "value": "Newly put up that year.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "D",
+      "value": "Painted so they could be seen.",
+      "isCorrect": false,
+      "carriesExecution": true
+     }
+    ]
+   },
+   "rowSha256": "aba38269c9a827294e5959a13f73fd44a691600c29b8cc30a888a91317b82276",
+   "rowSha256Spec": "sha256 over this row serialised as JSON with sorted keys, separators (\",\",\":\"), ensure_ascii false, WITHOUT the rowSha256 and rowSha256Spec fields, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-005-BB-03",
+   "classification": "DISAGREES ABOUT WORDING ONLY",
+   "filesCarryingThisItem": [
+    "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+    "~/Downloads/11+/items/eng005-draft.json"
+   ],
+   "WHICH_EACH_FILE_CALLS_CORRECT": {
+    "~/Downloads/11+/from-cluecrew/eng005-draft.json": [
+     "C"
+    ],
+    "~/Downloads/11+/items/eng005-draft.json": [
+     "C"
+    ]
+   },
+   "perLabel": [
+    {
+     "label": "A",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "It had already broken the wooden bridge.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "A long wait outside while the master worked.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "B",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "It was falling now that the rain had stopped.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "A trick played to make him go on.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "C",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "It was rising fast, and he feared a bad night.",
+       "isCorrect": true
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "A feed and a rest.",
+       "isCorrect": true
+      }
+     ]
+    },
+    {
+     "label": "D",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "It had covered the meadows so the road was shut.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "Something used to catch a fish.",
+       "isCorrect": false
+      }
+     ]
+    }
+   ],
+   "theServingRow": {
+    "NOT_A_VOTE": "what a child meets today. A fact she needs; not evidence about which copy is right.",
+    "status": "DRAFT",
+    "options": [
+     {
+      "label": "A",
+      "value": "It had already broken the wooden bridge.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "B",
+      "value": "It was falling now that the rain had stopped.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "C",
+      "value": "It was rising fast, and he feared a bad night.",
+      "isCorrect": true,
+      "carriesExecution": false
+     },
+     {
+      "label": "D",
+      "value": "It had covered the meadows so the road was shut.",
+      "isCorrect": false,
+      "carriesExecution": true
+     }
+    ]
+   },
+   "rowSha256": "70f26e658809a12a9d58ff1298573c19bc4ebd6755ad9c2f843c73f157ad3688",
+   "rowSha256Spec": "sha256 over this row serialised as JSON with sorted keys, separators (\",\",\":\"), ensure_ascii false, WITHOUT the rowSha256 and rowSha256Spec fields, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-005-BB-04",
+   "classification": "DISAGREES ABOUT WORDING ONLY",
+   "filesCarryingThisItem": [
+    "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+    "~/Downloads/11+/items/eng005-draft.json"
+   ],
+   "WHICH_EACH_FILE_CALLS_CORRECT": {
+    "~/Downloads/11+/from-cluecrew/eng005-draft.json": [
+     "D"
+    ],
+    "~/Downloads/11+/items/eng005-draft.json": [
+     "D"
+    ]
+   },
+   "perLabel": [
+    {
+     "label": "A",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "Something used to catch a fish.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "A great branch from one of the swaying trees.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "B",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "A long wait outside, with nothing to eat.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "Part of the wooden bridge, carried off by the flood.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "C",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "A trick played to make him go on.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "A shower of dry leaves blown across the road.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "D",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "A feed and a rest.",
+       "isCorrect": true
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "An oak tree, torn up by the roots.",
+       "isCorrect": true
+      }
+     ]
+    }
+   ],
+   "theServingRow": {
+    "NOT_A_VOTE": "what a child meets today. A fact she needs; not evidence about which copy is right.",
+    "status": "DRAFT",
+    "options": [
+     {
+      "label": "A",
+      "value": "Something used to catch a fish.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "B",
+      "value": "A long wait outside, with nothing to eat.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "C",
+      "value": "A trick played to make him go on.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "D",
+      "value": "A feed and a rest.",
+      "isCorrect": true,
+      "carriesExecution": false
+     }
+    ]
+   },
+   "rowSha256": "682d9749c67eafa5b198f78bab2e501839ebc49955bf7fb9afa4a98f55a2e250",
+   "rowSha256Spec": "sha256 over this row serialised as JSON with sorted keys, separators (\",\",\":\"), ensure_ascii false, WITHOUT the rowSha256 and rowSha256Spec fields, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-005-BB-05",
+   "classification": "DISAGREES ABOUT WORDING ONLY",
+   "filesCarryingThisItem": [
+    "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+    "~/Downloads/11+/items/eng005-draft.json"
+   ],
+   "WHICH_EACH_FILE_CALLS_CORRECT": {
+    "~/Downloads/11+/from-cluecrew/eng005-draft.json": [
+     "A"
+    ],
+    "~/Downloads/11+/items/eng005-draft.json": [
+     "A"
+    ]
+   },
+   "perLabel": [
+    {
+     "label": "A",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "An oak tree, torn up by the roots.",
+       "isCorrect": true
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "He had been trained not to, even when frightened.",
+       "isCorrect": true
+      }
+     ]
+    },
+    {
+     "label": "B",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "A great branch from one of the swaying trees.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "He was not frightened by the falling tree.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "C",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "Part of the wooden bridge, carried off by the flood.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "The dog-cart was too heavy to turn on the road.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "D",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "A shower of dry leaves blown across the road.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "John was already holding him at his head.",
+       "isCorrect": false
+      }
+     ]
+    }
+   ],
+   "theServingRow": {
+    "NOT_A_VOTE": "what a child meets today. A fact she needs; not evidence about which copy is right.",
+    "status": "DRAFT",
+    "options": [
+     {
+      "label": "A",
+      "value": "An oak tree, torn up by the roots.",
+      "isCorrect": true,
+      "carriesExecution": false
+     },
+     {
+      "label": "B",
+      "value": "A great branch from one of the swaying trees.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "C",
+      "value": "Part of the wooden bridge, carried off by the flood.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "D",
+      "value": "A shower of dry leaves blown across the road.",
+      "isCorrect": false,
+      "carriesExecution": true
+     }
+    ]
+   },
+   "rowSha256": "fa7a3ecf3b1f06ff14ff98cf8baa9f29f18e97759817291fc4198b8fc21c54aa",
+   "rowSha256Spec": "sha256 over this row serialised as JSON with sorted keys, separators (\",\",\":\"), ensure_ascii false, WITHOUT the rowSha256 and rowSha256Spec fields, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-005-BB-06",
+   "classification": "DISAGREES ABOUT WORDING ONLY",
+   "filesCarryingThisItem": [
+    "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+    "~/Downloads/11+/items/eng005-draft.json"
+   ],
+   "WHICH_EACH_FILE_CALLS_CORRECT": {
+    "~/Downloads/11+/from-cluecrew/eng005-draft.json": [
+     "B"
+    ],
+    "~/Downloads/11+/items/eng005-draft.json": [
+     "B"
+    ]
+   },
+   "perLabel": [
+    {
+     "label": "A",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "He was not frightened by the falling tree.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "Unhitch Beauty and lead him home on foot.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "B",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "He had been trained not to, even when frightened.",
+       "isCorrect": true
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "Go back to the crossways and round, six miles further.",
+       "isCorrect": true
+      }
+     ]
+    },
+    {
+     "label": "C",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "The dog-cart was too heavy to turn on the road.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "Drive slowly over the tree where it lay lowest.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "D",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "John was already holding him at his head.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "Wait by the wood until the storm had passed.",
+       "isCorrect": false
+      }
+     ]
+    }
+   ],
+   "theServingRow": {
+    "NOT_A_VOTE": "what a child meets today. A fact she needs; not evidence about which copy is right.",
+    "status": "DRAFT",
+    "options": [
+     {
+      "label": "B",
+      "value": "He had been trained not to, even when frightened.",
+      "isCorrect": true,
+      "carriesExecution": false
+     },
+     {
+      "label": "C",
+      "value": "The dog-cart was too heavy to turn on the road.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "D",
+      "value": "John was already holding him at his head.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "A",
+      "value": "He was not frightened by the falling tree.",
+      "isCorrect": false,
+      "carriesExecution": true
+     }
+    ]
+   },
+   "rowSha256": "b5ef6334b89b0673a03616f5ed215f2f585d50f3627304f9076faf0ce921ead2",
+   "rowSha256Spec": "sha256 over this row serialised as JSON with sorted keys, separators (\",\",\":\"), ensure_ascii false, WITHOUT the rowSha256 and rowSha256Spec fields, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-005-BB-07",
+   "classification": "DISAGREES ABOUT WORDING ONLY",
+   "filesCarryingThisItem": [
+    "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+    "~/Downloads/11+/items/eng005-draft.json"
+   ],
+   "WHICH_EACH_FILE_CALLS_CORRECT": {
+    "~/Downloads/11+/from-cluecrew/eng005-draft.json": [
+     "C"
+    ],
+    "~/Downloads/11+/items/eng005-draft.json": [
+     "C"
+    ]
+   },
+   "perLabel": [
+    {
+     "label": "A",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "Drive slowly over the tree where it lay lowest.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "Because the gatekeeper had waved them across.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "B",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "Wait by the wood until the storm had passed.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "Because Beauty was going at a good pace and could not stop.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "C",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "Go back to the crossways and round, six miles further.",
+       "isCorrect": true
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "Because that had happened before in floods.",
+       "isCorrect": true
+      }
+     ]
+    },
+    {
+     "label": "D",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "Unhitch Beauty and lead him home on foot.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "Because it was too dark for him to see the water.",
+       "isCorrect": false
+      }
+     ]
+    }
+   ],
+   "theServingRow": {
+    "NOT_A_VOTE": "what a child meets today. A fact she needs; not evidence about which copy is right.",
+    "status": "DRAFT",
+    "options": [
+     {
+      "label": "A",
+      "value": "Drive slowly over the tree where it lay lowest.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "B",
+      "value": "Wait by the wood until the storm had passed.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "C",
+      "value": "Go back to the crossways and round, six miles further.",
+      "isCorrect": true,
+      "carriesExecution": false
+     },
+     {
+      "label": "D",
+      "value": "Unhitch Beauty and lead him home on foot.",
+      "isCorrect": false,
+      "carriesExecution": true
+     }
+    ]
+   },
+   "rowSha256": "bdf9e5a6c3178dab42596e0b5cee0fdff5439dae207edfec3e6808575356d48c",
+   "rowSha256Spec": "sha256 over this row serialised as JSON with sorted keys, separators (\",\",\":\"), ensure_ascii false, WITHOUT the rowSha256 and rowSha256Spec fields, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-005-BB-08",
+   "classification": "DISAGREES ABOUT WORDING ONLY",
+   "filesCarryingThisItem": [
+    "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+    "~/Downloads/11+/items/eng005-draft.json"
+   ],
+   "WHICH_EACH_FILE_CALLS_CORRECT": {
+    "~/Downloads/11+/from-cluecrew/eng005-draft.json": [
+     "D"
+    ],
+    "~/Downloads/11+/items/eng005-draft.json": [
+     "D"
+    ]
+   },
+   "perLabel": [
+    {
+     "label": "A",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "Because it was too dark for him to see the water.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "The master was grateful to Beauty for saving their lives.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "B",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "Because the gatekeeper had waved them across.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "Beauty was too frightened of the deep water to move.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "C",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "Because Beauty was going at a good pace and could not stop.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "The master had wanted to test whether Beauty would obey.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "D",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "Because that had happened before in floods.",
+       "isCorrect": true
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "The master punished Beauty for the very thing that saved them.",
+       "isCorrect": true
+      }
+     ]
+    }
+   ],
+   "theServingRow": {
+    "NOT_A_VOTE": "what a child meets today. A fact she needs; not evidence about which copy is right.",
+    "status": "DRAFT",
+    "options": [
+     {
+      "label": "A",
+      "value": "Because it was too dark for him to see the water.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "B",
+      "value": "Because the gatekeeper had waved them across.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "C",
+      "value": "Because Beauty was going at a good pace and could not stop.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "D",
+      "value": "Because that had happened before in floods.",
+      "isCorrect": true,
+      "carriesExecution": false
+     }
+    ]
+   },
+   "rowSha256": "18b91776280475a54916c82acecbcb2da60aa922acb0ce083154de0e12c934af",
+   "rowSha256Spec": "sha256 over this row serialised as JSON with sorted keys, separators (\",\",\":\"), ensure_ascii false, WITHOUT the rowSha256 and rowSha256Spec fields, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-005-BB-09",
+   "classification": "DISAGREES ABOUT WORDING ONLY",
+   "filesCarryingThisItem": [
+    "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+    "~/Downloads/11+/items/eng005-draft.json"
+   ],
+   "WHICH_EACH_FILE_CALLS_CORRECT": {
+    "~/Downloads/11+/from-cluecrew/eng005-draft.json": [
+     "A"
+    ],
+    "~/Downloads/11+/items/eng005-draft.json": [
+     "A"
+    ]
+   },
+   "perLabel": [
+    {
+     "label": "A",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "The master punished Beauty for the very thing that saved them.",
+       "isCorrect": true
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "Move at all.",
+       "isCorrect": true
+      }
+     ]
+    },
+    {
+     "label": "B",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "The master knew that Beauty was right to stop on the bridge.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "Mix something round and round.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "C",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "Beauty was too frightened of the water to cross the bridge.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "Make any sound.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "D",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "The master had wanted to test whether Beauty would obey him at all.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "Wake up from a doze.",
+       "isCorrect": false
+      }
+     ]
+    }
+   ],
+   "theServingRow": {
+    "NOT_A_VOTE": "what a child meets today. A fact she needs; not evidence about which copy is right.",
+    "status": "DRAFT",
+    "options": [
+     {
+      "label": "A",
+      "value": "The master punished Beauty for the very thing that saved them.",
+      "isCorrect": true,
+      "carriesExecution": false
+     },
+     {
+      "label": "B",
+      "value": "The master knew that Beauty was right to stop on the bridge.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "C",
+      "value": "Beauty was too frightened of the water to cross the bridge.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "D",
+      "value": "The master had wanted to test whether Beauty would obey him at all.",
+      "isCorrect": false,
+      "carriesExecution": true
+     }
+    ]
+   },
+   "rowSha256": "9f1990c68e18c04cbb603164502108f17255dcc11081c580f3d8b122efec457c",
+   "rowSha256Spec": "sha256 over this row serialised as JSON with sorted keys, separators (\",\",\":\"), ensure_ascii false, WITHOUT the rowSha256 and rowSha256Spec fields, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-005-BB-10",
+   "classification": "DISAGREES ABOUT WORDING ONLY",
+   "filesCarryingThisItem": [
+    "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+    "~/Downloads/11+/items/eng005-draft.json"
+   ],
+   "WHICH_EACH_FILE_CALLS_CORRECT": {
+    "~/Downloads/11+/from-cluecrew/eng005-draft.json": [
+     "B"
+    ],
+    "~/Downloads/11+/items/eng005-draft.json": [
+     "B"
+    ]
+   },
+   "perLabel": [
+    {
+     "label": "A",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "To show the storm was still getting worse.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "To copy the sound of the wheels on the soft road.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "B",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": false,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "To make the change feel slow and steady.",
+       "isCorrect": true
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "To make the change feel slow and steady.",
+       "isCorrect": true
+      }
+     ]
+    },
+    {
+     "label": "C",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "To show Beauty was growing tired at the end of the day.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "To show the storm was still getting worse.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "D",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "To copy the sound of the wheels on the soft road.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "To show Beauty was growing tired at the end of the day.",
+       "isCorrect": false
+      }
+     ]
+    }
+   ],
+   "theServingRow": {
+    "NOT_A_VOTE": "what a child meets today. A fact she needs; not evidence about which copy is right.",
+    "status": "DRAFT",
+    "options": [
+     {
+      "label": "A",
+      "value": "To show the storm was still getting worse.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "B",
+      "value": "To make the change feel slow and steady.",
+      "isCorrect": true,
+      "carriesExecution": false
+     },
+     {
+      "label": "C",
+      "value": "To show Beauty was growing tired at the end of the day.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "D",
+      "value": "To copy the sound of the wheels on the soft road.",
+      "isCorrect": false,
+      "carriesExecution": true
+     }
+    ]
+   },
+   "rowSha256": "6f8a9c3b99e00e7b7c2a0678024c6afbecb9177849f1c465d056cafadb6321c4",
+   "rowSha256Spec": "sha256 over this row serialised as JSON with sorted keys, separators (\",\",\":\"), ensure_ascii false, WITHOUT the rowSha256 and rowSha256Spec fields, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-005-BB-11",
+   "classification": "DISAGREES ABOUT WORDING ONLY",
+   "filesCarryingThisItem": [
+    "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+    "~/Downloads/11+/items/eng005-draft.json"
+   ],
+   "WHICH_EACH_FILE_CALLS_CORRECT": {
+    "~/Downloads/11+/from-cluecrew/eng005-draft.json": [
+     "C"
+    ],
+    "~/Downloads/11+/items/eng005-draft.json": [
+     "C"
+    ]
+   },
+   "perLabel": [
+    {
+     "label": "A",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "That Beauty had been badly trained and needed more work.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "That the gatekeeper was to blame for the broken bridge.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "B",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "That the gatekeeper was to blame for the broken bridge.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "That they were lucky the wind had lulled when it did.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "C",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": false,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "That going on would probably have drowned them all.",
+       "isCorrect": true
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "That going on would probably have drowned them all.",
+       "isCorrect": true
+      }
+     ]
+    },
+    {
+     "label": "D",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "That they were lucky the wind had lulled when it did.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "That Beauty had been badly trained and needed more work.",
+       "isCorrect": false
+      }
+     ]
+    }
+   ],
+   "theServingRow": {
+    "NOT_A_VOTE": "what a child meets today. A fact she needs; not evidence about which copy is right.",
+    "status": "DRAFT",
+    "options": [
+     {
+      "label": "A",
+      "value": "That Beauty had been badly trained and needed more work.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "B",
+      "value": "That the gatekeeper was to blame for the broken bridge.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "C",
+      "value": "That going on would probably have drowned them all.",
+      "isCorrect": true,
+      "carriesExecution": false
+     },
+     {
+      "label": "D",
+      "value": "That they were lucky the wind had lulled when it did.",
+      "isCorrect": false,
+      "carriesExecution": true
+     }
+    ]
+   },
+   "rowSha256": "d7f79049c3876a9e2b5bbb7f37a58f0efd8dd4d68ba35d7166eaad120d28d9ef",
+   "rowSha256Spec": "sha256 over this row serialised as JSON with sorted keys, separators (\",\",\":\"), ensure_ascii false, WITHOUT the rowSha256 and rowSha256Spec fields, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-005-BB-12",
+   "classification": "DISAGREES ABOUT WORDING ONLY",
+   "filesCarryingThisItem": [
+    "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+    "~/Downloads/11+/items/eng005-draft.json"
+   ],
+   "WHICH_EACH_FILE_CALLS_CORRECT": {
+    "~/Downloads/11+/from-cluecrew/eng005-draft.json": [
+     "D"
+    ],
+    "~/Downloads/11+/items/eng005-draft.json": [
+     "D"
+    ]
+   },
+   "perLabel": [
+    {
+     "label": "A",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "He cannot talk to the men at all, so he shows them what he means instead.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "That Beauty is too frightened to listen properly.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "B",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "He is not frightened at all, but braver than the men on the bridge.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "That the people never speak to Beauty at all.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "C",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "The men explain each thing to him as they go, and he takes it all in.",
+       "isCorrect": false
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "That Beauty repeats the words to show off what he knows.",
+       "isCorrect": false
+      }
+     ]
+    },
+    {
+     "label": "D",
+     "DISAGREES_ABOUT_WHICH_IS_CORRECT": false,
+     "DISAGREES_ABOUT_WORDING": true,
+     "eachFileSays": [
+      {
+       "file": "~/Downloads/11+/from-cluecrew/eng005-draft.json",
+       "content": "He learns through his feet and his body, but cannot say what he knows.",
+       "isCorrect": true
+      },
+      {
+       "file": "~/Downloads/11+/items/eng005-draft.json",
+       "content": "He gives us their words exactly, but says he cannot follow them.",
+       "isCorrect": true
+      }
+     ]
+    }
+   ],
+   "theServingRow": {
+    "NOT_A_VOTE": "what a child meets today. A fact she needs; not evidence about which copy is right.",
+    "status": "DRAFT",
+    "options": [
+     {
+      "label": "A",
+      "value": "He cannot talk to the men at all, so he shows them what he means instead.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "B",
+      "value": "He is not frightened at all, but braver than the men on the bridge.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "C",
+      "value": "The men explain each thing to him as they go, and he takes it all in.",
+      "isCorrect": false,
+      "carriesExecution": true
+     },
+     {
+      "label": "D",
+      "value": "He learns through his feet and his body, but cannot say what he knows.",
+      "isCorrect": true,
+      "carriesExecution": false
+     }
+    ]
+   },
+   "rowSha256": "ac61e2d1431c4b6653c9e8f5ec8a0dbbbf66fd2e8561c3cf42aa653cfb6f0efb",
+   "rowSha256Spec": "sha256 over this row serialised as JSON with sorted keys, separators (\",\",\":\"), ensure_ascii false, WITHOUT the rowSha256 and rowSha256Spec fields, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  }
+ ],
+ "findingsSha256": "f2a7533467ec6f7b7824bdc2b38675eba63c5069af92185183ecd24d0b12b33e",
+ "howToCheckThisOnArrival": {
+  "subtreeKeys": [
+   "THE_COUNTS",
+   "ITEMS_DISAGREEING_ABOUT_THE_ANSWER",
+   "ITEMS_DISAGREEING_ABOUT_WORDING_ONLY"
+  ],
+  "subtree": "an object of THIS DOCUMENT'S OWN TOP-LEVEL KEYS, exactly as spelled in subtreeKeys and nowhere renamed: {\"THE_COUNTS\", \"ITEMS_DISAGREEING_ABOUT_THE_ANSWER\", \"ITEMS_DISAGREEING_ABOUT_WORDING_ONLY\"}",
+  "spec": "sha256 over json.dumps(subtree, sort_keys=True, separators=(\",\",\":\"), ensure_ascii=False).encode(\"utf-8\") — R729. ensure_ascii defaults to True and gives a different number.",
+  "andTheFileDigest": "the staging line and the .sha256 sidecar, over the whole file bytes"
+ },
+ "instrumentProvenance": {
+  "emittedBy": "emit-key-disagreements-for-annie.ts",
+  "carriedFixture": true,
+  "meaning": "the emitting instrument proved itself against carried cases — including at least one clean case caught by nothing — before it produced these figures (R721)."
+ }
+}

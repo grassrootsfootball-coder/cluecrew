@@ -21402,3 +21402,51 @@ treating prose as a crossing that had no channel at all.
 
 Both figures now cross as `three-open-answers`, with the vr-02 rows carried as data beside them.
 **The general form: if an answer matters enough to be asked for twice, it is an artefact.**
+
+## R765 — Which file wins is not which answer is right
+
+I proposed naming an authoritative directory to unblock the re-import. **That is the wrong
+instrument.** Naming a directory decides which FILE wins; it does not decide which ANSWER is right,
+and on 24 items the two readings disagree about exactly that. A directory ruling would have settled
+**48 content questions by provenance** — adopting whichever answer happened to sit in the folder
+somebody named — and no amount of correct filing makes that a content decision. **The reviewer is
+the only party who can settle which answer is right**, so the readings cross to her side by side
+and nothing lands until she rules. The 19 reversed executions stay reversed and re-land only under
+whichever reading she confirms.
+
+**And my framing was wrong in a way that made the directory ruling look adequate.** I said *two
+files named `eng006-draft.json` sit in different directories and disagree*, which sounds like a
+filing problem between two drafts. **One of those directories is `~/Downloads/11+/from-cluecrew` —
+THIS STORE'S OWN OUTBOUND.** All 24 key disagreements are the same single pairing: a copy this
+store exported against a file this store did not produce. There are not two authoring copies in
+play. And on **24 of 24, the serving row agrees with this store's export** — the export mirrors the
+database, so it is one party with two faces, not two witnesses.
+
+**The real statement is therefore much sharper: the database, and so what a child would meet,
+disagrees with an authored source about which answer is right, on 24 items.** A two-party content
+disagreement between the stores — not a drafting muddle, and not something a folder can decide.
+
+**Two figures corrected in the same pass, both the same shape.** I reported *48 disagreements over
+36 items*; it is 48 over **24** items. The 36 is items disagreeing about ANYTHING — 24 about the
+answer, 12 about wording only. I attached the wider item count to the narrower pair count, which is
+the 553's shape exactly: a true number under a label that widened it. Both classes cross, separated,
+because a wording disagreement is also hers and is a different question.
+
+## R766 — The rule caught me inside the artefact that carries it
+
+The per-row digests on the disagreement rows declared the canonical-JSON spec and were computed
+with `JSON.stringify(row, Object.keys(row).sort())`. **A replacer ARRAY is not a sort**: it filters
+every nested object to the top-level key names and preserves insertion order. The declared spec did
+not reproduce the digest, on any of the 36 rows.
+
+**R759 was registered one turn earlier and its guard passed this artefact**, because
+`assertDigestsNameTheirSpec` asks whether a spec is NAMED and cannot ask whether it is TRUE. That
+is the correct limit for a cheap structural guard and it is worth stating rather than patching over:
+naming a spec is checkable at the door; honouring it is only checkable by recomputing, which the
+emitting side can do and the receiving side must do anyway.
+
+**The repair is the same one R752 made for the subtree and R759 for the manifest — call the
+function the spec names.** `canonicalJson` is now used directly, so the description and the
+computation are the same object rather than two things kept in agreement by attention. All 36 rows
+reproduce. **Third time in three turns that a digest and its stated spec drifted apart, and the
+first time the drift was inside the artefact registering the rule against it.**
