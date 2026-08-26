@@ -20440,3 +20440,69 @@ held, and **row 10 did not** — she had inferred *farm animals* where the bank 
 importing row 18's rule into row 10. Sound by luck, not by method. Her line for the register:
 **"a list of paths is a snapshot of a schema, and schemas grow; walking the row is the only form
 that cannot go stale."**
+
+## R719 — The notation exemption has a boundary: a capital in a stem cannot claim it
+
+**Her scope line, taken as the whole rule**: *notation is exempt where the string is an IDENTIFIER
+OR SYMBOL IN ITS OWN SYSTEM, and never where it sits inside a sentence a child reads. A code
+letter in a series is notation; a capital inside a stem is emphasis wearing notation's coat.*
+
+Wired as `notationExempt(root, path, text)`, which requires **both** conditions and neither alone:
+the PATH must be one that carries symbols (`NOTATION_BEARING_PATHS`), **and the STRING must BE a
+symbol** — one token, no sentence punctuation. `stem.prompt` fails the first. **A capital inside
+any sentence fails the second on every path, including the notation-bearing ones**, because
+`options[].content.value` is a single letter on a VR card and a full sentence on a comprehension
+one — the same field name carrying two kinds of content, which is the trap this boundary exists
+for. Four tests, including the one that matters: *"Which word joins with AIR…"* is refused the
+exemption while a bare `AIR` keeps it.
+
+**And the thirty cleared**: all thirty undeclared paths ruled STAFF — sixteen
+`draftSelfAssessment.*`, three `stem.quotes[].*`, two `stemRedraft.*`, nine singletons. Re-run:
+**staff 62 · child 0 · quotation 2 · undecided 0 · UNDECLARED 0**, and the gate over 335 LIVE
+items reports **0 failing, zero content faults**.
+
+## R720 — A field arrives with its disposition declared, or the gate refuses it on sight
+
+**Standing rule, ruled after the author of the rule broke it**: two of the last ten undeclared
+paths were columns THIS SIDE added during the very week that ruled on them — `drafterNote` and
+`options[].drafterDeclaredPull` — arriving undeclared four days on. **Reporting was not enough.**
+An undeclared path is now a BUILD FAILURE in `check:every-string-field` (already wired into CI),
+so declaring a field is part of ADDING it rather than something someone notices later. The
+refusal names every offending path and cannot be satisfied by classifying one `undecided` — that
+is a ruling too, and it is one a person makes.
+
+## R721 — A known member drawn from the standing corpus expires when the corpus is repaired
+
+**Cowork's lesson, taken whole and audited against my own instruments.** Its bank screen wired its
+known member to the shouted TWO — a fault in the STANDING CORPUS — and **the moment the 28 rows
+were amended the screen refused, because the member it was built knowing about had been
+repaired**. Its sentence, which is the rule: *a screen whose self-test expires goes dark exactly
+when the corpus is at its cleanest — the moment it is least likely to be questioned.*
+
+**The audit** (`fixture-audit-5dbe34a6cabef6f6.json`, file sha256
+`5dbe34a6cabef6f65640c9c750f8fd65fdeda5ebabbd2c836d72ce10cd1e3f08`), limits first: it reads
+SOURCE, not behaviour, and covers `scripts/check-*.ts` only. Of 80 checks: 10 already carry
+synthetic/planted canaries, 4 anchor to a constant or a function name rather than to content, and
+**64 have no self-test at all** — named as membership, not repaired, because a fixture is a design
+decision per instrument.
+
+**TWO CONVERTED, and the second is the sharper finding:**
+- `check-content-flags` was **CORPUS-DRAWN**: its calibration specimen was the christmas-carol
+  `DECLARED(item-set)` flag, a real flag in the standing corpus. **The day Annie rules that flag
+  away — a legitimate content decision — the census would have gone blind while printing a clean
+  run.** Now a carried fixture of four synthetic passages; the corpus specimen is still OBSERVED
+  and reported, because losing the observation loses evidence — it simply no longer decides trust.
+- `check-every-string-field` had **NO SELF-TEST AT ALL**, which is worse than one that expires —
+  **and it is the check that produced the 1,533 figure by modelling the gate instead of calling
+  it. An instrument with no self-test cannot be caught being wrong by anything but an argument,
+  which is exactly what happened.**
+
+**The shared path** is `scripts/lib/carried-fixture.ts`: `assertFixture` REFUSES a malformed
+fixture (one lacking a clean case, or lacking a must-catch case — one without the other proves
+half an instrument), prints **FIXTURE PASSED before the sweep** so a reader knows the instrument
+worked before reading what it found, and exits non-zero when the instrument does not do what it
+claims. **Every fixture carries at least one CLEAN string that must be caught by NOTHING**,
+because a screen that flags clean text reports faults nobody can trust.
+
+**Her line for the register, from the same sitting**: the reconstruction cost is **one row in
+eighteen** — *"a figure where the argument used to have an opinion"*.

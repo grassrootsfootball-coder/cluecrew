@@ -20,6 +20,7 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { artefactStamp, deliver, stampedName } from './lib/export-destination';
 import { FIELD_DISPOSITIONS, dispositionFor, isScreenedPath, type FieldDisposition } from '../packages/core/src/index';
+import { assertFixture } from './lib/carried-fixture';
 import { prisma } from '../packages/db/src/index';
 import { requirePopulation } from './lib/population';
 
@@ -97,6 +98,22 @@ function strings(value: unknown, path: string, out: { path: string; text: string
 const generalise = (p: string) => p.replace(/\[\d+\]/g, '[]');
 
 async function main() {
+  /**
+   * **THIS CHECK HAD NO KNOWN MEMBER AT ALL** (R721). Cowork's screen had one that expired; this
+   * had none ever — and it is the check that produced the 1,533 figure by modelling the gate
+   * instead of calling it. An instrument with no self-test cannot be caught being wrong by
+   * anything but an argument, which is what happened.
+   *
+   * Carried, synthetic, and it exercises the two things this check actually claims: that it finds
+   * punctuation faults in strings, and that a clean string is caught by NOTHING.
+   */
+  assertFixture('check:every-string-field', [
+    { name: 'doubled opening quotation mark', input: '""He said so.', mustBeCaught: true },
+    { name: 'doubled terminal mark', input: 'She left..', mustBeCaught: true },
+    { name: 'space before a terminal mark', input: 'She left .', mustBeCaught: true },
+    { name: 'a clean sentence is caught by nothing', input: 'She said, "Come here," and left.', mustBeCaught: false },
+  ], (text) => FAULTS.some((f) => f.re.test(text)));
+
   const cases = await prisma.case.findMany({ select: { questionTypeId: true, id: true } });
   const doorTypes = new Set(cases.map((c) => c.questionTypeId));
   const items = await prisma.item.findMany({
@@ -193,6 +210,22 @@ async function main() {
   for (const f of findings.slice(0, 15)) {
     console.log(`  ${f.itemId} · ${f.path} · ${f.screened ? 'screened' : 'UNSCREENED'} · ${f.fault}`);
     console.log(`      ${JSON.stringify(f.text.slice(0, 90))}`);
+  }
+  /**
+   * **A FIELD ARRIVES WITH ITS DISPOSITION DECLARED, OR IT REFUSES ON SIGHT** (David's standing
+   * rule, 2026-08-25 — R720). Two of the last ten undeclared paths were columns THIS SIDE added
+   * during the week that ruled on them, and they arrived undeclared: the author of the rule
+   * breaking it, four days on. Reporting was not enough — an undeclared path is now a BUILD
+   * FAILURE, so declaring it is part of adding it rather than a thing someone notices later.
+   *
+   * The refusal is loud, names every path, and cannot be satisfied by classifying a path
+   * `undecided`: that is a ruling too, and it is one a person makes.
+   */
+  if (byDisposition.MISSING!.length > 0) {
+    console.error(`\n  ${byDisposition.MISSING!.length} PATH(S) ARRIVED WITHOUT A DISPOSITION.`);
+    console.error('  A new column or field arrives with its disposition declared, or the gate refuses it');
+    console.error('  on sight (R720). Add each to FIELD_DISPOSITIONS in packages/core/src/field-dispositions.ts.');
+    process.exitCode = 1;
   }
   await prisma.$disconnect();
 }

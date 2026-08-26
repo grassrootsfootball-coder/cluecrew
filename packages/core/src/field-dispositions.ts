@@ -34,16 +34,46 @@ export const isRetentionPath = (path: string): boolean =>
   path.split('.').some((seg) => seg.replace(/\[\d+\]/g, '').startsWith('_'));
 
 /**
- * A QUESTION TYPE'S OWN ORTHOGRAPHY IS NOT EMPHASIS (Annie's 156th, David's ruling — R716).
+ * A QUESTION TYPE'S OWN ORTHOGRAPHY IS NOT EMPHASIS — AND THE EXEMPTION HAS A BOUNDARY
+ * (Annie's 156th/157th, David's rulings, 2026-08-25 — R716, scoped R719).
  *
  * vr-06 renders the target `SHOUT`, the frame `SH___` and the option `OUT` in capitals BECAUSE
  * the child is completing letters; a joins-with prompt capitalises `AIR` because it is the thing
- * being joined. **The shouted-capitals rule binds EMPHASIS ONLY.** Scoring these would return 450
- * wrong verdicts — the qualifier lesson in a third guise, and the item gate has never done it:
- * probed before this rule was written, `SH___`/`SHOUT`/`OUT`/`AIR` all pass clean. This constant
- * exists so a LATER gate cannot be written that flags orthography without meeting the ruling.
+ * being joined. The shouted-capitals rule binds EMPHASIS ONLY.
+ *
+ * **HER SCOPE LINE, WHICH IS THE WHOLE RULE**: *notation is exempt where the string is an
+ * IDENTIFIER OR SYMBOL IN ITS OWN SYSTEM, and never where it sits inside a sentence a child
+ * reads. A code letter in a series is notation; a capital inside a stem is emphasis wearing
+ * notation's coat.*
+ *
+ * So the exemption needs BOTH conditions and neither alone:
+ *   1. the PATH must be one that carries symbols rather than prose, and
+ *   2. the STRING itself must BE a symbol — no internal whitespace, no sentence punctuation.
+ * `stem.prompt` fails (1). A capital inside any sentence fails (2), on every path, including the
+ * notation-bearing ones — because `options[].content.value` is a single letter on a VR card and a
+ * full sentence on a comprehension one, the same field name carrying two kinds of content.
  */
-export const NOTATION_IS_NOT_EMPHASIS = true;
+export const NOTATION_BEARING_PATHS = new Set([
+  'stem.target', 'stem.frame', 'stem.stemWord', 'stem.word1', 'stem.word2', 'stem.sum',
+  'stem.code.P', 'stem.code.Q', 'stem.code.R', 'stem.code.S',
+  'stem.series[]', 'stem.pairA[]', 'stem.words[]', 'stem.clues[]',
+  'options[].content.value', 'options[].content.label',
+]);
+
+/** A symbol in its own system: one token, no sentence punctuation. Never a sentence. */
+export const isSymbolString = (text: string): boolean => {
+  const s = text.trim();
+  if (s === '' || /\s/.test(s)) return false;
+  return !/[.!?,;:]/.test(s.replace(/[.]{2,}/g, ''));
+};
+
+/**
+ * The notation exemption, with her boundary enforced. A capital inside a sentence a child reads
+ * CANNOT claim it, whatever path it sits on.
+ */
+export function notationExempt(root: string, path: string, text: string): boolean {
+  return NOTATION_BEARING_PATHS.has(dispositionKey(root, path)) && isSymbolString(text);
+}
 
 /** Normalises a walked path to its declaration key: array indices collapse to `[]`. */
 export function dispositionKey(root: string, path: string): string {
@@ -90,6 +120,40 @@ export const FIELD_DISPOSITIONS: Record<string, FieldDisposition> = {
 
   // --- QUOTATION: bound by fidelity to its source, never by house style (R711). ---
   'options[].attractorQuote': 'quotation', 'options[].defeaterQuote': 'quotation',
+
+  // --- STAFF, ruled 2026-08-25 (her 157th thread): the THIRTY the whole-row walk surfaced —
+  // sixteen draftSelfAssessment.*, three stem.quotes[].*, two stemRedraft.*, nine singletons.
+  // Provenance, review record and drafting method throughout; none is rendered to a child. ---
+  'draftSelfAssessment.handoffState': 'staff',
+  'draftSelfAssessment.notes': 'staff',
+  'draftSelfAssessment.rubric.banList': 'staff',
+  'draftSelfAssessment.rubric.fairness': 'staff',
+  'draftSelfAssessment.rubric.tierFit': 'staff',
+  'draftSelfAssessment.rubricDerivability.banList': 'staff',
+  'draftSelfAssessment.rubricDerivability.distractorsExecute': 'staff',
+  'draftSelfAssessment.rubricDerivability.fairness': 'staff',
+  'draftSelfAssessment.rubricDerivability.keyVerified': 'staff',
+  'draftSelfAssessment.rubricDerivability.readingAge': 'staff',
+  'draftSelfAssessment.rubricDerivability.tierFit': 'staff',
+  'draftSelfAssessment.rubricDerivabilityNote': 'staff',
+  'draftSelfAssessment.subjectHash': 'staff',
+  'draftSelfAssessment.subjectHashCaveat': 'staff',
+  'draftSelfAssessment.subjectHashCovers': 'staff',
+  'draftSelfAssessment.subjectHashStampedAt': 'staff',
+  'draftingMethod': 'staff',
+  'itemModel': 'staff',
+  'passageFlag': 'staff',
+  'r4Note': 'staff',
+  'reviewMethod': 'staff',
+  'reviewNotes': 'staff',
+  'reviewRecordNote': 'staff',
+  'sourcedFrom': 'staff',
+  'stem.quotes[].passageRef': 'staff',
+  'stem.quotes[].rule': 'staff',
+  'stem.quotes[].why': 'staff',
+  'stemRedraft.rules[]': 'staff',
+  'stemRedraft.why': 'staff',
+  'tierRationale': 'staff',
 
   // --- STAFF, ruled 2026-08-25 (her 156th thread): the seven the gate surfaced. A declaration's
   // own metadata and a recorded ruling; neither is rendered to a child. ---

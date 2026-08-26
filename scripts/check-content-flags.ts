@@ -10,6 +10,7 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { axesTableCanary, readContentFlags } from '../packages/core/src/index';
+import { assertFixture } from './lib/carried-fixture';
 import { declareMayBeEmpty, requirePopulation } from './lib/population';
 
 const PASSAGES = join(dirname(fileURLToPath(import.meta.url)), '..', 'content/passages');
@@ -30,6 +31,26 @@ function main() {
    * cannot find the fault it was built from has not been built yet."* This census was built while
    * that flag landed; a run that cannot see it is blind, whatever else it prints.
    */
+  /**
+   * THE CARRIED FIXTURE, replacing the corpus-drawn specimen as the GATE (R721). The
+   * christmas-carol claim was a real flag in the standing corpus: the day Annie rules it away —
+   * a legitimate content decision — this census would have gone blind while printing a clean run.
+   * The fixture cannot be repaired out from under it. The corpus specimen is still OBSERVED and
+   * reported below, because losing the observation would lose evidence; it simply no longer
+   * decides whether the instrument is trusted.
+   */
+  assertFixture('check:content-flags', [
+    { name: 'DECLARED(item-set) parses', input: { id: 'FIXTURE-A', contentFlags: ['DECLARED(item-set): the fixture\'s own claim'] }, mustBeCaught: true },
+    { name: 'DECLARED(absence) parses', input: { id: 'FIXTURE-B', contentFlags: ['DECLARED(absence)'] }, mustBeCaught: true },
+    { name: 'a standard object flag parses', input: { id: 'FIXTURE-C', contentFlags: [{ axis: 'physical-peril-no-lasting-harm', element: 'x', severity: 'mild', disposition: 'keep', condition: null, conditionMetBy: null, reason: 'y', judgedBy: 'Annie', judgedAt: '2026-08-24' }] }, mustBeCaught: true },
+    // THE CLEAN CASE: a passage with no flags at all must produce NOTHING. A reader who cannot
+    // trust the zeros cannot trust the counts either.
+    { name: 'a passage with no flags is caught by nothing', input: { id: 'FIXTURE-CLEAN', contentFlags: [] }, mustBeCaught: false },
+  ], (passage) => {
+    const r = readContentFlags(passage);
+    return r.standardFlags.length + r.declared.length + r.legacy.strings + r.legacy.objects > 0;
+  });
+
   let specimenSeen = false;
 
   let standard = 0;
@@ -74,10 +95,11 @@ function main() {
     }
   }
 
+  // The corpus specimen is now an OBSERVATION, not the gate (R721): a known member drawn from the
+  // standing corpus expires the day the corpus is repaired, and its absence is then a content
+  // ruling rather than a blind instrument. The carried fixture above decides trust.
   if (!specimenSeen) {
-    console.error('check:content-flags BLIND — the CALIBRATION SPECIMEN (christmas-carol\'s DECLARED(item-set) flag) was not found. The census cannot see its known member; nothing else it prints is trustworthy.');
-    process.exitCode = 1;
-    return;
+    console.log('  note: the christmas-carol DECLARED(item-set) specimen is no longer in the corpus — a content ruling, not a blind run. The carried fixture passed, so this census is trustworthy.');
   }
   console.log(`\n  ${files.length} passages screened · ${canary.detail} — canary held · specimen found (christmas-carol item-set)`);
   declareMayBeEmpty('check:content-flags', 'standard-shape flag(s) arrived', standard,
