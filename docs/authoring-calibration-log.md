@@ -21573,3 +21573,44 @@ eight rows that is chance and it is still a thread — deduce one row and the re
 Salting the sort with the item id makes each row's order independent of every other's; measured
 after, 4 of 8. **A blind that holds per row and leaks in aggregate is not a blind**, and the only
 reason I saw it was checking the distribution rather than the mechanism.
+
+## R772 — The constraint goes on now, because five attempts is the cheapest this will ever be
+
+`Attempt.chosenOptionId` was a bare `String?` — no relation, no cascade, **nothing to violate** —
+while six writers delete and recreate an item's options rather than updating them. A foreign key is
+now on it with **`ON DELETE RESTRICT`**, chosen over the alternatives for a specific reason:
+`Cascade` would delete the history the column exists to hold, and `SetNull` would keep the row and
+lose the answer, **which is the same silent loss one field over.** Restrict makes a delete that
+would strand an attempt fail AT THE DELETE SITE. That is the whole property being bought.
+
+**Canaried both ways before being trusted** (R756): deleting an option that carries an attempt is
+refused with `Attempt_chosenOptionId_fkey`, and an option with no attempt still deletes. Migration
+replay is clean and all 13 hand-written invariants still hold.
+
+**What it costs, stated rather than discovered later.** 5 items now refuse an option delete, 1,032
+do not. `content:generate` never reaches its delete on them — `writable` excludes reviewed rows —
+and it mints deterministic option ids (`${id}-opt${n}`) anyway, so its recreate preserves referents.
+**The path that will feel this is the CMS edit** (`admin-items.ts:126`), which deletes an item's
+options and recreates them with fresh cuids: editing an item a child has attempted will now error.
+Near-zero today; at volume it needs the update-in-place path, and that is the follow-on this buys
+time for rather than replaces.
+
+## R773 — Zero of 104, and the cause in Cowork's words
+
+**The answer-dispute class is empty estate-wide: 0 of 104 items carried by two or more files.** Not
+one has two readings offering the same options under the same stem and keying different TEXT. Every
+apparent answer dispute in this thread was a label permutation, a numbering drift, or an option-set
+divergence.
+
+**The cause, in Cowork's words: four counts moved because the predicate got stated and applied
+rather than inherited from the sentence carrying the number.** 553 → 419 distinct. 36 items → 24.
+24 disputes → 0. 6 divergences → 8. Every one of those numbers was true when first written and
+false by the time I repeated it, because what travelled between turns was the FIGURE and not the
+PREDICATE THAT PRODUCED IT — and a figure with its predicate left behind will be applied to
+whatever population the next sentence happens to be about.
+
+**This is R591 and R25 meeting.** R591: a count needs its unit and its predicate, and a label
+supplies neither. R25: send the value, not an account of it. **A count IS an account** — it is the
+most compressed account there is, and compressing it is exactly what strips the predicate off.
+The rule that follows: **a count crosses with the predicate that selected it, or it does not
+cross.** Not the label, not the class name — the predicate, in terms someone could re-run.

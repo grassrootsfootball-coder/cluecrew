@@ -419,6 +419,8 @@ model ItemOption {
   // below is the source of truth for maths (annie, 2026-08-06).
   misconceptionId String? // REQUIRED on every incorrect option before item goes LIVE (P3)
   misconception   Misconception?  @relation(fields: [misconceptionId], references: [id])
+  /// Back-relation for R772. Its presence is what makes a delete that would strand an attempt fail.
+  attempts        Attempt[]
   // WHICH SENSE OF THE HEADWORD THIS OPTION TESTS. CHECK 10 holds an entire tag on it, and
   // without it a vocabulary item is UNSHIPPABLE while reading perfectly — the hint cannot be
   // built from a stored field. One of the 39 declarative fields, weighted critical.
@@ -918,7 +920,18 @@ model Attempt {
   child          ChildProfile @relation(fields: [childId], references: [id], onDelete: Cascade)
   itemId         String
   sessionId      String
+  /// THE OPTION THE CHILD CHOSE. **A FOREIGN KEY, ADDED 2026-08-26 (R772).** It was a bare
+  /// `String?` with no relation, no cascade and nothing to violate — while SIX writers delete and
+  /// recreate an item's options rather than updating them, including the CMS edit path. Any of
+  /// them re-minted the ids and left every attempt on that item pointing at a row that no longer
+  /// existed, with nothing able to report it.
+  ///
+  /// `Restrict` is deliberate and is the whole point: a delete that would strand an attempt now
+  /// FAILS AT THE DELETE SITE instead of succeeding quietly. Cascade would delete the history the
+  /// column exists to hold; SetNull would keep the row and lose the answer, which is the same
+  /// silent loss one field over.
   chosenOptionId String?
+  chosenOption   ItemOption?  @relation(fields: [chosenOptionId], references: [id], onDelete: Restrict)
   correct        Boolean
   latencyMs      Int
   context        String // "case_practice" | "warmup_review" | "boss_case" | "word_vault"
