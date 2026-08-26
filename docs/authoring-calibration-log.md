@@ -20610,3 +20610,67 @@ instrument, about a file that was intact."* The artefact now states
 `sort_keys=True, separators=(",",":"), ensure_ascii=False, UTF-8` — Cowork's own declared
 digestSpec, restated so the default cannot bite — and records that it reproduces under that spec
 and not under the other, *"a property of the convention rather than of the bytes."*
+
+## R729 — A digest crosses with the serialisation that produces it
+
+**Ruled (David, 2026-08-25), on the desk's confirmation that the membership recomputed and agrees
+exactly at `2ae669ad510adb948b01db43bf95211b18ab3aa4fd909ed5aac8a047f59e33d0`: a digest crosses
+with the serialisation that produces it, or the receiving party checks a different number.**
+
+A hash is not a property of a value; it is a property of a value AND a spelling of that value.
+`{a:1}` sorted or unsorted, spaced or not, with non-ASCII escaped or literal, are four different
+byte strings and four different digests, all honestly computed over "the same data". **Naming the
+convention is what made verification possible** — the desk agreed only because the artefact said
+`sort_keys=True, separators=(",",":"), ensure_ascii=False, UTF-8`.
+
+The evidence is on both sides of the same file: **it reproduces under that spec and NOT under
+Python's default**, and I raised that false mismatch against my own artefact before naming it —
+the fault Cowork had already recorded once as *"six false alarms from my instrument, about a file
+that was intact."* Two stores have now hit it independently, which makes it a class rather than a
+slip. **Every digest this store crosses names its serialisation from here.**
+
+## R730 — The twenty-nine ruled; the notation thread closes
+
+**Ruled: the twenty-nine are ANSWER SLOTS — notation, exempt, and nothing amends.** Cowork
+answered from the carriers, **two mechanical facts per row, uniform**, which is the form this
+question deserved: a claim about what a string IS, settled by what the row does with it, not by
+reading the string and judging its tone.
+
+**The notation thread closes** with its boundary intact across four rulings: orthography is not
+emphasis (R716); the exemption needs a symbol-bearing path AND a symbol-shaped string (R719); gap
+markers are exempt wherever they sit, because the sentence is where the gap must appear (R722);
+and stimulus words are not, because they sit inside a sentence a child reads (R723). Answer slots
+join the first class. **A bare shout in a stem can still claim none of it**, which is the probe
+that keeps the whole thread honest.
+
+## R731 — A name that claims a hash its bytes no longer have
+
+**My own fault, found within one run of building the rule that caused it.** R726 marks every
+emission at the door, injecting `instrumentProvenance` into the file. On its first run the mark
+rewrote the file AFTER `stampedName` had hashed it, so **the artefact's name declared a content
+hash the bytes no longer had** — and the name is how this store's superseding, retention and
+family-matching all work (R602). **A mechanism built to honour one rule broke another on its
+first execution**, which is the ordinary shape of a fix and the reason a fix is not finished when
+it works.
+
+Closed at the door rather than in the caller: `restampToContent` re-derives the stamp from the
+ACTUAL bytes and renames the file, printing `restamped →` when it does, so the invariant holds
+for every future emitter without anyone remembering it. **The general form: a derived name is a
+CLAIM ABOUT CONTENT, so anything that may touch content must run before the name is fixed, or the
+name must be re-derived after.** Ordering is not a detail where a name asserts a fact.
+
+## R732 — Happened-to-be-safe is not provably-safe
+
+**My own audit, against my own precedent, prompted by Cowork's migration order.** R717 deleted
+`check:every-string-field`'s `DISPOSITIONS` map and its `isScreened` predicate **in the same edit
+that added the import**, and verified afterwards. It worked. But the order Cowork proposed —
+replacement lands, replacement is proven against its fixture, only then the predecessor leaves —
+would have made it **provably** safe, and what I did was **happened-to-be** safe. The two are
+indistinguishable from the outcome and distinguishable in the method, which is the whole
+distinction this register exists to keep.
+
+**Both of this turn's findings came from turning a new rule on old work** — the marking rule
+exposed the stamp fault in the same run, and Cowork's migration order exposed my simultaneous
+swap a week after it landed. That is the cheapest audit available here: **a new rule is a query
+against everything already built**, and running it backwards costs one pass and finds faults
+nobody was looking for. It found two today, and both were mine.
