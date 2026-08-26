@@ -58,3 +58,4 @@ export * from './reviewer-return';
 export * from './english/n-option';
 export * from './passage-content';
 export * from './case-face';
+export * from './field-dispositions';

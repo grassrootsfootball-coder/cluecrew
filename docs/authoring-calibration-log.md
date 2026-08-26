@@ -20315,3 +20315,67 @@ makes a real word (WORD)."* **Where it must land is a judgement worth stating be
 it would destroy the record the field exists to keep. Her rewrite belongs in
 `drafterDeclaredPullVerdict` beside the claim, or in a template the banks re-emit from. Awaiting
 the desk's word.
+
+## R713 — The four land from the authored source; the reissue was stale, not the items
+
+**Cowork's re-cross verified (`9f8abd7e…667055`), each row's declared digest recomputed under its
+declared spec before the gate ran. Four items landed — `ENG-018-RB-01`, `ENG-018-RB-11`,
+`ENG-019-BV-02`, `ENG-023-RT-08` — all four PASS the gate, events recorded, landed from the
+AUTHORED SOURCE and never from the reissue.** The door now reads **5 already here, 1 absent**:
+`ENG-027-RR-08` alone remains held, on the walk-script paraphrase, exactly as R711 reported.
+
+**Cowork's finding, taken and decisive: the refusals were correct against the strings they were
+given, and those strings were out of date.** Three items had been repaired days earlier; BV-02's
+`quick` was already correctly declared as a quotation. So the account is: one item refused for
+ACCURACY (the quotation, R711), three refused for faults already fixed, one refused for a word
+already declared — and its own emitted-item freshness gate is what caught the staleness, *"a gate
+written for one instance of a fault catching the next one from the opposite direction."*
+
+**Her eighty-row rewrite landed in the rationale the tag serves** — `ItemOption.misconceptionExecution`,
+never `drafterDeclaredPull`, which keeps the drafter's claim verbatim. The claim and the reviewer's
+rewrite now sit side by side and neither impersonates the other. **Consequence stated rather than
+discovered later**: those 80 options previously held NO execution, so filling them moves 80 rows
+toward the R701 wholeness bar — a real effect of a real reviewer ruling, named here.
+
+## R714 — The gate screens by disposition, never by a field list; and the lead's figure was wrong
+
+**Ruled and wired**: the child-facing gate walks EVERY string on the row and screens by
+disposition — `packages/core/src/field-dispositions.ts`, one membership imported by the gate AND
+by `check:every-string-field`, neither re-listing (R57/R429). Child → screened; staff → skipped;
+quotation → skipped (R711); **no disposition → REFUSES, naming the path**, because unclassified is
+not assumed safe and not assumed child-facing.
+
+**THE LEAD'S OWN FIGURE IS CORRECTED, AND THE RULING IS VINDICATED BY THE CORRECTION.** The sweep
+reported 1,533 child-facing strings on fourteen paths reaching children through no gate. **Probed
+against the gate rather than its description, most of those were already screened**: a
+single-token option value carrying *favoring* WAS caught. What the check called "skipped for want
+of a space" was `TOKEN_FIELDS` skipping by field NAME — `stem.stemWord` is skipped,
+`options[].content.value` is not. **The figure came from `check:every-string-field` modelling the
+gate with its own `isScreened` predicate instead of calling it** — the exact fault its own header
+warns against: *"a verifier states its source before it runs, and calls the family's own function
+rather than re-deriving the property."*
+
+**And the real hole was a field list after all, just not that one: the gate walked `explanation`
+through three names — walkScript, walk, hintCore.** So `explanation.note`, which this store
+classifies CHILD, carried a US spelling past every check, and `teachBack` carried banned
+vocabulary. Both verified by probe before and after. **The ruling was right and the diagnosis
+under it was wrong**, which is the third time this month the right instruction arrived on a
+mis-measured premise (R706, R711, now this).
+
+**The baseline diff (R149), membership not totals**: 335 LIVE items, 0 failing before, **14
+failing after — every one an `unclassified-path`, ZERO new content faults.** No item demoted: a
+missing declaration is a classification gap, not a defect in any child-facing string, and no
+instruction covers demotion.
+
+**THE TEN UNDECLARED, ruled STAFF in this pass** — provenance, authority and drafter/reviewer
+records, none rendered to a child. **Two of the ten are columns this side added this week
+(`drafterNote`, `options[].drafterDeclaredPull`) and they arrived undeclared: the rule catching
+its own author, four days after it was built.**
+
+**SEVEN PATHS THE CHECK NEVER LISTED NOW REFUSE AND NEED THE DESK** — the check reads paths
+present across rows and these sit on fewer: `explanation.quotes[].rule` and
+`explanation.quotes[].passageRef` (21 items each), and five `explanation.unplacedBySplit.*` paths
+on one item. They read as staff to me — a declaration's own metadata, and a recorded ruling — but
+**a disposition is a ruling and this side does not make it**. Artefact:
+`disposition-sweep-715ea8ef35ac3a4c.json`, file sha256
+`715ea8ef35ac3a4ca9d97e847b6abe42046cb1c7553461d95c1f4f7e1a672045`.

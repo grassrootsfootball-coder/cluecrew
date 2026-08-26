@@ -17,6 +17,7 @@
  * Declared quotations and tested tokens are honoured exactly as elsewhere.
  */
 import { banListApplies } from './ban-list-scope';
+import { FIELD_DISPOSITIONS, dispositionKey } from './field-dispositions';
 import { checkChildFacingText, spansPresentIn, type ContentFailure } from './content-gates';
 import { refusalMessage, refusedInOptions } from './refused-misconceptions';
 import { roleForItemStem } from './content-gates';
@@ -276,8 +277,30 @@ export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
     ? (explanation.quotes as Array<{ text?: string }>).map((q) => q.text ?? '').filter(Boolean)
     : [];
   const declaredForScripts = [...stemQuotes, ...explanationQuotes];
-  for (const field of ['walkScript', 'walk', 'hintCore'] as const) {
-    const text = explanation[field];
+  /**
+   * EVERY STRING ON THE EXPLANATION, SCREENED BY DISPOSITION (R714). This walked a three-name
+   * list — walkScript, walk, hintCore — so `explanation.note` (classified CHILD) carried a US
+   * spelling past every check and `teachBack` carried banned vocabulary. A field list screens
+   * what somebody remembered; a disposition screens what the row holds.
+   *
+   * A PATH WITH NO DISPOSITION REFUSES: unclassified is not assumed safe, and the refusal names
+   * the path so it reaches the desk as a question rather than a silence.
+   */
+  const explanationPaths = [...textsFrom(explanation, '')];
+  for (const [rawPath] of explanationPaths) {
+    const key = dispositionKey('explanation', rawPath);
+    if (!(key in FIELD_DISPOSITIONS)) {
+      failures.push({
+        where: `item:${item.id} ${key}`,
+        rule: 'unclassified-path',
+        detail: `no disposition: this path is neither ruled child, staff nor quotation, so the gate cannot know which rules bind it — classify it before this item ships (R714)`,
+      });
+    }
+  }
+  for (const [rawPath, text] of explanationPaths) {
+    const key = dispositionKey('explanation', rawPath);
+    if (FIELD_DISPOSITIONS[key] !== 'child') continue;
+    const field = rawPath;
     if (typeof text !== 'string' || !text.trim()) continue;
     failures.push(
       ...checkChildFacingText({
