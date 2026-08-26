@@ -670,7 +670,11 @@ function compounds(): GenItem[] {
   return fromBank(COMPOUNDS, 25).map((entry, i) => ({
     n: i + 1,
     tier: vocabTierOfSet([entry[0], entry[1]]),
-    stem: { prompt: `Which word joins with ${entry[0].toUpperCase()} to make one new word?`, words: [entry[0]] },
+    // R723: a stimulus word in a prompt is NOT notation — it sits inside a sentence a child reads,
+    // so it cannot claim the orthography exemption and amends to QUOTED form under her 142nd's
+    // precedent (the shouted TWO). Quoted, not capitalised: the quotation marks name the word as
+    // the thing being joined without shouting it.
+    stem: { prompt: `Which word joins with "${entry[0]}" to make one new word?`, words: [entry[0]] },
     options: [
       { content: { value: entry[1] }, isCorrect: true },
       { content: { value: entry[2].replace('?', '') }, isCorrect: false, m: 0 },

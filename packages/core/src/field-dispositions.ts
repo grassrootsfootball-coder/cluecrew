@@ -75,6 +75,39 @@ export function notationExempt(root: string, path: string, text: string): boolea
   return NOTATION_BEARING_PATHS.has(dispositionKey(root, path)) && isSymbolString(text);
 }
 
+/**
+ * GAP MARKERS ARE EXEMPT WHEREVER THEY SIT (David's ruling, 2026-08-25 — R722).
+ *
+ * **The sentence is where the gap must appear**, so a gap marker is a symbol in its own system
+ * even inside prose a child reads — the one thing that can be, because moving it out of the
+ * sentence destroys the question. `___(2)___` in a cloze carrier and `SH___` in a vr-06 frame are
+ * the same object in two shapes.
+ *
+ * The exemption is for THE MARKER, never for the sentence around it: everything outside these
+ * spans is screened exactly as before.
+ */
+const GAP_MARKER = /[A-Z]*_{2,}(?:\(\d+\)_{2,})?[A-Z]*/g;
+
+export function gapMarkerSpans(text: string): Array<[number, number]> {
+  const spans: Array<[number, number]> = [];
+  for (const m of text.matchAll(GAP_MARKER)) {
+    if (m.index === undefined) continue;
+    spans.push([m.index, m.index + m[0].length]);
+  }
+  return spans;
+}
+
+/**
+ * Is this capital run exempt from the shouted-capitals rule? Exempt when it IS a gap marker
+ * wherever it sits (R722), or when the whole string is a symbol on a notation-bearing path
+ * (R719). **A stimulus word inside a prompt is NEITHER** — it amends to quoted form under her
+ * 142nd's precedent (R723) — and a bare shout inside a stem is neither, which is the probe.
+ */
+export function capitalRunIsExempt(root: string, path: string, text: string, runStart: number, runEnd: number): boolean {
+  if (notationExempt(root, path, text)) return true;
+  return gapMarkerSpans(text).some(([s, e]) => runStart >= s && runEnd <= e);
+}
+
 /** Normalises a walked path to its declaration key: array indices collapse to `[]`. */
 export function dispositionKey(root: string, path: string): string {
   const normalised = path.replace(/\[\d+\]/g, '[]');

@@ -20506,3 +20506,53 @@ because a screen that flags clean text reports faults nobody can trust.
 
 **Her line for the register, from the same sitting**: the reconstruction cost is **one row in
 eighteen** — *"a figure where the argument used to have an opinion"*.
+
+## R722 — Gap markers are exempt wherever they sit; the sentence is where the gap must appear
+
+**Ruled**: a gap marker is a symbol in its own system even inside prose a child reads — **the one
+string that can be, because moving it out of the sentence destroys the question.** `___(2)___` in
+a cloze carrier and `SH___` in a vr-06 frame are the same object in two shapes. **The exemption is
+for THE MARKER, never the sentence around it**: everything outside the marker spans is screened
+exactly as before. Wired as `gapMarkerSpans` and `capitalRunIsExempt`.
+
+## R723 — A stimulus word in a prompt is not notation; it amends to quoted form
+
+**Ruled**: a stimulus word sits inside a sentence a child reads, so it cannot claim the
+orthography exemption, and it **amends to QUOTED form under her 142nd's precedent** — the same
+move that took the shouted TWO to lowercase. Landed at the generator AND on 25 derived rows:
+`Which word joins with TOOTH…` → `Which word joins with "tooth"…`, the gate re-run clean on every
+row, one event on the template id. Quotation marks name the word as the thing being joined
+without shouting it.
+
+**THE PROBE DAVID ASKED FOR, and it holds**: a bare shout in a stem can claim NEITHER exemption —
+not on `stem.text`, not on `stem.sentence`, and not even on a notation-bearing path, because the
+string is a sentence. Four tests carry it.
+
+## R724 — The membership crosses in an importable form: one membership, both stores
+
+**Cowork asked, and its screen re-derives child/quotation/staff by a leaf-name rule of its own.**
+That is the same second-implementation fault this store removed from its own check two turns ago
+(R717) — **two implementations agreeing proves only that they agree** — and this is the other half
+of that repair. `field-dispositions-for-cowork-937f0bacbf89042d.json`, file sha256
+`937f0bacbf89042d8e06d223b183b4a892ec4e9fb010fda70484edfda80fecd6`: 115 paths, GENERATED from the
+live constants and never transcribed, because a copied membership is a second implementation
+wearing a data hat.
+
+**It carries the four things that are RULES rather than lists** — retention by underscore,
+symbol-hood by shape, gap markers wherever they sit, stimulus words never — each as a named
+predicate, **with eleven CONFORMANCE CASES so an importer can run its own implementation against
+them and prove it agrees.** The fixture discipline (R721) applied to a crossing: a membership that
+cannot be verified on arrival is prose.
+
+## R725 — No bulk conversion: a check earns its fixture before its next emission crosses
+
+**Ruled, and it is the better rule.** The sixty-four checks without a self-test are NOT converted
+in bulk: **a check gets a carried fixture before its next emission crosses the desk** — the rate
+at which they actually matter. Inventing sixty-four fixtures at once would produce sixty-four
+untested assertions about instruments nobody is currently reading, which is the fault the fixture
+rule exists to prevent, arriving as a tidy-up.
+
+**The audit's membership is STANDING** (`fixture-audit-5dbe34a6cabef6f6.json`, sha256
+`5dbe34a6…1e3f08`): of 80 checks, 2 now carry fixtures, 10 carry synthetic/planted canaries, 4
+anchor to a constant or function name, **64 have no self-test**. The list is the queue, and the
+trigger is a crossing rather than a calendar.
