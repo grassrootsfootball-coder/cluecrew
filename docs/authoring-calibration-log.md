@@ -20249,7 +20249,7 @@ on her disk. Both are STAGED and awaiting crossing — the group rules in
 `annie-152-landing-c16fc4c7ab4f721a.json` and all 155 rationales including the 80 in
 `annie-151-landing-b8ddfc5667dcb5d8.json`. Staged is not arrived (R255); the desk routes.
 
-## R711/R712 — One rule in two clauses: a door names what it cannot carry, and names who must repair
+## R711 — One rule in two clauses (with R712): a door names what it cannot carry, and names who must repair
 
 **Registered as one entry with two clauses, as she asked.** Her 154th verified
 (`8c7a9bae…2b2652`), Cowork's prediff (`1ec7350c…613495`).
@@ -20276,7 +20276,11 @@ paraphrase touches no quotation and breaks no byte-verify: **the item is repaira
 Cowork, at a string nobody had identified** — and the quotation is now protected permanently
 regardless.
 
-### R712 — A door that refuses must route the refusal to someone who can act on it
+## R712 — A door that refuses must route the refusal to someone who can act on it
+
+*(The second clause of the pair registered at R711, given its own heading so every citation
+resolves — she asked for one entry with two clauses, and the register asks for one heading per
+rule; both are satisfied by keeping the clauses adjacent and separately addressable.)*
 
 Her words: *"correct refusals into silence are worse than the faults they catch — the gate
 believed it was protecting children while the items believed they were shipped, and both were
