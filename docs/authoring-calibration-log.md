@@ -21450,3 +21450,63 @@ function the spec names.** `canonicalJson` is now used directly, so the descript
 computation are the same object rather than two things kept in agreement by attention. All 36 rows
 reproduce. **Third time in three turns that a digest and its stated spec drifted apart, and the
 first time the drift was inside the artefact registering the rule against it.**
+
+## R767 — An emitter recomputes its declared digests before crossing
+
+Ruled from R766. **Naming a spec is checkable at the door; honouring it is only checkable by
+recomputing** — and the emitting side is the only party that can recompute BEFORE the artefact
+leaves. `assertDigestsNameTheirSpec` asked whether a spec was named and passed an artefact whose
+36 row digests reproduced under none of them; that is the correct limit for a cheap structural
+guard and the wrong place to stop.
+
+`assertDeclaredDigestsRecompute` now runs inside `deliver()` — the one door every artefact passes —
+and recomputes `findingsSha256` from its declared `subtreeKeys` and every `rowSha256` on every row,
+throwing on any that does not reproduce. It prints what it checked (`recomputed: findingsSha256 +
+38 row digest(s)`), because a guard that says nothing is indistinguishable from one that did not
+run (R756). **A digest whose spec it cannot interpret is reported UNCHECKABLE rather than passed** —
+an unverifiable digest is not a failure, but it must not read as a success.
+
+## R768 — The key-dispute class is empty, and every one of them resolves without a judgement
+
+Her method was ruled: per item, from stem and options alone, three outcomes with REFUSE where the
+stem determines neither or both. **Classifying the population mechanically first, from the same two
+inputs her method uses, the batch that method is for turns out to be EMPTY.** Of 38 items whose
+readings differ:
+
+| | |
+|---|---|
+| **DIFFERENT QUESTION** — the stems differ | **19** |
+| **RELABELLING ONLY** — same keyed TEXT, different letter | **10** |
+| **OPTION-SET DIVERGENCE** — one stem, different options | **7** |
+| more than two readings | 2 |
+| **KEY DISPUTE** — same stem, same options, different answer | **0** |
+
+**Not one item is a case where the same question, offering the same choices, is given a different
+answer.** The largest class is two different questions sharing an id — `ENG-006-TM-02` asks *what
+does Uncle Podger DO straight after taking off his coat (lines 8 and 9)* in one reading and *what
+does he SAY when the picture needs putting up (lines 6 and 7)* in the other. Each key is correct for
+its own stem. **Her method cannot be applied there at all: it reads one stem, and there are two.**
+And on 10 more, both readings key the SAME TEXT and differ only in the letter above it.
+
+So *"24 items where the database disagrees with an authored source about which answer is right"* was
+my third wrong framing of this population in as many turns — first a filing muddle, then a two-party
+content disagreement, and now: **an id collision, a relabelling, and a genuinely separate class,
+with no answer dispute anywhere in it.** Each reframing came from looking at one layer further in,
+and the pattern is that I characterised the population before reading its members (R595).
+
+**The rows all cross regardless, with the classification exposed so she can overrule any of it** —
+a mechanical class is a reading of the data, not a ruling, and the seat that rules is hers.
+
+**The blinding, and why the previous artefact would have leaked.** She asked not to know which
+reading is which, because a label that leaks is a shortcut she cannot unsee. Removed: file paths,
+directory names, store names, and **the serving row** — which the previous artefact carried marked
+`NOT_A_VOTE`. That label is honest and *does not make it unreadable*: it identifies the database's
+reading exactly. **An honesty label is not a blind.** Reading order is fixed by the sha256 of each
+reading's own canonical JSON, so it is deterministic and uncorrelated with provenance — measured,
+reading 1 is this store's copy on 15 of 38 rows (39%), where a systematic 0% or 100% would be
+readable off the position alone. Nothing else was stripped: both stems and every option cross in
+full. The unblinding map is held at `content/blinded-readings-unblinding.json` and is not staged.
+
+**The nineteen executions stay reversed and RE-DERIVE from whichever key she settles**, rather than
+being un-reversed — un-reversing would restore values computed against a key that has not been
+ruled, which is the same fault that produced them.

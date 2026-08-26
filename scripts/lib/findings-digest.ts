@@ -88,3 +88,51 @@ export function assertDigestsNameTheirSpec(artefact: Record<string, unknown>, fi
     );
   }
 }
+
+/**
+ * **AN EMITTER RECOMPUTES ITS DECLARED DIGESTS BEFORE CROSSING** (Annie, 2026-08-26 — R767, ruled
+ * from R766). Naming a spec is checkable at the door; HONOURING it is only checkable by
+ * recomputing — so the emitting side recomputes, because it is the only side that can do it before
+ * the artefact leaves.
+ *
+ * `assertDigestsNameTheirSpec` asked whether a spec was named and passed an artefact whose 36 row
+ * digests reproduced under none of them. This closes that gap for the two shapes this store emits:
+ * `findingsSha256` over the named subtree keys, and any `rowSha256` on a row, both under
+ * `canonicalJson`. A digest whose spec it cannot interpret is REPORTED as uncheckable rather than
+ * passed silently — an unverifiable digest is not a failure, but it must not read as a success.
+ */
+export function assertDeclaredDigestsRecompute(artefact: Record<string, unknown>, file: string): string[] {
+  const failures: string[] = [];
+  const uncheckable: string[] = [];
+
+  const how = artefact.howToCheckThisOnArrival as { subtreeKeys?: string[] } | undefined;
+  if (typeof artefact.findingsSha256 === 'string') {
+    if (Array.isArray(how?.subtreeKeys)) {
+      const sub = Object.fromEntries(how.subtreeKeys.map((k) => [k, artefact[k]]));
+      const got = createHash('sha256').update(canonicalJson(sub), 'utf8').digest('hex');
+      if (got !== artefact.findingsSha256) failures.push(`findingsSha256 declared ${String(artefact.findingsSha256).slice(0, 16)}… recomputes ${got.slice(0, 16)}…`);
+    } else uncheckable.push('findingsSha256 (no subtreeKeys to recompute from)');
+  }
+
+  let rowsChecked = 0;
+  for (const [key, value] of Object.entries(artefact)) {
+    if (!Array.isArray(value)) continue;
+    for (const [i, row] of value.entries()) {
+      if (!row || typeof row !== 'object' || Array.isArray(row)) continue;
+      const r = row as Record<string, unknown>;
+      if (typeof r.rowSha256 !== 'string') continue;
+      const bare = Object.fromEntries(Object.entries(r).filter(([k]) => !k.startsWith('rowSha256')));
+      const got = createHash('sha256').update(canonicalJson(bare), 'utf8').digest('hex');
+      rowsChecked++;
+      if (got !== r.rowSha256) failures.push(`${key}[${i}].rowSha256 declared ${r.rowSha256.slice(0, 16)}… recomputes ${got.slice(0, 16)}…`);
+    }
+  }
+
+  if (failures.length) {
+    throw new Error(
+      `${file}: ${failures.length} declared digest(s) DO NOT REPRODUCE (R767).\n  ` + failures.slice(0, 5).join('\n  ') +
+      '\n  The emitter recomputes before crossing, because the far side can only refuse what it cannot verify.',
+    );
+  }
+  return [`recomputed: findingsSha256 + ${rowsChecked} row digest(s)`, ...uncheckable.map((u) => `UNCHECKABLE HERE: ${u}`)];
+}
