@@ -21645,8 +21645,10 @@ finds the symptom: that is merely where the divergence first shows, and three mo
 did not drift either — it holds one version faithfully, and the choice of version happened upstream
 of the import.
 
-**Which revision is right is a content question about eight replaced questions, not a numbering
-fix**, and nothing was renumbered.
+**Which revision is right is a content question about the replaced questions, not a numbering
+fix**, and nothing was renumbered. **CORRECTED at R776: not eight — NINE replacement positions
+(4 in ENG-005-BB, 5 in ENG-007-LP) and EIGHTEEN distinct questions.** I measured the first family
+and assumed the second matched it.
 
 ## R775 — The label-reference check on the executions: zero at risk, and my first predicate was wrong
 
@@ -21666,3 +21668,52 @@ carries a label dependency, so relabelling is not what stops them. What stops th
 343 authored executions sit on a CORRECT option** — the authoring convention puts them only on
 distractors — so the nineteen have no legitimate home on a key regardless of how the option-set
 question is settled. They stay reversed.
+
+## R776 — An unnamed file in a two-file comparison is disproportionately the reporting party's own output
+
+**Twice in this thread an unnamed pair turned out to have my export as one half, and both times the
+unnamed side was mine.** First `eng006-draft.json` against `eng006-draft.json`, which I described as
+two authoring copies in two directories; then the whole drift class, where I said *"the other file"*
+nine times and named none. Both times `~/Downloads/11+/from-cluecrew` — this store's own outbound —
+was the side I left unnamed.
+
+**The mechanism is not carelessness, and that is why it repeats.** A comparison is written from
+inside one of the two stores. **Your own output is the side you did not have to go and find**: it is
+already in hand, already trusted, already the frame the question is being asked from — so it reads
+as the baseline rather than as a party, and a baseline does not feel like it needs naming. The other
+file is the one you fetched, so it is the one your prose points at. **The asymmetry in the writing
+follows the asymmetry in the effort, and it points the wrong way**: the side that needs naming most
+is the one whose provenance the reader cannot infer, and that is always the reporter's own.
+
+The cost is exact and was paid twice. Cowork searched its entire authored corpus for id faults and
+found none — **correctly, because the fault was never on its disk** — and could not have known that
+from an artefact naming no file. A day of the other store's work went into confirming that my
+unnamed half was mine.
+
+**So: a comparison names every file it compares, with a digest, and states which side each belongs
+to — and the FIRST one it names is its own.** Naming mine first is not politeness; it is the entry
+most likely to be omitted, so it goes where omission is most visible. Both drifting families now
+cross that way, and naming them dissolved the class outright.
+
+**And the fifth count.** I reported *eight* replaced questions; it is NINE positions and EIGHTEEN
+questions — I measured ENG-005-BB, found four, and assumed ENG-007-LP matched. **The figure then
+crossed to the desk and came back to me inside the instruction, unchallenged**, which is the first
+time in this thread one of my bare numbers has been repeated back as a premise. R773 ruled that a
+count crosses with the predicate that selected it or it does not cross; I registered that rule and
+crossed a bare number in the same artefact.
+
+## R777 — The nineteen are blocked by a convention, not by a dispute
+
+Recorded as the operative blocker, because the two are easy to conflate and only one of them can be
+resolved by a ruling on the option sets.
+
+**The blocker: no authored execution anywhere sits on a CORRECT option — 0 of 343.** The convention
+puts `misconceptionExecution` only on distractors, which follows from what the field means (*why
+THIS distractor executes THIS misconception*). **So a key has no legitimate home for one, and that
+is true regardless of how the replaced-question and option-set questions are settled.** The nineteen
+stay reversed on that, not pending anything.
+
+**The other question is closed, separately: the label check clears at 0 of 343.** No execution
+anywhere references a letter or an ordinal as an option, so no relabelling can falsify one; nine say
+*"this option"*, which points at its own row and survives. Had that check found even one, a
+relabelling ruling would have had to precede any release. It did not, so it does not.
