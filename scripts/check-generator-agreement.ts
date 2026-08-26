@@ -16,7 +16,7 @@
  * would produce (R738). Drift is REPORTED as membership with the diff, never repaired: which side
  * is authoritative is a ruling, and an amendment may legitimately live in the row.
  */
-import { GENERATORS } from '../packages/db/prisma/generate-content';
+import { BANK_OWNED_TYPES, GENERATORS } from '../packages/db/prisma/generate-content';
 import { prisma } from '../packages/db/src/index';
 import { assertFixture } from './lib/carried-fixture';
 
@@ -37,7 +37,11 @@ async function main() {
 
   const drift: Array<Record<string, unknown>> = [];
   let compared = 0;
+  const skipped: string[] = [];
   for (const [typeId, generate] of Object.entries(GENERATORS)) {
+    // The generator's OWN skip set, imported (R748 follow-on): the write loop and this checker
+    // read one authority. Inferring ownership from an id prefix would be a second definition.
+    if (BANK_OWNED_TYPES.has(typeId)) { skipped.push(typeId); continue; }
     const stored = rows.filter((r) => r.questionTypeId === typeId);
     if (stored.length === 0) continue;
     let produced: Array<{ n: number; stem: unknown }>;
@@ -61,6 +65,7 @@ async function main() {
     console.log(`  ${undeclared.length} row(s) carry NO generator declaration — a generated row that cannot name its generator has no second source to be checked against.`);
     console.log(`    first: ${undeclared.slice(0, 5).map((u) => u.id).join(', ')}`);
   }
+  console.log(`  BANK-OWNED, generator skipped (its own set): ${skipped.join(', ') || 'none'}`);
   console.log(`  AGREEMENT: ${drift.length} row(s) differ from what their generator produces now`);
   for (const d of drift.slice(0, 8)) console.log(`    ✗ ${d.id ?? d.questionType} — ${d.kind ?? 'stem differs from the generator output'}`);
   console.log('\n  Reported, never repaired: which side is authoritative is a ruling, and an amendment may legitimately live in the row (R747).');

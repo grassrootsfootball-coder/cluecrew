@@ -67,7 +67,11 @@ const payload = {
     retention: { rule: 'ANY path segment beginning with an underscore is RETENTION (R715). It is a rule, not a list, so a before-image nobody has written yet is covered on the day it appears.', predicate: 'isRetentionPath(path)' },
     notationBearingPaths: [...NOTATION_BEARING_PATHS],
     symbolhood: { rule: 'a symbol in its own system: one token, no internal whitespace, no sentence punctuation (R719). Notation is exempt ONLY where the path carries symbols AND the string IS one — a capital inside a sentence a child reads can never claim it.', predicate: 'isSymbolString(text)' },
-    gapMarkers: { rule: 'a gap marker is exempt WHEREVER IT SITS, including inside a sentence, because the sentence is where the gap must appear (R722). The exemption is for the MARKER, never the sentence around it.', predicate: 'gapMarkerSpans(text)' },
+    gapMarkers: {
+      rule: 'a gap marker is exempt WHEREVER IT SITS, including inside a sentence, because the sentence is where the gap must appear (R722). The exemption is for the MARKER, never the sentence around it.',
+      THE_DEFINITION_RULED_ON_THE_SPEC: 'gapMarkerSpans RETURNS THE FRAME TOKEN — LETTERS AND UNDERSCORES TOGETHER (R748). There is no second concept: a frameTokenSpans sitting beside a narrower gapMarkerSpans IS the divergence given two names. The token is any run of underscores TOGETHER WITH the capital letters immediately adjacent on either side, plus the optional (n) a numbered cloze marker carries. SH___, ___AN, DE___VE and ___(2)___ are each ONE span. The older meaning — underscores alone — was portable only because nothing written down contradicted it; this is what contradicts it.',
+      predicate: 'gapMarkerSpans(text)',
+    },
     stimulusWords: { rule: 'a stimulus word in a prompt is NOT notation and amends to QUOTED form under her 142nd\'s precedent (R723). Wired this turn: the vr-12 generator and 25 derived rows now read joins with "tooth" rather than TOOTH.', predicate: 'capitalRunIsExempt(...) === false' },
   },
   conformanceCases: {

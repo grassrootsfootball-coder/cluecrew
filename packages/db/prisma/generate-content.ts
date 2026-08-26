@@ -1213,6 +1213,17 @@ function completeTheWord(): GenItem[] {
   });
 }
 
+/**
+ * TYPES THE BANK OWNS, NOT THE GENERATOR — EXPORTED SO THERE IS ONE AUTHORITY (R748 follow-on).
+ * The write loop skips these and `check:generator-agreement` must skip the same set: a checker
+ * that infers ownership from an id prefix is a second definition of who owns a type, and this
+ * store has spent a week removing those.
+ */
+export const BANK_OWNED_TYPES = new Set([
+  'vr-02-two-odd-ones-out',
+  'vr-06-missing-word',
+]);
+
 export const GENERATORS: Record<string, () => GenItem[]> = {
   'vr-01-insert-letter': insertLetter,
   'vr-02-two-odd-ones-out': oddOnesOut,
@@ -1271,10 +1282,7 @@ async function main(): Promise<void> {
   // type out of this set, say which ids the constructor will own and what happens to the rows it
   // was authored to replace — no guard here can ask that, because superseding is a fact about
   // content and every guard is a fact about a write.
-  const SUPERSEDED_BY_BANK = new Set([
-    'vr-02-two-odd-ones-out',
-    'vr-06-missing-word',
-  ]);
+  const SUPERSEDED_BY_BANK = BANK_OWNED_TYPES;
 
   let itemCount = 0;
   for (const [typeId, generate] of Object.entries(GENERATORS)) {

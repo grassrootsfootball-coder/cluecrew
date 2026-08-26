@@ -20978,3 +20978,74 @@ generator's own exported registry — rather than re-deriving what it would prod
 
 Drift is REPORTED, never repaired: which side is authoritative is a ruling, and an amendment may
 legitimately live in the row.
+
+## R748 — The ruling is on the SPEC: gapMarkerSpans returns the frame token
+
+**Ruled on the definition rather than on either predicate (David, 2026-08-26), which is the only
+place a ruling could settle this**: `gapMarkerSpans` **RETURNS THE FRAME TOKEN — LETTERS AND
+UNDERSCORES TOGETHER**, and `frameTokenSpans` folds into it. **There is no second concept: a
+`frameTokenSpans` sitting beside a narrower `gapMarkerSpans` is the divergence itself given two
+names**, which is exactly what the port's own half printed — both spans, side by side, with the
+predicate reading the narrower one.
+
+**This side already returned the token; what changed is that the definition now SAYS so**, in the
+place a future port reads. **The older meaning was portable precisely because nothing written
+down contradicted it** — the spec was silent and both readings were defensible, so the port was
+not wrong to read it that way, and no amount of care at the porting end could have settled it.
+The definition now states the token's shape: any run of underscores together with the capital
+letters immediately adjacent on either side, plus the optional `(n)` of a numbered cloze marker —
+`SH___`, `___AN`, `DE___VE`, `___(2)___` each ONE span.
+
+**Re-crossed with the corrected definition and its boundary cases**:
+`field-dispositions-recross-for-cowork-62e62d3375276143.json`, file sha256
+`62e62d33752761435346e7f4bbb21a3d770a4a3fbe0d9d78c6e7fe5224265457`, 115 paths, 19 conformance
+cases. **The membership digest MOVED — `2ae669ad…` → `ed7813fc…` — and that is the digest working**:
+the paths did not change, the RULES subtree did, and a digest over meaning must move when meaning
+does. A crossing whose digest had stayed put would have been carrying a changed definition under
+an unchanged name.
+
+**One authority for who owns a type, while here**: `BANK_OWNED_TYPES` is now exported from the
+generator and imported by `check:generator-agreement`, which previously would have inferred
+ownership from an id prefix — a second definition of the same fact, in a check written to close
+exactly that class. It now reports the skip explicitly: vr-02 and vr-06 are bank-owned.
+
+## R749 — The rejected variant is not on this side, and cannot reappear here
+
+**"The rest make real words with a poor meaning." appears NOWHERE in this repository** — not in
+`generate-content.ts`, not in any bank this side holds, and on **no serving row** (checked across
+every item's stem and explanation). **And it cannot reappear here on regeneration**: vr-06 sits in
+`BANK_OWNED_TYPES`, so the generator skips it entirely and this side has **zero `gen-vr-06` rows**
+— its vr-06 population is the bank's. The removal is the authoring store's to make in its own
+generator; there is nothing here to remove, and this is stated rather than performed so that a
+"done" does not travel for an act that never happened.
+
+**Her cause is the finding worth keeping**: *"somebody refused one variant of ten and never
+replaced it, and four rows filled the hole four different ways"* — four of six drifts, one cause.
+**Her third clause on refusal-routing (R712): a refusal that removes something in use must name
+its replacement or its owner. Silence after a rejection does not stop the work; it distributes
+the authoring.**
+
+## R750 — Provenance names what can be re-run
+
+**Ruled general (David, 2026-08-26) from the model-versus-builder finding:**
+
+> **Provenance names what can be RE-RUN. A model is not a generator; a name that cannot be
+> executed against the row it explains is a label, not a provenance.**
+
+All 514 generated rows carried `authoredBy: ai-draft:claude-fable-5` and every one of them read as
+provenanced. But a model cannot be re-run to reproduce a row: the same prompt gives a different
+answer, so the field asserted an origin nothing could check. **514 now name
+`generator:packages/db/prisma/generate-content.ts#GENERATORS['<type>']`, and that is the form** —
+a builder, addressable, executable, and asserted against the rows by `check:generator-agreement`
+in CI, which reproduces all 514 byte for byte.
+
+**The general test to apply to any provenance field: can the thing named be run against the row?**
+If not, it records who to ask, which is worth having and is a different fact — and the two must
+not share a column, because one of them supports a check and the other only a conversation.
+
+**Her §4 confirmed and verified rather than assumed**: a reconstructed before-image may never
+occupy a `replacedSha256` field, because that field asserts the row's actual prior bytes and a
+round trip proves consistency, not identity. **Checked here**: the 65 before-images stamped under
+R746 came from landing artefacts recording the ACTUAL prior strings, each hash verifying against
+its own bytes, none reconstructed. This side is clean on the rule and the check is recorded rather
+than the assumption.

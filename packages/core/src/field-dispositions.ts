@@ -85,6 +85,22 @@ export function notationExempt(root: string, path: string, text: string): boolea
  *
  * The exemption is for THE MARKER, never for the sentence around it: everything outside these
  * spans is screened exactly as before.
+ *
+ * ────────────────────────────────────────────────────────────────────────────────────────────
+ * **THE DEFINITION, RULED ON THE SPEC RATHER THAN ON EITHER IMPLEMENTATION (David, 2026-08-26 —
+ * R748): `gapMarkerSpans` RETURNS THE FRAME TOKEN — LETTERS AND UNDERSCORES TOGETHER.**
+ *
+ * There is no second concept. A `frameTokenSpans` that sits beside a narrower `gapMarkerSpans` is
+ * the divergence itself given two names: the port computed both, and its predicate read the
+ * narrower one, so `DE` in `DE___VE` fell outside the span the exemption consults. **This side
+ * already returned the token; what changes here is that the DEFINITION now says so**, in the
+ * place a future port reads — because the older meaning was portable precisely because nothing
+ * written down contradicted it.
+ *
+ * The token is: any run of underscores, TOGETHER WITH the capital letters immediately adjacent on
+ * either side, and the optional `(n)` a numbered cloze marker carries. `SH___`, `___AN`,
+ * `DE___VE`, `___(2)___` are each ONE span.
+ * ────────────────────────────────────────────────────────────────────────────────────────────
  */
 const GAP_MARKER = /[A-Z]*_{2,}(?:\(\d+\)_{2,})?[A-Z]*/g;
 
