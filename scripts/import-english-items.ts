@@ -26,6 +26,19 @@
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { checkItemChildFacing, stemSchema, type ContentFailure } from '@cluecrew/core';
+import { Prisma } from '@prisma/client';
+
+/**
+ * The writable scalar columns of ItemOption, READ FROM PRISMA'S OWN MODEL rather than hand-listed
+ * — a list here would drift from the schema the moment a column is added, which is the fault one
+ * level up from the one R758 closes.
+ */
+const OPTION_COLUMNS = new Set(
+  (Prisma.dmmf.datamodel.models.find((m) => m.name === 'ItemOption')?.fields ?? [])
+    .filter((f) => f.kind === 'scalar' && !['id', 'itemId', 'content', 'isCorrect', 'misconceptionId'].includes(f.name))
+    .map((f) => f.name),
+);
+if (OPTION_COLUMNS.size === 0) throw new Error('read no ItemOption columns from the Prisma datamodel — refusing rather than treating every authored key as unknown (R173)');
 import { prisma } from '../packages/db/src/index';
 
 /**
@@ -43,11 +56,28 @@ const QUESTION_TYPES: Array<{ id: string; name: string; mechanic: string }> = [
   { id: 'en-spag-cloze', name: 'Grammar cloze', mechanic: 'cloze' },
 ];
 
+/**
+ * **AN IMPORT DOOR VALIDATES AN OPTION; IT NEVER FILTERS ONE** (R758 — R57 reaching the path it
+ * never covered). R57 was written about STEMS and closed the allowlist there; this door went on
+ * rebuilding each option from four named keys, with no index signature to make the loss visible.
+ * The CMS door meanwhile takes `content: z.record(z.unknown())` and passes everything — **two
+ * doors enumerating separately, drifted, exactly as R57 predicted and R42/R55 already recorded.**
+ * Measured across the 19 files in this door's own input shape: 553 authored values on four keys
+ * would have been dropped, `misconceptionExecution` 499 of them — a REAL COLUMN, described in the
+ * schema as "the first thing a reviewer asks to see". The schema comment beside it records the
+ * same fault costing a reviewer three returns of archaeology (R707).
+ *
+ * The index signature is the mechanism: an unknown key now reaches `optionRows`, where it is
+ * carried to its column, carried into content if it is retention (`_`-prefixed, R596's rule), or
+ * REFUSES the import by name. Refusing rather than guessing a home is deliberate — inventing a
+ * placement convention is how a second wrong convention starts (R173).
+ */
 interface BatchOption {
   label?: string;
   content: string;
   isCorrect: boolean;
   misconceptionId?: string;
+  [key: string]: unknown;
 }
 interface BatchItem {
   itemId: string;
@@ -244,12 +274,31 @@ async function main(): Promise<void> {
        * order, and inventing a convention for them would be a second thing to keep true.
        */
       const segmented = (stemObject as { segmentsInOptions?: unknown }).segmentsInOptions === true;
-      const optionRows = item.options.map((option) => ({
-        ...(segmented && option.label ? { id: `${item.itemId}-OPT-${option.label}` } : {}),
-        content: { value: option.content, ...(option.label ? { label: option.label } : {}) },
-        isCorrect: option.isCorrect,
-        misconceptionId: option.misconceptionId ?? null,
-      }));
+      const optionRows = item.options.map((option) => {
+        const carried: Record<string, unknown> = {};
+        const retained: Record<string, unknown> = {};
+        const refused: string[] = [];
+        for (const [key, value] of Object.entries(option)) {
+          if (['label', 'content', 'isCorrect', 'misconceptionId'].includes(key)) continue;
+          if (OPTION_COLUMNS.has(key)) carried[key] = value;
+          else if (key.startsWith('_')) retained[key] = value;
+          else refused.push(key);
+        }
+        if (refused.length) {
+          throw new Error(
+            `${item.itemId}: authored option carries ${refused.length} key(s) with nowhere to land: ${refused.join(', ')}.\n` +
+            '  This door no longer drops what it cannot name (R758). Add the column, prefix the key with "_" if it is\n' +
+            '  retention, or remove it at the authoring end — but it will not vanish silently.',
+          );
+        }
+        return {
+          ...(segmented && option.label ? { id: `${item.itemId}-OPT-${option.label}` } : {}),
+          content: { value: option.content, ...(option.label ? { label: option.label } : {}), ...retained },
+          isCorrect: option.isCorrect,
+          misconceptionId: option.misconceptionId ?? null,
+          ...carried,
+        };
+      });
       if (segmented) {
         const missing = item.options.filter((o) => !o.label);
         if (missing.length) {

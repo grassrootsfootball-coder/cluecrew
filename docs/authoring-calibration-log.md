@@ -21230,3 +21230,39 @@ the FILENAME, which is the artefact, and never from the label, which is a caller
 it. A mismatch between the two is now reported rather than obeyed. Same shape as R57 (a door that
 enumerates what it expects will drift from the thing it is describing) and R60's third question
 (is it reading the artefact, or a copy of it?) — **the label was the copy.**
+
+## R758 — R57 reached stems and never reached options
+
+**Cowork named the risk in the abstract and it was concrete here.** Its ruling on what the 349 walk
+must carry ended with: *a field authored there and dropped at your door is invisible to a walk of
+serving rows, because the walk can only see what arrived.* That is exactly right, it is not
+hypothetical, and it was true of this corpus until this turn.
+
+`scripts/import-english-items.ts` rebuilt every option as
+`{ value: option.content, ...(label) }` from an interface declaring four keys **with no index
+signature**, so anything else authored on an option was dropped in silence — no warning, no count,
+no trace on the row afterwards. Meanwhile `apps/web/lib/actions/admin-items.ts` takes
+`content: z.record(z.unknown())` and passes everything through. **Two doors enumerating separately,
+drifted.** R57 predicted this in the sentence that names it, R42 and R55 already recorded it once
+each — and R57 was written about STEMS, so the option path was never brought under it.
+
+**Measured, over the 19 files in that door's own input shape: 553 authored values on four keys.**
+`misconceptionExecution` is 499 of them, and it is **a real column** the schema describes as *"the
+first thing a reviewer asks to see"*. The comment beside `drafterDeclaredPull` in that same model
+records this identical fault happening before — a door carried the tag, dropped the sentence, no
+column held it, nothing said so at the crossing, and a reviewer spent three returns reconstructing
+pulls by archaeology (R707). **The same fault, on a field that DID have a column to land in.**
+
+**Fixed by adding the index signature, which is the mechanism rather than the symptom.** An unknown
+key now reaches the row builder, where it is carried to its column if one exists (12 columns, read
+from Prisma's own datamodel, never hand-listed — a list here would drift from the schema one level
+above the fault being closed), carried into `content` if it is retention (`_`-prefixed), and
+otherwise **REFUSES THE IMPORT BY NAME**. Nothing is dropped. Refusing rather than guessing a home
+is deliberate: inventing a placement convention is how a second wrong convention starts (R173).
+Of the 553, 531 now land in columns, 22 carry as retention, and 24 `secondaryMisconceptionId` stop
+the import instead of vanishing.
+
+**And the honest status of the walk, which this bounds.** The exempted-population walk is a true and
+complete account of what is ON the serving rows. **It is not evidence about what was authored**, and
+for options it could not have been. Anything dropped before now left nothing here to find. That
+limit is carried in the artefact itself rather than in a covering note.

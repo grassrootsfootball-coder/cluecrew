@@ -55,7 +55,7 @@ async function run() {
   const withAccessible = rows.filter((r) => r.accessibleTextExists);
   const payload = {
     kind: 'frame-accessible-text',
-    RECROSS: 'THIRD CROSSING. Renamed, with the findings digest inline below and the file digest in the filename. Superseded in scope by the full-population walk (exempt-strings-accessible-text) — these forty are its stem.sentence half.',
+    RECROSS: 'FOURTH CROSSING. Renamed, with the findings digest inline below and the file digest in the filename. Superseded in scope by the full-population walk (exempt-strings-accessible-text) — these forty are its stem.sentence half.',
     what: 'Per row, the frame tokens and their accessible text — or the statement that none exists. Emitted because the forty hold until this fact is on the record.',
     theFlagBeingAnswered: 'Annie: the frame-versus-prose split may be an accessibility difference wearing a quality one. Staging the forty without this fact risks her ruling the accessible form out of the corpus.',
     THE_ANSWER: {
@@ -94,9 +94,9 @@ async function run() {
     },
   };
   const json = JSON.stringify(artefact, null, 1) + '\n';
-  const name = stampedName('frame-accessible-text-third-crossing', sha256(json).slice(0, 16), 'json');
+  const name = stampedName('frame-accessible-text-fourth-crossing', sha256(json).slice(0, 16), 'json');
   writeFileSync(join(REPO, 'content/exports', name), json);
-  deliver(join(REPO, 'content/exports', name), 'frame-accessible-text-third-crossing');
+  deliver(join(REPO, 'content/exports', name), 'frame-accessible-text-fourth-crossing');
   console.log(`rows ${rows.length}; with accessible text ${withAccessible.length}; findingsSha256 ${findingsSha256}`);
   await prisma.$disconnect();
 }

@@ -101,6 +101,20 @@ const OPTION_RENDER: RenderFact = {
  * field today would pass the gate, land on the row, and **reach nothing** — which is a different
  * fact from a field left blank, and the reason this is not reported as an empty value.
  */
+/** **A COUNT IS NOT A MEMBERSHIP, AND A MEMBERSHIP IS NOT A DERIVATION.** Stated, not implied. */
+const DERIVATION = {
+  unit: 'ONE STRING on ONE field path of ONE item. Not a run, not an item, not a token.',
+  selected: 'a string is a member when it sits on a SCREENED path (per the disposition membership) AND the notation exemption is LOAD-BEARING on it: it carries a capital run of two or more that the shouted-capitals rule would otherwise fail, or an underscore marker that would otherwise be screened as text.',
+  rejectedAlternative: 'every string for which an exemption predicate merely returns true. That reading gives 3,470, of which 3,376 are option values like "cat" — exempt in the sense that a locked door is keeping out somebody who was not coming.',
+  functionsCalled: [
+    'textsFrom (packages/core/src/item-content-gate.ts) — the item gate\'s own walker; not re-derived',
+    'isScreenedPath, dispositionFor (packages/core/src/field-dispositions.ts) — the disposition membership',
+    'notationExempt, gapMarkerSpans (same file) — the two exemption predicates themselves',
+  ],
+  classAssignment: 'FRAME when the marker token carries adjacent capitals; GAP_MARKER when it does not; OPTION_VALUE when the exemption is notationExempt on an options[] path; NOTATION for the same on any other notation-bearing path.',
+  whatTHEDIGESTcovers: 'manifestSha256 is over the population manifest ALONE — one "<itemId>\\t<root>.<path>" line per row, in the order emitted, newline-joined, no trailing newline. It changes when membership changes and not when prose does.',
+};
+
 const NO_FIELD = 'the stem is open JSON and would CARRY such a key (R57 passthrough), but none is declared in stemSchema and no renderer reads one — 28 stem keys are read across the engines and none is an accessibility channel. A value written there would reach nothing. This is not a blank field; it is an uninvited one.';
 
 async function run() {
@@ -272,7 +286,49 @@ async function run() {
     rows,
   };
 
-  const artefact = { ...payload, ...findingsDigest(payload, ['THE_DENOMINATORS', 'THE_ANSWER_PER_CLASS', 'rows']) };
+  /**
+   * **A COUNT IS NOT A MEMBERSHIP** (Cowork's ruling, carried). The other side cannot answer its
+   * half from "289"; it needs the rows by id and field path, the derivation that selected them,
+   * and WHICH FIELD PATHS WERE LOOKED AT — so it can report what it did NOT check instead of
+   * implying it checked everything.
+   */
+  const manifest = rows.map((r) => `${r.itemId}\t${r.root}.${r.path}`);
+  const manifestSha256 = createHash('sha256').update(manifest.join('\n'), 'utf8').digest('hex');
+
+  // Every screened field path present in the corpus, split into looked-at-and-in / looked-at-and-out.
+  const inPopulation = new Set(rows.map((r) => `${r.root}.${r.path}`.replace(/\[\d+\]/g, '[]')));
+  const allScreened = new Map<string, number>();
+  for (const item of items) {
+    const w: Array<[string, string]> = [];
+    for (const [p] of textsFrom(item.stem, '')) w.push(['stem', p]);
+    for (const [p] of textsFrom(item.explanation, '')) w.push(['explanation', p]);
+    item.options.forEach((o) => { for (const [p] of textsFrom(o.content, 'content')) w.push(['options[]', p]); });
+    for (const [root, p] of w) {
+      if (!isScreenedPath(root, p)) continue;
+      const k = `${root}.${p}`.replace(/\[\d+\]/g, '[]');
+      allScreened.set(k, (allScreened.get(k) ?? 0) + 1);
+    }
+  }
+
+  const coverage = {
+    WHAT_THIS_WALK_LOOKED_AT: 'every string on every SCREENED field path of every item in the corpus. Not a sample, not a district, not a status filter.',
+    fieldPathsExaminedTOTAL: allScreened.size,
+    fieldPathsYIELDINGpopulationRows: [...inPopulation].sort(),
+    fieldPathsEXAMINEDandFOUNDtoCarryNoExemption: [...allScreened.keys()].filter((k) => !inPopulation.has(k)).sort(),
+    whatThisDistinctionIsFOR: 'a path in the second list was CHECKED and found clean. A path in neither list was never reached by this walk and no claim is made about it. Cowork can now state its own uncovered set against the same names rather than against a total.',
+    fieldPathsNOTexamined: 'paths whose disposition is STAFF, and every non-string column. Named as a class because they are excluded BY THE DISPOSITION MEMBERSHIP, not by this walk\'s judgement.',
+  };
+
+  const bound = {
+    THE_BOUND_COWORK_NAMED: 'a field authored at the authoring end and DROPPED AT THIS DOOR is invisible to a walk of serving rows, because a walk can only see what arrived. That is correct, it is not hypothetical, and it was true of this very corpus until this turn.',
+    whatWasFound: 'scripts/import-english-items.ts rebuilt every option from four named keys with no index signature, so anything else authored on an option was dropped in silence. Across the 19 files in that door\'s own input shape, 553 authored values on four keys would have been lost — misconceptionExecution 499 of them, WHICH IS A REAL COLUMN the schema describes as "the first thing a reviewer asks to see".',
+    theOtherDoorDIDNOT: 'apps/web/lib/actions/admin-items.ts takes content as z.record(z.unknown()) and passes everything. Two doors enumerating separately, drifted — R57 predicted exactly this and R42/R55 already recorded it; R57 was written about STEMS and never reached options.',
+    fixedThisTurn: 'the door now carries an unknown key to its column when one exists (12 columns, read from Prisma\'s datamodel rather than hand-listed), carries it into content when it is retention ("_"-prefixed), and REFUSES THE IMPORT BY NAME otherwise. It no longer drops anything silently. Refusing rather than guessing a home is deliberate: inventing a placement convention is how a second wrong convention starts.',
+    soTheHONESTSTATUS: 'this walk is a true and complete account of what is ON the serving rows. It is NOT evidence about what was authored, and for options it could not have been until this turn. Anything dropped before now left no trace here to find.',
+  };
+
+  const full = { ...payload, POPULATION_MANIFEST: manifest, manifestSha256, THE_DERIVATION: DERIVATION, COVERAGE: coverage, THE_BOUND: bound };
+  const artefact = { ...full, ...findingsDigest(full, ['THE_DENOMINATORS', 'THE_ANSWER_PER_CLASS', 'POPULATION_MANIFEST', 'THE_DERIVATION', 'COVERAGE', 'THE_BOUND', 'rows']) };
   const json = JSON.stringify(artefact, null, 1) + '\n';
   const name = stampedName('exempt-strings-accessible-text', createHash('sha256').update(json).digest('hex').slice(0, 16), 'json');
   writeFileSync(join(REPO, 'content/exports', name), json);
