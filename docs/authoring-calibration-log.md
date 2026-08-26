@@ -20791,3 +20791,49 @@ Three instances in four days — R717's re-derived predicate, R734's narrow call
 all three were mine**, which is the part worth keeping: the class is not a thing careless people
 do, it is what building a second implementation always does, and the only reliable defence is to
 call the family's own function rather than to write a careful copy of it.
+
+## R739 — The frame is one token; key letters are mentions; and the split was a port wearing my name
+
+**Her two rulings landed across the template** (`annie-161-landing-4ea1f1e72e5c3cbe.json`, file
+sha256 `4ea1f1e72e5c3cbef6f52c11101832e4be33eb6bfcdb19f2749610344bb9c166`, findings digest inline
+with its serialisation named): **40 of 40 vr-06 walk scripts amended**, both of her worked
+examples reproducing byte-for-byte from the mechanical rule — *“out” makes “shout”*, *“pri” fills
+it to make “deprive”*. **Per-row assertions as instructed**: every frame token present after the
+edit and identical to before, and a mask-and-compare proving that NOTHING BUT the mention runs
+moved. Units stated: **her ninety is the authoring source, this side holds 40 serving rows of the
+template** (R690), and the ruling was applied to the whole template here rather than to the
+twenty she read — her own *"a ruling that stays where it was made is a preference."*
+
+**THE PREDICATE FINDING, and it is the sharpest form of R738 yet: `capitalRunIsExempt` DOES NOT
+SPLIT.** Called directly on her three rows, the whole frame is exempt AND so is the leading letter
+run — `SH___`, `DE___VE`, `COM___E`, `DEC___E`, every one a single span with the letters inside
+it, because the pattern takes letters on both sides of the underscores. **The split came from
+`build_ninety_screen.py over walkscript_screen.py` — Cowork's PYTHON PORT — and every split
+verdict in that artefact carries `by: "capitalRunIsExempt(...) === false"`, attributing the
+verdict to this function's NAME.** So a fault in a re-implementation reached the reviewer as
+evidence about my code, and she ruled against my predicate for a behaviour it does not have.
+
+**A second implementation wearing the original's name is the worst member of the class**, because
+the misattribution is invisible to everyone downstream: the artefact is honest, the name is
+accurate as a citation of intent, and the verdict is wrong. What I cannot settle from here —
+whether the port predates R722 or mis-ports it — is NAMED rather than guessed; I hold no version
+of that Python. **Her three rows are now regression tests**, so the split cannot be introduced
+here later, and the predicate crosses with five conformance cases so neither store re-derives it.
+
+**The option-value ruling needed no change and is recorded with its proof**: `options[].value`
+already sits in `NOTATION_BEARING_PATHS` and `OUT` is symbol-shaped, so the 240 were exempt
+before the ruling arrived — and the boundary still holds, because a sentence in that same field
+cannot claim it (R719).
+
+## R740 — A guard that compares totals refuses a pre-existing fault as if the edit caused it
+
+**Mine, caught mid-run.** The substitution's safety guard gated the whole item after the edit and
+threw on `bank-vr-06-missing-word-15` — whose *"poorly"* sits in the STEM and fails the ban list
+**before anything is touched**. The edit was innocent; the guard blamed it.
+
+**Refuse on the DIFF, never on the total** (R149, arriving in a new place): the guard now takes
+the gate's verdict before and after and refuses only what the edit INTRODUCED. Pre-existing
+faults are carried onto the row as `preExistingFaultsUntouchedByThisEdit` instead of stopping the
+run — **three rows carry them** (`-15`, `-17`, `-40`), which is a finding the totals-guard would
+have converted into a crash and lost. A guard that cannot tell what it caused from what it found
+reports the corpus's history as its own damage.
