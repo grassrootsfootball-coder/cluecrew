@@ -79,7 +79,7 @@ async function run() {
 
   const payload = {
     kind: 'boundary-conformance-cases',
-    RECROSS: 'THIRD CROSSING. The first two rode inside the membership artefact and did not arrive; the second stood alone and did not arrive. Renamed so it cannot be mistaken for either, with the digest of its own findings inline below and the file digest in the filename.',
+    RECROSS: 'FOURTH CROSSING. The first two rode inside the membership artefact and did not arrive; the second stood alone and did not arrive. Renamed so it cannot be mistaken for either, with the digest of its own findings inline below and the file digest in the filename.',
     what: 'THE EIGHT BOUNDARY CASES, crossed alone because twice they did not arrive inside the membership. Every value computed by running packages/core — none typed by hand.',
     theMigrationOrderThisSERVES: 'Cowork aliased frameTokenSpans and isExemptByFrame rather than deleting them, on the grounds that a migration proved against the wrong fixture is proved against nothing. This is the right fixture. When these eight pass there, the alias names go.',
     THE_EIGHT_CASES: THE_EIGHT,
@@ -108,9 +108,9 @@ async function run() {
 
   const artefact = { ...payload, ...findingsDigest(payload, ['THE_EIGHT_CASES', 'COWORKS_OWN_EIGHT_RUN_HERE', 'AND_ITS_SUITE_CAUGHT_A_CLASS_MINE_LACKS', 'theNinth']) };
   const json = JSON.stringify(artefact, null, 1) + '\n';
-  const name = stampedName('boundary-conformance-cases-recross', createHash('sha256').update(json).digest('hex').slice(0, 16), 'json');
+  const name = stampedName('boundary-conformance-cases-third-crossing', createHash('sha256').update(json).digest('hex').slice(0, 16), 'json');
   writeFileSync(join(REPO, 'content/exports', name), json);
-  deliver(join(REPO, 'content/exports', name), 'boundary-conformance-cases-recross');
+  deliver(join(REPO, 'content/exports', name), 'boundary-conformance-cases-third-crossing');
   console.log(`eight crossed; Cowork's eight agree here ${coworksEightHere.length - disagreeing.length}/${coworksEightHere.length}; classes only in its suite: ${classesOnlyCowork.join(' | ') || 'none'}`);
 }
 

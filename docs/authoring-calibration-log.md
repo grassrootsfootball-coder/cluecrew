@@ -21192,7 +21192,41 @@ worse in one specific way and better in another: the verdict was not the instrum
 discipline aimed at the instrument could have caught it — and it is the cheapest to prevent, since
 the guard is to stop writing the answer down yourself.
 
-**And R754 stands as the other self-finding**: `restampToContent` keyed its pattern on the family
-LABEL and returned silently when label and filename disagreed — **R731 re-entering through the
-function built to prevent it**, by R87's route. Both faults this turn were mine, both were in
-verification rather than in content, and both were found by running something a second time.
+**IT GENERALISES PAST THE BUILD TOOL, AND IT BELONGS BESIDE THE EMPTY-JOIN FAMILY.** The shape is
+not "tsc" and not "a missing config" — it is **an operation whose failure mode is silence, wearing a
+verdict its operator wrote.** A join on a key that matches nothing returns no rows and raises
+nothing; a filter on a renamed field selects nothing and raises nothing (R568); `str.replace` on a
+mismatched anchor changes nothing and raises nothing (R87); a gate over a population no path
+produces screens nothing and exits 0 (R60, R61). Every one is an operation that CANNOT FAIL,
+because failing is not among the things it does. **The pipeline case adds the last step: `|`
+discards the status of every stage but the last, so even an operation that CAN fail stops being
+able to once it is piped.** Hence the general form, which is testable before running anything:
+*name the specific observation that would make this command report failure.* If there is none, the
+command is not evidence and its silence is not a pass.
+
+Two mechanical consequences: invoke the repo's NAMED script rather than an ad-hoc reconstruction of
+it (the named one is where the config is wired — R57 in shell form), and never write a verdict
+sentence after a pipeline, because the sentence is then yours and not the command's.
+
+**And R757 carries the other self-finding**, which was folded into R754's second half and is large
+enough to stand alone.
+
+## R757 — R731 re-entering through the function built to prevent it
+
+`restampToContent` exists for exactly one purpose: to stop an artefact staging under a name that
+claims a hash its bytes no longer have (R731, the stamp-after-mark fault). **It reintroduced that
+fault itself.** It built its match pattern out of the `family` label passed to `deliver()`, so when
+the label and the filename prefix disagreed — `deliver(…, 'boundary-conformance-cases')` on a file
+named `boundary-conformance-cases-for-cowork-<hash>.json` — the pattern missed, the function
+**returned the path unchanged and printed nothing**, and the artefact crossed under a false stamp.
+
+**Three properties made it invisible.** The function was correct on every file whose label matched.
+It printed nothing on the ones it skipped, so the log of a bad run and a good run were identical.
+And the failure was in the guard rather than in the thing guarded, so every downstream check stayed
+green — a guard reports on its subject, never on itself.
+
+**The fix is a rule about where a fact comes from, not a patched regex**: the prefix is read from
+the FILENAME, which is the artefact, and never from the label, which is a caller's description of
+it. A mismatch between the two is now reported rather than obeyed. Same shape as R57 (a door that
+enumerates what it expects will drift from the thing it is describing) and R60's third question
+(is it reading the artefact, or a copy of it?) — **the label was the copy.**

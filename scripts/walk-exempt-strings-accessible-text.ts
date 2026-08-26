@@ -91,6 +91,18 @@ const OPTION_RENDER: RenderFact = {
   read: 'apps/web/components/crew/engines/option-button.tsx (no aria-label, no visually-hidden text)',
 };
 
+/**
+ * **THE THIRD STATE, STATED PRECISELY.** The stem is an OPEN JSON object with passthrough (R57),
+ * so a key written there would survive every import door — this is not a schema that forbids the
+ * field. It is worse and more specific: **no key is declared for it in `stemSchema`, and no
+ * renderer anywhere reads one.** Twenty-eight distinct `stem.*` keys are read across the engines
+ * and not one is an accessibility channel; the identifiers `accessibleText`, `spokenForm`,
+ * `readAloud` and their kin appear nowhere in the repository. So a value authored into such a
+ * field today would pass the gate, land on the row, and **reach nothing** — which is a different
+ * fact from a field left blank, and the reason this is not reported as an empty value.
+ */
+const NO_FIELD = 'the stem is open JSON and would CARRY such a key (R57 passthrough), but none is declared in stemSchema and no renderer reads one — 28 stem keys are read across the engines and none is an accessibility channel. A value written there would reach nothing. This is not a blank field; it is an uninvited one.';
+
 async function run() {
   assertFixture('exempt-string-walk', [
     { name: 'a frame in a sentence is an exempt string', input: 'Please do not SH___ so loudly.', mustBeCaught: true },
@@ -112,6 +124,15 @@ async function run() {
     exemptTokens: string[];
     tokenCarriesNonSpeakingCharacters: boolean;
     accessibleTextExists: boolean;
+    /**
+     * **A SCHEMA THAT NEVER INVITED THE FIELD AND A FIELD LEFT BLANK ARE DIFFERENT FACTS**
+     * (David, 2026-08-26). Neither is reported as an empty value.
+     */
+    accessibleTextStatus:
+      | 'CARRIED BY THE RENDERER'
+      | 'NO FIELD IS DECLARED FOR IT AND NOTHING WOULD READ ONE'
+      | 'NOT RENDERED TO A CHILD AT ALL';
+    whyThatStatus: string;
     renderedToChild: boolean | 'UNKNOWN';
     substituteAccessibleText: string | null;
     renderPath: string;
@@ -169,6 +190,14 @@ async function run() {
         exemptTokens: tokens.length ? tokens : [text],
         tokenCarriesNonSpeakingCharacters: (tokens.length ? tokens : [text]).some((t) => /_/.test(t)),
         accessibleTextExists: !unknown && fact.substitute !== null,
+        accessibleTextStatus: (byPath && !byPath.renderedToChild)
+          ? 'NOT RENDERED TO A CHILD AT ALL'
+          : (fact.substitute !== null ? 'CARRIED BY THE RENDERER' : 'NO FIELD IS DECLARED FOR IT AND NOTHING WOULD READ ONE'),
+        whyThatStatus: (byPath && !byPath.renderedToChild)
+          ? 'the string reaches no child surface, so there is nothing for an accessible text to be an alternative TO. Reported apart from the rendered rows rather than summed with them.'
+          : (fact.substitute !== null
+            ? 'the renderer computes it at render time; no value is stored on the row.'
+            : NO_FIELD),
         renderedToChild: unknown ? 'UNKNOWN' : (byPath ? byPath.renderedToChild : true),
         substituteAccessibleText: fact.substitute,
         renderPath: unknown ? `UNKNOWN — renderer not read for (${engine}, ${root}.${path})` : fact.how,
@@ -207,6 +236,15 @@ async function run() {
       byClass: by((r) => r.class),
       byStatus: by((r) => r.status),
       THE_RECONCILIATION_AGAINST_349: {
+        theInstructionsCLASSSIZES: { gapMarkers: 80, optionValues: 240, frames: 29, total: 349 },
+        thisSTORESmeasurement: { gapMarkers: 34, optionValues: 195, frames: 60, total: 289 },
+        AND_THEY_DO_NOT_RECONCILE: 'no scoping of this store produces 80/240/29. The three counts are STABLE at 34/195/60 across every reading tried: screened paths only or all paths, per-string or per-occurrence, all statuses or LIVE only. Distinct frame TOKENS are 37, not 29. The vr-06 bank holds 120 options in total, so 240 cannot be its option values. The figures are not a different slice of the same corpus.',
+        WHERE_THE_240_CAME_FROM: 'her hundred-and-sixty-first ruling — "the bank\'s options[].value bears notation, so the 240 are exempt". It was recorded on this side at R739 as a citation of her ruling and WAS NEVER ASSERTED AGAINST THESE ROWS. That is the R180 shape: a number true where it was written, carried into a second store as a population size, and never checked against the data it now scopes. **Mine to carry, because I recorded it.**',
+        THE_TWO_READINGS_AND_I_DO_NOT_PICK: [
+          'the three figures are the REVIEWER\'S or COWORK\'S count over Cowork\'s corpus, which this store cannot see and cannot walk — in which case 349 is a real population and simply not this one;',
+          'they are prose figures that drifted, in which case 289 is the population and the class sizes need restating.',
+        ],
+        soWhatThisFileIS: 'the complete membership of THIS store\'s exempted population, per row, walked and reported. If the 349 is Cowork\'s, this is its counterpart and the two should be compared row by row rather than by total. Naming which corpus a count is over is the thing that makes them comparable at all (R591).',
         why: 'the instruction named 349 and this walk finds a different number, so the predicate is stated and several counts given rather than the instrument tuned until it agrees (which is how a number gets confirmed instead of checked).',
         thisWalksPredicate: 'a STRING on a screened path where the exemption is LOAD-BEARING: it carries a capital run the shouted-capitals rule would otherwise fail, or an underscore marker that would otherwise be screened as text.',
         countsUnderOtherReadings: {
