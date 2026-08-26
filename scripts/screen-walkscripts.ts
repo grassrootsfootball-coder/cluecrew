@@ -114,7 +114,7 @@ async function run() {
   const name = stampedName('walkscript-screen-recross', sha256(json).slice(0, 16), 'json');
   writeFileSync(join(REPO, 'content/exports', name), json);
   deliver(join(REPO, 'content/exports', name), 'walkscript-screen-recross');
-  console.log(`walk scripts screened: ${walks.length}; faults ${faults.length}; findingsSha256 ${findingsSha256}`);
+  console.log(`walk scripts screened: ${walks.length}; faults ${faults.length}; findingsSha256 ${artefact.findingsSha256}`);
   await prisma.$disconnect();
 }
 

@@ -137,7 +137,7 @@ async function run() {
     writeFileSync(join(REPO, 'content/exports', name), json);
     deliver(join(REPO, 'content/exports', name), 'annie-161-landing');
   }
-  console.log(`rows: ${rows.length}; findingsSha256 ${findingsSha256}`);
+  console.log(`rows: ${rows.length}; findingsSha256 ${artefact.findingsSha256}`);
   await prisma.$disconnect();
 }
 

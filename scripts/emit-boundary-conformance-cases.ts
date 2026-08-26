@@ -30,7 +30,7 @@ const spanCase = (klass: string, text: string, why: string) => ({
 });
 const runCase = (klass: string, root: string, path: string, text: string, run: string, why: string) => {
   const [a, b] = at(text, run);
-  return { class: klass, fn: 'capitalRunIsExempt', args: [root, path, text, a, b], run, runSpan: [a, b], why, expect: capitalRunIsExempt(root, path, text, a, b) };
+  return { class: klass, fn: 'capitalRunIsExempt', args: [root, path, text, a, b], text, run, runSpan: [a, b], why, expect: capitalRunIsExempt(root, path, text, a, b) };
 };
 
 const THE_EIGHT = [
