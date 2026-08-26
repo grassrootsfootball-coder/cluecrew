@@ -21351,3 +21351,54 @@ DIVERGED from the authored source, which is a two-store question and is reported
 alarming number without checking whether the values were actually missing from the rows — the exact
 inversion of R173, which warns that a confirming number needs investigating on purpose. An alarming
 one does too.
+
+## R763 — A two-bucket coverage report lies about the size of the uncovered set
+
+Cowork found a class this store had no way to see: **224 authored child-facing strings on
+`options[].value[]`, list-shaped option values on the vr-02 odd-pair template**, against a crossed
+membership carrying `options[].content.value` and nothing of any name for a list.
+
+**Its premise needs one correction and the correction is the finding.** The message reads *a value
+with no shape to arrive in is an unbuilt path, not a dropped one, and it leaves no record at any
+door.* At the STORAGE layer that is not what happened: `ItemOption.content` is a `Json` column, so
+`{"value": ["van","bus"]}` lands without difficulty, and **100 vr-02 options hold exactly that
+shape today — 200 strings, on rows, right now.** What is unbuilt is one layer up. `options[].content.value`
+is declared child-facing and screened; `options[].content.value[]` **is declared nowhere**, so the
+gate walks those 200 strings and screens **0**. The path arrived; the membership never did.
+
+**And nothing reported it.** `check:every-string-field` prints `UNDECLARED 0` on every run and is
+correct — it screens the 326 LIVE items behind a door, and all 25 vr-02 items are DRAFT. R61's
+shape: a gate whose scope legitimately excludes the thing being asked about, printing a true zero.
+
+**My own coverage report was the same fault one level down.** It split field paths into
+yielded-rows and examined-and-clean, which reads as a complete account and is not — a path can be
+present in the corpus and screened by NOTHING, and mine named the scalar option path as examined
+while the list shape under it was invisible. **An unscreened path reported inside "examined" is the
+uncovered set understating its own size.** A third bucket now carries them, and it is not one path:
+**13 undeclared paths, 441 strings**, `options[].content.value[]` (200) the largest, `stem.wordWithGap`
+(25) notable because it renders to a child in a bare `<p>`.
+
+**The joinable key, since that was the operative question:** `itemId` (authored, stable, identical
+on both sides) plus the ordered value tuple. **Not the option id** — all 100 are auto-minted cuids
+that nothing on the authoring side could have produced — and not the label, because 0 of the 100
+carry one. The count gap is reported and not reconciled: Cowork says 224, the rows hold 200, and the
+join above is what settles the 24 rather than any argument from totals.
+
+No column was built, no disposition declared, no gate widened. As instructed.
+
+## R764 — A reply is not an artefact
+
+The 553 re-import and the execution population were answered in a reply two turns running and
+reported unanswered both times. **They were answered where answers do not cross.** This store
+already holds the rule — R25: when a value carries a signature, send the value, not an account of
+it; prose may accompany a value and may never stand in for one — and I broke it on the two figures
+most likely to be quoted back.
+
+**The tell was available and I did not read it.** Every artefact this store emits gets a digest, a
+sidecar and a staging line precisely so its arrival can be confirmed; a figure in a chat reply has
+none of those, so there is nothing for the far side to name and nothing for this side to check. The
+same turn in which I registered R760 — that a crossing reported absent is a latency fact — I was
+treating prose as a crossing that had no channel at all.
+
+Both figures now cross as `three-open-answers`, with the vr-02 rows carried as data beside them.
+**The general form: if an answer matters enough to be asked for twice, it is an artefact.**

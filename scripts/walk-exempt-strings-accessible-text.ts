@@ -241,6 +241,7 @@ async function run() {
 
   const payload = {
     kind: 'exempt-strings-accessible-text',
+    RECROSS: 'RENAMED CROSSING. Carries the uncovered-set report Cowork refused for want of bytes, now in three buckets rather than two: paths that yielded rows, paths examined and found clean, and PATHS PRESENT IN THE CORPUS AND SCREENED BY NOTHING — the last added after Cowork found what the two-bucket split hid.',
     what: 'EVERY string in the corpus claiming a notation exemption — gap markers, option values, frames — with, per row, whether accessible text exists. Membership. No repair is proposed and none is implied.',
     theInstruction: 'David, on Annie\'s flag ruled open on channel: walk the full population and report per row whether any accessible text exists. Nobody rules a remedy until the population is known.',
     THE_DENOMINATORS: {
@@ -299,14 +300,27 @@ async function run() {
   // Every screened field path present in the corpus, split into looked-at-and-in / looked-at-and-out.
   const inPopulation = new Set(rows.map((r) => `${r.root}.${r.path}`.replace(/\[\d+\]/g, '[]')));
   const allScreened = new Map<string, number>();
+  /**
+   * **THE THIRD COVERAGE BUCKET, ADDED AFTER COWORK FOUND WHAT IT HID** (R763). The first version
+   * split paths into yielded-rows and examined-and-clean, which reads as a complete account and is
+   * not: a path can be present in the corpus and screened by NOTHING, because no disposition names
+   * its shape. `options[].content.value` is declared; `options[].content.value[]` — the list shape
+   * the vr-02 template authors — is not, so 200 child-facing strings were walked past in silence
+   * and my coverage report named the scalar path as examined. **An unscreened path reported inside
+   * "examined" is the uncovered set lying about its own size.**
+   */
+  const presentButUnscreened = new Map<string, number>();
   for (const item of items) {
     const w: Array<[string, string]> = [];
     for (const [p] of textsFrom(item.stem, '')) w.push(['stem', p]);
     for (const [p] of textsFrom(item.explanation, '')) w.push(['explanation', p]);
     item.options.forEach((o) => { for (const [p] of textsFrom(o.content, 'content')) w.push(['options[]', p]); });
     for (const [root, p] of w) {
-      if (!isScreenedPath(root, p)) continue;
       const k = `${root}.${p}`.replace(/\[\d+\]/g, '[]');
+      if (!isScreenedPath(root, p)) {
+        if (dispositionFor(root, p) == null) presentButUnscreened.set(k, (presentButUnscreened.get(k) ?? 0) + 1);
+        continue;
+      }
       allScreened.set(k, (allScreened.get(k) ?? 0) + 1);
     }
   }
@@ -316,6 +330,8 @@ async function run() {
     fieldPathsExaminedTOTAL: allScreened.size,
     fieldPathsYIELDINGpopulationRows: [...inPopulation].sort(),
     fieldPathsEXAMINEDandFOUNDtoCarryNoExemption: [...allScreened.keys()].filter((k) => !inPopulation.has(k)).sort(),
+    fieldPathsPRESENTinTheCorpusAndScreenedByNOTHING: Object.fromEntries([...presentButUnscreened].sort((a, b) => b[1] - a[1])),
+    andWhatThatBucketMEANS: 'a string on one of these paths is walked by the gate and screened by no rule, because the disposition membership names no shape for it. It is NOT covered by this walk and NOT covered by the child-facing gate. It is the uncovered set proper, and it was invisible until Cowork named the vr-02 list shape.',
     whatThisDistinctionIsFOR: 'a path in the second list was CHECKED and found clean. A path in neither list was never reached by this walk and no claim is made about it. Cowork can now state its own uncovered set against the same names rather than against a total.',
     fieldPathsNOTexamined: 'paths whose disposition is STAFF, and every non-string column. Named as a class because they are excluded BY THE DISPOSITION MEMBERSHIP, not by this walk\'s judgement.',
   };
@@ -331,9 +347,9 @@ async function run() {
   const full = { ...payload, POPULATION_MANIFEST: manifest, manifestSha256: manifestDigest.value, manifestSha256Spec: manifestDigest.spec, THE_DERIVATION: DERIVATION, COVERAGE: coverage, THE_BOUND: bound };
   const artefact = { ...full, ...findingsDigest(full, ['THE_DENOMINATORS', 'THE_ANSWER_PER_CLASS', 'POPULATION_MANIFEST', 'THE_DERIVATION', 'COVERAGE', 'THE_BOUND', 'rows']) };
   const json = JSON.stringify(artefact, null, 1) + '\n';
-  const name = stampedName('exempt-strings-accessible-text', createHash('sha256').update(json).digest('hex').slice(0, 16), 'json');
+  const name = stampedName('exempt-strings-uncovered-set', createHash('sha256').update(json).digest('hex').slice(0, 16), 'json');
   writeFileSync(join(REPO, 'content/exports', name), json);
-  deliver(join(REPO, 'content/exports', name), 'exempt-strings-accessible-text');
+  deliver(join(REPO, 'content/exports', name), 'exempt-strings-uncovered-set');
 
   console.log(`items ${items.length}; exempt strings ${rows.length} (LIVE ${live.length})`);
   console.log(`  by class: ${JSON.stringify(by((r) => r.class))}`);
