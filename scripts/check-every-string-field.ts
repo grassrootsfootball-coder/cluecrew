@@ -41,7 +41,7 @@ const FAMILY = 'every-string-field-sweep';
  * An unscreened path missing from this map fails the run. That is the whole mechanism: the count
  * was never the problem, the silence about each entry was.
  */
-type Disposition = 'child' | 'staff' | 'undecided';
+type Disposition = 'child' | 'staff' | 'undecided' | 'quotation';
 const DISPOSITIONS: Readonly<Record<string, Disposition>> = {
   // --- STAFF: review bookkeeping, batch and status markers, provenance ---
   'explanation.walkScriptBatch': 'staff', 'explanation.walkScriptStatus': 'staff',
@@ -86,9 +86,14 @@ const DISPOSITIONS: Readonly<Record<string, Disposition>> = {
   'explanation.quotes[].text': 'child', 'stem.quotes[].text': 'child', 'stem.quotes[]': 'child',
   'explanation.note': 'child',
 
+  // --- QUOTATION: bound by FIDELITY to the source, not by our spelling and stance gates
+  // (R711). Ruled after ENG-027-RR-08's attractorQuote reproduced its passage's US spelling and
+  // a "repair" would have broken it at byte-verify. The membership is imported from the gate,
+  // never re-listed here. ---
+  'options[].attractorQuote': 'quotation',
+  'options[].defeaterQuote': 'quotation',
+
   // --- UNDECIDED: nobody has ruled. Named, not assumed. ---
-  'options[].attractorQuote': 'undecided',
-  'options[].defeaterQuote': 'undecided',
   'stem.words[]': 'undecided',
 };
 
@@ -172,10 +177,10 @@ async function main() {
   // Disposition audit. An unscreened path with no disposition, or a `child` path the gate does not
   // read, is a FAULT — the count was never the problem, the silence about each entry was.
   const dispositionFaults: string[] = [];
-  const byDisposition: Record<string, string[]> = { child: [], staff: [], undecided: [], MISSING: [], childSingleToken: [] };
+  const byDisposition: Record<string, string[]> = { child: [], staff: [], undecided: [], quotation: [], MISSING: [], childSingleToken: [] };
   for (const [p] of unscreenedPaths) {
     const d = DISPOSITIONS[p];
-    if (!d) { byDisposition.MISSING!.push(p); dispositionFaults.push(`UNDECLARED PATH: ${p} — classify it child, staff or undecided.`); continue; }
+    if (!d) { byDisposition.MISSING!.push(p); dispositionFaults.push(`UNDECLARED PATH: ${p} — classify it child, staff, quotation or undecided.`); continue; }
     byDisposition[d]!.push(p);
     // A `child` path appears here only when EVERY value under it is a single token — which the
     // gate skips by design. That is a design decision, not a gap, and it is reported as such.
@@ -213,12 +218,15 @@ async function main() {
   console.log(`\nLIVE items behind a door: ${items.length} · string fields screened: ${fieldsScreened}`);
   console.log(`paths OUTSIDE checkItemChildFacing: ${unscreenedPaths.size}`);
   for (const [p, n] of [...unscreenedPaths].sort((a, b) => b[1] - a[1]).slice(0, 10)) console.log(`    ${String(n).padStart(4)}  ${p}`);
-  console.log(`\ndispositions — staff ${byDisposition.staff!.length} · child ${byDisposition.child!.length} · undecided ${byDisposition.undecided!.length} · UNDECLARED ${byDisposition.MISSING!.length}`);
+  console.log(`\ndispositions — staff ${byDisposition.staff!.length} · child ${byDisposition.child!.length} · quotation ${byDisposition.quotation!.length} · undecided ${byDisposition.undecided!.length} · UNDECLARED ${byDisposition.MISSING!.length}`);
   if (byDisposition.childSingleToken!.length) {
     console.log(`    child-facing but SINGLE-TOKEN ONLY, so the gate skips them by design: ${byDisposition.childSingleToken!.length}`);
     console.log(`      ${byDisposition.childSingleToken!.join(', ')}`);
   }
   if (byDisposition.undecided!.length) console.log(`    undecided: ${byDisposition.undecided!.join(', ')}`);
+  // QUOTATION fields are ruled exempt (R711) — reported so the exemption is visible every run and
+  // can never quietly become "unscreened by accident".
+  if (byDisposition.quotation!.length) console.log(`    quotation (exempt by ruling, bound by fidelity to source): ${byDisposition.quotation!.join(', ')}`);
   if (byDisposition.MISSING!.length) console.log(`    UNDECLARED: ${byDisposition.MISSING!.join(', ')}`);
   for (const f of dispositionFaults) console.error(`  - ${f}`);
   console.log(`\nfaults: ${findings.length}`);

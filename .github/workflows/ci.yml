@@ -348,6 +348,12 @@ jobs:
       - name: Reissue completion (did a described act actually complete?)
         run: pnpm check:reissue-completion
 
+      # THE INSTRUMENT BUILT TO WATCH THE SILENT-REFUSAL CLASS WAS THE CLEAREST MEMBER OF IT
+      # (Annie's 154th, David's ruling -- R712). check-outstanding-import-refusals PRINTED ONLY and
+      # ran nowhere: a check whose entire subject is refusals nobody routed, itself unrouted.
+      - name: Outstanding import refusals (a refusal nobody received is not a refusal)
+        run: pnpm check:import-refusals
+
       # A RETURN'S AUTHORED WORDINGS ARE DECISIONS, AND NOTHING ASSERTED THEY REACHED THE STORE.
       # 9 of 13 never did; the most carried hint in the product served a string she had replaced,
       # and she reasoned in a later return from her own wording as though it were in force. Whole

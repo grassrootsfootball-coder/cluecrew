@@ -45,6 +45,21 @@ function everyString(value: unknown, path: string): Array<[string, string]> {
  * from the list and gets screened, which is the safe direction. A proxy fails silently toward
  * permissiveness, which is the other one.
  */
+/**
+ * DECLARED QUOTATION FIELDS — BOUND BY FIDELITY, NOT BY OUR SPELLING AND STANCE GATES
+ * (Annie's 154th thread, David's ruling, 2026-08-25 — R711).
+ *
+ * `ENG-027-RR-08` carries *"he had not realized that the King was in very truth"* in an
+ * `attractorQuote`, verbatim from line 35 of stream-a-22-prisoner-of-zenda, **which carries the
+ * US spelling itself**. Correcting it to British spelling would make the quotation false and the
+ * byte-verify at the landing gate would then refuse it for not matching its source. A quotation
+ * is bound by FIDELITY TO ITS SOURCE; the ban list and the UK-spelling rule bind OUR OWN WORDS.
+ *
+ * These two paths were classified `undecided` in `check-every-string-field` — nobody had ruled.
+ * This is the ruling, and both readers take it from HERE rather than re-listing (R57/R429).
+ */
+export const QUOTATION_FIELDS = new Set(['attractorQuote', 'defeaterQuote']);
+
 const TOKEN_FIELDS = new Set([
   'words', 'stemWord', 'word1', 'word2', 'sum', 'series', 'pairA', 'clues',
   'code', 'P', 'Q', 'R', 'S',
@@ -99,6 +114,10 @@ function fieldOf(path: string): string {
 export function textsFrom(value: unknown, path: string): Array<[string, string]> {
   if (typeof value === 'string') {
     if (TOKEN_FIELDS.has(fieldOf(path))) return [];
+    // A declared quotation is the source's words, not ours (R711). A FORWARD GUARD: the gate does
+    // not walk option columns today, so this changes no current verdict — it means a later
+    // widening cannot silently start capping quotations.
+    if (QUOTATION_FIELDS.has(fieldOf(path))) return [];
     if (isSuperseded(path)) return [];
     return value.trim() !== '' ? [[path, value]] : [];
   }

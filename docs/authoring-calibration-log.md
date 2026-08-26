@@ -20248,3 +20248,66 @@ never have been found."**
 on her disk. Both are STAGED and awaiting crossing — the group rules in
 `annie-152-landing-c16fc4c7ab4f721a.json` and all 155 rationales including the 80 in
 `annie-151-landing-b8ddfc5667dcb5d8.json`. Staged is not arrived (R255); the desk routes.
+
+## R711/R712 — One rule in two clauses: a door names what it cannot carry, and names who must repair
+
+**Registered as one entry with two clauses, as she asked.** Her 154th verified
+(`8c7a9bae…2b2652`), Cowork's prediff (`1ec7350c…613495`).
+
+### R711 — Spelling and stance gates do not bind declared quotations
+
+**Ruled**: a quotation is bound by FIDELITY TO ITS SOURCE; the ban list and the UK-spelling rule
+bind OUR OWN WORDS. `ENG-027-RR-08`'s `attractorQuote` reproduces line 35 of
+stream-a-22-prisoner-of-zenda, US spelling and all; "correcting" it would make the quotation false
+and the byte-verify would then refuse it for not matching. Landed in two places that now agree:
+`QUOTATION_FIELDS` in the gate (a FORWARD GUARD — the gate does not walk option columns today, so
+no verdict changes and a later widening cannot silently start capping quotations), and
+`check:every-string-field`, where these two paths had been classified **`undecided` — "nobody has
+ruled"** and are now `quotation`, **printed every run** so the exemption cannot decay into
+unscreened-by-accident. One membership, imported from the gate, never re-listed.
+
+**THE ANSWER TO THE QUESTION ASKED, and it corrects the premise: NO — the item does not pass.**
+`realized` appears THREE times in it: the declared `attractorQuote`, a `misconceptionExecution`,
+and `explanation.walkScript`. **The door flagged the walk script** — *"Line 35 says he had not
+realized the King had come."* — which is OUR OWN PROSE paraphrasing the line and reproducing its
+spelling, not a declared quotation; **the gate never read the attractorQuote at all**, because it
+receives options as `{content, misconceptionId}` and no option column reaches it. So rewording the
+paraphrase touches no quotation and breaks no byte-verify: **the item is repairable after all, by
+Cowork, at a string nobody had identified** — and the quotation is now protected permanently
+regardless.
+
+### R712 — A door that refuses must route the refusal to someone who can act on it
+
+Her words: *"correct refusals into silence are worse than the faults they catch — the gate
+believed it was protecting children while the items believed they were shipped, and both were
+right about themselves and wrong about the system."* Built as `scripts/lib/route-refusal.ts`:
+`routeRefusals({door, refusals})` emits ONE crossable artefact naming, per refusal, the SUBJECT,
+the gate's EXACT WORDS and the PARTY WHO MUST REPAIR IT — and it refuses to overclaim: staging is
+not arrival (R255), and an empty set or a wholly this-store-owned set returns "no crossing" WITH
+ITS REASON, so a silent nothing is impossible (R61). Demonstrated on the set that produced the
+rule: `refusals-import-reissued-items-9be9bb1633e7aaaa.json`, file sha256
+`9be9bb1633e7aaaac8d470534ff6b1da0b6f98f167474ad4d25adfaf1f1f20c7`.
+
+**THE TWENTY-SIX ARE NOT ONE CLASS**, and the useful half of the answer is which cannot be routed:
+**13 are import doors refusing Cowork's own words** and can take the default unchanged; **9 are
+checks whose faults land on authored content** and can route once each names its owner per
+refusal; **4 CANNOT BE ROUTED OUTWARD AND SHOULD NOT BE** — `check-child-surface-scope`,
+`check-decision-visible`, `check-declaration-schema`, `check-export-freshness` refuse THIS STORE'S
+OWN STATE, so CI is already their correct destination and **a crossing would address a party with
+no power to repair it — the fault inverted.** Stated limit: the default is built and demonstrated,
+NOT yet wired into all 22 outward doors; each has its own refusal shape and owner-derivation, and
+wiring them blind would produce artefacts naming the wrong repairer, which is the fault this rule
+exists to end. Named as owed, not claimed.
+
+**The instrument left its own class**: `check:import-refusals` is wired into CI beside
+`check:reissue-completion`. It reports and does not fail — *"a red build over another store's
+backlog would be switched off within a week"* — the same correct design as its sibling, and
+exactly why the crossing leg, not the redness, was always the remedy.
+
+**Her 154th's other ruling, recorded and NOT landed (no instruction covers it)**: the eighty vr-06
+rationales are PASS on substance, REWRITE on emphasis — *"Does not fit the sentence, although it
+makes a real word (WORD)."* **Where it must land is a judgement worth stating before it is made**:
+`drafterDeclaredPull` holds the DRAFTER'S VERBATIM CLAIM, and writing her improved sentence into
+it would destroy the record the field exists to keep. Her rewrite belongs in
+`drafterDeclaredPullVerdict` beside the claim, or in a template the banks re-emit from. Awaiting
+the desk's word.
