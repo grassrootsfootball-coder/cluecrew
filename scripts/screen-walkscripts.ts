@@ -67,9 +67,9 @@ async function run() {
   const curlyDouble = walks.filter((w) => /[""]/.test(w.script));
   const straightDouble = walks.filter((w) => /"/.test(w.script));
 
-  const artefact = {
-    kind: 'walkscript-screen',
-    what: 'The serving side\'s first screen of its whole walk-script population, plus the two row-answers David asked for.',
+  const payload = {
+    kind: 'walkscript-screen-recross',
+    what: 'The serving side\'s first screen of its whole walk-script population, plus the two row-answers David asked for. RE-CROSSED under a new name: the first crossing never arrived.',
     ANSWER_ONE_theJoinsWithPrompts: {
       question: 'do any serving rows carry the vr-12 joins-with prompts in shouted form?',
       answer: 'NO. All 25 vr-12 rows read the quoted form and ZERO shout — verified on the raw prompt field this run. The serving side already reads quoted, because R723 landed exactly this amendment here last turn, at the generator and on all 25 derived rows.',
@@ -96,11 +96,35 @@ async function run() {
       membership: faults,
     },
   };
+  /**
+   * THE DIGEST INLINE, in the only form a file can carry (R728): a digest of the FINDINGS subtree,
+   * recomputable on arrival, with the serialisation that produces it NAMED — because the default
+   * gives a different number and this store has already raised that false alarm once (R729).
+   */
+  const canonical = (o: unknown): string => {
+    if (o === null || typeof o !== 'object') return JSON.stringify(o);
+    if (Array.isArray(o)) return `[${o.map(canonical).join(',')}]`;
+    return `{${Object.keys(o as object).sort().map((k) => `${JSON.stringify(k)}:${canonical((o as Record<string, unknown>)[k])}`).join(',')}}`;
+  };
+  const findingsSha256 = sha256(canonical({
+    one: payload.ANSWER_ONE_theJoinsWithPrompts,
+    two: payload.ANSWER_TWO_theTwoStraightQuotes,
+    three: payload.ANSWER_THREE_theScreen,
+  }));
+  const artefact = {
+    ...payload,
+    findingsSha256,
+    howToCheckThisOnArrival: {
+      subtree: '{one: ANSWER_ONE_theJoinsWithPrompts, two: ANSWER_TWO_theTwoStraightQuotes, three: ANSWER_THREE_theScreen}',
+      spec: 'sha256 over json.dumps(subtree, sort_keys=True, separators=(",",":"), ensure_ascii=False).encode("utf-8") — the convention named, because the default escapes the em dashes and moves the digest (R729).',
+      fileDigest: 'in the staging line and the .sha256 sidecar — a file cannot carry its own.',
+    },
+  };
   const json = JSON.stringify(artefact, null, 1) + '\n';
-  const name = stampedName('walkscript-screen', sha256(json).slice(0, 16), 'json');
+  const name = stampedName('walkscript-screen-recross', sha256(json).slice(0, 16), 'json');
   writeFileSync(join(REPO, 'content/exports', name), json);
-  deliver(join(REPO, 'content/exports', name), 'walkscript-screen');
-  console.log(`walk scripts screened: ${walks.length}; rows with faults: ${faults.length}; byRule ${JSON.stringify(byRule)}; byStatus ${JSON.stringify(byStatus)}`);
+  deliver(join(REPO, 'content/exports', name), 'walkscript-screen-recross');
+  console.log(`walk scripts screened: ${walks.length}; faults ${faults.length}; findingsSha256 ${findingsSha256}`);
   await prisma.$disconnect();
 }
 

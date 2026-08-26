@@ -20736,3 +20736,58 @@ about itself in language that reads as a report about the corpus.
 **The defence is the same in all three and this store already runs it: state the population, state
 the method, state what the instrument cannot see — before the figure.** A number without its
 denominator and its blind spots is a claim about a corpus made of evidence about a tool.
+
+## R736 — The straight quotes are not amended; the sixty-eight stand as a class awaiting its own scope
+
+**Ruled (David, 2026-08-26): the two are NOT amended.** They are 1-of-52 and 1-of-16, **and the
+second is a possessive apostrophe** — *"taking the dog's food away"* — which is not a quotation
+mark at all and which no convention here calls a fault. **No single-quote norm is minted from two
+rows found by accident.** A convention arrived at by amending whichever instances a screen
+happened to surface is a convention shaped by the order somebody read in, which is R703's fault
+wearing typography.
+
+**DOUBLES KEEP THEIRS**: 32 walk-script rows use curly double quotes and 0 use straight, so that
+norm is real, established by the corpus rather than by an edit, and unaffected by this ruling.
+
+**Recorded as a standing class: THE SIXTY-EIGHT** — 52 walk scripts using straight singles as
+quotation marks, 16 using them as possessive or contraction apostrophes — **awaiting a ruling of
+its own scope.** The membership is derivable in one query and is on the screen artefact. Whoever
+rules it rules all 68 at once, or names why a subset is different; nobody rules two.
+
+## R737 — A search that reads a serialisation reports a clean corpus and an empty one identically
+
+**Register-grade and general (David, 2026-08-26), filed beside its narrow-instrument twin.**
+Checking the joins-with prompts, a first pass tested `JSON.stringify(stem)` and reported **0
+shouted AND 0 quoted** — the escaping had made `"tooth"` into `\\"tooth\\"` and the pattern matched
+neither. The corpus was clean and the search said nothing was there; **a corpus with the fault and
+a corpus with nothing in it produce the same output**, and only the second number's oddity —
+zero of BOTH — exposed it.
+
+**The rule: search the VALUE, never a rendering of it.** A serialisation adds escapes, reorders
+keys, elides undefined and changes the bytes a pattern is matched against, so a regex over
+`JSON.stringify` is a question asked of the encoder rather than of the data. The family it joins:
+the re-derived predicate (R717), the expiring fixture (R721), the narrow call (R734) and the
+narrow instrument (R735) — **five ways an instrument reports about itself in language that reads
+as a report about the corpus**, and the same defence answers all five: state the population, the
+method, and what the instrument cannot see, before the figure.
+
+## R738 — A narrower instrument is not a stricter one: it is a different one, wrong both ways at once
+
+**The canonical statement of the class, taken from its third instance (David, 2026-08-26).** The
+formulation the register keeps:
+
+> **A narrower instrument is not a stricter one — it is a DIFFERENT one, wrong both ways at
+> once.**
+
+**The proof is the correction itself: one change removed three false faults and revealed eight
+real ones.** The walk-script screen called `checkChildFacingText` instead of the item gate, so it
+lost every exemption the gate takes from the row — and reported `SP-06`, `SP-09` (both LIVE) and
+`BV-02` as faulty when all three are clean, the first two naming the misspelling they exist to
+test and the third quoting inside a declared quotation. The same narrowness could not see
+`internal-id-leak` at all, because that verdict comes from the gate's orphan-option check, so
+**eight genuinely stale scripts were invisible to it.**
+
+Three instances in four days — R717's re-derived predicate, R734's narrow call, and this — **and
+all three were mine**, which is the part worth keeping: the class is not a thing careless people
+do, it is what building a second implementation always does, and the only reliable defence is to
+call the family's own function rather than to write a careful copy of it.
