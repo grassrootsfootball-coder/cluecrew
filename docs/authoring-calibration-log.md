@@ -20674,3 +20674,65 @@ exposed the stamp fault in the same run, and Cowork's migration order exposed my
 swap a week after it landed. That is the cheapest audit available here: **a new rule is a query
 against everything already built**, and running it backwards costs one pass and finds faults
 nobody was looking for. It found two today, and both were mine.
+
+## R733 — The joins-with class closes; the two straight quotes are sixty-eight; the walk scripts screened
+
+**ANSWER ONE — the class closes.** No serving row carries a shouted joins-with prompt: **all 25
+vr-12 rows read the quoted form, zero shout**, verified on the raw prompt field. The serving side
+already reads quoted because R723 landed exactly that amendment here last turn, at the generator
+and on all 25 derived rows. *A first pass read `JSON.stringify` output and reported 0 quoted AND
+0 shouted — the escaping made the quoted form invisible to the regex. A search that reads a
+SERIALISATION instead of the VALUE reports a clean corpus and an empty one identically.*
+
+**ANSWER TWO — NOT AMENDED, and the premise is corrected.** Both vr-06 rows are serving-side, but
+**the two are not two**: `bank-vr-06-missing-word-02` is 1 of **52** walk scripts using straight
+singles as QUOTATION MARKS, and `-32` is 1 of **16** using them as POSSESSIVE APOSTROPHES —
+*"taking the dog's food away"*, which no convention here calls a fault. They are not even the same
+object as each other. For DOUBLE quotes this store has a clear norm (32 curly, 0 straight); for
+SINGLE quotes it has none, and straight is the majority. **Amending these two alone would be a
+typographic ruling scoped to where somebody happened to be reading (R703), leaving 66 identical
+siblings untouched.** The membership is on the artefact; the ruling and its scope are the desk's.
+
+**ANSWER THREE — 709 walk scripts screened, the first look from this side.** Units first: **Cowork
+screens 90 SOURCE walk scripts; this side holds 709 on SERVING rows** — not the same object,
+neither number wrong (R690). **8 rows carry a gate fault, all `internal-id-leak` (a stale script
+naming an option no longer on the card), and NONE IS LIVE**: 4 DRAFT, 2 RETIRED, 2
+NEVER_SHIPPABLE. Artefact `walkscript-screen-9b5c22038832eb3e.json`, file sha256
+`9b5c22038832eb3e746745b62dafed36f034cf7ef9a285a3d51658a496a3baf9`.
+
+## R734 — A screen stricter than the gate finds the gate's exemptions and calls them faults
+
+**Mine, in an instrument written the same turn as the rule it broke.** The walk-script screen's
+first version called `checkChildFacingText` directly on the script instead of calling the item
+gate. That omits every exemption the gate takes FROM THE ROW — the words the item tests, the
+option words a script may legitimately name, the declared quotations, the passage's proper nouns.
+
+**It reported three faults, TWO OF THEM ON LIVE ROWS, and all three are CLEAN at the gate**:
+`ENG-003-A-SP-06` and `SP-09` name the misspelling they exist to test (*dictionery* / *Dictionary*),
+and `ENG-019-BV-02`'s *quick* sits inside a declared quotation. Two LIVE items would have crossed
+as carrying faults they do not have.
+
+**And correcting it moved the answer in BOTH directions**: the 3 false faults went, and **8 real
+ones appeared that the narrower call could not see at all**, because `internal-id-leak` comes from
+the gate's own orphan-option check and never from `checkChildFacingText`. A narrower instrument is
+not a stricter one — it is a DIFFERENT one, wrong in both directions at once. Caught by checking
+the three against the gate before they crossed, which is the only reason this is a finding rather
+than an incident. **Third instance of R717's class in four days, and all three were mine.**
+
+## R735 — A zero from a narrow instrument is a fact about the instrument wearing a fact about the corpus
+
+**Cowork's finding, registered in its words, and it belongs exactly where David placed it —
+beside the 1,533 and the expiring fixture.** All three are the same shape: an instrument reports
+about itself in language that reads as a report about the corpus.
+
+- **The 1,533** (R714/R717): a re-derived predicate produced a figure that described the model,
+  not the gate.
+- **The expiring fixture** (R721): a self-test anchored to the standing corpus goes dark when the
+  corpus is repaired — the instrument's silence reading as the corpus's cleanliness.
+- **The zero from a narrow instrument** (this): a screen that never looked at a field reports no
+  faults in it, and "no faults found" is indistinguishable from "nothing was looked at" unless
+  the instrument states its own scope.
+
+**The defence is the same in all three and this store already runs it: state the population, state
+the method, state what the instrument cannot see — before the figure.** A number without its
+denominator and its blind spots is a claim about a corpus made of evidence about a tool.
