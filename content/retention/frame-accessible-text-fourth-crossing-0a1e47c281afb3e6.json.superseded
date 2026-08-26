@@ -1,0 +1,631 @@
+{
+ "kind": "frame-accessible-text",
+ "RECROSS": "FOURTH CROSSING. Renamed, with the findings digest inline below and the file digest in the filename. Superseded in scope by the full-population walk (exempt-strings-accessible-text) — these forty are its stem.sentence half.",
+ "what": "Per row, the frame tokens and their accessible text — or the statement that none exists. Emitted because the forty hold until this fact is on the record.",
+ "theFlagBeingAnswered": "Annie: the frame-versus-prose split may be an accessibility difference wearing a quality one. Staging the forty without this fact risks her ruling the accessible form out of the corpus.",
+ "THE_ANSWER": {
+  "rowsExamined": 40,
+  "rowsCarryingAnyAccessibleText": 0,
+  "verdict": "NONE OF THE FORTY CARRIES ACCESSIBLE TEXT FOR ITS FRAME. Every vr-06 stem holds exactly two keys — prompt and sentence — and no accessibility-shaped field exists anywhere on the type: no accessibleText, no spoken form, no ariaLabel, no alt.",
+  "andTheRendererAddsNone": "engines/stowaway.tsx gives the sentence a bare <p>. Its Word component DOES carry role=\"img\" with an aria-label — that is the tiled-word path for letter tiles, and the vr-06 sentence does not use it. So the only surface that could speak the frame is not on this row's path.",
+  "THE_CONSEQUENCE_FOR_HER_RULING": "the frame/prose distinction this store has been ruling on is, today, VISUAL ONLY. A child using a screen reader receives the same undifferentiated character stream for the frame as for the prose around it, so the exemption that protects the diagram protects nothing she can hear. That does not make the ruling wrong — a diagram a sighted child reads is still a diagram — but it means the accessible form has never existed rather than having been ruled against, and her flag is correct on the evidence.",
+  "whatWouldChangeIt": "a spoken form per row, authored, saying what the frame IS — the shape of the thing a sighted child sees. It does not exist and this store does not author it."
+ },
+ "rows": [
+  {
+   "id": "bank-vr-06-missing-word-01",
+   "status": "LIVE",
+   "sentence": "Please do not SH___ so loudly, or you will wake the sleeping baby.",
+   "frameTokens": [
+    "SH___"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"SH___\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-02",
+   "status": "LIVE",
+   "sentence": "Mum spread butter on a thick slice of BR___ for my lunch.",
+   "frameTokens": [
+    "BR___"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"BR___\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-03",
+   "status": "LIVE",
+   "sentence": "We dug a small hole in the soil so we could ___NT the flower seeds.",
+   "frameTokens": [
+    "___NT"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"___NT\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-04",
+   "status": "LIVE",
+   "sentence": "The garden wall was built from big blocks of hard grey S___E.",
+   "frameTokens": [
+    "S___E"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"S___E\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-05",
+   "status": "LIVE",
+   "sentence": "After playing outside, I used soap and water to ___AN my muddy hands.",
+   "frameTokens": [
+    "___AN"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"___AN\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-06",
+   "status": "LIVE",
+   "sentence": "Before bed each night I must BR___ my teeth until they are clean and shiny.",
+   "frameTokens": [
+    "BR___"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"BR___\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-07",
+   "status": "LIVE",
+   "sentence": "The lorry lost control and began to CR___ through the wooden fence.",
+   "frameTokens": [
+    "CR___"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"CR___\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-08",
+   "status": "LIVE",
+   "sentence": "I used a big ___ON to eat my bowl of hot tomato soup.",
+   "frameTokens": [
+    "___ON"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"___ON\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-09",
+   "status": "LIVE",
+   "sentence": "The heavy rain was the main ___SE of the flood in our town.",
+   "frameTokens": [
+    "___SE"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"___SE\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-10",
+   "status": "LIVE",
+   "sentence": "We watched the ___NE take off from the runway and fly high into the clouds.",
+   "frameTokens": [
+    "___NE"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"___NE\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-11",
+   "status": "LIVE",
+   "sentence": "The art teacher asked us to ___ATE a bright new painting of our own.",
+   "frameTokens": [
+    "___ATE"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"___ATE\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-12",
+   "status": "LIVE",
+   "sentence": "Mum bought a soft new CAR___ for the living room floor.",
+   "frameTokens": [
+    "CAR___"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"CAR___\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-13",
+   "status": "LIVE",
+   "sentence": "We walked among the tall trees deep in the dark ___EST.",
+   "frameTokens": [
+    "___EST"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"___EST\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-14",
+   "status": "LIVE",
+   "sentence": "She filled the shopping ___KET with apples, bread and milk.",
+   "frameTokens": [
+    "___KET"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"___KET\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-15",
+   "status": "DRAFT",
+   "sentence": "When I felt poorly, Mum took me to see the ___TOR at the surgery.",
+   "frameTokens": [
+    "___TOR"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"___TOR\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-16",
+   "status": "LIVE",
+   "sentence": "We planted red roses and runner beans in our back ___DEN.",
+   "frameTokens": [
+    "___DEN"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"___DEN\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-17",
+   "status": "DRAFT",
+   "sentence": "You must have a special ___MIT to park your car on this busy road.",
+   "frameTokens": [
+    "___MIT"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"___MIT\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-18",
+   "status": "LIVE",
+   "sentence": "So many tricky rules began to CON___E the new pupil on her very first day.",
+   "frameTokens": [
+    "CON___E"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"CON___E\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-19",
+   "status": "LIVE",
+   "sentence": "The king chose to PAR___ the prisoner, so the man was allowed to go home.",
+   "frameTokens": [
+    "PAR___"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"PAR___\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-20",
+   "status": "LIVE",
+   "sentence": "This large wooden box is big enough to CONT___ all of my toys and books.",
+   "frameTokens": [
+    "CONT___"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"CONT___\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-21",
+   "status": "LIVE",
+   "sentence": "The children stopped to MAR___ at the huge, glittering castle.",
+   "frameTokens": [
+    "MAR___"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"MAR___\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-22",
+   "status": "LIVE",
+   "sentence": "The referee raised his flag to S___AL the start of the running race.",
+   "frameTokens": [
+    "S___AL"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"S___AL\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-23",
+   "status": "DRAFT",
+   "sentence": "The heavy bag of bricks was a great ___DEN to carry all the way up the hill.",
+   "frameTokens": [
+    "___DEN"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"___DEN\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-24",
+   "status": "LIVE",
+   "sentence": "The chef will COM___E the eggs and the flour to make a smooth cake mix.",
+   "frameTokens": [
+    "COM___E"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"COM___E\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-25",
+   "status": "LIVE",
+   "sentence": "She tried to CONC___ the birthday present under her bed so no one would find it.",
+   "frameTokens": [
+    "CONC___"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"CONC___\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-26",
+   "status": "LIVE",
+   "sentence": "Many people wrote letters to CON___N the unfair new law and demand that it be changed.",
+   "frameTokens": [
+    "CON___N"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"CON___N\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-27",
+   "status": "LIVE",
+   "sentence": "The famous musician sat down to COMP___ a beautiful new song for the choir.",
+   "frameTokens": [
+    "COMP___"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"COMP___\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-28",
+   "status": "LIVE",
+   "sentence": "The king will DEC___E to everyone that the long war is finally over.",
+   "frameTokens": [
+    "DEC___E"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"DEC___E\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-29",
+   "status": "LIVE",
+   "sentence": "The waiter gave me a large ___TION of chips on my plate.",
+   "frameTokens": [
+    "___TION"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"___TION\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-30",
+   "status": "LIVE",
+   "sentence": "She gave her crying friend a warm hug to CONS___ her after the sad news.",
+   "frameTokens": [
+    "CONS___"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"CONS___\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-31",
+   "status": "LIVE",
+   "sentence": "The scientist will CON___T a careful test to see how the plants grow.",
+   "frameTokens": [
+    "CON___T"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"CON___T\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-32",
+   "status": "LIVE",
+   "sentence": "It would be very unkind to DE___VE the dog of its food and clean water.",
+   "frameTokens": [
+    "DE___VE"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"DE___VE\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-33",
+   "status": "LIVE",
+   "sentence": "The dark old house had a strange and ___ISTER feeling that made us shiver.",
+   "frameTokens": [
+    "___ISTER"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"___ISTER\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-34",
+   "status": "LIVE",
+   "sentence": "Dad was so ___IOUS about the broken window that he shouted and stamped his feet.",
+   "frameTokens": [
+    "___IOUS"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"___IOUS\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-35",
+   "status": "DRAFT",
+   "sentence": "Waiting for her turn to sing on the stage, Mia felt very ___IOUS and her tummy was full of butterflies.",
+   "frameTokens": [
+    "___IOUS"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"___IOUS\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-36",
+   "status": "DRAFT",
+   "sentence": "Even after he was told off, the boy glared in a ___IANT way and refused to say sorry.",
+   "frameTokens": [
+    "___IANT"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"___IANT\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-37",
+   "status": "LIVE",
+   "sentence": "The old lighthouse keeper lived a ___ITARY life, all alone on the rocky island.",
+   "frameTokens": [
+    "___ITARY"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"___ITARY\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-38",
+   "status": "LIVE",
+   "sentence": "The blue whale is an ___ENSE animal, far bigger than any other creature in the sea.",
+   "frameTokens": [
+    "___ENSE"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"___ENSE\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-39",
+   "status": "LIVE",
+   "sentence": "Because the problem was so serious, the head teacher had to take ___STIC action straight away.",
+   "frameTokens": [
+    "___STIC"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"___STIC\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  },
+  {
+   "id": "bank-vr-06-missing-word-40",
+   "status": "DRAFT",
+   "sentence": "After being ill in bed for a week, Grandad felt weak and ___BLE and could hardly stand.",
+   "frameTokens": [
+    "___BLE"
+   ],
+   "accessibleText": null,
+   "accessibleTextExists": false,
+   "whatAScreenReaderReceives": "THE LITERAL CHARACTERS, in a plain paragraph. The sentence renders as <p>{sentence}</p> in engines/stowaway.tsx with no role, no aria-label and no visually-hidden gloss, so the frame reaches a screen reader as the characters \"___BLE\" and nothing else — how they are voiced is the reader's punctuation setting, which the product neither sets nor knows.",
+   "stemKeysPresent": [
+    "prompt",
+    "sentence"
+   ]
+  }
+ ],
+ "findingsSha256": "90af1b5733cee8567f930ded8978fb6126e882ebc893166eab2b84ca055f68b8",
+ "howToCheckThisOnArrival": {
+  "subtreeKeys": [
+   "THE_ANSWER",
+   "rows"
+  ],
+  "subtree": "an object built from THIS DOCUMENT'S OWN TOP-LEVEL KEYS, in the order listed in subtreeKeys: {\"THE_ANSWER\": …, \"rows\": …}. No renaming, no aliases.",
+  "spec": "sha256 over json.dumps(subtree, sort_keys=True, separators=(\",\",\":\"), ensure_ascii=False).encode(\"utf-8\") (R729)",
+  "fileDigest": "staging line and .sha256 sidecar"
+ },
+ "instrumentProvenance": {
+  "emittedBy": "emit-frame-accessible-text.ts",
+  "carriedFixture": true,
+  "meaning": "the emitting instrument proved itself against carried cases — including at least one clean case caught by nothing — before it produced these figures (R721)."
+ }
+}

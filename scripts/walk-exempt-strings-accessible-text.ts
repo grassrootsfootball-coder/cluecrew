@@ -29,7 +29,7 @@ import { textsFrom } from '../packages/core/src/item-content-gate';
 import { prisma } from '../packages/db/src/index';
 import { assertFixture } from './lib/carried-fixture';
 import { deliver, stampedName } from './lib/export-destination';
-import { findingsDigest } from './lib/findings-digest';
+import { digestOverText, findingsDigest } from './lib/findings-digest';
 import { readFileSync } from 'node:fs';
 import { requirePopulation } from './lib/population';
 
@@ -112,7 +112,7 @@ const DERIVATION = {
     'notationExempt, gapMarkerSpans (same file) — the two exemption predicates themselves',
   ],
   classAssignment: 'FRAME when the marker token carries adjacent capitals; GAP_MARKER when it does not; OPTION_VALUE when the exemption is notationExempt on an options[] path; NOTATION for the same on any other notation-bearing path.',
-  whatTHEDIGESTcovers: 'manifestSha256 is over the population manifest ALONE — one "<itemId>\\t<root>.<path>" line per row, in the order emitted, newline-joined, no trailing newline. It changes when membership changes and not when prose does.',
+  whatTHEDIGESTcovers: 'manifestSha256 is over the population manifest ALONE, and manifestSha256Spec beside it states the serialisation. It changes when membership changes and not when prose does.',
 };
 
 const NO_FIELD = 'the stem is open JSON and would CARRY such a key (R57 passthrough), but none is declared in stemSchema and no renderer reads one — 28 stem keys are read across the engines and none is an accessibility channel. A value written there would reach nothing. This is not a blank field; it is an uninvited one.';
@@ -293,7 +293,8 @@ async function run() {
    * implying it checked everything.
    */
   const manifest = rows.map((r) => `${r.itemId}\t${r.root}.${r.path}`);
-  const manifestSha256 = createHash('sha256').update(manifest.join('\n'), 'utf8').digest('hex');
+  // R759: the value and its spec are produced together, so the two cannot drift apart.
+  const manifestDigest = digestOverText('the POPULATION_MANIFEST lines joined by \\n, no trailing newline, each line "<itemId>\\t<root>.<path>"', manifest.join('\n'));
 
   // Every screened field path present in the corpus, split into looked-at-and-in / looked-at-and-out.
   const inPopulation = new Set(rows.map((r) => `${r.root}.${r.path}`.replace(/\[\d+\]/g, '[]')));
@@ -327,7 +328,7 @@ async function run() {
     soTheHONESTSTATUS: 'this walk is a true and complete account of what is ON the serving rows. It is NOT evidence about what was authored, and for options it could not have been until this turn. Anything dropped before now left no trace here to find.',
   };
 
-  const full = { ...payload, POPULATION_MANIFEST: manifest, manifestSha256, THE_DERIVATION: DERIVATION, COVERAGE: coverage, THE_BOUND: bound };
+  const full = { ...payload, POPULATION_MANIFEST: manifest, manifestSha256: manifestDigest.value, manifestSha256Spec: manifestDigest.spec, THE_DERIVATION: DERIVATION, COVERAGE: coverage, THE_BOUND: bound };
   const artefact = { ...full, ...findingsDigest(full, ['THE_DENOMINATORS', 'THE_ANSWER_PER_CLASS', 'POPULATION_MANIFEST', 'THE_DERIVATION', 'COVERAGE', 'THE_BOUND', 'rows']) };
   const json = JSON.stringify(artefact, null, 1) + '\n';
   const name = stampedName('exempt-strings-accessible-text', createHash('sha256').update(json).digest('hex').slice(0, 16), 'json');

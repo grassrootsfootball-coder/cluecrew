@@ -1,0 +1,237 @@
+{
+ "kind": "port-crossing-serving-half",
+ "RECROSS": "FOURTH CROSSING. Renamed, with the findings digest inline below and the file digest in the filename. The subtree spec is corrected under R752 — subtreeKeys now names this document's own top-level keys, so no candidate readings are needed.",
+ "what": "This side's capitalRunIsExempt over S1–S4, span by span, from the TypeScript. The other half of the evidence.",
+ "comparedOn": "the four declared string digests and no other bytes — each recomputed here from the text before any verdict was taken.",
+ "theirHalf": {
+  "file": "port-crossing-cowork-half-for-code.json",
+  "sha256": "4dd8b8fc46965001c0635689192f8dd70f12ec1014aa3ad36b930d6f26d26323"
+ },
+ "THE_CONTROL_ANSWERS_FIRST": {
+  "id": "S4",
+  "text": "OUT makes SHOUT, and shouting wakes the baby.",
+  "thisStoreVerdicts": [
+   {
+    "run": "OUT",
+    "exempt": false
+   },
+   {
+    "run": "SHOUT",
+    "exempt": false
+   }
+  ],
+  "portVerdicts": [
+   {
+    "run": "OUT",
+    "exempt": false
+   },
+   {
+    "run": "SHOUT",
+    "exempt": false
+   }
+  ],
+  "agree": true,
+  "meaning": "BOTH IMPLEMENTATIONS SAY FALSE ON THE CONTROL. They do not agree by exempting everything — this side refuses OUT and SHOUT exactly as the port does. The disagreement is therefore specific to runs ADJACENT TO A MARKER, which is the only place they differ."
+ },
+ "theSummary": {
+  "runsCompared": 6,
+  "agree": 2,
+  "disagree": 4,
+  "everyDisagreementIsAdjacentToAMarker": true
+ },
+ "THE_DIVERGENCE_IS_IN_gapMarkerSpans_NOT_IN_THE_PREDICATE": {
+  "finding": "the two predicates share their logic and differ in ONE input. On S1 this side's gapMarkerSpans returns [[18,25]] — the whole frame, letters included — while the port's returns [[20,23]], the underscores alone. `DE` at [18,20) is inside the first and outside the second, and both predicates then answer their own span set correctly.",
+  "theTellInTheirOwnData": "the port's half ALREADY CARRIES frameTokenSpans [[18,25]] beside gapMarkerSpans [[20,23]] — it computes the whole-frame span and its capitalRunIsExempt does not consult it. The two spans sit side by side in its own artefact and the predicate reads the narrower one.",
+  "soTheRepairIsOneLine": "whichever store changes, the change is to what gapMarkerSpans returns, not to how exemption is decided. Stated as a diagnosis, not a repair: this side does not hold that Python and does not rule on it."
+ },
+ "strings": [
+  {
+   "id": "S1",
+   "from": "bank-vr-06-missing-word-32, opening sentence, current bytes",
+   "text": "The word stops at DE___VE.",
+   "sha256": "37b896ce21180db147b7c82585eac6e7cb0936229e161316eb7b9d4a4f0a721f",
+   "digestRecomputedHere": true,
+   "thisStore_gapMarkerSpans": [
+    [
+     18,
+     25
+    ]
+   ],
+   "port_gapMarkerSpans": [
+    [
+     20,
+     23
+    ]
+   ],
+   "port_frameTokenSpans": [
+    [
+     18,
+     25
+    ]
+   ],
+   "spansAgree": false,
+   "isSymbolString": false,
+   "notationExempt_walkScript": false,
+   "runs": [
+    {
+     "span": [
+      18,
+      20
+     ],
+     "run": "DE",
+     "thisStore_capitalRunIsExempt": true,
+     "port_capitalRunIsExempt": false,
+     "agree": false,
+     "thisStore_reason": "inside this side's gapMarkerSpans entry [18, 25) = \"DE___VE\""
+    },
+    {
+     "span": [
+      23,
+      25
+     ],
+     "run": "VE",
+     "thisStore_capitalRunIsExempt": true,
+     "port_capitalRunIsExempt": false,
+     "agree": false,
+     "thisStore_reason": "inside this side's gapMarkerSpans entry [18, 25) = \"DE___VE\""
+    }
+   ]
+  },
+  {
+   "id": "S2",
+   "from": "bank-vr-06-missing-word-24, opening sentence, current bytes",
+   "text": "See where the word splits: COM___E.",
+   "sha256": "8afff198488831e4fa622bdfa13ad150e518db2cae8c335ab03edd5de7d82e55",
+   "digestRecomputedHere": true,
+   "thisStore_gapMarkerSpans": [
+    [
+     27,
+     34
+    ]
+   ],
+   "port_gapMarkerSpans": [
+    [
+     30,
+     33
+    ]
+   ],
+   "port_frameTokenSpans": [
+    [
+     27,
+     34
+    ]
+   ],
+   "spansAgree": false,
+   "isSymbolString": false,
+   "notationExempt_walkScript": false,
+   "runs": [
+    {
+     "span": [
+      27,
+      30
+     ],
+     "run": "COM",
+     "thisStore_capitalRunIsExempt": true,
+     "port_capitalRunIsExempt": false,
+     "agree": false,
+     "thisStore_reason": "inside this side's gapMarkerSpans entry [27, 34) = \"COM___E\""
+    }
+   ]
+  },
+  {
+   "id": "S3",
+   "from": "bank-vr-06-missing-word-28, opening sentence, current bytes",
+   "text": "The word breaks open at DEC___E.",
+   "sha256": "f817de4cb80daffb589b4084dd5afaa480a31e28df8f97cb32318bca54629785",
+   "digestRecomputedHere": true,
+   "thisStore_gapMarkerSpans": [
+    [
+     24,
+     31
+    ]
+   ],
+   "port_gapMarkerSpans": [
+    [
+     27,
+     30
+    ]
+   ],
+   "port_frameTokenSpans": [
+    [
+     24,
+     31
+    ]
+   ],
+   "spansAgree": false,
+   "isSymbolString": false,
+   "notationExempt_walkScript": false,
+   "runs": [
+    {
+     "span": [
+      24,
+      27
+     ],
+     "run": "DEC",
+     "thisStore_capitalRunIsExempt": true,
+     "port_capitalRunIsExempt": false,
+     "agree": false,
+     "thisStore_reason": "inside this side's gapMarkerSpans entry [24, 31) = \"DEC___E\""
+    }
+   ]
+  },
+  {
+   "id": "S4",
+   "from": "bank-vr-06-missing-word-01, sentence 3 of the RETAINED before-image (_walkScriptBeforeR161) — THE CONTROL",
+   "text": "OUT makes SHOUT, and shouting wakes the baby.",
+   "sha256": "214abf6239c321664ced5d9f5b2087f077462cd803e3d24a7ed62f5b1d1c3ed7",
+   "digestRecomputedHere": true,
+   "thisStore_gapMarkerSpans": [],
+   "port_gapMarkerSpans": [],
+   "port_frameTokenSpans": [],
+   "spansAgree": true,
+   "isSymbolString": false,
+   "notationExempt_walkScript": false,
+   "runs": [
+    {
+     "span": [
+      0,
+      3
+     ],
+     "run": "OUT",
+     "thisStore_capitalRunIsExempt": false,
+     "port_capitalRunIsExempt": false,
+     "agree": true,
+     "thisStore_reason": "inside no marker span, and the string is not a symbol"
+    },
+    {
+     "span": [
+      10,
+      15
+     ],
+     "run": "SHOUT",
+     "thisStore_capitalRunIsExempt": false,
+     "port_capitalRunIsExempt": false,
+     "agree": true,
+     "thisStore_reason": "inside no marker span, and the string is not a symbol"
+    }
+   ]
+  }
+ ],
+ "findingsSha256": "91992d639479adca23c1821653dbe909561caa5d1838585a39c39335a59040df",
+ "howToCheckThisOnArrival": {
+  "subtreeKeys": [
+   "THE_CONTROL_ANSWERS_FIRST",
+   "theSummary",
+   "THE_DIVERGENCE_IS_IN_gapMarkerSpans_NOT_IN_THE_PREDICATE",
+   "strings"
+  ],
+  "subtree": "an object of THIS DOCUMENT'S OWN TOP-LEVEL KEYS, exactly as spelled in subtreeKeys and nowhere renamed: {\"THE_CONTROL_ANSWERS_FIRST\", \"theSummary\", \"THE_DIVERGENCE_IS_IN_gapMarkerSpans_NOT_IN_THE_PREDICATE\", \"strings\"}",
+  "spec": "sha256 over json.dumps(subtree, sort_keys=True, separators=(\",\",\":\"), ensure_ascii=False).encode(\"utf-8\") — R729. ensure_ascii defaults to True and gives a different number.",
+  "andTheFileDigest": "the staging line and the .sha256 sidecar, over the whole file bytes"
+ },
+ "instrumentProvenance": {
+  "emittedBy": "emit-port-crossing-half.ts",
+  "carriedFixture": true,
+  "meaning": "the emitting instrument proved itself against carried cases — including at least one clean case caught by nothing — before it produced these figures (R721)."
+ }
+}

@@ -46,3 +46,45 @@ export function findingsDigest<T extends Record<string, unknown>>(payload: T, ke
     },
   };
 }
+
+/**
+ * **EVERY DIGEST AN ARTEFACT CARRIES NAMES ITS OWN SPEC, NOT ITS NEIGHBOUR'S** (Annie, 2026-08-26
+ * — R759). `manifestSha256` sat one line below a `howToCheckThisOnArrival` block naming the R729
+ * canonical-JSON spec, and was in fact computed over newline-joined text. She recovered it by
+ * guessing among three readings — the SECOND time in three turns a digest was verified by
+ * guesswork, and R752 had already closed exactly this for the subtree keys.
+ *
+ * **The generalisation R752 missed: a spec block is not a property of the DOCUMENT, it is a
+ * property of ONE DIGEST.** One block plus a second digest reads as a spec that covers both, and
+ * proximity does the asserting. So a digest is emitted through `digestOverText`/`findingsDigest`,
+ * which produce the value and its spec together, and `assertDigestsNameTheirSpec` refuses to stage
+ * an artefact where any top-level `*Sha256` lacks one.
+ */
+export function digestOverText(over: string, text: string) {
+  return {
+    value: createHash('sha256').update(text, 'utf8').digest('hex'),
+    spec: `sha256 over ${over}, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content.`,
+  };
+}
+
+/**
+ * Refuses an artefact carrying a top-level digest that names no spec. Called from `deliver()`, so
+ * it cannot be forgotten — the fault it closes was a spec that had to be remembered.
+ */
+export function assertDigestsNameTheirSpec(artefact: Record<string, unknown>, file: string): void {
+  const unspecified: string[] = [];
+  for (const [key, value] of Object.entries(artefact)) {
+    if (!/[Ss]ha256$/.test(key) || typeof value !== 'string') continue;
+    const named = key === 'findingsSha256'
+      ? typeof (artefact.howToCheckThisOnArrival as Record<string, unknown> | undefined)?.spec === 'string'
+      : typeof artefact[`${key}Spec`] === 'string';
+    if (!named) unspecified.push(key);
+  }
+  if (unspecified.length) {
+    throw new Error(
+      `${file}: ${unspecified.length} digest(s) name no spec: ${unspecified.join(', ')}.\n` +
+      `  R759 — every digest an artefact carries names its OWN spec, not its neighbour's. Add "${unspecified[0]}Spec",\n` +
+      '  or emit the digest through digestOverText/findingsDigest, which produce the value and its spec together.',
+    );
+  }
+}

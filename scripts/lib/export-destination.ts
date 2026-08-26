@@ -17,6 +17,7 @@
  * batch file and its review pack can never be confused for one another.
  */
 import { createHash } from 'node:crypto';
+import { assertDigestsNameTheirSpec } from './findings-digest';
 import { renameSync, copyFileSync, existsSync, mkdirSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { basename, dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -259,6 +260,15 @@ export function deliver(sourcePathIn: string, family?: string): string {
    * store keeps closing.
    */
   markIfUnfixtured(sourcePath);
+  // R759: a digest that names no spec never leaves this door.
+  if (sourcePath.endsWith('.json')) {
+    try {
+      const parsed = JSON.parse(readFileSync(sourcePath, 'utf8')) as unknown;
+      if (parsed && typeof parsed === 'object' && !Array.isArray(parsed)) {
+        assertDigestsNameTheirSpec(parsed as Record<string, unknown>, basename(sourcePath));
+      }
+    } catch (e) { if (e instanceof Error && e.message.includes('R759')) throw e; }
+  }
   const marked = restampToContent(sourcePath, family);
   if (marked !== sourcePath) { sourcePath = marked; name = basename(sourcePath); target = join(OUTBOUND_DIR, name); }
   copyFileSync(sourcePath, target);

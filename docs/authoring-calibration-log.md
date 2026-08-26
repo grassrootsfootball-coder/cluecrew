@@ -21266,3 +21266,88 @@ the import instead of vanishing.
 complete account of what is ON the serving rows. **It is not evidence about what was authored**, and
 for options it could not have been. Anything dropped before now left nothing here to find. That
 limit is carried in the artefact itself rather than in a covering note.
+
+## R759 — Every digest names its own spec, not its neighbour's
+
+`manifestSha256` sat one line below a `howToCheckThisOnArrival` block naming the R729 canonical-JSON
+spec, and was computed over newline-joined TEXT. Annie recovered it by guessing among three
+readings — **the second time in three turns a digest was verified by guesswork**, and R752 had
+already closed exactly this for the subtree keys.
+
+**The generalisation R752 missed: a spec block is not a property of the DOCUMENT, it is a property
+of ONE DIGEST.** One block plus a second digest reads as a spec covering both, and PROXIMITY DOES
+THE ASSERTING — which is the same shape as R204 (a qualifier one field over is not a qualifier) and
+R608 (one decision split across two fields sorts as neither).
+
+Wired at the emitter, as R752 was. `digestOverText` produces the value and its spec together, so
+they cannot drift; `assertDigestsNameTheirSpec` refuses to stage any artefact whose top-level
+`*Sha256` names no spec, and it is called from `deliver()` — the one door every artefact passes —
+because the fault being closed was a spec that had to be remembered. **The guard was canaried
+before being trusted (R756):** it refuses a synthetic specless digest and passes the real artefact.
+
+## R760 — A crossing reported absent and later arriving in a batch is a latency fact, not a loss
+
+Three artefacts were reported absent over three turns and then arrived together, three or four
+copies of each, findings payloads byte-identical. **Nothing was lost and nothing was mis-sent; the
+channel batches.** Registered so the next absence is read correctly: an artefact not at the door is
+LATE until proven otherwise, and re-crossing it costs a filename, which is the right price to pay
+for the ambiguity.
+
+**And only the findings digests made it legible.** Four copies of one artefact under four names is
+an unreadable pile without something that says *these are the same document*; the file digest
+cannot do it, because renaming and re-marking change the bytes. **The findings digest, computed
+over the payload and not the packaging, was stable across every re-crossing** — and that stability
+is what turned four copies into one artefact seen four times. R752's key-naming is what made those
+digests checkable at all, so the two rules are one mechanism: the digest identifies the content,
+and naming its spec is what lets the far side confirm the identity rather than assume it.
+
+## R761 — A repair that reaches one renderer has not reached the class
+
+**Sixty rendered frames carry no accessible substitute; the sixteen that do are all on the one
+renderer built under R668.** That is the finding, and it is not a remedy: no repair is proposed and
+none is ordered — the reading belongs to a seat nobody has filled.
+
+The shape is what generalises. R668 was a correct, complete, well-executed accessibility repair; it
+named every gap in the cloze carrier and it is why 16 of 16 rendered gap markers speak. **It was
+scoped to a renderer, and the property it established is a property of a CLASS** — a marker whose
+visible form does not speak needs something that says what it is, wherever that marker renders.
+Every other renderer carrying such a marker was outside the repair and stayed outside it, silently,
+because nothing measures a class from inside a component.
+
+**The tell is that the split runs along renderer boundaries and along nothing else** — not district,
+not question type, not authoring vintage, not quality. When a property divides that way, the repair
+was scoped to the mechanism instead of to the property, and the unrepaired remainder is invisible
+until somebody walks the class. Sibling to R565, where a ruling applied to the field it was observed
+on left the same ruling standing wrong in an unreviewed channel.
+
+## R762 — Matching by label across copies that disagree wrote a distractor's rationale onto a key
+
+**Mine, applied and reversed within the same run.** Landing R758's dropped option fields, I matched
+authored options to rows by label, took whichever copy the walk reached first, and wrote 19
+`misconceptionExecution` values onto options marked CORRECT. The column means *why THIS distractor
+executes THIS misconception*; a key cannot have one, which is what made it visible. **Reversed to
+NULL, restoring the prior state exactly** — the writes had only ever touched fields that were null,
+so the reversal is identity and not a second guess.
+
+**The cause was not the matcher, it was that no source was authoritative.** Two files named
+`eng006-draft.json` sit in different directories and disagree about what option B of ENG-006-TM-02
+IS and about which option is CORRECT. Measured across the authored files: **135 (item, label) pairs
+disagree between copies, 48 of them about which option is the key, over 36 items.** CLAUDE.md's own
+rule says to diff a batch against the DB before importing; I swept a directory tree instead, and a
+sweep has no notion of authority.
+
+**The script now refuses rather than choosing.** It records the shape of each `(itemId, label)`
+identity as it collects, and exits naming the conflicting identities instead of landing anything —
+because picking between disagreeing copies is a ruling, and a ruling is not a script's to make
+(R173). **The re-import is BLOCKED, not failed**: it completes the moment an authoritative source
+directory is named, and not before.
+
+**And R758's figure is corrected.** I reported 553 authored values in the door's path. Deduplicated
+by (item, option, key, value) it is **419**, and of those **288 were already present on the rows and
+equal** — they had reached the database by another path. Only 21 were absent and landable, 2 of
+which (`tagStatus` on ENG-004-AGG-07/08 distractors) are correct and stand. 76 more are present and
+DIVERGED from the authored source, which is a two-store question and is reported, never overwritten.
+**The door's fault was real; its exposure was a quarter of what I first said.** I published an
+alarming number without checking whether the values were actually missing from the rows — the exact
+inversion of R173, which warns that a confirming number needs investigating on purpose. An alarming
+one does too.

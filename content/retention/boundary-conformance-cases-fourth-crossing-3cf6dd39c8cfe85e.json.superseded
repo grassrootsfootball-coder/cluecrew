@@ -1,0 +1,363 @@
+{
+ "kind": "boundary-conformance-cases",
+ "RECROSS": "FIFTH CROSSING. The first two rode inside the membership artefact and did not arrive; the second stood alone and did not arrive. Renamed so it cannot be mistaken for either, with the digest of its own findings inline below and the file digest in the filename.",
+ "what": "THE EIGHT BOUNDARY CASES, crossed alone because twice they did not arrive inside the membership. Every value computed by running packages/core — none typed by hand.",
+ "theMigrationOrderThisSERVES": "Cowork aliased frameTokenSpans and isExemptByFrame rather than deleting them, on the grounds that a migration proved against the wrong fixture is proved against nothing. This is the right fixture. When these eight pass there, the alias names go.",
+ "THE_EIGHT_CASES": [
+  {
+   "class": "letters BOTH sides of the blank",
+   "fn": "gapMarkerSpans",
+   "text": "The word stops at DE___VE.",
+   "why": "her cited frame; the whole mark or nothing",
+   "expect": [
+    [
+     18,
+     25
+    ]
+   ],
+   "marks": [
+    "DE___VE"
+   ]
+  },
+  {
+   "class": "a LONE capital at the tail of the mark",
+   "fn": "gapMarkerSpans",
+   "text": "See where the word splits: COM___E.",
+   "why": "the run rule needs two capitals, so E is never ASKED about — but it must be INSIDE the span or the mark is not the token",
+   "expect": [
+    [
+     27,
+     34
+    ]
+   ],
+   "marks": [
+    "COM___E"
+   ]
+  },
+  {
+   "class": "letters LEFT of the blank only",
+   "fn": "gapMarkerSpans",
+   "text": "The frame reads SH___.",
+   "why": "the string the crossing turned on",
+   "expect": [
+    [
+     16,
+     21
+    ]
+   ],
+   "marks": [
+    "SH___"
+   ]
+  },
+  {
+   "class": "letters RIGHT of the blank only",
+   "fn": "gapMarkerSpans",
+   "text": "Look at the frame ___AN.",
+   "why": "the mirror; a rule that handles one side is half a rule",
+   "expect": [
+    [
+     18,
+     23
+    ]
+   ],
+   "marks": [
+    "___AN"
+   ]
+  },
+  {
+   "class": "the PREDICATE on letters before the blank",
+   "fn": "capitalRunIsExempt",
+   "args": [
+    "explanation",
+    "walkScript",
+    "The word stops at DE___VE.",
+    18,
+    20
+   ],
+   "text": "The word stops at DE___VE.",
+   "run": "DE",
+   "runSpan": [
+    18,
+    20
+   ],
+   "why": "the tokeniser being right does not make the predicate right — this is the question her ruling actually asked",
+   "expect": true
+  },
+  {
+   "class": "the PREDICATE on letters after the blank",
+   "fn": "capitalRunIsExempt",
+   "args": [
+    "explanation",
+    "walkScript",
+    "The word stops at DE___VE.",
+    23,
+    25
+   ],
+   "text": "The word stops at DE___VE.",
+   "run": "VE",
+   "runSpan": [
+    23,
+    25
+   ],
+   "why": "the far side of the same mark; a predicate reading only the left of a span passes the case above and fails here",
+   "expect": true
+  },
+  {
+   "class": "the PREDICATE where the frame OPENS with the blank",
+   "fn": "capitalRunIsExempt",
+   "args": [
+    "explanation",
+    "walkScript",
+    "Look at the frame ___AN.",
+    21,
+    23
+   ],
+   "text": "Look at the frame ___AN.",
+   "run": "AN",
+   "runSpan": [
+    21,
+    23
+   ],
+   "why": "no letters precede the underscores, so a predicate that looks backwards from the run finds nothing",
+   "expect": true
+  },
+  {
+   "class": "THE CONTROL — a capital run with NO marker anywhere",
+   "fn": "capitalRunIsExempt",
+   "args": [
+    "explanation",
+    "walkScript",
+    "OUT makes SHOUT, and shouting wakes the baby.",
+    0,
+    3
+   ],
+   "text": "OUT makes SHOUT, and shouting wakes the baby.",
+   "run": "OUT",
+   "runSpan": [
+    0,
+    3
+   ],
+   "why": "two implementations that exempt everything also agree. This is the case that distinguishes agreement from surrender, and it must be FALSE on both sides.",
+   "expect": false
+  }
+ ],
+ "COWORKS_OWN_EIGHT_RUN_HERE": {
+  "why": "it cannot prove its port against cases it authored itself. Run through this store's gapMarkerSpans, its eight are:",
+  "agreeing": 8,
+  "of": 8,
+  "disagreements": "NONE — all eight of its expectations reproduce here, span for span.",
+  "cases": [
+   {
+    "class": "letters BOTH sides of the blank",
+    "text": "The word stops at DE___VE.",
+    "coworkExpects": [
+     [
+      18,
+      25
+     ]
+    ],
+    "thisStoreReturns": [
+     [
+      18,
+      25
+     ]
+    ],
+    "marks": [
+     "DE___VE"
+    ],
+    "agrees": true
+   },
+   {
+    "class": "letters LEFT of the blank only",
+    "text": "The frame reads SH___.",
+    "coworkExpects": [
+     [
+      16,
+      21
+     ]
+    ],
+    "thisStoreReturns": [
+     [
+      16,
+      21
+     ]
+    ],
+    "marks": [
+     "SH___"
+    ],
+    "agrees": true
+   },
+   {
+    "class": "letters RIGHT of the blank only",
+    "text": "Look at the frame ___AN.",
+    "coworkExpects": [
+     [
+      18,
+      23
+     ]
+    ],
+    "thisStoreReturns": [
+     [
+      18,
+      23
+     ]
+    ],
+    "marks": [
+     "___AN"
+    ],
+    "agrees": true
+   },
+   {
+    "class": "numbered gap inside a sentence a child reads",
+    "text": "Ade was the ___(2)___ runner.",
+    "coworkExpects": [
+     [
+      12,
+      21
+     ]
+    ],
+    "thisStoreReturns": [
+     [
+      12,
+      21
+     ]
+    ],
+    "marks": [
+     "___(2)___"
+    ],
+    "agrees": true
+   },
+   {
+    "class": "a bare mention — capitals, NO blank",
+    "text": "OUT makes SHOUT, and shouting wakes the baby.",
+    "coworkExpects": [],
+    "thisStoreReturns": [],
+    "marks": [],
+    "agrees": true
+   },
+   {
+    "class": "a LONE capital at the tail of the mark",
+    "text": "See where the word splits: COM___E.",
+    "coworkExpects": [
+     [
+      27,
+      34
+     ]
+    ],
+    "thisStoreReturns": [
+     [
+      27,
+      34
+     ]
+    ],
+    "marks": [
+     "COM___E"
+    ],
+    "agrees": true
+   },
+   {
+    "class": "TWO marks in one string",
+    "text": "From SH___ to ___AN.",
+    "coworkExpects": [
+     [
+      5,
+      10
+     ],
+     [
+      14,
+      19
+     ]
+    ],
+    "thisStoreReturns": [
+     [
+      5,
+      10
+     ],
+     [
+      14,
+      19
+     ]
+    ],
+    "marks": [
+     "SH___",
+     "___AN"
+    ],
+    "agrees": true
+   },
+   {
+    "class": "a pure blank, no letters either side",
+    "text": "Ade was the ___ runner.",
+    "coworkExpects": [
+     [
+      12,
+      15
+     ]
+    ],
+    "thisStoreReturns": [
+     [
+      12,
+      15
+     ]
+    ],
+    "marks": [
+     "___"
+    ],
+    "agrees": true
+   }
+  ]
+ },
+ "AND_ITS_SUITE_CAUGHT_A_CLASS_MINE_LACKS": {
+  "classes": [
+   "numbered gap inside a sentence a child reads",
+   "TWO marks in one string",
+   "a pure blank, no letters either side"
+  ],
+  "theOne": "TWO marks in one string — \"From SH___ to ___AN.\". A SINGLE-MATCH IMPLEMENTATION PASSES EVERY ONE OF MY EIGHT AND FAILS THERE. My four span cases each carry exactly one mark, so the suite I authored to close a blind-agreement finding was itself blind to the multiplicity class.",
+  "soItIsCARRIEDHERE": "as the ninth, credited to Cowork, because the case matters more than whose it is. It passes: [[5,10],[14,19]]",
+  "andTheOTHERS": "the numbered gap and the pure blank were in the ORIGINAL eleven, so those two are covered — they are absent from my eight, not from the suite.",
+  "theFindingABOUTSUITES": "a boundary suite is not finished when it reaches the boundary. Mine reached the seam between letters and underscores, which was the disagreement, and never asked whether there could be TWO seams. Coverage of a class is not coverage of its cardinality."
+ },
+ "theNinth": {
+  "class": "TWO marks in one string (Cowork's case, carried)",
+  "fn": "gapMarkerSpans",
+  "text": "From SH___ to ___AN.",
+  "why": "a single-match implementation passes all eight above and fails here",
+  "expect": [
+   [
+    5,
+    10
+   ],
+   [
+    14,
+    19
+   ]
+  ],
+  "marks": [
+   "SH___",
+   "___AN"
+  ]
+ },
+ "THE_RULE_THE_CASES_ENCODE": "gapMarkerSpans RETURNS THE FRAME TOKEN — letters and underscores together (R748, ruled on the spec rather than on either implementation). A run of underscores, plus the capitals immediately adjacent on either side, plus the optional (n) a numbered marker carries. SH___, ___AN, DE___VE, ___(2)___ are each ONE span. capitalRunIsExempt exempts a run that lies WHOLLY INSIDE such a span, and nothing else — which is what the control proves.",
+ "provenance": {
+  "source": "packages/core/src/field-dispositions.ts, executed — this artefact is generated, not transcribed",
+  "alsoInside": "the membership crossing (field-dispositions-recross-for-cowork, 19 cases). These are the same eight; this file exists so their arrival does not depend on that one's.",
+  "isSymbolStringOnAFrame": true
+ },
+ "findingsSha256": "8a15604ea220dc1e98210eb31e4eaa4e844e835093c48c30ebaf1fa0bd6d403e",
+ "howToCheckThisOnArrival": {
+  "subtreeKeys": [
+   "THE_EIGHT_CASES",
+   "COWORKS_OWN_EIGHT_RUN_HERE",
+   "AND_ITS_SUITE_CAUGHT_A_CLASS_MINE_LACKS",
+   "theNinth"
+  ],
+  "subtree": "an object of THIS DOCUMENT'S OWN TOP-LEVEL KEYS, exactly as spelled in subtreeKeys and nowhere renamed: {\"THE_EIGHT_CASES\", \"COWORKS_OWN_EIGHT_RUN_HERE\", \"AND_ITS_SUITE_CAUGHT_A_CLASS_MINE_LACKS\", \"theNinth\"}",
+  "spec": "sha256 over json.dumps(subtree, sort_keys=True, separators=(\",\",\":\"), ensure_ascii=False).encode(\"utf-8\") — R729. ensure_ascii defaults to True and gives a different number.",
+  "andTheFileDigest": "the staging line and the .sha256 sidecar, over the whole file bytes"
+ },
+ "instrumentProvenance": {
+  "emittedBy": "emit-boundary-conformance-cases.ts",
+  "carriedFixture": true,
+  "meaning": "the emitting instrument proved itself against carried cases — including at least one clean case caught by nothing — before it produced these figures (R721)."
+ }
+}
