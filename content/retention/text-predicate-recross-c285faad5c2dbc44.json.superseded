@@ -1,0 +1,809 @@
+{
+ "kind": "text-predicate-recross",
+ "what": "The estate-wide comparison re-run under the ruled predicate, its three separated classes, the attempts check, and the option-set divergences blinded and in full.",
+ "THE_RULED_PREDICATE": "key identity is TEXT identity of the keyed option, never label.",
+ "A_WHAT_SURVIVES": {
+  "itemsCarriedByTwoOrMoreFiles": 104,
+  "counts": {
+   "BYTE-IDENTICAL": 61,
+   "LABEL PERMUTATION ONLY — identical under the text predicate": 16,
+   "OPTION-SET DIVERGENCE — one stem, different options": 8,
+   "NUMBERING DRIFT — the same stem wears a different id in the other file": 9,
+   "STEM UNMATCHED — differs, and appears under no other id in the compared file": 10
+  },
+  "THE_ANSWER_DISPUTE_CLASS": "EMPTY. Estate-wide, not one item has two readings that offer the same options under the same stem and key different TEXT. Every apparent answer dispute so far has been a label permutation, a numbering drift, or an option-set divergence.",
+  "andTHECOUNT": "the desk named six option-set divergences; this run finds 8, estate-wide rather than within the earlier 24. All 8 cross below. If six is the intended set, the two extra are named here rather than dropped to make the numbers agree.",
+  "optionSetDivergenceIds": [
+   "ENG-004-AGG-02",
+   "ENG-006-TM-03",
+   "ENG-006-TM-05",
+   "ENG-006-TM-11",
+   "ENG-006-TM-12",
+   "ENG-007-LP-03",
+   "ENG-007-LP-05",
+   "ENG-007-LP-12"
+  ]
+ },
+ "B_THE_NUMBERING_DRIFT_CLASS": {
+  "why": "reported as its own class BEFORE any of it is read as a content fault, because it is not one: the content agrees and the ID moved.",
+  "count": 9,
+  "THE_SHAPE": "ENG-005-BB-02 through BB-08 form an OFF-BY-ONE CHAIN — each item's stem appears one position over in the other file, seven consecutive items shifted as a run. ENG-007-LP-07 and LP-09 are a straight swap: the folded-paper question (\"What did Reuben do with the folded paper from his pocket? (lines 34 to 36)\") is LP-07 in one file and LP-09 in the other.",
+  "rows": [
+   {
+    "itemId": "ENG-005-BB-02",
+    "sameStemAlsoAppearsAs": [
+     "ENG-005-BB-03"
+    ],
+    "stemsSeen": [
+     "Read lines 6 to 8. Line 8 says the bridge had 'good substantial rails'. What does 'substantial' mean here?",
+     "What did the man at the gate say about the river? (lines 10 and 11)"
+    ]
+   },
+   {
+    "itemId": "ENG-005-BB-03",
+    "sameStemAlsoAppearsAs": [
+     "ENG-005-BB-02",
+     "ENG-005-BB-04"
+    ],
+    "stemsSeen": [
+     "What did the man at the gate say about the river? (lines 10 and 11)",
+     "In town Beauty says 'I had a good bait'. What does 'bait' mean here? (line 14)"
+    ]
+   },
+   {
+    "itemId": "ENG-005-BB-04",
+    "sameStemAlsoAppearsAs": [
+     "ENG-005-BB-03",
+     "ENG-005-BB-05"
+    ],
+    "stemsSeen": [
+     "In town Beauty says 'I had a good bait'. What does 'bait' mean here? (line 14)",
+     "What came down across the road in front of them? (lines 22 to 24)"
+    ]
+   },
+   {
+    "itemId": "ENG-005-BB-05",
+    "sameStemAlsoAppearsAs": [
+     "ENG-005-BB-04",
+     "ENG-005-BB-06"
+    ],
+    "stemsSeen": [
+     "What came down across the road in front of them? (lines 22 to 24)",
+     "Beauty says he did not turn round or run away. Why not? (lines 24 to 26)"
+    ]
+   },
+   {
+    "itemId": "ENG-005-BB-06",
+    "sameStemAlsoAppearsAs": [
+     "ENG-005-BB-05",
+     "ENG-005-BB-07"
+    ],
+    "stemsSeen": [
+     "Beauty says he did not turn round or run away. Why not? (lines 24 to 26)",
+     "What did John say they would have to do? (lines 29 to 31)"
+    ]
+   },
+   {
+    "itemId": "ENG-005-BB-07",
+    "sameStemAlsoAppearsAs": [
+     "ENG-005-BB-06",
+     "ENG-005-BB-08"
+    ],
+    "stemsSeen": [
+     "What did John say they would have to do? (lines 29 to 31)",
+     "Water was over the middle of the bridge. Why did the master not stop? (lines 33 and 34)"
+    ]
+   },
+   {
+    "itemId": "ENG-005-BB-08",
+    "sameStemAlsoAppearsAs": [
+     "ENG-005-BB-07"
+    ],
+    "stemsSeen": [
+     "Water was over the middle of the bridge. Why did the master not stop? (lines 33 and 34)",
+     "On the bridge the master whipped Beauty for stopping. At the end he calls Beauty wiser than they were. What does the writer want us to understand? (lines 36 to 38 and 62 to 63)"
+    ]
+   },
+   {
+    "itemId": "ENG-007-LP-07",
+    "sameStemAlsoAppearsAs": [
+     "ENG-007-LP-09"
+    ],
+    "stemsSeen": [
+     "What did Reuben do with the folded paper from his pocket? (lines 34 to 36)",
+     "What did Reuben do with the navy jumper? (lines 33 and 34)"
+    ]
+   },
+   {
+    "itemId": "ENG-007-LP-09",
+    "sameStemAlsoAppearsAs": [
+     "ENG-007-LP-07"
+    ],
+    "stemsSeen": [
+     "What does Ilya say about the cupboard in the annexe? (lines 40 and 41)",
+     "What did Reuben do with the folded paper from his pocket? (lines 34 to 36)"
+    ]
+   }
+  ],
+  "andTheUNMATCHED": {
+   "count": 10,
+   "ids": [
+    "ENG-005-BB-09",
+    "ENG-005-BB-10",
+    "ENG-005-BB-12",
+    "ENG-006-TM-01",
+    "ENG-006-TM-02",
+    "ENG-006-TM-06",
+    "ENG-007-LP-02",
+    "ENG-007-LP-06",
+    "ENG-007-LP-08",
+    "ENG-007-LP-10"
+   ],
+   "meaning": "the stem differs AND appears under no other id in the compared file. That is consistent with a genuinely different question OR with the tail of a shift whose counterpart is absent from the file compared — the BB run ends right where these begin. Reported UNKNOWN rather than assigned to either (R98)."
+  }
+ },
+ "C_THE_ATTEMPTS_CHECK": {
+  "THE_QUESTION": "do any recorded attempts predate an option permutation — and do attempts store a letter or the text?",
+  "THE_ANSWER_IS_NEITHER": "Attempt.chosenOptionId stores the ItemOption ROW ID — a cuid. Not a letter, and not the text. So a permutation that only reassigns LETTERS over the same rows leaves every attempt meaning exactly what it meant.",
+  "ANDTHATISNOTTHEENDOFIT": "chosenOptionId carries NO FOREIGN KEY — it is a bare String? with no relation and no cascade. SIX writers delete and recreate an item's options rather than updating them, including the CMS edit path (apps/web/lib/actions/admin-items.ts:126), generate-content.ts, import-vr-banks.ts and three vr deploy scripts. Any of those silently re-mints the ids, and every attempt on that item is left pointing at a row that no longer exists. Nothing reports it, because nothing can: there is no constraint to violate.",
+  "THE_MEMBERSHIP_TODAY": {
+   "attemptsRecorded": 5,
+   "carryingAChosenOption": 5,
+   "chosenOptionIdsThatNoLongerRESOLVE": 0,
+   "itemsAffected": 0
+  },
+  "SO_THE_EXPOSURE_IS": "nil TODAY — 0 of 5 chosen ids fail to resolve. But 5 attempts is a pre-production population, so this is a measurement of how little has happened yet and NOT evidence that the mechanism is safe. The window to fix it cheaply is now, while the table is this small.",
+  "whatWouldFIXit": "a foreign key on chosenOptionId, or an update-in-place path for options instead of delete-and-recreate. Not built; this is a report."
+ },
+ "D_THE_BLINDING": {
+  "whatWasRemoved": "file paths, directory names, store names, and the serving row.",
+  "whatWasNOTremoved": "nothing. Every row carries BOTH readings in full — stem and every option — which the previous batch did not: the artefact she was reading (key-disagreements-for-annie) carried options without stems. The later blinded batch did carry them, so this may be two artefacts rather than one omission.",
+  "order": "readings sorted by the sha256 of their own canonical JSON — deterministic, and uncorrelated with provenance.",
+  "map": "held at content/text-predicate-unblinding.json. Not staged."
+ },
+ "OPTION_SET_DIVERGENCES": [
+  {
+   "itemId": "ENG-004-AGG-02",
+   "CLASS": "OPTION-SET DIVERGENCE",
+   "HER_QUESTION": "from the stem and options alone: which reading's option set is right — or REFUSE where the stem determines neither or both.",
+   "theStemBOTHreadingsSHARE": "Line 7 speaks of 'her attitude and expression'. What does 'attitude' mean here?",
+   "readings": [
+    {
+     "reading": "reading 1",
+     "stem": {
+      "text": "Line 7 speaks of 'her attitude and expression'. What does 'attitude' mean here?",
+      "quotes": [
+       "her attitude and expression"
+      ]
+     },
+     "options": [
+      {
+       "label": "A",
+       "text": "How tired she was after her journey.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "B",
+       "text": "The way she was holding herself.",
+       "thisReadingCallsItCorrect": true
+      },
+      {
+       "label": "C",
+       "text": "What she had been told to do.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "D",
+       "text": "How shy and awkward she looked.",
+       "thisReadingCallsItCorrect": false
+      }
+     ]
+    },
+    {
+     "reading": "reading 2",
+     "stem": {
+      "text": "Line 7 speaks of 'her attitude and expression'. What does 'attitude' mean here?",
+      "quotes": [
+       "her attitude and expression"
+      ]
+     },
+     "options": [
+      {
+       "label": "A",
+       "text": "How tired she was after her journey.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "B",
+       "text": "The way she was holding herself.",
+       "thisReadingCallsItCorrect": true
+      },
+      {
+       "label": "C",
+       "text": "What she had been told to do.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "D",
+       "text": "How shy and awkward she looked.",
+       "thisReadingCallsItCorrect": false
+      }
+     ]
+    },
+    {
+     "reading": "reading 3",
+     "stem": {
+      "text": "Line 7 speaks of 'her attitude and expression'. What does 'attitude' mean here?",
+      "quotes": [
+       "her attitude and expression"
+      ]
+     },
+     "options": [
+      {
+       "label": "A",
+       "text": "How tired she was after her journey.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "B",
+       "text": "The way she was holding herself.",
+       "thisReadingCallsItCorrect": true
+      },
+      {
+       "label": "C",
+       "text": "What she had been told to do.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "D",
+       "text": "How shy and awkward she looked.",
+       "thisReadingCallsItCorrect": false
+      }
+     ]
+    },
+    {
+     "reading": "reading 4",
+     "stem": {
+      "text": "Line 7 speaks of 'her attitude and expression'. What does 'attitude' mean here?",
+      "quotes": [
+       "her attitude and expression"
+      ]
+     },
+     "options": [
+      {
+       "label": "A",
+       "text": "How tired she was after her journey.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "B",
+       "text": "The way she was holding herself.",
+       "thisReadingCallsItCorrect": true
+      },
+      {
+       "label": "C",
+       "text": "What she thought about waiting.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "D",
+       "text": "How shy and awkward she looked.",
+       "thisReadingCallsItCorrect": false
+      }
+     ]
+    }
+   ],
+   "rowSha256": "728e349064e1f0bf24b9354e5d22948620df54156c0fe7ba994e1779bebf879b",
+   "rowSha256Spec": "sha256 over this row as canonical JSON — keys sorted at EVERY level, separators (\",\",\":\"), ensure_ascii false — with the rowSha256 and rowSha256Spec fields absent, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-006-TM-03",
+   "CLASS": "OPTION-SET DIVERGENCE",
+   "HER_QUESTION": "from the stem and options alone: which reading's option set is right — or REFUSE where the stem determines neither or both.",
+   "theStemBOTHreadingsSHARE": "What does Uncle Podger send Jim to Mr Goggles for? (lines 13 and 14)",
+   "readings": [
+    {
+     "reading": "reading 1",
+     "stem": {
+      "text": "What does Uncle Podger send Jim to Mr Goggles for? (lines 13 and 14)",
+      "quotes": []
+     },
+     "options": [
+      {
+       "label": "A",
+       "text": "To borrow his step-ladder.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "B",
+       "text": "To tell him that Pa's leg is better.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "C",
+       "text": "To borrow his spirit-level.",
+       "thisReadingCallsItCorrect": true
+      },
+      {
+       "label": "D",
+       "text": "To fetch a bit of picture-cord.",
+       "thisReadingCallsItCorrect": false
+      }
+     ]
+    },
+    {
+     "reading": "reading 2",
+     "stem": {
+      "text": "What does Uncle Podger send Jim to Mr Goggles for? (lines 13 and 14)",
+      "quotes": []
+     },
+     "options": [
+      {
+       "label": "A",
+       "text": "To borrow his step-ladder.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "B",
+       "text": "To ask how his leg is getting on.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "C",
+       "text": "To fetch a bit of picture-cord.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "D",
+       "text": "To borrow his spirit-level.",
+       "thisReadingCallsItCorrect": true
+      }
+     ]
+    }
+   ],
+   "rowSha256": "d5892569570330e74f7346c45480ea8da69b4d07a57beb00d17b7e7ab28a8fd4",
+   "rowSha256Spec": "sha256 over this row as canonical JSON — keys sorted at EVERY level, separators (\",\",\":\"), ensure_ascii false — with the rowSha256 and rowSha256Spec fields absent, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-006-TM-05",
+   "CLASS": "OPTION-SET DIVERGENCE",
+   "HER_QUESTION": "from the stem and options alone: which reading's option set is right — or REFUSE where the stem determines neither or both.",
+   "theStemBOTHreadingsSHARE": "Why does the whole house stop looking for the tools? (lines 20 to 23)",
+   "readings": [
+    {
+     "reading": "reading 1",
+     "stem": {
+      "text": "Why does the whole house stop looking for the tools? (lines 20 to 23)",
+      "quotes": []
+     },
+     "options": [
+      {
+       "label": "A",
+       "text": "Because he has cut himself and needs a bandage first.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "B",
+       "text": "Because his handkerchief is in the coat, and nobody knows where the coat is.",
+       "thisReadingCallsItCorrect": true
+      },
+      {
+       "label": "C",
+       "text": "Because Uncle Podger tells them to stop and help him.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "D",
+       "text": "Because the tools had not been brought into the room yet.",
+       "thisReadingCallsItCorrect": false
+      }
+     ]
+    },
+    {
+     "reading": "reading 2",
+     "stem": {
+      "text": "Why does the whole house stop looking for the tools? (lines 20 to 23)",
+      "quotes": []
+     },
+     "options": [
+      {
+       "label": "A",
+       "text": "Because his handkerchief is in the coat, and nobody knows where the coat is.",
+       "thisReadingCallsItCorrect": true
+      },
+      {
+       "label": "B",
+       "text": "Because Uncle Podger tells them to stop and help him.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "C",
+       "text": "Because the tools had not been brought into the room yet.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "D",
+       "text": "Because he goes out of the room to see to his cut.",
+       "thisReadingCallsItCorrect": false
+      }
+     ]
+    }
+   ],
+   "rowSha256": "3481f8ebaaeeabe3088639331894954a72de46ee5b1734d1a784e2af770948f8",
+   "rowSha256Spec": "sha256 over this row as canonical JSON — keys sorted at EVERY level, separators (\",\",\":\"), ensure_ascii false — with the rowSha256 and rowSha256Spec fields absent, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-006-TM-11",
+   "CLASS": "OPTION-SET DIVERGENCE",
+   "HER_QUESTION": "from the stem and options alone: which reading's option set is right — or REFUSE where the stem determines neither or both.",
+   "theStemBOTHreadingsSHARE": "Uncle Podger begins by telling them to leave it to him. He ends by saying some people would have had a man in. What does the writer show by this? (lines 6 and 7, and 61 to 63)",
+   "readings": [
+    {
+     "reading": "reading 1",
+     "stem": {
+      "text": "Uncle Podger begins by telling them to leave it to him. He ends by saying some people would have had a man in. What does the writer show by this? (lines 6 and 7, and 61 to 63)",
+      "quotes": []
+     },
+     "options": [
+      {
+       "label": "A",
+       "text": "He has learned that the job was harder than he expected.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "B",
+       "text": "He is pleased the family helped him finish it.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "C",
+       "text": "He is boasting to hide how badly it went.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "D",
+       "text": "He thinks of it as a success, exactly as he did at the start.",
+       "thisReadingCallsItCorrect": true
+      }
+     ]
+    },
+    {
+     "reading": "reading 2",
+     "stem": {
+      "text": "Uncle Podger begins by telling them to leave it to him. He ends by saying some people would have had a man in. What does the writer show by this? (lines 6 and 7, and 61 to 63)",
+      "quotes": []
+     },
+     "options": [
+      {
+       "label": "A",
+       "text": "He has learned, as he did not know then, that the job was hard.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "B",
+       "text": "He is pleased, and glad they all helped so much at the end.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "C",
+       "text": "He thinks of it as a success, exactly as he did at the start.",
+       "thisReadingCallsItCorrect": true
+      },
+      {
+       "label": "D",
+       "text": "He is boasting to them, and hiding it, because it went so badly.",
+       "thisReadingCallsItCorrect": false
+      }
+     ]
+    }
+   ],
+   "rowSha256": "e559610216ebc9fadb4bde24d23613ffa5b39b169899a0d8acecfd7f3657af64",
+   "rowSha256Spec": "sha256 over this row as canonical JSON — keys sorted at EVERY level, separators (\",\",\":\"), ensure_ascii false — with the rowSha256 and rowSha256Spec fields absent, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-006-TM-12",
+   "CLASS": "OPTION-SET DIVERGENCE",
+   "HER_QUESTION": "from the stem and options alone: which reading's option set is right — or REFUSE where the stem determines neither or both.",
+   "theStemBOTHreadingsSHARE": "The writer says 'would' again and again. He would shout, he would drop it, he would call us fools. What does that tell us about this day?",
+   "readings": [
+    {
+     "reading": "reading 1",
+     "stem": {
+      "text": "The writer says 'would' again and again. He would shout, he would drop it, he would call us fools. What does that tell us about this day?",
+      "quotes": [],
+      "techniqueKey": "habitual-would-turns-one-scene-into-a-standing-pattern",
+      "answerShape": "grammatical-split"
+     },
+     "options": [
+      {
+       "label": "A",
+       "text": "It is not one day at all, but what happened every single time.",
+       "thisReadingCallsItCorrect": true
+      },
+      {
+       "label": "B",
+       "text": "It tells us the writer is not sure it really happened.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "C",
+       "text": "It tells us the picture was never actually hung.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "D",
+       "text": "It tells us the story is being remembered years afterwards.",
+       "thisReadingCallsItCorrect": false
+      }
+     ]
+    },
+    {
+     "reading": "reading 2",
+     "stem": {
+      "text": "The writer says 'would' again and again. He would shout, he would drop it, he would call us fools. What does that tell us about this day?",
+      "quotes": [],
+      "techniqueKey": "habitual-would-turns-one-scene-into-a-standing-pattern",
+      "answerShape": "grammatical-split"
+     },
+     "options": [
+      {
+       "label": "A",
+       "text": "It is not one clear memory, but a guess at what may have happened.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "B",
+       "text": "It tells us the picture was never hung, though he says it was.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "C",
+       "text": "It tells us the story is remembered years after it all happened.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "D",
+       "text": "It is not one day at all, but what happened every single time.",
+       "thisReadingCallsItCorrect": true
+      }
+     ]
+    }
+   ],
+   "rowSha256": "8b293c22da4d3f77e33cfe54a4dcdeede20ec7c4245937cc9a28ca9ab59d2781",
+   "rowSha256Spec": "sha256 over this row as canonical JSON — keys sorted at EVERY level, separators (\",\",\":\"), ensure_ascii false — with the rowSha256 and rowSha256Spec fields absent, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-007-LP-03",
+   "CLASS": "OPTION-SET DIVERGENCE",
+   "HER_QUESTION": "from the stem and options alone: which reading's option set is right — or REFUSE where the stem determines neither or both.",
+   "theStemBOTHreadingsSHARE": "Line 21 says the swimming hat had 'perished'. What does 'perished' mean here?",
+   "readings": [
+    {
+     "reading": "reading 1",
+     "stem": {
+      "text": "Line 21 says the swimming hat had 'perished'. What does 'perished' mean here?",
+      "quotes": [
+       "perished into something like a dried leaf"
+      ]
+     },
+     "options": [
+      {
+       "label": "A",
+       "text": "Gone dry and crumbly with age.",
+       "thisReadingCallsItCorrect": true
+      },
+      {
+       "label": "B",
+       "text": "Died, the way a living thing does.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "C",
+       "text": "Been lost somewhere in the cupboard.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "D",
+       "text": "Been thrown away by its owner.",
+       "thisReadingCallsItCorrect": false
+      }
+     ]
+    },
+    {
+     "reading": "reading 2",
+     "stem": {
+      "text": "Line 21 says the swimming hat had 'perished'. What does 'perished' mean here?",
+      "quotes": [
+       "perished into something like a dried leaf"
+      ]
+     },
+     "options": [
+      {
+       "label": "A",
+       "text": "Died, the way a living thing does.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "B",
+       "text": "Been lost somewhere in the cupboard.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "C",
+       "text": "Gone dry and crumbly with age.",
+       "thisReadingCallsItCorrect": true
+      },
+      {
+       "label": "D",
+       "text": "Been worn out by too much swimming.",
+       "thisReadingCallsItCorrect": false
+      }
+     ]
+    }
+   ],
+   "rowSha256": "8d1338884ec5733e0985017e37863ffd075541e1bd87547dfe8306e4a2c8ca78",
+   "rowSha256Spec": "sha256 over this row as canonical JSON — keys sorted at EVERY level, separators (\",\",\":\"), ensure_ascii false — with the rowSha256 and rowSha256Spec fields absent, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-007-LP-05",
+   "CLASS": "OPTION-SET DIVERGENCE",
+   "HER_QUESTION": "from the stem and options alone: which reading's option set is right — or REFUSE where the stem determines neither or both.",
+   "theStemBOTHreadingsSHARE": "Reuben 'laughed as well, slightly after her'. What does this suggest? (lines 24 to 27)",
+   "readings": [
+    {
+     "reading": "reading 1",
+     "stem": {
+      "text": "Reuben 'laughed as well, slightly after her'. What does this suggest? (lines 24 to 27)",
+      "quotes": [
+       "he laughed as well, slightly after her"
+      ]
+     },
+     "options": [
+      {
+       "label": "A",
+       "text": "He could not hear her properly across the room.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "B",
+       "text": "He was laughing at Ilya instead.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "C",
+       "text": "He was thinking about something else first.",
+       "thisReadingCallsItCorrect": true
+      },
+      {
+       "label": "D",
+       "text": "He had not found the joke funny at all.",
+       "thisReadingCallsItCorrect": false
+      }
+     ]
+    },
+    {
+     "reading": "reading 2",
+     "stem": {
+      "text": "Reuben 'laughed as well, slightly after her'. What does this suggest? (lines 24 to 27)",
+      "quotes": [
+       "he laughed as well, slightly after her"
+      ]
+     },
+     "options": [
+      {
+       "label": "A",
+       "text": "He was thinking about something else first.",
+       "thisReadingCallsItCorrect": true
+      },
+      {
+       "label": "B",
+       "text": "He was waiting for her to tell him the answer.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "C",
+       "text": "He could not hear her properly across the room.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "D",
+       "text": "He was laughing at Ilya instead.",
+       "thisReadingCallsItCorrect": false
+      }
+     ]
+    }
+   ],
+   "rowSha256": "e37bf51dfd6a9afab653556cab67b89e4c0fc9d91e4afe483902c1aed225c9d3",
+   "rowSha256Spec": "sha256 over this row as canonical JSON — keys sorted at EVERY level, separators (\",\",\":\"), ensure_ascii false — with the rowSha256 and rowSha256Spec fields absent, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  },
+  {
+   "itemId": "ENG-007-LP-12",
+   "CLASS": "OPTION-SET DIVERGENCE",
+   "HER_QUESTION": "from the stem and options alone: which reading's option set is right — or REFUSE where the stem determines neither or both.",
+   "theStemBOTHreadingsSHARE": "We are never told what Reuben is feeling. How does the writer let us know anyway?",
+   "readings": [
+    {
+     "reading": "reading 1",
+     "stem": {
+      "text": "We are never told what Reuben is feeling. How does the writer let us know anyway?",
+      "quotes": [],
+      "techniqueKey": "interiority-withheld-and-displaced-into-handled-objects",
+      "answerShape": "withholds-and-evidences"
+     },
+     "options": [
+      {
+       "label": "A",
+       "text": "He describes lots of old clothes to fill out the story.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "B",
+       "text": "We get no thoughts from him, only his hands and the things he handles.",
+       "thisReadingCallsItCorrect": true
+      },
+      {
+       "label": "C",
+       "text": "The writer tells us he is sad about leaving.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "D",
+       "text": "His friend Ilya says what is troubling him.",
+       "thisReadingCallsItCorrect": false
+      }
+     ]
+    },
+    {
+     "reading": "reading 2",
+     "stem": {
+      "text": "We are never told what Reuben is feeling. How does the writer let us know anyway?",
+      "quotes": [],
+      "techniqueKey": "interiority-withheld-and-displaced-into-handled-objects",
+      "answerShape": "withholds-and-evidences"
+     },
+     "options": [
+      {
+       "label": "A",
+       "text": "The writer tells us he is sad, and then shows us only the reasons for it.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "B",
+       "text": "We get no feelings from him at all, only what his friend Ilya says.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "C",
+       "text": "He describes only the old clothes, and so we get nothing else.",
+       "thisReadingCallsItCorrect": false
+      },
+      {
+       "label": "D",
+       "text": "We get no thoughts from him, only his hands and the things he handles.",
+       "thisReadingCallsItCorrect": true
+      }
+     ]
+    }
+   ],
+   "rowSha256": "6408eae3b05ff038ff874c69f237afef03073ba8cd5fee3da96623e632446bc8",
+   "rowSha256Spec": "sha256 over this row as canonical JSON — keys sorted at EVERY level, separators (\",\",\":\"), ensure_ascii false — with the rowSha256 and rowSha256Spec fields absent, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content."
+  }
+ ],
+ "findingsSha256": "83b5147de33b2273d05210406833eb6cddfcc5587794d80931367effb2110041",
+ "howToCheckThisOnArrival": {
+  "subtreeKeys": [
+   "A_WHAT_SURVIVES",
+   "B_THE_NUMBERING_DRIFT_CLASS",
+   "C_THE_ATTEMPTS_CHECK",
+   "OPTION_SET_DIVERGENCES"
+  ],
+  "subtree": "an object of THIS DOCUMENT'S OWN TOP-LEVEL KEYS, exactly as spelled in subtreeKeys and nowhere renamed: {\"A_WHAT_SURVIVES\", \"B_THE_NUMBERING_DRIFT_CLASS\", \"C_THE_ATTEMPTS_CHECK\", \"OPTION_SET_DIVERGENCES\"}",
+  "spec": "sha256 over json.dumps(subtree, sort_keys=True, separators=(\",\",\":\"), ensure_ascii=False).encode(\"utf-8\") — R729. ensure_ascii defaults to True and gives a different number.",
+  "andTheFileDigest": "the staging line and the .sha256 sidecar, over the whole file bytes"
+ },
+ "instrumentProvenance": {
+  "emittedBy": "emit-text-predicate-recross.ts",
+  "carriedFixture": true,
+  "meaning": "the emitting instrument proved itself against carried cases — including at least one clean case caught by nothing — before it produced these figures (R721)."
+ }
+}

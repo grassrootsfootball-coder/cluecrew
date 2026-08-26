@@ -21510,3 +21510,66 @@ full. The unblinding map is held at `content/blinded-readings-unblinding.json` a
 **The nineteen executions stay reversed and RE-DERIVE from whichever key she settles**, rather than
 being un-reversed — un-reversing would restore values computed against a key that has not been
 ruled, which is the same fault that produced them.
+
+## R769 — Key identity is text identity of the keyed option, never label
+
+Her finding, ruled. **Seventeen of twenty-four were label permutations with both sides agreeing on
+the correct sentence** — a comparison keyed on the LETTER reports twenty-four disagreements where
+seven exist. Re-run estate-wide over the 104 items carried by two or more files:
+
+| | |
+|---|---|
+| byte-identical | 61 |
+| **label permutation only — identical under the text predicate** | **16** |
+| numbering drift — the same stem wears a different id | 9 |
+| stem unmatched | 10 |
+| **option-set divergence — one stem, different options** | **8** |
+| **key text differs — a real answer dispute** | **0** |
+
+**The answer-dispute class is empty estate-wide.** Not one item anywhere has two readings offering
+the same options under the same stem and keying different TEXT. Every apparent answer dispute in
+this thread has been a permutation, a drift, or an option-set divergence.
+
+**The desk named six option-set divergences; this run finds eight** — estate-wide rather than
+within the earlier 24. All eight cross, and the two extra are named rather than dropped to make the
+numbers agree. That is the fourth count I have had to restate in this thread (553→419, 36→24,
+24→0 disputes, 6→8), and every one moved because the predicate was stated and applied rather than
+inherited from the sentence that carried the number.
+
+## R770 — An attempt stores neither a letter nor the text, and nothing holds the id it does store
+
+`Attempt.chosenOptionId` holds the **ItemOption ROW ID** — a cuid. So a permutation that reassigns
+LETTERS across the same rows leaves every recorded attempt meaning exactly what it meant, and the
+question as posed is moot in that direction.
+
+**It is not moot in the other.** `chosenOptionId` is a bare `String?` with **no foreign key, no
+relation and no cascade** — and **six writers delete and recreate an item's options rather than
+updating them**, including the CMS edit path (`admin-items.ts:126`), `generate-content.ts`,
+`import-vr-banks.ts` and three vr deploy scripts. Any of those re-mints the ids, and every attempt
+on that item is left pointing at a row that no longer exists. **Nothing reports it because nothing
+can: there is no constraint to violate.**
+
+**Membership today: 5 attempts recorded, 5 carrying a chosen option, 0 that fail to resolve, 0 items
+affected.** And that zero is a measurement of how little has happened yet, not evidence the design
+holds — R62's lesson exactly. Five attempts is a pre-production table, which makes now the cheap
+moment to put a key on the column or an update-in-place path on the options. Not built; reported.
+
+## R771 — The numbering drift is its own class, and it is not a content fault
+
+Reported ahead of any content reading, because reading it as content is the error it invites.
+**Nine items are the same question wearing a different id.** `ENG-005-BB-02` through `BB-08` are an
+**off-by-one chain** — each stem appears one position over in the other file, seven consecutive
+items shifted as a run. `ENG-007-LP-07` and `LP-09` are a straight swap: *"What did Reuben do with
+the folded paper from his pocket? (lines 34 to 36)"* is LP-07 in one file and LP-09 in the other.
+
+**The ten "unmatched" stems are reported UNKNOWN, not as differences.** A stem that differs and
+appears under no other id in the compared file is consistent with a genuinely different question OR
+with the tail of a shift whose counterpart is absent — and **the BB run ends exactly where these
+begin**, which is what makes assigning them a guess (R98).
+
+**And the blinding gained a salt.** Ordering readings by their own content hash is uncorrelated with
+provenance per row but not across rows: measured, reading 1 was the same store on 7 of 8 rows. On
+eight rows that is chance and it is still a thread — deduce one row and the rest lean the same way.
+Salting the sort with the item id makes each row's order independent of every other's; measured
+after, 4 of 8. **A blind that holds per row and leaks in aggregate is not a blind**, and the only
+reason I saw it was checking the distribution rather than the mechanism.
