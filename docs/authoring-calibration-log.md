@@ -20189,3 +20189,62 @@ authored honestly until the rule they must be wrong about is stated.
 **Her import ruling, recorded**: *an import that cannot carry a field names it at the door, and a
 field named at the door is a finding, not a footnote* — already implemented at the vr-banks door
 (R707), and now with its reason on the register.
+
+## R710 — The refusal was routed to CI all along; 49 of 53 doors cannot reach the author
+
+**R709 CORRECTED ON A FACT THAT CHANGES THE REMEDY, own fault.** I wrote that the reissue's
+refusal was *"printed to a run log nobody reads"* and that *"the evidence was sitting in the
+console."* **It was not.** `pnpm check:reissue-completion` is a standing CI check that has, since
+**2026-08-20**, named all five refusals with their exact reasons AND their owner — *"repairable by
+Cowork — authored content. This store does not reword it."* — and it **exits 0 by design**, in its
+own words *"a REFUSED id is not a pass and not a failure — it is a recorded decision, which is the
+only thing that keeps this check from being permanently red and therefore muted."* Everything in
+that design is right. **The remedy is therefore not "read your logs" but "route a refusal to the
+party named as its repairer"**, and the entry that said otherwise was wrong.
+
+**THE CLASS, restated correctly: a recorded decision with no addressee.** The refusal was
+recorded, dated, reasoned and OWNER-NAMED — and the owner was never told. This is R88's return-leg
+class applied to refusals: every guard here watches content coming IN, and a refusal has to travel
+OUT to be worth anything. R601's rule one level up — a decision nothing reads is not a decision;
+a refusal nobody receives is not a refusal, however faithfully it is filed.
+
+**THE REFUSAL IS NOW ROUTED**: `refused-reissue-items-for-cowork-e42d01915a50bce9.json`, file
+sha256 `e42d01915a50bce9bc49b1945321d233d0e13e79bb5b717a6ae85ffe2c52548f` — the five items' FULL
+content verbatim as Cowork authored it (16 fields per row, from `REISSUESIXITEMS.json`,
+`b8a5f4cf…6790c`, with its declared per-row digests), each carrying the door's EXACT refusal
+**captured from the door's own run this turn, never retyped** (R649). *favoring*, *traveling*,
+banned *quick*, *fibers*, *realized* — five faults in its words, which this store does not reword.
+
+**THE WALK** (`refusal-routing-walk-edf2734b8a1d1338.json`, file sha256
+`edf2734b8a1d133849376a10ea34bd5d8e72fdbdf70aae7c5de4d755208f2161`), limits first: the population
+is derived from refusal vocabulary in source (220 files, which over-includes anything that
+throws); the sharp population is the **64 check/import doors, of which 53 refuse authored
+content**; and "routed to an artefact" means CAN REACH, never DID — deliver() stages, and arrival
+is the other store's to report (R255).
+
+**49 OF 53 DOORS THAT REFUSE ANOTHER STORE'S WORDS CANNOT REACH THAT STORE.** Four route to a
+crossable artefact; **18 route to CI only** — durable, dated, visible here, invisible to the
+author; 5 write a local record; **26 print and stop**. Every import door in the list is in the
+unrouted set, including the two reissue doors, `import-vr-banks`, and every English and VR
+content import. **The reissue was not an outlier; it is the ordinary case**, and it surfaced only
+because someone asked what happened to five ids.
+
+**The sharpest instance names itself**: `scripts/check-outstanding-import-refusals.ts` — a check
+whose entire subject is outstanding import refusals — **prints only, and is not wired into CI.**
+The instrument built to watch this class is inside it.
+
+**Her 153rd, recorded (no build follows)**: the qualifier class ruled BY SHAPE rather than queued
+behind a crossing — *the qualifier must name something a child could notice before she chooses* —
+with three outcomes, PASS where the qualifier is itself perceptible, FAIL where it is *"a
+distinction only an adult with the answer key can draw"*, REWRITE where it does the work but the
+sentence buries it, since *"a rationale stating its discriminating property in a subordinate
+clause is a true claim wearing a false emphasis, and the next reader will read the main clause and
+believe it."* She endorses the refusal-to-score: mechanical scoring there *"would have been the
+fault my test was minted against, one level up."* And on row 22: **"the reader finds the class,
+the machine finds the members, and the members nobody was arguing about are the ones that would
+never have been found."**
+
+**One channel fact she should have**: she reports neither the 25 group rules nor the 80 rationales
+on her disk. Both are STAGED and awaiting crossing — the group rules in
+`annie-152-landing-c16fc4c7ab4f721a.json` and all 155 rationales including the 80 in
+`annie-151-landing-b8ddfc5667dcb5d8.json`. Staged is not arrived (R255); the desk routes.
