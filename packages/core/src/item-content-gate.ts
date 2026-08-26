@@ -17,7 +17,7 @@
  * Declared quotations and tested tokens are honoured exactly as elsewhere.
  */
 import { banListApplies } from './ban-list-scope';
-import { FIELD_DISPOSITIONS, dispositionKey } from './field-dispositions';
+import { dispositionFor, dispositionKey } from './field-dispositions';
 import { checkChildFacingText, spansPresentIn, type ContentFailure } from './content-gates';
 import { refusalMessage, refusedInOptions } from './refused-misconceptions';
 import { roleForItemStem } from './content-gates';
@@ -289,7 +289,7 @@ export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
   const explanationPaths = [...textsFrom(explanation, '')];
   for (const [rawPath] of explanationPaths) {
     const key = dispositionKey('explanation', rawPath);
-    if (!(key in FIELD_DISPOSITIONS)) {
+    if (dispositionFor('explanation', rawPath) === undefined) {
       failures.push({
         where: `item:${item.id} ${key}`,
         rule: 'unclassified-path',
@@ -298,8 +298,7 @@ export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
     }
   }
   for (const [rawPath, text] of explanationPaths) {
-    const key = dispositionKey('explanation', rawPath);
-    if (FIELD_DISPOSITIONS[key] !== 'child') continue;
+    if (dispositionFor('explanation', rawPath) !== 'child') continue;
     const field = rawPath;
     if (typeof text !== 'string' || !text.trim()) continue;
     failures.push(

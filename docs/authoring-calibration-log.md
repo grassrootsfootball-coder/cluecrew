@@ -20379,3 +20379,64 @@ on one item. They read as staff to me — a declaration's own metadata, and a re
 **a disposition is a ruling and this side does not make it**. Artefact:
 `disposition-sweep-715ea8ef35ac3a4c.json`, file sha256
 `715ea8ef35ac3a4ca9d97e847b6abe42046cb1c7553461d95c1f4f7e1a672045`.
+
+## R715 — Retention fields are read-only evidence
+
+**Ruled (Annie's 156th thread, David, 2026-08-25): underscore-prefixed before-images are
+EVIDENCE. No gate flags them and no repairer touches them**, because repairing a retention field
+destroys the record it exists to hold. Cowork's screen found six punctuation faults in
+`stem._previousText` and named them correctly as NOT faults — *"a doubled quotation mark in a
+retained before-image is a record of what was repaired"*. Implemented as `isRetentionPath`, and
+**the rule is the UNDERSCORE, not a list**, so a before-image nobody has written yet is covered
+on the day it appears. `stem._previousText` reclassified accordingly.
+
+## R716 — A question type's own orthography is not emphasis
+
+**Ruled: the shouted-capitals rule binds EMPHASIS ONLY.** vr-06 renders the target `SHOUT`, the
+frame `SH___` and the option `OUT` in capitals BECAUSE the child is completing letters; a
+joins-with prompt capitalises `AIR` because it is the thing being joined. **Probed before the
+rule was written — all four pass the item gate clean — so this changes no verdict**; it is a
+named constant that stops a LATER gate flagging orthography without meeting the ruling. Cowork's
+450 notation hits would have been 450 wrong verdicts, and it NAMED them rather than scoring them:
+the qualifier lesson in a third guise, caught by the store that would have been marked down by it.
+
+## R717 — The check calls the gate; it no longer models it
+
+**The deeper repair my own correction implied, ruled and done.** `check:every-string-field` held
+its own `DISPOSITIONS` map and its own `isScreened` predicate — `walked && text.includes(' ')` —
+a RE-DERIVATION of the gate rather than a call to it, **wrong in both directions**: it reported
+single-token option values as unscreened when the gate screens them, and it could not see the
+gate walking `explanation` through a three-name list. **That predicate produced the 1,533 figure
+that sent a correct ruling after the wrong hole.** Both are deleted. One membership
+(`FIELD_DISPOSITIONS`), one function (`dispositionFor`/`isScreenedPath`), no second
+implementation. **The check's own header had already written the remedy** — *a verifier states
+its source before it runs, and calls the family's own function rather than re-deriving the
+property* — and this is that rule applied to the file that wrote it.
+
+**Result: the check now walks the whole row and reports CHILD 0 UNSCREENED.** It also surfaces
+**30 paths with no disposition** — mostly Item columns the gate does not walk (`tierRationale`,
+`sourcedFrom`, `reviewNotes`, `itemModel`, `draftSelfAssessment.*`) plus `stem.quotes[].rule`,
+`.passageRef`, `.why` and `stemRedraft.*`. **Not ruled here: a disposition is a ruling.** The next
+list for the desk.
+
+## R718 — The seven clear; the hint is ruled at the wording, not at nine tags
+
+**The seven paths ruled STAFF, and the prediction held exactly**: 335 LIVE items, 14 failing
+before the classification, **0 after — zero content faults**, every one of the fourteen an
+unclassified path and none a defect in a child-facing string.
+
+**Her hint amendment landed** (`vr02-surface-link`, replaced string asserted against the live row,
+gates clean, prior stamped): *"Name the group of three first. Both odd ones must sit outside it,
+however alike two words look or sound."* Her ground is the sitting's real finding: **nine of
+eleven surface-link distractors are structurally partial-group AS WELL** — bear-blue, chair-chin,
+snow-spade and six more pair one group member with one odd word — so the child who picked one
+either half-solved the group or was pulled by the surface, **and nothing in the row says which**.
+Only pear-plum and bird-bee are pure. **Ruled at the hint rather than at the nine tags**, because
+retagging would trade one guess for another and the WIW-19 lesson prefers the wording that
+survives a mistag.
+
+**And the sitting justified itself on its own terms**: seventeen of her eighteen reconstructions
+held, and **row 10 did not** — she had inferred *farm animals* where the bank says *land animals*,
+importing row 18's rule into row 10. Sound by luck, not by method. Her line for the register:
+**"a list of paths is a snapshot of a schema, and schemas grow; walking the row is the only form
+that cannot go stale."**

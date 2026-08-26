@@ -19,6 +19,7 @@
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { artefactStamp, deliver, stampedName } from './lib/export-destination';
+import { FIELD_DISPOSITIONS, dispositionFor, isScreenedPath, type FieldDisposition } from '../packages/core/src/index';
 import { prisma } from '../packages/db/src/index';
 import { requirePopulation } from './lib/population';
 
@@ -41,61 +42,6 @@ const FAMILY = 'every-string-field-sweep';
  * An unscreened path missing from this map fails the run. That is the whole mechanism: the count
  * was never the problem, the silence about each entry was.
  */
-type Disposition = 'child' | 'staff' | 'undecided' | 'quotation';
-const DISPOSITIONS: Readonly<Record<string, Disposition>> = {
-  // --- STAFF: review bookkeeping, batch and status markers, provenance ---
-  'explanation.walkScriptBatch': 'staff', 'explanation.walkScriptStatus': 'staff',
-  'reviewMethod': 'staff', 'reviewRecordNote': 'staff', 'reviewNotes': 'staff',
-  'itemModel': 'staff', 'draftingMethod': 'staff', 'sourcedFrom': 'staff',
-  'tierRationale': 'staff', 'r4Note': 'staff', 'passageFlag': 'staff',
-  'options[].a36Note': 'staff', 'options[].windowClass': 'staff',
-  'options[].misconceptionExecution': 'staff',
-  'mechanismLedger[].evidence': 'staff', 'mechanismLedger[].mechanism': 'staff',
-  'mechanismLedger[]._previousEvidence': 'staff',
-  'stem._previousText': 'staff', 'explanation._previousWalkScript': 'staff',
-  'explanation._previousHintCore': 'staff',
-  'stemRedraft.rules[]': 'staff', 'stemRedraft.why': 'staff',
-  'draftSelfAssessment.notes': 'staff', 'draftSelfAssessment.subjectHash': 'staff',
-  'draftSelfAssessment.handoffState': 'staff', 'draftSelfAssessment.subjectHashCaveat': 'staff',
-  'draftSelfAssessment.subjectHashCovers': 'staff', 'draftSelfAssessment.subjectHashStampedAt': 'staff',
-  'draftSelfAssessment.rubricDerivabilityNote': 'staff',
-  'draftSelfAssessment.rubric.banList': 'staff', 'draftSelfAssessment.rubric.tierFit': 'staff',
-  'draftSelfAssessment.rubric.fairness': 'staff',
-  'draftSelfAssessment.rubricDerivability.banList': 'staff',
-  'draftSelfAssessment.rubricDerivability.tierFit': 'staff',
-  'draftSelfAssessment.rubricDerivability.fairness': 'staff',
-  'draftSelfAssessment.rubricDerivability.readingAge': 'staff',
-  'draftSelfAssessment.rubricDerivability.keyVerified': 'staff',
-  'draftSelfAssessment.rubricDerivability.distractorsExecute': 'staff',
-  'stem.passageRef': 'staff', 'explanation.quotes[].passageRef': 'staff',
-  'stem.quotes[].passageRef': 'staff',
-  'explanation.quotes[].rule': 'staff', 'stem.quotes[].rule': 'staff',
-  'explanation.quotes[].why': 'staff',
-  'explanation.quotes[].exemptFrom[]': 'staff', 'stem.quotes[].exemptFrom[]': 'staff',
-  'stem.techniqueKey': 'staff', 'stem.answerShape': 'staff', 'options[].senseTarget': 'staff',
-  // Single-token option values and labels ("N", "A", "bread"): the gate walks them and skips them
-  // for want of a space, exactly as it skips a headword under test.
-  'options[].content.value': 'child', 'options[].content.label': 'child',
-
-  // --- CHILD: rendered on the card. Every one of these MUST also be in SCREENED. ---
-  'stem.series[]': 'child', 'stem.pairA[]': 'child', 'stem.clues[]': 'child',
-  'stem.stemWord': 'child', 'stem.word1': 'child', 'stem.word2': 'child',
-  'stem.sum': 'child', 'stem.question': 'child',
-  'stem.code.P': 'child', 'stem.code.Q': 'child', 'stem.code.R': 'child', 'stem.code.S': 'child',
-  'stem.operands.expr': 'child', 'stem.operands.kind': 'child',
-  'explanation.quotes[].text': 'child', 'stem.quotes[].text': 'child', 'stem.quotes[]': 'child',
-  'explanation.note': 'child',
-
-  // --- QUOTATION: bound by FIDELITY to the source, not by our spelling and stance gates
-  // (R711). Ruled after ENG-027-RR-08's attractorQuote reproduced its passage's US spelling and
-  // a "repair" would have broken it at byte-verify. The membership is imported from the gate,
-  // never re-listed here. ---
-  'options[].attractorQuote': 'quotation',
-  'options[].defeaterQuote': 'quotation',
-
-  // --- UNDECIDED: nobody has ruled. Named, not assumed. ---
-  'stem.words[]': 'undecided',
-};
 
 /**
  * **THIS SET WAS A DECLARATION AND THE GATE IS THE AUTHORITY** — my first version listed nine
@@ -110,11 +56,25 @@ const DISPOSITIONS: Readonly<Record<string, Disposition>> = {
  * where I had already written down the remedy: *a verifier states its source before it runs, and
  * calls the family's own function rather than re-deriving the property.*
  */
-const isScreened = (path: string, text: string): boolean => {
-  // The gate walks stem and explanation entirely, and options through their content.
-  const walked = /^(stem|explanation)\b/.test(path) || /^options\[\]\.content\b/.test(path);
-  return walked && text.trim().includes(' ');
+/**
+ * **THE CHECK CALLS THE GATE; IT NO LONGER MODELS IT** (David's ruling on my own correction,
+ * 2026-08-25 — R717). This held its own `DISPOSITIONS` map and its own `isScreened` predicate —
+ * `walked && text.includes(' ')` — a RE-DERIVATION of the gate rather than a call to it, and it
+ * was wrong in BOTH directions: it reported single-token option values as unscreened when the
+ * gate screens them, and it could not see that the gate walked `explanation` through a three-name
+ * list. **It produced the 1,533 figure that sent a correct ruling after the wrong hole.**
+ *
+ * Its own header had already written the remedy — *a verifier states its source before it runs,
+ * and calls the family's own function rather than re-deriving the property* — and this is that,
+ * applied to the file that wrote it. One membership, one function, no second implementation.
+ */
+const split = (path: string): [string, string] => {
+  const dot = path.indexOf('.');
+  return dot === -1 ? [path, ''] : [path.slice(0, dot), path.slice(dot + 1)];
 };
+const isScreened = (path: string): boolean => isScreenedPath(...split(path));
+/** Retention paths resolve by RULE (the underscore), so the lookup must go through the function. */
+const dispositionOf = (path: string): FieldDisposition | undefined => dispositionFor(...split(path));
 
 const FAULTS: { name: string; re: RegExp }[] = [
   { name: 'doubled opening quotation mark', re: /[“"']\s*[“"']/ },
@@ -164,7 +124,7 @@ async function main() {
       if (/(^|\.)(id|itemId|questionTypeId|status|pool|authoredBy|reviewedBy|reviewRecordedBy|misconceptionId|createdAt|updatedAt)$/.test(path)) continue;
       fieldsScreened += 1;
       const general = generalise(path);
-      const screened = isScreened(general, text);
+      const screened = isScreened(general);
       if (!screened) unscreenedPaths.set(general, (unscreenedPaths.get(general) ?? 0) + 1);
       for (const f of FAULTS) {
         if (f.re.test(text)) {
@@ -177,9 +137,9 @@ async function main() {
   // Disposition audit. An unscreened path with no disposition, or a `child` path the gate does not
   // read, is a FAULT — the count was never the problem, the silence about each entry was.
   const dispositionFaults: string[] = [];
-  const byDisposition: Record<string, string[]> = { child: [], staff: [], undecided: [], quotation: [], MISSING: [], childSingleToken: [] };
+  const byDisposition: Record<string, string[]> = { child: [], staff: [], undecided: [], quotation: [], retention: [], MISSING: [], childSingleToken: [] };
   for (const [p] of unscreenedPaths) {
-    const d = DISPOSITIONS[p];
+    const d = dispositionOf(p);
     if (!d) { byDisposition.MISSING!.push(p); dispositionFaults.push(`UNDECLARED PATH: ${p} — classify it child, staff, quotation or undecided.`); continue; }
     byDisposition[d]!.push(p);
     // A `child` path appears here only when EVERY value under it is a single token — which the
@@ -198,7 +158,7 @@ async function main() {
       stringFieldsScreened: fieldsScreened,
       distinctPathsOutsideTheChildFacingGate: unscreenedPaths.size,
     },
-    unscreenedPaths: [...unscreenedPaths].sort((a, b) => b[1] - a[1]).map(([path, count]) => ({ path, count, disposition: DISPOSITIONS[path] ?? 'UNDECLARED' })),
+    unscreenedPaths: [...unscreenedPaths].sort((a, b) => b[1] - a[1]).map(([path, count]) => ({ path, count, disposition: dispositionOf(path) ?? 'UNDECLARED' })),
     dispositions: {
       staff: byDisposition.staff!.length,
       child: byDisposition.child!.length,
