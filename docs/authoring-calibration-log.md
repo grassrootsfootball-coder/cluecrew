@@ -20837,3 +20837,64 @@ faults are carried onto the row as `preExistingFaultsUntouchedByThisEdit` instea
 run — **three rows carry them** (`-15`, `-17`, `-40`), which is a finding the totals-guard would
 have converted into a crash and lost. A guard that cannot tell what it caused from what it found
 reports the corpus's history as its own damage.
+
+## R741 — A verdict citing another party's function names the implementation that produced it
+
+**The misattribution class, in my words, registered as the worst member of the second-implementation
+family (R738):**
+
+> **A verdict citing another party's function names THE IMPLEMENTATION THAT PRODUCED IT, never the
+> function it ports. A port that cites the original is claiming an authority its own code has to
+> earn — and the citation reads as accurate, which is precisely why it is the worst member.**
+
+Every other member of the family announces itself eventually: a re-derived predicate disagrees
+with the gate, an expiring fixture goes quiet, a narrow call misses a rule. **This one arrives
+pre-endorsed.** The artefact was honest, the `by:` string was a truthful statement of intent, and
+the verdict was wrong — so a fault in a Python port travelled to the reviewer as evidence about my
+TypeScript, and she ruled against a behaviour my predicate does not have. **Nobody in the chain
+could have caught it by reading carefully; only by running the cited function.**
+
+**So the rule has a mechanical half**: a verdict that cites a function must be reproducible BY
+THAT FUNCTION, and where two stores cannot see each other's code, the disagreement is settled by
+**running both over shared inputs in a shared row shape** — not by comparing descriptions. That
+artefact is `predicate-verdicts-side-by-side-17cb19fef347c6f3.json`, file sha256
+`17cb19fef347c6f34c618d0b92502d697a57ff76d1ad509ae047c29a74a59d01`: this predicate's verdicts over
+the exact twenty rows the port ran on, plus her four frames span by span. **80 runs compared, 60
+agree, 20 disagree — and every disagreement is the same shape**, the port saying LOOSE where this
+predicate says EXEMPT, every one a letter run sitting inside a frame token. The artefact asserts
+nothing about the port's source, which this side does not hold.
+
+## R742 — Her §2 widened to vr-12; the substitution imported, never copied
+
+**25 of 25 vr-12 walk scripts amended** under David's widening
+(`mentions-vr12-landing-a8df3489d1d55d88.json`, file sha256
+`a8df3489d1d55d8870bb4c1a8fac21b2c66194373ed3017c64215265fa095d3e`), same mechanical substitution,
+same per-row assertions, refusing on the diff rather than the total. **`quoteMentions` is IMPORTED
+from the vr-06 lander** — a second copy of this rule would have been R738 in the turn that
+registered it.
+
+**And importing it exposed a fault worth the entry**: the vr-06 lander called `run()` at module
+scope, so importing the function RE-RAN THE WHOLE LANDING — and with `--apply` on the importer's
+argv it would have applied the vr-06 substitution a second time and written a duplicate
+attribution event. **Caught because the fixture line printed twice.** An entry-point guard now
+gates it. *A module that acts on import cannot be reused, only re-triggered* — and the tell was a
+duplicated line of output, which is the cheapest possible signal and nearly invisible.
+
+**Her role finding recorded** (162nd): the same three letters are exempt as an option chip and
+quoted as a mention inside a walk script, and that is the role rule working rather than a
+contradiction — *"role is a property of what a string is doing, not of the characters or the field
+it sits in"* — the first place in the estate where one string does two jobs and takes two
+dispositions on purpose. vr-12 carries NO frame tokens, so every capital run there is a mention;
+the frame assertion is vacuously true on all 25 and is reported as vacuous rather than as a pass.
+
+## R743 — A guard that gates the whole object blames the last edit for everything it finds
+
+**David's formulation of the fix registered at R740, which is sharper than mine and supersedes it
+as the statement of the rule:**
+
+> **A guard that gates the whole object blames the last edit for everything it finds.**
+
+Refusing on the DIFF rather than the total turned a crash into three recorded pre-existing faults
+(`bank-vr-06-missing-word-15`, `-17`, `-40`). The totals-guard would have destroyed that finding
+twice over: it stops the run, so the other 39 rows never land, and it attributes a stem's
+long-standing ban-list hit to a walk-script edit that never touched it.

@@ -139,4 +139,12 @@ async function run() {
   await prisma.$disconnect();
 }
 
-run().catch((e) => { console.error(e); process.exit(1); });
+/**
+ * **ONLY WHEN THIS FILE IS THE ENTRY POINT.** `quoteMentions` is imported by the vr-12 lander, and
+ * a module-scope `run()` meant importing the function RE-RAN THE WHOLE LANDING — with `--apply`
+ * on the importer's argv, it would have applied the vr-06 substitution a second time and written
+ * a duplicate attribution event. Caught by the fixture printing twice.
+ */
+if ((process.argv[1] ?? '').endsWith('land-annie-161.ts')) {
+  run().catch((e) => { console.error(e); process.exit(1); });
+}
