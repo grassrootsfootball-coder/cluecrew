@@ -20898,3 +20898,83 @@ Refusing on the DIFF rather than the total turned a crash into three recorded pr
 (`bank-vr-06-missing-word-15`, `-17`, `-40`). The totals-guard would have destroyed that finding
 twice over: it stops the run, so the other 39 rows never land, and it attributes a stem's
 long-standing ban-list hit to a walk-script edit that never touched it.
+
+## R744 — The port crossing settles on bytes: the control agrees, and the divergence is one input
+
+**Both halves now exist and compare on the four declared string digests, each recomputed here
+before any verdict was read.** This side's half:
+`port-crossing-serving-half-c57dfe27b89f3503.json`, file sha256
+`c57dfe27b89f35039f6eb3c66e861daef653efd9156eaae9d26e2966ea60f1cc`.
+
+**THE CONTROL ANSWERS FIRST, and it is why the comparison means anything.** On S4 —
+*"OUT makes SHOUT, and shouting wakes the baby."* — **both implementations say FALSE on both
+runs.** This side refuses `OUT` and `SHOUT` exactly as the port does, so **the two do not agree
+by exempting everything**; 2 of 6 runs agree, 4 disagree, **and every disagreement is a run
+adjacent to a marker.**
+
+**THE DIVERGENCE IS IN `gapMarkerSpans`, NOT IN THE PREDICATE, and the port's own half carries
+the tell.** On S1 this side's `gapMarkerSpans` returns `[[18,25]]` — the whole frame, letters
+included — where the port's returns `[[20,23]]`, the underscores alone; `DE` at `[18,20)` is
+inside the first and outside the second, and **both predicates then answer their own span set
+correctly.** The port's artefact already prints `frameTokenSpans [[18,25]]` beside its
+`gapMarkerSpans [[20,23]]`: **it computes the whole-frame span and its predicate reads the
+narrower one.** Whichever store changes, the change is one function's return value, not the
+exemption logic. Stated as a diagnosis; this side holds no Python and rules on none.
+
+## R745 — A conformance suite that avoids the boundary proves agreement about the interior only
+
+**The finding that outlives the disagreement, and it indicts my own suite.** The eleven
+conformance cases crossed with the membership passed **11 of 11 in both stores** while the two
+implementations disagreed on **every frame in the corpus** — because not one case put a CAPITAL
+RUN ADJACENT TO A MARKER. The suite carried a symbol, a marker inside a sentence, and a stimulus
+word in a prompt: three points comfortably inside the rule, and nothing at the seam where letters
+meet underscores. **That seam is the entire class the ports differ on.**
+
+> **Cases are chosen at the seams a rule creates, never in the middle of what it obviously
+> covers. A suite that avoids the boundary proves agreement about the interior only — and the
+> interior is not where implementations diverge.**
+
+Eight boundary cases added and re-crossed
+(`field-dispositions-recross-for-cowork-237724c9b7fa44f0.json`, file sha256
+`237724c9b7fa44f0de610d3773e75e4349f7d4ff247dc556c7506fe27cc55b10`, **19 cases now**): letters
+before the blank, letters after it, a frame that OPENS with the blank, the trailing lone letter no
+run rule ever asks about, and **the control** — a capital run with no marker anywhere, which both
+stores must refuse or they agree by exempting everything. **The membership digest is unchanged at
+`2ae669ad…`**, correctly: the membership did not move, only the proof of it.
+
+## R746 — Retention lives inside the artefact being changed
+
+**Ruled: a retention STORE is a convenience beside the thing; the before-image belongs ON THE
+ROW**, where it travels with every copy, survives a directory clean, and cannot be separated from
+the value it explains. `content/retention/` keeps its job for whole superseded FILES; **a changed
+FIELD keeps its predecessor in the record that changed.**
+
+**65 before-images backfilled** onto the walk scripts amended under R739/R742, each asserted
+against its landing artefact's `after` before stamping — *a before-image written against a row
+that has moved on is a false record, which is worse than none* — and against the artefact's own
+declared digest for the `before`. They land as `_walkScriptBefore`, which **R715's underscore rule
+classifies as retention automatically**: the gate skips them, no repairer touches them, and no
+new disposition was needed. Verified after: 335 LIVE items still failing 0, dispositions still
+UNDECLARED 0.
+
+## R747 — A generated artefact declares its generator, and a check asserts they agree
+
+**Her §4 ruled and wired.** Six rows drifted from their generator in the authoring store with no
+record, and **nobody would know but for an unrelated search**. Her consequence is the operative
+one: **a generated bank that no longer matches its generator has two sources of truth and no way
+to say which is authoritative** — an amendment landed only in the bank is erased by the next
+generation, and one landed only in the generator never reaches the rows that serve.
+
+`pnpm check:generator-agreement`, wired into CI, asserts BOTH halves and calls `GENERATORS` — the
+generator's own exported registry — rather than re-deriving what it would produce (R738):
+
+- **DECLARATION**: it found **0 of 514 generated rows naming a generator.** They carried
+  `authoredBy: ai-draft:claude-fable-5` — a MODEL, not a generator, and a model cannot be re-run
+  to check a row. All 514 now declare
+  `generator:packages/db/prisma/generate-content.ts#GENERATORS['<type>']`.
+- **AGREEMENT**: **514 of 514 reproduce byte for byte**, including the R723 prompts, because that
+  amendment landed in the generator AND the rows — which is exactly the discipline her ruling
+  requires and the reason this side has no drift to report.
+
+Drift is REPORTED, never repaired: which side is authoritative is a ruling, and an amendment may
+legitimately live in the row.

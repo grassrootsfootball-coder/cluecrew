@@ -16,6 +16,7 @@ import {
   FIELD_DISPOSITIONS, NOTATION_BEARING_PATHS, capitalRunIsExempt,
   dispositionFor, gapMarkerSpans, isRetentionPath, isSymbolString,
 } from '../packages/core/src/index';
+import { assertFixture } from './lib/carried-fixture';
 import { deliver, stampedName } from './lib/export-destination';
 
 const REPO = join(__dirname, '..');
@@ -35,6 +36,25 @@ const CONFORMANCE = [
   { fn: 'gapMarkerSpans', args: ['Ade was the ___(2)___ runner.'], expect: gapMarkerSpans('Ade was the ___(2)___ runner.') },
   { fn: 'capitalRunIsExempt', args: ['stem', 'sentence', 'Ade was the ___(2)___ runner.', 12, 21], expect: capitalRunIsExempt('stem', 'sentence', 'Ade was the ___(2)___ runner.', 12, 21) },
   { fn: 'capitalRunIsExempt', args: ['stem', 'prompt', 'Which word joins with AIR to make one new word?', 22, 25], expect: capitalRunIsExempt('stem', 'prompt', 'Which word joins with AIR to make one new word?', 22, 25) },
+
+  /**
+   * **THE BOUNDARY CLASS, ADDED AFTER ELEVEN CASES PROVED AGREEMENT ABOUT THE INTERIOR ONLY**
+   * (R745). Not one of the original eleven carried a CAPITAL RUN ADJACENT TO A MARKER — the suite
+   * had a symbol, a marker inside a sentence, and a stimulus word, and nothing at the seam where
+   * letters meet underscores. That seam is the entire class the two implementations diverge on,
+   * so 11 of 11 passed while the ports disagreed on every frame in the corpus.
+   *
+   * Every case below sits ON the boundary: letters before the blank, letters after it, letters on
+   * both sides, and the trailing lone letter no run rule ever asks about.
+   */
+  { fn: 'gapMarkerSpans', args: ['The word stops at DE___VE.'], expect: gapMarkerSpans('The word stops at DE___VE.') },
+  { fn: 'gapMarkerSpans', args: ['See where the word splits: COM___E.'], expect: gapMarkerSpans('See where the word splits: COM___E.') },
+  { fn: 'gapMarkerSpans', args: ['The frame reads SH___.'], expect: gapMarkerSpans('The frame reads SH___.') },
+  { fn: 'gapMarkerSpans', args: ['Look at the frame ___AN.'], expect: gapMarkerSpans('Look at the frame ___AN.') },
+  { fn: 'capitalRunIsExempt', args: ['explanation', 'walkScript', 'The word stops at DE___VE.', 18, 20, '// DE — letters BEFORE the blank'], expect: capitalRunIsExempt('explanation', 'walkScript', 'The word stops at DE___VE.', 18, 20) },
+  { fn: 'capitalRunIsExempt', args: ['explanation', 'walkScript', 'The word stops at DE___VE.', 23, 25, '// VE — letters AFTER the blank'], expect: capitalRunIsExempt('explanation', 'walkScript', 'The word stops at DE___VE.', 23, 25) },
+  { fn: 'capitalRunIsExempt', args: ['explanation', 'walkScript', 'Look at the frame ___AN.', 21, 23, '// AN — a frame that OPENS with the blank'], expect: capitalRunIsExempt('explanation', 'walkScript', 'Look at the frame ___AN.', 21, 23) },
+  { fn: 'capitalRunIsExempt', args: ['explanation', 'walkScript', 'OUT makes SHOUT, and shouting wakes the baby.', 0, 3, '// THE CONTROL — a capital run with no marker anywhere; both stores must say false, or they agree by exempting everything'], expect: capitalRunIsExempt('explanation', 'walkScript', 'OUT makes SHOUT, and shouting wakes the baby.', 0, 3) },
 ];
 
 const payload = {
@@ -52,6 +72,7 @@ const payload = {
   },
   conformanceCases: {
     why: 'run your implementation against these and it either agrees or it does not — a membership that cannot be verified on arrival is prose (the fixture discipline, R721, applied to a crossing).',
+    THE_BOUNDARY_RULE: 'A CONFORMANCE SUITE THAT AVOIDS THE BOUNDARY PROVES AGREEMENT ABOUT THE INTERIOR ONLY. The first eleven cases here passed 11 of 11 while the two implementations disagreed on every frame in the corpus, because not one case put a capital run ADJACENT TO A MARKER — the only place they differ. Cases are chosen at the seams a rule creates, never in the middle of what it obviously covers.',
     cases: CONFORMANCE,
   },
   counts: Object.entries(FIELD_DISPOSITIONS).reduce((a: Record<string, number>, [, v]) => ({ ...a, [v]: (a[v] ?? 0) + 1 }), {}),

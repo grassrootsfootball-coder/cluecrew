@@ -354,6 +354,13 @@ jobs:
       - name: Outstanding import refusals (a refusal nobody received is not a refusal)
         run: pnpm check:import-refusals
 
+      # A GENERATED ARTEFACT DECLARES ITS GENERATOR, AND THIS ASSERTS THEY AGREE (R747). Six rows
+      # drifted in the authoring store with no record and nobody would have known but for an
+      # unrelated search: a generated bank that no longer matches its generator has two sources of
+      # truth and no way to say which is authoritative.
+      - name: Generator agreement (declared, and reproducing)
+        run: pnpm check:generator-agreement
+
       # A RETURN'S AUTHORED WORDINGS ARE DECISIONS, AND NOTHING ASSERTED THEY REACHED THE STORE.
       # 9 of 13 never did; the most carried hint in the product served a string she had replaced,
       # and she reasoned in a later return from her own wording as though it were in force. Whole
