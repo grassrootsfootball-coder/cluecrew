@@ -72,6 +72,7 @@ function run() {
   const control = strings.find((s) => s.id === 'S4')!;
   const payload = {
     kind: 'port-crossing-serving-half',
+    RECROSS: 'SECOND CROSSING. Renamed, with the findings digest inline below and the file digest in the filename. The subtree spec is corrected under R752 — subtreeKeys now names this document\'s own top-level keys, so no candidate readings are needed.',
     what: "This side's capitalRunIsExempt over S1–S4, span by span, from the TypeScript. The other half of the evidence.",
     comparedOn: 'the four declared string digests and no other bytes — each recomputed here from the text before any verdict was taken.',
     theirHalf: { file: 'port-crossing-cowork-half-for-code.json', sha256: THEIRS_SHA },
@@ -105,9 +106,9 @@ function run() {
   // if any named key is not present, so an alias fails here rather than at the far door.
   const artefact = { ...payload, ...findingsDigest(payload, ['THE_CONTROL_ANSWERS_FIRST', 'theSummary', 'THE_DIVERGENCE_IS_IN_gapMarkerSpans_NOT_IN_THE_PREDICATE', 'strings']) };
   const json = JSON.stringify(artefact, null, 1) + '\n';
-  const name = stampedName('port-crossing-serving-half', sha256(json).slice(0, 16), 'json');
+  const name = stampedName('port-crossing-serving-half-recross', sha256(json).slice(0, 16), 'json');
   writeFileSync(join(REPO, 'content/exports', name), json);
-  deliver(join(REPO, 'content/exports', name), 'port-crossing-serving-half');
+  deliver(join(REPO, 'content/exports', name), 'port-crossing-serving-half-recross');
   console.log(`runs ${allRuns.length}; agree ${payload.theSummary.agree}; disagree ${payload.theSummary.disagree}; control agrees ${payload.THE_CONTROL_ANSWERS_FIRST.agree}`);
 }
 

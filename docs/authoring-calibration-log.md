@@ -21133,3 +21133,66 @@ zero disagreements.** So the sidecar is the only verification surface here and i
 guard on it — `pnpm check:staged-digests`, which asserts the sidecar and explicitly does NOT check
 the name, saying so on every run. 126 older artefacts carry no sidecar: unverifiable, which is a
 different thing from corrupted, and reported as its own line.
+
+## R755 — The exempted population, walked: the split is by renderer, not by quality
+
+Annie's accessibility flag ruled open on channel. **Nobody rules a remedy until the population is
+known**, so every string in the corpus claiming a notation exemption was walked and reported per
+row. It calls the gate's own walker (`textsFrom`), the disposition membership and the two exemption
+predicates themselves; the one thing it cannot get from a function is which RENDERER a path
+reaches, so the render map is declared with the file and line each entry was read from, and any
+`(engine, path)` not in it reports **UNKNOWN, never "none"** (R98). The family→engine map is read
+out of `play-runner.tsx` rather than hand-kept (R57) — `cloze` reuses the word-web component, and a
+hand-written map would have put cloze gaps on an unread renderer and reported UNKNOWN for **the one
+class that does name its gaps**.
+
+**289 exempt strings across 1,037 items, 187 LIVE.** Not 349, and the instrument was not tuned
+until it agreed. The predicate is stated instead: a string where the exemption is LOAD-BEARING —
+it carries a run the shouted-capitals rule would otherwise fail, or an underscore marker that would
+otherwise be screened. The first run returned **3,470**, of which 3,376 were option values, because
+`notationExempt` is true of any single-token value including `cat`: **exempt in the sense that a
+locked door is keeping out somebody who was not coming.** Counts under four readings are crossed so
+the 349 can be located by its predicate rather than by its size (R591).
+
+**And the answer is not uniform, which is why walking it mattered.** Reporting "none exists"
+corpus-wide from the forty would have been false:
+
+| class | rendered to a child | substitute accessible text |
+|---|---|---|
+| GAP_MARKER, cloze carrier | 16 | **16 name themselves** — `splitCarrierAtGaps` hides the marker and adds "gap N" (R668) |
+| GAP_MARKER, `quotes[].text` | 0 — no child surface renders it | n/a |
+| FRAME | 60 | **0** |
+| OPTION_VALUE | 195 | 0, and **not one carries an underscore** — every one is ordinary letters |
+
+**The class her flag is about is 60 rows, 51 LIVE, and it is one question type.** Every rendered
+string whose exempt token contains characters that do not speak is `vr-06-missing-word`: the forty
+`stem.sentence` frames already held, and twenty `explanation.walkScript` frames on the same rows.
+Nothing in maths, NVR, comprehension or SpaG is in it. **The split is not by quality and not by
+district — it is by which renderer the path reaches, and exactly one renderer in the corpus was
+ever built to name a marker.** Membership only; no remedy is proposed and none is implied.
+
+## R756 — A command that cannot fail has not run
+
+`npx tsc --noEmit -p tsconfig.json | grep …; echo "typecheck ok"` — there is no root
+`tsconfig.json`. tsc emitted TS5058 and exited non-zero; the grep filtered it out, the pipeline's
+status was the grep's, and the unconditional `echo` supplied a verdict **derived from nothing**.
+Two real errors sat behind it, both introduced by the edit that turn, and both found only when the
+repo's own `pnpm typecheck:scripts` was run instead.
+
+**The fault is not the missing file — it is that the sentence "typecheck ok" was written by me
+rather than by the command.** A verdict must be the exit status of the thing it describes. So:
+invoke the repo's NAMED script, never an ad-hoc reconstruction of it (the named one is where the
+config is wired, which is R57's lesson in shell form); never `echo` a verdict after a pipeline, as
+`|` discards the status of everything but the last stage; and when a command is expected to print
+nothing on success, that silence is only evidence if the command could have spoken.
+
+**The family, now four deep.** R60's zero, R61's absent population, R87's silent no-op and R80's
+wrong clock are all instruments that say nothing while appearing to say something. This one is
+worse in one specific way and better in another: the verdict was not the instrument's at all, so no
+discipline aimed at the instrument could have caught it — and it is the cheapest to prevent, since
+the guard is to stop writing the answer down yourself.
+
+**And R754 stands as the other self-finding**: `restampToContent` keyed its pattern on the family
+LABEL and returned silently when label and filename disagreed — **R731 re-entering through the
+function built to prevent it**, by R87's route. Both faults this turn were mine, both were in
+verification rather than in content, and both were found by running something a second time.
