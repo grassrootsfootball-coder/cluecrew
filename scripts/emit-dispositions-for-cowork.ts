@@ -37,9 +37,9 @@ const CONFORMANCE = [
   { fn: 'capitalRunIsExempt', args: ['stem', 'prompt', 'Which word joins with AIR to make one new word?', 22, 25], expect: capitalRunIsExempt('stem', 'prompt', 'Which word joins with AIR to make one new word?', 22, 25) },
 ];
 
-const artefact = {
-  kind: 'field-dispositions-for-cowork',
-  what: 'THE membership, in a form to import rather than read. One membership, both stores.',
+const payload = {
+  kind: 'field-dispositions-recross-for-cowork',
+  what: 'THE membership, in a form to import rather than read. One membership, both stores. RE-CROSSED under a new name: the first crossing never arrived — the desk holds 161 files and none is it.',
   why: 'Cowork\'s screen re-derives child/quotation/staff by a leaf-name rule of its own. Two implementations agreeing proves only that they agree — this store deleted its own second implementation two turns ago (R717) and this is the other half of that repair.',
   sourceOfTruth: { file: 'packages/core/src/field-dispositions.ts', note: 'this artefact is GENERATED from the live constants, never transcribed — a copied membership is a second implementation wearing a data hat.' },
   theMembership: FIELD_DISPOSITIONS,
@@ -56,8 +56,39 @@ const artefact = {
   },
   counts: Object.entries(FIELD_DISPOSITIONS).reduce((a: Record<string, number>, [, v]) => ({ ...a, [v]: (a[v] ?? 0) + 1 }), {}),
 };
+/**
+ * **THE DIGEST INLINE, HONESTLY** (David asked for it, and a file cannot contain its own digest —
+ * writing the hash in changes the document). So what IS inline is the digest of the MEMBERSHIP
+ * PAYLOAD: a canonical serialisation of the membership and its rules, hashed before the envelope
+ * is built. That value can be recomputed on arrival over the same subtree and is what an importer
+ * actually needs to check. The FILE digest travels where it must — the staging line and the
+ * .sha256 sidecar.
+ */
+const canonical = (o: unknown): string => {
+  if (o === null || typeof o !== 'object') return JSON.stringify(o);
+  if (Array.isArray(o)) return `[${o.map(canonical).join(',')}]`;
+  return `{${Object.keys(o as object).sort().map((k) => `${JSON.stringify(k)}:${canonical((o as Record<string, unknown>)[k])}`).join(',')}}`;
+};
+const membershipSha256 = sha256(canonical({ theMembership: payload.theMembership, theRulesThatAreNotLists: payload.theRulesThatAreNotLists }));
+const artefact = {
+  ...payload,
+  membershipSha256,
+  howToCheckThisOnArrival: {
+    subtree: '{theMembership, theRulesThatAreNotLists}',
+    /**
+     * THE CONVENTION IS NAMED BECAUSE THE DEFAULT IS WRONG. Checking this on arrival with
+     * Python's default json.dumps FAILS — ensure_ascii=True escapes the em dashes and
+     * apostrophes in the rule text and the digest moves. I raised exactly that false alarm
+     * against my own artefact before naming the spec, which is the fault Cowork already
+     * recorded once: "six false alarms from my instrument, about a file that was intact."
+     */
+    spec: 'sha256 over json.dumps(subtree, sort_keys=True, separators=(",",":"), ensure_ascii=False).encode("utf-8") — Cowork\'s own declared digestSpec, restated so the default cannot bite.',
+    verifiedBothWays: 'reproduced here under that spec before crossing; it does NOT reproduce under ensure_ascii=True, and that is a property of the convention rather than of the bytes.',
+    fileDigest: 'in the staging line and the .sha256 sidecar — a file cannot carry its own.',
+  },
+};
 const json = JSON.stringify(artefact, null, 1) + '\n';
-const name = stampedName('field-dispositions-for-cowork', sha256(json).slice(0, 16), 'json');
+const name = stampedName('field-dispositions-recross-for-cowork', sha256(json).slice(0, 16), 'json');
 writeFileSync(join(REPO, 'content/exports', name), json);
-deliver(join(REPO, 'content/exports', name), 'field-dispositions-for-cowork');
-console.log(`paths: ${Object.keys(FIELD_DISPOSITIONS).length}; conformance cases: ${CONFORMANCE.length}`);
+deliver(join(REPO, 'content/exports', name), 'field-dispositions-recross-for-cowork');
+console.log(`paths: ${Object.keys(FIELD_DISPOSITIONS).length}; conformance cases: ${CONFORMANCE.length}; membershipSha256 ${membershipSha256}`);

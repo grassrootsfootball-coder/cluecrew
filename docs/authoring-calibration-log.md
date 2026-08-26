@@ -20556,3 +20556,57 @@ rule exists to prevent, arriving as a tidy-up.
 `5dbe34a6…1e3f08`): of 80 checks, 2 now carry fixtures, 10 carry synthetic/planted canaries, 4
 anchor to a constant or function name, **64 have no self-test**. The list is the queue, and the
 trigger is a crossing rather than a calendar.
+
+## R726 — Every figure from an unfixtured instrument crosses saying so, marked at the door
+
+**Her clause and David's wiring instruction together: the mark goes INTO THE EMISSION, never into
+the covering message — "a mark that depends on someone remembering to write it is the class we
+just closed."** Wired in `deliver()`, the one door every artefact passes, and applied BEFORE the
+bytes are copied, so **the mark is inside the file the digest is taken over and cannot be
+separated from the figures it qualifies**. Whether an emitter is fixtured is read from its own
+source (does it call `assertFixture`), not declared by it. It deliberately OVER-MARKS: a
+membership crossing is not a check's figure, but marking it costs a reader one honest line while
+missing a genuine unfixtured figure costs them a wrong belief.
+
+**The mechanism broke a different rule on its first run, and the fix is at the door too**:
+marking rewrote the file AFTER `stampedName` had hashed it, so the name claimed a content hash
+the bytes no longer had — **R88's rule broken by the mechanism built to honour Annie's**. The
+stamp is now RE-DERIVED from the marked bytes and the file renamed automatically, printing
+`restamped →` when it happens. A name that disagrees with its own content is exactly what this
+store keeps closing.
+
+## R727 — A replacement lands before its predecessor leaves
+
+**Cowork's migration order, ruled by David and superseding the instruction it answers**:
+membership crosses → the screen rewires to import → **the rewired screen runs against its carried
+fixture** → and only then does the re-derivation go. *A replacement lands before its predecessor
+leaves.* **The conformance cases are what make that provable, which is why they matter more than
+the paths** — without them the middle step is a claim.
+
+**Owned in the same entry: my own R717 repair did not follow this order.** I deleted
+`check:every-string-field`'s `DISPOSITIONS` map and its `isScreened` predicate in the same edit
+that added the import, and verified afterwards. It happened to work; the order says it should
+have been provable before the old path went. The rule is registered against my own precedent, not
+only against Cowork's plan.
+
+## R728 — The membership re-crosses; a digest is inline only where it CAN be
+
+**The first crossing never arrived — the desk holds 161 files and none is it.** Re-crossed as
+`field-dispositions-recross-for-cowork-44dd210e1a213084.json`, file sha256
+`44dd210e1a2130847190f034cf0005f83c413ef42b88b9b231dff9e5526db498`, 115 paths generated from the
+live constants, eleven conformance cases, and the first artefact to carry the R726 mark.
+
+**"Digest inline" resolved honestly**: a file cannot contain its own digest, so what is inline is
+the digest of the MEMBERSHIP PAYLOAD — `membershipSha256` over a canonical serialisation of
+`{theMembership, theRulesThatAreNotLists}`, recomputable on arrival over the same subtree, which
+is the value an importer actually needs. The file digest travels where it must, in the staging
+line and the sidecar.
+
+**AND THE CONVENTION IS NAMED, because the default is wrong.** Checking that digest with Python's
+default `json.dumps` FAILS: `ensure_ascii=True` escapes the em dashes and apostrophes in the rule
+text and the digest moves. **I raised exactly that false alarm against my own artefact before
+naming the spec** — the fault Cowork has already recorded once as *"six false alarms from my
+instrument, about a file that was intact."* The artefact now states
+`sort_keys=True, separators=(",",":"), ensure_ascii=False, UTF-8` — Cowork's own declared
+digestSpec, restated so the default cannot bite — and records that it reproduces under that spec
+and not under the other, *"a property of the convention rather than of the bytes."*

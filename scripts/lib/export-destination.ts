@@ -127,10 +127,71 @@ export function stampedName(base: string, sourceHash: string, ext: string): stri
  * read by mistake. Files sharing this file's hash (a pack's .html/.pdf/
  * -decisions.json siblings) are KEPT: they are the current set, not stale.
  */
-export function deliver(sourcePath: string, family?: string): string {
+
+/**
+ * **EVERY FIGURE FROM AN UNFIXTURED INSTRUMENT CROSSES SAYING SO** (Annie's clause, David's
+ * ruling, 2026-08-25 — R726).
+ *
+ * Her clause and his wiring instruction together: the mark goes **into the emission, not into the
+ * covering message**, because *a mark that depends on someone remembering to write it is the
+ * class we just closed*. So it is applied HERE, at the one door every artefact passes, and it is
+ * applied BEFORE the bytes are copied — so the mark is inside the file the digest is taken over
+ * and cannot be separated from the figures it qualifies.
+ *
+ * The emitting script is read from `process.argv[1]`, and "fixtured" means that script calls
+ * `assertFixture` — the carried-fixture path (R721). **It deliberately OVER-MARKS**: a membership
+ * crossing is not a check's figure, but marking it costs a reader one honest line while missing a
+ * genuine unfixtured figure costs them a wrong belief.
+ *
+ * Idempotent: a file already carrying the key is left alone.
+ */
+function markIfUnfixtured(sourcePath: string): void {
+  if (!sourcePath.endsWith('.json')) return; // html/pdf siblings carry the JSON's mark by pairing
+  const emitter = process.argv[1] ?? '';
+  let emitterSource = '';
+  try { emitterSource = readFileSync(emitter, 'utf8'); } catch { /* not a readable script */ }
+  const fixtured = /assertFixture\(/.test(emitterSource);
+  let parsed: Record<string, unknown>;
+  try { parsed = JSON.parse(readFileSync(sourcePath, 'utf8')) as Record<string, unknown>; }
+  catch { return; } // not an object artefact; nothing to mark
+  if (typeof parsed !== 'object' || parsed === null || Array.isArray(parsed)) return;
+  if ('instrumentProvenance' in parsed) return;
+  parsed.instrumentProvenance = fixtured
+    ? {
+      emittedBy: basename(emitter),
+      carriedFixture: true,
+      meaning: 'the emitting instrument proved itself against carried cases — including at least one clean case caught by nothing — before it produced these figures (R721).',
+    }
+    : {
+      emittedBy: basename(emitter),
+      carriedFixture: false,
+      MARK: 'FROM AN UNFIXTURED INSTRUMENT',
+      meaning: 'this emitter carries no fixture, so nothing in this run proves it can find what it claims to find or stay silent on what is clean. Read its figures accordingly (Annie\'s clause, R726).',
+      remedy: 'the emitter earns a carried fixture before its next emission crosses (R725).',
+    };
+  writeFileSync(sourcePath, `${JSON.stringify(parsed, null, 1)}\n`);
+}
+
+
+/** Re-derives a stamped name from the file's ACTUAL bytes, renaming if the mark changed them. */
+function restampToContent(sourcePath: string, family?: string): string {
+  if (!family || !sourcePath.endsWith('.json')) return sourcePath;
+  const current = basename(sourcePath);
+  const stamped = new RegExp(`^${family.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}-([0-9a-f]{16})\\.json$`).exec(current);
+  if (!stamped) return sourcePath;
+  const actual = createHash('sha256').update(readFileSync(sourcePath)).digest('hex').slice(0, 16);
+  if (actual === stamped[1]) return sourcePath;
+  const renamed = join(dirname(sourcePath), `${family}-${actual}.json`);
+  renameSync(sourcePath, renamed);
+  console.log(`  restamped → ${basename(renamed)} (the mark changed the bytes; the name now agrees with them)`);
+  return renamed;
+}
+
+export function deliver(sourcePathIn: string, family?: string): string {
+  let sourcePath = sourcePathIn;
   mkdirSync(OUTBOUND_DIR, { recursive: true });
-  const name = basename(sourcePath);
-  const target = join(OUTBOUND_DIR, name);
+  let name = basename(sourcePath);
+  let target = join(OUTBOUND_DIR, name);
   if (family) {
     // The 16-hex content hash this delivery belongs to (absent for a legacy
     // date-named file, in which case nothing is kept as "same version").
@@ -173,6 +234,17 @@ export function deliver(sourcePath: string, family?: string): string {
       console.log(`  superseded → RETAINED (tracked) content/retention/${existing}.superseded`);
     }
   }
+  /**
+   * THE MARK GOES IN BEFORE THE STAMP IS TRUE OF THE BYTES (R726, corrected on its first run).
+   * Marking rewrote the file AFTER `stampedName` had hashed it, so the name claimed a content
+   * hash the bytes no longer had — R88's rule broken by the mechanism built to honour a different
+   * one. The stamp is therefore RE-DERIVED from the marked bytes and the file renamed to match,
+   * here, automatically: a name that disagrees with its own content is exactly the fault this
+   * store keeps closing.
+   */
+  markIfUnfixtured(sourcePath);
+  const marked = restampToContent(sourcePath, family);
+  if (marked !== sourcePath) { sourcePath = marked; name = basename(sourcePath); target = join(OUTBOUND_DIR, name); }
   copyFileSync(sourcePath, target);
   /*
    * **A SENDING REPORT SAYS STAGED WITH A HASH; THE RECEIVING STORE REPORTS ARRIVAL BY NAMING THE
