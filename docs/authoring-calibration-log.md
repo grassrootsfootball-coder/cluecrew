@@ -22072,3 +22072,50 @@ this one, and the absence of anything that could evidence it is the finding, not
 What this does not retire: the comparisons themselves were real, and every fault they found on
 THESE copies is real on these copies. What retires is the labelling — those findings are about this
 machine until something crosses that says otherwise.
+
+## R795 — The seven against the shelf: six confirmed, one outside its reach
+
+Her 173rd, obeyed before anyone quotes a rate: **a corrected derivation shares the parser's
+assumptions and a shelf does not.** My seven came from filenames. Checked against her outputs
+manifest by full-length digest (`check:manifest-diff`, not names):
+
+| | |
+|---|---|
+| derived ceiling | **7** |
+| **CONFIRMED never arrived** — named in her manifest, absent here by digest | **6** — 59, 60, 61, 63, 66, 68 |
+| **UNKNOWN — outside the shelf's reach** | **1** — 80 |
+
+**The population shrank on verification again. No exception to her rule.**
+
+**80 drops for a reason worth keeping distinct from "it arrived".** Her outputs manifest names no
+return above 68, so it says nothing about 80 either way. My derivation put it in the set because no
+file exists here; the shelf cannot corroborate that. **UNKNOWN, not lost, and not found.**
+
+**And the loss rate is quotable only over the shelf's coverage**: 6 of the 61 returns she catalogued
+between 8 and 68 never arrived. Outside 8–68 there is no shelf and therefore no rate — quoting one
+across the whole series would be the ceiling-as-figure fault this check exists to avoid.
+
+**One more thing the manifest found that no sequence check could**: `annie-merge-ack-and-gap-yard-
+note.md`, a seventh never-arrived artefact carrying no ordinal. **A sequence check finds gaps in a
+NUMBERING; a manifest finds absences in a SET, and only the second can see the unnumbered.** That is
+the standing limit of the ordinal method, and it is why the shelf outranks it rather than confirming
+it.
+
+## R796 — Enumerate what the parser could not read; a gap and an unresolvable name are the same hole
+
+Registered with the sequence rule, because it is what makes a gap set readable rather than merely
+short.
+
+**An unresolvable filename and an absent ordinal produce an identical hole in a sequence, and only
+one of them is a finding.** So the re-derivation enumerated every return-shaped file whose ordinal
+failed to resolve — **14, all legitimately a different series** (`eng003-*`, `approval-batch`,
+`axes-amended`) — rather than letting them fall through as gaps. That enumeration is what let the
+seven be read as seven; without it the number is a mixture of two kinds of thing under one label.
+
+The full form of the sequence rule as it now stands:
+1. **Resolve the whole series, not the half the parser can read** (R788 — 125 of 197 files were being
+   filed as "a named series rather than the main sequence", and they were the sequence).
+2. **Enumerate what still fails to resolve**, and say what it is (this rule).
+3. **Report the floor as a bound**, never as a start — below the lowest ordinal is UNKNOWN.
+4. **Re-derive, never adjust** (R793) — an adjustment inherits every blind spot of the run it adjusts.
+5. **Settle against a shelf, not a parse** (R795) — and only within the shelf's own coverage.
