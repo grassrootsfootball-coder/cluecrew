@@ -21901,3 +21901,50 @@ it changes — **a merge on one field, never a wholesale replace** (CLAUDE.md). 
 correction there is nothing to carry back: one source fault is reported and left unrepaired, because
 Cowork authors item content and this store does not invent the wording. That one is `ENG-007-LP-06`,
 the source of the held position.
+
+## R787 — Checking idempotence by re-running destroyed the record of what it verified
+
+My covering line named `914fe494…`; the file that arrived was `0ad343fc…`, matching its own sidecar
+and saying **"DRY RUN — nothing written, landed 0"** about a landing that had happened.
+
+**The covering line was right and the door was wrong.** After applying, I ran the lander again in
+dry-run to prove idempotence — the good instinct, and R599 exists because re-running catches what a
+single run cannot. But `deliver()` supersedes within a FAMILY, the verification run shared the
+family, and so **the proof retired the evidence.** The applied record went to retention as
+`.superseded` and the far side received the verification instead. Nothing was lost — retention held
+it byte-identical and it is restored — but for one exchange the door asserted that a landing had not
+happened.
+
+**It is the frozen-number class wearing a filename.** A number quoted from an earlier state goes
+stale silently; so does a FILENAME, and worse, because a filename looks like an address rather than
+an observation. **A digest in a covering line is a claim about which emission is current, and it
+decays the moment anything re-emits** — including something whose whole purpose is to change
+nothing.
+
+**Fixed at the mechanism: the MODE IS PART OF THE FAMILY.** `…-landing` and `…-landing-dry-run` are
+separate families, so a verification can never supersede an applied record. Canaried: the dry run
+now stages beside the applied artefact and leaves it standing. **Current emission of the settled
+landing: `914fe494d95eddb8fdc5e6e93b859146ecb0541ba22bf22ee53d11a8f3d7f270`, mode APPLIED, 3 column
+values and 7 retention keys** — that is the record; `0ad343fc…` is a verification of it and not a
+report of it.
+
+## R788 — The sequence check was blind to the half of the series that carries the returns
+
+Cowork's detector point is right and this store had it half-built. `check:return-sequence` parsed
+ordinals up to SEVENTY and had no `hundredand` case, so **125 files of 197 fell into "unnumbered (a
+named series rather than the main sequence)" — including every return since the hundredth.** It
+computed gaps over the 66 it could read and reported six.
+
+**Reading the whole series gives eight.** `59, 60, 61, 63, 66, 68, 80, 135` — and **80 and 135 were
+invisible to the instrument**, not absent from it. After the fix: 157 of 197 carry a resolved
+ordinal, and the 10 that remain unnumbered are genuinely a different series (`eng003-*`,
+`approval-batch`).
+
+**The tell was in the check's own wording.** *"a named series rather than the main sequence"* was
+written to explain the leftovers, and the leftovers WERE the sequence. **A sentence that explains
+away a large remainder is worth reading as a hypothesis rather than a description** — 125 of 197 is
+not a remainder, and the proportion alone should have been the question.
+
+**Below 8 stays UNKNOWN**, not absent: nothing on this disk says the series starts at 1, and the
+check prints that bound rather than implying a clean floor. Reported, never repaired — only she can
+send a return, and only she can say whether a number was ever used.

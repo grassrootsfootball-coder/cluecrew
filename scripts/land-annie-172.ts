@@ -184,9 +184,17 @@ async function run() {
   };
   const artefact = { ...payload, ...findingsDigest(payload, ['THE_LEAKS_NON_OPERATION', 'counts', 'LANDING_MANIFEST', 'rows']) };
   const json = JSON.stringify(artefact, null, 1) + '\n';
-  const name = stampedName('annie-172-landing', sha(json).slice(0, 16), 'json');
+  /**
+   * **THE MODE IS PART OF THE FAMILY** (R787). A dry run emitted after an applied run RETIRED THE
+   * APPLIED RECORD: `deliver()` supersedes within a family, the verification re-run shared the
+   * family, and the artefact that reached the far side said "DRY RUN — nothing written, landed 0"
+   * about a landing that had happened. **Checking idempotence by re-running destroyed the evidence
+   * of the thing being checked.** Separate families cannot collide.
+   */
+  const family = APPLY ? 'annie-172-landing' : 'annie-172-landing-dry-run';
+  const name = stampedName(family, sha(json).slice(0, 16), 'json');
   writeFileSync(join(REPO, 'content/exports', name), json);
-  deliver(join(REPO, 'content/exports', name), 'annie-172-landing');
+  deliver(join(REPO, 'content/exports', name), family);
   console.log(`${APPLY ? 'APPLIED' : 'DRY RUN'} — positions ${rows.length}: ${payload.counts.alreadyHerChoice} already hers, ${payload.counts.replaced} replaced, ${payload.counts.added} added, ${payload.counts.HELD} HELD`);
   await prisma.$disconnect();
 }

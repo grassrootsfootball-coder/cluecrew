@@ -115,9 +115,17 @@ async function run() {
   };
   const artefact = { ...payload, ...findingsDigest(payload, ['counts', 'LANDED', 'rows']) };
   const json = JSON.stringify(artefact, null, 1) + '\n';
-  const name = stampedName('settled-option-fields-landing', createHash('sha256').update(json).digest('hex').slice(0, 16), 'json');
+  /**
+   * **THE MODE IS PART OF THE FAMILY** (R787). A dry run emitted after an applied run RETIRED THE
+   * APPLIED RECORD: `deliver()` supersedes within a family, the verification re-run shared the
+   * family, and the artefact that reached the far side said "DRY RUN — nothing written, landed 0"
+   * about a landing that had happened. **Checking idempotence by re-running destroyed the evidence
+   * of the thing being checked.** Separate families cannot collide.
+   */
+  const family = APPLY ? 'settled-option-fields-landing' : 'settled-option-fields-landing-dry-run';
+  const name = stampedName(family, createHash('sha256').update(json).digest('hex').slice(0, 16), 'json');
   writeFileSync(join(REPO, 'content/exports', name), json);
-  deliver(join(REPO, 'content/exports', name), 'settled-option-fields-landing');
+  deliver(join(REPO, 'content/exports', name), family);
   console.log(`${APPLY ? 'APPLIED' : 'DRY RUN'} — in scope ${vals.length}: landed ${outcome.landed} column, ${outcome.retentionIntoContent} retention, already ${outcome.alreadyPresent}, no-column ${outcome.notAColumn}, unchosen ${outcome.noMatchingOptionText}`);
   await prisma.$disconnect();
 }

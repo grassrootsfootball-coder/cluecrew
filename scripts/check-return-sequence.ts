@@ -30,20 +30,40 @@ const TEENS = ['tenth', 'eleventh', 'twelfth', 'thirteenth', 'fourteenth', 'fift
   'seventeenth', 'eighteenth', 'nineteenth'];
 const TENS_ORDINAL: Record<number, string> = {
   20: 'twentieth', 30: 'thirtieth', 40: 'fortieth', 50: 'fiftieth', 60: 'sixtieth', 70: 'seventieth',
+  80: 'eightieth', 90: 'ninetieth',
 };
 const TENS_PREFIX: Record<number, string> = {
-  20: 'twenty', 30: 'thirty', 40: 'forty', 50: 'fifty', 60: 'sixty', 70: 'seventy',
+  20: 'twenty', 30: 'thirty', 40: 'forty', 50: 'fifty', 60: 'sixty', 70: 'seventy', 80: 'eighty', 90: 'ninety',
 };
 
 /** number -> the exact word this project's filenames use. Built, never hand-listed (R57). */
+/**
+ * **THE PARSER WAS BLIND TO THE HALF OF THE SERIES THAT CARRIES THE RETURNS** (R788). It stopped at
+ * SEVENTY and had no `hundredand` case, so every return from the hundredth on fell into
+ * "unnumbered (a named series rather than the main sequence)" — 125 files of 197, including every
+ * return of the last several months. The check then computed gaps over the 66 it could read and
+ * reported six. **Reading the whole series gives eight: 80 and 135 were invisible.**
+ *
+ * This is R60's third question in its most literal form — the check was reading a SUBSET and
+ * calling the remainder a different series. The phrase "a named series rather than the main
+ * sequence" is the tell: it was written to explain the leftovers, and the leftovers were the
+ * sequence.
+ */
 function ordinals(): Map<string, number> {
   const m = new Map<string, number>();
-  for (let n = 1; n <= 9; n++) m.set(UNITS[n] as string, n);
-  for (let n = 10; n <= 19; n++) m.set(TEENS[n - 10] as string, n);
-  for (const tens of [20, 30, 40, 50, 60, 70]) {
-    m.set(TENS_ORDINAL[tens] as string, tens);
-    for (let u = 1; u <= 9; u++) m.set(`${TENS_PREFIX[tens]}${UNITS[u]}`, tens + u);
+  const under100 = new Map<string, number>();
+  for (let n = 1; n <= 9; n++) under100.set(UNITS[n] as string, n);
+  for (let n = 10; n <= 19; n++) under100.set(TEENS[n - 10] as string, n);
+  for (const tens of [20, 30, 40, 50, 60, 70, 80, 90]) {
+    const word = TENS_ORDINAL[tens];
+    const prefix = TENS_PREFIX[tens];
+    if (word) under100.set(word, tens);
+    if (prefix) for (let u = 1; u <= 9; u++) under100.set(`${prefix}${UNITS[u]}`, tens + u);
   }
+  for (const [w, n] of under100) m.set(w, n);
+  // The hundreds, which the returns have used since the hundredth and which nothing parsed.
+  m.set('hundredth', 100);
+  for (const [w, n] of under100) m.set(`hundredand${w}`, 100 + n);
   return m;
 }
 
