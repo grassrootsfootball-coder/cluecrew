@@ -22025,3 +22025,50 @@ R579 and R788 both reached for from the receiving end and could only ever recons
 fact. This is the same guard moved to the moment of arrival, where it costs one word.
 
 Received and acknowledged to date: **return 172**, verified at `d8350f9f…`, landed.
+
+## R793 — Re-derived, not adjusted: seven gaps, and 135 was latency
+
+Ruled: **a correction derived from a faulty instrument is re-derived, never adjusted.** The desk's
+"four, not six" was its faulty parser one correction downstream; re-derived with a fixtured one, its
+gap set is EMPTY across 108–172. So I re-derived mine rather than subtracting 135 from it.
+
+**Re-derived set: 59, 60, 61, 63, 66, 68, 80. Seven.**
+
+**135 is off the list, and not because my instrument was wrong about it.**
+`annie-hundredandthirtyfifth-return.md` is on this disk, **dated today at 22:18**, titled *"verified,
+reconciled, closed"*. It was genuinely absent when measured and has since arrived — **R760 exactly:
+a crossing reported absent and later arriving is a latency fact, not a loss.** The one gap I shared
+with everyone turned out to be the one that was merely late.
+
+**80 survives every test.** No file in any spelling, by name or by content, and the returns either
+side of it are present. So does 59–61, 63, 66, 68.
+
+**What the re-derivation checked, so the number is trustworthy rather than merely smaller:** the
+parser was exercised on the disputed names themselves (`eightieth` → 80, `hundredandthirtyfifth` →
+135); every return-shaped file that FAILS to resolve was enumerated rather than counted as a gap —
+14, all legitimately a different series (`eng003-*`, `approval-batch`, `axes-amended`); and the
+range floor is reported as a bound, not a start. **An unresolvable filename and an absent ordinal
+produce the same hole in a sequence, and only one of them is a finding** — that is the specific way
+a sequence check goes wrong, and it is why re-deriving beats adjusting: an adjustment inherits every
+blind spot of the run it adjusts.
+
+## R794 — The thread's retiring finding, and the test that closes it
+
+Registered as the form, with the test named: **every comparison in this thread has been between
+local copies, and "not mine" is not "theirs".**
+
+**THE TEST: what makes this path the authoring store rather than a copy of it?**
+
+**Nothing on this disk answers it.** There is no marker, no manifest, no handshake — a directory that
+is not mine looks exactly like a directory that is theirs, and I treated the second as proved by the
+first for the length of an entire thread. Every "the source says", every "the other file", every
+staleness count against "the authoring store" was a statement about a folder on this machine.
+
+The sequence of the same mistake tightening: **R776** — the unnamed half of a comparison is
+disproportionately my own output. **R791** — a named half can be mine too, or at least not what I
+named it. **This** — the general form: a claim about another store cannot be evidenced from files on
+this one, and the absence of anything that could evidence it is the finding, not an obstacle to it.
+
+What this does not retire: the comparisons themselves were real, and every fault they found on
+THESE copies is real on these copies. What retires is the labelling — those findings are about this
+machine until something crosses that says otherwise.
