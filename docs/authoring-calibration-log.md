@@ -22405,3 +22405,53 @@ resolves from three that a crossing would merely have duplicated.
 **And an upper bound of one, over a band that had no manifest at all a turn ago, is what the
 listings bought.** Not a loss rate — there is still no sends record in 69–111 and so still no
 denominator (R805).
+
+## R809 — The author's shelf outranks every other, and it is the ceiling of the sequence method
+
+Ruled. **80 was on Annie's shelf all along.** The band closes at zero absent: forty-three ordinals,
+every one held somewhere.
+
+**Three parties bounded a band to one artefact without asking the party who wrote it.** The desk,
+Cowork and this store compared shelves, narrowed 43 ordinals to a single unaccounted one, registered
+an upper bound — and the answer was with the author the whole time. Every hour of that was spent on
+a question one enquiry would have closed.
+
+**THE AUTHOR'S SHELF IS THE ONLY ONE WHERE ABSENCE PROVES NON-EXISTENCE RATHER THAN NON-ARRIVAL.**
+That is the whole ordering, and it is not a matter of trust or precedence. A receiver's shelf can
+only ever say *it did not reach me*; a sender's staging record can only say *I did or did not put it
+out*; **only the author can say a thing was never written.** Every other shelf answers a question
+about transport, and absence-from-transport and absence-from-existence are different facts that look
+identical from any receiving end.
+
+**So the sequence method has a ceiling and this is it.** R797 fixed that a shelf outranks a
+sequence; this fixes that among shelves the AUTHOR'S outranks the rest — and a gap set is not
+merely a list of places to look (R797), it is **a list of places to look with one obvious first
+stop.** Three shelves compared give an upper bound on absence; the author's shelf gives the answer.
+
+**And the failure mode was not scepticism, it was momentum.** Nothing about the three-shelf method
+was wrong — the bound was honest, the asymmetries were real, 86 and 98 were genuinely settled by
+crossing. **The method simply had no step that said stop and ask.** Comparison is absorbing in a way
+that enquiry is not, and a method which can always take one more measurement will keep taking them.
+
+## R810 — Her eightieth asks this store's own retiring question from the other end
+
+Recorded because the convergence is the finding, not a coincidence.
+
+**R794 retired a labelling on this side: every comparison in this thread had been between local
+copies, and "not mine" is not "theirs".** Her eightieth, written on 22 August, reaches the same wall
+from the authoring end — *"one of the two is not reading the store that serves"*, three library
+entries carrying two different current wordings from the same day, and her closing question:
+**"which store does a child's hint come from, and which store was each of these lookups run
+against?"**
+
+**Two parties independently discovered that neither knew which store their evidence described**, six
+days apart, from opposite sides. Hers is the sharper statement because it names the cost: she ruled
+five amendments in her sixty-fourth return and **does not now know which store they were amendments
+to**, and she declines to treat any count of hint wordings as a measurement until it is answered —
+including her own.
+
+**The standing consequence for this store**: the question sits above the queue rather than in it,
+and it is not answerable from here (R794 — a claim about another store cannot be evidenced from
+files on this one). What this side can supply is the half it owns: which rows a child is served
+from, by digest, on demand. **What it cannot supply is the mapping between that and any authored
+artefact**, and every count either party has quoted this fortnight is bounded by that gap.
