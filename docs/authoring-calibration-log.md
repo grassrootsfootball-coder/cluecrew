@@ -21717,3 +21717,27 @@ stay reversed on that, not pending anything.
 anywhere references a letter or an ordinal as an option, so no relabelling can falsify one; nine say
 *"this option"*, which points at its own row and survives. Had that check found even one, a
 relabelling ruling would have had to precede any release. It did not, so it does not.
+
+## R778 — A replacement made for a reason she cannot see is a refusal with no addressee
+
+Her requirement on the replaced questions, and it outranks the comparison that found them: **someone
+judged nine positions wanting.** Where a reason was recorded it now travels with the pair, verbatim
+— not to persuade her, but because the refusal-routing class is ruled twice already and a
+replacement is a refusal wearing different clothes.
+
+**Of the 18 replaced questions: 3 carry a recorded replacement reason, 2 carry a note that does not
+speak to a replacement, and 13 carry none.** The reasons live in the authored `notes` field and
+nowhere else — **the pilot ruling log holds no entry for either family, and neither file has ever
+been in git**, so there is no external record to fall back on and the 13 are genuinely silent. They
+say so on their face and she reads them on merits alone.
+
+**The distinction that had to be drawn, because it is this thread's own failure mode.** Most of the
+18 carry a `tierRationale`, and it is NOT a replacement reason: it explains why an item sits at its
+tier and says nothing about why anything was replaced. Counting the two together would have reported
+a reason on nearly every position where **three** exist. Separated on the face of every row.
+
+**And one caveat she should have up front rather than discover.** At least one recorded reason names
+what it replaced — *"REPLACING the first draft's speech-verbatim pattern, which the cold read
+killed"* — so reading the reasons may indicate which version came later. **That cannot be blinded
+away without withholding the very thing the ruling asked for**, so it is stated on the face and left
+to her. A blind that survives by removing the evidence is not serving the reading it protects.
