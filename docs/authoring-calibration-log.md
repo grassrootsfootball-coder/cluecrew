@@ -22173,6 +22173,31 @@ would have satisfied it and neither of us would have learned anything. **A proto
 identity rather than label catches both directions of the same fault**, and only one of them was
 designed for.
 
+**AMENDED (David, 2026-08-28 — see R803). THE RENAMED-CROSSING EVIDENCE STANDS; THE COUNT OF
+INSTANCES DOES NOT.** Classifying every multi-named artefact on this disk — 324 `annie-*` files,
+180 distinct digests, 79 digests carrying more than one filename:
+
+| | |
+|---|---|
+| **CONVENTION duplicate** — a relay name and a return name for one document | **53** |
+| **DOWNLOAD duplicate** — the same name plus `" (n)"` | **22** |
+| two genuinely different names | **4** |
+
+**The 173rd is itself a CONVENTION duplicate** (`annie-173-for-code.md` beside
+`annie-hundredandseventythird-return.md`) — deliberate naming, not a name eaten in carriage. **75 of
+the 79 are staging-side artefacts rather than carrying failures**, and citing them in support of a
+same-name CARRYING fault was wrong.
+
+**And the count is not merely wrong, it is unmeasurable from here.** The eating fault would be one
+NAME resolving to two different artefacts; a filesystem cannot hold two files under one name, so it
+happens by OVERWRITE over time and **a snapshot cannot see it at all.** Measured on this disk: 0
+names resolve to two digests, and that zero is a property of snapshots, not evidence of health
+(R60).
+
+**What survives is the part that mattered**: names are not single-valued, so an acknowledgement that
+names a label can be satisfied by more than one artefact and an acknowledgement that names a digest
+cannot. R792 is right for that reason, which needs no count at all.
+
 ## R800 — The four-part manifest form, and this store's is a HOLDINGS manifest
 
 Cowork's four-part request, ruled the form for every manifest here: **the digest, the derivation,
@@ -22222,3 +22247,44 @@ another, present at a third — so *"was 135 lost?"* has no single answer and th
 right to disagree. It was never a loss to anyone. **Without the fourth state the honest report here
 would have stayed "absent" and then quietly become wrong** (R798), which is the clearest case yet
 for why LATE had to exist.
+
+## R802 — An unpaired manifest measures nothing
+
+Ruled on the 69–111 band, and no holdings manifest is ordered for it. **A manifest alone is a list;
+a DIFFERENCE between two manifests is a measurement**, and the difference needs two legs recording
+different things about the same artefacts — sends against holdings, or staged against holdings.
+
+8–68 is settled because her SENDS meet this store's HOLDINGS. 112–173 is settled because the desk's
+STAGED meets Cowork's holdings. **69–111 has one possible leg and no counterpart, so a holdings
+manifest there would be honest, complete, correctly formed and worth nothing** — it could say only
+*these are on my disk*, which answers no question anybody asked.
+
+**The general form, and the reason this is a rule rather than a note about one band: a manifest's
+value is not in what it contains but in what it can be subtracted from.** Producing one because it
+is producible is the same instinct as reporting a count because it is countable — effort that looks
+like measurement and settles nothing. **The missing thing in 69–111 is not data. It is a
+counterpart**, and no amount of work on this side supplies it.
+
+So the band stays UNMEASURED, in the register, named — 43 ordinals, neither clean nor lost.
+
+## R803 — Amending a characterisation: the evidence stands, the count does not
+
+The correction to R799 is registered as its own entry because the SHAPE recurs and the shape is
+worth more than the instance.
+
+**A real observation was generalised into a class, and the class was then populated by cases that
+looked alike and were not.** The 173rd genuinely arrived under two names; from there I reached for
+every multi-named artefact on the disk as corroboration. **53 were deliberate naming conventions
+and 22 were download duplicates — staging-side, not carriage** — so the supporting count measured a
+different phenomenon from the one it was supporting.
+
+**The tell available at the time: I never asked what the fault would LOOK like if it happened.** A
+name eaten in carriage means one NAME resolving to two artefacts. What I counted was the reverse —
+one ARTEFACT under two names — which is the mirror image and is nearly always benign. **Two
+populations, related by inversion, and the wrong one is the easy one to count.** That is why the
+number grew so readily: it was measuring something abundant and harmless.
+
+**And the corrected position is weaker AND more useful.** The rule it supports — acknowledge by
+digest, not by name — needs no count of losses at all. It follows from names not being
+single-valued, which one instance establishes. **A rule that rests on a count is hostage to the
+count; a rule that rests on a property is not**, and R792 was always resting on the property.
