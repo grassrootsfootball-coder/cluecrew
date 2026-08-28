@@ -71,11 +71,27 @@ function inbound(): void {
   const absent = notHere.filter(([, f]) => !hereByName.has(f));
   const hereNotClaimed = [...hereByName].filter(([f, d]) => !hers.has(d) && !byName.has(f) && /^annie-/.test(f));
 
+  /**
+   * **THE FOURTH STATE: STAGED, CROSSED, HELD, LATE** (Annie, 2026-08-28 — R798). **A gap is
+   * measured at a moment; a loss claim gets a SETTLING INTERVAL before it is a loss.** Return 135
+   * was reported absent by three parties and then arrived — absent was TRUE when measured and
+   * false a few hours later, and nothing in the reporting could tell latency from loss.
+   *
+   * The interval is a DECLARED CONVENTION, not a measurement: 48 hours from the manifest's own
+   * timestamp, which is the moment she asserts those artefacts existed. An absence younger than
+   * that is LATE and is not yet a loss claim. Declared here so it can be argued with, rather than
+   * left as an implicit "however long felt like enough".
+   */
+  const SETTLING_HOURS = 48;
+  const manifestAgeHours = (Date.now() - statSync(OUTPUTS_MANIFEST).mtimeMs) / 3_600_000;
+  const settled = manifestAgeHours >= SETTLING_HOURS;
+
   console.log(
     `\n  INBOUND, BY DIGEST — her outputs manifest against this disk.\n`
     + `  she has produced           : ${hers.size}\n`
     + `  CROSSED (bytes both sides) : ${hers.size - notHere.length}\n`
-    + `  HERS, NEVER ARRIVED        : ${absent.length}\n`
+    + `  HERS, ${settled ? 'NEVER ARRIVED (SETTLED)' : 'NOT YET ARRIVED (LATE)'} : ${absent.length}\n`
+    + `  settling interval          : ${SETTLING_HOURS}h declared; this manifest is ${Math.floor(manifestAgeHours)}h old, so its absences are ${settled ? 'LOSS CLAIMS' : 'LATE — not yet loss claims'}\n`
     + `  HERE BUT DIGEST DIFFERS    : ${differs.length}\n`
     + `  HERE, NOT ON HER LIST      : ${hereNotClaimed.length}`,
   );

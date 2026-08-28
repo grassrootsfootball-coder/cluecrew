@@ -22119,3 +22119,56 @@ The full form of the sequence rule as it now stands:
 3. **Report the floor as a bound**, never as a start — below the lowest ordinal is UNKNOWN.
 4. **Re-derive, never adjust** (R793) — an adjustment inherits every blind spot of the run it adjusts.
 5. **Settle against a shelf, not a parse** (R795) — and only within the shelf's own coverage.
+
+## R797 — The shelf outranks the sequence
+
+Ruled. **A manifest finds absences in a SET; a sequence finds gaps in a NUMBERING; and only the
+first sees the unnumbered.** `annie-merge-ack-and-gap-yard-note.md` is a never-arrived artefact
+carrying no ordinal — invisible to every ordinal method ever written, and found the moment the
+comparison was made by digest against a set.
+
+**So the ordering is fixed, not a preference.** A sequence check is a cheap prior that runs on
+filenames alone and needs nothing from the other party; a shelf check needs their manifest and
+settles the question. Where they disagree, the shelf wins — and where the shelf is silent, the
+sequence does not fill the gap, it reports UNKNOWN (R795, ordinal 80).
+
+The standing consequence: **a gap set is never a finding on its own.** It is a list of places to
+look, and the looking is done against holdings.
+
+## R798 — The fourth state: staged, crossed, held, LATE
+
+Her ruling, and it repairs a hole this store has fallen into twice. The states an artefact could be
+in were STAGED, CROSSED and HELD — **and an absence was read as a loss the moment it was measured.**
+
+**A gap is measured at a moment; a loss claim gets a SETTLING INTERVAL before it is a loss.**
+Return 135 was reported absent by three parties and then arrived. Absent was TRUE when measured and
+false a few hours later, and nothing in the reporting could tell latency from loss because the
+vocabulary had no word for the difference.
+
+**Wired, not just registered.** `check:manifest-diff` now measures the outputs manifest's own age —
+the moment she asserts those artefacts existed — and labels its absences accordingly: younger than
+the interval, they are **LATE and not yet loss claims**; older, they are **LOSS CLAIMS**. The
+interval is a **declared convention of 48 hours, not a measurement**, stated in the code so it can
+be argued with rather than left as an implicit "however long felt like enough" (the R61 shape: a
+judgement that must be declared because no data forces it).
+
+Measured on the current manifest: **148 hours old, so its 7 absences are settled loss claims.** The
+six returns hold as losses; 135 would have been caught as LATE had the state existed when it was
+reported.
+
+## R799 — The 173rd arrived under two names, and the digest is what caught it
+
+`annie-173-for-code.md` and `annie-hundredandseventythird-return.md`, **byte-identical at
+`79a1a5bb2e8a5cf6…`** — one return, two names, noticed in the same turn it arrived because R792's
+acknowledgement names the DIGEST and not the filename.
+
+**This is the fault the digest ledger predicted in August** — *"a source resolving by NAME resolves
+to two files, and only the digest is single-valued"* — arriving in the acknowledgement channel,
+which is the newest thing here and the one with the least protection.
+
+**The acknowledgement rule is stronger than its stated purpose.** R792 was ruled to make an absence
+visible within a turn. It also makes a DUPLICATE visible within a turn, because naming a digest
+back either matches one artefact or it does not — and had I acknowledged "173" by name, two files
+would have satisfied it and neither of us would have learned anything. **A protocol that names
+identity rather than label catches both directions of the same fault**, and only one of them was
+designed for.
