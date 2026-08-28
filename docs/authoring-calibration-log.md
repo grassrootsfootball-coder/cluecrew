@@ -22455,3 +22455,71 @@ and it is not answerable from here (R794 — a claim about another store cannot 
 files on this one). What this side can supply is the half it owns: which rows a child is served
 from, by digest, on demand. **What it cannot supply is the mapping between that and any authored
 artefact**, and every count either party has quoted this fortnight is bounded by that gap.
+
+## R811 — The serving half of the hint join, with no counts on its face
+
+Emitted: every hint a child can be served from this store, by row id, with the text and a sha256
+over that text. **It answers half of her eightieth and cannot answer the other half** — this side
+can say by digest exactly what it would serve, and can say nothing about any authored artefact
+(R794/R810). The desk joins the halves.
+
+**The population is DEFINED rather than counted.** For each LIVE item: its own `explanation.hintCore`
+where `chooseHint` returns `serves:item` — non-empty, no ruling withholding it, and carrying BOTH an
+authoring name and an authority — otherwise the `childHint` of every misconception tagged on any of
+its options. **CAN be served, not IS served**: which library hint a child meets depends on the option
+chosen. Excluded, and why: items not LIVE, empty library hints, entries reachable only through
+non-LIVE items.
+
+**NO TOTAL IS PUBLISHED, and her §4 is the reason**: *"Two hundred and ninety-eight without a hint
+against twenty-three without a hint is not a rounding, a scope or an ordering; it is a disagreement
+about the corpus."* **A total here would be compared against a total from a population not known to
+be the same one, and the comparison would look like arithmetic.** The rows are listed; anyone who
+wants a number can count the rows they actually mean. The only figures on the face are hers, quoted
+to explain the omission.
+
+**The digest is over the TEXT, not the row and not the file** — so it compares against any other
+store's copy of the same hint regardless of packaging, which is the only thing that makes a join
+possible at all.
+
+**And what it cannot settle, stated on the artefact**: her §3, that three of the four tags selecting
+what serves on `WIW-19` are wrong. **A wrong tag reaches the wrong library hint** — this reports
+which hints are reachable, never whether the reaching is correct. That is a third half.
+
+## R812 — Her decision rule, in her words
+
+From the eightieth, and she names it as the ruling herself — *"The criterion is the ruling. The
+verdicts follow the current text."*
+
+> **A visual verb is a fault when its object is available only visually.**
+
+Her worked cases: *"Look at what Silver is doing in the next two lines* points at lines, and lines
+can be read to her. **The verb is idiomatic for attend to and the object arrives by another
+channel.** No fault." Against: *"Picture the word in print* has the print itself as its object.
+**There is no other channel to it**, and she cannot obtain it by any route the product offers.
+Fault."
+
+**The test is not the verb**, which is what makes it decidable — it moves the question from a word
+to the object's availability, and an object either has a second channel or it does not. Applied by
+her: `ENG-016-HB-10` fails; in the library `en-silent-letter-dropped` and `en-homophone-by-sound`
+fail, both on *picture the spelling*; the rest point at passages and pass.
+
+**She did not rule the verdicts, and the reason is R811's**: *"I am not ruling these, because
+section 1 says I do not know that these are the strings."* The criterion stands; the verdicts wait
+on which store's text is the current one.
+
+## R813 — Cowork's momentum finding is not on this disk, and is not registered
+
+Asked to register it in Cowork's words. **I do not hold them.** Searched every `.md` and `.json` in
+`~/Downloads` and `~/Downloads/11+` for `momentum`: two files match and neither is the finding — an
+unrelated marketing document, and a recovered Cowork register using the word about held items
+(*"nothing stays held by momentum"*).
+
+**Reported rather than reconstructed.** I have made the same observation independently and it is
+registered at R809 in MY words — *the failure mode was not scepticism, it was momentum; the method
+simply had no step that said stop and ask* — and **that is not a substitute.** Registering my
+sentence under Cowork's name would be the R94 fault: a verdict wearing another party's authority.
+If the convergence is real it is worth more than either statement alone, and it needs their text to
+be a convergence rather than an echo.
+
+**The acknowledgement discipline working as intended** (R792): an artefact that has not crossed is
+visible in the turn it was expected, rather than at the next audit.
