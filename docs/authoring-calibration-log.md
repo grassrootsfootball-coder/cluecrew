@@ -21741,3 +21741,33 @@ what it replaced — *"REPLACING the first draft's speech-verbatim pattern, whic
 killed"* — so reading the reasons may indicate which version came later. **That cannot be blinded
 away without withholding the very thing the ruling asked for**, so it is stated on the face and left
 to her. A blind that survives by removing the evidence is not serving the reading it protects.
+
+## R779 — "No reason exists" and "I did not find one" are different findings
+
+Ruled as the general form from R778's thirteen. **Only one of them is a fact about the material;**
+the other is a fact about how hard the reporter looked, and it wears the same words.
+
+So an absence is reportable only once the places a reason could have been are named and checked.
+On the thirteen that was: the authored `notes` field, the pilot ruling log (no entry for either
+family), and git (neither file has ever been committed). **Three named places, all empty, is a
+finding about the material. The same sentence with no search behind it is a finding about me**, and
+a reader cannot tell them apart from the outside — which is why the search has to travel with the
+absence rather than the confidence.
+
+Sibling to R98 — unknown is not absent — one step earlier: R98 governs how an absence is
+RECORDED; this governs when it may be CLAIMED.
+
+## R780 — A blind that survives by removing the evidence is not serving the reading it protects
+
+Ruled from the caveat on the replaced questions. A recorded reason named what it replaced, so
+carrying it may tell the reader which version came later — and the blind could have been kept
+perfectly intact by dropping that reason.
+
+**That would have protected the blind and defeated its purpose.** The blind exists so the reading
+is made on the material; withholding material to preserve the blind inverts the two. **So the
+evidence stays and the leak is stated on the face, left to the reader**, who is the party the blind
+was for and the only one who can weigh what it costs.
+
+The general test: when a blind and the evidence conflict, ask which one the OTHER exists to serve.
+Here the blind serves the reading, so the reading wins and the blind is disclosed rather than
+repaired. A blind protecting a reader from evidence has stopped being a blind and become a filter.
