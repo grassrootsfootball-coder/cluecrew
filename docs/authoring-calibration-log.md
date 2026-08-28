@@ -22288,3 +22288,71 @@ number grew so readily: it was measuring something abundant and harmless.
 digest, not by name — needs no count of losses at all. It follows from names not being
 single-valued, which one instance establishes. **A rule that rests on a count is hostage to the
 count; a rule that rests on a property is not**, and R792 was always resting on the property.
+
+## R804 — A retired figure is not a corrected one
+
+Ruled from the same-name amendment, and the distinction is the point. **The zero I measured — no
+name resolving to two artefacts — is a property of SNAPSHOTS, not a finding about the channel.** A
+filesystem cannot hold two files under one name, so the eating fault happens by OVERWRITE across
+time and is invisible to any single reading of a directory. **The figure is not wrong and awaiting a
+better one. It is unmeasurable from here, and it is withdrawn rather than revised.**
+
+That is a different move from every other count this thread has restated. 553→419, 36→24, 24→0,
+6→8, 7→6: each replaced a number with a better number under a stated predicate. **This one replaces
+a number with nothing**, because the instrument available cannot address the question at all — and
+saying so is the only honest output. A revised figure implies the method works and the arithmetic
+slipped; a retired one says the method never reached the question.
+
+**THE TELL WAS AVAILABLE AND IT IS CHEAP: ask what the fault would LOOK LIKE if it happened.** A
+name eaten in carriage is ONE NAME resolving to TWO ARTEFACTS. I counted ONE ARTEFACT under TWO
+NAMES — the mirror, and nearly always benign: 53 deliberate naming conventions, 22 download
+duplicates, 4 genuinely distinct names.
+
+**And the mirror population is the easy one to count**, which is why the number grew so readily.
+That is the generalisable half: **when a fault and its mirror are both countable, the abundant one
+is usually the harmless one**, because harmless things are common and that is what makes them
+harmless. A count that climbs comfortably is evidence about which population was reached, not about
+severity.
+
+## R805 — A holdings listing is one shelf of three, and yields a bound rather than a rate
+
+Published for 69–111 as a LISTING, not a manifest, per R802 — the band has no counterpart of its
+own and an unpaired manifest measures nothing. **What makes it worth publishing is that three
+shelves compared name every artefact held by one party and not another: an ASYMMETRY SET and an
+UPPER BOUND ON ABSENCE, never a loss rate.**
+
+**A rate needs a denominator of things SENT, and no party in this band holds a sends record.** The
+denominator does not exist, so no rate can — and an artefact on no shelf may have been sent and
+lost, never sent, or sent to a party whose shelf is not here. Three shelves cannot separate those.
+
+**42 of 43 held; the one absence is 80** — the same ordinal the shelf check could not settle, absent
+from a second reading by a different route. **The desk's four (108–111) are all on this shelf too**,
+so that overlap is CROSSED and contributes no asymmetry.
+
+## R806 — Crossing state per recipient: there is no column to split, because there is no column
+
+Her crossing-is-a-pair ruling lands on the schema, and the first finding is that it does not land on
+a column. **Searched all 37 models: none records crossing, delivery, staging or arrival.** The state
+everyone in this thread reasons about **has never been stored.** It is inferred from a directory
+listing plus a reading of prose — staged because a file sits in an outbound folder, crossed because
+someone named a digest back, held because a return said so.
+
+**So the ruling is not "one column must become two". It is that a state everyone treats as known was
+never recorded**, and the per-recipient requirement is what makes that unavoidable rather than
+merely untidy. 135 is the proof: never staged for Cowork, arrived here — **one artefact, two
+recipients, two different states at the same instant**, and neither is an approximation of the
+other.
+
+**What it would take**, reported and not built: one row per (ARTEFACT, RECIPIENT), keyed on the
+**digest** and never the filename (R803). **Store OBSERVATIONS and DERIVE states** — LATE is a
+function of time, not a property of an artefact (R798), so storing "LATE" freezes a value the clock
+will falsify while "observed absent at T" stays true forever. Every row cites the digest of the
+manifest, return or acknowledgement that established it, because a state asserted without naming its
+source is what R25 refuses.
+
+**And the limit that decides whether it is worth building: this side can only ever know STAGED.**
+Arrival is a fact about the other store, knowable here only when they name the digest back — so a
+row with no far-side evidence must read UNKNOWN, never not-arrived. The table would make absence
+visible and dated, which is what turns a gap into a settled claim. **It would not make arrival
+observable, and a channel that drops silently would still drop silently.** The three manifests
+already do most of this by hand; on one recurrence it does not yet earn a model.
