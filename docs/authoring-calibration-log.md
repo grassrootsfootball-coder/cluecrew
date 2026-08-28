@@ -21771,3 +21771,57 @@ was for and the only one who can weigh what it costs.
 The general test: when a blind and the evidence conflict, ask which one the OTHER exists to serve.
 Here the blind serves the reading, so the reading wins and the blind is disclosed rather than
 repaired. A blind protecting a reader from evidence has stopped being a blind and become a filter.
+
+## R781 — R780's first live test passed, and a per-position transaction is not a per-run one
+
+**The leak did not operate.** Her 172nd opens: *"The order leak never operated: I did not read the
+recorded reasons. The stems and options settled all nine, so the fact you could not blind away is a
+fact I did not use."* Nine verdicts, all resting on material the blinding covered.
+
+**So disclosing the leak and keeping the evidence cost nothing here** — and had the alternative been
+taken, nine verdicts would have been made on a set of material chosen by the blinding rather than by
+the question. **The limit is worth stating with the result: one reader, one sitting, nine positions.
+That is the only kind of evidence R780 can ever accumulate**, and she reserved one thing explicitly
+— if the reasons say something the texts do not, that is a separate reading she will take
+separately. The reasons are not settled by these verdicts.
+
+**Landed: 3 positions already held her choice, 2 replaced, 3 added, 1 HELD.** Her scope line landed
+as ruled — BOTH gives each question its own id, and neither is dropped for length here; ENG-005-BB
+goes to 13 questions and ENG-007-LP to 15, and trimming either is a product decision recorded as
+such. All 27 rows in both families gate clean.
+
+**THE HELD POSITION IS NOT HER RULING.** `ENG-007-LP-14` (the *claim* vocabulary item) carries a
+pre-existing gate fault in its authored source: a declared quoted span that is not literally in the
+stem, because the stem quotes the word inside the span. **Baselined before concluding (R149):**
+`items/eng007-draft.json` faults on 4 items of 12 and the outbound copy on 2, while **every one of
+the 24 database rows gated CLEAN** — because this class was already corrected on the rows
+(`ENG-007-LP-03` declares `quotes: ["perished"]` with `_previousQuotes` retaining the longer clause)
+**and the correction never went back to either file.** A gate fault in the authored source HOLDS its
+position; it does not fail the landing, because failing would park eight sound positions behind one
+authoring fix, and inventing the correction would author content this store does not author.
+
+**And my own fault, in the mechanism rather than the content.** The lander wrapped each POSITION in
+a transaction and then died mid-run three times on schema mismatches — a scalar written where a
+relation was required, a field that lives in the stem JSON, an enum value that does not exist
+(`CREATED`; the truer word was `AUTHORED` and the enum already had it). Each retry re-committed the
+positions that had already succeeded, **so a per-position transaction with a per-run failure
+duplicates work on retry.** One duplicate attribution event resulted and was removed. **I first
+reported it as seven and it was one** — the other events on those rows cite earlier returns, and I
+counted every event on the record rather than every event citing this ruling. A multi-position
+lander is idempotent or transactional across the whole run; per-position is neither.
+
+## R782 — What the 419 does after her rulings
+
+`10` land now, `85` are already on their rows, `53` belong to versions she did not choose, and `271`
+stay held pending rulings on the other families.
+
+**The 53 is the number worth naming.** Those values were authored against the reading she did NOT
+select, so their option texts are not on any row and they correctly do not land. **They are
+unchosen, not lost** — the authored files still hold every one, and a later ruling could bring them
+back. Reporting them as "failed to match" would have read as breakage.
+
+**And the detector still refuses, correctly.** `land-dropped-option-fields` reports 75 conflicting
+`(item, label)` identities and exits, because it compares FILE COPIES and knows nothing of rulings —
+**her 172nd settles the two families at the DATABASE, which is where the settled reading now lives,
+and not in either file.** Nothing was re-run against it. The remaining 271 sit in ENG-004-AGG,
+ENG-006-TM and others, where the copy conflict is untouched by these rulings.

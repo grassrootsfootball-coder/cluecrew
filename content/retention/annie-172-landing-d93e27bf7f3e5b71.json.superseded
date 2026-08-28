@@ -1,0 +1,220 @@
+{
+ "kind": "annie-172-landing",
+ "herReturn": {
+  "sha256": "d8350f9fd72ac50681c2354afec50208c0856319ddb0d46aca7b730e51997c12",
+  "verdicts": "4 BOTH, 3 to version one, 2 to version two"
+ },
+ "mode": "DRY RUN — nothing written",
+ "THE_LEAKS_NON_OPERATION": {
+  "whatWasDisclosed": "under R780 the artefact carried a recorded reason naming what it replaced, which could indicate which version came later. The blind was disclosed rather than repaired, and the evidence was left in.",
+  "whatSheREPORTS": "\"The order leak never operated: I did not read the recorded reasons. The stems and options settled all nine, so the fact you could not blind away is a fact I did not use, and every verdict below rests on material the blinding covered.\"",
+  "soTHERULESFIRSTLIVETEST": "R780 passed. Disclosing the leak and keeping the evidence cost nothing: the reader did not use the disclosed evidence, and had it been removed instead, nine verdicts would have been made on a set of material chosen by the blinding rather than by the question.",
+  "andTHELIMIT": "one reader, one sitting, nine positions. That the leak did not operate here is not a general claim that disclosure is free — it is one instance, and it is the only kind of evidence this rule can ever accumulate.",
+  "andSHERESERVEDONETHING": "she noted that if the reasons say something the texts do not, that is a separate reading she will take separately. The reasons are therefore NOT settled by these verdicts."
+ },
+ "THE_SCOPE_LINE_AS_LANDED": "BOTH means neither is unfit. Both land, each on its own id. Neither is dropped for length by this script — ENG-005-BB goes to 13 questions and ENG-007-LP to 15, and trimming either is a PRODUCT decision to be recorded as such, never a quality verdict.",
+ "THE_ID_CONVENTION": {
+  "what": "the second item of each BOTH pair takes the next free id in its family: ENG-005-BB-13, ENG-007-LP-13/14/15.",
+  "whyNotTheOtherVERSIONSid": "the two versions use the same ids for different questions — the other version's ENG-007-LP-07 is the navy-jumper retrieval while this store's LP-07 is a SHARED question. Reusing them would collide and silently overwrite a question nobody ruled on.",
+  "andITISMECHANICAL": "an id assignment, not a content decision. Flagged so it can be overruled cheaply; nothing downstream depends on the numbers being contiguous."
+ },
+ "counts": {
+  "positions": 9,
+  "alreadyHerChoice": 3,
+  "replaced": 2,
+  "added": 3,
+  "HELD": 1
+ },
+ "THE_HELD_POSITION": {
+  "count": 1,
+  "rows": [
+   {
+    "position": "LP:claim-and-layer",
+    "targetId": "ENG-007-LP-14",
+    "faults": [
+     "banned-vocabulary: declares a quoted span that is not in the text: \"nobody was ever going to claim\""
+    ]
+   }
+  ],
+  "why": "the version she chose carries a pre-existing gate fault in its authored source. Her verdict stands and is not in question; the item cannot land until the declaration is corrected, and correcting it is authoring, which this store does not do.",
+  "andTHEBASELINE": "measured before concluding (R149): eng007 items/ has 4 faulting items of 12 and the outbound copy 2 of 12, while every one of the 24 DATABASE rows in both families gates CLEAN — because this class was already corrected on the rows and the correction never went back to either file.",
+  "soITISNOTHERRULING": "eight positions land; one waits on an authoring fix that predates the return."
+ },
+ "LANDING_MANIFEST": [
+  "BB:bridge-inference\tversion one\tALREADY HER CHOICE\tENG-005-BB-09",
+  "BB:darker-and-stiller\tversion one\tALREADY HER CHOICE\tENG-005-BB-10",
+  "BB:narrator-understanding\tversion two\tREPLACE\tENG-005-BB-12",
+  "BB:substantial-and-stir\tBOTH\tADD (the second of a BOTH pair)\tENG-005-BB-13",
+  "LP:cardigan-and-jumper\tversion two\tALREADY HER CHOICE\tENG-007-LP-06",
+  "LP:trials-sheet\tversion one\tREPLACE\tENG-007-LP-08",
+  "LP:cardigan-returns-and-ilya-deflections\tBOTH\tADD (the second of a BOTH pair)\tENG-007-LP-13",
+  "LP:claim-and-layer\tBOTH\tADD (the second of a BOTH pair)\tENG-007-LP-14",
+  "LP:jumper-and-annexe-retrieval\tBOTH\tADD (the second of a BOTH pair)\tENG-007-LP-15"
+ ],
+ "landingManifestSha256": "f79b731da92874eebb05b58656647dec15adbc1e699636ad0a6b597a851f51c8",
+ "landingManifestSha256Spec": "sha256 over the LANDING_MANIFEST lines joined by \\n, no trailing newline, each \"<position>\\t<verdict>\\t<action>\\t<targetId>\", encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content.",
+ "rows": [
+  {
+   "position": "BB:bridge-inference",
+   "herVerdict": "version one",
+   "action": "ALREADY HER CHOICE",
+   "targetId": "ENG-005-BB-09",
+   "chosenStem": "Look at what the master does on the bridge. Then look at what he says at the hall door. What does the writer want us to understand? (lines 36 to 38 and 62 to 63)",
+   "priorStemOnTheRow": "Look at what the master does on the bridge. Then look at what he says at the hall door. What does the writer want us to understand? (lines 36 to 38 and 62 to 63)",
+   "ASSERTION_theRowChangesOnlyIfHerVerdictDiffersFromIt": {
+    "unchanged": true,
+    "checked": true,
+    "meaning": "the database already held the version she chose; nothing is written for this position."
+   },
+   "gateFaults": "CLEAN",
+   "HELD": false
+  },
+  {
+   "position": "BB:darker-and-stiller",
+   "herVerdict": "version one",
+   "action": "ALREADY HER CHOICE",
+   "targetId": "ENG-005-BB-10",
+   "chosenStem": "Read lines 50 to 52. Line 52 says it grew 'darker and darker, stiller and stiller'. Why does the writer write it that way?",
+   "priorStemOnTheRow": "Read lines 50 to 52. Line 52 says it grew 'darker and darker, stiller and stiller'. Why does the writer write it that way?",
+   "ASSERTION_theRowChangesOnlyIfHerVerdictDiffersFromIt": {
+    "unchanged": true,
+    "checked": true,
+    "meaning": "the database already held the version she chose; nothing is written for this position."
+   },
+   "gateFaults": "CLEAN",
+   "HELD": false
+  },
+  {
+   "position": "BB:narrator-understanding",
+   "herVerdict": "version two",
+   "action": "REPLACE",
+   "targetId": "ENG-005-BB-12",
+   "chosenStem": "Beauty repeats what the people say, word for word. What does the writer keep reminding us at the same time?",
+   "priorStemOnTheRow": "Beauty is a horse telling his own story. What does the writer keep showing us about the way he learns things?",
+   "ASSERTION_theRowChangesOnlyIfHerVerdictDiffersFromIt": {
+    "unchanged": false,
+    "priorStemDiffersFromChosen": true
+   },
+   "gateFaults": "CLEAN",
+   "HELD": false
+  },
+  {
+   "position": "BB:substantial-and-stir",
+   "herVerdict": "BOTH",
+   "action": "ADD (the second of a BOTH pair)",
+   "targetId": "ENG-005-BB-13",
+   "chosenStem": "Beauty says 'I dare not stir'. What does 'stir' mean here? (lines 36 to 38)",
+   "priorStemOnTheRow": null,
+   "ASSERTION_theRowChangesOnlyIfHerVerdictDiffersFromIt": {
+    "unchanged": false,
+    "priorStemDiffersFromChosen": true
+   },
+   "gateFaults": "CLEAN",
+   "BOTH_pairedWith": "ENG-005-BB-02",
+   "scopeLine": "BOTH means neither is unfit. It does not mean both must serve in one set — that is a product decision and is not taken here.",
+   "HELD": false
+  },
+  {
+   "position": "LP:cardigan-and-jumper",
+   "herVerdict": "version two",
+   "action": "ALREADY HER CHOICE",
+   "targetId": "ENG-007-LP-06",
+   "chosenStem": "Reuben returns a cardigan whose owner has left. Later he puts his own named jumper in the charity box. What does the writer show by this? (lines 11 to 14 and 29 to 33)",
+   "priorStemOnTheRow": "Reuben returns a cardigan whose owner has left. Later he puts his own named jumper in the charity box. What does the writer show by this? (lines 11 to 14 and 29 to 33)",
+   "ASSERTION_theRowChangesOnlyIfHerVerdictDiffersFromIt": {
+    "unchanged": true,
+    "checked": true,
+    "meaning": "the database already held the version she chose; nothing is written for this position."
+   },
+   "gateFaults": "CLEAN",
+   "HELD": false
+  },
+  {
+   "position": "LP:trials-sheet",
+   "herVerdict": "version one",
+   "action": "REPLACE",
+   "targetId": "ENG-007-LP-08",
+   "chosenStem": "The trials sheet has eleven names and 'plenty of room left at the bottom'. Why does the writer tell us? (lines 37 to 39)",
+   "priorStemOnTheRow": "The writer ends this part on 'plenty of room left at the bottom'. Why end there? (lines 37 to 39)",
+   "ASSERTION_theRowChangesOnlyIfHerVerdictDiffersFromIt": {
+    "unchanged": false,
+    "priorStemDiffersFromChosen": true
+   },
+   "gateFaults": "CLEAN",
+   "HELD": false
+  },
+  {
+   "position": "LP:cardigan-returns-and-ilya-deflections",
+   "herVerdict": "BOTH",
+   "action": "ADD (the second of a BOTH pair)",
+   "targetId": "ENG-007-LP-13",
+   "chosenStem": "Reuben put a cardigan in the returns box even though its owner had left. What does this show? (lines 11 to 14)",
+   "priorStemOnTheRow": null,
+   "ASSERTION_theRowChangesOnlyIfHerVerdictDiffersFromIt": {
+    "unchanged": false,
+    "priorStemDiffersFromChosen": true
+   },
+   "gateFaults": "CLEAN",
+   "BOTH_pairedWith": "ENG-007-LP-02",
+   "scopeLine": "BOTH means neither is unfit. It does not mean both must serve in one set — that is a product decision and is not taken here.",
+   "HELD": false
+  },
+  {
+   "position": "LP:claim-and-layer",
+   "herVerdict": "BOTH",
+   "action": "ADD (the second of a BOTH pair)",
+   "targetId": "ENG-007-LP-14",
+   "chosenStem": "Line 29 says the trousers nobody was ever going to 'claim'. What does 'claim' mean here?",
+   "priorStemOnTheRow": null,
+   "ASSERTION_theRowChangesOnlyIfHerVerdictDiffersFromIt": {
+    "unchanged": false,
+    "priorStemDiffersFromChosen": true
+   },
+   "gateFaults": [
+    "undefined: undefined"
+   ],
+   "BOTH_pairedWith": "ENG-007-LP-10",
+   "scopeLine": "BOTH means neither is unfit. It does not mean both must serve in one set — that is a product decision and is not taken here.",
+   "HELD": {
+    "why": "the version she chose carries a gate fault in its authored source — not introduced by her ruling and not by this write.",
+    "faults": [
+     "banned-vocabulary: declares a quoted span that is not in the text: \"nobody was ever going to claim\""
+    ],
+    "whoFixesIt": "Cowork authors item content; this store does not invent the correction. The precedent is on this store's own rows: ENG-007-LP-03 declares quotes [\"perished\"] where the source declared the whole clause, with _previousQuotes retaining it."
+   }
+  },
+  {
+   "position": "LP:jumper-and-annexe-retrieval",
+   "herVerdict": "BOTH",
+   "action": "ADD (the second of a BOTH pair)",
+   "targetId": "ENG-007-LP-15",
+   "chosenStem": "What did Reuben do with the navy jumper? (lines 33 and 34)",
+   "priorStemOnTheRow": null,
+   "ASSERTION_theRowChangesOnlyIfHerVerdictDiffersFromIt": {
+    "unchanged": false,
+    "priorStemDiffersFromChosen": true
+   },
+   "gateFaults": "CLEAN",
+   "BOTH_pairedWith": "ENG-007-LP-09",
+   "scopeLine": "BOTH means neither is unfit. It does not mean both must serve in one set — that is a product decision and is not taken here.",
+   "HELD": false
+  }
+ ],
+ "findingsSha256": "974fdd8c4aa0ff08c9c9bf023b00c3f1686f935fa7bbf8fd0debc14a275c08a1",
+ "howToCheckThisOnArrival": {
+  "subtreeKeys": [
+   "THE_LEAKS_NON_OPERATION",
+   "counts",
+   "LANDING_MANIFEST",
+   "rows"
+  ],
+  "subtree": "an object of THIS DOCUMENT'S OWN TOP-LEVEL KEYS, exactly as spelled in subtreeKeys and nowhere renamed: {\"THE_LEAKS_NON_OPERATION\", \"counts\", \"LANDING_MANIFEST\", \"rows\"}",
+  "spec": "sha256 over json.dumps(subtree, sort_keys=True, separators=(\",\",\":\"), ensure_ascii=False).encode(\"utf-8\") — R729. ensure_ascii defaults to True and gives a different number.",
+  "andTheFileDigest": "the staging line and the .sha256 sidecar, over the whole file bytes"
+ },
+ "instrumentProvenance": {
+  "emittedBy": "land-annie-172.ts",
+  "carriedFixture": true,
+  "meaning": "the emitting instrument proved itself against carried cases — including at least one clean case caught by nothing — before it produced these figures (R721)."
+ }
+}
