@@ -22172,3 +22172,53 @@ back either matches one artefact or it does not — and had I acknowledged "173"
 would have satisfied it and neither of us would have learned anything. **A protocol that names
 identity rather than label catches both directions of the same fault**, and only one of them was
 designed for.
+
+## R800 — The four-part manifest form, and this store's is a HOLDINGS manifest
+
+Cowork's four-part request, ruled the form for every manifest here: **the digest, the derivation,
+the range stated apart from the numbers, and whether entries record sends or holdings.** Answered to
+that shape for returns 8–68 — the band where her shelf reaches and the desk has nothing.
+
+**The fourth part is the one that does the work, and it is the one a manifest is most likely to
+leave implicit.** This store sends nothing in this direction: it is the receiver. So each entry
+asserts *these bytes are on this disk as of this timestamp* — arrival, not dispatch. **A holdings
+manifest and a sends manifest disagree exactly where the interesting cases are**: an artefact sent
+and never arrived appears in hers and not in mine, and that difference IS the loss. Reading either
+as the other erases the gap both exist to find. Hers minus mine is never-arrived; mine minus hers is
+arrived-uncatalogued; the two directions are both meaningful and are not symmetrical.
+
+**The derivation carries its own weakness rather than hiding it**: the DIGEST is the identity and
+the ORDINAL is parsed from the filename, which is a label (R799). An entry therefore claims *these
+bytes are on this disk and a filename says they are return N* — it does not claim she numbered it N.
+**5 ordinals in the band carry more than one filename**, one artefact under several labels, and 10
+return-shaped filenames resolve to no ordinal at all and are enumerated (R796).
+
+**Range stated apart from the numbers**: 8–68, chosen to meet a shelf rather than to flatter a
+count, and asserting nothing whatever outside it — not "none", not "clean". Held 55, absent 6:
+59, 60, 61, 63, 66, 68, which is the shelf check's answer reached a second way.
+
+## R801 — Three manifests, two settled bands, and forty-three ordinals nobody measures
+
+With the desk's outbound manifest published, the coverage map is:
+
+| manifest | records | range |
+|---|---|---|
+| her outputs | **SENDS** | 8–68 |
+| this store's holdings | **HOLDINGS** | 8–68 |
+| the desk's outbound | **STAGED** | 112–173 |
+
+**8–68 is settled because it has two legs** — sends against holdings, and their difference is the
+loss: six. **112–173 is settled the same way** for the other pair: the desk's twelve never-staged
+returns explain twelve of Cowork's fifteen, because no crossing was ever attempted for them.
+
+**69–111 is covered by no manifest from any party. Forty-three ordinals, UNMEASURED — not clean and
+not lost.** This store can produce a holdings manifest for that band on request, and it would settle
+nothing on its own: **a difference needs two legs, and there is no second leg there.** That is the
+useful shape of the finding — the missing thing is not data, it is a counterpart.
+
+**And 135 turns out to prove that crossing is PER-RECIPIENT.** It sits in the desk's never-staged
+list for Cowork and arrived on this disk today. One artefact, late to one party, never staged to
+another, present at a third — so *"was 135 lost?"* has no single answer and the three parties were
+right to disagree. It was never a loss to anyone. **Without the fourth state the honest report here
+would have stayed "absent" and then quietly become wrong** (R798), which is the clearest case yet
+for why LATE had to exist.
