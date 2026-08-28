@@ -22523,3 +22523,59 @@ be a convergence rather than an echo.
 
 **The acknowledgement discipline working as intended** (R792): an artefact that has not crossed is
 visible in the turn it was expected, rather than at the next audit.
+
+## R814 — Nothing changed in that window, and her three were not touched that day at all
+
+**The library join cannot run**: the authoring store holds no authoring half for it — it holds two
+exports of THIS database, 16 August, twenty-nine minutes apart. **Joining those against these rows
+would be this store compared with itself**, which is R794's finding arriving from the other side and
+settling it: her §1's two current wordings are **one store observed twice, not two stores
+disagreeing.**
+
+**So the question narrows to one this store can answer alone, and `ContentWriteLog` answers it** —
+the database's own append-only write trigger, queried directly. Not git, not a file mtime, not a
+reconstruction: the row-level record of what was written and when.
+
+**Between 18:54 and 19:23 on 16 August: NO WRITE TO ANY CONTENT TABLE.** Not empty of library
+writes — empty of writes.
+
+**The clock caveat was read, and it is immaterial.** R80's timezone fault landed on 16 August, so
+rows from that date sit on either side of it and the window is genuinely ambiguous. Read one hour
+earlier, 17 Misconception rows were written — **but only TWO changed `childHint`, and neither is one
+of hers**; the other fifteen touched `updatedAt`, `textProvenance`, `status` and `approvedBy` only,
+which is provenance and approval rather than text. **Both readings were computed and reported rather
+than one chosen** (R80's own lesson), and they agree on the answer that matters.
+
+**The decisive fact is not about the window at all. NONE OF HER THREE ENTRIES WAS WRITTEN ON 16
+AUGUST, under either clock reading.** `en-extreme-option-pull` and `en-homophone-by-sound` changed
+on 21 August at 19:13:19, `en-attribute-transfer` at 19:23:31 the same evening, and
+`en-homophone-by-sound` again on 22 August at 20:58:45. **Two exports taken 29 minutes apart on 16
+August therefore CANNOT differ in those three entries** — both hold the same text, and both hold
+pre-21-August text for all three.
+
+**One date for the desk.** She compared against library batches stamped `2026-08-22T18:17`.
+`en-homophone-by-sound` was written again at 20:58:45 that evening — **after the stamp** — so for
+that entry the batch is stale by two and a half hours on this store's clock. That is a fact about
+the batch, not about the lookup, and it is the only one of the three where a same-day artefact could
+legitimately disagree with the rows.
+
+**What this does not resolve**: why a lookup dated the same day as a batch carried the older text.
+That is a question about how the lookups were produced, and nothing in this store's history bears on
+it.
+
+## R815 — The 378 is not on this disk, so the item-hint join is supplied, not run
+
+The item-hint join can run — **but not here.** This store holds no artefact carrying the authoring
+store's 378 item hints. Searched every JSON in both directories for hint-shaped entries: the largest
+is `CROSSSTORECENSUSCOWORKHALF.json` at 215 ids, and it is Cowork's **library** census — *"every
+text this store has ever held for each id"* — not item hints, and not 378.
+
+**So this side supplies its anchor and the desk joins**, which is the same shape as the library half
+and for the same reason (R794): the join needs both halves and neither store can hold both. The
+serving half already crossed carries all 89 rows — 43 item-sourced, 46 library-sourced — each with
+its text and a sha256 over that text, which is the join key.
+
+**Reported rather than approximated.** With 215 ids in hand and 378 wanted, the tempting move is to
+join against what is here and describe the shortfall. **That would produce a join whose non-matches
+are indistinguishable from absences in the wrong file**, which is precisely the fault the three
+outcomes exist to prevent.
