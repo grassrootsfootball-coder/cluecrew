@@ -22356,3 +22356,52 @@ row with no far-side evidence must read UNKNOWN, never not-arrived. The table wo
 visible and dated, which is what turns a gap into a settled claim. **It would not make arrival
 observable, and a channel that drops silently would still drop silently.** The three manifests
 already do most of this by hand; on one recurrence it does not yet earn a model.
+
+## R807 — The per-recipient crossing record: the design, held until it earns a model
+
+**Ruled: build nothing.** The three manifests do this by hand and one recurrence does not earn a
+model. Registered so the design exists when it does, rather than being re-derived under pressure by
+whoever meets the second recurrence.
+
+**GRAIN.** One row per (ARTEFACT, RECIPIENT). Not per artefact — 135 was never staged for Cowork and
+arrived here, two states at one instant, and neither is an approximation of the other.
+
+**KEY.** The **digest**, never the filename. 53 convention duplicates and 22 download duplicates on
+this disk mean a name is not single-valued (R803); sha256 over bytes is.
+
+**STORE OBSERVATIONS, DERIVE STATES.** A row records *what was observed and when* —
+`STAGED_HERE`, `NAMED_BACK_BY_RECIPIENT`, `REPORTED_ABSENT_BY_RECIPIENT`, `LISTED_IN_THEIR_MANIFEST`
+— with `observedAt` and an `evidence` digest naming the manifest, return or acknowledgement that
+established it. **LATE is a function of time, not a property of an artefact** (R798): storing it
+freezes a value the clock will falsify, while *observed absent at T* stays true forever. CROSSED,
+STAGED, LATE and LOST are all derived at read time from the observations plus the declared settling
+interval.
+
+**NO FAR-SIDE EVIDENCE MEANS UNKNOWN, NEVER NOT-ARRIVED.** This side can only ever know STAGED with
+certainty; arrival is a fact about the other store, knowable here only when they name the digest
+back. A row lacking far-side evidence is an absence of information, and reporting it as an absence
+of arrival is the whole family of faults this register is made of (R98, R60, R795).
+
+**What it would not fix, so nobody builds it expecting more:** it would not make arrival observable.
+A channel that drops silently would still drop silently. It makes absence **visible and dated**,
+which is what turns a gap into a settled claim — and that is all it does.
+
+## R808 — Two asymmetries settled by crossing rather than by argument
+
+The three-shelf comparison at the desk: **80 is the only ordinal on no shelf, so the upper bound on
+absence across 69–111 is ONE.** 42 here, 37 at Cowork, 4 at the desk.
+
+**86 and 98 were asymmetries this store could settle by simply sending them**, and they are staged —
+`2cd7bc157b657e46…` and `c3f7be58ecf9d5d7…`, verified byte-identical at the door, with nothing
+injected into either: they are her returns, not this store's artefacts, and the marking machinery
+touches JSON only.
+
+**The distinction the desk drew is the one worth keeping: 108, 110 and 111 are the desk's
+never-staged, not the channel's.** An asymmetry has at least three causes — never sent, sent and
+lost, or held by a party whose shelf is not in the comparison — and **only the first is fixed by
+sending.** Naming which cause applies before acting is what separated two artefacts that a crossing
+resolves from three that a crossing would merely have duplicated.
+
+**And an upper bound of one, over a band that had no manifest at all a turn ago, is what the
+listings bought.** Not a loss rate — there is still no sends record in 69–111 and so still no
+denominator (R805).
