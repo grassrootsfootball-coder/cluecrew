@@ -21948,3 +21948,31 @@ not a remainder, and the proportion alone should have been the question.
 **Below 8 stays UNKNOWN**, not absent: nothing on this disk says the series starts at 1, and the
 check prints that bound rather than implying a clean floor. Reported, never repaired — only she can
 send a return, and only she can say whether a number was ever used.
+
+## R790 — The 59–80 gaps are inside the receiving window, not before it
+
+The desk reports my gaps as disjoint from everyone else's but 135 — mine at 59–80, the desk's six
+and Cowork's seventeen in 103–160. **The question was whether 59–80 is a loss or a boundary. It is
+not a boundary.** Every measure available here puts it inside the window:
+
+- **The series arrived progressively**, not in one copy: file dates advance with the ordinals across
+  19–28 August. A bulk copy could have carried numbers from before involvement; this did not.
+- **Each gap is bracketed by returns I hold**, minutes or hours apart — 58 arrived 21 August and 62
+  on the 22nd, with 59, 60 and 61 between them.
+- **51 returns arrived on 22 August alone**, the day containing every gap from 59 to 80. A window
+  receiving at that rate is not a window before receiving began.
+- **The real boundary is below 8**, the lowest ordinal on this disk, and it is reported UNKNOWN
+  rather than absent, because nothing here says the series starts at 1.
+
+**What it does NOT settle, and cannot from this side: loss versus never-used.** A number sent and
+lost and a number never issued produce an identical absence here. Only she can say whether an
+ordinal was ever used.
+
+**And the citation method has no reach, which is worth recording so the silence is not read as
+evidence** (R779). No return I hold cites 59, 60, 61, 63, 66, 68 or 80 — but returns cite prior
+returns by ordinal only from about the 130th onward, so in this era the method could not have found
+a reference had one existed. **A search that could not have succeeded is not a search**, and
+reporting its emptiness as corroboration would have been the fault R779 exists to name.
+
+**The disjointness is itself consistent with the finding**: a gap peculiar to one recipient is about
+that recipient's channel, and 135 — the one everyone shares — is about the series.
