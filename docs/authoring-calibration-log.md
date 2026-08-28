@@ -21976,3 +21976,52 @@ reporting its emptiness as corroboration would have been the fault R779 exists t
 
 **The disjointness is itself consistent with the finding**: a gap peculiar to one recipient is about
 that recipient's channel, and 135 — the one everyone shares — is about the series.
+
+## R791 — I called a local copy "the source", and the carry-back was a no-op
+
+The authoring store answers that **all four `stem.quotes` corrections are already in its files.** The
+carry-back is withdrawn.
+
+**My count was right about a population I mislabelled.** I reported *8 stale file copies across 4
+corrections, 0 carried*. What I measured was four items across **two directories on this machine** —
+`~/Downloads/11+/from-cluecrew`, this store's own outbound, and `~/Downloads/11+/items`. **Neither
+is the authoring store. I have no route to the authoring store and have never read it.** Both counts
+are correct about their own populations: its files are not stale, these copies are, and mine was
+labelled as though it were about the other store.
+
+**The fault in one line: I called a local copy THE SOURCE.** R776 was the side I did not have to
+fetch reading as the baseline. **This is the same asymmetry one step on** — a directory I DID fetch,
+assumed to BE the other store on the strength of not being mine. *Not mine* and *theirs* are not the
+same predicate, and nothing on this disk distinguishes them.
+
+**What would have caught it: asking what makes a path the authoring store rather than a copy of it.
+Nothing here answers that, and the absence of an answer IS the answer** — a claim about another
+store cannot be evidenced from files on this one. That is the general form, and it retires a habit
+this whole thread has rested on: every comparison I have run has been between local copies.
+
+**And the id-join crossed two different questions.** I claimed `ENG-007-LP-06` is the source of the
+held `ENG-007-LP-14`; the authoring store holds neither row. **This thread registered that exact
+fault twice — R771 on the numbering drift, R774 on the replaced questions — and it recurred inside
+the artefact reporting on it.** An id is not an identity across stores, and I keep proving it by
+joining on one.
+
+**What survives, unchanged:** `ENG-007-LP-14` is still held, for the reason it always was — the
+version she chose declares a span not literally in its stem. And **the precedent stands: declare the
+shortest span that appears LITERALLY in the stem.** That was never a claim about a store; it is a
+property of a declaration, and nothing above touches it.
+
+## R792 — Acknowledge by ordinal, on receipt
+
+Standing instruction, ruled: **every return received is acknowledged by its ordinal, named back.**
+
+**A send that vanishes becomes visible in one turn instead of at the next audit** — and the audit is
+the expensive path, because by then the gap is one of eight and the question is which. Naming the
+number back turns a silent loss into an immediate mismatch: she knows what she sent, I say what
+arrived, and one of us notices in the same exchange.
+
+**The re-send is not the repair.** Getting the file across a second time fixes this instance;
+acknowledging by number is what makes the channel report its own failures, which is the property
+R579 and R788 both reached for from the receiving end and could only ever reconstruct after the
+fact. This is the same guard moved to the moment of arrival, where it costs one word.
+
+Received and acknowledged to date: **return 172**, verified at `d8350f9f…`, landed.

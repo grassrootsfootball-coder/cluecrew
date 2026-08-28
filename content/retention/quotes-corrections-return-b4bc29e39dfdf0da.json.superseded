@@ -1,0 +1,163 @@
+{
+ "kind": "quotes-corrections-return",
+ "what": "stem.quotes corrections that were made on this store's rows and never travelled back to the authored files — plus the source faults for which no correction exists anywhere.",
+ "THE_CLASS": "THE DROP CLASS IN REVERSE. R758 was a field authored at the source and dropped at this store's door. This is the mirror: a repair made at this store that reached the row and never reached the source. Both directions leave the two stores disagreeing, and neither reports itself.",
+ "ITISAMERGEONONEFIELD": "this carries stem.quotes and nothing else, with the before and the after on every row, and it names the field it changes. It is not a wholesale replace of any file (CLAUDE.md), and nothing outside stem.quotes is proposed.",
+ "counts": {
+  "correctionsToCarryBack": 4,
+  "staleFileCopies": 8,
+  "alreadyCarried": 0,
+  "sourceFaultsWithNoCorrectionAnywhere": 1
+ },
+ "NOT_REPAIRED_HERE": "where no row holds a correction there is nothing to carry back, so the fault is reported and left. Cowork authors item content; this store does not invent the wording (CLAUDE.md).",
+ "CARRY_BACK": [
+  {
+   "itemId": "ENG-006-TM-08",
+   "field": "stem.quotes",
+   "correctedOnTheRowTo": [
+    "the rule"
+   ],
+   "theValueItReplaced": [
+    "he would take the rule, and re-measure"
+   ],
+   "whyTheCorrectionWasMade": "the child-facing gate requires a declared quoted span to appear LITERALLY in the stem text. The replaced value did not, because the stem quotes the word inside the span.",
+   "everyFileCarryingThisItem": [
+    {
+     "file": "~/Downloads/11+/from-cluecrew/eng006-draft.json",
+     "holds": [
+      "he would take the rule, and re-measure"
+     ]
+    },
+    {
+     "file": "~/Downloads/11+/items/eng006-draft.json",
+     "holds": [
+      "he would take the rule, and re-measure"
+     ]
+    }
+   ],
+   "stale": 2,
+   "carried": 0
+  },
+  {
+   "itemId": "ENG-007-LP-03",
+   "field": "stem.quotes",
+   "correctedOnTheRowTo": [
+    "perished"
+   ],
+   "theValueItReplaced": [
+    "perished into something like a dried leaf"
+   ],
+   "whyTheCorrectionWasMade": "the child-facing gate requires a declared quoted span to appear LITERALLY in the stem text. The replaced value did not, because the stem quotes the word inside the span.",
+   "everyFileCarryingThisItem": [
+    {
+     "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+     "holds": [
+      "perished into something like a dried leaf"
+     ]
+    },
+    {
+     "file": "~/Downloads/11+/items/eng007-draft.json",
+     "holds": [
+      "perished into something like a dried leaf"
+     ]
+    }
+   ],
+   "stale": 2,
+   "carried": 0
+  },
+  {
+   "itemId": "ENG-007-LP-10",
+   "field": "stem.quotes",
+   "correctedOnTheRowTo": [
+    "the top layer"
+   ],
+   "theValueItReplaced": [
+    "lifted the top layer out of the Friday box"
+   ],
+   "whyTheCorrectionWasMade": "the child-facing gate requires a declared quoted span to appear LITERALLY in the stem text. The replaced value did not, because the stem quotes the word inside the span.",
+   "everyFileCarryingThisItem": [
+    {
+     "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+     "holds": [
+      "lifted the top layer out of the Friday box"
+     ]
+    },
+    {
+     "file": "~/Downloads/11+/items/eng007-draft.json",
+     "holds": []
+    }
+   ],
+   "stale": 2,
+   "carried": 0
+  },
+  {
+   "itemId": "ENG-007-LP-05",
+   "field": "stem.quotes",
+   "correctedOnTheRowTo": [
+    "laughed as well, slightly after her"
+   ],
+   "theValueItReplaced": [
+    "he laughed as well, slightly after her"
+   ],
+   "whyTheCorrectionWasMade": "the child-facing gate requires a declared quoted span to appear LITERALLY in the stem text. The replaced value did not, because the stem quotes the word inside the span.",
+   "everyFileCarryingThisItem": [
+    {
+     "file": "~/Downloads/11+/from-cluecrew/eng007-draft.json",
+     "holds": [
+      "he laughed as well, slightly after her"
+     ]
+    },
+    {
+     "file": "~/Downloads/11+/items/eng007-draft.json",
+     "holds": [
+      "he laughed as well, slightly after her"
+     ]
+    }
+   ],
+   "stale": 2,
+   "carried": 0
+  }
+ ],
+ "NOT_REPAIRED": [
+  {
+   "itemId": "ENG-007-LP-06",
+   "field": "stem.quotes",
+   "declares": [
+    "nobody was ever going to claim"
+   ],
+   "stemText": "Line 29 says the trousers nobody was ever going to 'claim'. What does 'claim' mean here?",
+   "faults": [
+    "declares a quoted span that is not in the text: \"nobody was ever going to claim\""
+   ],
+   "NO_CORRECTION_EXISTS": "no row anywhere carries a corrected value for this item, so there is nothing to carry back. The fault is reported, not repaired.",
+   "thePrecedentIfCowORKWANTSIT": "ENG-007-LP-03 declares quotes [\"perished\"] where the source declared the whole clause, with _previousQuotes retaining it. The shape is: declare the shortest span that appears LITERALLY in the stem.",
+   "whyItMattersNOW": "this is the source of the HELD position ENG-007-LP-14 in her 172nd landing. Eight positions landed; this one waits on this declaration."
+  }
+ ],
+ "MANIFEST": [
+  "CARRY-BACK\tENG-006-TM-08\tstem.quotes",
+  "CARRY-BACK\tENG-007-LP-03\tstem.quotes",
+  "CARRY-BACK\tENG-007-LP-10\tstem.quotes",
+  "CARRY-BACK\tENG-007-LP-05\tstem.quotes",
+  "FAULT-ONLY\tENG-007-LP-06\tstem.quotes"
+ ],
+ "manifestSha256": "16745a1c5470aed8b4d4229a54af78a33b627ffa6494a91d55f4d0a4bf502ebb",
+ "manifestSha256Spec": "sha256 over the MANIFEST lines joined by \\n, no trailing newline, each \"<kind>\\t<itemId>\\t<field>\", encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content.",
+ "findingsSha256": "a2d638c02c07b003891acc6da241655384dd585498b3a2eb1e8470bc73d2d8d9",
+ "howToCheckThisOnArrival": {
+  "subtreeKeys": [
+   "counts",
+   "CARRY_BACK",
+   "NOT_REPAIRED",
+   "MANIFEST"
+  ],
+  "subtree": "an object of THIS DOCUMENT'S OWN TOP-LEVEL KEYS, exactly as spelled in subtreeKeys and nowhere renamed: {\"counts\", \"CARRY_BACK\", \"NOT_REPAIRED\", \"MANIFEST\"}",
+  "spec": "sha256 over json.dumps(subtree, sort_keys=True, separators=(\",\",\":\"), ensure_ascii=False).encode(\"utf-8\") — R729. ensure_ascii defaults to True and gives a different number.",
+  "andTheFileDigest": "the staging line and the .sha256 sidecar, over the whole file bytes"
+ },
+ "instrumentProvenance": {
+  "emittedBy": "emit-quotes-corrections-return.ts",
+  "carriedFixture": true,
+  "meaning": "the emitting instrument proved itself against carried cases — including at least one clean case caught by nothing — before it produced these figures (R721)."
+ }
+}
