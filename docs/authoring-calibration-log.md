@@ -21825,3 +21825,79 @@ back. Reporting them as "failed to match" would have read as breakage.
 **her 172nd settles the two families at the DATABASE, which is where the settled reading now lives,
 and not in either file.** Nothing was re-run against it. The remaining 271 sit in ENG-004-AGG,
 ENG-006-TM and others, where the copy conflict is untouched by these rulings.
+
+## R783 — Text-true: a distractor must be wrong about the QUESTION, not merely irrelevant and true
+
+Her pens refinement, ruled as the fourth member of the distractor family. From the 172nd, on the
+trials-sheet position: *"its 'eleven people used eleven different pens' is a true statement from the
+text serving as a wrong answer"*.
+
+**TEXT-TRUE is distinct from PARTLY-TRUE.** Partly-true is a claim half of which the text supports;
+text-true is a claim the text supports ENTIRELY, offered as the answer to a question it does not
+answer. The first is a flawed statement, the second is a sound statement in the wrong place.
+
+**It is the harshest of the family because it punishes close reading.** A child who has read badly
+skims past it. A child who has read WELL recognises a sentence she genuinely saw in the passage, and
+the better her recall the stronger the pull — so the distractor selects against exactly the skill
+the item exists to reward. Partly-true punishes carelessness; text-true punishes care.
+
+The family now: invented (an event the passage does not carry — the heaviest, from the 172nd's
+cardigan-and-jumper ruling), partly-true, text-true, and the supplied-retrieval fault that lives in
+the STEM rather than the option (a stem that states the facts an inference item is about converts a
+two-part question into a one-part one).
+
+## R784 — A per-position transaction with a per-run failure duplicates work on retry
+
+Mine, from the 172nd landing. The lander wrapped each POSITION in its own transaction and then died
+mid-run three times on schema mismatches — a scalar written where a relation was required, a field
+that lives inside the stem JSON rather than in a column, and an enum value that does not exist.
+**Each retry re-committed every position that had already succeeded.**
+
+**Per-position atomicity is not per-run atomicity, and a retry is a per-RUN operation.** The
+transaction did exactly what it promised: each position landed wholly or not at all. Nothing in that
+guarantee says anything about the second attempt, and the operator's mental model — "it failed, so
+run it again" — is a run-level model meeting a position-level guarantee.
+
+The content survived because the writes were idempotent; only the attribution events accumulated,
+and one duplicate had to be removed. **So the visible damage was in the audit trail rather than in
+the data, which is the quiet version**: a duplicated fact reads as two events, and two events read
+as two decisions.
+
+**A multi-position lander is idempotent or transactional across the WHOLE run; per-position is
+neither.** And the cheap form of idempotence is the one already used elsewhere here — write only
+what is absent, and let a second run find nothing to do.
+
+## R785 — The 10 landed, and the 53 are unchosen rather than lost
+
+Landed on the two families her 172nd settled, matched by option TEXT against the DATABASE — which
+is where the settled reading lives after that landing, and not in either file (R769). **3 column
+values and 7 retention keys; 66 were already present; 0 had no column.** The re-run finds nothing
+left to do, which is the property that makes it safe: write only what is absent.
+
+**And the phrasing that goes on the artefact, ruled: THE 53 ARE UNCHOSEN, NOT LOST.** They were
+authored against the reading she did not select, so their option texts are on no row and they
+correctly do not land — **the authored files still hold every one, and a later ruling could bring
+them back.** Reporting them as "failed to match" would have read as breakage, and 53 items of
+breakage is the kind of number that starts an investigation into a fault that does not exist.
+
+271 remain held, in families her 172nd does not reach.
+
+## R786 — The drop class in reverse: a repair that reached the row and never reached the source
+
+`ENG-007-LP-14` could not land because its authored source declares a quoted span not literally
+present in the stem. **The same class had already been corrected on this store's rows — four items,
+each retaining its pre-correction value in `_previousQuotes` — and the correction never travelled
+back.** Measured: **8 stale file copies across 4 corrections, 0 carried.** Every future import from
+those files reintroduces a fault the gate already caught.
+
+**R758 was a field authored at the source and dropped at this store's door. This is its mirror**,
+and the two together make the shape plain: **each store repairs its own copy and neither direction
+reports itself.** R88 built the return leg for rulings; nothing was watching this — a GATE-forced
+repair, which is the class most likely to recur precisely because the gate will catch it again and
+the catch feels like the system working.
+
+The return carries `stem.quotes` and nothing else, before and after on every row, naming the field
+it changes — **a merge on one field, never a wholesale replace** (CLAUDE.md). Where no row holds a
+correction there is nothing to carry back: one source fault is reported and left unrepaired, because
+Cowork authors item content and this store does not invent the wording. That one is `ENG-007-LP-06`,
+the source of the held position.

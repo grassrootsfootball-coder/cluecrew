@@ -1,0 +1,121 @@
+{
+ "kind": "settled-option-fields-landing",
+ "mode": "APPLIED",
+ "scope": "the two families her 172nd settled: ENG-005-BB, ENG-007-LP. Everything else stays held.",
+ "matching": "by OPTION TEXT against the DATABASE (R769), which is where the settled reading lives after the 172nd landing — not against either file.",
+ "counts": {
+  "authoredValuesInScope": 129,
+  "landed": 3,
+  "alreadyPresent": 66,
+  "retentionIntoContent": 7,
+  "notAColumn": 0,
+  "noMatchingOptionText": 53
+ },
+ "THE_53_ARE_UNCHOSEN_NOT_LOST": "the values that match no option text on any row were authored against the reading she did NOT choose. Their options are not on the rows because her ruling selected the other version. THEY ARE UNCHOSEN, NOT LOST — the authored files still hold every one, and a later ruling could bring them back. Reporting them as failures to match would read as breakage, and it is not.",
+ "whatWasNOTlanded": {
+  "notAColumnAnywhere": "0 — no column exists and the key is not retention-shaped. The R758 door refuses these rather than dropping them; so does this.",
+  "alreadyPresent": "66 — a non-null field is never overwritten."
+ },
+ "LANDED": [
+  "ENG-005-BB-02\t_previousMisconceptionId\tretention key inside content",
+  "ENG-005-BB-04\t_previousMisconceptionId\tretention key inside content",
+  "ENG-007-LP-03\t_previousMisconceptionId\tretention key inside content",
+  "ENG-007-LP-03\t_previousMisconceptionId\tretention key inside content",
+  "ENG-007-LP-10\t_previousMisconceptionId\tretention key inside content",
+  "ENG-007-LP-10\t_previousMisconceptionId\tretention key inside content",
+  "ENG-007-LP-12\t_previousMisconceptionId\tretention key inside content",
+  "ENG-005-BB-12\tmisconceptionExecution\tcolumn",
+  "ENG-005-BB-12\tmisconceptionExecution\tcolumn",
+  "ENG-005-BB-12\tmisconceptionExecution\tcolumn"
+ ],
+ "landedSha256": "cb2c82773bf645059a1baf21eeaeaf8d36974496e1d4ead83b30f28c67fd55d0",
+ "landedSha256Spec": "sha256 over the LANDED lines joined by \\n, no trailing newline, each \"<itemId>\\t<field>\\t<landsAs>\", encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content.",
+ "rows": [
+  {
+   "itemId": "ENG-005-BB-02",
+   "optionText": "Very large in amount.",
+   "field": "_previousMisconceptionId",
+   "landsAs": "retention key inside content",
+   "value": "en-vocab-secondary-sense"
+  },
+  {
+   "itemId": "ENG-005-BB-04",
+   "optionText": "Something used to catch a fish.",
+   "field": "_previousMisconceptionId",
+   "landsAs": "retention key inside content",
+   "value": "en-vocab-secondary-sense"
+  },
+  {
+   "itemId": "ENG-007-LP-03",
+   "optionText": "Died, the way a living thing does.",
+   "field": "_previousMisconceptionId",
+   "landsAs": "retention key inside content",
+   "value": "en-vocab-secondary-sense"
+  },
+  {
+   "itemId": "ENG-007-LP-03",
+   "optionText": "Been worn out by too much swimming.",
+   "field": "_previousMisconceptionId",
+   "landsAs": "retention key inside content",
+   "value": "en-inference-literal-lookalike"
+  },
+  {
+   "itemId": "ENG-007-LP-10",
+   "optionText": "A thin coat of paint or dust.",
+   "field": "_previousMisconceptionId",
+   "landsAs": "retention key inside content",
+   "value": "en-vocab-secondary-sense"
+  },
+  {
+   "itemId": "ENG-007-LP-10",
+   "optionText": "A hen that lays eggs.",
+   "field": "_previousMisconceptionId",
+   "landsAs": "retention key inside content",
+   "value": "en-vocab-secondary-sense"
+  },
+  {
+   "itemId": "ENG-007-LP-12",
+   "optionText": "The writer tells us he is sad, and then shows us only the re",
+   "field": "_previousMisconceptionId",
+   "landsAs": "retention key inside content",
+   "value": "en-negation-dropped"
+  },
+  {
+   "itemId": "ENG-005-BB-12",
+   "optionText": "That Beauty is too frightened to listen properly.",
+   "field": "misconceptionExecution",
+   "landsAs": "column",
+   "value": "Swaps the evidenced limit, understanding, for a feeling the passage does not give."
+  },
+  {
+   "itemId": "ENG-005-BB-12",
+   "optionText": "That the people never speak to Beauty at all.",
+   "field": "misconceptionExecution",
+   "landsAs": "column",
+   "value": "Reads past the fact that they do speak to him, at lines 36, 40 and 49."
+  },
+  {
+   "itemId": "ENG-005-BB-12",
+   "optionText": "That Beauty repeats the words to show off what he knows.",
+   "field": "misconceptionExecution",
+   "landsAs": "column",
+   "value": "Invents a motive; the narrator's remarks are about what he cannot do, not what he can."
+  }
+ ],
+ "findingsSha256": "f04d4bf614a98989eb800567dddbaeefaaa370c11e36b2fab9987ca853cb637c",
+ "howToCheckThisOnArrival": {
+  "subtreeKeys": [
+   "counts",
+   "LANDED",
+   "rows"
+  ],
+  "subtree": "an object of THIS DOCUMENT'S OWN TOP-LEVEL KEYS, exactly as spelled in subtreeKeys and nowhere renamed: {\"counts\", \"LANDED\", \"rows\"}",
+  "spec": "sha256 over json.dumps(subtree, sort_keys=True, separators=(\",\",\":\"), ensure_ascii=False).encode(\"utf-8\") — R729. ensure_ascii defaults to True and gives a different number.",
+  "andTheFileDigest": "the staging line and the .sha256 sidecar, over the whole file bytes"
+ },
+ "instrumentProvenance": {
+  "emittedBy": "land-settled-option-fields.ts",
+  "carriedFixture": true,
+  "meaning": "the emitting instrument proved itself against carried cases — including at least one clean case caught by nothing — before it produced these figures (R721)."
+ }
+}
