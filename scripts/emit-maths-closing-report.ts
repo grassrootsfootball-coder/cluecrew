@@ -7,6 +7,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { join as pjoin } from 'node:path';
 import { prisma } from '../packages/db/src/index';
 import { publishBlockers, caseFaceServes } from '../packages/core/src/index';
+import { assertFixture } from './lib/carried-fixture';
 import { deliver, stampedName } from './lib/export-destination';
 import { digestOverText, findingsDigest } from './lib/findings-digest';
 import { requirePopulation } from './lib/population';
@@ -15,7 +16,36 @@ const REPO = pjoin(__dirname, '..');
 const sha = (s: string) => createHash('sha256').update(s, 'utf8').digest('hex');
 const MINTS = '/Users/davidb/Downloads/maths-six-mints-for-code.json';
 
+/**
+  * THE THREE PREDICATES THIS REPORT'S NUMBERS REST ON, named so they can be fixtured (R725).
+  * The report asserts counts derived from the store; a count is only as good as the predicate
+  * that decides membership, and until this commit the predicates lived inline where nothing
+  * could catch them going blind.
+  */
+const isBlocked = (opts: Array<{ isCorrect: boolean; misconceptionId: string | null }>, reviewedBy: string | null, authoredBy: string | null, flagged: Date | null) =>
+  publishBlockers(opts, reviewedBy, authoredBy, flagged) === 'missing-misconceptions';
+const isJoinedByMint = (misconceptionId: string | null, mintIds: readonly string[]) =>
+  misconceptionId !== null && mintIds.includes(misconceptionId);
+/** R873/R870: visible AND empty must be UNREACHABLE, not merely unobserved. */
+const windowVisibleAndEmpty = (livePractice: number) => livePractice > 0 && livePractice === 0;
+
 async function run() {
+  assertFixture('closing-report-predicates', [
+    { name: 'a row with an untagged distractor counts as blocked', input: JSON.stringify({ k: 'blocked', opts: [{ isCorrect: true, misconceptionId: null }, { isCorrect: false, misconceptionId: null }] }), mustBeCaught: true },
+    { name: 'a row with every distractor tagged does NOT count as blocked', input: JSON.stringify({ k: 'blocked', opts: [{ isCorrect: true, misconceptionId: null }, { isCorrect: false, misconceptionId: 'x' }] }), mustBeCaught: false },
+    { name: 'an untagged KEY does not make a row blocked', input: JSON.stringify({ k: 'blocked', opts: [{ isCorrect: true, misconceptionId: null }, { isCorrect: false, misconceptionId: 'x' }] }), mustBeCaught: false },
+    { name: 'an option tagged with a mint id counts as joined', input: JSON.stringify({ k: 'joined', id: 'm1' }), mustBeCaught: true },
+    { name: 'an option tagged with a NON-mint id does not count as joined', input: JSON.stringify({ k: 'joined', id: 'maths-77-treating-a-percentage-as-money' }), mustBeCaught: false },
+    { name: 'an untagged option does not count as joined', input: JSON.stringify({ k: 'joined', id: null }), mustBeCaught: false },
+    { name: 'the visible-and-empty window is unreachable at zero', input: JSON.stringify({ k: 'window', n: 0 }), mustBeCaught: false },
+    { name: 'the visible-and-empty window is unreachable at any pool size', input: JSON.stringify({ k: 'window', n: 42 }), mustBeCaught: false },
+  ], (raw) => {
+    const c = JSON.parse(raw) as { k: string; opts?: Array<{ isCorrect: boolean; misconceptionId: string | null }>; id?: string | null; n?: number };
+    if (c.k === 'blocked') return isBlocked(c.opts!, null, 'someone', null);
+    if (c.k === 'joined') return isJoinedByMint(c.id ?? null, ['m1', 'm2']);
+    return windowVisibleAndEmpty(c.n!);
+  });
+
   const mintBytes = readFileSync(MINTS);
   const mints = JSON.parse(mintBytes.toString('utf8')) as { entries: Array<{ id: string; refinement?: string }> };
 
@@ -30,11 +60,12 @@ async function run() {
     where: { id: { in: mints.entries.map((e) => e.id) } },
     select: { id: true, description: true, childHint: true, status: true },
   });
+  const mintIds = mints.entries.map((e) => e.id);
   const joined = rows.flatMap((r) => r.options
-    .filter((o) => mints.entries.some((e) => e.id === o.misconceptionId))
+    .filter((o) => isJoinedByMint(o.misconceptionId, mintIds))
     .map((o) => ({ itemId: r.id, option: String((o.content as { label: unknown }).label), value: String((o.content as { value: unknown }).value), entry: o.misconceptionId })));
 
-  const blocked = rows.filter((r) => publishBlockers(r.options, r.reviewedBy, r.authoredBy, r.answerFlaggedAt) === 'missing-misconceptions');
+  const blocked = rows.filter((r) => isBlocked(r.options, r.reviewedBy, r.authoredBy, r.answerFlaggedAt));
   const signed = rows.filter((r) => r.reviewedBy).length;
   const live = rows.filter((r) => r.status === 'LIVE').length;
   const caseRow = await prisma.case.findUnique({ where: { id: 'case-maths-01' }, select: { title: true, narrativeIntro: true } });
@@ -92,7 +123,7 @@ async function run() {
       live, livePractice,
       caseFaceServes: caseFaceServes(caseRow),
       caseServable: livePractice > 0,
-      windowVisibleAndEmpty: livePractice > 0 && livePractice === 0,
+      windowVisibleAndEmpty: windowVisibleAndEmpty(livePractice),
       TWO_GATES_IN_SERIES: 'a landed face makes the case RENDERABLE; a non-empty LIVE+PRACTICE pool makes it VISIBLE. Neither implies the other (R873).',
       shapeA: `${signed} signed, ${blocked.length} held — available now`,
       shapeB: `${rows.length} with the remaining ${blocked.length} unblocked — needs the five refused joins settled and the other blocked rows' entries`,

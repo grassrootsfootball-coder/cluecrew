@@ -24107,3 +24107,47 @@ one line that would land each refusal: a declared expression in the sender's han
 from her behaviours. So a working cannot supply the human ruling the gate accepts in place of
 execution — the entry is hers, the carrier choice is Cowork's, and only the first carries her
 authority (R203: where the fact is doubt, the doubt travels with the value).
+
+## R879 — A working supplied by the party naming the entry is not the carrier's own evidence
+
+David's ruling, 2026-08-29, registered from the maths join gate.
+
+**When one party names the entry, names the carrier AND supplies the account of how that carrier
+executes the entry, the join has one source wearing three hats.** The working reads as corroboration
+and is not: it is the same claim, restated in arithmetic. Executing it tests whether the sender's
+arithmetic is internally consistent — never whether the option a child meets executes the error the
+entry describes. **The check runs, it passes, and it has not tested the thing its name says.** That
+is R173's family — an instrument returning the right shape for the wrong reason — arriving through
+the join rather than through a query.
+
+So the carrier's own evidence is the only evidence that separates the two: a working the ITEM states,
+authored when the option was written, by somebody who did not know which entry would later claim it.
+
+**AND THE RULING'S STATED PREMISE DOES NOT HOLD HERE, WHICH IS THE HALF WORTH KEEPING** (R880 below).
+
+## R880 — The premise was that two joins landed on carriers stating their own working. None does.
+
+Measured before crossing: **none of the seven named options states a working of its own.** All seven
+carry `label` and `value` and nothing else. `distractorWorking` does not exist in this store — not a
+column, not a key on any of 4,597 options. `misconceptionExecution` is set on 1,140 options
+store-wide and on **0 of 748 MATHS options**.
+
+**So what separated the two joins that landed from the five that refused was EXECUTABILITY, NOT
+PROVENANCE.** Both landed on the sender's working; they landed because that working happened to be
+written as arithmetic (`15 divided by 3`, `(5 + 3, 4)`) rather than as English. Under R879 the two
+rest on exactly the evidence the ruling declines, and the gate that refused five for the right
+reason let two through for a reason it did not check. **A gate can be correct on every row it
+refuses and still be wrong about what it is measuring.**
+
+The exposure is two joined options (`MC01-FDP-08 C`, `MC01-GEOM-04 D`) and **one signed row**
+(`MC01-GEOM-04`, signed because that join unblocked it). **Nothing was unwound.** Applying a ruling
+whose stated premise has just been falsified is itself a reading, and the reading belongs to the
+party who made the ruling — the same line R867 drew when a gate and a reviewer disagreed.
+
+**THE GENERAL FORM: A PREMISE INSIDE A RULING IS A CLAIM ABOUT THE STORE AND GETS LOOKED UP LIKE ANY
+OTHER (R178).** Rules arrive with their reasons attached, the reason contains a fact, and the fact
+travels unchecked because it is riding inside an instruction rather than sitting in a field. The
+ruling can be right and its premise wrong at the same time — that is this entry — and adopting the
+premise silently would have made a measured 0-of-748 into a settled 2-of-7 nobody would re-measure.
+Fourth time this month a stated figure needed verifying before use (R866 the eight, R859 the twelve,
+R863 the routed claim, now this); the cost each time is one query.
