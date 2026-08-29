@@ -1,0 +1,163 @@
+{
+ "kind": "joins-unblocked-signing",
+ "mode": "DRY RUN — nothing written",
+ "THE_PROJECTION": "{stem, options[{content,isCorrect}], explanation}, keys beginning \"_\" stripped (R858/R859)",
+ "THE_SCOPING": "a pin asserts IDENTITY over the whole row under its named projection; a verdict asserts READING over what was read; the inherited fields are PINNED AND UNREAD.",
+ "counts": {
+  "STILL BLOCKED": 13,
+  "WOULD SIGN": 1
+ },
+ "results": [
+  {
+   "itemId": "MC01-CALC-02",
+   "outcome": "STILL BLOCKED",
+   "blocker": "missing-misconceptions",
+   "untagged": [
+    "40"
+   ]
+  },
+  {
+   "itemId": "MC01-CALC-07",
+   "outcome": "STILL BLOCKED",
+   "blocker": "missing-misconceptions",
+   "untagged": [
+    "21"
+   ]
+  },
+  {
+   "itemId": "MC01-CALC-08",
+   "outcome": "STILL BLOCKED",
+   "blocker": "missing-misconceptions",
+   "untagged": [
+    "5000"
+   ]
+  },
+  {
+   "itemId": "MC01-FDP-03",
+   "outcome": "STILL BLOCKED",
+   "blocker": "missing-misconceptions",
+   "untagged": [
+    "£2000"
+   ]
+  },
+  {
+   "itemId": "MC01-FDP-08",
+   "outcome": "STILL BLOCKED",
+   "blocker": "missing-misconceptions",
+   "untagged": [
+    "60"
+   ]
+  },
+  {
+   "itemId": "MC01-NPV-03",
+   "outcome": "STILL BLOCKED",
+   "blocker": "missing-misconceptions",
+   "untagged": [
+    "640",
+    "604"
+   ]
+  },
+  {
+   "itemId": "MC01-MEAS-01",
+   "outcome": "STILL BLOCKED",
+   "blocker": "missing-misconceptions",
+   "untagged": [
+    "£1.00"
+   ]
+  },
+  {
+   "itemId": "MC01-MEAS-02",
+   "outcome": "STILL BLOCKED",
+   "blocker": "missing-misconceptions",
+   "untagged": [
+    "50 cm"
+   ]
+  },
+  {
+   "itemId": "MC01-GEOM-04",
+   "outcome": "WOULD SIGN",
+   "blockerNow": "none",
+   "comparison": {
+    "pinsOnRow": 1,
+    "herPin": "69bdc10fe2199664b2efdb26147119b9a9845333bb378ffa123b1e11c2fd9982",
+    "rowNowUnderThatProjection": "69bdc10fe2199664b2efdb26147119b9a9845333bb378ffa123b1e11c2fd9982",
+    "theyMatch": true
+   }
+  },
+  {
+   "itemId": "MC01-GEOM-06",
+   "outcome": "STILL BLOCKED",
+   "blocker": "missing-misconceptions",
+   "untagged": [
+    "140°",
+    "50°"
+   ]
+  },
+  {
+   "itemId": "MC01-GEOM-05",
+   "outcome": "STILL BLOCKED",
+   "blocker": "missing-misconceptions",
+   "untagged": [
+    "12 cm²"
+   ]
+  },
+  {
+   "itemId": "MC01-STATS-01",
+   "outcome": "STILL BLOCKED",
+   "blocker": "missing-misconceptions",
+   "untagged": [
+    "7"
+   ]
+  },
+  {
+   "itemId": "MC01-STATS-03",
+   "outcome": "STILL BLOCKED",
+   "blocker": "missing-misconceptions",
+   "untagged": [
+    "4"
+   ]
+  },
+  {
+   "itemId": "MC01-STATS-04",
+   "outcome": "STILL BLOCKED",
+   "blocker": "missing-misconceptions",
+   "untagged": [
+    "2"
+   ]
+  }
+ ],
+ "RESULT_LINES": [
+  "MC01-CALC-02\tSTILL BLOCKED",
+  "MC01-CALC-07\tSTILL BLOCKED",
+  "MC01-CALC-08\tSTILL BLOCKED",
+  "MC01-FDP-03\tSTILL BLOCKED",
+  "MC01-FDP-08\tSTILL BLOCKED",
+  "MC01-NPV-03\tSTILL BLOCKED",
+  "MC01-MEAS-01\tSTILL BLOCKED",
+  "MC01-MEAS-02\tSTILL BLOCKED",
+  "MC01-GEOM-04\tWOULD SIGN",
+  "MC01-GEOM-06\tSTILL BLOCKED",
+  "MC01-GEOM-05\tSTILL BLOCKED",
+  "MC01-STATS-01\tSTILL BLOCKED",
+  "MC01-STATS-03\tSTILL BLOCKED",
+  "MC01-STATS-04\tSTILL BLOCKED"
+ ],
+ "resultsSha256": "2192df0643f624c27f5d198aab7068d7f5ffe1bfc5dbfe2f46f9ef6f9c298e29",
+ "resultsSha256Spec": "sha256 over the result lines joined by \\n, each \"<itemId>\\t<outcome>\", encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content.",
+ "findingsSha256": "96cca83a7b37e7073231869ecb5ce95e359508269d7eed8d550e59b4d7ef1c97",
+ "howToCheckThisOnArrival": {
+  "subtreeKeys": [
+   "counts",
+   "results",
+   "RESULT_LINES"
+  ],
+  "subtree": "an object of THIS DOCUMENT'S OWN TOP-LEVEL KEYS, exactly as spelled in subtreeKeys and nowhere renamed: {\"counts\", \"results\", \"RESULT_LINES\"}",
+  "spec": "sha256 over json.dumps(subtree, sort_keys=True, separators=(\",\",\":\"), ensure_ascii=False).encode(\"utf-8\") — R729. ensure_ascii defaults to True and gives a different number.",
+  "andTheFileDigest": "the staging line and the .sha256 sidecar, over the whole file bytes"
+ },
+ "instrumentProvenance": {
+  "emittedBy": "sign-joins-unblocked.ts",
+  "carriedFixture": true,
+  "meaning": "the emitting instrument proved itself against carried cases — including at least one clean case caught by nothing — before it produced these figures (R721)."
+ }
+}

@@ -24270,3 +24270,74 @@ still existed. R725 queued fixtures on the argument that a check should earn one
 emission crosses; the argument was about trusting findings. **This is the stronger reason: without
 the fixture, the capability would have gone and the diff would have looked like a clean improvement**
 — fourteen carried cases now, and the one that fired was the one nobody would have thought to re-add.
+
+## R885 — The condition tests that the working DETERMINES the value; the name said computes
+
+Annie's 192nd, 2026-08-29. **Computes-as was never about arithmetic.** Her words: *the stated act,
+run on the item's own material, produces exactly this value and no other.* Long division qualifies;
+so does selection; so does ordering. What the condition refuses is GESTURE — a working that makes its
+value plausible rather than inevitable.
+
+**THE NAME SAID COMPUTES AND THE TEST MEANT DETERMINES**, which is R871's `maxLongWords` fault
+landing on the reviewer's own condition rather than on our instrument. She named it before it cost
+anyone a wrong argument; three joins were refused on it first. So `scripts/lib/determination.ts` is
+named for what it tests and `determines()` is the only entry point.
+
+**A CLOSED SET OF ACTS, NOT AN INTERPRETER.** Widening to "any stated act" is precisely where R826's
+inference creeps back, so each act is NAMED, recognised by a declared vocabulary, and EXECUTED over
+the item's own material: `arithmetic`, `selection` (largest/smallest over the numbers the stem
+states), `permutation` (a stated order of the item's digits, concatenated). A working matching none
+is refused. The act that matched and the material it ran on travel on every result (R569).
+
+**"AND NO OTHER" IS HALF THE TEST AND IT IS WHERE THE TEETH ARE.** A tied selection determines
+nothing even when it names the right value; a permutation whose digits are not the item's determines
+some other item's answer. Both are carried as must-be-clean fixture cases, because both would
+otherwise pass as "the act produced the option".
+
+## R886 — A join's declared value re-derives against the carrier's current bytes at landing
+
+Annie's 192nd §2, on her own artefact: **she computed the join from a population snapshot and the
+money-units class landed after the cut**, so her file quoted `2000` where the store rightly carries
+`£2000`. Born-stale (R876) arriving on the reviewer's side of the exchange. The repair is the
+standing rule applied to joins — the mechanism and the working unchanged, the number keeping its
+deliberate wrongness with its unit attached.
+
+**RE-DERIVATION CORROBORATES; IT DOES NOT BELIEVE.** Identity anchors on the label, and a declared
+value matching neither the carrier's current bytes NOR its retained prior names something that
+carrier has never been — that refuses. Without the corroboration, "re-derive" degrades to "believe
+whichever option the label points at", which is R865's stretch by another route. Here the retained
+`_previousValue` is byte-identical to her declaration, so the re-derivation is evidenced rather than
+assumed, and the artefact records declared, re-derived, and what corroborated it.
+
+## R887 — A fixture case a ruling invalidates is retired in the commit that implements the ruling
+
+Two carried cases asserted that `the largest of 6, 3, 7 and 4` and `digits 6, 4, 0 in descending
+order` must NOT verify. **They were correct while the condition was read as arithmetic and R885 makes
+them wrong.** A stale must-be-clean case is an instrument enforcing a superseded rule: it fails
+loudly on the now-correct behaviour, and the failure looks exactly like a regression.
+
+So the retirement happens in the same commit as the ruling, in the file, with the reason written
+where the cases were — never by quietly deleting them and never by leaving them to fail. **A fixture
+is the instrument's memory (R884), and a memory nobody curates becomes a rule nobody voted for.**
+
+## R888 — Which projection a pin was taken under is DISCOVERED, never declared
+
+`sign-joins-unblocked.ts` named one projection — retention EXCLUDED — and asserted it in every
+signature's `method`. **Every maths pin was in fact taken with retention INCLUDED.**
+
+**It passed anyway on three rows.** A row carrying no `_`-key hashes identically under both
+projections, so the claim was untestable exactly where it was false and self-confirming everywhere
+else. Three signatures landed carrying a method string that names a projection which was not the one
+used; the verification behind them was sound, and the record of it was not.
+
+**The one row that could expose it did, and the exposure did not look like a projection fault.**
+`MC01-FDP-03` carries `_previousValue`, so the two projections diverge on it — and the refusal read
+*the row does not recompute to her pin*, which is the wording for a content problem. R859 said a
+digest is comparable only under the projection it was made with; **this is the next step — you do not
+get to declare which that was.** Both are now computed, the pin is matched against both, and the
+signature records WHICH, noting when the two are indistinguishable on that row.
+
+The three earlier signatures were corrected by ADDING a correcting event, not by rewriting the
+originals: a record is corrected by adding to it. And the fixture now carries the discriminating
+pair — retention present (projections differ) and retention absent (projections agree) — because the
+second case is the reason the first went unnoticed.

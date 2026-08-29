@@ -1,0 +1,135 @@
+{
+ "kind": "joins-unblocked-signing",
+ "mode": "DRY RUN — nothing written",
+ "THE_PROJECTION": "{stem, options[{content,isCorrect}], explanation}, keys beginning \"_\" stripped (R858/R859)",
+ "THE_SCOPING": "a pin asserts IDENTITY over the whole row under its named projection; a verdict asserts READING over what was read; the inherited fields are PINNED AND UNREAD.",
+ "counts": {
+  "STILL BLOCKED": 10,
+  "REFUSED": 1
+ },
+ "results": [
+  {
+   "itemId": "MC01-CALC-02",
+   "outcome": "STILL BLOCKED",
+   "blocker": "missing-misconceptions",
+   "untagged": [
+    "40"
+   ]
+  },
+  {
+   "itemId": "MC01-CALC-07",
+   "outcome": "STILL BLOCKED",
+   "blocker": "missing-misconceptions",
+   "untagged": [
+    "21"
+   ]
+  },
+  {
+   "itemId": "MC01-CALC-08",
+   "outcome": "STILL BLOCKED",
+   "blocker": "missing-misconceptions",
+   "untagged": [
+    "5000"
+   ]
+  },
+  {
+   "itemId": "MC01-FDP-03",
+   "outcome": "REFUSED — the row does not recompute to her pin",
+   "comparison": {
+    "pinsOnRow": 1,
+    "herPin": "9fea8856794467c1162128d5dac53bd9c05df20af09004686cc49ea4a01bd27c",
+    "rowNowUnderThatProjection": "537dcda436643a7aade6139eff7a5ed7cf2643767c9472a32c4138cc5541fbe3",
+    "theyMatch": false
+   },
+   "why": "a signature asserts she read THIS row. It goes back to her, never signed on a hash that moved."
+  },
+  {
+   "itemId": "MC01-FDP-08",
+   "outcome": "STILL BLOCKED",
+   "blocker": "missing-misconceptions",
+   "untagged": [
+    "60"
+   ]
+  },
+  {
+   "itemId": "MC01-MEAS-01",
+   "outcome": "STILL BLOCKED",
+   "blocker": "missing-misconceptions",
+   "untagged": [
+    "£1.00"
+   ]
+  },
+  {
+   "itemId": "MC01-MEAS-02",
+   "outcome": "STILL BLOCKED",
+   "blocker": "missing-misconceptions",
+   "untagged": [
+    "50 cm"
+   ]
+  },
+  {
+   "itemId": "MC01-GEOM-06",
+   "outcome": "STILL BLOCKED",
+   "blocker": "missing-misconceptions",
+   "untagged": [
+    "140°",
+    "50°"
+   ]
+  },
+  {
+   "itemId": "MC01-GEOM-05",
+   "outcome": "STILL BLOCKED",
+   "blocker": "missing-misconceptions",
+   "untagged": [
+    "12 cm²"
+   ]
+  },
+  {
+   "itemId": "MC01-STATS-03",
+   "outcome": "STILL BLOCKED",
+   "blocker": "missing-misconceptions",
+   "untagged": [
+    "4"
+   ]
+  },
+  {
+   "itemId": "MC01-STATS-04",
+   "outcome": "STILL BLOCKED",
+   "blocker": "missing-misconceptions",
+   "untagged": [
+    "2"
+   ]
+  }
+ ],
+ "RESULT_LINES": [
+  "MC01-CALC-02\tSTILL BLOCKED",
+  "MC01-CALC-07\tSTILL BLOCKED",
+  "MC01-CALC-08\tSTILL BLOCKED",
+  "MC01-FDP-03\tREFUSED — the row does not recompute to her pin",
+  "MC01-FDP-08\tSTILL BLOCKED",
+  "MC01-MEAS-01\tSTILL BLOCKED",
+  "MC01-MEAS-02\tSTILL BLOCKED",
+  "MC01-GEOM-06\tSTILL BLOCKED",
+  "MC01-GEOM-05\tSTILL BLOCKED",
+  "MC01-STATS-03\tSTILL BLOCKED",
+  "MC01-STATS-04\tSTILL BLOCKED"
+ ],
+ "resultsSha256": "1b647b1da3a3684fcb1bb71f0f9254fd9bda0cb5aeb50a76524612069e57434c",
+ "resultsSha256Spec": "sha256 over the result lines joined by \\n, each \"<itemId>\\t<outcome>\", encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content.",
+ "findingsSha256": "e63037f5b896e9f45bd005a895cd2baf84ecd8444780e2df8876795a4493b2b3",
+ "howToCheckThisOnArrival": {
+  "subtreeKeys": [
+   "counts",
+   "results",
+   "RESULT_LINES"
+  ],
+  "subtree": "an object of THIS DOCUMENT'S OWN TOP-LEVEL KEYS, exactly as spelled in subtreeKeys and nowhere renamed: {\"counts\", \"results\", \"RESULT_LINES\"}",
+  "spec": "sha256 over json.dumps(subtree, sort_keys=True, separators=(\",\",\":\"), ensure_ascii=False).encode(\"utf-8\") — R729. ensure_ascii defaults to True and gives a different number.",
+  "andTheFileDigest": "the staging line and the .sha256 sidecar, over the whole file bytes"
+ },
+ "instrumentProvenance": {
+  "emittedBy": "sign-joins-unblocked.ts",
+  "carriedFixture": true,
+  "meaning": "the emitting instrument proved itself against carried cases — including at least one clean case caught by nothing — before it produced these figures (R721)."
+ }
+}

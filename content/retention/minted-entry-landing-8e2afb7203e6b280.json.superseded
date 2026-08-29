@@ -1,0 +1,183 @@
+{
+ "kind": "minted-entry-landing",
+ "mode": "APPLIED",
+ "THE_CUT": {
+  "cutBeganAt": "2026-08-29T21:32:20.070Z",
+  "cutSealedAt": "2026-08-29T21:32:20.851Z",
+  "sourceLastWriteAt": "2026-08-29T21:32:20.845Z",
+  "TORN": true,
+  "meaning": "TORN — the source was written to AFTER this cut began, so this artefact may hold a mixture of states and no single moment describes it. Not a defect in the artefact; a fact about when it was taken."
+ },
+ "mintFile": "/Users/davidb/Downloads/maths-six-mints-for-code.json",
+ "mintFileSha256": "aa7af8b02157041f1ac79acdc361c14124e6a1e1a31f7fb850afc025c5f72610",
+ "mintFileSha256Spec": "sha256 over the mint file bytes exactly as delivered, unparsed",
+ "populationTheMintQuotes": "1d7f9cf414f33a0ae7b4a36a0fca9095e2c8c75b09d0be377a1c0c28b37d7ad9",
+ "THE_CONDITION_AS_SENT": "computes-as: if a carrier's working does not compute as the entry's behaviour, that join refuses and the entry waits. Nothing stretches.",
+ "THE_RULING_ENFORCED": "the join refuses rather than stretches: if an option does not compute as its entry's behaviour, the entry waits for its true carrier.",
+ "THE_DEFAULT_IS_REFUSAL": "**a join lands on positive verification, never on the absence of contradiction.**",
+ "THE_MAPPING_DECLARED": "join.itemId+optionValue select the carrier; optionLabel CORROBORATES and never selects; working supplies arithmetic that is EXTRACTED, never interpreted; behaviour->description, childHint->childHint (gated).",
+ "entryCounts": {
+  "MINTED": 6
+ },
+ "joinCounts": {
+  "REFUSED": 5,
+  "JOINED": 2
+ },
+ "entries": [
+  {
+   "entryId": "percentage-never-divided-by-hundred",
+   "outcome": "MINTED",
+   "childHintGate": "PASSES"
+  },
+  {
+   "entryId": "fraction-part-used-alone",
+   "outcome": "MINTED",
+   "refinementTaken": "Supersedes the 189th's wording fraction-reduced-to-its-denominator, refined at zero carriers: the bytes show the part used can be the top or the bottom, so the entry names the act, not one part.",
+   "supersedes": "the 189th's wording; the file's wording is what mints",
+   "childHintGate": "PASSES"
+  },
+  {
+   "entryId": "side-recounted-from-a-reached-corner",
+   "outcome": "MINTED",
+   "childHintGate": "PASSES"
+  },
+  {
+   "entryId": "maximum-given-for-a-sum",
+   "outcome": "MINTED",
+   "childHintGate": "PASSES"
+  },
+  {
+   "entryId": "ordering-goal-reversed",
+   "outcome": "MINTED",
+   "childHintGate": "PASSES"
+  },
+  {
+   "entryId": "leading-zero-repaired-ordering-not",
+   "outcome": "MINTED",
+   "childHintGate": "PASSES"
+  }
+ ],
+ "joins": [
+  {
+   "entryId": "percentage-never-divided-by-hundred",
+   "carrier": "MC01-FDP-03 C=\"2000\"",
+   "kind": "declared",
+   "outcome": "REFUSED",
+   "why": "no option on MC01-FDP-03 holds the value \"2000\" — the carrier must match byte for byte",
+   "valuesPresentNow": [
+    "£20",
+    "£55",
+    "£2000",
+    "£40"
+   ],
+   "THE_DECLARED_VALUE_IS_A_SUPERSEDED_ONE": "option C retains _previousValue \"2000\", which is byte-identical to the declared carrier. The value moved by AMENDMENT, not by drift.",
+   "andWHOMOVEDIT": "her own 180th — money keys and money options carry their unit — landing AFTER the population this mint quotes.",
+   "whatWouldLandIt": "her re-declaration against current bytes, or a ruling that a fenced value plus label identifies a carrier. NOT a relaxation here: matching on retention is a new selection rule, and inventing one under pressure to turn a row green is the fault R149 names."
+  },
+  {
+   "entryId": "fraction-part-used-alone",
+   "carrier": "MC01-FDP-08 C=\"5\"",
+   "kind": "declared",
+   "outcome": "JOINED",
+   "verification": "extracted [\"15 / 3\"] from \"15 / 3\" = [5]; the option is [5] — AGREES",
+   "extracted": [
+    "15 / 3"
+   ],
+   "extractedFrom": "15 / 3"
+  },
+  {
+   "entryId": "fraction-part-used-alone",
+   "carrier": "MC01-FDP-08 D=\"60\"",
+   "kind": "conditional",
+   "outcome": "REFUSED",
+   "why": "HELD — the file joins this candidate only if the store's declared gap prose agrees, and this store holds NO declared gap prose for the option.",
+   "antecedent": "the store's declared gap prose",
+   "antecedentState": "ABSENT — misconceptionExecution, drafterDeclaredPull, tagStatus, attractorLine, defeaterLine and a36Note are all null on this option",
+   "andWHYTHATISNOTADISAGREEMENT": "an absent antecedent is UNKNOWN, not false (R98). The condition says \"else waits\", and this waits.",
+   "contentKeysPresent": [
+    "label",
+    "value"
+   ]
+  },
+  {
+   "entryId": "side-recounted-from-a-reached-corner",
+   "carrier": "MC01-GEOM-04 D=\"(8, 4)\"",
+   "kind": "declared",
+   "outcome": "JOINED",
+   "verification": "extracted [\"5 + 3\",\"4\"] from \"(5 + 3, 4)\" = [8,4]; the option is [8,4] — AGREES",
+   "extracted": [
+    "5 + 3",
+    "4"
+   ],
+   "extractedFrom": "(5 + 3, 4)"
+  },
+  {
+   "entryId": "maximum-given-for-a-sum",
+   "carrier": "MC01-STATS-01 D=\"7\"",
+   "kind": "declared",
+   "outcome": "REFUSED",
+   "why": "NOT MECHANICALLY VERIFIABLE — the working names the act in words rather than writing the arithmetic. **An unverifiable join is refused, not waved through.**",
+   "detail": "the working states no arithmetic to execute — it names the act in words. Nothing here interprets a phrase (R826).",
+   "theWorkingAsWritten": "the largest of 6, 3, 7 and 4 given where the sum 20 is asked",
+   "whatWouldLandIt": "one declared expression per join, in the sender's hand — or her ruling on the join itself. Not an interpreter built here: R826 withdrew three signals that decided this by inference and every one measured something else.",
+   "andWHOAUTHOREDTHEWORKING": "the file says the workings were COMPUTED by the sender from her behaviours, so a working is not itself her ruling on the carrier (R203 — where the fact is doubt, the doubt travels with it)."
+  },
+  {
+   "entryId": "ordering-goal-reversed",
+   "carrier": "MC01-NPV-03 C=\"640\"",
+   "kind": "declared",
+   "outcome": "REFUSED",
+   "why": "NOT MECHANICALLY VERIFIABLE — the working names the act in words rather than writing the arithmetic. **An unverifiable join is refused, not waved through.**",
+   "detail": "the working states no arithmetic to execute — it names the act in words. Nothing here interprets a phrase (R826).",
+   "theWorkingAsWritten": "digits 6, 4, 0 in descending order: the largest number, built where the smallest is asked",
+   "whatWouldLandIt": "one declared expression per join, in the sender's hand — or her ruling on the join itself. Not an interpreter built here: R826 withdrew three signals that decided this by inference and every one measured something else.",
+   "andWHOAUTHOREDTHEWORKING": "the file says the workings were COMPUTED by the sender from her behaviours, so a working is not itself her ruling on the carrier (R203 — where the fact is doubt, the doubt travels with it)."
+  },
+  {
+   "entryId": "leading-zero-repaired-ordering-not",
+   "carrier": "MC01-NPV-03 D=\"604\"",
+   "kind": "declared",
+   "outcome": "REFUSED",
+   "why": "NOT MECHANICALLY VERIFIABLE — the working names the act in words rather than writing the arithmetic. **An unverifiable join is refused, not waved through.**",
+   "detail": "the working states no arithmetic to execute — it names the act in words. Nothing here interprets a phrase (R826).",
+   "theWorkingAsWritten": "zero correctly not leading, but 6 leads where 4 could: the repair applied over an ordering still wrong",
+   "whatWouldLandIt": "one declared expression per join, in the sender's hand — or her ruling on the join itself. Not an interpreter built here: R826 withdrew three signals that decided this by inference and every one measured something else.",
+   "andWHOAUTHOREDTHEWORKING": "the file says the workings were COMPUTED by the sender from her behaviours, so a working is not itself her ruling on the carrier (R203 — where the fact is doubt, the doubt travels with it)."
+  }
+ ],
+ "RESULT_LINES": [
+  "entry\tpercentage-never-divided-by-hundred\tMINTED",
+  "entry\tfraction-part-used-alone\tMINTED",
+  "entry\tside-recounted-from-a-reached-corner\tMINTED",
+  "entry\tmaximum-given-for-a-sum\tMINTED",
+  "entry\tordering-goal-reversed\tMINTED",
+  "entry\tleading-zero-repaired-ordering-not\tMINTED",
+  "join\tpercentage-never-divided-by-hundred\tMC01-FDP-03 C=\"2000\"\tREFUSED",
+  "join\tfraction-part-used-alone\tMC01-FDP-08 C=\"5\"\tJOINED",
+  "join\tfraction-part-used-alone\tMC01-FDP-08 D=\"60\"\tREFUSED",
+  "join\tside-recounted-from-a-reached-corner\tMC01-GEOM-04 D=\"(8, 4)\"\tJOINED",
+  "join\tmaximum-given-for-a-sum\tMC01-STATS-01 D=\"7\"\tREFUSED",
+  "join\tordering-goal-reversed\tMC01-NPV-03 C=\"640\"\tREFUSED",
+  "join\tleading-zero-repaired-ordering-not\tMC01-NPV-03 D=\"604\"\tREFUSED"
+ ],
+ "resultsSha256": "3e6bdef195d373ad12c84f9520d4f8a438ea1627829a91b3e36cc06ca209d6ed",
+ "resultsSha256Spec": "sha256 over the result lines joined by \\n, each \"<kind>\\t<entryId>[\\t<carrier>]\\t<outcome>\", encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content.",
+ "findingsSha256": "b84c2e9e82c4065ecd267ef337e995203a83ef11e07999f802b27def3927e2ff",
+ "howToCheckThisOnArrival": {
+  "subtreeKeys": [
+   "entries",
+   "joins",
+   "RESULT_LINES",
+   "entryCounts",
+   "joinCounts"
+  ],
+  "subtree": "an object of THIS DOCUMENT'S OWN TOP-LEVEL KEYS, exactly as spelled in subtreeKeys and nowhere renamed: {\"entries\", \"joins\", \"RESULT_LINES\", \"entryCounts\", \"joinCounts\"}",
+  "spec": "sha256 over json.dumps(subtree, sort_keys=True, separators=(\",\",\":\"), ensure_ascii=False).encode(\"utf-8\") — R729. ensure_ascii defaults to True and gives a different number.",
+  "andTheFileDigest": "the staging line and the .sha256 sidecar, over the whole file bytes"
+ },
+ "instrumentProvenance": {
+  "emittedBy": "land-minted-entries.ts",
+  "carriedFixture": true,
+  "meaning": "the emitting instrument proved itself against carried cases — including at least one clean case caught by nothing — before it produced these figures (R721)."
+ }
+}

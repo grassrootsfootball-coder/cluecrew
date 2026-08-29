@@ -27,20 +27,40 @@ const REPO = pjoin(__dirname, '..');
 const APPLY = process.argv.includes('--apply');
 const sha = (s: string) => createHash('sha256').update(s, 'utf8').digest('hex');
 
-/** The NAMED projection her maths pins were taken under. Retention (`_`-keys) excluded — R858/R859. */
+/**
+ * TWO PROJECTIONS, AND WHICH ONE A PIN WAS TAKEN UNDER IS DISCOVERED, NEVER ASSUMED (R888).
+ *
+ * The first version named ONE projection — retention excluded — and asserted it in every
+ * signature's method. It was wrong: every maths pin was taken with retention INCLUDED. It passed
+ * anyway on three rows, because a row carrying no `_`-key hashes identically under both, so the
+ * claim was untestable exactly where it was false and self-confirming everywhere else. The one row
+ * carrying retention refused, and the refusal read as *the row does not recompute to her pin* — a
+ * content fault, which it was not.
+ */
 const strip = (v: unknown): unknown => Array.isArray(v) ? v.map(strip)
   : v && typeof v === 'object' ? Object.fromEntries(Object.entries(v as Record<string, unknown>).filter(([k]) => !k.startsWith('_')).map(([k, x]) => [k, strip(x)]))
   : v;
-const hashOf = (stem: unknown, explanation: unknown, options: Array<{ content: unknown; isCorrect: boolean }>) =>
-  sha(canonicalJson(strip({ stem, options: options.map((o) => ({ content: o.content, isCorrect: o.isCorrect })), explanation })));
+const project = (stem: unknown, explanation: unknown, options: Array<{ content: unknown; isCorrect: boolean }>) =>
+  ({ stem, options: options.map((o) => ({ content: o.content, isCorrect: o.isCorrect })), explanation });
+const hashRetentionIncluded = (s: unknown, e: unknown, o: Array<{ content: unknown; isCorrect: boolean }>) => sha(canonicalJson(project(s, e, o)));
+const hashRetentionExcluded = (s: unknown, e: unknown, o: Array<{ content: unknown; isCorrect: boolean }>) => sha(canonicalJson(strip(project(s, e, o))));
+const hashOf = hashRetentionExcluded;
 
 async function run() {
-  assertFixture('pin-projection-excludes-tags', [
-    { name: 'tagging an option does NOT move the hash', input: 'tag', mustBeCaught: true },
-    { name: 'changing an option VALUE does move the hash', input: 'value', mustBeCaught: false },
-    { name: 'changing the stem does move the hash', input: 'stem', mustBeCaught: false },
+  assertFixture('pin-projection', [
+    { name: 'tagging an option does NOT move either hash', input: 'tag', mustBeCaught: true },
+    { name: 'changing an option VALUE moves the hash', input: 'value', mustBeCaught: false },
+    { name: 'changing the stem moves the hash', input: 'stem', mustBeCaught: false },
+    { name: 'RETENTION makes the two projections DIFFER — the case that exposed the wrong claim', input: 'retention', mustBeCaught: false },
+    { name: 'without retention the two projections AGREE, which is why the wrong claim passed everywhere else', input: 'no-retention', mustBeCaught: true },
   ], (k) => {
     const base = { stem: { text: 's' }, explanation: {}, options: [{ content: { label: 'A', value: '1' }, isCorrect: false }] };
+    if (k === 'retention' || k === 'no-retention') {
+      const opts = k === 'retention'
+        ? [{ content: { label: 'A', value: '1', _previousValue: '0' }, isCorrect: false }]
+        : base.options;
+      return hashRetentionIncluded(base.stem, base.explanation, opts) === hashRetentionExcluded(base.stem, base.explanation, opts);
+    }
     const after = k === 'tag' ? base
       : k === 'value' ? { ...base, options: [{ content: { label: 'A', value: '2' }, isCorrect: false }] }
       : { ...base, stem: { text: 't' } };
@@ -62,18 +82,29 @@ async function run() {
       continue;
     }
     const pins = await prisma.attributionEvent.findMany({ where: { recordId: r.id, actor: 'Annie', subjectHash: { not: null } }, select: { subjectHash: true, method: true }, orderBy: { at: 'asc' } });
-    const now = hashOf(r.stem, r.explanation, r.options);
-    const matched = pins.find((p) => p.subjectHash === now);
-    const comparison = { pinsOnRow: pins.length, herPin: pins[0]?.subjectHash ?? null, rowNowUnderThatProjection: now, theyMatch: !!matched };
+    const included = hashRetentionIncluded(r.stem, r.explanation, r.options);
+    const excluded = hashRetentionExcluded(r.stem, r.explanation, r.options);
+    const matched = pins.find((p) => p.subjectHash === included || p.subjectHash === excluded);
+    const projection = matched
+      ? (matched.subjectHash === included
+        ? (included === excluded ? 'retention-INCLUDED (indistinguishable on this row — it carries no retention)' : 'retention-INCLUDED')
+        : 'retention-EXCLUDED')
+      : null;
+    const comparison = {
+      pinsOnRow: pins.length, herPin: pins[0]?.subjectHash ?? null,
+      rowNowRetentionIncluded: included, rowNowRetentionExcluded: excluded,
+      theTwoProjectionsDiffer: included !== excluded,
+      theyMatch: !!matched, matchedUnderProjection: projection,
+    };
     if (!matched) {
-      results.push({ itemId: r.id, outcome: 'REFUSED — the row does not recompute to her pin', comparison, why: 'a signature asserts she read THIS row. It goes back to her, never signed on a hash that moved.' });
+      results.push({ itemId: r.id, outcome: 'REFUSED — the row recomputes to her pin under NEITHER projection', comparison, why: 'a signature asserts she read THIS row. It goes back to her, never signed on a hash that moved.' });
       continue;
     }
     if (APPLY) {
       await prisma.$transaction(async (tx) => {
         await tx.item.update({ where: { id: r.id }, data: { reviewedBy: 'reviewer:rev-0001', reviewRecordedBy: 'human:david', reviewMethod: 'content-verified against a pinned row hash', reviewRecordNote: 'Annie, via her 180th, 182nd and 184th returns; unblocked by her 189th minted entries', status: 'REVIEWED' } });
-        await tx.attributionEvent.create({ data: { recordType: 'item', recordId: r.id, action: 'SIGNED', reviewerId: 'rev-0001', actor: 'Annie', recordedBy: 'human:david', field: 'reviewedBy', subjectHash: now,
-          method: `signature landed on her pin, recomputed and matched under the named projection {stem, options[{content,isCorrect}], explanation}, retention excluded. Unblocked by a join written to options[].misconceptionId, which is OUTSIDE that projection.`,
+        await tx.attributionEvent.create({ data: { recordType: 'item', recordId: r.id, action: 'SIGNED', reviewerId: 'rev-0001', actor: 'Annie', recordedBy: 'human:david', field: 'reviewedBy', subjectHash: matched.subjectHash,
+          method: `signature landed on her pin, recomputed and matched under the ${projection} projection of {stem, options[{content,isCorrect}], explanation}${comparison.theTwoProjectionsDiffer ? ' — the two projections DIFFER on this row, so the match names a specific one' : ''}. Unblocked by a join written to options[].misconceptionId, which is OUTSIDE both.`,
           note: 'SCOPING: the pin asserts identity over the whole row; the verdict asserts reading over what was read; the inherited stem fields are pinned and unread.' } });
       });
     }
@@ -85,7 +116,7 @@ async function run() {
   const d = digestOverText('the result lines joined by \\n, each "<itemId>\\t<outcome>"', lines.join('\n'));
   const full = {
     kind: 'joins-unblocked-signing', mode: APPLY ? 'APPLIED' : 'DRY RUN — nothing written',
-    THE_PROJECTION: '{stem, options[{content,isCorrect}], explanation}, keys beginning "_" stripped (R858/R859)',
+    THE_PROJECTION: 'BOTH are computed and the pin is matched against both; the signature records which one matched. A pin is comparable only under the projection it was taken with (R859), and which that is, is discovered rather than declared (R888).',
     THE_SCOPING: 'a pin asserts IDENTITY over the whole row under its named projection; a verdict asserts READING over what was read; the inherited fields are PINNED AND UNREAD.',
     counts, results, RESULT_LINES: lines, resultsSha256: d.value, resultsSha256Spec: d.spec,
   };

@@ -33,6 +33,7 @@ import { prisma } from '../packages/db/src/index';
 import { checkChildFacingText } from '../packages/core/src/index';
 import { assertFixture } from './lib/carried-fixture';
 import { carrierWorking, crossedOptionKeys } from './lib/crossed-carrier-working';
+import { determines } from './lib/determination';
 import { beginCut, sealCut } from './lib/cut-stamp';
 import { deliver, stampedName } from './lib/export-destination';
 import { digestOverText, findingsDigest } from './lib/findings-digest';
@@ -58,79 +59,33 @@ function componentsOf(v: string): number[] | null {
   return nums.every((n) => !Number.isNaN(n)) && nums.length > 0 ? nums : null;
 }
 
-/**
- * Extract arithmetic that was WRITTEN. Not an interpreter: ` x ` and `divided by` are spellings the
- * corpus uses and nothing else is mapped. A phrase naming an operation in words — "biggest number
- * = 7", "6,4,0 = 640" — yields NOTHING and the join refuses, because building an English-phrase
- * mapper to land rows is R826 exactly.
- *
- * THREE FORMS, AND THE LAST IS WEAKER — SAID HERE RATHER THAN LEFT TO BE DISCOVERED (R591):
- *   TUPLE   `(5 + 3, 4)`      -> evaluates componentwise and must REPRODUCE the option exactly.
- *   ASSERTION `5 + 3 = 8`     -> checks the arithmetic is internally correct AND that its result
- *                                appears AMONG the option's numeric components. On `(8, 4)` that
- *                                is a weaker claim than reproduction: it says 8 is in there, not
- *                                that the working rebuilds the option. The carriers' own idiom is
- *                                the assertion form, so refusing it would have unwound a landed
- *                                join on a difference of notation.
- */
-function arithmeticIn(working: string): { kind: 'tuple' | 'assertion' | 'bare'; expr: string[]; asserted?: number; source: string } | null {
-  const norm = working.replace(/\bx\b/g, '*').replace(/\bdivided by\b/g, '/');
-  const tuple = norm.match(/\(([^)]*[+\-*\/][^)]*,[^)]*)\)/);
-  if (tuple) {
-    const expr = tuple[1].split(',').map((c) => c.trim());
-    if (expr.every((c) => /^[\d\s.+\-*\/()]+$/.test(c) && c !== '')) return { kind: 'tuple', expr, source: tuple[0] };
-  }
-  const assertion = norm.match(/([\d.()][\d\s.+\-*\/()]*[+\-*\/][\d\s.+\-*\/()]*)=\s*(-?[\d.]+)/);
-  if (assertion) {
-    const lhs = assertion[1].trim();
-    if (/^[\d\s.+\-*\/()]+$/.test(lhs)) return { kind: 'assertion', expr: [lhs], asserted: Number(assertion[2]), source: assertion[0].trim() };
-  }
-  const bare = norm.match(/[\d.]+(?:\s*[+\-*\/]\s*[\d.()]+)+/);
-  if (bare && /^[\d\s.+\-*\/()]+$/.test(bare[0])) return { kind: 'bare', expr: [bare[0].trim()], source: bare[0].trim() };
-  return null;
-}
-
-/** Evaluate written arithmetic against the option's own components. No proxy, no inference. */
-function computes(working: string, optionValue: string) {
-  const found = arithmeticIn(working);
-  if (!found) return { ran: false, detail: 'the working states no arithmetic to execute — it names the act in words. Nothing here interprets a phrase (R826).' };
-  const want = componentsOf(optionValue);
-  if (!want) return { ran: false, detail: `the option value ${JSON.stringify(optionValue)} has no numeric components to compare` };
-  let got: number[];
-  try { got = found.expr.map((e) => Function(`"use strict";return (${e})`)() as number); } catch {
-    return { ran: false, detail: `the extracted arithmetic ${JSON.stringify(found.expr)} did not evaluate` };
-  }
-  if (found.kind === 'tuple' || found.kind === 'bare') {
-    const agrees = got.length === want.length && got.every((g, i) => Math.abs(g - want[i]) < 1e-9);
-    return { ran: true, agrees, form: `${found.kind} — reproduces the option`, extractedFrom: found.source, extracted: found.expr, evaluatedTo: got, optionComponents: want,
-      detail: `extracted ${JSON.stringify(found.expr)} from ${JSON.stringify(found.source)} = ${JSON.stringify(got)}; the option is ${JSON.stringify(want)} — ${agrees ? 'AGREES' : 'DISAGREES'}` };
-  }
-  const arithmeticHolds = Math.abs(got[0] - (found.asserted as number)) < 1e-9;
-  const resultIsInTheOption = want.some((w) => Math.abs(w - (found.asserted as number)) < 1e-9);
-  const agrees = arithmeticHolds && resultIsInTheOption;
-  return { ran: true, agrees, form: 'assertion — result appears among the option components (weaker than reproduction)',
-    extractedFrom: found.source, extracted: found.expr, evaluatedTo: got, optionComponents: want,
-    detail: `extracted ${JSON.stringify(found.source)}: ${found.expr[0]} = ${got[0]}, asserted ${found.asserted} — arithmetic ${arithmeticHolds ? 'holds' : 'DOES NOT HOLD'}; the option is ${JSON.stringify(want)} and ${resultIsInTheOption ? 'contains' : 'DOES NOT CONTAIN'} that result — ${agrees ? 'AGREES' : 'DISAGREES'}` };
-}
-
 async function run() {
   const cutBeganAt = beginCut();
-  assertFixture('minted-join', [
-    { name: 'an assertion matching the option verifies', input: JSON.stringify(['80 x 25 = 2000', '£2000']), mustBeCaught: true },
-    { name: 'an assertion whose result is a tuple component verifies', input: JSON.stringify(['5 + 3 = 8 → (8, 4)', '(8, 4)']), mustBeCaught: true },
-    { name: 'a nested-fraction assertion verifies', input: JSON.stringify(['15 / (1/4) = 60', '60']), mustBeCaught: true },
-    { name: 'an assertion whose ARITHMETIC is wrong refuses', input: JSON.stringify(['80 x 25 = 1000', '1000']), mustBeCaught: false },
-    { name: 'an assertion whose result is not in the option refuses', input: JSON.stringify(['5 + 3 = 8', '(9, 4)']), mustBeCaught: false },
-    { name: 'a comma list with no operator is not an assertion', input: JSON.stringify(['6,4,0 = 640', '640']), mustBeCaught: false },
-    { name: 'a phrase with an equals sign is not an assertion', input: JSON.stringify(['biggest number = 7', '7']), mustBeCaught: false },
-    { name: 'written arithmetic matching the option verifies', input: JSON.stringify(['25 x 80 = 2000', '2000']), mustBeCaught: true },
-    { name: 'a division spelled in the mint\'s words verifies', input: JSON.stringify(['15 divided by 3', '5']), mustBeCaught: true },
-    { name: 'a tuple verifies componentwise, order preserved', input: JSON.stringify(['(5 + 3, 4)', '(8, 4)']), mustBeCaught: true },
-    { name: 'a tuple whose components are swapped REFUSES', input: JSON.stringify(['(5 + 3, 4)', '(4, 8)']), mustBeCaught: false },
-    { name: 'arithmetic that does not match the option refuses', input: JSON.stringify(['15 x 4', '61']), mustBeCaught: false },
-    { name: 'an operation named in words yields nothing and refuses', input: JSON.stringify(['the largest of 6, 3, 7 and 4', '7']), mustBeCaught: false },
-    { name: 'a described property yields nothing and refuses', input: JSON.stringify(['digits 6, 4, 0 in descending order', '640']), mustBeCaught: false },
-  ], (raw) => { const [w, v] = JSON.parse(raw) as [string, string]; const r = computes(w, v); return r.ran && r.agrees === true; });
+  assertFixture('join-determination', [
+    { name: 'arithmetic determines', input: JSON.stringify(['80 x 25 = 2000', '£2000', 'What is 25% of £80?']), mustBeCaught: true },
+    { name: 'arithmetic whose result is one component of a tuple option determines', input: JSON.stringify(['5 + 3 = 8 → (8, 4)', '(8, 4)', 'corners at (2, 1), (5, 1) and (2, 4)']), mustBeCaught: true },
+    { name: 'a nested fraction determines', input: JSON.stringify(['15 / (1/4) = 60', '60', 'holds 3/4 kg from 15 kg']), mustBeCaught: true },
+    { name: 'SELECTION determines', input: JSON.stringify(['biggest number = 7', '7', 'Ava 6, Ben 3, Cara 7, Dev 4. total?']), mustBeCaught: true },
+    { name: 'ORDERING by a stated sequence determines', input: JSON.stringify(['6,4,0 = 640', '640', 'Use the digits 6, 0 and 4 once each']), mustBeCaught: true },
+    { name: 'ORDERING stated in words determines', input: JSON.stringify(['put 6 first, then 0,4 -> 604', '604', 'Use the digits 6, 0 and 4 once each']), mustBeCaught: true },
+    { name: 'GESTURE determines nothing', input: JSON.stringify(['looks about right', '7', 'Ava 6, Ben 3, Cara 7, Dev 4']), mustBeCaught: false },
+    { name: 'a TIED selection determines nothing', input: JSON.stringify(['biggest number = 7', '7', 'Ava 7, Ben 7']), mustBeCaught: false },
+    { name: 'a permutation not grounded in the item determines nothing', input: JSON.stringify(['9,9,9 = 999', '999', 'Use the digits 6, 0 and 4']), mustBeCaught: false },
+    { name: 'a selection naming the wrong option refuses', input: JSON.stringify(['biggest number = 7', '6', 'Ava 6, Ben 3, Cara 7, Dev 4']), mustBeCaught: false },
+    { name: 'arithmetic that does not hold refuses', input: JSON.stringify(['80 x 25 = 1000', '1000', 'What is 25% of £80?']), mustBeCaught: false },
+    /**
+     * RETIRED WITH HER 192nd, DELIBERATELY AND NOT SILENTLY: two cases here asserted that
+     * `the largest of 6, 3, 7 and 4` and `digits 6, 4, 0 in descending order` must NOT verify.
+     * They were correct while the condition was read as arithmetic and they are wrong now — the
+     * ruling is that selection and ordering determine. **A fixture case that a ruling invalidates
+     * is removed in the commit that implements the ruling, with the reason**, because a stale
+     * must-be-clean case is an instrument enforcing a superseded rule and it fails loudly on the
+     * correct behaviour (R887).
+     */
+    { name: 'bare arithmetic reproducing the option determines', input: JSON.stringify(['15 divided by 3', '5', 'holds 3/4 kg from 15 kg']), mustBeCaught: true },
+    { name: 'a tuple determines componentwise, order preserved', input: JSON.stringify(['(5 + 3, 4)', '(8, 4)', 'corners at (2, 1), (5, 1) and (2, 4)']), mustBeCaught: true },
+    { name: 'a tuple whose components are SWAPPED determines nothing', input: JSON.stringify(['(5 + 3, 4)', '(4, 8)', 'corners at (2, 1), (5, 1) and (2, 4)']), mustBeCaught: false },
+  ], (raw) => { const [w, v, s] = JSON.parse(raw) as [string, string, string]; return determines(w, v, s).determines; });
 
   if (!existsSync(MINTS)) {
     console.log(`no mint file at ${MINTS} — the gate is built and nothing has landed. Re-run with --mints=<path>.`);
@@ -197,34 +152,61 @@ async function run() {
       const base = { entryId: m.id, carrier: `${j.itemId} ${j.optionLabel ?? '?'}=${JSON.stringify(j.optionValue)}`, kind };
       const refuse = (why: string, extra: Record<string, unknown> = {}) => joinResults.push({ ...base, outcome: 'REFUSED', why, ...extra });
 
-      const row = await prisma.item.findUnique({ where: { id: j.itemId }, select: { id: true, options: { select: { id: true, content: true, isCorrect: true, misconceptionId: true } } } });
+      const row = await prisma.item.findUnique({ where: { id: j.itemId }, select: { id: true, stem: true, options: { select: { id: true, content: true, isCorrect: true, misconceptionId: true } } } });
       if (!row) { refuse(`the named carrier row ${j.itemId} is not in this store`); continue; }
 
       const valueOf = (o: { content: unknown }) => String((o.content as { value: unknown }).value);
-      const opt = row.options.find((o) => valueOf(o) === j.optionValue);
+      /**
+       * R886 — A JOIN'S DECLARED VALUE RE-DERIVES AGAINST THE CARRIER'S CURRENT BYTES AT LANDING
+       * (Annie's 192nd). Her own quote was born stale: she computed the join from a population
+       * snapshot and the money-units class landed after the cut, so her file said `2000` where the
+       * store rightly carries `£2000`. The mechanism and the working are unchanged; only the
+       * number's clothes moved.
+       *
+       * **IDENTITY ANCHORS ON THE LABEL, AND THE RE-DERIVATION IS CORROBORATED, NEVER ASSUMED.**
+       * A declared value matching neither the carrier's current bytes NOR its retained prior names
+       * something this carrier has never been, and that refuses — otherwise "re-derive" would mean
+       * "believe whichever option the label points at", which is the stretch by another route.
+       */
+      const opt = j.optionLabel
+        ? row.options.find((o) => (o.content as { label?: string }).label === j.optionLabel)
+        : row.options.find((o) => valueOf(o) === j.optionValue);
       if (!opt) {
-        // Positive evidence about WHY, including retention — reported, never used to select (R98).
-        const byLabel = row.options.find((o) => (o.content as { label?: string }).label === j.optionLabel);
-        const retained = byLabel ? (byLabel.content as { _previousValue?: string })._previousValue : undefined;
-        refuse(`no option on ${j.itemId} holds the value ${JSON.stringify(j.optionValue)} — the carrier must match byte for byte`, {
-          valuesPresentNow: row.options.map(valueOf),
-          ...(retained !== undefined ? {
-            THE_DECLARED_VALUE_IS_A_SUPERSEDED_ONE: `option ${j.optionLabel} retains _previousValue ${JSON.stringify(retained)}, which is byte-identical to the declared carrier. The value moved by AMENDMENT, not by drift.`,
-            andWHOMOVEDIT: 'her own 180th — money keys and money options carry their unit — landing AFTER the population this mint quotes.',
-            whatWouldLandIt: 'her re-declaration against current bytes, or a ruling that a fenced value plus label identifies a carrier. NOT a relaxation here: matching on retention is a new selection rule, and inventing one under pressure to turn a row green is the fault R149 names.',
-          } : {}),
-        });
+        refuse(`no option on ${j.itemId} answers to ${JSON.stringify(j.optionLabel ?? j.optionValue)}`, { valuesPresentNow: row.options.map(valueOf) });
         continue;
+      }
+      const current = valueOf(opt);
+      const retained = (opt.content as { _previousValue?: string })._previousValue;
+      let reDerivation: Record<string, unknown> | null = null;
+      if (current !== j.optionValue) {
+        if (retained !== j.optionValue) {
+          refuse('THE DECLARED VALUE NAMES SOMETHING THIS CARRIER HAS NEVER BEEN — it matches neither the current bytes nor the retained prior. Re-derivation corroborates; it does not believe.', { declared: j.optionValue, currentBytes: current, retainedPrior: retained ?? null });
+          continue;
+        }
+        reDerivation = {
+          declared: j.optionValue, reDerivedTo: current,
+          corroboratedBy: `the carrier's own retained _previousValue ${JSON.stringify(retained)}, byte-identical to the declaration`,
+          why: 'the declaration was born stale — computed from a population snapshot taken before her 180th put the unit on the money options. The mechanism is unchanged; the number keeps its deliberate wrongness with its unit attached (her 192nd).',
+        };
       }
       if (opt.isCorrect) { refuse('the named carrier is the KEY. An entry describes an error; a key executes none.'); continue; }
       if (opt.misconceptionId) { refuse(`that option already carries ${opt.misconceptionId} — a second entry on one option is two answers to one question`); continue; }
       if (kind === 'conditional') {
-        const c = opt.content as Record<string, unknown>;
-        refuse('HELD — the file joins this candidate only if the store\'s declared gap prose agrees, and this store holds NO declared gap prose for the option.', {
-          antecedent: 'the store\'s declared gap prose',
-          antecedentState: 'ABSENT — misconceptionExecution, drafterDeclaredPull, tagStatus, attractorLine, defeaterLine and a36Note are all null on this option',
-          andWHYTHATISNOTADISAGREEMENT: 'an absent antecedent is UNKNOWN, not false (R98). The condition says "else waits", and this waits.',
-          contentKeysPresent: Object.keys(c),
+        /**
+         * HER 192nd §3: **the antecedent existing at the store is not the antecedent existing at
+         * her desk.** The declared gap prose was found — it is the carrier's own working in the
+         * crossed bytes — so this is no longer an absent antecedent. It is a READING of two texts
+         * against each other, and one of them has never crossed to her. That is not something this
+         * store can settle by finding the text; it settles when she has both.
+         */
+        const prose = carrierWorking(j.itemId, (opt.content as { label?: string }).label ?? j.optionLabel ?? '');
+        refuse('CONDITIONAL — the reading waits on bytes, as every reading does (her 192nd).', {
+          antecedent: 'the declared gap prose for this option',
+          antecedentState: prose.state === 'PRESENT' ? 'PRESENT at this store, ABSENT at her desk' : prose.state,
+          THE_PROSE_VERBATIM: prose.verbatim ?? null,
+          theEntrysBehaviour: m.behaviour ?? null,
+          theReadingRequired: 'whether that prose agrees with the entry — two texts against each other, which is hers and needs both in front of her',
+          whatLandsIt: 'the prose crossing verbatim. She rules same-day; the candidate holds its conditional state until then, which costs nothing and asserts nothing.',
         });
         continue;
       }
@@ -244,11 +226,15 @@ async function run() {
         refuse('THE CROSSED COPIES DISAGREE about this carrier\'s working. Nothing here picks between them.', { readings: own.readings, copiesHoldingTheCarrier: own.copiesHoldingTheCarrier });
         continue;
       }
-      const check = computes(own.verbatim as string, valueOf(opt));
-      if (check.ran && check.agrees === false) { refuse('THE OPTION DOES NOT COMPUTE AS THE ENTRY\'S BEHAVIOUR. The entry waits for its true carrier.', { detail: check.detail }); continue; }
-      if (!check.ran) {
-        refuse('NOT MECHANICALLY VERIFIABLE — the CARRIER\'S OWN working names the act in words rather than writing the arithmetic. **An unverifiable join is refused, not waved through.**', {
+      const stemText = String((row.stem as { text?: unknown })?.text ?? '');
+      const check = determines(own.verbatim as string, current, stemText);
+      if (!check.determines) {
+        refuse(check.act === null
+          ? 'THE CARRIER\'S OWN WORKING DETERMINES NOTHING — it is gesture. The condition asks that a stated act, run on the item\'s own material, produce exactly this value and no other (her 192nd).'
+          : `THE ${String(check.act).toUpperCase()} THE CARRIER STATES DOES NOT PRODUCE THIS OPTION. The entry waits for its true carrier.`, {
           detail: check.detail,
+          actRecognised: check.act ?? 'none — the working is GESTURE',
+          materialItRanOn: check.material,
           THE_CARRIERS_OWN_WORKING: own.verbatim,
           copiesAgreeing: own.copiesHoldingTheCarrier,
           theSendersWorking: j.working,
@@ -264,12 +250,12 @@ async function run() {
           await tx.attributionEvent.create({ data: {
             recordType: 'item', recordId: row.id, action: 'AMENDED', reviewerId: null,
             actor: 'Cowork (minted entry, joined)', recordedBy: 'human:david', field: 'options[].misconceptionId',
-            method: `entry ${m.id} joined to its DECLARED carrier; ${check.detail}`,
-            note: 'the join refuses rather than stretches — positively verified by executing the arithmetic the sender wrote, not merely uncontradicted',
+            method: `entry ${m.id} joined to its DECLARED carrier by ${check.act}; ${check.detail}${reDerivation ? `; declared value ${JSON.stringify(j.optionValue)} RE-DERIVED to ${JSON.stringify(current)} against the carrier's current bytes, corroborated by its retained prior (her 192nd)` : ''}`,
+            note: 'the join refuses rather than stretches — positively verified by executing the act the CARRIER states, over the item\'s own material, not merely uncontradicted',
           } });
         });
       }
-      joinResults.push({ ...base, outcome: APPLY ? 'JOINED' : 'WOULD JOIN', THE_CARRIERS_OWN_WORKING: own.verbatim, copiesAgreeing: own.copiesHoldingTheCarrier, verification: check.detail, form: check.form, extracted: check.extracted, extractedFrom: check.extractedFrom, theSendersWorking: j.working ?? null, andWHOSEEVIDENCECOUNTED: 'the carrier\'s, from crossed bytes. The sender\'s is recorded and was not used (R879/R881).' });
+      joinResults.push({ ...base, outcome: APPLY ? 'JOINED' : 'WOULD JOIN', THE_CARRIERS_OWN_WORKING: own.verbatim, copiesAgreeing: own.copiesHoldingTheCarrier, verification: check.detail, actRecognised: check.act, materialItRanOn: check.material, produced: check.produced, ...(reDerivation ? { THE_DECLARED_VALUE_RE_DERIVED: reDerivation } : {}), theSendersWorking: j.working ?? null, andWHOSEEVIDENCECOUNTED: 'the carrier\'s, from crossed bytes. The sender\'s is recorded and was not used (R879/R881).' });
     }
   }
 
@@ -283,7 +269,7 @@ async function run() {
     mintFileSha256Spec: 'sha256 over the mint file bytes exactly as delivered, unparsed',
     populationTheMintQuotes: parsed.populationReference,
     THE_CONDITION_AS_SENT: parsed.condition,
-    THE_RULING_ENFORCED: 'the join refuses rather than stretches: if an option does not compute as its entry\'s behaviour, the entry waits for its true carrier.',
+    THE_RULING_ENFORCED: 'the join refuses rather than stretches. The condition tests DETERMINATION, not arithmetic (her 192nd): the stated act, run on the item\'s own material, produces exactly this value and no other. Selection and ordering determine; gesture does not.',
     THE_DEFAULT_IS_REFUSAL: '**a join lands on positive verification, never on the absence of contradiction.**',
     THE_MAPPING_DECLARED: 'join.itemId+optionValue select the carrier; optionLabel CORROBORATES and never selects; working supplies arithmetic that is EXTRACTED, never interpreted; behaviour->description, childHint->childHint (gated).',
     entryCounts: counts(entryResults), joinCounts: counts(joinResults), entries: entryResults, joins: joinResults,
