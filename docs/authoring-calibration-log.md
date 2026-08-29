@@ -23359,3 +23359,24 @@ child-facing key and passes under a retention one.
 `_walkScriptBefore` held strings that already passed the gate when they were current. **The first
 retention field to hold text that was retired BECAUSE it was unresolved was the first to expose
 this** — a gate fault that needed a specific kind of history before it could show at all.
+
+## R846 — Eighteen pre-existing faults on LIVE English rows, and sixteen are the same class as R845
+
+Measured while baselining the R845 change, and reported rather than fixed — **nothing here was
+caused by that change**: English 18 faults before and 18 after, maths 8 → 7, exactly the one the
+change was for. **Surgical, and measured in a worktree at the previous commit rather than argued
+from the diff** (R62's technique, R149's rule).
+
+**Sixteen of the eighteen sit on `stem.quotes[].why` — a path `isScreenedPath` says is NOT
+child-facing.** That is R845's fault in a second rule: the sentence-length check, like the notation
+check, walks strings without consulting the disposition membership. **One instance is a bug; two in
+the same file is the gate's shape** — the dispositions exist and only some rules ask.
+
+**The other two are `us-spelling` on `ENG-003-A-SP-07`, flagging *"practise"*** in a walk script and
+an option value — **on a SpaG item whose subject IS the practice/practise distinction.** A rule
+firing on the word an item exists to teach is the R783 shape one level over: the check is right
+about the string and wrong about the item.
+
+**Reported, not repaired.** Sixteen want a disposition filter this store can add; two want a
+reviewer to say whether a rule may fire on the word an item is about, and that is not this store's
+to decide.
