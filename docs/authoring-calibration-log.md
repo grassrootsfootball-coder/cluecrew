@@ -23282,3 +23282,36 @@ asked to do anything with it.
 
 **The district closes at 181 rows, zero gate faults, all DRAFT, none signed, no orphans, publication
 holding.**
+
+## R843 — The absence was false, and checking before the next one found two more that are not absent
+
+`absent-from-district-5b7eb355…` is **WITHDRAWN**. `MC04-FDP-04` and `MC05-FDP-01` are in the
+population Annie read and verified in her 182nd, with row hashes she can cite — `58e69863…` and
+`da44c026…` — and both carry APPROVED content-verified events in this store. **They were HELD BACK
+by Cowork's substance guard, not lost**: the withdrawn send carried them with one stem silently
+chosen, the corrected send carried them not at all, **and neither state was ever published as a
+hold.**
+
+**The error is the desk's, and this store recorded what it was told.** Stated rather than absorbed —
+a store that silently owns an upstream error makes the next one harder to see. The bytes stand in
+retention; nothing is deleted.
+
+**Both restored, and the selection is HERS.** Each id carries **two different questions**. The
+variant restored is the one whose stem matches the row she verified, identified by her own row hash;
+**this store did not pick**, because picking silently is the fault the withdrawal existed for. The
+unchosen variant is recorded on the row under `explanation._stemCollision` and is not discarded.
+
+**And the instruction to check before calling anything absent again earned itself immediately.**
+`MC01-FDP-04` and `MC05-FDP-08` are **NOT absent.** Both are in the amended source and in Cowork's
+29, which names them itself: they are **stem collisions** — 6 of the 29, where two different
+questions share one itemId. Not in the store, not in the staged 196, not in the current send, but
+present in two sources and held rather than missing. **Recording them absent would have repeated the
+fault this same turn withdrew.**
+
+What they actually need is what the other two needed: **a reviewer to say WHICH QUESTION.** Cowork
+holds both variants of each and has chosen nothing, which is correct. Annie has not read either id.
+
+**The lesson is about the direction of the error.** Twice now a row has been called absent when it
+was held, and both times the hold existed and had never been published. **An unpublished hold is
+indistinguishable from an absence from every side except the one holding it** — and the party
+holding it is the only one who cannot see that nobody else knows.
