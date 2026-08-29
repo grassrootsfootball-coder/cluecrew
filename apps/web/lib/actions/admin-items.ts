@@ -2,7 +2,7 @@
 
 import { redirect } from 'next/navigation';
 import { z } from 'zod';
-import { checkItemChildFacing, checkSolution, draftAssessmentSubjectHash, fingerprintItem, inactiveMisconceptions, isBlocking, mathsPlanFileSchema, publishBlockers, screenAgainstIndex, stemSchema } from '@cluecrew/core';
+import { reviewSurfaceRenders, checkItemChildFacing, checkSolution, draftAssessmentSubjectHash, fingerprintItem, inactiveMisconceptions, isBlocking, mathsPlanFileSchema, publishBlockers, screenAgainstIndex, stemSchema } from '@cluecrew/core';
 import mathsPlanContent from '../../../../content/maths-district-plan.json';
 
 const mathsPlan = mathsPlanFileSchema.parse(mathsPlanContent);
@@ -172,6 +172,16 @@ export async function markReviewedAction(formData: FormData): Promise<void> {
 
   const itemId = z.string().min(1).parse(formData.get('itemId'));
   const item = await prisma.item.findUniqueOrThrow({ where: { id: itemId }, include: { options: { orderBy: { id: 'asc' } }, questionType: true } });
+
+  /**
+   * **R832 — THE SURFACE RENDERS THE ITEM OR THIS ACTION REFUSES.** Her 181st: a control that can
+   * record a judgement it cannot inform manufactures attested-but-unread rows at whatever rate
+   * somebody clicks, and they cannot be told apart afterwards by inspection. Refused HERE rather
+   * than by hiding the button — a hidden control can be re-enabled and a refusing action cannot be
+   * clicked past.
+   */
+  const surface = reviewSurfaceRenders(item.questionType.district);
+  if (!surface.renders) redirect(`/admin/items/${itemId}?error=surface-cannot-render`);
 
   if (item.authoredBy === `human:${staff.email}`) {
     redirect(`/admin/items/${itemId}?error=own-item`);
@@ -647,8 +657,12 @@ export async function signItemAction(formData: FormData): Promise<void> {
   const method = z.string().trim().min(8).parse(formData.get('method'));
   const item = await prisma.item.findUniqueOrThrow({
     where: { id: itemId },
-    include: { options: { orderBy: { id: 'asc' } } },
+    include: { options: { orderBy: { id: 'asc' } }, questionType: true },
   });
+
+  // R832 — the surface renders the item or this action refuses. See markReviewedAction.
+  const surface = reviewSurfaceRenders(item.questionType.district);
+  if (!surface.renders) redirect(`/admin/items/${itemId}?error=surface-cannot-render`);
 
   // THE NAMING PATH. A signature names a person, so the staff account must resolve to one.
   const reviewer = await prisma.reviewer.findFirst({

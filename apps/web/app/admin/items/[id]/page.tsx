@@ -16,6 +16,8 @@ import { shuffleOptionsForChild } from '@/lib/crew/shuffle';
 import { optionLabel } from '@/components/crew/engines/shared';
 
 const ERROR_COPY: Record<string, string> = {
+  'surface-cannot-render':
+    'Blocked: this page does not render this district\u2019s items, so a verdict recorded here would be a verdict on nothing (R832). It would show an id, a status, a type name and a notes box \u2014 not the stem, options, keys, tags, hint or walk script a judgement needs. Verdicts for this district land in returns against the row hashes of the artefact actually read.',
   'write-did-not-land':
     'Blocked: the change did not reach the record. Nothing was saved — do not treat this item as changed.',
   'signature-did-not-land':

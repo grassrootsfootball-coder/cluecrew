@@ -23004,3 +23004,61 @@ has 187 items and no surface that renders them for review. **The sitting is not 
 reads the crossed artefact — but a signature taken in the admin UI would be taken against a page
 showing almost nothing. Reported, not built: whether that surface widens is a decision about what a
 reviewer needs, and the same test applies to it.
+
+## R831 — A normaliser that half-converts makes a third form, wrong in a new way
+
+`MC02-RP-02`'s source read *"5 apples for 1 pound 50"* — £1.50 with the decimal point lost in
+AUTHORING. My door added the £ and preserved the loss, so the row read **"£1 50"**.
+
+**That is worse than either input.** The source form is at least readable as an old convention
+somebody could recognise; "£1 50" reads as a price with a missing point and belongs to no
+convention at all. **A normaliser converts the part it knows and carries the part it does not,
+and the result can be a form that never existed anywhere.**
+
+Contained: one item, two occurrences, and all 187 rows scanned for `£N NN` to establish that. Her
+disposition repaired both to £1.50 and £1.20 — and her finding names the family: *"MC02-RP-02 lost
+two decimal points and MC05-GEOM-02 a degree sign; both found by READING, neither by a gate, and
+both are the bare-unit family."*
+
+## R832 — The surface renders the item, or the action refuses and says why
+
+Her 181st, and the reasoning is why it was built today rather than queued: **a page that can record
+a judgement it cannot inform is worse than a page with no control at all. A missing control is
+visible and gets fixed; a working control over an unrendered item produces signatures
+indistinguishable from real ones.** That is the manufacture of attested-but-unread rows at whatever
+rate somebody clicks, and **it cannot be retrofitted** — once such signatures exist nobody can
+separate them from the others by inspection.
+
+Built as `reviewSurfaceRenders(district)` in core, with four tests. **`markReviewedAction` and
+`signItemAction` now refuse for any district the surface does not render**, and the page states the
+reason in full rather than saying "blocked".
+
+**Refused in the ACTION, not by hiding the button.** A hidden control can be re-enabled by anyone
+editing a template; a refusing action cannot be clicked past. And the refusal names where verdicts
+DO land — in returns against row hashes — so it closes a door and points at the open one.
+
+**Her third-time pattern is the part worth carrying**: the signature field that did not exist, the
+two fields that never crossed the door, and now a surface built to English's shape that silently
+mis-serves maths. *"What a system cannot hold is not visible in what it holds."*
+
+## R833 — Her 180th landed: nine bare keys, and six of eight recordable
+
+**The money-units class agrees with her count exactly: 9 items, her 9.** Money keys and money
+options now carry their unit; `_previousValue` retains the prior bytes per option. **One thing her
+rule does not decide is named rather than settled**: `MC03-CALC-08` becomes £3600 where its own stem
+writes "£1,200", and the thousands separator is not what her rule is about.
+
+**Sitting one is recorded as CONTENT-VERIFIED and NOT as a signature.** `reviewedBy` is untouched,
+every row stays DRAFT, and the row hash is pinned as `subjectHash`. Recording a content verification
+as a signature would be the attested-but-unread manufacture she ruled against in the next return,
+one field over.
+
+**The ordering was forced and is stated.** `MC01-CALC-04` is in sitting one AND in the money class,
+both ruled in the SAME return — so the class was applied FIRST and the sitting hash pinned
+afterwards. **The hash therefore describes the row as her own money rule leaves it.** Pinned the
+other way round it would have read SUPERSEDED within a single landing.
+
+**And she verified eight where six can be recorded.** `MC01-CALC-03` and `MC01-CALC-06` are not in
+the store: both refused at import for saying **"error"** in a walk script. She read them in the
+crossed artefact, which carries the refused rows too. **The verification stands on all eight; the
+RECORD can only be written on six**, and the two are named rather than quietly dropped from a count.
