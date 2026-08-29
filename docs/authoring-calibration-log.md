@@ -23979,3 +23979,42 @@ what it held instead.
 an absence. `prior && prior.title` treated the empty string as "nothing to retain", and the one case
 where retention matters most — the first landing, the only moment the pre-face state exists — was
 the exact case it skipped.
+
+## R873 — Two gates in series: a face makes a case RENDERABLE, a pool makes it VISIBLE
+
+Registered as the distinction rather than the incident.
+
+**`caseFaceServes` and `servableCaseIds` are two gates in series and neither implies the other.** A
+landed face gives a case something to render; a non-empty LIVE+PRACTICE pool gives it a reason to
+appear at all. A case with a face and no pool is absent from the district map. A case with a pool and
+no face renders nothing. **Both must hold, and each is derived independently at request time.**
+
+**The general fault is reading a necessary condition as a sufficient one**, and it has a reliable
+tell: **you reason from the gate you just touched.** I had landed the face, so the face was the gate
+in hand, and *the face serves* became *the case is visible* without a step in between. A second gate
+that nobody is currently working on is invisible in exactly the way a second store is (R794) — not
+hidden, just not the thing being held.
+
+**And the series is load-bearing, not redundant.** R695 hid eleven PAID VR doors by deriving
+visibility from the pool, which is what makes *visible and empty* unreachable rather than merely
+discouraged. **A window that cannot open is worth more than a window nobody opens**, and the two
+gates in series are what buy that.
+
+## R874 — An empty prior is a state, and the first landing is the only moment it exists
+
+Registered as the form, from the pre-face retention.
+
+**A retention condition that tests the prior for CONTENT will skip the empty prior**, and the empty
+prior is the one that carries the fact worth keeping: that the slot was empty, and what it held
+instead. `prior && prior.title` read the empty string as *nothing to retain* — the same conflation
+R842 drew between ABSENT and PENDING, in a different file and a different direction.
+
+**And the timing makes it unrecoverable rather than merely missing.** The pre-face state exists at
+exactly one moment: the first landing. Every later landing has a prior FACE to retain, so the gap is
+invisible from the second landing onward — **the only run that could have caught it is the only run
+that could have lost it.**
+
+**Nothing was lost here and that was luck.** The marker's bytes had crossed in another artefact for
+an unrelated instruction (R861). **A retention that depends on the state having been copied elsewhere
+is not a retention**, and a store that discovers its retention worked because of a coincidence should
+read that as a failure with a good outcome, not as a pass.
