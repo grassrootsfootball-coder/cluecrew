@@ -23164,3 +23164,49 @@ exactly; R813 is its cousin, a predicate applied to a projection that could not 
 **A report that derives the same value twice must derive it once**, and where it cannot, the two
 paths are the first thing to compare — because a reader has no way to tell a manufactured
 discrepancy from a real one, and it will always appear exactly where a real fault would.
+
+## R838 — An artefact normalises everything it prints, or nothing
+
+Her rule, with the mechanism mine. **A report that derives one value twice derives it once.**
+
+`MC04-GEOM-05` is the instance: the emitter normalised `options[].value` and printed the separate
+`key` field raw, so the artefact showed `cm²` options against a `cm2` key — **a discrepancy present
+in neither store.** The source holds `cm2` on all four options; the row holds `cm²` on all four.
+Both are internally consistent. Only the report was not.
+
+**All-or-nothing is the rule because a MIXED projection is worse than an untreated one.** An
+artefact that normalises nothing is merely raw, and a reader knows to normalise before comparing. An
+artefact that normalises some of what it prints is **actively misleading**, and it misleads exactly
+where a real fault would show — two copies of one value disagreeing.
+
+**And the deeper form: the second derivation is the fault, not the normalisation.** The key was
+already in `options[]`; printing it again created a value that could drift from itself. **Derive
+once and reference it**, and the question of whether both copies were treated cannot arise.
+
+**Third instance, and the gap is structural** (R837). Every gate in this project screens content;
+nothing screens the reporting layer. Digests are checked, populations declared, instruments
+fixtured — **and no check compares an artefact's projections against each other**, which is the one
+thing that would have caught all three.
+
+## R839 — Nothing watched for a withdrawn send, and five escaped by luck
+
+Twenty rows from a withdrawn 196-row send were landed and publication-eligible. **Five more were
+absent for no good reason at all** — a house-rule gate refused them for saying *"error"* to a child,
+and that gate was screening for banned vocabulary, not for provenance. **The five did not escape;
+they were caught by something aimed elsewhere.**
+
+**`pnpm check:withdrawn-sends` is the watch, and it is one subtraction**: every landed row whose id
+is absent from the CURRENT send. A row here that the sending store no longer sends is withdrawn,
+renamed, or from a send nobody remembers — **and a row the sending store no longer sends must not
+publish on the strength of having once arrived.** Currently 167 landed, 171 in the send, zero
+orphans: the removal was complete.
+
+**And it reports an ambiguity it cannot resolve.** `MATHSIMPORTOUTBOUND` resolves to **three files
+with three different digests**. The check takes the newest by mtime and says so — **mtime is not
+provenance** (R774). Measured: the first differs from the other two on all 171 items, by an
+`approvedBy` → `reviewedBy` rename; **the second and third differ on six items, and those six are
+the money-units class landing at source** — CALC-04 in all five batches plus `MC01-FDP-03`. The
+template repair Annie identified is arriving, under a filename that cannot say which version it is.
+
+**A send identified by NAME is a lookup with more than one answer.** R799 said it of returns; it is
+truer of a send, because a send is what a store imports from.
