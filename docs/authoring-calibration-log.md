@@ -22629,3 +22629,68 @@ that reason, and so did I.
 LAST TRUE.** Where those differ, the second is what a reader needs, and no artefact this store emits
 carries it. Registered rather than built — the fix is a high-water mark on the source (the latest
 write time of anything in the export), and it is not owed until something turns on it a second time.
+
+## R818 — An export's stamp is when it was TAKEN, never when its contents were last true
+
+Her ruling and mine, registered together because neither is complete alone.
+
+**Hers: every batch carries the moment it was cut, and every comparison states both moments or is
+not a comparison.** **Mine: an export's stamp is the moment it was TAKEN, never the moment its
+contents were LAST TRUE.** The first is the mechanism; the second is why the mechanism is needed —
+a single stamp is read as *the state at this time*, and it means only *the state I happened to
+copy at this time*.
+
+**Two moments, and they are different questions.** WHEN CUT bounds what could possibly be in the
+artefact. WHEN LAST TRUE says whether anything has moved since — and where the source is still being
+written to, the second is already in the past when the file is written. `en-homophone-by-sound` at
+20:58:45 against an 18:17 stamp is the measured instance (R817).
+
+**"or is not a comparison" is the load-bearing half.** Two artefacts with one moment each cannot be
+compared at all: a difference between them may be a disagreement, or may be the interval, and
+nothing in either file distinguishes those. **A comparison of two single-stamped artefacts produces
+a result that looks like a finding and is an unknown wearing one** — which is what happened to her
+eightieth, and to me reading it.
+
+## R819 — BORN STALE: the fifth state, and why every discipline here misses it
+
+STAGED, CROSSED, HELD, LATE (R798) — and now **BORN STALE**: an artefact exported before the writing
+settled. **It does not become stale; it is stale at the moment it is written**, and no subsequent
+event makes it so.
+
+**Why it evades everything this store has built: every discipline here aims at the crossing.**
+Digests, sidecars, manifests, the acknowledgement protocol, the settling interval — **all of them
+attest that the bytes that left are the bytes that arrived. None of them attests that the bytes that
+left were the current ones.** The whole apparatus watches one hop and is silent about the moment
+before it.
+
+**And it is invisible in exactly the way the other four are not.** LATE resolves itself — the
+artefact arrives and the state changes. BORN STALE never resolves: **the file is internally
+consistent, its digest verifies, its sidecar matches, it crosses cleanly and is wrong.** Every check
+passes because every check is asking a different question.
+
+**The distinguishing evidence is not in the artefact and cannot be** — it is the source's write
+history, which is why R814 could answer a question no artefact could. The fix is a high-water mark:
+the latest write time of anything in the export, carried beside the stamp. Registered, not built.
+
+## R820 — The five are held on a question this store cannot answer
+
+Her ruling: **a source that cannot receive corrections reintroduces every amendment on its next
+export.** So the five carry-backs wait, and **if no receive path exists, the path is the work** —
+sending them into a store that cannot absorb them would produce the appearance of a repair and the
+certainty of a recurrence.
+
+**What this store can contribute is the shape of its own evidence, and it is a null.** Two
+carry-backs have been attempted from here: the `stem.quotes` corrections (R786) and these five
+hint amendments (R816). The first closed as a no-op — the authoring store already held all four —
+**and that is not evidence it received them; it is evidence it had them independently.** So: **this
+store has never observed a correction it sent being absorbed at the source.** Not once.
+
+**That null is indistinguishable from a path that works silently**, which is the whole difficulty
+and the reason the question is not answerable from here (R794). What would settle it is one
+observation crossing back — an artefact from the authoring store carrying text this store sent, by
+digest.
+
+**And it reframes the reverse-drop class rather than adding to it.** R786 and R816 read as two
+incidents of a repair failing to travel. **If there is no receive path they are not incidents at
+all — they are the same structural absence observed twice**, and counting them as recurrences
+overstates the evidence for a process fault while understating the case for building the path.
