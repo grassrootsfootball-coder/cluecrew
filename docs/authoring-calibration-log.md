@@ -23315,3 +23315,47 @@ holds both variants of each and has chosen nothing, which is correct. Annie has 
 was held, and both times the hold existed and had never been published. **An unpublished hold is
 indistinguishable from an absence from every side except the one holding it** — and the party
 holding it is the only one who cannot see that nobody else knows.
+
+## R844 — Her six ruled, and the counts asserted from the artefact caught my own prose twice
+
+Four landed, two stand unchanged. `MC01-FDP-04` the two-step jug, `MC02-NPV-07` the largest-decimal
+comparison, `MC05-FDP-08` the £64 coat, `MC05-MEAS-02` the flour conversion; `MC04-FDP-04` and
+`MC05-FDP-01` keep their landed variants, verified on the row rather than assumed. **Her reasoning
+per row is on the artefact, in her words**, and the variant was matched by the KEY she named rather
+than by position.
+
+**The instruction to assert counts from the artefact rather than from prose earned itself twice on
+one id.** My prose had described the class as *"two different questions share one itemId"* —
+`MC01-FDP-04` carries **three**. And reading two of its three side by side they appeared identical:
+same stem, same key, same hint. **They are not** — they differ in their option sets, so the
+artefact's three is three DISTINCT items. **Asserting from the page would have been wrong twice; the
+artefact was right once.**
+
+**The unchosen are retired, not discarded** — every one recorded on the row with its stem, key, hint
+and holding files. **And the orphan closes itself**: `MC05-MEAS-02`'s double hint, which started the
+whole mechanism hunt, was never a joining fault. Two whole items under one id, each with its own
+hint. **An identity collision wearing a join fault's clothes**, and the class closes with its cause
+named.
+
+Her prose-pounds flag is carried and NOT amended, as she ruled.
+
+## R845 — The notation gate was screening retention, and demanded an amendment to a record of a decision not to amend
+
+Found by landing her 184th. The notation loop in `checkItemChildFacing` walked **every string** with
+no disposition filter, so it screened retention paths — `_previousText`, `_walkScriptBefore`,
+`_stemCollisionResolved`.
+
+**The instance is almost too neat.** The shelved variant of `MC05-FDP-08` spells *"50 pounds"*; the
+gate demanded *"£50"* — **on text Annie had just RETIRED, whose prose-money convention she had
+explicitly flagged as an open question and expressly not amended.** The gate was asking for an
+amendment to a record of a decision not to amend.
+
+**A retention field records text as it previously was, or as it was retired. A child never meets it,
+and demanding house form of it destroys the only thing it is for.** Retention paths are now skipped
+by the notation rule, with a test asserting both directions — the same text faults under a
+child-facing key and passes under a retention one.
+
+**And it was invisible until now because retention had never carried prose.** `_previousText` and
+`_walkScriptBefore` held strings that already passed the gate when they were current. **The first
+retention field to hold text that was retired BECAUSE it was unresolved was the first to expose
+this** — a gate fault that needed a specific kind of history before it could show at all.

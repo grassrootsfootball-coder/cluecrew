@@ -194,3 +194,15 @@ describe('a placeless declaration must resolve in the item (R152)', () => {
     expect(faults.some((f) => f.detail.includes('appears in NO field'))).toBe(false);
   });
 });
+
+describe('retention paths are not screened for notation (R845)', () => {
+  const base = { id: 'X', stem: { text: 'Work out 2 add 2.' }, options: [{ content: { value: '4' } }] };
+  it('faults on a money word in a child-facing explanation field', () => {
+    const f = checkItemChildFacing({ ...base, explanation: { hintCore: 'A coat costs 50 pounds.' } });
+    expect(f.some((x) => x.rule === 'notation')).toBe(true);
+  });
+  it('does NOT fault on the same text under a retention key', () => {
+    const f = checkItemChildFacing({ ...base, explanation: { _retired: { stem: 'A coat costs 50 pounds.' } } });
+    expect(f.some((x) => x.rule === 'notation')).toBe(false);
+  });
+});

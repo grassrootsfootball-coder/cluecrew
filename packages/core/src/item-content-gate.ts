@@ -22,6 +22,7 @@ import { checkChildFacingText, spansPresentIn, type ContentFailure } from './con
 import { refusalMessage, refusedInOptions } from './refused-misconceptions';
 import { roleForItemStem } from './content-gates';
 import { checkMathsNotation } from './maths/notation';
+import { isRetentionPath } from './field-dispositions';
 import { lettersNamedNotOnCard, wordOptionsNamedNotOnCard } from './word-puzzles';
 
 /** Every string in a Json value, INCLUDING single-token ones — the notation gate
@@ -436,6 +437,19 @@ export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
   const notationSources: Array<[string, unknown]> = [['stem', item.stem], ['explanation', item.explanation], ...item.options.map((o, i): [string, unknown] => [`option[${i}]`, o.content])];
   for (const [root, value] of notationSources) {
     for (const [path, text] of everyString(value, root)) {
+      /**
+       * **RETENTION IS NOT CHILD-FACING, AND THE NOTATION GATE WAS SCREENING IT** (R845). A
+       * retention field records text as it PREVIOUSLY WAS or as it was RETIRED — `_previousText`,
+       * `_walkScriptBefore`, `_stemCollisionResolved`. A child never meets it, and demanding house
+       * form of it is demanding that a record of the past be rewritten, which destroys the only
+       * thing it is for.
+       *
+       * Found by landing her 184th: the shelved variant of `MC05-FDP-08` spells "50 pounds", and
+       * the gate asked for "£50" — **on text she had just RETIRED, whose prose-money convention she
+       * had explicitly flagged as an open question and NOT amended.** The gate was demanding an
+       * amendment to a record of a decision not to amend.
+       */
+      if (isRetentionPath(path.replace(/^option\[\d+\]/, 'options[]'))) continue;
       for (const issue of checkMathsNotation(text)) {
         failures.push({ where: `item:${item.id} ${path}`, rule: 'notation', detail: `${issue.kind}: "${issue.found}" → house form "${issue.suggestion}"` });
       }
