@@ -24462,3 +24462,37 @@ evidence, published without naming the subset, is worse than no verdict, because
 Her words, registered from this store reopening its own agreement on exactly that ground. It is
 R889's shape stated as a duty rather than as a mechanism: naming the subset is what lets a reader
 compute the discriminating denominator you did not.
+
+## R894 — A store that can only record "verified" will record "verified" for everything it lands
+
+The form behind R892, and it is about the VOCABULARY OF VERDICTS rather than about one join.
+
+**A check that runs and separates nothing has not verified anything, and the artefact must be able to
+say so.** On `MC01-FDP-08` D the determination check ran, returned true, and decided nothing: the two
+rival rules coincide on that fraction, so the check verifies equally well for the reading the
+reviewer refused. Recording it as *verified* would have been a true sentence about a test that
+distinguished nothing — the R173 family, arriving in the verdict rather than in the measurement.
+
+**THREE THINGS TOGETHER, AND NONE OF THEM SUFFICES ALONE:**
+ 1. **The check still runs.** Skipping it because a ruling covers the row throws away the fact that
+    the arithmetic was consistent, and leaves nobody able to tell "not computed" from "not checked".
+ 2. **The artefact records that it decided nothing**, and why — `NOT_LANDED_ON_COMPUTATION: true`
+    beside `whatTheComputationSAYS` and `andWHYTHATDOESNOTDECIDE`. A verdict without its basis is a
+    name with no guard on it (R25).
+ 3. **The qualifier travels with the join**, in the reviewer's words rather than paraphrased: *that
+    is a weaker sentence than a computed join and it is the true one.* R203 — where the fact is
+    doubt, the doubt goes in the same value, not one field over.
+
+**THE FAILURE MODE IS INSTITUTIONAL, NOT TECHNICAL.** A store whose verdict vocabulary has one word
+will use that word for the strong rows and the weak ones alike, and no reader will ever be able to
+sort them again — not because anything was hidden, but because the distinction was never expressible.
+**Six joins here computed and one did not, and after the fact only the artefact can tell you which.**
+So the verdict set carries at least: DETERMINED (the act separates this option from the
+alternatives), RULED (a reviewer decided on grounds outside the check, which ran and separated
+nothing), and REFUSED. A basis that cannot be named will be recorded as the nearest basis that can.
+
+**And the same discipline reaches an unwind.** Retagging `MC01-FDP-08` D would write a new
+`misconceptionId` and, unless the ruling basis is carried onto the new attribution event verbatim,
+would leave D looking exactly like the six that computed. **A weaker basis is lost by ordinary
+maintenance, not by anybody deciding to drop it** — which is why the retirement impact report names
+it as the one thing that would go silently.
