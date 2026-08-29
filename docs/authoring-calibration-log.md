@@ -24571,3 +24571,42 @@ is a list.
 line — the report had no opinion about its own coherence. `emit-maths-closing-report.ts` now throws
 on it, with the message pointing at the membership rule rather than at the number, because the number
 is never the thing to fix.
+
+## R898 — The maths district publishes: 178 live, nine held by a mechanism, window zero
+
+David's ruling, 2026-08-30, executed in one transaction on the case-en-06 shape.
+
+**A CORRECTION WALKED RATHER THAN ADOPTED.** The instruction said the 178 move *DRAFT to LIVE*.
+They were **REVIEWED**; the nine that stay are the DRAFT ones. The move is REVIEWED → LIVE. Every
+figure here was derived from the rows at the moment of publication and none was carried forward from
+the instruction — which is the only reason that discrepancy surfaced rather than being reproduced in
+the artefact (R896).
+
+**EIGHT ASSERTIONS RAN BEFORE THE WRITE, ANY FAILURE REFUSING THE WHOLE RUN**: 178 of 178 signatures
+over pins that recompute under their own projection (both projections tried, per R888); 7 of 7 joins
+standing; the face serving; **the held set identical to the set `publishBlockers` computes** — so no
+row is held by hand and none caught by accident; 178 + 9 = 187; nothing held from serving; every row
+already in the practice pool. A partial publication is the half-applied-import fault with children on
+the other end of it.
+
+**SIX ROWS SERVE CHILDREN CARRYING A LIVE GATE FAULT, AND THE ARTEFACT SAYS SO IN THOSE WORDS.**
+Each of the six over-cap stems carries a per-row reviewer disposition — *the sixteen-word cap binds
+hints, so an over-cap stem stands* — recorded before the row was signed. The gate still reports them
+because the gate was deliberately not changed. **Both authorities agree and the only dissent is the
+gate, which holds neither** (R867), so they publish NAMED rather than silently exempted, and the
+question the register deferred stays open: whether the sixteen-word cap should bind an item stem at
+all. **The house rule is never exempt a scanner hit — reword it; six rows are now live against it on
+a reviewer's ruling, and that sentence is in the publication artefact rather than in a footnote.**
+
+**THE WINDOW IS ZERO AND STRUCTURALLY SO.** The face and the pool landed in the same act, and
+`servableCaseIds` derives visibility from the pool at request time, so *visible and empty* is
+unreachable rather than merely unobserved (R873/R695). Verified independently after the write by
+reading the store rather than the artefact: 178 LIVE+PRACTICE, `case-maths-01` in the servable set,
+17 of 28 cases servable, 0 visible-and-empty.
+
+**THE BLAST RADIUS WAS WALKED FROM THE ROWS**, not assumed to be one case: every case whose primary
+or mapped question type appears among the newly-live rows was enumerated from the case table. The
+district's paid door now opens onto 178 items across seven question types.
+
+Nine rows remain DRAFT with 15 untagged distractors, named per row with their causes on the
+artefact. **Open at 178 with the nine held.**
