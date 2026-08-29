@@ -24204,3 +24204,69 @@ Still open and not decided here: FDP-03 C, where the carrier's working verifies 
 stale declared value blocks it; and FDP-08 D, where the conditional's antecedent — *the store's
 declared gap prose* — now EXISTS (`15 / (1/4) = 60`) and whether it agrees with the sender's account
 is a reading. **Both are hers.** Nothing was unwound, nothing was landed.
+
+## R882 — Agreement between two sources is an outcome; it is never evidence the separation held
+
+Carrier evidence and sender evidence agreed on all seven named joins. **That is a fact about these
+seven rows and says nothing whatever about whether reading the sender's working would have been
+safe.** R879 exists because one party naming the entry, the carrier and the working is one claim
+wearing three hats; the hats did not come apart this time.
+
+**The reasoning that must not be allowed to run is: "we changed the evidence source and every verdict
+stayed the same, so the source did not matter."** It is R62's finding in a different clothing — zero
+divergence there was also an outcome, and the coupling that produced it was live, unguarded and
+exercised the same day. Here the sender's workings happened to be honest transcriptions of the
+carriers'. A sender who had computed a working FROM the entry rather than from the item would have
+produced exactly the same agreement rate on rows where the entry is correct, and a silent
+disagreement on precisely the rows where it is not — **the failure mode is invisible in the
+aggregate and concentrated in the cases that matter.**
+
+**So the number to report is not the agreement rate; it is which source was consulted.** An artefact
+saying *carrier and sender agree, 7 of 7* invites the reader to conclude the distinction is
+academic. It says instead which evidence counted, per row, and records the other as provenance.
+
+## R883 — A structural walker has R568's failure mode and none of R568's guard
+
+A scan of the crossed artefacts selected rows by SHAPE — `'id' in o && Array.isArray(o.options)` —
+where the files say `itemId`. It matched nothing across 196 items and reported **0 carriers holding
+a working**, which is the precise answer the scan had been written to test for. Third confident zero
+from a wrong key name in this thread (R568's `hintCore`, R80's moved `lineRefs`, now this).
+
+**R568 does not reach it.** That rule guards a delivery reading a NAMED field: print the keys
+present, throw when a requested name is on no row. A structural walker asks no name — it asks a
+shape — so there is no requested name to check and nothing throws. **The predicate that selects the
+rows has the same failure mode as the predicate that reads the fields, and only one of them was
+guarded.** So: any walker selecting rows by key-shape prints the keys it saw at each level and
+REFUSES on an empty selection from a non-empty file, exactly as a named read refuses a name on no
+row (`crossedOptionKeys()`, and the throw in `sources()`).
+
+**AND THE HALF WORTH KEEPING IS WHY IT DID NOT STAND.** Not vigilance, and not the output — a true
+zero and this zero are byte-identical downstream. It fell because an INDEPENDENT INVARIANT made it
+impossible: the file's digest was known-good and its provenance known, so *196 items, 0 with the
+field* was not a surprising result but a contradiction. **The guard against a wrong-key zero is
+holding a second fact that the wrong answer violates**, not reading more carefully. Where no such
+fact exists, the code has to manufacture one, which is all `requirePopulation`, `readFieldsByName`
+and `declareMayBeEmpty` have ever been. A zero that is merely *unexpected* gets argued with; a zero
+that is *impossible* gets investigated.
+
+## R884 — A carried fixture's first live catch, and what it caught: a removed capability, not an added bug
+
+Wiring R881 replaced the extractor's bare-arithmetic branch with the carriers' assertion idiom
+(`80 x 25 = 2000`). The change was correct for every carrier and it **silently dropped the ability to
+read a bare expression** (`15 divided by 3`). The carried fixture failed on the must-catch case the
+change removed — in the instrument, before a single row was read, with the run refusing to print
+findings at all.
+
+**Nothing in the corpus would have caught it.** The three word-workings refuse either way; the two
+landed options short-circuit on `already tagged` before any arithmetic runs; no remaining row uses
+the bare form. **A removed capability produces no wrong answer — it produces no answer, on inputs
+that have stopped arriving.** That is why it is invisible to every check that reads output: R87's
+silent no-op and R61's absent population are the same shape, and this is the first of the family
+that a fixture caught rather than a person noticing afterwards.
+
+**So a fixture is the instrument's memory of what it used to be able to do**, and that is a different
+thing from a test of what it currently does. The must-catch list is the only place the bare form
+still existed. R725 queued fixtures on the argument that a check should earn one before its next
+emission crosses; the argument was about trusting findings. **This is the stronger reason: without
+the fixture, the capability would have gone and the diff would have looked like a clean improvement**
+— fourteen carried cases now, and the one that fired was the one nobody would have thought to re-add.
