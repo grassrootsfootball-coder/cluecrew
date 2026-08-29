@@ -23113,3 +23113,54 @@ template lives where the items were authored.
 door repaired ten on import. **A template fixed there stops emitting.** This store can only keep
 normalising the output — a repair applied once per batch, forever, against a fault that has one
 source.
+
+## R836 — A refusal that reaches only the copy has not happened: twenty withdrawn rows come out
+
+Cowork withdrew its 196-row send; 25 of its ids are absent from the replacement. **20 of those 25
+were landed here**, including both rows the withdrawal was FOR — `MC04-FDP-04` and `MC05-FDP-01`,
+which shipped with one of two colliding stems chosen silently. **The authoring store superseded its
+own copy and retained the bytes, and nothing crossed that removed them from this store.**
+
+**The five not landed are exactly the five the import had already refused** on house rules. So the
+only reason this store did not hold all 25 is a gate that was screening for something else.
+
+**Six of the twenty are sitting-one rows.** Her proving run verified eight; six of them came from
+the withdrawn send. **Her verification is not voided** — she read the CONTENT, and keys computed and
+distractors executing their tags remain true of those texts. What is withdrawn is the SEND, not her
+judgement of it, and if the replacement carries the same ids the verification is re-pinnable against
+the new rows rather than re-done.
+
+**Removed with the bytes retained first.** Every row is in the artefact with its own content digest,
+captured BEFORE deletion, and an attribution event per row was written before the delete — it
+survives because `recordId` is a string, not a foreign key. **A withdrawal removes rows from the
+store; it must not remove the record of what was in it.** 187 → 167, no orphaned options, and all
+187 content-verified events intact.
+
+**And the R767 guard earned itself on this run.** I named the retained digest `rowSha256`, which the
+guard reserves for a digest over the WHOLE row object; mine was over the content subtree only. It
+refused the artefact rather than staging a field whose name promised one thing and held another.
+**Two different things must not share a field name**, and the guard found the collision on the first
+attempt.
+
+## R837 — A report is itself software, and nothing screens it
+
+The general form, on its third instance in this thread.
+
+**R94** — a machine verdict wearing a person's name: `check:word-puzzles` had marked eight items and
+the ruling said Annie had. **R813** — a membership of nineteen orphan mis-joins, every member an
+artefact of my own regexes, withdrawn before it reached a sitting. **R834** — a finding recorded
+about `MC04-GEOM-05` losing a superscript, where the source holds `cm2` on all four options and the
+row holds `cm²` on all four: **the discrepancy existed only in my emitter**, which normalised
+`options[].value` and emitted the separate `key` field raw.
+
+**Every gate in this project screens CONTENT. Nothing screens the artefact that reports on it.** A
+scanner reads child-facing strings, `check:register` reads rule numbers, `check:authority-shape`
+reads the store — and an emitted report passes through none of them. Its digests are checked, its
+population is declared, its instrument is fixtured, **and its PROJECTIONS are not checked against
+each other at all.**
+
+**The recurring mechanism is a value emitted twice by two paths, one of them treated.** R834 is that
+exactly; R813 is its cousin, a predicate applied to a projection that could not carry the answer.
+**A report that derives the same value twice must derive it once**, and where it cannot, the two
+paths are the first thing to compare — because a reader has no way to tell a manufactured
+discrepancy from a real one, and it will always appear exactly where a real fault would.
