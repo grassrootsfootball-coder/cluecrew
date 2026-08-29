@@ -22826,3 +22826,55 @@ receiver reads UNSIGNED rather than UNKNOWN — **but Item has no `approvedBy`; 
 Misconception.** An Item's signature field is `reviewedBy`, so the declared null landed there,
 written explicitly rather than omitted. The distinction is preserved: **0 of 178 carry a reviewer
 signature, and not one maths item has ever been through a reviewer.**
+
+## R825 — A door that gates without normalising reports the rule's own normalisation as a content fault
+
+Mine, and it cost twenty false refusals on the first maths import. CLAUDE.md's HOUSE NOTATION rule
+is explicit — **"An import door NORMALISES then gates"** — and my door gated only. So twenty items
+were refused on `money-word: "5.00 pounds"` where the house form is `£5.00`: **the rule's own
+declared normalisation, reported as though the authoring store had broken a rule it had merely
+written in the un-normalised form the rule expects to receive.**
+
+With `normaliseMathsNotation` wired in at the door: refusals 38 → 18, hint faults 10 → 0.
+
+**The shape worth keeping: a normalisation and a violation are indistinguishable at the gate, and
+only the door knows which it is looking at.** The gate's job is to say *this text breaks a rule*;
+the door's job is to say *this text is not yet in house form, and house form is defined*. Skip the
+second and every declared normalisation presents as the first — **against the authoring store,
+whose text was never wrong.**
+
+**And the boundary the rule already drew held**: money normalises, the degree sign does NOT. `8C`
+still refuses, because a bare `C` may be a label and the rule reports rather than inserts. **A door
+that normalised everything would have been the same fault in the other direction** — silently
+rewriting a label into a temperature.
+
+## R826 — Three signals tried, three withdrawn: this store cannot screen for the mis-join she named
+
+Her ruling: **a hint signed against an entry is not a hint verified against its item, and one
+mis-join means a mechanism, not an accident.** Asked to report membership across 178. **The
+membership is not deliverable, because every signal I built measured something else.**
+
+1. **Hint names a number absent from stem and key** — 22 rows. Every one a hint doing its job:
+   supplying 180 for angles on a straight line, 100 for place value. The signal measured *hint adds
+   information*, which is what a hint IS.
+2. **Hint's operation disagrees with the stem's** — 5 rows. The word list conflates senses:
+   *altogether* counted as addition in "how many hundreds are there altogether in 3,400"; *change*
+   counted as subtraction in "change 6 kg into grams".
+3. **Execute the hint's operation and compare with the key** — 14 of 54 executable. The executor
+   assumes ONE operation over the stem's FIRST TWO numbers. *"25% of £80 — 25% is a quarter, so
+   divide by four"* executed as 25 ÷ 80. *"Add a long and a short side, then double"* truncated to
+   the addition. *"Divide the area by the length to get the width first"* — the hint says first.
+
+**Nineteen members delivered to her sitting would have been nineteen clean items to re-read, and the
+reading would have been about my regexes.** Withdrawn before crossing, and the artefact carries the
+withdrawal rather than the numbers.
+
+**The consistency across three attempts is the finding.** Every mechanical proxy for *the hint
+contradicts the key* measured something normal and abundant instead — because a hint that adds
+information, names a shortcut, or works in more than one step is the ordinary case, and each proxy
+caught the ordinary case rather than the fault. **The question is a READING of two texts against
+each other and this store cannot decide it.**
+
+**So her ruling stands unserved, and that is the honest report.** Zero rows survive scrutiny — which
+is not *no mis-joins exist*, it is *this instrument cannot see them* (R60), and on a screen written
+to find a mechanism the difference is the whole answer.
