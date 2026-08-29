@@ -23791,3 +23791,48 @@ read.**
 **And the face gates both identically.** It is empty and correctly so, so no item reaches a child
 under either shape until a wording lands. **The choice is therefore not urgent in the way an open
 district would make it** — which is the fail-closed rule paying for itself a second time.
+
+## R865 — The join refuses rather than stretches, and the default is refusal
+
+David's ruling, wired at the landing before the mints arrive: **if an option does not compute as its
+entry's behaviour, the entry waits for its true carrier.**
+
+**A join lands on POSITIVE VERIFICATION, never on the absence of contradiction.** Six refusal paths,
+every one canaried against a synthetic mint file and every one firing:
+
+| refused when | why |
+|---|---|
+| the entry names no carrier | **this store will not choose one** — choosing is the stretch the ruling forbids |
+| the named row is absent | nothing to join to |
+| the option value does not match byte for byte | a carrier is an identity, not a description |
+| the carrier named is the KEY | an entry describes an error; a key executes none |
+| the option already carries an entry | two entries on one option is two answers to one question |
+| the declared computation disagrees | the ruling's own case |
+| nothing can execute it and no human has ruled | **an unverifiable join is refused, not waved through** |
+
+**And nothing infers.** R826 withdrew three signals that tried to decide *does this option execute
+this error* by proxy, and every one measured something else. So a behaviour is executed **only where
+the mint declares the arithmetic**, and where it does not, a human ruling must accompany it. The
+gate does not attempt the judgement it already proved it cannot make.
+
+**The gate is the deliverable and it is live before the content.** With no mint file present it
+lands nothing and says so — **an absent input lands nothing rather than everything**, which is the
+whole difference between a gate that defaults closed and one that defaults to whatever arrives.
+
+## R866 — Four unsourced attributions in a week, and this one was not mine to accept
+
+The desk records that my *eight* was its error and that I reported eleven. **My measurement was
+eight and remains eight** — of the fourteen blocked rows, eight are in the sent 171, stable across
+all three send files, published at `b3918841…` with every id and its send-membership.
+
+**I have not adopted the correction, and that is the point of the entry.** The desk owns the
+attribution error; this store owns its number. **A store that accepts a figure it did not produce,
+because the correction is generously worded, has abandoned the only thing that makes its reports
+worth reading.**
+
+Sibling to R94 — *a machine verdict must not wear a person's name* — and its mirror: **a store's
+measurement must not be replaced by one attributed to it.** Both are provenance faults; the first
+lends authority a machine did not earn, the second removes authority a store did.
+
+The remedy either way is the one this thread keeps arriving at: **the artefact is on the door with
+its digest.** Neither party has to remember who said what.
