@@ -1,0 +1,223 @@
+{
+ "kind": "backwards-test",
+ "THE_TEST": "try to separate the sides of each blinded pairing by COUNTING POPULATED FIELDS and comparing field SHAPES — never by reading a stem. The measure is over structure alone.",
+ "whyItMatters": "Cowork's check separated 23 of 23 this way. **If a pairing is separable by shape, it was never blinded** — the reader need not read to know which side is which. Her verdicts stand either way: a verdict made on the texts is unaffected by whether the blind held. What changes is the CERTIFICATE on the sitting.",
+ "THE_RESULT": {
+  "pairingsTested": 17,
+  "separableByFieldCOUNT": 5,
+  "separableByFieldSHAPE": 5,
+  "verdict": "5 of 17 pairings are separable without reading a stem."
+ },
+ "AND_WHY_THESE_DIFFER_FROM_THE_23": "these batches leak the same way the 23 did.",
+ "rows": [
+  {
+   "batch": "the English eight",
+   "id": "ENG-004-AGG-02",
+   "fieldCounts": [
+    15,
+    15,
+    15,
+    15
+   ],
+   "shapesDiffer": false,
+   "countsDiffer": false
+  },
+  {
+   "batch": "the English eight",
+   "id": "ENG-006-TM-03",
+   "fieldCounts": [
+    14,
+    14
+   ],
+   "shapesDiffer": false,
+   "countsDiffer": false
+  },
+  {
+   "batch": "the English eight",
+   "id": "ENG-006-TM-05",
+   "fieldCounts": [
+    14,
+    14
+   ],
+   "shapesDiffer": false,
+   "countsDiffer": false
+  },
+  {
+   "batch": "the English eight",
+   "id": "ENG-006-TM-11",
+   "fieldCounts": [
+    14,
+    14
+   ],
+   "shapesDiffer": false,
+   "countsDiffer": false
+  },
+  {
+   "batch": "the English eight",
+   "id": "ENG-006-TM-12",
+   "fieldCounts": [
+    16,
+    16
+   ],
+   "shapesDiffer": false,
+   "countsDiffer": false
+  },
+  {
+   "batch": "the English eight",
+   "id": "ENG-007-LP-03",
+   "fieldCounts": [
+    15,
+    15
+   ],
+   "shapesDiffer": false,
+   "countsDiffer": false
+  },
+  {
+   "batch": "the English eight",
+   "id": "ENG-007-LP-05",
+   "fieldCounts": [
+    15,
+    15
+   ],
+   "shapesDiffer": false,
+   "countsDiffer": false
+  },
+  {
+   "batch": "the English eight",
+   "id": "ENG-007-LP-12",
+   "fieldCounts": [
+    16,
+    16
+   ],
+   "shapesDiffer": false,
+   "countsDiffer": false
+  },
+  {
+   "batch": "the nine replacement pairs",
+   "id": "ENG-005-BB position 1",
+   "fieldCounts": [
+    16,
+    15
+   ],
+   "shapesDiffer": true,
+   "countsDiffer": true
+  },
+  {
+   "batch": "the nine replacement pairs",
+   "id": "ENG-005-BB position 2",
+   "fieldCounts": [
+    15,
+    16
+   ],
+   "shapesDiffer": true,
+   "countsDiffer": true
+  },
+  {
+   "batch": "the nine replacement pairs",
+   "id": "ENG-005-BB position 3",
+   "fieldCounts": [
+    16,
+    16
+   ],
+   "shapesDiffer": false,
+   "countsDiffer": false
+  },
+  {
+   "batch": "the nine replacement pairs",
+   "id": "ENG-005-BB position 4",
+   "fieldCounts": [
+    17,
+    17
+   ],
+   "shapesDiffer": false,
+   "countsDiffer": false
+  },
+  {
+   "batch": "the nine replacement pairs",
+   "id": "ENG-007-LP position 1",
+   "fieldCounts": [
+    15,
+    15
+   ],
+   "shapesDiffer": false,
+   "countsDiffer": false
+  },
+  {
+   "batch": "the nine replacement pairs",
+   "id": "ENG-007-LP position 2",
+   "fieldCounts": [
+    16,
+    15
+   ],
+   "shapesDiffer": true,
+   "countsDiffer": true
+  },
+  {
+   "batch": "the nine replacement pairs",
+   "id": "ENG-007-LP position 3",
+   "fieldCounts": [
+    15,
+    16
+   ],
+   "shapesDiffer": true,
+   "countsDiffer": true
+  },
+  {
+   "batch": "the nine replacement pairs",
+   "id": "ENG-007-LP position 4",
+   "fieldCounts": [
+    15,
+    15
+   ],
+   "shapesDiffer": false,
+   "countsDiffer": false
+  },
+  {
+   "batch": "the nine replacement pairs",
+   "id": "ENG-007-LP position 5",
+   "fieldCounts": [
+    15,
+    16
+   ],
+   "shapesDiffer": true,
+   "countsDiffer": true
+  }
+ ],
+ "RESULT_LINES": [
+  "the English eight\tENG-004-AGG-02\tnot\tnot",
+  "the English eight\tENG-006-TM-03\tnot\tnot",
+  "the English eight\tENG-006-TM-05\tnot\tnot",
+  "the English eight\tENG-006-TM-11\tnot\tnot",
+  "the English eight\tENG-006-TM-12\tnot\tnot",
+  "the English eight\tENG-007-LP-03\tnot\tnot",
+  "the English eight\tENG-007-LP-05\tnot\tnot",
+  "the English eight\tENG-007-LP-12\tnot\tnot",
+  "the nine replacement pairs\tENG-005-BB position 1\tCOUNT-SEPARABLE\tSHAPE-SEPARABLE",
+  "the nine replacement pairs\tENG-005-BB position 2\tCOUNT-SEPARABLE\tSHAPE-SEPARABLE",
+  "the nine replacement pairs\tENG-005-BB position 3\tnot\tnot",
+  "the nine replacement pairs\tENG-005-BB position 4\tnot\tnot",
+  "the nine replacement pairs\tENG-007-LP position 1\tnot\tnot",
+  "the nine replacement pairs\tENG-007-LP position 2\tCOUNT-SEPARABLE\tSHAPE-SEPARABLE",
+  "the nine replacement pairs\tENG-007-LP position 3\tCOUNT-SEPARABLE\tSHAPE-SEPARABLE",
+  "the nine replacement pairs\tENG-007-LP position 4\tnot\tnot",
+  "the nine replacement pairs\tENG-007-LP position 5\tCOUNT-SEPARABLE\tSHAPE-SEPARABLE"
+ ],
+ "resultsSha256": "c07ab3bd489fd7e3f5af3f1b134c9a40bc6ad16265cceed7b6e2424c5fd29b3c",
+ "resultsSha256Spec": "sha256 over the result lines joined by \\n, each \"<batch>\\t<id>\\t<count>\\t<shape>\", encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content.",
+ "findingsSha256": "ec6aa7e5863e6809e300c8d624c672409d61549b38a074e21328cda88b427310",
+ "howToCheckThisOnArrival": {
+  "subtreeKeys": [
+   "THE_RESULT",
+   "rows",
+   "RESULT_LINES"
+  ],
+  "subtree": "an object of THIS DOCUMENT'S OWN TOP-LEVEL KEYS, exactly as spelled in subtreeKeys and nowhere renamed: {\"THE_RESULT\", \"rows\", \"RESULT_LINES\"}",
+  "spec": "sha256 over json.dumps(subtree, sort_keys=True, separators=(\",\",\":\"), ensure_ascii=False).encode(\"utf-8\") — R729. ensure_ascii defaults to True and gives a different number.",
+  "andTheFileDigest": "the staging line and the .sha256 sidecar, over the whole file bytes"
+ },
+ "instrumentProvenance": {
+  "emittedBy": "backwards-test.ts",
+  "carriedFixture": true,
+  "meaning": "the emitting instrument proved itself against carried cases — including at least one clean case caught by nothing — before it produced these figures (R721)."
+ }
+}

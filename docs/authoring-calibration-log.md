@@ -23470,3 +23470,57 @@ two questions have opposite answers on these five.
 **Strip them at the blinding, not at the reading.** A field removed downstream leaves the upstream
 artefact still able to leak on its next use; the R776 lesson is that the side which built the
 artefact is the side least likely to notice what it reveals.
+
+## R851 — The backwards test: distinguishable is not side-identifying
+
+Run on both batches, by counting populated fields and comparing field shapes, never reading a stem.
+
+**The English eight: 0 of 8 separable.** Identical populated-field shapes on both sides of every
+pairing. The blind holds and the certificate on that sitting is unchanged.
+
+**The nine replacement pairs: 5 of 9 distinguishable by field shape.** And the distinction is one
+field — `stem.quotes`, present on one reading and absent on the other.
+
+**But separable is not side-identifying, and that is the finding.** Measured against the unblinding
+map, the reading carrying `stem.quotes` is this store's copy on **3 of the 5** and the other file's
+on **2**. A reader betting *"the one with quotes is store X"* is right three times in five — **no
+better than chance, and worse than useless, because it feels like a signal.**
+
+**So a reader could tell the two readings APART on those five, and could not tell WHICH SIDE either
+was.** Blinding protects provenance, not distinguishability: two different questions SHOULD be
+distinguishable, or there would be nothing to rule on. **The certificate stands on both sittings**,
+and her verdicts were never in question either way — a verdict made on the texts is unaffected by
+whether the blind held.
+
+**The line against the 23.** `map97Status`, `flagNote`, `topicId`, `processId`, `gapFamily` record
+WHICH PROCESS PRODUCED THE ROW; `stem.quotes` records whether a question cites its passage. **The
+first is provenance wearing a content field's clothes. The second is content, and content is what
+the reading is for.** A blinding strip that removed both would be removing the evidence — R780's
+fault — so the test is the one already ruled: not *does this differ*, but *does the reading need
+it*.
+
+**And the English eight held for a structural reason worth keeping**: that batch was built by
+projecting a FIXED SET OF KEYS onto every reading, so a field absent on one side is absent on both.
+**A projection with a fixed shape cannot leak a shape.** The nine were assembled from whole authored
+items and inherited whatever each carried.
+
+## R852 — A field that produces the right behaviour for the wrong reason makes the record untrue about why
+
+`testedTokens` already suppressed the us-spelling flag on `ENG-003-A-SP-07` — it would have "worked".
+Its own documentation says *"exempt from the VOCABULARY CEILING only"*, and using it would have left
+the row asserting that *practise* is a word the item TESTS FOR DIFFICULTY, which is not what it is.
+
+**The behaviour would have been right and the record would have been false**, and the record is what
+the next reader has. A field borrowed for a useful side effect quietly redefines itself: the next
+person to read `testedTokens` finds entries that are not tested tokens, and either widens the
+definition to fit or removes an entry that was load-bearing.
+
+**Name what the string IS.** `specimens` says the item exhibits this form; `testedTokens` says the
+item tests this word; `quotedSpans` says a source wrote it. Three roles, three declarations, and each
+one true. **The cost of the right field is one declaration; the cost of the borrowed one is paid by
+whoever next tries to trust the field's name.**
+
+Sibling to R601 and R605 — a decision honoured by accident and one honoured by design produce
+identical output and are distinguishable in one grep. **This is the same shape in the declaration
+layer: an exemption granted by the wrong field and one granted by the right field behave identically
+and record different facts.**
