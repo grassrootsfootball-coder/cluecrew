@@ -23258,3 +23258,27 @@ send by its content, not its family.
 the same error as R829's matched projections one level out — there, a comparison too narrow to see a
 dropped field; here, a comparison too narrow to see a legitimate arrival. **Both report confidently,
 and both are describing their own reach.**
+
+## R842 — Absent from the district, not pending
+
+`MC04-FDP-04` and `MC05-FDP-01` — the two rows the withdrawal existed for — are recorded **ABSENT
+FROM THE DISTRICT**. They are in no send and no source: the 196-row send was withdrawn FOR them, the
+171-row replacement omits them, and the amended source carries neither.
+
+**Pending is an expectation; absent is a settled state.** Recorded as pending they would sit in a
+queue with two permanent members, and every future reader of that queue would wait on nobody.
+**That is how a closed question becomes an open one that never closes** — the queue survives the
+reason for it, and the cost is paid by whoever reads it next and cannot tell a live item from a
+fossil.
+
+The trail is an `AttributionEvent` per id, actor *the desk*, attached to the ID rather than to a row
+because there is no row — `recordId` is a string and not a foreign key, the same property that let
+the withdrawal record survive the delete (R836).
+
+**And absent is not a refusal.** If a later send names either id it arrives as a NEW row and this
+event is its prior state rather than a contradiction. What is recorded is that on this date nothing
+was owed — which is a fact about the sends, not a judgement about the items, and neither store is
+asked to do anything with it.
+
+**The district closes at 181 rows, zero gate faults, all DRAFT, none signed, no orphans, publication
+holding.**
