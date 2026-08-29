@@ -23663,3 +23663,44 @@ movers resolved to twelve genuine ones with named causes.
 of retired text. Here the content hash counted retention and reported a signature as stale because
 the store had written down why it changed. **Same distinction, two mechanisms, and both found only
 when a retention field finally carried something.**
+
+## R859 — A digest is comparable only under the projection that produced it; a projection change re-pins everything
+
+**The twelve never moved, and the finding is mine.**
+
+R858 was right that a content hash must not carry retention. But I applied the corrected projection
+to pins **already taken under the old one**, and reported the arithmetic consequence as *twelve rows
+whose bytes have moved since she verified them* — the most serious thing this store can say about a
+signature.
+
+Checked properly: **all twelve reproduce EXACTLY under the projection their pin was taken with.**
+Their pins came from her 182nd, **after** the amendments blamed for moving them. The content never
+changed. **My hash did.**
+
+**So a hash-convention change is not a measurement. It is a re-pinning of every pin in the store**,
+and it silently reinterprets each one as either intact or moved depending on a decision taken later
+and elsewhere. That is a worse fault than the one R858 fixed, because the R858 fault made signatures
+impossible to take while this one makes them look **wrongly taken**.
+
+**Two mechanisms follow, and the second is the one that generalises.** A pin is verified under ITS
+OWN projection, not the reader's current one — so eleven of the twelve signed, and the twelfth,
+`MC01-FDP-03`, refuses on `missing-misconceptions`, which is a real blocker and nothing to do with
+hashing. **And every pin written from here names its projection**, because a bare digest is a claim
+whose meaning lives outside itself: identical bytes hash differently under two conventions, and
+nothing in the number says which one was used.
+
+Sibling to R752 and R759 — there a digest crossed without its serialisation, and the far side
+computed a different number. **Here a digest crossed without its PROJECTION, and the same side
+computed a different number about its own rows.**
+
+## R860 — What remains, and the face is why it does not matter yet
+
+**173 of 187 signed. 14 refused, all on `missing-misconceptions`** — an incorrect option carrying no
+tag. **They stay refused: they are Cowork's authoring, and three are the ones it could not resolve.**
+No signature cures an untagged distractor, because the tag is what says which error the option
+executes and there is nothing for a hint to attach to without it.
+
+**Blast radius: ZERO, unchanged, and it will stay zero while the face is empty.** `case-maths-01`
+carries no title, `caseFaceServes` is false, and the case is invisible however many items are
+signed. **Signing changes what MAY serve; the face decides whether anything DOES** — and the two are
+independent by design, which is the whole reason the visible-but-empty window cannot open.
