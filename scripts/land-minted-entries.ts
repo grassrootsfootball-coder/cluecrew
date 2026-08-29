@@ -32,6 +32,7 @@ import { join as pjoin } from 'node:path';
 import { prisma } from '../packages/db/src/index';
 import { checkChildFacingText } from '../packages/core/src/index';
 import { assertFixture } from './lib/carried-fixture';
+import { carrierWorking, crossedOptionKeys } from './lib/crossed-carrier-working';
 import { beginCut, sealCut } from './lib/cut-stamp';
 import { deliver, stampedName } from './lib/export-destination';
 import { digestOverText, findingsDigest } from './lib/findings-digest';
@@ -58,43 +59,70 @@ function componentsOf(v: string): number[] | null {
 }
 
 /**
- * Extract arithmetic the sender WROTE. Not an interpreter: ` x ` and `divided by` are the two
- * infix spellings the mint uses, and nothing else is mapped. A phrase naming an operation in
- * words — "the largest of 6, 3, 7 and 4" — yields NOTHING and the join refuses, because building
- * an English-phrase interpreter to land rows is R826 exactly.
+ * Extract arithmetic that was WRITTEN. Not an interpreter: ` x ` and `divided by` are spellings the
+ * corpus uses and nothing else is mapped. A phrase naming an operation in words — "biggest number
+ * = 7", "6,4,0 = 640" — yields NOTHING and the join refuses, because building an English-phrase
+ * mapper to land rows is R826 exactly.
+ *
+ * THREE FORMS, AND THE LAST IS WEAKER — SAID HERE RATHER THAN LEFT TO BE DISCOVERED (R591):
+ *   TUPLE   `(5 + 3, 4)`      -> evaluates componentwise and must REPRODUCE the option exactly.
+ *   ASSERTION `5 + 3 = 8`     -> checks the arithmetic is internally correct AND that its result
+ *                                appears AMONG the option's numeric components. On `(8, 4)` that
+ *                                is a weaker claim than reproduction: it says 8 is in there, not
+ *                                that the working rebuilds the option. The carriers' own idiom is
+ *                                the assertion form, so refusing it would have unwound a landed
+ *                                join on a difference of notation.
  */
-function arithmeticIn(working: string): { expr: string[]; source: string } | null {
+function arithmeticIn(working: string): { kind: 'tuple' | 'assertion' | 'bare'; expr: string[]; asserted?: number; source: string } | null {
   const norm = working.replace(/\bx\b/g, '*').replace(/\bdivided by\b/g, '/');
-  const tuple = norm.match(/\(([^)]*[+\-*/][^)]*)\)/);
-  const candidates = tuple ? tuple[1].split(',') : [norm.match(/[\d.]+(?:\s*[+\-*/]\s*[\d.]+)+/)?.[0] ?? ''];
-  const expr = candidates.map((c) => c.trim()).filter((c) => /^[\d\s.+\-*/()]+$/.test(c) && c !== '');
-  if (expr.length === 0 || !expr.some((e) => /[+\-*/]/.test(e))) return null;
-  return { expr, source: tuple ? tuple[0] : expr[0] };
+  const tuple = norm.match(/\(([^)]*[+\-*\/][^)]*,[^)]*)\)/);
+  if (tuple) {
+    const expr = tuple[1].split(',').map((c) => c.trim());
+    if (expr.every((c) => /^[\d\s.+\-*\/()]+$/.test(c) && c !== '')) return { kind: 'tuple', expr, source: tuple[0] };
+  }
+  const assertion = norm.match(/([\d.()][\d\s.+\-*\/()]*[+\-*\/][\d\s.+\-*\/()]*)=\s*(-?[\d.]+)/);
+  if (assertion) {
+    const lhs = assertion[1].trim();
+    if (/^[\d\s.+\-*\/()]+$/.test(lhs)) return { kind: 'assertion', expr: [lhs], asserted: Number(assertion[2]), source: assertion[0].trim() };
+  }
+  const bare = norm.match(/[\d.]+(?:\s*[+\-*\/]\s*[\d.()]+)+/);
+  if (bare && /^[\d\s.+\-*\/()]+$/.test(bare[0])) return { kind: 'bare', expr: [bare[0].trim()], source: bare[0].trim() };
+  return null;
 }
 
-/** Evaluate declared arithmetic against the option's own components. No proxy, no inference. */
+/** Evaluate written arithmetic against the option's own components. No proxy, no inference. */
 function computes(working: string, optionValue: string) {
   const found = arithmeticIn(working);
-  if (!found) {
-    return { ran: false, detail: 'the working states no arithmetic to execute — it names the act in words. Nothing here interprets a phrase (R826).' };
-  }
+  if (!found) return { ran: false, detail: 'the working states no arithmetic to execute — it names the act in words. Nothing here interprets a phrase (R826).' };
   const want = componentsOf(optionValue);
   if (!want) return { ran: false, detail: `the option value ${JSON.stringify(optionValue)} has no numeric components to compare` };
   let got: number[];
   try { got = found.expr.map((e) => Function(`"use strict";return (${e})`)() as number); } catch {
     return { ran: false, detail: `the extracted arithmetic ${JSON.stringify(found.expr)} did not evaluate` };
   }
-  const agrees = got.length === want.length && got.every((g, i) => Math.abs(g - want[i]) < 1e-9);
-  return {
-    ran: true, agrees,
+  if (found.kind === 'tuple' || found.kind === 'bare') {
+    const agrees = got.length === want.length && got.every((g, i) => Math.abs(g - want[i]) < 1e-9);
+    return { ran: true, agrees, form: `${found.kind} — reproduces the option`, extractedFrom: found.source, extracted: found.expr, evaluatedTo: got, optionComponents: want,
+      detail: `extracted ${JSON.stringify(found.expr)} from ${JSON.stringify(found.source)} = ${JSON.stringify(got)}; the option is ${JSON.stringify(want)} — ${agrees ? 'AGREES' : 'DISAGREES'}` };
+  }
+  const arithmeticHolds = Math.abs(got[0] - (found.asserted as number)) < 1e-9;
+  const resultIsInTheOption = want.some((w) => Math.abs(w - (found.asserted as number)) < 1e-9);
+  const agrees = arithmeticHolds && resultIsInTheOption;
+  return { ran: true, agrees, form: 'assertion — result appears among the option components (weaker than reproduction)',
     extractedFrom: found.source, extracted: found.expr, evaluatedTo: got, optionComponents: want,
-    detail: `extracted ${JSON.stringify(found.expr)} from ${JSON.stringify(found.source)} = ${JSON.stringify(got)}; the option is ${JSON.stringify(want)} — ${agrees ? 'AGREES' : 'DISAGREES'}`,
-  };
+    detail: `extracted ${JSON.stringify(found.source)}: ${found.expr[0]} = ${got[0]}, asserted ${found.asserted} — arithmetic ${arithmeticHolds ? 'holds' : 'DOES NOT HOLD'}; the option is ${JSON.stringify(want)} and ${resultIsInTheOption ? 'contains' : 'DOES NOT CONTAIN'} that result — ${agrees ? 'AGREES' : 'DISAGREES'}` };
 }
 
 async function run() {
   const cutBeganAt = beginCut();
   assertFixture('minted-join', [
+    { name: 'an assertion matching the option verifies', input: JSON.stringify(['80 x 25 = 2000', '£2000']), mustBeCaught: true },
+    { name: 'an assertion whose result is a tuple component verifies', input: JSON.stringify(['5 + 3 = 8 → (8, 4)', '(8, 4)']), mustBeCaught: true },
+    { name: 'a nested-fraction assertion verifies', input: JSON.stringify(['15 / (1/4) = 60', '60']), mustBeCaught: true },
+    { name: 'an assertion whose ARITHMETIC is wrong refuses', input: JSON.stringify(['80 x 25 = 1000', '1000']), mustBeCaught: false },
+    { name: 'an assertion whose result is not in the option refuses', input: JSON.stringify(['5 + 3 = 8', '(9, 4)']), mustBeCaught: false },
+    { name: 'a comma list with no operator is not an assertion', input: JSON.stringify(['6,4,0 = 640', '640']), mustBeCaught: false },
+    { name: 'a phrase with an equals sign is not an assertion', input: JSON.stringify(['biggest number = 7', '7']), mustBeCaught: false },
     { name: 'written arithmetic matching the option verifies', input: JSON.stringify(['25 x 80 = 2000', '2000']), mustBeCaught: true },
     { name: 'a division spelled in the mint\'s words verifies', input: JSON.stringify(['15 divided by 3', '5']), mustBeCaught: true },
     { name: 'a tuple verifies componentwise, order preserved', input: JSON.stringify(['(5 + 3, 4)', '(8, 4)']), mustBeCaught: true },
@@ -120,6 +148,7 @@ async function run() {
   const keysAtJoin = [...new Set(mints.flatMap((m) => Object.keys(m.join ?? {})))].sort();
   console.log(`  keys present on entries: ${keysAtEntry.join(', ')}`);
   console.log(`  keys present on joins:   ${keysAtJoin.join(', ')}`);
+  console.log(`  keys present on CROSSED carrier options: ${crossedOptionKeys().join(', ')}`);
   if (!keysAtJoin.includes('itemId') || !keysAtJoin.includes('optionValue')) {
     throw new Error('the delivered joins name no itemId/optionValue — refusing a shape I cannot parse (R173)');
   }
@@ -200,12 +229,29 @@ async function run() {
         continue;
       }
 
-      const check = computes(j.working ?? '', valueOf(opt));
+      /**
+       * R881 — THE CARRIER'S OWN WORKING, READ FROM THE AUTHORING STORE'S CROSSED BYTES.
+       * The sender's working is recorded as provenance and is NEVER the evidence: when one party
+       * names the entry, names the carrier and supplies the account of how that carrier executes
+       * it, the working is the same claim restated in arithmetic (R879).
+       */
+      const own = carrierWorking(j.itemId, (opt.content as { label?: string }).label ?? j.optionLabel ?? '');
+      if (own.state === 'ABSENT') {
+        refuse('NO CARRIER EVIDENCE HAS CROSSED. The carrier states no working of its own in any crossed artefact.', { theSendersWorking: j.working ?? null, andWHYTHATISNOTENOUGH: 'a working supplied by the party naming the entry is not the carrier\'s own evidence (R879).' });
+        continue;
+      }
+      if (own.state === 'DISAGREE') {
+        refuse('THE CROSSED COPIES DISAGREE about this carrier\'s working. Nothing here picks between them.', { readings: own.readings, copiesHoldingTheCarrier: own.copiesHoldingTheCarrier });
+        continue;
+      }
+      const check = computes(own.verbatim as string, valueOf(opt));
       if (check.ran && check.agrees === false) { refuse('THE OPTION DOES NOT COMPUTE AS THE ENTRY\'S BEHAVIOUR. The entry waits for its true carrier.', { detail: check.detail }); continue; }
       if (!check.ran) {
-        refuse('NOT MECHANICALLY VERIFIABLE — the working names the act in words rather than writing the arithmetic. **An unverifiable join is refused, not waved through.**', {
+        refuse('NOT MECHANICALLY VERIFIABLE — the CARRIER\'S OWN working names the act in words rather than writing the arithmetic. **An unverifiable join is refused, not waved through.**', {
           detail: check.detail,
-          theWorkingAsWritten: j.working,
+          THE_CARRIERS_OWN_WORKING: own.verbatim,
+          copiesAgreeing: own.copiesHoldingTheCarrier,
+          theSendersWorking: j.working,
           whatWouldLandIt: 'one declared expression per join, in the sender\'s hand — or her ruling on the join itself. Not an interpreter built here: R826 withdrew three signals that decided this by inference and every one measured something else.',
           andWHOAUTHOREDTHEWORKING: 'the file says the workings were COMPUTED by the sender from her behaviours, so a working is not itself her ruling on the carrier (R203 — where the fact is doubt, the doubt travels with it).',
         });
@@ -223,7 +269,7 @@ async function run() {
           } });
         });
       }
-      joinResults.push({ ...base, outcome: APPLY ? 'JOINED' : 'WOULD JOIN', verification: check.detail, extracted: check.extracted, extractedFrom: check.extractedFrom });
+      joinResults.push({ ...base, outcome: APPLY ? 'JOINED' : 'WOULD JOIN', THE_CARRIERS_OWN_WORKING: own.verbatim, copiesAgreeing: own.copiesHoldingTheCarrier, verification: check.detail, form: check.form, extracted: check.extracted, extractedFrom: check.extractedFrom, theSendersWorking: j.working ?? null, andWHOSEEVIDENCECOUNTED: 'the carrier\'s, from crossed bytes. The sender\'s is recorded and was not used (R879/R881).' });
     }
   }
 

@@ -24151,3 +24151,56 @@ ruling can be right and its premise wrong at the same time — that is this entr
 premise silently would have made a measured 0-of-748 into a settled 2-of-7 nobody would re-measure.
 Fourth time this month a stated figure needed verifying before use (R866 the eight, R859 the twelve,
 R863 the routed claim, now this); the cost each time is one query.
+
+## R881 — The evidence is where the evidence is: the join reads the carrier's working from crossed bytes
+
+David's ruling, 2026-08-29, closing R879/R880.
+
+**`distractorWorking` never crossed this door, and the reader test was right to refuse to widen for
+it** — nothing here renders it, and a field no reader consumes is a field this store should not hold
+(R601). The fault was one step later: *we do not hold it* became *it does not exist*, and the join
+demanded the carrier's evidence in a column that had been deliberately ruled out of existence.
+**Requiring evidence in the wrong place is indistinguishable, from inside, from the evidence being
+absent.** Cowork holds it on all seven carriers; this store holds it on none; both facts were true
+and the conclusion drawn from them was false.
+
+So the join reads the carrier's working from the authoring store's CROSSED BYTES
+(`scripts/lib/crossed-carrier-working.ts`), under three properties:
+ 1. **THE SOURCE IS DERIVED, NEVER PICKED** (R57) — every crossed artefact stating a
+    `distractorWorking` is scanned. Naming one file makes the answer depend on which copy somebody
+    reached for.
+ 2. **UNANIMITY REQUIRED, DISAGREEMENT REFUSED** — two copies stating different workings returns
+    DISAGREE with every reading and its files. It does not choose. Measured: 12 copies hold all
+    seven carriers and agree on every working; they differ only on FDP-03's *value*, where the three
+    newest already carry `£2000`. **The mint quoted an older copy than its own store's current
+    bytes** — which is R876's fence, seen from the sending side.
+ 3. **THE KEYS PRINTED BEFORE THE VALUES** (R568). The first scan of these files looked for `id`
+    where the shape says `itemId`, found nothing across 196 items, and reported 0 carriers — a
+    failed read wearing the exact shape of the true absence it was sent to check. **Third time in
+    this thread that a wrong key name produced a confident zero**, and the only reason it did not
+    stand was that the digest was known-good, so the zero was impossible rather than merely wrong.
+
+**THE TWO LANDED JOINS SURVIVE THE RE-FOUNDING, AND THAT IS MEASURED RATHER THAN ASSUMED.** The gate
+refuses an already-tagged option before it computes, so re-running it could never answer R880's open
+question; `refound-joins-on-carrier-evidence.ts` answers it without writing anything. `15 / 3 = 5`
+and `5 + 3 = 8 → (8, 4)` both verify on the carrier's own working. Carrier and sender agree on all
+seven — **an outcome, not evidence that the design held** (R62). The divergence R879 guards against
+did not happen this time; the guard is not thereby unnecessary.
+
+**AND THE EXTRACTOR NEEDED A THIRD FORM, WHICH THE FIXTURE CAUGHT RATHER THAN THE ROWS.** The
+carriers' idiom is the ASSERTION (`80 x 25 = 2000`), the sender's was BARE (`15 divided by 3`) and
+TUPLE (`(5 + 3, 4)`). Replacing bare with assertion silently dropped a capability, and the carried
+fixture failed on the case the change removed — not on a row, not in a report, in the instrument's
+own must-catch list. **The assertion form is WEAKER and it says so at its definition**: it checks the
+arithmetic is internally correct and that its result appears AMONG the option's components, which on
+`(8, 4)` is not reproduction. Said at the definition rather than left to be discovered (R591).
+
+Refusals after the re-founding, now on the carrier's own evidence: `biggest number = 7`,
+`6,4,0 = 640`, `put 6 first, then 0,4 -> 604` state no arithmetic. **The refusal is the same and its
+footing is not** — three rows previously refused on the sender's silence are now refused on the
+carrier's own, which is the only version of that refusal that means anything.
+
+Still open and not decided here: FDP-03 C, where the carrier's working verifies and only the mint's
+stale declared value blocks it; and FDP-08 D, where the conditional's antecedent — *the store's
+declared gap prose* — now EXISTS (`15 / (1/4) = 60`) and whether it agrees with the sender's account
+is a reading. **Both are hers.** Nothing was unwound, nothing was landed.
