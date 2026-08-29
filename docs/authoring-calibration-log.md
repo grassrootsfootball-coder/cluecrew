@@ -22951,3 +22951,56 @@ present on the rows, all of the form *"Angles on a straight line add to 180° �
 The difference is population and is not reconciled from here. A dash breaking a child-facing sentence
 has a standing house remedy, but these are maths hints in a district that has never been screened,
 and the ruling is hers.
+
+## R829 — A scan whose source projection matches its target projection can only confirm what it carries
+
+Mine, and the canary exposed it. My glyph scan reported `×`, `÷` and U+2212 as **zero in source and
+zero in rows** — a match, and reassuring, and worthless. It built its source text from `stem`,
+`explanation` and `options[].value`: **exactly the fields the import carries.** So it compared the
+imported half of the source against the imported row, found agreement, and could not have found
+anything else.
+
+**The general form: a comparison is only as wide as the NARROWER of its two projections, and when
+both projections are the same one, the comparison is a tautology wearing a check's clothes.** It
+cannot see a dropped field, because a dropped field is absent from both sides of the sum.
+
+**The tell was available and it is arithmetic**: my scan reported `× 0 in source` while the source
+file plainly contains 23. **A scan that reports zero of something a `grep` finds is describing its
+own reach**, and comparing my count against the raw bytes would have taken one command.
+
+Cowork's canary caught it because **its projection was the whole shipped row and its comparison was
+against a published map rather than against itself.** That is the structural difference and it is
+the reason a second party's instrument found what a first party's could not — not diligence, but a
+projection chosen independently of the thing being tested.
+
+Sibling to R173: there, an instrument said the right thing for the wrong reason. Here it said a TRUE
+thing about a population it had silently narrowed to the answer.
+
+## R830 — Two dropped fields, and the reader test refuses both
+
+The test as set: **widen the door only if a reader exists; do not widen it because the field is
+there.**
+
+**`options[].distractorWorking` — 588 of 784 options, never on a key.** The arithmetic trace of how
+each wrong answer was produced. **It is the nearest thing this district has to an execution, and the
+column already exists**: `ItemOption.misconceptionExecution`, which the schema calls *the first thing
+a reviewer asks to see*. **A reader exists — and it is gated `isEnglish`.**
+`admin/items/[id]/page.tsx` renders the review surface only when the district is ENGLISH, so for a
+maths item it does not render at all. **NO READER FOR MATHS. DO NOT WIDEN.** Carrying 588 workings
+into a column nothing reads for this district is exactly the field-because-it-is-there move.
+
+**`notes` — 194 of 196 items.** Authoring and design provenance. Nearest column `Item.drafterNote`,
+which appears in the disposition membership **and nowhere else**: no surface renders it, no check
+consults it. **NO READER AT ALL. DO NOT WIDEN.**
+
+**And the finding that outranks the door, again.** 187 maths items are about to be read, and **the
+reviewer surface that renders an item as she has to judge it is English-only.** For a maths item the
+admin page shows the id, the status, the type name, the author, and the returned-with-notes box —
+**no option table, no key flag, no misconception, no execution note, no hint, no walk script.** That
+surface exists because its own header says judging without those is not possible.
+
+**This is R823 one layer up.** The district had 111 attested hints and nothing to carry them; it now
+has 187 items and no surface that renders them for review. **The sitting is not gated by it** — she
+reads the crossed artefact — but a signature taken in the admin UI would be taken against a page
+showing almost nothing. Reported, not built: whether that surface widens is a decision about what a
+reviewer needs, and the same test applies to it.
