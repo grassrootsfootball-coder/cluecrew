@@ -22913,3 +22913,41 @@ separate, correct refusal. Saying *the temperature items are held* would have be
 misleading; they are held for saying "error" to a child.
 
 **187 items DRAFT, 0 LIVE, 0 signed, and every landed row gates clean.**
+
+## R828 — Nothing is stripped, and glyphs are missing: the canary separates a strip from a dropped field
+
+Cowork's canary run over the landed rows. **47 of 56 rows differ, and not one glyph was altered.**
+Both halves are true and they are not in tension: **every absent glyph lives in a FIELD THIS IMPORT
+DOES NOT CARRY.** A strip alters a string; this drops a field — and the difference decides whether a
+population needs re-importing or a door needs widening.
+
+**U+2212, the one they flagged as invisible: 45 sent, 0 landed, none stripped.** Every minus sign in
+the staged source sits in `options[].distractorWorking` (51) and `notes` (10), neither imported. The
+loss they feared was a hyphen appearing where a minus had been; what happened is that the text
+carrying it never crossed the door. Same for U+2192 (43), ÷ (22), × (23) — all in the same two
+uncarried fields.
+
+**The degree arithmetic reconciles exactly and that is what makes the account trustworthy**: 88 in
+the source, 11 in fields not imported, **77 landed — the count on the rows, with no residue.** An
+explanation that leaves nothing over is a different thing from one that merely sounds right.
+
+**Their fingerprint could not be reproduced, and I did not keep guessing.** The spec — *"sha256 over
+sorted (codepoint, count) pairs, first 16 hex"* — names the pairs and not the serialisation. Nine
+candidate readings against a published row, none matching. **This store registered that exact fault
+in August (R752): a digest crosses with the serialisation that produces it, or the receiving party
+checks a different number.** So the comparison ran on the published GLYPH MAPS instead — better
+evidence than the hash, because a map names which glyph and how many where a hash says only "moved".
+**A tenth guess that happened to match would have been luck presented as verification.**
+
+**And my own earlier glyph scan was wrong in a way this exposes.** It reported `×`, `÷` and U+2212 as
+zero in source AND rows — a match, and reassuring. It built its source text from stem, explanation
+and option values only: **the very fields that carry no such glyph.** It compared the imported half
+of the source against the imported row and found agreement, which was true and meant nothing. **A
+scan whose source projection matches its target projection cannot detect a dropped field** — it can
+only ever confirm what it already carries.
+
+**The em dash is hers.** They report 10 `hintCore` strings carrying U+2014; this side holds 3, all
+present on the rows, all of the form *"Angles on a straight line add to 180° — subtract from 180."*
+The difference is population and is not reconciled from here. A dash breaking a child-facing sentence
+has a standing house remedy, but these are maths hints in a district that has never been screened,
+and the ruling is hers.
