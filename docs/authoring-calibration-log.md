@@ -23759,3 +23759,35 @@ artefact looking for drift she had been told to expect, and **every ordinary dif
 like evidence** — a false alarm about signatures does not merely waste a reading, it recalibrates
 one. That is why it crosses now rather than as a footnote to the next batch, and why the artefact
 states it in the plainest available words rather than as a revision of an earlier figure.
+
+## R864 — A flagNote is the third state: it specifies an entry and does not substitute for one
+
+Her ruling: **the tag says WHICH ERROR the option executes; prose describing it does not clear the
+gate.**
+
+Measured, and the blocked rows are not careless. Every untagged option carries
+`misconceptionBehaviour` — *"rounds both numbers to the tens and does not compensate"*, *"gives the
+range instead of the mean"* — with `misconceptionRef: null` and **`mappingStatus: "gap"`**. **The
+authoring store DECLARED these as gaps.** The prose is exactly the third state: it describes the
+error and cannot be joined to a hint, because a hint attaches to an entry and there is no entry.
+
+**So the prose is not nothing and it is not enough.** It is the specification a minted entry would
+be written from, it travels on the authored option, and it is lost by nobody. **What it cannot do is
+carry a signature**, and a gate that accepted it would be recording that a child will be told
+something when nothing exists to tell her.
+
+**Fourteen rows blocked here, seventeen options; the ruling names six to mint.** The difference is a
+MAPPING judgement this store cannot make — whether an existing entry already covers a behaviour is a
+reading against 111 library entries, which is authoring rather than arithmetic. **All fourteen ids
+are published so the eight can be named rather than inferred**, and every blocked row keeps one or
+two tagged distractors: **a blocked row is one option short, not unmapped.**
+
+**Both shapes reported, neither taken.** 181 signed with six held — the district opens incomplete
+with its gaps declared, and *a hold that is published is a hold* (R836, R842). 187 with the six
+minted — the district opens whole, at the cost of **putting six new child-facing hints on the
+critical path of a publication, which is the condition under which hint wording is least carefully
+read.**
+
+**And the face gates both identically.** It is empty and correctly so, so no item reaches a child
+under either shape until a wording lands. **The choice is therefore not urgent in the way an open
+district would make it** — which is the fail-closed rule paying for itself a second time.
