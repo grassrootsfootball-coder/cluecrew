@@ -24341,3 +24341,62 @@ The three earlier signatures were corrected by ADDING a correcting event, not by
 originals: a record is corrected by adding to it. And the fixture now carries the discriminating
 pair — retention present (projections differ) and retention absent (projections agree) — because the
 second case is the reason the first went unnoticed.
+
+## R889 — A check that agrees with itself wherever it cannot be tested is not a check
+
+The full-reach form of R888, and the one to carry forward.
+
+**A check asserts a claim, and its population splits in two: rows where the claim is TESTABLE, and
+rows where it is DEGENERATE — where both branches of the claim give the same answer.** On a
+degenerate row the check passes no matter which branch is true. It is not a weak test there; it is
+NO test, and it is indistinguishable in the output from a strong one. **The degenerate rows do not
+merely fail to help — they manufacture the confidence that stops anyone looking.** Three signatures
+carried a false statement about how they were verified, and three green rows are why nobody asked.
+
+**SO EVERY CHECK REPORTS ITS DISCRIMINATING DENOMINATOR: on how many rows could this claim have been
+FALSIFIED?** Not how many rows were screened (R60) — how many could have said no.
+`THE_DISCRIMINATING_DENOMINATOR` in `sign-joins-unblocked.ts` is the shape: rows compared, rows where
+the branches differ, rows where the claim is degenerate, and the ids of the discriminating ones. **A
+discriminating count of zero is R61's absent population one level down** — the rows are there, the
+check ran, and the claim was tested on nothing. It must print as UNVERIFIED, never as a pass.
+
+**AND THE ONE ROW THAT COULD FALSIFY IT WAS THE ONE THAT DID.** `MC01-FDP-03` is the only maths row
+carrying retention, so it is the only row on which the two projections diverge — and it is the only
+row that refused. That is not luck; it is the definition. **A single discriminating row outweighs the
+entire agreeing remainder, and the remainder's size is what makes it feel otherwise.**
+
+**THE FALSIFICATION ARRIVED WEARING THE WRONG LABEL, WHICH IS WHY THIS NEEDS A MECHANISM AND NOT
+VIGILANCE.** The refusal read *the row does not recompute to her pin* — the wording for a content
+fault, on a signed row, pointing at the reviewer's own amendment. Every instinct it triggers is to
+investigate the DATA. The instrument was wrong, the data was fine, and nothing in the message could
+have told them apart. Sibling to R173 (right answer, wrong reason) and R149 (the fault that looks
+like content and is the instrument), and the discriminating denominator is the first guard here that
+would have caught it BEFORE the row did.
+
+## R890 — Widening a condition safely: a closed set of named acts, proved by its accidents
+
+R885 widened *computes-as* from arithmetic to determination — from one mechanical test to **any
+stated act**. That is the most dangerous shape of change available here, because "any stated act" is
+an invitation to infer, and R826 withdrew three signals for exactly that. The form that survives it:
+
+1. **THE SET IS CLOSED AND EACH ACT IS NAMED.** `arithmetic`, `selection`, `permutation`. Not a
+   parser for English, a vocabulary for three procedures.
+2. **EACH ACT RUNS ON THE SUBJECT'S OWN MATERIAL** — the numbers and digits the item itself states,
+   never material supplied by the party making the claim (R879).
+3. **NON-RECOGNITION REFUSES.** A working matching no act is gesture. The failure direction is
+   refusal, so a widening cannot silently admit more than it names.
+4. **THE ACT AND THE MATERIAL TRAVEL ON THE RESULT** (R569), because a verdict whose procedure the
+   reader cannot see is a verdict taken on trust.
+
+**AND THE TWO MUST-BE-CLEAN CASES ARE WHAT MAKE IT A TEST OF DETERMINATION RATHER THAN OF
+PRODUCTION.** A TIED SELECTION — *largest of [7, 7]* — produces the right value and determines
+nothing. An UNGROUNDED PERMUTATION — digits that are not the item's, concatenated — produces the
+right value and determines some other item's answer. **Both would pass a check that asked "does the
+act produce the option", and both must fail, because the condition is "produces exactly this value
+AND NO OTHER".**
+
+**The transferable half: for any "does X produce Y" check, the must-be-clean cases are the ones where
+X produces Y BY ACCIDENT** — ties, coincidences, ungrounded inputs, degenerate arguments. Without
+them a closed set of acts is a value-matcher wearing an act's name, and it will agree with every
+correct row and every lucky one alike. Those cases are also the ones nobody writes unprompted, since
+they require imagining the check succeeding for the wrong reason — which is the whole skill.

@@ -1,0 +1,138 @@
+{
+ "kind": "joins-unblocked-signing",
+ "mode": "DRY RUN — nothing written",
+ "THE_PROJECTION": "BOTH are computed and the pin is matched against both; the signature records which one matched. A pin is comparable only under the projection it was taken with (R859), and which that is, is discovered rather than declared (R888).",
+ "THE_SCOPING": "a pin asserts IDENTITY over the whole row under its named projection; a verdict asserts READING over what was read; the inherited fields are PINNED AND UNREAD.",
+ "counts": {
+  "STILL BLOCKED": 10,
+  "WOULD SIGN": 1
+ },
+ "results": [
+  {
+   "itemId": "MC01-CALC-02",
+   "outcome": "STILL BLOCKED",
+   "blocker": "missing-misconceptions",
+   "untagged": [
+    "40"
+   ]
+  },
+  {
+   "itemId": "MC01-CALC-07",
+   "outcome": "STILL BLOCKED",
+   "blocker": "missing-misconceptions",
+   "untagged": [
+    "21"
+   ]
+  },
+  {
+   "itemId": "MC01-CALC-08",
+   "outcome": "STILL BLOCKED",
+   "blocker": "missing-misconceptions",
+   "untagged": [
+    "5000"
+   ]
+  },
+  {
+   "itemId": "MC01-FDP-03",
+   "outcome": "WOULD SIGN",
+   "blockerNow": "none",
+   "comparison": {
+    "pinsOnRow": 1,
+    "herPin": "9fea8856794467c1162128d5dac53bd9c05df20af09004686cc49ea4a01bd27c",
+    "rowNowRetentionIncluded": "9fea8856794467c1162128d5dac53bd9c05df20af09004686cc49ea4a01bd27c",
+    "rowNowRetentionExcluded": "537dcda436643a7aade6139eff7a5ed7cf2643767c9472a32c4138cc5541fbe3",
+    "theTwoProjectionsDiffer": true,
+    "theyMatch": true,
+    "matchedUnderProjection": "retention-INCLUDED"
+   }
+  },
+  {
+   "itemId": "MC01-FDP-08",
+   "outcome": "STILL BLOCKED",
+   "blocker": "missing-misconceptions",
+   "untagged": [
+    "60"
+   ]
+  },
+  {
+   "itemId": "MC01-MEAS-01",
+   "outcome": "STILL BLOCKED",
+   "blocker": "missing-misconceptions",
+   "untagged": [
+    "£1.00"
+   ]
+  },
+  {
+   "itemId": "MC01-MEAS-02",
+   "outcome": "STILL BLOCKED",
+   "blocker": "missing-misconceptions",
+   "untagged": [
+    "50 cm"
+   ]
+  },
+  {
+   "itemId": "MC01-GEOM-06",
+   "outcome": "STILL BLOCKED",
+   "blocker": "missing-misconceptions",
+   "untagged": [
+    "140°",
+    "50°"
+   ]
+  },
+  {
+   "itemId": "MC01-GEOM-05",
+   "outcome": "STILL BLOCKED",
+   "blocker": "missing-misconceptions",
+   "untagged": [
+    "12 cm²"
+   ]
+  },
+  {
+   "itemId": "MC01-STATS-03",
+   "outcome": "STILL BLOCKED",
+   "blocker": "missing-misconceptions",
+   "untagged": [
+    "4"
+   ]
+  },
+  {
+   "itemId": "MC01-STATS-04",
+   "outcome": "STILL BLOCKED",
+   "blocker": "missing-misconceptions",
+   "untagged": [
+    "2"
+   ]
+  }
+ ],
+ "RESULT_LINES": [
+  "MC01-CALC-02\tSTILL BLOCKED",
+  "MC01-CALC-07\tSTILL BLOCKED",
+  "MC01-CALC-08\tSTILL BLOCKED",
+  "MC01-FDP-03\tWOULD SIGN",
+  "MC01-FDP-08\tSTILL BLOCKED",
+  "MC01-MEAS-01\tSTILL BLOCKED",
+  "MC01-MEAS-02\tSTILL BLOCKED",
+  "MC01-GEOM-06\tSTILL BLOCKED",
+  "MC01-GEOM-05\tSTILL BLOCKED",
+  "MC01-STATS-03\tSTILL BLOCKED",
+  "MC01-STATS-04\tSTILL BLOCKED"
+ ],
+ "resultsSha256": "3b128e9f3b7ea8065c0dd2aeea8511a735d58d8f922f2cb1ab862d62efe2df52",
+ "resultsSha256Spec": "sha256 over the result lines joined by \\n, each \"<itemId>\\t<outcome>\", encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content.",
+ "findingsSha256": "1d113defe9ab8f28f748cbfa8effeca6598146bb8371c6113a5142a6434ad4b6",
+ "howToCheckThisOnArrival": {
+  "subtreeKeys": [
+   "counts",
+   "results",
+   "RESULT_LINES"
+  ],
+  "subtree": "an object of THIS DOCUMENT'S OWN TOP-LEVEL KEYS, exactly as spelled in subtreeKeys and nowhere renamed: {\"counts\", \"results\", \"RESULT_LINES\"}",
+  "spec": "sha256 over json.dumps(subtree, sort_keys=True, separators=(\",\",\":\"), ensure_ascii=False).encode(\"utf-8\") — R729. ensure_ascii defaults to True and gives a different number.",
+  "andTheFileDigest": "the staging line and the .sha256 sidecar, over the whole file bytes"
+ },
+ "instrumentProvenance": {
+  "emittedBy": "sign-joins-unblocked.ts",
+  "carriedFixture": true,
+  "meaning": "the emitting instrument proved itself against carried cases — including at least one clean case caught by nothing — before it produced these figures (R721)."
+ }
+}

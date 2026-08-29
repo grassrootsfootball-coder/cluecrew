@@ -112,13 +112,32 @@ async function run() {
   }
 
   const counts = results.reduce<Record<string, number>>((a, r) => { const k = String(r.outcome).split(' —')[0]; a[k] = (a[k] ?? 0) + 1; return a; }, {});
+
+  /**
+   * THE DISCRIMINATING DENOMINATOR (R889). How many rows can actually tell the two projections
+   * apart? On the rest the claim is DEGENERATE — both branches return the same hash, so the check
+   * agrees with itself and measures nothing. A check whose discriminating count is 0 has tested its
+   * claim on no row at all, and must say so rather than reporting a pass.
+   */
+  const withComparison = results.filter((r) => (r as { comparison?: { theTwoProjectionsDiffer?: boolean } }).comparison);
+  const discriminating = withComparison.filter((r) => (r as { comparison: { theTwoProjectionsDiffer: boolean } }).comparison.theTwoProjectionsDiffer);
+  const THE_DISCRIMINATING_DENOMINATOR = {
+    rowsCompared: withComparison.length,
+    rowsWhereTheTwoProjectionsDIFFER: discriminating.length,
+    rowsWhereTheClaimIsDEGENERATE: withComparison.length - discriminating.length,
+    ids: discriminating.map((r) => r.itemId),
+    andWHATTHATMEANS: discriminating.length === 0
+      ? 'ZERO. No row here can distinguish the projections, so nothing in this run tested which one the pins were taken under. Treat the projection line as UNVERIFIED on this population, not as a pass.'
+      : `${discriminating.length} row(s) can falsify the projection claim; the other ${withComparison.length - discriminating.length} agree with themselves whichever projection is named. The passing rows are not evidence.`,
+  };
+  console.log(`  discriminating rows: ${discriminating.length} of ${withComparison.length} — the rest cannot tell the projections apart`);
   const lines = results.map((r) => `${r.itemId}\t${r.outcome}`);
   const d = digestOverText('the result lines joined by \\n, each "<itemId>\\t<outcome>"', lines.join('\n'));
   const full = {
     kind: 'joins-unblocked-signing', mode: APPLY ? 'APPLIED' : 'DRY RUN — nothing written',
     THE_PROJECTION: 'BOTH are computed and the pin is matched against both; the signature records which one matched. A pin is comparable only under the projection it was taken with (R859), and which that is, is discovered rather than declared (R888).',
     THE_SCOPING: 'a pin asserts IDENTITY over the whole row under its named projection; a verdict asserts READING over what was read; the inherited fields are PINNED AND UNREAD.',
-    counts, results, RESULT_LINES: lines, resultsSha256: d.value, resultsSha256Spec: d.spec,
+    counts, THE_DISCRIMINATING_DENOMINATOR, results, RESULT_LINES: lines, resultsSha256: d.value, resultsSha256Spec: d.spec,
   };
   const artefact = { ...full, ...findingsDigest(full, ['counts', 'results', 'RESULT_LINES']) };
   const json = JSON.stringify(artefact, null, 1) + '\n';
