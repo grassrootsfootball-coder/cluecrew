@@ -17,7 +17,17 @@ import { requirePopulation } from './lib/population';
 
 const REPO = join(__dirname, '..');
 const sha = (s: string) => createHash('sha256').update(s, 'utf8').digest('hex');
-const SERVING = '/Users/davidb/Downloads/11+/from-cluecrew/serving-hint-half-3c23bdd4bf240670.json';
+/**
+    * **RESOLVED, NEVER HARDCODED** (R787). A frozen filename breaks the moment the artefact it
+    * names is re-emitted — which is exactly what happened when the serving half gained its cut
+    * stamp. The current emission is found by family prefix, and the file actually read is reported.
+    */
+   const OUT = '/Users/davidb/Downloads/11+/from-cluecrew';
+   const SERVING = (() => {
+     const hits = require('node:fs').readdirSync(OUT).filter((f: string) => f.startsWith('serving-hint-half-') && f.endsWith('.json'));
+     if (hits.length !== 1) throw new Error(`expected exactly one serving-hint-half at the door, found ${hits.length}: ${hits.join(', ')} — refusing rather than guessing which (R173)`);
+     return join(OUT, hits[0]!);
+   })();
 const DOWN = '/Users/davidb/Downloads';
 
 /** What the amendment did, derived from the two strings rather than asserted. */
@@ -103,7 +113,8 @@ async function run() {
       notHere: 'the genuine rewrites, where the two texts differ by authorship rather than by a repair. **Those are Annie\'s to read, not this store\'s to reconcile**, and none is in this file.',
       alsoNotHere: 'rows where at least one authored file already carries the serving text — the amendment reached the source and nothing is owed.',
     },
-    THE_DERIVATION: 'the serving half (serving-hint-half, 3c23bdd4bf240670…) intersected with every authored file on this disk carrying an `explanation.hintCore` for the same item id. A row qualifies only when NO authored text equals what serves. The fault classes are derived from the two strings, not asserted.',
+    theServingHalfRead: SERVING.split('/').pop(),
+    THE_DERIVATION: 'the serving half named in theServingHalfRead, intersected with every authored file on this disk carrying an `explanation.hintCore` for the same item id. A row qualifies only when NO authored text equals what serves. The fault classes are derived from the two strings, not asserted.',
     AND_A_BOUND_ON_IT: 'this compares against authored files ON THIS DISK, which are not the authoring store (R794). A row absent here may be carried in a file this store has never seen. **These five are owed on the evidence available; they are not a claim that only five are owed.**',
     CARRY_BACK: carryBack,
   };
@@ -112,9 +123,9 @@ async function run() {
   const full = { ...payload, CARRY_BACK_LINES: lines, carryBackSha256: d.value, carryBackSha256Spec: d.spec };
   const artefact = { ...full, ...findingsDigest(full, ['THE_CLASS', 'WHAT_IS_HERE_AND_WHAT_IS_NOT', 'CARRY_BACK', 'CARRY_BACK_LINES']) };
   const json = JSON.stringify(artefact, null, 1) + '\n';
-  const name = stampedName('hint-amendment-carryback', sha(json).slice(0, 16), 'json');
+  const name = stampedName('hint-carriage-seven-third-crossing', sha(json).slice(0, 16), 'json');
   writeFileSync(join(REPO, 'content/exports', name), json);
-  deliver(join(REPO, 'content/exports', name), 'hint-amendment-carryback');
+  deliver(join(REPO, 'content/exports', name), 'hint-carriage-seven-third-crossing');
   console.log(`carry-backs: ${carryBack.map((c) => c.itemId).join(', ')}`);
 }
 run().catch((e) => { console.error(e); process.exit(1); });

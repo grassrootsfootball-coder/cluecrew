@@ -1,0 +1,563 @@
+{
+ "kind": "maths-district-build",
+ "mode": "DRY RUN — nothing written",
+ "THE_CUT": {
+  "cutBeganAt": "2026-08-29T17:43:48.031Z",
+  "cutSealedAt": "2026-08-29T17:43:48.424Z",
+  "sourceLastWriteAt": "2026-08-29T17:28:17.228Z",
+  "TORN": false,
+  "meaning": "WHOLE — the source's last write precedes this cut, so one moment describes the artefact and cutBeganAt is that moment."
+ },
+ "PUBLICATION_HOLDS": "every item lands DRAFT; nothing is flipped LIVE; the case face is EMPTY and fails closed. approvedBy is a DECLARED NULL — not one maths item has been through a reviewer, and a receiver must read UNSIGNED rather than UNKNOWN.",
+ "ONE_THE_TAXONOMY": {
+  "created": [
+   {
+    "id": "maths-calc",
+    "name": "Calculation",
+    "group": "CALC",
+    "mechanic": "forge",
+    "mechanicBasis": "AMBIGUOUS BY ARITHMETIC — CALC and FDP are both 40, so the engine totals cannot separate them. Assigned by meaning: calculation is the number-forge interaction. FLAGGED, not derived.",
+    "action": "WOULD CREATE"
+   },
+   {
+    "id": "maths-fdp",
+    "name": "Fractions, decimals and percentages",
+    "group": "FDP",
+    "mechanic": "workshop",
+    "mechanicBasis": "AMBIGUOUS BY ARITHMETIC — see maths-calc. Assigned by meaning. FLAGGED, not derived.",
+    "action": "WOULD CREATE"
+   },
+   {
+    "id": "maths-npv",
+    "name": "Number and place value",
+    "group": "NPV",
+    "mechanic": "forge",
+    "mechanicBasis": "DERIVED — 35 fits NUMBER FORGE (75) only alongside a 40; it cannot fit THE WORKSHOP (83) with the remaining groups.",
+    "action": "WOULD CREATE"
+   },
+   {
+    "id": "maths-meas",
+    "name": "Measurement",
+    "group": "MEAS",
+    "mechanic": "workshop",
+    "mechanicBasis": "DERIVED — 32 fits THE WORKSHOP (83) with RP 11 and a 40.",
+    "action": "WOULD CREATE"
+   },
+   {
+    "id": "maths-geom",
+    "name": "Geometry",
+    "group": "GEOM",
+    "mechanic": "shapeshop",
+    "mechanicBasis": "DERIVED — SHAPE SHOP 30 = GEOM 30 exactly, and no other group is 30.",
+    "action": "WOULD CREATE"
+   },
+   {
+    "id": "maths-stats",
+    "name": "Statistics",
+    "group": "STATS",
+    "mechanic": "datadesk",
+    "mechanicBasis": "DERIVED — DATA DESK 12 = STATS 12 exactly.",
+    "action": "WOULD CREATE"
+   },
+   {
+    "id": "maths-rp",
+    "name": "Ratio and proportion",
+    "group": "RP",
+    "mechanic": "workshop",
+    "mechanicBasis": "DERIVED — 11 fits THE WORKSHOP (83) only.",
+    "action": "WOULD CREATE"
+   }
+  ],
+  "mechanicNote": "the schema requires a mechanic and the staged data carries none. Derived from the inventory's engine totals where the arithmetic decides it; DECLARED and flagged where it does not — CALC and FDP are both 40 and cannot be separated by counting."
+ },
+ "TWO_THE_IMPORT": {
+  "staged": 196,
+  "imported": 158,
+  "refused": 38,
+  "refusals": [
+   {
+    "itemId": "MC01-CALC-03",
+    "why": "child-facing gate",
+    "faults": [
+     "item:MC01-CALC-03 explanation.walkScript — banned-vocabulary: \"error\" in child UI (§1.3) — found \"error\""
+    ]
+   },
+   {
+    "itemId": "MC01-CALC-04",
+    "why": "child-facing gate",
+    "faults": [
+     "item:MC01-CALC-04 stem.text — notation: money-word: \"5.00 pounds\" → house form \"£5.00\"",
+     "item:MC01-CALC-04 stem.text — notation: money-word: \"2.65 pounds\" → house form \"£2.65\"",
+     "item:MC01-CALC-04 stem.text — notation: money-word: \"1.20 pounds\" → house form \"£1.20\"",
+     "item:MC01-CALC-04 explanation.walkScript — notation: money-word: \"3.85 pounds\" → house form \"£3.85\"",
+     "item:MC01-CALC-04 explanation.walkScript — notation: money-word: \"5.00 pounds\" → house form \"£5.00\"",
+     "item:MC01-CALC-04 explanation.walkScript — notation: money-word: \"1.15 pounds\" → house form \"£1.15\"",
+     "item:MC01-CALC-04 explanation.hintCore — notation: money-word: \"5 pounds\" → house form \"£5\""
+    ]
+   },
+   {
+    "itemId": "MC01-CALC-06",
+    "why": "child-facing gate",
+    "faults": [
+     "item:MC01-CALC-06 explanation.walkScript — banned-vocabulary: \"error\" in child UI (§1.3) — found \"error\""
+    ]
+   },
+   {
+    "itemId": "MC01-FDP-03",
+    "why": "child-facing gate",
+    "faults": [
+     "item:MC01-FDP-03 stem.text — notation: money-word: \"80 pounds\" → house form \"£80\"",
+     "item:MC01-FDP-03 explanation.walkScript — notation: money-word: \"20 pounds\" → house form \"£20\""
+    ]
+   },
+   {
+    "itemId": "MC01-FDP-05",
+    "why": "child-facing gate",
+    "faults": [
+     "item:MC01-FDP-05 explanation.walkScript — banned-vocabulary: \"error\" in child UI (§1.3) — found \"error\""
+    ]
+   },
+   {
+    "itemId": "MC01-FDP-06",
+    "why": "child-facing gate",
+    "faults": [
+     "item:MC01-FDP-06 stem.text — notation: money-word: \"40 pounds\" → house form \"£40\"",
+     "item:MC01-FDP-06 explanation.walkScript — notation: money-word: \"40 pounds\" → house form \"£40\"",
+     "item:MC01-FDP-06 explanation.walkScript — notation: money-word: \"4 pounds\" → house form \"£4\"",
+     "item:MC01-FDP-06 explanation.walkScript — notation: money-word: \"36 pounds\" → house form \"£36\"",
+     "item:MC01-FDP-06 explanation.walkScript — notation: money-word: \"10 pounds\" → house form \"£10\""
+    ]
+   },
+   {
+    "itemId": "MC01-GEOM-03",
+    "why": "child-facing gate",
+    "faults": [
+     "item:MC01-GEOM-03 explanation.walkScript — long-words: 2 distinct long word(s) (max 1): relationship:, perimeter"
+    ]
+   },
+   {
+    "itemId": "MC01-GEOM-05",
+    "why": "child-facing gate",
+    "faults": [
+     "item:MC01-GEOM-05 stem.text — sentence-length: sentence of 25 words (max 16 for item-stem): \"An L-shape is made from a rectangle 10 cm by 6 cm with a 4 c…\""
+    ]
+   },
+   {
+    "itemId": "MC01-NPV-05",
+    "why": "child-facing gate",
+    "faults": [
+     "item:MC01-NPV-05 explanation.walkScript — banned-vocabulary: \"error\" in child UI (§1.3) — found \"error\"",
+     "item:MC01-NPV-05 stem.text — notation: temperature: \"4C\" → house form \"4°C\"",
+     "item:MC01-NPV-05 stem.text — notation: temperature: \"9C\" → house form \"9°C\""
+    ]
+   },
+   {
+    "itemId": "MC02-CALC-04",
+    "why": "child-facing gate",
+    "faults": [
+     "item:MC02-CALC-04 stem.text — notation: money-word: \"10.00 pounds\" → house form \"£10.00\"",
+     "item:MC02-CALC-04 stem.text — notation: money-word: \"3.45 pounds\" → house form \"£3.45\"",
+     "item:MC02-CALC-04 stem.text — notation: money-word: \"1.80 pounds\" → house form \"£1.80\"",
+     "item:MC02-CALC-04 explanation.walkScript — notation: money-word: \"5.25 pounds\" → house form \"£5.25\"",
+     "item:MC02-CALC-04 explanation.walkScript — notation: money-word: \"10.00 pounds\" → house form \"£10.00\"",
+     "item:MC02-CALC-04 explanation.walkScript — notation: money-word: \"4.75 pounds\" → house form \"£4.75\"",
+     "item:MC02-CALC-04 explanation.hintCore — notation: money-word: \"10 pounds\" → house form \"£10\""
+    ]
+   },
+   {
+    "itemId": "MC02-NPV-03",
+    "why": "child-facing gate",
+    "faults": [
+     "item:MC02-NPV-03 explanation.walkScript — banned-vocabulary: \"wrong\" (D1) — found \"wrong\""
+    ]
+   },
+   {
+    "itemId": "MC02-NPV-05",
+    "why": "child-facing gate",
+    "faults": [
+     "item:MC02-NPV-05 explanation.walkScript — banned-vocabulary: \"error\" in child UI (§1.3) — found \"error\"",
+     "item:MC02-NPV-05 stem.text — notation: temperature: \"3C\" → house form \"3°C\"",
+     "item:MC02-NPV-05 stem.text — notation: temperature: \"8C\" → house form \"8°C\""
+    ]
+   },
+   {
+    "itemId": "MC02-RP-02",
+    "why": "child-facing gate",
+    "faults": [
+     "item:MC02-RP-02 stem.text — notation: money-word: \"1 pound\" → house form \"£1\"",
+     "item:MC02-RP-02 stem.text — notation: money-word: \"1 pound\" → house form \"£1\""
+    ]
+   },
+   {
+    "itemId": "MC03-CALC-04",
+    "why": "child-facing gate",
+    "faults": [
+     "item:MC03-CALC-04 stem.text — notation: money-word: \"8.75 pounds\" → house form \"£8.75\"",
+     "item:MC03-CALC-04 stem.text — notation: money-word: \"3.60 pounds\" → house form \"£3.60\"",
+     "item:MC03-CALC-04 stem.text — notation: money-word: \"20 pound\" → house form \"£20\"",
+     "item:MC03-CALC-04 explanation.walkScript — notation: money-word: \"12.35 pounds\" → house form \"£12.35\"",
+     "item:MC03-CALC-04 explanation.walkScript — notation: money-word: \"20 pounds\" → house form \"£20\"",
+     "item:MC03-CALC-04 explanation.walkScript — notation: money-word: \"7.65 pounds\" → house form \"£7.65\"",
+     "item:MC03-CALC-04 explanation.hintCore — notation: money-word: \"20 pounds\" → house form \"£20\""
+    ]
+   },
+   {
+    "itemId": "MC03-CALC-07",
+    "why": "child-facing gate",
+    "faults": [
+     "item:MC03-CALC-07 stem.text — notation: money-word: \"6.50 pounds\" → house form \"£6.50\"",
+     "item:MC03-CALC-07 stem.text — notation: money-word: \"2.25 pounds\" → house form \"£2.25\"",
+     "item:MC03-CALC-07 explanation.walkScript — notation: money-word: \"19.50 pounds\" → house form \"£19.50\"",
+     "item:MC03-CALC-07 explanation.walkScript — notation: money-word: \"4.50 pounds\" → house form \"£4.50\"",
+     "item:MC03-CALC-07 explanation.walkScript — notation: money-word: \"24 pounds\" → house form \"£24\""
+    ]
+   },
+   {
+    "itemId": "MC03-CALC-08",
+    "why": "child-facing gate",
+    "faults": [
+     "item:MC03-CALC-08 stem.text — notation: money-word: \"15 pounds\" → house form \"£15\"",
+     "item:MC03-CALC-08 stem.text — notation: money-word: \"1,200 pounds\" → house form \"£1,200\"",
+     "item:MC03-CALC-08 explanation.walkScript — notation: money-word: \"15 pounds\" → house form \"£15\"",
+     "item:MC03-CALC-08 explanation.walkScript — notation: money-word: \"4,800 pounds\" → house form \"£4,800\"",
+     "item:MC03-CALC-08 explanation.walkScript — notation: money-word: \"1,200 pounds\" → house form \"£1,200\"",
+     "item:MC03-CALC-08 explanation.walkScript — notation: money-word: \"3,600 pounds\" → house form \"£3,600\""
+    ]
+   },
+   {
+    "itemId": "MC03-FDP-03",
+    "why": "child-facing gate",
+    "faults": [
+     "item:MC03-FDP-03 stem.text — notation: money-word: \"44 pounds\" → house form \"£44\"",
+     "item:MC03-FDP-03 explanation.walkScript — notation: money-word: \"11 pounds\" → house form \"£11\""
+    ]
+   },
+   {
+    "itemId": "MC03-FDP-04",
+    "why": "child-facing gate",
+    "faults": [
+     "item:MC03-FDP-04 stem.text — notation: money-word: \"45 pounds\" → house form \"£45\"",
+     "item:MC03-FDP-04 explanation.walkScript — notation: money-word: \"45 pounds\" → house form \"£45\"",
+     "item:MC03-FDP-04 explanation.walkScript — notation: money-word: \"9 pounds\" → house form \"£9\"",
+     "item:MC03-FDP-04 explanation.walkScript — notation: money-word: \"9 pounds\" → house form \"£9\"",
+     "item:MC03-FDP-04 explanation.walkScript — notation: money-word: \"36 pounds\" → house form \"£36\"",
+     "item:MC03-FDP-04 explanation.walkScript — notation: money-word: \"20 pounds\" → house form \"£20\""
+    ]
+   },
+   {
+    "itemId": "MC03-FDP-05",
+    "why": "child-facing gate",
+    "faults": [
+     "item:MC03-FDP-05 explanation.walkScript — banned-vocabulary: \"error\" in child UI (§1.3) — found \"error\""
+    ]
+   },
+   {
+    "itemId": "MC03-FDP-08",
+    "why": "child-facing gate",
+    "faults": [
+     "item:MC03-FDP-08 stem.text — notation: money-word: \"80 pounds\" → house form \"£80\"",
+     "item:MC03-FDP-08 stem.text — notation: money-word: \"5 pound\" → house form \"£5\"",
+     "item:MC03-FDP-08 explanation.walkScript — notation: money-word: \"80 pounds\" → house form \"£80\"",
+     "item:MC03-FDP-08 explanation.walkScript — notation: money-word: \"20 pounds\" → house form \"£20\"",
+     "item:MC03-FDP-08 explanation.walkScript — notation: money-word: \"60 pounds\" → house form \"£60\"",
+     "item:MC03-FDP-08 explanation.walkScript — notation: money-word: \"5 pound\" → house form \"£5\"",
+     "item:MC03-FDP-08 explanation.walkScript — notation: money-word: \"55 pounds\" → house form \"£55\"",
+     "item:MC03-FDP-08 explanation.walkScript — notation: money-word: \"25 pounds\" → house form \"£25\""
+    ]
+   },
+   {
+    "itemId": "MC03-GEOM-04",
+    "why": "child-facing gate",
+    "faults": [
+     "item:MC03-GEOM-04 stem.text — sentence-length: sentence of 25 words (max 16 for item-stem): \"An L-shape is a 15 cm by 9 cm rectangle with a 6 cm by 7 cm …\""
+    ]
+   },
+   {
+    "itemId": "MC03-MEAS-01",
+    "why": "child-facing gate",
+    "faults": [
+     "item:MC03-MEAS-01 stem.text — notation: money-word: \"8 pounds\" → house form \"£8\"",
+     "item:MC03-MEAS-01 stem.text — notation: money-word: \"5.60 pounds\" → house form \"£5.60\"",
+     "item:MC03-MEAS-01 explanation.walkScript — notation: money-word: \"8 pounds\" → house form \"£8\""
+    ]
+   },
+   {
+    "itemId": "MC03-MEAS-05",
+    "why": "child-facing gate",
+    "faults": [
+     "item:MC03-MEAS-05 stem.text — notation: money-word: \"2.65 pounds\" → house form \"£2.65\"",
+     "item:MC03-MEAS-05 stem.text — notation: money-word: \"1.75 pounds\" → house form \"£1.75\"",
+     "item:MC03-MEAS-05 stem.text — notation: money-word: \"10 pound\" → house form \"£10\"",
+     "item:MC03-MEAS-05 explanation.walkScript — notation: money-word: \"2.65 pounds\" → house form \"£2.65\"",
+     "item:MC03-MEAS-05 explanation.walkScript — notation: money-word: \"1.75 pounds\" → house form \"£1.75\"",
+     "item:MC03-MEAS-05 explanation.walkScript — notation: money-word: \"4.40 pounds\" → house form \"£4.40\"",
+     "item:MC03-MEAS-05 explanation.walkScript — notation: money-word: \"10 pounds\" → house form \"£10\"",
+     "item:MC03-MEAS-05 explanation.walkScript — notation: money-word: \"5.60 pounds\" → house form \"£5.60\"",
+     "item:MC03-MEAS-05 explanation.hintCore — notation: money-word: \"10 pounds\" → house form \"£10\""
+    ]
+   },
+   {
+    "itemId": "MC03-MEAS-07",
+    "why": "child-facing gate",
+    "faults": [
+     "item:MC03-MEAS-07 stem.text — notation: money-word: \"1.80 pounds\" → house form \"£1.80\"",
+     "item:MC03-MEAS-07 stem.text — notation: money-word: \"10 pound\" → house form \"£10\"",
+     "item:MC03-MEAS-07 explanation.walkScript — notation: money-word: \"2.45 pounds\" → house form \"£2.45\"",
+     "item:MC03-MEAS-07 explanation.walkScript — notation: money-word: \"1.80 pounds\" → house form \"£1.80\"",
+     "item:MC03-MEAS-07 explanation.walkScript — notation: money-word: \"4.25 pounds\" → house form \"£4.25\"",
+     "item:MC03-MEAS-07 explanation.walkScript — notation: money-word: \"10 pounds\" → house form \"£10\"",
+     "item:MC03-MEAS-07 explanation.walkScript — notation: money-word: \"5.75 pounds\" → house form \"£5.75\"",
+     "item:MC03-MEAS-07 explanation.hintCore — notation: money-word: \"10 pounds\" → house form \"£10\""
+    ]
+   },
+   {
+    "itemId": "MC03-NPV-05",
+    "why": "child-facing gate",
+    "faults": [
+     "item:MC03-NPV-05 explanation.walkScript — banned-vocabulary: \"error\" in child UI (§1.3) — found \"error\"",
+     "item:MC03-NPV-05 stem.text — notation: temperature: \"3C\" → house form \"3°C\"",
+     "item:MC03-NPV-05 stem.text — notation: temperature: \"8C\" → house form \"8°C\""
+    ]
+   },
+   {
+    "itemId": "MC04-CALC-04",
+    "why": "child-facing gate",
+    "faults": [
+     "item:MC04-CALC-04 stem.text — notation: money-word: \"8.40 pounds\" → house form \"£8.40\"",
+     "item:MC04-CALC-04 stem.text — notation: money-word: \"5.75 pounds\" → house form \"£5.75\"",
+     "item:MC04-CALC-04 stem.text — notation: money-word: \"20 pound\" → house form \"£20\"",
+     "item:MC04-CALC-04 explanation.walkScript — notation: money-word: \"14.15 pounds\" → house form \"£14.15\"",
+     "item:MC04-CALC-04 explanation.walkScript — notation: money-word: \"20 pounds\" → house form \"£20\"",
+     "item:MC04-CALC-04 explanation.walkScript — notation: money-word: \"5.85 pounds\" → house form \"£5.85\"",
+     "item:MC04-CALC-04 explanation.hintCore — notation: money-word: \"20 pounds\" → house form \"£20\""
+    ]
+   },
+   {
+    "itemId": "MC04-CALC-08",
+    "why": "child-facing gate",
+    "faults": [
+     "item:MC04-CALC-08 stem.text — sentence-length: sentence of 19 words (max 16 for item-stem): \"For a concert, 18 blocks of 145 seats are sold, and another …\""
+    ]
+   },
+   {
+    "itemId": "MC04-FDP-06",
+    "why": "child-facing gate",
+    "faults": [
+     "item:MC04-FDP-06 explanation.walkScript — notation: money-word: \"40 pounds\" → house form \"£40\""
+    ]
+   },
+   {
+    "itemId": "MC04-GEOM-05",
+    "why": "child-facing gate",
+    "faults": [
+     "item:MC04-GEOM-05 stem.text — sentence-length: sentence of 25 words (max 16 for item-stem): \"An L-shape is made from a rectangle 12 cm by 8 cm with a 4 c…\"",
+     "item:MC04-GEOM-05 explanation.walkScript — notation: unit-power: \"cm2\" → house form \"cm²\"",
+     "item:MC04-GEOM-05 option[0].value — notation: unit-power: \"cm2\" → house form \"cm²\"",
+     "item:MC04-GEOM-05 option[1].value — notation: unit-power: \"cm2\" → house form \"cm²\"",
+     "item:MC04-GEOM-05 option[2].value — notation: unit-power: \"cm2\" → house form \"cm²\"",
+     "item:MC04-GEOM-05 option[3].value — notation: unit-power: \"cm2\" → house form \"cm²\""
+    ]
+   },
+   {
+    "itemId": "MC04-MEAS-01",
+    "why": "child-facing gate",
+    "faults": [
+     "item:MC04-MEAS-01 explanation.walkScript — notation: money-word: \"7 pounds\" → house form \"£7\"",
+     "item:MC04-MEAS-01 explanation.hintCore — notation: money-word: \"7 pounds\" → house form \"£7\""
+    ]
+   },
+   {
+    "itemId": "MC04-MEAS-06",
+    "why": "child-facing gate",
+    "faults": [
+     "item:MC04-MEAS-06 explanation.walkScript — notation: money-word: \"5 pounds\" → house form \"£5\"",
+     "item:MC04-MEAS-06 explanation.hintCore — notation: money-word: \"5 pounds\" → house form \"£5\""
+    ]
+   },
+   {
+    "itemId": "MC04-MEAS-07",
+    "why": "child-facing gate",
+    "faults": [
+     "item:MC04-MEAS-07 explanation.walkScript — notation: money-word: \"10 pound\" → house form \"£10\"",
+     "item:MC04-MEAS-07 explanation.hintCore — notation: money-word: \"10 pounds\" → house form \"£10\""
+    ]
+   },
+   {
+    "itemId": "MC04-NPV-06",
+    "why": "child-facing gate",
+    "faults": [
+     "item:MC04-NPV-06 stem.text — notation: temperature: \"5C\" → house form \"5°C\"",
+     "item:MC04-NPV-06 stem.text — notation: temperature: \"8C\" → house form \"8°C\""
+    ]
+   },
+   {
+    "itemId": "MC05-CALC-04",
+    "why": "child-facing gate",
+    "faults": [
+     "item:MC05-CALC-04 stem.text — notation: money-word: \"7.65 pounds\" → house form \"£7.65\"",
+     "item:MC05-CALC-04 stem.text — notation: money-word: \"2.80 pounds\" → house form \"£2.80\"",
+     "item:MC05-CALC-04 stem.text — notation: money-word: \"20 pound\" → house form \"£20\"",
+     "item:MC05-CALC-04 explanation.walkScript — notation: money-word: \"10.45 pounds\" → house form \"£10.45\"",
+     "item:MC05-CALC-04 explanation.walkScript — notation: money-word: \"20 pounds\" → house form \"£20\"",
+     "item:MC05-CALC-04 explanation.walkScript — notation: money-word: \"9.55 pounds\" → house form \"£9.55\"",
+     "item:MC05-CALC-04 explanation.hintCore — notation: money-word: \"20 pounds\" → house form \"£20\""
+    ]
+   },
+   {
+    "itemId": "MC05-CALC-08",
+    "why": "child-facing gate",
+    "faults": [
+     "item:MC05-CALC-08 stem.text — sentence-length: sentence of 20 words (max 16 for item-stem): \"For a show, 16 rows of 120 seats are booked online, and anot…\""
+    ]
+   },
+   {
+    "itemId": "MC05-GEOM-05",
+    "why": "child-facing gate",
+    "faults": [
+     "item:MC05-GEOM-05 stem.text — sentence-length: sentence of 25 words (max 16 for item-stem): \"An L-shape is made from a rectangle 12 cm by 8 cm with a 5 c…\""
+    ]
+   },
+   {
+    "itemId": "MC05-NPV-06",
+    "why": "child-facing gate",
+    "faults": [
+     "item:MC05-NPV-06 stem.text — notation: temperature: \"6C\" → house form \"6°C\"",
+     "item:MC05-NPV-06 stem.text — notation: temperature: \"10C\" → house form \"10°C\""
+    ]
+   },
+   {
+    "itemId": "MC05-STATS-01",
+    "why": "child-facing gate",
+    "faults": [
+     "item:MC05-STATS-01 stem.text — sentence-length: sentence of 17 words (max 16 for item-stem): \"A table shows badges won: Red team 10, Blue team 9, Green te…\""
+    ]
+   }
+  ],
+  "door": "the shared stemSchema (R57) and checkItemChildFacing — the English importer's DOOR, not its wrapper. Its wrapper globs ENG-*.json and carries passage refs; renaming a maths batch to satisfy that would be a lie in a filename."
+ },
+ "THREE_THE_CASE": {
+  "id": "case-maths-01",
+  "district": "MATHS via maths-calc",
+  "paid": "freeTier false",
+  "face": "EMPTY — fails closed, invisible to every child until an Annie-approved wording lands",
+  "mapped": [
+   "maths-calc",
+   "maths-fdp",
+   "maths-npv",
+   "maths-meas",
+   "maths-geom",
+   "maths-stats",
+   "maths-rp"
+  ],
+  "action": "WOULD CREATE"
+ },
+ "FOUR_THE_TAG_JOIN": {
+  "distinctTagsUsed": 80,
+  "attestedEntriesInLibrary": 111,
+  "TAGS_POINTING_AT_NOTHING": "NONE — every misconception tag on every staged item resolves to an attested MATHS library entry."
+ },
+ "FIVE_THE_HINT_SCREEN": {
+  "hintsScreened": 196,
+  "FAULTS": [
+   {
+    "itemId": "MC01-CALC-04",
+    "hint": "Total the spending, then subtract from 5 pounds.",
+    "faults": [
+     "notation: money-word: \"5 pounds\" → house form \"£5\""
+    ]
+   },
+   {
+    "itemId": "MC02-CALC-04",
+    "hint": "Total the spending, then subtract from 10 pounds.",
+    "faults": [
+     "notation: money-word: \"10 pounds\" → house form \"£10\""
+    ]
+   },
+   {
+    "itemId": "MC03-CALC-04",
+    "hint": "Total the spending, then subtract from 20 pounds.",
+    "faults": [
+     "notation: money-word: \"20 pounds\" → house form \"£20\""
+    ]
+   },
+   {
+    "itemId": "MC03-MEAS-05",
+    "hint": "Add both prices first, then subtract from 10 pounds.",
+    "faults": [
+     "notation: money-word: \"10 pounds\" → house form \"£10\""
+    ]
+   },
+   {
+    "itemId": "MC03-MEAS-07",
+    "hint": "Total the pencils and notebook, then subtract from 10 pounds.",
+    "faults": [
+     "notation: money-word: \"10 pounds\" → house form \"£10\""
+    ]
+   },
+   {
+    "itemId": "MC04-CALC-04",
+    "hint": "Total the spending, then subtract from 20 pounds.",
+    "faults": [
+     "notation: money-word: \"20 pounds\" → house form \"£20\""
+    ]
+   },
+   {
+    "itemId": "MC04-MEAS-01",
+    "hint": "Write 7 pounds as 7.00 before subtracting.",
+    "faults": [
+     "notation: money-word: \"7 pounds\" → house form \"£7\""
+    ]
+   },
+   {
+    "itemId": "MC04-MEAS-06",
+    "hint": "Add the spending first, then take it from 5 pounds.",
+    "faults": [
+     "notation: money-word: \"5 pounds\" → house form \"£5\""
+    ]
+   },
+   {
+    "itemId": "MC04-MEAS-07",
+    "hint": "Multiply for the total, then subtract from 10 pounds.",
+    "faults": [
+     "notation: money-word: \"10 pounds\" → house form \"£10\""
+    ]
+   },
+   {
+    "itemId": "MC05-CALC-04",
+    "hint": "Total the spending, then subtract from 20 pounds.",
+    "faults": [
+     "notation: money-word: \"20 pounds\" → house form \"£20\""
+    ]
+   }
+  ],
+  "note": "no gate in either store had ever screened maths text. This is the first run."
+ },
+ "SUMMARY_LINES": [
+  "types\t7",
+  "imported\t158",
+  "refused\t38",
+  "unattested-tags\t0",
+  "hint-faults\t10"
+ ],
+ "summarySha256": "944ab489b49350c3619c9d368c5dc559198082aabc8b05a57df58f3a4d100feb",
+ "summarySha256Spec": "sha256 over the summary lines joined by \\n, each \"<what>\\t<count>\", encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content.",
+ "findingsSha256": "0f78d6b0f69c5d404e8c669ecc6873ad7ee2d521ce54400209d824538719ab04",
+ "howToCheckThisOnArrival": {
+  "subtreeKeys": [
+   "ONE_THE_TAXONOMY",
+   "TWO_THE_IMPORT",
+   "THREE_THE_CASE",
+   "FOUR_THE_TAG_JOIN",
+   "FIVE_THE_HINT_SCREEN",
+   "SUMMARY_LINES"
+  ],
+  "subtree": "an object of THIS DOCUMENT'S OWN TOP-LEVEL KEYS, exactly as spelled in subtreeKeys and nowhere renamed: {\"ONE_THE_TAXONOMY\", \"TWO_THE_IMPORT\", \"THREE_THE_CASE\", \"FOUR_THE_TAG_JOIN\", \"FIVE_THE_HINT_SCREEN\", \"SUMMARY_LINES\"}",
+  "spec": "sha256 over json.dumps(subtree, sort_keys=True, separators=(\",\",\":\"), ensure_ascii=False).encode(\"utf-8\") — R729. ensure_ascii defaults to True and gives a different number.",
+  "andTheFileDigest": "the staging line and the .sha256 sidecar, over the whole file bytes"
+ },
+ "instrumentProvenance": {
+  "emittedBy": "build-maths-district.ts",
+  "carriedFixture": true,
+  "meaning": "the emitting instrument proved itself against carried cases — including at least one clean case caught by nothing — before it produced these figures (R721)."
+ }
+}

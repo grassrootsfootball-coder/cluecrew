@@ -22784,3 +22784,45 @@ and read it as an instrument fault to be closed by declaration.** It was not an 
 The gates were right, the declaration was right, and **the thing the declaration described as a
 temporary gap is the whole district.** A correctly declared empty population is still an empty
 population, and declaring it stopped anyone asking why it was empty.
+
+## R824 — The maths district built: taxonomy, 178 items, a case that fails closed
+
+One run. **Publication holds: every item DRAFT, nothing LIVE, the case face EMPTY.**
+
+**The taxonomy.** Seven MATHS question types created. `mechanic` is required by the schema and the
+staged data carries none, so it was **derived where the arithmetic decides it and DECLARED where it
+does not**: the inventory's engine totals decompose exactly onto group totals — SHAPE SHOP 30 = GEOM
+30, DATA DESK 12 = STATS 12, NPV 35 / MEAS 32 / RP 11 each fitting one side only. **CALC and FDP are
+both 40 and cannot be separated by counting**, so those two are assigned by meaning and flagged as
+such on the artefact rather than presented as derived.
+
+**The import: 178 landed, 18 refused.** The English importer's DOOR was reused — the shared
+`stemSchema` (R57) and `checkItemChildFacing` — but not its WRAPPER, which globs `ENG-*.json` and
+carries passage refs. **Renaming a maths batch to satisfy that glob would have been a lie in a
+filename.**
+
+**The first run refused 38, and half of that was my door's fault.** CLAUDE.md's HOUSE NOTATION rule
+says an import door **NORMALISES then gates**; mine gated without normalising, so twenty items
+refused on `"5.00 pounds"` where the house form is `£5.00` — the rule's own declared normalisation,
+not a content fault. With `normaliseMathsNotation` wired in: refusals 38 → 18 and hint faults 10 →
+0. **The degree sign still refuses and should**: the rule reports it and never auto-inserts, because
+a bare `C` may be a label.
+
+**The 18 that remain are real, and they are the finding David predicted.** No gate in either store
+had ever screened maths text. Seven items say **"error"** in child UI, one says **"wrong"**, eight
+carry `8C` where the house form is `8°C`, four have stems over the sixteen-word cap, one breaks the
+long-word rule. **First screening of a district, and it refuses one item in eleven.**
+
+**The tag join is clean: every misconception tag on every staged item resolves to an attested MATHS
+library entry.** Zero pointing at nothing — the one wall that was already standing (R823) turns out
+to join perfectly to the items that arrived to meet it.
+
+**The case**: `case-maths-01`, MATHS via `maths-calc`, PAID, **face EMPTY and failing closed**,
+mapping all seven types. Built on case-en-06's pattern unchanged, now that the foreign key can be
+satisfied.
+
+**And a field that does not exist.** The staging file declares `approvedBy: null` per item so a
+receiver reads UNSIGNED rather than UNKNOWN — **but Item has no `approvedBy`; that column is on
+Misconception.** An Item's signature field is `reviewedBy`, so the declared null landed there,
+written explicitly rather than omitted. The distinction is preserved: **0 of 178 carry a reviewer
+signature, and not one maths item has ever been through a reviewer.**
