@@ -162,6 +162,7 @@
     "check:hint-house-form": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-hint-house-form.ts",
     "check:hint-asserts-feature": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-hint-asserts-feature.ts",
     "check:hint-locator": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-hint-locator.ts",
+    "check:inherited-fields": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-inherited-fields.ts",
     "check:field-reads": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-field-reads.ts",
     "check:arrival-confirmed": "tsx scripts/check-arrival-confirmed.ts",
     "check:return-sequence": "tsx scripts/check-return-sequence.ts",

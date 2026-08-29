@@ -24018,3 +24018,92 @@ that could have lost it.**
 an unrelated instruction (R861). **A retention that depends on the state having been copied elsewhere
 is not a retention**, and a store that discovers its retention worked because of a coincidence should
 read that as a failure with a good outcome, not as a pass.
+
+## R875 — A field nobody reads is the field every merge prefers
+
+Cowork's finding, 2026-08-29, registered because **my rows carry them too**: 1,849 fields in the send
+arrived by INHERITANCE — carried forward with an item, a role or a template — and were never read at
+either store. Its number is quoted as its own (R25); mine is measured below.
+
+**The half that makes it a fault rather than clutter is the dominance test.** Reconciliation between
+the stores is field-by-field, and the side a GATE FORCED is the side that exports back (CLAUDE.md,
+R23). A field nothing reads can never BE gate-forced, so it never moves, so it agrees on every diff —
+and a diff scores agreement as correctness. **The least-scrutinised fields win the most merges, and
+they win them for the precise reason that ought to disqualify them.** Stability is being read as
+assent. It is R173's camouflage — the confirming number nobody investigates — operating on a store
+instead of on an instrument.
+
+**MY SIDE, MEASURED** (`pnpm check:inherited-fields`): 1,227 items, 30 distinct stem keys, 3,398
+row-fields. The canonical `stemSchema` validates FIVE key names — `passageRef`, `lineRefs`, `quotes`,
+`sentence`, `testedTokens` — and passes every other key through untouched, which is R57 working
+exactly as ruled AND is the mechanism by which a field arrives and is never looked at. Three of those
+five are present here (757 row-fields); 26 keys on 2,640 row-fields are read somewhere but validated
+by no door; one key on one row is neither. **The one is not the finding — the 26 are.** A field the
+door does not know is a field the door cannot force, and every one of those 2,640 is a field the
+dominance test would prefer.
+
+**AND THE MEASUREMENT FAILED TWICE BEFORE IT REPORTED, BOTH TIMES IN THE SHAPE OF ITS OWN SUBJECT.**
+First it printed **0 of 30 read**: invoked through `pnpm --filter @cluecrew/db`, so the cwd was
+`packages/db`, every relative source root missed, grep exited non-zero, and a `catch` returned
+'absent' — R173's `?? []` inside the check written to count unread fields. Then, repaired, it printed
+**29 of 30 read**, which is a saturated proxy: `text`, `code`, `sum`, `question`, `words`, `series`
+match any identifier in a monorepo. **The first number was alarming and got investigated; the second
+was reassuring and nearly did not.** Only the third — reading the door's own key list — is an
+artefact rather than a proxy. Grep for a NAME answers a different question from "is this field read",
+and the two agree often enough to hide the difference.
+
+## R876 — A mint quoting a fence a later amendment moved past
+
+`percentage-never-divided-by-hundred` named its carrier as `MC01-FDP-03` option C, value `"2000"`.
+The store holds `"£2000"`. The join REFUSED on byte-identity, correctly — and **the cause is neither
+store's transcription.** Her own 180th amended those values (*money keys and money options carry
+their unit; the nine bare keys amend as a class*) after the population the mint quotes
+(`1d7f9cf414f33a0a…`) was fenced, and her 182nd is explicitly fenced against that same digest. **A
+fence is a promise about a snapshot, and a later ruling is entitled to move past it** — so the two
+facts are both true and the artefacts disagree anyway.
+
+**MY FIRST READING WAS THAT MY EXPORTER HAD STRIPPED THE £, AND I WAS ABOUT TO REPORT IT AS MY
+DEFECT.** The send carries 104 `"value": "£…"` occurrences, so no wholesale stripping had happened;
+what looked like an emitter bug was a row that had legitimately changed underneath a fence. R834 made
+me quick to suspect my own projection, and that priming produced a confident wrong answer in the
+opposite direction. Suspecting yourself is not the same as checking.
+
+**THE REFUSAL STANDS EVEN THOUGH THE IDENTITY IS PROVEN.** Four independent declarations agree: the
+row id, the label `C`, the option's own retained `_previousValue` byte-identical to the declared
+`"2000"`, and the working `25 x 80 = 2000` computing to the option's numeric value. Nothing is
+inferred. **And it still refuses**, because landing it means adding retention-matching as a
+carrier-selection rule, invented mid-run to turn a red row green — which is R149's fault with better
+motivation. The evidence travels with the refusal so she can settle it in one line; the gate does not
+settle it on her behalf.
+
+## R877 — What a signature actually covers: pin, verdict, and the fields inside one but not the other
+
+David's scoping, 2026-08-29, recorded on every row signed under it:
+
+- **A PIN asserts IDENTITY over the whole row**, under its named projection.
+- **A VERDICT asserts READING over what was actually read.**
+- **The INHERITED FIELDS are inside the pin and outside the reading — pinned and unread.**
+
+The three are different scopes and a signature that blurs them claims more than she gave. The pin's
+projection here is `{stem, options[{content,isCorrect}], explanation}` with `_`-keys stripped, so it
+covers every inherited stem key — the 2,640 row-fields R875 counts are all inside somebody's pin and
+none of them are inside anybody's reading. `options[].misconceptionId` is OUTSIDE the projection,
+which is why a join can unblock a row without voiding her verification; that is a fact about the
+projection and it is ASSERTED per row before each signature, never assumed.
+
+## R878 — A working that names an operation in words has not computed
+
+Her computes-as condition asks whether a carrier's working computes as the entry's behaviour. Two of
+seven workings write arithmetic (`15 divided by 3`, `(5 + 3, 4)`) and execute; three name the act in
+English (*the largest of 6, 3, 7 and 4*; *digits 6, 4, 0 in descending order*) and execute nothing.
+**Those three refuse.** Building an English-phrase-to-operation mapper to land them is R826 exactly —
+three signals withdrawn for deciding "does this option execute this error" by inference, every one
+measuring something else — and the fact that a mapper's failure mode is a safe refusal does not make
+writing one mid-run a good idea. **The narrowness has to be declared rather than discovered**, so the
+gate prints what arithmetic it extracted and from which substring on every row (R569), and names the
+one line that would land each refusal: a declared expression in the sender's hand.
+
+**AND THE WORKING IS NOT ITSELF HER RULING.** The file says the workings were COMPUTED BY THE SENDER
+from her behaviours. So a working cannot supply the human ruling the gate accepts in place of
+execution — the entry is hers, the carrier choice is Cowork's, and only the first carries her
+authority (R203: where the fact is doubt, the doubt travels with the value).
