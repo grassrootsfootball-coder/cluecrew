@@ -24400,3 +24400,65 @@ X produces Y BY ACCIDENT** — ties, coincidences, ungrounded inputs, degenerate
 them a closed set of acts is a value-matcher wearing an act's name, and it will agree with every
 correct row and every lucky one alike. Those cases are also the ones nobody writes unprompted, since
 they require imagining the check succeeding for the wrong reason — which is the whole skill.
+
+## R891 — A tag whose every member sits where the rival rules coincide is a taxonomy without its negative control
+
+Annie's 193rd §3, and she calls it the largest thing in the file. **Every carrier of the unit-fraction
+tag sits on a fraction where the two rival rules give the same answer, and twenty-six discriminating
+fractions rode in the same send untagged.** A tag like that has never been tested against its rival:
+every member confirms it, none could have refused it, and the confirmation is worth nothing.
+
+**This is R889 at the level of DIAGNOSIS rather than of code.** A check that agrees with itself
+wherever it cannot be tested is not a check; a tag whose members all sit on the coincidence set is
+not a diagnosis — **it names a family and is recorded as naming a member.** The discriminating
+denominator of the whole tag is zero.
+
+The repair is hers and it is one authored item: **a fraction of the form 2/5, where the complement
+and the unit fraction part company and a child's answer says which rule she runs.** Until it exists
+the tag cannot distinguish what it claims to distinguish, and the honest instrument in the meantime
+is a hint that survives either reading (R892).
+
+## R892 — On this fraction the arithmetic does not decide, so the join says so
+
+The join of `MC01-FDP-08` D lands on her ruling and **NOT on determination**, and the artefact
+records that distinction rather than smoothing it. `15 × 4 = 60` (the bottom used alone) and
+`15 ÷ (1 − 3/4) = 60` (the complement) are the same number, because on a fraction of the form
+(b−1)/b the complement equals the unit fraction by coincidence. **The determination check runs, and
+it verifies equally well for the rule she refused** — so recording this join as "verified" would be a
+true-looking sentence about a test that separated nothing.
+
+Her three grounds are outside the arithmetic: the item's architecture pairs C and D as one act in two
+halves; the stem invites no complement because no remainder is in view; and *uses the complement*
+describes the VALUE 1/4 rather than a route a child took to it — the letter-count class, where the
+flagNote described the coincidence and the authoredValue described the act.
+
+**HER QUALIFIER TRAVELS WITH THE JOIN, IN HER WORDS: *that is a weaker sentence than a computed join
+and it is the true one*.** Without it, this row reads identically to the six that computed and the
+reader has no way back to the difference (R203). **A store that can only record "verified" will
+record "verified" for everything it lands**, which is how a weaker basis becomes invisible one row at
+a time.
+
+And the hint amended for the same reason. The replaced wording ASSERTED the mechanism — *only one
+part of the fraction was used* — which lies to a complement child if one exists; the authored
+wording *the dividing was not done by the fraction in the question* is true under both readings and
+still names the fault rather than the key. R586's assert-or-describe, applied to a population that
+has not been measured yet.
+
+## R893 — Two fields on one row answering the same question opposite ways
+
+Annie's 193rd §5, the one-column fault's last costume. `flagNote` described the coincidence and
+`authoredValue` described the act; **both were true of the same option and they answered the same
+question differently, with nothing on the row saying which governed.** A reader takes whichever they
+open first, and neither is wrong, so nothing ever surfaces the conflict.
+
+**Fields that answer the same question either agree, or the row names which is authoritative.** This
+is R608's split-decision fault (a directive and its reason wearing one name) turned the other way
+round: there the two fields were one decision and neither sorted; here they are two decisions and
+neither yields. Same remedy — **name the authority at the field's definition**, not one field over
+and not in prose.
+
+**And the companion line, from the store's own conduct: a verdict reached from a subset of the
+evidence, published without naming the subset, is worse than no verdict, because it looks settled.**
+Her words, registered from this store reopening its own agreement on exactly that ground. It is
+R889's shape stated as a duty rather than as a mechanism: naming the subset is what lets a reader
+compute the discriminating denominator you did not.
