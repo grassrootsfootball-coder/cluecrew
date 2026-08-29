@@ -21949,6 +21949,17 @@ not a remainder, and the proportion alone should have been the question.
 check prints that bound rather than implying a clean floor. Reported, never repaired — only she can
 send a return, and only she can say whether a number was ever used.
 
+## R789 — WITHDRAWN BEFORE USE, recorded rather than left as a hole
+
+Allocated to the sequence-parser finding while it was being written, then renumbered to **R788** so
+the parser fix and its entry carried one number. **No rule was ever written here and none is
+missing.**
+
+Recorded because `check:register` reports numbering gaps and a gap with no explanation is
+indistinguishable from an entry that was lost — the same shape as R842's absent-versus-pending and
+R836's unpublished hold, in the register's own numbering. **A deliberate gap that says so is a
+closed question; a silent one is an open one nobody can close.**
+
 ## R790 — The 59–80 gaps are inside the receiving window, not before it
 
 The desk reports my gaps as disjoint from everyone else's but 135 — mine at 59–80, the desk's six
