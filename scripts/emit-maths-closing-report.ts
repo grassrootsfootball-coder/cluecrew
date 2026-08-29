@@ -119,6 +119,9 @@ async function run() {
     NO_NUMBERS_MINTED: 'ids are names here; every id is the file\'s string verbatim, with no maths-NN prefix. Numbers attach at the authoring register.',
 
     JOINS_LANDED: { count: joined.length, of: named.length, joined,
+      // R897: a numerator may not exceed its own denominator. The over-correction printed 18 of 7
+      // without complaint, and no reader of the headline alone would have seen it.
+      ...(joined.length > named.length ? { IMPOSSIBLE: `${joined.length} of ${named.length} — the count exceeds its denominator, so the population is not the one the denominator names` } : {}),
       theDenominator: 'the option(s) the mint file NAMED, not every option wearing these ids — a named carrier counts as joined when it carries its entry or the entry that entry retired into' },
     JOINS_REFUSED_WITH_CAUSES: [
       { entry: 'percentage-never-divided-by-hundred', carrier: 'MC01-FDP-03 C="2000"',
@@ -168,6 +171,9 @@ async function run() {
     },
   };
 
+  if (joined.length > named.length) {
+    throw new Error(`${joined.length} joins counted against a denominator of ${named.length} — a numerator cannot exceed its own population (R897). The membership rule and the denominator disagree; fix the rule, not the number.`);
+  }
   const lines = [
     `entries\t${entries.length}/${mints.entries.length}`,
     `joins\t${joined.length}/7 named options`,

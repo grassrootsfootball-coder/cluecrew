@@ -24539,3 +24539,35 @@ unreadable the day the register changes.** Option C's `flagNote` rejects an id t
 another entry, so it is dated rather than judged — survival, not judgement. A field asserting a
 negative about the library must say which library it was true of, or it decays into a contradiction
 nobody can adjudicate and everybody must route around.
+
+## R897 — A figure that enumerates a rule's membership goes stale the moment a ruling changes it
+
+The closing report defined *joined* as **tagged with one of these six ids** — an enumeration of who
+was a member on the day it was written, not of the property that made them members. It was correct
+for a week. It printed `joins 5 of 7` the instant `fraction-part-used-alone` retired, because two
+carriers had moved to the replacement and the enumeration had no way to know a ruling had happened.
+
+**The count still computed, still printed, and still looked like a measurement.** That is R180's
+rot, and the specific mechanism worth naming: **a definition by enumeration is a snapshot of a rule's
+output wearing the rule's name.** Every ruling that moves membership — a retirement, a merge, a
+rename, a re-tier — invalidates it silently, and the artefact goes on reporting with confidence
+about a population that has moved underneath it. **Both stores would have read 5 of 7 as two joins
+lost.**
+
+**AND THE OVER-CORRECTION IS THE SECOND HALF, BECAUSE IT IS THE PREDICTABLE ONE.** The repair
+instinct is to widen the enumeration — add the replacement id — which swept `maths-75`'s eleven
+pre-existing carriers into the count and printed **18 of 7**. That is R591 turned on our own report:
+a figure claiming a population wider than the thing behind it. **The correction was larger than the
+error and in the same direction of carelessness**, and it arrived while I was already looking
+straight at the number.
+
+**The repair is to define the population by what made it one** — here, the options the mint file
+NAMED — and let membership FOLLOW rulings: a named carrier is joined when it carries its entry or the
+entry that entry retired into. That survives a retirement without inflating, because nothing about it
+is a list.
+
+**THE GUARD IS ARITHMETIC AND IT COSTS NOTHING: a numerator may not exceed its own denominator.**
+`18 of 7` is impossible on its face and printed without complaint, which is the whole lesson in one
+line — the report had no opinion about its own coherence. `emit-maths-closing-report.ts` now throws
+on it, with the message pointing at the membership rule rather than at the number, because the number
+is never the thing to fix.

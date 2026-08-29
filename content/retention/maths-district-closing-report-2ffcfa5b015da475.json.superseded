@@ -1,0 +1,235 @@
+{
+ "kind": "maths-district-closing-report",
+ "mintFileSha256": "aa7af8b02157041f1ac79acdc361c14124e6a1e1a31f7fb850afc025c5f72610",
+ "mintFileSha256Spec": "sha256 over the mint file bytes exactly as delivered, unparsed",
+ "ENTRIES_LANDED": {
+  "count": 6,
+  "of": 6,
+  "entries": [
+   {
+    "id": "side-recounted-from-a-reached-corner",
+    "description": "adds a side length again from a corner the move has already reached, so one side is counted twice.",
+    "childHint": "That point lies one whole side too far. The corner was already reached.",
+    "status": "ACTIVE"
+   },
+   {
+    "id": "leading-zero-repaired-ordering-not",
+    "description": "keeps zero off the front, as the rule requires, but leads with a larger digit than the digits allow; the leading-zero rule learned, the ordering beneath it still wrong.",
+    "childHint": "The zero is rightly not first. But a smaller digit could still lead.",
+    "status": "ACTIVE"
+   },
+   {
+    "id": "percentage-never-divided-by-hundred",
+    "description": "multiplies by the percentage figure and never divides by one hundred, so the answer grows where it should shrink.",
+    "childHint": "This answer treats the percentage as a whole number. A percentage is a share out of one hundred.",
+    "status": "ACTIVE"
+   },
+   {
+    "id": "maximum-given-for-a-sum",
+    "description": "answers a total question with the largest single value instead of adding the values.",
+    "childHint": "The biggest number alone is not the total. A total needs every value added.",
+    "status": "ACTIVE"
+   },
+   {
+    "id": "ordering-goal-reversed",
+    "description": "orders the digits soundly but toward the wrong goal, building the largest number where the smallest is asked, or the reverse.",
+    "childHint": "Check which the question asks for, smallest or largest. These digits were ordered the other way.",
+    "status": "ACTIVE"
+   },
+   {
+    "id": "fraction-part-used-alone",
+    "description": "carries out the calculation using only one part of the fraction, the top or the bottom alone, instead of the whole fraction.",
+    "childHint": "The dividing was not done by the fraction in the question. Use the whole fraction, top and bottom.",
+    "status": "RETIRED"
+   }
+  ],
+  "RETIRED": [
+   {
+    "id": "fraction-part-used-alone",
+    "note": "RETIRED, NOT REJECTED — superseded by maths-75-incomplete-fraction-of-an-amount, which covers the act twice over: its description names both parts and it already carried two divide-by-a-fraction members using the denominator alone (MC04-FDP-05, MC05-FDP-06), tagged and reviewed before this entry existed. Her 194th, under the maths-88 precedent. The replacement is named on the face of the retirement, per the refusal rule."
+   }
+  ],
+  "stillActive": 5,
+  "andHOWJOINSARECOUNTED": "a retired entry's carriers are still JOINED — they carry their diagnosis under the replacement id. The join set follows the retirement rather than the original six ids (R180)."
+ },
+ "THE_REFINEMENT_TAKEN": {
+  "id": "fraction-part-used-alone",
+  "supersedes": "fraction-reduced-to-its-denominator (her 189th)",
+  "wordingTakenFrom": "the file, not the earlier return"
+ },
+ "NO_NUMBERS_MINTED": "ids are names here; every id is the file's string verbatim, with no maths-NN prefix. Numbers attach at the authoring register.",
+ "JOINS_LANDED": {
+  "count": 7,
+  "of": 7,
+  "joined": [
+   {
+    "itemId": "MC01-FDP-03",
+    "option": "C",
+    "value": "£2000",
+    "declaredEntry": "percentage-never-divided-by-hundred",
+    "nowCarries": "percentage-never-divided-by-hundred",
+    "viaRetirementOf": null,
+    "joined": true
+   },
+   {
+    "itemId": "MC01-FDP-08",
+    "option": "C",
+    "value": "5",
+    "declaredEntry": "fraction-part-used-alone",
+    "nowCarries": "maths-75-incomplete-fraction-of-an-amount",
+    "viaRetirementOf": "fraction-part-used-alone",
+    "joined": true
+   },
+   {
+    "itemId": "MC01-FDP-08",
+    "option": "D",
+    "value": "60",
+    "declaredEntry": "fraction-part-used-alone",
+    "nowCarries": "maths-75-incomplete-fraction-of-an-amount",
+    "viaRetirementOf": "fraction-part-used-alone",
+    "joined": true
+   },
+   {
+    "itemId": "MC01-GEOM-04",
+    "option": "D",
+    "value": "(8, 4)",
+    "declaredEntry": "side-recounted-from-a-reached-corner",
+    "nowCarries": "side-recounted-from-a-reached-corner",
+    "viaRetirementOf": null,
+    "joined": true
+   },
+   {
+    "itemId": "MC01-STATS-01",
+    "option": "D",
+    "value": "7",
+    "declaredEntry": "maximum-given-for-a-sum",
+    "nowCarries": "maximum-given-for-a-sum",
+    "viaRetirementOf": null,
+    "joined": true
+   },
+   {
+    "itemId": "MC01-NPV-03",
+    "option": "C",
+    "value": "640",
+    "declaredEntry": "ordering-goal-reversed",
+    "nowCarries": "ordering-goal-reversed",
+    "viaRetirementOf": null,
+    "joined": true
+   },
+   {
+    "itemId": "MC01-NPV-03",
+    "option": "D",
+    "value": "604",
+    "declaredEntry": "leading-zero-repaired-ordering-not",
+    "nowCarries": "leading-zero-repaired-ordering-not",
+    "viaRetirementOf": null,
+    "joined": true
+   }
+  ],
+  "theDenominator": "the option(s) the mint file NAMED, not every option wearing these ids — a named carrier counts as joined when it carries its entry or the entry that entry retired into"
+ },
+ "JOINS_REFUSED_WITH_CAUSES": [
+  {
+   "entry": "percentage-never-divided-by-hundred",
+   "carrier": "MC01-FDP-03 C=\"2000\"",
+   "cause": "the declared value is one her own 180th superseded. The store holds \"£2000\"; the mint quotes the population her 182nd was fenced against (1d7f9cf414f33a0a…), which predates that amendment.",
+   "identityIsNotInDoubt": "row id, label C, the option's retained _previousValue \"2000\" byte-identical to the declaration, and the working 25 x 80 = 2000 computing to the option value — four agreements, nothing inferred.",
+   "whyItStillRefuses": "landing it means inventing retention-matching as a carrier-selection rule, mid-run, to turn a red row green (R149). The gate reports the evidence; it does not settle it for her.",
+   "whatLandsIt": "one line: her re-declaration against current bytes, or a ruling that a fenced value plus label identifies a carrier."
+  },
+  {
+   "entry": "fraction-part-used-alone",
+   "carrier": "MC01-FDP-08 D=\"60\"",
+   "cause": "HELD. The file joins this candidate only if the store's declared gap prose agrees; this store holds NO declared gap prose for that option — misconceptionExecution, drafterDeclaredPull, tagStatus, attractorLine, defeaterLine and a36Note are all null.",
+   "andWHYTHATISNOTADISAGREEMENT": "an absent antecedent is UNKNOWN, not false (R98). The file says \"else waits\", and it waits.",
+   "whatLandsIt": "either store declaring the gap prose, or her ruling the candidate directly."
+  },
+  {
+   "entry": "maximum-given-for-a-sum",
+   "carrier": "MC01-STATS-01 D=\"7\"",
+   "cause": "NOT MECHANICALLY VERIFIABLE — the working names the act in words (\"the largest of 6, 3, 7 and 4\") and writes no arithmetic to execute.",
+   "whatLandsIt": "a declared expression in the sender's hand, or her ruling on the join. Not an interpreter built here (R826/R878)."
+  },
+  {
+   "entry": "ordering-goal-reversed",
+   "carrier": "MC01-NPV-03 C=\"640\"",
+   "cause": "NOT MECHANICALLY VERIFIABLE — \"digits 6, 4, 0 in descending order\" states a property, not a computation.",
+   "whatLandsIt": "a declared expression, or her ruling on the join."
+  },
+  {
+   "entry": "leading-zero-repaired-ordering-not",
+   "carrier": "MC01-NPV-03 D=\"604\"",
+   "cause": "NOT MECHANICALLY VERIFIABLE — the working describes the repair and the residual fault in prose.",
+   "whatLandsIt": "a declared expression, or her ruling on the join."
+  }
+ ],
+ "andWHOAUTHOREDTHEWORKINGS": "the file states the workings were COMPUTED BY THE SENDER from her behaviours. So a working is not itself her ruling on a carrier, and cannot stand in for the execution the gate requires (R203).",
+ "SIGNED": {
+  "count": 178,
+  "of": 187,
+  "newlySigned": [
+   "MC01-GEOM-04"
+  ],
+  "method": "her pin recomputed and MATCHED under the named projection {stem, options[{content,isCorrect}], explanation}, retention excluded, before the signature landed"
+ },
+ "HER_SIGNATURE_SCOPING": {
+  "pin": "asserts IDENTITY over the whole row, under its named projection",
+  "verdict": "asserts READING over what was actually read",
+  "inheritedFields": "PINNED AND UNREAD — inside the pin, outside the reading",
+  "andWHYITMATTERSHERE": "options[].misconceptionId is OUTSIDE the projection, which is why a join can unblock a row without voiding her verification. That is a fact about the projection and it is asserted per row, never assumed.",
+  "theMeasuredExposure": "pnpm check:inherited-fields — 1,227 items, 30 distinct stem keys, 3,398 row-fields; the canonical stemSchema validates 5 key names, so 26 keys on 2,640 row-fields are inside somebody's pin and inside no door (R875)."
+ },
+ "PUBLICATION_SHAPE": {
+  "signed": 178,
+  "blockedOnMissingMisconceptions": 9,
+  "blockedIds": [
+   "MC01-CALC-02",
+   "MC01-CALC-07",
+   "MC01-CALC-08",
+   "MC01-GEOM-05",
+   "MC01-GEOM-06",
+   "MC01-MEAS-01",
+   "MC01-MEAS-02",
+   "MC01-STATS-03",
+   "MC01-STATS-04"
+  ],
+  "untaggedDistractorsRemaining": 10,
+  "live": 0,
+  "livePractice": 0,
+  "caseFaceServes": true,
+  "caseServable": false,
+  "windowVisibleAndEmpty": false,
+  "TWO_GATES_IN_SERIES": "a landed face makes the case RENDERABLE; a non-empty LIVE+PRACTICE pool makes it VISIBLE. Neither implies the other (R873).",
+  "shapeA": "178 signed, 9 held — available now",
+  "shapeB": "187 with the remaining 9 unblocked — needs the five refused joins settled and the other blocked rows' entries",
+  "PUBLICATION_HOLDS": "on David's go. Nothing here publishes."
+ },
+ "RESULT_LINES": [
+  "entries\t6/6",
+  "joins\t7/7 named options",
+  "signed\t178/187",
+  "blocked\t9",
+  "live\t0"
+ ],
+ "resultsSha256": "2baf2dd089a8695a9af74740cbd5f88f897773f2d17ab9fc01d72a4fbcf5555b",
+ "resultsSha256Spec": "sha256 over the summary lines joined by \\n, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content.",
+ "findingsSha256": "a3f3e918d9b0206199e5c4a3f9713d640c3bf58032bc3f4168278ffcdea66043",
+ "howToCheckThisOnArrival": {
+  "subtreeKeys": [
+   "ENTRIES_LANDED",
+   "JOINS_LANDED",
+   "JOINS_REFUSED_WITH_CAUSES",
+   "SIGNED",
+   "PUBLICATION_SHAPE",
+   "RESULT_LINES"
+  ],
+  "subtree": "an object of THIS DOCUMENT'S OWN TOP-LEVEL KEYS, exactly as spelled in subtreeKeys and nowhere renamed: {\"ENTRIES_LANDED\", \"JOINS_LANDED\", \"JOINS_REFUSED_WITH_CAUSES\", \"SIGNED\", \"PUBLICATION_SHAPE\", \"RESULT_LINES\"}",
+  "spec": "sha256 over json.dumps(subtree, sort_keys=True, separators=(\",\",\":\"), ensure_ascii=False).encode(\"utf-8\") — R729. ensure_ascii defaults to True and gives a different number.",
+  "andTheFileDigest": "the staging line and the .sha256 sidecar, over the whole file bytes"
+ },
+ "instrumentProvenance": {
+  "emittedBy": "emit-maths-closing-report.ts",
+  "carriedFixture": true,
+  "meaning": "the emitting instrument proved itself against carried cases — including at least one clean case caught by nothing — before it produced these figures (R721)."
+ }
+}
