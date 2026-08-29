@@ -22743,3 +22743,44 @@ could not fail.
 crossing. This does not detect staleness either — **it makes the two moments visible so that the
 comparison R818 requires is possible at all.** The state stays invisible; the evidence for it stops
 being.
+
+## R823 — The maths door cannot be built, and the reason outranks the door
+
+David's instruction anticipated the shape: *"If they do not exist, say that plainly — it is a bigger
+finding than the door."* They do not exist, **and the absence is one level deeper than the question
+asked.**
+
+**THE CENSUS.** Question types by district: ENGLISH 7, VR 21, **MATHS 0**. Items in a MATHS question
+type, at any status: **0**. The question was whether items exist to carry the closed hint class —
+**and neither do the QUESTION TYPES they would belong to.** An item cannot exist without a
+`questionTypeId`, so this is not a content gap that authoring fills; **it is a missing layer of the
+taxonomy.**
+
+**THE DOOR IS NOT BLOCKED BY A POLICY, IT IS BLOCKED BY A FOREIGN KEY.** `Case.questionTypeId` is a
+required FK to `QuestionType`, and a MATHS case must point at a MATHS type. **Demonstrated rather
+than asserted**: a canary `case.create` inside a rolled-back transaction is REFUSED by the database.
+So nothing of case-en-06's pattern was re-derived, because the pattern is not what stops it — the
+row cannot be inserted. What would be needed first, in order: a QuestionType row in district MATHS,
+items authored against it, signatures on those items, and then the pattern applies unchanged.
+
+**THE BLAST RADIUS IS ZERO AND IT IS WALKED**, from `item where questionType.district = MATHS`, not
+carried from anywhere. The instruction was to refuse on any count that cannot be walked; this one is
+walked.
+
+**THE THREE WALLS, DERIVED.** *Hints attested*: **111 MATHS library entries, every one carrying a
+child-facing hint and every one carrying an approver** — the class closed at 106 and the store holds
+more. **This is the only wall that stands.** *Items signed*: 0 of 0, reported **VACUOUS** rather than
+passed — a wall over an empty population is not a wall (R61). *Gates green*: both maths gates print
+their declared-empty state, exactly as R61 requires — `verify:solutions` says *"MATHS items is
+EMPTY, and that is DECLARED LEGITIMATE — not a pass."*
+
+**PUBLICATION IS HELD, AND NOT BY CHOICE.** No transaction is prepared because no membership exists
+to flip.
+
+**And the finding that outranks the door: the teaching half of a district is authored, reviewed,
+approved and stored, and there is nothing anywhere that can carry it to a child.** 111 hints with no
+item, no question type and no case. **R60 recorded that the maths gates had never screened anything
+and read it as an instrument fault to be closed by declaration.** It was not an instrument fault.
+The gates were right, the declaration was right, and **the thing the declaration described as a
+temporary gap is the whole district.** A correctly declared empty population is still an empty
+population, and declaring it stopped anyone asking why it was empty.
