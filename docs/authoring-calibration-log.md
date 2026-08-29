@@ -24496,3 +24496,46 @@ nothing), and REFUSED. A basis that cannot be named will be recorded as the near
 would leave D looking exactly like the six that computed. **A weaker basis is lost by ordinary
 maintenance, not by anybody deciding to drop it** — which is why the retirement impact report names
 it as the one thing that would go silently.
+
+## R895 — A qualifier belongs to a JOIN, not to an ENTRY, and survives a retag intact
+
+Annie's 194th finding, and this store had already named it as the thing that would go missing.
+
+`MC01-FDP-08` D joined on a ruling rather than a computation (R892), and the qualifier saying so
+lived on the join's attribution event. **Retiring the entry retags the option, which writes a new
+`misconceptionId` — and a retag that does not carry the qualifier forward leaves D indistinguishable
+from the six joins that computed.** Nobody would have decided to drop it. Ordinary maintenance would
+have.
+
+**THE CARRY IS VERBATIM, FROM THE EVENT THAT HOLDS IT, NEVER RE-AUTHORED.** Re-typing a qualifier
+during a move is a second wording under one id (R598), and the wording is the reviewer's. The new
+event quotes the original `method` and `note` in full and says it is quoting; the assertion that the
+carry is intact is CHECKED after the write, not assumed.
+
+**The general shape: provenance attaches at the grain of the DECISION, not at the grain of the
+record that happens to hold it.** A basis recorded on an entry dies with the entry; a basis recorded
+on the join survives every move of the entry, because the join is what the basis is about. Anything
+that can be relocated — a tag, an id, a carrier — must be asked, before it moves, what qualifiers
+are riding on it. The impact report is that question in mechanical form (R894), and this is the case
+where asking it in advance is the only reason the answer was available afterwards.
+
+## R896 — The register's own words outlast every paraphrase of them
+
+Her 194th §2, and it closes the excursion. **The gap was declared against a misremembered quotation
+of an entry she had approved herself**, in her 134th, by reference under the head declaration.
+`maths-75` was cited as *using only the numerator*; its actual bytes name the numerator OR the
+denominator used alone, and give as its denominator example *15 divided by 3/4 = 5* — which is the
+exact item and the exact option value that the mint was created to diagnose.
+
+**Every paraphrase in this excursion was wrong somewhere and the bytes never were.** Mine (the
+premise about carriers stating their own workings, R880), hers (the quotation the gap was declared
+on), and the desk's (the eight-versus-eleven attribution, R866). Three parties, three paraphrases,
+three faults — and in each case the repair was the same act: read the value, not the account of it
+(R25). **A quotation with an ellipsis is not bytes**, and neither is a summary, a recollection, or a
+count carried forward from a message.
+
+**AND THE COROLLARY THAT COST THE MOST HERE: a rejection that names no register version becomes
+unreadable the day the register changes.** Option C's `flagNote` rejects an id that was retired into
+another entry, so it is dated rather than judged — survival, not judgement. A field asserting a
+negative about the library must say which library it was true of, or it decays into a contradiction
+nobody can adjudicate and everybody must route around.
