@@ -23524,3 +23524,64 @@ Sibling to R601 and R605 — a decision honoured by accident and one honoured by
 identical output and are distinguishable in one grep. **This is the same shape in the declaration
 layer: an exemption granted by the wrong field and one granted by the right field behave identically
 and record different facts.**
+
+## R853 — A blind cannot hide the property the judgement is about: curated-pass pairs are PERMANENTLY unblindable
+
+Her ruling, and it closes the thread. **Where FINISH is the question, finish is also the signature.**
+
+A curated-pass pair asks: which of these two is the finished one? The evidence for that judgement —
+polish, consistency, the declarations a careful pass adds — **is the same evidence that identifies
+which side the curated pass produced.** There is no projection that carries one and withholds the
+other, because they are not two properties. They are one property being asked about from two
+directions.
+
+**So this is registered as PERMANENT, not unblinded-for-now.** The distinction matters and it is the
+whole point of the entry. *Unblinded-for-now* is a defect with a fix, and it invites somebody to
+attempt the fix — to strip one more field, project one more shape, and produce a blind that appears
+to hold while quietly removing what the reader needed. **A permanent finding closes that road.** For
+this class the honest artefact is an OPEN pairing that says so, and the certificate records that no
+blind was possible rather than that none was attempted.
+
+**And it retires the twenty-three by the same argument** (R848). Twenty-three identical outcomes are
+a curated pass and its ancestors; the uniformity is the lineage. **A blinded reading of them would
+have been twenty-three readings of one act, unblindable in principle and uninformative in fact.**
+
+## R854 — Distinguishable is not side-identifying, and a signal that feels like one is worse than none
+
+The standing test for every future blind check, in two parts.
+
+**One: measure whether a difference IDENTIFIES A SIDE, not whether one exists.** Five of nine
+pairings were distinguishable by field shape and **none of them was side-identifying** — the
+distinguishing field landed on this store's copy three times and the other's twice. **Three of five
+is chance.** A check that stops at *"the sides differ structurally"* reports a leak that is not one,
+and would have voided two certificates that hold.
+
+**Two: a signal that feels like one is worse than none.** A reader who notices `stem.quotes` and
+believes it marks a side is worse off than a reader who notices nothing — they now have a confident
+method that is wrong two times in five, and confidence is what stops the second look. **The danger
+is not the information; it is the false sense of having some.**
+
+**Both certificates stand**: the English eight blinded and held, the nine were distinguishable and
+still carried no provenance. And the corollary that makes the rule usable — **two different
+questions SHOULD be distinguishable, or there is nothing to rule on.** A blind that made the
+readings identical would have destroyed the reading.
+
+## R855 — A projection with a fixed shape cannot leak a shape
+
+The mechanism, and the way to build a blind where one is possible at all.
+
+The English eight held for a structural reason rather than a careful one: that batch was built by
+**projecting a fixed set of keys onto every reading**, so a field absent on one side is absent on
+both. The nine were assembled from **whole authored items** and inherited whatever each happened to
+carry — which is exactly how `stem.quotes` came to differ, and how the 23 came to carry
+`map97Status`, `flagNote`, `topicId`, `processId` and `gapFamily`.
+
+**The rule: build a blinded artefact by PROJECTION, never by inclusion.** Name the fields the
+reading needs and emit exactly those on every row, populated or empty. **Then the shape is a
+property of the projection and not of the source**, and the only thing that can differ between two
+readings is what they say — which is what the reader is there for.
+
+Inclusion-based blinding fails in a specific and predictable way: it leaks precisely the fields that
+one process writes and another does not, **which is the definition of provenance.** A blind built by
+copying rows and removing what looks revealing is a blind maintained by vigilance, and vigilance is
+not a mechanism.
