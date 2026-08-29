@@ -22,12 +22,14 @@ import { prisma } from '../packages/db/src/index';
 import { assertFixture } from './lib/carried-fixture';
 import { deliver, stampedName } from './lib/export-destination';
 import { digestOverText, findingsDigest } from './lib/findings-digest';
+import { beginCut, sealCut } from './lib/cut-stamp';
 import { requirePopulation } from './lib/population';
 
 const REPO = join(__dirname, '..');
 const sha = (s: string) => createHash('sha256').update(s, 'utf8').digest('hex');
 
 async function run() {
+  const cutBeganAt = beginCut();
   assertFixture('serving-hint-half', [
     { name: 'an item hint read by a named reviewer serves from the item', input: JSON.stringify({ hintCore: 'x', hintAuthoredBy: 'Annie', hintAuthority: 'ruling' }), mustBeCaught: true },
     { name: 'a second such item hint does too', input: JSON.stringify({ hintCore: 'y', hintAuthoredBy: 'Annie', hintAuthority: 'return' }), mustBeCaught: true },
@@ -70,8 +72,10 @@ async function run() {
   const lines = rows.map((r) => `${r.source}\t${r.rowId}\t${r.textSha256}`);
   const d = digestOverText('the ROW_LINES joined by \\n, no trailing newline, each "<source>\\t<rowId>\\t<sha256 of the hint text>"', lines.join('\n'));
 
+  const cut = await sealCut(prisma, cutBeganAt);
   const payload = {
     kind: 'serving-hint-half',
+    THE_CUT: cut,
     WHAT_THIS_ANSWERS: 'half of her eightieth: which store does a child\'s hint come from. This is what THIS store would serve, by digest. It says nothing about any authored artefact, and cannot — a claim about another store cannot be evidenced from files on this one (R794). The desk joins the halves.',
     THE_POPULATION: {
       definition: 'every hint a child CAN be served from this store: for each LIVE item, either its own hint or the library hints its option tags can reach.',

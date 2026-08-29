@@ -1,0 +1,198 @@
+{
+ "kind": "hint-amendment-carryback",
+ "THE_CLASS": "THE REVERSE-DROP CLASS (R786) — a repair that reached the row and never reached the source. R758 was a field authored at the source and dropped at this store's door; this is its mirror, on `explanation.hintCore`.",
+ "WHAT_IS_HERE_AND_WHAT_IS_NOT": {
+  "here": "rows where THIS store serves her amended text and NO authored file on this disk carries it. Those are carry-backs: the amendment exists, it simply never travelled.",
+  "notHere": "the genuine rewrites, where the two texts differ by authorship rather than by a repair. **Those are Annie's to read, not this store's to reconcile**, and none is in this file.",
+  "alsoNotHere": "rows where at least one authored file already carries the serving text — the amendment reached the source and nothing is owed."
+ },
+ "THE_DERIVATION": "the serving half (serving-hint-half, 3c23bdd4bf240670…) intersected with every authored file on this disk carrying an `explanation.hintCore` for the same item id. A row qualifies only when NO authored text equals what serves. The fault classes are derived from the two strings, not asserted.",
+ "AND_A_BOUND_ON_IT": "this compares against authored files ON THIS DISK, which are not the authoring store (R794). A row absent here may be carried in a file this store has never seen. **These five are owed on the evidence available; they are not a claim that only five are owed.**",
+ "CARRY_BACK": [
+  {
+   "itemId": "ENG-003-A-PU-01",
+   "field": "explanation.hintCore",
+   "before": [
+    {
+     "text": "Ask: does it belong to somebody, or is it just more than one?",
+     "sha256": "0d8d28f42d4ac9af25d98af3f0ab3840da6e9fe1c09bfff1a25da6088242049b",
+     "inFiles": [
+      "~/Downloads/11+/from-cluecrew/ENG003spagsetA.json",
+      "~/Downloads/11+/from-cluecrew/eng003-spag-current-33c6292431155427.json",
+      "~/Downloads/11+/items/ENG-003-spag-set-A.json",
+      "~/Downloads/eng003-spag-current-0ec81d92752f028d.json"
+     ]
+    },
+    {
+     "text": "Ask: does it belong to a person, or is it just more than one?",
+     "sha256": "4cbd25874566fa222099f9c24c3565804ccefd7e9c53a82cbe418e76a77883cf",
+     "inFiles": [
+      "~/Downloads/ENG003SETAREPAIRED.json",
+      "~/Downloads/ENG003SETASECONDRETURN (1).json",
+      "~/Downloads/ENG003SETASECONDRETURN (2).json",
+      "~/Downloads/ENG003SETASECONDRETURN (3).json",
+      "~/Downloads/ENG003SETASECONDRETURN.json"
+     ]
+    }
+   ],
+   "after": {
+    "text": "Does it belong to someone, or is it just more than one?",
+    "sha256": "2455aa2bd5ccba6d637369b7e64ec88224a6b12d086ca215d0153e699025c039"
+   },
+   "whatTheAmendmentDID": [
+    "REWORDING — no mechanical fault class matches; the difference is authorial"
+   ],
+   "NOTHING_ELSE_PROPOSED": "no rewording is suggested and no authored text is judged. This names a field, a before and an after."
+  },
+  {
+   "itemId": "ENG-003-A-PU-05",
+   "field": "explanation.hintCore",
+   "before": [
+    {
+     "text": "Write the owner word first, then add the apostrophe.",
+     "sha256": "9f94d5dca2782b7de8b290ed30fe6aeafb3a8dd4f3b6bcb352c8d88e5db74fd2",
+     "inFiles": [
+      "~/Downloads/11+/from-cluecrew/ENG003spagsetA.json",
+      "~/Downloads/11+/from-cluecrew/eng003-spag-current-33c6292431155427.json",
+      "~/Downloads/11+/items/ENG-003-spag-set-A.json",
+      "~/Downloads/ENG003SETAREPAIRED.json",
+      "~/Downloads/ENG003SETASECONDRETURN (1).json",
+      "~/Downloads/ENG003SETASECONDRETURN (2).json",
+      "~/Downloads/ENG003SETASECONDRETURN (3).json",
+      "~/Downloads/ENG003SETASECONDRETURN.json",
+      "~/Downloads/eng003-spag-current-0ec81d92752f028d.json"
+     ]
+    }
+   ],
+   "after": {
+    "text": "Find the owner word first. The apostrophe goes after it.",
+    "sha256": "656ab312b2d043f6b5c04a02241201f6d6265ae16de064b97e05dc97eba6fc34"
+   },
+   "whatTheAmendmentDID": [
+    "SENTENCE SPLIT — one sentence became two"
+   ],
+   "NOTHING_ELSE_PROPOSED": "no rewording is suggested and no authored text is judged. This names a field, a before and an after."
+  },
+  {
+   "itemId": "ENG-003-A-PU-06",
+   "field": "explanation.hintCore",
+   "before": [
+    {
+     "text": "The mark belongs to the words that were spoken, so keep it inside.",
+     "sha256": "340b3507fa2a1b7a120d4443c6dbc493b61b05413e04a09eeddb4273ed534de9",
+     "inFiles": [
+      "~/Downloads/11+/from-cluecrew/ENG003spagsetA.json",
+      "~/Downloads/11+/from-cluecrew/eng003-spag-current-33c6292431155427.json",
+      "~/Downloads/11+/items/ENG-003-spag-set-A.json",
+      "~/Downloads/ENG003SETAREPAIRED.json",
+      "~/Downloads/ENG003SETASECONDRETURN (1).json",
+      "~/Downloads/ENG003SETASECONDRETURN (2).json",
+      "~/Downloads/ENG003SETASECONDRETURN (3).json",
+      "~/Downloads/ENG003SETASECONDRETURN.json",
+      "~/Downloads/eng003-spag-current-0ec81d92752f028d.json"
+     ]
+    }
+   ],
+   "after": {
+    "text": "The mark belongs to the words that were spoken. Keep it inside.",
+    "sha256": "ec182db944216ae2f1c91aea66e43f030e2cbff16e600902b04214af333093dd"
+   },
+   "whatTheAmendmentDID": [
+    "SENTENCE SPLIT — one sentence became two"
+   ],
+   "NOTHING_ELSE_PROPOSED": "no rewording is suggested and no authored text is judged. This names a field, a before and an after."
+  },
+  {
+   "itemId": "ENG-003-A-PU-07",
+   "field": "explanation.hintCore",
+   "before": [
+    {
+     "text": "Check the last word of all: what is it wearing at the end?",
+     "sha256": "723ae509fd418ed3a9ecb6eab3cc8244be88cc6c887de5fc493bbc59ef63f3d0",
+     "inFiles": [
+      "~/Downloads/11+/from-cluecrew/ENG003spagsetA.json",
+      "~/Downloads/11+/from-cluecrew/eng003-spag-current-33c6292431155427.json",
+      "~/Downloads/11+/items/ENG-003-spag-set-A.json",
+      "~/Downloads/ENG003SETAREPAIRED.json",
+      "~/Downloads/ENG003SETASECONDRETURN (1).json",
+      "~/Downloads/ENG003SETASECONDRETURN (2).json",
+      "~/Downloads/ENG003SETASECONDRETURN (3).json",
+      "~/Downloads/ENG003SETASECONDRETURN.json",
+      "~/Downloads/eng003-spag-current-0ec81d92752f028d.json"
+     ]
+    }
+   ],
+   "after": {
+    "text": "Take the very last word. What is it wearing at the end?",
+    "sha256": "746235590c1366e5afbf949ca728ed34900cdc3ef90ac54a9b002a5ff5d0d7a7"
+   },
+   "whatTheAmendmentDID": [
+    "SENTENCE SPLIT — one sentence became two"
+   ],
+   "NOTHING_ELSE_PROPOSED": "no rewording is suggested and no authored text is judged. This names a field, a before and an after."
+  },
+  {
+   "itemId": "ENG-003-A-SP-07",
+   "field": "explanation.hintCore",
+   "before": [
+    {
+     "text": "If all four parts check out, N is a real answer — use it.",
+     "sha256": "ed466ee6dcefb414a1fc2471df58aaa666e52092de186378eaa28593529d7a7b",
+     "inFiles": [
+      "~/Downloads/11+/from-cluecrew/ENG003spagsetA.json",
+      "~/Downloads/11+/from-cluecrew/eng003-spag-current-33c6292431155427.json",
+      "~/Downloads/11+/items/ENG-003-spag-set-A.json",
+      "~/Downloads/ENG003SETAREPAIRED.json",
+      "~/Downloads/ENG003SETASECONDRETURN.json",
+      "~/Downloads/eng003-spag-current-0ec81d92752f028d.json"
+     ]
+    },
+    {
+     "text": "If all four parts check out, N is a real answer. Use it.",
+     "sha256": "e2073033888c3494b73be9550005bbe26f9b26700d460742e0b557b482e820e6",
+     "inFiles": [
+      "~/Downloads/ENG003SETASECONDRETURN (1).json",
+      "~/Downloads/ENG003SETASECONDRETURN (2).json",
+      "~/Downloads/ENG003SETASECONDRETURN (3).json"
+     ]
+    }
+   ],
+   "after": {
+    "text": "If all four parts check out, No mistake is a real answer.",
+    "sha256": "8a26dee1fae8106a84a770d270542cc97dfa65588605d43d82e65e1c8ec7a40c"
+   },
+   "whatTheAmendmentDID": [
+    "EM DASH removed — a dash does not end or break a child-facing sentence (CLAUDE.md house rule)",
+    "BARE CAPITAL expanded — N no longer stands alone as a token a child must decode",
+    "N → \"No mistake\" — the answer named in words rather than by its option letter"
+   ],
+   "NOTHING_ELSE_PROPOSED": "no rewording is suggested and no authored text is judged. This names a field, a before and an after."
+  }
+ ],
+ "CARRY_BACK_LINES": [
+  "ENG-003-A-PU-01\texplanation.hintCore\t2455aa2bd5ccba6d637369b7e64ec88224a6b12d086ca215d0153e699025c039",
+  "ENG-003-A-PU-05\texplanation.hintCore\t656ab312b2d043f6b5c04a02241201f6d6265ae16de064b97e05dc97eba6fc34",
+  "ENG-003-A-PU-06\texplanation.hintCore\tec182db944216ae2f1c91aea66e43f030e2cbff16e600902b04214af333093dd",
+  "ENG-003-A-PU-07\texplanation.hintCore\t746235590c1366e5afbf949ca728ed34900cdc3ef90ac54a9b002a5ff5d0d7a7",
+  "ENG-003-A-SP-07\texplanation.hintCore\t8a26dee1fae8106a84a770d270542cc97dfa65588605d43d82e65e1c8ec7a40c"
+ ],
+ "carryBackSha256": "dad35a13b86b01f856aeec1812f4b3b5ee27af4b3441d83def50093baf0bba86",
+ "carryBackSha256Spec": "sha256 over the CARRY_BACK lines joined by \\n, each \"<itemId>\\t<field>\\t<sha256 of the after text>\", encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content.",
+ "findingsSha256": "cd76c59e3e1fb6b31898a0f40d39e4fbbf1104ebf89e94882436a9fba8c80401",
+ "howToCheckThisOnArrival": {
+  "subtreeKeys": [
+   "THE_CLASS",
+   "WHAT_IS_HERE_AND_WHAT_IS_NOT",
+   "CARRY_BACK",
+   "CARRY_BACK_LINES"
+  ],
+  "subtree": "an object of THIS DOCUMENT'S OWN TOP-LEVEL KEYS, exactly as spelled in subtreeKeys and nowhere renamed: {\"THE_CLASS\", \"WHAT_IS_HERE_AND_WHAT_IS_NOT\", \"CARRY_BACK\", \"CARRY_BACK_LINES\"}",
+  "spec": "sha256 over json.dumps(subtree, sort_keys=True, separators=(\",\",\":\"), ensure_ascii=False).encode(\"utf-8\") — R729. ensure_ascii defaults to True and gives a different number.",
+  "andTheFileDigest": "the staging line and the .sha256 sidecar, over the whole file bytes"
+ },
+ "instrumentProvenance": {
+  "emittedBy": "emit-hint-amendment-carryback.ts",
+  "carriedFixture": true,
+  "meaning": "the emitting instrument proved itself against carried cases — including at least one clean case caught by nothing — before it produced these figures (R721)."
+ }
+}

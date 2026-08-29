@@ -22694,3 +22694,52 @@ digest.
 incidents of a repair failing to travel. **If there is no receive path they are not incidents at
 all — they are the same structural absence observed twice**, and counting them as recurrences
 overstates the evidence for a process fault while understating the case for building the path.
+
+## R821 — Her 176th: WIW-22 takes the authored text, and the replacedSha256 was checked not trusted
+
+Four of her five rewrites keep the serving text; **`ENG-001-WIW-22` takes the authored one**, on her
+reason: *"the authored 'list the human things and the animal things, what do you notice' asks for
+the same work without doing it for her, and listing is own-paper working, which the rough-paper rule
+allows. This row should change, and it is the one place the authored text holds something the
+serving text lost."*
+
+**Her `replacedSha256` was VERIFIED against the row before anything was written** — her own rule
+(R164): a hash in that field asserts the row's actual prior bytes, so it is checked rather than
+accepted. `31d65592…` matched. **A mismatch would have been a stop, not a warning**, because it
+would mean one of us was describing a different row — and landing an amendment against a row that
+is not the one she read is the fault the field exists to prevent.
+
+Landed with the gate clean, the prior text retained on the row as `_previousHintCore` with its
+digest and rule, and one attribution event. **The retained bytes are the actual prior text, not a
+reconstruction** (R164 again — a reconstruction may never occupy that field).
+
+**And the carry-back is seven, not five.** Her reclassification moves `WIW-13` and `WIW-20` from
+rewrite to house-rule amendment. **This store holds no authored text for either**, so the `before`
+cannot be quoted from here — stated per row rather than left blank, because a missing before and an
+empty before are different facts (R779). The class on those two is hers; this store could not have
+derived it, having nothing to compare.
+
+## R822 — The born-stale field: two timestamps in place of a state nothing could see
+
+Built as ruled. **Every export carries the source's last-write moment taken at the cut, and declares
+itself TORN where the last write falls after the cut began.**
+
+**Its whole virtue is that it is not a judgement.** `cutBeganAt` bounds what could possibly be in the
+artefact; `sourceLastWriteAt` says when the source last moved; and anyone can compare them without
+trusting the emitter. **TORN is not a quality verdict** — a torn export is not wrong, it is one taken
+while the store was still being written to, and the reader is told rather than left to infer it from
+a date that looks like agreement.
+
+**It reads the source's own write log**, not a file mtime and not a guess, which is the same
+instrument that answered R814 when no artefact could. Three outcomes, and the third matters: an
+empty write log reports **UNKNOWN, never "clean"** (R60).
+
+**Canaried before trusting it** (R756): with a cut moment in the past it returns TORN, with one taken
+now it returns WHOLE. **Both branches reachable, so a WHOLE means something** — a field that could
+only ever say WHOLE would be decoration, and this register is largely a record of instruments that
+could not fail.
+
+**What it changes about R819.** BORN STALE evaded every discipline here because they all aim at the
+crossing. This does not detect staleness either — **it makes the two moments visible so that the
+comparison R818 requires is possible at all.** The state stays invisible; the evidence for it stops
+being.

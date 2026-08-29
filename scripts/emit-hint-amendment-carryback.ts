@@ -74,8 +74,29 @@ async function run() {
     });
   }
 
+  /**
+   * **RECLASSIFIED BY HER 176th: WIW-13 and WIW-20 are house-rule amendments, not rewrites**, and
+   * join the carry-back — seven, not five. **This store holds no authored text for either**, so
+   * the `before` cannot be supplied from here. That is stated per row rather than left blank: a
+   * missing before and an empty before are different facts (R779).
+   */
+  for (const itemId of ['ENG-001-WIW-13', 'ENG-001-WIW-20']) {
+    const after = serves.get(itemId);
+    if (!after) continue;
+    if (carryBack.some((c) => c.itemId === itemId)) continue;
+    carryBack.push({
+      itemId, field: 'explanation.hintCore',
+      before: [{ text: 'NOT HELD ON THIS DISK — no authored file here carries a hintCore for this item. The pre-amendment text exists at the desk; it cannot be quoted from this side.', sha256: null as unknown as string, inFiles: [] }],
+      after: { text: after, sha256: sha(after) },
+      whatTheAmendmentDID: ['HOUSE-RULE AMENDMENT — reclassified by her 176th from rewrite to carriage. The class is hers; this store cannot derive it, having no before to compare.'],
+      NOTHING_ELSE_PROPOSED: 'no rewording is suggested and no authored text is judged. This names a field and an after; the before is not available from this side.',
+    });
+  }
+  carryBack.sort((a, b) => a.itemId.localeCompare(b.itemId));
+
   const payload = {
     kind: 'hint-amendment-carryback',
+    HER_RECLASSIFICATION: 'her 176th: seven carriage rows, five rewrites. WIW-13 and WIW-20 move from rewrite to house-rule amendment and join this file. Of her five rewrites, four keep the serving text and WIW-22 takes the authored text — landed separately under her amendment block, not here.',
     THE_CLASS: 'THE REVERSE-DROP CLASS (R786) — a repair that reached the row and never reached the source. R758 was a field authored at the source and dropped at this store\'s door; this is its mirror, on `explanation.hintCore`.',
     WHAT_IS_HERE_AND_WHAT_IS_NOT: {
       here: 'rows where THIS store serves her amended text and NO authored file on this disk carries it. Those are carry-backs: the amendment exists, it simply never travelled.',

@@ -1,0 +1,838 @@
+{
+ "kind": "serving-hint-half",
+ "WHAT_THIS_ANSWERS": "half of her eightieth: which store does a child's hint come from. This is what THIS store would serve, by digest. It says nothing about any authored artefact, and cannot — a claim about another store cannot be evidenced from files on this one (R794). The desk joins the halves.",
+ "THE_POPULATION": {
+  "definition": "every hint a child CAN be served from this store: for each LIVE item, either its own hint or the library hints its option tags can reach.",
+  "itemSide": "an item contributes its `explanation.hintCore` when `chooseHint` returns serves:item — that is, the text is non-empty, no ruling withholds it, and it carries BOTH an authoring name and an authority.",
+  "librarySide": "an item whose `chooseHint` returns serves:library contributes the `childHint` of every misconception tagged on any of its options. CAN be served, not IS served: which one a child meets depends on the option chosen.",
+  "excludedAndWhy": "items not LIVE (a child cannot meet them); library entries with an empty childHint (nothing to serve); library entries reached only through non-LIVE items."
+ },
+ "THE_METHOD": {
+  "decisionFunction": "packages/core/src/item-hint.ts chooseHint — the serving path's own function, called directly and not re-implemented (R41).",
+  "digestPerRow": "sha256 over the hint TEXT as served, trimmed, UTF-8. Not over the row, not over the file — so it compares against any other store's text of the same hint regardless of packaging.",
+  "rerunnableAs": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/emit-serving-hint-half.ts"
+ },
+ "NO_COUNTS_ON_THE_FACE": "her §4 is the reason — 298 without a hint against 23 without a hint is a disagreement about the corpus, not a rounding. A total here would be compared against a total from a population not known to be the same, and the comparison would look like arithmetic. The population is defined above; the rows are below; anyone who wants a number can count the rows they actually mean.",
+ "AND_WHAT_THIS_CANNOT_SETTLE": "her §3 — that three of four tags selecting what serves on WIW-19 are wrong. A wrong tag reaches the WRONG library hint, and this artefact reports which hints are reachable, not whether the reaching is correct. That is a separate half again.",
+ "ROWS": [
+  {
+   "source": "ITEM",
+   "rowId": "ENG-001-WIW-04",
+   "field": "explanation.hintCore",
+   "text": "He did not stop for his coat. What does that tell you about how he left?",
+   "textSha256": "3fc3aee5484acc21cc210b22db02832f895646c837a80d75a7989b938da55d65",
+   "readBy": "Annie",
+   "authority": "annie-eightyninth-return.md (CONFIRMATIONS block), sha256 a51e2126cbfe9f2282254afc915fd340d851fa619fc53f9f4a7c5e4637193118"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-001-WIW-05",
+   "field": "explanation.hintCore",
+   "text": "Count how many times he scrapes and scrabbles. Why so many?",
+   "textSha256": "428238ee99a9b4c7a423712d9cccd536a238231c695c441e113bf07a82e257d0",
+   "readBy": "Annie",
+   "authority": "annie-sixtyfourth-return.md, sha256 e38bef6119ea210952df3ab39233c64df92e7448f1cb80bfc654c2af50923742"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-001-WIW-06",
+   "field": "explanation.hintCore",
+   "text": "Read to the end of the sentence with 'pop!' in it.",
+   "textSha256": "e3e8998b0575f2f5c0486afeeca912b8a53af2ebb72c3a6a67541deac37fcd9e",
+   "readBy": "Annie",
+   "authority": "annie-eightyninth-return.md (CONFIRMATIONS block), sha256 a51e2126cbfe9f2282254afc915fd340d851fa619fc53f9f4a7c5e4637193118"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-001-WIW-07",
+   "field": "explanation.hintCore",
+   "text": "Has something changed about the birds, or about the Mole?",
+   "textSha256": "c833ca616b23d239343ad1933c17f63ddd626ace2973ee306676dae28cd70d2f",
+   "readBy": "Annie",
+   "authority": "annie-eightyninth-return.md (CONFIRMATIONS block), sha256 a51e2126cbfe9f2282254afc915fd340d851fa619fc53f9f4a7c5e4637193118"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-001-WIW-09",
+   "field": "explanation.hintCore",
+   "text": "The rabbit says one sentence. What is he asking for in it?",
+   "textSha256": "77761435790043c9a657a7931d58afa8392b82ec5df8de1652e5b65e9ff1f08e",
+   "readBy": "Annie",
+   "authority": "annie-eightyninth-return.md (CONFIRMATIONS block), sha256 a51e2126cbfe9f2282254afc915fd340d851fa619fc53f9f4a7c5e4637193118"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-001-WIW-11",
+   "field": "explanation.hintCore",
+   "text": "What has just happened that would make the rabbits look out?",
+   "textSha256": "76589f0d99439d061ed8df798b2d13a80e99b85d6bbd092ddcd98ba512843268",
+   "readBy": "Annie",
+   "authority": "annie-ninetyfirst-return.md (CONFIRMATIONS block), sha256 522c296cbadcbaa59bf98fd3b73704a7a8240e476036c13876e7b0d1d7165bb8"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-001-WIW-12",
+   "field": "explanation.hintCore",
+   "text": "The question asks what he had never seen. Not what he saw that day.",
+   "textSha256": "7ae23d27ed6a8282119293f6390bea0bcd2ee77d8a8e0ac0e81905ef3eb9e777",
+   "readBy": "Annie",
+   "authority": "annie-sixtyfifth-return.md, sha256 0cd56a0547dbca75363163584f63656b8da67411cfa49783b4c2ed8217ea7469"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-001-WIW-13",
+   "field": "explanation.hintCore",
+   "text": "Chasing, chuckling, laughing. What sort of creature does all that?",
+   "textSha256": "9ea1d500fe24af0499139d0fc0f92473359448caf6a8e9a06f20b401dd6b52af",
+   "readBy": "Annie",
+   "authority": "annie-sixtyfifth-return.md, sha256 0cd56a0547dbca75363163584f63656b8da67411cfa49783b4c2ed8217ea7469"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-001-WIW-14",
+   "field": "explanation.hintCore",
+   "text": "Why would a small child trot beside someone telling 'exciting stories'?",
+   "textSha256": "a2ad9808b00be3f5d14ac5e0bf010b0df0c62801ec3ec6497d29a08c9d2795ef",
+   "readBy": "Annie",
+   "authority": "annie-ninetyfirst-return.md (CONFIRMATIONS block), sha256 522c296cbadcbaa59bf98fd3b73704a7a8240e476036c13876e7b0d1d7165bb8"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-001-WIW-15",
+   "field": "explanation.hintCore",
+   "text": "The question says 'first'. Which detail comes earliest?",
+   "textSha256": "975ca18d442bf5f0b0b51104331701c7d1805c4891c01e0679ac531a6e0b11a6",
+   "readBy": "Annie",
+   "authority": "annie-ninetyfirst-return.md (CONFIRMATIONS block), sha256 522c296cbadcbaa59bf98fd3b73704a7a8240e476036c13876e7b0d1d7165bb8"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-001-WIW-16",
+   "field": "explanation.hintCore",
+   "text": "What new thing does each short line add?",
+   "textSha256": "7bebb05cbf1ad3f87154b769e05f4ed3b38650e65912851edef0bc227af8140e",
+   "readBy": "Annie",
+   "authority": "annie-ninetyfirst-return.md (CONFIRMATIONS block), sha256 522c296cbadcbaa59bf98fd3b73704a7a8240e476036c13876e7b0d1d7165bb8"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-001-WIW-17",
+   "field": "explanation.hintCore",
+   "text": "It is describing a face. Can a face be a place in the ground?",
+   "textSha256": "955b028b2c06ef51a42862b4e7a84e6ff77a2a733f35a32d803b0c270f070204",
+   "readBy": "Annie",
+   "authority": "annie-ninetyfirst-return.md (CONFIRMATIONS block), sha256 522c296cbadcbaa59bf98fd3b73704a7a8240e476036c13876e7b0d1d7165bb8"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-001-WIW-18",
+   "field": "explanation.hintCore",
+   "text": "Read the words straight after 'said the Mole'. They explain him.",
+   "textSha256": "294d8ae17c9ac910b0721f58d06bfa07c9ddcc64b3d75af137e93a3dcc63c075",
+   "readBy": "Annie",
+   "authority": "annie-ninetyfirst-return.md (CONFIRMATIONS block), sha256 522c296cbadcbaa59bf98fd3b73704a7a8240e476036c13876e7b0d1d7165bb8"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-001-WIW-19",
+   "field": "explanation.hintCore",
+   "text": "He 'unfastened a rope' earlier. What would he do with it now?",
+   "textSha256": "da5d3eef350c3dcb7796e9faad16f2cfdbdf942d9939131c3a1c41ab65c7ffe6",
+   "readBy": "Annie",
+   "authority": "annie-seventieth-return.md, sha256 535eeb43343d476f168dcdbd459d1f0091879a28fa8de99553837789202bf7dc"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-001-WIW-20",
+   "field": "explanation.hintCore",
+   "text": "He is seated inside it. So it is a part of what?",
+   "textSha256": "d9ab1a1e11f31c07dc10017c9996f08cc4f9663c06c85f8d888de6070a6aff33",
+   "readBy": "Annie",
+   "authority": "annie-seventieth-return.md, sha256 535eeb43343d476f168dcdbd459d1f0091879a28fa8de99553837789202bf7dc"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-001-WIW-21",
+   "field": "explanation.hintCore",
+   "text": "What else in this passage had the Mole never done before?",
+   "textSha256": "7d542b664bf6b471ca628c2dd2fe4c7a779027ad17db87d7213afb5b90b9a69d",
+   "readBy": "Annie",
+   "authority": "annie-eightyseventh-return.md (CONFIRMATIONS block), sha256 b53aa2df063f3404868e0d423da2ffe2f24ebc6f31f9bf37f1acdbd75a5db336"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-001-WIW-22",
+   "field": "explanation.hintCore",
+   "text": "Some things about them are human and some are animal. Notice both.",
+   "textSha256": "31d655923d1071075e3f8aecf0991541bf8b1275743d578559c540b15c1b4ac6",
+   "readBy": "Annie",
+   "authority": "annie-seventieth-return.md, sha256 535eeb43343d476f168dcdbd459d1f0091879a28fa8de99553837789202bf7dc"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-003-A-CZ-A4",
+   "field": "explanation.hintCore",
+   "text": "Speech can be in the present. The telling around it stays in the past.",
+   "textSha256": "b279b596997a32c76e42884a5b24396e6de37059f746f75596ac053cb0bff77d",
+   "readBy": "Annie",
+   "authority": "annieeng003secondreturn.md §8, read from the file, sha256 90bd5b1ee56790d4"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-003-A-CZ-A5",
+   "field": "explanation.hintCore",
+   "text": "Think which small word belongs with the verb returned.",
+   "textSha256": "280896f1b24c3784fc052aeba0270a18bb8d6131424a0e871edf5b6ce66ef4e0",
+   "readBy": "Annie",
+   "authority": "annieeng003secondreturn.md §8, read from the file, sha256 90bd5b1ee56790d4"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-003-A-CZ-A8",
+   "field": "explanation.hintCore",
+   "text": "The row is one thing. The story is in the past.",
+   "textSha256": "8b80a5fae7eb3fe7de28a9979b0b3bfd467af67612e49669f5e728d1a5385964",
+   "readBy": "Annie",
+   "authority": "annieeng003secondreturn.md §8, read from the file, sha256 90bd5b1ee56790d4"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-003-A-CZ-B1",
+   "field": "explanation.hintCore",
+   "text": "The second half is a result, not a surprise.",
+   "textSha256": "ffa51a90a8b8a18a42d797968f1dec6dfe7137aef5c216f369783fd89aa42788",
+   "readBy": "Annie",
+   "authority": "annieeng003secondreturn.md §8, read from the file, sha256 90bd5b1ee56790d4"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-003-A-CZ-B3",
+   "field": "explanation.hintCore",
+   "text": "The line starts positive. A check question turns it negative. Keep the same helper word.",
+   "textSha256": "c50d31e788900e628e61b85ff894e47481958c4eb377778b09d9e461fb51f10f",
+   "readBy": "Annie",
+   "authority": "annieeng003secondreturn.md §8, read from the file, sha256 90bd5b1ee56790d4"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-003-A-PU-01",
+   "field": "explanation.hintCore",
+   "text": "Does it belong to someone, or is it just more than one?",
+   "textSha256": "2455aa2bd5ccba6d637369b7e64ec88224a6b12d086ca215d0153e699025c039",
+   "readBy": "Annie",
+   "authority": "annie-twentyseventh-return.md §1, read from the file"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-003-A-PU-02",
+   "field": "explanation.hintCore",
+   "text": "Does your voice go up at the end? Then it needs a question mark.",
+   "textSha256": "a227cdd44fa22247128c9ff82ec62f98a669da874fbe184c8d23d5250042ab21",
+   "readBy": "Annie",
+   "authority": "annie-twentyseventh-return.md §1, read from the file"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-003-A-PU-04",
+   "field": "explanation.hintCore",
+   "text": "Cover half the part. If both halves could stand alone, they need a join.",
+   "textSha256": "5ff381eb8d3eaef311ea71e86e271ced3613654f3d4ea8d61c0063b6d5559e0c",
+   "readBy": "Annie",
+   "authority": "annie-twentyseventh-return.md §1, read from the file"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-003-A-PU-05",
+   "field": "explanation.hintCore",
+   "text": "Find the owner word first. The apostrophe goes after it.",
+   "textSha256": "656ab312b2d043f6b5c04a02241201f6d6265ae16de064b97e05dc97eba6fc34",
+   "readBy": "Annie",
+   "authority": "annie-twentyseventh-return.md §1, read from the file"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-003-A-PU-06",
+   "field": "explanation.hintCore",
+   "text": "The mark belongs to the words that were spoken. Keep it inside.",
+   "textSha256": "ec182db944216ae2f1c91aea66e43f030e2cbff16e600902b04214af333093dd",
+   "readBy": "Annie",
+   "authority": "annie-twentyseventh-return.md §1, read from the file"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-003-A-PU-07",
+   "field": "explanation.hintCore",
+   "text": "Take the very last word. What is it wearing at the end?",
+   "textSha256": "746235590c1366e5afbf949ca728ed34900cdc3ef90ac54a9b002a5ff5d0d7a7",
+   "readBy": "Annie",
+   "authority": "annie-sixtyfourth-return.md, sha256 e38bef6119ea210952df3ab39233c64df92e7448f1cb80bfc654c2af50923742"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-003-A-PU-09",
+   "field": "explanation.hintCore",
+   "text": "A sentence can contain a question and still end with a full stop.",
+   "textSha256": "14800206825fb28e3efd5c5caaf78a2c3a8966d2217bcd11be7fe3f01f1b7a71",
+   "readBy": "Annie",
+   "authority": "annie-twentyseventh-return.md §1, read from the file"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-003-A-SP-07",
+   "field": "explanation.hintCore",
+   "text": "If all four parts check out, No mistake is a real answer.",
+   "textSha256": "8a26dee1fae8106a84a770d270542cc97dfa65588605d43d82e65e1c8ec7a40c",
+   "readBy": "Annie",
+   "authority": "annie-twentyeighth-return.md, read from the file, sha256 c0169214b2047ecd1250fcd5eb4f5afcdb127d7d50e1ba86de99c8ce36748439"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-003-A-SP-09",
+   "field": "explanation.hintCore",
+   "text": "A hard-looking word is not always a misspelt one. Check each part, then decide.",
+   "textSha256": "6c864a695295d9fa906611927366f05d528d26f255abfd15640e39b14fa2d28b",
+   "readBy": "Annie",
+   "authority": "annieeng003secondreturn.md §8, read from the file, sha256 90bd5b1ee56790d4"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-028-PR-01",
+   "field": "explanation.hintCore",
+   "text": "What is swelling here, and what makes it swell?",
+   "textSha256": "68e246fc11b13c7f711b5bb5df174759a3c7537ddc5d97eef633d2d0ab8c7ef9",
+   "readBy": "Annie",
+   "authority": "annie-seventieth-return.md, sha256 535eeb43343d476f168dcdbd459d1f0091879a28fa8de99553837789202bf7dc"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-028-PR-02",
+   "field": "explanation.hintCore",
+   "text": "One of these is where she is, not what she sees.",
+   "textSha256": "46c3b99df560564e80053151678e61602136282d8bcf65c574393ec9a4844742",
+   "readBy": "Annie",
+   "authority": "annie-eightyninth-return.md (CONFIRMATIONS block), sha256 a51e2126cbfe9f2282254afc915fd340d851fa619fc53f9f4a7c5e4637193118"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-028-PR-03",
+   "field": "explanation.hintCore",
+   "text": "He does say something back. Does he take it seriously?",
+   "textSha256": "94de1f9c0c8620f2fe468cc988057dbfa6ea66a686d4435b3d0529454ff1d8f1",
+   "readBy": "Annie",
+   "authority": "annie-seventieth-return.md, sha256 535eeb43343d476f168dcdbd459d1f0091879a28fa8de99553837789202bf7dc"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-028-PR-04",
+   "field": "explanation.hintCore",
+   "text": "The humming started while she reached. It cannot be the reason she reached in.",
+   "textSha256": "eee065e8f22b3c9a5c19c2f2c186b1e48d6098330a20b37ae4d35d18be949ee2",
+   "readBy": "Annie",
+   "authority": "annie-eightyeighth-return.md, sha256 4677bcb0d864a0ee35146a722a88e993df10ad703f92ffb26f7ceea39117ca4d"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-028-PR-05",
+   "field": "explanation.hintCore",
+   "text": "This one is not about waiting near somebody.",
+   "textSha256": "b80d3465c4111adfd60f6268f98f4fe434492dbb227ce769cd631c111e700c8b",
+   "readBy": "Annie",
+   "authority": "annie-eightyfourth-return.md, sha256 75967df0b034d33242fa60233d49a9e0a6847db6e49831b979a518ea7204a3c8"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-028-PR-06",
+   "field": "explanation.hintCore",
+   "text": "One of these has her planning it beforehand.",
+   "textSha256": "af2d7c10c4648506f564c70e0785ba33e92c89045309f876493e2f7f3c674d44",
+   "readBy": "Annie",
+   "authority": "annie-eightyfourth-return.md, sha256 75967df0b034d33242fa60233d49a9e0a6847db6e49831b979a518ea7204a3c8"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-028-PR-07",
+   "field": "explanation.hintCore",
+   "text": "Which of these does a line actually give as the reason?",
+   "textSha256": "6848c4d835bff702343d68789a6756d86bdcfd8a34ab3ffc578d2494df29003f",
+   "readBy": "Annie",
+   "authority": "annie-seventysecond-return.md, sha256 e974cc4ac3d7c0d5d350732f8140cde77e307c6e683b6b38328e7e08cb6d9741"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-028-PR-08",
+   "field": "explanation.hintCore",
+   "text": "Repeating his words is not a reason.",
+   "textSha256": "69ae19dc5f1d2bf4556736c7d1a81b0dcf3a0dc6b7d165d487bb6f5003384453",
+   "readBy": "Annie",
+   "authority": "annie-eightyfourth-return.md, sha256 75967df0b034d33242fa60233d49a9e0a6847db6e49831b979a518ea7204a3c8"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-028-PR-09",
+   "field": "explanation.hintCore",
+   "text": "Priya is not what changed.",
+   "textSha256": "35334139856b49e720d129cff7d8af0a52a13fb655cb7a61762f2ffc6eaec07c",
+   "readBy": "Annie",
+   "authority": "annie-eightyfourth-return.md, sha256 75967df0b034d33242fa60233d49a9e0a6847db6e49831b979a518ea7204a3c8"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-028-PR-10",
+   "field": "explanation.hintCore",
+   "text": "A count is not what she notices.",
+   "textSha256": "7eb48f4d0f27f5c6a841202a7c906b2e5f6fbb66b4ba133367b66b45c3338e39",
+   "readBy": "Annie",
+   "authority": "annie-eightyfourth-return.md, sha256 75967df0b034d33242fa60233d49a9e0a6847db6e49831b979a518ea7204a3c8"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-028-PR-11",
+   "field": "explanation.hintCore",
+   "text": "Something changes between swatting and stopping.",
+   "textSha256": "0b79088644338a086796f5d4fb8ae8103331d78161de718ccb1a16f874a772bc",
+   "readBy": "Annie",
+   "authority": "annie-eightyfourth-return.md, sha256 75967df0b034d33242fa60233d49a9e0a6847db6e49831b979a518ea7204a3c8"
+  },
+  {
+   "source": "ITEM",
+   "rowId": "ENG-028-PR-12",
+   "field": "explanation.hintCore",
+   "text": "One of these adds a telling the story never does.",
+   "textSha256": "d4ca14be752d04fd7d53562c1c87ce179c565b297771498aa77982309e05bd78",
+   "readBy": "Annie",
+   "authority": "annie-seventysecond-return.md, sha256 e974cc4ac3d7c0d5d350732f8140cde77e307c6e683b6b38328e7e08cb6d9741"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "en-a-an-by-spelling",
+   "field": "Misconception.childHint",
+   "text": "Listen to the sound that starts the next word.",
+   "textSha256": "b1fb26be688321557cb1f90b37d4e2f1ef4a11fdfc18345b8d18a288600ba98b"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "en-apostrophe-possession",
+   "field": "Misconception.childHint",
+   "text": "Ask whose it is. An owner needs an apostrophe. Try swapping in 'it is'.",
+   "textSha256": "a0e03f0ce5a48b20538d68a3f6269e62de6d04dc7e56be37f110bb0d051768e5"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "en-article-avoids-the-sound-choice",
+   "field": "Misconception.childHint",
+   "text": "This gap wants a or an. Say the next word aloud. Which sound starts it?",
+   "textSha256": "c8d5e1a8f31e0e6d5156bfefa52271f8fb3f3a77d43991aae922160527591dea"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "en-article-definiteness",
+   "field": "Misconception.childHint",
+   "text": "Has the text named it already? That changes which little word fits.",
+   "textSha256": "90e0e2dc4538e436346f2141a72054883deadeb355c41fbf7c702a417f5eb5df"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "en-comma-subject-verb-split",
+   "field": "Misconception.childHint",
+   "text": "Never let a single comma cut the do-er off from the doing.",
+   "textSha256": "9b7d4ac78056569ea2abe603d82af9dce233de5d45413df9d6d6291335e92c34"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "en-comparative-superlative-form",
+   "field": "Misconception.childHint",
+   "text": "Comparing two, or more than two? Then check the ending and the word before it are not both doing the job.",
+   "textSha256": "bfbb3acda4b24bf2cb9c2f03b349b3deed607446af57bc8a92d0b7b8253e7003"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "en-conjunction-logic",
+   "field": "Misconception.childHint",
+   "text": "Is the second idea a reason, a surprise, or just what happened next?",
+   "textSha256": "070813bbdeea74fa82dd719130cfe58d42127e8b9399570899ba679666a531c7"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "en-contraction-apostrophe",
+   "field": "Misconception.childHint",
+   "text": "Two words squeezed into one leave letters out. The apostrophe stands where the letters were.",
+   "textSha256": "3a0da907525099444e548c8be9ab509cac38c2c6ea8fdca6873b51a3b4149aea"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "en-double-consonant-boundary",
+   "field": "Misconception.childHint",
+   "text": "Say the root word first, then add the ending, and check which letter really doubles.",
+   "textSha256": "0535308b71e153a2f9714db03e2faacb160908bd7c290ae6095c88432f5aa877"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "en-homophone-by-sound",
+   "field": "Misconception.childHint",
+   "text": "Sound will not help with sound-alike words. Work out the meaning, then spell it from that.",
+   "textSha256": "90b51b1663571e69c66509192cdd42ecf0ee603c4d3d1e8a8a8f139bd699ec2e"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "en-modal-conditional-form",
+   "field": "Misconception.childHint",
+   "text": "An imagined if takes 'would'. A real if takes 'will'.",
+   "textSha256": "aaa408c7b2de5667c44c13c821cc45830bae3a17560ee84ec0a526d2bab516f7"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "en-paired-punctuation",
+   "field": "Misconception.childHint",
+   "text": "Brackets come in pairs, like shoes. Hunt for the partner.",
+   "textSha256": "7e47bcfa58a726b31a8693b10416c4408a2ce899115c424aeafdbffca739c577"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "en-relative-pronoun-choice",
+   "field": "Misconception.childHint",
+   "text": "Ask what the joining word stands for — a person, a thing, or something belonging to someone.",
+   "textSha256": "25b7e8cc529b5a6647ac69441167ffea58b621126dfda4a97845a67010070cef"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "en-silent-letter-dropped",
+   "field": "Misconception.childHint",
+   "text": "A letter can be there without being heard. Spell it out, do not sound it out.",
+   "textSha256": "08271a28fd2d0f216e51b7d41eb9bf3cf1e93bf035f47a5a40e631f7b861fd1b"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "en-spelling-form-lookalike",
+   "field": "Misconception.childHint",
+   "text": "Two words can look almost the same. Read the middle letters slowly, not the shape.",
+   "textSha256": "fd8e0dffbeba84a336628ff5c2e2c8f6559359fd291ecec96f94aed1a6298829"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "en-tense-sequence",
+   "field": "Misconception.childHint",
+   "text": "Did it happen before the story-moment? Then you usually need 'had' and the verb.",
+   "textSha256": "0cf63e7a4436dee68a37d35124abd00e8cabb13bcd319f64ee9ac32f781bf0c9"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "en-terminal-punctuation-blind",
+   "field": "Misconception.childHint",
+   "text": "Read it aloud. Where your voice stops or asks, the punctuation must match.",
+   "textSha256": "74d425665b967199c12737cb74f2982b0a18809235074f1af71f4e8741cb33b7"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "en-unstressed-medial-vowel",
+   "field": "Misconception.childHint",
+   "text": "A quiet middle vowel is still a letter. Say the word in parts and choose it.",
+   "textSha256": "f67c57531c26f18aefc13bef87e32b370448456630c84e38c00203da65890d59"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "en-unstressed-suffix-vowel",
+   "field": "Misconception.childHint",
+   "text": "Say a word from the same family with that ending stressed. Now you can hear the vowel.",
+   "textSha256": "ecea495e3aa2faf83acdb39463ccfda5defe0e689e9d23309c724d788ea5b8cc"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "en-word-class-by-ending",
+   "field": "Misconception.childHint",
+   "text": "Ask what job the word does in this sentence. Is it describing, or is it the action?",
+   "textSha256": "6259879800063749dd01443f4af2cb1ea344873b3570b4d188651c302ad34b40"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "vr-letter-series-direction",
+   "field": "Misconception.childHint",
+   "text": "Which way is the series moving through the alphabet? Check the first two letters.",
+   "textSha256": "adc155a7801b7553a7157c5cc35f4ff1db1c659194a2e4c0ff59380cf134c04a"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "vr-letter-series-off-by-one",
+   "field": "Misconception.childHint",
+   "text": "Count along the alphabet again. Land one letter at a time.",
+   "textSha256": "d558a24fb1ac5887a5c83dc57db189b3f9d8ded94c122209acd0545c4fe00ceb"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "vr-letter-series-step-repeat",
+   "field": "Misconception.childHint",
+   "text": "One jump at a time! Count the step from the last letter just once.",
+   "textSha256": "83a221d4551fdecee84a87e57a7bdc85632fb8ebefe0ce5cf3eead629239aed4"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "vr-series-off-by-one",
+   "field": "Misconception.childHint",
+   "text": "Count the last jump again, slowly. Check where it lands.",
+   "textSha256": "81b90e4f4eca845dcd33cc362a1870ab96bbd0ff006b74350a5cef24b29a9886"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "vr-series-step-applied-twice",
+   "field": "Misconception.childHint",
+   "text": "Take one jump from the last number, not two. Check the gaps first.",
+   "textSha256": "248fa56f3ec0f540b438651ed73a673a1f20bd8dfa7f6339cdd88c651491a424"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "vr-series-step-carryover",
+   "field": "Misconception.childHint",
+   "text": "Look at every jump, not just the first. Do they stay the same?",
+   "textSha256": "190c0b080e1cbe2eb1faff5170654166b3e80ad5ed3e5144312afaddfa720737"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "vr-series-sum-of-last-two",
+   "field": "Misconception.childHint",
+   "text": "Find what turns each number into the next one. Use the same thing.",
+   "textSha256": "e60c93f41c77dfdc031a0e9977b737f605f7177de6bcdef2a76d6d85fb65d41a"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "vr01-completes-neither",
+   "field": "Misconception.childHint",
+   "text": "Say both finished words out loud. Are they both real?",
+   "textSha256": "ed0bf676ecd9dd10abae6286948589d4883591cb4ae4327983809ed37bdf8f97"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "vr01-first-word-only",
+   "field": "Misconception.childHint",
+   "text": "Your letter has to finish both words. Try it in each gap.",
+   "textSha256": "e4efa41a27b2427f9bbf2f566c361e5c7d82e425af8c724818cd67214f9c67c6"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "vr01-second-word-only",
+   "field": "Misconception.childHint",
+   "text": "Check the first word too. Your letter must finish it as well.",
+   "textSha256": "5211276adf407a61ea59e2b97cb33b8c3873287898c6cd0032bbcc774cab0913"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "vr03-example-anchor",
+   "field": "Misconception.childHint",
+   "text": "The first pair only shows the rule. Now use that rule on the new word.",
+   "textSha256": "c1cdb82f2aceb77cd2838a5d73ef6887cf7cc48c5c266678acf3606e7545650a"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "vr03-part-for-kind",
+   "field": "Misconception.childHint",
+   "text": "A part is not the same as a whole. Check what the first pair gave you.",
+   "textSha256": "45bcf56fff3323dd813e3e45837e987cb8ce4ff28c844f06fd14c5084dd696aa"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "vr03-reversed-relation",
+   "field": "Misconception.childHint",
+   "text": "Check which way round the first pair goes. Keep your answer the same way round.",
+   "textSha256": "b0a7cc0765a3bba6eada001f18e897f6e83312e808656242c85a43aca392c697"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "vr03-same-topic",
+   "field": "Misconception.childHint",
+   "text": "Say the first pair as a sentence. Then use that exact sentence for the second.",
+   "textSha256": "0b7ee716dbe6abea49bd068981d7f94b7481e1197caea288964a2819d654dc81"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "vr03-wrong-link",
+   "field": "Misconception.childHint",
+   "text": "Make the first pair into a sentence. Then try your answer in the same sentence.",
+   "textSha256": "8cd698fa56b965c335a51fbb1074c34c6065a7c8e6fe2790f6ce04f681279a01"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "vr04-associated-not-same",
+   "field": "Misconception.childHint",
+   "text": "Goes-together is not the same as means-the-same. Swap the words in a sentence to test.",
+   "textSha256": "557b74d8fe404543fc7a55d341cb136cffea51867c069ec12be6b0632ce3b07d"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "vr04-opposite-pull",
+   "field": "Misconception.childHint",
+   "text": "That word points the other way. Read both meanings again.",
+   "textSha256": "5f7101dd1cbf5bf777ba037769ff99259efbccc4d2aca1aaad883d80829ca48f"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "vr06-ignores-sentence",
+   "field": "Misconception.childHint",
+   "text": "Read the whole sentence with your word in it. Does it make sense?",
+   "textSha256": "5521a1b2e4878964011c4fb0d6b688920d01b24e955ad6d1d331f65843021e10"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "vr07-operation-slip",
+   "field": "Misconception.childHint",
+   "text": "Look at the signs first. Is it plus, minus or times?",
+   "textSha256": "e26340a900ddd59849010c7b8f28a291426323a7228bc27d53d2128348d6533c"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "vr07-term-dropped",
+   "field": "Misconception.childHint",
+   "text": "Check you have used every letter. Count them as you go.",
+   "textSha256": "07bcf9a74eb02432a1a8a17edea0b1a690f75d22f3fda0821d07183f30c4109b"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "vr07-value-slip",
+   "field": "Misconception.childHint",
+   "text": "Write each letter’s number above it before you add.",
+   "textSha256": "523d8b502f53e243f84367b399371282fe3f0d96461c97eb873df2ffae958d2f"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "vr12-meaning-not-word",
+   "field": "Misconception.childHint",
+   "text": "The two halves must make one real word you have seen written.",
+   "textSha256": "1e8c63d0fbf9ef956ca2c494081d991b36c7852bf648d8e126bf0a0db3f9026a"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "vr14-step-direction",
+   "field": "Misconception.childHint",
+   "text": "Draw the arrow: which way did the first pair travel?",
+   "textSha256": "e6b1d5fdbd953bbfd81e030bfef91c917a8cdc5db8f2d98821f6de064a2d0933"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "vr14-step-size",
+   "field": "Misconception.childHint",
+   "text": "Count each hop along the alphabet. Say the number of steps out loud.",
+   "textSha256": "4400ffd291906180a4376530e51088c39029ccb1b63ce4b3383477c3f4103454"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "vr15-clue-flip",
+   "field": "Misconception.childHint",
+   "text": "Careful with the direction words: taller, older, faster. Who beats whom?",
+   "textSha256": "ab71f8226fa33f856c9c2e6a0365ce168dc7e388ac787d63e6be04c4e4288f09"
+  },
+  {
+   "source": "LIBRARY",
+   "rowId": "vr15-first-mention",
+   "field": "Misconception.childHint",
+   "text": "Use every clue to put them in order before you answer.",
+   "textSha256": "56a39f19d42c8df1d80999afe63c9e5285569698c543dbc1cf8fa95c9c6a5b36"
+  }
+ ],
+ "ROW_LINES": [
+  "ITEM\tENG-001-WIW-04\t3fc3aee5484acc21cc210b22db02832f895646c837a80d75a7989b938da55d65",
+  "ITEM\tENG-001-WIW-05\t428238ee99a9b4c7a423712d9cccd536a238231c695c441e113bf07a82e257d0",
+  "ITEM\tENG-001-WIW-06\te3e8998b0575f2f5c0486afeeca912b8a53af2ebb72c3a6a67541deac37fcd9e",
+  "ITEM\tENG-001-WIW-07\tc833ca616b23d239343ad1933c17f63ddd626ace2973ee306676dae28cd70d2f",
+  "ITEM\tENG-001-WIW-09\t77761435790043c9a657a7931d58afa8392b82ec5df8de1652e5b65e9ff1f08e",
+  "ITEM\tENG-001-WIW-11\t76589f0d99439d061ed8df798b2d13a80e99b85d6bbd092ddcd98ba512843268",
+  "ITEM\tENG-001-WIW-12\t7ae23d27ed6a8282119293f6390bea0bcd2ee77d8a8e0ac0e81905ef3eb9e777",
+  "ITEM\tENG-001-WIW-13\t9ea1d500fe24af0499139d0fc0f92473359448caf6a8e9a06f20b401dd6b52af",
+  "ITEM\tENG-001-WIW-14\ta2ad9808b00be3f5d14ac5e0bf010b0df0c62801ec3ec6497d29a08c9d2795ef",
+  "ITEM\tENG-001-WIW-15\t975ca18d442bf5f0b0b51104331701c7d1805c4891c01e0679ac531a6e0b11a6",
+  "ITEM\tENG-001-WIW-16\t7bebb05cbf1ad3f87154b769e05f4ed3b38650e65912851edef0bc227af8140e",
+  "ITEM\tENG-001-WIW-17\t955b028b2c06ef51a42862b4e7a84e6ff77a2a733f35a32d803b0c270f070204",
+  "ITEM\tENG-001-WIW-18\t294d8ae17c9ac910b0721f58d06bfa07c9ddcc64b3d75af137e93a3dcc63c075",
+  "ITEM\tENG-001-WIW-19\tda5d3eef350c3dcb7796e9faad16f2cfdbdf942d9939131c3a1c41ab65c7ffe6",
+  "ITEM\tENG-001-WIW-20\td9ab1a1e11f31c07dc10017c9996f08cc4f9663c06c85f8d888de6070a6aff33",
+  "ITEM\tENG-001-WIW-21\t7d542b664bf6b471ca628c2dd2fe4c7a779027ad17db87d7213afb5b90b9a69d",
+  "ITEM\tENG-001-WIW-22\t31d655923d1071075e3f8aecf0991541bf8b1275743d578559c540b15c1b4ac6",
+  "ITEM\tENG-003-A-CZ-A4\tb279b596997a32c76e42884a5b24396e6de37059f746f75596ac053cb0bff77d",
+  "ITEM\tENG-003-A-CZ-A5\t280896f1b24c3784fc052aeba0270a18bb8d6131424a0e871edf5b6ce66ef4e0",
+  "ITEM\tENG-003-A-CZ-A8\t8b80a5fae7eb3fe7de28a9979b0b3bfd467af67612e49669f5e728d1a5385964",
+  "ITEM\tENG-003-A-CZ-B1\tffa51a90a8b8a18a42d797968f1dec6dfe7137aef5c216f369783fd89aa42788",
+  "ITEM\tENG-003-A-CZ-B3\tc50d31e788900e628e61b85ff894e47481958c4eb377778b09d9e461fb51f10f",
+  "ITEM\tENG-003-A-PU-01\t2455aa2bd5ccba6d637369b7e64ec88224a6b12d086ca215d0153e699025c039",
+  "ITEM\tENG-003-A-PU-02\ta227cdd44fa22247128c9ff82ec62f98a669da874fbe184c8d23d5250042ab21",
+  "ITEM\tENG-003-A-PU-04\t5ff381eb8d3eaef311ea71e86e271ced3613654f3d4ea8d61c0063b6d5559e0c",
+  "ITEM\tENG-003-A-PU-05\t656ab312b2d043f6b5c04a02241201f6d6265ae16de064b97e05dc97eba6fc34",
+  "ITEM\tENG-003-A-PU-06\tec182db944216ae2f1c91aea66e43f030e2cbff16e600902b04214af333093dd",
+  "ITEM\tENG-003-A-PU-07\t746235590c1366e5afbf949ca728ed34900cdc3ef90ac54a9b002a5ff5d0d7a7",
+  "ITEM\tENG-003-A-PU-09\t14800206825fb28e3efd5c5caaf78a2c3a8966d2217bcd11be7fe3f01f1b7a71",
+  "ITEM\tENG-003-A-SP-07\t8a26dee1fae8106a84a770d270542cc97dfa65588605d43d82e65e1c8ec7a40c",
+  "ITEM\tENG-003-A-SP-09\t6c864a695295d9fa906611927366f05d528d26f255abfd15640e39b14fa2d28b",
+  "ITEM\tENG-028-PR-01\t68e246fc11b13c7f711b5bb5df174759a3c7537ddc5d97eef633d2d0ab8c7ef9",
+  "ITEM\tENG-028-PR-02\t46c3b99df560564e80053151678e61602136282d8bcf65c574393ec9a4844742",
+  "ITEM\tENG-028-PR-03\t94de1f9c0c8620f2fe468cc988057dbfa6ea66a686d4435b3d0529454ff1d8f1",
+  "ITEM\tENG-028-PR-04\teee065e8f22b3c9a5c19c2f2c186b1e48d6098330a20b37ae4d35d18be949ee2",
+  "ITEM\tENG-028-PR-05\tb80d3465c4111adfd60f6268f98f4fe434492dbb227ce769cd631c111e700c8b",
+  "ITEM\tENG-028-PR-06\taf2d7c10c4648506f564c70e0785ba33e92c89045309f876493e2f7f3c674d44",
+  "ITEM\tENG-028-PR-07\t6848c4d835bff702343d68789a6756d86bdcfd8a34ab3ffc578d2494df29003f",
+  "ITEM\tENG-028-PR-08\t69ae19dc5f1d2bf4556736c7d1a81b0dcf3a0dc6b7d165d487bb6f5003384453",
+  "ITEM\tENG-028-PR-09\t35334139856b49e720d129cff7d8af0a52a13fb655cb7a61762f2ffc6eaec07c",
+  "ITEM\tENG-028-PR-10\t7eb48f4d0f27f5c6a841202a7c906b2e5f6fbb66b4ba133367b66b45c3338e39",
+  "ITEM\tENG-028-PR-11\t0b79088644338a086796f5d4fb8ae8103331d78161de718ccb1a16f874a772bc",
+  "ITEM\tENG-028-PR-12\td4ca14be752d04fd7d53562c1c87ce179c565b297771498aa77982309e05bd78",
+  "LIBRARY\ten-a-an-by-spelling\tb1fb26be688321557cb1f90b37d4e2f1ef4a11fdfc18345b8d18a288600ba98b",
+  "LIBRARY\ten-apostrophe-possession\ta0e03f0ce5a48b20538d68a3f6269e62de6d04dc7e56be37f110bb0d051768e5",
+  "LIBRARY\ten-article-avoids-the-sound-choice\tc8d5e1a8f31e0e6d5156bfefa52271f8fb3f3a77d43991aae922160527591dea",
+  "LIBRARY\ten-article-definiteness\t90e0e2dc4538e436346f2141a72054883deadeb355c41fbf7c702a417f5eb5df",
+  "LIBRARY\ten-comma-subject-verb-split\t9b7d4ac78056569ea2abe603d82af9dce233de5d45413df9d6d6291335e92c34",
+  "LIBRARY\ten-comparative-superlative-form\tbfbb3acda4b24bf2cb9c2f03b349b3deed607446af57bc8a92d0b7b8253e7003",
+  "LIBRARY\ten-conjunction-logic\t070813bbdeea74fa82dd719130cfe58d42127e8b9399570899ba679666a531c7",
+  "LIBRARY\ten-contraction-apostrophe\t3a0da907525099444e548c8be9ab509cac38c2c6ea8fdca6873b51a3b4149aea",
+  "LIBRARY\ten-double-consonant-boundary\t0535308b71e153a2f9714db03e2faacb160908bd7c290ae6095c88432f5aa877",
+  "LIBRARY\ten-homophone-by-sound\t90b51b1663571e69c66509192cdd42ecf0ee603c4d3d1e8a8a8f139bd699ec2e",
+  "LIBRARY\ten-modal-conditional-form\taaa408c7b2de5667c44c13c821cc45830bae3a17560ee84ec0a526d2bab516f7",
+  "LIBRARY\ten-paired-punctuation\t7e47bcfa58a726b31a8693b10416c4408a2ce899115c424aeafdbffca739c577",
+  "LIBRARY\ten-relative-pronoun-choice\t25b7e8cc529b5a6647ac69441167ffea58b621126dfda4a97845a67010070cef",
+  "LIBRARY\ten-silent-letter-dropped\t08271a28fd2d0f216e51b7d41eb9bf3cf1e93bf035f47a5a40e631f7b861fd1b",
+  "LIBRARY\ten-spelling-form-lookalike\tfd8e0dffbeba84a336628ff5c2e2c8f6559359fd291ecec96f94aed1a6298829",
+  "LIBRARY\ten-tense-sequence\t0cf63e7a4436dee68a37d35124abd00e8cabb13bcd319f64ee9ac32f781bf0c9",
+  "LIBRARY\ten-terminal-punctuation-blind\t74d425665b967199c12737cb74f2982b0a18809235074f1af71f4e8741cb33b7",
+  "LIBRARY\ten-unstressed-medial-vowel\tf67c57531c26f18aefc13bef87e32b370448456630c84e38c00203da65890d59",
+  "LIBRARY\ten-unstressed-suffix-vowel\tecea495e3aa2faf83acdb39463ccfda5defe0e689e9d23309c724d788ea5b8cc",
+  "LIBRARY\ten-word-class-by-ending\t6259879800063749dd01443f4af2cb1ea344873b3570b4d188651c302ad34b40",
+  "LIBRARY\tvr-letter-series-direction\tadc155a7801b7553a7157c5cc35f4ff1db1c659194a2e4c0ff59380cf134c04a",
+  "LIBRARY\tvr-letter-series-off-by-one\td558a24fb1ac5887a5c83dc57db189b3f9d8ded94c122209acd0545c4fe00ceb",
+  "LIBRARY\tvr-letter-series-step-repeat\t83a221d4551fdecee84a87e57a7bdc85632fb8ebefe0ce5cf3eead629239aed4",
+  "LIBRARY\tvr-series-off-by-one\t81b90e4f4eca845dcd33cc362a1870ab96bbd0ff006b74350a5cef24b29a9886",
+  "LIBRARY\tvr-series-step-applied-twice\t248fa56f3ec0f540b438651ed73a673a1f20bd8dfa7f6339cdd88c651491a424",
+  "LIBRARY\tvr-series-step-carryover\t190c0b080e1cbe2eb1faff5170654166b3e80ad5ed3e5144312afaddfa720737",
+  "LIBRARY\tvr-series-sum-of-last-two\te60c93f41c77dfdc031a0e9977b737f605f7177de6bcdef2a76d6d85fb65d41a",
+  "LIBRARY\tvr01-completes-neither\ted0bf676ecd9dd10abae6286948589d4883591cb4ae4327983809ed37bdf8f97",
+  "LIBRARY\tvr01-first-word-only\te4efa41a27b2427f9bbf2f566c361e5c7d82e425af8c724818cd67214f9c67c6",
+  "LIBRARY\tvr01-second-word-only\t5211276adf407a61ea59e2b97cb33b8c3873287898c6cd0032bbcc774cab0913",
+  "LIBRARY\tvr03-example-anchor\tc1cdb82f2aceb77cd2838a5d73ef6887cf7cc48c5c266678acf3606e7545650a",
+  "LIBRARY\tvr03-part-for-kind\t45bcf56fff3323dd813e3e45837e987cb8ce4ff28c844f06fd14c5084dd696aa",
+  "LIBRARY\tvr03-reversed-relation\tb0a7cc0765a3bba6eada001f18e897f6e83312e808656242c85a43aca392c697",
+  "LIBRARY\tvr03-same-topic\t0b7ee716dbe6abea49bd068981d7f94b7481e1197caea288964a2819d654dc81",
+  "LIBRARY\tvr03-wrong-link\t8cd698fa56b965c335a51fbb1074c34c6065a7c8e6fe2790f6ce04f681279a01",
+  "LIBRARY\tvr04-associated-not-same\t557b74d8fe404543fc7a55d341cb136cffea51867c069ec12be6b0632ce3b07d",
+  "LIBRARY\tvr04-opposite-pull\t5f7101dd1cbf5bf777ba037769ff99259efbccc4d2aca1aaad883d80829ca48f",
+  "LIBRARY\tvr06-ignores-sentence\t5521a1b2e4878964011c4fb0d6b688920d01b24e955ad6d1d331f65843021e10",
+  "LIBRARY\tvr07-operation-slip\te26340a900ddd59849010c7b8f28a291426323a7228bc27d53d2128348d6533c",
+  "LIBRARY\tvr07-term-dropped\t07bcf9a74eb02432a1a8a17edea0b1a690f75d22f3fda0821d07183f30c4109b",
+  "LIBRARY\tvr07-value-slip\t523d8b502f53e243f84367b399371282fe3f0d96461c97eb873df2ffae958d2f",
+  "LIBRARY\tvr12-meaning-not-word\t1e8c63d0fbf9ef956ca2c494081d991b36c7852bf648d8e126bf0a0db3f9026a",
+  "LIBRARY\tvr14-step-direction\te6b1d5fdbd953bbfd81e030bfef91c917a8cdc5db8f2d98821f6de064a2d0933",
+  "LIBRARY\tvr14-step-size\t4400ffd291906180a4376530e51088c39029ccb1b63ce4b3383477c3f4103454",
+  "LIBRARY\tvr15-clue-flip\tab71f8226fa33f856c9c2e6a0365ce168dc7e388ac787d63e6be04c4e4288f09",
+  "LIBRARY\tvr15-first-mention\t56a39f19d42c8df1d80999afe63c9e5285569698c543dbc1cf8fa95c9c6a5b36"
+ ],
+ "rowLinesSha256": "6f25f0f5d58a2f4b85616e7b14229c4633090aa4164473faf0f3ff83deedf47e",
+ "rowLinesSha256Spec": "sha256 over the ROW_LINES joined by \\n, no trailing newline, each \"<source>\\t<rowId>\\t<sha256 of the hint text>\", encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content.",
+ "findingsSha256": "e3d57079e38189403f8dd69a5d68b187d591b8f48c741d5d2ce6fe2c1854cbb9",
+ "howToCheckThisOnArrival": {
+  "subtreeKeys": [
+   "THE_POPULATION",
+   "THE_METHOD",
+   "ROWS",
+   "ROW_LINES"
+  ],
+  "subtree": "an object of THIS DOCUMENT'S OWN TOP-LEVEL KEYS, exactly as spelled in subtreeKeys and nowhere renamed: {\"THE_POPULATION\", \"THE_METHOD\", \"ROWS\", \"ROW_LINES\"}",
+  "spec": "sha256 over json.dumps(subtree, sort_keys=True, separators=(\",\",\":\"), ensure_ascii=False).encode(\"utf-8\") — R729. ensure_ascii defaults to True and gives a different number.",
+  "andTheFileDigest": "the staging line and the .sha256 sidecar, over the whole file bytes"
+ },
+ "instrumentProvenance": {
+  "emittedBy": "emit-serving-hint-half.ts",
+  "carriedFixture": true,
+  "meaning": "the emitting instrument proved itself against carried cases — including at least one clean case caught by nothing — before it produced these figures (R721)."
+ }
+}
