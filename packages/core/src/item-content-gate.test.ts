@@ -51,7 +51,7 @@ describe('carrier sentence takes the word-card role', () => {
         testedTokens: ['notorious'],
       },
     });
-    expect(failures.map((f) => f.rule)).toContain('long-words');
+    expect(failures.map((f) => f.rule)).toContain('four-syllable-words');
   });
 
   it("applies the same rule to vr-06's cloze sentence field", () => {
@@ -138,14 +138,14 @@ describe('option branch takes the stem branch\'s arguments (R148)', () => {
     const faults = checkItemChildFacing({
       ...base, stem: { text: 'Line 41. Why?' }, options: opts(`He is ${TWO_DISTINCT}.`),
     }).filter(isBlocking);
-    expect(faults.some((f) => f.rule === 'long-words')).toBe(true);
+    expect(faults.some((f) => f.rule === 'four-syllable-words')).toBe(true);
   });
 
   it('the ordinary/extraordinary pair is ONE hard word, not two (R338)', () => {
     const faults = checkItemChildFacing({
       ...base, stem: { text: 'Line 41. Why?' }, options: opts(`He is ${QUOTE}.`),
     }).filter(isBlocking);
-    expect(faults.some((f) => f.rule === 'long-words')).toBe(false);
+    expect(faults.some((f) => f.rule === 'four-syllable-words')).toBe(false);
   });
 
   it('a stem span the option does not use is NOT reported against it', () => {

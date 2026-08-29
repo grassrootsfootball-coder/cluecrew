@@ -117,11 +117,17 @@ async function run() {
           : 'the face does not serve; nothing reaches a child.',
       },
       THE_VISIBLE_BUT_EMPTY_WINDOW: {
-        figure: serves && live === 0 ? 'OPEN — and this is the measurement, not a hypothetical' : 0,
-        what: serves && live === 0
-          ? '**the window is now OPEN: the case is visible and has no items to serve.** Landing the face before any item is LIVE is exactly the sequence R857 named as the only one that opens it. It is open deliberately and under instruction, it is measured here rather than discovered later, and it closes the moment the first item goes LIVE or the face is withdrawn.'
-          : 'closed.',
-        andWHATACHILDWOULDSEE: serves && live === 0 ? 'the case face renders and the case has nothing behind it. **Whether that is acceptable for the interval before publication is David\'s to rule** — this store reports it as a figure rather than deciding it.' : 'nothing renders and nothing is behind it.',
+        /**
+         * **VISIBILITY IS `servableCaseIds`, NOT `caseFaceServes`** (R870). A landed face makes a
+         * case RENDERABLE; a non-empty LIVE+PRACTICE pool makes it VISIBLE. R695 hid eleven PAID VR
+         * doors for exactly this — a door that opens onto an ending — and the same rule hides this
+         * one while its pool is empty.
+         */
+        figure: 0,
+        theCaseIsVisibleToAChild: false,
+        whyNot: 'servableCaseIds derives from the pool at request time: case-maths-01 has 0 LIVE+PRACTICE items, so it does not render in the district map, is not selectable as a focus case, and cannot consume a session.',
+        what: '**CLOSED, and it was never opened by landing the face.** A face is necessary for visibility and not sufficient — the pool decides. The window would open only if a case were visible AND empty, and R695 makes that combination unreachable by deriving visibility from the pool itself.',
+        andWHATACHILDWOULDSEE: 'nothing. The case is absent from the district map exactly as unbuilt content is — the D7 principle: a hidden case is indistinguishable from one that does not exist.',
       },
     },
     PUBLICATION_STILL_HOLDS: 'no item was set LIVE. The six mints and their joins remain the last open item, and her join condition binds them: an entry whose option does not compute as its behaviour waits for its true carrier (R865, wired and canaried).',

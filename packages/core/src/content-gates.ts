@@ -77,7 +77,14 @@ export function roleForItemStem(mechanic: string | null | undefined): ContentRol
 export interface RoleRules {
   /** null = no sentence-length cap for this role. */
   maxSentenceWords: number | null;
-  /** `null` = the cap does not bind this role (R868). Not zero — zero would forbid every long word. */
+  /**
+   * **THE FOUR-SYLLABLE CAP. IT HAS NEVER COUNTED LETTERS** (R871 — renamed from `maxLongWords`'s
+   * old `long-words` rule name). The test is `syllables(word) >= 4`: `operations` and `percentages`
+   * count, `proportion` does not, and it is ten letters. **The old name invited every reader to
+   * check lengths and disagree with the gate**, which is what happened.
+   *
+   * `null` = the cap does not bind this role (R868). Not zero — zero would forbid every such word.
+   */
   maxLongWords: number | null;
 }
 
@@ -112,7 +119,7 @@ export const ROLE_RULES: Record<ContentRole, RoleRules> = {
 
 export interface ContentFailure {
   where: string;
-  rule: 'sentence-length' | 'long-words' | 'banned-vocabulary' | 'internal-id-leak' | 'us-spelling' | 'notation' | 'placeholder-tag' | 'notice-standard' | 'unclassified-path';
+  rule: 'sentence-length' | 'four-syllable-words' | 'banned-vocabulary' | 'internal-id-leak' | 'us-spelling' | 'notation' | 'placeholder-tag' | 'notice-standard' | 'unclassified-path';
   detail: string;
   /**
    * Absent means 'error' — every rule that existed before UK spelling arrived
@@ -429,9 +436,11 @@ export function checkReadingAge(
   if (rules.maxLongWords !== null && distinctLongWords.length > rules.maxLongWords) {
     failures.push({
       where: label,
-      rule: 'long-words',
-      detail: `${distinctLongWords.length} distinct long word(s) (max ${rules.maxLongWords}): `
-        + `${distinctLongWords.join(', ')}`
+      rule: 'four-syllable-words',
+      detail: `${distinctLongWords.length} distinct word(s) of FOUR OR MORE SYLLABLES (max ${rules.maxLongWords}): `
+        // Reported WITHOUT their trailing punctuation: printing "operations," made the gate look
+        // as though it matched punctuation, and sent readers to count the wrong string (R871).
+        + `${distinctLongWords.map((w) => w.replace(/[^A-Za-z']/g, '')).join(', ')}`
         + (longWords.length !== distinctLongWords.length
           ? ` — counted from ${longWords.length} token(s); repeats and shared roots count once (R338)`
           : ''),
@@ -446,7 +455,7 @@ export function checkReadingAge(
   if (tokenOnly.length > 0 && role !== 'word-card') {
     failures.push({
       where: label,
-      rule: 'long-words',
+      rule: 'four-syllable-words',
       severity: 'warning',
       detail: `${tokenOnly.length} long word(s) exempted by testedTokens ALONE, with no declaration `
         + `covering them: ${[...new Set(tokenOnly)].join(', ')} — an unsourced exemption`,

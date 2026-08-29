@@ -44,12 +44,12 @@ describe('reading age is checked BY ROLE (David’s spec correction, 2026-08-02)
       'Something completely unnecessary and unbelievably complicated.',
       'thing',
     );
-    expect(failures.some((f) => f.rule === 'long-words')).toBe(true);
+    expect(failures.some((f) => f.rule === 'four-syllable-words')).toBe(true);
   });
 
   it('the word being taught is exempt from its own definition', () => {
     const withHeadword = checkReadingAge('word-card', 'c', 'Extraordinary means very unusual.', 'extraordinary');
-    expect(withHeadword.filter((f) => f.rule === 'long-words')).toEqual([]);
+    expect(withHeadword.filter((f) => f.rule === 'four-syllable-words')).toEqual([]);
   });
 
   it('an unclassified role falls back to the STRICTEST rules, never the loosest', () => {
@@ -377,7 +377,7 @@ describe('inline quotation inside a stem (David’s ruling, 2026-08-02)', () => 
         label: 'x',
         text: `He writes: ${hard}. Why?`,
         quotedSpans: [hard],
-      }).some((f) => f.rule === 'long-words'),
+      }).some((f) => f.rule === 'four-syllable-words'),
     ).toBe(false);
   });
 });
@@ -403,7 +403,7 @@ describe('the tested-token exemption (David’s ruling, 2026-08-02)', () => {
 
   it('without the declaration they still count', () => {
     expect(
-      checkReadingAge('item-stem-proofread', 'x', SPELLING).some((f) => f.rule === 'long-words'),
+      checkReadingAge('item-stem-proofread', 'x', SPELLING).some((f) => f.rule === 'four-syllable-words'),
     ).toBe(true);
   });
 
@@ -415,7 +415,7 @@ describe('the tested-token exemption (David’s ruling, 2026-08-02)', () => {
       '',
       ['dictionery'],
     );
-    expect(failures.some((f) => f.rule === 'long-words')).toBe(true);
+    expect(failures.some((f) => f.rule === 'four-syllable-words')).toBe(true);
     expect(failures[0]!.detail).not.toContain('dictionery');
   });
 
@@ -484,7 +484,7 @@ describe('a quotation is outside the sentence cap (David’s gate rule, 2026-08-
     const hard = 'his countenance was extraordinarily disagreeable and unnecessarily complicated';
     expect(
       checkReadingAge('item-stem', 'x', `He writes: ${hard}. Why?`, '', [], [hard]).some(
-        (f) => f.rule === 'long-words',
+        (f) => f.rule === 'four-syllable-words',
       ),
     ).toBe(false);
   });
@@ -493,14 +493,14 @@ describe('a quotation is outside the sentence cap (David’s gate rule, 2026-08-
     const quoted = 'his countenance was disagreeable';
     const ours = `This extraordinary unnecessarily complicated question asks: '${quoted}'. Why?`;
     expect(
-      checkReadingAge('item-stem', 'x', ours, '', [], [quoted]).some((f) => f.rule === 'long-words'),
+      checkReadingAge('item-stem', 'x', ours, '', [], [quoted]).some((f) => f.rule === 'four-syllable-words'),
     ).toBe(true);
   });
 
   it('BOUND — an undeclared archaic quote is still counted', () => {
     const hard = 'his countenance was extraordinarily disagreeable and unnecessarily complicated';
     expect(
-      checkReadingAge('item-stem', 'x', `He writes: ${hard}. Why?`).some((f) => f.rule === 'long-words'),
+      checkReadingAge('item-stem', 'x', `He writes: ${hard}. Why?`).some((f) => f.rule === 'four-syllable-words'),
     ).toBe(true);
   });
 });
@@ -530,9 +530,9 @@ describe('R23 — declared passage proper nouns', () => {
   it('R23: a declared passage name is exempt from the CEILING ONLY', () => {
     const text = 'Elizabeth understood immediately.';
     // Undeclared, the name counts against the ceiling like any other four-syllable word.
-    expect(checkReadingAge('item-stem', 'T', text, '', [], [], []).some((f) => f.rule === 'long-words')).toBe(true);
+    expect(checkReadingAge('item-stem', 'T', text, '', [], [], []).some((f) => f.rule === 'four-syllable-words')).toBe(true);
     // Declared, it does not — the passage has already taught it.
-    expect(checkReadingAge('item-stem', 'T', text, '', [], [], ['Elizabeth']).some((f) => f.rule === 'long-words')).toBe(false);
+    expect(checkReadingAge('item-stem', 'T', text, '', [], [], ['Elizabeth']).some((f) => f.rule === 'four-syllable-words')).toBe(false);
     // But the exemption reaches the ceiling and nothing else: the ban list still bites.
     expect(
       checkChildFacingText({ role: 'item-stem', label: 'T', text: 'Elizabeth got the wrong answer.', passageNames: ['Elizabeth'] })
@@ -651,15 +651,15 @@ describe('R689 — the doorplate role: notice-class, stance gates, no word cap',
 describe('the long-word cap binds the hint role, not the notice class (R868)', () => {
   const text = 'This case covers the four operations, fractions and percentages, and proportion.';
   it('binds the hint role', () => {
-    expect(checkChildFacingText({ role: 'hint', label: 'x', text }).some((f) => f.rule === 'long-words')).toBe(true);
+    expect(checkChildFacingText({ role: 'hint', label: 'x', text }).some((f) => f.rule === 'four-syllable-words')).toBe(true);
   });
   it('binds item-stem too', () => {
-    expect(checkChildFacingText({ role: 'item-stem', label: 'x', text }).some((f) => f.rule === 'long-words')).toBe(true);
+    expect(checkChildFacingText({ role: 'item-stem', label: 'x', text }).some((f) => f.rule === 'four-syllable-words')).toBe(true);
   });
   it('does NOT bind the notice role', () => {
-    expect(checkChildFacingText({ role: 'notice', label: 'x', text }).some((f) => f.rule === 'long-words')).toBe(false);
+    expect(checkChildFacingText({ role: 'notice', label: 'x', text }).some((f) => f.rule === 'four-syllable-words')).toBe(false);
   });
   it('does NOT bind the doorplate role', () => {
-    expect(checkChildFacingText({ role: 'doorplate', label: 'x', text }).some((f) => f.rule === 'long-words')).toBe(false);
+    expect(checkChildFacingText({ role: 'doorplate', label: 'x', text }).some((f) => f.rule === 'four-syllable-words')).toBe(false);
   });
 });

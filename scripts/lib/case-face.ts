@@ -41,10 +41,23 @@ export async function landCaseFace(
   });
   const recordPath = join(repoRoot, 'content/case-faces', `${caseId}.json`);
   const prior = existsSync(recordPath) ? JSON.parse(readFileSync(recordPath, 'utf8')) as Record<string, unknown> : null;
+  /**
+   * **THE STATE BEFORE THERE WAS A FACE IS ALSO A PRIOR** (R872). This path retained prior FACES
+   * and nothing else, so the FIRST landing on any case overwrote whatever the slot held — for
+   * `case-maths-01`, a narrativeIntro carrying the EMPTY-slot marker — with no record of it.
+   *
+   * **Nothing was lost that time and that was luck**: the marker's bytes had already crossed in
+   * another artefact. A retention that depends on the state having been copied elsewhere is not a
+   * retention. The pre-face state is now captured from the ROW, before the write, on every landing.
+   */
+  const preFace = { title: row.title, narrativeIntro: row.narrativeIntro };
   writeFileSync(recordPath, JSON.stringify({
     caseId, title: face.title, narrativeText: face.narrativeText,
     approvedBy, authority, landedAt: new Date().toISOString().slice(0, 10),
     ...(prior && prior.title ? { _previous: prior } : {}),
+    // R872 — the row as it stood BEFORE this landing, always, whether or not a prior FACE existed.
+    // On a first landing this is the only record that the slot was empty and what it held instead.
+    _preFaceState: preFace,
   }, null, 1));
   await prisma.attributionEvent.create({
     data: {

@@ -1,0 +1,77 @@
+{
+ "kind": "maths-face-landing",
+ "mode": "APPLIED",
+ "THE_CUT": {
+  "cutBeganAt": "2026-08-29T21:07:00.954Z",
+  "cutSealedAt": "2026-08-29T21:07:01.169Z",
+  "sourceLastWriteAt": "2026-08-29T20:30:19.008Z",
+  "TORN": false,
+  "meaning": "WHOLE — the source's last write precedes this cut, so one moment describes the artefact and cutBeganAt is that moment."
+ },
+ "HER_AUTHORITY": {
+  "return": "annie-191-for-code.md",
+  "sha256": "24f592ae9ccc5502478dc3f71bf90f5ebc17ea9ed3faa544bbff9260c4c462ad",
+  "verdict": "APPROVED, both strings, unamended — the first child-facing face in this project to pass a reading without a single change."
+ },
+ "THE_STRINGS": {
+  "titleSha256": "88f99fae8ce3fd85a5e2d53abaa72f6998e5e20133a38ecd003613870eb8c2fb",
+  "descriptionSha256": "e5235dc9585b7acaecd92cae3c5e988aec9b1897396e98a53e936b5d38802466",
+  "titleBytes": 28,
+  "descriptionBytes": 426,
+  "noTrailingNewlineOnEither": true
+ },
+ "THE_LANDING": "LANDED through landCaseFace",
+ "THE_BYTE_ASSERTION": {
+  "titleStoredBytesSha256": "88f99fae8ce3fd85a5e2d53abaa72f6998e5e20133a38ecd003613870eb8c2fb",
+  "titleCrossedSha256": "88f99fae8ce3fd85a5e2d53abaa72f6998e5e20133a38ecd003613870eb8c2fb",
+  "TITLE_BYTE_IDENTICAL": true,
+  "descriptionStoredBytesSha256": "e5235dc9585b7acaecd92cae3c5e988aec9b1897396e98a53e936b5d38802466",
+  "descriptionCrossedSha256": "e5235dc9585b7acaecd92cae3c5e988aec9b1897396e98a53e936b5d38802466",
+  "DESCRIPTION_BYTE_IDENTICAL": true,
+  "why": "**she approved BYTES, not a wording.** A face that stores \"the same text\" with a normalised space or a stripped newline has stored something she did not read. The assertion is over the STORED string, hashed after the write."
+ },
+ "THE_PRIOR": {
+  "before": "The Ashline Working Register",
+  "stampedBy": "landCaseFace stamps the prior into `_previous` on the record — the standing path, not a direct write"
+ },
+ "THE_STATE": {
+  "caseFaceServes": true,
+  "blastRadiusWalkedFromTheRows": {
+   "itemsThatWouldReachAChild": 0,
+   "signed": 173,
+   "of": 187,
+   "liveItems": 0,
+   "THE_READING": "**the face now serves, and the blast radius is 0** — the number of LIVE items, which is zero. The face opening does not open the district: an item reaches a child only when it is LIVE, and nothing is."
+  },
+  "THE_VISIBLE_BUT_EMPTY_WINDOW": {
+   "figure": 0,
+   "theCaseIsVisibleToAChild": false,
+   "whyNot": "servableCaseIds derives from the pool at request time: case-maths-01 has 0 LIVE+PRACTICE items, so it does not render in the district map, is not selectable as a focus case, and cannot consume a session.",
+   "what": "**CLOSED, and it was never opened by landing the face.** A face is necessary for visibility and not sufficient — the pool decides. The window would open only if a case were visible AND empty, and R695 makes that combination unreachable by deriving visibility from the pool itself.",
+   "andWHATACHILDWOULDSEE": "nothing. The case is absent from the district map exactly as unbuilt content is — the D7 principle: a hidden case is indistinguishable from one that does not exist."
+  }
+ },
+ "PUBLICATION_STILL_HOLDS": "no item was set LIVE. The six mints and their joins remain the last open item, and her join condition binds them: an entry whose option does not compute as its behaviour waits for its true carrier (R865, wired and canaried).",
+ "ASSERTION_LINES": [
+  "title\t88f99fae8ce3fd85a5e2d53abaa72f6998e5e20133a38ecd003613870eb8c2fb\ttrue",
+  "description\te5235dc9585b7acaecd92cae3c5e988aec9b1897396e98a53e936b5d38802466\ttrue"
+ ],
+ "assertionSha256": "499fb7a97355091a38aa1f34922b15ef39b566a3f971503d2a727d5b6d30a999",
+ "assertionSha256Spec": "sha256 over the assertion lines joined by \\n, each \"<field>\\t<crossed sha256>\\t<byte-identical>\", encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content.",
+ "findingsSha256": "b5e9e5e77cefe817570b6fe22f823f2e7067e9cca05de27c50a08fff7638f221",
+ "howToCheckThisOnArrival": {
+  "subtreeKeys": [
+   "THE_BYTE_ASSERTION",
+   "THE_STATE",
+   "ASSERTION_LINES"
+  ],
+  "subtree": "an object of THIS DOCUMENT'S OWN TOP-LEVEL KEYS, exactly as spelled in subtreeKeys and nowhere renamed: {\"THE_BYTE_ASSERTION\", \"THE_STATE\", \"ASSERTION_LINES\"}",
+  "spec": "sha256 over json.dumps(subtree, sort_keys=True, separators=(\",\",\":\"), ensure_ascii=False).encode(\"utf-8\") — R729. ensure_ascii defaults to True and gives a different number.",
+  "andTheFileDigest": "the staging line and the .sha256 sidecar, over the whole file bytes"
+ },
+ "instrumentProvenance": {
+  "emittedBy": "land-maths-face.ts",
+  "carriedFixture": true,
+  "meaning": "the emitting instrument proved itself against carried cases — including at least one clean case caught by nothing — before it produced these figures (R721)."
+ }
+}

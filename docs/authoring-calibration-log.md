@@ -23922,3 +23922,60 @@ no `_previous`: this is the first face ever landed on this case, so there was no
 without retention.** The standing path retains prior FACES; it does not retain the state a case was
 in before it had one. That is a small gap and it is named rather than repaired: the marker's content
 is recorded verbatim at R861 and in the crossed artefact `b3918841…`, so nothing is lost this time.
+
+## R870 — CORRECTION: the window is closed, and a face does not make a case visible
+
+**My prose said the visible-but-empty window was OPEN. It is CLOSED, figure 0, and my own artefact's
+blast radius said so.**
+
+**A landed face makes a case RENDERABLE; a non-empty LIVE pool makes it VISIBLE.** `servableCaseIds`
+derives visibility from the pool AT REQUEST TIME: `case-maths-01` has 0 LIVE+PRACTICE items, so it
+does not render in the district map, is not selectable as a focus case, and cannot consume a
+session. Measured: **16 of 28 cases servable; this one is not.**
+
+**I conflated `caseFaceServes` with visibility**, and they are two different gates in series. The
+face was the one I had just landed, so it was the one I reasoned from.
+
+**And the fault I nearly reported as fine is the exact fault eleven PAID VR doors were hidden for**
+(R695): a door that opens onto an ending, sitting in the default path. That rule is why the window
+**cannot** open by landing a face — visibility is derived from the pool itself, so the combination
+*visible AND empty* is unreachable rather than merely avoided. **A correct claim of OPEN would have
+described a regression that R695 makes impossible.**
+
+The artefact is corrected at `8140844360811c5e…`, and the correction runs the right way round: **the
+artefact was right and the prose was wrong**, which is the opposite of the usual direction here and
+worth recording for that reason alone.
+
+## R871 — The rule is renamed to what it tests
+
+`long-words` → **`four-syllable-words`**. The test is `syllables(word) >= 4` and has never counted
+letters: `operations` and `percentages` count; `proportion` does not, and it is ten letters.
+
+**The name was the fault.** *"2 distinct long word(s)"* sends every reader to count lengths, and a
+reader who counts lengths disagrees with the gate whenever a long word is short of syllables — which
+is precisely the disagreement the desk and this store just had. The message now reads *"distinct
+word(s) of FOUR OR MORE SYLLABLES"*, and the reported words are stripped of trailing punctuation:
+printing `operations,` made the gate look as though it matched punctuation and sent readers to count
+the wrong string.
+
+**A rule whose name states a different predicate from its test will be re-litigated by everyone who
+reads only its output**, and the output is what most readers ever see.
+
+## R872 — The state before there was a face is also a prior
+
+`landCaseFace` retained prior FACES and nothing else, so the **first** landing on any case overwrote
+whatever the slot held with no record of it. For `case-maths-01` that was a `narrativeIntro` carrying
+the EMPTY-slot marker.
+
+**Nothing was lost, and that was luck**: the marker's bytes had already crossed in another artefact
+(R861), so the record existed somewhere else by coincidence of a different instruction. **A
+retention that depends on the state having been copied elsewhere is not a retention.**
+
+Wired: `_preFaceState` captures the ROW as it stood before the write, on **every** landing, whether
+or not a prior face existed. On a first landing it is the only record that the slot was empty and
+what it held instead.
+
+**The distinction the old code missed is the one R842 already drew**: an empty prior is a STATE, not
+an absence. `prior && prior.title` treated the empty string as "nothing to retain", and the one case
+where retention matters most — the first landing, the only moment the pre-face state exists — was
+the exact case it skipped.
