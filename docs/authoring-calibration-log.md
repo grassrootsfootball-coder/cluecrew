@@ -22878,3 +22878,38 @@ each other and this store cannot decide it.**
 **So her ruling stands unserved, and that is the honest report.** Zero rows survive scrutiny — which
 is not *no mis-joins exist*, it is *this instrument cannot see them* (R60), and on a screen written
 to find a mechanism the difference is the whole answer.
+
+## R827 — The glyph scan clears the import: nothing is stripped, and the absence is authorial
+
+Her ruling put this ahead of the sitting — **eight rows losing one character is a mechanism** — and
+if the import stripped, the degree sign would not be the only casualty. **It does not strip.**
+
+Scanned across all landed rows, source against row, for `° £ × ÷ −`, fractions and superscripts:
+**ROWS LOSING ANY GLYPH: ZERO.** Degree 77 in source, 77 on the rows. Superscripts 12 and 12. The
+`£` count RISES, on exactly the rows the door normalised — a gain, reported apart from a loss.
+
+**And the five temperature items carry NO degree glyph in the staged source.** They were authored
+`4C`, `9C`, `3C`, `8C`, `5C`, `6C`, `10C`. The staged file holds **88 degree glyphs in total**, so
+it uses the character freely elsewhere and simply does not use it here. **There is no mechanism.
+The absence is authorial**, which is the opposite of what a stripping import would look like and is
+why the scan had to run before the sitting rather than after it.
+
+**A correction to my own check, which nearly told the opposite story.** A first pass reported ZERO
+degree glyphs in the entire staged file — evidence for a very different conclusion. It used Python's
+`json.dumps` with `ensure_ascii` defaulted TRUE, escaping `°` to `°`, so a substring count
+found none. **R729's fault, inside the check written to test for character loss** — the one place
+where an escaping bug and the thing being measured are indistinguishable.
+
+**Her dispositions landed.** The degree repair applies at the door and requires a DIGIT before the
+C, so *"Point C is on the line"* is untouched. The over-cap stems stand as a **door disposition**:
+the gate still enforces the sixteen-word cap globally and this door sets those faults aside on her
+ruling. **The discrepancy is named rather than hidden** — whether the gate itself should change is a
+separate ruling and is not assumed here.
+
+**Nine more landed; nine still refuse, and none of them for a reason she has ruled on.** Seven say
+**"error"** in a walk script, one says **"wrong"**, one breaks the long-word rule. **Three of the
+five temperature items are among them** — their degree faults were repaired and they are held by a
+separate, correct refusal. Saying *the temperature items are held* would have been true and
+misleading; they are held for saying "error" to a child.
+
+**187 items DRAFT, 0 LIVE, 0 signed, and every landed row gates clean.**
