@@ -23704,3 +23704,58 @@ executes and there is nothing for a hint to attach to without it.
 carries no title, `caseFaceServes` is false, and the case is invisible however many items are
 signed. **Signing changes what MAY serve; the face decides whether anything DOES** — and the two are
 independent by design, which is the whole reason the visible-but-empty window cannot open.
+
+## R861 — The face crossed as bytes, and the bytes say something the paraphrase could not
+
+The face slot has been described to her and never crossed as a string. Crossed now, verbatim, with
+its own digest.
+
+**And the bytes carry a fact the description could not.** `title` is the **empty string**;
+`narrativeIntro` holds a **state marker**, not prose — a record that the slot is empty and how a
+face may land. **Nothing in this case has ever been written for a child to read.**
+
+**A paraphrase of an empty slot and a paraphrase of a wording are indistinguishable to a reader who
+has seen neither.** "The face is empty" and "the face holds a placeholder" and "the face holds a
+draft nobody approved" all reduce to the same sentence at second hand, and only the bytes separate
+them. That is the whole case for crossing a string rather than an account of it (R25), and it is
+sharpest where the string is absent.
+
+**It is the last child-facing item in the district.** Every stem, option, hint and walk script has
+crossed and been read; this has not. **Nothing was drafted** — the slot crossed, not a proposal,
+because a placeholder would make the face SERVE, which is the one thing failing closed prevents.
+
+## R862 — Publish the ids, do not adopt the number
+
+Two stores counting the untagged: **fourteen here over 187 landed rows, eleven there over the sent
+171.** The instruction offered adoption or publication, and **publication is the only one that
+settles anything.**
+
+**Scoped to the same 171, this store counts EIGHT — not eleven.** So the gap was never only scope:
+the two stores disagree about which rows carry an untagged distractor **even over one population**.
+Six of the fourteen sit outside the send entirely, all MC01 rows that arrived by the exemplar rather
+than by the send.
+
+**Adopting the 11 would have made the two counts agree and left three rows in dispute that nobody
+could name.** A number adopted is a disagreement closed by deference; ids published are a
+disagreement reduced to a subtraction anyone can run. **The reconciliation is now mechanical, and it
+was not available at any point while both sides were exchanging totals.**
+
+Every id crosses with whether it is in the sent 171 and which of its option values carry no tag —
+because *"fourteen untagged"* names no row, and R569 already ruled that a match carries what it
+matched on.
+
+## R863 — The correction that had to reach her, and why speed mattered
+
+The desk routed this store's twelve to Annie as **movement caused by her own amendments**. **It was
+false, and the record says so: the rows never moved.**
+
+All twelve reproduce exactly under the projection their pins were taken with, and those pins came
+from her 182nd — **after** the amendments blamed for moving them. What moved was this store's hash,
+when R858 stopped counting retention and the corrected projection was applied to pins already taken
+under the old one (R859).
+
+**A reviewer told that text she verified has changed cannot un-know it.** She would read the next
+artefact looking for drift she had been told to expect, and **every ordinary difference would look
+like evidence** — a false alarm about signatures does not merely waste a reading, it recalibrates
+one. That is why it crosses now rather than as a footnote to the next batch, and why the artefact
+states it in the plainest available words rather than as a revision of an earlier figure.
