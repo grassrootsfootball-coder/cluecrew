@@ -23868,3 +23868,57 @@ than reconciled. `caseFaceServes` false, blast radius zero, the visible-but-empt
 one sequence R857 named — a visible case with no LIVE items behind it. **The gate that refused her
 wording also held the window shut**, which is not a defence of the refusal but is worth knowing
 before anyone hurries to resolve it.
+
+## R868 — What the long-word rule actually counts, and R689's second half
+
+**Reported before repairing, as ruled. The rule is not the length rule its name claims.**
+
+`long-words` counts words of **FOUR OR MORE SYLLABLES**, by `syllables()` — vowel-groups after
+stripping a trailing `e`. It never measured letters:
+
+| word | letters | syllables | counted |
+|---|---|---|---|
+| `operations` | 10 | 4 | **yes** |
+| `percentages` | 11 | 4 | **yes** |
+| `proportion` | 10 | **3** | no |
+| `percentage` | 10 | 3 | no |
+
+So the desk's *three words of ten or more letters* and the gate's *two* were both right about
+different rules. **`proportion` is ten letters and three syllables**, and the gate was correct to
+pass it. Then R338's dedup runs on top: distinct headwords, not tokens, with a word containing
+another counted once.
+
+**The name is the fault, not the rule.** *"2 distinct long word(s)"* invites a reader to check
+lengths, and a reader who does will disagree with the gate every time a long word is short of
+syllables. A rule whose name states a different predicate from its test will be re-litigated
+forever by anyone who reads only its output.
+
+**And the ruling: the cap binds the HINT role and not the notice class.** Same ground as the
+sixteen-word cap — a child mid-item after a miss, reading under pressure. **A notice is not read
+under pressure**: it is read once, at a door, with nothing riding on it. `notice` and `doorplate`
+now carry `maxLongWords: null` — **null, not zero**, because zero would forbid every long word
+rather than lift the cap.
+
+**This is R689's second half.** That ruling gave the doorplate role no word cap and stance gates
+only — and left `maxLongWords: 1` in place, because the role was minted by copying a row and its
+caps came with it unexamined. **A role minted by copying inherits every cap nobody re-read**, and
+the inheritance is invisible precisely because it was never decided.
+
+## R869 — The face landed on her bytes, and the window is open by instruction
+
+`The Ashline Working Register` and its description are on the case, **byte-identical as stored** —
+title `88f99fae8ce3…`, description `e5235dc9585b…`, hashed after the write, not before. **She
+approved a string and the string is what landed**: no normalised space, no stripped newline, no
+"same wording".
+
+**`caseFaceServes` is now TRUE, and the visible-but-empty window is OPEN.** 173 of 187 signed, **0
+LIVE**, so the case is visible with nothing behind it. That is exactly the sequence R857 named as
+the only one that opens the window — **and it is open by instruction, measured here rather than
+discovered later.** It closes when the first item goes LIVE.
+
+**Two notes on the prior.** The record at `content/case-faces/case-maths-01.json` correctly carries
+no `_previous`: this is the first face ever landed on this case, so there was no prior face to stamp.
+**But the DB's pre-face state — `narrativeIntro` holding the EMPTY-slot marker — was replaced
+without retention.** The standing path retains prior FACES; it does not retain the state a case was
+in before it had one. That is a small gap and it is named rather than repaired: the marker's content
+is recorded verbatim at R861 and in the crossed artefact `b3918841…`, so nothing is lost this time.

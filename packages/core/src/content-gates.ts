@@ -77,7 +77,8 @@ export function roleForItemStem(mechanic: string | null | undefined): ContentRol
 export interface RoleRules {
   /** null = no sentence-length cap for this role. */
   maxSentenceWords: number | null;
-  maxLongWords: number;
+  /** `null` = the cap does not bind this role (R868). Not zero — zero would forbid every long word. */
+  maxLongWords: number | null;
 }
 
 /** 16 words at reading age 9 — the repo's long-standing ceiling. */
@@ -94,11 +95,19 @@ export const ROLE_RULES: Record<ContentRole, RoleRules> = {
   // a long sentence. The vocabulary ceiling still holds — that is what
   // "reading age ≤9" actually protects.
   'word-card': { maxSentenceWords: null, maxLongWords: 1 },
-  // The notice role (R669): no word cap — a notice states a fact with its reason in the same
-  // breath, and the notice standard's own gates bind it instead (checkNoticeStandard).
-  notice: { maxSentenceWords: null, maxLongWords: 1 },
+  /**
+   * The notice role (R669): no word cap — a notice states a fact with its reason in the same
+   * breath, and the notice standard's own gates bind it instead (checkNoticeStandard).
+   *
+   * **AND NO LONG-WORD CAP EITHER (R868 — R689's second half).** The cap binds the HINT role, for
+   * the reason the sixteen-word cap does: a child mid-item after a miss, reading under pressure.
+   * **A notice is not read under pressure** — it is read once, at a door, with nothing riding on
+   * it. The notice role was minted by copying a row and its caps came with it unexamined; this is
+   * the examination.
+   */
+  notice: { maxSentenceWords: null, maxLongWords: null },
   // The doorplate role (R689): notice-class, no word cap; stance gates only (see the role's doc).
-  doorplate: { maxSentenceWords: null, maxLongWords: 1 },
+  doorplate: { maxSentenceWords: null, maxLongWords: null },
 };
 
 export interface ContentFailure {
@@ -417,7 +426,7 @@ export function checkReadingAge(
   }
   const distinctLongWords = [...distinctRoots.values()];
 
-  if (distinctLongWords.length > rules.maxLongWords) {
+  if (rules.maxLongWords !== null && distinctLongWords.length > rules.maxLongWords) {
     failures.push({
       where: label,
       rule: 'long-words',

@@ -1,0 +1,88 @@
+{
+ "kind": "maths-face-landing",
+ "mode": "APPLIED",
+ "THE_CUT": {
+  "cutBeganAt": "2026-08-29T20:53:41.296Z",
+  "cutSealedAt": "2026-08-29T20:53:41.482Z",
+  "sourceLastWriteAt": "2026-08-29T20:30:19.008Z",
+  "TORN": false,
+  "meaning": "WHOLE — the source's last write precedes this cut, so one moment describes the artefact and cutBeganAt is that moment."
+ },
+ "HER_AUTHORITY": {
+  "return": "annie-191-for-code.md",
+  "sha256": "24f592ae9ccc5502478dc3f71bf90f5ebc17ea9ed3faa544bbff9260c4c462ad",
+  "verdict": "APPROVED, both strings, unamended — the first child-facing face in this project to pass a reading without a single change."
+ },
+ "THE_STRINGS": {
+  "titleSha256": "88f99fae8ce3fd85a5e2d53abaa72f6998e5e20133a38ecd003613870eb8c2fb",
+  "descriptionSha256": "e5235dc9585b7acaecd92cae3c5e988aec9b1897396e98a53e936b5d38802466",
+  "titleBytes": 28,
+  "descriptionBytes": 426,
+  "noTrailingNewlineOnEither": true
+ },
+ "THE_LANDING": {
+  "outcome": "REFUSED BY THE STANDING PATH — nothing was written and nothing was bypassed",
+  "refusal": "landCaseFace REFUSED — the wording fails the child-facing gate: 2 distinct long word(s) (max 1): operations,, percentages,",
+  "THE_CONFLICT": "**she approved these bytes and the child-facing gate refuses them.** Her 191st reads *\"House checks clean over the bytes: no dashes, no contractions, no shouts, four sentences, none straining readability\"* — and the long-word cap fires on TWO distinct long words where the maximum is one.",
+  "theTwoWords": [
+   "operations",
+   "percentages"
+  ],
+  "andBOTHAREINTHECONTENTLISTSHEENDORSED": "her return names that list explicitly — *place value, the four operations, fractions and percentages, measures and money, shape, charts and proportion* — and says it is *true of the corpus as built*. **The gate is not refusing an oversight; it is refusing the sentence she checked most closely.**",
+  "itFIRESUNDEREVERYROLE": "doorplate, notice and narrative all refuse on the same two words, so this is not a role misfit like the first landing attempt (R689).",
+  "aCOSMETICNOTEONTHEREPORT": "the gate prints the words with their trailing commas — \"operations,\" and \"percentages,\" — which makes it look as though punctuation is being matched. It is not: both are long by the rule regardless, and a third ten-letter word (*proportion*) is NOT counted, so the rule is not simple length.",
+  "WHAT_THIS_STORE_WILL_NOT_DO": "amend her approved text, lower the cap, exempt the doorplate role, or land through anything other than the standing path. **Each of those resolves a reviewer-versus-rule conflict by quietly picking a side**, and the picking is the fault, not the outcome.",
+  "soITWAITS": "the face stays empty, which is the state it was already in and the state that fails closed. **Nothing is worse than before and nothing is decided.**"
+ },
+ "THE_BYTE_ASSERTION": {
+  "titleStoredBytesSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "titleCrossedSha256": "88f99fae8ce3fd85a5e2d53abaa72f6998e5e20133a38ecd003613870eb8c2fb",
+  "TITLE_BYTE_IDENTICAL": false,
+  "descriptionStoredBytesSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "descriptionCrossedSha256": "e5235dc9585b7acaecd92cae3c5e988aec9b1897396e98a53e936b5d38802466",
+  "DESCRIPTION_BYTE_IDENTICAL": false,
+  "why": "**she approved BYTES, not a wording.** A face that stores \"the same text\" with a normalised space or a stripped newline has stored something she did not read. The assertion is over the STORED string, hashed after the write."
+ },
+ "THE_PRIOR": {
+  "before": "the title was the empty string; the narrativeIntro held a state marker, not prose",
+  "stampedBy": "landCaseFace stamps the prior into `_previous` on the record — the standing path, not a direct write"
+ },
+ "THE_STATE": {
+  "caseFaceServes": false,
+  "blastRadiusWalkedFromTheRows": {
+   "itemsThatWouldReachAChild": 0,
+   "signed": 173,
+   "of": 187,
+   "liveItems": 0,
+   "THE_READING": "the face does not serve; nothing reaches a child."
+  },
+  "THE_VISIBLE_BUT_EMPTY_WINDOW": {
+   "figure": 0,
+   "what": "closed.",
+   "andWHATACHILDWOULDSEE": "nothing renders and nothing is behind it."
+  }
+ },
+ "PUBLICATION_STILL_HOLDS": "no item was set LIVE. The six mints and their joins remain the last open item, and her join condition binds them: an entry whose option does not compute as its behaviour waits for its true carrier (R865, wired and canaried).",
+ "ASSERTION_LINES": [
+  "title\t88f99fae8ce3fd85a5e2d53abaa72f6998e5e20133a38ecd003613870eb8c2fb\tfalse",
+  "description\te5235dc9585b7acaecd92cae3c5e988aec9b1897396e98a53e936b5d38802466\tfalse"
+ ],
+ "assertionSha256": "8af5b7a1ebfc8d8a90cdd0f34e7cc21d826a76e58e04afb85cfcac08d5bd6bba",
+ "assertionSha256Spec": "sha256 over the assertion lines joined by \\n, each \"<field>\\t<crossed sha256>\\t<byte-identical>\", encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content.",
+ "findingsSha256": "80e48b2b6385858d67cada427dfeec2f72e427467afd419dde96d86019c1af81",
+ "howToCheckThisOnArrival": {
+  "subtreeKeys": [
+   "THE_BYTE_ASSERTION",
+   "THE_STATE",
+   "ASSERTION_LINES"
+  ],
+  "subtree": "an object of THIS DOCUMENT'S OWN TOP-LEVEL KEYS, exactly as spelled in subtreeKeys and nowhere renamed: {\"THE_BYTE_ASSERTION\", \"THE_STATE\", \"ASSERTION_LINES\"}",
+  "spec": "sha256 over json.dumps(subtree, sort_keys=True, separators=(\",\",\":\"), ensure_ascii=False).encode(\"utf-8\") — R729. ensure_ascii defaults to True and gives a different number.",
+  "andTheFileDigest": "the staging line and the .sha256 sidecar, over the whole file bytes"
+ },
+ "instrumentProvenance": {
+  "emittedBy": "land-maths-face.ts",
+  "carriedFixture": true,
+  "meaning": "the emitting instrument proved itself against carried cases — including at least one clean case caught by nothing — before it produced these figures (R721)."
+ }
+}

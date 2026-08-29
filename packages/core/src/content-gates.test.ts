@@ -647,3 +647,19 @@ describe('R689 — the doorplate role: notice-class, stance gates, no word cap',
     expect(checkNoticeStandard('n', 'One. Two. Three because reasons.').some((f) => f.detail.includes('one sentence'))).toBe(true);
   });
 });
+
+describe('the long-word cap binds the hint role, not the notice class (R868)', () => {
+  const text = 'This case covers the four operations, fractions and percentages, and proportion.';
+  it('binds the hint role', () => {
+    expect(checkChildFacingText({ role: 'hint', label: 'x', text }).some((f) => f.rule === 'long-words')).toBe(true);
+  });
+  it('binds item-stem too', () => {
+    expect(checkChildFacingText({ role: 'item-stem', label: 'x', text }).some((f) => f.rule === 'long-words')).toBe(true);
+  });
+  it('does NOT bind the notice role', () => {
+    expect(checkChildFacingText({ role: 'notice', label: 'x', text }).some((f) => f.rule === 'long-words')).toBe(false);
+  });
+  it('does NOT bind the doorplate role', () => {
+    expect(checkChildFacingText({ role: 'doorplate', label: 'x', text }).some((f) => f.rule === 'long-words')).toBe(false);
+  });
+});
