@@ -11,6 +11,7 @@ import {
 } from '@/lib/actions/admin-items';
 import { ItemFormFields } from '@/components/item-form';
 import { ComprehensionReview } from '@/components/admin/comprehension-review';
+import { MathsReview } from '@/components/admin/maths-review';
 import { currentStaff, roleAllows } from '@/lib/staff';
 import { shuffleOptionsForChild } from '@/lib/crew/shuffle';
 import { optionLabel } from '@/components/crew/engines/shared';
@@ -82,8 +83,10 @@ export default async function ItemDetailPage({
   // reviewer needs the passage it cites, the error each distractor executes, and what the child is
   // told. Loaded only for English items so nothing else pays for it.
   const isEnglish = item.questionType.district === 'ENGLISH';
+  // R856 — the surface renders the item or refuses the action. Maths now renders.
+  const isMaths = item.questionType.district === 'MATHS';
   const tagIds = item.options.map((o) => o.misconceptionId).filter((m): m is string => m !== null);
-  const hintRows = isEnglish && tagIds.length
+  const hintRows = (isEnglish || isMaths) && tagIds.length
     ? await prisma.misconception.findMany({
       where: { id: { in: tagIds } },
       select: { id: true, childHint: true, description: true, status: true },
@@ -106,6 +109,7 @@ export default async function ItemDetailPage({
       </p>
       {error ? <p role="alert">{ERROR_COPY[error] ?? 'That action was blocked.'}</p> : null}
       {isEnglish ? <ComprehensionReview item={item} hints={hints} /> : null}
+      {isMaths ? <MathsReview item={item} hints={hints} /> : null}
       {item.reviewNotes ? (
         <div className="cc-card">
           <strong>Returned with notes:</strong> {item.reviewNotes}

@@ -23596,3 +23596,70 @@ Inclusion-based blinding fails in a specific and predictable way: it leaks preci
 one process writes and another does not, **which is the definition of provenance.** A blind built by
 copying rows and removing what looks revealing is a blind maintained by vigilance, and vigilance is
 not a mechanism.
+
+## R856 — The review surface renders the maths item, so the refusal has its other half
+
+Her ruling: **the surface renders the item or refuses the action.** The refusal was built and
+correct; until now the admin page showed a maths item's id, status, type name and author, and
+**a signature taken against that page would have recorded that somebody did not look.**
+
+`MathsReview` renders what a maths verdict actually needs: the stem; every option with its value,
+key flag, misconception, execution note and **the hint a child would be told**; the item hint; the
+walk script; and, where an id carried more than one question, the collision resolution with its
+retired variants. It reads and never writes — the verdict is still taken by the existing actions.
+
+An untagged distractor renders as **NOT TAGGED — this blocks the verdict**, because that is exactly
+what `publishBlockers` will say, and the reviewer should meet the blocker on the page rather than
+at the button.
+
+## R857 — Everything the district needs, in one run, with publication held
+
+**Signatures: 162 landed, 25 refused.** `reviewedBy`, `reviewMethod`, `reviewRecordedBy` and
+`reviewRecordNote` are written in one transaction with a SIGNED attribution event carrying the row
+hash — **authority recorded, not implied**: the reviewer id, the returns it comes from, and the hash
+it was taken against.
+
+**The refusals are two populations and they are not the same fact.** Fourteen refuse on
+`missing-misconceptions` — a distractor with no tag, which no signature can cure. **Twelve refuse
+because their bytes have moved since she verified them, and EVERY ONE MOVED BY ONE OF HER OWN
+AMENDMENTS** — the 180th's money keys, the 182nd's measures extension, the routine dash and degree
+repairs. Not one move is unexplained.
+
+**The refusal stands anyway, and that is her ruling working rather than misfiring.** A signature
+taken against a stale hash records that somebody did not check. **The remedy is a RE-PIN, not a
+re-read** (R840), and the re-pin is not this store's to make.
+
+**The nine assert 6 of 6 byte-identical** against the amended source through the same door; the
+other three are the unresolved pairs, which have no single form to regenerate. **The two held rows
+carry their ruled variants with the unchosen shelved.**
+
+**The face fails closed and nothing was drafted.** `case-maths-01` has an empty title, so
+`caseFaceServes` is false and **no item reaches any child regardless of status.** The wording is
+Cowork's to draft and Annie's to approve, as case-en-06's was — **and a placeholder would have made
+the face SERVE, which is the one thing failing closed prevents.**
+
+**The visible-but-empty window is ZERO, and structurally so.** The face is invisible until a wording
+lands, and by then the items are whatever they are. **There is no ordering of the two acts that
+opens a window** — it would take landing a face wording before the items are LIVE, which is the
+sequence the fail-closed rule exists to make impossible by default rather than by discipline.
+
+**187 rows: 162 REVIEWED, 25 DRAFT, 0 LIVE. Publication holds.**
+
+## R858 — A content hash must not carry retention, or recording provenance falsifies the signature
+
+The first run of the signing reported six rows as *bytes moved* and all nine amendments as *drift*.
+**Every one was mine.** The rows carry `_stemCollisionResolved` and `_previousValue`, written BY the
+landings; the pinned hashes were computed before those keys existed.
+
+**A record of what changed is not part of what a reviewer read.** So it cannot be part of the hash
+that asks whether her text moved — otherwise **every act of recording provenance falsifies the
+signature it is recording**, and the more carefully a store keeps its history the less of it can be
+signed.
+
+Stripping `_`-prefixed keys at every level: the nine went 0 of 6 to **6 of 6**, and the false
+movers resolved to twelve genuine ones with named causes.
+
+**This is R845 one layer over.** There the notation gate screened retention and demanded house form
+of retired text. Here the content hash counted retention and reported a signature as stale because
+the store had written down why it changed. **Same distinction, two mechanisms, and both found only
+when a retention field finally carried something.**

@@ -1,0 +1,2158 @@
+{
+ "kind": "maths-publication-build",
+ "mode": "DRY RUN — nothing written",
+ "THE_CUT": {
+  "cutBeganAt": "2026-08-29T20:20:10.919Z",
+  "cutSealedAt": "2026-08-29T20:20:11.385Z",
+  "sourceLastWriteAt": "2026-08-29T20:07:55.440Z",
+  "TORN": false,
+  "meaning": "WHOLE — the source's last write precedes this cut, so one moment describes the artefact and cutBeganAt is that moment."
+ },
+ "PUBLICATION_HOLDS": "nothing in this run sets an item LIVE. The signatures are REVIEWED, which is the stage before serving, and the face fails closed underneath all of it.",
+ "ONE_THE_SIGNATURES": {
+  "herRuling": "refuse any row whose bytes have moved — a signature onto text she never saw is not a signature.",
+  "counts": {
+   "WOULD SIGN": 167,
+   "REFUSED": 20
+  },
+  "bytesMoved": [
+   "MC01-FDP-04",
+   "MC02-NPV-07",
+   "MC04-FDP-04",
+   "MC05-FDP-01",
+   "MC05-FDP-08",
+   "MC05-MEAS-02"
+  ],
+  "refusedOnBlockers": [
+   {
+    "itemId": "MC01-CALC-02",
+    "blocker": "missing-misconceptions"
+   },
+   {
+    "itemId": "MC01-CALC-07",
+    "blocker": "missing-misconceptions"
+   },
+   {
+    "itemId": "MC01-CALC-08",
+    "blocker": "missing-misconceptions"
+   },
+   {
+    "itemId": "MC01-FDP-03",
+    "blocker": "missing-misconceptions"
+   },
+   {
+    "itemId": "MC01-FDP-08",
+    "blocker": "missing-misconceptions"
+   },
+   {
+    "itemId": "MC01-GEOM-04",
+    "blocker": "missing-misconceptions"
+   },
+   {
+    "itemId": "MC01-GEOM-05",
+    "blocker": "missing-misconceptions"
+   },
+   {
+    "itemId": "MC01-GEOM-06",
+    "blocker": "missing-misconceptions"
+   },
+   {
+    "itemId": "MC01-MEAS-01",
+    "blocker": "missing-misconceptions"
+   },
+   {
+    "itemId": "MC01-MEAS-02",
+    "blocker": "missing-misconceptions"
+   },
+   {
+    "itemId": "MC01-NPV-03",
+    "blocker": "missing-misconceptions"
+   },
+   {
+    "itemId": "MC01-STATS-01",
+    "blocker": "missing-misconceptions"
+   },
+   {
+    "itemId": "MC01-STATS-03",
+    "blocker": "missing-misconceptions"
+   },
+   {
+    "itemId": "MC01-STATS-04",
+    "blocker": "missing-misconceptions"
+   }
+  ],
+  "theFieldISNOWWRITABLE": "reviewedBy, reviewMethod, reviewRecordedBy and reviewRecordNote are written together through one transaction with a SIGNED attribution event carrying the row hash. **Authority is recorded, not implied**: the reviewer id, the returns it comes from, and the hash it was taken against.",
+  "rows": [
+   {
+    "itemId": "MC01-CALC-01",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "b620ed4009580592a74ee2e1ae22447d3b85044220f43929b707b7784e6cd67b",
+    "hashNow": "b620ed4009580592a74ee2e1ae22447d3b85044220f43929b707b7784e6cd67b",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC01-CALC-02",
+    "outcome": "REFUSED — missing-misconceptions",
+    "pinnedHash": "9b3bd11e4976e3f0cb3185e8f29cbe1596dc49d231cf7e8ae5b374ab0ce64433",
+    "hashNow": "9b3bd11e4976e3f0cb3185e8f29cbe1596dc49d231cf7e8ae5b374ab0ce64433",
+    "bytesMoved": false,
+    "publishBlocker": "missing-misconceptions",
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC01-CALC-05",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "f22ccea8db95702e62b8ca77f3c2d9f3d454940961a96dd8c9144d726c63f4ad",
+    "hashNow": "f22ccea8db95702e62b8ca77f3c2d9f3d454940961a96dd8c9144d726c63f4ad",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC01-CALC-07",
+    "outcome": "REFUSED — missing-misconceptions",
+    "pinnedHash": "c63e54e3caacf25016651b53915cb79c52ee6325773316e179a38caf4c2de0f7",
+    "hashNow": "c63e54e3caacf25016651b53915cb79c52ee6325773316e179a38caf4c2de0f7",
+    "bytesMoved": false,
+    "publishBlocker": "missing-misconceptions",
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC01-CALC-08",
+    "outcome": "REFUSED — missing-misconceptions",
+    "pinnedHash": "5ed67269df3b2300974d5247e85a5aab9e909958a4fd968f2431bb5618966577",
+    "hashNow": "5ed67269df3b2300974d5247e85a5aab9e909958a4fd968f2431bb5618966577",
+    "bytesMoved": false,
+    "publishBlocker": "missing-misconceptions",
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC01-FDP-01",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "7ef0e41f2cb35f8408de29e3e7105a6491b85e89b692894c6d68c18f55b178b8",
+    "hashNow": "7ef0e41f2cb35f8408de29e3e7105a6491b85e89b692894c6d68c18f55b178b8",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC01-FDP-02",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "d649de119d1095f4235f5d7b2aad57262cee9880cd7446edc3094091157f7787",
+    "hashNow": "d649de119d1095f4235f5d7b2aad57262cee9880cd7446edc3094091157f7787",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC01-FDP-03",
+    "outcome": "REFUSED — missing-misconceptions",
+    "pinnedHash": "9fea8856794467c1162128d5dac53bd9c05df20af09004686cc49ea4a01bd27c",
+    "hashNow": "9fea8856794467c1162128d5dac53bd9c05df20af09004686cc49ea4a01bd27c",
+    "bytesMoved": false,
+    "publishBlocker": "missing-misconceptions",
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC01-FDP-04",
+    "outcome": "REFUSED — THE BYTES HAVE MOVED SINCE SHE VERIFIED",
+    "pinnedHash": "09e859050f8bfc0f4ab5aa659512531ef754e826c0df1daa32736ca4b2040610",
+    "hashNow": "346a08c8bc41ecb30b8c751810d23a58be36ea146d964de8023846e378c9b9c8",
+    "bytesMoved": true,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC01-FDP-07",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "481c5740c1f786ce5b6a900723a1904fc915381f2e149602d02fe66001c82535",
+    "hashNow": "481c5740c1f786ce5b6a900723a1904fc915381f2e149602d02fe66001c82535",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC01-FDP-08",
+    "outcome": "REFUSED — missing-misconceptions",
+    "pinnedHash": "ffd6aba1f1e5cd51d6227d764113e9e99f8f641ebd111a296f25fbbfd5a19360",
+    "hashNow": "ffd6aba1f1e5cd51d6227d764113e9e99f8f641ebd111a296f25fbbfd5a19360",
+    "bytesMoved": false,
+    "publishBlocker": "missing-misconceptions",
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC01-GEOM-01",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "5a28fa7c1ba0cc9f2d27214a3cd74704b4d00d2e5bd42089bce0f218f3bbb614",
+    "hashNow": "5a28fa7c1ba0cc9f2d27214a3cd74704b4d00d2e5bd42089bce0f218f3bbb614",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC01-GEOM-02",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "a2f62aa7a5384f976d6020171bc5431a7a9548da592cc9746c7aedceed104c68",
+    "hashNow": "a2f62aa7a5384f976d6020171bc5431a7a9548da592cc9746c7aedceed104c68",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC01-GEOM-04",
+    "outcome": "REFUSED — missing-misconceptions",
+    "pinnedHash": "69bdc10fe2199664b2efdb26147119b9a9845333bb378ffa123b1e11c2fd9982",
+    "hashNow": "69bdc10fe2199664b2efdb26147119b9a9845333bb378ffa123b1e11c2fd9982",
+    "bytesMoved": false,
+    "publishBlocker": "missing-misconceptions",
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC01-GEOM-05",
+    "outcome": "REFUSED — missing-misconceptions",
+    "pinnedHash": "9cc994c3e9abad7dc167b43d41f8ef5af9e6ec02408dab822cf2d57d005cfa2a",
+    "hashNow": "9cc994c3e9abad7dc167b43d41f8ef5af9e6ec02408dab822cf2d57d005cfa2a",
+    "bytesMoved": false,
+    "publishBlocker": "missing-misconceptions",
+    "gateFaults": [
+     "sentence-length: sentence of 25 words (max 16 for item-stem): \"An L-shape is made from a rectangle 10 cm by 6 cm with a 4 c…\""
+    ]
+   },
+   {
+    "itemId": "MC01-GEOM-06",
+    "outcome": "REFUSED — missing-misconceptions",
+    "pinnedHash": "a7677051a315290cdeb6a65adf22aee397d753ce66e5a1f0637e7de1c4fbf608",
+    "hashNow": "a7677051a315290cdeb6a65adf22aee397d753ce66e5a1f0637e7de1c4fbf608",
+    "bytesMoved": false,
+    "publishBlocker": "missing-misconceptions",
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC01-MEAS-01",
+    "outcome": "REFUSED — missing-misconceptions",
+    "pinnedHash": "c37a5d5644738dd1a2bb9177fdae0b3f1bc44f36b64f97524d57d59105e53209",
+    "hashNow": "c37a5d5644738dd1a2bb9177fdae0b3f1bc44f36b64f97524d57d59105e53209",
+    "bytesMoved": false,
+    "publishBlocker": "missing-misconceptions",
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC01-MEAS-02",
+    "outcome": "REFUSED — missing-misconceptions",
+    "pinnedHash": "94feb06719ba0e4b5ca6bf3ac8198343ced2bcce4aec2786e680813a6d62480d",
+    "hashNow": "94feb06719ba0e4b5ca6bf3ac8198343ced2bcce4aec2786e680813a6d62480d",
+    "bytesMoved": false,
+    "publishBlocker": "missing-misconceptions",
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC01-MEAS-03",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "a8cbef047ab9c037504ac9c1c815ffc1f99c3357eb43d98ac5d2e9a844ef5d39",
+    "hashNow": "a8cbef047ab9c037504ac9c1c815ffc1f99c3357eb43d98ac5d2e9a844ef5d39",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC01-MEAS-04",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "2e8e85fe467e73281b9bb88c855f36e5e4d245f361f2ad41c9c2db183cb22d2d",
+    "hashNow": "2e8e85fe467e73281b9bb88c855f36e5e4d245f361f2ad41c9c2db183cb22d2d",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC01-MEAS-05",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "f43dd5d7876e6128cab1229bbf66976b5d062716dc0e423887c4b0ee6f333fa4",
+    "hashNow": "f43dd5d7876e6128cab1229bbf66976b5d062716dc0e423887c4b0ee6f333fa4",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC01-MEAS-06",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "ec586e76f9f4283af81865f0e29f9d6746731448ae35636421fa9dd9f37101d4",
+    "hashNow": "ec586e76f9f4283af81865f0e29f9d6746731448ae35636421fa9dd9f37101d4",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC01-MEAS-07",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "3e5a43bbf85f5532896726ab76f60f86731efe5bddf85a262bd3696069d50287",
+    "hashNow": "3e5a43bbf85f5532896726ab76f60f86731efe5bddf85a262bd3696069d50287",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC01-NPV-01",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "fbcd35050470e455a8fc55033ca4b6cdce7cdc810c20c6902061bba299a266f0",
+    "hashNow": "fbcd35050470e455a8fc55033ca4b6cdce7cdc810c20c6902061bba299a266f0",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC01-NPV-02",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "67f9f63a067ba7ddeb118c17fb945a1ced9d2243e24d23a4ccb7d57b6be006c0",
+    "hashNow": "67f9f63a067ba7ddeb118c17fb945a1ced9d2243e24d23a4ccb7d57b6be006c0",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC01-NPV-03",
+    "outcome": "REFUSED — missing-misconceptions",
+    "pinnedHash": "45e1821a5c9ba481d758bccb0de36ed5deb0fa52f5a3083d1008c5b46e295f2d",
+    "hashNow": "45e1821a5c9ba481d758bccb0de36ed5deb0fa52f5a3083d1008c5b46e295f2d",
+    "bytesMoved": false,
+    "publishBlocker": "missing-misconceptions",
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC01-NPV-04",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "208e689e235254743f4da578668f95002799dde703784f047bd784732105eede",
+    "hashNow": "208e689e235254743f4da578668f95002799dde703784f047bd784732105eede",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC01-NPV-06",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "9a36effb231895ce289ad6a32d414b3163d7c87cfc7ae45fcac24f401e16662a",
+    "hashNow": "9a36effb231895ce289ad6a32d414b3163d7c87cfc7ae45fcac24f401e16662a",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC01-NPV-07",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "a46d90a3f9e0a0fa2b0d1cd6390bff4428d937b57631e1473aeedb839e56ea53",
+    "hashNow": "a46d90a3f9e0a0fa2b0d1cd6390bff4428d937b57631e1473aeedb839e56ea53",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC01-STATS-01",
+    "outcome": "REFUSED — missing-misconceptions",
+    "pinnedHash": "3579f576398e0f1f61d87c6d5a404ea55cf50c0e362d9c069887d483f9ad4187",
+    "hashNow": "3579f576398e0f1f61d87c6d5a404ea55cf50c0e362d9c069887d483f9ad4187",
+    "bytesMoved": false,
+    "publishBlocker": "missing-misconceptions",
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC01-STATS-02",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "271c89eec95550cd642b2e6c3ca8714ee896557d55ce1b4369fc00456c19d9c2",
+    "hashNow": "271c89eec95550cd642b2e6c3ca8714ee896557d55ce1b4369fc00456c19d9c2",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC01-STATS-03",
+    "outcome": "REFUSED — missing-misconceptions",
+    "pinnedHash": "dd47b3badd34ca222fb86ecb7122d3b9cf5e9a159b784b6a77c37805689b5efb",
+    "hashNow": "dd47b3badd34ca222fb86ecb7122d3b9cf5e9a159b784b6a77c37805689b5efb",
+    "bytesMoved": false,
+    "publishBlocker": "missing-misconceptions",
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC01-STATS-04",
+    "outcome": "REFUSED — missing-misconceptions",
+    "pinnedHash": "e97e788d8234e82db2ce6b907bf349690ee83b139b8ed24c4269f54082f62a9f",
+    "hashNow": "e97e788d8234e82db2ce6b907bf349690ee83b139b8ed24c4269f54082f62a9f",
+    "bytesMoved": false,
+    "publishBlocker": "missing-misconceptions",
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC02-CALC-01",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "0daa9e86825403f31380a8a82778cbc0062038392ed00edfea6477bffb8e4d96",
+    "hashNow": "0daa9e86825403f31380a8a82778cbc0062038392ed00edfea6477bffb8e4d96",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC02-CALC-02",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "df23963201ff292023bc3292c1a68406d974d2cb2b9d3e0dc2482dcff48d97c4",
+    "hashNow": "df23963201ff292023bc3292c1a68406d974d2cb2b9d3e0dc2482dcff48d97c4",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC02-CALC-03",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "09e6095c215a817c53c88ae1e2c69d121a9a6d7545d052c55d1a1966cd971932",
+    "hashNow": "09e6095c215a817c53c88ae1e2c69d121a9a6d7545d052c55d1a1966cd971932",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC02-CALC-04",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "d91eed16a3401a604b7f52d98fef98fe08d9decabbbd0b4752fe202ed5bfd9fe",
+    "hashNow": "d91eed16a3401a604b7f52d98fef98fe08d9decabbbd0b4752fe202ed5bfd9fe",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC02-CALC-05",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "e207888de0d550f0fc333f3b69e305517f91cd7ff11feafbb72ff4df8cc0b829",
+    "hashNow": "e207888de0d550f0fc333f3b69e305517f91cd7ff11feafbb72ff4df8cc0b829",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC02-CALC-06",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "1d9db2309db426bea9fe3ab82d2b62b90211ea6c0b7846139608d148ef4b58d2",
+    "hashNow": "1d9db2309db426bea9fe3ab82d2b62b90211ea6c0b7846139608d148ef4b58d2",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC02-CALC-07",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "8475a7e07af766bbffea919ca1b0770ed4eb4b6882a22e5968e21b58e62a2166",
+    "hashNow": "8475a7e07af766bbffea919ca1b0770ed4eb4b6882a22e5968e21b58e62a2166",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC02-CALC-08",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "901331bbe78a0e92cadf5fbd81f6333ebdabf5275ee7853326c4d4b8f0353e2c",
+    "hashNow": "901331bbe78a0e92cadf5fbd81f6333ebdabf5275ee7853326c4d4b8f0353e2c",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC02-FDP-01",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "f9a3824b2eab7fcea9bca099019748d548a7b7b45320d16766824d0cacaead20",
+    "hashNow": "f9a3824b2eab7fcea9bca099019748d548a7b7b45320d16766824d0cacaead20",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC02-FDP-02",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "0f1160aa71283365f63aa2abe4e3f4bb8d6a46f7813902d788bad71d766a3be3",
+    "hashNow": "0f1160aa71283365f63aa2abe4e3f4bb8d6a46f7813902d788bad71d766a3be3",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC02-FDP-03",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "7dd39ba26c12ba3f86457e9f8f6ac6ef92cbfc52ed49574b22d52c926a1eca76",
+    "hashNow": "7dd39ba26c12ba3f86457e9f8f6ac6ef92cbfc52ed49574b22d52c926a1eca76",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC02-FDP-04",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "103e7f64225f5773fe5256da1f961412903855d4d52751dffb1e47c0fdd6040a",
+    "hashNow": "103e7f64225f5773fe5256da1f961412903855d4d52751dffb1e47c0fdd6040a",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC02-FDP-05",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "b660571fad46673f75a360e54ad9fcf792fb4b0804f6c02e9ffce678104ba8f5",
+    "hashNow": "b660571fad46673f75a360e54ad9fcf792fb4b0804f6c02e9ffce678104ba8f5",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC02-FDP-06",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "3d9b8093681a1273e26a7fba68283e3cdc3e7263b6c3927d8a865765c468c7e1",
+    "hashNow": "3d9b8093681a1273e26a7fba68283e3cdc3e7263b6c3927d8a865765c468c7e1",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC02-FDP-07",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "987182b605b730edc79a262837781249a1856688172bead48a47721e1d1f765a",
+    "hashNow": "987182b605b730edc79a262837781249a1856688172bead48a47721e1d1f765a",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC02-FDP-08",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "a93ae5898e4589fdf98c69b0e64ddc061e2047d416a418a3292b00bf7af5ce41",
+    "hashNow": "a93ae5898e4589fdf98c69b0e64ddc061e2047d416a418a3292b00bf7af5ce41",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC02-GEOM-01",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "7fe6dda61257ed3004f0599b86cc0452208063f4b67f44b3d754c85ad8f89344",
+    "hashNow": "7fe6dda61257ed3004f0599b86cc0452208063f4b67f44b3d754c85ad8f89344",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC02-GEOM-02",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "aadfa0c8b655dd968853480e6bd93694bdd8002d7a7dad674521419d3e2ff94a",
+    "hashNow": "aadfa0c8b655dd968853480e6bd93694bdd8002d7a7dad674521419d3e2ff94a",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC02-GEOM-03",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "f36331edb5fcf1291ec84817e01e5be76fa41fb42181bb7ca57c6158c8245e44",
+    "hashNow": "f36331edb5fcf1291ec84817e01e5be76fa41fb42181bb7ca57c6158c8245e44",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC02-GEOM-04",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "ea5cb2f0434021c556557c78d369b02d5412e9c70dd50a29745314b54b6c5610",
+    "hashNow": "ea5cb2f0434021c556557c78d369b02d5412e9c70dd50a29745314b54b6c5610",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC02-GEOM-05",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "277ae1d1ad3f1ba0522ae23ee5a440c143eeb20cc3d3873e6dce6812c307443a",
+    "hashNow": "277ae1d1ad3f1ba0522ae23ee5a440c143eeb20cc3d3873e6dce6812c307443a",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC02-GEOM-06",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "1e728a88f9a8a27a9ad4e38652b7306dcccdda34ab9b6713ce309f7ccfe78ad8",
+    "hashNow": "1e728a88f9a8a27a9ad4e38652b7306dcccdda34ab9b6713ce309f7ccfe78ad8",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC02-MEAS-01",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "f2d5fbe45c3fb94c003192e7a2819bcfead9684d22405d06a91583364c03c1a1",
+    "hashNow": "f2d5fbe45c3fb94c003192e7a2819bcfead9684d22405d06a91583364c03c1a1",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC02-MEAS-02",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "cfc7e4176179a9d25314a68093cbb1591e38ba70fc85b4819e9cd8dbe782f3ff",
+    "hashNow": "cfc7e4176179a9d25314a68093cbb1591e38ba70fc85b4819e9cd8dbe782f3ff",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC02-MEAS-03",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "4084cb168f738b0390270c29451f44acecaf38125c82751bc20717158db5de40",
+    "hashNow": "4084cb168f738b0390270c29451f44acecaf38125c82751bc20717158db5de40",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC02-MEAS-04",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "0dfe99d4413e8ef6a88332ee137f5011ef88fc24a0c93aee215d37ef12d20da6",
+    "hashNow": "0dfe99d4413e8ef6a88332ee137f5011ef88fc24a0c93aee215d37ef12d20da6",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC02-MEAS-05",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "795e8ab7b85df875f5671c1f9adf492b9d888130608a86a712500249cba8ea48",
+    "hashNow": "795e8ab7b85df875f5671c1f9adf492b9d888130608a86a712500249cba8ea48",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC02-MEAS-06",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "1f664883ed8d260a809c8dce66a7ae3c59b56570dcacef1c242bed3e6ef86039",
+    "hashNow": "1f664883ed8d260a809c8dce66a7ae3c59b56570dcacef1c242bed3e6ef86039",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC02-MEAS-07",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "fbb2d3430a8c2862309cc71d085cfb93083179865321defefd3378a8247f573d",
+    "hashNow": "fbb2d3430a8c2862309cc71d085cfb93083179865321defefd3378a8247f573d",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC02-NPV-01",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "bd8c4f81481fbe6772bc90c830d5f5d6ab37d9922d8e4de718f3974f13a0060b",
+    "hashNow": "bd8c4f81481fbe6772bc90c830d5f5d6ab37d9922d8e4de718f3974f13a0060b",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC02-NPV-02",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "863da886b1fc6180c28cbda17ad61196df8404e71660d7c74eb2f960643b1d89",
+    "hashNow": "863da886b1fc6180c28cbda17ad61196df8404e71660d7c74eb2f960643b1d89",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC02-NPV-04",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "4f56ae26c5efa7cc4eba0cf5d23e705fc4a35f6abd99a5e9aaaf9e815755670f",
+    "hashNow": "4f56ae26c5efa7cc4eba0cf5d23e705fc4a35f6abd99a5e9aaaf9e815755670f",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC02-NPV-06",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "8cde77adf6734896fe02509933928c83a2043603db20414a4699f8e090f31e00",
+    "hashNow": "8cde77adf6734896fe02509933928c83a2043603db20414a4699f8e090f31e00",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC02-NPV-07",
+    "outcome": "REFUSED — THE BYTES HAVE MOVED SINCE SHE VERIFIED",
+    "pinnedHash": "1e4f9b1780c38de6d46929633b2a3ffb9744be0357d1f33262e606aa0030652b",
+    "hashNow": "f52c0dde689281db09cad61a30f708e7ed58ed3004540bb67d06be4502f3079c",
+    "bytesMoved": true,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC02-RP-01",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "5c0b1e480cf80f76bcd190d5d26a272cbe0cc7a174b75139ffcee97d47a40891",
+    "hashNow": "5c0b1e480cf80f76bcd190d5d26a272cbe0cc7a174b75139ffcee97d47a40891",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC02-RP-02",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "3c5f7680494f76a855fdc37922efd6a5dc0f1669c4ee96665d16a54fc734ddcf",
+    "hashNow": "3c5f7680494f76a855fdc37922efd6a5dc0f1669c4ee96665d16a54fc734ddcf",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC02-STATS-01",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "6ba425539762c1a083667122642cec8e40b58bcfbbea108ff337d0588a6fc450",
+    "hashNow": "6ba425539762c1a083667122642cec8e40b58bcfbbea108ff337d0588a6fc450",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC02-STATS-02",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "a5bc58b1fa8e4bb0b6578a5e3b8dd77139dd1b62a5e58012a358328c1991f4c8",
+    "hashNow": "a5bc58b1fa8e4bb0b6578a5e3b8dd77139dd1b62a5e58012a358328c1991f4c8",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC03-CALC-01",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "c47debc581f63f3786c209e651d83e5a8b9806d7e1ffaef82d9fac9f43b31d82",
+    "hashNow": "c47debc581f63f3786c209e651d83e5a8b9806d7e1ffaef82d9fac9f43b31d82",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC03-CALC-02",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "b7dd8002279af7096252f843a8dfca8f50b24c8ab151391242e641f75038ed8d",
+    "hashNow": "b7dd8002279af7096252f843a8dfca8f50b24c8ab151391242e641f75038ed8d",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC03-CALC-03",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "3b03bad3bffc5ccdfcd900520212e3ad31d8366a088e6367b0d80e4a7e548351",
+    "hashNow": "3b03bad3bffc5ccdfcd900520212e3ad31d8366a088e6367b0d80e4a7e548351",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC03-CALC-04",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "e64c4e67c3d99fadcc51d9a49b3f2adcfe57d4f3701e844640258365e54e4c82",
+    "hashNow": "e64c4e67c3d99fadcc51d9a49b3f2adcfe57d4f3701e844640258365e54e4c82",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC03-CALC-05",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "d7ccbb02b9a1376c7b14a97917e109d97ba4c1eda70e64b3e668f204fb213a56",
+    "hashNow": "d7ccbb02b9a1376c7b14a97917e109d97ba4c1eda70e64b3e668f204fb213a56",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC03-CALC-06",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "07c43ebc800591e9e970e839d086546d90f89df9ae144817be676299e39ee0cc",
+    "hashNow": "07c43ebc800591e9e970e839d086546d90f89df9ae144817be676299e39ee0cc",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC03-CALC-07",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "04e73ce660c8689a83bb92c06ccaf858fd1518d87374a82dd1c11dd5bae94a44",
+    "hashNow": "04e73ce660c8689a83bb92c06ccaf858fd1518d87374a82dd1c11dd5bae94a44",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC03-CALC-08",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "b2d05cbafe3a3f9371e280f3ac15acdbc052522c459db3bedb4ea43428c4d18f",
+    "hashNow": "b2d05cbafe3a3f9371e280f3ac15acdbc052522c459db3bedb4ea43428c4d18f",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC03-FDP-01",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "330589a7ef6b1906940119513f69d5e1ae1728c576eb865ec92b743c7f9cc157",
+    "hashNow": "330589a7ef6b1906940119513f69d5e1ae1728c576eb865ec92b743c7f9cc157",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC03-FDP-02",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "5893382645adc39c7028e2f12e3fbf7100b90aa8b7ae96af4fa1cc7b9a4e8b50",
+    "hashNow": "5893382645adc39c7028e2f12e3fbf7100b90aa8b7ae96af4fa1cc7b9a4e8b50",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC03-FDP-03",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "3e30821271c308fdcc29eca2e69d71bb5798e0206aa82c066979edb04b3c97e0",
+    "hashNow": "3e30821271c308fdcc29eca2e69d71bb5798e0206aa82c066979edb04b3c97e0",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC03-FDP-04",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "ddc5d4cc4cb8e19c67a2f288941a3986fc31f0ad2f8a86c6c7ec22598f072c51",
+    "hashNow": "ddc5d4cc4cb8e19c67a2f288941a3986fc31f0ad2f8a86c6c7ec22598f072c51",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC03-FDP-06",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "72512513d229408343d574e7028965ec60e1b03c16d70dcaae32b17d2ee26a91",
+    "hashNow": "72512513d229408343d574e7028965ec60e1b03c16d70dcaae32b17d2ee26a91",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC03-FDP-07",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "5298d5d3bd0afb75aab497a0f4fdf961bd00b0d6af8157421fb56f7874408bed",
+    "hashNow": "5298d5d3bd0afb75aab497a0f4fdf961bd00b0d6af8157421fb56f7874408bed",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC03-FDP-08",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "2de7cfcd45358ae5602c1ade57da2468b612d0133b1c8af27d04d966abeaa481",
+    "hashNow": "2de7cfcd45358ae5602c1ade57da2468b612d0133b1c8af27d04d966abeaa481",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC03-GEOM-01",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "8299bc02e9be8812bd96067e74a6e64a6954bd9a6b1bf23ed20b9c522d8de96d",
+    "hashNow": "8299bc02e9be8812bd96067e74a6e64a6954bd9a6b1bf23ed20b9c522d8de96d",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC03-GEOM-02",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "d51914df60d65f5fdb25265c11b090d135b2945bb290ebc4d20e091eee134dba",
+    "hashNow": "d51914df60d65f5fdb25265c11b090d135b2945bb290ebc4d20e091eee134dba",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC03-GEOM-03",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "7ead979bce1524b5cb6e1eba3c7872e54892df038111608252484790d1375144",
+    "hashNow": "7ead979bce1524b5cb6e1eba3c7872e54892df038111608252484790d1375144",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC03-GEOM-04",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "702580ec0689155b3a44b94799eff6695efba37e9fe3b5a0a3267b9046e61cdc",
+    "hashNow": "702580ec0689155b3a44b94799eff6695efba37e9fe3b5a0a3267b9046e61cdc",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": [
+     "sentence-length: sentence of 25 words (max 16 for item-stem): \"An L-shape is a 15 cm by 9 cm rectangle with a 6 cm by 7 cm …\""
+    ]
+   },
+   {
+    "itemId": "MC03-GEOM-05",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "35e898371cb847f2af72758c8d107af56d60ee7340b4ab30cabd8e3dc8e5a6cf",
+    "hashNow": "35e898371cb847f2af72758c8d107af56d60ee7340b4ab30cabd8e3dc8e5a6cf",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC03-GEOM-06",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "08b19469f7d6d7111200df26cf6c35d67f757cebf8341efe1de8efa157e628e0",
+    "hashNow": "08b19469f7d6d7111200df26cf6c35d67f757cebf8341efe1de8efa157e628e0",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC03-MEAS-01",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "716ba024c8f45e7f2608f6b3a8192d151a40fa588b35ea68c1ba1c6b07f07a32",
+    "hashNow": "716ba024c8f45e7f2608f6b3a8192d151a40fa588b35ea68c1ba1c6b07f07a32",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC03-MEAS-02",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "a8d85ea3ba450ca7c62d36167a01180a0328d61040cd0241ac4e6effe9598628",
+    "hashNow": "a8d85ea3ba450ca7c62d36167a01180a0328d61040cd0241ac4e6effe9598628",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC03-MEAS-03",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "c3a0dbc3686c296f3d0e3a6609e9fef34a1e1ad0ec30b82ec3316541be657b93",
+    "hashNow": "c3a0dbc3686c296f3d0e3a6609e9fef34a1e1ad0ec30b82ec3316541be657b93",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC03-MEAS-04",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "2b76c03d2eca520d833611b65505edec1650b593e83274fb49d6e9642e35d122",
+    "hashNow": "2b76c03d2eca520d833611b65505edec1650b593e83274fb49d6e9642e35d122",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC03-MEAS-05",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "93e91c0fc388a0ac6ccb76c96b7f2d1a600728475df7fff89220d079802969d7",
+    "hashNow": "93e91c0fc388a0ac6ccb76c96b7f2d1a600728475df7fff89220d079802969d7",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC03-MEAS-06",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "3841401fef52cbcc94562f2fd406d742183d5854e6537674be87d3385f76df64",
+    "hashNow": "3841401fef52cbcc94562f2fd406d742183d5854e6537674be87d3385f76df64",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC03-MEAS-07",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "404f1b4bfadd1e474e40b059511b5e9938eaf3459b315e2e0ebc5d387b3abe9f",
+    "hashNow": "404f1b4bfadd1e474e40b059511b5e9938eaf3459b315e2e0ebc5d387b3abe9f",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC03-NPV-01",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "6bf56b933ea1c09f39d18dc633918d458403b6bb42d8c374b5486c8c68990b51",
+    "hashNow": "6bf56b933ea1c09f39d18dc633918d458403b6bb42d8c374b5486c8c68990b51",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC03-NPV-02",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "ee8ba9e052558e76c4ff58e014b8ac6bf6d3362c34a096d232f95b84dd9b8465",
+    "hashNow": "ee8ba9e052558e76c4ff58e014b8ac6bf6d3362c34a096d232f95b84dd9b8465",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC03-NPV-03",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "23f975a22aa26f6128ce71576c7a139cd23adc9522ff5e6a35fd55d607a7de47",
+    "hashNow": "23f975a22aa26f6128ce71576c7a139cd23adc9522ff5e6a35fd55d607a7de47",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC03-NPV-04",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "2178e5648442fa0754b27d621fe2e9ed63f111822aadcf597f24b8ed6246fe39",
+    "hashNow": "2178e5648442fa0754b27d621fe2e9ed63f111822aadcf597f24b8ed6246fe39",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC03-NPV-06",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "e7265dabead3e1ffad461697d70ada15964948f5572b49248de7adcd0e2b64f1",
+    "hashNow": "e7265dabead3e1ffad461697d70ada15964948f5572b49248de7adcd0e2b64f1",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC03-NPV-07",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "7afe359e4bf54f11426b26c112423842ba4d9e151d95dd4ea2ae21c038e56352",
+    "hashNow": "7afe359e4bf54f11426b26c112423842ba4d9e151d95dd4ea2ae21c038e56352",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC03-RP-01",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "8db6c007eea9a01b737e752957e77aabe37574a5c7860395ac3ce57f31f534a0",
+    "hashNow": "8db6c007eea9a01b737e752957e77aabe37574a5c7860395ac3ce57f31f534a0",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC03-RP-02",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "3c8013bd2d6bc7b912d769346b9cc83e320458f44de2a3f148eebea2d389612b",
+    "hashNow": "3c8013bd2d6bc7b912d769346b9cc83e320458f44de2a3f148eebea2d389612b",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC03-STATS-01",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "edcecdbeeeb708e33f24048ae024f93e4f6ecb2488a7ecd67a42cfa8d3207c02",
+    "hashNow": "edcecdbeeeb708e33f24048ae024f93e4f6ecb2488a7ecd67a42cfa8d3207c02",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC03-STATS-02",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "4ba5c876a0b1d84e976b5d272e3eab0924823110d7246d378ac47862c342fa29",
+    "hashNow": "4ba5c876a0b1d84e976b5d272e3eab0924823110d7246d378ac47862c342fa29",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC04-CALC-01",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "ac301edeb363fc02325f3245def3954673014170179099ca9c46957e5e2c305c",
+    "hashNow": "ac301edeb363fc02325f3245def3954673014170179099ca9c46957e5e2c305c",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC04-CALC-02",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "dd3a70886cc8c2f3432d85e7149a1a67dde52dfb59db6d3cf9214a276082cdbc",
+    "hashNow": "dd3a70886cc8c2f3432d85e7149a1a67dde52dfb59db6d3cf9214a276082cdbc",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC04-CALC-03",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "21122ca15519ebf67dac599e4fb080e790328ffa7a4bfb88c73eeeae24a01061",
+    "hashNow": "21122ca15519ebf67dac599e4fb080e790328ffa7a4bfb88c73eeeae24a01061",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC04-CALC-04",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "3804e7e392755a732f09c2f8782ffdead8360754730b8a0d8439e577656a50be",
+    "hashNow": "3804e7e392755a732f09c2f8782ffdead8360754730b8a0d8439e577656a50be",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC04-CALC-05",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "2cbaf945b06ca3cd20d923afb02ab3956f6bcfa5efcd2b3613829d3be8aa0f4f",
+    "hashNow": "2cbaf945b06ca3cd20d923afb02ab3956f6bcfa5efcd2b3613829d3be8aa0f4f",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC04-CALC-06",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "e2423d2a060f68c0a41f85d7e60f51dcf8dab6701959cd67e511d8cd2b7d8895",
+    "hashNow": "e2423d2a060f68c0a41f85d7e60f51dcf8dab6701959cd67e511d8cd2b7d8895",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC04-CALC-07",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "e51a83a1790b408bdb38fac655a1fbb4bb607097fc389cc1b17f73fb76f73c3a",
+    "hashNow": "e51a83a1790b408bdb38fac655a1fbb4bb607097fc389cc1b17f73fb76f73c3a",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC04-CALC-08",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "4756afd41fa5854b2776608a4323584b8cf9af8bc238bd57ec4acba77e45dd74",
+    "hashNow": "4756afd41fa5854b2776608a4323584b8cf9af8bc238bd57ec4acba77e45dd74",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": [
+     "sentence-length: sentence of 19 words (max 16 for item-stem): \"For a concert, 18 blocks of 145 seats are sold, and another …\""
+    ]
+   },
+   {
+    "itemId": "MC04-FDP-01",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "19d2be51954c4d5f67d1833b6033254b677ecef8d694b796263e331eb64ba4b7",
+    "hashNow": "19d2be51954c4d5f67d1833b6033254b677ecef8d694b796263e331eb64ba4b7",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC04-FDP-02",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "3bbbd8f5ec4c8f9e8c1b3a3a724c5914d3a1565bc8000fd494764f55bbcfd89e",
+    "hashNow": "3bbbd8f5ec4c8f9e8c1b3a3a724c5914d3a1565bc8000fd494764f55bbcfd89e",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC04-FDP-03",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "b9262429a2357b5ce611529789c6c38d540c1aafeea6faaae99f346406e7a51c",
+    "hashNow": "b9262429a2357b5ce611529789c6c38d540c1aafeea6faaae99f346406e7a51c",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC04-FDP-04",
+    "outcome": "REFUSED — THE BYTES HAVE MOVED SINCE SHE VERIFIED",
+    "pinnedHash": "31344b3b1e61382a3f964d9351aed59528dee11fe41004ccd474692af2c33fa3",
+    "hashNow": "a2b4d221934c6b948adb634bcf0ab547db608790515a3796a1313c4f62a757dd",
+    "bytesMoved": true,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC04-FDP-05",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "58b60330581dcb5643c0f0bd63405a098ddf66d0c3e2aaf8f3fbfb9b36f3159e",
+    "hashNow": "58b60330581dcb5643c0f0bd63405a098ddf66d0c3e2aaf8f3fbfb9b36f3159e",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC04-FDP-07",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "fad76bbc71eca0312e138b60c8f7e7116a75c63b958c69f01f9cb38da69310ac",
+    "hashNow": "fad76bbc71eca0312e138b60c8f7e7116a75c63b958c69f01f9cb38da69310ac",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC04-FDP-08",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "a2c0949f12c93d21973867f06c9e1175d707fa970445c73b423204b0517b7688",
+    "hashNow": "a2c0949f12c93d21973867f06c9e1175d707fa970445c73b423204b0517b7688",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC04-GEOM-01",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "de644a8a7fac08dc9b0a21b8e3c3e440dfb10d43d3d641713814d99fae3c99eb",
+    "hashNow": "de644a8a7fac08dc9b0a21b8e3c3e440dfb10d43d3d641713814d99fae3c99eb",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC04-GEOM-02",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "a89362ec5d8350d140be03c69584bba0be6f73dee570b279276c9455897d6d54",
+    "hashNow": "a89362ec5d8350d140be03c69584bba0be6f73dee570b279276c9455897d6d54",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC04-GEOM-03",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "2ed2f53fcaac859bddef2e57b1bee12149c87b923f2b4337bc2d0a961eeb9135",
+    "hashNow": "2ed2f53fcaac859bddef2e57b1bee12149c87b923f2b4337bc2d0a961eeb9135",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC04-GEOM-05",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "2ddf20848814434a5ab689f450cb7457b026ff16d7251a1b2ce20acbe6b4f8f6",
+    "hashNow": "2ddf20848814434a5ab689f450cb7457b026ff16d7251a1b2ce20acbe6b4f8f6",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": [
+     "sentence-length: sentence of 25 words (max 16 for item-stem): \"An L-shape is made from a rectangle 12 cm by 8 cm with a 4 c…\""
+    ]
+   },
+   {
+    "itemId": "MC04-GEOM-06",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "f37ff1c422e2f2de921f9ae402fcbe2f8024d6fefdfa491fd3a0b436716c8955",
+    "hashNow": "f37ff1c422e2f2de921f9ae402fcbe2f8024d6fefdfa491fd3a0b436716c8955",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC04-MEAS-01",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "af881e555e5bc10f41bfb21cab0154427d796276f5671c6b90b85a545e370f2e",
+    "hashNow": "af881e555e5bc10f41bfb21cab0154427d796276f5671c6b90b85a545e370f2e",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC04-MEAS-02",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "7edab9d8c57d628d7d9aa7890c620af1fbf5b405ff52fbd9c589649a4db5b9a7",
+    "hashNow": "7edab9d8c57d628d7d9aa7890c620af1fbf5b405ff52fbd9c589649a4db5b9a7",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC04-MEAS-03",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "4564be0125da3cd3dfa850f6ae927eb34a509118959dccce98ec092e978334bc",
+    "hashNow": "4564be0125da3cd3dfa850f6ae927eb34a509118959dccce98ec092e978334bc",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC04-MEAS-04",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "18213f25d8695a7544c73afb4b1233343ce55b7ff8d07bbe77fda508722ded0f",
+    "hashNow": "18213f25d8695a7544c73afb4b1233343ce55b7ff8d07bbe77fda508722ded0f",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC04-MEAS-05",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "454062c0a54370a90b0e8249e3afa332eebc88669bccf7b47a29af47b4472708",
+    "hashNow": "454062c0a54370a90b0e8249e3afa332eebc88669bccf7b47a29af47b4472708",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC04-MEAS-06",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "2868274a6bff09d17478bb8ebfaaf046e96b050636e0700fd7190fa9ef2ea24e",
+    "hashNow": "2868274a6bff09d17478bb8ebfaaf046e96b050636e0700fd7190fa9ef2ea24e",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC04-MEAS-07",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "37b368b002d214ff6487b231ea73abe21d4a765bee421418f6507bd64a7aea66",
+    "hashNow": "37b368b002d214ff6487b231ea73abe21d4a765bee421418f6507bd64a7aea66",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC04-NPV-01",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "d265915cca99074e1300679c124727c6b610f7cc253cd86f4db4badb7d34f73e",
+    "hashNow": "d265915cca99074e1300679c124727c6b610f7cc253cd86f4db4badb7d34f73e",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC04-NPV-02",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "b6f664673f1d65927c28279b48e5d40c7b6634805989dda490c21a4d14226ffe",
+    "hashNow": "b6f664673f1d65927c28279b48e5d40c7b6634805989dda490c21a4d14226ffe",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC04-NPV-03",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "b58a3012c43c8614ffb93bce01544f64a237f1158ce9d8d2cf563dd441e86917",
+    "hashNow": "b58a3012c43c8614ffb93bce01544f64a237f1158ce9d8d2cf563dd441e86917",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC04-NPV-04",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "f676fe3dbf12535d77ff54bcc9701c4c006342ea198208606bc63d5e9b026a26",
+    "hashNow": "f676fe3dbf12535d77ff54bcc9701c4c006342ea198208606bc63d5e9b026a26",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC04-NPV-05",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "21672ef5227d5a9a13cd180a2ef2c9d0834f55035afb6069cc472be451f66419",
+    "hashNow": "21672ef5227d5a9a13cd180a2ef2c9d0834f55035afb6069cc472be451f66419",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC04-NPV-06",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "d65b2232d8b1d1ece49e79722f6e3235a7c8c786de71fc93c56df1262c630754",
+    "hashNow": "d65b2232d8b1d1ece49e79722f6e3235a7c8c786de71fc93c56df1262c630754",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC04-NPV-07",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "be707eb80543b4f6e8712ae91619925d4f97843ceb0ca8e0a22946b7daf5b9f9",
+    "hashNow": "be707eb80543b4f6e8712ae91619925d4f97843ceb0ca8e0a22946b7daf5b9f9",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC04-RP-01",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "f8d945aeee7094a3fbbc1d8d6b04ef694a9c7e92c633532f43c353f9ebac855d",
+    "hashNow": "f8d945aeee7094a3fbbc1d8d6b04ef694a9c7e92c633532f43c353f9ebac855d",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC04-RP-02",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "a5bfa3a05ae7e6b34a2ff1150ed3b70d72b53430254a45d0ba50d43470b47a38",
+    "hashNow": "a5bfa3a05ae7e6b34a2ff1150ed3b70d72b53430254a45d0ba50d43470b47a38",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC04-STATS-01",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "b30d4623c49ebd41cdda343bd849d545f4e8cf5dcba6784c5ddf8a5102cbcaf3",
+    "hashNow": "b30d4623c49ebd41cdda343bd849d545f4e8cf5dcba6784c5ddf8a5102cbcaf3",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC04-STATS-02",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "85e93385a39ef8c14e147a3538b16f736afe24e09aeaeb7c769e8b781d0f153e",
+    "hashNow": "85e93385a39ef8c14e147a3538b16f736afe24e09aeaeb7c769e8b781d0f153e",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC05-CALC-01",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "77048e444ef9f54461460c459eb6893003111a00b743852fba8322208ffe1110",
+    "hashNow": "77048e444ef9f54461460c459eb6893003111a00b743852fba8322208ffe1110",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC05-CALC-02",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "ca03b0d8cef9f095f5d67f7c51d1281707aaffae56d4407f027864d305647127",
+    "hashNow": "ca03b0d8cef9f095f5d67f7c51d1281707aaffae56d4407f027864d305647127",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC05-CALC-03",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "755d464a88580e8a1a07c9c9c3263303f16dfd1671e3d8fe259f52a5a19f2991",
+    "hashNow": "755d464a88580e8a1a07c9c9c3263303f16dfd1671e3d8fe259f52a5a19f2991",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC05-CALC-04",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "dfde4d021ef56a5edc6f389afa619beeed6cc9b3f0b221960514305f4ac57f3d",
+    "hashNow": "dfde4d021ef56a5edc6f389afa619beeed6cc9b3f0b221960514305f4ac57f3d",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC05-CALC-05",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "8e2d1a4fff100f27f1f565f2965343e4db373f60003203e9b51693ef52f822b0",
+    "hashNow": "8e2d1a4fff100f27f1f565f2965343e4db373f60003203e9b51693ef52f822b0",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC05-CALC-06",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "eb0f83cde1d8c09185ca53e836bd94c3f2da1b830c34ae552ff6c0711ac7c0d4",
+    "hashNow": "eb0f83cde1d8c09185ca53e836bd94c3f2da1b830c34ae552ff6c0711ac7c0d4",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC05-CALC-07",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "1ff3edb110ee51073c13a9fc5785025005c680c913dd5bea947433f04427d21a",
+    "hashNow": "1ff3edb110ee51073c13a9fc5785025005c680c913dd5bea947433f04427d21a",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC05-CALC-08",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "8dba46e48eb9a8323f0be36d35dc07a1c2647561bdb58105eafff59195be33a7",
+    "hashNow": "8dba46e48eb9a8323f0be36d35dc07a1c2647561bdb58105eafff59195be33a7",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": [
+     "sentence-length: sentence of 20 words (max 16 for item-stem): \"For a show, 16 rows of 120 seats are booked online, and anot…\""
+    ]
+   },
+   {
+    "itemId": "MC05-FDP-01",
+    "outcome": "REFUSED — THE BYTES HAVE MOVED SINCE SHE VERIFIED",
+    "pinnedHash": "d6f3d429b824dd1d6e11fdb85f97d13d4a78406f13cbde5daad886762e369cae",
+    "hashNow": "51077912df10af3d8d61b88f931a76b50701da8ce322f6f4d9e0a76265365175",
+    "bytesMoved": true,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC05-FDP-02",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "7a8f8da2f0079dc912d210922e242eb44b61e2396473fc8102f5e31a6959d0a8",
+    "hashNow": "7a8f8da2f0079dc912d210922e242eb44b61e2396473fc8102f5e31a6959d0a8",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC05-FDP-03",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "66e73d8730c26ce9e43c6a67d8bcfc7369c790c2f42a0a67fa62cdf20e52cdb2",
+    "hashNow": "66e73d8730c26ce9e43c6a67d8bcfc7369c790c2f42a0a67fa62cdf20e52cdb2",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC05-FDP-04",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "172392dc77742d2613d6e2562cc16e529c9c3a6fb0a7882d79ec4c1deee996c3",
+    "hashNow": "172392dc77742d2613d6e2562cc16e529c9c3a6fb0a7882d79ec4c1deee996c3",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC05-FDP-05",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "1d47bb863bd75c86ce2d3d39f264e89c2d9861b1ed4225aefd280e2c1e3ddac9",
+    "hashNow": "1d47bb863bd75c86ce2d3d39f264e89c2d9861b1ed4225aefd280e2c1e3ddac9",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC05-FDP-06",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "7e1b68874893a37978f4fa632f3c92c5b3ff198d32d3af4c02431dac9d718f53",
+    "hashNow": "7e1b68874893a37978f4fa632f3c92c5b3ff198d32d3af4c02431dac9d718f53",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC05-FDP-07",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "71b8df2cdd30431c39f3acd62e193c1c6b523a2eda8be1e6c8008d2a10da9842",
+    "hashNow": "71b8df2cdd30431c39f3acd62e193c1c6b523a2eda8be1e6c8008d2a10da9842",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC05-FDP-08",
+    "outcome": "REFUSED — THE BYTES HAVE MOVED SINCE SHE VERIFIED",
+    "pinnedHash": "0a2ee9356f56903fd70602617f5440053ad27a78aec210b7b671fb5415201203",
+    "hashNow": "927168f09f55f9cdc4f0996bfc8ce8a61b7adeb8083070fc762ffc567700335d",
+    "bytesMoved": true,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC05-GEOM-01",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "0d1603fa3043208a2210231ef87d5c36b1fa86d6df608d08d6d4136f1508151e",
+    "hashNow": "0d1603fa3043208a2210231ef87d5c36b1fa86d6df608d08d6d4136f1508151e",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC05-GEOM-02",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "1f6f0ee978ea259ed129e25c4af39174c1dd7bd218662c54e6df9fc819ce4010",
+    "hashNow": "1f6f0ee978ea259ed129e25c4af39174c1dd7bd218662c54e6df9fc819ce4010",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC05-GEOM-03",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "9b7742a951dff79d0aea846bc77f6713edd140fa9da1b7504c8d7775a2295fb3",
+    "hashNow": "9b7742a951dff79d0aea846bc77f6713edd140fa9da1b7504c8d7775a2295fb3",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC05-GEOM-04",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "c314d3bafaa9f1d1842271225ec6a3105999e599136d029423b84fa0839cf084",
+    "hashNow": "c314d3bafaa9f1d1842271225ec6a3105999e599136d029423b84fa0839cf084",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC05-GEOM-05",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "02b643d2b7cee72c2fdf3b4ff73b06d639b42b445b09317959eca5a7920752fd",
+    "hashNow": "02b643d2b7cee72c2fdf3b4ff73b06d639b42b445b09317959eca5a7920752fd",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": [
+     "sentence-length: sentence of 25 words (max 16 for item-stem): \"An L-shape is made from a rectangle 12 cm by 8 cm with a 5 c…\""
+    ]
+   },
+   {
+    "itemId": "MC05-GEOM-06",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "5da3ba986478ece19a173d4183683883fa3094499de9cc4e28a27422efd05c70",
+    "hashNow": "5da3ba986478ece19a173d4183683883fa3094499de9cc4e28a27422efd05c70",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC05-MEAS-01",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "86950b264f49477dabddd3c64164c74c9edbaaf9d7c02f21e1ed974fd1dc8934",
+    "hashNow": "86950b264f49477dabddd3c64164c74c9edbaaf9d7c02f21e1ed974fd1dc8934",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC05-MEAS-02",
+    "outcome": "REFUSED — THE BYTES HAVE MOVED SINCE SHE VERIFIED",
+    "pinnedHash": "d8f498630be0d0db256b5960d019fdfa1867840e1c3f25641ae72fcc5e0a10c8",
+    "hashNow": "f218d28b711e4d46de657b4c5e01177aca61dc95c797283123ba0ac2f38cb1d7",
+    "bytesMoved": true,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC05-MEAS-03",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "946b504aaf28bcb91ab5c92da9259d2ae4003eb0c04f3f51486ba94756d0a9ea",
+    "hashNow": "946b504aaf28bcb91ab5c92da9259d2ae4003eb0c04f3f51486ba94756d0a9ea",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC05-MEAS-04",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "c59a0d75ce9f0642313aab5250d8aefa0485b6c07c56efb3be139ecd9bb735fb",
+    "hashNow": "c59a0d75ce9f0642313aab5250d8aefa0485b6c07c56efb3be139ecd9bb735fb",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC05-MEAS-05",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "eb10d1fde79c7dc1138b455fc9bcaf175b2e98ff0b7290765f24a5e90c96004f",
+    "hashNow": "eb10d1fde79c7dc1138b455fc9bcaf175b2e98ff0b7290765f24a5e90c96004f",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC05-MEAS-06",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "1e6fe0ef394a23409f51ec5d7a709af2222c71bd214046b38e8c9b60b36282e0",
+    "hashNow": "1e6fe0ef394a23409f51ec5d7a709af2222c71bd214046b38e8c9b60b36282e0",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC05-MEAS-07",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "385b0800c0b8f8d26cd4d327642bafe3206b7778dcb74297149a1d7fe2bc305c",
+    "hashNow": "385b0800c0b8f8d26cd4d327642bafe3206b7778dcb74297149a1d7fe2bc305c",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC05-NPV-01",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "b952e9f6b5f7e827768e3130682a450f24c28d7ecb40baf43864c66c05838e2e",
+    "hashNow": "b952e9f6b5f7e827768e3130682a450f24c28d7ecb40baf43864c66c05838e2e",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC05-NPV-02",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "f8529d43186698f67853707719a43f318fa3e70f1ac237d66fae7b3330c2cb5e",
+    "hashNow": "f8529d43186698f67853707719a43f318fa3e70f1ac237d66fae7b3330c2cb5e",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC05-NPV-03",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "d528363fadda08ca65fef60377285580ce750f286f1eca51a22b1db46a94f44e",
+    "hashNow": "d528363fadda08ca65fef60377285580ce750f286f1eca51a22b1db46a94f44e",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC05-NPV-04",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "2fae1bea21ac630eeb3382b09c626af180a8858141d1ce492fee537bc9d686ac",
+    "hashNow": "2fae1bea21ac630eeb3382b09c626af180a8858141d1ce492fee537bc9d686ac",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC05-NPV-05",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "b35313ad59aa86049ce3c4894e68abbb01cc92b2548929cc8c3a5b6ee85286fa",
+    "hashNow": "b35313ad59aa86049ce3c4894e68abbb01cc92b2548929cc8c3a5b6ee85286fa",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC05-NPV-06",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "ba8d6bf19ddabf238bcdda9d48b91a535ba28424bed0f33b81f947fa06b906eb",
+    "hashNow": "ba8d6bf19ddabf238bcdda9d48b91a535ba28424bed0f33b81f947fa06b906eb",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC05-NPV-07",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "1e91bbf7bb1f7ce5dadf956a70ad1ad9cda9c3657c0fa0134525740071d9c800",
+    "hashNow": "1e91bbf7bb1f7ce5dadf956a70ad1ad9cda9c3657c0fa0134525740071d9c800",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC05-RP-01",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "df52b1eaa89d5d42a7edbb33eee4654811f982c8eca1f290f16d8756e632184e",
+    "hashNow": "df52b1eaa89d5d42a7edbb33eee4654811f982c8eca1f290f16d8756e632184e",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC05-RP-02",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "bc779d54cbadcccc9ff247257232256189fdce61982751d08b0aeeb13d598d22",
+    "hashNow": "bc779d54cbadcccc9ff247257232256189fdce61982751d08b0aeeb13d598d22",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   },
+   {
+    "itemId": "MC05-STATS-01",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "3d75f7d5fb917ffc05fffb85d5594e7558beca7c514d583eeaecdc08c033c74e",
+    "hashNow": "3d75f7d5fb917ffc05fffb85d5594e7558beca7c514d583eeaecdc08c033c74e",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": [
+     "sentence-length: sentence of 17 words (max 16 for item-stem): \"A table shows badges won: Red team 10, Blue team 9, Green te…\""
+    ]
+   },
+   {
+    "itemId": "MC05-STATS-02",
+    "outcome": "WOULD SIGN",
+    "pinnedHash": "914b07580d55ded4444a70d795670a1c35e5e2bab70987776d60acf9923f5283",
+    "hashNow": "914b07580d55ded4444a70d795670a1c35e5e2bab70987776d60acf9923f5283",
+    "bytesMoved": false,
+    "publishBlocker": null,
+    "gateFaults": "CLEAN"
+   }
+  ]
+ },
+ "TWO_THE_REVIEW_SURFACE": {
+  "built": "apps/web/components/admin/maths-review.tsx, rendered by the item page when the district is MATHS.",
+  "renders": "the stem; every option with its value, key flag, misconception, execution note and the hint a child is told; the item hint; the walk script; and any stem-collision resolution with its retired variants.",
+  "herRuling": "the surface renders the item or refuses the action. **It now renders**, so the refusal has its other half and a signature is no longer taken against a page showing almost nothing.",
+  "andITNEVERWRITES": "the verdict is still taken by the existing actions; this reads."
+ },
+ "THREE_THE_NINE": {
+  "asserted": 0,
+  "of": 6,
+  "drift": [
+   {
+    "itemId": "MC01-FDP-03",
+    "outcome": "DRIFT",
+    "regenerates": false,
+    "fromSource": "537dcda436643a7aade6139eff7a5ed7cf2643767c9472a32c4138cc5541fbe3",
+    "onTheRow": "9fea8856794467c1162128d5dac53bd9c05df20af09004686cc49ea4a01bd27c"
+   },
+   {
+    "itemId": "MC02-CALC-04",
+    "outcome": "DRIFT",
+    "regenerates": false,
+    "fromSource": "862b36629fc25d77bacc81b44662d86efb0e439f35d13a348a9baad383a6e58c",
+    "onTheRow": "d91eed16a3401a604b7f52d98fef98fe08d9decabbbd0b4752fe202ed5bfd9fe"
+   },
+   {
+    "itemId": "MC03-CALC-04",
+    "outcome": "DRIFT",
+    "regenerates": false,
+    "fromSource": "f19c8463392223bc8ce5cda12af3711e55a1d5e15ae3eda7db6832b507467c8f",
+    "onTheRow": "e64c4e67c3d99fadcc51d9a49b3f2adcfe57d4f3701e844640258365e54e4c82"
+   },
+   {
+    "itemId": "MC03-CALC-08",
+    "outcome": "DRIFT",
+    "regenerates": false,
+    "fromSource": "7bc47448b16a646eee1e3af7f692b5f8bdb096393a168a5ffc392782a6ef7bfc",
+    "onTheRow": "b2d05cbafe3a3f9371e280f3ac15acdbc052522c459db3bedb4ea43428c4d18f"
+   },
+   {
+    "itemId": "MC04-CALC-04",
+    "outcome": "DRIFT",
+    "regenerates": false,
+    "fromSource": "d81c14bf2264744c7a60faf98fde58af3188b26459b91aea87aca3b66cdd1c35",
+    "onTheRow": "3804e7e392755a732f09c2f8782ffdead8360754730b8a0d8439e577656a50be"
+   },
+   {
+    "itemId": "MC05-CALC-04",
+    "outcome": "DRIFT",
+    "regenerates": false,
+    "fromSource": "8ec7b3309c892c01c68f61f1e68712b527a600e2ebec4fb62430c9d4573f4551",
+    "onTheRow": "dfde4d021ef56a5edc6f389afa619beeed6cc9b3f0b221960514305f4ac57f3d"
+   }
+  ],
+  "rows": [
+   {
+    "itemId": "MC01-FDP-03",
+    "outcome": "DRIFT",
+    "regenerates": false,
+    "fromSource": "537dcda436643a7aade6139eff7a5ed7cf2643767c9472a32c4138cc5541fbe3",
+    "onTheRow": "9fea8856794467c1162128d5dac53bd9c05df20af09004686cc49ea4a01bd27c"
+   },
+   {
+    "itemId": "MC02-CALC-04",
+    "outcome": "DRIFT",
+    "regenerates": false,
+    "fromSource": "862b36629fc25d77bacc81b44662d86efb0e439f35d13a348a9baad383a6e58c",
+    "onTheRow": "d91eed16a3401a604b7f52d98fef98fe08d9decabbbd0b4752fe202ed5bfd9fe"
+   },
+   {
+    "itemId": "MC03-CALC-04",
+    "outcome": "DRIFT",
+    "regenerates": false,
+    "fromSource": "f19c8463392223bc8ce5cda12af3711e55a1d5e15ae3eda7db6832b507467c8f",
+    "onTheRow": "e64c4e67c3d99fadcc51d9a49b3f2adcfe57d4f3701e844640258365e54e4c82"
+   },
+   {
+    "itemId": "MC03-CALC-08",
+    "outcome": "DRIFT",
+    "regenerates": false,
+    "fromSource": "7bc47448b16a646eee1e3af7f692b5f8bdb096393a168a5ffc392782a6ef7bfc",
+    "onTheRow": "b2d05cbafe3a3f9371e280f3ac15acdbc052522c459db3bedb4ea43428c4d18f"
+   },
+   {
+    "itemId": "MC04-CALC-04",
+    "outcome": "DRIFT",
+    "regenerates": false,
+    "fromSource": "d81c14bf2264744c7a60faf98fde58af3188b26459b91aea87aca3b66cdd1c35",
+    "onTheRow": "3804e7e392755a732f09c2f8782ffdead8360754730b8a0d8439e577656a50be"
+   },
+   {
+    "itemId": "MC05-CALC-04",
+    "outcome": "DRIFT",
+    "regenerates": false,
+    "fromSource": "8ec7b3309c892c01c68f61f1e68712b527a600e2ebec4fb62430c9d4573f4551",
+    "onTheRow": "dfde4d021ef56a5edc6f389afa619beeed6cc9b3f0b221960514305f4ac57f3d"
+   },
+   {
+    "itemId": "MC01-CALC-04",
+    "outcome": "HELD — both variants cross, unruled",
+    "regenerates": "n/a: an unresolved pair has no single form to regenerate"
+   },
+   {
+    "itemId": "MC01-FDP-06",
+    "outcome": "HELD — both variants cross, unruled",
+    "regenerates": "n/a: an unresolved pair has no single form to regenerate"
+   },
+   {
+    "itemId": "MC05-FDP-08",
+    "outcome": "RULED AND LANDED — both variants crossed and she chose one (184th)",
+    "regenerates": "n/a: an unresolved pair has no single form to regenerate"
+   }
+  ]
+ },
+ "FOUR_THE_TWO_HELD": [
+  {
+   "itemId": "MC04-FDP-04",
+   "present": true,
+   "key": "3/8",
+   "unchosenRecorded": true,
+   "publishBlocker": null
+  },
+  {
+   "itemId": "MC05-FDP-01",
+   "present": true,
+   "key": "4/5",
+   "unchosenRecorded": true,
+   "publishBlocker": null
+  }
+ ],
+ "FIVE_THE_CASE_FACE": {
+  "caseId": "case-maths-01",
+  "titleIsEmpty": true,
+  "FAILS_CLOSED_NOW": true,
+  "theOnePredicate": "caseFaceServes(c) — packages/core/src/case-face.ts, called by the serve path and never re-derived",
+  "whatTheSlotNEEDS": [
+   "a TITLE — the child-facing name of the case",
+   "a NARRATIVE INTRO — the wording that opens it",
+   "both landed through the standing path (scripts/lib/case-face.ts) with the reviewer name and return digest as authority, the NVR-notice pattern applied to cases (R686)"
+  ],
+  "standingPathPresent": true,
+  "DRAFTED_BY_NOBODY_HERE": "the wording is Cowork's to draft and Annie's to approve, exactly as case-en-06's was. **Nothing is drafted in this run and no placeholder is written** — a placeholder title would make the face SERVE, which is the one thing failing closed prevents.",
+  "mappedTypes": 7,
+  "caseFiles": 0
+ },
+ "THE_BLAST_RADIUS_WALKED_FROM_THE_ROWS": {
+  "itemsThatWouldReachAChild": 0,
+  "throughCase": "case-maths-01",
+  "atTier": "PAID",
+  "faceServes": false,
+  "soCHILDRENREACHED": "**ZERO. The face is an empty slot and fails closed, so no item reaches any child regardless of status.**"
+ },
+ "THE_THREE_WALLS": {
+  "hintsAttested": "every misconception tagged on a maths option resolves to a library entry — asserted below by count of untagged incorrect options, which is the only thing that can block a verdict here.",
+  "itemsSigned": "0 of 187",
+  "gatesGreen": "7 rows carry a gate fault, all of them the over-cap stems her disposition RULED TO STAND (the cap binds hints; a stem is read at leisure).",
+  "derivedNotRecalled": "every figure on this face was read from the rows in this run, in the cut recorded above."
+ },
+ "THE_VISIBLE_BUT_EMPTY_WINDOW": {
+  "figure": 0,
+  "what": "the interval during which a case is visible to a child and has no items to serve. **It is zero and it is zero structurally**: the face fails closed, so the case is invisible until a wording lands, and by then the items are whatever they are. There is no ordering of these two acts that opens a window.",
+  "andHOWITWOULDBECOMENONZERO": "landing a face wording before the items are LIVE. That is the only sequence that opens it, and it is the sequence the face-fails-closed rule exists to make impossible by default rather than by discipline."
+ },
+ "REFUSED_TO_PUBLISH_ON": "nothing — because nothing publishes in this run. Every count above was walked from the rows rather than carried from a previous artefact.",
+ "SIGNATURE_LINES": [
+  "MC01-CALC-01\tWOULD SIGN",
+  "MC01-CALC-02\tREFUSED — missing-misconceptions",
+  "MC01-CALC-05\tWOULD SIGN",
+  "MC01-CALC-07\tREFUSED — missing-misconceptions",
+  "MC01-CALC-08\tREFUSED — missing-misconceptions",
+  "MC01-FDP-01\tWOULD SIGN",
+  "MC01-FDP-02\tWOULD SIGN",
+  "MC01-FDP-03\tREFUSED — missing-misconceptions",
+  "MC01-FDP-04\tREFUSED — THE BYTES HAVE MOVED SINCE SHE VERIFIED",
+  "MC01-FDP-07\tWOULD SIGN",
+  "MC01-FDP-08\tREFUSED — missing-misconceptions",
+  "MC01-GEOM-01\tWOULD SIGN",
+  "MC01-GEOM-02\tWOULD SIGN",
+  "MC01-GEOM-04\tREFUSED — missing-misconceptions",
+  "MC01-GEOM-05\tREFUSED — missing-misconceptions",
+  "MC01-GEOM-06\tREFUSED — missing-misconceptions",
+  "MC01-MEAS-01\tREFUSED — missing-misconceptions",
+  "MC01-MEAS-02\tREFUSED — missing-misconceptions",
+  "MC01-MEAS-03\tWOULD SIGN",
+  "MC01-MEAS-04\tWOULD SIGN",
+  "MC01-MEAS-05\tWOULD SIGN",
+  "MC01-MEAS-06\tWOULD SIGN",
+  "MC01-MEAS-07\tWOULD SIGN",
+  "MC01-NPV-01\tWOULD SIGN",
+  "MC01-NPV-02\tWOULD SIGN",
+  "MC01-NPV-03\tREFUSED — missing-misconceptions",
+  "MC01-NPV-04\tWOULD SIGN",
+  "MC01-NPV-06\tWOULD SIGN",
+  "MC01-NPV-07\tWOULD SIGN",
+  "MC01-STATS-01\tREFUSED — missing-misconceptions",
+  "MC01-STATS-02\tWOULD SIGN",
+  "MC01-STATS-03\tREFUSED — missing-misconceptions",
+  "MC01-STATS-04\tREFUSED — missing-misconceptions",
+  "MC02-CALC-01\tWOULD SIGN",
+  "MC02-CALC-02\tWOULD SIGN",
+  "MC02-CALC-03\tWOULD SIGN",
+  "MC02-CALC-04\tWOULD SIGN",
+  "MC02-CALC-05\tWOULD SIGN",
+  "MC02-CALC-06\tWOULD SIGN",
+  "MC02-CALC-07\tWOULD SIGN",
+  "MC02-CALC-08\tWOULD SIGN",
+  "MC02-FDP-01\tWOULD SIGN",
+  "MC02-FDP-02\tWOULD SIGN",
+  "MC02-FDP-03\tWOULD SIGN",
+  "MC02-FDP-04\tWOULD SIGN",
+  "MC02-FDP-05\tWOULD SIGN",
+  "MC02-FDP-06\tWOULD SIGN",
+  "MC02-FDP-07\tWOULD SIGN",
+  "MC02-FDP-08\tWOULD SIGN",
+  "MC02-GEOM-01\tWOULD SIGN",
+  "MC02-GEOM-02\tWOULD SIGN",
+  "MC02-GEOM-03\tWOULD SIGN",
+  "MC02-GEOM-04\tWOULD SIGN",
+  "MC02-GEOM-05\tWOULD SIGN",
+  "MC02-GEOM-06\tWOULD SIGN",
+  "MC02-MEAS-01\tWOULD SIGN",
+  "MC02-MEAS-02\tWOULD SIGN",
+  "MC02-MEAS-03\tWOULD SIGN",
+  "MC02-MEAS-04\tWOULD SIGN",
+  "MC02-MEAS-05\tWOULD SIGN",
+  "MC02-MEAS-06\tWOULD SIGN",
+  "MC02-MEAS-07\tWOULD SIGN",
+  "MC02-NPV-01\tWOULD SIGN",
+  "MC02-NPV-02\tWOULD SIGN",
+  "MC02-NPV-04\tWOULD SIGN",
+  "MC02-NPV-06\tWOULD SIGN",
+  "MC02-NPV-07\tREFUSED — THE BYTES HAVE MOVED SINCE SHE VERIFIED",
+  "MC02-RP-01\tWOULD SIGN",
+  "MC02-RP-02\tWOULD SIGN",
+  "MC02-STATS-01\tWOULD SIGN",
+  "MC02-STATS-02\tWOULD SIGN",
+  "MC03-CALC-01\tWOULD SIGN",
+  "MC03-CALC-02\tWOULD SIGN",
+  "MC03-CALC-03\tWOULD SIGN",
+  "MC03-CALC-04\tWOULD SIGN",
+  "MC03-CALC-05\tWOULD SIGN",
+  "MC03-CALC-06\tWOULD SIGN",
+  "MC03-CALC-07\tWOULD SIGN",
+  "MC03-CALC-08\tWOULD SIGN",
+  "MC03-FDP-01\tWOULD SIGN",
+  "MC03-FDP-02\tWOULD SIGN",
+  "MC03-FDP-03\tWOULD SIGN",
+  "MC03-FDP-04\tWOULD SIGN",
+  "MC03-FDP-06\tWOULD SIGN",
+  "MC03-FDP-07\tWOULD SIGN",
+  "MC03-FDP-08\tWOULD SIGN",
+  "MC03-GEOM-01\tWOULD SIGN",
+  "MC03-GEOM-02\tWOULD SIGN",
+  "MC03-GEOM-03\tWOULD SIGN",
+  "MC03-GEOM-04\tWOULD SIGN",
+  "MC03-GEOM-05\tWOULD SIGN",
+  "MC03-GEOM-06\tWOULD SIGN",
+  "MC03-MEAS-01\tWOULD SIGN",
+  "MC03-MEAS-02\tWOULD SIGN",
+  "MC03-MEAS-03\tWOULD SIGN",
+  "MC03-MEAS-04\tWOULD SIGN",
+  "MC03-MEAS-05\tWOULD SIGN",
+  "MC03-MEAS-06\tWOULD SIGN",
+  "MC03-MEAS-07\tWOULD SIGN",
+  "MC03-NPV-01\tWOULD SIGN",
+  "MC03-NPV-02\tWOULD SIGN",
+  "MC03-NPV-03\tWOULD SIGN",
+  "MC03-NPV-04\tWOULD SIGN",
+  "MC03-NPV-06\tWOULD SIGN",
+  "MC03-NPV-07\tWOULD SIGN",
+  "MC03-RP-01\tWOULD SIGN",
+  "MC03-RP-02\tWOULD SIGN",
+  "MC03-STATS-01\tWOULD SIGN",
+  "MC03-STATS-02\tWOULD SIGN",
+  "MC04-CALC-01\tWOULD SIGN",
+  "MC04-CALC-02\tWOULD SIGN",
+  "MC04-CALC-03\tWOULD SIGN",
+  "MC04-CALC-04\tWOULD SIGN",
+  "MC04-CALC-05\tWOULD SIGN",
+  "MC04-CALC-06\tWOULD SIGN",
+  "MC04-CALC-07\tWOULD SIGN",
+  "MC04-CALC-08\tWOULD SIGN",
+  "MC04-FDP-01\tWOULD SIGN",
+  "MC04-FDP-02\tWOULD SIGN",
+  "MC04-FDP-03\tWOULD SIGN",
+  "MC04-FDP-04\tREFUSED — THE BYTES HAVE MOVED SINCE SHE VERIFIED",
+  "MC04-FDP-05\tWOULD SIGN",
+  "MC04-FDP-07\tWOULD SIGN",
+  "MC04-FDP-08\tWOULD SIGN",
+  "MC04-GEOM-01\tWOULD SIGN",
+  "MC04-GEOM-02\tWOULD SIGN",
+  "MC04-GEOM-03\tWOULD SIGN",
+  "MC04-GEOM-05\tWOULD SIGN",
+  "MC04-GEOM-06\tWOULD SIGN",
+  "MC04-MEAS-01\tWOULD SIGN",
+  "MC04-MEAS-02\tWOULD SIGN",
+  "MC04-MEAS-03\tWOULD SIGN",
+  "MC04-MEAS-04\tWOULD SIGN",
+  "MC04-MEAS-05\tWOULD SIGN",
+  "MC04-MEAS-06\tWOULD SIGN",
+  "MC04-MEAS-07\tWOULD SIGN",
+  "MC04-NPV-01\tWOULD SIGN",
+  "MC04-NPV-02\tWOULD SIGN",
+  "MC04-NPV-03\tWOULD SIGN",
+  "MC04-NPV-04\tWOULD SIGN",
+  "MC04-NPV-05\tWOULD SIGN",
+  "MC04-NPV-06\tWOULD SIGN",
+  "MC04-NPV-07\tWOULD SIGN",
+  "MC04-RP-01\tWOULD SIGN",
+  "MC04-RP-02\tWOULD SIGN",
+  "MC04-STATS-01\tWOULD SIGN",
+  "MC04-STATS-02\tWOULD SIGN",
+  "MC05-CALC-01\tWOULD SIGN",
+  "MC05-CALC-02\tWOULD SIGN",
+  "MC05-CALC-03\tWOULD SIGN",
+  "MC05-CALC-04\tWOULD SIGN",
+  "MC05-CALC-05\tWOULD SIGN",
+  "MC05-CALC-06\tWOULD SIGN",
+  "MC05-CALC-07\tWOULD SIGN",
+  "MC05-CALC-08\tWOULD SIGN",
+  "MC05-FDP-01\tREFUSED — THE BYTES HAVE MOVED SINCE SHE VERIFIED",
+  "MC05-FDP-02\tWOULD SIGN",
+  "MC05-FDP-03\tWOULD SIGN",
+  "MC05-FDP-04\tWOULD SIGN",
+  "MC05-FDP-05\tWOULD SIGN",
+  "MC05-FDP-06\tWOULD SIGN",
+  "MC05-FDP-07\tWOULD SIGN",
+  "MC05-FDP-08\tREFUSED — THE BYTES HAVE MOVED SINCE SHE VERIFIED",
+  "MC05-GEOM-01\tWOULD SIGN",
+  "MC05-GEOM-02\tWOULD SIGN",
+  "MC05-GEOM-03\tWOULD SIGN",
+  "MC05-GEOM-04\tWOULD SIGN",
+  "MC05-GEOM-05\tWOULD SIGN",
+  "MC05-GEOM-06\tWOULD SIGN",
+  "MC05-MEAS-01\tWOULD SIGN",
+  "MC05-MEAS-02\tREFUSED — THE BYTES HAVE MOVED SINCE SHE VERIFIED",
+  "MC05-MEAS-03\tWOULD SIGN",
+  "MC05-MEAS-04\tWOULD SIGN",
+  "MC05-MEAS-05\tWOULD SIGN",
+  "MC05-MEAS-06\tWOULD SIGN",
+  "MC05-MEAS-07\tWOULD SIGN",
+  "MC05-NPV-01\tWOULD SIGN",
+  "MC05-NPV-02\tWOULD SIGN",
+  "MC05-NPV-03\tWOULD SIGN",
+  "MC05-NPV-04\tWOULD SIGN",
+  "MC05-NPV-05\tWOULD SIGN",
+  "MC05-NPV-06\tWOULD SIGN",
+  "MC05-NPV-07\tWOULD SIGN",
+  "MC05-RP-01\tWOULD SIGN",
+  "MC05-RP-02\tWOULD SIGN",
+  "MC05-STATS-01\tWOULD SIGN",
+  "MC05-STATS-02\tWOULD SIGN"
+ ],
+ "signaturesSha256": "465058ed2ff4eb6fc028fc0a427b6f362c7b4fadc716e3a2189ff8e8b16b4751",
+ "signaturesSha256Spec": "sha256 over the signature lines joined by \\n, each \"<itemId>\\t<outcome>\", encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content.",
+ "findingsSha256": "5a534f3c59340f6cd30ebf6bee08df95c569a140cb396afbf151ea692641a0c1",
+ "howToCheckThisOnArrival": {
+  "subtreeKeys": [
+   "ONE_THE_SIGNATURES",
+   "THREE_THE_NINE",
+   "FOUR_THE_TWO_HELD",
+   "FIVE_THE_CASE_FACE",
+   "THE_BLAST_RADIUS_WALKED_FROM_THE_ROWS",
+   "SIGNATURE_LINES"
+  ],
+  "subtree": "an object of THIS DOCUMENT'S OWN TOP-LEVEL KEYS, exactly as spelled in subtreeKeys and nowhere renamed: {\"ONE_THE_SIGNATURES\", \"THREE_THE_NINE\", \"FOUR_THE_TWO_HELD\", \"FIVE_THE_CASE_FACE\", \"THE_BLAST_RADIUS_WALKED_FROM_THE_ROWS\", \"SIGNATURE_LINES\"}",
+  "spec": "sha256 over json.dumps(subtree, sort_keys=True, separators=(\",\",\":\"), ensure_ascii=False).encode(\"utf-8\") — R729. ensure_ascii defaults to True and gives a different number.",
+  "andTheFileDigest": "the staging line and the .sha256 sidecar, over the whole file bytes"
+ },
+ "instrumentProvenance": {
+  "emittedBy": "maths-publication-build.ts",
+  "carriedFixture": true,
+  "meaning": "the emitting instrument proved itself against carried cases — including at least one clean case caught by nothing — before it produced these figures (R721)."
+ }
+}
