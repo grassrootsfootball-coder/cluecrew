@@ -22,7 +22,29 @@ import { checkChildFacingText, spansPresentIn, type ContentFailure } from './con
 import { refusalMessage, refusedInOptions } from './refused-misconceptions';
 import { roleForItemStem } from './content-gates';
 import { checkMathsNotation } from './maths/notation';
-import { isRetentionPath } from './field-dispositions';
+
+
+/**
+ * **THE DISPOSITION FILTER, WIRED ONCE AT THE WALK — NOT PER RULE** (R847).
+ *
+ * The dispositions existed and the rules OPTED IN. Two faults came of that and they are one shape:
+ * the notation rule screened retention and demanded house form of retired text (R845), and the
+ * sentence-length rule screened `stem.quotes[].why` — a STAFF path — producing sixteen faults on
+ * LIVE English rows about a field no child ever meets (R846). **One rule asking is a bug; two in
+ * one file is the design.**
+ *
+ * So the question is asked ONCE, at the walk, and every rule inherits the answer.
+ *
+ * **STAFF and RETENTION are excluded. UNDECLARED IS NOT.** A path nobody has ruled on still
+ * screens, because an undeclared field must surface as a question rather than vanish through a
+ * filter — which is the exact failure mode of the allowlist R57 removed. Filtering on
+ * `isScreenedPath` alone would have been the tidier line and would have silently dropped every
+ * field nobody has classified yet.
+ */
+function childFacing(root: string, path: string): boolean {
+  const d = dispositionFor(root, path);
+  return d !== 'staff' && d !== 'retention';
+}
 import { lettersNamedNotOnCard, wordOptionsNamedNotOnCard } from './word-puzzles';
 
 /** Every string in a Json value, INCLUDING single-token ones — the notation gate
@@ -228,6 +250,7 @@ export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
    */
   // Every stem string. The prose and the quote declarations carry the declared quotes.
   for (const [path, text] of textsFrom(item.stem, '')) {
+    if (!childFacing('stem', path)) continue;
     if (!banListApplies(`stem.${path}`)) continue;
     // A carrier sentence disambiguates a meaning and can run long, so it takes
     // the word-card role (no length cap; the vocabulary ceiling ≤9 still holds,
@@ -287,7 +310,7 @@ export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
    * A PATH WITH NO DISPOSITION REFUSES: unclassified is not assumed safe, and the refusal names
    * the path so it reaches the desk as a question rather than a silence.
    */
-  const explanationPaths = [...textsFrom(explanation, '')];
+  const explanationPaths = [...textsFrom(explanation, '')].filter(([p]) => childFacing('explanation', p));
   for (const [rawPath] of explanationPaths) {
     const key = dispositionKey('explanation', rawPath);
     if (dispositionFor('explanation', rawPath) === undefined) {
@@ -347,6 +370,7 @@ export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
    */
   for (const option of item.options) {
     for (const [path, text] of textsFrom(option.content, '')) {
+      if (!childFacing('options[]', path)) continue;
       if (!banListApplies(`option.${path}`)) continue;
       failures.push(
         ...checkChildFacingText({
@@ -449,7 +473,9 @@ export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
        * had explicitly flagged as an open question and NOT amended.** The gate was demanding an
        * amendment to a record of a decision not to amend.
        */
-      if (isRetentionPath(path.replace(/^option\[\d+\]/, 'options[]'))) continue;
+      const normalisedRoot = root.startsWith('option[') ? 'options[]' : root;
+      const relative = path.replace(/^(stem|explanation|option\[\d+\])\.?/, '');
+      if (!childFacing(normalisedRoot, relative)) continue;
       for (const issue of checkMathsNotation(text)) {
         failures.push({ where: `item:${item.id} ${path}`, rule: 'notation', detail: `${issue.kind}: "${issue.found}" → house form "${issue.suggestion}"` });
       }

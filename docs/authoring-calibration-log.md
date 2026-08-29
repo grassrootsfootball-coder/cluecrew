@@ -23380,3 +23380,47 @@ about the string and wrong about the item.
 **Reported, not repaired.** Sixteen want a disposition filter this store can add; two want a
 reviewer to say whether a rule may fire on the word an item is about, and that is not this store's
 to decide.
+
+## R847 — Every rule asks the dispositions now, because the filter is at the walk
+
+The dispositions existed and the rules **opted in**. Two faults came of that and they were one shape:
+the notation rule screened retention and demanded house form of retired text (R845); the
+sentence-length rule screened `stem.quotes[].why`, a STAFF path, producing sixteen faults on LIVE
+English rows about a field no child meets (R846). **One rule asking is a bug; two in one file is the
+design.**
+
+The question is now asked **once, at the walk**, and every rule inherits the answer — all four walk
+sites in `checkItemChildFacing`, both walkers.
+
+**STAFF and RETENTION are excluded. UNDECLARED IS NOT, and that is the load-bearing choice.**
+Filtering on `isScreenedPath` — disposition *is* `child` — was the tidier line and would have
+**silently dropped every field nobody has classified yet**, which is precisely the allowlist failure
+R57 removed. An undeclared path must surface as a question, not vanish through a filter.
+
+**Measured in a worktree at the previous commit rather than argued from the diff:**
+
+| | before | after |
+|---|---|---|
+| ENGLISH LIVE | 18 | **2** |
+| ENGLISH, all 380 rows | 159 | **143** |
+| MATHS | 7 | 7 |
+| VR/NVR LIVE | 0 | 0 |
+
+**Exactly the sixteen, and nothing else.** The two remaining English LIVE faults are the
+`practise`/`practice` pair on `ENG-003-A-SP-07` — a rule firing on the word the item exists to teach,
+which is a reviewer's question and not a filter's.
+
+## R848 — Twenty-three identical outcomes are a curated pass and its ancestors, not a preference
+
+Her finding, and it **retires the class rather than closing it.** Where a set of variants resolves
+the same way twenty-three times, the uniformity is not evidence of a rule about quality — **it is
+the fingerprint of one curated pass and the files descended from it.** The variants are not
+competing judgements; they are a lineage, and the "winner" is simply the copy the curation touched.
+
+**A preference would vary.** Twenty-three identical outcomes say the population was never twenty-three
+decisions — it was one decision, copied. So the class does not need twenty-three readings, and
+reading them would produce twenty-three confirmations of a single ancestral act while looking like
+corroboration.
+
+Sibling to R804's mirror-population lesson: **when a count comes out too clean, the question is what
+produced the uniformity, not what the uniformity proves.**
