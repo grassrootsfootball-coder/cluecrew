@@ -22579,3 +22579,53 @@ its text and a sha256 over that text, which is the join key.
 join against what is here and describe the shortfall. **That would produce a join whose non-matches
 are indistinguishable from absences in the wrong file**, which is precisely the fault the three
 outcomes exist to prevent.
+
+## R816 — Five hint amendments that reached the row and not the source
+
+The item-hint join ran at the desk: 31 matched, 0 ambiguous, 12 unattributed — **and five of the
+twelve are this store's rows carrying her amendments while the authored files carry the
+pre-amendment text.** The reverse-drop class (R786) a second time, on `explanation.hintCore`.
+
+Crossed as the stem-level corrections were — **id, before, after, field named, nothing else
+proposed**: `ENG-003-A-PU-01`, `PU-05`, `PU-06`, `PU-07`, `SP-07`. Membership was derived, not
+accepted: a row qualifies only where NO authored text on this disk equals what serves, which also
+excluded six rows where an authored file already carries the amendment and nothing is owed.
+
+**The fault classes are derived from the two strings rather than asserted**, and one of the five
+does not classify. `SP-07` repairs an em dash and expands a bare `N` to *No mistake*; `PU-05`,
+`PU-06` and `PU-07` are sentence splits. **`PU-01` my classifier calls AUTHORIAL, not a repair** —
+*"Ask: does it belong to somebody"* to *"Does it belong to someone"* matches no mechanical class.
+It is in the set because the source lacks the serving text, which is a fact about carriage; whether
+it is an amendment or a rewrite is a fact about authorship, and **the two axes are independent.**
+Flagged on the row rather than resolved, because resolving it would be reconciling, and **the seven
+genuine rewrites are hers to read, not this store's to reconcile.**
+
+**And the bound is on the artefact**: this compares against authored files ON THIS DISK, which are
+not the authoring store (R794). A row absent here may be carried in a file this store has never
+seen. **These five are owed on the evidence available; they are not a claim that only five are
+owed.**
+
+## R817 — A settling fault, not a store disagreement
+
+Ruled. Her §1 compared library batches stamped `2026-08-22T18:17` against a lookup, and found two
+current wordings. **`en-homophone-by-sound` was written again at 20:58:45 that same evening — two
+hours and forty-one minutes AFTER the stamp.** The batch is not wrong and the row is not wrong:
+**the batch was taken while the store was still being written to.**
+
+**This is the fourth state (R798) applied to EXPORT rather than to ARRIVAL.** LATE was ruled for an
+artefact that has not yet crossed; this is its sibling one step earlier — **an artefact exported
+before the writing settled is stale by construction, and it does not become stale, it is BORN
+stale.** Nothing detects it, because every discipline this store has aims at the crossing: digests,
+manifests, acknowledgement. **All of them attest that the bytes that left are the bytes that
+arrived, and none of them attests that the bytes that left were the current ones.**
+
+**Why it presents as a store disagreement, which is the part worth remembering.** Two artefacts of
+the same date carrying different text looks exactly like two stores holding different text. **The
+date is what disguises it** — same day reads as same state, and it is not: 18:17 and 20:58 are the
+same date and different stores-in-time. Her eightieth reached for the two-store explanation for
+that reason, and so did I.
+
+**The general form: an export's stamp is the moment it was TAKEN, never the moment its contents were
+LAST TRUE.** Where those differ, the second is what a reader needs, and no artefact this store emits
+carries it. Registered rather than built — the fix is a high-water mark on the source (the latest
+write time of anything in the export), and it is not owed until something turns on it a second time.
