@@ -23836,3 +23836,35 @@ lends authority a machine did not earn, the second removes authority a store did
 
 The remedy either way is the one this thread keeps arriving at: **the artefact is on the door with
 its digest.** Neither party has to remember who said what.
+
+## R867 — Her approved bytes and the house gate disagree, and this store picks neither
+
+Her 191st approves both face strings **unamended, on their bytes** — the first child-facing face in
+this project to pass a reading without a single change. **`landCaseFace` refuses them.**
+
+The long-word cap fires on **two distinct long words where the maximum is one: `operations` and
+`percentages`.** Both sit in the content list her return names explicitly — *place value, the four
+operations, fractions and percentages, measures and money, shape, charts and proportion* — and which
+she confirms is *true of the corpus as built*. **The gate is not refusing an oversight. It is
+refusing the sentence she checked most closely.**
+
+It fires under **doorplate, notice and narrative alike**, so this is not the role misfit that
+refused the first landing attempt (R689). And a cosmetic note, because the report misleads: the gate
+prints *"operations,"* and *"percentages,"* with trailing commas, as though punctuation were being
+matched. It is not — and a third ten-letter word, *proportion*, is NOT counted, so the rule is not
+simple length either.
+
+**Four ways to make this land, and this store took none of them:** amend her approved text, lower
+the cap, exempt the doorplate role, or write the face without the standing path. **Every one
+resolves a reviewer-versus-rule conflict by quietly picking a side, and the picking is the fault
+rather than the outcome.** A store that edits approved bytes to satisfy a gate has replaced the
+reviewer; a store that bypasses the gate has replaced the rule.
+
+**So the face stays empty — the state it was already in, and the state that fails closed.** Nothing
+is worse than before, nothing is decided, and the conflict is reported with both sides quoted rather
+than reconciled. `caseFaceServes` false, blast radius zero, the visible-but-empty window **closed**.
+
+**And the window is why the refusal cost nothing.** Had the face landed, it would have opened the
+one sequence R857 named — a visible case with no LIVE items behind it. **The gate that refused her
+wording also held the window shut**, which is not a defence of the refusal but is worth knowing
+before anyone hurries to resolve it.

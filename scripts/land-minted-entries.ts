@@ -82,7 +82,7 @@ async function run() {
 
     if (APPLY) {
       await prisma.$transaction(async (tx) => {
-        await tx.misconception.upsert({ where: { id: m.id }, create: { id: m.id, description: m.description ?? '', childHint: m.childHint ?? null, status: 'ACTIVE' }, update: { description: m.description ?? undefined, childHint: m.childHint ?? undefined } });
+        await tx.misconception.upsert({ where: { id: m.id }, create: { id: m.id, description: m.description ?? '', childHint: m.childHint ?? '', status: 'ACTIVE' }, update: { description: m.description ?? undefined, childHint: m.childHint ?? '' } });
         await tx.itemOption.update({ where: { id: opt.id }, data: { misconceptionId: m.id } });
         await tx.attributionEvent.create({ data: { recordType: 'item', recordId: row.id, action: 'AMENDED', reviewerId: null, actor: 'Cowork (minted entry)', recordedBy: 'human:david', field: 'options[].misconceptionId', method: `minted entry ${m.id} joined to its DECLARED carrier; ${check.ran ? `verified: ${check.detail}` : `human ruling: ${m.humanRuling}`}`, note: 'the join refuses rather than stretches — this one was positively verified, not merely uncontradicted' } });
       });
