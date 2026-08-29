@@ -23210,3 +23210,51 @@ template repair Annie identified is arriving, under a filename that cannot say w
 
 **A send identified by NAME is a lookup with more than one answer.** R799 said it of returns; it is
 truer of a send, because a send is what a store imports from.
+
+## R840 — Re-imported and re-pinned, with the comparison calibrated before it was trusted
+
+The amended source (`4bab53bb…`) reached the desk and was not forwarded — **the desk's fault, not a
+non-arrival.** It is on this disk under **two names, byte-identical** (`amended-maths-source-for-code`
+and `AMENDEDMATHSSOURCECROSSING`): the naming class again, in the turn it was ruled.
+
+**Fourteen of the twenty withdrawn rows re-imported. Six did not, for two different reasons, and the
+difference matters:**
+
+- **Two are HELD because both variants cross** — `MC01-CALC-04` and `MC01-FDP-06`. The units
+  amendment reached both variants and does not resolve the collision. **Picking is the fault that
+  caused the withdrawal, and this store does not pick.**
+- **Four are simply not in this source** — `MC04-FDP-04`, `MC04-FDP-06`, `MC04-GEOM-04`,
+  `MC05-FDP-01`. It carries the exemplar, three briefs and nine amended items; these are in none of
+  them. **That includes both rows the withdrawal was for.** They stay out.
+
+**Her six re-pinned: five RE-PINNED, none back to her, one unreachable.** `MC01-CALC-04` is among the
+held, so its verification cannot be re-pinned and waits on the collision. The other five carry bytes
+**identical** to what she verified — not a re-reading, the same text under a new row.
+
+**And the comparison was calibrated before it was trusted.** A "bytes differ" verdict is only about
+the text if the hash function here is the one that pinned the hashes there. Every retained row was
+re-hashed against its own pinned value first — **compared against a known answer rather than against
+itself** (R829). All reproduce. Had they not, every verdict would have been about my function and
+none of it reportable; **this is the step that makes a mismatch mean something.**
+
+181 rows, 0 gate faults, all DRAFT, none signed.
+
+## R841 — The watcher fired on rows it should not have, because it knew one send
+
+`check:withdrawn-sends` flagged the fourteen legitimate re-imports as orphans. **It was correct
+about what it knew and wrong about the world**: it watched `MATHSIMPORTOUTBOUND` alone, and the rows
+came from a second send it had never heard of.
+
+**A row is orphaned when it is in NO send — not when it is absent from the one the check happens to
+name.** The reference is now every send file on the disk, and the check reports each family's file
+count, digest count and id count separately.
+
+**Widening the reference is not resolving the ambiguity, and the ruling holds.** The check still
+refuses to say which send is current and **still does not use mtime to pick** — it reports that
+`MATHSIMPORTOUTBOUND` resolves to three different documents under one name and stops there. Name a
+send by its content, not its family.
+
+**The general shape: a watcher scoped to one source will read every other source as a fault.** It is
+the same error as R829's matched projections one level out — there, a comparison too narrow to see a
+dropped field; here, a comparison too narrow to see a legitimate arrival. **Both report confidently,
+and both are describing their own reach.**
