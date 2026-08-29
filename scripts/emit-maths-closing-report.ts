@@ -5,6 +5,7 @@
 import { createHash } from 'node:crypto';
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join as pjoin } from 'node:path';
+import { Prisma } from '@prisma/client';
 import { prisma } from '../packages/db/src/index';
 import { publishBlockers, caseFaceServes } from '../packages/core/src/index';
 import { assertFixture } from './lib/carried-fixture';
@@ -60,10 +61,42 @@ async function run() {
     where: { id: { in: mints.entries.map((e) => e.id) } },
     select: { id: true, description: true, childHint: true, status: true },
   });
+  /**
+   * A RETIRED ENTRY'S CARRIERS ARE STILL JOINED — THEY CARRY THEIR DIAGNOSIS UNDER THE ELDER ID.
+   * Counting joins by mint id alone reported 5 of 7 the moment `fraction-part-used-alone` retired
+   * into maths-75, because two carriers had moved to the replacement. The store was right and the
+   * REPORT was stale: it encoded "joined" as "tagged with one of these six ids", which stopped
+   * being the same thing the instant a ruling retired one of them. R180 — a claim that is true when
+   * written is the one that rots silently. So the set follows the retirement.
+   */
+  const retired = await prisma.misconception.findMany({
+    where: { id: { in: mints.entries.map((e) => e.id) }, status: 'RETIRED' },
+    select: { id: true, rejectionNote: true },
+  });
   const mintIds = mints.entries.map((e) => e.id);
-  const joined = rows.flatMap((r) => r.options
-    .filter((o) => isJoinedByMint(o.misconceptionId, mintIds))
-    .map((o) => ({ itemId: r.id, option: String((o.content as { label: unknown }).label), value: String((o.content as { value: unknown }).value), entry: o.misconceptionId })));
+
+  /**
+   * THE DENOMINATOR IS THE SEVEN OPTIONS THE MINT FILE NAMED, not everything wearing these ids.
+   * The first repair swept maths-75's eleven pre-existing carriers into the count and reported
+   * 18 of 7 — an over-correction that is its own R591: the figure claimed a population wider than
+   * the thing behind it. A named carrier counts as JOINED when it carries its entry OR the entry
+   * that entry retired into, which is what makes the count survive a retirement without inflating.
+   */
+  const named = mints.entries.flatMap((e) => [e.join, (e as { secondCarrierCandidate?: { itemId: string; optionLabel?: string } }).secondCarrierCandidate]
+    .filter((j): j is { itemId: string; optionLabel?: string } => !!j)
+    .map((j) => ({ entryId: e.id, itemId: j.itemId, label: j.optionLabel })));
+  const joined = named.map((n) => {
+    const opt = rows.find((r) => r.id === n.itemId)?.options
+      .find((o) => (o.content as { label?: string }).label === n.label);
+    const prior = (opt?.content as { _previousMisconceptionId?: string } | undefined)?._previousMisconceptionId;
+    const tagged = !!opt?.misconceptionId
+      && (isJoinedByMint(opt.misconceptionId, mintIds) || isJoinedByMint(prior ?? null, mintIds));
+    return { itemId: n.itemId, option: n.label, value: opt ? String((opt.content as { value: unknown }).value) : null,
+      declaredEntry: n.entryId, nowCarries: opt?.misconceptionId ?? null,
+      // `undefined` disappears through JSON.stringify, so a digest taken over the object does not
+      // reproduce over the bytes that ship. Absence is written, not omitted (R88).
+      viaRetirementOf: prior && isJoinedByMint(prior, mintIds) ? prior : null, joined: tagged };
+  }).filter((j) => j.joined);
 
   const blocked = rows.filter((r) => isBlocked(r.options, r.reviewedBy, r.authoredBy, r.answerFlaggedAt));
   const signed = rows.filter((r) => r.reviewedBy).length;
@@ -76,13 +109,17 @@ async function run() {
     mintFileSha256: sha(mintBytes.toString('utf8')),
     mintFileSha256Spec: 'sha256 over the mint file bytes exactly as delivered, unparsed',
 
-    ENTRIES_LANDED: { count: entries.length, of: mints.entries.length, entries },
+    ENTRIES_LANDED: { count: entries.length, of: mints.entries.length, entries,
+      RETIRED: retired.map((r) => ({ id: r.id, note: r.rejectionNote })),
+      stillActive: entries.length - retired.length,
+      andHOWJOINSARECOUNTED: 'a retired entry\'s carriers are still JOINED — they carry their diagnosis under the replacement id. The join set follows the retirement rather than the original six ids (R180).' },
     THE_REFINEMENT_TAKEN: mints.entries.find((e) => e.refinement)
       ? { id: mints.entries.find((e) => e.refinement)!.id, supersedes: 'fraction-reduced-to-its-denominator (her 189th)', wordingTakenFrom: 'the file, not the earlier return' }
       : null,
     NO_NUMBERS_MINTED: 'ids are names here; every id is the file\'s string verbatim, with no maths-NN prefix. Numbers attach at the authoring register.',
 
-    JOINS_LANDED: { count: joined.length, joined },
+    JOINS_LANDED: { count: joined.length, of: named.length, joined,
+      theDenominator: 'the option(s) the mint file NAMED, not every option wearing these ids — a named carrier counts as joined when it carries its entry or the entry that entry retired into' },
     JOINS_REFUSED_WITH_CAUSES: [
       { entry: 'percentage-never-divided-by-hundred', carrier: 'MC01-FDP-03 C="2000"',
         cause: 'the declared value is one her own 180th superseded. The store holds "£2000"; the mint quotes the population her 182nd was fenced against (1d7f9cf414f33a0a…), which predates that amendment.',
