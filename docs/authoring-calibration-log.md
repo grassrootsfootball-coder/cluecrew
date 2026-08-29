@@ -23424,3 +23424,49 @@ corroboration.
 
 Sibling to R804's mirror-population lesson: **when a count comes out too clean, the question is what
 produced the uniformity, not what the uniformity proves.**
+
+## R849 — SPECIMEN: a declared role, because house rules bind use and never mention
+
+Her ruling, and it is **the third instance of one shape**. Quotation: a source's words are not ours
+to reword. Retention: retired text is a record, not an offer. **Specimen: an exhibited form is a
+lesson, not a usage.**
+
+`ENG-003-A-SP-07` teaches the practice/practise distinction, so it must PRINT *practise* — and the
+US-spelling rule flagged it for doing the only thing it exists to do. **A character-level rule will
+always eventually meet a lesson about its own characters**, and a district that teaches orthography
+produces this on every item it authors. **So it is a declarable role the gates read, not an
+exception list somebody maintains.**
+
+`stem.specimens` is declared once at item level and honoured wherever the character-level rules run
+— the stem walk, the explanation walk, and the option values, **filtered per string by
+`spansPresentIn` exactly as quotations are.** The declaration itself is a token field, because
+screening the specimen list would flag the very forms it exempts.
+
+**The exemption is the SPAN, never the string**, and there is a test for each direction: an
+undeclared *practise* still faults, a declared one does not, and *"Organize your practise notes"*
+still faults on `Organize` with `practise` declared. **The prose around a specimen stays fully
+bound** — the boundary quotation already draws.
+
+**ENGLISH LIVE: 0 faults**, from 18 before R847 and 2 after it. Across all 380 English rows,
+143 → 141.
+
+**And a note on what was already there.** `testedTokens` silently exempted us-spelling while
+documenting itself as *"exempt from the VOCABULARY CEILING only"*. It would have hidden this fault
+with a wrong declaration — the right form was to name what the string IS, not to borrow a field that
+happened to work.
+
+## R850 — Provenance-only fields separate a blinded pairing by field count alone
+
+Cowork's check separates **23 of 23 without reading a stem** — `map97Status`, `flagNote`, `topicId`,
+`processId`, `gapFamily`. A blinded pairing that carries them is not blinded: the reader never needs
+the content, because **the shape of the record identifies which side produced it.**
+
+**This is the R780 disclosure in reverse.** There, evidence had to stay and the leak was disclosed
+because removing it would have withheld the thing the reading needed. Here the leaking fields carry
+**nothing the reading uses** — provenance, workflow state, internal identifiers — so they come out
+and nothing is lost. **The test is not "does this leak?" but "does the reading need it?"**, and the
+two questions have opposite answers on these five.
+
+**Strip them at the blinding, not at the reading.** A field removed downstream leaves the upstream
+artefact still able to leak on its next use; the R776 lesson is that the side which built the
+artefact is the side least likely to notice what it reveals.

@@ -91,6 +91,9 @@ const TOKEN_FIELDS = new Set([
   // value it can hold is one whatever the item type. It names words already exempt from the
   // ceilings; screening the exemption list itself would cap the very words it exempts.
   'testedTokens',
+  // R849 — the specimen list is a declaration, exactly as `testedTokens` is. Screening it would
+  // flag the very forms it exempts, which is the fault it exists to fix.
+  'specimens',
 ]);
 /*
  * **`value` AND `label` ARE DELIBERATELY ABSENT, AND MY FIRST LIST HAD THEM.** An option's `value`
@@ -211,6 +214,9 @@ export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
     }
     : undefined;
   const testedTokens = Array.isArray(stem.testedTokens) ? (stem.testedTokens as string[]) : [];
+  /** R849 — SPECIMENS: strings the item EXHIBITS rather than employs. A declared role beside
+   *  quotation and notation; house rules bind USE, never MENTION. */
+  const specimens = Array.isArray(stem.specimens) ? (stem.specimens as string[]) : [];
   // R23 — proper nouns the passage itself uses, declared on the stem, exempt from the ceiling only.
   const passageNames = Array.isArray(stem.passageNames) ? (stem.passageNames as string[]) : [];
 
@@ -274,6 +280,7 @@ export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
         quotedSpans: carriesQuotes(path) ? spansFor(path) : [],
         exemptSpans: carriesQuotes(path) ? stemExemptSpans : undefined,
         testedTokens,
+        specimens,
         passageNames,
       }),
     );
@@ -332,6 +339,7 @@ export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
         text,
         quotedSpans: spansPresentIn(text, declaredForScripts),
         testedTokens: scriptTested,
+        specimens,
         derivedTokens: optionWords,
         passageNames,
       }),
@@ -378,6 +386,8 @@ export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
           label: `item:${item.id} option.${path}`,
           text,
           quotedSpans: spansPresentIn(text, stemQuotes),
+          // R849 — filtered to those actually in this option, exactly as the spans are.
+          specimens: spansPresentIn(text, specimens),
           // FILTERED TOO, PER CEILING. `quotedSpans` was filtered and this was not, so the ban-list
           // check received the RAW stem list and reported every span the option did not use as
           // "not in the text" — six items newly failed, all of them false. The same shape as the

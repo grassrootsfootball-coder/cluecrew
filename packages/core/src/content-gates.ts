@@ -606,8 +606,11 @@ export function checkUkSpelling(
   text: string,
   quotedSpans: readonly string[] = [],
   testedTokens: readonly string[] = [],
+  /** R849 — a specimen is exhibited, not used. Masked exactly as a quotation is. */
+  specimens: readonly string[] = [],
 ): ContentFailure[] {
-  const haystack = quotedSpans.length > 0 ? maskQuotedSpans(text, quotedSpans) : text;
+  const masked = [...quotedSpans, ...specimens];
+  const haystack = masked.length > 0 ? maskQuotedSpans(text, masked) : text;
   const tested = new Set(testedTokens.map((token) => token.toLowerCase()));
   const failures: ContentFailure[] = [];
   const seen = new Set<string>();
@@ -762,6 +765,24 @@ export function checkChildFacingText(input: {
   derivedTokens?: readonly string[];
   /** Words this item tests. Exempt from the VOCABULARY CEILING only. */
   testedTokens?: readonly string[];
+  /**
+   * **SPECIMENS: HOUSE RULES BIND USE, NEVER MENTION** (Annie, 2026-08-29 — R849).
+   *
+   * A declared role beside quotation and notation. A specimen is a string the item EXHIBITS rather
+   * than employs — the word a SpaG lesson is about. `ENG-003-A-SP-07` teaches the
+   * practice/practise distinction, so it must print *practise*, and the US-spelling rule flagged it
+   * for doing the only thing it exists to do.
+   *
+   * **The third instance of one shape.** Quotation: a source's words are not ours to reword.
+   * Retention: retired text is a record, not an offer. Specimen: an exhibited form is a lesson, not
+   * a usage. **A character-level rule will always eventually meet a lesson about its own
+   * characters**, and a district that teaches orthography will produce this on every item it
+   * authors — so it is a declarable role rather than an exception list.
+   *
+   * **The exemption is the SPAN, never the string.** Prose around a specimen stays fully bound, the
+   * same boundary quotation already draws.
+   */
+  specimens?: readonly string[];
   /** Proper nouns the PASSAGE uses (R23). Exempt from the ceiling only; verified against the
    *  passage file by `pnpm check:line-refs`, exactly as a quotation is. */
   passageNames?: readonly string[];
@@ -788,7 +809,7 @@ export function checkChildFacingText(input: {
       input.role,
     ),
     ...checkNoInternalIds(input.label, input.text),
-    ...checkUkSpelling(input.label, input.text, input.quotedSpans ?? [], input.testedTokens ?? []),
+    ...checkUkSpelling(input.label, input.text, input.quotedSpans ?? [], input.testedTokens ?? [], input.specimens ?? []),
     // Gates bind by role (R669/R689): the full notice standard binds the notice role; the
     // doorplate role binds the standard's stance half only.
     ...(input.role === 'notice' ? checkNoticeStandard(input.label, input.text) : []),

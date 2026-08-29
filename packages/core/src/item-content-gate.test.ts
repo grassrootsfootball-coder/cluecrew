@@ -206,3 +206,21 @@ describe('retention paths are not screened for notation (R845)', () => {
     expect(f.some((x) => x.rule === 'notation')).toBe(false);
   });
 });
+
+describe('specimens: house rules bind use, never mention (R849)', () => {
+  const item = (stem: Record<string, unknown>) => ({
+    id: 'SP', stem, explanation: {}, options: [{ content: { value: 'a' } }, { content: { value: 'b' } }],
+  });
+  it('flags an exhibited US-looking form when it is NOT declared a specimen', () => {
+    const f = checkItemChildFacing(item({ text: 'Which one is right: practice or practise?' }));
+    expect(f.some((x) => x.rule === 'us-spelling')).toBe(true);
+  });
+  it('does not flag it once declared a specimen', () => {
+    const f = checkItemChildFacing(item({ text: 'Which one is right: practice or practise?', specimens: ['practise', 'practice'] }));
+    expect(f.some((x) => x.rule === 'us-spelling')).toBe(false);
+  });
+  it('KEEPS the surrounding prose bound — a specimen exempts its span, not its sentence', () => {
+    const f = checkItemChildFacing(item({ text: 'Organize your practise notes.', specimens: ['practise'] }));
+    expect(f.some((x) => x.rule === 'us-spelling' && /organize/i.test(x.detail))).toBe(true);
+  });
+});
