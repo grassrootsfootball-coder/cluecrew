@@ -23062,3 +23062,54 @@ other way round it would have read SUPERSEDED within a single landing.
 the store: both refused at import for saying **"error"** in a walk script. She read them in the
 crossed artefact, which carries the refused rows too. **The verification stands on all eight; the
 RECORD can only be written on six**, and the two are named rather than quietly dropped from a count.
+
+## R834 — Her finding described my artefact: the key emitted raw beside normalised options
+
+Her 182nd records *"MC04-GEOM-05 — superscript lost in the key while present in the options; the
+lost-character family's fourth member."* **It is not a member of that family and there is nothing on
+the row to repair.**
+
+The staged source carries `cm2` on **all four** options. The row carries `cm²` on all four,
+normalised at the door. **The inconsistency existed only in the artefact I emitted**: line 73
+normalised `options[].value`, line 74 emitted the separate `key` field from the RAW value. So the
+population she read showed `cm²` options against a `cm2` key — a discrepancy that exists in neither
+store.
+
+**A projection that normalises one copy of a value and not another manufactures a discrepancy
+between them**, and it will always look like a data fault, because the two fields disagree exactly
+where a real loss would show. **Same value, two paths out, one of them treated.** Fixed at the
+emitter; nothing was written to the row.
+
+Third time a machine artefact has worn a data finding in this thread — R94's conflation, R813's
+withdrawn membership, and now this. **The pattern is not carelessness about data, it is that a
+report is itself a piece of software and nothing screens it.**
+
+## R835 — Sittings two to twenty-five, and the generator finding that outranks them
+
+**181 of 188 rows recorded CONTENT-VERIFIED**, fenced against `1d7f9cf4…`, row hash pinned per row,
+`reviewedBy` untouched and every row DRAFT. **Seven refused and are named** rather than dropped from
+a count: `MC01-FDP-05`, `MC01-GEOM-03`, `MC01-NPV-05`, `MC02-NPV-03`, `MC02-NPV-05`, `MC03-FDP-05`,
+`MC03-NPV-05` — all absent from the store on house rules this district had never been screened
+against. She read them in the crossed artefact, which carries the refused rows too. **Her
+verification stands on all 188; the RECORD can only be written where a row exists.**
+
+**The measures extension landed**, and the FORM was a choice rather than a derivation: no litre
+precedent existed anywhere in the corpus — the unit suffixes in use are `cm`, `g`, `p`, `cm²`, `kg`,
+`m` and `degrees` — so `"N litres"` is taken from the stem's own word and is named as chosen.
+
+**The two by-design distractors survived, and the reason matters more than the fact.** `162 cm²` and
+`£4.3` are untouched — **not because anyone remembered them, but because neither was reachable by
+either rule.** The money class matched only bare numbers, so `£4.3` was never in scope; the litre
+amendment matched bare numbers on two named ids. **A rule narrow enough to state is a rule that
+cannot wander into the exceptions**, which is a better protection than a list of things to avoid.
+
+**The generator finding: the template is the authoring store's, and this store could not have
+emitted it.** 21 generators here, every one VR — `vr-01` through `vr-21`. No maths generator, no
+CALC template, no code path emitting a maths item; and all 187 rows carry
+`authoredBy: "maths staging import"`. The five-batch parallel is a template signature and the
+template lives where the items were authored.
+
+**Why it outranks the ten rows, in her terms and mine**: a row fixed here is fixed once, and the
+door repaired ten on import. **A template fixed there stops emitting.** This store can only keep
+normalising the output — a repair applied once per batch, forever, against a fault that has one
+source.

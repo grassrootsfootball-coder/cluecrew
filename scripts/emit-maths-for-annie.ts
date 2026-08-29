@@ -71,7 +71,10 @@ async function run() {
       itemId: it.itemId, group: it.group, tier: it.tier,
       stem: normaliseMathsNotation(String(it.stem ?? '')),
       options: opts.map((o) => ({ label: o.label, value: normaliseMathsNotation(o.value), isKey: o.isKey === true, tag: o.misconceptionId ?? null, tagBehaviour: o.misconceptionBehaviour ?? null })),
-      key: opts.find((o) => o.isKey)?.value ?? null,
+      // R834: the key is normalised HERE TOO. Emitting the raw value beside normalised options
+      // made the artefact show "68 cm2" against options of "68 cm²" and produced a finding about
+      // a data fault that was an artefact fault.
+      key: (() => { const k = opts.find((o) => o.isKey)?.value; return k == null ? null : normaliseMathsNotation(k); })(),
       hint: normaliseMathsNotation(String((it.explanation as Record<string, unknown> ?? {}).hintCore ?? '')),
       landedInTheServingStore: importedIds.has(String(it.itemId)),
     };
