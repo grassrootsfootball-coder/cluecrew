@@ -25372,3 +25372,65 @@ child would meet an option that could not attract anybody. **The test is the sam
 ask what the item tests before harmonising anything**, and here the answer is one character.
 
 Reported as a reading with its reason, not applied to the other store's copy.
+
+## R929 — Executions attach per OPTION; a tag names the diagnosis, an execution names the derivation
+
+Annie's 198th. The one-entry-two-options class needed no reading, because **the condition was never
+unsatisfiable — it was aimed at the wrong grain.** One entry, two options, one execution determines
+neither, *because the execution belongs to the option, not to the pair of row and tag.*
+
+**Two options sharing a tag carry TWO executions**, each running the entry's behaviour on its own
+input and determining its own value. Partial-group executed from the first odd word gives one pair,
+from the second odd word the other, and both are the entry working. **A misconception is a mechanism,
+and a mechanism with two inputs has two outputs on one item.**
+
+**SO THE DOUBLING IS A DESIGN SIGNATURE, NOT A FAULT SIGNATURE.** Five whole cases doubling by
+template is what a symmetric error looks like at population scale; case-vr-02 and the maths 182nd are
+the precedents. **The 125 rows I sent for reading did not need one** — the class was real and the
+question I attached to it was aimed one level too high. `misconceptionExecution` already sits on
+`ItemOption`, so the schema had the grain right and the reporting did not.
+
+**And the routing falls out of it**: where both options take an execution, the doubling is proven
+rather than presumed; where an option refuses every execution of its entry's behaviour, that option
+is the candidate mistag and travels to her with its row, its siblings and the execution that failed.
+**The reader finds the class, the machine finds the members, and only what resists arrives at the
+desk.**
+
+## R930 — Nothing had ever asked whether the carrier performs the entry, and 107 of 275 do not
+
+Cowork's finding, run here across every tagged distractor in the eleven cases. **Tagging asserts a
+diagnosis; nothing had ever checked that the option a tag sits on EXECUTES the act the entry names.**
+
+**Measured: 650 tagged carriers, 275 testable, 168 perform, 107 REFUSE.**
+
+| pattern | carriers | performs | refuses |
+| --- | --- | --- | --- |
+| `vr19-shared-letter-miss` | 25 | **0** | **25** |
+| `vr13-not-a-word` | 25 | 3 | 22 |
+| `vr05-single-word-only` | 25 | 4 | 21 |
+| `vr-move-letter-first-word-invalid` | 25 | 11 | 14 |
+| `vr-move-letter-second-word-invalid` | 25 | 11 | 14 |
+| `vr05-almost-letters` | 25 | 14 | 11 |
+| `vr20-common-letter`, `vr20-sound-alike`, `vr19-letter-order`, `vr17-arith-slip` | 125 | 125 | 0 |
+
+**`vr19-shared-letter-miss` is the clearest case and it is total: not one of the twenty-five coded
+words contains a repeated letter.** The entry names missing that repeated letters share a digit, and
+on every carrier there is nothing to miss — **the act the tag asserts is impossible on the item it
+sits on.** `vr13-not-a-word` is the same shape softened: 22 of 25 carriers are in the lexicon, and
+the entry says they are not words.
+
+**THE DIAGNOSIS: THESE DISTRACTORS WERE GENERATED FROM THE KEY, NOT FROM THE ENTRY'S ACT.** A
+generator that perturbs the answer produces something plausibly wrong and tags it with the pattern
+the slot expects; the tag is then a LABEL rather than a CLAIM, and nothing downstream could tell the
+difference, because every check this district owns reads the tag and none reads the carrier. R927's
+vr-10 finding is the same cause seen from the vocabulary side.
+
+**UNDECIDABLE IS A VERDICT AND IT COVERS 375 OF THE 650.** Thirteen patterns are semantic — *chose a
+goes-together word*, *grouped by look or sound* — and get no predicate. **A test that scored them by
+inference would report a number for all 23 patterns and mean something for ten** (R890). Cowork
+reports fourteen patterns; ten are testable here and six of those refuse, which is consistent with
+their fourteen rather than in tension with it — the difference is what each side could decide, not
+what each side found.
+
+**And the lexicon is named**, because a carrier called *not a word* is being judged against a list,
+and the finding is only as good as it: `/usr/share/dict/words`, BSD web2.
