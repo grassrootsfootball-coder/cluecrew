@@ -517,8 +517,23 @@ function lettersForNumbers(): GenItem[] {
   });
 }
 
+/**
+ * THE CODED WORDS CARRY REPEATED LETTERS, BECAUSE THE ENTRY NEEDS THEM (Annie's 201st — R935).
+ *
+ * The former list — TAP, PAT, TIP, PIT, SIP, SAT, TAPS, PAST, PITS, SPIT — held **not one repeated
+ * letter**, while every row tagged a distractor `vr19-shared-letter-miss`: *missed that repeated
+ * letters share one digit*. The act was impossible on all 25 carriers, and the distractor was the
+ * key with its last digit incremented — a value derived from the ANSWER rather than from the ERROR.
+ *
+ * **An entry whose act is impossible on every carrier is not a tagging fault; it is an item
+ * population that cannot host its own diagnosis.** The entry is signed and the words are generated,
+ * so the words conform. The repeated-letter slip is the classic error of letter-substitution codes —
+ * a coding case whose words cannot produce it has generated the pedagogy out of its own items.
+ */
 function wordNumberCodes(): GenItem[] {
-  const words = ['TAP', 'PAT', 'TIP', 'PIT', 'SIP', 'SAT', 'TAPS', 'PAST', 'PITS', 'SPIT'];
+  // STATS codes to the palindrome 93439, which makes the letter-order distractor EQUAL the key —
+  // a degenerate seat. PAPAS replaces it: repeats P and A, and its code reverses to a distinct value.
+  const words = ['PIPS', 'SAPS', 'SPAS', 'ASPS', 'APPS', 'PAPA', 'PASTA', 'TAPAS', 'PAPAS', 'SPITS'];
   return Array.from({ length: 25 }, (_, i) => {
     const map: Record<string, number> = { T: 1 + (i % 3), A: 4, P: 6, I: 7, S: 9 };
     const word = words[i % words.length]!;
@@ -526,6 +541,15 @@ function wordNumberCodes(): GenItem[] {
     const codeOf = (candidate: string) => candidate.split('').map((letter) => map[letter]).join('');
     const answer = codeOf(word);
     const scrambled = answer.split('').reverse().join('');
+    /**
+     * The shared-letter slip, DERIVED FROM THE ACT: the child misses that a repeated letter wears
+     * one digit and gives the second occurrence a different one. Deterministic, and it exists only
+     * because the word repeats a letter — which is the whole point of the list above.
+     */
+    const repeatAt = word.split('').findIndex((l, j) => word.indexOf(l) !== j);
+    const sharedLetterMiss = repeatAt < 0
+      ? null
+      : answer.slice(0, repeatAt) + String((Number(answer[repeatAt]) + 1) % 10) + answer.slice(repeatAt + 1);
     return {
       n: i + 1,
       tier,
@@ -536,7 +560,7 @@ function wordNumberCodes(): GenItem[] {
       options: [
         { content: { value: answer }, isCorrect: true },
         { content: { value: scrambled === answer ? `${answer}0` : scrambled }, isCorrect: false, m: 0 },
-        { content: { value: answer.slice(0, -1) + ((Number(answer.at(-1)) + 1) % 10) }, isCorrect: false, m: 1 },
+        { content: { value: sharedLetterMiss ?? answer.slice(0, -1) + ((Number(answer.at(-1)) + 1) % 10) }, isCorrect: false, m: 1 },
       ],
     };
   });

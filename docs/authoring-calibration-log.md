@@ -25536,3 +25536,76 @@ UNDECIDABLE is a verdict (R890). **A test that had guessed at the semantic patte
 scored this one, and would have had a one-in-two chance of scoring it wrong in exactly the direction
 the corrected count moves.** Declining to decide what it could not decide is what kept the artefacts
 clean while the surrounding count was off by one.
+
+## R935 — An entry whose act is impossible on every carrier is an item population, not a tagging fault
+
+Annie's 201st, and the repair moved up a layer. `vr19-shared-letter-miss` names *missing that
+repeated letters share one digit*; **not one of the twenty-five generated words carried a repeated
+letter.** The tag was not on the wrong option — the items could not host the diagnosis at all.
+
+**THE ATTESTED LAYER OUTRANKS THE GENERATED ONE.** The entry is signed; the coded words were written
+by `wordNumberCodes()`; **so the words conform to the entry.** The design argument seals it: the
+repeated-letter slip is the classic error of letter-substitution codes, the exact trap a coding case
+exists to teach past, and **a coding case whose words cannot produce it has generated the pedagogy
+out of its own items.**
+
+**THE GENERATOR'S OWN SOURCE IS THE ACCOUNT, AND IT HELD BOTH HALVES OF THE DIVORCE IN ONE FUNCTION.**
+The word list — TAP, PAT, TIP, PIT, SIP, SAT, TAPS, PAST, PITS, SPIT — repeats no letter, and the
+carrier was written as `answer.slice(0,-1) + ((last digit + 1) % 10)`: **the key with its last digit
+incremented, derived from the ANSWER rather than from the ERROR.** Neither half needed inference;
+both are a line of code.
+
+Repaired at the generator so `content:generate` cannot undo it, then regenerated under R62's
+classify-before-write — 25 rows, 0 reviewed, or the run would have failed whole. Words now repeat a
+letter, and the carrier is derived from the ACT: the repeated letter's second occurrence takes a
+different digit. **`vr19-shared-letter-miss` moves from 0 of 25 performing to 25 of 25**, and the
+refusing set falls from 107 carriers to 82.
+
+**One word was dropped for a reason worth recording**: `STATS` codes to the palindrome `93439`, so
+its letter-order distractor would have EQUALLED the key — a degenerate seat created by the repair
+itself. `PAPAS` replaces it. **A fix that introduces a new degeneracy while closing an old one is the
+ordinary way repairs go wrong**, and the only reason this one was caught is that the derivation was
+previewed across all 25 before anything was written.
+
+## R936 — A seat is named by its value, never by its position
+
+Registered in both stores' words, from her 200th's landing.
+
+Her amendment block named five seats by option label — D, D, D, D and B. **vr-02 options carry no
+`label` key at all**, so every one of those references resolved to nothing. The `replaced` VALUES
+resolved to exactly one option each and were the anchor used.
+
+**THE LABEL IS THE NATURAL WAY TO NAME A SEAT AND THE WRONG WAY TO FIND ONE.** A position is a fact
+about a rendering, not about the content: it is absent on some shapes, unstable under shuffling, and
+— worst — it is always PLAUSIBLE, so a landing that falls back to it looks like it worked. **A value
+either resolves to exactly one option or it does not, and the failure is loud.** The same match was
+needed in her 197th, where the carriers were named by word pair; twice now the value has been the
+only usable anchor.
+
+**And the ordering matters: assert, then write.** Each of the five was checked before any write —
+the replaced value resolves to exactly one non-key option, the authored pair sits entirely inside the
+stem's word list, does not overlap the key, and is not already an option on the row. Four assertions,
+none of which a label could have supported.
+
+## R937 — Repetition is not corroboration, and a check cannot condemn on the property under test
+
+Two findings from her 201st, registered over both signatures.
+
+**REPETITION IS NOT CORROBORATION.** *Fourteen* was sixteen minus two, never measured, and it was
+repeated twice — acquiring on the second telling a confidence it had not earned on the first. **A
+figure is corroborated only by INDEPENDENT DERIVATION**, and a figure restated by the same party from
+the same working has been corroborated by nothing. Her pattern-grain ruling survived the correction
+untouched because it was scoped by CLASS and not by COUNT; **a ruling that had been scoped by the
+number would have fallen with it.**
+
+**AND A CHECK CANNOT CONDEMN ON THE PROPERTY THE CHECKED THING IS SUPPOSED TO HAVE.** Every other
+pattern's refusal evidence is UNIFORMITY. `vr18-partial-rule`'s genuine products are uniform too,
+because applying half a rule everywhere is precisely what the misconception is — **the instrument's
+fingerprint and the entry's mechanism are the same property.** This is R889's blind rule arriving at
+an instrument rather than at a population: the test cannot separate the thing it is looking for from
+the thing it is looking with.
+
+So vr18 crosses to the reader with BOTH derivations computed and no verdict from either store, and
+the deciding question stated in advance — **which makes the reading a check rather than a hunt.**
+The artefact carries the generator's line verbatim and stops there; what it means for the entry is
+hers.
