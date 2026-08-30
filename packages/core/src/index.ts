@@ -61,3 +61,4 @@ export * from './case-face';
 export * from './field-dispositions';
 export * from './review-surface';
 export * from './item-identity';
+export * from './tag-write-gate';

@@ -25750,3 +25750,57 @@ up, never recalled** — and *whose finding this is* is a name. The lookup here 
 R938, R939 and R941 now carry the correction at their head rather than being rewritten; the entries
 stand, the attribution is restored, and the path from the false credit to this entry is on the page
 (R888 — a record is corrected by adding to it).
+
+## R943 — Computes-as becomes a write gate: no tag lands without its carrier performing its entry
+
+Annie's 203rd, and it is the repair that outlasts the eighty-two carriers.
+
+**Arithmetic on the key and curation by column position failed identically, because neither ever
+compared the value to the entry it would wear.** Two unrelated methods, one fault, and it lives in
+the JOIN. So the gate lives there: `packages/core/src/tag-write-gate.ts`, called at write time on
+every tag landing, estate-wide. **The class becomes unmanufacturable by either method and by any
+future one.**
+
+**THE GATE IS THREE-VALUED AND THAT IS THE DESIGN.** PERFORMS proceeds; REFUSES throws with the
+execution that failed; **UNDECIDED proceeds and is RECORDED as unverified**, because a predicate
+exists for some entries and not others, and a gate that refused the semantic ones would refuse most
+of the estate. **UNDECIDED is a named state, counted separately, and never a pass** — a caller that
+treats it as one is choosing to, which is the difference between a limit and a leak (R890).
+
+The lexicon is a parameter, never hard-coded: a word test is only as good as its list, and the gate
+must not silently own that choice (R903, and R203's narrow-lexicon lesson below).
+
+**Run against every tag currently landed in VR: 136 PERFORMS, 65 REFUSES, 1,411 UNDECIDED.** The
+65 are the standing debt; the gate's value is that the 66th cannot be created.
+
+## R944 — Four families tested whole, and three hypotheses met their own numbers
+
+Her 203rd dropped the grain back down: **wholesale refusal was a generator verdict; partial refusal
+is not.** Twenty-two of twenty-five is a MIXED population, and three samples cannot rule a family of
+twenty-two — the same rule that kept the dismissal templates from being judged from a fifth of their
+population. Every refusing carrier was tested and every one crosses.
+
+**vr13 — the hypothesis explains four of twenty-two.** *Selected the wrong letters* is a real and
+determinate act, and only **4 of the 22** refusing values can be derived from the outer words by any
+statable position choice. **Under R940's own rule the account fails: it does not reach across the
+material.** Stated with the positions for the four, and no verdict from this store.
+
+**And her counter-point about the other direction landed exactly.** Of the three carriers that
+PERFORM, **one stops performing under a fuller lexicon** — `GRAN` is a real word in this country and
+a narrow list issued it a pass. **A performs verdict is bounded by the lexicon that issued it**, so
+the wider list is named on the artefact rather than appended silently.
+
+**vr05 — the content question was asked first and answered NO.** If a refusing carrier sat at a word
+join, the item would contain a second findable word and the fault would be CONTENT, not tagging.
+**Zero of fifty sit at a join**: 15 sit inside a single word, 35 appear nowhere contiguously. **The
+feared rival key does not exist**, and the sentences crossed whole regardless, because the test was
+worth running before any retag and is worth recording after.
+
+**move-letter — the symmetry is not the swap.** 28 carriers refuse their own entry; **10 perform the
+mirror** — a swapped join, one repair — and **18 refuse both entries**, which is a separate question
+she anticipated when she wrote that symmetry is not proof. The fourteen-and-fourteen shape suggested
+a clean exchange and the cross-execution found a third of one.
+
+**Three tests, three hypotheses, and not one of them came back clean.** That is what testing a whole
+subset buys over sampling three: each family's real shape, and in two cases a refutation of the
+reading that would have been confirmed by any three examples chosen from it.
