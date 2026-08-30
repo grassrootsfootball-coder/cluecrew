@@ -1,0 +1,427 @@
+{
+ "kind": "key-performs-stem-census",
+ "THE_QUESTION": "does the key perform the stem? Forty-seven gates in this estate and not one asks it.",
+ "andWHYITISTHEWORSESEAT": "a mistagged distractor fires the wrong hint; a broken key marks a right answer WRONG. This is R930's blind spot one seat over.",
+ "THE_LEXICON": "/usr/share/dict/web2, 234456 entries — named, because a word test is only as good as its list",
+ "counts": {
+  "UNDECIDED": 1051,
+  "PERFORMS": 165,
+  "REFUSES": 11
+ },
+ "ofItems": 1227,
+ "ITEMS_WITH_NO_CORRECT_ANSWER": {
+  "count": 4,
+  "andWHATTHATMEANS": "the stem cannot be performed by ANY option, or by any cut of its own material. Not a wrong key — an item with no right answer.",
+  "rows": [
+   {
+    "itemId": "gen-vr-08-move-letter-01",
+    "questionType": "vr-08-move-letter",
+    "status": "DRAFT",
+    "key": "C",
+    "stem": {
+     "word1": "CHAIR",
+     "word2": "MOP",
+     "prompt": "Move one letter from the first word to the second so both make new words."
+    },
+    "why": "NO LETTER OF CHAIR CAN DO THIS TASK WITH MOP — the stem cannot be performed at any cut, by any key"
+   },
+   {
+    "itemId": "gen-vr-08-move-letter-13",
+    "questionType": "vr-08-move-letter",
+    "status": "DRAFT",
+    "key": "C",
+    "stem": {
+     "word1": "CHAIR",
+     "word2": "MOP",
+     "prompt": "Move one letter from the first word to the second so both make new words."
+    },
+    "why": "NO LETTER OF CHAIR CAN DO THIS TASK WITH MOP — the stem cannot be performed at any cut, by any key"
+   },
+   {
+    "itemId": "gen-vr-05-hidden-word-16",
+    "questionType": "vr-05-hidden-word",
+    "status": "DRAFT",
+    "key": "pear",
+    "stem": {
+     "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+     "sentence": "A deep armchair sat there."
+    },
+    "why": "\"pear\" DOES NOT APPEAR IN THE SENTENCE AT ALL — the item has no correct answer"
+   },
+   {
+    "itemId": "gen-vr-08-move-letter-25",
+    "questionType": "vr-08-move-letter",
+    "status": "DRAFT",
+    "key": "C",
+    "stem": {
+     "word1": "CHAIR",
+     "word2": "MOP",
+     "prompt": "Move one letter from the first word to the second so both make new words."
+    },
+    "why": "NO LETTER OF CHAIR CAN DO THIS TASK WITH MOP — the stem cannot be performed at any cut, by any key"
+   }
+  ]
+ },
+ "REFUSING": [
+  {
+   "itemId": "gen-vr-05-hidden-word-06",
+   "district": "VR",
+   "questionType": "vr-05-hidden-word",
+   "status": "DRAFT",
+   "key": "song",
+   "task": "a word hiding at the join between two words",
+   "why": "\"song\" appears in the sentence but NOT across a join",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "Whose pens on Gran’s desk?"
+   }
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-01",
+   "district": "VR",
+   "questionType": "vr-08-move-letter",
+   "status": "DRAFT",
+   "key": "C",
+   "task": "move one letter so both make new words",
+   "why": "NO LETTER OF CHAIR CAN DO THIS TASK WITH MOP — the stem cannot be performed at any cut, by any key",
+   "stem": {
+    "word1": "CHAIR",
+    "word2": "MOP",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   }
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-05",
+   "district": "VR",
+   "questionType": "vr-08-move-letter",
+   "status": "DRAFT",
+   "key": "C",
+   "task": "move one letter so both make new words",
+   "why": "the key \"C\" fails: CHEAT->HEAT is a word, and AIR+C makes no word",
+   "stem": {
+    "word1": "CHEAT",
+    "word2": "AIR",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   }
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-16",
+   "district": "VR",
+   "questionType": "vr-08-move-letter",
+   "status": "DRAFT",
+   "key": "S",
+   "task": "move one letter so both make new words",
+   "why": "the key \"S\" fails: SHELF->HELF is NOT a word, and TRAIN+S makes STRAIN",
+   "stem": {
+    "word1": "SHELF",
+    "word2": "TRAIN",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   }
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-17",
+   "district": "VR",
+   "questionType": "vr-08-move-letter",
+   "status": "DRAFT",
+   "key": "C",
+   "task": "move one letter so both make new words",
+   "why": "the key \"C\" fails: CHEAT->HEAT is a word, and AIR+C makes no word",
+   "stem": {
+    "word1": "CHEAT",
+    "word2": "AIR",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   }
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-04",
+   "district": "VR",
+   "questionType": "vr-08-move-letter",
+   "status": "DRAFT",
+   "key": "S",
+   "task": "move one letter so both make new words",
+   "why": "the key \"S\" fails: SHELF->HELF is NOT a word, and TRAIN+S makes STRAIN",
+   "stem": {
+    "word1": "SHELF",
+    "word2": "TRAIN",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   }
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-13",
+   "district": "VR",
+   "questionType": "vr-08-move-letter",
+   "status": "DRAFT",
+   "key": "C",
+   "task": "move one letter so both make new words",
+   "why": "NO LETTER OF CHAIR CAN DO THIS TASK WITH MOP — the stem cannot be performed at any cut, by any key",
+   "stem": {
+    "word1": "CHAIR",
+    "word2": "MOP",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   }
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-16",
+   "district": "VR",
+   "questionType": "vr-05-hidden-word",
+   "status": "DRAFT",
+   "key": "pear",
+   "task": "a word hiding at the join between two words",
+   "why": "\"pear\" DOES NOT APPEAR IN THE SENTENCE AT ALL — the item has no correct answer",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "A deep armchair sat there."
+   }
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-17",
+   "district": "VR",
+   "questionType": "vr-05-hidden-word",
+   "status": "DRAFT",
+   "key": "kind",
+   "task": "a word hiding at the join between two words",
+   "why": "\"kind\" appears in the sentence but NOT across a join",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "The oak in Dan’s garden fell."
+   }
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-19",
+   "district": "VR",
+   "questionType": "vr-05-hidden-word",
+   "status": "DRAFT",
+   "key": "ring",
+   "task": "a word hiding at the join between two words",
+   "why": "\"ring\" appears in the sentence but NOT across a join",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "Put the star in gold paper."
+   }
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-25",
+   "district": "VR",
+   "questionType": "vr-08-move-letter",
+   "status": "DRAFT",
+   "key": "C",
+   "task": "move one letter so both make new words",
+   "why": "NO LETTER OF CHAIR CAN DO THIS TASK WITH MOP — the stem cannot be performed at any cut, by any key",
+   "stem": {
+    "word1": "CHAIR",
+    "word2": "MOP",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   }
+  }
+ ],
+ "BY_QUESTION_TYPE": {
+  "vr-06-missing-word": {
+   "performs": 0,
+   "refuses": 0,
+   "undecided": 40
+  },
+  "maths-npv": {
+   "performs": 0,
+   "refuses": 0,
+   "undecided": 31
+  },
+  "maths-geom": {
+   "performs": 0,
+   "refuses": 0,
+   "undecided": 28
+  },
+  "vr-03-related-words": {
+   "performs": 0,
+   "refuses": 0,
+   "undecided": 49
+  },
+  "vr-08-move-letter": {
+   "performs": 31,
+   "refuses": 7,
+   "undecided": 0
+  },
+  "vr-09-letter-series": {
+   "performs": 0,
+   "refuses": 0,
+   "undecided": 38
+  },
+  "en-comp-vocab": {
+   "performs": 0,
+   "refuses": 0,
+   "undecided": 65
+  },
+  "en-comp-inference": {
+   "performs": 0,
+   "refuses": 0,
+   "undecided": 112
+  },
+  "en-comp-retrieval": {
+   "performs": 0,
+   "refuses": 0,
+   "undecided": 122
+  },
+  "vr-04-closest-meaning": {
+   "performs": 0,
+   "refuses": 0,
+   "undecided": 81
+  },
+  "vr-07-letters-for-numbers": {
+   "performs": 0,
+   "refuses": 0,
+   "undecided": 25
+  },
+  "maths-fdp": {
+   "performs": 0,
+   "refuses": 0,
+   "undecided": 36
+  },
+  "vr-01-insert-letter": {
+   "performs": 0,
+   "refuses": 0,
+   "undecided": 25
+  },
+  "maths-calc": {
+   "performs": 0,
+   "refuses": 0,
+   "undecided": 37
+  },
+  "vr-10-word-connections": {
+   "performs": 0,
+   "refuses": 0,
+   "undecided": 25
+  },
+  "maths-meas": {
+   "performs": 0,
+   "refuses": 0,
+   "undecided": 32
+  },
+  "vr-05-hidden-word": {
+   "performs": 21,
+   "refuses": 4,
+   "undecided": 0
+  },
+  "maths-stats": {
+   "performs": 0,
+   "refuses": 0,
+   "undecided": 12
+  },
+  "vr-11-number-series": {
+   "performs": 0,
+   "refuses": 0,
+   "undecided": 39
+  },
+  "vr-12-compound-words": {
+   "performs": 0,
+   "refuses": 0,
+   "undecided": 25
+  },
+  "vr-13-make-a-word": {
+   "performs": 25,
+   "refuses": 0,
+   "undecided": 0
+  },
+  "vr-14-letter-connections": {
+   "performs": 0,
+   "refuses": 0,
+   "undecided": 25
+  },
+  "vr-20-complete-the-word": {
+   "performs": 25,
+   "refuses": 0,
+   "undecided": 0
+  },
+  "vr-19-word-number-codes": {
+   "performs": 25,
+   "refuses": 0,
+   "undecided": 0
+  },
+  "vr-16-opposite-meaning": {
+   "performs": 0,
+   "refuses": 0,
+   "undecided": 25
+  },
+  "vr-18-related-numbers": {
+   "performs": 25,
+   "refuses": 0,
+   "undecided": 0
+  },
+  "vr-21-same-meaning": {
+   "performs": 0,
+   "refuses": 0,
+   "undecided": 25
+  },
+  "maths-rp": {
+   "performs": 0,
+   "refuses": 0,
+   "undecided": 11
+  },
+  "vr-15-reading-information": {
+   "performs": 0,
+   "refuses": 0,
+   "undecided": 25
+  },
+  "vr-02-two-odd-ones-out": {
+   "performs": 0,
+   "refuses": 0,
+   "undecided": 25
+  },
+  "en-comp-technique": {
+   "performs": 0,
+   "refuses": 0,
+   "undecided": 47
+  },
+  "en-spag-spelling-spot": {
+   "performs": 0,
+   "refuses": 0,
+   "undecided": 9
+  },
+  "vr-17-complete-the-sum": {
+   "performs": 13,
+   "refuses": 0,
+   "undecided": 12
+  },
+  "en-spag-cloze": {
+   "performs": 0,
+   "refuses": 0,
+   "undecided": 16
+  },
+  "en-spag-punct-spot": {
+   "performs": 0,
+   "refuses": 0,
+   "undecided": 9
+  }
+ },
+ "UNDECIDED_IS_A_VERDICT": "item types whose task is semantic get no predicate and are never passed. The undecided count is the estate this gate cannot yet reach, stated rather than folded into a pass.",
+ "RESULT_LINES": [
+  "gen-vr-05-hidden-word-06\tvr-05-hidden-word\tsong",
+  "gen-vr-08-move-letter-01\tvr-08-move-letter\tC",
+  "gen-vr-08-move-letter-05\tvr-08-move-letter\tC",
+  "gen-vr-08-move-letter-16\tvr-08-move-letter\tS",
+  "gen-vr-08-move-letter-17\tvr-08-move-letter\tC",
+  "gen-vr-08-move-letter-04\tvr-08-move-letter\tS",
+  "gen-vr-08-move-letter-13\tvr-08-move-letter\tC",
+  "gen-vr-05-hidden-word-16\tvr-05-hidden-word\tpear",
+  "gen-vr-05-hidden-word-17\tvr-05-hidden-word\tkind",
+  "gen-vr-05-hidden-word-19\tvr-05-hidden-word\tring",
+  "gen-vr-08-move-letter-25\tvr-08-move-letter\tC"
+ ],
+ "resultsSha256": "3d278fb68dd0a0a6bbced54afa70c6fcf7bf06fb044b821edc6ecb6bd87baf82",
+ "resultsSha256Spec": "sha256 over one line per refusing key, \"<itemId>\\t<questionType>\\t<key>\", encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content.",
+ "findingsSha256": "b96c4a1c28c2be4f5d8a570ff99de53aa62199735febbf77623e1e3390df1252",
+ "howToCheckThisOnArrival": {
+  "subtreeKeys": [
+   "counts",
+   "REFUSING",
+   "ITEMS_WITH_NO_CORRECT_ANSWER",
+   "RESULT_LINES"
+  ],
+  "subtree": "an object of THIS DOCUMENT'S OWN TOP-LEVEL KEYS, exactly as spelled in subtreeKeys and nowhere renamed: {\"counts\", \"REFUSING\", \"ITEMS_WITH_NO_CORRECT_ANSWER\", \"RESULT_LINES\"}",
+  "spec": "sha256 over json.dumps(subtree, sort_keys=True, separators=(\",\",\":\"), ensure_ascii=False).encode(\"utf-8\") — R729. ensure_ascii defaults to True and gives a different number.",
+  "andTheFileDigest": "the staging line and the .sha256 sidecar, over the whole file bytes"
+ },
+ "instrumentProvenance": {
+  "emittedBy": "check-key-performs-stem.ts",
+  "carriedFixture": true,
+  "meaning": "the emitting instrument proved itself against carried cases — including at least one clean case caught by nothing — before it produced these figures (R721)."
+ }
+}

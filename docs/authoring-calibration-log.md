@@ -25804,3 +25804,62 @@ a clean exchange and the cross-execution found a third of one.
 **Three tests, three hypotheses, and not one of them came back clean.** That is what testing a whole
 subset buys over sampling three: each family's real shape, and in two cases a refutation of the
 reading that would have been confirmed by any three examples chosen from it.
+
+## R945 — Forty-seven gates and not one asks whether the key performs the stem
+
+David's ruling, 2026-08-30, and it is the largest blind spot this register has recorded.
+
+**Every instrument in this estate verifies reference, identity, notation, reading age, attribution,
+tagging — and all of them pass an item whose KEY IS WRONG**, because none of them ever executes the
+stem's own task. `packages/core/src/key-gate.ts` asks it: three-valued like the tag gate, a predicate
+per question type whose task is decidable, UNDECIDED and never a pass for the semantic ones.
+
+**THIS IS R930's BLIND SPOT ONE SEAT OVER, AND THE WORSE SEAT.** A mistagged distractor fires the
+wrong hint; **a broken key marks a right answer wrong.** The same failure of imagination put both
+there: every check was built to ask whether a row is well-FORMED, and none to ask whether it is
+TRUE.
+
+**Estate-wide: 1,227 items — 168 PERFORMS, 8 REFUSES, 1,051 UNDECIDED.** And four items have NO
+CORRECT ANSWER AT ANY CUT: `gen-vr-05-hidden-word-16`, whose key `pear` does not appear in its
+sentence at all, and three rows carrying `CHAIR/MOP`, where no letter of CHAIR both leaves a word and
+makes one with MOP. **The bank repeats CHAIR/MOP three times, so one broken pair became three broken
+items** — which is why the count of broken stems is not the count of broken content.
+
+## R946 — A join is not a pair, and a lexicon issues false passes as readily as false refusals
+
+**Two faults in my own instrument, found within the same run, pointing opposite ways.**
+
+**A JOIN IS NOT A PAIR.** The first hidden-word predicate checked ADJACENT WORD PAIRS and refused
+three sound items whose key spans three words — *song* across `pens|on|grans`, *kind* across
+`oak|in|dans`, *ring* across `star|in|gold`. A hidden word crosses at least one boundary and may
+cross more; **the pair was an assumption about how far a word can reach, made silently while writing
+the check.** Corrected: 4 vr05 refusals became 1, and the survivor is the genuine one.
+
+**AND THE LEXICON CUTS BOTH WAYS.** `GRAN` is absent from web2 and issued a REFUSES on a sound
+carrier (R944). `THRAIN`, `RIDGEL`, `HERNE`, `ALY`, `PLUP` and `TWI` are PRESENT in web2 and issue
+PASSES on broken ones. **`SHELF/TRAIN` is the case that matters: this store's gate passed it, and only
+because web2 holds THRAIN.** Under any lexicon a child meets no letter works and the stem is
+unperformable — which was the reading relayed to me, and **my instrument disagreed for a reason that
+is a fault in the instrument, not a disagreement about the item.**
+
+So every rival key now carries **the words its verdict rests on**, with the obscure entries flagged.
+This store does not adjudicate the lexicon; **it names what each verdict depends on**, which is the
+only honest position when a list of 234,456 words is standing between a child and a right answer.
+
+## R947 — The pair is a trio, and eighteen distractors are rival keys
+
+`vr-08-move-letter`, every distractor classified by what it ACTUALLY does rather than by its tag:
+**15 first-word-invalid, 9 second-word-invalid, 8 both-invalid, and 18 RIVAL KEYS.** The tag agrees
+with the act on **14 of 50**.
+
+**THE PAIR IS A TRIO.** `vr-move-letter-both-invalid` exists in this library and sits on no DRAFT row
+here — it carries only the 13 NEVER_SHIPPABLE seed rows. Eight carriers belong to it. **One repair
+for a pair was never going to be enough**, and the cross-execution that suggested a swap (R944: 10 of
+28 performing the mirror) was measuring a two-way exchange in a three-way space.
+
+**AND EIGHTEEN CARRIERS PERFORM THE STEM.** Under web2, 18; discounting those resting on obscure
+entries, **8 solid rival keys across 4 distinct stems** — `TWIN/HERE` (move T → WIN + THERE),
+`GRAIN/ATE` (R → GAIN + RATE), `CHARM/ORE` (M → CHAR + MORE), `SNOW/HOE` (N → SOW + HONE). Each is a
+second correct answer sitting in a distractor seat. **A distractor that performs the stem is not a
+mistag; retagging it would bury a content fault under a resolved one**, which is exactly the priority
+her 203rd set for vr05 and which turns out to bite hardest here.
