@@ -24704,3 +24704,36 @@ send and not the replacement; 16 rows carry the withdrawal marker and are still 
 derivations from independent sources — the send files and the attribution log — landing on the same
 membership. **That is the only kind of agreement this register treats as evidence** (R882): not one
 instrument agreeing with itself, but two that could have disagreed.
+
+## R902 — A role is defined by what it OMITS; containment matches every superset
+
+David's ruling, 2026-08-30, from the send-history build.
+
+**A send is the withdrawn one because of what it LEAVES OUT of the replacement, never because of
+what it holds.** The first classifier asked *does this artefact contain the withdrawn ids* — and
+every superset contains them. It put 26 artefacts in one class and reported **187 of 187** rows as
+appearing in a withdrawn send, which is not a finding; it is a classifier with no discriminating
+power reporting as confidently as one that has.
+
+**THE MECHANISM IS MONOTONICITY, AND IT IS WHY THIS FAILS SILENTLY AS A CORPUS GROWS.** A
+containment predicate is monotone increasing in the data: adding rows to an artefact can only make
+it match MORE, never less. So a containment-based role classifier's false positives rise with the
+size of the corpus, and nothing in its output changes shape as that happens — it goes on returning
+a clean list that quietly becomes the whole population. **An omission predicate is monotone in the
+opposite direction**: adding data can only make it fail, so it errs toward refusing to classify
+rather than toward classifying everything. **Where a role must be bounded, define it by absence.**
+
+**THE SMELL IS CHEAP AND MECHANICAL: a role matching the entire population is a failure, not a
+result.** `attach-send-history.ts` now throws on it. That is R889's discriminating denominator
+turned from verification to classification — the question is not how many artefacts a role matched
+but how many it could have EXCLUDED, and a role that excludes nothing has been tested against
+nothing.
+
+**AND THE THIRD CLASS THE OMISSION TEST MADE VISIBLE.** Defining the roles by absence forced a
+distinction containment had hidden entirely: `1d7f9cf4…` carries the withdrawn ids and is not a send
+at all — it is this store's own export of the same 196-row membership, the population the reviewer
+content-verified. Under containment it was a withdrawn send; under omission it needed a role of its
+own, and that role is the reason her verification legitimately covers rows that were later
+withdrawn. **A test too coarse to separate two things will not report that it merged them** — it
+reports the merged class as a fact, and the distinction is only recovered by someone asking why a
+count looks too round.

@@ -106,6 +106,14 @@ async function run() {
   if (replacements.length === 0 || withdrawnSends.size === 0) {
     throw new Error('the sends do not resolve into a withdrawn set and a replacement — refusing to label roles I cannot derive (R173)');
   }
+  /**
+   * A ROLE THAT MATCHES EVERYTHING IS NOT A ROLE (R902). The containment version of this test
+   * matched every superset and put all 26 artefacts in one class. A classifier returning the whole
+   * population has no discriminating power, and it reports as confidently as one that has.
+   */
+  if (withdrawnSends.size >= all.length || replacements.length >= all.length) {
+    throw new Error(`a role matched ${Math.max(withdrawnSends.size, replacements.length)} of ${all.length} artefacts — a classifier that returns the whole population is not classifying (R902)`);
+  }
 
   const rows = await prisma.item.findMany({ where: { questionType: { district: 'MATHS' } },
     select: { id: true, stem: true, explanation: true, options: { select: { content: true, isCorrect: true } } } });
