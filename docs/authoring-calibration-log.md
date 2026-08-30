@@ -24902,3 +24902,59 @@ SUBSTANCE, exactly as the withdrawal is, naming the authority that granted it �
 run. **An exception that stops being visible stops being a decision** (R601); the sender's own note
 says *nothing chose between them*, and what is different now is that something did, with the unchosen
 variant retained on the row so the choice is inspectable rather than remembered.
+
+## R909 — A row serves on identity, reading and authorship, or it waits
+
+Annie's 195th, and it is the district's operating sentence.
+
+**A PIN ASSERTS IDENTITY. A VERDICT ASSERTS READING. THE AUTHOR STANDING BEHIND THE BYTES IS A THIRD
+THING NEITHER SUPPLIES.** She wrote the first two clauses in her signature scoping (R877); the door
+enforced the third before anyone had named it. `MC01-CALC-01` and `MC01-CALC-05` carried her
+verification and their pins and carried **no author's re-issue after the send that shipped them was
+withdrawn** — her words: *they served on soundness without authority, which is a different lack than
+the six had and the same exit.*
+
+**THAT IS THE PRECISE SHAPE OF MY ERROR AT R905.** I credited those two with a "later authority"
+because they had been re-pinned. A re-pin is an IDENTITY assertion; withdrawal is an AUTHORSHIP
+question; and I answered the second with the first because both are true statements about the same
+row. **Two of the three assertions were in hand and the missing one was the one at issue** — which is
+why the fault survived a careful reading and fell to a door keyed on the right thing.
+
+**THE RETURN PATH IS PAVED AND IT IS ASYMMETRIC.** The author re-issues through the gate, and where
+the re-issued bytes are byte-identical to the pinned ones, her verdicts RE-ATTACH — because a reading
+is of bytes and survives their re-issue. Her sentence: **authority arrives fresh; the reading never
+left.** So a withdrawal costs an author's re-issue and never a re-review, provided the bytes come
+back identical. Nothing here re-reads what has not changed.
+
+## R910 — A refusal answered by completing an amendment, not by judging a form
+
+This store refused to convert *1 pound 50* to *£1.50* on the ground that converting a written form is
+a ruling. **It is, and the ruling already existed.** Her 180th amended that stem's SERVING bytes to
+£1.50 and signed against the pin; what had never happened was the amendment reaching the SOURCE. So
+the disposition is not a fresh form judgement but **her amendment completing its journey**: the
+authoring slot amends to byte-identity with the ruled serving stem, under both-or-neither.
+
+**THE GROUND MATTERS MORE THAN THE OUTCOME HERE.** She names a second reason the slot text is wrong —
+spoken register transcribed rather than prose or symbol, no form a child should meet in print — and
+then explicitly declines to rest on it: *the ground of the amendment is the 180th's authority, not a
+new taste.* **A ruling that arrives with two grounds and names which one carries it can be applied by
+somebody who disagrees with the other**, and it cannot be over-extended into a taste rule about
+transcribed speech that nobody made.
+
+The refusal was right and the answer was not a reversal. **A store that refuses correctly should
+expect the reply to be an authority it did not know about at least as often as a concession** — the
+refusal is what surfaced the gap between a ruled serving text and an unruled source.
+
+## R911 — A pending lift is a state, not a silence
+
+`MC03-CALC-07` matches neither the withdrawn substance nor the declared replacement: this store's row
+is not the withdrawn one, so nothing refuses, and the sender's lifting key does not describe it, so
+nothing lifts. **Until today the door reported that as "not named in any standing withdrawal" —
+indistinguishable from a row the notice never mentioned.**
+
+A row NAMED with a replacement that does not describe it is a third state and now has a name,
+`AWAITING RE-DERIVATION`. The cause is on the sender's side and is checkable rather than asserted:
+their v3 replacement digest is reproduced by their own send row, which still carries BARE option
+values while its stem is amended. **It lifts mechanically the moment their re-derivation describes
+the row, and the door reports it on the next run** — which is what makes "report when it lifts" a
+mechanism rather than a thing somebody remembers to do.

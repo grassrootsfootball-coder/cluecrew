@@ -149,6 +149,15 @@ async function main() {
     const digests = computable
       ? canonicalSubstanceCandidates({ stem: r.stem, options: r.options, ...recovered } as never).map(sha)
       : [];
+    /**
+      * AWAITING RE-DERIVATION — the notice names this id with a replacement, and the row matches
+      * NEITHER the withdrawn substance NOR the declared replacement. It is a third state: this
+      * store's row is not the withdrawn one (so nothing is refused) and the sender's lifting key
+      * does not describe it (so nothing lifts). **A pending lift is a state, not a silence**, and
+      * without this class it reads as "not named in any standing withdrawal" — indistinguishable
+      * from a row the notice never mentioned.
+      */
+    const namedWithReplacement = notice.WITHDRAWN.some((e) => e.itemId === r.id && e.replacementSubstanceSha256);
     const hitX = digests.find((d) => exceptions.has(d));
     const hitW = digests.find((d) => withdrawn.has(d));
     const hitL = digests.find((d) => lifts.has(d));
@@ -158,19 +167,22 @@ async function main() {
         : hitX ? 'RULED EXCEPTION — withdrawn, and a ruling permits it'
         : hitW ? 'REFUSE — withdrawn substance'
         : hitL ? 'LIFTED — matches a named replacement substance'
+        : namedWithReplacement ? 'AWAITING RE-DERIVATION — named with a replacement that does not describe this row'
         : 'not named in any standing withdrawal' };
   });
 
   const refuse = screened.filter((s) => s.verdict.startsWith('REFUSE'));
   const excepted = screened.filter((s) => s.verdict.startsWith('RULED EXCEPTION'));
+  const awaiting = screened.filter((s) => s.verdict.startsWith('AWAITING'));
   const lifted = screened.filter((s) => s.verdict.startsWith('LIFTED'));
   const uncomputable = screened.filter((s) => !s.computable);
   console.log(`  serving rows screened: ${screened.length}`);
   console.log(`   REFUSE (withdrawn substance): ${refuse.length}${refuse.length ? ' — ' + refuse.map((r) => r.id).join(', ') : ''}`);
   console.log(`   LIFTED (named replacement):   ${lifted.length}${lifted.length ? ' — ' + lifted.map((r) => r.id).join(', ') : ''}`);
+  console.log(`   AWAITING RE-DERIVATION:       ${awaiting.length}${awaiting.length ? ' — ' + awaiting.map((r) => r.id).join(', ') : ''}`);
   console.log(`   RULED EXCEPTION:              ${excepted.length}`);
   for (const e of excepted) console.log(`      ${e.id} — ${e.exception!.ruledBy}: ${e.exception!.theRuling}`);
-  console.log(`   not named:                    ${screened.length - refuse.length - lifted.length - excepted.length - uncomputable.length}`);
+  console.log(`   not named:                    ${screened.length - refuse.length - lifted.length - excepted.length - awaiting.length - uncomputable.length}`);
   console.log(`   NOT COMPUTABLE HERE:          ${uncomputable.length}`);
   if (uncomputable.length) {
     console.log('\n  THREE OF THE SIX FIELDS DO NOT EXIST IN THIS STORE. Item holds `solution` and has no');
