@@ -25072,3 +25072,46 @@ With the chain declared, the standing notice is v5 and the door reads: **14 lift
 refusing, 2 ruled exceptions.** `MC03-CALC-07` lifted on candidate B as declared, and `MC02-RP-02`
 lifted with it — her 195th's amendment having reached the source, so the row the reviewer ruled and
 the row the authoring store ships are one question again.
+
+## R916 — VR is the transpose of maths, so the parallel-case answer key does not transfer
+
+The slot census, run before the sectioning because the sectioning depends on it.
+
+**A maths case mapped SEVEN question types; a VR case maps ONE.** `case-vr-02` is
+`vr-02-two-odd-ones-out` entire, `case-vr-17` is `vr-17-complete-the-sum` entire. So slot N across the
+eleven cases holds **eleven DIFFERENT question types, at every one of the 25 slots** — 0 slots are
+constant in type, 0 in tier, and every slot spans three to five tiers. **Annie's maths finding was
+that a parallel-case corpus carries its own answer key. VR is parallel in SHAPE and not in CONTENT:**
+25 × 11 = 275 exactly, and the grid is the only thing the two corpora share.
+
+**SO THE SHORTCUT IS NOT AVAILABLE AND SAYING SO IS THE DELIVERABLE.** Sectioning by slot would put
+eleven unrelated skills at five tiers in front of a reader and call it a sitting. A ruling lands on
+eleven rows here only when it is about TIER or about a house rule; a ruling about a question's
+construction lands on one case, because construction is what a VR case IS.
+
+**THE GENERAL FORM: "IS THIS CORPUS PARALLEL" IS TWO QUESTIONS AND THE COUNT ANSWERS THE WRONG ONE.**
+A perfect 25 × 11 grid is exactly what a parallel corpus looks like from the outside, and exactly what
+this one looks like too. **Shape-parallelism is cheap and content-parallelism is the one that
+collapses a calendar** — so the test is never the row count, it is whether the same DECISION reaches
+every member of a slot. Checking that cost one query and would have cost a mis-shaped emission of 275
+rows and somebody's week.
+
+## R917 — An obligation with an empty denominator is a declaration about the mode, not a gap in the rows
+
+The wholeness census asked for `walkScript` **where walk mode serves**. Every one of the eleven cases
+declares walk as a `faded-example` whose `assetRef` is under `placeholder/`. **Walk mode serves a
+real asset in 0 of 11 cases**, so the obligation's denominator is empty: no row is yet obliged to
+carry a script, and reporting "25 of 275 have a walkScript" as a shortfall would have invented a
+debt of 250 rows that nobody owes.
+
+**The 25 that DO carry one are all `vr-10-word-connections` — one case, complete.** That is authoring
+ahead of the mode rather than a partial sweep, and the two read identically in a count. R61's shape,
+arriving in a census rather than in a gate: **a population that is legitimately empty must say so in
+terms that cannot be read as a shortfall**, and the same figure means opposite things depending on a
+fact that lives on the CASE and not on the row.
+
+Measured beside it, and both are clean: **641 of 650 distractors tagged, and all 641 attested against
+an ACTIVE library entry** — no tag names an entry that does not serve. The 9 untagged are one case
+entire (`vr-02-two-odd-ones-out`, nine rows). **Executions stand at 0 of 650**, the binding absence
+as reported, and it blocks nothing the reviewer does — which is what lets the reading and the
+authoring run in parallel rather than in series.
