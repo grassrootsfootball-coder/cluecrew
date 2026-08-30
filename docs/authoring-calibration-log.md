@@ -25296,3 +25296,40 @@ Their states are recorded as UNKNOWN, because this store does not hold the 280 a
 invent a status for every one. **The catalogue records the population and its rule, not a status it
 would have to make up** — the same line R921 drew when the residual turned out not to be a
 population at all.
+
+## R926 — The reach of one artefact: it removes the receive path by removing the copy, and that is not everything
+
+R923's general form, **with a correction to the sentence I used to state it.**
+
+**THE MECHANISM.** A receive path exists because a copy exists. Import doors, gates, canaries,
+substance digests, withdrawal notices, supersession chains, lifting keys, return legs — the whole
+apparatus this week built and armed is machinery for **reconciling two things that were one thing
+before a crossing**. Remove the copy and the apparatus is not cheaper, it is unnecessary: there is
+nothing to receive, because neither store is sending the other a version to merge. **The cost of a
+copy is never the crossing; it is the permanent obligation to keep two things equal afterwards.**
+
+**WHAT IT CLOSES, AND THESE ARE THE WEEK'S OWN CASES.** A mint quoting a population a later amendment
+moved past (R876). A declared value born stale from a snapshot (R886). Lifting keys that described
+nobody's row because current bytes had been amended under them (R908). Every one is a copy that was
+correct when it parted and wrong when it arrived, and **shared bytes make the whole class
+unreachable** rather than detectable.
+
+**AND HERE IS THE CORRECTION.** I said *every divergence this week was a copy that drifted after a
+crossing.* Checked against the register, that is **too strong** — the failure R591 names, in my own
+sentence about my own week. Three of this week's divergences are NOT copy drift and shared bytes do
+not close them:
+
+- **R918, "bank-row" naming two populations.** A shared word meaning two things is untouched by
+  shared bytes. Both stores could read one artefact and still mean different sets by one noun.
+- **R914, the substance predicate contradicting itself.** One artefact yields one key, so the
+  SYMPTOM goes; the predicate is still incoherent and will split identity the next time anything
+  needs a key.
+- **R899, a withdrawal recorded and never executed.** A decision nothing reads is unread whether the
+  bytes are shared or copied.
+
+**THE BOUNDARY, STATED SHARPLY: shared bytes close divergence where exactly ONE party writes.** Two
+readers over one text cannot drift. Two WRITERS over one text need a copy or a lock, and the
+reconciliation cost returns in full — which is precisely why this ruling works for THIS arc: her
+reading and its execution authoring are both reads of the cut, and the writes land in one store.
+**Share where both read; copy only where both must write, and pay the reconciliation knowingly rather
+than discovering it.**
