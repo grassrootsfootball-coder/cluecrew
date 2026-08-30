@@ -25115,3 +25115,49 @@ an ACTIVE library entry** — no tag names an entry that does not serve. The 9 u
 entire (`vr-02-two-odd-ones-out`, nine rows). **Executions stand at 0 of 650**, the binding absence
 as reported, and it blocks nothing the reviewer does — which is what lets the reading and the
 authoring run in parallel rather than in series.
+
+## R918 — Two stores using one word for two populations, and the count that refused to meet
+
+Cowork reported **19 ids and 355 tagged bank-rows** and DECLINED to reconcile against this store's
+641 on the mismatch. **That refusal was the correct act and the reason is now measurable.**
+
+This store's `bank-vr-` population is **105 rows across three question types** — vr-06 (40), vr-04
+(40), vr-02 (25). Of the eleven paid VR cases, **only vr-02 carries `bank-` ids; the other ten are
+`gen-vr`.** So 355 cannot be this store's bank rows under any status filter, and no comparison
+between the two figures means anything. **"Bank-row" is not a shared word**, and both stores used it
+as though it were.
+
+**A COUNT COMPARISON BETWEEN STORES IS A COMPARISON OF TWO DEFINITIONS BEFORE IT IS A COMPARISON OF
+TWO NUMBERS**, and only one of those is visible in the figures. The instructive part is the failure
+direction: had the two counts happened to AGREE, the population mismatch would have been invisible
+and the agreement would have been taken as reconciliation. **The mismatch is what made the
+definitions checkable** — R882's lesson arriving through a disagreement rather than an agreement, and
+cheaper for it.
+
+So the reconciliation is published as ID SETS, per named population: 23 across the eleven cases, 22
+across the 275 DRAFT rows, 54 across all 660 VR rows, 54 signed of 78 held. **The intersection is not
+completed here** — their nineteen have not crossed, and guessing which nineteen would be the count
+comparison again, wearing ids.
+
+**AND THE 23 IS EXPLAINED RATHER THAN MATCHED.** 22 entries appear on the 275 DRAFT rows; the 23rd,
+`vr-move-letter-both-invalid`, appears only on the 13 NEVER_SHIPPABLE vr-08 rows. The figure named to
+this store was 23, this store measured 22 first, and the difference is a status filter — named on the
+artefact so nobody rediscovers it. **A figure that arrives from elsewhere is reproduced with its
+population stated, not matched.**
+
+## R919 — Nine gaps that are one question asked nine times
+
+The nine untagged vr-02 distractors cross to Annie as **their own class, not as nine tagging
+decisions.** All nine are `vr-02-two-odd-ones-out`, every one a two-word odd-pair option, and all
+nine sit outside the three entries that case uses. **That is one question about what vr-02 needs,
+asked nine times.**
+
+The distinction is not presentational. Nine separate gaps invite nine separate judgements and produce
+a tagging pass; one class invites a single reading of whether the case's three entries are complete,
+and produces either a ruling or one new entry. **The row-level view is the more granular and the less
+useful**, because it hides the only fact that makes the population tractable — that its members are
+identical in kind.
+
+**And what is NOT asserted travels with it**: this store does not claim a new entry is required. Two
+of the three existing vr-02 entries may already cover them, and that is a reading nobody here has
+made (R593 — a population offered for review says what it has decided and what it has not).
