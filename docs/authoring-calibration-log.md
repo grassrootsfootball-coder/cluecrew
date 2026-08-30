@@ -25612,7 +25612,11 @@ hers.
 
 ## R938 — A repair is caught by previewing the whole output, never by verifying the fix
 
-David's ruling, from the vr19 regeneration.
+**AUTHORSHIP CORRECTED — SEE R942.** This finding is THIS STORE'S, made here from the vr19
+regeneration. It was relayed to the desk as the authoring store's and returned in that attribution,
+and the original wording of this entry credited the relay rather than the work.
+
+From the vr19 regeneration.
 
 **The fix was right and it introduced a new degeneracy.** Replacing the word list so every coded word
 repeats a letter is exactly what her 201st ruled — and `STATS` codes to the palindrome `93439`, so
@@ -25697,10 +25701,12 @@ the key by a constant refuses on sight — is run against the proposal before it
 a refuter attached and not executed is a description of a check. It refuses the current carriers and
 passes the proposed ones: 21 distinct differences from the key across 25 rows.
 
-## R941 — The STATS form in Cowork's words
+## R941 — The STATS form, restated
 
-Recorded in the other store's phrasing beside R938, because a rule two stores hold in one wording is
-a rule neither can drift from:
+**AUTHORSHIP CORRECTED — SEE R942.** This entry was filed as *the STATS form in Cowork's words*, on
+a relay that attributed this store's own finding to the authoring store. **The wording below is this
+store's own, returned to it.** The entry stands because the restatement earned its place; only the
+attribution was wrong:
 
 > **A repair is proved by rendering the whole output and reading it, not by asserting the thing you
 > set out to fix.**
@@ -25715,3 +25721,32 @@ the columns.
 **Three degeneracies in two repairs, all of the same shape**: STATS in vr19, and two discarded
 candidates in vr18. **The rate is the finding** — a repair that touches a derivation introduces a new
 degeneracy often enough that the full render is not a precaution, it is the step.
+
+## R942 — A relay that reattributes, and a store that then files its own rule in the other's voice
+
+David's correction, 2026-08-30. **The STATS form (R938) and the arithmetic-and-curation finding
+(R939) are this store's.** They were made here, from this store's own preview of the vr19 output and
+its own reading of two generator functions. The desk attributed them to the authoring store, and
+**this store then filed R941 as *the STATS form in Cowork's words* — restating its own rule in
+another party's voice, on the strength of the relay.**
+
+**THE FAILURE IS NOT THE MISATTRIBUTION; IT IS THAT I HAD THE EVIDENCE AND DEFERRED ANYWAY.** The
+commit that produced R938 is in this repository, authored here, minutes earlier. Nothing needed
+looking up. **An attribution arriving through the ruling channel was treated as a fact about the
+world rather than as a claim about my own work** — which is R94's conflation exactly, running in the
+opposite direction: there a machine verdict wore a person's name, here a store's own finding wore
+another store's.
+
+**AND THE SECOND STEP IS THE WORSE ONE.** Accepting a wrong attribution is a small error that
+corrects itself the moment anyone checks. **Re-emitting the finding in the other party's voice
+manufactures corroboration**: a register entry saying *in Cowork's words* is evidence, to any later
+reader, that two stores reached this independently. **One relay became two sources.** That is R937's
+repetition-is-not-corroboration with the repetition performed by the party who should most easily
+have known better.
+
+**The guard is the one R178 already names and I did not apply to myself: a name in prose is looked
+up, never recalled** — and *whose finding this is* is a name. The lookup here was `git log`.
+
+R938, R939 and R941 now carry the correction at their head rather than being rewritten; the entries
+stand, the attribution is restored, and the path from the false credit to this entry is on the page
+(R888 — a record is corrected by adding to it).
