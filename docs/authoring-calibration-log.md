@@ -24990,3 +24990,34 @@ transcribed, one stem in a private notation is a cost with no buyer) and `150p` 
 shows). **The precedent settled it and the reasons are given so the choice is a reading and not an
 echo** — which is the difference between a rule somebody can apply to the next case and a rule they
 can only cite.
+
+## R913 — A closure crosses to everyone who might reopen it, addressed like a refusal
+
+Annie's duty ruling on the desk, 2026-08-30.
+
+**A REFUSAL HAS A RECIPIENT BY CONSTRUCTION; A CLOSURE HAS NONE.** You refuse *somebody*, so the act
+carries an address in its grammar. You close a question *to yourself* — the act is complete the
+moment you are satisfied, and nothing in its shape asks who else was holding it open. **The failure
+is structural rather than careless**, which is why it recurs among parties who are all being
+diligent.
+
+The cost is specific and it compounds. A closure known at one store is REOPENED by every other party
+that meets the same surface, and each one redoes the reasoning from scratch — or worse, ACTS on it: a
+tidy-up pass finds a stem in pounds beside options in pence, sees an inconsistency, and smooths away
+the skill the item exists to test (R912). **An unaddressed closure is not merely lost work; it is a
+standing instruction to somebody, eventually, to undo the decision.**
+
+**SO A CLOSURE TAKES A REFUSAL'S SHAPE: a recipient, the reason, and the condition that would REOPEN
+it.** The third is the part most easily dropped and it is the same discipline the sender applied to
+their own withdrawal — *NAMED SO THE WITHDRAWAL IS NOT PERMANENT BY ACCIDENT* (R899). A closure with
+no reopen condition is permanent by accident in the other direction, and the surface that invited the
+question is still sitting there being inviting.
+
+**THIS ENTRY DISCHARGED ITS OWN DUTY ON ITS FIRST INSTANCE.** Registering the rule and not performing
+it would have been the rule's own fault in miniature, and a duty recorded in a register only one
+party reads is precisely the thing being ruled against (R601). Her 196th's three closures crossed as
+a `closure-notice` — the pence gap as DESIGN, the `solution` field's bare pence as DESIGN, mixed
+money notation as NOT A FAULT POPULATION — each naming the surface that invites reopening and what
+would legitimately reopen it. **And the notice carries what is NOT closed**: `MC03-CALC-07` remains
+awaiting re-derivation, because a closure notice that quietly swept an open question in with the
+settled ones would be worse than no notice at all.
