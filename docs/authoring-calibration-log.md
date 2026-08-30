@@ -25240,3 +25240,59 @@ a specific row and tag (this store's holding), and the English precedent put it 
 without the question being asked. **650 is the number at which an unruled ownership becomes a
 migration** — cheap to rule at zero, cheap to rule now, expensive after the work is done in the wrong
 store.
+
+## R923 — One artefact read by both parties, and byte-identity replaces the receive path
+
+David's ruling, closing what R922 left open. **Her reading and its execution authoring run on THE
+SAME BYTES**, and byte-identity binds both to the same text.
+
+R922 put two shapes on the table and both carried a receive-path cost: rows crossing to the author
+needed an import door for executions, a gate and a canary before 650 rows depended on it, in the
+direction R88 found had never carried anything. **One artefact read by both parties needs none of
+it** — there is nothing to receive, because neither store is sending the other a copy to merge. The
+population is CUT once, crossed once, and quoted back by digest.
+
+**THE FAILURE MODE THIS CLOSES IS THE ONE THIS WEEK KEPT PRODUCING: two stores authoring against two
+texts that were the same when they parted.** The money-units divergence (R906), the stem that was
+amended at one store and not the other, the replacement digest that described nobody's row — every
+one of them is a copy that drifted after a crossing. **Byte-identity is not a courtesy here. It is
+what makes a reading done at one store valid over a row served at the other**, and the digest is the
+whole of the guarantee: a reading or an execution citing any other digest is about a different text.
+
+## R924 — A row whose bank nobody can name has no source for its third assertion
+
+David's ruling on provenance, and it lands on R909's third clause. A pin asserts identity, a verdict
+asserts reading, and **authorship is the third thing neither supplies** — in this district the
+author's shelf IS the source of that assertion, so every row carries a bank and a digest or says
+UNKNOWN.
+
+Measured: the shelf at `~/Downloads/11+/items/vr-banks` holds exactly **three** banks — vr-02 (25),
+vr-04 (40), vr-06 (40) — which is exactly this store's 105 `bank-vr-` rows. **Of the eleven paid
+cases, ONE has a bank.** The other ten are `gen-vr`, generated in this store, never banked, and their
+provenance line says UNKNOWN with the reason.
+
+**THAT IS THE SAME FACT AS "THE AUTHORING STORE HOLDS ALMOST NONE OF THESE ROWS", SEEN FROM THE
+SHELF.** Two parties reported it independently from opposite sides and it resolves to one cause:
+ten of the eleven cases were generated here and never existed at the author. **A finding that
+arrives twice from different directions is worth more than either arrival** — and it also means
+neither store was wrong, which is the outcome a count comparison would have obscured.
+
+**BLANK AND UNKNOWN ARE THE SAME CHARACTER ON A PAGE AND DIFFERENT FACTS** (R98, in a provenance
+column). Ten UNKNOWN lines each carrying their reason are ten answered questions; ten empty cells are
+one unasked one.
+
+## R925 — A shelf is the state that is neither a loss nor a debt
+
+The 280 rows outside the eleven cases are **catalogued as a shelf**: not a loss, not a debt, and
+never counted into a door's population until a cut names them.
+
+**AN UNCATALOGUED POPULATION OUTSIDE A DOOR HAS TWO FAILURE MODES AND THEY ARE OPPOSITE.** It gets
+counted IN — and a reviewer is asked to sign for rows nobody cut, which is what she refused this week
+and was right to. Or it gets FORGOTTEN — and the work is redone because nothing recorded that it
+existed. **A shelf is the state that is neither: present, named, and outside every denominator until
+somebody cuts it.**
+
+Their states are recorded as UNKNOWN, because this store does not hold the 280 and would have to
+invent a status for every one. **The catalogue records the population and its rule, not a status it
+would have to make up** — the same line R921 drew when the residual turned out not to be a
+population at all.

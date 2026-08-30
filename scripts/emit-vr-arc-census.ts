@@ -12,6 +12,8 @@
  * unrelated questions in front of a reader and call it a sitting.
  */
 import { createHash } from 'node:crypto';
+import { readFileSync, readdirSync, existsSync } from 'node:fs';
+import { homedir } from 'node:os';
 import { writeFileSync } from 'node:fs';
 import { join as pjoin } from 'node:path';
 import { prisma } from '../packages/db/src/index';
@@ -34,6 +36,26 @@ const valueOf = (c: unknown) => {
   const v = (c as { value?: unknown }).value;
   return Array.isArray(v) ? v.map(String) : String(v);
 };
+
+/**
+ * THE SHELF — the author's banks, read from disk and hashed. A row's BANK is the source of its third
+ * assertion (R909: authorship), so **a row whose bank nobody can name has no source for it** and is
+ * marked UNKNOWN rather than left blank. Blank and unknown are the same character on a page and
+ * different facts.
+ */
+function theShelf() {
+  const dir = pjoin(homedir(), 'Downloads/11+/items/vr-banks');
+  if (!existsSync(dir)) throw new Error(`no shelf at ${dir} — refusing to name every bank unknown by accident (R173)`);
+  const banks = new Map<string, { file: string; sha256: string; itemCount: number }>();
+  for (const n of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
+    const bytes = readFileSync(pjoin(dir, n), 'utf8');
+    let d: { bank?: string; itemCount?: number };
+    try { d = JSON.parse(bytes) as { bank?: string; itemCount?: number }; } catch { continue }
+    if (typeof d.bank === 'string') banks.set(d.bank, { file: n, sha256: sha(bytes), itemCount: d.itemCount ?? 0 });
+  }
+  if (banks.size === 0) throw new Error('the shelf holds no bank with a `bank` key — the shape changed (R173)');
+  return banks;
+}
 
 async function run() {
   assertFixture('slot-parse', [
@@ -168,6 +190,15 @@ async function run() {
     },
     SO_WHAT_ANNIE_CAN_SIGN_AGAINST: `${eleven.length - outsideTheDoor.length} rows cut by the door and ${outsideTheDoor.length} named and stateable beside them. The residual is CLOSED: it was never a population.`,
   };
+  const shelf = theShelf();
+  const provenanceOf = (qtId: string) => {
+    const b = shelf.get(qtId);
+    return b
+      ? { bank: b.file, bankSha256: b.sha256, bankItemCount: b.itemCount, state: 'NAMED' as const }
+      : { bank: null, bankSha256: null, bankItemCount: null, state: 'UNKNOWN' as const,
+          why: 'no bank for this question type is on the author\'s shelf. Its rows carry gen-vr ids — generated in this store — so there is no bank to name, and the absence is a fact about the shelf rather than a gap in this record.' };
+  };
+
   const THE_CUT = {
     state: 'CUT',
     what: `${sorted.length} rows in ${cases.length} cases, ${SECTION_SIZE} to a section, contiguous by case`,
@@ -177,8 +208,32 @@ async function run() {
 
   const full = {
     kind: 'vr-arc-census-and-population',
+    TO: 'BOTH Annie and Cowork — one artefact, one digest, crossed once.',
+    THE_RULING_THAT_MAKES_ONE_CROSSING_ENOUGH: {
+      it: 'her reading and its execution authoring run on THE SAME BYTES, byte-identity binding both to the same text.',
+      andWHATITREPLACES: 'the receive-path problem for this arc. Shape A needed an import door for executions, a gate and a canary before 650 rows depended on it (R922). One artefact read by both parties needs none of that: there is nothing to receive, because neither store is sending the other a copy to merge.',
+      soTHEFAILUREMODEITCLOSES: 'two stores authoring against two texts that were the same when they parted. Byte-identity is not a courtesy here — it is what makes a reading done there valid over a row served here.',
+      theBindingValue: 'the sha256 of this file, which both parties quote back. A reading or an execution citing any other digest is about a different text and this store will say so.',
+    },
     THE_CUT,
+    THE_PROVENANCE_LINE_PER_CASE: {
+      whyItIsHere: 'a row\'s BANK is the source of its third assertion — authorship (R909). A row whose bank nobody can name has no source for it, so every case carries a line and the unnamed say UNKNOWN rather than nothing.',
+      theShelf: pjoin(homedir(), 'Downloads/11+/items/vr-banks'),
+      banksOnIt: [...shelf.entries()].map(([bank, b]) => ({ bank, file: b.file, sha256: b.sha256, items: b.itemCount })),
+      perCase: cases.map((c) => ({ caseId: c.id, questionType: c.questionTypeId, rowsHere: eleven.filter((r) => r.questionTypeId === c.questionTypeId).length, ...provenanceOf(c.questionTypeId) })),
+      THE_SUMMARY: `${cases.filter((c) => shelf.has(c.questionTypeId)).length} of ${cases.length} cases have a bank on the shelf. The rest are UNKNOWN.`,
+      andWHATTHATEXPLAINS: 'the shelf holds exactly three banks — vr-02 (25), vr-04 (40), vr-06 (40) — which is exactly this store\'s 105 bank-vr- rows. Of the eleven paid cases only vr-02 came from a bank; the other ten are gen-vr, generated here and never banked. **That is the same fact as "the authoring store holds almost none of the eleven cases\' rows", seen from the shelf instead of from their store.**',
+      AND_AN_INFERENCE_MARKED_AS_ONE: 'the 25 rows overlapping between the two stores are very likely vr-02\'s 25 — it is the only one of the eleven with a bank, the bank declares itemCount 25, and this store holds exactly 25 rows for it. NOT VERIFIED: their 25 ids have not crossed, and a count agreeing with a count is what R918 was registered about.',
+    },
     THE_DAYLIGHT_RECONCILIATION: daylight,
+    THE_TWO_HUNDRED_AND_EIGHTY_AS_A_SHELF: {
+      what: '280 of the authoring store\'s 305 rows lie outside the eleven cases entirely. Recorded as their measurement.',
+      overlapping: 25,
+      THE_RULING: 'not a loss, not a debt, and never counted into a door\'s population until a cut names them.',
+      whyThatIsNotBookkeeping: 'an uncatalogued population outside a door has exactly two failure modes and they are opposite: it gets counted in, and a reviewer is asked to sign for rows nobody cut; or it gets forgotten, and work is redone because nothing recorded that it existed. **A shelf is the state that is neither** — present, named, and outside every denominator until somebody cuts it.',
+      statesHere: 'UNKNOWN. This store does not hold their 280 and cannot state a status for a single one; the catalogue records the population and its rule, not a status it would have to invent.',
+      whatWouldMakeITCUTTABLE: 'their 280 ids with states. Then it is a population and can be sectioned like any other.',
+    },
     THE_POPULATION: `${rows.length} DRAFT rows across ${cases.length} paid VR cases, 25 per case`,
 
     ONE_THE_SLOT_CENSUS: {
