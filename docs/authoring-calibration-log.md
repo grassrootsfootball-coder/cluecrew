@@ -24610,3 +24610,46 @@ district's paid door now opens onto 178 items across seven question types.
 
 Nine rows remain DRAFT with 15 untagged distractors, named per row with their causes on the
 artefact. **Open at 178 with the nine held.**
+
+## R899 — A withdrawal recorded as an event and never executed as a removal
+
+**Six rows served children on bytes from a send their author had withdrawn.** Each carried, on its
+own row, an event reading *"the 196-row send was WITHDRAWN by the authoring store; this id is not in
+the replacement send. **The row is removed before anything publishes.**"* The removal never happened.
+The rows went marker → SIGNED → PUBLISHED, and the instruction sat on each one the whole way.
+
+**THE MARKER IS INDISTINGUISHABLE, DOWNSTREAM, FROM NO WITHDRAWAL AT ALL.** It is prose in a
+`method` field. Nothing reads it, so nothing enforces it — R601 exactly: *a decision nothing reads is
+not a decision*, arriving on the most consequential field in the district. The event was written to
+be a control and functioned as a note.
+
+**AND THE PUBLICATION'S EIGHT ASSERTIONS WERE ALL SOUND.** Signatures, pins recomputing under their
+own projection, joins standing, the face serving, the held set matching the mechanism, the arithmetic
+closing, nothing held from serving, every row in the practice pool. **Not one asked which SEND a row
+came from.** A complete set of correct assertions about the wrong axis reads exactly like a complete
+set of assertions — which is R889 wearing its most expensive costume: every green was real, and the
+question that mattered was never put.
+
+**THE COLUMNS COULD NOT HAVE ANSWERED IT EITHER.** `sourcedFrom`, `importDoorFix` and
+`draftingMethod` are null on all 187. The district has no per-row record of its own provenance;
+what exists lives in `AttributionEvent`, which no gate consults. **The first place I looked returned
+"no provenance anywhere" and that was true of the columns and false of the store** — R568's fault
+one level up, where the right question asked of the wrong table gives a clean, wrong answer.
+
+`pnpm check:withdrawn-serving` is the missing assertion, standing alone: any row marked by a
+withdrawal and serving must carry a LATER AUTHORITY reaching it, and the check prints that authority
+per id. **Six of the ten marked-and-live rows had none and came out** (LIVE → REVIEWED, not deleted —
+signature, bytes and events intact, reinstatable in one statement). Four stay and the reason is on
+the record: `MC01-CALC-01` and `MC01-CALC-05` were re-pinned against the amended source
+`4bab53bba515e606` with bytes verified identical to the replacement; `MC04-FDP-04` and `MC05-FDP-01`
+were restored on her explicit ruling — *the absence recorded earlier was false and is withdrawn.*
+**A row with a later authority is not a withdrawn-send row; a row with none is**, and that
+distinction is the whole content of the check.
+
+**A SEPARATE FALSE NOTE, FOUND WHILE ANSWERING.** The restore events on `MC04-FDP-04` and
+`MC05-FDP-01` state: *the unchosen variant is recorded on the row and is NOT discarded.* Both stems
+carry exactly one key, `text`; `_stemCollisionResolved` is absent on all 187. **The note asserts a
+retention that does not exist.** The rows serve the variant she read — attested by her ruling and by
+a signature over a pin that recomputes — but from the row you cannot tell a choice was made, which is
+precisely what the note promises you can. R872's lesson unlearned in a neighbouring file: a retention
+claimed in prose and not written is worse than no retention, because it stops anyone looking.
