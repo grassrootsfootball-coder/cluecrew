@@ -25660,3 +25660,58 @@ a column and the tag assigned by that column's POSITION — `m: 0`, `m: 1`, inde
 **Nothing ever compared the column to the entry it would wear.** Arithmetic and curation produced
 identical failures, which says the fault is in the join between layers and not in either layer's
 method.
+
+## R940 — Explanatory reach decides between two accounts, and uniformity has three states
+
+Annie's 202nd, and it supplies the tiebreak R937's blind-property rule was missing.
+
+**WHEN TWO ACCOUNTS FIT A PATTERN, THE ONE THAT EXPLAINS IT ACROSS THE MATERIAL'S VARIATION WINS.**
+An account that only describes the pattern where the material is easy is **a coincidence with three
+examples.**
+
+The instance measured it exactly. `vr18-partial-rule`'s carrier is key-plus-one on 25 of 25; the
+stated child-act reaches it on 3, and **all three are coincidences of small addition sums.** Twelve
+of the rows multiply, and there the accounts part company: *an off-by-one lives in counting and dies
+in multiplication, because nobody computes fourteen times ten and reaches a hundred and forty-one by
+any act a hand or mind performs.* **The carrier does not care what the rule is — plus one on
+additions and plus one on multiplications — which no child act explains and one generator line does:
+`rule(a2, c2) + 1`, the key wearing a constant.**
+
+**AND THE COROLLARY, WHICH IS THE PART THAT TRANSFERS: uniformity has three states.**
+- **Explained by the entry is INNOCENCE.** `vr18-rule-swap` is uniform too, and its uniformity is the
+  wrong operation applied everywhere, producing wrong values that vary exactly as the operation does.
+- **Merely consistent is THE QUESTION.**
+- **Surviving where the act cannot is GUILT.**
+
+R937 said an instrument cannot condemn on the property the entry predicts. **This says what a reader
+can do that the instrument cannot: ask which account survives the rows the property does not reach.**
+The evidence is never the uniformity; it is where the uniformity holds.
+
+**And the count is a measurement at last.** Fourteen refuse, one performs, twenty-five rows re-derived
+at her desk — which is what it costs a number to stop being a rumour here (R937).
+
+The repair crosses PROPOSED with its refuter pre-written and self-applied: the child feeds the rule
+one outer number twice, doubling on an addition and squaring on a multiplication, so the product
+varies with the operation as the old carrier's never did. **Her refuter — any carrier reachable from
+the key by a constant refuses on sight — is run against the proposal before it is offered**, because
+a refuter attached and not executed is a description of a check. It refuses the current carriers and
+passes the proposed ones: 21 distinct differences from the key across 25 rows.
+
+## R941 — The STATS form in Cowork's words
+
+Recorded in the other store's phrasing beside R938, because a rule two stores hold in one wording is
+a rule neither can drift from:
+
+> **A repair is proved by rendering the whole output and reading it, not by asserting the thing you
+> set out to fix.**
+
+It earned its keep again within the hour. The vr18 proposal's first candidate — the child carrying
+the first pair's second outer, `rule(a2, c1)` — **collided with the key on five rows where `c1`
+happens to equal `c2`**; the second, `rule(a2, a1)`, collided on six. **Both are correct as accounts
+of the act and both would have shipped a row whose distractor is the answer.** Neither collision is
+visible in any test of the fix, and both were caught by rendering all twenty-five rows and reading
+the columns.
+
+**Three degeneracies in two repairs, all of the same shape**: STATS in vr19, and two discarded
+candidates in vr18. **The rate is the finding** — a repair that touches a derivation introduces a new
+degeneracy often enough that the full render is not a precaution, it is the step.
