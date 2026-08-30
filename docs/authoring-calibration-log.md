@@ -25021,3 +25021,54 @@ money notation as NOT A FAULT POPULATION — each naming the surface that invite
 would legitimately reopen it. **And the notice carries what is NOT closed**: `MC03-CALC-07` remains
 awaiting re-derivation, because a closure notice that quietly swept an open question in with the
 settled ones would be worse than no notice at all.
+
+## R914 — The substance predicate contradicts itself: it deducts what a child cannot see, then includes a machine-read render
+
+Cowork's finding on their own predicate, 2026-08-30. **Reported, not repaired.**
+
+`substance()` DEDUCTS option order, labels and every enrichment field, on the stated ground that **a
+difference a child cannot see is not a different question.** It then INCLUDES `solutionValue`,
+stringified — a field Annie ruled machine-read, *the one reader for whom units are noise* (R912). So
+the predicate applies a child's-eye test to decide what to throw away and then keeps a field no child
+meets, rendered as a string.
+
+**THE CONSEQUENCE IS NOT AESTHETIC. IDENTITY SPLITS ON A DISTINCTION MEANINGFUL TO NOBODY.** One row
+produced two candidate keys — `599e2621…` for `"24"`, `48d9731b…` for `"24.0"`, and a third,
+`a3ffb3a5…`, for `"24.00"` — while **the stem, all four option values and the key are byte-identical
+across every candidate.** Two stores holding the same question could not agree what to call it, and
+the disagreement was resolvable only by a message.
+
+**MY OWN R904 IS THE SYMPTOM-LEVEL RESPONSE AND SHOULD BE READ AS ONE.** Enumerating both spellings
+where `solutionValue` is a whole number was the correct LOCAL act — it closed a false-negative hole
+that would have made the door blind to any row whose answer is round. It is not a fix. **A mitigation
+that works is the most likely thing to be mistaken for a repair**, and this entry exists partly so
+that the enumeration is not read as the matter being settled.
+
+**WHY IT IS NOT REPAIRED HERE, AND THIS IS THE transferable part.** Normalising the predicate would
+move all thirty-nine declared digests at once and UNARM a door that is currently armed on evidence.
+**A key cannot be fixed incrementally: every holder of every key must move in the same act, or the
+stores disagree in a new way while believing they have agreed.** So the fix is ONE RULING about the
+predicate, taken once, with every key re-declared in the same act — and it waits. The cost of a
+predicate defect is paid in coordination, not in code, which is why the defect is cheap to introduce
+and expensive to close.
+
+## R915 — Two notices claiming one predecessor, and a chain repaired by declaration rather than inference
+
+v5 (`5cce4d95…`, 39 rows) names the ORIGINAL notice `6774c502…` as its predecessor — where v3
+(`943abb60…`, 38 rows) already did. **Two heads, and nothing in the artefacts saying which is
+current.** The door refused to pick, which is what it was built to do (R908).
+
+**THE TEMPTING REPAIR IS THE ONE TO REFUSE: "more rows" is not "later".** A notice can legitimately
+withdraw fewer than its predecessor, so inferring recency from size would be a rule nobody made,
+applied silently, deciding which withdrawals bind. Nor is the other store's artefact edited here —
+their notice says what it says.
+
+So the chain is repaired by a **declared supersession**: `content/withdrawals/supersession-declared.json`,
+naming which notice supersedes which, the authority who declared it, and the fact that the break is at
+the emission rather than here. **A repair recorded with an author is inspectable; a repair inferred
+from a heuristic is indistinguishable from the fault it was meant to fix.**
+
+With the chain declared, the standing notice is v5 and the door reads: **14 lifted, 0 awaiting, 0
+refusing, 2 ruled exceptions.** `MC03-CALC-07` lifted on candidate B as declared, and `MC02-RP-02`
+lifted with it — her 195th's amendment having reached the source, so the row the reviewer ruled and
+the row the authoring store ships are one question again.

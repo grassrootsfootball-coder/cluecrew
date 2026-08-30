@@ -1,0 +1,15 @@
+{
+ "kind": "declared-supersession",
+ "what": "Which standing notice supersedes which, where the notices themselves do not say. A chain repaired by a RECORDED DECISION with an author — never by inference, and never by editing another store's artefact.",
+ "whyThisExists": "v5 (5cce4d95, 39 rows) names the ORIGINAL notice 6774c502 as its predecessor, not v3 (943abb60, 38 rows). Two notices claiming one predecessor leaves TWO HEADS, and nothing in the artefacts says which is current. The door refused to pick — correctly — rather than serving whichever sorted first.",
+ "andWHYNOTJUSTTAKETHEHIGHESTCOUNT": "because 'more rows' is not 'later'. A notice can legitimately withdraw fewer. Inferring recency from size would be a rule nobody made, applied silently, to decide which withdrawals bind.",
+ "declarations": [
+  {
+   "supersedes": "943abb607eca3710056458d9ba7e15b421ab6f1c44d62174342c4b3915c50ccc",
+   "supersededBy": "5cce4d95cb8a72e9bbd80fc597b51eafe3eddca9a5b1a11db1a7d70c2bf0eaac",
+   "declaredBy": "David, 2026-08-30",
+   "theInstruction": "withdrawal-notice-v5-for-code.json at 5cce4d95… Thirty-nine rows, fourteen lifting, all recomputing.",
+   "andWHATISREPORTEDBACK": "the sender's v5 names 6774c502 as its predecessor where v3 already did. The chain is broken at the emission, not here; this declaration records the repair rather than hiding it."
+  }
+ ]
+}

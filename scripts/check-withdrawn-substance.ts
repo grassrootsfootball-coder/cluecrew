@@ -72,7 +72,16 @@ async function main() {
     const text = readFileSync(join(DIR, f), 'utf8');
     return { file: f, sha256: sha(text), body: JSON.parse(text) as { WITHDRAWN: Entry[]; THIS_SUPERSEDES_AN_EARLIER_NOTICE?: { sha256: string } } };
   });
-  const superseded = new Set(notices.map((n) => n.body.THIS_SUPERSEDES_AN_EARLIER_NOTICE?.sha256).filter(Boolean) as string[]);
+  /**
+   * DECLARED SUPERSESSIONS repair a chain the notices themselves get wrong — recorded with an
+   * author, never inferred. v5 named the ORIGINAL notice as its predecessor where v3 already had,
+   * leaving two heads. "More rows" is not "later", so nothing here guesses from size.
+   */
+  const declared = JSON.parse(readFileSync(join(DIR, 'supersession-declared.json'), 'utf8')) as { declarations: Array<{ supersedes: string; supersededBy: string; declaredBy: string }> };
+  const superseded = new Set([
+    ...notices.map((n) => n.body.THIS_SUPERSEDES_AN_EARLIER_NOTICE?.sha256).filter(Boolean) as string[],
+    ...declared.declarations.map((d) => d.supersedes),
+  ]);
   const heads = notices.filter((n) => !superseded.has(n.sha256));
   if (heads.length !== 1) {
     throw new Error(`${heads.length} standing notices after following the supersession chain — refusing to pick one (${notices.map((n) => `${n.file}=${n.sha256.slice(0, 12)}`).join(', ')})`);
@@ -80,6 +89,7 @@ async function main() {
   const standing = heads[0];
   const notice = standing.body;
   console.log(`  standing notice: ${standing.file} (${standing.sha256.slice(0, 16)}), superseding ${superseded.size} earlier notice(s)`);
+  for (const d of declared.declarations) console.log(`    declared supersession: ${d.supersedes.slice(0, 16)} superseded by ${d.supersededBy.slice(0, 16)} — ${d.declaredBy}`);
   const spec = JSON.parse(readFileSync(join(DIR, readdirSync(DIR).find((f) => f.startsWith('substance-spec'))!), 'utf8')) as {
     EVERY_DECLARED_DIGEST_WITH_ITS_EXACT_INPUT: Worked[];
     THE_IMPLEMENTATION_VERBATIM: { aProbeYouCanRUNAGAINSTYOURIMPLEMENTATION: { input: Record<string, unknown>; expectedString: string; expectedSha256: string } };
