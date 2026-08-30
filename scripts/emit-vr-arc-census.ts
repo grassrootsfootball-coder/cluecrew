@@ -138,8 +138,38 @@ async function run() {
     }
   }
 
+  // ---- THE DAYLIGHT RECONCILIATION, CARRIED ONTO THE POPULATION BEFORE IT CUTS -----------------
+  const eleven = await prisma.item.findMany({ where: { questionTypeId: { in: PAID } },
+    select: { id: true, status: true, pool: true, difficultyTier: true, questionTypeId: true } });
+  const outsideTheDoor = eleven.filter((r) => r.status !== 'DRAFT');
+  const rulings = await prisma.attributionEvent.findMany({
+    where: { recordId: { in: outsideTheDoor.map((r) => r.id) } },
+    select: { recordId: true, actor: true, method: true },
+  });
+  const COWORK_COUNT = 305;
+  const daylight = {
+    THE_GAP_AS_STATED: `Cowork reports 305; this door cuts 275. Annie will not sign against an unexplained gap and is right not to, so what can be named is named and what cannot is marked as arithmetic.`,
+    thisStoreHoldsInTheElevenCases: eleven.length,
+    ofWhichTheDoorCuts: eleven.length - outsideTheDoor.length,
+    NAMED_BY_STATE: outsideTheDoor.map((r) => ({
+      itemId: r.id, state: r.status, pool: r.pool, tier: r.difficultyTier, questionType: r.questionTypeId,
+      theRulingThatPutItThere: rulings.find((e) => e.recordId === r.id)?.method ?? null,
+      byWhom: rulings.find((e) => e.recordId === r.id)?.actor ?? null,
+    })).sort((a, b) => a.itemId.localeCompare(b.itemId)),
+    namedCount: outsideTheDoor.length,
+    andWHATTHEYARE: 'the thirteen vr-08 SEED rows, NEVER_SHIPPABLE under David\'s seed ruling. They are inside the eleven cases and outside the door because the door cuts DRAFT; their state is a decision with an author, not an omission.',
+    THE_RESIDUAL_IS_ARITHMETIC_AND_IS_NOT_A_POPULATION: {
+      figure: COWORK_COUNT - eleven.length,
+      whyItIsNotNamed: `305 minus the ${eleven.length} rows this store holds leaves ${COWORK_COUNT - eleven.length}, and that subtraction is a comparison of two definitions before it is a comparison of two numbers (R918, registered one turn ago on exactly this pair of stores). No Cowork VR send of 305 rows is on this disk, so those rows cannot be named by id or by state here.`,
+      andWHATWASCHECKED: 'every VR artefact on disk carrying more than twenty vr ids. The only 300-plus file is this store\'s OWN export of the FREE TEN cases (307 items) — a different population entirely, and naming it as the source would have been the count comparison wearing a filename.',
+      WHAT_RESOLVES_IT: 'their 305 ids. The intersection is one operation and needs no ruling.',
+    },
+    SO_WHAT_ANNIE_CAN_SIGN_AGAINST: `${eleven.length - outsideTheDoor.length} rows cut by the door, ${outsideTheDoor.length} named and stateable beside them, and a residual of ${COWORK_COUNT - eleven.length} that is a figure rather than a set. The gap is explained to the limit of what is knowable here, and the limit is named rather than papered.`,
+  };
+
   const full = {
     kind: 'vr-arc-census-and-population',
+    THE_DAYLIGHT_RECONCILIATION: daylight,
     THE_POPULATION: `${rows.length} DRAFT rows across ${cases.length} paid VR cases, 25 per case`,
 
     ONE_THE_SLOT_CENSUS: {

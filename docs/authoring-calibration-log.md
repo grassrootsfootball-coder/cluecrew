@@ -25161,3 +25161,30 @@ identical in kind.
 **And what is NOT asserted travels with it**: this store does not claim a new entry is required. Two
 of the three existing vr-02 entries may already cover them, and that is a reading nobody here has
 made (R593 — a population offered for review says what it has decided and what it has not).
+
+## R920 — Naming a gap to the limit of what is knowable, and marking the limit
+
+Annie will not sign against an unexplained gap and is right not to. Cowork reports **305**; this
+door cuts **275**. The instruction was to name the thirty by state, and **thirteen can be named and
+seventeen cannot** — so the artefact says exactly that rather than producing thirty of something.
+
+**THE THIRTEEN ARE NAMED AND STATEABLE**: `seed-vr08-01` through `-13`, NEVER_SHIPPABLE, inside the
+eleven cases and outside the door because the door cuts DRAFT, each carrying the ruling that put it
+there and its author. **Their state is a decision with an author, not an omission** — which is the
+whole difference between a gap and a boundary.
+
+**THE RESIDUAL IS A FIGURE AND NOT A SET, AND THAT IS WRITTEN ON THE ARTEFACT.** 305 minus the 288
+this store holds leaves 17, and that subtraction is a comparison of two DEFINITIONS before it is a
+comparison of two numbers — **R918, registered one turn earlier about this same pair of stores.** A
+rule is worth what it costs you the first time it binds against your own next task, and this is that
+turn: the tempting act was to report "thirty rows, thirteen NEVER_SHIPPABLE and seventeen absent",
+which reads as a complete answer and asserts a population nobody has seen.
+
+**WHAT WAS CHECKED IS ALSO NAMED**, because "I could not find it" and "I did not look" are
+indistinguishable in a report. Every VR artefact on disk carrying more than twenty vr ids was
+scanned. The only 300-plus file is this store's OWN export of the FREE TEN cases at 307 items — a
+different population entirely, and close enough to 305 that naming it as the source would have been
+the count comparison wearing a filename. **A near-miss number from the wrong population is more
+dangerous than no candidate at all**, because it supplies the shape of an answer.
+
+What resolves it needs no ruling: their 305 ids, and the intersection is one operation.
