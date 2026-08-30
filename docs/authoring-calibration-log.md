@@ -24958,3 +24958,35 @@ their v3 replacement digest is reproduced by their own send row, which still car
 values while its stem is amended. **It lifts mechanically the moment their re-derivation describes
 the row, and the door reports it on the next run** — which is what makes "report when it lifts" a
 mechanism rather than a thing somebody remembers to do.
+
+## R912 — Where a conversion is the skill, notation distance is the work
+
+Annie's 196th, and it closes both open lines by ruling that neither is a fault.
+
+**The pence gap between `MC02-RP-02`'s stem and its options is not a seam; it is the task.** The item
+is a rate item: the child takes a shop price in pounds, finds a per-apple price in pence, and
+compares. **The pounds-to-pence step is part of the work the item exists to ask**, and the corpus
+says so in its own voice — `MC03-RP-01` runs the same crossing in the other direction, a pence stem
+with a pounds key. **Smoothing the distance would do the child's first step for her: the
+supplied-retrieval fault wearing a currency.**
+
+**THE GENERAL FORM, AND IT REACHES BEYOND MONEY.** Any surface difference between a stem and its
+options is either noise or the exercise, and only the item's own purpose decides which. A
+consistency sweep cannot tell them apart, because a sweep sees a difference and a difference is what
+a conversion item is FOR. **So a notation-harmonising pass must ask what each item tests before it
+harmonises anything**, or it will quietly delete the skill from every item whose skill it is.
+
+**AND THE TWO NOT-CHECKED LINES CLOSE AS DESIGN, NOT AS DEBT.** The `solution` field keeps its bare
+pence: it is a machine-read check line, **its reader is the checker, and the checker is the one
+reader for whom units are noise** — the child's-eye rule governs what a CHILD reads and does not
+reach a field no child meets. Mixed money notation corpus-wide is not a fault population either:
+where the mixing is the item's task it is design, and the units rule governs PRESENCE of units, which
+is whole. **Nothing to sweep** — and a not-checked line answered as design is closed, where the same
+line left open is a permanent invitation to somebody's tidy-up.
+
+She also states the grounds she did NOT rest on, again: leave-it fails on VOICE (spoken register
+transcribed, one stem in a private notation is a cost with no buyer) and `150p` fails on THE WORLD
+(shop prices are not written that way, and a stem should not teach a form the high street never
+shows). **The precedent settled it and the reasons are given so the choice is a reading and not an
+echo** — which is the difference between a rule somebody can apply to the next case and a rule they
+can only cite.
