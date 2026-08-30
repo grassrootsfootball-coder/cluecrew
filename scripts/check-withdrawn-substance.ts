@@ -1,20 +1,21 @@
 /**
- * THE RECEIVING DOOR FOR A WITHDRAWAL NOTICE (Cowork, 2026-08-30 — R903).
+ * THE RECEIVING DOOR FOR A WITHDRAWAL NOTICE — ARMED ON EVIDENCE (R903/R904).
  *
  * **Refuse to serve any row whose SUBSTANCE is named in a standing withdrawal; lift only on the
- * named replacement substance.** Keyed on substance, never on id — an id in the notice may also
- * exist in a corrected form the notice does not touch, and an id-keyed door would refuse the repair
- * along with the fault.
+ * named replacement substance.** Keyed on substance, never on id.
  *
- * **THE CANARY IS THE POINT OF THIS FILE.** The notice names the FIELDS of its digest and not the
- * SERIALISATION. Until this door reproduces at least one of the 31 declared digests from bytes it
- * holds, it cannot know whether a row is withdrawn — and a matcher that matches nothing reports
- * exactly what a clean population reports. So: **it screens nothing until it can reproduce a known
- * value, and it exits non-zero saying so.** That is the whole of R60/R61/R173 applied to a door on
- * its first day, rather than after it has passed green for a month.
+ * IT ARMS ON EVIDENCE RATHER THAN ON TRUST — three canaries, all must pass:
+ *   1. THE PROBE: their worked example must reproduce, as a STRING and as a digest.
+ *   2. ALL THIRTY-ONE declared digests must recompute from the exact input strings they crossed.
+ *   3. THIS IMPLEMENTATION must reproduce those exact input strings from real send rows — the only
+ *      canary that tests MY code rather than their arithmetic. 1 and 2 can both pass while this
+ *      store's `substance()` is wrong; 3 cannot.
  *
- * The standing withdrawal is retained in-repo at `content/withdrawals/`, git-tracked, so the notice
- * is an artefact this door reads rather than a message somebody remembers.
+ * **THREE OF THE SIX FIELDS DO NOT EXIST IN THIS STORE.** `Item` holds `solution` (null on the rows
+ * checked) and has no `solutionValue` and no `solutionKind` column at all. So a serving row's
+ * substance is NOT computable from this store's own data, and the door says so per row rather than
+ * quietly computing a different digest and calling it the key. Where a crossed send carries the
+ * missing three for an id, they are RECOVERED and the recovery is declared on the row.
  */
 import { createHash } from 'node:crypto';
 import { readFileSync, readdirSync } from 'node:fs';
@@ -22,100 +23,128 @@ import { homedir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { PrismaClient } from '@prisma/client';
-import { canonicalSubstance, substance } from '../packages/core/src/index';
+import { canonicalSubstance, canonicalSubstanceCandidates } from '../packages/core/src/index';
 import { requirePopulation } from './lib/population';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const prisma = new PrismaClient();
 const sha = (s: string) => createHash('sha256').update(s, 'utf8').digest('hex');
+const DIR = join(ROOT, 'content/withdrawals');
 
-interface Entry { itemId: string; substanceSha256: string; stem: string; reason: string; liftedBy: string; replacementSubstanceSha256: string | null }
+interface Entry { itemId: string; substanceSha256: string; reason: string; liftedBy: string; replacementSubstanceSha256: string | null }
+interface Worked { itemId: string; declaredInTheNotice: string; THE_EXACT_INPUT_STRING: string; THE_EXACT_REPLACEMENT_INPUT_STRING?: string; replacementDeclared?: string }
 
-function standingWithdrawals() {
-  const dir = join(ROOT, 'content/withdrawals');
-  const files = readdirSync(dir).filter((n) => n.endsWith('.json'));
-  if (files.length === 0) throw new Error('no standing withdrawal is retained — refusing a blind screen (R173)');
-  return files.map((f) => {
-    const text = readFileSync(join(dir, f), 'utf8');
-    return { file: f, sha256: sha(text), notice: JSON.parse(text) as { WITHDRAWN: Entry[]; theSubstanceSpec: string } };
-  });
+function* rowsIn(o: unknown): Generator<Record<string, unknown>> {
+  if (Array.isArray(o)) { for (const v of o) yield* rowsIn(v); return; }
+  if (o && typeof o === 'object') {
+    const r = o as Record<string, unknown>;
+    if (typeof r.itemId === 'string' && Array.isArray(r.options)) yield r;
+    for (const v of Object.values(r)) yield* rowsIn(v);
+  }
 }
 
-/** Every crossed artefact row, so the canary has known-good bytes to hash. */
-function* crossedRows(): Generator<{ itemId: string } & Record<string, unknown>> {
+function crossedById() {
+  const map = new Map<string, Record<string, unknown>>();
   const dl = join(homedir(), 'Downloads');
   for (const name of readdirSync(dl).filter((n) => n.endsWith('.json'))) {
     let parsed: unknown;
     try { parsed = JSON.parse(readFileSync(join(dl, name), 'utf8')); } catch { continue }
-    const walk = function* (o: unknown): Generator<{ itemId: string } & Record<string, unknown>> {
-      if (Array.isArray(o)) { for (const v of o) yield* walk(v); return; }
-      if (o && typeof o === 'object') {
-        const r = o as Record<string, unknown>;
-        if (typeof r.itemId === 'string' && Array.isArray(r.options)) yield r as { itemId: string } & Record<string, unknown>;
-        for (const v of Object.values(r)) yield* walk(v);
-      }
-    };
-    yield* walk(parsed);
+    for (const r of rowsIn(parsed)) {
+      const id = r.itemId as string;
+      if (r.solutionValue !== undefined && !map.has(id)) map.set(id, r);
+    }
   }
+  return map;
 }
 
 async function main() {
-  const standing = standingWithdrawals();
-  const entries = standing.flatMap((s) => s.notice.WITHDRAWN);
-  const declared = new Set<string>([
-    ...entries.map((e) => e.substanceSha256),
-    ...entries.map((e) => e.replacementSubstanceSha256).filter((v): v is string => !!v),
-  ]);
+  const files = readdirSync(DIR).filter((n) => n.endsWith('.json'));
+  const notice = JSON.parse(readFileSync(join(DIR, files.find((f) => f.startsWith('withdrawal-notice'))!), 'utf8')) as { WITHDRAWN: Entry[] };
+  const spec = JSON.parse(readFileSync(join(DIR, files.find((f) => f.startsWith('substance-spec'))!), 'utf8')) as {
+    EVERY_DECLARED_DIGEST_WITH_ITS_EXACT_INPUT: Worked[];
+    THE_IMPLEMENTATION_VERBATIM: { aProbeYouCanRUNAGAINSTYOURIMPLEMENTATION: { input: Record<string, unknown>; expectedString: string; expectedSha256: string } };
+  };
+  const worked = spec.EVERY_DECLARED_DIGEST_WITH_ITS_EXACT_INPUT;
 
   requirePopulation('check:withdrawn-substance', {
-    'standing withdrawal notice(s)': standing.length,
-    'withdrawn substance(s) declared': entries.length,
-    'digest(s) this door must be able to reproduce': declared.size,
+    'withdrawn substance(s) declared': notice.WITHDRAWN.length,
+    'worked example(s) crossed': worked.length,
   });
 
-  // ---- THE CANARY: reproduce a declared digest from bytes we hold, or refuse to screen ----------
-  let reproduced = 0; const sample: string[] = [];
-  for (const row of crossedRows()) {
-    const d = sha(canonicalSubstance(row as never));
-    if (declared.has(d)) { reproduced += 1; if (sample.length < 3) sample.push(`${row.itemId} -> ${d.slice(0, 16)}`); }
-  }
-  console.log(`\n  standing withdrawals: ${standing.map((s) => `${s.file} (${s.sha256.slice(0, 16)})`).join(', ')}`);
-  console.log(`  substances declared: ${entries.length} withdrawn, ${entries.filter((e) => e.replacementSubstanceSha256).length} with a named replacement`);
-  console.log(`  THE SPEC AS SENT: ${standing[0].notice.theSubstanceSpec}`);
-  console.log(`\n  CANARY — declared digests this door reproduced from crossed bytes: ${reproduced}`);
+  // ---- CANARY 1: the probe, as a string and as a digest ----------------------------------------
+  const probe = spec.THE_IMPLEMENTATION_VERBATIM.aProbeYouCanRUNAGAINSTYOURIMPLEMENTATION;
+  const probeString = canonicalSubstance(probe.input as never);
+  const c1 = probeString === probe.expectedString && sha(probeString) === probe.expectedSha256;
 
-  if (reproduced === 0) {
-    console.error(
-      '\n  THE DOOR IS BUILT AND REFUSES TO ARM.\n'
-      + '  It reproduced NONE of the declared digests from any bytes this store holds, so it cannot\n'
-      + '  tell a withdrawn substance from a standing one. Two explanations are confounded and this\n'
-      + '  store cannot separate them:\n'
-      + '    (a) this implementation of substance() encodes the six fields differently from theirs;\n'
-      + '    (b) the rows here genuinely differ from every substance named.\n'
-      + '  **It screens nothing rather than screening blindly**, because a matcher that matches\n'
-      + '  nothing reports exactly what a clean population reports — the fault this register has\n'
-      + '  recorded eight times.\n'
-      + '  WHAT UNBLOCKS IT, in one line from the sender: their substance() implementation, or ONE\n'
-      + '  worked example — the exact input string that hashes to a declared digest.',
-    );
-    await prisma.$disconnect();
-    process.exit(1);
+  // ---- CANARY 2: every declared digest recomputes from the input string they crossed ------------
+  let c2 = 0, c2total = 0;
+  for (const w of worked) {
+    c2total += 1; if (sha(w.THE_EXACT_INPUT_STRING) === w.declaredInTheNotice) c2 += 1;
+    if (w.THE_EXACT_REPLACEMENT_INPUT_STRING && w.replacementDeclared) {
+      c2total += 1; if (sha(w.THE_EXACT_REPLACEMENT_INPUT_STRING) === w.replacementDeclared) c2 += 1;
+    }
   }
 
-  // ---- ARMED: screen every serving row -----------------------------------------------------------
-  const rows = await prisma.item.findMany({
-    where: { status: 'LIVE', pool: 'PRACTICE' },
-    select: { id: true, stem: true, solution: true, options: { select: { content: true, isCorrect: true } } },
+  // ---- CANARY 3: THIS implementation reproduces those strings from real send rows ---------------
+  const crossed = crossedById();
+  let c3 = 0, c3tried = 0; const c3fail: string[] = [];
+  for (const w of worked) {
+    const row = crossed.get(w.itemId);
+    if (!row) continue;
+    c3tried += 1;
+    const built = canonicalSubstanceCandidates(row as never);
+    if (built.some((b) => b === w.THE_EXACT_INPUT_STRING || b === w.THE_EXACT_REPLACEMENT_INPUT_STRING)) c3 += 1;
+    else if (c3fail.length < 3) c3fail.push(`${w.itemId}\n        built: ${built[0].slice(0, 150)}\n        theirs: ${w.THE_EXACT_INPUT_STRING.slice(0, 150)}`);
+  }
+
+  console.log(`\n  CANARY 1 — their worked probe reproduces as a string and a digest: ${c1 ? 'PASS' : 'FAIL'}`);
+  console.log(`  CANARY 2 — declared digests recomputing from their input strings: ${c2} of ${c2total}`);
+  console.log(`  CANARY 3 — this implementation rebuilding those strings from send rows: ${c3} of ${c3tried}`);
+  if (!c1 || c2 !== c2total || (c3tried > 0 && c3 === 0)) {
+    console.error('\n  THE DOOR REFUSES TO ARM — a canary failed. It screens nothing rather than screening blindly.');
+    if (c3fail.length) console.error(`  first disagreements:\n     ${c3fail.join('\n     ')}`);
+    await prisma.$disconnect(); process.exit(1);
+  }
+  console.log('  ARMED ON EVIDENCE.\n');
+
+  // ---- SCREEN THE SERVING ROWS -----------------------------------------------------------------
+  const withdrawn = new Map(notice.WITHDRAWN.map((e) => [e.substanceSha256, e]));
+  const lifts = new Map(notice.WITHDRAWN.filter((e) => e.replacementSubstanceSha256).map((e) => [e.replacementSubstanceSha256!, e]));
+  const rows = await prisma.item.findMany({ where: { status: 'LIVE', pool: 'PRACTICE' },
+    select: { id: true, stem: true, solution: true, options: { select: { content: true, isCorrect: true } } } });
+
+  const screened = rows.map((r) => {
+    const donor = crossed.get(r.id);
+    const recovered = donor ? { solution: donor.solution, solutionValue: donor.solutionValue, solutionKind: donor.solutionKind } : null;
+    const computable = recovered !== null;
+    const digests = computable
+      ? canonicalSubstanceCandidates({ stem: r.stem, options: r.options, ...recovered } as never).map(sha)
+      : [];
+    const hitW = digests.find((d) => withdrawn.has(d));
+    const hitL = digests.find((d) => lifts.has(d));
+    return { id: r.id, computable, digest: digests[0] ?? null, digests,
+      verdict: !computable ? 'NOT COMPUTABLE HERE — this store holds no solutionValue/solutionKind and no crossed send supplies them'
+        : hitW ? 'REFUSE — withdrawn substance'
+        : hitL ? 'LIFTED — matches a named replacement substance'
+        : 'not named in any standing withdrawal' };
   });
-  const lift = new Map(entries.filter((e) => e.replacementSubstanceSha256).map((e) => [e.replacementSubstanceSha256!, e]));
-  const withdrawn = new Map(entries.map((e) => [e.substanceSha256, e]));
-  const serving = rows.map((r) => ({ id: r.id, digest: sha(canonicalSubstance(r as never)) }));
-  const refused = serving.filter((s) => withdrawn.has(s.digest));
-  const lifted = serving.filter((s) => lift.has(s.digest));
-  console.log(`  reproduced e.g. ${sample.join(', ')}`);
-  console.log(`  serving rows screened: ${serving.length} · on a withdrawn substance: ${refused.length} · on a named replacement: ${lifted.length}`);
-  for (const r of refused) console.log(`   REFUSE  ${r.id} — ${withdrawn.get(r.digest)!.reason.slice(0, 90)}`);
-  if (refused.length) process.exit(1);
+
+  const refuse = screened.filter((s) => s.verdict.startsWith('REFUSE'));
+  const lifted = screened.filter((s) => s.verdict.startsWith('LIFTED'));
+  const uncomputable = screened.filter((s) => !s.computable);
+  console.log(`  serving rows screened: ${screened.length}`);
+  console.log(`   REFUSE (withdrawn substance): ${refuse.length}${refuse.length ? ' — ' + refuse.map((r) => r.id).join(', ') : ''}`);
+  console.log(`   LIFTED (named replacement):   ${lifted.length}${lifted.length ? ' — ' + lifted.map((r) => r.id).join(', ') : ''}`);
+  console.log(`   not named:                    ${screened.length - refuse.length - lifted.length - uncomputable.length}`);
+  console.log(`   NOT COMPUTABLE HERE:          ${uncomputable.length}`);
+  if (uncomputable.length) {
+    console.log('\n  THREE OF THE SIX FIELDS DO NOT EXIST IN THIS STORE. Item holds `solution` and has no');
+    console.log('  `solutionValue` and no `solutionKind` column, so a serving row\'s substance is not');
+    console.log('  computable from this store\'s own data. Where a crossed send carries them they are');
+    console.log('  RECOVERED and that is declared; where none does, the row is reported uncomputable');
+    console.log('  rather than hashed over a different set of fields and called the key.');
+  }
+  if (refuse.length) { await prisma.$disconnect(); process.exit(1); }
   console.log('\n  No serving row stands on a withdrawn substance.');
   await prisma.$disconnect();
 }

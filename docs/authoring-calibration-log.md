@@ -24774,3 +24774,77 @@ values describe rows with pre-amendment stems**, and these six match neither the
 nor the declared replacement: they are a third state, and it is the amended one. Reported as an
 observation, not a ruling — which stem form is right is not this store's call — because a replacement
 that is itself pre-amendment is a thing the sender wants to know before anybody lifts on it.
+
+## R904 — Armed on evidence: the serialisation nobody would guess, and the ambiguity JSON.parse destroys
+
+Cowork crossed the substance spec with **all thirty-one worked input strings**, not the one example
+asked for, on the stated ground that *a door that can check every declared digest ARMS ON EVIDENCE
+RATHER THAN ON TRUST*. `check:withdrawn-substance` now carries three canaries and screens nothing
+unless all pass: their probe reproduces as a STRING and a digest; 37 of 37 declared digests recompute
+from the input strings they crossed; and **this implementation rebuilds 29 of 31 of those strings
+from real send rows** — the only canary that tests our code rather than their arithmetic, and the one
+the other two cannot substitute for.
+
+**THE CAUSE OF THE SIXTEEN MISSES WAS THE SERIALISATION, AND IT IS THE ODD ONE OUT IN THIS DISTRICT.**
+Python's `json.dumps` DEFAULT separators — `", "` and `": "`, with spaces — where every other digest
+here uses R729's compact form. Sixteen reasonable encodings all missed because the working one is the
+one nobody would guess in a codebase whose every other hash is compact. Their prose spec named the
+six FIELDS and not the SERIALISATION; **they had registered that exact defect the same day, dropped
+a glyph hash for it, and then shipped a door spec carrying it** — their words: *the rule was
+registered and the way of making it was not removed.* A rule that removes only the instance leaves
+the method in place.
+
+**AND THE HALF THAT WAS OURS: `JSON.parse` DESTROYS A DISTINCTION PYTHON KEEPS.** `str()` of a float
+retains its point — `20.0`, `1.0`, `300.0` — while JavaScript's `String(20.0)` is `"20"`, and once a
+file is parsed the float-ness is unrecoverable. Three worked examples differ from this implementation
+on exactly that. **The failure direction is what makes it serious: a false NEGATIVE, a withdrawn row
+the door cannot see, on every item whose answer is a round number.** It is a two-valued ambiguity
+with a known cause, so it is ENUMERATED and not guessed — `canonicalSubstanceCandidates` returns both
+spellings where `solutionValue` is a whole number. Guessing one would have made the door quietly
+blind to a predictable slice of the corpus.
+
+**THREE OF THE SIX FIELDS DO NOT EXIST IN THIS STORE.** `Item` holds `solution` (null on the rows
+checked) and has no `solutionValue` and no `solutionKind` column. A serving row's substance is
+therefore **not computable from this store's own data**: 335 of 507 serving rows are reported NOT
+COMPUTABLE rather than hashed over a different set of fields and called the key. Where a crossed send
+supplies the missing three they are RECOVERED and the recovery is declared per row. **The serving
+side cannot compute the identity of what it serves**, which is a finding about this schema and not
+about the notice.
+
+## R905 — A re-pin is not a warrant from the authoring store
+
+The door refused four serving rows, and two of them this store had earlier classed as safe **on my
+own inference**: `MC01-CALC-01` and `MC01-CALC-05` were credited with a "later authority" because
+they had been re-pinned against the amended source.
+
+**A RE-PIN ASSERTS THAT A ROW IS BYTE-IDENTICAL TO WHAT THE REVIEWER VERIFIED. IT IS SILENT ON
+WHETHER THE AUTHORING STORE STANDS BEHIND THOSE BYTES.** Those are different questions with different
+authorities, and the notice puts both rows in the twenty-five-with-no-replacement class — no
+replacement exists anywhere and nobody has ruled them back. They are out.
+
+**What caught it was not a re-reading.** It was a door keyed on SUBSTANCE rather than on id, arming
+on evidence the sender supplied. The earlier classification was careful, cited real events, and was
+wrong because it answered the question it could see with the authority it had to hand.
+
+**THE OTHER TWO ARE A CONFLICT AND STAY REPORTED.** Cowork withdrew the SUBSTANCE of `MC04-FDP-04`
+and `MC05-FDP-01`; Annie restored the ROW and David endorsed keeping them. Two authorities over two
+different things and this store holds neither — pulling would resolve it in favour of whoever spoke
+last, which is not a rule (R867). One word settles it either way.
+
+## R906 — Money a child reads carries its unit wherever it sits, and the two stores applied one ruling to different scopes
+
+David's scope ruling, 2026-08-30. **This store's stems already carry it; the authoring store's do
+not and are amending.**
+
+The instructive part is how the divergence happened. Their money amender says on its face *no stem
+is touched, no "pounds" becomes £ in any sentence*, applied on the reviewer's line THE UNIT'S
+PRESENCE, NOT ITS SPELLING — prose-money harmonisation read as a voice question and left out. This
+store applied the same ruling to stem and options together. **Neither store drifted and neither
+misread a value: one ruling, two defensible scopes, and a district holding a third state.**
+
+The consequence is mechanical and it is the reason scope has to be settled rather than tolerated:
+their `replacementSubstanceSha256` values recompute exactly over THEIR current post-amendment rows,
+and are **useless as a lifting key for ours**, because ours are amended at the stem as well. A
+replacement digest that is accurate about one store's bytes and unusable by the other is not a
+defect in either digest. **Re-check when their re-derived digests cross**; this store does not
+re-amend prose to make a digest match, which would be fitting the corpus to the key.

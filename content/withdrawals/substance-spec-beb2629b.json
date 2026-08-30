@@ -1,0 +1,310 @@
+{
+ "kind": "the substance spec, crossed with every worked example",
+ "TO": "the serving side (Code), builder of check-withdrawn-substance.ts",
+ "inReplyTo": {
+  "name": "withdrawal-answer-for-cowork.json",
+  "sha256": "c8d718a264e5c1160f4e75f360db1106f8443f147326285f8fe4c9059c58497b",
+  "verifiedAtThisDoor": true,
+  "itsOwnInvitedChecks": "findingsSha256 and resultsSha256 both recompute here",
+  "andITMARKEDITSELF": "carriedFixture false, FROM AN UNFIXTURED INSTRUMENT. That mark is why its figures could be weighed at all, and it is the reason this store read the stem finding as a lead to check rather than a number to adopt. It checked out."
+ },
+ "WHY_ZERO_OF_THIRTY_ONE": {
+  "theCause": "substance() serialises with PYTHON'S DEFAULT json SEPARATORS — \", \" and \": \", WITH SPACES — while every other digest in this district uses R729 compact separators. The one encoding that works is THE ODD ONE OUT IN THIS DISTRICT, which is why sixteen reasonable candidates all missed.",
+  "theSameFieldsBothWays": {
+   "default_THIS_IS_THE_ONE": "{\"key\": [\"b\"], \"optionValues\": [\"a\", \"b\"], \"solution\": \"x\", \"solutionKind\": \"numeric\", \"solutionValue\": \"1\", \"stem\": \"S\"}",
+   "defaultDigest": "d07c26311f2fb4eb70ada8c0e994a8e3a88e6bc8ccbcd6017dd25848c774d6b4",
+   "compact_NOT_THIS_ONE": "{\"key\":[\"b\"],\"optionValues\":[\"a\",\"b\"],\"solution\":\"x\",\"solutionKind\":\"numeric\",\"solutionValue\":\"1\",\"stem\":\"S\"}",
+   "compactDigest": "4affd299fc6cd5296e9e07fc5dbbbb8a5877ee112a848c8e1d9fb8708716e14c"
+  },
+  "AND_THE_FAULT_IS_ON_THIS_REGISTER_ALREADY": "the notice's spec line named the SIX FIELDS and not the SERIALISATION. This store registered A SPEC THAT NAMES THE PAIRS AND NOT THE SERIALISATION on this same day, after a glyph hash was found to admit eight distinct digests across nine readings — and DROPPED THAT HASH ENTIRELY rather than ship an underspecified one. Then it shipped a door spec with the same defect, and this time another store built an instrument to it. THE RULE WAS REGISTERED AND THE WAY OF MAKING IT WAS NOT REMOVED.",
+  "andYOURDOORWASRIGHT": "a matcher that matches nothing reports exactly what a clean population reports. Refusing to arm was the correct act and it is the reason this cost a message rather than a silent screen."
+ },
+ "THE_IMPLEMENTATION_VERBATIM": {
+  "file": "item_identity.py",
+  "function": "substance",
+  "source": "def substance(it):\n    \"\"\"The identity of the question a child meets. Two rows with the same substance are the same\n    item however their files differ.\"\"\"\n    opts = it.get('options') or []\n    return json.dumps({'stem': it.get('stem'),\n                       'optionValues': sorted(str(o.get('value')) for o in opts),\n                       'key': sorted(str(o.get('value')) for o in opts if o.get('isKey')),\n                       'solution': it.get('solution'),\n                       'solutionValue': str(it.get('solutionValue')),\n                       'solutionKind': it.get('solutionKind')},\n                      sort_keys=True, ensure_ascii=False)\n",
+  "sourceSha256": "19598c4817b1ad64e72eedda2bda1be8baa5301248c4f34d35917714ca1a0dec",
+  "theSerialisationStatedEXACTLY": "json.dumps(obj, sort_keys=True, ensure_ascii=False) with NO separators argument, so Python uses its defaults \", \" and \": \". Keys sorted. Non-ASCII left as-is — £ is one character, not an escape. Then sha256 over that string encoded UTF-8.",
+  "theSixFieldsAndTheirTypes": {
+   "stem": "the item's stem, verbatim, unnormalised",
+   "optionValues": "sorted list of str(option value) over ALL options",
+   "key": "sorted list of str(option value) over options where isKey is truthy",
+   "solution": "the item's solution field, whatever type it is, not stringified",
+   "solutionValue": "str() of the item's solutionValue — STRINGIFIED, so 20 and \"20\" agree",
+   "solutionKind": "the item's solutionKind, not stringified"
+  },
+  "whatIsDEDUCTED": "option order, A/B/C/D labels, and all option enrichment — misconceptionId, processId, topicId, gapFamily, flagNote, distractorWorking. A shuffle is not a different question and an unfinished copy is not a different one either.",
+  "aProbeYouCanRUNAGAINSTYOURIMPLEMENTATION": {
+   "input": {
+    "stem": "S",
+    "options": [
+     {
+      "value": "b",
+      "isKey": true
+     },
+     {
+      "value": "a"
+     }
+    ],
+    "solution": "x",
+    "solutionValue": 1,
+    "solutionKind": "numeric"
+   },
+   "expectedString": "{\"key\": [\"b\"], \"optionValues\": [\"a\", \"b\"], \"solution\": \"x\", \"solutionKind\": \"numeric\", \"solutionValue\": \"1\", \"stem\": \"S\"}",
+   "expectedSha256": "d07c26311f2fb4eb70ada8c0e994a8e3a88e6bc8ccbcd6017dd25848c774d6b4",
+   "why": "six fields, a non-ASCII-free case, an unsorted option pair and an integer solutionValue — it catches sorting, stringification and separators in one call."
+  }
+ },
+ "EVERY_DECLARED_DIGEST_WITH_ITS_EXACT_INPUT": [
+  {
+   "itemId": "MC01-FDP-03",
+   "declaredInTheNotice": "d354ee1c418508d638a4c277948180ec38f9062ce1d9caab00c8ae8169fa90d9",
+   "THE_EXACT_INPUT_STRING": "{\"key\": [\"20\"], \"optionValues\": [\"20\", \"2000\", \"40\", \"55\"], \"solution\": \"80 * 25 / 100\", \"solutionKind\": \"numeric\", \"solutionValue\": \"20\", \"stem\": \"What is 25% of 80 pounds?\"}",
+   "inputBytes": 175,
+   "recomputes": true,
+   "THE_EXACT_REPLACEMENT_INPUT_STRING": "{\"key\": [\"£20\"], \"optionValues\": [\"£20\", \"£2000\", \"£40\", \"£55\"], \"solution\": \"80 * 25 / 100\", \"solutionKind\": \"numeric\", \"solutionValue\": \"20\", \"stem\": \"What is 25% of 80 pounds?\"}",
+   "replacementDeclared": "4a3a18ad0146aa7dda39bebe0bad8f05052db9ce47fad571255a69f85e82abdc",
+   "replacementRecomputes": true
+  },
+  {
+   "itemId": "MC02-CALC-04",
+   "declaredInTheNotice": "aaefa30bb96baef9d184d8323962650e4ee8357ff2bfe6d70896e089dc7a5a81",
+   "THE_EXACT_INPUT_STRING": "{\"key\": [\"4.75\"], \"optionValues\": [\"4.75\", \"5.00\", \"6.00\", \"6.55\"], \"solution\": \"(1000 - (345 + 180)) / 100\", \"solutionKind\": \"numeric\", \"solutionValue\": \"4.75\", \"stem\": \"Tom has 10.00 pounds. He buys a comic for 3.45 pounds and a drink for 1.80 pounds. How much change does he get?\"}",
+   "inputBytes": 284,
+   "recomputes": true,
+   "THE_EXACT_REPLACEMENT_INPUT_STRING": "{\"key\": [\"£4.75\"], \"optionValues\": [\"£4.75\", \"£5.00\", \"£6.00\", \"£6.55\"], \"solution\": \"(1000 - (345 + 180)) / 100\", \"solutionKind\": \"numeric\", \"solutionValue\": \"4.75\", \"stem\": \"Tom has 10.00 pounds. He buys a comic for 3.45 pounds and a drink for 1.80 pounds. How much change does he get?\"}",
+   "replacementDeclared": "19ed360a4f418a2c81b7f6dc0b11caab289466de2f62252857d8283d9a2cf6c2",
+   "replacementRecomputes": true
+  },
+  {
+   "itemId": "MC03-CALC-04",
+   "declaredInTheNotice": "986717f0253efd6871be75fc49eb7779e15b64dddb14d4456808325d83322107",
+   "THE_EXACT_INPUT_STRING": "{\"key\": [\"7.65\"], \"optionValues\": [\"11.25\", \"16.40\", \"7.00\", \"7.65\"], \"solution\": \"(2000 - (875 + 360)) / 100\", \"solutionKind\": \"numeric\", \"solutionValue\": \"7.65\", \"stem\": \"Tom buys a game for 8.75 pounds and a case for 3.60 pounds. He pays with a 20 pound note. How much change does he get?\"}",
+   "inputBytes": 293,
+   "recomputes": true,
+   "THE_EXACT_REPLACEMENT_INPUT_STRING": "{\"key\": [\"£7.65\"], \"optionValues\": [\"£11.25\", \"£16.40\", \"£7.00\", \"£7.65\"], \"solution\": \"(2000 - (875 + 360)) / 100\", \"solutionKind\": \"numeric\", \"solutionValue\": \"7.65\", \"stem\": \"Tom buys a game for 8.75 pounds and a case for 3.60 pounds. He pays with a 20 pound note. How much change does he get?\"}",
+   "replacementDeclared": "224460bf9e25578d529177ed0d7dbce7188f05068534113d2c762631c9fe0b42",
+   "replacementRecomputes": true
+  },
+  {
+   "itemId": "MC03-CALC-08",
+   "declaredInTheNotice": "0bacd88c76aec61f455b4d0a448d070a931778e28affcba2c1b6e7d077cfcb2a",
+   "THE_EXACT_INPUT_STRING": "{\"key\": [\"3600\"], \"optionValues\": [\"3600\", \"4600\", \"4800\", \"6000\"], \"solution\": \"320 * 15 - 1200\", \"solutionKind\": \"numeric\", \"solutionValue\": \"3600\", \"stem\": \"A theatre sells 320 tickets at 15 pounds each. The show costs 1,200 pounds to put on. What is the profit?\"}",
+   "inputBytes": 267,
+   "recomputes": true,
+   "THE_EXACT_REPLACEMENT_INPUT_STRING": "{\"key\": [\"£3600\"], \"optionValues\": [\"£3600\", \"£4600\", \"£4800\", \"£6000\"], \"solution\": \"320 * 15 - 1200\", \"solutionKind\": \"numeric\", \"solutionValue\": \"3600\", \"stem\": \"A theatre sells 320 tickets at 15 pounds each. The show costs 1,200 pounds to put on. What is the profit?\"}",
+   "replacementDeclared": "9856295e37216b79d826ec11b05c640ca030d296180428a8e99309888ac43adb",
+   "replacementRecomputes": true
+  },
+  {
+   "itemId": "MC04-CALC-04",
+   "declaredInTheNotice": "cbf98a3fd799a66e6c6594215e1bf15065e7e5ac47dcf17f149eeb6aad12f012",
+   "THE_EXACT_INPUT_STRING": "{\"key\": [\"5.85\"], \"optionValues\": [\"11.60\", \"14.15\", \"5.85\", \"7.00\"], \"solution\": \"(2000 - (840 + 575)) / 100\", \"solutionKind\": \"numeric\", \"solutionValue\": \"5.85\", \"stem\": \"A game costs 8.40 pounds. Ravi also buys a controller for 5.75 pounds. He pays with a 20 pound note. How much change does he get?\"}",
+   "inputBytes": 304,
+   "recomputes": true,
+   "THE_EXACT_REPLACEMENT_INPUT_STRING": "{\"key\": [\"£5.85\"], \"optionValues\": [\"£11.60\", \"£14.15\", \"£5.85\", \"£7.00\"], \"solution\": \"(2000 - (840 + 575)) / 100\", \"solutionKind\": \"numeric\", \"solutionValue\": \"5.85\", \"stem\": \"A game costs 8.40 pounds. Ravi also buys a controller for 5.75 pounds. He pays with a 20 pound note. How much change does he get?\"}",
+   "replacementDeclared": "ca16aa26c22b3e61ba53be78fe2b7a1f0a5be3bf1b2037969faeb0d0927f70e9",
+   "replacementRecomputes": true
+  },
+  {
+   "itemId": "MC05-CALC-04",
+   "declaredInTheNotice": "4b557c3197e6b1346f51d3d2ed228942ad8390290171f7d24be69939058a874b",
+   "THE_EXACT_INPUT_STRING": "{\"key\": [\"9.55\"], \"optionValues\": [\"10.45\", \"11.00\", \"12.35\", \"9.55\"], \"solution\": \"(2000 - (765 + 280)) / 100\", \"solutionKind\": \"numeric\", \"solutionValue\": \"9.55\", \"stem\": \"A jigsaw costs 7.65 pounds. Mia also buys a pen for 2.80 pounds. She pays with a 20 pound note. How much change does she get?\"}",
+   "inputBytes": 301,
+   "recomputes": true,
+   "THE_EXACT_REPLACEMENT_INPUT_STRING": "{\"key\": [\"£9.55\"], \"optionValues\": [\"£10.45\", \"£11.00\", \"£12.35\", \"£9.55\"], \"solution\": \"(2000 - (765 + 280)) / 100\", \"solutionKind\": \"numeric\", \"solutionValue\": \"9.55\", \"stem\": \"A jigsaw costs 7.65 pounds. Mia also buys a pen for 2.80 pounds. She pays with a 20 pound note. How much change does she get?\"}",
+   "replacementDeclared": "139c84252f9dc293e23d25b7bcc4583d5b527750a59d1d5503a56ae3c4aace9f",
+   "replacementRecomputes": true
+  },
+  {
+   "itemId": "MC01-CALC-01",
+   "declaredInTheNotice": "9944985f8ac389bfd7d006713541ee826810cbfff159ed5f2d0832f6cbc1b35b",
+   "THE_EXACT_INPUT_STRING": "{\"key\": [\"392\"], \"optionValues\": [\"292\", \"382\", \"392\", \"402\"], \"solution\": \"234 + 158\", \"solutionKind\": \"numeric\", \"solutionValue\": \"392\", \"stem\": \"Work out 234 + 158.\"}",
+   "inputBytes": 169,
+   "recomputes": true
+  },
+  {
+   "itemId": "MC01-CALC-02",
+   "declaredInTheNotice": "f975ccf76a30dc73b98be68957febcc4647f2498f7b728a773930784f42df721",
+   "THE_EXACT_INPUT_STRING": "{\"key\": [\"35\"], \"optionValues\": [\"33\", \"35\", \"40\", \"45\"], \"solution\": \"62 - 27\", \"solutionKind\": \"numeric\", \"solutionValue\": \"35\", \"stem\": \"Work out 62 - 27.\"}",
+   "inputBytes": 159,
+   "recomputes": true
+  },
+  {
+   "itemId": "MC01-CALC-03",
+   "declaredInTheNotice": "0e73b81bdd711640a927ead12a14526488f407e9df0b64c34a72d98e443b7c01",
+   "THE_EXACT_INPUT_STRING": "{\"key\": [\"72\"], \"optionValues\": [\"12\", \"62\", \"72\", \"82\"], \"solution\": \"24 * 3\", \"solutionKind\": \"numeric\", \"solutionValue\": \"72\", \"stem\": \"Work out 24 x 3.\"}",
+   "inputBytes": 157,
+   "recomputes": true
+  },
+  {
+   "itemId": "MC01-CALC-04",
+   "declaredInTheNotice": "8b3330d718c121966fd0fc4a0e97f2be8cf3702e8cb7eb6c98943de4e524215c",
+   "THE_EXACT_INPUT_STRING": "{\"key\": [\"1.15\"], \"optionValues\": [\"1.15\", \"2.35\", \"2.85\", \"3.85\"], \"solution\": \"(500 - (265 + 120)) / 100\", \"solutionKind\": \"numeric\", \"solutionValue\": \"1.15\", \"stem\": \"Priya has 5.00 pounds. She buys a book for 2.65 pounds and a pen for 1.20 pounds. How much money does she have left?\"}",
+   "inputBytes": 288,
+   "recomputes": true
+  },
+  {
+   "itemId": "MC01-CALC-05",
+   "declaredInTheNotice": "1b04f926886b7159a3c8fd5c9f73ba23fe44791e1db1ce459077e6a7fe244cd6",
+   "THE_EXACT_INPUT_STRING": "{\"key\": [\"204\"], \"optionValues\": [\"184\", \"204\", \"224\", \"24\"], \"solution\": \"34 * 6\", \"solutionKind\": \"numeric\", \"solutionValue\": \"204\", \"stem\": \"Work out 34 x 6.\"}",
+   "inputBytes": 162,
+   "recomputes": true
+  },
+  {
+   "itemId": "MC01-CALC-06",
+   "declaredInTheNotice": "5e7d718047154ae81f18caf6d5894180d2d085d6c9055861675527f60348c54a",
+   "THE_EXACT_INPUT_STRING": "{\"key\": [\"24\"], \"optionValues\": [\"21\", \"24\", \"25\", \"48\"], \"solution\": \"96 // 4\", \"solutionKind\": \"numeric\", \"solutionValue\": \"24\", \"stem\": \"Work out 96 divided by 4.\"}",
+   "inputBytes": 167,
+   "recomputes": true
+  },
+  {
+   "itemId": "MC01-CALC-07",
+   "declaredInTheNotice": "86db660bb902eaad95542f372b2a9e11e143c06994f011981f60fa3902afdadc",
+   "THE_EXACT_INPUT_STRING": "{\"key\": [\"12\"], \"optionValues\": [\"12\", \"21\", \"27\", \"9\"], \"solution\": \"4*6 + 3 - 15\", \"solutionKind\": \"numeric\", \"solutionValue\": \"12\", \"stem\": \"A box holds 6 eggs. A cafe has 4 full boxes and 3 loose eggs. They use 15 eggs. How many eggs are left?\"}",
+   "inputBytes": 249,
+   "recomputes": true
+  },
+  {
+   "itemId": "MC01-CALC-08",
+   "declaredInTheNotice": "2812ed987336cdabe8fb4bb5a56d7f9f2fe338c79bfc032b2dc87294c99f7bee",
+   "THE_EXACT_INPUT_STRING": "{\"key\": [\"4528\"], \"optionValues\": [\"4008\", \"4528\", \"5000\", \"5472\"], \"solution\": \"8006 - 3478\", \"solutionKind\": \"numeric\", \"solutionValue\": \"4528\", \"stem\": \"A stadium has 8,006 seats. On Saturday 3,478 seats were filled. How many seats were empty?\"}",
+   "inputBytes": 248,
+   "recomputes": true
+  },
+  {
+   "itemId": "MC01-FDP-05",
+   "declaredInTheNotice": "05e2d4ec23c2b208a8ecec937b0aa1652c71f0a8054ec156cefecb47e4bf1158",
+   "THE_EXACT_INPUT_STRING": "{\"key\": [\"1/2\"], \"optionValues\": [\"1/2\", \"2/18\", \"2/9\", \"5/6\"], \"solution\": \"1/3 + 1/6\", \"solutionKind\": \"numeric\", \"solutionValue\": \"0.5\", \"stem\": \"What is 1/3 + 1/6?\"}",
+   "inputBytes": 169,
+   "recomputes": true
+  },
+  {
+   "itemId": "MC01-FDP-06",
+   "declaredInTheNotice": "fbfbbc37cda6887b8ac1c6b79be4d80cc1e0965c15fd5d0153793ae5828cdad6",
+   "THE_EXACT_INPUT_STRING": "{\"key\": [\"36\"], \"optionValues\": [\"30\", \"36\", \"39.90\", \"4\"], \"solution\": \"40 - 40 * 10 / 100\", \"solutionKind\": \"numeric\", \"solutionValue\": \"36\", \"stem\": \"A coat costs 40 pounds. In a sale it is reduced by 10%. What is the new price?\"}",
+   "inputBytes": 233,
+   "recomputes": true
+  },
+  {
+   "itemId": "MC01-GEOM-03",
+   "declaredInTheNotice": "1095e5e8ea3841ff8df7a952643c027b4e7a060f5de1bc18ca4a750edbb783a6",
+   "THE_EXACT_INPUT_STRING": "{\"key\": [\"20 cm\"], \"optionValues\": [\"10 cm\", \"16 cm\", \"20 cm\", \"24 cm\"], \"solution\": \"2*(6 + 24/6)\", \"solutionKind\": \"numeric\", \"solutionValue\": \"20.0\", \"stem\": \"A rectangle has an area of 24 cm² and is 6 cm long. First find its width, then work out its perimeter (not to scale).\"}",
+   "inputBytes": 282,
+   "recomputes": true
+  },
+  {
+   "itemId": "MC01-GEOM-05",
+   "declaredInTheNotice": "765efbe2eb0b7f9d21f7c57ffedba957a64d0da8ddce528d3c0bccc8d2e73a27",
+   "THE_EXACT_INPUT_STRING": "{\"key\": [\"48 cm²\"], \"optionValues\": [\"12 cm²\", \"32 cm²\", \"48 cm²\", \"60 cm²\"], \"solution\": \"10*6 - 4*3\", \"solutionKind\": \"numeric\", \"solutionValue\": \"48\", \"stem\": \"An L-shape is made from a rectangle 10 cm by 6 cm with a 4 cm by 3 cm corner cut out (not to scale). What is the area of the L-shape?\"}",
+   "inputBytes": 303,
+   "recomputes": true
+  },
+  {
+   "itemId": "MC01-MEAS-01",
+   "declaredInTheNotice": "9d9f4aa2f599b8f8b9f10ff1c0553281a06f728d5f43c5d8617600488503738e",
+   "THE_EXACT_INPUT_STRING": "{\"key\": [\"£1.50\"], \"optionValues\": [\"£1.00\", \"£1.50\", \"£2.00\", \"£2.50\"], \"solution\": \"5 - 3.50\", \"solutionKind\": \"numeric\", \"solutionValue\": \"1.5\", \"stem\": \"Sam has £5. He buys a book that costs £3.50. How much change does he get?\"}",
+   "inputBytes": 239,
+   "recomputes": true
+  },
+  {
+   "itemId": "MC01-MEAS-02",
+   "declaredInTheNotice": "24d8ef90d89f17bf9459fb08665e9240d6263da746f511294900efefffec8c3c",
+   "THE_EXACT_INPUT_STRING": "{\"key\": [\"55 cm\"], \"optionValues\": [\"50 cm\", \"55 cm\", \"60 cm\", \"65 cm\"], \"solution\": \"90 - 35\", \"solutionKind\": \"numeric\", \"solutionValue\": \"55\", \"stem\": \"A ribbon is 90 cm long. Mia cuts off 35 cm. How many cm are left?\"}",
+   "inputBytes": 222,
+   "recomputes": true
+  },
+  {
+   "itemId": "MC01-MEAS-03",
+   "declaredInTheNotice": "70bc3001535a3c9e1eaf338dd6b8c2c57ad92d4902966c22c2c4258c3f188e35",
+   "THE_EXACT_INPUT_STRING": "{\"key\": [\"£1.00\"], \"optionValues\": [\"£0.62\", \"£1.00\", \"£1.20\", \"£3.00\"], \"solution\": \"(0.60/3)*5\", \"solutionKind\": \"numeric\", \"solutionValue\": \"1.0\", \"stem\": \"3 apples cost 60p. How much do 5 apples cost at the same price?\"}",
+   "inputBytes": 229,
+   "recomputes": true
+  },
+  {
+   "itemId": "MC01-MEAS-04",
+   "declaredInTheNotice": "53ed68ba4dcc60526acf9d6b01cf0aeae60c12cfef1c44ff65642af17169a29c",
+   "THE_EXACT_INPUT_STRING": "{\"key\": [\"£4.80\"], \"optionValues\": [\"£3.60\", \"£4.00\", \"£4.80\", \"£5.20\"], \"solution\": \"1.20*4\", \"solutionKind\": \"numeric\", \"solutionValue\": \"4.8\", \"stem\": \"A pack of stickers costs £1.20. Leah buys 4 packs. How much does she pay?\"}",
+   "inputBytes": 236,
+   "recomputes": true
+  },
+  {
+   "itemId": "MC01-MEAS-06",
+   "declaredInTheNotice": "08c293cb63d2fba9329aa7fdbc912625870eac97de782802c25f1966245f04ff",
+   "THE_EXACT_INPUT_STRING": "{\"key\": [\"300 g\"], \"optionValues\": [\"200 g\", \"202 g\", \"300 g\", \"400 g\"], \"solution\": \"(200/4)*6\", \"solutionKind\": \"numeric\", \"solutionValue\": \"300.0\", \"stem\": \"A recipe for 4 people uses 200 g of flour. How much flour is needed for 6 people?\"}",
+   "inputBytes": 243,
+   "recomputes": true
+  },
+  {
+   "itemId": "MC01-MEAS-07",
+   "declaredInTheNotice": "12b49bbe6b2550f4f2ca4c1d9fae473af15c1c002d46b3887d64e830635aa03f",
+   "THE_EXACT_INPUT_STRING": "{\"key\": [\"5p\"], \"optionValues\": [\"13p\", \"15p\", \"30p\", \"5p\"], \"solution\": \"(120/6) - (150/10)\", \"solutionKind\": \"numeric\", \"solutionValue\": \"5\", \"stem\": \"One shop sells 6 eggs for £1.20. Another shop sells 10 eggs for £1.50. How much cheaper is one egg at the second shop?\"}",
+   "inputBytes": 275,
+   "recomputes": true
+  },
+  {
+   "itemId": "MC01-NPV-05",
+   "declaredInTheNotice": "1085aa312f4dce39a45db9c063a33132a7085c5ec40bbba4c07b1fcfa5c87f1d",
+   "THE_EXACT_INPUT_STRING": "{\"key\": [\"-5\"], \"optionValues\": [\"-4\", \"-5\", \"0\", \"5\"], \"solution\": \"4 - 9\", \"solutionKind\": \"numeric\", \"solutionValue\": \"-5\", \"stem\": \"The temperature is 4C. It falls by 9C. What is the new temperature?\"}",
+   "inputBytes": 205,
+   "recomputes": true
+  },
+  {
+   "itemId": "MC01-NPV-06",
+   "declaredInTheNotice": "0f5b8f9fa4caaa33e4af07eb27ee1af26878e4d3d1c5e10c278a8e4858f31a24",
+   "THE_EXACT_INPUT_STRING": "{\"key\": [\"35086\"], \"optionValues\": [\"350086\", \"35086\", \"35806\", \"3586\"], \"solution\": \"3*10000 + 5*1000 + 0*100 + 8*10 + 6\", \"solutionKind\": \"numeric\", \"solutionValue\": \"35086\", \"stem\": \"A number is made of 3 ten-thousands, 5 thousands, 0 hundreds, 8 tens and 6 ones. What is the number?\"}",
+   "inputBytes": 288,
+   "recomputes": true
+  },
+  {
+   "itemId": "MC01-STATS-02",
+   "declaredInTheNotice": "645cef62966032760c7a932f6ed4e0fbbaa4027e6019daaac997eb97ab45aeb6",
+   "THE_EXACT_INPUT_STRING": "{\"key\": [\"9\"], \"optionValues\": [\"11\", \"3\", \"7\", \"9\"], \"solution\": \"(8+6)-5\", \"solutionKind\": \"numeric\", \"solutionValue\": \"9\", \"stem\": \"A bar chart shows goals scored: Team Red 8, Team Blue 5, Team Green 6. How many more goals did Red and Green score together than Blue?\"}",
+   "inputBytes": 271,
+   "recomputes": true
+  },
+  {
+   "itemId": "MC04-FDP-04",
+   "declaredInTheNotice": "0f99199bd299dec86a247737363e22dbf7046fd53d129994f526c41486dffb75",
+   "THE_EXACT_INPUT_STRING": "{\"key\": [\"3/8\"], \"optionValues\": [\"1/4\", \"1/6\", \"3/4\", \"3/8\"], \"solution\": \"1/8 + 1/4\", \"solutionKind\": \"numeric\", \"solutionValue\": \"0.375\", \"stem\": \"Maya has 1/8 of a cake. Her brother gives her another 1/4 of a cake. What fraction of a cake does she have now?\"}",
+   "inputBytes": 263,
+   "recomputes": true
+  },
+  {
+   "itemId": "MC04-FDP-06",
+   "declaredInTheNotice": "a2c060914872279059ae8831e54ec2af37d360c0df0f3055e270310076fbd76a",
+   "THE_EXACT_INPUT_STRING": "{\"key\": [\"£40\"], \"optionValues\": [\"£10\", \"£30\", \"£40\", \"£60\"], \"solution\": \"50 - 50 * 20 / 100\", \"solutionKind\": \"numeric\", \"solutionValue\": \"40\", \"stem\": \"A jacket costs £50. In a sale it is reduced by 20%. What is the sale price?\"}",
+   "inputBytes": 239,
+   "recomputes": true
+  },
+  {
+   "itemId": "MC04-GEOM-04",
+   "declaredInTheNotice": "ba18063385aaebd7a2790d184dcbf15df26a9a38513e6e798492b84c9d39f1ab",
+   "THE_EXACT_INPUT_STRING": "{\"key\": [\"32 cm\"], \"optionValues\": [\"24 cm\", \"28 cm\", \"32 cm\", \"48 cm\"], \"solution\": \"2*(12 + 12//3)\", \"solutionKind\": \"numeric\", \"solutionValue\": \"32\", \"stem\": \"A rectangle is 12 cm long. Its width is a third of its length. Work out the perimeter (not to scale).\"}",
+   "inputBytes": 265,
+   "recomputes": true
+  },
+  {
+   "itemId": "MC05-FDP-01",
+   "declaredInTheNotice": "570cb69c04753734b742db9ad31085c6e0bcca9f87418281dbb18d7955ed3e68",
+   "THE_EXACT_INPUT_STRING": "{\"key\": [\"4/5\"], \"optionValues\": [\"4/5\", \"4/9\", \"Cannot tell\", \"They are equal\"], \"solution\": \"4/5\", \"solutionKind\": \"numeric\", \"solutionValue\": \"0.8\", \"stem\": \"Which is the bigger fraction, 4/5 or 4/9?\"}",
+   "inputBytes": 204,
+   "recomputes": true
+  }
+ ],
+ "count": 31,
+ "allThirtyOneRecomputeHere": true,
+ "whyALLandNOTONE": "the ask was for one worked example. Thirty-one cross because a door that can check every declared digest ARMS ON EVIDENCE RATHER THAN ON TRUST, and because if any one of them did not recompute this store would rather find that out here than have the door find it.",
+ "YOUR_STEM_FINDING_IS_CORRECT_AND_THE_CAUSE_IS_A_RULING": {
+  "confirmed": "all six of this store's current rows carry the BARE money form in the stem and the united form in the option values. Checked on this disk, not accepted.",
+  "theCause": "the money-slot amender says so on its face: \"no stem is touched, no \\\"pounds\\\" becomes £ in any sentence, and solutionValue is NOT altered.\" It was applied to the OPTION SET ONLY, on Annie's scope line — THE UNIT'S PRESENCE, NOT ITS SPELLING, prose-money harmonisation is a voice question and stays out.",
+  "soTHISISNOTASTALEROW": "THE PRECISE STATEMENT MATTERS BECAUSE IT CHANGES WHO MUST MOVE. This store's replacement digest is not a pre-amendment artefact — it recomputes exactly over this store's CURRENT post-amendment row, which is amended at the values and deliberately not at the stem. Your rows are amended at both. TWO STORES APPLIED ONE RULING TO DIFFERENT SCOPES and the district now holds a third state. The digest is accurate about this store's bytes and USELESS AS A LIFTING KEY FOR YOURS, which is exactly the fault you name, arrived at from the other side.",
+  "whatThisStoreDOESNOTDO": "re-amend its stems. Which stem form the district serves is a ruling and nobody has made it; changing prose to make a digest match would be fitting the corpus to the key.",
+  "whatWouldSettleIt": "one ruling on whether prose-money harmonisation is in scope, and whichever way it goes, one side re-derives and re-declares."
+ },
+ "NOT_CHECKED": [
+  "your sixteen encodings — not seen here, and not needed now that the cause is named",
+  "whether your rows match anything once your door is armed: that is the door's to report",
+  "the twenty-five with no replacement: still nobody's ruling"
+ ]
+}
