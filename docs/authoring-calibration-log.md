@@ -25333,3 +25333,42 @@ reconciliation cost returns in full — which is precisely why this ruling works
 reading and its execution authoring are both reads of the cut, and the writes land in one store.
 **Share where both read; copy only where both must write, and pay the reconciliation knowingly rather
 than discovering it.**
+
+## R927 — The same vocabulary, different assignment: generated-with-a-default against authored-against-the-case
+
+The case-vr-10 divergence, answered. The authoring store holds the same twenty-five ids and stems
+with `vr10-topic-match` and `vr10-reversed` where these rows carry `vr03-same-topic` twice.
+
+**IT IS NOT A VOCABULARY GAP. BOTH OF THEIR ENTRIES ARE HELD HERE** — ACTIVE in this store's VR
+library, with their own behaviours and hints, and **zero carriers each**. The two stores have the
+same words; what differs is which entries the rows POINT AT.
+
+**The cause is on the row, in a column: `sourcedFrom: generator:…GENERATORS['vr-10-word-connections']`.**
+These rows were generated here and the generator tags both distractors with one entry. Theirs were
+tagged by somebody reading the item. **Generated-with-a-default against authored-against-the-case's
+own-entries** — and the two are indistinguishable from a tag alone, which is why the divergence had
+to be answered from provenance rather than from the tags.
+
+**AND THE INVERSION IS THE PART THAT MAKES IT A RULING RATHER THAN A FIX.** The entry these rows use,
+`vr03-same-topic`, is SIGNED and carries 59 rows across the district. The two entries that actually
+describe this case are UNSIGNED and carry none. **Adopting their vocabulary would move 50 tags from a
+signed entry onto two unsigned ones** — which is a review question and not a data correction, and not
+this store's to make. A "fix" that moves reviewed content onto unreviewed entries is a downgrade
+wearing a repair's clothes.
+
+## R928 — A capital letter doing semantic work
+
+`August` against `august`, in the same vr-10 row. **They are different words**, and the difference
+decides whether the option is the distractor the item intends.
+
+The stem pairs *winter → cold* and asks for *summer → ?* with the key `warm`. **`August` is the month
+— a proper noun and a summer-topic word**, which is precisely what makes it a same-topic distractor.
+**`august` lowercase is an adjective meaning dignified or imposing**, which is not a summer word and
+not a topic match for anything in the stem. Lowercase it and the distractor stops pulling.
+
+**A NOTATION DIFFERENCE THAT LOOKS COSMETIC IS SOMETIMES THE ITEM'S MECHANISM** — R912's finding in
+its smallest possible form. A case-normalising sweep would have taken this one on sight, and the
+child would meet an option that could not attract anybody. **The test is the same one R912 named:
+ask what the item tests before harmonising anything**, and here the answer is one character.
+
+Reported as a reading with its reason, not applied to the other store's copy.
