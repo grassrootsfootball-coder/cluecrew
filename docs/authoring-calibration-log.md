@@ -24737,3 +24737,40 @@ own, and that role is the reason her verification legitimately covers rows that 
 withdrawn. **A test too coarse to separate two things will not report that it merged them** — it
 reports the merged class as a fact, and the distinction is only recovered by someone asking why a
 count looks too round.
+
+## R903 — A withdrawal keys on SUBSTANCE, and the receiving door refuses to arm before it can reproduce one
+
+Cowork's withdrawal notice, 2026-08-30, crossed as an ACT addressed to this store — 31 substances of
+the 196-row send, six superseded by current bytes and twenty-five with no replacement anywhere.
+
+**THE KEY IS SUBSTANCE AND NEVER ID**, in their words: *MC04-FDP-04 appears below and ALSO exists in
+a variant this notice does not touch. A door keying on the id would refuse the repair along with the
+fault.* Substance is the stem, the SORTED set of option values, the key, solution, solutionValue and
+solutionKind — option order, labels and enrichment deducted, because a shuffle is not a different
+question and an unfinished copy is not a different one either. `packages/core/src/item-identity.ts`
+implements it; the notice is retained git-tracked at `content/withdrawals/` so the standing
+withdrawal is an artefact the door READS rather than a message somebody remembers (R899's whole
+lesson).
+
+**THE DOOR IS BUILT AND CORRECTLY REFUSES TO ARM.** It reproduced ZERO of the 31 declared digests
+from any bytes this store holds, across sixteen candidate encodings of their six fields. The notice
+names the FIELDS and not the SERIALISATION. **Two explanations remain confounded and this store
+cannot separate them**: this encoding differs from theirs, or these rows genuinely differ from every
+substance named. So it screens nothing and exits non-zero saying why — **a matcher that matches
+nothing reports exactly what a clean population reports**, and shipping it green would have been the
+ninth instance of the fault this register exists to record. One line unblocks it: their `substance()`
+implementation, or one worked example — the input string that hashes to a declared digest.
+
+**AND THE QUESTION DID NOT NEED THE DIGEST.** Their marked inference was that six ids might be
+serving pre-amendment money bytes. Refuted by READING: all six carry the united form in the stem and
+in every option value. **A verdict blocked on an unbuildable instrument was answerable from the bytes
+the whole time** — the digest was the general mechanism and the question was specific, and reaching
+for the mechanism first would have delayed a one-line answer indefinitely.
+
+**THE FINDING THAT CAME BACK THE OTHER WAY.** Their CURRENT send `744b3fc8ab16` still carries the
+BARE money form in the STEM on all six, while carrying the united form in the option values — the
+money amendment reached their values and not their stems. **So their `replacementSubstanceSha256`
+values describe rows with pre-amendment stems**, and these six match neither the withdrawn substance
+nor the declared replacement: they are a third state, and it is the amended one. Reported as an
+observation, not a ruling — which stem form is right is not this store's call — because a replacement
+that is itself pre-amendment is a thing the sender wants to know before anybody lifts on it.

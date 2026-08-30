@@ -163,6 +163,7 @@
     "check:hint-asserts-feature": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-hint-asserts-feature.ts",
     "check:hint-locator": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-hint-locator.ts",
     "check:inherited-fields": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-inherited-fields.ts",
+    "check:withdrawn-substance": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-withdrawn-substance.ts",
     "check:withdrawn-serving": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-withdrawn-serving.ts",
     "check:field-reads": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-field-reads.ts",
     "check:arrival-confirmed": "tsx scripts/check-arrival-confirmed.ts",
