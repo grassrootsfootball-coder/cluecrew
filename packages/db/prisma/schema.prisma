@@ -372,6 +372,19 @@ model Item {
   // these and none should.
   tierRationale           String? // why this item sits at this tier
   sourcedFrom             String? // what the authoring pass read to write it
+  /**
+   * WHICH SENDS CARRY THIS ID, AS A PROPERTY (Annie's ruling, 2026-08-30 — R901).
+   *
+   * Six rows served children on bytes from a withdrawn send because the withdrawal was recorded as
+   * an EVENT and never read by anything. Provenance that lives only in `AttributionEvent` prose is
+   * answerable by conversation and by nothing else. This column makes the next such question a
+   * query: per row, every crossed send holding the id, its digest, and whether that send was
+   * withdrawn — DERIVED by scanning the sends, never hand-kept (R57).
+   *
+   * Deliberately OUTSIDE the pin projection ({stem, options, explanation}), so recording provenance
+   * cannot falsify a signature — the fault R858 closed and the reason retention is stripped.
+   */
+  sendHistory             Json?
   // The affordance test's output at item level: which mechanism each distractor executes and the
   // evidence for it. Structured, one entry per mechanism.
   mechanismLedger         Json?

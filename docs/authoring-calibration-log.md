@@ -24653,3 +24653,54 @@ retention that does not exist.** The rows serve the variant she read — atteste
 a signature over a pin that recomputes — but from the row you cannot tell a choice was made, which is
 precisely what the note promises you can. R872's lesson unlearned in a neighbouring file: a retention
 claimed in prose and not written is worse than no retention, because it stops anyone looking.
+
+## R900 — The note was right and the row caught up
+
+The restore events on `MC04-FDP-04` and `MC05-FDP-01` said *the unchosen variant is recorded on the
+row and is NOT discarded*. It was not. **The repair is to write the retention, not to correct the
+note** — the note described the right behaviour, and a store that fixes the description instead of
+the behaviour has chosen the cheaper of two repairs and recorded it as if it were the other one.
+
+The unchosen variants came from **Cowork's crossed bytes**, never re-authored here — this store does
+not author item content, and a retention invented locally would be a second wording under one id
+(R598). The chosen variant was asserted byte-identical to what the row already serves BEFORE
+anything was written: if the store and the sends disagreed about which variant is live, that is a
+different and larger fault, and it refuses rather than papering over it.
+
+**THE SIGNATURE SURVIVES BY DESIGN AND WAS ASSERTED ANYWAY.** Both pins are under the
+retention-EXCLUDED projection, which strips `_`-keys, so a retention key cannot move them — **which
+is precisely what R858 stripped retention FOR**, working here on its first real test rather than
+being trusted. The excluded hash is computed before and after inside the transaction, and anything
+but equality rolls back.
+
+## R901 — Send history is a property of the row, not a memory of the conversation
+
+Annie's ruling, 2026-08-30, after six rows served children on bytes from a withdrawn send.
+
+**The withdrawal was recorded as prose in an `AttributionEvent` and nothing read it** (R899).
+Answering *which of the 187 came from the withdrawn send* took a conversation, four queries against
+a table no gate consults, and one wrong start — the provenance COLUMNS (`sourcedFrom`,
+`importDoorFix`, `draftingMethod`) are null on all 187, so the first honest answer was "there is no
+provenance anywhere", true of the columns and false of the store. **Provenance answerable only by
+conversation is provenance that will be wrong the next time nobody asks.**
+
+`Item.sendHistory` now carries, per row, every crossed send holding that id with its digest, row
+count and ROLE, plus whether the row is in the withdrawn send and absent from the replacement. It
+is DERIVED by scanning the sends (R57) and sits OUTSIDE the pin projection, so recording provenance
+cannot falsify a signature — asserted per row inside the transaction.
+
+**THE ROLES HAD TO BE DERIVED FROM MEMBERSHIP, AND THE FIRST ATTEMPT WAS WORTHLESS.** Marking a send
+withdrawn because it CONTAINS the withdrawn ids matched every superset and reported **187 of 187**
+rows in a withdrawn send — R591's wider-population fault, third instance this week, and this one
+would have made the new column useless on the day it landed. The roles that mean something are
+defined by what a send OMITS: the replacement omits every marked id; the withdrawn send carries them.
+**And one artefact needed a role of its own** — `1d7f9cf4…` is this store's own export of the same
+196-row membership, the population Annie content-verified. Calling it a withdrawn send would have
+been false, and it is exactly why her 182nd covers rows later withdrawn and why restoring two of
+them was sound.
+
+**THE CONFIRMATION WORTH HAVING: the column agrees with the events.** 16 rows are in the withdrawn
+send and not the replacement; 16 rows carry the withdrawal marker and are still in the store. Two
+derivations from independent sources — the send files and the attribution log — landing on the same
+membership. **That is the only kind of agreement this register treats as evidence** (R882): not one
+instrument agreeing with itself, but two that could have disagreed.
