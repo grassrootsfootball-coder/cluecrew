@@ -1,0 +1,82 @@
+{
+ "kind": "execution-siting-report",
+ "THE_QUESTION": "what would it take for the executions to be authored where the rows are",
+ "NOTHING_HERE_IS_DECIDED": "both shapes are buildable. Which is right turns on who OWNS an execution, and that is a ruling nobody has made.",
+ "WHAT_AN_EXECUTION_IS_AND_WHY_IT_DECIDES_THE_ARC": {
+  "anExample": "Does not fit the sentence, although it makes a real word (BROKE).",
+  "itIs": "item-specific prose about ONE distractor in ONE stem — the INSTANTIATION of a pattern, not the pattern.",
+  "soITCANNOTBEAUTHOREDFROMAPATTERN": "it requires the row. Nineteen patterns are structure; 650 executions are 650 readings of 650 specific wrong answers. **They are not the same work at a different scale — they are different work**, and that is why holding the patterns does not shorten the executions by one row."
+ },
+ "WHAT_IS_ON_THIS_SIDE": {
+  "distractorsInTheElevenCases": 689,
+  "tagged": 680,
+  "attestedEntries": 23,
+  "executionsPresent": 0,
+  "andTHEENTRIESHAVECROSSED": "all 23 as bytes, with per-entry digests and one over the set (ff52f64d4793ac2d)."
+ },
+ "THE_PRECEDENT_IS_NOT_HYPOTHETICAL": {
+  "executionsAlreadyAuthoredBesideTheRowsHere": {
+   "VR": {
+    "withExecution": 80,
+    "ofOptions": 2275
+   },
+   "ENGLISH": {
+    "withExecution": 1060,
+    "ofOptions": 1574
+   },
+   "MATHS": {
+    "withExecution": 0,
+    "ofOptions": 748
+   }
+  },
+  "andVRALREADYHASSOME": {
+   "byType": {
+    "vr-06-missing-word": 80
+   },
+   "note": "all 80 are vr-06-missing-word — one case, complete, and none of them in the eleven. So the shape has been done in this district already, once."
+  },
+  "soSHAPE_B_IS_THE_ESTABLISHED_ONE": "ENGLISH carries 1060 executions of 1574 options, authored beside the rows through the landing scripts. This is not a proposal; it is what the corpus already did 1,060 times."
+ },
+ "SHAPE_A_THE_ROWS_CROSS_TO_THE_AUTHOR": {
+  "whatCrosses": "288 rows with stems, options, keys, tags and the 23 entries — the population artefact already cuts exactly this and is staged.",
+  "whatIsMISSING": "a RETURN LEG for executions. No import door writes options[].misconceptionExecution from a crossed artefact; every one of the 1,140 executions in this store was written by a landing script from a reviewer return, never imported from the authoring store.",
+  "soTHECOST": "an import door plus its gate plus its canary, and a first crossing that proves the door before 650 rows depend on it (R903 is the worked example of what that costs).",
+  "andTHERISK": "R88 — the return leg is the direction that had never carried anything, and the first thing it carried dropped 16 of 22 columns."
+ },
+ "SHAPE_B_THE_AUTHOR_WORKS_BESIDE_THE_ROWS": {
+  "whatIsALREADYINPLACE": "the rows, the tags, the attested entries, the write path, the gates, and 1,140 executions already written this way.",
+  "whatIsMISSING": "nothing mechanical. What is missing is an author and a ruling that this is theirs to do here.",
+  "andTHECONSTRAINT": "CLAUDE.md — content decisions go through the CMS review pipeline and nothing skips the reviewer. An execution is child-adjacent prose, so it gates like any authored string."
+ },
+ "THE_ONE_QUESTION_THAT_DECIDES_IT": {
+  "it": "who owns an execution — the store that owns the PATTERN, or the store that owns the ROW?",
+  "whyItIsNotObvious": "R23 gives authored ITEM content to Cowork and everything the gates and platform own to this store. An execution is neither cleanly: it is authored prose (Cowork's kind) about a specific row and tag (this store's holding), and the English precedent put it here 1,060 times without the question being asked.",
+  "andWHYITSHOULDBEASKEDNOW": "because 650 is the number at which an unruled ownership becomes a migration. It was cheap to leave unruled at zero and it is cheap to rule now; it is not cheap to rule after the work is done in the wrong store."
+ },
+ "RESULT_LINES": [
+  "distractors\t689",
+  "tagged\t680",
+  "executions\t0"
+ ],
+ "resultsSha256": "bd5b60ed902fd06b67dea66180ceb0e57244c24f636a2eb6aaaf6ac9713fb698",
+ "resultsSha256Spec": "sha256 over the summary lines joined by \\n, encoded UTF-8. NOT the R729 canonical-JSON spec — this digest is over TEXT, and the two give different numbers over the same content.",
+ "findingsSha256": "f21339f5587b7fa50d037637f52775338d844098d357be56a8f06926d6c7e5ba",
+ "howToCheckThisOnArrival": {
+  "subtreeKeys": [
+   "WHAT_IS_ON_THIS_SIDE",
+   "SHAPE_A_THE_ROWS_CROSS_TO_THE_AUTHOR",
+   "SHAPE_B_THE_AUTHOR_WORKS_BESIDE_THE_ROWS",
+   "RESULT_LINES"
+  ],
+  "subtree": "an object of THIS DOCUMENT'S OWN TOP-LEVEL KEYS, exactly as spelled in subtreeKeys and nowhere renamed: {\"WHAT_IS_ON_THIS_SIDE\", \"SHAPE_A_THE_ROWS_CROSS_TO_THE_AUTHOR\", \"SHAPE_B_THE_AUTHOR_WORKS_BESIDE_THE_ROWS\", \"RESULT_LINES\"}",
+  "spec": "sha256 over json.dumps(subtree, sort_keys=True, separators=(\",\",\":\"), ensure_ascii=False).encode(\"utf-8\") — R729. ensure_ascii defaults to True and gives a different number.",
+  "andTheFileDigest": "the staging line and the .sha256 sidecar, over the whole file bytes"
+ },
+ "instrumentProvenance": {
+  "emittedBy": "report-execution-siting.ts",
+  "carriedFixture": false,
+  "MARK": "FROM AN UNFIXTURED INSTRUMENT",
+  "meaning": "this emitter carries no fixture, so nothing in this run proves it can find what it claims to find or stay silent on what is clean. Read its figures accordingly (Annie's clause, R726).",
+  "remedy": "the emitter earns a carried fixture before its next emission crosses (R725)."
+ }
+}

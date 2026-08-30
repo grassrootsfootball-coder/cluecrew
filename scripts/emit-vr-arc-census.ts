@@ -148,7 +148,9 @@ async function run() {
   });
   const COWORK_COUNT = 305;
   const daylight = {
-    THE_GAP_AS_STATED: `Cowork reports 305; this door cuts 275. Annie will not sign against an unexplained gap and is right not to, so what can be named is named and what cannot is marked as arithmetic.`,
+    RESOLVED: 'THERE IS NO GAP. Cowork reports that 280 of its 305 rows are outside the eleven cases entirely, so the two figures were never measuring the same thing and there was never anything to reconcile. Recorded as their measurement, not re-derived here.',
+    andWHATTHATCONFIRMS: 'R918 and R920 in one line: the subtraction 305 - 275 = 30 produced a number, a plausible story, and thirty rows that do not exist. The residual this store declined to name as a population turned out not to BE a population — which is the outcome the refusal was protecting against, arriving as vindication rather than as luck.',
+    THE_GAP_AS_STATED: `Cowork reported 305; this door cuts 275. Annie will not sign against an unexplained gap and is right not to, so what can be named is named and what cannot is marked as arithmetic.`,
     thisStoreHoldsInTheElevenCases: eleven.length,
     ofWhichTheDoorCuts: eleven.length - outsideTheDoor.length,
     NAMED_BY_STATE: outsideTheDoor.map((r) => ({
@@ -164,11 +166,18 @@ async function run() {
       andWHATWASCHECKED: 'every VR artefact on disk carrying more than twenty vr ids. The only 300-plus file is this store\'s OWN export of the FREE TEN cases (307 items) — a different population entirely, and naming it as the source would have been the count comparison wearing a filename.',
       WHAT_RESOLVES_IT: 'their 305 ids. The intersection is one operation and needs no ruling.',
     },
-    SO_WHAT_ANNIE_CAN_SIGN_AGAINST: `${eleven.length - outsideTheDoor.length} rows cut by the door, ${outsideTheDoor.length} named and stateable beside them, and a residual of ${COWORK_COUNT - eleven.length} that is a figure rather than a set. The gap is explained to the limit of what is knowable here, and the limit is named rather than papered.`,
+    SO_WHAT_ANNIE_CAN_SIGN_AGAINST: `${eleven.length - outsideTheDoor.length} rows cut by the door and ${outsideTheDoor.length} named and stateable beside them. The residual is CLOSED: it was never a population.`,
+  };
+  const THE_CUT = {
+    state: 'CUT',
+    what: `${sorted.length} rows in ${cases.length} cases, ${SECTION_SIZE} to a section, contiguous by case`,
+    theDaylightIsResolvedBeforeTheCut: true,
+    andWHYTHATORDERMATTERS: 'a population cut over an unexplained gap asks a reviewer to sign for rows she cannot account for. The gap closed first, so what is cut is the whole of what this store holds in these cases minus a boundary with an author.',
   };
 
   const full = {
     kind: 'vr-arc-census-and-population',
+    THE_CUT,
     THE_DAYLIGHT_RECONCILIATION: daylight,
     THE_POPULATION: `${rows.length} DRAFT rows across ${cases.length} paid VR cases, 25 per case`,
 

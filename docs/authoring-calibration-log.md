@@ -25188,3 +25188,55 @@ the count comparison wearing a filename. **A near-miss number from the wrong pop
 dangerous than no candidate at all**, because it supplies the shape of an answer.
 
 What resolves it needs no ruling: their 305 ids, and the intersection is one operation.
+
+## R921 — The residual was not a population, and that is what the refusal was protecting
+
+**280 of Cowork's 305 rows are outside the eleven cases entirely.** The two figures were never
+measuring the same thing and there was never anything to reconcile.
+
+The subtraction 305 − 275 = 30 produced a NUMBER, a plausible STORY (thirteen NEVER_SHIPPABLE and
+seventeen absent), and **thirty rows that do not exist.** R920 declined to name the residual as a
+population and the residual turned out not to BE one — **the refusal's justification arriving as
+vindication rather than as luck.**
+
+**THE TRANSFERABLE HALF IS ABOUT PLAUSIBILITY, NOT ARITHMETIC.** The wrong answer here was not
+absurd; it was well-formed, partially verified, and thirteen twenty-thirds true. A named subset with
+a real ruling behind it (the seed rows) would have lent its credibility to a residual that had none —
+**a report is most dangerous where its verified part is largest**, because the unverified part
+inherits the standing of the whole. Naming the limit is what kept the thirteen from vouching for the
+seventeen.
+
+The population is now CUT: 275 rows, 55 sections of six, contiguous by case, with the daylight
+resolved BEFORE the cut. **A population cut over an unexplained gap asks a reviewer to sign for rows
+she cannot account for**, which is the thing she declined to do and was right to.
+
+## R922 — An execution is an instantiation, so it cannot be authored where the rows are not
+
+The finding that decides the VR arc. The authoring store holds almost none of the eleven cases' rows;
+its nineteen patterns are structure over the items it DOES hold; available work there is one, and
+that one is archived.
+
+**AN EXECUTION IS ITEM-SPECIFIC PROSE ABOUT ONE DISTRACTOR IN ONE STEM** — *"Does not fit the
+sentence, although it makes a real word (BROKE)."* It is the INSTANTIATION of a pattern, not the
+pattern, so it requires the row. **Nineteen patterns and 650 executions are not the same work at
+different scales; they are different work**, and holding every pattern shortens the executions by
+exactly zero rows. That is why the arc cannot be unblocked by crossing more library and why the 23
+entries, now crossed, were necessary and are not sufficient.
+
+**THERE IS NO THIRD SHAPE.** Either the rows cross to the author, or the author works beside the rows.
+
+- **Rows cross**: the cut population already stages exactly this. What is missing is a RETURN LEG —
+  **no import door writes `options[].misconceptionExecution`**, and all 1,140 executions in this
+  store were written by landing scripts from reviewer returns, never imported. That is a door, a
+  gate and a canary before 650 rows depend on it, in the direction R88 found had never carried
+  anything and dropped 16 of 22 columns the first time it did.
+- **Author beside the rows**: nothing mechanical is missing. The rows, tags, attested entries, write
+  path and gates are here, and **ENGLISH carries 1,060 executions authored exactly this way**. VR has
+  80 already, all `vr-06-missing-word`, one case complete — the shape has been done in this district.
+
+**SO THE ONE QUESTION IS OWNERSHIP, AND IT IS UNRULED.** R23 gives authored ITEM content to Cowork
+and what the gates and platform own to this store; an execution is authored prose (their kind) about
+a specific row and tag (this store's holding), and the English precedent put it here a thousand times
+without the question being asked. **650 is the number at which an unruled ownership becomes a
+migration** — cheap to rule at zero, cheap to rule now, expensive after the work is done in the wrong
+store.
