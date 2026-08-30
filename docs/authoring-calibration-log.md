@@ -24848,3 +24848,57 @@ and are **useless as a lifting key for ours**, because ours are amended at the s
 replacement digest that is accurate about one store's bytes and unusable by the other is not a
 defect in either digest. **Re-check when their re-derived digests cross**; this store does not
 re-amend prose to make a digest match, which would be fitting the corpus to the key.
+
+## R907 — A serving side that cannot compute the identity of what it serves
+
+David's ruling to register, 2026-08-30, and it is a fact about this schema rather than about any notice.
+
+The substance of an item — the thing a withdrawal keys on — is six fields: stem, the sorted option
+values, the key, `solution`, `solutionValue` and `solutionKind`. **This store holds three of them.**
+`Item` has a `solution` column (null on every row inspected) and has **no `solutionValue` and no
+`solutionKind` column at all.** So a serving row's identity is not computable from this store's own
+data: **335 of 505 serving rows report NOT COMPUTABLE**, and the 170 that resolve do so only because
+a crossed send supplies the missing three and the recovery is declared per row.
+
+**THE CONSEQUENCE IS NOT ABOUT THIS WITHDRAWAL.** Any question of the form *is this row the same
+question as that one* — a duplicate sweep, a re-import diff, a withdrawal, a shuffle audit — is
+unanswerable here without borrowing half the answer from the party asking. **A store that must ask
+the sender what it is serving cannot independently check the sender**, and every guard built on
+substance inherits that dependency silently. The door reports the uncomputable class rather than
+hashing over the three fields it has and calling that the key, which would have produced a digest
+that matches nothing and refuses nothing while looking exactly like a clean screen.
+
+The repair is a schema change and is not made here on a check's say-so. **What is closed today is
+the invisibility**: the count is printed on every run, so the gap is a number rather than a
+discovery.
+
+## R908 — Re-arming: the withdrawn keys are historical and only the lifting keys move
+
+The notice was re-derived after the stem ruling and superseded (`943abb60…` over `6774c502…`),
+and the shape of the change is worth keeping. **The WITHDRAWN digests did not move — they are
+computed over a retained 196-row send, which is historical and cannot change. Only the LIFTING keys
+moved**, because what replaces a withdrawn row depends on current bytes and current bytes had been
+amended. A door armed on the old notice went on refusing exactly what it had been refusing; it was
+only the lifting half that had gone stale.
+
+**SO THE STANDING NOTICE IS THE HEAD OF A DERIVED SUPERSESSION CHAIN, NEVER THE FIRST FILENAME.** A
+superseded notice is retained rather than deleted (R888 — a record is corrected by adding to it), so
+the directory holds more than one, and the first version of this door picked by `readdirSync` order.
+That would have served whichever sorted first, forever, silently. Each notice names the sha256 of
+the one it supersedes; the standing one is the notice nothing supersedes, and two heads or none is an
+ambiguity the door refuses rather than resolving by guess.
+
+**RESULT: 12 of 13 lifted on bytes.** The one that did not is `MC03-CALC-07`, and the cause is theirs
+rather than ours: their declared replacement digest **is reproduced by their own send row, which
+still carries BARE option values** (`24.00`) while its stem is amended. Under the ruling — a money
+amount a child reads carries its unit wherever it sits — this store's row is the correct form and
+their re-derivation missed the values on that single row. **A lifting key that describes a row nobody
+holds does not lift anything**, and the only way to tell that from a serving-side fault is to
+recompute both sides, which is what the canaries make possible.
+
+**AND THE TWO REFUSALS BECAME RULED EXCEPTIONS, NOT SILENT SKIPS.** `MC04-FDP-04` and `MC05-FDP-01`
+carry a withdrawn substance and a later ruling that permits them. The exception is recorded keyed on
+SUBSTANCE, exactly as the withdrawal is, naming the authority that granted it — and printed on every
+run. **An exception that stops being visible stops being a decision** (R601); the sender's own note
+says *nothing chose between them*, and what is different now is that something did, with the unchosen
+variant retained on the row so the choice is inspectable rather than remembered.

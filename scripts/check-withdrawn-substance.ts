@@ -58,9 +58,29 @@ function crossedById() {
 }
 
 async function main() {
-  const files = readdirSync(DIR).filter((n) => n.endsWith('.json'));
-  const notice = JSON.parse(readFileSync(join(DIR, files.find((f) => f.startsWith('withdrawal-notice'))!), 'utf8')) as { WITHDRAWN: Entry[] };
-  const spec = JSON.parse(readFileSync(join(DIR, files.find((f) => f.startsWith('substance-spec'))!), 'utf8')) as {
+  /**
+   * THE STANDING NOTICE IS THE HEAD OF THE SUPERSESSION CHAIN, DERIVED — NEVER THE FIRST FILENAME.
+   *
+   * A superseded notice is RETAINED, never deleted (a record is corrected by adding to it, R888),
+   * so the directory holds more than one and picking by filename order would have silently served
+   * whichever sorted first. Each notice names the sha256 of the one it supersedes; the standing one
+   * is the notice no other notice supersedes. Two heads, or none, is an ambiguity this refuses
+   * rather than resolving by guess.
+   */
+  const files = readdirSync(DIR).filter((n) => n.startsWith('withdrawal-notice') && n.endsWith('.json'));
+  const notices = files.map((f) => {
+    const text = readFileSync(join(DIR, f), 'utf8');
+    return { file: f, sha256: sha(text), body: JSON.parse(text) as { WITHDRAWN: Entry[]; THIS_SUPERSEDES_AN_EARLIER_NOTICE?: { sha256: string } } };
+  });
+  const superseded = new Set(notices.map((n) => n.body.THIS_SUPERSEDES_AN_EARLIER_NOTICE?.sha256).filter(Boolean) as string[]);
+  const heads = notices.filter((n) => !superseded.has(n.sha256));
+  if (heads.length !== 1) {
+    throw new Error(`${heads.length} standing notices after following the supersession chain — refusing to pick one (${notices.map((n) => `${n.file}=${n.sha256.slice(0, 12)}`).join(', ')})`);
+  }
+  const standing = heads[0];
+  const notice = standing.body;
+  console.log(`  standing notice: ${standing.file} (${standing.sha256.slice(0, 16)}), superseding ${superseded.size} earlier notice(s)`);
+  const spec = JSON.parse(readFileSync(join(DIR, readdirSync(DIR).find((f) => f.startsWith('substance-spec'))!), 'utf8')) as {
     EVERY_DECLARED_DIGEST_WITH_ITS_EXACT_INPUT: Worked[];
     THE_IMPLEMENTATION_VERBATIM: { aProbeYouCanRUNAGAINSTYOURIMPLEMENTATION: { input: Record<string, unknown>; expectedString: string; expectedSha256: string } };
   };
@@ -108,6 +128,15 @@ async function main() {
   console.log('  ARMED ON EVIDENCE.\n');
 
   // ---- SCREEN THE SERVING ROWS -----------------------------------------------------------------
+  /**
+   * RULED EXCEPTIONS — substances a RULING permits to serve despite a standing withdrawal. Keyed on
+   * substance, exactly as the withdrawal is, and each naming the authority that granted it. They are
+   * printed on EVERY run: an exception that stops being visible stops being a decision (R601).
+   */
+  const exceptions = new Map(
+    (JSON.parse(readFileSync(join(DIR, 'ruled-exceptions.json'), 'utf8')) as { exceptions: Array<{ substanceSha256: string; itemId: string; ruledBy: string; theRuling: string }> })
+      .exceptions.map((x) => [x.substanceSha256, x]),
+  );
   const withdrawn = new Map(notice.WITHDRAWN.map((e) => [e.substanceSha256, e]));
   const lifts = new Map(notice.WITHDRAWN.filter((e) => e.replacementSubstanceSha256).map((e) => [e.replacementSubstanceSha256!, e]));
   const rows = await prisma.item.findMany({ where: { status: 'LIVE', pool: 'PRACTICE' },
@@ -120,22 +149,28 @@ async function main() {
     const digests = computable
       ? canonicalSubstanceCandidates({ stem: r.stem, options: r.options, ...recovered } as never).map(sha)
       : [];
+    const hitX = digests.find((d) => exceptions.has(d));
     const hitW = digests.find((d) => withdrawn.has(d));
     const hitL = digests.find((d) => lifts.has(d));
     return { id: r.id, computable, digest: digests[0] ?? null, digests,
+      exception: hitX ? exceptions.get(hitX)! : null,
       verdict: !computable ? 'NOT COMPUTABLE HERE — this store holds no solutionValue/solutionKind and no crossed send supplies them'
+        : hitX ? 'RULED EXCEPTION — withdrawn, and a ruling permits it'
         : hitW ? 'REFUSE — withdrawn substance'
         : hitL ? 'LIFTED — matches a named replacement substance'
         : 'not named in any standing withdrawal' };
   });
 
   const refuse = screened.filter((s) => s.verdict.startsWith('REFUSE'));
+  const excepted = screened.filter((s) => s.verdict.startsWith('RULED EXCEPTION'));
   const lifted = screened.filter((s) => s.verdict.startsWith('LIFTED'));
   const uncomputable = screened.filter((s) => !s.computable);
   console.log(`  serving rows screened: ${screened.length}`);
   console.log(`   REFUSE (withdrawn substance): ${refuse.length}${refuse.length ? ' — ' + refuse.map((r) => r.id).join(', ') : ''}`);
   console.log(`   LIFTED (named replacement):   ${lifted.length}${lifted.length ? ' — ' + lifted.map((r) => r.id).join(', ') : ''}`);
-  console.log(`   not named:                    ${screened.length - refuse.length - lifted.length - uncomputable.length}`);
+  console.log(`   RULED EXCEPTION:              ${excepted.length}`);
+  for (const e of excepted) console.log(`      ${e.id} — ${e.exception!.ruledBy}: ${e.exception!.theRuling}`);
+  console.log(`   not named:                    ${screened.length - refuse.length - lifted.length - excepted.length - uncomputable.length}`);
   console.log(`   NOT COMPUTABLE HERE:          ${uncomputable.length}`);
   if (uncomputable.length) {
     console.log('\n  THREE OF THE SIX FIELDS DO NOT EXIST IN THIS STORE. Item holds `solution` and has no');
