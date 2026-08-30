@@ -25609,3 +25609,54 @@ So vr18 crosses to the reader with BOTH derivations computed and no verdict from
 the deciding question stated in advance — **which makes the reading a check rather than a hunt.**
 The artefact carries the generator's line verbatim and stops there; what it means for the entry is
 hers.
+
+## R938 — A repair is caught by previewing the whole output, never by verifying the fix
+
+David's ruling, from the vr19 regeneration.
+
+**The fix was right and it introduced a new degeneracy.** Replacing the word list so every coded word
+repeats a letter is exactly what her 201st ruled — and `STATS` codes to the palindrome `93439`, so
+its `vr19-letter-order` distractor, defined as the key reversed, would have **equalled the key**. One
+row would have shipped with two identical options, and the seat that names *matched the digits in
+reverse order* would have named the right answer.
+
+**VERIFYING THE FIX WOULD HAVE PASSED IT.** Every check aimed at the repair succeeds on STATS: the
+word repeats a letter, the shared-letter carrier derives from the act, the entry becomes performable.
+**The defect is not in the property being repaired — it is in a DIFFERENT property of the same
+output**, and no test of the change can see it, because the change is correct.
+
+**So the form: a repair is proved by rendering the WHOLE output and reading it, not by asserting the
+thing you set out to fix.** The preview across all 25 rows cost one command and caught a degeneracy
+that no fix-focused assertion could have. This is R149's baseline-before-the-edit turned forward: a
+baseline tells you what moved, and a full preview tells you what the new state IS — **and a repair
+needs both, because the row it breaks is not the row it was aimed at.**
+
+The general shape is a familiar one arriving from a new direction: R921's *the wrong answer was
+well-formed and partially verified*, R890's accidents that pass a production test, R904's mitigation
+mistaken for a repair. **Correct-in-the-aimed-at-property is the most confident kind of wrong**, and
+the only cheap defence is to look at everything the change produces rather than at the change.
+
+## R939 — Description is not bytes, and the count is hers while the evidence is mine
+
+The thirteen pattern readings and the vr19 regeneration crossed to Annie **as bytes**: entry,
+behaviour, child hint, three sample carriers with their stems and keys, the execution that failed on
+each, and the generator's account read from its own source — with a digest per reading, one over the
+set, and one over the file.
+
+She had them as DESCRIPTION, and stated that her rulings bind on the bytes when they cross. **A
+ruling made on a description is a ruling about my summary of the evidence**, and this store has spent
+the week registering what summaries do (R25, R896). The readings existed as artefacts and had not
+travelled, which is R899's shape in the other direction — recorded here, unread there.
+
+**AND THE TWO SETS DIFFER, WHICH IS NAMED RATHER THAN MATCHED.** The refusing set is thirteen; this
+store evidences SIX by execution — five refusing, one repaired — plus `vr18-partial-rule` crossed
+undecided because the instrument cannot judge it. The rest are semantic patterns where the census
+returns UNDECIDABLE. **Six readings is not a correction of thirteen; it is what this store can
+evidence**, and saying so is the difference between a gap and a disagreement (R918/R920).
+
+**The generator's account differs by pattern and both accounts are the same divorce.** vr19's carrier
+was arithmetic on the key. The other five come from CURATED BANKS, where the value was authored into
+a column and the tag assigned by that column's POSITION — `m: 0`, `m: 1`, indexing the entry list.
+**Nothing ever compared the column to the entry it would wear.** Arithmetic and curation produced
+identical failures, which says the fault is in the join between layers and not in either layer's
+method.
