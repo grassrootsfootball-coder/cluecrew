@@ -26018,3 +26018,49 @@ the same file; this store cannot re-author what it did not write. The 114 are na
 their source file and digest, and the 15 differing are named beside them, because a landed execution
 that is not byte-identical to the crossed one is a question about which is authoritative and neither
 store can now answer it from a register.
+
+## R955 — A count too round to be about content is a reading failing
+
+The matcher tell, registered as its own form.
+
+**569 absences in a corpus of 689 is not a finding.** Content faults are ragged: they cluster in a
+family, they trail off, they leave survivors. **A number that is most of the population, or all of one
+question type, or exactly the size of a set you can name, is the shape of a READING failing rather
+than a corpus being wrong.** Three instances in one hour, all mine:
+
+- **569 of 689 "not in this store"** — a walker that propagated `optionValue` from any ancestor with
+  a `value` key, blind to the shape where an execution sits on an option inside an item. 565 of the
+  569 had their row right here.
+- **183 refused, concentrated on `vr-17`** — the store holds those option values as NUMBERS and the
+  artefact carries them as STRINGS. `7` against `"7"`. Comparing canonical JSON alone refused every
+  seat in one question type.
+- **and the correction moved 113 to 188** — seventy-five executions were hidden behind a type
+  difference, which is a fifth of everything crossed.
+
+**THE TELL IS THE DISTRIBUTION, NOT THE SIZE.** A real fault in a generated corpus arrives shaped
+like its generator; a fault in a matcher arrives shaped like a JOIN — total within one key, one type,
+one artefact shape, and absent everywhere else. **So the question to ask of any absence census is not
+"is this number large" but "is this number too clean to be content".** R173's family, arriving as a
+property of the OUTPUT's shape rather than of the instrument's internals — and the only one of that
+family that can be spotted without reading the code.
+
+## R956 — 188 executions landed; the exposure is closed except where it cannot be
+
+Every execution the authoring store crossed that this store could seat is now in the database.
+**188 landed and 188 verified byte-identical after the write**, on the same verification the nine
+took, applied per row rather than per batch: the row exists, the option resolves by the identity the
+artefact itself uses, the seat's tag agrees with the entry named, and the slot was empty.
+
+**Executions held here: 1,337 — ENGLISH 1,063, VR 274**, from 1,140 before this began. Case-vr-02
+alone went from 0 to 70.
+
+**108 refuse and their causes are named**: rows this store does not hold, and options that no longer
+resolve to any identity the artefact used — English seats that were re-authored after the execution
+was written. **Those are not recoverable by landing**; they need the row they were written about,
+and that row has changed or is gone.
+
+**The 15 differing were not touched.** A landed execution differing from its crossed original is a
+question about which is authoritative, and overwriting either would answer a question nobody asked
+this store. They cross with **both texts and both digests, per row**, for a reading — and neither
+store can settle it from a register now, which is the single-holder loss showing up as an
+unanswerable question rather than as a missing file.
