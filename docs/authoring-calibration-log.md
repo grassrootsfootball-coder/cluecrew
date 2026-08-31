@@ -25974,3 +25974,47 @@ one hop, and the only reason it cost nothing is that the test was run against th
 against the relayed set — the verdict came from `isWord()` over the store's own carriers, not from
 matching names against a list. **A test that reads the material survives a corrupted question; a test
 that compares two lists does not.**
+
+## R953 — The nine executions land: a file becomes a row with a migration history
+
+The nine mint executions bound to `3cfebb67479b…` are in the database, **9 of 9 byte-identical to the
+crossed artefact**, verified by re-reading them after the write.
+
+**THEY WERE PROVISIONAL AND THEIR CONDITION WAS EXPLICIT**: *authored against the projection and not
+against the population… IF THE REISSUED BYTES DIFFER FROM THIS PROJECTION IN ANY OF THE NINE ROWS,
+THESE EXECUTIONS ARE REFUSED AND RE-AUTHORED, NOT PATCHED.* So the projection's nine declared changes
+were checked against these rows first — the option present with the projected value, carrying the
+mint, and for each RE-AUTHOR the displaced pair vacated. **9 of 9 agreed**, which they should, because
+this store landed her 197th and 200th itself; **checking anyway is what makes the agreement evidence
+rather than an assumption.**
+
+The condition names the nine ROWS, so the nine rows are what was checked — **not the projection
+digest**, which this store cannot reproduce without the projection's row-list shape, and not a
+sample. **A condition tested at the grain it was written at is the only version that means anything.**
+
+Landed verbatim, not a character edited: they are the authoring store's authored prose and are not
+re-derivable (R922).
+
+## R954 — 709 crossed executions, 114 unlanded — and a matcher that nearly reported 569 absences
+
+The rest of the class, measured. **709 executions crossed and 413 are already in these rows** (398
+byte-identical, 15 differing — a drift class of its own). **114 have a seat here and no execution:
+those are held once, in a file.** 182 could not be resolved to a seat.
+
+**THE FIRST RUN REPORTED 569 WITH NO SEAT IN THIS STORE, AND 565 OF THEM HAD THEIR ROW RIGHT HERE.**
+Two shapes carry an execution across: a flat `{itemId, optionValue, EXECUTION}` record, and an ITEM
+whose options each carry `misconceptionExecution` and identify themselves by `content` or `value` or
+`label` — never by `optionValue`. My walker propagated `optionValue` down from whatever ancestor had
+a `value` key, and against shape B it matched nothing.
+
+**A MATCHER THAT CANNOT RESOLVE AN OPTION IS INDISTINGUISHABLE, IN A COUNT, FROM A STORE THAT DOES
+NOT HOLD IT.** 569 would have been reported as work this store never received, when four fifths of it
+is work this store already has. R568's fault at the join between two artefact shapes rather than at a
+field name — **and the tell was the size**: 569 absences in a corpus of 689 is not a finding, it is a
+reading failing, and the number was too round to be about content.
+
+**What ends the exposure is landing them and nothing else.** A second artefact is a second copy of
+the same file; this store cannot re-author what it did not write. The 114 are named per row with
+their source file and digest, and the 15 differing are named beside them, because a landed execution
+that is not byte-identical to the crossed one is a question about which is authoritative and neither
+store can now answer it from a register.
