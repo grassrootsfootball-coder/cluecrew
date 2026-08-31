@@ -26151,3 +26151,42 @@ apostrophe, and a straight quote following a word character is never an opening 
 that wrongly refuses reads as strict; one that wrongly passes reads as broken. **The first is the
 more dangerous because nobody investigates a check for being too harsh** — and the only reason these
 were caught is that the shape of the refusal was too regular to be about content.
+
+## R961 — Instruments fail toward refusal, and nobody investigates a check for being too harsh
+
+The refusal-direction finding, registered as its own form.
+
+**Every instrument has an error direction, and the two are not equally visible.** A check that
+wrongly PASSES reads as broken and gets fixed. A check that wrongly REFUSES reads as strict — and
+strictness is the thing this whole estate is built to prize. **So false refusals accumulate
+uninvestigated, wearing the costume of rigour.**
+
+**AND THE SKEW IS STRUCTURAL, NOT JUST PSYCHOLOGICAL.** A predicate is written by someone imagining
+what a fault looks like, and an incomplete imagining under-matches. **Over-matching takes actively
+wrong logic; under-matching is the default state of any pattern that is merely unfinished.** So the
+likelier error and the less-examined error are the same error, which is what makes the class worth a
+rule.
+
+**THE WEEK'S EVIDENCE IS NEARLY UNANIMOUS.** Every instrument fault recorded since R946 erred toward
+refusal: a join-is-a-pair predicate refusing three sound hidden words (R946); a narrow lexicon
+refusing `GRAN` (R946); an obscure-word filter discounting `PLUMP/AY` because `ALY` sat beside `LAY`
+(R949); a walker reporting **569 executions absent** that were four-fifths present (R955); a type
+mismatch refusing **183 seats** across one question type (R955); nine wrong-scope executions and two
+apostrophe collisions in one run (R960). **Not one instrument fault this week failed by passing
+something it should have caught.**
+
+**THE COST IS NOT A MISSED FAULT — IT IS MANUFACTURED WORK ON SOUND CONTENT.** A false refusal sends
+somebody to re-author an item that was fine, or records a standing loss against work that is
+recoverable (R957 — twice, before the reason was investigated). **It does not merely fail to find
+a problem; it creates one.**
+
+**So the guard is the one thing that does not depend on anybody's suspicion: the SHAPE of the refusal
+set.** A refusal population that is regular, clustered in one entry or type or artefact, or a round
+fraction of its denominator, is treated as **an instrument hypothesis before it is treated as a
+content finding** (R955). Ask it of refusals specifically, because agreement gets scrutinised now
+(R173) and strictness still does not.
+
+**And one test stays withheld under the same discipline.** Resolving a line NUMBER to passage TEXT
+remains unrun until the numbering convention is **recoverable from bytes rather than inferred**. An
+inferred convention would decide readings by a rule nobody wrote — and, being a matching rule, it
+would fail toward refusal like the rest.
