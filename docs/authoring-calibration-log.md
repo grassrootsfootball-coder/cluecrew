@@ -26105,3 +26105,49 @@ one grain finer than the thing the rule addresses (R929: executions attach per o
 the recovery and watch it fail at a different step. **A recovery attempt that fails at a NEW point
 has told you where the boundary actually is**; one that is skipped because the loss looks obvious
 tells you nothing, and leaves a plausible wrong reason standing in the record forever.
+
+## R959 — The fifteen ruled by derivation: the deriving text stands whoever held it
+
+Her ruling, executed. **Provenance never entered** — both texts ran through executes-as and the
+question of which store wrote them was not asked.
+
+| verdict | n |
+| --- | --- |
+| **BOTH DERIVE** — house form, the other retained | **9** |
+| the text in these rows derives; the crossed one does not | 3 |
+| the crossed text derives; the one in these rows does not | 2 |
+| **NEITHER** — re-derives fresh from entry and key | 1 |
+
+**Two tests, both decidable, and a third named and withheld.** Cited lines must sit where the ENTRY
+says the derivation lives; quoted spans must be present in the passage. **Not run: resolving a line
+NUMBER to passage TEXT** — the extract is stored as paragraphs and the items number lines by a
+rendering this store cannot reconstruct, so guessing it would have decided fifteen readings on an
+invented numbering (R904). Named and withheld rather than approximated.
+
+Of the nine dual-deriving, **seven have the in-window clause in these rows and not in the crossed
+text** — the near-miss named, then the line inside the window that answers the stem, quoted. Two are
+not separated by house form at all and say so.
+
+## R960 — I condemned on the property the entry predicts, in the check written to apply R937
+
+The first run of this test returned **NEITHER DERIVES on nine of fifteen**, and every one was
+`en-wrong-scope-retrieval`.
+
+**That entry means the child retrieved from OUTSIDE the shown window.** A text citing an
+out-of-window line is performing the derivation — it names where the wrong answer IS true. My test
+scored every out-of-window citation as a failure, which is **condemning on the property the entry
+predicts: the exact fault R937 registered, committed inside the instrument built to honour it.**
+
+**The tell caught it before the report went out: nine of fifteen, all one entry** (R955 — a count too
+clean to be about content). The expectation is now set BY THE ENTRY, not by the window, and the
+verdicts move from 9-neither to 9-both.
+
+**A second fault in the same run, and smaller only by luck.** The quote extractor matched `'` as an
+opening quote and read *the family's scepticism about the STORY* as a quoted span, then reported it
+absent from the passage — **two texts refused over a punctuation collision.** A quote mark is not an
+apostrophe, and a straight quote following a word character is never an opening one.
+
+**Both faults produced REFUSALS, which is the direction that looks like diligence.** An instrument
+that wrongly refuses reads as strict; one that wrongly passes reads as broken. **The first is the
+more dangerous because nobody investigates a check for being too harsh** — and the only reason these
+were caught is that the shape of the refusal was too regular to be about content.
