@@ -25863,3 +25863,62 @@ entries, **8 solid rival keys across 4 distinct stems** — `TWIN/HERE` (move T 
 second correct answer sitting in a distractor seat. **A distractor that performs the stem is not a
 mistag; retagging it would bury a content fault under a resolved one**, which is exactly the priority
 her 203rd set for vr05 and which turns out to bite hardest here.
+
+## R948 — Phase-shut: an item whose key cannot perform its stem is not repairable below authoring
+
+Annie's ruling. **No retag reaches it, no regenerated distractor reaches it, no hint reaches it** —
+if the key cannot do what the stem asks, every layer beneath authoring is repairing the wrong thing.
+The four go back to source.
+
+| item | case | why |
+| --- | --- | --- |
+| `gen-vr-05-hidden-word-16` | **case-vr-05** *The Stowaway*, PAID, order 5 | the key `pear` is not in the sentence at all |
+| `gen-vr-08-move-letter-01`, `-13`, `-25` | **case-vr-08** *The Case of the Wandering Letter*, PAID, order 8 | no letter of CHAIR both leaves a word and makes one with MOP |
+
+**Three rows, one broken pair.** The generator's bank repeats CHAIR/MOP, so **the count of broken
+stems is not the count of broken content** — a fact that matters for the repair, because authoring
+one pair fixes three items.
+
+**ZERO CHILDREN WERE EVER NEAR THEM, AND IT IS GUARANTEED RATHER THAN LUCKY.** Zero attempts on the
+four; zero on any item of either question type; **0 of 63 vr-05/vr-08 items has ever been LIVE**, so
+no door could serve them — the pool gate makes exposure unreachable rather than merely unobserved
+(R695/R873). **And the honest caveat: the estate holds five attempts in total.** The zero is real and
+its denominator is tiny; the guarantee rests on the status, not on the traffic, and saying only the
+first half would be true and misleading.
+
+## R949 — Ten rival keys, and the count I was given is not the count I measure
+
+The eight rival keys crossed as content faults, each with its stem, the letter, the two words it
+makes and the tag currently on the seat — **and there are ten, across five distinct stems.**
+
+`TWIN/HERE` (T → WIN + THERE) · `GRAIN/ATE` (R → GAIN + RATE) · `CHARM/ORE` (M → CHAR + MORE) ·
+`PLUMP/AY` (L → PUMP + LAY) · `SNOW/HOE` (N → SOW + HONE). **Each appears twice because the bank
+repeats**, so ten carriers sit on five stems.
+
+**The tenth is `PLUMP/AY`, and I had discounted it myself.** My earlier pass flagged it as resting on
+an obscure lexicon entry because `ALY` is one of the words the insertion can make — **while `LAY`,
+the ordinary one, was sitting beside it.** The filter asked *does any produced word look obscure*
+where it should have asked *is there a solid word among them*, and a stem with a genuine second
+answer nearly went unreported by a check I wrote to be careful about lexicons.
+
+**Nine of the ten sit under a tag that says the move is invalid** — `first-word-invalid` on eight,
+`second-word-invalid` on two. **The tag asserts the move cannot be made; the move can be made and
+makes two real words.** That is the strongest form of the tag-versus-carrier divorce in this district:
+not a wrong diagnosis, a diagnosis of something that did not happen.
+
+## R950 — A count matching is not an identity, tested and denied
+
+Cowork inferred that this store's four vr13 performers are STAY, SHOE, SWAM and CHIT, **from a
+matching count, and marked the inference as such.** Tested against the rows: **DENIED.**
+
+**This store's performers are GRAN, PROM and DRAP — three, not four.** All four of their names are
+real words, so **none of them can perform an entry whose act is *the letters do not form a real
+word*.** What they had found was three of the four carriers that are DERIVABLE BY A STATED POSITION
+CHOICE — `STAY`, `SHOE`, `SWAM`, `SLIM` — **a different set of the same size, drawn from the opposite
+side of the verdict.**
+
+**The near-miss is what makes it instructive.** Four against four, three members shared, and every
+shared member on the wrong side. A count agreeing is the weakest possible evidence of identity and it
+FEELS like the strongest, because it is arithmetic. **The marking is what made it cheap** — they
+named it an inference from a count, so testing it cost one query, and the register keeps the refuted
+inference rather than deleting it (R937's form, applied by its author to their own guess).
