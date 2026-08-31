@@ -25922,3 +25922,55 @@ shared member on the wrong side. A count agreeing is the weakest possible eviden
 FEELS like the strongest, because it is arithmetic. **The marking is what made it cheap** — they
 named it an inference from a count, so testing it cost one query, and the register keeps the refuted
 inference rather than deleting it (R937's form, applied by its author to their own guess).
+
+## R951 — Single-holder exposure, measured: the nine executions are in a file and not in a database
+
+The authoring store's disk was reclaimed. Its register, gates and retained bytes are gone; its
+crossed artefacts survive on the desk. **Nothing on this side changed and nothing of this store's is
+at risk** — but everything that had two holders now has one, and which things those are is a
+measurement.
+
+**HELD TWICE — in these rows and in its artefacts.** All 187 MATHS items, every one carrying
+`sendHistory`; the 117-entry MATHS library; the withdrawal notices, git-tracked at
+`content/withdrawals/` since R903 and therefore independent of any disk but this one; the substance
+spec and its 31 worked examples, from which the door still reproduces 37 of 37 declared digests. **A
+retained artefact is the difference between a record and a memory, and R903 made that choice before
+there was a reason to.**
+
+**HELD ONCE, AND THE HOLDER IS A JSON FILE ON A DESK: the nine mint executions bound to
+`3cfebb67479b…`.** The rows exist here — 9 of 9 — the options exist, the tags are right. **The
+executions are in none of them.** `misconceptionExecution` is null on every one, and this store
+cannot re-derive them: an execution is authored prose about one option (R922), not a computation. If
+that file goes, the work goes.
+
+**AND THE ASYMMETRY IS THE FINDING.** This store's work is in git and in a database with a migration
+history; that store's was on one disk. **Nothing in the exchange protocol ever noticed.** Every guard
+built across this week — import doors, canaries, substance digests, withdrawal notices, supersession
+chains, lifting keys, return legs — watches for DRIFT BETWEEN TWO COPIES. **Not one of them watches
+the copy COUNT.** R926 drew the boundary at *share where both read, copy only where both must write*,
+and it arrives here from the side nobody was looking at: **the failure mode of a single copy is not
+divergence, it is disappearance**, and a protocol tuned entirely to the first is silent about the
+second.
+
+The one place this costs least is the VR arc, and for a reason already registered: **the authoring
+store held no VR library at all** (R922), so its loss removes nothing there. The 79-entry VR library
+and R1–R950 are this store's and always were.
+
+## R952 — The relayed name was CHIT and the member was SLIM; the denial holds either way
+
+A correction to R950's account of Cowork's inference. **The set it actually named was STAY, SHOE,
+SWAM, SLIM — which is EXACTLY this store's derivable-four**, not three of it. The relay carried
+`CHIT` where the artefact held `SLIM`; I tested `CHIT` because that is what I was given, reported it
+a real word and outside the derivable set, and both statements were true of `CHIT`.
+
+**The denial is unaffected and is now sharper.** Their inference was that this store's PERFORMERS are
+its DERIVABLE set — a claim about which side of a verdict a group of carriers sits on. The performers
+are `GRAN`, `PROM`, `DRAP`; the derivable four are `STAY`, `SHOE`, `SWAM`, `SLIM`; **the overlap
+between the two sets is zero.** A count of four matching a count of four was the entire basis, and
+the two sets do not share a member.
+
+**And the relay error is its own small instance of the same rule.** One name travelled wrong through
+one hop, and the only reason it cost nothing is that the test was run against the ROWS rather than
+against the relayed set — the verdict came from `isWord()` over the store's own carriers, not from
+matching names against a list. **A test that reads the material survives a corrupted question; a test
+that compares two lists does not.**
