@@ -26064,3 +26064,44 @@ question about which is authoritative, and overwriting either would answer a que
 this store. They cross with **both texts and both digests, per row**, for a reading — and neither
 store can settle it from a register now, which is the single-holder loss showing up as an
 unanswerable question rather than as a missing file.
+
+## R957 — A standing loss is a claim about forever, so its reason gets investigated before it is written
+
+The 108 unlandable executions are recorded at `content/standing-losses/`, git-tracked — **a loss
+recorded only in a delivered artefact is itself single-holder, which is the fault that produced it**
+(R951).
+
+**AND THE REASON TOOK THREE ATTEMPTS, WHICH IS THE ENTRY.** A standing loss says *this is gone and
+nothing will bring it back*. A wrong reason on it is worse than no record, because it tells the next
+reader where to look and the place is empty.
+
+- **First framing: *no option on this row resolves to that identity*.** True of the id. **21 of those
+  questions were sitting under other ids** — the artefact's `01` is this store's `05`.
+- **Second framing: *the row under this id is a different question here*.** Also true, and still not
+  the cause: matched on `pairA` and `stemWord`, the questions were found.
+- **The actual cause: the OPTION was regenerated away.** The artefact's execution for
+  *kitten/cat → puppy* names option `bone`; this store's row for that exact question carries `paw`
+  and `whiskers`. **The question survives; the seat does not — and an execution is prose about a
+  seat.**
+
+**A loss recorded as an id mismatch invites someone to fix the ids and expect recovery. A loss
+recorded as "the seat was regenerated away" tells them there is nothing to point at.** Two of the
+three framings would have sent the next reader to a place with nothing in it, and both were true
+sentences.
+
+## R958 — Substance recovered nothing here, and finding that out was still the right move
+
+R903's rule — **the id is not the identity** — was applied to the 21 vr-03 executions and **matched
+the question every time**: `pairA` and `stemWord` together found the row the execution was written
+about, under a different id, 21 of 25.
+
+**And not one of them landed.** The option values had been regenerated, so the seat the execution
+describes is gone from a question that is otherwise identical. **The substance match was correct and
+insufficient**, because substance identified the QUESTION and an execution is bound to an OPTION —
+one grain finer than the thing the rule addresses (R929: executions attach per option).
+
+**This is worth registering precisely because it recovered nothing.** The alternative was recording
+21 executions as lost for a reason that was false, and the only way to learn the true one was to run
+the recovery and watch it fail at a different step. **A recovery attempt that fails at a NEW point
+has told you where the boundary actually is**; one that is skipped because the loss looks obvious
+tells you nothing, and leaves a plausible wrong reason standing in the record forever.
