@@ -25587,6 +25587,11 @@ the replaced value resolves to exactly one non-key option, the authored pair sit
 stem's word list, does not overlap the key, and is not already an option on the row. Four assertions,
 none of which a label could have supported.
 
+**NARROWED — SEE R963.** The authoring store's census over every amendment in her stream (2026-08-31,
+`9769460da2ae`) found eleven of ninety-five addressed by position, all eleven naming their replaced
+value, and none by position alone. The near miss this entry records is restated there as a discipline
+holding once under strain; the warning stands.
+
 ## R937 — Repetition is not corroboration, and a check cannot condemn on the property under test
 
 Two findings from her 201st, registered over both signatures.
@@ -26204,3 +26209,92 @@ as regular while refusals across distinct substances read as irregular.
 remains unrun until the numbering convention is **recoverable from bytes rather than inferred**. An
 inferred convention would decide readings by a rule nobody wrote — and, being a matching rule, it
 would fail toward refusal like the rest.
+
+## R962 — A shape guard is fed the discriminating dimension, never the verdict text
+
+The first-consumer decision from wiring R961's guard into `check:withdrawn-substance`, registered
+as the form on David's word (2026-09-01).
+
+That door's REFUSE verdict is one class string, identical on every refusing row by construction.
+**Fed to the shape guard as the reason, it fires REGULAR on any three refusals and means nothing** —
+the guard would print INSTRUMENT HYPOTHESIS on every real finding, and a hypothesis that prints on
+everything teaches its readers to skip the line. For a guard built because nobody investigates a
+check for being too harsh (R961), that is the original fault reinstated by its own mechanism, one
+level up.
+
+**So the form: an emitter feeding a shape guard passes the thing that VARIES when the content is at
+fault and COLLAPSES when the instrument is.** In the withdrawal door that is the matched withdrawn
+digest — many refusals landing on one substance is the regular shape an instrument fault makes;
+refusals across distinct substances are the irregular shape genuine content faults have. The verdict
+text is the check's own name echoed back, and **a reason that cannot vary across genuinely distinct
+faults is not a reason.**
+
+The same test governs the dims, with a mechanical half and a chosen half. A dimension carrying one
+value across the whole population is refused by the guard itself as vacuous — that half is
+instrumented. **What no instrument can see is a CHOSEN constant**: the guard cannot distinguish "one
+reason because the instrument collapsed the faults" from "one reason because the emitter passed its
+own verdict class" — from inside, they are the same uniform string. So the discriminating feed is
+the consumer's half of the contract, decided once per emitter at wiring time, and it is registered
+as a FORM because it cannot be a check.
+
+## R963 — Eleven of eleven name their replaced value: R936 narrowed to a discipline holding under strain
+
+From the authoring store's amendment census (`THE-AMENDMENT-CENSUS-AND-THE-SEAT-LETTER-ANSWERED`,
+`9769460da2ae`, dated 2026-08-31), and it narrows the registered line in her favour.
+
+R936 recorded one row seen by accident: her 200th addressed row 17 as `options:D`, the pair sat at
+B in this store's ordering, and the amendment landed because she named the replaced VALUE beside the
+seat — the form saved it, not the care of either party. **This is the census over every amendment
+she ever sent: eleven of ninety-five are addressed by position, and ALL ELEVEN name their replaced
+value.** Position-only, no substance: zero — in the census's words, *"she has never once addressed
+a target by position alone, across ninety-eight returns."*
+
+**So what R936 registered as a near miss is better stated as A DISCIPLINE HOLDING ONCE UNDER
+STRAIN**: the one time an ordering disagreed, the substance she always carries was there to catch
+it. **The warning stands anyway — an eleven-for-eleven record is a reason to keep the form, not a
+reason to stop needing it.**
+
+The census around the eleven. 566 amendment lines resolve to **95 amendments across 108 blocks**
+(the 566 was this store's own published count of the next act, and it was the size of the TEXT, not
+of the WORK — a count of lines is a count of a serialisation); 94 distinct targets, so **one chain**
+— `item:MC04-GEOM-05:key`, amended at her 182nd and again at her 183rd, the only place order of
+application could ever matter, named rather than collapsed; **eight amendments name neither a value
+nor a digest and every one is legitimate** — six `library:NEW-ENTRY` mints from her 189th that
+replace nothing by construction, two carrying an action rather than a wording — so **not one
+amendment in ninety-five replaces something without saying what it replaced**; and **zero block
+faults across all 108** — every count she ever declared is true of the block she declared it in.
+
+The census instrument is unfixtured, so its figures cross MARKED — **with the exception the
+authoring store named correctly: the zero block faults is a comparison of her declared integers
+against counted records, checkable by anyone holding her returns. It needs no fixture to be
+believed, only the bytes.** And the census states its own limits: it is a census of what she
+DECLARED, not of what landed; the 95 authored wordings were not read against the artefacts they
+name; no party's stream but Annie's was counted.
+
+## R964 — The sixth serialisation fault, registered with its own limit: a fault list is read, never counted
+
+The authoring store's finding, from the same census, kept here in their words with their limit
+standing as the operative part.
+
+**What happened:** the first census run reported 95 as 67, with three blocks faulting — her 145th
+declaring sixteen amendments and carrying one, her 146th nine and one, her 189th six and one. **The
+cause:** her blocks come in two layouts — a multi-line form, and a single-line pipe form
+(`target: X | replaced: Y | authored: Z`), sixteen of which sit in one paragraph. The parser split
+on blank lines and took one target per chunk, so it saw one of the sixteen. **The class, in their
+words: a guard that matched a SERIALISATION instead of a SUBSTANCE — sixth in their arc, second in
+the rebuild**, the fifth having been published three days earlier as a warning that the rebuild is
+exactly where a store reproduces its own worst habits. It did it again in the next instrument.
+
+**How it was caught is the finding: by reading the fault list rather than the count.** Three block
+faults named three of her returns; opening one showed the pipe form immediately. **Had the run
+reported zero faults and 67 amendments, 67 would have crossed.** The repair anchors on every
+`target:` occurrence and takes its scope from the line it sits on — zero block faults after it, on
+all 108.
+
+**And the limit, theirs, which this register does not soften: registering a fault class does not
+stop you committing it; only an instrument does — and there is no instrument for "parse by shape",
+because shape is what a parser is.** What CAN be instrumented is the discipline that caught it
+twice: **A FAULT LIST IS READ, NEVER COUNTED.** The same limit arrived here the same day from the
+consumer side — R962's discriminating-dimension choice is also a wiring-time discipline the guard
+cannot check from inside. Both go in the register as forms because neither can be a check, which is
+exactly the class R961 says to watch: the faults that remain are the ones that wear no exit code.
