@@ -62,4 +62,6 @@ export * from './field-dispositions';
 export * from './review-surface';
 export * from './item-identity';
 export * from './tag-write-gate';
-export * from './key-gate';
+// key-gate's Lexicon is the same (word: string) => boolean as tag-write-gate's; the explicit list
+// avoids the ambiguous double export of the name.
+export { checkKeyPerformsStem, moveLetterOutcomes, type KeyVerdict, type KeySubject, type KeyResult } from './key-gate';

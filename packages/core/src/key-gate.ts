@@ -56,11 +56,20 @@ const PREDICATES: Record<string, (s: KeySubject, isWord: Lexicon) => KeyResult> 
     words.reduce((acc, w) => { bounds.push(acc + w.length); return acc + w.length; }, 0);
     const idx = flat.indexOf(k);
     const crossed = idx < 0 ? 0 : bounds.filter((b) => b > idx && b < idx + k.length).length;
-    const atAJoin = idx >= 0 && crossed >= 1;
+    /**
+     * THE STEM PROMISES A JOIN BETWEEN TWO WORDS — exactly one boundary. The first version
+     * passed any boundary count ("crosses a boundary"), a CORRELATE of the fault, and certified
+     * three keys that span THREE words: song across pens-on-Gran, kind across oak-in-Dan, ring
+     * across star-in-gold (her 208th; measured independently by the authoring store). A child
+     * following the instruction as written cannot find a three-word straddle, so a key that
+     * needs one refuses. Repaired 2026-09-02 under an R149 baseline: exactly those three flip.
+     */
+    const atAJoin = idx >= 0 && crossed === 1;
     const anywhere = idx >= 0;
-    if (atAJoin) return ok('a word hiding at the join between two words', `"${s.keyValue}" spans a word boundary in the sentence`);
+    if (atAJoin) return ok('a word hiding at the join between two words', `"${s.keyValue}" sits at exactly one join`);
     return no('a word hiding at the join between two words',
-      anywhere ? `"${s.keyValue}" appears in the sentence but NOT across a join` : `"${s.keyValue}" DOES NOT APPEAR IN THE SENTENCE AT ALL — the item has no correct answer`);
+      crossed >= 2 ? `"${s.keyValue}" spans ${crossed + 1} words — the stem promises a join between TWO, and a child following the instruction cannot find it`
+        : anywhere ? `"${s.keyValue}" appears in the sentence but NOT across a join` : `"${s.keyValue}" DOES NOT APPEAR IN THE SENTENCE AT ALL — the item has no correct answer`);
   },
 
   'vr-08-move-letter': (s, isWord) => {
