@@ -26301,3 +26301,24 @@ twice: **A FAULT LIST IS READ, NEVER COUNTED.** The same limit arrived here the 
 consumer side — R962's discriminating-dimension choice is also a wiring-time discipline the guard
 cannot check from inside. Both go in the register as forms because neither can be a check, which is
 exactly the class R961 says to watch: the faults that remain are the ones that wear no exit code.
+
+## R965 — A mint lands whole or not at all: the landing writes every field of the governed state
+
+From the vr21-opposite-pull landing (round one, 2026-09-01; caught and fixed 2026-09-02, registered
+on David's word).
+
+The mint landed ACTIVE with her description and hint and **no `approvedBy` stamp**. Every entry she
+has minted carries `approvedBy: reviewer:rev-0001` — measured precedent on the class, not an
+inference — and the attestation is precisely what the wholeness bar reads (R699/R701): a tag
+pointing at an unstamped entry is UNATTESTED, and twenty-two carriers were about to be counted
+un-whole for a field the landing script forgot, not a state the content was in.
+
+**The omission was invisible to every check that reads the landing's own account, and visible to
+the one that reads the governed state.** The landing printed MINTED and was truthful; the wholeness
+derivation consults the store, and the store was missing half the class. Completed with an APPROVED
+event citing her 208th and David's ratification.
+
+**The form: a landing writes the WHOLE governed state for its class, and the field list comes from
+measured precedent on the class — never from what the landing script happened to know.** This is
+R57 arriving in a WRITER rather than a door: a door that enumerates drops what it cannot name; a
+writer that enumerates under-writes what it did not know, and reports success either way.

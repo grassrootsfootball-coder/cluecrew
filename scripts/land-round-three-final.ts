@@ -59,6 +59,8 @@ async function main() {
   // ---- EVIDENCE -------------------------------------------------------------------------------
   const r197 = fileSha(pjoin(DL, 'annie-hundredandninetyseventh-return.md'));
   const r200 = fileSha(pjoin(DL, 'annie-twohundredth-return.md'));
+  const r210 = fileSha(pjoin(DL, 'annie-210-for-code.md'));
+  console.log(`  her 210th ${r210.slice(0, 16)} — twelve confirmed, her ten withdrawn, thirteen duplicates; vr-02 pins need nothing further`);
   console.log(`  her 197th ${r197.slice(0, 16)}, her 200th ${r200.slice(0, 16)}`);
   const ev197 = await prisma.attributionEvent.count({ where: { method: { contains: 'her 197th' }, recordId: { startsWith: 'bank-vr-02' } } });
   const ev200 = await prisma.attributionEvent.count({ where: { method: { contains: 'her 200th' }, recordId: { startsWith: 'bank-vr-02' } } });
@@ -122,7 +124,14 @@ async function main() {
   const table: Array<Record<string, unknown>> = [];
   for (const [qt, caseId] of DOORS) {
     const c = await prisma.case.findUniqueOrThrow({ where: { id: caseId }, select: { modes: true } });
-    const walkServes = Boolean((c.modes as Record<string, unknown>)?.walk);
+    /**
+     * R917 GOVERNS: "walkScript where walk mode serves" means serves a REAL asset — the census's
+     * own test (emit-vr-arc-census: assetRef not under placeholder/). Mode-declaration truthiness
+     * is TRUE on a placeholder and manufactured a 250-row debt nobody owes; that was this run's
+     * first reading and it is corrected here. One phrase, two tests — the ruled one is this one.
+     */
+    const walkAsset = (c.modes as Record<string, { assetRef?: string }>)?.walk;
+    const walkServes = !!walkAsset?.assetRef && !walkAsset.assetRef.startsWith('placeholder/');
     const rows = await prisma.item.findMany({ where: { questionTypeId: qt, status: 'DRAFT' },
       select: { id: true, explanation: true, answerFlaggedAt: true, sendHistory: true, options: { select: { misconceptionId: true, misconceptionExecution: true } } } });
     const signedIds = new Set((await prisma.attributionEvent.findMany({ where: { recordId: { in: rows.map((r) => r.id) }, action: 'SIGNED', reviewerId: { not: null } }, select: { recordId: true } })).map((e) => e.recordId));
