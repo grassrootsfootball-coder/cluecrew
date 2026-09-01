@@ -25,6 +25,7 @@ import { fileURLToPath } from 'node:url';
 import { PrismaClient } from '@prisma/client';
 import { canonicalSubstance, canonicalSubstanceCandidates } from '../packages/core/src/index';
 import { requirePopulation } from './lib/population';
+import { assessRefusalShape, runRefusalShapeFixture } from './lib/refusal-shape';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const prisma = new PrismaClient();
@@ -172,6 +173,7 @@ async function main() {
     const hitW = digests.find((d) => withdrawn.has(d));
     const hitL = digests.find((d) => lifts.has(d));
     return { id: r.id, computable, digest: digests[0] ?? null, digests,
+      withdrawnHit: hitW ?? null,
       exception: hitX ? exceptions.get(hitX)! : null,
       verdict: !computable ? 'NOT COMPUTABLE HERE — this store holds no solutionValue/solutionKind and no crossed send supplies them'
         : hitX ? 'RULED EXCEPTION — withdrawn, and a ruling permits it'
@@ -201,6 +203,20 @@ async function main() {
     console.log('  RECOVERED and that is declared; where none does, the row is reported uncomputable');
     console.log('  rather than hashed over a different set of fields and called the key.');
   }
+  /**
+   * R961'S GUARD, CONSULTED — the shape of this door's refusal set is an instrument hypothesis
+   * before it is a content finding. The reason passed per refusal is the MATCHED WITHDRAWN
+   * DIGEST, not the verdict text (which is uniform by construction): many refusals collapsing
+   * onto one substance is the regular shape an instrument fault makes; refusals across distinct
+   * substances are irregular. The guard prints a hypothesis; the REFUSE exit below still stands —
+   * a hypothesis orders a reading of the instrument, it does not clear a withdrawn substance.
+   */
+  runRefusalShapeFixture();
+  assessRefusalShape('check:withdrawn-substance', screened.map((s: { id: string; verdict: string; withdrawnHit: string | null }) => ({
+    refused: s.verdict.startsWith('REFUSE'),
+    reason: s.verdict.startsWith('REFUSE') ? `matched withdrawn substance ${s.withdrawnHit}` : undefined,
+    dims: { family: s.id.split('-').slice(0, 2).join('-') },
+  })));
   if (refuse.length) { await prisma.$disconnect(); process.exit(1); }
   console.log('\n  No serving row stands on a withdrawn substance.');
   await prisma.$disconnect();

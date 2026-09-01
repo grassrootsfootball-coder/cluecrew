@@ -26186,6 +26186,20 @@ fraction of its denominator, is treated as **an instrument hypothesis before it 
 content finding** (R955). Ask it of refusals specifically, because agreement gets scrutinised now
 (R173) and strictness still does not.
 
+**Mechanised 2026-09-01, on David's word** — the guard had stood one day as prose, which by R601 is
+the weaker form. `assessRefusalShape()` in `scripts/lib/refusal-shape.ts`: an emitter reporting
+refusals passes its screened rows (refused, reason, dims), and the three shapes — REGULAR (one
+reason covers every refusal), CLUSTERED (every refusal in one dimension value, or one value refusing
+wholesale), ROUND_FRACTION (the count reduces to n of ≤12) — print an instrument-hypothesis line
+before anyone dispatches a refusal as a content fault. It is a hypothesis, never an exit code: a
+true content fault can be shaped, so the guard orders a reading, not a verdict. The carried fixture
+(R721) is the three incidents that would have fired — 569 of 689 under one reason, 183 all within
+vr-17, 9 of 15 all one entry — plus one irregular clean set that must NOT fire, because a guard that
+only ever fires has not been shown to discriminate. `pnpm check:refusal-shape` runs the fixture;
+`check:withdrawn-substance` is the first standing emitter to consult it, passing the matched
+withdrawn digest as each refusal's reason so that many refusals collapsing onto one substance read
+as regular while refusals across distinct substances read as irregular.
+
 **And one test stays withheld under the same discipline.** Resolving a line NUMBER to passage TEXT
 remains unrun until the numbering convention is **recoverable from bytes rather than inferred**. An
 inferred convention would decide readings by a rule nobody wrote — and, being a matching rule, it
