@@ -26246,8 +26246,11 @@ R936 recorded one row seen by accident: her 200th addressed row 17 as `options:D
 B in this store's ordering, and the amendment landed because she named the replaced VALUE beside the
 seat — the form saved it, not the care of either party. **This is the census over every amendment
 she ever sent: eleven of ninety-five are addressed by position, and ALL ELEVEN name their replaced
-value.** Position-only, no substance: zero — in the census's words, *"she has never once addressed
-a target by position alone, across ninety-eight returns."*
+value.** Position-only, no substance: zero — she has never once addressed a target by position
+alone. **The unit, stated (David, 2026-09-01, moving this from quotation to assertion): ninety-five
+amendments, from thirty-three returns carrying any, among ninety-eight held. Ninety-eight is the
+census's SCOPE, not its population** — the returns screened, not the returns that answer for the
+eleven-of-eleven — which is why her ordinals can run past 200 while the census holds 98.
 
 **So what R936 registered as a near miss is better stated as A DISCIPLINE HOLDING ONCE UNDER
 STRAIN**: the one time an ordering disagreed, the substance she always carries was there to catch
