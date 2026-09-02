@@ -26843,3 +26843,43 @@ would have refused rather than land her signature on bytes she had not read.
 suite's (R976) — retained, labelled UNVERIFIABLE, standing beside the reading that replaces them
 rather than instead of it. **A reader can now tell the three apart by inspection rather than by
 forensics**, which is the property her 219th asked the estate to have.
+
+## R980 — A record of destruction names what was destroyed, or it is a record with no subject
+
+Annie's pair, registered as one entry because the two halves are the same rule read in opposite
+directions, and each is useless as a guide without the other.
+
+**FORWARD: A RECORD THAT NAMES ONLY THE FACT OF DESTRUCTION BOUNDS AN UNKNOWN, AND THAT IS WORTH
+HAVING.** Before her check, the `ENG-001-WIW-15` signature was an unbounded hunt: writer unknown,
+mechanism unknown, no floor. `ContentWriteLog` gave it a floor in one query — **at 17:14:58, one
+hour after the signature, the item's five `ItemOption` rows were INSERTed inside a transaction that
+wrote 2,709 of them, within 2,808 DELETEs and 2,815 INSERTs across four transactions.** The rows
+the hash was taken over were destroyed. That converts *nobody knows what happened* into **we know
+exactly what happened and cannot recover what was held** — a smaller thing, a permanent thing, and
+above all a CLOSABLE thing. A hunt with a floor can be stopped on purpose; one without a floor is
+stopped only by exhaustion, and exhaustion leaves no record.
+
+**REVERSE: AND IT IS STILL A RECORD WITH NO SUBJECT, WHICH IS WHY THE UNKNOWN STAYS UNKNOWN.**
+`ContentWriteLog` records `tableName`, `recordId`, `op`, `changedColumns`, `dbUser`,
+`applicationName`, `txId` and `at` — **never values.** It is a WRITE log, not a VALUE log. So it can
+always answer *was this destroyed, when, by which transaction*, and can never answer *what did it
+hold*. **It proved an absence and could not fill it**, and no amount of further reading of it will
+change that, because the subject was never in it to begin with.
+
+**THE RULE THAT FALLS OUT, AND IT IS A DESIGN RULE RATHER THAN AN INVESTIGATIVE ONE: knowing WHICH
+KIND a record is decides which questions it can ever answer, and that is settled when the record is
+designed, not when someone comes looking.** A store that wants destroyed values recoverable must
+put the values in the record of destruction; a store that logs only the fact buys boundedness and
+nothing else. **Neither is wrong and only one of them is usually chosen deliberately.** The failure
+this closes is not consulting the wrong log — it is *expecting a log to answer a question its
+columns never carried*, then reading its silence as evidence rather than as absence (R98, at the
+level of a table's design).
+
+**AND THE ESTATE ALREADY HELD BOTH ANSWERS ELSEWHERE, WHICH IS THE USEFUL COMPARISON.** R62's
+recovery works because derived values are deterministic functions of code and **git IS the prior
+state** — the subject is recoverable because it was never only in the database. Retention's rule
+runs the other way: **a reconstruction may never occupy a `replacedSha256`**, because a value
+rebuilt is not the value that was there. `ContentWriteLog` sits between them and belongs to
+neither: the destroyed rows were authored content, not derivations, so git cannot rebuild them, and
+nothing may be invented into their place. **The honest end state is the one now on the record — a
+named unknown with its cause proven and its content permanently unrecoverable.**
