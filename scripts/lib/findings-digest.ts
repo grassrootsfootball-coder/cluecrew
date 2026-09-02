@@ -26,6 +26,36 @@ export function canonicalJson(value: unknown): string {
   return `{${Object.keys(o).sort().map((k) => `${JSON.stringify(k)}:${canonicalJson(o[k])}`).join(',')}}`;
 }
 
+/**
+ * TWO DIGESTS TRAVEL WITH EVERY ARTEFACT AND THEY MEASURE DIFFERENT THINGS (R981).
+ *
+ * `findingsSha256` is over a DECLARED SUBTREE; the staging line and the `.sha256` sidecar are over
+ * the WHOLE FILE BYTES. Both are correct, both are needed, and they never agree — so an artefact
+ * quoted by "its digest" is an artefact quoted by a number the reader must guess the kind of.
+ * A landing was reported with one and read with the other, and the two looked like a name and a
+ * mismatch instead of two measurements.
+ *
+ * This block goes IN the artefact so the file answers the question itself: which number is which,
+ * and how each is recomputed. A digest crosses with the spec that produces it (R752/R759) — this
+ * is that rule applied to the fact that there is more than one.
+ */
+export function digestsBlock(findingsSha256: string, subtreeKeys: readonly string[]) {
+  return {
+    /**
+     * THE FILE DIGEST IS NAMED, NOT EMBEDDED, AND THAT IS NOT AN OMISSION. A file cannot state its
+     * own byte-hash: writing the value changes the bytes and invalidates it. The first attempt at
+     * this block embedded it, and the artefact left with a name its bytes no longer had — the
+     * very fault the block exists to prevent, committed by the block. So the file digest lives
+     * where it can be true: in the filename, which deliver() restamps to it, and in the sidecar.
+     */
+    THE_FILE_DIGEST: 'this file\'s own name and its .sha256 sidecar carry it. It cannot be written here: a file that states its own byte-hash changes the bytes it is stating.',
+    theFileDigestSpec: 'sha256 over the whole file bytes. This is what the filename carries after deliver() restamps, what the .sha256 sidecar holds, and what a receiving store should quote back to confirm arrival.',
+    THE_FINDINGS_DIGEST: findingsSha256,
+    theFindingsDigestSpec: `sha256 over json.dumps(subtree, sort_keys=True, separators=(",",":"), ensure_ascii=False) where subtree is {${subtreeKeys.map((k) => JSON.stringify(k)).join(', ')}} — R729. It measures the FINDINGS, not the file, and changes only when a finding changes.`,
+    andWHYBOTH: 'they never agree and neither is wrong. The file digest identifies the bytes; the findings digest identifies the claim. Quoting one without naming which is how one landing acquires two names (R981).',
+  };
+}
+
 export function findingsDigest<T extends Record<string, unknown>>(payload: T, keys: Array<keyof T & string>) {
   const missing = keys.filter((k) => !(k in payload));
   if (missing.length) {

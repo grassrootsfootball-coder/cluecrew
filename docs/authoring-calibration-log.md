@@ -26883,3 +26883,32 @@ rebuilt is not the value that was there. `ContentWriteLog` sits between them and
 neither: the destroyed rows were authored content, not derivations, so git cannot rebuild them, and
 nothing may be invented into their place. **The honest end state is the one now on the record — a
 named unknown with its cause proven and its content permanently unrecoverable.**
+
+## R981 — Two digests travel with every artefact, and quoting one without naming which gives a landing two names
+
+David, 2026-09-02, on a landing reported with one number and read with another.
+
+**AN ARTEFACT HERE CARRIES TWO CORRECT DIGESTS THAT NEVER AGREE.** `findingsSha256` is over a
+DECLARED SUBTREE — it identifies the CLAIM and changes only when a finding changes. The staging
+line, the filename after `deliver()` restamps, and the `.sha256` sidecar are over the WHOLE FILE
+BYTES — they identify the BYTES. Neither is wrong and neither substitutes for the other.
+
+**So "its digest" is not a reference.** `batch-one-landed` was reported here as
+`25bf9bc9f4b1ba1b` — its file digest, correctly, and the name it carries — while its findings
+digest is `b0e148f0810c67cf`, which recomputes exactly under R729 over its declared subtree. One
+file, one name, one sidecar, both numbers true of it, and two of the three names in the question
+were these. **A reader given one number and no kind cannot tell a second measurement from a
+mismatch**, which is R752's rule — a digest crosses with the spec that produces it — arriving at
+the fact that there is MORE THAN ONE digest rather than at any single one being unlabelled.
+
+**The repair is in the artefact, not in the covering message.** `digestsBlock()` emits a `DIGESTS`
+section naming both, each with its spec and how to recompute it, so the file answers the question
+itself and no covering note has to.
+
+**AND THE FIRST ATTEMPT AT THAT BLOCK COMMITTED THE FAULT IT EXISTS TO PREVENT**, which is the part
+worth the entry. It embedded the file digest as a value; writing the value changed the bytes; the
+artefact left carrying a name its bytes no longer had — R731 exactly, produced by the guard against
+it. **A file cannot state its own byte-hash**, so the block NAMES where the file digest lives (the
+filename and the sidecar) rather than reproducing it, and the block is written BEFORE delivery so
+the restamp names bytes that already contain it. Ordering is not a detail here: a self-describing
+artefact must be complete before the thing that describes it from outside is computed.
