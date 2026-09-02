@@ -26515,6 +26515,14 @@ rather than inside a class of twelve.
 prefix on the value — changes what every stored signature asserts and belongs with the
 canonical-order ruling it was found beside (R867).
 
+**ENLARGED THE SAME DAY: THERE ARE AT LEAST THREE SUBJECTS, AND THE THIRD IS THE PRODUCT'S OWN.**
+Chasing the one unexplained signature to its source found `draftAssessmentSubjectHash` — the hash
+the in-platform admin review surface writes when a reviewer signs, over `{prompt, tier,
+options:[{isCorrect, text}]}` with plain `JSON.stringify`: no stem, no explanation, `text` rather
+than `content`, and not canonical JSON. **That is the subject the PRODUCT writes, which makes it
+the most likely meaning in the estate rather than an exception**, and a verifier assuming the pin
+projection reports every row signed through the reviewer's own surface as drift.
+
 ## R971 — Prepared, not taken: what canonicalising option order would cost, measured
 
 David's instruction, 2026-09-02: prepare the ruling rather than take it. Recorded here because the
@@ -26545,3 +26553,32 @@ order, as the vr-10 publication did — exact, evidenced, free, and unavailable 
 with no record. **This store would recommend B and C together now and A only on the reviewer's
 word**, because B stops the decay at its source, C is already proven in a publication, and A is
 the only one that spends her signatures to buy the property.
+
+## R972 — B and C done: the read is ordered for the future, the recorded order verifies the past
+
+Her ruling, 2026-09-02: **a signature is over content, not an arrangement.** David's instruction:
+do B and C now; A waits on her word with the 366 figure in front of her (R971).
+
+**`scripts/lib/pin-projection.ts` is the one place, so no script assembles this again** (R429).
+`ORDERED_OPTION_READ` carries `orderBy: { id: 'asc' }` — B, and it is deliberately by ID and not
+by VALUE, because sorting by value IS canonicalisation and would be option A wearing B's clothes.
+`verifyPin()` is C: it tries the order recorded in the population artefact the signature names
+FIRST, then the current read order, and REPORTS WHICH MATCHED — so a reader can see at a glance
+which rows still rest on the live database. Evidenced, not permissive: no permutation search, no
+fallback to comparing content, and a recorded order that does not name every option the row holds
+is DROPPED rather than partially applied, because a partial arrangement is not the arrangement
+that was signed.
+
+**WHY THE TWO CANNOT BE ONE ACT.** B cannot fix the past: a stored hash was taken over whatever
+order the database returned that day, so re-ordering the read now would break it rather than
+verify it. C cannot fix the future: it depends on a witness existing. Each covers exactly what the
+other cannot, which is why the ruling names both.
+
+**AND THE FOUR WITHOUT A WITNESS WERE WITNESSED BEFORE ANYTHING COULD MOVE.** 436 of 440
+ordering-relevant signatures have their signed order recorded in a crossed artefact; four had
+nothing but the live database — all four LIVE and serving children, three of them under a
+non-value-sorted order, each one write away from becoming unverifiable with nothing anywhere able
+to say what it had been. Their exact order is now recorded as bytes with both retention hashes
+beside it. **A photograph, not a change**: it re-issues nothing and re-orders nothing, and it makes
+C available to those four as it already was to the other 436. `MC05-FDP-08`, `MC01-FDP-04`,
+`MC02-NPV-07`, `MC05-MEAS-02`.
