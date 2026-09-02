@@ -23,8 +23,25 @@ export const CASE_DIGEST_SPEC = 'R729 over the itemId-ordered list of {itemId, r
 
 export interface BindableRow { itemId: string; stem: unknown; solution: unknown; options: Array<{ value: unknown; isKey: boolean }> }
 
+/**
+ * THE SPEC IS `{value, isKey}` AND THE PROJECTION HAPPENS HERE, NOT AT EACH CALLER (R984).
+ *
+ * The declared spec is `R729 over {stem, options:[{value,isKey}], solution}`. Callers hand this
+ * function rows from two sources: live rows, which a caller naturally projects, and rows read out
+ * of a crossed population, whose options still carry `tag`, `tagIsActiveInTheLibrary` and
+ * `execution`. **A caller that forgets to strip them hashes a superset of the spec and produces a
+ * number that agrees with nothing** — this store's supersession notices carried exactly that, and
+ * the other store's identical spec computed a different value for the same row.
+ *
+ * So the projection is applied HERE, to whatever it is given. One place, and no caller can get it
+ * half right (R429).
+ */
 export function rowDigest(r: BindableRow): string {
-  return sha(canonicalJson(JSON.parse(JSON.stringify({ stem: r.stem, options: r.options, solution: r.solution ?? null }))));
+  return sha(canonicalJson(JSON.parse(JSON.stringify({
+    stem: r.stem,
+    options: r.options.map((o) => ({ value: o.value, isKey: o.isKey })),
+    solution: r.solution ?? null,
+  }))));
 }
 
 /**
@@ -37,7 +54,10 @@ export function rowDigest(r: BindableRow): string {
 export function rowDigestNormalised(r: BindableRow): string {
   return sha(canonicalJson(JSON.parse(JSON.stringify({
     stem: r.stem, solution: r.solution ?? null,
-    options: r.options.map((o) => ({ value: o.value === null || o.value === undefined ? o.value : String(o.value), isKey: o.isKey })),
+    options: r.options.map((o) => ({
+      value: o.value === null || o.value === undefined ? o.value : Array.isArray(o.value) ? o.value.map(String) : String(o.value),
+      isKey: o.isKey,
+    })),
   }))));
 }
 

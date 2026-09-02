@@ -26988,3 +26988,38 @@ guess wearing a record's shape is worse than an open question.
 the only one that can announce it, so the announcement belongs to the act rather than to the
 noticing.** Every gate before this one stood between the stores and the data. This one stands
 between an act and its silence.
+
+## R984 — Two stores, one declared spec, two numbers: the projection belongs in the function, not in each caller
+
+Found at the vr-02 door, 2026-09-02, and it is this store's fault.
+
+**BOTH STORES DECLARED `R729 over {stem, options:[{value,isKey}], solution}` AND COMPUTED DIFFERENT
+NUMBERS FOR THE SAME ROW.** The authoring store's `rowSha256` for
+`bank-vr-02-two-odd-ones-out-17` was `a0f05ae8332ab189`; this store's supersession notice recorded
+the same row's before-digest as `66a7d593585d14bb`. **One row, one spec, two values — and a digest
+that agrees with nothing is worse than no digest, because it looks like evidence.**
+
+**THE CAUSE IS A HALF-APPLIED PROJECTION.** Rows arrive from two sources. Live rows a caller
+naturally maps to `{value, isKey}`. Rows read out of a crossed population arrive with their options
+still carrying `tag`, `tagIsActiveInTheLibrary` and `execution` — and the caller that passed those
+through hashed a SUPERSET of the declared spec. Measured against the population's own bytes, the
+batch's number is the spec exactly and this store's was the superset. **The other store was right
+and this store's notices were unusable for the one thing they exist for.**
+
+**So the projection moved INTO `rowDigest`, applied to whatever it is handed** (R429). One place,
+and no caller can get it half right — which is the same repair as `stampedName` truncating for
+every caller rather than each caller remembering (R967), and it is the same fault: a contract
+stated in a docstring and implemented at the call sites.
+
+**AND THE CLASSIFICATION SURVIVED THE BUG, WHICH IS THE UNCOMFORTABLE PART.** vr-02 read 17 of 25
+moved before the fix and 17 of 25 after; vr-05 one; vr-19 twenty-five. The verdicts were right
+while the numbers they rested on were wrong, because both sides of each comparison were wrong the
+same way. **A result that does not move when a real fault is repaired is not thereby confirmed** —
+it means the fault was invisible to that particular test, and R599's discipline of re-running is
+what turned a right answer into a right answer for a stated reason.
+
+**The exchange behaved exactly as designed around it.** The authoring store crossed checkable
+bindings and NAMED the doubt rather than asserting the five bound; the door compared each against
+the live rows and refused all ten; every one of the five rows is among the seventeen the notice
+names. **A refusal on arrival is a cheaper finding than an absence**, and both stores now compute
+one number for one row.
