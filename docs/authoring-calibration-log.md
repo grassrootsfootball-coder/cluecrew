@@ -27086,3 +27086,46 @@ decision has never been put.** This store does not choose.
 produced, and its empty run was genuinely correct. Here, an entry is carried only by a population
 the cut never admits — **not refused, not held, not counted, and correct-looking in every
 instrument bound to that cut.**
+
+## R987 — vr-19 derives open, and the hint that flatters spans both populations
+
+David, 2026-09-02. The fifty land, the door fires, and the generator question widens with an answer
+that is not the simple one.
+
+**THE FIFTY LANDED, ALL FIFTY, THROUGH THREE GATES** — row digest against the bytes each was
+authored against, tag gate, key gate — and the refusal-shape guard found nothing to shape. **They
+were RE-AUTHORED, not re-bound**: the twenty-five that refused a fortnight ago named TAP and 146,
+and these name what the rows now read. The authoring store's refusal to re-bind them was right, and
+re-authoring was the only sound repair.
+
+**vr-19 DERIVES OPEN: 25 signed, 25 whole, `doorOpensOnThisSection` FIRES** — the district's second
+door, and the first to reach it entirely through the exchange rather than by one store's work.
+Publication is a separate act and is not taken here.
+
+**THE HINT TEST, RUN ON BOTH POPULATIONS, AND THE ANSWER IS SPLIT.** The entry's own child hint
+executed: `first-word-invalid` tells the child to take the letter out and read what is left, and it
+FLATTERS when what is left is a real word, because she is then confirmed in the wrong answer.
+
+| | seed (13 rows) | cut (25 rows) |
+|---|---|---|
+| first-word-invalid | **12 of 13 — 92%** | **14 of 25 — 56%** |
+| second-word-invalid | 3 of 13 — 23% | 14 of 25 — 56% |
+
+**THE FAULT SPANS BOTH POPULATIONS, SO IT IS NOT AN ARTEFACT OF THE SEED ROWS** — 26 first-word
+seats flatter across 38 rows. **But the rates are not equal, and that refuses the simple reading.**
+A single uniform generator rule would flatter at one rate in both; 92 against 56 does not. And the
+mirror is more telling still: in the SEED the two halves diverge sharply (92 against 23), while in
+the CUT they are identical (56 and 56). **A fault in one half of a mirrored pair points at that
+half's rule; equal rates in both halves point at something shared.** The two populations are not
+carrying one fault at one rate — they are carrying a fault whose shape differs between them, and
+that is a finding about how each was produced rather than about either's rows.
+
+**AND THIS STORE'S FIGURE DISAGREES WITH THE AUTHORING STORE'S ON THE SEED: 12 of 13 here, 10 of 13
+there.** The likely cause is named rather than assumed — this store's lexicon is web2 and is known
+too broad (R949, the GRAN incident), so it calls more remainders words and therefore counts more
+flatters. **The direction of the disagreement matches the known instrument difference**, which is
+evidence for that explanation and not proof of it; two seats are the whole of the gap and either
+store can settle it by naming which two.
+
+**No repair is taken.** Whether it lies in the generator's letter-choice rule, in the entries'
+hints, or in the rows, is a content decision.
