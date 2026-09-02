@@ -22,7 +22,7 @@ import { join as pjoin } from 'node:path';
 import { prisma } from '../packages/db/src/index';
 import { requirePopulation } from './lib/population';
 import { canonicalJson, findingsDigest, digestsBlock } from './lib/findings-digest';
-import { rowDigest as libRowDigest, rowDigestNormalised as libRowDigestNormalised, ROW_DIGEST_SPEC, CASE_DIGEST_SPEC } from './lib/population-binding';
+import { rowDigest as libRowDigest, rowDigestNormalised as libRowDigestNormalised, ROW_DIGEST_SPEC, CASE_DIGEST_SPEC, ROW_DIGEST_SUBJECT_KEYS, digestSubject } from './lib/population-binding';
 import { deliver, stampedName } from './lib/export-destination';
 
 const REPO = pjoin(__dirname, '..');
@@ -107,6 +107,7 @@ async function main() {
     date: '2026-09-02',
     WHY_THIS_EXISTS: 'your lane binds to bb6be0d3. That digest proves what you READ; it cannot tell you the rows have moved since, and nothing on your disk can. Only the store holding the rows can say which cases the binding is still good for — so it says.',
     THE_SPECS: { row: ROW_SPEC, case: CASE_SPEC },
+    THE_SUBJECT_AS_KEYS: digestSubject(ROW_DIGEST_SUBJECT_KEYS, ROW_SPEC),
     THE_HEADLINE: `${cases.length - superseded.length} of ${cases.length} cases are still exactly bound to bb6be0d3. ${superseded.length} superseded: ${superseded.map((c) => c.caseId).join(', ') || 'none'}.`,
     HOW_TO_USE_IT: 'before authoring against a row, compare its rowSha256 with PER_ROW_DIGEST_NOW. A match means what you author lands. A mismatch means the row moved and the work would describe bytes that no longer exist — which is exactly what refused twenty-five vr-19 executions at this store\'s door.',
     andWHATTHISSTOREOWES: 'a regeneration that lands should cross its own supersession of the population it replaces, rather than leaving the other store to discover it by refusal. This declaration is the repair for what has already happened; that is the repair for what happens next, and it is not yet built.',

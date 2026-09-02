@@ -21,6 +21,33 @@ export const ROW_DIGEST_SPEC =
   'R729 over {stem, options:[{value,isKey}], solution} — the spec batch one\'s rowSha256 already uses, so these numbers compare directly with the one every execution carries';
 export const CASE_DIGEST_SPEC = 'R729 over the itemId-ordered list of {itemId, rowSha256} for the case';
 
+/**
+ * THE SUBJECT, NAMED AS KEYS (Annie's ruling on R985, 2026-09-02).
+ *
+ * A published digest travels with the KEYS it was taken over, not with a sentence describing them.
+ * The census artefact published each row's `rowSha256` over `{stem, options:[{value,isKey}],
+ * solution}` and, two fields away, that row's `options` carrying `tag`,
+ * `tagIsActiveInTheLibrary` and `execution` as well. **Nothing in it was wrong; it made the wrong
+ * thing easy and the right thing invisible**, and two stores that had both read the spec correctly
+ * hashed a superset of it.
+ *
+ * Keys are machine-readable and prose is not: a consumer reading `subjectKeys` builds the
+ * projection from the artefact, where one reading `rowSha256Spec` rebuilds it from a sentence and
+ * may rebuild it differently. This is R25 at one remove — send the value, not an account of it.
+ */
+export const ROW_DIGEST_SUBJECT_KEYS = ['stem', 'options[].value', 'options[].isKey', 'solution'] as const;
+
+export function digestSubject(subjectKeys: readonly string[], spec: string) {
+  return {
+    subjectKeys,
+    spec,
+    andWHYTHEKEYSANDNOTONLYTHESPEC:
+      'the keys are the subject; the spec says how they are serialised. A consumer that reads the keys projects exactly what was hashed. A consumer that reads only the prose rebuilds the projection from a sentence, and a field on the row that the sentence does not name will be included by anyone doing the obvious thing (R985).',
+    everyOtherKeyOnTheRowIsEXCLUDED:
+      'rows in this artefact carry more than the subject names — enrichment such as tag, tagIsActiveInTheLibrary and execution. They are NOT part of any digest here.',
+  };
+}
+
 export interface BindableRow { itemId: string; stem: unknown; solution: unknown; options: Array<{ value: unknown; isKey: boolean }> }
 
 /**

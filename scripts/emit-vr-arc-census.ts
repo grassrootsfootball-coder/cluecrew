@@ -20,6 +20,7 @@ import { prisma } from '../packages/db/src/index';
 import { assertFixture } from './lib/carried-fixture';
 import { deliver, stampedName } from './lib/export-destination';
 import { canonicalJson, digestOverText, findingsDigest } from './lib/findings-digest';
+import { ROW_DIGEST_SUBJECT_KEYS } from './lib/population-binding';
 import { requirePopulation } from './lib/population';
 
 const REPO = pjoin(__dirname, '..');
@@ -154,6 +155,9 @@ async function run() {
               executionsPresent: wh.executionsPresent, walkScriptPresent: wh.walkScriptPresent },
             rowSha256: sha(canonicalJson(projection)),
             rowSha256Spec: 'sha256 over canonical JSON of {stem, options[{value,isKey}], solution} — order as stored, enrichment excluded',
+            // THE SUBJECT AS KEYS, NOT ONLY AS PROSE (R985). This row's `options` below carry tag,
+            // tagIsActiveInTheLibrary and execution; none of them is in the digest.
+            rowSha256Subject: ROW_DIGEST_SUBJECT_KEYS,
           };
         }),
       });

@@ -54,6 +54,7 @@
     "check:witnesses": "tsx scripts/check-witnesses.ts",
     "check:refusal-shape": "tsx scripts/check-refusal-shape.ts",
     "check:no-reviewer-borrow": "tsx scripts/check-no-reviewer-borrow.ts",
+    "check:digest-carries-subject": "tsx scripts/check-digest-carries-subject.ts",
     "check:supersession-declared": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-supersession-declared.ts",
     "check:unordered-includes": "tsx scripts/check-unordered-includes.ts",
     "export:for-cowork": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-for-cowork.ts",

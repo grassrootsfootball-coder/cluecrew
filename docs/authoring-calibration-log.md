@@ -27055,3 +27055,34 @@ that digest was taken over** — as its own field, or by naming per row which ke
 includes. Then a consumer hashes what is in front of it instead of reconstructing a projection from
 a sentence. **This is R25 at one remove — send the value, not an account of it — and a spec in
 prose beside a superset of its own subject is an account.**
+
+## R986 — An entry whose entire carriage lies outside every cut is unmeasured, not unused
+
+David's instruction, 2026-09-02: report it, do not fold it into a census that excludes it.
+
+**`vr-move-letter-both-invalid` is ACTIVE, attested by the reviewer, carries a description and a
+child hint — and every one of its thirteen seats sits on a `seed-vr08` row that is
+NEVER_SHIPPABLE.** The population cut takes DRAFT, so **every census bound to `bb6be0d3` shows the
+entry with zero carriers.** It reads as an entry nothing uses. Everything that uses it is outside
+the frame.
+
+**ITS SIBLINGS ARE THE CONTRAST THAT MAKES IT LEGIBLE.** `vr-move-letter-first-word-invalid` and
+`vr-move-letter-second-word-invalid` carry thirty-eight seats each, spanning both the twenty-five
+DRAFT rows and the thirteen seed rows. **The family is not obscure; this one member of it is
+invisible**, and only because of where its carriage happens to sit.
+
+**AN ENTRY WITH NO MEASURABLE CARRIAGE IS NOT AN UNUSED ENTRY. IT IS AN UNMEASURED ONE, AND THE TWO
+NEED OPPOSITE DECISIONS.** Reporting zero would have been true of the cut and false of the entry —
+R98's rule about a row, arriving at a library entry. So it is reported with its carriage named
+rather than counted into a census that cannot see it.
+
+**Three dispositions are open and none of them follows from the measurement**: retire it, because
+an entry serving only rows that will never ship serves nobody; keep it and treat the absence as an
+AUTHORING gap, because the act is plainly real; or keep it against the proposed vr-08 regeneration,
+whose rows would give it visible carriage for the first time. **The measurement says only that the
+decision has never been put.** This store does not choose.
+
+**The general shape is R61 one level up.** There, a check screened a population the pipeline never
+produced, and its empty run was genuinely correct. Here, an entry is carried only by a population
+the cut never admits — **not refused, not held, not counted, and correct-looking in every
+instrument bound to that cut.**
