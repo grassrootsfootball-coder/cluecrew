@@ -26625,3 +26625,38 @@ for a fresh reading. The signature is not deleted: refusing to rely on a signatu
 the evidence of one are different acts. The row stays LIVE, because an unverifiable signature is
 not a wrong answer and pulling a served row on an instrument question is the manufactured work R961
 names.
+
+## R974 — A hold reaches the row, and prevalence is not authority
+
+Annie's 217th, 2026-09-02. Two rulings, and the first corrects both of us.
+
+**HELD AND LIVE CANNOT BOTH BE TRUE OF ONE ROW.** Her 216th held the signature and left the row's
+state unstated; the row was live. **A signature that reproduces under no declared subject cannot
+tell anyone whether the bytes moved since the reading**, so the row serves on an unverifiable
+reading, and R909 admits no exception for a row already live: identity, reading, authorship, or it
+waits.
+
+**AND THIS STORE HAD ARGUED THE OPPOSITE, WHICH IS THE PART WORTH KEEPING.** The published hold
+said the row could stay LIVE because *an unverifiable signature is not a wrong answer*. That
+reasoning conflated two things: it is true that nothing indicts the content, and false that the
+content is therefore sound. **The pin is the only instrument that can say the SERVED bytes are the
+READ bytes** — so an unverifiable pin puts the content in doubt in exactly the sense that matters,
+and the absence of evidence either way is precisely why a row cannot serve on it. *Nothing is
+wrong here* is not a finding; it is the shape of not having looked.
+
+`ENG-001-WIW-15` moved LIVE → REVIEWED in one transaction, **signature retained** — refusing to
+rely on a signature and destroying the evidence of one are different acts. Blast radius walked
+before the write: `en-comp-retrieval` 8 serving → 7, `case-en-01` stays servable, **and no child
+had ever met the row**, so the withdrawal cost nothing served. Its current bytes cross for a fresh
+reading under the canonical spec with the subject declared, and the row returns on that signature —
+**a reading nobody can verify is replaced, not defended**, and replacing it costs less than the
+argument about it.
+
+**PREVALENCE IS NOT AUTHORITY.** The draft-assessment shape is the estate's commonest subject
+because it is what the product writes when a reviewer signs there — **a fact about a code path, not
+a decision anyone made.** A majority produced by ONE WRITER is an undecision dressed as a decision
+until someone reads it: the `doorplate` inheritance rule at estate scale. So the subject set carries
+no default and marks nothing canonical by frequency; **canonicity is declared on merits and binds
+new signatures only**, and the one canonicity that IS declared (her 216th) is about the ORDER of
+options within the row projection, never a ruling that the row projection is the canonical subject.
+The frequency table is useful and it is not a verdict.

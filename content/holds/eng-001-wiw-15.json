@@ -1,19 +1,33 @@
 {
-  "kind": "PUBLISHED-HOLD",
-  "itemId": "ENG-001-WIW-15",
-  "status": "LIVE",
-  "pool": "PRACTICE",
-  "held": true,
-  "ruledBy": "Annie's 216th, 2026-09-02, d58d08e0e1e372ea",
-  "theRuling": "Genuinely unexplained is the right disposition and it stays unexplained until something explains it. Not reconciled, not assumed drifted, not re-signed: HELD with its reason published, one row, named, in the state that costs nothing and asserts nothing.",
-  "THE_REASON_PUBLISHED": "This row carries two SIGNED events four minutes apart, both with subjectHash 425245f09b627e89, written through the in-platform admin review surface. No declared subject reproduces that hash: not the row projection under any permutation of its five options and either retention variant, not any execution text on the row, and not the surface's own subject (draftAssessmentSubjectHash over {prompt, tier, options:[{isCorrect,text}]}) computed from stem.text or from stem.prompt. The three schema migrations that rewrote this stem all landed 2026-08-16 between 11:38 and 11:53; the signature was taken at 16:07, after them, so the migrations do not explain it either.",
-  "HER_CONDITIONAL_HAS_NOW_BEEN_TESTED": {
-    "herWords": "If its bytes and its hash cannot be brought into agreement by any declared subject and spec, then the signature is refused and the row returns to me for a fresh reading, which is a small sitting and an honest one.",
-    "theTest": "run 2026-09-02 across the whole closed set of declared subjects, as part of the subject backfill (R973). ENG-001-WIW-15 is one of two signatures carrying the admin surface's own marker, and neither reproduces under any declared subject and spec.",
-    "soTHECONDITIONISMET": true,
-    "andWHATFOLLOWS": "the signature is refused and the row returns to her for a fresh reading. This file records that; it does not delete her signature, because destroying the evidence of a signature is not the same act as refusing to rely on it."
-  },
-  "WHAT_IS_NOT_DONE_AND_WHY": "the row stays LIVE. An unverifiable signature is not a wrong answer, and pulling a served row on an instrument question is the manufactured work R961 names. Nothing about the child-facing content is in doubt; what is in doubt is whether anyone can now state what was read.",
-  "crossedAs": "eng-001-wiw-15-unexplained-signature-0778bd3f2ac95f59.json",
-  "subjectBackfill": "signature-subjects-derived-ded06d187e2db4df.json"
+ "kind": "PUBLISHED-HOLD",
+ "itemId": "ENG-001-WIW-15",
+ "status": "REVIEWED",
+ "pool": "PRACTICE",
+ "held": true,
+ "ruledBy": "Annie's 216th, 2026-09-02, d58d08e0e1e372ea",
+ "theRuling": "Genuinely unexplained is the right disposition and it stays unexplained until something explains it. Not reconciled, not assumed drifted, not re-signed: HELD with its reason published, one row, named, in the state that costs nothing and asserts nothing.",
+ "THE_REASON_PUBLISHED": "This row carries two SIGNED events four minutes apart, both with subjectHash 425245f09b627e89, written through the in-platform admin review surface. No declared subject reproduces that hash: not the row projection under any permutation of its five options and either retention variant, not any execution text on the row, and not the surface's own subject (draftAssessmentSubjectHash over {prompt, tier, options:[{isCorrect,text}]}) computed from stem.text or from stem.prompt. The three schema migrations that rewrote this stem all landed 2026-08-16 between 11:38 and 11:53; the signature was taken at 16:07, after them, so the migrations do not explain it either.",
+ "HER_CONDITIONAL_HAS_NOW_BEEN_TESTED": {
+  "herWords": "If its bytes and its hash cannot be brought into agreement by any declared subject and spec, then the signature is refused and the row returns to me for a fresh reading, which is a small sitting and an honest one.",
+  "theTest": "run 2026-09-02 across the whole closed set of declared subjects, as part of the subject backfill (R973). ENG-001-WIW-15 is one of two signatures carrying the admin surface's own marker, and neither reproduces under any declared subject and spec.",
+  "soTHECONDITIONISMET": true,
+  "andWHATFOLLOWS": "the signature is refused and the row returns to her for a fresh reading. This file records that; it does not delete her signature, because destroying the evidence of a signature is not the same act as refusing to rely on it."
+ },
+ "crossedAs": "eng-001-wiw-15-unexplained-signature-0778bd3f2ac95f59.json",
+ "subjectBackfill": "signature-subjects-derived-ded06d187e2db4df.json",
+ "statusWas": "LIVE",
+ "WITHHELD_FROM_SERVING": {
+  "ruledBy": "Annie's 217th, 2026-09-02, 65429f9de31781b6",
+  "herWords": "HELD and LIVE cannot both be true of one row. A signature that reproduces under no declared subject cannot tell anyone whether the bytes moved since the reading, so the row is serving on an unverifiable reading, and the three-assertion rule admits no exception for a row already live.",
+  "theCorrectionToThisStoresReasoning": "this store had argued the row could stay LIVE because an unverifiable signature is not a wrong answer. That was wrong. The pin is the only thing that can say the SERVED bytes are the READ bytes, so an unverifiable pin puts the content in doubt in the one sense that matters — identity was the missing assertion, not a technicality beside it.",
+  "theMove": "LIVE -> REVIEWED, in one transaction, signature RETAINED",
+  "whyTheSignatureIsRetained": "refusing to rely on a signature and destroying the evidence of one are different acts",
+  "blastRadiusWalked": {
+   "questionType": "en-comp-retrieval",
+   "servingRows": "8 -> 7",
+   "case": "case-en-01 \"The Written Clue\" — stays servable",
+   "childrenWhoHadMetIt": 0
+  }
+ },
+ "WHAT_ENDS_THE_HOLD": "one fresh reading of the row's current bytes, signed under the declared canonical subject and spec. Crossed as wiw15-one-row-for-a-fresh-reading-94c5c5744d0b6508.json; the hash her reading would certify is 65576865481b4452… The row returns to LIVE on that signature."
 }

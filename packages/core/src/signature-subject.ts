@@ -13,6 +13,17 @@
  *
  * **AND THE SPEC IS THE VALUABLE HALF.** The name tells a reader which family a hash belongs to;
  * the spec tells them how to recompute it, which is the only thing that settles a disagreement.
+ *
+ * **PREVALENCE IS NOT AUTHORITY, AND THIS SET HAS NO DEFAULT** (Annie's 217th, 2026-09-02 — R974).
+ * One of these shapes is the commonest in the estate because it is what the product writes when a
+ * reviewer signs — **a fact about a code path, not a decision anyone made.** A majority produced
+ * by one writer is an undecision dressed as a decision until someone reads it, so no entry here is
+ * marked canonical by frequency, nothing falls back to a default, and a caller must name the
+ * subject it actually hashed. A frequency table over these is useful and it is not a verdict.
+ *
+ * The one canonicity that IS declared is about ORDER WITHIN the row projection (her 216th), and it
+ * is a ruling about how options are arranged before hashing — never a ruling that the row
+ * projection is the canonical SUBJECT. The two questions are separate and only the first is settled.
  */
 export const SIGNATURE_SUBJECTS = {
   ROW_PROJECTION_RETENTION_EXCLUDED: {
@@ -25,7 +36,7 @@ export const SIGNATURE_SUBJECTS = {
   },
   ROW_PROJECTION_CANONICAL_ORDER: {
     kind: 'row-projection',
-    spec: 'sha256 over canonicalJson({stem, options:[{content,isCorrect}], explanation}), retention stripped, OPTIONS SORTED BY VALUE — the canonical form, binding on signatures made or re-made from 2026-09-02 (her 216th)',
+    spec: 'sha256 over canonicalJson({stem, options:[{content,isCorrect}], explanation}), retention stripped, OPTIONS SORTED BY VALUE — the canonical ORDER, binding on signatures made or re-made from 2026-09-02 (her 216th). "Canonical" here names the arrangement of options, NOT a claim that the row projection is the canonical subject (R974).',
   },
   EXECUTION_TEXT: {
     kind: 'execution-text',
@@ -33,7 +44,7 @@ export const SIGNATURE_SUBJECTS = {
   },
   DRAFT_ASSESSMENT: {
     kind: 'draft-assessment',
-    spec: 'sha256 over JSON.stringify({prompt, tier, options:[{isCorrect,text}]}) — NOT canonical JSON, no stem, no explanation, `text` rather than `content`. What the in-platform admin review surface writes when a reviewer signs (draftAssessmentSubjectHash)',
+    spec: 'sha256 over JSON.stringify({prompt, tier, options:[{isCorrect,text}]}) — NOT canonical JSON, no stem, no explanation, `text` rather than `content`. What the in-platform admin review surface writes when a reviewer signs (draftAssessmentSubjectHash). THE COMMONEST SHAPE A REVIEWER SIGNS THROUGH IS STILL ONLY THE DEFAULT VALUE OF A FIELD, not the canonical subject (R974)',
   },
 } as const;
 
