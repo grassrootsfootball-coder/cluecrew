@@ -27129,3 +27129,36 @@ store can settle it by naming which two.
 
 **No repair is taken.** Whether it lies in the generator's letter-choice rule, in the entries'
 hints, or in the rows, is a content decision.
+
+## R988 — A broader lexicon is not a fuller count when the question is what a child knows
+
+The two-seat disagreement, settled to the limit one store can settle it, 2026-09-02.
+
+**THIS STORE MEASURED 12 OF 13 SEED SEATS AS FLATTERING; THE AUTHORING STORE MEASURED 10.** The gap
+is two seats and **this store cannot name which two**: seven of its twelve flattering remainders are
+dialect, archaic or technical — LANT, SARK, SOOL, GOVE, SARE, BAST, BAIN — and naming two of seven
+would be a guess wearing a measurement's shape. So this store crosses its HALF: every seat, its
+remainder, its verdict and a gloss, and the other store's list settles it in one comparison.
+
+**AND THE FRAMING THIS STORE GAVE IT WAS WRONG, WHICH MATTERS MORE THAN THE TWO SEATS.** It called
+its lexicon merely BROADER, which implies its 12 is the fuller count and the other store's 10 the
+short one. **The hint flatters only if the child reads the remainder as a word SHE knows.** A child
+who takes P out of PLANT and reads LANT is not confirmed in a wrong answer — she is confused, which
+is a different fault and possibly not this one at all. **For a test about what a child is confirmed
+by, a lexicon containing LANT, SARK, SOOL and GOVE is not broader; it is the WRONG INSTRUMENT.**
+
+**So the correction runs the other way from the one this store implied: 10 is likelier nearer the
+truth than 12, and both may be high.** Five of the twelve remainders are words a nine-year-old
+plainly knows — SIP, CAT, SEAM, SING, and arguably PATE — and the rest are not.
+
+**AND R987'S SHAPE NEEDS RE-READING BECAUSE OF IT.** That entry reported the seed at 92% and the cut
+at 56% and drew a finding from the difference between them. **Those figures are correct about the
+lexicon and may be wrong about children**, so the shape drawn from them is not yet earned. The
+figures stand as measured and the inference does not — which is the distinction R591 names: language
+claiming a stronger population than the thing behind it.
+
+**The general form: an instrument known to be too broad is not thereby conservative.** This store
+has been recording web2's breadth as a caveat for weeks — GRAN, PLUMP, the rival keys — while
+reading its results as generous-but-safe. **On any question about what a person knows, a broader
+lexicon does not overcount safely; it answers a different question**, and the direction of its error
+depends on which way the question runs.
