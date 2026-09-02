@@ -26322,3 +26322,45 @@ event citing her 208th and David's ratification.
 measured precedent on the class — never from what the landing script happened to know.** This is
 R57 arriving in a WRITER rather than a door: a door that enumerates drops what it cannot name; a
 writer that enumerates under-writes what it did not know, and reports success either way.
+
+## R966 — The high-water rule: declare your emissions, because only the receiver can diff its own shelf
+
+David's ruling, 2026-09-02, after the vr03 crossing stalled invisibly and was found only because
+the desk happened to look for it by name.
+
+**Every reader in this estate iterates what is PRESENT.** So a receiving store can enumerate what
+it holds and can *never* enumerate what it is missing — the absence has no row to iterate. This is
+R579 exactly (*an absent return is not reported absent, it is not reported*), turned around onto the
+OUTBOUND channel, where nothing had ever been checked: **the desk has never been diffed against
+what it should hold, and nothing on the sending side can do it.**
+
+**AND THE SENDER'S OWN INSTRUMENT DOES NOT CLOSE IT.** `stagingQueue` reads what came BACK and
+infers arrival from it, which measures QUOTING, not HOLDING. It reports **743 of 857 staged files
+unacknowledged** — and that is a QUEUE LENGTH, not an absence count, because most artefacts arrive
+and are never named in a reply. Read as absences it would manufacture seven hundred faults; read as
+what it is, it says almost nothing about the shelf. **The diff can only be done by the receiver, and
+only against a declaration the sender emits.** `scripts/declare-emissions.ts` is that declaration:
+every staged file with its recomputed digest, the high-water mark per kind, and the current file per
+family so gaps beneath the mark are findable.
+
+**THE TWO KINDS ARE THE ARTEFACT AND ITS SIDECAR, AND THEY CROSS INDEPENDENTLY.** A sidecar alone
+vouches for nothing; an artefact alone cannot be checked against a declared digest. Measured: 571
+artefacts, 286 sidecars, **0 mismatches and 0 orphans — and 285 artefacts carrying no sidecar at
+all**, half the lane crossing unvouched. A directory sitting in the lane is declared as its own
+class rather than skipped, because a silent skip is how a staged thing stops being counted (R98).
+
+**THE NAMING FINDING, WHICH IS THIS STORE'S OWN AND IS BOUNDED.** `stampedName` takes whatever hash
+it is handed; its documented example is a TRUNCATED one (`vr-free-ten-c17a98c9d7c439cf.json`, 16
+hex) and the desk's own artefacts carry 12. **Every report this session passed the FULL 64-character
+digest**, producing ~100-character names where every prior emission produced ~34. Of the 14 files
+carrying a 64-hex name, **0 are acknowledged; of the 114 acknowledged files, 0 carry one** — and the
+single confirmed stall, `vr03-reversed-relation-crossed-1bfec75c…`, is one of the seven, which
+arrived only when re-crossed byte-identical under a 12-hex name. **THE BOUND: one stall and one
+arrival of the same bytes under two names is a PAIR, NOT A PROOF.** The separation is real, the
+population is small, and the mechanism is invisible from this side. It crosses as a hypothesis the
+desk can kill in one line by saying which of the seven it holds — and the declaration is emitted
+under a truncated stamp, so it is itself the first test of it.
+
+**One sender is declared. The authoring store emits into the same desk and must declare its own
+lane** — this store cannot see it and does not guess at it, which is the same discipline that made
+its twenty-four holds correct rather than invented.

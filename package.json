@@ -39,6 +39,7 @@
     "check:key-change-cards": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-key-change-cards.ts",
     "check:manifest-diff": "tsx scripts/check-manifest-diff.ts",
     "check:staging-queue": "tsx scripts/check-staging-queue.ts",
+    "declare:emissions": "tsx scripts/declare-emissions.ts",
     "check:outbound-sidecars": "tsx scripts/check-outbound-sidecars.ts",
     "deliver:claim-ledger": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/deliver-claim-ledger.ts",
     "report:gate-field-scope": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/report-gate-field-scope.ts",
