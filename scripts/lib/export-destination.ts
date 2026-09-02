@@ -102,7 +102,17 @@ export function retireDropTree(
  *   vr-free-ten-c17a98c9d7c439cf.json
  */
 export function stampedName(base: string, sourceHash: string, ext: string): string {
-  return `${base}-${sourceHash}.${ext}`;
+  /**
+   * SIXTEEN HEX IS NOT A STYLE, IT IS THIS PATH'S OWN CONTRACT (R967). `restampToContent` below
+   * matches `-([0-9a-f]{16})\.json` and `deliver` matches `-([0-9a-f]{16})(?:[.-]|$)` for the
+   * family. A stamp of any other length does not match either, so the file is COPIED IN while the
+   * restamp, the family match and the supersession all silently no-op — R87's shape inside the
+   * staging path itself. Seven artefacts were handed the full 64-character digest this way and
+   * bypassed every guarantee this function's caller believed it had; six never reached the desk.
+   * So the truncation happens HERE, where every caller gets it, rather than in each caller's head.
+   */
+  const stamp = /^[0-9a-f]{16,}$/.test(sourceHash) ? sourceHash.slice(0, 16) : sourceHash;
+  return `${base}-${stamp}.${ext}`;
 }
 
 /**
@@ -190,6 +200,22 @@ function markIfUnfixtured(sourcePath: string): void {
 function restampToContent(sourcePath: string, family?: string): string {
   if (!sourcePath.endsWith('.json')) return sourcePath;
   const current = basename(sourcePath);
+  /**
+   * A NAME THAT LOOKS STAMPED BUT IS NOT 16 HEX IS REFUSED, NOT PASSED THROUGH (R967). Passing it
+   * through is what let seven artefacts stage with no restamp, no family match and no
+   * supersession, reported as success. Measured before the guard was added (R149): of 368
+   * artefacts in the lane, 292 carry exactly 16 hex, 69 carry no trailing stamp at all, and 7
+   * carry 64 — nothing sits between, so this fires on the fault class and on nothing else.
+   */
+  const looksStamped = /^(.*)-([0-9a-f]{8,})\.json$/.exec(current);
+  if (looksStamped && looksStamped[2]!.length !== 16) {
+    throw new Error(
+      `deliver: "${current}" carries a ${looksStamped[2]!.length}-character hex stamp where this path's contract is exactly 16.\n` +
+      '  A stamp of any other length matches neither the restamp nor the family pattern, so the file would be staged\n' +
+      '  while the restamp, the family match and the supersession all silently do nothing. Pass the hash through\n' +
+      '  stampedName(), which truncates to 16 — do not build the name by hand.',
+    );
+  }
   const stamped = /^(.*)-([0-9a-f]{16})\.json$/.exec(current);
   if (!stamped) return sourcePath;
   const [, prefix, claimed] = stamped;

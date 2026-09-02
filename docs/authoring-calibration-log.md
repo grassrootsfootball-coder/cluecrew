@@ -26364,3 +26364,49 @@ under a truncated stamp, so it is itself the first test of it.
 **One sender is declared. The authoring store emits into the same desk and must declare its own
 lane** — this store cannot see it and does not guess at it, which is the same discipline that made
 its twenty-four holds correct rather than invented.
+
+**CONFIRMED FROM THE RECEIVING END, SAME DAY — SEE R967.** Six of the seven are not on the desk;
+the seventh is there only because it re-crossed under a short name. The declaration's first use
+found six stalled artefacts, and the confirmation could only come from the side that holds the
+shelf, which is the rule's whole point.
+
+## R967 — Sixteen hex was never a style: a name outside the path's own pattern bypasses every guarantee the path makes
+
+The high-water rule's first use, and it confirmed its own hypothesis in one day (R966).
+
+**The desk answered: six of the seven are absent, and the seventh is present only because it
+re-crossed under a short name.** Only the receiving side could establish that — a sender can
+declare, and can never diff. The six are the reports: round one, round two, the one-run, the
+seventeen-and-serve, the mint-and-door derivation, and the final door report. **Every table the
+desk read this week was prose while its artefact stalled**, which is the cost stated exactly: a
+sentence cannot be recomputed against a digest, so a reader given prose is asked to trust rather
+than to check.
+
+**AND THE CAUSE IS THIS STORE'S OWN AND IS MECHANICAL, NOT A MYSTERY ABOUT THE CHANNEL.** The
+staging path matches `-([0-9a-f]{16})\.json` for its restamp and `-([0-9a-f]{16})(?:[.-]|$)` for
+its family. **A 64-character stamp matches neither.** So `deliver()` copied the file in while the
+restamp, the family match and the supersession every caller believes it is getting all silently did
+nothing — and the run printed STAGED. **R87's shape inside the staging path itself: an operation
+that is correct, a report that is true, and neither saying that nothing happened.** Sixteen hex was
+being read as a house style; it is a CONTRACT, encoded in two regexes, and a name outside it is not
+merely unconventional — it is invisible to the machinery.
+
+**Measured before the guard, per R149.** Of 368 artefacts in the lane: **292 carry exactly 16 hex,
+69 carry no trailing stamp at all, and 7 carry 64 — nothing sits between.** So the guard fires on
+the fault class and on nothing else, and that is a measurement rather than a hope.
+
+**The repair is at the NAMER, not in each caller's head.** `stampedName` now truncates any hash of
+16 or more to 16, so every caller conforms without knowing why; and `deliver` REFUSES a name whose
+trailing hex run is any other length, naming the contract. A rule that lives in a docstring is
+obeyed by whoever read the docstring; the same rule in the namer is obeyed by everyone. The six
+re-crossed byte-identical under conforming stamps, each verified three ways — desk copy, lane copy,
+and the stamp equal to the bytes' own digest — so every figure already quoted for them stays true.
+The 64-hex originals stay in the lane as the evidence of the stall, named beside their replacements
+(R86).
+
+**THE SECOND FINDING, David's, from the same declaration: 285 artefacts in the lane carry no
+sidecar — half of it crosses unvouched.** An artefact and its sidecar are separate files that cross
+independently, so a sidecar can arrive without its artefact and either alone proves nothing. The
+declaration is the better answer to it than 285 loose files would be: **one list, itself crossing
+under one digest, carrying every artefact's hash** — vouching that cannot be half-delivered, where
+per-file sidecars are exactly the thing that can.
