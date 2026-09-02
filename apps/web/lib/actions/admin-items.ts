@@ -687,6 +687,36 @@ export async function signItemAction(formData: FormData): Promise<void> {
     })),
   });
 
+  /**
+   * THE SUBJECT PROVES ITSELF BEFORE THE SIGNATURE IS WRITTEN (R975).
+   *
+   * `ENG-001-WIW-15` carries the only two signatures this path ever wrote, and neither reproduces
+   * — with this action byte-identical to the commit that introduced it, the subject function
+   * unchanged since before the signature, and the row's inputs identical to an artefact recorded
+   * sixteen minutes earlier. The writer is known and the mismatch still cannot be explained, which
+   * is exactly the state a signature must never be allowed to reach unnoticed.
+   *
+   * So the subject is recomputed from a SECOND, FRESH read and asserted equal before anything is
+   * stored. It costs one query and it converts an unexplainable mismatch discovered months later
+   * into a refusal at the moment of signing — the only moment at which the reviewer is still here
+   * to be asked. **This is the forward repair: one change on the write path, and every signature
+   * the estate makes from here carries it.**
+   */
+  const confirm = await prisma.item.findUniqueOrThrow({
+    where: { id: itemId },
+    include: { options: { orderBy: { id: 'asc' } } },
+  });
+  const confirmStem = (confirm.stem ?? {}) as Record<string, unknown>;
+  const confirmHash = draftAssessmentSubjectHash({
+    prompt: typeof confirmStem.text === 'string' ? confirmStem.text : typeof confirmStem.prompt === 'string' ? confirmStem.prompt : null,
+    tier: confirm.difficultyTier,
+    options: confirm.options.map((o) => ({
+      text: typeof o.content === 'string' ? o.content : String((o.content as { value?: unknown })?.value ?? ''),
+      isCorrect: o.isCorrect,
+    })),
+  });
+  if (confirmHash !== subjectHash) redirect(`/admin/items/${itemId}?error=subject-did-not-reproduce`);
+
   await recordSignature(prisma, {
     recordType: 'item',
     recordId: itemId,

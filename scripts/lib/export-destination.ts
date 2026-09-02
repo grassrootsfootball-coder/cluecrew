@@ -206,6 +206,14 @@ function restampToContent(sourcePath: string, family?: string): string {
    * supersession, reported as success. Measured before the guard was added (R149): of 368
    * artefacts in the lane, 292 carry exactly 16 hex, 69 carry no trailing stamp at all, and 7
    * carry 64 — nothing sits between, so this fires on the fault class and on nothing else.
+   *
+   * **THE MECHANISM IS A SIXTEEN-HEX MATCH, NOT A LENGTH BOUND, AND IT IS SCOPED TO THIS LANE**
+   * (Cowork's correction, accepted 2026-09-02 — R967 amended). The two regexes match exactly
+   * sixteen hex; nothing here says a name must be short. Read as a length rule and generalised
+   * across stores it would condemn the authoring store's entire lane and every VERSIONS index,
+   * none of which is wrong — they simply do not use this store's stamp. This guard governs
+   * `deliver()`, which stages only what THIS store emits, and it is not to be generalised
+   * without the other stores' own conventions in front of whoever generalises it.
    */
   const looksStamped = /^(.*)-([0-9a-f]{8,})\.json$/.exec(current);
   if (looksStamped && looksStamped[2]!.length !== 16) {

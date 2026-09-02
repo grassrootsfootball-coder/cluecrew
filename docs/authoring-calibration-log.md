@@ -26395,6 +26395,15 @@ merely unconventional — it is invisible to the machinery.
 69 carry no trailing stamp at all, and 7 carry 64 — nothing sits between.** So the guard fires on
 the fault class and on nothing else, and that is a measurement rather than a hope.
 
+**AMENDED ON COWORK'S CORRECTION, ACCEPTED 2026-09-02: THE MECHANISM IS A SIXTEEN-HEX MATCH, NOT A
+LENGTH BOUND, AND IT IS SCOPED TO THIS LANE.** The two regexes match exactly sixteen hex; nothing
+in them says a name must be short, and reading the finding as *long names stall* would generalise
+it into a rule that condemns the authoring store's entire lane and every VERSIONS index — none of
+which is wrong, because none of them uses this store's stamp. **A convention is a fact about the
+path that reads it, not about names.** The guard governs `deliver()`, which stages only what this
+store emits, and it is not to be generalised across stores without those stores' own conventions
+in front of whoever generalises it.
+
 **The repair is at the NAMER, not in each caller's head.** `stampedName` now truncates any hash of
 16 or more to 16, so every caller conforms without knowing why; and `deliver` REFUSES a name whose
 trailing hex run is any other length, naming the contract. A rule that lives in a docstring is
@@ -26660,3 +26669,40 @@ no default and marks nothing canonical by frequency; **canonicity is declared on
 new signatures only**, and the one canonicity that IS declared (her 216th) is about the ORDER of
 options within the row projection, never a ruling that the row projection is the canonical subject.
 The frequency table is useful and it is not a verdict.
+
+## R975 — The writer is found, the class is two, and the mismatch survives finding it
+
+David's instruction, 2026-09-02: follow the writer before her reading lands.
+
+**THE WRITER IS `signItemAction`, and it is the only thing in this estate that has ever written the
+draft-assessment subject into a signature** — 2 of 477, both on `ENG-001-WIW-15`, four minutes
+apart, carrying an identical hash. **So the row is the class's only casualty**, and no other
+signature anywhere is exposed to it.
+
+**AND EVERY CANDIDATE EXPLANATION IS ELIMINATED, WHICH IS THE FINDING.**
+
+- **Not option order.** The path's read is `orderBy: { id: 'asc' }` and always was — this writer was
+  deterministic before anything in this estate asked it to be.
+- **Not the function.** `draftAssessmentSubjectHash` is byte-identical to its state at `aee00d5`,
+  the 11:53 commit of the signing day — three hours before the signature.
+- **Not the action's assembly.** The subject block is byte-identical to `f8a732d`, the commit that
+  introduced it.
+- **Not the inputs.** A crossed artefact recorded the row at 15:51, sixteen minutes before the
+  signature: same `stem.text`, same tier, same five option values, same key flags as the row today.
+- **Not any reachable variation.** An exhaustive search — every string key of the stem as prompt ×
+  six tiers × four text-extraction modes × all 26 option subsets × every permutation of each — does
+  not reproduce the stored hash. Nor does any state recorded in the 98 crossed artefacts naming
+  the row.
+
+**So the writer is identified, its code has not moved, its inputs have not moved, and the hash
+still does not reproduce.** That is a stronger and more uncomfortable statement than *we do not
+know who wrote it*, and it is the honest one. What remains is a write with no attribution event
+(R63 names sixteen unguarded appliers) or a value the code cannot now produce — and this store
+cannot tell which from here.
+
+**THE FORWARD REPAIR, WHICH IS THE PRIORITY BY THIS STORE'S OWN SPLIT.** One change on the write
+path: **the subject is recomputed from a second, fresh read and asserted equal before the signature
+is stored.** It costs one query, and it converts an unexplainable mismatch discovered months later
+into a refusal at the moment of signing — **the only moment at which the reviewer is still there to
+be asked.** Every signature the estate makes from here carries it, which is why it outranks any
+amount of further archaeology on the two that exist.
