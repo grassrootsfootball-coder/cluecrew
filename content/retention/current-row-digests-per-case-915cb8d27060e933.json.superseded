@@ -1,0 +1,1767 @@
+{
+ "kind": "CURRENT-ROW-DIGESTS-PER-CASE",
+ "TO": "the authoring store; David and Annie by relay",
+ "date": "2026-09-02",
+ "WHY_THIS_EXISTS": "your lane binds to bb6be0d3. That digest proves what you READ; it cannot tell you the rows have moved since, and nothing on your disk can. Only the store holding the rows can say which cases the binding is still good for — so it says.",
+ "THE_SPECS": {
+  "row": "R729 over {stem, options:[{value,isKey}], solution} — the same spec batch one's rowSha256 already uses, so these numbers compare directly with the ones each execution carries",
+  "case": "R729 over the itemId-ordered list of {itemId, rowSha256} for the case"
+ },
+ "THE_HEADLINE": "5 of 11 cases are still exactly bound to bb6be0d3. 6 superseded: case-vr-02, case-vr-05, case-vr-08, case-vr-17, case-vr-18, case-vr-19.",
+ "HOW_TO_USE_IT": "before authoring against a row, compare its rowSha256 with PER_ROW_DIGEST_NOW. A match means what you author lands. A mismatch means the row moved and the work would describe bytes that no longer exist — which is exactly what refused twenty-five vr-19 executions at this store's door.",
+ "andWHATTHISSTOREOWES": "a regeneration that lands should cross its own supersession of the population it replaces, rather than leaving the other store to discover it by refusal. This declaration is the repair for what has already happened; that is the repair for what happens next, and it is not yet built.",
+ "CASES": [
+  {
+   "caseId": "case-vr-02",
+   "questionType": "vr-02-two-odd-ones-out",
+   "BINDING": "SUPERSEDED — bb6be0d3 no longer describes these rows",
+   "caseDigestNOW": "06573843e8ebeec2fa85885b2cc367fefdd356e349e4fe9f01cdc359248e383b",
+   "caseDigestAS_bb6be0d3_RECORDED_IT": "55e742f50661133999c3e1a9c4a60b27750275e45a41ee301b511df792ec7eab",
+   "rowsInThePopulation": 25,
+   "rowsHereNow": 25,
+   "rowsMoved": 17,
+   "movedIds": [
+    "bank-vr-02-two-odd-ones-out-01",
+    "bank-vr-02-two-odd-ones-out-02",
+    "bank-vr-02-two-odd-ones-out-03",
+    "bank-vr-02-two-odd-ones-out-04",
+    "bank-vr-02-two-odd-ones-out-08",
+    "bank-vr-02-two-odd-ones-out-09",
+    "bank-vr-02-two-odd-ones-out-10",
+    "bank-vr-02-two-odd-ones-out-11",
+    "bank-vr-02-two-odd-ones-out-12",
+    "bank-vr-02-two-odd-ones-out-14",
+    "bank-vr-02-two-odd-ones-out-16",
+    "bank-vr-02-two-odd-ones-out-17",
+    "bank-vr-02-two-odd-ones-out-18",
+    "bank-vr-02-two-odd-ones-out-22",
+    "bank-vr-02-two-odd-ones-out-23",
+    "bank-vr-02-two-odd-ones-out-24",
+    "bank-vr-02-two-odd-ones-out-25"
+   ],
+   "rowsGone": [],
+   "rowsAdded": [],
+   "andWHATTOREAUTHOR": "only the 17 named above; the other 8 are unchanged and anything authored against them still lands",
+   "PER_ROW_DIGEST_NOW": [
+    {
+     "itemId": "bank-vr-02-two-odd-ones-out-01",
+     "rowSha256": "0580890d6ec7f0699c641787386a1fbfb65133869b49bf4ed0e1aad8c405b39f",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "bank-vr-02-two-odd-ones-out-02",
+     "rowSha256": "240bf03ff10dc830b3a17216e540be47ad19fdad60ca3e8917fd2dad8b10567a",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "bank-vr-02-two-odd-ones-out-03",
+     "rowSha256": "a4fc2d0efa086d29c06184e6334ca3410bb0477f8d4c07ad0283f68347395881",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "bank-vr-02-two-odd-ones-out-04",
+     "rowSha256": "1d1e9baa52b254260e3ff1be07f0d58c7399d1bc90ec432455c70595b194287d",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "bank-vr-02-two-odd-ones-out-05",
+     "rowSha256": "ac10918c31abe24afabce8af9ad502922245ec267c5df8c35b29630b8a13816e",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "bank-vr-02-two-odd-ones-out-06",
+     "rowSha256": "f295abb3304ec32b266d863ceedb2336e200cb4deb23d8524df3c3725e4d968a",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "bank-vr-02-two-odd-ones-out-07",
+     "rowSha256": "40191eae1885606d322dd334e9911a71d68d5d58effe53f34d3521bfa05a684d",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "bank-vr-02-two-odd-ones-out-08",
+     "rowSha256": "e199924a349e8a16b3a92289d5900d5252bc92328ccc090b0bf5bbcc49f8fec7",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "bank-vr-02-two-odd-ones-out-09",
+     "rowSha256": "dbf0325075bad7f730852b0378783f73018f206a54567d79fcc1a4729cb7c645",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "bank-vr-02-two-odd-ones-out-10",
+     "rowSha256": "56e5a9daaa93f36984359f4edc4c286f8c6b6ddbfd5720f7ac6e9cfb6f9aaa7d",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "bank-vr-02-two-odd-ones-out-11",
+     "rowSha256": "6abe813453012ef6d36ae2e5d9a2323bfc6fe615979b0d977dd214d58cbb415c",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "bank-vr-02-two-odd-ones-out-12",
+     "rowSha256": "6b625dd6c1b5bfc4696e6438f6423829e80c4512250d9f19a4e5de656b00d003",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "bank-vr-02-two-odd-ones-out-13",
+     "rowSha256": "0670c1bf9a39f67b2e874de30f283be2be6bbc9d8aaa50f0dc838dba9914029b",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "bank-vr-02-two-odd-ones-out-14",
+     "rowSha256": "633e915aeb127d3667ea117ca4f746abcae811c0e63f13edabee689ad40fd0fc",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "bank-vr-02-two-odd-ones-out-15",
+     "rowSha256": "6e40b2740e6ca3f7ef1be91a13102ca22bdf42e87fce8651f6918d26ea6a9545",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "bank-vr-02-two-odd-ones-out-16",
+     "rowSha256": "ff7dcd79758169998c3b00f3458bf77c18642cad9b70a4ceac4d6bd166b169c7",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "bank-vr-02-two-odd-ones-out-17",
+     "rowSha256": "876d0e0c0063546b138f5b3bd84f5bf54bc478391720ebfac01749e44b63b424",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "bank-vr-02-two-odd-ones-out-18",
+     "rowSha256": "bce3ca312d2dd7716b78dde4c439b240bc3a3445bd6aa2f5ebf624e3dbe62232",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "bank-vr-02-two-odd-ones-out-19",
+     "rowSha256": "3a53e587f7b888af1a71c7924b728ecf9a0b0eaa7ee94704ee06360f07b1d230",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "bank-vr-02-two-odd-ones-out-20",
+     "rowSha256": "d47cf35f911a54c6c0bbc64acedfd3b818d398b8bda4f2e2b3228ea40f1b98ed",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "bank-vr-02-two-odd-ones-out-21",
+     "rowSha256": "e504aaf81972318cafe6794a5ed377e8af1ad7f41e1f922cdd1823451cf5fff0",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "bank-vr-02-two-odd-ones-out-22",
+     "rowSha256": "9554eb0ff89252cc4f59217f149d074714c68e5690f91fb5a7697cfb44d65828",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "bank-vr-02-two-odd-ones-out-23",
+     "rowSha256": "06ca41f006ef77fdc5244805b6b04928ec16fe8755d26449c3ca908d2d718c60",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "bank-vr-02-two-odd-ones-out-24",
+     "rowSha256": "4cb094f3e18e895ae01dec1c222d67afe744dea74e5d29b4cb9a390fa0b570cb",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "bank-vr-02-two-odd-ones-out-25",
+     "rowSha256": "f86e591f0fc46586ebd67b238ce937d74b611ad9fe66841dc50cea90cd990bdd",
+     "movedSincebb6be0d3": true
+    }
+   ]
+  },
+  {
+   "caseId": "case-vr-05",
+   "questionType": "vr-05-hidden-word",
+   "BINDING": "SUPERSEDED — bb6be0d3 no longer describes these rows",
+   "caseDigestNOW": "25069462d5d9fc6879ab68646fc9a3b4e6213119a9056fd342796fd10fcd7f2f",
+   "caseDigestAS_bb6be0d3_RECORDED_IT": "44bd436c776befa3341fc84ef32cdf1ba30f216b3bbdbb65c726d25801934a2c",
+   "rowsInThePopulation": 25,
+   "rowsHereNow": 25,
+   "rowsMoved": 1,
+   "movedIds": [
+    "gen-vr-05-hidden-word-07"
+   ],
+   "rowsGone": [],
+   "rowsAdded": [],
+   "andWHATTOREAUTHOR": "only the 1 named above; the other 24 are unchanged and anything authored against them still lands",
+   "PER_ROW_DIGEST_NOW": [
+    {
+     "itemId": "gen-vr-05-hidden-word-01",
+     "rowSha256": "94138b57c04e01d9b72eb3a7012390d10f95dbedc7487f5e25432d60f0aa17ae",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-05-hidden-word-02",
+     "rowSha256": "990a0ea33cff8d4f782b117740f270ac75ddcf3b515cb26a72b307f8daa6184d",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-05-hidden-word-03",
+     "rowSha256": "cc01610f45914cce9a8dd55b902fafe4d55813cc3128d95c13cbc23aa83a6870",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-05-hidden-word-04",
+     "rowSha256": "be5f3ce3fd06eb62c36926b811aeba2b0165c2c52044544f333517da0a9f0b4e",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-05-hidden-word-05",
+     "rowSha256": "207a723a09e2843ea49879beb47fe42d78197c0a1ece00b5e4ea65fd35564c1b",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-05-hidden-word-06",
+     "rowSha256": "a15d2a86fbef2a8bf22c9588254d33aa5b9b96d0cf448e8350b34744cdf0dbec",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-05-hidden-word-07",
+     "rowSha256": "0e3b44f96ea4a9449483f97a00684b4b607962a012e27a81a98fa5ee84e468b2",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-05-hidden-word-08",
+     "rowSha256": "068e206d94870993dba18c69f457571b163528aa4af5988560971d52f8c725e9",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-05-hidden-word-09",
+     "rowSha256": "1c83b9bbfe77e5abc4a64233af30960e02d32200718459ee194432fb404779df",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-05-hidden-word-10",
+     "rowSha256": "de16deacfb40ad23cab1620b43bced06e826b33a1f6fe7bd69ccbc95c9d38885",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-05-hidden-word-11",
+     "rowSha256": "a9602357e37f442838ecee147eae7565e493f78b46419e54368b489440fc5f77",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-05-hidden-word-12",
+     "rowSha256": "eef48e8ccd6bd1320f0d6eb1f53111103e29932ad33f30c98d7116fb097200a9",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-05-hidden-word-13",
+     "rowSha256": "9d1831062001a0b3c1be6dbde64003e14dc99bee511747882473e4b2efcbccdc",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-05-hidden-word-14",
+     "rowSha256": "c3a95715eceedfc9f039448debb6ea6c4b137fb2dae2e233207c6b14c8a16874",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-05-hidden-word-15",
+     "rowSha256": "a3dffcad1d3f59cf0011b298da4fef3647607231230cc6b85873a43d5473e4e3",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-05-hidden-word-16",
+     "rowSha256": "2eac5374bf758510ea9444508058e6fe711a5ea8aaf161eb2c43e7114c7c07ed",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-05-hidden-word-17",
+     "rowSha256": "66c63f28d0f99de4fb9ab82706f77ba8f941e54ade97c3c197c43bcb07850936",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-05-hidden-word-18",
+     "rowSha256": "0db592672fc4deb155a0befe7558038ba0e4c5110d5a43d146cf073060f5f976",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-05-hidden-word-19",
+     "rowSha256": "ac77d9903e6324567a1b2e80162b66d87b5940881b93bedd186a14757cb41d3e",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-05-hidden-word-20",
+     "rowSha256": "43bb2ac2db142b1924756198f850ab38b024b55eaf8b1ce7a10b9b4fd9143d82",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-05-hidden-word-21",
+     "rowSha256": "7355df23ba6ffd6c8972931ccbff3ea6818d46a65c57a3b8cfb5e7426b6a9ed8",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-05-hidden-word-22",
+     "rowSha256": "c87da00482b1d80561ae41c1dee8e8be5e8c8a766521cc6267d62ae955b5c1f2",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-05-hidden-word-23",
+     "rowSha256": "266e8d206b8f4ee403ad8a1a8933ee87a687729f227b23f27dfa08d633898f7f",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-05-hidden-word-24",
+     "rowSha256": "6d745a550764b037d1dda5730f0e8b67bdcf977439f64f0b641d6a0d4df6937b",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-05-hidden-word-25",
+     "rowSha256": "81c1dc6b35fa2cbb4c176579d480e68e5b312d34ac62fd15d6a8564a17619932",
+     "movedSincebb6be0d3": false
+    }
+   ]
+  },
+  {
+   "caseId": "case-vr-08",
+   "questionType": "vr-08-move-letter",
+   "BINDING": "SUPERSEDED — bb6be0d3 no longer describes these rows",
+   "caseDigestNOW": "b4d9e7a1fe88381a5d5fe72da1665ba66aabdd90d747544fc52d1204bc8cd946",
+   "caseDigestAS_bb6be0d3_RECORDED_IT": "cdbabae30efdfff7d2ea20293984cc2272d9ce2bfaf218c97f9f2c83060ea7a5",
+   "rowsInThePopulation": 25,
+   "rowsHereNow": 38,
+   "rowsMoved": 0,
+   "movedIds": [],
+   "rowsGone": [],
+   "rowsAdded": [
+    "seed-vr08-01",
+    "seed-vr08-02",
+    "seed-vr08-03",
+    "seed-vr08-04",
+    "seed-vr08-05",
+    "seed-vr08-06",
+    "seed-vr08-07",
+    "seed-vr08-08",
+    "seed-vr08-09",
+    "seed-vr08-10",
+    "seed-vr08-11",
+    "seed-vr08-12",
+    "seed-vr08-13"
+   ],
+   "andWHATTOREAUTHOR": "only the 0 named above; the other 25 are unchanged and anything authored against them still lands",
+   "PER_ROW_DIGEST_NOW": [
+    {
+     "itemId": "gen-vr-08-move-letter-01",
+     "rowSha256": "2c61cdc75665a7ea68763853b2c83b02ec991627b601b7a4a590b41c9cb5f537",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-08-move-letter-02",
+     "rowSha256": "fd18eb8a078b3af6c7c90a05ff902de9ac5bb8fd73b52a564c46e158d2197131",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-08-move-letter-03",
+     "rowSha256": "97f5e72783a36d967d1df62a14968d9dba20b15ef12851076bfa6216a022ae16",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-08-move-letter-04",
+     "rowSha256": "9a591db52238cd3e834d47966f8871cc698b711aa447671ced495038a1b42f0e",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-08-move-letter-05",
+     "rowSha256": "0a0e0238fc0bbcf7172949e028e3dbc380a83602a6b681f96666269dd9439443",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-08-move-letter-06",
+     "rowSha256": "c8aefb9a00e8d8296e7fc274d270da6ea384bd25e1a241dabb8a5f9496f4a918",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-08-move-letter-07",
+     "rowSha256": "52d59bcd993c7b5b7b2ccb47c8cdd33d0196a147ebd59c26a75616885346c684",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-08-move-letter-08",
+     "rowSha256": "921ffc203119f253ca428db43491b789abdc53b7088d432f2334930a9141e40f",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-08-move-letter-09",
+     "rowSha256": "e2d627da672598dc8d61317dc3337a54b482b0da3dc0254ef1807e96bf19c017",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-08-move-letter-10",
+     "rowSha256": "223d757695c6095a2ce41762ea95e8d08b7dc6cca25d02f2bfd68c1e5a228f45",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-08-move-letter-11",
+     "rowSha256": "fcba16659d0b9b8a1c8f7a6c5f34f26c69e6829215455f87d33e6e778a437a59",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-08-move-letter-12",
+     "rowSha256": "99ba6be1c98739890809493e718442cc80c2231821935eb2616dee5e0ee95117",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-08-move-letter-13",
+     "rowSha256": "2c61cdc75665a7ea68763853b2c83b02ec991627b601b7a4a590b41c9cb5f537",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-08-move-letter-14",
+     "rowSha256": "fd18eb8a078b3af6c7c90a05ff902de9ac5bb8fd73b52a564c46e158d2197131",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-08-move-letter-15",
+     "rowSha256": "97f5e72783a36d967d1df62a14968d9dba20b15ef12851076bfa6216a022ae16",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-08-move-letter-16",
+     "rowSha256": "9a591db52238cd3e834d47966f8871cc698b711aa447671ced495038a1b42f0e",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-08-move-letter-17",
+     "rowSha256": "0a0e0238fc0bbcf7172949e028e3dbc380a83602a6b681f96666269dd9439443",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-08-move-letter-18",
+     "rowSha256": "c8aefb9a00e8d8296e7fc274d270da6ea384bd25e1a241dabb8a5f9496f4a918",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-08-move-letter-19",
+     "rowSha256": "52d59bcd993c7b5b7b2ccb47c8cdd33d0196a147ebd59c26a75616885346c684",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-08-move-letter-20",
+     "rowSha256": "921ffc203119f253ca428db43491b789abdc53b7088d432f2334930a9141e40f",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-08-move-letter-21",
+     "rowSha256": "e2d627da672598dc8d61317dc3337a54b482b0da3dc0254ef1807e96bf19c017",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-08-move-letter-22",
+     "rowSha256": "223d757695c6095a2ce41762ea95e8d08b7dc6cca25d02f2bfd68c1e5a228f45",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-08-move-letter-23",
+     "rowSha256": "fcba16659d0b9b8a1c8f7a6c5f34f26c69e6829215455f87d33e6e778a437a59",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-08-move-letter-24",
+     "rowSha256": "99ba6be1c98739890809493e718442cc80c2231821935eb2616dee5e0ee95117",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-08-move-letter-25",
+     "rowSha256": "2c61cdc75665a7ea68763853b2c83b02ec991627b601b7a4a590b41c9cb5f537",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "seed-vr08-01",
+     "rowSha256": "f70b728036dd757e121ef975aa46d0ad0679c61a77176fa487bbcfe54b302651",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "seed-vr08-02",
+     "rowSha256": "39255be7eb9a85852ed43900cd3ebb5ca06ebfdd381fb1878e84a85cae37d1c5",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "seed-vr08-03",
+     "rowSha256": "d0700eb26cb5c807b1b64faeb6b1b3d5300b90d42a98d4fa2e16a3b0f0f5fee0",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "seed-vr08-04",
+     "rowSha256": "40c0dc274d8e0ce2681c47cfb85d8b87e02b9f6da4e842a9c9d4069a373a83b0",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "seed-vr08-05",
+     "rowSha256": "7363be6d29ac068e410fb532ad6bf67e6eb074952a152272ed535f21d7fe464c",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "seed-vr08-06",
+     "rowSha256": "ed5ab68ca1494f3a8db9100bf42b10a030bdf3a77a34f615f13e0cca63a1db6c",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "seed-vr08-07",
+     "rowSha256": "eef2445139638a01519950227b1fb964c8167aee8d75c0f3cfab474f6f73e78e",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "seed-vr08-08",
+     "rowSha256": "f6ea7619734e88f6dd93e3f0e226ff88e7d822fc76f943bdaf8f51b7c3bf5a4c",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "seed-vr08-09",
+     "rowSha256": "865a6cbc55e969a9d01a4651f58b15a4272af7fec490ad6ea1e751044f183468",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "seed-vr08-10",
+     "rowSha256": "7898003b774fc5cf5ee5ce3b24d6f7746c13be32aa1dc52702ed77dfc08cc5c4",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "seed-vr08-11",
+     "rowSha256": "631f8d86f470d9ba0bf4c2ce5458128ffa3fde5c5e33516dcb71aca559a039ec",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "seed-vr08-12",
+     "rowSha256": "24b684769e9bd8cd851061b2ff93ec47ca4fb78f46fe35e866cb65407cb7b78d",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "seed-vr08-13",
+     "rowSha256": "a87c4e47da955a8e8e334617d0aa78e0589be04f8868058c9c468dab4c55461b",
+     "movedSincebb6be0d3": false
+    }
+   ]
+  },
+  {
+   "caseId": "case-vr-10",
+   "questionType": "vr-10-word-connections",
+   "BINDING": "BOUND — bb6be0d3 is still exact for this case",
+   "caseDigestNOW": "684b18aafc4ee15c04661ab94fbc0b65bc2e0e04aa93f0a984d00bafa5c5fe93",
+   "caseDigestAS_bb6be0d3_RECORDED_IT": "684b18aafc4ee15c04661ab94fbc0b65bc2e0e04aa93f0a984d00bafa5c5fe93",
+   "rowsInThePopulation": 25,
+   "rowsHereNow": 25,
+   "rowsMoved": 0,
+   "movedIds": [],
+   "rowsGone": [],
+   "rowsAdded": [],
+   "andWHATTOREAUTHOR": "nothing — anything authored against bb6be0d3 for this case still lands",
+   "PER_ROW_DIGEST_NOW": [
+    {
+     "itemId": "gen-vr-10-word-connections-01",
+     "rowSha256": "a6c8866479e1492600b044df731ccb27be3910dc59eaa2fa43d203a7b945b096",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-10-word-connections-02",
+     "rowSha256": "d67148b471a45e2b85e4ec7ed3e3bb8be096d709f596575160d8132de4444c54",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-10-word-connections-03",
+     "rowSha256": "700c031e49520ef8d6c9e40186ff0961a13046fc0f8a679d6c363a57de830bd8",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-10-word-connections-04",
+     "rowSha256": "c821e04f739bb339dfb4d27e8a71324901c6e59d518f43778c980c20e666cab1",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-10-word-connections-05",
+     "rowSha256": "f0577a415416915d2dc7c0bfb9315e6ae45b2a26d6751e06ad3a134cd78f9980",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-10-word-connections-06",
+     "rowSha256": "78882f5cbc1068f2a72d10cb4efd4df5b1c6aba765ca6cf514e5de2c14d53213",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-10-word-connections-07",
+     "rowSha256": "18bd4b30505bebcaae785d20c6cd94d38060976ed45bbdc4a0cab02a0875c145",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-10-word-connections-08",
+     "rowSha256": "4378cacde4d28ca38782d9ea227ec09788718bfc320dd0bb772730d9a9a420a3",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-10-word-connections-09",
+     "rowSha256": "607dbbbcfc0afe4eb7ae5dd6bc0c7844e446bbf1aa76b233c4463e224b7ab0d7",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-10-word-connections-10",
+     "rowSha256": "96d1d2803f09d1242053b1b03a443c25e807bbfc93aec90587934b314575fa3c",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-10-word-connections-11",
+     "rowSha256": "3b8c79844e4f4b2cb106fa01dc274329c53f17d56b105eaab0ef9b004d1fd50d",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-10-word-connections-12",
+     "rowSha256": "0329073f2df7b7a5f2478b29a037644d5186b3e75965d052eff50a1c5bec019f",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-10-word-connections-13",
+     "rowSha256": "c2af08deb1ec3d50c8a354f2fc3116a7ee2ea145e61e78cb4c6be24a3cee10fc",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-10-word-connections-14",
+     "rowSha256": "31ee0ad4ab75666cc220d3421cec27de5c90d7d1d1ff2784739c6345a277f9da",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-10-word-connections-15",
+     "rowSha256": "fa74bd7e3e1c8afebba20cee76f39c3cc91b004d0fdb960b0b9e94d56a6f145a",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-10-word-connections-16",
+     "rowSha256": "fad939322dffc77c645114e05fe05e86b4a89c0d2e7ce2fda5d239791396fc4e",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-10-word-connections-17",
+     "rowSha256": "4357c3109e6be0aa43aba72f398fdf6bd11b1741aed23fbcd878d84bc3a83765",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-10-word-connections-18",
+     "rowSha256": "e1a83f0c47b8d7b64174fb1dfa11dc41becd57485a8df9e798e3cdcc83487165",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-10-word-connections-19",
+     "rowSha256": "35b7abcd7b46e4e13b60480230ba7b49d980a001646dd8c1cbc6384e2358fcd9",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-10-word-connections-20",
+     "rowSha256": "dfc3bd1dd51580b7911c755e727d0bf8a45773239658c6f6eb75b01e96156aea",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-10-word-connections-21",
+     "rowSha256": "45b8a8bca5e86071dce97a45147708953575d0f8b869b62545be64fd84a86275",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-10-word-connections-22",
+     "rowSha256": "4edcb4eb683a4a39b32f352820888f606f1e2f076a1709b0d97878508bdaab97",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-10-word-connections-23",
+     "rowSha256": "96c24273c5de64f85ec7428b70529682b5ef9643a964aa35fe0e17fd8517d974",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-10-word-connections-24",
+     "rowSha256": "02bf103ba80ebb6cdd759ee3593671a36e4deefa4ab41b17ba3ee271936fb54e",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-10-word-connections-25",
+     "rowSha256": "43e4faefa51f60252f25b47592df94ac45e528975d18dceda8a7fccb17cb4f28",
+     "movedSincebb6be0d3": false
+    }
+   ]
+  },
+  {
+   "caseId": "case-vr-13",
+   "questionType": "vr-13-make-a-word",
+   "BINDING": "BOUND — bb6be0d3 is still exact for this case",
+   "caseDigestNOW": "64640e339b84eb61734c243f9f1abbe9e128a67e0ac670c78423ec9fca0ff099",
+   "caseDigestAS_bb6be0d3_RECORDED_IT": "64640e339b84eb61734c243f9f1abbe9e128a67e0ac670c78423ec9fca0ff099",
+   "rowsInThePopulation": 25,
+   "rowsHereNow": 25,
+   "rowsMoved": 0,
+   "movedIds": [],
+   "rowsGone": [],
+   "rowsAdded": [],
+   "andWHATTOREAUTHOR": "nothing — anything authored against bb6be0d3 for this case still lands",
+   "PER_ROW_DIGEST_NOW": [
+    {
+     "itemId": "gen-vr-13-make-a-word-01",
+     "rowSha256": "f75f28584c3d1b259eb24086e9dc07e45b5ee611fd971ca838944bbfb09eda12",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-13-make-a-word-02",
+     "rowSha256": "9b775515c315368189161ffd8d76d25f8c99b2ea326048e85eef7cf8f3402fa3",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-13-make-a-word-03",
+     "rowSha256": "48c17a7af953095bcad6823a88cada8ad223558e75bb41a10f0f6f007688b3d5",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-13-make-a-word-04",
+     "rowSha256": "e15e7d6eb11cb4d64bb38a1c55027ac4e28a9b6b4220acbdd16cd5022a9a54af",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-13-make-a-word-05",
+     "rowSha256": "d53ee31d4464eb94b8139a209cbbc36ff620937dfe442b7ab9c9c32256f86f8f",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-13-make-a-word-06",
+     "rowSha256": "369739e04443c96bff002070bad250f001cb5629722c4eca17597d3d3c76a961",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-13-make-a-word-07",
+     "rowSha256": "41c3e97a73c33d2deedd13ddaccca3e12c0a12ad1d365b793ebf96adc20b5743",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-13-make-a-word-08",
+     "rowSha256": "ad525cd264d0eb455909d294171b8580894698494833c71771de0d3500dde826",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-13-make-a-word-09",
+     "rowSha256": "185f66c7a4b6438dd269773f24c1d68094bf042c678e59fd11d78c8d1f521333",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-13-make-a-word-10",
+     "rowSha256": "eac11ea60ec6b6871011139f3d02b5d8d8f8d30bb6b7664838cb278acf2bd108",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-13-make-a-word-11",
+     "rowSha256": "e5ee024462ccc38d2fa5741c0dec9f26baab0e71fb41224fa6a5816eb67576f0",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-13-make-a-word-12",
+     "rowSha256": "1d46ca88c278d468ab788898d2ff7a56ada4e00f87d1d3de35b6a89d07264ce1",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-13-make-a-word-13",
+     "rowSha256": "7d188a69e99f6555d914d8397c4b8c03183e502557c2afad20424c38f94f9db9",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-13-make-a-word-14",
+     "rowSha256": "5ca2a9d69a2b2b52dda8f4f76158bb23c3fb60a34d632e5aee2027c3b36a42f7",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-13-make-a-word-15",
+     "rowSha256": "5751d9efaab2cf26c0c3e1c705df55c3cdf3f4090eaed5184610f95d32b68a43",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-13-make-a-word-16",
+     "rowSha256": "feb888003dded8a94679d7ea2eadc45fe2d393bae3e48886d6cefb10209c438b",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-13-make-a-word-17",
+     "rowSha256": "d25751cbee1d89fa4c9d47716df21bc1ac8538e99d16a5a52bd15e071ed5c4aa",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-13-make-a-word-18",
+     "rowSha256": "ddf59338dd7f3742f28bbb09b30f6914da107ff6a878b85a223e0aa5b84f8a21",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-13-make-a-word-19",
+     "rowSha256": "032284800d7b5033359ad1a7b31bd45fd54b38a274b1283189d7c84b8032690d",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-13-make-a-word-20",
+     "rowSha256": "1841864878cc4abdd9441d3e4de86a20dfe673a15b14640d26a1d48256470189",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-13-make-a-word-21",
+     "rowSha256": "a397e6691107122981958b8d02fc00c7218322eabfb23bd43a034821d6d1e84a",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-13-make-a-word-22",
+     "rowSha256": "1dd118dc14f5062d33adcba2069eb0218774c6e930e5afb3f66ade29313ac8e2",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-13-make-a-word-23",
+     "rowSha256": "50dab95ae67c24a04a3e0443ca4f39d0aa28b61138462efe434ac36d48dc430c",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-13-make-a-word-24",
+     "rowSha256": "7b4dd01059d3becd7832d3150b99fa2875bd93b41edd4fe3be723ca87b586d93",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-13-make-a-word-25",
+     "rowSha256": "c4ef8818525c322c813c495ad5e775797e19230a30a6ca29f6b5fad7c2b25202",
+     "movedSincebb6be0d3": false
+    }
+   ]
+  },
+  {
+   "caseId": "case-vr-16",
+   "questionType": "vr-16-opposite-meaning",
+   "BINDING": "BOUND — bb6be0d3 is still exact for this case",
+   "caseDigestNOW": "dbd18dd6cb6d7d5059c9ca914b32c07ea82c876860dbc0537e7280fbec2229b5",
+   "caseDigestAS_bb6be0d3_RECORDED_IT": "dbd18dd6cb6d7d5059c9ca914b32c07ea82c876860dbc0537e7280fbec2229b5",
+   "rowsInThePopulation": 25,
+   "rowsHereNow": 25,
+   "rowsMoved": 0,
+   "movedIds": [],
+   "rowsGone": [],
+   "rowsAdded": [],
+   "andWHATTOREAUTHOR": "nothing — anything authored against bb6be0d3 for this case still lands",
+   "PER_ROW_DIGEST_NOW": [
+    {
+     "itemId": "gen-vr-16-opposite-meaning-01",
+     "rowSha256": "b076ab040a9781b07472bb09fe3b0beb85b24043743519bfbd08d5c174367a48",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-16-opposite-meaning-02",
+     "rowSha256": "45ec0e5c141e173dbc385f66d46eee6fc21900b912cf8367212931cf574cbf70",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-16-opposite-meaning-03",
+     "rowSha256": "ee7ad56e037c5a93bd83f552dc17d4b0839d13fc3fd72b7fb4ef7c9e97e91803",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-16-opposite-meaning-04",
+     "rowSha256": "06c477dd226fd1d57333601a1da7b9a04d6ba0707f0904620d623600af5dfb5b",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-16-opposite-meaning-05",
+     "rowSha256": "ca1b98a2f36c39e18e06415af1ecfe5df55d7d3620c071a40163725d41c4578a",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-16-opposite-meaning-06",
+     "rowSha256": "2bfa30934b60cd138a72907a605cda4257df4d4065e18009ea1b057e5d0ee33a",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-16-opposite-meaning-07",
+     "rowSha256": "5ee6deb2ec0e536d289142de0ed1a04947a4b157b67668f85639ba8e59ab3eea",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-16-opposite-meaning-08",
+     "rowSha256": "7d6d5609ee9d636d1ae358a1dff08767b4bffefaea923b7b81055709e049df4b",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-16-opposite-meaning-09",
+     "rowSha256": "3035b1e2899a4b9ca3467fce6315423595a2db1c64bbc73eda43844582b986d9",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-16-opposite-meaning-10",
+     "rowSha256": "68ceac63ff02d81a98b88582471bf97c06be3bd2ffcb59f31c35e21c7e380870",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-16-opposite-meaning-11",
+     "rowSha256": "86413f5693e05c2570d21fd7a6a7cc67caa08b31821943faae61d49710f99f9b",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-16-opposite-meaning-12",
+     "rowSha256": "25c47dd71fa432e8fe35bd31bd4a9fe5c2b195628c703526cc66348b1f6144af",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-16-opposite-meaning-13",
+     "rowSha256": "2fae088ee072ce7393d035099b22fb4deafef782bc91b52ae31a538e3d6812f5",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-16-opposite-meaning-14",
+     "rowSha256": "ab38350b64ab8508ecb2746836435d831e71fceeb8f484249f1b094b374c4ec9",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-16-opposite-meaning-15",
+     "rowSha256": "7a9120e6dbc10698885a02a4fb2b213cbe790ad5c1a8b660ecbdf57739b89cf2",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-16-opposite-meaning-16",
+     "rowSha256": "38f9422d3fa35c905aadb75ffa59e0de252f68bb90e81bfe18b48a15c81962a2",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-16-opposite-meaning-17",
+     "rowSha256": "4acb2896ccfdb34de180324ec8c8f3ae4e91b0294c30d8c88b9253dcf9ca2bb6",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-16-opposite-meaning-18",
+     "rowSha256": "4bebd1c752dadda267eb1400b5e8f35d4691f7cb1cd8a11353a6efb312f37f67",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-16-opposite-meaning-19",
+     "rowSha256": "a211fb0f42bee2154645bc0d9dc4d8ac941fe4599855404c2488eb085acd38f4",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-16-opposite-meaning-20",
+     "rowSha256": "59cb8d72c1b3cdda0ca6bd557a4da7430644282cc1cf161459b738dc34e0d9db",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-16-opposite-meaning-21",
+     "rowSha256": "10d5a4dd8fcb246e4a2915b4111cb37e4f5452e8b204d46fe4cbdb5b44d7fde0",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-16-opposite-meaning-22",
+     "rowSha256": "731b3d99bd506da8e5d13792e074fa6a3cae288af2231cb99155a3d9ec7cf631",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-16-opposite-meaning-23",
+     "rowSha256": "cf7427fd320a81553609f1d7d5cbfff188d568db9ff969c6cc42017e97e60825",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-16-opposite-meaning-24",
+     "rowSha256": "1d91178ba651014ff88d831a0b378c81f3600efea6b32f5bf26873b04209915b",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-16-opposite-meaning-25",
+     "rowSha256": "3e891009a3577c9c4717b0c8e0362e1c65f2e99bec0a9909e9fcfb90f9e69380",
+     "movedSincebb6be0d3": false
+    }
+   ]
+  },
+  {
+   "caseId": "case-vr-17",
+   "questionType": "vr-17-complete-the-sum",
+   "BINDING": "SUPERSEDED — bb6be0d3 no longer describes these rows",
+   "caseDigestNOW": "04d2ea374a7fc9e0238cd2d8525e7eb376398625b0dd11f8cc277ae156240c30",
+   "caseDigestAS_bb6be0d3_RECORDED_IT": "3efb24e76ea6518d1c29fc5aa3c65fcd6895e0843bb0c2c3ef4e20540eb517ff",
+   "rowsInThePopulation": 25,
+   "rowsHereNow": 25,
+   "rowsMoved": 25,
+   "movedIds": [
+    "gen-vr-17-complete-the-sum-01",
+    "gen-vr-17-complete-the-sum-02",
+    "gen-vr-17-complete-the-sum-03",
+    "gen-vr-17-complete-the-sum-04",
+    "gen-vr-17-complete-the-sum-05",
+    "gen-vr-17-complete-the-sum-06",
+    "gen-vr-17-complete-the-sum-07",
+    "gen-vr-17-complete-the-sum-08",
+    "gen-vr-17-complete-the-sum-09",
+    "gen-vr-17-complete-the-sum-10",
+    "gen-vr-17-complete-the-sum-11",
+    "gen-vr-17-complete-the-sum-12",
+    "gen-vr-17-complete-the-sum-13",
+    "gen-vr-17-complete-the-sum-14",
+    "gen-vr-17-complete-the-sum-15",
+    "gen-vr-17-complete-the-sum-16",
+    "gen-vr-17-complete-the-sum-17",
+    "gen-vr-17-complete-the-sum-18",
+    "gen-vr-17-complete-the-sum-19",
+    "gen-vr-17-complete-the-sum-20",
+    "gen-vr-17-complete-the-sum-21",
+    "gen-vr-17-complete-the-sum-22",
+    "gen-vr-17-complete-the-sum-23",
+    "gen-vr-17-complete-the-sum-24",
+    "gen-vr-17-complete-the-sum-25"
+   ],
+   "rowsGone": [],
+   "rowsAdded": [],
+   "andWHATTOREAUTHOR": "every row: all 25 moved",
+   "PER_ROW_DIGEST_NOW": [
+    {
+     "itemId": "gen-vr-17-complete-the-sum-01",
+     "rowSha256": "c923b9f281f5c2a4f7a1aeca2ad8928abdb98c1ef2e79d4f36228c18daa818f4",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-17-complete-the-sum-02",
+     "rowSha256": "f6d3f0b54893fc0b600cce629aece8f80982a4345e2e4aa77c8c2f0d6c992a47",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-17-complete-the-sum-03",
+     "rowSha256": "8401ac4d0cab29267e514509f2a1661f8e1e2a8d0f8c9bb1b2791b8150615a74",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-17-complete-the-sum-04",
+     "rowSha256": "a607734d936f1d64d03796f6b855d3a6b756189e9d5c2484ca6c9418238ab090",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-17-complete-the-sum-05",
+     "rowSha256": "c744da067b80850af80ba61da3103e19d23af15140280dfe287544c32570269b",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-17-complete-the-sum-06",
+     "rowSha256": "4a032d2ae4ef5e56969d546c1a5482ae433e4aa7258773d76c18b7ba141f576b",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-17-complete-the-sum-07",
+     "rowSha256": "9e1aaba24f6a0d52a6f6d1d59ecc015d43ee715d7eeaa2b8a3a91088f1e28ad4",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-17-complete-the-sum-08",
+     "rowSha256": "d6138f57f8599f56bf9367a85aad8c4e5a22307dcc73ed5e804bb4c744fcdd1c",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-17-complete-the-sum-09",
+     "rowSha256": "5d401bdc5dafca0efcd02c61807527609d1bc7b5df9754a432bcb910f214b64f",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-17-complete-the-sum-10",
+     "rowSha256": "ff86cdfa1345743861818724bdfd0b0ff6efb2a96c4e0346bca2f44ca0acd21e",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-17-complete-the-sum-11",
+     "rowSha256": "aab94560edc3e48f144bb590d24cb8bb3c1c300b4d224bf63a39e73767dad5f8",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-17-complete-the-sum-12",
+     "rowSha256": "7bb7625d699c0fda256141d41529a048c6059e08b2fc3d9681974195921e7ab7",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-17-complete-the-sum-13",
+     "rowSha256": "3a9f4f58f663ff40400f1ee0e52958779eaeb4e30d6345e9f16e3f192e5fdbd1",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-17-complete-the-sum-14",
+     "rowSha256": "5772e308c904bfad5eab64a2ac9d7d531ea2ad3fa9424fe9375b90bf0b038612",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-17-complete-the-sum-15",
+     "rowSha256": "fd2073334584851b759d36dff49e7d26f315454bd9373d23c9f347f4e0eee939",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-17-complete-the-sum-16",
+     "rowSha256": "672803b1e6b23164594d6c5e00309ef6cbf30e736c343b91e4ba079452242ce1",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-17-complete-the-sum-17",
+     "rowSha256": "a4320d5ba491364867362ff6928b96056da07ca93be8940d2bcabf7d6ee542af",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-17-complete-the-sum-18",
+     "rowSha256": "1a06f198e4098ff60a16a8f9fe430c197bf4bed03a8caee1f0b701feb533edb5",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-17-complete-the-sum-19",
+     "rowSha256": "ab090895955e6eb49f01565928b4a1e16609851d53d62411a45431e9f49c4ab3",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-17-complete-the-sum-20",
+     "rowSha256": "e808dbe7e37ee80ef4948c01a1ceabe890caaa4235636662adfc430dc2a4447d",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-17-complete-the-sum-21",
+     "rowSha256": "cf6b17b94bb0f742896abc292c4f7694c808a559ce86aa9a489d701e2ca019f7",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-17-complete-the-sum-22",
+     "rowSha256": "348130591399fc545d6cf2fa3ef738c219fd3e481c358e43845679db4c250a9e",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-17-complete-the-sum-23",
+     "rowSha256": "e0508c9b585cdab6fb4aac92dae219eba122e8174279a79d49aaf9b890030763",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-17-complete-the-sum-24",
+     "rowSha256": "d14689a6b0b28058cccb58df3c588a7ac4f9967686791b9c00dc8ec4af41c6ef",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-17-complete-the-sum-25",
+     "rowSha256": "d59ec51b202cc6db6f47831996680b03edda206a78faba74ef82ef9aecdddfee",
+     "movedSincebb6be0d3": true
+    }
+   ]
+  },
+  {
+   "caseId": "case-vr-18",
+   "questionType": "vr-18-related-numbers",
+   "BINDING": "SUPERSEDED — bb6be0d3 no longer describes these rows",
+   "caseDigestNOW": "67fe6f3672340afa2937f2226224f0af8ac8474ae1a230f3d3b2f6bce7101caf",
+   "caseDigestAS_bb6be0d3_RECORDED_IT": "509973bba5d2b9c9e10cb6c9343124eb1eda3ace78d4cbe9271ac58a9ff823a5",
+   "rowsInThePopulation": 25,
+   "rowsHereNow": 25,
+   "rowsMoved": 25,
+   "movedIds": [
+    "gen-vr-18-related-numbers-01",
+    "gen-vr-18-related-numbers-02",
+    "gen-vr-18-related-numbers-03",
+    "gen-vr-18-related-numbers-04",
+    "gen-vr-18-related-numbers-05",
+    "gen-vr-18-related-numbers-06",
+    "gen-vr-18-related-numbers-07",
+    "gen-vr-18-related-numbers-08",
+    "gen-vr-18-related-numbers-09",
+    "gen-vr-18-related-numbers-10",
+    "gen-vr-18-related-numbers-11",
+    "gen-vr-18-related-numbers-12",
+    "gen-vr-18-related-numbers-13",
+    "gen-vr-18-related-numbers-14",
+    "gen-vr-18-related-numbers-15",
+    "gen-vr-18-related-numbers-16",
+    "gen-vr-18-related-numbers-17",
+    "gen-vr-18-related-numbers-18",
+    "gen-vr-18-related-numbers-19",
+    "gen-vr-18-related-numbers-20",
+    "gen-vr-18-related-numbers-21",
+    "gen-vr-18-related-numbers-22",
+    "gen-vr-18-related-numbers-23",
+    "gen-vr-18-related-numbers-24",
+    "gen-vr-18-related-numbers-25"
+   ],
+   "rowsGone": [],
+   "rowsAdded": [],
+   "andWHATTOREAUTHOR": "every row: all 25 moved",
+   "PER_ROW_DIGEST_NOW": [
+    {
+     "itemId": "gen-vr-18-related-numbers-01",
+     "rowSha256": "003851a8cf2902797d420f7c26f18b6a3a8d383d40337a4eec50b1047633fdaf",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-18-related-numbers-02",
+     "rowSha256": "0ca858f4298cb00a8074ae05ebdc3acc847ac07a3a8cd3e8cdbc2e10caadf0a8",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-18-related-numbers-03",
+     "rowSha256": "24849ee4cb62ee017c5aa3a1d32e3b5306a51185c222fbd556271f01c5db283e",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-18-related-numbers-04",
+     "rowSha256": "6e8be86b3ad973aaed0355efa0b476f948779a23f7f32d579f4c1b9b0f0ed073",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-18-related-numbers-05",
+     "rowSha256": "ab39e8614ec6de87a015b18ddb48577f29cd8d0989cbdea80dca440549704aa2",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-18-related-numbers-06",
+     "rowSha256": "b111f6d6caf64e8960fd4dd7bb5e2e56d29f94fa05812b81f4d61678f6eabdd1",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-18-related-numbers-07",
+     "rowSha256": "2abfe4f42fe84eedb735ffeaa4aefd11a7b86b7d874e884ba3767739e1ac1eac",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-18-related-numbers-08",
+     "rowSha256": "85c88210014d2b062e65a8aaa65c0e26e271692d6d0408ba11e290e9eed1dfb5",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-18-related-numbers-09",
+     "rowSha256": "18e7b3056394fbc39787c20fd26c54b660ee3b790f965addac4ef0fa74bdb86f",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-18-related-numbers-10",
+     "rowSha256": "6000a1cfd409c9e12a6c155317b3980b8ab7ef71038c42992495f84d06b9cb60",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-18-related-numbers-11",
+     "rowSha256": "50832fa9f4db99f63a409461c6a5fb5b8193998ad59bce30fcbc416ee2ea1179",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-18-related-numbers-12",
+     "rowSha256": "1ad8cda1fca9be3afa7d2912b2306f39fceb629310eafd05dc1c6bd615993c46",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-18-related-numbers-13",
+     "rowSha256": "cb8dcf10719daa9ca583530dfa4f60b0d6d7552e27f40dbbc7b5c28413601f24",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-18-related-numbers-14",
+     "rowSha256": "5e0a6bd3aaf43fcd6f979ad12d47969fd3a3290ddcf60dc5b30b1559ea8af272",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-18-related-numbers-15",
+     "rowSha256": "f5b4f565b3f5d7136cbb46c971857851c8150847a567e8f18ca0a8a49affc7e8",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-18-related-numbers-16",
+     "rowSha256": "8151ef01deab554a852d7fa9b1b40d483de0ec982a80efacc51997bb224f3e36",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-18-related-numbers-17",
+     "rowSha256": "c898a3097c5cecf1f9f8ac75658109b64f74e3c91e50bbae87be5e31d8df1e93",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-18-related-numbers-18",
+     "rowSha256": "4ce6f585f158caa7d2a0fd456ec9dce152887379e398cc99df99dc92c76f5cbd",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-18-related-numbers-19",
+     "rowSha256": "c9b6c66ff7f583a015b2535d7117ae50c89e5ce193dfbe8a50bc0b33017f772e",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-18-related-numbers-20",
+     "rowSha256": "e1e6d219b6aba368c1ba1f10078d42fab35e3ce3213340984607fc07abd0aab5",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-18-related-numbers-21",
+     "rowSha256": "34a2a82d8b3257e24e91a96190d23fa175edeecdb5bef3c5bb1e2cf8de55212b",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-18-related-numbers-22",
+     "rowSha256": "b19ff4f04fcef4cd4db13da58ed7d8f748231ca83ef8e4702b7c4e0658a0e5d8",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-18-related-numbers-23",
+     "rowSha256": "d44d690d8365d3e81ab4d572dc155d43e4b28c6115fe2780f41a4e9066a176fd",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-18-related-numbers-24",
+     "rowSha256": "ab92f9e41704067474b5f9b23c99c99e394358958d608894155fb31736afb1f1",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-18-related-numbers-25",
+     "rowSha256": "9d8abbb1a683a6f8a8cafe02964271a4ad38ce9fdb2ce65ce47ab348262399a7",
+     "movedSincebb6be0d3": true
+    }
+   ]
+  },
+  {
+   "caseId": "case-vr-19",
+   "questionType": "vr-19-word-number-codes",
+   "BINDING": "SUPERSEDED — bb6be0d3 no longer describes these rows",
+   "caseDigestNOW": "e68e1401d496172ef7d14ce229f8ced47b69b9d766e5140bd5ef9eddbf09abb0",
+   "caseDigestAS_bb6be0d3_RECORDED_IT": "e65e9b4084ab90995ecb8a7af75c6c6d0b4bc3d0e817baa926cd91d49fc9a570",
+   "rowsInThePopulation": 25,
+   "rowsHereNow": 25,
+   "rowsMoved": 25,
+   "movedIds": [
+    "gen-vr-19-word-number-codes-01",
+    "gen-vr-19-word-number-codes-02",
+    "gen-vr-19-word-number-codes-03",
+    "gen-vr-19-word-number-codes-04",
+    "gen-vr-19-word-number-codes-05",
+    "gen-vr-19-word-number-codes-06",
+    "gen-vr-19-word-number-codes-07",
+    "gen-vr-19-word-number-codes-08",
+    "gen-vr-19-word-number-codes-09",
+    "gen-vr-19-word-number-codes-10",
+    "gen-vr-19-word-number-codes-11",
+    "gen-vr-19-word-number-codes-12",
+    "gen-vr-19-word-number-codes-13",
+    "gen-vr-19-word-number-codes-14",
+    "gen-vr-19-word-number-codes-15",
+    "gen-vr-19-word-number-codes-16",
+    "gen-vr-19-word-number-codes-17",
+    "gen-vr-19-word-number-codes-18",
+    "gen-vr-19-word-number-codes-19",
+    "gen-vr-19-word-number-codes-20",
+    "gen-vr-19-word-number-codes-21",
+    "gen-vr-19-word-number-codes-22",
+    "gen-vr-19-word-number-codes-23",
+    "gen-vr-19-word-number-codes-24",
+    "gen-vr-19-word-number-codes-25"
+   ],
+   "rowsGone": [],
+   "rowsAdded": [],
+   "andWHATTOREAUTHOR": "every row: all 25 moved",
+   "PER_ROW_DIGEST_NOW": [
+    {
+     "itemId": "gen-vr-19-word-number-codes-01",
+     "rowSha256": "37a2f8e01c0a944156c03f69926a10c5d17cb1fefb7a1a67f84d4821e20148f9",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-19-word-number-codes-02",
+     "rowSha256": "f34f461ac498b72c4d3fa9620e8d360bff328991060ab27114fe99bcab965cb6",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-19-word-number-codes-03",
+     "rowSha256": "496bed42761f9207a1a51c6f12e9dc3670cdafe00fe2b2ced60738e0afa99d93",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-19-word-number-codes-04",
+     "rowSha256": "05e906831a6b1530f9e231943db0902d926bc7fc1488b9637b3194d23161d997",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-19-word-number-codes-05",
+     "rowSha256": "c50e5f227228feb9cb15496c339df126db85b1a515ca018f7245ee53eac2f7fb",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-19-word-number-codes-06",
+     "rowSha256": "6672e5a138f9a4d6e2bf298a4020e04856628a838bd7d11b871268269ff0e094",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-19-word-number-codes-07",
+     "rowSha256": "4b621c41fdf8b99328fc83962f423ab66bd5f29432ab207645ebe00154c3f1e9",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-19-word-number-codes-08",
+     "rowSha256": "7c411927e470e07c3480b76e55034ec2378f8d2afb8ea1f34476ef0887b19604",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-19-word-number-codes-09",
+     "rowSha256": "4bfb42d3900044b5351112fbd2af9b23e2f5e5e570a3ec3db0a845ac3931f692",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-19-word-number-codes-10",
+     "rowSha256": "15298027afe8046a77e29147b39c92cc5888975defe86dc87487cdf9b230c994",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-19-word-number-codes-11",
+     "rowSha256": "b2a6e08659e8ae8c7a260f2b69ecfdbdabb34e00a780030e586b55870c882e22",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-19-word-number-codes-12",
+     "rowSha256": "0328cb50fe96e4cbb463e1c7a22be3d43401d23e106292af7e8c7d90e9416bb1",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-19-word-number-codes-13",
+     "rowSha256": "32fb2b54751ed0b86fc0635fe14c47fc262e24fe9e1b3dade69fdf7066b5165d",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-19-word-number-codes-14",
+     "rowSha256": "569f936ea41b46d8d3893eb43a5af8d7694c94d0e8c696b338a5c5382732306b",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-19-word-number-codes-15",
+     "rowSha256": "60a966605d18fca021a81f2ad4d557d990856d6e2e4665d2c0998ae0d0a12e39",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-19-word-number-codes-16",
+     "rowSha256": "db68f7af8b1074387bcb0a371bf351343184672264767dc250395622845555b4",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-19-word-number-codes-17",
+     "rowSha256": "07cdfc58a105f9ee8898cb39ec0a7f6e0068bb9c5183fa26b8cbec30480846dc",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-19-word-number-codes-18",
+     "rowSha256": "c527d0866b057774a1831cfea8e6fd3d5f174ec24a847ed7d470435515b12b37",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-19-word-number-codes-19",
+     "rowSha256": "e26fb8c1619d70190eaf423b3655c4cbe240864c9bc35e3003ce3885559a3442",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-19-word-number-codes-20",
+     "rowSha256": "9245ad5fad4fadfb4af26dac606b2782f597b4ffbfd9e1a9ce0890a7c2b40454",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-19-word-number-codes-21",
+     "rowSha256": "51433cd2b64535256fbc575d036baf9e6839ae7ea7e89c6f27dc152be0078622",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-19-word-number-codes-22",
+     "rowSha256": "97136867c43f43800ed014be1fcfc2cad1f0a03fe5db1410176f25932d583f77",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-19-word-number-codes-23",
+     "rowSha256": "918cbd09c701c156df157f62a483418f7cc9e44adcdfb5fccb4c229b6ba542ef",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-19-word-number-codes-24",
+     "rowSha256": "5ca240adc444b94584101e2a572e7177eea06813f3659b448078332ccd00b39d",
+     "movedSincebb6be0d3": true
+    },
+    {
+     "itemId": "gen-vr-19-word-number-codes-25",
+     "rowSha256": "45445bc9f492d0444ee932253573b1d2b9ad0c6e0854ac0aca10e1b79cff16c7",
+     "movedSincebb6be0d3": true
+    }
+   ]
+  },
+  {
+   "caseId": "case-vr-20",
+   "questionType": "vr-20-complete-the-word",
+   "BINDING": "BOUND — bb6be0d3 is still exact for this case",
+   "caseDigestNOW": "e1a03c85e439e50f557c7da77098b3b8be95d6dd4e135579f110ddd28ea8ca6f",
+   "caseDigestAS_bb6be0d3_RECORDED_IT": "e1a03c85e439e50f557c7da77098b3b8be95d6dd4e135579f110ddd28ea8ca6f",
+   "rowsInThePopulation": 25,
+   "rowsHereNow": 25,
+   "rowsMoved": 0,
+   "movedIds": [],
+   "rowsGone": [],
+   "rowsAdded": [],
+   "andWHATTOREAUTHOR": "nothing — anything authored against bb6be0d3 for this case still lands",
+   "PER_ROW_DIGEST_NOW": [
+    {
+     "itemId": "gen-vr-20-complete-the-word-01",
+     "rowSha256": "8e41afbf79babc699c19a11116348c17fafd9b9f3dbffb7f0c0f0b5e2653b81f",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-20-complete-the-word-02",
+     "rowSha256": "f9e8c6304af5b854b7a84cfcd09f765d282b60203421d2477a1b41b143c4dfb3",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-20-complete-the-word-03",
+     "rowSha256": "9cdad190d684754cd6ee7a0fdd096fbc12ef89edc695dac7f4bcb8b859e317a4",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-20-complete-the-word-04",
+     "rowSha256": "34d6c413354d56aa6333bc773985b08e36fec793d7882ae3cd8c3e4a6ae9d9f6",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-20-complete-the-word-05",
+     "rowSha256": "20bdc9245bc641e32ec6e79b6236ffa79e75a7831b7a07d299deb1bc7e4b9b9b",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-20-complete-the-word-06",
+     "rowSha256": "fe1315a0d92229dd70ff1eb9b222dac1022fc9ef12f4c1a91a89a3caf6afeea0",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-20-complete-the-word-07",
+     "rowSha256": "2935e7f6e7e2dfbf1383753c3935c382e0c0d6cde62a473c52935b46160f35f2",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-20-complete-the-word-08",
+     "rowSha256": "82b556599cfa192a72fc6636d067b41dae25f98ebdeb3a88276f7b67a22e7297",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-20-complete-the-word-09",
+     "rowSha256": "18e862f166d9446e57efe9e5894a2139fa82afa720b544be732013ea71a6465a",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-20-complete-the-word-10",
+     "rowSha256": "55b02b15ccbb47fc30c3cb464bd1feda8da08f5d5b9fd2667f6338fe40b80ba6",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-20-complete-the-word-11",
+     "rowSha256": "4e4b5763ac0278ec5e9f113a93a2a020825bf4d6d65006467170901d0de08b78",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-20-complete-the-word-12",
+     "rowSha256": "d4045a53b01b79bbb27d4b94d3ac42838e99e2dae067123b00f3cf6df502ec8a",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-20-complete-the-word-13",
+     "rowSha256": "4ad0a78b05621c080948e7c1d5b804aa0f5c93b265421bfdfbcd6c551c194e9d",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-20-complete-the-word-14",
+     "rowSha256": "0a9601a6bb65ce947bb0aac0a7c4921612cc90aee27c0b28f15eea439ac5c523",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-20-complete-the-word-15",
+     "rowSha256": "806b443d1a7f2b1f19cd9eb8e0c7a68807a17063c9d185e9849fc12683f0faaf",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-20-complete-the-word-16",
+     "rowSha256": "b5711ada9d4045528d05366114de18dd4b73da4f24103e590057cd87e47845f3",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-20-complete-the-word-17",
+     "rowSha256": "9ad74638fada4da3b3cc05d43a975304fbfb8a0a2f4cfc8d6fbb3532cb470184",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-20-complete-the-word-18",
+     "rowSha256": "3c985186c7a1921411e87917e622683f72bc87205a0d190183ef2b279f1f9250",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-20-complete-the-word-19",
+     "rowSha256": "99df3043f152d95db2b4481a1124323d49f345321bbcc246108ee4b540ba6326",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-20-complete-the-word-20",
+     "rowSha256": "2ee285785a562759bbe1d649f0317e8fe8c10fab293ff19fd5b7b48b2f5587b2",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-20-complete-the-word-21",
+     "rowSha256": "e19f45356ba5585549d7b2b0271c087f3800433641852dc072e0822285f9fd30",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-20-complete-the-word-22",
+     "rowSha256": "0284e2b1b7d5fe7fb12fc8a4d71efb407ef92a56417118618104f3f8d890616c",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-20-complete-the-word-23",
+     "rowSha256": "365c2bc8c5c56f89282e5ca858cd335a488f6d55d021665758d4d2f4e91a046c",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-20-complete-the-word-24",
+     "rowSha256": "9e19bff723fce80fb964334d7be1e70896b4d2dfb5740bd45a842388d6a4eb50",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-20-complete-the-word-25",
+     "rowSha256": "ca471cdca78cd855c4d9987b7bc293b9a7e4f678974f08044f7d875059d03e02",
+     "movedSincebb6be0d3": false
+    }
+   ]
+  },
+  {
+   "caseId": "case-vr-21",
+   "questionType": "vr-21-same-meaning",
+   "BINDING": "BOUND — bb6be0d3 is still exact for this case",
+   "caseDigestNOW": "cb0b9839cd6a5d4f3341e7aed72ab70d83ec19e6f4825029e4e86b8abb00ab67",
+   "caseDigestAS_bb6be0d3_RECORDED_IT": "cb0b9839cd6a5d4f3341e7aed72ab70d83ec19e6f4825029e4e86b8abb00ab67",
+   "rowsInThePopulation": 25,
+   "rowsHereNow": 25,
+   "rowsMoved": 0,
+   "movedIds": [],
+   "rowsGone": [],
+   "rowsAdded": [],
+   "andWHATTOREAUTHOR": "nothing — anything authored against bb6be0d3 for this case still lands",
+   "PER_ROW_DIGEST_NOW": [
+    {
+     "itemId": "gen-vr-21-same-meaning-01",
+     "rowSha256": "9310fc144525d1febaa29f171cb1ea445d1a41bd6854760ec58d50fe5ca3c926",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-21-same-meaning-02",
+     "rowSha256": "e2c17810cc31b979db37b4410809c58fe7813365972ee5c42371037bb44bda8a",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-21-same-meaning-03",
+     "rowSha256": "a4aad738ae81df198fafbb94392d853b34f5a2b59637bea644571a80cef870fa",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-21-same-meaning-04",
+     "rowSha256": "b100d0b1771813701aca0551c1bdf1feaa7bed8cb9978764a060f2acadd7117f",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-21-same-meaning-05",
+     "rowSha256": "8c69ebd590c1ed215c1fa10a92ea883596a907afc86f94e96ea94aa7557a8969",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-21-same-meaning-06",
+     "rowSha256": "3efa7b6f03187b3ba8d48be364187bf0361b969a458cc1e5da4ce859092eb49e",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-21-same-meaning-07",
+     "rowSha256": "8f794277ea55ac9ec61aa1bbc1d127288c48210d7dcd8a6926354753608c1eba",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-21-same-meaning-08",
+     "rowSha256": "850bf273b34327c319489e33cf19bae418e245cb322c5d24c4e032e6abb396b0",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-21-same-meaning-09",
+     "rowSha256": "7664cc08a83ee71cf777a1bb33889f8ea37e9b7c62953f0164cce9f38e79daa4",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-21-same-meaning-10",
+     "rowSha256": "19f926bf06d6c506f7bc8d3c19ca9db0a572b34041ae05a9671006ce5f0fee76",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-21-same-meaning-11",
+     "rowSha256": "70b9e380d7d576e2b0d8a89bfa3dab24251033180eefa48eb7980058b2256a14",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-21-same-meaning-12",
+     "rowSha256": "d27ef3ed1bea4283e88000977fe89b926627f0987b717cb4d1f703a4b0149b1d",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-21-same-meaning-13",
+     "rowSha256": "a06b95cf7fea8fb3c4b2341ccf0c78c985449d54537b94d509544e6b1972562d",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-21-same-meaning-14",
+     "rowSha256": "3c07977ada549e96fdec608bf4dc28815aaee9ac4c578c59f232dcbabed5acba",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-21-same-meaning-15",
+     "rowSha256": "13c29c475dffbf5febea7ce8dd731ce4c26a582259b2ceaa594258979d2205df",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-21-same-meaning-16",
+     "rowSha256": "635534a7855f416850372daf398653f3cb8d49597ad6536af8e04bf704c8c0b3",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-21-same-meaning-17",
+     "rowSha256": "306b6298fd1039c76172f91d228c47d633a7d03225cb3a94b9da969cfe2fe025",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-21-same-meaning-18",
+     "rowSha256": "5c02f3e1b66090f37c0b80c4c3a33e2c5c843b279323c156769574ca4e52b0ce",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-21-same-meaning-19",
+     "rowSha256": "bb53494621256d703e9b90e1f4c75e366e25f268d893929a33279ce2c8fe603e",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-21-same-meaning-20",
+     "rowSha256": "76c5affdee73dc747839e4f25b2cc5bd60289b5bdbca41353a97152dae858470",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-21-same-meaning-21",
+     "rowSha256": "abd3ab39159c906a7b5372380a2a6af7c325e060de454ad9bf7ea58d1b3af959",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-21-same-meaning-22",
+     "rowSha256": "0886407f64365e3bac0b5bd1b9a5752c2c5612f4e9c1bc28e4d6ab88f98aa100",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-21-same-meaning-23",
+     "rowSha256": "8c1665ed8879feea251ff453a29c938a55b9acc66070ffeb1b2f4bd07c98a029",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-21-same-meaning-24",
+     "rowSha256": "1f7fb593cfa9d7c70fd678d22e9607814e3b49f94543fd7cba896e53a25b8b2c",
+     "movedSincebb6be0d3": false
+    },
+    {
+     "itemId": "gen-vr-21-same-meaning-25",
+     "rowSha256": "10871d65c082176ac3b84701d9db81585660990fa94e3776af87e7f7a649a5bb",
+     "movedSincebb6be0d3": false
+    }
+   ]
+  }
+ ],
+ "findingsSha256": "87b413d0e7fb4e80b16c9589b812d81a45abb48587b89af7cafe590f310cc7f2",
+ "howToCheckThisOnArrival": {
+  "subtreeKeys": [
+   "CASES",
+   "THE_SPECS"
+  ],
+  "subtree": "an object of THIS DOCUMENT'S OWN TOP-LEVEL KEYS, exactly as spelled in subtreeKeys and nowhere renamed: {\"CASES\", \"THE_SPECS\"}",
+  "spec": "sha256 over json.dumps(subtree, sort_keys=True, separators=(\",\",\":\"), ensure_ascii=False).encode(\"utf-8\") — R729. ensure_ascii defaults to True and gives a different number.",
+  "andTheFileDigest": "the staging line and the .sha256 sidecar, over the whole file bytes"
+ },
+ "DIGESTS": {
+  "THE_FILE_DIGEST": "this file's own name and its .sha256 sidecar carry it. It cannot be written here: a file that states its own byte-hash changes the bytes it is stating.",
+  "theFileDigestSpec": "sha256 over the whole file bytes. This is what the filename carries after deliver() restamps, what the .sha256 sidecar holds, and what a receiving store should quote back to confirm arrival.",
+  "THE_FINDINGS_DIGEST": "87b413d0e7fb4e80b16c9589b812d81a45abb48587b89af7cafe590f310cc7f2",
+  "theFindingsDigestSpec": "sha256 over json.dumps(subtree, sort_keys=True, separators=(\",\",\":\"), ensure_ascii=False) where subtree is {\"CASES\", \"THE_SPECS\"} — R729. It measures the FINDINGS, not the file, and changes only when a finding changes.",
+  "andWHYBOTH": "they never agree and neither is wrong. The file digest identifies the bytes; the findings digest identifies the claim. Quoting one without naming which is how one landing acquires two names (R981)."
+ },
+ "instrumentProvenance": {
+  "emittedBy": "declare-current-row-digests.ts",
+  "carriedFixture": false,
+  "MARK": "FROM AN UNFIXTURED INSTRUMENT",
+  "meaning": "this emitter carries no fixture, so nothing in this run proves it can find what it claims to find or stay silent on what is clean. Read its figures accordingly (Annie's clause, R726).",
+  "remedy": "the emitter earns a carried fixture before its next emission crosses (R725)."
+ }
+}

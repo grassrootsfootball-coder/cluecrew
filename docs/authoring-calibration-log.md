@@ -26912,3 +26912,41 @@ it. **A file cannot state its own byte-hash**, so the block NAMES where the file
 filename and the sidecar) rather than reproducing it, and the block is written BEFORE delivery so
 the restamp names bytes that already contain it. Ordering is not a detail here: a self-describing
 artefact must be complete before the thing that describes it from outside is computed.
+
+## R982 — The binding table: only the store holding the rows can say which cases a population digest still describes
+
+David's instruction, 2026-09-02, and it is the cheap repair for a fault neither store could see
+alone.
+
+**A POPULATION DIGEST PROVES WHAT A STORE READ. IT CANNOT REPORT THAT THE ROWS HAVE MOVED SINCE.**
+The authoring store binds its whole lane to `bb6be0d3` — correctly, and it has no way to learn that
+one case was regenerated underneath it. Twenty-five vr-19 executions were authored against words
+that no longer exist and refused at this store's door, which is the expensive way to discover it.
+**Only the store holding the rows can declare which cases the binding still describes, so it does**:
+`current-row-digests-per-case`, per case and per row, under the same spec the batch's own
+`rowSha256` already uses, so the numbers compare directly with what every execution carries.
+
+**AND THE FIRST RUN OF IT WOULD HAVE SENT FIFTY SOUND ROWS TO BE RE-AUTHORED.** vr-17 and vr-18
+came back 25-of-25 MOVED — wholesale, two cases, every row. **The crossed population STRINGIFIED
+numeric option values**: it records `"7"` where the row holds `7`, so canonical JSON separates them
+and the digests differ while the content is identical. vr-13 is strings on both sides, which is why
+it read BOUND and the fault did not look universal. **R955's number/string mismatch, in a new
+instrument, three weeks later** — and the shape that exposed it was the one R961 names: a refusal
+set that is regular, clustered and wholesale is an instrument hypothesis before it is a content
+finding.
+
+**So the comparison declares BOTH digests and separates three states that a single number collapses:
+CONTENT MOVED, SERIALISATION ONLY, and ROWS ADDED SINCE THE CUT.** Normalising happens where the
+comparison is made and never where the row is read (R570), and the raw digest is still declared
+because it is what an execution's `rowSha256` will actually be checked against. The verdict a case
+carries is about its CONTENT; the raw mismatch is reported beside it as the serialisation fact it is.
+
+**Measured: eleven cases. Five bound exactly, three content-unchanged with a declared reason, three
+superseded** — vr-02 on seventeen rows her 197th and 200th amended, vr-05 on one, vr-19 on all
+twenty-five. **Naming the moved rows is the point**: "this case has changed" would have sent
+somebody to re-author twenty-five rows where one moved.
+
+**What this store still owes** is the forward half: a regeneration that lands should cross its own
+supersession of the population it replaces, rather than leaving the other store to discover it by
+refusal. This table repairs what has already happened; that repairs what happens next, and it is
+not yet built.
