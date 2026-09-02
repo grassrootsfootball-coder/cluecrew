@@ -680,6 +680,20 @@ model AttributionEvent {
   recordId    String
   action      AttributionAction
   /**
+   * WHAT THIS SIGNATURE IS OVER, BY NAME AND BY SPEC (Annie's 216th, 2026-09-02 — R973).
+   *
+   * `subjectHash` held more than one kind of hash with nothing to tell them apart, and eleven
+   * sound rows were read as drift because of it (R970). A signature that does not say what it is
+   * over is an assertion with an unstated referent. These two fields travel with the signature so
+   * a verifier is TOLD which subject it is reading rather than assuming one.
+   *
+   * NULL means UNKNOWN and is a real state: the backfill derives the subject where the stored
+   * hash can be reproduced and leaves it null where it cannot. Nothing is invented to fill the
+   * column, and a signature with an unknown subject keeps whatever standing it had.
+   */
+  subjectKind String?
+  subjectSpec String?
+  /**
    * DEPRECATED AS AN IDENTITY, KEPT AS A CACHE (R65). Holds whatever was recorded at the time —
    * a role placeholder ("current-reviewer"), a bare name ("annie"), or an email. Deliberately NOT
    * rewritten: these placeholders and the `actor-identity` REASSIGNED events that resolve them are

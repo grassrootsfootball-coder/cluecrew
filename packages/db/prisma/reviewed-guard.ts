@@ -192,6 +192,15 @@ export interface SignatureRecord {
   method: string;
   note?: string;
   subjectHash?: string;
+  /**
+   * WHAT THE HASH IS OVER (Annie's 216th — R973). Required whenever `subjectHash` is given: a
+   * signature that does not say what it is over is an assertion with an unstated referent, and
+   * eleven sound rows were read as drift because one column held several kinds of hash. Take both
+   * from `SIGNATURE_SUBJECTS` in @cluecrew/core rather than writing a string here — an
+   * undeclared subject is one nobody can re-derive.
+   */
+  subjectKind?: string;
+  subjectSpec?: string;
 }
 
 export async function recordSignature(
@@ -208,6 +217,14 @@ export async function recordSignature(
   if (!signature.method || signature.method.trim().length < 8) {
     throw new Error('Refusing to record a signature with no method — say how the review happened.');
   }
+  if (signature.subjectHash && (!signature.subjectKind || !signature.subjectSpec)) {
+    throw new Error(
+      'Refusing to record a signature that carries a subjectHash without naming its SUBJECT (R973).\n' +
+      '  A hash with an unstated referent is what read eleven sound rows as drift: one column held a row\n' +
+      '  projection, an execution text and the review surface\'s own subject, with nothing to tell them apart.\n' +
+      '  Pass subjectKind and subjectSpec from SIGNATURE_SUBJECTS in @cluecrew/core.',
+    );
+  }
   await prisma.attributionEvent.create({
     data: {
       recordType: signature.recordType,
@@ -220,6 +237,8 @@ export async function recordSignature(
       method: signature.method,
       note: signature.note ?? null,
       subjectHash: signature.subjectHash ?? null,
+      subjectKind: signature.subjectKind ?? null,
+      subjectSpec: signature.subjectSpec ?? null,
     },
   });
 }

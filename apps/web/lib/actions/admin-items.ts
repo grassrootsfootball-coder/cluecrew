@@ -2,7 +2,7 @@
 
 import { redirect } from 'next/navigation';
 import { z } from 'zod';
-import { reviewSurfaceRenders, checkItemChildFacing, checkSolution, draftAssessmentSubjectHash, fingerprintItem, inactiveMisconceptions, isBlocking, mathsPlanFileSchema, publishBlockers, screenAgainstIndex, stemSchema } from '@cluecrew/core';
+import { reviewSurfaceRenders, checkItemChildFacing, checkSolution, draftAssessmentSubjectHash, fingerprintItem, inactiveMisconceptions, isBlocking, mathsPlanFileSchema, publishBlockers, screenAgainstIndex, SIGNATURE_SUBJECTS, stemSchema } from '@cluecrew/core';
 import mathsPlanContent from '../../../../content/maths-district-plan.json';
 
 const mathsPlan = mathsPlanFileSchema.parse(mathsPlanContent);
@@ -696,6 +696,11 @@ export async function signItemAction(formData: FormData): Promise<void> {
     method,
     note: `Signed in-platform on the comprehension review surface by ${reviewer!.displayName}.`,
     subjectHash,
+    // THE SUBJECT THIS PATH WRITES, DECLARED (R973). It is not the row projection, and a verifier
+    // assuming that reads a sound signature as drift — which is exactly what happened to the two
+    // signatures this surface had already written.
+    subjectKind: SIGNATURE_SUBJECTS.DRAFT_ASSESSMENT.kind,
+    subjectSpec: SIGNATURE_SUBJECTS.DRAFT_ASSESSMENT.spec,
   });
   // CONFIRM THE WRITE BEFORE REDIRECTING. The redirect is what the reviewer reads as success, and
   // it fired cleanly for an action that had thrown and written nothing: Next.js swallowed a

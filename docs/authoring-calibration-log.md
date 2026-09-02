@@ -26582,3 +26582,46 @@ to say what it had been. Their exact order is now recorded as bytes with both re
 beside it. **A photograph, not a change**: it re-issues nothing and re-orders nothing, and it makes
 C available to those four as it already was to the other 436. `MC05-FDP-08`, `MC01-FDP-04`,
 `MC02-NPV-07`, `MC05-MEAS-02`.
+
+## R973 — A signature names its subject, and the product's own path had the least-readable one
+
+Annie's 216th, 2026-09-02. **A is withdrawn as a migration and survives as a meaning**: canonical
+order binds signatures made or re-made from here, existing pins stand under the spec they name, and
+**366 signatures ceasing to verify is a migration that spends authority for no reading** — the one
+thing this desk cannot re-earn cheaply.
+
+**THE RULING: every signature declares its subject, by name and by spec, in a field that travels
+with it.** `AttributionEvent.subjectKind` and `.subjectSpec`, with the closed set in
+`packages/core/src/signature-subject.ts`. **This changes nothing any stored signature asserted; it
+states what each one always asserted, made legible.** The backfill is therefore not authoring:
+**derived where the stored hash can be reproduced, UNKNOWN where it cannot, invented never** — the
+before-image rule pointed at a column.
+
+**MEASURED ACROSS ALL 477.** 329 row-projection retention-excluded, 26 retention-included, 15
+already in canonical order, 14 execution-text, **33 NOT AN ITEM SUBJECT** (template families,
+whose own spec this set does not declare), and **60 UNKNOWN**. The 33 matter: folded into UNKNOWN
+they would have reported a fifth of the estate's signatures as unreadable, when **not-applicable is
+not unknown** (R98 again, one turn further on) — the same separation that rescued the eleven.
+
+**AND THE POPULATION NOBODY HAD COUNTED IS TWO.** The subject the PRODUCT writes when a reviewer
+signs — `draftAssessmentSubjectHash` over `{prompt, tier, options:[{isCorrect,text}]}`, plain
+`JSON.stringify`, no stem, no explanation — accounts for **2 of 477 signatures, both on
+`ENG-001-WIW-15`, and neither reproduces**. Counted two ways on purpose: by the note the CODE
+writes (the method is typed by a person and cannot identify a path) and by re-derivation, because
+one figure would have hidden the difference between them.
+
+**So the finding inverts on measurement and is worth more, not less, for it.** The standing exposure
+is two signatures on one already-held row. **The forward exposure is every future signing**: this is
+the path a reviewer actually uses, so without a declared subject each new signature would arrive
+unreadable to any verifier assuming the row projection. The surface now declares its subject at the
+call site, and `recordSignature` REFUSES a `subjectHash` with no `subjectKind` and `subjectSpec` —
+the rule in the door rather than in a docstring.
+
+**ENG-001-WIW-15 is HELD, LIVE, with its reason published** (`content/holds/eng-001-wiw-15.json`).
+Her conditional — *if its bytes and its hash cannot be brought into agreement by any declared
+subject and spec, the signature is refused and the row returns to me* — **has now been tested
+against the whole closed set and is MET**, so the signature is refused and the row returns to her
+for a fresh reading. The signature is not deleted: refusing to rely on a signature and destroying
+the evidence of one are different acts. The row stays LIVE, because an unverifiable signature is
+not a wrong answer and pulling a served row on an instrument question is the manufactured work R961
+names.
