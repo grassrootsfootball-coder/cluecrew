@@ -26484,3 +26484,64 @@ case, one question type, zero items outside it, two library entries now reachabl
 **The window is zero and structurally so**: `servableCaseIds` derives visibility from the live pool
 at request time, so the face and the pool land in the same act and there is no interval in which
 the door exists without content behind it.
+
+## R970 — `subjectHash` names two different subjects, and nothing on the row says which
+
+Found while preparing the canonical-order ruling, 2026-09-02, and it nearly produced a false
+finding about eleven sound rows.
+
+**Most signatures in this estate hash a row's PIN PROJECTION. The fifteen ruled by derivation under
+her 206th hash THE EXECUTION TEXT the verdict is about.** Both are written to the same column, and
+neither the column, the schema, nor the row says which subject a given `subjectHash` names. **A
+verifier that assumes the projection meaning reports the execution ones as content drift** — the
+canonical-order analysis classified them NO PERMUTATION VERIFIES, whose stated meaning is *the
+content changed after signing*, and eleven English comprehension rows were one report away from
+being described that way. They had not changed at all: the subject was never the row.
+
+**This is R608's shape inverted.** There, one decision was split across two fields and neither
+sorted. Here, TWO SUBJECTS share one field, and the field name — `subjectHash` — is honest about
+being a hash and silent about what of. **A field whose meaning depends on which script wrote it is
+a field that reads correctly only to whoever wrote it.**
+
+**Detected, not guessed, and separated before anything is called unexplained:** the analysis now
+tests whether a non-reproducing hash equals the sha of an execution text on its own row, and
+reports that as its own class. Of 477 signatures over 473 items: 372 verify under the current
+order, 56 only under a non-current permutation, **11 are execution-text subjects**, and exactly
+**1 is genuinely unexplained** — `ENG-001-WIW-15`, LIVE, signed through the in-platform
+comprehension review surface, whose subject this analysis cannot name. That row is reported alone
+rather than inside a class of twelve.
+
+**The repair is not taken here.** Naming the subject on the signature — a `subjectKind`, or a
+prefix on the value — changes what every stored signature asserts and belongs with the
+canonical-order ruling it was found beside (R867).
+
+## R971 — Prepared, not taken: what canonicalising option order would cost, measured
+
+David's instruction, 2026-09-02: prepare the ruling rather than take it. Recorded here because the
+measurement should outlive the conversation; **the decision is not made by this entry.**
+
+**The estate rests on option order more heavily than the vr-10 refusal suggested.** Exhaustively —
+every permutation of every signed row's options hashed under both retention projections, a decision
+procedure rather than a sample:
+
+- **372 signatures verify under the order the database returns today, and 316 of those verify
+  under an order that is NOT value-sorted.** Every one is a single write away from refusing exactly
+  as row 23 did. **184 of them are LIVE.**
+- **56 have already moved** — they verify only under a non-current permutation, meaning the order
+  shifted after signing and nothing noticed.
+- **436 of 440 ordering-relevant rows have their signed order recorded in a crossed population
+  artefact; 4 have none.** That is the hinge: a signature verifies today only because SOMETHING
+  records the order it was taken in, and for four rows the only witness is the live database —
+  the very thing that moves.
+- **Canonicalising would stop 366 signatures verifying**, across seventeen question types. They
+  would not be void — the reading happened — but nothing could re-derive them mechanically, so
+  each needs RE-ISSUING by the reviewer. By R909 that costs authority, not a re-read: authority
+  arrives fresh, the reading never left.
+
+**Three options, with what each buys and spends.** (A) canonicalise the projection — signatures
+stop decaying forever, at 366 re-issues. (B) order the READ deterministically — costs nothing,
+stops NEW signatures decaying, fixes none of the existing ones. (C) verify against the recorded
+order, as the vr-10 publication did — exact, evidenced, free, and unavailable for the four rows
+with no record. **This store would recommend B and C together now and A only on the reviewer's
+word**, because B stops the decay at its source, C is already proven in a publication, and A is
+the only one that spends her signatures to buy the property.
