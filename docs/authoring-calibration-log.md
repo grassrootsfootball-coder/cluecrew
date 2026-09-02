@@ -27023,3 +27023,35 @@ bindings and NAMED the doubt rather than asserting the five bound; the door comp
 the live rows and refused all ten; every one of the five rows is among the seventeen the notice
 names. **A refusal on arrival is a cheaper finding than an absence**, and both stores now compute
 one number for one row.
+
+## R985 — An artefact that publishes a digest should publish the subject it was taken over
+
+The audit David ordered after R984: where else does a caller project rather than the function?
+
+**SEVEN CONSUMERS READ A CROSSED POPULATION'S ROWS AND DIGEST THEM.** One carried a DUPLICATE
+IMPLEMENTATION of the declared spec — `declare-current-row-digests.ts` had its own `rowDigest` and
+`rowDigestNormalised` — and **a spec with two implementations has two specs**, which is exactly how
+two stores reading one sentence reached different numbers. Fixed; the table re-derives identically
+(17/1/25), which is what repairing a duplicate should do. Two more hand crossed rows through
+UNPROJECTED and are now **safe by the function rather than by the caller** — they do the obvious
+wrong thing and get the right answer, which is the whole point of moving the projection inward. The
+remaining four only ever project LIVE rows, which is correct and is not this fault.
+
+**The broad grep finds ninety-odd files projecting options inline. Reporting ninety would have been
+a count without its predicate** — almost all are projecting live rows for their own purposes. The
+population that matters is seven.
+
+**AND THE ORIGIN IS UPSTREAM OF EVERY CONSUMER.** `emit-vr-arc-census.ts` computes each row's
+`rowSha256` over the projection `{value, isKey}` — correctly — and then emits that row's `options`
+carrying `value`, `isKey`, `tag`, `tagIsActiveInTheLibrary` and `execution`. **The artefact
+publishes rows whose `options` field is a SUPERSET of what its own `rowSha256Spec` names.** A
+consumer that reads `row.options` and hashes it — the obvious thing — gets a number disagreeing
+with the row's own declared digest sitting two fields away. Nothing in the artefact is wrong. **It
+makes the wrong thing easy and the right thing invisible**, and both stores duly did the wrong
+thing while having read the spec correctly.
+
+**So the rule, proposed and not taken: an artefact that publishes a digest publishes the SUBJECT
+that digest was taken over** — as its own field, or by naming per row which keys the projection
+includes. Then a consumer hashes what is in front of it instead of reconstructing a projection from
+a sentence. **This is R25 at one remove — send the value, not an account of it — and a spec in
+prose beside a superset of its own subject is an account.**

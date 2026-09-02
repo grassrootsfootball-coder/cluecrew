@@ -22,6 +22,7 @@ import { join as pjoin } from 'node:path';
 import { prisma } from '../packages/db/src/index';
 import { requirePopulation } from './lib/population';
 import { canonicalJson, findingsDigest, digestsBlock } from './lib/findings-digest';
+import { rowDigest as libRowDigest, rowDigestNormalised as libRowDigestNormalised, ROW_DIGEST_SPEC, CASE_DIGEST_SPEC } from './lib/population-binding';
 import { deliver, stampedName } from './lib/export-destination';
 
 const REPO = pjoin(__dirname, '..');
@@ -29,35 +30,17 @@ const DL = pjoin(homedir(), 'Downloads');
 const LANE = pjoin(DL, '11+', 'from-cluecrew');
 const sha = (s: string | Buffer) => createHash('sha256').update(s).digest('hex');
 
-const ROW_SPEC = 'R729 over {stem, options:[{value,isKey}], solution} — the same spec batch one\'s rowSha256 already uses, so these numbers compare directly with the ones each execution carries';
-const CASE_SPEC = 'R729 over the itemId-ordered list of {itemId, rowSha256} for the case';
+const ROW_SPEC = ROW_DIGEST_SPEC;
+const CASE_SPEC = CASE_DIGEST_SPEC;
 
 interface PopRow { itemId: string; stem: unknown; solution: unknown; options: Array<{ value: unknown; isKey: boolean }> }
 
-function rowDigest(stem: unknown, options: Array<{ value: unknown; isKey: boolean }>, solution: unknown): string {
-  return sha(canonicalJson(JSON.parse(JSON.stringify({ stem, options, solution }))));
-}
-
 /**
- * NORMALISE WHERE YOU COMPARE, NEVER WHERE YOU READ (R570).
- *
- * The crossed population STRINGIFIED numeric option values — vr-17 and vr-18 carry `"7"` where the
- * rows hold `7` — so a raw digest reports all fifty rows moved when not one has. That is R955's
- * number/string mismatch in a new instrument, and the raw comparison would have sent the authoring
- * store to re-author fifty sound rows: the manufactured work R961 names, from an instrument
- * failing toward refusal.
- *
- * So BOTH digests are declared per row: the raw one, and one over values coerced to strings on
- * both sides. The raw pair is what an execution's `rowSha256` will actually be compared against;
- * the normalised pair is what says whether the CONTENT moved. Reporting only one would hide either
- * a real change or a false one.
+ * THE DIGEST FUNCTIONS ARE THE LIBRARY'S, NOT THIS SCRIPT'S (R984). This file carried its own
+ * `rowDigest` and `rowDigestNormalised` — a second implementation of one declared spec, which is
+ * precisely how two stores computing "R729 over {stem, options:[{value,isKey}], solution}" arrived
+ * at different numbers for one row. A spec with two implementations has two specs.
  */
-function rowDigestNormalised(stem: unknown, options: Array<{ value: unknown; isKey: boolean }>, solution: unknown): string {
-  return sha(canonicalJson(JSON.parse(JSON.stringify({
-    stem, solution,
-    options: options.map((o) => ({ value: o.value === null || o.value === undefined ? o.value : String(o.value), isKey: o.isKey })),
-  }))));
-}
 
 async function main() {
   const popBytes = readFileSync(pjoin(LANE, 'vr-arc-census-and-population-bb6be0d3f2fed905.json'));
@@ -76,10 +59,10 @@ async function main() {
       select: { id: true, status: true, stem: true, solution: true, options: { select: { content: true, isCorrect: true }, orderBy: { id: 'asc' } } } });
     const val = (o: { content: unknown }) => (o.content as { value?: unknown })?.value;
 
-    const nowById = new Map(live.map((r) => [r.id, rowDigest(r.stem, r.options.map((o) => ({ value: val(o), isKey: o.isCorrect })), r.solution)]));
-    const thenById = new Map(popRows.map((r) => [r.itemId, rowDigest(r.stem, r.options.map((o) => ({ value: o.value, isKey: o.isKey })), r.solution ?? null)]));
-    const nowNorm = new Map(live.map((r) => [r.id, rowDigestNormalised(r.stem, r.options.map((o) => ({ value: val(o), isKey: o.isCorrect })), r.solution)]));
-    const thenNorm = new Map(popRows.map((r) => [r.itemId, rowDigestNormalised(r.stem, r.options.map((o) => ({ value: o.value, isKey: o.isKey })), r.solution ?? null)]));
+    const nowById = new Map(live.map((r) => [r.id, libRowDigest({ itemId: r.id, stem: r.stem, solution: r.solution, options: r.options.map((o) => ({ value: val(o), isKey: o.isCorrect })) })]));
+    const thenById = new Map(popRows.map((r) => [r.itemId, libRowDigest({ itemId: r.itemId, stem: r.stem, solution: r.solution ?? null, options: r.options })]));
+    const nowNorm = new Map(live.map((r) => [r.id, libRowDigestNormalised({ itemId: r.id, stem: r.stem, solution: r.solution, options: r.options.map((o) => ({ value: val(o), isKey: o.isCorrect })) })]));
+    const thenNorm = new Map(popRows.map((r) => [r.itemId, libRowDigestNormalised({ itemId: r.itemId, stem: r.stem, solution: r.solution ?? null, options: r.options })]));
 
     const moved: string[] = [], gone: string[] = [], added: string[] = [], serialisationOnly: string[] = [];
     for (const [id, then] of thenById) {
