@@ -350,11 +350,22 @@ export function deliver(sourcePathIn: string, family?: string): string {
  * ACKNOWLEDGED reads as "we are done" while a false UNACKNOWLEDGED merely asks someone to check.
  */
 export function acknowledgedFiles(inboundDirs: readonly string[]): Set<string> {
+  /**
+   * A FILE THIS STORE WROTE IS NOT EVIDENCE THAT THIS STORE'S FILES ARRIVED (R968). The emissions
+   * declaration (R966) is placed on the desk's floor to be delivered — and the desk's floor is an
+   * inbound scan directory, so the ledger began reading this store's own declaration, which names
+   * every staged file, as acknowledgement of all of them. Acknowledged went 114 -> 542 with not
+   * one new word from the other store. **The exclusion is DERIVED, never listed: any inbound file
+   * whose basename also sits in the outbound lane is one of ours** (R57).
+   */
+  let ours: Set<string>;
+  try { ours = new Set(readdirSync(OUTBOUND_DIR)); } catch { ours = new Set(); }
   const named = new Set<string>();
   for (const dir of inboundDirs) {
     let entries: string[];
     try { entries = readdirSync(dir); } catch { continue; }
     for (const entry of entries) {
+      if (ours.has(entry)) continue;  // this store's own emission, echoed back at itself
       const full = join(dir, entry);
       let text: string;
       try {

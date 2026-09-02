@@ -26410,3 +26410,32 @@ independently, so a sidecar can arrive without its artefact and either alone pro
 declaration is the better answer to it than 285 loose files would be: **one list, itself crossing
 under one digest, carrying every artefact's hash** — vouching that cannot be half-delivered, where
 per-file sidecars are exactly the thing that can.
+
+## R968 — Delivering a declaration into the inbound path makes it acknowledge itself
+
+Found on the re-run, minutes after R966 was registered, and it is this store's own fault twice over.
+
+**The emissions declaration is placed on the desk's floor so it can be delivered — and the desk's
+floor IS an inbound scan directory for `acknowledgedFiles`.** The declaration names every staged
+file by construction, so the ledger read this store's own emission as evidence that this store's
+emissions had arrived. **Acknowledged went 114 to 542 without one new word from the other store.**
+A file that was correctly UNACKNOWLEDGED in the morning was ACKNOWLEDGED in the afternoon because
+I had written its name down and put the paper on the desk.
+
+**The ledger's own docstring already forbade this** — *"the evidence has to come from something it
+wrote, never from anything on this side"* — so the contract was right, stated, and silently broken
+by an act taken for an unrelated good reason. **A stated contract with no mechanism is obeyed until
+somebody has a reason not to notice it.** The guard is one line and derives its exclusion rather
+than listing it (R57): any inbound file whose basename also sits in the outbound lane is ours, and
+is skipped.
+
+**IT WAS CAUGHT ONLY BY RUNNING THE THING TWICE** (R599), and confirmed by PREDICTION rather than
+by inspection: the fix should return the figure to about 114, and it returned 112 — the two
+missing are this store's own artefacts, now correctly excluded. **A repair that lands on a
+predicted number is a different quality of evidence from one that merely changes the number**, and
+the prediction cost nothing but saying it first.
+
+**The general form: an artefact that describes a channel must not be delivered INTO the channel it
+describes without saying what that does to the instruments reading it.** Every self-describing
+artefact this estate emits — declarations, manifests, ledgers — is a candidate for the same fault,
+because the reason to place it where the readers look is exactly the reason it corrupts them.
