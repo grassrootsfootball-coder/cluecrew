@@ -26700,9 +26700,55 @@ know who wrote it*, and it is the honest one. What remains is a write with no at
 (R63 names sixteen unguarded appliers) or a value the code cannot now produce — and this store
 cannot tell which from here.
 
+**RESOLVED THE NEXT DAY — SEE R976.** Neither. The inputs it hashed were never these inputs: the
+two signatures were written by the END-TO-END TEST SUITE, twice, against a transient state of a
+seeded database. The elimination above was sound and its conclusion was the right one to hold — the
+writer had not moved, so the inputs must have been different, and they were.
+
 **THE FORWARD REPAIR, WHICH IS THE PRIORITY BY THIS STORE'S OWN SPLIT.** One change on the write
 path: **the subject is recomputed from a second, fresh read and asserted equal before the signature
 is stored.** It costs one query, and it converts an unexplainable mismatch discovered months later
 into a refusal at the moment of signing — **the only moment at which the reviewer is still there to
 be asked.** Every signature the estate makes from here carries it, which is why it outranks any
 amount of further archaeology on the two that exist.
+
+## R976 — The signature was the test suite wearing her name, and the passage carried the negation
+
+Annie's 218th, 2026-09-02. Two crossings answered, and the second dissolves a hold.
+
+**THE PASSAGE CARRIES THE NEGATION, SO THE TAG IS EXACT.** Line 45 of `stream-a-03-wind-in-willows`
+reads *"and it was too glittering and small for a glow-worm."* A child who drops that negation reads
+the passage as offering a glow-worm and answers D. The act is performable on the row's own source,
+`negation-dropped` describes it exactly, and D is not the invented event her distractor rule
+refuses. **She named this as the whole distance to the signature and it is closed on bytes**, with
+this store asserting nothing beyond the fact she asked for.
+
+**AND THE LINE NUMBERING IS ESTABLISHED, WHICH CLOSES A TEST HELD BACK SINCE R961.** Resolving a
+line NUMBER to passage TEXT was withheld because the convention was inferred rather than
+recoverable — an inferred convention decides readings by a rule nobody wrote. It is recoverable:
+the passage source carries `numberedLines`, 83 entries, **67 with an explicit `n` and 16 blank
+separators carrying `n: null`**, so the numbering counts non-blank lines and says so in its own
+bytes. Corroborated twice over — this store's serving-path artefact independently records the same
+83 lines and 16 separators, and the row's three citations land exactly where they claim: 43 the
+bright small thing that twinkled, 48 the brown face, 51 the ears. **Closed by evidence, not by
+deciding to trust an inference.**
+
+**THE DOUBLE-WRITE IS THE END-TO-END TEST SUITE, AND IT WAS WEARING HER NAME.** The two signatures
+six minutes apart carry `recordedBy: human:e2e-staff-rs-signtest-<timestamp>@cluecrew.test` — two
+generated throwaway accounts, two runs of the reviewer-surfaces sign test.
+`apps/web/e2e/reviewer-surfaces.spec.ts` **temporarily repoints Reviewer `rev-0001` — hers — at the
+test's throwaway staff email** so the action's naming path resolves, drives the real signing
+action, and restores the row afterwards. The signature it writes therefore carries her reviewerId.
+
+**This is R94 arriving through the TEST SUITE, a channel nothing in this estate screens** — the test
+needed a named reviewer to exercise the naming path and borrowed the only real one. The exposure is
+bounded and was measured: **2 of 499 SIGNED events were written by an e2e throwaway account, and
+both are these two on this row.** Her row is not left repointed; the restore ran.
+
+**AND IT DISSOLVES THE HOLD RATHER THAN EXPLAINING IT.** The hash was never reproducible because the
+test signs whatever the row is at that instant in a database that is seeded and reseeded. So
+`ENG-001-WIW-15` **never had a reading through that path at all**: the hold was on a signature that
+was never a reading, there is no lost reading to recover, and her fresh reading is the row's first
+real one by this route. **No repair is taken here** — whether the test should mint its own reviewer
+rather than borrow hers is a decision with her name on it, and it is not made by the party that
+found the fault.
