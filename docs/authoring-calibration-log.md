@@ -26439,3 +26439,48 @@ the prediction cost nothing but saying it first.
 describes without saying what that does to the instruments reading it.** Every self-describing
 artefact this estate emits — declarations, manifests, ledgers — is a candidate for the same fault,
 because the reason to place it where the readers look is exactly the reason it corrupts them.
+
+## R969 — The district's first door published, and both of its refusals were instruments
+
+vr-10 publication, 2026-09-02, on David's word. Twenty-five rows DRAFT to LIVE in one transaction,
+thirteen assertions passing before the write, window zero.
+
+**THE RUN REFUSED TWICE ON ITS FIRST PASS, AND NEITHER REFUSAL WAS CONTENT.** That is R961 arriving
+at the most consequential act in the project: instruments fail toward refusal, and a publication
+that refuses reads as a publication being careful. Both would have sent somebody to repair sound
+work.
+
+**FIRST: A PIN OVER AN UNORDERED READ IS A PIN OVER A RENDERING.** Row 23's signature holds
+`ae3bc2ab38e02441`; the row computed `82e6f4e0e453ec16`, and its bytes had never changed. Landing
+her mint on `wet` moved that option's physical row, and the option read carries no `orderBy`, so
+the arbitrary order moved with it and the hash followed. **Recomputed in the option order recorded
+in the population she signed against, the row hashes to `ae3bc2ab38e02441` — the signature
+exactly.** The other twenty-four passed on luck: 19 of 25 rows are not in value order, so the
+returned order is arbitrary and stable only until something writes, and any future write to any
+option would have refused its row the same way. **Option order is presentation, not identity**
+(R936: a seat is named by its value, never its position), so a hash that moves with it is measuring
+the rendering — R737's rule arriving at a signature instead of a search. This run verifies in HER
+RECORDED ORDER, the pin's own context: evidenced, not permissive, with no permutation search and no
+fallback. **Whether the projection should canonicalise option order for every future signature is
+a change to what a signature MEANS estate-wide and is not taken here** (R867).
+
+**SECOND: A GATE CONDEMNING A SCRIPT THAT TEACHES BY EXCLUSION.** Three walk scripts were flagged
+`internal-id-leak — names option(s) not on the card`. Each names the word precisely IN ORDER TO
+RULE IT OUT: *"Water and deep go with lakes, not size"*, *"Dark and sleep go with night, giving no
+light"*, *"Hot and yellow go with sun, not its work"*. The rule is a CORRELATE of staleness, and a
+script naming a near-miss to exclude it is caught by the correlate and is not the fault — the same
+shape as the vr-05 join gate repaired the same day, and her 205th's filter rule for the third time.
+All three carry a reviewer APPROVED event on `explanation.walkScript` from her 146th, on the exact
+field flagged, byte-identical to the text in the population she read. **So they publish under a
+per-row disposition and the fault is REPORTED, never waved**, and the gate is deliberately not
+changed (R867).
+
+**WHAT PUBLISHED, WALKED FROM THE ROWS.** `case-vr-10`, *The Missing Link* — looked up, not recalled
+(R178: the accompanying note named it *The Balanced Scales*, which is `case-vr-17`). 25 items LIVE
+and PRACTICE, `reviewedBy` written in the same transaction from the signatures' own reviewerId
+following measured precedent (R965 — it was NULL on all twenty-five, the readings living as events
+while the column the schema requires stood empty). Servable cases 17 to 18 of 28. Blast radius one
+case, one question type, zero items outside it, two library entries now reachable by a child.
+**The window is zero and structurally so**: `servableCaseIds` derives visibility from the live pool
+at request time, so the face and the pool land in the same act and there is no interval in which
+the door exists without content behind it.
