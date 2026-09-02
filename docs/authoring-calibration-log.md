@@ -26752,3 +26752,37 @@ was never a reading, there is no lost reading to recover, and her fresh reading 
 real one by this route. **No repair is taken here** — whether the test should mint its own reviewer
 rather than borrow hers is a decision with her name on it, and it is not made by the party that
 found the fault.
+
+## R977 — A named unknown, and the write log's last line: the inputs are recorded as destroyed
+
+Annie's ruling, 2026-09-02: **stop the hunt at a named unknown.** Recorded in
+`content/named-unknowns/eng-001-wiw-15-signature.json` with its elimination trail and its bound.
+
+**THE UNKNOWN, STATED EXACTLY: which bytes were hashed to produce `425245f09b627e89`.** Not who
+wrote it, not by what path, not under what spec — all three are known. Naming the unknown that
+precisely is what makes it a record rather than an open question, and it is the difference between
+a thing nobody is chasing and a thing nobody has thought about.
+
+**HER LAST CHECK WAS THE ONLY ONE THAT SEPARATED THE TWO SURVIVORS, AND IT LANDED.** Something did
+record writes to that table on 16 August: `ContentWriteLog` was running from 11:27:29 that morning,
+before the signature. What it records is that **at 17:14:58 — one hour AFTER both signatures — this
+item's five `ItemOption` rows were INSERTed**, inside a transaction that wrote 2,709 option rows,
+within a window of **2,808 DELETEs and 2,815 INSERTs across four transactions**. A bulk
+delete-and-recreate of the option table: R62's mechanism, recorded.
+
+**So the elimination resolves in the direction it pointed.** The writer had not moved, the assembly
+had not moved, the recorded inputs had not moved — **because the rows it hashed were destroyed and
+replaced.** The subject is unreproducible BY CONSTRUCTION rather than by mystery.
+
+**AND THE BOUND IS THE OTHER HALF OF THE FINDING.** `ContentWriteLog` records tableName, recordId,
+op, changedColumns, dbUser, applicationName, txId and time — **never values.** So the inputs are
+recorded as having been destroyed and their content is unrecoverable from this store. **The unknown
+is not what happened; it is what the destroyed rows held**, which is a smaller and permanently
+bounded thing. A log that proves an absence and cannot fill it is doing its job, not failing at it.
+
+**The retained signature stays retained, unverifiable and LABELLED** — `subjectKind: UNVERIFIABLE`
+with a spec naming the record and the destruction, so a reader meets the reason rather than a null
+they must interpret. It stands beside the reading that replaces it, never instead of it: **refusing
+to rely on a signature and destroying the evidence of one are different acts.** Both carriers are
+stopped — the row is withheld, and no signature can pass that path again without the subject
+proving itself from a fresh read (R975).

@@ -1,0 +1,33 @@
+{
+  "kind": "NAMED-UNKNOWN",
+  "subject": "the subjectHash 425245f09b627e89… on the two retained SIGNED events of ENG-001-WIW-15",
+  "ruledBy": "Annie, 2026-09-02: stop the hunt at a named unknown; record it with its elimination trail and its bound.",
+  "THE_UNKNOWN_STATED_EXACTLY": "which bytes were hashed to produce 425245f09b627e89. NOT who wrote it, NOT by what path, NOT under what subject spec — all three are known.",
+  "THE_ELIMINATION_TRAIL": {
+    "theWriter": "FOUND — signItemAction, driven by the end-to-end suite. Both events carry recordedBy human:e2e-staff-rs-signtest-<timestamp>@cluecrew.test, two throwaway accounts 5.6 minutes apart, and apps/web/e2e/reviewer-surfaces.spec.ts temporarily repoints Reviewer rev-0001 at the test's email so the naming path resolves.",
+    "theSubjectSpec": "KNOWN — draftAssessmentSubjectHash over JSON.stringify({prompt, tier, options:[{isCorrect,text}]}).",
+    "theCode": "ELIMINATED — draftAssessmentSubjectHash byte-identical to its state at aee00d5 (11:53 on the signing day, three hours before the signature).",
+    "theAssembly": "ELIMINATED — the action's subject block byte-identical to f8a732d, the commit that introduced it. Its option read was orderBy id asc then and now.",
+    "theInputsAsRecorded": "ELIMINATED — the crossed artefact ENG001.json, recorded 15:51 on the signing day, carries the same stem.text, the same tier 2 and the same five option values as the row today.",
+    "theVariations": "ELIMINATED — exhaustive: every string key of the stem as prompt x six tiers x four text-extraction modes x all 26 option subsets x every permutation of each. No combination reproduces the hash. Nor does any state recorded across the 98 crossed artefacts naming the row.",
+    "theWriteLog": "ANSWERED — and it is the line that stops the hunt. ContentWriteLog was running from 11:27:29 that morning, before the signature. It records that at 17:14:58 — one hour AFTER the two signatures — this item's five ItemOption rows were INSERTed, inside a transaction that wrote 2,709 ItemOption rows, within a window of 2,808 DELETEs and 2,815 INSERTs across four transactions by dbUser davidb. A bulk delete-and-recreate of the option table, R62's mechanism exactly."
+  },
+  "THE_BOUND": {
+    "whatTheLogProves": "the option rows the signature hashed were DESTROYED an hour after it was written and replaced by new rows with new ids. The subject is therefore unreproducible by construction, not by mystery.",
+    "whatTheLogCANNOTSupply": "what the destroyed rows held. ContentWriteLog records tableName, recordId, op, changedColumns, dbUser, applicationName, txId and time — never values. So the inputs are recorded as having been destroyed, and their content is unrecoverable from this store.",
+    "soTHEUNKNOWNISNOTWHATHAPPENED": "it is what the destroyed rows contained, and that is unrecoverable by construction rather than unexamined.",
+    "andTHATISTHELASTLINE": "something DID record writes to that table on 16 August. What it recorded is that the subject's inputs no longer exist."
+  },
+  "THE_CARRIERS": {
+    "count": 2,
+    "both": "ENG-001-WIW-15, SIGNED at 2026-08-16T16:07:26.892Z and 16:13:05.687Z, identical hash, identical method, identical note",
+    "bothStopped": "the row is WITHHELD (LIVE -> REVIEWED, her 217th) and no further signature can be written through that path without the subject proving itself from a fresh read (R975's forward repair).",
+    "measuredExposure": "2 of 499 SIGNED events in the estate were written by an e2e throwaway account, and both are these two. No other signature is affected."
+  },
+  "THE_RETAINED_SIGNATURE": {
+    "retained": true,
+    "labelled": "subjectKind UNVERIFIABLE, subjectSpec naming this record",
+    "why": "refusing to rely on a signature and destroying the evidence of one are different acts. It stands beside the reading that replaces it, not instead of it.",
+    "theReadingThatReplacesIt": "Annie's fresh reading under the canonical spec, crossed as wiw15-one-row-for-a-fresh-reading-94c5c5744d0b6508.json; her 218th verified the declared subject hash 65576865481b4452 independently at her desk."
+  }
+}
