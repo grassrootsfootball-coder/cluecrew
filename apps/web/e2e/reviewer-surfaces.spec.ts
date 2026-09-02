@@ -265,8 +265,30 @@ test('SIGN TEST: ENG-028 item reaches a SIGNED event with a reviewerId', async (
   const page = await staffContext(browser, reviewer);
   // THE NAMING PATH. The staff account must resolve to a Reviewer row or the door refuses; this
   // is the link an admin makes once, not something the action invents.
-  const previous = await prisma.reviewer.findUnique({ where: { id: 'rev-0001' } });
-  await prisma.reviewer.update({ where: { id: 'rev-0001' }, data: { staffEmail: reviewer.email.toLowerCase() } });
+  /**
+   * THE SUITE MINTS ITS OWN REVIEWER AND NEVER BORROWS A REAL ONE (Annie's 219th, David's ruling,
+   * 2026-09-02 — R978).
+   *
+   * This test used to repoint `rev-0001` — Annie's row — at a throwaway account so the naming path
+   * would resolve, and restore it afterwards. **It wrote two SIGNED events under her identity on a
+   * row she had never read**, and they cost that row its serving status and four turns of
+   * forensics. The restore running does not soften it: **the exposure exists while the test runs,
+   * and a repair that depends on a cleanup step completing is a repair with a failure mode.**
+   *
+   * No test repoints, borrows or impersonates a real reviewer row for any reason. A minted
+   * reviewer also makes the resulting signature distinguishable from a human one BY INSPECTION
+   * rather than by forensics, which is the rule the estate already applies to every other writer.
+   */
+  const testReviewerId = `zz-e2e-rev-${Date.now()}`;
+  await prisma.reviewer.create({
+    data: {
+      id: testReviewerId,
+      displayName: `E2E TEST REVIEWER ${testReviewerId}`,
+      staffEmail: reviewer.email.toLowerCase(),
+      heldFrom: new Date(),
+      evidence: 'minted by the e2e suite for this run only; deleted in teardown with everything it wrote (R978)',
+    },
+  });
   // ENG-028-PR-02 is the packet item; ENG-001-WIW-15 is a DRAFT English item whose distractors
   // are ALL tagged ACTIVE. Walking both separates "the door does not work" from "these tags are
   // not approved yet" — the door is ruled to refuse an unapproved tag, so the packet item SHOULD
@@ -302,7 +324,15 @@ test('SIGN TEST: ENG-028 item reaches a SIGNED event with a reviewerId', async (
   console.log(`  reviewerId resolves to: ${sig?.reviewer?.displayName ?? 'FAIL — no signature'}`);
   console.log(`  recordedBy separate:    ${sig ? (sig.recordedBy !== sig.reviewerId ? 'PASS' : 'FAIL') : 'FAIL'}`);
   console.log(`  subjectHash pinned:     ${sig?.subjectHash ? `PASS ${sig.subjectHash.slice(0, 16)}` : 'FAIL'}`);
-  await prisma.reviewer.update({ where: { id: 'rev-0001' }, data: { staffEmail: previous?.staffEmail ?? null } });
+  /**
+   * TEARDOWN DELETES WHAT THE RUN WROTE (R978). A test may not leave a signature wearing ANY
+   * reviewer's identity in a shared table — not a real person's, and not its own minted one, which
+   * would otherwise accumulate one indistinguishable signature per run on a real row. Events go
+   * first: `AttributionEvent.reviewerId` is a foreign key to `Reviewer`, so the order is forced.
+   */
+  const wrote = await prisma.attributionEvent.deleteMany({ where: { reviewerId: testReviewerId } });
+  await prisma.reviewer.delete({ where: { id: testReviewerId } });
+  console.log(`  teardown: ${wrote.count} event(s) this run wrote deleted, minted reviewer removed`);
 
   const verdictLanded = after.status === 'REVIEWED';
   const signatureLanded = signed.length > 0 && signed.every((e) => e.reviewerId !== null);

@@ -53,6 +53,7 @@
     "check:spot-shape": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-spot-shape.ts",
     "check:witnesses": "tsx scripts/check-witnesses.ts",
     "check:refusal-shape": "tsx scripts/check-refusal-shape.ts",
+    "check:no-reviewer-borrow": "tsx scripts/check-no-reviewer-borrow.ts",
     "check:unordered-includes": "tsx scripts/check-unordered-includes.ts",
     "export:for-cowork": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/export-for-cowork.ts",
     "check:expiring-claims": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-expiring-claims.ts",

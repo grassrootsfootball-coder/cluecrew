@@ -26786,3 +26786,60 @@ they must interpret. It stands beside the reading that replaces it, never instea
 to rely on a signature and destroying the evidence of one are different acts.** Both carriers are
 stopped — the row is withheld, and no signature can pass that path again without the subject
 proving itself from a fresh read (R975).
+
+## R978 — The test suite stands inside the fence: it mints its own reviewer and deletes what it wrote
+
+Annie's 219th with David's ruling, 2026-09-02, and it ends the class.
+
+**A TEST MAY NOT REPOINT, BORROW OR IMPERSONATE A REAL REVIEWER ROW FOR ANY REASON.** The e2e sign
+test repointed `rev-0001` — hers — at a throwaway account so a naming path would resolve, wrote two
+SIGNED events under her identity on a row she had never read, and restored the row afterwards.
+**The restore running does not soften it: the exposure exists while the test runs, and a repair
+that depends on a cleanup step completing is a repair with a failure mode.**
+
+**AND THE SECOND HALF IS WHAT ENDS THE CLASS: teardown deletes what the run wrote.** A test may not
+leave a signature wearing ANY reviewer's identity in a shared table — not a real person's, and not
+its own minted one, which would otherwise accumulate one indistinguishable signature per run on a
+real row. Events go first; `AttributionEvent.reviewerId` is a foreign key, so the order is forced.
+**That change alone would have prevented this entire thread**, and both exposures — two standing,
+and every future run — close with one mint and one teardown.
+
+**THE RULE IS IN A CHECK, NOT A DOCSTRING** (R967's lesson applied the same day it was learned).
+`pnpm check:no-reviewer-borrow` refuses two things across every test file, both derivable from the
+bytes and neither needing a database: a test that UPDATES a `Reviewer` row, and a test naming a
+`rev-`prefixed id outside the minted `zz-e2e-rev-` pattern. Six carried fixture cases, three
+must-catch and three must-be-clean, including a comment ABOUT the old borrow that must not fire.
+81 test files screened; none borrows.
+
+**THE NINE REFERENCES ARE THREE DIFFERENT THINGS, and reporting them as one would have been the
+count-without-its-predicate fault.** Three lines in `reviewer-surfaces.spec.ts` are the borrow —
+one test, not three — and are fixed. Five are STRING FIXTURES in pure-function unit tests that
+touch no table and are not the harm her ruling names; they were de-personalised anyway, because a
+guard carrying a permanent exception is worse than the fixture it excuses. One,
+`walk-approval.ts`'s `approvedBy: 'reviewer:rev-0001'`, is **production code recording a real
+approval she really gave** — it is not a test, not an impersonation, and it stays.
+
+**THE CLASS, IN HER WORDS: a channel that writes to production tables while wearing the estate's own
+credentials.** Every gate this fortnight built stands between the stores and the data; the test
+suite stands beside them, inside the fence.
+
+## R979 — ENG-001-WIW-15 signed: the row's first real reading
+
+Her 219th. The row returns to LIVE on a signature, and the arc is worth one line because the hold
+changed shape twice and was discharged on evidence at every stage.
+
+**The hold was IDENTITY-shaped** — a pin no declared subject reproduced, so nobody could say the
+served bytes were the read bytes. **Then CONTENT-shaped** — her 218th withheld the signature on one
+question she would not answer by inference: does the passage carry the negation the tag asserts?
+**Then discharged** — line 45 carries it in the passage's own words, so D is a rejected candidate
+taken as the answer with its rejection dropped, exactly what `en-negation-dropped` names.
+
+**Signed under subject `row-projection`, canonical option order,
+`65576865481b4452d91dcf5d4aef9331abaef69f3275d3df51c859974f68fa8d` — recomputed independently three
+times**, at her desk in the 218th, again in the 219th, and here immediately before the write, which
+would have refused rather than land her signature on bytes she had not read.
+
+**And it is the row's FIRST real reading.** The two signatures it carried before were the e2e
+suite's (R976) — retained, labelled UNVERIFIABLE, standing beside the reading that replaces them
+rather than instead of it. **A reader can now tell the three apart by inspection rather than by
+forensics**, which is the property her 219th asked the estate to have.

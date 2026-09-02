@@ -1,8 +1,14 @@
 import { describe, expect, it } from 'vitest';
 import { renderReviewerReturn, reviewerReturnBasename } from './reviewer-return';
 
+/**
+ * A FICTIONAL REVIEWER, NOT A REAL ONE (R978). This test writes to no table and so is not the harm
+ * her ruling names — but a real person's identity in a fixture is a real person's identity, and
+ * keeping it here would mean the borrow guard carried a permanent exception. An exception that has
+ * to be remembered is the thing the guard exists to replace.
+ */
 const base = {
-  reviewerName: 'Annie', reviewerId: 'rev-0001', recordedBy: 'human:david@cluecrew.test',
+  reviewerName: 'Test Reviewer', reviewerId: 'zz-e2e-rev-fixture', recordedBy: 'human:david@cluecrew.test',
   scope: 'ENG-001-WIW-04', at: '2026-08-16T18:00:00.000Z',
 };
 
@@ -22,7 +28,7 @@ describe('renderReviewerReturn', () => {
 
   it('keeps whose judgement separate from who typed it', () => {
     const out = renderReviewerReturn({ ...base, rulings: [{ subject: 'x', verdict: 'REVIEWED' }] });
-    expect(out).toContain('Reviewer: Annie (rev-0001)');
+    expect(out).toContain('Reviewer: Test Reviewer (zz-e2e-rev-fixture)');
     expect(out).toContain('Recorded by: human:david@cluecrew.test');
   });
 
