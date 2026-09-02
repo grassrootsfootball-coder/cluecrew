@@ -26950,3 +26950,41 @@ somebody to re-author twenty-five rows where one moved.
 supersession of the population it replaces, rather than leaving the other store to discover it by
 refusal. This table repairs what has already happened; that repairs what happens next, and it is
 not yet built.
+
+## R983 — A regeneration crosses its own supersession, and a check makes it unforgettable
+
+David's instruction, 2026-09-02 — the forward half this store named as owing and had not built.
+
+**A POPULATION DIGEST PROVES WHAT A STORE READ AND CANNOT REPORT THAT THE ROWS MOVED AFTERWARDS.**
+The authoring store binds its whole lane to `bb6be0d3`, correctly, and had no way to learn that one
+case was regenerated underneath it. It discovered it by refusal — twenty-five vr-19 executions
+authored against words that no longer exist, stopped at this store's door. **The binding table
+(R982) repaired what had happened; nothing repaired what happens next.**
+
+**AND THE REPAIR IS NOT A HABIT.** Nothing can make a regeneration script remember to declare, any
+more than a docstring could stop a test borrowing a reviewer (R978) or a comment could stop a
+64-hex name bypassing the staging path (R967). So the declaration is enforced rather than
+requested: `pnpm check:supersession-declared` compares every crossed population — found by
+scanning, never listed (R57) — against the live rows, and **REFUSES when a case's content has moved
+with no notice covering it.** A regeneration that lands undeclared fails the build that follows it.
+
+**WHAT IT DOES NOT DEMAND IS THE HALF THAT MAKES IT USABLE.** Ten of eleven cases differ from
+`bb6be0d3` **only** because the population stringified numeric option values — `"7"` where the row
+holds `7`. Demanding a notice for those would have declared fifty sound rows superseded and sent
+somebody to re-author them, which is R982's catch turned into policy. **Serialisation is not
+supersession**, rows added after a cut are not supersession either, and the check says so in
+carried fixture cases: content-moved must be caught, a stringified number must be caught by
+nothing.
+
+**THE ARREARS ARE PAID AND THEY ARE DERIVED, NOT WRITTEN.** Three notices — `case-vr-02` on
+seventeen rows her 197th and 200th amended, `case-vr-05` on one, `case-vr-19` on all twenty-five —
+each naming the rows whose content moved with their digests before and after, so the other store
+re-binds only what changed. **A notice whose moved rows are computed cannot claim a row moved that
+did not, or miss one that did**, and the declaring script REFUSES a diverged case for which no
+ruling is named rather than inventing a reason: a supersession states why the rows moved, and a
+guess wearing a record's shape is worse than an open question.
+
+**The general form, and it is the third time this fortnight: the store that changes something is
+the only one that can announce it, so the announcement belongs to the act rather than to the
+noticing.** Every gate before this one stood between the stores and the data. This one stands
+between an act and its silence.
