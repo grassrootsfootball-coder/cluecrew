@@ -27162,3 +27162,56 @@ has been recording web2's breadth as a caveat for weeks — GRAN, PLUMP, the riv
 reading its results as generous-but-safe. **On any question about what a person knows, a broader
 lexicon does not overcount safely; it answers a different question**, and the direction of its error
 depends on which way the question runs.
+
+## R989 — The wrong instrument errs in both directions at once, and the second direction was invisible
+
+R988 established that web2 answers a different question from the one the hint test asks, and that
+the error inflated this store's flatter count. **It does not only inflate.** Run the same lexicon
+through the key gate rather than the hint test and it errs the other way: it RESCUES stems that
+cannot be performed.
+
+Of the twelve distinct word pairs in the vr-08 cut, three cannot be performed at any defensible
+child-facing cut, and **web2 shows only one of them as broken**:
+
+- `CHAIR/MOP` — no letter works even under web2. Visible, and already refused.
+- `CHEAT/AIR` — every solution web2 admits is carried by `AIRE`, `AIRA` or `CHET`.
+- `SHELF/TRAIN` — carried by `THRAIN`.
+
+Two stems therefore sit in the bank wearing a PERFORMS-adjacent verdict on the strength of three
+words no child holds. **The same lexicon, on the same rows, on the same day, overcounted the fault
+in one measurement and concealed it in another.** A caveat that says "web2 is broad" predicts the
+first error and not the second, which is why weeks of recording that caveat did not surface these.
+
+**THE GENERAL FORM: the direction of an instrument's error is a property of the QUESTION, not of the
+instrument.** A too-broad lexicon overcounts "is this remainder a word the child will accept" and
+undercounts "is this stem impossible". One bound, two signs. So state the direction per question,
+never per instrument — "known too broad" is not a caveat, it is half a caveat.
+
+**AND THE REPAIR IS NOT A THIRD INSTRUMENT.** The first attempt at one used the 302-card Word vault
+as a child lexicon; it scored 0 of 13 and 0 of 25, and labelled `LEND`, `BRIDGE`, `GATE` and `RAIN`
+as words outside child vocabulary. **That output looked like a finding and was a blind read** (R60,
+R61). Its replacement — every word this estate has already printed for a child, 4,129 of them — is
+better and still under-admits, provably: it flags `FRIGHT`, `HARM` and `CORE`. So the flag ships as
+a SHORTLIST for a ruling and not as a verdict, because claiming otherwise is R591. **Where the cut
+falls is Annie's; this store can measure sensitivity to the cut and cannot set it.**
+
+## R990 — Equal totals are not co-occurrence, and a duplicated population manufactures the association
+
+R987 reported the two hint kinds flattering at 14 of 25 and 14 of 25 and read one cause behind both.
+**One number appearing twice is what a shared cause and a coincidence both look like from outside.**
+The discriminating test is per-row: do the two kinds land on the SAME rows? They do not — 5 pairs
+carry both against 4.08 expected if the kinds were independent. **The equal totals were accident.**
+
+**AND THE DENOMINATOR WAS NOT 25.** The cut's 25 ids are 12 distinct word pairs: `CHAIR/MOP` three
+times, every other pair twice. A duplicate row cannot disagree with itself, so every duplicated pair
+enters an association measure twice on one piece of evidence — over the 25 ids the same test reads
+10 against 7.84, which is the identical evidence wearing a stronger number. **A duplicated
+population inflates every association computed over it and no per-row check can see this**, because
+each row is individually well-formed; only counting distinct subjects finds it.
+
+The duplication is itself the finding about production: 25 rows from one generator, one day, one
+run, cycling twelve pairs. Every boundary the rows carry — `clusterPosition`, `draftingMethod`,
+`itemModel` — is null on all 38, and `sourcedFrom` is null on the thirteen seed rows and identical
+on the twenty-five cut rows. **So the seed test Annie asked for cannot be run: no recorded boundary
+discriminates within either population**, and that is a fact about what the rows record, not a
+negative result. Declaring it is R61 — an empty population is a declaration, never an inference.

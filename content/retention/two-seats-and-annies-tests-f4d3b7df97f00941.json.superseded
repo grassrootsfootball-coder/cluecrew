@@ -1,0 +1,1150 @@
+{
+ "kind": "THE-TWO-SEATS-AND-ANNIES-TWO-TESTS",
+ "TO": "the authoring store; David and Annie by relay",
+ "date": "2026-09-04",
+ "THE_ARTEFACT_NAMED": {
+  "theOne": "vr19-fifty-and-the-generator-question-6dfdd8da190163df.json",
+  "itVerifies": "name equals bytes; mode APPLIED",
+  "retired": "the file named 5900cfd38933c09b, which computed 8a82cde6ba774f47 — a DRY RUN whose name carried its findings digest while its bytes carried another. Deleted, not renamed: nothing from it is credited.",
+  "andWHYTHENAMEDISAGREED": "it was stamped with the findings digest and never restamped to its bytes, because a dry run does not go through deliver(). The verifying file is the applied one and is the only one either store should hold."
+ },
+ "ONE_THE_STRUCTURAL_PREDICATE": {
+  "question": "which structural predicate selects exactly seed rows 01 and 06 out of the thirteen?",
+  "method": "40 pure string features over (word1, word2, letter, leftover, key), then every single feature, its negation, and every conjunction and disjunction of two — 3200 candidate predicates. No word list is consulted anywhere in this search.",
+  "atomicPredicatesSelectingExactlyThoseTwo": [],
+  "pairPredicatesSelectingExactlyThoseTwo": [
+   "letterAtIndex0 OR word1HasDoubleLetter",
+   "letterAtIndex0 OR leftoverHasDoubleLetter",
+   "letterAtIndex0 OR letterAppearsInWord2",
+   "letterAtIndex0 OR letterIsLastOfWord2",
+   "NOT letterAtIndex1 OR word1HasDoubleLetter",
+   "NOT letterAtIndex1 OR leftoverHasDoubleLetter",
+   "NOT letterAtIndex1 OR letterAppearsInWord2",
+   "NOT letterAtIndex1 OR letterIsLastOfWord2",
+   "NOT keyAtIndex0 OR word1HasDoubleLetter",
+   "NOT keyAtIndex0 OR leftoverHasDoubleLetter",
+   "NOT keyAtIndex0 OR letterAppearsInWord2",
+   "NOT keyAtIndex0 OR letterIsLastOfWord2",
+   "keyIsLastOfWord1 OR word1HasDoubleLetter",
+   "keyIsLastOfWord1 OR leftoverHasDoubleLetter",
+   "keyIsLastOfWord1 OR letterAppearsInWord2",
+   "keyIsLastOfWord1 OR letterIsLastOfWord2",
+   "NOT keyBeforeLetterInWord1 OR word1HasDoubleLetter",
+   "NOT keyBeforeLetterInWord1 OR leftoverHasDoubleLetter",
+   "NOT keyBeforeLetterInWord1 OR letterAppearsInWord2",
+   "NOT keyBeforeLetterInWord1 OR letterIsLastOfWord2",
+   "word1HasDoubleLetter OR NOT leftoverStartsSameAsWord1",
+   "word1HasDoubleLetter OR leftoverIsSuffixOfWord1",
+   "leftoverHasDoubleLetter OR NOT leftoverStartsSameAsWord1",
+   "leftoverHasDoubleLetter OR leftoverIsSuffixOfWord1",
+   "NOT leftoverStartsSameAsWord1 OR letterAppearsInWord2",
+   "NOT leftoverStartsSameAsWord1 OR letterIsLastOfWord2",
+   "letterAppearsInWord2 OR leftoverIsSuffixOfWord1",
+   "letterIsLastOfWord2 OR leftoverIsSuffixOfWord1"
+  ],
+  "THE_THIRTEEN_AS_FEATURES": [
+   {
+    "itemId": "seed-vr08-01",
+    "trueOf": [
+     "letterAtIndex0",
+     "keyIsLastOfWord1",
+     "word2HasVowelDigraph",
+     "leftoverLen4",
+     "word1Len5",
+     "leftoverEndsWithConsonantCluster",
+     "word1StartsWithConsonantCluster",
+     "word1EndsWithConsonantCluster",
+     "leftoverOneVowel",
+     "leftoverIsSuffixOfWord1",
+     "letterIsInInitialCluster"
+    ]
+   },
+   {
+    "itemId": "seed-vr08-02",
+    "trueOf": [
+     "letterAtIndex1",
+     "keyAtIndex0",
+     "keyBeforeLetterInWord1",
+     "leftoverLen4",
+     "word1Len5",
+     "leftoverStartsSameAsWord1",
+     "leftoverEndsWithConsonantCluster",
+     "word1StartsWithConsonantCluster",
+     "word1EndsWithConsonantCluster",
+     "word2EndsWithVowel",
+     "leftoverOneVowel",
+     "letterIsInInitialCluster",
+     "removesSecondOfInitialCluster"
+    ]
+   },
+   {
+    "itemId": "seed-vr08-03",
+    "trueOf": [
+     "letterAtIndex1",
+     "keyAtIndex0",
+     "keyBeforeLetterInWord1",
+     "leftoverLen3",
+     "word1Len4",
+     "leftoverStartsSameAsWord1",
+     "word1StartsWithConsonantCluster",
+     "leftoverOneVowel",
+     "letterIsInInitialCluster",
+     "removesSecondOfInitialCluster"
+    ]
+   },
+   {
+    "itemId": "seed-vr08-04",
+    "trueOf": [
+     "letterAtIndex1",
+     "letterIsVowel",
+     "keyAtIndex0",
+     "keyBeforeLetterInWord1",
+     "word1HasVowelDigraph",
+     "leftoverLen3",
+     "word1Len4",
+     "leftoverStartsSameAsWord1",
+     "leftoverOneVowel"
+    ]
+   },
+   {
+    "itemId": "seed-vr08-05",
+    "trueOf": [
+     "letterAtIndex1",
+     "letterIsVowel",
+     "keyAtIndex0",
+     "keyBeforeLetterInWord1",
+     "word1HasVowelDigraph",
+     "leftoverLen4",
+     "word1Len5",
+     "leftoverStartsSameAsWord1",
+     "leftoverEndsWithConsonantCluster",
+     "word1EndsWithConsonantCluster",
+     "leftoverOneVowel"
+    ]
+   },
+   {
+    "itemId": "seed-vr08-06",
+    "trueOf": [
+     "letterAtIndex1",
+     "keyAtIndex0",
+     "keyBeforeLetterInWord1",
+     "word1HasDoubleLetter",
+     "leftoverHasDoubleLetter",
+     "leftoverHasVowelDigraph",
+     "word1HasVowelDigraph",
+     "leftoverLen4",
+     "word1Len5",
+     "word2Len3",
+     "leftoverStartsSameAsWord1",
+     "word1StartsWithConsonantCluster",
+     "letterAppearsInWord2",
+     "letterIsLastOfWord2",
+     "leftoverTwoVowels",
+     "letterIsInInitialCluster",
+     "removesSecondOfInitialCluster"
+    ]
+   },
+   {
+    "itemId": "seed-vr08-07",
+    "trueOf": [
+     "letterAtIndex1",
+     "keyAtIndex0",
+     "keyBeforeLetterInWord1",
+     "word2HasVowelDigraph",
+     "leftoverLen4",
+     "word1Len5",
+     "leftoverStartsSameAsWord1",
+     "leftoverEndsVowel",
+     "leftoverEndsInSilentE",
+     "word1EndsInSilentE",
+     "word1StartsWithConsonantCluster",
+     "leftoverTwoVowels",
+     "letterIsInInitialCluster",
+     "removesSecondOfInitialCluster"
+    ]
+   },
+   {
+    "itemId": "seed-vr08-08",
+    "trueOf": [
+     "letterAtIndex1",
+     "keyAtIndex0",
+     "keyBeforeLetterInWord1",
+     "leftoverLen4",
+     "word1Len5",
+     "leftoverStartsSameAsWord1",
+     "leftoverEndsVowel",
+     "leftoverEndsInSilentE",
+     "word1EndsInSilentE",
+     "word1StartsWithConsonantCluster",
+     "leftoverTwoVowels",
+     "letterIsInInitialCluster",
+     "removesSecondOfInitialCluster"
+    ]
+   },
+   {
+    "itemId": "seed-vr08-09",
+    "trueOf": [
+     "letterAtIndex1",
+     "keyAtIndex0",
+     "keyBeforeLetterInWord1",
+     "leftoverHasVowelDigraph",
+     "word1HasVowelDigraph",
+     "word2HasVowelDigraph",
+     "leftoverLen4",
+     "word1Len5",
+     "word2Len3",
+     "leftoverStartsSameAsWord1",
+     "word1StartsWithConsonantCluster",
+     "word2StartsWithVowel",
+     "leftoverTwoVowels",
+     "letterIsInInitialCluster",
+     "removesSecondOfInitialCluster"
+    ]
+   },
+   {
+    "itemId": "seed-vr08-10",
+    "trueOf": [
+     "letterAtIndex1",
+     "keyAtIndex0",
+     "keyBeforeLetterInWord1",
+     "leftoverHasVowelDigraph",
+     "word1HasVowelDigraph",
+     "leftoverLen4",
+     "word1Len5",
+     "word2Len3",
+     "leftoverStartsSameAsWord1",
+     "word1StartsWithConsonantCluster",
+     "word2StartsWithVowel",
+     "word2EndsWithVowel",
+     "leftoverTwoVowels",
+     "letterIsInInitialCluster",
+     "removesSecondOfInitialCluster"
+    ]
+   },
+   {
+    "itemId": "seed-vr08-11",
+    "trueOf": [
+     "letterAtIndex1",
+     "keyAtIndex0",
+     "keyBeforeLetterInWord1",
+     "leftoverLen4",
+     "word1Len5",
+     "leftoverStartsSameAsWord1",
+     "leftoverEndsVowel",
+     "leftoverEndsInSilentE",
+     "word1EndsInSilentE",
+     "word1StartsWithConsonantCluster",
+     "word2EndsWithVowel",
+     "leftoverTwoVowels",
+     "letterIsInInitialCluster",
+     "removesSecondOfInitialCluster"
+    ]
+   },
+   {
+    "itemId": "seed-vr08-12",
+    "trueOf": [
+     "letterAtIndex1",
+     "keyAtIndex0",
+     "keyBeforeLetterInWord1",
+     "leftoverLen4",
+     "word1Len5",
+     "leftoverStartsSameAsWord1",
+     "leftoverEndsVowel",
+     "leftoverEndsInSilentE",
+     "word1EndsInSilentE",
+     "word1StartsWithConsonantCluster",
+     "leftoverTwoVowels",
+     "letterIsInInitialCluster",
+     "removesSecondOfInitialCluster"
+    ]
+   },
+   {
+    "itemId": "seed-vr08-13",
+    "trueOf": [
+     "letterAtIndex1",
+     "keyAtIndex0",
+     "keyBeforeLetterInWord1",
+     "leftoverLen4",
+     "word1Len5",
+     "leftoverStartsSameAsWord1",
+     "leftoverEndsWithConsonantCluster",
+     "word1StartsWithConsonantCluster",
+     "word1EndsWithConsonantCluster",
+     "leftoverOneVowel",
+     "letterIsInInitialCluster",
+     "removesSecondOfInitialCluster"
+    ]
+   }
+  ]
+ },
+ "TWO_THE_INSTRUMENT": {
+  "theCorrection": "web2 is not a broader instrument for the question the hint test asks. The hint asks what the CHILD reads; web2 answers what is attested in English. Those are different questions and the second does not bound the first.",
+  "web2Entries": 234456,
+  "vaultHeadwords": 302,
+  "seedUnderWeb2": {
+   "firstFlatters": 12,
+   "firstN": 13,
+   "secondFlatters": 3,
+   "secondN": 13
+  },
+  "seedUnderVault": {
+   "firstFlatters": 0,
+   "firstN": 13,
+   "secondFlatters": 0,
+   "secondN": 13
+  },
+  "cutUnderWeb2": {
+   "firstFlatters": 14,
+   "firstN": 25,
+   "secondFlatters": 14,
+   "secondN": 25
+  },
+  "cutUnderVault": {
+   "firstFlatters": 0,
+   "firstN": 25,
+   "secondFlatters": 0,
+   "secondN": 25
+  }
+ },
+ "THREE_ANNIES_CUT_TEST": {
+  "question": "do the two kinds co-occur row by row? Equal totals can be accident; per-row co-occurrence cannot.",
+  "underWeb2": {
+   "bothFlatter": 10,
+   "onlyFirst": 4,
+   "onlySecond": 4,
+   "neither": 7,
+   "n": 25,
+   "expectedBothIfIndependent": 7.84,
+   "rowsWithFirst": 14,
+   "rowsWithSecond": 14
+  },
+  "underVault": {
+   "bothFlatter": 0,
+   "onlyFirst": 0,
+   "onlySecond": 0,
+   "neither": 25,
+   "n": 25,
+   "expectedBothIfIndependent": 0,
+   "rowsWithFirst": 0,
+   "rowsWithSecond": 0
+  },
+  "perRow": [
+   {
+    "itemId": "gen-vr-08-move-letter-01",
+    "word1": "CHAIR",
+    "word2": "MOP",
+    "firstLetter": "H",
+    "leftover": "CAIR",
+    "secondLetter": "R",
+    "web2": {
+     "first": "SERVES",
+     "second": "SERVES"
+    },
+    "vault": {
+     "first": "SERVES",
+     "second": "SERVES"
+    }
+   },
+   {
+    "itemId": "gen-vr-08-move-letter-02",
+    "word1": "BLEND",
+    "word2": "RIDGE",
+    "firstLetter": "L",
+    "leftover": "BEND",
+    "secondLetter": "D",
+    "web2": {
+     "first": "FLATTERS",
+     "second": "FLATTERS"
+    },
+    "vault": {
+     "first": "SERVES",
+     "second": "SERVES"
+    }
+   },
+   {
+    "itemId": "gen-vr-08-move-letter-03",
+    "word1": "FLAME",
+    "word2": "RIGHT",
+    "firstLetter": "L",
+    "leftover": "FAME",
+    "secondLetter": "M",
+    "web2": {
+     "first": "FLATTERS",
+     "second": "SERVES"
+    },
+    "vault": {
+     "first": "SERVES",
+     "second": "SERVES"
+    }
+   },
+   {
+    "itemId": "gen-vr-08-move-letter-04",
+    "word1": "SHELF",
+    "word2": "TRAIN",
+    "firstLetter": "H",
+    "leftover": "SELF",
+    "secondLetter": "F",
+    "web2": {
+     "first": "FLATTERS",
+     "second": "SERVES"
+    },
+    "vault": {
+     "first": "SERVES",
+     "second": "SERVES"
+    }
+   },
+   {
+    "itemId": "gen-vr-08-move-letter-05",
+    "word1": "CHEAT",
+    "word2": "AIR",
+    "firstLetter": "T",
+    "leftover": "CHEA",
+    "secondLetter": "H",
+    "web2": {
+     "first": "SERVES",
+     "second": "FLATTERS"
+    },
+    "vault": {
+     "first": "SERVES",
+     "second": "SERVES"
+    }
+   },
+   {
+    "itemId": "gen-vr-08-move-letter-06",
+    "word1": "SPACE",
+    "word2": "TAR",
+    "firstLetter": "P",
+    "leftover": "SACE",
+    "secondLetter": "C",
+    "web2": {
+     "first": "SERVES",
+     "second": "SERVES"
+    },
+    "vault": {
+     "first": "SERVES",
+     "second": "SERVES"
+    }
+   },
+   {
+    "itemId": "gen-vr-08-move-letter-07",
+    "word1": "TWIN",
+    "word2": "HERE",
+    "firstLetter": "T",
+    "leftover": "WIN",
+    "secondLetter": "N",
+    "web2": {
+     "first": "FLATTERS",
+     "second": "FLATTERS"
+    },
+    "vault": {
+     "first": "SERVES",
+     "second": "SERVES"
+    }
+   },
+   {
+    "itemId": "gen-vr-08-move-letter-08",
+    "word1": "SLED",
+    "word2": "PIT",
+    "firstLetter": "L",
+    "leftover": "SED",
+    "secondLetter": "D",
+    "web2": {
+     "first": "SERVES",
+     "second": "SERVES"
+    },
+    "vault": {
+     "first": "SERVES",
+     "second": "SERVES"
+    }
+   },
+   {
+    "itemId": "gen-vr-08-move-letter-09",
+    "word1": "GRAIN",
+    "word2": "ATE",
+    "firstLetter": "R",
+    "leftover": "GAIN",
+    "secondLetter": "N",
+    "web2": {
+     "first": "FLATTERS",
+     "second": "FLATTERS"
+    },
+    "vault": {
+     "first": "SERVES",
+     "second": "SERVES"
+    }
+   },
+   {
+    "itemId": "gen-vr-08-move-letter-10",
+    "word1": "CHARM",
+    "word2": "ORE",
+    "firstLetter": "H",
+    "leftover": "CARM",
+    "secondLetter": "M",
+    "web2": {
+     "first": "SERVES",
+     "second": "FLATTERS"
+    },
+    "vault": {
+     "first": "SERVES",
+     "second": "SERVES"
+    }
+   },
+   {
+    "itemId": "gen-vr-08-move-letter-11",
+    "word1": "PLUMP",
+    "word2": "AY",
+    "firstLetter": "L",
+    "leftover": "PUMP",
+    "secondLetter": "M",
+    "web2": {
+     "first": "FLATTERS",
+     "second": "FLATTERS"
+    },
+    "vault": {
+     "first": "SERVES",
+     "second": "SERVES"
+    }
+   },
+   {
+    "itemId": "gen-vr-08-move-letter-12",
+    "word1": "SNOW",
+    "word2": "HOE",
+    "firstLetter": "N",
+    "leftover": "SOW",
+    "secondLetter": "W",
+    "web2": {
+     "first": "FLATTERS",
+     "second": "FLATTERS"
+    },
+    "vault": {
+     "first": "SERVES",
+     "second": "SERVES"
+    }
+   },
+   {
+    "itemId": "gen-vr-08-move-letter-13",
+    "word1": "CHAIR",
+    "word2": "MOP",
+    "firstLetter": "H",
+    "leftover": "CAIR",
+    "secondLetter": "R",
+    "web2": {
+     "first": "SERVES",
+     "second": "SERVES"
+    },
+    "vault": {
+     "first": "SERVES",
+     "second": "SERVES"
+    }
+   },
+   {
+    "itemId": "gen-vr-08-move-letter-14",
+    "word1": "BLEND",
+    "word2": "RIDGE",
+    "firstLetter": "L",
+    "leftover": "BEND",
+    "secondLetter": "D",
+    "web2": {
+     "first": "FLATTERS",
+     "second": "FLATTERS"
+    },
+    "vault": {
+     "first": "SERVES",
+     "second": "SERVES"
+    }
+   },
+   {
+    "itemId": "gen-vr-08-move-letter-15",
+    "word1": "FLAME",
+    "word2": "RIGHT",
+    "firstLetter": "L",
+    "leftover": "FAME",
+    "secondLetter": "M",
+    "web2": {
+     "first": "FLATTERS",
+     "second": "SERVES"
+    },
+    "vault": {
+     "first": "SERVES",
+     "second": "SERVES"
+    }
+   },
+   {
+    "itemId": "gen-vr-08-move-letter-16",
+    "word1": "SHELF",
+    "word2": "TRAIN",
+    "firstLetter": "H",
+    "leftover": "SELF",
+    "secondLetter": "F",
+    "web2": {
+     "first": "FLATTERS",
+     "second": "SERVES"
+    },
+    "vault": {
+     "first": "SERVES",
+     "second": "SERVES"
+    }
+   },
+   {
+    "itemId": "gen-vr-08-move-letter-17",
+    "word1": "CHEAT",
+    "word2": "AIR",
+    "firstLetter": "T",
+    "leftover": "CHEA",
+    "secondLetter": "H",
+    "web2": {
+     "first": "SERVES",
+     "second": "FLATTERS"
+    },
+    "vault": {
+     "first": "SERVES",
+     "second": "SERVES"
+    }
+   },
+   {
+    "itemId": "gen-vr-08-move-letter-18",
+    "word1": "SPACE",
+    "word2": "TAR",
+    "firstLetter": "P",
+    "leftover": "SACE",
+    "secondLetter": "C",
+    "web2": {
+     "first": "SERVES",
+     "second": "SERVES"
+    },
+    "vault": {
+     "first": "SERVES",
+     "second": "SERVES"
+    }
+   },
+   {
+    "itemId": "gen-vr-08-move-letter-19",
+    "word1": "TWIN",
+    "word2": "HERE",
+    "firstLetter": "T",
+    "leftover": "WIN",
+    "secondLetter": "N",
+    "web2": {
+     "first": "FLATTERS",
+     "second": "FLATTERS"
+    },
+    "vault": {
+     "first": "SERVES",
+     "second": "SERVES"
+    }
+   },
+   {
+    "itemId": "gen-vr-08-move-letter-20",
+    "word1": "SLED",
+    "word2": "PIT",
+    "firstLetter": "L",
+    "leftover": "SED",
+    "secondLetter": "D",
+    "web2": {
+     "first": "SERVES",
+     "second": "SERVES"
+    },
+    "vault": {
+     "first": "SERVES",
+     "second": "SERVES"
+    }
+   },
+   {
+    "itemId": "gen-vr-08-move-letter-21",
+    "word1": "GRAIN",
+    "word2": "ATE",
+    "firstLetter": "R",
+    "leftover": "GAIN",
+    "secondLetter": "N",
+    "web2": {
+     "first": "FLATTERS",
+     "second": "FLATTERS"
+    },
+    "vault": {
+     "first": "SERVES",
+     "second": "SERVES"
+    }
+   },
+   {
+    "itemId": "gen-vr-08-move-letter-22",
+    "word1": "CHARM",
+    "word2": "ORE",
+    "firstLetter": "H",
+    "leftover": "CARM",
+    "secondLetter": "M",
+    "web2": {
+     "first": "SERVES",
+     "second": "FLATTERS"
+    },
+    "vault": {
+     "first": "SERVES",
+     "second": "SERVES"
+    }
+   },
+   {
+    "itemId": "gen-vr-08-move-letter-23",
+    "word1": "PLUMP",
+    "word2": "AY",
+    "firstLetter": "L",
+    "leftover": "PUMP",
+    "secondLetter": "M",
+    "web2": {
+     "first": "FLATTERS",
+     "second": "FLATTERS"
+    },
+    "vault": {
+     "first": "SERVES",
+     "second": "SERVES"
+    }
+   },
+   {
+    "itemId": "gen-vr-08-move-letter-24",
+    "word1": "SNOW",
+    "word2": "HOE",
+    "firstLetter": "N",
+    "leftover": "SOW",
+    "secondLetter": "W",
+    "web2": {
+     "first": "FLATTERS",
+     "second": "FLATTERS"
+    },
+    "vault": {
+     "first": "SERVES",
+     "second": "SERVES"
+    }
+   },
+   {
+    "itemId": "gen-vr-08-move-letter-25",
+    "word1": "CHAIR",
+    "word2": "MOP",
+    "firstLetter": "H",
+    "leftover": "CAIR",
+    "secondLetter": "R",
+    "web2": {
+     "first": "SERVES",
+     "second": "SERVES"
+    },
+    "vault": {
+     "first": "SERVES",
+     "second": "SERVES"
+    }
+   }
+  ]
+ },
+ "FOUR_ANNIES_SEED_TEST": {
+  "question": "do the flattering seats cluster by case, batch or date? A defect respecting a production boundary is a fact about who made those rows.",
+  "boundariesUnderWeb2": {
+   "population:cut": {
+    "flatters": 14,
+    "n": 25,
+    "ids": [
+     "gen-vr-08-move-letter-02",
+     "gen-vr-08-move-letter-03",
+     "gen-vr-08-move-letter-04",
+     "gen-vr-08-move-letter-07",
+     "gen-vr-08-move-letter-09",
+     "gen-vr-08-move-letter-11",
+     "gen-vr-08-move-letter-12",
+     "gen-vr-08-move-letter-14",
+     "gen-vr-08-move-letter-15",
+     "gen-vr-08-move-letter-16",
+     "gen-vr-08-move-letter-19",
+     "gen-vr-08-move-letter-21",
+     "gen-vr-08-move-letter-23",
+     "gen-vr-08-move-letter-24"
+    ]
+   },
+   "createdOn:2026-07-27": {
+    "flatters": 26,
+    "n": 38,
+    "ids": [
+     "gen-vr-08-move-letter-02",
+     "gen-vr-08-move-letter-03",
+     "gen-vr-08-move-letter-04",
+     "gen-vr-08-move-letter-07",
+     "gen-vr-08-move-letter-09",
+     "gen-vr-08-move-letter-11",
+     "gen-vr-08-move-letter-12",
+     "gen-vr-08-move-letter-14",
+     "gen-vr-08-move-letter-15",
+     "gen-vr-08-move-letter-16",
+     "gen-vr-08-move-letter-19",
+     "gen-vr-08-move-letter-21",
+     "gen-vr-08-move-letter-23",
+     "gen-vr-08-move-letter-24",
+     "seed-vr08-01",
+     "seed-vr08-02",
+     "seed-vr08-03",
+     "seed-vr08-04",
+     "seed-vr08-05",
+     "seed-vr08-06",
+     "seed-vr08-07",
+     "seed-vr08-08",
+     "seed-vr08-09",
+     "seed-vr08-10",
+     "seed-vr08-11",
+     "seed-vr08-13"
+    ]
+   },
+   "clusterPosition:none": {
+    "flatters": 26,
+    "n": 38,
+    "ids": [
+     "gen-vr-08-move-letter-02",
+     "gen-vr-08-move-letter-03",
+     "gen-vr-08-move-letter-04",
+     "gen-vr-08-move-letter-07",
+     "gen-vr-08-move-letter-09",
+     "gen-vr-08-move-letter-11",
+     "gen-vr-08-move-letter-12",
+     "gen-vr-08-move-letter-14",
+     "gen-vr-08-move-letter-15",
+     "gen-vr-08-move-letter-16",
+     "gen-vr-08-move-letter-19",
+     "gen-vr-08-move-letter-21",
+     "gen-vr-08-move-letter-23",
+     "gen-vr-08-move-letter-24",
+     "seed-vr08-01",
+     "seed-vr08-02",
+     "seed-vr08-03",
+     "seed-vr08-04",
+     "seed-vr08-05",
+     "seed-vr08-06",
+     "seed-vr08-07",
+     "seed-vr08-08",
+     "seed-vr08-09",
+     "seed-vr08-10",
+     "seed-vr08-11",
+     "seed-vr08-13"
+    ]
+   },
+   "draftingMethod:none": {
+    "flatters": 26,
+    "n": 38,
+    "ids": [
+     "gen-vr-08-move-letter-02",
+     "gen-vr-08-move-letter-03",
+     "gen-vr-08-move-letter-04",
+     "gen-vr-08-move-letter-07",
+     "gen-vr-08-move-letter-09",
+     "gen-vr-08-move-letter-11",
+     "gen-vr-08-move-letter-12",
+     "gen-vr-08-move-letter-14",
+     "gen-vr-08-move-letter-15",
+     "gen-vr-08-move-letter-16",
+     "gen-vr-08-move-letter-19",
+     "gen-vr-08-move-letter-21",
+     "gen-vr-08-move-letter-23",
+     "gen-vr-08-move-letter-24",
+     "seed-vr08-01",
+     "seed-vr08-02",
+     "seed-vr08-03",
+     "seed-vr08-04",
+     "seed-vr08-05",
+     "seed-vr08-06",
+     "seed-vr08-07",
+     "seed-vr08-08",
+     "seed-vr08-09",
+     "seed-vr08-10",
+     "seed-vr08-11",
+     "seed-vr08-13"
+    ]
+   },
+   "sourcedFrom:generator:packages/db/prisma/generate-content.ts#GENERATORS['vr-08-move-letter']": {
+    "flatters": 14,
+    "n": 25,
+    "ids": [
+     "gen-vr-08-move-letter-02",
+     "gen-vr-08-move-letter-03",
+     "gen-vr-08-move-letter-04",
+     "gen-vr-08-move-letter-07",
+     "gen-vr-08-move-letter-09",
+     "gen-vr-08-move-letter-11",
+     "gen-vr-08-move-letter-12",
+     "gen-vr-08-move-letter-14",
+     "gen-vr-08-move-letter-15",
+     "gen-vr-08-move-letter-16",
+     "gen-vr-08-move-letter-19",
+     "gen-vr-08-move-letter-21",
+     "gen-vr-08-move-letter-23",
+     "gen-vr-08-move-letter-24"
+    ]
+   },
+   "itemModel:none": {
+    "flatters": 26,
+    "n": 38,
+    "ids": [
+     "gen-vr-08-move-letter-02",
+     "gen-vr-08-move-letter-03",
+     "gen-vr-08-move-letter-04",
+     "gen-vr-08-move-letter-07",
+     "gen-vr-08-move-letter-09",
+     "gen-vr-08-move-letter-11",
+     "gen-vr-08-move-letter-12",
+     "gen-vr-08-move-letter-14",
+     "gen-vr-08-move-letter-15",
+     "gen-vr-08-move-letter-16",
+     "gen-vr-08-move-letter-19",
+     "gen-vr-08-move-letter-21",
+     "gen-vr-08-move-letter-23",
+     "gen-vr-08-move-letter-24",
+     "seed-vr08-01",
+     "seed-vr08-02",
+     "seed-vr08-03",
+     "seed-vr08-04",
+     "seed-vr08-05",
+     "seed-vr08-06",
+     "seed-vr08-07",
+     "seed-vr08-08",
+     "seed-vr08-09",
+     "seed-vr08-10",
+     "seed-vr08-11",
+     "seed-vr08-13"
+    ]
+   },
+   "status:DRAFT": {
+    "flatters": 14,
+    "n": 25,
+    "ids": [
+     "gen-vr-08-move-letter-02",
+     "gen-vr-08-move-letter-03",
+     "gen-vr-08-move-letter-04",
+     "gen-vr-08-move-letter-07",
+     "gen-vr-08-move-letter-09",
+     "gen-vr-08-move-letter-11",
+     "gen-vr-08-move-letter-12",
+     "gen-vr-08-move-letter-14",
+     "gen-vr-08-move-letter-15",
+     "gen-vr-08-move-letter-16",
+     "gen-vr-08-move-letter-19",
+     "gen-vr-08-move-letter-21",
+     "gen-vr-08-move-letter-23",
+     "gen-vr-08-move-letter-24"
+    ]
+   },
+   "population:seed": {
+    "flatters": 12,
+    "n": 13,
+    "ids": [
+     "seed-vr08-01",
+     "seed-vr08-02",
+     "seed-vr08-03",
+     "seed-vr08-04",
+     "seed-vr08-05",
+     "seed-vr08-06",
+     "seed-vr08-07",
+     "seed-vr08-08",
+     "seed-vr08-09",
+     "seed-vr08-10",
+     "seed-vr08-11",
+     "seed-vr08-13"
+    ]
+   },
+   "sourcedFrom:none": {
+    "flatters": 12,
+    "n": 13,
+    "ids": [
+     "seed-vr08-01",
+     "seed-vr08-02",
+     "seed-vr08-03",
+     "seed-vr08-04",
+     "seed-vr08-05",
+     "seed-vr08-06",
+     "seed-vr08-07",
+     "seed-vr08-08",
+     "seed-vr08-09",
+     "seed-vr08-10",
+     "seed-vr08-11",
+     "seed-vr08-13"
+    ]
+   },
+   "status:NEVER_SHIPPABLE": {
+    "flatters": 12,
+    "n": 13,
+    "ids": [
+     "seed-vr08-01",
+     "seed-vr08-02",
+     "seed-vr08-03",
+     "seed-vr08-04",
+     "seed-vr08-05",
+     "seed-vr08-06",
+     "seed-vr08-07",
+     "seed-vr08-08",
+     "seed-vr08-09",
+     "seed-vr08-10",
+     "seed-vr08-11",
+     "seed-vr08-13"
+    ]
+   }
+  },
+  "boundariesUnderVault": {
+   "population:cut": {
+    "flatters": 0,
+    "n": 25,
+    "ids": []
+   },
+   "createdOn:2026-07-27": {
+    "flatters": 0,
+    "n": 38,
+    "ids": []
+   },
+   "clusterPosition:none": {
+    "flatters": 0,
+    "n": 38,
+    "ids": []
+   },
+   "draftingMethod:none": {
+    "flatters": 0,
+    "n": 38,
+    "ids": []
+   },
+   "sourcedFrom:generator:packages/db/prisma/generate-content.ts#GENERATORS['vr-08-move-letter']": {
+    "flatters": 0,
+    "n": 25,
+    "ids": []
+   },
+   "itemModel:none": {
+    "flatters": 0,
+    "n": 38,
+    "ids": []
+   },
+   "status:DRAFT": {
+    "flatters": 0,
+    "n": 25,
+    "ids": []
+   },
+   "population:seed": {
+    "flatters": 0,
+    "n": 13,
+    "ids": []
+   },
+   "sourcedFrom:none": {
+    "flatters": 0,
+    "n": 13,
+    "ids": []
+   },
+   "status:NEVER_SHIPPABLE": {
+    "flatters": 0,
+    "n": 13,
+    "ids": []
+   }
+  },
+  "theGeneratorsOwnShape": {
+   "repeatedWordPairsInTheCut": [
+    {
+     "pair": "CHAIR/MOP",
+     "ids": [
+      "gen-vr-08-move-letter-01",
+      "gen-vr-08-move-letter-13",
+      "gen-vr-08-move-letter-25"
+     ]
+    },
+    {
+     "pair": "BLEND/RIDGE",
+     "ids": [
+      "gen-vr-08-move-letter-02",
+      "gen-vr-08-move-letter-14"
+     ]
+    },
+    {
+     "pair": "FLAME/RIGHT",
+     "ids": [
+      "gen-vr-08-move-letter-03",
+      "gen-vr-08-move-letter-15"
+     ]
+    },
+    {
+     "pair": "SHELF/TRAIN",
+     "ids": [
+      "gen-vr-08-move-letter-04",
+      "gen-vr-08-move-letter-16"
+     ]
+    },
+    {
+     "pair": "CHEAT/AIR",
+     "ids": [
+      "gen-vr-08-move-letter-05",
+      "gen-vr-08-move-letter-17"
+     ]
+    },
+    {
+     "pair": "SPACE/TAR",
+     "ids": [
+      "gen-vr-08-move-letter-06",
+      "gen-vr-08-move-letter-18"
+     ]
+    },
+    {
+     "pair": "TWIN/HERE",
+     "ids": [
+      "gen-vr-08-move-letter-07",
+      "gen-vr-08-move-letter-19"
+     ]
+    },
+    {
+     "pair": "SLED/PIT",
+     "ids": [
+      "gen-vr-08-move-letter-08",
+      "gen-vr-08-move-letter-20"
+     ]
+    },
+    {
+     "pair": "GRAIN/ATE",
+     "ids": [
+      "gen-vr-08-move-letter-09",
+      "gen-vr-08-move-letter-21"
+     ]
+    },
+    {
+     "pair": "CHARM/ORE",
+     "ids": [
+      "gen-vr-08-move-letter-10",
+      "gen-vr-08-move-letter-22"
+     ]
+    },
+    {
+     "pair": "PLUMP/AY",
+     "ids": [
+      "gen-vr-08-move-letter-11",
+      "gen-vr-08-move-letter-23"
+     ]
+    },
+    {
+     "pair": "SNOW/HOE",
+     "ids": [
+      "gen-vr-08-move-letter-12",
+      "gen-vr-08-move-letter-24"
+     ]
+    }
+   ],
+   "distinctPairs": 12,
+   "rowsInTheCut": 25
+  }
+ },
+ "findingsSha256": "54142781ce87568bb3bd08841d98b00a4d9703be4650417dfb5a0890b26e699e",
+ "howToCheckThisOnArrival": {
+  "subtreeKeys": [
+   "ONE_THE_STRUCTURAL_PREDICATE",
+   "TWO_THE_INSTRUMENT",
+   "THREE_ANNIES_CUT_TEST",
+   "FOUR_ANNIES_SEED_TEST"
+  ],
+  "subtree": "an object of THIS DOCUMENT'S OWN TOP-LEVEL KEYS, exactly as spelled in subtreeKeys and nowhere renamed: {\"ONE_THE_STRUCTURAL_PREDICATE\", \"TWO_THE_INSTRUMENT\", \"THREE_ANNIES_CUT_TEST\", \"FOUR_ANNIES_SEED_TEST\"}",
+  "spec": "sha256 over json.dumps(subtree, sort_keys=True, separators=(\",\",\":\"), ensure_ascii=False).encode(\"utf-8\") — R729. ensure_ascii defaults to True and gives a different number.",
+  "andTheFileDigest": "the staging line and the .sha256 sidecar, over the whole file bytes"
+ },
+ "DIGESTS": {
+  "THE_FILE_DIGEST": "this file's own name and its .sha256 sidecar carry it. It cannot be written here: a file that states its own byte-hash changes the bytes it is stating.",
+  "theFileDigestSpec": "sha256 over the whole file bytes. This is what the filename carries after deliver() restamps, what the .sha256 sidecar holds, and what a receiving store should quote back to confirm arrival.",
+  "THE_FINDINGS_DIGEST": "54142781ce87568bb3bd08841d98b00a4d9703be4650417dfb5a0890b26e699e",
+  "theFindingsDigestSpec": "sha256 over json.dumps(subtree, sort_keys=True, separators=(\",\",\":\"), ensure_ascii=False) where subtree is {\"ONE_THE_STRUCTURAL_PREDICATE\", \"TWO_THE_INSTRUMENT\", \"THREE_ANNIES_CUT_TEST\", \"FOUR_ANNIES_SEED_TEST\"} — R729. It measures the FINDINGS, not the file, and changes only when a finding changes.",
+  "andWHYBOTH": "they never agree and neither is wrong. The file digest identifies the bytes; the findings digest identifies the claim. Quoting one without naming which is how one landing acquires two names (R981)."
+ },
+ "instrumentProvenance": {
+  "emittedBy": "name-the-two-seats-and-run-annies-tests.ts",
+  "carriedFixture": false,
+  "MARK": "FROM AN UNFIXTURED INSTRUMENT",
+  "meaning": "this emitter carries no fixture, so nothing in this run proves it can find what it claims to find or stay silent on what is clean. Read its figures accordingly (Annie's clause, R726).",
+  "remedy": "the emitter earns a carried fixture before its next emission crosses (R725)."
+ }
+}
