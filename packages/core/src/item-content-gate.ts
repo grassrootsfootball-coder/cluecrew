@@ -17,7 +17,7 @@
  * Declared quotations and tested tokens are honoured exactly as elsewhere.
  */
 import { banListApplies } from './ban-list-scope';
-import { appropriatenessHits, APPROPRIATENESS_VERSION } from './appropriateness';
+import { screenForAChild, APPROPRIATENESS_VERSION } from './appropriateness';
 import { dispositionFor, dispositionKey } from './field-dispositions';
 import { checkChildFacingText, spansPresentIn, type ContentFailure } from './content-gates';
 import { refusalMessage, refusedInOptions } from './refused-misconceptions';
@@ -196,30 +196,37 @@ export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
    *
    * It screens the stem, the option values and the explanation, because a child meets all three.
    */
-  const screenAppropriateness = (label: string, path: string, text: string) => {
+  const screenAppropriateness = (label: string, path: string, text: string, scope: 'bare' | 'sentence') => {
     if (!text) return;
     if (QUOTATION_FIELDS.has(path.split('.').pop() ?? '')) return;
     if (!banListApplies(path)) return;
-    for (const hit of appropriatenessHits(text)) {
-      failures.push({
-        where: label,
-        rule: 'banned-vocabulary',
-        detail: `subject matter unsuitable for a child: "${hit.matched}" (${APPROPRIATENESS_VERSION}). `
-          + 'Generated child-facing content only; passages and quotations are exempt by the same rule the ban list uses.',
-      });
-    }
+    const v = screenForAChild(text, scope, 'write-gate');
+    if (v.verdict === 'PASS') return;
+    // A FLAG IS NOT A REFUSAL AND IT IS NOT A PASS: the row HOLDS and routes to the reviewer with
+    // its context (Annie, 228th). It blocks, because a held row that ships is not held — but the
+    // message names the reader and the act, so nobody reads it as bad authoring.
+    failures.push({
+      where: label,
+      rule: 'banned-vocabulary',
+      detail: v.verdict === 'REFUSE'
+        ? `subject matter unsuitable for a child: "${v.hits[0]!.matched}" (${APPROPRIATENESS_VERSION}). Generated child-facing content only; passages and quotations are exempt by the same rule the ban list uses.`
+        : `HOLD AND ROUTE — "${v.hits[0]!.matched}" has an ordinary sense and an unsuitable one, and this scope supplies no sentence to tell them apart (${APPROPRIATENESS_VERSION}). `
+          + `Reader: ${v.reader}. This is not a refusal: somebody wanted this word, and whether the row's sense is the ordinary one is a reading, not an execution.`,
+    });
   };
+  /** Token fields are BARE — a word on a card has no sentence around it. Prose fields have one. */
+  const BARE_FIELDS = new Set(['word1', 'word2', 'words', 'stemWord', 'value', 'label', 'clues', 'series']);
+  const scopeOf = (path: string): 'bare' | 'sentence' => (BARE_FIELDS.has(path.split('.').pop()?.replace(/\[\d+\]$/, '') ?? '') ? 'bare' : 'sentence');
   for (const [path, text] of textsFrom(item.stem, '')) {
-    if (childFacing('stem', path)) screenAppropriateness(`item:${item.id} stem.${path}`, `stem.${path}`, text);
+    if (childFacing('stem', path)) screenAppropriateness(`item:${item.id} stem.${path}`, `stem.${path}`, text, scopeOf(path));
   }
   for (const [i, o] of (item.options ?? []).entries()) {
     const v = (o.content as { value?: unknown })?.value;
-    for (const one of (Array.isArray(v) ? v : [v])) screenAppropriateness(`item:${item.id} options[${i}]`, 'options.value', String(one ?? ''));
+    for (const one of (Array.isArray(v) ? v : [v])) screenAppropriateness(`item:${item.id} options[${i}]`, 'options.value', String(one ?? ''), 'bare');
   }
   for (const [path, text] of textsFrom((item.explanation ?? {}) as Record<string, unknown>, '')) {
-    screenAppropriateness(`item:${item.id} explanation.${path}`, `explanation.${path}`, text);
+    screenAppropriateness(`item:${item.id} explanation.${path}`, `explanation.${path}`, text, 'sentence');
   }
-
   const stem = (item.stem ?? {}) as Record<string, unknown>;
   const stemRole = roleForItemStem(item.mechanic);
   /**

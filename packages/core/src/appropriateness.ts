@@ -1,195 +1,211 @@
 /**
- * THE SUBJECT-MATTER SCREEN (Annie's 227th; David's ruling, 2026-09-05).
+ * THE SUBJECT-MATTER SCREEN (Annie's 227th and 228th; David's rulings, 2026-09-05).
  *
- * **NOTHING IN THIS ESTATE HAS EVER ASKED WHETHER A STRING IS APPROPRIATE FOR A CHILD.** Every
- * gate built this fortnight asks whether a claim is true, a tag performs, a key computes, a word is
- * known. HELL and LOVER passed all of it because all of it is about CORRECTNESS. They were caught
- * by a name filter that was not looking for them and would not have caught a hundred others —
- * **exclusion by accident is the same state as no exclusion at all**, and the estate's apparent
- * absence of failures here is a fact about generation volume, not about safety.
+ * **NOTHING IN THIS ESTATE HAD EVER ASKED WHETHER A STRING IS APPROPRIATE FOR A CHILD.** Every
+ * other gate asks whether a claim is true, a tag performs, a key computes, a word is known. HELL
+ * and LOVER passed all of it because all of it is about CORRECTNESS, and they were stopped by a
+ * name filter that was not looking for them: **exclusion by accident is the same state as no
+ * exclusion at all.**
  *
- * ── SOURCE ────────────────────────────────────────────────────────────────────────────────────
- * AUTHORED IN-HOUSE, v1, seeded by the cases that actually arose. Three sources were considered and
- * two rejected in the crossed proposal: an external profanity list is the wrong SHAPE (neither HELL
- * nor LOVER is profanity, and the words that matter are ordinary words wrong for the setting), and
- * widening `BANNED.childFacing` was rejected because that list is scoped to claims, difficulty and
- * tone — a gate that absorbs whatever it happens to miss stops meaning what it says.
+ * ── SOURCE ─ authored in-house, seeded by cases arising. No external list of the right shape was
+ * found; a profanity list would miss both words that caused this, and widening `BANNED.childFacing`
+ * was rejected because that list is scoped to claims, difficulty and tone.
  *
- * **THE SOURCE'S WEAKNESS IS ITS INCOMPLETENESS AND THAT IS STATED, NOT DISCOVERED LATER.** A
- * hand-authored list catches what someone thought of. It is a floor, not a proof, and its growth
- * path is the fixture: every case that arises is added there first. **It carries no slur coverage
- * and must not be read as having any** — that needs a properly sourced list and a separate ruling,
- * and pretending otherwise would be the most dangerous thing this file could do.
+ * ── SCOPE ─ GENERATED child-facing content, including every word a generated task asks a child to
+ * PRODUCE. **NOT passages, quotations or specimen material** — a quotation is bound by fidelity to
+ * its source where the ban list binds our own words, and a screen that edits Grahame or Sewell is
+ * the gate that would have edited a quotation. That boundary is inherited from `QUOTATION_FIELDS`
+ * and `banListApplies`, never re-derived (R57/R429).
  *
- * ── SCOPE ─────────────────────────────────────────────────────────────────────────────────────
- * **GENERATED CHILD-FACING CONTENT ONLY. NOT PASSAGES.** Public-domain literature carries what it
- * carries, and `QUOTATION_FIELDS` already holds that ground: a quotation is bound by FIDELITY TO
- * ITS SOURCE where the ban list binds OUR OWN WORDS. A screen that edits Grahame or Sewell is the
- * gate that would have edited a quotation, so quoted and specimen material is exempt here by the
- * same rule and not by a second list of its own (R57/R429).
+ * ── THE RULE ─ **a word belongs on the refuse list only if it has NO ordinary use in the register
+ * children read.** A bloody nose; *she had drunk her tea*; a family affair; tobacco in his cheek.
  *
- * ── THE FIXTURE IS TWO-SIDED, AND THE PASS HALF MATTERS MORE ──────────────────────────────────
- * **A screen tuned only to refuse will quietly strip a corpus of ordinary language.** A maths
- * district that cannot say *kill* in *killed the engine* is damaged by its own guard. So KILL,
- * DEAD, BLOOD, GUN, WAR, SHOT and PAIN are must-PASS cases, carried in the same fixture and given
- * the same weight — and SHELL, SELL and SIDE are there because **the words this must not touch are
- * the near neighbours of the words it must**: SHELL is fine, HELL is not, and they differ by the
- * letter a vr-08 task removes.
+ * ── THE QUALIFIER THE OTHER STORE OFFERED, AND THE ONLY THING THAT RECONCILES THE RULE WITH THE
+ * CASE THAT CAUSED THE SCREEN ─ the rule presumes a register AROUND the word, **and a bare option
+ * value has none: it is a token on a card, not a sentence.** So *"a lover of books"* is ordinary
+ * and bare `LOVER` is not the same string in the same place. **A word whose ordinary use REQUIRES
+ * context the scope cannot supply does not pass — it FLAGS.** Where the default reading of the bare
+ * token is the ordinary one it passes; where the ordinary sense needs a sentence that is not there
+ * it flags. Every assignment below is a READING, not a measurement.
+ *
+ * ── THE THIRD OUTCOME HAS AN ADDRESSEE, AND IT DIFFERS BY DOOR (her 228th) ─ **a flag with no
+ * reader is a diary entry.** At the SEARCH ambiguity is free to avoid: a flagged candidate is
+ * dropped and another proposed, because the corpus does not need that particular word. At the WRITE
+ * GATE ambiguity costs a reading and should get one: the row HOLDS and routes to the reviewer with
+ * its context, because somebody wanted that word. **A screen that proposes may refuse cheaply; a
+ * screen that judges what someone wrote may not.**
  */
 
-/** Bump when the list changes. A screen without a version cannot be cited by a store that ran it. */
-export const APPROPRIATENESS_VERSION = 'v1-2026-09-05';
+export const APPROPRIATENESS_VERSION = 'v2-2026-09-05';
 
 export const APPROPRIATENESS_SOURCE = {
   version: APPROPRIATENESS_VERSION,
-  source: 'authored in-house, seeded by cases arising; no external list is cited because none of the right shape was found',
-  scope: 'GENERATED child-facing content — stems, options and generated text, plus every word a generated task asks a child to PRODUCE. NOT passages, quotations or specimen material.',
-  ruling: 'Annie 227th; David 2026-09-05 — one predicate, declared once, called at the search and at every write producing child-facing text',
+  source: 'authored in-house, seeded by cases arising; no external list of the right shape was found',
+  scope: 'GENERATED child-facing content, including derived words. NOT passages, quotations or specimen material.',
+  rule: 'a word belongs on the refuse list only if it has NO ordinary use in the register children read',
+  qualifier: 'a word whose ordinary use REQUIRES context this scope cannot supply does not pass — it flags (the authoring store\'s qualifier, 2026-09-02)',
+  routing: 'search: a flag is dropped and another candidate proposed. Write gate: the row HOLDS and routes to the reviewer with its context (Annie, 228th)',
   knownLimits: [
-    'INCOMPLETE BY CONSTRUCTION: a hand-authored list catches what somebody thought of. This is a floor, not a proof.',
+    'INCOMPLETE BY CONSTRUCTION: a hand-authored list catches what somebody thought of. A floor, not a proof.',
     'NO SLUR COVERAGE. It contains none and must not be read as having any; that needs a sourced list and its own ruling.',
     'WORD-LEVEL ONLY: it cannot see that an innocent sentence is about something unsuitable.',
-    'AMBIGUOUS WORDS ARE OMITTED RATHER THAN HANDLED. A word with any ordinary use in a child\'s register is left off, because a word-level matcher cannot tell "a bloody nose" from an oath. That is a deliberate hole on the refuse side, chosen over the certainty of stripping ordinary language.',
-    'ONE KNOWN FALSE POSITIVE KEPT ON PURPOSE: "naked" refuses, so "visible to the naked eye" would be flagged. The bare word is unsuitable often enough in generated content to be worth one phrase a reviewer can wave.',
+    'EVERY LIST MEMBERSHIP IS A READING, NOT A MEASUREMENT — including which token is the default reading of a bare word.',
+    'CROSSED AGAINST ONE OTHER LIST ONLY, and the two disagreed on a whole category (drug and weapon doubles) that neither fixture could have surfaced alone.',
   ],
 } as const;
 
-/**
- * REFUSED IN GENERATED CONTENT. Every entry is a word a child could meet on a generated card where
- * no passage supplies a reason for it. Ordinary words for difficult things are NOT here — see the
- * pass fixture, which is the half that keeps this honest.
- */
+/** No ordinary use in the register children read, in any scope. */
 const REFUSED = [
-  // oaths
-  'hell', 'damn', 'crap', 'bugger', 'arse', 'bastard', 'bitch',
-  // adult/sexual — `naked` moved to FLAGGED: "the naked eye" is the sense a bare scope cannot see
-  'lover', 'nude', 'sexy', 'lust', 'brothel',
-  // intoxicants
+  'hell', 'damn', 'crap', 'bugger', 'arse', 'bastard', 'satan',
+  'nude', 'sexy', 'lust', 'brothel',
   'whisky', 'whiskey', 'vodka', 'brandy', 'booze', 'heroin', 'cocaine',
-  // death and violence beyond the ordinary register
-  'corpse', 'suicide', 'slaughter', 'massacre', 'torture', 'hanged',
+  'corpse', 'suicide', 'hanged',
 ];
 
 /**
- * **SIX WORDS WERE REMOVED FROM THE FIRST DRAFT OF THIS LIST BY ITS OWN FIRST RUN, AND THE RULE
- * THEY VIOLATED IS NOW THE RULE FOR ADDING ANY.**
- *
- * `tobacco`, `cigarette`, `bloody`, `drunk`, `mistress` and `affair` all have ORDINARY uses in the
- * register children read: a bloody nose, *had drunk her tea*, a family affair, the mistress of the
- * house. The screen's first baseline diff caught `tobacco` on `ENG-018-RB-02` — a walk script for
- * *Rebecca of Sunnybrook Farm* reporting that Mr Cobb has tobacco in his cheek, which is exactly
- * what a comprehension walk script is FOR.
- *
- * **THE RULE: a word belongs on this list only if it has NO ordinary use in the register children
- * read.** That is the operational form of her 227th — a screen tuned only to refuse strips a corpus
- * of ordinary language — and it is why the pass fixture is not decoration. Every removed word is
- * now a must-PASS case, so no future edit can quietly put them back.
+ * FLAGGED — two kinds, both flag, and the kinds are kept apart because the distinction IS the
+ * reconciliation. Neither is copied from the other store: their qualifier is a RULE and this is
+ * that rule applied to this store's own words, or the cross between the two lists measures nothing.
  */
+const FLAG_AMBIGUOUS_SENSE = ['bloody', 'drunk', 'mistress', 'affair', 'naked', 'spirits', 'liquor', 'bitch'];
+/** The ordinary sense needs a sentence that a bare token cannot supply. LOVER is the case. */
+const FLAG_NEEDS_CONTEXT = ['lover', 'slaughter', 'massacre', 'torture'];
+const FLAGGED = [...FLAG_AMBIGUOUS_SENSE, ...FLAG_NEEDS_CONTEXT];
 
 /**
- * **FLAG-NEEDS-A-SENSE — THE THIRD OUTCOME, ADOPTED FROM THE AUTHORING STORE'S SCREEN.**
- *
- * Some words carry an ordinary sense and an unsuitable one, and **nothing in a bare scope can tell
- * them apart: an option value has no sentence around it.** Their store found this when its own
- * fixture caught `shoot` in the refuse list and the pass list at once; this store found the same
- * pressure and resolved it worse, by DELETING six ambiguous words from the list entirely.
- *
- * **Deleting an ambiguous word decides it silently in favour of passing.** Flagging keeps it in the
- * system and puts the decision where it belongs. So the six that were dropped are back, as flags,
- * and `naked` moves here from REFUSED — it was kept there with a known false positive on "the naked
- * eye", which is precisely a word needing a sense.
- *
- * **It is Annie's wordhood ruling transposed** — the corpus whose population matches the reader
- * decides, and where the row supplies the sense the word is readable. Here: where a SENTENCE
- * supplies the sense, a flag word passes; where the scope is bare, it is reported and never
- * silently decided in either direction.
+ * **THE DEPARTURES, WITH THE ORDINARY USE THAT CARRIED EACH ONE OUT.** A list that records only its
+ * state cannot be argued with; one that records its history can. Every entry here was on a draft of
+ * the refuse list and left under the rule.
  */
-const FLAGGED = [
-  'bloody', 'drunk', 'mistress', 'affair', 'naked', 'spirits', 'liquor',
+export const DEPARTURES: ReadonlyArray<{ word: string; ordinaryUse: string }> = [
+  { word: 'tobacco', ordinaryUse: 'tobacco in his cheek — a walk script for Rebecca of Sunnybrook Farm; caught by this screen\'s own first baseline diff' },
+  { word: 'cigarette', ordinaryUse: 'a plain noun in a story' },
+  { word: 'bloody', ordinaryUse: 'a bloody nose — now a FLAG rather than a departure' },
+  { word: 'drunk', ordinaryUse: 'she had drunk her tea — the past participle of drink; now a FLAG' },
+  { word: 'mistress', ordinaryUse: 'the mistress of the house; now a FLAG' },
+  { word: 'affair', ordinaryUse: 'a family affair; now a FLAG' },
+  { word: 'naked', ordinaryUse: 'visible to the naked eye; moved from REFUSE to FLAG, having been kept as a refusal with this logged as a known false positive — a word needing a sense, described instead of handled' },
+  { word: 'lover', ordinaryUse: 'a lover of books. It leaves the refuse list under the rule and lands on FLAG under the qualifier, which is the only reading that holds both the rule and her 227th naming LOVER as the reason the screen exists' },
 ];
 
-/** Optional plural or possessive only — never a loose prefix, which would catch SHELL from HELL. */
 const rx = (w: string) => new RegExp(`\\b${w}(s|'s|es)?\\b`, 'i');
-const PATTERNS = REFUSED.map((w) => ({ word: w, re: rx(w) }));
+const REFUSE_PATTERNS = REFUSED.map((w) => ({ word: w, re: rx(w) }));
 const FLAG_PATTERNS = FLAGGED.map((w) => ({ word: w, re: rx(w) }));
 
 export interface AppropriatenessHit { word: string; matched: string }
-
 export type AppropriatenessVerdict = 'PASS' | 'FLAG-NEEDS-A-SENSE' | 'REFUSE';
-
-/**
- * A BARE scope has no sentence to supply the sense — an option value, a vr-08 leftover, a headword.
- * A SENTENCE scope has one, and a reviewer reading the item can see it.
- */
+/** BARE has no sentence to supply the sense — an option value, a leftover, a headword. */
 export type AppropriatenessScope = 'bare' | 'sentence';
+/** Which door is asking. A flag means different things at each, and that is her 228th's whole point. */
+export type AppropriatenessDoor = 'search' | 'write-gate';
+export type AppropriatenessAction = 'accept' | 'drop-and-retry' | 'hold-and-route' | 'refuse';
 
-export interface AppropriatenessResult { verdict: AppropriatenessVerdict; hits: AppropriatenessHit[]; scope: AppropriatenessScope }
-
-/**
- * The full verdict. **A refusal REPORTS and never rewrites** — nothing is stripped in place; the
- * search proposes another candidate, in the open.
- */
-export function screenForAChild(text: string, scope: AppropriatenessScope = 'bare'): AppropriatenessResult {
-  const refuse = appropriatenessHits(text);
-  if (refuse.length) return { verdict: 'REFUSE', hits: refuse, scope };
-  const flags: AppropriatenessHit[] = [];
-  for (const p of FLAG_PATTERNS) { const m = p.re.exec(text); if (m) flags.push({ word: p.word, matched: m[0] }); }
-  if (flags.length && scope === 'bare') return { verdict: 'FLAG-NEEDS-A-SENSE', hits: flags, scope };
-  return { verdict: 'PASS', hits: [], scope };
+export interface AppropriatenessResult {
+  verdict: AppropriatenessVerdict;
+  hits: AppropriatenessHit[];
+  scope: AppropriatenessScope;
+  door: AppropriatenessDoor;
+  /** What the calling door must DO. A verdict with no action is the diary entry she names. */
+  action: AppropriatenessAction;
+  reader: string | null;
 }
 
-/** Does this string carry a refused word? Returns every hit, so a report never says only the first. */
 export function appropriatenessHits(text: string): AppropriatenessHit[] {
   const hits: AppropriatenessHit[] = [];
-  for (const p of PATTERNS) { const m = p.re.exec(text); if (m) hits.push({ word: p.word, matched: m[0] }); }
+  for (const p of REFUSE_PATTERNS) { const m = p.re.exec(text); if (m) hits.push({ word: p.word, matched: m[0] }); }
   return hits;
 }
 
-/**
- * THE PREDICATE THE SEARCH CALLS. A search that cannot propose an unsuitable candidate is a system
- * that cannot fail in this direction; a search that proposes one for a gate to catch is a system
- * that works and wastes (her 227th).
- */
+export function flagHits(text: string): AppropriatenessHit[] {
+  const hits: AppropriatenessHit[] = [];
+  for (const p of FLAG_PATTERNS) { const m = p.re.exec(text); if (m) hits.push({ word: p.word, matched: m[0] }); }
+  return hits;
+}
+
+/** The full verdict. **It reports and never rewrites** — nothing is stripped in place. */
+export function screenForAChild(
+  text: string, scope: AppropriatenessScope = 'bare', door: AppropriatenessDoor = 'write-gate',
+): AppropriatenessResult {
+  const refuse = appropriatenessHits(text);
+  if (refuse.length) return { verdict: 'REFUSE', hits: refuse, scope, door, action: door === 'search' ? 'drop-and-retry' : 'refuse', reader: null };
+  const flags = flagHits(text);
+  if (flags.length && scope === 'bare') {
+    return {
+      verdict: 'FLAG-NEEDS-A-SENSE', hits: flags, scope, door,
+      // At the search, ambiguity is free to avoid — spending a reader on a proposal is spending a
+      // person where a retry would do. At the write gate somebody WANTED that word.
+      action: door === 'search' ? 'drop-and-retry' : 'hold-and-route',
+      reader: door === 'search' ? null : 'the reviewer, with the row and its context',
+    };
+  }
+  return { verdict: 'PASS', hits: [], scope, door, action: 'accept', reader: null };
+}
+
+/** The search's predicate: a flag is dropped, so a proposal never carries what a reader would owe time to. */
 export function isAppropriateForAChild(word: string): boolean {
-  return appropriatenessHits(word).length === 0;
+  return screenForAChild(word, 'bare', 'search').action === 'accept';
 }
 
 /**
- * THE FIXTURE. Both halves carried, and the PASS half is not decoration: it is the half that fails
- * if this screen is ever tuned into a corpus-stripper.
+ * THE FIXTURE.
+ *
+ * **THE PASS HALF IS ASSERTED AS NEVER-REFUSED, NOT AS PASS** — the other store's repair, and the
+ * one that reconciles SHELL. A word may legitimately be a substring trap (must not be refused for
+ * containing HELL) AND an ambiguous sense (must not be silently passed); asserting equality with
+ * PASS makes those two memberships a contradiction when the real requirement is that it never be
+ * REFUSED. **The fault was the assertion, not the lists.**
  */
 export const APPROPRIATENESS_FIXTURE = {
-  mustRefuse: ['HELL', 'LOVER', 'DAMN', 'CORPSE', 'WHISKY', 'SUICIDE', 'BROTHEL', 'a hell of a thing'],
-  mustPass: [
-    // her own instance: a district that cannot say this is damaged by its own guard
-    'killed the engine', 'kill', 'dead', 'die', 'blood', 'gun', 'war', 'shot', 'pain', 'poison',
-    'ghost', 'fight', 'hate', 'sick', 'weapon', 'enemy', 'angry',
-    // the near neighbours of the refused words, which a loose matcher would take with them
-    'shell', 'sell', 'side', 'hello', 'shellfish', 'damp', 'lovely', 'clover', 'bloodied',
-    // the two its own first run removed OUTRIGHT: ordinary nouns, not ambiguous ones
+  mustRefuse: ['HELL', 'DAMN', 'CORPSE', 'WHISKY', 'SUICIDE', 'BROTHEL', 'SATAN', 'a hell of a thing'],
+  /** May PASS or FLAG. May never REFUSE. */
+  mustNeverBeRefused: [
+    'kill', 'killed the engine', 'dead', 'die', 'blood', 'gun', 'war', 'shot', 'pain', 'poison',
+    'ghost', 'fight', 'hate', 'sick', 'weapon', 'enemy', 'angry', 'knife', 'murder', 'stupid', 'ugly', 'fat',
+    'sell', 'side', 'hello', 'shellfish', 'damp', 'lovely', 'bloodied',
     'tobacco in his cheek', 'a cigarette card',
-    // THE SUBSTRING TRAPS, taken from the authoring store's fixture — they offered the fixture
-    // shape as the transferable half and they were right. Each is a whole word containing a
-    // refused one, and a substring matcher would refuse all five and call it safety.
+    // the substring traps — each a whole word containing a refused one
     'shell', 'glover', 'grass', 'class', 'button', 'diesel',
   ],
-  /**
-   * The bare-scope flags. A sentence resolves them (see mustPassInASentence); bare, they are
-   * reported. These are the words this store's first draft deleted, which decided them silently.
-   */
-  mustFlagWhenBARE: ['bloody', 'drunk', 'mistress', 'affair', 'naked'],
+  mustFlagWhenBARE: ['bloody', 'drunk', 'mistress', 'affair', 'naked', 'lover', 'bitch'],
   mustPassInASentence: ['a bloody nose', 'she had drunk her tea', 'the mistress of the house',
-    'a family affair', 'visible to the naked eye'],
+    'a family affair', 'visible to the naked eye', 'a lover of books'],
+  /** Her 228th: at the search a flag is dropped; at the write gate it holds and routes. */
+  routing: [
+    { text: 'lover', scope: 'bare' as const, door: 'search' as const, action: 'drop-and-retry' as const },
+    { text: 'lover', scope: 'bare' as const, door: 'write-gate' as const, action: 'hold-and-route' as const },
+    { text: 'a lover of books', scope: 'sentence' as const, door: 'write-gate' as const, action: 'accept' as const },
+    { text: 'HELL', scope: 'bare' as const, door: 'write-gate' as const, action: 'refuse' as const },
+  ],
 } as const;
 
-/** Runs the fixture. Throws on any disagreement — a screen unproven in both directions is not one. */
-export function runAppropriatenessFixture(): { refused: number; passed: number; flagged: number; inASentence: number } {
-  const wrongly: string[] = [];
+export interface FixtureCounts { refused: number; neverRefused: number; flagged: number; inASentence: number; routing: number; contradictions: number }
+
+/**
+ * Runs every half AND checks the lists against each other. **A fixture that can detect its own
+ * contradiction is a specification; one that cannot is a wish** (Annie, 228th) — so a word sitting
+ * in both the refuse and flag lists halts the run rather than being silently resolved.
+ */
+export function runAppropriatenessFixture(): FixtureCounts {
+  const wrong: string[] = [];
   const F = APPROPRIATENESS_FIXTURE;
-  for (const s of F.mustRefuse) if (screenForAChild(s, 'bare').verdict !== 'REFUSE') wrongly.push(`MISSED "${s}"`);
-  for (const s of F.mustPass) { const v = screenForAChild(s, 'bare'); if (v.verdict !== 'PASS') wrongly.push(`WRONGLY ${v.verdict} on "${s}" (${v.hits.map((h) => h.word).join(', ')})`); }
-  for (const s of F.mustFlagWhenBARE) { const v = screenForAChild(s, 'bare'); if (v.verdict !== 'FLAG-NEEDS-A-SENSE') wrongly.push(`"${s}" bare should FLAG and gave ${v.verdict}`); }
-  for (const s of F.mustPassInASentence) { const v = screenForAChild(s, 'sentence'); if (v.verdict !== 'PASS') wrongly.push(`"${s}" in a sentence should PASS and gave ${v.verdict}`); }
-  if (wrongly.length) throw new Error(`the appropriateness fixture fails on ${wrongly.length} case(s):\n  ${wrongly.join('\n  ')}`);
-  return { refused: F.mustRefuse.length, passed: F.mustPass.length, flagged: F.mustFlagWhenBARE.length, inASentence: F.mustPassInASentence.length };
+
+  const both = REFUSED.filter((w) => FLAGGED.includes(w));
+  if (both.length) wrong.push(`CONTRADICTION — ${both.join(', ')} sit(s) in the refuse list AND the flag list`);
+  const dup = (xs: readonly string[]) => xs.filter((w, i) => xs.indexOf(w) !== i);
+  for (const [name, xs] of [['refuse', REFUSED], ['flag', FLAGGED]] as const) {
+    const d = dup(xs); if (d.length) wrong.push(`CONTRADICTION — ${name} list repeats ${d.join(', ')}`);
+  }
+
+  for (const s of F.mustRefuse) if (screenForAChild(s, 'bare').verdict !== 'REFUSE') wrong.push(`MISSED "${s}"`);
+  for (const s of F.mustNeverBeRefused) { const v = screenForAChild(s, 'bare'); if (v.verdict === 'REFUSE') wrong.push(`WRONGLY REFUSED "${s}" (${v.hits.map((h) => h.word).join(', ')})`); }
+  for (const s of F.mustFlagWhenBARE) { const v = screenForAChild(s, 'bare'); if (v.verdict !== 'FLAG-NEEDS-A-SENSE') wrong.push(`"${s}" bare should FLAG and gave ${v.verdict}`); }
+  for (const s of F.mustPassInASentence) { const v = screenForAChild(s, 'sentence'); if (v.verdict !== 'PASS') wrong.push(`"${s}" in a sentence should PASS and gave ${v.verdict}`); }
+  for (const r of F.routing) { const v = screenForAChild(r.text, r.scope, r.door); if (v.action !== r.action) wrong.push(`"${r.text}" at the ${r.door} should ${r.action} and gave ${v.action}`); }
+
+  if (wrong.length) throw new Error(`the appropriateness fixture fails on ${wrong.length} case(s):\n  ${wrong.join('\n  ')}`);
+  return { refused: F.mustRefuse.length, neverRefused: F.mustNeverBeRefused.length, flagged: F.mustFlagWhenBARE.length,
+    inASentence: F.mustPassInASentence.length, routing: F.routing.length, contradictions: 0 };
 }
+
+/** The lists themselves, for crossing. Published entire — a cross on a fifth of a population is a start, not a result. */
+export const APPROPRIATENESS_LISTS = { refuse: REFUSED, flagAmbiguousSense: FLAG_AMBIGUOUS_SENSE, flagNeedsContext: FLAG_NEEDS_CONTEXT } as const;

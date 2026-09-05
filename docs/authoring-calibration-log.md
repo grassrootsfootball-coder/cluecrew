@@ -27615,3 +27615,52 @@ every correction reads NOTHING MOVED.
 in full; their 45 refuse and 26 pass words are not. The cross therefore covers 21 words of at least
 90 across both stores — **a disagreement set on a fifth of the population is a start, not a result**
 (R595). This store's three lists are published entire so the cross can be run from their side today.
+
+## R1000 — Two fixtures crossed, and a flag is not a decision until it names its reader
+
+**HER 228th'S CORRECTION TO THE THIRD OUTCOME: a flag with no reader is a diary entry.** The
+verdict was right and had no addressee. It now names one, and the answer differs by door:
+
+- **At the SEARCH, ambiguity is free to avoid.** A flagged candidate is dropped and another
+  proposed — the corpus does not need that particular word and the generator has thousands.
+  *Spending a reader on a proposal is spending a person where a retry would do.*
+- **At the WRITE GATE, ambiguity costs a reading and should get one.** The row HOLDS and routes to
+  the reviewer with its context, because hand-authored and imported content arrives *because
+  somebody wanted that word*.
+
+**The general form: a screen that proposes may refuse cheaply; a screen that judges what someone
+wrote may not.** Bare option values hold; rows with a sentence answer themselves, so scope is now
+per field — token fields bare, prose fields sentence.
+
+**THE LOVER QUALIFIER IS THE ONLY THING THAT RECONCILES THE RULE WITH THE CASE THAT CAUSED THE
+SCREEN.** This store's own rule — *no ordinary use in the register children read* — applied honestly
+carries LOVER off the refuse list, because *"a lover of books"* is ordinary. But her 227th named
+LOVER as one of the two words the screen exists for. **The rule presumes a register AROUND the word,
+and a bare option value has none: it is a token on a card.** So a word whose ordinary use REQUIRES
+context this scope cannot supply does not pass — it FLAGS. Applied to this store's own words (not
+copied — the cross measures nothing between two copies of one list), `lover`, `slaughter`,
+`massacre` and `torture` move REFUSE → FLAG. **At the search LOVER can now never be proposed, which
+preserves her 227th exactly; at the gate it holds for a reading rather than being refused outright.
+The rule and the case are both satisfied and neither was overruled.**
+
+**THE PASS HALF IS NOW ASSERTED AS NEVER-REFUSED, NOT AS PASS** — their repair, and the one that
+lets SHELL be a substring trap AND an ambiguous sense at once. **The fault was the assertion, not
+the lists.** A contradiction check is a fixture case of its own: a word in both lists halts the run.
+And a DEPARTURES record carries eight words with the ordinary use that carried each out, because a
+list that records only its state cannot be argued with.
+
+**THE FULL CROSS, 86 WORDS EITHER STORE LISTS.** 65 comparable, 21 not published by them. **38 agree
+exactly, 27 disagree — and 57 of 65 are refused by neither store.** That last figure is the one that
+governs safety: a word neither refuses cannot be stripped from the corpus by either, and it is the
+corroboration her method promises. The 27 are almost all one category — their drug and weapon
+doubles, which this store's list still lacks — plus `bloody` and `drunk`, which this store flags and
+they departed outright.
+
+**THE UNION FIXTURE, AND SHELL IS ITS FIRST ENTRY** (`content/union-appropriateness-fixture.json`).
+Her ruling: **what crosses between stores is the FIXTURE, not the list; a list is accepted anywhere
+by passing it rather than by anyone adopting anyone's vocabulary.** SHELL is a deliberate
+never-refused case here and a FLAG there, on `gen-vr-08-move-letter-20` — a row this store authored
+yesterday. **Both stores agree it must never be refused, and that is asserted; what is open is
+whether a bare SHELL on a card needs a reader.** It is recorded as OPEN with both readings and what
+would settle it — one reviewer reading one row — rather than resolved by whichever list was read
+last. **An open entry is not a gap in the fixture; it is the fixture doing its job.**
