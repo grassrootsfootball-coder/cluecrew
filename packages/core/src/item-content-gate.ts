@@ -221,7 +221,7 @@ export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
     // message names the reader and the act, so nobody reads it as bad authoring.
     failures.push({
       where: label,
-      rule: 'banned-vocabulary',
+      rule: 'subject-matter',
       detail: v.verdict === 'REFUSE'
         ? `subject matter unsuitable for a child: "${v.hits[0]!.matched}" (${APPROPRIATENESS_VERSION}). Generated child-facing content only; passages and quotations are exempt by the same rule the ban list uses.`
         : `HOLD AND ROUTE — "${v.hits[0]!.matched}" has an ordinary sense and an unsuitable one, and this scope supplies no sentence to tell them apart (${APPROPRIATENESS_VERSION}). `

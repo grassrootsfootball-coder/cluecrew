@@ -119,7 +119,14 @@ export const ROLE_RULES: Record<ContentRole, RoleRules> = {
 
 export interface ContentFailure {
   where: string;
-  rule: 'sentence-length' | 'four-syllable-words' | 'banned-vocabulary' | 'internal-id-leak' | 'us-spelling' | 'notation' | 'placeholder-tag' | 'notice-standard' | 'unclassified-path';
+  /**
+   * **`subject-matter` IS ITS OWN RULE AND SHARES NOTHING WITH `banned-vocabulary`.** They ran
+   * under one id for three turns, and a re-derivation of the screen's own figures then counted five
+   * of the BAN LIST's voice refusals — "poorly", "You must", "weak" — as the appropriateness
+   * screen's. **Two instruments under one rule name are indistinguishable to every consumer
+   * downstream**, including the one written to audit them.
+   */
+  rule: 'sentence-length' | 'four-syllable-words' | 'banned-vocabulary' | 'subject-matter' | 'internal-id-leak' | 'us-spelling' | 'notation' | 'placeholder-tag' | 'notice-standard' | 'unclassified-path';
   detail: string;
   /**
    * Absent means 'error' — every rule that existed before UK spelling arrived

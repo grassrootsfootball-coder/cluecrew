@@ -27810,3 +27810,55 @@ quotation boundary transfers because it is about whose words a string is — tru
 path scope does not, because it is about what THAT list is for. **Inheriting both looked like reuse
 and was a category error**, and it produced the quietest possible failure: a gate that runs, passes,
 and reports a population it never looked at.
+
+## R1004 — The inert screen's figures re-derived, and a filtered list names its parent
+
+**EVERY FIGURE THE SCREEN PRODUCED FOR THREE TURNS, CLASSIFIED BY WHAT COMPUTED IT.** "The screen
+was inert" does not invalidate everything the screen was mentioned in, and saying so would be as
+careless as the original fault in the other direction. **Six stand, two stand narrower than they
+read, two do not stand.**
+
+**THE TWO THAT FALL ARE BOTH THE GATE'S.** *"blocked 70 → 70. NOTHING MOVED."* was published three
+times as reassurance and was true of an instrument that was not looking — the exact shape of R173,
+the right answer from a failed read. The real figure is **83, with 14 subject-matter faults, all
+HOLD AND ROUTE and none a refusal.** The second is worse because it was never printed: the gate
+reported no appropriateness faults, so none were reported. **A silence is the most misleading kind of
+figure, because nothing was published to distrust.**
+
+**THE TWO THAT NARROW ARE THE INSTRUCTIVE ONES.** The fifteen holds were real — the routing script
+called the predicate directly and saw what the gate could not — but they were read as *the corpus has
+been screened* when the claim available was *these fields of DRAFT and LIVE rows have been*. And
+`check:appropriateness-sited` answered **"is the screen REACHABLE"** while being read as **"is the
+content SCREENED"**. It printed that bound in its own output — *"never is every string screened"* —
+and the bound was correct and was not enough: **a reachable screen that skips the fields it exists
+for satisfies every word of it.**
+
+**Everything LIST-DERIVED stands**, because the lists were never the fault. The 0-of-19, the 86-word
+cross, 31-of-35, the under-application's zero — all compare vocabularies and never touch a row.
+
+**AND THE RE-DERIVATION ITSELF MISCOUNTED, IN THE ARTEFACT WRITTEN TO CATCH MISCOUNTS.** Its first
+run reported *5 REFUSE* — which were the BAN LIST's voice rules on "poorly", "You must" and "weak",
+counted as the screen's because **both instruments emitted under `rule: 'banned-vocabulary'`**. Two
+instruments under one rule id are indistinguishable to every consumer downstream, including the one
+written to audit them. `subject-matter` is now its own rule, and the corrected figure is 14 and 0.
+
+---
+
+**A LIST BUILT BY FILTERING ANOTHER NAMES ITS PARENT AND STATES THE NARROWING RULE.** The fault this
+closes is always a SUBSET wearing a population's clothes: the child lexicon is SUBTLEX minus 62,097
+names, and its zeros read as verdicts until the exclusion was named (R992); the 302-card vault
+scored 0 of 13 and called LEND non-child vocabulary (R989); the generator's material is its own
+vocabulary minus what fails the cut. **A subset is indistinguishable from the population it came
+from when a reader cannot see what was excluded** (R595).
+
+`deriveList()` carries the parent, **the parent's SIZE**, the rule in words, and the excluded count —
+and the size is the part that gets dropped, because a parent named without it lets a reader assume
+the filter did little. The predicate does the filtering so the count and the description cannot
+drift: a hand-written *"excluded 62,097"* beside a separate `.filter()` is two facts that agree
+until someone edits one.
+
+`pnpm check:derived-lists` refuses any emitter publishing a filtered array that names no parent, on
+R985's proven shape — screen the emitters, declare the backlog that predates the rule, let it only
+shrink. **165 published filters across 85 files are declared; the search's own source is wired, and
+nothing new can join them.** Its fixture caught the first regex missing an inline key, which is the
+must-catch half earning its place before the check screened anything.

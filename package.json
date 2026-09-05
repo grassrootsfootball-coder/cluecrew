@@ -223,7 +223,8 @@
     "disagreement:set": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/run-the-disagreement-set.ts",
     "check:lane-health": "tsx scripts/check-lane-health.ts",
     "archive:lane": "tsx scripts/archive-the-lane.ts",
-    "check:appropriateness-sited": "tsx scripts/check-appropriateness-sited.ts"
+    "check:appropriateness-sited": "tsx scripts/check-appropriateness-sited.ts",
+    "check:derived-lists": "tsx scripts/check-derived-lists.ts"
   },
   "devDependencies": {
     "@eslint/js": "^9.20.0",

@@ -19,6 +19,7 @@ import { readFileSync } from 'node:fs';
 import { join as pjoin } from 'node:path';
 import { isAppropriateForAChild } from '../../packages/core/src/appropriateness';
 import { loadChildLexicon, type ChildLexicon } from './child-lexicon';
+import { deriveList, type Derivation } from './derived-list';
 
 const GENERATOR = pjoin(__dirname, '..', '..', 'packages', 'db', 'prisma', 'generate-content.ts');
 
@@ -32,12 +33,26 @@ export interface MoveLetterCandidate {
   minZipf: number; minZipfCBBC: number;
 }
 
-/** Every word the generator already carries. THE SOURCE. The lexicon never enumerates. */
-export function generatorMaterial(lex: ChildLexicon): string[] {
+/**
+ * Every word the generator already carries. THE SOURCE. The lexicon never enumerates.
+ *
+ * **AND IT IS A DERIVED LIST, SO IT NAMES ITS PARENT (R1004).** 796 of the generator's own words
+ * clear the cut; a reader given only that number cannot tell how many did not, and the excluded
+ * half is what decides whether a short candidate list is a fact about the corpus or about the cut.
+ */
+export function generatorMaterialDerived(lex: ChildLexicon): { items: string[]; derivedFrom: Derivation } {
   const src = readFileSync(GENERATOR, 'utf8');
   const quoted = src.match(/'[A-Za-z]{2,7}'/g) ?? [];
   if (quoted.length < 200) throw new Error(`read only ${quoted.length} quoted words from the generator — a short read is a broken read, not a small generator (R173)`);
-  return [...new Set(quoted.map((s) => s.slice(1, -1).toUpperCase()))].filter((w) => lex.knows(w));
+  const all = [...new Set(quoted.map((s) => s.slice(1, -1).toUpperCase()))];
+  return deriveList(
+    { name: 'the generator\'s usable material', parent: 'every distinct 2-7 letter quoted word in generate-content.ts', rule: `known to a competent eleven-year-old at Zipf >= ${lex.cut} on SUBTLEX-UK, names excluded` },
+    all, (w) => lex.knows(w),
+  );
+}
+
+export function generatorMaterial(lex: ChildLexicon): string[] {
+  return generatorMaterialDerived(lex).items;
 }
 
 const insertions = (w: string, l: string) => [...Array(w.length + 1).keys()].map((i) => w.slice(0, i) + l + w.slice(i));
