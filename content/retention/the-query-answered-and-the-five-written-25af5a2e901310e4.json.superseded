@@ -1,0 +1,181 @@
+{
+ "kind": "THE-QUERY-ANSWERED-AND-THE-FIVE-WRITTEN",
+ "TO": "Annie, and the authoring store; by relay through David",
+ "date": "2026-09-05",
+ "mode": "APPLIED",
+ "THE_231st": {
+  "sha256": "728a4fe81ebb9360516b74a8acdf6dc1cb79a7e81975a46b8dfdf9c7c0232ce6",
+  "verifiedHere": true
+ },
+ "ONE_THE_QUERY_ANSWERED": {
+  "question": "name every surface that renders misconceptionExecution.",
+  "ANSWER": "NO child-facing surface renders it.",
+  "staffSurfacesThatDO": [
+   "apps/web/components/admin/maths-review.tsx:78 — a staff review table cell",
+   "apps/web/components/admin/comprehension-review.tsx:162 — a staff review table cell",
+   "apps/web/e2e/render-sweep.spec.ts:92 — a staff sweep that LOGS a warning when the field is empty; it never renders it"
+  ],
+  "andTHECHILDPATHSINFULL": [
+   "orchestrator.ts:774 serves options as {id, content} — the field is loaded by include and projected away",
+   "clue-tap route serves options as {id, label} — same",
+   "the walk route selects only {explanation, status} and loads no options at all",
+   "the miss path serves childHint via hintToServe/resolveLibraryHint — the library entry's hint, never the execution"
+  ],
+  "THE_THING_WORTH_SAYING": "the field IS loaded on the child path. Both child readers `include` every option column and then project. That is correct today and it is one careless edit from wrong — `options.map((o) => ({ ...o }))` would serve it — so the assertion reads the PROJECTIONS rather than the includes.",
+  "keptANSWERED": "pnpm check:execution-not-child-facing, with a carried fixture of two must-catch and two must-be-clean cases. A fact that licenses a store to write is the worst kind to leave unasserted (R180)."
+ },
+ "TWO_THE_FIVE_WRITTEN": {
+  "howTHESENTENCEWASMADE": "computed, not composed. The template was LIFTED from a row that already carries it and then used to rebuild that row's own execution — byte-identical, or the run refuses, because a template read wrongly would produce five wrong sentences that all look right.",
+  "donorRow": "bank-vr-02-two-odd-ones-out-01",
+  "assertions": [
+   {
+    "assertion": "a sibling row carries the template, so it is lifted rather than invented",
+    "result": "read from bank-vr-02-two-odd-ones-out-01",
+    "passed": true
+   },
+   {
+    "assertion": "the template reproduces the donor row's own execution exactly",
+    "result": "byte-identical",
+    "passed": true
+   },
+   {
+    "assertion": "bank-vr-02-two-odd-ones-out-17 oval,triangle: the tag performs, so the sentence describes an act the seat executes",
+    "result": "PERFORMS — oval and triangle takes one odd word and one group member",
+    "passed": true
+   },
+   {
+    "assertion": "bank-vr-02-two-odd-ones-out-17 oval,triangle: exactly one odd word and one group member, as the template assumes",
+    "result": "1 odd, 1 group",
+    "passed": true
+   },
+   {
+    "assertion": "bank-vr-02-two-odd-ones-out-17: the seat names the odd word FIRST, which is what \"starts from\" means",
+    "result": "seat reads oval,triangle, odd word is oval",
+    "passed": true
+   },
+   {
+    "assertion": "bank-vr-02-two-odd-ones-out-22 dog,snake: the tag performs, so the sentence describes an act the seat executes",
+    "result": "PERFORMS — dog and snake takes one odd word and one group member",
+    "passed": true
+   },
+   {
+    "assertion": "bank-vr-02-two-odd-ones-out-22 dog,snake: exactly one odd word and one group member, as the template assumes",
+    "result": "1 odd, 1 group",
+    "passed": true
+   },
+   {
+    "assertion": "bank-vr-02-two-odd-ones-out-22: the seat names the odd word FIRST, which is what \"starts from\" means",
+    "result": "seat reads dog,snake, odd word is dog",
+    "passed": true
+   },
+   {
+    "assertion": "bank-vr-02-two-odd-ones-out-23 cold,rough: the tag performs, so the sentence describes an act the seat executes",
+    "result": "PERFORMS — cold and rough takes one odd word and one group member",
+    "passed": true
+   },
+   {
+    "assertion": "bank-vr-02-two-odd-ones-out-23 cold,rough: exactly one odd word and one group member, as the template assumes",
+    "result": "1 odd, 1 group",
+    "passed": true
+   },
+   {
+    "assertion": "bank-vr-02-two-odd-ones-out-23: the seat names the odd word FIRST, which is what \"starts from\" means",
+    "result": "seat reads cold,rough, odd word is cold",
+    "passed": true
+   },
+   {
+    "assertion": "bank-vr-02-two-odd-ones-out-24 net,kick: the tag performs, so the sentence describes an act the seat executes",
+    "result": "PERFORMS — net and kick takes one odd word and one group member",
+    "passed": true
+   },
+   {
+    "assertion": "bank-vr-02-two-odd-ones-out-24 net,kick: exactly one odd word and one group member, as the template assumes",
+    "result": "1 odd, 1 group",
+    "passed": true
+   },
+   {
+    "assertion": "bank-vr-02-two-odd-ones-out-24: the seat names the odd word FIRST, which is what \"starts from\" means",
+    "result": "seat reads net,kick, odd word is net",
+    "passed": true
+   },
+   {
+    "assertion": "bank-vr-02-two-odd-ones-out-25 tuna,dolphin: the tag performs, so the sentence describes an act the seat executes",
+    "result": "PERFORMS — tuna and dolphin takes one odd word and one group member",
+    "passed": true
+   },
+   {
+    "assertion": "bank-vr-02-two-odd-ones-out-25 tuna,dolphin: exactly one odd word and one group member, as the template assumes",
+    "result": "1 odd, 1 group",
+    "passed": true
+   },
+   {
+    "assertion": "bank-vr-02-two-odd-ones-out-25: the seat names the odd word FIRST, which is what \"starts from\" means",
+    "result": "seat reads tuna,dolphin, odd word is tuna",
+    "passed": true
+   },
+   {
+    "assertion": "exactly the five named seats are written, and no other",
+    "result": "5 gap(s): 17, 22, 23, 24, 25",
+    "passed": true
+   },
+   {
+    "assertion": "every row written is DRAFT and unsigned — nothing reviewed is overwritten (R62)",
+    "result": "0 not DRAFT/unsigned",
+    "passed": true
+   }
+  ],
+  "written": [
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-17",
+    "seat": "oval,triangle",
+    "execution": "The group of three is square, triangle and star, so the two odd ones out are circle and oval. This option starts from oval, which is genuinely one of the odd pair, and then takes triangle to go with it — but triangle is one of the three that belong together. Only one of these two words sits outside the group."
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-22",
+    "seat": "dog,snake",
+    "execution": "The group of three is hen, snake and frog, so the two odd ones out are cat and dog. This option starts from dog, which is genuinely one of the odd pair, and then takes snake to go with it — but snake is one of the three that belong together. Only one of these two words sits outside the group."
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-23",
+    "seat": "cold,rough",
+    "execution": "The group of three is soft, rough and smooth, so the two odd ones out are hot and cold. This option starts from cold, which is genuinely one of the odd pair, and then takes rough to go with it — but rough is one of the three that belong together. Only one of these two words sits outside the group."
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-24",
+    "seat": "net,kick",
+    "execution": "The group of three is jump, kick and run, so the two odd ones out are ball and net. This option starts from net, which is genuinely one of the odd pair, and then takes kick to go with it — but kick is one of the three that belong together. Only one of these two words sits outside the group."
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-25",
+    "seat": "tuna,dolphin",
+    "execution": "The group of three is whale, dolphin and seal, so the two odd ones out are shark and tuna. This option starts from tuna, which is genuinely one of the odd pair, and then takes dolphin to go with it — but dolphin is one of the three that belong together. Only one of these two words sits outside the group."
+   }
+  ],
+  "rowsWritten": 5
+ },
+ "THREE_WHAT_THIS_DOES_NOT_TOUCH": "the sixth seat. bank-vr-02-two-odd-ones-out-17 circle,square is the authoring store's withdrawal — it HAS an execution, bound to superseded bytes, and re-writing it is their re-authoring rather than this gap.",
+ "findingsSha256": "5ed3191e4507c8d32f168edbe08e19747aa281c7ec128dcdc4a137e41d059d04",
+ "howToCheckThisOnArrival": {
+  "subtreeKeys": [
+   "ONE_THE_QUERY_ANSWERED",
+   "TWO_THE_FIVE_WRITTEN"
+  ],
+  "subtree": "an object of THIS DOCUMENT'S OWN TOP-LEVEL KEYS, exactly as spelled in subtreeKeys and nowhere renamed: {\"ONE_THE_QUERY_ANSWERED\", \"TWO_THE_FIVE_WRITTEN\"}",
+  "spec": "sha256 over json.dumps(subtree, sort_keys=True, separators=(\",\",\":\"), ensure_ascii=False).encode(\"utf-8\") — R729. ensure_ascii defaults to True and gives a different number.",
+  "andTheFileDigest": "the staging line and the .sha256 sidecar, over the whole file bytes"
+ },
+ "DIGESTS": {
+  "THE_FILE_DIGEST": "this file's own name and its .sha256 sidecar carry it. It cannot be written here: a file that states its own byte-hash changes the bytes it is stating.",
+  "theFileDigestSpec": "sha256 over the whole file bytes. This is what the filename carries after deliver() restamps, what the .sha256 sidecar holds, and what a receiving store should quote back to confirm arrival.",
+  "THE_FINDINGS_DIGEST": "5ed3191e4507c8d32f168edbe08e19747aa281c7ec128dcdc4a137e41d059d04",
+  "theFindingsDigestSpec": "sha256 over json.dumps(subtree, sort_keys=True, separators=(\",\",\":\"), ensure_ascii=False) where subtree is {\"ONE_THE_QUERY_ANSWERED\", \"TWO_THE_FIVE_WRITTEN\"} — R729. It measures the FINDINGS, not the file, and changes only when a finding changes.",
+  "andWHYBOTH": "they never agree and neither is wrong. The file digest identifies the bytes; the findings digest identifies the claim. Quoting one without naming which is how one landing acquires two names (R981)."
+ },
+ "instrumentProvenance": {
+  "emittedBy": "write-the-five-executions.ts",
+  "carriedFixture": false,
+  "MARK": "FROM AN UNFIXTURED INSTRUMENT",
+  "meaning": "this emitter carries no fixture, so nothing in this run proves it can find what it claims to find or stay silent on what is clean. Read its figures accordingly (Annie's clause, R726).",
+  "remedy": "the emitter earns a carried fixture before its next emission crosses (R725)."
+ }
+}

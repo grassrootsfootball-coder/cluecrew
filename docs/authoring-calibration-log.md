@@ -28051,3 +28051,24 @@ whole**.
 
 **The sixth seat is untouched**: `circle,square` on row 17 has an execution and belongs to the other
 store's re-authoring, not to this gap.
+
+## R1010 — An applier is not idempotent in what it reports, even when it is in what it writes
+
+Asked to re-cross an artefact, this store **re-ran the applier that produced it**. The five
+executions were already written, so its gap set was empty: it emitted a report saying **zero written
+and carrying zero sentences**, and `deliver()` pruned the real artefact as a superseded generation
+of the same subject name. **The write was idempotent and the REPORT was not**, and the second run
+destroyed the first's only delivered copy while looking like a successful re-delivery.
+
+Recovered from `content/exports`, which is why an applier writes its artefact there before
+delivering rather than only into the lane.
+
+**THE RULE: a re-cross re-delivers BYTES. It never re-runs the producer.** A producer reads the
+world as it is now, and the world has changed precisely because the producer ran — so the second
+run is a report on a different state wearing the first run's name. The same shape as R62's
+derived-value problem, one level up: **the artefact is a function of the store, and re-running it
+after a write is re-deriving a record of the state before that write.**
+
+**AND THE PRUNE IS THE DANGEROUS HALF.** Delivering by subject name means a new generation
+supersedes the old, which is right when the new one supersedes the old and wrong when it merely
+followed it. A re-run always looks like the newer generation.
