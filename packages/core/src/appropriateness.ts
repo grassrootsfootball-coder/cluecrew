@@ -67,8 +67,39 @@ const REFUSED = [
  * reconciliation. Neither is copied from the other store: their qualifier is a RULE and this is
  * that rule applied to this store's own words, or the cross between the two lists measures nothing.
  */
-const FLAG_AMBIGUOUS_SENSE = ['bloody', 'drunk', 'mistress', 'affair', 'naked', 'spirits', 'liquor', 'bitch'];
-/** The ordinary sense needs a sentence that a bare token cannot supply. LOVER is the case. */
+const FLAG_AMBIGUOUS_SENSE = [
+  'bloody', 'drunk', 'mistress', 'affair', 'naked', 'spirits', 'liquor', 'bitch',
+  /**
+   * **FOUR CASES THIS STORE'S LIST FAILED IN THE AUTHORING STORE'S FIXTURE.** Their fixture asserts
+   * these must not SILENTLY PASS and this store's list passed all four. Flagging satisfies the case
+   * without adopting their verdict — and adopting a FIXTURE CASE is not adopting a list.
+   *
+   * **Independence is for FINDING; convergence is for FIXING.** The cross needed two independent
+   * lists to surface this category at all. Once surfaced, refusing to converge would be keeping a
+   * known hole open to protect a measurement that has already been taken.
+   */
+  'shoot', 'arms', 'pot', 'high',
+];
+/**
+ * The ordinary sense needs a sentence that a bare token cannot supply. LOVER is the case.
+ *
+ * **THE UNDER-APPLICATION RULE (the authoring store, 2026-09-05): a qualifier is UNDER-APPLIED
+ * until it has been run over every word the rule it qualifies already touched.** This store had
+ * applied it to four words it happened to be thinking about. Run over the whole refuse list, it
+ * moves NOTHING — and the first attempt to run it moved three, which was the qualifier being
+ * MISAPPLIED rather than finally applied.
+ *
+ * **THE DISTINCTION THE FIRST PASS BLURRED, WHICH IS THE QUALIFIER'S OWN TEST:** it is not "does
+ * this word have an ordinary use somewhere". It is *"where the DEFAULT READING OF THE BARE TOKEN is
+ * the ordinary one it passes; where the ordinary sense needs a sentence that is not there it
+ * flags."* `nude` has a nude shade, `lust` a lust for life, `brandy` a brandy snap — and the
+ * default bare reading of all three is the unsuitable sense, which is the REFUSE case and not the
+ * flag case. Caught by this store's own portable fixture, which asserts `nude` MUST_REFUSE and
+ * failed 41 of 42 the moment the list moved under it.
+ *
+ * **So the honest result of the under-application check is ZERO MOVES over twenty-one words** — and
+ * that is a result, not a null. Running it was the only way to know.
+ */
 const FLAG_NEEDS_CONTEXT = ['lover', 'slaughter', 'massacre', 'torture'];
 const FLAGGED = [...FLAG_AMBIGUOUS_SENSE, ...FLAG_NEEDS_CONTEXT];
 

@@ -27722,3 +27722,91 @@ fixture, and one question: *name a category neither of these lists has.* If they
 source is justified and its first entry is written. If they name none, that is evidence the floor is
 higher than this store believes, and it cost one reading. **What it must not be is a third word
 list**, which reproduces the shared-perspective problem with more words in it.
+
+## R1002 — Both first runs failed, and a qualifier applied where it was noticed is not applied
+
+**THEIR FIXTURE FAILED THIS STORE'S LIST — 31 of 35 — AND THE LAST REPORT SAID IT THE WRONG WAY
+ROUND.** It called the four failures *"their category, which this store lacks"*, which is true and
+is not what happened. **Said plainly: their fixture failed this list**, on `shoot`, `arms`, `pot`
+and `high`. This store's 42 failed theirs on seven. **Both first runs failing is the method, not a
+fault** — a fixture that passed the other store's list first time would have told neither store
+anything. The framing matters because the passive one puts the finding on the other store's list
+when it is a finding about this one.
+
+The four are now flagged, so their fixture scores 35 of 35 here. **Adopting a FIXTURE CASE is not
+adopting a list: independence is for FINDING, convergence is for FIXING.** The cross needed two
+independent lists to surface the category at all; refusing to converge afterwards would keep a known
+hole open to protect a measurement already taken.
+
+**AND THE UNDER-APPLICATION RULE FOUND A FAULT IN HOW THIS STORE HAD READ THE QUALIFIER, NOT IN THE
+LIST.** Their rule: *a qualifier is under-applied until it has been run over every word the rule it
+qualifies already touched.* This store had applied it to four words it happened to be thinking about.
+Run over all twenty-one refuse words, **the first attempt moved three — `nude`, `lust`, `brandy` —
+and every one of those was the qualifier MISAPPLIED rather than finally applied.**
+
+**The distinction blurred is the qualifier's own test.** It is not *does this word have an ordinary
+use somewhere*; it is *where the DEFAULT READING OF THE BARE TOKEN is the ordinary one it passes,
+and where the ordinary sense needs a sentence that is not there it flags.* A nude shade, a lust for
+life, a brandy snap all exist — and the default bare reading of all three is the unsuitable sense,
+which is the REFUSE case. **Caught by this store's own portable fixture**, which asserts `nude`
+MUST_REFUSE and fell to 41 of 42 the moment the list moved under it.
+
+**So the honest result of the under-application check is ZERO MOVES over twenty-one words, and that
+is a result rather than a null.** Running it was the only way to know, and what it found was a
+misreading of a rule this store had already adopted and believed it understood.
+
+**THE HOLDS ARE HERS AND NOT THIS STORE'S TO READ OFF.** `SHOOT`, `ARMS`, `POT` and `HIGH` sit on
+written rows, so under her 228th they hold and route with their context: **15 holds across 15 rows**,
+each carrying the row as a child meets it, the option set, and the question — *does the sense THIS
+row supplies make the token the ordinary one?* The authoring store made the identical correction to
+its own report a turn earlier. **A store that finds a flag on a written row and judges it itself has
+used the wrong door**, and the temptation is strongest exactly when the answer looks obvious.
+
+**AND HER CAUTION DEMOTES THE PUBLISHED-LIST HALF OF THE THIRD-SOURCE PROPOSAL.** A published list
+**inherits its own author's ceiling**: Ofcom's research answers what a broadcast audience finds
+offensive, the BBFC's what a classifier must weigh, and neither was written for an eleven-year-old
+sitting an entrance paper. **A third author is not a third perspective** — publication makes a list
+citable and durable, not unlike the people who wrote it, and unlikeness is the property the cross is
+short of.
+
+**Its value is its DOCUMENTED BLIND SPOTS.** A published instrument states what it does not cover;
+neither store's list does, except where this one declared no slur coverage. **A documented hole can
+be planned around and an undocumented one cannot** — which is what to read those sources for, and is
+not what they are usually read for. So the order of work inverts: **the reader is the stronger half
+and comes first; the documents are cheaper and weaker and come second.**
+
+## R1003 — The screen inherited the wrong boundary and ran on prose, skipping every bare value it exists for
+
+**THE GATE SAID NOTHING MOVED WHILE FIFTEEN ROWS HELD, AND THE CONTRADICTION IS WHAT FOUND IT.** A
+routing script screening rows directly reported 15 holds; the baseline diff over the same corpus
+reported zero. **Two of this store's own instruments disagreed, and the one that agreed with the
+change was the one that was wrong** — R173's shape, and it was only visible because both were run.
+
+**THE SCREEN HAD INHERITED THE BAN LIST'S PATH SCOPE ALONG WITH ITS QUOTATION BOUNDARY.**
+`banListApplies` is false for `stem.word1`, `stem.words` and every option value: the ban list runs on
+the 24 SERVED prose paths plus class 3 (R379), and token fields are UNDECLARED there. **So the
+appropriateness screen ran on prose and skipped exactly the bare values it was built for.** HELL,
+LOVER and ARMS live on option values and stem words. For three turns it was sited, fixtured, crossed
+and reported — and inert on the fields that caused it.
+
+**AND A SECOND FAULT UNDERNEATH: the option path was written `options.value` where the scope model
+declares `option.value`.** Every option value was skipped by a plural, and no reader of either file
+would see it, because both names are plausible and only one is in the model.
+
+**THE REPAIR IS A DISTINCTION, NOT A WIDENING.** Her 227th scoped THIS screen herself — *"option
+values, stem words, sentences and hints"* — **so the field scope was already ruled and was never the
+ban list's to lend.** What transfers is the QUOTATION boundary and the provenance and
+machine-declaration exclusions, because a child reads none of those. UNDECLARED paths are screened
+and reported rather than silently exempted, which is R299's own answer applied to a second
+instrument.
+
+**The blast radius: 70 blocked before, 83 after. All 14 new reports are HOLD AND ROUTE and NONE is a
+refusal** — five on `arms`, five on `high`, three on `pot`, one on `shoots`, across English
+comprehension and four VR cases. Every one goes to Annie with its row.
+
+**THE GENERAL FORM, AND IT IS THE THIRD TIME THIS FORTNIGHT ONE INSTRUMENT HAS BORROWED ANOTHER'S
+SCOPE:** a boundary is inherited for a REASON, and the reason does not travel with the code. The
+quotation boundary transfers because it is about whose words a string is — true for any screen. The
+path scope does not, because it is about what THAT list is for. **Inheriting both looked like reuse
+and was a category error**, and it produced the quietest possible failure: a gate that runs, passes,
+and reports a population it never looked at.

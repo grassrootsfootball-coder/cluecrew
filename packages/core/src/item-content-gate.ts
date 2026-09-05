@@ -16,7 +16,7 @@
  *     long-word ceiling and the script checked for stale option references.
  * Declared quotations and tested tokens are honoured exactly as elsewhere.
  */
-import { banListApplies } from './ban-list-scope';
+import { banListApplies, banListScope } from './ban-list-scope';
 import { screenForAChild, APPROPRIATENESS_VERSION } from './appropriateness';
 import { dispositionFor, dispositionKey } from './field-dispositions';
 import { checkChildFacingText, spansPresentIn, type ContentFailure } from './content-gates';
@@ -199,7 +199,21 @@ export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
   const screenAppropriateness = (label: string, path: string, text: string, scope: 'bare' | 'sentence') => {
     if (!text) return;
     if (QUOTATION_FIELDS.has(path.split('.').pop() ?? '')) return;
-    if (!banListApplies(path)) return;
+    /**
+     * **THE SCREEN INHERITS THE QUOTATION BOUNDARY AND NOT THE BAN LIST'S PATH SCOPE, AND THE FIRST
+     * VERSION INHERITED BOTH.** `banListApplies` is false for `stem.word1`, `stem.words` and every
+     * option value — the ban list's scope (R379) is the 24 SERVED prose paths plus class 3, and
+     * token fields are UNDECLARED there. So this screen ran on prose and skipped **exactly the bare
+     * values it exists for**: HELL, LOVER and ARMS live on option values and stem words.
+     *
+     * Her 227th scoped THIS screen herself — *"option values, stem words, sentences and hints"* —
+     * so the field scope is ruled and is not the ban list's to lend. What transfers is the
+     * QUOTATION boundary and the provenance/machine exclusions, because a child reads neither.
+     * UNDECLARED paths are screened here (R299 refuses them for the ban list; this screen's own
+     * scope ruling covers them) and reported, so the scope question stays visible.
+     */
+    const scope_ = banListScope(path);
+    if (scope_ === 'OUT — provenance or workflow' || scope_ === 'OUT — machine declaration') return;
     const v = screenForAChild(text, scope, 'write-gate');
     if (v.verdict === 'PASS') return;
     // A FLAG IS NOT A REFUSAL AND IT IS NOT A PASS: the row HOLDS and routes to the reviewer with
@@ -222,7 +236,9 @@ export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
   }
   for (const [i, o] of (item.options ?? []).entries()) {
     const v = (o.content as { value?: unknown })?.value;
-    for (const one of (Array.isArray(v) ? v : [v])) screenAppropriateness(`item:${item.id} options[${i}]`, 'options.value', String(one ?? ''), 'bare');
+    // `option.value` — the DECLARED path. This read `options.value`, which matches nothing in the
+    // scope model, so every option value was skipped by a plural.
+    for (const one of (Array.isArray(v) ? v : [v])) screenAppropriateness(`item:${item.id} options[${i}]`, 'option.value', String(one ?? ''), 'bare');
   }
   for (const [path, text] of textsFrom((item.explanation ?? {}) as Record<string, unknown>, '')) {
     screenAppropriateness(`item:${item.id} explanation.${path}`, `explanation.${path}`, text, 'sentence');

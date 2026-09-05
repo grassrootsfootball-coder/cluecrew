@@ -1,0 +1,479 @@
+{
+ "kind": "BOTH-FIRST-RUNS-FAILED-THE-QUALIFIER-RUN-OVER-EVERYTHING-AND-THE-HOLDS-ROUTED",
+ "TO": "Annie, and the authoring store; by relay through David",
+ "date": "2026-09-05",
+ "ONE_THEIR_FIXTURE_FAILED_THIS_STORES_LIST": {
+  "saidPLAINLY": "their fixture failed this store's list on four cases. The previous report said \"their category, which this store lacks\", which is true and is not what happened — said the other way it is a finding about this store, and that is the way it should have been said.",
+  "andBOTHFIRSTRUNSFAILED": "their 35 cases scored 31 of 35 against this store's list as it stood; this store's 42 scored 35 of 42 against theirs. **Both first runs failing is the method, not a fault** — a fixture that passed the other store's list on the first run would have told neither store anything.",
+  "theFOURFAILURES": [
+   {
+    "word": "shoot",
+    "kind": "NEEDS_A_SENSE",
+    "theirReason": "a bamboo shoot and a gun. This store had it in two lists at once and its own fixture halted"
+   },
+   {
+    "word": "arms",
+    "kind": "NEEDS_A_SENSE",
+    "theirReason": "limbs and weapons; vr-13 carries ARMS as a word-building answer"
+   },
+   {
+    "word": "pot",
+    "kind": "NEEDS_A_SENSE",
+    "theirReason": "a cooking pot; vr-10 carries it"
+   },
+   {
+    "word": "high",
+    "kind": "NEEDS_A_SENSE",
+    "theirReason": "a height; vr-16 carries it as a stem word"
+   }
+  ],
+  "afterTheREPAIR": "35 of 35",
+  "andWHYADOPTINGTHEMISNOTADOPTINGALIST": "their fixture asserts these must not SILENTLY PASS. Flagging satisfies the case without taking their verdict. **Independence is for FINDING; convergence is for FIXING** — the cross needed two independent lists to surface this category at all, and refusing to converge afterwards would keep a known hole open to protect a measurement already taken."
+ },
+ "TWO_THE_UNDER_APPLICATION_RULE_RUN": {
+  "theirRule": "a qualifier is under-applied until it has been run over every word the rule it qualifies already touched.",
+  "wordsTheRuleHadTOUCHED": 21,
+  "moved": 0,
+  "andTHEFIRSTATTEMPTMOVEDTHREE": "nude, lust and brandy — a nude shade, a lust for life, a brandy snap. **That was the qualifier being MISAPPLIED, not finally applied.**",
+  "theDISTINCTIONBLURRED": "the qualifier is not \"does this word have an ordinary use somewhere\". It is \"where the DEFAULT READING OF THE BARE TOKEN is the ordinary one it passes; where the ordinary sense needs a sentence that is not there it flags.\" The default bare reading of all three is the UNSUITABLE sense — which is the refuse case.",
+  "caughtBY": "this store's own portable fixture, which asserts nude MUST_REFUSE and dropped to 41 of 42 the moment the list moved under it. It is now 42 of 42.",
+  "soTHERESULT": "ZERO moves over twenty-one words — and that is a result, not a null. Running it was the only way to know, and the run found a fault in how this store had read the qualifier rather than in the list."
+ },
+ "THREE_THE_HOLDS_ROUTED_TO_HER": {
+  "herRuling": "at the write gate the row holds and routes to her with its context. A bare option value supplies no sentence, so it holds rather than answering itself.",
+  "andWHATTHISSTOREISNOTDOING": "reading them off. SHOOT, ARMS, POT and HIGH sit on written rows, and a store that finds a flag on a written row and judges it itself has used the wrong door — the authoring store made this same correction to its own report last turn.",
+  "count": 15,
+  "distinctTokens": [
+   "arms",
+   "high",
+   "pot",
+   "shoot"
+  ],
+  "holds": [
+   {
+    "itemId": "ENG-001-WIW-01",
+    "status": "DRAFT",
+    "questionType": "en-comp-retrieval",
+    "token": "arms",
+    "matched": "arms",
+    "where": "options[3]",
+    "THE_ROW_AS_THE_CHILD_MEETS_IT": {
+     "text": "Read lines 1 to 4. What had the Mole been doing all morning?",
+     "passageRef": "stream-a-03-wind-in-willows",
+     "orderAnchor": 1
+    },
+    "optionValues": [
+     "Digging out a brand new tunnel.",
+     "Cleaning his little home from top to bottom.",
+     "Painting his house blue outside and white inside.",
+     "Resting his aching back and weary arms.",
+     "Singing along with the happy birds."
+    ],
+    "action": "HELD AND ROUTED",
+    "routedTo": "Annie",
+    "THE_QUESTION_FOR_HER": "does the sense THIS row supplies make \"arms\" the ordinary one? A bare option value supplies no sentence, so this holds rather than answering itself."
+   },
+   {
+    "itemId": "gen-vr-12-compound-words-11",
+    "status": "LIVE",
+    "questionType": "vr-12-compound-words",
+    "token": "pot",
+    "matched": "pot",
+    "where": "options[1]",
+    "THE_ROW_AS_THE_CHILD_MEETS_IT": {
+     "words": [
+      "pan"
+     ],
+     "prompt": "Which word joins with \"pan\" to make one new word?"
+    },
+    "optionValues": [
+     "cake",
+     "pot",
+     "fry"
+    ],
+    "action": "HELD AND ROUTED",
+    "routedTo": "Annie",
+    "THE_QUESTION_FOR_HER": "does the sense THIS row supplies make \"pot\" the ordinary one? A bare option value supplies no sentence, so this holds rather than answering itself."
+   },
+   {
+    "itemId": "gen-vr-13-make-a-word-01",
+    "status": "DRAFT",
+    "questionType": "vr-13-make-a-word",
+    "token": "arms",
+    "matched": "ARMS",
+    "where": "options[2]",
+    "THE_ROW_AS_THE_CHILD_MEETS_IT": {
+     "words": [
+      "STAY",
+      "ARMY"
+     ],
+     "prompt": "The middle word is built from the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: STAY ( ? ) ARMY"
+    },
+    "optionValues": [
+     "STAR",
+     "STAY",
+     "ARMS"
+    ],
+    "action": "HELD AND ROUTED",
+    "routedTo": "Annie",
+    "THE_QUESTION_FOR_HER": "does the sense THIS row supplies make \"ARMS\" the ordinary one? A bare option value supplies no sentence, so this holds rather than answering itself."
+   },
+   {
+    "itemId": "gen-vr-16-opposite-meaning-02",
+    "status": "DRAFT",
+    "questionType": "vr-16-opposite-meaning",
+    "token": "high",
+    "matched": "high",
+    "where": "stem.words",
+    "THE_ROW_AS_THE_CHILD_MEETS_IT": {
+     "words": [
+      "high"
+     ],
+     "prompt": "Which word means the OPPOSITE of the word on the card?"
+    },
+    "optionValues": [
+     "low",
+     "tall",
+     "steep",
+     "wide"
+    ],
+    "action": "HELD AND ROUTED",
+    "routedTo": "Annie",
+    "THE_QUESTION_FOR_HER": "does the sense THIS row supplies make \"high\" the ordinary one? A bare option value supplies no sentence, so this holds rather than answering itself."
+   },
+   {
+    "itemId": "gen-vr-03-related-words-10",
+    "status": "LIVE",
+    "questionType": "vr-03-related-words",
+    "token": "pot",
+    "matched": "pot",
+    "where": "options[0]",
+    "THE_ROW_AS_THE_CHILD_MEETS_IT": {
+     "pairA": [
+      "baker",
+      "bread"
+     ],
+     "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+     "stemWord": "potter"
+    },
+    "optionValues": [
+     "pot",
+     "oven",
+     "handle"
+    ],
+    "action": "HELD AND ROUTED",
+    "routedTo": "Annie",
+    "THE_QUESTION_FOR_HER": "does the sense THIS row supplies make \"pot\" the ordinary one? A bare option value supplies no sentence, so this holds rather than answering itself."
+   },
+   {
+    "itemId": "ENG-001-WIW-03",
+    "status": "DRAFT",
+    "questionType": "en-comp-inference",
+    "token": "arms",
+    "matched": "arms",
+    "where": "options[2]",
+    "THE_ROW_AS_THE_CHILD_MEETS_IT": {
+     "text": "Read lines 5 to 9. Why did the Mole suddenly stop cleaning and run outside?",
+     "passageRef": "stream-a-03-wind-in-willows",
+     "orderAnchor": 3
+    },
+    "optionValues": [
+     "He had finished every job in the house.",
+     "Spring outside was pulling at him and he could not sit still.",
+     "His back and arms hurt too much to go on.",
+     "The Water Rat called him from up above.",
+     "He wanted to find the river he had heard about."
+    ],
+    "action": "HELD AND ROUTED",
+    "routedTo": "Annie",
+    "THE_QUESTION_FOR_HER": "does the sense THIS row supplies make \"arms\" the ordinary one? A bare option value supplies no sentence, so this holds rather than answering itself."
+   },
+   {
+    "itemId": "ENG-005-BB-01",
+    "status": "DRAFT",
+    "questionType": "en-comp-retrieval",
+    "token": "high",
+    "matched": "high",
+    "where": "options[0]",
+    "THE_ROW_AS_THE_CHILD_MEETS_IT": {
+     "text": "Why did Beauty like going in the dog-cart? (lines 2 and 3)",
+     "quotes": [],
+     "passageRef": "stream-a-04-black-beauty",
+     "orderAnchor": 2
+    },
+    "optionValues": [
+     "It was light, and its high wheels ran along pleasantly.",
+     "It was the only cart he was strong enough to pull.",
+     "It meant John came with him instead of the master.",
+     "It was slow, so the journey felt easy."
+    ],
+    "action": "HELD AND ROUTED",
+    "routedTo": "Annie",
+    "THE_QUESTION_FOR_HER": "does the sense THIS row supplies make \"high\" the ordinary one? A bare option value supplies no sentence, so this holds rather than answering itself."
+   },
+   {
+    "itemId": "ENG-008-RC-11",
+    "status": "DRAFT",
+    "questionType": "en-comp-inference",
+    "token": "high",
+    "matched": "high",
+    "where": "options[3]",
+    "THE_ROW_AS_THE_CHILD_MEETS_IT": {
+     "text": "Read lines 26 to 30, then lines 71 to 73. Why could the morning search never find the garden?",
+     "quotes": [],
+     "passageRef": "stream-a-02-railway-children",
+     "orderAnchor": 71
+    },
+    "optionValues": [
+     "The house stood in a field, and no garden lay near it.",
+     "They had seen no wall at all, but only imagined it in the dark.",
+     "They searched round the house, but the garden lay behind the stables.",
+     "The garden had hidden itself away, and the high wall kept it out of sight."
+    ],
+    "action": "HELD AND ROUTED",
+    "routedTo": "Annie",
+    "THE_QUESTION_FOR_HER": "does the sense THIS row supplies make \"high\" the ordinary one? A bare option value supplies no sentence, so this holds rather than answering itself."
+   },
+   {
+    "itemId": "gen-vr-10-word-connections-09",
+    "status": "LIVE",
+    "questionType": "vr-10-word-connections",
+    "token": "pot",
+    "matched": "pot",
+    "where": "options[0]",
+    "THE_ROW_AS_THE_CHILD_MEETS_IT": {
+     "pairA": [
+      "baker",
+      "bread"
+     ],
+     "prompt": "Find the connection in the first pair, then complete the second.",
+     "stemWord": "potter"
+    },
+    "optionValues": [
+     "pot",
+     "oven",
+     "clay"
+    ],
+    "action": "HELD AND ROUTED",
+    "routedTo": "Annie",
+    "THE_QUESTION_FOR_HER": "does the sense THIS row supplies make \"pot\" the ordinary one? A bare option value supplies no sentence, so this holds rather than answering itself."
+   },
+   {
+    "itemId": "ENG-001-WIW-05",
+    "status": "LIVE",
+    "questionType": "en-comp-technique",
+    "token": "arms",
+    "matched": "arms",
+    "where": "options[4]",
+    "THE_ROW_AS_THE_CHILD_MEETS_IT": {
+     "text": "In lines 11 to 14 the writer repeats words like 'scraped' and 'scrabbled'. Why does he do this?",
+     "passageRef": "stream-a-03-wind-in-willows",
+     "orderAnchor": 5
+    },
+    "optionValues": [
+     "To show that digging is the easiest job a mole ever does.",
+     "To show the Mole was bored and fed up with the climb.",
+     "To show the climb went on and on and was hard work.",
+     "To copy the sound of the birds singing up above.",
+     "To make the reader feel sorry for the Mole's sore arms."
+    ],
+    "action": "HELD AND ROUTED",
+    "routedTo": "Annie",
+    "THE_QUESTION_FOR_HER": "does the sense THIS row supplies make \"arms\" the ordinary one? A bare option value supplies no sentence, so this holds rather than answering itself."
+   },
+   {
+    "itemId": "ENG-014-TS-03",
+    "status": "DRAFT",
+    "questionType": "en-comp-retrieval",
+    "token": "high",
+    "matched": "high",
+    "where": "options[3]",
+    "THE_ROW_AS_THE_CHILD_MEETS_IT": {
+     "text": "Look at lines 10 to 14. What shows us that Ben was in a happy mood?",
+     "quotes": [],
+     "passageRef": "stream-a-05-tom-sawyer",
+     "orderAnchor": 10
+    },
+    "optionValues": [
+     "The calm way of working that is described.",
+     "The fruit he had in his hand.",
+     "The way he came hopping and skipping along.",
+     "His heart was light and his hopes were high."
+    ],
+    "action": "HELD AND ROUTED",
+    "routedTo": "Annie",
+    "THE_QUESTION_FOR_HER": "does the sense THIS row supplies make \"high\" the ordinary one? A bare option value supplies no sentence, so this holds rather than answering itself."
+   },
+   {
+    "itemId": "ENG-016-HB-08",
+    "status": "DRAFT",
+    "questionType": "en-comp-inference",
+    "token": "high",
+    "matched": "high",
+    "where": "options[2]",
+    "THE_ROW_AS_THE_CHILD_MEETS_IT": {
+     "text": "Look at lines 47 to 55. How does the land change as they drive on?",
+     "quotes": [],
+     "passageRef": "stream-a-12-hound-baskervilles",
+     "orderAnchor": 47
+    },
+    "optionValues": [
+     "They were driving down towards the fertile country.",
+     "The low sun turned the streams to threads of gold.",
+     "Two high, narrow towers rose over the trees.",
+     "The gold and the green give way to bare stone."
+    ],
+    "action": "HELD AND ROUTED",
+    "routedTo": "Annie",
+    "THE_QUESTION_FOR_HER": "does the sense THIS row supplies make \"high\" the ordinary one? A bare option value supplies no sentence, so this holds rather than answering itself."
+   },
+   {
+    "itemId": "ENG-016-HB-11",
+    "status": "DRAFT",
+    "questionType": "en-comp-vocab",
+    "token": "arms",
+    "matched": "arms",
+    "where": "options[3]",
+    "THE_ROW_AS_THE_CHILD_MEETS_IT": {
+     "text": "Look at lines 72 to 76. What does 'veil' on line 75 mean here?",
+     "quotes": [
+      "veil"
+     ],
+     "passageRef": "stream-a-12-hound-baskervilles",
+     "orderAnchor": 72
+    },
+    "optionValues": [
+     "A thin cloth worn over the face.",
+     "The patches clipped bare here and there.",
+     "The dark ivy covering the front.",
+     "The coat of arms that breaks through it."
+    ],
+    "action": "HELD AND ROUTED",
+    "routedTo": "Annie",
+    "THE_QUESTION_FOR_HER": "does the sense THIS row supplies make \"arms\" the ordinary one? A bare option value supplies no sentence, so this holds rather than answering itself."
+   },
+   {
+    "itemId": "ENG-017-CR-07",
+    "status": "DRAFT",
+    "questionType": "en-comp-inference",
+    "token": "high",
+    "matched": "high",
+    "where": "options[3]",
+    "THE_ROW_AS_THE_CHILD_MEETS_IT": {
+     "text": "Look at lines 30 to 34. What does the Captain's silence show?",
+     "quotes": [],
+     "passageRef": "stream-a-17-cranford",
+     "orderAnchor": 30
+    },
+    "optionValues": [
+     "He agrees with her about Dr Johnson at last.",
+     "He screwed his lips up and drummed on the table.",
+     "He is holding back something he wants to say.",
+     "She has read her scene in a high, grand voice."
+    ],
+    "action": "HELD AND ROUTED",
+    "routedTo": "Annie",
+    "THE_QUESTION_FOR_HER": "does the sense THIS row supplies make \"high\" the ordinary one? A bare option value supplies no sentence, so this holds rather than answering itself."
+   },
+   {
+    "itemId": "ENG-019-BV-03",
+    "status": "DRAFT",
+    "questionType": "en-comp-inference",
+    "token": "shoot",
+    "matched": "shoots",
+    "where": "options[0]",
+    "THE_ROW_AS_THE_CHILD_MEETS_IT": {
+     "text": "Look at lines 10 to 13. What does Mark do when he interrupts?",
+     "quotes": [],
+     "passageRef": "stream-a-20-bevis",
+     "orderAnchor": 10
+    },
+    "optionValues": [
+     "He offers to hand Bevis the gun while Bevis shoots.",
+     "He keeps the same example and swaps the two boys round.",
+     "He says he might be shooting an elephant.",
+     "He wants to stop Bevis before he can finish."
+    ],
+    "action": "HELD AND ROUTED",
+    "routedTo": "Annie",
+    "THE_QUESTION_FOR_HER": "does the sense THIS row supplies make \"shoots\" the ordinary one? A bare option value supplies no sentence, so this holds rather than answering itself."
+   }
+  ]
+ },
+ "FOUR_THIS_STORES_LISTS_AND_CASES": {
+  "version": "v2-2026-09-05",
+  "lists": {
+   "refuse": [
+    "hell",
+    "damn",
+    "crap",
+    "bugger",
+    "arse",
+    "bastard",
+    "satan",
+    "nude",
+    "sexy",
+    "lust",
+    "brothel",
+    "whisky",
+    "whiskey",
+    "vodka",
+    "brandy",
+    "booze",
+    "heroin",
+    "cocaine",
+    "corpse",
+    "suicide",
+    "hanged"
+   ],
+   "flagAmbiguousSense": [
+    "bloody",
+    "drunk",
+    "mistress",
+    "affair",
+    "naked",
+    "spirits",
+    "liquor",
+    "bitch",
+    "shoot",
+    "arms",
+    "pot",
+    "high"
+   ],
+   "flagNeedsContext": [
+    "lover",
+    "slaughter",
+    "massacre",
+    "torture"
+   ]
+  },
+  "ownCases": "42 of 42",
+  "cases": 42
+ },
+ "FIVE_THE_BANK": "unchanged, pending David. keep-or-revert on slots 12-24.",
+ "findingsSha256": "5ef47c0d518937509d0fc74fc990d6fdd6656a6687a0c3519094b24b73e68d3a",
+ "howToCheckThisOnArrival": {
+  "subtreeKeys": [
+   "ONE_THEIR_FIXTURE_FAILED_THIS_STORES_LIST",
+   "TWO_THE_UNDER_APPLICATION_RULE_RUN",
+   "THREE_THE_HOLDS_ROUTED_TO_HER"
+  ],
+  "subtree": "an object of THIS DOCUMENT'S OWN TOP-LEVEL KEYS, exactly as spelled in subtreeKeys and nowhere renamed: {\"ONE_THEIR_FIXTURE_FAILED_THIS_STORES_LIST\", \"TWO_THE_UNDER_APPLICATION_RULE_RUN\", \"THREE_THE_HOLDS_ROUTED_TO_HER\"}",
+  "spec": "sha256 over json.dumps(subtree, sort_keys=True, separators=(\",\",\":\"), ensure_ascii=False).encode(\"utf-8\") — R729. ensure_ascii defaults to True and gives a different number.",
+  "andTheFileDigest": "the staging line and the .sha256 sidecar, over the whole file bytes"
+ },
+ "DIGESTS": {
+  "THE_FILE_DIGEST": "this file's own name and its .sha256 sidecar carry it. It cannot be written here: a file that states its own byte-hash changes the bytes it is stating.",
+  "theFileDigestSpec": "sha256 over the whole file bytes. This is what the filename carries after deliver() restamps, what the .sha256 sidecar holds, and what a receiving store should quote back to confirm arrival.",
+  "THE_FINDINGS_DIGEST": "5ef47c0d518937509d0fc74fc990d6fdd6656a6687a0c3519094b24b73e68d3a",
+  "theFindingsDigestSpec": "sha256 over json.dumps(subtree, sort_keys=True, separators=(\",\",\":\"), ensure_ascii=False) where subtree is {\"ONE_THEIR_FIXTURE_FAILED_THIS_STORES_LIST\", \"TWO_THE_UNDER_APPLICATION_RULE_RUN\", \"THREE_THE_HOLDS_ROUTED_TO_HER\"} — R729. It measures the FINDINGS, not the file, and changes only when a finding changes.",
+  "andWHYBOTH": "they never agree and neither is wrong. The file digest identifies the bytes; the findings digest identifies the claim. Quoting one without naming which is how one landing acquires two names (R981)."
+ },
+ "instrumentProvenance": {
+  "emittedBy": "route-the-holds-and-report-both-failures.ts",
+  "carriedFixture": false,
+  "MARK": "FROM AN UNFIXTURED INSTRUMENT",
+  "meaning": "this emitter carries no fixture, so nothing in this run proves it can find what it claims to find or stay silent on what is clean. Read its figures accordingly (Annie's clause, R726).",
+  "remedy": "the emitter earns a carried fixture before its next emission crosses (R725)."
+ }
+}

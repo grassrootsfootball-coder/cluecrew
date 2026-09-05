@@ -68,6 +68,12 @@ function main() {
     },
 
     TWO_PUBLISHED_LIST_CANDIDATES: {
+      HER_CAUTION_AND_IT_DEMOTES_THIS_WHOLE_SECTION: {
+        what: '**a published list inherits its own author\'s ceiling.** Ofcom\'s research answers what a broadcast audience finds offensive; the BBFC\'s answers what a film classifier must weigh. Neither was written for an eleven-year-old sitting an entrance paper, and each carries the blind spots of the body that wrote it — exactly as these two lists carry theirs.',
+        soITISNOTATHIRDPERSPECTIVEBYVIRTUEOFBEINGPUBLISHED: 'a third author is not a third perspective. Publication makes a list citable and durable; it does not make it unlike the people who wrote it, and unlikeness is the property the cross is short of.',
+        WHERE_ITS_VALUE_ACTUALLY_IS: '**its DOCUMENTED BLIND SPOTS.** A published instrument states what it does not cover — scope notes, exclusions, the population it was drawn from. Neither store\'s list has that except where this one declared it (no slur coverage), and a declaration is worth more here than coverage: **a documented hole can be planned around, and an undocumented one cannot.** That is what to read these sources FOR, and it is not what they are usually read for.',
+        andTHEORDEROFWORK: 'so the reader comes first and the documents second. The proposal below stands, demoted: it is the cheaper half and the weaker one.',
+      },
       caveat: 'NONE OF THESE HAS BEEN RETRIEVED. Each is named as a candidate with what it would supply and what must be checked, exactly as SUBTLEX was named a candidate before its licence was read.',
       candidates: [
         { source: 'Ofcom research on offensive language (UK, periodically republished)',
@@ -86,8 +92,9 @@ function main() {
       ],
     },
 
-    THREE_A_READER_UNLIKE_EITHER_STORE: {
-      why: 'a published list still answers "which words", and the ceiling is that the question is "which subjects, for whom". A reader can answer that and a list cannot.',
+    THREE_A_READER_UNLIKE_EITHER_STORE_AND_THIS_IS_THE_STRONGER_HALF: {
+      why: 'a published list still answers "which words", and inherits the ceiling of whoever wrote it. The question is "which subjects, for whom" — a reader can answer that, a list cannot, and a reader can be chosen for the one property the cross lacks: unlikeness.',
+      herRANKING: 'the reader is the stronger half. A published list is the cheaper one and its value is its documented exclusions rather than its contents.',
       whoWOULDBEGENUINELYUNLIKE: [
         { reader: 'a designated safeguarding lead', unlikeHOW: 'their expertise IS harm. Both stores optimise for correctness and read harm as a special case of it; a safeguarding reader inverts that, and the inversion is the point' },
         { reader: 'a teacher of the actual year group', unlikeHOW: 'has met the children these items are for, which neither store has' },
@@ -107,7 +114,7 @@ function main() {
   };
 
   const clean = JSON.parse(JSON.stringify(report)) as Record<string, unknown>;
-  const keys = ['ZERO_WHY_THE_UNION_IS_A_FLOOR', 'ONE_WHAT_NEITHER_LIST_COVERS', 'TWO_PUBLISHED_LIST_CANDIDATES', 'THREE_A_READER_UNLIKE_EITHER_STORE'];
+  const keys = ['ZERO_WHY_THE_UNION_IS_A_FLOOR', 'ONE_WHAT_NEITHER_LIST_COVERS', 'TWO_PUBLISHED_LIST_CANDIDATES', 'THREE_A_READER_UNLIKE_EITHER_STORE_AND_THIS_IS_THE_STRONGER_HALF'];
   Object.assign(clean, findingsDigest(clean, keys));
   clean.DIGESTS = digestsBlock(String(clean.findingsSha256), keys);
   const p = pjoin(REPO, 'content/exports', stampedName('proposal-third-party-harm-source', String(clean.findingsSha256), 'json'));
