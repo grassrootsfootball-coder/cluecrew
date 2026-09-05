@@ -62,8 +62,8 @@ export const APPROPRIATENESS_SOURCE = {
 const REFUSED = [
   // oaths
   'hell', 'damn', 'crap', 'bugger', 'arse', 'bastard', 'bitch',
-  // adult/sexual
-  'lover', 'naked', 'nude', 'sexy', 'lust', 'brothel',
+  // adult/sexual — `naked` moved to FLAGGED: "the naked eye" is the sense a bare scope cannot see
+  'lover', 'nude', 'sexy', 'lust', 'brothel',
   // intoxicants
   'whisky', 'whiskey', 'vodka', 'brandy', 'booze', 'heroin', 'cocaine',
   // death and violence beyond the ordinary register
@@ -86,10 +86,57 @@ const REFUSED = [
  * now a must-PASS case, so no future edit can quietly put them back.
  */
 
+/**
+ * **FLAG-NEEDS-A-SENSE — THE THIRD OUTCOME, ADOPTED FROM THE AUTHORING STORE'S SCREEN.**
+ *
+ * Some words carry an ordinary sense and an unsuitable one, and **nothing in a bare scope can tell
+ * them apart: an option value has no sentence around it.** Their store found this when its own
+ * fixture caught `shoot` in the refuse list and the pass list at once; this store found the same
+ * pressure and resolved it worse, by DELETING six ambiguous words from the list entirely.
+ *
+ * **Deleting an ambiguous word decides it silently in favour of passing.** Flagging keeps it in the
+ * system and puts the decision where it belongs. So the six that were dropped are back, as flags,
+ * and `naked` moves here from REFUSED — it was kept there with a known false positive on "the naked
+ * eye", which is precisely a word needing a sense.
+ *
+ * **It is Annie's wordhood ruling transposed** — the corpus whose population matches the reader
+ * decides, and where the row supplies the sense the word is readable. Here: where a SENTENCE
+ * supplies the sense, a flag word passes; where the scope is bare, it is reported and never
+ * silently decided in either direction.
+ */
+const FLAGGED = [
+  'bloody', 'drunk', 'mistress', 'affair', 'naked', 'spirits', 'liquor',
+];
+
 /** Optional plural or possessive only — never a loose prefix, which would catch SHELL from HELL. */
-const PATTERNS = REFUSED.map((w) => ({ word: w, re: new RegExp(`\\b${w}(s|'s|es)?\\b`, 'i') }));
+const rx = (w: string) => new RegExp(`\\b${w}(s|'s|es)?\\b`, 'i');
+const PATTERNS = REFUSED.map((w) => ({ word: w, re: rx(w) }));
+const FLAG_PATTERNS = FLAGGED.map((w) => ({ word: w, re: rx(w) }));
 
 export interface AppropriatenessHit { word: string; matched: string }
+
+export type AppropriatenessVerdict = 'PASS' | 'FLAG-NEEDS-A-SENSE' | 'REFUSE';
+
+/**
+ * A BARE scope has no sentence to supply the sense — an option value, a vr-08 leftover, a headword.
+ * A SENTENCE scope has one, and a reviewer reading the item can see it.
+ */
+export type AppropriatenessScope = 'bare' | 'sentence';
+
+export interface AppropriatenessResult { verdict: AppropriatenessVerdict; hits: AppropriatenessHit[]; scope: AppropriatenessScope }
+
+/**
+ * The full verdict. **A refusal REPORTS and never rewrites** — nothing is stripped in place; the
+ * search proposes another candidate, in the open.
+ */
+export function screenForAChild(text: string, scope: AppropriatenessScope = 'bare'): AppropriatenessResult {
+  const refuse = appropriatenessHits(text);
+  if (refuse.length) return { verdict: 'REFUSE', hits: refuse, scope };
+  const flags: AppropriatenessHit[] = [];
+  for (const p of FLAG_PATTERNS) { const m = p.re.exec(text); if (m) flags.push({ word: p.word, matched: m[0] }); }
+  if (flags.length && scope === 'bare') return { verdict: 'FLAG-NEEDS-A-SENSE', hits: flags, scope };
+  return { verdict: 'PASS', hits: [], scope };
+}
 
 /** Does this string carry a refused word? Returns every hit, so a report never says only the first. */
 export function appropriatenessHits(text: string): AppropriatenessHit[] {
@@ -112,25 +159,37 @@ export function isAppropriateForAChild(word: string): boolean {
  * if this screen is ever tuned into a corpus-stripper.
  */
 export const APPROPRIATENESS_FIXTURE = {
-  mustRefuse: ['HELL', 'LOVER', 'DAMN', 'NAKED', 'CORPSE', 'WHISKY', 'SUICIDE', 'BROTHEL', 'a hell of a thing'],
+  mustRefuse: ['HELL', 'LOVER', 'DAMN', 'CORPSE', 'WHISKY', 'SUICIDE', 'BROTHEL', 'a hell of a thing'],
   mustPass: [
     // her own instance: a district that cannot say this is damaged by its own guard
     'killed the engine', 'kill', 'dead', 'die', 'blood', 'gun', 'war', 'shot', 'pain', 'poison',
     'ghost', 'fight', 'hate', 'sick', 'weapon', 'enemy', 'angry',
     // the near neighbours of the refused words, which a loose matcher would take with them
     'shell', 'sell', 'side', 'hello', 'shellfish', 'damp', 'lovely', 'clover', 'bloodied',
-    // the six its own first run removed — every one has an ordinary use, and each is pinned here
-    // so no later edit can put them back without this fixture failing
-    'tobacco in his cheek', 'a cigarette card', 'a bloody nose', 'she had drunk her tea',
-    'the mistress of the house', 'a family affair',
+    // the two its own first run removed OUTRIGHT: ordinary nouns, not ambiguous ones
+    'tobacco in his cheek', 'a cigarette card',
+    // THE SUBSTRING TRAPS, taken from the authoring store's fixture — they offered the fixture
+    // shape as the transferable half and they were right. Each is a whole word containing a
+    // refused one, and a substring matcher would refuse all five and call it safety.
+    'shell', 'glover', 'grass', 'class', 'button', 'diesel',
   ],
+  /**
+   * The bare-scope flags. A sentence resolves them (see mustPassInASentence); bare, they are
+   * reported. These are the words this store's first draft deleted, which decided them silently.
+   */
+  mustFlagWhenBARE: ['bloody', 'drunk', 'mistress', 'affair', 'naked'],
+  mustPassInASentence: ['a bloody nose', 'she had drunk her tea', 'the mistress of the house',
+    'a family affair', 'visible to the naked eye'],
 } as const;
 
 /** Runs the fixture. Throws on any disagreement — a screen unproven in both directions is not one. */
-export function runAppropriatenessFixture(): { refused: number; passed: number } {
+export function runAppropriatenessFixture(): { refused: number; passed: number; flagged: number; inASentence: number } {
   const wrongly: string[] = [];
-  for (const s of APPROPRIATENESS_FIXTURE.mustRefuse) if (appropriatenessHits(s).length === 0) wrongly.push(`MISSED "${s}"`);
-  for (const s of APPROPRIATENESS_FIXTURE.mustPass) if (appropriatenessHits(s).length > 0) wrongly.push(`WRONGLY REFUSED "${s}" (on ${appropriatenessHits(s).map((h) => h.word).join(', ')})`);
+  const F = APPROPRIATENESS_FIXTURE;
+  for (const s of F.mustRefuse) if (screenForAChild(s, 'bare').verdict !== 'REFUSE') wrongly.push(`MISSED "${s}"`);
+  for (const s of F.mustPass) { const v = screenForAChild(s, 'bare'); if (v.verdict !== 'PASS') wrongly.push(`WRONGLY ${v.verdict} on "${s}" (${v.hits.map((h) => h.word).join(', ')})`); }
+  for (const s of F.mustFlagWhenBARE) { const v = screenForAChild(s, 'bare'); if (v.verdict !== 'FLAG-NEEDS-A-SENSE') wrongly.push(`"${s}" bare should FLAG and gave ${v.verdict}`); }
+  for (const s of F.mustPassInASentence) { const v = screenForAChild(s, 'sentence'); if (v.verdict !== 'PASS') wrongly.push(`"${s}" in a sentence should PASS and gave ${v.verdict}`); }
   if (wrongly.length) throw new Error(`the appropriateness fixture fails on ${wrongly.length} case(s):\n  ${wrongly.join('\n  ')}`);
-  return { refused: APPROPRIATENESS_FIXTURE.mustRefuse.length, passed: APPROPRIATENESS_FIXTURE.mustPass.length };
+  return { refused: F.mustRefuse.length, passed: F.mustPass.length, flagged: F.mustFlagWhenBARE.length, inASentence: F.mustPassInASentence.length };
 }

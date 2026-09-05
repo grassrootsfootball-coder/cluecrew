@@ -27571,3 +27571,47 @@ revert it* — reported rather than reversed, because reverting thirteen sound r
 own judgement is the same class of act as taking the decision was. **A correct outcome reached
 through the wrong authority is still the wrong authority**, and it is easier to see in a verdict
 than in a fill that looks like tidying up.
+
+## R999 — Two screens crossed: zero agreement on nineteen words, and a category neither fixture could find
+
+**HER DISAGREEMENT-SET METHOD, POINTED AT A WORDLIST RATHER THAN A LEXICON.** Two independently
+authored appropriateness screens, each having caught a false refusal in its own first draft:
+`tobacco` here, on a *Rebecca of Sunnybrook Farm* walk script; `knife` there, in a vr-02 group of
+sharp things. **Neither store found the other's**, which is the argument for crossing them rather
+than for either being more careful.
+
+**THE CROSS ONLY MEASURES SOMETHING IF THE LISTS STAY INDEPENDENT.** Two copies of one list agree
+perfectly and prove nothing, so this store took their MECHANISM and their FIXTURE SHAPE and left the
+words alone.
+
+**THE RESULT: 0 of 19 agree.** Every word on their flag list — *arms, beat, blow, bust, club, crack,
+grass, high, joint, pot, shell, shoot, strip, stroke, trip, whip* — PASSES here. That is not a
+near-miss. **This store's list contains no drug, weapon or violence-slang doubles at all: a whole
+category nobody here thought of, and one no fixture written by the same person who wrote the list
+could ever have surfaced.** Measured against this store's own rows, six places carry one, and **two
+are pairs authored yesterday** — `SHELL/AIR` at slot 19, and `BLOW` as the made word at slot 15.
+SHELL is a deliberate must-PASS case here, as the near neighbour of HELL, and a FLAG there. Both
+readings are defensible and they cannot both govern that row.
+
+**AND THE THIRD OUTCOME IS ADOPTED, BECAUSE THEIRS IS BETTER THAN WHAT THIS STORE DID.**
+FLAG-NEEDS-A-SENSE: a word with an ordinary sense and an unsuitable one, in a scope with no
+sentence, is flagged and never silently decided. Their store reached it when its fixture caught
+`shoot` in the refuse list and the pass list at once. **This store met the same pressure and
+resolved it worse — by DELETING six ambiguous words**, which decides them silently in favour of
+passing and leaves nothing to review. `bloody`, `drunk`, `mistress` and `affair` are back as flags,
+and `naked` moves from REFUSE to FLAG: it had been kept as a refusal with *"the naked eye"* logged
+as a known false positive, which is a word needing a sense **described instead of handled**.
+
+It is Annie's wordhood ruling transposed and the shape is now identical in both districts: **the
+population that matches the reader decides, and where the surrounding text supplies the sense the
+word is readable.** Bare scope flags; a sentence resolves.
+
+**THE FIXTURE CAUGHT THIS STORE THREE TIMES IN ONE BUILD** — `drunk` in the refuse half after
+leaving the list, `NAKED` the same after moving to flags, and before either, `tobacco` over-blocking
+a real row. **A refuse-only fixture would have passed all three in silence.** The gate diff after
+every correction reads NOTHING MOVED.
+
+**WHAT THE CROSS CANNOT YET MEASURE, STATED RATHER THAN GLOSSED.** Only their FLAG list is published
+in full; their 45 refuse and 26 pass words are not. The cross therefore covers 21 words of at least
+90 across both stores — **a disagreement set on a fifth of the population is a start, not a result**
+(R595). This store's three lists are published entire so the cross can be run from their side today.
