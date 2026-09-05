@@ -1,0 +1,348 @@
+{
+ "kind": "THE-THREE-DOUBTFUL-SEATS-WITH-THEIR-ROWS",
+ "TO": "Annie, by relay through David",
+ "date": "2026-09-05",
+ "WHY_THIS_SHAPE": "your 225th rules per row, not per word. So these are rows, with the stem the child reads, the seat, its tag and the wording the child would receive, and the full three-part set — the key, its siblings, and their tags (R573).",
+ "THE_CUT_AND_ITS_INSTRUMENT": {
+  "cut": 3,
+  "ruling": "Annie, 224th return — validity is what a competent eleven-year-old knows, not what a broad dictionary holds. The cut is 3.0.",
+  "instrument": {
+   "source": "SUBTLEX-UK (van Heuven, Mandera, Keuleers & Brysbaert 2014), Zipf scale, British English",
+   "sha256": "e40d83af55eb85e9e2bc0d72e1022b10e47e31ff2086ad2edcc18292d6bd6616",
+   "retrievedOn": "2026-09-05",
+   "rows": 160024,
+   "column": "LogFreq(Zipf)",
+   "columnIsAREADINGNotARuling": "Annie ruled the CUT (3.0), not the COLUMN. The primary here is a reading, not a ruling, and every emission carries the CBBC Zipf beside it so the reading can be checked."
+  },
+  "nameFilter": {
+   "rule": "entries whose DomPoS is \"name\" are excluded from the lexicon entirely, whatever their Zipf",
+   "whyItIsPartOfTHEMEASUREMENT": "GOVE reads 3.74, SARK 3.37 and BAIN 3.17 — three dialect remainders the ruling exists to exclude, admitted by the bare cut because subtitle corpora lowercase proper nouns into the word list. A store told only \"3.0\" would admit them and be faithful to the ruling as written.",
+   "andWHATITCOSTS": "it over-excludes: minister, south and god are DomPoS \"name\" here too, and AllPoS cannot separate them (it reads .name.noun. for minister and for gove alike). A verdict resting on an excluded word reports EXCLUDED-AS-A-NAME, never \"unknown\"."
+  },
+  "andWHYTHISTRAVELS": "the authoring store runs wordfreq 3.1.1 and reads GRAN at 3.44. Two honest instruments disagree, so a cut without its instrument is not a shared fact. Quote this block back with any figure taken at this cut and the two stores can find the disagreement instead of inheriting it.",
+  "knownDisagreementToQuOTEBACK": "GRAN: the authoring store reads 3.44 on wordfreq 3.1.1. This store's own reading is carried as GRAN_measuredHere beside this block, measured at call time rather than written here — a number typed into a declaration is the thing this rule exists to stop."
+ },
+ "GRAN_measuredHere": 3.67,
+ "andTHECROSSSTORECHECK": "you named GRAN at 3.44 on wordfreq 3.1.1. This store reads it at 3.94 on SUBTLEX-UK — half a Zipf apart, SAME verdict at 3.0. The instruments disagree in magnitude and agree on this word; that is exactly why the instrument now travels with every figure.",
+ "SEATS_FOUND": [
+  {
+   "word": "SOW",
+   "seats": 2
+  },
+  {
+   "word": "SEAM",
+   "seats": 1
+  },
+  {
+   "word": "BAIN",
+   "seats": 1
+  }
+ ],
+ "THE_ONE_THAT_REACHES_A_CHILD": "SOW. Its two seats sit on DRAFT rows in the vr-08 cut (gen-vr-08-move-letter-12 and -24, SNOW/HOE), which are live-eligible. SEAM and BAIN sit on seed rows that are NEVER_SHIPPABLE and reach nobody.",
+ "AND_ONE_THING_YOUR_RULING_MAY_NOT_HAVE_INTENDED": {
+  "what": "you ruled that BAIN fails at 3.0 as a surname and \"its seat regenerates with the rest\".",
+  "butTHEROW": "BAIN's seat is on seed-vr08-09 (BRAIN/OIL), which is NEVER_SHIPPABLE by your 210th. There is nothing to regenerate — the row already reaches no child, and rewriting it would change a row that serves nobody while leaving the seed bank's status ruling untouched.",
+  "whatWASdone": "nothing to that row. The name filter now excludes BAIN from the lexicon entirely, which executes your ruling for every future use without editing a dead row. If you meant the seed row itself to be rebuilt, that is a different act and it is not assumed here."
+ },
+ "THE_SEATS": [
+  {
+   "THE_WORD": "SOW",
+   "itemId": "gen-vr-08-move-letter-12",
+   "status": "DRAFT",
+   "pool": "PRACTICE",
+   "REACHES_A_CHILD": true,
+   "THE_ROW_AS_THE_CHILD_MEETS_IT": {
+    "prompt": "Move one letter from the first word to the second so both make new words.",
+    "word1": "SNOW",
+    "word2": "HOE"
+   },
+   "THE_SEAT": {
+    "value": "N",
+    "tag": "vr-move-letter-first-word-invalid",
+    "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?",
+    "execution": null,
+    "theActItRecords": "remove \"N\" from SNOW and read what is left: SOW"
+   },
+   "THE_THREE_PART_SET": {
+    "theThreeParts": "the KEY, its SIBLINGS, and THEIR TAGS. Named rather than abbreviated to \"the option set\", because that phrase hides the third part and the tags are what identify a likely wrong answer (Annie, R573 — see ENG-001-WIW-10).",
+    "key": {
+     "value": "S",
+     "label": null
+    },
+    "siblings": [
+     {
+      "value": "N",
+      "label": null,
+      "tag": "vr-move-letter-first-word-invalid",
+      "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?"
+     },
+     {
+      "value": "W",
+      "label": null,
+      "tag": "vr-move-letter-second-word-invalid",
+      "tagChildHint": "Pop the letter into the second word and say it aloud. Does it sound like a real word?"
+     }
+    ],
+    "theirTags": [
+     {
+      "tag": "vr-move-letter-first-word-invalid",
+      "childHint": "Take the letter out and read what is left. Is that first word a real word?",
+      "onSiblings": 1
+     },
+     {
+      "tag": "vr-move-letter-second-word-invalid",
+      "childHint": "Pop the letter into the second word and say it aloud. Does it sound like a real word?",
+      "onSiblings": 1
+     }
+    ],
+    "exactlyOneKey": true
+   },
+   "THE_QUESTION_FOR_HER": "a child meeting THIS row takes \"N\" out of SNOW and reads SOW. Does the row supply the sense — does she recognise SOW as a word here? If yes the seat FLATTERS and is a bad distractor; if no it fails on the earlier ground.",
+   "THE_READINGS": {
+    "zipf": 3.6,
+    "zipfCBBC": 2.94,
+    "excludedAsAName": false,
+    "passesTheCut": true,
+    "andWHERETHECOLUMNSDISAGREE": "THE TWO COLUMNS DISAGREE ON THIS WORD — it clears the cut on the whole corpus and fails it on children's television, which is the sharpest form of the question you are being asked to read."
+   },
+   "theWalkOrExplanation": {}
+  },
+  {
+   "THE_WORD": "SOW",
+   "itemId": "gen-vr-08-move-letter-24",
+   "status": "DRAFT",
+   "pool": "PRACTICE",
+   "REACHES_A_CHILD": true,
+   "THE_ROW_AS_THE_CHILD_MEETS_IT": {
+    "prompt": "Move one letter from the first word to the second so both make new words.",
+    "word1": "SNOW",
+    "word2": "HOE"
+   },
+   "THE_SEAT": {
+    "value": "N",
+    "tag": "vr-move-letter-first-word-invalid",
+    "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?",
+    "execution": null,
+    "theActItRecords": "remove \"N\" from SNOW and read what is left: SOW"
+   },
+   "THE_THREE_PART_SET": {
+    "theThreeParts": "the KEY, its SIBLINGS, and THEIR TAGS. Named rather than abbreviated to \"the option set\", because that phrase hides the third part and the tags are what identify a likely wrong answer (Annie, R573 — see ENG-001-WIW-10).",
+    "key": {
+     "value": "S",
+     "label": null
+    },
+    "siblings": [
+     {
+      "value": "N",
+      "label": null,
+      "tag": "vr-move-letter-first-word-invalid",
+      "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?"
+     },
+     {
+      "value": "W",
+      "label": null,
+      "tag": "vr-move-letter-second-word-invalid",
+      "tagChildHint": "Pop the letter into the second word and say it aloud. Does it sound like a real word?"
+     }
+    ],
+    "theirTags": [
+     {
+      "tag": "vr-move-letter-first-word-invalid",
+      "childHint": "Take the letter out and read what is left. Is that first word a real word?",
+      "onSiblings": 1
+     },
+     {
+      "tag": "vr-move-letter-second-word-invalid",
+      "childHint": "Pop the letter into the second word and say it aloud. Does it sound like a real word?",
+      "onSiblings": 1
+     }
+    ],
+    "exactlyOneKey": true
+   },
+   "THE_QUESTION_FOR_HER": "a child meeting THIS row takes \"N\" out of SNOW and reads SOW. Does the row supply the sense — does she recognise SOW as a word here? If yes the seat FLATTERS and is a bad distractor; if no it fails on the earlier ground.",
+   "THE_READINGS": {
+    "zipf": 3.6,
+    "zipfCBBC": 2.94,
+    "excludedAsAName": false,
+    "passesTheCut": true,
+    "andWHERETHECOLUMNSDISAGREE": "THE TWO COLUMNS DISAGREE ON THIS WORD — it clears the cut on the whole corpus and fails it on children's television, which is the sharpest form of the question you are being asked to read."
+   },
+   "theWalkOrExplanation": {}
+  },
+  {
+   "THE_WORD": "BAIN",
+   "itemId": "seed-vr08-09",
+   "status": "NEVER_SHIPPABLE",
+   "pool": "PRACTICE",
+   "REACHES_A_CHILD": false,
+   "THE_ROW_AS_THE_CHILD_MEETS_IT": {
+    "prompt": "Move one letter from the first word to the second so both make new words.",
+    "word1": "BRAIN",
+    "word2": "OIL"
+   },
+   "THE_SEAT": {
+    "value": "R",
+    "tag": "vr-move-letter-first-word-invalid",
+    "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?",
+    "execution": null,
+    "theActItRecords": "remove \"R\" from BRAIN and read what is left: BAIN"
+   },
+   "THE_THREE_PART_SET": {
+    "theThreeParts": "the KEY, its SIBLINGS, and THEIR TAGS. Named rather than abbreviated to \"the option set\", because that phrase hides the third part and the tags are what identify a likely wrong answer (Annie, R573 — see ENG-001-WIW-10).",
+    "key": {
+     "value": "B",
+     "label": null
+    },
+    "siblings": [
+     {
+      "value": "R",
+      "label": null,
+      "tag": "vr-move-letter-first-word-invalid",
+      "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?"
+     },
+     {
+      "value": "A",
+      "label": null,
+      "tag": "vr-move-letter-second-word-invalid",
+      "tagChildHint": "Pop the letter into the second word and say it aloud. Does it sound like a real word?"
+     },
+     {
+      "value": "I",
+      "label": null,
+      "tag": "vr-move-letter-both-invalid",
+      "tagChildHint": "Test both halves: the first word without the letter, the second word with it."
+     }
+    ],
+    "theirTags": [
+     {
+      "tag": "vr-move-letter-both-invalid",
+      "childHint": "Test both halves: the first word without the letter, the second word with it.",
+      "onSiblings": 1
+     },
+     {
+      "tag": "vr-move-letter-first-word-invalid",
+      "childHint": "Take the letter out and read what is left. Is that first word a real word?",
+      "onSiblings": 1
+     },
+     {
+      "tag": "vr-move-letter-second-word-invalid",
+      "childHint": "Pop the letter into the second word and say it aloud. Does it sound like a real word?",
+      "onSiblings": 1
+     }
+    ],
+    "exactlyOneKey": true
+   },
+   "THE_QUESTION_FOR_HER": "a child meeting THIS row takes \"R\" out of BRAIN and reads BAIN. Does the row supply the sense — does she recognise BAIN as a word here? If yes the seat FLATTERS and is a bad distractor; if no it fails on the earlier ground.",
+   "THE_READINGS": {
+    "zipf": 2.58,
+    "zipfCBBC": 2.34,
+    "excludedAsAName": true,
+    "passesTheCut": false,
+    "andWHERETHECOLUMNSDISAGREE": "both columns agree"
+   },
+   "theWalkOrExplanation": {
+    "note": "synthetic seed item — never shippable"
+   }
+  },
+  {
+   "THE_WORD": "SEAM",
+   "itemId": "seed-vr08-10",
+   "status": "NEVER_SHIPPABLE",
+   "pool": "PRACTICE",
+   "REACHES_A_CHILD": false,
+   "THE_ROW_AS_THE_CHILD_MEETS_IT": {
+    "prompt": "Move one letter from the first word to the second so both make new words.",
+    "word1": "STEAM",
+    "word2": "ALE"
+   },
+   "THE_SEAT": {
+    "value": "T",
+    "tag": "vr-move-letter-first-word-invalid",
+    "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?",
+    "execution": null,
+    "theActItRecords": "remove \"T\" from STEAM and read what is left: SEAM"
+   },
+   "THE_THREE_PART_SET": {
+    "theThreeParts": "the KEY, its SIBLINGS, and THEIR TAGS. Named rather than abbreviated to \"the option set\", because that phrase hides the third part and the tags are what identify a likely wrong answer (Annie, R573 — see ENG-001-WIW-10).",
+    "key": {
+     "value": "S",
+     "label": null
+    },
+    "siblings": [
+     {
+      "value": "T",
+      "label": null,
+      "tag": "vr-move-letter-first-word-invalid",
+      "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?"
+     },
+     {
+      "value": "E",
+      "label": null,
+      "tag": "vr-move-letter-second-word-invalid",
+      "tagChildHint": "Pop the letter into the second word and say it aloud. Does it sound like a real word?"
+     },
+     {
+      "value": "A",
+      "label": null,
+      "tag": "vr-move-letter-both-invalid",
+      "tagChildHint": "Test both halves: the first word without the letter, the second word with it."
+     }
+    ],
+    "theirTags": [
+     {
+      "tag": "vr-move-letter-both-invalid",
+      "childHint": "Test both halves: the first word without the letter, the second word with it.",
+      "onSiblings": 1
+     },
+     {
+      "tag": "vr-move-letter-first-word-invalid",
+      "childHint": "Take the letter out and read what is left. Is that first word a real word?",
+      "onSiblings": 1
+     },
+     {
+      "tag": "vr-move-letter-second-word-invalid",
+      "childHint": "Pop the letter into the second word and say it aloud. Does it sound like a real word?",
+      "onSiblings": 1
+     }
+    ],
+    "exactlyOneKey": true
+   },
+   "THE_QUESTION_FOR_HER": "a child meeting THIS row takes \"T\" out of STEAM and reads SEAM. Does the row supply the sense — does she recognise SEAM as a word here? If yes the seat FLATTERS and is a bad distractor; if no it fails on the earlier ground.",
+   "THE_READINGS": {
+    "zipf": 3.15,
+    "zipfCBBC": 3.19,
+    "excludedAsAName": false,
+    "passesTheCut": true,
+    "andWHERETHECOLUMNSDISAGREE": "both columns agree"
+   },
+   "theWalkOrExplanation": {
+    "note": "synthetic seed item — never shippable"
+   }
+  }
+ ],
+ "findingsSha256": "322ad4c51493b301df6c2701cdd86d74845eb64685509c17845c8362b9f70f47",
+ "howToCheckThisOnArrival": {
+  "subtreeKeys": [
+   "THE_SEATS",
+   "THE_CUT_AND_ITS_INSTRUMENT",
+   "SEATS_FOUND"
+  ],
+  "subtree": "an object of THIS DOCUMENT'S OWN TOP-LEVEL KEYS, exactly as spelled in subtreeKeys and nowhere renamed: {\"THE_SEATS\", \"THE_CUT_AND_ITS_INSTRUMENT\", \"SEATS_FOUND\"}",
+  "spec": "sha256 over json.dumps(subtree, sort_keys=True, separators=(\",\",\":\"), ensure_ascii=False).encode(\"utf-8\") — R729. ensure_ascii defaults to True and gives a different number.",
+  "andTheFileDigest": "the staging line and the .sha256 sidecar, over the whole file bytes"
+ },
+ "DIGESTS": {
+  "THE_FILE_DIGEST": "this file's own name and its .sha256 sidecar carry it. It cannot be written here: a file that states its own byte-hash changes the bytes it is stating.",
+  "theFileDigestSpec": "sha256 over the whole file bytes. This is what the filename carries after deliver() restamps, what the .sha256 sidecar holds, and what a receiving store should quote back to confirm arrival.",
+  "THE_FINDINGS_DIGEST": "322ad4c51493b301df6c2701cdd86d74845eb64685509c17845c8362b9f70f47",
+  "theFindingsDigestSpec": "sha256 over json.dumps(subtree, sort_keys=True, separators=(\",\",\":\"), ensure_ascii=False) where subtree is {\"THE_SEATS\", \"THE_CUT_AND_ITS_INSTRUMENT\", \"SEATS_FOUND\"} — R729. It measures the FINDINGS, not the file, and changes only when a finding changes.",
+  "andWHYBOTH": "they never agree and neither is wrong. The file digest identifies the bytes; the findings digest identifies the claim. Quoting one without naming which is how one landing acquires two names (R981)."
+ },
+ "instrumentProvenance": {
+  "emittedBy": "cross-the-three-doubtful-seats.ts",
+  "carriedFixture": false,
+  "MARK": "FROM AN UNFIXTURED INSTRUMENT",
+  "meaning": "this emitter carries no fixture, so nothing in this run proves it can find what it claims to find or stay silent on what is clean. Read its figures accordingly (Annie's clause, R726).",
+  "remedy": "the emitter earns a carried fixture before its next emission crosses (R725)."
+ }
+}

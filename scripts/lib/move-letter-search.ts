@@ -50,23 +50,31 @@ export function performingLetters(w1: string, w2: string, lex: ChildLexicon): st
  * Candidates with a UNIQUE key and both distractor kinds actually available on the item's own
  * letters — a stem whose second seat cannot be built is a stem that will be tagged by hand later.
  */
-export function searchMoveLetter(lex: ChildLexicon, opts: { exclude?: Set<string> } = {}): MoveLetterCandidate[] {
-  const pool = generatorMaterial(lex);
+export function searchMoveLetter(lex: ChildLexicon, opts: { exclude?: Set<string>; decideBare?: boolean } = {}): MoveLetterCandidate[] {
+  /**
+   * THE DECIDING CORPUS (Annie, 226th): where the child meets the word BARE — which is every word
+   * in this district — the child-directed corpus decides and the whole corpus is background. So a
+   * search for bare-word items tests `knowsBare`, not `knows`. SOW is why: 3.60 wide, 2.94 bare.
+   */
+  const known = opts.decideBare ? (w: string) => lex.knowsBare(w) : (w: string) => lex.knows(w);
+  const pool = generatorMaterial(lex).filter(known);
   const exclude = opts.exclude ?? new Set<string>();
   const out: MoveLetterCandidate[] = [];
   for (const w1 of pool) {
     if (w1.length < 5 || w1.endsWith('S')) continue;
     for (const w2 of pool) {
       if (w2 === w1 || w2.length < 3 || w2.length > 5 || w2.endsWith('S')) continue;
-      const works = performingLetters(w1, w2, lex);
+      const works = [...new Set(w1)].filter((l) => known(w1.replace(l, '')) && insertions(w2, l).some((m) => known(m)));
       if (works.length !== 1) continue;
       const key = works[0]!;
       const left = w1.replace(key, '');
-      const made = insertions(w2, key).find((m) => lex.knows(m))!;
+      const made = insertions(w2, key).find((m) => known(m))!;
       if (made === w1 || left === w2) continue;
       const letters = [...new Set(w1)].filter((l) => l !== key);
-      const d1 = letters.find((l) => !lex.knows(w1.replace(l, '')));
-      const d2 = letters.find((l) => lex.knows(w1.replace(l, '')) && !insertions(w2, l).some((m) => lex.knows(m)));
+      // A first-word-invalid seat must leave a word the child does not hold on EITHER reading —
+      // a leftover known wide and unknown bare is the borderline case her 226th rules out.
+      const d1 = letters.find((l) => !lex.knows(w1.replace(l, '')) && !lex.knowsBare(w1.replace(l, '')));
+      const d2 = letters.find((l) => known(w1.replace(l, '')) && !insertions(w2, l).some((m) => known(m)));
       if (!d1 || !d2) continue;
       const four = [w1, w2, left, made];
       if (four.some((w) => exclude.has(w))) continue;

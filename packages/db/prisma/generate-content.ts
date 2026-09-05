@@ -311,7 +311,20 @@ const MOVE_LETTER_EXTRA: Array<[string, string, string, string, string]> = [
   ['SPEND', 'SENT', 'P', 'S', 'N'], ['SPACE', 'TAR', 'S', 'P', 'C'],
   ['TWIN', 'HERE', 'W', 'T', 'N'], ['SLED', 'PIT', 'S', 'L', 'D'],
   ['GRAIN', 'ATE', 'G', 'R', 'N'], ['CHARM', 'ORE', 'C', 'H', 'M'],
-  ['PLUMP', 'AY', 'P', 'L', 'M'], ['SNOW', 'HOE', 'S', 'N', 'W'],
+  ['PLUMP', 'AY', 'P', 'L', 'M'], ['SNOW', 'HOE', 'S', 'O', 'W'],
+  ['PLATE', 'ART', 'P', 'A', 'L'],
+  ['PAINT', 'PLAN', 'T', 'P', 'A'],
+  ['BREAD', 'LOW', 'B', 'R', 'A'],
+  ['PLANET', 'SEA', 'T', 'P', 'E'],
+  ['SHOUT', 'COLD', 'U', 'S', 'O'],
+  ['CLOCK', 'LOUD', 'C', 'O', 'L'],
+  ['TIRED', 'LARGE', 'R', 'T', 'D'],
+  ['SHELL', 'AIR', 'H', 'E', 'S'],
+  ['BRUSH', 'RING', 'B', 'U', 'R'],
+  ['SLIDE', 'FOOD', 'L', 'S', 'E'],
+  ['WHEAT', 'EAR', 'W', 'H', 'E'],
+  ['WHEEL', 'ARM', 'W', 'H', 'L'],
+  ['TRACK', 'END', 'T', 'A', 'R'],
 ];
 
 // Distractors corrected 2026-08-02 (case-vr-12-CORRECTED-BANK): nine that

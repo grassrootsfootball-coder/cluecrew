@@ -27426,3 +27426,47 @@ both copies identical — so the fault was in transfer or enumeration, not autho
 under a new digest and nothing from the old one is credited. **The lane now holds 941 files and
 40 MB**, which is a plausible cause of a listing error and is not something this store can fix by
 writing more carefully.
+
+## R996 — The deciding corpus, the duplication settled, and the channel nobody screened
+
+**THE DECIDING CORPUS IS THE ONE WHOSE POPULATION MATCHES THE READER** (Annie's 226th, as relayed —
+no return is on the desk, so this is recorded as a relay and the digest field is absent rather than
+guessed). *"A word met bare must be known outright."* Every word in vr-08 is met bare, so the
+child-directed column decides here and the whole corpus is background. **This is not a stricter cut;
+it is the same cut on the population that matches the reader.**
+
+Screened across the whole cut: **zero of twenty-five keys fail under it.** Exactly two seats sat on
+a borderline word, both SOW — 3.60 wide, 2.94 bare — which is her instance and the only one. Seat
+regenerated N → O, leaving SNW, absent from both corpora.
+
+**THE DUPLICATION IS A GENERATOR ARTEFACT, AND THE EVIDENCE IS IN THE CODE THAT MADE THE ROWS.**
+`fromBank` is `bank[i % bank.length]` — a modular fill with no spacing or placement logic — and
+**five of the six banks that call it hold 25 or 26 entries for the 25 rows they are asked for.**
+Every other author sized their bank to the request; `MOVE_LETTER_EXTRA` held twelve and the cycle
+papered over it. So the regeneration writes THREE where it wrote one, and the bank is filled to 25
+rather than the cut being cut to twelve.
+
+**Filled by APPENDING to slots 12-24**, so rows 1-12 keep their pairs and only the duplicate rows
+change: a sound row is not disturbed to fix a fault it does not have. The cut is now **25 rows, 25
+distinct pairs, 0 unperformable under the deciding corpus**, and R994's first open item is closed by
+its own measurement rather than by anyone declaring it done.
+
+**THE ONE JUDGEMENT IN THE RUN, FLAGGED BECAUSE IT IS THE ONLY ONE.** The search proposed
+`SHELL/BEGIN` (giving HELL) and `SLIDE/OVER` (giving LOVER). **Nothing screened them** —
+`headwordIsBanned` returns ok for both, because the ban list is scoped to claims, difficulty and
+tone rather than to subject matter. Widening a designed gate to cover whatever it happens to miss is
+how a gate stops meaning what it says, so the two were excluded BY NAME in the applier with the
+reason visible, and **the gap is reported rather than patched: a generated child-facing bank has no
+age-appropriateness screen.** That wants a ruling. Everything else in the run is mechanical; this is
+the one to overrule.
+
+**AND THE CHANNEL IS AN ARTEFACT NOBODY WAS SCREENING.** A file was delivered three times and read
+at the desk none of them, and a directory listing errored. Every guard here screens what is IN an
+artefact; **none screened the place artefacts are put.** Measured, the lane holds 945 files and
+39.5 MB — 841 files and 37.0 MB of it from August — with **125 .json files carrying no .sha256
+sidecar**, bytes nothing attests. `pnpm check:lane-health` now reports count, weight, month spread
+and orphans against declared budgets, and prices the two fixes apart: archiving every month but the
+current one moves 841 files and leaves 104, which addresses a LISTING failure; moving the five files
+over 1 MB recovers 20 MB and five listing entries, which does not. **It reports and does not act —
+moving files out of a channel the other store reads is an outward act, and a store that prunes
+shared state on its own judgement is the fault this repo keeps finding.**

@@ -63,7 +63,9 @@ async function main() {
 
   const known = new Set(declared.items.map((i) => i.id));
   const undeclared = results.filter((r) => r.state === 'OPEN' && !known.has(r.id));
-  const closed = results.filter((r) => r.state === 'CLOSED');
+  // Stale means DECLARED-but-repaired. A result that is closed and no longer declared is simply
+  // finished, and reporting it forever would make the list nag about work already done.
+  const closed = results.filter((r) => r.state === 'CLOSED' && known.has(r.id));
 
   console.log(`  ${declared.items.length} declared open item(s); ${results.filter((r) => r.state === 'OPEN').length} still OPEN, measured from the rows.`);
   for (const r of results) {
@@ -81,8 +83,12 @@ async function main() {
     process.exitCode = 1;
     return;
   }
-  console.log('\n  Both faults are still true, still unrepaired, and named with whose decision they are.');
-  console.log('  Neither can decay into a forgotten one; neither can be closed without this line changing.');
+  const open = results.filter((r) => r.state === 'OPEN').length;
+  // The summary counts what it measured. An earlier version said "both faults are still true"
+  // on a run where one had just been repaired — the sentence and its test disagreeing, which is
+  // the defect R591 names, in this check's own output.
+  console.log(`\n  ${open} fault(s) still true and unrepaired, each named with whose decision it is.`);
+  console.log('  None can decay into a forgotten one; none can be closed without this line changing.');
 }
 
 main().catch((e) => { console.error(e); process.exitCode = 1; }).finally(async () => { await prisma.$disconnect(); });

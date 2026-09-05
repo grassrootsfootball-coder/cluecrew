@@ -77,6 +77,19 @@ export interface ChildLexicon {
   zipfCBBC: (word: string) => number | null;
   /** The ruling, executed: is this a word a competent eleven-year-old holds? */
   knows: (word: string) => boolean;
+  /**
+   * THE DECIDING CORPUS IS THE ONE WHOSE POPULATION MATCHES THE ITEM'S READER (Annie, 226th).
+   *
+   * *"A word met bare must be known outright."* Where the child meets a word with no sentence
+   * around it — a vr-08 leftover, a bare vocabulary card — the corpus built from children's
+   * language DECIDES and the whole-corpus figure is BACKGROUND. Where a row supplies the sense,
+   * the whole corpus is the fairer read and the child-directed figure is background.
+   *
+   * This is not a stricter cut; it is the SAME cut on the population that matches the reader.
+   * SOW is the instance: 3.60 on the whole corpus, 2.94 on children's television. Met bare, the
+   * child does not have it, and a seat resting on her having it is resting on the wrong corpus.
+   */
+  knowsBare: (word: string) => boolean;
   /** True when the corpus's own DomPoS calls this a name — excluded, not merely absent (R98). */
   isProperName: (word: string) => boolean;
   /**
@@ -190,6 +203,13 @@ export function loadChildLexicon(): ChildLexicon {
     zipf: (w) => main.get(w.trim().toUpperCase()) ?? null,
     zipfCBBC: (w) => cbbc.get(w.trim().toUpperCase()) ?? null,
     knows: (w) => (main.get(w.trim().toUpperCase()) ?? -Infinity) >= CHILD_CUT_ZIPF,
+    // Both corpora must carry it: the child-directed one DECIDES, and a word absent from the
+    // non-name reading is excluded there for reasons the child-directed column cannot see.
+    knowsBare: (w) => {
+      const k = w.trim().toUpperCase();
+      if ((main.get(k) ?? -Infinity) < CHILD_CUT_ZIPF) return false;
+      return (cbbc.get(k) ?? -Infinity) >= CHILD_CUT_ZIPF;
+    },
     isProperName: (w) => { const k = w.trim().toUpperCase(); return (main.get(k) ?? -Infinity) < CHILD_CUT_ZIPF && (raw.get(k) ?? -Infinity) >= CHILD_CUT_ZIPF; },
     zipfRaw: (w) => raw.get(w.trim().toUpperCase()) ?? null,
     size: main.size,
