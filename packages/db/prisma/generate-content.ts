@@ -306,9 +306,9 @@ const INSERT_LETTER: Array<[string, string, string, string, string]> = [
 
 const MOVE_LETTER_EXTRA: Array<[string, string, string, string, string]> = [
   // [word1, word2, letter, d1, d2]
-  ['CHAIR', 'MOP', 'C', 'H', 'R'], ['BLEND', 'RIDGE', 'B', 'L', 'D'],
-  ['FLAME', 'RIGHT', 'F', 'L', 'M'], ['SHELF', 'TRAIN', 'S', 'H', 'F'],
-  ['CHEAT', 'AIR', 'C', 'T', 'H'], ['SPACE', 'TAR', 'S', 'P', 'C'],
+  ['HEART', 'OLD', 'T', 'H', 'R'], ['BLEND', 'RIDGE', 'B', 'L', 'D'],
+  ['FLAME', 'RIGHT', 'F', 'L', 'M'], ['TABLE', 'OWN', 'T', 'A', 'B'],
+  ['SPEND', 'SENT', 'P', 'S', 'N'], ['SPACE', 'TAR', 'S', 'P', 'C'],
   ['TWIN', 'HERE', 'W', 'T', 'N'], ['SLED', 'PIT', 'S', 'L', 'D'],
   ['GRAIN', 'ATE', 'G', 'R', 'N'], ['CHARM', 'ORE', 'C', 'H', 'M'],
   ['PLUMP', 'AY', 'P', 'L', 'M'], ['SNOW', 'HOE', 'S', 'N', 'W'],

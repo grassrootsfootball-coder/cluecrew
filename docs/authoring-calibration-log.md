@@ -27270,3 +27270,55 @@ and their rows stay where they are. What is needed is one decision from David: w
 candidate stem against a frequency cut counts as the list *generating* content, or as it *checking*
 a stem a search proposed — a distinction the firewall ruling did not have to draw, because when it
 was written nothing was proposing stems.
+
+## R992 — The cut is installed, and a frequency list without a part-of-speech filter is web2 again
+
+**vr-19 IS PUBLISHED.** Twenty-five rows DRAFT to LIVE in one transaction, thirteen assertions
+passing before the write, live practice pool 0 → 25, window 0, `case-vr-19` servable. The pin
+context was `vr19-the-current-rows-themselves-6b95ddca15bbb06a` and **not `bb6be0d3`** — vr-19 was
+regenerated after that cut, so checking a signature against it would have proved nothing about
+these bytes. The file was verified by digest before a hash was taken from it.
+
+**THE SOURCE IS INSTALLED.** SUBTLEX-UK, 160,024 rows, sha256 `e40d83af…`, pinned in
+`frequency-signal.ts`, bytes gitignored — the licence question was only ever about redistribution,
+and fetching for local use was never the act that needed a grant. `FREQUENCY_UNMEASURED` no longer
+blocks anything.
+
+**AND THE FIRST THING IT MEASURED WAS ITSELF.** GOVE clears Annie's 3.0 cut at Zipf 3.74, SARK at
+3.37, BAIN at 3.17 — **three of the exact dialect remainders the ruling was written to exclude.**
+Subtitle corpora lowercase proper nouns into the word list, so a bare frequency cut would have
+readmitted them under a better-sounding instrument: **web2's fault wearing a new costume, a number
+correct about its corpus and wrong about the question** (R988). The corpus makes the judgement
+itself — `DomPoS` is `name` for all four and they are 74–100% capitalised, where every genuine
+common word here is under 35% — so 62,097 names are excluded and a verdict resting on one reports
+EXCLUDED-AS-A-NAME rather than "unknown" (R98).
+
+**The filter over-excludes and the direction is stated per question (R989's own lesson, applied):**
+`minister`, `south` and `god` are DomPoS `name` too, and `AllPoS` cannot rescue them — it reads
+`.name.noun.` for `minister` and for `gove` alike. Asking *does this leftover read as a word*,
+over-exclusion UNDERSTATES the flatter count and is conservative; asking *can this stem be
+performed*, it OVERSTATES refusals and can refuse a sound stem. One filter, two signs.
+
+**THE FIREWALL BOUNDARY IS NOW A FUNCTION, NOT A PROMISE.** David's ruling — *a search may propose
+from the generator's own material and be measured at 3.0; it may not enumerate candidates from the
+frequency list; the list gates, it does not source* — is implemented in `move-letter-search.ts`:
+`generatorMaterial()` reads the words already written into `generate-content.ts`, and the lexicon is
+consulted only to accept or reject what that material proposes. Nothing iterates the corpus. **A
+list that proposes words has reached the generator; one that judges words the generator proposed
+has not**, and the difference is which function owns the loop.
+
+**THE THREE REGENERATED, AND THE BANK MOVED WITH THE ROWS.** CHAIR/MOP → HEART/OLD, SHELF/TRAIN →
+TABLE/OWN, CHEAT/AIR → SPEND/SENT, chosen by rank from 1,953 valid candidates rather than by
+preference — weakest of the four words maximised, corroborated on the CBBC subcorpus, sharing no
+word with each other or with the nine surviving pairs. `MOVE_LETTER_EXTRA` is cycled by
+`fromBank(bank, 25)`, so **fixing the rows alone would have let the next regeneration reinstate the
+broken pairs, and fixing the bank alone would leave the database disagreeing with the code that
+claims to have produced it.** Both, in one run, or neither. All 25 cut rows now perform at 3.0,
+verified from the rows and not from the run's own report.
+
+**TWO THINGS STAY OPEN AND ARE NOT REPAIRED HERE.** The cut's 25 rows are still 12 distinct pairs
+(R990) — a defect in how the bank is expanded, not in any pair. And `seed-vr08-04` (COAT/HARD) and
+`seed-vr08-05` (BEAST/RING) are **performable but MIS-KEYED**: a letter does the task and it is not
+the recorded key. They are NEVER_SHIPPABLE and reach no child, which is why they are reported rather
+than fixed — but "unperformable" and "mis-keyed" are different faults and the earlier count did not
+separate them.
