@@ -67,8 +67,21 @@ const REFUSED = [
  * reconciliation. Neither is copied from the other store: their qualifier is a RULE and this is
  * that rule applied to this store's own words, or the cross between the two lists measures nothing.
  */
+/**
+ * **THE MEMBERSHIP TEST FOR THIS CLASS, AND IT IS HERS (229th, as relayed): does the unsuitable
+ * sense arrive BEFORE the ordinary one, read as the adult over the child's shoulder?**
+ *
+ * It is a reading and not a measurement, and it decides differently from "has an unsuitable sense
+ * somewhere" — which is what a list grows into if nobody states the test. Applied to the two words
+ * her ruling names:
+ *   · DRUG — bare, the narcotic sense arrives first. **In the class.** Added here.
+ *   · TRIP — bare, a journey or a stumble arrives first and the other sense is well behind.
+ *     **NOT in the class by her own test**, and it is therefore not flagged here, so this store's
+ *     gate has no instance of it to route. The authoring store flags it and holds that instance.
+ * That split is this store's reading of her test and is the thing to overrule if it is wrong.
+ */
 const FLAG_AMBIGUOUS_SENSE = [
-  'bloody', 'drunk', 'mistress', 'affair', 'naked', 'spirits', 'liquor', 'bitch',
+  'bloody', 'drunk', 'mistress', 'affair', 'naked', 'spirits', 'liquor', 'bitch', 'drug',
   /**
    * **FOUR CASES THIS STORE'S LIST FAILED IN THE AUTHORING STORE'S FIXTURE.** Their fixture asserts
    * these must not SILENTLY PASS and this store's list passed all four. Flagging satisfies the case
@@ -129,6 +142,14 @@ export type AppropriatenessVerdict = 'PASS' | 'FLAG-NEEDS-A-SENSE' | 'REFUSE';
 export type AppropriatenessScope = 'bare' | 'sentence';
 /** Which door is asking. A flag means different things at each, and that is her 228th's whole point. */
 export type AppropriatenessDoor = 'search' | 'write-gate';
+/**
+ * Where the flagged token sits. **A KEY is not a distractor** (her 229th, standing exception): the
+ * key is the answer the child must produce and carry away, where a distractor is one she rejects.
+ * So a flagged word in the key position **routes every time, clearance notwithstanding** — a
+ * clearance says the sense was ordinary in that row on that reading, and it does not make the word
+ * a safe thing to teach as the answer.
+ */
+export type TokenRole = 'key' | 'distractor' | 'other';
 export type AppropriatenessAction = 'accept' | 'drop-and-retry' | 'hold-and-route' | 'refuse';
 
 export interface AppropriatenessResult {
@@ -156,17 +177,30 @@ export function flagHits(text: string): AppropriatenessHit[] {
 /** The full verdict. **It reports and never rewrites** — nothing is stripped in place. */
 export function screenForAChild(
   text: string, scope: AppropriatenessScope = 'bare', door: AppropriatenessDoor = 'write-gate',
+  ctx: { role?: TokenRole; cleared?: boolean } = {},
 ): AppropriatenessResult {
   const refuse = appropriatenessHits(text);
   if (refuse.length) return { verdict: 'REFUSE', hits: refuse, scope, door, action: door === 'search' ? 'drop-and-retry' : 'refuse', reader: null };
   const flags = flagHits(text);
   if (flags.length && scope === 'bare') {
+    /**
+     * **THE STANDING EXCEPTION OUTRANKS A CLEARANCE, AND ONLY IN ONE DIRECTION.** A cleared
+     * distractor stays cleared; a cleared KEY routes again. Nothing here can clear a key, which is
+     * the point — the exception exists so that a ruling on one reading cannot become a permanent
+     * pass on the word a child is being taught to produce.
+     */
+    if (ctx.cleared && ctx.role !== 'key') {
+      return { verdict: 'PASS', hits: [], scope, door, action: 'accept', reader: null };
+    }
     return {
       verdict: 'FLAG-NEEDS-A-SENSE', hits: flags, scope, door,
       // At the search, ambiguity is free to avoid — spending a reader on a proposal is spending a
       // person where a retry would do. At the write gate somebody WANTED that word.
       action: door === 'search' ? 'drop-and-retry' : 'hold-and-route',
-      reader: door === 'search' ? null : 'the reviewer, with the row and its context',
+      reader: door === 'search' ? null
+        : ctx.role === 'key'
+          ? 'the reviewer — THE FLAGGED TOKEN IS THE KEY, so this routes every time even though the position has been cleared before (her 229th, standing exception)'
+          : 'the reviewer, with the row and its context',
     };
   }
   return { verdict: 'PASS', hits: [], scope, door, action: 'accept', reader: null };

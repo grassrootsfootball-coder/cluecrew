@@ -27862,3 +27862,54 @@ R985's proven shape — screen the emitters, declare the backlog that predates t
 shrink. **165 published filters across 85 files are declared; the search's own source is wired, and
 nothing new can join them.** Its fixture caught the first regex missing an inline key, which is the
 must-catch half earning its place before the check screened anything.
+
+## R1005 — A cleared distractor stays cleared; a cleared key routes every time
+
+**Her 229th, recorded AS RELAYED — no return is on this desk**, so the digest is David's, quoted and
+unverified, and the clearance record says so in a field rather than around it. If it crosses, that
+field is REPLACED by the verification.
+
+**All twenty-seven clear**, sixteen of them positions this store found and routed. And **her test
+binds the class**: *does the unsuitable sense arrive before the ordinary one, read as the adult over
+the child's shoulder?* That is a membership test, and it decides differently from *has an unsuitable
+sense somewhere* — which is what a flag list grows into when nobody states the test. Applied to the
+two words her ruling names: **DRUG** is in the class (bare, the narcotic sense arrives first) and is
+added; **TRIP** is not (a journey or a stumble arrives first), so this store's gate has no instance
+of it and the authoring store holds that one. That split is this store's reading and is the thing to
+overrule.
+
+**THE STANDING EXCEPTION: where a flagged word is the KEY rather than a distractor, it routes every
+time.** The key is the answer the child must produce and carry away; a distractor is one she
+rejects. **A clearance says the sense was ordinary in that row on that reading, and it does not make
+the word a safe thing to teach as the answer.** So the exception outranks a clearance, and only in
+that direction — nothing can clear a key permanently, which is the point.
+
+Wired and measured: 83 blocked → **73**. Sixteen flagged positions became **twelve cleared
+distractors passing, three keys routing every time** — `ENG-005-BB-01` (high),
+`gen-vr-03-related-words-10` and `gen-vr-10-word-connections-09` (pot), **two of them LIVE** — and
+one newly in the class. A clearance is per ROW and per TOKEN, never per word, and a missing
+clearance record yields no clearances rather than silent ones (R98).
+
+## R1006 — An identifier shared by two producers is a join key that silently merges them
+
+The appropriateness screen and the ban list both emitted `rule: 'banned-vocabulary'`. **Nothing
+downstream could tell them apart** — and the thing that proved it was the script written to
+re-derive the screen's own figures, which counted five of the BAN LIST's voice refusals as the
+screen's *while auditing the screen for exactly this kind of error* (R1004).
+
+**THE GENERAL FORM IS NOT ABOUT RULE IDS.** An id is a claim about identity, and a shared one is a
+false claim that every consumer inherits — a dashboard, a triage, a count, an auditor. The same
+shape is already in this register twice: a machine verdict wearing a person's name (R94), and
+`human:staff-reviewer@cluecrew.test` resolving to no Reviewer row. **What makes it hard to see is
+that both producers are correct**; only the merge is wrong, and the merge happens in the reader.
+
+A shared id is not always a fault — a rule genuinely enforced in four places is one rule. So
+`pnpm check:rule-id-owners` reports every id with more than one emitter and **refuses the ones with
+no declared reason**, on the R985/R1004 shape: 618 files, 35 distinct rule ids, **3 shared and all 3
+declared** — `internal-id-leak` across four enforcement points, `banned-vocabulary` across its
+definition and its per-item caller, `placeholder-tag` across its definition and the database check.
+The id that caused this now has its own: `subject-matter`.
+
+**And the check's first run reported five, three of them its own fixture strings.** A screen that
+counts itself reports a fault it created by existing — excluded, and named here because it is the
+third instrument this fortnight to need telling that it is not part of its own population.

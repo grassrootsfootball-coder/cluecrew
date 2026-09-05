@@ -24,6 +24,7 @@
  */
 import { readFileSync, writeFileSync } from 'node:fs';
 import { checkItemChildFacing, isBlocking } from '../packages/core/src/index';
+import { loadClearances } from './lib/clearances';
 import { prisma } from '../packages/db/src/index';
 
 type Snapshot = Record<string, string[]>;
@@ -33,11 +34,13 @@ async function capture(path: string): Promise<void> {
     include: { options: { orderBy: { id: 'asc' } }, questionType: { select: { mechanic: true } } },
     orderBy: { id: 'asc' },
   });
+  const cleared = loadClearances();
   const out: Snapshot = {};
   for (const i of items) {
     out[i.id] = checkItemChildFacing({
       id: i.id, stem: i.stem, explanation: i.explanation,
       mechanic: i.questionType.mechanic, options: i.options,
+      clearedAppropriatenessTokens: cleared.get(i.id),
     }).filter(isBlocking).map((f) => `${f.rule}|${f.where}|${f.detail}`).sort();
   }
   writeFileSync(path, JSON.stringify(out, null, 1));

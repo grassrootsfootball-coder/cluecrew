@@ -1,0 +1,10 @@
+{
+ "what": "rule ids emitted from more than one file, each with the reason the sharing is correct. An id NOT on this list may not be shared.",
+ "rule": "R1006 — an identifier shared by two producers is a join key that silently merges them",
+ "recordedOn": "2026-09-05",
+ "shared": {
+  "internal-id-leak": "ONE RULE, FOUR ENFORCEMENT POINTS. content-gates defines it; item-content-gate applies it per item; the two import doors apply it at the door. Every emitter is executing the SAME predicate on the same definition of the fault, so a consumer merging them is merging things that are genuinely one thing.",
+  "banned-vocabulary": "ONE RULE, TWO CALLERS. content-gates owns checkBannedVocabulary and item-content-gate re-emits its result per item. THIS IS THE ID THAT CAUSED R1006 — but the fault was never this pair; it was a THIRD instrument, the subject-matter screen, borrowing the id. That one now has its own, and this pair is one rule reported twice.",
+  "placeholder-tag": "ONE RULE, TWO CALLERS. content-gates defines it and check-db-content applies it over the database. Same predicate, same fault."
+ }
+}

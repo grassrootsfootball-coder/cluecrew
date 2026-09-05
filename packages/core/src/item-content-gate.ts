@@ -17,7 +17,7 @@
  * Declared quotations and tested tokens are honoured exactly as elsewhere.
  */
 import { banListApplies, banListScope } from './ban-list-scope';
-import { screenForAChild, APPROPRIATENESS_VERSION } from './appropriateness';
+import { screenForAChild, APPROPRIATENESS_VERSION, type TokenRole } from './appropriateness';
 import { dispositionFor, dispositionKey } from './field-dispositions';
 import { checkChildFacingText, spansPresentIn, type ContentFailure } from './content-gates';
 import { refusalMessage, refusedInOptions } from './refused-misconceptions';
@@ -163,7 +163,16 @@ export interface GatableItem {
   stem: unknown;
   explanation?: unknown;
   mechanic?: string | null;
-  options: Array<{ content: unknown }>;
+  options: Array<{ content: unknown; isCorrect?: boolean }>;
+  /**
+   * Tokens the reviewer has ruled ordinary IN THIS ROW (her 229th). A cleared token does not route
+   * again — **unless it is the key**, which routes every time by the standing exception.
+   *
+   * The list is supplied by the CALLER because this package reads no files. A caller that omits it
+   * gets every flag routed, which is the safe default: a missing clearance record must not read as
+   * a clearance (R98 — unknown is not absent).
+   */
+  clearedAppropriatenessTokens?: readonly string[];
 }
 
 export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
@@ -196,7 +205,7 @@ export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
    *
    * It screens the stem, the option values and the explanation, because a child meets all three.
    */
-  const screenAppropriateness = (label: string, path: string, text: string, scope: 'bare' | 'sentence') => {
+  const screenAppropriateness = (label: string, path: string, text: string, scope: 'bare' | 'sentence', role: TokenRole = 'other') => {
     if (!text) return;
     if (QUOTATION_FIELDS.has(path.split('.').pop() ?? '')) return;
     /**
@@ -214,7 +223,8 @@ export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
      */
     const scope_ = banListScope(path);
     if (scope_ === 'OUT — provenance or workflow' || scope_ === 'OUT — machine declaration') return;
-    const v = screenForAChild(text, scope, 'write-gate');
+    const cleared = (item.clearedAppropriatenessTokens ?? []).some((t) => text.toLowerCase().includes(t.toLowerCase()));
+    const v = screenForAChild(text, scope, 'write-gate', { role, cleared });
     if (v.verdict === 'PASS') return;
     // A FLAG IS NOT A REFUSAL AND IT IS NOT A PASS: the row HOLDS and routes to the reviewer with
     // its context (Annie, 228th). It blocks, because a held row that ships is not held — but the
@@ -238,7 +248,7 @@ export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
     const v = (o.content as { value?: unknown })?.value;
     // `option.value` — the DECLARED path. This read `options.value`, which matches nothing in the
     // scope model, so every option value was skipped by a plural.
-    for (const one of (Array.isArray(v) ? v : [v])) screenAppropriateness(`item:${item.id} options[${i}]`, 'option.value', String(one ?? ''), 'bare');
+    for (const one of (Array.isArray(v) ? v : [v])) screenAppropriateness(`item:${item.id} options[${i}]`, 'option.value', String(one ?? ''), 'bare', o.isCorrect ? 'key' : 'distractor');
   }
   for (const [path, text] of textsFrom((item.explanation ?? {}) as Record<string, unknown>, '')) {
     screenAppropriateness(`item:${item.id} explanation.${path}`, `explanation.${path}`, text, 'sentence');

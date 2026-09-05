@@ -224,7 +224,8 @@
     "check:lane-health": "tsx scripts/check-lane-health.ts",
     "archive:lane": "tsx scripts/archive-the-lane.ts",
     "check:appropriateness-sited": "tsx scripts/check-appropriateness-sited.ts",
-    "check:derived-lists": "tsx scripts/check-derived-lists.ts"
+    "check:derived-lists": "tsx scripts/check-derived-lists.ts",
+    "check:rule-id-owners": "tsx scripts/check-rule-id-owners.ts"
   },
   "devDependencies": {
     "@eslint/js": "^9.20.0",
