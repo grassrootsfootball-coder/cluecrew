@@ -219,7 +219,8 @@
     "check:pilot-exclusion": "tsx scripts/check-pilot-review-excluded.ts",
     "check:generator-agreement": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-generator-agreement.ts",
     "check:cut-carries-instrument": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-cut-carries-instrument.ts",
-    "check:vr08-open-items": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-vr08-open-items.ts"
+    "check:vr08-open-items": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-vr08-open-items.ts",
+    "disagreement:set": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/run-the-disagreement-set.ts"
   },
   "devDependencies": {
     "@eslint/js": "^9.20.0",

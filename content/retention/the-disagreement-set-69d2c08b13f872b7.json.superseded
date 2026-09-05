@@ -1,0 +1,391 @@
+{
+ "kind": "THE-DISAGREEMENT-SET-TWO-INSTRUMENTS-ONE-POPULATION",
+ "TO": "Annie, by relay through David; the authoring store",
+ "date": "2026-09-05",
+ "THE_QUESTION": "both instruments over one word population, counted at 3.0 — does the district have one rule or two?",
+ "THE_POPULATION": {
+  "what": "the district's own adjudication surface: for every vr-08 row and every letter of word1, the leftover and every insertion of that letter into word2, plus both stem words",
+  "size": 685,
+  "fromRows": 38,
+  "andWHYNOTABIGGERLIST": "a disagreement on a word this district never asks about costs nothing. This is the set where the cut actually decides something."
+ },
+ "THE_TWO_INSTRUMENTS": {
+  "thisStore": {
+   "cut": 3,
+   "ruling": "Annie, 224th return — validity is what a competent eleven-year-old knows, not what a broad dictionary holds. The cut is 3.0.",
+   "instrument": {
+    "source": "SUBTLEX-UK (van Heuven, Mandera, Keuleers & Brysbaert 2014), Zipf scale, British English",
+    "sha256": "e40d83af55eb85e9e2bc0d72e1022b10e47e31ff2086ad2edcc18292d6bd6616",
+    "retrievedOn": "2026-09-05",
+    "rows": 160024,
+    "column": "LogFreq(Zipf)",
+    "columnIsAREADINGNotARuling": "Annie ruled the CUT (3.0), not the COLUMN. The primary here is a reading, not a ruling, and every emission carries the CBBC Zipf beside it so the reading can be checked."
+   },
+   "nameFilter": {
+    "rule": "entries whose DomPoS is \"name\" are excluded from the lexicon entirely, whatever their Zipf",
+    "whyItIsPartOfTHEMEASUREMENT": "GOVE reads 3.74, SARK 3.37 and BAIN 3.17 — three dialect remainders the ruling exists to exclude, admitted by the bare cut because subtitle corpora lowercase proper nouns into the word list. A store told only \"3.0\" would admit them and be faithful to the ruling as written.",
+    "andWHATITCOSTS": "it over-excludes: minister, south and god are DomPoS \"name\" here too, and AllPoS cannot separate them (it reads .name.noun. for minister and for gove alike). A verdict resting on an excluded word reports EXCLUDED-AS-A-NAME, never \"unknown\"."
+   },
+   "andWHYTHISTRAVELS": "the authoring store runs wordfreq 3.1.1 and reads GRAN at 3.44. Two honest instruments disagree, so a cut without its instrument is not a shared fact. Quote this block back with any figure taken at this cut and the two stores can find the disagreement instead of inheriting it.",
+   "knownDisagreementToQuOTEBACK": "GRAN: the authoring store reads 3.44 on wordfreq 3.1.1. This store's own reading is carried as GRAN_measuredHere beside this block, measured at call time rather than written here — a number typed into a declaration is the thing this rule exists to stop."
+  },
+  "otherStore": {
+   "source": "wordfreq 3.1.1, en, Zipf scale",
+   "runWHERE": "installed and run HERE, so both halves of this set are measured rather than one being estimated",
+   "confirmedAgainstYourOwnFIGURE": "you reported GRAN at 3.44 on wordfreq 3.1.1; run here it returns 3.44. That match is how this side knows it is running your instrument and not an approximation."
+  },
+  "GRAN": {
+   "subtlex": 3.67,
+   "wordfreq": 3.44
+  }
+ },
+ "THE_ANSWER": {
+  "crossingsOnTHECORPORAALONE": 14,
+  "crossingsWITHTHISSTORESNAMERULE": 18,
+  "ofPopulation": 685,
+  "agreementRate": "97.4%",
+  "andWHATTHATMEANS": "18 word(s) of 685 cross the cut in opposite directions. Every OTHER word in the district is corroborated by two independent corpora, which is the stronger agreement you named.",
+  "theNameFilterIsARULEDIFFERENCEnotACORPUSONE": "10 word(s) change verdict here BECAUSE of the name filter, which the other store does not apply. That is where the district has two rules rather than two instruments, and it is the half that can be reconciled by a ruling instead of by a corpus."
+ },
+ "THE_CROSSINGS_WITH_THE_RULE_APPLIED": [
+  {
+   "word": "AMY",
+   "subtlexRuled": "EXCLUDED-AS-A-NAME",
+   "subtlexRawZipf": 4.52,
+   "wordfreqZipf": 4.2,
+   "thisStoreSays": "not known",
+   "otherStoreSays": "known",
+   "cause": "THE NAME RULE — the corpora may or may not agree; this store excludes it as a proper noun"
+  },
+  {
+   "word": "BAIN",
+   "subtlexRuled": "EXCLUDED-AS-A-NAME",
+   "subtlexRawZipf": 3.17,
+   "wordfreqZipf": 3.23,
+   "thisStoreSays": "not known",
+   "otherStoreSays": "known",
+   "cause": "THE NAME RULE — the corpora may or may not agree; this store excludes it as a proper noun"
+  },
+  {
+   "word": "BRAN",
+   "subtlexRuled": 2.74,
+   "subtlexRawZipf": 2.93,
+   "wordfreqZipf": 3.3,
+   "thisStoreSays": "not known",
+   "otherStoreSays": "known",
+   "cause": "THE CORPORA — both apply the same bare cut and land on opposite sides"
+  },
+  {
+   "word": "COA",
+   "subtlexRuled": 1.3,
+   "subtlexRawZipf": 1.47,
+   "wordfreqZipf": 3.13,
+   "thisStoreSays": "not known",
+   "otherStoreSays": "known",
+   "cause": "THE CORPORA — both apply the same bare cut and land on opposite sides"
+  },
+  {
+   "word": "HART",
+   "subtlexRuled": "EXCLUDED-AS-A-NAME",
+   "subtlexRawZipf": 3.72,
+   "wordfreqZipf": 4.04,
+   "thisStoreSays": "not known",
+   "otherStoreSays": "known",
+   "cause": "THE NAME RULE — the corpora may or may not agree; this store excludes it as a proper noun"
+  },
+  {
+   "word": "HOE",
+   "subtlexRuled": 2.95,
+   "subtlexRawZipf": 2.95,
+   "wordfreqZipf": 3.25,
+   "thisStoreSays": "not known",
+   "otherStoreSays": "known",
+   "cause": "THE CORPORA — both apply the same bare cut and land on opposite sides"
+  },
+  {
+   "word": "HONE",
+   "subtlexRuled": 2.92,
+   "subtlexRawZipf": 2.94,
+   "wordfreqZipf": 3.17,
+   "thisStoreSays": "not known",
+   "otherStoreSays": "known",
+   "cause": "THE CORPORA — both apply the same bare cut and land on opposite sides"
+  },
+  {
+   "word": "HOWE",
+   "subtlexRuled": "EXCLUDED-AS-A-NAME",
+   "subtlexRawZipf": 3.26,
+   "wordfreqZipf": 3.52,
+   "thisStoreSays": "not known",
+   "otherStoreSays": "known",
+   "cause": "THE NAME RULE — the corpora may or may not agree; this store excludes it as a proper noun"
+  },
+  {
+   "word": "NATE",
+   "subtlexRuled": 1.54,
+   "subtlexRawZipf": 2.91,
+   "wordfreqZipf": 3.81,
+   "thisStoreSays": "not known",
+   "otherStoreSays": "known",
+   "cause": "THE CORPORA — both apply the same bare cut and land on opposite sides"
+  },
+  {
+   "word": "OWEN",
+   "subtlexRuled": "EXCLUDED-AS-A-NAME",
+   "subtlexRawZipf": 4.2,
+   "wordfreqZipf": 4.05,
+   "thisStoreSays": "not known",
+   "otherStoreSays": "known",
+   "cause": "THE NAME RULE — the corpora may or may not agree; this store excludes it as a proper noun"
+  },
+  {
+   "word": "PANT",
+   "subtlexRuled": 2.86,
+   "subtlexRawZipf": 2.94,
+   "wordfreqZipf": 3.18,
+   "thisStoreSays": "not known",
+   "otherStoreSays": "known",
+   "cause": "THE CORPORA — both apply the same bare cut and land on opposite sides"
+  },
+  {
+   "word": "PATE",
+   "subtlexRuled": 3.39,
+   "subtlexRawZipf": 3.42,
+   "wordfreqZipf": 2.88,
+   "thisStoreSays": "known",
+   "otherStoreSays": "not known",
+   "cause": "THE CORPORA — both apply the same bare cut and land on opposite sides"
+  },
+  {
+   "word": "PLAT",
+   "subtlexRuled": 2.28,
+   "subtlexRawZipf": 2.33,
+   "wordfreqZipf": 3.1,
+   "thisStoreSays": "not known",
+   "otherStoreSays": "known",
+   "cause": "THE CORPORA — both apply the same bare cut and land on opposite sides"
+  },
+  {
+   "word": "SPAR",
+   "subtlexRuled": 2.56,
+   "subtlexRawZipf": 2.92,
+   "wordfreqZipf": 3.06,
+   "thisStoreSays": "not known",
+   "otherStoreSays": "known",
+   "cause": "THE CORPORA — both apply the same bare cut and land on opposite sides"
+  },
+  {
+   "word": "TARA",
+   "subtlexRuled": "EXCLUDED-AS-A-NAME",
+   "subtlexRawZipf": 3.53,
+   "wordfreqZipf": 3.66,
+   "thisStoreSays": "not known",
+   "otherStoreSays": "known",
+   "cause": "THE NAME RULE — the corpora may or may not agree; this store excludes it as a proper noun"
+  },
+  {
+   "word": "TARTS",
+   "subtlexRuled": 3.46,
+   "subtlexRawZipf": 3.49,
+   "wordfreqZipf": 2.98,
+   "thisStoreSays": "known",
+   "otherStoreSays": "not known",
+   "cause": "THE CORPORA — both apply the same bare cut and land on opposite sides"
+  },
+  {
+   "word": "TRIPE",
+   "subtlexRuled": 3.07,
+   "subtlexRawZipf": 3.13,
+   "wordfreqZipf": 2.71,
+   "thisStoreSays": "known",
+   "otherStoreSays": "not known",
+   "cause": "THE CORPORA — both apply the same bare cut and land on opposite sides"
+  },
+  {
+   "word": "TSAR",
+   "subtlexRuled": "EXCLUDED-AS-A-NAME",
+   "subtlexRawZipf": 3.17,
+   "wordfreqZipf": 3.16,
+   "thisStoreSays": "not known",
+   "otherStoreSays": "known",
+   "cause": "THE NAME RULE — the corpora may or may not agree; this store excludes it as a proper noun"
+  }
+ ],
+ "THE_CROSSINGS_ON_CORPORA_ALONE": [
+  {
+   "word": "BRAN",
+   "subtlexRawZipf": 2.93,
+   "wordfreqZipf": 3.3,
+   "gap": -0.37
+  },
+  {
+   "word": "CHARD",
+   "subtlexRawZipf": 3.09,
+   "wordfreqZipf": 2.71,
+   "gap": 0.38
+  },
+  {
+   "word": "COA",
+   "subtlexRawZipf": 1.47,
+   "wordfreqZipf": 3.13,
+   "gap": -1.66
+  },
+  {
+   "word": "GOVE",
+   "subtlexRawZipf": 3.74,
+   "wordfreqZipf": 2.94,
+   "gap": 0.8
+  },
+  {
+   "word": "HOE",
+   "subtlexRawZipf": 2.95,
+   "wordfreqZipf": 3.25,
+   "gap": -0.3
+  },
+  {
+   "word": "HONE",
+   "subtlexRawZipf": 2.94,
+   "wordfreqZipf": 3.17,
+   "gap": -0.23
+  },
+  {
+   "word": "NATE",
+   "subtlexRawZipf": 2.91,
+   "wordfreqZipf": 3.81,
+   "gap": -0.9
+  },
+  {
+   "word": "PANT",
+   "subtlexRawZipf": 2.94,
+   "wordfreqZipf": 3.18,
+   "gap": -0.24
+  },
+  {
+   "word": "PATE",
+   "subtlexRawZipf": 3.42,
+   "wordfreqZipf": 2.88,
+   "gap": 0.54
+  },
+  {
+   "word": "PLAT",
+   "subtlexRawZipf": 2.33,
+   "wordfreqZipf": 3.1,
+   "gap": -0.77
+  },
+  {
+   "word": "SARK",
+   "subtlexRawZipf": 3.37,
+   "wordfreqZipf": 2.68,
+   "gap": 0.69
+  },
+  {
+   "word": "SPAR",
+   "subtlexRawZipf": 2.92,
+   "wordfreqZipf": 3.06,
+   "gap": -0.14
+  },
+  {
+   "word": "TARTS",
+   "subtlexRawZipf": 3.49,
+   "wordfreqZipf": 2.98,
+   "gap": 0.51
+  },
+  {
+   "word": "TRIPE",
+   "subtlexRawZipf": 3.13,
+   "wordfreqZipf": 2.71,
+   "gap": 0.42
+  }
+ ],
+ "WHERE_THEY_AGREE_THE_AGREEMENT_IS_STRONGER": {
+  "count": 667,
+  "ofWhichBOTHCALLKNOWN": 134,
+  "andWHATTHATBUYS": "a word both instruments place above the cut is corroborated by two independent corpora built from different sources. Any wordhood decision resting only on those words is not resting on a single instrument, which is the state every figure before tonight was in."
+ },
+ "THE_THREE_DOUBTFUL_WORDS_UNDER_BOTH": [
+  {
+   "word": "SOW",
+   "inThisPopulation": true,
+   "subtlexRawZipf": 3.62,
+   "excludedAsAName": false,
+   "wordfreqZipf": 3.38,
+   "thisStore": "known"
+  },
+  {
+   "word": "SEAM",
+   "inThisPopulation": true,
+   "subtlexRawZipf": 3.16,
+   "excludedAsAName": false,
+   "wordfreqZipf": 3.44,
+   "thisStore": "known"
+  },
+  {
+   "word": "BAIN",
+   "inThisPopulation": true,
+   "subtlexRawZipf": 3.17,
+   "excludedAsAName": true,
+   "wordfreqZipf": 3.23,
+   "thisStore": "not known"
+  },
+  {
+   "word": "GOVE",
+   "inThisPopulation": true,
+   "subtlexRawZipf": 3.74,
+   "excludedAsAName": true,
+   "wordfreqZipf": 2.94,
+   "thisStore": "not known"
+  },
+  {
+   "word": "SARK",
+   "inThisPopulation": true,
+   "subtlexRawZipf": 3.37,
+   "excludedAsAName": true,
+   "wordfreqZipf": 2.68,
+   "thisStore": "not known"
+  },
+  {
+   "word": "LANT",
+   "inThisPopulation": true,
+   "subtlexRawZipf": 1.84,
+   "excludedAsAName": false,
+   "wordfreqZipf": 1.78,
+   "thisStore": "not known"
+  },
+  {
+   "word": "SOOL",
+   "inThisPopulation": true,
+   "subtlexRawZipf": null,
+   "excludedAsAName": false,
+   "wordfreqZipf": 1.66,
+   "thisStore": "not known"
+  }
+ ],
+ "andTHELIMIT": "wordfreq is installed locally and is NOT a CI gate, exactly as SUBTLEX-UK is not: neither corpus can be committed. This is a LOCAL cross-check, and its absence on another machine must report UNMEASURED rather than agreement.",
+ "findingsSha256": "2f30f9b707c2df72c7e3b7799ce19ee2d67e26eec5c1b1c308ecc49054b7d708",
+ "howToCheckThisOnArrival": {
+  "subtreeKeys": [
+   "THE_ANSWER",
+   "THE_POPULATION",
+   "THE_CROSSINGS_WITH_THE_RULE_APPLIED",
+   "THE_CROSSINGS_ON_CORPORA_ALONE",
+   "THE_THREE_DOUBTFUL_WORDS_UNDER_BOTH"
+  ],
+  "subtree": "an object of THIS DOCUMENT'S OWN TOP-LEVEL KEYS, exactly as spelled in subtreeKeys and nowhere renamed: {\"THE_ANSWER\", \"THE_POPULATION\", \"THE_CROSSINGS_WITH_THE_RULE_APPLIED\", \"THE_CROSSINGS_ON_CORPORA_ALONE\", \"THE_THREE_DOUBTFUL_WORDS_UNDER_BOTH\"}",
+  "spec": "sha256 over json.dumps(subtree, sort_keys=True, separators=(\",\",\":\"), ensure_ascii=False).encode(\"utf-8\") — R729. ensure_ascii defaults to True and gives a different number.",
+  "andTheFileDigest": "the staging line and the .sha256 sidecar, over the whole file bytes"
+ },
+ "DIGESTS": {
+  "THE_FILE_DIGEST": "this file's own name and its .sha256 sidecar carry it. It cannot be written here: a file that states its own byte-hash changes the bytes it is stating.",
+  "theFileDigestSpec": "sha256 over the whole file bytes. This is what the filename carries after deliver() restamps, what the .sha256 sidecar holds, and what a receiving store should quote back to confirm arrival.",
+  "THE_FINDINGS_DIGEST": "2f30f9b707c2df72c7e3b7799ce19ee2d67e26eec5c1b1c308ecc49054b7d708",
+  "theFindingsDigestSpec": "sha256 over json.dumps(subtree, sort_keys=True, separators=(\",\",\":\"), ensure_ascii=False) where subtree is {\"THE_ANSWER\", \"THE_POPULATION\", \"THE_CROSSINGS_WITH_THE_RULE_APPLIED\", \"THE_CROSSINGS_ON_CORPORA_ALONE\", \"THE_THREE_DOUBTFUL_WORDS_UNDER_BOTH\"} — R729. It measures the FINDINGS, not the file, and changes only when a finding changes.",
+  "andWHYBOTH": "they never agree and neither is wrong. The file digest identifies the bytes; the findings digest identifies the claim. Quoting one without naming which is how one landing acquires two names (R981)."
+ },
+ "instrumentProvenance": {
+  "emittedBy": "run-the-disagreement-set.ts",
+  "carriedFixture": false,
+  "MARK": "FROM AN UNFIXTURED INSTRUMENT",
+  "meaning": "this emitter carries no fixture, so nothing in this run proves it can find what it claims to find or stay silent on what is clean. Read its figures accordingly (Annie's clause, R726).",
+  "remedy": "the emitter earns a carried fixture before its next emission crosses (R725)."
+ }
+}

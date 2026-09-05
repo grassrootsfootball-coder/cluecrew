@@ -11,12 +11,13 @@
    "measuredBy": "distinct (word1, word2) pairs against row count across the vr-08 cut"
   },
   {
-   "id": "seed-rows-04-and-05-are-performable-but-mis-keyed",
-   "what": "seed-vr08-04 (COAT/HARD) and seed-vr08-05 (BEAST/RING) each have a letter that performs the task at the 3.0 cut, and it is not the letter recorded as the key. COAT/HARD works on O (COAT->CAT, HARD->HOARD); the key says C. BEAST/RING works on S (BEAST->BEAT, RING->RINGS); the key says B.",
+   "id": "seed-vr08-04-is-performable-but-mis-keyed",
+   "what": "seed-vr08-04 (COAT/HARD) has a letter that performs the task at the 3.0 cut, and it is not the letter recorded as the key. It works on O (COAT->CAT 4.83, HARD->HOARD 3.31); the key says C, which needs OAT (2.70) and CHARD (2.95) — both below the cut on BOTH instruments.",
    "whyItWasNotRepaired": "both rows are NEVER_SHIPPABLE and reach no child, and correcting a key is a content decision on rows the reviewer has already ruled out of service. Repairing them would also change rows that several crossed artefacts describe.",
    "whoseDecision": "Annie — whether a NEVER_SHIPPABLE seed row is corrected or left as the record of what was made",
    "andWHYITISNAMEDSEPARATELY": "UNPERFORMABLE and MIS-KEYED are different faults. The earlier count reported these two inside a single 'unperformable' figure, which is wrong about both: the stem is sound and the answer is wrong.",
-   "measuredBy": "for each seed row, the letters that perform the task at the cut, against the recorded key"
+   "measuredBy": "for each seed row, the letters that perform the task at the cut, against the recorded key",
+   "CORRECTED_2026_09_05": "This item originally named seed-vr08-05 (BEAST/RING) as well. THAT WAS AN ARTEFACT OF THIS STORE'S OWN NAME FILTER, not a fault in the row: EAST reads 5.19 and was excluded as a proper noun, which made the recorded key B fail. The key B is correct — BEAST->EAST, RING->BRING, both far above the cut. The filter was repaired to compute Zipf from non-name frequency and the row is sound. Found by Annie's disagreement set, not by anything on this side alone."
   }
  ]
 }

@@ -57,7 +57,7 @@ async function main() {
     if (works.length === 0) { unperformable.push(`${r.id} (${w1}/${w2})`); continue; }
     if (!works.includes(key)) misKeyed.push(`${r.id} (${w1}/${w2}: works on ${works.join('/')}, key says ${key})`);
   }
-  results.push({ id: 'seed-rows-04-and-05-are-performable-but-mis-keyed',
+  results.push({ id: 'seed-vr08-04-is-performable-but-mis-keyed',
     state: misKeyed.length > 0 ? 'OPEN' : 'CLOSED',
     figure: `${misKeyed.length} seed row(s) performable but mis-keyed${misKeyed.length ? `: ${misKeyed.join('; ')}` : ''}. Separately, ${unperformable.length} seed row(s) unperformable at the cut — a DIFFERENT fault and not counted here.` });
 

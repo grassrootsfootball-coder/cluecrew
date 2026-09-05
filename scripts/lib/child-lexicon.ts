@@ -79,6 +79,12 @@ export interface ChildLexicon {
   knows: (word: string) => boolean;
   /** True when the corpus's own DomPoS calls this a name — excluded, not merely absent (R98). */
   isProperName: (word: string) => boolean;
+  /**
+   * The Zipf BEFORE the name rule is applied — names included. Needed to separate a disagreement
+   * between CORPORA from a disagreement between RULES: without it, this store's name filter and
+   * SUBTLEX's contents are one indistinguishable difference (Annie's 225th).
+   */
+  zipfRaw: (word: string) => number | null;
   size: number;
   namesExcluded: number;
   cut: number;
@@ -106,8 +112,11 @@ export function loadChildLexicon(): ChildLexicon {
   const iZipf = header.indexOf('LogFreq(Zipf)');
   const iCBBC = header.indexOf('LogFreqCBBC(Zipf)');
   const iPoS = header.indexOf('DomPoS');
-  if (iWord < 0 || iZipf < 0 || iCBBC < 0 || iPoS < 0) {
-    throw new Error(`the frequency file does not carry the columns this reads: Spelling / LogFreq(Zipf) / LogFreqCBBC(Zipf) / DomPoS. Found: ${header.join(', ')}`);
+  const iAll = header.indexOf('AllPoS');
+  const iAllF = header.indexOf('AllPoSFreq');
+  const iFreq = header.indexOf('FreqCount');
+  if (iWord < 0 || iZipf < 0 || iCBBC < 0 || iPoS < 0 || iAll < 0 || iAllF < 0 || iFreq < 0) {
+    throw new Error(`the frequency file does not carry the columns this reads: Spelling / LogFreq(Zipf) / LogFreqCBBC(Zipf) / DomPoS / AllPoS / AllPoSFreq / FreqCount. Found: ${header.join(', ')}`);
   }
 
   /**
@@ -136,21 +145,42 @@ export function loadChildLexicon(): ChildLexicon {
    * Any verdict resting on an excluded word is therefore reported as EXCLUDED-AS-A-NAME rather
    * than as unknown, so the second case is visible to a reviewer instead of silent.
    */
-  const main = new Map<string, number>();
+  const main = new Map<string, number>();      // Zipf computed from NON-NAME frequency only
   const cbbc = new Map<string, number>();
-  const names = new Map<string, number>();
-  let parsed = 0;
+  const raw = new Map<string, number>();       // the file's own Zipf, all senses
+  const excluded = new Map<string, number>();  // cleared the cut on all senses, fails on non-name ones
+  let parsed = 0, corpusTotal = 0;
+  interface Rec { w: string; z: number; c: number; nonName: number }
+  const recs: Rec[] = [];
   for (let i = 1; i < lines.length; i += 1) {
     const f = lines[i]!.split('\t');
     const w = f[iWord]?.trim().toUpperCase();
     if (!w) continue;
-    const z = Number(f[iZipf]); const c = Number(f[iCBBC]);
     parsed += 1;
-    const isName = (f[iPoS] ?? '').trim().toLowerCase() === 'name';
-    if (isName) { if (Number.isFinite(z)) names.set(w, z); continue; }
-    if (Number.isFinite(z)) main.set(w, z);
+    const z = Number(f[iZipf]); const c = Number(f[iCBBC]); const total = Number(f[iFreq]);
+    if (Number.isFinite(total)) corpusTotal += total;
+    // AllPoS is `.name.noun.verb.` and AllPoSFreq the matching `.18569.12700.144.`; the counts are
+    // positional, so a length mismatch means the row cannot be read and is refused, not guessed.
+    const labels = (f[iAll] ?? '').split('.').filter(Boolean);
+    const counts = (f[iAllF] ?? '').split('.').filter(Boolean).map(Number);
+    let nonName = 0;
+    if (labels.length === counts.length && labels.length > 0) {
+      labels.forEach((lab, j) => { if (lab.trim().toLowerCase() !== 'name') nonName += counts[j] ?? 0; });
+    } else if (Number.isFinite(total)) {
+      nonName = (f[iPoS] ?? '').trim().toLowerCase() === 'name' ? 0 : total;
+    }
+    if (Number.isFinite(z)) raw.set(w, z);
     if (Number.isFinite(c)) cbbc.set(w, c);
+    recs.push({ w, z, c, nonName });
   }
+  if (corpusTotal <= 0) throw new Error('the corpus total summed to zero — a Zipf cannot be recomputed without it');
+  for (const r of recs) {
+    if (r.nonName <= 0) { if (Number.isFinite(r.z)) excluded.set(r.w, r.z); continue; }
+    const zNonName = Math.log10((r.nonName / corpusTotal) * 1e9);
+    main.set(r.w, Number(zNonName.toFixed(2)));
+    if (zNonName < CHILD_CUT_ZIPF && Number.isFinite(r.z) && r.z >= CHILD_CUT_ZIPF) excluded.set(r.w, r.z);
+  }
+  const names = excluded;
   // The guard is on the PARSE, not on the post-exclusion set — an earlier version checked the
   // filtered map and refused the file for doing exactly what it was asked to do.
   if (parsed < 150_000) throw new Error(`the frequency file parsed to only ${parsed} rows — expected ~160,000. A short parse is a broken read, not a small corpus (R173).`);
@@ -160,7 +190,8 @@ export function loadChildLexicon(): ChildLexicon {
     zipf: (w) => main.get(w.trim().toUpperCase()) ?? null,
     zipfCBBC: (w) => cbbc.get(w.trim().toUpperCase()) ?? null,
     knows: (w) => (main.get(w.trim().toUpperCase()) ?? -Infinity) >= CHILD_CUT_ZIPF,
-    isProperName: (w) => names.has(w.trim().toUpperCase()),
+    isProperName: (w) => { const k = w.trim().toUpperCase(); return (main.get(k) ?? -Infinity) < CHILD_CUT_ZIPF && (raw.get(k) ?? -Infinity) >= CHILD_CUT_ZIPF; },
+    zipfRaw: (w) => raw.get(w.trim().toUpperCase()) ?? null,
     size: main.size,
     namesExcluded: names.size,
     cut: CHILD_CUT_ZIPF,

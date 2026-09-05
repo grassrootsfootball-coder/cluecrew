@@ -64,12 +64,13 @@ function main() {
   console.log(`  ${all.length} script(s) screened; ${measuring} measure at the cut; ${faults.length} publish a figure without naming the instrument.`);
   if (faults.length === 0) {
     console.log('  Every emitter that measures at 3.0 carries its instrument — source, digest, column and name filter.');
-    console.log('  Cross-store check available: GRAN reads 3.94 here (SUBTLEX-UK) and 3.44 there (wordfreq 3.1.1).');
+    console.log('  Cross-store check available: run pnpm disagreement:set for the current reading on both instruments.');
+    console.log('  No figure is printed here — a number typed into a check is a claim that rots (R180).');
     return;
   }
   console.error(`\n  REFUSED — ${faults.length} emitter(s) measure at the cut and name no instrument:`);
   for (const f of faults) console.error(`    ${f}`);
-  console.error('\n  Two honest instruments disagree: GRAN is 3.94 on SUBTLEX-UK and 3.44 on wordfreq 3.1.1.');
+  console.error('\n  Two honest instruments disagree — see pnpm disagreement:set for the measured gap.');
   console.error('  A ruling that names only its number cannot be checked across stores (Annie, 225th).');
   console.error('  Publish it: include cutDeclaration() — or the lexicon\'s own .provenance, which embeds it.');
   process.exitCode = 1;

@@ -27375,3 +27375,54 @@ says a letter does and it is not the one recorded. Measured apart, the seed bank
 unperformable and 2 mis-keyed** — `seed-vr08-04` works on O where the key says C, `seed-vr08-05`
 works on S where the key says B. My own earlier verification printed "2 unperformable", which was
 wrong about both rows in opposite directions: it condemned sound stems and hid two wrong answers.
+
+## R995 — The disagreement set found a fault in the instrument that ran it, and corrects R994
+
+**HER TEST, RUN.** Both instruments over one word population: 685 words — the district's own
+adjudication surface, every leftover and every insertion candidate across all 38 vr-08 rows.
+wordfreq 3.1.1 is installed locally and returns **GRAN at 3.44, the exact figure she reported**,
+which is how this side knows it is running *her* instrument and not an approximation of it.
+
+**THE ANSWER: 97.4% agreement, 18 crossings of 685, split three ways so it sums** — 11 from the
+CORPORA (both applying the same bare cut and landing opposite), 7 from THIS STORE'S NAME RULE alone,
+0 from both at once. **The split is the answer to her question.** The 7 are where the district has
+two RULES and a ruling can reconcile them; the 11 are where two corpora simply disagree and no
+ruling can. And her other half holds: **667 words are now corroborated by two independent corpora**,
+which is a stronger footing than any figure had before tonight.
+
+**AND THE TEST FOUND A DEFECT IN THE INSTRUMENT RUNNING IT.** `EAST` reads **5.19** — among the
+commonest words in the corpus — and this store's name filter was excluding it, because SUBTLEX's
+`DomPoS` is `name` for any word whose dominant use sits inside a name. So did `MINISTER`, `SOUTH`,
+`NORTH`, `GOD` and `MARK`. **Nothing on this side could see it**: the filter's over-exclusion was
+declared in R992 as a known direction of error, and a declared limit is not a detection.
+
+**R994 IS WRONG ABOUT ONE OF ITS TWO ROWS AND THIS IS THE CORRECTION.** It reported
+`seed-vr08-05` (BEAST/RING) as *performable but mis-keyed*. It is neither: the recorded key **B is
+correct** — BEAST→EAST (5.19), RING→BRING (5.40). The row only looked mis-keyed because EAST had
+been filtered out from under it. **A row was condemned by an instrument fault and the register
+carried it as a content fault for a day.** `seed-vr08-04` stands: COAT/HARD works on O, and its key
+C needs OAT (2.70) and CHARD (2.95), both below the cut on *both* instruments. **One mis-keyed row,
+not two.**
+
+**THE REPAIR IS A MEASUREMENT, NOT A BETTER GUESS.** `DomPoS` is too coarse and capitalisation
+cannot separate either — EAST is 60% capitalised, BAIN 74%, MARK 69%, so no threshold keeps the
+words and drops the surnames. `AllPoSFreq` gives the frequency of each part of speech separately,
+so the lexicon now computes each word's Zipf **from its non-name frequency alone**: EAST 4.80 kept,
+MINISTER 4.79 kept, BAIN 2.58 excluded — which is precisely Annie's 225th ruling, *"BAIN is a
+surname and not a word a child holds, so it fails at 3.0"*, now reached by measurement rather than
+by a tag. JOHN (2.09) and LONDON (1.84) fall out too, correctly. The lexicon grew from 97,925 words
+to 118,086.
+
+**THE TRANSFERABLE HALF: A SECOND INSTRUMENT IS A FAULT DETECTOR, NOT ONLY A CORROBORATOR.** Every
+guard in this register watches an instrument against the thing it measures. **This is the first one
+that watched an instrument against ANOTHER INSTRUMENT**, and it found what a declared caveat had
+failed to find for three days — because a caveat tells you an error's direction and a second
+instrument tells you it has occurred. Where they agree the agreement is stronger than either alone;
+where they disagree, **the disagreement is a place to look.**
+
+**AND A DELIVERY NOTE.** `three-doubtful-seats-with-their-rows` failed to read at the desk twice and
+its directory listing errored once. The file was intact on this side — name equal to bytes, parsing,
+both copies identical — so the fault was in transfer or enumeration, not authoring. It is re-crossed
+under a new digest and nothing from the old one is credited. **The lane now holds 941 files and
+40 MB**, which is a plausible cause of a listing error and is not something this store can fix by
+writing more carefully.
