@@ -27664,3 +27664,61 @@ yesterday. **Both stores agree it must never be refused, and that is asserted; w
 whether a bare SHELL on a card needs a reader.** It is recorded as OPEN with both readings and what
 would settle it — one reviewer reading one row — rather than resolved by whichever list was read
 last. **An open entry is not a gap in the fixture; it is the fixture doing its job.**
+
+## R1001 — The cross cannot find a category both lists lack, and that is the ceiling
+
+**BOTH FIXTURES RUN BOTH WAYS.** Theirs verifies at `7e0a5956e807184d` — 36 cases, each with its
+reason, and two negative controls it can fail. This store's is now in the same shape:
+`appropriateness-fixture.ts`, **42 cases with reasons, runnable against two sets and nothing else** —
+no import of either screen, no shared code path, no vocabulary adopted.
+
+- **Their 35 word-cases against this store's sets: 31 pass.** All four failures are NEEDS_A_SENSE on
+  their slang doubles — `shoot`, `arms`, `pot`, `high` — which this store's list does not contain at
+  all. The word cross reported that as 27 disagreements; the fixture reports the same gap as four
+  failures with reasons attached, and the second is the more useful artefact.
+- **This store's 42 against their sets: 35 pass.** Three MUST_REFUSE (`brothel`, `heroin`, `whisky`)
+  and four NEEDS_A_SENSE (`bloody`, `drunk`, `naked`, `mistress`) — the four they departed outright,
+  which passes them silently.
+- **LOVER passes their fixture here.** Their case requires only that a list not SILENTLY pass it;
+  this store flags it, so the search drops it and the gate holds it. A bare pass fails that case, and
+  so a week ago would this store's outright refusal have satisfied it — **the case is written to
+  admit both honest answers and forbid the absence of one**, which is what a good fixture case does.
+- Three negative controls fail as required: 28, 31 and 36 of 42. The third is new — a list complete
+  on refusals that flags nothing, so LOVER passes silently. **A list can be complete on the refuse
+  half and still fail the thing the third outcome exists for.**
+
+**AND THE CEILING, WHICH IS THE ENTRY.** The cross finds a word one list has and the other lacks —
+tonight it found a whole category that way. **It cannot find a category BOTH lack.** Two blind spots
+that coincide produce perfect agreement, and this method reads perfect agreement as corroboration.
+**Its silence is uninformative in exactly one direction, and that is the direction that matters
+most.**
+
+**Independence of authorship is not independence of perspective.** Both lists were written by the
+same kind of author — correctness-minded, adult, British-English, seeded by whatever arose in each
+store's own corpus this fortnight — and only the second kind of independence closes a shared hole.
+Read off the two lists as they stand, the union is 54 words and **seven harm categories have zero
+members in either**: discriminatory language, self-harm, bullying, grooming, gambling, extremism,
+body image. This store DECLARED the first of those as a known limit, which is honest and is not a
+mitigation — **a declared hole is still a hole.**
+
+**The structural one is larger than all seven: most harm is not word-shaped.** A maths problem about
+a child who cannot afford lunch; a comprehension about a parent who leaves. Every string is ordinary
+and every word list passes them. **Crossing two word lists cannot discover that word-level screening
+is the wrong shape**, because a cross can only compare vocabularies. That is why the union is a
+floor: the floor is all a word list can be.
+
+**THE ACCEPTANCE TEST FOR A THIRD SOURCE, AND IT IS FALSIFIABLE ON THE FIRST RUN:** it must produce
+a category NEITHER store has. If it only reorders what both hold, **it is not a third source, it is
+a mirror — and it will feel like corroboration while adding nothing.** Candidates are named in the
+crossed proposal and **none has been retrieved**: Ofcom's offensive-language research for the word
+half, and BBFC classification guidelines as the most interesting, because it is CATEGORY-shaped
+rather than vocabulary-shaped and would say what the word lists are missing rather than extending
+them. Each carries the SUBTLEX discipline — existence, scope, currency and licence verified before
+it is quoted, and a candidate that cannot be retrieved is struck rather than cited.
+
+**The cheapest first step is not a document.** One reader unlike either author — a safeguarding lead,
+whose expertise IS harm where both stores read harm as a special case of correctness — the union
+fixture, and one question: *name a category neither of these lists has.* If they name one, the third
+source is justified and its first entry is written. If they name none, that is evidence the floor is
+higher than this store believes, and it cost one reading. **What it must not be is a third word
+list**, which reproduces the shared-perspective problem with more words in it.
