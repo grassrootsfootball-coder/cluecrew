@@ -17,6 +17,7 @@
  * Declared quotations and tested tokens are honoured exactly as elsewhere.
  */
 import { banListApplies } from './ban-list-scope';
+import { appropriatenessHits, APPROPRIATENESS_VERSION } from './appropriateness';
 import { dispositionFor, dispositionKey } from './field-dispositions';
 import { checkChildFacingText, spansPresentIn, type ContentFailure } from './content-gates';
 import { refusalMessage, refusedInOptions } from './refused-misconceptions';
@@ -184,6 +185,41 @@ export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
       detail: refusalMessage(refusal),
     });
   }
+  /**
+   * THE SUBJECT-MATTER SCREEN, AT THE ONE GATE EVERY DOOR CALLS (Annie's 227th; David, 2026-09-05).
+   *
+   * **IT INHERITS THE QUOTATION BOUNDARY RATHER THAN RE-DERIVING IT.** A quotation is bound by
+   * fidelity to its source where the ban list binds OUR OWN WORDS, and that ground is already held
+   * by `QUOTATION_FIELDS` and `banListApplies`. Screening a passage would be the gate that edits
+   * Grahame or Sewell — so this asks the SAME two questions the ban list asks before it looks at a
+   * string, and a second list of exempt paths is exactly the drift R57 and R429 name.
+   *
+   * It screens the stem, the option values and the explanation, because a child meets all three.
+   */
+  const screenAppropriateness = (label: string, path: string, text: string) => {
+    if (!text) return;
+    if (QUOTATION_FIELDS.has(path.split('.').pop() ?? '')) return;
+    if (!banListApplies(path)) return;
+    for (const hit of appropriatenessHits(text)) {
+      failures.push({
+        where: label,
+        rule: 'banned-vocabulary',
+        detail: `subject matter unsuitable for a child: "${hit.matched}" (${APPROPRIATENESS_VERSION}). `
+          + 'Generated child-facing content only; passages and quotations are exempt by the same rule the ban list uses.',
+      });
+    }
+  };
+  for (const [path, text] of textsFrom(item.stem, '')) {
+    if (childFacing('stem', path)) screenAppropriateness(`item:${item.id} stem.${path}`, `stem.${path}`, text);
+  }
+  for (const [i, o] of (item.options ?? []).entries()) {
+    const v = (o.content as { value?: unknown })?.value;
+    for (const one of (Array.isArray(v) ? v : [v])) screenAppropriateness(`item:${item.id} options[${i}]`, 'options.value', String(one ?? ''));
+  }
+  for (const [path, text] of textsFrom((item.explanation ?? {}) as Record<string, unknown>, '')) {
+    screenAppropriateness(`item:${item.id} explanation.${path}`, `explanation.${path}`, text);
+  }
+
   const stem = (item.stem ?? {}) as Record<string, unknown>;
   const stemRole = roleForItemStem(item.mechanic);
   /**

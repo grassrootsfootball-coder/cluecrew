@@ -61,6 +61,7 @@ export * from './case-face';
 export * from './field-dispositions';
 export * from './review-surface';
 export * from './signature-subject';
+export * from './appropriateness';
 export * from './item-identity';
 export * from './tag-write-gate';
 // key-gate's Lexicon is the same (word: string) => boolean as tag-write-gate's; the explicit list

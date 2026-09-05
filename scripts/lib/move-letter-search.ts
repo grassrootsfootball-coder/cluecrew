@@ -17,6 +17,7 @@
  */
 import { readFileSync } from 'node:fs';
 import { join as pjoin } from 'node:path';
+import { isAppropriateForAChild } from '../../packages/core/src/appropriateness';
 import { loadChildLexicon, type ChildLexicon } from './child-lexicon';
 
 const GENERATOR = pjoin(__dirname, '..', '..', 'packages', 'db', 'prisma', 'generate-content.ts');
@@ -56,7 +57,14 @@ export function searchMoveLetter(lex: ChildLexicon, opts: { exclude?: Set<string
    * in this district — the child-directed corpus decides and the whole corpus is background. So a
    * search for bare-word items tests `knowsBare`, not `knows`. SOW is why: 3.60 wide, 2.94 bare.
    */
-  const known = opts.decideBare ? (w: string) => lex.knowsBare(w) : (w: string) => lex.knows(w);
+  /**
+   * THE CONSTRAINT SET GAINS AN APPROPRIATENESS PREDICATE ALONGSIDE WORDHOOD (Annie's 227th).
+   * *"A search that proposes an unsuitable candidate and a gate that catches it is a system that
+   * works and wastes; a search that cannot propose one is a system that cannot fail in this
+   * direction."* It is the SAME predicate the write gate calls — one declaration, two sites, so
+   * the two cannot drift (R42, R57).
+   */
+  const known = (w: string) => (opts.decideBare ? lex.knowsBare(w) : lex.knows(w)) && isAppropriateForAChild(w);
   const pool = generatorMaterial(lex).filter(known);
   const exclude = opts.exclude ?? new Set<string>();
   const out: MoveLetterCandidate[] = [];

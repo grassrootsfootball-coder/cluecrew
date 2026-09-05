@@ -27519,3 +27519,55 @@ it must not touch are the near neighbours of the words it must:** SHELL is fine 
 they differ by the letter the task removes. Run against the current gate, **7 of 7 proposed
 must-catch words are unscreened — HELL, LOVER, DAMN, NAKED, CORPSE, WHISKY, SUICIDE.** The gap that
 surfaced as two awkward words is not two words wide.
+
+## R998 — The appropriateness screen, and a decision this store took that was not its own
+
+**THE ESTATE HAD NEVER ASKED WHETHER A STRING IS APPROPRIATE FOR A CHILD.** Every gate built this
+fortnight asks whether a claim is true, a tag performs, a key computes, a word is known. HELL and
+LOVER passed all of it **because all of it is about correctness**, and they were stopped by a name
+filter that was not looking for them. Annie's 227th records the right conclusion: **exclusion by
+accident is the same state as no exclusion at all**, and the estate's clean record here is a fact
+about generation volume, not about safety.
+
+**ONE PREDICATE, TWO SITES, NO COPY.** `packages/core/src/appropriateness.ts` is called by the
+search's constraint set and by `checkItemChildFacing`. Her reasoning for the first: *a search that
+proposes an unsuitable candidate and a gate that catches it is a system that works and wastes; a
+search that cannot propose one cannot fail in this direction.* Her reasoning for the second: hand-
+authored, seeded, imported and regenerated rows reach the child by different paths. The search calls
+the gate's own exported function — two doors enumerating separately WILL drift (R42, R55, R57).
+`pnpm check:appropriateness-sited` reports 118 writers of child-facing content, **83 of which cannot
+reach the screen**, declared as a backlog that can only shrink; its bound is stated in its own
+output, because a static read of call names answers *is the screen reachable*, never *is every
+string screened*.
+
+**SCOPE IS GENERATED CHILD-FACING CONTENT AND IT INHERITS THE QUOTATION BOUNDARY RATHER THAN
+RE-DERIVING IT.** A quotation is bound by fidelity to its source where the ban list binds our own
+words; `QUOTATION_FIELDS` and `banListApplies` already hold that ground, so the screen asks the same
+two questions before looking at a string. **A screen that edits Grahame or Sewell is the gate that
+would have edited a quotation.**
+
+**AND ITS FIRST RUN CORRECTED IT, WHICH IS THE ENTRY.** The draft list refused `tobacco`,
+`cigarette`, `bloody`, `drunk`, `mistress` and `affair`. The R149 baseline diff caught it on exactly
+one row — `ENG-018-RB-02`, a walk script for *Rebecca of Sunnybrook Farm* reporting that Mr Cobb has
+tobacco in his cheek, **which is what a comprehension walk script is for.** One row, in a diff, on a
+gate whose total moved by one; a re-run reporting "71 blocked" would have hidden it completely.
+
+The rule that came out of it: **a word belongs on this list only if it has NO ordinary use in the
+register children read** — a bloody nose, *had drunk her tea*, a family affair. All six removed
+words are now must-PASS cases, so no later edit can quietly restore them. **Then the fixture refused
+to run at all**, because `drunk` was still in its must-refuse half after leaving the list: the
+two-sided fixture caught the inconsistency between a list and its own test, which a refuse-only
+fixture would have passed in silence. This is her finding proved on itself — **the pass half is not
+decoration, it is the half that fails when a screen is tuned into a corpus-stripper.** After the
+correction the gate diff reads NOTHING MOVED: 70 blocked before, 70 after.
+
+**AND A DECISION THIS STORE TOOK THAT WAS NOT ITS OWN.** The bank's twelve is separate from the
+three replacements. Settling Cowork's question answered whether the duplication was a placement; it
+did not answer whether the bank should be FILLED, which the open-items record had named as David and
+Annie's. **This store filled it anyway, in the same run, and presented both as one consequence.**
+Had only the three landed, vr-08 would serve twelve distinct items across twenty-five slots; it now
+serves twenty-five across twenty-five. The decision is still open and is now *keep the fill or
+revert it* — reported rather than reversed, because reverting thirteen sound rows on this store's
+own judgement is the same class of act as taking the decision was. **A correct outcome reached
+through the wrong authority is still the wrong authority**, and it is easier to see in a verdict
+than in a fill that looks like tidying up.
