@@ -18,7 +18,25 @@
 import { readFileSync } from 'node:fs';
 import { join as pjoin } from 'node:path';
 import { prisma } from '../packages/db/src/index';
+import { readFileSync as readSync } from 'node:fs';
 import { loadChildLexicon, performingLetters } from './lib/move-letter-search';
+
+/**
+ * **THE STANDARD A ROW WAS AUTHORED AGAINST, USED AS HISTORY AND NEVER AS A VERDICT.** web2 is the
+ * wrong instrument for whether a child knows a word (R988) and is the right one for a different
+ * question: what counted as a word when this row was made. A key that performed then and fails now
+ * was not MIS-KEYED — the cut moved under it, and calling that an authoring error attributes a
+ * mistake to whoever keyed it. Nothing here reads web2 as a knownness test.
+ */
+const AUTHORING_ERA_LEXICON = new Set(
+  readSync('/usr/share/dict/web2', 'utf8').split('\n').map((w) => w.trim().toUpperCase()).filter(Boolean),
+);
+const performedUnderTheAuthoringEra = (w1: string, w2: string, letter: string) => {
+  const left = w1.replace(letter, '');
+  if (!AUTHORING_ERA_LEXICON.has(left)) return false;
+  for (let i = 0; i <= w2.length; i += 1) if (AUTHORING_ERA_LEXICON.has(w2.slice(0, i) + letter + w2.slice(i))) return true;
+  return false;
+};
 import { requirePopulation } from './lib/population';
 
 const REPO = pjoin(__dirname, '..');
@@ -48,6 +66,15 @@ async function main() {
     figure: `${distinct.size} distinct word pair(s) across ${cut.length} cut row(s)${distinct.size < cut.length ? `; ${cut.length - distinct.size} row(s) repeat a pair already on the card set` : ''}` });
 
   // 2. MIS-KEYED SEED ROWS — a letter performs, and it is not the recorded key.
+  /**
+   * THREE CLASSES, NOT TWO, AND ONLY ONE OF THEM BLAMES ANYBODY.
+   *   UNPERFORMABLE      — no letter performs at the current cut.
+   *   KEY FAILS AT THE CUT — the recorded key performed under the standard the row was authored
+   *                        against and does not at 3.0. Nobody made a mistake; the cut moved.
+   *   MIS-KEYED          — the recorded key performed under NEITHER standard. An authoring error.
+   * The authoring store declined a "mis-keying" correction it had never earned, and was right.
+   */
+  const keyFailsAtTheCut: string[] = [];
   const misKeyed: string[] = [];
   const unperformable: string[] = [];
   for (const r of rows.filter((x) => x.id.startsWith('seed-vr08'))) {
@@ -55,11 +82,14 @@ async function main() {
     const works = performingLetters(w1, w2, lex);
     const key = val(r.options.find((o) => o.isCorrect)!);
     if (works.length === 0) { unperformable.push(`${r.id} (${w1}/${w2})`); continue; }
-    if (!works.includes(key)) misKeyed.push(`${r.id} (${w1}/${w2}: works on ${works.join('/')}, key says ${key})`);
+    if (works.includes(key)) continue;
+    const line = `${r.id} (${w1}/${w2}: key ${key}; a letter that performs at 3.0 is ${works.join('/')})`;
+    if (performedUnderTheAuthoringEra(w1, w2, key)) keyFailsAtTheCut.push(line);
+    else misKeyed.push(line);
   }
-  results.push({ id: 'seed-vr08-04-is-performable-but-mis-keyed',
-    state: misKeyed.length > 0 ? 'OPEN' : 'CLOSED',
-    figure: `${misKeyed.length} seed row(s) performable but mis-keyed${misKeyed.length ? `: ${misKeyed.join('; ')}` : ''}. Separately, ${unperformable.length} seed row(s) unperformable at the cut — a DIFFERENT fault and not counted here.` });
+  results.push({ id: 'seed-vr08-04-key-fails-at-the-ruled-cut',
+    state: keyFailsAtTheCut.length > 0 ? 'OPEN' : 'CLOSED',
+    figure: `${keyFailsAtTheCut.length} seed row(s) whose key PERFORMED under the standard they were authored against and fails at 3.0${keyFailsAtTheCut.length ? `: ${keyFailsAtTheCut.join('; ')}` : ''}. Separately: ${misKeyed.length} genuinely MIS-KEYED (performed under neither standard), ${unperformable.length} unperformable. Three different faults and only the last of those three blames an author.` });
 
   const known = new Set(declared.items.map((i) => i.id));
   const undeclared = results.filter((r) => r.state === 'OPEN' && !known.has(r.id));

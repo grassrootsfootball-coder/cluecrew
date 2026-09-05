@@ -27470,3 +27470,52 @@ current one moves 841 files and leaves 104, which addresses a LISTING failure; m
 over 1 MB recovers 20 MB and five listing entries, which does not. **It reports and does not act —
 moving files out of a channel the other store reads is an outward act, and a store that prunes
 shared state on its own judgement is the fault this repo keeps finding.**
+
+## R997 — A fault name that assigns blame is a claim, and this one was wrong
+
+**THE AUTHORING STORE DECLINED A MIS-KEYING CORRECTION IT HAD NEVER EARNED, AND WAS RIGHT.**
+`seed-vr08-04` (COAT/HARD) carries key C, which needs OAT and CHARD. **Both are in web2 — the
+standard the row was authored against** — and both fall below the ruled 3.0 cut (OAT 2.70, CHARD
+2.95). The key performed when it was written. **The cut moved under it afterwards, and nobody made
+a mistake.**
+
+"Mis-keyed" attributes an error to whoever keyed it. It is a claim about a person, filed as a
+measurement — the same shape as R94, where a machine verdict wore a person's name, arriving this
+time through a fault LABEL rather than an authority field. So the check now separates three classes
+and **only the third blames anyone**:
+
+- **UNPERFORMABLE** — no letter performs at the current cut.
+- **KEY FAILS AT THE CUT** — the key performed under the standard the row was authored against and
+  does not now. A standard-change casualty.
+- **MIS-KEYED** — the key performed under NEITHER standard. An authoring error.
+
+Measured across the seed bank: **1 key-fails-at-the-cut, 0 genuinely mis-keyed, 0 unperformable.**
+The store's record is clean and two register entries had said otherwise. **web2 is the right
+instrument for this and only this** — not what a child knows (R988), but what counted as a word when
+the row was made. A wrong instrument for one question is the correct instrument for another.
+
+**THE LANE IS ARCHIVED, ON DAVID'S CALL.** 841 files and 37.0 MB moved to
+`~/Downloads/11+/archive/from-cluecrew/2026-08/`; **104 files and 2.4 MB remain**. Every digest was
+taken before the move and re-verified after — a byte changing in transit is indistinguishable from a
+file that was always different once the original is gone — and a manifest names every file, its
+digest and its origin, so the move is reversible by anyone who reads it. Verified independently
+afterwards: 841 present, 25 sampled and re-hashed clean, nothing left behind. The archive sits
+OUTSIDE the lane, because inside it a recursive listing is the same length and the fault would
+survive the fix. **The lane now reports zero orphans and zero files over 1 MB** — the 125 unattested
+`.json` and all five heavy files were August, so the count fix took the weight problem with it.
+
+**AND THE SUBJECT-MATTER GAP IS WIDER THAN THE CASE THAT FOUND IT.** The proposal is crossed —
+source, scope and a fixture of in and out, per Annie's own shape for the wordlist she deferred — and
+building it is nobody's until it is ruled. Two findings from writing it:
+
+**The screen must read DERIVED words, not authored fields.** Nobody typed HELL or LOVER; they are
+what the item asks the child to produce. A screen reading stems and options would have missed both
+however good its list was, and every generated district has its own derivation surface.
+
+**And the hard half of the fixture is the IN list, not the OUT list.** PAIN, SHOT, DEAD, BLOOD, WAR
+and GUN are ordinary words an 11+ paper uses without comment — a screen catching them would have
+blocked PAINT/PLAN and SHOUT/COLD, two of the thirteen pairs that just filled the bank. **The words
+it must not touch are the near neighbours of the words it must:** SHELL is fine and HELL is not, and
+they differ by the letter the task removes. Run against the current gate, **7 of 7 proposed
+must-catch words are unscreened — HELL, LOVER, DAMN, NAKED, CORPSE, WHISKY, SUICIDE.** The gap that
+surfaced as two awkward words is not two words wide.

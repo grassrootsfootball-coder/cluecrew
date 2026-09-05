@@ -221,7 +221,8 @@
     "check:cut-carries-instrument": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-cut-carries-instrument.ts",
     "check:vr08-open-items": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-vr08-open-items.ts",
     "disagreement:set": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/run-the-disagreement-set.ts",
-    "check:lane-health": "tsx scripts/check-lane-health.ts"
+    "check:lane-health": "tsx scripts/check-lane-health.ts",
+    "archive:lane": "tsx scripts/archive-the-lane.ts"
   },
   "devDependencies": {
     "@eslint/js": "^9.20.0",

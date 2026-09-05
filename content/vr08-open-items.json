@@ -4,13 +4,14 @@
  "declaredOn": "2026-09-05",
  "items": [
   {
-   "id": "seed-vr08-04-is-performable-but-mis-keyed",
-   "what": "seed-vr08-04 (COAT/HARD) has a letter that performs the task at the 3.0 cut, and it is not the letter recorded as the key. It works on O (COAT->CAT 4.83, HARD->HOARD 3.31); the key says C, which needs OAT (2.70) and CHARD (2.95) — both below the cut on BOTH instruments.",
+   "id": "seed-vr08-04-key-fails-at-the-ruled-cut",
+   "what": "seed-vr08-04 (COAT/HARD) carries key C, which needs OAT and CHARD. Both are in web2 — the standard the row was authored against — and both fall below the ruled 3.0 cut (OAT 2.70, CHARD 2.95). At 3.0 the letter that performs is O (COAT->CAT 4.79, HARD->HOARD 3.27).",
    "whyItWasNotRepaired": "both rows are NEVER_SHIPPABLE and reach no child, and correcting a key is a content decision on rows the reviewer has already ruled out of service. Repairing them would also change rows that several crossed artefacts describe.",
-   "whoseDecision": "Annie — whether a NEVER_SHIPPABLE seed row is corrected or left as the record of what was made",
+   "whoseDecision": "Annie — whether a NEVER_SHIPPABLE seed row whose key was overtaken by a cut is re-keyed to O, or left as the record of what the standard used to be",
    "andWHYITISNAMEDSEPARATELY": "UNPERFORMABLE and MIS-KEYED are different faults. The earlier count reported these two inside a single 'unperformable' figure, which is wrong about both: the stem is sound and the answer is wrong.",
    "measuredBy": "for each seed row, the letters that perform the task at the cut, against the recorded key",
-   "CORRECTED_2026_09_05": "This item originally named seed-vr08-05 (BEAST/RING) as well. THAT WAS AN ARTEFACT OF THIS STORE'S OWN NAME FILTER, not a fault in the row: EAST reads 5.19 and was excluded as a proper noun, which made the recorded key B fail. The key B is correct — BEAST->EAST, RING->BRING, both far above the cut. The filter was repaired to compute Zipf from non-name frequency and the row is sound. Found by Annie's disagreement set, not by anything on this side alone."
+   "CORRECTED_2026_09_05": "This item originally named seed-vr08-05 (BEAST/RING) as well. THAT WAS AN ARTEFACT OF THIS STORE'S OWN NAME FILTER, not a fault in the row: EAST reads 5.19 and was excluded as a proper noun, which made the recorded key B fail. The key B is correct — BEAST->EAST, RING->BRING, both far above the cut. The filter was repaired to compute Zipf from non-name frequency and the row is sound. Found by Annie's disagreement set, not by anything on this side alone.",
+   "CORRECTED_AGAIN_2026_09_05": "Previously filed as MIS-KEYED. THAT WAS WRONG AND THE AUTHORING STORE WAS RIGHT TO DECLINE IT: the key performed under the standard in force when the row was made, and the cut moved under it afterwards. 'Mis-keyed' attributes an error to whoever keyed it; nobody made one. The check now separates three classes and only the third blames an author: UNPERFORMABLE, KEY-FAILS-AT-THE-CUT, and MIS-KEYED (performed under neither standard)."
   }
  ],
  "closed": [
