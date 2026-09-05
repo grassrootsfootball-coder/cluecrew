@@ -75,13 +75,14 @@ const REFUSED = [
  * somewhere" — which is what a list grows into if nobody states the test. Applied to the two words
  * her ruling names:
  *   · DRUG — bare, the narcotic sense arrives first. **In the class.** Added here.
- *   · TRIP — bare, a journey or a stumble arrives first and the other sense is well behind.
- *     **NOT in the class by her own test**, and it is therefore not flagged here, so this store's
- *     gate has no instance of it to route. The authoring store flags it and holds that instance.
- * That split is this store's reading of her test and is the thing to overrule if it is wrong.
+ *   · TRIP — this store read it OUT of the class: bare, a journey or a stumble arrives first.
+ *     **HER 229th OVERRULES THAT AND THE OVERRULE IS IN HER OWN TEXT**, which calls DRUG and TRIP
+ *     *"the class's true boundary"* — a boundary case is inside the class, not outside it. Added.
+ *     The reading was offered to be overruled and it was, by reading the return rather than by
+ *     anyone conceding.
  */
 const FLAG_AMBIGUOUS_SENSE = [
-  'bloody', 'drunk', 'mistress', 'affair', 'naked', 'spirits', 'liquor', 'bitch', 'drug',
+  'bloody', 'drunk', 'mistress', 'affair', 'naked', 'spirits', 'liquor', 'bitch', 'drug', 'trip',
   /**
    * **FOUR CASES THIS STORE'S LIST FAILED IN THE AUTHORING STORE'S FIXTURE.** Their fixture asserts
    * these must not SILENTLY PASS and this store's list passed all four. Flagging satisfies the case

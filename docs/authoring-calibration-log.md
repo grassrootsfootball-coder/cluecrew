@@ -27913,3 +27913,52 @@ The id that caused this now has its own: `subject-matter`.
 **And the check's first run reported five, three of them its own fixture strings.** A screen that
 counts itself reports a fault it created by existing — excluded, and named here because it is the
 third instrument this fortnight to need telling that it is not part of its own population.
+
+## R1007 — A report over faults cannot show an absent fault; a report over rules can
+
+**HER SILENCE RULE, BUILT.** *A gate reports on every run including zero, and a run producing no
+line is itself the reportable event.* The figure that fell this arc was never printed at all: the
+subject-matter screen sat at zero for three turns while inert, and **there was nothing to distrust
+because nothing was said.** Every other silence rule here is about an empty POPULATION — R60's zero,
+R61's absent population, R87's silent no-op. **This one is about an empty OUTPUT: the population was
+there, the instrument ran, and it had nothing to say because it was looking at nothing.**
+
+So `check:gate-silence` reports over RULES rather than faults. Every rule the gate can emit gets a
+line every run, zeros included — **and a zero alone still cannot tell you which silence it is.** A
+rule at zero is either enforcing and finding nothing, or inert and finding nothing, and the corpus
+cannot separate them. **So every rule is fed a canary it MUST catch. A rule whose canary does not
+fire is REFUSED and no declaration excuses it** — R60's second question made mechanical instead of
+remembered.
+
+Running it found four things, and two were faults in the check:
+
+- **`notation` and `us-spelling` are enforcing and finding nothing** — no MATHS item exists (R61's
+  own case, now *proved* by a firing canary rather than assumed), and the corpus is British.
+  Declared, with the canary as the evidence.
+- **`notice-standard` and `placeholder-tag` were reported SILENT AND INERT and are neither.** They
+  belong to *other gates* — `checkNoticeStandard` and the misconception field checks — that share
+  one `ContentFailure` type. **A shared TYPE makes the rules of several gates look like the rules of
+  one**: R1006 one level up, found the day after R1006, by the canary it had just been given.
+- **Two canaries were wrong and the rules were right.** `four-syllable-words` and
+  `unclassified-path` fire on the corpus while their first canaries did not. **A canary failing
+  against a rule that fires 140 times proves the canary wrong**, and reading it the other way would
+  have condemned two working rules — the instrument-versus-content confusion (R149) arriving inside
+  the instrument built to end it.
+
+**HER 229th VERIFIED AND LANDED.** It was staged a turn early and not forwarded; the clearance
+record was written from the relay, said so in its own field, and that field has now been REPLACED by
+the verification rather than amended around — which is what it said would happen.
+
+**Her overrule taken, from her text rather than by concession.** This store read TRIP out of the
+flag class; her return calls DRUG and TRIP *"the class's true boundary"*, and a boundary case is
+inside the class. TRIP added. Her test stands as the class's definition: *read the row as the adult
+over her shoulder and ask whether the unsuitable sense would occur to that adult BEFORE the ordinary
+one — not whether the word can carry it, since almost every word can.*
+
+**AND ONE PREMISE OF HERS DIFFERS FROM THE ROWS, REPORTED RATHER THAN SMOOTHED.** She writes that on
+`-06`, `-09` and `-22` *"the token is the answer rather than a distractor and the child writes it
+herself."* Measured: the flagged token is the KEY on **one of the three**. On `-06` the key is DRUM
+and DRUG is a distractor; on `-22` the key is TRAP and TRIP is a distractor. Her standing exception
+reaches the key position only, so as worded it routes `-09` every time and leaves the other two
+cleared. **The ruling stands either way — it is the premise being checked**, and this store has not
+widened the rule to fit the examples. Five positions now route, every one a key.
