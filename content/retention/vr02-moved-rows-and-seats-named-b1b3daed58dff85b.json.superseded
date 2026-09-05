@@ -1,0 +1,1966 @@
+{
+ "kind": "VR-02-THE-MOVED-ROWS-AS-CONTENT-AND-THE-SEATS-NAMED",
+ "TO": "the authoring store; Annie and David by relay",
+ "date": "2026-09-05",
+ "THE_BOUND_POPULATION": {
+  "file": "vr-arc-census-and-population-bb6be0d3f2fed905.json",
+  "sha256": "bb6be0d3f2fed905399329e5c18d7a25a707d6d909150eb2ee45e1227c2e8fab",
+  "verifiedBeforeUse": true,
+  "andWHEREITISNOW": "archived out of the lane on 2026-09-05 with 840 other August files; the archive is at ~/Downloads/11+/archive/from-cluecrew/2026-08/ and every digest was re-verified on the move."
+ },
+ "ONE_THE_SEVENTEEN_AS_CONTENT": {
+  "whyCONTENTANDNOTDIGESTS": "your ten refusals are bound to superseded bytes. A digest says a row CHANGED; it does not say what the row now READS, so re-binding would tell you your work describes something else without telling you what to author instead. That is why vr-19's twenty-five were re-authored rather than re-bound.",
+  "count": 17,
+  "derivedFrom": {
+   "parent": "every vr-02 row in the crossed population bb6be0d3",
+   "parentSize": 25,
+   "rule": "the row's content digest differs from the one bb6be0d3 recorded, ignoring serialisation",
+   "kept": 17,
+   "excluded": 8,
+   "andWHATAREADERCANNOTSEEFROMTHEROWS": "the moved rows is a SUBSET of every vr-02 row in the crossed population bb6be0d3, not a population. 8 of 25 were excluded by: the row's content digest differs from the one bb6be0d3 recorded, ignoring serialisation. A zero or a small count from this list is a fact about the narrowing as much as about the world, and nothing in the rows themselves says so."
+  },
+  "THE_DIGEST_SUBJECT": {
+   "subjectKeys": [
+    "stem",
+    "options[].value",
+    "options[].isKey",
+    "solution"
+   ],
+   "spec": "R729 over {stem, options:[{value,isKey}], solution} — the spec batch one's rowSha256 already uses, so these numbers compare directly with the one every execution carries",
+   "andWHYTHEKEYSANDNOTONLYTHESPEC": "the keys are the subject; the spec says how they are serialised. A consumer that reads the keys projects exactly what was hashed. A consumer that reads only the prose rebuilds the projection from a sentence, and a field on the row that the sentence does not name will be included by anyone doing the obvious thing (R985).",
+   "everyOtherKeyOnTheRowIsEXCLUDED": "rows in this artefact carry more than the subject names — enrichment such as tag, tagIsActiveInTheLibrary and execution. They are NOT part of any digest here."
+  },
+  "andWHATEACHROWCARRIES": "the stem as the child meets it, the FULL three-part set — the key, its siblings, and their tags with the wording a child would receive (R573) — the current rowSha256, the digest it had in bb6be0d3, and what the row used to read.",
+  "ROWS": [
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-01",
+    "status": "DRAFT",
+    "THE_ROW_AS_THE_CHILD_MEETS_IT": {
+     "prompt": "Three of these words go together. Which two are the odd ones out?",
+     "words": [
+      "apple",
+      "van",
+      "pear",
+      "bus",
+      "plum"
+     ]
+    },
+    "THE_THREE_PART_SET": {
+     "theThreeParts": "the KEY, its SIBLINGS, and THEIR TAGS. Named rather than abbreviated to \"the option set\", because that phrase hides the third part and the tags are what identify a likely wrong answer (Annie, R573 — see ENG-001-WIW-10).",
+     "key": {
+      "value": "[\"van\",\"bus\"]",
+      "label": null
+     },
+     "siblings": [
+      {
+       "value": "[\"van\",\"apple\"]",
+       "label": null,
+       "tag": "vr02-partial-group",
+       "tagChildHint": "Name the group first. Both odd ones sit outside it."
+      },
+      {
+       "value": "[\"bus\",\"pear\"]",
+       "label": null,
+       "tag": "vr02-partial-group",
+       "tagChildHint": "Name the group first. Both odd ones sit outside it."
+      },
+      {
+       "value": "[\"pear\",\"plum\"]",
+       "label": null,
+       "tag": "vr02-answered-the-opposite",
+       "tagChildHint": "Those two do belong together. The question asks for the two that do not."
+      }
+     ],
+     "theirTags": [
+      {
+       "tag": "vr02-partial-group",
+       "childHint": "Name the group first. Both odd ones sit outside it.",
+       "onSiblings": 2
+      },
+      {
+       "tag": "vr02-answered-the-opposite",
+       "childHint": "Those two do belong together. The question asks for the two that do not.",
+       "onSiblings": 1
+      }
+     ],
+     "exactlyOneKey": true
+    },
+    "solution": null,
+    "rowSha256": "0580890d6ec7f0699c641787386a1fbfb65133869b49bf4ed0e1aad8c405b39f",
+    "rowSha256WasInThePopulation": "7dd8e5e8562d65f9f6097a9a146774764ca3c7053d87f64c25a0082712e5fd3b",
+    "andWHATTHEROWUSEDTOREAD": {
+     "words": [
+      "apple",
+      "van",
+      "pear",
+      "bus",
+      "plum"
+     ],
+     "options": [
+      {
+       "value": [
+        "van",
+        "bus"
+       ],
+       "isKey": true
+      },
+      {
+       "value": [
+        "van",
+        "apple"
+       ],
+       "isKey": false
+      },
+      {
+       "value": [
+        "pear",
+        "plum"
+       ],
+       "isKey": false
+      },
+      {
+       "value": [
+        "bus",
+        "pear"
+       ],
+       "isKey": false
+      }
+     ]
+    }
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-02",
+    "status": "DRAFT",
+    "THE_ROW_AS_THE_CHILD_MEETS_IT": {
+     "prompt": "Three of these words go together. Which two are the odd ones out?",
+     "words": [
+      "red",
+      "bear",
+      "blue",
+      "wolf",
+      "green"
+     ]
+    },
+    "THE_THREE_PART_SET": {
+     "theThreeParts": "the KEY, its SIBLINGS, and THEIR TAGS. Named rather than abbreviated to \"the option set\", because that phrase hides the third part and the tags are what identify a likely wrong answer (Annie, R573 — see ENG-001-WIW-10).",
+     "key": {
+      "value": "[\"bear\",\"wolf\"]",
+      "label": null
+     },
+     "siblings": [
+      {
+       "value": "[\"bear\",\"red\"]",
+       "label": null,
+       "tag": "vr02-partial-group",
+       "tagChildHint": "Name the group first. Both odd ones sit outside it."
+      },
+      {
+       "value": "[\"wolf\",\"green\"]",
+       "label": null,
+       "tag": "vr02-partial-group",
+       "tagChildHint": "Name the group first. Both odd ones sit outside it."
+      },
+      {
+       "value": "[\"bear\",\"blue\"]",
+       "label": null,
+       "tag": "vr02-surface-link",
+       "tagChildHint": "Name the group of three first. Both odd ones must sit outside it, however alike two words look or sound."
+      }
+     ],
+     "theirTags": [
+      {
+       "tag": "vr02-partial-group",
+       "childHint": "Name the group first. Both odd ones sit outside it.",
+       "onSiblings": 2
+      },
+      {
+       "tag": "vr02-surface-link",
+       "childHint": "Name the group of three first. Both odd ones must sit outside it, however alike two words look or sound.",
+       "onSiblings": 1
+      }
+     ],
+     "exactlyOneKey": true
+    },
+    "solution": null,
+    "rowSha256": "240bf03ff10dc830b3a17216e540be47ad19fdad60ca3e8917fd2dad8b10567a",
+    "rowSha256WasInThePopulation": "49b14e3a1eac6cc515ea6af089b93bbe7e8bc49e95aa438e4b73ab126115c1c7",
+    "andWHATTHEROWUSEDTOREAD": {
+     "words": [
+      "red",
+      "bear",
+      "blue",
+      "wolf",
+      "green"
+     ],
+     "options": [
+      {
+       "value": [
+        "bear",
+        "wolf"
+       ],
+       "isKey": true
+      },
+      {
+       "value": [
+        "bear",
+        "red"
+       ],
+       "isKey": false
+      },
+      {
+       "value": [
+        "bear",
+        "blue"
+       ],
+       "isKey": false
+      },
+      {
+       "value": [
+        "wolf",
+        "green"
+       ],
+       "isKey": false
+      }
+     ]
+    }
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-03",
+    "status": "DRAFT",
+    "THE_ROW_AS_THE_CHILD_MEETS_IT": {
+     "prompt": "Three of these words go together. Which two are the odd ones out?",
+     "words": [
+      "hand",
+      "chair",
+      "knee",
+      "couch",
+      "chin"
+     ]
+    },
+    "THE_THREE_PART_SET": {
+     "theThreeParts": "the KEY, its SIBLINGS, and THEIR TAGS. Named rather than abbreviated to \"the option set\", because that phrase hides the third part and the tags are what identify a likely wrong answer (Annie, R573 — see ENG-001-WIW-10).",
+     "key": {
+      "value": "[\"chair\",\"couch\"]",
+      "label": null
+     },
+     "siblings": [
+      {
+       "value": "[\"chair\",\"hand\"]",
+       "label": null,
+       "tag": "vr02-partial-group",
+       "tagChildHint": "Name the group first. Both odd ones sit outside it."
+      },
+      {
+       "value": "[\"couch\",\"knee\"]",
+       "label": null,
+       "tag": "vr02-partial-group",
+       "tagChildHint": "Name the group first. Both odd ones sit outside it."
+      },
+      {
+       "value": "[\"chair\",\"chin\"]",
+       "label": null,
+       "tag": "vr02-surface-link",
+       "tagChildHint": "Name the group of three first. Both odd ones must sit outside it, however alike two words look or sound."
+      }
+     ],
+     "theirTags": [
+      {
+       "tag": "vr02-partial-group",
+       "childHint": "Name the group first. Both odd ones sit outside it.",
+       "onSiblings": 2
+      },
+      {
+       "tag": "vr02-surface-link",
+       "childHint": "Name the group of three first. Both odd ones must sit outside it, however alike two words look or sound.",
+       "onSiblings": 1
+      }
+     ],
+     "exactlyOneKey": true
+    },
+    "solution": null,
+    "rowSha256": "a4fc2d0efa086d29c06184e6334ca3410bb0477f8d4c07ad0283f68347395881",
+    "rowSha256WasInThePopulation": "0a0fece8492c65caa0707c3392dbfeae78e68b4799a0b675be147f64491a0de3",
+    "andWHATTHEROWUSEDTOREAD": {
+     "words": [
+      "hand",
+      "chair",
+      "knee",
+      "couch",
+      "chin"
+     ],
+     "options": [
+      {
+       "value": [
+        "chair",
+        "couch"
+       ],
+       "isKey": true
+      },
+      {
+       "value": [
+        "couch",
+        "knee"
+       ],
+       "isKey": false
+      },
+      {
+       "value": [
+        "chair",
+        "chin"
+       ],
+       "isKey": false
+      },
+      {
+       "value": [
+        "chair",
+        "hand"
+       ],
+       "isKey": false
+      }
+     ]
+    }
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-04",
+    "status": "DRAFT",
+    "THE_ROW_AS_THE_CHILD_MEETS_IT": {
+     "prompt": "Three of these words go together. Which two are the odd ones out?",
+     "words": [
+      "rain",
+      "hammer",
+      "snow",
+      "spade",
+      "wind"
+     ]
+    },
+    "THE_THREE_PART_SET": {
+     "theThreeParts": "the KEY, its SIBLINGS, and THEIR TAGS. Named rather than abbreviated to \"the option set\", because that phrase hides the third part and the tags are what identify a likely wrong answer (Annie, R573 — see ENG-001-WIW-10).",
+     "key": {
+      "value": "[\"hammer\",\"spade\"]",
+      "label": null
+     },
+     "siblings": [
+      {
+       "value": "[\"hammer\",\"rain\"]",
+       "label": null,
+       "tag": "vr02-partial-group",
+       "tagChildHint": "Name the group first. Both odd ones sit outside it."
+      },
+      {
+       "value": "[\"spade\",\"wind\"]",
+       "label": null,
+       "tag": "vr02-partial-group",
+       "tagChildHint": "Name the group first. Both odd ones sit outside it."
+      },
+      {
+       "value": "[\"snow\",\"spade\"]",
+       "label": null,
+       "tag": "vr02-surface-link",
+       "tagChildHint": "Name the group of three first. Both odd ones must sit outside it, however alike two words look or sound."
+      }
+     ],
+     "theirTags": [
+      {
+       "tag": "vr02-partial-group",
+       "childHint": "Name the group first. Both odd ones sit outside it.",
+       "onSiblings": 2
+      },
+      {
+       "tag": "vr02-surface-link",
+       "childHint": "Name the group of three first. Both odd ones must sit outside it, however alike two words look or sound.",
+       "onSiblings": 1
+      }
+     ],
+     "exactlyOneKey": true
+    },
+    "solution": null,
+    "rowSha256": "1d1e9baa52b254260e3ff1be07f0d58c7399d1bc90ec432455c70595b194287d",
+    "rowSha256WasInThePopulation": "2daca9e2ec08ab21ab669eb0ee94e13d70943887ae9ef70e7aa105024a019a82",
+    "andWHATTHEROWUSEDTOREAD": {
+     "words": [
+      "rain",
+      "hammer",
+      "snow",
+      "spade",
+      "wind"
+     ],
+     "options": [
+      {
+       "value": [
+        "hammer",
+        "spade"
+       ],
+       "isKey": true
+      },
+      {
+       "value": [
+        "spade",
+        "wind"
+       ],
+       "isKey": false
+      },
+      {
+       "value": [
+        "hammer",
+        "rain"
+       ],
+       "isKey": false
+      },
+      {
+       "value": [
+        "snow",
+        "spade"
+       ],
+       "isKey": false
+      }
+     ]
+    }
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-08",
+    "status": "DRAFT",
+    "THE_ROW_AS_THE_CHILD_MEETS_IT": {
+     "prompt": "Three of these words go together. Which two are the odd ones out?",
+     "words": [
+      "saw",
+      "ball",
+      "drill",
+      "doll",
+      "spanner"
+     ]
+    },
+    "THE_THREE_PART_SET": {
+     "theThreeParts": "the KEY, its SIBLINGS, and THEIR TAGS. Named rather than abbreviated to \"the option set\", because that phrase hides the third part and the tags are what identify a likely wrong answer (Annie, R573 — see ENG-001-WIW-10).",
+     "key": {
+      "value": "[\"ball\",\"doll\"]",
+      "label": null
+     },
+     "siblings": [
+      {
+       "value": "[\"ball\",\"saw\"]",
+       "label": null,
+       "tag": "vr02-partial-group",
+       "tagChildHint": "Name the group first. Both odd ones sit outside it."
+      },
+      {
+       "value": "[\"doll\",\"spanner\"]",
+       "label": null,
+       "tag": "vr02-partial-group",
+       "tagChildHint": "Name the group first. Both odd ones sit outside it."
+      },
+      {
+       "value": "[\"drill\",\"doll\"]",
+       "label": null,
+       "tag": "vr02-surface-link",
+       "tagChildHint": "Name the group of three first. Both odd ones must sit outside it, however alike two words look or sound."
+      }
+     ],
+     "theirTags": [
+      {
+       "tag": "vr02-partial-group",
+       "childHint": "Name the group first. Both odd ones sit outside it.",
+       "onSiblings": 2
+      },
+      {
+       "tag": "vr02-surface-link",
+       "childHint": "Name the group of three first. Both odd ones must sit outside it, however alike two words look or sound.",
+       "onSiblings": 1
+      }
+     ],
+     "exactlyOneKey": true
+    },
+    "solution": null,
+    "rowSha256": "e199924a349e8a16b3a92289d5900d5252bc92328ccc090b0bf5bbcc49f8fec7",
+    "rowSha256WasInThePopulation": "f72055421dd02e334b455121542eba47863e950ee2bf3c669e9291dd590137de",
+    "andWHATTHEROWUSEDTOREAD": {
+     "words": [
+      "saw",
+      "ball",
+      "drill",
+      "doll",
+      "spanner"
+     ],
+     "options": [
+      {
+       "value": [
+        "ball",
+        "doll"
+       ],
+       "isKey": true
+      },
+      {
+       "value": [
+        "ball",
+        "saw"
+       ],
+       "isKey": false
+      },
+      {
+       "value": [
+        "drill",
+        "doll"
+       ],
+       "isKey": false
+      },
+      {
+       "value": [
+        "doll",
+        "spanner"
+       ],
+       "isKey": false
+      }
+     ]
+    }
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-09",
+    "status": "DRAFT",
+    "THE_ROW_AS_THE_CHILD_MEETS_IT": {
+     "prompt": "Three of these words go together. Which two are the odd ones out?",
+     "words": [
+      "tree",
+      "rock",
+      "grass",
+      "brick",
+      "rose"
+     ]
+    },
+    "THE_THREE_PART_SET": {
+     "theThreeParts": "the KEY, its SIBLINGS, and THEIR TAGS. Named rather than abbreviated to \"the option set\", because that phrase hides the third part and the tags are what identify a likely wrong answer (Annie, R573 — see ENG-001-WIW-10).",
+     "key": {
+      "value": "[\"rock\",\"brick\"]",
+      "label": null
+     },
+     "siblings": [
+      {
+       "value": "[\"rock\",\"tree\"]",
+       "label": null,
+       "tag": "vr02-partial-group",
+       "tagChildHint": "Name the group first. Both odd ones sit outside it."
+      },
+      {
+       "value": "[\"brick\",\"grass\"]",
+       "label": null,
+       "tag": "vr02-partial-group",
+       "tagChildHint": "Name the group first. Both odd ones sit outside it."
+      },
+      {
+       "value": "[\"rock\",\"rose\"]",
+       "label": null,
+       "tag": "vr02-surface-link",
+       "tagChildHint": "Name the group of three first. Both odd ones must sit outside it, however alike two words look or sound."
+      }
+     ],
+     "theirTags": [
+      {
+       "tag": "vr02-partial-group",
+       "childHint": "Name the group first. Both odd ones sit outside it.",
+       "onSiblings": 2
+      },
+      {
+       "tag": "vr02-surface-link",
+       "childHint": "Name the group of three first. Both odd ones must sit outside it, however alike two words look or sound.",
+       "onSiblings": 1
+      }
+     ],
+     "exactlyOneKey": true
+    },
+    "solution": null,
+    "rowSha256": "dbf0325075bad7f730852b0378783f73018f206a54567d79fcc1a4729cb7c645",
+    "rowSha256WasInThePopulation": "a16c1d450953081f25063bf6a406b8f552fa3fb4d7aa725164c21b0d42b054ef",
+    "andWHATTHEROWUSEDTOREAD": {
+     "words": [
+      "tree",
+      "rock",
+      "grass",
+      "brick",
+      "rose"
+     ],
+     "options": [
+      {
+       "value": [
+        "rock",
+        "brick"
+       ],
+       "isKey": true
+      },
+      {
+       "value": [
+        "rock",
+        "tree"
+       ],
+       "isKey": false
+      },
+      {
+       "value": [
+        "rock",
+        "rose"
+       ],
+       "isKey": false
+      },
+      {
+       "value": [
+        "brick",
+        "grass"
+       ],
+       "isKey": false
+      }
+     ]
+    }
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-10",
+    "status": "DRAFT",
+    "THE_ROW_AS_THE_CHILD_MEETS_IT": {
+     "prompt": "Three of these words go together. Which two are the odd ones out?",
+     "words": [
+      "eel",
+      "goat",
+      "fish",
+      "sheep",
+      "shark"
+     ]
+    },
+    "THE_THREE_PART_SET": {
+     "theThreeParts": "the KEY, its SIBLINGS, and THEIR TAGS. Named rather than abbreviated to \"the option set\", because that phrase hides the third part and the tags are what identify a likely wrong answer (Annie, R573 — see ENG-001-WIW-10).",
+     "key": {
+      "value": "[\"goat\",\"sheep\"]",
+      "label": null
+     },
+     "siblings": [
+      {
+       "value": "[\"goat\",\"eel\"]",
+       "label": null,
+       "tag": "vr02-partial-group",
+       "tagChildHint": "Name the group first. Both odd ones sit outside it."
+      },
+      {
+       "value": "[\"sheep\",\"fish\"]",
+       "label": null,
+       "tag": "vr02-partial-group",
+       "tagChildHint": "Name the group first. Both odd ones sit outside it."
+      },
+      {
+       "value": "[\"sheep\",\"shark\"]",
+       "label": null,
+       "tag": "vr02-surface-link",
+       "tagChildHint": "Name the group of three first. Both odd ones must sit outside it, however alike two words look or sound."
+      }
+     ],
+     "theirTags": [
+      {
+       "tag": "vr02-partial-group",
+       "childHint": "Name the group first. Both odd ones sit outside it.",
+       "onSiblings": 2
+      },
+      {
+       "tag": "vr02-surface-link",
+       "childHint": "Name the group of three first. Both odd ones must sit outside it, however alike two words look or sound.",
+       "onSiblings": 1
+      }
+     ],
+     "exactlyOneKey": true
+    },
+    "solution": null,
+    "rowSha256": "56e5a9daaa93f36984359f4edc4c286f8c6b6ddbfd5720f7ac6e9cfb6f9aaa7d",
+    "rowSha256WasInThePopulation": "4f0c6a6b235044ac0b5e300cfb5c129045dba5ca39d60a53d2cef134e6e65137",
+    "andWHATTHEROWUSEDTOREAD": {
+     "words": [
+      "eel",
+      "goat",
+      "fish",
+      "sheep",
+      "shark"
+     ],
+     "options": [
+      {
+       "value": [
+        "goat",
+        "sheep"
+       ],
+       "isKey": true
+      },
+      {
+       "value": [
+        "goat",
+        "eel"
+       ],
+       "isKey": false
+      },
+      {
+       "value": [
+        "sheep",
+        "shark"
+       ],
+       "isKey": false
+      },
+      {
+       "value": [
+        "sheep",
+        "fish"
+       ],
+       "isKey": false
+      }
+     ]
+    }
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-11",
+    "status": "DRAFT",
+    "THE_ROW_AS_THE_CHILD_MEETS_IT": {
+     "prompt": "Three of these words go together. Which two are the odd ones out?",
+     "words": [
+      "flute",
+      "straw",
+      "trumpet",
+      "balloon",
+      "recorder"
+     ]
+    },
+    "THE_THREE_PART_SET": {
+     "theThreeParts": "the KEY, its SIBLINGS, and THEIR TAGS. Named rather than abbreviated to \"the option set\", because that phrase hides the third part and the tags are what identify a likely wrong answer (Annie, R573 — see ENG-001-WIW-10).",
+     "key": {
+      "value": "[\"straw\",\"balloon\"]",
+      "label": null
+     },
+     "siblings": [
+      {
+       "value": "[\"straw\",\"flute\"]",
+       "label": null,
+       "tag": "vr02-partial-group",
+       "tagChildHint": "Name the group first. Both odd ones sit outside it."
+      },
+      {
+       "value": "[\"balloon\",\"recorder\"]",
+       "label": null,
+       "tag": "vr02-partial-group",
+       "tagChildHint": "Name the group first. Both odd ones sit outside it."
+      },
+      {
+       "value": "[\"trumpet\",\"balloon\"]",
+       "label": null,
+       "tag": "vr02-real-link-wrong-rule",
+       "tagChildHint": "Those two do go together, but not by the group's rule. Find what the three share first."
+      }
+     ],
+     "theirTags": [
+      {
+       "tag": "vr02-partial-group",
+       "childHint": "Name the group first. Both odd ones sit outside it.",
+       "onSiblings": 2
+      },
+      {
+       "tag": "vr02-real-link-wrong-rule",
+       "childHint": "Those two do go together, but not by the group's rule. Find what the three share first.",
+       "onSiblings": 1
+      }
+     ],
+     "exactlyOneKey": true
+    },
+    "solution": null,
+    "rowSha256": "6abe813453012ef6d36ae2e5d9a2323bfc6fe615979b0d977dd214d58cbb415c",
+    "rowSha256WasInThePopulation": "fedd97de9dae7a4b59eed88bf5f84d5589c8a23ce65e196153454bd202653e8f",
+    "andWHATTHEROWUSEDTOREAD": {
+     "words": [
+      "flute",
+      "straw",
+      "trumpet",
+      "balloon",
+      "recorder"
+     ],
+     "options": [
+      {
+       "value": [
+        "straw",
+        "balloon"
+       ],
+       "isKey": true
+      },
+      {
+       "value": [
+        "straw",
+        "flute"
+       ],
+       "isKey": false
+      },
+      {
+       "value": [
+        "trumpet",
+        "balloon"
+       ],
+       "isKey": false
+      },
+      {
+       "value": [
+        "balloon",
+        "recorder"
+       ],
+       "isKey": false
+      }
+     ]
+    }
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-12",
+    "status": "DRAFT",
+    "THE_ROW_AS_THE_CHILD_MEETS_IT": {
+     "prompt": "Three of these words go together. Which two are the odd ones out?",
+     "words": [
+      "knife",
+      "pin",
+      "scissors",
+      "thorn",
+      "saw"
+     ]
+    },
+    "THE_THREE_PART_SET": {
+     "theThreeParts": "the KEY, its SIBLINGS, and THEIR TAGS. Named rather than abbreviated to \"the option set\", because that phrase hides the third part and the tags are what identify a likely wrong answer (Annie, R573 — see ENG-001-WIW-10).",
+     "key": {
+      "value": "[\"pin\",\"thorn\"]",
+      "label": null
+     },
+     "siblings": [
+      {
+       "value": "[\"pin\",\"knife\"]",
+       "label": null,
+       "tag": "vr02-partial-group",
+       "tagChildHint": "Name the group first. Both odd ones sit outside it."
+      },
+      {
+       "value": "[\"thorn\",\"scissors\"]",
+       "label": null,
+       "tag": "vr02-partial-group",
+       "tagChildHint": "Name the group first. Both odd ones sit outside it."
+      },
+      {
+       "value": "[\"knife\",\"thorn\"]",
+       "label": null,
+       "tag": "vr02-real-link-wrong-rule",
+       "tagChildHint": "Those two do go together, but not by the group's rule. Find what the three share first."
+      }
+     ],
+     "theirTags": [
+      {
+       "tag": "vr02-partial-group",
+       "childHint": "Name the group first. Both odd ones sit outside it.",
+       "onSiblings": 2
+      },
+      {
+       "tag": "vr02-real-link-wrong-rule",
+       "childHint": "Those two do go together, but not by the group's rule. Find what the three share first.",
+       "onSiblings": 1
+      }
+     ],
+     "exactlyOneKey": true
+    },
+    "solution": null,
+    "rowSha256": "6b625dd6c1b5bfc4696e6438f6423829e80c4512250d9f19a4e5de656b00d003",
+    "rowSha256WasInThePopulation": "eb95e5a80deeb4ddbab16f06dc2060808ac98b08b7bd81d4a71da4c75d685aff",
+    "andWHATTHEROWUSEDTOREAD": {
+     "words": [
+      "knife",
+      "pin",
+      "scissors",
+      "thorn",
+      "saw"
+     ],
+     "options": [
+      {
+       "value": [
+        "pin",
+        "thorn"
+       ],
+       "isKey": true
+      },
+      {
+       "value": [
+        "pin",
+        "knife"
+       ],
+       "isKey": false
+      },
+      {
+       "value": [
+        "knife",
+        "thorn"
+       ],
+       "isKey": false
+      },
+      {
+       "value": [
+        "thorn",
+        "scissors"
+       ],
+       "isKey": false
+      }
+     ]
+    }
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-14",
+    "status": "DRAFT",
+    "THE_ROW_AS_THE_CHILD_MEETS_IT": {
+     "prompt": "Three of these words go together. Which two are the odd ones out?",
+     "words": [
+      "milk",
+      "paint",
+      "juice",
+      "glue",
+      "tea"
+     ]
+    },
+    "THE_THREE_PART_SET": {
+     "theThreeParts": "the KEY, its SIBLINGS, and THEIR TAGS. Named rather than abbreviated to \"the option set\", because that phrase hides the third part and the tags are what identify a likely wrong answer (Annie, R573 — see ENG-001-WIW-10).",
+     "key": {
+      "value": "[\"paint\",\"glue\"]",
+      "label": null
+     },
+     "siblings": [
+      {
+       "value": "[\"paint\",\"milk\"]",
+       "label": null,
+       "tag": "vr02-partial-group",
+       "tagChildHint": "Name the group first. Both odd ones sit outside it."
+      },
+      {
+       "value": "[\"glue\",\"juice\"]",
+       "label": null,
+       "tag": "vr02-partial-group",
+       "tagChildHint": "Name the group first. Both odd ones sit outside it."
+      },
+      {
+       "value": "[\"juice\",\"paint\"]",
+       "label": null,
+       "tag": "vr02-real-link-wrong-rule",
+       "tagChildHint": "Those two do go together, but not by the group's rule. Find what the three share first."
+      }
+     ],
+     "theirTags": [
+      {
+       "tag": "vr02-partial-group",
+       "childHint": "Name the group first. Both odd ones sit outside it.",
+       "onSiblings": 2
+      },
+      {
+       "tag": "vr02-real-link-wrong-rule",
+       "childHint": "Those two do go together, but not by the group's rule. Find what the three share first.",
+       "onSiblings": 1
+      }
+     ],
+     "exactlyOneKey": true
+    },
+    "solution": null,
+    "rowSha256": "633e915aeb127d3667ea117ca4f746abcae811c0e63f13edabee689ad40fd0fc",
+    "rowSha256WasInThePopulation": "b0a10196650a2fd5819ec49c6d1a0175cc2b6cfd80413d4a4e1fefa007a58504",
+    "andWHATTHEROWUSEDTOREAD": {
+     "words": [
+      "milk",
+      "paint",
+      "juice",
+      "glue",
+      "tea"
+     ],
+     "options": [
+      {
+       "value": [
+        "paint",
+        "glue"
+       ],
+       "isKey": true
+      },
+      {
+       "value": [
+        "glue",
+        "juice"
+       ],
+       "isKey": false
+      },
+      {
+       "value": [
+        "juice",
+        "paint"
+       ],
+       "isKey": false
+      },
+      {
+       "value": [
+        "paint",
+        "milk"
+       ],
+       "isKey": false
+      }
+     ]
+    }
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-16",
+    "status": "DRAFT",
+    "THE_ROW_AS_THE_CHILD_MEETS_IT": {
+     "prompt": "Three of these words go together. Which two are the odd ones out?",
+     "words": [
+      "happy",
+      "tired",
+      "angry",
+      "hungry",
+      "afraid"
+     ]
+    },
+    "THE_THREE_PART_SET": {
+     "theThreeParts": "the KEY, its SIBLINGS, and THEIR TAGS. Named rather than abbreviated to \"the option set\", because that phrase hides the third part and the tags are what identify a likely wrong answer (Annie, R573 — see ENG-001-WIW-10).",
+     "key": {
+      "value": "[\"tired\",\"hungry\"]",
+      "label": null
+     },
+     "siblings": [
+      {
+       "value": "[\"tired\",\"happy\"]",
+       "label": null,
+       "tag": "vr02-partial-group",
+       "tagChildHint": "Name the group first. Both odd ones sit outside it."
+      },
+      {
+       "value": "[\"hungry\",\"angry\"]",
+       "label": null,
+       "tag": "vr02-partial-group",
+       "tagChildHint": "Name the group first. Both odd ones sit outside it."
+      },
+      {
+       "value": "[\"happy\",\"hungry\"]",
+       "label": null,
+       "tag": "vr02-surface-link",
+       "tagChildHint": "Name the group of three first. Both odd ones must sit outside it, however alike two words look or sound."
+      }
+     ],
+     "theirTags": [
+      {
+       "tag": "vr02-partial-group",
+       "childHint": "Name the group first. Both odd ones sit outside it.",
+       "onSiblings": 2
+      },
+      {
+       "tag": "vr02-surface-link",
+       "childHint": "Name the group of three first. Both odd ones must sit outside it, however alike two words look or sound.",
+       "onSiblings": 1
+      }
+     ],
+     "exactlyOneKey": true
+    },
+    "solution": null,
+    "rowSha256": "ff7dcd79758169998c3b00f3458bf77c18642cad9b70a4ceac4d6bd166b169c7",
+    "rowSha256WasInThePopulation": "cb49a751d24b9c7a18fcd7a9aca75d156be16f7017237039d3ba2c49ed9dc498",
+    "andWHATTHEROWUSEDTOREAD": {
+     "words": [
+      "happy",
+      "tired",
+      "angry",
+      "hungry",
+      "afraid"
+     ],
+     "options": [
+      {
+       "value": [
+        "tired",
+        "hungry"
+       ],
+       "isKey": true
+      },
+      {
+       "value": [
+        "tired",
+        "happy"
+       ],
+       "isKey": false
+      },
+      {
+       "value": [
+        "happy",
+        "hungry"
+       ],
+       "isKey": false
+      },
+      {
+       "value": [
+        "hungry",
+        "angry"
+       ],
+       "isKey": false
+      }
+     ]
+    }
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-17",
+    "status": "DRAFT",
+    "THE_ROW_AS_THE_CHILD_MEETS_IT": {
+     "prompt": "Three of these words go together. Which two are the odd ones out?",
+     "words": [
+      "square",
+      "circle",
+      "triangle",
+      "oval",
+      "star"
+     ]
+    },
+    "THE_THREE_PART_SET": {
+     "theThreeParts": "the KEY, its SIBLINGS, and THEIR TAGS. Named rather than abbreviated to \"the option set\", because that phrase hides the third part and the tags are what identify a likely wrong answer (Annie, R573 — see ENG-001-WIW-10).",
+     "key": {
+      "value": "[\"circle\",\"oval\"]",
+      "label": null
+     },
+     "siblings": [
+      {
+       "value": "[\"circle\",\"square\"]",
+       "label": null,
+       "tag": "vr02-partial-group",
+       "tagChildHint": "Name the group first. Both odd ones sit outside it."
+      },
+      {
+       "value": "[\"oval\",\"triangle\"]",
+       "label": null,
+       "tag": "vr02-partial-group",
+       "tagChildHint": "Name the group first. Both odd ones sit outside it."
+      },
+      {
+       "value": "[\"triangle\",\"star\"]",
+       "label": null,
+       "tag": "vr02-answered-the-opposite",
+       "tagChildHint": "Those two do belong together. The question asks for the two that do not."
+      }
+     ],
+     "theirTags": [
+      {
+       "tag": "vr02-partial-group",
+       "childHint": "Name the group first. Both odd ones sit outside it.",
+       "onSiblings": 2
+      },
+      {
+       "tag": "vr02-answered-the-opposite",
+       "childHint": "Those two do belong together. The question asks for the two that do not.",
+       "onSiblings": 1
+      }
+     ],
+     "exactlyOneKey": true
+    },
+    "solution": null,
+    "rowSha256": "876d0e0c0063546b138f5b3bd84f5bf54bc478391720ebfac01749e44b63b424",
+    "rowSha256WasInThePopulation": "a0f05ae8332ab189c71b59912a287a291ed6582a2dbf642036b602b007e2d3a0",
+    "andWHATTHEROWUSEDTOREAD": {
+     "words": [
+      "square",
+      "circle",
+      "triangle",
+      "oval",
+      "star"
+     ],
+     "options": [
+      {
+       "value": [
+        "circle",
+        "oval"
+       ],
+       "isKey": true
+      },
+      {
+       "value": [
+        "oval",
+        "star"
+       ],
+       "isKey": false
+      },
+      {
+       "value": [
+        "oval",
+        "triangle"
+       ],
+       "isKey": false
+      },
+      {
+       "value": [
+        "circle",
+        "square"
+       ],
+       "isKey": false
+      }
+     ]
+    }
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-18",
+    "status": "DRAFT",
+    "THE_ROW_AS_THE_CHILD_MEETS_IT": {
+     "prompt": "Three of these words go together. Which two are the odd ones out?",
+     "words": [
+      "cow",
+      "deer",
+      "pig",
+      "wolf",
+      "hen"
+     ]
+    },
+    "THE_THREE_PART_SET": {
+     "theThreeParts": "the KEY, its SIBLINGS, and THEIR TAGS. Named rather than abbreviated to \"the option set\", because that phrase hides the third part and the tags are what identify a likely wrong answer (Annie, R573 — see ENG-001-WIW-10).",
+     "key": {
+      "value": "[\"deer\",\"wolf\"]",
+      "label": null
+     },
+     "siblings": [
+      {
+       "value": "[\"deer\",\"cow\"]",
+       "label": null,
+       "tag": "vr02-partial-group",
+       "tagChildHint": "Name the group first. Both odd ones sit outside it."
+      },
+      {
+       "value": "[\"wolf\",\"pig\"]",
+       "label": null,
+       "tag": "vr02-partial-group",
+       "tagChildHint": "Name the group first. Both odd ones sit outside it."
+      },
+      {
+       "value": "[\"cow\",\"hen\"]",
+       "label": null,
+       "tag": "vr02-answered-the-opposite",
+       "tagChildHint": "Those two do belong together. The question asks for the two that do not."
+      }
+     ],
+     "theirTags": [
+      {
+       "tag": "vr02-partial-group",
+       "childHint": "Name the group first. Both odd ones sit outside it.",
+       "onSiblings": 2
+      },
+      {
+       "tag": "vr02-answered-the-opposite",
+       "childHint": "Those two do belong together. The question asks for the two that do not.",
+       "onSiblings": 1
+      }
+     ],
+     "exactlyOneKey": true
+    },
+    "solution": null,
+    "rowSha256": "bce3ca312d2dd7716b78dde4c439b240bc3a3445bd6aa2f5ebf624e3dbe62232",
+    "rowSha256WasInThePopulation": "cb3fa4839aeeede0455cf835d447e28013646deea6e7876e4d36e8086cab583e",
+    "andWHATTHEROWUSEDTOREAD": {
+     "words": [
+      "cow",
+      "deer",
+      "pig",
+      "wolf",
+      "hen"
+     ],
+     "options": [
+      {
+       "value": [
+        "deer",
+        "wolf"
+       ],
+       "isKey": true
+      },
+      {
+       "value": [
+        "wolf",
+        "pig"
+       ],
+       "isKey": false
+      },
+      {
+       "value": [
+        "deer",
+        "cow"
+       ],
+       "isKey": false
+      },
+      {
+       "value": [
+        "cow",
+        "hen"
+       ],
+       "isKey": false
+      }
+     ]
+    }
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-22",
+    "status": "DRAFT",
+    "THE_ROW_AS_THE_CHILD_MEETS_IT": {
+     "prompt": "Three of these words go together. Which two are the odd ones out?",
+     "words": [
+      "hen",
+      "cat",
+      "snake",
+      "dog",
+      "frog"
+     ]
+    },
+    "THE_THREE_PART_SET": {
+     "theThreeParts": "the KEY, its SIBLINGS, and THEIR TAGS. Named rather than abbreviated to \"the option set\", because that phrase hides the third part and the tags are what identify a likely wrong answer (Annie, R573 — see ENG-001-WIW-10).",
+     "key": {
+      "value": "[\"cat\",\"dog\"]",
+      "label": null
+     },
+     "siblings": [
+      {
+       "value": "[\"cat\",\"hen\"]",
+       "label": null,
+       "tag": "vr02-partial-group",
+       "tagChildHint": "Name the group first. Both odd ones sit outside it."
+      },
+      {
+       "value": "[\"dog\",\"snake\"]",
+       "label": null,
+       "tag": "vr02-partial-group",
+       "tagChildHint": "Name the group first. Both odd ones sit outside it."
+      },
+      {
+       "value": "[\"snake\",\"frog\"]",
+       "label": null,
+       "tag": "vr02-answered-the-opposite",
+       "tagChildHint": "Those two do belong together. The question asks for the two that do not."
+      }
+     ],
+     "theirTags": [
+      {
+       "tag": "vr02-partial-group",
+       "childHint": "Name the group first. Both odd ones sit outside it.",
+       "onSiblings": 2
+      },
+      {
+       "tag": "vr02-answered-the-opposite",
+       "childHint": "Those two do belong together. The question asks for the two that do not.",
+       "onSiblings": 1
+      }
+     ],
+     "exactlyOneKey": true
+    },
+    "solution": null,
+    "rowSha256": "9554eb0ff89252cc4f59217f149d074714c68e5690f91fb5a7697cfb44d65828",
+    "rowSha256WasInThePopulation": "313d6148b0154e8ca1cd5a31ef090f9d7a153083f5ff1434e44dc5a289ecbcf2",
+    "andWHATTHEROWUSEDTOREAD": {
+     "words": [
+      "hen",
+      "cat",
+      "snake",
+      "dog",
+      "frog"
+     ],
+     "options": [
+      {
+       "value": [
+        "cat",
+        "dog"
+       ],
+       "isKey": true
+      },
+      {
+       "value": [
+        "cat",
+        "hen"
+       ],
+       "isKey": false
+      },
+      {
+       "value": [
+        "dog",
+        "snake"
+       ],
+       "isKey": false
+      },
+      {
+       "value": [
+        "hen",
+        "dog"
+       ],
+       "isKey": false
+      }
+     ]
+    }
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-23",
+    "status": "DRAFT",
+    "THE_ROW_AS_THE_CHILD_MEETS_IT": {
+     "prompt": "Three of these words go together. Which two are the odd ones out?",
+     "words": [
+      "soft",
+      "hot",
+      "rough",
+      "cold",
+      "smooth"
+     ]
+    },
+    "THE_THREE_PART_SET": {
+     "theThreeParts": "the KEY, its SIBLINGS, and THEIR TAGS. Named rather than abbreviated to \"the option set\", because that phrase hides the third part and the tags are what identify a likely wrong answer (Annie, R573 — see ENG-001-WIW-10).",
+     "key": {
+      "value": "[\"hot\",\"cold\"]",
+      "label": null
+     },
+     "siblings": [
+      {
+       "value": "[\"hot\",\"soft\"]",
+       "label": null,
+       "tag": "vr02-partial-group",
+       "tagChildHint": "Name the group first. Both odd ones sit outside it."
+      },
+      {
+       "value": "[\"cold\",\"rough\"]",
+       "label": null,
+       "tag": "vr02-partial-group",
+       "tagChildHint": "Name the group first. Both odd ones sit outside it."
+      },
+      {
+       "value": "[\"soft\",\"smooth\"]",
+       "label": null,
+       "tag": "vr02-answered-the-opposite",
+       "tagChildHint": "Those two do belong together. The question asks for the two that do not."
+      }
+     ],
+     "theirTags": [
+      {
+       "tag": "vr02-partial-group",
+       "childHint": "Name the group first. Both odd ones sit outside it.",
+       "onSiblings": 2
+      },
+      {
+       "tag": "vr02-answered-the-opposite",
+       "childHint": "Those two do belong together. The question asks for the two that do not.",
+       "onSiblings": 1
+      }
+     ],
+     "exactlyOneKey": true
+    },
+    "solution": null,
+    "rowSha256": "06ca41f006ef77fdc5244805b6b04928ec16fe8755d26449c3ca908d2d718c60",
+    "rowSha256WasInThePopulation": "9efcafea07dcbb7cec3a2514bcea125199f90a19deb8bf73c821627cac277814",
+    "andWHATTHEROWUSEDTOREAD": {
+     "words": [
+      "soft",
+      "hot",
+      "rough",
+      "cold",
+      "smooth"
+     ],
+     "options": [
+      {
+       "value": [
+        "hot",
+        "cold"
+       ],
+       "isKey": true
+      },
+      {
+       "value": [
+        "hot",
+        "soft"
+       ],
+       "isKey": false
+      },
+      {
+       "value": [
+        "cold",
+        "rough"
+       ],
+       "isKey": false
+      },
+      {
+       "value": [
+        "soft",
+        "cold"
+       ],
+       "isKey": false
+      }
+     ]
+    }
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-24",
+    "status": "DRAFT",
+    "THE_ROW_AS_THE_CHILD_MEETS_IT": {
+     "prompt": "Three of these words go together. Which two are the odd ones out?",
+     "words": [
+      "jump",
+      "ball",
+      "kick",
+      "net",
+      "run"
+     ]
+    },
+    "THE_THREE_PART_SET": {
+     "theThreeParts": "the KEY, its SIBLINGS, and THEIR TAGS. Named rather than abbreviated to \"the option set\", because that phrase hides the third part and the tags are what identify a likely wrong answer (Annie, R573 — see ENG-001-WIW-10).",
+     "key": {
+      "value": "[\"ball\",\"net\"]",
+      "label": null
+     },
+     "siblings": [
+      {
+       "value": "[\"ball\",\"jump\"]",
+       "label": null,
+       "tag": "vr02-partial-group",
+       "tagChildHint": "Name the group first. Both odd ones sit outside it."
+      },
+      {
+       "value": "[\"net\",\"kick\"]",
+       "label": null,
+       "tag": "vr02-partial-group",
+       "tagChildHint": "Name the group first. Both odd ones sit outside it."
+      },
+      {
+       "value": "[\"jump\",\"run\"]",
+       "label": null,
+       "tag": "vr02-answered-the-opposite",
+       "tagChildHint": "Those two do belong together. The question asks for the two that do not."
+      }
+     ],
+     "theirTags": [
+      {
+       "tag": "vr02-partial-group",
+       "childHint": "Name the group first. Both odd ones sit outside it.",
+       "onSiblings": 2
+      },
+      {
+       "tag": "vr02-answered-the-opposite",
+       "childHint": "Those two do belong together. The question asks for the two that do not.",
+       "onSiblings": 1
+      }
+     ],
+     "exactlyOneKey": true
+    },
+    "solution": null,
+    "rowSha256": "4cb094f3e18e895ae01dec1c222d67afe744dea74e5d29b4cb9a390fa0b570cb",
+    "rowSha256WasInThePopulation": "0ef06af03f4c231bbc156e5ee4623911077b81c0454ae14c17b14874f07b4015",
+    "andWHATTHEROWUSEDTOREAD": {
+     "words": [
+      "jump",
+      "ball",
+      "kick",
+      "net",
+      "run"
+     ],
+     "options": [
+      {
+       "value": [
+        "ball",
+        "net"
+       ],
+       "isKey": true
+      },
+      {
+       "value": [
+        "ball",
+        "jump"
+       ],
+       "isKey": false
+      },
+      {
+       "value": [
+        "net",
+        "kick"
+       ],
+       "isKey": false
+      },
+      {
+       "value": [
+        "net",
+        "run"
+       ],
+       "isKey": false
+      }
+     ]
+    }
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-25",
+    "status": "DRAFT",
+    "THE_ROW_AS_THE_CHILD_MEETS_IT": {
+     "prompt": "Three of these words go together. Which two are the odd ones out?",
+     "words": [
+      "whale",
+      "shark",
+      "dolphin",
+      "tuna",
+      "seal"
+     ]
+    },
+    "THE_THREE_PART_SET": {
+     "theThreeParts": "the KEY, its SIBLINGS, and THEIR TAGS. Named rather than abbreviated to \"the option set\", because that phrase hides the third part and the tags are what identify a likely wrong answer (Annie, R573 — see ENG-001-WIW-10).",
+     "key": {
+      "value": "[\"shark\",\"tuna\"]",
+      "label": null
+     },
+     "siblings": [
+      {
+       "value": "[\"shark\",\"whale\"]",
+       "label": null,
+       "tag": "vr02-partial-group",
+       "tagChildHint": "Name the group first. Both odd ones sit outside it."
+      },
+      {
+       "value": "[\"tuna\",\"dolphin\"]",
+       "label": null,
+       "tag": "vr02-partial-group",
+       "tagChildHint": "Name the group first. Both odd ones sit outside it."
+      },
+      {
+       "value": "[\"whale\",\"dolphin\"]",
+       "label": null,
+       "tag": "vr02-answered-the-opposite",
+       "tagChildHint": "Those two do belong together. The question asks for the two that do not."
+      }
+     ],
+     "theirTags": [
+      {
+       "tag": "vr02-partial-group",
+       "childHint": "Name the group first. Both odd ones sit outside it.",
+       "onSiblings": 2
+      },
+      {
+       "tag": "vr02-answered-the-opposite",
+       "childHint": "Those two do belong together. The question asks for the two that do not.",
+       "onSiblings": 1
+      }
+     ],
+     "exactlyOneKey": true
+    },
+    "solution": null,
+    "rowSha256": "f86e591f0fc46586ebd67b238ce937d74b611ad9fe66841dc50cea90cd990bdd",
+    "rowSha256WasInThePopulation": "ca099bba40b078e952dfe25ea5b3d0a40f152a422993a9b8c5e228687789e4e3",
+    "andWHATTHEROWUSEDTOREAD": {
+     "words": [
+      "whale",
+      "shark",
+      "dolphin",
+      "tuna",
+      "seal"
+     ],
+     "options": [
+      {
+       "value": [
+        "shark",
+        "tuna"
+       ],
+       "isKey": true
+      },
+      {
+       "value": [
+        "tuna",
+        "seal"
+       ],
+       "isKey": false
+      },
+      {
+       "value": [
+        "shark",
+        "whale"
+       ],
+       "isKey": false
+      },
+      {
+       "value": [
+        "tuna",
+        "dolphin"
+       ],
+       "isKey": false
+      }
+     ]
+    }
+   }
+  ]
+ },
+ "TWO_WHICH_ROWS_ARE_WHOLE": {
+  "derivation": "itemWholeness — the door trigger's own function, called and not re-implemented (R41). walkModeServes is false: the walk mode's assetRef is a placeholder, so no row owes a script (R917).",
+  "whole": 20,
+  "of": 25,
+  "THE_SEATS_NAMED_RATHER_THAN_COUNTED": [
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-17",
+    "shortOf": [
+     "1 tagged option(s) carry NO EXECUTION: oval,triangle (vr02-partial-group)"
+    ]
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-22",
+    "shortOf": [
+     "1 tagged option(s) carry NO EXECUTION: dog,snake (vr02-partial-group)"
+    ]
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-23",
+    "shortOf": [
+     "1 tagged option(s) carry NO EXECUTION: cold,rough (vr02-partial-group)"
+    ]
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-24",
+    "shortOf": [
+     "1 tagged option(s) carry NO EXECUTION: net,kick (vr02-partial-group)"
+    ]
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-25",
+    "shortOf": [
+     "1 tagged option(s) carry NO EXECUTION: tuna,dolphin (vr02-partial-group)"
+    ]
+   }
+  ],
+  "andWHYNAMEDNOTCOUNTED": "\"twenty of twenty-five whole\" is a number nobody can act on. \"Row 07 has an untagged distractor\" is a job.",
+  "perRow": [
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-01",
+    "whole": true,
+    "tagsAttested": true,
+    "executionsExist": true,
+    "walkOk": true,
+    "shortOf": []
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-02",
+    "whole": true,
+    "tagsAttested": true,
+    "executionsExist": true,
+    "walkOk": true,
+    "shortOf": []
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-03",
+    "whole": true,
+    "tagsAttested": true,
+    "executionsExist": true,
+    "walkOk": true,
+    "shortOf": []
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-04",
+    "whole": true,
+    "tagsAttested": true,
+    "executionsExist": true,
+    "walkOk": true,
+    "shortOf": []
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-05",
+    "whole": true,
+    "tagsAttested": true,
+    "executionsExist": true,
+    "walkOk": true,
+    "shortOf": []
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-06",
+    "whole": true,
+    "tagsAttested": true,
+    "executionsExist": true,
+    "walkOk": true,
+    "shortOf": []
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-07",
+    "whole": true,
+    "tagsAttested": true,
+    "executionsExist": true,
+    "walkOk": true,
+    "shortOf": []
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-08",
+    "whole": true,
+    "tagsAttested": true,
+    "executionsExist": true,
+    "walkOk": true,
+    "shortOf": []
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-09",
+    "whole": true,
+    "tagsAttested": true,
+    "executionsExist": true,
+    "walkOk": true,
+    "shortOf": []
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-10",
+    "whole": true,
+    "tagsAttested": true,
+    "executionsExist": true,
+    "walkOk": true,
+    "shortOf": []
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-11",
+    "whole": true,
+    "tagsAttested": true,
+    "executionsExist": true,
+    "walkOk": true,
+    "shortOf": []
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-12",
+    "whole": true,
+    "tagsAttested": true,
+    "executionsExist": true,
+    "walkOk": true,
+    "shortOf": []
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-13",
+    "whole": true,
+    "tagsAttested": true,
+    "executionsExist": true,
+    "walkOk": true,
+    "shortOf": []
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-14",
+    "whole": true,
+    "tagsAttested": true,
+    "executionsExist": true,
+    "walkOk": true,
+    "shortOf": []
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-15",
+    "whole": true,
+    "tagsAttested": true,
+    "executionsExist": true,
+    "walkOk": true,
+    "shortOf": []
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-16",
+    "whole": true,
+    "tagsAttested": true,
+    "executionsExist": true,
+    "walkOk": true,
+    "shortOf": []
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-17",
+    "whole": false,
+    "tagsAttested": true,
+    "executionsExist": false,
+    "walkOk": true,
+    "shortOf": [
+     "1 tagged option(s) carry NO EXECUTION: oval,triangle (vr02-partial-group)"
+    ]
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-18",
+    "whole": true,
+    "tagsAttested": true,
+    "executionsExist": true,
+    "walkOk": true,
+    "shortOf": []
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-19",
+    "whole": true,
+    "tagsAttested": true,
+    "executionsExist": true,
+    "walkOk": true,
+    "shortOf": []
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-20",
+    "whole": true,
+    "tagsAttested": true,
+    "executionsExist": true,
+    "walkOk": true,
+    "shortOf": []
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-21",
+    "whole": true,
+    "tagsAttested": true,
+    "executionsExist": true,
+    "walkOk": true,
+    "shortOf": []
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-22",
+    "whole": false,
+    "tagsAttested": true,
+    "executionsExist": false,
+    "walkOk": true,
+    "shortOf": [
+     "1 tagged option(s) carry NO EXECUTION: dog,snake (vr02-partial-group)"
+    ]
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-23",
+    "whole": false,
+    "tagsAttested": true,
+    "executionsExist": false,
+    "walkOk": true,
+    "shortOf": [
+     "1 tagged option(s) carry NO EXECUTION: cold,rough (vr02-partial-group)"
+    ]
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-24",
+    "whole": false,
+    "tagsAttested": true,
+    "executionsExist": false,
+    "walkOk": true,
+    "shortOf": [
+     "1 tagged option(s) carry NO EXECUTION: net,kick (vr02-partial-group)"
+    ]
+   },
+   {
+    "itemId": "bank-vr-02-two-odd-ones-out-25",
+    "whole": false,
+    "tagsAttested": true,
+    "executionsExist": false,
+    "walkOk": true,
+    "shortOf": [
+     "1 tagged option(s) carry NO EXECUTION: tuna,dolphin (vr02-partial-group)"
+    ]
+   }
+  ]
+ },
+ "THREE_WHAT_HAPPENS_WHEN_THE_RE_AUTHORINGS_CROSS": {
+  "theThreeGates": [
+   "checkKeyPerformsStem — the key performs the stem's own task",
+   "checkTagWrite — every tag names an act its carrier executes, including the vr02 trio added on her 224th",
+   "checkItemChildFacing — the child-facing gate, now including the subject-matter screen sited on token fields"
+  ],
+  "thenTheDoor": "derived by itemWholeness and publishBlockers over the rows after the write, never from a message.",
+  "andTHEREPORT": "movement from the rows: pool before and after, the window, servable-case membership, and the blast radius walked from the case table."
+ },
+ "FOUR_THE_CASE": {
+  "id": "case-vr-02",
+  "title": "Two Don't Belong",
+  "questionType": "vr-02-two-odd-ones-out",
+  "paid": true,
+  "orderInDistrict": 2,
+  "rows": 25,
+  "statuses": {
+   "DRAFT": 25
+  },
+  "walkServesARealAsset": false,
+  "livePracticePool": 0
+ },
+ "findingsSha256": "6ea3b0d4a7a9a116c382d57bef6611991f7f854ff25f811196f0197334553654",
+ "howToCheckThisOnArrival": {
+  "subtreeKeys": [
+   "ONE_THE_SEVENTEEN_AS_CONTENT",
+   "TWO_WHICH_ROWS_ARE_WHOLE",
+   "FOUR_THE_CASE"
+  ],
+  "subtree": "an object of THIS DOCUMENT'S OWN TOP-LEVEL KEYS, exactly as spelled in subtreeKeys and nowhere renamed: {\"ONE_THE_SEVENTEEN_AS_CONTENT\", \"TWO_WHICH_ROWS_ARE_WHOLE\", \"FOUR_THE_CASE\"}",
+  "spec": "sha256 over json.dumps(subtree, sort_keys=True, separators=(\",\",\":\"), ensure_ascii=False).encode(\"utf-8\") — R729. ensure_ascii defaults to True and gives a different number.",
+  "andTheFileDigest": "the staging line and the .sha256 sidecar, over the whole file bytes"
+ },
+ "DIGESTS": {
+  "THE_FILE_DIGEST": "this file's own name and its .sha256 sidecar carry it. It cannot be written here: a file that states its own byte-hash changes the bytes it is stating.",
+  "theFileDigestSpec": "sha256 over the whole file bytes. This is what the filename carries after deliver() restamps, what the .sha256 sidecar holds, and what a receiving store should quote back to confirm arrival.",
+  "THE_FINDINGS_DIGEST": "6ea3b0d4a7a9a116c382d57bef6611991f7f854ff25f811196f0197334553654",
+  "theFindingsDigestSpec": "sha256 over json.dumps(subtree, sort_keys=True, separators=(\",\",\":\"), ensure_ascii=False) where subtree is {\"ONE_THE_SEVENTEEN_AS_CONTENT\", \"TWO_WHICH_ROWS_ARE_WHOLE\", \"FOUR_THE_CASE\"} — R729. It measures the FINDINGS, not the file, and changes only when a finding changes.",
+  "andWHYBOTH": "they never agree and neither is wrong. The file digest identifies the bytes; the findings digest identifies the claim. Quoting one without naming which is how one landing acquires two names (R981)."
+ },
+ "instrumentProvenance": {
+  "emittedBy": "cross-vr02-content-and-wholeness.ts",
+  "carriedFixture": false,
+  "MARK": "FROM AN UNFIXTURED INSTRUMENT",
+  "meaning": "this emitter carries no fixture, so nothing in this run proves it can find what it claims to find or stay silent on what is clean. Read its figures accordingly (Annie's clause, R726).",
+  "remedy": "the emitter earns a carried fixture before its next emission crosses (R725)."
+ }
+}

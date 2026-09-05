@@ -28002,3 +28002,52 @@ Three positions now route, every one a key.
 work** — `gate-report.ts` published two filtered lists without naming their parent (R1004), and two
 emitters measured at the cut without naming the instrument (R993). Both were written after those
 rules and both broke them, which is the argument for the checks rather than against the author.
+
+## R1008 — Two fives that were never the same five: six seats, not five
+
+David: *check on ids, not counts.* The rows were the same five — 17, 22, 23, 24, 25 — **and the
+seats were not.** Four of five name the same option. On row 17 the two stores name **different
+options of the same row**: theirs `circle,square`, which HAS an execution bound to superseded bytes;
+this store's `oval,triangle`, which has none at all.
+
+**Complementary, not duplicate — so the combined work is SIX seats.** The two screens are looking
+for different faults on one row: a withdrawal screen sees executions bound to a stale digest, a
+wholeness screen sees tagged options with no execution, **and each is blind to exactly what the
+other finds.** A seat with an execution is invisible to one; a seat without is invisible to the
+other. **Two counts of five is the cheapest possible way for that to look reconciled**, and nothing
+but the ids would have shown it.
+
+**And their explicitly-unchecked question, answered from the rows:** all twenty-five vr-02 rows
+carry exactly two `vr02-partial-group` options. The doubling survived the move and **is not confined
+to five rows — it is universal across the case**, so their five are selected by which executions are
+bound, not by which rows are doubled, and nothing in the doubling recomputes them. Every seat they
+name is still on its row: the withdrawals stay actionable and only their digests are superseded.
+
+## R1009 — Audience is a property of what a string does, and one query settles it
+
+Her 231st refused to rule what she could have ruled: *"whether a field is child-facing is answered
+by naming its surfaces, not by its position on a row"*, with the conditional stated in advance —
+if any child-facing surface renders `misconceptionExecution`, the five hold for her; if none does,
+the store writes them; **and if nobody knows what renders it, that is the never-screened class and
+the answer is one query.**
+
+**The query returned NONE.** Three staff surfaces name the field — two admin review tables and an
+e2e sweep that logs when it is empty rather than rendering it. Every child path projects it away:
+the orchestrator serves `{id, content}`, clue-tap serves `{id, label}`, the walk route loads no
+options at all, and the miss path serves the library `childHint`.
+
+**The thing worth saying is that the field IS loaded on the child path.** Both child readers
+`include` every option column and then project. That is correct today and **one careless edit from
+wrong** — `options.map((o) => ({ ...o }))` would serve it — so `check:execution-not-child-facing`
+reads the PROJECTIONS, not the includes, and carries two must-catch cases including that spread.
+**A fact that licenses a store to write is the worst kind to leave unasserted** (R180).
+
+**The five are written, computed rather than composed.** The template was LIFTED from a row that
+already carries it and then used to **rebuild that row's own execution byte-identically** — because
+a template read wrongly produces five wrong sentences that all look right, and nothing else would
+have caught it. Nineteen assertions, including that the tag predicate PERFORMS on every seat and
+that each names its odd word first, which is what *"starts from"* means. vr-02 is now **25 of 25
+whole**.
+
+**The sixth seat is untouched**: `circle,square` on row 17 has an execution and belongs to the other
+store's re-authoring, not to this gap.

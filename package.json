@@ -226,7 +226,8 @@
     "check:appropriateness-sited": "tsx scripts/check-appropriateness-sited.ts",
     "check:derived-lists": "tsx scripts/check-derived-lists.ts",
     "check:rule-id-owners": "tsx scripts/check-rule-id-owners.ts",
-    "check:gate-silence": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-gate-silence.ts"
+    "check:gate-silence": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-gate-silence.ts",
+    "check:execution-not-child-facing": "tsx scripts/check-execution-not-child-facing.ts"
   },
   "devDependencies": {
     "@eslint/js": "^9.20.0",
