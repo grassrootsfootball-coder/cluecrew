@@ -22,6 +22,8 @@ export interface GateSweep {
   screened: number;
   silent: RuleTally[];
   undeclaredSilent: RuleTally[];
+  /** Each filtered list above names what it was filtered FROM (R1004). */
+  derivedFrom: Record<string, { parent: string; parentSize: number; rule: string; kept: number; excluded: number; andWHATAREADERCANNOTSEEFROMTHEROWS: string }>;
 }
 
 /**
@@ -42,7 +44,16 @@ export function sweepGate(
     return { rule, count, rows, silent: count === 0, declared: declaredSilent[rule] ?? null };
   }).sort((a, b) => b.count - a.count || a.rule.localeCompare(b.rule));
   const silent = rules.filter((r) => r.silent);
-  return { rules, screened, silent, undeclaredSilent: silent.filter((r) => !r.declared) };
+  return {
+    rules, screened, silent, undeclaredSilent: silent.filter((r) => !r.declared),
+    /** R1004: both lists above are subsets, and a reader given only their length cannot see of what. */
+    derivedFrom: {
+      silent: { parent: 'every rule this gate can emit', parentSize: rules.length, rule: 'fired zero times across the corpus', kept: silent.length, excluded: rules.length - silent.length,
+        andWHATAREADERCANNOTSEEFROMTHEROWS: 'the silent list is a SUBSET of the gate\'s rules; the rules that fired are excluded from it and are the larger half.' },
+      undeclaredSilent: { parent: 'the silent rules', parentSize: silent.length, rule: 'no declared reason for the silence', kept: silent.filter((r) => !r.declared).length, excluded: silent.filter((r) => r.declared).length,
+        andWHATAREADERCANNOTSEEFROMTHEROWS: 'an empty undeclaredSilent means every silence is declared, NOT that nothing is silent.' },
+    },
+  };
 }
 
 /** Emitted rules the closed set does not know — a rule reaching a reader that nothing declares. */

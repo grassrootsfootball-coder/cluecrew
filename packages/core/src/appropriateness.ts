@@ -75,14 +75,15 @@ const REFUSED = [
  * somewhere" — which is what a list grows into if nobody states the test. Applied to the two words
  * her ruling names:
  *   · DRUG — bare, the narcotic sense arrives first. **In the class.** Added here.
- *   · TRIP — this store read it OUT of the class: bare, a journey or a stumble arrives first.
- *     **HER 229th OVERRULES THAT AND THE OVERRULE IS IN HER OWN TEXT**, which calls DRUG and TRIP
- *     *"the class's true boundary"* — a boundary case is inside the class, not outside it. Added.
- *     The reading was offered to be overruled and it was, by reading the return rather than by
- *     anyone conceding.
+ *   · TRIP — OUT of the class: bare, a journey or a stumble arrives first.
+ *     **THIS MOVED TWICE AND BOTH MOVES WERE READINGS OF ONE TEST.** Her 229th called DRUG and TRIP
+ *     *"the class's true boundary"*, which reads as inside it, so TRIP was added. Her 230th upholds
+ *     this store's original reading and TRIP leaves again. Recorded rather than tidied away,
+ *     because a list showing only its current state cannot be argued with — and no row's verdict
+ *     ever changed on TRIP, since every position carrying it was already cleared.
  */
 const FLAG_AMBIGUOUS_SENSE = [
-  'bloody', 'drunk', 'mistress', 'affair', 'naked', 'spirits', 'liquor', 'bitch', 'drug', 'trip',
+  'bloody', 'drunk', 'mistress', 'affair', 'naked', 'spirits', 'liquor', 'bitch', 'drug',
   /**
    * **FOUR CASES THIS STORE'S LIST FAILED IN THE AUTHORING STORE'S FIXTURE.** Their fixture asserts
    * these must not SILENTLY PASS and this store's list passed all four. Flagging satisfies the case
@@ -186,9 +187,13 @@ export function screenForAChild(
   if (flags.length && scope === 'bare') {
     /**
      * **THE STANDING EXCEPTION OUTRANKS A CLEARANCE, AND ONLY IN ONE DIRECTION.** A cleared
-     * distractor stays cleared; a cleared KEY routes again. Nothing here can clear a key, which is
-     * the point — the exception exists so that a ruling on one reading cannot become a permanent
-     * pass on the word a child is being taught to produce.
+     * distractor stays cleared; a cleared KEY routes again.
+     *
+     * **HER REASON, WHICH IS WHY THE DIRECTION IS NOT ARBITRARY: a distractor she rejects is a
+     * smaller act than a key she writes down.** The child meets a distractor in order to refuse it
+     * and meets a key in order to produce it and carry it away, so a clearance on the first is a
+     * smaller claim than a clearance on the second — and only the smaller one can safely be made
+     * permanent.
      */
     if (ctx.cleared && ctx.role !== 'key') {
       return { verdict: 'PASS', hits: [], scope, door, action: 'accept', reader: null };

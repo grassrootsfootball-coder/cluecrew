@@ -351,7 +351,7 @@ const MAKE_A_WORD: Array<[string, string, string, string, string]> = [
   // [w1, w3, answer, d1, d2] — answer = first two of w1 + first two of w3
   ['STAY', 'ARMY', 'STAR', 'STAY', 'ARMS'], ['SHEEP', 'OPEN', 'SHOP', 'SHOE', 'OPAL'],
   ['GRASS', 'INK', 'GRIN', 'GRAN', 'RINK'], ['FLAG', 'ATLAS', 'FLAT', 'FLAP', 'ALAS'],
-  ['CHEESE', 'INSECT', 'CHIN', 'CHIP', 'ICES'], ['DRESS', 'UMBRELLA', 'DRUM', 'DRUG', 'UMPS'],
+  ['CHEESE', 'INSECT', 'CHIN', 'CHIP', 'ICES'], ['DRESS', 'UMBRELLA', 'DRUM', 'DREL', 'UMPS'],
   ['PLATE', 'UMPIRE', 'PLUM', 'PLAN', 'UMPS'], ['CLOUD', 'APPLE', 'CLAP', 'CLAY', 'APES'],
   ['TREE', 'IPAD', 'TRIP', 'TRAY', 'PADS'], ['SNAKE', 'APRON', 'SNAP', 'SNIP', 'APES'],
   ['SWAN', 'IMAGE', 'SWIM', 'SWAM', 'MAGE'], ['CRAB', 'ABLE', 'CRAB', 'CRIB', 'ABLE'],

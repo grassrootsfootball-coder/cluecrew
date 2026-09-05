@@ -97,6 +97,9 @@ async function main() {
   // finished, and reporting it forever would make the list nag about work already done.
   const closed = results.filter((r) => r.state === 'CLOSED' && known.has(r.id));
 
+  // R993: a figure taken at the cut names the instrument it was taken on.
+  const inst = lex.provenance.THE_CUT_AND_ITS_INSTRUMENT as { cut: number; instrument: { source: string; sha256: string | null } };
+  console.log(`  measured at Zipf >= ${inst.cut} on ${inst.instrument.source.split('(')[0]!.trim()} (${String(inst.instrument.sha256).slice(0, 16)}).`);
   console.log(`  ${declared.items.length} declared open item(s); ${results.filter((r) => r.state === 'OPEN').length} still OPEN, measured from the rows.`);
   for (const r of results) {
     const d = declared.items.find((i) => i.id === r.id);
