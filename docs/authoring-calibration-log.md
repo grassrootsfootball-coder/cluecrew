@@ -27215,3 +27215,58 @@ run, cycling twelve pairs. Every boundary the rows carry — `clusterPosition`, 
 on the twenty-five cut rows. **So the seed test Annie asked for cannot be run: no recorded boundary
 discriminates within either population**, and that is a fact about what the rows record, not a
 negative result. Declaring it is R61 — an empty population is a declaration, never an inference.
+
+## R991 — Her 224th lands as a predicate; the 3.0 cut is unmeasurable here and collides with the firewall
+
+**THE RULING THAT LANDED.** Rows 01 and 06 take `vr02-answered-the-opposite`. Her reasoning is not
+a judgement about two rows — *"both pairs join two group members and nothing else, so the act these
+seats record is choosing the two that belong"* is **set membership on the stem's own words**, and it
+needs no lexicon. So it went into `tag-write-gate.ts` as three predicates rather than two writes:
+`vr02-answered-the-opposite` (neither chosen word is odd), `vr02-partial-group` (exactly one is),
+and `vr02-surface-link`, which now REFUSES on a pair lying wholly inside the group and stays
+UNDECIDED elsewhere — because whether a link rests on look or sound is a judgement no predicate
+should pretend to make.
+
+**Screened across all 25 rows and 75 seats, the rule selects EXACTLY the two rows she named**: 59
+seats perform their tag, 14 are UNDECIDED, 2 refuse. The script refuses to write if that agreement
+fails, and the ruling wins over the rule if they ever diverge. This is the good case of R173 — the
+agreement is between two independent things, her reading and the encoding, not a measurement
+agreeing with the thing that produced it.
+
+**Her generalisation is the transferable half: a tag names the ACT; the attraction explains which
+performance of it the child chose.** The alliteration in pear/plum and bird/bee is real, and it is
+why *those* two group members caught her eye — not what she did with them. A tag library that lets
+attraction rename the act will retag by salience, which is how both seats were surface-link.
+
+---
+
+**AND THE OTHER THREE INSTRUCTIONS CANNOT BE EXECUTED, FOR TWO SEPARATE REASONS.**
+
+**One: nothing here can measure a 3.0 cut.** The return does not name a scale; the estate's only
+frequency scale is Zipf via SUBTLEX-UK, so that is the reading. `FREQUENCY_SOURCE.installed` is
+`false` (R281), `data/frequency/` holds its `.gitignore` and its `SOURCE.md` and no data, and
+`expectedDigest` is still null. So the correct output is `FREQUENCY_UNMEASURED` — **not a pass and
+not a zero: nothing was compared.** The fix is the one command in `data/frequency/SOURCE.md`, run
+by a person, and then the digest pinned in committed source.
+
+**She is right that the shape tests must wait, and the reason is worth keeping.** Running
+co-occurrence and clustering on web2 would measure the wordlist, and I have now twice built a
+substitute instrument that looked like an answer — the 302-card vault scoring 0 of 13 (R989), and
+before it web2 itself. **A third improvised lexicon would be the same mistake a third time.** The
+figures stay as measured under web2, labelled with the instrument, and the inference drawn from
+their shape stays withdrawn, which is her own ruling applied to her own reasoning.
+
+**Two: the regeneration instruction collides with a standing ruling, and the collision is
+surfaced, not resolved here.** Her 224th says the regeneration *"searches against the constraint set
+at 3.0"*. David's corpus-firewall ruling of 2026-08-19, recorded in `frequency-signal.ts` and
+`data/frequency/SOURCE.md`, says of that same list: **"It may NOT be used to select or generate item
+content. It measures items that already exist."** A search over the constraint set is generation by
+the frequency list — precisely the act the firewall forbids. Both rulings are clear and they point
+opposite ways on one action.
+
+**The manifesto governs: a deviation is surfaced, never silent, and this store does not pick between
+two rulings by preferring the newer one.** So CHAIR/MOP, CHEAT/AIR and SHELF/TRAIN stay unregenerated
+and their rows stay where they are. What is needed is one decision from David: whether measuring a
+candidate stem against a frequency cut counts as the list *generating* content, or as it *checking*
+a stem a search proposed — a distinction the firewall ruling did not have to draw, because when it
+was written nothing was proposing stems.

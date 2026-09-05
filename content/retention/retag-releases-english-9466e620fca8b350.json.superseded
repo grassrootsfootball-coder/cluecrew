@@ -1,0 +1,537 @@
+{
+  "kind": "retag-releases-english",
+  "note": "Every retag on record, with the successor's state read from the library table rather than relayed. Cowork supplies the population (the retag history lives in their store); this supplies the state, and additionally whether each retag actually landed here.",
+  "generatedAt": "2026-08-17T16:56:27.649Z",
+  "source": {
+    "file": "RETAGDEPENDENCYREPORT.txt",
+    "retagsRead": 36
+  },
+  "headline": {
+    "released": 36,
+    "notReleased": 0,
+    "theyHadNoState": 12,
+    "overtakenByAnApprovalSince": 11,
+    "contradictions": 0,
+    "retagsThatDidNotLandHere": 0
+  },
+  "bySuccessor": [
+    {
+      "successor": "en-vocab-dominant-sense",
+      "ourState": "ACTIVE",
+      "retags": 13,
+      "items": [
+        "ENG-001-WIW-08-A",
+        "ENG-001-WIW-17-B",
+        "ENG-001-WIW-20-A",
+        "ENG-005-BB-02-A",
+        "ENG-005-BB-04-A",
+        "ENG-006-TM-08-A",
+        "ENG-007-LP-03-A",
+        "ENG-007-LP-10-A",
+        "ENG-008-RC-08-B",
+        "ENG-009-SM-07-A",
+        "ENG-009-SM-08-A",
+        "ENG-010-JE-08-B",
+        "ENG-012-ML-08-B"
+      ]
+    },
+    {
+      "successor": "en-vocab-neighbouring-sense",
+      "ourState": "ACTIVE",
+      "retags": 5,
+      "items": [
+        "ENG-001-WIW-04-A",
+        "ENG-006-TM-12-A",
+        "ENG-007-LP-10-C",
+        "ENG-008-RC-07-A",
+        "ENG-011-CV-02-A"
+      ]
+    },
+    {
+      "successor": "en-coordination-wrong-conjunct",
+      "ourState": "ACTIVE",
+      "retags": 5,
+      "items": [
+        "ENG-008-RC-07-B",
+        "ENG-009-SM-07-B",
+        "ENG-011-CV-02-C",
+        "ENG-011-CV-06-C",
+        "ENG-012-ML-08-C"
+      ]
+    },
+    {
+      "successor": "en-vocab-form-lookalike",
+      "ourState": "ACTIVE",
+      "retags": 3,
+      "items": [
+        "ENG-001-WIW-11-B",
+        "ENG-010-JE-09-A",
+        "ENG-011-CV-06-A"
+      ]
+    },
+    {
+      "successor": "en-within-span-wrong-element",
+      "ourState": "ACTIVE",
+      "retags": 3,
+      "items": [
+        "ENG-001-WIW-12-B",
+        "ENG-001-WIW-19-C",
+        "ENG-007-LP-03-D"
+      ]
+    },
+    {
+      "successor": "en-wrong-scope-retrieval",
+      "ourState": "ACTIVE",
+      "retags": 3,
+      "items": [
+        "ENG-006-TM-08-B",
+        "ENG-011-CV-09-D",
+        "ENG-019-BV-11-C"
+      ]
+    },
+    {
+      "successor": "en-plausible-not-stated",
+      "ourState": "ACTIVE",
+      "retags": 1,
+      "items": [
+        "ENG-001-WIW-16-(ledger)"
+      ]
+    },
+    {
+      "successor": "en-cause-agent-swap",
+      "ourState": "ACTIVE",
+      "retags": 1,
+      "items": [
+        "ENG-006-TM-02-D"
+      ]
+    },
+    {
+      "successor": "en-whole-text-absence-asserted",
+      "ourState": "ACTIVE",
+      "retags": 1,
+      "items": [
+        "ENG-007-LP-12-A"
+      ]
+    },
+    {
+      "successor": "en-attribute-transfer",
+      "ourState": "ACTIVE",
+      "retags": 1,
+      "items": [
+        "ENG-008-RC-05-B"
+      ]
+    }
+  ],
+  "retags": [
+    {
+      "itemId": "ENG-001-WIW-04",
+      "opt": "A",
+      "dependsOn": "en-vocab-neighbouring-sense",
+      "theirState": "PROPOSED",
+      "movedOff": "en-vocab-secondary-sense",
+      "ourState": "ACTIVE",
+      "released": true,
+      "stateAgreement": "OVERTAKEN — they said PROPOSED, approved since; store says ACTIVE",
+      "landed": "LANDED"
+    },
+    {
+      "itemId": "ENG-001-WIW-08",
+      "opt": "A",
+      "dependsOn": "en-vocab-dominant-sense",
+      "theirState": "ACTIVE",
+      "movedOff": "en-vocab-secondary-sense",
+      "ourState": "ACTIVE",
+      "released": true,
+      "stateAgreement": "AGREES",
+      "landed": "LANDED"
+    },
+    {
+      "itemId": "ENG-001-WIW-11",
+      "opt": "B",
+      "dependsOn": "en-vocab-form-lookalike",
+      "theirState": "PROPOSED",
+      "movedOff": "en-vocab-secondary-sense",
+      "ourState": "ACTIVE",
+      "released": true,
+      "stateAgreement": "OVERTAKEN — they said PROPOSED, approved since; store says ACTIVE",
+      "landed": "LANDED"
+    },
+    {
+      "itemId": "ENG-001-WIW-12",
+      "opt": "B",
+      "dependsOn": "en-within-span-wrong-element",
+      "theirState": "PROPOSED",
+      "movedOff": "en-inference-literal-lookalike",
+      "ourState": "ACTIVE",
+      "released": true,
+      "stateAgreement": "OVERTAKEN — they said PROPOSED, approved since; store says ACTIVE",
+      "landed": "LANDED"
+    },
+    {
+      "itemId": "ENG-001-WIW-16",
+      "opt": "(ledger)",
+      "dependsOn": "en-plausible-not-stated",
+      "theirState": "UNKNOWN",
+      "movedOff": "en-plausible-not-stated",
+      "ourState": "ACTIVE",
+      "released": true,
+      "stateAgreement": "THEY HAD NO STATE",
+      "landed": "N/A — ledger row, not an option"
+    },
+    {
+      "itemId": "ENG-001-WIW-17",
+      "opt": "B",
+      "dependsOn": "en-vocab-dominant-sense",
+      "theirState": "ACTIVE",
+      "movedOff": "en-vocab-secondary-sense",
+      "ourState": "ACTIVE",
+      "released": true,
+      "stateAgreement": "AGREES",
+      "landed": "LANDED"
+    },
+    {
+      "itemId": "ENG-001-WIW-19",
+      "opt": "C",
+      "dependsOn": "en-within-span-wrong-element",
+      "theirState": "PROPOSED",
+      "movedOff": "en-wrong-scope-retrieval",
+      "ourState": "ACTIVE",
+      "released": true,
+      "stateAgreement": "OVERTAKEN — they said PROPOSED, approved since; store says ACTIVE",
+      "landed": "LANDED"
+    },
+    {
+      "itemId": "ENG-001-WIW-20",
+      "opt": "A",
+      "dependsOn": "en-vocab-dominant-sense",
+      "theirState": "ACTIVE",
+      "movedOff": "en-vocab-secondary-sense",
+      "ourState": "ACTIVE",
+      "released": true,
+      "stateAgreement": "AGREES",
+      "landed": "LANDED"
+    },
+    {
+      "itemId": "ENG-005-BB-02",
+      "opt": "A",
+      "dependsOn": "en-vocab-dominant-sense",
+      "theirState": "ACTIVE",
+      "movedOff": "en-vocab-secondary-sense",
+      "ourState": "ACTIVE",
+      "released": true,
+      "stateAgreement": "AGREES",
+      "landed": "LANDED"
+    },
+    {
+      "itemId": "ENG-005-BB-04",
+      "opt": "A",
+      "dependsOn": "en-vocab-dominant-sense",
+      "theirState": "ACTIVE",
+      "movedOff": "en-vocab-secondary-sense",
+      "ourState": "ACTIVE",
+      "released": true,
+      "stateAgreement": "AGREES",
+      "landed": "LANDED"
+    },
+    {
+      "itemId": "ENG-006-TM-02",
+      "opt": "D",
+      "dependsOn": "en-cause-agent-swap",
+      "theirState": "UNKNOWN",
+      "movedOff": "en-within-span-wrong-element",
+      "ourState": "ACTIVE",
+      "released": true,
+      "stateAgreement": "THEY HAD NO STATE",
+      "landed": "LANDED"
+    },
+    {
+      "itemId": "ENG-006-TM-08",
+      "opt": "A",
+      "dependsOn": "en-vocab-dominant-sense",
+      "theirState": "ACTIVE",
+      "movedOff": "en-vocab-secondary-sense",
+      "ourState": "ACTIVE",
+      "released": true,
+      "stateAgreement": "AGREES",
+      "landed": "LANDED"
+    },
+    {
+      "itemId": "ENG-006-TM-08",
+      "opt": "B",
+      "dependsOn": "en-wrong-scope-retrieval",
+      "theirState": "UNKNOWN",
+      "movedOff": "en-inference-literal-lookalike",
+      "ourState": "ACTIVE",
+      "released": true,
+      "stateAgreement": "THEY HAD NO STATE",
+      "landed": "LANDED"
+    },
+    {
+      "itemId": "ENG-006-TM-12",
+      "opt": "A",
+      "dependsOn": "en-vocab-neighbouring-sense",
+      "theirState": "PROPOSED",
+      "movedOff": "en-vocab-secondary-sense",
+      "ourState": "ACTIVE",
+      "released": true,
+      "stateAgreement": "OVERTAKEN — they said PROPOSED, approved since; store says ACTIVE",
+      "landed": "LANDED"
+    },
+    {
+      "itemId": "ENG-007-LP-03",
+      "opt": "A",
+      "dependsOn": "en-vocab-dominant-sense",
+      "theirState": "ACTIVE",
+      "movedOff": "en-vocab-secondary-sense",
+      "ourState": "ACTIVE",
+      "released": true,
+      "stateAgreement": "AGREES",
+      "landed": "LANDED"
+    },
+    {
+      "itemId": "ENG-007-LP-03",
+      "opt": "D",
+      "dependsOn": "en-within-span-wrong-element",
+      "theirState": "PROPOSED",
+      "movedOff": "en-inference-literal-lookalike",
+      "ourState": "ACTIVE",
+      "released": true,
+      "stateAgreement": "OVERTAKEN — they said PROPOSED, approved since; store says ACTIVE",
+      "landed": "LANDED"
+    },
+    {
+      "itemId": "ENG-007-LP-10",
+      "opt": "A",
+      "dependsOn": "en-vocab-dominant-sense",
+      "theirState": "ACTIVE",
+      "movedOff": "en-vocab-secondary-sense",
+      "ourState": "ACTIVE",
+      "released": true,
+      "stateAgreement": "AGREES",
+      "landed": "LANDED"
+    },
+    {
+      "itemId": "ENG-007-LP-10",
+      "opt": "C",
+      "dependsOn": "en-vocab-neighbouring-sense",
+      "theirState": "PROPOSED",
+      "movedOff": "en-vocab-secondary-sense",
+      "ourState": "ACTIVE",
+      "released": true,
+      "stateAgreement": "OVERTAKEN — they said PROPOSED, approved since; store says ACTIVE",
+      "landed": "LANDED"
+    },
+    {
+      "itemId": "ENG-007-LP-12",
+      "opt": "A",
+      "dependsOn": "en-whole-text-absence-asserted",
+      "theirState": "UNKNOWN",
+      "movedOff": "en-negation-dropped",
+      "ourState": "ACTIVE",
+      "released": true,
+      "stateAgreement": "THEY HAD NO STATE",
+      "landed": "LANDED"
+    },
+    {
+      "itemId": "ENG-008-RC-05",
+      "opt": "B",
+      "dependsOn": "en-attribute-transfer",
+      "theirState": "UNKNOWN",
+      "movedOff": "en-within-span-wrong-element",
+      "ourState": "ACTIVE",
+      "released": true,
+      "stateAgreement": "THEY HAD NO STATE",
+      "landed": "LANDED"
+    },
+    {
+      "itemId": "ENG-008-RC-07",
+      "opt": "A",
+      "dependsOn": "en-vocab-neighbouring-sense",
+      "theirState": "PROPOSED",
+      "movedOff": "en-vocab-secondary-sense",
+      "ourState": "ACTIVE",
+      "released": true,
+      "stateAgreement": "OVERTAKEN — they said PROPOSED, approved since; store says ACTIVE",
+      "landed": "LANDED"
+    },
+    {
+      "itemId": "ENG-008-RC-07",
+      "opt": "B",
+      "dependsOn": "en-coordination-wrong-conjunct",
+      "theirState": "UNKNOWN",
+      "movedOff": "en-within-span-wrong-element",
+      "ourState": "ACTIVE",
+      "released": true,
+      "stateAgreement": "THEY HAD NO STATE",
+      "landed": "LANDED"
+    },
+    {
+      "itemId": "ENG-008-RC-08",
+      "opt": "B",
+      "dependsOn": "en-vocab-dominant-sense",
+      "theirState": "ACTIVE",
+      "movedOff": "en-vocab-secondary-sense",
+      "ourState": "ACTIVE",
+      "released": true,
+      "stateAgreement": "AGREES",
+      "landed": "LANDED"
+    },
+    {
+      "itemId": "ENG-009-SM-07",
+      "opt": "A",
+      "dependsOn": "en-vocab-dominant-sense",
+      "theirState": "ACTIVE",
+      "movedOff": "en-vocab-secondary-sense",
+      "ourState": "ACTIVE",
+      "released": true,
+      "stateAgreement": "AGREES",
+      "landed": "LANDED"
+    },
+    {
+      "itemId": "ENG-009-SM-07",
+      "opt": "B",
+      "dependsOn": "en-coordination-wrong-conjunct",
+      "theirState": "UNKNOWN",
+      "movedOff": "en-within-span-wrong-element",
+      "ourState": "ACTIVE",
+      "released": true,
+      "stateAgreement": "THEY HAD NO STATE",
+      "landed": "LANDED"
+    },
+    {
+      "itemId": "ENG-009-SM-08",
+      "opt": "A",
+      "dependsOn": "en-vocab-dominant-sense",
+      "theirState": "ACTIVE",
+      "movedOff": "en-vocab-secondary-sense",
+      "ourState": "ACTIVE",
+      "released": true,
+      "stateAgreement": "AGREES",
+      "landed": "LANDED"
+    },
+    {
+      "itemId": "ENG-010-JE-08",
+      "opt": "B",
+      "dependsOn": "en-vocab-dominant-sense",
+      "theirState": "ACTIVE",
+      "movedOff": "en-vocab-secondary-sense",
+      "ourState": "ACTIVE",
+      "released": true,
+      "stateAgreement": "AGREES",
+      "landed": "LANDED"
+    },
+    {
+      "itemId": "ENG-010-JE-09",
+      "opt": "A",
+      "dependsOn": "en-vocab-form-lookalike",
+      "theirState": "PROPOSED",
+      "movedOff": "en-vocab-secondary-sense",
+      "ourState": "ACTIVE",
+      "released": true,
+      "stateAgreement": "OVERTAKEN — they said PROPOSED, approved since; store says ACTIVE",
+      "landed": "LANDED"
+    },
+    {
+      "itemId": "ENG-011-CV-02",
+      "opt": "A",
+      "dependsOn": "en-vocab-neighbouring-sense",
+      "theirState": "PROPOSED",
+      "movedOff": "en-vocab-secondary-sense",
+      "ourState": "ACTIVE",
+      "released": true,
+      "stateAgreement": "OVERTAKEN — they said PROPOSED, approved since; store says ACTIVE",
+      "landed": "LANDED"
+    },
+    {
+      "itemId": "ENG-011-CV-02",
+      "opt": "C",
+      "dependsOn": "en-coordination-wrong-conjunct",
+      "theirState": "UNKNOWN",
+      "movedOff": "en-within-span-wrong-element",
+      "ourState": "ACTIVE",
+      "released": true,
+      "stateAgreement": "THEY HAD NO STATE",
+      "landed": "LANDED"
+    },
+    {
+      "itemId": "ENG-011-CV-06",
+      "opt": "A",
+      "dependsOn": "en-vocab-form-lookalike",
+      "theirState": "PROPOSED",
+      "movedOff": "en-vocab-secondary-sense",
+      "ourState": "ACTIVE",
+      "released": true,
+      "stateAgreement": "OVERTAKEN — they said PROPOSED, approved since; store says ACTIVE",
+      "landed": "LANDED"
+    },
+    {
+      "itemId": "ENG-011-CV-06",
+      "opt": "C",
+      "dependsOn": "en-coordination-wrong-conjunct",
+      "theirState": "UNKNOWN",
+      "movedOff": "en-within-span-wrong-element",
+      "ourState": "ACTIVE",
+      "released": true,
+      "stateAgreement": "THEY HAD NO STATE",
+      "landed": "LANDED"
+    },
+    {
+      "itemId": "ENG-011-CV-09",
+      "opt": "D",
+      "dependsOn": "en-wrong-scope-retrieval",
+      "theirState": "UNKNOWN",
+      "movedOff": "en-plausible-not-stated",
+      "ourState": "ACTIVE",
+      "released": true,
+      "stateAgreement": "THEY HAD NO STATE",
+      "landed": "LANDED"
+    },
+    {
+      "itemId": "ENG-012-ML-08",
+      "opt": "B",
+      "dependsOn": "en-vocab-dominant-sense",
+      "theirState": "ACTIVE",
+      "movedOff": "en-vocab-secondary-sense",
+      "ourState": "ACTIVE",
+      "released": true,
+      "stateAgreement": "AGREES",
+      "landed": "LANDED"
+    },
+    {
+      "itemId": "ENG-012-ML-08",
+      "opt": "C",
+      "dependsOn": "en-coordination-wrong-conjunct",
+      "theirState": "UNKNOWN",
+      "movedOff": "en-within-span-wrong-element",
+      "ourState": "ACTIVE",
+      "released": true,
+      "stateAgreement": "THEY HAD NO STATE",
+      "landed": "LANDED"
+    },
+    {
+      "itemId": "ENG-019-BV-11",
+      "opt": "C",
+      "dependsOn": "en-wrong-scope-retrieval",
+      "theirState": "UNKNOWN",
+      "movedOff": "en-motive-invention",
+      "ourState": "ACTIVE",
+      "released": true,
+      "stateAgreement": "THEY HAD NO STATE",
+      "landed": "LANDED"
+    }
+  ],
+  "limits": [
+    "A retag that left neither _previousMisconceptionId nor _previousMechanism is invisible to the population, and the population is Cowork's. Nothing here can widen it — this sweep can only be as complete as the history they kept.",
+    "RELEASED means the successor is ACTIVE, which clears the tag route ONLY. An item can be released here and still refuse a verdict on child-facing copy: see check:verdict-refusals."
+  ],
+  "stamp": {
+    "generatedAt": "2026-08-17T16:56:27.649Z",
+    "sourceHash": "9466e620fca8b350",
+    "snapshotOf": "status",
+    "describes": "every recorded retag with its successor state read from the library table",
+    "stampedOver": [
+      "retags",
+      "bySuccessor"
+    ]
+  }
+}

@@ -46,6 +46,20 @@ export type Lexicon = (word: string) => boolean;
 type Predicate = (s: TagWriteSubject, isWord: Lexicon) => TagWriteResult;
 
 const performs = (act: string, why: string): TagWriteResult => ({ verdict: 'PERFORMS', act, why });
+
+/**
+ * The group of three, the two odd ones, and how many of a seat's pair are odd. Returns null rather
+ * than an empty shape when the stem cannot be read — an empty result and a broken read are
+ * indistinguishable downstream (R173).
+ */
+function vr02Groups(s: TagWriteSubject) {
+  const words = (s.stem.words as unknown[] | undefined)?.map((w) => String(w).trim().toLowerCase());
+  const key = s.keyValue.split(',').map((w) => w.trim().toLowerCase()).filter(Boolean);
+  const pair = s.optionValue.split(',').map((w) => w.trim().toLowerCase()).filter(Boolean);
+  if (!words || words.length < 3 || key.length !== 2 || pair.length !== 2) return null;
+  const group = words.filter((w) => !key.includes(w));
+  return { group, key, pair, chosenInKey: pair.filter((w) => key.includes(w)).length };
+}
 const refuses = (act: string, why: string): TagWriteResult => ({ verdict: 'REFUSES', act, why });
 
 /**
@@ -78,6 +92,45 @@ export const TAG_PREDICATES: Record<string, Predicate> = {
     return d === 1 || d === 2
       ? performs('a slip of one or two', `off by ${d}`)
       : refuses('a slip of one or two', `off by ${Number.isNaN(d) ? 'a non-numeric amount' : d} from the key ${s.keyValue}`);
+  },
+
+  /**
+   * THE vr-02 TRIO (Annie's 224th, 2026-08-24). Her ruling on rows 01 and 06 is not a judgement
+   * about two rows — it is a PREDICATE, and one that needs no lexicon: **the act a seat records is
+   * choosing two words that both lie inside the group of three.** The stem carries five words and
+   * the key names the two odd ones, so the group is the remainder and the test is set membership.
+   *
+   * **A TAG NAMES THE ACT; THE ATTRACTION EXPLAINS WHICH PERFORMANCE OF IT SHE CHOSE.** Both
+   * disputed seats — pear/plum and bird/bee — alliterate, and the alliteration is real. It explains
+   * why THOSE two group members caught her eye; it does not change what she did, which was to
+   * answer the opposite question. So `vr02-surface-link` REFUSES on a pair lying wholly inside the
+   * group, and stays UNDECIDED elsewhere, where whether a link rests on look or sound is a
+   * judgement no predicate should pretend to make.
+   */
+  'vr02-answered-the-opposite': (s) => {
+    const g = vr02Groups(s);
+    if (!g) return { verdict: 'UNDECIDED', act: null, why: 'the stem carries no readable word list, or the option is not a pair' };
+    return g.chosenInKey === 0
+      ? performs('chose two words that both belong to the group', `${g.pair.join(' and ')} both sit inside the group (${g.group.join(', ')}); the odd ones are ${g.key.join(' and ')}`)
+      : refuses('chose two words that both belong to the group', `${g.pair.join(' and ')} includes ${g.chosenInKey} of the two odd ones, so the act performed was not answering the opposite question`);
+  },
+
+  'vr02-partial-group': (s) => {
+    const g = vr02Groups(s);
+    if (!g) return { verdict: 'UNDECIDED', act: null, why: 'the stem carries no readable word list, or the option is not a pair' };
+    return g.chosenInKey === 1
+      ? performs('found one odd word and paired it with a group member', `${g.pair.join(' and ')} takes one odd word and one group member`)
+      : refuses('found one odd word and paired it with a group member', g.chosenInKey === 0
+        ? `${g.pair.join(' and ')} are both group members — no odd word was found at all`
+        : `${g.pair.join(' and ')} is the key itself`);
+  },
+
+  'vr02-surface-link': (s) => {
+    const g = vr02Groups(s);
+    if (!g) return { verdict: 'UNDECIDED', act: null, why: 'the stem carries no readable word list, or the option is not a pair' };
+    return g.chosenInKey === 0
+      ? refuses('grouped by look or sound instead of meaning', `${g.pair.join(' and ')} both sit inside the group, so the act recorded is answering the opposite question. A shared look or sound is why these two were picked, not what was done with them (Annie, 224th).`)
+      : { verdict: 'UNDECIDED', act: null, why: 'whether the link rests on look or sound rather than meaning is a judgement, not an execution' };
   },
 
   'vr-move-letter-first-word-invalid': (s, isWord) => {
