@@ -70,7 +70,7 @@ export function classifyFrequencyPair(input: {
 
 /** The state of the signal itself. Null source is the honest answer today. */
 export const FREQUENCY_SOURCE = {
-  installed: false,
+  installed: true,
   candidate: 'SUBTLEX-UK (van Heuven et al. 2014), Zipf scale, British English, 160,022 word types',
   candidateApprovedBy: 'David, 2026-08-19 — approved as the CANDIDATE; the licence is the ruling',
   /**
@@ -95,15 +95,32 @@ export const FREQUENCY_SOURCE = {
    * in committed source, which is the half that can be shared without a licence.
    */
   localPath: 'data/frequency/SUBTLEX-UK.txt.zip',
-  expectedDigest: null as string | null,
-  retrievedOn: null as string | null,
+  expectedDigest: 'e40d83af55eb85e9e2bc0d72e1022b10e47e31ff2086ad2edcc18292d6bd6616' as string | null,
+  retrievedOn: '2026-09-05' as string | null,
+  fetchedOnDavidsInstruction: '2026-09-05 — "install the source, pin its digest". The bytes stay out of git (data/frequency/.gitignore); only this digest is committed, which is the half that needs no grant.',
+  rows: 160024,
+  /**
+   * **WHICH COLUMN IS THE CUT TAKEN ON, AND WHO CHOSE IT.** The file carries four Zipf columns:
+   * the whole corpus, and three subcorpora including CBBC (children's television, roughly the age
+   * band this estate teaches). Annie ruled the cut at 3.0 and did not name a column, and the
+   * choice changes the answer — a word can clear 3.0 on adult subtitles and not appear in CBBC at
+   * all.
+   *
+   * `LogFreq(Zipf)` is the primary, because "Zipf 3.0" unqualified conventionally means the whole
+   * corpus and that is the likeliest reading of an unqualified 3.0. **But the CBBC figure travels
+   * beside every verdict** rather than being discarded, so the choice is visible in the output and
+   * can be ruled against evidence instead of inherited from this note (R604: a field is a decision
+   * if it can be disobeyed; this one can, and the artefact shows what obeying differently costs).
+   */
+  primaryColumn: 'LogFreq(Zipf)',
+  columnChoiceIsNOTRULED: 'Annie ruled the CUT (3.0), not the COLUMN. The primary here is a reading, not a ruling, and every emission carries the CBBC Zipf beside it so the reading can be checked.',
   /**
    * **A LOCAL MEASUREMENT IS NOT A GATE, AND MUST SAY SO IN ITS OWN OUTPUT.** A check that runs on
    * one machine and is absent in CI cannot fail a commit, and this project has spent a month on
    * what an unreadable check is worth. Any emission built on this source declares LOCAL, and
    * declares UNMEASURED — never "no faults" — where the file is absent.
    */
-  measurementStatus: 'LOCAL — not a gate, and not run in CI, until a licence answer lands',
+  measurementStatus: 'LOCAL — installed on this machine 2026-09-05 and still NOT A CI GATE: the bytes cannot be committed, so a check built on this is absent in CI and must declare LOCAL in its own output. The licence remains UNESTABLISHED; fetching for local use was never the act that needed a grant.',
 } as const;
 
 /** What a check must print when the file is not on the machine. Absence is not a clean result. */
