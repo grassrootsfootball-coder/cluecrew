@@ -29,6 +29,47 @@ const REPO = pjoin(__dirname, '..', '..');
 /** Annie's cut, 224th return. A parameter, not a constant, so it is argued about rather than inherited. */
 export const CHILD_CUT_ZIPF = 3.0;
 
+/**
+ * THE INSTRUMENT TRAVELS WITH THE CUT (Annie's 225th, 2026-08-24).
+ *
+ * **A RULING THAT NAMES ONLY ITS NUMBER CANNOT BE CHECKED ACROSS STORES.** The authoring store
+ * runs wordfreq 3.1.1 and reads GRAN at 3.44; this store reads SUBTLEX-UK. Both are honest
+ * instruments and they disagree, so "3.0" alone is not a shared fact — two stores can apply the
+ * same ruling faithfully, reach different verdicts, and have no way to discover why.
+ *
+ * So every emission that names the cut names the instrument WITH it: the source, its digest, its
+ * version, and the name filter — because the filter is part of the measurement, not a detail of
+ * the implementation. GOVE clears 3.0 at 3.74 and is excluded as a surname; a store told only
+ * "3.0" would admit it and be right by the ruling as written.
+ *
+ * This is R985 one level up: there, a digest travelled with the keys it was taken over; here, a
+ * threshold travels with the instrument it was taken on. A number without its instrument is a
+ * value with no subject.
+ */
+export function cutDeclaration() {
+  return {
+    cut: CHILD_CUT_ZIPF,
+    ruling: 'Annie, 224th return — validity is what a competent eleven-year-old knows, not what a broad dictionary holds. The cut is 3.0.',
+    instrument: {
+      source: 'SUBTLEX-UK (van Heuven, Mandera, Keuleers & Brysbaert 2014), Zipf scale, British English',
+      sha256: FREQUENCY_SOURCE.expectedDigest,
+      retrievedOn: FREQUENCY_SOURCE.retrievedOn,
+      rows: FREQUENCY_SOURCE.rows,
+      column: FREQUENCY_SOURCE.primaryColumn,
+      columnIsAREADINGNotARuling: FREQUENCY_SOURCE.columnChoiceIsNOTRULED,
+    },
+    nameFilter: {
+      rule: 'entries whose DomPoS is "name" are excluded from the lexicon entirely, whatever their Zipf',
+      whyItIsPartOfTHEMEASUREMENT: 'GOVE reads 3.74, SARK 3.37 and BAIN 3.17 — three dialect remainders the ruling exists to exclude, admitted by the bare cut because subtitle corpora lowercase proper nouns into the word list. A store told only "3.0" would admit them and be faithful to the ruling as written.',
+      andWHATITCOSTS: 'it over-excludes: minister, south and god are DomPoS "name" here too, and AllPoS cannot separate them (it reads .name.noun. for minister and for gove alike). A verdict resting on an excluded word reports EXCLUDED-AS-A-NAME, never "unknown".',
+    },
+    andWHYTHISTRAVELS:
+      'the authoring store runs wordfreq 3.1.1 and reads GRAN at 3.44. Two honest instruments disagree, so a cut without its instrument is not a shared fact. Quote this block back with any figure taken at this cut and the two stores can find the disagreement instead of inheriting it.',
+    knownDisagreementToQuOTEBACK:
+      'GRAN: the authoring store reads 3.44 on wordfreq 3.1.1. This store\'s own reading is carried as GRAN_measuredHere beside this block, measured at call time rather than written here — a number typed into a declaration is the thing this rule exists to stop.',
+  };
+}
+
 export interface ChildLexicon {
   /** Zipf on the whole corpus — the primary. Null when the word is not in the corpus at all. */
   zipf: (word: string) => number | null;
@@ -124,6 +165,8 @@ export function loadChildLexicon(): ChildLexicon {
     namesExcluded: names.size,
     cut: CHILD_CUT_ZIPF,
     provenance: {
+      THE_CUT_AND_ITS_INSTRUMENT: cutDeclaration(),
+      GRAN_measuredHere: main.get('GRAN') ?? null,
       source: 'SUBTLEX-UK (van Heuven et al. 2014), Zipf scale, British English',
       digest, retrievedOn: FREQUENCY_SOURCE.retrievedOn,
       column: FREQUENCY_SOURCE.primaryColumn,

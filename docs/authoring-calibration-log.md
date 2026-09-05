@@ -27322,3 +27322,56 @@ verified from the rows and not from the run's own report.
 the recorded key. They are NEVER_SHIPPABLE and reach no child, which is why they are reported rather
 than fixed — but "unperformable" and "mis-keyed" are different faults and the earlier count did not
 separate them.
+
+## R993 — A threshold travels with the instrument it was taken on
+
+Annie's 225th: *"the authoring store runs wordfreq 3.1.1 and gets GRAN at 3.44 — two honest
+instruments, and a ruling that names only its number cannot be checked across stores."* Measured
+here, GRAN reads **3.94** on SUBTLEX-UK. **Half a Zipf apart, same verdict at 3.0** — and nothing
+in the number "3.0" would ever have surfaced the gap.
+
+So `cutDeclaration()` travels with every figure taken at the cut: source, digest, retrieval date,
+column, **and the name filter** — which is part of the MEASUREMENT, not a detail of the
+implementation. GOVE clears 3.0 at 3.74; a store told only "3.0" would admit it and be perfectly
+faithful to the ruling as written. `pnpm check:cut-carries-instrument` refuses any emitter that
+measures at the cut and publishes no instrument, with a carried fixture proving it discriminates.
+One emitter measures today, which is a small population honestly reported — the value is forward,
+and the fixture is what makes the empty case meaningful (R60).
+
+**This is R985 one level up.** There, a digest travelled with the keys it was taken over; here a
+threshold travels with the instrument it was taken on. **A number without its instrument is a value
+with no subject** — and the cross-store case is the sharp one, because both stores are right and
+neither can discover the disagreement from its own disk.
+
+**Her per-row ruling is the deeper half, and it bounds the whole apparatus.** *"Knownness depends
+on the sentence around the word; a word list answers about words and a row answers about a child."*
+So the three doubtful seats crossed as ROWS — stem, seat, tag, the wording the child receives, and
+the full three-part set (R573) — not as a word list for adjudication. SOW is the live one: its two
+seats sit on DRAFT rows in the cut, and it is the case where **the two columns disagree**, clearing
+3.0 on the whole corpus at 3.62 and failing it on children's television at 2.94. SEAM and BAIN sit
+on NEVER_SHIPPABLE seed rows and reach nobody.
+
+**One thing her ruling may not have intended, reported rather than assumed:** she ruled BAIN's seat
+"regenerates with the rest", but that seat is on `seed-vr08-09`, NEVER_SHIPPABLE by her 210th.
+There is nothing to regenerate. The name filter now excludes BAIN entirely, which executes the
+ruling for every future use without editing a dead row; rebuilding the seed row itself is a
+different act and is not assumed here.
+
+## R994 — A fault reported and not repaired is named in code, or it is lost
+
+Two vr-08 faults were found and deliberately left unrepaired, and both were recorded in prose.
+**Prose is the only artefact here with no gate on it** (R178) — a fault living in a paragraph of a
+register entry is one nobody meets again at the moment they would act on it.
+
+So `content/vr08-open-items.json` declares each with its reason and whose decision it is, and
+`pnpm check:vr08-open-items` MEASURES each from the rows every run: OPEN with its current figure,
+or CLOSED when the measurement no longer finds it. **An open item cannot decay into a forgotten
+one, and a repair cannot happen silently** — the declaration can only shrink, and it shrinks
+visibly. A fault measured OPEN and not declared refuses the run.
+
+**And the check earns its keep immediately by separating two faults an earlier count had fused.**
+`UNPERFORMABLE` and `MIS-KEYED` are different: the first says no letter does the task, the second
+says a letter does and it is not the one recorded. Measured apart, the seed bank is **0
+unperformable and 2 mis-keyed** — `seed-vr08-04` works on O where the key says C, `seed-vr08-05`
+works on S where the key says B. My own earlier verification printed "2 unperformable", which was
+wrong about both rows in opposite directions: it condemned sound stems and hid two wrong answers.

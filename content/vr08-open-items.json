@@ -1,0 +1,22 @@
+{
+ "what": "Faults found in vr-08 that were deliberately NOT repaired when they were found, each with the reason. check:vr08-open-items measures every one from the rows on each run and reports OPEN or CLOSED, so an open item cannot decay into a forgotten one and cannot be closed silently.",
+ "rule": "R992, R994 — a fault reported and not repaired is named here or it is lost",
+ "declaredOn": "2026-09-05",
+ "items": [
+  {
+   "id": "bank-cycles-twelve-pairs-into-twenty-five-rows",
+   "what": "The vr-08 cut presents 25 rows built from 12 distinct word pairs. MOVE_LETTER_EXTRA holds 12 tuples and fromBank(bank, 25) cycles them, so CHAIR/MOP appeared three times and every other pair twice.",
+   "whyItWasNotRepaired": "it is a defect in how the bank is EXPANDED, not in any pair. Repairing it means authoring thirteen more pairs or changing what fromBank does when the bank is short — both are content decisions, not a fix. R990 recorded that a duplicated population inflates every association computed over it, which is the cost already being paid.",
+   "whoseDecision": "David and Annie — how a short bank should expand, or whether the cut should be twelve rows",
+   "measuredBy": "distinct (word1, word2) pairs against row count across the vr-08 cut"
+  },
+  {
+   "id": "seed-rows-04-and-05-are-performable-but-mis-keyed",
+   "what": "seed-vr08-04 (COAT/HARD) and seed-vr08-05 (BEAST/RING) each have a letter that performs the task at the 3.0 cut, and it is not the letter recorded as the key. COAT/HARD works on O (COAT->CAT, HARD->HOARD); the key says C. BEAST/RING works on S (BEAST->BEAT, RING->RINGS); the key says B.",
+   "whyItWasNotRepaired": "both rows are NEVER_SHIPPABLE and reach no child, and correcting a key is a content decision on rows the reviewer has already ruled out of service. Repairing them would also change rows that several crossed artefacts describe.",
+   "whoseDecision": "Annie — whether a NEVER_SHIPPABLE seed row is corrected or left as the record of what was made",
+   "andWHYITISNAMEDSEPARATELY": "UNPERFORMABLE and MIS-KEYED are different faults. The earlier count reported these two inside a single 'unperformable' figure, which is wrong about both: the stem is sound and the answer is wrong.",
+   "measuredBy": "for each seed row, the letters that perform the task at the cut, against the recorded key"
+  }
+ ]
+}
