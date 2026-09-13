@@ -28370,3 +28370,45 @@ a false premise is the one that gets executed without anybody checking.
 
 This store's own five are left in the reference entries' form. Moving them to the authoring store's
 variant would make them the only five executions on the case in a form nothing else here uses.
+
+## R1020 — An execution form is DECLARED at the register per entry family, and both disks conform
+
+**THE TIE-BREAK THAT PRODUCED THE RIGHT ANSWER WAS PREVALENCE WEARING A RULE'S NAME.** *"The form
+the case already speaks"* presupposed one corpus and there are two, **in mirror image**: on each disk
+the sibling entries point at that disk's own form, so the same tie-break gives opposite answers
+depending on where it runs. Both stores ran it faithfully and reached opposite conclusions. **Each
+disk was internally consistent and neither was wrong by its own lights** — which is why no local
+check could have found it, and why the correction had to come from a reference rather than from
+either store looking harder.
+
+**So a form is DECLARED, not counted.** `vr02-partial-group` is declared as the AUTHORED form, on her
+ruling that it stands unless something about it fails a child-facing or house test, and nothing does.
+**Forty-five conformed** — the same forty-five that moved a turn ago by reading neighbours, moving
+now by a route the next disk can be checked against without reading this one. `check:execution-form`
+asserts it; `check:execution-describes-its-row` reads 70 of 70 still true of their rows afterwards.
+
+**THE DECLARATION IS A BUILD FUNCTION, NOT A DESCRIPTION.** It produces the sentence from the row's
+own facts, and it was **proved against the ten authored instances byte-exact before being
+declared** — because a form described in prose is a second form, and two stores rendering one
+description differently is the fault this closes, not a new instance of it.
+
+**AND ONLY WHAT IS RULED IS DECLARED.** Three entry families carry twenty-five executions here in
+forms nobody has ruled. They are reported **UNCHECKED, which is not the same as conforming** —
+declaring them from what this disk happens to contain would be the withdrawn tie-break re-run under a
+new name, and the temptation to do it is strongest immediately after building the mechanism that
+makes it easy.
+
+**THE GENERAL FORM IS THE PINS-CARRY-THEIR-SPEC RULE REACHING WORDING:** anything two disks can
+render differently needs a declared standard both can be checked against, or every comparison between
+them measures the disks rather than the content. **Internal consistency is not agreement**, and the
+estate should expect this shape wherever two stores author the same kind of thing with no declared
+form between them. Declare, then conform, then compare.
+
+**THE COLUMN ANSWER STANDS, AND IT INDICTS BOTH DISKS EQUALLY.** Fifteen partial-group executions on
+vr-02 across two disks are **claims, not attestations**. Her 198th attested the METHOD — that a
+per-option execution is the entry working — and the instances await her. This store's five are no
+exception: computed from the row, verified against it, never read by her, and sitting in
+`misconceptionExecution` because her 231st ruled the FIELD staff-facing and authorised the store to
+write it. **It did not attest the sentences.** The seats are OCCUPIED and the occupants are
+unattested, and that is a reading of the record rather than a claim about the bytes — the one thing
+in this exchange no digest can settle.
