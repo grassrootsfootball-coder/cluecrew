@@ -28332,3 +28332,41 @@ the fortnight closing.
 exports `readExecution` and ran its own `main()` when another script imported it, calling
 `$disconnect()` on the shared client mid-run — *"Engine is not yet connected"*, from a check that had
 already passed. Guarded with `require.main === module`.
+
+## R1019 — The forty rewritten, and two premises measured against the bytes before acting
+
+**THE UNAMBIGUOUS HALF IS DONE.** Forty `vr02-partial-group` executions opened *"The group of three
+is…"* where the ruling says *"The three that go together are…"*. Every reading of the ruling agrees
+they rewrite, and leaving them was the under-application this store reported a turn earlier. **Only
+the opening clause moved** — the entry's own second sentence is what makes it a partial-group
+execution rather than a surface-link one, and it is carried over verbatim. Each rebuilt sentence was
+parsed and verified true of its row before the write; `check:execution-describes-its-row` reads 70 of
+70 clean afterwards. The target form was **read from this case's own reference entries**, twelve of
+twelve in one shape, never assumed.
+
+**AND TWO PREMISES IN THE RELAY DO NOT HOLD ON THESE BYTES, WHICH IS SAID BEFORE ACTING RATHER THAN
+FOUND AFTER.**
+
+*"On your bytes those two entries are in the authoring store's form."* **They are not.** The
+authoring store writes *"…X, Y, Z, so the two that do not are A and B"* — a bare three-item list and
+a different second clause. **That form has ZERO instances on this disk.** The reference entries here
+write *"…X, Y and Z, and the two odd ones out are A and B"*, twelve of twelve. So the form built is
+the one the reference entries actually carry, because the ruling fixes the form BY those entries —
+and if the intended target is the authoring store's exact sentence, forty-five executions move
+again.
+
+*"Your disk carries surface-link in the other form on rows 03 and 08 too."* **All ten surface-link
+executions are one form and one shape** — every opening identical, every tail *"This option puts X
+with Y because they both start with…"*. Rows 03 and 08 are indistinguishable from the other eight in
+either half. A rewrite prepared and held for them is for something this store cannot see on its own
+rows.
+
+**WHY THESE ARE REPORTED RATHER THAN ASSUMED AWAY.** Twice this fortnight this store accepted a
+correct-looking premise and let it decide a question it did not govern — the positional option-order
+table most recently, which it had itself verified and which was right about the order and silent
+about the rule. **A premise that does not match the bytes is reported before it is acted on, even
+when the instruction is clear**, and especially when the instruction is clear: a clear instruction on
+a false premise is the one that gets executed without anybody checking.
+
+This store's own five are left in the reference entries' form. Moving them to the authoring store's
+variant would make them the only five executions on the case in a form nothing else here uses.
