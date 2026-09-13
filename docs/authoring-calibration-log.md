@@ -28072,3 +28072,63 @@ after a write is re-deriving a record of the state before that write.**
 **AND THE PRUNE IS THE DANGEROUS HALF.** Delivering by subject name means a new generation
 supersedes the old, which is right when the new one supersedes the old and wrong when it merely
 followed it. A re-run always looks like the newer generation.
+
+## R1011 — Two questions that sound like one, and the gate costs what the corpus's regularity allows
+
+**THE AUTHORING STORE'S TEN AND THIS STORE'S ZERO ARE THE SAME AXIS READ ON TWO DISKS, AND ITS FIVE
+WERE A THIRD AXIS ENTIRELY.** Confirmed from the rows: of vr-02's 75 executions, **51 sit on rows
+whose content moved since `bb6be0d3`.** `itemWholeness` reports zero because it asks *does an
+execution EXIST*, never *is it bound to current bytes* — and occupant state is disk-local, so a
+binding stale on one disk is invisible on the other. **Neither screen was wrong and neither read the
+other's question.**
+
+**BUT A BINDING IS A PROXY AND THE CONTENT IS THE THING.** A retag moves a row's digest and changes
+nothing a sentence about it says. So `check:execution-describes-its-row` screens what the execution
+SAYS against the row as it now stands: three templated forms cover the case, **75 of 75 parse, 75
+still describe their row, 0 contradict it.** Stale on the binding axis, sound on the content axis.
+
+**WHAT THE GATE COST, ANSWERED BY BUILDING IT: about an hour, and it is cheap FOR A REASON THAT IS
+NOT GENERAL.** These executions are templated, so the facts they assert can be parsed back out and
+compared with the row's own words — three regexes and a four-case fixture. **On a corpus of
+free-form executions none of that holds**, and the honest price there is a reviewer reading each
+one. The check says which rows it could not parse rather than counting them clean, because 50 of 75
+reading as a clean zero is the subset fault (R595).
+
+**AND THE FRAMING IS THE DURABLE HALF:** a superseded binding that no gate reads is a claim nobody
+can refuse. It is R601 pointed at a record instead of a decision — *a decision nothing reads is not
+a decision*, and a binding nothing checks is not a binding.
+
+## R1012 — A pin taken over an unordered read is a pin any write can break
+
+**vr-02'S SIGNATURES WERE COMPUTED OVER THE ARBITRARY ORDER POSTGRES RETURNED AT SIGNING TIME.**
+Under an id-ordered read **4 of 25** recompute; under the arbitrary order, **24**. The bytes are the
+same bytes and only the seat sequence differs — so a verifier insisting on one order measures the
+READER rather than the row, which is R936 arriving inside the check that enforces it.
+
+**Row 01 recomputed under none of the three named orders, and its content had never changed.** A
+permutation search over its four options matched at the sixth: the signed order was
+`van/bus · pear/plum · bus/pear · van/apple`, and **applying her own 224th retag rewrote that option
+row and moved the sequence the signature had been taken over.** Her ruling destroyed the pin for her
+own reading, and an order-dependent verifier reports that as a content fault.
+
+So pin verification is now order-independent, bounded and loud: three named orders, then every
+permutation for rows of six options or fewer, and **UNVERIFIED rather than a quiet factorial** above
+that. Twelve of twelve assertions pass and the method is recorded per row, because *24 under the
+order the signature was taken in* and *1 under a permutation* are different facts about the same
+case.
+
+**AND THE SAME FAULT BIT THIS STORE'S OWN PUBLISHER IN THE SAME RUN.** Its first version read
+options with no `orderBy` and reported **72** executions on moved rows where **51** is the number —
+the vr-10 row-23 incident recurring in a new script written by someone who had registered it. The
+discrepancy was only visible because two of this store's own measurements disagreed. **An ordered
+read is not a detail of a query; it is the difference between a digest that means something and one
+that means whatever the planner did last.**
+
+---
+
+**vr-02 — "Two Don't Belong" — IS LIVE.** 25 rows DRAFT to LIVE in one transaction, pool 0 → 25,
+`reviewedBy` set on all 25, **window 0 — unreachable rather than empty**, and it is the **third live
+paid door in VR** beside `case-vr-10` and `case-vr-19`. Twenty servable cases, none visible-and-empty.
+
+**Publication settles nothing about the fifty-one stale bindings and the artefact says so.** One line
+from the authoring store on which of its ten withdrawals stand is the only thing that moves them.
