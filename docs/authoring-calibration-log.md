@@ -28186,3 +28186,53 @@ against. **If it holds the drafter's sentence it maps to `drafterDeclaredPull`, 
 That is the question to settle before any crossing writes it, and it is why the column exists: the
 vr-02 import once carried the bank's tag and dropped its pull sentence, with nothing said at the
 crossing, and a reviewer spent three returns reconstructing pulls by archaeology.
+
+## R1015 — A seat has three states, and this store is the instance of the fault the third one closes
+
+**Her 234th: occupied, owed, ACCOUNTED FOR** — *"a screen that reads that emptiness as a debt would
+demand a fourth seat be authored to fill a hole the rule made on purpose."* **This store did exactly
+that.** Its wholeness screen reported five gaps on vr-02; four were seats her 198th had emptied by
+rule, and it authored into all five. **The screen was not wrong about occupancy — it had no third
+state to be right with**, and the helpfulness reversed the ruling.
+
+Wired in `scripts/lib/seat-state.ts` and read by `itemWholeness`. **The third state requires a NAMED
+ruling** in `content/ruled-empty-seats.json`; a seat emptied with no record is OWED, because the
+state cannot be reached by silence (R98). Measured on vr-02: **66 occupied, 4 owed, 5 accounted
+for** — and **5 rows not-whole under a two-state screen against 4 under a three-state one.** That
+difference is the hole the rule made on purpose.
+
+**AND THE ORDER QUESTION IS SETTLED, FROM BYTES ONLY THIS STORE HELD.** The authoring store could
+not check whether the current option order had moved — its §THREE left two hypotheses open.
+Measured here: its `bb6be0d3` partial-group order is **confirmed on all five rows**, and on rows 22,
+23, 24 and 25 the CURRENT order is **identical** to it, so *second by bb6be0d3 order* and *second by
+current order* name one seat. **Hypothesis A is dead on those four rows.** Row 17 is the single row
+where the orders differ — and the reorder is this store's own R991 retag, which rewrote the
+`oval,triangle` option row and moved it. **That is why row 17 is the one row where the two
+withdrawals agreed: this store's reorder made a positional rule and an occupant rule coincide.**
+
+**The rule this store applied, stated in one line as they asked: BY OCCUPANT, NOT BY POSITION** —
+withdraw the seat whose execution predates her 231st. They inferred it and were right. It is a
+tidiness rule; the 198th is positional. Four writes came out and are retained with the authority
+named; the fifth, row 17 `oval,triangle`, sits in their OWED seat and filled a debt rather than
+undoing a rule, so it stays.
+
+## R1016 — The same seat holds different authored text on the two disks
+
+Crossing the retained executions seat by seat: **all five differ.** This store's vr-02
+partial-group executions read *"The group of three is X, Y and Z, so the two odd ones out are A and
+B. This option starts from…"*; theirs read *"The three that go together are X, Y, Z, so the two that
+do not are A and B. This option pairs…"*.
+
+Measured: **45 vr-02 partial-group executions here use this store's form and none uses theirs.** And
+theirs is not a foreign form — **21 options here DO use it, on `vr02-answered-the-opposite` and
+`vr02-surface-link`**, a different entry. So the two stores have been writing one entry's executions
+in two forms while agreeing on every count.
+
+**The inversion was never only about which seat is owed.** The seats disagree AND the content
+disagrees, and a re-authoring that assumes one form will not match the other. Neither store had
+noticed, because every instrument either store built compares seats, counts, digests or bindings —
+**and none of them reads the sentence.** `check:execution-describes-its-row` reads what a sentence
+asserts and accepts both forms by design, which is why it reported 75 of 75 clean and could not
+have found this.
+
+Reported, not resolved: which form is the estate's is a corpus decision and not this store's.

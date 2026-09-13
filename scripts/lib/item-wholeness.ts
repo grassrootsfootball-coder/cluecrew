@@ -1,3 +1,4 @@
+import { seatOf, type RuledEmpty } from './seat-state';
 /**
  * A WHOLE ITEM, DERIVED — NEVER FLAGGED (Annie's 142nd, David's build ruling, 2026-08-24 — R699).
  *
@@ -18,8 +19,10 @@
  * the last hollow row fills, and not before, with no flag for anyone to set or forget.
  */
 export interface WholenessInput {
+  /** Needed to resolve a ruled-empty seat, which is named by (itemId, seat) and never by row. */
+  id?: string;
   explanation: unknown;
-  options: Array<{ misconceptionId: string | null; misconceptionExecution: string | null }>;
+  options: Array<{ misconceptionId: string | null; misconceptionExecution: string | null; content?: unknown }>;
 }
 
 /**
@@ -46,8 +49,15 @@ export function hintLayerPresent(explanation: unknown): boolean {
   );
 }
 
-export function itemWholeness(item: WholenessInput, attestedEntryIds: ReadonlySet<string>, walkModeServes: boolean) {
-  const tagged = item.options.filter((o) => o.misconceptionId !== null);
+/**
+ * **A SEAT EMPTIED BY RULING IS NOT A DEBT (her 234th — R1015).** `ruledEmpty` names the seats a
+ * ruling emptied on purpose; they are ACCOUNTED FOR and do not make a row not-whole. A caller that
+ * omits the list gets every empty seat counted as owed, which is the safe direction: a missing
+ * record must not read as a clearance (R98).
+ */
+export function itemWholeness(item: WholenessInput, attestedEntryIds: ReadonlySet<string>, walkModeServes: boolean, ruledEmpty: readonly RuledEmpty[] = []) {
+  const accountedFor = (o: { content?: unknown }) => ruledEmpty.some((r) => r.itemId === item.id && r.seat === seatOf(o.content));
+  const tagged = item.options.filter((o) => o.misconceptionId !== null && !accountedFor(o));
   const tagsAttested = tagged.length > 0 && tagged.every((o) => attestedEntryIds.has(o.misconceptionId!));
   const executionsExist = tagged.length > 0 && tagged.every((o) => typeof o.misconceptionExecution === 'string' && o.misconceptionExecution.trim() !== '');
   const walkOk = walkModeServes ? walkScriptPresent(item.explanation) : true;
