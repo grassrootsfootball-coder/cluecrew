@@ -28283,3 +28283,52 @@ everything after is `ASSIGNED-AT-EMISSION`. **A basis that is weak for part of a
 stated per row, never averaged into a claim about the whole** (R595). `check:lane-manifest` asserts
 monotonicity, gaplessness, no name under two ordinals, and that nothing is staged without one; a
 pruned artefact keeps its ordinal, because an order that forgets is not an order.
+
+## R1018 — The arrays cross, the ruled opening is built not adopted, and the field answer is plain
+
+**THE FIVE ROWS' OPTION ARRAYS CROSSED IN FULL** — every option's value and `isKey` in id order, with
+stem and solution: the exact projection `R729 over {stem, options:[{value,isKey}], solution}` reads.
+**And their five declared target digests were recomputed against these rows before crossing: FIVE OF
+FIVE MATCH.** Their notice was right, their ten are content-true, and their re-bind is now a digest
+check with no prose in it.
+
+**THE FORM RULING NAMES AN OPENING, AND TWO DIFFERENT FULL FORMS SHARE IT.** *"The three that go
+together are…"* opens both this disk's form for the case's other two entries and theirs for
+partial-group, and they diverge immediately: this disk writes *"…X, Y and Z, AND THE TWO ODD ONES
+OUT ARE A and B"*, theirs *"…X, Y, Z, SO THE TWO THAT DO NOT ARE A and B"*.
+
+**This was caught by refusing, not by reading carefully.** The first attempt adopted their text
+verbatim — the cheapest and most cooperative-looking move — and this store's own content-truth reader
+rejected it as UNPARSED. **A guard fired on a store trying to be helpful**, which is the only kind of
+helpfulness this arc has repeatedly had to stop. The ruled form was then built from this disk's own
+usage, as David's justification specifies, and **only the OPENING CLAUSE moved**: the entry's second
+sentence is what makes it a partial-group execution rather than a surface-link one, and it is carried
+over untouched, never recomposed.
+
+**AND THE RULING IS NOW UNDER-APPLIED, WHICH IS REPORTED RATHER THAN QUIETLY EXTENDED.** Five
+partial-group executions carry the ruled opening and **forty do not** — the ones on the other twenty
+rows, landed earlier. The instruction named five; the rule names a form. By the authoring store's own
+under-application rule, a form ruled is under-applied until it has been run over everything the rule
+touches, and that is forty more. **Whether they follow is David's, not this store's to assume.**
+
+**THE FIELD QUESTION, ANSWERED PLAINLY: `option.execution` is THE DRAFTER'S CLAIM.** It maps to
+`drafterDeclaredPull`, never to `misconceptionExecution` — **the attested column is defined by
+ATTESTATION, not by quality or by method.** Their own §FOUR says it: *computed from the row and
+qualified by act-fit and hint-pair… not reviewer-attested… the store's claim.*
+
+**The consequence they should hear first: landing their ten in the claim column does NOT make the
+seats whole.** `itemWholeness` reads `misconceptionExecution` only, by design. Ten claims land, ten
+seats stay OWED, and the count does not move until she reads them. Not a rejection — the column
+doing the one job it exists for.
+
+**And the symmetry this store raises against itself:** its own five were written the same way —
+computed from the row, verified against it, never read by her. **By this answer they are claims
+too.** They sit in the attested column because her 231st ruled the FIELD staff-facing and authorised
+the store to write it; **it did not attest the sentences.** That is the same fault one disk over, and
+naming it on the other store while holding it here would be the conflation this register has spent
+the fortnight closing.
+
+**AND A MODULE THAT ACTS ON IMPORT IS A DOOR NOBODY OPENED.** `check-execution-describes-its-row`
+exports `readExecution` and ran its own `main()` when another script imported it, calling
+`$disconnect()` on the shared client mid-run — *"Engine is not yet connected"*, from a check that had
+already passed. Guarded with `require.main === module`.

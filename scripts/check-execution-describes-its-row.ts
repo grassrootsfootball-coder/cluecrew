@@ -35,8 +35,17 @@ const FORMS: Array<{ name: string; re: RegExp; group?: (m: RegExpExecArray) => s
     group: (m) => [m[1]!, m[2]!, m[3]!], odd: (m) => [m[4]!, m[5]!] },
   { name: 'three-that-go-together', re: /The three that go together are ([^,]+), (\S+) and ([^,]+), and the two odd ones out are (\S+) and ([^.]+)\./,
     group: (m) => [m[1]!, m[2]!, m[3]!], odd: (m) => [m[4]!, m[5]!] },
+  { name: 'three-that-go-together-theirs', re: /The three that go together are ([^,]+), ([^,]+), ([^,]+), so the two that do not are (\S+) and ([^.]+)\./,
+    group: (m) => [m[1]!, m[2]!, m[3]!], odd: (m) => [m[4]!, m[5]!] },
   { name: 'rule-the-three-share', re: /so the two odd ones out are (\S+) and ([^.]+)\./, odd: (m) => [m[1]!, m[2]!] },
 ];
+/**
+ * **THE READER READS; IT DOES NOT POLICE FORM.** The authoring store's partial-group executions use
+ * a third variant — "X, Y, Z, so the two that do not are…" where this disk uses "X, Y and Z, and
+ * the two odd ones out are…". Both assert the same facts and both are testable. Which form the
+ * estate USES is a ruling and belongs nowhere near a content-truth check (R585: a by-type zero is a
+ * finding about the wording, never about the tagging).
+ */
 const clean = (s: string) => s.trim().toLowerCase().replace(/[.,]$/, '');
 
 export interface Verdict { form: string | null; agrees: boolean | null; said?: { group?: string[]; odd: string[] }; row?: { group: string[]; odd: string[] } }
@@ -104,4 +113,12 @@ async function main() {
   for (const f of faults.slice(0, 10)) console.error(`    ${f}`);
   process.exitCode = 1;
 }
-main().catch((e) => { console.error(e); process.exitCode = 1; }).finally(async () => { await prisma.$disconnect(); });
+/**
+ * **ONLY WHEN RUN, NEVER ON IMPORT.** `readExecution` is exported and another script imported it;
+ * this file's `main()` then ran inside that script's process and called `$disconnect()` on the
+ * shared client mid-transaction — "Engine is not yet connected", from a check that had already
+ * passed. A module that acts on import is a door nobody opened.
+ */
+if (require.main === module) {
+  main().catch((e) => { console.error(e); process.exitCode = 1; }).finally(async () => { await prisma.$disconnect(); });
+}
