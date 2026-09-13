@@ -28236,3 +28236,50 @@ asserts and accepts both forms by design, which is why it reported 75 of 75 clea
 have found this.
 
 Reported, not resolved: which form is the estate's is a corpus decision and not this store's.
+
+## R1017 — Her tie-break is by input, it restores the four, and a verified premise is not a verified inference
+
+**THE TEST, RUN.** `vr02-partial-group` is *found one odd word but paired it with a group member*, so
+the seat's INPUT is the odd word it starts from. A row's key names TWO odd words, so the entry has
+two inputs per row and **two carriers is two inputs, not a doubling.** A third carrier would be a
+second seat on one odd word.
+
+**Measured across all twenty-five rows: ZERO carry two partial-group seats on one input.** Each of
+this store's five pairs a distinct odd word — 17 `oval`, 22 `dog`, 23 `cold`, 24 `net`, 25 `tuna`,
+against `circle`, `cat`, `hot`, `ball`, `shark`. **All five stand**, and the four withdrawn a turn
+ago are restored byte-exact from retention. vr-02 reads **70 occupied, 5 owed, 0 accounted for** —
+the five owed being the stale occupants her 232nd withdrew, and nothing ruled-empty.
+
+**WHAT WAS WRONG, AND IT IS THE TRANSFERABLE HALF.** *"The second same-act seat of a symmetric
+pair"* presumes both seats execute the same act **on the same input**. By input they do not. This
+store verified the authoring store's `bb6be0d3` option-order table against its own copy, found it
+correct on all five rows, **and then let a correct table decide a question the order never
+governed.** The verification was real and it authorised nothing. **A verified premise is not a
+verified inference** — and the verification is what made the inference feel safe, which is R173's
+shape arriving through a table instead of a number.
+
+The ruled-empty record is now empty and **DECLARED empty** (R61), not deleted. The third seat state
+stands with zero instances on vr-02: the mechanism is right and its population here is nil.
+
+---
+
+**AND THE LANE NOW PLACES BY ORDINAL, WITH ITS BASIS STATED PER ENTRY.**
+
+What ordered it before: **a clock, and a discontinuous one.** Seventy artefacts, no ordinal, no
+manifest, no index — and this session's clock moved 2026-09-05 → 2026-09-13 between two consecutive
+turns with no turn between. `content/exports` is gitignored (`.gitignore:33`), checked rather than
+assumed, so git held no record of an emission either. **The lane had no ordering basis it could
+state.**
+
+`content/lane-manifest.jsonl` is append-only; `deliver()` assigns the ordinal **at emission** and
+appends it. The staging line's `N file(s) staged` stays, and it is a COUNT OF A DIRECTORY — a
+reading of what the lane looks like now, which moves when anything is pruned or archived. The
+ordinal is a record of an act and never moves.
+
+**AND IT DOES NOT CLAIM PARITY WITH THEIRS.** Their manifest is frozen from a verified-monotonic
+order. The backfill of the first seventy can only be seeded from mtime — the clock this exists to
+stop trusting — so every one of those rows is marked `SEEDED-FROM-MTIME-NOT-VERIFIED` and
+everything after is `ASSIGNED-AT-EMISSION`. **A basis that is weak for part of a population is
+stated per row, never averaged into a claim about the whole** (R595). `check:lane-manifest` asserts
+monotonicity, gaplessness, no name under two ordinals, and that nothing is staged without one; a
+pruned artefact keeps its ordinal, because an order that forgets is not an order.

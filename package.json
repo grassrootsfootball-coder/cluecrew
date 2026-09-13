@@ -228,7 +228,9 @@
     "check:rule-id-owners": "tsx scripts/check-rule-id-owners.ts",
     "check:gate-silence": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-gate-silence.ts",
     "check:execution-not-child-facing": "tsx scripts/check-execution-not-child-facing.ts",
-    "check:execution-describes-its-row": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-execution-describes-its-row.ts"
+    "check:execution-describes-its-row": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-execution-describes-its-row.ts",
+    "freeze:lane-manifest": "tsx scripts/freeze-lane-manifest.ts",
+    "check:lane-manifest": "tsx scripts/check-lane-manifest.ts"
   },
   "devDependencies": {
     "@eslint/js": "^9.20.0",

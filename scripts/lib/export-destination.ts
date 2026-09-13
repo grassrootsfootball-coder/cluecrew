@@ -1,3 +1,4 @@
+import { appendToManifest } from './lane-manifest';
 /**
  * WHERE AN EXPORT ACTUALLY GOES (David's ruling, 2026-08-02).
  *
@@ -336,6 +337,18 @@ export function deliver(sourcePathIn: string, family?: string): string {
    */
   const fileDigest = createHash('sha256').update(readFileSync(target)).digest('hex');
   writeFileSync(`${target}.sha256`, `${fileDigest}  ${name}\n`);
+  /**
+   * THE ORDINAL IS ASSIGNED HERE, AT EMISSION (R1017). `queued` below is a COUNT OF A DIRECTORY —
+   * a reading of what the lane looks like now, which changes when anything is pruned or archived.
+   * An ordinal recorded at the moment of delivery is a record of an act and never moves.
+   */
+  try {
+    const e = appendToManifest({ name: basename(target), sha256: fileDigest, basis: 'ASSIGNED-AT-EMISSION' });
+    console.log(`  ORDINAL ${e.ordinal}  (assigned at emission and appended; the lane places by this, not by a clock)`);
+  } catch (err) {
+    console.error(`  MANIFEST NOT APPENDED — ${(err as Error).message}`);
+    console.error('  The artefact is staged with NO ORDINAL. check:lane-manifest will refuse until it has one.');
+  }
   const queued = readdirSync(OUTBOUND_DIR).filter((f) => !f.endsWith('.sha256')).length;
   console.log(`  STAGED  ${basename(target)}`);
   console.log(`  sha256  ${fileDigest}  (over the FILE BYTES; also written to ${basename(target)}.sha256)`);
