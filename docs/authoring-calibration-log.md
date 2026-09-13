@@ -28132,3 +28132,57 @@ paid door in VR** beside `case-vr-10` and `case-vr-19`. Twenty servable cases, n
 
 **Publication settles nothing about the fifty-one stale bindings and the artefact says so.** One line
 from the authoring store on which of its ten withdrawals stand is the only thing that moves them.
+
+## R1013 — A seat that is owed work must look owed, and the list was right about the wrong disk
+
+**Her 232nd (recorded AS RELAYED — no annie-232 file is on this desk): the executions come out of
+their seats and are retained with the withdrawing ruling named.** Run, and the wholeness screen moved
+**from 25 of 25 whole with zero faults to 20 of 25 with five owed seats** — which is the two-axis
+finding paying out. The screen could not see a stale binding and can see an ABSENT execution, so
+withdrawing the text converts an invisible fault into a visible one. **That is what the ruling buys:
+not a repair, a visibility.**
+
+**AND THE FIVE SEATS ARE NOT THE FIVE THE LIST NAMED.** The authoring store's withdrawal names
+`17 circle,square · 22 dog,snake · 23 cold,rough · 24 net,kick · 25 tuna,dolphin`. **Four of those
+were EMPTY on this disk when it measured** — they were the gaps filled on 2026-09-05 under her 231st,
+from the rows as they now stand. The seats that actually carry a pre-231st execution are the OTHER
+partial-group option on each of the same five rows: `circle,square · cat,hen · hot,soft · ball,jump ·
+shark,whale`.
+
+**R1008 FOR THE THIRD TIME, AND IT WAS NEARLY EXPENSIVE HERE.** A removal driven by the list rather
+than by the rows would have **emptied five current verified seats and left five stale ones full** —
+the precise inverse of the ruling. Occupant state is disk-local, so the list is correct about its own
+disk and wrong about this one, and nothing but the seats would have shown it. **The measurement of
+that fault hit the same trap once more**: the first probe read the last attribution event on the ROW
+and attributed row 17's `oval,triangle` write to `circle,square`, reporting all five as rewritten.
+The note carries the seat; matching on `recordId` alone does not.
+
+**Withdrawn is not deleted** — each text is retained verbatim in `content/withdrawn-executions.json`
+with the withdrawing ruling named, its seat, its tag, and why that seat and not its sibling, because
+a record of destruction that does not name what was destroyed is a record with no subject.
+
+**One consequence, stated as intended rather than discovered:** those five rows are LIVE. A child
+meets nothing different — an execution is staff-facing (R1009) — but vr-02 now carries five LIVE rows
+that would not pass the publication gate it passed this morning.
+
+## R1014 — `misconceptionExecution` and the drafter's pull are two fields, and the separation is the guard
+
+The authoring store asks whether its `option.execution` is one field with `misconceptionExecution`.
+**No, and the distinction is ruled and load-bearing:**
+
+- **`misconceptionExecution`** — the gated, ATTESTED account. **`itemWholeness` reads it**; it is the
+  field a door turns on. 1,437 options.
+- **`drafterDeclaredPull`** — the drafter's CLAIM, verbatim from the authored source (R707), with
+  `drafterDeclaredPullVerdict` beside it (R708) because a claim met alone is an unrefuted assertion.
+  **Nothing in the wholeness derivation reads it, by design.** 155 options, 13 ruled.
+
+**Filling the first from a bank would manufacture wholeness out of a machine's claim** — R701's bar,
+and the exact fault R707 exists to prevent. The schema says so at the column.
+
+**And what this store cannot answer: which of the two their field is.** Their vr-02 census carries
+the `execution` key on all 70 options and a value on NONE, so there is nothing here to compare
+against. **If it holds the drafter's sentence it maps to `drafterDeclaredPull`, and loading it into
+`misconceptionExecution` would make five owed seats look whole** — the seats withdrawn an hour ago.
+That is the question to settle before any crossing writes it, and it is why the column exists: the
+vr-02 import once carried the bank's tag and dropped its pull sentence, with nothing said at the
+crossing, and a reviewer spent three returns reconstructing pulls by archaeology.
