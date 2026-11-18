@@ -1,0 +1,858 @@
+{
+ "door": "vr-13",
+ "proposer": "agent",
+ "seats": [],
+ "redrafts": [],
+ "rebuilds": [
+  {
+   "itemId": "gen-vr-13-make-a-word-01",
+   "why": "No real word built on STAY and ARMY keeps one correct piece in place, so the outer words were changed. Outer words STAY ( ? ) ARMY became STEAM ( ? ) ARCH; the key stays STAR. The prompt's first sentence ran to 17 words, over the 16-word cap; 'is built from' is now 'uses', and the worked example is BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question. Round 3: the wrong-pieces word HEAR keeps the correct piece AR in place, and the not-a-word value EMAR keeps the same piece, so the non-word differs from the key in exactly as many places as the real word does, and which half of the rule the distractors share varies from row to row.",
+   "stem": {
+    "words": [
+     "STEAM",
+     "ARCH"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: STEAM ( ? ) ARCH"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-01-opt1",
+     "value": "STAR",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-01-opt2",
+     "value": "EMAR",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": "The rule takes the first two letters of each outer word: ST from STEAM and AR from ARCH, giving STAR. This option assembles EMAR, which is not a word — the child built letters and stopped without hearing them. It keeps AR from ARCH but puts EM where ST should be: E is the third letter of STEAM, and M is its fifth."
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-01-opt3",
+     "value": "HEAR",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so STEAM and ARCH give STAR. This option takes HEAR: it keeps AR from ARCH in the right place, but puts HE where ST should be. H is the fourth letter of ARCH, and E is the third letter of STEAM."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-02",
+   "why": "SHEEP and OPEN offered only SHOE, a one-step twin of SHOP, as a word keeping one piece, so SHEEP became SHADOW. Outer words SHEEP ( ? ) OPEN became SHADOW ( ? ) OPEN; the key stays SHOP. The prompt's first sentence ran to 17 words, over the 16-word cap; 'is built from' is now 'uses', and the worked example is BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question. Round 3: the wrong-pieces word HOOP keeps the correct piece OP in place, and the not-a-word value ADOP keeps the same piece, so the non-word differs from the key in exactly as many places as the real word does, and which half of the rule the distractors share varies from row to row.",
+   "stem": {
+    "words": [
+     "SHADOW",
+     "OPEN"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: SHADOW ( ? ) OPEN"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-02-opt1",
+     "value": "SHOP",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-02-opt2",
+     "value": "ADOP",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": "The rule takes the first two letters of each outer word: SH from SHADOW and OP from OPEN, giving SHOP. This option assembles ADOP, which is not a word — the child built letters and stopped without hearing them. It keeps OP from OPEN but puts AD where SH should be: A is the third letter of SHADOW, and D is its fourth."
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-02-opt3",
+     "value": "HOOP",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so SHADOW and OPEN give SHOP. This option takes HOOP: it keeps OP from OPEN in the right place, but puts HO where SH should be. H is the second letter of SHADOW, and O is its fifth."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-03",
+   "why": "The prompt's first sentence ran to 17 words, over the 16-word cap; 'is built from' is now 'uses', and the worked example is BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question. Round 3: the wrong-pieces word SKIN keeps the correct piece IN in place, and the not-a-word value ASIN keeps the same piece, so the non-word differs from the key in exactly as many places as the real word does, and which half of the rule the distractors share varies from row to row.",
+   "stem": {
+    "words": [
+     "GRASS",
+     "INK"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: GRASS ( ? ) INK"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-03-opt1",
+     "value": "GRIN",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-03-opt2",
+     "value": "ASIN",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": "The rule takes the first two letters of each outer word: GR from GRASS and IN from INK, giving GRIN. This option assembles ASIN, which is not a word — the child built letters and stopped without hearing them. It keeps IN from INK but puts AS where GR should be: A is the third letter of GRASS, and S is its fourth."
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-03-opt3",
+     "value": "SKIN",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so GRASS and INK give GRIN. This option takes SKIN: it keeps IN from INK in the right place, but puts SK where GR should be. S is the fourth letter of GRASS, and K is the third letter of INK."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-04",
+   "why": "No real word built on FLAG and ATLAS keeps one correct piece in place, so the outer words were changed. Outer words FLAG ( ? ) ATLAS became FLUTE ( ? ) ATOM; the key stays FLAT. The prompt's first sentence ran to 17 words, over the 16-word cap; 'is built from' is now 'uses', and the worked example is BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question. Round 3: the wrong-pieces word FLEA keeps the correct piece FL in place, and the not-a-word value FLOM keeps the same piece, so the non-word differs from the key in exactly as many places as the real word does, and which half of the rule the distractors share varies from row to row.",
+   "stem": {
+    "words": [
+     "FLUTE",
+     "ATOM"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: FLUTE ( ? ) ATOM"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-04-opt1",
+     "value": "FLAT",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-04-opt2",
+     "value": "FLOM",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": "The rule takes the first two letters of each outer word: FL from FLUTE and AT from ATOM, giving FLAT. This option assembles FLOM, which is not a word — the child built letters and stopped without hearing them. It keeps FL from FLUTE but puts OM where AT should be: O is the third letter of ATOM, and M is its fourth."
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-04-opt3",
+     "value": "FLEA",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so FLUTE and ATOM give FLAT. This option takes FLEA: it keeps FL from FLUTE in the right place, but puts EA where AT should be. E is the fifth letter of FLUTE, and A is the first letter of ATOM."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-05",
+   "why": "The prompt's first sentence ran to 17 words, over the 16-word cap; 'is built from' is now 'uses', and the worked example is BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question. Round 3: the wrong-pieces word THIN keeps the correct piece IN in place, and the not-a-word value ESIN keeps the same piece, so the non-word differs from the key in exactly as many places as the real word does, and which half of the rule the distractors share varies from row to row.",
+   "stem": {
+    "words": [
+     "CHEESE",
+     "INSECT"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: CHEESE ( ? ) INSECT"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-05-opt1",
+     "value": "CHIN",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-05-opt2",
+     "value": "ESIN",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": "The rule takes the first two letters of each outer word: CH from CHEESE and IN from INSECT, giving CHIN. This option assembles ESIN, which is not a word — the child built letters and stopped without hearing them. It keeps IN from INSECT but puts ES where CH should be: E is the fourth letter of CHEESE, and S is its fifth."
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-05-opt3",
+     "value": "THIN",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so CHEESE and INSECT give CHIN. This option takes THIN: it keeps IN from INSECT in the right place, but puts TH where CH should be. T is the sixth letter of INSECT, and H is the second letter of CHEESE."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-06",
+   "why": "The prompt's first sentence ran to 17 words, over the 16-word cap; 'is built from' is now 'uses', and the worked example is BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question. Round 3: the wrong-pieces word DRAB keeps the correct piece DR in place, and the not-a-word value DREL keeps the same piece, so the non-word differs from the key in exactly as many places as the real word does, and which half of the rule the distractors share varies from row to row.",
+   "stem": {
+    "words": [
+     "DRESS",
+     "UMBRELLA"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: DRESS ( ? ) UMBRELLA"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-06-opt1",
+     "value": "DRUM",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-06-opt2",
+     "value": "DREL",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": "The rule takes the first two letters of each outer word: DR from DRESS and UM from UMBRELLA, giving DRUM. This option assembles DREL, which is not a word — the child built letters and stopped without hearing them. It keeps DR from DRESS but puts EL where UM should be: E is the fifth letter of UMBRELLA, and L is its sixth."
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-06-opt3",
+     "value": "DRAB",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so DRESS and UMBRELLA give DRUM. This option takes DRAB: it keeps DR from DRESS in the right place, but puts AB where UM should be. A is the eighth letter of UMBRELLA, and B is its third."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-07",
+   "why": "The prompt's first sentence ran to 17 words, over the 16-word cap; 'is built from' is now 'uses', and the worked example is BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question. Round 3: the wrong-pieces word PLEA keeps the correct piece PL in place, and the not-a-word value PLIR keeps the same piece, so the non-word differs from the key in exactly as many places as the real word does, and which half of the rule the distractors share varies from row to row.",
+   "stem": {
+    "words": [
+     "PLATE",
+     "UMPIRE"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: PLATE ( ? ) UMPIRE"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-07-opt1",
+     "value": "PLUM",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-07-opt2",
+     "value": "PLIR",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": "The rule takes the first two letters of each outer word: PL from PLATE and UM from UMPIRE, giving PLUM. This option assembles PLIR, which is not a word — the child built letters and stopped without hearing them. It keeps PL from PLATE but puts IR where UM should be: I is the fourth letter of UMPIRE, and R is its fifth."
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-07-opt3",
+     "value": "PLEA",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so PLATE and UMPIRE give PLUM. This option takes PLEA: it keeps PL from PLATE in the right place, but puts EA where UM should be. E is the fifth letter of PLATE, and A is its third."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-08",
+   "why": "The prompt's first sentence ran to 17 words, over the 16-word cap; 'is built from' is now 'uses', and the worked example is BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question. Round 3: the wrong-pieces word CLUE keeps the correct piece CL in place, and the not-a-word value CLEL keeps the same piece, so the non-word differs from the key in exactly as many places as the real word does, and which half of the rule the distractors share varies from row to row.",
+   "stem": {
+    "words": [
+     "CLOUD",
+     "APPLE"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: CLOUD ( ? ) APPLE"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-08-opt1",
+     "value": "CLAP",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-08-opt2",
+     "value": "CLEL",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": "The rule takes the first two letters of each outer word: CL from CLOUD and AP from APPLE, giving CLAP. This option assembles CLEL, which is not a word — the child built letters and stopped without hearing them. It keeps CL from CLOUD but puts EL where AP should be: E is the fifth letter of APPLE, and L is its fourth."
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-08-opt3",
+     "value": "CLUE",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so CLOUD and APPLE give CLAP. This option takes CLUE: it keeps CL from CLOUD in the right place, but puts UE where AP should be. U is the fourth letter of CLOUD, and E is the fifth letter of APPLE."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-09",
+   "why": "Named defect: the outer word IPAD was a brand name. Outer words TREE ( ? ) IPAD became TRAIN ( ? ) OTTER; key TRIP became TROT. The prompt's first sentence ran to 17 words, over the 16-word cap; 'is built from' is now 'uses', and the worked example is BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question. Round 3: the wrong-pieces word RIOT keeps the correct piece OT in place, and the not-a-word value INOT keeps the same piece, so the non-word differs from the key in exactly as many places as the real word does, and which half of the rule the distractors share varies from row to row.",
+   "stem": {
+    "words": [
+     "TRAIN",
+     "OTTER"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: TRAIN ( ? ) OTTER"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-09-opt1",
+     "value": "TROT",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-09-opt2",
+     "value": "INOT",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": "The rule takes the first two letters of each outer word: TR from TRAIN and OT from OTTER, giving TROT. This option assembles INOT, which is not a word — the child built letters and stopped without hearing them. It keeps OT from OTTER but puts IN where TR should be: I is the fourth letter of TRAIN, and N is its fifth."
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-09-opt3",
+     "value": "RIOT",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so TRAIN and OTTER give TROT. This option takes RIOT: it keeps OT from OTTER in the right place, but puts RI where TR should be. R is the fifth letter of OTTER, and I is the fourth letter of TRAIN."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-10",
+   "why": "The prompt's first sentence ran to 17 words, over the 16-word cap; 'is built from' is now 'uses', and the worked example is BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question. Round 3: the wrong-pieces word SOAP keeps the correct piece AP in place, and the not-a-word value AKAP keeps the same piece, so the non-word differs from the key in exactly as many places as the real word does, and which half of the rule the distractors share varies from row to row.",
+   "stem": {
+    "words": [
+     "SNAKE",
+     "APRON"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: SNAKE ( ? ) APRON"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-10-opt1",
+     "value": "SNAP",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-10-opt2",
+     "value": "AKAP",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": "The rule takes the first two letters of each outer word: SN from SNAKE and AP from APRON, giving SNAP. This option assembles AKAP, which is not a word — the child built letters and stopped without hearing them. It keeps AP from APRON but puts AK where SN should be: A is the third letter of SNAKE, and K is its fourth."
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-10-opt3",
+     "value": "SOAP",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so SNAKE and APRON give SNAP. This option takes SOAP: it keeps AP from APRON in the right place, but puts SO where SN should be. S is the first letter of SNAKE, and O is the fourth letter of APRON."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-11",
+   "why": "Named defect: the landed distractor MAGE is not an ordinary word for a child. SWAN and IMAGE offered only SWAM, a one-step twin of SWIM, as a word keeping one piece, so SWAN became SWITCH. Outer words SWAN ( ? ) IMAGE became SWITCH ( ? ) IMAGE; the key stays SWIM. The prompt's first sentence ran to 17 words, over the 16-word cap; 'is built from' is now 'uses', and the worked example is BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question. Round 3: the wrong-pieces word WHIM keeps the correct piece IM in place, and the not-a-word value ITIM keeps the same piece, so the non-word differs from the key in exactly as many places as the real word does, and which half of the rule the distractors share varies from row to row.",
+   "stem": {
+    "words": [
+     "SWITCH",
+     "IMAGE"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: SWITCH ( ? ) IMAGE"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-11-opt1",
+     "value": "SWIM",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-11-opt2",
+     "value": "ITIM",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": "The rule takes the first two letters of each outer word: SW from SWITCH and IM from IMAGE, giving SWIM. This option assembles ITIM, which is not a word — the child built letters and stopped without hearing them. It keeps IM from IMAGE but puts IT where SW should be: I is the third letter of SWITCH, and T is its fourth."
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-11-opt3",
+     "value": "WHIM",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so SWITCH and IMAGE give SWIM. This option takes WHIM: it keeps IM from IMAGE in the right place, but puts WH where SW should be. W is the second letter of SWITCH, and H is its sixth."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-12",
+   "why": "Named defect: the key CRAB was the first outer word itself and the distractor ABLE was the second outer word copied whole. Outer words CRAB ( ? ) ABLE became CROWN ( ? ) ABOUT; the key stays CRAB. The prompt's first sentence ran to 17 words, over the 16-word cap; 'is built from' is now 'uses', and the worked example is BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question. Round 3: the wrong-pieces word CROW keeps the correct piece CR in place, and the not-a-word value CRUT keeps the same piece, so the non-word differs from the key in exactly as many places as the real word does, and which half of the rule the distractors share varies from row to row.",
+   "stem": {
+    "words": [
+     "CROWN",
+     "ABOUT"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: CROWN ( ? ) ABOUT"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-12-opt1",
+     "value": "CRAB",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-12-opt2",
+     "value": "CRUT",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": "The rule takes the first two letters of each outer word: CR from CROWN and AB from ABOUT, giving CRAB. This option assembles CRUT, which is not a word — the child built letters and stopped without hearing them. It keeps CR from CROWN but puts UT where AB should be: U is the fourth letter of ABOUT, and T is its fifth."
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-12-opt3",
+     "value": "CROW",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so CROWN and ABOUT give CRAB. This option takes CROW: it keeps CR from CROWN in the right place, but puts OW where AB should be. O is the third letter of CROWN, and W is its fourth."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-13",
+   "why": "Named defect: the landed distractor DENS is a weak word for a child. SPOON and INDEX gave no sayable non-word keeping the piece the real-word option keeps, so the outer words were changed. Outer words SPOON ( ? ) INDEX became SPADE ( ? ) INCH; the key stays SPIN. The prompt's first sentence ran to 17 words, over the 16-word cap; 'is built from' is now 'uses', and the worked example is BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question. Round 3: the wrong-pieces word PAIN keeps the correct piece IN in place, and the not-a-word value EDIN keeps the same piece, so the non-word differs from the key in exactly as many places as the real word does, and which half of the rule the distractors share varies from row to row.",
+   "stem": {
+    "words": [
+     "SPADE",
+     "INCH"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: SPADE ( ? ) INCH"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-13-opt1",
+     "value": "SPIN",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-13-opt2",
+     "value": "EDIN",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": "The rule takes the first two letters of each outer word: SP from SPADE and IN from INCH, giving SPIN. This option assembles EDIN, which is not a word — the child built letters and stopped without hearing them. It keeps IN from INCH but puts ED where SP should be: E is the fifth letter of SPADE, and D is its fourth."
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-13-opt3",
+     "value": "PAIN",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so SPADE and INCH give SPIN. This option takes PAIN: it keeps IN from INCH in the right place, but puts PA where SP should be. P is the second letter of SPADE, and A is its third."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-14",
+   "why": "Named defect: the landed distractor ABBE is not an ordinary word for a child. GRAPE and ABBEY gave no sayable non-word keeping the piece the real-word option keeps, so the outer words were changed. Outer words GRAPE ( ? ) ABBEY became GROUND ( ? ) ABLE; the key stays GRAB. The prompt's first sentence ran to 17 words, over the 16-word cap; 'is built from' is now 'uses', and the worked example is BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question. Round 3: the wrong-pieces word GRUB keeps the correct piece GR in place, and the not-a-word value GREL keeps the same piece, so the non-word differs from the key in exactly as many places as the real word does, and which half of the rule the distractors share varies from row to row.",
+   "stem": {
+    "words": [
+     "GROUND",
+     "ABLE"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: GROUND ( ? ) ABLE"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-14-opt1",
+     "value": "GRAB",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-14-opt2",
+     "value": "GREL",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": "The rule takes the first two letters of each outer word: GR from GROUND and AB from ABLE, giving GRAB. This option assembles GREL, which is not a word — the child built letters and stopped without hearing them. It keeps GR from GROUND but puts EL where AB should be: E is the fourth letter of ABLE, and L is its third."
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-14-opt3",
+     "value": "GRUB",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so GROUND and ABLE give GRAB. This option takes GRUB: it keeps GR from GROUND in the right place, but puts UB where AB should be. U is the fourth letter of GROUND, and B is the second letter of ABLE."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-15",
+   "why": "Named defect: the outer word IPOD was a brand name. Outer words SLEEP ( ? ) IPOD became SLEEP ( ? ) UGLY; key SLIP became SLUG. The prompt's first sentence ran to 17 words, over the 16-word cap; 'is built from' is now 'uses', and the worked example is BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question. Round 3: the wrong-pieces word PLUG keeps the correct piece UG in place, and the not-a-word value LEUG keeps the same piece, so the non-word differs from the key in exactly as many places as the real word does, and which half of the rule the distractors share varies from row to row.",
+   "stem": {
+    "words": [
+     "SLEEP",
+     "UGLY"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: SLEEP ( ? ) UGLY"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-15-opt1",
+     "value": "SLUG",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-15-opt2",
+     "value": "LEUG",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": "The rule takes the first two letters of each outer word: SL from SLEEP and UG from UGLY, giving SLUG. This option assembles LEUG, which is not a word — the child built letters and stopped without hearing them. It keeps UG from UGLY but puts LE where SL should be: L is the second letter of SLEEP, and E is its third."
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-15-opt3",
+     "value": "PLUG",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so SLEEP and UGLY give SLUG. This option takes PLUG: it keeps UG from UGLY in the right place, but puts PL where SL should be. P is the fifth letter of SLEEP, and L is the third letter of UGLY."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-16",
+   "why": "The prompt's first sentence ran to 17 words, over the 16-word cap; 'is built from' is now 'uses', and the worked example is BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question. Round 3: the wrong-pieces word BEAM keeps the correct piece AM in place, and the not-a-word value AWAM keeps the same piece, so the non-word differs from the key in exactly as many places as the real word does, and which half of the rule the distractors share varies from row to row.",
+   "stem": {
+    "words": [
+     "PRAWN",
+     "AMBER"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: PRAWN ( ? ) AMBER"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-16-opt1",
+     "value": "PRAM",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-16-opt2",
+     "value": "AWAM",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": "The rule takes the first two letters of each outer word: PR from PRAWN and AM from AMBER, giving PRAM. This option assembles AWAM, which is not a word — the child built letters and stopped without hearing them. It keeps AM from AMBER but puts AW where PR should be: A is the third letter of PRAWN, and W is its fourth."
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-16-opt3",
+     "value": "BEAM",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so PRAWN and AMBER give PRAM. This option takes BEAM: it keeps AM from AMBER in the right place, but puts BE where PR should be. B is the third letter of AMBER, and E is its fourth."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-17",
+   "why": "Named defect: the outer word IMP is a weak word for a child. Outer words BRICK ( ? ) IMP became MOTHER ( ? ) ONION; key BRIM became MOON. The prompt's first sentence ran to 17 words, over the 16-word cap; 'is built from' is now 'uses', and the worked example is BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question. Round 3: the wrong-pieces word IRON keeps the correct piece ON in place, and the not-a-word value OTON keeps the same piece, so the non-word differs from the key in exactly as many places as the real word does, and which half of the rule the distractors share varies from row to row.",
+   "stem": {
+    "words": [
+     "MOTHER",
+     "ONION"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: MOTHER ( ? ) ONION"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-17-opt1",
+     "value": "MOON",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-17-opt2",
+     "value": "OTON",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": "The rule takes the first two letters of each outer word: MO from MOTHER and ON from ONION, giving MOON. This option assembles OTON, which is not a word — the child built letters and stopped without hearing them. It keeps ON from ONION but puts OT where MO should be: O is the second letter of MOTHER, and T is its third."
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-17-opt3",
+     "value": "IRON",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so MOTHER and ONION give MOON. This option takes IRON: it keeps ON from ONION in the right place, but puts IR where MO should be. I is the third letter of ONION, and R is the sixth letter of MOTHER."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-18",
+   "why": "Named defect: the outer word IPS is not a word. Outer words DRAGON ( ? ) IPS became DRAGON ( ? ) OPPOSITE; key DRIP became DROP. The prompt's first sentence ran to 17 words, over the 16-word cap; 'is built from' is now 'uses', and the worked example is BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question. Round 3: the wrong-pieces word DRAG keeps the correct piece DR in place, and the not-a-word value DRIT keeps the same piece, so the non-word differs from the key in exactly as many places as the real word does, and which half of the rule the distractors share varies from row to row.",
+   "stem": {
+    "words": [
+     "DRAGON",
+     "OPPOSITE"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: DRAGON ( ? ) OPPOSITE"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-18-opt1",
+     "value": "DROP",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-18-opt2",
+     "value": "DRIT",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": "The rule takes the first two letters of each outer word: DR from DRAGON and OP from OPPOSITE, giving DROP. This option assembles DRIT, which is not a word — the child built letters and stopped without hearing them. It keeps DR from DRAGON but puts IT where OP should be: I is the sixth letter of OPPOSITE, and T is its seventh."
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-18-opt3",
+     "value": "DRAG",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so DRAGON and OPPOSITE give DROP. This option takes DRAG: it keeps DR from DRAGON in the right place, but puts AG where OP should be. A is the third letter of DRAGON, and G is its fourth."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-19",
+   "why": "Named defect: the distractor ATTA needed two As, but the row holds one. The prompt's first sentence ran to 17 words, over the 16-word cap; 'is built from' is now 'uses', and the worked example is BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question. Round 3: the wrong-pieces word HEAT keeps the correct piece AT in place, and the not-a-word value ERAT keeps the same piece, so the non-word differs from the key in exactly as many places as the real word does, and which half of the rule the distractors share varies from row to row.",
+   "stem": {
+    "words": [
+     "CHERRY",
+     "ATTIC"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: CHERRY ( ? ) ATTIC"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-19-opt1",
+     "value": "CHAT",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-19-opt2",
+     "value": "ERAT",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": "The rule takes the first two letters of each outer word: CH from CHERRY and AT from ATTIC, giving CHAT. This option assembles ERAT, which is not a word — the child built letters and stopped without hearing them. It keeps AT from ATTIC but puts ER where CH should be: E is the third letter of CHERRY, and R is its fourth."
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-19-opt3",
+     "value": "HEAT",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so CHERRY and ATTIC give CHAT. This option takes HEAT: it keeps AT from ATTIC in the right place, but puts HE where CH should be. H is the second letter of CHERRY, and E is its third."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-20",
+   "why": "Named defect: the outer word IMPS is a weak word for a child. WHEEL and ENGINE offered no ordinary word keeping one correct piece, so WHEEL became WHEAT. Outer words WHEEL ( ? ) IMPS became WHEAT ( ? ) ENGINE; key WHIM became WHEN. The prompt's first sentence ran to 17 words, over the 16-word cap; 'is built from' is now 'uses', and the worked example is BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question. Round 3: the wrong-pieces word THEN keeps the correct piece EN in place, and the not-a-word value HEEN keeps the same piece, so the non-word differs from the key in exactly as many places as the real word does, and which half of the rule the distractors share varies from row to row.",
+   "stem": {
+    "words": [
+     "WHEAT",
+     "ENGINE"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: WHEAT ( ? ) ENGINE"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-20-opt1",
+     "value": "WHEN",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-20-opt2",
+     "value": "HEEN",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": "The rule takes the first two letters of each outer word: WH from WHEAT and EN from ENGINE, giving WHEN. This option assembles HEEN, which is not a word — the child built letters and stopped without hearing them. It keeps EN from ENGINE but puts HE where WH should be: H is the second letter of WHEAT, and E is its third."
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-20-opt3",
+     "value": "THEN",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so WHEAT and ENGINE give WHEN. This option takes THEN: it keeps EN from ENGINE in the right place, but puts TH where WH should be. T is the fifth letter of WHEAT, and H is its second."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-21",
+   "why": "Named defect: the landed distractor UTTS is not a word. No real word built on SHED and UTTER keeps one correct piece in place, so SHED became SHORE. Outer words SHED ( ? ) UTTER became SHORE ( ? ) UTTER; the key stays SHUT. The prompt's first sentence ran to 17 words, over the 16-word cap; 'is built from' is now 'uses', and the worked example is BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question. Round 3: the wrong-pieces word SHOT keeps the correct piece SH in place, and the not-a-word value SHET keeps the same piece, so the non-word differs from the key in exactly as many places as the real word does, and which half of the rule the distractors share varies from row to row.",
+   "stem": {
+    "words": [
+     "SHORE",
+     "UTTER"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: SHORE ( ? ) UTTER"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-21-opt1",
+     "value": "SHUT",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-21-opt2",
+     "value": "SHET",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": "The rule takes the first two letters of each outer word: SH from SHORE and UT from UTTER, giving SHUT. This option assembles SHET, which is not a word — the child built letters and stopped without hearing them. It keeps SH from SHORE but puts ET where UT should be: E is the fourth letter of UTTER, and T is its third."
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-21-opt3",
+     "value": "SHOT",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so SHORE and UTTER give SHUT. This option takes SHOT: it keeps SH from SHORE in the right place, but puts OT where UT should be. O is the third letter of SHORE, and T is the third letter of UTTER."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-22",
+   "why": "The prompt's first sentence ran to 17 words, over the 16-word cap; 'is built from' is now 'uses', and the worked example is BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question. Round 3: the wrong-pieces word REAP keeps the correct piece AP in place, and the not-a-word value UCAP keeps the same piece, so the non-word differs from the key in exactly as many places as the real word does, and which half of the rule the distractors share varies from row to row.",
+   "stem": {
+    "words": [
+     "TRUCK",
+     "APPLE"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: TRUCK ( ? ) APPLE"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-22-opt1",
+     "value": "TRAP",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-22-opt2",
+     "value": "UCAP",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": "The rule takes the first two letters of each outer word: TR from TRUCK and AP from APPLE, giving TRAP. This option assembles UCAP, which is not a word — the child built letters and stopped without hearing them. It keeps AP from APPLE but puts UC where TR should be: U is the third letter of TRUCK, and C is its fourth."
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-22-opt3",
+     "value": "REAP",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so TRUCK and APPLE give TRAP. This option takes REAP: it keeps AP from APPLE in the right place, but puts RE where TR should be. R is the second letter of TRUCK, and E is the fifth letter of APPLE."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-23",
+   "why": "Named defect: the outer word IPS is not a word, and the distractor IPSO was not one either. Outer words FLOWER ( ? ) IPS became FLOWER ( ? ) AGAIN; key FLIP became FLAG. The prompt's first sentence ran to 17 words, over the 16-word cap; 'is built from' is now 'uses', and the worked example is BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question. Round 3: the wrong-pieces word FLEW keeps the correct piece FL in place, and the not-a-word value FLIN keeps the same piece, so the non-word differs from the key in exactly as many places as the real word does, and which half of the rule the distractors share varies from row to row.",
+   "stem": {
+    "words": [
+     "FLOWER",
+     "AGAIN"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: FLOWER ( ? ) AGAIN"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-23-opt1",
+     "value": "FLAG",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-23-opt2",
+     "value": "FLIN",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": "The rule takes the first two letters of each outer word: FL from FLOWER and AG from AGAIN, giving FLAG. This option assembles FLIN, which is not a word — the child built letters and stopped without hearing them. It keeps FL from FLOWER but puts IN where AG should be: I is the fourth letter of AGAIN, and N is its fifth."
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-23-opt3",
+     "value": "FLEW",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so FLOWER and AGAIN give FLAG. This option takes FLEW: it keeps FL from FLOWER in the right place, but puts EW where AG should be. E is the fifth letter of FLOWER, and W is its fourth."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-24",
+   "why": "Named defect: the landed distractor AMBS is not a word. The prompt's first sentence ran to 17 words, over the 16-word cap; 'is built from' is now 'uses', and the worked example is BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question. Round 3: the wrong-pieces word SLAB keeps the correct piece SL in place, and the not-a-word value SLER keeps the same piece, so the non-word differs from the key in exactly as many places as the real word does, and which half of the rule the distractors share varies from row to row.",
+   "stem": {
+    "words": [
+     "SLIDE",
+     "AMBER"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: SLIDE ( ? ) AMBER"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-24-opt1",
+     "value": "SLAM",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-24-opt2",
+     "value": "SLER",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": "The rule takes the first two letters of each outer word: SL from SLIDE and AM from AMBER, giving SLAM. This option assembles SLER, which is not a word — the child built letters and stopped without hearing them. It keeps SL from SLIDE but puts ER where AM should be: E is the fourth letter of AMBER, and R is its fifth."
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-24-opt3",
+     "value": "SLAB",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so SLIDE and AMBER give SLAM. This option takes SLAB: it keeps SL from SLIDE in the right place, but puts AB where AM should be. A is the first letter of AMBER, and B is its third."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-25",
+   "why": "Named defect: the outer word IPS is not a word. SNOW and AGREE offered no ordinary word keeping one correct piece, so the row became BOTTLE ( ? ) ATTIC, key BOAT. Outer words SNOW ( ? ) IPS became BOTTLE ( ? ) ATTIC; key SNIP became BOAT. The prompt's first sentence ran to 17 words, over the 16-word cap; 'is built from' is now 'uses', and the worked example is BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question. Round 3: the wrong-pieces word BOLT keeps the correct piece BO in place, and the not-a-word value BOIC keeps the same piece, so the non-word differs from the key in exactly as many places as the real word does, and which half of the rule the distractors share varies from row to row.",
+   "stem": {
+    "words": [
+     "BOTTLE",
+     "ATTIC"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: BOTTLE ( ? ) ATTIC"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-25-opt1",
+     "value": "BOAT",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-25-opt2",
+     "value": "BOIC",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": "The rule takes the first two letters of each outer word: BO from BOTTLE and AT from ATTIC, giving BOAT. This option assembles BOIC, which is not a word — the child built letters and stopped without hearing them. It keeps BO from BOTTLE but puts IC where AT should be: I is the fourth letter of ATTIC, and C is its fifth."
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-25-opt3",
+     "value": "BOLT",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so BOTTLE and ATTIC give BOAT. This option takes BOLT: it keeps BO from BOTTLE in the right place, but puts LT where AT should be. L is the fifth letter of BOTTLE, and T is its third."
+    }
+   ]
+  }
+ ]
+}
