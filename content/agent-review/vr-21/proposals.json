@@ -1,84 +1,48 @@
 {
  "door": "vr-21",
  "proposer": "agent",
- "seats": [
+ "seats": [],
+ "redrafts": [],
+ "rebuilds": [
   {
-   "optionId": "gen-vr-21-same-meaning-09-opt2",
-   "itemId": "gen-vr-21-same-meaning-09",
-   "oldValue": "generous",
-   "tag": "vr21-associated-not-same",
-   "newValue": "famous",
-   "execution": "The task is to find the word that means the same as 'rich', and the key is 'wealthy'. 'Rich and famous' is a common pair, but 'famous' means well known, not having lots of money. A child who picks a word that goes with 'rich', not one that means the same, picks 'famous' instead of 'wealthy'."
-  },
-  {
-   "optionId": "gen-vr-21-same-meaning-09-opt3",
-   "itemId": "gen-vr-21-same-meaning-09",
-   "oldValue": "distant",
-   "tag": "vr21-associated-not-same",
-   "newValue": "powerful",
-   "execution": "The task is to find the word that means the same as 'rich', and the key is 'wealthy'. 'Rich and powerful' is a common pair, but 'powerful' means strong or in charge, not having lots of money. A child who picks a word that goes with 'rich', not one that means the same, picks 'powerful' instead of 'wealthy'."
-  },
-  {
-   "optionId": "gen-vr-21-same-meaning-09-opt4",
-   "itemId": "gen-vr-21-same-meaning-09",
-   "oldValue": "polite",
-   "tag": "vr21-opposite-pull",
-   "newValue": "penniless",
-   "execution": "The task is to find the word that means the same as 'rich', and the key is 'wealthy'. 'Penniless' means having no money at all, the opposite of 'rich'. A child who spots the meaning area but reverses it picks 'penniless' instead of 'wealthy'."
-  },
-  {
-   "optionId": "gen-vr-21-same-meaning-22-opt3",
    "itemId": "gen-vr-21-same-meaning-22",
-   "oldValue": "loud",
-   "tag": "vr21-associated-not-same",
-   "newValue": "nice",
-   "execution": "The task is to find the word that means the same as 'tidy', and the key is 'neat'. 'Nice and tidy' is an everyday pairing, but 'nice' means pleasant, not neat. A child who picks a word that goes with 'tidy', not one that means the same, picks 'nice' instead of 'neat'."
-  },
-  {
-   "optionId": "gen-vr-21-same-meaning-22-opt4",
-   "itemId": "gen-vr-21-same-meaning-22",
-   "oldValue": "sharp",
-   "tag": "vr21-too-strong",
-   "newValue": "spotless",
-   "execution": "The task is to find the word that means the same as 'tidy', and the key is 'neat'. 'Spotless' means perfectly clean with not a mark anywhere, a much stronger word than 'tidy', so it is near the meaning but far past its size. A child who finds the meaning area but ignores its strength picks 'spotless' instead of 'neat'."
+   "why": "Eight seat values on 'tidy' were refused and its goes-together partners are exhausted, so the row is rebuilt on a new pair: card 'scared', key 'fearful'. 'fearful' is rarer than 'scared', as the bank's direction asks (R323), and neither word is a card or key elsewhere in the door. Distractors: 'bold' (opposite), 'terrified' (too-strong), 'alone' (goes-together, an adjective like the key).",
+   "stem": {
+    "words": [
+     "scared"
+    ],
+    "prompt": "Which word means the SAME as the word on the card?"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-21-same-meaning-22-opt1",
+     "value": "fearful",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-21-same-meaning-22-opt2",
+     "value": "bold",
+     "isKey": false,
+     "tag": "vr21-opposite-pull",
+     "execution": "The task is to find the word that means the same as 'scared', and the key is 'fearful'. 'Bold' means daring and unafraid, the opposite of 'scared'. A child who spots the meaning area but reverses it picks 'bold' instead of 'fearful'."
+    },
+    {
+     "optionId": "gen-vr-21-same-meaning-22-opt3",
+     "value": "terrified",
+     "isKey": false,
+     "tag": "vr21-too-strong",
+     "execution": "The task is to find the word that means the same as 'scared', and the key is 'fearful'. 'Terrified' means extremely scared, a much stronger word than 'scared', so it matches the meaning but not its size. A child who finds the right meaning but ignores its strength picks 'terrified' instead of 'fearful'."
+    },
+    {
+     "optionId": "gen-vr-21-same-meaning-22-opt4",
+     "value": "alone",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "execution": "The task is to find the word that means the same as 'scared', and the key is 'fearful'. 'Alone and scared' is an everyday pairing, but 'alone' means with nobody else, not afraid. A child who picks a word that goes with 'scared', not one that means the same, picks 'alone' instead of 'fearful'."
+    }
+   ]
   }
- ],
- "redrafts": [
-  {
-   "optionId": "gen-vr-21-same-meaning-04-opt2",
-   "itemId": "gen-vr-21-same-meaning-04",
-   "value": "hop",
-   "tag": "vr21-too-strong",
-   "execution": "The task is to find the word that means the same as 'leap', and the key is 'jump'. 'Hop' is a small jump, much weaker than a 'leap', so it matches the meaning but not its size. A child who finds the right meaning but ignores its strength picks 'hop' instead of 'jump'."
-  },
-  {
-   "optionId": "gen-vr-21-same-meaning-15-opt3",
-   "itemId": "gen-vr-21-same-meaning-15",
-   "value": "even",
-   "tag": "vr21-opposite-pull",
-   "execution": "The task is to find the word that means the same as 'odd', and the key is 'strange'. 'Even' is the opposite of 'odd' in numbers, as in 'odd and even'. A child who spots the meaning area but reverses it in the number sense picks 'even' instead of 'strange'."
-  },
-  {
-   "optionId": "gen-vr-21-same-meaning-17-opt2",
-   "itemId": "gen-vr-21-same-meaning-17",
-   "value": "shout",
-   "tag": "vr21-too-strong",
-   "execution": "The task is to find the word that means the same as 'speak', and the key is 'talk'. 'Shout' means speak very loudly, a much stronger version of 'speak', so it matches the meaning but not its size. A child who finds the right meaning but ignores its strength picks 'shout' instead of 'talk'."
-  },
-  {
-   "optionId": "gen-vr-21-same-meaning-18-opt2",
-   "itemId": "gen-vr-21-same-meaning-18",
-   "value": "finish",
-   "tag": "vr21-opposite-pull",
-   "execution": "The task is to find the word that means the same as 'begin', and the key is 'start'. 'Finish' is the opposite of 'begin'. A child who spots the meaning area but reverses it picks 'finish' instead of 'start'."
-  },
-  {
-   "optionId": "gen-vr-21-same-meaning-19-opt3",
-   "itemId": "gen-vr-21-same-meaning-19",
-   "value": "slam",
-   "tag": "vr21-too-strong",
-   "execution": "The task is to find the word that means the same as 'shut', and the key is 'close'. 'Slam' means shut hard and loudly, a much stronger version of 'shut', so it matches the meaning but not its size. A child who finds the right meaning but ignores its strength picks 'slam' instead of 'close'."
-  }
- ],
- "rebuilds": []
+ ]
 }

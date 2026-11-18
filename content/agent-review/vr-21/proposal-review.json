@@ -3,91 +3,16 @@
  "reviewer": "rev-agent-01",
  "changes": [
   {
-   "ref": "seat:gen-vr-21-same-meaning-09-opt2",
+   "ref": "rebuild:gen-vr-21-same-meaning-22",
    "verdict": "ATTEST",
-   "reason": "Checked card 'rich', key and 'famous' are on the row; 'famous' is the same word class as the key, has no same-meaning sense a 9-11-year-old knows, and tag vr21-associated-not-same names the pull. Carried forward from an earlier attest, unchanged in value and tag."
-  },
-  {
-   "ref": "seat:gen-vr-21-same-meaning-09-opt3",
-   "verdict": "ATTEST",
-   "reason": "Checked card 'rich', key and 'powerful' are on the row; 'powerful' is the same word class as the key, has no same-meaning sense a 9-11-year-old knows, and tag vr21-associated-not-same names the pull. Carried forward from an earlier attest, unchanged in value and tag."
-  },
-  {
-   "ref": "seat:gen-vr-21-same-meaning-09-opt4",
-   "verdict": "ATTEST",
-   "reason": "Checked card 'rich', key and 'penniless' are on the row; 'penniless' is the same word class as the key, has no same-meaning sense a 9-11-year-old knows, and tag vr21-opposite-pull names the pull. New value: 'penniless' (no money at all) is the direct opposite of 'rich' in the money sense the key uses. It is a storybook word ('a penniless woodcutter') within reach of a 9-11-year-old 11+ candidate, the row has no other opposite, and 'penniless' does not mean the same as 'famous' or 'powerful'."
-  },
-  {
-   "ref": "seat:gen-vr-21-same-meaning-22-opt3",
-   "verdict": "ATTEST",
-   "reason": "Checked card 'tidy', key and 'nice' are on the row; 'nice' is the same word class as the key, has no same-meaning sense a 9-11-year-old knows, and tag vr21-associated-not-same names the pull. Carried forward from an earlier attest, unchanged in value and tag."
-  },
-  {
-   "ref": "seat:gen-vr-21-same-meaning-22-opt4",
-   "verdict": "REFUSE",
-   "reason": "The execution's central claim is false. 'Spotless' is a stronger word for CLEAN (no dirt, not a mark), not for TIDY (everything in its place); a spotless room can still have clothes on the floor. The execution says so itself ('perfectly clean'), then calls it 'a much stronger word than tidy'. It only becomes a stronger 'tidy' through the clean = tidy equivalence that round 1 ruled a second answer. The tag (right meaning, wrong strength) therefore depends on the very confusion that disqualified 'clean'. Either 'spotless' is a defensible tidy-word, and the row has a second-answer risk at full strength, or it is not, and the too-strong tag does not name the mistake. Asked separately: 'messy' and 'spotless' at opposite ends do NOT let a child drop them as a pair. They are opposites of each other, not synonyms, so the rule that two same-meaning options cannot both be the answer does not apply (unlike 'wise'/'sensible' in round 3). That is moot given the refusal."
-  },
-  {
-   "ref": "redraft:gen-vr-21-same-meaning-04-opt2",
-   "verdict": "ATTEST",
-   "reason": "Diffed against the previously attested execution (archived proposals-round1/round3.json): value 'hop' and tag vr21-too-strong are unchanged, and the only change is that the sentence explaining the tag choice ('so this seat uses the ... entry') has been deleted. The rest is byte-identical. Every word in the remaining execution is on the row, and it still names the mistake."
-  },
-  {
-   "ref": "redraft:gen-vr-21-same-meaning-15-opt3",
-   "verdict": "ATTEST",
-   "reason": "Diffed against the previously attested execution (archived proposals-round1/round3.json): value 'even' and tag vr21-opposite-pull are unchanged, and the only change is that the sentence explaining the tag choice ('so this seat uses the ... entry') has been deleted. The rest is byte-identical. Every word in the remaining execution is on the row, and it still names the mistake."
-  },
-  {
-   "ref": "redraft:gen-vr-21-same-meaning-17-opt2",
-   "verdict": "ATTEST",
-   "reason": "Diffed against the previously attested execution (archived proposals-round1/round3.json): value 'shout' and tag vr21-too-strong are unchanged, and the only change is that the sentence explaining the tag choice ('so this seat uses the ... entry') has been deleted. The rest is byte-identical. Every word in the remaining execution is on the row, and it still names the mistake."
-  },
-  {
-   "ref": "redraft:gen-vr-21-same-meaning-18-opt2",
-   "verdict": "ATTEST",
-   "reason": "Diffed against the previously attested execution (archived proposals-round1/round3.json): value 'finish' and tag vr21-opposite-pull are unchanged, and the only change is that the sentence explaining the tag choice ('so this seat uses the ... entry') has been deleted. The rest is byte-identical. Every word in the remaining execution is on the row, and it still names the mistake."
-  },
-  {
-   "ref": "redraft:gen-vr-21-same-meaning-19-opt3",
-   "verdict": "ATTEST",
-   "reason": "Diffed against the previously attested execution (archived proposals-round1/round3.json): value 'slam' and tag vr21-too-strong are unchanged, and the only change is that the sentence explaining the tag choice ('so this seat uses the ... entry') has been deleted. The rest is byte-identical. Every word in the remaining execution is on the row, and it still names the mistake."
+   "reason": "MEASURED, not judged: loadChildLexicon() in scripts/lib/child-lexicon.ts (SUBTLEX-UK, Zipf; the child cut is 3.0) gives scared 4.81 (CBBC 5.30) and fearful 3.51 (CBBC 3.21). The key is rarer than the card, as BANK_DIRECTIONS declares for vr-21 (key-rarer-than-stem, R323), and above the child cut. The distractors measure bold 4.11, terrified 4.10 and alone 5.03, all well above the cut. Tidy's goes-together partners were exhausted, and moving to a new pair is the right fix. Key: 'fearful' (full of fear) is the same strength as 'scared' and the only option that means it. Its old 'dreadful' sense ('a fearful mess') is not one a child uses, and it would not compete anyway. 'bold' is a real opposite (daring, unafraid), and its print sense (bold type) is not on the row. 'alone': 'scared and alone' is a stock pairing, an adjective like the key, and it never means afraid. 'terrified': a child WOULD say a terrified person is scared, but that is a degree relation, the exact shape the bank's too-strong entry is built on: huge/big, whose hint is 'Huge is more than big', and shout/speak and slam/shut, attested on this door. 'fearful' matches the size of 'scared' and 'terrified' does not, so it is a designed near-miss rather than a second key. Executions checked: every word is on the row and each names its tag's mistake."
   }
  ],
  "rows": [
   {
-   "itemId": "gen-vr-21-same-meaning-04",
-   "verdict": "SIGN",
-   "reason": "Execution-only redraft. Row unchanged: leap / jump, hop, run, land, signed earlier and re-read. 'jump' is the only same-meaning option."
-  },
-  {
-   "itemId": "gen-vr-21-same-meaning-09",
-   "verdict": "SIGN",
-   "reason": "Read as built: card 'rich', options [wealthy, famous, powerful, penniless], all adjectives. 'wealthy' is the only same-meaning option. 'penniless' is the single opposite, and 'famous' and 'powerful' are stock pairings ('rich and famous', 'rich and powerful'). No two options mean the same as each other, so none can be dropped as a pair. No stereotype, and every word is within reach of a 9-11-year-old."
-  },
-  {
-   "itemId": "gen-vr-21-same-meaning-15",
-   "verdict": "SIGN",
-   "reason": "Execution-only redraft. Row unchanged: odd / strange, ordinary, even, puzzled, signed earlier and re-read."
-  },
-  {
-   "itemId": "gen-vr-21-same-meaning-17",
-   "verdict": "SIGN",
-   "reason": "Execution-only redraft. Row unchanged: speak / talk, shout, listen, write, signed earlier and re-read."
-  },
-  {
-   "itemId": "gen-vr-21-same-meaning-18",
-   "verdict": "SIGN",
-   "reason": "Execution-only redraft. Row unchanged: begin / start, finish, race, count, signed earlier and re-read."
-  },
-  {
-   "itemId": "gen-vr-21-same-meaning-19",
-   "verdict": "SIGN",
-   "reason": "Execution-only redraft. Row unchanged: shut / close, open, slam, sleep, signed earlier and re-read."
-  },
-  {
    "itemId": "gen-vr-21-same-meaning-22",
-   "verdict": "HOLD",
-   "reason": "opt4 'spotless' refused: it is a stronger CLEAN, not a stronger TIDY, so it reaches 'tidy' only through the clean = tidy confusion that round 1 ruled a second answer. Across rounds this row has had eight values refused (clean, folded, bedroom, toys, small, careful, bright, spotless; 'nice' was the one that held). The stock partners of 'tidy' look exhausted, and this seat probably needs a person's decision rather than another agent round."
+   "verdict": "SIGN",
+   "reason": "Read as built: card 'scared', options [fearful, bold, terrified, alone], all adjectives, so none can be dropped by word class. 'fearful' is the only same-strength same-meaning option. 'bold' and 'terrified' sit at opposite ends but are not synonyms of each other, so they cannot be dropped as a pair. No stereotype, and every word is above the 3.0 child cut. The card does not repeat elsewhere on the door."
   }
  ]
 }
