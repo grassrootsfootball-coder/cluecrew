@@ -1,303 +1,49 @@
 {
  "door": "vr-05",
  "reviewer": "rev-agent-01",
+ "round": 2,
  "changes": [
   {
-   "ref": "seat:gen-vr-05-hidden-word-01-opt2",
+   "ref": "rebuild:gen-vr-05-hidden-word-08",
    "verdict": "ATTEST",
-   "reason": "Recomputed on \"Dad ate the last plum.\": lost is not on the row at any position; the run \"last\" is on the row and differs from lost by exactly one letter, and no run is closer. Near-miss is the act that produces lost."
+   "reason": "Fixes the odd sentence. Joined 'myextraideahelpedtheteam': raid appears once, crossing exactly one join (extr|a + id|ea). beam is absent; its closest run is 'team', one letter off, and no run is closer. help sits whole inside 'helped', appears once and crosses no join. 'aide' also crosses a join (extr|a + ide|a) but is not an option, and it is an adult word, so neither a child nor a marker can claim it as a second answer in a three-option item. No other real four-letter word crosses a join."
   },
   {
-   "ref": "seat:gen-vr-05-hidden-word-01-opt3",
+   "ref": "rebuild:gen-vr-05-hidden-word-12",
    "verdict": "ATTEST",
-   "reason": "Recomputed on \"Dad ate the last plum.\": plum sits whole inside the single word \"plum\", appears once, and crosses no join. Key named in the execution is the row key. House form verbatim."
+   "reason": "Fixes the fragment. Joined 'weatefishandchipsonthebeach': hand appears once, crossing exactly one join (fis|h + and). wish is absent; its closest run is 'fish', one letter off. chip sits whole inside 'chips' and crosses no join. No other real four-letter word crosses a join."
   },
   {
-   "ref": "seat:gen-vr-05-hidden-word-02-opt2",
+   "ref": "rebuild:gen-vr-05-hidden-word-20",
    "verdict": "ATTEST",
-   "reason": "Recomputed on \"She played her oboe in the band.\": ship is not on the row at any position; the run \"shep\" is on the row and differs from ship by exactly one letter, and no run is closer. Near-miss is the act that produces ship."
+   "reason": "Replaces 'industrious' with everyday words. Joined 'wewatchinsectsclimbthewall': chin appears once, crossing exactly one join (wat|ch + in|sects). itch is absent; its closest run is 'atch', one letter off. limb sits whole inside 'climb' and crosses no join. No other real four-letter word crosses a join."
   },
   {
-   "ref": "seat:gen-vr-05-hidden-word-02-opt3",
-   "verdict": "ATTEST",
-   "reason": "Recomputed on \"She played her oboe in the band.\": play sits whole inside the single word \"played\", appears once, and crosses no join. Key named in the execution is the row key. House form verbatim."
-  },
-  {
-   "ref": "seat:gen-vr-05-hidden-word-03-opt2",
-   "verdict": "ATTEST",
-   "reason": "Recomputed on \"It was the best option today.\": wasp is not on the row at any position; the run \"wast\" is on the row and differs from wasp by exactly one letter, and no run is closer. Near-miss is the act that produces wasp."
-  },
-  {
-   "ref": "seat:gen-vr-05-hidden-word-03-opt3",
-   "verdict": "ATTEST",
-   "reason": "Recomputed on \"It was the best option today.\": best sits whole inside the single word \"best\", appears once, and crosses no join. Key named in the execution is the row key. House form verbatim."
-  },
-  {
-   "ref": "seat:gen-vr-05-hidden-word-04-opt3",
-   "verdict": "ATTEST",
-   "reason": "Recomputed on \"The crab and the gull raced.\": race sits whole inside the single word \"raced\", appears once, and crosses no join. Key named in the execution is the row key. House form verbatim."
-  },
-  {
-   "ref": "seat:gen-vr-05-hidden-word-05-opt3",
-   "verdict": "ATTEST",
-   "reason": "Recomputed on \"A flamingo nests near water.\": nest sits whole inside the single word \"nests\", appears once, and crosses no join. Key named in the execution is the row key. House form verbatim."
-  },
-  {
-   "ref": "seat:gen-vr-05-hidden-word-08-opt2",
-   "verdict": "ATTEST",
-   "reason": "Recomputed on \"Zebra ideas win prizes.\": wing is not on the row at any position; the run \"winp\" is on the row and differs from wing by exactly one letter, and no run is closer. Near-miss is the act that produces wing."
-  },
-  {
-   "ref": "seat:gen-vr-05-hidden-word-08-opt3",
-   "verdict": "ATTEST",
-   "reason": "Recomputed on \"Zebra ideas win prizes.\": idea sits whole inside the single word \"ideas\", appears once, and crosses no join. Key named in the execution is the row key. House form verbatim."
-  },
-  {
-   "ref": "seat:gen-vr-05-hidden-word-09-opt2",
-   "verdict": "ATTEST",
-   "reason": "Recomputed on \"The metal ambulance door shut.\": talk is not on the row at any position; the run \"tala\" is on the row and differs from talk by exactly one letter, and no run is closer. Near-miss is the act that produces talk."
-  },
-  {
-   "ref": "seat:gen-vr-05-hidden-word-09-opt3",
-   "verdict": "ATTEST",
-   "reason": "Recomputed on \"The metal ambulance door shut.\": door sits whole inside the single word \"door\", appears once, and crosses no join. Key named in the execution is the row key. House form verbatim."
-  },
-  {
-   "ref": "seat:gen-vr-05-hidden-word-10-opt2",
-   "verdict": "ATTEST",
-   "reason": "Recomputed on \"Both Emma and Jo came.\": name is not on the row at any position; the run \"came\" is on the row and differs from name by exactly one letter, and no run is closer. Near-miss is the act that produces name."
-  },
-  {
-   "ref": "seat:gen-vr-05-hidden-word-10-opt3",
-   "verdict": "ATTEST",
-   "reason": "Recomputed on \"Both Emma and Jo came.\": both sits whole inside the single word \"Both\", appears once, and crosses no join. Key named in the execution is the row key. House form verbatim."
-  },
-  {
-   "ref": "seat:gen-vr-05-hidden-word-11-opt3",
-   "verdict": "ATTEST",
-   "reason": "Recomputed on \"The bus and the car waited.\": wait sits whole inside the single word \"waited\", appears once, and crosses no join. Key named in the execution is the row key. House form verbatim."
-  },
-  {
-   "ref": "seat:gen-vr-05-hidden-word-12-opt2",
-   "verdict": "ATTEST",
-   "reason": "Recomputed on \"Which and how many?\": whip is not on the row at any position; the run \"whic\" is on the row and differs from whip by exactly one letter, and no run is closer. Near-miss is the act that produces whip."
-  },
-  {
-   "ref": "seat:gen-vr-05-hidden-word-12-opt3",
-   "verdict": "ATTEST",
-   "reason": "Recomputed on \"Which and how many?\": many sits whole inside the single word \"many\", appears once, and crosses no join. Key named in the execution is the row key. House form verbatim."
-  },
-  {
-   "ref": "seat:gen-vr-05-hidden-word-13-opt3",
-   "verdict": "ATTEST",
-   "reason": "Recomputed on \"You can see so far, Max.\": soft is not on the row at any position; the run \"sofa\" is on the row and differs from soft by exactly one letter, and no run is closer. Near-miss is the act that produces soft. Row has no word of four or more letters (all of \"You can see so far, Max.\" are 3 letters or fewer), so the tag switch from single-word-only is forced and stated."
-  },
-  {
-   "ref": "seat:gen-vr-05-hidden-word-14-opt2",
-   "verdict": "ATTEST",
-   "reason": "Recomputed on \"The hero sent a letter.\": went is not on the row at any position; the run \"sent\" is on the row and differs from went by exactly one letter, and no run is closer. Near-miss is the act that produces went."
-  },
-  {
-   "ref": "seat:gen-vr-05-hidden-word-14-opt3",
-   "verdict": "ATTEST",
-   "reason": "Recomputed on \"The hero sent a letter.\": hero sits whole inside the single word \"hero\", appears once, and crosses no join. Key named in the execution is the row key. House form verbatim."
-  },
-  {
-   "ref": "seat:gen-vr-05-hidden-word-18-opt2",
-   "verdict": "ATTEST",
-   "reason": "Recomputed on \"The demo thrilled everyone.\": hill is not on the row at any position; the run \"rill\" is on the row and differs from hill by exactly one letter, and no run is closer. Near-miss is the act that produces hill."
-  },
-  {
-   "ref": "seat:gen-vr-05-hidden-word-20-opt2",
-   "verdict": "ATTEST",
-   "reason": "Recomputed on \"Watch industrious ants.\": find is not on the row at any position; the run \"hind\" is on the row and differs from find by exactly one letter, and no run is closer. Near-miss is the act that produces find."
-  },
-  {
-   "ref": "seat:gen-vr-05-hidden-word-20-opt3",
-   "verdict": "ATTEST",
-   "reason": "Recomputed on \"Watch industrious ants.\": dust sits whole inside the single word \"industrious\", appears once, and crosses no join. Key named in the execution is the row key. House form verbatim."
-  },
-  {
-   "ref": "seat:gen-vr-05-hidden-word-21-opt2",
-   "verdict": "ATTEST",
-   "reason": "Recomputed on \"Dad drank a cider slowly.\": wide is not on the row at any position; the run \"cide\" is on the row and differs from wide by exactly one letter, and no run is closer. Near-miss is the act that produces wide."
-  },
-  {
-   "ref": "seat:gen-vr-05-hidden-word-22-opt2",
-   "verdict": "ATTEST",
-   "reason": "Recomputed on \"The lamp landed with a bump.\": wish is not on the row at any position; the run \"with\" is on the row and differs from wish by exactly one letter, and no run is closer. Near-miss is the act that produces wish."
-  },
-  {
-   "ref": "seat:gen-vr-05-hidden-word-22-opt3",
-   "verdict": "ATTEST",
-   "reason": "Recomputed on \"The lamp landed with a bump.\": land sits whole inside the single word \"landed\", appears once, and crosses no join. Key named in the execution is the row key. House form verbatim."
-  },
-  {
-   "ref": "seat:gen-vr-05-hidden-word-23-opt3",
-   "verdict": "ATTEST",
-   "reason": "Recomputed on \"Deliver yesterday’s post.\": live sits whole inside the single word \"Deliver\", appears once, and crosses no join. Key named in the execution is the row key. House form verbatim."
-  },
-  {
-   "ref": "seat:gen-vr-05-hidden-word-24-opt2",
-   "verdict": "ATTEST",
-   "reason": "Recomputed on \"The piano seemed loud.\": load is not on the row at any position; the run \"loud\" is on the row and differs from load by exactly one letter, and no run is closer. Near-miss is the act that produces load."
-  },
-  {
-   "ref": "seat:gen-vr-05-hidden-word-24-opt3",
-   "verdict": "ATTEST",
-   "reason": "Recomputed on \"The piano seemed loud.\": seem sits whole inside the single word \"seemed\", appears once, and crosses no join. Key named in the execution is the row key. House form verbatim."
-  },
-  {
-   "ref": "seat:gen-vr-05-hidden-word-25-opt3",
-   "verdict": "ATTEST",
-   "reason": "Recomputed on \"The vicar eats early.\": eats sits whole inside the single word \"eats\", appears once, and crosses no join. Key named in the execution is the row key. House form verbatim."
-  },
-  {
-   "ref": "redraft:gen-vr-05-hidden-word-07-opt3",
-   "verdict": "ATTEST",
-   "reason": "Recomputed on \"Do not sit empty-handed.\": hand sits whole inside the single word \"empty-handed\", appears once, and crosses no join. Key named in the execution is the row key. House form verbatim. Corrects the exemplar's \"emptyhanded\" to the row's actual spelling \"empty-handed\"."
-  },
-  {
-   "ref": "rebuild:gen-vr-05-hidden-word-06",
-   "verdict": "ATTEST",
-   "reason": "Fault fixed: song now crosses exactly one join (lesso|n + g|oes: s-o-n|g), appears once; sentence has a verb and reads naturally; rand gone. tell: closest run \"well\" (1 letter off), tell not on row. less: whole inside \"lesson\", crosses no join. Neither distractor hides across any join."
-  },
-  {
-   "ref": "rebuild:gen-vr-05-hidden-word-16",
-   "verdict": "ATTEST",
-   "reason": "Fault fixed: pear is now on the row, crossing exactly one join (ro|pe + ar|ound), once. soap: not on row, closest run \"snap\" 1 letter off. snap: whole inside \"snapped\", crosses no join. Neither distractor hides across any join."
-  },
-  {
-   "ref": "rebuild:gen-vr-05-hidden-word-17",
-   "verdict": "ATTEST",
-   "reason": "Fault fixed: kind crosses exactly one join (pump|kin + d|ropped), once; no proper noun on the row. skin: not on row, closest run \"pkin\" 1 letter off. pump: whole inside \"pumpkin\", crosses no join. Neither distractor hides across any join."
-  },
-  {
-   "ref": "rebuild:gen-vr-05-hidden-word-19",
-   "verdict": "ATTEST",
-   "reason": "Fault fixed: ring crosses exactly one join (ou|r + ing|redients), once. four: not on row, closest run \"xour\" (mi|x + our) 1 letter off. slow: whole inside \"slowly\", crosses no join. Neither distractor hides across any join."
+   "ref": "rebuild:gen-vr-05-hidden-word-21",
+   "verdict": "REFUSE",
+   "reason": "The mechanics are correct, and the cider fault is fixed. date appears once, crossing exactly one join (an|d + ate). toad is absent; its closest run is 'toas', one letter off. rank sits whole inside 'drank' and crosses no join. 'hist' crosses a join (h|is + t|oast), but it is not an ordinary word and not an option, so it is no second answer. What breaks: date is already the key of the live row 01, 'Dad ate the last plum.', where it is also built from a d-ending word plus 'ate'. The new sentence also opens with 'Dad'. A child working through the door meets the same answer, made the same way, under the same opening word twice, which the brief rules out. It needs a key not used elsewhere in vr-05. Keys already in use: date, hero, stop, band, gone, song, item, raid, lamb, them, sand, hand, farm, rose, tent, pear, kind, moth, ring, chin, plan, very, nose, care."
   }
  ],
  "rows": [
   {
-   "itemId": "gen-vr-05-hidden-word-01",
-   "verdict": "SIGN",
-   "reason": "Joined the letters of \"Dad ate the last plum.\" myself: key crosses exactly one join between two words and appears once; no distractor occurrence in the joined letters crosses a join (so none is a second correct answer); each almost-letters value is absent and one letter off an on-row run; each single-word-only value is whole inside one word; no option-pair pattern gives the key away; all option words known to 9-11s."
-  },
-  {
-   "itemId": "gen-vr-05-hidden-word-02",
-   "verdict": "SIGN",
-   "reason": "Joined the letters of \"She played her oboe in the band.\" myself: key crosses exactly one join between two words and appears once; no distractor occurrence in the joined letters crosses a join (so none is a second correct answer); each almost-letters value is absent and one letter off an on-row run; each single-word-only value is whole inside one word; no option-pair pattern gives the key away; all option words known to 9-11s."
-  },
-  {
-   "itemId": "gen-vr-05-hidden-word-03",
-   "verdict": "SIGN",
-   "reason": "Joined the letters of \"It was the best option today.\" myself: key crosses exactly one join between two words and appears once; no distractor occurrence in the joined letters crosses a join (so none is a second correct answer); each almost-letters value is absent and one letter off an on-row run; each single-word-only value is whole inside one word; no option-pair pattern gives the key away; all option words known to 9-11s."
-  },
-  {
-   "itemId": "gen-vr-05-hidden-word-04",
-   "verdict": "SIGN",
-   "reason": "Joined the letters of \"The crab and the gull raced.\" myself: key crosses exactly one join between two words and appears once; no distractor occurrence in the joined letters crosses a join (so none is a second correct answer); each almost-letters value is absent and one letter off an on-row run; each single-word-only value is whole inside one word; no option-pair pattern gives the key away; all option words known to 9-11s."
-  },
-  {
-   "itemId": "gen-vr-05-hidden-word-05",
-   "verdict": "SIGN",
-   "reason": "Joined the letters of \"A flamingo nests near water.\" myself: key crosses exactly one join between two words and appears once; no distractor occurrence in the joined letters crosses a join (so none is a second correct answer); each almost-letters value is absent and one letter off an on-row run; each single-word-only value is whole inside one word; no option-pair pattern gives the key away; all option words known to 9-11s."
-  },
-  {
    "itemId": "gen-vr-05-hidden-word-08",
    "verdict": "SIGN",
-   "reason": "Joined the letters of \"Zebra ideas win prizes.\" myself: key crosses exactly one join between two words and appears once; no distractor occurrence in the joined letters crosses a join (so none is a second correct answer); each almost-letters value is absent and one letter off an on-row run; each single-word-only value is whole inside one word; no option-pair pattern gives the key away; all option words known to 9-11s."
-  },
-  {
-   "itemId": "gen-vr-05-hidden-word-09",
-   "verdict": "SIGN",
-   "reason": "Joined the letters of \"The metal ambulance door shut.\" myself: key crosses exactly one join between two words and appears once; no distractor occurrence in the joined letters crosses a join (so none is a second correct answer); each almost-letters value is absent and one letter off an on-row run; each single-word-only value is whole inside one word; no option-pair pattern gives the key away; all option words known to 9-11s."
-  },
-  {
-   "itemId": "gen-vr-05-hidden-word-10",
-   "verdict": "SIGN",
-   "reason": "Joined the letters of \"Both Emma and Jo came.\" myself: key crosses exactly one join between two words and appears once; no distractor occurrence in the joined letters crosses a join (so none is a second correct answer); each almost-letters value is absent and one letter off an on-row run; each single-word-only value is whole inside one word; no option-pair pattern gives the key away; all option words known to 9-11s."
-  },
-  {
-   "itemId": "gen-vr-05-hidden-word-11",
-   "verdict": "SIGN",
-   "reason": "Joined the letters of \"The bus and the car waited.\" myself: key crosses exactly one join between two words and appears once; no distractor occurrence in the joined letters crosses a join (so none is a second correct answer); each almost-letters value is absent and one letter off an on-row run; each single-word-only value is whole inside one word; no option-pair pattern gives the key away; all option words known to 9-11s."
+   "reason": "Checked: key once across one join, and no distractor crosses any join. The almost-letters value is one off an on-row run; the single-word-only value is whole inside one word. Read as a child, 'My extra idea helped the team.' is natural British English, 6 words. 'aide' is not a defensible second answer."
   },
   {
    "itemId": "gen-vr-05-hidden-word-12",
    "verdict": "SIGN",
-   "reason": "Joined the letters of \"Which and how many?\" myself: key crosses exactly one join between two words and appears once; no distractor occurrence in the joined letters crosses a join (so none is a second correct answer); each almost-letters value is absent and one letter off an on-row run; each single-word-only value is whole inside one word; no option-pair pattern gives the key away; all option words known to 9-11s."
-  },
-  {
-   "itemId": "gen-vr-05-hidden-word-13",
-   "verdict": "SIGN",
-   "reason": "Joined the letters of \"You can see so far, Max.\" myself: key crosses exactly one join between two words and appears once; no distractor occurrence in the joined letters crosses a join (so none is a second correct answer); each almost-letters value is absent and one letter off an on-row run; each single-word-only value is whole inside one word; no option-pair pattern gives the key away; all option words known to 9-11s."
-  },
-  {
-   "itemId": "gen-vr-05-hidden-word-14",
-   "verdict": "SIGN",
-   "reason": "Joined the letters of \"The hero sent a letter.\" myself: key crosses exactly one join between two words and appears once; no distractor occurrence in the joined letters crosses a join (so none is a second correct answer); each almost-letters value is absent and one letter off an on-row run; each single-word-only value is whole inside one word; no option-pair pattern gives the key away; all option words known to 9-11s."
-  },
-  {
-   "itemId": "gen-vr-05-hidden-word-18",
-   "verdict": "SIGN",
-   "reason": "Joined the letters of \"The demo thrilled everyone.\" myself: key crosses exactly one join between two words and appears once; no distractor occurrence in the joined letters crosses a join (so none is a second correct answer); each almost-letters value is absent and one letter off an on-row run; each single-word-only value is whole inside one word; no option-pair pattern gives the key away; all option words known to 9-11s."
+   "reason": "Checked: key once across one join, and no distractor crosses any join. The almost-letters value is one off an on-row run; the single-word-only value is whole inside one word. Read as a child, 'We ate fish and chips on the beach.' is natural British English, 8 words."
   },
   {
    "itemId": "gen-vr-05-hidden-word-20",
    "verdict": "SIGN",
-   "reason": "Joined the letters of \"Watch industrious ants.\" myself: key crosses exactly one join between two words and appears once; no distractor occurrence in the joined letters crosses a join (so none is a second correct answer); each almost-letters value is absent and one letter off an on-row run; each single-word-only value is whole inside one word; no option-pair pattern gives the key away; all option words known to 9-11s."
+   "reason": "Checked: key once across one join, and no distractor crosses any join. The almost-letters value is one off an on-row run; the single-word-only value is whole inside one word. Read as a child, 'We watch insects climb the wall.' is natural British English, 6 words, and every word is familiar."
   },
   {
    "itemId": "gen-vr-05-hidden-word-21",
-   "verdict": "SIGN",
-   "reason": "Joined the letters of \"Dad drank a cider slowly.\" myself: key crosses exactly one join between two words and appears once; no distractor occurrence in the joined letters crosses a join (so none is a second correct answer); each almost-letters value is absent and one letter off an on-row run; each single-word-only value is whole inside one word; no option-pair pattern gives the key away; all option words known to 9-11s."
-  },
-  {
-   "itemId": "gen-vr-05-hidden-word-22",
-   "verdict": "SIGN",
-   "reason": "Joined the letters of \"The lamp landed with a bump.\" myself: key crosses exactly one join between two words and appears once; no distractor occurrence in the joined letters crosses a join (so none is a second correct answer); each almost-letters value is absent and one letter off an on-row run; each single-word-only value is whole inside one word; no option-pair pattern gives the key away; all option words known to 9-11s."
-  },
-  {
-   "itemId": "gen-vr-05-hidden-word-23",
-   "verdict": "SIGN",
-   "reason": "Joined the letters of \"Deliver yesterday’s post.\" myself: key crosses exactly one join between two words and appears once; no distractor occurrence in the joined letters crosses a join (so none is a second correct answer); each almost-letters value is absent and one letter off an on-row run; each single-word-only value is whole inside one word; no option-pair pattern gives the key away; all option words known to 9-11s."
-  },
-  {
-   "itemId": "gen-vr-05-hidden-word-24",
-   "verdict": "SIGN",
-   "reason": "Joined the letters of \"The piano seemed loud.\" myself: key crosses exactly one join between two words and appears once; no distractor occurrence in the joined letters crosses a join (so none is a second correct answer); each almost-letters value is absent and one letter off an on-row run; each single-word-only value is whole inside one word; no option-pair pattern gives the key away; all option words known to 9-11s."
-  },
-  {
-   "itemId": "gen-vr-05-hidden-word-25",
-   "verdict": "SIGN",
-   "reason": "Joined the letters of \"The vicar eats early.\" myself: key crosses exactly one join between two words and appears once; no distractor occurrence in the joined letters crosses a join (so none is a second correct answer); each almost-letters value is absent and one letter off an on-row run; each single-word-only value is whole inside one word; no option-pair pattern gives the key away; all option words known to 9-11s."
-  },
-  {
-   "itemId": "gen-vr-05-hidden-word-07",
-   "verdict": "SIGN",
-   "reason": "Joined the letters of \"Do not sit empty-handed.\" myself: key crosses exactly one join between two words and appears once; no distractor occurrence in the joined letters crosses a join (so none is a second correct answer); each almost-letters value is absent and one letter off an on-row run; each single-word-only value is whole inside one word; no option-pair pattern gives the key away; all option words known to 9-11s."
-  },
-  {
-   "itemId": "gen-vr-05-hidden-word-06",
-   "verdict": "SIGN",
-   "reason": "Joined the letters of \"Her lesson goes well today.\" myself: key crosses exactly one join between two words and appears once; no distractor occurrence in the joined letters crosses a join (so none is a second correct answer); each almost-letters value is absent and one letter off an on-row run; each single-word-only value is whole inside one word; no option-pair pattern gives the key away; all option words known to 9-11s. Read as a child: \"Her lesson goes well today.\" is natural British English, 5 words."
-  },
-  {
-   "itemId": "gen-vr-05-hidden-word-16",
-   "verdict": "SIGN",
-   "reason": "Joined the letters of \"A rope around the box snapped.\" myself: key crosses exactly one join between two words and appears once; no distractor occurrence in the joined letters crosses a join (so none is a second correct answer); each almost-letters value is absent and one letter off an on-row run; each single-word-only value is whole inside one word; no option-pair pattern gives the key away; all option words known to 9-11s. Read as a child: \"A rope around the box snapped.\" is natural British English, 6 words."
-  },
-  {
-   "itemId": "gen-vr-05-hidden-word-17",
-   "verdict": "SIGN",
-   "reason": "Joined the letters of \"The pumpkin dropped and split.\" myself: key crosses exactly one join between two words and appears once; no distractor occurrence in the joined letters crosses a join (so none is a second correct answer); each almost-letters value is absent and one letter off an on-row run; each single-word-only value is whole inside one word; no option-pair pattern gives the key away; all option words known to 9-11s. Read as a child: \"The pumpkin dropped and split.\" is natural British English, 5 words."
-  },
-  {
-   "itemId": "gen-vr-05-hidden-word-19",
-   "verdict": "SIGN",
-   "reason": "Joined the letters of \"Mix our ingredients slowly.\" myself: key crosses exactly one join between two words and appears once; no distractor occurrence in the joined letters crosses a join (so none is a second correct answer); each almost-letters value is absent and one letter off an on-row run; each single-word-only value is whole inside one word; no option-pair pattern gives the key away; all option words known to 9-11s. Read as a child: \"Mix our ingredients slowly.\" is a grammatical recipe-style instruction, 4 words; \"our\" is a touch less usual than \"the\" but natural in a shared-cooking context and is what places the key."
+   "verdict": "HOLD",
+   "reason": "The row is correct on its own terms: 'Dad drank tea and ate his toast.' is natural, 7 words, and the key, distractors and joins all check, with 'hist' not a second answer. But its key, date, repeats the key of live row 01, which uses the same Dad/'ate' construction. Re-key it to a word not used elsewhere in the door."
   }
  ]
 }

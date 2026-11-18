@@ -6,13 +6,13 @@
  "rebuilds": [
   {
    "itemId": "gen-vr-13-make-a-word-01",
-   "why": "The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; \"is built from\" is now \"uses\", the only wording change, made on every row of this door. Distractors replaced: opt2 STAY -> ARST; opt3 ARMS -> TRAY. ARMS is held by the child-facing gate for having an unsuitable sense (weapons), so it is replaced with TRAY.",
+   "why": "The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; 'is built from' is now 'uses'. The worked example is now BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question; no row uses BEACH, ARROW or BEAR. Distractors replaced: opt2 STAY -> ARST; opt3 ARMS -> TRAY. ARMS is held by the child-facing gate for having an unsuitable sense (weapons), so it is replaced with TRAY.",
    "stem": {
     "words": [
      "STAY",
      "ARMY"
     ],
-    "prompt": "The middle word uses the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: STAY ( ? ) ARMY"
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: STAY ( ? ) ARMY"
    },
    "options": [
     {
@@ -40,13 +40,13 @@
   },
   {
    "itemId": "gen-vr-13-make-a-word-02",
-   "why": "The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; \"is built from\" is now \"uses\", the only wording change, made on every row of this door. Distractors replaced: opt2 SHOE -> SHPO; opt3 OPAL -> PEEP.",
+   "why": "The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; 'is built from' is now 'uses'. The worked example is now BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question; no row uses BEACH, ARROW or BEAR. Distractors replaced: opt2 SHOE -> SHPO; opt3 OPAL -> PEEP.",
    "stem": {
     "words": [
      "SHEEP",
      "OPEN"
     ],
-    "prompt": "The middle word uses the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: SHEEP ( ? ) OPEN"
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: SHEEP ( ? ) OPEN"
    },
    "options": [
     {
@@ -74,13 +74,13 @@
   },
   {
    "itemId": "gen-vr-13-make-a-word-03",
-   "why": "The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; \"is built from\" is now \"uses\", the only wording change, made on every row of this door. Distractors replaced: opt2 GRAN -> RGIN.",
+   "why": "The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; 'is built from' is now 'uses'. The worked example is now BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question; no row uses BEACH, ARROW or BEAR. Distractors replaced: opt2 GRAN -> RGIN; opt3 RINK kept, execution rewritten because the landed execution said none of its letters sit at the shown positions, but R, I and N do.",
    "stem": {
     "words": [
      "GRASS",
      "INK"
     ],
-    "prompt": "The middle word uses the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: GRASS ( ? ) INK"
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: GRASS ( ? ) INK"
    },
    "options": [
     {
@@ -102,19 +102,19 @@
      "value": "RINK",
      "isKey": false,
      "tag": "vr13-wrong-pieces",
-     "execution": "The example takes the first two letters of each outer word, so GRASS and INK give GRIN. This option takes RINK — letters that are in the outer words but not at the positions the example shows."
+     "execution": "The example takes the first two letters of each outer word, so GRASS and INK give GRIN. This option takes RINK — letters that are in the outer words, but not the two pieces the example takes. R is the second letter of GRASS, and I, N and K are the three letters of INK."
     }
    ]
   },
   {
    "itemId": "gen-vr-13-make-a-word-04",
-   "why": "The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; \"is built from\" is now \"uses\", the only wording change, made on every row of this door. Distractors replaced: opt2 FLAP -> ATFL.",
+   "why": "The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; 'is built from' is now 'uses'. The worked example is now BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question; no row uses BEACH, ARROW or BEAR. Distractors replaced: opt2 FLAP -> ATFL; opt3 ALAS kept, execution rewritten because the landed execution said none of its letters sit at the shown positions, but the first A does.",
    "stem": {
     "words": [
      "FLAG",
      "ATLAS"
     ],
-    "prompt": "The middle word uses the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: FLAG ( ? ) ATLAS"
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: FLAG ( ? ) ATLAS"
    },
    "options": [
     {
@@ -136,19 +136,19 @@
      "value": "ALAS",
      "isKey": false,
      "tag": "vr13-wrong-pieces",
-     "execution": "The example takes the first two letters of each outer word, so FLAG and ATLAS give FLAT. This option takes ALAS — letters that are in the outer words but not at the positions the example shows."
+     "execution": "The example takes the first two letters of each outer word, so FLAG and ATLAS give FLAT. This option takes ALAS — letters that are in the outer words, but not the two pieces the example takes. A, L, A and S are the first, third, fourth and fifth letters of ATLAS."
     }
    ]
   },
   {
    "itemId": "gen-vr-13-make-a-word-05",
-   "why": "The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; \"is built from\" is now \"uses\", the only wording change, made on every row of this door. Distractors replaced: opt2 CHIP -> CHNI.",
+   "why": "The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; 'is built from' is now 'uses'. The worked example is now BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question; no row uses BEACH, ARROW or BEAR. Distractors replaced: opt2 CHIP -> CHNI; opt3 ICES kept, execution rewritten because the landed execution said none of its letters sit at the shown positions, but the I does.",
    "stem": {
     "words": [
      "CHEESE",
      "INSECT"
     ],
-    "prompt": "The middle word uses the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: CHEESE ( ? ) INSECT"
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: CHEESE ( ? ) INSECT"
    },
    "options": [
     {
@@ -170,19 +170,19 @@
      "value": "ICES",
      "isKey": false,
      "tag": "vr13-wrong-pieces",
-     "execution": "The example takes the first two letters of each outer word, so CHEESE and INSECT give CHIN. This option takes ICES — letters that are in the outer words but not at the positions the example shows."
+     "execution": "The example takes the first two letters of each outer word, so CHEESE and INSECT give CHIN. This option takes ICES — letters that are in the outer words, but not the two pieces the example takes. I and C are the first and fifth letters of INSECT, and E and S are the third and fifth letters of CHEESE."
     }
    ]
   },
   {
    "itemId": "gen-vr-13-make-a-word-06",
-   "why": "The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; \"is built from\" is now \"uses\", the only wording change, made on every row of this door. Distractors replaced: opt2 DREL -> RDUM; opt3 UMPS -> LESS.",
+   "why": "The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; 'is built from' is now 'uses'. The worked example is now BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question; no row uses BEACH, ARROW or BEAR. Distractors replaced: opt2 DREL -> RDUM; opt3 UMPS -> LESS.",
    "stem": {
     "words": [
      "DRESS",
      "UMBRELLA"
     ],
-    "prompt": "The middle word uses the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: DRESS ( ? ) UMBRELLA"
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: DRESS ( ? ) UMBRELLA"
    },
    "options": [
     {
@@ -210,13 +210,13 @@
   },
   {
    "itemId": "gen-vr-13-make-a-word-07",
-   "why": "The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; \"is built from\" is now \"uses\", the only wording change, made on every row of this door. Distractors replaced: opt2 PLAN -> UMPL; opt3 UMPS -> TAPE.",
+   "why": "The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; 'is built from' is now 'uses'. The worked example is now BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question; no row uses BEACH, ARROW or BEAR. Distractors replaced: opt2 PLAN -> UMPL; opt3 UMPS -> TAPE.",
    "stem": {
     "words": [
      "PLATE",
      "UMPIRE"
     ],
-    "prompt": "The middle word uses the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: PLATE ( ? ) UMPIRE"
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: PLATE ( ? ) UMPIRE"
    },
    "options": [
     {
@@ -244,13 +244,13 @@
   },
   {
    "itemId": "gen-vr-13-make-a-word-08",
-   "why": "The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; \"is built from\" is now \"uses\", the only wording change, made on every row of this door. Distractors replaced: opt2 CLAY -> CLPA; opt3 APES -> LOUD.",
+   "why": "The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; 'is built from' is now 'uses'. The worked example is now BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question; no row uses BEACH, ARROW or BEAR. Distractors replaced: opt2 CLAY -> CLPA; opt3 APES -> LOUD.",
    "stem": {
     "words": [
      "CLOUD",
      "APPLE"
     ],
-    "prompt": "The middle word uses the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: CLOUD ( ? ) APPLE"
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: CLOUD ( ? ) APPLE"
    },
    "options": [
     {
@@ -278,13 +278,13 @@
   },
   {
    "itemId": "gen-vr-13-make-a-word-09",
-   "why": "The outer word IPAD is a brand name, which the brief forbids. Replaced TREE ( ? ) IPAD with TRAIN ( ? ) OTTER, key TROT; both distractors rebuilt on the new words. The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; \"is built from\" is now \"uses\", the only wording change, made on every row of this door.",
+   "why": "The outer word IPAD is a brand name, which the brief forbids. Replaced TREE ( ? ) IPAD with TRAIN ( ? ) OTTER, key TROT; both distractors rebuilt on the new words. The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; 'is built from' is now 'uses'. The worked example is now BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question; no row uses BEACH, ARROW or BEAR. Distractors replaced: opt2 TRAY -> RTOT; opt3 PADS -> RAIN.",
    "stem": {
     "words": [
      "TRAIN",
      "OTTER"
     ],
-    "prompt": "The middle word uses the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: TRAIN ( ? ) OTTER"
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: TRAIN ( ? ) OTTER"
    },
    "options": [
     {
@@ -312,13 +312,13 @@
   },
   {
    "itemId": "gen-vr-13-make-a-word-10",
-   "why": "The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; \"is built from\" is now \"uses\", the only wording change, made on every row of this door. Distractors replaced: opt2 SNIP -> APSN.",
+   "why": "The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; 'is built from' is now 'uses'. The worked example is now BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question; no row uses BEACH, ARROW or BEAR. Distractors replaced: opt2 SNIP -> APSN; opt3 APES kept, execution rewritten because the landed execution said none of its letters sit at the shown positions, but A and P do.",
    "stem": {
     "words": [
      "SNAKE",
      "APRON"
     ],
-    "prompt": "The middle word uses the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: SNAKE ( ? ) APRON"
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: SNAKE ( ? ) APRON"
    },
    "options": [
     {
@@ -340,19 +340,19 @@
      "value": "APES",
      "isKey": false,
      "tag": "vr13-wrong-pieces",
-     "execution": "The example takes the first two letters of each outer word, so SNAKE and APRON give SNAP. This option takes APES — letters that are in the outer words but not at the positions the example shows."
+     "execution": "The example takes the first two letters of each outer word, so SNAKE and APRON give SNAP. This option takes APES — letters that are in the outer words, but not the two pieces the example takes. A and P are the first two letters of APRON, E is the last letter of SNAKE, and S is its first."
     }
    ]
   },
   {
    "itemId": "gen-vr-13-make-a-word-11",
-   "why": "The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; \"is built from\" is now \"uses\", the only wording change, made on every row of this door. Distractors replaced: opt2 SWAM -> SWMI.",
+   "why": "The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; 'is built from' is now 'uses'. The worked example is now BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question; no row uses BEACH, ARROW or BEAR. Distractors replaced: opt2 SWAM -> SWMI; opt3 MAGE -> GAME because MAGE is not an ordinary word for a child.",
    "stem": {
     "words": [
      "SWAN",
      "IMAGE"
     ],
-    "prompt": "The middle word uses the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: SWAN ( ? ) IMAGE"
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: SWAN ( ? ) IMAGE"
    },
    "options": [
     {
@@ -371,22 +371,22 @@
     },
     {
      "optionId": "gen-vr-13-make-a-word-11-opt3",
-     "value": "MAGE",
+     "value": "GAME",
      "isKey": false,
      "tag": "vr13-wrong-pieces",
-     "execution": "The example takes the first two letters of each outer word, so SWAN and IMAGE give SWIM. This option takes MAGE — letters that are in the outer words but not at the positions the example shows."
+     "execution": "The example takes the first two letters of each outer word, so SWAN and IMAGE give SWIM. This option takes GAME — letters that are in the outer words, but not the two pieces the example takes. G, A and E are the fourth, third and fifth letters of IMAGE, and M is its second letter."
     }
    ]
   },
   {
    "itemId": "gen-vr-13-make-a-word-12",
-   "why": "The key CRAB was the first outer word itself and the distractor ABLE was the second outer word copied whole. Replaced CRAB ( ? ) ABLE with CROWN ( ? ) ABOUT, keeping the key CRAB, so no option repeats an outer word. The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; \"is built from\" is now \"uses\", the only wording change, made on every row of this door.",
+   "why": "The key CRAB was the first outer word itself and the distractor ABLE was the second outer word copied whole. Replaced CRAB ( ? ) ABLE with CROWN ( ? ) ABOUT, keeping the key CRAB, so no option repeats an outer word. The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; 'is built from' is now 'uses'. The worked example is now BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question; no row uses BEACH, ARROW or BEAR. Distractors replaced: opt2 CRIB -> RCAB; opt3 ABLE -> TOWN.",
    "stem": {
     "words": [
      "CROWN",
      "ABOUT"
     ],
-    "prompt": "The middle word uses the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: CROWN ( ? ) ABOUT"
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: CROWN ( ? ) ABOUT"
    },
    "options": [
     {
@@ -414,13 +414,13 @@
   },
   {
    "itemId": "gen-vr-13-make-a-word-13",
-   "why": "The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; \"is built from\" is now \"uses\", the only wording change, made on every row of this door. Distractors replaced: opt2 SPAN -> INSP.",
+   "why": "The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; 'is built from' is now 'uses'. The worked example is now BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question; no row uses BEACH, ARROW or BEAR. Distractors replaced: opt2 SPAN -> INSP; opt3 DENS -> DONE because DENS is a weak word for a child.",
    "stem": {
     "words": [
      "SPOON",
      "INDEX"
     ],
-    "prompt": "The middle word uses the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: SPOON ( ? ) INDEX"
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: SPOON ( ? ) INDEX"
    },
    "options": [
     {
@@ -439,22 +439,22 @@
     },
     {
      "optionId": "gen-vr-13-make-a-word-13-opt3",
-     "value": "DENS",
+     "value": "DONE",
      "isKey": false,
      "tag": "vr13-wrong-pieces",
-     "execution": "The example takes the first two letters of each outer word, so SPOON and INDEX give SPIN. This option takes DENS — letters that are in the outer words but not at the positions the example shows."
+     "execution": "The example takes the first two letters of each outer word, so SPOON and INDEX give SPIN. This option takes DONE — letters that are in the outer words, but not the two pieces the example takes. D and E are the third and fourth letters of INDEX, and O and N are the third and fifth letters of SPOON."
     }
    ]
   },
   {
    "itemId": "gen-vr-13-make-a-word-14",
-   "why": "The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; \"is built from\" is now \"uses\", the only wording change, made on every row of this door. Distractors replaced: opt2 GRIP -> GRBA.",
+   "why": "The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; 'is built from' is now 'uses'. The worked example is now BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question; no row uses BEACH, ARROW or BEAR. Distractors replaced: opt2 GRIP -> GRBA; opt3 ABBE -> BEEP because ABBE is not an ordinary word for a child.",
    "stem": {
     "words": [
      "GRAPE",
      "ABBEY"
     ],
-    "prompt": "The middle word uses the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: GRAPE ( ? ) ABBEY"
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: GRAPE ( ? ) ABBEY"
    },
    "options": [
     {
@@ -473,22 +473,22 @@
     },
     {
      "optionId": "gen-vr-13-make-a-word-14-opt3",
-     "value": "ABBE",
+     "value": "BEEP",
      "isKey": false,
      "tag": "vr13-wrong-pieces",
-     "execution": "The example takes the first two letters of each outer word, so GRAPE and ABBEY give GRAB. This option takes ABBE — letters that are in the outer words but not at the positions the example shows."
+     "execution": "The example takes the first two letters of each outer word, so GRAPE and ABBEY give GRAB. This option takes BEEP — letters that are in the outer words, but not the two pieces the example takes. B and E are the third and fourth letters of ABBEY, and E and P are the fifth and fourth letters of GRAPE."
     }
    ]
   },
   {
    "itemId": "gen-vr-13-make-a-word-15",
-   "why": "The outer word IPOD is a brand name, which the brief forbids. Replaced SLEEP ( ? ) IPOD with SLEEP ( ? ) UGLY, key SLUG; both distractors rebuilt on the new words. The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; \"is built from\" is now \"uses\", the only wording change, made on every row of this door.",
+   "why": "The outer word IPOD is a brand name, which the brief forbids. Replaced SLEEP ( ? ) IPOD with SLEEP ( ? ) UGLY, key SLUG; both distractors rebuilt on the new words. The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; 'is built from' is now 'uses'. The worked example is now BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question; no row uses BEACH, ARROW or BEAR. Distractors replaced: opt2 SLAP -> LSUG; opt3 PODS -> PEEL.",
    "stem": {
     "words": [
      "SLEEP",
      "UGLY"
     ],
-    "prompt": "The middle word uses the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: SLEEP ( ? ) UGLY"
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: SLEEP ( ? ) UGLY"
    },
    "options": [
     {
@@ -516,13 +516,13 @@
   },
   {
    "itemId": "gen-vr-13-make-a-word-16",
-   "why": "The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; \"is built from\" is now \"uses\", the only wording change, made on every row of this door. Distractors replaced: opt2 PROM -> AMPR; opt3 AMBS -> BARN.",
+   "why": "The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; 'is built from' is now 'uses'. The worked example is now BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question; no row uses BEACH, ARROW or BEAR. Distractors replaced: opt2 PROM -> AMPR; opt3 AMBS -> BARN.",
    "stem": {
     "words": [
      "PRAWN",
      "AMBER"
     ],
-    "prompt": "The middle word uses the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: PRAWN ( ? ) AMBER"
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: PRAWN ( ? ) AMBER"
    },
    "options": [
     {
@@ -550,81 +550,81 @@
   },
   {
    "itemId": "gen-vr-13-make-a-word-17",
-   "why": "The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; \"is built from\" is now \"uses\", the only wording change, made on every row of this door. Distractors replaced: opt2 BRAM -> BRMI; opt3 IMPS -> PICK.",
+   "why": "The outer word IMP is a weak word for a child. Replaced BRICK ( ? ) IMP with MOTHER ( ? ) ONION, key MOON; both distractors rebuilt on the new words. The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; 'is built from' is now 'uses'. The worked example is now BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question; no row uses BEACH, ARROW or BEAR. Distractors replaced: opt2 BRAM -> ONMO; opt3 IMPS -> THIN.",
    "stem": {
     "words": [
-     "BRICK",
-     "IMP"
+     "MOTHER",
+     "ONION"
     ],
-    "prompt": "The middle word uses the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: BRICK ( ? ) IMP"
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: MOTHER ( ? ) ONION"
    },
    "options": [
     {
      "optionId": "gen-vr-13-make-a-word-17-opt1",
-     "value": "BRIM",
+     "value": "MOON",
      "isKey": true,
      "tag": null,
      "execution": null
     },
     {
      "optionId": "gen-vr-13-make-a-word-17-opt2",
-     "value": "BRMI",
+     "value": "ONMO",
      "isKey": false,
      "tag": "vr13-not-a-word",
-     "execution": "The rule takes the first two letters of each outer word: BR from BRICK and IM from IMP, giving BRIM. This option assembles BRMI, which is not a word — the child built letters and stopped without hearing them. It keeps the right two pieces in order but writes the IMP piece backwards, MI for IM."
+     "execution": "The rule takes the first two letters of each outer word: MO from MOTHER and ON from ONION, giving MOON. This option assembles ONMO, which is not a word — the child built letters and stopped without hearing them. It sets down the right two pieces in the wrong order, ON before MO."
     },
     {
      "optionId": "gen-vr-13-make-a-word-17-opt3",
-     "value": "PICK",
+     "value": "THIN",
      "isKey": false,
      "tag": "vr13-wrong-pieces",
-     "execution": "The example takes the first two letters of each outer word, so BRICK and IMP give BRIM. This option takes PICK — letters that are in the outer words, but not the two pieces the example takes. P is the last letter of IMP, and I, C and K are the last three letters of BRICK."
+     "execution": "The example takes the first two letters of each outer word, so MOTHER and ONION give MOON. This option takes THIN — letters that are in the outer words, but not the two pieces the example takes. T and H are the third and fourth letters of MOTHER, and I and N are the third and fifth letters of ONION."
     }
    ]
   },
   {
    "itemId": "gen-vr-13-make-a-word-18",
-   "why": "The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; \"is built from\" is now \"uses\", the only wording change, made on every row of this door. Distractors replaced: opt3 IPSY -> SONG.",
+   "why": "The outer word IPS is not a word. Replaced DRAGON ( ? ) IPS with DRAGON ( ? ) OPPOSITE, key DROP; both distractors rebuilt on the new words. The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; 'is built from' is now 'uses'. The worked example is now BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question; no row uses BEACH, ARROW or BEAR. Distractors replaced: opt2 DRAP -> RDOP; opt3 IPSY -> GOAT.",
    "stem": {
     "words": [
      "DRAGON",
-     "IPS"
+     "OPPOSITE"
     ],
-    "prompt": "The middle word uses the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: DRAGON ( ? ) IPS"
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: DRAGON ( ? ) OPPOSITE"
    },
    "options": [
     {
      "optionId": "gen-vr-13-make-a-word-18-opt1",
-     "value": "DRIP",
+     "value": "DROP",
      "isKey": true,
      "tag": null,
      "execution": null
     },
     {
      "optionId": "gen-vr-13-make-a-word-18-opt2",
-     "value": "DRAP",
+     "value": "RDOP",
      "isKey": false,
      "tag": "vr13-not-a-word",
-     "execution": "The rule takes the first two letters of each outer word: DR from DRAGON and IP from IPS, giving DRIP. This option assembles DRAP, which is not a word — the child built letters and stopped without hearing them."
+     "execution": "The rule takes the first two letters of each outer word: DR from DRAGON and OP from OPPOSITE, giving DROP. This option assembles RDOP, which is not a word — the child built letters and stopped without hearing them. It keeps the right two pieces in order but writes the DRAGON piece backwards, RD for DR."
     },
     {
      "optionId": "gen-vr-13-make-a-word-18-opt3",
-     "value": "SONG",
+     "value": "GOAT",
      "isKey": false,
      "tag": "vr13-wrong-pieces",
-     "execution": "The example takes the first two letters of each outer word, so DRAGON and IPS give DRIP. This option takes SONG — letters that are in the outer words, but not the two pieces the example takes. S is the last letter of IPS, and O, N and G are the fifth, sixth and fourth letters of DRAGON."
+     "execution": "The example takes the first two letters of each outer word, so DRAGON and OPPOSITE give DROP. This option takes GOAT — letters that are in the outer words, but not the two pieces the example takes. G, O and A are the fourth, fifth and third letters of DRAGON, and T is the seventh letter of OPPOSITE."
     }
    ]
   },
   {
    "itemId": "gen-vr-13-make-a-word-19",
-   "why": "The wrong-pieces distractor ATTA needs two As, but CHERRY and ATTIC hold only one, so the tag cannot produce it. Outer words and key unchanged; ATTA replaced by RICE, and the held not-a-word seat CHIT (a real word) replaced too. The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; \"is built from\" is now \"uses\", the only wording change, made on every row of this door.",
+   "why": "The wrong-pieces distractor ATTA needs two As, but CHERRY and ATTIC hold only one, so the tag cannot produce it. Outer words and key unchanged; ATTA replaced by RICE, and the held not-a-word seat CHIT (a real word) replaced too. The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; 'is built from' is now 'uses'. The worked example is now BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question; no row uses BEACH, ARROW or BEAR. Distractors replaced: opt2 CHIT -> HCAT; opt3 ATTA -> RICE.",
    "stem": {
     "words": [
      "CHERRY",
      "ATTIC"
     ],
-    "prompt": "The middle word uses the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: CHERRY ( ? ) ATTIC"
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: CHERRY ( ? ) ATTIC"
    },
    "options": [
     {
@@ -652,47 +652,47 @@
   },
   {
    "itemId": "gen-vr-13-make-a-word-20",
-   "why": "The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; \"is built from\" is now \"uses\", the only wording change, made on every row of this door. Distractors replaced: opt2 WHAM -> IMWH; opt3 IMPY -> HELP.",
+   "why": "The outer word IMPS is a weak word for a child. Replaced WHEEL ( ? ) IMPS with WHEEL ( ? ) ENGINE, key WHEN; both distractors rebuilt on the new words. The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; 'is built from' is now 'uses'. The worked example is now BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question; no row uses BEACH, ARROW or BEAR. Distractors replaced: opt2 WHAM -> ENWH; opt3 IMPY -> LINE.",
    "stem": {
     "words": [
      "WHEEL",
-     "IMPS"
+     "ENGINE"
     ],
-    "prompt": "The middle word uses the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: WHEEL ( ? ) IMPS"
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: WHEEL ( ? ) ENGINE"
    },
    "options": [
     {
      "optionId": "gen-vr-13-make-a-word-20-opt1",
-     "value": "WHIM",
+     "value": "WHEN",
      "isKey": true,
      "tag": null,
      "execution": null
     },
     {
      "optionId": "gen-vr-13-make-a-word-20-opt2",
-     "value": "IMWH",
+     "value": "ENWH",
      "isKey": false,
      "tag": "vr13-not-a-word",
-     "execution": "The rule takes the first two letters of each outer word: WH from WHEEL and IM from IMPS, giving WHIM. This option assembles IMWH, which is not a word — the child built letters and stopped without hearing them. It sets down the right two pieces in the wrong order, IM before WH."
+     "execution": "The rule takes the first two letters of each outer word: WH from WHEEL and EN from ENGINE, giving WHEN. This option assembles ENWH, which is not a word — the child built letters and stopped without hearing them. It sets down the right two pieces in the wrong order, EN before WH."
     },
     {
      "optionId": "gen-vr-13-make-a-word-20-opt3",
-     "value": "HELP",
+     "value": "LINE",
      "isKey": false,
      "tag": "vr13-wrong-pieces",
-     "execution": "The example takes the first two letters of each outer word, so WHEEL and IMPS give WHIM. This option takes HELP — letters that are in the outer words, but not the two pieces the example takes. H is the second letter of WHEEL, E and L come from the end of WHEEL, and P is the third letter of IMPS."
+     "execution": "The example takes the first two letters of each outer word, so WHEEL and ENGINE give WHEN. This option takes LINE — letters that are in the outer words, but not the two pieces the example takes. L is the last letter of WHEEL, and I, N and E are the fourth, fifth and sixth letters of ENGINE."
     }
    ]
   },
   {
    "itemId": "gen-vr-13-make-a-word-21",
-   "why": "The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; \"is built from\" is now \"uses\", the only wording change, made on every row of this door. Distractors replaced: opt2 SHOT -> SHTU.",
+   "why": "The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; 'is built from' is now 'uses'. The worked example is now BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question; no row uses BEACH, ARROW or BEAR. Distractors replaced: opt2 SHOT -> SHTU; opt3 UTTS -> DEER because UTTS is not a word.",
    "stem": {
     "words": [
      "SHED",
      "UTTER"
     ],
-    "prompt": "The middle word uses the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: SHED ( ? ) UTTER"
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: SHED ( ? ) UTTER"
    },
    "options": [
     {
@@ -711,22 +711,22 @@
     },
     {
      "optionId": "gen-vr-13-make-a-word-21-opt3",
-     "value": "UTTS",
+     "value": "DEER",
      "isKey": false,
      "tag": "vr13-wrong-pieces",
-     "execution": "The example takes the first two letters of each outer word, so SHED and UTTER give SHUT. This option takes UTTS — letters that are in the outer words but not at the positions the example shows."
+     "execution": "The example takes the first two letters of each outer word, so SHED and UTTER give SHUT. This option takes DEER — letters that are in the outer words, but not the two pieces the example takes. D and E are the fourth and third letters of SHED, and E and R are the fourth and fifth letters of UTTER."
     }
    ]
   },
   {
    "itemId": "gen-vr-13-make-a-word-22",
-   "why": "The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; \"is built from\" is now \"uses\", the only wording change, made on every row of this door. Distractors replaced: opt2 TRIP -> RTAP; opt3 APPS -> LUCK.",
+   "why": "The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; 'is built from' is now 'uses'. The worked example is now BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question; no row uses BEACH, ARROW or BEAR. Distractors replaced: opt2 TRIP -> RTAP; opt3 APPS -> LUCK.",
    "stem": {
     "words": [
      "TRUCK",
      "APPLE"
     ],
-    "prompt": "The middle word uses the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: TRUCK ( ? ) APPLE"
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: TRUCK ( ? ) APPLE"
    },
    "options": [
     {
@@ -754,47 +754,47 @@
   },
   {
    "itemId": "gen-vr-13-make-a-word-23",
-   "why": "The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; \"is built from\" is now \"uses\", the only wording change, made on every row of this door. Distractors replaced: opt2 FLAP -> IPFL.",
+   "why": "The outer word IPS is not a word, and the landed distractor IPSO is not one either. Replaced FLOWER ( ? ) IPS with FLOWER ( ? ) AGAIN, key FLAG; both distractors rebuilt on the new words. The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; 'is built from' is now 'uses'. The worked example is now BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question; no row uses BEACH, ARROW or BEAR. Distractors replaced: opt2 FLAP -> AGFL; opt3 IPSO -> WIRE.",
    "stem": {
     "words": [
      "FLOWER",
-     "IPS"
+     "AGAIN"
     ],
-    "prompt": "The middle word uses the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: FLOWER ( ? ) IPS"
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: FLOWER ( ? ) AGAIN"
    },
    "options": [
     {
      "optionId": "gen-vr-13-make-a-word-23-opt1",
-     "value": "FLIP",
+     "value": "FLAG",
      "isKey": true,
      "tag": null,
      "execution": null
     },
     {
      "optionId": "gen-vr-13-make-a-word-23-opt2",
-     "value": "IPFL",
+     "value": "AGFL",
      "isKey": false,
      "tag": "vr13-not-a-word",
-     "execution": "The rule takes the first two letters of each outer word: FL from FLOWER and IP from IPS, giving FLIP. This option assembles IPFL, which is not a word — the child built letters and stopped without hearing them. It sets down the right two pieces in the wrong order, IP before FL."
+     "execution": "The rule takes the first two letters of each outer word: FL from FLOWER and AG from AGAIN, giving FLAG. This option assembles AGFL, which is not a word — the child built letters and stopped without hearing them. It sets down the right two pieces in the wrong order, AG before FL."
     },
     {
      "optionId": "gen-vr-13-make-a-word-23-opt3",
-     "value": "IPSO",
+     "value": "WIRE",
      "isKey": false,
      "tag": "vr13-wrong-pieces",
-     "execution": "The example takes the first two letters of each outer word, so FLOWER and IPS give FLIP. This option takes IPSO — letters that are in the outer words but not at the positions the example shows."
+     "execution": "The example takes the first two letters of each outer word, so FLOWER and AGAIN give FLAG. This option takes WIRE — letters that are in the outer words, but not the two pieces the example takes. W, R and E are the fourth, sixth and fifth letters of FLOWER, and I is the fourth letter of AGAIN."
     }
    ]
   },
   {
    "itemId": "gen-vr-13-make-a-word-24",
-   "why": "The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; \"is built from\" is now \"uses\", the only wording change, made on every row of this door. Distractors replaced: opt2 SLIM -> SLMA.",
+   "why": "The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; 'is built from' is now 'uses'. The worked example is now BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question; no row uses BEACH, ARROW or BEAR. Distractors replaced: opt2 SLIM -> SLMA; opt3 AMBS -> RIDE because AMBS is not a word.",
    "stem": {
     "words": [
      "SLIDE",
      "AMBER"
     ],
-    "prompt": "The middle word uses the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: SLIDE ( ? ) AMBER"
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: SLIDE ( ? ) AMBER"
    },
    "options": [
     {
@@ -813,44 +813,44 @@
     },
     {
      "optionId": "gen-vr-13-make-a-word-24-opt3",
-     "value": "AMBS",
+     "value": "RIDE",
      "isKey": false,
      "tag": "vr13-wrong-pieces",
-     "execution": "The example takes the first two letters of each outer word, so SLIDE and AMBER give SLAM. This option takes AMBS — letters that are in the outer words but not at the positions the example shows."
+     "execution": "The example takes the first two letters of each outer word, so SLIDE and AMBER give SLAM. This option takes RIDE — letters that are in the outer words, but not the two pieces the example takes. R is the last letter of AMBER, and I, D and E are the last three letters of SLIDE."
     }
    ]
   },
   {
    "itemId": "gen-vr-13-make-a-word-25",
-   "why": "The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; \"is built from\" is now \"uses\", the only wording change, made on every row of this door. Distractors replaced: opt2 SNAP -> NSIP; opt3 IPSA -> OWNS.",
+   "why": "The outer word IPS is not a word. Replaced SNOW ( ? ) IPS with SNOW ( ? ) AGREE, key SNAG; both distractors rebuilt on the new words. The stem prompt's first sentence ran to 17 words, over the 16-word cap the child-facing gate enforces; 'is built from' is now 'uses'. The worked example is now BEACH (BEAR) ARROW on every row, because the old example SHEEP (SHOP) OPEN was row 02's own question; no row uses BEACH, ARROW or BEAR. Distractors replaced: opt2 SNAP -> NSAG; opt3 IPSA -> WORE.",
    "stem": {
     "words": [
      "SNOW",
-     "IPS"
+     "AGREE"
     ],
-    "prompt": "The middle word uses the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: SNOW ( ? ) IPS"
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: SNOW ( ? ) AGREE"
    },
    "options": [
     {
      "optionId": "gen-vr-13-make-a-word-25-opt1",
-     "value": "SNIP",
+     "value": "SNAG",
      "isKey": true,
      "tag": null,
      "execution": null
     },
     {
      "optionId": "gen-vr-13-make-a-word-25-opt2",
-     "value": "NSIP",
+     "value": "NSAG",
      "isKey": false,
      "tag": "vr13-not-a-word",
-     "execution": "The rule takes the first two letters of each outer word: SN from SNOW and IP from IPS, giving SNIP. This option assembles NSIP, which is not a word — the child built letters and stopped without hearing them. It keeps the right two pieces in order but writes the SNOW piece backwards, NS for SN."
+     "execution": "The rule takes the first two letters of each outer word: SN from SNOW and AG from AGREE, giving SNAG. This option assembles NSAG, which is not a word — the child built letters and stopped without hearing them. It keeps the right two pieces in order but writes the SNOW piece backwards, NS for SN."
     },
     {
      "optionId": "gen-vr-13-make-a-word-25-opt3",
-     "value": "OWNS",
+     "value": "WORE",
      "isKey": false,
      "tag": "vr13-wrong-pieces",
-     "execution": "The example takes the first two letters of each outer word, so SNOW and IPS give SNIP. This option takes OWNS — letters that are in the outer words, but not the two pieces the example takes. O and W are the third and fourth letters of SNOW, N is its second letter, and S is the last letter of IPS."
+     "execution": "The example takes the first two letters of each outer word, so SNOW and AGREE give SNAG. This option takes WORE — letters that are in the outer words, but not the two pieces the example takes. W and O are the fourth and third letters of SNOW, and R and E are the third and fourth letters of AGREE."
     }
    ]
   }

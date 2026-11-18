@@ -3,376 +3,201 @@
  "reviewer": "rev-agent-01",
  "changes": [
   {
-   "ref": "seat:gen-vr-20-complete-the-word-01-opt2",
-   "verdict": "ATTEST",
-   "reason": "A is among the most frequent English letters (ETAOINSR); TAGER recomputed and is not a word; key and word quoted correctly; the act (drop in a common letter without reading back) produces this value."
-  },
-  {
-   "ref": "seat:gen-vr-20-complete-the-word-01-opt3",
-   "verdict": "ATTEST",
-   "reason": "TYGER read aloud by a 9-11-year-old sounds like the real word by a genuine sound-spelling confusion; checked as a non-word; key, word and spelling pattern quoted correctly."
-  },
-  {
-   "ref": "seat:gen-vr-20-complete-the-word-02-opt2",
-   "verdict": "ATTEST",
-   "reason": "T is among the most frequent English letters (ETAOINSR); CATDLE recomputed and is not a word; key and word quoted correctly; the act (drop in a common letter without reading back) produces this value."
-  },
-  {
-   "ref": "seat:gen-vr-20-complete-the-word-02-opt3",
-   "verdict": "REFUSE",
-   "reason": "M does not sound like N before D. CAMDLE read aloud is 'cam-dle', plainly not CANDLE; there is no M/N sound-spelling confusion here for a 9-11-year-old reader (assimilation runs N to M before B/P, not before D). The tag does not produce M."
-  },
-  {
-   "ref": "seat:gen-vr-20-complete-the-word-03-opt2",
-   "verdict": "ATTEST",
-   "reason": "S is among the most frequent English letters (ETAOINSR); WINSOW recomputed and is not a word; key and word quoted correctly; the act (drop in a common letter without reading back) produces this value."
-  },
-  {
-   "ref": "seat:gen-vr-20-complete-the-word-03-opt3",
-   "verdict": "REFUSE",
-   "reason": "T for D is a voicing contrast, not a sound-spelling confusion for a British 9-11-year-old: WINTOW read aloud is 'win-toe', not WINDOW. 'Made in the same place in the mouth' is a phonetics story fitted to the value, not a mistake a child reading the word makes."
-  },
-  {
    "ref": "seat:gen-vr-20-complete-the-word-04-opt2",
-   "verdict": "ATTEST",
-   "reason": "T is among the most frequent English letters (ETAOINSR); GARDTN recomputed and is not a word; key and word quoted correctly; the act (drop in a common letter without reading back) produces this value. Value is a genuinely common letter and the strings check; note that a consonant dropped into a vowel gap gives an unreadable string (GARDTN), so this distractor is eliminated on sight."
+   "verdict": "REFUSE",
+   "reason": "Yes, this blurs the two tags. The gap is an unstressed syllable, so any vowel in it is read as the same weak schwa: GARDAN read aloud sounds like the real word (compare Morgan, organ). This seat is therefore a second sound-alike under a common-letter label. The common-letter story ('drops it in without reading the word back') does not produce this mistake, because reading it back would not catch it, and the childHint 'Try your letter in the gap and read the whole word' would send the child to a check that passes. A consonant was dead on sight (round 1) and every vowel reduces here, so no live common-letter distractor exists for this gap. Either retag this seat vr20-sound-alike (the row then tests spelling knowledge alone, with two sound-alike distractors) or rebuild the row on a word whose gap is stressed."
   },
   {
    "ref": "seat:gen-vr-20-complete-the-word-04-opt3",
    "verdict": "ATTEST",
-   "reason": "GARDIN read aloud by a 9-11-year-old sounds like the real word by a genuine sound-spelling confusion; checked as a non-word; key, word and spelling pattern quoted correctly."
-  },
-  {
-   "ref": "seat:gen-vr-20-complete-the-word-05-opt2",
-   "verdict": "ATTEST",
-   "reason": "O is among the most frequent English letters (ETAOINSR); PORPLE recomputed and is not a word; key and word quoted correctly; the act (drop in a common letter without reading back) produces this value."
-  },
-  {
-   "ref": "seat:gen-vr-20-complete-the-word-05-opt3",
-   "verdict": "ATTEST",
-   "reason": "PERPLE read aloud by a 9-11-year-old sounds like the real word by a genuine sound-spelling confusion; checked as a non-word; key, word and spelling pattern quoted correctly."
-  },
-  {
-   "ref": "seat:gen-vr-20-complete-the-word-06-opt2",
-   "verdict": "ATTEST",
-   "reason": "T is among the most frequent English letters (ETAOINSR); SITVER recomputed and is not a word; key and word quoted correctly; the act (drop in a common letter without reading back) produces this value."
-  },
-  {
-   "ref": "seat:gen-vr-20-complete-the-word-06-opt3",
-   "verdict": "ATTEST",
-   "reason": "N is among the most frequent English letters (ETAOINSR); SINVER recomputed and is not a word; key and word quoted correctly; the act (drop in a common letter without reading back) produces this value. The 'no sound-alike letter fits' claim checked and holds for this gap; that sentence is an authoring note rather than part of the child's act, but it is true."
-  },
-  {
-   "ref": "seat:gen-vr-20-complete-the-word-07-opt2",
-   "verdict": "ATTEST",
-   "reason": "S is among the most frequent English letters (ETAOINSR); MARSET recomputed and is not a word; key and word quoted correctly; the act (drop in a common letter without reading back) produces this value."
-  },
-  {
-   "ref": "seat:gen-vr-20-complete-the-word-07-opt3",
-   "verdict": "REFUSE",
-   "reason": "Before E, C reads as S (soft C, taught in KS1/KS2 spelling), so a 9-11-year-old reading MARCET says 'mar-set', which does not sound like MARKET. 'Makes that sound in words like cat' is true only before A/O/U, not in this position. Contrast POKKET on row 14, which does read as POCKET."
+   "reason": "Unchanged from round 1 (attested there): GARDIN is a genuine unstressed-vowel sound-alike for a 9-11-year-old reader, is not a word, and the execution quotes the row correctly."
   },
   {
    "ref": "seat:gen-vr-20-complete-the-word-08-opt2",
-   "verdict": "ATTEST",
-   "reason": "R is among the most frequent English letters (ETAOINSR); PENCRL recomputed and is not a word; key and word quoted correctly; the act (drop in a common letter without reading back) produces this value. Value is a genuinely common letter and the strings check; note that a consonant dropped into a vowel gap gives an unreadable string (PENCRL), so this distractor is eliminated on sight."
+   "verdict": "REFUSE",
+   "reason": "Yes, this blurs the two tags. The gap is an unstressed syllable, so any vowel in it is read as the same weak schwa: PENCOL read aloud sounds like the real word (compare pistol, symbol). This seat is therefore a second sound-alike under a common-letter label. The common-letter story ('drops it in without reading the word back') does not produce this mistake, because reading it back would not catch it, and the childHint 'Try your letter in the gap and read the whole word' would send the child to a check that passes. A consonant was dead on sight (round 1) and every vowel reduces here, so no live common-letter distractor exists for this gap. Either retag this seat vr20-sound-alike (the row then tests spelling knowledge alone, with two sound-alike distractors) or rebuild the row on a word whose gap is stressed."
   },
   {
    "ref": "seat:gen-vr-20-complete-the-word-08-opt3",
    "verdict": "ATTEST",
-   "reason": "PENCAL read aloud by a 9-11-year-old sounds like the real word by a genuine sound-spelling confusion; checked as a non-word; key, word and spelling pattern quoted correctly."
-  },
-  {
-   "ref": "seat:gen-vr-20-complete-the-word-09-opt2",
-   "verdict": "ATTEST",
-   "reason": "E is among the most frequent English letters (ETAOINSR); RECKET recomputed and is not a word; key and word quoted correctly; the act (drop in a common letter without reading back) produces this value."
-  },
-  {
-   "ref": "seat:gen-vr-20-complete-the-word-09-opt3",
-   "verdict": "REFUSE",
-   "reason": "The value is unchanged (T) and only the tag moves. T was placed by the generator's key+5 offset (O to T), the fault the pass-1 reviewer recorded on this seat; relabelling the generator's value as a common-letter default fits a story to an existing value rather than naming the mistake that made it. RTCKET is also unreadable on sight (RTC), so no child 'drops it in' undetected. Needs a chosen value, e.g. a vowel other than A (RACKET is a real word) or I/U checked as non-words."
-  },
-  {
-   "ref": "seat:gen-vr-20-complete-the-word-10-opt2",
-   "verdict": "ATTEST",
-   "reason": "A is among the most frequent English letters (ETAOINSR); JUAGLE recomputed and is not a word; key and word quoted correctly; the act (drop in a common letter without reading back) produces this value."
-  },
-  {
-   "ref": "seat:gen-vr-20-complete-the-word-10-opt3",
-   "verdict": "REFUSE",
-   "reason": "N before G is the /ng/ sound; M never spells it. JUMGLE read aloud is 'jum-gle', not JUNGLE. Not a genuine sound-spelling confusion for a 9-11-year-old."
-  },
-  {
-   "ref": "seat:gen-vr-20-complete-the-word-11-opt2",
-   "verdict": "ATTEST",
-   "reason": "E is among the most frequent English letters (ETAOINSR); CASELE recomputed and is not a word; key and word quoted correctly; the act (drop in a common letter without reading back) produces this value."
-  },
-  {
-   "ref": "seat:gen-vr-20-complete-the-word-11-opt3",
-   "verdict": "ATTEST",
-   "reason": "CASSLE read aloud by a 9-11-year-old sounds like the real word by a genuine sound-spelling confusion; checked as a non-word; key, word and spelling pattern quoted correctly."
+   "reason": "Unchanged from round 1 (attested there): PENCAL is a genuine unstressed-vowel sound-alike for a 9-11-year-old reader, is not a word, and the execution quotes the row correctly."
   },
   {
    "ref": "seat:gen-vr-20-complete-the-word-12-opt2",
-   "verdict": "ATTEST",
-   "reason": "R is among the most frequent English letters (ETAOINSR); BUTTRN recomputed and is not a word; key and word quoted correctly; the act (drop in a common letter without reading back) produces this value. Value is a genuinely common letter and the strings check; note that a consonant dropped into a vowel gap gives an unreadable string (BUTTRN), so this distractor is eliminated on sight."
+   "verdict": "REFUSE",
+   "reason": "Yes, this blurs the two tags. The gap is an unstressed syllable, so any vowel in it is read as the same weak schwa: BUTTAN read aloud sounds like the real word (compare Morgan, woman). This seat is therefore a second sound-alike under a common-letter label. The common-letter story ('drops it in without reading the word back') does not produce this mistake, because reading it back would not catch it, and the childHint 'Try your letter in the gap and read the whole word' would send the child to a check that passes. A consonant was dead on sight (round 1) and every vowel reduces here, so no live common-letter distractor exists for this gap. Either retag this seat vr20-sound-alike (the row then tests spelling knowledge alone, with two sound-alike distractors) or rebuild the row on a word whose gap is stressed."
   },
   {
    "ref": "seat:gen-vr-20-complete-the-word-12-opt3",
    "verdict": "ATTEST",
-   "reason": "BUTTEN read aloud by a 9-11-year-old sounds like the real word by a genuine sound-spelling confusion; checked as a non-word; key, word and spelling pattern quoted correctly."
-  },
-  {
-   "ref": "seat:gen-vr-20-complete-the-word-13-opt2",
-   "verdict": "ATTEST",
-   "reason": "O is among the most frequent English letters (ETAOINSR); MORROR recomputed and is not a word; key and word quoted correctly; the act (drop in a common letter without reading back) produces this value."
-  },
-  {
-   "ref": "seat:gen-vr-20-complete-the-word-13-opt3",
-   "verdict": "REFUSE",
-   "reason": "MERROR read aloud has the short E of 'merry', which the execution itself cites, and so does not sound like MIRROR (short I). An I/E vowel merger is an accent or early-years feature, not a confusion a 9-11-year-old reader makes on this word."
-  },
-  {
-   "ref": "seat:gen-vr-20-complete-the-word-14-opt2",
-   "verdict": "ATTEST",
-   "reason": "S is among the most frequent English letters (ETAOINSR); POSKET recomputed and is not a word; key and word quoted correctly; the act (drop in a common letter without reading back) produces this value."
-  },
-  {
-   "ref": "seat:gen-vr-20-complete-the-word-14-opt3",
-   "verdict": "ATTEST",
-   "reason": "POKKET read aloud by a 9-11-year-old sounds like the real word by a genuine sound-spelling confusion; checked as a non-word; key, word and spelling pattern quoted correctly."
-  },
-  {
-   "ref": "seat:gen-vr-20-complete-the-word-16-opt2",
-   "verdict": "ATTEST",
-   "reason": "A is among the most frequent English letters (ETAOINSR); BOTTAE recomputed and is not a word; key and word quoted correctly; the act (drop in a common letter without reading back) produces this value."
-  },
-  {
-   "ref": "seat:gen-vr-20-complete-the-word-16-opt3",
-   "verdict": "ATTEST",
-   "reason": "N is among the most frequent English letters (ETAOINSR); BOTTNE recomputed and is not a word; key and word quoted correctly; the act (drop in a common letter without reading back) produces this value. The 'no sound-alike letter fits' claim checked and holds for this gap; that sentence is an authoring note rather than part of the child's act, but it is true."
-  },
-  {
-   "ref": "seat:gen-vr-20-complete-the-word-17-opt2",
-   "verdict": "ATTEST",
-   "reason": "E is among the most frequent English letters (ETAOINSR); DEAGON recomputed and is not a word; key and word quoted correctly; the act (drop in a common letter without reading back) produces this value."
-  },
-  {
-   "ref": "seat:gen-vr-20-complete-the-word-17-opt3",
-   "verdict": "REFUSE",
-   "reason": "Explicitly excluded by the standard for this pass: R-as-W is a feature of very young children's speech ('the way young children often do'), not a sound-spelling confusion of a 9-11-year-old. DWAGON read aloud does not sound like DRAGON to the target reader. The value (W) is also unchanged from the generator's key+5 offset."
-  },
-  {
-   "ref": "seat:gen-vr-20-complete-the-word-18-opt2",
-   "verdict": "ATTEST",
-   "reason": "T is among the most frequent English letters (ETAOINSR); CITCUS recomputed and is not a word; key and word quoted correctly; the act (drop in a common letter without reading back) produces this value."
-  },
-  {
-   "ref": "seat:gen-vr-20-complete-the-word-18-opt3",
-   "verdict": "ATTEST",
-   "reason": "A is among the most frequent English letters (ETAOINSR); CIACUS recomputed and is not a word; key and word quoted correctly; the act (drop in a common letter without reading back) produces this value. The 'no sound-alike letter fits' claim checked and holds for this gap; that sentence is an authoring note rather than part of the child's act, but it is true."
-  },
-  {
-   "ref": "seat:gen-vr-20-complete-the-word-19-opt2",
-   "verdict": "ATTEST",
-   "reason": "A is among the most frequent English letters (ETAOINSR); HELAET recomputed and is not a word; key and word quoted correctly; the act (drop in a common letter without reading back) produces this value."
-  },
-  {
-   "ref": "seat:gen-vr-20-complete-the-word-19-opt3",
-   "verdict": "REFUSE",
-   "reason": "HELNET read aloud is 'hel-net', not HELMET. M and N are distinct sounds here with no spelling pattern linking them; 'sounds close' is not a genuine sound-spelling confusion for a 9-11-year-old."
+   "reason": "Unchanged from round 1 (attested there): BUTTEN is a genuine unstressed-vowel sound-alike for a 9-11-year-old reader, is not a word, and the execution quotes the row correctly."
   },
   {
    "ref": "seat:gen-vr-20-complete-the-word-20-opt2",
-   "verdict": "ATTEST",
-   "reason": "S is among the most frequent English letters (ETAOINSR); CARPST recomputed and is not a word; key and word quoted correctly; the act (drop in a common letter without reading back) produces this value. Value is a genuinely common letter and the strings check; note that a consonant dropped into a vowel gap gives an unreadable string (CARPST), so this distractor is eliminated on sight."
+   "verdict": "REFUSE",
+   "reason": "Yes, this blurs the two tags. The gap is an unstressed syllable, so any vowel in it is read as the same weak schwa: CARPAT read aloud sounds like the real word (compare carat). This seat is therefore a second sound-alike under a common-letter label. The common-letter story ('drops it in without reading the word back') does not produce this mistake, because reading it back would not catch it, and the childHint 'Try your letter in the gap and read the whole word' would send the child to a check that passes. A consonant was dead on sight (round 1) and every vowel reduces here, so no live common-letter distractor exists for this gap. Either retag this seat vr20-sound-alike (the row then tests spelling knowledge alone, with two sound-alike distractors) or rebuild the row on a word whose gap is stressed."
   },
   {
    "ref": "seat:gen-vr-20-complete-the-word-20-opt3",
    "verdict": "ATTEST",
-   "reason": "CARPIT read aloud by a 9-11-year-old sounds like the real word by a genuine sound-spelling confusion; checked as a non-word; key, word and spelling pattern quoted correctly."
-  },
-  {
-   "ref": "seat:gen-vr-20-complete-the-word-21-opt2",
-   "verdict": "ATTEST",
-   "reason": "E is among the most frequent English letters (ETAOINSR); LENTERN recomputed and is not a word; key and word quoted correctly; the act (drop in a common letter without reading back) produces this value."
-  },
-  {
-   "ref": "seat:gen-vr-20-complete-the-word-21-opt3",
-   "verdict": "ATTEST",
-   "reason": "O is among the most frequent English letters (ETAOINSR); LONTERN recomputed and is not a word; key and word quoted correctly; the act (drop in a common letter without reading back) produces this value. The 'no sound-alike letter fits' claim checked and holds for this gap; that sentence is an authoring note rather than part of the child's act, but it is true."
-  },
-  {
-   "ref": "seat:gen-vr-20-complete-the-word-22-opt2",
-   "verdict": "ATTEST",
-   "reason": "I is among the most frequent English letters (ETAOINSR); BAIKET recomputed and is not a word; key and word quoted correctly; the act (drop in a common letter without reading back) produces this value."
-  },
-  {
-   "ref": "seat:gen-vr-20-complete-the-word-22-opt3",
-   "verdict": "REFUSE",
-   "reason": "The S in BASKET is /s/; Z spells /z/. BAZKET read aloud is 'baz-ket', not BASKET. Z-for-S is a genuine confusion only where S is voiced (is, has, rose), which it is not here."
-  },
-  {
-   "ref": "seat:gen-vr-20-complete-the-word-23-opt2",
-   "verdict": "ATTEST",
-   "reason": "E is among the most frequent English letters (ETAOINSR); TUNEEL recomputed and is not a word; key and word quoted correctly; the act (drop in a common letter without reading back) produces this value."
-  },
-  {
-   "ref": "seat:gen-vr-20-complete-the-word-23-opt3",
-   "verdict": "ATTEST",
-   "reason": "R is among the most frequent English letters (ETAOINSR); TUNREL recomputed and is not a word; key and word quoted correctly; the act (drop in a common letter without reading back) produces this value. The 'no sound-alike letter fits' claim checked and holds for this gap; that sentence is an authoring note rather than part of the child's act, but it is true."
+   "reason": "Unchanged from round 1 (attested there): CARPIT is a genuine unstressed-vowel sound-alike for a 9-11-year-old reader, is not a word, and the execution quotes the row correctly."
   },
   {
    "ref": "seat:gen-vr-20-complete-the-word-24-opt2",
-   "verdict": "ATTEST",
-   "reason": "N is among the most frequent English letters (ETAOINSR); VELVNT recomputed and is not a word; key and word quoted correctly; the act (drop in a common letter without reading back) produces this value. Value is a genuinely common letter and the strings check; note that a consonant dropped into a vowel gap gives an unreadable string (VELVNT), so this distractor is eliminated on sight."
+   "verdict": "REFUSE",
+   "reason": "Yes, this blurs the two tags. The gap is an unstressed syllable, so any vowel in it is read as the same weak schwa: VELVOT read aloud sounds like the real word (compare carrot, parrot). This seat is therefore a second sound-alike under a common-letter label. The common-letter story ('drops it in without reading the word back') does not produce this mistake, because reading it back would not catch it, and the childHint 'Try your letter in the gap and read the whole word' would send the child to a check that passes. A consonant was dead on sight (round 1) and every vowel reduces here, so no live common-letter distractor exists for this gap. Either retag this seat vr20-sound-alike (the row then tests spelling knowledge alone, with two sound-alike distractors) or rebuild the row on a word whose gap is stressed."
   },
   {
    "ref": "seat:gen-vr-20-complete-the-word-24-opt3",
    "verdict": "ATTEST",
-   "reason": "VELVIT read aloud by a 9-11-year-old sounds like the real word by a genuine sound-spelling confusion; checked as a non-word; key, word and spelling pattern quoted correctly."
+   "reason": "Unchanged from round 1 (attested there): VELVIT is a genuine unstressed-vowel sound-alike for a 9-11-year-old reader, is not a word, and the execution quotes the row correctly."
   },
   {
-   "ref": "seat:gen-vr-20-complete-the-word-25-opt2",
+   "ref": "rebuild:gen-vr-20-complete-the-word-02",
    "verdict": "ATTEST",
-   "reason": "O is among the most frequent English letters (ETAOINSR); MOGNET recomputed and is not a word; key and word quoted correctly; the act (drop in a common letter without reading back) produces this value."
+   "reason": "DANSER: S is the usual spelling of /s/ and DANSER reads as DANCER, a genuine soft-C confusion. DANTER: T is common and DANTER is not a word. Key C. The A-Z scan also finds DANGER (G), DANDER and DANNER, none of them offered, so C is the only correct offered option. Executions are accurate."
   },
   {
-   "ref": "seat:gen-vr-20-complete-the-word-25-opt3",
+   "ref": "rebuild:gen-vr-20-complete-the-word-03",
+   "verdict": "ATTEST",
+   "reason": "CEVEN: C before E reads /s/ (centre), a genuine sound-alike. TEVEN: common letter, not a word. Key S. The A-Z scan finds only SEVEN and an archaic YEVEN (Y not offered). Executions are accurate."
+  },
+  {
+   "ref": "rebuild:gen-vr-20-complete-the-word-07",
+   "verdict": "ATTEST",
+   "reason": "KAMEL: K spells /k/ before A, so KAMEL reads exactly as CAMEL, a genuine sound-alike. SAMEL: common letter. Key C. Note that Webster's 2nd lists 'Kamel' (a proper or archaic form) and 'samel' (a brick-making term). Neither is a word a British 9-11-year-old knows or a current children's dictionary carries, so I treat both as non-words. The other A-Z fills (HAMEL, LAMEL, WAMEL, YAMEL) are not offered and are equally obscure. Executions are accurate."
+  },
+  {
+   "ref": "rebuild:gen-vr-20-complete-the-word-09",
+   "verdict": "ATTEST",
+   "reason": "CRISTAL: I and Y share the short-I sound (gym, myth), a genuine sound-alike. CRESTAL: stressed short E reads differently, so it is a live common-letter distractor and not a word in the scan dictionary. Key Y. The A-Z scan finds CRUSTAL (U, not offered). Executions are accurate."
+  },
+  {
+   "ref": "rebuild:gen-vr-20-complete-the-word-10",
    "verdict": "REFUSE",
-   "reason": "Short A and short E are distinct for a British 9-11-year-old; MEGNET reads 'meg-net', not MAGNET. Also inconsistent with the same proposal: row 21 (L_NTERN, short A) states no sound-alike fits and uses E as a common letter, while this row claims E as a sound-alike for the same vowel. Under this pass's standard row 21's position is the correct one."
+   "reason": "The common-letter seat A gives SPADER, which is a dictionary word ('one who spades', Webster's 2nd), so the execution's 'which is not a word' is false. Under the standard that the key must be the ONLY correct option under every reading, A cannot stand, even though no child would know the word. SPYDER is a sound key-vs-Y contrast (Y for long I) and is fine. Replace A with a vowel that forms no word, e.g. O (SPODER) or U (SPUDER), both absent from the scan."
+  },
+  {
+   "ref": "rebuild:gen-vr-20-complete-the-word-13",
+   "verdict": "ATTEST",
+   "reason": "HORCE: C before E reads /s/ (force), a genuine sound-alike. HORTE: common letter, not a word. Key S. The A-Z scan finds HORDE (D) and an archaic HORME, neither offered. Executions are accurate."
   },
   {
    "ref": "rebuild:gen-vr-20-complete-the-word-15",
+   "verdict": "ATTEST",
+   "reason": "Replaces SUNDAY (a proper noun) and LEMON (no genuine sound-alike). BISYCLE reads exactly as BICYCLE, a genuine sound-alike. BITYCLE: common letter. Key C, and the A-Z scan finds C only. Executions are accurate."
+  },
+  {
+   "ref": "rebuild:gen-vr-20-complete-the-word-16",
+   "verdict": "ATTEST",
+   "reason": "CANGAROO: C before A spells /k/, so it reads as KANGAROO, a genuine sound-alike. TANGAROO: common letter. Key K, and the A-Z scan finds K only. Executions are accurate."
+  },
+  {
+   "ref": "rebuild:gen-vr-20-complete-the-word-17",
    "verdict": "REFUSE",
-   "reason": "The named fault is fixed (SUNDAY, a proper noun, replaced by LEMON) and the key M is correct and unique (no other letter makes LE_ON a word), but the rebuild introduces a sound-alike seat that fails: LENON read aloud is 'len-on', not LEMON; M/N is not a genuine sound-spelling confusion for a 9-11-year-old (same fault as row 19). The common-letter seat T (LETON) is sound. Rebuild with a different second distractor."
+   "reason": "The sound-alike seat I gives SIRUP, a recognised variant spelling of syrup (Webster's 2nd; Merriam-Webster still lists 'sirup'). The option the row calls a misspelling is therefore a correct spelling under one reading, which breaks the 'key is the only correct option' rule, and the execution's 'which is not a word' is false. SORUP (common letter O) is sound. Rebuild on another word, or use a sound-alike that forms no variant spelling."
+  },
+  {
+   "ref": "rebuild:gen-vr-20-complete-the-word-19",
+   "verdict": "ATTEST",
+   "reason": "TIKKET reads exactly as TICKET, a genuine sound-alike (the same mechanism as POKKET). TINKET: common letter, not a word. Key C, and the A-Z scan finds C only. Executions are accurate."
+  },
+  {
+   "ref": "rebuild:gen-vr-20-complete-the-word-22",
+   "verdict": "ATTEST",
+   "reason": "MOUCE: C before E reads /s/ (bounce), a genuine sound-alike. MOUTE: common letter, not a word. Key S. The A-Z scan finds an archaic MOULE (L, not offered). Executions are accurate."
+  },
+  {
+   "ref": "rebuild:gen-vr-20-complete-the-word-25",
+   "verdict": "ATTEST",
+   "reason": "PYLOT: Y for long I (fly, type), a genuine sound-alike. PALOT: stressed A reads differently, so it is a live common-letter distractor. Key I, and the A-Z scan finds I only. Executions are accurate."
   }
  ],
  "rows": [
   {
-   "itemId": "gen-vr-20-complete-the-word-01",
-   "verdict": "SIGN",
-   "reason": "Read T_GER with I/A/Y: TIGER is the only word (dictionary scan of all 26 letters gives I alone); TAGER, TYGER non-words (TYGER is Blake's archaic spelling, unknown to a child as a word); options shuffled at serve; vocabulary fine."
-  },
-  {
    "itemId": "gen-vr-20-complete-the-word-02",
-   "verdict": "HOLD",
-   "reason": "opt3 M (CAMDLE) refused: not a sound-alike to a 9-11-year-old reader. Rest of row is sound (key N unique among offered letters; CADDLE/CAUDLE not offered)."
+   "verdict": "SIGN",
+   "reason": "DAN_ER: answerable; the key is the only offered option making a word on the A-Z scan of the gap (/usr/share/dict/words); one live common-letter distractor and one genuine sound-alike; options are shuffled when served; vocabulary is known to a 9-11-year-old in Britain."
   },
   {
    "itemId": "gen-vr-20-complete-the-word-03",
-   "verdict": "HOLD",
-   "reason": "opt3 T (WINTOW) refused: voicing contrast, not a sound-alike to the target reader. WINNOW/WINROW are real words but not offered; rest sound."
+   "verdict": "SIGN",
+   "reason": "_EVEN: answerable; the key is the only offered option making a word on the A-Z scan of the gap (/usr/share/dict/words); one live common-letter distractor and one genuine sound-alike; options are shuffled when served; vocabulary is known to a 9-11-year-old in Britain."
   },
   {
    "itemId": "gen-vr-20-complete-the-word-04",
-   "verdict": "SIGN",
-   "reason": "GARD_N: E the only word-forming letter; GARDIN a genuine schwa sound-alike; GARDTN is a dead distractor (unreadable), so the row is effectively a two-way E/I choice. Signed; recommend a vowel common letter (e.g. A/O) in vowel gaps."
-  },
-  {
-   "itemId": "gen-vr-20-complete-the-word-05",
-   "verdict": "SIGN",
-   "reason": "P_RPLE: U unique; PORPLE and PERPLE both readable non-words, PERPLE a genuine /er/ sound-alike; good row."
-  },
-  {
-   "itemId": "gen-vr-20-complete-the-word-06",
-   "verdict": "SIGN",
-   "reason": "SI_VER with L/T/N: L unique among offered (SIEVER exists only with E, not offered); SITVER/SINVER both readable non-words a hasty child could accept. Two common-letter distractors: the row tests only read-back-and-check, gives one diagnosis whichever is chosen, and exercises no sound-alike, but no genuine sound-alike exists for L here and the row still tests the case's core skill. Signed as a weaker but valid row."
+   "verdict": "HOLD",
+   "reason": "Common-letter seat refused: GARDAN sounds as right as the tagged sound-alike, so the row has two sound-alike distractors and one of them carries the wrong tag and the wrong hint. The key is the only real word on the A-Z scan of the gap (/usr/share/dict/words). The row can sign once the tags are true: retag, or rebuild on a word with a stressed gap."
   },
   {
    "itemId": "gen-vr-20-complete-the-word-07",
-   "verdict": "HOLD",
-   "reason": "opt3 C (MARCET) refused: soft C before E reads as S, so it does not sound right when read."
+   "verdict": "SIGN",
+   "reason": "_AMEL: answerable; the key is the only offered option making a word on the A-Z scan of the gap (/usr/share/dict/words); one live common-letter distractor and one genuine sound-alike; options are shuffled when served; vocabulary is known to a 9-11-year-old in Britain."
   },
   {
    "itemId": "gen-vr-20-complete-the-word-08",
-   "verdict": "SIGN",
-   "reason": "PENC_L: I unique among offered (PENCEL with E not offered); PENCAL a genuine schwa sound-alike; PENCRL dead on sight, so effectively two-way."
+   "verdict": "HOLD",
+   "reason": "Common-letter seat refused: PENCOL sounds as right as the tagged sound-alike, so the row has two sound-alike distractors and one of them carries the wrong tag and the wrong hint. The key is the only real word on the A-Z scan of the gap (/usr/share/dict/words) (PENCEL with E exists in Webster but E is not offered). The row can sign once the tags are true: retag, or rebuild on a word with a stressed gap."
   },
   {
    "itemId": "gen-vr-20-complete-the-word-09",
-   "verdict": "HOLD",
-   "reason": "opt3 retag of the generator's T refused (story fitted to an offset value; RTCKET unreadable). The row as proposed would carry two common-letter distractors, one dead on sight, so in effect it is a two-way choice with no sound-alike tested. Note A must never be used here (RACKET)."
+   "verdict": "SIGN",
+   "reason": "CR_STAL: answerable; the key is the only offered option making a word on the A-Z scan of the gap (/usr/share/dict/words); one live common-letter distractor and one genuine sound-alike; options are shuffled when served; vocabulary is known to a 9-11-year-old in Britain."
   },
   {
    "itemId": "gen-vr-20-complete-the-word-10",
    "verdict": "HOLD",
-   "reason": "opt3 M (JUMGLE) refused: M never spells the /ng/ sound. JUGGLE is a real word but G is not offered; rest sound."
-  },
-  {
-   "itemId": "gen-vr-20-complete-the-word-11",
-   "verdict": "SIGN",
-   "reason": "CAS_LE: T unique; CASSLE a genuine silent-T sound-alike; CASELE readable non-word; good row."
+   "reason": "Rebuild refused: The common-letter seat A gives SPADER, which is a dictionary word ('one who spades', Webster's 2nd), so the execution's 'which is not a word' is false."
   },
   {
    "itemId": "gen-vr-20-complete-the-word-12",
-   "verdict": "SIGN",
-   "reason": "BUTT_N: O unique; BUTTEN a genuine schwa sound-alike; BUTTRN dead on sight, effectively two-way."
+   "verdict": "HOLD",
+   "reason": "Common-letter seat refused: BUTTAN sounds as right as the tagged sound-alike, so the row has two sound-alike distractors and one of them carries the wrong tag and the wrong hint. The key is the only real word on the A-Z scan of the gap (/usr/share/dict/words). The row can sign once the tags are true: retag, or rebuild on a word with a stressed gap."
   },
   {
    "itemId": "gen-vr-20-complete-the-word-13",
-   "verdict": "HOLD",
-   "reason": "opt3 E (MERROR) refused: short E reads differently from short I to the target reader."
-  },
-  {
-   "itemId": "gen-vr-20-complete-the-word-14",
    "verdict": "SIGN",
-   "reason": "PO_KET: C unique among offered (PORKET with R not offered); POKKET reads exactly as POCKET; POSKET readable non-word; good row."
+   "reason": "HOR_E: answerable; the key is the only offered option making a word on the A-Z scan of the gap (/usr/share/dict/words); one live common-letter distractor and one genuine sound-alike; options are shuffled when served; vocabulary is known to a 9-11-year-old in Britain."
   },
   {
    "itemId": "gen-vr-20-complete-the-word-15",
-   "verdict": "HOLD",
-   "reason": "Rebuild refused: LENON is not a sound-alike to the target reader. Row cannot land as proposed."
+   "verdict": "SIGN",
+   "reason": "BI_YCLE: answerable; the key is the only offered option making a word on the A-Z scan of the gap (/usr/share/dict/words); one live common-letter distractor and one genuine sound-alike; options are shuffled when served; vocabulary is known to a 9-11-year-old in Britain."
   },
   {
    "itemId": "gen-vr-20-complete-the-word-16",
-   "verdict": "HOLD",
-   "reason": "Both seats proposed as common-letter, and both strings fail on sight: BOTTAE ends in an un-English AE and BOTTNE carries an impossible TTN cluster. A child eliminates both without knowing the word, so the row tests nothing beyond recognising BOTTLE. Two common-letter distractors can carry a row only when the strings they make look like plausible words (as on rows 06, 18, 21, 23); here they do not. Needs at least one live distractor, e.g. a consonant that forms a pronounceable non-word."
+   "verdict": "SIGN",
+   "reason": "_ANGAROO: answerable; the key is the only offered option making a word on the A-Z scan of the gap (/usr/share/dict/words); one live common-letter distractor and one genuine sound-alike; options are shuffled when served; vocabulary is known to a 9-11-year-old in Britain."
   },
   {
    "itemId": "gen-vr-20-complete-the-word-17",
    "verdict": "HOLD",
-   "reason": "opt3 W (DWAGON) refused: R-as-W is young-child speech, excluded by this pass's standard."
-  },
-  {
-   "itemId": "gen-vr-20-complete-the-word-18",
-   "verdict": "SIGN",
-   "reason": "CI_CUS with R/T/A: R unique; CITCUS and CIACUS readable non-words. Two common-letter distractors: the R is silent in British speech so no letter is a genuine sound-alike; row tests read-back only, one diagnosis, but both distractors are live. Signed as a weaker but valid row."
+   "reason": "Rebuild refused: The sound-alike seat I gives SIRUP, a recognised variant spelling of syrup (Webster's 2nd; Merriam-Webster still lists 'sirup')."
   },
   {
    "itemId": "gen-vr-20-complete-the-word-19",
-   "verdict": "HOLD",
-   "reason": "opt3 N (HELNET) refused: M/N is not a sound-alike to the target reader."
+   "verdict": "SIGN",
+   "reason": "TI_KET: answerable; the key is the only offered option making a word on the A-Z scan of the gap (/usr/share/dict/words); one live common-letter distractor and one genuine sound-alike; options are shuffled when served; vocabulary is known to a 9-11-year-old in Britain."
   },
   {
    "itemId": "gen-vr-20-complete-the-word-20",
-   "verdict": "SIGN",
-   "reason": "CARP_T: E unique; CARPIT a genuine unstressed-vowel sound-alike; CARPST dead on sight, effectively two-way."
-  },
-  {
-   "itemId": "gen-vr-20-complete-the-word-21",
-   "verdict": "SIGN",
-   "reason": "L_NTERN with A/E/O: A unique among offered (LINTERN with I not offered); LENTERN and LONTERN both plausible non-words. Two common-letter distractors, no genuine sound-alike for short A for this age (see row 25), row tests read-back only but both distractors are live. Signed as weaker but valid."
+   "verdict": "HOLD",
+   "reason": "Common-letter seat refused: CARPAT sounds as right as the tagged sound-alike, so the row has two sound-alike distractors and one of them carries the wrong tag and the wrong hint. The key is the only real word on the A-Z scan of the gap (/usr/share/dict/words). The row can sign once the tags are true: retag, or rebuild on a word with a stressed gap."
   },
   {
    "itemId": "gen-vr-20-complete-the-word-22",
-   "verdict": "HOLD",
-   "reason": "opt3 Z (BAZKET) refused: the S in BASKET is unvoiced, so Z does not sound right. BACKET/BANKET are dictionary entries but C/N not offered; rest sound."
-  },
-  {
-   "itemId": "gen-vr-20-complete-the-word-23",
    "verdict": "SIGN",
-   "reason": "TUN_EL with N/E/R: N unique; TUNEEL and TUNREL readable non-words, both live. Two common-letter distractors and one diagnosis; signed as weaker but valid."
+   "reason": "MOU_E: answerable; the key is the only offered option making a word on the A-Z scan of the gap (/usr/share/dict/words); one live common-letter distractor and one genuine sound-alike; options are shuffled when served; vocabulary is known to a 9-11-year-old in Britain."
   },
   {
    "itemId": "gen-vr-20-complete-the-word-24",
-   "verdict": "SIGN",
-   "reason": "VELV_T: E unique; VELVIT a genuine unstressed-vowel sound-alike; VELVNT dead on sight, effectively two-way."
+   "verdict": "HOLD",
+   "reason": "Common-letter seat refused: VELVOT sounds as right as the tagged sound-alike, so the row has two sound-alike distractors and one of them carries the wrong tag and the wrong hint. The key is the only real word on the A-Z scan of the gap (/usr/share/dict/words). The row can sign once the tags are true: retag, or rebuild on a word with a stressed gap."
   },
   {
    "itemId": "gen-vr-20-complete-the-word-25",
-   "verdict": "HOLD",
-   "reason": "opt3 E (MEGNET) refused: short A/short E are distinct for the target reader, and the proposal contradicts itself on this vowel (row 21)."
+   "verdict": "SIGN",
+   "reason": "P_LOT: answerable; the key is the only offered option making a word on the A-Z scan of the gap (/usr/share/dict/words); one live common-letter distractor and one genuine sound-alike; options are shuffled when served; vocabulary is known to a 9-11-year-old in Britain."
   }
  ]
 }

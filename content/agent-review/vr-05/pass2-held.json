@@ -2,66 +2,25 @@
  "door": "vr-05",
  "mode": "APPLIED",
  "landed": [
-  "gen-vr-05-hidden-word-05",
-  "gen-vr-05-hidden-word-14",
-  "gen-vr-05-hidden-word-01",
-  "gen-vr-05-hidden-word-02",
-  "gen-vr-05-hidden-word-04",
-  "gen-vr-05-hidden-word-03",
-  "gen-vr-05-hidden-word-19",
-  "gen-vr-05-hidden-word-23",
-  "gen-vr-05-hidden-word-07",
-  "gen-vr-05-hidden-word-06",
-  "gen-vr-05-hidden-word-09",
-  "gen-vr-05-hidden-word-10",
-  "gen-vr-05-hidden-word-11",
-  "gen-vr-05-hidden-word-13",
-  "gen-vr-05-hidden-word-16",
-  "gen-vr-05-hidden-word-17",
-  "gen-vr-05-hidden-word-18",
-  "gen-vr-05-hidden-word-22",
-  "gen-vr-05-hidden-word-24",
-  "gen-vr-05-hidden-word-25"
+  "gen-vr-05-hidden-word-12",
+  "gen-vr-05-hidden-word-08",
+  "gen-vr-05-hidden-word-20"
  ],
  "held": [
   {
-   "itemId": "gen-vr-05-hidden-word-12",
-   "gateFaults": [],
-   "unattested": [],
-   "row": {
-    "itemId": "gen-vr-05-hidden-word-12",
-    "verdict": "SIGN",
-    "reason": "Joined the letters of \"Which and how many?\" myself: key crosses exactly one join between two words and appears once; no distractor occurrence in the joined letters crosses a join (so none is a second correct answer); each almost-letters value is absent and one letter off an on-row run; each single-word-only value is whole inside one word; no option-pair pattern gives the key away; all option words known to 9-11s."
-   }
-  },
-  {
-   "itemId": "gen-vr-05-hidden-word-08",
-   "gateFaults": [],
-   "unattested": [],
-   "row": {
-    "itemId": "gen-vr-05-hidden-word-08",
-    "verdict": "SIGN",
-    "reason": "Joined the letters of \"Zebra ideas win prizes.\" myself: key crosses exactly one join between two words and appears once; no distractor occurrence in the joined letters crosses a join (so none is a second correct answer); each almost-letters value is absent and one letter off an on-row run; each single-word-only value is whole inside one word; no option-pair pattern gives the key away; all option words known to 9-11s."
-   }
-  },
-  {
-   "itemId": "gen-vr-05-hidden-word-20",
-   "gateFaults": [],
-   "unattested": [],
-   "row": {
-    "itemId": "gen-vr-05-hidden-word-20",
-    "verdict": "SIGN",
-    "reason": "Joined the letters of \"Watch industrious ants.\" myself: key crosses exactly one join between two words and appears once; no distractor occurrence in the joined letters crosses a join (so none is a second correct answer); each almost-letters value is absent and one letter off an on-row run; each single-word-only value is whole inside one word; no option-pair pattern gives the key away; all option words known to 9-11s."
-   }
-  },
-  {
    "itemId": "gen-vr-05-hidden-word-21",
    "gateFaults": [],
-   "unattested": [],
+   "unattested": [
+    {
+     "ref": "rebuild:gen-vr-05-hidden-word-21",
+     "verdict": "REFUSE",
+     "reason": "The mechanics are correct, and the cider fault is fixed. date appears once, crossing exactly one join (an|d + ate). toad is absent; its closest run is 'toas', one letter off. rank sits whole inside 'drank' and crosses no join. 'hist' crosses a join (h|is + t|oast), but it is not an ordinary word and not an option, so it is no second answer. What breaks: date is already the key of the live row 01, 'Dad ate the last plum.', where it is also built from a d-ending word plus 'ate'. The new sentence also opens with 'Dad'. A child working through the door meets the same answer, made the same way, under the same opening word twice, which the brief rules out. It needs a key not used elsewhere in vr-05. Keys already in use: date, hero, stop, band, gone, song, item, raid, lamb, them, sand, hand, farm, rose, tent, pear, kind, moth, ring, chin, plan, very, nose, care."
+    }
+   ],
    "row": {
     "itemId": "gen-vr-05-hidden-word-21",
-    "verdict": "SIGN",
-    "reason": "Joined the letters of \"Dad drank a cider slowly.\" myself: key crosses exactly one join between two words and appears once; no distractor occurrence in the joined letters crosses a join (so none is a second correct answer); each almost-letters value is absent and one letter off an on-row run; each single-word-only value is whole inside one word; no option-pair pattern gives the key away; all option words known to 9-11s."
+    "verdict": "HOLD",
+    "reason": "The row is correct on its own terms: 'Dad drank tea and ate his toast.' is natural, 7 words, and the key, distractors and joins all check, with 'hist' not a second answer. But its key, date, repeats the key of live row 01, which uses the same Dad/'ate' construction. Re-key it to a word not used elsewhere in the door."
    }
   }
  ]

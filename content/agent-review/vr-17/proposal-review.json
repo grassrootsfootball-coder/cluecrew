@@ -1,514 +1,130 @@
 {
  "door": "vr-17",
  "reviewer": "rev-agent-01",
- "summary": {
-  "keys": "All 25 keys recomputed by substitution over 0–99: each sum has exactly one solution and it equals the stored key.",
-  "oneSideOnly": "19 attested: 13 right-hand-total readings (copying the right total into the gap, the documented \"= means the answer\" mistake) and 6 left readings on three-term rows (8+5=13, 12+3=15, 13−5=8, 20+5=25, 25−5=20, 28+7=35) that genuinely total the visible left terms. 6 refused (rows 05, 13, 21 on ? + n = r; rows 14, 22 on a + ? = r): a single-term left reading is empty, the child copies a printed number and no side is solved. Replace each with the right-hand total.",
-  "arithSlip": "50 attested, 12 of them unchanged values attested on the same terms. Every execution checked against its row: sum, key, value, direction and size of the slip.",
-  "pattern": "Positions are shuffled per child at serve, so opt1 = key is invisible. The one-side value is far from the key on all 25 rows, so a child can discard it as an outlier, leaving three close values; that is inherent to the tag and still leaves 1 in 3. Among the three close values the key is the lowest on 7 rows, the highest on 10, the middle on 8, so neither \"pick the middle\" (8/25) nor \"pick an end\" gives better than chance. Slip offsets vary across six patterns (−2/−1 on 10 rows, +1/+2 on 7, −1/+2 on 3, ±1 on 2, ±2 on 2, −2/+1 on 1). The one exposure: on 6 rows (03, 10, 13, 14, 17, 20) the slips straddle the key with a span of 3–4, so the key is the only value within 2 of both others. Exploiting that needs the generator's ±2 rule, which no child-facing text states, and the same move fails on the other 19 rows. Judged inherent to the tag and not a give-away. Advisory only: keeping the cluster span to 2 (offsets ±1, +1/+2 or −1/−2) would remove even that."
- },
+ "round": 2,
+ "summary": "Round 2: 18 seats on 6 rows (05, 13, 14, 21, 22, 25). Keys recomputed by substitution over 0–99, one solution each, matching the stored key. All 6 opt3 seats are now the right-hand total, which is the genuine mistake, so the round-1 refusal is resolved. The 12 slips are unchanged from round 1 and re-checked against their rows. Row 13 (21 next to the slip 20) holds up, and its round-1 pattern exposure is now closed. Row 14 keeps the exposure accepted in round 1. Result: 18 ATTEST, 0 REFUSE; 6 SIGN, 0 HOLD.",
  "changes": [
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-01-opt2",
-   "verdict": "ATTEST",
-   "reason": "Recomputed ? + 3 = 9: key 6, unique. 7 is 1 too many, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row. Stored value unchanged (7), attested on the same terms."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-01-opt3",
-   "verdict": "ATTEST",
-   "reason": "Recomputed ? + 3 = 9: key 6, unique. 9 is the right-hand total 9 copied into the gap, the child treating '=' as 'write the answer' and never making the sides balance; that is one side worked and stopped, as the tag names. Every number in the execution is on the row and the calculation is right; 9 is not correct and collides with no other option."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-01-opt4",
-   "verdict": "ATTEST",
-   "reason": "Recomputed ? + 3 = 9: key 6, unique. 8 is 2 too many, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-02-opt2",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 7 + ? = 11: key 4, unique. 2 is 2 too few, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-02-opt3",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 7 + ? = 11: key 4, unique. 11 is the right-hand total 11 copied into the gap, the child treating '=' as 'write the answer' and never making the sides balance; that is one side worked and stopped, as the tag names. Every number in the execution is on the row and the calculation is right; 11 is not correct and collides with no other option."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-02-opt4",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 7 + ? = 11: key 4, unique. 3 is 1 too few, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-03-opt2",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 8 + 5 − ? = 9: key 4, unique. 6 is 2 too many, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-03-opt3",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 8 + 5 − ? = 9: key 4, unique. 13 is the total of the visible left terms (13), working the left side without the gap and stopping; that is one side worked and stopped, as the tag names. Every number in the execution is on the row and the calculation is right; 13 is not correct and collides with no other option."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-03-opt4",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 8 + 5 − ? = 9: key 4, unique. 3 is 1 too few, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-04-opt2",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 9 + ? − 5 = 10: key 6, unique. 5 is 1 too few, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-04-opt3",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 9 + ? − 5 = 10: key 6, unique. 10 is the right-hand total 10 copied into the gap, the child treating '=' as 'write the answer' and never making the sides balance; that is one side worked and stopped, as the tag names. Every number in the execution is on the row and the calculation is right; 10 is not correct and collides with no other option."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-04-opt4",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 9 + ? − 5 = 10: key 6, unique. 4 is 2 too few, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row. Stored value unchanged (4), attested on the same terms."
-  },
   {
    "ref": "seat:gen-vr-17-complete-the-sum-05-opt2",
    "verdict": "ATTEST",
-   "reason": "Recomputed ? + 7 = 17: key 10, unique. 8 is 2 too few, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row."
+   "reason": "Recomputed ? + 7 = 17: key 10, unique. 8 is 2 too few, a slip of one or two on the right method, as the tag names. The sum, key, value, direction and size in the execution all match the row. Unchanged from round 1 and attested on the same terms."
   },
   {
    "ref": "seat:gen-vr-17-complete-the-sum-05-opt3",
-   "verdict": "REFUSE",
-   "reason": "Recomputed ? + 7 = 17: key 10. The value 7 is the left side's ONLY visible term, copied. With one visible term on the left there is nothing to work out, so 'solved one side and stopped' names no step here: no side was solved, the child copied a number printed on the row. That is a story fitted to the value, and the same story would fit any printed number on any row. Arithmetic in the execution is correct, but the mechanism is empty. The genuine one-side reading on this row is the right-hand total, 17 (the '= means write the answer' mistake), as already used on rows 01, 09 and 17; 17 collides with no option on the row."
+   "verdict": "ATTEST",
+   "reason": "Recomputed ? + 7 = 17: key 10, unique. 17 is the printed right-hand total copied into the gap: the child treats '=' as 'write the answer' and never makes the sides balance, which is one side taken and stopped, as the tag names. Every number in the execution is on the row, and 17 is wrong (17 does not balance) and clashes with no other option. This replaces the refused single-term left reading, as asked for in round 1."
   },
   {
    "ref": "seat:gen-vr-17-complete-the-sum-05-opt4",
    "verdict": "ATTEST",
-   "reason": "Recomputed ? + 7 = 17: key 10, unique. 9 is 1 too few, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-06-opt2",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 11 + ? = 19: key 8, unique. 10 is 2 too many, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-06-opt3",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 11 + ? = 19: key 8, unique. 19 is the right-hand total 19 copied into the gap, the child treating '=' as 'write the answer' and never making the sides balance; that is one side worked and stopped, as the tag names. Every number in the execution is on the row and the calculation is right; 19 is not correct and collides with no other option."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-06-opt4",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 11 + ? = 19: key 8, unique. 9 is 1 too many, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-07-opt2",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 12 + 3 − ? = 11: key 4, unique. 3 is 1 too few, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-07-opt3",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 12 + 3 − ? = 11: key 4, unique. 15 is the total of the visible left terms (15), working the left side without the gap and stopping; that is one side worked and stopped, as the tag names. Every number in the execution is on the row and the calculation is right; 15 is not correct and collides with no other option."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-07-opt4",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 12 + 3 − ? = 11: key 4, unique. 5 is 1 too many, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-08-opt2",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 13 + ? − 5 = 12: key 4, unique. 5 is 1 too many, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row. Stored value unchanged (5), attested on the same terms."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-08-opt3",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 13 + ? − 5 = 12: key 4, unique. 8 is the total of the visible left terms (8), working the left side without the gap and stopping; that is one side worked and stopped, as the tag names. Every number in the execution is on the row and the calculation is right; 8 is not correct and collides with no other option."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-08-opt4",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 13 + ? − 5 = 12: key 4, unique. 6 is 2 too many, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-09-opt2",
-   "verdict": "ATTEST",
-   "reason": "Recomputed ? + 5 = 19: key 14, unique. 12 is 2 too few, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-09-opt3",
-   "verdict": "ATTEST",
-   "reason": "Recomputed ? + 5 = 19: key 14, unique. 19 is the right-hand total 19 copied into the gap, the child treating '=' as 'write the answer' and never making the sides balance; that is one side worked and stopped, as the tag names. Every number in the execution is on the row and the calculation is right; 19 is not correct and collides with no other option."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-09-opt4",
-   "verdict": "ATTEST",
-   "reason": "Recomputed ? + 5 = 19: key 14, unique. 13 is 1 too few, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-10-opt2",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 15 + ? = 21: key 6, unique. 7 is 1 too many, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row. Stored value unchanged (7), attested on the same terms."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-10-opt3",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 15 + ? = 21: key 6, unique. 21 is the right-hand total 21 copied into the gap, the child treating '=' as 'write the answer' and never making the sides balance; that is one side worked and stopped, as the tag names. Every number in the execution is on the row and the calculation is right; 21 is not correct and collides with no other option."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-10-opt4",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 15 + ? = 21: key 6, unique. 4 is 2 too few, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row. Stored value unchanged (4), attested on the same terms."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-11-opt2",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 16 + 7 − ? = 19: key 4, unique. 6 is 2 too many, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-11-opt3",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 16 + 7 − ? = 19: key 4, unique. 19 is the right-hand total 19 copied into the gap, the child treating '=' as 'write the answer' and never making the sides balance; that is one side worked and stopped, as the tag names. Every number in the execution is on the row and the calculation is right; 19 is not correct and collides with no other option."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-11-opt4",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 16 + 7 − ? = 19: key 4, unique. 5 is 1 too many, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-12-opt2",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 17 + ? − 5 = 20: key 8, unique. 7 is 1 too few, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-12-opt3",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 17 + ? − 5 = 20: key 8, unique. 20 is the right-hand total 20 copied into the gap, the child treating '=' as 'write the answer' and never making the sides balance; that is one side worked and stopped, as the tag names. Every number in the execution is on the row and the calculation is right; 20 is not correct and collides with no other option."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-12-opt4",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 17 + ? − 5 = 20: key 8, unique. 6 is 2 too few, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row. Stored value unchanged (6), attested on the same terms."
+   "reason": "Recomputed ? + 7 = 17: key 10, unique. 9 is 1 too few, a slip of one or two on the right method, as the tag names. The sum, key, value, direction and size in the execution all match the row. Unchanged from round 1 and attested on the same terms."
   },
   {
    "ref": "seat:gen-vr-17-complete-the-sum-13-opt2",
    "verdict": "ATTEST",
-   "reason": "Recomputed ? + 3 = 21: key 18, unique. 20 is 2 too many, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row."
+   "reason": "Recomputed ? + 3 = 21: key 18, unique. 20 is 2 too many, a slip of one or two on the right method, as the tag names. The sum, key, value, direction and size in the execution all match the row. Unchanged from round 1 and attested on the same terms."
   },
   {
    "ref": "seat:gen-vr-17-complete-the-sum-13-opt3",
-   "verdict": "REFUSE",
-   "reason": "Recomputed ? + 3 = 21: key 18. The value 3 is the left side's ONLY visible term, copied. With one visible term on the left there is nothing to work out, so 'solved one side and stopped' names no step here: no side was solved, the child copied a number printed on the row. That is a story fitted to the value, and the same story would fit any printed number on any row. Arithmetic in the execution is correct, but the mechanism is empty. The genuine one-side reading on this row is the right-hand total, 21 (the '= means write the answer' mistake), as already used on rows 01, 09 and 17; 21 collides with no option on the row."
+   "verdict": "ATTEST",
+   "reason": "Recomputed ? + 3 = 21: key 18, unique. 21 is the printed right-hand total copied into the gap: the child treats '=' as 'write the answer' and never makes the sides balance, which is one side taken and stopped, as the tag names. Every number in the execution is on the row, and 21 is wrong (21 does not balance) and clashes with no other option. This replaces the refused single-term left reading, as asked for in round 1."
   },
   {
    "ref": "seat:gen-vr-17-complete-the-sum-13-opt4",
    "verdict": "ATTEST",
-   "reason": "Recomputed ? + 3 = 21: key 18, unique. 16 is 2 too few, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row. Stored value unchanged (16), attested on the same terms."
+   "reason": "Recomputed ? + 3 = 21: key 18, unique. 16 is 2 too few, a slip of one or two on the right method, as the tag names. The sum, key, value, direction and size in the execution all match the row. Unchanged from round 1 and attested on the same terms."
   },
   {
    "ref": "seat:gen-vr-17-complete-the-sum-14-opt2",
    "verdict": "ATTEST",
-   "reason": "Recomputed 19 + ? = 23: key 4, unique. 2 is 2 too few, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row."
+   "reason": "Recomputed 19 + ? = 23: key 4, unique. 2 is 2 too few, a slip of one or two on the right method, as the tag names. The sum, key, value, direction and size in the execution all match the row. Unchanged from round 1 and attested on the same terms."
   },
   {
    "ref": "seat:gen-vr-17-complete-the-sum-14-opt3",
-   "verdict": "REFUSE",
-   "reason": "Recomputed 19 + ? = 23: key 4. The value 19 is the left side's ONLY visible term, copied. With one visible term on the left there is nothing to work out, so 'solved one side and stopped' names no step here: no side was solved, the child copied a number printed on the row. That is a story fitted to the value, and the same story would fit any printed number on any row. Arithmetic in the execution is correct, but the mechanism is empty. The genuine one-side reading on this row is the right-hand total, 23 (the '= means write the answer' mistake), as already used on rows 01, 09 and 17; 23 collides with no option on the row."
+   "verdict": "ATTEST",
+   "reason": "Recomputed 19 + ? = 23: key 4, unique. 23 is the printed right-hand total copied into the gap: the child treats '=' as 'write the answer' and never makes the sides balance, which is one side taken and stopped, as the tag names. Every number in the execution is on the row, and 23 is wrong (23 does not balance) and clashes with no other option. This replaces the refused single-term left reading, as asked for in round 1."
   },
   {
    "ref": "seat:gen-vr-17-complete-the-sum-14-opt4",
    "verdict": "ATTEST",
-   "reason": "Recomputed 19 + ? = 23: key 4, unique. 6 is 2 too many, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-15-opt2",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 20 + 5 − ? = 21: key 4, unique. 3 is 1 too few, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-15-opt3",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 20 + 5 − ? = 21: key 4, unique. 25 is the total of the visible left terms (25), working the left side without the gap and stopping; that is one side worked and stopped, as the tag names. Every number in the execution is on the row and the calculation is right; 25 is not correct and collides with no other option."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-15-opt4",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 20 + 5 − ? = 21: key 4, unique. 2 is 2 too few, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row. Stored value unchanged (2), attested on the same terms."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-16-opt2",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 21 + ? − 5 = 22: key 6, unique. 7 is 1 too many, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row. Stored value unchanged (7), attested on the same terms."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-16-opt3",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 21 + ? − 5 = 22: key 6, unique. 22 is the right-hand total 22 copied into the gap, the child treating '=' as 'write the answer' and never making the sides balance; that is one side worked and stopped, as the tag names. Every number in the execution is on the row and the calculation is right; 22 is not correct and collides with no other option."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-16-opt4",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 21 + ? − 5 = 22: key 6, unique. 8 is 2 too many, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-17-opt2",
-   "verdict": "ATTEST",
-   "reason": "Recomputed ? + 7 = 29: key 22, unique. 24 is 2 too many, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-17-opt3",
-   "verdict": "ATTEST",
-   "reason": "Recomputed ? + 7 = 29: key 22, unique. 29 is the right-hand total 29 copied into the gap, the child treating '=' as 'write the answer' and never making the sides balance; that is one side worked and stopped, as the tag names. Every number in the execution is on the row and the calculation is right; 29 is not correct and collides with no other option."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-17-opt4",
-   "verdict": "ATTEST",
-   "reason": "Recomputed ? + 7 = 29: key 22, unique. 21 is 1 too few, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-18-opt2",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 23 + ? = 31: key 8, unique. 6 is 2 too few, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-18-opt3",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 23 + ? = 31: key 8, unique. 31 is the right-hand total 31 copied into the gap, the child treating '=' as 'write the answer' and never making the sides balance; that is one side worked and stopped, as the tag names. Every number in the execution is on the row and the calculation is right; 31 is not correct and collides with no other option."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-18-opt4",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 23 + ? = 31: key 8, unique. 7 is 1 too few, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-19-opt2",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 24 + 3 − ? = 23: key 4, unique. 6 is 2 too many, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-19-opt3",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 24 + 3 − ? = 23: key 4, unique. 23 is the right-hand total 23 copied into the gap, the child treating '=' as 'write the answer' and never making the sides balance; that is one side worked and stopped, as the tag names. Every number in the execution is on the row and the calculation is right; 23 is not correct and collides with no other option."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-19-opt4",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 24 + 3 − ? = 23: key 4, unique. 5 is 1 too many, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-20-opt2",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 25 + ? − 5 = 24: key 4, unique. 3 is 1 too few, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-20-opt3",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 25 + ? − 5 = 24: key 4, unique. 20 is the total of the visible left terms (20), working the left side without the gap and stopping; that is one side worked and stopped, as the tag names. Every number in the execution is on the row and the calculation is right; 20 is not correct and collides with no other option."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-20-opt4",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 25 + ? − 5 = 24: key 4, unique. 6 is 2 too many, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row."
+   "reason": "Recomputed 19 + ? = 23: key 4, unique. 6 is 2 too many, a slip of one or two on the right method, as the tag names. The sum, key, value, direction and size in the execution all match the row. Unchanged from round 1 and attested on the same terms."
   },
   {
    "ref": "seat:gen-vr-17-complete-the-sum-21-opt2",
    "verdict": "ATTEST",
-   "reason": "Recomputed ? + 5 = 31: key 26, unique. 25 is 1 too few, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row."
+   "reason": "Recomputed ? + 5 = 31: key 26, unique. 25 is 1 too few, a slip of one or two on the right method, as the tag names. The sum, key, value, direction and size in the execution all match the row. Unchanged from round 1 and attested on the same terms."
   },
   {
    "ref": "seat:gen-vr-17-complete-the-sum-21-opt3",
-   "verdict": "REFUSE",
-   "reason": "Recomputed ? + 5 = 31: key 26. The value 5 is the left side's ONLY visible term, copied. With one visible term on the left there is nothing to work out, so 'solved one side and stopped' names no step here: no side was solved, the child copied a number printed on the row. That is a story fitted to the value, and the same story would fit any printed number on any row. Arithmetic in the execution is correct, but the mechanism is empty. The genuine one-side reading on this row is the right-hand total, 31 (the '= means write the answer' mistake), as already used on rows 01, 09 and 17; 31 collides with no option on the row."
+   "verdict": "ATTEST",
+   "reason": "Recomputed ? + 5 = 31: key 26, unique. 31 is the printed right-hand total copied into the gap: the child treats '=' as 'write the answer' and never makes the sides balance, which is one side taken and stopped, as the tag names. Every number in the execution is on the row, and 31 is wrong (31 does not balance) and clashes with no other option. This replaces the refused single-term left reading, as asked for in round 1."
   },
   {
    "ref": "seat:gen-vr-17-complete-the-sum-21-opt4",
    "verdict": "ATTEST",
-   "reason": "Recomputed ? + 5 = 31: key 26, unique. 24 is 2 too few, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row. Stored value unchanged (24), attested on the same terms."
+   "reason": "Recomputed ? + 5 = 31: key 26, unique. 24 is 2 too few, a slip of one or two on the right method, as the tag names. The sum, key, value, direction and size in the execution all match the row. Unchanged from round 1 and attested on the same terms."
   },
   {
    "ref": "seat:gen-vr-17-complete-the-sum-22-opt2",
    "verdict": "ATTEST",
-   "reason": "Recomputed 27 + ? = 33: key 6, unique. 7 is 1 too many, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row. Stored value unchanged (7), attested on the same terms."
+   "reason": "Recomputed 27 + ? = 33: key 6, unique. 7 is 1 too many, a slip of one or two on the right method, as the tag names. The sum, key, value, direction and size in the execution all match the row. Unchanged from round 1 and attested on the same terms."
   },
   {
    "ref": "seat:gen-vr-17-complete-the-sum-22-opt3",
-   "verdict": "REFUSE",
-   "reason": "Recomputed 27 + ? = 33: key 6. The value 27 is the left side's ONLY visible term, copied. With one visible term on the left there is nothing to work out, so 'solved one side and stopped' names no step here: no side was solved, the child copied a number printed on the row. That is a story fitted to the value, and the same story would fit any printed number on any row. Arithmetic in the execution is correct, but the mechanism is empty. The genuine one-side reading on this row is the right-hand total, 33 (the '= means write the answer' mistake), as already used on rows 01, 09 and 17; 33 collides with no option on the row."
+   "verdict": "ATTEST",
+   "reason": "Recomputed 27 + ? = 33: key 6, unique. 33 is the printed right-hand total copied into the gap: the child treats '=' as 'write the answer' and never makes the sides balance, which is one side taken and stopped, as the tag names. Every number in the execution is on the row, and 33 is wrong (33 does not balance) and clashes with no other option. This replaces the refused single-term left reading, as asked for in round 1."
   },
   {
    "ref": "seat:gen-vr-17-complete-the-sum-22-opt4",
    "verdict": "ATTEST",
-   "reason": "Recomputed 27 + ? = 33: key 6, unique. 8 is 2 too many, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-23-opt2",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 28 + 7 − ? = 31: key 4, unique. 2 is 2 too few, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-23-opt3",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 28 + 7 − ? = 31: key 4, unique. 35 is the total of the visible left terms (35), working the left side without the gap and stopping; that is one side worked and stopped, as the tag names. Every number in the execution is on the row and the calculation is right; 35 is not correct and collides with no other option."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-23-opt4",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 28 + 7 − ? = 31: key 4, unique. 3 is 1 too few, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-24-opt2",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 29 + ? − 5 = 32: key 8, unique. 9 is 1 too many, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row. Stored value unchanged (9), attested on the same terms."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-24-opt3",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 29 + ? − 5 = 32: key 8, unique. 32 is the right-hand total 32 copied into the gap, the child treating '=' as 'write the answer' and never making the sides balance; that is one side worked and stopped, as the tag names. Every number in the execution is on the row and the calculation is right; 32 is not correct and collides with no other option."
-  },
-  {
-   "ref": "seat:gen-vr-17-complete-the-sum-24-opt4",
-   "verdict": "ATTEST",
-   "reason": "Recomputed 29 + ? − 5 = 32: key 8, unique. 7 is 1 too few, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row."
+   "reason": "Recomputed 27 + ? = 33: key 6, unique. 8 is 2 too many, a slip of one or two on the right method, as the tag names. The sum, key, value, direction and size in the execution all match the row. Unchanged from round 1 and attested on the same terms."
   },
   {
    "ref": "seat:gen-vr-17-complete-the-sum-25-opt2",
    "verdict": "ATTEST",
-   "reason": "Recomputed ? + 3 = 33: key 30, unique. 28 is 2 too few, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row."
+   "reason": "Recomputed ? + 3 = 33: key 30, unique. 28 is 2 too few, a slip of one or two on the right method, as the tag names. The sum, key, value, direction and size in the execution all match the row. Unchanged from round 1 and attested on the same terms."
   },
   {
    "ref": "seat:gen-vr-17-complete-the-sum-25-opt3",
-   "verdict": "REFUSE",
-   "reason": "Recomputed ? + 3 = 33: key 30. The value 3 is the left side's ONLY visible term, copied. With one visible term on the left there is nothing to work out, so 'solved one side and stopped' names no step here: no side was solved, the child copied a number printed on the row. That is a story fitted to the value, and the same story would fit any printed number on any row. Arithmetic in the execution is correct, but the mechanism is empty. The genuine one-side reading on this row is the right-hand total, 33 (the '= means write the answer' mistake), as already used on rows 01, 09 and 17; 33 collides with no option on the row."
+   "verdict": "ATTEST",
+   "reason": "Recomputed ? + 3 = 33: key 30, unique. 33 is the printed right-hand total copied into the gap: the child treats '=' as 'write the answer' and never makes the sides balance, which is one side taken and stopped, as the tag names. Every number in the execution is on the row, and 33 is wrong (33 does not balance) and clashes with no other option. This replaces the refused single-term left reading, as asked for in round 1."
   },
   {
    "ref": "seat:gen-vr-17-complete-the-sum-25-opt4",
    "verdict": "ATTEST",
-   "reason": "Recomputed ? + 3 = 33: key 30, unique. 29 is 1 too few, a slip of one or two on the right method, as the tag names; the execution's sum, key, value, direction and size all match the row."
+   "reason": "Recomputed ? + 3 = 33: key 30, unique. 29 is 1 too few, a slip of one or two on the right method, as the tag names. The sum, key, value, direction and size in the execution all match the row. Unchanged from round 1 and attested on the same terms."
   }
  ],
  "rows": [
   {
-   "itemId": "gen-vr-17-complete-the-sum-01",
-   "verdict": "SIGN",
-   "reason": "Read as it will be: ? + 3 = 9, options 6, 7, 9, 8. Key 6 recomputed, the only value that balances; every distractor checked wrong; four distinct values; numbers and wording suit 9–11; positions are shuffled per child at serve (apps/web/lib/crew/shuffle.ts), so authored opt1 order is not seen."
-  },
-  {
-   "itemId": "gen-vr-17-complete-the-sum-02",
-   "verdict": "SIGN",
-   "reason": "Read as it will be: 7 + ? = 11, options 4, 2, 11, 3. Key 4 recomputed, the only value that balances; every distractor checked wrong; four distinct values; numbers and wording suit 9–11; positions are shuffled per child at serve (apps/web/lib/crew/shuffle.ts), so authored opt1 order is not seen."
-  },
-  {
-   "itemId": "gen-vr-17-complete-the-sum-03",
-   "verdict": "SIGN",
-   "reason": "Read as it will be: 8 + 5 − ? = 9, options 4, 6, 13, 3. Key 4 recomputed, the only value that balances; every distractor checked wrong; four distinct values; numbers and wording suit 9–11; positions are shuffled per child at serve (apps/web/lib/crew/shuffle.ts), so authored opt1 order is not seen. Cluster note: the two slips sit on opposite sides of the key with a span of 3 or more (4 sits between 3 and 6), so a child who knew the generator's ±2 rule could pick the centre; judged not a give-away, because no rule a child can learn without solving beats chance across the door (see summary)."
-  },
-  {
-   "itemId": "gen-vr-17-complete-the-sum-04",
-   "verdict": "SIGN",
-   "reason": "Read as it will be: 9 + ? − 5 = 10, options 6, 5, 10, 4. Key 6 recomputed, the only value that balances; every distractor checked wrong; four distinct values; numbers and wording suit 9–11; positions are shuffled per child at serve (apps/web/lib/crew/shuffle.ts), so authored opt1 order is not seen."
-  },
-  {
    "itemId": "gen-vr-17-complete-the-sum-05",
-   "verdict": "HOLD",
-   "reason": "The proposed one-side-only seat (opt3 = 7) is refused: it copies the single visible left term, which is no step of solving a side. Otherwise the row is sound: key 10 recomputed and unique, slips 8 and 9 attested. Re-propose opt3 as the right-hand total 17 and the row can be signed."
-  },
-  {
-   "itemId": "gen-vr-17-complete-the-sum-06",
    "verdict": "SIGN",
-   "reason": "Read as it will be: 11 + ? = 19, options 8, 10, 19, 9. Key 8 recomputed, the only value that balances; every distractor checked wrong; four distinct values; numbers and wording suit 9–11; positions are shuffled per child at serve (apps/web/lib/crew/shuffle.ts), so authored opt1 order is not seen."
-  },
-  {
-   "itemId": "gen-vr-17-complete-the-sum-07",
-   "verdict": "SIGN",
-   "reason": "Read as it will be: 12 + 3 − ? = 11, options 4, 3, 15, 5. Key 4 recomputed, the only value that balances; every distractor checked wrong; four distinct values; numbers and wording suit 9–11; positions are shuffled per child at serve (apps/web/lib/crew/shuffle.ts), so authored opt1 order is not seen."
-  },
-  {
-   "itemId": "gen-vr-17-complete-the-sum-08",
-   "verdict": "SIGN",
-   "reason": "Read as it will be: 13 + ? − 5 = 12, options 4, 5, 8, 6. Key 4 recomputed, the only value that balances; every distractor checked wrong; four distinct values; numbers and wording suit 9–11; positions are shuffled per child at serve (apps/web/lib/crew/shuffle.ts), so authored opt1 order is not seen."
-  },
-  {
-   "itemId": "gen-vr-17-complete-the-sum-09",
-   "verdict": "SIGN",
-   "reason": "Read as it will be: ? + 5 = 19, options 14, 12, 19, 13. Key 14 recomputed, the only value that balances; every distractor checked wrong; four distinct values; numbers and wording suit 9–11; positions are shuffled per child at serve (apps/web/lib/crew/shuffle.ts), so authored opt1 order is not seen."
-  },
-  {
-   "itemId": "gen-vr-17-complete-the-sum-10",
-   "verdict": "SIGN",
-   "reason": "Read as it will be: 15 + ? = 21, options 6, 7, 21, 4. Key 6 recomputed, the only value that balances; every distractor checked wrong; four distinct values; numbers and wording suit 9–11; positions are shuffled per child at serve (apps/web/lib/crew/shuffle.ts), so authored opt1 order is not seen. Cluster note: the two slips sit on opposite sides of the key with a span of 3 or more (6 sits between 4 and 7), so a child who knew the generator's ±2 rule could pick the centre; judged not a give-away, because no rule a child can learn without solving beats chance across the door (see summary)."
-  },
-  {
-   "itemId": "gen-vr-17-complete-the-sum-11",
-   "verdict": "SIGN",
-   "reason": "Read as it will be: 16 + 7 − ? = 19, options 4, 6, 19, 5. Key 4 recomputed, the only value that balances; every distractor checked wrong; four distinct values; numbers and wording suit 9–11; positions are shuffled per child at serve (apps/web/lib/crew/shuffle.ts), so authored opt1 order is not seen."
-  },
-  {
-   "itemId": "gen-vr-17-complete-the-sum-12",
-   "verdict": "SIGN",
-   "reason": "Read as it will be: 17 + ? − 5 = 20, options 8, 7, 20, 6. Key 8 recomputed, the only value that balances; every distractor checked wrong; four distinct values; numbers and wording suit 9–11; positions are shuffled per child at serve (apps/web/lib/crew/shuffle.ts), so authored opt1 order is not seen."
+   "reason": "Read as it will be: ? + 7 = 17, options 10, 8, 17, 9. Key 10 recomputed, the only value that balances; every distractor checked wrong; four distinct values; numbers and wording suit 9–11; positions are shuffled per child at serve. The one-side value 17 is far from the key; the three close values 8, 9, 10 have the key as the highest, which no rule a child can learn finds better than chance (round 1: key lowest on 7 rows, highest on 10, middle on 8)."
   },
   {
    "itemId": "gen-vr-17-complete-the-sum-13",
-   "verdict": "HOLD",
-   "reason": "The proposed one-side-only seat (opt3 = 3) is refused: it copies the single visible left term, which is no step of solving a side. Otherwise the row is sound: key 18 recomputed and unique, slips 20 and 16 attested. Re-propose opt3 as the right-hand total 21 and the row can be signed."
+   "verdict": "SIGN",
+   "reason": "Read as it will be: ? + 3 = 21, options 18, 20, 21, 16. Key 18 recomputed, the only value that balances; every distractor checked wrong; four distinct values; numbers and wording suit 9–11; positions are shuffled per child at serve. Row 13 checked specifically, because 21 now sits next to the slip 20. 21 is still wrong (21 + 3 = 24), it is the printed right total, so the mistake behind it is the genuine one, and 20 and 21 being adjacent changes nothing about answerability. On patterns it HELPS: the one-side value no longer stands out as a far outlier, so a child cannot discard it first, and no value among 16, 18, 20, 21 is within 2 of all three others. The round-1 exposure on this row (key the only value within 2 of both slips once the outlier is gone) is therefore closed. The four values span 16 to 21 with the key second lowest; nothing points to 18 without solving."
   },
   {
    "itemId": "gen-vr-17-complete-the-sum-14",
-   "verdict": "HOLD",
-   "reason": "The proposed one-side-only seat (opt3 = 19) is refused: it copies the single visible left term, which is no step of solving a side. Otherwise the row is sound: key 4 recomputed and unique, slips 2 and 6 attested. Re-propose opt3 as the right-hand total 23 and the row can be signed."
-  },
-  {
-   "itemId": "gen-vr-17-complete-the-sum-15",
    "verdict": "SIGN",
-   "reason": "Read as it will be: 20 + 5 − ? = 21, options 4, 3, 25, 2. Key 4 recomputed, the only value that balances; every distractor checked wrong; four distinct values; numbers and wording suit 9–11; positions are shuffled per child at serve (apps/web/lib/crew/shuffle.ts), so authored opt1 order is not seen."
-  },
-  {
-   "itemId": "gen-vr-17-complete-the-sum-16",
-   "verdict": "SIGN",
-   "reason": "Read as it will be: 21 + ? − 5 = 22, options 6, 7, 22, 8. Key 6 recomputed, the only value that balances; every distractor checked wrong; four distinct values; numbers and wording suit 9–11; positions are shuffled per child at serve (apps/web/lib/crew/shuffle.ts), so authored opt1 order is not seen."
-  },
-  {
-   "itemId": "gen-vr-17-complete-the-sum-17",
-   "verdict": "SIGN",
-   "reason": "Read as it will be: ? + 7 = 29, options 22, 24, 29, 21. Key 22 recomputed, the only value that balances; every distractor checked wrong; four distinct values; numbers and wording suit 9–11; positions are shuffled per child at serve (apps/web/lib/crew/shuffle.ts), so authored opt1 order is not seen. Cluster note: the two slips sit on opposite sides of the key with a span of 3 or more (22 sits between 21 and 24), so a child who knew the generator's ±2 rule could pick the centre; judged not a give-away, because no rule a child can learn without solving beats chance across the door (see summary)."
-  },
-  {
-   "itemId": "gen-vr-17-complete-the-sum-18",
-   "verdict": "SIGN",
-   "reason": "Read as it will be: 23 + ? = 31, options 8, 6, 31, 7. Key 8 recomputed, the only value that balances; every distractor checked wrong; four distinct values; numbers and wording suit 9–11; positions are shuffled per child at serve (apps/web/lib/crew/shuffle.ts), so authored opt1 order is not seen."
-  },
-  {
-   "itemId": "gen-vr-17-complete-the-sum-19",
-   "verdict": "SIGN",
-   "reason": "Read as it will be: 24 + 3 − ? = 23, options 4, 6, 23, 5. Key 4 recomputed, the only value that balances; every distractor checked wrong; four distinct values; numbers and wording suit 9–11; positions are shuffled per child at serve (apps/web/lib/crew/shuffle.ts), so authored opt1 order is not seen."
-  },
-  {
-   "itemId": "gen-vr-17-complete-the-sum-20",
-   "verdict": "SIGN",
-   "reason": "Read as it will be: 25 + ? − 5 = 24, options 4, 3, 20, 6. Key 4 recomputed, the only value that balances; every distractor checked wrong; four distinct values; numbers and wording suit 9–11; positions are shuffled per child at serve (apps/web/lib/crew/shuffle.ts), so authored opt1 order is not seen. Cluster note: the two slips sit on opposite sides of the key with a span of 3 or more (4 sits between 3 and 6), so a child who knew the generator's ±2 rule could pick the centre; judged not a give-away, because no rule a child can learn without solving beats chance across the door (see summary)."
+   "reason": "Read as it will be: 19 + ? = 23, options 4, 2, 23, 6. Key 4 recomputed, the only value that balances; every distractor checked wrong; four distinct values; numbers and wording suit 9–11; positions are shuffled per child at serve. The one-side value 23 is far from the key. The slips 2 and 6 straddle the key 4, the round-1 exposure (key the only close value within 2 of both slips); it needs the generator's ±2 rule, which no child-facing text states, and it fails on most rows of the door, so it was accepted in round 1 and is accepted on the same terms here."
   },
   {
    "itemId": "gen-vr-17-complete-the-sum-21",
-   "verdict": "HOLD",
-   "reason": "The proposed one-side-only seat (opt3 = 5) is refused: it copies the single visible left term, which is no step of solving a side. Otherwise the row is sound: key 26 recomputed and unique, slips 25 and 24 attested. Re-propose opt3 as the right-hand total 31 and the row can be signed."
+   "verdict": "SIGN",
+   "reason": "Read as it will be: ? + 5 = 31, options 26, 25, 31, 24. Key 26 recomputed, the only value that balances; every distractor checked wrong; four distinct values; numbers and wording suit 9–11; positions are shuffled per child at serve. The one-side value 31 is far from the key; among 24, 25, 26 the key is the highest, no learnable give-away."
   },
   {
    "itemId": "gen-vr-17-complete-the-sum-22",
-   "verdict": "HOLD",
-   "reason": "The proposed one-side-only seat (opt3 = 27) is refused: it copies the single visible left term, which is no step of solving a side. Otherwise the row is sound: key 6 recomputed and unique, slips 7 and 8 attested. Re-propose opt3 as the right-hand total 33 and the row can be signed."
-  },
-  {
-   "itemId": "gen-vr-17-complete-the-sum-23",
    "verdict": "SIGN",
-   "reason": "Read as it will be: 28 + 7 − ? = 31, options 4, 2, 35, 3. Key 4 recomputed, the only value that balances; every distractor checked wrong; four distinct values; numbers and wording suit 9–11; positions are shuffled per child at serve (apps/web/lib/crew/shuffle.ts), so authored opt1 order is not seen."
-  },
-  {
-   "itemId": "gen-vr-17-complete-the-sum-24",
-   "verdict": "SIGN",
-   "reason": "Read as it will be: 29 + ? − 5 = 32, options 8, 9, 32, 7. Key 8 recomputed, the only value that balances; every distractor checked wrong; four distinct values; numbers and wording suit 9–11; positions are shuffled per child at serve (apps/web/lib/crew/shuffle.ts), so authored opt1 order is not seen."
+   "reason": "Read as it will be: 27 + ? = 33, options 6, 7, 33, 8. Key 6 recomputed, the only value that balances; every distractor checked wrong; four distinct values; numbers and wording suit 9–11; positions are shuffled per child at serve. The one-side value 33 is far from the key; among 6, 7, 8 the key is the lowest, no learnable give-away."
   },
   {
    "itemId": "gen-vr-17-complete-the-sum-25",
-   "verdict": "HOLD",
-   "reason": "The proposed one-side-only seat (opt3 = 3) is refused: it copies the single visible left term, which is no step of solving a side. Otherwise the row is sound: key 30 recomputed and unique, slips 28 and 29 attested. Re-propose opt3 as the right-hand total 33 and the row can be signed."
+   "verdict": "SIGN",
+   "reason": "Read as it will be: ? + 3 = 33, options 30, 28, 33, 29. Key 30 recomputed, the only value that balances; every distractor checked wrong; four distinct values; numbers and wording suit 9–11; positions are shuffled per child at serve. The one-side value 33 is 3 above the key, so it is not a clean outlier; among 28, 29, 30, 33 the key is neither the middle nor an end of the close run in a way a rule could find."
   }
  ]
 }

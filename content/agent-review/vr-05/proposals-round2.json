@@ -1,0 +1,132 @@
+{
+ "door": "vr-05",
+ "proposer": "agent",
+ "seats": [],
+ "redrafts": [],
+ "rebuilds": [
+  {
+   "itemId": "gen-vr-05-hidden-word-08",
+   "why": "The sentence \"Zebra ideas win prizes.\" reads oddly. New natural sentence keeps raid across exactly one join (extra|idea).",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "My extra idea helped the team."
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-08-opt1",
+     "value": "raid",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-08-opt2",
+     "value": "beam",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": "The letters of beam are nearly in the sentence but not exactly: the closest run is \"team\", which differs from beam by 1 letter. Every letter must be there, touching, and one is not."
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-08-opt3",
+     "value": "help",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": "The hidden word must cross the gap between two words. This option is help, and help sits whole inside the single word \"helped\" — found by looking inside one word instead of across the join. The answer, raid, runs from the end of one word into the start of the next."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-12",
+   "why": "The sentence \"Which and how many?\" is a bare fragment. New natural sentence keeps hand across exactly one join (fish|and).",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "We ate fish and chips on the beach."
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-12-opt1",
+     "value": "hand",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-12-opt2",
+     "value": "wish",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": "The letters of wish are nearly in the sentence but not exactly: the closest run is \"fish\", which differs from wish by 1 letter. Every letter must be there, touching, and one is not."
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-12-opt3",
+     "value": "chip",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": "The hidden word must cross the gap between two words. This option is chip, and chip sits whole inside the single word \"chips\" — found by looking inside one word instead of across the join. The answer, hand, runs from the end of one word into the start of the next."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-20",
+   "why": "\"Industrious\" is too hard for a 9-11 child. New sentence keeps chin across exactly one join (watch|insects) with everyday words.",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "We watch insects climb the wall."
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-20-opt1",
+     "value": "chin",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-20-opt2",
+     "value": "itch",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": "The letters of itch are nearly in the sentence but not exactly: the closest run is \"atch\", which differs from itch by 1 letter. Every letter must be there, touching, and one is not."
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-20-opt3",
+     "value": "limb",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": "The hidden word must cross the gap between two words. This option is limb, and limb sits whole inside the single word \"climb\" — found by looking inside one word instead of across the join. The answer, chin, runs from the end of one word into the start of the next."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-21",
+   "why": "The sentence was about cider, which is alcohol and not for children. No everyday word starts with \"cid\", so acid could not stay at a join; the new key date sits across exactly one join (and|ate).",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "Dad drank tea and ate his toast."
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-21-opt1",
+     "value": "date",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-21-opt2",
+     "value": "toad",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": "The letters of toad are nearly in the sentence but not exactly: the closest run is \"toas\", which differs from toad by 1 letter. Every letter must be there, touching, and one is not."
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-21-opt3",
+     "value": "rank",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": "The hidden word must cross the gap between two words. This option is rank, and rank sits whole inside the single word \"drank\" — found by looking inside one word instead of across the join. The answer, date, runs from the end of one word into the start of the next."
+    }
+   ]
+  }
+ ]
+}
