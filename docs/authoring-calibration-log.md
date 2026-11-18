@@ -28412,3 +28412,48 @@ exception: computed from the row, verified against it, never read by her, and si
 write it. **It did not attest the sentences.** The seats are OCCUPIED and the occupants are
 unattested, and that is a reading of the record rather than a claim about the bytes — the one thing
 in this exchange no digest can settle.
+
+## R1021 — An agent acts in the reviewer role, under its own name (David, 2026-11-18)
+
+**THE RULING.** David: *"no you will use another agent to act as annie. my project my rules. make it
+happen."* The review pipeline that stalled on a single human reviewer is now run by separate agents:
+a DRAFTING/PROPOSING agent writes, and a REVIEWING agent, holding her standard and never shown the
+proposer's reasons as its own, attests change-by-change and signs whole rows. Nothing lands that the
+reviewer did not attest, and a row lands all-or-nothing because a signature is over the whole row.
+
+**THE ONE CONDITION, STATED BEFORE ANY WRITE: THE AGENT SIGNS AS ITSELF (R94).** Every verdict, every
+signature and every publication event is recorded under the machine reviewer `rev-agent-01` ("Agent
+reviewer (machine) acting in the reviewer role"), never under `rev-0001`. A machine verdict wearing a
+person's name is the fault R94 names; the audit trail must say truthfully that no person read these
+rows. Her earlier signatures stay in history and cover only the rows they still recompute against.
+
+**THE MACHINERY** (`scripts/agent-review/`): `export-packets.ts` (one packet per door);
+`land-door.ts` (pass 1: executions on existing values; refuses if the DB moved since the packet);
+`land-proposals.ts` (pass 2: new values, rebuilds and redrafts; every gate — key gate, tag-write
+gate, child-facing gate, uniqueness, vr-20 non-word, vr-08 derived-word suitability — runs on the row
+AS IT WILL BE, `--precheck` lets a proposer gate its own work, `--hold` holds a signed row back by
+name, and a LIVE row may take an execution-only redraft because executions sit outside the signed
+projection); `publish-door.ts` (publish-vr02 generalised: a row's signature must recompute against
+the row as it stands — the person's under any order (R936), the agent's under the canonical-order
+subject (her 216th)). Every round's proposals and review are archived beside the live files.
+
+**WHAT IT FOUND THAT THE GATES HAD NOT.** Most generator distractors were not produced by their tag:
+fixed offsets (vr-17 key+2..+5 by sum shape, vr-18 key+1 in one seat bank-wide, vr-20 key+1/key+5,
+vr-21 random fillers) — a child learns the offset, not the skill. Keys spanning three words (vr-05),
+a key absent from its sentence (vr-05-16, signed), double-keyed pairs and a COCK derivation (vr-08),
+a worked example that was a row's own question and IPS/IPAD outer words (vr-13), a schwa gap where
+every vowel sounds right (vr-20), executions copied from another row, and authoring notes stored as
+executions. The reviewer refused its own proposer's work whole twice (vr-18 x+x/x*x as a fitted
+story; vr-13 an anagram cue, then a near-twin cue) — **the independence is the mechanism.**
+
+**OUTCOME 2026-11-18.** vr-05, vr-08, vr-16, vr-17, vr-18, vr-20, vr-21 published: 175 rows DRAFT to
+LIVE, every assertion passing before each one-transaction write. vr-13 in its third round.
+
+**OPEN FOR DAVID (door-level, no single row at fault, so not held):** vr-16 — the key is the odd one
+out among three same-side twins on 23 of 25 rows (two tags cannot break the cluster); vr-08 — the key
+is the first letter of the first word on 15 of 25 rows; vr-21 — several Annie-signed keys are commoner
+than their card (finish/end, begin/start, speak/talk, silent/quiet, simple/easy) against R323;
+vr-05 — signed rows carry other real words at joins that are not options. **Instrument fault:**
+`check:word-puzzles`' lexicon lacks comparatives (LARGER) and accepts adjective+d (LARGED), so it
+flagged a correct row unanswerable with no clearing path; worked round by rebuilding the row, the
+fix queued separately under R149.
