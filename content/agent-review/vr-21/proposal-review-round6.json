@@ -1,0 +1,93 @@
+{
+ "door": "vr-21",
+ "reviewer": "rev-agent-01",
+ "changes": [
+  {
+   "ref": "seat:gen-vr-21-same-meaning-09-opt2",
+   "verdict": "ATTEST",
+   "reason": "Checked card 'rich', key and 'famous' are on the row; 'famous' is the same word class as the key, has no same-meaning sense a 9-11-year-old knows, and tag vr21-associated-not-same names the pull. Carried forward from an earlier attest, unchanged in value and tag."
+  },
+  {
+   "ref": "seat:gen-vr-21-same-meaning-09-opt3",
+   "verdict": "ATTEST",
+   "reason": "Checked card 'rich', key and 'powerful' are on the row; 'powerful' is the same word class as the key, has no same-meaning sense a 9-11-year-old knows, and tag vr21-associated-not-same names the pull. Carried forward from an earlier attest, unchanged in value and tag."
+  },
+  {
+   "ref": "seat:gen-vr-21-same-meaning-09-opt4",
+   "verdict": "ATTEST",
+   "reason": "Checked card 'rich', key and 'penniless' are on the row; 'penniless' is the same word class as the key, has no same-meaning sense a 9-11-year-old knows, and tag vr21-opposite-pull names the pull. New value: 'penniless' (no money at all) is the direct opposite of 'rich' in the money sense the key uses. It is a storybook word ('a penniless woodcutter') within reach of a 9-11-year-old 11+ candidate, the row has no other opposite, and 'penniless' does not mean the same as 'famous' or 'powerful'."
+  },
+  {
+   "ref": "seat:gen-vr-21-same-meaning-22-opt3",
+   "verdict": "ATTEST",
+   "reason": "Checked card 'tidy', key and 'nice' are on the row; 'nice' is the same word class as the key, has no same-meaning sense a 9-11-year-old knows, and tag vr21-associated-not-same names the pull. Carried forward from an earlier attest, unchanged in value and tag."
+  },
+  {
+   "ref": "seat:gen-vr-21-same-meaning-22-opt4",
+   "verdict": "REFUSE",
+   "reason": "The execution's central claim is false. 'Spotless' is a stronger word for CLEAN (no dirt, not a mark), not for TIDY (everything in its place); a spotless room can still have clothes on the floor. The execution says so itself ('perfectly clean'), then calls it 'a much stronger word than tidy'. It only becomes a stronger 'tidy' through the clean = tidy equivalence that round 1 ruled a second answer. The tag (right meaning, wrong strength) therefore depends on the very confusion that disqualified 'clean'. Either 'spotless' is a defensible tidy-word, and the row has a second-answer risk at full strength, or it is not, and the too-strong tag does not name the mistake. Asked separately: 'messy' and 'spotless' at opposite ends do NOT let a child drop them as a pair. They are opposites of each other, not synonyms, so the rule that two same-meaning options cannot both be the answer does not apply (unlike 'wise'/'sensible' in round 3). That is moot given the refusal."
+  },
+  {
+   "ref": "redraft:gen-vr-21-same-meaning-04-opt2",
+   "verdict": "ATTEST",
+   "reason": "Diffed against the previously attested execution (archived proposals-round1/round3.json): value 'hop' and tag vr21-too-strong are unchanged, and the only change is that the sentence explaining the tag choice ('so this seat uses the ... entry') has been deleted. The rest is byte-identical. Every word in the remaining execution is on the row, and it still names the mistake."
+  },
+  {
+   "ref": "redraft:gen-vr-21-same-meaning-15-opt3",
+   "verdict": "ATTEST",
+   "reason": "Diffed against the previously attested execution (archived proposals-round1/round3.json): value 'even' and tag vr21-opposite-pull are unchanged, and the only change is that the sentence explaining the tag choice ('so this seat uses the ... entry') has been deleted. The rest is byte-identical. Every word in the remaining execution is on the row, and it still names the mistake."
+  },
+  {
+   "ref": "redraft:gen-vr-21-same-meaning-17-opt2",
+   "verdict": "ATTEST",
+   "reason": "Diffed against the previously attested execution (archived proposals-round1/round3.json): value 'shout' and tag vr21-too-strong are unchanged, and the only change is that the sentence explaining the tag choice ('so this seat uses the ... entry') has been deleted. The rest is byte-identical. Every word in the remaining execution is on the row, and it still names the mistake."
+  },
+  {
+   "ref": "redraft:gen-vr-21-same-meaning-18-opt2",
+   "verdict": "ATTEST",
+   "reason": "Diffed against the previously attested execution (archived proposals-round1/round3.json): value 'finish' and tag vr21-opposite-pull are unchanged, and the only change is that the sentence explaining the tag choice ('so this seat uses the ... entry') has been deleted. The rest is byte-identical. Every word in the remaining execution is on the row, and it still names the mistake."
+  },
+  {
+   "ref": "redraft:gen-vr-21-same-meaning-19-opt3",
+   "verdict": "ATTEST",
+   "reason": "Diffed against the previously attested execution (archived proposals-round1/round3.json): value 'slam' and tag vr21-too-strong are unchanged, and the only change is that the sentence explaining the tag choice ('so this seat uses the ... entry') has been deleted. The rest is byte-identical. Every word in the remaining execution is on the row, and it still names the mistake."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "gen-vr-21-same-meaning-04",
+   "verdict": "SIGN",
+   "reason": "Execution-only redraft. Row unchanged: leap / jump, hop, run, land, signed earlier and re-read. 'jump' is the only same-meaning option."
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-09",
+   "verdict": "SIGN",
+   "reason": "Read as built: card 'rich', options [wealthy, famous, powerful, penniless], all adjectives. 'wealthy' is the only same-meaning option. 'penniless' is the single opposite, and 'famous' and 'powerful' are stock pairings ('rich and famous', 'rich and powerful'). No two options mean the same as each other, so none can be dropped as a pair. No stereotype, and every word is within reach of a 9-11-year-old."
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-15",
+   "verdict": "SIGN",
+   "reason": "Execution-only redraft. Row unchanged: odd / strange, ordinary, even, puzzled, signed earlier and re-read."
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-17",
+   "verdict": "SIGN",
+   "reason": "Execution-only redraft. Row unchanged: speak / talk, shout, listen, write, signed earlier and re-read."
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-18",
+   "verdict": "SIGN",
+   "reason": "Execution-only redraft. Row unchanged: begin / start, finish, race, count, signed earlier and re-read."
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-19",
+   "verdict": "SIGN",
+   "reason": "Execution-only redraft. Row unchanged: shut / close, open, slam, sleep, signed earlier and re-read."
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-22",
+   "verdict": "HOLD",
+   "reason": "opt4 'spotless' refused: it is a stronger CLEAN, not a stronger TIDY, so it reaches 'tidy' only through the clean = tidy confusion that round 1 ruled a second answer. Across rounds this row has had eight values refused (clean, folded, bedroom, toys, small, careful, bright, spotless; 'nice' was the one that held). The stock partners of 'tidy' look exhausted, and this seat probably needs a person's decision rather than another agent round."
+  }
+ ]
+}

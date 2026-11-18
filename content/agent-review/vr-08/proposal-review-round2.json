@@ -1,0 +1,28 @@
+{
+  "door": "vr-08",
+  "reviewer": "rev-agent-01",
+  "changes": [
+    {
+      "ref": "seat:gen-vr-08-move-letter-06-opt3",
+      "verdict": "ATTEST",
+      "reason": "Read as it now stands; it is round 1 with only the trailing sentence removed (prefix byte-identical). E: SPACE minus E is SPAC, not a word. TAR+E at every position gives ETAR, TEAR, TAER, TARE, so TEAR and TARE are real and ONLY the first word breaks. That makes the first-word tag the genuine fault. Every letter quoted is on the row, PACE and STAR are correct, and the text is in house form."
+    },
+    {
+      "ref": "seat:gen-vr-08-move-letter-15-opt2",
+      "verdict": "ATTEST",
+      "reason": "Read as it now stands; it is round 1 with only the trailing sentence removed (prefix byte-identical). R: BREAD minus R is BEAD, a real word. LOW+R at every position (RLOW, LROW, LORW, LOWR) is no word in any dictionary, so ONLY the second word breaks and the second-word tag is the genuine fault. LOWR is quoted correctly, READ and BLOW are correct, and the text is in house form."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "gen-vr-08-move-letter-06",
+      "verdict": "SIGN",
+      "reason": "SPACE/TAR with S, P, E. Every letter of SPACE checked at every position of TAR. Only S makes two words (PACE + STAR; TARS and TSAR also form). P leaves SACE and E leaves SPAC, so neither is a second answer, even though TARP and TEAR form. A leaves SPCE. C leaves SPAE (Scots dialect, not current English) and TAR takes no C. Every word is suitable for 9-11. Both distractors carry the first-word entry, which is correct for this pair."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-15",
+      "verdict": "SIGN",
+      "reason": "BREAD/LOW with B, R, A. Only B makes two current-English words (READ + BLOW). R leaves BEAD, but LOW takes no R. ALOW NOTE, restated: A leaves BRED, and LOW+A makes ALOW, an archaic nautical word for 'below' found only in the larger dictionaries (it is in /usr/share/dict/words). No 9-11 child knows it, and it is not current general English, so I do not treat A as a second answer. This rests on the dictionary line stated in round 1. Under a strict any-dictionary standard, A would be a second answer, the row would be HOLD, and the A seat's execution ('LOW cannot take A anywhere and make a word') would be false. Only D breaks the first word, and D breaks both, so no letter could fill a first-word seat; both distractors therefore carry the second-word entry, which is correct. Every word is suitable."
+    }
+  ]
+}

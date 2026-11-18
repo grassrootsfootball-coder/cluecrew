@@ -2,38 +2,14 @@
  "door": "vr-05",
  "proposer": "agent",
  "seats": [],
- "redrafts": [],
- "rebuilds": [
+ "redrafts": [
   {
-   "itemId": "gen-vr-05-hidden-word-21",
-   "why": "The cider sentence was alcohol, and the round-2 key date duplicated row 01. New sentence, with no alcohol and not opening with \"Dad\", puts a key used nowhere else in the door, fast, across exactly one join (sofa|stayed).",
-   "stem": {
-    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
-    "sentence": "The sofa stayed in the hall."
-   },
-   "options": [
-    {
-     "optionId": "gen-vr-05-hidden-word-21-opt1",
-     "value": "fast",
-     "isKey": true,
-     "tag": null,
-     "execution": null
-    },
-    {
-     "optionId": "gen-vr-05-hidden-word-21-opt2",
-     "value": "tall",
-     "isKey": false,
-     "tag": "vr05-almost-letters",
-     "execution": "The letters of tall are nearly in the sentence but not exactly: the closest run is \"hall\", which differs from tall by 1 letter. Every letter must be there, touching, and one is not."
-    },
-    {
-     "optionId": "gen-vr-05-hidden-word-21-opt3",
-     "value": "stay",
-     "isKey": false,
-     "tag": "vr05-single-word-only",
-     "execution": "The hidden word must cross the gap between two words. This option is stay, and stay sits whole inside the single word \"stayed\" — found by looking inside one word instead of across the join. The answer, fast, runs from the end of one word into the start of the next."
-    }
-   ]
+   "optionId": "gen-vr-05-hidden-word-13-opt3",
+   "itemId": "gen-vr-05-hidden-word-13",
+   "value": "soft",
+   "tag": "vr05-almost-letters",
+   "execution": "The letters of soft are nearly in the sentence but not exactly: the closest run is \"sofa\", which differs from soft by 1 letter. Every letter must be there, touching, and one is not."
   }
- ]
+ ],
+ "rebuilds": []
 }

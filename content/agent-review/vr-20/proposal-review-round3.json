@@ -1,0 +1,78 @@
+{
+ "door": "vr-20",
+ "reviewer": "rev-agent-01",
+ "changes": [
+  {
+   "ref": "rebuild:gen-vr-20-complete-the-word-04",
+   "verdict": "ATTEST",
+   "reason": "MUSCLE replaces the schwa row GARD_N. MUSSLE: the C is silent, so a child writes S for the /s/ sound twice, and MUSSLE reads exactly as MUSCLE. That is a genuine sound-alike, and MUSSLE is not a word (MUSSEL, with E, is not offered). MUSTLE: T is common and MUSTLE is not a word. Key C, the only letter the scan accepts. Executions are accurate."
+  },
+  {
+   "ref": "rebuild:gen-vr-20-complete-the-word-08",
+   "verdict": "ATTEST",
+   "reason": "FENCE replaces the schwa row PENC_L. FENSE: S spells /s/ before final E (sense, tense), and FENSE reads as FENCE, a genuine sound-alike. FENRE: R is common and FENRE is not a word. Key C, the only letter the scan accepts. Executions are accurate."
+  },
+  {
+   "ref": "rebuild:gen-vr-20-complete-the-word-10",
+   "verdict": "ATTEST",
+   "reason": "Same SPIDER build as round 2, with the common-letter seat changed from A (SPADER, a dictionary word) to O. SPODER is not in the dictionary, and stressed O reads differently, so it is a live common-letter distractor. SPYDER: Y for the long I sound (fly, type), a genuine sound-alike. Key I. The scan's only other fill is A (SPADER), which is no longer offered. Executions are accurate."
+  },
+  {
+   "ref": "rebuild:gen-vr-20-complete-the-word-12",
+   "verdict": "ATTEST",
+   "reason": "GIRAFFE replaces the schwa row BUTT_N. JIRAFFE: J is the usual spelling of the /d\u0292/ sound, and JIRAFFE reads exactly as GIRAFFE, a genuine sound-alike. SIRAFFE: S is common and SIRAFFE is not a word. Key G, the only letter the scan accepts. Executions are accurate."
+  },
+  {
+   "ref": "rebuild:gen-vr-20-complete-the-word-17",
+   "verdict": "ATTEST",
+   "reason": "SKATE replaces SYRUP, whose sound-alike SIRUP is a listed variant spelling. SCATE: C before A spells /k/ (cat, scab), and SCATE reads as SKATE, a genuine sound-alike. SNATE: N is common and SNATE is not a word. Key K. The scan also finds SLATE (L), SPATE (P) and STATE (T), none of them offered. The drafter rightly avoided T, which would have made STATE."
+  },
+  {
+   "ref": "rebuild:gen-vr-20-complete-the-word-20",
+   "verdict": "ATTEST",
+   "reason": "BRIDGE replaces the schwa row CARP_T. BRIDJE: J spells /d\u0292/, and BRIDJE reads as BRIDGE, a genuine sound-alike (the DGE spelling is a known KS2 trap). BRIDSE: S is common and BRIDSE is not a word. Key G. The scan also finds BRIDLE (L), which is not offered. Executions are accurate."
+  },
+  {
+   "ref": "rebuild:gen-vr-20-complete-the-word-24",
+   "verdict": "ATTEST",
+   "reason": "ENGINE replaces the schwa row VELV_T. ENJINE: J spells /d\u0292/, and ENJINE reads as ENGINE, a genuine sound-alike. ENTINE: T is common and ENTINE is not a word. Key G, the only letter the scan accepts. Executions are accurate."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "gen-vr-20-complete-the-word-04",
+   "verdict": "SIGN",
+   "reason": "MUS_LE: answerable; C is the only real-word fill on the A-Z scan of the gap against /usr/share/dict/words; one sound-alike and one plausible common-letter distractor, both live; MUSCLE is known to the age group."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-08",
+   "verdict": "SIGN",
+   "reason": "FEN_E: answerable; C is the only real-word fill on the A-Z scan of the gap against /usr/share/dict/words; FENSE is a genuine sound-alike and FENRE a readable non-word (shaped like 'genre'), so both are live."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-10",
+   "verdict": "SIGN",
+   "reason": "SP_DER: the round-2 fault is fixed, because the only other real-word fill (A) is not offered; Y is a genuine sound-alike and O a live common letter."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-12",
+   "verdict": "SIGN",
+   "reason": "_IRAFFE: answerable; G is the only real-word fill on the A-Z scan of the gap against /usr/share/dict/words; both distractors are live; GIRAFFE is known to the age group."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-17",
+   "verdict": "SIGN",
+   "reason": "S_ATE: K is the only correct option among those offered (the real-word fills L, P and T are excluded); both distractors are live; SKATE is known to the age group."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-20",
+   "verdict": "SIGN",
+   "reason": "BRID_E: G is the only correct option among those offered (BRIDLE with L excluded); both distractors are live; BRIDGE is known to the age group."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-24",
+   "verdict": "SIGN",
+   "reason": "EN_INE: answerable; G is the only real-word fill on the A-Z scan of the gap against /usr/share/dict/words; both distractors are live; ENGINE is known to the age group. Across the door, three G-key rows now use J as the sound-alike. Options are shuffled when served and J is never the key, so this gives nothing away."
+  }
+ ]
+}

@@ -1,24 +1,40 @@
 {
  "door": "vr-08",
  "proposer": "agent",
- "seats": [
-  {
-   "optionId": "gen-vr-08-move-letter-06-opt3",
-   "itemId": "gen-vr-08-move-letter-06",
-   "oldValue": "C",
-   "tag": "vr-move-letter-first-word-invalid",
-   "newValue": "E",
-   "execution": "Move one letter so both words are real. This option moves E. Taking E out of SPACE leaves SPAC, which is not a word — the first word breaks. The answer is S: PACE and STAR."
-  },
-  {
-   "optionId": "gen-vr-08-move-letter-15-opt2",
-   "itemId": "gen-vr-08-move-letter-15",
-   "oldValue": "R",
-   "tag": "vr-move-letter-second-word-invalid",
-   "newValue": "R",
-   "execution": "Move one letter so both words are real. This option moves R. BREAD without R is BEAD, a real word — but LOW cannot take R anywhere and make a word; the best try is LOWR. The second word breaks. The answer is B: READ and BLOW."
-  }
- ],
+ "seats": [],
  "redrafts": [],
- "rebuilds": []
+ "rebuilds": [
+  {
+   "itemId": "gen-vr-08-move-letter-19",
+   "why": "TIRED/LARGE is correct, but the publish gate's lexicon lacks LARGER and accepts LARGED, so it flags the row unanswerable. New pair IDEAL/PLAN: only I both leaves a word (DEAL) and makes one (PLAIN), under the child lexicon, the system dictionary and the gate's lexicon alike.",
+   "stem": {
+    "word1": "IDEAL",
+    "word2": "PLAN",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-19-opt1",
+     "value": "I",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-19-opt2",
+     "value": "E",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "execution": "Move one letter so both words are real. This option moves E. Taking E out of IDEAL leaves IDAL, which is not a word — the first word breaks. The answer is I: DEAL and PLAIN."
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-19-opt3",
+     "value": "L",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "execution": "Move one letter so both words are real. This option moves L. IDEAL without L is IDEA, a real word — but PLAN cannot take L anywhere and make a word; the best try is PLANL. The second word breaks. The answer is I: DEAL and PLAIN."
+    }
+   ]
+  }
+ ]
 }

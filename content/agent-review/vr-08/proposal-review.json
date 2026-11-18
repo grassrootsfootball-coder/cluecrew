@@ -3,26 +3,16 @@
   "reviewer": "rev-agent-01",
   "changes": [
     {
-      "ref": "seat:gen-vr-08-move-letter-06-opt3",
+      "ref": "rebuild:gen-vr-08-move-letter-19",
       "verdict": "ATTEST",
-      "reason": "Read as it now stands; it is round 1 with only the trailing sentence removed (prefix byte-identical). E: SPACE minus E is SPAC, not a word. TAR+E at every position gives ETAR, TEAR, TAER, TARE, so TEAR and TARE are real and ONLY the first word breaks. That makes the first-word tag the genuine fault. Every letter quoted is on the row, PACE and STAR are correct, and the text is in house form."
-    },
-    {
-      "ref": "seat:gen-vr-08-move-letter-15-opt2",
-      "verdict": "ATTEST",
-      "reason": "Read as it now stands; it is round 1 with only the trailing sentence removed (prefix byte-identical). R: BREAD minus R is BEAD, a real word. LOW+R at every position (RLOW, LROW, LORW, LOWR) is no word in any dictionary, so ONLY the second word breaks and the second-word tag is the genuine fault. LOWR is quoted correctly, READ and BLOW are correct, and the text is in house form."
+      "reason": "IDEAL/PLAN, every letter at every position. I: DEAL plus PLAIN, the key. E: IDAL is not a word, but PLAN+E makes PLANE, so only the first word breaks and the first-word tag is genuine. L: IDEA is real, but PLAN+L (LPLAN, PLLAN, PLALN, PLANL) is no word, so only the second word breaks and the second-word tag is genuine. A and D leave IDEL and IEAL and take no position in PLAN. Both executions are verified letter by letter: IDAL, IDEA, PLANL, DEAL, PLAIN. The named fault (gate flags the row unanswerable) is gone, and precheck passes. Note: the rebuild works around a defect in the gate's lexicon, not a defect in the content. TIRED/LARGE was correct (R gives TIED + LARGER). The lexicon still lacks LARGER and accepts LARGED, and it will misjudge any other row that leans on those words until it is fixed."
     }
   ],
   "rows": [
     {
-      "itemId": "gen-vr-08-move-letter-06",
+      "itemId": "gen-vr-08-move-letter-19",
       "verdict": "SIGN",
-      "reason": "SPACE/TAR with S, P, E. Every letter of SPACE checked at every position of TAR. Only S makes two words (PACE + STAR; TARS and TSAR also form). P leaves SACE and E leaves SPAC, so neither is a second answer, even though TARP and TEAR form. A leaves SPCE. C leaves SPAE (Scots dialect, not current English) and TAR takes no C. Every word is suitable for 9-11. Both distractors carry the first-word entry, which is correct for this pair."
-    },
-    {
-      "itemId": "gen-vr-08-move-letter-15",
-      "verdict": "SIGN",
-      "reason": "BREAD/LOW with B, R, A. Only B makes two current-English words (READ + BLOW). R leaves BEAD, but LOW takes no R. ALOW NOTE, restated: A leaves BRED, and LOW+A makes ALOW, an archaic nautical word for 'below' found only in the larger dictionaries (it is in /usr/share/dict/words). No 9-11 child knows it, and it is not current general English, so I do not treat A as a second answer. This rests on the dictionary line stated in round 1. Under a strict any-dictionary standard, A would be a second answer, the row would be HOLD, and the A seat's execution ('LOW cannot take A anywhere and make a word') would be false. Only D breaks the first word, and D breaks both, so no letter could fill a first-word seat; both distractors therefore carry the second-word entry, which is correct. Every word is suitable."
+      "reason": "Read as the child meets it. Only I makes two words (DEAL, PLAIN), checked against the child lexicon and /usr/share/dict/words. Every distractor is wrong. IDEAL, IDEA, DEAL, PLAIN, PLAN and PLANE are all everyday words for 9-11. On the reuse of PLAN (also the second word on row 14, PAINT/PLAN, key T to PLANT): it does not matter for correctness or give-away. The target words differ (PLAIN here, PLANT there). T is not offered here, so carrying 'PLAN takes T' over from row 14 cannot produce a wrong pick, and nothing on row 14 points to I. It is a variety cost only. The PLAN/PLANE family now appears on rows 10, 14, 16 and 19; worth spreading in later builds, not a reason to hold."
     }
   ]
 }

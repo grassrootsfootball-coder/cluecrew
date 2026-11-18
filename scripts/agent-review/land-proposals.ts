@@ -75,7 +75,10 @@ async function main() {
   const faults = new Map<string, string[]>();
   const fault = (id: string, f: string) => faults.set(id, [...(faults.get(id) ?? []), f]);
   for (const r of live) {
-    if (r.status !== 'DRAFT') fault(r.id, `status ${r.status}`);
+    // A LIVE row may take an execution REDRAFT only: executions are staff-facing and outside the
+    // signed projection, so the row a child meets does not move. Any value or stem change needs DRAFT.
+    const onlyRedrafts = ![...(prop.seats ?? []), ...(prop.rebuilds ?? [])].some((x) => x.itemId === r.id);
+    if (r.status !== 'DRAFT' && !(r.status === 'LIVE' && onlyRedrafts)) fault(r.id, `status ${r.status}`);
     after.set(r.id, { id: r.id, stem: r.stem as Record<string, unknown>, refs: [],
       options: r.options.map((o) => ({ optionId: o.id, value: val(o.content), isKey: o.isCorrect, tag: o.misconceptionId, execution: o.misconceptionExecution?.trim() || null })) });
   }
