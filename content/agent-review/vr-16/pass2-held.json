@@ -1,0 +1,63 @@
+{
+ "door": "vr-16",
+ "mode": "APPLIED",
+ "landed": [
+  "gen-vr-16-opposite-meaning-03",
+  "gen-vr-16-opposite-meaning-04",
+  "gen-vr-16-opposite-meaning-02",
+  "gen-vr-16-opposite-meaning-10",
+  "gen-vr-16-opposite-meaning-13",
+  "gen-vr-16-opposite-meaning-17",
+  "gen-vr-16-opposite-meaning-20",
+  "gen-vr-16-opposite-meaning-01",
+  "gen-vr-16-opposite-meaning-05",
+  "gen-vr-16-opposite-meaning-07",
+  "gen-vr-16-opposite-meaning-08",
+  "gen-vr-16-opposite-meaning-09",
+  "gen-vr-16-opposite-meaning-11",
+  "gen-vr-16-opposite-meaning-12",
+  "gen-vr-16-opposite-meaning-14",
+  "gen-vr-16-opposite-meaning-15",
+  "gen-vr-16-opposite-meaning-18",
+  "gen-vr-16-opposite-meaning-19",
+  "gen-vr-16-opposite-meaning-21",
+  "gen-vr-16-opposite-meaning-22",
+  "gen-vr-16-opposite-meaning-23",
+  "gen-vr-16-opposite-meaning-24",
+  "gen-vr-16-opposite-meaning-25"
+ ],
+ "held": [
+  {
+   "itemId": "gen-vr-16-opposite-meaning-06",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "seat:gen-vr-16-opposite-meaning-06-opt4",
+     "verdict": "REFUSE",
+     "reason": "The VALUE and TAG are acceptable: give is a loose opposite of buy (it parts with a thing, as sell does) but not the reverse, because buy is getting-for-money and only sell is parting-for-money; no reading of buy (including 'believe', as in I don't buy it) has give as its antonym, so sell stays the only key and give is exactly what the loose-opposite tag describes, a defensible-sounding but loose answer. The EXECUTION fails: its last sentence 'Tag changed from synonym-pull, because buy has no further plain twin.' is the drafter's authoring note, not an execution of the child's mistake, and is not on the row. Redraft with that sentence removed; the first four sentences can stand."
+    }
+   ],
+   "row": {
+    "itemId": "gen-vr-16-opposite-meaning-06",
+    "verdict": "HOLD",
+    "reason": "Row content is sound as values: buy -> sell; spend, purchase are buy-twins, give is a loose opposite (parts with a thing but gets no money back) and is not an antonym of buy under any reading, including buy = believe, so sell is the only key. Held because the give seat's execution carries an authoring note ('Tag changed from synonym-pull...') that is not an execution; it lands once that sentence is removed and re-attested."
+   }
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-16",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "seat:gen-vr-16-opposite-meaning-16-opt4",
+     "verdict": "REFUSE",
+     "reason": "Memorise is not a twin of remember: it is the act of learning something so you will remember it later, and the execution concedes this ('to learn to remember it'). That is an associate, the same ground on which light was refused as a twin of empty in the pass-1 verdicts. The synonym-pull description ('a word meaning the same') does not name it; the tag is fitted to the value. Needs a value that genuinely means remember (recall and recollect are already on the row), or a different tag."
+    }
+   ],
+   "row": {
+    "itemId": "gen-vr-16-opposite-meaning-16",
+    "verdict": "HOLD",
+    "reason": "remember -> forget is the only key and recall/recollect are true twins, but memorise is an associate (learning so as to remember), not a twin, and its seat is refused; the row needs a new value there. No distractor is an opposite of remember in any sense."
+   }
+  }
+ ]
+}

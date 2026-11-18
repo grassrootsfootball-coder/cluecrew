@@ -1,0 +1,123 @@
+{
+ "door": "vr-17",
+ "mode": "APPLIED",
+ "landed": [
+  "gen-vr-17-complete-the-sum-02",
+  "gen-vr-17-complete-the-sum-09",
+  "gen-vr-17-complete-the-sum-16",
+  "gen-vr-17-complete-the-sum-20",
+  "gen-vr-17-complete-the-sum-23",
+  "gen-vr-17-complete-the-sum-01",
+  "gen-vr-17-complete-the-sum-03",
+  "gen-vr-17-complete-the-sum-04",
+  "gen-vr-17-complete-the-sum-06",
+  "gen-vr-17-complete-the-sum-07",
+  "gen-vr-17-complete-the-sum-08",
+  "gen-vr-17-complete-the-sum-10",
+  "gen-vr-17-complete-the-sum-11",
+  "gen-vr-17-complete-the-sum-12",
+  "gen-vr-17-complete-the-sum-15",
+  "gen-vr-17-complete-the-sum-17",
+  "gen-vr-17-complete-the-sum-18",
+  "gen-vr-17-complete-the-sum-19",
+  "gen-vr-17-complete-the-sum-24"
+ ],
+ "held": [
+  {
+   "itemId": "gen-vr-17-complete-the-sum-13",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "seat:gen-vr-17-complete-the-sum-13-opt3",
+     "verdict": "REFUSE",
+     "reason": "Recomputed ? + 3 = 21: key 18. The value 3 is the left side's ONLY visible term, copied. With one visible term on the left there is nothing to work out, so 'solved one side and stopped' names no step here: no side was solved, the child copied a number printed on the row. That is a story fitted to the value, and the same story would fit any printed number on any row. Arithmetic in the execution is correct, but the mechanism is empty. The genuine one-side reading on this row is the right-hand total, 21 (the '= means write the answer' mistake), as already used on rows 01, 09 and 17; 21 collides with no option on the row."
+    }
+   ],
+   "row": {
+    "itemId": "gen-vr-17-complete-the-sum-13",
+    "verdict": "HOLD",
+    "reason": "The proposed one-side-only seat (opt3 = 3) is refused: it copies the single visible left term, which is no step of solving a side. Otherwise the row is sound: key 18 recomputed and unique, slips 20 and 16 attested. Re-propose opt3 as the right-hand total 21 and the row can be signed."
+   }
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-05",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "seat:gen-vr-17-complete-the-sum-05-opt3",
+     "verdict": "REFUSE",
+     "reason": "Recomputed ? + 7 = 17: key 10. The value 7 is the left side's ONLY visible term, copied. With one visible term on the left there is nothing to work out, so 'solved one side and stopped' names no step here: no side was solved, the child copied a number printed on the row. That is a story fitted to the value, and the same story would fit any printed number on any row. Arithmetic in the execution is correct, but the mechanism is empty. The genuine one-side reading on this row is the right-hand total, 17 (the '= means write the answer' mistake), as already used on rows 01, 09 and 17; 17 collides with no option on the row."
+    }
+   ],
+   "row": {
+    "itemId": "gen-vr-17-complete-the-sum-05",
+    "verdict": "HOLD",
+    "reason": "The proposed one-side-only seat (opt3 = 7) is refused: it copies the single visible left term, which is no step of solving a side. Otherwise the row is sound: key 10 recomputed and unique, slips 8 and 9 attested. Re-propose opt3 as the right-hand total 17 and the row can be signed."
+   }
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-14",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "seat:gen-vr-17-complete-the-sum-14-opt3",
+     "verdict": "REFUSE",
+     "reason": "Recomputed 19 + ? = 23: key 4. The value 19 is the left side's ONLY visible term, copied. With one visible term on the left there is nothing to work out, so 'solved one side and stopped' names no step here: no side was solved, the child copied a number printed on the row. That is a story fitted to the value, and the same story would fit any printed number on any row. Arithmetic in the execution is correct, but the mechanism is empty. The genuine one-side reading on this row is the right-hand total, 23 (the '= means write the answer' mistake), as already used on rows 01, 09 and 17; 23 collides with no option on the row."
+    }
+   ],
+   "row": {
+    "itemId": "gen-vr-17-complete-the-sum-14",
+    "verdict": "HOLD",
+    "reason": "The proposed one-side-only seat (opt3 = 19) is refused: it copies the single visible left term, which is no step of solving a side. Otherwise the row is sound: key 4 recomputed and unique, slips 2 and 6 attested. Re-propose opt3 as the right-hand total 23 and the row can be signed."
+   }
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-21",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "seat:gen-vr-17-complete-the-sum-21-opt3",
+     "verdict": "REFUSE",
+     "reason": "Recomputed ? + 5 = 31: key 26. The value 5 is the left side's ONLY visible term, copied. With one visible term on the left there is nothing to work out, so 'solved one side and stopped' names no step here: no side was solved, the child copied a number printed on the row. That is a story fitted to the value, and the same story would fit any printed number on any row. Arithmetic in the execution is correct, but the mechanism is empty. The genuine one-side reading on this row is the right-hand total, 31 (the '= means write the answer' mistake), as already used on rows 01, 09 and 17; 31 collides with no option on the row."
+    }
+   ],
+   "row": {
+    "itemId": "gen-vr-17-complete-the-sum-21",
+    "verdict": "HOLD",
+    "reason": "The proposed one-side-only seat (opt3 = 5) is refused: it copies the single visible left term, which is no step of solving a side. Otherwise the row is sound: key 26 recomputed and unique, slips 25 and 24 attested. Re-propose opt3 as the right-hand total 31 and the row can be signed."
+   }
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-22",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "seat:gen-vr-17-complete-the-sum-22-opt3",
+     "verdict": "REFUSE",
+     "reason": "Recomputed 27 + ? = 33: key 6. The value 27 is the left side's ONLY visible term, copied. With one visible term on the left there is nothing to work out, so 'solved one side and stopped' names no step here: no side was solved, the child copied a number printed on the row. That is a story fitted to the value, and the same story would fit any printed number on any row. Arithmetic in the execution is correct, but the mechanism is empty. The genuine one-side reading on this row is the right-hand total, 33 (the '= means write the answer' mistake), as already used on rows 01, 09 and 17; 33 collides with no option on the row."
+    }
+   ],
+   "row": {
+    "itemId": "gen-vr-17-complete-the-sum-22",
+    "verdict": "HOLD",
+    "reason": "The proposed one-side-only seat (opt3 = 27) is refused: it copies the single visible left term, which is no step of solving a side. Otherwise the row is sound: key 6 recomputed and unique, slips 7 and 8 attested. Re-propose opt3 as the right-hand total 33 and the row can be signed."
+   }
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-25",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "seat:gen-vr-17-complete-the-sum-25-opt3",
+     "verdict": "REFUSE",
+     "reason": "Recomputed ? + 3 = 33: key 30. The value 3 is the left side's ONLY visible term, copied. With one visible term on the left there is nothing to work out, so 'solved one side and stopped' names no step here: no side was solved, the child copied a number printed on the row. That is a story fitted to the value, and the same story would fit any printed number on any row. Arithmetic in the execution is correct, but the mechanism is empty. The genuine one-side reading on this row is the right-hand total, 33 (the '= means write the answer' mistake), as already used on rows 01, 09 and 17; 33 collides with no option on the row."
+    }
+   ],
+   "row": {
+    "itemId": "gen-vr-17-complete-the-sum-25",
+    "verdict": "HOLD",
+    "reason": "The proposed one-side-only seat (opt3 = 3) is refused: it copies the single visible left term, which is no step of solving a side. Otherwise the row is sound: key 30 recomputed and unique, slips 28 and 29 attested. Re-propose opt3 as the right-hand total 33 and the row can be signed."
+   }
+  }
+ ]
+}
