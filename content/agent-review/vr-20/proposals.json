@@ -1,217 +1,74 @@
 {
  "door": "vr-20",
  "proposer": "agent",
- "seats": [
-  {
-   "optionId": "gen-vr-20-complete-the-word-04-opt2",
-   "itemId": "gen-vr-20-complete-the-word-04",
-   "oldValue": "F",
-   "tag": "vr20-common-letter",
-   "newValue": "A",
-   "execution": "The task is to complete GARD_N, and the correct word is GARDEN, so the key is E. The child drops in A, one of the most common letters in English, without reading the finished word back. That gives GARDAN, which is not a word."
-  },
-  {
-   "optionId": "gen-vr-20-complete-the-word-04-opt3",
-   "itemId": "gen-vr-20-complete-the-word-04",
-   "oldValue": "J",
-   "tag": "vr20-sound-alike",
-   "newValue": "I",
-   "execution": "The task is to complete GARD_N, and the correct word is GARDEN, so the key is E. The ending is spoken as a weak 'in' sound, so the child writes I for the unstressed vowel. That gives GARDIN, which is not a word."
-  },
-  {
-   "optionId": "gen-vr-20-complete-the-word-08-opt2",
-   "itemId": "gen-vr-20-complete-the-word-08",
-   "oldValue": "J",
-   "tag": "vr20-common-letter",
-   "newValue": "O",
-   "execution": "The task is to complete PENC_L, and the correct word is PENCIL, so the key is I. The child drops in O, one of the most common letters in English, without reading the finished word back. That gives PENCOL, which is not a word."
-  },
-  {
-   "optionId": "gen-vr-20-complete-the-word-08-opt3",
-   "itemId": "gen-vr-20-complete-the-word-08",
-   "oldValue": "N",
-   "tag": "vr20-sound-alike",
-   "newValue": "A",
-   "execution": "The task is to complete PENC_L, and the correct word is PENCIL, so the key is I. The ending is spoken as a weak 'ul' sound, so the child writes A for the unstressed vowel. That gives PENCAL, which is not a word."
-  },
-  {
-   "optionId": "gen-vr-20-complete-the-word-12-opt2",
-   "itemId": "gen-vr-20-complete-the-word-12",
-   "oldValue": "P",
-   "tag": "vr20-common-letter",
-   "newValue": "A",
-   "execution": "The task is to complete BUTT_N, and the correct word is BUTTON, so the key is O. The child drops in A, one of the most common letters in English, without reading the finished word back. That gives BUTTAN, which is not a word."
-  },
-  {
-   "optionId": "gen-vr-20-complete-the-word-12-opt3",
-   "itemId": "gen-vr-20-complete-the-word-12",
-   "oldValue": "T",
-   "tag": "vr20-sound-alike",
-   "newValue": "E",
-   "execution": "The task is to complete BUTT_N, and the correct word is BUTTON, so the key is O. The ending is spoken as a weak 'un' sound, so the child writes E for the unstressed vowel. That gives BUTTEN, which is not a word."
-  },
-  {
-   "optionId": "gen-vr-20-complete-the-word-20-opt2",
-   "itemId": "gen-vr-20-complete-the-word-20",
-   "oldValue": "F",
-   "tag": "vr20-common-letter",
-   "newValue": "A",
-   "execution": "The task is to complete CARP_T, and the correct word is CARPET, so the key is E. The child drops in A, one of the most common letters in English, without reading the finished word back. That gives CARPAT, which is not a word."
-  },
-  {
-   "optionId": "gen-vr-20-complete-the-word-20-opt3",
-   "itemId": "gen-vr-20-complete-the-word-20",
-   "oldValue": "J",
-   "tag": "vr20-sound-alike",
-   "newValue": "I",
-   "execution": "The task is to complete CARP_T, and the correct word is CARPET, so the key is E. The ending is spoken as a weak 'it' sound, so the child writes I for the unstressed vowel. That gives CARPIT, which is not a word."
-  },
-  {
-   "optionId": "gen-vr-20-complete-the-word-24-opt2",
-   "itemId": "gen-vr-20-complete-the-word-24",
-   "oldValue": "F",
-   "tag": "vr20-common-letter",
-   "newValue": "O",
-   "execution": "The task is to complete VELV_T, and the correct word is VELVET, so the key is E. The child drops in O, one of the most common letters in English, without reading the finished word back. That gives VELVOT, which is not a word."
-  },
-  {
-   "optionId": "gen-vr-20-complete-the-word-24-opt3",
-   "itemId": "gen-vr-20-complete-the-word-24",
-   "oldValue": "J",
-   "tag": "vr20-sound-alike",
-   "newValue": "I",
-   "execution": "The task is to complete VELV_T, and the correct word is VELVET, so the key is E. The ending is spoken as a weak 'it' sound, so the child writes I for the unstressed vowel. That gives VELVIT, which is not a word."
-  }
- ],
+ "seats": [],
  "redrafts": [],
  "rebuilds": [
   {
-   "itemId": "gen-vr-20-complete-the-word-02",
-   "why": "The gap in CA_DLE allows no genuine sound-alike for a 9-11-year-old reader; rebuilt on DANCER, whose gap does.",
+   "itemId": "gen-vr-20-complete-the-word-04",
+   "why": "The gap in GARD_N is a schwa, where any vowel sounds right; rebuilt on MUSCLE, whose consonant gap allows a genuine sound-alike.",
    "stem": {
     "prompt": "Which letter completes the word?",
-    "wordWithGap": "DAN_ER"
+    "wordWithGap": "MUS_LE"
    },
    "options": [
     {
-     "optionId": "gen-vr-20-complete-the-word-02-opt1",
+     "optionId": "gen-vr-20-complete-the-word-04-opt1",
      "value": "C",
      "isKey": true,
      "tag": null,
      "execution": null
     },
     {
-     "optionId": "gen-vr-20-complete-the-word-02-opt2",
+     "optionId": "gen-vr-20-complete-the-word-04-opt2",
      "value": "T",
      "isKey": false,
      "tag": "vr20-common-letter",
-     "execution": "The task is to complete DAN_ER, and the correct word is DANCER, so the key is C. The child drops in T, one of the most common letters in English, without reading the finished word back. That gives DANTER, which is not a word."
+     "execution": "The task is to complete MUS_LE, and the correct word is MUSCLE, so the key is C. The child drops in T, one of the most common letters in English, without reading the finished word back. That gives MUSTLE, which is not a word."
     },
     {
-     "optionId": "gen-vr-20-complete-the-word-02-opt3",
+     "optionId": "gen-vr-20-complete-the-word-04-opt3",
      "value": "S",
      "isKey": false,
      "tag": "vr20-sound-alike",
-     "execution": "The task is to complete DAN_ER, and the correct word is DANCER, so the key is C. The child hears an S sound in the middle and writes S, the usual letter for that sound. That gives DANSER, which is not a word."
+     "execution": "The task is to complete MUS_LE, and the correct word is MUSCLE, so the key is C. The C in this word makes no sound of its own, so the child writes the S sound they hear a second time. That gives MUSSLE, which is not a word."
     }
    ]
   },
   {
-   "itemId": "gen-vr-20-complete-the-word-03",
-   "why": "The gap in WIN_OW allows no genuine sound-alike for a 9-11-year-old reader; rebuilt on SEVEN, whose gap does.",
+   "itemId": "gen-vr-20-complete-the-word-08",
+   "why": "The gap in PENC_L is a schwa, where any vowel sounds right; rebuilt on FENCE, whose consonant gap allows a genuine sound-alike.",
    "stem": {
     "prompt": "Which letter completes the word?",
-    "wordWithGap": "_EVEN"
+    "wordWithGap": "FEN_E"
    },
    "options": [
     {
-     "optionId": "gen-vr-20-complete-the-word-03-opt1",
-     "value": "S",
-     "isKey": true,
-     "tag": null,
-     "execution": null
-    },
-    {
-     "optionId": "gen-vr-20-complete-the-word-03-opt2",
-     "value": "T",
-     "isKey": false,
-     "tag": "vr20-common-letter",
-     "execution": "The task is to complete _EVEN, and the correct word is SEVEN, so the key is S. The child drops in T, one of the most common letters in English, without reading the finished word back. That gives TEVEN, which is not a word."
-    },
-    {
-     "optionId": "gen-vr-20-complete-the-word-03-opt3",
-     "value": "C",
-     "isKey": false,
-     "tag": "vr20-sound-alike",
-     "execution": "The task is to complete _EVEN, and the correct word is SEVEN, so the key is S. The child hears an S sound and writes C, because C before E makes the S sound, as in centre. That gives CEVEN, which is not a word."
-    }
-   ]
-  },
-  {
-   "itemId": "gen-vr-20-complete-the-word-07",
-   "why": "The gap in MAR_ET allows no genuine sound-alike for a 9-11-year-old reader; rebuilt on CAMEL, whose gap does.",
-   "stem": {
-    "prompt": "Which letter completes the word?",
-    "wordWithGap": "_AMEL"
-   },
-   "options": [
-    {
-     "optionId": "gen-vr-20-complete-the-word-07-opt1",
+     "optionId": "gen-vr-20-complete-the-word-08-opt1",
      "value": "C",
      "isKey": true,
      "tag": null,
      "execution": null
     },
     {
-     "optionId": "gen-vr-20-complete-the-word-07-opt2",
+     "optionId": "gen-vr-20-complete-the-word-08-opt2",
+     "value": "R",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "execution": "The task is to complete FEN_E, and the correct word is FENCE, so the key is C. The child drops in R, one of the most common letters in English, without reading the finished word back. That gives FENRE, which is not a word."
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-08-opt3",
      "value": "S",
      "isKey": false,
-     "tag": "vr20-common-letter",
-     "execution": "The task is to complete _AMEL, and the correct word is CAMEL, so the key is C. The child drops in S, one of the most common letters in English, without reading the finished word back. That gives SAMEL, which is not a word."
-    },
-    {
-     "optionId": "gen-vr-20-complete-the-word-07-opt3",
-     "value": "K",
-     "isKey": false,
      "tag": "vr20-sound-alike",
-     "execution": "The task is to complete _AMEL, and the correct word is CAMEL, so the key is C. The child hears a K sound and writes K, which also makes that sound before A, as in kangaroo. That gives KAMEL, which is not a word."
-    }
-   ]
-  },
-  {
-   "itemId": "gen-vr-20-complete-the-word-09",
-   "why": "The gap in R_CKET allows no genuine sound-alike for a 9-11-year-old reader; rebuilt on CRYSTAL, whose gap does.",
-   "stem": {
-    "prompt": "Which letter completes the word?",
-    "wordWithGap": "CR_STAL"
-   },
-   "options": [
-    {
-     "optionId": "gen-vr-20-complete-the-word-09-opt1",
-     "value": "Y",
-     "isKey": true,
-     "tag": null,
-     "execution": null
-    },
-    {
-     "optionId": "gen-vr-20-complete-the-word-09-opt2",
-     "value": "E",
-     "isKey": false,
-     "tag": "vr20-common-letter",
-     "execution": "The task is to complete CR_STAL, and the correct word is CRYSTAL, so the key is Y. The child drops in E, one of the most common letters in English, without reading the finished word back. That gives CRESTAL, which is not a word."
-    },
-    {
-     "optionId": "gen-vr-20-complete-the-word-09-opt3",
-     "value": "I",
-     "isKey": false,
-     "tag": "vr20-sound-alike",
-     "execution": "The task is to complete CR_STAL, and the correct word is CRYSTAL, so the key is Y. The child hears the short I sound and writes I, because I and Y can both make that sound. That gives CRISTAL, which is not a word."
+     "execution": "The task is to complete FEN_E, and the correct word is FENCE, so the key is C. The child hears an S sound before the final E and writes S, as in words like sense. That gives FENSE, which is not a word."
     }
    ]
   },
   {
    "itemId": "gen-vr-20-complete-the-word-10",
-   "why": "The gap in JU_GLE allows no genuine sound-alike for a 9-11-year-old reader; rebuilt on SPIDER, whose gap does.",
+   "why": "Rebuilt on SPIDER as before; the common-letter seat is now O, since A spells SPADER, a dictionary word.",
    "stem": {
     "prompt": "Which letter completes the word?",
     "wordWithGap": "SP_DER"
@@ -226,10 +83,10 @@
     },
     {
      "optionId": "gen-vr-20-complete-the-word-10-opt2",
-     "value": "A",
+     "value": "O",
      "isKey": false,
      "tag": "vr20-common-letter",
-     "execution": "The task is to complete SP_DER, and the correct word is SPIDER, so the key is I. The child drops in A, one of the most common letters in English, without reading the finished word back. That gives SPADER, which is not a word."
+     "execution": "The task is to complete SP_DER, and the correct word is SPIDER, so the key is I. The child drops in O, one of the most common letters in English, without reading the finished word back. That gives SPODER, which is not a word."
     },
     {
      "optionId": "gen-vr-20-complete-the-word-10-opt3",
@@ -241,219 +98,126 @@
    ]
   },
   {
-   "itemId": "gen-vr-20-complete-the-word-13",
-   "why": "The gap in M_RROR allows no genuine sound-alike for a 9-11-year-old reader; rebuilt on HORSE, whose gap does.",
+   "itemId": "gen-vr-20-complete-the-word-12",
+   "why": "The gap in BUTT_N is a schwa, where any vowel sounds right; rebuilt on GIRAFFE, whose consonant gap allows a genuine sound-alike.",
    "stem": {
     "prompt": "Which letter completes the word?",
-    "wordWithGap": "HOR_E"
+    "wordWithGap": "_IRAFFE"
    },
    "options": [
     {
-     "optionId": "gen-vr-20-complete-the-word-13-opt1",
-     "value": "S",
+     "optionId": "gen-vr-20-complete-the-word-12-opt1",
+     "value": "G",
      "isKey": true,
      "tag": null,
      "execution": null
     },
     {
-     "optionId": "gen-vr-20-complete-the-word-13-opt2",
-     "value": "T",
-     "isKey": false,
-     "tag": "vr20-common-letter",
-     "execution": "The task is to complete HOR_E, and the correct word is HORSE, so the key is S. The child drops in T, one of the most common letters in English, without reading the finished word back. That gives HORTE, which is not a word."
-    },
-    {
-     "optionId": "gen-vr-20-complete-the-word-13-opt3",
-     "value": "C",
-     "isKey": false,
-     "tag": "vr20-sound-alike",
-     "execution": "The task is to complete HOR_E, and the correct word is HORSE, so the key is S. The child hears an S sound before the final E and writes C, as in words like force. That gives HORCE, which is not a word."
-    }
-   ]
-  },
-  {
-   "itemId": "gen-vr-20-complete-the-word-15",
-   "why": "The key gave SUNDAY, a proper noun, and LEMON's M gap allows no genuine sound-alike; rebuilt on BICYCLE, whose C gap does.",
-   "stem": {
-    "prompt": "Which letter completes the word?",
-    "wordWithGap": "BI_YCLE"
-   },
-   "options": [
-    {
-     "optionId": "gen-vr-20-complete-the-word-15-opt1",
-     "value": "C",
-     "isKey": true,
-     "tag": null,
-     "execution": null
-    },
-    {
-     "optionId": "gen-vr-20-complete-the-word-15-opt2",
-     "value": "T",
-     "isKey": false,
-     "tag": "vr20-common-letter",
-     "execution": "The task is to complete BI_YCLE, and the correct word is BICYCLE, so the key is C. The child drops in T, one of the most common letters in English, without reading the finished word back. That gives BITYCLE, which is not a word."
-    },
-    {
-     "optionId": "gen-vr-20-complete-the-word-15-opt3",
+     "optionId": "gen-vr-20-complete-the-word-12-opt2",
      "value": "S",
      "isKey": false,
-     "tag": "vr20-sound-alike",
-     "execution": "The task is to complete BI_YCLE, and the correct word is BICYCLE, so the key is C. The child hears an S sound in the middle and writes S, the usual letter for that sound. That gives BISYCLE, which is not a word."
-    }
-   ]
-  },
-  {
-   "itemId": "gen-vr-20-complete-the-word-16",
-   "why": "The gap in BOTT_E allows no genuine sound-alike for a 9-11-year-old reader; rebuilt on KANGAROO, whose gap does.",
-   "stem": {
-    "prompt": "Which letter completes the word?",
-    "wordWithGap": "_ANGAROO"
-   },
-   "options": [
-    {
-     "optionId": "gen-vr-20-complete-the-word-16-opt1",
-     "value": "K",
-     "isKey": true,
-     "tag": null,
-     "execution": null
-    },
-    {
-     "optionId": "gen-vr-20-complete-the-word-16-opt2",
-     "value": "T",
-     "isKey": false,
      "tag": "vr20-common-letter",
-     "execution": "The task is to complete _ANGAROO, and the correct word is KANGAROO, so the key is K. The child drops in T, one of the most common letters in English, without reading the finished word back. That gives TANGAROO, which is not a word."
+     "execution": "The task is to complete _IRAFFE, and the correct word is GIRAFFE, so the key is G. The child drops in S, one of the most common letters in English, without reading the finished word back. That gives SIRAFFE, which is not a word."
     },
     {
-     "optionId": "gen-vr-20-complete-the-word-16-opt3",
-     "value": "C",
+     "optionId": "gen-vr-20-complete-the-word-12-opt3",
+     "value": "J",
      "isKey": false,
      "tag": "vr20-sound-alike",
-     "execution": "The task is to complete _ANGAROO, and the correct word is KANGAROO, so the key is K. The child hears a K sound and writes C, which also makes that sound before A, as in cat. That gives CANGAROO, which is not a word."
+     "execution": "The task is to complete _IRAFFE, and the correct word is GIRAFFE, so the key is G. The child hears a J sound and writes J, because that is the usual letter for it; here G before I makes the sound. That gives JIRAFFE, which is not a word."
     }
    ]
   },
   {
    "itemId": "gen-vr-20-complete-the-word-17",
-   "why": "The gap in D_AGON allows no genuine sound-alike for a 9-11-year-old reader; rebuilt on SYRUP, whose gap does.",
+   "why": "SIRUP is a listed variant of SYRUP; rebuilt on SKATE, whose consonant gap allows a genuine sound-alike.",
    "stem": {
     "prompt": "Which letter completes the word?",
-    "wordWithGap": "S_RUP"
+    "wordWithGap": "S_ATE"
    },
    "options": [
     {
      "optionId": "gen-vr-20-complete-the-word-17-opt1",
-     "value": "Y",
+     "value": "K",
      "isKey": true,
      "tag": null,
      "execution": null
     },
     {
      "optionId": "gen-vr-20-complete-the-word-17-opt2",
-     "value": "O",
-     "isKey": false,
-     "tag": "vr20-common-letter",
-     "execution": "The task is to complete S_RUP, and the correct word is SYRUP, so the key is Y. The child drops in O, one of the most common letters in English, without reading the finished word back. That gives SORUP, which is not a word."
-    },
-    {
-     "optionId": "gen-vr-20-complete-the-word-17-opt3",
-     "value": "I",
-     "isKey": false,
-     "tag": "vr20-sound-alike",
-     "execution": "The task is to complete S_RUP, and the correct word is SYRUP, so the key is Y. The child hears the short I sound and writes I, because I and Y can both make that sound. That gives SIRUP, which is not a word."
-    }
-   ]
-  },
-  {
-   "itemId": "gen-vr-20-complete-the-word-19",
-   "why": "The gap in HEL_ET allows no genuine sound-alike for a 9-11-year-old reader; rebuilt on TICKET, whose gap does.",
-   "stem": {
-    "prompt": "Which letter completes the word?",
-    "wordWithGap": "TI_KET"
-   },
-   "options": [
-    {
-     "optionId": "gen-vr-20-complete-the-word-19-opt1",
-     "value": "C",
-     "isKey": true,
-     "tag": null,
-     "execution": null
-    },
-    {
-     "optionId": "gen-vr-20-complete-the-word-19-opt2",
      "value": "N",
      "isKey": false,
      "tag": "vr20-common-letter",
-     "execution": "The task is to complete TI_KET, and the correct word is TICKET, so the key is C. The child drops in N, one of the most common letters in English, without reading the finished word back. That gives TINKET, which is not a word."
+     "execution": "The task is to complete S_ATE, and the correct word is SKATE, so the key is K. The child drops in N, one of the most common letters in English, without reading the finished word back. That gives SNATE, which is not a word."
     },
     {
-     "optionId": "gen-vr-20-complete-the-word-19-opt3",
-     "value": "K",
-     "isKey": false,
-     "tag": "vr20-sound-alike",
-     "execution": "The task is to complete TI_KET, and the correct word is TICKET, so the key is C. The child hears the K sound and writes K before the K that is already there. That gives TIKKET, which is not a word."
-    }
-   ]
-  },
-  {
-   "itemId": "gen-vr-20-complete-the-word-22",
-   "why": "The gap in BA_KET allows no genuine sound-alike for a 9-11-year-old reader; rebuilt on MOUSE, whose gap does.",
-   "stem": {
-    "prompt": "Which letter completes the word?",
-    "wordWithGap": "MOU_E"
-   },
-   "options": [
-    {
-     "optionId": "gen-vr-20-complete-the-word-22-opt1",
-     "value": "S",
-     "isKey": true,
-     "tag": null,
-     "execution": null
-    },
-    {
-     "optionId": "gen-vr-20-complete-the-word-22-opt2",
-     "value": "T",
-     "isKey": false,
-     "tag": "vr20-common-letter",
-     "execution": "The task is to complete MOU_E, and the correct word is MOUSE, so the key is S. The child drops in T, one of the most common letters in English, without reading the finished word back. That gives MOUTE, which is not a word."
-    },
-    {
-     "optionId": "gen-vr-20-complete-the-word-22-opt3",
+     "optionId": "gen-vr-20-complete-the-word-17-opt3",
      "value": "C",
      "isKey": false,
      "tag": "vr20-sound-alike",
-     "execution": "The task is to complete MOU_E, and the correct word is MOUSE, so the key is S. The child hears an S sound before the final E and writes C, as in words like bounce. That gives MOUCE, which is not a word."
+     "execution": "The task is to complete S_ATE, and the correct word is SKATE, so the key is K. The child hears a K sound and writes C, which also makes that sound before A, as in cat. That gives SCATE, which is not a word."
     }
    ]
   },
   {
-   "itemId": "gen-vr-20-complete-the-word-25",
-   "why": "The gap in M_GNET allows no genuine sound-alike for a 9-11-year-old reader; rebuilt on PILOT, whose gap does.",
+   "itemId": "gen-vr-20-complete-the-word-20",
+   "why": "The gap in CARP_T is a schwa, where any vowel sounds right; rebuilt on BRIDGE, whose consonant gap allows a genuine sound-alike.",
    "stem": {
     "prompt": "Which letter completes the word?",
-    "wordWithGap": "P_LOT"
+    "wordWithGap": "BRID_E"
    },
    "options": [
     {
-     "optionId": "gen-vr-20-complete-the-word-25-opt1",
-     "value": "I",
+     "optionId": "gen-vr-20-complete-the-word-20-opt1",
+     "value": "G",
      "isKey": true,
      "tag": null,
      "execution": null
     },
     {
-     "optionId": "gen-vr-20-complete-the-word-25-opt2",
-     "value": "A",
+     "optionId": "gen-vr-20-complete-the-word-20-opt2",
+     "value": "S",
      "isKey": false,
      "tag": "vr20-common-letter",
-     "execution": "The task is to complete P_LOT, and the correct word is PILOT, so the key is I. The child drops in A, one of the most common letters in English, without reading the finished word back. That gives PALOT, which is not a word."
+     "execution": "The task is to complete BRID_E, and the correct word is BRIDGE, so the key is G. The child drops in S, one of the most common letters in English, without reading the finished word back. That gives BRIDSE, which is not a word."
     },
     {
-     "optionId": "gen-vr-20-complete-the-word-25-opt3",
-     "value": "Y",
+     "optionId": "gen-vr-20-complete-the-word-20-opt3",
+     "value": "J",
      "isKey": false,
      "tag": "vr20-sound-alike",
-     "execution": "The task is to complete P_LOT, and the correct word is PILOT, so the key is I. The child hears the long I sound and writes Y, because I and Y can both make that sound. That gives PYLOT, which is not a word."
+     "execution": "The task is to complete BRID_E, and the correct word is BRIDGE, so the key is G. The ending makes a J sound, so the child writes J after the D instead of G. That gives BRIDJE, which is not a word."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-24",
+   "why": "The gap in VELV_T is a schwa, where any vowel sounds right; rebuilt on ENGINE, whose consonant gap allows a genuine sound-alike.",
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "EN_INE"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-24-opt1",
+     "value": "G",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-24-opt2",
+     "value": "T",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "execution": "The task is to complete EN_INE, and the correct word is ENGINE, so the key is G. The child drops in T, one of the most common letters in English, without reading the finished word back. That gives ENTINE, which is not a word."
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-24-opt3",
+     "value": "J",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "execution": "The task is to complete EN_INE, and the correct word is ENGINE, so the key is G. The child hears a J sound and writes J, because that is the usual letter for it; here G before I makes the sound. That gives ENJINE, which is not a word."
     }
    ]
   }

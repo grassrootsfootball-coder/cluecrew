@@ -2,26 +2,7 @@
  "door": "vr-05",
  "mode": "APPLIED",
  "landed": [
-  "gen-vr-05-hidden-word-12",
-  "gen-vr-05-hidden-word-08",
-  "gen-vr-05-hidden-word-20"
+  "gen-vr-05-hidden-word-21"
  ],
- "held": [
-  {
-   "itemId": "gen-vr-05-hidden-word-21",
-   "gateFaults": [],
-   "unattested": [
-    {
-     "ref": "rebuild:gen-vr-05-hidden-word-21",
-     "verdict": "REFUSE",
-     "reason": "The mechanics are correct, and the cider fault is fixed. date appears once, crossing exactly one join (an|d + ate). toad is absent; its closest run is 'toas', one letter off. rank sits whole inside 'drank' and crosses no join. 'hist' crosses a join (h|is + t|oast), but it is not an ordinary word and not an option, so it is no second answer. What breaks: date is already the key of the live row 01, 'Dad ate the last plum.', where it is also built from a d-ending word plus 'ate'. The new sentence also opens with 'Dad'. A child working through the door meets the same answer, made the same way, under the same opening word twice, which the brief rules out. It needs a key not used elsewhere in vr-05. Keys already in use: date, hero, stop, band, gone, song, item, raid, lamb, them, sand, hand, farm, rose, tent, pear, kind, moth, ring, chin, plan, very, nose, care."
-    }
-   ],
-   "row": {
-    "itemId": "gen-vr-05-hidden-word-21",
-    "verdict": "HOLD",
-    "reason": "The row is correct on its own terms: 'Dad drank tea and ate his toast.' is natural, 7 words, and the key, distractors and joins all check, with 'hist' not a second answer. But its key, date, repeats the key of live row 01, which uses the same Dad/'ate' construction. Re-key it to a word not used elsewhere in the door."
-   }
-  }
- ]
+ "held": []
 }

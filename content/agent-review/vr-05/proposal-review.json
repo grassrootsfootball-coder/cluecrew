@@ -1,49 +1,19 @@
 {
  "door": "vr-05",
  "reviewer": "rev-agent-01",
- "round": 2,
+ "round": 3,
  "changes": [
   {
-   "ref": "rebuild:gen-vr-05-hidden-word-08",
-   "verdict": "ATTEST",
-   "reason": "Fixes the odd sentence. Joined 'myextraideahelpedtheteam': raid appears once, crossing exactly one join (extr|a + id|ea). beam is absent; its closest run is 'team', one letter off, and no run is closer. help sits whole inside 'helped', appears once and crosses no join. 'aide' also crosses a join (extr|a + ide|a) but is not an option, and it is an adult word, so neither a child nor a marker can claim it as a second answer in a three-option item. No other real four-letter word crosses a join."
-  },
-  {
-   "ref": "rebuild:gen-vr-05-hidden-word-12",
-   "verdict": "ATTEST",
-   "reason": "Fixes the fragment. Joined 'weatefishandchipsonthebeach': hand appears once, crossing exactly one join (fis|h + and). wish is absent; its closest run is 'fish', one letter off. chip sits whole inside 'chips' and crosses no join. No other real four-letter word crosses a join."
-  },
-  {
-   "ref": "rebuild:gen-vr-05-hidden-word-20",
-   "verdict": "ATTEST",
-   "reason": "Replaces 'industrious' with everyday words. Joined 'wewatchinsectsclimbthewall': chin appears once, crossing exactly one join (wat|ch + in|sects). itch is absent; its closest run is 'atch', one letter off. limb sits whole inside 'climb' and crosses no join. No other real four-letter word crosses a join."
-  },
-  {
    "ref": "rebuild:gen-vr-05-hidden-word-21",
-   "verdict": "REFUSE",
-   "reason": "The mechanics are correct, and the cider fault is fixed. date appears once, crossing exactly one join (an|d + ate). toad is absent; its closest run is 'toas', one letter off. rank sits whole inside 'drank' and crosses no join. 'hist' crosses a join (h|is + t|oast), but it is not an ordinary word and not an option, so it is no second answer. What breaks: date is already the key of the live row 01, 'Dad ate the last plum.', where it is also built from a d-ending word plus 'ate'. The new sentence also opens with 'Dad'. A child working through the door meets the same answer, made the same way, under the same opening word twice, which the brief rules out. It needs a key not used elsewhere in vr-05. Keys already in use: date, hero, stop, band, gone, song, item, raid, lamb, them, sand, hand, farm, rose, tent, pear, kind, moth, ring, chin, plan, very, nose, care."
+   "verdict": "ATTEST",
+   "reason": "Both earlier faults are fixed: there is no alcohol, and the key no longer repeats row 01. Joined 'thesofastayedinthehall': fast appears once, crossing exactly one join (so|fa + st|ayed). tall is absent; its closest run is 'hall', one letter off, and no run is closer. stay sits whole inside 'stayed', appears once and crosses no join. None of the other four-letter runs that cross a join is an ordinary word (thes, heso, esof, ofas, asta, yedi, edin, dint, inth, nthe, theh, heha, ehal), so there is no second answer. fast, tall and stay appear nowhere else in vr-05 as a key or option. The door's other keys are date, hero, stop, band, gone, song, item, raid, lamb, them, sand, hand, farm, rose, tent, pear, kind, moth, ring, chin, plan, very, nose, care."
   }
  ],
  "rows": [
   {
-   "itemId": "gen-vr-05-hidden-word-08",
-   "verdict": "SIGN",
-   "reason": "Checked: key once across one join, and no distractor crosses any join. The almost-letters value is one off an on-row run; the single-word-only value is whole inside one word. Read as a child, 'My extra idea helped the team.' is natural British English, 6 words. 'aide' is not a defensible second answer."
-  },
-  {
-   "itemId": "gen-vr-05-hidden-word-12",
-   "verdict": "SIGN",
-   "reason": "Checked: key once across one join, and no distractor crosses any join. The almost-letters value is one off an on-row run; the single-word-only value is whole inside one word. Read as a child, 'We ate fish and chips on the beach.' is natural British English, 8 words."
-  },
-  {
-   "itemId": "gen-vr-05-hidden-word-20",
-   "verdict": "SIGN",
-   "reason": "Checked: key once across one join, and no distractor crosses any join. The almost-letters value is one off an on-row run; the single-word-only value is whole inside one word. Read as a child, 'We watch insects climb the wall.' is natural British English, 6 words, and every word is familiar."
-  },
-  {
    "itemId": "gen-vr-05-hidden-word-21",
-   "verdict": "HOLD",
-   "reason": "The row is correct on its own terms: 'Dad drank tea and ate his toast.' is natural, 7 words, and the key, distractors and joins all check, with 'hist' not a second answer. But its key, date, repeats the key of live row 01, which uses the same Dad/'ate' construction. Re-key it to a word not used elsewhere in the door."
+   "verdict": "SIGN",
+   "reason": "Checked: key once across one join, no distractor across any join, almost-letters one off an on-row run, single-word-only whole inside one word, and the key is unique in the door. Read as a child, 'The sofa stayed in the hall.' is natural British English, 6 words, all familiar, and it does not open with 'Dad'. Its two distractors play different roles (one only nearly there, one inside a single word), so no pattern gives the key away."
   }
  ]
 }

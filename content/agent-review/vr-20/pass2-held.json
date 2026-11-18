@@ -2,129 +2,13 @@
  "door": "vr-20",
  "mode": "APPLIED",
  "landed": [
-  "gen-vr-20-complete-the-word-07",
-  "gen-vr-20-complete-the-word-19",
-  "gen-vr-20-complete-the-word-02",
-  "gen-vr-20-complete-the-word-03",
-  "gen-vr-20-complete-the-word-09",
-  "gen-vr-20-complete-the-word-13",
-  "gen-vr-20-complete-the-word-15",
-  "gen-vr-20-complete-the-word-16",
-  "gen-vr-20-complete-the-word-22",
-  "gen-vr-20-complete-the-word-25"
+  "gen-vr-20-complete-the-word-04",
+  "gen-vr-20-complete-the-word-20",
+  "gen-vr-20-complete-the-word-10",
+  "gen-vr-20-complete-the-word-12",
+  "gen-vr-20-complete-the-word-24",
+  "gen-vr-20-complete-the-word-08",
+  "gen-vr-20-complete-the-word-17"
  ],
- "held": [
-  {
-   "itemId": "gen-vr-20-complete-the-word-04",
-   "gateFaults": [],
-   "unattested": [
-    {
-     "ref": "seat:gen-vr-20-complete-the-word-04-opt2",
-     "verdict": "REFUSE",
-     "reason": "Yes, this blurs the two tags. The gap is an unstressed syllable, so any vowel in it is read as the same weak schwa: GARDAN read aloud sounds like the real word (compare Morgan, organ). This seat is therefore a second sound-alike under a common-letter label. The common-letter story ('drops it in without reading the word back') does not produce this mistake, because reading it back would not catch it, and the childHint 'Try your letter in the gap and read the whole word' would send the child to a check that passes. A consonant was dead on sight (round 1) and every vowel reduces here, so no live common-letter distractor exists for this gap. Either retag this seat vr20-sound-alike (the row then tests spelling knowledge alone, with two sound-alike distractors) or rebuild the row on a word whose gap is stressed."
-    }
-   ],
-   "row": {
-    "itemId": "gen-vr-20-complete-the-word-04",
-    "verdict": "HOLD",
-    "reason": "Common-letter seat refused: GARDAN sounds as right as the tagged sound-alike, so the row has two sound-alike distractors and one of them carries the wrong tag and the wrong hint. The key is the only real word on the A-Z scan of the gap (/usr/share/dict/words). The row can sign once the tags are true: retag, or rebuild on a word with a stressed gap."
-   }
-  },
-  {
-   "itemId": "gen-vr-20-complete-the-word-20",
-   "gateFaults": [],
-   "unattested": [
-    {
-     "ref": "seat:gen-vr-20-complete-the-word-20-opt2",
-     "verdict": "REFUSE",
-     "reason": "Yes, this blurs the two tags. The gap is an unstressed syllable, so any vowel in it is read as the same weak schwa: CARPAT read aloud sounds like the real word (compare carat). This seat is therefore a second sound-alike under a common-letter label. The common-letter story ('drops it in without reading the word back') does not produce this mistake, because reading it back would not catch it, and the childHint 'Try your letter in the gap and read the whole word' would send the child to a check that passes. A consonant was dead on sight (round 1) and every vowel reduces here, so no live common-letter distractor exists for this gap. Either retag this seat vr20-sound-alike (the row then tests spelling knowledge alone, with two sound-alike distractors) or rebuild the row on a word whose gap is stressed."
-    }
-   ],
-   "row": {
-    "itemId": "gen-vr-20-complete-the-word-20",
-    "verdict": "HOLD",
-    "reason": "Common-letter seat refused: CARPAT sounds as right as the tagged sound-alike, so the row has two sound-alike distractors and one of them carries the wrong tag and the wrong hint. The key is the only real word on the A-Z scan of the gap (/usr/share/dict/words). The row can sign once the tags are true: retag, or rebuild on a word with a stressed gap."
-   }
-  },
-  {
-   "itemId": "gen-vr-20-complete-the-word-10",
-   "gateFaults": [],
-   "unattested": [
-    {
-     "ref": "rebuild:gen-vr-20-complete-the-word-10",
-     "verdict": "REFUSE",
-     "reason": "The common-letter seat A gives SPADER, which is a dictionary word ('one who spades', Webster's 2nd), so the execution's 'which is not a word' is false. Under the standard that the key must be the ONLY correct option under every reading, A cannot stand, even though no child would know the word. SPYDER is a sound key-vs-Y contrast (Y for long I) and is fine. Replace A with a vowel that forms no word, e.g. O (SPODER) or U (SPUDER), both absent from the scan."
-    }
-   ],
-   "row": {
-    "itemId": "gen-vr-20-complete-the-word-10",
-    "verdict": "HOLD",
-    "reason": "Rebuild refused: The common-letter seat A gives SPADER, which is a dictionary word ('one who spades', Webster's 2nd), so the execution's 'which is not a word' is false."
-   }
-  },
-  {
-   "itemId": "gen-vr-20-complete-the-word-12",
-   "gateFaults": [],
-   "unattested": [
-    {
-     "ref": "seat:gen-vr-20-complete-the-word-12-opt2",
-     "verdict": "REFUSE",
-     "reason": "Yes, this blurs the two tags. The gap is an unstressed syllable, so any vowel in it is read as the same weak schwa: BUTTAN read aloud sounds like the real word (compare Morgan, woman). This seat is therefore a second sound-alike under a common-letter label. The common-letter story ('drops it in without reading the word back') does not produce this mistake, because reading it back would not catch it, and the childHint 'Try your letter in the gap and read the whole word' would send the child to a check that passes. A consonant was dead on sight (round 1) and every vowel reduces here, so no live common-letter distractor exists for this gap. Either retag this seat vr20-sound-alike (the row then tests spelling knowledge alone, with two sound-alike distractors) or rebuild the row on a word whose gap is stressed."
-    }
-   ],
-   "row": {
-    "itemId": "gen-vr-20-complete-the-word-12",
-    "verdict": "HOLD",
-    "reason": "Common-letter seat refused: BUTTAN sounds as right as the tagged sound-alike, so the row has two sound-alike distractors and one of them carries the wrong tag and the wrong hint. The key is the only real word on the A-Z scan of the gap (/usr/share/dict/words). The row can sign once the tags are true: retag, or rebuild on a word with a stressed gap."
-   }
-  },
-  {
-   "itemId": "gen-vr-20-complete-the-word-24",
-   "gateFaults": [],
-   "unattested": [
-    {
-     "ref": "seat:gen-vr-20-complete-the-word-24-opt2",
-     "verdict": "REFUSE",
-     "reason": "Yes, this blurs the two tags. The gap is an unstressed syllable, so any vowel in it is read as the same weak schwa: VELVOT read aloud sounds like the real word (compare carrot, parrot). This seat is therefore a second sound-alike under a common-letter label. The common-letter story ('drops it in without reading the word back') does not produce this mistake, because reading it back would not catch it, and the childHint 'Try your letter in the gap and read the whole word' would send the child to a check that passes. A consonant was dead on sight (round 1) and every vowel reduces here, so no live common-letter distractor exists for this gap. Either retag this seat vr20-sound-alike (the row then tests spelling knowledge alone, with two sound-alike distractors) or rebuild the row on a word whose gap is stressed."
-    }
-   ],
-   "row": {
-    "itemId": "gen-vr-20-complete-the-word-24",
-    "verdict": "HOLD",
-    "reason": "Common-letter seat refused: VELVOT sounds as right as the tagged sound-alike, so the row has two sound-alike distractors and one of them carries the wrong tag and the wrong hint. The key is the only real word on the A-Z scan of the gap (/usr/share/dict/words). The row can sign once the tags are true: retag, or rebuild on a word with a stressed gap."
-   }
-  },
-  {
-   "itemId": "gen-vr-20-complete-the-word-08",
-   "gateFaults": [],
-   "unattested": [
-    {
-     "ref": "seat:gen-vr-20-complete-the-word-08-opt2",
-     "verdict": "REFUSE",
-     "reason": "Yes, this blurs the two tags. The gap is an unstressed syllable, so any vowel in it is read as the same weak schwa: PENCOL read aloud sounds like the real word (compare pistol, symbol). This seat is therefore a second sound-alike under a common-letter label. The common-letter story ('drops it in without reading the word back') does not produce this mistake, because reading it back would not catch it, and the childHint 'Try your letter in the gap and read the whole word' would send the child to a check that passes. A consonant was dead on sight (round 1) and every vowel reduces here, so no live common-letter distractor exists for this gap. Either retag this seat vr20-sound-alike (the row then tests spelling knowledge alone, with two sound-alike distractors) or rebuild the row on a word whose gap is stressed."
-    }
-   ],
-   "row": {
-    "itemId": "gen-vr-20-complete-the-word-08",
-    "verdict": "HOLD",
-    "reason": "Common-letter seat refused: PENCOL sounds as right as the tagged sound-alike, so the row has two sound-alike distractors and one of them carries the wrong tag and the wrong hint. The key is the only real word on the A-Z scan of the gap (/usr/share/dict/words) (PENCEL with E exists in Webster but E is not offered). The row can sign once the tags are true: retag, or rebuild on a word with a stressed gap."
-   }
-  },
-  {
-   "itemId": "gen-vr-20-complete-the-word-17",
-   "gateFaults": [],
-   "unattested": [
-    {
-     "ref": "rebuild:gen-vr-20-complete-the-word-17",
-     "verdict": "REFUSE",
-     "reason": "The sound-alike seat I gives SIRUP, a recognised variant spelling of syrup (Webster's 2nd; Merriam-Webster still lists 'sirup'). The option the row calls a misspelling is therefore a correct spelling under one reading, which breaks the 'key is the only correct option' rule, and the execution's 'which is not a word' is false. SORUP (common letter O) is sound. Rebuild on another word, or use a sound-alike that forms no variant spelling."
-    }
-   ],
-   "row": {
-    "itemId": "gen-vr-20-complete-the-word-17",
-    "verdict": "HOLD",
-    "reason": "Rebuild refused: The sound-alike seat I gives SIRUP, a recognised variant spelling of syrup (Webster's 2nd; Merriam-Webster still lists 'sirup')."
-   }
-  }
- ]
+ "held": []
 }
