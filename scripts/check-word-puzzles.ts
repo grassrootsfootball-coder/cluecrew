@@ -9,11 +9,11 @@
  * Same policy as the other database gates: a LIVE item fails the build, a
  * DRAFT one is reported as backlog.
  */
-import { readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import {
   checkLabelCollision,
-  makeLexicon,
   solveHiddenWord,
   solveMakeAWord,
   deriveSeries,
@@ -25,9 +25,10 @@ import {
 } from '@cluecrew/core';
 import { prisma } from '../packages/db/src/index';
 import { requirePopulation } from './lib/population';
+import { loadWordPuzzleLexicon, WORD_PUZZLE_WORDLIST as WORDLIST } from './lib/word-puzzle-lexicon';
 
-const WORDLIST = resolve(import.meta.dirname, '../content/wordlists/en-lower.txt');
-const isWord = makeLexicon(readFileSync(WORDLIST, 'utf8').split('\n').filter(Boolean));
+// Base words from en-lower.txt; rule-made inflections need SUBTLEX-UK evidence (R1021).
+const { isWord, evidence: inflectionEvidence } = loadWordPuzzleLexicon();
 
 /**
  * THREE OUTCOMES, adopted from Cowork's model (David's ruling, 2026-08-02).
@@ -91,6 +92,26 @@ const reports: WordPuzzleFailure[] = [];
  * lifts when the item is fixed and this gate stops setting it.
  */
 const defects = new Map<string, string>();
+
+/**
+ * READ-ONLY MODE (2026-11-18, for R149 on a gate that WRITES). `--dry-run` computes every finding
+ * and every flag it WOULD raise or lift, prints them, and writes nothing to the database. Without
+ * it a before/after measurement of a lexicon change is impossible: the before-run would already
+ * have moved the flags the after-run is meant to be compared against.
+ *
+ * `--snapshot <file>` writes every finding per item in the `gate:baseline` shape
+ * (`{ itemId: ["rule|detail", ...] }`), so `pnpm gate:baseline diff` reads it row for row, plus a
+ * sidecar `<file>.inputs.json` holding a digest of each item's stem, options and status. The DB is
+ * shared with other sessions; if an input digest moved between two snapshots, that row's diff is
+ * the DATA, not the instrument, and must be read as such.
+ */
+const argv = process.argv.slice(2);
+const DRY_RUN = argv.includes('--dry-run');
+const snapshotAt = argv.indexOf('--snapshot');
+const SNAPSHOT = snapshotAt >= 0 ? argv[snapshotAt + 1] : undefined;
+if (snapshotAt >= 0 && !SNAPSHOT) throw new Error('--snapshot needs a file path');
+const allFindings: Record<string, string[]> = {};
+const inputDigests: Record<string, string> = {};
 
 async function main(): Promise<void> {
   const items = await prisma.item.findMany({
@@ -406,6 +427,17 @@ async function main(): Promise<void> {
       }
     }
     for (const f of found) (SOFT_RULES.has(f.rule) ? reports : bucket).push(f);
+    allFindings[item.id] = found.map((f) => `${f.rule}|${f.detail}`).sort();
+    inputDigests[item.id] = createHash('sha256')
+      .update(JSON.stringify({ status: item.status, stem: item.stem, options: item.options.map((o) => [o.id, o.content, o.isCorrect, o.misconceptionId]) }))
+      .digest('hex').slice(0, 16);
+  }
+
+  if (SNAPSHOT) {
+    const path = resolve(SNAPSHOT);
+    writeFileSync(path, JSON.stringify(allFindings, null, 1));
+    writeFileSync(`${path}.inputs.json`, JSON.stringify(inputDigests, null, 1));
+    console.log(`snapshot: ${Object.keys(allFindings).length} item(s) -> ${path} (+ .inputs.json)`);
   }
 
   // Reconcile the flag with what the gate just found: set it on every defect,
@@ -417,16 +449,19 @@ async function main(): Promise<void> {
   let lifted = 0;
   for (const [id, detail] of defects) {
     if (flagged.some((row) => row.id === id)) continue;
-    await prisma.item.update({ where: { id }, data: { answerFlaggedAt: now, answerFlagNote: detail } });
+    if (DRY_RUN) console.log(`  [dry-run] WOULD RAISE ${id}: ${detail}`);
+    else await prisma.item.update({ where: { id }, data: { answerFlaggedAt: now, answerFlagNote: detail } });
     raised += 1;
   }
   for (const row of flagged) {
     if (defects.has(row.id)) continue;
-    await prisma.item.update({ where: { id: row.id }, data: { answerFlaggedAt: null, answerFlagNote: null } });
+    if (DRY_RUN) console.log(`  [dry-run] WOULD LIFT ${row.id}`);
+    else await prisma.item.update({ where: { id: row.id }, data: { answerFlaggedAt: null, answerFlagNote: null } });
     lifted += 1;
   }
+  if (DRY_RUN) console.log(`DRY RUN — nothing written. ${raised} flag(s) would be raised, ${lifted} lifted.`);
 
-  console.log(`Word-puzzle gate: ${checked} rule-based item(s) solved against ${WORDLIST.split('/').pop()}.`);
+  console.log(`Word-puzzle gate: ${checked} rule-based item(s) solved against ${WORDLIST.split('/').pop()}; inflections judged by ${inflectionEvidence.source}.`);
   console.log(
     `Unanswerable items flagged: ${defects.size} (${raised} newly raised, ${lifted} lifted after a fix). ` +
       'A flagged item cannot reach REVIEWED by any route.',

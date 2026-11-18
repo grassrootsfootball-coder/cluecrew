@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
   checkLabelCollision,
+  evidenceFromLists,
   makeLexicon,
   movableLetters,
   deriveSeries,
@@ -17,7 +18,8 @@ import {
 const isWord = makeLexicon([
   'pare', 'stile', 'spar', 'tile', 'spare', 'star', 'stay', 'army', 'shop', 'date', 'hero',
   'cans', 'sofa', 'plum', 'last', 'ate', 'dad',
-]);
+], evidenceFromLists({ noun: ['tile', 'spar', 'star', 'shop', 'date', 'hero', 'plum'] }));
+const noEvidence = evidenceFromLists({});
 
 describe('the lexicon recognises regular inflections the base list omits', () => {
   it('accepts "tiles" from "tile"', () => {
@@ -27,6 +29,63 @@ describe('the lexicon recognises regular inflections the base list omits', () =>
   });
   it('does not accept a non-word', () => {
     expect(isWord('zqx')).toBe(false);
+  });
+});
+
+/**
+ * R1021 (2026-11-18). TIRED/LARGE, key R: TIE + D is TIED, LARGE + R is LARGER — correct. The old
+ * rules had no comparative and accepted any base + "d", so the gate found only D (TIRE/LARGED),
+ * called the key underivable and flagged a correct row with a flag nothing clears.
+ */
+describe('inflections need part-of-speech evidence (R1021)', () => {
+  const lex = makeLexicon(
+    ['tired', 'tire', 'tie', 'large', 'big', 'happy', 'walk', 'stop', 'try', 'table'],
+    evidenceFromLists({
+      noun: ['tire', 'table'],
+      verb: ['tie', 'walk', 'stop', 'try'],
+      adjective: ['large', 'big', 'happy'],
+    }, ['tabled']),
+  );
+
+  it('accepts LARGER and LARGEST — the comparative of an adjective', () => {
+    expect(lex('larger')).toBe(true);
+    expect(lex('largest')).toBe(true);
+  });
+
+  it('rejects LARGED and LARGING — large is not a verb', () => {
+    expect(lex('larged')).toBe(false);
+    expect(lex('larging')).toBe(false);
+  });
+
+  it('still accepts verb inflections: TIED, WALKED, STOPPED, TRIED, STOPPING', () => {
+    for (const w of ['tied', 'walked', 'stopped', 'tried', 'stopping']) expect(lex(w)).toBe(true);
+  });
+
+  it('handles the comparative shapes a child meets: BIGGER, BIGGEST, HAPPIER, HAPPIEST', () => {
+    for (const w of ['bigger', 'biggest', 'happier', 'happiest']) expect(lex(w)).toBe(true);
+  });
+
+  it('does not make a comparative of a noun or a verb: TABLER, WALKER-as-comparative', () => {
+    expect(lex('tabler')).toBe(false);
+    expect(lex('walker')).toBe(false);
+  });
+
+  it('a form the evidence ATTESTS passes even when its base is mis-tagged: TABLED', () => {
+    // table is tagged noun only here, as `tire` is in SUBTLEX-UK; the attested form rescues it.
+    expect(lex('tabled')).toBe(true);
+  });
+
+  it('solves TIRED/LARGE to the key R only — no LARGED', () => {
+    const solutions = solveMoveLetter('TIRED', 'LARGE', lex);
+    expect(movableLetters(solutions)).toEqual(['R']);
+    expect(solutions).toEqual([{ letter: 'R', from: 'TIED', to: 'LARGER' }]);
+  });
+
+  it('with no evidence, no rule-made form is a word — evidence is required, not optional', () => {
+    const bare = makeLexicon(['large', 'tie'], noEvidence);
+    expect(bare('larger')).toBe(false);
+    expect(bare('tied')).toBe(false);
+    expect(bare('large')).toBe(true);
   });
 });
 
@@ -132,7 +191,7 @@ describe('an item never draws its symbols from the option-label range', () => {
 });
 
 describe('punctuation does not block a join (David, 2026-08-02)', () => {
-  const lex = makeLexicon(['rest', 'trip', 'plum', 'forest']);
+  const lex = makeLexicon(['rest', 'trip', 'plum', 'forest'], noEvidence);
 
   it('finds a word across a hyphen', () => {
     // "for-est" hides REST across the hyphen. A child scans the line as text,
@@ -152,7 +211,7 @@ describe('punctuation does not block a join (David, 2026-08-02)', () => {
 });
 
 describe('insert-letter: one letter finishes the first word and starts the second', () => {
-  const lex = makeLexicon(['plan', 'plant', 'plans', 'tail', 'sail', 'clean', 'clear', 'nose', 'rose']);
+  const lex = makeLexicon(['plan', 'plant', 'plans', 'tail', 'sail', 'clean', 'clear', 'nose', 'rose'], noEvidence);
 
   it('finds every OFFERED letter that completes both words', () => {
     // plan(?)/(?)ail with t, s, r offered: t→plant/tail, s→plans/sail both work.

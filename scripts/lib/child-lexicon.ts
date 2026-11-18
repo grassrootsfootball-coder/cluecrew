@@ -98,6 +98,19 @@ export interface ChildLexicon {
    * SUBTLEX's contents are one indistinguishable difference (Annie's 225th).
    */
   zipfRaw: (word: string) => number | null;
+  /**
+   * The parts of speech the corpus records for this exact spelling, each with its COUNT (AllPoS /
+   * AllPoSFreq, lower-case), with `name` removed — at any frequency, not only above the cut. Empty
+   * when the corpus has none. Counts, not a set: SUBTLEX tags `old` as a verb once in ~119,000,
+   * and a reader that took the label alone would make "olded" a word (R1021). The caller decides
+   * what share is evidence.
+   */
+  partsOfSpeechCounts: (word: string) => ReadonlyMap<string, number>;
+  /**
+   * The spelling is in the corpus, passes the corpus's own spell check (Spell_check is not `X`)
+   * and has some non-name usage. "larged" is in SUBTLEX-UK three times and fails this.
+   */
+  spellChecked: (word: string) => boolean;
   size: number;
   namesExcluded: number;
   cut: number;
@@ -128,8 +141,9 @@ export function loadChildLexicon(): ChildLexicon {
   const iAll = header.indexOf('AllPoS');
   const iAllF = header.indexOf('AllPoSFreq');
   const iFreq = header.indexOf('FreqCount');
-  if (iWord < 0 || iZipf < 0 || iCBBC < 0 || iPoS < 0 || iAll < 0 || iAllF < 0 || iFreq < 0) {
-    throw new Error(`the frequency file does not carry the columns this reads: Spelling / LogFreq(Zipf) / LogFreqCBBC(Zipf) / DomPoS / AllPoS / AllPoSFreq / FreqCount. Found: ${header.join(', ')}`);
+  const iSpell = header.indexOf('Spell_check');
+  if (iWord < 0 || iZipf < 0 || iCBBC < 0 || iPoS < 0 || iAll < 0 || iAllF < 0 || iFreq < 0 || iSpell < 0) {
+    throw new Error(`the frequency file does not carry the columns this reads: Spelling / LogFreq(Zipf) / LogFreqCBBC(Zipf) / DomPoS / AllPoS / AllPoSFreq / FreqCount / Spell_check. Found: ${header.join(', ')}`);
   }
 
   /**
@@ -162,6 +176,8 @@ export function loadChildLexicon(): ChildLexicon {
   const cbbc = new Map<string, number>();
   const raw = new Map<string, number>();       // the file's own Zipf, all senses
   const excluded = new Map<string, number>();  // cleared the cut on all senses, fails on non-name ones
+  const posOf = new Map<string, Map<string, number>>(); // AllPoS minus `name` -> count, any frequency
+  const checked = new Set<string>();            // Spell_check is not X, and some non-name usage
   let parsed = 0, corpusTotal = 0;
   interface Rec { w: string; z: number; c: number; nonName: number }
   const recs: Rec[] = [];
@@ -184,6 +200,17 @@ export function loadChildLexicon(): ChildLexicon {
     }
     if (Number.isFinite(z)) raw.set(w, z);
     if (Number.isFinite(c)) cbbc.set(w, c);
+    if (labels.length === counts.length) {
+      labels.forEach((lab, j) => {
+        const l = lab.trim().toLowerCase();
+        if (!l || l === 'name' || !Number.isFinite(counts[j])) return;
+        const m = posOf.get(w) ?? new Map<string, number>();
+        m.set(l, (m.get(l) ?? 0) + counts[j]!);
+        posOf.set(w, m);
+      });
+    }
+    const spell = (f[iSpell] ?? '').trim();
+    if (spell && spell !== 'X' && nonName > 0) checked.add(w);
     recs.push({ w, z, c, nonName });
   }
   if (corpusTotal <= 0) throw new Error('the corpus total summed to zero — a Zipf cannot be recomputed without it');
@@ -212,6 +239,8 @@ export function loadChildLexicon(): ChildLexicon {
     },
     isProperName: (w) => { const k = w.trim().toUpperCase(); return (main.get(k) ?? -Infinity) < CHILD_CUT_ZIPF && (raw.get(k) ?? -Infinity) >= CHILD_CUT_ZIPF; },
     zipfRaw: (w) => raw.get(w.trim().toUpperCase()) ?? null,
+    partsOfSpeechCounts: (w) => posOf.get(w.trim().toUpperCase()) ?? new Map(),
+    spellChecked: (w) => checked.has(w.trim().toUpperCase()),
     size: main.size,
     namesExcluded: names.size,
     cut: CHILD_CUT_ZIPF,

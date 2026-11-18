@@ -10,7 +10,6 @@ import {
   bandTier,
   categoryTier as coreCategoryTier,
   deductionTier as coreDeductionTier,
-  makeLexicon,
   vocabTierFrom,
 } from '@cluecrew/core';
 
@@ -37,20 +36,12 @@ try {
   /* proxy leans on length alone */
 }
 
-/**
- * The dictionary the insert-letter constructor uses to COMPUTE distractors that
- * complete only one word (so the tag is true and no distractor is a second
- * answer). Same list the word-puzzle gate uses, so generator and gate agree.
+/*
+ * `isWord` lived here until R1021 (2026-11-18). Nothing imported it — the insert-letter
+ * constructor it was written for no longer reads it — and it built the word-puzzle lexicon with
+ * no inflection evidence, which is the fault R1021 closes. The gate's lexicon is now
+ * `scripts/lib/word-puzzle-lexicon.ts`; a generator that needs it reads it from there.
  */
-export const isWord = makeLexicon(
-  (() => {
-    try {
-      return readFileSync(resolve(CONTENT, 'wordlists/en-lower.txt'), 'utf8').split('\n').filter(Boolean);
-    } catch {
-      return [];
-    }
-  })(),
-);
 
 /**
  * THE COMMON-USAGE FLOOR (reviewer, 2026-08-02). The SAME list that splits

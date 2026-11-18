@@ -30,6 +30,17 @@
  * rather than under-reporting it. For a single-answer gate that is the safe
  * direction — a false ambiguity costs a reviewer a minute, a missed one costs
  * a child a mark.
+ *
+ * **EXCEPT THAT THIS GATE ALSO WRITES A DEFECT FLAG, AND THERE AN OVER-ACCEPTING
+ * LEXICON IS NOT SAFE (2026-11-18, R1021).** The rules had no part of speech, so
+ * any base + "d" passed: LARGE + D = "larged" was a word, while LARGER — not in
+ * the list, and no comparative rule — was not. TIRED/LARGE (key R → TIED/LARGER)
+ * was therefore reported `key-not-derivable` ("the only valid move is D
+ * (TIRE/LARGED)") and flagged, which blocks publication and has no clearing
+ * path. A false word does not only add a competitor; it can REPLACE the key.
+ * So a rule-made form now needs evidence: the base must carry the inflection's
+ * part of speech in the corpus, or the form itself must be a spell-checked
+ * corpus spelling. See `makeLexicon`.
  */
 
 export interface WordPuzzleFailure {
@@ -44,21 +55,116 @@ export interface WordPuzzleFailure {
   detail: string;
 }
 
-/** A lookup that recognises regular inflections the base list omits. */
-export function makeLexicon(words: Iterable<string>): (candidate: string) => boolean {
+/**
+ * What the lexicon needs to know to judge a RULE-MADE form (R1021). The base
+ * wordlist carries no part of speech, so it cannot tell "tired" (tire, a verb,
+ * + d) from "larged" (large, an adjective, + d). Something else has to.
+ */
+export interface InflectionEvidence {
+  /** Named on every report, so a verdict says what it was measured against. */
+  readonly source: string;
+  /**
+   * The parts of speech the evidence records for a base word, lower-case
+   * ('noun', 'verb', 'adjective', 'adverb', …), names EXCLUDED. Empty when the
+   * evidence records none — never a guess.
+   */
+  partsOfSpeech(base: string): ReadonlySet<string>;
+  /**
+   * The form is itself a spell-checked spelling in the evidence. This rescues a
+   * real form whose base the evidence mis-tags ("tire" is tagged noun-only in
+   * SUBTLEX-UK, but "tired" is attested) without readmitting "larged", which is
+   * in the corpus three times and fails its spell check.
+   */
+  attests(form: string): boolean;
+}
+
+/** Test and fixture evidence from plain lists. Not for gates: a gate reads a corpus. */
+export function evidenceFromLists(
+  byPos: Partial<Record<'noun' | 'verb' | 'adjective' | 'adverb', readonly string[]>>,
+  attested: readonly string[] = [],
+): InflectionEvidence {
+  const pos = new Map<string, Set<string>>();
+  for (const [label, words] of Object.entries(byPos)) {
+    for (const w of words ?? []) {
+      const k = w.toLowerCase();
+      if (!pos.has(k)) pos.set(k, new Set());
+      pos.get(k)!.add(label);
+    }
+  }
+  const seen = new Set(attested.map((w) => w.toLowerCase()));
+  return {
+    source: 'fixture lists',
+    partsOfSpeech: (base) => pos.get(base.toLowerCase()) ?? new Set(),
+    attests: (form) => seen.has(form.toLowerCase()),
+  };
+}
+
+const NOUN_OR_VERB = ['noun', 'verb'] as const;
+const VERB = ['verb'] as const;
+const GRADABLE = ['adjective', 'adverb'] as const;
+
+/** "big" → "bigger": the stem before a suffix ends in a doubled consonant. */
+function undoubled(stem: string): string | null {
+  const n = stem.length;
+  if (n < 3) return null;
+  const last = stem[n - 1]!;
+  return stem[n - 2] === last && !'aeiouy'.includes(last) ? stem.slice(0, -1) : null;
+}
+
+/**
+ * Each regular inflection, the bases it can come from, and the part of speech
+ * that base must carry. The shapes are the ones the old rules accepted, plus
+ * the comparative and superlative (absent before, which is why LARGER was not a
+ * word) and the doubled consonant for -ed/-ing/-er/-est.
+ */
+const INFLECTIONS: ReadonlyArray<{
+  suffix: string;
+  bases: (word: string) => Array<string | null>;
+  pos: readonly string[];
+}> = [
+  // "tiles" is not in the base list; "tile" is. Without this the gate would
+  // miss the very case that prompted it.
+  { suffix: 's', bases: (w) => [w.slice(0, -1)], pos: NOUN_OR_VERB },
+  { suffix: 'es', bases: (w) => [w.slice(0, -2)], pos: NOUN_OR_VERB },
+  { suffix: 'ies', bases: (w) => [`${w.slice(0, -3)}y`], pos: NOUN_OR_VERB },
+  // walk+ed, tie+d, try→tried, stop→stopped. Verbs only: an adjective + d is not a word.
+  { suffix: 'ed', bases: (w) => [w.slice(0, -2), w.slice(0, -1), w.endsWith('ied') ? `${w.slice(0, -3)}y` : null, undoubled(w.slice(0, -2))], pos: VERB },
+  { suffix: 'ing', bases: (w) => [w.slice(0, -3), `${w.slice(0, -3)}e`, undoubled(w.slice(0, -3))], pos: VERB },
+  // tall+er, large+r, happy→happier, big→bigger; and the same for -est.
+  { suffix: 'er', bases: (w) => [w.slice(0, -2), w.slice(0, -1), w.endsWith('ier') ? `${w.slice(0, -3)}y` : null, undoubled(w.slice(0, -2))], pos: GRADABLE },
+  { suffix: 'est', bases: (w) => [w.slice(0, -3), w.slice(0, -2), w.endsWith('iest') ? `${w.slice(0, -4)}y` : null, undoubled(w.slice(0, -3))], pos: GRADABLE },
+];
+
+/**
+ * A lookup that recognises regular inflections the base list omits — but only
+ * where the evidence says the inflection is real (R1021).
+ *
+ * A form in the base list is a word. A form NOT in it is a word only if some
+ * inflection rule maps it to a base that IS in the list, and either
+ *   · the evidence gives that base the rule's part of speech (tie is a verb, so
+ *     "tied"; large is an adjective, so "larger" but not "larged"), or
+ *   · the evidence attests the form itself as a spell-checked spelling.
+ * Evidence is REQUIRED: there is no evidence-free mode, because the evidence-free
+ * mode is the fault this closes.
+ */
+export function makeLexicon(
+  words: Iterable<string>,
+  evidence: InflectionEvidence,
+): (candidate: string) => boolean {
   const base = new Set<string>();
   for (const word of words) base.add(word.toLowerCase());
   return (candidate: string): boolean => {
     const word = candidate.toLowerCase();
     if (word.length < 2) return false;
     if (base.has(word)) return true;
-    // "tiles" is not in the base list; "tile" is. Without this the gate would
-    // miss the very case that prompted it.
-    if (word.endsWith('s') && base.has(word.slice(0, -1))) return true;
-    if (word.endsWith('es') && base.has(word.slice(0, -2))) return true;
-    if (word.endsWith('ies') && base.has(`${word.slice(0, -3)}y`)) return true;
-    if (word.endsWith('ed') && (base.has(word.slice(0, -2)) || base.has(word.slice(0, -1)))) return true;
-    if (word.endsWith('ing') && (base.has(word.slice(0, -3)) || base.has(`${word.slice(0, -3)}e`))) return true;
+    for (const rule of INFLECTIONS) {
+      if (!word.endsWith(rule.suffix)) continue;
+      for (const stem of rule.bases(word)) {
+        if (!stem || stem.length < 2 || !base.has(stem)) continue;
+        const pos = evidence.partsOfSpeech(stem);
+        if (rule.pos.some((p) => pos.has(p)) || evidence.attests(word)) return true;
+      }
+    }
     return false;
   };
 }

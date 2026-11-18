@@ -28459,3 +28459,65 @@ vr-05 — signed rows carry other real words at joins that are not options. **In
 `check:word-puzzles`' lexicon lacks comparatives (LARGER) and accepts adjective+d (LARGED), so it
 flagged a correct row unanswerable with no clearing path; worked round by rebuilding the row, the
 fix queued separately under R149.
+
+## R1022 — A rule-made word needs evidence: the word-puzzle lexicon judges inflections by part of speech (2026-11-18)
+
+**THE FAULT, AS R1021 RECORDED IT.** `makeLexicon` (packages/core/src/word-puzzles.ts) recognised
+inflections by suffix alone. It had no comparative or superlative, so LARGER was not a word; and its
+`-ed` rule accepted `base.has(word.slice(0, -1))`, so ANY base + "d" was — LARGE + D = "larged". On
+`gen-vr-08-move-letter-19` (TIRED/LARGE, key R → TIED/LARGER, which is correct) the gate found only
+D (TIRE/LARGED), reported `key-not-derivable` and set `answerFlaggedAt`, which blocks publication and
+has no clearing path. The row was rebuilt to ship the door (IDEAL/PLAN); the instrument is fixed here.
+
+**THE FILE'S OWN DEFENCE OF OVER-ACCEPTANCE WAS HALF TRUE.** Its header argued that a permissive
+lexicon errs the safe way: more words means more reported ambiguity, and a false ambiguity costs a
+reviewer a minute. That holds for the AMBIGUOUS/REVIEW grading. **It does not hold for the defect
+flag, because a false word can REPLACE the key rather than join it** — one false word and one missing
+word together turned a correct row into "unanswerable", in the one channel nothing clears. An
+over-accepting instrument is only safe where its errors can only add.
+
+**THE FIX — EVIDENCE, NOT A WIDER LIST.** The base list (`en-lower.txt`) still decides what EXISTS;
+it was not unioned with the corpus, so the word set moves only where an inflection rule fires.
+A form not in the list is a word only if a rule maps it to a listed base AND either:
+- **the base carries the inflection's part of speech** in SUBTLEX-UK (`-ed`/`-ing` need a verb;
+  `-er`/`-est` an adjective or adverb; `-s`/`-es`/`-ies` a noun or verb), at **at least 1% of the
+  base's non-name tagged usage** (`POS_SHARE_FLOOR`) — SUBTLEX tags `old` a verb once in 118,978, and
+  the label alone made "olded" a word; or
+- **the form itself is a spell-checked corpus spelling** (`Spell_check` not `X`, non-name use), which
+  rescues a real form on a mis-tagged base (`tire` is noun-only in SUBTLEX; "tired" is attested) and
+  still refuses "larged", which IS in the corpus, three times, and fails its spell check.
+
+Evidence is a REQUIRED argument to `makeLexicon`: there is no evidence-free mode, because the
+evidence-free mode was the fault. `scripts/lib/word-puzzle-lexicon.ts` builds the gate's lexicon and
+**refuses to return one that fails its canaries** (larger, largest, tied, tired, tiles, bigger,
+happier, stopped, walked are words; larged, larging, olded are not) — a corpus read that went blind
+would otherwise make every rule-made form a non-word and start raising flags through the same
+no-clearing-path channel. The canary fired once during the build, on "olded"; that is how the share
+floor came to exist. `packages/db/prisma/difficulty.ts` exported an `isWord` built the old way;
+nothing imported it (scanned, not recalled), so it was retired rather than wired to the corpus.
+
+**R149, AND WHAT THE REQUESTED BASELINE COULD NOT SEE.** `pnpm gate:baseline` snapshots
+`checkItemChildFacing`, which does not read this lexicon — **run as instructed it would have reported
+an instrument change it was blind to.** It was captured before and after anyway: 24 rows newly pass,
+all `gen-vr-13-make-a-word-*` sentence-length, and **all 24 had their stem change between the two
+captures** (another session rewriting vr-13 prompts in the shared DB) — the data moved, not this
+instrument. So `check:word-puzzles` gained `--dry-run` (computes every flag it would raise or lift,
+writes none) and `--snapshot <file>` (findings per item in the `gate:baseline` shape, plus a digest of
+each row's inputs so a moved row is distinguishable from a moved instrument). Before and after, 305
+items, same inputs on every word-puzzle row whose findings moved:
+- `gen-vr-08-move-letter-24` (LIVE) — NEWLY PASS. Lost `ambiguous-outcome` "SLICK/NOW: one letter S
+  but 2 valid results — LICK/SNOW, LICK/NOWS". NOW is an adverb, NOWS is not a word. Correct.
+- `gen-vr-05-hidden-word-07` (LIVE) — CHANGED. "Do not sit empty-handed." hid 4 words, now 3: NOTS
+  dropped (NOT is an adverb). Still AMBIGUOUS on SITE and TEMP; its serving failure is unchanged.
+- **Flags: 0 would be raised, 0 lifted, before and after.** Serving failures 15 → 15, same rows.
+
+**THE MOTIVATING ROW IS NOT IN THE MEASURED POPULATION.** By the time the baseline ran, row 19 had
+already been rebuilt, so no DB diff can show the fix on the case that prompted it. It is shown
+directly instead: against the real wordlist, `solveMoveLetter('TIRED', 'LARGE')` returned
+`[D: TIRE/LARGED]` before and `[R: TIED/LARGER]` after; and a core test pins it. **A clean diff on a
+population that no longer holds the case is not evidence the case is fixed** — the probe is.
+
+**WHAT REMAINS, NAMED.** "larges" still passes: it is a UKUS spell-checked SUBTLEX spelling (7 uses),
+so it enters by attestation — dictionary-only, it can reach REVIEW, never AMBIGUOUS. Other lexicons in
+the estate are separate instruments and untouched: `land-door`/`land-proposals` use the child lexicon
+directly, `check-key-performs-stem` and `check-carrier-performs-entry` read plain word sets.
