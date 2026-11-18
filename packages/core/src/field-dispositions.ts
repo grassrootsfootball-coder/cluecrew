@@ -210,6 +210,16 @@ export const FIELD_DISPOSITIONS: Record<string, FieldDisposition> = {
   'explanation.unplacedBySplit.why': 'staff', 'explanation.unplacedBySplit.split': 'staff',
   'explanation.unplacedBySplit.state': 'staff', 'explanation.unplacedBySplit.ruledBy': 'staff',
   'explanation.unplacedBySplit.authority': 'staff',
+
+  // --- STAFF, classified 2026-11-18 under the agent-review regime (R1021): the reviewer's own
+  // passage measurement, attached to the rows so it "arrives with them when they are read" (R510).
+  // Read by reviewers, never rendered to a child; NOT_A_READING_AGE travels with it (R350). ---
+  'explanation.passageReadingContext.why': 'staff', 'explanation.passageReadingContext.note': 'staff',
+  'explanation.passageReadingContext.readBy': 'staff', 'explanation.passageReadingContext.readOn': 'staff',
+  'explanation.passageReadingContext.passage': 'staff',
+  'explanation.passageReadingContext.NOT_A_READING_AGE': 'staff',
+  // A quotation declaration's own reason, the sibling of its `rule` and `passageRef` (her 156th). ---
+  'explanation.quotes[].why': 'staff',
 };
 
 /**
