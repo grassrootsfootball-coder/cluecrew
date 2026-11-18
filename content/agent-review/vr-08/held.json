@@ -1,0 +1,287 @@
+{
+ "door": "vr-08",
+ "mode": "APPLIED",
+ "landed": 25,
+ "signed": 14,
+ "seatsHeld": [
+  {
+   "itemId": "gen-vr-08-move-letter-02",
+   "optionId": "gen-vr-08-move-letter-02-opt2",
+   "value": "L",
+   "tag": "vr-move-letter-first-word-invalid",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "Taking L out of BLEND leaves BEND, which is a real word, so the first word does not break; the tag's first-word fault is not present here. RIDGE with L makes no word, so the second word is the one that fails. Seat belongs to the other tag.",
+   "reviewer": "AGREE",
+   "reviewerReason": null,
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-02",
+   "optionId": "gen-vr-08-move-letter-02-opt3",
+   "value": "D",
+   "tag": "vr-move-letter-second-word-invalid",
+   "drafter": "EXECUTES",
+   "drafterReason": null,
+   "reviewer": "REFUSE",
+   "reviewerReason": "False claim: RIDGE CAN take D — RIDGED is a real word (D added at the end), so the second word does not break and 'the best try is DRIDGE' is wrong. D's actual fault is the first word (BLEN), which is the other entry, so the tag does not name the mistake either.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-03",
+   "optionId": "gen-vr-08-move-letter-03-opt2",
+   "value": "L",
+   "tag": "vr-move-letter-first-word-invalid",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "Taking L out of FLAME leaves FAME, which is a real word, so the first word does not break. The option does not fit the first-word-invalid tag. It also fails on the second word (RIGHT with L makes no word), so it matches the other tag instead.",
+   "reviewer": "AGREE",
+   "reviewerReason": null,
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-03",
+   "optionId": "gen-vr-08-move-letter-03-opt3",
+   "value": "M",
+   "tag": "vr-move-letter-second-word-invalid",
+   "drafter": "EXECUTES",
+   "drafterReason": null,
+   "reviewer": "REFUSE",
+   "reviewerReason": "This option fails BOTH words, so it is not the second-word mistake: the leftover FLAE is not a word, and the child's first check (take the letter out) already fails — that is the first-word entry's fault. The execution itself leads with the other entry's fault ('...as well'), departing from the second-word house form, which establishes a REAL leftover before the second word breaks. The seat needs a distractor whose leftover is a real word. (Letters verified: RIGHT+M gives no word in any position.)",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-05",
+   "optionId": "gen-vr-08-move-letter-05-opt2",
+   "value": "S",
+   "tag": "vr-move-letter-first-word-invalid",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "Taking S out of SPEND leaves PEND. PEND is accepted in some word lists (Scrabble) but is not an everyday word a child would class as not-a-word, so whether the first word breaks is a judgement. Needs a clearer first-word breaker.",
+   "reviewer": "AGREE",
+   "reviewerReason": null,
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-06",
+   "optionId": "gen-vr-08-move-letter-06-opt3",
+   "value": "C",
+   "tag": "vr-move-letter-second-word-invalid",
+   "drafter": "EXECUTES",
+   "drafterReason": null,
+   "reviewer": "REFUSE",
+   "reviewerReason": "This option fails BOTH words, so it is not the second-word mistake: the leftover SPAE is not a word, and the child's first check (take the letter out) already fails — that is the first-word entry's fault. The execution itself leads with the other entry's fault ('...as well'), departing from the second-word house form, which establishes a REAL leftover before the second word breaks. The seat needs a distractor whose leftover is a real word. (Letters verified: TAR+C (CTAR, TCAR, TACR, TARC) is no word.)",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-07",
+   "optionId": "gen-vr-08-move-letter-07-opt2",
+   "value": "T",
+   "tag": "vr-move-letter-first-word-invalid",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "Taking T out of TWIN leaves WIN, which is a real word, so the first word does not break. The option does not fit the first-word-invalid tag.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Agree, but the drafter's reason is incomplete: T is not merely mis-tagged — WIN plus THERE (HERE+T) are both real words, so T is a second correct answer. See the row HOLD.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-07",
+   "optionId": "gen-vr-08-move-letter-07-opt3",
+   "value": "N",
+   "tag": "vr-move-letter-second-word-invalid",
+   "drafter": "EXECUTES",
+   "drafterReason": null,
+   "reviewer": "REFUSE",
+   "reviewerReason": "This option fails BOTH words, so it is not the second-word mistake: the leftover TWI is not a word, and the child's first check (take the letter out) already fails — that is the first-word entry's fault. The execution itself leads with the other entry's fault ('...as well'), departing from the second-word house form, which establishes a REAL leftover before the second word breaks. The seat needs a distractor whose leftover is a real word. (Letters verified: HERE+N gives no common word; HERNE is a proper name.)",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-09",
+   "optionId": "gen-vr-08-move-letter-09-opt2",
+   "value": "R",
+   "tag": "vr-move-letter-first-word-invalid",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "Taking R out of GRAIN leaves GAIN, a real word, so the first word does not break, and ATE with R makes RATE, also real. Both words are real, so R is a second correct answer, not a distractor.",
+   "reviewer": "AGREE",
+   "reviewerReason": "R gives GAIN and RATE, both real: a second correct answer, not a distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-09",
+   "optionId": "gen-vr-08-move-letter-09-opt3",
+   "value": "N",
+   "tag": "vr-move-letter-second-word-invalid",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "ATE with N makes ANTE, which is a real word, so the second word does not fail as the tag says. The first word does break (GRAIN without N is GRAI), so the real fault is first-word-invalid, not second.",
+   "reviewer": "AGREE",
+   "reviewerReason": null,
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-10",
+   "optionId": "gen-vr-08-move-letter-10-opt2",
+   "value": "H",
+   "tag": "vr-move-letter-first-word-invalid",
+   "verdict": "EXECUTES",
+   "execution": "Move one letter so both words are real. This option moves H. Taking H out of CHARM leaves CARM, which is not a word — the first word breaks. The answer is C: HARM and CORE.",
+   "why": "held by name: reviewer attested conditionally",
+   "reviewer": {
+    "optionId": "gen-vr-08-move-letter-10-opt2",
+    "verdict": "ATTEST",
+    "reason": "CARM is not a word; HARM and CORE correct. House form."
+   }
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-10",
+   "optionId": "gen-vr-08-move-letter-10-opt3",
+   "value": "M",
+   "tag": "vr-move-letter-second-word-invalid",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "Taking M out of CHARM leaves CHAR, a real word, and ORE with M makes MORE, a real word. Both words are real, so M is a second correct answer, not a distractor.",
+   "reviewer": "AGREE",
+   "reviewerReason": "M gives CHAR and MORE, both real: a second correct answer.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-11",
+   "optionId": "gen-vr-08-move-letter-11-opt2",
+   "value": "L",
+   "tag": "vr-move-letter-first-word-invalid",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "Taking L out of PLUMP leaves PUMP, a real word, and AY with L makes LAY, a real word. Both words are real, so L is a second correct answer, not a distractor.",
+   "reviewer": "AGREE",
+   "reviewerReason": "L gives PUMP and LAY, both real: a second correct answer.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-11",
+   "optionId": "gen-vr-08-move-letter-11-opt3",
+   "value": "M",
+   "tag": "vr-move-letter-second-word-invalid",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "AY with M makes MAY, a real word, so the second word does not fail as the tag says. PLUMP without M is PLUP, which is not a word, so the real fault is first-word-invalid, not second.",
+   "reviewer": "AGREE",
+   "reviewerReason": null,
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-12",
+   "optionId": "gen-vr-08-move-letter-12-opt3",
+   "value": "W",
+   "tag": "vr-move-letter-second-word-invalid",
+   "drafter": "EXECUTES",
+   "drafterReason": null,
+   "reviewer": "REFUSE",
+   "reviewerReason": "This option fails BOTH words, so it is not the second-word mistake: the leftover SNO is not a word, and the child's first check (take the letter out) already fails — that is the first-word entry's fault. The execution itself leads with the other entry's fault ('...as well'), departing from the second-word house form, which establishes a REAL leftover before the second word breaks. The seat needs a distractor whose leftover is a real word. (Letters verified: HOE+W (WHOE, HWOE, HOWE, HOEW) is no word.)",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-15",
+   "optionId": "gen-vr-08-move-letter-15-opt2",
+   "value": "R",
+   "tag": "vr-move-letter-first-word-invalid",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "Taking R out of BREAD leaves BEAD, which is a real word, so the first word does not break. The option does not fit the first-word-invalid tag.",
+   "reviewer": "AGREE",
+   "reviewerReason": null,
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-18",
+   "optionId": "gen-vr-08-move-letter-18-opt3",
+   "value": "L",
+   "tag": "vr-move-letter-second-word-invalid",
+   "drafter": "EXECUTES",
+   "drafterReason": null,
+   "reviewer": "REFUSE",
+   "reviewerReason": "unsuitable derived word: CLOCK minus L leaves COCK, which a child following the hint (read what is left) would produce; not suitable for 9-11. The seat needs a different distractor; no execution can be attested on it.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-20",
+   "optionId": "gen-vr-08-move-letter-20-opt2",
+   "value": "E",
+   "tag": "vr-move-letter-first-word-invalid",
+   "verdict": "EXECUTES",
+   "execution": "Move one letter so both words are real. This option moves E. Taking E out of SHELL leaves SHLL, which is not a word — the first word breaks. The answer is H: SELL and HAIR.",
+   "why": "held by name: reviewer attested conditionally",
+   "reviewer": {
+    "optionId": "gen-vr-08-move-letter-20-opt2",
+    "verdict": "ATTEST",
+    "reason": "SHLL is not a word; SELL and HAIR correct. House form. (The row itself is held for its S seat.)"
+   }
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-24",
+   "optionId": "gen-vr-08-move-letter-24-opt3",
+   "value": "L",
+   "tag": "vr-move-letter-second-word-invalid",
+   "drafter": "EXECUTES",
+   "drafterReason": null,
+   "reviewer": "REFUSE",
+   "reviewerReason": "This option fails BOTH words, so it is not the second-word mistake: the leftover WHEE (an exclamation, not a word a child would accept) is not a word, and the child's first check (take the letter out) already fails — that is the first-word entry's fault. The execution itself leads with the other entry's fault ('...as well'), departing from the second-word house form, which establishes a REAL leftover before the second word breaks. The seat needs a distractor whose leftover is a real word. (Letters verified: ARM+L (LARM, ALRM, ARLM, ARML) is no word.)",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-25",
+   "optionId": "gen-vr-08-move-letter-25-opt2",
+   "value": "A",
+   "tag": "vr-move-letter-first-word-invalid",
+   "verdict": "EXECUTES",
+   "execution": "Move one letter so both words are real. This option moves A. Taking A out of TRACK leaves TRCK, which is not a word — the first word breaks. The answer is T: RACK and TEND.",
+   "why": "held by name: reviewer attested conditionally",
+   "reviewer": {
+    "optionId": "gen-vr-08-move-letter-25-opt2",
+    "verdict": "ATTEST",
+    "reason": "TRCK is not a word; RACK and TEND correct. House form."
+   }
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-25",
+   "optionId": "gen-vr-08-move-letter-25-opt3",
+   "value": "R",
+   "tag": "vr-move-letter-second-word-invalid",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "END with R makes REND, which is a real word (to tear), and TRACK without R is TACK, also real. Both words are real, so R is a second correct answer, not a distractor.",
+   "reviewer": "AGREE",
+   "reviewerReason": "END+R makes REND, a dictionary word, so the second-word tag is false; TACK is also real. REND is not a word a child knows, but the tag cannot be executed truthfully.",
+   "needs": "NEW DISTRACTOR or new execution"
+  }
+ ],
+ "rowsHeld": [
+  {
+   "itemId": "gen-vr-08-move-letter-07",
+   "verdict": "HOLD",
+   "reason": "Second correct answer: T gives WIN and THERE (HERE with T at the front), both real words a child knows. Key W is not the only correct option."
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-09",
+   "verdict": "HOLD",
+   "reason": "Second correct answer: R gives GAIN and RATE, both real words a child knows."
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-10",
+   "verdict": "HOLD",
+   "reason": "Second correct answer: M gives CHAR and MORE, both real words."
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-11",
+   "verdict": "HOLD",
+   "reason": "Second correct answer: L gives PUMP and LAY, both real. Also the given second word AY is not a word in British English (only \"aye\"), which confuses a prompt asking for new words."
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-18",
+   "verdict": "HOLD",
+   "reason": "Two faults. (1) Existing execution on opt2 (O) is row 06's text verbatim — it quotes P, SPACE, SACE, PACE and STAR, none on this row. (2) Unsuitable derived word: the L distractor leaves COCK when taken out of CLOCK. Key C (LOCK+CLOUD) is otherwise correct and unique.",
+   "existingExecutionWrong": true
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-20",
+   "verdict": "HOLD",
+   "reason": "Three faults. (1) Existing execution on opt3 (S) is row 08's text verbatim — it quotes D, SLED, SLE, PIT and PITD, none on this row. (2) Second correct answer: S leaves HELL and AIR+S makes AIRS, both real words, so S is not wrong. (3) Unsuitable derived word: HELL is not suitable for 9-11.",
+   "existingExecutionWrong": true
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-25",
+   "verdict": "HOLD",
+   "reason": "R gives TACK and REND, both dictionary words; REND is not one a child knows, so it is not a second answer by the child test, but an adult checking a dictionary would mark R correct and the seat's tag is false. Replace the R distractor before signing."
+  }
+ ]
+}

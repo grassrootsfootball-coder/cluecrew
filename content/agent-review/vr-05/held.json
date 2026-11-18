@@ -1,0 +1,432 @@
+{
+ "door": "vr-05",
+ "mode": "APPLIED",
+ "landed": 5,
+ "signed": 0,
+ "seatsHeld": [
+  {
+   "itemId": "gen-vr-05-hidden-word-01",
+   "optionId": "gen-vr-05-hidden-word-01-opt2",
+   "value": "plum",
+   "tag": "vr05-almost-letters",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The letters of plum are exactly in the sentence, as the run \"plum\" inside the word \"plum\", so they are not nearly there. The tag's act (letters close but not exact) cannot produce this option; it needs a different distractor.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Confirmed: plum is exactly on the row, whole inside \"plum\", so no near-miss produces it; the seat needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-01",
+   "optionId": "gen-vr-05-hidden-word-01-opt3",
+   "value": "sale",
+   "tag": "vr05-single-word-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The letters sale do not appear in order inside any single word of the sentence, so searching single words cannot produce this option.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Confirmed: sale does not appear as touching letters inside any single word of the sentence, so searching single words cannot produce it; the seat needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-02",
+   "optionId": "gen-vr-05-hidden-word-02-opt2",
+   "value": "band",
+   "tag": "vr05-almost-letters",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The letters of band are exactly in the sentence, as the run \"band\" inside the word \"band\", so they are not nearly there. The tag's act (letters close but not exact) cannot produce this option; it needs a different distractor.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Confirmed: band is exactly on the row, whole inside \"band\", so no near-miss produces it; the seat needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-02",
+   "optionId": "gen-vr-05-hidden-word-02-opt3",
+   "value": "robe",
+   "tag": "vr05-single-word-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The letters robe do not appear in order inside any single word of the sentence, so searching single words cannot produce this option.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Confirmed: robe does not appear as touching letters inside any single word of the sentence, so searching single words cannot produce it; the seat needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-03",
+   "optionId": "gen-vr-05-hidden-word-03-opt2",
+   "value": "best",
+   "tag": "vr05-almost-letters",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The letters of best are exactly in the sentence, as the run \"best\" inside the word \"best\", so they are not nearly there. The tag's act (letters close but not exact) cannot produce this option; it needs a different distractor.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Confirmed: best is exactly on the row, whole inside \"best\", so no near-miss produces it; the seat needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-03",
+   "optionId": "gen-vr-05-hidden-word-03-opt3",
+   "value": "toad",
+   "tag": "vr05-single-word-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The letters toad do not appear in order inside any single word of the sentence, so searching single words cannot produce this option.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Confirmed: toad does not appear as touching letters inside any single word of the sentence, so searching single words cannot produce it; the seat needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-04",
+   "optionId": "gen-vr-05-hidden-word-04-opt3",
+   "value": "gulp",
+   "tag": "vr05-single-word-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The letters gulp do not appear in order inside any single word of the sentence, so searching single words cannot produce this option.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Confirmed: gulp does not appear as touching letters inside any single word of the sentence, so searching single words cannot produce it; the seat needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-05",
+   "optionId": "gen-vr-05-hidden-word-05-opt3",
+   "value": "stem",
+   "tag": "vr05-single-word-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The letters stem do not appear in order inside any single word of the sentence, so searching single words cannot produce this option.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Confirmed: stem does not appear as touching letters inside any single word of the sentence, so searching single words cannot produce it; the seat needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-06",
+   "optionId": "gen-vr-05-hidden-word-06-opt2",
+   "value": "pane",
+   "tag": "vr05-almost-letters",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The closest four-letter run to pane in the sentence is \"pens\", which differs by 2 letters, so the letters are not nearly there. The tag's act cannot honestly produce this option.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Confirmed: the closest touching runs to pane are \"pens\" and \"rans\" (two letters off each), so its letters are not nearly there; the seat needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-06",
+   "optionId": "gen-vr-05-hidden-word-06-opt3",
+   "value": "rand",
+   "tag": "vr05-single-word-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The letters rand do not appear in order inside any single word of the sentence, so searching single words cannot produce this option.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Confirmed: rand does not appear as touching letters inside any single word of the sentence, so searching single words cannot produce it; the seat needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-08",
+   "optionId": "gen-vr-05-hidden-word-08-opt2",
+   "value": "zeal",
+   "tag": "vr05-almost-letters",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The closest four-letter run to zeal in the sentence is \"deas\", which differs by 2 letters, so the letters are not nearly there. The tag's act cannot honestly produce this option.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Confirmed: the closest touching runs to zeal are \"deas\" and \"zebr\" (two letters off each), so its letters are not nearly there; the seat needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-08",
+   "optionId": "gen-vr-05-hidden-word-08-opt3",
+   "value": "wisp",
+   "tag": "vr05-single-word-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The letters wisp do not appear in order inside any single word of the sentence, so searching single words cannot produce this option.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Confirmed: wisp does not appear as touching letters inside any single word of the sentence, so searching single words cannot produce it; the seat needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-09",
+   "optionId": "gen-vr-05-hidden-word-09-opt2",
+   "value": "meta",
+   "tag": "vr05-almost-letters",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The letters of meta are exactly in the sentence, as the run \"meta\" inside the word \"metal\", so they are not nearly there. The tag's act (letters close but not exact) cannot produce this option; it needs a different distractor.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Confirmed: meta is exactly on the row, whole inside \"metal\", so no near-miss produces it; the seat needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-09",
+   "optionId": "gen-vr-05-hidden-word-09-opt3",
+   "value": "dool",
+   "tag": "vr05-single-word-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The letters dool do not appear in order inside any single word of the sentence, so searching single words cannot produce this option.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Confirmed: dool does not appear as touching letters inside any single word of the sentence, so searching single words cannot produce it; the seat needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-10",
+   "optionId": "gen-vr-05-hidden-word-10-opt2",
+   "value": "both",
+   "tag": "vr05-almost-letters",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The letters of both are exactly in the sentence, as the run \"both\" inside the word \"both\", so they are not nearly there. The tag's act (letters close but not exact) cannot produce this option; it needs a different distractor.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Confirmed: both is exactly on the row, whole inside \"both\", so no near-miss produces it; the seat needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-10",
+   "optionId": "gen-vr-05-hidden-word-10-opt3",
+   "value": "jams",
+   "tag": "vr05-single-word-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The letters jams do not appear in order inside any single word of the sentence, so searching single words cannot produce this option.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Confirmed: jams does not appear as touching letters inside any single word of the sentence, so searching single words cannot produce it; the seat needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-11",
+   "optionId": "gen-vr-05-hidden-word-11-opt3",
+   "value": "cart",
+   "tag": "vr05-single-word-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The letters cart do not appear in order inside any single word of the sentence, so searching single words cannot produce this option.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Confirmed: cart does not appear as touching letters inside any single word of the sentence, so searching single words cannot produce it; the seat needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-12",
+   "optionId": "gen-vr-05-hidden-word-12-opt2",
+   "value": "many",
+   "tag": "vr05-almost-letters",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The letters of many are exactly in the sentence, as the run \"many\" inside the word \"many\", so they are not nearly there. The tag's act (letters close but not exact) cannot produce this option; it needs a different distractor.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Confirmed: many is exactly on the row, whole inside \"many\", so no near-miss produces it; the seat needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-12",
+   "optionId": "gen-vr-05-hidden-word-12-opt3",
+   "value": "whim",
+   "tag": "vr05-single-word-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The letters whim do not appear in order inside any single word of the sentence, so searching single words cannot produce this option.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Confirmed: whim does not appear as touching letters inside any single word of the sentence, so searching single words cannot produce it; the seat needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-13",
+   "optionId": "gen-vr-05-hidden-word-13-opt3",
+   "value": "foam",
+   "tag": "vr05-single-word-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The letters foam do not appear in order inside any single word of the sentence, so searching single words cannot produce this option.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Confirmed: foam does not appear as touching letters inside any single word of the sentence, so searching single words cannot produce it; the seat needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-14",
+   "optionId": "gen-vr-05-hidden-word-14-opt2",
+   "value": "sent",
+   "tag": "vr05-almost-letters",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The letters of sent are exactly in the sentence, as the run \"sent\" inside the word \"sent\", so they are not nearly there. The tag's act (letters close but not exact) cannot produce this option; it needs a different distractor.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Confirmed: sent is exactly on the row, whole inside \"sent\", so no near-miss produces it; the seat needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-14",
+   "optionId": "gen-vr-05-hidden-word-14-opt3",
+   "value": "reel",
+   "tag": "vr05-single-word-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The letters reel do not appear in order inside any single word of the sentence, so searching single words cannot produce this option.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Confirmed: reel does not appear as touching letters inside any single word of the sentence, so searching single words cannot produce it; the seat needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-16",
+   "optionId": "gen-vr-05-hidden-word-16-opt2",
+   "value": "deed",
+   "tag": "vr05-almost-letters",
+   "verdict": "EXECUTES",
+   "execution": "The letters of deed are nearly in the sentence but not exactly: the closest run is \"deep\", which differs from deed by 1 letter. Every letter must be there, touching, and one is not.",
+   "why": "held by name: reviewer attested conditionally",
+   "reviewer": {
+    "optionId": "gen-vr-05-hidden-word-16-opt2",
+    "verdict": "ATTEST",
+    "reason": "Checked: \"deep\" is on the row and differs from deed by one letter (d for p); the tag fits. House form verbatim. Note the row itself is HELD (key absent), so this execution stands only if the sentence survives the rebuild."
+   }
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-16",
+   "optionId": "gen-vr-05-hidden-word-16-opt3",
+   "value": "arch",
+   "tag": "vr05-single-word-only",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "The letters arch do not appear in order inside any single word of the sentence, so searching single words cannot produce this option.",
+   "why": "held by name: reviewer attested conditionally",
+   "reviewer": {
+    "optionId": "gen-vr-05-hidden-word-16-opt3",
+    "verdict": "AGREE",
+    "reason": "Confirmed: arch does not appear as touching letters inside any single word of the sentence, so searching single words cannot produce it; the seat needs a new distractor."
+   }
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-17",
+   "optionId": "gen-vr-05-hidden-word-17-opt3",
+   "value": "goad",
+   "tag": "vr05-single-word-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The letters goad do not appear in order inside any single word of the sentence, so searching single words cannot produce this option.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Confirmed: goad does not appear as touching letters inside any single word of the sentence, so searching single words cannot produce it; the seat needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-18",
+   "optionId": "gen-vr-05-hidden-word-18-opt2",
+   "value": "demo",
+   "tag": "vr05-almost-letters",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The letters of demo are exactly in the sentence, as the run \"demo\" inside the word \"demo\", so they are not nearly there. The tag's act (letters close but not exact) cannot produce this option; it needs a different distractor.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Confirmed: demo is exactly on the row, whole inside \"demo\", so no near-miss produces it; the seat needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-19",
+   "optionId": "gen-vr-05-hidden-word-19-opt3",
+   "value": "gasp",
+   "tag": "vr05-single-word-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The letters gasp do not appear in order inside any single word of the sentence, so searching single words cannot produce this option.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Confirmed: gasp does not appear as touching letters inside any single word of the sentence, so searching single words cannot produce it; the seat needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-20",
+   "optionId": "gen-vr-05-hidden-word-20-opt2",
+   "value": "wand",
+   "tag": "vr05-almost-letters",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The closest four-letter run to wand in the sentence is \"hind\", which differs by 2 letters, so the letters are not nearly there. The tag's act cannot honestly produce this option.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Confirmed: the closest touching runs to wand are \"hind\", \"sant\" and \"watc\" (two letters off each), so its letters are not nearly there; the seat needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-20",
+   "optionId": "gen-vr-05-hidden-word-20-opt3",
+   "value": "stir",
+   "tag": "vr05-single-word-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The letters stir do not appear in order inside any single word of the sentence, so searching single words cannot produce this option.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Confirmed: stir does not appear as touching letters inside any single word of the sentence, so searching single words cannot produce it; the seat needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-21",
+   "optionId": "gen-vr-05-hidden-word-21-opt2",
+   "value": "rank",
+   "tag": "vr05-almost-letters",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The letters of rank are exactly in the sentence, as the run \"rank\" inside the word \"drank\", so they are not nearly there. The tag's act (letters close but not exact) cannot produce this option; it needs a different distractor.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Confirmed: rank is exactly on the row, whole inside \"drank\", so no near-miss produces it; the seat needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-22",
+   "optionId": "gen-vr-05-hidden-word-22-opt2",
+   "value": "bump",
+   "tag": "vr05-almost-letters",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The letters of bump are exactly in the sentence, as the run \"bump\" inside the word \"bump\", so they are not nearly there. The tag's act (letters close but not exact) cannot produce this option; it needs a different distractor.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Confirmed: bump is exactly on the row, whole inside \"bump\", so no near-miss produces it; the seat needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-22",
+   "optionId": "gen-vr-05-hidden-word-22-opt3",
+   "value": "dame",
+   "tag": "vr05-single-word-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The letters dame do not appear in order inside any single word of the sentence, so searching single words cannot produce this option.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Confirmed: dame does not appear as touching letters inside any single word of the sentence, so searching single words cannot produce it; the seat needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-23",
+   "optionId": "gen-vr-05-hidden-word-23-opt3",
+   "value": "past",
+   "tag": "vr05-single-word-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The letters past do not appear in order inside any single word of the sentence, so searching single words cannot produce this option.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Confirmed: past does not appear as touching letters inside any single word of the sentence, so searching single words cannot produce it; the seat needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-24",
+   "optionId": "gen-vr-05-hidden-word-24-opt2",
+   "value": "loud",
+   "tag": "vr05-almost-letters",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The letters of loud are exactly in the sentence, as the run \"loud\" inside the word \"loud\", so they are not nearly there. The tag's act (letters close but not exact) cannot produce this option; it needs a different distractor.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Confirmed: loud is exactly on the row, whole inside \"loud\", so no near-miss produces it; the seat needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-24",
+   "optionId": "gen-vr-05-hidden-word-24-opt3",
+   "value": "pane",
+   "tag": "vr05-single-word-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The letters pane do not appear in order inside any single word of the sentence, so searching single words cannot produce this option.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Confirmed: pane does not appear as touching letters inside any single word of the sentence, so searching single words cannot produce it; the seat needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-25",
+   "optionId": "gen-vr-05-hidden-word-25-opt3",
+   "value": "rate",
+   "tag": "vr05-single-word-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The letters rate do not appear in order inside any single word of the sentence, so searching single words cannot produce this option.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Confirmed: rate does not appear as touching letters inside any single word of the sentence, so searching single words cannot produce it; the seat needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  }
+ ],
+ "rowsHeld": [
+  {
+   "itemId": "gen-vr-05-hidden-word-06",
+   "verdict": "HOLD",
+   "reason": "The key song spans THREE words (pen|s + on + g|ran), but the stem tells the child it is \"at the join between two words\", so a child checking pairs of words cannot find it. The sentence \"Whose pens on Gran’s desk?\" also has no verb and is not grammatical British English. Distractor rand is not a word a 9-11 child would know. Key is present once and both distractors are absent, so the only faults are the stem/span mismatch, the sentence and rand."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-16",
+   "verdict": "HOLD",
+   "reason": "The key pear is not on the row. \"A deep armchair\" joins as \"deeparmchair\", which gives \"epar\" and \"parm\", never p-e-a-r. No option is findable, so the item has no correct answer. The drafter's flag is confirmed. Needs a new sentence or key."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-17",
+   "verdict": "HOLD",
+   "reason": "The key kind spans THREE words (oa|k + in + D|an’s), but the stem says the word is \"at the join between two words\". A child checking each pair of words will not find it. Distractor dane is a proper noun (a Dane, Great Dane), not an ordinary lower-case word."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-19",
+   "verdict": "HOLD",
+   "reason": "The key ring spans THREE words (sta|r + in + g|old), but the stem says \"at the join between two words\". A child checking each pair of words will not find it. The key is found once and both distractors are absent, so the stem/span mismatch is the fault."
+  }
+ ]
+}

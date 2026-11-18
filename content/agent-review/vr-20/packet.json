@@ -1,0 +1,844 @@
+{
+ "door": "vr-20",
+ "caseId": "case-vr-20",
+ "title": "The Smudged Page",
+ "questionType": "vr-20-complete-the-word",
+ "entries": {
+  "vr20-common-letter": {
+   "description": "Defaulted to a common letter without testing the word.",
+   "childHint": "Try your letter in the gap and read the whole word."
+  },
+  "vr20-sound-alike": {
+   "description": "Chose a letter that sounds right but spells a non-word.",
+   "childHint": "Spell the finished word letter by letter. Is that how it is really written?"
+  }
+ },
+ "houseFormExemplars": {},
+ "rows": [
+  {
+   "itemId": "gen-vr-20-complete-the-word-01",
+   "signed": true,
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "T_GER"
+   },
+   "solution": null,
+   "key": "I",
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-01-opt1",
+     "value": "I",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-01-opt2",
+     "value": "J",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-01-opt3",
+     "value": "N",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-02",
+   "signed": true,
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "CA_DLE"
+   },
+   "solution": null,
+   "key": "N",
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-02-opt1",
+     "value": "N",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-02-opt2",
+     "value": "O",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-02-opt3",
+     "value": "S",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-03",
+   "signed": true,
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "WIN_OW"
+   },
+   "solution": null,
+   "key": "D",
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-03-opt1",
+     "value": "D",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-03-opt2",
+     "value": "E",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-03-opt3",
+     "value": "I",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-04",
+   "signed": true,
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "GARD_N"
+   },
+   "solution": null,
+   "key": "E",
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-04-opt1",
+     "value": "E",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-04-opt2",
+     "value": "F",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-04-opt3",
+     "value": "J",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-05",
+   "signed": true,
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "P_RPLE"
+   },
+   "solution": null,
+   "key": "U",
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-05-opt1",
+     "value": "U",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-05-opt2",
+     "value": "V",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-05-opt3",
+     "value": "Z",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-06",
+   "signed": true,
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "SI_VER"
+   },
+   "solution": null,
+   "key": "L",
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-06-opt1",
+     "value": "L",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-06-opt2",
+     "value": "M",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-06-opt3",
+     "value": "Q",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-07",
+   "signed": true,
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "MAR_ET"
+   },
+   "solution": null,
+   "key": "K",
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-07-opt1",
+     "value": "K",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-07-opt2",
+     "value": "L",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-07-opt3",
+     "value": "P",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-08",
+   "signed": true,
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "PENC_L"
+   },
+   "solution": null,
+   "key": "I",
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-08-opt1",
+     "value": "I",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-08-opt2",
+     "value": "J",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-08-opt3",
+     "value": "N",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-09",
+   "signed": true,
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "R_CKET"
+   },
+   "solution": null,
+   "key": "O",
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-09-opt1",
+     "value": "O",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-09-opt2",
+     "value": "P",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-09-opt3",
+     "value": "T",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-10",
+   "signed": true,
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "JU_GLE"
+   },
+   "solution": null,
+   "key": "N",
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-10-opt1",
+     "value": "N",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-10-opt2",
+     "value": "O",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-10-opt3",
+     "value": "S",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-11",
+   "signed": true,
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "CAS_LE"
+   },
+   "solution": null,
+   "key": "T",
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-11-opt1",
+     "value": "T",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-11-opt2",
+     "value": "U",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-11-opt3",
+     "value": "Y",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-12",
+   "signed": true,
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "BUTT_N"
+   },
+   "solution": null,
+   "key": "O",
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-12-opt1",
+     "value": "O",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-12-opt2",
+     "value": "P",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-12-opt3",
+     "value": "T",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-13",
+   "signed": true,
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "M_RROR"
+   },
+   "solution": null,
+   "key": "I",
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-13-opt1",
+     "value": "I",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-13-opt2",
+     "value": "J",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-13-opt3",
+     "value": "N",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-14",
+   "signed": true,
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "PO_KET"
+   },
+   "solution": null,
+   "key": "C",
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-14-opt1",
+     "value": "C",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-14-opt2",
+     "value": "D",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-14-opt3",
+     "value": "H",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-15",
+   "signed": true,
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "SUN_AY"
+   },
+   "solution": null,
+   "key": "D",
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-15-opt1",
+     "value": "D",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-15-opt2",
+     "value": "E",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-15-opt3",
+     "value": "I",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-16",
+   "signed": true,
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "BOTT_E"
+   },
+   "solution": null,
+   "key": "L",
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-16-opt1",
+     "value": "L",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-16-opt2",
+     "value": "M",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-16-opt3",
+     "value": "Q",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-17",
+   "signed": true,
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "D_AGON"
+   },
+   "solution": null,
+   "key": "R",
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-17-opt1",
+     "value": "R",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-17-opt2",
+     "value": "S",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-17-opt3",
+     "value": "W",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-18",
+   "signed": true,
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "CI_CUS"
+   },
+   "solution": null,
+   "key": "R",
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-18-opt1",
+     "value": "R",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-18-opt2",
+     "value": "S",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-18-opt3",
+     "value": "W",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-19",
+   "signed": true,
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "HEL_ET"
+   },
+   "solution": null,
+   "key": "M",
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-19-opt1",
+     "value": "M",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-19-opt2",
+     "value": "N",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-19-opt3",
+     "value": "R",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-20",
+   "signed": true,
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "CARP_T"
+   },
+   "solution": null,
+   "key": "E",
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-20-opt1",
+     "value": "E",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-20-opt2",
+     "value": "F",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-20-opt3",
+     "value": "J",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-21",
+   "signed": true,
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "L_NTERN"
+   },
+   "solution": null,
+   "key": "A",
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-21-opt1",
+     "value": "A",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-21-opt2",
+     "value": "B",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-21-opt3",
+     "value": "F",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-22",
+   "signed": true,
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "BA_KET"
+   },
+   "solution": null,
+   "key": "S",
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-22-opt1",
+     "value": "S",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-22-opt2",
+     "value": "T",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-22-opt3",
+     "value": "X",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-23",
+   "signed": true,
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "TUN_EL"
+   },
+   "solution": null,
+   "key": "N",
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-23-opt1",
+     "value": "N",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-23-opt2",
+     "value": "O",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-23-opt3",
+     "value": "S",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-24",
+   "signed": true,
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "VELV_T"
+   },
+   "solution": null,
+   "key": "E",
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-24-opt1",
+     "value": "E",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-24-opt2",
+     "value": "F",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-24-opt3",
+     "value": "J",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-25",
+   "signed": true,
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "M_GNET"
+   },
+   "solution": null,
+   "key": "A",
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-25-opt1",
+     "value": "A",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-25-opt2",
+     "value": "B",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-25-opt3",
+     "value": "F",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "execution": null
+    }
+   ]
+  }
+ ]
+}

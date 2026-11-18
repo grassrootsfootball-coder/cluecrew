@@ -1,0 +1,286 @@
+{
+ "door": "vr-13",
+ "drafter": "agent",
+ "drafts": [
+  {
+   "itemId": "gen-vr-13-make-a-word-01",
+   "optionId": "gen-vr-13-make-a-word-01-opt2",
+   "value": "STAY",
+   "tag": "vr13-not-a-word",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "STAY is the first outer word copied whole, not letters assembled, and it is a real word, so it is not a non-word."
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-02",
+   "optionId": "gen-vr-13-make-a-word-02-opt2",
+   "value": "SHOE",
+   "tag": "vr13-not-a-word",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "SHOE is a real English word, so the tag's act (assembling letters into a non-word) does not describe it. It needs a new distractor that is not a word."
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-02",
+   "optionId": "gen-vr-13-make-a-word-02-opt3",
+   "value": "OPAL",
+   "tag": "vr13-wrong-pieces",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "OPAL needs A and L, which is in neither SHEEP or OPEN, so it cannot be made by taking letters from the wrong positions of the outer words. It needs a new distractor built only from the row's letters."
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-03",
+   "optionId": "gen-vr-13-make-a-word-03-opt2",
+   "value": "GRAN",
+   "tag": "vr13-not-a-word",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "GRAN is a real English word, so the tag's act (assembling letters into a non-word) does not describe it. It needs a new distractor that is not a word."
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-04",
+   "optionId": "gen-vr-13-make-a-word-04-opt2",
+   "value": "FLAP",
+   "tag": "vr13-not-a-word",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "FLAP is a real English word, so the tag's act (assembling letters into a non-word) does not describe it. It needs a new distractor that is not a word."
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-05",
+   "optionId": "gen-vr-13-make-a-word-05-opt2",
+   "value": "CHIP",
+   "tag": "vr13-not-a-word",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "CHIP is a real English word, so the tag's act (assembling letters into a non-word) does not describe it. It needs a new distractor that is not a word."
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-06",
+   "optionId": "gen-vr-13-make-a-word-06-opt2",
+   "value": "DREL",
+   "tag": "vr13-not-a-word",
+   "verdict": "EXECUTES",
+   "execution": "The rule takes the first two letters of each outer word: DR from DRESS and UM from UMBRELLA, giving DRUM. This option keeps DR but ends EL, which sits inside UMBRELLA but not at its start, so it assembles DREL, which is not a word \u2014 the child built letters and stopped without hearing them."
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-06",
+   "optionId": "gen-vr-13-make-a-word-06-opt3",
+   "value": "UMPS",
+   "tag": "vr13-wrong-pieces",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "UMPS needs P and S, which is in neither DRESS or UMBRELLA, so it cannot be made by taking letters from the wrong positions of the outer words. It needs a new distractor built only from the row's letters."
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-07",
+   "optionId": "gen-vr-13-make-a-word-07-opt2",
+   "value": "PLAN",
+   "tag": "vr13-not-a-word",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "PLAN is a real English word, so the tag's act (assembling letters into a non-word) does not describe it. It needs a new distractor that is not a word."
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-07",
+   "optionId": "gen-vr-13-make-a-word-07-opt3",
+   "value": "UMPS",
+   "tag": "vr13-wrong-pieces",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "UMPS needs S, which is in neither PLATE or UMPIRE, so it cannot be made by taking letters from the wrong positions of the outer words. It needs a new distractor built only from the row's letters."
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-08",
+   "optionId": "gen-vr-13-make-a-word-08-opt2",
+   "value": "CLAY",
+   "tag": "vr13-not-a-word",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "CLAY is a real English word, so the tag's act (assembling letters into a non-word) does not describe it. It needs a new distractor that is not a word."
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-08",
+   "optionId": "gen-vr-13-make-a-word-08-opt3",
+   "value": "APES",
+   "tag": "vr13-wrong-pieces",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "APES needs S, which is in neither CLOUD or APPLE, so it cannot be made by taking letters from the wrong positions of the outer words. It needs a new distractor built only from the row's letters."
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-09",
+   "optionId": "gen-vr-13-make-a-word-09-opt2",
+   "value": "TRAY",
+   "tag": "vr13-not-a-word",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "TRAY is a real English word, so the tag's act (assembling letters into a non-word) does not describe it. It needs a new distractor that is not a word."
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-09",
+   "optionId": "gen-vr-13-make-a-word-09-opt3",
+   "value": "PADS",
+   "tag": "vr13-wrong-pieces",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "PADS needs S, which is in neither TREE or IPAD, so it cannot be made by taking letters from the wrong positions of the outer words. It needs a new distractor built only from the row's letters."
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-10",
+   "optionId": "gen-vr-13-make-a-word-10-opt2",
+   "value": "SNIP",
+   "tag": "vr13-not-a-word",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "SNIP is a real English word, so the tag's act (assembling letters into a non-word) does not describe it. It needs a new distractor that is not a word."
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-11",
+   "optionId": "gen-vr-13-make-a-word-11-opt2",
+   "value": "SWAM",
+   "tag": "vr13-not-a-word",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "SWAM is a real English word, so the tag's act (assembling letters into a non-word) does not describe it. It needs a new distractor that is not a word."
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-12",
+   "optionId": "gen-vr-13-make-a-word-12-opt2",
+   "value": "CRIB",
+   "tag": "vr13-not-a-word",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "CRIB is a real English word, so the tag's act (assembling letters into a non-word) does not describe it. It needs a new distractor that is not a word."
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-13",
+   "optionId": "gen-vr-13-make-a-word-13-opt2",
+   "value": "SPAN",
+   "tag": "vr13-not-a-word",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "SPAN is a real English word, so the tag's act (assembling letters into a non-word) does not describe it. It needs a new distractor that is not a word."
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-14",
+   "optionId": "gen-vr-13-make-a-word-14-opt2",
+   "value": "GRIP",
+   "tag": "vr13-not-a-word",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "GRIP is a real English word, so the tag's act (assembling letters into a non-word) does not describe it. It needs a new distractor that is not a word."
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-15",
+   "optionId": "gen-vr-13-make-a-word-15-opt2",
+   "value": "SLAP",
+   "tag": "vr13-not-a-word",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "SLAP is a real English word, so the tag's act (assembling letters into a non-word) does not describe it. It needs a new distractor that is not a word."
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-16",
+   "optionId": "gen-vr-13-make-a-word-16-opt2",
+   "value": "PROM",
+   "tag": "vr13-not-a-word",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "PROM is a real English word, so the tag's act (assembling letters into a non-word) does not describe it. It needs a new distractor that is not a word."
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-16",
+   "optionId": "gen-vr-13-make-a-word-16-opt3",
+   "value": "AMBS",
+   "tag": "vr13-wrong-pieces",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "AMBS needs S, which is in neither PRAWN or AMBER, so it cannot be made by taking letters from the wrong positions of the outer words. It needs a new distractor built only from the row's letters."
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-17",
+   "optionId": "gen-vr-13-make-a-word-17-opt2",
+   "value": "BRAM",
+   "tag": "vr13-not-a-word",
+   "verdict": "EXECUTES",
+   "execution": "The rule takes the first two letters of each outer word: BR from BRICK and IM from IMP, giving BRIM. This option keeps BR but ends AM, and IMP has no A, so it assembles BRAM, which is not a word \u2014 the child built letters and stopped without hearing them."
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-17",
+   "optionId": "gen-vr-13-make-a-word-17-opt3",
+   "value": "IMPS",
+   "tag": "vr13-wrong-pieces",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "IMPS needs S, which is in neither BRICK or IMP, so it cannot be made by taking letters from the wrong positions of the outer words. It needs a new distractor built only from the row's letters."
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-18",
+   "optionId": "gen-vr-13-make-a-word-18-opt3",
+   "value": "IPSY",
+   "tag": "vr13-wrong-pieces",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "IPSY needs Y, which is in neither DRAGON or IPS, so it cannot be made by taking letters from the wrong positions of the outer words. It needs a new distractor built only from the row's letters."
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-19",
+   "optionId": "gen-vr-13-make-a-word-19-opt2",
+   "value": "CHIT",
+   "tag": "vr13-not-a-word",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "CHIT is a real English word, so the tag's act (assembling letters into a non-word) does not describe it. It needs a new distractor that is not a word."
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-20",
+   "optionId": "gen-vr-13-make-a-word-20-opt2",
+   "value": "WHAM",
+   "tag": "vr13-not-a-word",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "WHAM is a real English word, so the tag's act (assembling letters into a non-word) does not describe it. It needs a new distractor that is not a word."
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-20",
+   "optionId": "gen-vr-13-make-a-word-20-opt3",
+   "value": "IMPY",
+   "tag": "vr13-wrong-pieces",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "IMPY needs Y, which is in neither WHEEL or IMPS, so it cannot be made by taking letters from the wrong positions of the outer words. It needs a new distractor built only from the row's letters."
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-21",
+   "optionId": "gen-vr-13-make-a-word-21-opt2",
+   "value": "SHOT",
+   "tag": "vr13-not-a-word",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "SHOT is a real English word, so the tag's act (assembling letters into a non-word) does not describe it. It needs a new distractor that is not a word."
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-22",
+   "optionId": "gen-vr-13-make-a-word-22-opt2",
+   "value": "TRIP",
+   "tag": "vr13-not-a-word",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "TRIP is a real English word, so the tag's act (assembling letters into a non-word) does not describe it. It needs a new distractor that is not a word."
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-22",
+   "optionId": "gen-vr-13-make-a-word-22-opt3",
+   "value": "APPS",
+   "tag": "vr13-wrong-pieces",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "APPS needs S, which is in neither TRUCK or APPLE, so it cannot be made by taking letters from the wrong positions of the outer words. It needs a new distractor built only from the row's letters."
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-23",
+   "optionId": "gen-vr-13-make-a-word-23-opt2",
+   "value": "FLAP",
+   "tag": "vr13-not-a-word",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "FLAP is a real English word, so the tag's act (assembling letters into a non-word) does not describe it. It needs a new distractor that is not a word."
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-24",
+   "optionId": "gen-vr-13-make-a-word-24-opt2",
+   "value": "SLIM",
+   "tag": "vr13-not-a-word",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "SLIM is a real English word, so the tag's act (assembling letters into a non-word) does not describe it. It needs a new distractor that is not a word."
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-25",
+   "optionId": "gen-vr-13-make-a-word-25-opt2",
+   "value": "SNAP",
+   "tag": "vr13-not-a-word",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "SNAP is a real English word, so the tag's act (assembling letters into a non-word) does not describe it. It needs a new distractor that is not a word."
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-25",
+   "optionId": "gen-vr-13-make-a-word-25-opt3",
+   "value": "IPSA",
+   "tag": "vr13-wrong-pieces",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "IPSA needs A, which is in neither SNOW or IPS, so it cannot be made by taking letters from the wrong positions of the outer words. It needs a new distractor built only from the row's letters."
+  }
+ ]
+}

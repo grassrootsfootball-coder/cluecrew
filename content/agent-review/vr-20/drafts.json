@@ -1,0 +1,406 @@
+{
+ "door": "vr-20",
+ "drafter": "agent",
+ "drafts": [
+  {
+   "itemId": "gen-vr-20-complete-the-word-01",
+   "optionId": "gen-vr-20-complete-the-word-01-opt2",
+   "value": "J",
+   "tag": "vr20-common-letter",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "J is not one of the most common letters in English (E, T, A, O, I, N, S, H, R, D, L), so a child defaulting to a common letter would not plainly reach it. It looks like the key's next letter in the alphabet, not a common-letter default."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-01",
+   "optionId": "gen-vr-20-complete-the-word-01-opt3",
+   "value": "N",
+   "tag": "vr20-sound-alike",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "N does not make a sound that plausibly fits the gap in T_GER. The word is spelled with I there, and N is not a letter a child would choose because it sounds right. Writing TNGER does not read aloud like the real word, so the sound-alike act does not produce this option."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-02",
+   "optionId": "gen-vr-20-complete-the-word-02-opt2",
+   "value": "O",
+   "tag": "vr20-common-letter",
+   "verdict": "EXECUTES",
+   "execution": "The task is to complete CA_DLE, and the correct word is CANDLE, so the key is N. The child puts O, one of the most common letters in English, into the gap without reading the result back. That gives CAODLE, which is not a word."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-02",
+   "optionId": "gen-vr-20-complete-the-word-02-opt3",
+   "value": "S",
+   "tag": "vr20-sound-alike",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "S does not make a sound that plausibly fits the gap in CA_DLE. The word is spelled with N there, and S is not a letter a child would choose because it sounds right. Writing CASDLE does not read aloud like the real word, so the sound-alike act does not produce this option."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-03",
+   "optionId": "gen-vr-20-complete-the-word-03-opt2",
+   "value": "E",
+   "tag": "vr20-common-letter",
+   "verdict": "EXECUTES",
+   "execution": "The task is to complete WIN_OW, and the correct word is WINDOW, so the key is D. The child puts E, one of the most common letters in English, into the gap without reading the result back. That gives WINEOW, which is not a word."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-03",
+   "optionId": "gen-vr-20-complete-the-word-03-opt3",
+   "value": "I",
+   "tag": "vr20-sound-alike",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "I does not make a sound that plausibly fits the gap in WIN_OW. The word is spelled with D there, and I is not a letter a child would choose because it sounds right. Writing WINIOW does not read aloud like the real word, so the sound-alike act does not produce this option."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-04",
+   "optionId": "gen-vr-20-complete-the-word-04-opt2",
+   "value": "F",
+   "tag": "vr20-common-letter",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "F is not one of the most common letters in English (E, T, A, O, I, N, S, H, R, D, L), so a child defaulting to a common letter would not plainly reach it. It looks like the key's next letter in the alphabet, not a common-letter default."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-04",
+   "optionId": "gen-vr-20-complete-the-word-04-opt3",
+   "value": "J",
+   "tag": "vr20-sound-alike",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "J does not make a sound that plausibly fits the gap in GARD_N. The word is spelled with E there, and J is not a letter a child would choose because it sounds right. Writing GARDJN does not read aloud like the real word, so the sound-alike act does not produce this option."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-05",
+   "optionId": "gen-vr-20-complete-the-word-05-opt2",
+   "value": "V",
+   "tag": "vr20-common-letter",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "V is not one of the most common letters in English (E, T, A, O, I, N, S, H, R, D, L), so a child defaulting to a common letter would not plainly reach it. It looks like the key's next letter in the alphabet, not a common-letter default."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-05",
+   "optionId": "gen-vr-20-complete-the-word-05-opt3",
+   "value": "Z",
+   "tag": "vr20-sound-alike",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "Z does not make a sound that plausibly fits the gap in P_RPLE. The word is spelled with U there, and Z is not a letter a child would choose because it sounds right. Writing PZRPLE does not read aloud like the real word, so the sound-alike act does not produce this option."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-06",
+   "optionId": "gen-vr-20-complete-the-word-06-opt2",
+   "value": "M",
+   "tag": "vr20-common-letter",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "M is not one of the most common letters in English (E, T, A, O, I, N, S, H, R, D, L), so a child defaulting to a common letter would not plainly reach it. It looks like the key's next letter in the alphabet, not a common-letter default."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-06",
+   "optionId": "gen-vr-20-complete-the-word-06-opt3",
+   "value": "Q",
+   "tag": "vr20-sound-alike",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "Q does not make a sound that plausibly fits the gap in SI_VER. The word is spelled with L there, and Q is not a letter a child would choose because it sounds right. Writing SIQVER does not read aloud like the real word, so the sound-alike act does not produce this option."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-07",
+   "optionId": "gen-vr-20-complete-the-word-07-opt2",
+   "value": "L",
+   "tag": "vr20-common-letter",
+   "verdict": "EXECUTES",
+   "execution": "The task is to complete MAR_ET, and the correct word is MARKET, so the key is K. The child puts L, one of the most common letters in English, into the gap without reading the result back. That gives MARLET, which is not a word."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-07",
+   "optionId": "gen-vr-20-complete-the-word-07-opt3",
+   "value": "P",
+   "tag": "vr20-sound-alike",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "P does not make a sound that plausibly fits the gap in MAR_ET. The word is spelled with K there, and P is not a letter a child would choose because it sounds right. Writing MARPET does not read aloud like the real word, so the sound-alike act does not produce this option."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-08",
+   "optionId": "gen-vr-20-complete-the-word-08-opt2",
+   "value": "J",
+   "tag": "vr20-common-letter",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "J is not one of the most common letters in English (E, T, A, O, I, N, S, H, R, D, L), so a child defaulting to a common letter would not plainly reach it. It looks like the key's next letter in the alphabet, not a common-letter default."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-08",
+   "optionId": "gen-vr-20-complete-the-word-08-opt3",
+   "value": "N",
+   "tag": "vr20-sound-alike",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "N does not make a sound that plausibly fits the gap in PENC_L. The word is spelled with I there, and N is not a letter a child would choose because it sounds right. Writing PENCNL does not read aloud like the real word, so the sound-alike act does not produce this option."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-09",
+   "optionId": "gen-vr-20-complete-the-word-09-opt2",
+   "value": "P",
+   "tag": "vr20-common-letter",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "P is not one of the most common letters in English (E, T, A, O, I, N, S, H, R, D, L), so a child defaulting to a common letter would not plainly reach it. It looks like the key's next letter in the alphabet, not a common-letter default."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-09",
+   "optionId": "gen-vr-20-complete-the-word-09-opt3",
+   "value": "T",
+   "tag": "vr20-sound-alike",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "T does not make a sound that plausibly fits the gap in R_CKET. The word is spelled with O there, and T is not a letter a child would choose because it sounds right. Writing RTCKET does not read aloud like the real word, so the sound-alike act does not produce this option."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-10",
+   "optionId": "gen-vr-20-complete-the-word-10-opt2",
+   "value": "O",
+   "tag": "vr20-common-letter",
+   "verdict": "EXECUTES",
+   "execution": "The task is to complete JU_GLE, and the correct word is JUNGLE, so the key is N. The child puts O, one of the most common letters in English, into the gap without reading the result back. That gives JUOGLE, which is not a word."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-10",
+   "optionId": "gen-vr-20-complete-the-word-10-opt3",
+   "value": "S",
+   "tag": "vr20-sound-alike",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "S does not make a sound that plausibly fits the gap in JU_GLE. The word is spelled with N there, and S is not a letter a child would choose because it sounds right. Writing JUSGLE does not read aloud like the real word, so the sound-alike act does not produce this option."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-11",
+   "optionId": "gen-vr-20-complete-the-word-11-opt2",
+   "value": "U",
+   "tag": "vr20-common-letter",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "U is not one of the most common letters in English (E, T, A, O, I, N, S, H, R, D, L), so a child defaulting to a common letter would not plainly reach it. It looks like the key's next letter in the alphabet, not a common-letter default."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-11",
+   "optionId": "gen-vr-20-complete-the-word-11-opt3",
+   "value": "Y",
+   "tag": "vr20-sound-alike",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "Y does not make a sound that plausibly fits the gap in CAS_LE. The word is spelled with T there, and Y is not a letter a child would choose because it sounds right. Writing CASYLE does not read aloud like the real word, so the sound-alike act does not produce this option."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-12",
+   "optionId": "gen-vr-20-complete-the-word-12-opt2",
+   "value": "P",
+   "tag": "vr20-common-letter",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "P is not one of the most common letters in English (E, T, A, O, I, N, S, H, R, D, L), so a child defaulting to a common letter would not plainly reach it. It looks like the key's next letter in the alphabet, not a common-letter default."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-12",
+   "optionId": "gen-vr-20-complete-the-word-12-opt3",
+   "value": "T",
+   "tag": "vr20-sound-alike",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "T does not make a sound that plausibly fits the gap in BUTT_N. The word is spelled with O there, and T is not a letter a child would choose because it sounds right. Writing BUTTTN does not read aloud like the real word, so the sound-alike act does not produce this option."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-13",
+   "optionId": "gen-vr-20-complete-the-word-13-opt2",
+   "value": "J",
+   "tag": "vr20-common-letter",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "J is not one of the most common letters in English (E, T, A, O, I, N, S, H, R, D, L), so a child defaulting to a common letter would not plainly reach it. It looks like the key's next letter in the alphabet, not a common-letter default."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-13",
+   "optionId": "gen-vr-20-complete-the-word-13-opt3",
+   "value": "N",
+   "tag": "vr20-sound-alike",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "N does not make a sound that plausibly fits the gap in M_RROR. The word is spelled with I there, and N is not a letter a child would choose because it sounds right. Writing MNRROR does not read aloud like the real word, so the sound-alike act does not produce this option."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-14",
+   "optionId": "gen-vr-20-complete-the-word-14-opt2",
+   "value": "D",
+   "tag": "vr20-common-letter",
+   "verdict": "EXECUTES",
+   "execution": "The task is to complete PO_KET, and the correct word is POCKET, so the key is C. The child puts D, one of the most common letters in English, into the gap without reading the result back. That gives PODKET, which is not a word."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-14",
+   "optionId": "gen-vr-20-complete-the-word-14-opt3",
+   "value": "H",
+   "tag": "vr20-sound-alike",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "H does not make a sound that plausibly fits the gap in PO_KET. The word is spelled with C there, and H is not a letter a child would choose because it sounds right. Writing POHKET does not read aloud like the real word, so the sound-alike act does not produce this option."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-15",
+   "optionId": "gen-vr-20-complete-the-word-15-opt2",
+   "value": "E",
+   "tag": "vr20-common-letter",
+   "verdict": "EXECUTES",
+   "execution": "The task is to complete SUN_AY, and the correct word is SUNDAY, so the key is D. The child puts E, one of the most common letters in English, into the gap without reading the result back. That gives SUNEAY, which is not a word."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-15",
+   "optionId": "gen-vr-20-complete-the-word-15-opt3",
+   "value": "I",
+   "tag": "vr20-sound-alike",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "I does not make a sound that plausibly fits the gap in SUN_AY. The word is spelled with D there, and I is not a letter a child would choose because it sounds right. Writing SUNIAY does not read aloud like the real word, so the sound-alike act does not produce this option."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-16",
+   "optionId": "gen-vr-20-complete-the-word-16-opt2",
+   "value": "M",
+   "tag": "vr20-common-letter",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "M is not one of the most common letters in English (E, T, A, O, I, N, S, H, R, D, L), so a child defaulting to a common letter would not plainly reach it. It looks like the key's next letter in the alphabet, not a common-letter default."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-16",
+   "optionId": "gen-vr-20-complete-the-word-16-opt3",
+   "value": "Q",
+   "tag": "vr20-sound-alike",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "Q does not make a sound that plausibly fits the gap in BOTT_E. The word is spelled with L there, and Q is not a letter a child would choose because it sounds right. Writing BOTTQE does not read aloud like the real word, so the sound-alike act does not produce this option."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-17",
+   "optionId": "gen-vr-20-complete-the-word-17-opt2",
+   "value": "S",
+   "tag": "vr20-common-letter",
+   "verdict": "EXECUTES",
+   "execution": "The task is to complete D_AGON, and the correct word is DRAGON, so the key is R. The child puts S, one of the most common letters in English, into the gap without reading the result back. That gives DSAGON, which is not a word."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-17",
+   "optionId": "gen-vr-20-complete-the-word-17-opt3",
+   "value": "W",
+   "tag": "vr20-sound-alike",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "W does not make a sound that plausibly fits the gap in D_AGON. The word is spelled with R there, and W is not a letter a child would choose because it sounds right. Writing DWAGON does not read aloud like the real word, so the sound-alike act does not produce this option."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-18",
+   "optionId": "gen-vr-20-complete-the-word-18-opt2",
+   "value": "S",
+   "tag": "vr20-common-letter",
+   "verdict": "EXECUTES",
+   "execution": "The task is to complete CI_CUS, and the correct word is CIRCUS, so the key is R. The child puts S, one of the most common letters in English, into the gap without reading the result back. That gives CISCUS, which is not a word."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-18",
+   "optionId": "gen-vr-20-complete-the-word-18-opt3",
+   "value": "W",
+   "tag": "vr20-sound-alike",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "W does not make a sound that plausibly fits the gap in CI_CUS. The word is spelled with R there, and W is not a letter a child would choose because it sounds right. Writing CIWCUS does not read aloud like the real word, so the sound-alike act does not produce this option."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-19",
+   "optionId": "gen-vr-20-complete-the-word-19-opt2",
+   "value": "N",
+   "tag": "vr20-common-letter",
+   "verdict": "EXECUTES",
+   "execution": "The task is to complete HEL_ET, and the correct word is HELMET, so the key is M. The child puts N, one of the most common letters in English, into the gap without reading the result back. That gives HELNET, which is not a word."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-19",
+   "optionId": "gen-vr-20-complete-the-word-19-opt3",
+   "value": "R",
+   "tag": "vr20-sound-alike",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "R does not make a sound that plausibly fits the gap in HEL_ET. The word is spelled with M there, and R is not a letter a child would choose because it sounds right. Writing HELRET does not read aloud like the real word, so the sound-alike act does not produce this option."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-20",
+   "optionId": "gen-vr-20-complete-the-word-20-opt2",
+   "value": "F",
+   "tag": "vr20-common-letter",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "F is not one of the most common letters in English (E, T, A, O, I, N, S, H, R, D, L), so a child defaulting to a common letter would not plainly reach it. It looks like the key's next letter in the alphabet, not a common-letter default."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-20",
+   "optionId": "gen-vr-20-complete-the-word-20-opt3",
+   "value": "J",
+   "tag": "vr20-sound-alike",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "J does not make a sound that plausibly fits the gap in CARP_T. The word is spelled with E there, and J is not a letter a child would choose because it sounds right. Writing CARPJT does not read aloud like the real word, so the sound-alike act does not produce this option."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-21",
+   "optionId": "gen-vr-20-complete-the-word-21-opt2",
+   "value": "B",
+   "tag": "vr20-common-letter",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "B is not one of the most common letters in English (E, T, A, O, I, N, S, H, R, D, L), so a child defaulting to a common letter would not plainly reach it. It looks like the key's next letter in the alphabet, not a common-letter default."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-21",
+   "optionId": "gen-vr-20-complete-the-word-21-opt3",
+   "value": "F",
+   "tag": "vr20-sound-alike",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "F does not make a sound that plausibly fits the gap in L_NTERN. The word is spelled with A there, and F is not a letter a child would choose because it sounds right. Writing LFNTERN does not read aloud like the real word, so the sound-alike act does not produce this option."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-22",
+   "optionId": "gen-vr-20-complete-the-word-22-opt2",
+   "value": "T",
+   "tag": "vr20-common-letter",
+   "verdict": "EXECUTES",
+   "execution": "The task is to complete BA_KET, and the correct word is BASKET, so the key is S. The child puts T, one of the most common letters in English, into the gap without reading the result back. That gives BATKET, which is not a word."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-22",
+   "optionId": "gen-vr-20-complete-the-word-22-opt3",
+   "value": "X",
+   "tag": "vr20-sound-alike",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "X does not make a sound that plausibly fits the gap in BA_KET. The word is spelled with S there, and X is not a letter a child would choose because it sounds right. Writing BAXKET does not read aloud like the real word, so the sound-alike act does not produce this option."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-23",
+   "optionId": "gen-vr-20-complete-the-word-23-opt2",
+   "value": "O",
+   "tag": "vr20-common-letter",
+   "verdict": "EXECUTES",
+   "execution": "The task is to complete TUN_EL, and the correct word is TUNNEL, so the key is N. The child puts O, one of the most common letters in English, into the gap without reading the result back. That gives TUNOEL, which is not a word."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-23",
+   "optionId": "gen-vr-20-complete-the-word-23-opt3",
+   "value": "S",
+   "tag": "vr20-sound-alike",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "S does not make a sound that plausibly fits the gap in TUN_EL. The word is spelled with N there, and S is not a letter a child would choose because it sounds right. Writing TUNSEL does not read aloud like the real word, so the sound-alike act does not produce this option."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-24",
+   "optionId": "gen-vr-20-complete-the-word-24-opt2",
+   "value": "F",
+   "tag": "vr20-common-letter",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "F is not one of the most common letters in English (E, T, A, O, I, N, S, H, R, D, L), so a child defaulting to a common letter would not plainly reach it. It looks like the key's next letter in the alphabet, not a common-letter default."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-24",
+   "optionId": "gen-vr-20-complete-the-word-24-opt3",
+   "value": "J",
+   "tag": "vr20-sound-alike",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "J does not make a sound that plausibly fits the gap in VELV_T. The word is spelled with E there, and J is not a letter a child would choose because it sounds right. Writing VELVJT does not read aloud like the real word, so the sound-alike act does not produce this option."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-25",
+   "optionId": "gen-vr-20-complete-the-word-25-opt2",
+   "value": "B",
+   "tag": "vr20-common-letter",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "B is not one of the most common letters in English (E, T, A, O, I, N, S, H, R, D, L), so a child defaulting to a common letter would not plainly reach it. It looks like the key's next letter in the alphabet, not a common-letter default."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-25",
+   "optionId": "gen-vr-20-complete-the-word-25-opt3",
+   "value": "F",
+   "tag": "vr20-sound-alike",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "F does not make a sound that plausibly fits the gap in M_GNET. The word is spelled with A there, and F is not a letter a child would choose because it sounds right. Writing MFGNET does not read aloud like the real word, so the sound-alike act does not produce this option."
+  }
+ ]
+}

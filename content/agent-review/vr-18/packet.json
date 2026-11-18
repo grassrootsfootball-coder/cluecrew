@@ -1,0 +1,862 @@
+{
+ "door": "vr-18",
+ "caseId": "case-vr-18",
+ "title": "The Middle Number",
+ "questionType": "vr-18-related-numbers",
+ "entries": {
+  "vr18-rule-swap": {
+   "description": "Applied a nearby rule (added instead of multiplied).",
+   "childHint": "Test your rule on the first group before using it on the second."
+  },
+  "vr18-partial-rule": {
+   "description": "Used only one of the two outer numbers in the rule.",
+   "childHint": "The middle number is made from both outside numbers. How do they combine?"
+  }
+ },
+ "houseFormExemplars": {
+  "vr18-rule-swap": [
+   {
+    "itemId": "gen-vr-18-related-numbers-01",
+    "option": "8",
+    "execution": "The first group settles the rule: 2 + 3 = 5, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 4 + 2 = 6. This option multiplied them instead: 4 x 2 = 8."
+   },
+   {
+    "itemId": "gen-vr-18-related-numbers-02",
+    "option": "60",
+    "execution": "The first group settles the rule: 6 + 8 = 14, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 10 + 6 = 16. This option multiplied them instead: 10 x 6 = 60."
+   },
+   {
+    "itemId": "gen-vr-18-related-numbers-03",
+    "option": "10",
+    "execution": "The first group settles the rule: 4 x 5 = 20, so the middle number comes from multiplying the two outer numbers. The same rule on the second group gives 6 x 4 = 24. This option added them instead: 6 + 4 = 10."
+   }
+  ]
+ },
+ "rows": [
+  {
+   "itemId": "gen-vr-18-related-numbers-01",
+   "signed": true,
+   "stem": {
+    "sum": "(2 [5] 3)    (4 [?] 2)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "solution": null,
+   "key": "6",
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-01-opt1",
+     "value": "6",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-01-opt2",
+     "value": "8",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "execution": "The first group settles the rule: 2 + 3 = 5, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 4 + 2 = 6. This option multiplied them instead: 4 x 2 = 8."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-01-opt3",
+     "value": "7",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-02",
+   "signed": true,
+   "stem": {
+    "sum": "(6 [14] 8)    (10 [?] 6)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "solution": null,
+   "key": "16",
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-02-opt1",
+     "value": "16",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-02-opt2",
+     "value": "60",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "execution": "The first group settles the rule: 6 + 8 = 14, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 10 + 6 = 16. This option multiplied them instead: 10 x 6 = 60."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-02-opt3",
+     "value": "17",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-03",
+   "signed": true,
+   "stem": {
+    "sum": "(4 [20] 5)    (6 [?] 4)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "solution": null,
+   "key": "24",
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-03-opt1",
+     "value": "24",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-03-opt2",
+     "value": "10",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "execution": "The first group settles the rule: 4 x 5 = 20, so the middle number comes from multiplying the two outer numbers. The same rule on the second group gives 6 x 4 = 24. This option added them instead: 6 + 4 = 10."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-03-opt3",
+     "value": "25",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-04",
+   "signed": true,
+   "stem": {
+    "sum": "(10 [120] 12)    (14 [?] 10)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "solution": null,
+   "key": "140",
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-04-opt1",
+     "value": "140",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-04-opt2",
+     "value": "24",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "execution": "The first group settles the rule: 10 x 12 = 120, so the middle number comes from multiplying the two outer numbers. The same rule on the second group gives 14 x 10 = 140. This option added them instead: 14 + 10 = 24."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-04-opt3",
+     "value": "141",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-05",
+   "signed": true,
+   "stem": {
+    "sum": "(6 [13] 7)    (8 [?] 6)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "solution": null,
+   "key": "14",
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-05-opt1",
+     "value": "14",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-05-opt2",
+     "value": "48",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "execution": "The first group settles the rule: 6 + 7 = 13, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 8 + 6 = 14. This option multiplied them instead: 8 x 6 = 48."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-05-opt3",
+     "value": "15",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-06",
+   "signed": true,
+   "stem": {
+    "sum": "(14 [20] 6)    (8 [?] 14)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "solution": null,
+   "key": "22",
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-06-opt1",
+     "value": "22",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-06-opt2",
+     "value": "112",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "execution": "The first group settles the rule: 14 + 6 = 20, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 8 + 14 = 22. This option multiplied them instead: 8 x 14 = 112."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-06-opt3",
+     "value": "23",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-07",
+   "signed": true,
+   "stem": {
+    "sum": "(2 [8] 4)    (5 [?] 8)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "solution": null,
+   "key": "40",
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-07-opt1",
+     "value": "40",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-07-opt2",
+     "value": "13",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "execution": "The first group settles the rule: 2 x 4 = 8, so the middle number comes from multiplying the two outer numbers. The same rule on the second group gives 5 x 8 = 40. This option added them instead: 5 + 8 = 13."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-07-opt3",
+     "value": "41",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-08",
+   "signed": true,
+   "stem": {
+    "sum": "(6 [60] 10)    (12 [?] 4)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "solution": null,
+   "key": "48",
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-08-opt1",
+     "value": "48",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-08-opt2",
+     "value": "16",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "execution": "The first group settles the rule: 6 x 10 = 60, so the middle number comes from multiplying the two outer numbers. The same rule on the second group gives 12 x 4 = 48. This option added them instead: 12 + 4 = 16."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-08-opt3",
+     "value": "49",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-09",
+   "signed": true,
+   "stem": {
+    "sum": "(4 [10] 6)    (7 [?] 3)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "solution": null,
+   "key": "10",
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-09-opt1",
+     "value": "10",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-09-opt2",
+     "value": "21",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "execution": "The first group settles the rule: 4 + 6 = 10, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 7 + 3 = 10. This option multiplied them instead: 7 x 3 = 21."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-09-opt3",
+     "value": "11",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-10",
+   "signed": true,
+   "stem": {
+    "sum": "(10 [24] 14)    (16 [?] 8)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "solution": null,
+   "key": "24",
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-10-opt1",
+     "value": "24",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-10-opt2",
+     "value": "128",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "execution": "The first group settles the rule: 10 + 14 = 24, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 16 + 8 = 24. This option multiplied them instead: 16 x 8 = 128."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-10-opt3",
+     "value": "25",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-11",
+   "signed": true,
+   "stem": {
+    "sum": "(6 [18] 3)    (4 [?] 5)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "solution": null,
+   "key": "20",
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-11-opt1",
+     "value": "20",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-11-opt2",
+     "value": "9",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "execution": "The first group settles the rule: 6 x 3 = 18, so the middle number comes from multiplying the two outer numbers. The same rule on the second group gives 4 x 5 = 20. This option added them instead: 4 + 5 = 9."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-11-opt3",
+     "value": "21",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-12",
+   "signed": true,
+   "stem": {
+    "sum": "(14 [112] 8)    (10 [?] 12)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "solution": null,
+   "key": "120",
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-12-opt1",
+     "value": "120",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-12-opt2",
+     "value": "22",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "execution": "The first group settles the rule: 14 x 8 = 112, so the middle number comes from multiplying the two outer numbers. The same rule on the second group gives 10 x 12 = 120. This option added them instead: 10 + 12 = 22."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-12-opt3",
+     "value": "121",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-13",
+   "signed": true,
+   "stem": {
+    "sum": "(2 [7] 5)    (6 [?] 7)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "solution": null,
+   "key": "13",
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-13-opt1",
+     "value": "13",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-13-opt2",
+     "value": "42",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "execution": "The first group settles the rule: 2 + 5 = 7, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 6 + 7 = 13. This option multiplied them instead: 6 x 7 = 42."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-13-opt3",
+     "value": "14",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-14",
+   "signed": true,
+   "stem": {
+    "sum": "(6 [18] 12)    (14 [?] 16)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "solution": null,
+   "key": "30",
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-14-opt1",
+     "value": "30",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-14-opt2",
+     "value": "224",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "execution": "The first group settles the rule: 6 + 12 = 18, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 14 + 16 = 30. This option multiplied them instead: 14 x 16 = 224."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-14-opt3",
+     "value": "31",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-15",
+   "signed": true,
+   "stem": {
+    "sum": "(4 [28] 7)    (8 [?] 2)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "solution": null,
+   "key": "16",
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-15-opt1",
+     "value": "16",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-15-opt2",
+     "value": "10",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "execution": "The first group settles the rule: 4 x 7 = 28, so the middle number comes from multiplying the two outer numbers. The same rule on the second group gives 8 x 2 = 16. This option added them instead: 8 + 2 = 10."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-15-opt3",
+     "value": "17",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-16",
+   "signed": true,
+   "stem": {
+    "sum": "(10 [60] 6)    (8 [?] 6)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "solution": null,
+   "key": "48",
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-16-opt1",
+     "value": "48",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-16-opt2",
+     "value": "14",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "execution": "The first group settles the rule: 10 x 6 = 60, so the middle number comes from multiplying the two outer numbers. The same rule on the second group gives 8 x 6 = 48. This option added them instead: 8 + 6 = 14."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-16-opt3",
+     "value": "49",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-17",
+   "signed": true,
+   "stem": {
+    "sum": "(6 [10] 4)    (5 [?] 4)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "solution": null,
+   "key": "9",
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-17-opt1",
+     "value": "9",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-17-opt2",
+     "value": "20",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "execution": "The first group settles the rule: 6 + 4 = 10, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 5 + 4 = 9. This option multiplied them instead: 5 x 4 = 20."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-17-opt3",
+     "value": "10",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-18",
+   "signed": true,
+   "stem": {
+    "sum": "(14 [24] 10)    (12 [?] 10)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "solution": null,
+   "key": "22",
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-18-opt1",
+     "value": "22",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-18-opt2",
+     "value": "120",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "execution": "The first group settles the rule: 14 + 10 = 24, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 12 + 10 = 22. This option multiplied them instead: 12 x 10 = 120."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-18-opt3",
+     "value": "23",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-19",
+   "signed": true,
+   "stem": {
+    "sum": "(2 [12] 6)    (7 [?] 6)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "solution": null,
+   "key": "42",
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-19-opt1",
+     "value": "42",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-19-opt2",
+     "value": "13",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "execution": "The first group settles the rule: 2 x 6 = 12, so the middle number comes from multiplying the two outer numbers. The same rule on the second group gives 7 x 6 = 42. This option added them instead: 7 + 6 = 13."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-19-opt3",
+     "value": "43",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-20",
+   "signed": true,
+   "stem": {
+    "sum": "(6 [84] 14)    (16 [?] 14)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "solution": null,
+   "key": "224",
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-20-opt1",
+     "value": "224",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-20-opt2",
+     "value": "30",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "execution": "The first group settles the rule: 6 x 14 = 84, so the middle number comes from multiplying the two outer numbers. The same rule on the second group gives 16 x 14 = 224. This option added them instead: 16 + 14 = 30."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-20-opt3",
+     "value": "225",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-21",
+   "signed": true,
+   "stem": {
+    "sum": "(4 [7] 3)    (4 [?] 8)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "solution": null,
+   "key": "12",
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-21-opt1",
+     "value": "12",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-21-opt2",
+     "value": "32",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "execution": "The first group settles the rule: 4 + 3 = 7, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 4 + 8 = 12. This option multiplied them instead: 4 x 8 = 32."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-21-opt3",
+     "value": "13",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-22",
+   "signed": true,
+   "stem": {
+    "sum": "(10 [18] 8)    (10 [?] 4)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "solution": null,
+   "key": "14",
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-22-opt1",
+     "value": "14",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-22-opt2",
+     "value": "40",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "execution": "The first group settles the rule: 10 + 8 = 18, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 10 + 4 = 14. This option multiplied them instead: 10 x 4 = 40."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-22-opt3",
+     "value": "15",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-23",
+   "signed": true,
+   "stem": {
+    "sum": "(6 [30] 5)    (6 [?] 3)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "solution": null,
+   "key": "18",
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-23-opt1",
+     "value": "18",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-23-opt2",
+     "value": "9",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "execution": "The first group settles the rule: 6 x 5 = 30, so the middle number comes from multiplying the two outer numbers. The same rule on the second group gives 6 x 3 = 18. This option added them instead: 6 + 3 = 9."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-23-opt3",
+     "value": "19",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-24",
+   "signed": true,
+   "stem": {
+    "sum": "(14 [168] 12)    (14 [?] 8)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "solution": null,
+   "key": "112",
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-24-opt1",
+     "value": "112",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-24-opt2",
+     "value": "22",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "execution": "The first group settles the rule: 14 x 12 = 168, so the middle number comes from multiplying the two outer numbers. The same rule on the second group gives 14 x 8 = 112. This option added them instead: 14 + 8 = 22."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-24-opt3",
+     "value": "113",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-25",
+   "signed": true,
+   "stem": {
+    "sum": "(2 [9] 7)    (8 [?] 5)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "solution": null,
+   "key": "13",
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-25-opt1",
+     "value": "13",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-25-opt2",
+     "value": "40",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "execution": "The first group settles the rule: 2 + 7 = 9, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 8 + 5 = 13. This option multiplied them instead: 8 x 5 = 40."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-25-opt3",
+     "value": "14",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "execution": null
+    }
+   ]
+  }
+ ]
+}

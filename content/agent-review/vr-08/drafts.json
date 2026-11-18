@@ -1,0 +1,374 @@
+{
+  "door": "vr-08",
+  "drafter": "agent",
+  "drafts": [
+    {
+      "itemId": "gen-vr-08-move-letter-01",
+      "optionId": "gen-vr-08-move-letter-01-opt2",
+      "value": "H",
+      "tag": "vr-move-letter-first-word-invalid",
+      "verdict": "EXECUTES",
+      "execution": "Move one letter so both words are real. This option moves H. Taking H out of HEART leaves EART, which is not a word — the first word breaks. The answer is T: HEAR and TOLD."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-01",
+      "optionId": "gen-vr-08-move-letter-01-opt3",
+      "value": "R",
+      "tag": "vr-move-letter-second-word-invalid",
+      "verdict": "EXECUTES",
+      "execution": "Move one letter so both words are real. This option moves R. HEART without R is HEAT, a real word — but OLD cannot take R anywhere and make a word; the best try is OLDR. The second word breaks. The answer is T: HEAR and TOLD."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-02",
+      "optionId": "gen-vr-08-move-letter-02-opt2",
+      "value": "L",
+      "tag": "vr-move-letter-first-word-invalid",
+      "verdict": "CANNOT_EXECUTE",
+      "reason": "Taking L out of BLEND leaves BEND, which is a real word, so the first word does not break; the tag's first-word fault is not present here. RIDGE with L makes no word, so the second word is the one that fails. Seat belongs to the other tag."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-02",
+      "optionId": "gen-vr-08-move-letter-02-opt3",
+      "value": "D",
+      "tag": "vr-move-letter-second-word-invalid",
+      "verdict": "EXECUTES",
+      "execution": "Move one letter so both words are real. This option moves D. Taking D out of BLEND leaves BLEN, which is not a word, and RIDGE cannot take D anywhere and make a word either; the best try is DRIDGE. The second word breaks as well. The answer is B: LEND and BRIDGE."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-03",
+      "optionId": "gen-vr-08-move-letter-03-opt2",
+      "value": "L",
+      "tag": "vr-move-letter-first-word-invalid",
+      "verdict": "CANNOT_EXECUTE",
+      "reason": "Taking L out of FLAME leaves FAME, which is a real word, so the first word does not break. The option does not fit the first-word-invalid tag. It also fails on the second word (RIGHT with L makes no word), so it matches the other tag instead."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-03",
+      "optionId": "gen-vr-08-move-letter-03-opt3",
+      "value": "M",
+      "tag": "vr-move-letter-second-word-invalid",
+      "verdict": "EXECUTES",
+      "execution": "Move one letter so both words are real. This option moves M. Taking M out of FLAME leaves FLAE, which is not a word, and RIGHT cannot take M anywhere and make a word either; the best try is RIGHTM. The second word breaks as well. The answer is F: LAME and FRIGHT."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-04",
+      "optionId": "gen-vr-08-move-letter-04-opt2",
+      "value": "A",
+      "tag": "vr-move-letter-first-word-invalid",
+      "verdict": "EXECUTES",
+      "execution": "Move one letter so both words are real. This option moves A. Taking A out of TABLE leaves TBLE, which is not a word — the first word breaks. The answer is T: ABLE and TOWN."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-04",
+      "optionId": "gen-vr-08-move-letter-04-opt3",
+      "value": "B",
+      "tag": "vr-move-letter-second-word-invalid",
+      "verdict": "EXECUTES",
+      "execution": "Move one letter so both words are real. This option moves B. TABLE without B is TALE, a real word — but OWN cannot take B anywhere and make a word; the best try is OWNB. The second word breaks. The answer is T: ABLE and TOWN."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-05",
+      "optionId": "gen-vr-08-move-letter-05-opt2",
+      "value": "S",
+      "tag": "vr-move-letter-first-word-invalid",
+      "verdict": "CANNOT_EXECUTE",
+      "reason": "Taking S out of SPEND leaves PEND. PEND is accepted in some word lists (Scrabble) but is not an everyday word a child would class as not-a-word, so whether the first word breaks is a judgement. Needs a clearer first-word breaker."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-05",
+      "optionId": "gen-vr-08-move-letter-05-opt3",
+      "value": "N",
+      "tag": "vr-move-letter-second-word-invalid",
+      "verdict": "EXECUTES",
+      "execution": "Move one letter so both words are real. This option moves N. SPEND without N is SPED, a real word — but SENT cannot take N anywhere and make a word; the best try is SENTN. The second word breaks. The answer is P: SEND and SPENT."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-06",
+      "optionId": "gen-vr-08-move-letter-06-opt3",
+      "value": "C",
+      "tag": "vr-move-letter-second-word-invalid",
+      "verdict": "EXECUTES",
+      "execution": "Move one letter so both words are real. This option moves C. Taking C out of SPACE leaves SPAE, which is not a word, and TAR cannot take C anywhere and make a word either; the best try is TARC. The second word breaks as well. The answer is S: PACE and STAR."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-07",
+      "optionId": "gen-vr-08-move-letter-07-opt2",
+      "value": "T",
+      "tag": "vr-move-letter-first-word-invalid",
+      "verdict": "CANNOT_EXECUTE",
+      "reason": "Taking T out of TWIN leaves WIN, which is a real word, so the first word does not break. The option does not fit the first-word-invalid tag."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-07",
+      "optionId": "gen-vr-08-move-letter-07-opt3",
+      "value": "N",
+      "tag": "vr-move-letter-second-word-invalid",
+      "verdict": "EXECUTES",
+      "execution": "Move one letter so both words are real. This option moves N. Taking N out of TWIN leaves TWI, which is not a word, and HERE cannot take N anywhere and make a word either; the best try is HERNE. The second word breaks as well. The answer is W: TIN and WHERE."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-08",
+      "optionId": "gen-vr-08-move-letter-08-opt2",
+      "value": "L",
+      "tag": "vr-move-letter-first-word-invalid",
+      "verdict": "EXECUTES",
+      "execution": "Move one letter so both words are real. This option moves L. Taking L out of SLED leaves SED, which is not a word — the first word breaks. The answer is S: LED and SPIT."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-09",
+      "optionId": "gen-vr-08-move-letter-09-opt2",
+      "value": "R",
+      "tag": "vr-move-letter-first-word-invalid",
+      "verdict": "CANNOT_EXECUTE",
+      "reason": "Taking R out of GRAIN leaves GAIN, a real word, so the first word does not break, and ATE with R makes RATE, also real. Both words are real, so R is a second correct answer, not a distractor."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-09",
+      "optionId": "gen-vr-08-move-letter-09-opt3",
+      "value": "N",
+      "tag": "vr-move-letter-second-word-invalid",
+      "verdict": "CANNOT_EXECUTE",
+      "reason": "ATE with N makes ANTE, which is a real word, so the second word does not fail as the tag says. The first word does break (GRAIN without N is GRAI), so the real fault is first-word-invalid, not second."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-10",
+      "optionId": "gen-vr-08-move-letter-10-opt2",
+      "value": "H",
+      "tag": "vr-move-letter-first-word-invalid",
+      "verdict": "EXECUTES",
+      "execution": "Move one letter so both words are real. This option moves H. Taking H out of CHARM leaves CARM, which is not a word — the first word breaks. The answer is C: HARM and CORE."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-10",
+      "optionId": "gen-vr-08-move-letter-10-opt3",
+      "value": "M",
+      "tag": "vr-move-letter-second-word-invalid",
+      "verdict": "CANNOT_EXECUTE",
+      "reason": "Taking M out of CHARM leaves CHAR, a real word, and ORE with M makes MORE, a real word. Both words are real, so M is a second correct answer, not a distractor."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-11",
+      "optionId": "gen-vr-08-move-letter-11-opt2",
+      "value": "L",
+      "tag": "vr-move-letter-first-word-invalid",
+      "verdict": "CANNOT_EXECUTE",
+      "reason": "Taking L out of PLUMP leaves PUMP, a real word, and AY with L makes LAY, a real word. Both words are real, so L is a second correct answer, not a distractor."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-11",
+      "optionId": "gen-vr-08-move-letter-11-opt3",
+      "value": "M",
+      "tag": "vr-move-letter-second-word-invalid",
+      "verdict": "CANNOT_EXECUTE",
+      "reason": "AY with M makes MAY, a real word, so the second word does not fail as the tag says. PLUMP without M is PLUP, which is not a word, so the real fault is first-word-invalid, not second."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-12",
+      "optionId": "gen-vr-08-move-letter-12-opt2",
+      "value": "O",
+      "tag": "vr-move-letter-first-word-invalid",
+      "verdict": "EXECUTES",
+      "execution": "Move one letter so both words are real. This option moves O. Taking O out of SNOW leaves SNW, which is not a word — the first word breaks. The answer is S: NOW and SHOE."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-12",
+      "optionId": "gen-vr-08-move-letter-12-opt3",
+      "value": "W",
+      "tag": "vr-move-letter-second-word-invalid",
+      "verdict": "EXECUTES",
+      "execution": "Move one letter so both words are real. This option moves W. Taking W out of SNOW leaves SNO, which is not a word, and HOE cannot take W anywhere and make a word either; the best try is HOWE. The second word breaks as well. The answer is S: NOW and SHOE."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-13",
+      "optionId": "gen-vr-08-move-letter-13-opt2",
+      "value": "A",
+      "tag": "vr-move-letter-first-word-invalid",
+      "verdict": "EXECUTES",
+      "execution": "Move one letter so both words are real. This option moves A. Taking A out of PLATE leaves PLTE, which is not a word — the first word breaks. The answer is P: LATE and PART."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-13",
+      "optionId": "gen-vr-08-move-letter-13-opt3",
+      "value": "L",
+      "tag": "vr-move-letter-second-word-invalid",
+      "verdict": "EXECUTES",
+      "execution": "Move one letter so both words are real. This option moves L. PLATE without L is PATE, a real word — but ART cannot take L anywhere and make a word; the best try is ARTL. The second word breaks. The answer is P: LATE and PART."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-14",
+      "optionId": "gen-vr-08-move-letter-14-opt2",
+      "value": "P",
+      "tag": "vr-move-letter-first-word-invalid",
+      "verdict": "EXECUTES",
+      "execution": "Move one letter so both words are real. This option moves P. Taking P out of PAINT leaves AINT, which is not a word — the first word breaks. The answer is T: PAIN and PLANT."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-14",
+      "optionId": "gen-vr-08-move-letter-14-opt3",
+      "value": "A",
+      "tag": "vr-move-letter-second-word-invalid",
+      "verdict": "EXECUTES",
+      "execution": "Move one letter so both words are real. This option moves A. PAINT without A is PINT, a real word — but PLAN cannot take A anywhere and make a word; the best try is PLANA. The second word breaks. The answer is T: PAIN and PLANT."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-15",
+      "optionId": "gen-vr-08-move-letter-15-opt2",
+      "value": "R",
+      "tag": "vr-move-letter-first-word-invalid",
+      "verdict": "CANNOT_EXECUTE",
+      "reason": "Taking R out of BREAD leaves BEAD, which is a real word, so the first word does not break. The option does not fit the first-word-invalid tag."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-15",
+      "optionId": "gen-vr-08-move-letter-15-opt3",
+      "value": "A",
+      "tag": "vr-move-letter-second-word-invalid",
+      "verdict": "EXECUTES",
+      "execution": "Move one letter so both words are real. This option moves A. BREAD without A is BRED, a real word — but LOW cannot take A anywhere and make a word; the best try is LOWA. The second word breaks. The answer is B: READ and BLOW."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-16",
+      "optionId": "gen-vr-08-move-letter-16-opt2",
+      "value": "P",
+      "tag": "vr-move-letter-first-word-invalid",
+      "verdict": "EXECUTES",
+      "execution": "Move one letter so both words are real. This option moves P. Taking P out of PLANET leaves LANET, which is not a word — the first word breaks. The answer is T: PLANE and SEAT."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-16",
+      "optionId": "gen-vr-08-move-letter-16-opt3",
+      "value": "E",
+      "tag": "vr-move-letter-second-word-invalid",
+      "verdict": "EXECUTES",
+      "execution": "Move one letter so both words are real. This option moves E. PLANET without E is PLANT, a real word — but SEA cannot take E anywhere and make a word; the best try is SEAE. The second word breaks. The answer is T: PLANE and SEAT."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-17",
+      "optionId": "gen-vr-08-move-letter-17-opt2",
+      "value": "S",
+      "tag": "vr-move-letter-first-word-invalid",
+      "verdict": "EXECUTES",
+      "execution": "Move one letter so both words are real. This option moves S. Taking S out of SHOUT leaves HOUT, which is not a word — the first word breaks. The answer is U: SHOT and COULD."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-17",
+      "optionId": "gen-vr-08-move-letter-17-opt3",
+      "value": "O",
+      "tag": "vr-move-letter-second-word-invalid",
+      "verdict": "EXECUTES",
+      "execution": "Move one letter so both words are real. This option moves O. SHOUT without O is SHUT, a real word — but COLD cannot take O anywhere and make a word; the best try is COLDO. The second word breaks. The answer is U: SHOT and COULD."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-18",
+      "optionId": "gen-vr-08-move-letter-18-opt3",
+      "value": "L",
+      "tag": "vr-move-letter-second-word-invalid",
+      "verdict": "EXECUTES",
+      "execution": "Move one letter so both words are real. This option moves L. CLOCK without L is COCK, a real word — but LOUD cannot take L anywhere and make a word; the best try is LOUDL. The second word breaks. The answer is C: LOCK and CLOUD."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-19",
+      "optionId": "gen-vr-08-move-letter-19-opt2",
+      "value": "T",
+      "tag": "vr-move-letter-first-word-invalid",
+      "verdict": "EXECUTES",
+      "execution": "Move one letter so both words are real. This option moves T. Taking T out of TIRED leaves IRED, which is not a word — the first word breaks. The answer is R: TIED and LARGER."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-19",
+      "optionId": "gen-vr-08-move-letter-19-opt3",
+      "value": "D",
+      "tag": "vr-move-letter-second-word-invalid",
+      "verdict": "EXECUTES",
+      "execution": "Move one letter so both words are real. This option moves D. TIRED without D is TIRE, a real word — but LARGE cannot take D anywhere and make a word; the best try is LARGED. The second word breaks. The answer is R: TIED and LARGER."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-20",
+      "optionId": "gen-vr-08-move-letter-20-opt2",
+      "value": "E",
+      "tag": "vr-move-letter-first-word-invalid",
+      "verdict": "EXECUTES",
+      "execution": "Move one letter so both words are real. This option moves E. Taking E out of SHELL leaves SHLL, which is not a word — the first word breaks. The answer is H: SELL and HAIR."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-21",
+      "optionId": "gen-vr-08-move-letter-21-opt2",
+      "value": "U",
+      "tag": "vr-move-letter-first-word-invalid",
+      "verdict": "EXECUTES",
+      "execution": "Move one letter so both words are real. This option moves U. Taking U out of BRUSH leaves BRSH, which is not a word — the first word breaks. The answer is B: RUSH and BRING."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-21",
+      "optionId": "gen-vr-08-move-letter-21-opt3",
+      "value": "R",
+      "tag": "vr-move-letter-second-word-invalid",
+      "verdict": "EXECUTES",
+      "execution": "Move one letter so both words are real. This option moves R. BRUSH without R is BUSH, a real word — but RING cannot take R anywhere and make a word; the best try is RINGR. The second word breaks. The answer is B: RUSH and BRING."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-22",
+      "optionId": "gen-vr-08-move-letter-22-opt2",
+      "value": "S",
+      "tag": "vr-move-letter-first-word-invalid",
+      "verdict": "EXECUTES",
+      "execution": "Move one letter so both words are real. This option moves S. Taking S out of SLIDE leaves LIDE, which is not a word — the first word breaks. The answer is L: SIDE and FLOOD."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-22",
+      "optionId": "gen-vr-08-move-letter-22-opt3",
+      "value": "E",
+      "tag": "vr-move-letter-second-word-invalid",
+      "verdict": "EXECUTES",
+      "execution": "Move one letter so both words are real. This option moves E. SLIDE without E is SLID, a real word — but FOOD cannot take E anywhere and make a word; the best try is FOODE. The second word breaks. The answer is L: SIDE and FLOOD."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-23",
+      "optionId": "gen-vr-08-move-letter-23-opt2",
+      "value": "H",
+      "tag": "vr-move-letter-first-word-invalid",
+      "verdict": "EXECUTES",
+      "execution": "Move one letter so both words are real. This option moves H. Taking H out of WHEAT leaves WEAT, which is not a word — the first word breaks. The answer is W: HEAT and WEAR."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-23",
+      "optionId": "gen-vr-08-move-letter-23-opt3",
+      "value": "E",
+      "tag": "vr-move-letter-second-word-invalid",
+      "verdict": "EXECUTES",
+      "execution": "Move one letter so both words are real. This option moves E. WHEAT without E is WHAT, a real word — but EAR cannot take E anywhere and make a word; the best try is EARE. The second word breaks. The answer is W: HEAT and WEAR."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-24",
+      "optionId": "gen-vr-08-move-letter-24-opt2",
+      "value": "H",
+      "tag": "vr-move-letter-first-word-invalid",
+      "verdict": "EXECUTES",
+      "execution": "Move one letter so both words are real. This option moves H. Taking H out of WHEEL leaves WEEL, which is not a word — the first word breaks. The answer is W: HEEL and WARM."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-24",
+      "optionId": "gen-vr-08-move-letter-24-opt3",
+      "value": "L",
+      "tag": "vr-move-letter-second-word-invalid",
+      "verdict": "EXECUTES",
+      "execution": "Move one letter so both words are real. This option moves L. Taking L out of WHEEL leaves WHEE, which is not a word, and ARM cannot take L anywhere and make a word either; the best try is ARML. The second word breaks as well. The answer is W: HEEL and WARM."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-25",
+      "optionId": "gen-vr-08-move-letter-25-opt2",
+      "value": "A",
+      "tag": "vr-move-letter-first-word-invalid",
+      "verdict": "EXECUTES",
+      "execution": "Move one letter so both words are real. This option moves A. Taking A out of TRACK leaves TRCK, which is not a word — the first word breaks. The answer is T: RACK and TEND."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-25",
+      "optionId": "gen-vr-08-move-letter-25-opt3",
+      "value": "R",
+      "tag": "vr-move-letter-second-word-invalid",
+      "verdict": "CANNOT_EXECUTE",
+      "reason": "END with R makes REND, which is a real word (to tear), and TRACK without R is TACK, also real. Both words are real, so R is a second correct answer, not a distractor."
+    }
+  ]
+}

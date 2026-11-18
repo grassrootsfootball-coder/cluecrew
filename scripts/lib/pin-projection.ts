@@ -88,3 +88,14 @@ export function verifyPin(
   return { verified: false, under: null, projection: null,
     why: `no stored hash matches this row under ${attempts.map((a) => a[0]).join(' or ')}. This is NOT proof the content changed: subjectHash carries more than one subject in this estate (R970), so check whether the signature is over an execution text or the review surface's own subject before reading it as drift.` };
 }
+
+/**
+ * THE CANONICAL-ORDER SUBJECT (her 216th; SIGNATURE_SUBJECTS.ROW_PROJECTION_CANONICAL_ORDER):
+ * retention stripped, options SORTED BY VALUE. Binding on every signature made from 2026-09-02,
+ * and the reason a later write that moves an option row cannot break a pin (R1012's row 01).
+ * One implementation — `backfill-signature-subjects.ts` computes the same thing inline.
+ */
+export function canonicalOrderHash(row: PinRow): string {
+  const value = (o: { content: unknown }) => { const v = (o.content as { value?: unknown })?.value; return Array.isArray(v) ? v.join(',') : String(v); };
+  return pinHashes({ ...row, options: [...row.options].sort((a, b) => value(a).localeCompare(value(b))) }).retentionExcluded;
+}

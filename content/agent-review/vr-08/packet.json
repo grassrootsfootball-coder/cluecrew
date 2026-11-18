@@ -1,0 +1,894 @@
+{
+ "door": "vr-08",
+ "caseId": "case-vr-08",
+ "title": "The Case of the Wandering Letter",
+ "questionType": "vr-08-move-letter",
+ "entries": {
+  "vr-move-letter-first-word-invalid": {
+   "description": "Chose a letter whose removal does not leave a real first word.",
+   "childHint": "Take the letter out and read what is left. Is that first word a real word?"
+  },
+  "vr-move-letter-second-word-invalid": {
+   "description": "Chose a letter that does not make a real second word when added.",
+   "childHint": "Pop the letter into the second word and say it aloud. Does it sound like a real word?"
+  }
+ },
+ "houseFormExemplars": {
+  "vr-move-letter-first-word-invalid": [
+   {
+    "itemId": "gen-vr-08-move-letter-06",
+    "option": "P",
+    "execution": "Move one letter so both words are real. This option moves P. Taking P out of SPACE leaves SACE, which is not a word — the first word breaks. The answer is S: PACE and STAR."
+   },
+   {
+    "itemId": "gen-vr-08-move-letter-18",
+    "option": "O",
+    "execution": "Move one letter so both words are real. This option moves P. Taking P out of SPACE leaves SACE, which is not a word — the first word breaks. The answer is S: PACE and STAR."
+   }
+  ],
+  "vr-move-letter-second-word-invalid": [
+   {
+    "itemId": "gen-vr-08-move-letter-08",
+    "option": "D",
+    "execution": "Move one letter so both words are real. This option moves D. SLED without D is SLE, a real word — but PIT cannot take D anywhere and make a word; the best try is PITD. The second word breaks. The answer is S."
+   },
+   {
+    "itemId": "gen-vr-08-move-letter-20",
+    "option": "S",
+    "execution": "Move one letter so both words are real. This option moves D. SLED without D is SLE, a real word — but PIT cannot take D anywhere and make a word; the best try is PITD. The second word breaks. The answer is S."
+   }
+  ]
+ },
+ "rows": [
+  {
+   "itemId": "gen-vr-08-move-letter-01",
+   "signed": false,
+   "stem": {
+    "word1": "HEART",
+    "word2": "OLD",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "solution": null,
+   "key": "T",
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-01-opt1",
+     "value": "T",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-01-opt2",
+     "value": "H",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-01-opt3",
+     "value": "R",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-02",
+   "signed": true,
+   "stem": {
+    "word1": "BLEND",
+    "word2": "RIDGE",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "solution": null,
+   "key": "B",
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-02-opt1",
+     "value": "B",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-02-opt2",
+     "value": "L",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-02-opt3",
+     "value": "D",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-03",
+   "signed": true,
+   "stem": {
+    "word1": "FLAME",
+    "word2": "RIGHT",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "solution": null,
+   "key": "F",
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-03-opt1",
+     "value": "F",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-03-opt2",
+     "value": "L",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-03-opt3",
+     "value": "M",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-04",
+   "signed": false,
+   "stem": {
+    "word1": "TABLE",
+    "word2": "OWN",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "solution": null,
+   "key": "T",
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-04-opt1",
+     "value": "T",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-04-opt2",
+     "value": "A",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-04-opt3",
+     "value": "B",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-05",
+   "signed": false,
+   "stem": {
+    "word1": "SPEND",
+    "word2": "SENT",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "solution": null,
+   "key": "P",
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-05-opt1",
+     "value": "P",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-05-opt2",
+     "value": "S",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-05-opt3",
+     "value": "N",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-06",
+   "signed": true,
+   "stem": {
+    "word1": "SPACE",
+    "word2": "TAR",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "solution": null,
+   "key": "S",
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-06-opt1",
+     "value": "S",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-06-opt2",
+     "value": "P",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "execution": "Move one letter so both words are real. This option moves P. Taking P out of SPACE leaves SACE, which is not a word — the first word breaks. The answer is S: PACE and STAR."
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-06-opt3",
+     "value": "C",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-07",
+   "signed": false,
+   "stem": {
+    "word1": "TWIN",
+    "word2": "HERE",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "solution": null,
+   "key": "W",
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-07-opt1",
+     "value": "W",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-07-opt2",
+     "value": "T",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-07-opt3",
+     "value": "N",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-08",
+   "signed": true,
+   "stem": {
+    "word1": "SLED",
+    "word2": "PIT",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "solution": null,
+   "key": "S",
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-08-opt1",
+     "value": "S",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-08-opt2",
+     "value": "L",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-08-opt3",
+     "value": "D",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "execution": "Move one letter so both words are real. This option moves D. SLED without D is SLE, a real word — but PIT cannot take D anywhere and make a word; the best try is PITD. The second word breaks. The answer is S."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-09",
+   "signed": false,
+   "stem": {
+    "word1": "GRAIN",
+    "word2": "ATE",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "solution": null,
+   "key": "G",
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-09-opt1",
+     "value": "G",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-09-opt2",
+     "value": "R",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-09-opt3",
+     "value": "N",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-10",
+   "signed": false,
+   "stem": {
+    "word1": "CHARM",
+    "word2": "ORE",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "solution": null,
+   "key": "C",
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-10-opt1",
+     "value": "C",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-10-opt2",
+     "value": "H",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-10-opt3",
+     "value": "M",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-11",
+   "signed": false,
+   "stem": {
+    "word1": "PLUMP",
+    "word2": "AY",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "solution": null,
+   "key": "P",
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-11-opt1",
+     "value": "P",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-11-opt2",
+     "value": "L",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-11-opt3",
+     "value": "M",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-12",
+   "signed": false,
+   "stem": {
+    "word1": "SNOW",
+    "word2": "HOE",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "solution": null,
+   "key": "S",
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-12-opt1",
+     "value": "S",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-12-opt2",
+     "value": "O",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-12-opt3",
+     "value": "W",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-13",
+   "signed": false,
+   "stem": {
+    "word1": "PLATE",
+    "word2": "ART",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "solution": null,
+   "key": "P",
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-13-opt1",
+     "value": "P",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-13-opt2",
+     "value": "A",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-13-opt3",
+     "value": "L",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-14",
+   "signed": false,
+   "stem": {
+    "word1": "PAINT",
+    "word2": "PLAN",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "solution": null,
+   "key": "T",
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-14-opt1",
+     "value": "T",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-14-opt2",
+     "value": "P",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-14-opt3",
+     "value": "A",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-15",
+   "signed": false,
+   "stem": {
+    "word1": "BREAD",
+    "word2": "LOW",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "solution": null,
+   "key": "B",
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-15-opt1",
+     "value": "B",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-15-opt2",
+     "value": "R",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-15-opt3",
+     "value": "A",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-16",
+   "signed": false,
+   "stem": {
+    "word1": "PLANET",
+    "word2": "SEA",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "solution": null,
+   "key": "T",
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-16-opt1",
+     "value": "T",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-16-opt2",
+     "value": "P",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-16-opt3",
+     "value": "E",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-17",
+   "signed": false,
+   "stem": {
+    "word1": "SHOUT",
+    "word2": "COLD",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "solution": null,
+   "key": "U",
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-17-opt1",
+     "value": "U",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-17-opt2",
+     "value": "S",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-17-opt3",
+     "value": "O",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-18",
+   "signed": false,
+   "stem": {
+    "word1": "CLOCK",
+    "word2": "LOUD",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "solution": null,
+   "key": "C",
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-18-opt1",
+     "value": "C",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-18-opt2",
+     "value": "O",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "execution": "Move one letter so both words are real. This option moves P. Taking P out of SPACE leaves SACE, which is not a word — the first word breaks. The answer is S: PACE and STAR."
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-18-opt3",
+     "value": "L",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-19",
+   "signed": false,
+   "stem": {
+    "word1": "TIRED",
+    "word2": "LARGE",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "solution": null,
+   "key": "R",
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-19-opt1",
+     "value": "R",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-19-opt2",
+     "value": "T",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-19-opt3",
+     "value": "D",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-20",
+   "signed": false,
+   "stem": {
+    "word1": "SHELL",
+    "word2": "AIR",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "solution": null,
+   "key": "H",
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-20-opt1",
+     "value": "H",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-20-opt2",
+     "value": "E",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-20-opt3",
+     "value": "S",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "execution": "Move one letter so both words are real. This option moves D. SLED without D is SLE, a real word — but PIT cannot take D anywhere and make a word; the best try is PITD. The second word breaks. The answer is S."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-21",
+   "signed": false,
+   "stem": {
+    "word1": "BRUSH",
+    "word2": "RING",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "solution": null,
+   "key": "B",
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-21-opt1",
+     "value": "B",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-21-opt2",
+     "value": "U",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-21-opt3",
+     "value": "R",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-22",
+   "signed": false,
+   "stem": {
+    "word1": "SLIDE",
+    "word2": "FOOD",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "solution": null,
+   "key": "L",
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-22-opt1",
+     "value": "L",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-22-opt2",
+     "value": "S",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-22-opt3",
+     "value": "E",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-23",
+   "signed": false,
+   "stem": {
+    "word1": "WHEAT",
+    "word2": "EAR",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "solution": null,
+   "key": "W",
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-23-opt1",
+     "value": "W",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-23-opt2",
+     "value": "H",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-23-opt3",
+     "value": "E",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-24",
+   "signed": false,
+   "stem": {
+    "word1": "WHEEL",
+    "word2": "ARM",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "solution": null,
+   "key": "W",
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-24-opt1",
+     "value": "W",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-24-opt2",
+     "value": "H",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-24-opt3",
+     "value": "L",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-25",
+   "signed": false,
+   "stem": {
+    "word1": "TRACK",
+    "word2": "END",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "solution": null,
+   "key": "T",
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-25-opt1",
+     "value": "T",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-25-opt2",
+     "value": "A",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-25-opt3",
+     "value": "R",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "execution": null
+    }
+   ]
+  }
+ ]
+}

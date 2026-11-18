@@ -1,0 +1,262 @@
+{
+ "door": "vr-17",
+ "mode": "DRY RUN",
+ "landed": 0,
+ "signed": 0,
+ "seatsHeld": [
+  {
+   "itemId": "gen-vr-17-complete-the-sum-01",
+   "optionId": "gen-vr-17-complete-the-sum-01-opt3",
+   "value": "8",
+   "tag": "vr17-one-side-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The sum is ? + 3 = 9 and the key is 6. Under this tag the child stops at what the left side's visible terms come to, but the only visible left-side term is 3, and 8 is not that. No stated step of 'solving one side and stopping' produces 8, so any execution would be invented. This seat needs a new distractor, for example one equal to the visible left-side total.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Recomputed: ? + 3 = 9 has key 6. Option 8 is not the right side (9), not the visible left-side total (3), and not any reading of stopping after one side; the same +2 offset over the key appears on every '? + n = r' row, so it is the generator's offset, not a step a child takes. The value is 2 more than the key, which reads as an arithmetic slip rather than one-side-only; the one-side-only seat still needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-03",
+   "optionId": "gen-vr-17-complete-the-sum-03-opt3",
+   "value": "8",
+   "tag": "vr17-one-side-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The sum is 8 + 5 − ? = 9 and the key is 4. Under this tag the child stops at what the left side's visible terms come to, but the visible left-side terms are 8 and 5, which come to 13 when added, and 8 is not that. No stated step of 'solving one side and stopping' produces 8, so any execution would be invented. This seat needs a new distractor, for example one equal to the visible left-side total.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Recomputed: 8 + 5 − ? = 9 has key 4. Option 8 is not the right side (9), not the visible left-side total (13), and not any reading of stopping after one side; the same +4 offset (twice the key here) appears on every 'a + b − ? = r' row, so it is the generator's offset, not a step a child takes. Note: 8 does equal the first visible left-side term, which the draft omits, but that is coincidence (8 = key + 4, the same offset as rows 07, 11, 15, 19, 23) and stopping at the first term of a side is not 'solving one side'; it must not be read as a fit.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-04",
+   "optionId": "gen-vr-17-complete-the-sum-04-opt3",
+   "value": "11",
+   "tag": "vr17-one-side-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The sum is 9 + ? − 5 = 10 and the key is 6. Under this tag the child stops at what the left side's visible terms come to, but the visible left-side terms are 9 and 5, which come to 14 added or 4 subtracted, and 11 is not that. No stated step of 'solving one side and stopping' produces 11, so any execution would be invented. This seat needs a new distractor, for example one equal to the visible left-side total.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Recomputed: 9 + ? − 5 = 10 has key 6. Option 11 is not the right side (10), not the visible left-side total (4, or 14 if all added), and not any reading of stopping after one side; the same +5 offset over the key appears on every 'a + ? − 5 = r' row, so it is the generator's offset, not a step a child takes.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-05",
+   "optionId": "gen-vr-17-complete-the-sum-05-opt3",
+   "value": "12",
+   "tag": "vr17-one-side-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The sum is ? + 7 = 17 and the key is 10. Under this tag the child stops at what the left side's visible terms come to, but the only visible left-side term is 7, and 12 is not that. No stated step of 'solving one side and stopping' produces 12, so any execution would be invented. This seat needs a new distractor, for example one equal to the visible left-side total.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Recomputed: ? + 7 = 17 has key 10. Option 12 is not the right side (17), not the visible left-side total (7), and not any reading of stopping after one side; the same +2 offset over the key appears on every '? + n = r' row, so it is the generator's offset, not a step a child takes. The value is 2 more than the key, which reads as an arithmetic slip rather than one-side-only; the one-side-only seat still needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-07",
+   "optionId": "gen-vr-17-complete-the-sum-07-opt3",
+   "value": "8",
+   "tag": "vr17-one-side-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The sum is 12 + 3 − ? = 11 and the key is 4. Under this tag the child stops at what the left side's visible terms come to, but the visible left-side terms are 12 and 3, which come to 15 when added, and 8 is not that. No stated step of 'solving one side and stopping' produces 8, so any execution would be invented. This seat needs a new distractor, for example one equal to the visible left-side total.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Recomputed: 12 + 3 − ? = 11 has key 4. Option 8 is not the right side (11), not the visible left-side total (15), and not any reading of stopping after one side; the same +4 offset (twice the key here) appears on every 'a + b − ? = r' row, so it is the generator's offset, not a step a child takes.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-08",
+   "optionId": "gen-vr-17-complete-the-sum-08-opt3",
+   "value": "9",
+   "tag": "vr17-one-side-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The sum is 13 + ? − 5 = 12 and the key is 4. Under this tag the child stops at what the left side's visible terms come to, but the visible left-side terms are 13 and 5, which come to 18 added or 8 subtracted, and 9 is not that. No stated step of 'solving one side and stopping' produces 9, so any execution would be invented. This seat needs a new distractor, for example one equal to the visible left-side total.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Recomputed: 13 + ? − 5 = 12 has key 4. Option 9 is not the right side (12), not the visible left-side total (8, or 18 if all added), and not any reading of stopping after one side; the same +5 offset over the key appears on every 'a + ? − 5 = r' row, so it is the generator's offset, not a step a child takes.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-09",
+   "optionId": "gen-vr-17-complete-the-sum-09-opt3",
+   "value": "16",
+   "tag": "vr17-one-side-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The sum is ? + 5 = 19 and the key is 14. Under this tag the child stops at what the left side's visible terms come to, but the only visible left-side term is 5, and 16 is not that. No stated step of 'solving one side and stopping' produces 16, so any execution would be invented. This seat needs a new distractor, for example one equal to the visible left-side total.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Recomputed: ? + 5 = 19 has key 14. Option 16 is not the right side (19), not the visible left-side total (5), and not any reading of stopping after one side; the same +2 offset over the key appears on every '? + n = r' row, so it is the generator's offset, not a step a child takes. The value is 2 more than the key, which reads as an arithmetic slip rather than one-side-only; the one-side-only seat still needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-10",
+   "optionId": "gen-vr-17-complete-the-sum-10-opt3",
+   "value": "9",
+   "tag": "vr17-one-side-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The sum is 15 + ? = 21 and the key is 6. Under this tag the child stops at what the left side's visible terms come to, but the only visible left-side term is 15, and 9 is not that. No stated step of 'solving one side and stopping' produces 9, so any execution would be invented. This seat needs a new distractor, for example one equal to the visible left-side total.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Recomputed: 15 + ? = 21 has key 6. Option 9 is not the right side (21), not the visible left-side total (15), and not any reading of stopping after one side; the same +3 offset over the key appears on every 'n + ? = r' row, so it is the generator's offset, not a step a child takes.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-11",
+   "optionId": "gen-vr-17-complete-the-sum-11-opt3",
+   "value": "8",
+   "tag": "vr17-one-side-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The sum is 16 + 7 − ? = 19 and the key is 4. Under this tag the child stops at what the left side's visible terms come to, but the visible left-side terms are 16 and 7, which come to 23 when added, and 8 is not that. No stated step of 'solving one side and stopping' produces 8, so any execution would be invented. This seat needs a new distractor, for example one equal to the visible left-side total.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Recomputed: 16 + 7 − ? = 19 has key 4. Option 8 is not the right side (19), not the visible left-side total (23), and not any reading of stopping after one side; the same +4 offset (twice the key here) appears on every 'a + b − ? = r' row, so it is the generator's offset, not a step a child takes.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-12",
+   "optionId": "gen-vr-17-complete-the-sum-12-opt3",
+   "value": "13",
+   "tag": "vr17-one-side-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The sum is 17 + ? − 5 = 20 and the key is 8. Under this tag the child stops at what the left side's visible terms come to, but the visible left-side terms are 17 and 5, which come to 22 added or 12 subtracted, and 13 is not that. No stated step of 'solving one side and stopping' produces 13, so any execution would be invented. This seat needs a new distractor, for example one equal to the visible left-side total.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Recomputed: 17 + ? − 5 = 20 has key 8. Option 13 is not the right side (20), not the visible left-side total (12, or 22 if all added), and not any reading of stopping after one side; the same +5 offset over the key appears on every 'a + ? − 5 = r' row, so it is the generator's offset, not a step a child takes.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-13",
+   "optionId": "gen-vr-17-complete-the-sum-13-opt3",
+   "value": "20",
+   "tag": "vr17-one-side-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The sum is ? + 3 = 21 and the key is 18. Under this tag the child stops at what the left side's visible terms come to, but the only visible left-side term is 3, and 20 is not that. No stated step of 'solving one side and stopping' produces 20, so any execution would be invented. This seat needs a new distractor, for example one equal to the visible left-side total.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Recomputed: ? + 3 = 21 has key 18. Option 20 is not the right side (21), not the visible left-side total (3), and not any reading of stopping after one side; the same +2 offset over the key appears on every '? + n = r' row, so it is the generator's offset, not a step a child takes. The value is 2 more than the key, which reads as an arithmetic slip rather than one-side-only; the one-side-only seat still needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-14",
+   "optionId": "gen-vr-17-complete-the-sum-14-opt3",
+   "value": "7",
+   "tag": "vr17-one-side-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The sum is 19 + ? = 23 and the key is 4. Under this tag the child stops at what the left side's visible terms come to, but the only visible left-side term is 19, and 7 is not that. No stated step of 'solving one side and stopping' produces 7, so any execution would be invented. This seat needs a new distractor, for example one equal to the visible left-side total.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Recomputed: 19 + ? = 23 has key 4. Option 7 is not the right side (23), not the visible left-side total (19), and not any reading of stopping after one side; the same +3 offset over the key appears on every 'n + ? = r' row, so it is the generator's offset, not a step a child takes.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-15",
+   "optionId": "gen-vr-17-complete-the-sum-15-opt3",
+   "value": "8",
+   "tag": "vr17-one-side-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The sum is 20 + 5 − ? = 21 and the key is 4. Under this tag the child stops at what the left side's visible terms come to, but the visible left-side terms are 20 and 5, which come to 25 when added, and 8 is not that. No stated step of 'solving one side and stopping' produces 8, so any execution would be invented. This seat needs a new distractor, for example one equal to the visible left-side total.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Recomputed: 20 + 5 − ? = 21 has key 4. Option 8 is not the right side (21), not the visible left-side total (25), and not any reading of stopping after one side; the same +4 offset (twice the key here) appears on every 'a + b − ? = r' row, so it is the generator's offset, not a step a child takes.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-16",
+   "optionId": "gen-vr-17-complete-the-sum-16-opt3",
+   "value": "11",
+   "tag": "vr17-one-side-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The sum is 21 + ? − 5 = 22 and the key is 6. Under this tag the child stops at what the left side's visible terms come to, but the visible left-side terms are 21 and 5, which come to 26 added or 16 subtracted, and 11 is not that. No stated step of 'solving one side and stopping' produces 11, so any execution would be invented. This seat needs a new distractor, for example one equal to the visible left-side total.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Recomputed: 21 + ? − 5 = 22 has key 6. Option 11 is not the right side (22), not the visible left-side total (16, or 26 if all added), and not any reading of stopping after one side; the same +5 offset over the key appears on every 'a + ? − 5 = r' row, so it is the generator's offset, not a step a child takes.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-17",
+   "optionId": "gen-vr-17-complete-the-sum-17-opt3",
+   "value": "24",
+   "tag": "vr17-one-side-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The sum is ? + 7 = 29 and the key is 22. Under this tag the child stops at what the left side's visible terms come to, but the only visible left-side term is 7, and 24 is not that. No stated step of 'solving one side and stopping' produces 24, so any execution would be invented. This seat needs a new distractor, for example one equal to the visible left-side total.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Recomputed: ? + 7 = 29 has key 22. Option 24 is not the right side (29), not the visible left-side total (7), and not any reading of stopping after one side; the same +2 offset over the key appears on every '? + n = r' row, so it is the generator's offset, not a step a child takes. The value is 2 more than the key, which reads as an arithmetic slip rather than one-side-only; the one-side-only seat still needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-18",
+   "optionId": "gen-vr-17-complete-the-sum-18-opt3",
+   "value": "11",
+   "tag": "vr17-one-side-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The sum is 23 + ? = 31 and the key is 8. Under this tag the child stops at what the left side's visible terms come to, but the only visible left-side term is 23, and 11 is not that. No stated step of 'solving one side and stopping' produces 11, so any execution would be invented. This seat needs a new distractor, for example one equal to the visible left-side total.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Recomputed: 23 + ? = 31 has key 8. Option 11 is not the right side (31), not the visible left-side total (23), and not any reading of stopping after one side; the same +3 offset over the key appears on every 'n + ? = r' row, so it is the generator's offset, not a step a child takes.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-19",
+   "optionId": "gen-vr-17-complete-the-sum-19-opt3",
+   "value": "8",
+   "tag": "vr17-one-side-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The sum is 24 + 3 − ? = 23 and the key is 4. Under this tag the child stops at what the left side's visible terms come to, but the visible left-side terms are 24 and 3, which come to 27 when added, and 8 is not that. No stated step of 'solving one side and stopping' produces 8, so any execution would be invented. This seat needs a new distractor, for example one equal to the visible left-side total.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Recomputed: 24 + 3 − ? = 23 has key 4. Option 8 is not the right side (23), not the visible left-side total (27), and not any reading of stopping after one side; the same +4 offset (twice the key here) appears on every 'a + b − ? = r' row, so it is the generator's offset, not a step a child takes.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-20",
+   "optionId": "gen-vr-17-complete-the-sum-20-opt3",
+   "value": "9",
+   "tag": "vr17-one-side-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The sum is 25 + ? − 5 = 24 and the key is 4. Under this tag the child stops at what the left side's visible terms come to, but the visible left-side terms are 25 and 5, which come to 30 added or 20 subtracted, and 9 is not that. No stated step of 'solving one side and stopping' produces 9, so any execution would be invented. This seat needs a new distractor, for example one equal to the visible left-side total.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Recomputed: 25 + ? − 5 = 24 has key 4. Option 9 is not the right side (24), not the visible left-side total (20, or 30 if all added), and not any reading of stopping after one side; the same +5 offset over the key appears on every 'a + ? − 5 = r' row, so it is the generator's offset, not a step a child takes.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-21",
+   "optionId": "gen-vr-17-complete-the-sum-21-opt3",
+   "value": "28",
+   "tag": "vr17-one-side-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The sum is ? + 5 = 31 and the key is 26. Under this tag the child stops at what the left side's visible terms come to, but the only visible left-side term is 5, and 28 is not that. No stated step of 'solving one side and stopping' produces 28, so any execution would be invented. This seat needs a new distractor, for example one equal to the visible left-side total.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Recomputed: ? + 5 = 31 has key 26. Option 28 is not the right side (31), not the visible left-side total (5), and not any reading of stopping after one side; the same +2 offset over the key appears on every '? + n = r' row, so it is the generator's offset, not a step a child takes. The value is 2 more than the key, which reads as an arithmetic slip rather than one-side-only; the one-side-only seat still needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-22",
+   "optionId": "gen-vr-17-complete-the-sum-22-opt3",
+   "value": "9",
+   "tag": "vr17-one-side-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The sum is 27 + ? = 33 and the key is 6. Under this tag the child stops at what the left side's visible terms come to, but the only visible left-side term is 27, and 9 is not that. No stated step of 'solving one side and stopping' produces 9, so any execution would be invented. This seat needs a new distractor, for example one equal to the visible left-side total.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Recomputed: 27 + ? = 33 has key 6. Option 9 is not the right side (33), not the visible left-side total (27), and not any reading of stopping after one side; the same +3 offset over the key appears on every 'n + ? = r' row, so it is the generator's offset, not a step a child takes.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-23",
+   "optionId": "gen-vr-17-complete-the-sum-23-opt3",
+   "value": "8",
+   "tag": "vr17-one-side-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The sum is 28 + 7 − ? = 31 and the key is 4. Under this tag the child stops at what the left side's visible terms come to, but the visible left-side terms are 28 and 7, which come to 35 when added, and 8 is not that. No stated step of 'solving one side and stopping' produces 8, so any execution would be invented. This seat needs a new distractor, for example one equal to the visible left-side total.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Recomputed: 28 + 7 − ? = 31 has key 4. Option 8 is not the right side (31), not the visible left-side total (35), and not any reading of stopping after one side; the same +4 offset (twice the key here) appears on every 'a + b − ? = r' row, so it is the generator's offset, not a step a child takes.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-24",
+   "optionId": "gen-vr-17-complete-the-sum-24-opt3",
+   "value": "13",
+   "tag": "vr17-one-side-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The sum is 29 + ? − 5 = 32 and the key is 8. Under this tag the child stops at what the left side's visible terms come to, but the visible left-side terms are 29 and 5, which come to 34 added or 24 subtracted, and 13 is not that. No stated step of 'solving one side and stopping' produces 13, so any execution would be invented. This seat needs a new distractor, for example one equal to the visible left-side total.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Recomputed: 29 + ? − 5 = 32 has key 8. Option 13 is not the right side (32), not the visible left-side total (24, or 34 if all added), and not any reading of stopping after one side; the same +5 offset over the key appears on every 'a + ? − 5 = r' row, so it is the generator's offset, not a step a child takes.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-25",
+   "optionId": "gen-vr-17-complete-the-sum-25-opt3",
+   "value": "32",
+   "tag": "vr17-one-side-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "The sum is ? + 3 = 33 and the key is 30. Under this tag the child stops at what the left side's visible terms come to, but the only visible left-side term is 3, and 32 is not that. No stated step of 'solving one side and stopping' produces 32, so any execution would be invented. This seat needs a new distractor, for example one equal to the visible left-side total.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Recomputed: ? + 3 = 33 has key 30. Option 32 is not the right side (33), not the visible left-side total (3), and not any reading of stopping after one side; the same +2 offset over the key appears on every '? + n = r' row, so it is the generator's offset, not a step a child takes. The value is 2 more than the key, which reads as an arithmetic slip rather than one-side-only; the one-side-only seat still needs a new distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  }
+ ],
+ "rowsHeld": []
+}

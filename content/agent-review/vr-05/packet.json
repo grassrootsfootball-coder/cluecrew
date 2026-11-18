@@ -1,0 +1,874 @@
+{
+ "door": "vr-05",
+ "caseId": "case-vr-05",
+ "title": "The Stowaway",
+ "questionType": "vr-05-hidden-word",
+ "entries": {
+  "vr05-almost-letters": {
+   "description": "Picked a word whose letters are nearly, not exactly, in the sentence.",
+   "childHint": "Find the exact letters in order. Every letter must be there, touching."
+  },
+  "vr05-single-word-only": {
+   "description": "Searched inside single words instead of across the join.",
+   "childHint": "The hidden word loves to hide across two words. Check where they meet."
+  }
+ },
+ "houseFormExemplars": {
+  "vr05-almost-letters": [
+   {
+    "itemId": "gen-vr-05-hidden-word-05",
+    "option": "lame",
+    "execution": "The letters of lame are nearly in the sentence but not exactly: the closest run is \"lami\", which differs from lame by 1 letter. Every letter must be there, touching, and one is not."
+   },
+   {
+    "itemId": "gen-vr-05-hidden-word-07",
+    "option": "note",
+    "execution": "The letters of note are nearly in the sentence but not exactly: the closest run is \"nots\", which differs from note by 1 letter. Every letter must be there, touching, and one is not."
+   },
+   {
+    "itemId": "gen-vr-05-hidden-word-13",
+    "option": "seas",
+    "execution": "The letters of seas are nearly in the sentence but not exactly: the closest run is \"sees\", which differs from seas by 1 letter. Every letter must be there, touching, and one is not."
+   }
+  ],
+  "vr05-single-word-only": [
+   {
+    "itemId": "gen-vr-05-hidden-word-07",
+    "option": "hand",
+    "execution": "The hidden word must cross the gap between two words. This option is hand, and hand sits whole inside the single word \"emptyhanded\" — found by looking inside one word instead of across the join. The answer, item, runs from the end of one word into the start of the next."
+   },
+   {
+    "itemId": "gen-vr-05-hidden-word-15",
+    "option": "over",
+    "execution": "The hidden word must cross the gap between two words. This option is over, and over sits whole inside the single word \"over\" — found by looking inside one word instead of across the join. The answer, tent, runs from the end of one word into the start of the next."
+   }
+  ]
+ },
+ "rows": [
+  {
+   "itemId": "gen-vr-05-hidden-word-01",
+   "signed": true,
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "Dad ate the last plum."
+   },
+   "solution": null,
+   "key": "date",
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-01-opt1",
+     "value": "date",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-01-opt2",
+     "value": "plum",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-01-opt3",
+     "value": "sale",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-02",
+   "signed": true,
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "She played her oboe in the band."
+   },
+   "solution": null,
+   "key": "hero",
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-02-opt1",
+     "value": "hero",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-02-opt2",
+     "value": "band",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-02-opt3",
+     "value": "robe",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-03",
+   "signed": true,
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "It was the best option today."
+   },
+   "solution": null,
+   "key": "stop",
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-03-opt1",
+     "value": "stop",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-03-opt2",
+     "value": "best",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-03-opt3",
+     "value": "toad",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-04",
+   "signed": true,
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "The crab and the gull raced."
+   },
+   "solution": null,
+   "key": "band",
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-04-opt1",
+     "value": "band",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-04-opt2",
+     "value": "crag",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-04-opt3",
+     "value": "gulp",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-05",
+   "signed": true,
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "A flamingo nests near water."
+   },
+   "solution": null,
+   "key": "gone",
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-05-opt1",
+     "value": "gone",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-05-opt2",
+     "value": "lame",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": "The letters of lame are nearly in the sentence but not exactly: the closest run is \"lami\", which differs from lame by 1 letter. Every letter must be there, touching, and one is not."
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-05-opt3",
+     "value": "stem",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-06",
+   "signed": false,
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "Whose pens on Gran’s desk?"
+   },
+   "solution": null,
+   "key": "song",
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-06-opt1",
+     "value": "song",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-06-opt2",
+     "value": "pane",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-06-opt3",
+     "value": "rand",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-07",
+   "signed": true,
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "Do not sit empty-handed."
+   },
+   "solution": null,
+   "key": "item",
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-07-opt1",
+     "value": "item",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-07-opt2",
+     "value": "note",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": "The letters of note are nearly in the sentence but not exactly: the closest run is \"nots\", which differs from note by 1 letter. Every letter must be there, touching, and one is not."
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-07-opt3",
+     "value": "hand",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": "The hidden word must cross the gap between two words. This option is hand, and hand sits whole inside the single word \"emptyhanded\" — found by looking inside one word instead of across the join. The answer, item, runs from the end of one word into the start of the next."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-08",
+   "signed": true,
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "Zebra ideas win prizes."
+   },
+   "solution": null,
+   "key": "raid",
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-08-opt1",
+     "value": "raid",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-08-opt2",
+     "value": "zeal",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-08-opt3",
+     "value": "wisp",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-09",
+   "signed": true,
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "The metal ambulance door shut."
+   },
+   "solution": null,
+   "key": "lamb",
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-09-opt1",
+     "value": "lamb",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-09-opt2",
+     "value": "meta",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-09-opt3",
+     "value": "dool",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-10",
+   "signed": true,
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "Both Emma and Jo came."
+   },
+   "solution": null,
+   "key": "them",
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-10-opt1",
+     "value": "them",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-10-opt2",
+     "value": "both",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-10-opt3",
+     "value": "jams",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-11",
+   "signed": true,
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "The bus and the car waited."
+   },
+   "solution": null,
+   "key": "sand",
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-11-opt1",
+     "value": "sand",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-11-opt2",
+     "value": "busy",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-11-opt3",
+     "value": "cart",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-12",
+   "signed": true,
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "Which and how many?"
+   },
+   "solution": null,
+   "key": "hand",
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-12-opt1",
+     "value": "hand",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-12-opt2",
+     "value": "many",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-12-opt3",
+     "value": "whim",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-13",
+   "signed": true,
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "You can see so far, Max."
+   },
+   "solution": null,
+   "key": "farm",
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-13-opt1",
+     "value": "farm",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-13-opt2",
+     "value": "seas",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": "The letters of seas are nearly in the sentence but not exactly: the closest run is \"sees\", which differs from seas by 1 letter. Every letter must be there, touching, and one is not."
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-13-opt3",
+     "value": "foam",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-14",
+   "signed": true,
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "The hero sent a letter."
+   },
+   "solution": null,
+   "key": "rose",
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-14-opt1",
+     "value": "rose",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-14-opt2",
+     "value": "sent",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-14-opt3",
+     "value": "reel",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-15",
+   "signed": true,
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "The kitten tumbled over."
+   },
+   "solution": null,
+   "key": "tent",
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-15-opt1",
+     "value": "tent",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-15-opt2",
+     "value": "kite",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": "The letters of kite are nearly in the sentence but not exactly: the closest run is \"kitt\", which differs from kite by 1 letter. Every letter must be there, touching, and one is not."
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-15-opt3",
+     "value": "over",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": "The hidden word must cross the gap between two words. This option is over, and over sits whole inside the single word \"over\" — found by looking inside one word instead of across the join. The answer, tent, runs from the end of one word into the start of the next."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-16",
+   "signed": false,
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "A deep armchair sat there."
+   },
+   "solution": null,
+   "key": "pear",
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-16-opt1",
+     "value": "pear",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-16-opt2",
+     "value": "deed",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-16-opt3",
+     "value": "arch",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-17",
+   "signed": false,
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "The oak in Dan’s garden fell."
+   },
+   "solution": null,
+   "key": "kind",
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-17-opt1",
+     "value": "kind",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-17-opt2",
+     "value": "dane",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": "The letters of dane are nearly in the sentence but not exactly: the closest run is \"dans\", which differs from dane by 1 letter. Every letter must be there, touching, and one is not."
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-17-opt3",
+     "value": "goad",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-18",
+   "signed": true,
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "The demo thrilled everyone."
+   },
+   "solution": null,
+   "key": "moth",
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-18-opt1",
+     "value": "moth",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-18-opt2",
+     "value": "demo",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-18-opt3",
+     "value": "ever",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-19",
+   "signed": false,
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "Put the star in gold paper."
+   },
+   "solution": null,
+   "key": "ring",
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-19-opt1",
+     "value": "ring",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-19-opt2",
+     "value": "trap",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": "The letters of trap are nearly in the sentence but not exactly: the closest run is \"dpap\", which differs from trap by 2 letters. Every letter must be there, touching, and one is not."
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-19-opt3",
+     "value": "gasp",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-20",
+   "signed": true,
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "Watch industrious ants."
+   },
+   "solution": null,
+   "key": "chin",
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-20-opt1",
+     "value": "chin",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-20-opt2",
+     "value": "wand",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-20-opt3",
+     "value": "stir",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-21",
+   "signed": true,
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "Dad drank a cider slowly."
+   },
+   "solution": null,
+   "key": "acid",
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-21-opt1",
+     "value": "acid",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-21-opt2",
+     "value": "rank",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-21-opt3",
+     "value": "slow",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-22",
+   "signed": true,
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "The lamp landed with a bump."
+   },
+   "solution": null,
+   "key": "plan",
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-22-opt1",
+     "value": "plan",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-22-opt2",
+     "value": "bump",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-22-opt3",
+     "value": "dame",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-23",
+   "signed": true,
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "Deliver yesterday’s post."
+   },
+   "solution": null,
+   "key": "very",
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-23-opt1",
+     "value": "very",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-23-opt2",
+     "value": "dell",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-23-opt3",
+     "value": "past",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-24",
+   "signed": true,
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "The piano seemed loud."
+   },
+   "solution": null,
+   "key": "nose",
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-24-opt1",
+     "value": "nose",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-24-opt2",
+     "value": "loud",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-24-opt3",
+     "value": "pane",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-25",
+   "signed": true,
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "The vicar eats early."
+   },
+   "solution": null,
+   "key": "care",
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-25-opt1",
+     "value": "care",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-25-opt2",
+     "value": "vice",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": "The letters of vice are nearly in the sentence but not exactly: the closest run is \"vica\", which differs from vice by 1 letter. Every letter must be there, touching, and one is not."
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-25-opt3",
+     "value": "rate",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": null
+    }
+   ]
+  }
+ ]
+}

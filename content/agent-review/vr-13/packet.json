@@ -1,0 +1,944 @@
+{
+ "door": "vr-13",
+ "caseId": "case-vr-13",
+ "title": "The Word Builder",
+ "questionType": "vr-13-make-a-word",
+ "entries": {
+  "vr13-not-a-word": {
+   "description": "Assembled letters that do not form a real word.",
+   "childHint": "Say your finished word out loud. Is it one you know?"
+  },
+  "vr13-wrong-pieces": {
+   "description": "Took letters from the middle instead of the shown positions.",
+   "childHint": "Look at where the example word takes its letters from. Copy those exact positions."
+  }
+ },
+ "houseFormExemplars": {
+  "vr13-wrong-pieces": [
+   {
+    "itemId": "gen-vr-13-make-a-word-01",
+    "option": "ARMS",
+    "execution": "The example takes the first two letters of each outer word, so STAY and ARMY give STAR. This option takes ARMS — letters that are in the outer words but not at the positions the example shows."
+   },
+   {
+    "itemId": "gen-vr-13-make-a-word-03",
+    "option": "RINK",
+    "execution": "The example takes the first two letters of each outer word, so GRASS and INK give GRIN. This option takes RINK — letters that are in the outer words but not at the positions the example shows."
+   },
+   {
+    "itemId": "gen-vr-13-make-a-word-04",
+    "option": "ALAS",
+    "execution": "The example takes the first two letters of each outer word, so FLAG and ATLAS give FLAT. This option takes ALAS — letters that are in the outer words but not at the positions the example shows."
+   }
+  ],
+  "vr13-not-a-word": [
+   {
+    "itemId": "gen-vr-13-make-a-word-18",
+    "option": "DRAP",
+    "execution": "The rule takes the first two letters of each outer word: DR from DRAGON and IP from IPS, giving DRIP. This option assembles DRAP, which is not a word — the child built letters and stopped without hearing them."
+   }
+  ]
+ },
+ "rows": [
+  {
+   "itemId": "gen-vr-13-make-a-word-01",
+   "signed": true,
+   "stem": {
+    "words": [
+     "STAY",
+     "ARMY"
+    ],
+    "prompt": "The middle word is built from the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: STAY ( ? ) ARMY"
+   },
+   "solution": null,
+   "key": "STAR",
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-01-opt1",
+     "value": "STAR",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-01-opt2",
+     "value": "STAY",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-01-opt3",
+     "value": "ARMS",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so STAY and ARMY give STAR. This option takes ARMS — letters that are in the outer words but not at the positions the example shows."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-02",
+   "signed": true,
+   "stem": {
+    "words": [
+     "SHEEP",
+     "OPEN"
+    ],
+    "prompt": "The middle word is built from the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: SHEEP ( ? ) OPEN"
+   },
+   "solution": null,
+   "key": "SHOP",
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-02-opt1",
+     "value": "SHOP",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-02-opt2",
+     "value": "SHOE",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-02-opt3",
+     "value": "OPAL",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-03",
+   "signed": true,
+   "stem": {
+    "words": [
+     "GRASS",
+     "INK"
+    ],
+    "prompt": "The middle word is built from the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: GRASS ( ? ) INK"
+   },
+   "solution": null,
+   "key": "GRIN",
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-03-opt1",
+     "value": "GRIN",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-03-opt2",
+     "value": "GRAN",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-03-opt3",
+     "value": "RINK",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so GRASS and INK give GRIN. This option takes RINK — letters that are in the outer words but not at the positions the example shows."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-04",
+   "signed": true,
+   "stem": {
+    "words": [
+     "FLAG",
+     "ATLAS"
+    ],
+    "prompt": "The middle word is built from the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: FLAG ( ? ) ATLAS"
+   },
+   "solution": null,
+   "key": "FLAT",
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-04-opt1",
+     "value": "FLAT",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-04-opt2",
+     "value": "FLAP",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-04-opt3",
+     "value": "ALAS",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so FLAG and ATLAS give FLAT. This option takes ALAS — letters that are in the outer words but not at the positions the example shows."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-05",
+   "signed": true,
+   "stem": {
+    "words": [
+     "CHEESE",
+     "INSECT"
+    ],
+    "prompt": "The middle word is built from the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: CHEESE ( ? ) INSECT"
+   },
+   "solution": null,
+   "key": "CHIN",
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-05-opt1",
+     "value": "CHIN",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-05-opt2",
+     "value": "CHIP",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-05-opt3",
+     "value": "ICES",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so CHEESE and INSECT give CHIN. This option takes ICES — letters that are in the outer words but not at the positions the example shows."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-06",
+   "signed": true,
+   "stem": {
+    "words": [
+     "DRESS",
+     "UMBRELLA"
+    ],
+    "prompt": "The middle word is built from the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: DRESS ( ? ) UMBRELLA"
+   },
+   "solution": null,
+   "key": "DRUM",
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-06-opt1",
+     "value": "DRUM",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-06-opt2",
+     "value": "DREL",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-06-opt3",
+     "value": "UMPS",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-07",
+   "signed": true,
+   "stem": {
+    "words": [
+     "PLATE",
+     "UMPIRE"
+    ],
+    "prompt": "The middle word is built from the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: PLATE ( ? ) UMPIRE"
+   },
+   "solution": null,
+   "key": "PLUM",
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-07-opt1",
+     "value": "PLUM",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-07-opt2",
+     "value": "PLAN",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-07-opt3",
+     "value": "UMPS",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-08",
+   "signed": true,
+   "stem": {
+    "words": [
+     "CLOUD",
+     "APPLE"
+    ],
+    "prompt": "The middle word is built from the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: CLOUD ( ? ) APPLE"
+   },
+   "solution": null,
+   "key": "CLAP",
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-08-opt1",
+     "value": "CLAP",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-08-opt2",
+     "value": "CLAY",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-08-opt3",
+     "value": "APES",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-09",
+   "signed": true,
+   "stem": {
+    "words": [
+     "TREE",
+     "IPAD"
+    ],
+    "prompt": "The middle word is built from the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: TREE ( ? ) IPAD"
+   },
+   "solution": null,
+   "key": "TRIP",
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-09-opt1",
+     "value": "TRIP",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-09-opt2",
+     "value": "TRAY",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-09-opt3",
+     "value": "PADS",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-10",
+   "signed": true,
+   "stem": {
+    "words": [
+     "SNAKE",
+     "APRON"
+    ],
+    "prompt": "The middle word is built from the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: SNAKE ( ? ) APRON"
+   },
+   "solution": null,
+   "key": "SNAP",
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-10-opt1",
+     "value": "SNAP",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-10-opt2",
+     "value": "SNIP",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-10-opt3",
+     "value": "APES",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so SNAKE and APRON give SNAP. This option takes APES — letters that are in the outer words but not at the positions the example shows."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-11",
+   "signed": true,
+   "stem": {
+    "words": [
+     "SWAN",
+     "IMAGE"
+    ],
+    "prompt": "The middle word is built from the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: SWAN ( ? ) IMAGE"
+   },
+   "solution": null,
+   "key": "SWIM",
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-11-opt1",
+     "value": "SWIM",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-11-opt2",
+     "value": "SWAM",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-11-opt3",
+     "value": "MAGE",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so SWAN and IMAGE give SWIM. This option takes MAGE — letters that are in the outer words but not at the positions the example shows."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-12",
+   "signed": true,
+   "stem": {
+    "words": [
+     "CRAB",
+     "ABLE"
+    ],
+    "prompt": "The middle word is built from the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: CRAB ( ? ) ABLE"
+   },
+   "solution": null,
+   "key": "CRAB",
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-12-opt1",
+     "value": "CRAB",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-12-opt2",
+     "value": "CRIB",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-12-opt3",
+     "value": "ABLE",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so CRAB and ABLE give CRAB. This option takes ABLE — letters that are in the outer words but not at the positions the example shows."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-13",
+   "signed": true,
+   "stem": {
+    "words": [
+     "SPOON",
+     "INDEX"
+    ],
+    "prompt": "The middle word is built from the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: SPOON ( ? ) INDEX"
+   },
+   "solution": null,
+   "key": "SPIN",
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-13-opt1",
+     "value": "SPIN",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-13-opt2",
+     "value": "SPAN",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-13-opt3",
+     "value": "DENS",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so SPOON and INDEX give SPIN. This option takes DENS — letters that are in the outer words but not at the positions the example shows."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-14",
+   "signed": true,
+   "stem": {
+    "words": [
+     "GRAPE",
+     "ABBEY"
+    ],
+    "prompt": "The middle word is built from the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: GRAPE ( ? ) ABBEY"
+   },
+   "solution": null,
+   "key": "GRAB",
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-14-opt1",
+     "value": "GRAB",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-14-opt2",
+     "value": "GRIP",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-14-opt3",
+     "value": "ABBE",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so GRAPE and ABBEY give GRAB. This option takes ABBE — letters that are in the outer words but not at the positions the example shows."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-15",
+   "signed": true,
+   "stem": {
+    "words": [
+     "SLEEP",
+     "IPOD"
+    ],
+    "prompt": "The middle word is built from the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: SLEEP ( ? ) IPOD"
+   },
+   "solution": null,
+   "key": "SLIP",
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-15-opt1",
+     "value": "SLIP",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-15-opt2",
+     "value": "SLAP",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-15-opt3",
+     "value": "PODS",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so SLEEP and IPOD give SLIP. This option takes PODS — letters that are in the outer words but not at the positions the example shows."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-16",
+   "signed": true,
+   "stem": {
+    "words": [
+     "PRAWN",
+     "AMBER"
+    ],
+    "prompt": "The middle word is built from the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: PRAWN ( ? ) AMBER"
+   },
+   "solution": null,
+   "key": "PRAM",
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-16-opt1",
+     "value": "PRAM",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-16-opt2",
+     "value": "PROM",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-16-opt3",
+     "value": "AMBS",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-17",
+   "signed": true,
+   "stem": {
+    "words": [
+     "BRICK",
+     "IMP"
+    ],
+    "prompt": "The middle word is built from the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: BRICK ( ? ) IMP"
+   },
+   "solution": null,
+   "key": "BRIM",
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-17-opt1",
+     "value": "BRIM",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-17-opt2",
+     "value": "BRAM",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-17-opt3",
+     "value": "IMPS",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-18",
+   "signed": true,
+   "stem": {
+    "words": [
+     "DRAGON",
+     "IPS"
+    ],
+    "prompt": "The middle word is built from the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: DRAGON ( ? ) IPS"
+   },
+   "solution": null,
+   "key": "DRIP",
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-18-opt1",
+     "value": "DRIP",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-18-opt2",
+     "value": "DRAP",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": "The rule takes the first two letters of each outer word: DR from DRAGON and IP from IPS, giving DRIP. This option assembles DRAP, which is not a word — the child built letters and stopped without hearing them."
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-18-opt3",
+     "value": "IPSY",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-19",
+   "signed": true,
+   "stem": {
+    "words": [
+     "CHERRY",
+     "ATTIC"
+    ],
+    "prompt": "The middle word is built from the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: CHERRY ( ? ) ATTIC"
+   },
+   "solution": null,
+   "key": "CHAT",
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-19-opt1",
+     "value": "CHAT",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-19-opt2",
+     "value": "CHIT",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-19-opt3",
+     "value": "ATTA",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so CHERRY and ATTIC give CHAT. This option takes ATTA — letters that are in the outer words but not at the positions the example shows."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-20",
+   "signed": true,
+   "stem": {
+    "words": [
+     "WHEEL",
+     "IMPS"
+    ],
+    "prompt": "The middle word is built from the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: WHEEL ( ? ) IMPS"
+   },
+   "solution": null,
+   "key": "WHIM",
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-20-opt1",
+     "value": "WHIM",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-20-opt2",
+     "value": "WHAM",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-20-opt3",
+     "value": "IMPY",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-21",
+   "signed": true,
+   "stem": {
+    "words": [
+     "SHED",
+     "UTTER"
+    ],
+    "prompt": "The middle word is built from the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: SHED ( ? ) UTTER"
+   },
+   "solution": null,
+   "key": "SHUT",
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-21-opt1",
+     "value": "SHUT",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-21-opt2",
+     "value": "SHOT",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-21-opt3",
+     "value": "UTTS",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so SHED and UTTER give SHUT. This option takes UTTS — letters that are in the outer words but not at the positions the example shows."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-22",
+   "signed": true,
+   "stem": {
+    "words": [
+     "TRUCK",
+     "APPLE"
+    ],
+    "prompt": "The middle word is built from the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: TRUCK ( ? ) APPLE"
+   },
+   "solution": null,
+   "key": "TRAP",
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-22-opt1",
+     "value": "TRAP",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-22-opt2",
+     "value": "TRIP",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-22-opt3",
+     "value": "APPS",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-23",
+   "signed": true,
+   "stem": {
+    "words": [
+     "FLOWER",
+     "IPS"
+    ],
+    "prompt": "The middle word is built from the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: FLOWER ( ? ) IPS"
+   },
+   "solution": null,
+   "key": "FLIP",
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-23-opt1",
+     "value": "FLIP",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-23-opt2",
+     "value": "FLAP",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-23-opt3",
+     "value": "IPSO",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so FLOWER and IPS give FLIP. This option takes IPSO — letters that are in the outer words but not at the positions the example shows."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-24",
+   "signed": true,
+   "stem": {
+    "words": [
+     "SLIDE",
+     "AMBER"
+    ],
+    "prompt": "The middle word is built from the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: SLIDE ( ? ) AMBER"
+   },
+   "solution": null,
+   "key": "SLAM",
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-24-opt1",
+     "value": "SLAM",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-24-opt2",
+     "value": "SLIM",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-24-opt3",
+     "value": "AMBS",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": "The example takes the first two letters of each outer word, so SLIDE and AMBER give SLAM. This option takes AMBS — letters that are in the outer words but not at the positions the example shows."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-25",
+   "signed": true,
+   "stem": {
+    "words": [
+     "SNOW",
+     "IPS"
+    ],
+    "prompt": "The middle word is built from the first two letters of each outer word: SHEEP (SHOP) OPEN. Build the middle word for: SNOW ( ? ) IPS"
+   },
+   "solution": null,
+   "key": "SNIP",
+   "options": [
+    {
+     "optionId": "gen-vr-13-make-a-word-25-opt1",
+     "value": "SNIP",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-25-opt2",
+     "value": "SNAP",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-13-make-a-word-25-opt3",
+     "value": "IPSA",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "execution": null
+    }
+   ]
+  }
+ ]
+}

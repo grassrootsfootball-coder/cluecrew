@@ -1,0 +1,334 @@
+{
+ "door": "vr-05",
+ "drafter": "agent",
+ "drafts": [
+  {
+   "itemId": "gen-vr-05-hidden-word-01",
+   "optionId": "gen-vr-05-hidden-word-01-opt2",
+   "value": "plum",
+   "tag": "vr05-almost-letters",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "The letters of plum are exactly in the sentence, as the run \"plum\" inside the word \"plum\", so they are not nearly there. The tag's act (letters close but not exact) cannot produce this option; it needs a different distractor."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-01",
+   "optionId": "gen-vr-05-hidden-word-01-opt3",
+   "value": "sale",
+   "tag": "vr05-single-word-only",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "The letters sale do not appear in order inside any single word of the sentence, so searching single words cannot produce this option."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-02",
+   "optionId": "gen-vr-05-hidden-word-02-opt2",
+   "value": "band",
+   "tag": "vr05-almost-letters",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "The letters of band are exactly in the sentence, as the run \"band\" inside the word \"band\", so they are not nearly there. The tag's act (letters close but not exact) cannot produce this option; it needs a different distractor."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-02",
+   "optionId": "gen-vr-05-hidden-word-02-opt3",
+   "value": "robe",
+   "tag": "vr05-single-word-only",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "The letters robe do not appear in order inside any single word of the sentence, so searching single words cannot produce this option."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-03",
+   "optionId": "gen-vr-05-hidden-word-03-opt2",
+   "value": "best",
+   "tag": "vr05-almost-letters",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "The letters of best are exactly in the sentence, as the run \"best\" inside the word \"best\", so they are not nearly there. The tag's act (letters close but not exact) cannot produce this option; it needs a different distractor."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-03",
+   "optionId": "gen-vr-05-hidden-word-03-opt3",
+   "value": "toad",
+   "tag": "vr05-single-word-only",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "The letters toad do not appear in order inside any single word of the sentence, so searching single words cannot produce this option."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-04",
+   "optionId": "gen-vr-05-hidden-word-04-opt2",
+   "value": "crag",
+   "tag": "vr05-almost-letters",
+   "verdict": "EXECUTES",
+   "execution": "The letters of crag are nearly in the sentence but not exactly: the closest run is \"crab\", which differs from crag by 1 letter. Every letter must be there, touching, and one is not."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-04",
+   "optionId": "gen-vr-05-hidden-word-04-opt3",
+   "value": "gulp",
+   "tag": "vr05-single-word-only",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "The letters gulp do not appear in order inside any single word of the sentence, so searching single words cannot produce this option."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-05",
+   "optionId": "gen-vr-05-hidden-word-05-opt3",
+   "value": "stem",
+   "tag": "vr05-single-word-only",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "The letters stem do not appear in order inside any single word of the sentence, so searching single words cannot produce this option."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-06",
+   "optionId": "gen-vr-05-hidden-word-06-opt2",
+   "value": "pane",
+   "tag": "vr05-almost-letters",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "The closest four-letter run to pane in the sentence is \"pens\", which differs by 2 letters, so the letters are not nearly there. The tag's act cannot honestly produce this option."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-06",
+   "optionId": "gen-vr-05-hidden-word-06-opt3",
+   "value": "rand",
+   "tag": "vr05-single-word-only",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "The letters rand do not appear in order inside any single word of the sentence, so searching single words cannot produce this option."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-08",
+   "optionId": "gen-vr-05-hidden-word-08-opt2",
+   "value": "zeal",
+   "tag": "vr05-almost-letters",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "The closest four-letter run to zeal in the sentence is \"deas\", which differs by 2 letters, so the letters are not nearly there. The tag's act cannot honestly produce this option."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-08",
+   "optionId": "gen-vr-05-hidden-word-08-opt3",
+   "value": "wisp",
+   "tag": "vr05-single-word-only",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "The letters wisp do not appear in order inside any single word of the sentence, so searching single words cannot produce this option."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-09",
+   "optionId": "gen-vr-05-hidden-word-09-opt2",
+   "value": "meta",
+   "tag": "vr05-almost-letters",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "The letters of meta are exactly in the sentence, as the run \"meta\" inside the word \"metal\", so they are not nearly there. The tag's act (letters close but not exact) cannot produce this option; it needs a different distractor."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-09",
+   "optionId": "gen-vr-05-hidden-word-09-opt3",
+   "value": "dool",
+   "tag": "vr05-single-word-only",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "The letters dool do not appear in order inside any single word of the sentence, so searching single words cannot produce this option."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-10",
+   "optionId": "gen-vr-05-hidden-word-10-opt2",
+   "value": "both",
+   "tag": "vr05-almost-letters",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "The letters of both are exactly in the sentence, as the run \"both\" inside the word \"both\", so they are not nearly there. The tag's act (letters close but not exact) cannot produce this option; it needs a different distractor."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-10",
+   "optionId": "gen-vr-05-hidden-word-10-opt3",
+   "value": "jams",
+   "tag": "vr05-single-word-only",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "The letters jams do not appear in order inside any single word of the sentence, so searching single words cannot produce this option."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-11",
+   "optionId": "gen-vr-05-hidden-word-11-opt2",
+   "value": "busy",
+   "tag": "vr05-almost-letters",
+   "verdict": "EXECUTES",
+   "execution": "The letters of busy are nearly in the sentence but not exactly: the closest run is \"busa\", which differs from busy by 1 letter. Every letter must be there, touching, and one is not."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-11",
+   "optionId": "gen-vr-05-hidden-word-11-opt3",
+   "value": "cart",
+   "tag": "vr05-single-word-only",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "The letters cart do not appear in order inside any single word of the sentence, so searching single words cannot produce this option."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-12",
+   "optionId": "gen-vr-05-hidden-word-12-opt2",
+   "value": "many",
+   "tag": "vr05-almost-letters",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "The letters of many are exactly in the sentence, as the run \"many\" inside the word \"many\", so they are not nearly there. The tag's act (letters close but not exact) cannot produce this option; it needs a different distractor."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-12",
+   "optionId": "gen-vr-05-hidden-word-12-opt3",
+   "value": "whim",
+   "tag": "vr05-single-word-only",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "The letters whim do not appear in order inside any single word of the sentence, so searching single words cannot produce this option."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-13",
+   "optionId": "gen-vr-05-hidden-word-13-opt3",
+   "value": "foam",
+   "tag": "vr05-single-word-only",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "The letters foam do not appear in order inside any single word of the sentence, so searching single words cannot produce this option."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-14",
+   "optionId": "gen-vr-05-hidden-word-14-opt2",
+   "value": "sent",
+   "tag": "vr05-almost-letters",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "The letters of sent are exactly in the sentence, as the run \"sent\" inside the word \"sent\", so they are not nearly there. The tag's act (letters close but not exact) cannot produce this option; it needs a different distractor."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-14",
+   "optionId": "gen-vr-05-hidden-word-14-opt3",
+   "value": "reel",
+   "tag": "vr05-single-word-only",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "The letters reel do not appear in order inside any single word of the sentence, so searching single words cannot produce this option."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-16",
+   "optionId": "gen-vr-05-hidden-word-16-opt2",
+   "value": "deed",
+   "tag": "vr05-almost-letters",
+   "verdict": "EXECUTES",
+   "execution": "The letters of deed are nearly in the sentence but not exactly: the closest run is \"deep\", which differs from deed by 1 letter. Every letter must be there, touching, and one is not."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-16",
+   "optionId": "gen-vr-05-hidden-word-16-opt3",
+   "value": "arch",
+   "tag": "vr05-single-word-only",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "The letters arch do not appear in order inside any single word of the sentence, so searching single words cannot produce this option."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-17",
+   "optionId": "gen-vr-05-hidden-word-17-opt3",
+   "value": "goad",
+   "tag": "vr05-single-word-only",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "The letters goad do not appear in order inside any single word of the sentence, so searching single words cannot produce this option."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-18",
+   "optionId": "gen-vr-05-hidden-word-18-opt2",
+   "value": "demo",
+   "tag": "vr05-almost-letters",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "The letters of demo are exactly in the sentence, as the run \"demo\" inside the word \"demo\", so they are not nearly there. The tag's act (letters close but not exact) cannot produce this option; it needs a different distractor."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-18",
+   "optionId": "gen-vr-05-hidden-word-18-opt3",
+   "value": "ever",
+   "tag": "vr05-single-word-only",
+   "verdict": "EXECUTES",
+   "execution": "The hidden word must cross the gap between two words. This option is ever, and ever sits whole inside the single word \"everyone\" — found by looking inside one word instead of across the join. The answer, moth, runs from the end of one word into the start of the next."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-19",
+   "optionId": "gen-vr-05-hidden-word-19-opt3",
+   "value": "gasp",
+   "tag": "vr05-single-word-only",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "The letters gasp do not appear in order inside any single word of the sentence, so searching single words cannot produce this option."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-20",
+   "optionId": "gen-vr-05-hidden-word-20-opt2",
+   "value": "wand",
+   "tag": "vr05-almost-letters",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "The closest four-letter run to wand in the sentence is \"hind\", which differs by 2 letters, so the letters are not nearly there. The tag's act cannot honestly produce this option."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-20",
+   "optionId": "gen-vr-05-hidden-word-20-opt3",
+   "value": "stir",
+   "tag": "vr05-single-word-only",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "The letters stir do not appear in order inside any single word of the sentence, so searching single words cannot produce this option."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-21",
+   "optionId": "gen-vr-05-hidden-word-21-opt2",
+   "value": "rank",
+   "tag": "vr05-almost-letters",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "The letters of rank are exactly in the sentence, as the run \"rank\" inside the word \"drank\", so they are not nearly there. The tag's act (letters close but not exact) cannot produce this option; it needs a different distractor."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-21",
+   "optionId": "gen-vr-05-hidden-word-21-opt3",
+   "value": "slow",
+   "tag": "vr05-single-word-only",
+   "verdict": "EXECUTES",
+   "execution": "The hidden word must cross the gap between two words. This option is slow, and slow sits whole inside the single word \"slowly\" — found by looking inside one word instead of across the join. The answer, acid, runs from the end of one word into the start of the next."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-22",
+   "optionId": "gen-vr-05-hidden-word-22-opt2",
+   "value": "bump",
+   "tag": "vr05-almost-letters",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "The letters of bump are exactly in the sentence, as the run \"bump\" inside the word \"bump\", so they are not nearly there. The tag's act (letters close but not exact) cannot produce this option; it needs a different distractor."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-22",
+   "optionId": "gen-vr-05-hidden-word-22-opt3",
+   "value": "dame",
+   "tag": "vr05-single-word-only",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "The letters dame do not appear in order inside any single word of the sentence, so searching single words cannot produce this option."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-23",
+   "optionId": "gen-vr-05-hidden-word-23-opt2",
+   "value": "dell",
+   "tag": "vr05-almost-letters",
+   "verdict": "EXECUTES",
+   "execution": "The letters of dell are nearly in the sentence but not exactly: the closest run is \"deli\", which differs from dell by 1 letter. Every letter must be there, touching, and one is not."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-23",
+   "optionId": "gen-vr-05-hidden-word-23-opt3",
+   "value": "past",
+   "tag": "vr05-single-word-only",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "The letters past do not appear in order inside any single word of the sentence, so searching single words cannot produce this option."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-24",
+   "optionId": "gen-vr-05-hidden-word-24-opt2",
+   "value": "loud",
+   "tag": "vr05-almost-letters",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "The letters of loud are exactly in the sentence, as the run \"loud\" inside the word \"loud\", so they are not nearly there. The tag's act (letters close but not exact) cannot produce this option; it needs a different distractor."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-24",
+   "optionId": "gen-vr-05-hidden-word-24-opt3",
+   "value": "pane",
+   "tag": "vr05-single-word-only",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "The letters pane do not appear in order inside any single word of the sentence, so searching single words cannot produce this option."
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-25",
+   "optionId": "gen-vr-05-hidden-word-25-opt3",
+   "value": "rate",
+   "tag": "vr05-single-word-only",
+   "verdict": "CANNOT_EXECUTE",
+   "reason": "The letters rate do not appear in order inside any single word of the sentence, so searching single words cannot produce this option."
+  }
+ ]
+}
