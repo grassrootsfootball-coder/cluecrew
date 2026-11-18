@@ -28447,7 +28447,9 @@ executions. The reviewer refused its own proposer's work whole twice (vr-18 x+x/
 story; vr-13 an anagram cue, then a near-twin cue) — **the independence is the mechanism.**
 
 **OUTCOME 2026-11-18.** vr-05, vr-08, vr-16, vr-17, vr-18, vr-20, vr-21 published: 175 rows DRAFT to
-LIVE, every assertion passing before each one-transaction write. vr-13 in its third round.
+LIVE, every assertion passing before each one-transaction write. vr-13 followed after four rounds
+(25 LIVE): all eight doors handed to this regime are live, 200 rows, and every one of the 28 cases now
+serves a live practice pool.
 
 **OPEN FOR DAVID (door-level, no single row at fault, so not held):** vr-16 — the key is the odd one
 out among three same-side twins on 23 of 25 rows (two tags cannot break the cluster); vr-08 — the key
