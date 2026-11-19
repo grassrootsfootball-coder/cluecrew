@@ -159,10 +159,10 @@
   {
    "id": "en-emotion-label-approximation",
    "verdict": "REFUSE",
-   "reason": "29 carriers screened. Both texts assert that the chosen feeling is CLOSE to an evidenced feeling. On 8 carriers the execution itself says the text gives no feeling, or gives a non-feeling state (knowledge, understanding, a cost, a reason, a purpose): there the option imports a feeling, and 'Close is not the same' is false. 'Pick the word' also misdescribes options that are sentences. Proposed hint is a move (find the words that show the feeling) that is true on every carrier. Two carriers choose no feeling at all and are misfiled. Proposal is ungated.",
+   "reason": "Revised after transform-review-D. 29 carriers screened. The entry stays narrow: it names a NEAR-MISS feeling, and 'Close is not the same' is the point of the entry on its 19 genuine carriers, so it is kept unchanged. The 8 carriers where the text gives no feeling, or gives a non-feeling state (knowledge, a purpose, a cost, a reason), are a different error (an imported feeling) and are now listed as misfiled, each with the entry it belongs under; pp-19 and pp-20 stay misfiled. That brings the misfiled total to 10. Description: no transform. The only remaining change is to the hint's first sentence. 'Pick the word you can prove' misdescribes options that are sentences, and it gives no place to look. The replacement tells the child to look at the words in the text that show the feeling, then keeps 'Close is not the same.' beside it. Not gated: run checkItemChildFacing / scan:vocab before applying.",
    "assertionClauses": [
     {
-     "clause": "Close is not the same (childHint: asserts the chosen feeling is near an evidenced one)",
+     "clause": "Close is not the same (childHint: presupposes the chosen feeling is near an evidenced one)",
      "falseOn": [
       "ENG-001-WIW-16",
       "ENG-005-BB-09",
@@ -171,45 +171,80 @@
       "ENG-010-JE-07",
       "ENG-011-CV-11",
       "ENG-012-ML-04",
-      "ENG-012-ML-10"
-     ]
-    },
-    {
-     "clause": "an adjacent emotion word rather than the precisely evidenced one (description)",
-     "falseOn": [
-      "ENG-001-WIW-16",
-      "ENG-005-BB-09",
-      "ENG-005-BB-12",
-      "ENG-007-LP-02",
-      "ENG-010-JE-07",
-      "ENG-011-CV-11",
-      "ENG-012-ML-04",
-      "ENG-012-ML-10"
-     ]
+      "ENG-012-ML-10",
+      "ENG-002-pp-19",
+      "ENG-002-pp-20"
+     ],
+     "note": "false only on carriers listed as misfiled (item faults)"
     }
    ],
    "transforms": [
     {
      "field": "childHint",
-     "from": "Pick the word you can prove from the text. Close is not the same.",
-     "to": "Which words in the text show that feeling? If you cannot find them, look again."
-    },
-    {
-     "field": "description",
-     "from": "Chooses an adjacent emotion word rather than the precisely evidenced one.",
-     "to": "Chooses a feeling near the one the text evidences, or puts a feeling where the text gives a different state or none."
+     "from": "Pick the word you can prove from the text.",
+     "to": "Find the words in the text that show the feeling."
     }
    ],
    "misfiledCarriers": [
     {
+     "itemId": "ENG-001-WIW-16",
+     "option": "To show that the Mole was afraid of the face.",
+     "why": "A technique question. The option puts an effect on the Mole that lines 48 to 52 never give him; there is no evidenced feeling for fear to be near. Belongs under en-technique-effect-mislocated.",
+     "belongsUnder": "en-technique-effect-mislocated"
+    },
+    {
+     "itemId": "ENG-005-BB-09",
+     "option": "Beauty was too frightened of the water to cross the bridge.",
+     "why": "Line 41 gives knowledge (he knew the bridge was not safe). Fear is an invented reason for his stopping, not a near feeling. Belongs under en-motive-invention.",
+     "belongsUnder": "en-motive-invention"
+    },
+    {
+     "itemId": "ENG-005-BB-12",
+     "option": "That Beauty is too frightened to listen properly.",
+     "why": "The limit the passage gives is understanding. The fear is a plausible state that is not stated anywhere. Belongs under en-plausible-not-stated.",
+     "belongsUnder": "en-plausible-not-stated"
+    },
+    {
+     "itemId": "ENG-007-LP-02",
+     "option": "Both show he is annoyed with Ilya.",
+     "why": "His answers are flat and on the job. No feeling is evidenced, so annoyance is imported, not approximated. Belongs under en-plausible-not-stated.",
+     "belongsUnder": "en-plausible-not-stated"
+    },
+    {
+     "itemId": "ENG-010-JE-07",
+     "option": "It had been frightened by the fall.",
+     "why": "Line 30 gives the dog a purpose (to raise help). Fright is an invented motive for its running up. Belongs under en-motive-invention.",
+     "belongsUnder": "en-motive-invention"
+    },
+    {
+     "itemId": "ENG-011-CV-11",
+     "option": "He is worried about the old woman's health.",
+     "why": "Line 48 answers with a charge to her wages. Worry is a plausible feeling that is not stated, not a near one. Belongs under en-plausible-not-stated.",
+     "belongsUnder": "en-plausible-not-stated"
+    },
+    {
+     "itemId": "ENG-012-ML-04",
+     "option": "He is jealous of the notice that Lucy will get tomorrow.",
+     "why": "Line 14 gives his reason (she cannot play bandy). Jealousy is an invented motive. Belongs under en-motive-invention.",
+     "belongsUnder": "en-motive-invention"
+    },
+    {
+     "itemId": "ENG-012-ML-10",
+     "option": "Because he was jealous of how much she enjoyed it.",
+     "why": "Line 48 gives an expectation he thought she owed him. Jealousy is an invented motive for calling her greedy. Belongs under en-motive-invention.",
+     "belongsUnder": "en-motive-invention"
+    },
+    {
      "itemId": "ENG-002-pp-19",
      "option": "Very rude to other people.",
-     "why": "Rudeness is a behaviour, not a feeling, and is Darcy's at line 66; closer to en-attribute-transfer / form-led vocab error."
+     "why": "Rudeness is a behaviour, not a feeling, and is Darcy's at line 66; closer to en-attribute-transfer / form-led vocab error.",
+     "belongsUnder": "en-attribute-transfer"
     },
     {
      "itemId": "ENG-002-pp-20",
      "option": "Very good-looking, so he is paying her a compliment.",
-     "why": "Reads 'tolerable' as praise against 'but not handsome enough'; no feeling is chosen. Closer to en-relation-word-flipped (the 'but')."
+     "why": "Reads 'tolerable' as praise against 'but not handsome enough'; no feeling is chosen. Closer to en-relation-word-flipped (the 'but').",
+     "belongsUnder": "en-relation-word-flipped"
     }
    ]
   },
@@ -487,7 +522,7 @@
   {
    "id": "en-physical-vs-emotional-cue",
    "verdict": "REFUSE",
-   "reason": "1 carrier screened. The hint's first sentence names a racing heart; the only carrier (ENG-001-WIW-03) has an aching back and weary arms and no heart at all. The description says 'body-language', but the carrier offers a stated physical state (tiredness) as the cause in place of a feeling (the pull of spring). The second sentence ('Check what the character is feeling right then') is a good move and fits. Transforms drop the feature and widen the description to the carrier's actual shape. Proposal is ungated.",
+   "reason": "Revised after transform-review-D. 1 carrier screened. The first sentence names a racing heart, and the only carrier (ENG-001-WIW-03) has none. My earlier replacement ('A body clue can point to a feeling') sent the child back to the aching back at line 4, but the feeling is at lines 5 and 6. The new first sentence tells the child to look past the body. The second sentence, already in the hint, says where to look instead: what the character feels right then. That holds on WIW-03 (past the aching back, to the pull of spring) and on the racing-heart case the entry was written for. The description transform is unchanged (the checker attested it). Not gated.",
    "assertionClauses": [
     {
      "clause": "A racing heart usually shows a feeling (childHint)",
@@ -506,7 +541,7 @@
     {
      "field": "childHint",
      "from": "A racing heart usually shows a feeling.",
-     "to": "A body clue can point to a feeling."
+     "to": "Look past what the body is doing."
     },
     {
      "field": "description",

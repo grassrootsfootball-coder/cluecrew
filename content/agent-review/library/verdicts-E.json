@@ -22,48 +22,123 @@
         {
           "clause": "Ask exactly what the first word means.",
           "falseOn": [
-            "gen-vr-04-closest-meaning-25", "gen-vr-04-closest-meaning-26", "gen-vr-04-closest-meaning-27",
-            "gen-vr-04-closest-meaning-29", "gen-vr-04-closest-meaning-30", "gen-vr-04-closest-meaning-31",
-            "gen-vr-04-closest-meaning-32", "gen-vr-04-closest-meaning-33", "gen-vr-04-closest-meaning-35",
-            "gen-vr-04-closest-meaning-36", "gen-vr-04-closest-meaning-37", "gen-vr-04-closest-meaning-38",
-            "gen-vr-04-closest-meaning-39", "gen-vr-04-closest-meaning-40"
+            "gen-vr-04-closest-meaning-25",
+            "gen-vr-04-closest-meaning-26",
+            "gen-vr-04-closest-meaning-27",
+            "gen-vr-04-closest-meaning-29",
+            "gen-vr-04-closest-meaning-30",
+            "gen-vr-04-closest-meaning-31",
+            "gen-vr-04-closest-meaning-32",
+            "gen-vr-04-closest-meaning-33",
+            "gen-vr-04-closest-meaning-35",
+            "gen-vr-04-closest-meaning-36",
+            "gen-vr-04-closest-meaning-37",
+            "gen-vr-04-closest-meaning-38",
+            "gen-vr-04-closest-meaning-39",
+            "gen-vr-04-closest-meaning-40"
           ]
         },
-        { "clause": "Close is not the same.", "falseOn": [] }
+        {
+          "clause": "Close is not the same.",
+          "falseOn": []
+        }
       ],
       "transforms": [
-        { "field": "childHint", "from": "the first word means", "to": "the word you were given means" }
+        {
+          "field": "childHint",
+          "from": "the first word means",
+          "to": "the word you were given means"
+        }
       ],
       "misfiledCarriers": [
-        { "itemId": "gen-vr-04-closest-meaning-08", "option": "heavy", "why": "For HUGE, 'heavy' is a property huge things often have, not a tilt of its meaning. This is vr04-one-feature-only, and that entry already carries 'tall' on the same item." },
-        { "itemId": "gen-vr-04-closest-meaning-38", "option": "thin", "why": "For TRANSPARENT, 'thin' is a physical reason something can be see-through, not a near-meaning with a different slant. It is closer to one-feature-only." },
-        { "itemId": "gen-vr-04-closest-meaning-40", "option": "gentle", "why": "A MELANCHOLY tune is often gentle, but 'gentle' does not share sadness's area of meaning. It co-occurs rather than shades, which makes it vr04-keeps-the-same-company." }
+        {
+          "itemId": "gen-vr-04-closest-meaning-08",
+          "option": "heavy",
+          "why": "For HUGE, 'heavy' is a property huge things often have, not a tilt of its meaning. This is vr04-one-feature-only, and that entry already carries 'tall' on the same item."
+        },
+        {
+          "itemId": "gen-vr-04-closest-meaning-38",
+          "option": "thin",
+          "why": "For TRANSPARENT, 'thin' is a physical reason something can be see-through, not a near-meaning with a different slant. It is closer to one-feature-only."
+        },
+        {
+          "itemId": "gen-vr-04-closest-meaning-40",
+          "option": "gentle",
+          "why": "A MELANCHOLY tune is often gentle, but 'gentle' does not share sadness's area of meaning. It co-occurs rather than shades, which makes it vr04-keeps-the-same-company."
+        }
       ]
     },
     {
       "id": "vr04-one-feature-only",
       "verdict": "REFUSE",
-      "reason": "Pass 1: 'one thing it can look like' asserts that the carrying option is something you can see. Most carriers are a sound, a touch, a feeling, a speed or a length instead, so a child who picked 'loud' for BRAVE is told about appearance (the wrong-channel fault, R567/R586). 'The word itself means something wider.' is true on all 27, because each key is broader than its carrier. Pass 2: once the visual claim is removed, the hint names the mistake (one sign mistaken for the whole meaning) in the child's language, in two sentences of 8 and 7 words ending on a full stop. The transform keeps the wording and drops the visual claim.",
+      "reason": "Pass 1: 'one thing it can look like' asserts that the carrying option is something you can see. Most carriers are a sound, a touch, a feeling, a speed or a length instead, so a child who picked 'loud' for BRAVE is told about appearance (the wrong-channel fault, R567/R586). 'The word itself means something wider.' is true on all 27, because each key is broader than its carrier. Pass 2: once the visual claim is removed, the hint names the mistake (one sign mistaken for the whole meaning) in the child's language, in two sentences of 8 and 7 words ending on a full stop. The transform keeps the wording and drops the visual claim. REVISED after transform review (transform-review-BE.json): pass 1 covers the description too, and 'one visible sign' in the description makes the same false claim as the hint on the same 17 carriers. A second transform drops 'visible'. With both transforms applied, I expect this entry to attest.",
       "assertionClauses": [
         {
           "clause": "That is one thing it can look like.",
           "falseOn": [
-            "gen-vr-04-closest-meaning-01 (loud)", "gen-vr-04-closest-meaning-04 (shivery)", "gen-vr-04-closest-meaning-05 (smooth)",
-            "gen-vr-04-closest-meaning-09 (brisk)", "gen-vr-04-closest-meaning-11 (silent)", "gen-vr-04-closest-meaning-12 (quiet)",
-            "gen-vr-04-closest-meaning-15 (loud)", "gen-vr-04-closest-meaning-17 (cold)", "gen-vr-04-closest-meaning-18 (quiet)",
-            "gen-vr-04-closest-meaning-19 (brief)", "gen-vr-04-closest-meaning-22 (slow)", "gen-vr-04-closest-meaning-23 (quiet)",
-            "gen-vr-04-closest-meaning-25 (noisy)", "gen-vr-04-closest-meaning-31 (chatty)", "gen-vr-04-closest-meaning-36 (silent)",
-            "gen-vr-04-closest-meaning-37 (loud)", "gen-vr-04-closest-meaning-40 (slow)"
+            "gen-vr-04-closest-meaning-01 (loud)",
+            "gen-vr-04-closest-meaning-04 (shivery)",
+            "gen-vr-04-closest-meaning-05 (smooth)",
+            "gen-vr-04-closest-meaning-09 (brisk)",
+            "gen-vr-04-closest-meaning-11 (silent)",
+            "gen-vr-04-closest-meaning-12 (quiet)",
+            "gen-vr-04-closest-meaning-15 (loud)",
+            "gen-vr-04-closest-meaning-17 (cold)",
+            "gen-vr-04-closest-meaning-18 (quiet)",
+            "gen-vr-04-closest-meaning-19 (brief)",
+            "gen-vr-04-closest-meaning-22 (slow)",
+            "gen-vr-04-closest-meaning-23 (quiet)",
+            "gen-vr-04-closest-meaning-25 (noisy)",
+            "gen-vr-04-closest-meaning-31 (chatty)",
+            "gen-vr-04-closest-meaning-36 (silent)",
+            "gen-vr-04-closest-meaning-37 (loud)",
+            "gen-vr-04-closest-meaning-40 (slow)"
           ]
         },
-        { "clause": "The word itself means something wider.", "falseOn": [] }
+        {
+          "clause": "The word itself means something wider.",
+          "falseOn": []
+        },
+        {
+          "clause": "Picks a word naming one visible sign of the headword",
+          "falseOn": [
+            "same 17 carriers as the childHint clause: 01, 04, 05, 09, 11, 12, 15, 17, 18, 19, 22, 23, 25, 31, 36, 37, 40; its own example (silent for STOIC) is not visible either"
+          ]
+        }
       ],
       "transforms": [
-        { "field": "childHint", "from": "That is one thing it can look like.", "to": "That is one sign of it." }
+        {
+          "field": "childHint",
+          "from": "That is one thing it can look like.",
+          "to": "That is one sign of it."
+        },
+        {
+          "field": "description",
+          "from": "one visible sign",
+          "to": "one sign"
+        }
       ],
       "misfiledCarriers": [
-        { "itemId": "gen-vr-04-closest-meaning-09", "option": "brisk", "why": "'Brisk' (a brisk walk) is close to a synonym of RAPID, not a sign of it. It risks being a second defensible key, so the item needs re-review." },
-        { "itemId": "gen-vr-04-closest-meaning-38", "option": "shiny", "why": "Being shiny is not a sign of being TRANSPARENT; glass is both, but neither shows the other. It is closer to keeps-the-same-company." }
+        {
+          "itemId": "gen-vr-04-closest-meaning-09",
+          "option": "brisk",
+          "why": "'Brisk' (a brisk walk) is close to a synonym of RAPID, not a sign of it. It risks being a second defensible key, so the item needs re-review."
+        },
+        {
+          "itemId": "gen-vr-04-closest-meaning-38",
+          "option": "shiny",
+          "why": "Being shiny is not a sign of being TRANSPARENT; glass is both, but neither shows the other. It is closer to keeps-the-same-company."
+        },
+        {
+          "itemId": "gen-vr-04-closest-meaning-05",
+          "option": "smooth",
+          "why": "Weak fit, not misfiled: being smooth is hardly a sign of being SHINY. Raised by the transform checker; worth an item look."
+        },
+        {
+          "itemId": "gen-vr-04-closest-meaning-19",
+          "option": "brief",
+          "why": "Weak fit, not misfiled: being brief is hardly a sign of being VAGUE. Raised by the transform checker; worth an item look."
+        }
       ]
     },
     {
@@ -74,18 +149,32 @@
         {
           "clause": "These words often turn up together.",
           "falseOn": [
-            "gen-vr-04-closest-meaning-02 (swift/early)", "gen-vr-04-closest-meaning-06 (glad/lucky)",
-            "gen-vr-04-closest-meaning-12 (timid/polite)", "gen-vr-04-closest-meaning-21 (genuine/costly)",
-            "gen-vr-04-closest-meaning-30 (futile/slow)", "gen-vr-04-closest-meaning-32 (abundant/valuable)"
+            "gen-vr-04-closest-meaning-02 (swift/early)",
+            "gen-vr-04-closest-meaning-06 (glad/lucky)",
+            "gen-vr-04-closest-meaning-12 (timid/polite)",
+            "gen-vr-04-closest-meaning-21 (genuine/costly)",
+            "gen-vr-04-closest-meaning-30 (futile/slow)",
+            "gen-vr-04-closest-meaning-32 (abundant/valuable)"
           ]
         },
-        { "clause": "That does not make them the same.", "falseOn": [] }
+        {
+          "clause": "That does not make them the same.",
+          "falseOn": []
+        }
       ],
       "transforms": [
-        { "field": "childHint", "from": "These words often turn up together. That does not make them the same.", "to": "Both words could fit the same story. Ask whether they mean the same." }
+        {
+          "field": "childHint",
+          "from": "These words often turn up together. That does not make them the same.",
+          "to": "Both words could fit the same story. Ask whether they mean the same."
+        }
       ],
       "misfiledCarriers": [
-        { "itemId": "gen-vr-04-closest-meaning-02", "option": "early", "why": "'Early' is about time, not a word found alongside SWIFT. It sits with 'sudden' as a near-meaning with the wrong slant, which makes it vr04-wrong-shade rather than company." }
+        {
+          "itemId": "gen-vr-04-closest-meaning-02",
+          "option": "early",
+          "why": "'Early' is about time, not a word found alongside SWIFT. It sits with 'sudden' as a near-meaning with the wrong slant, which makes it vr04-wrong-shade rather than company."
+        }
       ]
     },
     {
@@ -93,38 +182,76 @@
       "verdict": "REFUSE",
       "reason": "Pass 1: 'This word has more than one meaning' is true of every headword: RECEDE (memories fade), EXHAUSTED (supplies empty), EXQUISITE (pain sharp), TRANSPARENT (a lie obvious). But the hint is shown on the option the child picked, so 'This word' reads as THEIR word, which may have only one meaning. The referent has to be the headword. 'Read the sentence' is true on all 4, since every carrier is a sentence item. Pass 2: the hint describes the right move in child language; sentences are 6 and 10 words before the transform and 8 and 10 after, all ending on a full stop. The transform names the word in capitals, matching the prompt on all four carriers.",
       "assertionClauses": [
-        { "clause": "This word has more than one meaning.", "falseOn": [], "note": "Not false, but the referent is ambiguous: at feedback time 'this word' points at the chosen option, not the headword." },
-        { "clause": "Read the sentence and pick the one it shows.", "falseOn": [] }
+        {
+          "clause": "This word has more than one meaning.",
+          "falseOn": [],
+          "note": "Not false, but the referent is ambiguous: at feedback time 'this word' points at the chosen option, not the headword."
+        },
+        {
+          "clause": "Read the sentence and pick the one it shows.",
+          "falseOn": []
+        }
       ],
       "transforms": [
-        { "field": "childHint", "from": "This word has", "to": "The word in capitals has" }
+        {
+          "field": "childHint",
+          "from": "This word has",
+          "to": "The word in capitals has"
+        }
       ],
       "misfiledCarriers": [
-        { "itemId": "gen-vr-04-closest-meaning-34", "option": "sharp", "why": "Not misfiled, but weak. The 'exquisite pain = acute' sense is rare and literary, so few 9-11 year olds will hold it. The option works more as an unrelated distractor than as the other meaning. Flagged for item review." }
+        {
+          "itemId": "gen-vr-04-closest-meaning-34",
+          "option": "sharp",
+          "why": "Not misfiled, but weak. The 'exquisite pain = acute' sense is rare and literary, so few 9-11 year olds will hold it. The option works more as an unrelated distractor than as the other meaning. Flagged for item review."
+        }
       ]
     },
     {
       "id": "vr03-wrong-degree",
-      "verdict": "REFUSE",
-      "reason": "Pass 1: 'You found the right link' asserts that the carrier keeps the pair's relationship and direction, and only the size is wrong. That holds on 34 (wet) and 37 (cry). It is false on 35 (drizzle is weaker than a shower, the opposite of breeze to gale) and 36 (peek is no bigger than a glance, the opposite of whisper to shout). It is doubtful on 38 (content is no stronger than pleased) and 48 (hesitate to act is a change from unsure to sure, not a change of size). 'Now check how big the change is' fits only the carriers where size is the whole error. Pass 2: a hint describing the move fits all six. It uses the prompt's own 'first pair' wording and covers both direction and size. The new sentences are 7 and 10 words and end on a full stop.",
+      "verdict": "ATTEST",
+      "reason": "REVISED after transform review (transform-review-BE.json). I agree with the checker and withdraw my transform. My rewrite stretched the entry to teach direction ('the same way') so that it would cover carriers that make a different mistake. The fault lies in the tagging, not the wording, so the fix is to retag those items, not to reword the entry around them. Pass 1: on the two carriers that genuinely make this mistake, both clauses are true. 34 wet (damp to wet goes the right way but not far enough; soaked is the answer) and 37 cry (sniffle to cry goes the right way but stops short of wail). The description is true on both as well. Pass 2: the hint has 6 and 8 words, ends on a full stop, and names the move (check the size of the change) in the child's language. 35, 36, 38 and 48 are misfiled; the clause failures recorded below are theirs, not the entry's. They must be retagged at item level before this entry is served. Until then, a child who picks drizzle, peek, content or accept is told 'You found the right link', which is false for them. Note the denominator: once those four leave, this entry has 2 carriers. The entry needs more carriers before its fit rests on more than two items.",
       "assertionClauses": [
         {
           "clause": "You found the right link.",
-          "falseOn": [ "gen-vr-03-related-words-35", "gen-vr-03-related-words-36", "gen-vr-03-related-words-38", "gen-vr-03-related-words-48" ]
+          "falseOn": [
+            "gen-vr-03-related-words-35",
+            "gen-vr-03-related-words-36",
+            "gen-vr-03-related-words-38",
+            "gen-vr-03-related-words-48"
+          ],
+          "note": "False only on misfiled carriers (35, 36, 38, 48); true on the 2 genuine carriers (34, 37). This is an item fault, fixed by retagging."
         },
         {
           "clause": "Now check how big the change is.",
-          "falseOn": [ "gen-vr-03-related-words-48" ]
+          "falseOn": [
+            "gen-vr-03-related-words-48"
+          ],
+          "note": "False only on misfiled carriers (35, 36, 38, 48); true on the 2 genuine carriers (34, 37). This is an item fault, fixed by retagging."
         }
       ],
-      "transforms": [
-        { "field": "childHint", "from": "You found the right link. Now check how big the change is.", "to": "See how much the first pair changes. Your pair must change the same way, by as much." }
-      ],
+      "transforms": [],
       "misfiledCarriers": [
-        { "itemId": "gen-vr-03-related-words-35", "option": "drizzle", "why": "This option runs in the wrong direction: drizzle is lighter than a shower, while breeze to gale gets stronger. The description says 'the right direction of change', so this is a direction error, not a degree error." },
-        { "itemId": "gen-vr-03-related-words-36", "option": "peek", "why": "This option runs in the wrong direction or does not change at all: a peek is no longer or stronger than a glance, while whisper to shout gets stronger." },
-        { "itemId": "gen-vr-03-related-words-38", "option": "content", "why": "'Content' is no stronger than 'pleased' and arguably milder, so the change is zero or reversed, not too small." },
-        { "itemId": "gen-vr-03-related-words-48", "option": "accept", "why": "The pair hesitate to act is a change from doubt to commitment, not a scale of strength. 'Accept' versus 'believe' is a near-sense choice, not a degree error. The pair may not suit this entry at all." }
+        {
+          "itemId": "gen-vr-03-related-words-35",
+          "option": "drizzle",
+          "why": "This option runs in the wrong direction: drizzle is lighter than a shower, while breeze to gale gets stronger. The description says 'the right direction of change', so this is a direction error, not a degree error."
+        },
+        {
+          "itemId": "gen-vr-03-related-words-36",
+          "option": "peek",
+          "why": "This option runs in the wrong direction or does not change at all: a peek is no longer or stronger than a glance, while whisper to shout gets stronger."
+        },
+        {
+          "itemId": "gen-vr-03-related-words-38",
+          "option": "content",
+          "why": "'Content' is no stronger than 'pleased' and arguably milder, so the change is zero or reversed, not too small."
+        },
+        {
+          "itemId": "gen-vr-03-related-words-48",
+          "option": "accept",
+          "why": "The pair hesitate to act is a change from doubt to commitment, not a scale of strength. 'Accept' versus 'believe' is a near-sense choice, not a degree error. The pair may not suit this entry at all."
+        }
       ]
     }
   ]

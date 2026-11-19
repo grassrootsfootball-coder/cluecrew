@@ -1,0 +1,68 @@
+{
+  "reviewer": "rev-agent-01",
+  "entries": [
+    {
+      "id": "en-inference-literal-lookalike",
+      "verdict": "REFUSE",
+      "reason": "Both transforms apply exactly once. The description change (dropping 'For why/imply questions') is sound on its own: 18 of 115 carriers are retrieval or vocab items. The childHint transform does not remove the fault it was written to fix. It moves the fault. Sentence 1 now says copied words 'can' miss the question. But sentence 2, 'Ask what those words are telling you.', still assumes the child's option copied passage words. The unchanged description 'Picks the option that reuses passage wording' says the same. So on every carrier where the proposer found no copied wording, the result still asserts it. The proposer lists WIW-13, WIW-14, pp-16 and BB-02 as misfiled, and CV-12 as well, so those are item faults. But ENG-007-LP-12 ('He describes only the old clothes, and so we get nothing else.') is not listed as misfiled, and it copies no wording. 'Old clothes' is not in the stream-b-04 passage. On LP-12 the result is false in sentence 2 and in the description. Either the transform failed to fix LP-12, or LP-12 is misfiled and needed no transform. Both cannot hold. The proposer also overstates its false-on list. When checked against the passages, ENG-009-SM-12 echoes 'two miles of sea wall' and ENG-012-ML-12 echoes 'the best bit'. ENG-007-LP-15 reuses 'bin bag' and 'cuffs had gone thin' (lines 7 to 9 and 29 to 30), so it can be checked and it fits. Pass 2 is clean: 10 and 7 words, each ending in a full stop, British English, a usable move. Resolve LP-12 first, by retagging it (literal surface for a technique question) or by rewording sentence 2 so it does not refer back to copied words. Only then can this be attested.",
+      "resultText": {
+        "childHint": "Words copied from the passage can still miss the question. Ask what those words are telling you.",
+        "description": "Picks the option that reuses passage wording."
+      }
+    },
+    {
+      "id": "en-wrong-scope-retrieval",
+      "verdict": "ATTEST",
+      "reason": "Both transforms apply exactly once. Pass 1: 'Something from another part of the passage' holds on the core population, and also on 7 of the 9 carriers where 'true fact' failed. The borrowed element really is located elsewhere on WIW-01 (tunnel lines 9-13, birds line 18), WIW-04 (ladders line 2), WIW-09 (spring-cleaning lines 1/8, boat line 63), WIW-12 (meadow line 15), pp-03 (lines 15-17), pp-22 (line 30) and RT-08 (fire lines 15-16). It also now holds on the borderline items, where the detail is in the passage but belongs to someone else: pp-04, pp-14, AGG-05, TM-09, BF-08, AL-10. The result is still false on 2 carriers. On ENG-002-pp-13 the option contradicts line 41, which is inside the window, so nothing comes from another part. On ENG-001-WIW-22 the stem names no window, so 'Find the part the question points to' has no referent. Both are already listed as misfiled by the proposer, which makes them item faults, not entry faults. Pass 2: 12 and 7 words, each ending in a full stop, British English. 'Find the part the question points to' is a move a child can act on, and on almost every carrier the stem names lines. Meaning: removing 'true' does not widen the entry into en-plausible-not-stated, because 'in the wrong part of the passage' still requires the detail to exist in the passage. Retag pp-13 and WIW-22 (and the other listed misfiles) at item level.",
+      "resultText": {
+        "childHint": "Something from another part of the passage does not answer this question. Find the part the question points to.",
+        "description": "Answers from a detail in the wrong part of the passage."
+      }
+    },
+    {
+      "id": "vr04-wrong-shade",
+      "verdict": "ATTEST",
+      "reason": "The transform applies once. Pass 1: 'the word you were given' is correct on all 29 carriers. It is the word on the card on the 15 bare-card items (02-24) and the word in capitals on the 14 sentence items (25-40). The old wording 'the first word' was wrong on the sentence items. 'Close is not the same.' holds wherever the carrier is a near-meaning. The three carriers where it does not are 08 heavy, 38 thin and 40 gentle, and the proposer lists them as misfiled, so they are item faults. The description is unchanged and holds. Pass 2: 5 and 9 words, each ending in a full stop, British English, and the move (pin down the exact meaning) is the right one for a wrong-slant pick. Meaning is unchanged: only the referent was fixed.",
+      "resultText": {
+        "childHint": "Close is not the same. Ask exactly what the word you were given means.",
+        "description": "Picks a word that shares the general area of meaning but tilts it in a different direction (gloomy for STOIC, hearing sadness where the word means not showing feeling)."
+      }
+    },
+    {
+      "id": "vr04-one-feature-only",
+      "verdict": "REFUSE",
+      "reason": "The transform applies once, and the resulting childHint is clean. 'That is one sign of it. The word itself means something wider.' is 6 and 6 words, each ending in a full stop, and no longer names the sense of sight. But the unchanged description still says 'one visible sign of the headword'. That is the same assertion the proposer refused in the hint, and it is false on the same carriers: 01 loud, 04 shivery, 05 smooth, 09 brisk, 11 silent, 12 quiet, 15 loud, 17 cold, 18 quiet, 19 brief, 22 slow, 23 quiet, 25 noisy, 31 chatty, 36 silent, 37 loud and 40 slow. Even its own example, silent for STOIC, is not visible. Pass 1 covers the description as well as the hint, so the result fails pass 1 on those 17 carriers, which are not misfiled. A second transform would fix it: description 'one visible sign' becomes 'one sign'. With that added, this would attest. Weak fits worth an item look, not counted against the entry: 05 smooth for SHINY and 19 brief for VAGUE are hardly signs of the headword. 09 brisk and 38 shiny are already listed as misfiled.",
+      "resultText": {
+        "childHint": "That is one sign of it. The word itself means something wider.",
+        "description": "Picks a word naming one visible sign of the headword rather than what it means (silent for STOIC — one thing a stoic person might do, not what stoic means)."
+      }
+    },
+    {
+      "id": "vr04-keeps-the-same-company",
+      "verdict": "ATTEST",
+      "reason": "The transform applies once. Pass 1: 'Both words could fit the same story' is a claim about what is possible, not about how often the words occur. It holds on all 23 carriers, because each carrier and its headword can share a scene (loyal/brave, cold/damp, wealthy/generous, dangerous/notorious, and so on). It stays true on 02 early for SWIFT, which the proposer lists as misfiled. 'Ask whether they mean the same.' is a move and holds everywhere. The description ('turns up in the same situations') is unchanged and matches the new hint better than the old 'often turn up together' did. Pass 2: 7 and 6 words (the proposer counted 7 for the second sentence; it is 6), each ending in a full stop, British English. The first sentence explains why the pick felt right and the second gives the test, so it is not empty. Meaning: the frequency claim is gone and the entry's definition is unchanged.",
+      "resultText": {
+        "childHint": "Both words could fit the same story. Ask whether they mean the same.",
+        "description": "Picks a word that turns up in the same situations as the headword without sharing its meaning (loyal for BRAVE — another word of praise, not one that means unafraid)."
+      }
+    },
+    {
+      "id": "vr04-the-other-meaning",
+      "verdict": "ATTEST",
+      "reason": "The transform applies once. Pass 1: all 4 carriers (26 RECEDE, 28 EXHAUSTED, 34 EXQUISITE, 38 TRANSPARENT) are sentence items whose prompt says 'the word in capitals', so the new referent exists on every carrier. The description says 'T4/T5 only' and 'the carrier sentence', so any future carrier will be a sentence item too. Each headword really has a second sense (memories recede, supplies exhausted, exquisite pain, a transparent lie). 'Read the sentence and pick the one it shows.' holds on all 4. Pass 2: 9 and 9 words, each ending in a full stop, British English, a concrete move. Meaning is unchanged: the fix only stops 'This word' being read as the child's own pick. 34 sharp is weak for this age group, as the proposer notes, but that is an item matter.",
+      "resultText": {
+        "childHint": "The word in capitals has more than one meaning. Read the sentence and pick the one it shows.",
+        "description": "Picks a genuine meaning of the headword, but not the sense the carrier sentence fixes (poor for HUMBLE in \"stayed HUMBLE after winning\" — the humble-cottage sense). T4/T5 only."
+      }
+    },
+    {
+      "id": "vr03-wrong-degree",
+      "verdict": "REFUSE",
+      "reason": "The transform applies once, but it changes what the entry means instead of fixing a fault in its wording. The proposer's own misfiled list says 4 of the 6 carriers do not make this mistake: 35 drizzle and 36 peek go the wrong way, 38 content shows no change or the reverse, and 48 accept is a choice between close meanings. Their own false-on findings agree. On the 2 genuine carriers (34 wet, 37 cry) the original hint was true. The new hint, 'See how much the first pair changes. Your pair must change the same way, by as much.', widens the entry to teach direction ('the same way') so that it covers the misfiles. Wrong direction is a different named mistake, not wrong degree. The fix for misfiles is retagging, not rewording the entry around them. The result also fails pass 1. The unchanged description, 'Applies the right relationship ... the right direction of change, not its size', is still false on 35, 36, 38 and 48, and now contradicts the hint. 'See how much the first pair changes' assumes a change of size, which is false on 48: hesitate to act is a change from wavering to doing, not a difference in size. Pass 2: 7 and 10 words, each ending in a full stop. 'By as much' is stiff for ages 9-11 but acceptable. Recommendation: keep the original childHint, retag 35, 36, 38 and 48 at item level, and refill this entry's carriers.",
+      "resultText": {
+        "childHint": "See how much the first pair changes. Your pair must change the same way, by as much.",
+        "description": "Applies the right relationship but at the wrong strength or scale (wet for damp→soaked — the right direction of change, not its size)."
+      }
+    }
+  ]
+}

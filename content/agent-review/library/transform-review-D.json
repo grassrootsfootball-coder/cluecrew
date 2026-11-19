@@ -1,0 +1,59 @@
+{
+ "reviewer": "rev-agent-01",
+ "entries": [
+  {
+   "id": "en-vocab-dominant-sense",
+   "verdict": "ATTEST",
+   "reason": "42 carriers screened against the result. Pass 1: 'Words can have more than one meaning' is a general truth, not a claim about any item; 'the meaning you used' refers to the child's own reading, so it no longer presupposes a stem naming one target word and holds on ENG-002-pp-13 (technique stem). Description unchanged; its 'real sense of the same word' clause stays false only on ENG-001-WIW-19 'Waved to the Mole from the boat.', already listed as misfiled (item fault). Pass 2: 6 and 13 words, both end on a full stop, British English, a move the child can act on. Transform fixes the referent fault without changing what the entry names. Not gated here: run checkItemChildFacing / scan:vocab before applying.",
+   "resultText": {
+    "childHint": "Words can have more than one meaning. Check that the meaning you used fits what the sentence is saying here.",
+    "description": "The child applies the word's commonest everyday sense in a context that does not support it. The sense chosen is a real sense of the same word; it is simply the one that arrives first, and the sentence around the word is what should have displaced it. Scoped to the ERROR, not to vocabulary items: it occurs wherever a word's sense is load-bearing, including on technique stems."
+   }
+  },
+  {
+   "id": "en-emotion-label-approximation",
+   "verdict": "REFUSE",
+   "reason": "29 carriers screened. Pass 1 on the hint is clean except where no feeling is chosen: 'that feeling' has no referent on ENG-002-pp-19 ('Very rude to other people.') and ENG-002-pp-20 ('Very good-looking...'), both already listed as misfiled. Refused on scope, not on assertion. (1) The description transform makes the entry name two mistakes: a near-miss feeling (21 carriers) AND a feeling imported where the text gives a different state or none (ENG-001-WIW-16, ENG-005-BB-09, ENG-005-BB-12, ENG-007-LP-02, ENG-010-JE-07, ENG-011-CV-11, ENG-012-ML-04, ENG-012-ML-10). The second is a different error, nearer en-plausible-not-stated / en-motive-invention; the same reviewer declined to widen en-relation-word-flipped for exactly this reason, and those 8 should be misfiled, not absorbed. (2) The hint transform drops the entry's discriminating teaching ('Close is not the same'), which was right on the 21 genuine approximation carriers (e.g. ENG-010-JE-04 terrified vs dark fancies, ENG-012-ML-09 pleased vs appetite, ENG-014-TS-10 proud vs keen), where a child can find loosely-matching words and so 'prove' the near feeling. (3) Pass 2: 'If you cannot find them, look again' does not say what to look at again; on the 8 import carriers it sends the child to search again for words that do not exist. Suggested direction (not a transform from this reviewer): keep the description narrow, misfile the 8, and keep the near-miss point beside the evidence question.",
+   "resultText": {
+    "childHint": "Which words in the text show that feeling? If you cannot find them, look again.",
+    "description": "Chooses a feeling near the one the text evidences, or puts a feeling where the text gives a different state or none."
+   }
+  },
+  {
+   "id": "en-agent-patient-reversal",
+   "verdict": "ATTEST",
+   "reason": "24 carriers screened. Hint unchanged and already a move. Pass 1 on the new description: with 'in reported speech' removed it holds on all 20 genuine carriers, including the narration and technique ones (ENG-001-WIW-09, ENG-008-RC-01, ENG-011-CV-03, ENG-011-CV-07, ENG-012-ML-09, ENG-014-TS-12, ENG-025-LW-12) and ENG-013-TI-11, where the words are aimed at the wrong person, which the added 'or who it was done to' covers. The added clause is the patient side of the same swap that the hint already names, so the entry still names one mistake. ENG-002-pp-10, ENG-002-pp-20, ENG-006-TM-03 and ENG-006-TM-10 remain misfiled (item faults). Staff-facing; one sentence ending on a full stop.",
+   "resultText": {
+    "childHint": "Ask who is doing it and who it is being done to.",
+    "description": "Swaps who did or thought something, or who it was done to."
+   }
+  },
+  {
+   "id": "en-minimal-pair-skim",
+   "verdict": "ATTEST",
+   "reason": "16 carriers screened. Pass 1: 'An answer can look almost like the text' is hedged ('can') and is true on all 11 genuine carriers: whether the near-twin is the key (ENG-002-pp-12, ENG-004-AGG-01/09/12, ENG-006-TM-03, ENG-009-SM-02, ENG-010-JE-01, ENG-007-LP-01) or the line itself (ENG-001-WIW-21, ENG-002-pp-06, ENG-005-BB-01), the carrying option is a one-word or one-detail variant of what the text says. It fails only on the 5 already-misfiled carriers (ENG-001-WIW-17, ENG-002-pp-08, ENG-002-pp-19, ENG-005-BB-05, ENG-006-TM-09), which are item faults. Pass 2: 9 and 10 words, full stops, a word-by-word comparison move a child can act on. 'the text' appears in both sentences, which is slightly redundant but not wrong. Description still names one mistake, a gist match on a near-twin. Watch the boundary: 'or detail' must not absorb en-within-span-wrong-element (a different element of the passage, as on BB-05 and TM-09). Not gated here.",
+   "resultText": {
+    "childHint": "An answer can look almost like the text. Find what differs and check it against the text.",
+    "description": "Matches an option on gist when it differs from the text, or from the key, by a single word or detail."
+   }
+  },
+  {
+   "id": "en-vocab-not-this-word",
+   "verdict": "ATTEST",
+   "reason": "3 carriers screened. Pass 1: 'This word never means that' is a feature claim, true on all three: carol is never a church bell (ENG-001-WIW-08), stern is never a cushioned seat (ENG-001-WIW-20), hovered never means moving in a straight line (ENG-028-PR-05). The false claim 'belongs to a different word' is gone. The new description is true on all three and keeps the entry apart from en-vocab-form-lookalike and the sense entries, so it still names one mistake; it drops an example that was on no carrier. Pass 2: three sentences of 5, 5 and 4 words, full stops, a substitution move. Note: on ENG-001-WIW-20 the distractor was built to fit 'seated in', so putting it in place of 'stern' may not sound wrong to every child; the first sentence still settles it. Not gated here.",
+   "resultText": {
+    "childHint": "This word never means that. Put your answer in its place. Read the sentence again.",
+    "description": "Picks a meaning that belongs to no sense of the word and to no word it resembles in form."
+   }
+  },
+  {
+   "id": "en-physical-vs-emotional-cue",
+   "verdict": "REFUSE",
+   "reason": "1 carrier screened: ENG-001-WIW-03, option 'His back and arms hurt too much to go on.' The description transform is acceptable: a physical cause given where the text signals a feeling fits this carrier. The hint fails Pass 1 on it. 'A body clue can point to a feeling' tells the child to re-read the body clue as a sign of feeling. On WIW-03 the only body clue is the aching back and weary arms at line 4, which really is physical. The feeling (the pull of spring) comes from lines 5 and 6, not from any body clue. So on the entry's one carrier the first sentence points the child at the wrong line and the wrong reading. The second sentence ('Check what the character is feeling right then.') is a sound move and would pass on its own. A hint that says the reason may be a feeling rather than the body would fit; the attested result must not keep the body-clue claim.",
+   "resultText": {
+    "childHint": "A body clue can point to a feeling. Check what the character is feeling right then.",
+    "description": "Gives a physical cause, from the body or body-language, when the text signals a feeling."
+   }
+  }
+ ]
+}

@@ -41,7 +41,7 @@ interface Opt { optionId: string; value: string; isKey: boolean; tag: string | n
 interface Proposals {
   seats?: Array<{ optionId: string; itemId: string; oldValue: string; tag: string; newValue: string; execution: string }>;
   redrafts?: Array<{ optionId: string; itemId: string; value: string; tag: string; execution: string }>;
-  rebuilds?: Array<{ itemId: string; stem: Record<string, unknown>; options: Opt[]; why: string }>;
+  rebuilds?: Array<{ itemId: string; stem: Record<string, unknown>; options: Opt[]; why: string; explanation?: Record<string, unknown> }>;
 }
 interface Review { changes: Array<{ ref: string; verdict: string; reason?: string }>; rows: Array<{ itemId: string; verdict: string; reason?: string }> }
 
@@ -70,7 +70,7 @@ async function main() {
   const touched = new Set<string>([...(prop.seats ?? []), ...(prop.redrafts ?? []), ...(prop.rebuilds ?? [])].map((x) => x.itemId));
   const live = await prisma.item.findMany({ where: { id: { in: [...touched] } }, select: { id: true, status: true, questionTypeId: true, stem: true, explanation: true,
     options: { select: { id: true, content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true }, orderBy: { id: 'asc' } } } });
-  type Row = { id: string; type: string; stem: Record<string, unknown>; options: Opt[]; refs: string[] };
+  type Row = { id: string; type: string; stem: Record<string, unknown>; explanation: unknown; options: Opt[]; refs: string[] };
   const after = new Map<string, Row>();
   const faults = new Map<string, string[]>();
   const fault = (id: string, f: string) => faults.set(id, [...(faults.get(id) ?? []), f]);
@@ -79,7 +79,7 @@ async function main() {
     // signed projection, so the row a child meets does not move. Any value or stem change needs DRAFT.
     const onlyRedrafts = ![...(prop.seats ?? []), ...(prop.rebuilds ?? [])].some((x) => x.itemId === r.id);
     if (r.status !== 'DRAFT' && !(r.status === 'LIVE' && onlyRedrafts)) fault(r.id, `status ${r.status}`);
-    after.set(r.id, { id: r.id, type: r.questionTypeId, stem: r.stem as Record<string, unknown>, refs: [],
+    after.set(r.id, { id: r.id, type: r.questionTypeId, stem: r.stem as Record<string, unknown>, explanation: r.explanation, refs: [],
       options: r.options.map((o) => ({ optionId: o.id, value: val(o.content), isKey: o.isCorrect, tag: o.misconceptionId, execution: o.misconceptionExecution?.trim() || null })) });
   }
   for (const id of touched) if (!after.has(id)) fault(id, 'row not found');
@@ -87,7 +87,7 @@ async function main() {
     const r = after.get(b.itemId); if (!r) continue;
     const ids = r.options.map((o) => o.optionId).sort().join();
     if (b.options.map((o) => o.optionId).sort().join() !== ids) fault(b.itemId, 'a rebuild must keep the same option ids');
-    r.stem = b.stem; r.options = b.options.map((o) => ({ ...o, execution: o.isKey ? null : o.execution })); r.refs.push(`rebuild:${b.itemId}`);
+    r.stem = b.stem; if (b.explanation) r.explanation = b.explanation; r.options = b.options.map((o) => ({ ...o, execution: o.isKey ? null : o.execution })); r.refs.push(`rebuild:${b.itemId}`);
   }
   for (const s of prop.seats ?? []) {
     const r = after.get(s.itemId); const o = r?.options.find((x) => x.optionId === s.optionId);
@@ -113,7 +113,7 @@ async function main() {
     // Each row's OWN type: a case can map several (maths-01), and a door-level type would run the wrong predicate.
     const k = checkKeyPerformsStem({ questionTypeId: r.type, stem: r.stem, keyValue, optionValues: r.options.map((o) => o.value) }, isWord);
     if (k.verdict === 'REFUSES') fault(r.id, `key gate REFUSES: ${k.why}`);
-    for (const f of checkItemChildFacing({ id: r.id, stem: r.stem, options: r.options.map((o) => ({ content: { value: o.value }, isCorrect: o.isKey })) }))
+    for (const f of checkItemChildFacing({ id: r.id, stem: r.stem, explanation: r.explanation, options: r.options.map((o) => ({ content: { value: o.value }, isCorrect: o.isKey })) }))
       fault(r.id, `child-facing: ${JSON.stringify(f).slice(0, 200)}`);
     for (const o of r.options.filter((x) => !x.isKey)) {
       if (!o.tag || !tags.has(o.tag)) fault(r.id, `${o.value}: tag ${o.tag} is not one of this door's entries`);
@@ -155,6 +155,7 @@ async function main() {
         const r = after.get(id)!;
         const before = live.find((x) => x.id === id)!;
         if (JSON.stringify(before.stem) !== JSON.stringify(r.stem)) await tx.item.update({ where: { id }, data: { stem: r.stem as object } });
+        if (JSON.stringify(before.explanation) !== JSON.stringify(r.explanation)) await tx.item.update({ where: { id }, data: { explanation: r.explanation as object } });
         for (const o of r.options) {
           const b = before.options.find((x) => x.id === o.optionId)!;
           if (val(b.content) === o.value && b.isCorrect === o.isKey && b.misconceptionId === o.tag && (b.misconceptionExecution?.trim() || null) === o.execution) continue;

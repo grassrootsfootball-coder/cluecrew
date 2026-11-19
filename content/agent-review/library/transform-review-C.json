@@ -1,0 +1,32 @@
+{
+  "reviewer": "rev-agent-01",
+  "entries": [
+    {
+      "id": "en-attribute-transfer",
+      "verdict": "ATTEST",
+      "reason": "Both transforms applied cleanly (each 'from' matched exactly once). Screened 44 of 44 carriers. Pass 1: the result childHint 'Check who or what each detail belongs to in the text.' describes a move and asserts no feature; the removed clause 'Two people are being described.' was the fault, and 'who or what' now covers carriers where the holder is a thing (WIW-01/02 boat, CC-01 knocker, CC-10 flame, RB-10 hat, BV-05 sand), a group (RR-11, LW-01) or a time (TM-07). No carrier makes it false; on the carriers the first review listed as misfiled (WIW-17, WIW-20, pp-02, BB-13, TM-01, TM-07, RB-06, BB-10) it is weak, not false, and that is an item filing fault. The result description 'Assigns a detail the text gives to one character or thing to another, or the right attribute at the wrong value.' is true of every correctly filed carrier. Pass 2: 11 words, one sentence ending in a full stop, British English, actionable in a silent test. The transforms do not change the entry's meaning: they widen 'one character' to 'one character or thing' to match the carriers already filed, and keep the wrong-value half. Residual, not a refusal: on ENG-004-AGG-04 (girl for boy, same person) the hint does not address the wrong-value half directly; checking what line 17 gives the girl still gets the child there.",
+      "resultText": {
+        "childHint": "Check who or what each detail belongs to in the text.",
+        "description": "Assigns a detail the text gives to one character or thing to another, or the right attribute at the wrong value."
+      }
+    },
+    {
+      "id": "en-chronology-collapse",
+      "verdict": "REFUSE",
+      "reason": "Both transforms applied cleanly; the childHint is unchanged and passes both passes on all 40 carriers. The DESCRIPTION result fails. (1) Pass 1: the transforms leave in place 'The two events are both real and both about the same people', which is false on correctly filed carriers as well as misfiled ones. ENG-020-HD-06 is a real time error (would have gone stale, taken as already stale), but the staling never happens, so 'both real' is false. On ENG-006-TM-10 the later idea at line 63 is Uncle Podger's, asked about Aunt Maria, so 'about the same people' is false. The first review counted that clause false on 6 carriers and proposed no transform for it. (2) Coherence: the new first sentence's first alternative names ONE event ('an event from later (or earlier) than the moment asked about'), so the following 'The two events' has no antecedent for it. (3) Meaning: the first transform does more than fix a fault. It redefines a person-approved entry (approvedByPerson Annie, annie-seventysixth-return.md) from 'a cause that happens LATER than its effect' to any order error, earlier included, in retrieval as well as cause questions. That is a scope ruling about what the entry is; the alternative fix (refiling 27 carriers) is equally available, and choosing between them belongs to the human reviewer. Dropping the stale 'Currently split across...' sentence is fine on its own. Carriers failing the result: ENG-020-HD-06, ENG-006-TM-10 (correctly filed); ENG-019-BV-02, ENG-023-RT-02, ENG-010-JE-02, ENG-007-LP-04, ENG-007-LP-09 (misfiled, 'both real' false).",
+      "resultText": {
+        "childHint": "Check what happened first, and what the question asks for.",
+        "description": "The child picks something from the wrong point in the passage's order: an event from later (or earlier) than the moment asked about, a cause that comes after its effect, or two events in reversed order. The two events are both real and both about the same people, so the option reads well; only the order rules it out."
+      }
+    },
+    {
+      "id": "en-cause-agent-swap",
+      "verdict": "ATTEST",
+      "reason": "The transform applied cleanly (matched once). Screened 32 of 32 carriers. Pass 1: the result 'Ask who did this, or what caused it, in the text. Re-read the moment step by step.' is two moves and asserts no feature. The disjunction covers both halves of the description ('wrong cause or character'). 'Who did this' fits the agent carriers that the old 'what exactly made this happen' did not (pp-16, AGG-04, AGG-08, TM-02, TM-03, RC-10, RC-12, CV-06, BV-10, SM-03). 'What caused it' fits the cause carriers (WIW-03, WIW-07, pp-14, BB-08, RC-06, SM-06, SM-11, JE-06, CV-01, BV-06, ED-04, CR-02). It is false on none. Pass 2: sentences of 11 and 6 words, both ending in a full stop, British English, actionable in a silent test. The transform does not change the entry's meaning: the description is untouched and the hint now names both of its halves. Misfiled carriers, an item fault: ENG-002-pp-15 (cause after effect, en-chronology-collapse), ENG-007-LP-07 (destination moved, attribute transfer), ENG-007-LP-12 (contradicted by the text). 'Re-read the moment' is weak on the whole-passage technique stems (LP-12, RC-12) but not false.",
+      "resultText": {
+        "childHint": "Ask who did this, or what caused it, in the text. Re-read the moment step by step.",
+        "description": "Attributes the right event to the wrong cause or character."
+      }
+    }
+  ]
+}

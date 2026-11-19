@@ -1,0 +1,23 @@
+{
+ "reviewer": "rev-agent-01",
+ "entries": [
+  {
+   "id": "en-emotion-label-approximation",
+   "verdict": "ATTEST",
+   "reason": "Revised version. I screened the result against all 29 carriers, 19 of them genuine once the 10 listed misfiles are set aside. The description is unchanged and narrow, so the entry again names one mistake. The 8 no-feeling carriers are now misfiled to en-technique-effect-mislocated, en-motive-invention or en-plausible-not-stated, each with a reason, and I agree with each placement. Pass 1: 'Find the words in the text that show the feeling.' describes a move and claims nothing about any item. 'Close is not the same.' holds on the genuine carriers, where the option is a feeling next to the one the text gives (e.g. ENG-010-JE-04 terrified vs dark fancies, ENG-004-AGG-07 sad vs dread, ENG-014-TS-10 proud vs keen, ENG-015-CC-05 panic vs irresolution). Two more carriers should be added to the misfiled list. They are item faults and do not block attestation. (a) ENG-018-RB-05 'Warm, and very pleased with her.' is the opposite of 'sardonic', not a near feeling, so 'Close' and 'adjacent' are both false on it. (b) ENG-001-WIW-18 'He thought the Water Rat was being unkind to him.' moves the Mole's own pettish tone onto the Rat, which is closer to en-attribute-transfer. Pass 2: the two sentences are 10 and 5 words, both end on a full stop, use British English and give the child a move they can act on. Not gated here: run checkItemChildFacing / scan:vocab before applying.",
+   "resultText": {
+    "childHint": "Find the words in the text that show the feeling. Close is not the same.",
+    "description": "Chooses an adjacent emotion word rather than the precisely evidenced one."
+   }
+  },
+  {
+   "id": "en-physical-vs-emotional-cue",
+   "verdict": "ATTEST",
+   "reason": "Revised version. I screened it against its 1 carrier, ENG-001-WIW-03, option 'His back and arms hurt too much to go on.' Pass 1: 'Look past what the body is doing.' assumes the text has a body state, which is true here (aching back and weary arms at line 4). It no longer claims the body clue signals a feeling. It sends the child past the body to the feeling, the pull of spring at lines 5 and 6, which is the right move on this item. The description transform ('Gives a physical cause, from the body or body-language, when the text signals a feeling.') is true on WIW-03 and still names one mistake. Pass 2: the two sentences are 7 and 9 words, both end on a full stop, use British English, and 'look past' is plain enough for 9 to 11. Not gated here: run checkItemChildFacing / scan:vocab before applying.",
+   "resultText": {
+    "childHint": "Look past what the body is doing. Check what the character is feeling right then.",
+    "description": "Gives a physical cause, from the body or body-language, when the text signals a feeling."
+   }
+  }
+ ]
+}

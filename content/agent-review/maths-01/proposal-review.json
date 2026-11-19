@@ -1,0 +1,18 @@
+{
+  "door": "maths-01",
+  "reviewer": "rev-agent-01",
+  "changes": [
+    {
+      "ref": "rebuild:MC01-GEOM-05",
+      "verdict": "ATTEST",
+      "reason": "The round-1 fault is fixed: the 'not drawn to scale' sentence is gone and the stem no longer mentions a drawing. The 25-word sentence is now three of 10, 9 and 7 words. Key: 10 x 6 = 60, 4 x 3 = 12, 60 - 12 = 48 cm², the same whichever corner is cut. Every execution recomputed: 60 forgets the cut-out (maths-90); 10 + 6 + 10 + 6 = 32 adds the sides (maths-38); 12 stops at the corner (proc-01). Option values and ids are unchanged and nothing else moved."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "MC01-GEOM-05",
+      "verdict": "SIGN",
+      "reason": "Answerable from the words alone (a 4 cm by 3 cm corner fits a 10 cm by 6 cm rectangle). 48 cm² is the only correct option; 60, 32 and 12 cm² were each recomputed and are wrong. Real cm² superscript on every value. Words suit a 9-11-year-old."
+    }
+  ]
+}

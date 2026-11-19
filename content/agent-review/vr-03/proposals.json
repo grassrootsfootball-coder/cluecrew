@@ -1,0 +1,398 @@
+{
+ "door": "vr-03",
+ "proposer": "agent",
+ "seats": [
+  {
+   "optionId": "gen-vr-03-related-words-26-opt2",
+   "itemId": "gen-vr-03-related-words-26",
+   "oldValue": "mercury",
+   "tag": "vr03-same-topic",
+   "newValue": "doctor",
+   "execution": "A clock measures time, so a thermometer measures temperature. The child picks doctor because a thermometer belongs to the topic of being ill and seeing a doctor. A thermometer does not measure a doctor."
+  },
+  {
+   "optionId": "gen-vr-03-related-words-27-opt2",
+   "itemId": "gen-vr-03-related-words-27",
+   "oldValue": "orchestra",
+   "tag": "vr03-same-topic",
+   "newValue": "piano",
+   "execution": "An author writes a novel, so a composer writes a symphony. The child picks piano because it belongs to the topic of music that the composer brings to mind. A composer does not write a piano, so the writer-to-work relationship is never applied."
+  },
+  {
+   "optionId": "gen-vr-03-related-words-29-opt2",
+   "itemId": "gen-vr-03-related-words-29",
+   "oldValue": "artist",
+   "tag": "vr03-same-topic",
+   "newValue": "brush",
+   "execution": "A library holds books, so a gallery holds paintings. The child picks brush because it belongs to the topic of art and painting. A gallery does not hold brushes on its walls, so the holds relationship is never applied."
+  },
+  {
+   "optionId": "gen-vr-03-related-words-30-opt3",
+   "itemId": "gen-vr-03-related-words-30",
+   "oldValue": "hunger",
+   "tag": "vr03-example-anchor",
+   "newValue": "cloud",
+   "execution": "A drought is a lack of rain, so a famine is a lack of food. The child stays with the first pair: rain falls from a cloud, so cloud belongs with drought and rain. The relationship is never carried across to famine."
+  },
+  {
+   "optionId": "gen-vr-03-related-words-32-opt3",
+   "itemId": "gen-vr-03-related-words-32",
+   "oldValue": "architect",
+   "tag": "vr03-example-anchor",
+   "newValue": "kitchen",
+   "execution": "A recipe is the plan for a meal, so a blueprint is the plan for a building. The child stays with the first pair: a recipe is used in a kitchen to make a meal. Kitchen belongs with recipe and meal and is never carried across to blueprint."
+  },
+  {
+   "optionId": "gen-vr-03-related-words-33-opt2",
+   "itemId": "gen-vr-03-related-words-33",
+   "oldValue": "actor",
+   "tag": "vr03-same-topic",
+   "newValue": "ticket",
+   "execution": "A chapter is one part of a novel, so a scene is one part of a play. The child picks ticket because it belongs to the topic of going to see a play. A scene is not part of a ticket, so the part-of-a-whole relationship is never applied."
+  },
+  {
+   "optionId": "gen-vr-03-related-words-35-opt2",
+   "itemId": "gen-vr-03-related-words-35",
+   "oldValue": "puddle",
+   "tag": "vr03-example-anchor",
+   "newValue": "kite",
+   "execution": "A gale is a much stronger breeze, so a downpour is a much heavier shower. The child stays with the first pair: a kite flies in a breeze. Kite belongs with breeze and gale and is never carried across to shower."
+  },
+  {
+   "optionId": "gen-vr-03-related-words-35-opt3",
+   "itemId": "gen-vr-03-related-words-35",
+   "oldValue": "drizzle",
+   "tag": "vr03-same-topic",
+   "newValue": "umbrella",
+   "execution": "A gale is a much stronger breeze, so a downpour is a much heavier shower. The child picks umbrella because it belongs to the topic of rain that shower brings to mind. An umbrella is not a heavier shower."
+  },
+  {
+   "optionId": "gen-vr-03-related-words-36-opt2",
+   "itemId": "gen-vr-03-related-words-36",
+   "oldValue": "peek",
+   "tag": "vr03-wrong-degree",
+   "newValue": "look",
+   "execution": "Whisper and shout are the quietest and loudest ways to speak, so glance and stare are the shortest and longest ways to look. The child moves the right way, from glance to look, but stops at the ordinary middle step. Look is the plain word, as talk is for whisper and shout, so it is the right direction at the wrong size."
+  },
+  {
+   "optionId": "gen-vr-03-related-words-36-opt3",
+   "itemId": "gen-vr-03-related-words-36",
+   "oldValue": "blink",
+   "tag": "vr03-example-anchor",
+   "newValue": "loud",
+   "execution": "Whisper and shout are the quietest and loudest ways to speak, so glance and stare are the shortest and longest ways to look. The child stays with the first pair: a shout is loud. Loud belongs with whisper and shout and is never carried across to glance."
+  },
+  {
+   "optionId": "gen-vr-03-related-words-38-opt2",
+   "itemId": "gen-vr-03-related-words-38",
+   "oldValue": "content",
+   "tag": "vr03-example-anchor",
+   "newValue": "angry",
+   "execution": "Furious is a much stronger feeling than annoyed, so delighted is a much stronger feeling than pleased. The child stays with the first pair: angry belongs with annoyed and furious. It is never carried across to pleased."
+  },
+  {
+   "optionId": "gen-vr-03-related-words-38-opt3",
+   "itemId": "gen-vr-03-related-words-38",
+   "oldValue": "calm",
+   "tag": "vr03-same-topic",
+   "newValue": "smile",
+   "execution": "Furious is a much stronger feeling than annoyed, so delighted is a much stronger feeling than pleased. The child picks smile because it belongs to the topic of being happy. A smile is not a stronger feeling than pleased, so the relationship is never applied."
+  },
+  {
+   "optionId": "gen-vr-03-related-words-39-opt2",
+   "itemId": "gen-vr-03-related-words-39",
+   "oldValue": "skin",
+   "tag": "vr03-example-anchor",
+   "newValue": "bread",
+   "execution": "Wheat is made into flour, so grapes are made into juice. The child stays with the first pair: flour is made into bread. Bread belongs with wheat and flour and is never carried across to grape."
+  },
+  {
+   "optionId": "gen-vr-03-related-words-40-opt2",
+   "itemId": "gen-vr-03-related-words-40",
+   "oldValue": "handle",
+   "tag": "vr03-same-topic",
+   "newValue": "vase",
+   "execution": "A sculptor works with marble, so a potter works with clay. The child picks vase because it belongs to the topic of pottery: a vase is something a potter makes. Marble is the material, not the thing made, so the relationship is not applied."
+  },
+  {
+   "optionId": "gen-vr-03-related-words-41-opt2",
+   "itemId": "gen-vr-03-related-words-41",
+   "oldValue": "shepherd",
+   "tag": "vr03-example-anchor",
+   "newValue": "cow",
+   "execution": "A herd is a group of cattle, so a flock is a group of sheep. The child stays with the first pair: a cow is one of the cattle. Cow belongs with herd and cattle and is never carried across to flock."
+  },
+  {
+   "optionId": "gen-vr-03-related-words-45-opt2",
+   "itemId": "gen-vr-03-related-words-45",
+   "oldValue": "player",
+   "tag": "vr03-example-anchor",
+   "newValue": "judge",
+   "execution": "A witness takes part in a trial, so a referee takes part in a match. The child stays with the first pair: a judge runs a trial. Judge belongs with witness and trial and is never carried across to referee."
+  },
+  {
+   "optionId": "gen-vr-03-related-words-45-opt3",
+   "itemId": "gen-vr-03-related-words-45",
+   "oldValue": "whistle",
+   "tag": "vr03-same-topic",
+   "newValue": "goal",
+   "execution": "A witness takes part in a trial, so a referee takes part in a match. The child picks goal because it belongs to the topic of football that referee brings to mind. A referee does not take part in a goal, so the relationship is never applied."
+  },
+  {
+   "optionId": "gen-vr-03-related-words-47-opt2",
+   "itemId": "gen-vr-03-related-words-47",
+   "oldValue": "outline",
+   "tag": "vr03-reversed-relation",
+   "newValue": "outline",
+   "execution": "A sketch comes before a painting, so a draft comes before an essay. The child runs the sequence backwards and names what comes before a draft: an outline."
+  }
+ ],
+ "redrafts": [],
+ "rebuilds": [
+  {
+   "itemId": "gen-vr-03-related-words-34",
+   "why": "Wet was a second correct answer: warm:hot is mild-to-strong, as damp:wet is. The first pair becomes warm:scorching (mild to extreme), so only soaked completes it; mouldy replaced.",
+   "stem": {
+    "pairA": [
+     "warm",
+     "scorching"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "damp"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-34-opt1",
+     "value": "soaked",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-34-opt2",
+     "value": "wet",
+     "isKey": false,
+     "tag": "vr03-wrong-degree",
+     "execution": "Scorching is the extreme of warm, so soaked is the extreme of damp. The child moves the right way, from damp to wet, but stops at the ordinary middle step. Wet parallels hot, not scorching, so it is the right direction at the wrong size."
+    },
+    {
+     "optionId": "gen-vr-03-related-words-34-opt3",
+     "value": "sunny",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "execution": "Scorching is the extreme of warm, so soaked is the extreme of damp. The child stays with the first pair: warm and scorching days are sunny. Sunny belongs with warm and scorching and is never carried across to damp."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-03-related-words-37",
+   "why": "Sniffle had a cold reading (giving sneeze) and roar relied on a figurative laugh. The pair becomes whisper:scream and the stem whimper, a plain crying word, so only wail completes it; sneeze replaced.",
+   "stem": {
+    "pairA": [
+     "whisper",
+     "scream"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "whimper"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-37-opt1",
+     "value": "wail",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-37-opt2",
+     "value": "cry",
+     "isKey": false,
+     "tag": "vr03-wrong-degree",
+     "execution": "Whisper and scream are the quietest and loudest voices, so whimper and wail are the quietest and loudest crying. The child moves the right way, from whimper to cry, but stops at the ordinary middle step. Cry is the plain word, as talk is for whisper and scream, so it is the wrong size."
+    },
+    {
+     "optionId": "gen-vr-03-related-words-37-opt3",
+     "value": "tears",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "execution": "Whisper and scream are the quietest and loudest voices, so whimper and wail are the quietest and loudest crying. The child picks tears because they belong to the topic of crying. Tears are not a loud cry, so the quiet-to-loud relationship is never applied."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-03-related-words-42",
+   "why": "Note was also a part of a symphony, and movement needs specialist music words. The stem becomes poem, whose named section is verse, so only verse completes novel:chapter; note replaced.",
+   "stem": {
+    "pairA": [
+     "novel",
+     "chapter"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "poem"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-42-opt1",
+     "value": "verse",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-42-opt2",
+     "value": "poet",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "execution": "A chapter is one section of a novel, so a verse is one section of a poem. The child picks poet because it belongs to the topic of poems. A poet writes a poem and is not a section of it, so the part relationship is never applied."
+    },
+    {
+     "optionId": "gen-vr-03-related-words-42-opt3",
+     "value": "author",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "execution": "A chapter is one section of a novel, so a verse is one section of a poem. The child stays with the first pair: an author writes a novel. Author belongs with novel and chapter and is never carried across to poem."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-03-related-words-43",
+   "why": "Country was a defensible second answer (an atlas is full of countries). Country is replaced with spelling, which is clearly wrong; stem, key and geography unchanged.",
+   "stem": {
+    "pairA": [
+     "dictionary",
+     "word"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "atlas"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-43-opt1",
+     "value": "map",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-43-opt2",
+     "value": "spelling",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "execution": "A dictionary is a book of words, so an atlas is a book of maps. The child stays with the first pair: a dictionary is used to check spelling. Spelling belongs with dictionary and word and is never carried across to atlas."
+    },
+    {
+     "optionId": "gen-vr-03-related-words-43-opt3",
+     "value": "geography",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "execution": "A dictionary is a book of words, so an atlas is a book of maps. The child picks geography because an atlas belongs to that school subject. Geography is the subject an atlas is used for, not the thing it is made of, as words make up a dictionary."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-03-related-words-44",
+   "why": "Mercy was a second correct answer: it is also an opposite of cruelty. Mercy is replaced with fear, which is clearly wrong; stem, key and violence unchanged.",
+   "stem": {
+    "pairA": [
+     "cowardice",
+     "bravery"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "cruelty"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-44-opt1",
+     "value": "kindness",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-44-opt2",
+     "value": "violence",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "execution": "Bravery is the opposite of cowardice, so kindness is the opposite of cruelty. The child picks violence because it belongs to the same topic as cruelty. Violence goes with cruelty rather than against it, so the opposite relationship is never applied."
+    },
+    {
+     "optionId": "gen-vr-03-related-words-44-opt3",
+     "value": "fear",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "execution": "Bravery is the opposite of cowardice, so kindness is the opposite of cruelty. The child stays with the first pair: a coward is full of fear. Fear belongs with cowardice and bravery and is never carried across to cruelty."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-03-related-words-46",
+   "why": "Dune was a defensible second answer (a grain is a tiny piece of a dune). Dune is replaced with wave, which is clearly wrong; stem, key and camel unchanged.",
+   "stem": {
+    "pairA": [
+     "drop",
+     "ocean"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "grain"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-46-opt1",
+     "value": "desert",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-46-opt2",
+     "value": "camel",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "execution": "A drop is a tiny piece of a vast ocean, so a grain is a tiny piece of a vast desert. The child picks camel because it belongs to the topic of deserts. A grain is not a tiny piece of a camel, so the relationship is never applied."
+    },
+    {
+     "optionId": "gen-vr-03-related-words-46-opt3",
+     "value": "wave",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "execution": "A drop is a tiny piece of a vast ocean, so a grain is a tiny piece of a vast desert. The child stays with the first pair: waves move across the ocean. Wave belongs with drop and ocean and is never carried across to grain."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-03-related-words-48",
+   "why": "Hesitate:act was a loose pair, which let accept stand as a second answer. The pair becomes the clean opposites forget:remember, so only believe completes doubt; accept and suspect replaced.",
+   "stem": {
+    "pairA": [
+     "forget",
+     "remember"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "doubt"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-48-opt1",
+     "value": "believe",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-48-opt2",
+     "value": "memory",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "execution": "Remember is the opposite of forget, so believe is the opposite of doubt. The child stays with the first pair: forgetting and remembering are about memory. Memory belongs with forget and remember and is never carried across to doubt."
+    },
+    {
+     "optionId": "gen-vr-03-related-words-48-opt3",
+     "value": "worry",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "execution": "Remember is the opposite of forget, so believe is the opposite of doubt. The child picks worry because it belongs to the same topic of uneasy feelings as doubt. Worry is not the opposite of doubt, so the relationship is never applied."
+    }
+   ]
+  }
+ ]
+}

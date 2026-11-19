@@ -4,7 +4,7 @@
     {
       "id": "en-inference-literal-lookalike",
       "verdict": "REFUSE",
-      "reason": "Pass 1 (assertion): the childHint opens by asserting a feature of the item - 'Some options only copy words from the passage.' On 8 of 115 carriers the carrying option copies no passage wording (its own execution describes a literal reading, a paraphrase or a distortion instead); a ninth, ENG-007-LP-15, has no execution recorded and could not be checked. The description's scope 'For why/imply questions' is false on the 18 carriers that are retrieval (13) or vocab (5) questions, and it strains on the many technique 'what does the writer keep doing' stems. The second sentence 'Ask what those words are telling you.' describes a move and holds on every carrier. Pass 2 (generality): the move is usable by a child and fits the main population (an option that reuses a line but gives the wrong kind of answer - a feeling for a reason, a quote for a pattern). It is weaker, though still true, for the 16 'both spans handed back in order, with no relation named' carriers (e.g. ENG-019-BV-04, ENG-020-HD-03, ENG-028-PR-06), where the move a child needs is 'what joins them'. Both sentences are under 16 words, end on a full stop and are British English. The transform turns the first sentence from an assertion into a general warning, so it holds whether or not this item has a copying option. Misfiled carriers are listed; they are an item fault.",
+      "reason": "Pass 1 (assertion): the childHint opens by asserting a feature of the item: 'Some options only copy words from the passage.' On 6 of 115 carriers the carrying option copies no passage wording: WIW-13, WIW-14, pp-16, BB-02, LP-12 and CV-12. All 6 are listed as misfiled (item faults), so the entry's identity, an option that reuses passage wording, holds on the other 109. Correction to the first verdict: SM-12 ('two miles of sea wall'), ML-12 ('the best bit') and LP-15 ('bin bag', 'cuffs had gone thin', lines 7 to 9 and 29 to 30) do echo passage wording, as the independent checker found. They are removed from the false-on list. With the misfiled six set aside, sentence 2 'Ask what those words are telling you.' and the description's 'reuses passage wording' hold on every remaining carrier. I keep that wording deliberately: it is the definition of the entry, and rewording it away would blur this entry into en-plausible-not-stated and en-figurative-taken-literally. The description's scope 'For why/imply questions' is false on the 18 retrieval (13) and vocab (5) carriers. Pass 2 (generality): the move is usable by a child and fits the main population, where an option reuses a line but gives the wrong kind of answer, such as a feeling for a reason or a quote for a pattern. It is weaker, but still true, on the 16 carriers that hand back two spans with no link named, where the move a child needs is to ask what joins them. Sentences are 10 and 7 words, end on a full stop, and use British English. The transforms turn sentence 1 into a general warning rather than a claim about this item, and drop the false scope from the description. This attests once the 6 misfiled carriers are retagged at item level.",
       "assertionClauses": [
         {
           "clause": "Some options only copy words from the passage.",
@@ -14,9 +14,7 @@
             "ENG-002-pp-16",
             "ENG-005-BB-02",
             "ENG-007-LP-12",
-            "ENG-011-CV-12",
-            "ENG-009-SM-12",
-            "ENG-012-ML-12"
+            "ENG-011-CV-12"
           ]
         },
         {
@@ -50,9 +48,7 @@
             "ENG-002-pp-16",
             "ENG-005-BB-02",
             "ENG-007-LP-12",
-            "ENG-011-CV-12",
-            "ENG-009-SM-12",
-            "ENG-012-ML-12"
+            "ENG-011-CV-12"
           ]
         }
       ],
@@ -88,6 +84,11 @@
           "itemId": "ENG-005-BB-02",
           "option": "Painted so they could be seen.",
           "why": "'Painted so they could be seen' copies nothing from the passage; its own execution says it reuses an 'idea', not wording."
+        },
+        {
+          "itemId": "ENG-007-LP-12",
+          "option": "He describes only the old clothes, and so we get nothing else.",
+          "why": "Copies no passage wording ('old clothes' is not in stream-b-04). It names the surface content of a technique question, the objects, and misses that the feeling is withheld. That is a literal-surface reading of technique, not reused wording, so it needs an item-level retag."
         },
         {
           "itemId": "ENG-011-CV-12",

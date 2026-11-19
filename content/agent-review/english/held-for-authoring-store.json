@@ -1,0 +1,1295 @@
+{
+ "note": "English rows the machine reviewer rev-agent-01 HELD. Item text is the authoring store's to change; each row names its fault and field.",
+ "byField": {
+  "execution": 41,
+  "hintCore": 42,
+  "walkScript": 26,
+  "key": 15,
+  "stem": 10,
+  "passageRef": 10,
+  "options": 39
+ },
+ "held": [
+  {
+   "itemId": "ENG-002-pp-01",
+   "verdict": "HOLD",
+   "reason": "Execution on 'That he stayed about ten minutes with their father' says 'Line 5 does say he sat about ten minutes... inside the window'; 'sat about ten minutes' is line 4, outside the 5-8 window.",
+   "faultField": "execution",
+   "group": "verdicts-G1.json"
+  },
+  {
+   "itemId": "ENG-002-pp-02",
+   "verdict": "HOLD",
+   "reason": "Execution on 'A dance with the eldest Miss Bennet' asserts the assembly is 'weeks after this visit'; the passage gives no such interval (and his dancing with the eldest is at line 60, not lines 36-41).",
+   "faultField": "execution",
+   "group": "verdicts-G1.json"
+  },
+  {
+   "itemId": "ENG-002-pp-03",
+   "verdict": "HOLD",
+   "reason": "hintCore 'Find the words obliged to be in town' quotes the answer clause itself; the key is a paraphrase of those words, so the hint coaches (R572).",
+   "faultField": "hintCore",
+   "group": "verdicts-G1.json"
+  },
+  {
+   "itemId": "ENG-002-pp-10",
+   "verdict": "HOLD",
+   "reason": "Option 'They decided he was less good-looking than Mr Bingley' is TRUE of lines 34-35 as an outcome ('forbidding, disagreeable countenance... unworthy to be compared with his friend'); execution says only that it 'reverses line 30' and the tag (agent-patient-reversal) does not name the actual mistake, which is taking the result for the cause.",
+   "faultField": "execution",
+   "group": "verdicts-G1.json"
+  },
+  {
+   "itemId": "ENG-002-pp-13",
+   "verdict": "HOLD",
+   "reason": "hintCore 'Whose opinion is this - the writer's own, or the room's?' offers a binary whose second half is the key ('the room's quick opinion'), so it coaches (R572). Also: option 'said nothing to anybody all evening' is tagged en-wrong-scope-retrieval but its execution refutes it from line 41 inside the window, so the tag does not name the mistake.",
+   "faultField": "hintCore",
+   "group": "verdicts-G1.json"
+  },
+  {
+   "itemId": "ENG-002-pp-14",
+   "verdict": "HOLD",
+   "reason": "hintCore 'The words one of her daughters are the clue' quotes the key's own phrase ('rude about one of her daughters'), so it coaches (R572).",
+   "faultField": "hintCore",
+   "group": "verdicts-G1.json"
+  },
+  {
+   "itemId": "ENG-002-pp-15",
+   "verdict": "HOLD",
+   "reason": "hintCore 'What does scarcity of gentlemen mean?' asks the child to define the exact phrase whose definition is the key ('not enough gentlemen'), so it coaches (R572).",
+   "faultField": "hintCore",
+   "group": "verdicts-G1.json"
+  },
+  {
+   "itemId": "ENG-002-pp-16",
+   "verdict": "HOLD",
+   "reason": "walkScript ends 'The room hears nothing of this'; the passage never says so (line 48 says only that Darcy stood near enough for Elizabeth to overhear).",
+   "faultField": "walkScript",
+   "group": "verdicts-G1.json"
+  },
+  {
+   "itemId": "ENG-002-pp-20",
+   "verdict": "HOLD",
+   "reason": "walkScript ends 'Putting up with things is the other sense', but the row's own repaired execution states that meaning belongs to TOLERANT and is not a sense of 'tolerable' at all; the walk is wrong about English.",
+   "faultField": "walkScript",
+   "group": "verdicts-G1.json"
+  },
+  {
+   "itemId": "ENG-002-pp-23",
+   "verdict": "HOLD",
+   "reason": "Key 'never whether the writer agrees' is not the only defensible answer: the narrator characterises directly at lines 24-25 ('good-looking and gentlemanlike... easy, unaffected manners') and lines 72-73 ('a lively, playful disposition'), which supports distractor 'We are told what the writer thinks'. Also hintCore calls Jane Austen 'he'.",
+   "faultField": "key",
+   "group": "verdicts-G1.json"
+  },
+  {
+   "itemId": "ENG-016-HB-01",
+   "verdict": "HOLD",
+   "reason": "Execution on 'The green squares of the fields' says they are 'what they pass over'; line 3 has the HILL rising over the fields, not the travellers passing over them (the walkScript has it right).",
+   "faultField": "execution",
+   "group": "verdicts-G1.json"
+  },
+  {
+   "itemId": "ENG-016-HB-02",
+   "verdict": "HOLD",
+   "reason": "hintCore 'Two of these sit in one window only' is false: only the 'eyes fixed... eager' option sits in one window; the lamps option is in neither and the other two use both. Also the lamps option's execution carries an appended clause 'line 9 answers the stem' which is untrue for a what-has-changed question.",
+   "faultField": "hintCore",
+   "group": "verdicts-G1.json"
+  },
+  {
+   "itemId": "ENG-016-HB-03",
+   "verdict": "HOLD",
+   "reason": "hintCore 'Ask what does not belong in a sweet, simple spot' restates the key ('Armed men do not belong in a sweet and simple spot') almost word for word, so it coaches (R572).",
+   "faultField": "hintCore",
+   "group": "verdicts-G1.json"
+  },
+  {
+   "itemId": "ENG-016-HB-05",
+   "verdict": "HOLD",
+   "reason": "Execution on 'Was covered over by a skirt' opens 'The commonest everyday sense of the word', which is false of 'skirted' and contradicts its own retag note (en-vocab-built-from-parts); the execution no longer describes the tagged mistake.",
+   "faultField": "execution",
+   "group": "verdicts-G1.json"
+  },
+  {
+   "itemId": "ENG-016-HB-07",
+   "verdict": "HOLD",
+   "reason": "Stem asks 'What has the moor got in it besides stone?' but the key answers a different question ('The bare moor and the hidden man together chill him'), as do the executions ('rather than what chills him', window 'lines 40 to 46' against a stem window of 40 to 44).",
+   "faultField": "stem",
+   "group": "verdicts-G1.json"
+  },
+  {
+   "itemId": "ENG-016-HB-08",
+   "verdict": "HOLD",
+   "reason": "Key 'The gold and the green give way to bare stone' misstates lines 47-51: green is not given for the country behind, the slopes ahead are 'russet and olive' (olive is a green), and they are 'sprinkled with giant boulders', not bare stone. The hint ('The question asks about ahead') also pulls against a key that describes behind-to-ahead.",
+   "faultField": "key",
+   "group": "verdicts-G1.json"
+  },
+  {
+   "itemId": "ENG-016-HB-10",
+   "verdict": "HOLD",
+   "reason": "Execution on 'Night had fallen before they reached it' cites 'line 57 has them arriving in a fading light'; 'fading light' is line 73 and line 57 says nothing of light.",
+   "faultField": "execution",
+   "group": "verdicts-G1.json"
+  },
+  {
+   "itemId": "ENG-016-HB-12",
+   "verdict": "HOLD",
+   "reason": "walkScript says 'At line 4 the hill is melancholy before anyone has said a word', but Dr Mortimer speaks at lines 1-2 before it; it also says Nature 'throws at them' where line 28 has 'throw before the carriage'.",
+   "faultField": "walkScript",
+   "group": "verdicts-G1.json"
+  },
+  {
+   "itemId": "ENG-024-BF-04",
+   "verdict": "HOLD",
+   "reason": "walkScript 'Line 13 says she said it on Monday' is wrong: 'She said it on Monday' is on line 12; line 13 is that they were still asleep on Monday.",
+   "faultField": "walkScript",
+   "group": "verdicts-G1.json"
+  },
+  {
+   "itemId": "ENG-024-BF-07",
+   "verdict": "HOLD",
+   "reason": "walkScript 'Line 27 says that is what half past two is like' misreports lines 26-27, which say screaming is 'just what Reception is like at half past two'.",
+   "faultField": "walkScript",
+   "group": "verdicts-G1.json"
+  },
+  {
+   "itemId": "ENG-007-LP-02",
+   "verdict": "HOLD",
+   "reason": "Execution on 'Both show he has not been listening' says 'He answers each time', which contradicts the key's own premise that his replies do not answer Ilya; that distractor is then excluded only by inference. Key's 'not about next year' also asserts Whitby is next year, which lines 19-20 never state.",
+   "faultField": "execution",
+   "group": "verdicts-G2.json"
+  },
+  {
+   "itemId": "ENG-007-LP-04",
+   "verdict": "HOLD",
+   "reason": "hintCore 'She names a stop and then a destination' describes the key's shape (warehouse, then shops) so the key can be picked from the options without reading; also the tag en-relation-word-flipped on 'She said she did not really know' names no relation word - the mistake is over-reading her hedge 'she thought' (line 25).",
+   "faultField": "hintCore",
+   "group": "verdicts-G2.json"
+  },
+  {
+   "itemId": "ENG-007-LP-06",
+   "verdict": "HOLD",
+   "reason": "walkScript calls the cardigan 'a stranger's' - line 13 says only she 'had left in Year Four', nothing says Reuben did not know her; hintCore 'Two named jumpers' also miscounts, as line 13 item is a cardigan. Key itself checks against lines 11-14 and 29-34.",
+   "faultField": "walkScript",
+   "group": "verdicts-G2.json"
+  },
+  {
+   "itemId": "ENG-007-LP-07",
+   "verdict": "HOLD",
+   "reason": "hintCore 'The last three words of line 36 matter most' is false: line 36 is 'opening it.' (two words); 'without' is on line 35. Key and distractors otherwise check.",
+   "faultField": "hintCore",
+   "group": "verdicts-G2.json"
+  },
+  {
+   "itemId": "ENG-007-LP-08",
+   "verdict": "HOLD",
+   "reason": "passageRef missing (row cannot show its passage); distractor executions are also null.",
+   "faultField": "passageRef",
+   "group": "verdicts-G2.json"
+  },
+  {
+   "itemId": "ENG-007-LP-09",
+   "verdict": "HOLD",
+   "reason": "hintCore 'He gives a day and a thing they escape' maps one-to-one onto the key (Monday + miss spellings) - coaching by shape. Tag en-relation-word-flipped on 'already been cleared by somebody else' also names no relation word in line 40.",
+   "faultField": "hintCore",
+   "group": "verdicts-G2.json"
+  },
+  {
+   "itemId": "ENG-007-LP-10",
+   "verdict": "HOLD",
+   "reason": "hintCore 'She lifts it out, so it is a thing, not a coating' explicitly rules out the dominant-sense distractor the item exists to test - it does the vocabulary work for the child (R572 coaching).",
+   "faultField": "hintCore",
+   "group": "verdicts-G2.json"
+  },
+  {
+   "itemId": "ENG-007-LP-12",
+   "verdict": "HOLD",
+   "reason": "Key 'We get no thoughts from him' is false: lines 31-32 give what Reuben knew and why ('he knew the shape of the capitals his mum used'). hintCore 'Look for his hands' names the one word only the key carries (coaching); walkScript lists 'laughing late' as hands.",
+   "faultField": "key",
+   "group": "verdicts-G2.json"
+  },
+  {
+   "itemId": "ENG-007-LP-13",
+   "verdict": "HOLD",
+   "reason": "passageRef missing (row cannot show its passage); distractor executions are also null.",
+   "faultField": "passageRef",
+   "group": "verdicts-G2.json"
+  },
+  {
+   "itemId": "ENG-007-LP-15",
+   "verdict": "HOLD",
+   "reason": "passageRef missing (row cannot show its passage); distractor executions are also null.",
+   "faultField": "passageRef",
+   "group": "verdicts-G2.json"
+  },
+  {
+   "itemId": "ENG-015-CC-01",
+   "verdict": "HOLD",
+   "reason": "walkScript says line 1 'gives the one exception: it was very large' - 'except that it was very large' is on line 2, and 'night and morning' is lines 2-3, not 'at line 2' alone. Key and distractors check.",
+   "faultField": "walkScript",
+   "group": "verdicts-G2.json"
+  },
+  {
+   "itemId": "ENG-015-CC-03",
+   "verdict": "HOLD",
+   "reason": "'That' at line 15 points back to the whole preceding sentence, which begins with the hair 'curiously stirred, as if by breath or hot air' (line 14); under that reading the hair distractor is a defensible part-answer, and the execution/walkScript 'not to the hair' assert an antecedent the text does not fix.",
+   "faultField": "options",
+   "group": "verdicts-G2.json"
+  },
+  {
+   "itemId": "ENG-015-CC-04",
+   "verdict": "HOLD",
+   "reason": "Execution on 'He let go of the key' cites 'True at line 20'; 'the key he had relinquished' is on line 21 (walkScript repeats line 20 for it). Key and order otherwise check.",
+   "faultField": "execution",
+   "group": "verdicts-G2.json"
+  },
+  {
+   "itemId": "ENG-015-CC-06",
+   "verdict": "HOLD",
+   "reason": "hintCore 'Two of these only list the noises' eliminates two of three distractors outright, leaving the key against a flame option that is not a noise - coaching. Also lines 60-66 hold two noises (bells, then clanking), so 'the second noise' is ambiguous; the flame execution carries a malformed fragment ('own. Scrooge was not a man...').",
+   "faultField": "hintCore",
+   "group": "verdicts-G2.json"
+  },
+  {
+   "itemId": "ENG-015-CC-07",
+   "verdict": "HOLD",
+   "reason": "Distractor 'Finding all the rooms in order, just as before' is supported by line 32 'All as they should be' and line 36 'Lumber-room as usual' - it is a true account of what he is doing (outcome rather than search), so the key is not the only defensible answer.",
+   "faultField": "options",
+   "group": "verdicts-G2.json"
+  },
+  {
+   "itemId": "ENG-015-CC-08",
+   "verdict": "HOLD",
+   "reason": "hintCore 'One of these says it was his custom. Line 39 does not.' points to the exact clause that is the key ('which was not his custom') - coaching. walkScript/execution also assert gown and nightcap are 'what he does every night', which the passage never states.",
+   "faultField": "hintCore",
+   "group": "verdicts-G2.json"
+  },
+  {
+   "itemId": "ENG-015-CC-11",
+   "verdict": "HOLD",
+   "reason": "Tag en-vocab-built-from-parts on 'Careful about every word he uses' does not name the mistake: its execution says it comes from 'cautious, a word it resembles in form' - a lookalike, not word parts. Key otherwise correct for line 78.",
+   "faultField": "options",
+   "group": "verdicts-G2.json"
+  },
+  {
+   "itemId": "ENG-015-CC-12",
+   "verdict": "HOLD",
+   "reason": "passageRef missing (row cannot show its passage).",
+   "faultField": "passageRef",
+   "group": "verdicts-G2.json"
+  },
+  {
+   "itemId": "ENG-023-RT-02",
+   "verdict": "HOLD",
+   "reason": "Key 'The creature they took for dead' is inaccurate: only the boy calls him dead (line 12); the mother says 'Perhaps he isn't really dead' (line 13) and the man says he was not dead (line 15). A careful reader can reject the key on that word.",
+   "faultField": "key",
+   "group": "verdicts-G2.json"
+  },
+  {
+   "itemId": "ENG-023-RT-04",
+   "verdict": "HOLD",
+   "reason": "Tag en-vocab-form-lookalike on 'So that he could go on and do something' misfits: its execution says it is the same word in 'in order to', while the tag hint tells the child to check it is not the same word. walkScript 'Everything near it is about his body' is also untrue (cotton wool, running round the table).",
+   "faultField": "options",
+   "group": "verdicts-G2.json"
+  },
+  {
+   "itemId": "ENG-023-RT-05",
+   "verdict": "HOLD",
+   "reason": "hintCore 'Two of these are things that happened, not reasons' eliminates two of three distractors outright, leaving the key against one motive-invention option - coaching.",
+   "faultField": "hintCore",
+   "group": "verdicts-G2.json"
+  },
+  {
+   "itemId": "ENG-023-RT-06",
+   "verdict": "HOLD",
+   "reason": "Execution on 'He sat on all of their laps' claims 'line 34 answers the stem' and quotes 'Teddy went to bed Rikki-tikki climbed up too. But' - that is another distractor's content; the answer is lines 35-36.",
+   "faultField": "execution",
+   "group": "verdicts-G2.json"
+  },
+  {
+   "itemId": "ENG-023-RT-07",
+   "verdict": "HOLD",
+   "reason": "Execution on 'A garden that somebody keeps tidy for him' says 'only half cultivated, so nobody is keeping it' - half cultivated means half of it is kept; the exclusion should rest on 'for him'.",
+   "faultField": "execution",
+   "group": "verdicts-G2.json"
+  },
+  {
+   "itemId": "ENG-023-RT-08",
+   "verdict": "HOLD",
+   "reason": "passageRef missing (row cannot show its passage).",
+   "faultField": "passageRef",
+   "group": "verdicts-G2.json"
+  },
+  {
+   "itemId": "ENG-023-RT-10",
+   "verdict": "HOLD",
+   "reason": "Execution on 'Because they had already told him about the baby' claims line 55 answers the stem by quoting 'Darzee and his wife only cowered down in the' - that is the restatement used by the literal-lookalike distractor, not the reason (the hiss, lines 55-56).",
+   "faultField": "execution",
+   "group": "verdicts-G2.json"
+  },
+  {
+   "itemId": "ENG-023-RT-12",
+   "verdict": "HOLD",
+   "reason": "Execution on 'The writer says each time that Rikki-tikki is only proving the rule' says lines 39 and 68 are 'left without comment', but line 39 ('because every well-brought-up mongoose...') and line 68 ('it is impossible for a mongoose...') are the writer explicitly tying his act to the rule - the execution is false and the distractor is partly defensible.",
+   "faultField": "execution",
+   "group": "verdicts-G2.json"
+  },
+  {
+   "itemId": "ENG-005-BB-01",
+   "verdict": "HOLD",
+   "reason": "Within-span distractor's execution says it 'takes a true detail from the SAME sentence, line 2' — but 'John went with his master' is the previous sentence, and the option ('John came with him instead of the master') contradicts line 2 rather than reusing a true detail. Key (lines 2-3), hint and walk are correct.",
+   "faultField": "execution",
+   "group": "verdicts-G3.json"
+  },
+  {
+   "itemId": "ENG-005-BB-02",
+   "verdict": "HOLD",
+   "reason": "Key 'strong and solidly built' correct from lines 6-9. But the 'Painted so they could be seen' distractor's execution ('reuses the idea of good rails as a warning') names an idea the passage never has, and the option copies no passage words, so en-inference-literal-lookalike does not name its mistake.",
+   "faultField": "execution",
+   "group": "verdicts-G3.json"
+  },
+  {
+   "itemId": "ENG-005-BB-03",
+   "verdict": "HOLD",
+   "reason": "Tag en-relation-word-flipped (child hint: 'Some words tell you how two things go together') does not name this mistake: 'falling' reverses 'rising' (line 10), an antonym reversal with no relation word involved. Key, other distractors, hint and walk correct.",
+   "faultField": "options",
+   "group": "verdicts-G3.json"
+  },
+  {
+   "itemId": "ENG-005-BB-04",
+   "verdict": "HOLD",
+   "reason": "Minor: the fish-bait distractor's execution reads 'which this sentence does not fix' (should say the sense does not fit). Key 'a feed and a rest' is defensible for line 14; other distractors, hint and walk are sound.",
+   "faultField": "execution",
+   "group": "verdicts-G3.json"
+  },
+  {
+   "itemId": "ENG-005-BB-07",
+   "verdict": "HOLD",
+   "reason": "Tag en-relation-word-flipped (child hint: 'Some words tell you how two things go together') does not name this mistake: 'Drive slowly over the tree' drops the negative in 'we can't drive over that tree' (line 29), which is en-negation-dropped. Key (back to the crossways, six miles) correct; hint and walk accurate.",
+   "faultField": "options",
+   "group": "verdicts-G3.json"
+  },
+  {
+   "itemId": "ENG-005-BB-09",
+   "verdict": "HOLD",
+   "reason": "Tag en-relation-word-flipped (child hint: 'Some words tell you how two things go together') does not name this mistake: 'The master knew that Beauty was right' contradicts his whip at lines 37-38; no relation word is flipped. Key (punished the thing that saved them, 37-38 vs 62-63) correct; hint and walk accurate.",
+   "faultField": "options",
+   "group": "verdicts-G3.json"
+  },
+  {
+   "itemId": "ENG-005-BB-10",
+   "verdict": "HOLD",
+   "reason": "Tag en-relation-word-flipped (child hint: 'Some words tell you how two things go together') does not name this mistake: 'the storm was still getting worse' ignores the lull at line 51, it does not flip a relation word. Key (slow, steady change) correct; quote on line 52 correct; hint and walk accurate.",
+   "faultField": "options",
+   "group": "verdicts-G3.json"
+  },
+  {
+   "itemId": "ENG-005-BB-11",
+   "verdict": "HOLD",
+   "reason": "Tag en-relation-word-flipped (child hint: 'Some words tell you how two things go together') does not name this mistake: 'Beauty had been badly trained' is an invented opposite judgement, not a flipped relation word. Key (would probably all have drowned, 55-58) correct; hint and walk accurate.",
+   "faultField": "options",
+   "group": "verdicts-G3.json"
+  },
+  {
+   "itemId": "ENG-005-BB-12",
+   "verdict": "HOLD",
+   "reason": "passageRef missing (row has passageRefMissing: true; it cannot show its passage). Also: stem gives no line references.",
+   "faultField": "passageRef",
+   "group": "verdicts-G3.json"
+  },
+  {
+   "itemId": "ENG-005-BB-13",
+   "verdict": "HOLD",
+   "reason": "passageRef missing (row has passageRefMissing: true). Also: every distractor's execution is null, so criterion 3 cannot be checked.",
+   "faultField": "passageRef",
+   "group": "verdicts-G3.json"
+  },
+  {
+   "itemId": "ENG-014-TS-02",
+   "verdict": "HOLD",
+   "reason": "Key 'same sort of trash, but he paid nothing for it' misses the change the passage states (from not half enough to buy half an hour, line 6, to 'literally rolling in wealth', line 61), and 'paid nothing' is contestable — he traded turns at the fence for each item. Walk also misquotes line 60-61 as 'the middle of the day' (text: 'middle of the afternoon').",
+   "faultField": "key",
+   "group": "verdicts-G3.json"
+  },
+  {
+   "itemId": "ENG-014-TS-04",
+   "verdict": "HOLD",
+   "reason": "Key (the apple, line 19) correct and distractors excluded, but hintCore 'A small no sits in one line. Read it twice.' points to line 15's 'paid no attention' — the steamboat distractor's line — not to line 19, which carries no negative ('but he stuck to his work'). The hint steers the child to the wrong line.",
+   "faultField": "hintCore",
+   "group": "verdicts-G3.json"
+  },
+  {
+   "itemId": "ENG-014-TS-05",
+   "verdict": "HOLD",
+   "reason": "Key (to make Ben doubt it is work) correct, but the 'answer the question Ben asked about work' distractor's execution says Ben's question only comes after (line 27). Ben has already asked about work at line 20 ('you got to work, hey?') and lines 23-24, so the execution is false and the distractor is partly supported by the window's run-up.",
+   "faultField": "execution",
+   "group": "verdicts-G3.json"
+  },
+  {
+   "itemId": "ENG-014-TS-06",
+   "verdict": "HOLD",
+   "reason": "Key (make the job sound like a rare treat) correct; distractors excluded. walkScript says 'Rare is the word doing the work', but 'rare' is not in the passage — line 33 says 'every day'. Walk is not accurate to the text.",
+   "faultField": "walkScript",
+   "group": "verdicts-G3.json"
+  },
+  {
+   "itemId": "ENG-014-TS-08",
+   "verdict": "HOLD",
+   "reason": "Second defensible answer: 'About one boy in a thousand could do it well' is close to what line 43 says (not one in a thousand, maybe two thousand) and it is itself a reason Tom gives for keeping the brush. Its negation-dropped execution overstates the difference. hintCore ('One of these drops a word that means no') also points at that distractor rather than helping to the key.",
+   "faultField": "options",
+   "group": "verdicts-G3.json"
+  },
+  {
+   "itemId": "ENG-014-TS-12",
+   "verdict": "HOLD",
+   "reason": "hintCore 'Two of these are about the ending. Read the middle.' is false: only the three-coats option is about the ending. Also the chronology distractor's execution says 'line 53 has Ben give in' — line 53 is Tom giving up the brush; Ben gives in at line 52. Key itself is defensible.",
+   "faultField": "hintCore",
+   "group": "verdicts-G3.json"
+  },
+  {
+   "itemId": "ENG-021-ED-02",
+   "verdict": "HOLD",
+   "reason": "Key defensible (remark, then instruction about the game, lines 7-8 and 81-82), but hintCore 'One of these joins his two speeches with an and' fits both the key ('and then tells them') and the literal-lookalike ('and then asks'), so it does not discriminate; walk's 'At line 81 he has staked half his fortune' cites line 74's fact at line 81.",
+   "faultField": "hintCore",
+   "group": "verdicts-G3.json"
+  },
+  {
+   "itemId": "ENG-021-ED-06",
+   "verdict": "HOLD",
+   "reason": "Key (he has allowed for every delay) correct, but 'He agrees those things were left out' is tagged en-negation-dropped while line 23 ('All included') contains no negative to drop — the option ACCEPTS Stuart's negative ('doesn't take into account', line 21). Tag does not name the mistake.",
+   "faultField": "options",
+   "group": "verdicts-G3.json"
+  },
+  {
+   "itemId": "ENG-021-ED-07",
+   "verdict": "HOLD",
+   "reason": "walkScript never reaches the meaning: after line 24 it moves to line 27 (the challenge) and line 31 ('quite possible'), neither of which bears on 'deal'. Also the stem asks the meaning of the phrase 'turn it was to deal' while options define 'deal'; window 'lines 24 to 31' is wider than the evidence.",
+   "faultField": "walkScript",
+   "group": "verdicts-G3.json"
+  },
+  {
+   "itemId": "ENG-021-ED-08",
+   "verdict": "HOLD",
+   "reason": "Key (decided to wager after all, line 42) correct; but the wrong-scope distractor's execution states 'In the window, line 39 answers the stem: Come, let's go on with the game' — line 39 is the opposite of the answer; line 42 answers it.",
+   "faultField": "execution",
+   "group": "verdicts-G3.json"
+  },
+  {
+   "itemId": "ENG-021-ED-10",
+   "verdict": "HOLD",
+   "reason": "Stem (and walk) say Sullivan says he is joking, but line 56 'You are joking.' is unattributed — the passage names Sullivan only at line 47. Not checkable from the text. Key is also only one of several things Fogg adds (57-58 'A true Englishman doesn't joke', the bet against anyone).",
+   "faultField": "stem",
+   "group": "verdicts-G3.json"
+  },
+  {
+   "itemId": "ENG-021-ED-11",
+   "verdict": "HOLD",
+   "reason": "Key (uneasy feelings about rightness, lines 76-78) correct, but 'Careful scraping away at a surface' is tagged en-figurative-taken-literally while its execution says it is 'built from the scrape the word sounds like' — a form-lookalike mistake; nothing figurative is read literally.",
+   "faultField": "options",
+   "group": "verdicts-G3.json"
+  },
+  {
+   "itemId": "ENG-021-ED-12",
+   "verdict": "HOLD",
+   "reason": "Second defensible answer: 'The wager grows larger, and the card game goes on beside it' is true of the passage (29-46, with cards at 7, 15, 23, 40, 81), and the stem 'What happens every time the argument gets bigger?' does not ask for the relation the key adds. Distinction rests on the technique the stem never names.",
+   "faultField": "options",
+   "group": "verdicts-G3.json"
+  },
+  {
+   "itemId": "ENG-001-WIW-01",
+   "verdict": "HOLD",
+   "reason": "Key (spring-cleaning, line 1) correct. walkScript says 'The other choices happen later in the passage' — false: aching back is line 4 (inside the window), and singing / painting the house blue and white never happen. Also 'Singing along with the happy birds' is tagged en-wrong-scope-retrieval while its execution says nothing states it (plausible-not-stated).",
+   "faultField": "walkScript",
+   "group": "verdicts-G3.json"
+  },
+  {
+   "itemId": "ENG-001-WIW-10",
+   "verdict": "HOLD",
+   "reason": "walkScript reasons 'contemptuous means looking down on someone. So he will not stop for anyone' — a non sequitur; the key (too excited to stop) rests on 'impatient' (line 23) and lines 19-20's joy, not on contempt. hintCore 'He is not thinking about the rabbits at all' is also contestable: he chaffs and jeers at them (24-26).",
+   "faultField": "walkScript",
+   "group": "verdicts-G3.json"
+  },
+  {
+   "itemId": "ENG-004-AGG-01",
+   "verdict": "HOLD",
+   "reason": "Key and distractors check against lines 4-6, but walkScript says line 6 means 'had he looked, he could hardly have missed her'; line 6 says he could hardly have failed to notice her tense rigidity and expectation, and he had in fact seen her (line 5, 'barely noting that it was a girl'). Note also: the hint ('what he did not do') points straight at the only option with a negative.",
+   "faultField": "walkScript",
+   "group": "verdicts-G4.json"
+  },
+  {
+   "itemId": "ENG-004-AGG-05",
+   "verdict": "HOLD",
+   "reason": "The key is correct (lines 20-21). But the Nova Scotia distractor's execution adds 'In the window, line 20 answers the stem' and quotes '“Guess there’s some mistake,” he said. “Mrs. Spencer came'. That quotation is cut off before the answer, and its first sentence does not answer the stem.",
+   "faultField": "execution",
+   "group": "verdicts-G4.json"
+  },
+  {
+   "itemId": "ENG-004-AGG-09",
+   "verdict": "HOLD",
+   "reason": "The key is correct (lines 47-49). But the 'stays sitting' distractor's execution says 'line 47 answers the stem' and quotes 'Matthew, however, was spared the ordeal of speaking first'. That clause does not answer what she does; standing, the bag and the held-out hand are in lines 48-49. Note also: the hint ('three things') matches only the key.",
+   "faultField": "execution",
+   "group": "verdicts-G4.json"
+  },
+  {
+   "itemId": "ENG-004-AGG-10",
+   "verdict": "HOLD",
+   "reason": "The key and distractors check against lines 51-58. But the hint 'Notice what she turns the night into' uses the key's own wording ('turn a hard situation into something lovely'), which is coaching (R572).",
+   "faultField": "hintCore",
+   "group": "verdicts-G4.json"
+  },
+  {
+   "itemId": "ENG-004-AGG-12",
+   "verdict": "HOLD",
+   "reason": "The key is correct (lines 64-65). But the ladies'-waiting-room distractor's execution quotes a truncated fragment ('“I’m sorry I was late,” he said shyly. “Come') as the line that answers the stem. Also, the walkScript says 'the bag changes hands', but lines 64-65 only have him ask for it.",
+   "faultField": "execution",
+   "group": "verdicts-G4.json"
+  },
+  {
+   "itemId": "ENG-010-JE-01",
+   "verdict": "HOLD",
+   "reason": "The key is correct (lines 1-2). But the 'in the field' distractor's execution says the stile is 'what she sits on to reach it'. She sits on the stile to rest and never goes into the field, so the execution invents a purpose.",
+   "faultField": "execution",
+   "group": "verdicts-G4.json"
+  },
+  {
+   "itemId": "ENG-010-JE-03",
+   "verdict": "HOLD",
+   "reason": "The key is correct (line 10, 'as the path was narrow'). But the hint 'The reason is one word about the path' points to the only option that mentions the path, so it gives the key away (R572 coaching).",
+   "faultField": "hintCore",
+   "group": "verdicts-G4.json"
+  },
+  {
+   "itemId": "ENG-010-JE-04",
+   "verdict": "HOLD",
+   "reason": "Second defensible answer: lines 14-18 tie the memory directly to the moment. A Gytrash 'came upon belated travellers, as this horse was now coming upon me'. So 'Because a Gytrash comes upon lonely travellers who are out late' is a reasonable reason she thinks of it, and its execution ('not why she thinks of it') is contestable. Note also: the hint 'her age' names the only option that mentions her age.",
+   "faultField": "options",
+   "group": "verdicts-G4.json"
+  },
+  {
+   "itemId": "ENG-010-JE-05",
+   "verdict": "HOLD",
+   "reason": "The key rests on reading the 'however' in lines 22-23 as doubt, which the text never states. Line 25 explicitly says the rider 'broke the spell at once', so 'The man riding the horse' is defensible and only 'first' separates the two. The walk's 'A spirit would have looked; this one behaved like a dog' is not in the passage. The hint ('something the dog did not do') also points straight at the key.",
+   "faultField": "key",
+   "group": "verdicts-G4.json"
+  },
+  {
+   "itemId": "ENG-010-JE-10",
+   "verdict": "HOLD",
+   "reason": "The key is correct (line 49). But the hint 'He names two things. Keep both' matches only the key, which is the one option holding both, so it gives the key away (R572 coaching).",
+   "faultField": "hintCore",
+   "group": "verdicts-G4.json"
+  },
+  {
+   "itemId": "ENG-010-JE-11",
+   "verdict": "HOLD",
+   "reason": "Previously signed (everSigned). The key holds (lines 74-77 and 87). But the first distractor's execution cites 'Line 72 says she has never seen him'. That line is 77; line 72 is the moonlit description of Thornfield.",
+   "faultField": "execution",
+   "group": "verdicts-G4.json"
+  },
+  {
+   "itemId": "ENG-010-JE-12",
+   "verdict": "HOLD",
+   "reason": "The stem gives no line window over an 89-line passage. It also claims Jane reports the light 'again and again before describing something', but the pattern rests on two instances (lines 51 and 71). The descriptions of Thornfield (line 6) and her own dress (line 83) have no light report first, so the stem overstates its population (R591).",
+   "faultField": "stem",
+   "group": "verdicts-G4.json"
+  },
+  {
+   "itemId": "ENG-017-CR-01",
+   "verdict": "HOLD",
+   "reason": "The key is correct (lines 3-4). But the Bath-scene distractor's execution says 'line 1 answers the stem' and quotes 'When the trays re-appeared with biscuits and wine, punctually'. That line does not answer what Captain Brown brought up; lines 3-4 do.",
+   "faultField": "execution",
+   "group": "verdicts-G4.json"
+  },
+  {
+   "itemId": "ENG-017-CR-03",
+   "verdict": "HOLD",
+   "reason": "The walkScript cites 'Line 13 has her allow that the author is young', but that is line 14. It also calls the advice to take Johnson as a model (lines 14-15) 'a reason'. That advice is a recommendation, not a reason for her judgement, and that claim is the walk's whole support for the key ('gives reasons').",
+   "faultField": "walkScript",
+   "group": "verdicts-G4.json"
+  },
+  {
+   "itemId": "ENG-017-CR-04",
+   "verdict": "HOLD",
+   "reason": "The key is correct (line 20). But the 'Explain that it is a different sort of thing' distractor is tagged en-chronology-collapse. Its execution says 'this puts it after', yet the option orders nothing; its fault is giving a statement where the stem asks for a request. The tag does not name the mistake.",
+   "faultField": "execution",
+   "group": "verdicts-G4.json"
+  },
+  {
+   "itemId": "ENG-017-CR-05",
+   "verdict": "HOLD",
+   "reason": "The key is correct. But the hint 'Check the word against a chair' and the dominant-sense execution ('line 22 has her settling into a chair') introduce a chair the lines do not contain. Line 22 says only 'settling herself'; the arm-chair is at line 52.",
+   "faultField": "hintCore",
+   "group": "verdicts-G4.json"
+  },
+  {
+   "itemId": "ENG-017-CR-06",
+   "verdict": "HOLD",
+   "reason": "Second defensible answer: lines 28-29 give her stated purpose, 'then the present company can judge between your favourite, Mr Boz, and Dr Johnson'. That makes 'To let the present company judge between the two' a text-supported reason. The hint asks the child to distrust a reason the text gives with nothing to refute it.",
+   "faultField": "options",
+   "group": "verdicts-G4.json"
+  },
+  {
+   "itemId": "ENG-017-CR-07",
+   "verdict": "HOLD",
+   "reason": "The walkScript ends 'she reads him as beaten', which leans toward the defeat/agreement reading rather than the key ('holding back something'). It never connects the screwed lips and drumming to suppressed speech. Also, the 'agrees at last' distractor is tagged en-negation-dropped, but no negation is dropped.",
+   "faultField": "walkScript",
+   "group": "verdicts-G4.json"
+  },
+  {
+   "itemId": "ENG-017-CR-08",
+   "verdict": "HOLD",
+   "reason": "This retrieval stem asks why he speaks low, but the passage gives no reason. Line 37 gives only the narrator's guess about the effect ('I think Miss Jenkyns could not have heard'). The key asserts an intent ('He meant that Miss Jenkyns was not to hear it') the text does not state. The 'wants the whole company to hear' execution ('he pitched it so she would not') likewise invents the intent.",
+   "faultField": "key",
+   "group": "verdicts-G4.json"
+  },
+  {
+   "itemId": "ENG-017-CR-10",
+   "verdict": "HOLD",
+   "reason": "Second defensible answer: 'It is only said that he was heard to say it' is the hearsay reason itself ('It is said', line 50), the same reason as the key in other words. Its execution ('repeats the report rather than giving the reason') does not hold.",
+   "faultField": "options",
+   "group": "verdicts-G4.json"
+  },
+  {
+   "itemId": "ENG-017-CR-11",
+   "verdict": "HOLD",
+   "reason": "The key is correct (line 53, set against his attempts in line 52). But the walkScript says 'Line 54 shows it still holding the next day'. Line 54 mentions only an unexplained 'remark ... about Miss Jessie's dimples', which a child cannot read as continued hostility from this passage.",
+   "faultField": "walkScript",
+   "group": "verdicts-G4.json"
+  },
+  {
+   "itemId": "ENG-025-LW-03",
+   "verdict": "HOLD",
+   "reason": "The key is correct (line 22, 'make you pay ... and I have'). But the hint 'Two of these are things somebody said' is misleading: the key is itself a paraphrase of what Amy says on line 22. A child using the hint to rule out 'things somebody said' can rule out the key.",
+   "faultField": "hintCore",
+   "group": "verdicts-G4.json"
+  },
+  {
+   "itemId": "ENG-025-LW-06",
+   "verdict": "HOLD",
+   "reason": "The key ('easy enough to say at the table, and it is hard now') is not supported. No line says the refusal at tea was easy, or that it is hard for Jo by the river; lines 66-67 give her a 'bitter, unhappy sort of satisfaction'. 'The table' is not in lines 33-35, which follow only a tea bell (line 31). The walkScript lists lines but never reaches the key.",
+   "faultField": "key",
+   "group": "verdicts-G4.json"
+  },
+  {
+   "itemId": "ENG-025-LW-07",
+   "verdict": "HOLD",
+   "reason": "Second defensible answer: 'She keeps her voice gruff because Amy is listening' is stated at line 42 and is something Jo does with her feeling. The hint 'Watch what comes out of her mouth in the end' points at that gruff speech as much as at the key.",
+   "faultField": "options",
+   "group": "verdicts-G4.json"
+  },
+  {
+   "itemId": "ENG-025-LW-08",
+   "verdict": "HOLD",
+   "reason": "The key is correct (line 49, 'this is the last ice we shall have'). But the Laurie-testing distractor's execution says 'line 48 answers the stem' and quotes 'Amy heard the clash of skates, and looked out'. Line 48 says nothing about the ice; line 49 does.",
+   "faultField": "execution",
+   "group": "verdicts-G4.json"
+  },
+  {
+   "itemId": "ENG-025-LW-09",
+   "verdict": "HOLD",
+   "reason": "The key is correct (lines 53-54). But 'Until Laurie has gone off home' is tagged en-motive-invention while its execution calls it 'A condition the lines never give'. It is an invented condition, not a motive, so the tag does not name the mistake.",
+   "faultField": "execution",
+   "group": "verdicts-G4.json"
+  },
+  {
+   "itemId": "ENG-025-LW-11",
+   "verdict": "HOLD",
+   "reason": "The key is correct (line 65). But the turned-her-back distractor's execution says 'line 64 answers the stem' and quotes 'Jo heard Amy panting after her run, stamping her'. That is about Amy; Jo's action is at line 65.",
+   "faultField": "execution",
+   "group": "verdicts-G4.json"
+  },
+  {
+   "itemId": "ENG-025-LW-12",
+   "verdict": "HOLD",
+   "reason": "The key is supported (lines 24, 67, 72). But the 'under control from the table onwards' distractor's execution refutes it with lines 24 and 28, which come before the tea table (line 31). The refutation is lines 67 and 72, so the execution is not true of the row.",
+   "faultField": "execution",
+   "group": "verdicts-G4.json"
+  },
+  {
+   "itemId": "ENG-006-TM-01",
+   "verdict": "HOLD",
+   "faultField": "options",
+   "reason": "Key correct, but two tags do not name the mistake: 'A slow and careful piece of work' carries en-relation-word-flipped where no relation word exists (it is an antonym of the sense), and 'A crowd of people arriving at once' carries en-attribute-transfer where no detail moves between two described entities.",
+   "group": "verdicts-G5.json"
+  },
+  {
+   "itemId": "ENG-006-TM-02",
+   "verdict": "HOLD",
+   "faultField": "hintCore",
+   "reason": "Key correct (lines 8-9), but hintCore 'Two people are sent before anything else happens' states the key's content; only the key has two people sent, so it is answerable from the hint without reading (coaching, R572).",
+   "group": "verdicts-G5.json"
+  },
+  {
+   "itemId": "ENG-006-TM-04",
+   "verdict": "HOLD",
+   "faultField": "hintCore",
+   "reason": "Key correct (lines 18-19), but hintCore 'One sentence holds three mishaps in a row' singles out the key by form: it is the only option listing three mishaps, the distractors list two (coaching).",
+   "group": "verdicts-G5.json"
+  },
+  {
+   "itemId": "ENG-006-TM-06",
+   "verdict": "HOLD",
+   "faultField": "options",
+   "reason": "Key defensible, but 'The family were too busy to watch him properly' carries en-relation-word-flipped with no relation word in lines 26-29 to flip; tag does not name the mistake.",
+   "group": "verdicts-G5.json"
+  },
+  {
+   "itemId": "ENG-006-TM-07",
+   "verdict": "HOLD",
+   "faultField": "stem",
+   "reason": "Stem says lines 27-29 count helpers 'a second, a third, a fourth, a fifth', but line 27 reads 'Two people would have to hold the chair, and a third' - there is no 'a second'; walkScript repeats the misquote ('A second person'). Also 'well organised' tagged en-relation-word-flipped and 'how long the job took' tagged en-attribute-transfer do not name those mistakes.",
+   "group": "verdicts-G5.json"
+  },
+  {
+   "itemId": "ENG-006-TM-09",
+   "verdict": "HOLD",
+   "faultField": "hintCore",
+   "reason": "Key correct (line 44), but hintCore 'Something musical happens, so find the instrument' makes the key pickable from the options alone - the piano is the only instrument offered (coaching).",
+   "group": "verdicts-G5.json"
+  },
+  {
+   "itemId": "ENG-006-TM-11",
+   "verdict": "HOLD",
+   "faultField": "options",
+   "reason": "'He has learned... that the job was hard' carries en-relation-word-flipped with no relation word to flip; and the key 'thinks of it as a success, exactly as he did at the start' is imprecise - at lines 6-7 there is no success yet, only confidence it is easy.",
+   "group": "verdicts-G5.json"
+  },
+  {
+   "itemId": "ENG-006-TM-12",
+   "verdict": "HOLD",
+   "faultField": "walkScript",
+   "reason": "walkScript cites line 1's 'always' as part of the pattern, but that 'He always reminds me' is about Harris, not Uncle Podger; and 'every action takes would' is false (line 57 'we had to find', 'a new hole was made'). The 'remembered years after' distractor is also arguably true of the narration.",
+   "group": "verdicts-G5.json"
+  },
+  {
+   "itemId": "ENG-011-CV-04",
+   "verdict": "HOLD",
+   "faultField": "options",
+   "reason": "'A great flight of rooks goes silently over their heads' is true at line 9 and is itself one of the changes as they enter, so a child can defend it as an answer to 'What changes'; walkScript also concludes 'the change they make is a mood', which is not what the key states.",
+   "group": "verdicts-G5.json"
+  },
+  {
+   "itemId": "ENG-011-CV-05",
+   "verdict": "HOLD",
+   "faultField": "walkScript",
+   "reason": "Key correct (lines 13-14), but walkScript says 'Two women are named in it' of lines 13-14; three are named (Mrs Umney, Mrs Otis, Lady Canterville).",
+   "group": "verdicts-G5.json"
+  },
+  {
+   "itemId": "ENG-011-CV-06",
+   "verdict": "HOLD",
+   "faultField": "hintCore",
+   "reason": "Key correct, but hintCore 'Someone is waiting to receive them. Ask what they do.' has an ambiguous 'they' that reads as the someone (Mrs Umney), steering to the curtsey distractor; 'came down the steps towards them' also carries en-cause-agent-swap where nothing causal is swapped.",
+   "group": "verdicts-G5.json"
+  },
+  {
+   "itemId": "ENG-011-CV-07",
+   "verdict": "HOLD",
+   "faultField": "options",
+   "reason": "Line 19 says they 'began to look round' the library, which contains the stained glass window (line 18), so 'They look at the large stained glass window' is close to supported; execution's 'describes the room rather than what they do' ignores 'look round'.",
+   "group": "verdicts-G5.json"
+  },
+  {
+   "itemId": "ENG-011-CV-10",
+   "verdict": "HOLD",
+   "faultField": "walkScript",
+   "reason": "Key correct, but walkScript says 'A boy with a stick of cosmetic removes it'; line 37 says only 'what looked like a black cosmetic' (it is Pinkerton's stain remover, line 34), and Washington is never called a boy.",
+   "group": "verdicts-G5.json"
+  },
+  {
+   "itemId": "ENG-011-CV-12",
+   "verdict": "HOLD",
+   "faultField": "walkScript",
+   "reason": "walkScript pairs 'charge it to her' as the reply to 'a stain that will not go', but line 48 answers her fainting; and lines 54-55 have the Otises reply directly about ghosts ('not afraid of ghosts'), so 'every one belongs to running a house' and the key's 'keep to household business' overstate.",
+   "group": "verdicts-G5.json"
+  },
+  {
+   "itemId": "ENG-018-RB-01",
+   "verdict": "HOLD",
+   "faultField": "passageRef",
+   "reason": "passageRef missing",
+   "group": "verdicts-G5.json"
+  },
+  {
+   "itemId": "ENG-018-RB-02",
+   "verdict": "HOLD",
+   "faultField": "execution",
+   "reason": "Execution for 'He tucks his hat down first, and then he pulls it over his eyes' says it reverses lines 6 and 63, but the option never pushes the hat back - it is not a reversal; and 'He lolls back, and later he clears his mental decks' is true at lines 5 and 64 and defensible as what happened to how he sits.",
+   "group": "verdicts-G5.json"
+  },
+  {
+   "itemId": "ENG-018-RB-03",
+   "verdict": "HOLD",
+   "faultField": "key",
+   "reason": "Key says she ran 'when she was called', but line 10-11 has the mother nod to her; nobody calls her.",
+   "group": "verdicts-G5.json"
+  },
+  {
+   "itemId": "ENG-018-RB-04",
+   "verdict": "HOLD",
+   "faultField": "stem",
+   "reason": "'What does the mother expect Rebecca to do' reads naturally as 'require', under which 'Sit quiet and look neat when she arrives' (lines 22-23) is a second correct answer; the hint concedes the ambiguity. That option's en-relation-word-flipped tag also names no relation word.",
+   "group": "verdicts-G5.json"
+  },
+  {
+   "itemId": "ENG-018-RB-05",
+   "verdict": "HOLD",
+   "faultField": "walkScript",
+   "reason": "walkScript says 'Line 27 says the laugh was short and this'; line 27 is Rebecca's speech, the laugh is at line 28.",
+   "group": "verdicts-G5.json"
+  },
+  {
+   "itemId": "ENG-018-RB-06",
+   "verdict": "HOLD",
+   "faultField": "execution",
+   "reason": "Execution for 'Thinking hard about the errands ahead' says line 34 gives the errands 'not as his thoughts', but line 34 says 'the contemplation of errands' - they are his thoughts; the tag en-attribute-transfer does not name the actual mistake.",
+   "group": "verdicts-G5.json"
+  },
+  {
+   "itemId": "ENG-018-RB-08",
+   "verdict": "HOLD",
+   "faultField": "stem",
+   "reason": "Stem asks what riding inside stops her 'doing' but every option is a state, not an action; and lines 47-49 also show inside stops her seeing whether her trunk is safe, so the stem does not single out the window complaint.",
+   "group": "verdicts-G5.json"
+  },
+  {
+   "itemId": "ENG-018-RB-11",
+   "verdict": "HOLD",
+   "faultField": "passageRef",
+   "reason": "passageRef missing",
+   "group": "verdicts-G5.json"
+  },
+  {
+   "itemId": "ENG-018-RB-12",
+   "verdict": "HOLD",
+   "faultField": "walkScript",
+   "reason": "walkScript line references are off: the braid is line 40 not 39, and Mr Cobb's thought begins at line 60 not 61; key's 'talk the whole way' also overstates (she is silent lines 33-42).",
+   "group": "verdicts-G5.json"
+  },
+  {
+   "itemId": "ENG-026-AL-01",
+   "verdict": "HOLD",
+   "faultField": "hintCore",
+   "reason": "Key correct (lines 3-5), but hintCore 'Count the places he stopped' points straight at the key 'He stopped twice' - the only option about stopping (coaching).",
+   "group": "verdicts-G5.json"
+  },
+  {
+   "itemId": "ENG-026-AL-02",
+   "verdict": "HOLD",
+   "faultField": "walkScript",
+   "reason": "walkScript says 'Line 9 says she did not say so'; 'I did not say so' is on line 8, and the walk ends before reaching the reason the key rests on.",
+   "group": "verdicts-G5.json"
+  },
+  {
+   "itemId": "ENG-026-AL-03",
+   "verdict": "HOLD",
+   "faultField": "options",
+   "reason": "'The key was under the brick, and after that it was in her hand' is wholly true (lines 12, 43-44) and as much a 'what these lines show' as the key, which is itself a literal pairing of two facts; no defensible distinction between them.",
+   "group": "verdicts-G5.json"
+  },
+  {
+   "itemId": "ENG-026-AL-09",
+   "verdict": "HOLD",
+   "faultField": "key",
+   "reason": "Key 'That Cass will still be coming up here' is something he asks for (line 33), not takes for granted; what the November plan presupposes is that he himself will still be there to garden (against lines 30-31, 38), so the key is not the only or best defensible answer.",
+   "group": "verdicts-G5.json"
+  },
+  {
+   "itemId": "ENG-026-AL-12",
+   "verdict": "HOLD",
+   "faultField": "key",
+   "reason": "Key 'each time... the next detail says otherwise' is false on carriers in the passage: the key 'would be under the brick. It was under the brick' (line 12) and 'enormous breakfast... He always has' (lines 36-37) both confirm him; walk's Thursday step (line 39) shows a change of subject, not contradiction.",
+   "group": "verdicts-G5.json"
+  },
+  {
+   "itemId": "ENG-008-RC-02",
+   "verdict": "HOLD",
+   "reason": "hintCore coaches: 'what she wants to be true before Mother comes down' restates the key's distinguishing clause ('before Mother gets up', line 6), so matching hint to options selects the key without reading.",
+   "faultField": "hintCore",
+   "group": "verdicts-G6.json"
+  },
+  {
+   "itemId": "ENG-008-RC-03",
+   "verdict": "HOLD",
+   "reason": "Key correct (line 10), but the basin distractor's execution asserts 'line 9 answers the stem' with a truncated fragment ('...washed as much as') that does not contain the answer; the key is settled by line 10.",
+   "faultField": "execution",
+   "group": "verdicts-G6.json"
+  },
+  {
+   "itemId": "ENG-008-RC-04",
+   "verdict": "HOLD",
+   "reason": "hintCore coaches: 'turns a refusal into a delay' states the inference the key expresses ('keeps the garden for later'), leaving only one matching option.",
+   "faultField": "hintCore",
+   "group": "verdicts-G6.json"
+  },
+  {
+   "itemId": "ENG-008-RC-05",
+   "verdict": "HOLD",
+   "reason": "Key correct (lines 21-22). Faults: the attribute-transfer distractor surfaces tag hint 'Two people are being described', false here (two objects; library en-attribute-transfer wording, R586); walkScript says 'the other holds the bread' but line 23 has them with no bread ('if they had any').",
+   "faultField": "options",
+   "group": "verdicts-G6.json"
+  },
+  {
+   "itemId": "ENG-008-RC-06",
+   "verdict": "HOLD",
+   "reason": "walkScript says line 39's eight o'clock is 'three hours later' than line 41's half-past five; it is two and a half. The 'fire far too big' execution reasons 'fire had been out for some time, so it was not too fierce', which does not follow (line 41 calls it 'an excellent fire').",
+   "faultField": "walkScript",
+   "group": "verdicts-G6.json"
+  },
+  {
+   "itemId": "ENG-008-RC-07",
+   "verdict": "HOLD",
+   "reason": "Key 'worried and in a hurry' fits line 48. The wrong-scope distractor's execution claims 'line 48 answers the stem' quoting 'The forgotten room opened out of the kitchen. In' - a fragment that says nothing about the word's meaning; untrue as written.",
+   "faultField": "execution",
+   "group": "verdicts-G6.json"
+  },
+  {
+   "itemId": "ENG-008-RC-11",
+   "verdict": "HOLD",
+   "reason": "Distractor 'The garden had hidden itself away, and the high wall kept it out of sight' pairs the figurative phrase with a literal clause the text supports ('a high wall all round', line 72); a child can defend it, and its execution addresses only the figurative half.",
+   "faultField": "options",
+   "group": "verdicts-G6.json"
+  },
+  {
+   "itemId": "ENG-012-ML-01",
+   "verdict": "HOLD",
+   "reason": "hintCore coaches: 'Follow the smells. The reason is in the list.' names the key ('The smells of baking and gravy'). Minor: key's 'through the house' is not in lines 1-4.",
+   "faultField": "hintCore",
+   "group": "verdicts-G6.json"
+  },
+  {
+   "itemId": "ENG-012-ML-03",
+   "verdict": "HOLD",
+   "reason": "Key correct (lines 8-10), but hintCore 'Keep the small word no' resolves the only difference between the key and the nearest distractor ('he says he will'), giving the key away.",
+   "faultField": "hintCore",
+   "group": "verdicts-G6.json"
+  },
+  {
+   "itemId": "ENG-012-ML-05",
+   "verdict": "HOLD",
+   "reason": "Second defensible answer: line 18 'that'll be good the day after' says Tom expects the tipsy-cake to be good, so 'The tipsy-cake...' also answers the stem as worded ('What is Tom looking forward to?'). Also hintCore 'Take the second' gives the key away.",
+   "faultField": "stem",
+   "group": "verdicts-G6.json"
+  },
+  {
+   "itemId": "ENG-012-ML-07",
+   "verdict": "HOLD",
+   "reason": "Distractor 'afraid that Tom will take both of the halves himself' is textually supported: Tom threatens 'else you sha'n't have any' (lines 31-32) and line 33 says her sacrifice 'did not extend so far' - she shut her eyes so as not to lose her share. Its execution 'Nothing gives her that fear' is false.",
+   "faultField": "options",
+   "group": "verdicts-G6.json"
+  },
+  {
+   "itemId": "ENG-012-ML-10",
+   "verdict": "HOLD",
+   "reason": "Key correct (lines 48-49). Distractor 'would have taken a bit of hers beforehand' reverses 'refused' (line 49) - an antonym swap, not a relation word, so tag en-relation-word-flipped does not name the mistake. hintCore 'He expected something back' also mirrors the key's 'expected her to offer him some'.",
+   "faultField": "options",
+   "group": "verdicts-G6.json"
+  },
+  {
+   "itemId": "ENG-012-ML-11",
+   "verdict": "HOLD",
+   "reason": "Key 'Maggie cannot let it go' (and walk 'Only one of the two can put it down') is contradicted by lines 72-73, where after ten minutes 'resentment began to give way to the desire of reconciliation'.",
+   "faultField": "key",
+   "group": "verdicts-G6.json"
+  },
+  {
+   "itemId": "ENG-012-ML-12",
+   "verdict": "HOLD",
+   "reason": "Every option refers to the writer as 'He'; George Eliot (Mary Ann Evans) was a woman - a factual error a child or parent may know. walkScript also calls the jam puff 'a bun'.",
+   "faultField": "options",
+   "group": "verdicts-G6.json"
+  },
+  {
+   "itemId": "ENG-019-BV-02",
+   "verdict": "HOLD",
+   "reason": "passageRef missing (passageRefMissing: true). Also: distractor 'Mark ran for the rod while the fish waited' is tagged en-chronology-collapse, which does not name its mistake.",
+   "faultField": "passageRef",
+   "group": "verdicts-G6.json"
+  },
+  {
+   "itemId": "ENG-019-BV-03",
+   "verdict": "HOLD",
+   "reason": "Second defensible answer: 'He says he might be shooting an elephant' is literally what Mark does when he interrupts (line 12), and the stem asks what he does; its execution concedes it repeats him.",
+   "faultField": "stem",
+   "group": "verdicts-G6.json"
+  },
+  {
+   "itemId": "ENG-019-BV-04",
+   "verdict": "HOLD",
+   "reason": "Key's 'while he is losing' at line 14 is not established: Bevis is asserting, and his defeat comes at lines 18-19. Executions for 'order first, reason once won' ('Line 14 comes seventy lines before line 87') and 'learns it while he climbs' (half-rations at line 90) do not show those options false.",
+   "faultField": "key",
+   "group": "verdicts-G6.json"
+  },
+  {
+   "itemId": "ENG-019-BV-05",
+   "verdict": "HOLD",
+   "reason": "Key correct. The attribute-transfer distractor surfaces tag hint 'Two people are being described', false here (Bevis and the sand; library en-attribute-transfer, R586), and its execution misreads line 19, which gives Bevis 'very upright and very angry', not slow and stubborn.",
+   "faultField": "execution",
+   "group": "verdicts-G6.json"
+  },
+  {
+   "itemId": "ENG-019-BV-06",
+   "verdict": "HOLD",
+   "reason": "Key correct (line 24). The wrong-scope execution claims 'line 23 answers the stem' quoting 'about and sniffed among the willow bushes on their', which gives no reason; the answer is on line 24.",
+   "faultField": "execution",
+   "group": "verdicts-G6.json"
+  },
+  {
+   "itemId": "ENG-019-BV-08",
+   "verdict": "HOLD",
+   "reason": "Key is wrong: lines 38-41 give fear of Mark boasting as the reason not to go HOME for nails; going round would let him keep up (line 45 'run round and overtake Mark'). The lines give no reason for refusing to go round beyond 'having determined' (33-34). Wrong-scope execution quote 'drive into the hard sand to catch hold of' answers nothing; walk repeats the misreading.",
+   "faultField": "key",
+   "group": "verdicts-G6.json"
+  },
+  {
+   "itemId": "ENG-019-BV-09",
+   "verdict": "HOLD",
+   "reason": "Key correct. Distractor 'Leaning over to see better' tagged en-vocab-built-from-parts with execution 'Built from lean, which the word looks and sounds like' - 'inclined' neither contains nor sounds like 'lean'; the tag does not name the mistake (a physical neighbouring sense).",
+   "faultField": "execution",
+   "group": "verdicts-G6.json"
+  },
+  {
+   "itemId": "ENG-019-BV-12",
+   "verdict": "HOLD",
+   "reason": "walkScript asserts 'He made up the game and Mark never agreed to it', which the passage does not show (preamble only says Bevis appointed himself; Mark accepts at lines 89-92).",
+   "faultField": "walkScript",
+   "group": "verdicts-G6.json"
+  },
+  {
+   "itemId": "ENG-022-GK-01",
+   "verdict": "HOLD",
+   "reason": "Key correct (line 2). The wrong-scope execution claims 'line 1 answers the stem' quoting 'I get there first, every break', which restates the stem; line 2 answers it.",
+   "faultField": "execution",
+   "group": "verdicts-G6.json"
+  },
+  {
+   "itemId": "ENG-022-GK-02",
+   "verdict": "HOLD",
+   "reason": "Distractor 'He goes in goal, but he was picked eighth for it' is near-identical to the key and defensible; its execution ('reverses the order') is untrue - it has the same order as the key.",
+   "faultField": "options",
+   "group": "verdicts-G6.json"
+  },
+  {
+   "itemId": "ENG-022-GK-04",
+   "verdict": "HOLD",
+   "reason": "Key correct. Distractor 'A tear that has been sewn up again' is tagged en-vocab-form-lookalike, whose hint says 'check it is the same word' - it IS the same word; the mistake is the sewing sense, so the tag does not name it.",
+   "faultField": "options",
+   "group": "verdicts-G6.json"
+  },
+  {
+   "itemId": "ENG-022-GK-05",
+   "verdict": "HOLD",
+   "reason": "Key correct (line 22). The wrong-scope execution claims 'line 20 answers the stem' quoting 'Fourteen went past me last Tuesday', which says nothing about the four; line 22 answers.",
+   "faultField": "execution",
+   "group": "verdicts-G6.json"
+  },
+  {
+   "itemId": "ENG-022-GK-06",
+   "verdict": "HOLD",
+   "reason": "Second defensible answer: 'That he had his hands on the ball' is a claim he makes about that goal (lines 26-27); its execution concedes it repeats him.",
+   "faultField": "options",
+   "group": "verdicts-G6.json"
+  },
+  {
+   "itemId": "ENG-022-GK-10",
+   "verdict": "HOLD",
+   "reason": "hintCore 'The line after it says why he stays' supplies the meaning (not shifting = staying), giving the key away.",
+   "faultField": "hintCore",
+   "group": "verdicts-G6.json"
+  },
+  {
+   "itemId": "ENG-022-GK-11",
+   "verdict": "HOLD",
+   "reason": "walkScript's evidence for 'each time' does not hold: line 22 (four unsaveable) and line 26 (could have had it) do not go against his case; only line 7 against line 38 does. hintCore 'Look for the line where the writer gives a verdict' sends the child looking for a line that does not exist.",
+   "faultField": "walkScript",
+   "group": "verdicts-G6.json"
+  },
+  {
+   "itemId": "ENG-009-SM-03",
+   "verdict": "HOLD",
+   "reason": "hintCore 'Find the bare wall. The reason is what would go on it.' states the key's content (Nan's wall is bare) rather than pointing to evidence - coaching (R572). Key and distractors otherwise check against lines 13-15.",
+   "faultField": "hintCore",
+   "group": "verdicts-G7.json"
+  },
+  {
+   "itemId": "ENG-009-SM-04",
+   "verdict": "HOLD",
+   "reason": "Distractor 'He had promised Nan he would go out there' is defensible: lines 14-15 'I said I would get her a picture of the place' is a promise that can only be kept by going there; the execution's picture-not-visit distinction is too thin for a child to be marked wrong on, under a stem as open as 'what do these lines tell you about the trip'.",
+   "faultField": "options",
+   "group": "verdicts-G7.json"
+  },
+  {
+   "itemId": "ENG-009-SM-07",
+   "verdict": "HOLD",
+   "reason": "hintCore 'One word here is doing something only a plant can do' tells the child the elder is a plant, which alone selects 'a small tree or bush' from the three options - coaching (R572). Key, distractors and walkScript otherwise correct for l.29.",
+   "faultField": "hintCore",
+   "group": "verdicts-G7.json"
+  },
+  {
+   "itemId": "ENG-009-SM-08",
+   "verdict": "HOLD",
+   "reason": "hintCore '... ruins. Not a result.' rules out the dominant-sense distractor that the item exists to test, leaving the key as the only feeling-word option - coaching (R572). Key 'feeling of the visit' is otherwise defensible for 'spoiled the effect' (l.32).",
+   "faultField": "hintCore",
+   "group": "verdicts-G7.json"
+  },
+  {
+   "itemId": "ENG-009-SM-09",
+   "verdict": "HOLD",
+   "reason": "Key 'the water he watches is the slow one' is not supported: the passage never says standing on the step settles anything about Nan's story - a tide coming in and out over a boot (l.33-35) is not evidence for forty years of erosion over one February night (l.10-12), and the stem's 'settle' asserts a conclusion the text leaves open. Key wording ('two speeds, but...') is also hard for a 9-11 reader.",
+   "faultField": "key",
+   "group": "verdicts-G7.json"
+  },
+  {
+   "itemId": "ENG-009-SM-11",
+   "verdict": "HOLD",
+   "reason": "hintCore 'Two causes, one in each line' names a property only the key has (it is the only option with two causes), so it selects the key without reading - coaching (R572). Key and distractors otherwise check against l.40-42.",
+   "faultField": "hintCore",
+   "group": "verdicts-G7.json"
+  },
+  {
+   "itemId": "ENG-009-SM-12",
+   "verdict": "HOLD",
+   "reason": "hintCore 'Sort the sentences into what still stands and what happened' restates the key ('present kept for what is still true, the walk stays past') - coaching (R572). The key itself checks (l.1, 6, 8, 13, 18, 28-29, 37, 42-43 present and still true; the walk past). Distractor 2 'told it to them' has no referent for 'them'.",
+   "faultField": "hintCore",
+   "group": "verdicts-G7.json"
+  },
+  {
+   "itemId": "ENG-013-TI-03",
+   "verdict": "HOLD",
+   "reason": "Distractor 'He was in fear and in curiosity' is defensible: lines 11-13 have him lie there 'trembling ... in the extreme of fear', and fear is an ordinary reason for staying hidden; the item leans on the hint ('That is not why he stayed') to exclude it, which is itself coaching away the main competitor.",
+   "faultField": "options",
+   "group": "verdicts-G7.json"
+  },
+  {
+   "itemId": "ENG-013-TI-05",
+   "verdict": "HOLD",
+   "reason": "Execution on 'calls Dick square / trusts him with the keg' ends 'In the window, line 22 answers the stem: 'it all away, some here, some there, and none'' - false (line 22 alone does not say how the two speeches differ) and the quote is a truncated fragment. Key otherwise checks against l.21-22 and l.44-47.",
+   "faultField": "execution",
+   "group": "verdicts-G7.json"
+  },
+  {
+   "itemId": "ENG-013-TI-06",
+   "verdict": "HOLD",
+   "reason": "Distractor 'Silver praised him, so he agreed to join' is defensible: line 15-16 says Silver addressed the lad 'in the very same words of flattery', and that flattering talk (l.18-26) is what the lad says won him over (l.27-28); the execution only considers the later praise at l.29.",
+   "faultField": "options",
+   "group": "verdicts-G7.json"
+  },
+  {
+   "itemId": "ENG-013-TI-08",
+   "verdict": "HOLD",
+   "reason": "hintCore 'Read on to the end of that line' has no referent - the stem cites five lines and names none, so the child cannot tell which line is meant. Key ('hazed me long enough', l.41) and distractors otherwise check.",
+   "faultField": "hintCore",
+   "group": "verdicts-G7.json"
+  },
+  {
+   "itemId": "ENG-013-TI-10",
+   "verdict": "HOLD",
+   "reason": "'my limbs and heart alike misgave me' (l.53): with 'heart' as subject, 'misgave' carries the established sense of foreboding/doubt, so the neighbouring-sense distractor is partly supported and its execution ('line 53 fixes the sense of giving way') is not true for the heart; the hint 'Limbs cannot doubt' ignores the heart and also eliminates two distractors outright.",
+   "faultField": "options",
+   "group": "verdicts-G7.json"
+  },
+  {
+   "itemId": "ENG-013-TI-12",
+   "verdict": "HOLD",
+   "reason": "hintCore '... He does not move' states half the key (coaching, R572); and walkScript claims 'At lines 32 and 33 he cannot move' - those lines say nothing about his movement, only his understanding.",
+   "faultField": "hintCore",
+   "group": "verdicts-G7.json"
+  },
+  {
+   "itemId": "ENG-020-HD-01",
+   "verdict": "HOLD",
+   "reason": "hintCore 'Two of these are true things that happen next' is false: only the Clara-willing option is true; the wardrobe option says she found it bare, but she found rolls (l.12). Key 'decent appearance when Herr Sesemann returned' (l.5) otherwise correct.",
+   "faultField": "hintCore",
+   "group": "verdicts-G7.json"
+  },
+  {
+   "itemId": "ENG-020-HD-02",
+   "verdict": "HOLD",
+   "reason": "walkScript misquotes and mislines: it gives 'bread in a wardrobe, a whole pile of bread' as line 12, but the text runs over l.12-13 and reads 'bread in a wardrobe! a whole pile of bread!'. The hat-option execution also ends in a truncated fragment ('a heap'). Key (heap of rolls, l.12) is correct.",
+   "faultField": "walkScript",
+   "group": "verdicts-G7.json"
+  },
+  {
+   "itemId": "ENG-020-HD-03",
+   "verdict": "HOLD",
+   "reason": "Distractor 'Somebody took it away, and later it was in her bed' is a true answer to 'What has happened to the hat between the two?' - Tinette is ordered to take it (l.13-15) and it is found under the counterpane (l.42); the execution's 'nothing named that links them' does not make it false. Also, l.39-41 strongly imply Sebastian, so the key's 'never says who' needs care.",
+   "faultField": "options",
+   "group": "verdicts-G7.json"
+  },
+  {
+   "itemId": "ENG-020-HD-07",
+   "verdict": "HOLD",
+   "reason": "hintCore 'The word has an upon it after it. Find what the it is.' is ungrammatical and confusing for a 9-11 reader (two different 'it's in one sentence, 'the it'). Key 'trust' for 'depend upon it' (l.33) and distractors otherwise check.",
+   "faultField": "hintCore",
+   "group": "verdicts-G7.json"
+  },
+  {
+   "itemId": "ENG-020-HD-08",
+   "verdict": "HOLD",
+   "reason": "Wrong window: the reason is stated at line 33 ('to make sure that she could depend upon it she kept on saying'), outside the cited lines 34-36. walkScript also says 'Line 35 puts the same question to Clara again' - line 35 is Clara's assurance.",
+   "faultField": "stem",
+   "group": "verdicts-G7.json"
+  },
+  {
+   "itemId": "ENG-020-HD-09",
+   "verdict": "HOLD",
+   "reason": "hintCore 'Nothing here is being put down by force' eliminates the dominant-sense distractor the item tests (coaching, R572); and the 'press down hard' distractor is tagged en-figurative-taken-literally while its execution ('Built out of press') describes a built-from-parts error.",
+   "faultField": "hintCore",
+   "group": "verdicts-G7.json"
+  },
+  {
+   "itemId": "ENG-020-HD-10",
+   "verdict": "HOLD",
+   "reason": "Execution on 'she saw her own roll' ends 'In the window, line 40 answers the stem: 'all sorts of strange signs, pointing to his own'' - false: the message is at line 41 ('I have got it all safe for you'); line 40 only describes the signs. Key otherwise correct.",
+   "faultField": "execution",
+   "group": "verdicts-G7.json"
+  },
+  {
+   "itemId": "ENG-020-HD-11",
+   "verdict": "HOLD",
+   "reason": "Distractor 'She squeezes it further out of shape in her delight' is a second correct answer: 'made it more out of shape still in her joy' runs onto line 44, inside the cited window, and is something she does with the hat; the execution wrongly places it wholly at l.43.",
+   "faultField": "options",
+   "group": "verdicts-G7.json"
+  },
+  {
+   "itemId": "ENG-020-HD-12",
+   "verdict": "HOLD",
+   "reason": "Distractor 'What is taken is her bread, but what returns is her hat' is true of the passage and answers 'What is true of the things done to Heidi and ... for her'; and hintCore 'Look for the line where the writer gives a verdict' sends the child to search for a line that does not exist.",
+   "faultField": "options",
+   "group": "verdicts-G7.json"
+  },
+  {
+   "itemId": "ENG-027-RR-03",
+   "verdict": "HOLD",
+   "reason": "hintCore 'This is a thing he has, not a thing he refuses' eliminates the won't-lookalike distractor that the item exists to test - coaching (R572). Key 'usual way of looking' for 'paler than his wont' (l.11) is correct.",
+   "faultField": "hintCore",
+   "group": "verdicts-G7.json"
+  },
+  {
+   "itemId": "ENG-027-RR-06",
+   "verdict": "HOLD",
+   "reason": "Lines 19-20 give being 'spared the unpleasant sight' as the direct reason he is glad, so 'His brother's portrait was in most of the windows' (the sight) is a defensible answer alongside the temper reason. walkScript also misquotes l.20 as 'a hot temper'; the text says 'quick temper'.",
+   "faultField": "options",
+   "group": "verdicts-G7.json"
+  },
+  {
+   "itemId": "ENG-027-RR-07",
+   "verdict": "HOLD",
+   "reason": "Execution on the kneeling option ends 'In the window, line 24 answers the stem: 'before me, and the sudden sense of my audacity'' - false: the answer is 'Everything was in a mist as I dismounted' (l.24-25); the quoted fragment is not it. Key correct.",
+   "faultField": "execution",
+   "group": "verdicts-G7.json"
+  },
+  {
+   "itemId": "ENG-027-RR-09",
+   "verdict": "HOLD",
+   "reason": "Execution on the oath option ends 'In the window, line 41 answers the stem: 'before them all. Then the great organ pealed out'' - false: that fragment is the organ (distractor 2), not the proclamation (l.41-42). hintCore 'The heralds say who he now is' also states the key's content.",
+   "faultField": "execution",
+   "group": "verdicts-G7.json"
+  },
+  {
+   "itemId": "ENG-027-RR-10",
+   "verdict": "HOLD",
+   "reason": "Stem asks what the Duke's 'hands and face' show, but the key's 'looking for a way out' comes from where he looks ('to the right and to the left, as a man looks who thinks on flight', l.53-54), not his hands or face. hintCore 'Two of these describe him without saying why' is false: the Sapt option does not describe him.",
+   "faultField": "stem",
+   "group": "verdicts-G7.json"
+  }
+ ]
+}

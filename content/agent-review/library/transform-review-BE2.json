@@ -1,0 +1,23 @@
+{
+  "reviewer": "rev-agent-01",
+  "entries": [
+    {
+      "id": "en-inference-literal-lookalike",
+      "verdict": "ATTEST",
+      "reason": "Both transforms apply exactly once. The previous refusal rested on ENG-007-LP-12. It is now listed as misfiled, and I checked that it makes a genuinely different mistake. Its option, 'He describes only the old clothes, and so we get nothing else.', is close to the key ('only his hands and the things he handles'). It goes wrong by the overclaim 'we get nothing else', which denies that the feeling comes through the objects. It copies no passage wording. That is a near-key option with an overclaimed absence, not a copied-wording pick, so it is an item fault. The other listed misfiles also make different mistakes. WIW-13 and WIW-14 read a figure literally, which fits en-figurative-taken-literally. One item-level warning: WIW-13 already has an option tagged en-figurative-taken-literally, so retagging it as proposed would put two options with the same tag on one item. pp-16 invents a reading ('loudly to the whole room'). BB-02 gives a meaning built on no wording in the passage. CV-12 turns 'not afraid of ghosts' into 'no ghost', a different claim. LP-01 and LP-09 come from outside the lines the question names, so they are wrong-scope. Dropping SM-12, ML-12 and LP-15 from the false-on list is correct; I checked them against the passages. SM-12 echoes 'two miles of sea wall', ML-12 echoes 'the best bit', and LP-15 reuses 'bin bag' and 'cuffs had gone thin'. Pass 1 on the result: 'Words copied from the passage can still miss the question.' says what can happen, so it asserts nothing about the item. 'Those words' and the description ('Picks the option that reuses passage wording') hold on every remaining carrier, each of which reuses passage wording according to its execution. The description now also holds on the 18 retrieval and vocab carriers. Pass 2: the sentences are 10 and 7 words, each ending in a full stop, in British English. The move, asking what the copied words are telling you, fits the main population. It is weaker but still true on the carriers that hand back two passages with no link named (for example BV-04, GK-02, PR-06). Meaning: the entry still names the same mistake, and the change to the description only widens its scope to match its carriers.",
+      "resultText": {
+        "childHint": "Words copied from the passage can still miss the question. Ask what those words are telling you.",
+        "description": "Picks the option that reuses passage wording."
+      }
+    },
+    {
+      "id": "vr04-one-feature-only",
+      "verdict": "ATTEST",
+      "reason": "Both transforms apply exactly once. The added description transform clears the only ground of the previous refusal. 'one sign of the headword' no longer claims something you can see. It is now true on the 17 carriers that are a sound, a touch, a feeling, a speed or a length (01, 04, 05, 09, 11, 12, 15, 17, 18, 19, 22, 23, 25, 31, 36, 37, 40), and on its own example, silent for STOIC. The childHint 'That is one sign of it. The word itself means something wider.' was already clean on pass 1. 'The word itself means something wider' is true on all 27 carriers, because each key is broader than its carrier. Misfiles, checked myself: 09 brisk for RAPID is close to a synonym, so it risks being a second correct answer rather than a sign. 38 shiny for TRANSPARENT is something glass also is, not a sign of being see-through. Both make a genuinely different mistake, so they are item faults. Weak but not false, worth an item look: 05 smooth for SHINY and 19 brief for VAGUE. Pass 2: the sentences are 6 and 6 words, each ending in a full stop, in British English. The hint names the mistake (one sign taken for the whole meaning) in words a child can use. Meaning: the entry's definition is unchanged, and only the claim that the sign is something you can see is removed.",
+      "resultText": {
+        "childHint": "That is one sign of it. The word itself means something wider.",
+        "description": "Picks a word naming one sign of the headword rather than what it means (silent for STOIC — one thing a stoic person might do, not what stoic means)."
+      }
+    }
+  ]
+}

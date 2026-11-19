@@ -175,57 +175,22 @@
     {
       "id": "en-chronology-collapse",
       "verdict": "REFUSE",
-      "reason": "Screened 40 of 40 carriers. childHint 'Check what happened first, and what the question asks for.' is a move, asserts no feature, is within 16 words and actionable: it passes both passes on every correctly filed carrier. The DESCRIPTION fails pass 1: 'picks a cause that happens LATER ... than the effect being asked about' is false on 27 of 40, whose stems do not ask for a cause at all (retrieval of what or where, or two events in reversed order); ENG-002-pp-06 also takes an EARLIER report, not a later one. 'The two events are both real' is false on the misfiled carriers. The closing sentence 'Currently split across ...' is a proposal-time note that is now stale: the entry exists and carries 40 items.",
+      "reason": "Revised on the coordinator's ruling: keep Annie's meaning (a cause that happens LATER in the passage than the effect asked about) and refile, rather than widen the entry. Screened 40 of 40. The childHint 'Check what happened first, and what the question asks for.' stays as it is; it passes both passes. The description's only fault on the correctly filed carriers is the stale closing sentence 'Currently split across ...', a proposal-time note that is no longer true now the entry is active; that is the one transform. 11 of 40 carriers make the later-cause mistake: ENG-005-BB-06, ENG-006-TM-05, ENG-008-RC-06, ENG-008-RC-09, ENG-010-JE-03, ENG-010-JE-05, ENG-013-TI-06, ENG-014-TS-01, ENG-014-TS-05, ENG-014-TS-09, ENG-020-HD-01. 29 of 40 do not and are listed as misfiled: 27 whose stems ask for no cause, plus ENG-019-BV-02 and ENG-020-HD-06, where 'both real' is false. 10 of the 29 are a reversed order of two real events, and NO EXISTING ENTRY covers that; they carry belongsUnder null and need a ruling. The entry is REFUSE only for the stale sentence; the scope stays as approved.",
       "assertionClauses": [
         {
           "clause": "(description) The child picks a cause that happens LATER in the passage than the effect being asked about.",
-          "falseOn": [
-            "ENG-001-WIW-06",
-            "ENG-001-WIW-15",
-            "ENG-002-pp-06",
-            "ENG-005-BB-03",
-            "ENG-005-BB-05",
-            "ENG-006-TM-02",
-            "ENG-006-TM-04",
-            "ENG-006-TM-09",
-            "ENG-006-TM-10",
-            "ENG-007-LP-04",
-            "ENG-007-LP-09",
-            "ENG-007-LP-15",
-            "ENG-010-JE-02",
-            "ENG-014-TS-02",
-            "ENG-014-TS-12",
-            "ENG-015-CC-04",
-            "ENG-015-CC-06",
-            "ENG-016-HB-02",
-            "ENG-017-CR-03",
-            "ENG-017-CR-04",
-            "ENG-018-RB-02",
-            "ENG-018-RB-07",
-            "ENG-019-BV-04",
-            "ENG-019-BV-10",
-            "ENG-020-HD-11",
-            "ENG-021-ED-02",
-            "ENG-023-RT-02"
-          ],
-          "count": "27 of 40 (stem does not ask for a cause); ENG-002-pp-06 is also earlier, not later"
+          "falseOn": [],
+          "note": "Kept as Annie's definition. Carriers it is false on are refiled below as misfiled, not counted against the entry."
         },
         {
-          "clause": "(description) The two events are both real",
-          "falseOn": [
-            "ENG-019-BV-02",
-            "ENG-023-RT-02",
-            "ENG-010-JE-02",
-            "ENG-020-HD-06",
-            "ENG-007-LP-04",
-            "ENG-007-LP-09"
-          ],
-          "count": "6 of 40"
+          "clause": "(description) The two events are both real and both about the same people",
+          "falseOn": [],
+          "note": "True on all 11 correctly filed carriers. Its failures (BV-02, HD-06, RT-02, JE-02, LP-04, LP-09, and 'same people' on TM-10) are all among the misfiled carriers."
         },
         {
           "clause": "(description) Currently split across en-cause-agent-swap and en-wrong-scope-retrieval, neither of which names the time error.",
           "falseOn": [],
-          "note": "Stale history about the store, not about carriers; no longer true now the entry is active."
+          "note": "Stale history about the store, not about carriers; no longer true now the entry is active with 40 carriers."
         },
         {
           "clause": "(childHint) Check what happened first",
@@ -236,47 +201,212 @@
       "transforms": [
         {
           "field": "description",
-          "from": "The child picks a cause that happens LATER in the passage than the effect being asked about.",
-          "to": "The child picks something from the wrong point in the passage's order: an event from later (or earlier) than the moment asked about, a cause that comes after its effect, or two events in reversed order."
-        },
-        {
-          "field": "description",
           "from": " Currently split across en-cause-agent-swap and en-wrong-scope-retrieval, neither of which names the time error.",
           "to": ""
         }
       ],
       "misfiledCarriers": [
         {
+          "itemId": "ENG-001-WIW-06",
+          "option": "At the gap in the hedge.",
+          "belongsUnder": "en-wrong-scope-retrieval",
+          "why": "A where-question; line 22 is outside lines 14 to 15. No cause is asked for."
+        },
+        {
+          "itemId": "ENG-001-WIW-15",
+          "option": "A brown little face with whiskers.",
+          "belongsUnder": "en-wrong-scope-retrieval",
+          "why": "A what-first question answered from line 48, outside lines 43 to 45. No cause is asked for."
+        },
+        {
+          "itemId": "ENG-002-pp-06",
+          "option": "Twelve ladies and seven gentlemen.",
+          "belongsUnder": "en-within-span-wrong-element",
+          "why": "The first report at lines 17 to 18 is inside the window and EARLIER, not later; an early stage taken as the final one."
+        },
+        {
+          "itemId": "ENG-005-BB-03",
+          "option": "It had already broken the wooden bridge.",
+          "belongsUnder": "en-wrong-scope-retrieval",
+          "why": "Answers from line 47, outside lines 10 to 11. No cause is asked for."
+        },
+        {
+          "itemId": "ENG-005-BB-05",
+          "option": "Part of the wooden bridge, carried off by the flood.",
+          "belongsUnder": "en-wrong-scope-retrieval",
+          "why": "Answers from line 47, outside lines 22 to 24, and a different place. No cause is asked for."
+        },
+        {
+          "itemId": "ENG-006-TM-02",
+          "option": "Fetches the step-ladder and a kitchen-chair.",
+          "belongsUnder": "en-wrong-scope-retrieval",
+          "why": "Answers from line 12, outside lines 8 and 9. No cause is asked for."
+        },
+        {
+          "itemId": "ENG-006-TM-04",
+          "option": "He hangs it crooked and has to start again.",
+          "belongsUnder": "en-wrong-scope-retrieval",
+          "why": "Answers from line 58, outside lines 18 and 19. No cause is asked for."
+        },
+        {
+          "itemId": "ENG-006-TM-09",
+          "option": "The charwoman's corns.",
+          "belongsUnder": "en-wrong-scope-retrieval",
+          "why": "Answers from line 61, outside lines 43 to 45, and it is his foot, not his fall. No cause is asked for."
+        },
+        {
+          "itemId": "ENG-006-TM-10",
+          "option": "Send for a man to come and do it properly.",
+          "belongsUnder": "en-wrong-scope-retrieval",
+          "why": "Answers from line 63, outside lines 49 to 51; it is also Uncle Podger's idea, not Aunt Maria's (en-attribute-transfer is the second candidate). 'About the same people' is false."
+        },
+        {
           "itemId": "ENG-007-LP-04",
           "option": "They are sorted again at the school on Friday.",
-          "why": "Friday is the collection day at line 8; the option invents a sorting, which is a scope error, not an order error."
+          "belongsUnder": "en-plausible-not-stated",
+          "why": "A second sorting at school is never stated; Friday at line 8 is the collection. Not a real later event."
         },
         {
           "itemId": "ENG-007-LP-09",
           "option": "Miss Bhatt wants it done before Friday.",
-          "why": "Moves the Friday date onto a different task; attribute transfer, not chronology."
-        },
-        {
-          "itemId": "ENG-019-BV-02",
-          "option": "Mark ran for the rod while the fish waited.",
-          "why": "Its own execution says nobody runs anywhere; contradicted-by-the-text, not an order error."
-        },
-        {
-          "itemId": "ENG-023-RT-02",
-          "option": "Nag was afraid of him on the day the flood washed him up.",
-          "why": "Line 69 says he had never met a live cobra; contradicted, not two real events reordered."
-        },
-        {
-          "itemId": "ENG-010-JE-02",
-          "option": "The brook froze over while she sat there.",
-          "why": "Doubtful: invents a process (freezing) where line 3 has a state; closer to plausible-not-stated."
+          "belongsUnder": "en-attribute-transfer",
+          "why": "The Friday date belongs to the charity collection and is moved onto the annexe cupboard. Not a real later event."
         },
         {
           "itemId": "ENG-007-LP-15",
           "option": "Folded it and gave it to Miss Bhatt.",
-          "why": "No execution recorded; filing cannot be confirmed from the packet."
+          "belongsUnder": "en-wrong-scope-retrieval",
+          "why": "No execution recorded. The folding at line 49 is Miss Bhatt's and outside lines 33 and 34; tentative filing."
+        },
+        {
+          "itemId": "ENG-010-JE-02",
+          "option": "The brook froze over while she sat there.",
+          "belongsUnder": "en-plausible-not-stated",
+          "why": "The brook freezing while she sat is never stated; line 3 has the ice already there. Not a real event."
+        },
+        {
+          "itemId": "ENG-014-TS-02",
+          "option": "He grew rich first, but then he gave up buying the boys.",
+          "belongsUnder": null,
+          "why": "Two real events put in reversed order; neither is a cause placed after its effect. NO EXISTING ENTRY names this; it needs a ruling (a new order-reversal entry, or a scope decision on this one)."
+        },
+        {
+          "itemId": "ENG-014-TS-12",
+          "option": "He shows us Ben giving in first, so the refusals come after that.",
+          "belongsUnder": null,
+          "why": "Two real events put in reversed order; neither is a cause placed after its effect. NO EXISTING ENTRY names this; it needs a ruling (a new order-reversal entry, or a scope decision on this one)."
+        },
+        {
+          "itemId": "ENG-015-CC-04",
+          "option": "He lighted his candle, then turned the key.",
+          "belongsUnder": null,
+          "why": "Two real events put in reversed order; neither is a cause placed after its effect. NO EXISTING ENTRY names this; it needs a ruling (a new order-reversal entry, or a scope decision on this one)."
+        },
+        {
+          "itemId": "ENG-015-CC-06",
+          "option": "The bells ring first, and the door bangs a long while after.",
+          "belongsUnder": null,
+          "why": "Two real events put in reversed order; neither is a cause placed after its effect. NO EXISTING ENTRY names this; it needs a ruling (a new order-reversal entry, or a scope decision on this one)."
+        },
+        {
+          "itemId": "ENG-016-HB-02",
+          "option": "He falls silent first, but Watson had judged him brave.",
+          "belongsUnder": null,
+          "why": "Two real events put in reversed order; neither is a cause placed after its effect. NO EXISTING ENTRY names this; it needs a ruling (a new order-reversal entry, or a scope decision on this one)."
+        },
+        {
+          "itemId": "ENG-017-CR-03",
+          "option": "She takes the affront first, and then she offers to make allowances.",
+          "belongsUnder": null,
+          "why": "Two real events put in reversed order; neither is a cause placed after its effect. NO EXISTING ENTRY names this; it needs a ruling (a new order-reversal entry, or a scope decision on this one)."
+        },
+        {
+          "itemId": "ENG-017-CR-04",
+          "option": "Explain that it is a different sort of thing.",
+          "belongsUnder": "en-within-span-wrong-element",
+          "why": "Line 18 is something he says inside the window, not what he asks at line 20. No cause is asked for."
+        },
+        {
+          "itemId": "ENG-018-RB-02",
+          "option": "He tucks his hat down first, and then he pulls it over his eyes.",
+          "belongsUnder": null,
+          "why": "Two real events put in reversed order; neither is a cause placed after its effect. NO EXISTING ENTRY names this; it needs a ruling (a new order-reversal entry, or a scope decision on this one)."
+        },
+        {
+          "itemId": "ENG-018-RB-07",
+          "option": "A small shape hanging out of the window.",
+          "belongsUnder": "en-within-span-wrong-element",
+          "why": "Line 39 is what he saw after turning, inside lines 36 to 42; the wrong element for 'first took the voice for'. No cause is asked for."
+        },
+        {
+          "itemId": "ENG-019-BV-04",
+          "option": "He gives the order first, and gives the reason once he has won.",
+          "belongsUnder": null,
+          "why": "Two real events put in reversed order; neither is a cause placed after its effect. NO EXISTING ENTRY names this; it needs a ruling (a new order-reversal entry, or a scope decision on this one)."
+        },
+        {
+          "itemId": "ENG-019-BV-10",
+          "option": "He finds the narrow ledge and then calls Pan back.",
+          "belongsUnder": "en-wrong-scope-retrieval",
+          "why": "The ledge is found at line 58, outside lines 49 to 54, and Pan coming back is not stated. No cause is asked for."
+        },
+        {
+          "itemId": "ENG-020-HD-11",
+          "option": "She puts it in the cupboard and then wraps it up.",
+          "belongsUnder": null,
+          "why": "Two real events put in reversed order; neither is a cause placed after its effect. NO EXISTING ENTRY names this; it needs a ruling (a new order-reversal entry, or a scope decision on this one)."
+        },
+        {
+          "itemId": "ENG-021-ED-02",
+          "option": "He calls for the cards first, and makes his remark later.",
+          "belongsUnder": null,
+          "why": "Two real events put in reversed order; neither is a cause placed after its effect. NO EXISTING ENTRY names this; it needs a ruling (a new order-reversal entry, or a scope decision on this one)."
+        },
+        {
+          "itemId": "ENG-023-RT-02",
+          "option": "Nag was afraid of him on the day the flood washed him up.",
+          "belongsUnder": "en-contradicted-by-the-text",
+          "why": "Line 69 says he had never met a live cobra before; the option is contradicted, not a real later event."
+        },
+        {
+          "itemId": "ENG-019-BV-02",
+          "option": "Mark ran for the rod while the fish waited.",
+          "belongsUnder": "en-contradicted-by-the-text",
+          "why": "A cause question, but nobody runs; line 9 is a refusal. 'Both real' is false."
+        },
+        {
+          "itemId": "ENG-020-HD-06",
+          "option": "They had already gone hard and stale in the wardrobe.",
+          "belongsUnder": "en-minimal-pair-skim",
+          "why": "A cause question, but the staling never happens; 'would have' is read as 'had already' and the option differs from the key by that wording. 'Both real' is false."
         }
-      ]
+      ],
+      "correctlyFiled": [
+        "ENG-005-BB-06",
+        "ENG-006-TM-05",
+        "ENG-008-RC-06",
+        "ENG-008-RC-09",
+        "ENG-010-JE-03",
+        "ENG-010-JE-05",
+        "ENG-013-TI-06",
+        "ENG-014-TS-01",
+        "ENG-014-TS-05",
+        "ENG-014-TS-09",
+        "ENG-020-HD-01"
+      ],
+      "misfiledCount": {
+        "total": "29 of 40",
+        "byEntry": {
+          "en-wrong-scope-retrieval": 10,
+          "en-within-span-wrong-element": 3,
+          "en-plausible-not-stated": 2,
+          "en-attribute-transfer": 1,
+          "NO EXISTING ENTRY": 10,
+          "en-contradicted-by-the-text": 2,
+          "en-minimal-pair-skim": 1
+        },
+        "notInThisPacketSet": "en-within-span-wrong-element and en-contradicted-by-the-text exist as tags in the store but have no packet in content/agent-review/library/."
+      }
     },
     {
       "id": "en-cause-agent-swap",
