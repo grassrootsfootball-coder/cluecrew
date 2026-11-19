@@ -1,0 +1,68 @@
+{
+ "entry": {
+  "id": "en-contraction-apostrophe",
+  "status": "ACTIVE",
+  "district": "ENGLISH",
+  "category": null,
+  "description": "Omits or misplaces the apostrophe in a contraction: Youre for You're, dont for don't, wont for won't.",
+  "childHint": "Two words squeezed into one leave letters out. The apostrophe stands where the letters were.",
+  "approvedBy": null,
+  "approvalMethod": null,
+  "approvalNote": null,
+  "textProvenance": {
+   "state": "RECORDED",
+   "textFrom": "LIB-DRAFT-en-contraction-apostrophe.json, sha256 7a31b669ee488d2666efbe39a132a1b0702448ebd5bfc470143dd9f17e24b985 — the draft is the authored artefact; her act was approval",
+   "appliedOn": "2026-08-22",
+   "authority": "Annie's fifteenth return, sha256 6f7fdd870d04ac803fe98ed9b465c1bf10bb937d19771c4ef6e143197d8b7f67, quoting the string verbatim under the approval form",
+   "carriedBy": "TOCODECONTRACTIONENTRYANDB7RETAG, sha256 5d6e9fdfe6c354db91266814fd38ac1f15eb8844b324ca27e85df9cf2f9e9c85, delivery 101",
+   "fieldDigests": {
+    "childHintSha256": "3a0da907525099444e548c8be9ab509cac38c2c6ea8fdca6873b51a3b4149aea",
+    "verifiedHereOver": "this row, byte for byte, 2026-08-22",
+    "descriptionSha256": "bb5fcaba25bbe2da64aff96decdb103b933abe93a1f182e293dedde89fa6960e"
+   },
+   "priorCitation": "annie-eng003-third-return.md §6 (\"approved as written\"), sha256 630a56dc876883ca7f42ad01f7b448fe9ed7b044967815712e4f4e19948534a2",
+   "approvedByPerson": "Annie"
+  }
+ },
+ "carrierCount": 1,
+ "carriers": [
+  {
+   "itemId": "ENG-003-A-CZ-B7",
+   "status": "LIVE",
+   "questionType": "en-spag-cloze",
+   "stem": {
+    "text": "Choose the words that fit best.  —  “___ going to do it!” shouted Priya.",
+    "gapIndex": 7,
+    "passageRef": "cloze-eng003-b-sports-day"
+   },
+   "key": "You’re",
+   "options": [
+    {
+     "value": "Your",
+     "isKey": false,
+     "tag": "en-homophone-by-sound",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "You’re",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Yours",
+     "isKey": false,
+     "tag": "en-homophone-by-sound",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Youre",
+     "isKey": false,
+     "tag": "en-contraction-apostrophe",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  }
+ ]
+}

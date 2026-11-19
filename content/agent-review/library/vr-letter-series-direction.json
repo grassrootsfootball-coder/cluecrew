@@ -1,0 +1,1222 @@
+{
+ "entry": {
+  "id": "vr-letter-series-direction",
+  "status": "ACTIVE",
+  "district": "VR",
+  "category": null,
+  "description": "Moved backwards through the alphabet instead of forwards.",
+  "childHint": "Which way is the series moving through the alphabet? Check the first two letters.",
+  "approvedBy": null,
+  "approvalMethod": null,
+  "approvalNote": null,
+  "textProvenance": {
+   "state": "RECORDED",
+   "appliedOn": "2026-08-21",
+   "authority": "annie-eighth-return.md, read from the file, sha256 bdd956ab3ef5a6d8ecb18eb7ca0d0a4b679c1d023eda7a28ad29103c028c5a34",
+   "approvedByPerson": "Annie"
+  }
+ },
+ "carrierCount": 25,
+ "carriers": [
+  {
+   "itemId": "gen-vr-09-letter-series-01",
+   "status": "LIVE",
+   "questionType": "vr-09-letter-series",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "A",
+     "B",
+     "C",
+     "D"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 1,
+     "first": 0,
+     "answer": 4
+    }
+   },
+   "key": "E",
+   "options": [
+    {
+     "value": "E",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "F",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Z",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "D",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-02",
+   "status": "LIVE",
+   "questionType": "vr-09-letter-series",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "B",
+     "D",
+     "F",
+     "H"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 2,
+     "first": 1,
+     "answer": 9
+    }
+   },
+   "key": "J",
+   "options": [
+    {
+     "value": "J",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "L",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Z",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "K",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-03",
+   "status": "LIVE",
+   "questionType": "vr-09-letter-series",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "C",
+     "G",
+     "K",
+     "O"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 4,
+     "first": 2,
+     "answer": 18
+    }
+   },
+   "key": "S",
+   "options": [
+    {
+     "value": "S",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "W",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Y",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "T",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-04",
+   "status": "LIVE",
+   "questionType": "vr-09-letter-series",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "D",
+     "F",
+     "H",
+     "J"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 2,
+     "first": 3,
+     "answer": 11
+    }
+   },
+   "key": "L",
+   "options": [
+    {
+     "value": "L",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "N",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "B",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "M",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-05",
+   "status": "LIVE",
+   "questionType": "vr-09-letter-series",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "E",
+     "G",
+     "I",
+     "K"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 2,
+     "first": 4,
+     "answer": 12
+    }
+   },
+   "key": "M",
+   "options": [
+    {
+     "value": "M",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "O",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "C",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "N",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-06",
+   "status": "LIVE",
+   "questionType": "vr-09-letter-series",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "F",
+     "I",
+     "L",
+     "O"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 3,
+     "first": 5,
+     "answer": 17
+    }
+   },
+   "key": "R",
+   "options": [
+    {
+     "value": "R",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "U",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "C",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "S",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-07",
+   "status": "LIVE",
+   "questionType": "vr-09-letter-series",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "A",
+     "C",
+     "E",
+     "G"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 2,
+     "first": 0,
+     "answer": 8
+    }
+   },
+   "key": "I",
+   "options": [
+    {
+     "value": "I",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "K",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Y",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "J",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-08",
+   "status": "LIVE",
+   "questionType": "vr-09-letter-series",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "B",
+     "E",
+     "H",
+     "K"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 3,
+     "first": 1,
+     "answer": 13
+    }
+   },
+   "key": "N",
+   "options": [
+    {
+     "value": "N",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Q",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Y",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "O",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-09",
+   "status": "LIVE",
+   "questionType": "vr-09-letter-series",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "C",
+     "F",
+     "I",
+     "L"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 3,
+     "first": 2,
+     "answer": 14
+    }
+   },
+   "key": "O",
+   "options": [
+    {
+     "value": "O",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "R",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Z",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "P",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-10",
+   "status": "LIVE",
+   "questionType": "vr-09-letter-series",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "D",
+     "E",
+     "F",
+     "G"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 1,
+     "first": 3,
+     "answer": 7
+    }
+   },
+   "key": "H",
+   "options": [
+    {
+     "value": "H",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "I",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "C",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "G",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-11",
+   "status": "LIVE",
+   "questionType": "vr-09-letter-series",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "E",
+     "H",
+     "K",
+     "N"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 3,
+     "first": 4,
+     "answer": 16
+    }
+   },
+   "key": "Q",
+   "options": [
+    {
+     "value": "Q",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "T",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "B",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "R",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-12",
+   "status": "LIVE",
+   "questionType": "vr-09-letter-series",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "F",
+     "J",
+     "N",
+     "R"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 4,
+     "first": 5,
+     "answer": 21
+    }
+   },
+   "key": "V",
+   "options": [
+    {
+     "value": "V",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Z",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "B",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "W",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-13",
+   "status": "LIVE",
+   "questionType": "vr-09-letter-series",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "A",
+     "B",
+     "C",
+     "D"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 1,
+     "first": 0,
+     "answer": 4
+    }
+   },
+   "key": "E",
+   "options": [
+    {
+     "value": "E",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "F",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Z",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "D",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-14",
+   "status": "LIVE",
+   "questionType": "vr-09-letter-series",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "B",
+     "D",
+     "F",
+     "H"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 2,
+     "first": 1,
+     "answer": 9
+    }
+   },
+   "key": "J",
+   "options": [
+    {
+     "value": "J",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "L",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Z",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "K",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-15",
+   "status": "LIVE",
+   "questionType": "vr-09-letter-series",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "C",
+     "G",
+     "K",
+     "O"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 4,
+     "first": 2,
+     "answer": 18
+    }
+   },
+   "key": "S",
+   "options": [
+    {
+     "value": "S",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "W",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Y",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "T",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-16",
+   "status": "LIVE",
+   "questionType": "vr-09-letter-series",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "D",
+     "F",
+     "H",
+     "J"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 2,
+     "first": 3,
+     "answer": 11
+    }
+   },
+   "key": "L",
+   "options": [
+    {
+     "value": "L",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "N",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "B",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "M",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-17",
+   "status": "LIVE",
+   "questionType": "vr-09-letter-series",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "E",
+     "G",
+     "I",
+     "K"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 2,
+     "first": 4,
+     "answer": 12
+    }
+   },
+   "key": "M",
+   "options": [
+    {
+     "value": "M",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "O",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "C",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "N",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-18",
+   "status": "LIVE",
+   "questionType": "vr-09-letter-series",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "F",
+     "I",
+     "L",
+     "O"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 3,
+     "first": 5,
+     "answer": 17
+    }
+   },
+   "key": "R",
+   "options": [
+    {
+     "value": "R",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "U",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "C",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "S",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-19",
+   "status": "LIVE",
+   "questionType": "vr-09-letter-series",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "A",
+     "C",
+     "E",
+     "G"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 2,
+     "first": 0,
+     "answer": 8
+    }
+   },
+   "key": "I",
+   "options": [
+    {
+     "value": "I",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "K",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Y",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "J",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-20",
+   "status": "LIVE",
+   "questionType": "vr-09-letter-series",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "B",
+     "E",
+     "H",
+     "K"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 3,
+     "first": 1,
+     "answer": 13
+    }
+   },
+   "key": "N",
+   "options": [
+    {
+     "value": "N",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Q",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Y",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "O",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-21",
+   "status": "LIVE",
+   "questionType": "vr-09-letter-series",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "C",
+     "F",
+     "I",
+     "L"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 3,
+     "first": 2,
+     "answer": 14
+    }
+   },
+   "key": "O",
+   "options": [
+    {
+     "value": "O",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "R",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Z",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "P",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-22",
+   "status": "LIVE",
+   "questionType": "vr-09-letter-series",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "D",
+     "E",
+     "F",
+     "G"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 1,
+     "first": 3,
+     "answer": 7
+    }
+   },
+   "key": "H",
+   "options": [
+    {
+     "value": "H",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "I",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "C",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "G",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-23",
+   "status": "LIVE",
+   "questionType": "vr-09-letter-series",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "E",
+     "H",
+     "K",
+     "N"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 3,
+     "first": 4,
+     "answer": 16
+    }
+   },
+   "key": "Q",
+   "options": [
+    {
+     "value": "Q",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "T",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "B",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "R",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-24",
+   "status": "LIVE",
+   "questionType": "vr-09-letter-series",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "F",
+     "J",
+     "N",
+     "R"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 4,
+     "first": 5,
+     "answer": 21
+    }
+   },
+   "key": "V",
+   "options": [
+    {
+     "value": "V",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Z",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "B",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "W",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-25",
+   "status": "LIVE",
+   "questionType": "vr-09-letter-series",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "A",
+     "B",
+     "C",
+     "D"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 1,
+     "first": 0,
+     "answer": 4
+    }
+   },
+   "key": "E",
+   "options": [
+    {
+     "value": "E",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "F",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Z",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "D",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "carriesThisEntry": false
+    }
+   ]
+  }
+ ]
+}

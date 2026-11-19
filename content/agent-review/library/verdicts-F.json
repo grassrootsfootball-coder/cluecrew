@@ -1,0 +1,66 @@
+{
+  "reviewer": "rev-agent-01",
+  "group": "F",
+  "screened": {
+    "entries": 3,
+    "perEntry": {
+      "en-contradicted-by-the-text": { "packetCarriers": 6, "retagSeats": 23, "total": 29 },
+      "en-technique-intent-as-character": { "packetCarriers": 0, "retagSeats": 3, "total": 3 },
+      "en-technique-structure-effect-blind": { "packetCarriers": 0, "retagSeats": 3, "total": 3 }
+    },
+    "carrierRowsRead": 35,
+    "sources": "Packet carriers from content/agent-review/library/<entry>.json; retag seats are every seat in content/agent-review/retag/proposals.json whose tag is one of these three entries (29 seats), with stem, key and siblings from content/agent-review/retag/packet.json, and the cited lines read from the passage in content/agent-review/english/<passageRef>.json. stream-b-01 (ENG-028) has no passage file there; those 4 carriers were judged on their recorded executions only.",
+    "countNote": "The brief said en-contradicted-by-the-text receives 24 seats. proposals.json holds 23 seats with that tag (grep count 23). ENG-005-BB-10 holds two seats on different options, one for en-contradicted-by-the-text and one for en-technique-intent-as-character; that may be the source of the 24. Nothing was invented to reach 24.",
+    "approvalState": "None of the three entries has a real approval: en-contradicted-by-the-text has approvedBy null; the other two carry the placeholder 'current-reviewer', which resolves to no reviewer."
+  },
+  "entries": [
+    {
+      "id": "en-contradicted-by-the-text",
+      "verdict": "REFUSE",
+      "reason": "Pass 1: 'One line in the passage says something different.' asserts that the contrary sits in ONE line. On ENG-017-CR-03 the option makes two claims refuted in two separate places (line 41, the Captain still defending Boz; line 49, Miss Jenkyns preferring Johnson), and on ENG-019-BV-02 likewise (line 5, Mark refuses to go; line 6, the tench swims off). On nine more carriers the refuting sentence runs across a printed line break, so a child counting numbered lines finds it in two or more (ENG-002-pp-16 48-49, ENG-002-pp-20 66-67, ENG-006-TM-06 26-27, ENG-006-TM-11 62-63, ENG-007-LP-06 30-32, ENG-005-BB-11 55-58, ENG-013-TI-05 21-22, ENG-013-TI-12 11-12, ENG-025-LW-06 66-67). 'Go back and find it.' describes a move and holds on all 29. In the description, 'explicitly denies' is false on two carriers, ENG-001-WIW-21 and ENG-023-RT-02. Their own executions are inferences, not stated contraries, and both are listed as misfiled. That is an item fault, so the description is left alone. Pass 2: once the line count is dropped, the hint is short (5 and 5 words) and ends on full stops. It tells a child who picked a contradicted option the one useful thing: the text says otherwise, so go and find where. It is general but not empty, because it points to the passage and not to the child's sense of what sounds likely. The other 21 of the 23 retag seats really do make this mistake: each option states a claim the cited lines state the contrary of.",
+      "assertionClauses": [
+        { "clause": "One line in the passage says something different.", "falseOn": ["ENG-017-CR-03", "ENG-019-BV-02"] },
+        { "clause": "Go back and find it.", "falseOn": [] },
+        { "clause": "Chooses an option the passage explicitly denies (description)", "falseOn": ["ENG-001-WIW-21", "ENG-023-RT-02"] },
+        { "clause": "here the passage states the contrary (description)", "falseOn": ["ENG-001-WIW-21", "ENG-023-RT-02"] }
+      ],
+      "transforms": [
+        { "field": "childHint", "from": "One line in the passage says", "to": "The passage says" }
+      ],
+      "misfiledCarriers": [
+        { "itemId": "ENG-001-WIW-21", "option": "He was already wishing he was back in his own house.", "why": "The packet's own execution begins 'Nothing says he wants to go home'. Calling it 'a wonderful day' at line 66 does not state that he is not homesick. This is en-plausible-not-stated, not a stated contrary." },
+        { "itemId": "ENG-023-RT-02", "option": "Nag was afraid of him on the day the flood washed him up.", "why": "No line denies Nag's fear on the flood day. The option moves Nag's fear from line 71 back to lines 8-12, and the contrary is only inferred from line 69, 'never met a live cobra'. This is a fact displaced in time. en-chronology-collapse (a cause placed after its effect) does not fit either, so it belongs with the time-displacement class in proposals.json noEntry." }
+      ]
+    },
+    {
+      "id": "en-technique-intent-as-character",
+      "verdict": "ATTEST",
+      "reason": "Pass 1: 'Is it the writer, or the character?' assumes the option names a character's state. That is true on all 3 carriers: ENG-001-WIW-13 (the Mole thought a big animal was in front of him), ENG-001-WIW-16 (the Mole was afraid) and ENG-005-BB-10 (Beauty was growing tired, and Beauty is the narrating character). The description's 'treating the writer's choice as the character's state' is true on all 3. 'the boy feels tense' is an illustrative example, not a claim about the carriers. Pass 2: 'Ask who is doing this.' lines up with every carrier's stem, which asks why THE WRITER does this or writes it that way. So 'this' has a clear referent, and the move of telling the writer's choice apart from the character's state is exactly what separates each key from its carrying option. The sentences are 5 and 7 words, end on '.' and '?', and use British English. All 3 carriers make this mistake. ENG-005-BB-10's other seat (option 'To show the storm was still getting worse.') goes to en-contradicted-by-the-text, not here.",
+      "assertionClauses": [
+        { "clause": "Ask who is doing this.", "falseOn": [] },
+        { "clause": "Is it the writer, or the character?", "falseOn": [] },
+        { "clause": "treating the writer's choice as the character's state (description)", "falseOn": [] }
+      ],
+      "transforms": [],
+      "misfiledCarriers": []
+    },
+    {
+      "id": "en-technique-structure-effect-blind",
+      "verdict": "REFUSE",
+      "reason": "Pass 1: the entry was written for a SHORT SENTENCE, and none of its 3 incoming carriers has one. In the description, 'a paraphrase of the short sentence' and 'its shortness makes the moment land suddenly' are false on all 3: ENG-002-pp-07 is about a number that shrinks across lines 17-23, ENG-006-TM-07 about a count that piles up across lines 27-29, and ENG-007-LP-12 about a whole passage that withholds thoughts. In the hint, 'Notice how long it is' and 'What does that length do?' assert that length is the feature. That is false on ENG-002-pp-07, where the pattern is in the numbers, and on ENG-007-LP-12, where it is what is left out. It roughly holds on ENG-006-TM-07, where the growing list is a kind of length. 'not just what it says' describes the move and holds on all 3. The reviewer's approvalNote says the entry exists because 'one-word paragraphs and lists of three were untaggable', so the intended population is structure in general, and the length-only wording is narrower than its own purpose. Pass 2: after the transforms the hint names the move (look at how it is built, not just at its content, then ask what that does). It is 12 and 7 words, ends on '.' and '?', and fits pp-07 and TM-07. ENG-007-LP-12 is listed as misfiled.",
+      "assertionClauses": [
+        { "clause": "Notice how long it is, not just what it says.", "falseOn": ["ENG-002-pp-07", "ENG-007-LP-12"] },
+        { "clause": "What does that length do?", "falseOn": ["ENG-002-pp-07", "ENG-007-LP-12"] },
+        { "clause": "Child gives a paraphrase of the short sentence where the answer is that its shortness makes the moment land suddenly (description)", "falseOn": ["ENG-002-pp-07", "ENG-006-TM-07", "ENG-007-LP-12"] }
+      ],
+      "transforms": [
+        { "field": "childHint", "from": "how long it is", "to": "how the writer has built it" },
+        { "field": "childHint", "from": "What does that length do?", "to": "What does that do for the reader?" },
+        { "field": "description", "from": "a paraphrase of the short sentence where the answer is that its shortness makes the moment land suddenly", "to": "what the words say where the answer is what their shape does (a short sentence makes a moment land suddenly; a count that grows or shrinks builds a pattern)" }
+      ],
+      "misfiledCarriers": [
+        { "itemId": "ENG-007-LP-12", "option": "He describes only the old clothes, and so we get nothing else.", "why": "The question asks how feeling is shown without being told, which is indirect characterisation and not the shape of a sentence or list. The option borrows the key's 'only ... the things he handles' frame and points it at the wrong things. That is en-inference-literal-lookalike, its current tag, and no structural effect is involved." }
+      ]
+    }
+  ]
+}

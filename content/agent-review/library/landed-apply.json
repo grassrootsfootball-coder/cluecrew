@@ -21,15 +21,7 @@
  },
  {
   "id": "en-chronology-collapse",
-  "outcome": "TRANSFORMED + ATTESTED",
-  "before": {
-   "childHint": "Check what happened first, and what the question asks for.",
-   "description": "The child picks a cause that happens LATER in the passage than the effect being asked about. The two events are both real and both about the same people, so the option reads well; only the order rules it out. Currently split across en-cause-agent-swap and en-wrong-scope-retrieval, neither of which names the time error."
-  },
-  "after": {
-   "description": "The child picks a cause that happens LATER in the passage than the effect being asked about. The two events are both real and both about the same people, so the option reads well; only the order rules it out.",
-   "childHint": "Check what happened first, and what the question asks for."
-  }
+  "outcome": "already attested"
  },
  {
   "id": "en-cause-agent-swap",
@@ -101,6 +93,170 @@
  },
  {
   "id": "vr03-wrong-degree",
+  "outcome": "already attested"
+ },
+ {
+  "id": "en-contradicted-by-the-text",
+  "outcome": "already attested"
+ },
+ {
+  "id": "en-technique-intent-as-character",
+  "outcome": "already attested"
+ },
+ {
+  "id": "en-technique-structure-effect-blind",
+  "outcome": "already attested"
+ },
+ {
+  "id": "en-a-an-by-spelling",
+  "outcome": "already attested"
+ },
+ {
+  "id": "en-apostrophe-possession",
+  "outcome": "held: transform not independently attested (no check)"
+ },
+ {
+  "id": "en-article-definiteness",
+  "outcome": "already attested"
+ },
+ {
+  "id": "en-comma-subject-verb-split",
+  "outcome": "already attested"
+ },
+ {
+  "id": "en-conjunction-logic",
+  "outcome": "already attested"
+ },
+ {
+  "id": "en-contraction-apostrophe",
+  "outcome": "already attested"
+ },
+ {
+  "id": "en-double-consonant-boundary",
+  "outcome": "held: transform not independently attested (no check)"
+ },
+ {
+  "id": "en-homophone-by-sound",
+  "outcome": "already attested"
+ },
+ {
+  "id": "en-modal-conditional-form",
+  "outcome": "held: transform not independently attested (no check)"
+ },
+ {
+  "id": "en-n-option-avoidance",
+  "outcome": "already attested"
+ },
+ {
+  "id": "en-paired-punctuation",
+  "outcome": "held: transform not independently attested (no check)"
+ },
+ {
+  "id": "en-preposition-collocation",
+  "outcome": "held: transform not independently attested (no check)"
+ },
+ {
+  "id": "en-question-tag-polarity",
+  "outcome": "already attested"
+ },
+ {
+  "id": "en-silent-letter-dropped",
+  "outcome": "already attested"
+ },
+ {
+  "id": "en-speech-punctuation-inside",
+  "outcome": "already attested"
+ },
+ {
+  "id": "en-spelling-form-lookalike",
+  "outcome": "already attested"
+ },
+ {
+  "id": "en-tense-sequence",
+  "outcome": "held: transform not independently attested (no check)"
+ },
+ {
+  "id": "en-terminal-punctuation-blind",
+  "outcome": "held: transform not independently attested (no check)"
+ },
+ {
+  "id": "en-unstressed-medial-vowel",
+  "outcome": "already attested"
+ },
+ {
+  "id": "en-unstressed-suffix-vowel",
+  "outcome": "held: transform not independently attested (no check)"
+ },
+ {
+  "id": "en-word-class-by-ending",
+  "outcome": "held: transform not independently attested (no check)"
+ },
+ {
+  "id": "vr14-step-size",
+  "outcome": "TRANSFORMED + ATTESTED",
+  "before": {
+   "childHint": "Count each hop along the alphabet. Say the number of steps out loud.",
+   "description": "Counted the jump one letter short or long."
+  },
+  "after": {
+   "description": "Counted the jump one letter short or long.",
+   "childHint": "Count each hop along the alphabet. Then make the same number of hops from the new letter."
+  }
+ },
+ {
+  "id": "vr-letter-series-direction",
+  "outcome": "already attested"
+ },
+ {
+  "id": "vr-letter-series-off-by-one",
+  "outcome": "TRANSFORMED + ATTESTED",
+  "before": {
+   "childHint": "So close — use the alphabet line and count each letter out loud.",
+   "description": "Correct rule, but landed one letter short or long."
+  },
+  "after": {
+   "description": "Correct rule, but landed one letter short or long.",
+   "childHint": "Count along the alphabet again. Land one letter at a time."
+  }
+ },
+ {
+  "id": "en-evidence-vividness-bias",
+  "outcome": "held: transform not independently attested (REFUSE)"
+ },
+ {
+  "id": "en-technique-device-confusion",
+  "outcome": "already attested"
+ },
+ {
+  "id": "en-technique-effect-mislocated",
+  "outcome": "TRANSFORMED + ATTESTED",
+  "before": {
+   "childHint": "Find the exact words the question quotes. Answer about those words only.",
+   "description": "Child gives the effect of the sentence before where the answer is the effect of the quoted phrase, reading past the words under test."
+  },
+  "after": {
+   "description": "Child gives the effect of an earlier or neighbouring part of the passage where the answer is the effect of the quoted phrase, reading past the words under test.",
+   "childHint": "Find the exact words the question quotes. Answer about those words only."
+  }
+ },
+ {
+  "id": "leading-zero-repaired-ordering-not",
+  "outcome": "already attested"
+ },
+ {
+  "id": "maximum-given-for-a-sum",
+  "outcome": "already attested"
+ },
+ {
+  "id": "ordering-goal-reversed",
+  "outcome": "already attested"
+ },
+ {
+  "id": "percentage-never-divided-by-hundred",
+  "outcome": "already attested"
+ },
+ {
+  "id": "side-recounted-from-a-reached-corner",
   "outcome": "already attested"
  }
 ]

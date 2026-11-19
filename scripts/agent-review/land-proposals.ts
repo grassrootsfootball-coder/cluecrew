@@ -65,6 +65,8 @@ async function main() {
   const lex = loadChildLexicon();
   const isWord = (w: string) => lex.knows(w) || lex.knowsBare(w);
   const tags = new Set(Object.keys(packet.entries));
+  // A tag a child can be served must be ATTESTED — by the person or the machine reviewer, never a placeholder (R94).
+  const attested = new Set((await prisma.misconception.findMany({ where: { status: 'ACTIVE', approvedBy: { in: ['reviewer:rev-0001', 'reviewer:rev-agent-01'] } }, select: { id: true } })).map((m) => m.id));
 
   // Build every touched row AS IT WILL BE.
   const touched = new Set<string>([...(prop.seats ?? []), ...(prop.redrafts ?? []), ...(prop.rebuilds ?? [])].map((x) => x.itemId));
@@ -119,6 +121,7 @@ async function main() {
       fault(r.id, `child-facing: ${JSON.stringify(f).slice(0, 200)}`);
     for (const o of r.options.filter((x) => !x.isKey)) {
       if (!o.tag || !tags.has(o.tag)) fault(r.id, `${o.value}: tag ${o.tag} is not one of this door's entries`);
+      else if (!attested.has(o.tag)) fault(r.id, `${o.value}: tag ${o.tag} is not attested — attest the library entry first`);
       if (!o.execution || o.execution.length < 40) fault(r.id, `${o.value}: no execution`);
       if (o.tag && o.tag in TAG_PREDICATES) {
         const g = checkTagWrite({ stem: r.stem, optionValue: o.value, keyValue, misconceptionId: o.tag }, isWord);

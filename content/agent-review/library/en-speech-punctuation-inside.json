@@ -1,0 +1,66 @@
+{
+ "entry": {
+  "id": "en-speech-punctuation-inside",
+  "status": "ACTIVE",
+  "district": "ENGLISH",
+  "category": null,
+  "description": "Places a quoted question's mark outside the speech marks.",
+  "childHint": "The question belongs to the spoken words. Keep the mark inside.",
+  "approvedBy": "human:staff-reviewer@cluecrew.test",
+  "approvalMethod": "written review 2026-08-02",
+  "approvalNote": "Cleared on the printed review pack; returned marked up.",
+  "textProvenance": {
+   "note": "Ruled when written; absent from the store until now (R403/R410).",
+   "state": "RECORDED",
+   "appliedOn": "2026-08-22",
+   "authority": "annie-fiftyfirst-return.md, read from the file, sha256 c35cdc66776bd6897997f0f33a0e269a446ab5e8a4ce661c8ee2f4c7b8bf1a2d",
+   "approvedByPerson": "Annie"
+  }
+ },
+ "carrierCount": 1,
+ "carriers": [
+  {
+   "itemId": "ENG-003-A-PU-06",
+   "status": "LIVE",
+   "questionType": "en-spag-punct-spot",
+   "stem": {
+    "text": "Read the sentence. One part may have a punctuation mistake. Which part is it? If every part is right, choose No mistake.",
+    "segmentsInOptions": true
+   },
+   "key": "“Has anyone seen my whistle”?",
+   "options": [
+    {
+     "value": "“Has anyone seen my whistle”?",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "asked Mr Doyle,",
+     "isKey": false,
+     "tag": "en-comma-subject-verb-split",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "who was searching under the bibs,",
+     "isKey": false,
+     "tag": "en-paired-punctuation",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "the cones and the spare bags.",
+     "isKey": false,
+     "tag": "en-paired-punctuation",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "No mistake",
+     "isKey": false,
+     "tag": "en-speech-punctuation-inside",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  }
+ ]
+}

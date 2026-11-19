@@ -1,0 +1,157 @@
+{
+ "entry": {
+  "id": "en-silent-letter-dropped",
+  "status": "ACTIVE",
+  "district": "ENGLISH",
+  "category": null,
+  "description": "Drops silent letters when spelling.",
+  "childHint": "A letter can be there without being heard. Spell it out, do not sound it out.",
+  "approvedBy": "human:staff-reviewer@cluecrew.test",
+  "approvalMethod": "written review 2026-08-02",
+  "approvalNote": "Cleared on the printed review pack; returned marked up.",
+  "textProvenance": {
+   "note": "Ruled when written; absent from the store until now (R403/R410).",
+   "state": "RECORDED",
+   "appliedOn": "2026-08-22",
+   "authority": "annie-sixtyfourth-return (1).md, read from the file, sha256 e38bef6119ea210952df3ab39233c64df92e7448f1cb80bfc654c2af50923742",
+   "approvedByPerson": "Annie"
+  }
+ },
+ "carrierCount": 3,
+ "carriers": [
+  {
+   "itemId": "ENG-003-A-SP-03",
+   "status": "LIVE",
+   "questionType": "en-spag-spelling-spot",
+   "stem": {
+    "text": "Read the sentence. One part may have a spelling mistake. Which part is it? If every part is right, choose No mistake.",
+    "segmentsInOptions": true
+   },
+   "key": "On Wenesday the whole school",
+   "options": [
+    {
+     "value": "On Wenesday the whole school",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "gathered in the school hall,",
+     "isKey": false,
+     "tag": "en-homophone-by-sound",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "listened to a talk about knights,",
+     "isKey": false,
+     "tag": "en-silent-letter-dropped",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "and wrote a short list of questions.",
+     "isKey": false,
+     "tag": "en-silent-letter-dropped",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "No mistake",
+     "isKey": false,
+     "tag": "en-silent-letter-dropped",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-003-A-SP-05",
+   "status": "LIVE",
+   "questionType": "en-spag-spelling-spot",
+   "stem": {
+    "text": "Read the sentence. One part may have a spelling mistake. Which part is it? If every part is right, choose No mistake.",
+    "segmentsInOptions": true
+   },
+   "key": "At the begining of term,",
+   "options": [
+    {
+     "value": "At the begining of term,",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Toby was allowed to borrow",
+     "isKey": false,
+     "tag": "en-homophone-by-sound",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "the good scissors,",
+     "isKey": false,
+     "tag": "en-silent-letter-dropped",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "and he stopped to thank the office staff.",
+     "isKey": false,
+     "tag": "en-double-consonant-boundary",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "No mistake",
+     "isKey": false,
+     "tag": "en-double-consonant-boundary",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-003-A-SP-06",
+   "status": "LIVE",
+   "questionType": "en-spag-spelling-spot",
+   "stem": {
+    "text": "Read the sentence. One part may have a spelling mistake. Which part is it? If every part is right, choose No mistake.",
+    "correctionOf": [
+     "Dictionary"
+    ],
+    "segmentsInOptions": true
+   },
+   "key": "The librarian showed us the new dictionery,",
+   "options": [
+    {
+     "value": "The librarian showed us the new dictionery,",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "explained the difference",
+     "isKey": false,
+     "tag": "en-unstressed-suffix-vowel",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "between the science and history shelves,",
+     "isKey": false,
+     "tag": "en-silent-letter-dropped",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "and gave everyone a temporary pass.",
+     "isKey": false,
+     "tag": "en-unstressed-suffix-vowel",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "No mistake",
+     "isKey": false,
+     "tag": "en-unstressed-suffix-vowel",
+     "carriesThisEntry": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,97 @@
+{
+ "entry": {
+  "id": "en-conjunction-logic",
+  "status": "ACTIVE",
+  "district": "ENGLISH",
+  "category": null,
+  "description": "Chooses a conjunction with the wrong logical relation.",
+  "childHint": "Is the second idea a reason, a surprise, or just what happened next?",
+  "approvedBy": "human:staff-reviewer@cluecrew.test",
+  "approvalMethod": "written review 2026-08-02",
+  "approvalNote": "Cleared on the printed review pack; returned marked up.",
+  "textProvenance": null
+ },
+ "carrierCount": 2,
+ "carriers": [
+  {
+   "itemId": "ENG-003-A-CZ-A3",
+   "status": "LIVE",
+   "questionType": "en-spag-cloze",
+   "stem": {
+    "text": "Choose the words that fit best.  —  “You cannot fix the whole school,” said Dev, “___ the bins have been like that since Year 3.”",
+    "gapIndex": 3,
+    "passageRef": "cloze-eng003-a-eco-club"
+   },
+   "key": "because",
+   "options": [
+    {
+     "value": "because",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "although",
+     "isKey": false,
+     "tag": "en-conjunction-logic",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "unless",
+     "isKey": false,
+     "tag": "en-conjunction-logic",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "whereas",
+     "isKey": false,
+     "tag": "en-conjunction-logic",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-003-A-CZ-B1",
+   "status": "LIVE",
+   "questionType": "en-spag-cloze",
+   "stem": {
+    "text": "Choose the words that fit best.  — The field had flooded on Thursday, ___ the caretaker spent Friday morning sweeping water off the running track.",
+    "gapIndex": 1,
+    "passageRef": "cloze-eng003-b-sports-day"
+   },
+   "key": "so",
+   "options": [
+    {
+     "value": "so",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "but",
+     "isKey": false,
+     "tag": "en-conjunction-logic",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "although",
+     "isKey": false,
+     "tag": "en-conjunction-logic",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "unless",
+     "isKey": false,
+     "tag": "en-conjunction-logic",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  }
+ ]
+}

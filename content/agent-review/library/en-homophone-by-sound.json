@@ -1,0 +1,276 @@
+{
+ "entry": {
+  "id": "en-homophone-by-sound",
+  "status": "ACTIVE",
+  "district": "ENGLISH",
+  "category": null,
+  "description": "Spells the wrong member of a homophone pair; their/there/they're.",
+  "childHint": "Sound will not help with sound-alike words. Work out the meaning, then spell it from that.",
+  "approvedBy": "human:staff-reviewer@cluecrew.test",
+  "approvalMethod": "written review 2026-08-02",
+  "approvalNote": "Cleared on the printed review pack; returned marked up.",
+  "textProvenance": {
+   "note": "Ruled when written; absent from the store until now (R403/R410).",
+   "state": "RECORDED",
+   "appliedOn": "2026-08-22",
+   "authority": "annie-sixtyfourth-return (1).md, read from the file, sha256 e38bef6119ea210952df3ab39233c64df92e7448f1cb80bfc654c2af50923742",
+   "approvedByPerson": "Annie"
+  }
+ },
+ "carrierCount": 6,
+ "carriers": [
+  {
+   "itemId": "ENG-003-A-CZ-A6",
+   "status": "LIVE",
+   "questionType": "en-spag-cloze",
+   "stem": {
+    "text": "Choose the words that fit best.  —  “Those are library books. ___ not rubbish,” he said quietly.",
+    "gapIndex": 6,
+    "passageRef": "cloze-eng003-a-eco-club"
+   },
+   "key": "They’re",
+   "options": [
+    {
+     "value": "There",
+     "isKey": false,
+     "tag": "en-homophone-by-sound",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "Their",
+     "isKey": false,
+     "tag": "en-homophone-by-sound",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "They’re",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Theirs",
+     "isKey": false,
+     "tag": "en-homophone-by-sound",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-003-A-CZ-B7",
+   "status": "LIVE",
+   "questionType": "en-spag-cloze",
+   "stem": {
+    "text": "Choose the words that fit best.  —  “___ going to do it!” shouted Priya.",
+    "gapIndex": 7,
+    "passageRef": "cloze-eng003-b-sports-day"
+   },
+   "key": "You’re",
+   "options": [
+    {
+     "value": "Your",
+     "isKey": false,
+     "tag": "en-homophone-by-sound",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "You’re",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Yours",
+     "isKey": false,
+     "tag": "en-homophone-by-sound",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "Youre",
+     "isKey": false,
+     "tag": "en-contraction-apostrophe",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-003-A-SP-01",
+   "status": "LIVE",
+   "questionType": "en-spag-spelling-spot",
+   "stem": {
+    "text": "Read the sentence. One part may have a spelling mistake. Which part is it? If every part is right, choose No mistake.",
+    "segmentsInOptions": true
+   },
+   "key": "The twins left there lunch boxes",
+   "options": [
+    {
+     "value": "The twins left there lunch boxes",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "beside the quiet library door,",
+     "isKey": false,
+     "tag": "en-spelling-form-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "then walked past the office",
+     "isKey": false,
+     "tag": "en-homophone-by-sound",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "and hurried to the netball court.",
+     "isKey": false,
+     "tag": "en-double-consonant-boundary",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "No mistake",
+     "isKey": false,
+     "tag": "en-homophone-by-sound",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-003-A-SP-03",
+   "status": "LIVE",
+   "questionType": "en-spag-spelling-spot",
+   "stem": {
+    "text": "Read the sentence. One part may have a spelling mistake. Which part is it? If every part is right, choose No mistake.",
+    "segmentsInOptions": true
+   },
+   "key": "On Wenesday the whole school",
+   "options": [
+    {
+     "value": "On Wenesday the whole school",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "gathered in the school hall,",
+     "isKey": false,
+     "tag": "en-homophone-by-sound",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "listened to a talk about knights,",
+     "isKey": false,
+     "tag": "en-silent-letter-dropped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "and wrote a short list of questions.",
+     "isKey": false,
+     "tag": "en-silent-letter-dropped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "No mistake",
+     "isKey": false,
+     "tag": "en-silent-letter-dropped",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-003-A-SP-04",
+   "status": "LIVE",
+   "questionType": "en-spag-spelling-spot",
+   "stem": {
+    "text": "Read the sentence. One part may have a spelling mistake. Which part is it? If every part is right, choose No mistake.",
+    "segmentsInOptions": true
+   },
+   "key": "because of the wet whether,",
+   "options": [
+    {
+     "value": "The netball match was cancelled",
+     "isKey": false,
+     "tag": "en-double-consonant-boundary",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "because of the wet whether,",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "so Mrs Dean pinned a new date",
+     "isKey": false,
+     "tag": "en-double-consonant-boundary",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "on the notice board.",
+     "isKey": false,
+     "tag": "en-homophone-by-sound",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "No mistake",
+     "isKey": false,
+     "tag": "en-homophone-by-sound",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-003-A-SP-05",
+   "status": "LIVE",
+   "questionType": "en-spag-spelling-spot",
+   "stem": {
+    "text": "Read the sentence. One part may have a spelling mistake. Which part is it? If every part is right, choose No mistake.",
+    "segmentsInOptions": true
+   },
+   "key": "At the begining of term,",
+   "options": [
+    {
+     "value": "At the begining of term,",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Toby was allowed to borrow",
+     "isKey": false,
+     "tag": "en-homophone-by-sound",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "the good scissors,",
+     "isKey": false,
+     "tag": "en-silent-letter-dropped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "and he stopped to thank the office staff.",
+     "isKey": false,
+     "tag": "en-double-consonant-boundary",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "No mistake",
+     "isKey": false,
+     "tag": "en-double-consonant-boundary",
+     "carriesThisEntry": false
+    }
+   ]
+  }
+ ]
+}

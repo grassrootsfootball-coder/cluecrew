@@ -1,0 +1,116 @@
+{
+ "entry": {
+  "id": "en-unstressed-suffix-vowel",
+  "status": "ACTIVE",
+  "district": "ENGLISH",
+  "category": null,
+  "description": "Guesses between -ant/-ent, -ance/-ence, -ary/-ory/-ery.",
+  "childHint": "Say a word from the same family with that ending stressed. Now you can hear the vowel.",
+  "approvedBy": "human:staff-reviewer@cluecrew.test",
+  "approvalMethod": "written review 2026-08-02",
+  "approvalNote": "Cleared on the printed review pack; returned marked up.",
+  "textProvenance": {
+   "note": "Ruled when written; absent from the store until now (R403/R410).",
+   "state": "RECORDED",
+   "appliedOn": "2026-08-22",
+   "authority": "annie-fiftyfirst-return.md, read from the file, sha256 c35cdc66776bd6897997f0f33a0e269a446ab5e8a4ce661c8ee2f4c7b8bf1a2d",
+   "approvedByPerson": "Annie"
+  }
+ },
+ "carrierCount": 2,
+ "carriers": [
+  {
+   "itemId": "ENG-003-A-SP-02",
+   "status": "LIVE",
+   "questionType": "en-spag-spelling-spot",
+   "stem": {
+    "text": "Read the sentence. One part may have a spelling mistake. Which part is it? If every part is right, choose No mistake.",
+    "segmentsInOptions": true
+   },
+   "key": "Ravi gave an excellant answer,",
+   "options": [
+    {
+     "value": "Ravi gave an excellant answer,",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "thanked the assistant kindly,",
+     "isKey": false,
+     "tag": "en-unstressed-suffix-vowel",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "then slipped back to his seat",
+     "isKey": false,
+     "tag": "en-double-consonant-boundary",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "with a confident smile.",
+     "isKey": false,
+     "tag": "en-unstressed-suffix-vowel",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "No mistake",
+     "isKey": false,
+     "tag": "en-unstressed-suffix-vowel",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-003-A-SP-06",
+   "status": "LIVE",
+   "questionType": "en-spag-spelling-spot",
+   "stem": {
+    "text": "Read the sentence. One part may have a spelling mistake. Which part is it? If every part is right, choose No mistake.",
+    "correctionOf": [
+     "Dictionary"
+    ],
+    "segmentsInOptions": true
+   },
+   "key": "The librarian showed us the new dictionery,",
+   "options": [
+    {
+     "value": "The librarian showed us the new dictionery,",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "explained the difference",
+     "isKey": false,
+     "tag": "en-unstressed-suffix-vowel",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "between the science and history shelves,",
+     "isKey": false,
+     "tag": "en-silent-letter-dropped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "and gave everyone a temporary pass.",
+     "isKey": false,
+     "tag": "en-unstressed-suffix-vowel",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "No mistake",
+     "isKey": false,
+     "tag": "en-unstressed-suffix-vowel",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,64 @@
+{
+ "entry": {
+  "id": "en-modal-conditional-form",
+  "status": "ACTIVE",
+  "district": "ENGLISH",
+  "category": null,
+  "description": "Mismatches the modal to its if-clause, or builds an impossible modal form: 'if we painted ... people will know', 'would knew', 'would be knowing'.",
+  "childHint": "An imagined if takes 'would'. A real if takes 'will'.",
+  "approvedBy": "human:staff-reviewer@cluecrew.test",
+  "approvalMethod": "written review 2026-08-03",
+  "approvalNote": "Second-pass returns: ten new proposals cleared, WIW-14 stem rewritten, mistag check completed across the remaining 69.",
+  "textProvenance": {
+   "note": "Ruled when written; never reached the store until now (R403).",
+   "state": "RECORDED",
+   "method": "authored by the reviewer in her return; applied verbatim",
+   "appliedOn": "2026-08-21",
+   "authority": "annie-eng003-second-return.md, read from the file, sha256 90bd5b1ee56790d4aa202401e2095f07215953704d9ecc30d6251e6a597bb7ac",
+   "approvedByPerson": "Annie"
+  }
+ },
+ "carrierCount": 1,
+ "carriers": [
+  {
+   "itemId": "ENG-003-A-CZ-A7",
+   "status": "LIVE",
+   "questionType": "en-spag-cloze",
+   "stem": {
+    "text": "Choose the words that fit best.  —  “If we painted a picture on every lid,” Maya said, “people ___ exactly where things go.”",
+    "gapIndex": 7,
+    "passageRef": "cloze-eng003-a-eco-club"
+   },
+   "key": "would know",
+   "options": [
+    {
+     "value": "will know",
+     "isKey": false,
+     "tag": "en-modal-conditional-form",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "would know",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "would have known",
+     "isKey": false,
+     "tag": "en-modal-conditional-form",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "would be knowing",
+     "isKey": false,
+     "tag": "en-modal-conditional-form",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  }
+ ]
+}

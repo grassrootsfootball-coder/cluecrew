@@ -1,0 +1,1222 @@
+{
+ "entry": {
+  "id": "vr14-step-size",
+  "status": "ACTIVE",
+  "district": "VR",
+  "category": null,
+  "description": "Counted the jump one letter short or long.",
+  "childHint": "Count each hop along the alphabet. Say the number of steps out loud.",
+  "approvedBy": null,
+  "approvalMethod": null,
+  "approvalNote": null,
+  "textProvenance": {
+   "state": "RECORDED",
+   "appliedOn": "2026-08-21",
+   "authority": "annie-eighth-return.md, read from the file, sha256 bdd956ab3ef5a6d8ecb18eb7ca0d0a4b679c1d023eda7a28ad29103c028c5a34",
+   "approvedByPerson": "Annie"
+  }
+ },
+ "carrierCount": 25,
+ "carriers": [
+  {
+   "itemId": "gen-vr-14-letter-connections-01",
+   "status": "LIVE",
+   "questionType": "vr-14-letter-connections",
+   "stem": {
+    "pairA": [
+     "A",
+     "B"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": 1,
+     "first": 8,
+     "answer": 9
+    },
+    "stemWord": "I"
+   },
+   "key": "J",
+   "options": [
+    {
+     "value": "J",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "H",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "K",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "I",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-02",
+   "status": "LIVE",
+   "questionType": "vr-14-letter-connections",
+   "stem": {
+    "pairA": [
+     "B",
+     "D"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": 2,
+     "first": 9,
+     "answer": 11
+    },
+    "stemWord": "J"
+   },
+   "key": "L",
+   "options": [
+    {
+     "value": "L",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "H",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "M",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "K",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-03",
+   "status": "LIVE",
+   "questionType": "vr-14-letter-connections",
+   "stem": {
+    "pairA": [
+     "C",
+     "F"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": 3,
+     "first": 10,
+     "answer": 13
+    },
+    "stemWord": "K"
+   },
+   "key": "N",
+   "options": [
+    {
+     "value": "N",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "H",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "O",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "M",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-04",
+   "status": "LIVE",
+   "questionType": "vr-14-letter-connections",
+   "stem": {
+    "pairA": [
+     "D",
+     "H"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": 4,
+     "first": 11,
+     "answer": 15
+    },
+    "stemWord": "L"
+   },
+   "key": "P",
+   "options": [
+    {
+     "value": "P",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "H",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Q",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "O",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-05",
+   "status": "LIVE",
+   "questionType": "vr-14-letter-connections",
+   "stem": {
+    "pairA": [
+     "E",
+     "F"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": 1,
+     "first": 12,
+     "answer": 13
+    },
+    "stemWord": "M"
+   },
+   "key": "N",
+   "options": [
+    {
+     "value": "N",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "L",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "O",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "M",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-06",
+   "status": "LIVE",
+   "questionType": "vr-14-letter-connections",
+   "stem": {
+    "pairA": [
+     "F",
+     "H"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": 2,
+     "first": 13,
+     "answer": 15
+    },
+    "stemWord": "N"
+   },
+   "key": "P",
+   "options": [
+    {
+     "value": "P",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "L",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Q",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "O",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-07",
+   "status": "LIVE",
+   "questionType": "vr-14-letter-connections",
+   "stem": {
+    "pairA": [
+     "G",
+     "J"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": 3,
+     "first": 14,
+     "answer": 17
+    },
+    "stemWord": "O"
+   },
+   "key": "R",
+   "options": [
+    {
+     "value": "R",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "L",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "S",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "Q",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-08",
+   "status": "LIVE",
+   "questionType": "vr-14-letter-connections",
+   "stem": {
+    "pairA": [
+     "H",
+     "L"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": 4,
+     "first": 15,
+     "answer": 19
+    },
+    "stemWord": "P"
+   },
+   "key": "T",
+   "options": [
+    {
+     "value": "T",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "L",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "U",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "S",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-09",
+   "status": "LIVE",
+   "questionType": "vr-14-letter-connections",
+   "stem": {
+    "pairA": [
+     "A",
+     "B"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": 1,
+     "first": 16,
+     "answer": 17
+    },
+    "stemWord": "Q"
+   },
+   "key": "R",
+   "options": [
+    {
+     "value": "R",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "P",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "S",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "Q",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-10",
+   "status": "LIVE",
+   "questionType": "vr-14-letter-connections",
+   "stem": {
+    "pairA": [
+     "B",
+     "D"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": 2,
+     "first": 17,
+     "answer": 19
+    },
+    "stemWord": "R"
+   },
+   "key": "T",
+   "options": [
+    {
+     "value": "T",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "P",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "U",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "S",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-11",
+   "status": "LIVE",
+   "questionType": "vr-14-letter-connections",
+   "stem": {
+    "pairA": [
+     "C",
+     "F"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": 3,
+     "first": 8,
+     "answer": 11
+    },
+    "stemWord": "I"
+   },
+   "key": "L",
+   "options": [
+    {
+     "value": "L",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "F",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "M",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "K",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-12",
+   "status": "LIVE",
+   "questionType": "vr-14-letter-connections",
+   "stem": {
+    "pairA": [
+     "D",
+     "H"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": 4,
+     "first": 9,
+     "answer": 13
+    },
+    "stemWord": "J"
+   },
+   "key": "N",
+   "options": [
+    {
+     "value": "N",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "F",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "O",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "M",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-13",
+   "status": "LIVE",
+   "questionType": "vr-14-letter-connections",
+   "stem": {
+    "pairA": [
+     "E",
+     "F"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": 1,
+     "first": 10,
+     "answer": 11
+    },
+    "stemWord": "K"
+   },
+   "key": "L",
+   "options": [
+    {
+     "value": "L",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "J",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "M",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "K",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-14",
+   "status": "LIVE",
+   "questionType": "vr-14-letter-connections",
+   "stem": {
+    "pairA": [
+     "F",
+     "H"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": 2,
+     "first": 11,
+     "answer": 13
+    },
+    "stemWord": "L"
+   },
+   "key": "N",
+   "options": [
+    {
+     "value": "N",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "J",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "O",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "M",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-15",
+   "status": "LIVE",
+   "questionType": "vr-14-letter-connections",
+   "stem": {
+    "pairA": [
+     "G",
+     "J"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": 3,
+     "first": 12,
+     "answer": 15
+    },
+    "stemWord": "M"
+   },
+   "key": "P",
+   "options": [
+    {
+     "value": "P",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "J",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Q",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "O",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-16",
+   "status": "LIVE",
+   "questionType": "vr-14-letter-connections",
+   "stem": {
+    "pairA": [
+     "H",
+     "L"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": 4,
+     "first": 13,
+     "answer": 17
+    },
+    "stemWord": "N"
+   },
+   "key": "R",
+   "options": [
+    {
+     "value": "R",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "J",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "S",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "Q",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-17",
+   "status": "LIVE",
+   "questionType": "vr-14-letter-connections",
+   "stem": {
+    "pairA": [
+     "A",
+     "B"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": 1,
+     "first": 14,
+     "answer": 15
+    },
+    "stemWord": "O"
+   },
+   "key": "P",
+   "options": [
+    {
+     "value": "P",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "N",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Q",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "O",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-18",
+   "status": "LIVE",
+   "questionType": "vr-14-letter-connections",
+   "stem": {
+    "pairA": [
+     "B",
+     "D"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": 2,
+     "first": 15,
+     "answer": 17
+    },
+    "stemWord": "P"
+   },
+   "key": "R",
+   "options": [
+    {
+     "value": "R",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "N",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "S",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "Q",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-19",
+   "status": "LIVE",
+   "questionType": "vr-14-letter-connections",
+   "stem": {
+    "pairA": [
+     "C",
+     "F"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": 3,
+     "first": 16,
+     "answer": 19
+    },
+    "stemWord": "Q"
+   },
+   "key": "T",
+   "options": [
+    {
+     "value": "T",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "N",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "U",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "S",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-20",
+   "status": "LIVE",
+   "questionType": "vr-14-letter-connections",
+   "stem": {
+    "pairA": [
+     "D",
+     "H"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": 4,
+     "first": 17,
+     "answer": 21
+    },
+    "stemWord": "R"
+   },
+   "key": "V",
+   "options": [
+    {
+     "value": "V",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "N",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "W",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "U",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-21",
+   "status": "LIVE",
+   "questionType": "vr-14-letter-connections",
+   "stem": {
+    "pairA": [
+     "E",
+     "F"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": 1,
+     "first": 8,
+     "answer": 9
+    },
+    "stemWord": "I"
+   },
+   "key": "J",
+   "options": [
+    {
+     "value": "J",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "H",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "K",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "I",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-22",
+   "status": "LIVE",
+   "questionType": "vr-14-letter-connections",
+   "stem": {
+    "pairA": [
+     "F",
+     "H"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": 2,
+     "first": 9,
+     "answer": 11
+    },
+    "stemWord": "J"
+   },
+   "key": "L",
+   "options": [
+    {
+     "value": "L",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "H",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "M",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "K",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-23",
+   "status": "LIVE",
+   "questionType": "vr-14-letter-connections",
+   "stem": {
+    "pairA": [
+     "G",
+     "J"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": 3,
+     "first": 10,
+     "answer": 13
+    },
+    "stemWord": "K"
+   },
+   "key": "N",
+   "options": [
+    {
+     "value": "N",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "H",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "O",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "M",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-24",
+   "status": "LIVE",
+   "questionType": "vr-14-letter-connections",
+   "stem": {
+    "pairA": [
+     "H",
+     "L"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": 4,
+     "first": 11,
+     "answer": 15
+    },
+    "stemWord": "L"
+   },
+   "key": "P",
+   "options": [
+    {
+     "value": "P",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "H",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Q",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "O",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-25",
+   "status": "LIVE",
+   "questionType": "vr-14-letter-connections",
+   "stem": {
+    "pairA": [
+     "A",
+     "B"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": 1,
+     "first": 12,
+     "answer": 13
+    },
+    "stemWord": "M"
+   },
+   "key": "N",
+   "options": [
+    {
+     "value": "N",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "L",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "O",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "M",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  }
+ ]
+}

@@ -287,11 +287,15 @@ async function seedMisconceptions(): Promise<void> {
     await prisma.misconception.upsert({
       where: { id: misconception.id },
       create: { ...misconception, district: 'VR' },
-      update: {
-        description: misconception.description,
-        childHint: misconception.childHint,
-        teachback: misconception.teachback,
-      },
+      /**
+       * CREATE-ONLY. LIBRARY TEXT IS AUTHORED IN THE DATABASE, NOT HERE (CLAUDE.md: "the DB holds
+       * library text"). This clause used to rewrite description/childHint/teachback on every seed
+       * run, which silently reverted reviewed text: Annie's R456 hint for vr-letter-series-off-by-one
+       * was applied and confirmed by direct read on 2026-08-21 and found serving the old seed string
+       * on 2026-11-19. The literals above are the FIRST-CREATE values only; an existing row is never
+       * touched. Same class as R62 — a routine command must not rewrite reviewed content.
+       */
+      update: {},
     });
   }
 }

@@ -1,0 +1,70 @@
+{
+ "entry": {
+  "id": "en-technique-device-confusion",
+  "status": "ACTIVE",
+  "district": "ENGLISH",
+  "category": "writers-technique",
+  "description": "Child gives \"metaphor\" for a comparison using \"like\" where the answer is simile, naming a device of the right family and the wrong kind.",
+  "childHint": "Does the line say like or as? A comparison using those words is a simile.",
+  "approvedBy": "current-reviewer",
+  "approvalMethod": "written review — annie authoring sitting 2026-08-08",
+  "approvalNote": null,
+  "textProvenance": {
+   "note": "Ruled when written; never reached the store until now (R403).",
+   "state": "RECORDED",
+   "method": "authored by the reviewer in her return; applied verbatim",
+   "appliedOn": "2026-08-21",
+   "authority": "annie-sixteenth-return.md, read from the file, sha256 9a52df0641a33c1fb5d0be4540556105ae12e3d2c43715e86d5f718d63c496b0",
+   "approvedByPerson": "Annie"
+  }
+ },
+ "carrierCount": 1,
+ "carriers": [
+  {
+   "itemId": "ENG-001-WIW-22",
+   "status": "LIVE",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "The animals act like people, but we never forget they are animals. How does the writer do this?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "answerShape": "two-halved-contrast-given-what-they-have-and-what-they-keep",
+    "orderAnchor": 22,
+    "techniqueKey": "human-manners-on-animal-bodies-kept-together"
+   },
+   "key": "He gives them houses, money and boats, but keeps their fur, paws and whiskers.",
+   "options": [
+    {
+     "value": "He keeps the animals quiet, still and dull, but lets the river chatter, gurgle and laugh.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He gives them human names, and leaves the animal ones behind.",
+     "isKey": false,
+     "tag": "en-technique-device-confusion",
+     "carriesThisEntry": true,
+     "execution": "Their names are Mole, Rat and rabbit — animal names on every appearance. Nothing in the passage gives them human names, and the claim is the reverse of the text."
+    },
+    {
+     "value": "He tells the reader, plainly and often, that these animals are really people.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He gives them houses, money and boats, but keeps their fur, paws and whiskers.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He makes every animal speak, move and think in exactly the same way.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": false
+    }
+   ]
+  }
+ ]
+}

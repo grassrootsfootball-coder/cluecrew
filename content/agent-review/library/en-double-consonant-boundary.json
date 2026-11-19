@@ -1,0 +1,236 @@
+{
+ "entry": {
+  "id": "en-double-consonant-boundary",
+  "status": "ACTIVE",
+  "district": "ENGLISH",
+  "category": null,
+  "description": "Guesses whether a consonant doubles when an ending is added, or doubles the wrong letter: begining for beginning, dissapointed for disappointed, stoped for stopped.",
+  "childHint": "Say the root word first, then add the ending, and check which letter really doubles.",
+  "approvedBy": "human:staff-reviewer@cluecrew.test",
+  "approvalMethod": "written review 2026-08-03",
+  "approvalNote": "Second-pass returns: ten new proposals cleared, WIW-14 stem rewritten, mistag check completed across the remaining 69.",
+  "textProvenance": null
+ },
+ "carrierCount": 5,
+ "carriers": [
+  {
+   "itemId": "ENG-003-A-SP-01",
+   "status": "LIVE",
+   "questionType": "en-spag-spelling-spot",
+   "stem": {
+    "text": "Read the sentence. One part may have a spelling mistake. Which part is it? If every part is right, choose No mistake.",
+    "segmentsInOptions": true
+   },
+   "key": "The twins left there lunch boxes",
+   "options": [
+    {
+     "value": "The twins left there lunch boxes",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "beside the quiet library door,",
+     "isKey": false,
+     "tag": "en-spelling-form-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "then walked past the office",
+     "isKey": false,
+     "tag": "en-homophone-by-sound",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "and hurried to the netball court.",
+     "isKey": false,
+     "tag": "en-double-consonant-boundary",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "No mistake",
+     "isKey": false,
+     "tag": "en-homophone-by-sound",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-003-A-SP-02",
+   "status": "LIVE",
+   "questionType": "en-spag-spelling-spot",
+   "stem": {
+    "text": "Read the sentence. One part may have a spelling mistake. Which part is it? If every part is right, choose No mistake.",
+    "segmentsInOptions": true
+   },
+   "key": "Ravi gave an excellant answer,",
+   "options": [
+    {
+     "value": "Ravi gave an excellant answer,",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "thanked the assistant kindly,",
+     "isKey": false,
+     "tag": "en-unstressed-suffix-vowel",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "then slipped back to his seat",
+     "isKey": false,
+     "tag": "en-double-consonant-boundary",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "with a confident smile.",
+     "isKey": false,
+     "tag": "en-unstressed-suffix-vowel",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "No mistake",
+     "isKey": false,
+     "tag": "en-unstressed-suffix-vowel",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-003-A-SP-04",
+   "status": "LIVE",
+   "questionType": "en-spag-spelling-spot",
+   "stem": {
+    "text": "Read the sentence. One part may have a spelling mistake. Which part is it? If every part is right, choose No mistake.",
+    "segmentsInOptions": true
+   },
+   "key": "because of the wet whether,",
+   "options": [
+    {
+     "value": "The netball match was cancelled",
+     "isKey": false,
+     "tag": "en-double-consonant-boundary",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "because of the wet whether,",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "so Mrs Dean pinned a new date",
+     "isKey": false,
+     "tag": "en-double-consonant-boundary",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "on the notice board.",
+     "isKey": false,
+     "tag": "en-homophone-by-sound",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "No mistake",
+     "isKey": false,
+     "tag": "en-homophone-by-sound",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-003-A-SP-05",
+   "status": "LIVE",
+   "questionType": "en-spag-spelling-spot",
+   "stem": {
+    "text": "Read the sentence. One part may have a spelling mistake. Which part is it? If every part is right, choose No mistake.",
+    "segmentsInOptions": true
+   },
+   "key": "At the begining of term,",
+   "options": [
+    {
+     "value": "At the begining of term,",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Toby was allowed to borrow",
+     "isKey": false,
+     "tag": "en-homophone-by-sound",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "the good scissors,",
+     "isKey": false,
+     "tag": "en-silent-letter-dropped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "and he stopped to thank the office staff.",
+     "isKey": false,
+     "tag": "en-double-consonant-boundary",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "No mistake",
+     "isKey": false,
+     "tag": "en-double-consonant-boundary",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-003-A-SP-08",
+   "status": "LIVE",
+   "questionType": "en-spag-spelling-spot",
+   "stem": {
+    "text": "Read the sentence. One part may have a spelling mistake. Which part is it? If every part is right, choose No mistake.",
+    "segmentsInOptions": true
+   },
+   "key": "Jonah was dissapointed with his score,",
+   "options": [
+    {
+     "value": "Jonah was dissapointed with his score,",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "but he grinned when Mr Ellis",
+     "isKey": false,
+     "tag": "en-double-consonant-boundary",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "pinned the team photograph",
+     "isKey": false,
+     "tag": "en-double-consonant-boundary",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "next to the register.",
+     "isKey": false,
+     "tag": "en-unstressed-medial-vowel",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "No mistake",
+     "isKey": false,
+     "tag": "en-double-consonant-boundary",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  }
+ ]
+}

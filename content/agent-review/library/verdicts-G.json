@@ -1,0 +1,493 @@
+{
+  "reviewer": "rev-agent-01",
+  "group": "G",
+  "screened": {
+    "entries": 21,
+    "carrierRowsRead": 55,
+    "perEntry": {
+      "en-a-an-by-spelling": 2,
+      "en-apostrophe-possession": 4,
+      "en-article-definiteness": 2,
+      "en-comma-subject-verb-split": 5,
+      "en-conjunction-logic": 2,
+      "en-contraction-apostrophe": 1,
+      "en-double-consonant-boundary": 5,
+      "en-homophone-by-sound": 6,
+      "en-modal-conditional-form": 1,
+      "en-n-option-avoidance": 3,
+      "en-paired-punctuation": 5,
+      "en-preposition-collocation": 1,
+      "en-question-tag-polarity": 1,
+      "en-silent-letter-dropped": 3,
+      "en-speech-punctuation-inside": 1,
+      "en-spelling-form-lookalike": 1,
+      "en-tense-sequence": 4,
+      "en-terminal-punctuation-blind": 4,
+      "en-unstressed-medial-vowel": 1,
+      "en-unstressed-suffix-vowel": 2,
+      "en-word-class-by-ending": 1
+    },
+    "note": "Every carrier is LIVE (en-spag-cloze, en-spag-punct-spot, en-spag-spelling-spot; ENG-003-A). No carrying option in group G has an execution recorded (execution null on all). transforms[].resultingText is the full text after applying the transform, for reading only; the transform is {field, from, to}. Transforms are UNGATED: run them through checkItemChildFacing / scan:vocab before applying."
+  },
+  "entries": [
+    {
+      "id": "en-a-an-by-spelling",
+      "verdict": "ATTEST",
+      "reason": "2 carriers screened (2 carrying options). The hint describes a move (sound the next word) and asserts no item feature; one 9-word sentence, full stop, British English. 'Listen' is an inner-speech act a child can do in a silent test, and the sound IS the teaching here (R586's exception). Fits ENG-003-A-CZ-A2 ('a hour') exactly. On ENG-003-A-CZ-B8 the carrying option 'an' before 'board' is wrong by letter AND by sound, so it is not this mistake (listed as misfiled; item fault).",
+      "assertionClauses": [
+        {
+          "clause": "Chooses a/an by following letter rather than sound (description)",
+          "falseOn": [
+            "ENG-003-A-CZ-B8"
+          ],
+          "note": "False only on the misfiled carrier."
+        }
+      ],
+      "transforms": [],
+      "misfiledCarriers": [
+        {
+          "itemId": "ENG-003-A-CZ-B8",
+          "option": "an",
+          "why": "'an board': b is a consonant by spelling and by sound, so letter-versus-sound cannot produce it; the key is 'the' (already named), which is en-article-definiteness territory."
+        }
+      ]
+    },
+    {
+      "id": "en-apostrophe-possession",
+      "verdict": "REFUSE",
+      "reason": "4 carriers screened (13 carrying options); all genuinely possessive-apostrophe confusions (flagging a correct owner apostrophe, flagging a plain plural, or missing the fault). Pass 1: 'An owner needs an apostrophe.' is stated as a rule with no exception, and is FALSE on ENG-003-A-PU-03, whose key is 'It's fur': the owner 'it' takes no apostrophe, so a child following the hint keeps the mistake. 'Try swapping in 'it is'.' presupposes an its/it's in the item and has nothing to act on in PU-01, PU-04 and PU-05 (3 of 4). Pass 2: 'Ask whose it is.' is a good move on every carrier. Transform adds the its exception and makes the it-is swap conditional. On spot-the-mistake carriers the carrying part is often a CORRECT form the child flagged as wrong (the converse of the description's wording); treated as the same confusion, not a misfile.",
+      "assertionClauses": [
+        {
+          "clause": "An owner needs an apostrophe.",
+          "falseOn": [
+            "ENG-003-A-PU-03"
+          ],
+          "note": "Owner 'it' takes no apostrophe; the key is the false it's."
+        },
+        {
+          "clause": "Try swapping in 'it is'. (presupposes an its/it's in the item)",
+          "falseOn": [
+            "ENG-003-A-PU-01",
+            "ENG-003-A-PU-04",
+            "ENG-003-A-PU-05"
+          ]
+        }
+      ],
+      "transforms": [
+        {
+          "field": "childHint",
+          "from": "An owner needs an apostrophe. Try swapping in 'it is'.",
+          "to": "An owner needs an apostrophe, but the word its never has one. If you see it's, try swapping in 'it is'.",
+          "resultingText": "Ask whose it is. An owner needs an apostrophe, but the word its never has one. If you see it's, try swapping in 'it is'."
+        }
+      ],
+      "misfiledCarriers": []
+    },
+    {
+      "id": "en-article-definiteness",
+      "verdict": "ATTEST",
+      "reason": "2 carriers screened (3 carrying options). The hint asks a question (a move) and asserts no feature; 'That changes which little word fits.' is true on both. Fits ENG-003-A-CZ-B8 exactly (the board is named in the previous sentence, so 'the'). Weakest on ENG-003-A-CZ-A2 'no word is needed' ('spent ___ hour'): nothing has been named, so the hint points away from 'the' but only implicitly against omitting the article; still within the description's 'a, the and no article by habit'. Sentences 7 and 6 words, end on ? and .",
+      "assertionClauses": [
+        {
+          "clause": "Has the text named it already?",
+          "falseOn": [],
+          "note": "A question the child can answer on both carriers."
+        }
+      ],
+      "transforms": [],
+      "misfiledCarriers": []
+    },
+    {
+      "id": "en-comma-subject-verb-split",
+      "verdict": "ATTEST",
+      "reason": "5 carriers screened (5 carrying options). The hint states a move-rule ('never let a single comma cut the do-er off from the doing'), 12 words, child language; no feature assertion. It fits ENG-003-A-PU-08 exactly (No mistake accepted 'The boy in the red jumper,') and PU-02 in the converse direction ('Did Nadia,' flagged: the word 'single' is exactly what separates a legal paired comma from a split). Three carrying options are not this mistake (item faults, listed). Note: the description says 'Accepts'; PU-02 is the converse (rejects a legal comma). On spot-the-mistake carriers the carrying part is often a CORRECT form the child flagged as wrong (the converse of the description's wording); treated as the same confusion, not a misfile.",
+      "assertionClauses": [
+        {
+          "clause": "Never let a single comma cut the do-er off from the doing.",
+          "falseOn": [],
+          "note": "A rule-as-move; inapplicable (not false) on the three misfiled carriers."
+        }
+      ],
+      "transforms": [],
+      "misfiledCarriers": [
+        {
+          "itemId": "ENG-003-A-PU-04",
+          "option": "Once the rain stopped,",
+          "why": "Comma after a fronted adverbial; no subject or verb either side of it. A fronted-adverbial misjudgement, not a subject-verb split."
+        },
+        {
+          "itemId": "ENG-003-A-PU-06",
+          "option": "asked Mr Doyle,",
+          "why": "The comma follows the subject AFTER its verb and opens a 'who' clause; it cuts no do-er from its doing. Closer to en-paired-punctuation (comma before extra information)."
+        },
+        {
+          "itemId": "ENG-003-A-PU-07",
+          "option": "then carried the whole pile",
+          "why": "The part contains no comma at all; the key is a missing full stop. Nothing here for this entry to describe."
+        }
+      ]
+    },
+    {
+      "id": "en-conjunction-logic",
+      "verdict": "ATTEST",
+      "reason": "2 carriers screened (6 carrying options). The hint is a question-move ('Is the second idea a reason, a surprise, or just what happened next?'), 13 words; it presupposes two ideas joined by the gap, true on both. On ENG-003-A-CZ-A3 it leads straight to 'because'. On ENG-003-A-CZ-B1 the second idea is a result; 'what happened next' is close enough to reach 'so' and rule out but/although/unless. The three named relations do not include condition or contrast ('unless', 'whereas'), but asking the question still rules them out. Description true on all 6 options.",
+      "assertionClauses": [
+        {
+          "clause": "the second idea (presupposes two linked ideas)",
+          "falseOn": [],
+          "note": "True on both carriers."
+        }
+      ],
+      "transforms": [],
+      "misfiledCarriers": []
+    },
+    {
+      "id": "en-contraction-apostrophe",
+      "verdict": "ATTEST",
+      "reason": "1 carrier screened (1 carrying option, 'Youre' on ENG-003-A-CZ-B7). 'Two words squeezed into one leave letters out.' asserts the item contains a contraction; true (you are). Both sentences short, end on a full stop, and give the move (put the apostrophe where letters were). Note: no approval of any kind is recorded on this entry (approvedBy null), not even the placeholder.",
+      "assertionClauses": [
+        {
+          "clause": "Two words squeezed into one leave letters out.",
+          "falseOn": [],
+          "note": "True on the one carrier (You're = you are)."
+        }
+      ],
+      "transforms": [],
+      "misfiledCarriers": []
+    },
+    {
+      "id": "en-double-consonant-boundary",
+      "verdict": "REFUSE",
+      "reason": "5 carriers screened (8 carrying options); all genuine doubling confusions (hurried, slipped, cancelled, pinned, stopped, grinned flagged; begining and dissapointed missed). Pass 1: the hint's move 'then add the ending' covers only a suffix boundary. On ENG-003-A-SP-08 the 'No mistake' carrier misses 'dissapointed', where the fault is at the PREFIX boundary (dis + appointed); the description itself names this example, so the hint covers one half of its own definition (R576's shape). Pass 2: otherwise clear and actionable; 15 words, one sentence. Transform adds the beginning and splits the sentence; 'Say' is kept (inner speech is possible in a silent test, unlike 'aloud'). On spot-the-mistake carriers the carrying part is often a CORRECT form the child flagged as wrong (the converse of the description's wording); treated as the same confusion, not a misfile.",
+      "assertionClauses": [
+        {
+          "clause": "then add the ending (presupposes the doubling is at a suffix)",
+          "falseOn": [
+            "ENG-003-A-SP-08"
+          ],
+          "note": "The missed error 'dissapointed' is at the prefix dis-."
+        }
+      ],
+      "transforms": [
+        {
+          "field": "childHint",
+          "from": "then add the ending, and check which letter really doubles.",
+          "to": "then add the beginning or ending. Check which letter really doubles.",
+          "resultingText": "Say the root word first, then add the beginning or ending. Check which letter really doubles."
+        }
+      ],
+      "misfiledCarriers": []
+    },
+    {
+      "id": "en-homophone-by-sound",
+      "verdict": "ATTEST",
+      "reason": "6 carriers screened (11 carrying options): there/their/theirs, your/yours, past, hall, board, allowed flagged, and two 'No mistake' that miss there/whether. Pass 1: 'sound-alike words' presupposes a homophone in play; true on every carrier (Theirs and Yours are near- rather than exact homophones of They're/You're, which does not mislead). Pass 2: 'Work out the meaning, then spell it from that.' is a move; on cloze and spot items the child checks rather than spells, but the move transfers directly. Sentences 9 and 9 words. On spot-the-mistake carriers the carrying part is often a CORRECT form the child flagged as wrong (the converse of the description's wording); treated as the same confusion, not a misfile.",
+      "assertionClauses": [
+        {
+          "clause": "Sound will not help with sound-alike words.",
+          "falseOn": [],
+          "note": "True on all 6 carriers."
+        }
+      ],
+      "transforms": [],
+      "misfiledCarriers": []
+    },
+    {
+      "id": "en-modal-conditional-form",
+      "verdict": "REFUSE",
+      "reason": "1 carrier screened (ENG-003-A-CZ-A7, 3 carrying options). Pass 1: no false clause; both rules are true. Pass 2: the hint covers only the will/would half of the description. A child who chose 'would have known' or 'would be knowing' already used 'would', so the hint tells them they were right; it helps 1 of 3 carrying options. Transform adds the 'would have' rule, which serves 'would have known'. 'would be knowing' (the impossible-form half: know does not take -ing here) is still served by no wording; left for a person to decide whether one more sentence is worth it.",
+      "assertionClauses": [
+        {
+          "clause": "An imagined if takes 'would'.",
+          "falseOn": [],
+          "note": "True, but already satisfied by two of the three carrying options."
+        }
+      ],
+      "transforms": [
+        {
+          "field": "childHint",
+          "from": "A real if takes 'will'.",
+          "to": "A real if takes 'will'. Use 'would have' only when the if part has 'had'.",
+          "resultingText": "An imagined if takes 'would'. A real if takes 'will'. Use 'would have' only when the if part has 'had'."
+        }
+      ],
+      "misfiledCarriers": []
+    },
+    {
+      "id": "en-n-option-avoidance",
+      "verdict": "ATTEST",
+      "reason": "3 carriers screened (12 carrying options, every non-N part of three N-keyed items). No feature asserted; 'Check every part in turn.' is the move and 'No mistake is a real answer, not a way out.' addresses the exact avoidance. Sentences 5 and 9 words. Fits all 12.",
+      "assertionClauses": [
+        {
+          "clause": "No mistake is a real answer, not a way out.",
+          "falseOn": [],
+          "note": "A claim about the answer format, true on every carrier."
+        }
+      ],
+      "transforms": [],
+      "misfiledCarriers": []
+    },
+    {
+      "id": "en-paired-punctuation",
+      "verdict": "REFUSE",
+      "reason": "5 carriers screened (10 carrying options). Pass 1: 'Brackets come in pairs, like shoes.' presupposes brackets; NO carrier contains a bracket or an unclosed quotation, so the hint instructs an act on something absent on 5 of 5 (R576's shape). The description ('unclosed brackets or quotes') likewise matches no carrier. Two options are genuine pair judgements with COMMAS around extra information ('who arrived late,' and 'who was searching under the bibs,', each flagged by a child who misjudged the pair). The other eight are list or clause commas with no pair at all (listed misfiled). Transform widens hint and description to commas around extra information, which is the KS2 parenthesis set; 'Hunt for the partner.' then works on the two real carriers and correctly finds no partner on the rest.",
+      "assertionClauses": [
+        {
+          "clause": "Brackets come in pairs, like shoes.",
+          "falseOn": [
+            "ENG-003-A-PU-02",
+            "ENG-003-A-PU-03",
+            "ENG-003-A-PU-06",
+            "ENG-003-A-PU-07",
+            "ENG-003-A-PU-08"
+          ],
+          "note": "No carrier contains a bracket."
+        },
+        {
+          "clause": "Misses unclosed brackets or quotes. (description)",
+          "falseOn": [
+            "ENG-003-A-PU-02",
+            "ENG-003-A-PU-03",
+            "ENG-003-A-PU-06",
+            "ENG-003-A-PU-07",
+            "ENG-003-A-PU-08"
+          ]
+        }
+      ],
+      "transforms": [
+        {
+          "field": "childHint",
+          "from": "Brackets come in pairs, like shoes.",
+          "to": "Brackets, and commas around extra information, come in pairs like shoes.",
+          "resultingText": "Brackets, and commas around extra information, come in pairs like shoes. Hunt for the partner."
+        },
+        {
+          "field": "description",
+          "from": "Misses unclosed brackets or quotes.",
+          "to": "Misjudges paired punctuation: misses an unclosed bracket, quote or pair of commas around extra information, or flags a correct closing one.",
+          "resultingText": "Misjudges paired punctuation: misses an unclosed bracket, quote or pair of commas around extra information, or flags a correct closing one."
+        }
+      ],
+      "misfiledCarriers": [
+        {
+          "itemId": "ENG-003-A-PU-02",
+          "option": "remember to bring her recorder, her music book",
+          "why": "List comma; nothing paired."
+        },
+        {
+          "itemId": "ENG-003-A-PU-03",
+          "option": "so Ella dried the rabbit gently,",
+          "why": "Comma between actions in a sequence; nothing paired."
+        },
+        {
+          "itemId": "ENG-003-A-PU-06",
+          "option": "the cones and the spare bags.",
+          "why": "End of a list closed by a full stop; nothing paired."
+        },
+        {
+          "itemId": "ENG-003-A-PU-07",
+          "option": "Ben checked the lost property box,",
+          "why": "Comma in a sequence of actions; nothing paired."
+        },
+        {
+          "itemId": "ENG-003-A-PU-07",
+          "option": "found one glove, a scarf and a swimming cap,",
+          "why": "List commas; nothing paired."
+        },
+        {
+          "itemId": "ENG-003-A-PU-08",
+          "option": "dropped his tray,",
+          "why": "Comma in a list of actions; nothing paired."
+        },
+        {
+          "itemId": "ENG-003-A-PU-08",
+          "option": "spilled the peas and the gravy,",
+          "why": "Comma in a list of actions; nothing paired."
+        }
+      ]
+    },
+    {
+      "id": "en-preposition-collocation",
+      "verdict": "REFUSE",
+      "reason": "1 carrier screened (ENG-003-A-CZ-A5, 3 carrying options: at/on/for the shelf). Pass 1: 'this verb' presupposes a verb governing the gap; true ('returned'). Pass 2: 'Say the whole phrase aloud' instructs an act a child cannot perform in a silent test (the brief's own example), and the dash joins two sentences into one (house rule: split with a full stop). The move itself is right. Transform: inner speech and a full stop.",
+      "assertionClauses": [
+        {
+          "clause": "which little word does this verb usually take?",
+          "falseOn": [],
+          "note": "True on the one carrier."
+        }
+      ],
+      "transforms": [
+        {
+          "field": "childHint",
+          "from": "Say the whole phrase aloud — which",
+          "to": "Say the whole phrase in your head. Which",
+          "resultingText": "Say the whole phrase in your head. Which little word does this verb usually take?"
+        }
+      ],
+      "misfiledCarriers": []
+    },
+    {
+      "id": "en-question-tag-polarity",
+      "verdict": "ATTEST",
+      "reason": "1 carrier screened (ENG-003-A-CZ-B3, 3 carrying options: 'are you' repeats polarity; 'isn't it' and 'don't you' mismatch the helper). 'A tag flips the sentence.' covers both repetition and the wrong helper or pronoun (flip what is there); 'If there is no helper verb, use do, does or did.' is conditional and correctly rules out 'don't you', since 'are' is present. 'A positive sentence takes a negative tag.' is true on the carrier. Sentences 5, 7 and 11 words.",
+      "assertionClauses": [
+        {
+          "clause": "A positive sentence takes a negative tag.",
+          "falseOn": [],
+          "note": "Carrier sentence is positive; a rule, not a false claim."
+        },
+        {
+          "clause": "If there is no helper verb (conditional)",
+          "falseOn": [],
+          "note": "Correctly does not fire on the carrier."
+        }
+      ],
+      "transforms": [],
+      "misfiledCarriers": []
+    },
+    {
+      "id": "en-silent-letter-dropped",
+      "verdict": "ATTEST",
+      "reason": "3 carriers screened (5 carrying options): 'No mistake' missing Wenesday (exact fit), and listened/knights/talk, wrote, scissors, science flagged as wrong (the converse: doubting a silent letter). 'A letter can be there without being heard.' is a general truth that fits both directions, and 'Spell it out, do not sound it out.' is the move. Sentences 8 and 7 words. Note the description is one-directional ('Drops'). On spot-the-mistake carriers the carrying part is often a CORRECT form the child flagged as wrong (the converse of the description's wording); treated as the same confusion, not a misfile.",
+      "assertionClauses": [
+        {
+          "clause": "A letter can be there without being heard.",
+          "falseOn": [],
+          "note": "Every carrier has a silent letter in play."
+        }
+      ],
+      "transforms": [],
+      "misfiledCarriers": []
+    },
+    {
+      "id": "en-speech-punctuation-inside",
+      "verdict": "ATTEST",
+      "reason": "1 carrier screened (ENG-003-A-PU-06 'No mistake', missing 'whistle”?'). 'The question belongs to the spoken words.' asserts the item has a quoted question; true. 'Keep the mark inside.' is the move. Sentences 7 and 5 words.",
+      "assertionClauses": [
+        {
+          "clause": "The question belongs to the spoken words.",
+          "falseOn": [],
+          "note": "True on the one carrier."
+        }
+      ],
+      "transforms": [],
+      "misfiledCarriers": []
+    },
+    {
+      "id": "en-spelling-form-lookalike",
+      "verdict": "ATTEST",
+      "reason": "1 carrier screened (ENG-003-A-SP-01 'beside the quiet library door,', flagged by a child confusing quiet/quite). 'Two words can look almost the same.' is hedged ('can') and true; 'Read the middle letters slowly, not the shape.' is a reading act, not a visual-picture instruction (R567). Note: no approval of any kind is recorded on this entry (approvedBy null). On spot-the-mistake carriers the carrying part is often a CORRECT form the child flagged as wrong (the converse of the description's wording); treated as the same confusion, not a misfile.",
+      "assertionClauses": [
+        {
+          "clause": "Two words can look almost the same.",
+          "falseOn": [],
+          "note": "Hedged; true on the carrier."
+        }
+      ],
+      "transforms": [],
+      "misfiledCarriers": []
+    },
+    {
+      "id": "en-tense-sequence",
+      "verdict": "REFUSE",
+      "reason": "4 carriers screened (11 carrying options). Pass 1: no false clause; the question is conditional. Pass 2: the hint serves only the past-perfect half of the description. It fits ENG-003-A-CZ-A1 (had tipped) and CZ-B6 (had almost caught). On CZ-A4 (replied) and CZ-A8 (was) the key has no 'had'; the child answers 'no' to the hint's question and is then told nothing, so the tense-drift half (5 of 11 carrying options: replies, has replied, is replying, are, is) gets no help. Transform adds the drift move.",
+      "assertionClauses": [
+        {
+          "clause": "Did it happen before the story-moment? Then you usually need 'had' and the verb.",
+          "falseOn": [],
+          "note": "Conditional; true, but silent on CZ-A4 and CZ-A8."
+        }
+      ],
+      "transforms": [
+        {
+          "field": "childHint",
+          "from": "Then you usually need 'had' and the verb.",
+          "to": "Then you usually need 'had' and the verb. If not, keep to the same tense as the story around it.",
+          "resultingText": "Did it happen before the story-moment? Then you usually need 'had' and the verb. If not, keep to the same tense as the story around it."
+        }
+      ],
+      "misfiledCarriers": []
+    },
+    {
+      "id": "en-terminal-punctuation-blind",
+      "verdict": "REFUSE",
+      "reason": "4 carriers screened (5 carrying options): 'No mistake' on PU-02 (question with a full stop), PU-04 (run-on) and PU-07 (missing full stop), plus correct full stops flagged on PU-04 and PU-08. All genuinely this mistake. Pass 1: no feature asserted. Pass 2: 'Read it aloud.' instructs an act a child cannot perform in a silent test (the brief's own example). The voice-stops idea is the right teaching and works as inner speech. On spot-the-mistake carriers the carrying part is often a CORRECT form the child flagged as wrong (the converse of the description's wording); treated as the same confusion, not a misfile.",
+      "assertionClauses": [
+        {
+          "clause": "Where your voice stops or asks, the punctuation must match.",
+          "falseOn": [],
+          "note": "A move; true on every carrier."
+        }
+      ],
+      "transforms": [
+        {
+          "field": "childHint",
+          "from": "Read it aloud. Where your voice stops or asks",
+          "to": "Read it in your head. Where your voice would stop or ask",
+          "resultingText": "Read it in your head. Where your voice would stop or ask, the punctuation must match."
+        }
+      ],
+      "misfiledCarriers": []
+    },
+    {
+      "id": "en-unstressed-medial-vowel",
+      "verdict": "ATTEST",
+      "reason": "1 carrier screened (ENG-003-A-SP-08 'next to the register.', flagged by a child unsure of the middle vowel). 'A quiet middle vowel is still a letter.' is true of 'register'. 'Say the word in parts and choose it.' is a move (exaggerated spelling voice) a child can do silently; 'choose it' is loose on a spot item, where the child checks rather than chooses, but still actionable. Note for a person: the description says the remediation for this entry is the spelling PATTERN (minister, sinister, register), which the hint does not give; not a fault of either pass. No approval of any kind recorded (approvedBy null). On spot-the-mistake carriers the carrying part is often a CORRECT form the child flagged as wrong (the converse of the description's wording); treated as the same confusion, not a misfile.",
+      "assertionClauses": [
+        {
+          "clause": "A quiet middle vowel is still a letter.",
+          "falseOn": [],
+          "note": "True on the carrier."
+        }
+      ],
+      "transforms": [],
+      "misfiledCarriers": []
+    },
+    {
+      "id": "en-unstressed-suffix-vowel",
+      "verdict": "REFUSE",
+      "reason": "2 carriers screened (6 carrying options: assistant, confident, difference, temporary flagged; 'No mistake' missing excellant and dictionery); all genuinely this mistake. Pass 1: 'Say a word from the same family with that ending stressed.' asserts such a word exists. It does for confident (confidential) and, at a stretch, difference (differential). It does not for assistant, excellent, temporary or dictionary: no family word stresses that vowel. So the hint is unusable on carrying options on both carriers, including both 'No mistake' options, which are where the child misses the real fault. Transform keeps the family move where it exists and adds a fallback for when it does not. On spot-the-mistake carriers the carrying part is often a CORRECT form the child flagged as wrong (the converse of the description's wording); treated as the same confusion, not a misfile.",
+      "assertionClauses": [
+        {
+          "clause": "Say a word from the same family with that ending stressed. Now you can hear the vowel.",
+          "falseOn": [
+            "ENG-003-A-SP-02",
+            "ENG-003-A-SP-06"
+          ],
+          "note": "No such family word for assistant/excellent (SP-02) or temporary/dictionary (SP-06)."
+        }
+      ],
+      "transforms": [
+        {
+          "field": "childHint",
+          "from": "Say a word from the same family with that ending stressed. Now you can hear the vowel.",
+          "to": "Think of a family word with that ending stressed, and listen for the vowel. If there is none, use a word you are sure of that ends the same way.",
+          "resultingText": "Think of a family word with that ending stressed, and listen for the vowel. If there is none, use a word you are sure of that ends the same way."
+        }
+      ],
+      "misfiledCarriers": []
+    },
+    {
+      "id": "en-word-class-by-ending",
+      "verdict": "REFUSE",
+      "reason": "1 carrier screened (ENG-003-A-CZ-B5 'The ___ crowd', 3 carrying options: cheer, cheered, cheers). Pass 1: no false clause. Pass 2: 'Is it describing, or is it the action?' rules out cheer and cheers but not 'cheered', which also describes. That is the description's own 'participial adjective trap' half (-ed versus -ing), and the hint is silent on it. Transform adds the doing-or-done-to move, which separates 'cheering crowd' from 'cheered crowd'.",
+      "assertionClauses": [
+        {
+          "clause": "Is it describing, or is it the action?",
+          "falseOn": [],
+          "note": "A question; true, but does not separate the two describing forms."
+        }
+      ],
+      "transforms": [
+        {
+          "field": "childHint",
+          "from": "Is it describing, or is it the action?",
+          "to": "Is it describing, or is it the action? If it describes, is the thing doing the action or having it done to it?",
+          "resultingText": "Ask what job the word does in this sentence. Is it describing, or is it the action? If it describes, is the thing doing the action or having it done to it?"
+        }
+      ],
+      "misfiledCarriers": []
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+ "entry": {
+  "id": "en-unstressed-medial-vowel",
+  "status": "ACTIVE",
+  "district": "ENGLISH",
+  "category": null,
+  "description": "Guesses a vowel in an unstressed syllable inside a word: regester for register. Scoped to the ERROR. Distinct from en-unstressed-suffix-vowel, whose vowel surfaces when the stress shifts (definite/definition); a medial vowel has no family word that stresses it, so the remediation is the spelling pattern — minister, sinister, register.",
+  "childHint": "A quiet middle vowel is still a letter. Say the word in parts and choose it.",
+  "approvedBy": null,
+  "approvalMethod": null,
+  "approvalNote": null,
+  "textProvenance": {
+   "state": "RECORDED",
+   "appliedOn": "2026-08-21",
+   "authority": "annie-fiftythird-return.md, hint authored in the block, read from the file, sha256 51bc94ab40e4b65aaef4dc45b3a9681e064bbc7db9752ec209260ca7227509de",
+   "approvedByPerson": "Annie"
+  }
+ },
+ "carrierCount": 1,
+ "carriers": [
+  {
+   "itemId": "ENG-003-A-SP-08",
+   "status": "LIVE",
+   "questionType": "en-spag-spelling-spot",
+   "stem": {
+    "text": "Read the sentence. One part may have a spelling mistake. Which part is it? If every part is right, choose No mistake.",
+    "segmentsInOptions": true
+   },
+   "key": "Jonah was dissapointed with his score,",
+   "options": [
+    {
+     "value": "Jonah was dissapointed with his score,",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "but he grinned when Mr Ellis",
+     "isKey": false,
+     "tag": "en-double-consonant-boundary",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "pinned the team photograph",
+     "isKey": false,
+     "tag": "en-double-consonant-boundary",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "next to the register.",
+     "isKey": false,
+     "tag": "en-unstressed-medial-vowel",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "No mistake",
+     "isKey": false,
+     "tag": "en-double-consonant-boundary",
+     "carriesThisEntry": false
+    }
+   ]
+  }
+ ]
+}

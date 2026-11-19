@@ -1,0 +1,164 @@
+{
+ "entry": {
+  "id": "en-n-option-avoidance",
+  "status": "ACTIVE",
+  "district": "ENGLISH",
+  "category": null,
+  "description": "Never selects the no-mistake option in error-spotting.",
+  "childHint": "Check every part in turn. No mistake is a real answer, not a way out.",
+  "approvedBy": "human:staff-reviewer@cluecrew.test",
+  "approvalMethod": "written review 2026-08-02",
+  "approvalNote": "Cleared on the printed review pack; returned marked up. — REACHABILITY (annie, 2026-08-09): unreachable BY DESIGN in spag-punct-speech, which carries no N option at all (R33) — recorded as designed-out rather than unused, so a later coverage sweep does not read it as a gap and re-add the option. Reachable in the other EIGHT spot families, each keying N at a real rate.",
+  "textProvenance": {
+   "state": "RECORDED",
+   "appliedOn": "2026-08-21",
+   "authority": "annie-twentyeighth-return.md, read from the file, sha256 c0169214b2047ecd1250fcd5eb4f5afcdb127d7d50e1ba86de99c8ce36748439",
+   "approvedByPerson": "Annie"
+  }
+ },
+ "carrierCount": 3,
+ "carriers": [
+  {
+   "itemId": "ENG-003-A-PU-09",
+   "status": "LIVE",
+   "questionType": "en-spag-punct-spot",
+   "stem": {
+    "text": "Read the sentence. One part may have a punctuation mistake. Which part is it? If every part is right, choose No mistake.",
+    "segmentsInOptions": true
+   },
+   "key": "No mistake",
+   "options": [
+    {
+     "value": "“Whose bag is this?”",
+     "isKey": false,
+     "tag": "en-n-option-avoidance",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "asked Mrs Okonjo,",
+     "isKey": false,
+     "tag": "en-n-option-avoidance",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "holding up the boys’ football kit,",
+     "isKey": false,
+     "tag": "en-n-option-avoidance",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "which had been left by the gate.",
+     "isKey": false,
+     "tag": "en-n-option-avoidance",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "No mistake",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-003-A-SP-07",
+   "status": "LIVE",
+   "questionType": "en-spag-spelling-spot",
+   "stem": {
+    "text": "Read the sentence. One part may have a spelling mistake. Which part is it? If every part is right, choose No mistake.",
+    "specimens": [
+     "practise",
+     "practice"
+    ],
+    "segmentsInOptions": true
+   },
+   "key": "No mistake",
+   "options": [
+    {
+     "value": "Their coats were already hanging",
+     "isKey": false,
+     "tag": "en-n-option-avoidance",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "by the door, so Miss Bell allowed them",
+     "isKey": false,
+     "tag": "en-n-option-avoidance",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "to practise the quiet piece",
+     "isKey": false,
+     "tag": "en-n-option-avoidance",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "separately in the corridor.",
+     "isKey": false,
+     "tag": "en-n-option-avoidance",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "No mistake",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-003-A-SP-09",
+   "status": "LIVE",
+   "questionType": "en-spag-spelling-spot",
+   "stem": {
+    "text": "Read the sentence. One part may have a spelling mistake. Which part is it? If every part is right, choose No mistake.",
+    "segmentsInOptions": true
+   },
+   "key": "No mistake",
+   "options": [
+    {
+     "value": "Every Wednesday the whole choir",
+     "isKey": false,
+     "tag": "en-n-option-avoidance",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "rehearsed separately,",
+     "isKey": false,
+     "tag": "en-n-option-avoidance",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "but the two groups definitely",
+     "isKey": false,
+     "tag": "en-n-option-avoidance",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "sounded better in the hall together.",
+     "isKey": false,
+     "tag": "en-n-option-avoidance",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "No mistake",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  }
+ ]
+}

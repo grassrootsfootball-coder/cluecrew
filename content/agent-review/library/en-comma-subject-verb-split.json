@@ -1,0 +1,232 @@
+{
+ "entry": {
+  "id": "en-comma-subject-verb-split",
+  "status": "ACTIVE",
+  "district": "ENGLISH",
+  "category": null,
+  "description": "Accepts a comma cutting subject from verb.",
+  "childHint": "Never let a single comma cut the do-er off from the doing.",
+  "approvedBy": "human:staff-reviewer@cluecrew.test",
+  "approvalMethod": "written review 2026-08-02",
+  "approvalNote": "Cleared on the printed review pack; returned marked up.",
+  "textProvenance": null
+ },
+ "carrierCount": 5,
+ "carriers": [
+  {
+   "itemId": "ENG-003-A-PU-02",
+   "status": "LIVE",
+   "questionType": "en-spag-punct-spot",
+   "stem": {
+    "text": "Read the sentence. One part may have a punctuation mistake. Which part is it? If every part is right, choose No mistake.",
+    "segmentsInOptions": true
+   },
+   "key": "and her pencil case.",
+   "options": [
+    {
+     "value": "Did Nadia,",
+     "isKey": false,
+     "tag": "en-comma-subject-verb-split",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "who arrived late,",
+     "isKey": false,
+     "tag": "en-paired-punctuation",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "remember to bring her recorder, her music book",
+     "isKey": false,
+     "tag": "en-paired-punctuation",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "and her pencil case.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "No mistake",
+     "isKey": false,
+     "tag": "en-terminal-punctuation-blind",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-003-A-PU-04",
+   "status": "LIVE",
+   "questionType": "en-spag-punct-spot",
+   "stem": {
+    "text": "Read the sentence. One part may have a punctuation mistake. Which part is it? If every part is right, choose No mistake.",
+    "segmentsInOptions": true
+   },
+   "key": "Mr Doyle opened the doors the class raced outside,",
+   "options": [
+    {
+     "value": "Once the rain stopped,",
+     "isKey": false,
+     "tag": "en-comma-subject-verb-split",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "Mr Doyle opened the doors the class raced outside,",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "and Ben’s football",
+     "isKey": false,
+     "tag": "en-apostrophe-possession",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "rolled straight under the bench.",
+     "isKey": false,
+     "tag": "en-terminal-punctuation-blind",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "No mistake",
+     "isKey": false,
+     "tag": "en-terminal-punctuation-blind",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-003-A-PU-06",
+   "status": "LIVE",
+   "questionType": "en-spag-punct-spot",
+   "stem": {
+    "text": "Read the sentence. One part may have a punctuation mistake. Which part is it? If every part is right, choose No mistake.",
+    "segmentsInOptions": true
+   },
+   "key": "“Has anyone seen my whistle”?",
+   "options": [
+    {
+     "value": "“Has anyone seen my whistle”?",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "asked Mr Doyle,",
+     "isKey": false,
+     "tag": "en-comma-subject-verb-split",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "who was searching under the bibs,",
+     "isKey": false,
+     "tag": "en-paired-punctuation",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "the cones and the spare bags.",
+     "isKey": false,
+     "tag": "en-paired-punctuation",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "No mistake",
+     "isKey": false,
+     "tag": "en-speech-punctuation-inside",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-003-A-PU-07",
+   "status": "LIVE",
+   "questionType": "en-spag-punct-spot",
+   "stem": {
+    "text": "Read the sentence. One part may have a punctuation mistake. Which part is it? If every part is right, choose No mistake.",
+    "segmentsInOptions": true
+   },
+   "key": "to the school office",
+   "options": [
+    {
+     "value": "Ben checked the lost property box,",
+     "isKey": false,
+     "tag": "en-paired-punctuation",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "found one glove, a scarf and a swimming cap,",
+     "isKey": false,
+     "tag": "en-paired-punctuation",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "then carried the whole pile",
+     "isKey": false,
+     "tag": "en-comma-subject-verb-split",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "to the school office",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "No mistake",
+     "isKey": false,
+     "tag": "en-terminal-punctuation-blind",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-003-A-PU-08",
+   "status": "LIVE",
+   "questionType": "en-spag-punct-spot",
+   "stem": {
+    "text": "Read the sentence. One part may have a punctuation mistake. Which part is it? If every part is right, choose No mistake.",
+    "segmentsInOptions": true
+   },
+   "key": "The boy in the red jumper,",
+   "options": [
+    {
+     "value": "The boy in the red jumper,",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "dropped his tray,",
+     "isKey": false,
+     "tag": "en-paired-punctuation",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "spilled the peas and the gravy,",
+     "isKey": false,
+     "tag": "en-paired-punctuation",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "then went very pink.",
+     "isKey": false,
+     "tag": "en-terminal-punctuation-blind",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "No mistake",
+     "isKey": false,
+     "tag": "en-comma-subject-verb-split",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  }
+ ]
+}

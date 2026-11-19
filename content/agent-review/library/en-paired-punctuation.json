@@ -1,0 +1,242 @@
+{
+ "entry": {
+  "id": "en-paired-punctuation",
+  "status": "ACTIVE",
+  "district": "ENGLISH",
+  "category": null,
+  "description": "Misses unclosed brackets or quotes.",
+  "childHint": "Brackets come in pairs, like shoes. Hunt for the partner.",
+  "approvedBy": "human:staff-reviewer@cluecrew.test",
+  "approvalMethod": "written review 2026-08-02",
+  "approvalNote": "Cleared on the printed review pack; returned marked up.",
+  "textProvenance": {
+   "note": "Ruled when written; absent from the store until now (R403/R410).",
+   "state": "RECORDED",
+   "appliedOn": "2026-08-21",
+   "authority": "annie-eighteenth-return (1).md, read from the file, sha256 b2e9e673669861e3b82d8a9a1fbc8a883a9f4b8f634353b3c8b407b74fa468ca",
+   "approvedByPerson": "Annie"
+  }
+ },
+ "carrierCount": 5,
+ "carriers": [
+  {
+   "itemId": "ENG-003-A-PU-02",
+   "status": "LIVE",
+   "questionType": "en-spag-punct-spot",
+   "stem": {
+    "text": "Read the sentence. One part may have a punctuation mistake. Which part is it? If every part is right, choose No mistake.",
+    "segmentsInOptions": true
+   },
+   "key": "and her pencil case.",
+   "options": [
+    {
+     "value": "Did Nadia,",
+     "isKey": false,
+     "tag": "en-comma-subject-verb-split",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "who arrived late,",
+     "isKey": false,
+     "tag": "en-paired-punctuation",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "remember to bring her recorder, her music book",
+     "isKey": false,
+     "tag": "en-paired-punctuation",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "and her pencil case.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "No mistake",
+     "isKey": false,
+     "tag": "en-terminal-punctuation-blind",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-003-A-PU-03",
+   "status": "LIVE",
+   "questionType": "en-spag-punct-spot",
+   "stem": {
+    "text": "Read the sentence. One part may have a punctuation mistake. Which part is it? If every part is right, choose No mistake.",
+    "segmentsInOptions": true
+   },
+   "key": "It’s fur was still damp,",
+   "options": [
+    {
+     "value": "It’s fur was still damp,",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "so Ella dried the rabbit gently,",
+     "isKey": false,
+     "tag": "en-paired-punctuation",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "checked Mr Bhatt’s chart",
+     "isKey": false,
+     "tag": "en-apostrophe-possession",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "and wrote today’s date.",
+     "isKey": false,
+     "tag": "en-apostrophe-possession",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "No mistake",
+     "isKey": false,
+     "tag": "en-apostrophe-possession",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-003-A-PU-06",
+   "status": "LIVE",
+   "questionType": "en-spag-punct-spot",
+   "stem": {
+    "text": "Read the sentence. One part may have a punctuation mistake. Which part is it? If every part is right, choose No mistake.",
+    "segmentsInOptions": true
+   },
+   "key": "“Has anyone seen my whistle”?",
+   "options": [
+    {
+     "value": "“Has anyone seen my whistle”?",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "asked Mr Doyle,",
+     "isKey": false,
+     "tag": "en-comma-subject-verb-split",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "who was searching under the bibs,",
+     "isKey": false,
+     "tag": "en-paired-punctuation",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "the cones and the spare bags.",
+     "isKey": false,
+     "tag": "en-paired-punctuation",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "No mistake",
+     "isKey": false,
+     "tag": "en-speech-punctuation-inside",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-003-A-PU-07",
+   "status": "LIVE",
+   "questionType": "en-spag-punct-spot",
+   "stem": {
+    "text": "Read the sentence. One part may have a punctuation mistake. Which part is it? If every part is right, choose No mistake.",
+    "segmentsInOptions": true
+   },
+   "key": "to the school office",
+   "options": [
+    {
+     "value": "Ben checked the lost property box,",
+     "isKey": false,
+     "tag": "en-paired-punctuation",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "found one glove, a scarf and a swimming cap,",
+     "isKey": false,
+     "tag": "en-paired-punctuation",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "then carried the whole pile",
+     "isKey": false,
+     "tag": "en-comma-subject-verb-split",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "to the school office",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "No mistake",
+     "isKey": false,
+     "tag": "en-terminal-punctuation-blind",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-003-A-PU-08",
+   "status": "LIVE",
+   "questionType": "en-spag-punct-spot",
+   "stem": {
+    "text": "Read the sentence. One part may have a punctuation mistake. Which part is it? If every part is right, choose No mistake.",
+    "segmentsInOptions": true
+   },
+   "key": "The boy in the red jumper,",
+   "options": [
+    {
+     "value": "The boy in the red jumper,",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "dropped his tray,",
+     "isKey": false,
+     "tag": "en-paired-punctuation",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "spilled the peas and the gravy,",
+     "isKey": false,
+     "tag": "en-paired-punctuation",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "then went very pink.",
+     "isKey": false,
+     "tag": "en-terminal-punctuation-blind",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "No mistake",
+     "isKey": false,
+     "tag": "en-comma-subject-verb-split",
+     "carriesThisEntry": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "entry": {
+  "id": "en-question-tag-polarity",
+  "status": "ACTIVE",
+  "district": "ENGLISH",
+  "category": null,
+  "description": "Repeats instead of flipping polarity in question tags; mismatches the auxiliary.",
+  "childHint": "A tag flips the sentence. A positive sentence takes a negative tag. If there is no helper verb, use do, does or did.",
+  "approvedBy": "human:staff-reviewer@cluecrew.test",
+  "approvalMethod": "written review 2026-08-02",
+  "approvalNote": "Cleared on the printed review pack; returned marked up.",
+  "textProvenance": {
+   "note": "Ruled when written; absent from the store until now (R403/R410).",
+   "state": "RECORDED",
+   "appliedOn": "2026-08-22",
+   "authority": "annie-fiftyfirst-return.md, read from the file, sha256 c35cdc66776bd6897997f0f33a0e269a446ab5e8a4ce661c8ee2f4c7b8bf1a2d",
+   "approvedByPerson": "Annie"
+  }
+ },
+ "carrierCount": 1,
+ "carriers": [
+  {
+   "itemId": "ENG-003-A-CZ-B3",
+   "status": "LIVE",
+   "questionType": "en-spag-cloze",
+   "stem": {
+    "text": "Choose the words that fit best.  —  “You are on the last leg, ___?” said Priya, tying her laces.",
+    "gapIndex": 3,
+    "passageRef": "cloze-eng003-b-sports-day"
+   },
+   "key": "aren’t you",
+   "options": [
+    {
+     "value": "are you",
+     "isKey": false,
+     "tag": "en-question-tag-polarity",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "aren’t you",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "isn’t it",
+     "isKey": false,
+     "tag": "en-question-tag-polarity",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "don’t you",
+     "isKey": false,
+     "tag": "en-question-tag-polarity",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  }
+ ]
+}

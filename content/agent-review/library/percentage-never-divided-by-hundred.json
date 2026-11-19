@@ -1,0 +1,53 @@
+{
+ "entry": {
+  "id": "percentage-never-divided-by-hundred",
+  "status": "ACTIVE",
+  "district": "MATHS",
+  "category": null,
+  "description": "multiplies by the percentage figure and never divides by one hundred, so the answer grows where it should shrink.",
+  "childHint": "This answer treats the percentage as a whole number. A percentage is a share out of one hundred.",
+  "approvedBy": null,
+  "approvalMethod": null,
+  "approvalNote": null,
+  "textProvenance": null
+ },
+ "carrierCount": 1,
+ "carriers": [
+  {
+   "itemId": "MC01-FDP-03",
+   "status": "LIVE",
+   "questionType": "maths-fdp",
+   "stem": {
+    "text": "What is 25% of £80?"
+   },
+   "key": "£20",
+   "options": [
+    {
+     "value": "£20",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "£55",
+     "isKey": false,
+     "tag": "maths-77-treating-a-percentage-as-money",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "£2000",
+     "isKey": false,
+     "tag": "percentage-never-divided-by-hundred",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "£40",
+     "isKey": false,
+     "tag": "maths-78-percentage-fraction-confusion",
+     "carriesThisEntry": false
+    }
+   ]
+  }
+ ]
+}

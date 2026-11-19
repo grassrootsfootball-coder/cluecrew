@@ -13,7 +13,8 @@ const OUT = pjoin(__dirname, '..', '..', 'content', 'agent-review', 'library');
 const val = (c: unknown) => { const x = (c as { value?: unknown })?.value; return Array.isArray(x) ? x.join(', ') : String(x); };
 async function main() {
   mkdirSync(OUT, { recursive: true });
-  const ids = (await prisma.$queryRaw<Array<{ id: string }>>`select distinct m.id from "Misconception" m join "ItemOption" o on o."misconceptionId"=m.id join "Item" i on i.id=o."itemId" where i.status='DRAFT' and i.pool='PRACTICE' and coalesce(m."approvedBy",'')<>'reviewer:rev-0001'`).map((r) => r.id);
+  const only = process.argv.find((a) => a.startsWith('--ids='))?.slice(6).split(',').filter(Boolean);
+  const ids = only?.length ? only : (await prisma.$queryRaw<Array<{ id: string }>>`select distinct m.id from "Misconception" m join "ItemOption" o on o."misconceptionId"=m.id join "Item" i on i.id=o."itemId" where i.status='DRAFT' and i.pool='PRACTICE' and coalesce(m."approvedBy",'')<>'reviewer:rev-0001'`).map((r) => r.id);
   requirePopulation('library-packets', { 'unattested entries carried by drafts': ids.length });
   const index: Array<Record<string, unknown>> = [];
   for (const id of ids) {
@@ -29,7 +30,7 @@ async function main() {
     writeFileSync(pjoin(OUT, `${id}.json`), JSON.stringify(packet, null, 1));
     index.push({ id, status: m.status, approvedBy: m.approvedBy, carriers: carriers.length });
   }
-  writeFileSync(pjoin(OUT, 'index.json'), JSON.stringify(index, null, 1));
+  if (!only?.length) writeFileSync(pjoin(OUT, 'index.json'), JSON.stringify(index, null, 1));
   console.log(`library packets: ${ids.length} entries written to content/agent-review/library/`);
 }
 main().catch((e) => { console.error(e); process.exitCode = 1; }).finally(() => prisma.$disconnect());

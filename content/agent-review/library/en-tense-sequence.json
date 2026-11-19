@@ -1,0 +1,182 @@
+{
+ "entry": {
+  "id": "en-tense-sequence",
+  "status": "ACTIVE",
+  "district": "ENGLISH",
+  "category": null,
+  "description": "Uses simple past where prior events need 'had'; drifts tense mid-narrative.",
+  "childHint": "Did it happen before the story-moment? Then you usually need 'had' and the verb.",
+  "approvedBy": "human:staff-reviewer@cluecrew.test",
+  "approvalMethod": "written review 2026-08-02",
+  "approvalNote": "Cleared on the printed review pack; returned marked up.",
+  "textProvenance": {
+   "note": "Ruled when written; absent from the store until now (R403/R410).",
+   "state": "RECORDED",
+   "appliedOn": "2026-08-22",
+   "authority": "annie-fiftyfirst-return.md, read from the file, sha256 c35cdc66776bd6897997f0f33a0e269a446ab5e8a4ce661c8ee2f4c7b8bf1a2d",
+   "approvedByPerson": "Annie"
+  }
+ },
+ "carrierCount": 4,
+ "carriers": [
+  {
+   "itemId": "ENG-003-A-CZ-A1",
+   "status": "LIVE",
+   "questionType": "en-spag-cloze",
+   "stem": {
+    "text": "Choose the words that fit best.  — She walked past the bins behind the kitchen and noticed that somebody ___ the paper recycling straight into the general waste.",
+    "gapIndex": 1,
+    "passageRef": "cloze-eng003-a-eco-club"
+   },
+   "key": "had tipped",
+   "options": [
+    {
+     "value": "tipped",
+     "isKey": false,
+     "tag": "en-tense-sequence",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "had tipped",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "has tipped",
+     "isKey": false,
+     "tag": "en-tense-sequence",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "tips",
+     "isKey": false,
+     "tag": "en-tense-sequence",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-003-A-CZ-A4",
+   "status": "LIVE",
+   "questionType": "en-spag-cloze",
+   "stem": {
+    "text": "Choose the words that fit best.  —  “I am not fixing the whole school,” Maya ___. “I am fixing one corridor.” Dev shrugged.",
+    "gapIndex": 4,
+    "passageRef": "cloze-eng003-a-eco-club"
+   },
+   "key": "replied",
+   "options": [
+    {
+     "value": "replies",
+     "isKey": false,
+     "tag": "en-tense-sequence",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "replied",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "has replied",
+     "isKey": false,
+     "tag": "en-tense-sequence",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "is replying",
+     "isKey": false,
+     "tag": "en-tense-sequence",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-003-A-CZ-A8",
+   "status": "LIVE",
+   "questionType": "en-spag-cloze",
+   "stem": {
+    "text": "Choose the words that fit best.  — Three weeks later the row of new labels ___ brighter than anything else in the corridor. Dev had joined the club, although he still refused to give up his apples.",
+    "gapIndex": 8,
+    "passageRef": "cloze-eng003-a-eco-club"
+   },
+   "key": "was",
+   "options": [
+    {
+     "value": "were",
+     "isKey": false,
+     "tag": "en-subject-verb-agreement-by-proximity",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "was",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "are",
+     "isKey": false,
+     "tag": "en-tense-sequence",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "is",
+     "isKey": false,
+     "tag": "en-tense-sequence",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-003-A-CZ-B6",
+   "status": "LIVE",
+   "questionType": "en-spag-cloze",
+   "stem": {
+    "text": "Choose the words that fit best.  — Ade took the baton, felt it slip, caught it again and ran. By the final bend he ___ the boy in the yellow bib.",
+    "gapIndex": 6,
+    "passageRef": "cloze-eng003-b-sports-day"
+   },
+   "key": "had almost caught",
+   "options": [
+    {
+     "value": "almost catches",
+     "isKey": false,
+     "tag": "en-tense-sequence",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "has almost caught",
+     "isKey": false,
+     "tag": "en-tense-sequence",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "had almost caught",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "was almost catching",
+     "isKey": false,
+     "tag": "en-tense-sequence",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "entry": {
+  "id": "ordering-goal-reversed",
+  "status": "ACTIVE",
+  "district": "MATHS",
+  "category": null,
+  "description": "orders the digits soundly but toward the wrong goal, building the largest number where the smallest is asked, or the reverse.",
+  "childHint": "Check which the question asks for, smallest or largest. These digits were ordered the other way.",
+  "approvedBy": null,
+  "approvalMethod": null,
+  "approvalNote": null,
+  "textProvenance": null
+ },
+ "carrierCount": 1,
+ "carriers": [
+  {
+   "itemId": "MC01-NPV-03",
+   "status": "LIVE",
+   "questionType": "maths-npv",
+   "stem": {
+    "text": "Use the digits 6, 0 and 4 once each. What is the smallest 3-digit number you can make?"
+   },
+   "key": "406",
+   "options": [
+    {
+     "value": "406",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "46",
+     "isKey": false,
+     "tag": "maths-64-leading-zero-ordering-slip",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "640",
+     "isKey": false,
+     "tag": "ordering-goal-reversed",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "604",
+     "isKey": false,
+     "tag": "leading-zero-repaired-ordering-not",
+     "carriesThisEntry": false
+    }
+   ]
+  }
+ ]
+}

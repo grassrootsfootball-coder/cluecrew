@@ -1,0 +1,111 @@
+{
+ "entry": {
+  "id": "en-evidence-vividness-bias",
+  "status": "ACTIVE",
+  "district": "ENGLISH",
+  "category": null,
+  "description": "Picks the most vivid quotation rather than the one proving the stated idea.",
+  "childHint": "The prettiest quote is not always the proof. Pick the one that shows it.",
+  "approvedBy": "human:staff-reviewer@cluecrew.test",
+  "approvalMethod": "written review 2026-08-02",
+  "approvalNote": "Cleared on the printed review pack; returned marked up.",
+  "textProvenance": {
+   "note": "Ruled when written; absent from the store until now (R403/R410).",
+   "state": "RECORDED",
+   "appliedOn": "2026-08-21",
+   "authority": "annie-eighteenth-return (1).md, read from the file, sha256 b2e9e673669861e3b82d8a9a1fbc8a883a9f4b8f634353b3c8b407b74fa468ca",
+   "approvedByPerson": "Annie"
+  }
+ },
+ "carrierCount": 2,
+ "carriers": [
+  {
+   "itemId": "ENG-001-WIW-06",
+   "status": "LIVE",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Read lines 14 to 15. Where did the Mole find himself when his snout came out into the sunlight?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 6
+   },
+   "key": "Rolling in the warm grass of a great meadow.",
+   "options": [
+    {
+     "value": "On the bank of the river.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "At the gap in the hedge.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "In a boat painted blue and white.",
+     "isKey": false,
+     "tag": "en-evidence-vividness-bias",
+     "carriesThisEntry": true,
+     "execution": "The blue and white boat at line 60 is the most vivid image in the passage and the one a reader carries away; it is pulled back here for that reason and no other."
+    },
+    {
+     "value": "Rolling in the warm grass of a great meadow.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "On a gravelled carriage-drive.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-12",
+   "status": "LIVE",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Read lines 29 to 33. What had the Mole never seen before in all his life?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 12
+   },
+   "key": "A river.",
+   "options": [
+    {
+     "value": "A great meadow.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "An animal that chased and chuckled.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A face with whiskers.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The bright sunshine.",
+     "isKey": false,
+     "tag": "en-evidence-vividness-bias",
+     "carriesThisEntry": true,
+     "execution": "The sunlight at line 14 is the passage's brightest image and is chosen for its vividness; he has seen the sun all through the meadow."
+    },
+    {
+     "value": "A river.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  }
+ ]
+}

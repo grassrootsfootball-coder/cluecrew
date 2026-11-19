@@ -1,0 +1,267 @@
+{
+ "entry": {
+  "id": "en-contradicted-by-the-text",
+  "status": "ACTIVE",
+  "district": "ENGLISH",
+  "category": null,
+  "description": "Chooses an option the passage explicitly denies, rather than one it merely fails to support. Distinguished from a plausible option the passage never states: here the passage states the contrary. Negation-dropped loses a WORD; this loses a CLAIM, and the option may share no wording with the line that refutes it.",
+  "childHint": "One line in the passage says something different. Go back and find it.",
+  "approvedBy": null,
+  "approvalMethod": null,
+  "approvalNote": null,
+  "textProvenance": {
+   "note": "Her description; the proposal's wording becomes the first boundary clause.",
+   "state": "RECORDED",
+   "appliedOn": "2026-08-21",
+   "authority": "annie-twentyfifth-return.md, read from the file, sha256 a4324d1085132d82aa2fb484306c90e35554508bc15e4e3058323322d280af53",
+   "approvedByPerson": "Annie"
+  }
+ },
+ "carrierCount": 6,
+ "carriers": [
+  {
+   "itemId": "ENG-001-WIW-18",
+   "status": "LIVE",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 56 to 62. The Mole says, 'Oh, it’s all very well to talk.' What does this show about him?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 18
+   },
+   "key": "He did not know how anyone could get across the river.",
+   "options": [
+    {
+     "value": "He did not know how anyone could get across the river.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He thought the Water Rat was being unkind to him.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He did not want to be friends with the Water Rat.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He was too tired from his walk to move.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He knew all about boats but did not own one.",
+     "isKey": false,
+     "tag": "en-contradicted-by-the-text",
+     "carriesThisEntry": true,
+     "execution": "Line 62 says he 'did not yet fully understand its uses', which contradicts knowing all about boats."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-21",
+   "status": "LIVE",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 66 to 67. What does the last thing the Mole says show about his day?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 21
+   },
+   "key": "The whole day had been full of things he had never done before.",
+   "options": [
+    {
+     "value": "He was hoping the Rat would let him hold the oars.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He was still frightened of the water.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The whole day had been full of things he had never done before.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He was already wishing he was back in his own house.",
+     "isKey": false,
+     "tag": "en-contradicted-by-the-text",
+     "carriesThisEntry": true,
+     "execution": "Nothing says he wants to go home; line 66 has him calling it a wonderful day."
+    },
+    {
+     "value": "He had been in boats before, but never one as fine as this.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-028-PR-02",
+   "status": "LIVE",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 5 to 8. What can Priya see from where she is standing?",
+    "passageRef": "stream-b-01",
+    "orderAnchor": 5
+   },
+   "key": "A gap under the roof where two boards have parted.",
+   "options": [
+    {
+     "value": "The flagstone beside the water butt.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A gap under the roof where two boards have parted.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A grey nest hanging under the roof board.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "So many going in that she cannot keep count.",
+     "isKey": false,
+     "tag": "en-contradicted-by-the-text",
+     "carriesThisEntry": true,
+     "execution": "Line 7 has her eyes doing the counting without being asked."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-028-PR-06",
+   "status": "LIVE",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Look at lines 21 and 22 and lines 48 to 50. What do the two moments show about Priya and the nest?",
+    "passageRef": "stream-b-01",
+    "answerShape": "what-she-told-nobody-against-what-she-says-at-the-door",
+    "orderAnchor": 21,
+    "techniqueKey": "a-thing-kept-secret-and-then-claimed-out-loud"
+   },
+   "key": "She kept them to herself, and now she says out loud that they are hers.",
+   "options": [
+    {
+     "value": "She told nobody about them, and she has two fists in his sleeve at the door.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She kept them to herself, and now she says out loud that they are hers.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She had already told her mother about them before this morning.",
+     "isKey": false,
+     "tag": "en-contradicted-by-the-text",
+     "carriesThisEntry": true,
+     "execution": "Line 21 says she told nobody."
+    },
+    {
+     "value": "She speaks so that Grandad will not be stung by them.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-028-PR-09",
+   "status": "LIVE",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 34 to 36. How has the traffic under the boards changed?",
+    "passageRef": "stream-b-01",
+    "orderAnchor": 34
+   },
+   "key": "More are out, and they are circling one patch of air.",
+   "options": [
+    {
+     "value": "More are out, and they are circling one patch of air.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The traffic under the boards has changed.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Priya is looking past his shoulder.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They have moved away from the roofline altogether.",
+     "isKey": false,
+     "tag": "en-contradicted-by-the-text",
+     "carriesThisEntry": true,
+     "execution": "Line 36 keeps them above the guttering."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-028-PR-12",
+   "status": "LIVE",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Think about the whole passage. How does the writer handle the thing in the shed?",
+    "passageRef": "stream-b-01",
+    "answerShape": "how-much-we-are-shown-against-what-we-are-told",
+    "orderAnchor": 999,
+    "techniqueKey": "the-creature-described-at-length-and-never-named"
+   },
+   "key": "We are shown them over and over, but the writer never names them.",
+   "options": [
+    {
+     "value": "The wall hummed against her ear, and the nest hung under the board.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Priya knows what they are, but she has not yet worked out where they live.",
+     "isKey": false,
+     "tag": "en-contradicted-by-the-text",
+     "carriesThisEntry": true,
+     "execution": "Line 20 has her see the nest itself through the gap."
+    },
+    {
+     "value": "We are told what they are, and then shown them again and again.",
+     "isKey": false,
+     "tag": "en-whole-text-absence-asserted",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "We are shown them over and over, but the writer never names them.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  }
+ ]
+}

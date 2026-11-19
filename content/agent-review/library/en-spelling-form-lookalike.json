@@ -1,0 +1,68 @@
+{
+ "entry": {
+  "id": "en-spelling-form-lookalike",
+  "status": "ACTIVE",
+  "district": "ENGLISH",
+  "category": null,
+  "description": "Accepts or writes a word's visual near-twin: quiet for quite, dairy for diary, angel for angle, loose for lose.",
+  "childHint": "Two words can look almost the same. Read the middle letters slowly, not the shape.",
+  "approvedBy": null,
+  "approvalMethod": null,
+  "approvalNote": null,
+  "textProvenance": {
+   "state": "RECORDED",
+   "appliedOn": "2026-08-22",
+   "authority": "annie-eng003-fifth-return.md, sha256 4a35b913da977fc843458780d08724b9fdf5096362b956889a015708014d0aaa — approved as written, definition, scope note and child hint",
+   "carriedBy": "SPLITRECORDSPELLINGFORMLOOKALIKE, sha256 eb2a1ba6479e41fd0221348c4e6f0ef37ca97ff3f9fd3b1dbfcd9371c20ce647",
+   "executedBy": "David's instruction, 2026-08-22 — executing her existing signed approval, not a new ruling",
+   "createdByRuling": "ENG-003 third return (sha256 630a56dc…) — A SPLIT from en-homophone-by-sound, not a rename: quiet/quite is form, not sound",
+   "approvedByPerson": "Annie"
+  }
+ },
+ "carrierCount": 1,
+ "carriers": [
+  {
+   "itemId": "ENG-003-A-SP-01",
+   "status": "LIVE",
+   "questionType": "en-spag-spelling-spot",
+   "stem": {
+    "text": "Read the sentence. One part may have a spelling mistake. Which part is it? If every part is right, choose No mistake.",
+    "segmentsInOptions": true
+   },
+   "key": "The twins left there lunch boxes",
+   "options": [
+    {
+     "value": "The twins left there lunch boxes",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "beside the quiet library door,",
+     "isKey": false,
+     "tag": "en-spelling-form-lookalike",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "then walked past the office",
+     "isKey": false,
+     "tag": "en-homophone-by-sound",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "and hurried to the netball court.",
+     "isKey": false,
+     "tag": "en-double-consonant-boundary",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "No mistake",
+     "isKey": false,
+     "tag": "en-homophone-by-sound",
+     "carriesThisEntry": false
+    }
+   ]
+  }
+ ]
+}

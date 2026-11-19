@@ -1,0 +1,101 @@
+{
+ "entry": {
+  "id": "en-article-definiteness",
+  "status": "ACTIVE",
+  "district": "ENGLISH",
+  "category": null,
+  "description": "Chooses between a, the and no article by habit, missing that the thing has already been named in the text or is one of a kind. Distinct from en-a-an-by-spelling, which is a sound judgement.",
+  "childHint": "Has the text named it already? That changes which little word fits.",
+  "approvedBy": "human:staff-reviewer@cluecrew.test",
+  "approvalMethod": "written review 2026-08-03",
+  "approvalNote": "Second-pass returns: ten new proposals cleared, WIW-14 stem rewritten, mistag check completed across the remaining 69.",
+  "textProvenance": {
+   "note": "Ruled when written; never reached the store until now (R403).",
+   "state": "RECORDED",
+   "method": "authored by the reviewer in her return; applied verbatim",
+   "appliedOn": "2026-08-21",
+   "authority": "annie-eng003-second-return.md, read from the file, sha256 90bd5b1ee56790d4aa202401e2095f07215953704d9ecc30d6251e6a597bb7ac",
+   "approvedByPerson": "Annie"
+  }
+ },
+ "carrierCount": 2,
+ "carriers": [
+  {
+   "itemId": "ENG-003-A-CZ-A2",
+   "status": "LIVE",
+   "questionType": "en-spag-cloze",
+   "stem": {
+    "text": "Choose the words that fit best.  — By lunchtime she had spent ___ hour drawing a plan on the back of her maths book.",
+    "gapIndex": 2,
+    "passageRef": "cloze-eng003-a-eco-club"
+   },
+   "key": "an",
+   "options": [
+    {
+     "value": "a",
+     "isKey": false,
+     "tag": "en-a-an-by-spelling",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "an",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "no word is needed",
+     "isKey": false,
+     "tag": "en-article-definiteness",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "the",
+     "isKey": false,
+     "tag": "en-article-avoids-the-sound-choice",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-003-A-CZ-B8",
+   "status": "LIVE",
+   "questionType": "en-spag-cloze",
+   "stem": {
+    "text": "Choose the words that fit best.  — Mrs Lawson wrote his time on a board beside the finish line. Ade looked at ___ board for a long time.",
+    "gapIndex": 8,
+    "passageRef": "cloze-eng003-b-sports-day"
+   },
+   "key": "the",
+   "options": [
+    {
+     "value": "a",
+     "isKey": false,
+     "tag": "en-article-definiteness",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "an",
+     "isKey": false,
+     "tag": "en-a-an-by-spelling",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "the",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "no word is needed",
+     "isKey": false,
+     "tag": "en-article-definiteness",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  }
+ ]
+}

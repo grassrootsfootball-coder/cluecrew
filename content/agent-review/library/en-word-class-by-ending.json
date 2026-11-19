@@ -1,0 +1,63 @@
+{
+ "entry": {
+  "id": "en-word-class-by-ending",
+  "status": "ACTIVE",
+  "district": "ENGLISH",
+  "category": null,
+  "description": "Classifies words by suffix rather than sentence job; participial adjective traps.",
+  "childHint": "Ask what job the word does in this sentence. Is it describing, or is it the action?",
+  "approvedBy": "human:staff-reviewer@cluecrew.test",
+  "approvalMethod": "written review 2026-08-02",
+  "approvalNote": "Cleared on the printed review pack; returned marked up.",
+  "textProvenance": {
+   "note": "Ruled when written; absent from the store until now (R403/R410).",
+   "state": "RECORDED",
+   "appliedOn": "2026-08-22",
+   "authority": "annie-fiftyfirst-return.md, read from the file, sha256 c35cdc66776bd6897997f0f33a0e269a446ab5e8a4ce661c8ee2f4c7b8bf1a2d",
+   "approvedByPerson": "Annie"
+  }
+ },
+ "carrierCount": 1,
+ "carriers": [
+  {
+   "itemId": "ENG-003-A-CZ-B5",
+   "status": "LIVE",
+   "questionType": "en-spag-cloze",
+   "stem": {
+    "text": "Choose the words that fit best.  — The ___ crowd made it hard to hear the whistle.",
+    "gapIndex": 5,
+    "passageRef": "cloze-eng003-b-sports-day"
+   },
+   "key": "cheering",
+   "options": [
+    {
+     "value": "cheer",
+     "isKey": false,
+     "tag": "en-word-class-by-ending",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "cheered",
+     "isKey": false,
+     "tag": "en-word-class-by-ending",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "cheering",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "cheers",
+     "isKey": false,
+     "tag": "en-word-class-by-ending",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  }
+ ]
+}

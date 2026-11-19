@@ -1,0 +1,57 @@
+{
+ "entry": {
+  "id": "en-preposition-collocation",
+  "status": "ACTIVE",
+  "district": "ENGLISH",
+  "category": null,
+  "description": "Chooses a preposition that is close in meaning but does not go with the verb: returned on the shelf, listened at the teacher.",
+  "childHint": "Say the whole phrase aloud — which little word does this verb usually take?",
+  "approvedBy": "human:staff-reviewer@cluecrew.test",
+  "approvalMethod": "written review 2026-08-03",
+  "approvalNote": "Second-pass returns: ten new proposals cleared, WIW-14 stem rewritten, mistag check completed across the remaining 69.",
+  "textProvenance": null
+ },
+ "carrierCount": 1,
+ "carriers": [
+  {
+   "itemId": "ENG-003-A-CZ-A5",
+   "status": "LIVE",
+   "questionType": "en-spag-cloze",
+   "stem": {
+    "text": "Choose the words that fit best.  — Crisp packets. A shoe. Two library books, which she returned ___ the shelf.",
+    "gapIndex": 5,
+    "passageRef": "cloze-eng003-a-eco-club"
+   },
+   "key": "to",
+   "options": [
+    {
+     "value": "at",
+     "isKey": false,
+     "tag": "en-preposition-collocation",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "on",
+     "isKey": false,
+     "tag": "en-preposition-collocation",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "to",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "for",
+     "isKey": false,
+     "tag": "en-preposition-collocation",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  }
+ ]
+}

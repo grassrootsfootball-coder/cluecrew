@@ -1,0 +1,105 @@
+{
+ "entry": {
+  "id": "en-technique-effect-mislocated",
+  "status": "ACTIVE",
+  "district": "ENGLISH",
+  "category": "writers-technique",
+  "description": "Child gives the effect of the sentence before where the answer is the effect of the quoted phrase, reading past the words under test.",
+  "childHint": "Find the exact words the question quotes. Answer about those words only.",
+  "approvedBy": "current-reviewer",
+  "approvalMethod": "written review — annie authoring sitting 2026-08-08",
+  "approvalNote": null,
+  "textProvenance": null
+ },
+ "carrierCount": 2,
+ "carriers": [
+  {
+   "itemId": "ENG-001-WIW-05",
+   "status": "LIVE",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "In lines 11 to 14 the writer repeats words like 'scraped' and 'scrabbled'. Why does he do this?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 5
+   },
+   "key": "To show the climb went on and on and was hard work.",
+   "options": [
+    {
+     "value": "To show that digging is the easiest job a mole ever does.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To show the Mole was bored and fed up with the climb.",
+     "isKey": false,
+     "tag": "en-repetition-purpose",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To show the climb went on and on and was hard work.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To copy the sound of the birds singing up above.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To make the reader feel sorry for the Mole's sore arms.",
+     "isKey": false,
+     "tag": "en-technique-effect-mislocated",
+     "carriesThisEntry": true,
+     "execution": "The sore arms are line 4 and the sympathy is the reader's; the repetition is doing length, not pity."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-16",
+   "status": "LIVE",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Lines 48 to 52 are four very short paragraphs. Each one adds one new detail. Why does the writer do this?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 16
+   },
+   "key": "To let the reader see the face appear bit by bit, just as the Mole does.",
+   "options": [
+    {
+     "value": "To show that the Mole was creeping closer with every step.",
+     "isKey": false,
+     "tag": "en-technique-effect-mislocated",
+     "carriesThisEntry": true,
+     "execution": "Detail arriving a piece at a time invites a child to supply someone moving in, and lines 48 to 52 give four pieces in a row. Nothing in the passage moves the Mole: he is looking, and it is the face that grows, so the approach is added by the reader and not by the text."
+    },
+    {
+     "value": "To show that the Mole was afraid of the face.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To let the reader see the face appear bit by bit, just as the Mole does.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To copy the little jumps the Mole made across the meadow.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To make the face sound as grand as it possibly could be.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,241 @@
+{
+ "reviewer": "rev-agent-01",
+ "entries": [
+  {
+   "id": "vr14-step-size",
+   "verdict": "REFUSE",
+   "reason": "Recomputed all 25 carriers (all LIVE, gen-vr-14-letter-connections-01..25): for each, pairA's gap equals operands.step and stemWord + step equals the key; both carrying options are exactly key+1 and key-1, i.e. the right rule with the hop count one long or one short. 25 of 25 genuine; none misfiled. Note: on the 7 step-1 items (01, 05, 09, 13, 17, 21, 25) the 'one short' option equals the given letter itself (zero hops); still a step-size slip, and the hint still helps, so not listed as misfiled. Pass 1: 'Count each hop along the alphabet' describes a move; every carrier is a forward letter analogy, so 'along the alphabet' holds on 25 of 25. Pass 2 fails: 'Say the number of steps out loud.' instructs an act a child cannot perform in a silent test, which the brief names as a fault and which the register already ruled against for a read-aloud hint (en-determiner-omitted, log line ~4419). This sentence is in the wording recorded as the eighth return (R426), so the transform overrides authored text and is hers to accept; approvedBy is null on the row. The replacement describes the move that fixes this slip: carry the same hop count to the new letter.",
+   "assertionClauses": [
+    {
+     "clause": "Count each hop along the alphabet.",
+     "falseOn": []
+    }
+   ],
+   "transforms": [
+    {
+     "field": "childHint",
+     "from": "Say the number of steps out loud.",
+     "to": "Then make the same number of hops from the new letter."
+    }
+   ],
+   "misfiledCarriers": []
+  },
+  {
+   "id": "vr-letter-series-direction",
+   "verdict": "ATTEST",
+   "reason": "Recomputed all 25 carriers (all LIVE, gen-vr-09-letter-series-01..25): every series is a constant forward step (1-4) and the key is last + step. Each carrying option is first - step with wrap (ABCD -> Z, BDFH -> Z, CGKO -> Y, DFHJ -> B ...): the term you get by reading the series right to left and continuing it, i.e. moving backwards through the alphabet. 25 of 25 genuine. Note for staff: the option is anchored at the FIRST letter, not last - step (C for ABCD), so it models reading the series in reverse order; the description still holds. Pass 1: 'Which way is the series moving' presupposes a single direction, true on 25 of 25 (all constant forward steps); 'Check the first two letters' is a move, and on every carrier the first two letters show the forward direction. Pass 2: 9 and 5 words, ends on '?' and '.', British English, actionable in a silent test, and aimed exactly at the reversal.",
+   "assertionClauses": [
+    {
+     "clause": "Which way is the series moving through the alphabet?",
+     "falseOn": []
+    }
+   ],
+   "transforms": [],
+   "misfiledCarriers": []
+  },
+  {
+   "id": "vr-letter-series-off-by-one",
+   "verdict": "REFUSE",
+   "reason": "Recomputed all 25 carriers (all LIVE, gen-vr-09-letter-series-01..25): series are constant forward steps, key = last + step. Carrying option is key+1 on the 20 step-2/3/4 items and key-1 (= the last letter of the series repeated) on the 5 step-1 items (01, 10, 13, 22, 25). Both are 'right rule, one letter short or long'. 25 of 25 genuine; none misfiled. Pass 1: 'So close' holds on all 25 (each carrier is one letter from the key). 'use the alphabet line' asserts a tool on the item; the Alphabet Rail exists (apps/web/components/crew/engines/alphabet-rail.tsx) but is absent in Plain mode by design, so it is not available to every child. Pass 2 fails: 'count each letter out loud' instructs an act a child cannot perform in a silent test, and the sentence leans on a dash. STORE FINDING: the row's textProvenance cites annie-thirtyseventh-return (appliedOn 2026-08-21), and R456 records that return as replacing this exact string with 'Count along the alphabet again. Land one letter at a time.' The packet still serves the BEFORE value, so either the amendment was reverted after landing or the provenance stamp records a write that is not in the text. The transform proposed is her authored replacement, verbatim from R456, not new wording; the provenance/text mismatch should be investigated before or alongside landing it.",
+   "assertionClauses": [
+    {
+     "clause": "So close",
+     "falseOn": []
+    },
+    {
+     "clause": "use the alphabet line",
+     "falseOn": [],
+     "note": "not a carrier feature; the rail is absent in Plain mode, so false for some children rather than some items"
+    }
+   ],
+   "transforms": [
+    {
+     "field": "childHint",
+     "from": "So close — use the alphabet line and count each letter out loud.",
+     "to": "Count along the alphabet again. Land one letter at a time."
+    }
+   ],
+   "misfiledCarriers": []
+  },
+  {
+   "id": "en-evidence-vividness-bias",
+   "verdict": "REFUSE",
+   "reason": "Read both carriers against the passage (stream-a-03-wind-in-willows). Both carrying options genuinely make the vividness mistake: WIW-06 'In a boat painted blue and white' pulls the boat from lines 59-61 into a question about lines 14-15; WIW-12 'The bright sunshine' pulls line 16's sunshine into a question about lines 29-33. So the carriers fit the MISTAKE, but not the entry's TEXT: both are en-comp-retrieval items whose options are paraphrased answers, not quotations, and neither stem states an idea to be proved. Pass 1: 'The prettiest quote is not always the proof' and 'Pick the one that shows it' are false on 2 of 2 carriers (no quote, no proof, and 'it' has no referent in a where/what question); the description's 'quotation ... proving the stated idea' is false on 2 of 2 the same way. Because the carriers are right and the text is narrow, the fix is a text transform, not a retag. Proposed hint reads 'The most striking detail is not always the answer. Pick the one the question asks for.' (9 and 8 words), which stays true on quotation-evidence items too.",
+   "assertionClauses": [
+    {
+     "clause": "The prettiest quote is not always the proof.",
+     "falseOn": [
+      "ENG-001-WIW-06",
+      "ENG-001-WIW-12"
+     ]
+    },
+    {
+     "clause": "Pick the one that shows it.",
+     "falseOn": [
+      "ENG-001-WIW-06",
+      "ENG-001-WIW-12"
+     ]
+    },
+    {
+     "clause": "(description) the most vivid quotation rather than the one proving the stated idea",
+     "falseOn": [
+      "ENG-001-WIW-06",
+      "ENG-001-WIW-12"
+     ]
+    }
+   ],
+   "transforms": [
+    {
+     "field": "childHint",
+     "from": "The prettiest quote is not always the proof.",
+     "to": "The most striking detail is not always the answer."
+    },
+    {
+     "field": "childHint",
+     "from": "Pick the one that shows it.",
+     "to": "Pick the one the question asks for."
+    },
+    {
+     "field": "description",
+     "from": "the most vivid quotation rather than the one proving the stated idea",
+     "to": "the most vivid detail or quotation rather than the one that answers the question or proves the stated idea"
+    }
+   ],
+   "misfiledCarriers": []
+  },
+  {
+   "id": "en-technique-device-confusion",
+   "verdict": "ATTEST",
+   "reason": "The entry's text is correct for its own definition (simile/metaphor naming), but its only carrier is misfiled, so the entry currently has 0 correctly filed carriers and the attestation rests on the definition alone. Pass 1: 'Does the line say like or as?' and 'A comparison using those words is a simile' are false on the 1 carrier (WIW-22 quotes no line and contains no simile). Worse, WIW-22's stem itself reads 'The animals act like people', so a child shown this hint on that LIVE item would be told a 'like' comparison is a simile, which is irrelevant to the question and actively misleading. That is an item fault, fixed by retagging, not by changing this text. Pass 2: 7 and 9 words, child language, actionable. RETAG URGENT: WIW-22 is LIVE.",
+   "assertionClauses": [
+    {
+     "clause": "Does the line say like or as?",
+     "falseOn": [
+      "ENG-001-WIW-22"
+     ]
+    },
+    {
+     "clause": "A comparison using those words is a simile.",
+     "falseOn": [
+      "ENG-001-WIW-22"
+     ]
+    }
+   ],
+   "transforms": [],
+   "misfiledCarriers": [
+    {
+     "itemId": "ENG-001-WIW-22",
+     "option": "He gives them human names, and leaves the animal ones behind.",
+     "why": "No device is being named; the option claims the reverse of the text (they are called Mole, Rat, rabbit throughout, lines 22, 52, 54-55), which is en-contradicted-by-the-text, as the option's own execution says."
+    }
+   ]
+  },
+  {
+   "id": "en-technique-effect-mislocated",
+   "verdict": "REFUSE",
+   "reason": "Read both carriers against the passage. WIW-05: the stem quotes 'scraped' and 'scrabbled' (lines 11-13); the carrying option 'feel sorry for the Mole's sore arms' takes its effect from line 4's 'weary arms', an earlier part of the passage, not the words under test. Genuine. But the description says 'the sentence before', and line 4 sits several sentences earlier (the sentence immediately before line 11 is about the tunnel and the carriage-drive), so that clause is false on WIW-05; transform below generalises it. WIW-16: misfiled (below). Pass 1 on the hint: 'Find the exact words the question quotes' is true on WIW-05 and false on WIW-16, whose stem quotes no words; that falsity comes with the misfiling and is resolved by the retag, so no hint transform. Pass 2: 8 and 5 words, child language, an act a child can do in a silent test, and the right remedy for mislocation.",
+   "assertionClauses": [
+    {
+     "clause": "Find the exact words the question quotes.",
+     "falseOn": [
+      "ENG-001-WIW-16"
+     ]
+    },
+    {
+     "clause": "(description) the effect of the sentence before",
+     "falseOn": [
+      "ENG-001-WIW-05",
+      "ENG-001-WIW-16"
+     ]
+    }
+   ],
+   "transforms": [
+    {
+     "field": "description",
+     "from": "the effect of the sentence before",
+     "to": "the effect of an earlier or neighbouring part of the passage"
+    }
+   ],
+   "misfiledCarriers": [
+    {
+     "itemId": "ENG-001-WIW-16",
+     "option": "To show that the Mole was creeping closer with every step.",
+     "why": "No effect is taken from a neighbouring sentence; the option adds a movement the text does not give (line 39 has the Mole sitting on the grass while the face grows), so it is a reader-supplied claim: en-plausible-not-stated, or en-contradicted-by-the-text given line 39."
+    }
+   ]
+  },
+  {
+   "id": "leading-zero-repaired-ordering-not",
+   "verdict": "ATTEST",
+   "reason": "Recomputed MC01-NPV-03 (LIVE): digits 6, 0, 4, smallest 3-digit number = 406 (smallest non-zero digit leads, then ascending). Carrier 604: zero kept off the front, but 6 leads where 4 could, then 0, 4 ascending. Exactly the entry's mistake; 1 of 1 genuine. Pass 1: 'The zero is rightly not first' and 'a smaller digit could still lead' are both true of 604. Pass 2: 8 and 7 words, actionable, points at the specific remaining fault.",
+   "assertionClauses": [
+    {
+     "clause": "The zero is rightly not first.",
+     "falseOn": []
+    },
+    {
+     "clause": "a smaller digit could still lead",
+     "falseOn": []
+    }
+   ],
+   "transforms": [],
+   "misfiledCarriers": []
+  },
+  {
+   "id": "maximum-given-for-a-sum",
+   "verdict": "ATTEST",
+   "reason": "Recomputed MC01-STATS-01 (LIVE): 6 + 3 + 7 + 4 = 20 (key). Carrier 7 = max(6, 3, 7, 4), the largest single value given as the total. 1 of 1 genuine; no other route reaches 7. Pass 1: 'The biggest number alone is not the total' is true of 7; 'A total needs every value added' is a general truth, not an item claim. Pass 2: 9 and 6 words, child language, names the move.",
+   "assertionClauses": [
+    {
+     "clause": "The biggest number alone is not the total.",
+     "falseOn": []
+    }
+   ],
+   "transforms": [],
+   "misfiledCarriers": []
+  },
+  {
+   "id": "ordering-goal-reversed",
+   "verdict": "ATTEST",
+   "reason": "Recomputed MC01-NPV-03 (LIVE): smallest from 6, 0, 4 is 406; carrier 640 is the digits in descending order, the LARGEST 3-digit number. Sound ordering toward the wrong goal; 1 of 1 genuine. Pass 1: 'These digits were ordered the other way' is true of 640 (descending where ascending, zero-repaired, is wanted). Pass 2: 'Check which the question asks for, smallest or largest.' (9 words) is a move, and the second sentence (6 words) names the fault.",
+   "assertionClauses": [
+    {
+     "clause": "These digits were ordered the other way.",
+     "falseOn": []
+    }
+   ],
+   "transforms": [],
+   "misfiledCarriers": []
+  },
+  {
+   "id": "percentage-never-divided-by-hundred",
+   "verdict": "ATTEST",
+   "reason": "Recomputed MC01-FDP-03 (LIVE): 25% of £80 = 80 x 25 / 100 = £20 (key). Carrier £2000 = 80 x 25, the division by 100 never made. 1 of 1 genuine; the answer grows where it should shrink, as the description says. Pass 1: 'This answer treats the percentage as a whole number' is true (25% used as 25). Pass 2: 8 and 9 words; 'a share out of one hundred' is the concept the child is missing. House notation on the options is correct (£ symbol).",
+   "assertionClauses": [
+    {
+     "clause": "This answer treats the percentage as a whole number.",
+     "falseOn": []
+    }
+   ],
+   "transforms": [],
+   "misfiledCarriers": []
+  },
+  {
+   "id": "side-recounted-from-a-reached-corner",
+   "verdict": "ATTEST",
+   "reason": "Recomputed MC01-GEOM-04 (LIVE): corners (2,1), (5,1), (2,4) give side 3 and fourth corner (5,4). Carrier (8,4) = (5,4) + 3 across, or (2,4) + 3 + 3: one side length added again after the corner x = 5 was reached. 1 of 1 genuine. Pass 1: 'That point lies one whole side too far' is true (3 units past (5,4)); 'The corner was already reached' is true of the move. Pass 2: 8 and 5 words, child language. Mild generality note, not a fault: 'The corner' does not say which corner, so a child who chose (8,4) by guessing may not see which reach the hint means; acceptable on a single carrier.",
+   "assertionClauses": [
+    {
+     "clause": "That point lies one whole side too far.",
+     "falseOn": []
+    },
+    {
+     "clause": "The corner was already reached.",
+     "falseOn": []
+    }
+   ],
+   "transforms": [],
+   "misfiledCarriers": []
+  }
+ ]
+}

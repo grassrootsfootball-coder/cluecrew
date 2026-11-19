@@ -1,0 +1,53 @@
+{
+ "entry": {
+  "id": "leading-zero-repaired-ordering-not",
+  "status": "ACTIVE",
+  "district": "MATHS",
+  "category": null,
+  "description": "keeps zero off the front, as the rule requires, but leads with a larger digit than the digits allow; the leading-zero rule learned, the ordering beneath it still wrong.",
+  "childHint": "The zero is rightly not first. But a smaller digit could still lead.",
+  "approvedBy": null,
+  "approvalMethod": null,
+  "approvalNote": null,
+  "textProvenance": null
+ },
+ "carrierCount": 1,
+ "carriers": [
+  {
+   "itemId": "MC01-NPV-03",
+   "status": "LIVE",
+   "questionType": "maths-npv",
+   "stem": {
+    "text": "Use the digits 6, 0 and 4 once each. What is the smallest 3-digit number you can make?"
+   },
+   "key": "406",
+   "options": [
+    {
+     "value": "406",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "46",
+     "isKey": false,
+     "tag": "maths-64-leading-zero-ordering-slip",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "640",
+     "isKey": false,
+     "tag": "ordering-goal-reversed",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "604",
+     "isKey": false,
+     "tag": "leading-zero-repaired-ordering-not",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "entry": {
+  "id": "side-recounted-from-a-reached-corner",
+  "status": "ACTIVE",
+  "district": "MATHS",
+  "category": null,
+  "description": "adds a side length again from a corner the move has already reached, so one side is counted twice.",
+  "childHint": "That point lies one whole side too far. The corner was already reached.",
+  "approvedBy": null,
+  "approvalMethod": null,
+  "approvalNote": null,
+  "textProvenance": null
+ },
+ "carrierCount": 1,
+ "carriers": [
+  {
+   "itemId": "MC01-GEOM-04",
+   "status": "LIVE",
+   "questionType": "maths-geom",
+   "stem": {
+    "text": "On a grid, a square has three corners at (2, 1), (5, 1) and (2, 4). What are the coordinates of the fourth corner?"
+   },
+   "key": "(5, 4)",
+   "options": [
+    {
+     "value": "(5, 4)",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "(4, 5)",
+     "isKey": false,
+     "tag": "maths-46-reversed-coordinates",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "(3, 3)",
+     "isKey": false,
+     "tag": "maths-91-coordinate-read-slip",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "(8, 4)",
+     "isKey": false,
+     "tag": "side-recounted-from-a-reached-corner",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  }
+ ]
+}

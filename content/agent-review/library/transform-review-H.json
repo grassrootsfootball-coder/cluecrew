@@ -1,0 +1,41 @@
+{
+  "reviewer": "rev-agent-01",
+  "entries": [
+    {
+      "id": "vr14-step-size",
+      "verdict": "ATTEST",
+      "reason": "The transform applies once. Recomputed all 25 carriers: on each one, the gap in pairA equals the step, and the two carrying options are exactly key+1 and key-1. On the 7 step-1 items, key-1 is the given letter itself. So 25 of 25 genuinely make this mistake. Pass 1: 'Count each hop along the alphabet.' holds on 25 of 25, because every carrier is a forward letter analogy. 'Then make the same number of hops from the new letter.' is a move. 'The new letter' has a referent on every carrier (stemWord, the given letter of the second pair), and the move is exactly what fixes a hop count that is one long or one short. Pass 2: the sentences are 6 and 11 words, end on full stops, use British English, and need nothing the child may not have. The removed sentence 'Say the number of steps out loud.' instructs a channel a child does not have in a silent test. The brief names that as a fault, and it is the class R567 and R586 describe ('instructing a channel not every child has'). Meaning: the entry still names the same mistake, and the new sentence replaces a counting aid with the matching silent move. It adds no new claim. AUTHORITY NOTE: R426 confirms the current string is Annie's eighth-return wording (row approvedBy null, textProvenance approvedByPerson Annie). This attests the replacement as passing both passes, under rev-agent-01. It does not approve overriding her text; that is hers to accept.",
+      "resultText": {
+        "childHint": "Count each hop along the alphabet. Then make the same number of hops from the new letter.",
+        "description": "Counted the jump one letter short or long."
+      }
+    },
+    {
+      "id": "vr-letter-series-off-by-one",
+      "verdict": "ATTEST",
+      "reason": "The transform applies once. Its 'from' matches the current string, em dash included. Its 'to' is VERBATIM the replacement that R456 (docs/authoring-calibration-log.md lines 14273-14275) records from Annie's thirty-seventh return: 'Count along the alphabet again. Land one letter at a time.' So this restores her wording; it is not new wording. Recomputed all 25 carriers. The carrier is key+1 on the 20 items with a step of 2, 3 or 4, and key-1 (the last letter repeated) on the 5 step-1 items (01, 10, 13, 22, 25). All 25 have the right rule and land one letter off. Pass 1: 'again' assumes only that the child counted, and 'Land one letter at a time' is a move. Neither claims a feature of the item. The result also drops 'use the alphabet line', which names a tool absent in Plain mode, and 'count each letter out loud', a channel absent in a silent test. Pass 2: the sentences are 5 and 6 words, end on full stops, use British English, and have no dash. Weaker on the 5 step-1 carriers, where the slip is repeating the last letter rather than overshooting, but still true there. R457 Q2 already records that off-by-one and step-repeat are the same letter on those five, which is an item matter. STORE FINDING, to resolve BEFORE landing: R456 says this amendment was applied on 2026-08-21 and 'CONFIRMED by direct read', and the row's textProvenance cites that same return. Yet the packet serves the BEFORE string. So the text was overwritten after it landed. These misconception rows are seeded by generate-content.ts (R426), so a seed or generate run is the likely cause. If so, landing it again without finding the overwriting path will revert it again. I did not read the database.",
+      "resultText": {
+        "childHint": "Count along the alphabet again. Land one letter at a time.",
+        "description": "Correct rule, but landed one letter short or long."
+      }
+    },
+    {
+      "id": "en-evidence-vividness-bias",
+      "verdict": "REFUSE",
+      "reason": "All three transforms apply once, but the result changes the entry's meaning to fit carriers that make a different mistake. The text Annie approved is about EVIDENCE: choosing which quotation proves a stated idea. Both carriers are retrieval questions with paraphrased options. ENG-001-WIW-06: 'In a boat painted blue and white.' comes from the boat at line 60, for a question about lines 14-15. ENG-001-WIW-12: 'The bright sunshine.' comes from line 14, for a question about lines 29-33. Each is a detail taken from another part of the passage, which is exactly en-wrong-scope-retrieval, whose attested hint is now 'Something from another part of the passage does not answer this question.' The vividness reading appears only in the executions, as a guess at why the child was drawn to it. Nothing in the item can tell a vivid wrong-part detail from any other wrong-part detail. So the carriers are misfiled, and the fix is to retag them, not to widen the text. Widening 'quotation ... proving the stated idea' to 'detail or quotation ... that answers the question' turns an evidence-selection entry into a general retrieval distractor that overlaps wrong-scope-retrieval. Pass 2 also fails on generality: 'Pick the one the question asks for.' is true of every wrong answer to every question, so it tells the child nothing. Recommendation: keep the current text. Retag WIW-06 and WIW-12 to en-wrong-scope-retrieval, leaving this entry with 0 carriers until an evidence item exists. That is the same state the attested en-technique-device-confusion is in.",
+      "resultText": {
+        "childHint": "The most striking detail is not always the answer. Pick the one the question asks for.",
+        "description": "Picks the most vivid detail or quotation rather than the one that answers the question or proves the stated idea."
+      }
+    },
+    {
+      "id": "en-technique-effect-mislocated",
+      "verdict": "ATTEST",
+      "reason": "The single description transform applies once, and the hint is unchanged. Pass 1: the result description, 'the effect of an earlier or neighbouring part of the passage', is true on ENG-001-WIW-05. Its stem quotes 'scraped' and 'scrabbled' (lines 11-14), and its carrier ('feel sorry for the Mole's sore arms') takes its effect from line 4's 'weary arms', several sentences earlier, so 'the sentence before' was false there. The hint 'Find the exact words the question quotes. Answer about those words only.' is true on WIW-05. Misfile ENG-001-WIW-16, checked myself: its stem quotes no words, and its carrier ('the Mole was creeping closer') adds a movement the passage does not give. That is a claim the reader supplies (en-plausible-not-stated), not an effect borrowed from another part, so it is genuinely a different mistake and an item fault. Pass 2: the sentences are 7 and 5 words, end on full stops, use British English, and describe an act a child can do in a silent test. Meaning: widening 'the sentence before' to 'an earlier or neighbouring part' keeps the entry's core ('reading past the words under test'). It only stops it naming a distance its own carrier contradicts. The entry was written in an Annie authoring sitting, and this changes her description wording, so she should see it.",
+      "resultText": {
+        "childHint": "Find the exact words the question quotes. Answer about those words only.",
+        "description": "Child gives the effect of an earlier or neighbouring part of the passage where the answer is the effect of the quoted phrase, reading past the words under test."
+      }
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+ "entry": {
+  "id": "maximum-given-for-a-sum",
+  "status": "ACTIVE",
+  "district": "MATHS",
+  "category": null,
+  "description": "answers a total question with the largest single value instead of adding the values.",
+  "childHint": "The biggest number alone is not the total. A total needs every value added.",
+  "approvedBy": null,
+  "approvalMethod": null,
+  "approvalNote": null,
+  "textProvenance": null
+ },
+ "carrierCount": 1,
+ "carriers": [
+  {
+   "itemId": "MC01-STATS-01",
+   "status": "LIVE",
+   "questionType": "maths-stats",
+   "stem": {
+    "text": "A table shows books read this week: Ava 6, Ben 3, Cara 7, Dev 4. How many books did they read in total?"
+   },
+   "key": "20",
+   "options": [
+    {
+     "value": "16",
+     "isKey": false,
+     "tag": "maths-94-incomplete-statistical-total",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "4",
+     "isKey": false,
+     "tag": "maths-95-reading-the-wrong-statistical-quantity",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "20",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "7",
+     "isKey": false,
+     "tag": "maximum-given-for-a-sum",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  }
+ ]
+}
