@@ -55,7 +55,7 @@
     {
       "id": "en-apostrophe-possession",
       "verdict": "REFUSE",
-      "reason": "4 carriers screened (13 carrying options); all genuinely possessive-apostrophe confusions (flagging a correct owner apostrophe, flagging a plain plural, or missing the fault). Pass 1: 'An owner needs an apostrophe.' is stated as a rule with no exception, and is FALSE on ENG-003-A-PU-03, whose key is 'It's fur': the owner 'it' takes no apostrophe, so a child following the hint keeps the mistake. 'Try swapping in 'it is'.' presupposes an its/it's in the item and has nothing to act on in PU-01, PU-04 and PU-05 (3 of 4). Pass 2: 'Ask whose it is.' is a good move on every carrier. Transform adds the its exception and makes the it-is swap conditional. On spot-the-mistake carriers the carrying part is often a CORRECT form the child flagged as wrong (the converse of the description's wording); treated as the same confusion, not a misfile.",
+      "reason": "Revised after transform-review-G.json refused the first transform. 4 carriers screened (13 carrying options); all genuine possessive-apostrophe confusions. Pass 1 on the original: 'An owner needs an apostrophe.' is false on ENG-003-A-PU-03 (the answer is the wrong 'It's fur'), and 'Try swapping in 'it is'' has nothing to act on in PU-01, PU-04 and PU-05. The first transform fixed both but said nothing about WHERE the apostrophe goes, so on PU-05 ('childrens’ coats') a child finds an apostrophe present and is confirmed in the mistake. The revised transform adds placement: straight after the owner word, which is correct for singular (Patel's, Ben's), plural ending in s (boys') and irregular plural (children's). Checked per carrier: PU-01 boys → boys'; PU-03 its, no apostrophe; PU-04 Ben's correct; PU-05 children → children's. Grammar claims: possessive apostrophe follows the complete owner word (true in every case above); possessive 'its' never takes an apostrophe (true). Straight quotes kept, matching the store's other library hints; it's is left unquoted because a quote mark around it would sit against its own apostrophe. Spot-the-mistake note: often the carrying part is a CORRECT form the child flagged as wrong; treated as the same confusion.",
       "assertionClauses": [
         {
           "clause": "An owner needs an apostrophe.",
@@ -71,14 +71,21 @@
             "ENG-003-A-PU-04",
             "ENG-003-A-PU-05"
           ]
+        },
+        {
+          "clause": "(missing) where the apostrophe goes",
+          "falseOn": [
+            "ENG-003-A-PU-05"
+          ],
+          "note": "A gap, not a false clause: the key misplaces the apostrophe (childrens’)."
         }
       ],
       "transforms": [
         {
           "field": "childHint",
           "from": "An owner needs an apostrophe. Try swapping in 'it is'.",
-          "to": "An owner needs an apostrophe, but the word its never has one. If you see it's, try swapping in 'it is'.",
-          "resultingText": "Ask whose it is. An owner needs an apostrophe, but the word its never has one. If you see it's, try swapping in 'it is'."
+          "to": "An owner needs an apostrophe straight after the owner word, like children's or boys'. Owner words like its, his, ours and theirs never have one. If you see it's, try swapping in 'it is'.",
+          "resultingText": "Ask whose it is. An owner needs an apostrophe straight after the owner word, like children's or boys'. Owner words like its, his, ours and theirs never have one. If you see it's, try swapping in 'it is'."
         }
       ],
       "misfiledCarriers": []
@@ -195,7 +202,7 @@
     {
       "id": "en-modal-conditional-form",
       "verdict": "REFUSE",
-      "reason": "1 carrier screened (ENG-003-A-CZ-A7, 3 carrying options). Pass 1: no false clause; both rules are true. Pass 2: the hint covers only the will/would half of the description. A child who chose 'would have known' or 'would be knowing' already used 'would', so the hint tells them they were right; it helps 1 of 3 carrying options. Transform adds the 'would have' rule, which serves 'would have known'. 'would be knowing' (the impossible-form half: know does not take -ing here) is still served by no wording; left for a person to decide whether one more sentence is worth it.",
+      "reason": "Revised after transform-review-G.json refused the first transform. 1 carrier (ENG-003-A-CZ-A7, 'If we painted a picture on every lid, people ___ exactly where things go.'), 3 carrying options. Pass 2 on the original: the hint covers only will/would, and two carrying options ('would have known', 'would be knowing') already use 'would'. My first addition ('Use 'would have' only when the if part has 'had'') is FALSE as grammar: mixed conditionals put 'would have' after an if part with no 'had' ('If I were braver, I would have gone'). The revised move makes no only-if claim; it tells the child what each form means. (a) In an imagined if, a past form without 'had' ('if we painted') refers to now or later, not the past (second conditional). (b) 'Would have' imagines the past. Each claim describes its own clause, so mixed conditionals do not break them ('If I were braver' is about now; 'I would have gone' is about the past). That reaches 'would have known': the if part is about now or later, so a past result does not fit. 'Would be knowing' CANNOT be covered by a general move. Its fault is that 'know' is a state verb and takes no -ing here, but the description's impossible-form half has several shapes ('would knew', 'would be knowing'), and one sentence naming 'know' would teach one verb. So the revised hint serves 2 of 3 carrying options. If a person wants the third, an optional sentence would be 'Some verbs, like know, do not usually take -ing.' (true as grammar; not proposed, since it takes the hint to five sentences for one option).",
       "assertionClauses": [
         {
           "clause": "An imagined if takes 'would'.",
@@ -207,11 +214,18 @@
         {
           "field": "childHint",
           "from": "A real if takes 'will'.",
-          "to": "A real if takes 'will'. Use 'would have' only when the if part has 'had'.",
-          "resultingText": "An imagined if takes 'would'. A real if takes 'will'. Use 'would have' only when the if part has 'had'."
+          "to": "A real if takes 'will'. In an imagined if, a past word like 'painted' without 'had' means now or later. 'Would have' is for imagining the past.",
+          "resultingText": "An imagined if takes 'would'. A real if takes 'will'. In an imagined if, a past word like 'painted' without 'had' means now or later. 'Would have' is for imagining the past."
         }
       ],
-      "misfiledCarriers": []
+      "misfiledCarriers": [],
+      "uncovered": [
+        {
+          "itemId": "ENG-003-A-CZ-A7",
+          "option": "would be knowing",
+          "why": "Impossible form (state verb 'know' with -ing). No general move covers the description's impossible-form half; see reason for an optional sentence."
+        }
+      ]
     },
     {
       "id": "en-n-option-avoidance",
@@ -229,8 +243,8 @@
     },
     {
       "id": "en-paired-punctuation",
-      "verdict": "REFUSE",
-      "reason": "5 carriers screened (10 carrying options). Pass 1: 'Brackets come in pairs, like shoes.' presupposes brackets; NO carrier contains a bracket or an unclosed quotation, so the hint instructs an act on something absent on 5 of 5 (R576's shape). The description ('unclosed brackets or quotes') likewise matches no carrier. Two options are genuine pair judgements with COMMAS around extra information ('who arrived late,' and 'who was searching under the bibs,', each flagged by a child who misjudged the pair). The other eight are list or clause commas with no pair at all (listed misfiled). Transform widens hint and description to commas around extra information, which is the KS2 parenthesis set; 'Hunt for the partner.' then works on the two real carriers and correctly finds no partner on the rest.",
+      "verdict": "ATTEST",
+      "reason": "Revised after transform-review-G.json refused the first transform. Withdrawn: no widening. The first transform widened the hint and description to 'commas around extra information', which is false as grammar whenever the extra information runs to the end of the sentence (one comma opens it, the full stop closes it). ENG-003-A-PU-06 is that case, and I had misread its 'who was searching under the bibs,' as a pair: the comma after 'bibs' is a LIST comma. Kept as written, the entry ('Misses unclosed brackets or quotes.'; 'Brackets come in pairs, like shoes. Hunt for the partner.') is sound for genuinely paired marks. Grammar claim checked: brackets always come in pairs (true). ATTEST, with this caveat in plain terms: the entry currently fits NONE of its 5 carriers or 9 carrying options. No carrier contains a bracket or an unclosed quote, so the hint's clauses are false on every carrier, and every carrying option is listed as misfiled below. Those are item faults; this attestation is about the entry's own text and is NOT a statement that it fits what children now see.",
       "assertionClauses": [
         {
           "clause": "Brackets come in pairs, like shoes.",
@@ -241,7 +255,7 @@
             "ENG-003-A-PU-07",
             "ENG-003-A-PU-08"
           ],
-          "note": "No carrier contains a bracket."
+          "note": "No carrier contains a bracket; false only on carriers whose every carrying option is misfiled."
         },
         {
           "clause": "Misses unclosed brackets or quotes. (description)",
@@ -251,60 +265,59 @@
             "ENG-003-A-PU-06",
             "ENG-003-A-PU-07",
             "ENG-003-A-PU-08"
-          ]
+          ],
+          "note": "Same: all carrying options misfiled."
         }
       ],
-      "transforms": [
-        {
-          "field": "childHint",
-          "from": "Brackets come in pairs, like shoes.",
-          "to": "Brackets, and commas around extra information, come in pairs like shoes.",
-          "resultingText": "Brackets, and commas around extra information, come in pairs like shoes. Hunt for the partner."
-        },
-        {
-          "field": "description",
-          "from": "Misses unclosed brackets or quotes.",
-          "to": "Misjudges paired punctuation: misses an unclosed bracket, quote or pair of commas around extra information, or flags a correct closing one.",
-          "resultingText": "Misjudges paired punctuation: misses an unclosed bracket, quote or pair of commas around extra information, or flags a correct closing one."
-        }
-      ],
+      "transforms": [],
       "misfiledCarriers": [
         {
           "itemId": "ENG-003-A-PU-02",
+          "option": "who arrived late,",
+          "why": "The closing comma of a correct comma pair around 'who arrived late'. A real paired-mark judgement, but with commas, which this entry's text does not cover and which I am not widening it to. Retag to belongs under en-comma-over-applied (the child picks a part where a comma may sit, not the faulty part). CAVEAT: that is the NEAREST existing entry, not a clean fit. Its description is worded for comma-keyed items, and its childHint 'Now find the part that cannot do without one.' is false here, because this key is not a missing comma (key: a question ending on a full stop). The alternative is a person's ruling to widen this entry to parenthesis commas."
+        },
+        {
+          "itemId": "ENG-003-A-PU-02",
           "option": "remember to bring her recorder, her music book",
-          "why": "List comma; nothing paired."
+          "why": "List comma; nothing paired. Retag: belongs under en-comma-over-applied (the child picks a part where a comma may sit, not the faulty part). CAVEAT: that is the NEAREST existing entry, not a clean fit. Its description is worded for comma-keyed items, and its childHint 'Now find the part that cannot do without one.' is false here, because this key is not a missing comma (key: a question ending on a full stop)."
         },
         {
           "itemId": "ENG-003-A-PU-03",
           "option": "so Ella dried the rabbit gently,",
-          "why": "Comma between actions in a sequence; nothing paired."
+          "why": "A comma in a list of actions; nothing paired. Retag: belongs under en-comma-over-applied (the child picks a part where a comma may sit, not the faulty part). CAVEAT: that is the NEAREST existing entry, not a clean fit. Its description is worded for comma-keyed items, and its childHint 'Now find the part that cannot do without one.' is false here, because this key is not a missing comma (key: the false It's)."
+        },
+        {
+          "itemId": "ENG-003-A-PU-06",
+          "option": "who was searching under the bibs,",
+          "why": "The comma after 'bibs' is a list comma (bibs, cones, bags). The who-clause runs to the full stop, so there is no pair to close. Retag: belongs under en-comma-over-applied (the child picks a part where a comma may sit, not the faulty part). CAVEAT: that is the NEAREST existing entry, not a clean fit. Its description is worded for comma-keyed items, and its childHint 'Now find the part that cannot do without one.' is false here, because this key is not a missing comma (key: question mark outside the speech marks)."
         },
         {
           "itemId": "ENG-003-A-PU-06",
           "option": "the cones and the spare bags.",
-          "why": "End of a list closed by a full stop; nothing paired."
+          "why": "The only mark is the closing full stop, which is correct. Retag to en-terminal-punctuation-blind (flags a correct full stop), which is how ENG-003-A-PU-08's 'then went very pink.' is already tagged."
         },
         {
           "itemId": "ENG-003-A-PU-07",
           "option": "Ben checked the lost property box,",
-          "why": "Comma in a sequence of actions; nothing paired."
+          "why": "Comma in a list of actions; nothing paired. Retag: belongs under en-comma-over-applied (the child picks a part where a comma may sit, not the faulty part). CAVEAT: that is the NEAREST existing entry, not a clean fit. Its description is worded for comma-keyed items, and its childHint 'Now find the part that cannot do without one.' is false here, because this key is not a missing comma (key: a missing full stop)."
         },
         {
           "itemId": "ENG-003-A-PU-07",
           "option": "found one glove, a scarf and a swimming cap,",
-          "why": "List commas; nothing paired."
+          "why": "List commas; nothing paired. Retag: belongs under en-comma-over-applied (the child picks a part where a comma may sit, not the faulty part). CAVEAT: that is the NEAREST existing entry, not a clean fit. Its description is worded for comma-keyed items, and its childHint 'Now find the part that cannot do without one.' is false here, because this key is not a missing comma (key: a missing full stop)."
         },
         {
           "itemId": "ENG-003-A-PU-08",
           "option": "dropped his tray,",
-          "why": "Comma in a list of actions; nothing paired."
+          "why": "Comma in a list of actions; nothing paired. Retag: belongs under en-comma-over-applied (the child picks a part where a comma may sit, not the faulty part). CAVEAT: that is the NEAREST existing entry, not a clean fit. Its description is worded for comma-keyed items, and its childHint 'Now find the part that cannot do without one.' is false here, because this key is not a missing comma (key: a comma that must be removed)."
         },
         {
           "itemId": "ENG-003-A-PU-08",
           "option": "spilled the peas and the gravy,",
-          "why": "Comma in a list of actions; nothing paired."
+          "why": "Comma in a list of actions; nothing paired. Retag: belongs under en-comma-over-applied (the child picks a part where a comma may sit, not the faulty part). CAVEAT: that is the NEAREST existing entry, not a clean fit. Its description is worded for comma-keyed items, and its childHint 'Now find the part that cannot do without one.' is false here, because this key is not a missing comma (key: a comma that must be removed)."
         }
-      ]
+      ],
+      "retagNote": "No existing ENGLISH entry is defined as 'flags a correct comma when the fault is a different mark'. Looked up from the Misconception table: en-comma-subject-verb-split, en-terminal-punctuation-blind, en-paired-punctuation, en-comma-over-applied, en-comma-not-a-comma-site, en-speech-punctuation-inside. en-comma-over-applied is the nearest; whether these go there or under a new entry is a person's decision."
     },
     {
       "id": "en-preposition-collocation",
@@ -447,7 +460,7 @@
     {
       "id": "en-unstressed-suffix-vowel",
       "verdict": "REFUSE",
-      "reason": "2 carriers screened (6 carrying options: assistant, confident, difference, temporary flagged; 'No mistake' missing excellant and dictionery); all genuinely this mistake. Pass 1: 'Say a word from the same family with that ending stressed.' asserts such a word exists. It does for confident (confidential) and, at a stretch, difference (differential). It does not for assistant, excellent, temporary or dictionary: no family word stresses that vowel. So the hint is unusable on carrying options on both carriers, including both 'No mistake' options, which are where the child misses the real fault. Transform keeps the family move where it exists and adds a fallback for when it does not. On spot-the-mistake carriers the carrying part is often a CORRECT form the child flagged as wrong (the converse of the description's wording); treated as the same confusion, not a misfile.",
+      "reason": "Revised after transform-review-G.json refused the first transform. 2 carriers screened (6 carrying options: assistant, confident, difference and temporary flagged as wrong; 'No mistake' on SP-02 misses excellant, on SP-06 misses dictionery). Pass 1 on the original: 'Say a word from the same family with that ending stressed' asserts that such a word exists. It does not for assistant, excellent, temporary or dictionary. The first fallback ('a word you are sure of that ends the same way') could produce the exact mistake (bakery leads to dictionery; elegant leads to excellant). The revised transform uses the -ant/-ance, -ent/-ence partner, which keeps the vowel: assistant/assistance, excellent/excellence, confident/confidence, different/difference. That serves 4 of 6 carrying options, including the SP-02 'No mistake'. Grammar claims checked. 'Many' (not 'all') -ant/-ent words have such a partner, because many do not (giant, plant, moment). 'Almost always keeps the same vowel', not 'always', because of rare pairs (dependant/dependence). 'May' for the -ary/-ery/-ory route, because some family words stress the vowel (library/librarian, history/historical) and many do not. HONEST GAP: the two -ary carrying options (temporary on SP-06, and SP-06's 'No mistake' missing dictionery) have no family word that sounds the vowel, so the third sentence is true but serves 0 of 2 here. No reliable child-level move for -ary/-ery/-ory is known to me, and I have not invented one.",
       "assertionClauses": [
         {
           "clause": "Say a word from the same family with that ending stressed. Now you can hear the vowel.",
@@ -462,11 +475,23 @@
         {
           "field": "childHint",
           "from": "Say a word from the same family with that ending stressed. Now you can hear the vowel.",
-          "to": "Think of a family word with that ending stressed, and listen for the vowel. If there is none, use a word you are sure of that ends the same way.",
-          "resultingText": "Think of a family word with that ending stressed, and listen for the vowel. If there is none, use a word you are sure of that ends the same way."
+          "to": "Many words ending -ant or -ent have a partner ending -ance or -ence. The partner almost always keeps the same vowel, like assistant and assistance. For -ary, -ery or -ory, a family word may help, like librarian for library.",
+          "resultingText": "Many words ending -ant or -ent have a partner ending -ance or -ence. The partner almost always keeps the same vowel, like assistant and assistance. For -ary, -ery or -ory, a family word may help, like librarian for library."
         }
       ],
-      "misfiledCarriers": []
+      "misfiledCarriers": [],
+      "uncovered": [
+        {
+          "itemId": "ENG-003-A-SP-06",
+          "option": "and gave everyone a temporary pass.",
+          "why": "-ary, no family word sounds the vowel."
+        },
+        {
+          "itemId": "ENG-003-A-SP-06",
+          "option": "No mistake",
+          "why": "Misses dictionery; -ary, no family word sounds the vowel."
+        }
+      ]
     },
     {
       "id": "en-word-class-by-ending",
@@ -489,5 +514,6 @@
       ],
       "misfiledCarriers": []
     }
-  ]
+  ],
+  "revision": "2026-11-19: en-apostrophe-possession, en-modal-conditional-form, en-paired-punctuation and en-unstressed-suffix-vowel revised in response to transform-review-G.json. The other 17 entries are unchanged."
 }

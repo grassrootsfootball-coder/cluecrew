@@ -113,7 +113,15 @@
  },
  {
   "id": "en-apostrophe-possession",
-  "outcome": "held: transform not independently attested (REFUSE)"
+  "outcome": "TRANSFORMED + ATTESTED",
+  "before": {
+   "childHint": "Ask whose it is. An owner needs an apostrophe. Try swapping in 'it is'.",
+   "description": "Misses possessive apostrophes; confuses its/it's."
+  },
+  "after": {
+   "description": "Misses possessive apostrophes; confuses its/it's.",
+   "childHint": "Ask whose it is. An owner needs an apostrophe straight after the owner word, like children's or boys'. Owner words like its, his, ours and theirs never have one. If you see it's, try swapping in 'it is'."
+  }
  },
  {
   "id": "en-article-definiteness",
@@ -133,15 +141,7 @@
  },
  {
   "id": "en-double-consonant-boundary",
-  "outcome": "TRANSFORMED + ATTESTED",
-  "before": {
-   "childHint": "Say the root word first, then add the ending, and check which letter really doubles.",
-   "description": "Guesses whether a consonant doubles when an ending is added, or doubles the wrong letter: begining for beginning, dissapointed for disappointed, stoped for stopped."
-  },
-  "after": {
-   "description": "Guesses whether a consonant doubles when an ending is added, or doubles the wrong letter: begining for beginning, dissapointed for disappointed, stoped for stopped.",
-   "childHint": "Say the root word first, then add the beginning or ending. Check which letter really doubles."
-  }
+  "outcome": "already attested"
  },
  {
   "id": "en-homophone-by-sound",
@@ -149,7 +149,7 @@
  },
  {
   "id": "en-modal-conditional-form",
-  "outcome": "held: transform not independently attested (REFUSE)"
+  "outcome": "already attested"
  },
  {
   "id": "en-n-option-avoidance",
@@ -157,19 +157,11 @@
  },
  {
   "id": "en-paired-punctuation",
-  "outcome": "held: transform not independently attested (REFUSE)"
+  "outcome": "already attested"
  },
  {
   "id": "en-preposition-collocation",
-  "outcome": "TRANSFORMED + ATTESTED",
-  "before": {
-   "childHint": "Say the whole phrase aloud — which little word does this verb usually take?",
-   "description": "Chooses a preposition that is close in meaning but does not go with the verb: returned on the shelf, listened at the teacher."
-  },
-  "after": {
-   "description": "Chooses a preposition that is close in meaning but does not go with the verb: returned on the shelf, listened at the teacher.",
-   "childHint": "Say the whole phrase in your head. Which little word does this verb usually take?"
-  }
+  "outcome": "already attested"
  },
  {
   "id": "en-question-tag-polarity",
@@ -189,27 +181,11 @@
  },
  {
   "id": "en-tense-sequence",
-  "outcome": "TRANSFORMED + ATTESTED",
-  "before": {
-   "childHint": "Did it happen before the story-moment? Then you usually need 'had' and the verb.",
-   "description": "Uses simple past where prior events need 'had'; drifts tense mid-narrative."
-  },
-  "after": {
-   "description": "Uses simple past where prior events need 'had'; drifts tense mid-narrative.",
-   "childHint": "Did it happen before the story-moment? Then you usually need 'had' and the verb. If not, keep to the same tense as the story around it."
-  }
+  "outcome": "already attested"
  },
  {
   "id": "en-terminal-punctuation-blind",
-  "outcome": "TRANSFORMED + ATTESTED",
-  "before": {
-   "childHint": "Read it aloud. Where your voice stops or asks, the punctuation must match.",
-   "description": "Accepts a full stop on a question; misses run-ons and missing boundaries."
-  },
-  "after": {
-   "description": "Accepts a full stop on a question; misses run-ons and missing boundaries.",
-   "childHint": "Read it in your head. Where your voice would stop or ask, the punctuation must match."
-  }
+  "outcome": "already attested"
  },
  {
   "id": "en-unstressed-medial-vowel",
@@ -217,19 +193,11 @@
  },
  {
   "id": "en-unstressed-suffix-vowel",
-  "outcome": "held: transform not independently attested (REFUSE)"
+  "outcome": "already attested"
  },
  {
   "id": "en-word-class-by-ending",
-  "outcome": "TRANSFORMED + ATTESTED",
-  "before": {
-   "childHint": "Ask what job the word does in this sentence. Is it describing, or is it the action?",
-   "description": "Classifies words by suffix rather than sentence job; participial adjective traps."
-  },
-  "after": {
-   "description": "Classifies words by suffix rather than sentence job; participial adjective traps.",
-   "childHint": "Ask what job the word does in this sentence. Is it describing, or is it the action? If it describes, is the thing doing the action or having it done to it?"
-  }
+  "outcome": "already attested"
  },
  {
   "id": "vr14-step-size",

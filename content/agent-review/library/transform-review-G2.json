@@ -1,0 +1,32 @@
+{
+  "reviewer": "rev-agent-01",
+  "entries": [
+    {
+      "id": "en-apostrophe-possession",
+      "verdict": "REFUSE",
+      "reason": "Transform applied (exact single match; result equals the proposer's resultingText). The placement fix is right and closes my round-1 objection: 'straight after the owner word' is correct for Patel's, Ben's, boys' and children's, and on ENG-003-A-PU-05 it now leads from 'childrens’' to 'children's'. Per carrier, Pass 1 is clean on all 4. But the grammar check fails on a clause I should have caught in round 1, and the revision makes it worse. 'An owner needs an apostrophe straight after the owner word' is false for the possessive pronouns his, hers, ours, theirs, yours and whose, which never take one. The new sentence 'The owner word 'its' never has one.' names its as THE exception, so a child reads every other owner word as needing one. That teaches her's, their's and our's, which are common KS2 errors of this very entry. No carrier contains those pronouns, so this is a grammar fault in the text, not a carrier fault. Minimal fix: 'The owner words its, his, hers and theirs never have one.' Or scope the rule to names and naming words. With that one change I would attest.",
+      "resultText": {
+        "childHint": "Ask whose it is. An owner needs an apostrophe straight after the owner word, like children's or boys'. The owner word 'its' never has one. If you see it's, try swapping in 'it is'.",
+        "description": "Misses possessive apostrophes; confuses its/it's."
+      }
+    },
+    {
+      "id": "en-modal-conditional-form",
+      "verdict": "ATTEST",
+      "reason": "Transform applied (exact single match; result equals the proposer's resultingText). Four sentences of 6, 6, 15 and 7 words, each ending on a full stop, British English, no aloud instruction. Grammar checked clause by clause. 'An imagined if takes would' and 'A real if takes will' are the standard first and second conditional. 'In an imagined if, a past word like painted without had means now or later' is correct for the second conditional: a past form in a counterfactual if-clause is unreal present or future, and that includes 'were'. 'Would have is for imagining the past' is correct, and it survives mixed conditionals ('If I were braver, I would have gone': the result is still about the past). The only-if claim I refused is gone. On the carrier, ENG-003-A-CZ-A7 ('If we painted…, people ___'), it serves 'will know' (imagined if takes would) and 'would have known' (the if part is about now or later, so a past result does not fit). 'would be knowing' is still not served, and nothing in the text is false about it. That honest gap is acceptable under the coordinator's standard. Note that naming 'painted' ties the example to this carrier; it is offered as an example ('like') and is true in general.",
+      "resultText": {
+        "childHint": "An imagined if takes 'would'. A real if takes 'will'. In an imagined if, a past word like 'painted' without 'had' means now or later. 'Would have' is for imagining the past.",
+        "description": "Mismatches the modal to its if-clause, or builds an impossible modal form: 'if we painted ... people will know', 'would knew', 'would be knowing'."
+      }
+    },
+    {
+      "id": "en-unstressed-suffix-vowel",
+      "verdict": "ATTEST",
+      "reason": "Transform applied (exact single match; result equals the proposer's resultingText). Three sentences of 12, 11 and 13 words, each ending on a full stop, British English. Grammar checked. 'Many', not 'all', is right: giant, plant and moment have no -ance/-ence partner. -ant pairs with -ance and -ent with -ence, and 'almost always' honestly allows the rare noun dependant beside the noun dependence. assistant/assistance is a true example. In librarian the stress falls on the 'a' (li-BRAR-i-an), so it really does sound the vowel of library, and 'may help' is properly hedged. No clause asserts a feature that is false on any carrier. Coverage per carrier, honestly limited: the partner route reaches assistant, excellent/excellant, confident and difference, which is 4 of 6 carrying options. The -ary sentence is true but reaches neither temporary nor dictionery on ENG-003-A-SP-06. One limit for a person to weigh, not a falsehood: the partner's vowel is also unstressed, so the move helps only when the child knows the partner better (different → difference works well; excellence is about as unfamiliar as excellent). Not widened: it stays inside the description's own -ant/-ent, -ance/-ence, -ary/-ery/-ory. The new text is not yet gated: run scan:vocab and the reading-age lint, as the hyphen-led suffixes may trip a tokeniser.",
+      "resultText": {
+        "childHint": "Many words ending -ant or -ent have a partner ending -ance or -ence. The partner almost always keeps the same vowel, like assistant and assistance. For -ary, -ery or -ory, a family word may help, like librarian for library.",
+        "description": "Guesses between -ant/-ent, -ance/-ence, -ary/-ory/-ery."
+      }
+    }
+  ]
+}

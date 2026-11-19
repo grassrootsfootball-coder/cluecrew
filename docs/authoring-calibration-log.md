@@ -28521,3 +28521,35 @@ population that no longer holds the case is not evidence the case is fixed** —
 so it enters by attestation — dictionary-only, it can reach REVIEW, never AMBIGUOUS. Other lexicons in
 the estate are separate instruments and untouched: `land-door`/`land-proposals` use the child lexicon
 directly, `check-key-performs-stem` and `check-carrier-performs-entry` read plain word sets.
+
+## R1022 — The remaining drafts, the whole library, and two faults that were reverting reviewed work (2026-11-19)
+
+**Under R1021's regime, on David's "go ahead".** Every remaining VR and maths practice draft is LIVE
+(vr-03, vr-04, vr-06, maths-01), English rose from 29 to 197 LIVE, and **every library entry any practice
+row carries is now attested** — by Annie, or by `rev-agent-01` after a two-pass reading against every
+carrier, with any rewording landed only as a TRANSFORM that a SECOND, independent agent attested. 36 of
+those entries had only the placeholder `human:staff-reviewer@cluecrew.test`, `current-reviewer` or nothing
+(R94's finding, closed rather than reported). Provenance records the approver as MACHINE (R98).
+
+**THE SEED WAS REVERTING LIBRARY TEXT.** `seedMisconceptions` rewrote description/childHint/teachback on
+every run; Annie's R456 hint was confirmed applied on 2026-08-21 and found serving the old seed string.
+Now create-only. Same class as R62 — a routine command rewriting reviewed content.
+
+**A NARROWER SIGNATURE MUST NOT CLEAR A WIDER HOLD.** The retag reviewer re-signed 38 English rows for a
+TAG change while the English reviewer's holds on their hints, walk scripts and passage refs stood;
+`publish-door --ready` read the newer signature as clearance and they went LIVE. Reverted the same hour,
+one transaction, an event each; the publisher now refuses any row in the standing hold file. **A hold
+stands until the review that placed it reads its field again.**
+
+**WHAT THE REVIEW FOUND.** 112 options filed under the wrong library entry (35 LIVE — WIW-22 was serving a
+simile hint on "act like people"); 10 English options make a mistake no entry names (two real events told
+in reversed order); a library example with wrong arithmetic (maths-99: 62 − 27 rounds to 30, not 40);
+10 LIVE maths rows still carrying two entries Annie dissolved on 2026-08-06; a machine-appended "In the
+window, line N answers the stem" clause misquoting its line across every English passage; and on several
+doors one or two distractor types carrying most seats (vr-03 anchor/topic 30 of 48, vr-04 opposite-pull
+~12 of 41, maths keys second-smallest on 7 of 9).
+
+**OPEN FOR DAVID.** 183 English drafts are HELD with fault and field
+(`content/agent-review/english/held-for-authoring-store.json`): item text is the authoring store's under
+"Cowork authors, the DB holds", and whether agents may now rewrite it is his call. A new entry for
+reversed-order events; the door-level distribution caps; maths-99's example.

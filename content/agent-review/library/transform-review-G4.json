@@ -1,0 +1,14 @@
+{
+  "reviewer": "rev-agent-01",
+  "entries": [
+    {
+      "id": "en-apostrophe-possession",
+      "verdict": "ATTEST",
+      "reason": "Transform applied (exact single match; result equals the proposer's resultingText). The only change since G3 is the exceptions sentence, now 'Owner words like its, his, ours and theirs never have one.' Grammar: true. Possessive pronouns never take an apostrophe, and 'like' marks the list as examples, so ours, yours and whose are no longer implied to need one. That makes the general rule 'An owner needs an apostrophe straight after the owner word' honest as the rule for naming words, with pronoun owners openly excepted. Pass 1 per carrier (4 carriers, 13 carrying options): PU-01 'the boys coats' becomes boys'. PU-03 'It's fur' is caught by the its exception and the it's swap ('it is fur' fails), and Mr Bhatt's and today's are confirmed correct. On PU-04 Ben's is confirmed correct. PU-05 'childrens’' becomes children's by the placement rule, and caretaker's is confirmed correct. No clause is false on any carrier. The it's swap is conditional ('If you see it's'), so it gives no instruction on PU-01/04/05. Pass 2: four sentences of 4, 15, 9 and 8 words, each ending on a full stop, British English, no aloud instruction, all moves a child can make silently. Not widened beyond the description (possessive apostrophes and its/it's). Minor, not blocking: straight apostrophes in the hint where the items use curly ones. The new text is not yet gated; run checkItemChildFacing / scan:vocab and the reading-age lint before applying.",
+      "resultText": {
+        "childHint": "Ask whose it is. An owner needs an apostrophe straight after the owner word, like children's or boys'. Owner words like its, his, ours and theirs never have one. If you see it's, try swapping in 'it is'.",
+        "description": "Misses possessive apostrophes; confuses its/it's."
+      }
+    }
+  ]
+}
