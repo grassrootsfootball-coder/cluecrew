@@ -1,0 +1,86 @@
+{
+  "reviewer": "rev-agent-01",
+  "entries": [
+    {
+      "id": "en-apostrophe-possession",
+      "verdict": "REFUSE",
+      "reason": "Transform applied cleanly. Pass 1 on the result: the its exception now makes 'An owner needs an apostrophe' true on ENG-003-A-PU-03, and the it's swap is conditional, so it no longer instructs an absent act on PU-01/04/05. Grammar claims correct ('its' possessive never takes an apostrophe). But the result still fails ENG-003-A-PU-05 (4 of 13 carrying options): the key there is the MISPLACED apostrophe in 'childrens’ coats'. A child who chose No mistake, or flagged a correct part, asks whose the coats are, is told an owner needs an apostrophe, finds one already present, and is confirmed in the mistake. Nothing in the hint says WHERE the apostrophe goes, and placement is inside the entry's own mistake (a possessive apostrophe), so this is a gap, not a widening. Minor: its/it's appear unquoted while 'it is' is quoted, and the hint uses straight apostrophes where the items use curly ones. Suggested direction for the proposer: add a placement move against the owner word, e.g. 'It goes straight after the owner word.' (children → children’s, boys → boys’), then re-screen PU-01 and PU-05.",
+      "resultText": {
+        "childHint": "Ask whose it is. An owner needs an apostrophe, but the word its never has one. If you see it's, try swapping in 'it is'.",
+        "description": "Misses possessive apostrophes; confuses its/it's."
+      }
+    },
+    {
+      "id": "en-double-consonant-boundary",
+      "verdict": "ATTEST",
+      "reason": "Result: two sentences, 11 and 5 words, ending on full stops, British English. Pass 1: no feature asserted; 'add the beginning or ending' now covers the prefix case on ENG-003-A-SP-08 (dis + appointed: the root carries pp, the prefix adds one s), and the suffix case on SP-05 (begin + ing → beginning). On SP-01 (hurried) and SP-04/SP-08 (cancelled, pinned, grinned) and SP-02/SP-05 (slipped, stopped) 'check which letter really doubles' is a true move; on hurried the answer is none, which is correct. Pass 2: actionable and specific to one mistake; 'Say' is inner speech, not an instruction to speak aloud. Not widened: the description already names the prefix example. Note 'beginning' as the child's word for prefix also appears as a test word in SP-05; harmless but worth knowing.",
+      "resultText": {
+        "childHint": "Say the root word first, then add the beginning or ending. Check which letter really doubles.",
+        "description": "Guesses whether a consonant doubles when an ending is added, or doubles the wrong letter: begining for beginning, dissapointed for disappointed, stoped for stopped."
+      }
+    },
+    {
+      "id": "en-modal-conditional-form",
+      "verdict": "REFUSE",
+      "reason": "One carrier, ENG-003-A-CZ-A7 ('If we painted…, people ___'), three carrying options. The added sentence 'Use 'would have' only when the if part has 'had'.' rules out 'would have known' here, which is an improvement. But (1) as an English-grammar claim 'only' is false: mixed conditionals put 'would have' after an if part with no 'had' ('If she were more careful, she would have noticed'; 'If I were you, I would have told him'). A necessary-condition rule stated as absolute is the kind of claim this pass exists to stop. (2) 'would be knowing' (1 of 3 carrying options, the description's 'impossible modal form' half) is still served by no wording: the child used 'would' and the hint tells them 'would' is right. So the result helps 2 of 3 options and contains one over-strong grammar claim. Suggested direction: soften to ''Would have' goes with an if part that has 'had'.' and add a sentence for the impossible form, e.g. that 'know' does not take -ing after 'would be'; then re-screen.",
+      "resultText": {
+        "childHint": "An imagined if takes 'would'. A real if takes 'will'. Use 'would have' only when the if part has 'had'.",
+        "description": "Mismatches the modal to its if-clause, or builds an impossible modal form: 'if we painted ... people will know', 'would knew', 'would be knowing'."
+      }
+    },
+    {
+      "id": "en-paired-punctuation",
+      "verdict": "REFUSE",
+      "reason": "The new childHint clause 'commas around extra information … come in pairs' is FALSE as English grammar whenever the extra information ends the sentence: then one comma opens it and the full stop closes it. ENG-003-A-PU-06 is exactly that case: 'asked Mr Doyle, who was searching under the bibs, the cones and the spare bags.' The relative clause runs to the full stop; the comma after 'bibs' is a LIST comma, not a closing parenthesis comma, so the proposer's reading of 'who was searching under the bibs,' as a genuine pair judgement is wrong. A child told to 'hunt for the partner' there will look for a second comma that should not exist. That leaves ONE genuine paired carrier (ENG-003-A-PU-02, 'who arrived late,'), out of 5 carriers and 9 carrying options; the other carrying options are list or sequence commas (proposer's misfile list, plus PU-06's two options). The transform widens hint and description to fit a carrier population that mostly is not this mistake, rather than fixing the tagging, and the description now runs to brackets, quotes, comma pairs AND flagging a correct closing mark. The right repair is to retag the misfiled carriers (item fault), not to stretch the entry to them. Refuse.",
+      "resultText": {
+        "childHint": "Brackets, and commas around extra information, come in pairs like shoes. Hunt for the partner.",
+        "description": "Misjudges paired punctuation: misses an unclosed bracket, quote or pair of commas around extra information, or flags a correct closing one."
+      }
+    },
+    {
+      "id": "en-preposition-collocation",
+      "verdict": "ATTEST",
+      "reason": "Result: 'Say the whole phrase in your head. Which little word does this verb usually take?' Two sentences (7 and 8 words), ending on . and ?, no dash, British English. The 'aloud' instruction is gone; inner speech is possible in a silent test. Pass 1: 'this verb' presupposes a verb governing the gap, true on the one carrier ENG-003-A-CZ-A5 ('returned ___ the shelf'). Pass 2: the collocation move is exactly the mistake; 'returned to' is what a child sure of the phrase reaches for, and 'usually' is honest about the verb's other uses. No widening.",
+      "resultText": {
+        "childHint": "Say the whole phrase in your head. Which little word does this verb usually take?",
+        "description": "Chooses a preposition that is close in meaning but does not go with the verb: returned on the shelf, listened at the teacher."
+      }
+    },
+    {
+      "id": "en-tense-sequence",
+      "verdict": "ATTEST",
+      "reason": "Result: three sentences (8, 9, 11 words), ending on ? . ., British English. Pass 1: all clauses are conditional moves; none asserts a feature. Checked per carrier: ENG-003-A-CZ-A1 (noticed that somebody ___: before → 'had tipped') and CZ-B6 ('By the final bend he ___': before → 'had almost caught') are served by the first move; CZ-A4 ('Maya ___', narration past: 'Dev shrugged') and CZ-A8 ('Three weeks later the row ___', narration past: 'Dev had joined') are now served by 'keep to the same tense as the story around it', which rules out replies/has replied/is replying and are/is. Grammar correct: past perfect for prior events, consistent narrative tense otherwise. The addition is the description's own 'drifts tense' half, not a widening. Watch: on CZ-A4 the speech nearby is present tense ('I am not fixing'); 'the story around it' points at narration, which is right, but a child may read the speech as the story.",
+      "resultText": {
+        "childHint": "Did it happen before the story-moment? Then you usually need 'had' and the verb. If not, keep to the same tense as the story around it.",
+        "description": "Uses simple past where prior events need 'had'; drifts tense mid-narrative."
+      }
+    },
+    {
+      "id": "en-terminal-punctuation-blind",
+      "verdict": "ATTEST",
+      "reason": "Result: 'Read it in your head. Where your voice would stop or ask, the punctuation must match.' Two sentences (5 and 11 words), full stops, British English, no aloud instruction. Pass 1: a move, no feature asserted. Per carrier: ENG-003-A-PU-02 (the sentence asks, so the closing full stop fails to match); PU-04 run-on ('opened the doors the class raced outside': the voice stops between 'doors' and 'the class', nothing marks it) and the correct full stop flagged on 'rolled straight under the bench.' (stop, and it matches); PU-07 ('to the school office' ends with no mark); PU-08 ('then went very pink.' matches). Grammar: the stop/ask heuristic is the standard KS2 sentence-boundary teaching; it says stop, not pause, so it does not license a comma. No widening.",
+      "resultText": {
+        "childHint": "Read it in your head. Where your voice would stop or ask, the punctuation must match.",
+        "description": "Accepts a full stop on a question; misses run-ons and missing boundaries."
+      }
+    },
+    {
+      "id": "en-unstressed-suffix-vowel",
+      "verdict": "REFUSE",
+      "reason": "Pass 1 is now clean (the family move is conditional on such a word existing). Pass 2 fails on the fallback 'use a word you are sure of that ends the same way', which is not a reliable spelling move and can produce the exact mistake: words that END THE SAME WAY in sound split across the spellings (library / bakery / factory; elegant / silent; balance / silence). A child sure of 'bakery' writes 'dictionery'; a child sure of 'elegant' writes 'excellant'. Those are the two missed faults on ENG-003-A-SP-06 and SP-02, and the 'No mistake' carrying options there are the ones the fallback was added to serve. If 'the same way' means the same SPELLING, the move is circular. Also, the family move as worded ('ending stressed') still works only for confident (confidential) and difference (differential): 2 of 6 carrying options. A move that does work on these carriers is the -ance/-ence family word, which keeps the same vowel: assistance → assistant, excellence → excellent, confidence → confident, different → difference. -ary (dictionary, temporary) still needs its own answer. Refuse; suggest the proposer rework around that.",
+      "resultText": {
+        "childHint": "Think of a family word with that ending stressed, and listen for the vowel. If there is none, use a word you are sure of that ends the same way.",
+        "description": "Guesses between -ant/-ent, -ance/-ence, -ary/-ory/-ery."
+      }
+    },
+    {
+      "id": "en-word-class-by-ending",
+      "verdict": "ATTEST",
+      "reason": "Result: three sentences (9, 8, 15 words), ending on . ? ?, British English. One carrier, ENG-003-A-CZ-B5 ('The ___ crowd'). Pass 1: the added sentence is conditional ('If it describes') and asserts no feature. Grammar correct: a present participle used as an adjective is active (the crowd does the cheering), a past participle is passive (the crowd has it done to it), so 'cheering' versus 'cheered' is separated; 'cheer' and 'cheers' are already ruled out by the describing/action question. This is the description's own 'participial adjective trap' half, not a widening. Pass 2: actionable on all 3 carrying options. The final 'it … it' is a little heavy for a 9-year-old but unambiguous in context.",
+      "resultText": {
+        "childHint": "Ask what job the word does in this sentence. Is it describing, or is it the action? If it describes, is the thing doing the action or having it done to it?",
+        "description": "Classifies words by suffix rather than sentence job; participial adjective traps."
+      }
+    }
+  ]
+}

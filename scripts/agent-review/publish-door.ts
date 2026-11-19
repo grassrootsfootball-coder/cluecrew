@@ -13,7 +13,7 @@
  *   tsx scripts/agent-review/publish-door.ts --door=vr-17 --apply
  */
 import { createHash } from 'node:crypto';
-import { writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { join as pjoin } from 'node:path';
 import { prisma } from '../../packages/db/src/index';
 import { publishBlockers, isHeldFromServing, caseFaceServes, checkItemChildFacing, isBlocking } from '../../packages/core/src/index';
@@ -97,7 +97,16 @@ async function run() {
   assert('the face serves', caseFaceServes(caseRow), `caseFaceServes = ${caseFaceServes(caseRow)}`);
   assert('no row is held from serving', rows.every((r) => !isHeldFromServing(r.id)), `${rows.filter((r) => isHeldFromServing(r.id)).length} held`);
 
-  const rowFail = new Set<string>([...unsigned, ...notWhole, ...blocked.map(([i]) => i), ...faults.map((x) => x.id), ...rows.filter((r) => isHeldFromServing(r.id)).map((r) => r.id)]);
+  /**
+   * A HOLD STANDS UNTIL ITS OWN FIELD IS RE-READ (2026-11-19). A later signature from a NARROWER review (a
+   * retag reads tags, not hints) cleared 38 English holds by being newer, and they went LIVE. Holds are
+   * read from the hold file itself; a row leaves it only when the review that placed it signs it again.
+   */
+  const holdFile = pjoin(REPO, 'content', 'agent-review', 'english', 'held-for-authoring-store.json');
+  const standingHolds = new Set(existsSync(holdFile) ? (JSON.parse(readFileSync(holdFile, 'utf8')) as { held: Array<{ itemId: string }> }).held.map((h) => h.itemId) : []);
+  const heldByReview = rows.filter((r) => standingHolds.has(r.id)).map((r) => r.id);
+  assert('no row carries a standing review HOLD', heldByReview.length === 0, `${heldByReview.length} held by review${heldByReview.length ? `: ${heldByReview.slice(0, 8).join(', ')}` : ''}`);
+  const rowFail = new Set<string>([...heldByReview,...unsigned, ...notWhole, ...blocked.map(([i]) => i), ...faults.map((x) => x.id), ...rows.filter((r) => isHeldFromServing(r.id)).map((r) => r.id)]);
   const publish = READY ? rows.filter((r) => !rowFail.has(r.id)) : rows;
   if (READY) {
     if (liveAlready === 0) refusals.push('--ready is only for a case already serving; this pool is empty');

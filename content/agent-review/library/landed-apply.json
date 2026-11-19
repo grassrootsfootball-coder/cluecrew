@@ -113,7 +113,7 @@
  },
  {
   "id": "en-apostrophe-possession",
-  "outcome": "held: transform not independently attested (no check)"
+  "outcome": "held: transform not independently attested (REFUSE)"
  },
  {
   "id": "en-article-definiteness",
@@ -133,7 +133,15 @@
  },
  {
   "id": "en-double-consonant-boundary",
-  "outcome": "held: transform not independently attested (no check)"
+  "outcome": "TRANSFORMED + ATTESTED",
+  "before": {
+   "childHint": "Say the root word first, then add the ending, and check which letter really doubles.",
+   "description": "Guesses whether a consonant doubles when an ending is added, or doubles the wrong letter: begining for beginning, dissapointed for disappointed, stoped for stopped."
+  },
+  "after": {
+   "description": "Guesses whether a consonant doubles when an ending is added, or doubles the wrong letter: begining for beginning, dissapointed for disappointed, stoped for stopped.",
+   "childHint": "Say the root word first, then add the beginning or ending. Check which letter really doubles."
+  }
  },
  {
   "id": "en-homophone-by-sound",
@@ -141,7 +149,7 @@
  },
  {
   "id": "en-modal-conditional-form",
-  "outcome": "held: transform not independently attested (no check)"
+  "outcome": "held: transform not independently attested (REFUSE)"
  },
  {
   "id": "en-n-option-avoidance",
@@ -149,11 +157,19 @@
  },
  {
   "id": "en-paired-punctuation",
-  "outcome": "held: transform not independently attested (no check)"
+  "outcome": "held: transform not independently attested (REFUSE)"
  },
  {
   "id": "en-preposition-collocation",
-  "outcome": "held: transform not independently attested (no check)"
+  "outcome": "TRANSFORMED + ATTESTED",
+  "before": {
+   "childHint": "Say the whole phrase aloud — which little word does this verb usually take?",
+   "description": "Chooses a preposition that is close in meaning but does not go with the verb: returned on the shelf, listened at the teacher."
+  },
+  "after": {
+   "description": "Chooses a preposition that is close in meaning but does not go with the verb: returned on the shelf, listened at the teacher.",
+   "childHint": "Say the whole phrase in your head. Which little word does this verb usually take?"
+  }
  },
  {
   "id": "en-question-tag-polarity",
@@ -173,11 +189,27 @@
  },
  {
   "id": "en-tense-sequence",
-  "outcome": "held: transform not independently attested (no check)"
+  "outcome": "TRANSFORMED + ATTESTED",
+  "before": {
+   "childHint": "Did it happen before the story-moment? Then you usually need 'had' and the verb.",
+   "description": "Uses simple past where prior events need 'had'; drifts tense mid-narrative."
+  },
+  "after": {
+   "description": "Uses simple past where prior events need 'had'; drifts tense mid-narrative.",
+   "childHint": "Did it happen before the story-moment? Then you usually need 'had' and the verb. If not, keep to the same tense as the story around it."
+  }
  },
  {
   "id": "en-terminal-punctuation-blind",
-  "outcome": "held: transform not independently attested (no check)"
+  "outcome": "TRANSFORMED + ATTESTED",
+  "before": {
+   "childHint": "Read it aloud. Where your voice stops or asks, the punctuation must match.",
+   "description": "Accepts a full stop on a question; misses run-ons and missing boundaries."
+  },
+  "after": {
+   "description": "Accepts a full stop on a question; misses run-ons and missing boundaries.",
+   "childHint": "Read it in your head. Where your voice would stop or ask, the punctuation must match."
+  }
  },
  {
   "id": "en-unstressed-medial-vowel",
@@ -185,23 +217,23 @@
  },
  {
   "id": "en-unstressed-suffix-vowel",
-  "outcome": "held: transform not independently attested (no check)"
+  "outcome": "held: transform not independently attested (REFUSE)"
  },
  {
   "id": "en-word-class-by-ending",
-  "outcome": "held: transform not independently attested (no check)"
+  "outcome": "TRANSFORMED + ATTESTED",
+  "before": {
+   "childHint": "Ask what job the word does in this sentence. Is it describing, or is it the action?",
+   "description": "Classifies words by suffix rather than sentence job; participial adjective traps."
+  },
+  "after": {
+   "description": "Classifies words by suffix rather than sentence job; participial adjective traps.",
+   "childHint": "Ask what job the word does in this sentence. Is it describing, or is it the action? If it describes, is the thing doing the action or having it done to it?"
+  }
  },
  {
   "id": "vr14-step-size",
-  "outcome": "TRANSFORMED + ATTESTED",
-  "before": {
-   "childHint": "Count each hop along the alphabet. Say the number of steps out loud.",
-   "description": "Counted the jump one letter short or long."
-  },
-  "after": {
-   "description": "Counted the jump one letter short or long.",
-   "childHint": "Count each hop along the alphabet. Then make the same number of hops from the new letter."
-  }
+  "outcome": "already attested"
  },
  {
   "id": "vr-letter-series-direction",
@@ -209,15 +241,7 @@
  },
  {
   "id": "vr-letter-series-off-by-one",
-  "outcome": "TRANSFORMED + ATTESTED",
-  "before": {
-   "childHint": "So close — use the alphabet line and count each letter out loud.",
-   "description": "Correct rule, but landed one letter short or long."
-  },
-  "after": {
-   "description": "Correct rule, but landed one letter short or long.",
-   "childHint": "Count along the alphabet again. Land one letter at a time."
-  }
+  "outcome": "already attested"
  },
  {
   "id": "en-evidence-vividness-bias",
@@ -229,15 +253,7 @@
  },
  {
   "id": "en-technique-effect-mislocated",
-  "outcome": "TRANSFORMED + ATTESTED",
-  "before": {
-   "childHint": "Find the exact words the question quotes. Answer about those words only.",
-   "description": "Child gives the effect of the sentence before where the answer is the effect of the quoted phrase, reading past the words under test."
-  },
-  "after": {
-   "description": "Child gives the effect of an earlier or neighbouring part of the passage where the answer is the effect of the quoted phrase, reading past the words under test.",
-   "childHint": "Find the exact words the question quotes. Answer about those words only."
-  }
+  "outcome": "already attested"
  },
  {
   "id": "leading-zero-repaired-ordering-not",
