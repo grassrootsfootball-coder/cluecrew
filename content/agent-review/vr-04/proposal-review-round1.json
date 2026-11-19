@@ -1,0 +1,218 @@
+{
+  "door": "vr-04",
+  "reviewer": "rev-agent-01",
+  "changes": [
+    {
+      "ref": "seat:gen-vr-04-closest-meaning-01-opt3",
+      "verdict": "ATTEST",
+      "reason": "'cowardly' is the plain opposite of 'brave'; execution quotes only 'fearless', 'brave', 'cowardly'. Row: fearless / reckless / cowardly / loyal."
+    },
+    {
+      "ref": "seat:gen-vr-04-closest-meaning-02-opt2",
+      "verdict": "ATTEST",
+      "reason": "'instant' (taking no time) is the speed family pushed past 'swift' (moving fast); wrong-strength fits. Not defensible as closest beside 'speedy'."
+    },
+    {
+      "ref": "seat:gen-vr-04-closest-meaning-07-opt2",
+      "verdict": "ATTEST",
+      "reason": "'solid' (filled through) is the opposite of 'hollow'; execution words are on the row."
+    },
+    {
+      "ref": "seat:gen-vr-04-closest-meaning-14-opt2",
+      "verdict": "ATTEST",
+      "reason": "'unbreakable' is 'sturdy' pushed to an absolute; wrong-strength fits and 'strong' remains clearly closest."
+    },
+    {
+      "ref": "seat:gen-vr-04-closest-meaning-21-opt2",
+      "verdict": "ATTEST",
+      "reason": "'fake' is the opposite of 'genuine'; execution accurate."
+    },
+    {
+      "ref": "seat:gen-vr-04-closest-meaning-30-opt4",
+      "verdict": "ATTEST",
+      "reason": "'successful' reverses 'futile' in the sentence about saving the tree; execution accurate."
+    },
+    {
+      "ref": "seat:gen-vr-04-closest-meaning-31-opt2",
+      "verdict": "ATTEST",
+      "reason": "'grumpy' (bad-tempered) is a fair opposite of 'amiable' (friendly and pleasant); execution accurate."
+    },
+    {
+      "ref": "seat:gen-vr-04-closest-meaning-32-opt4",
+      "verdict": "ATTEST",
+      "reason": "'rare' is the opposite of 'abundant' for fish in a river; execution accurate."
+    },
+    {
+      "ref": "seat:gen-vr-04-closest-meaning-33-opt2",
+      "verdict": "ATTEST",
+      "reason": "'unknown' reverses the well-known half of 'notorious'; the execution says 'which means well known', which is half the meaning but the half the reversal acts on. Accurate enough and staff-facing."
+    },
+    {
+      "ref": "rebuild:bank-vr-04-closest-meaning-30",
+      "verdict": "ATTEST",
+      "reason": "Named faults fixed: 'tired' gone; 'yawning' is a visible sign of exhaustion, not its meaning (one-feature fits). Walk script replaced: every option word it names is on the row (exhausted, worn out, rested, yawning, sleep), sentences end on full stops and are short, and 'marathon' is gone. Minor: the script groups 'yawning' with 'sleep' as goes-with, where its tag calls it a sign. That is not false, but a later pass could align it."
+    },
+    {
+      "ref": "rebuild:gen-vr-04-closest-meaning-09",
+      "verdict": "ATTEST",
+      "reason": "'speedy' and 'brisk' both gone; 'slow' is the opposite, 'race' is associated (an event, not a speed). Neither 'quick' nor 'hurried' is on the banned-vocabulary list (BANNED_CHILD_FACING in packages/core/src/english/open-response.ts carries weak, poor, careless and others, not these two), and the gates pass. 'race' being a noun lets a child drop it on form alone. That makes one distractor weaker but does not point to the key, and 'sleep' on bank-30 is the same form already accepted."
+    },
+    {
+      "ref": "rebuild:gen-vr-04-closest-meaning-19",
+      "verdict": "ATTEST",
+      "reason": "'careless' gone. 'mysterious' tilts 'not plain' towards secret or strange; wrong-shade fits and it is not defensible as closest to 'vague'. Other options unchanged."
+    },
+    {
+      "ref": "rebuild:gen-vr-04-closest-meaning-20",
+      "verdict": "ATTEST",
+      "reason": "'weak' gone. 'frail' is a correct key for 'feeble' (lacking strength, delicate) and the only correct option. The three executions now quote 'frail' and are accurate. 'elderly' sits even closer in company to 'frail', but it still means old, not lacking strength."
+    },
+    {
+      "ref": "rebuild:gen-vr-04-closest-meaning-23",
+      "verdict": "ATTEST",
+      "reason": "'submissive' gone. 'naughty' is the opposite of 'obedient'; 'well-behaved' is now uncontested."
+    },
+    {
+      "ref": "rebuild:gen-vr-04-closest-meaning-27",
+      "verdict": "ATTEST",
+      "reason": "'bury' gone. 'show' is the opposite of 'conceal' in the sentence; 'hide' is now the only fit."
+    },
+    {
+      "ref": "rebuild:gen-vr-04-closest-meaning-28",
+      "verdict": "REFUSE",
+      "reason": "The named fault is fixed ('tired' gone, 'lively' is a clean opposite), but the rebuild breaks something else. It makes the key 'worn out', the same key the rebuilt bank-30 now has for the same headword 'exhausted' in the same door. A child who meets both rows gets the second from memory. Keep 'drained' as the key (it was correct and is now uncontested without 'tired'), or choose a key bank-30 does not use; 'lively', 'sleepy' and 'empty' can stay."
+    },
+    {
+      "ref": "rebuild:gen-vr-04-closest-meaning-29",
+      "verdict": "ATTEST",
+      "reason": "'improve' gone. 'shorten' is one kind of change, so wrong-shade fits, and it is not defensible as closest to 'amend'. 'change' is now the only fit."
+    },
+    {
+      "ref": "rebuild:gen-vr-04-closest-meaning-34",
+      "verdict": "ATTEST",
+      "reason": "'delicate' gone. 'costly' goes with fine lace but means expensive; keeps-the-same-company fits. 'beautiful' is now the only fit."
+    },
+    {
+      "ref": "rebuild:gen-vr-04-closest-meaning-35",
+      "verdict": "ATTEST",
+      "reason": "'businessman' replaced by 'farmer', and the reading-age gate now passes. The sentence still reads naturally, and 'kind' remains the only fit. The 'wealthy' execution's 'pays to found a school' is an inference from 'founded', not a quotation, and is acceptable."
+    },
+    {
+      "ref": "rebuild:gen-vr-04-closest-meaning-36",
+      "verdict": "REFUSE",
+      "reason": "'patient' is gone and 'calm' is a sound key, but the new sentence breaks the 'brave' seat. In 'She stayed STOIC when she heard the sad news', 'She stayed brave' is natural British English for taking bad news without breaking down, which is close to the stoic sense. A marker could defend 'brave' here, where the old long-wait sentence kept it at a distance. Replace 'brave', or use a sentence where courage is not what the moment asks for."
+    },
+    {
+      "ref": "rebuild:gen-vr-04-closest-meaning-37",
+      "verdict": "ATTEST",
+      "reason": "'friendly' gone. 'silly' tilts fun towards foolishness; wrong-shade fits. 'cheerful' is now the only fit."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "gen-vr-04-closest-meaning-01",
+      "verdict": "SIGN",
+      "reason": "fearless is the only synonym of brave; reckless overshoots, cowardly reverses, loyal is company."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-02",
+      "verdict": "SIGN",
+      "reason": "speedy is the only synonym of swift; instant overshoots, sudden and early are time words."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-07",
+      "verdict": "SIGN",
+      "reason": "empty is the only fit for hollow; solid reverses, light and wooden are wrong."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-14",
+      "verdict": "SIGN",
+      "reason": "strong is the only fit for sturdy; unbreakable overshoots, heavy and wooden are wrong."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-21",
+      "verdict": "SIGN",
+      "reason": "real is the only fit for genuine; fake reverses, signed and costly are wrong."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-30",
+      "verdict": "SIGN",
+      "reason": "pointless is the only fit for futile in the sentence; impossible, foolish and successful are wrong."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-31",
+      "verdict": "SIGN",
+      "reason": "friendly is the only fit for amiable; grumpy reverses, cheerful and chatty are not the meaning."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-32",
+      "verdict": "SIGN",
+      "reason": "plentiful is the only fit for abundant; endless, large and rare are wrong."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-33",
+      "verdict": "SIGN",
+      "reason": "infamous (well known for something bad) is the only fit for notorious; unknown, famous and dangerous are wrong. A child who misreads infamous as 'not famous' will see it beside 'unknown', which is a trap, not a giveaway."
+    },
+    {
+      "itemId": "bank-vr-04-closest-meaning-30",
+      "verdict": "SIGN",
+      "reason": "worn out is the only fit for exhausted; rested reverses, yawning is a sign, sleep is a need. The walk script names only words on the row."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-09",
+      "verdict": "SIGN",
+      "reason": "quick is the only fit for rapid; slow reverses, hurried tilts to rushing, race is an event. No banned word is on the row."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-19",
+      "verdict": "SIGN",
+      "reason": "unclear is the only fit for vague; meaningless, mysterious and brief are wrong. No banned word is on the row."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-20",
+      "verdict": "SIGN",
+      "reason": "frail is the only fit for feeble; helpless, pale and elderly are wrong. No banned word is on the row."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-23",
+      "verdict": "SIGN",
+      "reason": "well-behaved is the only fit for obedient; naughty, polite and quiet are wrong."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-27",
+      "verdict": "SIGN",
+      "reason": "hide is the only fit for conceal in the sentence; show, ignore and pretend are wrong."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-28",
+      "verdict": "HOLD",
+      "reason": "Same headword and same key as bank-30 after both rebuilds (exhausted, worn out), so the second row a child meets is answered from memory. The row is otherwise sound."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-29",
+      "verdict": "SIGN",
+      "reason": "change is the only fit for amend in the sentence; rewrite overshoots, shorten is one kind of change, check is company."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-34",
+      "verdict": "SIGN",
+      "reason": "beautiful is the only fit for exquisite lace; pretty is too weak, costly is company, sharp is the other sense."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-35",
+      "verdict": "SIGN",
+      "reason": "kind is the only fit for benevolent in the farmer sentence; saintly, polite and wealthy are wrong. The reading-age gate passes."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-36",
+      "verdict": "HOLD",
+      "reason": "In 'She stayed STOIC when she heard the sad news', 'brave' can be defended ('she stayed brave'), so 'calm' is not the only correct option."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-37",
+      "verdict": "SIGN",
+      "reason": "cheerful is the only fit for jovial; ecstatic overshoots, silly tilts to foolishness, loud is a sign."
+    }
+  ]
+}

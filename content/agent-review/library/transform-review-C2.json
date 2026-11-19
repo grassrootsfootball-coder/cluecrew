@@ -1,0 +1,44 @@
+{
+  "reviewer": "rev-agent-01",
+  "entries": [
+    {
+      "id": "en-chronology-collapse",
+      "verdict": "ATTEST",
+      "reason": "Re-check of the revised verdict. The single transform's 'from' matched once. It removes only the stale 'Currently split across ...' sentence, so Annie's approved meaning and wording are otherwise untouched; the meaning does not change. I checked each of the 11 'correctly filed' carriers against its passage lines. PASS 1: the description is true on 9 of the 11 (BB-06, TM-05, RC-06, RC-09, JE-05, TI-06, TS-01, TS-05, TS-09): each picks a real event about the same people that happens later than the effect asked about. It is FALSE on 2 that the revision lists as correctly filed. (a) ENG-020-HD-01, 'Because she had looked in the wardrobe and found it bare': the going upstairs is real and later (line 7), but lines 10 to 12 have her find a heap of rolls, not a bare wardrobe, so 'both real' fails. (b) ENG-010-JE-03, 'She sat down on the stile because she heard the horse': the horse is heard at line 9, BEFORE she sits still at line 10, and is part of the stated reason ('as the path was narrow, I sat still to let it go by'). The error is 'sat down' for 'sat still' plus dropping the narrow path, not a cause placed later; 'happens LATER' fails. Doubtful, but I count it as true: ENG-006-TM-05, 'the tools had not been brought into the room yet'. That is TRUE at line 22, so the pull is true-but-not-the-reason; it reads as a later cause only through the arrival at line 25. These are filing faults in the carrier list, not faults in the text, so the text is attested. The genuine population is 9 of 40 (8 if TM-05 goes), not 11. PASS 2: the childHint 'Check what happened first, and what the question asks for.' is 10 words, ends in a full stop, British English, a move that asserts nothing. It fits all 9: each needs the child to place the offered cause against the moment asked about. The description is staff-facing; the 16-word cap does not apply. SAMPLE OF THE 29 MISFILED, checked against the passage: I agree on WIW-06, pp-06 (earlier report, not a later cause), TM-10 (Uncle Podger's idea, not Aunt Maria's), TS-02, CC-04 (two real events reversed, no cause asked), HD-06 ('would have' read as 'had already') and LP-15 (no execution; tentative). I agree with moving ENG-019-BV-10 but NOT with its stated reason. 'How does Bevis learn the cliff can be got past?' asks for a means. The ledge at line 58 is a real event placed after the learning at lines 52 to 54, which is this entry's mistake; it is misfiled only because 'then calls Pan back' is never stated (Pan comes back on his own at line 50). CAVEAT, outside the attestation: this attests the TEXT. Until the 29 (now 31) are refiled, they still carry the tag and will be served this hint. Ten of them (the reversed-order pairs) have no existing entry to go to and need a ruling.",
+      "resultText": {
+        "childHint": "Check what happened first, and what the question asks for.",
+        "description": "The child picks a cause that happens LATER in the passage than the effect being asked about. The two events are both real and both about the same people, so the option reads well; only the order rules it out."
+      },
+      "correctlyFiledDisputed": [
+        {
+          "itemId": "ENG-020-HD-01",
+          "why": "'found it bare' is contradicted by lines 10 to 12 (a heap of rolls); 'both real' false."
+        },
+        {
+          "itemId": "ENG-010-JE-03",
+          "why": "The horse is heard at line 9, before she sits still at line 10, and is part of the stated reason; not a later cause."
+        },
+        {
+          "itemId": "ENG-006-TM-05",
+          "why": "Doubtful: the option's state is true at line 22; true-but-not-the-reason rather than a later cause."
+        }
+      ],
+      "misfiledSampleChecked": [
+        "ENG-001-WIW-06",
+        "ENG-002-pp-06",
+        "ENG-006-TM-10",
+        "ENG-014-TS-02",
+        "ENG-015-CC-04",
+        "ENG-020-HD-06",
+        "ENG-007-LP-15",
+        "ENG-019-BV-10"
+      ],
+      "misfiledReasonDisputed": [
+        {
+          "itemId": "ENG-019-BV-10",
+          "why": "A cause/means question with a real later event (ledge, line 58); misfiled only because 'calls Pan back' is unstated, not because no cause is asked."
+        }
+      ]
+    }
+  ]
+}

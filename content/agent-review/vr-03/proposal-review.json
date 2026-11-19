@@ -1,0 +1,49 @@
+{
+ "door": "vr-03",
+ "reviewer": "rev-agent-01",
+ "round": 2,
+ "changes": [
+  {
+   "ref": "rebuild:gen-vr-03-related-words-35",
+   "verdict": "ATTEST",
+   "reason": "Fixes the round-1 hold: drizzle returns in place of umbrella, so downpour is no longer the only rain word. Drizzle is lighter than a shower where gale is stronger than breeze, so it runs the change backwards; reversed-relation fits. Kite (anchor) and key unchanged; key unique."
+  },
+  {
+   "ref": "rebuild:gen-vr-03-related-words-38",
+   "verdict": "ATTEST",
+   "reason": "Fixes the round-1 hold: happy replaces smile. annoyed to furious is mild to extreme; pleased to happy is mild to the plain middle word, parallel to angry, so happy is the right direction at the wrong strength. Wrong-degree fits, and happy is not a second answer because the example reaches the extreme. Angry (anchor) and key unchanged."
+  },
+  {
+   "ref": "rebuild:gen-vr-03-related-words-42",
+   "verdict": "ATTEST",
+   "reason": "Fixes the round-1 refusal: book replaces poet, so there are no longer two writers to drop together. novel:chapter is whole to part; poem to book is part to whole (a poem is found in a book), so book runs the relation backwards and reversed-relation fits. Book is not a second answer: a poem is not the whole that a book is a section of. Author (anchor) and key unchanged."
+  },
+  {
+   "ref": "seat:gen-vr-03-related-words-43-opt2",
+   "verdict": "ATTEST",
+   "reason": "library replaces spelling. A word is held in a dictionary; an atlas is held in a library, so the child names the container of the stem word instead of its contents. That is the example containment run backwards, so reversed-relation fits. Every word in the execution is on the row."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "gen-vr-03-related-words-35",
+   "verdict": "SIGN",
+   "reason": "downpour, kite, drizzle: breeze to gale is light to strong wind, so shower to downpour; drizzle goes lighter and kite belongs to wind; downpour is no longer the only rain word, so the relation is tested; key unique."
+  },
+  {
+   "itemId": "gen-vr-03-related-words-38",
+   "verdict": "SIGN",
+   "reason": "delighted, angry, happy: annoyed to furious is mild to extreme, so pleased to delighted; happy is the middle step and angry belongs to the first pair; the child must now judge strength; key unique; all words known."
+  },
+  {
+   "itemId": "gen-vr-03-related-words-42",
+   "verdict": "SIGN",
+   "reason": "verse, book, author: a chapter is a section of a novel, a verse a section of a poem; book holds the poem (reversed) and author belongs with novel; the options are no longer two writers and a part, so there is no odd one out; verse is known to 9-11s from poems and songs; key unique."
+  },
+  {
+   "itemId": "gen-vr-03-related-words-43",
+   "verdict": "SIGN",
+   "reason": "map, library, geography: a dictionary is a book of words, an atlas a book of maps; library holds atlases and geography is the subject; key unique."
+  }
+ ]
+}

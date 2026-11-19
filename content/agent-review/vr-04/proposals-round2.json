@@ -1,0 +1,73 @@
+{
+ "door": "vr-04",
+ "proposer": "agent",
+ "seats": [
+  {
+   "optionId": "gen-vr-04-closest-meaning-28-opt2",
+   "itemId": "gen-vr-04-closest-meaning-28",
+   "oldValue": "tired",
+   "tag": "vr04-opposite-pull",
+   "newValue": "lively",
+   "execution": "In 'After the long walk home they were EXHAUSTED', the key is 'drained'. 'lively' is the opposite of 'exhausted': full of energy. A child who finds the area of energy but reverses it picks 'lively'."
+  }
+ ],
+ "redrafts": [
+  {
+   "optionId": "gen-vr-04-closest-meaning-28-opt3",
+   "itemId": "gen-vr-04-closest-meaning-28",
+   "value": "sleepy",
+   "tag": "vr04-keeps-the-same-company",
+   "execution": "In the sentence, the key is 'drained'. 'sleepy' turns up beside 'exhausted' at the end of a long day, but it means ready to sleep, not out of energy. A child who matches the situation picks 'sleepy'."
+  },
+  {
+   "optionId": "gen-vr-04-closest-meaning-28-opt4",
+   "itemId": "gen-vr-04-closest-meaning-28",
+   "value": "empty",
+   "tag": "vr04-the-other-meaning",
+   "execution": "In the sentence, the key is 'drained'. 'exhausted' has a real second meaning, used up completely, as in exhausted supplies, and 'empty' fits that sense. The sentence is about people after a walk, which fixes the worn-out sense. A child who picks the other sense picks 'empty'."
+  }
+ ],
+ "rebuilds": [
+  {
+   "itemId": "gen-vr-04-closest-meaning-36",
+   "why": "Stored row: sentence 'She remained STOIC throughout the long wait.', key 'unemotional', distractors 'patient' (defensible), 'silent', 'brave'. Round 1 moved the sentence to sad news and the key to 'calm', which made 'brave' defensible ('she stayed brave'). 'brave' is now replaced with 'tearful' on opposite-pull; sentence, key, 'gloomy' and 'silent' as attested in round 1.",
+   "stem": {
+    "words": [
+     "stoic"
+    ],
+    "prompt": "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "sentence": "She stayed STOIC when she heard the sad news."
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-36-opt1",
+     "value": "calm",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-36-opt2",
+     "value": "gloomy",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "execution": "In 'She stayed STOIC when she heard the sad news', the key is 'calm'. 'gloomy' shares the area of how someone takes bad news but tilts it towards sadness, where stoic means not showing feeling. A child who hears only 'sad news' picks 'gloomy'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-36-opt3",
+     "value": "silent",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "execution": "In the sentence, the key is 'calm'. A stoic person may stay silent, so 'silent' names one thing stoicism can look like, not what 'stoic' means. A child who picks that visible sign picks 'silent'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-36-opt4",
+     "value": "tearful",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": "In the sentence, the key is 'calm'. 'tearful' is the opposite of 'stoic': showing your feelings openly by crying. A child who links the sad news to the reaction it often brings, and so reverses the meaning, picks 'tearful'."
+    }
+   ]
+  }
+ ]
+}

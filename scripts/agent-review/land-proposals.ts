@@ -77,7 +77,9 @@ async function main() {
   for (const r of live) {
     // A LIVE row may take an execution REDRAFT only: executions are staff-facing and outside the
     // signed projection, so the row a child meets does not move. Any value or stem change needs DRAFT.
-    const onlyRedrafts = ![...(prop.seats ?? []), ...(prop.rebuilds ?? [])].some((x) => x.itemId === r.id);
+    // A RETAG (same value, new tag + execution) is outside the signed projection too, so it counts with the redrafts.
+    const onlyRedrafts = !(prop.rebuilds ?? []).some((x) => x.itemId === r.id)
+      && !(prop.seats ?? []).some((x) => x.itemId === r.id && x.newValue !== x.oldValue);
     if (r.status !== 'DRAFT' && !(r.status === 'LIVE' && onlyRedrafts)) fault(r.id, `status ${r.status}`);
     after.set(r.id, { id: r.id, type: r.questionTypeId, stem: r.stem as Record<string, unknown>, explanation: r.explanation, refs: [],
       options: r.options.map((o) => ({ optionId: o.id, value: val(o.content), isKey: o.isCorrect, tag: o.misconceptionId, execution: o.misconceptionExecution?.trim() || null })) });

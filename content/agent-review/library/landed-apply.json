@@ -21,7 +21,15 @@
  },
  {
   "id": "en-chronology-collapse",
-  "outcome": "held: transform not independently attested (REFUSE)"
+  "outcome": "TRANSFORMED + ATTESTED",
+  "before": {
+   "childHint": "Check what happened first, and what the question asks for.",
+   "description": "The child picks a cause that happens LATER in the passage than the effect being asked about. The two events are both real and both about the same people, so the option reads well; only the order rules it out. Currently split across en-cause-agent-swap and en-wrong-scope-retrieval, neither of which names the time error."
+  },
+  "after": {
+   "description": "The child picks a cause that happens LATER in the passage than the effect being asked about. The two events are both real and both about the same people, so the option reads well; only the order rules it out.",
+   "childHint": "Check what happened first, and what the question asks for."
+  }
  },
  {
   "id": "en-cause-agent-swap",

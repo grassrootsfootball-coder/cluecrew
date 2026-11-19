@@ -1,0 +1,573 @@
+{
+ "door": "vr-04",
+ "proposer": "agent",
+ "seats": [
+  {
+   "optionId": "gen-vr-04-closest-meaning-01-opt3",
+   "itemId": "gen-vr-04-closest-meaning-01",
+   "oldValue": "loud",
+   "tag": "vr04-opposite-pull",
+   "newValue": "cowardly",
+   "execution": "The key is 'fearless'. 'cowardly' is the opposite of 'brave': it means easily frightened. A child who finds the area of courage but reverses it picks 'cowardly'."
+  },
+  {
+   "optionId": "gen-vr-04-closest-meaning-02-opt2",
+   "itemId": "gen-vr-04-closest-meaning-02",
+   "oldValue": "frantic",
+   "tag": "vr04-wrong-strength",
+   "newValue": "instant",
+   "execution": "The key is 'speedy'. 'instant' is from the same family of speed but far stronger: taking no time at all, where swift means moving fast. A child who reaches for the strongest speed word picks 'instant'."
+  },
+  {
+   "optionId": "gen-vr-04-closest-meaning-07-opt2",
+   "itemId": "gen-vr-04-closest-meaning-07",
+   "oldValue": "bottomless",
+   "tag": "vr04-opposite-pull",
+   "newValue": "solid",
+   "execution": "The key is 'empty'. 'solid' is the opposite of 'hollow': filled all the way through. A child who finds the area but reverses it picks 'solid'."
+  },
+  {
+   "optionId": "gen-vr-04-closest-meaning-14-opt2",
+   "itemId": "gen-vr-04-closest-meaning-14",
+   "oldValue": "massive",
+   "tag": "vr04-wrong-strength",
+   "newValue": "unbreakable",
+   "execution": "The key is 'strong'. 'unbreakable' is from the same family but far stronger: it cannot be broken at all, where sturdy means strongly made. A child who reaches for the strongest word picks 'unbreakable'."
+  },
+  {
+   "optionId": "gen-vr-04-closest-meaning-21-opt2",
+   "itemId": "gen-vr-04-closest-meaning-21",
+   "oldValue": "perfect",
+   "tag": "vr04-opposite-pull",
+   "newValue": "fake",
+   "execution": "The key is 'real'. 'fake' is the opposite of 'genuine': made to look real when it is not. A child who reverses the meaning picks 'fake'."
+  },
+  {
+   "optionId": "gen-vr-04-closest-meaning-30-opt4",
+   "itemId": "gen-vr-04-closest-meaning-30",
+   "oldValue": "slow",
+   "tag": "vr04-opposite-pull",
+   "newValue": "successful",
+   "execution": "In the sentence, the key is 'pointless'. 'successful' is the opposite of 'futile': the efforts would have worked. A child who reverses the meaning picks 'successful'."
+  },
+  {
+   "optionId": "gen-vr-04-closest-meaning-31-opt2",
+   "itemId": "gen-vr-04-closest-meaning-31",
+   "oldValue": "devoted",
+   "tag": "vr04-opposite-pull",
+   "newValue": "grumpy",
+   "execution": "In the sentence, the key is 'friendly'. 'grumpy' is the opposite of 'amiable': bad-tempered and hard to get on with. A child who reverses the meaning picks 'grumpy'."
+  },
+  {
+   "optionId": "gen-vr-04-closest-meaning-32-opt4",
+   "itemId": "gen-vr-04-closest-meaning-32",
+   "oldValue": "valuable",
+   "tag": "vr04-opposite-pull",
+   "newValue": "rare",
+   "execution": "In the sentence, the key is 'plentiful'. 'rare' is the opposite of 'abundant': hardly any fish at all. A child who reverses the meaning picks 'rare'."
+  },
+  {
+   "optionId": "gen-vr-04-closest-meaning-33-opt2",
+   "itemId": "gen-vr-04-closest-meaning-33",
+   "oldValue": "legendary",
+   "tag": "vr04-opposite-pull",
+   "newValue": "unknown",
+   "execution": "In the sentence, the key is 'infamous'. 'unknown' is the opposite of 'notorious', which means well known. A child who finds the area of fame but reverses it picks 'unknown'."
+  }
+ ],
+ "redrafts": [],
+ "rebuilds": [
+  {
+   "itemId": "bank-vr-04-closest-meaning-30",
+   "why": "'tired' was defensible as closest to 'exhausted'. Replaced with 'yawning' on one-feature-only; 'rested' and 'sleep' kept. The stored walk script names 'marathon', which is on no version of this row; 'explanation' carries the stored object with only walkScript replaced.",
+   "stem": {
+    "words": [
+     "exhausted"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "options": [
+    {
+     "optionId": "cmscb15800042tmzvx3lit16y",
+     "value": "worn out",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15800043tmzvbbdx88hz",
+     "value": "rested",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": "The task is to find the word closest in meaning to 'exhausted', and the key is 'worn out'. 'rested' is the opposite of 'exhausted': it means no longer tired. A child who finds the right area of meaning but reverses it picks 'rested'."
+    },
+    {
+     "optionId": "cmscb15800044tmzvvcnae71u",
+     "value": "yawning",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "execution": "The key is 'worn out'. An exhausted person may keep yawning, so 'yawning' names one visible sign of exhaustion, not what 'exhausted' means. A child who picks that visible sign picks 'yawning'."
+    },
+    {
+     "optionId": "cmscb15800045tmzvi4w0czzm",
+     "value": "sleep",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": "The key is 'worn out'. 'sleep' is what an exhausted person needs, so the two words go together, but 'sleep' does not mean 'exhausted' (it is not even a describing word). A child who takes goes-together for means-the-same picks 'sleep'."
+    }
+   ],
+   "explanation": {
+    "walkScript": "See the card word exhausted. This word means having no energy left. Worn out lands closest to it. Rested is the flip side. Yawning and sleep go with being tired but do not mean it.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT"
+   }
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-09",
+   "why": "'speedy' and 'brisk' were both as close to 'rapid' as the key. Both replaced; 'hurried' kept with its execution.",
+   "stem": {
+    "words": [
+     "rapid"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-09-opt1",
+     "value": "quick",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-09-opt2",
+     "value": "slow",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": "The key is 'quick'. 'slow' is the opposite of 'rapid': taking a long time. A child who finds the area of speed but reverses it picks 'slow'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-09-opt3",
+     "value": "hurried",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "execution": "The key is 'quick'. 'hurried' shares the area of speed but tilts it towards rushing because time is short, often carelessly. 'rapid' has no rush in it. A child who hears only 'fast' picks 'hurried'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-09-opt4",
+     "value": "race",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": "The key is 'quick'. A race is where things are rapid, so the two words go together, but 'race' names an event, not a speed. A child who takes goes-together for means-the-same picks 'race'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-19",
+   "why": "'careless' fails the house vocabulary scan. Replaced with 'mysterious' on the same tag; the other options and executions are unchanged.",
+   "stem": {
+    "words": [
+     "vague"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-19-opt1",
+     "value": "unclear",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-19-opt2",
+     "value": "meaningless",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "execution": "The key is 'unclear'. 'meaningless' pushes the same idea too far: not just hard to make out, but having no meaning at all. A child who reaches for the strongest word picks 'meaningless'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-19-opt3",
+     "value": "mysterious",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "execution": "The key is 'unclear'. 'mysterious' shares the area of not being plain but tilts it towards something strange or secret. A vague answer lacks detail; it hides nothing. A child who hears only 'hard to make out' picks 'mysterious'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-19-opt4",
+     "value": "brief",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "execution": "The key is 'unclear'. A vague answer is often short, so 'brief' names one thing vagueness can look like, not what 'vague' means. A child who picks that visible sign picks 'brief'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-20",
+   "why": "The key 'weak' fails the house vocabulary scan. New key 'frail'; the distractors are kept and their executions rewritten against the new key.",
+   "stem": {
+    "words": [
+     "feeble"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-20-opt1",
+     "value": "frail",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-20-opt2",
+     "value": "helpless",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "execution": "The key is 'frail'. 'helpless' is from the same family but far stronger: unable to do anything at all. A child who reaches for the strongest word in the family picks 'helpless'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-20-opt3",
+     "value": "pale",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "execution": "The key is 'frail'. A feeble person may look pale, so 'pale' names one visible sign of feebleness, not what 'feeble' means. A child who picks that sign picks 'pale'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-20-opt4",
+     "value": "elderly",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "execution": "The key is 'frail'. 'elderly' turns up beside 'feeble', as in a feeble elderly man, but it means old, not lacking strength. A child who matches the company the words keep picks 'elderly'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-23",
+   "why": "'submissive' is a dictionary synonym of 'obedient' and a poor word for children. Replaced with 'naughty' on opposite-pull; the rest is unchanged.",
+   "stem": {
+    "words": [
+     "obedient"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-23-opt1",
+     "value": "well-behaved",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-23-opt2",
+     "value": "naughty",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": "The key is 'well-behaved'. 'naughty' is the opposite of 'obedient': not doing as you are told. A child who finds the area of behaviour but reverses it picks 'naughty'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-23-opt3",
+     "value": "polite",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "execution": "The key is 'well-behaved'. 'polite' shares the area of good behaviour but tilts it towards good manners rather than doing as you are told. A child who hears only 'good' picks 'polite'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-23-opt4",
+     "value": "quiet",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "execution": "The key is 'well-behaved'. An obedient child may be quiet, so 'quiet' names one thing obedience can look like, not what 'obedient' means. A child who picks that visible sign picks 'quiet'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-27",
+   "why": "'bury her disappointment' is an idiom for hiding a feeling, so 'bury' was a second answer. Replaced with 'show' on opposite-pull; the rest is unchanged.",
+   "stem": {
+    "words": [
+     "conceal"
+    ],
+    "prompt": "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "sentence": "She tried to CONCEAL her disappointment from her friends."
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-27-opt1",
+     "value": "hide",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-27-opt2",
+     "value": "show",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": "In the sentence, the key is 'hide'. 'show' is the opposite of 'conceal': to let others see the feeling. A child who finds the area but reverses it picks 'show'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-27-opt3",
+     "value": "ignore",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "execution": "In the sentence, the key is 'hide'. 'ignore' shares the area of not dealing with a feeling but tilts it: to take no notice of something, rather than keep it from others. A child who hears only 'not show it' picks 'ignore'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-27-opt4",
+     "value": "pretend",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "execution": "In the sentence, the key is 'hide'. Concealing disappointment goes with pretending to be fine, so the two words turn up together, but 'pretend' means act as if, not hide. A child who matches the situation picks 'pretend'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-28",
+   "why": "'tired' was defensible against the figurative key 'drained'. New key 'worn out'; 'tired' replaced with 'lively' on opposite-pull; 'sleepy' and 'empty' kept with executions rewritten against the new key.",
+   "stem": {
+    "words": [
+     "exhausted"
+    ],
+    "prompt": "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "sentence": "After the long walk home they were EXHAUSTED."
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-28-opt1",
+     "value": "worn out",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-28-opt2",
+     "value": "lively",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": "In the sentence, the key is 'worn out'. 'lively' is the opposite of 'exhausted': full of energy. A child who finds the area of energy but reverses it picks 'lively'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-28-opt3",
+     "value": "sleepy",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "execution": "In the sentence, the key is 'worn out'. 'sleepy' turns up beside 'exhausted' at the end of a long day, but it means ready to sleep, not out of energy. A child who matches the situation picks 'sleepy'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-28-opt4",
+     "value": "empty",
+     "isKey": false,
+     "tag": "vr04-the-other-meaning",
+     "execution": "In the sentence, the key is 'worn out'. 'exhausted' has a real second meaning, used up completely, as in exhausted supplies, and 'empty' fits that sense. The sentence is about people after a walk, which fixes the worn-out sense. A child who picks the other sense picks 'empty'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-29",
+   "why": "'improve' is part of the meaning of 'amend' and was a second answer. Replaced with 'shorten' on wrong-shade; the rest is unchanged.",
+   "stem": {
+    "words": [
+     "amend"
+    ],
+    "prompt": "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "sentence": "The teacher asked her to AMEND the last paragraph."
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-29-opt1",
+     "value": "change",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-29-opt2",
+     "value": "rewrite",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "execution": "In 'The teacher asked her to AMEND the last paragraph', the key is 'change'. 'rewrite' pushes the same idea too far: to write it all again, where amending means making some changes. A child who reaches for the biggest change picks 'rewrite'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-29-opt3",
+     "value": "shorten",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "execution": "In the sentence, the key is 'change'. 'shorten' shares the area of altering a piece of writing but tilts it to one kind of change, making it shorter. Amending need not cut anything. A child who hears only 'edit it' picks 'shorten'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-29-opt4",
+     "value": "check",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "execution": "In the sentence, the key is 'change'. 'check' turns up beside 'amend' in the same classroom job, since you check work and then amend it, but it means look over, not alter. A child who matches the situation picks 'check'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-34",
+   "why": "'delicate' is part of the meaning of 'exquisite', and lace is the archetypal delicate thing. Replaced with 'costly' on keeps-the-same-company; the rest is unchanged.",
+   "stem": {
+    "words": [
+     "exquisite"
+    ],
+    "prompt": "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "sentence": "The lace on the dress was EXQUISITE."
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-34-opt1",
+     "value": "beautiful",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-34-opt2",
+     "value": "pretty",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "execution": "In 'The lace on the dress was EXQUISITE', the key is 'beautiful'. 'pretty' is from the same family but far weaker; exquisite means extremely beautiful and finely made. A child who matches the family and ignores the strength picks 'pretty'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-34-opt3",
+     "value": "costly",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "execution": "In the sentence, the key is 'beautiful'. 'costly' turns up beside 'exquisite', since finely made lace is often expensive, but it means costing a lot, not beautiful. A child who matches the company the words keep picks 'costly'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-34-opt4",
+     "value": "sharp",
+     "isKey": false,
+     "tag": "vr04-the-other-meaning",
+     "execution": "In the sentence, the key is 'beautiful'. 'exquisite' has a real second meaning, intense and sharp, as in exquisite pain, and 'sharp' fits that sense. The sentence is about lace on a dress, which fixes the beautiful sense. A child who picks the other sense picks 'sharp'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-35",
+   "why": "Reading-age lint: two four-syllable words. 'businessman' replaced with 'farmer' in the carrier sentence; options kept, the 'wealthy' execution adjusted to the new sentence.",
+   "stem": {
+    "words": [
+     "benevolent"
+    ],
+    "prompt": "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "sentence": "The school was founded by a BENEVOLENT farmer."
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-35-opt1",
+     "value": "kind",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-35-opt2",
+     "value": "saintly",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "execution": "In 'The school was founded by a BENEVOLENT farmer', the key is 'kind'. 'saintly' is from the same family of goodness but far stronger: as good as a saint. A child who reaches for the strongest good word picks 'saintly'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-35-opt3",
+     "value": "polite",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "execution": "In the sentence, the key is 'kind'. 'polite' shares the area of behaving well towards others but tilts it towards good manners rather than wishing others well. A child who hears only 'nice' picks 'polite'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-35-opt4",
+     "value": "wealthy",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "execution": "In the sentence, the key is 'kind'. 'wealthy' turns up beside 'benevolent' when someone pays to found a school, but it means rich, not kind. A child who matches the situation picks 'wealthy'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-36",
+   "why": "'patient' was defensible in a sentence about a long wait, and the key 'unemotional' was imprecise. New sentence (sad news, no wait), new key 'calm', 'patient' replaced with 'gloomy' on wrong-shade; 'silent' and 'brave' kept.",
+   "stem": {
+    "words": [
+     "stoic"
+    ],
+    "prompt": "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "sentence": "She stayed STOIC when she heard the sad news."
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-36-opt1",
+     "value": "calm",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-36-opt2",
+     "value": "gloomy",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "execution": "In 'She stayed STOIC when she heard the sad news', the key is 'calm'. 'gloomy' shares the area of how someone takes bad news but tilts it towards sadness, where stoic means not showing feeling. A child who hears only 'sad news' picks 'gloomy'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-36-opt3",
+     "value": "silent",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "execution": "In the sentence, the key is 'calm'. A stoic person may stay silent, so 'silent' names one thing stoicism can look like, not what 'stoic' means. A child who picks that visible sign picks 'silent'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-36-opt4",
+     "value": "brave",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "execution": "In the sentence, the key is 'calm'. 'brave' turns up beside 'stoic' when praising someone who faces hardship, but it means unafraid, not keeping feelings hidden. A child who matches the company the words keep picks 'brave'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-37",
+   "why": "'friendly' is part of the meaning of 'jovial' and was a second answer. Replaced with 'silly' on wrong-shade; the rest is unchanged.",
+   "stem": {
+    "words": [
+     "jovial"
+    ],
+    "prompt": "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "sentence": "The innkeeper greeted them in a JOVIAL manner."
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-37-opt1",
+     "value": "cheerful",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-37-opt2",
+     "value": "ecstatic",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "execution": "In 'The innkeeper greeted them in a JOVIAL manner', the key is 'cheerful'. 'ecstatic' is from the same family of happiness but far stronger: overwhelmed with joy. A child who reaches for the strongest happy word picks 'ecstatic'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-37-opt3",
+     "value": "silly",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "execution": "In the sentence, the key is 'cheerful'. 'silly' shares the area of fun and laughter but tilts it towards acting foolishly. A jovial innkeeper is good-humoured, not foolish. A child who hears only 'full of fun' picks 'silly'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-37-opt4",
+     "value": "loud",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "execution": "In the sentence, the key is 'cheerful'. A jovial innkeeper may laugh loudly, so 'loud' names one thing joviality can sound like, not what 'jovial' means. A child who picks that sign picks 'loud'."
+    }
+   ]
+  }
+ ]
+}

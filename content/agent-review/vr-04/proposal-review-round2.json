@@ -1,0 +1,38 @@
+{
+  "door": "vr-04",
+  "reviewer": "rev-agent-01",
+  "changes": [
+    {
+      "ref": "seat:gen-vr-04-closest-meaning-28-opt2",
+      "verdict": "ATTEST",
+      "reason": "'lively' (full of energy) is the opposite of 'exhausted' in the walk-home sentence. The execution quotes the sentence exactly and names the key 'drained'. It is not defensible as closest."
+    },
+    {
+      "ref": "redraft:gen-vr-04-closest-meaning-28-opt3",
+      "verdict": "ATTEST",
+      "reason": "'sleepy' goes with the end of a long day but means ready to sleep, not out of energy. Keeps-the-same-company fits, and the execution now names the stored key 'drained'."
+    },
+    {
+      "ref": "redraft:gen-vr-04-closest-meaning-28-opt4",
+      "verdict": "ATTEST",
+      "reason": "'exhausted' does have a used-up sense (exhausted supplies), which 'empty' fits, and the sentence about people fixes the tired sense. The-other-meaning fits, and the execution names 'drained'."
+    },
+    {
+      "ref": "rebuild:gen-vr-04-closest-meaning-36",
+      "verdict": "REFUSE",
+      "reason": "Replacing 'brave' clears the round-1 fault, and 'calm' is a sound, uncontested key. But 'gloomy' (wrong-shade) and 'tearful' (opposite-pull) are produced by the same mistake: hearing 'sad news' and picking a word for showing sadness. Both executions describe that one mistake ('a child who hears only sad news' / 'links the sad news to the reaction it brings'). So the two tags differ in name, not in fact. One of the two needs to come off the sadness axis."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "gen-vr-04-closest-meaning-28",
+      "verdict": "SIGN",
+      "reason": "drained / lively / sleepy / empty: 'drained' is the only fit for EXHAUSTED after a long walk, with 'tired' gone. 'lively' reverses it, 'sleepy' is company, 'empty' is the used-up sense the sentence rules out. Key differs from bank-30's 'worn out', so the duplicate is gone. Gates pass."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-36",
+      "verdict": "HOLD",
+      "reason": "Yes, gloomy and tearful leaning the same way gives the key away. Both mean showing sadness, so a test-wise child drops both on the rule that two options which go together cannot both be the one answer, without knowing what 'stoic' means. That leaves 'calm' or 'silent', and 'calm' is the only remaining word for a state of mind. The sentence's 'sad news' makes the pair more conspicuous. Fix: keep 'tearful' as the opposite and replace 'gloomy' with a wrong-shade word off the sadness axis that is not defensible as closest (e.g. 'stubborn', tilting endurance towards refusing to give way)."
+    }
+  ]
+}
