@@ -1,0 +1,42 @@
+{
+ "door": "maths-retag",
+ "rebuilds": [
+  {
+   "itemId": "MC03-GEOM-04",
+   "stem": {
+    "text": "An L-shape is made from a 15 cm by 9 cm rectangle. A 6 cm by 7 cm rectangle is cut from one corner. What is the area of the L-shape?"
+   },
+   "options": [
+    {
+     "optionId": "cmteorehi0006tm2cdzmfz4s3",
+     "value": "93 cm²",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteorehi0007tm2cdljru5ec",
+     "value": "135 cm²",
+     "isKey": false,
+     "tag": "maths-90-composite-shape-area-slip",
+     "execution": "The child finds the area of the whole 15 cm by 9 cm rectangle, 135 cm², and forgets to take away the 6 cm by 7 cm cut-out. Taking away 42 cm² gives 93 cm²."
+    },
+    {
+     "optionId": "cmteorehi0008tm2c6s6uc8a8",
+     "value": "48 cm²",
+     "isKey": false,
+     "tag": "maths-38-perimeter-vs-area-adding",
+     "execution": "The child adds the sides of the 15 cm by 9 cm rectangle, 15 + 9 + 15 + 9 = 48, when asked for area. The area is 15 × 9 − 6 × 7 = 135 − 42 = 93 cm²."
+    },
+    {
+     "optionId": "cmteorehi0009tm2cgpj7oz8w",
+     "value": "177 cm²",
+     "isKey": false,
+     "tag": "maths-72-wrong-operation-chosen",
+     "execution": "The child finds both areas correctly, 135 cm² and 42 cm², but adds the cut-out instead of taking it away. That gives 135 + 42 = 177 instead of 135 − 42 = 93 cm²."
+    }
+   ],
+   "why": "'(not to scale)' dropped (no drawing); sentences split to 16 words or fewer; same maths, option ids and values. Retags: none. Executions written for every wrong option."
+  }
+ ]
+}

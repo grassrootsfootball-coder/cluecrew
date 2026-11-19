@@ -1,0 +1,118 @@
+{
+  "door": "maths-retag",
+  "reviewer": "rev-agent-01",
+  "changes": [
+    {
+      "ref": "seat:cmteo81yy001mtmmjhg8ms2gg",
+      "verdict": "ATTEST",
+      "reason": "Side lengths 5 - 2 = 3 and 4 - 1 = 3 are the intermediates of (2, 1) + (3, 3) = (5, 4); stopping there is proc-01. Unchanged from round 2."
+    },
+    {
+      "ref": "redraft:cmteo81yy001ltmmjktj9hqup",
+      "verdict": "ATTEST",
+      "reason": "Key (5, 4) written y-first gives (4, 5) (#46). Unchanged from round 2."
+    },
+    {
+      "ref": "redraft:cmteo81yy001ntmmjhrai3pm8",
+      "verdict": "ATTEST",
+      "reason": "Now produces the value: from (2, 4), 3 right reaches (5, 4), then the side of 3 counted again gives x = 8, so (8, 4). y = 4 is accounted for. The round-2 fault is fixed."
+    },
+    {
+      "ref": "rebuild:MC01-GEOM-01",
+      "verdict": "ATTEST",
+      "reason": "Bracket gone; 11 and 7 words. Key 2 x (8 + 3) = 22 cm. 24 = 8 x 3 (#39). 19 = 8 + 8 + 3 (#88's own example, on this row). 11 = 8 + 3, two sides only, also under #88: the entry's name and hint ('Count every side once') fit, though its description says three sides, so the description is narrower than its use."
+    },
+    {
+      "ref": "rebuild:MC02-GEOM-01",
+      "verdict": "ATTEST",
+      "reason": "Bracket gone. Key 2 x (9 + 5) = 28 cm. 45 = 9 x 5 (#39). 23 = 9 + 9 + 5 (#88). 14 = 9 + 5, two sides (#88, same description-width note as MC01-GEOM-01)."
+    },
+    {
+      "ref": "rebuild:MC02-GEOM-05",
+      "verdict": "ATTEST",
+      "reason": "Bracket gone; four sentences of 9, 8, 13 and 8 words. Key 10 x 4 + 3 x 5 = 40 + 15 = 55 cm². Retag 40 to proc-01 is right: the bottom rectangle is a correct intermediate and the child stops. The old #100 (steps out of order) had no order fault to name. 90 = 10 x (4 + 5), the bounding box with the 5 cm upright (#90); under the other orientation the box is 10 x 7, but the value is genuine under the natural reading. 22 = 10 + 4 + 3 + 5, lengths added for area (#38)."
+    },
+    {
+      "ref": "rebuild:MC03-GEOM-04",
+      "verdict": "REFUSE",
+      "reason": "The maths and every execution check. Key 15 x 9 - 6 x 7 = 135 - 42 = 93 cm², and the cut fits. 135 forgets the cut-out (#90). 48 = 15 + 9 + 15 + 9 (#38). 177 = 135 + 42 (#72). But the split made a new false sentence: 'An L-shape is a 15 cm by 9 cm rectangle.' Read on its own, it tells a child an L-shape IS a rectangle. In the old single sentence the following 'with … cut from one corner' rescued it. The other rebuilds say 'is made from'. Fix: 'An L-shape is made from a 15 cm by 9 cm rectangle.' (10 words)."
+    },
+    {
+      "ref": "rebuild:MC03-GEOM-05",
+      "verdict": "ATTEST",
+      "reason": "Bracket gone; 13 and 7 words. Width (30 - 9 - 9) ÷ 2 = 6, key 9 x 6 = 54 cm². 6 cm moved to proc-01: the width is the intermediate the stem itself names, so this is right; the old #71 was wrong, as every number is used. 15 cm² = 9 + 6, added instead of multiplied (#72). 135 cm²: 30 ÷ 2 = 15 taken as the width, 15 x 9 = 135. #82's mechanism (halving the starting total instead of what remains: 30 rather than 12) produces it exactly, and its hint ('a fraction of the total, or of what is left?') suits the child. The wording 'in a multi-step fraction problem' is narrower than this use, a library description point and not a fault. A second route gives the same value (30 ÷ 2 = 15 = length + width, then 9 never subtracted). The old #100 was wrong: halving first is a valid order."
+    },
+    {
+      "ref": "rebuild:MC04-GEOM-01",
+      "verdict": "ATTEST",
+      "reason": "Bracket gone. Key 50 cm. 126 = 18 x 7 (#39, off the retired #87). 43 = 18 + 18 + 7 (#88). 20: ones 30, carry of 3 dropped, tens 2 (#69). Attested in round 2."
+    },
+    {
+      "ref": "rebuild:MC05-GEOM-01",
+      "verdict": "ATTEST",
+      "reason": "Bracket gone. Key 54 cm. 162 = 18 x 9 (#39). 45 = 18 + 18 + 9 (#88). 44: 36 + 18 with the carry dropped (#69). Attested in round 2."
+    },
+    {
+      "ref": "rebuild:MC05-GEOM-04",
+      "verdict": "ATTEST",
+      "reason": "Bracket gone; 13 and 10 words. Width 6, key 28 cm. 48 = 8 x 6 (#39). 22 = 8 + 6 + 8 (#88). 6 cm stops at the width (proc-01)."
+    },
+    {
+      "ref": "rebuild:MC05-GEOM-05",
+      "verdict": "ATTEST",
+      "reason": "Bracket gone; 10, 9 and 7 words; the 5 by 4 corner fits. Key 96 - 20 = 76 cm². 96 forgets the cut-out (#90). 40 = 12 + 8 + 12 + 8 (#38). 116 = 96 + 20 (#72)."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "MC01-GEOM-04",
+      "verdict": "SIGN",
+      "reason": "Fourth corner (5, 4), unique; (4, 5), (3, 3), (8, 4) recomputed and wrong, and every execution now produces its value."
+    },
+    {
+      "itemId": "MC01-GEOM-01",
+      "verdict": "SIGN",
+      "reason": "Key 22 cm, unique; 24, 11, 19 cm recomputed and wrong; no drawing reference."
+    },
+    {
+      "itemId": "MC02-GEOM-01",
+      "verdict": "SIGN",
+      "reason": "Key 28 cm, unique; 45, 14, 23 cm recomputed and wrong."
+    },
+    {
+      "itemId": "MC02-GEOM-05",
+      "verdict": "SIGN",
+      "reason": "Key 55 cm² whichever way the top rectangle stands (3 x 5 = 15); 40, 90, 22 cm² recomputed and wrong; cm² throughout."
+    },
+    {
+      "itemId": "MC03-GEOM-04",
+      "verdict": "HOLD",
+      "reason": "The rebuild is refused: 'An L-shape is a 15 cm by 9 cm rectangle.' is false read alone. Change it to 'is made from'. Otherwise sound: key 93 cm² unique; 135, 48, 177 cm² wrong."
+    },
+    {
+      "itemId": "MC03-GEOM-05",
+      "verdict": "SIGN",
+      "reason": "Width 6, key 54 cm², unique; 135 cm², 6 cm, 15 cm² recomputed and wrong. Unit note (asked): the one option in a different unit lets a child rule it out only by knowing perimeter is in cm and area in cm², which is exactly the distinction the distractor tests. A child making the mistake is not deterred. It eliminates one distractor by subject knowledge and points to no key, so it does not block."
+    },
+    {
+      "itemId": "MC04-GEOM-01",
+      "verdict": "SIGN",
+      "reason": "Key 50 cm, unique; 126, 43, 20 cm recomputed and wrong. The area value is labelled cm here and cm² on MC05-GEOM-01, an inconsistent district convention but not a row fault."
+    },
+    {
+      "itemId": "MC05-GEOM-01",
+      "verdict": "SIGN",
+      "reason": "Key 54 cm, unique; 45 cm, 162 cm², 44 cm recomputed and wrong. Unit note (asked): the one option in a different unit lets a child rule it out only by knowing perimeter is in cm and area in cm², which is exactly the distinction the distractor tests. A child making the mistake is not deterred. It eliminates one distractor by subject knowledge and points to no key, so it does not block."
+    },
+    {
+      "itemId": "MC05-GEOM-04",
+      "verdict": "SIGN",
+      "reason": "Key 28 cm, unique; 48 cm², 22 cm, 6 cm recomputed and wrong. Unit note (asked): the one option in a different unit lets a child rule it out only by knowing perimeter is in cm and area in cm², which is exactly the distinction the distractor tests. A child making the mistake is not deterred. It eliminates one distractor by subject knowledge and points to no key, so it does not block."
+    },
+    {
+      "itemId": "MC05-GEOM-05",
+      "verdict": "SIGN",
+      "reason": "Key 76 cm², unique; 96 cm², 40 cm, 116 cm² recomputed and wrong. Unit note (asked): the one option in a different unit lets a child rule it out only by knowing perimeter is in cm and area in cm², which is exactly the distinction the distractor tests. A child making the mistake is not deterred. It eliminates one distractor by subject knowledge and points to no key, so it does not block."
+    }
+  ]
+}

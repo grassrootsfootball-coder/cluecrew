@@ -1,0 +1,312 @@
+{
+ "door": "maths-retag",
+ "seats": [
+  {
+   "optionId": "cmteo8244004vtmmjjf2b976n",
+   "itemId": "MC02-FDP-03",
+   "oldValue": "150",
+   "newValue": "150",
+   "tag": "maths-24-inverted-fraction-of-an-amount",
+   "execution": "The child uses 40% as 40/100 turned upside down, so works out 60 × 100 ÷ 40 = 150 instead of 60 × 40 ÷ 100 = 24. Multiplying by the bottom number and dividing by the top makes the answer bigger than 60 when 40% of it must be smaller."
+  },
+  {
+   "optionId": "cmteo827e006stmmjtov7wwt8",
+   "itemId": "MC02-MEAS-07",
+   "oldValue": "£7.40",
+   "newValue": "£7.40",
+   "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+   "execution": "The child prices the 4 apples correctly at 4 × 65p = £2.60 but never adds the £2.30 juice. Taking £2.60 from £10 gives £7.40 instead of £10 − £4.90 = £5.10."
+  },
+  {
+   "optionId": "cmteo827e006vtmmjsdyy46ih",
+   "itemId": "MC02-MEAS-07",
+   "oldValue": "£4.90",
+   "newValue": "£4.90",
+   "tag": "maths-proc-01-stopped-at-the-first-answer",
+   "execution": "The child works out the total cost correctly, 4 × 65p + £2.30 = £4.90, and gives that as the answer. They stop before taking £4.90 from £10, which gives £5.10 change."
+  },
+  {
+   "optionId": "cmteo8244004stmmjdjiuy3so",
+   "itemId": "MC02-FDP-03",
+   "oldValue": "12",
+   "newValue": "6",
+   "tag": "maths-proc-01-stopped-at-the-first-answer",
+   "execution": "The child finds 10% of 60 correctly by dividing by 10, gets 6, and gives that as the answer. They stop before multiplying by 4 to reach 40%, which gives 24."
+  },
+  {
+   "optionId": "cmteo81yy001mtmmjhg8ms2gg",
+   "itemId": "MC01-GEOM-04",
+   "oldValue": "(3, 3)",
+   "newValue": "(3, 3)",
+   "tag": "maths-proc-01-stopped-at-the-first-answer",
+   "execution": "The child finds the side of the square correctly, 5 − 2 = 3 and 4 − 1 = 3, and writes those lengths as the answer. They stop before adding 3 to the corner (2, 1) in each direction, which gives (5, 4)."
+  },
+  {
+   "optionId": "cmteo825n005vtmmj5g8xxiro",
+   "itemId": "MC02-GEOM-04",
+   "oldValue": "(-1, 1)",
+   "newValue": "(-1, 1)",
+   "tag": "maths-72-wrong-operation-chosen",
+   "execution": "The child subtracts the moves instead of adding them, working out 3 − 4 = −1 and 2 − 1 = 1. Moving right and up should add, giving (3 + 4, 2 + 1) = (7, 3)."
+  },
+  {
+   "optionId": "cmteo82cm009ntmmjrttv2asq",
+   "itemId": "MC03-GEOM-02",
+   "oldValue": "(-3, -2)",
+   "newValue": "(-3, -2)",
+   "tag": "maths-72-wrong-operation-chosen",
+   "execution": "The child subtracts the moves instead of adding them, working out 2 − 5 = −3 and 1 − 3 = −2. Moving right and up should add, giving (2 + 5, 1 + 3) = (7, 4)."
+  },
+  {
+   "optionId": "cmteo82j200dktmmjbzd500b6",
+   "itemId": "MC04-GEOM-01",
+   "oldValue": "126 cm",
+   "newValue": "126 cm",
+   "tag": "maths-39-perimeter-vs-area-multiplying",
+   "execution": "The child multiplies the two sides, 18 × 7 = 126, when asked for the perimeter. That is the area of the rectangle; the perimeter is 18 + 7 + 18 + 7 = 50 cm."
+  },
+  {
+   "optionId": "cmteo82j900dqtmmjozdjypet",
+   "itemId": "MC04-GEOM-02",
+   "oldValue": "(8, 5)",
+   "newValue": "(8, 5)",
+   "tag": "maths-46-reversed-coordinates",
+   "execution": "The child mixes up the two directions, adding the 5 squares up to the x-coordinate and the 4 squares right to the y-coordinate. That gives (3 + 5, 1 + 4) = (8, 5) instead of (3 + 4, 1 + 5) = (7, 6)."
+  },
+  {
+   "optionId": "cmteo82lq00fbtmmj7jr5c3qj",
+   "itemId": "MC04-NPV-04",
+   "oldValue": "4200",
+   "newValue": "4200",
+   "tag": "maths-09-rounding-misdirection",
+   "execution": "The child rounds down regardless of the tens digit, keeping 42 hundreds and giving 4200. The tens digit is 7, so 4,271 rounds up to 4300."
+  },
+  {
+   "optionId": "cmteo82pl00hmtmmjttswdfo4",
+   "itemId": "MC05-GEOM-01",
+   "oldValue": "162 cm²",
+   "newValue": "162 cm²",
+   "tag": "maths-39-perimeter-vs-area-multiplying",
+   "execution": "The child multiplies the two sides, 18 × 9 = 162, when asked for the perimeter. That is the area of the rectangle; the perimeter is 18 + 9 + 18 + 9 = 54 cm."
+  },
+  {
+   "optionId": "cmteo82px00hvtmmjkjuuefty",
+   "itemId": "MC05-GEOM-03",
+   "oldValue": "(-1, -2)",
+   "newValue": "(-1, -2)",
+   "tag": "maths-72-wrong-operation-chosen",
+   "execution": "The child subtracts the moves instead of adding them, working out 5 − 6 = −1 and 2 − 4 = −2. Moving right and up should add, giving (5 + 6, 2 + 4) = (11, 6)."
+  },
+  {
+   "optionId": "cmteo82q200hxtmmjvxeneyam",
+   "itemId": "MC05-GEOM-04",
+   "oldValue": "48 cm²",
+   "newValue": "48 cm²",
+   "tag": "maths-39-perimeter-vs-area-multiplying",
+   "execution": "The child finds the width correctly, 48 ÷ 8 = 6 cm, then multiplies the sides, 8 × 6 = 48, when asked for the perimeter. The perimeter is 8 + 6 + 8 + 6 = 28 cm."
+  },
+  {
+   "optionId": "cmteo82rr00j7tmmj571z3j1j",
+   "itemId": "MC05-NPV-04",
+   "oldValue": "2600",
+   "newValue": "2600",
+   "tag": "maths-09-rounding-misdirection",
+   "execution": "The child rounds down regardless of the tens digit, keeping 26 hundreds and giving 2600. The tens digit is 7, so 2,673 rounds up to 2700."
+  }
+ ],
+ "redrafts": [
+  {
+   "optionId": "cmteo8244004utmmj1zscio7e",
+   "itemId": "MC02-FDP-03",
+   "value": "20",
+   "tag": "maths-77-treating-a-percentage-as-money",
+   "execution": "The child takes the percentage figure straight off the amount, working out 60 − 40 = 20. The 40 is used as a quantity to subtract rather than as 40 out of every 100, which gives 24."
+  },
+  {
+   "optionId": "cmteo827e006ttmmj9km1xf7h",
+   "itemId": "MC02-MEAS-07",
+   "value": "£7.10",
+   "tag": "maths-98-digit-dropped-in-column-work",
+   "execution": "The child adds 4 × 65p = £2.60 to only the 30p of the £2.30 juice, dropping the £2, to make £2.90. Taking £2.90 from £10 gives £7.10 instead of £10 − £4.90 = £5.10."
+  },
+  {
+   "optionId": "cmteo81yy001ltmmjktj9hqup",
+   "itemId": "MC01-GEOM-04",
+   "value": "(4, 5)",
+   "tag": "maths-46-reversed-coordinates",
+   "execution": "The child finds the right corner but writes the y-coordinate first, giving (4, 5) instead of (5, 4)."
+  },
+  {
+   "optionId": "cmteo81yy001ntmmjhrai3pm8",
+   "itemId": "MC01-GEOM-04",
+   "value": "(8, 4)",
+   "tag": "side-recounted-from-a-reached-corner",
+   "execution": "The child moves 3 squares right again from (5, 1), a corner the square already reaches, so x becomes 5 + 3 = 8. One side is counted twice, giving (8, 4) instead of (5, 4)."
+  },
+  {
+   "optionId": "cmteo825n005ttmmjncshw0nn",
+   "itemId": "MC02-GEOM-04",
+   "value": "(3, 7)",
+   "tag": "maths-46-reversed-coordinates",
+   "execution": "The child finds the right point but writes the y-coordinate first, giving (3, 7) instead of (7, 3)."
+  },
+  {
+   "optionId": "cmteo825n005utmmjtf1cjw3j",
+   "itemId": "MC02-GEOM-04",
+   "value": "(6, 2)",
+   "tag": "maths-47-translation-by-gap",
+   "execution": "The child counts the gaps between squares rather than moving point to point, so goes 3 right instead of 4 and 0 up instead of 1. That gives (6, 2) instead of (7, 3)."
+  },
+  {
+   "optionId": "cmteo82cm009ltmmj42uku2n8",
+   "itemId": "MC03-GEOM-02",
+   "value": "(4, 7)",
+   "tag": "maths-46-reversed-coordinates",
+   "execution": "The child finds the right point but writes the y-coordinate first, giving (4, 7) instead of (7, 4)."
+  },
+  {
+   "optionId": "cmteo82cm009mtmmjdv89oo0f",
+   "itemId": "MC03-GEOM-02",
+   "value": "(6, 3)",
+   "tag": "maths-47-translation-by-gap",
+   "execution": "The child counts the gaps between squares rather than moving point to point, so goes 4 right instead of 5 and 2 up instead of 3. That gives (6, 3) instead of (7, 4)."
+  },
+  {
+   "optionId": "cmteo82j200dltmmjg9j9c1zb",
+   "itemId": "MC04-GEOM-01",
+   "value": "43 cm",
+   "tag": "maths-88-incomplete-perimeter",
+   "execution": "The child adds only three sides, 18 + 18 + 7 = 43, and leaves one 7 cm side out. All four sides give 50 cm."
+  },
+  {
+   "optionId": "cmteo82j200dntmmjn1n0zgmi",
+   "itemId": "MC04-GEOM-01",
+   "value": "20 cm",
+   "tag": "maths-69-dropped-calculation-carry",
+   "execution": "The child adds 18 + 7 + 18 + 7 in columns: the ones make 30, so they write 0 but drop the carried 3. The tens give 1 + 1 = 2, so they write 20 cm instead of 50 cm."
+  },
+  {
+   "optionId": "cmteo82j900dotmmjmi0g5rdv",
+   "itemId": "MC04-GEOM-02",
+   "value": "(6, 7)",
+   "tag": "maths-46-reversed-coordinates",
+   "execution": "The child finds the right point but writes the y-coordinate first, giving (6, 7) instead of (7, 6)."
+  },
+  {
+   "optionId": "cmteo82j900drtmmjo7g7ulzp",
+   "itemId": "MC04-GEOM-02",
+   "value": "(7, 1)",
+   "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+   "execution": "The child moves 4 squares right from (3, 1) but never uses the 5 squares up. That gives (7, 1) instead of (7, 6)."
+  },
+  {
+   "optionId": "cmteo82lq00f9tmmjpuslvty9",
+   "itemId": "MC04-NPV-04",
+   "value": "4270",
+   "tag": "maths-65-incorrect-rounding-place",
+   "execution": "The child rounds to the nearest ten instead of the nearest hundred, giving 4270. To the nearest 100, 4,271 is 4300."
+  },
+  {
+   "optionId": "cmteo82lq00fatmmj7ehhnrxu",
+   "itemId": "MC04-NPV-04",
+   "value": "4000",
+   "tag": "maths-65-incorrect-rounding-place",
+   "execution": "The child rounds to the nearest thousand instead of the nearest hundred, giving 4000. To the nearest 100, 4,271 is 4300."
+  },
+  {
+   "optionId": "cmteo82pl00hltmmjqf8usait",
+   "itemId": "MC05-GEOM-01",
+   "value": "45 cm",
+   "tag": "maths-88-incomplete-perimeter",
+   "execution": "The child adds only three sides, 18 + 18 + 9 = 45, and leaves one 9 cm side out. All four sides give 54 cm."
+  },
+  {
+   "optionId": "cmteo82pl00hntmmj3pf8dg53",
+   "itemId": "MC05-GEOM-01",
+   "value": "44 cm",
+   "tag": "maths-69-dropped-calculation-carry",
+   "execution": "The child works out 36 + 18 for the two pairs of sides: the ones make 14, so they write 4 but drop the carried 1. The tens give 3 + 1 = 4, so they write 44 cm instead of 54 cm."
+  },
+  {
+   "optionId": "cmteo82px00httmmj7ulz5cus",
+   "itemId": "MC05-GEOM-03",
+   "value": "(6, 11)",
+   "tag": "maths-46-reversed-coordinates",
+   "execution": "The child finds the right point but writes the y-coordinate first, giving (6, 11) instead of (11, 6)."
+  },
+  {
+   "optionId": "cmteo82px00hutmmj8cywxu57",
+   "itemId": "MC05-GEOM-03",
+   "value": "(10, 5)",
+   "tag": "maths-47-translation-by-gap",
+   "execution": "The child counts the gaps between squares rather than moving point to point, so goes 5 right instead of 6 and 3 up instead of 4. That gives (10, 5) instead of (11, 6)."
+  },
+  {
+   "optionId": "cmteo82q200hytmmj9z4pztps",
+   "itemId": "MC05-GEOM-04",
+   "value": "22 cm",
+   "tag": "maths-88-incomplete-perimeter",
+   "execution": "The child finds the width of 6 cm correctly but adds only three sides, 8 + 6 + 8 = 22. All four sides give 28 cm."
+  },
+  {
+   "optionId": "cmteo82q200hztmmjguuw6gyd",
+   "itemId": "MC05-GEOM-04",
+   "value": "6 cm",
+   "tag": "maths-proc-01-stopped-at-the-first-answer",
+   "execution": "The child finds the width correctly, 48 ÷ 8 = 6 cm, and gives that as the answer. They stop before working out the perimeter, 8 + 6 + 8 + 6 = 28 cm."
+  },
+  {
+   "optionId": "cmteo82rr00j5tmmjl8s12m49",
+   "itemId": "MC05-NPV-04",
+   "value": "2670",
+   "tag": "maths-65-incorrect-rounding-place",
+   "execution": "The child rounds to the nearest ten instead of the nearest hundred, giving 2670. To the nearest 100, 2,673 is 2700."
+  },
+  {
+   "optionId": "cmteo82rr00j6tmmjx6vb1idr",
+   "itemId": "MC05-NPV-04",
+   "value": "3000",
+   "tag": "maths-65-incorrect-rounding-place",
+   "execution": "The child rounds to the nearest thousand instead of the nearest hundred, giving 3000. To the nearest 100, 2,673 is 2700."
+  }
+ ],
+ "rebuilds": [
+  {
+   "itemId": "MC04-GEOM-05",
+   "stem": {
+    "text": "An L-shape is made from a rectangle 12 cm by 8 cm. A corner 4 cm by 7 cm is cut out. What is the area of the L-shape?"
+   },
+   "options": [
+    {
+     "optionId": "cmteorehz000itm2c46596hzm",
+     "value": "96 cm²",
+     "isKey": false,
+     "tag": "maths-90-composite-shape-area-slip",
+     "execution": "The child finds the area of the whole 12 cm by 8 cm rectangle, 96 cm², and forgets to take away the 4 cm by 7 cm cut-out. Taking away 28 cm² gives 68 cm²."
+    },
+    {
+     "optionId": "cmteorehz000jtm2cxnd9co3e",
+     "value": "40 cm²",
+     "isKey": false,
+     "tag": "maths-38-perimeter-vs-area-adding",
+     "execution": "The child adds the sides of the 12 cm by 8 cm rectangle, 12 + 8 + 12 + 8 = 40, when asked for area. The area is 12 × 8 − 4 × 7 = 96 − 28 = 68 cm²."
+    },
+    {
+     "optionId": "cmteorehz000ktm2c5kmqv45u",
+     "value": "68 cm²",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteorehz000ltm2cocyghqps",
+     "value": "72 cm²",
+     "isKey": false,
+     "tag": "maths-11-commutative-subtraction",
+     "execution": "The child works out 96 − 28 in columns and takes the smaller digit from the larger in the ones, 8 − 6 = 2. The tens give 9 − 2 = 7, so they write 72 cm² instead of 68 cm²."
+    }
+   ],
+   "why": "Stem was one 25-word sentence (cap 16): split into three sentences with the same maths (12 cm by 8 cm rectangle, 4 cm by 7 cm corner cut out, area asked). '(not to scale)' dropped because there is no drawing. Option ids and values unchanged; 40 cm² retagged from retired maths-87 to maths-38 (12 + 8 + 12 + 8 = 40 when asked for area); executions added to all distractors."
+  }
+ ]
+}

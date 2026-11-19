@@ -1,0 +1,18 @@
+{
+  "door": "maths-retag",
+  "reviewer": "rev-agent-01",
+  "changes": [
+    {
+      "ref": "rebuild:MC03-GEOM-04",
+      "verdict": "ATTEST",
+      "reason": "The round-3 fault is fixed: the first sentence now reads 'An L-shape is made from a 15 cm by 9 cm rectangle.' (11 words), so it no longer says an L-shape is a rectangle. The other sentences are 11 and 8 words, with no drawing reference. Key 15 x 9 - 6 x 7 = 135 - 42 = 93 cm²; the 6 by 7 cut fits. 135 forgets the cut-out (#90). 48 = 15 + 9 + 15 + 9 (#38). 177 = 135 + 42 (#72). Option ids and values unchanged; nothing else moved."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "MC03-GEOM-04",
+      "verdict": "SIGN",
+      "reason": "Answerable from the words alone; 93 cm² is the only correct option; 135, 48 and 177 cm² recomputed and wrong; cm² throughout; words suit a 9-11-year-old."
+    }
+  ]
+}

@@ -1,0 +1,229 @@
+{
+ "door": "maths-retag",
+ "seats": [
+  {
+   "optionId": "cmteo81xe000utmmjpwp1trs2",
+   "itemId": "MC01-FDP-02",
+   "oldValue": "24",
+   "newValue": "24",
+   "tag": "maths-75-incomplete-fraction-of-an-amount",
+   "execution": "The child multiplies 12 by the top number 2 and never divides by the bottom number 3, giving 24 instead of 8. The fraction is treated as the single number 2. Using it upside down would give 12 × 3 ÷ 2 = 18, not 24."
+  },
+  {
+   "optionId": "cmteo823z004rtmmj7lti23g0",
+   "itemId": "MC02-FDP-02",
+   "oldValue": "72",
+   "newValue": "72",
+   "tag": "maths-75-incomplete-fraction-of-an-amount",
+   "execution": "The child multiplies 24 by the top number 3 and never divides by the bottom number 4, giving 72 instead of 18. The fraction is treated as the single number 3. Using it upside down would give 24 × 4 ÷ 3 = 32, not 72."
+  },
+  {
+   "optionId": "cmteo82b5008utmmj42w7yabk",
+   "itemId": "MC03-FDP-02",
+   "oldValue": "72",
+   "newValue": "72",
+   "tag": "maths-75-incomplete-fraction-of-an-amount",
+   "execution": "The child multiplies 24 by the top number 3 and never divides by the bottom number 4, giving 72 instead of 18. The fraction is treated as the single number 3. Using it upside down would give 24 × 4 ÷ 3 = 32, not 72."
+  },
+  {
+   "optionId": "cmteo8244004vtmmjjf2b976n",
+   "itemId": "MC02-FDP-03",
+   "oldValue": "150",
+   "newValue": "150",
+   "tag": "maths-24-inverted-fraction-of-an-amount",
+   "execution": "The child uses 40% as 40/100 turned upside down, so works out 60 × 100 ÷ 40 = 150 instead of 60 × 40 ÷ 100 = 24. Multiplying by the bottom number and dividing by the top makes the answer bigger than 60 when 40% of it must be smaller."
+  },
+  {
+   "optionId": "cmteo81zz0029tmmjc14t0olq",
+   "itemId": "MC01-MEAS-05",
+   "oldValue": "£1.10",
+   "newValue": "£1.10",
+   "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+   "execution": "The child prices the 3 pencils correctly at 3 × 30p = 90p but never adds the 40p rubber. Taking 90p from £2 gives £1.10 instead of £2 − £1.30 = £0.70."
+  },
+  {
+   "optionId": "cmteo81zz002atmmjeajkt8ih",
+   "itemId": "MC01-MEAS-05",
+   "oldValue": "£1.30",
+   "newValue": "£1.30",
+   "tag": "maths-proc-01-stopped-at-the-first-answer",
+   "execution": "The child works out the total cost correctly, 3 × 30p + 40p = £1.30, and gives that as the answer. They stop before the last step of taking £1.30 from £2, which gives £0.70 change."
+  },
+  {
+   "optionId": "cmteo81zz002btmmj1p5c9may",
+   "itemId": "MC01-MEAS-05",
+   "oldValue": "£1.60",
+   "newValue": "£1.60",
+   "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+   "execution": "The child takes only the 40p rubber from £2 and never uses the 3 pencils at 30p each. That gives £2 − 40p = £1.60 instead of £2 − £1.30 = £0.70."
+  },
+  {
+   "optionId": "cmteo8279006ptmmjfxnj2368",
+   "itemId": "MC02-MEAS-06",
+   "oldValue": "£8.55",
+   "newValue": "£8.55",
+   "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+   "execution": "The child takes the price of one notebook from £10 and never uses the 3. That gives £10 − £1.45 = £8.55 instead of £10 − £4.35 = £5.65."
+  },
+  {
+   "optionId": "cmteo827e006stmmjtov7wwt8",
+   "itemId": "MC02-MEAS-07",
+   "oldValue": "£7.40",
+   "newValue": "£7.40",
+   "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+   "execution": "The child prices the 4 apples correctly at 4 × 65p = £2.60 but never adds the £2.30 juice. Taking £2.60 from £10 gives £7.40 instead of £10 − £4.90 = £5.10."
+  },
+  {
+   "optionId": "cmteo829u0086tmmjcksixs2i",
+   "itemId": "MC03-CALC-04",
+   "oldValue": "£16.40",
+   "newValue": "£16.40",
+   "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+   "execution": "The child takes only the £3.60 case from £20 and never uses the £8.75 game. That gives £20 − £3.60 = £16.40 instead of £20 − £12.35 = £7.65."
+  },
+  {
+   "optionId": "cmteo82e000ajtmmj4j6kp40f",
+   "itemId": "MC03-MEAS-05",
+   "oldValue": "£8.25",
+   "newValue": "£8.25",
+   "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+   "execution": "The child takes only the £1.75 pen from £10 and never uses the £2.65 comic. That gives £10 − £1.75 = £8.25 instead of £10 − £4.40 = £5.60."
+  },
+  {
+   "optionId": "cmteo82ed00artmmjvxpulhcf",
+   "itemId": "MC03-MEAS-07",
+   "oldValue": "£7.55",
+   "newValue": "£7.55",
+   "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+   "execution": "The child prices the 7 pencils correctly at 7 × 35p = £2.45 but never adds the £1.80 notebook. Taking £2.45 from £10 gives £7.55 instead of £10 − £4.25 = £5.75."
+  }
+ ],
+ "redrafts": [
+  {
+   "optionId": "cmteo829u0085tmmjtkpg1si2",
+   "itemId": "MC03-CALC-04",
+   "value": "£11.25",
+   "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+   "execution": "The child takes only the £8.75 game from £20 and never uses the £3.60 case. That gives £20 − £8.75 = £11.25 instead of £20 − £12.35 = £7.65."
+  },
+  {
+   "optionId": "cmteo829u0087tmmj7v2vroi2",
+   "itemId": "MC03-CALC-04",
+   "value": "£7.00",
+   "tag": "maths-99-rounded-without-compensating",
+   "execution": "The child rounds £8.75 to £9 and £3.60 to £4, then takes £13 from £20. They give the rounded result £7.00 without adjusting back, instead of £7.65."
+  },
+  {
+   "optionId": "cmteo81xe000ttmmjkjar2ch5",
+   "itemId": "MC01-FDP-02",
+   "value": "4",
+   "tag": "maths-75-incomplete-fraction-of-an-amount",
+   "execution": "The child divides 12 by the bottom number 3 and stops there, giving 4 instead of 8. Only one of the two numbers in the fraction is used."
+  },
+  {
+   "optionId": "cmteo81xe000vtmmjkv7zjme2",
+   "itemId": "MC01-FDP-02",
+   "value": "18",
+   "tag": "maths-24-inverted-fraction-of-an-amount",
+   "execution": "The child turns 2/3 upside down and finds three halves of 12, working out 12 × 3 ÷ 2 = 18. The answer is 12 ÷ 3 × 2 = 8."
+  },
+  {
+   "optionId": "cmteo823z004ptmmj6m72i30q",
+   "itemId": "MC02-FDP-02",
+   "value": "6",
+   "tag": "maths-75-incomplete-fraction-of-an-amount",
+   "execution": "The child divides 24 by the bottom number 4 and stops there, giving 6 instead of 18. Only one of the two numbers in the fraction is used."
+  },
+  {
+   "optionId": "cmteo823z004qtmmjynjpnb3c",
+   "itemId": "MC02-FDP-02",
+   "value": "32",
+   "tag": "maths-24-inverted-fraction-of-an-amount",
+   "execution": "The child turns 3/4 upside down and finds four thirds of 24, working out 24 × 4 ÷ 3 = 32. The answer is 24 ÷ 4 × 3 = 18."
+  },
+  {
+   "optionId": "cmteo82b5008ttmmj6bod41h7",
+   "itemId": "MC03-FDP-02",
+   "value": "6",
+   "tag": "maths-75-incomplete-fraction-of-an-amount",
+   "execution": "The child divides 24 by the bottom number 4 and stops there, giving 6 instead of 18. Only one of the two numbers in the fraction is used."
+  },
+  {
+   "optionId": "cmteo82b5008vtmmj5jc76tzn",
+   "itemId": "MC03-FDP-02",
+   "value": "32",
+   "tag": "maths-24-inverted-fraction-of-an-amount",
+   "execution": "The child turns 3/4 upside down and finds four thirds of 24, working out 24 × 4 ÷ 3 = 32. The answer is 24 ÷ 4 × 3 = 18."
+  },
+  {
+   "optionId": "cmteo8244004stmmjdjiuy3so",
+   "itemId": "MC02-FDP-03",
+   "value": "12",
+   "tag": "maths-75-incomplete-fraction-of-an-amount",
+   "execution": "The child writes 40% as 2/5, divides 60 by the bottom number 5 and stops at 12. They never multiply by the top number 2, which gives 24."
+  },
+  {
+   "optionId": "cmteo8244004utmmj1zscio7e",
+   "itemId": "MC02-FDP-03",
+   "value": "20",
+   "tag": "maths-77-treating-a-percentage-as-money",
+   "execution": "The child takes the percentage figure straight off the amount, working out 60 − 40 = 20. The 40 is used as a quantity to subtract rather than as 40 out of every 100, which gives 24."
+  },
+  {
+   "optionId": "cmteo8279006qtmmjx8o7prot",
+   "itemId": "MC02-MEAS-06",
+   "value": "£7.10",
+   "tag": "maths-85-miscount-or-rounding-in-measures",
+   "execution": "The child multiplies £1.45 by one fewer notebook, so 2 × £1.45 = £2.90. Taking £2.90 from £10 gives £7.10 instead of £10 − £4.35 = £5.65."
+  },
+  {
+   "optionId": "cmteo8279006rtmmj7l3fsnh8",
+   "itemId": "MC02-MEAS-06",
+   "value": "£14.35",
+   "tag": "maths-84-adding-instead-of-finding-the-difference",
+   "execution": "The child works out 3 × £1.45 = £4.35 correctly but adds it to £10 instead of taking it away. That gives £14.35 instead of £5.65 change."
+  },
+  {
+   "optionId": "cmteo82ec00aptmmjgu4j9mb6",
+   "itemId": "MC03-MEAS-07",
+   "value": "£5.40",
+   "tag": "maths-99-rounded-without-compensating",
+   "execution": "The child rounds 35p up to 40p, so 7 pencils cost £2.80, and adds the £1.80 notebook to make £4.60. They give £10 − £4.60 = £5.40 without adjusting for the 5p added to each pencil, instead of £5.75."
+  },
+  {
+   "optionId": "cmteo82ec00aqtmmjlihkmp6i",
+   "itemId": "MC03-MEAS-07",
+   "value": "£6.10",
+   "tag": "maths-85-miscount-or-rounding-in-measures",
+   "execution": "The child multiplies 35p by one fewer pencil, so 6 × 35p = £2.10, then adds the £1.80 notebook to make £3.90. Taking £3.90 from £10 gives £6.10 instead of £5.75."
+  },
+  {
+   "optionId": "cmteo827e006ttmmj9km1xf7h",
+   "itemId": "MC02-MEAS-07",
+   "value": "£7.10",
+   "tag": "maths-98-digit-dropped-in-column-work",
+   "execution": "The child adds 4 × 65p = £2.60 to only the 30p of the £2.30 juice, dropping the £2, to make £2.90. Taking £2.90 from £10 gives £7.10 instead of £10 − £4.90 = £5.10."
+  },
+  {
+   "optionId": "cmteo827e006vtmmjsdyy46ih",
+   "itemId": "MC02-MEAS-07",
+   "value": "£4.90",
+   "tag": "maths-99-rounded-without-compensating",
+   "execution": "The child rounds 65p up to 70p, so 4 apples cost £2.80, and adds the £2.30 juice to make £5.10. They give £10 − £5.10 = £4.90 without adjusting for the 5p added to each apple, instead of £5.10."
+  },
+  {
+   "optionId": "cmteo82e000ahtmmjnspvlcme",
+   "itemId": "MC03-MEAS-05",
+   "value": "£7.60",
+   "tag": "maths-98-digit-dropped-in-column-work",
+   "execution": "The child adds only the 65p of the £2.65 comic to the £1.75 pen, dropping the £2, to make £2.40. Taking £2.40 from £10 gives £7.60 instead of £10 − £4.40 = £5.60."
+  },
+  {
+   "optionId": "cmteo82e000aitmmjiutqewr1",
+   "itemId": "MC03-MEAS-05",
+   "value": "£5.00",
+   "tag": "maths-99-rounded-without-compensating",
+   "execution": "The child rounds £2.65 to £3 and £1.75 to £2, then takes £5 from £10. They give the rounded result £5.00 without adjusting back, instead of £5.60."
+  }
+ ]
+}

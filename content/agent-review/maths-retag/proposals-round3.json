@@ -1,0 +1,364 @@
+{
+ "door": "maths-retag",
+ "seats": [
+  {
+   "optionId": "cmteo81yy001mtmmjhg8ms2gg",
+   "itemId": "MC01-GEOM-04",
+   "oldValue": "(3, 3)",
+   "newValue": "(3, 3)",
+   "tag": "maths-proc-01-stopped-at-the-first-answer",
+   "execution": "The child finds the side of the square correctly, 5 − 2 = 3 and 4 − 1 = 3, and writes those lengths as the answer. They stop before adding 3 to the corner (2, 1) in each direction, which gives (5, 4)."
+  }
+ ],
+ "redrafts": [
+  {
+   "optionId": "cmteo81yy001ltmmjktj9hqup",
+   "itemId": "MC01-GEOM-04",
+   "value": "(4, 5)",
+   "tag": "maths-46-reversed-coordinates",
+   "execution": "The child finds the right corner but writes the y-coordinate first, giving (4, 5) instead of (5, 4)."
+  },
+  {
+   "optionId": "cmteo81yy001ntmmjhrai3pm8",
+   "itemId": "MC01-GEOM-04",
+   "value": "(8, 4)",
+   "tag": "side-recounted-from-a-reached-corner",
+   "execution": "The child starts at (2, 4) and moves 3 squares right to (5, 4), the corner the square needs. They then count the side of 3 again, so x becomes 5 + 3 = 8, giving (8, 4)."
+  }
+ ],
+ "rebuilds": [
+  {
+   "itemId": "MC01-GEOM-01",
+   "stem": {
+    "text": "A rectangle is 8 cm long and 3 cm wide. What is its perimeter?"
+   },
+   "options": [
+    {
+     "optionId": "cmteo81yf001ctmmj489rjtk6",
+     "value": "22 cm",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo81yf001dtmmj725usu7d",
+     "value": "24 cm",
+     "isKey": false,
+     "tag": "maths-39-perimeter-vs-area-multiplying",
+     "execution": "The child multiplies the two sides, 8 × 3 = 24, when asked for the perimeter. That is the area of the rectangle; the perimeter is 8 + 3 + 8 + 3 = 22 cm."
+    },
+    {
+     "optionId": "cmteo81yf001etmmjp3ca0m97",
+     "value": "11 cm",
+     "isKey": false,
+     "tag": "maths-88-incomplete-perimeter",
+     "execution": "The child adds only two sides, 8 + 3 = 11, and leaves the other two out. All four sides give 22 cm."
+    },
+    {
+     "optionId": "cmteo81yf001ftmmjz759yuh6",
+     "value": "19 cm",
+     "isKey": false,
+     "tag": "maths-88-incomplete-perimeter",
+     "execution": "The child adds only three sides, 8 + 8 + 3 = 19, and leaves one 3 cm side out. All four sides give 22 cm."
+    }
+   ],
+   "why": "'(not to scale)' dropped (no drawing); sentences split to 16 words or fewer; same maths, option ids and values. Retags: none. Executions written for every wrong option."
+  },
+  {
+   "itemId": "MC02-GEOM-01",
+   "stem": {
+    "text": "A rectangle is 9 cm long and 5 cm wide. What is its perimeter?"
+   },
+   "options": [
+    {
+     "optionId": "cmteo8255005gtmmjqszy76ur",
+     "value": "28 cm",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo8255005htmmjbjdyoz77",
+     "value": "45 cm",
+     "isKey": false,
+     "tag": "maths-39-perimeter-vs-area-multiplying",
+     "execution": "The child multiplies the two sides, 9 × 5 = 45, when asked for the perimeter. That is the area of the rectangle; the perimeter is 9 + 5 + 9 + 5 = 28 cm."
+    },
+    {
+     "optionId": "cmteo8255005itmmjb7kddygf",
+     "value": "14 cm",
+     "isKey": false,
+     "tag": "maths-88-incomplete-perimeter",
+     "execution": "The child adds only two sides, 9 + 5 = 14, and leaves the other two out. All four sides give 28 cm."
+    },
+    {
+     "optionId": "cmteo8255005jtmmj4yza7c7z",
+     "value": "23 cm",
+     "isKey": false,
+     "tag": "maths-88-incomplete-perimeter",
+     "execution": "The child adds only three sides, 9 + 9 + 5 = 23, and leaves one 5 cm side out. All four sides give 28 cm."
+    }
+   ],
+   "why": "'(not to scale)' dropped (no drawing); sentences split to 16 words or fewer; same maths, option ids and values. Retags: none. Executions written for every wrong option."
+  },
+  {
+   "itemId": "MC02-GEOM-05",
+   "stem": {
+    "text": "An L-shape is made from two rectangles joined together. The bottom rectangle is 10 cm by 4 cm. A smaller rectangle 3 cm by 5 cm sits on top at one end. What is the total area of the L-shape?"
+   },
+   "options": [
+    {
+     "optionId": "cmteo825t005wtmmjj9qlcts0",
+     "value": "55 cm²",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo825t005xtmmjg2dr6cmj",
+     "value": "40 cm²",
+     "isKey": false,
+     "tag": "maths-proc-01-stopped-at-the-first-answer",
+     "execution": "The child finds the area of the bottom rectangle correctly, 10 × 4 = 40 cm², and gives that as the answer. They stop before adding the top rectangle, 3 × 5 = 15 cm², which gives 55 cm²."
+    },
+    {
+     "optionId": "cmteo825u005ytmmj2qbbmhn1",
+     "value": "90 cm²",
+     "isKey": false,
+     "tag": "maths-90-composite-shape-area-slip",
+     "execution": "The child uses the whole bounding box, 10 cm wide and 4 + 5 = 9 cm tall, so works out 10 × 9 = 90. The L-shape does not fill that box; its area is 40 + 15 = 55 cm²."
+    },
+    {
+     "optionId": "cmteo825u005ztmmj7yky40tn",
+     "value": "22 cm²",
+     "isKey": false,
+     "tag": "maths-38-perimeter-vs-area-adding",
+     "execution": "The child adds the four lengths given, 10 + 4 + 3 + 5 = 22, when asked for area. The area is 10 × 4 + 3 × 5 = 40 + 15 = 55 cm²."
+    }
+   ],
+   "why": "'(not to scale)' dropped (no drawing); sentences split to 16 words or fewer; same maths, option ids and values. Retags: 40 cm²: maths-100-steps-out-of-order -> maths-proc-01-stopped-at-the-first-answer. Executions written for every wrong option."
+  },
+  {
+   "itemId": "MC03-GEOM-04",
+   "stem": {
+    "text": "An L-shape is a 15 cm by 9 cm rectangle. A 6 cm by 7 cm rectangle is cut from one corner. What is the area of the L-shape?"
+   },
+   "options": [
+    {
+     "optionId": "cmteorehi0006tm2cdzmfz4s3",
+     "value": "93 cm²",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteorehi0007tm2cdljru5ec",
+     "value": "135 cm²",
+     "isKey": false,
+     "tag": "maths-90-composite-shape-area-slip",
+     "execution": "The child finds the area of the whole 15 cm by 9 cm rectangle, 135 cm², and forgets to take away the 6 cm by 7 cm cut-out. Taking away 42 cm² gives 93 cm²."
+    },
+    {
+     "optionId": "cmteorehi0008tm2c6s6uc8a8",
+     "value": "48 cm²",
+     "isKey": false,
+     "tag": "maths-38-perimeter-vs-area-adding",
+     "execution": "The child adds the sides of the 15 cm by 9 cm rectangle, 15 + 9 + 15 + 9 = 48, when asked for area. The area is 15 × 9 − 6 × 7 = 135 − 42 = 93 cm²."
+    },
+    {
+     "optionId": "cmteorehi0009tm2cgpj7oz8w",
+     "value": "177 cm²",
+     "isKey": false,
+     "tag": "maths-72-wrong-operation-chosen",
+     "execution": "The child finds both areas correctly, 135 cm² and 42 cm², but adds the cut-out instead of taking it away. That gives 135 + 42 = 177 instead of 135 − 42 = 93 cm²."
+    }
+   ],
+   "why": "'(not to scale)' dropped (no drawing); sentences split to 16 words or fewer; same maths, option ids and values. Retags: none. Executions written for every wrong option."
+  },
+  {
+   "itemId": "MC03-GEOM-05",
+   "stem": {
+    "text": "A rectangle has a perimeter of 30 cm and a length of 9 cm. Work out the width, then the area."
+   },
+   "options": [
+    {
+     "optionId": "cmteo82d1009stmmjsm494t92",
+     "value": "54 cm²",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82d1009ttmmj96luqtu6",
+     "value": "135 cm²",
+     "isKey": false,
+     "tag": "maths-82-fraction-of-the-wrong-whole",
+     "execution": "The child halves the whole perimeter, 30 ÷ 2 = 15, and uses 15 as the width. They should halve what is left after the two lengths, 30 − 9 − 9 = 12, to get a width of 6, so they give 15 × 9 = 135 instead of 6 × 9 = 54 cm²."
+    },
+    {
+     "optionId": "cmteo82d1009utmmjukee5zou",
+     "value": "6 cm",
+     "isKey": false,
+     "tag": "maths-proc-01-stopped-at-the-first-answer",
+     "execution": "The child finds the width correctly, (30 − 9 − 9) ÷ 2 = 6 cm, and gives that as the answer. They stop before working out the area, 9 × 6 = 54 cm²."
+    },
+    {
+     "optionId": "cmteo82d1009vtmmjvc04k0gw",
+     "value": "15 cm²",
+     "isKey": false,
+     "tag": "maths-72-wrong-operation-chosen",
+     "execution": "The child finds the width of 6 cm correctly but adds it to the length, 9 + 6 = 15, instead of multiplying. The area is 9 × 6 = 54 cm²."
+    }
+   ],
+   "why": "'(not to scale)' dropped (no drawing); sentences split to 16 words or fewer; same maths, option ids and values. Retags: 135 cm²: maths-100-steps-out-of-order -> maths-82-fraction-of-the-wrong-whole; 6 cm: maths-71-forgetting-part-of-a-multi-step-problem -> maths-proc-01-stopped-at-the-first-answer. Executions written for every wrong option."
+  },
+  {
+   "itemId": "MC04-GEOM-01",
+   "stem": {
+    "text": "A rectangle is 18 cm long and 7 cm wide. What is its perimeter?"
+   },
+   "options": [
+    {
+     "optionId": "cmteo82j200dktmmjbzd500b6",
+     "value": "126 cm",
+     "isKey": false,
+     "tag": "maths-39-perimeter-vs-area-multiplying",
+     "execution": "The child multiplies the two sides, 18 × 7 = 126, when asked for the perimeter. That is the area of the rectangle; the perimeter is 18 + 7 + 18 + 7 = 50 cm."
+    },
+    {
+     "optionId": "cmteo82j200dltmmjg9j9c1zb",
+     "value": "43 cm",
+     "isKey": false,
+     "tag": "maths-88-incomplete-perimeter",
+     "execution": "The child adds only three sides, 18 + 18 + 7 = 43, and leaves one 7 cm side out. All four sides give 50 cm."
+    },
+    {
+     "optionId": "cmteo82j200dmtmmj7gc8drmx",
+     "value": "50 cm",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82j200dntmmjn1n0zgmi",
+     "value": "20 cm",
+     "isKey": false,
+     "tag": "maths-69-dropped-calculation-carry",
+     "execution": "The child adds 18 + 7 + 18 + 7 in columns: the ones make 30, so they write 0 but drop the carried 3. The tens give 1 + 1 = 2, so they write 20 cm instead of 50 cm."
+    }
+   ],
+   "why": "'(not to scale)' dropped (no drawing); sentences split to 16 words or fewer; same maths, option ids and values. Retags: 126 cm: maths-87-perimeter-area-swap -> maths-39-perimeter-vs-area-multiplying. Executions written for every wrong option."
+  },
+  {
+   "itemId": "MC05-GEOM-01",
+   "stem": {
+    "text": "A rectangle is 18 cm long and 9 cm wide. What is its perimeter?"
+   },
+   "options": [
+    {
+     "optionId": "cmteo82pl00hktmmj79vv7qce",
+     "value": "54 cm",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82pl00hltmmjqf8usait",
+     "value": "45 cm",
+     "isKey": false,
+     "tag": "maths-88-incomplete-perimeter",
+     "execution": "The child adds only three sides, 18 + 18 + 9 = 45, and leaves one 9 cm side out. All four sides give 54 cm."
+    },
+    {
+     "optionId": "cmteo82pl00hmtmmjttswdfo4",
+     "value": "162 cm²",
+     "isKey": false,
+     "tag": "maths-39-perimeter-vs-area-multiplying",
+     "execution": "The child multiplies the two sides, 18 × 9 = 162, when asked for the perimeter. That is the area of the rectangle; the perimeter is 18 + 9 + 18 + 9 = 54 cm."
+    },
+    {
+     "optionId": "cmteo82pl00hntmmj3pf8dg53",
+     "value": "44 cm",
+     "isKey": false,
+     "tag": "maths-69-dropped-calculation-carry",
+     "execution": "The child works out 36 + 18 for the two pairs of sides: the ones make 14, so they write 4 but drop the carried 1. The tens give 3 + 1 = 4, so they write 44 cm instead of 54 cm."
+    }
+   ],
+   "why": "'(not to scale)' dropped (no drawing); sentences split to 16 words or fewer; same maths, option ids and values. Retags: 162 cm²: maths-87-perimeter-area-swap -> maths-39-perimeter-vs-area-multiplying. Executions written for every wrong option."
+  },
+  {
+   "itemId": "MC05-GEOM-04",
+   "stem": {
+    "text": "A rectangle has an area of 48 cm² and a length of 8 cm. First find its width, then work out its perimeter."
+   },
+   "options": [
+    {
+     "optionId": "cmteo82q200hwtmmj4jtgzg7f",
+     "value": "28 cm",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82q200hxtmmjvxeneyam",
+     "value": "48 cm²",
+     "isKey": false,
+     "tag": "maths-39-perimeter-vs-area-multiplying",
+     "execution": "The child finds the width correctly, 48 ÷ 8 = 6 cm, then multiplies the sides, 8 × 6 = 48, when asked for the perimeter. The perimeter is 8 + 6 + 8 + 6 = 28 cm."
+    },
+    {
+     "optionId": "cmteo82q200hytmmj9z4pztps",
+     "value": "22 cm",
+     "isKey": false,
+     "tag": "maths-88-incomplete-perimeter",
+     "execution": "The child finds the width of 6 cm correctly but adds only three sides, 8 + 6 + 8 = 22. All four sides give 28 cm."
+    },
+    {
+     "optionId": "cmteo82q200hztmmjguuw6gyd",
+     "value": "6 cm",
+     "isKey": false,
+     "tag": "maths-proc-01-stopped-at-the-first-answer",
+     "execution": "The child finds the width correctly, 48 ÷ 8 = 6 cm, and gives that as the answer. They stop before working out the perimeter, 8 + 6 + 8 + 6 = 28 cm."
+    }
+   ],
+   "why": "'(not to scale)' dropped (no drawing); sentences split to 16 words or fewer; same maths, option ids and values. Retags: 48 cm²: maths-87-perimeter-area-swap -> maths-39-perimeter-vs-area-multiplying. Executions written for every wrong option."
+  },
+  {
+   "itemId": "MC05-GEOM-05",
+   "stem": {
+    "text": "An L-shape is made from a rectangle 12 cm by 8 cm. A corner 5 cm by 4 cm is cut out. What is the area of the L-shape?"
+   },
+   "options": [
+    {
+     "optionId": "cmteorein0010tm2ci5fc668y",
+     "value": "76 cm²",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteorein0011tm2cc1yvmtyp",
+     "value": "96 cm²",
+     "isKey": false,
+     "tag": "maths-90-composite-shape-area-slip",
+     "execution": "The child finds the area of the whole 12 cm by 8 cm rectangle, 96 cm², and forgets to take away the 5 cm by 4 cm cut-out. Taking away 20 cm² gives 76 cm²."
+    },
+    {
+     "optionId": "cmteorein0012tm2cfwy9opxa",
+     "value": "40 cm",
+     "isKey": false,
+     "tag": "maths-38-perimeter-vs-area-adding",
+     "execution": "The child adds the sides of the 12 cm by 8 cm rectangle, 12 + 8 + 12 + 8 = 40, when asked for area. The area is 12 × 8 − 5 × 4 = 96 − 20 = 76 cm²."
+    },
+    {
+     "optionId": "cmteorein0013tm2clxqw8exu",
+     "value": "116 cm²",
+     "isKey": false,
+     "tag": "maths-72-wrong-operation-chosen",
+     "execution": "The child finds both areas correctly, 96 cm² and 20 cm², but adds the cut-out instead of taking it away. That gives 96 + 20 = 116 instead of 96 − 20 = 76 cm²."
+    }
+   ],
+   "why": "'(not to scale)' dropped (no drawing); sentences split to 16 words or fewer; same maths, option ids and values. Retags: none. Executions written for every wrong option."
+  }
+ ]
+}
