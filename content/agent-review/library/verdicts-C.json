@@ -1,0 +1,331 @@
+{
+  "reviewer": "rev-agent-01",
+  "group": "C",
+  "screened": {
+    "en-motive-invention": 70,
+    "en-attribute-transfer": 44,
+    "en-chronology-collapse": 40,
+    "en-cause-agent-swap": 32
+  },
+  "entries": [
+    {
+      "id": "en-motive-invention",
+      "verdict": "ATTEST",
+      "reason": "Screened 70 of 70 carriers. childHint 'A reason has to be given, not guessed. Ask what the text says about why.' describes a move (check the stated reason against the guessed one) and asserts no feature of the item; it holds on every carrier whose option supplies a reason, which is all the correctly filed ones. Both sentences are within 16 words, end on a full stop, British English, actionable in a silent test. Description 'Attributes a plausible motive the text never supports.' is true of every correctly filed carrier. The carriers listed below invent something other than a motive (an action, a blame, an opinion, a condition, a vocabulary sense); that is an item filing fault, not an entry fault. Note ENG-007-LP-13 carries the entry with no execution recorded.",
+      "assertionClauses": [
+        {
+          "clause": "Ask what the text says about why.",
+          "falseOn": [],
+          "note": "A move, not a feature claim. It presupposes the option supplies a reason, which fails only on the misfiled carriers below."
+        }
+      ],
+      "transforms": [],
+      "misfiledCarriers": [
+        {
+          "itemId": "ENG-005-BB-07",
+          "option": "Unhitch Beauty and lead him home on foot.",
+          "why": "Invents an action, not a motive (its own execution says 'Invents an action'); closer to en-plausible-not-stated."
+        },
+        {
+          "itemId": "ENG-005-BB-11",
+          "option": "That the gatekeeper was to blame for the broken bridge.",
+          "why": "Invents a conclusion about blame, not anyone's motive."
+        },
+        {
+          "itemId": "ENG-005-BB-04",
+          "option": "A trick played to make him go on.",
+          "why": "Vocabulary item; the pull is the lure sense of 'bait', a sense error rather than an invented motive."
+        },
+        {
+          "itemId": "ENG-006-TM-11",
+          "option": "He is pleased, and glad they all helped so much at the end.",
+          "why": "An invented feeling the text contradicts at lines 37 and 52; contradicted-by-the-text, not a motive."
+        },
+        {
+          "itemId": "ENG-008-RC-04",
+          "option": "She thinks the garden will turn out to be a disappointment.",
+          "why": "Invents an opinion, not a reason for anything."
+        },
+        {
+          "itemId": "ENG-015-CC-12",
+          "option": "He fears the thing, so he sends for help to sit up.",
+          "why": "The fear is not the error; the invented act (sending for help) is."
+        },
+        {
+          "itemId": "ENG-013-TI-12",
+          "option": "He hears the plot, so he goes to warn the honest men.",
+          "why": "Invents an action the passage never has; the motive is incidental."
+        },
+        {
+          "itemId": "ENG-017-CR-12",
+          "option": "She was staying in the house, but she wrote it all down after.",
+          "why": "Invents an action (writing it down), not a motive."
+        },
+        {
+          "itemId": "ENG-025-LW-09",
+          "option": "Until Laurie has gone off home and left them alone.",
+          "why": "Invents a condition in Meg's words, not a motive."
+        }
+      ]
+    },
+    {
+      "id": "en-attribute-transfer",
+      "verdict": "REFUSE",
+      "reason": "R586's flagged clause IS STILL THERE: the exported childHint reads 'Two people are being described. Check which one each detail belongs to.' Screened 44 of 44 carriers (R586 cited 43). On my reading the clause is false on 20 of 44: the detail moves between things (boat, house, flame, knocker, sand, hat, time), between a person and a group, among three people, or within one person at the wrong value. This does not match R586's 26; the difference is in borderline calls I counted as TRUE: WIW-17 (Mole and Rat, animal characters), LW-05 (Meg and Beth swapped), SM-12 (Nan and him). The second sentence describes a move and survives every carrier once it covers things as well as people. The description's 'one character's described attribute' is likewise false where the holder is an object and the 'wrong value' clause does not cover it. Residual: on ENG-004-AGG-04 (boy vs girl, one person) neither the old nor the proposed hint speaks to the wrong-value half.",
+      "assertionClauses": [
+        {
+          "clause": "Two people are being described.",
+          "falseOn": [
+            "ENG-001-WIW-01",
+            "ENG-001-WIW-02",
+            "ENG-001-WIW-20",
+            "ENG-002-pp-02",
+            "ENG-004-AGG-04",
+            "ENG-005-BB-10",
+            "ENG-005-BB-13",
+            "ENG-006-TM-01",
+            "ENG-006-TM-07",
+            "ENG-008-RC-05",
+            "ENG-009-SM-04",
+            "ENG-015-CC-01",
+            "ENG-015-CC-10",
+            "ENG-017-CR-05",
+            "ENG-018-RB-06",
+            "ENG-018-RB-10",
+            "ENG-019-BV-05",
+            "ENG-024-BF-07",
+            "ENG-025-LW-01",
+            "ENG-027-RR-11"
+          ],
+          "count": "20 of 44"
+        },
+        {
+          "clause": "(description) Assigns one character's described attribute to another",
+          "falseOn": [
+            "ENG-001-WIW-01",
+            "ENG-001-WIW-02",
+            "ENG-001-WIW-20",
+            "ENG-002-pp-02",
+            "ENG-005-BB-10",
+            "ENG-006-TM-07",
+            "ENG-015-CC-01",
+            "ENG-015-CC-10",
+            "ENG-018-RB-06",
+            "ENG-018-RB-10",
+            "ENG-019-BV-05"
+          ],
+          "count": "11 of 44 (holder is an object or abstraction, not covered by the 'wrong value' clause)"
+        }
+      ],
+      "transforms": [
+        {
+          "field": "childHint",
+          "from": "Two people are being described. Check which one each detail belongs to.",
+          "to": "Check who or what each detail belongs to in the text."
+        },
+        {
+          "field": "description",
+          "from": "one character's described attribute to another",
+          "to": "a detail the text gives to one character or thing to another"
+        }
+      ],
+      "misfiledCarriers": [
+        {
+          "itemId": "ENG-001-WIW-17",
+          "option": "Dark and dirty with earth.",
+          "why": "Vocabulary item; the pull is the burial sense of 'grave' (dominant sense), not earth carried from the Mole's fur."
+        },
+        {
+          "itemId": "ENG-001-WIW-20",
+          "option": "The rope that held the boat to the bank.",
+          "why": "A part-of versus attached-to vocabulary error; no attribute changes holder. Doubtful rather than clear."
+        },
+        {
+          "itemId": "ENG-002-pp-02",
+          "option": "A ride on Mr Bennet's black horse.",
+          "why": "A thing seen turned into a wish; no detail moves between holders. Closer to en-plausible-not-stated."
+        },
+        {
+          "itemId": "ENG-005-BB-13",
+          "option": "Make any sound.",
+          "why": "Vocabulary neighbouring-sense error for 'stir'; no transfer, and no execution recorded."
+        },
+        {
+          "itemId": "ENG-006-TM-01",
+          "option": "A crowd of people arriving at once.",
+          "why": "Vocabulary sense error for 'commotion'; no detail belongs to anyone."
+        },
+        {
+          "itemId": "ENG-006-TM-07",
+          "option": "To show how long the job took to finish.",
+          "why": "Wrong purpose for a technique (count of people read as time); not an attribute moved between holders."
+        },
+        {
+          "itemId": "ENG-018-RB-06",
+          "option": "Thinking hard about the errands ahead.",
+          "why": "Vocabulary sense error for 'oblivion'; the errands are not anyone's attribute."
+        },
+        {
+          "itemId": "ENG-005-BB-10",
+          "option": "To show Beauty was growing tired at the end of the day.",
+          "why": "Doubtful: a technique misread; 'gives the horse the evening's quality' is a stretch of the definition."
+        }
+      ]
+    },
+    {
+      "id": "en-chronology-collapse",
+      "verdict": "REFUSE",
+      "reason": "Screened 40 of 40 carriers. childHint 'Check what happened first, and what the question asks for.' is a move, asserts no feature, is within 16 words and actionable: it passes both passes on every correctly filed carrier. The DESCRIPTION fails pass 1: 'picks a cause that happens LATER ... than the effect being asked about' is false on 27 of 40, whose stems do not ask for a cause at all (retrieval of what or where, or two events in reversed order); ENG-002-pp-06 also takes an EARLIER report, not a later one. 'The two events are both real' is false on the misfiled carriers. The closing sentence 'Currently split across ...' is a proposal-time note that is now stale: the entry exists and carries 40 items.",
+      "assertionClauses": [
+        {
+          "clause": "(description) The child picks a cause that happens LATER in the passage than the effect being asked about.",
+          "falseOn": [
+            "ENG-001-WIW-06",
+            "ENG-001-WIW-15",
+            "ENG-002-pp-06",
+            "ENG-005-BB-03",
+            "ENG-005-BB-05",
+            "ENG-006-TM-02",
+            "ENG-006-TM-04",
+            "ENG-006-TM-09",
+            "ENG-006-TM-10",
+            "ENG-007-LP-04",
+            "ENG-007-LP-09",
+            "ENG-007-LP-15",
+            "ENG-010-JE-02",
+            "ENG-014-TS-02",
+            "ENG-014-TS-12",
+            "ENG-015-CC-04",
+            "ENG-015-CC-06",
+            "ENG-016-HB-02",
+            "ENG-017-CR-03",
+            "ENG-017-CR-04",
+            "ENG-018-RB-02",
+            "ENG-018-RB-07",
+            "ENG-019-BV-04",
+            "ENG-019-BV-10",
+            "ENG-020-HD-11",
+            "ENG-021-ED-02",
+            "ENG-023-RT-02"
+          ],
+          "count": "27 of 40 (stem does not ask for a cause); ENG-002-pp-06 is also earlier, not later"
+        },
+        {
+          "clause": "(description) The two events are both real",
+          "falseOn": [
+            "ENG-019-BV-02",
+            "ENG-023-RT-02",
+            "ENG-010-JE-02",
+            "ENG-020-HD-06",
+            "ENG-007-LP-04",
+            "ENG-007-LP-09"
+          ],
+          "count": "6 of 40"
+        },
+        {
+          "clause": "(description) Currently split across en-cause-agent-swap and en-wrong-scope-retrieval, neither of which names the time error.",
+          "falseOn": [],
+          "note": "Stale history about the store, not about carriers; no longer true now the entry is active."
+        },
+        {
+          "clause": "(childHint) Check what happened first",
+          "falseOn": [],
+          "note": "A move; holds on all correctly filed carriers."
+        }
+      ],
+      "transforms": [
+        {
+          "field": "description",
+          "from": "The child picks a cause that happens LATER in the passage than the effect being asked about.",
+          "to": "The child picks something from the wrong point in the passage's order: an event from later (or earlier) than the moment asked about, a cause that comes after its effect, or two events in reversed order."
+        },
+        {
+          "field": "description",
+          "from": " Currently split across en-cause-agent-swap and en-wrong-scope-retrieval, neither of which names the time error.",
+          "to": ""
+        }
+      ],
+      "misfiledCarriers": [
+        {
+          "itemId": "ENG-007-LP-04",
+          "option": "They are sorted again at the school on Friday.",
+          "why": "Friday is the collection day at line 8; the option invents a sorting, which is a scope error, not an order error."
+        },
+        {
+          "itemId": "ENG-007-LP-09",
+          "option": "Miss Bhatt wants it done before Friday.",
+          "why": "Moves the Friday date onto a different task; attribute transfer, not chronology."
+        },
+        {
+          "itemId": "ENG-019-BV-02",
+          "option": "Mark ran for the rod while the fish waited.",
+          "why": "Its own execution says nobody runs anywhere; contradicted-by-the-text, not an order error."
+        },
+        {
+          "itemId": "ENG-023-RT-02",
+          "option": "Nag was afraid of him on the day the flood washed him up.",
+          "why": "Line 69 says he had never met a live cobra; contradicted, not two real events reordered."
+        },
+        {
+          "itemId": "ENG-010-JE-02",
+          "option": "The brook froze over while she sat there.",
+          "why": "Doubtful: invents a process (freezing) where line 3 has a state; closer to plausible-not-stated."
+        },
+        {
+          "itemId": "ENG-007-LP-15",
+          "option": "Folded it and gave it to Miss Bhatt.",
+          "why": "No execution recorded; filing cannot be confirmed from the packet."
+        }
+      ]
+    },
+    {
+      "id": "en-cause-agent-swap",
+      "verdict": "REFUSE",
+      "reason": "Screened 32 of 32 carriers. The description 'Attributes the right event to the wrong cause or character' has two halves; the childHint 'Ask what exactly made this happen.' serves only the cause half. On 12 of 32 carriers the question is not about what made something happen: the option gives an act, a word or a seeing to the wrong character (who did it, who said it, who was sent). There 'what made this happen' presupposes a cause the item does not ask for and points the child at the wrong check. 'Re-read the moment step by step.' is a move and survives all carriers. Sentences are within 16 words and end on full stops.",
+      "assertionClauses": [
+        {
+          "clause": "Ask what exactly made this happen.",
+          "falseOn": [
+            "ENG-002-pp-16",
+            "ENG-004-AGG-04",
+            "ENG-004-AGG-08",
+            "ENG-006-TM-02",
+            "ENG-006-TM-03",
+            "ENG-007-LP-05",
+            "ENG-007-LP-07",
+            "ENG-007-LP-12",
+            "ENG-008-RC-10",
+            "ENG-008-RC-12",
+            "ENG-011-CV-06",
+            "ENG-019-BV-10"
+          ],
+          "count": "12 of 32 (no cause asked for; the error is the wrong character)"
+        }
+      ],
+      "transforms": [
+        {
+          "field": "childHint",
+          "from": "Ask what exactly made this happen.",
+          "to": "Ask who did this, or what caused it, in the text."
+        }
+      ],
+      "misfiledCarriers": [
+        {
+          "itemId": "ENG-002-pp-15",
+          "option": "Mr Darcy had refused to dance with her.",
+          "why": "Its own execution says the refusal comes after she is sitting and cause and effect are swapped in time; that is en-chronology-collapse."
+        },
+        {
+          "itemId": "ENG-007-LP-07",
+          "option": "Put it in the Friday box with the jumper.",
+          "why": "The paper is given the jumper's destination; no cause or character is swapped (attribute transfer)."
+        },
+        {
+          "itemId": "ENG-007-LP-12",
+          "option": "We get no feelings from him at all, only what his friend Ilya says.",
+          "why": "Contradicted by the text (Ilya never talks about Reuben); not a cause or agent swap."
+        }
+      ]
+    }
+  ]
+}

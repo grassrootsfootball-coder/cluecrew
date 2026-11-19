@@ -1,0 +1,38 @@
+{
+  "door": "vr-06",
+  "reviewer": "rev-agent-01",
+  "changes": [
+    {
+      "ref": "rebuild:bank-vr-06-missing-word-15",
+      "verdict": "ATTEST",
+      "reason": "The named fault is fixed: 'poorly' became 'ill', and the precheck passes. Only the sentence changed; prompt, key and the three options with their tags and executions are identical to the packet (diffed). DOC+TOR = DOCTOR is still correct for 'at the surgery'."
+    },
+    {
+      "ref": "rebuild:bank-vr-06-missing-word-17",
+      "verdict": "ATTEST",
+      "reason": "The named fault is fixed: 'You must have' became 'Drivers need', and the precheck passes. Only the sentence changed; prompt, key and options are identical to the packet (diffed). PER+MIT = PERMIT is still correct for parking on the road."
+    },
+    {
+      "ref": "rebuild:bank-vr-06-missing-word-40",
+      "verdict": "ATTEST",
+      "reason": "The named fault is fixed: 'weak' became 'tired', and the precheck passes. Only the sentence changed; prompt, key and options are identical to the packet (diffed). FEE+BLE = FEEBLE is still correct for 'could hardly stand'."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "bank-vr-06-missing-word-15",
+      "verdict": "SIGN",
+      "reason": "Read as rebuilt: 'When I felt ill, Mum took me to see the ___TOR at the surgery.' DOCTOR is the only fit. FACTOR and EDITOR are real words that make no sense there, so both executions are true. No pattern gives the key away, and every word is suitable for the age."
+    },
+    {
+      "itemId": "bank-vr-06-missing-word-17",
+      "verdict": "SIGN",
+      "reason": "Read as rebuilt: 'Drivers need a special ___MIT to park a car on this busy road.' PERMIT is the only fit. SUBMIT and SUMMIT are real words that do not fit, so both executions are true. No pattern gives the key away, and every word is suitable for the age."
+    },
+    {
+      "itemId": "bank-vr-06-missing-word-40",
+      "verdict": "SIGN",
+      "reason": "Read as rebuilt: 'After being ill in bed for a week, Grandad felt tired and ___BLE and could hardly stand.' FEEBLE is the only fit. MARBLE and TREBLE are real words that do not fit, so both executions are true. No pattern gives the key away, and FEEBLE is known at 9-11."
+    }
+  ]
+}

@@ -1,0 +1,667 @@
+{
+ "entry": {
+  "id": "en-minimal-pair-skim",
+  "status": "ACTIVE",
+  "district": "ENGLISH",
+  "category": null,
+  "description": "Matches an option on gist when two options differ by a single word.",
+  "childHint": "Two answers can look almost the same. Find what differs and check it against the text.",
+  "approvedBy": "human:staff-reviewer@cluecrew.test",
+  "approvalMethod": "written review 2026-08-02",
+  "approvalNote": "Cleared on the printed review pack; returned marked up.",
+  "textProvenance": {
+   "note": "Ruled when written; absent from the store until now (R403/R410).",
+   "state": "RECORDED",
+   "appliedOn": "2026-08-22",
+   "authority": "annie-seventyseventh-return.md, read from the file, sha256 1c7070f52f67c5d9664f26f1fdefa17323ff1b9111a84ca7c4d093c8c48f79a7",
+   "approvedByPerson": "Annie"
+  }
+ },
+ "carrierCount": 16,
+ "carriers": [
+  {
+   "itemId": "ENG-001-WIW-17",
+   "status": "LIVE",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Read line 49: 'A grave round face'. What does 'grave' mean here?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 17
+   },
+   "key": "Serious and calm.",
+   "options": [
+    {
+     "value": "Serious and calm.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A place where someone is buried.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Dark and dirty with earth.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Very sad and upset.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Round and rather fat.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "carriesThisEntry": true,
+     "execution": "'Grave' is skimmed as a near-neighbour of 'round', which is the very next word on the line."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-21",
+   "status": "LIVE",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 66 to 67. What does the last thing the Mole says show about his day?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 21
+   },
+   "key": "The whole day had been full of things he had never done before.",
+   "options": [
+    {
+     "value": "He was hoping the Rat would let him hold the oars.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He was still frightened of the water.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The whole day had been full of things he had never done before.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He was already wishing he was back in his own house.",
+     "isKey": false,
+     "tag": "en-contradicted-by-the-text",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He had been in boats before, but never one as fine as this.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "carriesThisEntry": true,
+     "execution": "Line 67 reads 'never been in a boat before in all my life'. This keeps the sentence's shape and its 'never', moves the never onto the boat's fineness, and so reverses what line 67 says about him."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-06",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Read lines 17 to 23. Who actually came into the assembly-room with Mr Bingley?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 6
+   },
+   "key": "His two sisters, the husband of the elder sister, and one other young man.",
+   "options": [
+    {
+     "value": "His five sisters and a cousin.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Twelve ladies and seven gentlemen.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "His two sisters, Mr Hurst and Mr Bennet.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "carriesThisEntry": true,
+     "execution": "One name changed: Mr Bennet for the young man. Everything else matches line 22."
+    },
+    {
+     "value": "His two sisters and both their husbands.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "His two sisters, the husband of the elder sister, and one other young man.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-08",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Read lines 24 to 34. Line 24 uses 'countenance' about Mr Bingley and line 34 about Mr Darcy. What does it mean both times?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 8
+   },
+   "key": "A person's face, and the look on it.",
+   "options": [
+    {
+     "value": "A person's face, and the look on it.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The way a person speaks to other people.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Letting something happen, or agreeing to it.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The good name a person's family has in the county.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A count of how many people are in a room.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "carriesThisEntry": true,
+     "execution": "'Countenance' is skimmed for the word 'count' inside it."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-12",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Read lines 39 to 41. How many dances did Mr Darcy dance, and who did he dance with?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 12
+   },
+   "key": "Two: one with Mrs Hurst and one with Miss Bingley.",
+   "options": [
+    {
+     "value": "Every dance of the evening.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Two: one with Mrs Hurst and one with Miss Bingley.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Two: one with Miss Bingley and one with Elizabeth.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "carriesThisEntry": true,
+     "execution": "One name changed: Elizabeth for Mrs Hurst. The count and the shape of line 40 are kept."
+    },
+    {
+     "value": "None at all.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Three: with Mrs Hurst, Miss Bingley and Miss Bennet.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-19",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Read lines 57 to 59. Mr Bingley cries: 'I would not be so fastidious as you are.' What does 'fastidious' mean here?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 19
+   },
+   "key": "Very hard to please.",
+   "options": [
+    {
+     "value": "Very hard to please.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Very quick and in a hurry.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "carriesThisEntry": true,
+     "execution": "'Fastidious' is skimmed as though it were 'fast'."
+    },
+    {
+     "value": "Very shy with people you do not know.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Very tidy and neat.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Very rude to other people.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-004-AGG-01",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "What did Matthew do when he first saw the girl? (lines 4 to 6)",
+    "passageRef": "stream-a-06-anne-green-gables",
+    "orderAnchor": 1
+   },
+   "key": "He slipped past her without looking at her.",
+   "options": [
+    {
+     "value": "He slipped past her without looking at her.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He noticed her red hair and freckled face.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He asked her who she was waiting for.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He slipped past her, glancing at her as he went.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "carriesThisEntry": true,
+     "execution": "Differs from the key by one element: line 5 says without looking at her."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-004-AGG-09",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "What does the girl do once she decides Matthew is coming to her? (lines 47 to 49)",
+    "passageRef": "stream-a-06-anne-green-gables",
+    "orderAnchor": 9
+   },
+   "key": "She stands up, takes her bag and holds out her hand.",
+   "options": [
+    {
+     "value": "She stands up, takes her bag and holds out her hand.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She stays sitting and watches him come closer.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She stands up and holds out both her hands.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "carriesThisEntry": true,
+     "execution": "Differs by one detail: line 48 puts the bag in one hand and only the other is held out."
+    },
+    {
+     "value": "She walks along the platform to meet him.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-004-AGG-12",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "What does Matthew ask the girl to do at the end? (lines 64 and 65)",
+    "passageRef": "stream-a-06-anne-green-gables",
+    "orderAnchor": 12
+   },
+   "key": "Come along with him, and hand him her bag.",
+   "options": [
+    {
+     "value": "Go and sit in the ladies' waiting room.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Come along with him, and carry her own bag.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "carriesThisEntry": true,
+     "execution": "Differs by one detail: line 65 asks her to give him the bag."
+    },
+    {
+     "value": "Tell him her name before they set off.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Come along with him, and hand him her bag.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-005-BB-01",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Why did Beauty like going in the dog-cart? (lines 2 and 3)",
+    "passageRef": "stream-a-04-black-beauty",
+    "orderAnchor": 2
+   },
+   "key": "It was light, and its high wheels ran along pleasantly.",
+   "options": [
+    {
+     "value": "It was light, and its high wheels ran along pleasantly.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "It was the only cart he was strong enough to pull.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "It meant John came with him instead of the master.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "It was slow, so the journey felt easy.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "carriesThisEntry": true,
+     "execution": "Differs by one word: line 3 says light, not slow."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-005-BB-05",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "What came down across the road in front of them? (lines 22 to 24)",
+    "passageRef": "stream-a-04-black-beauty",
+    "orderAnchor": 22
+   },
+   "key": "An oak tree, torn up by the roots.",
+   "options": [
+    {
+     "value": "An oak tree, torn up by the roots.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A great branch from one of the swaying trees.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "carriesThisEntry": true,
+     "execution": "Line 20 names a branch as John's worry; line 23 says a whole oak came down."
+    },
+    {
+     "value": "Part of the wooden bridge, carried off by the flood.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A shower of dry leaves blown across the road.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-006-TM-03",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "What does Uncle Podger send Jim to Mr Goggles for? (lines 13 and 14)",
+    "passageRef": "stream-a-10-three-men-boat",
+    "orderAnchor": 13
+   },
+   "key": "To borrow his spirit-level.",
+   "options": [
+    {
+     "value": "To borrow his step-ladder.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "carriesThisEntry": true,
+     "execution": "The step-ladder is in the same speech at line 12, but Uncle Podger wants that himself."
+    },
+    {
+     "value": "To tell him that Pa's leg is better.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To borrow his spirit-level.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To fetch a bit of picture-cord.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-006-TM-09",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "What does Uncle Podger fall onto when the string slips? (lines 43 to 45)",
+    "passageRef": "stream-a-10-three-men-boat",
+    "orderAnchor": 43
+   },
+   "key": "The piano.",
+   "options": [
+    {
+     "value": "The piano.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The kitchen-chair he had been standing on.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "carriesThisEntry": true,
+     "execution": "The chair is real at line 42, but line 44 says he slides down onto the piano."
+    },
+    {
+     "value": "The charwoman's corns.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Somebody's toes, with a yell.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-007-LP-01",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "What was the bin bag for? (lines 7 to 9)",
+    "passageRef": "stream-b-04",
+    "orderAnchor": 1
+   },
+   "key": "Anything with the sole coming off it.",
+   "options": [
+    {
+     "value": "Anything with the sole coming off it.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Anything with no name in it.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "carriesThisEntry": true,
+     "execution": "Line 8 gives unnamed things to the second box, not the bag."
+    },
+    {
+     "value": "Anything going to the charity collection.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Anything that smelled of chlorine.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-009-SM-02",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Read lines 4 and 5. What do they say about Saltmere and this walk?",
+    "passageRef": "stream-b-02",
+    "orderAnchor": 4
+   },
+   "key": "He got as far as the caravan park, twice.",
+   "options": [
+    {
+     "value": "He got as far as Saltmere, twice.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "carriesThisEntry": true,
+     "execution": "One word out: line 5 says the caravan park, which is where the bus stops."
+    },
+    {
+     "value": "He got as far as the caravan park, twice.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He had never set out for Saltmere before.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He walked out to Saltmere about four years ago.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-010-JE-01",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 1 and 2. Where does Jane sit down?",
+    "passageRef": "stream-a-11-jane-eyre",
+    "orderAnchor": 1
+   },
+   "key": "On a stile that leads into a field.",
+   "options": [
+    {
+     "value": "On a stile that leads into a field.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "In the field on the other side of the stile.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "On a low wall beside the frozen causeway.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "On a stile that leads into a lane.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "carriesThisEntry": true,
+     "execution": "One word out: line 2 says the stile led into a field."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,675 @@
+{
+ "entry": {
+  "id": "en-figurative-taken-literally",
+  "status": "ACTIVE",
+  "district": "ENGLISH",
+  "category": null,
+  "description": "Reads similes and idioms as literal events.",
+  "childHint": "Figures of speech are not facts. Ask what the words are really saying.",
+  "approvedBy": "human:staff-reviewer@cluecrew.test",
+  "approvalMethod": "written review 2026-08-02",
+  "approvalNote": "Cleared on the printed review pack; returned marked up.",
+  "textProvenance": {
+   "note": "Ruled when written; absent from the store until now (R403/R410).",
+   "state": "RECORDED",
+   "appliedOn": "2026-08-22",
+   "authority": "annie-seventyseventh-return.md, read from the file, sha256 1c7070f52f67c5d9664f26f1fdefa17323ff1b9111a84ca7c4d093c8c48f79a7",
+   "approvedByPerson": "Annie"
+  }
+ },
+ "carrierCount": 16,
+ "carriers": [
+  {
+   "itemId": "ENG-001-WIW-06",
+   "status": "LIVE",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Read lines 14 to 15. Where did the Mole find himself when his snout came out into the sunlight?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 6
+   },
+   "key": "Rolling in the warm grass of a great meadow.",
+   "options": [
+    {
+     "value": "On the bank of the river.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "At the gap in the hedge.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "In a boat painted blue and white.",
+     "isKey": false,
+     "tag": "en-evidence-vividness-bias",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Rolling in the warm grass of a great meadow.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "On a gravelled carriage-drive.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "carriesThisEntry": true,
+     "execution": "Line 10 uses the carriage-drive as a comparison for his tunnel. This takes the comparison as the place he arrives."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-08",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Read line 18. What does 'the carol of happy birds' mean?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 8
+   },
+   "key": "The singing of the birds.",
+   "options": [
+    {
+     "value": "A Christmas song the birds had learned.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The singing of the birds.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A church bell ringing far away.",
+     "isKey": false,
+     "tag": "en-vocab-not-this-word",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The sound of the river chattering.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A shout from someone in the meadow.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "carriesThisEntry": true,
+     "execution": "Line 19 says the singing fell 'almost like a shout'. This takes the comparison as the thing itself."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-09",
+   "status": "LIVE",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Read lines 22 to 23. What did the elderly rabbit at the gap want from the Mole?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 9
+   },
+   "key": "Sixpence for using the private road.",
+   "options": [
+    {
+     "value": "Sixpence for using the private road.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Help with his own spring-cleaning.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A ride across the river in a boat.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To be let past the hedge himself.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Some onion sauce for his dinner.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "carriesThisEntry": true,
+     "execution": "'Onion-sauce!' at line 25 is the Mole's jeer on the way past, taken as an order for the rabbit's dinner."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-13",
+   "status": "LIVE",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "The writer calls the river an animal that chases, chuckles and grips things. Read lines 29 to 33. Why does he do this?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 13
+   },
+   "key": "To make the river seem alive, playful and always moving.",
+   "options": [
+    {
+     "value": "To make the river seem alive, playful and always moving.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Because a real animal was swimming in the water.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "carriesThisEntry": true,
+     "execution": "Takes the animal comparison at line 30 as a real animal swimming in the water."
+    },
+    {
+     "value": "Because the river was dangerous and might grab the Mole.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Because the Water Rat lived in the bank beside it.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Because the Mole thought a big animal was in front of him.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-14",
+   "status": "LIVE",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 33 to 36. The Mole 'trotted as one trots, when very small, by the side of a man who holds one spell-bound by exciting stories'. What does this tell you about the Mole?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 14
+   },
+   "key": "The river held the Mole's interest so much that he kept following it.",
+   "options": [
+    {
+     "value": "The Mole could not keep up with the river.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The Mole was much younger than the Water Rat.",
+     "isKey": false,
+     "tag": "en-comparison-vehicle-misread",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The Mole was looking for a man to help him.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "carriesThisEntry": true,
+     "execution": "Takes the man in the comparison at line 35 as a man the Mole is actually looking for."
+    },
+    {
+     "value": "The river held the Mole's interest so much that he kept following it.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The Mole was tired and wanted to go home.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-15",
+   "status": "LIVE",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Read lines 43 to 45. What did the Mole first notice in the dark hole in the bank?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 15
+   },
+   "key": "Something bright and small that twinkled.",
+   "options": [
+    {
+     "value": "A brown little face with whiskers.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Something bright and small that twinkled.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A tiny star shining in the hole.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "carriesThisEntry": true,
+     "execution": "Line 44 says 'like a tiny star'. This takes the comparison as the thing."
+    },
+    {
+     "value": "A glow-worm.",
+     "isKey": false,
+     "tag": "en-negation-dropped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Small neat ears and thick silky hair.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-22",
+   "status": "LIVE",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "The animals act like people, but we never forget they are animals. How does the writer do this?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "answerShape": "two-halved-contrast-given-what-they-have-and-what-they-keep",
+    "orderAnchor": 22,
+    "techniqueKey": "human-manners-on-animal-bodies-kept-together"
+   },
+   "key": "He gives them houses, money and boats, but keeps their fur, paws and whiskers.",
+   "options": [
+    {
+     "value": "He keeps the animals quiet, still and dull, but lets the river chatter, gurgle and laugh.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He gives them human names, and leaves the animal ones behind.",
+     "isKey": false,
+     "tag": "en-technique-device-confusion",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He tells the reader, plainly and often, that these animals are really people.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "carriesThisEntry": true,
+     "execution": "Takes the human behaviour as the narrator telling the reader they are people. He never says it anywhere, plainly or otherwise."
+    },
+    {
+     "value": "He gives them houses, money and boats, but keeps their fur, paws and whiskers.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He makes every animal speak, move and think in exactly the same way.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-004-AGG-07",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Read lines 29 to 31. Line 30 says the task was harder than 'bearding a lion in its den'. Why does the writer compare it to that?",
+    "passageRef": "stream-a-06-anne-green-gables",
+    "orderAnchor": 7
+   },
+   "key": "To show how frightening an everyday task felt to shy Matthew.",
+   "options": [
+    {
+     "value": "To show that Matthew is bold, like a lion hunter.",
+     "isKey": false,
+     "tag": "en-comparison-vehicle-misread",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To show that Matthew felt sad about the mistake.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To show how frightening an everyday task felt to shy Matthew.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To show that Matthew had once faced real danger.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "carriesThisEntry": true,
+     "execution": "Reads the comparison as something that happened rather than a picture of a feeling."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-008-RC-10",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 64 to 70. What do these lines show about the three children?",
+    "passageRef": "stream-a-02-railway-children",
+    "orderAnchor": 64
+   },
+   "key": "All three reached the same idea without saying anything.",
+   "options": [
+    {
+     "value": "They wrote the question and the answer in a book.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "carriesThisEntry": true,
+     "execution": "Lines 67 and 68 say the thought was LIKE a school book, so nothing was written."
+    },
+    {
+     "value": "All three reached the same idea without saying anything.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They had agreed on the plan earlier in the day.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Mother suggested that they go down to the railway.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-008-RC-11",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 26 to 30, then lines 71 to 73. Why could the morning search never find the garden?",
+    "passageRef": "stream-a-02-railway-children",
+    "orderAnchor": 71
+   },
+   "key": "They searched round the house, but the garden lay behind the stables.",
+   "options": [
+    {
+     "value": "The house stood in a field, and no garden lay near it.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They had seen no wall at all, but only imagined it in the dark.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They searched round the house, but the garden lay behind the stables.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The garden had hidden itself away, and the high wall kept it out of sight.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "carriesThisEntry": true,
+     "execution": "Line 72's hidden itself is a way of speaking, not something the garden did."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-009-SM-05",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Read lines 18 to 23. What lies in the mud below the wall?",
+    "passageRef": "stream-b-02",
+    "orderAnchor": 18
+   },
+   "key": "A boat with its ribs showing, and a gull on it.",
+   "options": [
+    {
+     "value": "A boat with its ribs showing, and a gull on it.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A half mile of black posts leaning into the channel.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "What is left of an old bridge across the channel.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "carriesThisEntry": true,
+     "execution": "Line 22 says the posts are LIKE the last of a bridge; no bridge is stated."
+    },
+    {
+     "value": "The remains of a row of four cottages.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-011-CV-11",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 47 to 49. What does Mr Otis's answer show?",
+    "passageRef": "stream-a-07-canterville-ghost",
+    "orderAnchor": 11
+   },
+   "key": "He treats her fainting as a cost to be charged for.",
+   "options": [
+    {
+     "value": "He is worried about the old woman's health.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He wants her to pay for something that she has broken.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "carriesThisEntry": true,
+     "execution": "Line 48 says like breakages, so the breakages are a comparison, not a fact."
+    },
+    {
+     "value": "He treats her fainting as a cost to be charged for.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He means to send for a doctor from the nearby village.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-015-CC-10",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 68 to 70. What did the flame do as the ghost came in?",
+    "passageRef": "stream-a-08-christmas-carol",
+    "orderAnchor": 68
+   },
+   "key": "It leaped up and then fell back again.",
+   "options": [
+    {
+     "value": "It came on through the heavy door.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "It leaped up and then fell back again.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "It called out that it knew Marley.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "carriesThisEntry": true,
+     "execution": "Line 70 says as though it cried, so the flame is given a voice it does not have."
+    },
+    {
+     "value": "Scrooge changed colour as the thing passed.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-016-HB-06",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 30 to 34. What was on the top of the rise?",
+    "passageRef": "stream-a-12-hound-baskervilles",
+    "orderAnchor": 30
+   },
+   "key": "A soldier on a horse watching the road.",
+   "options": [
+    {
+     "value": "A steep curve of heath-clad land.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A soldier on a horse watching the road.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A stone statue set up on a pedestal.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "carriesThisEntry": true,
+     "execution": "Line 32 says hard and clear LIKE a statue, so the statue is a comparison."
+    },
+    {
+     "value": "A stone marker left there by the family.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-020-HD-09",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Look at lines 37 and 38. What does \"suppress\" on line 38 mean here?",
+    "passageRef": "stream-a-19-heidi",
+    "orderAnchor": 37
+   },
+   "key": "To hold back a thing that is coming out.",
+   "options": [
+    {
+     "value": "To put down a rising by force.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To hold back a thing that is coming out.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To sit quietly at the table.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To press down hard on a thing.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "carriesThisEntry": true,
+     "execution": "Built out of press, which sits inside the word."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-021-ED-11",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Look at lines 76 to 78. What does \"scruples\" on line 77 mean here?",
+    "passageRef": "stream-a-09-eighty-days",
+    "orderAnchor": 76
+   },
+   "key": "Uneasy feelings about whether a thing is right.",
+   "options": [
+    {
+     "value": "Very small weights used by a chemist.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The value of the money they have staked.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Careful scraping away at a surface.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "carriesThisEntry": true,
+     "execution": "Built from the scrape the word sounds like."
+    },
+    {
+     "value": "Uneasy feelings about whether a thing is right.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  }
+ ]
+}

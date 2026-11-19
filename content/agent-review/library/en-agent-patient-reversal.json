@@ -1,0 +1,963 @@
+{
+ "entry": {
+  "id": "en-agent-patient-reversal",
+  "status": "ACTIVE",
+  "district": "ENGLISH",
+  "category": null,
+  "description": "Swaps who did or thought something in reported speech.",
+  "childHint": "Ask who is doing it and who it is being done to.",
+  "approvedBy": "human:staff-reviewer@cluecrew.test",
+  "approvalMethod": "written review 2026-08-02",
+  "approvalNote": "Cleared on the printed review pack; returned marked up.",
+  "textProvenance": {
+   "note": "Ruled when written; absent from the store until now (R403/R410).",
+   "state": "RECORDED",
+   "appliedOn": "2026-08-22",
+   "authority": "annie-seventyseventh-return.md, read from the file, sha256 1c7070f52f67c5d9664f26f1fdefa17323ff1b9111a84ca7c4d093c8c48f79a7",
+   "approvedByPerson": "Annie"
+  }
+ },
+ "carrierCount": 24,
+ "carriers": [
+  {
+   "itemId": "ENG-001-WIW-09",
+   "status": "LIVE",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Read lines 22 to 23. What did the elderly rabbit at the gap want from the Mole?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 9
+   },
+   "key": "Sixpence for using the private road.",
+   "options": [
+    {
+     "value": "Sixpence for using the private road.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Help with his own spring-cleaning.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A ride across the river in a boat.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To be let past the hedge himself.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": true,
+     "execution": "It reverses who is passing whom: the Mole is going by, and the rabbit is the one charging for it."
+    },
+    {
+     "value": "Some onion sauce for his dinner.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-02",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Mr Bingley hoped for something on this visit that he did not get. Read lines 5 to 6. What was it?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 2
+   },
+   "key": "A look at Mr Bennet's daughters.",
+   "options": [
+    {
+     "value": "A book from Mr Bennet's library.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A look at Mr Bennet's daughters.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A chance to invite the Bennets to dinner at his own house.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": true,
+     "execution": "It reverses who invites whom: line 9 has the invitation going FROM the Bennets."
+    },
+    {
+     "value": "A ride on Mr Bennet's black horse.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A dance with the eldest Miss Bennet.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-10",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Halfway through the evening, people changed their minds about Mr Darcy. Read lines 30 to 35. What changed them?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 10
+   },
+   "key": "The way he behaved, as if he were better than everyone there.",
+   "options": [
+    {
+     "value": "They found out that he was not really rich after all.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They decided he was less good-looking than Mr Bingley.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": true,
+     "execution": "It reverses line 30, where the ladies declare him HANDSOMER than Mr Bingley."
+    },
+    {
+     "value": "The way he behaved, as if he were better than everyone there.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He complained that the ball had ended too early.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Everybody disliked him from the moment he walked in.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-20",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Read lines 65 to 67. Mr Darcy says Elizabeth 'is tolerable: but not handsome enough to tempt me'. What does 'tolerable' mean here?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 20
+   },
+   "key": "Only just good enough to look at.",
+   "options": [
+    {
+     "value": "Kind, and easy to get along with.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Good at putting up with things without complaining.",
+     "isKey": false,
+     "tag": "en-vocab-built-from-parts",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Only just good enough to look at.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Very good-looking, so he is paying her a compliment.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Too proud to dance with anybody.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": true,
+     "execution": "Turns the word back on Mr Darcy: it describes Elizabeth, and the pride is his."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-004-AGG-05",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "In lines 20 to 22, what does the stationmaster say Mrs Spencer did at the station?",
+    "passageRef": "stream-a-06-anne-green-gables",
+    "orderAnchor": 5
+   },
+   "key": "She came off the train with the girl and left her with him.",
+   "options": [
+    {
+     "value": "She came off the train with the girl and left her with him.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She waited beside the girl until Matthew came.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She was to bring a boy over from Nova Scotia.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She took the girl into her charge from him.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": true,
+     "execution": "Reverses line 21, where she is the one who gives the girl into his charge."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-006-TM-03",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "What does Uncle Podger send Jim to Mr Goggles for? (lines 13 and 14)",
+    "passageRef": "stream-a-10-three-men-boat",
+    "orderAnchor": 13
+   },
+   "key": "To borrow his spirit-level.",
+   "options": [
+    {
+     "value": "To borrow his step-ladder.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To tell him that Pa's leg is better.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": true,
+     "execution": "Swaps whose leg it is: line 13 has Uncle Podger hoping Mr Goggles's leg is better."
+    },
+    {
+     "value": "To borrow his spirit-level.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To fetch a bit of picture-cord.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-006-TM-10",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "What does Aunt Maria say she would like to do next time? (lines 49 to 51)",
+    "passageRef": "stream-a-10-three-men-boat",
+    "orderAnchor": 49
+   },
+   "key": "Go and stay with her mother while the job is done.",
+   "options": [
+    {
+     "value": "Ask Uncle Podger to let her hang the picture instead.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": true,
+     "execution": "She asks only to be told in time; she never offers to do the job."
+    },
+    {
+     "value": "Go and stay with her mother while the job is done.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Send for a man to come and do it properly.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Hide the hammer so he cannot start at all.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-008-RC-01",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 1 to 3. How does Roberta wake Phyllis?",
+    "passageRef": "stream-a-02-railway-children",
+    "orderAnchor": 1
+   },
+   "key": "By pulling her hair, gently but hard enough.",
+   "options": [
+    {
+     "value": "By pulling her hair, gently but hard enough.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "By shouting at her to wake up.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "By pulling the blankets off her bed.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Phyllis wakes Roberta by pulling her hair.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": true,
+     "execution": "Line 1 runs the other way round: Roberta is the one who acts."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-009-SM-04",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 15 to 17. What do these lines tell you about the trip?",
+    "passageRef": "stream-b-02",
+    "orderAnchor": 15
+   },
+   "key": "He kept the trip from his mother.",
+   "options": [
+    {
+     "value": "His mother would have stopped him going.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He had promised Nan he would go out there.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "His mother told him to go round to Ryan's.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": true,
+     "execution": "Line 17 runs the other way: he is the one doing the telling."
+    },
+    {
+     "value": "He kept the trip from his mother.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-010-JE-11",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 70 to 81, then lines 86 to 88. What do these two parts together show about the traveller?",
+    "passageRef": "stream-a-11-jane-eyre",
+    "orderAnchor": 86
+   },
+   "key": "He questions her like a stranger, but knew of the governess.",
+   "options": [
+    {
+     "value": "Jane has met Mr Rochester before, though only once at the hall.",
+     "isKey": false,
+     "tag": "en-negation-dropped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He is annoyed to find her out, and says so.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He questions her like a stranger, but knew of the governess.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Jane is the one who asks, and he is the one who answers.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": true,
+     "execution": "Line 74 runs the other way: he asks, and she answers at line 75."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-011-CV-03",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Read lines 5 to 7. What do the squirrels and the rabbits do?",
+    "passageRef": "stream-a-07-canterville-ghost",
+    "orderAnchor": 3
+   },
+   "key": "The squirrels peer and the rabbits run away.",
+   "options": [
+    {
+     "value": "The rabbits peer and the squirrels run away.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": true,
+     "execution": "Lines 5 and 6 run the other way round: squirrels peer, rabbits scud away."
+    },
+    {
+     "value": "A pheasant shows its breast deep in the fern.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The squirrels peer and the rabbits run away.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The rabbits run out into the road ahead of them.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-011-CV-05",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Read lines 12 to 14. Why is Mrs Umney still working at the house?",
+    "passageRef": "stream-a-07-canterville-ghost",
+    "orderAnchor": 5
+   },
+   "key": "Mrs Otis agreed to keep her at Lady Canterville's request.",
+   "options": [
+    {
+     "value": "Mrs Otis agreed to keep her at Lady Canterville's request.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Lady Canterville agreed to Mrs Otis's earnest request.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": true,
+     "execution": "Line 14 runs the other way: the request is Lady Canterville's."
+    },
+    {
+     "value": "She had nowhere else in the world to go after so many years there.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Because she was neatly dressed in black silk.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-011-CV-07",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Read lines 17 to 20. What do the family do in the library?",
+    "passageRef": "stream-a-07-canterville-ghost",
+    "orderAnchor": 7
+   },
+   "key": "They take off their wraps and sit down to tea.",
+   "options": [
+    {
+     "value": "They look at the large stained glass window.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Mrs Umney sits down to tea while they wait on her.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": true,
+     "execution": "Line 19 runs the other way: she waited on them."
+    },
+    {
+     "value": "They take off their wraps and sit down to tea.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They are shown upstairs to their rooms to change.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-012-ML-03",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Read lines 7 to 10. What does Maggie ask, and what does Tom answer?",
+    "passageRef": "stream-a-14-mill-on-floss",
+    "orderAnchor": 3
+   },
+   "key": "Whether he will run away tomorrow; he says he will not.",
+   "options": [
+    {
+     "value": "Whether he will run away tomorrow; he says he will.",
+     "isKey": false,
+     "tag": "en-negation-dropped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Whether he will divide the third jam-puff with her.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Whether he will run away tomorrow; he says he will not.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Tom asks whether Maggie will run away tomorrow.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": true,
+     "execution": "Lines 7 and 8 run the other way: Maggie is the one who asks."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-012-ML-05",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Read lines 16 to 19. What is Tom looking forward to?",
+    "passageRef": "stream-a-14-mill-on-floss",
+    "orderAnchor": 5
+   },
+   "key": "The pudding, which he knows is to be apricot roll-up.",
+   "options": [
+    {
+     "value": "The pudding, which he knows is to be apricot roll-up.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The tipsy-cake, which he says will be good the day after.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Maggie tells him what the pudding is to be.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": true,
+     "execution": "Line 18 runs the other way: he says he knows what it is to be."
+    },
+    {
+     "value": "He is disappointed that it is not to be tipsy-cake.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-012-ML-06",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Read lines 27 to 31. What does Tom tell Maggie to do?",
+    "passageRef": "stream-a-14-mill-on-floss",
+    "orderAnchor": 6
+   },
+   "key": "Choose right hand or left with her eyes still shut.",
+   "options": [
+    {
+     "value": "He says he will give her the jam piece anyway.",
+     "isKey": false,
+     "tag": "en-negation-dropped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Choose right hand or left with her eyes still shut.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Take the half with the jam run out of it.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Maggie tells Tom to shut his own eyes and then choose.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": true,
+     "execution": "Line 27 runs the other way: he asks which she will have."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-012-ML-09",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Read lines 43 to 46. What do these lines tell you about Tom?",
+    "passageRef": "stream-a-14-mill-on-floss",
+    "orderAnchor": 9
+   },
+   "key": "He finished first and watched her, wanting more.",
+   "options": [
+    {
+     "value": "He did not know that Maggie was looking across at him.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": true,
+     "execution": "Line 45 runs the other way: Maggie did not know Tom was looking."
+    },
+    {
+     "value": "He was pleased to watch her enjoy her half.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He was lost to everything but jam and idleness.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He finished first and watched her, wanting more.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-013-TI-11",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 53 to 55. Why did Dick not fetch the apple?",
+    "passageRef": "stream-a-01-treasure-island",
+    "orderAnchor": 53
+   },
+   "key": "Hands broke in and called out for the rum.",
+   "options": [
+    {
+     "value": "Silver told him to leave the barrel alone.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Dick had seen Jim hiding in the barrel.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Hands broke in and called out for the rum.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Hands told Dick off for sucking at the bilge.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": true,
+     "execution": "Line 55 says John, so the words are aimed at Silver rather than at Dick."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-014-TS-12",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Think about the whole passage. How does the writer let us watch Tom work on Ben?",
+    "passageRef": "stream-a-05-tom-sawyer",
+    "answerShape": "outside-view-set-against-a-withheld-plan",
+    "orderAnchor": 999,
+    "techniqueKey": "a-plan-named-but-withheld-while-its-working-is-shown"
+   },
+   "key": "He gives us what Ben can see, but he holds Tom's plan back.",
+   "options": [
+    {
+     "value": "He hides Ben's mind, but he gives us Tom's all through.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": true,
+     "execution": "Turns the two round: line 12 and line 37 give Ben's mind, and Tom's plan is the thing withheld."
+    },
+    {
+     "value": "He tells us the fence had three coats, and then the boys went home.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He shows us Ben giving in first, so the refusals come after that.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He gives us what Ben can see, but he holds Tom's plan back.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-017-CR-04",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 18 to 21. What does Captain Brown ask to be allowed to do?",
+    "passageRef": "stream-a-17-cranford",
+    "orderAnchor": 18
+   },
+   "key": "Read the company a scene out of the new number.",
+   "options": [
+    {
+     "value": "Explain that it is a different sort of thing.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Fetch the month's number from his own house.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Make allowances for Miss Jenkyns and her taste.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": true,
+     "execution": "Line 19 has HER making the allowances, so this turns the two round."
+    },
+    {
+     "value": "Read the company a scene out of the new number.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-017-CR-08",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 35 to 37. Why does Captain Brown speak in a low voice?",
+    "passageRef": "stream-a-17-cranford",
+    "orderAnchor": 35
+   },
+   "key": "He meant that Miss Jenkyns was not to hear it.",
+   "options": [
+    {
+     "value": "He considers it vulgar to publish in numbers.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": true,
+     "execution": "Line 35 gives that opinion to her, and he is arguing against it."
+    },
+    {
+     "value": "He wants the whole company to hear the question.",
+     "isKey": false,
+     "tag": "en-relation-word-flipped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He has begun to lose his temper with her.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He meant that Miss Jenkyns was not to hear it.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-017-CR-09",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 38 to 42. What does Miss Jenkyns recommend to Boz?",
+    "passageRef": "stream-a-17-cranford",
+    "orderAnchor": 38
+   },
+   "key": "That he take Dr Johnson's style as a model.",
+   "options": [
+    {
+     "value": "That he take Dr Johnson's style as a model.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That her father take Boz for a model.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": true,
+     "execution": "Line 38 has her father recommending Johnson to her, so this turns the two round."
+    },
+    {
+     "value": "That he form his own style upon her letters.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That he stop publishing his work in numbers.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-019-BV-03",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 10 to 13. What does Mark do when he interrupts?",
+    "passageRef": "stream-a-20-bevis",
+    "orderAnchor": 10
+   },
+   "key": "He keeps the same example and swaps the two boys round.",
+   "options": [
+    {
+     "value": "He offers to hand Bevis the gun while Bevis shoots.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": true,
+     "execution": "That is the arrangement Bevis gives at lines 10 and 11, put back the way it was."
+    },
+    {
+     "value": "He keeps the same example and swaps the two boys round.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He says he might be shooting an elephant.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He wants to stop Bevis before he can finish.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-025-LW-12",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Think about the whole passage. How does the writer keep describing Jo’s anger?",
+    "passageRef": "stream-a-16-little-women",
+    "answerShape": "what-she-does-set-against-what-is-done-to-her",
+    "orderAnchor": 999,
+    "techniqueKey": "jos-anger-reported-as-something-that-acts-on-her"
+   },
+   "key": "The anger is the one acting, but Jo is the one acted on.",
+   "options": [
+    {
+     "value": "Her hot temper mastered her, and she shook Amy.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The writer tells us Jo is angry, but never shows the anger doing anything.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Jo has her anger under control from the table onwards, and keeps it there.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": true,
+     "execution": "Lines 24 and 28 have it master her and put her beside herself."
+    },
+    {
+     "value": "The anger is the one acting, but Jo is the one acted on.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  }
+ ]
+}

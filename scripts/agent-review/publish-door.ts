@@ -25,6 +25,12 @@ import { requirePopulation } from '../lib/population';
 const REPO = pjoin(__dirname, '..', '..');
 const DOOR = process.argv.find((a) => a.startsWith('--door='))?.slice(7);
 const APPLY = process.argv.includes('--apply');
+/**
+ * --ready: publish the rows that pass every per-row assertion and HOLD the rest by name. Only for a case
+ * that already serves (its pool is non-empty), so no visible-and-empty window can open; a first
+ * publication stays all-or-nothing.
+ */
+const READY = process.argv.includes('--ready');
 const AGENT = 'rev-agent-01';
 const PERSON = 'rev-0001';
 const RECORDED_BY = 'human:dbamgbade@gmail.com';
@@ -37,9 +43,11 @@ async function run() {
   const caseRow = await prisma.case.findUniqueOrThrow({ where: { id: CASE },
     select: { title: true, modes: true, freeTier: true, orderInDistrict: true, questionTypeId: true, mappedQuestionTypeIds: true } });
   const TYPE = caseRow.questionTypeId;
+  // A case may serve several question types (maths-01 maps calc/geom/meas/stats); publish them as one door.
+  const TYPES = [TYPE, ...caseRow.mappedQuestionTypeIds];
   console.log(`PUBLISH ${DOOR} (${caseRow.title}) — ${APPLY ? 'APPLY' : 'DRY RUN'}\n`);
 
-  const rows = await prisma.item.findMany({ where: { questionTypeId: TYPE, pool: 'PRACTICE', status: { in: ['DRAFT', 'LIVE'] } }, orderBy: { id: 'asc' },
+  const rows = await prisma.item.findMany({ where: { questionTypeId: { in: TYPES }, pool: 'PRACTICE', status: 'DRAFT' }, orderBy: { id: 'asc' },
     select: { id: true, status: true, pool: true, stem: true, explanation: true, reviewedBy: true, authoredBy: true, answerFlaggedAt: true,
       options: { select: { content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true }, orderBy: { id: 'asc' } } } });
   requirePopulation(`publish:${DOOR}`, { [`${DOOR} practice row(s)`]: rows.length });
@@ -48,8 +56,8 @@ async function run() {
   const assertions: Array<{ assertion: string; result: string; passed: boolean }> = [];
   const assert = (n: string, ok: boolean, r: string) => { assertions.push({ assertion: n, result: r, passed: ok }); if (!ok) refusals.push(`${n} — ${r}`); };
 
-  assert('every row is DRAFT before the act', rows.every((r) => r.status === 'DRAFT'),
-    JSON.stringify(rows.reduce<Record<string, number>>((a, r) => { a[r.status] = (a[r.status] ?? 0) + 1; return a; }, {})));
+  const liveAlready = await prisma.item.count({ where: { questionTypeId: { in: TYPES }, pool: 'PRACTICE', status: 'LIVE' } });
+  assert('the drafts being published are DRAFT (a case already serving adds to its pool)', rows.every((r) => r.status === 'DRAFT'), `${rows.length} DRAFT; ${liveAlready} already LIVE`);
 
   // 1. SIGNED, AND THE SIGNATURE RECOMPUTES AGAINST THE ROW AS IT STANDS
   const by: Record<string, number> = {}; const unsigned: string[] = [];
@@ -69,7 +77,9 @@ async function run() {
   // 2. WHOLE BY itemWholeness (R41)
   const walk = (caseRow.modes as Record<string, { assetRef?: string }>)?.walk;
   const walkServes = !!walk?.assetRef && !walk.assetRef.startsWith('placeholder/');
-  const attested = new Set((await prisma.misconception.findMany({ where: { status: 'ACTIVE', approvedBy: `reviewer:${PERSON}` }, select: { id: true } })).map((m) => m.id));
+  // An entry is attested by the person or, under R1021, by the machine reviewer — never by a placeholder
+  // (`human:staff-reviewer@cluecrew.test` resolves to no Reviewer row, R94).
+  const attested = new Set((await prisma.misconception.findMany({ where: { status: 'ACTIVE', approvedBy: { in: [`reviewer:${PERSON}`, `reviewer:${AGENT}`] } }, select: { id: true } })).map((m) => m.id));
   const notWhole = rows.filter((r) => !itemWholeness(r, attested, walkServes).whole).map((r) => r.id);
   assert('every row whole by itemWholeness — tags attested, every tagged option carrying its execution', notWhole.length === 0,
     `${rows.length - notWhole.length} of ${rows.length} whole${notWhole.length ? `; not whole: ${notWhole.join(', ')}` : ''}`);
@@ -83,30 +93,37 @@ async function run() {
     faults.map((x) => `${x.id} (${x.f[0]!.rule})`).join(', ') || '0 rows fail');
 
   // 4. THE FACE SERVES, THE POOL IS EMPTY BEFORE THE ACT, NOTHING HELD
-  const poolBefore = rows.filter((r) => r.status === 'LIVE' && !isHeldFromServing(r.id)).length;
+  const poolBefore = liveAlready;
   assert('the face serves', caseFaceServes(caseRow), `caseFaceServes = ${caseFaceServes(caseRow)}`);
-  assert('the live pool is empty before the act, so face and pool land together', poolBefore === 0, `live before = ${poolBefore}`);
   assert('no row is held from serving', rows.every((r) => !isHeldFromServing(r.id)), `${rows.filter((r) => isHeldFromServing(r.id)).length} held`);
 
+  const rowFail = new Set<string>([...unsigned, ...notWhole, ...blocked.map(([i]) => i), ...faults.map((x) => x.id), ...rows.filter((r) => isHeldFromServing(r.id)).map((r) => r.id)]);
+  const publish = READY ? rows.filter((r) => !rowFail.has(r.id)) : rows;
+  if (READY) {
+    if (liveAlready === 0) refusals.push('--ready is only for a case already serving; this pool is empty');
+    else refusals.splice(0, refusals.length, ...refusals.filter((r) => r.startsWith('the face serves')));
+    if (publish.length === 0) refusals.push('no row passes every assertion');
+    console.log(`  --ready: ${publish.length} of ${rows.length} pass every per-row assertion; ${rowFail.size} held by name`);
+  }
   console.log(`  assertions: ${assertions.filter((a) => a.passed).length} of ${assertions.length} pass`);
   for (const a of assertions) console.log(`   ${a.passed ? 'ok     ' : 'REFUSED'} ${a.assertion}\n            ${a.result}`);
 
   let wrote = 0;
   if (refusals.length === 0 && APPLY) {
-    const method = `PUBLISHED — DRAFT to LIVE in one transaction with the door's other ${rows.length - 1}, under the agent-review regime (David's ruling 2026-11-18); every row's signature recomputed, wholeness and blockers derived immediately before the write.`;
+    const method = `PUBLISHED — DRAFT to LIVE in one transaction with the door's other ${publish.length - 1}, under the agent-review regime (David's ruling 2026-11-18); every row's signature recomputed, wholeness and blockers derived immediately before the write.`;
     await prisma.$transaction(async (tx) => {
-      const n = await tx.item.updateMany({ where: { id: { in: rows.map((r) => r.id) }, status: 'DRAFT' },
+      const n = await tx.item.updateMany({ where: { id: { in: publish.map((r) => r.id) }, status: 'DRAFT' },
         data: { status: 'LIVE', reviewedBy: `reviewer:${AGENT}`, reviewRecordedBy: RECORDED_BY, reviewMethod: 'agent review: drafted, proposed and reviewed by separate agents; the machine reviewer rev-agent-01 attested every change and signed every row it changed' } });
-      if (n.count !== rows.length) throw new Error(`updateMany moved ${n.count}, expected ${rows.length} — rolling back`);
-      await tx.attributionEvent.createMany({ data: rows.map((r) => ({ recordType: 'item', recordId: r.id, action: 'APPROVED' as const, reviewerId: AGENT,
+      if (n.count !== publish.length) throw new Error(`updateMany moved ${n.count}, expected ${publish.length} — rolling back`);
+      await tx.attributionEvent.createMany({ data: publish.map((r) => ({ recordType: 'item', recordId: r.id, action: 'APPROVED' as const, reviewerId: AGENT,
         actor: 'agent-reviewer', recordedBy: RECORDED_BY, field: 'status', method })) });
       wrote = n.count;
     }, { timeout: 60000 });
   }
-  const after = await prisma.item.count({ where: { questionTypeId: TYPE, pool: 'PRACTICE', status: 'LIVE' } });
+  const after = await prisma.item.count({ where: { questionTypeId: { in: TYPES }, pool: 'PRACTICE', status: 'LIVE' } });
   const outcome = refusals.length ? 'REFUSED' : APPLY ? 'PUBLISHED' : 'WOULD PUBLISH';
   const report = { kind: `${DOOR}-publication`, mode: APPLY ? 'APPLY' : 'DRY RUN', outcome, date: new Date().toISOString().slice(0, 10),
-    case: { id: CASE, title: caseRow.title, paid: !caseRow.freeTier }, assertions, refusals, move: { liveBefore: poolBefore, liveAfter: after, rowsMoved: wrote } };
+    case: { id: CASE, title: caseRow.title, paid: !caseRow.freeTier }, assertions, refusals, heldByName: READY ? [...rowFail] : [], move: { liveBefore: poolBefore, liveAfter: after, rowsMoved: wrote } };
   const body = JSON.stringify(report, null, 1);
   if (APPLY) writeFileSync(pjoin(REPO, 'content/exports', `${DOOR}-publication-${sha(body).slice(0, 16)}.json`), body);
   console.log(`\n  ${outcome}: live ${poolBefore} -> ${after}`);

@@ -1,0 +1,607 @@
+{
+ "door": "vr-04",
+ "mode": "APPLIED",
+ "landed": 81,
+ "signed": 29,
+ "seatsHeld": [
+  {
+   "itemId": "gen-vr-04-closest-meaning-01",
+   "optionId": "gen-vr-04-closest-meaning-01-opt3",
+   "value": "loud",
+   "tag": "vr04-one-feature-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "'loud' is not a visible sign of being brave. A brave person can be completely quiet, and nothing about bravery shows itself through noise, so the one-feature mistake does not lead a child to 'loud' on this row.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Agreed: bravery has no characteristic sound, so 'loud' is not one visible sign of it.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-02",
+   "optionId": "gen-vr-04-closest-meaning-02-opt2",
+   "value": "frantic",
+   "tag": "vr04-wrong-strength",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "'frantic' is not a stronger form of 'swift'. It means wild with worry or panic, which is a different family; something can be swift and perfectly calm. The wrong-strength mistake does not produce it on this row.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Agreed: 'frantic' is panic, not a stronger 'swift'; the family differs.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-07",
+   "optionId": "gen-vr-04-closest-meaning-07-opt2",
+   "value": "bottomless",
+   "tag": "vr04-wrong-strength",
+   "drafter": "EXECUTES",
+   "drafterReason": null,
+   "reviewer": "REFUSE",
+   "reviewerReason": "'bottomless' is not 'hollow' at a greater strength: hollow means empty inside, bottomless means having no bottom, a different property. The wrong-strength tag is told as a story here, not the mistake that produces this option.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-09",
+   "optionId": "gen-vr-04-closest-meaning-09-opt2",
+   "value": "speedy",
+   "tag": "vr04-wrong-strength",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "'speedy' is not at a different strength from 'rapid'. It means fast to the same degree, and is as close to 'rapid' as the key 'quick' is. There is no strength gap for the mistake to act on, so this option is a second correct answer, not a wrong-strength distractor.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Agreed: 'speedy' is as close to 'rapid' as the key 'quick'; it is a second correct answer, not a distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-09",
+   "optionId": "gen-vr-04-closest-meaning-09-opt3",
+   "value": "hurried",
+   "tag": "vr04-wrong-shade",
+   "verdict": "EXECUTES",
+   "execution": "The key is 'quick'. 'hurried' shares the area of speed but tilts it towards rushing because time is short, often carelessly. 'rapid' has no rush in it. A child who hears only 'fast' picks 'hurried'.",
+   "why": "held by name: reviewer attested conditionally",
+   "reviewer": {
+    "optionId": "gen-vr-04-closest-meaning-09-opt3",
+    "verdict": "ATTEST",
+    "reason": "Quoted words are on the row; the tag names the mistake that produces this option; staff-facing and not padded."
+   }
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-09",
+   "optionId": "gen-vr-04-closest-meaning-09-opt4",
+   "value": "brisk",
+   "tag": "vr04-one-feature-only",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "'brisk' is not one visible sign of 'rapid'; it is itself a near-synonym meaning quick and lively, as in a brisk pace. The one-feature mistake does not produce it, and a child or marker could defend it as closest.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Agreed: 'brisk' is itself a near-synonym of 'rapid' (a brisk pace), not one feature of it, and is defensible as closest.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-14",
+   "optionId": "gen-vr-04-closest-meaning-14-opt2",
+   "value": "massive",
+   "tag": "vr04-wrong-strength",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "'massive' is not a stronger form of 'sturdy'. It is about size and bulk, a different family: a small stool can be sturdy and a huge tent can be flimsy. The wrong-strength mistake does not produce it on this row.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Agreed: 'massive' is about size, not strength of build; a small stool can be sturdy.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-19",
+   "optionId": "gen-vr-04-closest-meaning-19-opt2",
+   "value": "meaningless",
+   "tag": "vr04-wrong-strength",
+   "verdict": "EXECUTES",
+   "execution": "The key is 'unclear'. 'meaningless' pushes the same idea too far: not just hard to make out, but having no meaning at all. A child who reaches for the strongest word picks 'meaningless'.",
+   "why": "held by name: reviewer attested conditionally",
+   "reviewer": {
+    "optionId": "gen-vr-04-closest-meaning-19-opt2",
+    "verdict": "ATTEST",
+    "reason": "Quoted words are on the row; the tag names the mistake that produces this option; staff-facing and not padded."
+   }
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-19",
+   "optionId": "gen-vr-04-closest-meaning-19-opt3",
+   "value": "careless",
+   "tag": "vr04-wrong-shade",
+   "verdict": "EXECUTES",
+   "execution": "The key is 'unclear'. 'careless' shares the area of not being exact but tilts it towards not taking care. A vague answer lacks detail; it is not necessarily sloppy. A child who hears only 'not exact' picks 'careless'.",
+   "why": "held by name: reviewer attested conditionally",
+   "reviewer": {
+    "optionId": "gen-vr-04-closest-meaning-19-opt3",
+    "verdict": "ATTEST",
+    "reason": "Quoted words are on the row; the tag names the mistake that produces this option; staff-facing and not padded."
+   }
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-19",
+   "optionId": "gen-vr-04-closest-meaning-19-opt4",
+   "value": "brief",
+   "tag": "vr04-one-feature-only",
+   "verdict": "EXECUTES",
+   "execution": "The key is 'unclear'. A vague answer is often short, so 'brief' names one thing vagueness can look like, not what 'vague' means. A child who picks that visible sign picks 'brief'.",
+   "why": "held by name: reviewer attested conditionally",
+   "reviewer": {
+    "optionId": "gen-vr-04-closest-meaning-19-opt4",
+    "verdict": "ATTEST",
+    "reason": "Quoted words are on the row; the tag names the mistake that produces this option; staff-facing and not padded."
+   }
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-20",
+   "optionId": "gen-vr-04-closest-meaning-20-opt2",
+   "value": "helpless",
+   "tag": "vr04-wrong-strength",
+   "verdict": "EXECUTES",
+   "execution": "The key is 'weak'. 'helpless' is from the same family but far stronger: unable to do anything at all. A child who reaches for the strongest weak word picks 'helpless'.",
+   "why": "held by name: reviewer attested conditionally",
+   "reviewer": {
+    "optionId": "gen-vr-04-closest-meaning-20-opt2",
+    "verdict": "ATTEST",
+    "reason": "Quoted words are on the row; the tag names the mistake that produces this option; staff-facing and not padded."
+   }
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-20",
+   "optionId": "gen-vr-04-closest-meaning-20-opt3",
+   "value": "pale",
+   "tag": "vr04-one-feature-only",
+   "verdict": "EXECUTES",
+   "execution": "The key is 'weak'. A feeble person may look pale, so 'pale' names one visible sign of feebleness, not what 'feeble' means. A child who picks that sign picks 'pale'.",
+   "why": "held by name: reviewer attested conditionally",
+   "reviewer": {
+    "optionId": "gen-vr-04-closest-meaning-20-opt3",
+    "verdict": "ATTEST",
+    "reason": "Quoted words are on the row; the tag names the mistake that produces this option; staff-facing and not padded."
+   }
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-20",
+   "optionId": "gen-vr-04-closest-meaning-20-opt4",
+   "value": "elderly",
+   "tag": "vr04-keeps-the-same-company",
+   "verdict": "EXECUTES",
+   "execution": "The key is 'weak'. 'elderly' turns up beside 'feeble', as in a feeble elderly man, but it means old, not weak. A child who matches the company the words keep picks 'elderly'.",
+   "why": "held by name: reviewer attested conditionally",
+   "reviewer": {
+    "optionId": "gen-vr-04-closest-meaning-20-opt4",
+    "verdict": "ATTEST",
+    "reason": "Quoted words are on the row; the tag names the mistake that produces this option; staff-facing and not padded."
+   }
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-21",
+   "optionId": "gen-vr-04-closest-meaning-21-opt2",
+   "value": "perfect",
+   "tag": "vr04-wrong-strength",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "'perfect' is not a stronger form of 'genuine'. 'genuine' means real, not fake; 'perfect' means having no faults, a different family. A genuine old coin can be badly damaged. The wrong-strength mistake does not produce it on this row.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Agreed: 'perfect' is a different family (without fault), not a stronger 'genuine'.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-23",
+   "optionId": "gen-vr-04-closest-meaning-23-opt2",
+   "value": "submissive",
+   "tag": "vr04-wrong-strength",
+   "drafter": "EXECUTES",
+   "drafterReason": null,
+   "reviewer": "REFUSE",
+   "reviewerReason": "'submissive' is listed as a direct synonym of 'obedient' in standard thesauruses; the execution's claim that it is 'far stronger' is not secure enough to make it a wrong-strength distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-23",
+   "optionId": "gen-vr-04-closest-meaning-23-opt3",
+   "value": "polite",
+   "tag": "vr04-wrong-shade",
+   "verdict": "EXECUTES",
+   "execution": "The key is 'well-behaved'. 'polite' shares the area of good behaviour but tilts it towards good manners rather than doing as you are told. A child who hears only 'good' picks 'polite'.",
+   "why": "held by name: reviewer attested conditionally",
+   "reviewer": {
+    "optionId": "gen-vr-04-closest-meaning-23-opt3",
+    "verdict": "ATTEST",
+    "reason": "Quoted words are on the row; the tag names the mistake that produces this option; staff-facing and not padded."
+   }
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-23",
+   "optionId": "gen-vr-04-closest-meaning-23-opt4",
+   "value": "quiet",
+   "tag": "vr04-one-feature-only",
+   "verdict": "EXECUTES",
+   "execution": "The key is 'well-behaved'. An obedient child may be quiet, so 'quiet' names one thing obedience can look like, not what 'obedient' means. A child who picks that visible sign picks 'quiet'.",
+   "why": "held by name: reviewer attested conditionally",
+   "reviewer": {
+    "optionId": "gen-vr-04-closest-meaning-23-opt4",
+    "verdict": "ATTEST",
+    "reason": "Quoted words are on the row; the tag names the mistake that produces this option; staff-facing and not padded."
+   }
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-27",
+   "optionId": "gen-vr-04-closest-meaning-27-opt2",
+   "value": "bury",
+   "tag": "vr04-wrong-strength",
+   "drafter": "EXECUTES",
+   "drafterReason": null,
+   "reviewer": "REFUSE",
+   "reviewerReason": "In this sentence 'bury' is not a stronger 'hide': 'bury her disappointment' is a standard idiom meaning to hide or suppress a feeling, so it is an equal-strength fit, not a wrong-strength distractor.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-27",
+   "optionId": "gen-vr-04-closest-meaning-27-opt3",
+   "value": "ignore",
+   "tag": "vr04-wrong-shade",
+   "verdict": "EXECUTES",
+   "execution": "In the sentence, the key is 'hide'. 'ignore' shares the area of not dealing with a feeling but tilts it: to take no notice of something, rather than keep it from others. A child who hears only 'not show it' picks 'ignore'.",
+   "why": "held by name: reviewer attested conditionally",
+   "reviewer": {
+    "optionId": "gen-vr-04-closest-meaning-27-opt3",
+    "verdict": "ATTEST",
+    "reason": "Quoted words are on the row; the tag names the mistake that produces this option; staff-facing and not padded."
+   }
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-27",
+   "optionId": "gen-vr-04-closest-meaning-27-opt4",
+   "value": "pretend",
+   "tag": "vr04-keeps-the-same-company",
+   "verdict": "EXECUTES",
+   "execution": "In the sentence, the key is 'hide'. Concealing disappointment goes with pretending to be fine, so the two words turn up together, but 'pretend' means act as if, not hide. A child who matches the situation picks 'pretend'.",
+   "why": "held by name: reviewer attested conditionally",
+   "reviewer": {
+    "optionId": "gen-vr-04-closest-meaning-27-opt4",
+    "verdict": "ATTEST",
+    "reason": "Quoted words are on the row; the tag names the mistake that produces this option; staff-facing and not padded."
+   }
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-28",
+   "optionId": "gen-vr-04-closest-meaning-28-opt2",
+   "value": "tired",
+   "tag": "vr04-wrong-strength",
+   "verdict": "EXECUTES",
+   "execution": "In 'After the long walk home they were EXHAUSTED', the key is 'drained'. 'tired' is from the same family but far weaker; exhausted means all your energy is used up. A child who matches the family and ignores the strength picks 'tired'.",
+   "why": "held by name: reviewer attested conditionally",
+   "reviewer": {
+    "optionId": "gen-vr-04-closest-meaning-28-opt2",
+    "verdict": "ATTEST",
+    "reason": "Quoted words are on the row; the tag names the mistake that produces this option; staff-facing and not padded."
+   }
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-28",
+   "optionId": "gen-vr-04-closest-meaning-28-opt3",
+   "value": "sleepy",
+   "tag": "vr04-keeps-the-same-company",
+   "verdict": "EXECUTES",
+   "execution": "In the sentence, the key is 'drained'. 'sleepy' turns up beside 'exhausted' at the end of a long day, but it means ready to sleep, not out of energy. A child who matches the situation picks 'sleepy'.",
+   "why": "held by name: reviewer attested conditionally",
+   "reviewer": {
+    "optionId": "gen-vr-04-closest-meaning-28-opt3",
+    "verdict": "ATTEST",
+    "reason": "Quoted words are on the row; the tag names the mistake that produces this option; staff-facing and not padded."
+   }
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-28",
+   "optionId": "gen-vr-04-closest-meaning-28-opt4",
+   "value": "empty",
+   "tag": "vr04-the-other-meaning",
+   "verdict": "EXECUTES",
+   "execution": "In the sentence, the key is 'drained'. 'exhausted' has a real second meaning, used up completely, as in exhausted supplies, and 'empty' fits that sense. The sentence is about people after a walk, which fixes the worn-out sense. A child who picks the other sense picks 'empty'.",
+   "why": "held by name: reviewer attested conditionally",
+   "reviewer": {
+    "optionId": "gen-vr-04-closest-meaning-28-opt4",
+    "verdict": "ATTEST",
+    "reason": "Quoted words are on the row; the tag names the mistake that produces this option; staff-facing and not padded."
+   }
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-29",
+   "optionId": "gen-vr-04-closest-meaning-29-opt2",
+   "value": "rewrite",
+   "tag": "vr04-wrong-strength",
+   "verdict": "EXECUTES",
+   "execution": "In 'The teacher asked her to AMEND the last paragraph', the key is 'change'. 'rewrite' pushes the same idea too far: to write it all again, where amending means making some changes. A child who reaches for the biggest change picks 'rewrite'.",
+   "why": "held by name: reviewer attested conditionally",
+   "reviewer": {
+    "optionId": "gen-vr-04-closest-meaning-29-opt2",
+    "verdict": "ATTEST",
+    "reason": "Quoted words are on the row; the tag names the mistake that produces this option; staff-facing and not padded."
+   }
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-29",
+   "optionId": "gen-vr-04-closest-meaning-29-opt3",
+   "value": "improve",
+   "tag": "vr04-wrong-shade",
+   "drafter": "EXECUTES",
+   "drafterReason": null,
+   "reviewer": "REFUSE",
+   "reviewerReason": "'amend' means to make changes in order to improve or correct (Oxford). 'improve' is part of the headword's meaning, not a tilt away from it, so wrong-shade does not describe it; it is a defensible answer.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-29",
+   "optionId": "gen-vr-04-closest-meaning-29-opt4",
+   "value": "check",
+   "tag": "vr04-keeps-the-same-company",
+   "verdict": "EXECUTES",
+   "execution": "In the sentence, the key is 'change'. 'check' turns up beside 'amend' in the same classroom job, since you check work and then amend it, but it means look over, not alter. A child who matches the situation picks 'check'.",
+   "why": "held by name: reviewer attested conditionally",
+   "reviewer": {
+    "optionId": "gen-vr-04-closest-meaning-29-opt4",
+    "verdict": "ATTEST",
+    "reason": "Quoted words are on the row; the tag names the mistake that produces this option; staff-facing and not padded."
+   }
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-30",
+   "optionId": "gen-vr-04-closest-meaning-30-opt4",
+   "value": "slow",
+   "tag": "vr04-keeps-the-same-company",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "'slow' does not turn up in the same situations as 'futile' in any regular way, and the sentence says nothing about speed. There is no shared setting for the same-company mistake to act on, so 'slow' works only as a random wrong word on this row.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Agreed: 'slow' shares no regular setting with 'futile' and the sentence says nothing of speed.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-31",
+   "optionId": "gen-vr-04-closest-meaning-31-opt2",
+   "value": "devoted",
+   "tag": "vr04-wrong-strength",
+   "drafter": "EXECUTES",
+   "drafterReason": null,
+   "reviewer": "REFUSE",
+   "reviewerReason": "'devoted' is not amiable at a higher strength; it means loyal, committed love, a different family from pleasant friendliness. The wrong-strength tag does not produce it on this row.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-32",
+   "optionId": "gen-vr-04-closest-meaning-32-opt4",
+   "value": "valuable",
+   "tag": "vr04-keeps-the-same-company",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "'valuable' does not keep the same company as 'abundant'. Things that are abundant are usually common, and valuable is the word that goes with 'rare', not with 'abundant'. Nothing in the sentence about river fish links them, so the same-company mistake does not produce it.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Agreed: 'valuable' goes with 'rare', not 'abundant'; no shared company on this row.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-33",
+   "optionId": "gen-vr-04-closest-meaning-33-opt2",
+   "value": "legendary",
+   "tag": "vr04-wrong-strength",
+   "drafter": "CANNOT_EXECUTE",
+   "drafterReason": "'legendary' is not a stronger form of 'notorious'. It means famous in a good, admired way, so it reverses the bad sense of 'notorious' rather than raising its strength. That error is a change of direction, which the wrong-shade seat ('famous') already carries; the wrong-strength mistake does not produce it.",
+   "reviewer": "AGREE",
+   "reviewerReason": "Agreed: 'legendary' reverses the bad sense of 'notorious' rather than intensifying it; that is not a strength error.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-34",
+   "optionId": "gen-vr-04-closest-meaning-34-opt2",
+   "value": "pretty",
+   "tag": "vr04-wrong-strength",
+   "verdict": "EXECUTES",
+   "execution": "In 'The lace on the dress was EXQUISITE', the key is 'beautiful'. 'pretty' is from the same family but far weaker; exquisite means extremely beautiful and finely made. A child who matches the family and ignores the strength picks 'pretty'.",
+   "why": "held by name: reviewer attested conditionally",
+   "reviewer": {
+    "optionId": "gen-vr-04-closest-meaning-34-opt2",
+    "verdict": "ATTEST",
+    "reason": "Quoted words are on the row; the tag names the mistake that produces this option; staff-facing and not padded."
+   }
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-34",
+   "optionId": "gen-vr-04-closest-meaning-34-opt3",
+   "value": "delicate",
+   "tag": "vr04-one-feature-only",
+   "drafter": "EXECUTES",
+   "drafterReason": null,
+   "reviewer": "REFUSE",
+   "reviewerReason": "'exquisite' is defined as 'extremely beautiful and delicate' (Oxford), and the sentence is about lace. 'delicate' is part of the meaning, not one feature only; it is defensible as closest.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-34",
+   "optionId": "gen-vr-04-closest-meaning-34-opt4",
+   "value": "sharp",
+   "tag": "vr04-the-other-meaning",
+   "verdict": "EXECUTES",
+   "execution": "In the sentence, the key is 'beautiful'. 'exquisite' has a real second meaning, intense and sharp, as in exquisite pain, and 'sharp' fits that sense. The sentence is about lace on a dress, which fixes the beautiful sense. A child who picks the other sense picks 'sharp'.",
+   "why": "held by name: reviewer attested conditionally",
+   "reviewer": {
+    "optionId": "gen-vr-04-closest-meaning-34-opt4",
+    "verdict": "ATTEST",
+    "reason": "Quoted words are on the row; the tag names the mistake that produces this option; staff-facing and not padded."
+   }
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-35",
+   "optionId": "gen-vr-04-closest-meaning-35-opt2",
+   "value": "saintly",
+   "tag": "vr04-wrong-strength",
+   "verdict": "EXECUTES",
+   "execution": "In 'The school was founded by a BENEVOLENT businessman', the key is 'kind'. 'saintly' is from the same family of goodness but far stronger: as good as a saint. A child who reaches for the strongest good word picks 'saintly'.",
+   "why": "held by name: reviewer attested conditionally",
+   "reviewer": {
+    "optionId": "gen-vr-04-closest-meaning-35-opt2",
+    "verdict": "ATTEST",
+    "reason": "Quoted words are on the row; the tag names the mistake that produces this option; staff-facing and not padded."
+   }
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-35",
+   "optionId": "gen-vr-04-closest-meaning-35-opt3",
+   "value": "polite",
+   "tag": "vr04-wrong-shade",
+   "verdict": "EXECUTES",
+   "execution": "In the sentence, the key is 'kind'. 'polite' shares the area of behaving well towards others but tilts it towards good manners rather than wishing others well. A child who hears only 'nice' picks 'polite'.",
+   "why": "held by name: reviewer attested conditionally",
+   "reviewer": {
+    "optionId": "gen-vr-04-closest-meaning-35-opt3",
+    "verdict": "ATTEST",
+    "reason": "Quoted words are on the row; the tag names the mistake that produces this option; staff-facing and not padded."
+   }
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-35",
+   "optionId": "gen-vr-04-closest-meaning-35-opt4",
+   "value": "wealthy",
+   "tag": "vr04-keeps-the-same-company",
+   "verdict": "EXECUTES",
+   "execution": "In the sentence, the key is 'kind'. 'wealthy' turns up beside 'benevolent' when a businessman founds a school, but it means rich, not kind. A child who matches the situation picks 'wealthy'.",
+   "why": "held by name: reviewer attested conditionally",
+   "reviewer": {
+    "optionId": "gen-vr-04-closest-meaning-35-opt4",
+    "verdict": "ATTEST",
+    "reason": "Quoted words are on the row; the tag names the mistake that produces this option; staff-facing and not padded."
+   }
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-36",
+   "optionId": "gen-vr-04-closest-meaning-36-opt2",
+   "value": "patient",
+   "tag": "vr04-wrong-shade",
+   "drafter": "EXECUTES",
+   "drafterReason": null,
+   "reviewer": "REFUSE",
+   "reviewerReason": "In 'remained STOIC throughout the long wait', 'patient' (enduring a delay without complaint) is a defensible answer, not a wrong shade. The tag does not name a mistake when the option can be argued correct.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-36",
+   "optionId": "gen-vr-04-closest-meaning-36-opt3",
+   "value": "silent",
+   "tag": "vr04-one-feature-only",
+   "verdict": "EXECUTES",
+   "execution": "In the sentence, the key is 'unemotional'. A stoic person may stay silent, so 'silent' names one thing stoicism can look like, not what 'stoic' means. A child who picks that visible sign picks 'silent'.",
+   "why": "held by name: reviewer attested conditionally",
+   "reviewer": {
+    "optionId": "gen-vr-04-closest-meaning-36-opt3",
+    "verdict": "ATTEST",
+    "reason": "Quoted words are on the row; the tag names the mistake that produces this option; staff-facing and not padded."
+   }
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-36",
+   "optionId": "gen-vr-04-closest-meaning-36-opt4",
+   "value": "brave",
+   "tag": "vr04-keeps-the-same-company",
+   "verdict": "EXECUTES",
+   "execution": "In the sentence, the key is 'unemotional'. 'brave' turns up beside 'stoic' when praising someone who faces hardship, but it means unafraid, not not showing feeling. A child who matches the company the words keep picks 'brave'.",
+   "why": "held by name: reviewer attested conditionally",
+   "reviewer": {
+    "optionId": "gen-vr-04-closest-meaning-36-opt4",
+    "verdict": "ATTEST",
+    "reason": "Quoted words are on the row; the tag names the mistake that produces this option; staff-facing and not padded."
+   }
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-37",
+   "optionId": "gen-vr-04-closest-meaning-37-opt2",
+   "value": "ecstatic",
+   "tag": "vr04-wrong-strength",
+   "verdict": "EXECUTES",
+   "execution": "In 'The innkeeper greeted them in a JOVIAL manner', the key is 'cheerful'. 'ecstatic' is from the same family of happiness but far stronger: overwhelmed with joy. A child who reaches for the strongest happy word picks 'ecstatic'.",
+   "why": "held by name: reviewer attested conditionally",
+   "reviewer": {
+    "optionId": "gen-vr-04-closest-meaning-37-opt2",
+    "verdict": "ATTEST",
+    "reason": "Quoted words are on the row; the tag names the mistake that produces this option; staff-facing and not padded."
+   }
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-37",
+   "optionId": "gen-vr-04-closest-meaning-37-opt3",
+   "value": "friendly",
+   "tag": "vr04-wrong-shade",
+   "drafter": "EXECUTES",
+   "drafterReason": null,
+   "reviewer": "REFUSE",
+   "reviewerReason": "'jovial' means cheerful and friendly; 'friendly' is part of the definition, not a tilt away from it. It is defensible as closest, so wrong-shade does not apply.",
+   "needs": "NEW DISTRACTOR or new execution"
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-37",
+   "optionId": "gen-vr-04-closest-meaning-37-opt4",
+   "value": "loud",
+   "tag": "vr04-one-feature-only",
+   "verdict": "EXECUTES",
+   "execution": "In the sentence, the key is 'cheerful'. A jovial innkeeper may laugh loudly, so 'loud' names one thing joviality can sound like, not what 'jovial' means. A child who picks that sign picks 'loud'.",
+   "why": "held by name: reviewer attested conditionally",
+   "reviewer": {
+    "optionId": "gen-vr-04-closest-meaning-37-opt4",
+    "verdict": "ATTEST",
+    "reason": "Quoted words are on the row; the tag names the mistake that produces this option; staff-facing and not padded."
+   }
+  }
+ ],
+ "rowsHeld": [
+  {
+   "itemId": "bank-vr-04-closest-meaning-30",
+   "verdict": "HOLD",
+   "reason": "Two faults. (1) 'tired' is defensible as closest to 'exhausted': it is the everyday synonym, and a child or marker could argue it against 'worn out'. (2) The gate refuses the row on a stale script naming 'marathon', which is not on this row (the packet carries solution: null, so the stale text is in the store, not here)."
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-09",
+   "verdict": "HOLD",
+   "reason": "'speedy' and 'brisk' are both defensible as closest to 'rapid'; 'speedy' is as close as the key 'quick'. Three options could be argued correct."
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-19",
+   "verdict": "HOLD",
+   "reason": "Gate refusal on house vocabulary: the option 'careless' fails the house vocabulary scan. Reword the distractor; a scanner hit is never exempted."
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-20",
+   "verdict": "HOLD",
+   "reason": "Gate refusal on house vocabulary: the key 'weak' fails the house vocabulary scan. Replace the key; a scanner hit is never exempted."
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-23",
+   "verdict": "HOLD",
+   "reason": "'submissive' is a standard dictionary synonym of 'obedient' (doing as told), while the key 'well-behaved' is broader: a child can be well-behaved without obeying anyone. A marker could defend 'submissive' as closest. 'submissive' is also a poor word to put before a 9-11-year-old."
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-27",
+   "verdict": "HOLD",
+   "reason": "In this sentence 'bury' is defensible: 'bury her disappointment' is a standard idiom meaning to hide a feeling. Two options fit the carrier sentence."
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-28",
+   "verdict": "HOLD",
+   "reason": "'tired' is defensible as closest to 'exhausted' in 'After the long walk home they were EXHAUSTED'; a child would argue it against 'drained', which is itself a less familiar figurative use."
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-29",
+   "verdict": "HOLD",
+   "reason": "'improve' is defensible: 'amend' means to make changes in order to improve or correct a text, and a teacher asking for a paragraph to be amended wants it improved. Two options fit."
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-34",
+   "verdict": "HOLD",
+   "reason": "'delicate' is defensible: 'exquisite' means extremely beautiful and delicate, and the sentence is about lace, which is the archetypal delicate thing. Two options fit."
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-35",
+   "verdict": "HOLD",
+   "reason": "Gate refusal on reading age: the row carries two four-syllable words. Reword the carrier sentence so it passes the reading-age lint."
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-36",
+   "verdict": "HOLD",
+   "reason": "'patient' is defensible in 'She remained STOIC throughout the long wait': stoic means enduring hardship without complaint, and the sentence is about a wait. The key 'unemotional' is also imprecise (stoic is not showing feeling, not lacking it). Two options fit."
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-37",
+   "verdict": "HOLD",
+   "reason": "'friendly' is defensible: 'jovial' means cheerful and friendly, and the sentence is a greeting. Two options fit."
+  }
+ ]
+}

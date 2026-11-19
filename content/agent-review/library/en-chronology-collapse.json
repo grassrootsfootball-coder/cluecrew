@@ -1,0 +1,1566 @@
+{
+ "entry": {
+  "id": "en-chronology-collapse",
+  "status": "ACTIVE",
+  "district": "ENGLISH",
+  "category": null,
+  "description": "The child picks a cause that happens LATER in the passage than the effect being asked about. The two events are both real and both about the same people, so the option reads well; only the order rules it out. Currently split across en-cause-agent-swap and en-wrong-scope-retrieval, neither of which names the time error.",
+  "childHint": "Check what happened first, and what the question asks for.",
+  "approvedBy": "human:staff-reviewer@cluecrew.test",
+  "approvalMethod": "written review 2026-08-03",
+  "approvalNote": "Second-pass returns: ten new proposals cleared, WIW-14 stem rewritten, mistag check completed across the remaining 69.",
+  "textProvenance": {
+   "note": "Ruled when written; absent from the store until now (R403/R410).",
+   "state": "RECORDED",
+   "appliedOn": "2026-08-22",
+   "authority": "annie-seventysixth-return.md, read from the file, sha256 583df5ad8d5a5779b6f20830ea0041d93670236acff44649190836e3764fc536",
+   "approvedByPerson": "Annie"
+  }
+ },
+ "carrierCount": 40,
+ "carriers": [
+  {
+   "itemId": "ENG-001-WIW-06",
+   "status": "LIVE",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Read lines 14 to 15. Where did the Mole find himself when his snout came out into the sunlight?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 6
+   },
+   "key": "Rolling in the warm grass of a great meadow.",
+   "options": [
+    {
+     "value": "On the bank of the river.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "At the gap in the hedge.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "The gap in the hedge at line 22 is the very next thing that happens. The two moments are collapsed into one."
+    },
+    {
+     "value": "In a boat painted blue and white.",
+     "isKey": false,
+     "tag": "en-evidence-vividness-bias",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Rolling in the warm grass of a great meadow.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "On a gravelled carriage-drive.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-15",
+   "status": "LIVE",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Read lines 43 to 45. What did the Mole first notice in the dark hole in the bank?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 15
+   },
+   "key": "Something bright and small that twinkled.",
+   "options": [
+    {
+     "value": "A brown little face with whiskers.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "The brown face is line 48, one step later in a reveal the passage deliberately stages; the two moments are collapsed."
+    },
+    {
+     "value": "Something bright and small that twinkled.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A tiny star shining in the hole.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A glow-worm.",
+     "isKey": false,
+     "tag": "en-negation-dropped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Small neat ears and thick silky hair.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-06",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Read lines 17 to 23. Who actually came into the assembly-room with Mr Bingley?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 6
+   },
+   "key": "His two sisters, the husband of the elder sister, and one other young man.",
+   "options": [
+    {
+     "value": "His five sisters and a cousin.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Twelve ladies and seven gentlemen.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "Twelve ladies and seven gentlemen is the FIRST report at lines 17 and 18, superseded twice before line 21. An early stage of the news is taken as the final state."
+    },
+    {
+     "value": "His two sisters, Mr Hurst and Mr Bennet.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "His two sisters and both their husbands.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "His two sisters, the husband of the elder sister, and one other young man.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-005-BB-03",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "What did the man at the gate say about the river? (lines 10 and 11)",
+    "passageRef": "stream-a-04-black-beauty",
+    "orderAnchor": 10
+   },
+   "key": "It was rising fast, and he feared a bad night.",
+   "options": [
+    {
+     "value": "It had already broken the wooden bridge.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "Takes the news from line 47, which arrives hours later."
+    },
+    {
+     "value": "It was falling now that the rain had stopped.",
+     "isKey": false,
+     "tag": "en-relation-word-flipped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "It was rising fast, and he feared a bad night.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "It had covered the meadows so the road was shut.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-005-BB-05",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "What came down across the road in front of them? (lines 22 to 24)",
+    "passageRef": "stream-a-04-black-beauty",
+    "orderAnchor": 22
+   },
+   "key": "An oak tree, torn up by the roots.",
+   "options": [
+    {
+     "value": "An oak tree, torn up by the roots.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A great branch from one of the swaying trees.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Part of the wooden bridge, carried off by the flood.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "Takes the bridge damage from line 47, which happens elsewhere and later."
+    },
+    {
+     "value": "A shower of dry leaves blown across the road.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-005-BB-06",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Beauty says he did not turn round or run away. Why not? (lines 24 to 26)",
+    "passageRef": "stream-a-04-black-beauty",
+    "orderAnchor": 24
+   },
+   "key": "He had been trained not to, even when frightened.",
+   "options": [
+    {
+     "value": "He was not frightened by the falling tree.",
+     "isKey": false,
+     "tag": "en-negation-dropped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He had been trained not to, even when frightened.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The dog-cart was too heavy to turn on the road.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "John was already holding him at his head.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "John reaches his head at line 26, after Beauty has already stopped still."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-006-TM-02",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "What does Uncle Podger do straight after taking off his coat? (lines 8 and 9)",
+    "passageRef": "stream-a-10-three-men-boat",
+    "orderAnchor": 8
+   },
+   "key": "Sends the girl out for nails, then a boy after her.",
+   "options": [
+    {
+     "value": "Fetches the step-ladder and a kitchen-chair.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "Those are called for at line 12, in the speech that comes after this."
+    },
+    {
+     "value": "Sends the girl out for nails, then a boy after her.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Measures the wall to find where the nail goes.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Sends the girl for nails and goes with her.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-006-TM-04",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "What happens when Uncle Podger first lifts up the picture? (lines 18 and 19)",
+    "passageRef": "stream-a-10-three-men-boat",
+    "orderAnchor": 18
+   },
+   "key": "He drops it, the frame comes off, and he cuts himself.",
+   "options": [
+    {
+     "value": "He hangs it crooked and has to start again.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "The crooked picture is at line 58, at the very end of the whole business."
+    },
+    {
+     "value": "He drops the hammer on somebody's toes.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He drops it and the glass stays whole.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He drops it, the frame comes off, and he cuts himself.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-006-TM-05",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Why does the whole house stop looking for the tools? (lines 20 to 23)",
+    "passageRef": "stream-a-10-three-men-boat",
+    "orderAnchor": 20
+   },
+   "key": "Because his handkerchief is in the coat, and nobody knows where the coat is.",
+   "options": [
+    {
+     "value": "Because his handkerchief is in the coat, and nobody knows where the coat is.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Because Uncle Podger tells them to stop and help him.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Because the tools had not been brought into the room yet.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "The tools arrive at line 25, after this search, so they are not the cause here."
+    },
+    {
+     "value": "Because he goes out of the room to see to his cut.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-006-TM-09",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "What does Uncle Podger fall onto when the string slips? (lines 43 to 45)",
+    "passageRef": "stream-a-10-three-men-boat",
+    "orderAnchor": 43
+   },
+   "key": "The piano.",
+   "options": [
+    {
+     "value": "The piano.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The kitchen-chair he had been standing on.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The charwoman's corns.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "That is line 61, at the very end, and it is his foot, not his fall."
+    },
+    {
+     "value": "Somebody's toes, with a yell.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-006-TM-10",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "What does Aunt Maria say she would like to do next time? (lines 49 to 51)",
+    "passageRef": "stream-a-10-three-men-boat",
+    "orderAnchor": 49
+   },
+   "key": "Go and stay with her mother while the job is done.",
+   "options": [
+    {
+     "value": "Ask Uncle Podger to let her hang the picture instead.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Go and stay with her mother while the job is done.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Send for a man to come and do it properly.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "That idea comes at line 63, and it is Uncle Podger scorning it."
+    },
+    {
+     "value": "Hide the hammer so he cannot start at all.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-007-LP-04",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "What did Miss Bhatt say happens to the charity bags? (lines 24 to 26)",
+    "passageRef": "stream-b-04",
+    "orderAnchor": 4
+   },
+   "key": "They go to a warehouse, then out to shops.",
+   "options": [
+    {
+     "value": "They are sorted again at the school on Friday.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "Friday at line 8 is when they are collected, not where they end up."
+    },
+    {
+     "value": "They go to families who need them nearby.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She said she did not really know.",
+     "isKey": false,
+     "tag": "en-relation-word-flipped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They go to a warehouse, then out to shops.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-007-LP-09",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "What does Ilya say about the cupboard in the annexe? (lines 40 and 41)",
+    "passageRef": "stream-b-04",
+    "orderAnchor": 9
+   },
+   "key": "They can do it on Monday and miss spellings.",
+   "options": [
+    {
+     "value": "They can do it on Monday and miss spellings.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Miss Bhatt wants it done before Friday.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "Friday at line 8 is the charity collection, not a deadline for the annexe."
+    },
+    {
+     "value": "It has already been cleared by somebody else.",
+     "isKey": false,
+     "tag": "en-relation-word-flipped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They will do it instead of going to Whitby.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-007-LP-15",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "What did Reuben do with the navy jumper? (lines 33 and 34)"
+   },
+   "key": "Put it in the Friday box, low down, and pressed it flat.",
+   "options": [
+    {
+     "value": "Put it in the Friday box, low down, and pressed it flat.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Put it in the returns box, because it had a name in it.",
+     "isKey": false,
+     "tag": "en-relation-word-flipped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Put it in the bin bag, because the cuffs had gone thin.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Folded it and gave it to Miss Bhatt.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-008-RC-06",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 37 to 43. Why is the bottom burned out of the kettle?",
+    "passageRef": "stream-a-02-railway-children",
+    "orderAnchor": 37
+   },
+   "key": "They fell asleep outside, so nobody took it off the fire.",
+   "options": [
+    {
+     "value": "Mother let the fire go out while they slept.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They fell asleep outside, so nobody took it off the fire.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They built the fire far too big for the kettle.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They set the kettle on after Mother came to look for them.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "Line 41 puts the kettle on at half-past five, hours before the eight of line 39."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-008-RC-09",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Read lines 53 to 55. Why did Mrs Viney have to go home early?",
+    "passageRef": "stream-a-02-railway-children",
+    "orderAnchor": 53
+   },
+   "key": "Her son-in-law had broken his arm.",
+   "options": [
+    {
+     "value": "She had broken her own arm.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Nobody had told her the family was arriving.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Because she had to be back at the house by ten.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "Line 55's ten o'clock is her return, which comes after the leaving it is offered for."
+    },
+    {
+     "value": "Her son-in-law had broken his arm.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-010-JE-02",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Read lines 3 to 5. What shows the reader how cold it was?",
+    "passageRef": "stream-a-11-jane-eyre",
+    "orderAnchor": 3
+   },
+   "key": "A sheet of ice lay over the causeway.",
+   "options": [
+    {
+     "value": "Jane could feel the cold through her muff.",
+     "isKey": false,
+     "tag": "en-negation-dropped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A sheet of ice lay over the causeway.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The brook froze over while she sat there.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "Line 3 has the ice already there as she sits, attesting to the cold."
+    },
+    {
+     "value": "Snow was lying along the sides of the lane.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-010-JE-03",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Read lines 9 and 10. Why does Jane stay sitting on the stile?",
+    "passageRef": "stream-a-11-jane-eyre",
+    "orderAnchor": 9
+   },
+   "key": "The path was narrow, so she stayed where she was.",
+   "options": [
+    {
+     "value": "She was afraid of the horse in the dusk.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She was just leaving the stile at that moment.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The path was narrow, so she stayed where she was.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She sat down on the stile because she heard the horse.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "Line 10 has her already seated and just leaving, before the horse is in sight."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-010-JE-05",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 21 to 26. What first makes Jane doubt the dog is a Gytrash?",
+    "passageRef": "stream-a-11-jane-eyre",
+    "orderAnchor": 21
+   },
+   "key": "It went past her quietly and did not look up.",
+   "options": [
+    {
+     "value": "It went past her quietly and did not look up.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Its black and white colour against the trees.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The man riding the horse along behind it.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "Line 25 has the rider break the spell, and the stem asks what came first."
+    },
+    {
+     "value": "It stopped and stared up into her face.",
+     "isKey": false,
+     "tag": "en-negation-dropped",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-013-TI-06",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 27 to 31. What has the talk with Silver done to the lad?",
+    "passageRef": "stream-a-01-treasure-island",
+    "orderAnchor": 27
+   },
+   "key": "It has won him over to the job at last.",
+   "options": [
+    {
+     "value": "He liked the job from the very start.",
+     "isKey": false,
+     "tag": "en-negation-dropped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "It has won him over to the job at last.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "It has made Silver shake his hand hard.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Silver praised him, so he agreed to join.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "The praise at line 29 comes after the hand at line 28, so the cause sits later than the effect."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-014-TS-01",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 1 to 3. Why did Tom's sorrows multiply?",
+    "passageRef": "stream-a-05-tom-sawyer",
+    "orderAnchor": 1
+   },
+   "key": "He thought of the fun he had planned.",
+   "options": [
+    {
+     "value": "He thought of the fun he had planned.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "His energy did not last very long.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The free boys made a world of fun of him.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "Lines 2 and 3 put that ahead of him as a thing to come, so it cannot be the cause yet."
+    },
+    {
+     "value": "Aunt Polly had told him off that morning.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-014-TS-02",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 4 to 7 and 60 to 67. What has changed between the two heaps of goods?",
+    "passageRef": "stream-a-05-tom-sawyer",
+    "orderAnchor": 4
+   },
+   "key": "His pockets hold the same sort of trash, but he paid nothing for it.",
+   "options": [
+    {
+     "value": "He had bits of toys and marbles, and by the end he has twelve marbles.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "His pockets hold the same sort of trash, but he paid nothing for it.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He grew rich first, but then he gave up buying the boys.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "Line 7 has him give up buying before line 61 has him rich, so this turns the order round."
+    },
+    {
+     "value": "His next turn went to Billy Fisher, and a kite came back for it.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-014-TS-05",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 25 to 29. Why does Tom ask Ben what he calls work?",
+    "passageRef": "stream-a-05-tom-sawyer",
+    "orderAnchor": 25
+   },
+   "key": "To make Ben doubt that painting a fence is work.",
+   "options": [
+    {
+     "value": "To make Ben doubt that painting a fence is work.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To find out whether Ben has done any work himself.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To show that the job suits Tom Sawyer.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To answer the question Ben asked about work.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "Ben's line 27 comes after Tom's question at line 26, so the cause sits later."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-014-TS-09",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 45 to 52. Why does Ben end up offering his whole apple?",
+    "passageRef": "stream-a-05-tom-sawyer",
+    "orderAnchor": 45
+   },
+   "key": "Tom keeps saying no, so Ben wants the brush more.",
+   "options": [
+    {
+     "value": "Tom keeps saying no, so Ben wants the brush more.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Tom gave up the brush, so Ben offered the apple.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "Nowhere in lines 45 to 52 does Tom give up the brush; that comes at line 53, after the offer."
+    },
+    {
+     "value": "Ben has eaten his fill and wants to be rid of it.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Ben says he will be just as careful with it.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-014-TS-12",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Think about the whole passage. How does the writer let us watch Tom work on Ben?",
+    "passageRef": "stream-a-05-tom-sawyer",
+    "answerShape": "outside-view-set-against-a-withheld-plan",
+    "orderAnchor": 999,
+    "techniqueKey": "a-plan-named-but-withheld-while-its-working-is-shown"
+   },
+   "key": "He gives us what Ben can see, but he holds Tom's plan back.",
+   "options": [
+    {
+     "value": "He hides Ben's mind, but he gives us Tom's all through.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He tells us the fence had three coats, and then the boys went home.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He shows us Ben giving in first, so the refusals come after that.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "Line 51 still has Tom refusing, and line 53 has Ben give in after that, so this turns the order round."
+    },
+    {
+     "value": "He gives us what Ben can see, but he holds Tom's plan back.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-015-CC-04",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 19 to 22. What did Scrooge do after the shock?",
+    "passageRef": "stream-a-08-christmas-carol",
+    "orderAnchor": 19
+   },
+   "key": "He turned his key and he walked in.",
+   "options": [
+    {
+     "value": "The sight left him quite unmoved.",
+     "isKey": false,
+     "tag": "en-negation-dropped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He let go of the key he was holding.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He lighted his candle, then turned the key.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "Line 21 turns the key before line 22 lights the candle, so this reverses them."
+    },
+    {
+     "value": "He turned his key and he walked in.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-015-CC-06",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 28 to 31 and 60 to 66. What does the second noise do that the first does not?",
+    "passageRef": "stream-a-08-christmas-carol",
+    "orderAnchor": 28
+   },
+   "key": "The first noise he leaves behind, and the second one follows him.",
+   "options": [
+    {
+     "value": "The first is like thunder, and the second is like a dragged chain.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The first noise he leaves behind, and the second one follows him.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The bells ring first, and the door bangs a long while after.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "Line 27 bangs the door before line 59 rings the bells, so this turns the order round."
+    },
+    {
+     "value": "The flame leaps up first, and then it falls again in the grate.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-016-HB-02",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 5 to 10 and 45 to 46. What has changed in Sir Henry?",
+    "passageRef": "stream-a-12-hound-baskervilles",
+    "orderAnchor": 5
+   },
+   "key": "He is a brave comrade at first, but the moor has silenced him.",
+   "options": [
+    {
+     "value": "His eyes were fixed upon it, and his face was eager to see it.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He is a brave comrade at first, but the moor has silenced him.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He falls silent first, but Watson had judged him brave.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "Line 45 comes thirty-five lines after line 9, so this turns the order round."
+    },
+    {
+     "value": "He talks of electric lamps, and then he says nothing more.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-017-CR-03",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 13 to 17 and 43 to 49. How does her second answer differ from her first?",
+    "passageRef": "stream-a-17-cranford",
+    "orderAnchor": 13
+   },
+   "key": "At first she gives reasons, but at the end she gives none at all.",
+   "options": [
+    {
+     "value": "At first she has read them, and at the end she prefers Dr Johnson.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She takes the affront first, and then she offers to make allowances.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "Line 43 has the affront long after line 19 has the allowances, so this reverses them."
+    },
+    {
+     "value": "At first she gives reasons, but at the end she gives none at all.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She grows warmer towards Boz, but the Captain cools towards him.",
+     "isKey": false,
+     "tag": "en-relation-word-flipped",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-017-CR-04",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 18 to 21. What does Captain Brown ask to be allowed to do?",
+    "passageRef": "stream-a-17-cranford",
+    "orderAnchor": 18
+   },
+   "key": "Read the company a scene out of the new number.",
+   "options": [
+    {
+     "value": "Explain that it is a different sort of thing.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "Line 18 has him say that before he asks at line 20, so this puts it after."
+    },
+    {
+     "value": "Fetch the month's number from his own house.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Make allowances for Miss Jenkyns and her taste.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Read the company a scene out of the new number.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-018-RB-02",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 5 to 7 and 62 to 64. What has happened to the way Mr Cobb sits?",
+    "passageRef": "stream-a-21-rebecca-sunnybrook",
+    "orderAnchor": 4
+   },
+   "key": "He settles in at the start, and he undoes it all at the end.",
+   "options": [
+    {
+     "value": "He tucks his hat down first, and then he pulls it over his eyes.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "Line 6 pulls the hat down before line 63 pushes it back, so this reverses them."
+    },
+    {
+     "value": "He settles in at the start, and he undoes it all at the end.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He lolls back, and later he clears his mental decks.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He boosts her up to the seat, and then he resumes his own place.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-018-RB-07",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 36 to 42. What did Mr Cobb first take the small voice for?",
+    "passageRef": "stream-a-21-rebecca-sunnybrook",
+    "orderAnchor": 36
+   },
+   "key": "A cricket, or a tree toad, or a bird.",
+   "options": [
+    {
+     "value": "The rattle and rumble of the wheels.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A small shape hanging out of the window.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "Line 39 is what he saw after he turned round, so this puts it before he looked."
+    },
+    {
+     "value": "A cricket, or a tree toad, or a bird.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Somebody calling to him from the road.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-019-BV-02",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 6 to 9. Why does Bevis say \"if you had run quick!\"?",
+    "quotesAuthority": "David, 20 August: repair the splice to the second half only. The quotation is now ONE span, verbatim in line 8 of stream-a-20-bevis at the item's own lineRefs."
+   },
+   "key": "Mark would not go, and the fish left while they argued.",
+   "options": [
+    {
+     "value": "Mark has promised to fetch everything for him.",
+     "isKey": false,
+     "tag": "en-negation-dropped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Mark ran for the rod while the fish waited.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "Nobody runs anywhere; line 9 is a refusal."
+    },
+    {
+     "value": "Mark would not go, and the fish left while they argued.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He wants Mark to admit he cannot run fast.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-019-BV-04",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Look at lines 14 to 17 and lines 87 to 88. What is true of the rule about captains both times Bevis states it?",
+    "passageRef": "stream-a-20-bevis",
+    "answerShape": "two-halved-contrast-of-when-it-is-claimed",
+    "orderAnchor": 14,
+    "techniqueKey": "same-rule-asserted-from-defeat-and-from-victory"
+   },
+   "key": "He claims it while he is losing, and again once he has won.",
+   "options": [
+    {
+     "value": "He says the captain does everything, and that people do as he says.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He gives the order first, and gives the reason once he has won.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "Line 14 comes seventy lines before line 87."
+    },
+    {
+     "value": "He learns it while he climbs, and again once he is across.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He claims it while he is losing, and again once he has won.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-019-BV-10",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 49 to 54. How does Bevis learn that the cliff can be got past?",
+    "passageRef": "stream-a-20-bevis",
+    "orderAnchor": 49
+   },
+   "key": "He watches Pan run along the face of it.",
+   "options": [
+    {
+     "value": "He watches Pan run along the face of it.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Pan follows him along once he has set off.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He finds the narrow ledge and then calls Pan back.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "The ledge is not found until line 58 and Pan comes back on his own."
+    },
+    {
+     "value": "He sees a set of footmarks left along the sand.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-020-HD-01",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 2 to 8. Why does Fraulein Rottenmeier decide to give Heidi some of Clara's clothes?",
+    "passageRef": "stream-a-19-heidi",
+    "orderAnchor": 2
+   },
+   "key": "Because Heidi will then look decent when Herr Sesemann comes home.",
+   "options": [
+    {
+     "value": "Because Clara was willing to give away any number of dresses.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Because Heidi will then look decent when Herr Sesemann comes home.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Because she had looked in the wardrobe and found it bare.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "She goes up at line 7, after the decision at line 4."
+    },
+    {
+     "value": "Because Heidi's own clothes were spoiled on the journey.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-020-HD-06",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 26 to 30. What reason does Clara give for the rolls not being worth keeping?",
+    "passageRef": "stream-a-19-heidi",
+    "orderAnchor": 26
+   },
+   "key": "They would have gone hard and stale before Heidi went home.",
+   "options": [
+    {
+     "value": "They had already gone hard and stale in the wardrobe.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "Line 29 says would have been by then, which has not happened yet."
+    },
+    {
+     "value": "They will be replaced with fresh ones.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They are worse than the bread this house has.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They would have gone hard and stale before Heidi went home.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-020-HD-11",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 44 and 45. What does Heidi do with the hat?",
+    "passageRef": "stream-a-19-heidi",
+    "orderAnchor": 44
+   },
+   "key": "She wraps a handkerchief round it and pushes it to the back of the cupboard.",
+   "options": [
+    {
+     "value": "She puts it in the cupboard and then wraps it up.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "Line 44 wraps it before line 45 puts it away."
+    },
+    {
+     "value": "She squeezes it further out of shape in her delight.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She wraps a handkerchief round it and pushes it to the back of the cupboard.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She puts it on and keeps it on in bed.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-021-ED-02",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Look at lines 7 and 8, and lines 81 and 82. What does Fogg do both times?",
+    "passageRef": "stream-a-09-eighty-days",
+    "answerShape": "two-halved-contrast-of-what-he-says-against-what-he-does-next",
+    "orderAnchor": 7,
+    "techniqueKey": "a-large-remark-closed-with-an-instruction-about-the-game"
+   },
+   "key": "He drops a large remark, and then tells them all to play.",
+   "options": [
+    {
+     "value": "He drops a large remark, and then tells them all to play.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He says the world was once big, and then asks for diamonds.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He calls for the cards first, and makes his remark later.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "Line 7 puts the remark before the instruction, both times."
+    },
+    {
+     "value": "He grows calm as the evening goes on, and plays better.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-023-RT-02",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Look at lines 8 to 12 and lines 69 to 72. What do lines 69 to 72 show about the creature in lines 8 to 12?",
+    "passageRef": "stream-a-15-jungle-book",
+    "answerShape": "what-he-was-on-arrival-against-what-he-is-to-nag",
+    "orderAnchor": 8,
+    "techniqueKey": "the-half-drowned-arrival-set-against-the-fear-he-now-causes"
+   },
+   "key": "The creature they took for dead is the one the cobra now fears.",
+   "options": [
+    {
+     "value": "The summer flood washed him down a roadside ditch, and Nag was afraid at heart.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The creature they took for dead is the one the cobra now fears.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Nag was afraid of him on the day the flood washed him up.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": true,
+     "execution": "Line 69 says he had never met a live cobra before this."
+    },
+    {
+     "value": "He faces Nag so the family who saved him will keep him.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    }
+   ]
+  }
+ ]
+}

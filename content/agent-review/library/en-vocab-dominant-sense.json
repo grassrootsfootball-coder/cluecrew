@@ -1,0 +1,1650 @@
+{
+ "entry": {
+  "id": "en-vocab-dominant-sense",
+  "status": "ACTIVE",
+  "district": "ENGLISH",
+  "category": null,
+  "description": "The child applies the word's commonest everyday sense in a context that does not support it. The sense chosen is a real sense of the same word; it is simply the one that arrives first, and the sentence around the word is what should have displaced it. Scoped to the ERROR, not to vocabulary items: it occurs wherever a word's sense is load-bearing, including on technique stems.",
+  "childHint": "You know one meaning for this word. Check that meaning fits what the sentence is saying here.",
+  "approvedBy": "rev-0001",
+  "approvalMethod": "written review — ENG-028 return document (annie-eng028-return.md, sha 2575946944cc0f41), section 1 \"hint (authored field)\"",
+  "approvalNote": "Hint READ from the authored field in her own document, character for character, never retyped. Supersedes en-vocab-secondary-sense. | SCOPING RULED 2026-08-16 (Annie): the tag is scoped to the ERROR, not to vocabulary items — it occurs wherever a word’s sense is load-bearing, including on technique stems. Her own 8 August ruling applied to this entry; the sentence had lived only in the drafting store until 16 August.",
+  "textProvenance": null
+ },
+ "carrierCount": 42,
+ "carriers": [
+  {
+   "itemId": "ENG-001-WIW-04",
+   "status": "LIVE",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Read line 8. What does 'bolted out of the house' mean here?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 4
+   },
+   "key": "Rushed out all of a sudden.",
+   "options": [
+    {
+     "value": "Ate something far too fast.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Slid a bolt across to lock the door.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "The door-fastening is the sense a child meets first, and 'bolted out of the house' puts a house and a door in the same clause to support it."
+    },
+    {
+     "value": "Climbed out slowly using a ladder.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Rushed out all of a sudden.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Shouted 'Hang spring-cleaning!' as he went.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-08",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Read line 18. What does 'the carol of happy birds' mean?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 8
+   },
+   "key": "The singing of the birds.",
+   "options": [
+    {
+     "value": "A Christmas song the birds had learned.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "The Christmas sense of 'carol' is the one a child meets first, and the passage supplies no season but spring to argue against it. NOTE REPAIRED 2026-08-16 (delivery 52): this is the DOMINANT sense arriving ahead of the passage's, not a second sense being matched to the wrong one. The tag is grandfathered; the description of the error is not."
+    },
+    {
+     "value": "The singing of the birds.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A church bell ringing far away.",
+     "isKey": false,
+     "tag": "en-vocab-not-this-word",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The sound of the river chattering.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A shout from someone in the meadow.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-11",
+   "status": "LIVE",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Read lines 24 and 25. What does 'the row' mean here?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 11
+   },
+   "key": "The noise and fuss the Mole had made.",
+   "options": [
+    {
+     "value": "A line of rabbits standing together.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "A row of things is the sense a child meets first, and the sentence has rabbits at their holes to line up."
+    },
+    {
+     "value": "Moving a boat along with oars.",
+     "isKey": false,
+     "tag": "en-vocab-form-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The noise and fuss the Mole had made.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The hedge that ran along the meadow.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "An argument between two of the rabbits.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-17",
+   "status": "LIVE",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Read line 49: 'A grave round face'. What does 'grave' mean here?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 17
+   },
+   "key": "Serious and calm.",
+   "options": [
+    {
+     "value": "Serious and calm.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A place where someone is buried.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "A burial place is the commonest sense of 'grave' a child meets, and it arrives ahead of the adjective the line needs. NOTE REPAIRED 2026-08-16 (delivery 52): DOMINANT sense, not a second sense mismatched. Tag grandfathered under the era exception; the note is not covered by it."
+    },
+    {
+     "value": "Dark and dirty with earth.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Very sad and upset.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Round and rather fat.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-19",
+   "status": "LIVE",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Read lines 59 to 64. The Rat 'sculled smartly across and made fast'. What does 'made fast' mean?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 19
+   },
+   "key": "Tied the boat up firmly.",
+   "options": [
+    {
+     "value": "Went across very quickly.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "'Fast' as quick is overwhelmingly the sense a child meets, and 'sculled smartly' in the same line supports it."
+    },
+    {
+     "value": "Went without any food.",
+     "isKey": false,
+     "tag": "en-vocab-form-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Made the Mole hurry up.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Waved to the Mole from the boat.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "Waving is nowhere in the passage; a boat arriving invites it."
+    },
+    {
+     "value": "Tied the boat up firmly.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-20",
+   "status": "LIVE",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Read line 65. The Mole was 'seated in the stern of a real boat'. What is the stern?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 20
+   },
+   "key": "The back part of the boat.",
+   "options": [
+    {
+     "value": "A strict and serious look.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "A stern look is the adjective, and it is the sense of 'stern' a child meets first; the line is about a boat. NOTE REPAIRED 2026-08-16 (delivery 52): the error is the DOMINANT sense arriving before the nautical one, not a second sense matched to the wrong target. Tag grandfathered; the note is not."
+    },
+    {
+     "value": "The oars that push the boat along.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A soft seat with a cushion on it.",
+     "isKey": false,
+     "tag": "en-vocab-not-this-word",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The rope that held the boat to the bank.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The back part of the boat.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-05",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Read lines 17 to 21. Line 21 says: 'when the party entered the assembly-room'. What does 'party' mean here?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 5
+   },
+   "key": "A group of people who arrive together.",
+   "options": [
+    {
+     "value": "A celebration with food, music and games.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "A birthday party is the sense a child meets first, and the word sits in a sentence about a ball."
+    },
+    {
+     "value": "The ball that Mr Bingley talked of giving at Netherfield.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A group of people who arrive together.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A group of people who run a country together.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Everybody who came to the assembly that night.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-13",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Read lines 41 to 43. The writer says: 'His character was decided. He was the proudest, most disagreeable man in the world.' What do these short, sure sentences do?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 13
+   },
+   "key": "They make the room's quick opinion sound like a settled fact.",
+   "options": [
+    {
+     "value": "They prove that Mr Darcy really was the worst man alive.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They show that the writer had run out of things to say about him.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They make the room's quick opinion sound like a settled fact.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They show that Mr Darcy had at last made up his mind about something.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "Takes 'his character was decided' as Mr Darcy deciding something. NOTE REPAIRED 2026-08-16 (delivery 52): 'decided' meaning MADE A DECISION is the sense that arrives first, not 'the other sense' — the passage's sense, settled and no longer open to question, is the rarer one. The error is a dominant sense displacing a rarer one. Tag grandfathered; the note is not."
+    },
+    {
+     "value": "They tell us that Mr Darcy said nothing to anybody all evening.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-18",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Read lines 53 to 56. Mr Darcy says: 'Your sisters are engaged.' What does 'engaged' mean here?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 18
+   },
+   "key": "They have already promised their dances to other partners.",
+   "options": [
+    {
+     "value": "They have promised to marry somebody.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "Promised in marriage is the sense a child meets first, and a ballroom full of unmarried people supports it."
+    },
+    {
+     "value": "They are busy and cannot be spoken to.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They are standing and talking with Mr Bingley.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They do not want to dance with Mr Darcy.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They have already promised their dances to other partners.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-21",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Read lines 70 to 73. Elizabeth 'told the story, however, with great spirit'. What does 'spirit' mean here?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 21
+   },
+   "key": "Being lively and cheerful.",
+   "options": [
+    {
+     "value": "A ghost.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "A ghost is the sense a child meets first, and nothing in the sentence rules it out until you read on."
+    },
+    {
+     "value": "Anger.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Care and quietness, so that nobody else heard.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Being lively and cheerful.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Bravery when you are in danger.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-004-AGG-02",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Read lines 6 and 7. Line 7 speaks of 'her attitude and expression'. What does 'attitude' mean here?",
+    "passageRef": "stream-a-06-anne-green-gables",
+    "orderAnchor": 2
+   },
+   "key": "The way she was holding herself.",
+   "options": [
+    {
+     "value": "How tired she was after her journey.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The way she was holding herself.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "What she thought about waiting.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "Takes the opinion sense of attitude, which this sentence does not fix."
+    },
+    {
+     "value": "How shy and awkward she looked.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-005-BB-02",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Read lines 6 to 8. Line 8 says the bridge had 'good substantial rails'. What does 'substantial' mean here?",
+    "passageRef": "stream-a-04-black-beauty",
+    "orderAnchor": 6
+   },
+   "key": "Strong and solidly built.",
+   "options": [
+    {
+     "value": "Very large in amount.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "The commonest other sense of the word, which a pair of rails does not fit."
+    },
+    {
+     "value": "Strong and solidly built.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Newly put up that year.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Painted so they could be seen.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-005-BB-04",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "In town Beauty says 'I had a good bait'. What does 'bait' mean here? (line 14)",
+    "passageRef": "stream-a-04-black-beauty",
+    "orderAnchor": 14
+   },
+   "key": "A feed and a rest.",
+   "options": [
+    {
+     "value": "Something used to catch a fish.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "The commonest other sense of the word, which this sentence does not fix."
+    },
+    {
+     "value": "A long wait outside, with nothing to eat.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A trick played to make him go on.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A feed and a rest.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-006-TM-08",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Read lines 38 and 39. On line 38 Uncle Podger takes 'the rule' and re-measures. What is a 'rule' here?",
+    "passageRef": "stream-a-10-three-men-boat",
+    "orderAnchor": 38
+   },
+   "key": "A tool for measuring length.",
+   "options": [
+    {
+     "value": "A law about how the job has to be done.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "The commonest other sense of the word, which this sentence does not fix."
+    },
+    {
+     "value": "A line drawn on the wall to work from.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A habit he always follows when working.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A tool for measuring length.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-007-LP-03",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Line 21 says the swimming hat had 'perished'. What does 'perished' mean here?",
+    "passageRef": "stream-b-04",
+    "orderAnchor": 3
+   },
+   "key": "Gone dry and crumbly with age.",
+   "options": [
+    {
+     "value": "Died, the way a living thing does.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "The commonest other sense of the word, which the rubber hat does not fit."
+    },
+    {
+     "value": "Been lost somewhere in the cupboard.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Gone dry and crumbly with age.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Been worn out by too much swimming.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-007-LP-10",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Read lines 43 and 44. On line 44 Miss Bhatt lifted 'the top layer' out of the Friday box. What is a 'layer' here?",
+    "passageRef": "stream-b-04",
+    "orderAnchor": 10
+   },
+   "key": "The things lying across the top.",
+   "options": [
+    {
+     "value": "A thin coat of paint or dust.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "The commonest other sense of the word, which a box of clothes does not fit."
+    },
+    {
+     "value": "The things lying across the top.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A hen that lays eggs.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A list of what is in the box.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-008-RC-08",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Look at lines 50 to 52. Peter says 'ripping' on line 52. What does he mean by it?",
+    "passageRef": "stream-a-02-railway-children",
+    "orderAnchor": 50
+   },
+   "key": "that the pie is wonderful",
+   "options": [
+    {
+     "value": "that the pie is wonderful",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "that the pie is torn into pieces",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "The everyday sense of the word, and line 50 has the pie whole and set out."
+    },
+    {
+     "value": "that the table has been beautifully laid",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-009-SM-07",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Look at lines 28 to 30. Line 29 puts an 'elder' on top of the wall. What is an 'elder' here?",
+    "passageRef": "stream-b-02",
+    "orderAnchor": 28
+   },
+   "key": "a small tree or bush",
+   "options": [
+    {
+     "value": "an older member of the family",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "A real sense of the word, and line 29 has this one growing out of the wall."
+    },
+    {
+     "value": "the hole shaped like a window",
+     "isKey": false,
+     "tag": "en-coordination-wrong-conjunct",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "a small tree or bush",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-009-SM-08",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Look at lines 31 and 32. On line 32 the can he is carrying 'spoiled the effect'. What does he mean by 'the effect'?",
+    "passageRef": "stream-b-02",
+    "orderAnchor": 31
+   },
+   "key": "the feeling of the visit he was making",
+   "options": [
+    {
+     "value": "what picking the can up led to",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "A real sense of the word, and here it is a feeling being spoiled, not a result."
+    },
+    {
+     "value": "the trouble of carrying a can round with him",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "that it seemed rude not to pick it up",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "the feeling of the visit he was making",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-010-JE-08",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Look at lines 42 to 44. What does 'halted' on line 44 mean there?",
+    "passageRef": "stream-a-11-jane-eyre",
+    "orderAnchor": 42
+   },
+   "key": "walked with a limp",
+   "options": [
+    {
+     "value": "walked with a limp",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "stopped where he was standing",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "The everyday sense, and line 44 has him move to the stile and sit down."
+    },
+    {
+     "value": "felt along his foot and leg",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-012-ML-08",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Look at lines 41 to 43. What does 'relish' on line 43 mean there?",
+    "passageRef": "stream-a-14-mill-on-floss",
+    "orderAnchor": 8
+   },
+   "key": "the enjoyment she took in the taste",
+   "options": [
+    {
+     "value": "the enjoyment she took in the taste",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "a sauce eaten along with the food",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "A real sense, and line 43 makes this a word about how she ate rather than what."
+    },
+    {
+     "value": "the speed at which she ate up her half of it",
+     "isKey": false,
+     "tag": "en-coordination-wrong-conjunct",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-015-CC-11",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Look at lines 78 and 79. What does 'caustic' on line 78 mean here?",
+    "passageRef": "stream-a-08-christmas-carol",
+    "orderAnchor": 78
+   },
+   "key": "Sharp and cutting in what he says.",
+   "options": [
+    {
+     "value": "Able to burn like a strong acid.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "The commonest everyday sense of the word; line 78 puts it on how he speaks."
+    },
+    {
+     "value": "Careful about every word he uses.",
+     "isKey": false,
+     "tag": "en-vocab-built-from-parts",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Sharp and cutting in what he says.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Cold, in the way he had always been.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-016-HB-11",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Look at lines 72 to 76. What does 'veil' on line 75 mean here?",
+    "passageRef": "stream-a-12-hound-baskervilles",
+    "orderAnchor": 72
+   },
+   "key": "The dark ivy covering the front.",
+   "options": [
+    {
+     "value": "A thin cloth worn over the face.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "The commonest everyday sense of the word; line 75 puts it on the front of a house."
+    },
+    {
+     "value": "The patches clipped bare here and there.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The dark ivy covering the front.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The coat of arms that breaks through it.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-017-CR-05",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Look at lines 22 to 25. What does 'resignation' on line 22 mean here?",
+    "passageRef": "stream-a-17-cranford",
+    "orderAnchor": 22
+   },
+   "key": "Putting up with something you dislike.",
+   "options": [
+    {
+     "value": "Putting up with something you dislike.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Giving up a job that you hold.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "The commonest everyday sense of the word; line 22 has her settling into a chair."
+    },
+    {
+     "value": "Sitting in a patient and grave way.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Deciding to laugh along with the rest.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-018-RB-06",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Look at lines 33 to 35. What does 'oblivion' on line 35 mean here?",
+    "passageRef": "stream-a-21-rebecca-sunnybrook",
+    "orderAnchor": 33
+   },
+   "key": "Being quite unable to remember.",
+   "options": [
+    {
+     "value": "Being wiped out altogether.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "The commonest everyday sense of the word; line 35 attaches it to a promise."
+    },
+    {
+     "value": "Being quite unable to remember.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Being lulled by the heat and dust.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Thinking hard about the errands ahead.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-019-BV-05",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Look at lines 19 and 20. What does \"yielding\" on line 20 mean here?",
+    "passageRef": "stream-a-20-bevis",
+    "orderAnchor": 19
+   },
+   "key": "Soft, so that a foot sinks into it.",
+   "options": [
+    {
+     "value": "Soft, so that a foot sinks into it.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Giving in to somebody who insists.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "The commonest sense, and the whole quarrel is about giving way."
+    },
+    {
+     "value": "Marked with the prints of somebody who has walked over it.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Moving slowly and stubbornly along.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-019-BV-07",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Look at lines 26 and 27. What does \"shelving\" on line 27 mean here?",
+    "passageRef": "stream-a-20-bevis",
+    "orderAnchor": 26
+   },
+   "key": "Low and sloping gently down to the water.",
+   "options": [
+    {
+     "value": "Fitted with shelves for standing things on.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "The sense a child meets first, and it is a noun they know."
+    },
+    {
+     "value": "Put aside to be dealt with later.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Low and sloping gently down to the water.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Suddenly steep, and cut through by the water.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-019-BV-09",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Look at lines 44 to 46. What does \"inclined\" on line 45 mean here?",
+    "passageRef": "stream-a-20-bevis",
+    "orderAnchor": 44
+   },
+   "key": "Feeling tempted to do a thing.",
+   "options": [
+    {
+     "value": "Sloping at an angle.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "The commonest sense, and there is a cliff in the same sentence."
+    },
+    {
+     "value": "Feeling tempted to do a thing.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Leaning over to see better.",
+     "isKey": false,
+     "tag": "en-vocab-built-from-parts",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Climbing over railings to cross a field.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-020-HD-09",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Look at lines 37 and 38. What does \"suppress\" on line 38 mean here?",
+    "passageRef": "stream-a-19-heidi",
+    "orderAnchor": 37
+   },
+   "key": "To hold back a thing that is coming out.",
+   "options": [
+    {
+     "value": "To put down a rising by force.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "The sense a child meets in history, and it is the commoner one."
+    },
+    {
+     "value": "To hold back a thing that is coming out.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To sit quietly at the table.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To press down hard on a thing.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-021-ED-03",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Look at line 9. What does \"rubber\" mean here?",
+    "passageRef": "stream-a-09-eighty-days",
+    "orderAnchor": 9
+   },
+   "key": "A set of games played through to the end.",
+   "options": [
+    {
+     "value": "The soft stuff a ball is made from.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "The commonest sense a child owns, and it is the same word."
+    },
+    {
+     "value": "A thing used for rubbing out pencil.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A pause in which nobody spoke.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A set of games played through to the end.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-021-ED-07",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Look at lines 24 to 31. What does \"turn it was to deal\" on line 24 mean here?",
+    "passageRef": "stream-a-09-eighty-days",
+    "orderAnchor": 24
+   },
+   "key": "It was his to give out the cards again.",
+   "options": [
+    {
+     "value": "A bargain made between two people.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "The commonest sense, and a wager is being argued about in the same lines."
+    },
+    {
+     "value": "It was his to give out the cards again.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "It was his to take a large amount.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "It was his to gather up the cards.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-022-GK-04",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Look at lines 16 to 19. What does \"stitch\" on line 17 mean here?",
+    "passageRef": "stream-c-01",
+    "orderAnchor": 16
+   },
+   "key": "A sharp pain in the side from running.",
+   "options": [
+    {
+     "value": "A loop of thread in a piece of sewing.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "The commonest sense a child owns, and it is the same word."
+    },
+    {
+     "value": "A trick somebody does every single time.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A sharp pain in the side from running.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A tear that has been sewn up again.",
+     "isKey": false,
+     "tag": "en-vocab-form-lookalike",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-022-GK-10",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Look at lines 40 to 44. What does \"shifting\" on line 43 mean here?",
+    "passageRef": "stream-c-01",
+    "orderAnchor": 40
+   },
+   "key": "Moving himself away from a place.",
+   "options": [
+    {
+     "value": "Moving himself away from a place.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Changing from one shape to another.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "A common sense of the word and it fits a sentence about change."
+    },
+    {
+     "value": "Stacking things up by a fence.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Working a turn at a job.",
+     "isKey": false,
+     "tag": "en-vocab-built-from-parts",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-023-RT-04",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Look at lines 21 to 23. What does \"order\" mean here?",
+    "passageRef": "stream-a-15-jungle-book",
+    "orderAnchor": 21
+   },
+   "key": "A tidy state, with everything smoothed down.",
+   "options": [
+    {
+     "value": "A command that somebody had given him.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "The commonest sense a child owns, and it is the same word."
+    },
+    {
+     "value": "The place each thing takes in a line.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "So that he could go on and do something.",
+     "isKey": false,
+     "tag": "en-vocab-form-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A tidy state, with everything smoothed down.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-023-RT-09",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Look at lines 51 to 54. What does \"stranger\" mean here?",
+    "passageRef": "stream-a-15-jungle-book",
+    "orderAnchor": 51
+   },
+   "key": "Somebody new here, who does not know the place.",
+   "options": [
+    {
+     "value": "Somebody new here, who does not know the place.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A person you have been told not to speak to.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "The sense a child is taught first, and it is the same word."
+    },
+    {
+     "value": "Somebody more strange than Darzee.",
+     "isKey": false,
+     "tag": "en-vocab-built-from-parts",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Somebody who finds a thing very sad.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-024-BF-02",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Look at lines 6 to 8. What does \"sign\" mean here?",
+    "passageRef": "stream-b-03",
+    "orderAnchor": 6
+   },
+   "key": "Something showing what is about to happen.",
+   "options": [
+    {
+     "value": "A board with writing on it.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "The commonest sense a child owns, and it is the same word."
+    },
+    {
+     "value": "Something showing what is about to happen.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A mark used in sums, such as a plus.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The card the butterfly was hanging under.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-024-BF-09",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Look at lines 31 and 32. What does \"hatch\" mean here?",
+    "passageRef": "stream-b-03",
+    "orderAnchor": 31
+   },
+   "key": "A small opening in a wall or counter.",
+   "options": [
+    {
+     "value": "A small opening in a wall or counter.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The breaking out of an egg or a chrysalis.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "The commonest sense a child owns, and this passage is full of it."
+    },
+    {
+     "value": "A small door set into a floor.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The extinguisher by the double doors.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-025-LW-04",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Look at lines 24 and 25. What does \"mastered\" mean here?",
+    "passageRef": "stream-a-16-little-women",
+    "orderAnchor": 24
+   },
+   "key": "Got the better of her.",
+   "options": [
+    {
+     "value": "Learned to do something thoroughly.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "The commonest sense a child owns, and it reverses who is doing what."
+    },
+    {
+     "value": "Made her the master of the house.",
+     "isKey": false,
+     "tag": "en-vocab-built-from-parts",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Shook her till her teeth chattered.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Got the better of her.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-025-LW-10",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Look at lines 58 to 60. What does \"sounding\" mean here?",
+    "passageRef": "stream-a-16-little-women",
+    "orderAnchor": 58
+   },
+   "key": "Testing how solid it is.",
+   "options": [
+    {
+     "value": "Making the ice ring as he goes over it.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "The commonest sense a child owns, and it is the same word."
+    },
+    {
+     "value": "Testing how solid it is.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Calling out a warning to the others.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Skating along close to the shore.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-026-AL-05",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Look at lines 18 to 20. What does \"spear\" mean here?",
+    "passageRef": "stream-b-05",
+    "orderAnchor": 5
+   },
+   "key": "Push the fork point right through them.",
+   "options": [
+    {
+     "value": "Push the fork point right through them.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Throw or jab with a long pointed weapon.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "The commonest sense a child owns, and it is the same word."
+    },
+    {
+     "value": "Pick a piece of food up on a fork point.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Put the fork in a hand’s width back.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-026-AL-07",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Look at lines 25 and 26. What does \"plot\" mean here?",
+    "passageRef": "stream-b-05",
+    "orderAnchor": 7
+   },
+   "key": "A piece of ground for growing food.",
+   "options": [
+    {
+     "value": "The story of a book or a film.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "The commonest sense a child owns, and it is met in every English lesson."
+    },
+    {
+     "value": "A secret plan made against somebody.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A piece of ground for growing food.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The end of the row where Alan stood.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-028-PR-01",
+   "status": "LIVE",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Look at lines 3 and 4. What does \"swells\" mean here?",
+    "passageRef": "stream-b-01",
+    "orderAnchor": 3
+   },
+   "key": "Gets bigger as it takes in the heat.",
+   "options": [
+    {
+     "value": "Gets bigger as it takes in the heat.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Rises louder, the way music does.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": true,
+     "execution": "The commonest sense a child owns, and it is the same word."
+    },
+    {
+     "value": "Grows in number, the way a crowd does.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Stops sitting flat in its frame.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    }
+   ]
+  }
+ ]
+}

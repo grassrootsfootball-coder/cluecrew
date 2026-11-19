@@ -1,0 +1,231 @@
+{
+ "door": "vr-06",
+ "caseId": "case-vr-06",
+ "title": "The Gap in the Report",
+ "questionType": "vr-06-missing-word",
+ "entries": {
+  "vr06-ignores-sentence": {
+   "description": "Made a real word that does not fit the sentence.",
+   "childHint": "Read the whole sentence with your word in it. Does it make sense?"
+  }
+ },
+ "houseFormExemplars": {
+  "vr06-ignores-sentence": [
+   {
+    "itemId": "bank-vr-06-missing-word-15",
+    "option": "FAC",
+    "execution": "Does not fit the sentence, although it makes a real word (FACTOR)."
+   },
+   {
+    "itemId": "bank-vr-06-missing-word-15",
+    "option": "EDI",
+    "execution": "Does not fit the sentence, although it makes a real word (EDITOR)."
+   },
+   {
+    "itemId": "bank-vr-06-missing-word-17",
+    "option": "SUB",
+    "execution": "Does not fit the sentence, although it makes a real word (SUBMIT)."
+   }
+  ]
+ },
+ "rows": [
+  {
+   "itemId": "bank-vr-06-missing-word-15",
+   "signed": false,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "When I felt poorly, Mum took me to see the ___TOR at the surgery."
+   },
+   "solution": null,
+   "key": "DOC",
+   "options": [
+    {
+     "optionId": "cmscb159y0075tmzvznn18hmh",
+     "value": "DOC",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb159y0076tmzvlsvi20pq",
+     "value": "FAC",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (FACTOR)."
+    },
+    {
+     "optionId": "cmscb159y0077tmzvhe5offq1",
+     "value": "EDI",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (EDITOR)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-17",
+   "signed": false,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "You must have a special ___MIT to park your car on this busy road."
+   },
+   "solution": null,
+   "key": "PER",
+   "options": [
+    {
+     "optionId": "cmscb15a2007dtmzvdc3ybpmu",
+     "value": "PER",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15a2007etmzvrxutmsge",
+     "value": "SUB",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (SUBMIT)."
+    },
+    {
+     "optionId": "cmscb15a2007ftmzvmybkyjdi",
+     "value": "SUM",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (SUMMIT)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-23",
+   "signed": false,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "The heavy bag of bricks was a great ___DEN to carry all the way up the hill."
+   },
+   "solution": null,
+   "key": "BUR",
+   "options": [
+    {
+     "optionId": "cmscb15ad0081tmzvddzdce3f",
+     "value": "BUR",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15ad0082tmzvxl6x0rpc",
+     "value": "GAR",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (GARDEN)."
+    },
+    {
+     "optionId": "cmscb15ad0083tmzvka50j64a",
+     "value": "SUD",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (SUDDEN)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-35",
+   "signed": false,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "Waiting for her turn to sing on the stage, Mia felt very ___IOUS and her tummy was full of butterflies."
+   },
+   "solution": null,
+   "key": "ANX",
+   "options": [
+    {
+     "optionId": "cmscb15b0009dtmzviostj77b",
+     "value": "ANX",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15b0009etmzvqcvdywy7",
+     "value": "OBV",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (OBVIOUS)."
+    },
+    {
+     "optionId": "cmscb15b0009ftmzvm80nqw86",
+     "value": "VAR",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (VARIOUS)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-36",
+   "signed": false,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "Even after he was told off, the boy glared in a ___IANT way and refused to say sorry."
+   },
+   "solution": null,
+   "key": "DEF",
+   "options": [
+    {
+     "optionId": "cmscb15b2009htmzvtame6juh",
+     "value": "DEF",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15b2009itmzvsral5u3z",
+     "value": "RAD",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (RADIANT)."
+    },
+    {
+     "optionId": "cmscb15b2009jtmzv97tljlki",
+     "value": "REL",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (RELIANT)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-40",
+   "signed": false,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "After being ill in bed for a week, Grandad felt weak and ___BLE and could hardly stand."
+   },
+   "solution": null,
+   "key": "FEE",
+   "options": [
+    {
+     "optionId": "cmscb15ba009xtmzvjjbljeqv",
+     "value": "FEE",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15ba009ytmzvia60zuti",
+     "value": "MAR",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (MARBLE)."
+    },
+    {
+     "optionId": "cmscb15ba009ztmzvzcdpu6oj",
+     "value": "TRE",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (TREBLE)."
+    }
+   ]
+  }
+ ]
+}

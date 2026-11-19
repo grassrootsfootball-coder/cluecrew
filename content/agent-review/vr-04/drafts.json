@@ -1,0 +1,990 @@
+{
+  "door": "vr-04",
+  "drafter": "agent",
+  "drafts": [
+    {
+      "itemId": "bank-vr-04-closest-meaning-30",
+      "optionId": "cmscb15800043tmzvbbdx88hz",
+      "value": "rested",
+      "tag": "vr04-opposite-pull",
+      "verdict": "EXECUTES",
+      "execution": "The task is to find the word closest in meaning to 'exhausted', and the key is 'worn out'. 'rested' is the opposite of 'exhausted': it means no longer tired. A child who finds the right area of meaning but reverses it picks 'rested'."
+    },
+    {
+      "itemId": "bank-vr-04-closest-meaning-30",
+      "optionId": "cmscb15800044tmzvvcnae71u",
+      "value": "tired",
+      "tag": "vr04-wrong-strength",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'worn out', which matches how extreme 'exhausted' is. 'tired' is from the same family but far weaker: you can be a little tired, but not a little exhausted. A child who matches the family and ignores the strength picks 'tired'."
+    },
+    {
+      "itemId": "bank-vr-04-closest-meaning-30",
+      "optionId": "cmscb15800045tmzvi4w0czzm",
+      "value": "sleep",
+      "tag": "vr04-associated-not-same",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'worn out'. 'sleep' is what an exhausted person needs, so the two words go together, but 'sleep' does not mean 'exhausted' (it is not even a describing word). A child who takes goes-together for means-the-same picks 'sleep'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-01",
+      "optionId": "gen-vr-04-closest-meaning-01-opt2",
+      "value": "reckless",
+      "tag": "vr04-wrong-strength",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'fearless'. 'reckless' is from the same family but pushed too far: it means bold without any care for danger. A child who reaches for the strongest courage word picks 'reckless' instead of 'fearless'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-01",
+      "optionId": "gen-vr-04-closest-meaning-01-opt3",
+      "value": "loud",
+      "tag": "vr04-one-feature-only",
+      "verdict": "CANNOT_EXECUTE",
+      "reason": "'loud' is not a visible sign of being brave. A brave person can be completely quiet, and nothing about bravery shows itself through noise, so the one-feature mistake does not lead a child to 'loud' on this row."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-01",
+      "optionId": "gen-vr-04-closest-meaning-01-opt4",
+      "value": "loyal",
+      "tag": "vr04-keeps-the-same-company",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'fearless'. 'loyal' is another word of praise that turns up beside 'brave' when describing a hero, but it means faithful, not unafraid. A child who matches the company the words keep picks 'loyal'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-02",
+      "optionId": "gen-vr-04-closest-meaning-02-opt2",
+      "value": "frantic",
+      "tag": "vr04-wrong-strength",
+      "verdict": "CANNOT_EXECUTE",
+      "reason": "'frantic' is not a stronger form of 'swift'. It means wild with worry or panic, which is a different family; something can be swift and perfectly calm. The wrong-strength mistake does not produce it on this row."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-02",
+      "optionId": "gen-vr-04-closest-meaning-02-opt3",
+      "value": "sudden",
+      "tag": "vr04-wrong-shade",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'speedy'. 'sudden' shares the general area of quickness but tilts it towards happening without warning. A swift runner is fast; a sudden noise is unexpected. A child who hears only 'quick' picks 'sudden'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-02",
+      "optionId": "gen-vr-04-closest-meaning-02-opt4",
+      "value": "early",
+      "tag": "vr04-keeps-the-same-company",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'speedy'. 'early' turns up in the same situations as 'swift', such as a prompt reply or getting somewhere in good time, but it is about when something happens, not how fast. A child who matches the situation picks 'early'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-03",
+      "optionId": "gen-vr-04-closest-meaning-03-opt2",
+      "value": "soaked",
+      "tag": "vr04-wrong-strength",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'moist', which is slightly wet, like 'damp'. 'soaked' is from the same family but far stronger: completely wet through. A child who matches wetness and ignores the strength picks 'soaked'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-03",
+      "optionId": "gen-vr-04-closest-meaning-03-opt3",
+      "value": "mouldy",
+      "tag": "vr04-one-feature-only",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'moist'. Mould is one thing you can see on a damp wall, so 'mouldy' names a sign of damp, not what 'damp' means. A child who picks the visible sign picks 'mouldy'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-03",
+      "optionId": "gen-vr-04-closest-meaning-03-opt4",
+      "value": "cold",
+      "tag": "vr04-keeps-the-same-company",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'moist'. 'cold' often turns up beside 'damp', as in a cold, damp day, but it is about temperature, not wetness. A child who matches the company the words keep picks 'cold'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-04",
+      "optionId": "gen-vr-04-closest-meaning-04-opt2",
+      "value": "freezing",
+      "tag": "vr04-wrong-strength",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'cool', which is mildly cold, like 'chilly'. 'freezing' is from the same family but far stronger. A child who matches coldness and ignores the strength picks 'freezing'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-04",
+      "optionId": "gen-vr-04-closest-meaning-04-opt3",
+      "value": "shivery",
+      "tag": "vr04-one-feature-only",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'cool'. Shivering is one thing a person does when it is chilly, so 'shivery' names a sign, not what 'chilly' means. A child who picks the visible sign picks 'shivery'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-04",
+      "optionId": "gen-vr-04-closest-meaning-04-opt4",
+      "value": "grey",
+      "tag": "vr04-keeps-the-same-company",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'cool'. 'grey' turns up beside 'chilly' in descriptions such as a chilly, grey morning, but it is a colour, not a temperature. A child who matches the company the words keep picks 'grey'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-05",
+      "optionId": "gen-vr-04-closest-meaning-05-opt2",
+      "value": "dazzling",
+      "tag": "vr04-wrong-strength",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'gleaming'. 'dazzling' is from the same family of brightness but far stronger: so bright it hurts to look. A child who reaches for the strongest bright word picks 'dazzling' instead of 'gleaming'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-05",
+      "optionId": "gen-vr-04-closest-meaning-05-opt3",
+      "value": "smooth",
+      "tag": "vr04-one-feature-only",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'gleaming'. A shiny surface is often smooth to touch, so 'smooth' names one feature that can come with shine, not what 'shiny' means. A child who picks that single feature picks 'smooth'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-05",
+      "optionId": "gen-vr-04-closest-meaning-05-opt4",
+      "value": "new",
+      "tag": "vr04-keeps-the-same-company",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'gleaming'. 'new' turns up beside 'shiny', as in a shiny new bike, but it means recently made, not giving off shine. A child who matches the company the words keep picks 'new'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-06",
+      "optionId": "gen-vr-04-closest-meaning-06-opt2",
+      "value": "overjoyed",
+      "tag": "vr04-wrong-strength",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'pleased', which is as mild as 'glad'. 'overjoyed' is from the same family but far stronger. A child who matches happiness and ignores the strength picks 'overjoyed'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-06",
+      "optionId": "gen-vr-04-closest-meaning-06-opt3",
+      "value": "relieved",
+      "tag": "vr04-wrong-shade",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'pleased'. 'relieved' is in the same area of happy feelings but tilts it: glad because a worry has ended. 'glad' needs no worry first. A child who hears only 'happy' picks 'relieved'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-06",
+      "optionId": "gen-vr-04-closest-meaning-06-opt4",
+      "value": "lucky",
+      "tag": "vr04-keeps-the-same-company",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'pleased'. 'lucky' turns up beside 'glad', as in glad it worked out, we were lucky, but it means fortunate, not happy. A child who matches the company the words keep picks 'lucky'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-07",
+      "optionId": "gen-vr-04-closest-meaning-07-opt2",
+      "value": "bottomless",
+      "tag": "vr04-wrong-strength",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'empty', meaning nothing inside, like 'hollow'. 'bottomless' pushes that emptiness to an extreme: so deep it has no bottom at all. A child who reaches for the strongest empty word picks 'bottomless'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-07",
+      "optionId": "gen-vr-04-closest-meaning-07-opt3",
+      "value": "light",
+      "tag": "vr04-one-feature-only",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'empty'. A hollow object often feels light when you lift it, so 'light' names one thing hollowness can lead to, not what 'hollow' means. A child who picks that feature picks 'light'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-07",
+      "optionId": "gen-vr-04-closest-meaning-07-opt4",
+      "value": "wooden",
+      "tag": "vr04-keeps-the-same-company",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'empty'. 'wooden' turns up beside 'hollow', as in a hollow wooden log or box, but it names what something is made of, not that it is empty inside. A child who matches the company picks 'wooden'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-08",
+      "optionId": "gen-vr-04-closest-meaning-08-opt2",
+      "value": "big",
+      "tag": "vr04-wrong-strength",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'enormous', which matches how extreme 'huge' is. 'big' is from the same family but far weaker. A child who matches size and ignores the strength picks 'big'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-08",
+      "optionId": "gen-vr-04-closest-meaning-08-opt3",
+      "value": "tall",
+      "tag": "vr04-one-feature-only",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'enormous'. 'tall' is big in one direction only, height, so it names one way a thing can look huge, not what 'huge' means. A child who picks that single feature picks 'tall'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-08",
+      "optionId": "gen-vr-04-closest-meaning-08-opt4",
+      "value": "heavy",
+      "tag": "vr04-wrong-shade",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'enormous'. 'heavy' shares the general area of bigness but tilts it to weight: a small stone can be heavy, and a huge balloon is not. A child who hears only 'a lot of it' picks 'heavy'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-09",
+      "optionId": "gen-vr-04-closest-meaning-09-opt2",
+      "value": "speedy",
+      "tag": "vr04-wrong-strength",
+      "verdict": "CANNOT_EXECUTE",
+      "reason": "'speedy' is not at a different strength from 'rapid'. It means fast to the same degree, and is as close to 'rapid' as the key 'quick' is. There is no strength gap for the mistake to act on, so this option is a second correct answer, not a wrong-strength distractor."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-09",
+      "optionId": "gen-vr-04-closest-meaning-09-opt3",
+      "value": "hurried",
+      "tag": "vr04-wrong-shade",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'quick'. 'hurried' shares the area of speed but tilts it towards rushing because time is short, often carelessly. 'rapid' has no rush in it. A child who hears only 'fast' picks 'hurried'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-09",
+      "optionId": "gen-vr-04-closest-meaning-09-opt4",
+      "value": "brisk",
+      "tag": "vr04-one-feature-only",
+      "verdict": "CANNOT_EXECUTE",
+      "reason": "'brisk' is not one visible sign of 'rapid'; it is itself a near-synonym meaning quick and lively, as in a brisk pace. The one-feature mistake does not produce it, and a child or marker could defend it as closest."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-10",
+      "optionId": "gen-vr-04-closest-meaning-10-opt2",
+      "value": "extravagant",
+      "tag": "vr04-wrong-strength",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'giving'. 'extravagant' pushes the same idea too far: spending or giving far more than is sensible. A child who reaches for the strongest generous word picks 'extravagant'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-10",
+      "optionId": "gen-vr-04-closest-meaning-10-opt3",
+      "value": "friendly",
+      "tag": "vr04-wrong-shade",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'giving'. 'friendly' shares the general area of warmth towards others but tilts it: a friendly person is pleasant, not necessarily ready to give. A child who hears only 'nice' picks 'friendly'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-10",
+      "optionId": "gen-vr-04-closest-meaning-10-opt4",
+      "value": "wealthy",
+      "tag": "vr04-keeps-the-same-company",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'giving'. 'wealthy' turns up beside 'generous' in talk of rich donors, but it means having a lot of money, not sharing it. A child who matches the company the words keep picks 'wealthy'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-11",
+      "optionId": "gen-vr-04-closest-meaning-11-opt2",
+      "value": "despairing",
+      "tag": "vr04-wrong-strength",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'miserable'. 'despairing' is from the same family of low feeling but far stronger: having lost all hope. A child who reaches for the strongest sad word picks 'despairing'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-11",
+      "optionId": "gen-vr-04-closest-meaning-11-opt3",
+      "value": "grumpy",
+      "tag": "vr04-wrong-shade",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'miserable'. 'grumpy' shares the area of a bad mood but tilts it towards being cross and irritable rather than low. A child who hears only 'in a bad mood' picks 'grumpy'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-11",
+      "optionId": "gen-vr-04-closest-meaning-11-opt4",
+      "value": "silent",
+      "tag": "vr04-one-feature-only",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'miserable'. A gloomy person may go silent, so 'silent' names one thing gloominess can look like, not what 'gloomy' means. A child who picks that visible sign picks 'silent'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-12",
+      "optionId": "gen-vr-04-closest-meaning-12-opt2",
+      "value": "terrified",
+      "tag": "vr04-wrong-strength",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'shy'. 'terrified' is from the same family of fear but far stronger: a timid child holds back, a terrified one is overcome with fear. A child who matches fear and ignores the strength picks 'terrified'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-12",
+      "optionId": "gen-vr-04-closest-meaning-12-opt3",
+      "value": "quiet",
+      "tag": "vr04-one-feature-only",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'shy'. A timid child is often quiet, so 'quiet' names one thing timidity can look like, not what 'timid' means. A child who picks that visible sign picks 'quiet'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-12",
+      "optionId": "gen-vr-04-closest-meaning-12-opt4",
+      "value": "polite",
+      "tag": "vr04-keeps-the-same-company",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'shy'. 'polite' turns up beside 'timid' when describing a well-mannered, quiet child, but it means having good manners, not lacking confidence. A child who matches the company picks 'polite'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-13",
+      "optionId": "gen-vr-04-closest-meaning-13-opt2",
+      "value": "unique",
+      "tag": "vr04-wrong-strength",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'uncommon'. 'unique' is from the same family but far stronger: the only one of its kind, not just hard to find. A child who reaches for the strongest rare word picks 'unique'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-13",
+      "optionId": "gen-vr-04-closest-meaning-13-opt3",
+      "value": "strange",
+      "tag": "vr04-wrong-shade",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'uncommon'. 'strange' shares the area of unusual but tilts it towards odd or puzzling. A rare stamp is hard to find, not weird. A child who hears only 'unusual' picks 'strange'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-13",
+      "optionId": "gen-vr-04-closest-meaning-13-opt4",
+      "value": "precious",
+      "tag": "vr04-keeps-the-same-company",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'uncommon'. 'precious' turns up beside 'rare', as in rare and precious jewels, but it means of great value, not hard to find. A child who matches the company the words keep picks 'precious'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-14",
+      "optionId": "gen-vr-04-closest-meaning-14-opt2",
+      "value": "massive",
+      "tag": "vr04-wrong-strength",
+      "verdict": "CANNOT_EXECUTE",
+      "reason": "'massive' is not a stronger form of 'sturdy'. It is about size and bulk, a different family: a small stool can be sturdy and a huge tent can be flimsy. The wrong-strength mistake does not produce it on this row."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-14",
+      "optionId": "gen-vr-04-closest-meaning-14-opt3",
+      "value": "heavy",
+      "tag": "vr04-wrong-shade",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'strong'. 'heavy' shares the general area of solid objects but tilts it to weight: a sturdy chair need not be heavy. A child who hears only 'solid' picks 'heavy'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-14",
+      "optionId": "gen-vr-04-closest-meaning-14-opt4",
+      "value": "wooden",
+      "tag": "vr04-keeps-the-same-company",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'strong'. 'wooden' turns up beside 'sturdy', as in a sturdy wooden table, but it names the material, not the strength. A child who matches the company the words keep picks 'wooden'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-15",
+      "optionId": "gen-vr-04-closest-meaning-15-opt2",
+      "value": "reckless",
+      "tag": "vr04-wrong-strength",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'daring'. 'reckless' pushes the same idea too far: so bold that you ignore danger completely. A child who reaches for the strongest bold word picks 'reckless' instead of 'daring'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-15",
+      "optionId": "gen-vr-04-closest-meaning-15-opt3",
+      "value": "rude",
+      "tag": "vr04-wrong-shade",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'daring'. 'rude' shares one area of 'bold', speaking out cheekily, but tilts it towards bad manners. A child who hears only 'forward' picks 'rude'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-15",
+      "optionId": "gen-vr-04-closest-meaning-15-opt4",
+      "value": "loud",
+      "tag": "vr04-one-feature-only",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'daring'. A bold person may speak up loudly, so 'loud' names one thing boldness can look like, not what 'bold' means. A child who picks that visible sign picks 'loud'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-16",
+      "optionId": "gen-vr-04-closest-meaning-16-opt2",
+      "value": "prehistoric",
+      "tag": "vr04-wrong-strength",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'old'. 'prehistoric' is from the same family but far stronger: from before history was written down. A child who reaches for the oldest-sounding word picks 'prehistoric'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-16",
+      "optionId": "gen-vr-04-closest-meaning-16-opt3",
+      "value": "ruined",
+      "tag": "vr04-one-feature-only",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'old'. Ancient buildings are often ruined, so 'ruined' names one thing age can look like, not what 'ancient' means. A child who picks that visible sign picks 'ruined'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-16",
+      "optionId": "gen-vr-04-closest-meaning-16-opt4",
+      "value": "valuable",
+      "tag": "vr04-keeps-the-same-company",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'old'. 'valuable' turns up beside 'ancient', as in an ancient and valuable vase, but it means worth a lot, not very old. A child who matches the company the words keep picks 'valuable'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-17",
+      "optionId": "gen-vr-04-closest-meaning-17-opt2",
+      "value": "murderous",
+      "tag": "vr04-wrong-strength",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'unfriendly'. 'murderous' is from the same family of ill will but far stronger: wanting to kill. A child who reaches for the strongest hostile word picks 'murderous'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-17",
+      "optionId": "gen-vr-04-closest-meaning-17-opt3",
+      "value": "rude",
+      "tag": "vr04-wrong-shade",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'unfriendly'. 'rude' shares the area of unpleasant behaviour but tilts it towards bad manners rather than ill will. A child who hears only 'not nice' picks 'rude'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-17",
+      "optionId": "gen-vr-04-closest-meaning-17-opt4",
+      "value": "cold",
+      "tag": "vr04-one-feature-only",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'unfriendly'. A cold manner is one way hostility can show, so 'cold' names one sign of it, not what 'hostile' means. A child who picks that visible sign picks 'cold'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-18",
+      "optionId": "gen-vr-04-closest-meaning-18-opt2",
+      "value": "meek",
+      "tag": "vr04-wrong-shade",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'modest'. 'meek' shares the area of not putting yourself forward but tilts it towards being timid and easily pushed around. A humble person need not give in. A child who hears only 'not proud' picks 'meek'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-18",
+      "optionId": "gen-vr-04-closest-meaning-18-opt3",
+      "value": "quiet",
+      "tag": "vr04-one-feature-only",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'modest'. A humble person may keep quiet about their success, so 'quiet' names one sign of humility, not what 'humble' means. A child who picks that visible sign picks 'quiet'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-18",
+      "optionId": "gen-vr-04-closest-meaning-18-opt4",
+      "value": "grateful",
+      "tag": "vr04-keeps-the-same-company",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'modest'. 'grateful' turns up beside 'humble', as in humble and grateful, but it means thankful, not modest. A child who matches the company the words keep picks 'grateful'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-19",
+      "optionId": "gen-vr-04-closest-meaning-19-opt2",
+      "value": "meaningless",
+      "tag": "vr04-wrong-strength",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'unclear'. 'meaningless' pushes the same idea too far: not just hard to make out, but having no meaning at all. A child who reaches for the strongest word picks 'meaningless'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-19",
+      "optionId": "gen-vr-04-closest-meaning-19-opt3",
+      "value": "careless",
+      "tag": "vr04-wrong-shade",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'unclear'. 'careless' shares the area of not being exact but tilts it towards not taking care. A vague answer lacks detail; it is not necessarily sloppy. A child who hears only 'not exact' picks 'careless'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-19",
+      "optionId": "gen-vr-04-closest-meaning-19-opt4",
+      "value": "brief",
+      "tag": "vr04-one-feature-only",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'unclear'. A vague answer is often short, so 'brief' names one thing vagueness can look like, not what 'vague' means. A child who picks that visible sign picks 'brief'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-20",
+      "optionId": "gen-vr-04-closest-meaning-20-opt2",
+      "value": "helpless",
+      "tag": "vr04-wrong-strength",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'weak'. 'helpless' is from the same family but far stronger: unable to do anything at all. A child who reaches for the strongest weak word picks 'helpless'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-20",
+      "optionId": "gen-vr-04-closest-meaning-20-opt3",
+      "value": "pale",
+      "tag": "vr04-one-feature-only",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'weak'. A feeble person may look pale, so 'pale' names one visible sign of feebleness, not what 'feeble' means. A child who picks that sign picks 'pale'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-20",
+      "optionId": "gen-vr-04-closest-meaning-20-opt4",
+      "value": "elderly",
+      "tag": "vr04-keeps-the-same-company",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'weak'. 'elderly' turns up beside 'feeble', as in a feeble elderly man, but it means old, not weak. A child who matches the company the words keep picks 'elderly'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-21",
+      "optionId": "gen-vr-04-closest-meaning-21-opt2",
+      "value": "perfect",
+      "tag": "vr04-wrong-strength",
+      "verdict": "CANNOT_EXECUTE",
+      "reason": "'perfect' is not a stronger form of 'genuine'. 'genuine' means real, not fake; 'perfect' means having no faults, a different family. A genuine old coin can be badly damaged. The wrong-strength mistake does not produce it on this row."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-21",
+      "optionId": "gen-vr-04-closest-meaning-21-opt3",
+      "value": "signed",
+      "tag": "vr04-one-feature-only",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'real'. A signature is one thing that can show a painting or letter is genuine, so 'signed' names one sign, not what 'genuine' means. A child who picks that visible sign picks 'signed'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-21",
+      "optionId": "gen-vr-04-closest-meaning-21-opt4",
+      "value": "costly",
+      "tag": "vr04-keeps-the-same-company",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'real'. 'costly' turns up beside 'genuine', as in genuine leather costing more, but it means expensive, not real. A child who matches the company the words keep picks 'costly'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-22",
+      "optionId": "gen-vr-04-closest-meaning-22-opt2",
+      "value": "opposed",
+      "tag": "vr04-wrong-strength",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'unwilling'. 'opposed' is from the same family but far stronger: actively against something, not just not wanting to do it. A child who reaches for the strongest word picks 'opposed'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-22",
+      "optionId": "gen-vr-04-closest-meaning-22-opt3",
+      "value": "doubtful",
+      "tag": "vr04-wrong-shade",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'unwilling'. 'doubtful' shares the area of holding back but tilts it towards being unsure. A reluctant person knows they do not want to; a doubtful one is not sure. A child who hears only 'hesitant' picks 'doubtful'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-22",
+      "optionId": "gen-vr-04-closest-meaning-22-opt4",
+      "value": "slow",
+      "tag": "vr04-one-feature-only",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'unwilling'. A reluctant person may be slow to start, so 'slow' names one thing reluctance can look like, not what 'reluctant' means. A child who picks that visible sign picks 'slow'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-23",
+      "optionId": "gen-vr-04-closest-meaning-23-opt2",
+      "value": "submissive",
+      "tag": "vr04-wrong-strength",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'well-behaved'. 'submissive' is from the same family but far stronger: giving in to others completely. A child who reaches for the strongest obeying word picks 'submissive'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-23",
+      "optionId": "gen-vr-04-closest-meaning-23-opt3",
+      "value": "polite",
+      "tag": "vr04-wrong-shade",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'well-behaved'. 'polite' shares the area of good behaviour but tilts it towards good manners rather than doing as you are told. A child who hears only 'good' picks 'polite'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-23",
+      "optionId": "gen-vr-04-closest-meaning-23-opt4",
+      "value": "quiet",
+      "tag": "vr04-one-feature-only",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'well-behaved'. An obedient child may be quiet, so 'quiet' names one thing obedience can look like, not what 'obedient' means. A child who picks that visible sign picks 'quiet'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-24",
+      "optionId": "gen-vr-04-closest-meaning-24-opt2",
+      "value": "worthless",
+      "tag": "vr04-wrong-strength",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'unimportant'. 'worthless' is from the same family but far stronger: having no value at all, not just not mattering much. A child who reaches for the strongest word picks 'worthless'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-24",
+      "optionId": "gen-vr-04-closest-meaning-24-opt3",
+      "value": "simple",
+      "tag": "vr04-wrong-shade",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'unimportant'. 'simple' shares the area of small matters but tilts it towards easy or not complicated. A trivial problem is one that does not matter, not one that is easy. A child who hears only 'nothing much' picks 'simple'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-24",
+      "optionId": "gen-vr-04-closest-meaning-24-opt4",
+      "value": "small",
+      "tag": "vr04-one-feature-only",
+      "verdict": "EXECUTES",
+      "execution": "The key is 'unimportant'. A trivial matter is often a small one, so 'small' names one feature of it, not what 'trivial' means. A child who picks that single feature picks 'small'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-25",
+      "optionId": "gen-vr-04-closest-meaning-25-opt2",
+      "value": "pleased",
+      "tag": "vr04-wrong-strength",
+      "verdict": "EXECUTES",
+      "execution": "In 'The crowd was JUBILANT when the final whistle blew', the key is 'overjoyed'. 'pleased' is from the same family of happiness but far weaker; a jubilant crowd is wild with joy. A child who matches happiness and ignores the strength picks 'pleased'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-25",
+      "optionId": "gen-vr-04-closest-meaning-25-opt3",
+      "value": "noisy",
+      "tag": "vr04-one-feature-only",
+      "verdict": "EXECUTES",
+      "execution": "In the sentence, the key is 'overjoyed'. A jubilant crowd cheers, so 'noisy' names one thing jubilation can look like, not what 'jubilant' means. A child who picks the sound of the crowd picks 'noisy'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-25",
+      "optionId": "gen-vr-04-closest-meaning-25-opt4",
+      "value": "relieved",
+      "tag": "vr04-wrong-shade",
+      "verdict": "EXECUTES",
+      "execution": "In the sentence, the key is 'overjoyed'. 'relieved' shares the area of happy feeling at the final whistle but tilts it: glad a worry is over. 'jubilant' is triumphant joy. A child who hears only 'happy it ended' picks 'relieved'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-26",
+      "optionId": "gen-vr-04-closest-meaning-26-opt2",
+      "value": "vanish",
+      "tag": "vr04-wrong-strength",
+      "verdict": "EXECUTES",
+      "execution": "In 'They waited for the floodwater to RECEDE', the key is 'retreat'. 'vanish' pushes the same idea too far: to disappear completely, where receding water only draws back. A child who reaches for the strongest word picks 'vanish'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-26",
+      "optionId": "gen-vr-04-closest-meaning-26-opt3",
+      "value": "settle",
+      "tag": "vr04-wrong-shade",
+      "verdict": "EXECUTES",
+      "execution": "In the sentence, the key is 'retreat'. 'settle' shares the area of floodwater calming down but tilts it towards coming to rest and staying, the opposite of drawing back. A child who hears only 'calm down' picks 'settle'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-26",
+      "optionId": "gen-vr-04-closest-meaning-26-opt4",
+      "value": "fade",
+      "tag": "vr04-the-other-meaning",
+      "verdict": "EXECUTES",
+      "execution": "In the sentence, the key is 'retreat'. 'recede' has a real second meaning, to grow fainter, as when a sound or memory recedes, and 'fade' fits that sense. The sentence fixes the moving-back sense, since floodwater draws back. A child who picks the other sense picks 'fade'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-27",
+      "optionId": "gen-vr-04-closest-meaning-27-opt2",
+      "value": "bury",
+      "tag": "vr04-wrong-strength",
+      "verdict": "EXECUTES",
+      "execution": "In 'She tried to CONCEAL her disappointment', the key is 'hide'. 'bury' pushes the same idea further: to hide something so deep it is pushed out of sight for good. A child who reaches for the strongest hiding word picks 'bury'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-27",
+      "optionId": "gen-vr-04-closest-meaning-27-opt3",
+      "value": "ignore",
+      "tag": "vr04-wrong-shade",
+      "verdict": "EXECUTES",
+      "execution": "In the sentence, the key is 'hide'. 'ignore' shares the area of not dealing with a feeling but tilts it: to take no notice of something, rather than keep it from others. A child who hears only 'not show it' picks 'ignore'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-27",
+      "optionId": "gen-vr-04-closest-meaning-27-opt4",
+      "value": "pretend",
+      "tag": "vr04-keeps-the-same-company",
+      "verdict": "EXECUTES",
+      "execution": "In the sentence, the key is 'hide'. Concealing disappointment goes with pretending to be fine, so the two words turn up together, but 'pretend' means act as if, not hide. A child who matches the situation picks 'pretend'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-28",
+      "optionId": "gen-vr-04-closest-meaning-28-opt2",
+      "value": "tired",
+      "tag": "vr04-wrong-strength",
+      "verdict": "EXECUTES",
+      "execution": "In 'After the long walk home they were EXHAUSTED', the key is 'drained'. 'tired' is from the same family but far weaker; exhausted means all your energy is used up. A child who matches the family and ignores the strength picks 'tired'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-28",
+      "optionId": "gen-vr-04-closest-meaning-28-opt3",
+      "value": "sleepy",
+      "tag": "vr04-keeps-the-same-company",
+      "verdict": "EXECUTES",
+      "execution": "In the sentence, the key is 'drained'. 'sleepy' turns up beside 'exhausted' at the end of a long day, but it means ready to sleep, not out of energy. A child who matches the situation picks 'sleepy'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-28",
+      "optionId": "gen-vr-04-closest-meaning-28-opt4",
+      "value": "empty",
+      "tag": "vr04-the-other-meaning",
+      "verdict": "EXECUTES",
+      "execution": "In the sentence, the key is 'drained'. 'exhausted' has a real second meaning, used up completely, as in exhausted supplies, and 'empty' fits that sense. The sentence is about people after a walk, which fixes the worn-out sense. A child who picks the other sense picks 'empty'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-29",
+      "optionId": "gen-vr-04-closest-meaning-29-opt2",
+      "value": "rewrite",
+      "tag": "vr04-wrong-strength",
+      "verdict": "EXECUTES",
+      "execution": "In 'The teacher asked her to AMEND the last paragraph', the key is 'change'. 'rewrite' pushes the same idea too far: to write it all again, where amending means making some changes. A child who reaches for the biggest change picks 'rewrite'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-29",
+      "optionId": "gen-vr-04-closest-meaning-29-opt3",
+      "value": "improve",
+      "tag": "vr04-wrong-shade",
+      "verdict": "EXECUTES",
+      "execution": "In the sentence, the key is 'change'. 'improve' shares the area of editing but tilts it towards the result, making it better, rather than the act of altering it. A child who hears only 'make it better' picks 'improve'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-29",
+      "optionId": "gen-vr-04-closest-meaning-29-opt4",
+      "value": "check",
+      "tag": "vr04-keeps-the-same-company",
+      "verdict": "EXECUTES",
+      "execution": "In the sentence, the key is 'change'. 'check' turns up beside 'amend' in the same classroom job, since you check work and then amend it, but it means look over, not alter. A child who matches the situation picks 'check'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-30",
+      "optionId": "gen-vr-04-closest-meaning-30-opt2",
+      "value": "impossible",
+      "tag": "vr04-wrong-strength",
+      "verdict": "EXECUTES",
+      "execution": "In 'Their efforts to save the old tree proved FUTILE', the key is 'pointless'. 'impossible' pushes the same idea too far: it could never be done at all, where futile means the efforts made no difference. A child who reaches for the strongest word picks 'impossible'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-30",
+      "optionId": "gen-vr-04-closest-meaning-30-opt3",
+      "value": "foolish",
+      "tag": "vr04-wrong-shade",
+      "verdict": "EXECUTES",
+      "execution": "In the sentence, the key is 'pointless'. 'foolish' shares the area of efforts that came to nothing but tilts it towards being silly. Trying to save a tree was not foolish, only useless. A child who hears only 'a waste' picks 'foolish'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-30",
+      "optionId": "gen-vr-04-closest-meaning-30-opt4",
+      "value": "slow",
+      "tag": "vr04-keeps-the-same-company",
+      "verdict": "CANNOT_EXECUTE",
+      "reason": "'slow' does not turn up in the same situations as 'futile' in any regular way, and the sentence says nothing about speed. There is no shared setting for the same-company mistake to act on, so 'slow' works only as a random wrong word on this row."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-31",
+      "optionId": "gen-vr-04-closest-meaning-31-opt2",
+      "value": "devoted",
+      "tag": "vr04-wrong-strength",
+      "verdict": "EXECUTES",
+      "execution": "In 'The new neighbour seemed AMIABLE from the first day', the key is 'friendly'. 'devoted' is from the same family of warmth towards others but far stronger: deep, loyal love. A child who reaches for the strongest warm word picks 'devoted'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-31",
+      "optionId": "gen-vr-04-closest-meaning-31-opt3",
+      "value": "cheerful",
+      "tag": "vr04-wrong-shade",
+      "verdict": "EXECUTES",
+      "execution": "In the sentence, the key is 'friendly'. 'cheerful' shares the area of a pleasant manner but tilts it towards being in good spirits oneself, rather than warm towards others. A child who hears only 'nice to be around' picks 'cheerful'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-31",
+      "optionId": "gen-vr-04-closest-meaning-31-opt4",
+      "value": "chatty",
+      "tag": "vr04-one-feature-only",
+      "verdict": "EXECUTES",
+      "execution": "In the sentence, the key is 'friendly'. An amiable neighbour may be chatty, so 'chatty' names one thing amiability can look like, not what 'amiable' means. A child who picks that visible sign picks 'chatty'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-32",
+      "optionId": "gen-vr-04-closest-meaning-32-opt2",
+      "value": "endless",
+      "tag": "vr04-wrong-strength",
+      "verdict": "EXECUTES",
+      "execution": "In 'Fish were ABUNDANT in the river that summer', the key is 'plentiful'. 'endless' pushes the same idea too far: so many there is no end to them. A child who reaches for the strongest word picks 'endless'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-32",
+      "optionId": "gen-vr-04-closest-meaning-32-opt3",
+      "value": "large",
+      "tag": "vr04-wrong-shade",
+      "verdict": "EXECUTES",
+      "execution": "In the sentence, the key is 'plentiful'. 'large' shares the area of 'a lot' but tilts it from how many fish there were to how big each fish was. A child who hears only 'a lot' picks 'large'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-32",
+      "optionId": "gen-vr-04-closest-meaning-32-opt4",
+      "value": "valuable",
+      "tag": "vr04-keeps-the-same-company",
+      "verdict": "CANNOT_EXECUTE",
+      "reason": "'valuable' does not keep the same company as 'abundant'. Things that are abundant are usually common, and valuable is the word that goes with 'rare', not with 'abundant'. Nothing in the sentence about river fish links them, so the same-company mistake does not produce it."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-33",
+      "optionId": "gen-vr-04-closest-meaning-33-opt2",
+      "value": "legendary",
+      "tag": "vr04-wrong-strength",
+      "verdict": "CANNOT_EXECUTE",
+      "reason": "'legendary' is not a stronger form of 'notorious'. It means famous in a good, admired way, so it reverses the bad sense of 'notorious' rather than raising its strength. That error is a change of direction, which the wrong-shade seat ('famous') already carries; the wrong-strength mistake does not produce it."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-33",
+      "optionId": "gen-vr-04-closest-meaning-33-opt3",
+      "value": "famous",
+      "tag": "vr04-wrong-shade",
+      "verdict": "EXECUTES",
+      "execution": "In 'That road is NOTORIOUS for its sharp bends', the key is 'infamous'. 'famous' shares the area of being well known but drops the bad side: notorious means well known for something bad. A child who hears only 'well known' picks 'famous'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-33",
+      "optionId": "gen-vr-04-closest-meaning-33-opt4",
+      "value": "dangerous",
+      "tag": "vr04-keeps-the-same-company",
+      "verdict": "EXECUTES",
+      "execution": "In the sentence, the key is 'infamous'. 'dangerous' turns up beside 'notorious' when people talk about a road with sharp bends, but it describes the road itself, not its bad name. A child who matches the situation picks 'dangerous'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-34",
+      "optionId": "gen-vr-04-closest-meaning-34-opt2",
+      "value": "pretty",
+      "tag": "vr04-wrong-strength",
+      "verdict": "EXECUTES",
+      "execution": "In 'The lace on the dress was EXQUISITE', the key is 'beautiful'. 'pretty' is from the same family but far weaker; exquisite means extremely beautiful and finely made. A child who matches the family and ignores the strength picks 'pretty'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-34",
+      "optionId": "gen-vr-04-closest-meaning-34-opt3",
+      "value": "delicate",
+      "tag": "vr04-one-feature-only",
+      "verdict": "EXECUTES",
+      "execution": "In the sentence, the key is 'beautiful'. Fine lace is delicate, so 'delicate' names one feature exquisite work often has, not what 'exquisite' means. A child who picks that single feature picks 'delicate'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-34",
+      "optionId": "gen-vr-04-closest-meaning-34-opt4",
+      "value": "sharp",
+      "tag": "vr04-the-other-meaning",
+      "verdict": "EXECUTES",
+      "execution": "In the sentence, the key is 'beautiful'. 'exquisite' has a real second meaning, intense and sharp, as in exquisite pain, and 'sharp' fits that sense. The sentence is about lace on a dress, which fixes the beautiful sense. A child who picks the other sense picks 'sharp'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-35",
+      "optionId": "gen-vr-04-closest-meaning-35-opt2",
+      "value": "saintly",
+      "tag": "vr04-wrong-strength",
+      "verdict": "EXECUTES",
+      "execution": "In 'The school was founded by a BENEVOLENT businessman', the key is 'kind'. 'saintly' is from the same family of goodness but far stronger: as good as a saint. A child who reaches for the strongest good word picks 'saintly'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-35",
+      "optionId": "gen-vr-04-closest-meaning-35-opt3",
+      "value": "polite",
+      "tag": "vr04-wrong-shade",
+      "verdict": "EXECUTES",
+      "execution": "In the sentence, the key is 'kind'. 'polite' shares the area of behaving well towards others but tilts it towards good manners rather than wishing others well. A child who hears only 'nice' picks 'polite'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-35",
+      "optionId": "gen-vr-04-closest-meaning-35-opt4",
+      "value": "wealthy",
+      "tag": "vr04-keeps-the-same-company",
+      "verdict": "EXECUTES",
+      "execution": "In the sentence, the key is 'kind'. 'wealthy' turns up beside 'benevolent' when a businessman founds a school, but it means rich, not kind. A child who matches the situation picks 'wealthy'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-36",
+      "optionId": "gen-vr-04-closest-meaning-36-opt2",
+      "value": "patient",
+      "tag": "vr04-wrong-shade",
+      "verdict": "EXECUTES",
+      "execution": "In 'She remained STOIC throughout the long wait', the key is 'unemotional'. 'patient' shares the area of bearing a hard time calmly but tilts it towards waiting without complaint, where stoic means not showing feeling. A child who hears 'long wait' picks 'patient'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-36",
+      "optionId": "gen-vr-04-closest-meaning-36-opt3",
+      "value": "silent",
+      "tag": "vr04-one-feature-only",
+      "verdict": "EXECUTES",
+      "execution": "In the sentence, the key is 'unemotional'. A stoic person may stay silent, so 'silent' names one thing stoicism can look like, not what 'stoic' means. A child who picks that visible sign picks 'silent'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-36",
+      "optionId": "gen-vr-04-closest-meaning-36-opt4",
+      "value": "brave",
+      "tag": "vr04-keeps-the-same-company",
+      "verdict": "EXECUTES",
+      "execution": "In the sentence, the key is 'unemotional'. 'brave' turns up beside 'stoic' when praising someone who faces hardship, but it means unafraid, not not showing feeling. A child who matches the company the words keep picks 'brave'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-37",
+      "optionId": "gen-vr-04-closest-meaning-37-opt2",
+      "value": "ecstatic",
+      "tag": "vr04-wrong-strength",
+      "verdict": "EXECUTES",
+      "execution": "In 'The innkeeper greeted them in a JOVIAL manner', the key is 'cheerful'. 'ecstatic' is from the same family of happiness but far stronger: overwhelmed with joy. A child who reaches for the strongest happy word picks 'ecstatic'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-37",
+      "optionId": "gen-vr-04-closest-meaning-37-opt3",
+      "value": "friendly",
+      "tag": "vr04-wrong-shade",
+      "verdict": "EXECUTES",
+      "execution": "In the sentence, the key is 'cheerful'. 'friendly' shares the area of a warm greeting but tilts it towards kindness to others rather than good humour and fun. A child who hears only 'welcoming' picks 'friendly'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-37",
+      "optionId": "gen-vr-04-closest-meaning-37-opt4",
+      "value": "loud",
+      "tag": "vr04-one-feature-only",
+      "verdict": "EXECUTES",
+      "execution": "In the sentence, the key is 'cheerful'. A jovial innkeeper may laugh loudly, so 'loud' names one thing joviality can sound like, not what 'jovial' means. A child who picks that sign picks 'loud'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-38",
+      "optionId": "gen-vr-04-closest-meaning-38-opt2",
+      "value": "thin",
+      "tag": "vr04-wrong-shade",
+      "verdict": "EXECUTES",
+      "execution": "In 'The lid was TRANSPARENT, so she could see the cake inside', the key is 'clear'. 'thin' shares the area of letting light through but tilts it to how thick something is; a thick glass lid is still transparent. A child who hears only 'see-through' picks 'thin'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-38",
+      "optionId": "gen-vr-04-closest-meaning-38-opt3",
+      "value": "shiny",
+      "tag": "vr04-one-feature-only",
+      "verdict": "EXECUTES",
+      "execution": "In the sentence, the key is 'clear'. A glass or plastic lid often shines, so 'shiny' names one thing a transparent lid can look like, not what 'transparent' means. A child who picks that visible sign picks 'shiny'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-38",
+      "optionId": "gen-vr-04-closest-meaning-38-opt4",
+      "value": "obvious",
+      "tag": "vr04-the-other-meaning",
+      "verdict": "EXECUTES",
+      "execution": "In the sentence, the key is 'clear'. 'transparent' has a real second meaning, easy to see through as in a transparent lie, and 'obvious' fits that sense. The sentence, about seeing the cake inside, fixes the see-through sense. A child who picks the other sense picks 'obvious'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-39",
+      "optionId": "gen-vr-04-closest-meaning-39-opt2",
+      "value": "blazing",
+      "tag": "vr04-wrong-strength",
+      "verdict": "EXECUTES",
+      "execution": "In 'The dial on the watch was LUMINOUS in the dark', the key is 'glowing'. 'blazing' is from the same family of light but far stronger: burning brightly like a fire. A child who reaches for the strongest bright word picks 'blazing'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-39",
+      "optionId": "gen-vr-04-closest-meaning-39-opt3",
+      "value": "pale",
+      "tag": "vr04-wrong-shade",
+      "verdict": "EXECUTES",
+      "execution": "In the sentence, the key is 'glowing'. 'pale' shares the area of soft light but tilts it towards faint colour, rather than giving off light. A child who hears only 'soft and light' picks 'pale'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-39",
+      "optionId": "gen-vr-04-closest-meaning-39-opt4",
+      "value": "visible",
+      "tag": "vr04-one-feature-only",
+      "verdict": "EXECUTES",
+      "execution": "In the sentence, the key is 'glowing'. A luminous dial can be seen in the dark, so 'visible' names one result of glowing, not what 'luminous' means. A child who picks that single feature picks 'visible'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-40",
+      "optionId": "gen-vr-04-closest-meaning-40-opt2",
+      "value": "heartbroken",
+      "tag": "vr04-wrong-strength",
+      "verdict": "EXECUTES",
+      "execution": "In 'A MELANCHOLY tune drifted from the piano', the key is 'sad'. 'heartbroken' is from the same family but far stronger: overwhelmed by grief. A child who reaches for the strongest sad word picks 'heartbroken'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-40",
+      "optionId": "gen-vr-04-closest-meaning-40-opt3",
+      "value": "gentle",
+      "tag": "vr04-wrong-shade",
+      "verdict": "EXECUTES",
+      "execution": "In the sentence, the key is 'sad'. 'gentle' shares the area of a soft, quiet mood but tilts it towards calm and soothing rather than sad. A child who hears only 'soft tune' picks 'gentle'."
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-40",
+      "optionId": "gen-vr-04-closest-meaning-40-opt4",
+      "value": "slow",
+      "tag": "vr04-one-feature-only",
+      "verdict": "EXECUTES",
+      "execution": "In the sentence, the key is 'sad'. A melancholy tune is often slow, so 'slow' names one feature of how it sounds, not what 'melancholy' means. A child who picks that single feature picks 'slow'."
+    }
+  ]
+}

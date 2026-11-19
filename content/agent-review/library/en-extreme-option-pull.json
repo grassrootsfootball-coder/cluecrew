@@ -1,0 +1,1097 @@
+{
+ "entry": {
+  "id": "en-extreme-option-pull",
+  "status": "ACTIVE",
+  "district": "ENGLISH",
+  "category": null,
+  "description": "Chooses always/never/impossible options when the text is measured.",
+  "childHint": "Does the passage really go that far? Check the strongest word in the option.",
+  "approvedBy": "human:staff-reviewer@cluecrew.test",
+  "approvalMethod": "written review 2026-08-02",
+  "approvalNote": "Cleared on the printed review pack; returned marked up.",
+  "textProvenance": {
+   "note": "Ruled when written; absent from the store until now (R403/R410).",
+   "state": "RECORDED",
+   "appliedOn": "2026-08-21",
+   "authority": "annie-eighteenth-return (1).md, read from the file, sha256 b2e9e673669861e3b82d8a9a1fbc8a883a9f4b8f634353b3c8b407b74fa468ca",
+   "approvedByPerson": "Annie"
+  }
+ },
+ "carrierCount": 26,
+ "carriers": [
+  {
+   "itemId": "ENG-001-WIW-05",
+   "status": "LIVE",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "In lines 11 to 14 the writer repeats words like 'scraped' and 'scrabbled'. Why does he do this?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 5
+   },
+   "key": "To show the climb went on and on and was hard work.",
+   "options": [
+    {
+     "value": "To show that digging is the easiest job a mole ever does.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": true,
+     "execution": "'The easiest job a mole ever does' overstates; nothing in the passage ranks the work at all."
+    },
+    {
+     "value": "To show the Mole was bored and fed up with the climb.",
+     "isKey": false,
+     "tag": "en-repetition-purpose",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To show the climb went on and on and was hard work.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To copy the sound of the birds singing up above.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To make the reader feel sorry for the Mole's sore arms.",
+     "isKey": false,
+     "tag": "en-technique-effect-mislocated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-07",
+   "status": "LIVE",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 17 to 19. Why did the birds' singing sound almost like a shout to the Mole?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 7
+   },
+   "key": "He had been shut underground so long that his ears were not used to it.",
+   "options": [
+    {
+     "value": "The birds were much louder than usual that day.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The rabbits were shouting at him from the gap.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The hot sun made every sound seem bigger.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He had never heard a bird sing before in his life.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": true,
+     "execution": "'Never heard a bird sing before in his life' is the absolute version of a true statement about his ears being out of practice."
+    },
+    {
+     "value": "He had been shut underground so long that his ears were not used to it.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-10",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 23 to 27. What does the way the Mole treats the rabbits show about him?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 10
+   },
+   "key": "He is so excited that he will not stop for anyone.",
+   "options": [
+    {
+     "value": "He is frightened of the older rabbit.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He is so excited that he will not stop for anyone.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He is a cruel animal who is always unkind.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": true,
+     "execution": "'Always unkind' pushes one rush past a hedge into a permanent character."
+    },
+    {
+     "value": "He is rushing home to get his dinner.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He is sorry at once for knocking the rabbit over.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-13",
+   "status": "LIVE",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "The writer calls the river an animal that chases, chuckles and grips things. Read lines 29 to 33. Why does he do this?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 13
+   },
+   "key": "To make the river seem alive, playful and always moving.",
+   "options": [
+    {
+     "value": "To make the river seem alive, playful and always moving.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Because a real animal was swimming in the water.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Because the river was dangerous and might grab the Mole.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": true,
+     "execution": "'Gripping things' at line 30 is pushed to a threat; the passage's next words are 'with a gurgle' and 'leaving them with a laugh'."
+    },
+    {
+     "value": "Because the Water Rat lived in the bank beside it.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Because the Mole thought a big animal was in front of him.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-16",
+   "status": "LIVE",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Lines 48 to 52 are four very short paragraphs. Each one adds one new detail. Why does the writer do this?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 16
+   },
+   "key": "To let the reader see the face appear bit by bit, just as the Mole does.",
+   "options": [
+    {
+     "value": "To show that the Mole was creeping closer with every step.",
+     "isKey": false,
+     "tag": "en-technique-effect-mislocated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To show that the Mole was afraid of the face.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To let the reader see the face appear bit by bit, just as the Mole does.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To copy the little jumps the Mole made across the meadow.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To make the face sound as grand as it possibly could be.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": true,
+     "execution": "'As grand as it possibly could be' overstates a brown face with whiskers."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-22",
+   "status": "LIVE",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "The animals act like people, but we never forget they are animals. How does the writer do this?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "answerShape": "two-halved-contrast-given-what-they-have-and-what-they-keep",
+    "orderAnchor": 22,
+    "techniqueKey": "human-manners-on-animal-bodies-kept-together"
+   },
+   "key": "He gives them houses, money and boats, but keeps their fur, paws and whiskers.",
+   "options": [
+    {
+     "value": "He keeps the animals quiet, still and dull, but lets the river chatter, gurgle and laugh.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He gives them human names, and leaves the animal ones behind.",
+     "isKey": false,
+     "tag": "en-technique-device-confusion",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He tells the reader, plainly and often, that these animals are really people.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He gives them houses, money and boats, but keeps their fur, paws and whiskers.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He makes every animal speak, move and think in exactly the same way.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": true,
+     "execution": "'Exactly the same way' overstates: the rabbit charges a toll at line 22, the Rat sculls a boat at line 63, the Mole whitewashes a house at line 3."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-09",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "When Mr Darcy first walked in, the room thought very well of him. Read lines 26 to 30. Why?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 9
+   },
+   "key": "Because of his looks, and because of the news that he was very rich.",
+   "options": [
+    {
+     "value": "Because he danced with lots of different ladies.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Because he spoke kindly to everyone he was introduced to.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Because he was the tallest man in the room.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": true,
+     "execution": "'The tallest man in the room' is the absolute version of line 27's 'fine, tall person'."
+    },
+    {
+     "value": "Because of his looks, and because of the news that he was very rich.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Because he owned a large estate in Derbyshire.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-10",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Halfway through the evening, people changed their minds about Mr Darcy. Read lines 30 to 35. What changed them?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 10
+   },
+   "key": "The way he behaved, as if he were better than everyone there.",
+   "options": [
+    {
+     "value": "They found out that he was not really rich after all.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They decided he was less good-looking than Mr Bingley.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The way he behaved, as if he were better than everyone there.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He complained that the ball had ended too early.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Everybody disliked him from the moment he walked in.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": true,
+     "execution": "'From the moment he walked in' overstates: line 30 has him admired for half the evening."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-12",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Read lines 39 to 41. How many dances did Mr Darcy dance, and who did he dance with?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 12
+   },
+   "key": "Two: one with Mrs Hurst and one with Miss Bingley.",
+   "options": [
+    {
+     "value": "Every dance of the evening.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Two: one with Mrs Hurst and one with Miss Bingley.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Two: one with Miss Bingley and one with Elizabeth.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "None at all.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": true,
+     "execution": "'None at all' is the absolute version of 'danced only once... and once' at lines 39 and 40."
+    },
+    {
+     "value": "Three: with Mrs Hurst, Miss Bingley and Miss Bennet.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-13",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Read lines 41 to 43. The writer says: 'His character was decided. He was the proudest, most disagreeable man in the world.' What do these short, sure sentences do?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 13
+   },
+   "key": "They make the room's quick opinion sound like a settled fact.",
+   "options": [
+    {
+     "value": "They prove that Mr Darcy really was the worst man alive.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": true,
+     "execution": "'Really was the worst man alive' takes the room's verdict as the writer's own finding."
+    },
+    {
+     "value": "They show that the writer had run out of things to say about him.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They make the room's quick opinion sound like a settled fact.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They show that Mr Darcy had at last made up his mind about something.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They tell us that Mr Darcy said nothing to anybody all evening.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-14",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Mrs Bennet disliked Mr Darcy more strongly than anybody else in the room did. Read lines 44 to 46. What made her feeling so strong?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 14
+   },
+   "key": "He had been rude about one of her daughters.",
+   "options": [
+    {
+     "value": "He had been rude about one of her daughters.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He would not let anyone introduce him to her.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He had told Mr Bennet that he did not like the neighbourhood.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Mr Bingley had chosen to dance with her eldest daughter.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He was the proudest man in the world, and she hated proud people.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": true,
+     "execution": "'The proudest man in the world' at line 42 is offered as her reason, which makes her feeling general when lines 45 and 46 make it particular."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-22",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "At the end, Elizabeth turns what happened into a story for her friends. Read lines 70 to 73. What does this tell us about her?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 22
+   },
+   "key": "She can find the funny side of things, even when she has been treated badly.",
+   "options": [
+    {
+     "value": "She has completely forgiven Mr Darcy.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She can find the funny side of things, even when she has been treated badly.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She wants her friends to feel sorry for her.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "What Mr Darcy said did not bother her at all.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": true,
+     "execution": "'Did not bother her at all' overstates: line 70 says her feelings towards him were not cordial."
+    },
+    {
+     "value": "She thinks Mr Darcy is a fine, handsome man.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-23",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Think about the whole passage. How do we learn what the people in it are like?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "answerShape": "two-halved-contrast-of-what-is-given-against-what-is-withheld",
+    "orderAnchor": 23,
+    "techniqueKey": "verdicts-always-in-other-mouths-narrator-never-adjudicates"
+   },
+   "key": "We are told what others say of them, but never whether the writer agrees.",
+   "options": [
+    {
+     "value": "We are told what the writer thinks, and not only what the room says.",
+     "isKey": false,
+     "tag": "en-narrator-voice-as-fact",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "We are shown what they do, but never told whether the writer approves.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "We are given only Elizabeth's view, and no other opinion is ever allowed.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": true,
+     "execution": "Elizabeth does not appear until line 47 and gives no verdict at all; the opinions at lines 29, 42 and 44 belong to the room and to Mrs Bennet."
+    },
+    {
+     "value": "We are told what others say of them, but never whether the writer agrees.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-004-AGG-08",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Read lines 33 to 46. The writer shows the girl to an 'ordinary observer', then to an 'extraordinary observer'. Why?",
+    "passageRef": "stream-a-06-anne-green-gables",
+    "orderAnchor": 8
+   },
+   "key": "To show that there is far more to this girl than her plain looks suggest.",
+   "options": [
+    {
+     "value": "To show that the girl slowly changed while she sat there waiting for him.",
+     "isKey": false,
+     "tag": "en-parallel-read-as-sequence",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To show that Matthew saw both of these things as he came down the platform.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To show that nobody could ever really know what this girl was like inside.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": true,
+     "execution": "Stretches to nobody and ever where the passage is measured."
+    },
+    {
+     "value": "To show that there is far more to this girl than her plain looks suggest.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-004-AGG-10",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "The girl says she had planned to sleep in a wild cherry-tree. What does this show about her? (lines 51 to 58)",
+    "passageRef": "stream-a-06-anne-green-gables",
+    "orderAnchor": 10
+   },
+   "key": "She can turn a hard situation into something lovely.",
+   "options": [
+    {
+     "value": "She would rather sleep outside than go to Green Gables.",
+     "isKey": false,
+     "tag": "en-relation-word-flipped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She can turn a hard situation into something lovely.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She is never frightened by anything at all.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": true,
+     "execution": "Stretches line 55; lines 51 and 52 say she was beginning to be afraid he was not coming."
+    },
+    {
+     "value": "She has slept outdoors many times before.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-004-AGG-11",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Matthew decides to take the girl home. What does this decision show about him? (lines 59 to 63)",
+    "passageRef": "stream-a-06-anne-green-gables",
+    "orderAnchor": 11
+   },
+   "key": "He would rather be kind now than face a hard talk.",
+   "options": [
+    {
+     "value": "Marilla had told him what to do in this case.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He never makes a decision by himself.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": true,
+     "execution": "Line 59 shows him deciding by himself, so never cannot hold."
+    },
+    {
+     "value": "He would rather be kind now than face a hard talk.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He had always hoped that a girl would come.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-006-TM-12",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "The writer says 'would' again and again. He would shout, he would drop it, he would call us fools. What does that tell us about this day?",
+    "passageRef": "stream-a-10-three-men-boat",
+    "answerShape": "grammatical-split",
+    "orderAnchor": 9999,
+    "techniqueKey": "habitual-would-turns-one-scene-into-a-standing-pattern"
+   },
+   "key": "It is not one day at all, but what happened every single time.",
+   "options": [
+    {
+     "value": "It is not one clear memory, but a guess at what may have happened.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "It tells us the picture was never hung, though he says it was.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": true,
+     "execution": "Stretches to never; line 58 has the picture up by midnight, crooked but up."
+    },
+    {
+     "value": "It tells us the story is remembered years after it all happened.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "It is not one day at all, but what happened every single time.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-007-LP-08",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "The trials sheet has eleven names and 'plenty of room left at the bottom'. Why does the writer tell us? (lines 37 to 39)"
+   },
+   "key": "There is a space Reuben is not going to fill.",
+   "options": [
+    {
+     "value": "The football team still needs more players.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Reuben has already written his name on it.",
+     "isKey": false,
+     "tag": "en-negation-dropped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Nobody at the school wants to play in September.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "There is a space Reuben is not going to fill.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-008-RC-11",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 26 to 30, then lines 71 to 73. Why could the morning search never find the garden?",
+    "passageRef": "stream-a-02-railway-children",
+    "orderAnchor": 71
+   },
+   "key": "They searched round the house, but the garden lay behind the stables.",
+   "options": [
+    {
+     "value": "The house stood in a field, and no garden lay near it.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": true,
+     "execution": "Line 29 says no strip of garden touched the house, and line 72 finds the garden."
+    },
+    {
+     "value": "They had seen no wall at all, but only imagined it in the dark.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They searched round the house, but the garden lay behind the stables.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The garden had hidden itself away, and the high wall kept it out of sight.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-008-RC-12",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "The writer keeps making one choice about the order she tells things in. Which is it?",
+    "passageRef": "stream-a-02-railway-children",
+    "answerShape": "order-of-telling-inverted",
+    "orderAnchor": 9999,
+    "techniqueKey": "explanation-arrives-after-the-scene-it-explains"
+   },
+   "key": "We are shown the scene, but told the reason for it only afterwards.",
+   "options": [
+    {
+     "value": "She shows them creeping down to be useful, and then Mother wakes.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She lets Mother explain the whole of it, though the children had missed it.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "We are told what the children do, but never what they feel.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": true,
+     "execution": "Line 11 gives Roberta's fun, line 39 their contentment, line 56 a wonderful breakfast."
+    },
+    {
+     "value": "We are shown the scene, but told the reason for it only afterwards.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-009-SM-02",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Read lines 4 and 5. What do they say about Saltmere and this walk?",
+    "passageRef": "stream-b-02",
+    "orderAnchor": 4
+   },
+   "key": "He got as far as the caravan park, twice.",
+   "options": [
+    {
+     "value": "He got as far as Saltmere, twice.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He got as far as the caravan park, twice.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He had never set out for Saltmere before.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": true,
+     "execution": "Line 5 says twice, so never is stronger than the passage."
+    },
+    {
+     "value": "He walked out to Saltmere about four years ago.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-009-SM-09",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 10 to 12, then lines 33 to 35. What does standing on the step settle about Nan's story?",
+    "passageRef": "stream-b-02",
+    "orderAnchor": 33
+   },
+   "key": "The story has two speeds, but the water he watches is the slow one.",
+   "options": [
+    {
+     "value": "The story has two speeds, but the water he watches is the slow one.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The sea took the whole row in one night in February, as she says.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "None of what Nan has told him about the place ever really happened.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": true,
+     "execution": "Line 33 has him standing on the step, so at least that much of it is real."
+    },
+    {
+     "value": "The water comes up, but then leaves the step alone.",
+     "isKey": false,
+     "tag": "en-negation-dropped",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-010-JE-12",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Jane does the same thing again and again before describing something. What?",
+    "passageRef": "stream-a-11-jane-eyre",
+    "answerShape": "observation-bounded-by-conditions",
+    "orderAnchor": 9999,
+    "techniqueKey": "the-light-is-reported-before-the-description"
+   },
+   "key": "She reports the light first, but describes little beyond what it shows.",
+   "options": [
+    {
+     "value": "She tells us the sun sank down crimson and clear behind the trees.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She describes each person in full first, but gives their actions later.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She never describes a person, but only the weather and the sky.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": true,
+     "execution": "Lines 52 to 56 describe the traveller closely, from his cloak to his age."
+    },
+    {
+     "value": "She reports the light first, but describes little beyond what it shows.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-011-CV-12",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Mrs Umney offers the family a ghost story. How do they keep answering it?",
+    "passageRef": "stream-a-07-canterville-ghost",
+    "answerShape": "register-mismatch",
+    "orderAnchor": 12,
+    "techniqueKey": "the-ghost-story-is-answered-in-household-business"
+   },
+   "key": "They keep to household business, though she speaks of ghosts.",
+   "options": [
+    {
+     "value": "They keep saying, over and over, that the house has no ghost.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They laugh at her openly, while she is out of the room.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They never take her to heart, and answer her coldly.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": true,
+     "execution": "Line 54 has them answer her warmly, and line 57 leaves her better paid."
+    },
+    {
+     "value": "They keep to household business, though she speaks of ghosts.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-012-ML-12",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "The writer keeps doing something the two children could not do. What?",
+    "passageRef": "stream-a-14-mill-on-floss",
+    "answerShape": "narrator-register-above-the-scene",
+    "orderAnchor": 12,
+    "techniqueKey": "a-child-quarrel-narrated-in-adult-general-terms"
+   },
+   "key": "He gives a children's quarrel, but explains it in grown-up words.",
+   "options": [
+    {
+     "value": "He tells us that Tom cut the puff and gave Maggie the best bit of it.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He takes Maggie's side, but keeps it out of his words.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He never once tells us what either child is feeling.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": true,
+     "execution": "Lines 33, 48 and 64 all give feelings the children never speak aloud."
+    },
+    {
+     "value": "He gives a children's quarrel, but explains it in grown-up words.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-024-BF-12",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Think about the whole passage. What does Dilan keep doing as he tells it?",
+    "passageRef": "stream-b-03",
+    "answerShape": "the-case-he-makes-set-against-the-facts-he-reports",
+    "orderAnchor": 999,
+    "techniqueKey": "a-narrator-whose-own-details-answer-his-case"
+   },
+   "key": "He keeps saying it went well, but his own details say otherwise.",
+   "options": [
+    {
+     "value": "He says he is not in trouble, and his mother is behind the door.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He knows he went too far, but he keeps it from us.",
+     "isKey": false,
+     "tag": "en-whole-text-absence-asserted",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He leaves out every single detail that could count against him.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": true,
+     "execution": "Every single is what defeats it; lines 28 to 34 report the damage."
+    },
+    {
+     "value": "He keeps saying it went well, but his own details say otherwise.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  }
+ ]
+}

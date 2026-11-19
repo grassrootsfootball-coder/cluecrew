@@ -1,0 +1,111 @@
+{
+ "entry": {
+  "id": "en-repetition-purpose",
+  "status": "ACTIVE",
+  "district": "ENGLISH",
+  "category": null,
+  "description": "Cannot say why a writer repeats words; defaults to literal or dismissive readings.",
+  "childHint": "Writers repeat on purpose. Ask what the echo does to the reader.",
+  "approvedBy": "human:staff-reviewer@cluecrew.test",
+  "approvalMethod": "written review 2026-08-02",
+  "approvalNote": "Cleared on the printed review pack; returned marked up.",
+  "textProvenance": {
+   "note": "Ruled when written; absent from the store until now (R403/R410).",
+   "state": "RECORDED",
+   "appliedOn": "2026-08-22",
+   "authority": "annie-fiftyfirst-return.md, read from the file, sha256 c35cdc66776bd6897997f0f33a0e269a446ab5e8a4ce661c8ee2f4c7b8bf1a2d",
+   "approvedByPerson": "Annie"
+  }
+ },
+ "carrierCount": 2,
+ "carriers": [
+  {
+   "itemId": "ENG-001-WIW-05",
+   "status": "LIVE",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "In lines 11 to 14 the writer repeats words like 'scraped' and 'scrabbled'. Why does he do this?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 5
+   },
+   "key": "To show the climb went on and on and was hard work.",
+   "options": [
+    {
+     "value": "To show that digging is the easiest job a mole ever does.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To show the Mole was bored and fed up with the climb.",
+     "isKey": false,
+     "tag": "en-repetition-purpose",
+     "carriesThisEntry": true,
+     "execution": "The repeated verbs are read as boredom rather than as duration — the standard misreading of a repeated action word."
+    },
+    {
+     "value": "To show the climb went on and on and was hard work.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To copy the sound of the birds singing up above.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To make the reader feel sorry for the Mole's sore arms.",
+     "isKey": false,
+     "tag": "en-technique-effect-mislocated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-07",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "First the village hears of twelve ladies and seven gentlemen. Then it hears six. Then only five people arrive. Read lines 17 to 23. Why does the writer give us all three numbers?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 7
+   },
+   "key": "To show how much the village talk changed each time it was passed on.",
+   "options": [
+    {
+     "value": "To show that Mr Bingley kept changing his mind about who to bring.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To show how much the village talk changed each time it was passed on.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To show that the girls were looking forward to meeting new people.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To show that Mr Bingley really did have five sisters.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To make sure the reader counts the guests carefully.",
+     "isKey": false,
+     "tag": "en-repetition-purpose",
+     "carriesThisEntry": true,
+     "execution": "The three numbers are read as an instruction to the reader rather than as talk changing shape."
+    }
+   ]
+  }
+ ]
+}

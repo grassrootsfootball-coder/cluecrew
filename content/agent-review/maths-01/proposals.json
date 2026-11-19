@@ -1,0 +1,229 @@
+{
+  "door": "maths-01",
+  "proposer": "agent",
+  "seats": [
+    {
+      "optionId": "cmtereveq0008tmfzflc0zzw2",
+      "itemId": "MC01-CALC-02",
+      "oldValue": "33",
+      "tag": "maths-99-rounded-without-compensating",
+      "newValue": "30",
+      "execution": "The child rounds 62 to 60 and 27 to 30, both to the nearest ten, and gives 60 - 30 = 30. Rounding 62 down took 2 off and rounding 27 up took 3 more away, so 5 has to be put back to reach 35; the child never does."
+    },
+    {
+      "optionId": "cmtereveq0009tmfzymqid2t9",
+      "itemId": "MC01-CALC-02",
+      "oldValue": "40",
+      "tag": "maths-12-forgetting-to-exchange",
+      "newValue": "40",
+      "execution": "The top digit in the ones column, 2, is smaller than 7, so the child writes 0 there instead of exchanging a ten. The tens column gives 6 - 2 = 4, so the answer reads 40 where 62 - 27 is 35."
+    },
+    {
+      "optionId": "cmterevf5000ktmfzyh1czb1a",
+      "itemId": "MC01-CALC-07",
+      "oldValue": "27",
+      "tag": "maths-proc-01-stopped-at-the-first-answer",
+      "newValue": "27",
+      "execution": "The child works out the starting total correctly, 4 x 6 + 3 = 27, and gives it as the answer. The question asks how many are left after 15 are used, which is the step still to do: 27 - 15 = 12."
+    },
+    {
+      "optionId": "cmterevf5000ltmfz7ahl8wcc",
+      "itemId": "MC01-CALC-07",
+      "oldValue": "21",
+      "tag": "maths-72-wrong-operation-chosen",
+      "newValue": "42",
+      "execution": "The child finds the starting total of 27 correctly, then adds the 15 eggs used instead of taking them away: 27 + 15 = 42. Eggs that are used are gone, so the count should fall to 12, not rise."
+    },
+    {
+      "optionId": "cmterevfa000qtmfz0b8dvk0f",
+      "itemId": "MC01-CALC-08",
+      "oldValue": "4008",
+      "tag": "maths-99-rounded-without-compensating",
+      "newValue": "4500",
+      "execution": "The child rounds 8006 to 8000 and 3478 to 3500, both to the nearest hundred, and gives 8000 - 3500 = 4500. The 6 dropped from 8006 and the 22 added to 3478 both have to be put back, giving 4528; the child stops at the rounded result."
+    },
+    {
+      "optionId": "cmterevfa000rtmfzsvduiend",
+      "itemId": "MC01-CALC-08",
+      "oldValue": "5000",
+      "tag": "maths-12-forgetting-to-exchange",
+      "newValue": "5000",
+      "execution": "In the ones, tens and hundreds columns the top digit (6, 0, 0) is smaller than the bottom (8, 7, 4), so the child writes 0 in each instead of exchanging. Only the thousands column is worked, 8 - 3 = 5, so the answer reads 5000 where 8006 - 3478 is 4528."
+    },
+    {
+      "optionId": "cmteo81z7001otmmjnlemtn35",
+      "itemId": "MC01-GEOM-06",
+      "oldValue": "140°",
+      "tag": "maths-proc-01-stopped-at-the-first-answer",
+      "newValue": "140°",
+      "execution": "The child takes the 40° from 180° correctly to get 140° and gives that as the answer. The 140° is shared by the two equal angles, so the step still to do is 140° ÷ 2 = 70°."
+    },
+    {
+      "optionId": "cmteo81z7001rtmmjm4kxs4y3",
+      "itemId": "MC01-GEOM-06",
+      "oldValue": "50°",
+      "tag": "maths-100-steps-out-of-order",
+      "newValue": "50°",
+      "execution": "The child halves the 180° first, getting 90°, and then takes away the 40°: 90° - 40° = 50°. The 40° must come off the whole 180° before the rest is shared, giving 140° ÷ 2 = 70°."
+    },
+    {
+      "optionId": "cmterevfn000ztmfzy4d2a2sl",
+      "itemId": "MC01-MEAS-01",
+      "oldValue": "£1.00",
+      "tag": "maths-99-rounded-without-compensating",
+      "newValue": "£1.00",
+      "execution": "The child rounds £3.50 up to £4 and gives £5 - £4 = £1.00 as the change. Rounding up took 50p too much away, so 50p has to be added back to reach £1.50; the child stops at the rounded result."
+    },
+    {
+      "optionId": "cmterevfs0014tmfzy9gcfchv",
+      "itemId": "MC01-MEAS-02",
+      "oldValue": "50 cm",
+      "tag": "maths-99-rounded-without-compensating",
+      "newValue": "50 cm",
+      "execution": "The child rounds 35 cm up to 40 cm and gives 90 - 40 = 50 cm. Rounding up took 5 cm too much away, so 5 cm has to be added back to reach 55 cm; the child stops at the rounded result."
+    },
+    {
+      "optionId": "cmterevfs0015tmfz2d20fzvf",
+      "itemId": "MC01-MEAS-02",
+      "oldValue": "60 cm",
+      "tag": "maths-12-forgetting-to-exchange",
+      "newValue": "60 cm",
+      "execution": "The top digit in the ones column, 0, is smaller than 5, so the child writes 0 there instead of exchanging a ten. The tens give 9 - 3 = 6, so the answer reads 60 cm where 90 - 35 is 55 cm."
+    },
+    {
+      "optionId": "cmteo821v003itmmjqk086trw",
+      "itemId": "MC01-STATS-03",
+      "oldValue": "4",
+      "tag": "maths-104-gave-a-different-average",
+      "newValue": "4",
+      "execution": "The child gives the range instead of the mean: the highest score take away the lowest, 10 - 6 = 4. The question asks for the mean, 32 ÷ 4 = 8."
+    },
+    {
+      "optionId": "cmteo822f003mtmmjm1g8m299",
+      "itemId": "MC01-STATS-04",
+      "oldValue": "2",
+      "tag": "maths-proc-01-stopped-at-the-first-answer",
+      "newValue": "30",
+      "execution": "The child works out the total of all five numbers correctly, 5 x 6 = 30, and gives that as the answer. The step still to do is taking away the four given numbers, 30 - 26 = 4."
+    },
+    {
+      "optionId": "cmteo822f003ntmmjbdik8a73",
+      "itemId": "MC01-STATS-04",
+      "oldValue": "6",
+      "tag": "maths-110-missing-value-equals-the-average",
+      "newValue": "6",
+      "execution": "The child assumes the missing number must be the mean itself and gives 6. With 6 as the fifth number the total is 32, and 32 ÷ 5 is not 6; the fifth number must be 30 - 26 = 4."
+    }
+  ],
+  "redrafts": [
+    {
+      "optionId": "cmtereveq0007tmfzaoh3jahc",
+      "itemId": "MC01-CALC-02",
+      "value": "45",
+      "tag": "maths-11-commutative-subtraction",
+      "execution": "In the ones column the child sees 2 and 7 and takes the smaller from the larger, 7 - 2 = 5, instead of exchanging a ten. The tens column then gives 6 - 2 = 4, so the answer reads 45 where 62 - 27 is 35."
+    },
+    {
+      "optionId": "cmterevf5000jtmfzee70si4w",
+      "itemId": "MC01-CALC-07",
+      "value": "9",
+      "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+      "execution": "The child counts only the eggs in the boxes, 4 x 6 = 24, and never uses the 3 loose eggs. Taking away the 15 used gives 24 - 15 = 9, where 27 - 15 is 12."
+    },
+    {
+      "optionId": "cmterevfa000ptmfz0xxb5mvo",
+      "itemId": "MC01-CALC-08",
+      "value": "5472",
+      "tag": "maths-11-commutative-subtraction",
+      "execution": "In each column where the top digit is smaller the child takes the top from the bottom instead of exchanging: 8 - 6 = 2 in the ones, 7 - 0 = 7 in the tens and 4 - 0 = 4 in the hundreds. The thousands give 8 - 3 = 5, so the answer reads 5472 where 8006 - 3478 is 4528."
+    },
+    {
+      "optionId": "cmteo81z7001qtmmjmqditme6",
+      "itemId": "MC01-GEOM-06",
+      "value": "160°",
+      "tag": "maths-89-wrong-angle-total",
+      "execution": "The child uses 360° as the angle total for a triangle instead of 180°. Then 360° - 40° = 320° and 320° ÷ 2 = 160°, where the triangle's angles give (180° - 40°) ÷ 2 = 70°."
+    },
+    {
+      "optionId": "cmterevfn000ytmfzekrq2d7d",
+      "itemId": "MC01-MEAS-01",
+      "value": "£2.00",
+      "tag": "maths-83-money-place-value-slip",
+      "execution": "The child drops the 50p and subtracts whole pounds only: £5 - £3 = £2.00. The book costs £3.50, so the 50p must come off too, leaving £1.50."
+    },
+    {
+      "optionId": "cmterevfn0011tmfzjmhchidf",
+      "itemId": "MC01-MEAS-01",
+      "value": "£2.50",
+      "tag": "maths-11-commutative-subtraction",
+      "execution": "Setting out £5.00 - £3.50 in columns, the child sees 0 above 5 in the tenths and writes 5 instead of exchanging. The pounds give 5 - 3 = 2, so the answer reads £2.50 where the change is £1.50."
+    },
+    {
+      "optionId": "cmterevfs0013tmfz911hgw71",
+      "itemId": "MC01-MEAS-02",
+      "value": "65 cm",
+      "tag": "maths-11-commutative-subtraction",
+      "execution": "In the ones column the child sees 0 above 5 and takes the smaller from the larger, 5 - 0 = 5, instead of exchanging a ten. The tens give 9 - 3 = 6, so the answer reads 65 cm where 90 - 35 is 55 cm."
+    },
+    {
+      "optionId": "cmteo821v003gtmmj3sxmwtag",
+      "itemId": "MC01-STATS-03",
+      "value": "32",
+      "tag": "maths-56-incomplete-mean",
+      "execution": "The child adds the four scores correctly, 7 + 9 + 6 + 10 = 32, and stops there. The mean needs that total shared between the four tests, 32 ÷ 4 = 8."
+    },
+    {
+      "optionId": "cmteo821v003htmmjoia9o817",
+      "itemId": "MC01-STATS-03",
+      "value": "16",
+      "tag": "maths-96-mean-calculation-slip",
+      "execution": "The child adds the scores to 32 correctly but divides by 2 instead of by the 4 tests: 32 ÷ 2 = 16. There are four scores, so the mean is 32 ÷ 4 = 8."
+    },
+    {
+      "optionId": "cmteo822f003ktmmjk1iucg0e",
+      "itemId": "MC01-STATS-04",
+      "value": "6.5",
+      "tag": "maths-97-missing-value-mean-slip",
+      "execution": "The child finds the mean of the four numbers given, (4 + 8 + 5 + 9) ÷ 4 = 26 ÷ 4 = 6.5, and ignores the missing fifth one. The question needs the total of all five, 5 x 6 = 30, less the 26 given, which is 4."
+    }
+  ],
+  "rebuilds": [
+    {
+      "itemId": "MC01-GEOM-05",
+      "why": "Stem sentence was 25 words against the 16-word cap. Same maths (10 cm by 6 cm rectangle, 4 cm by 3 cm corner removed, area 48 cm²), split into four short sentences; the old 'not to scale' bracket becomes its own sentence. Options keep their values; every distractor now tagged with an execution.",
+      "stem": {
+        "text": "An L-shape is made from a rectangle 10 cm by 6 cm. A corner 4 cm by 3 cm is cut out. It is not drawn to scale. What is the area of the L-shape?"
+      },
+      "options": [
+        {
+          "optionId": "cmterevfh000utmfzj2w7nx9k",
+          "value": "60 cm²",
+          "isKey": false,
+          "tag": "maths-90-composite-shape-area-slip",
+          "execution": "The child works out the whole rectangle, 10 x 6 = 60 cm², and forgets the corner that was cut out. The 4 x 3 = 12 cm² corner has to come off, leaving 48 cm²."
+        },
+        {
+          "optionId": "cmterevfh000vtmfzlxyu7wsu",
+          "value": "32 cm²",
+          "isKey": false,
+          "tag": "maths-38-perimeter-vs-area-adding",
+          "execution": "The child adds the rectangle's sides instead of finding the space inside: 10 + 6 + 10 + 6 = 32. That is a perimeter, not an area; the area is 60 - 12 = 48 cm²."
+        },
+        {
+          "optionId": "cmterevfh000wtmfzl5t8jjpl",
+          "value": "12 cm²",
+          "isKey": false,
+          "tag": "maths-proc-01-stopped-at-the-first-answer",
+          "execution": "The child works out the cut-out corner correctly, 4 x 3 = 12 cm², and gives that as the answer. The question asks for what is left, so the step still to do is 60 - 12 = 48 cm²."
+        },
+        {
+          "optionId": "cmterevfh000xtmfzkschqykc",
+          "value": "48 cm²",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        }
+      ]
+    }
+  ]
+}

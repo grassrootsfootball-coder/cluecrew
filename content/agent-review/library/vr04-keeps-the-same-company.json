@@ -1,0 +1,922 @@
+{
+ "entry": {
+  "id": "vr04-keeps-the-same-company",
+  "status": "ACTIVE",
+  "district": "VR",
+  "category": "vr-04-closest-meaning",
+  "description": "Picks a word that turns up in the same situations as the headword without sharing its meaning (loyal for BRAVE — another word of praise, not one that means unafraid).",
+  "childHint": "These words often turn up together. That does not make them the same.",
+  "approvedBy": null,
+  "approvalMethod": null,
+  "approvalNote": null,
+  "textProvenance": null
+ },
+ "carrierCount": 23,
+ "carriers": [
+  {
+   "itemId": "gen-vr-04-closest-meaning-01",
+   "status": "DRAFT",
+   "questionType": "vr-04-closest-meaning",
+   "stem": {
+    "words": [
+     "brave"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "key": "fearless",
+   "options": [
+    {
+     "value": "fearless",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "reckless",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "loud",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "loyal",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-02",
+   "status": "DRAFT",
+   "questionType": "vr-04-closest-meaning",
+   "stem": {
+    "words": [
+     "swift"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "key": "speedy",
+   "options": [
+    {
+     "value": "speedy",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "frantic",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "sudden",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "early",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-03",
+   "status": "DRAFT",
+   "questionType": "vr-04-closest-meaning",
+   "stem": {
+    "words": [
+     "damp"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "key": "moist",
+   "options": [
+    {
+     "value": "moist",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "soaked",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "mouldy",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "cold",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-04",
+   "status": "DRAFT",
+   "questionType": "vr-04-closest-meaning",
+   "stem": {
+    "words": [
+     "chilly"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "key": "cool",
+   "options": [
+    {
+     "value": "cool",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "freezing",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "shivery",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "grey",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-05",
+   "status": "DRAFT",
+   "questionType": "vr-04-closest-meaning",
+   "stem": {
+    "words": [
+     "shiny"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "key": "gleaming",
+   "options": [
+    {
+     "value": "gleaming",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "dazzling",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "smooth",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "new",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-06",
+   "status": "DRAFT",
+   "questionType": "vr-04-closest-meaning",
+   "stem": {
+    "words": [
+     "glad"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "key": "pleased",
+   "options": [
+    {
+     "value": "pleased",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "overjoyed",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "relieved",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "lucky",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-07",
+   "status": "DRAFT",
+   "questionType": "vr-04-closest-meaning",
+   "stem": {
+    "words": [
+     "hollow"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "key": "empty",
+   "options": [
+    {
+     "value": "empty",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "bottomless",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "light",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "wooden",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-10",
+   "status": "DRAFT",
+   "questionType": "vr-04-closest-meaning",
+   "stem": {
+    "words": [
+     "generous"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "key": "giving",
+   "options": [
+    {
+     "value": "giving",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "extravagant",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "friendly",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "wealthy",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-12",
+   "status": "DRAFT",
+   "questionType": "vr-04-closest-meaning",
+   "stem": {
+    "words": [
+     "timid"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "key": "shy",
+   "options": [
+    {
+     "value": "shy",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "terrified",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "quiet",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "polite",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-13",
+   "status": "DRAFT",
+   "questionType": "vr-04-closest-meaning",
+   "stem": {
+    "words": [
+     "rare"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "key": "uncommon",
+   "options": [
+    {
+     "value": "uncommon",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "unique",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "strange",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "precious",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-14",
+   "status": "DRAFT",
+   "questionType": "vr-04-closest-meaning",
+   "stem": {
+    "words": [
+     "sturdy"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "key": "strong",
+   "options": [
+    {
+     "value": "strong",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "massive",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "heavy",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "wooden",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-16",
+   "status": "DRAFT",
+   "questionType": "vr-04-closest-meaning",
+   "stem": {
+    "words": [
+     "ancient"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "key": "old",
+   "options": [
+    {
+     "value": "old",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "prehistoric",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "ruined",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "valuable",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-18",
+   "status": "DRAFT",
+   "questionType": "vr-04-closest-meaning",
+   "stem": {
+    "words": [
+     "humble"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "key": "modest",
+   "options": [
+    {
+     "value": "modest",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "meek",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "quiet",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "grateful",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-20",
+   "status": "DRAFT",
+   "questionType": "vr-04-closest-meaning",
+   "stem": {
+    "words": [
+     "feeble"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "key": "weak",
+   "options": [
+    {
+     "value": "weak",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "helpless",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "pale",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "elderly",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-21",
+   "status": "DRAFT",
+   "questionType": "vr-04-closest-meaning",
+   "stem": {
+    "words": [
+     "genuine"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "key": "real",
+   "options": [
+    {
+     "value": "real",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "perfect",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "signed",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "costly",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-27",
+   "status": "DRAFT",
+   "questionType": "vr-04-closest-meaning",
+   "stem": {
+    "words": [
+     "conceal"
+    ],
+    "prompt": "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "sentence": "She tried to CONCEAL her disappointment from her friends."
+   },
+   "key": "hide",
+   "options": [
+    {
+     "value": "hide",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "bury",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "ignore",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "pretend",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-28",
+   "status": "DRAFT",
+   "questionType": "vr-04-closest-meaning",
+   "stem": {
+    "words": [
+     "exhausted"
+    ],
+    "prompt": "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "sentence": "After the long walk home they were EXHAUSTED."
+   },
+   "key": "drained",
+   "options": [
+    {
+     "value": "drained",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "tired",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "sleepy",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "empty",
+     "isKey": false,
+     "tag": "vr04-the-other-meaning",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-29",
+   "status": "DRAFT",
+   "questionType": "vr-04-closest-meaning",
+   "stem": {
+    "words": [
+     "amend"
+    ],
+    "prompt": "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "sentence": "The teacher asked her to AMEND the last paragraph."
+   },
+   "key": "change",
+   "options": [
+    {
+     "value": "change",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "rewrite",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "improve",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "check",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-30",
+   "status": "DRAFT",
+   "questionType": "vr-04-closest-meaning",
+   "stem": {
+    "words": [
+     "futile"
+    ],
+    "prompt": "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "sentence": "Their efforts to save the old tree proved FUTILE."
+   },
+   "key": "pointless",
+   "options": [
+    {
+     "value": "pointless",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "impossible",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "foolish",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "slow",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-32",
+   "status": "DRAFT",
+   "questionType": "vr-04-closest-meaning",
+   "stem": {
+    "words": [
+     "abundant"
+    ],
+    "prompt": "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "sentence": "Fish were ABUNDANT in the river that summer."
+   },
+   "key": "plentiful",
+   "options": [
+    {
+     "value": "plentiful",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "endless",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "large",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "valuable",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-33",
+   "status": "DRAFT",
+   "questionType": "vr-04-closest-meaning",
+   "stem": {
+    "words": [
+     "notorious"
+    ],
+    "prompt": "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "sentence": "That road is NOTORIOUS for its sharp bends."
+   },
+   "key": "infamous",
+   "options": [
+    {
+     "value": "infamous",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "legendary",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "famous",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "dangerous",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-35",
+   "status": "DRAFT",
+   "questionType": "vr-04-closest-meaning",
+   "stem": {
+    "words": [
+     "benevolent"
+    ],
+    "prompt": "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "sentence": "The school was founded by a BENEVOLENT businessman."
+   },
+   "key": "kind",
+   "options": [
+    {
+     "value": "kind",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "saintly",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "polite",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "wealthy",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-36",
+   "status": "DRAFT",
+   "questionType": "vr-04-closest-meaning",
+   "stem": {
+    "words": [
+     "stoic"
+    ],
+    "prompt": "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "sentence": "She remained STOIC throughout the long wait."
+   },
+   "key": "unemotional",
+   "options": [
+    {
+     "value": "unemotional",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "patient",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "silent",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "brave",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  }
+ ]
+}

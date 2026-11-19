@@ -1,0 +1,1279 @@
+{
+ "entry": {
+  "id": "en-cause-agent-swap",
+  "status": "ACTIVE",
+  "district": "ENGLISH",
+  "category": null,
+  "description": "Attributes the right event to the wrong cause or character.",
+  "childHint": "Ask what exactly made this happen. Re-read the moment step by step.",
+  "approvedBy": "human:staff-reviewer@cluecrew.test",
+  "approvalMethod": "written review 2026-08-02",
+  "approvalNote": "Cleared on the printed review pack; returned marked up.",
+  "textProvenance": {
+   "note": "Ruled when written; absent from the store until now (R403/R410).",
+   "state": "RECORDED",
+   "appliedOn": "2026-08-22",
+   "authority": "annie-seventyseventh-return.md, read from the file, sha256 1c7070f52f67c5d9664f26f1fdefa17323ff1b9111a84ca7c4d093c8c48f79a7",
+   "approvedByPerson": "Annie"
+  }
+ },
+ "carrierCount": 32,
+ "carriers": [
+  {
+   "itemId": "ENG-001-WIW-03",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 5 to 9. Why did the Mole suddenly stop cleaning and run outside?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 3
+   },
+   "key": "Spring outside was pulling at him and he could not sit still.",
+   "options": [
+    {
+     "value": "He had finished every job in the house.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Spring outside was pulling at him and he could not sit still.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "His back and arms hurt too much to go on.",
+     "isKey": false,
+     "tag": "en-physical-vs-emotional-cue",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The Water Rat called him from up above.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": true,
+     "execution": "The Water Rat does not appear until line 54. Line 9 says 'something up above was calling him', and this hands that to a character."
+    },
+    {
+     "value": "He wanted to find the river he had heard about.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-07",
+   "status": "LIVE",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 17 to 19. Why did the birds' singing sound almost like a shout to the Mole?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 7
+   },
+   "key": "He had been shut underground so long that his ears were not used to it.",
+   "options": [
+    {
+     "value": "The birds were much louder than usual that day.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": true,
+     "execution": "The change is put on the birds; lines 18 and 19 put it on his dulled hearing."
+    },
+    {
+     "value": "The rabbits were shouting at him from the gap.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The hot sun made every sound seem bigger.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He had never heard a bird sing before in his life.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He had been shut underground so long that his ears were not used to it.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-07",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "First the village hears of twelve ladies and seven gentlemen. Then it hears six. Then only five people arrive. Read lines 17 to 23. Why does the writer give us all three numbers?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 7
+   },
+   "key": "To show how much the village talk changed each time it was passed on.",
+   "options": [
+    {
+     "value": "To show that Mr Bingley kept changing his mind about who to bring.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": true,
+     "execution": "The changing is put on Mr Bingley; the numbers change in the village's mouth at lines 17 to 21 and he is never asked."
+    },
+    {
+     "value": "To show how much the village talk changed each time it was passed on.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To show that the girls were looking forward to meeting new people.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To show that Mr Bingley really did have five sisters.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To make sure the reader counts the guests carefully.",
+     "isKey": false,
+     "tag": "en-repetition-purpose",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-14",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Mrs Bennet disliked Mr Darcy more strongly than anybody else in the room did. Read lines 44 to 46. What made her feeling so strong?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 14
+   },
+   "key": "He had been rude about one of her daughters.",
+   "options": [
+    {
+     "value": "He had been rude about one of her daughters.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He would not let anyone introduce him to her.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He had told Mr Bennet that he did not like the neighbourhood.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Mr Bingley had chosen to dance with her eldest daughter.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": true,
+     "execution": "The cause is moved to Mr Bingley's dancing at line 63; lines 45 and 46 name the slight as the reason."
+    },
+    {
+     "value": "He was the proudest man in the world, and she hated proud people.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-15",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Elizabeth had to sit down for two dances. Read lines 47 to 48. Why?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 15
+   },
+   "key": "There were not enough gentlemen for all the ladies.",
+   "options": [
+    {
+     "value": "She did not feel like dancing that evening.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Mr Darcy had refused to dance with her.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": true,
+     "execution": "Mr Darcy's refusal is lines 66 and 67 and comes after she is already sitting; the cause and the effect are swapped."
+    },
+    {
+     "value": "She wanted to listen to Mr Darcy and Mr Bingley talking.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "There were not enough gentlemen for all the ladies.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Her eldest sister was dancing with Mr Bingley.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-16",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Elizabeth hears Mr Darcy's words herself. A friend does not tell her later. Read lines 47 to 50. Why is that a good choice?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 16
+   },
+   "key": "The reader hears the unkind words at the very moment Elizabeth does.",
+   "options": [
+    {
+     "value": "It shows that Elizabeth enjoyed listening in on other people.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "It shows that the room had almost emptied by then.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The reader hears the unkind words at the very moment Elizabeth does.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Mr Bingley had planned for her to hear his kind words about her.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": true,
+     "execution": "The planning is given to Mr Bingley, and the words Elizabeth hears are Mr Darcy's, not his."
+    },
+    {
+     "value": "It shows that Mr Darcy was speaking loudly to the whole room.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-004-AGG-04",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Who was Matthew expecting to meet at Bright River? (lines 17 and 18)",
+    "passageRef": "stream-a-06-anne-green-gables",
+    "orderAnchor": 4
+   },
+   "key": "A boy, sent over by Mrs Spencer.",
+   "options": [
+    {
+     "value": "A girl, sent over by Mrs Spencer.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A boy, sent over by the man at the station.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": true,
+     "execution": "Right arrangement, wrong person: line 18 names Mrs Spencer."
+    },
+    {
+     "value": "His sister Marilla, coming in on the train.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A boy, sent over by Mrs Spencer.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-004-AGG-08",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Read lines 33 to 46. The writer shows the girl to an 'ordinary observer', then to an 'extraordinary observer'. Why?",
+    "passageRef": "stream-a-06-anne-green-gables",
+    "orderAnchor": 8
+   },
+   "key": "To show that there is far more to this girl than her plain looks suggest.",
+   "options": [
+    {
+     "value": "To show that the girl slowly changed while she sat there waiting for him.",
+     "isKey": false,
+     "tag": "en-parallel-read-as-sequence",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To show that Matthew saw both of these things as he came down the platform.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": true,
+     "execution": "Gives the seeing to Matthew, though line 34 says he was not looking at her."
+    },
+    {
+     "value": "To show that nobody could ever really know what this girl was like inside.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To show that there is far more to this girl than her plain looks suggest.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-004-AGG-11",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Matthew decides to take the girl home. What does this decision show about him? (lines 59 to 63)",
+    "passageRef": "stream-a-06-anne-green-gables",
+    "orderAnchor": 11
+   },
+   "key": "He would rather be kind now than face a hard talk.",
+   "options": [
+    {
+     "value": "Marilla had told him what to do in this case.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": true,
+     "execution": "Moves the decision to Marilla, though line 59 says Matthew decided then and there."
+    },
+    {
+     "value": "He never makes a decision by himself.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He would rather be kind now than face a hard talk.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He had always hoped that a girl would come.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-005-BB-08",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Water was over the middle of the bridge. Why did the master not stop? (lines 33 and 34)",
+    "passageRef": "stream-a-04-black-beauty",
+    "orderAnchor": 33
+   },
+   "key": "Because that had happened before in floods.",
+   "options": [
+    {
+     "value": "Because it was too dark for him to see the water.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Because the gatekeeper had waved them across.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": true,
+     "execution": "The gatekeeper does run out, but at line 43, to stop them, not to wave them on."
+    },
+    {
+     "value": "Because Beauty was going at a good pace and could not stop.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Because that had happened before in floods.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-006-TM-02",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "What does Uncle Podger do straight after taking off his coat? (lines 8 and 9)",
+    "passageRef": "stream-a-10-three-men-boat",
+    "orderAnchor": 8
+   },
+   "key": "Sends the girl out for nails, then a boy after her.",
+   "options": [
+    {
+     "value": "Fetches the step-ladder and a kitchen-chair.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Sends the girl out for nails, then a boy after her.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Measures the wall to find where the nail goes.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Sends the girl for nails and goes with her.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": true,
+     "execution": "Takes the right sentence but the wrong second half: a boy is sent after her, not himself."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-006-TM-03",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "What does Uncle Podger send Jim to Mr Goggles for? (lines 13 and 14)",
+    "passageRef": "stream-a-10-three-men-boat",
+    "orderAnchor": 13
+   },
+   "key": "To borrow his spirit-level.",
+   "options": [
+    {
+     "value": "To borrow his step-ladder.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To tell him that Pa's leg is better.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To borrow his spirit-level.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To fetch a bit of picture-cord.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": true,
+     "execution": "The cord is real at line 16, but the girl is sent for it, not Jim."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-006-TM-05",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Why does the whole house stop looking for the tools? (lines 20 to 23)",
+    "passageRef": "stream-a-10-three-men-boat",
+    "orderAnchor": 20
+   },
+   "key": "Because his handkerchief is in the coat, and nobody knows where the coat is.",
+   "options": [
+    {
+     "value": "Because his handkerchief is in the coat, and nobody knows where the coat is.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Because Uncle Podger tells them to stop and help him.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": true,
+     "execution": "Line 23 has him dancing round and hindering them, not directing the search."
+    },
+    {
+     "value": "Because the tools had not been brought into the room yet.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Because he goes out of the room to see to his cut.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-007-LP-05",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Reuben 'laughed as well, slightly after her'. What does this suggest? (lines 24 to 27)",
+    "passageRef": "stream-b-04",
+    "orderAnchor": 5
+   },
+   "key": "He was thinking about something else first.",
+   "options": [
+    {
+     "value": "He was thinking about something else first.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He was waiting for her to tell him the answer.",
+     "isKey": false,
+     "tag": "en-relation-word-flipped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He could not hear her properly across the room.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He was laughing at Ilya instead.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": true,
+     "execution": "Ilya is busy with a sock at line 28, and is not part of this exchange."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-007-LP-07",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "What did Reuben do with the folded paper from his pocket? (lines 34 to 36)",
+    "passageRef": "stream-b-04",
+    "orderAnchor": 7
+   },
+   "key": "Looked at its edge and put it back unopened.",
+   "options": [
+    {
+     "value": "Read it and then put it away again.",
+     "isKey": false,
+     "tag": "en-negation-dropped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Put it in the Friday box with the jumper.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": true,
+     "execution": "The jumper goes in the box at line 33; the paper goes back in his blazer."
+    },
+    {
+     "value": "Looked at its edge and put it back unopened.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Showed it to Ilya when he came back.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-007-LP-12",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "We are never told what Reuben is feeling. How does the writer let us know anyway?",
+    "passageRef": "stream-b-04",
+    "answerShape": "withholds-and-evidences",
+    "orderAnchor": 12,
+    "techniqueKey": "interiority-withheld-and-displaced-into-handled-objects"
+   },
+   "key": "We get no thoughts from him, only his hands and the things he handles.",
+   "options": [
+    {
+     "value": "The writer tells us he is sad, and then shows us only the reasons for it.",
+     "isKey": false,
+     "tag": "en-whole-text-absence-asserted",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "We get no feelings from him at all, only what his friend Ilya says.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": true,
+     "execution": "Ilya talks about lockers, Whitby and cupboards, and never about Reuben."
+    },
+    {
+     "value": "He describes only the old clothes, and so we get nothing else.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "We get no thoughts from him, only his hands and the things he handles.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-008-RC-06",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 37 to 43. Why is the bottom burned out of the kettle?",
+    "passageRef": "stream-a-02-railway-children",
+    "orderAnchor": 37
+   },
+   "key": "They fell asleep outside, so nobody took it off the fire.",
+   "options": [
+    {
+     "value": "Mother let the fire go out while they slept.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": true,
+     "execution": "Mother only arrives at line 38, and the fire was out well before she came."
+    },
+    {
+     "value": "They fell asleep outside, so nobody took it off the fire.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They built the fire far too big for the kettle.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They set the kettle on after Mother came to look for them.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-008-RC-09",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Read lines 53 to 55. Why did Mrs Viney have to go home early?",
+    "passageRef": "stream-a-02-railway-children",
+    "orderAnchor": 53
+   },
+   "key": "Her son-in-law had broken his arm.",
+   "options": [
+    {
+     "value": "She had broken her own arm.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": true,
+     "execution": "Line 54 names her son-in-law as the one with the broken arm."
+    },
+    {
+     "value": "Nobody had told her the family was arriving.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Because she had to be back at the house by ten.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Her son-in-law had broken his arm.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-008-RC-10",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 64 to 70. What do these lines show about the three children?",
+    "passageRef": "stream-a-02-railway-children",
+    "orderAnchor": 64
+   },
+   "key": "All three reached the same idea without saying anything.",
+   "options": [
+    {
+     "value": "They wrote the question and the answer in a book.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "All three reached the same idea without saying anything.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They had agreed on the plan earlier in the day.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Mother suggested that they go down to the railway.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": true,
+     "execution": "Line 64 has Mother speaking only about lying down; the thought at line 66 is theirs."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-008-RC-12",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "The writer keeps making one choice about the order she tells things in. Which is it?",
+    "passageRef": "stream-a-02-railway-children",
+    "answerShape": "order-of-telling-inverted",
+    "orderAnchor": 9999,
+    "techniqueKey": "explanation-arrives-after-the-scene-it-explains"
+   },
+   "key": "We are shown the scene, but told the reason for it only afterwards.",
+   "options": [
+    {
+     "value": "She shows them creeping down to be useful, and then Mother wakes.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She lets Mother explain the whole of it, though the children had missed it.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": true,
+     "execution": "Mother explains the room, but the kettle and the garden are explained by the narrator."
+    },
+    {
+     "value": "We are told what the children do, but never what they feel.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "We are shown the scene, but told the reason for it only afterwards.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-009-SM-03",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Read lines 13 to 15. Why did he want a photograph of the place?",
+    "passageRef": "stream-b-02",
+    "orderAnchor": 13
+   },
+   "key": "Nan's wall has nothing on it but a calendar.",
+   "options": [
+    {
+     "value": "Nan asked him to bring her back a picture.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": true,
+     "execution": "Line 15 has him say he would get her one; the offer is his."
+    },
+    {
+     "value": "He cannot remember which visit he promised it on.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Nan's wall has nothing on it but a calendar.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He wanted a picture of Saltmere for himself.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-009-SM-06",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 24 to 26. Why does he keep from looking over at the water?",
+    "passageRef": "stream-b-02",
+    "orderAnchor": 24
+   },
+   "key": "It sat higher up than the field beside him.",
+   "options": [
+    {
+     "value": "He was in a hurry to reach Saltmere before dark.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "It sat higher up than the field beside him.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The wind was blowing hard into his eyes.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": true,
+     "execution": "Line 24 says the wind dropped out of his ears, so it had eased, not risen."
+    },
+    {
+     "value": "He looked over as soon as he could hear the water.",
+     "isKey": false,
+     "tag": "en-negation-dropped",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-009-SM-11",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 40 to 42. Why did the picture come out grey and shaken?",
+    "passageRef": "stream-b-02",
+    "orderAnchor": 40
+   },
+   "key": "The light had gone and his hands would not hold still.",
+   "options": [
+    {
+     "value": "The wind shook the phone as he held it.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": true,
+     "execution": "Line 41 gives the movement to his own hand, not to any wind."
+    },
+    {
+     "value": "There was something the matter with the camera on his phone.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The light had gone and his hands would not hold still.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Holding it in both hands is what shook it.",
+     "isKey": false,
+     "tag": "en-relation-word-flipped",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-010-JE-06",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Read lines 27 to 29. What made the man and the horse come down?",
+    "passageRef": "stream-a-11-jane-eyre",
+    "orderAnchor": 27
+   },
+   "key": "They slipped on the sheet of ice over the causeway.",
+   "options": [
+    {
+     "value": "The dog got under the horse and tripped it.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": true,
+     "execution": "Line 28 gives the cause as the ice, and line 29 has the dog come back after."
+    },
+    {
+     "value": "They slipped on the sheet of ice over the causeway.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The horse was going too fast down the hill.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The exclamation the rider made as he went down on the road.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-011-CV-01",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 1 to 3. Why did Mr Otis send for a waggonette?",
+    "passageRef": "stream-a-07-canterville-ghost",
+    "orderAnchor": 1
+   },
+   "key": "Because the nearest station is seven miles away.",
+   "options": [
+    {
+     "value": "Because the nearest station is seven miles away.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Because it was a lovely July evening for a drive.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Because the family had a great deal of luggage with them.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Lady Canterville arranged for one to meet the family.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": true,
+     "execution": "Line 2 says Mr Otis had telegraphed for it himself."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-011-CV-06",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Look at lines 12 to 16. What does 'alighted' on line 15 mean there?",
+    "passageRef": "stream-a-07-canterville-ghost",
+    "orderAnchor": 6
+   },
+   "key": "got down on arriving at the house",
+   "options": [
+    {
+     "value": "caught fire and burned",
+     "isKey": false,
+     "tag": "en-vocab-built-from-parts",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "got down on arriving at the house",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "made a low curtsey to each one of the family",
+     "isKey": false,
+     "tag": "en-coordination-wrong-conjunct",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "came down the steps towards them",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": true,
+     "execution": "Line 12 has Mrs Umney standing on the steps, and line 15 gives this act to them."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-013-TI-01",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 1 to 5. Why did Jim run on deck?",
+    "passageRef": "stream-a-01-treasure-island",
+    "orderAnchor": 1
+   },
+   "key": "He had taken a fancy for an apple.",
+   "options": [
+    {
+     "value": "He had taken a fancy for an apple.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "His work for the day was over.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He was looking out for the island.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": true,
+     "execution": "Lines 2 and 3 give that to the watch, not to Jim."
+    },
+    {
+     "value": "He could not settle down in his berth.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-013-TI-11",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 53 to 55. Why did Dick not fetch the apple?",
+    "passageRef": "stream-a-01-treasure-island",
+    "orderAnchor": 53
+   },
+   "key": "Hands broke in and called out for the rum.",
+   "options": [
+    {
+     "value": "Silver told him to leave the barrel alone.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": true,
+     "execution": "The words at line 54 are Hands's, and lines 53 to 55 give them to no one else."
+    },
+    {
+     "value": "Dick had seen Jim hiding in the barrel.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Hands broke in and called out for the rum.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Hands told Dick off for sucking at the bilge.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-017-CR-02",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 6 to 12. What made Miss Jenkyns consider herself literary?",
+    "passageRef": "stream-a-17-cranford",
+    "orderAnchor": 6
+   },
+   "key": "The sermons and the divinity books she had.",
+   "options": [
+    {
+     "value": "Her father was the rector of the town.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": true,
+     "execution": "True at line 6, and it is who her father was rather than what she went on."
+    },
+    {
+     "value": "The sermons and the divinity books she had.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The numbers she had read all the way through.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She had written a book of her own once.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-019-BV-06",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 21 to 25. Why are the willow bushes now several yards from the edge of the water?",
+    "passageRef": "stream-a-20-bevis",
+    "orderAnchor": 21
+   },
+   "key": "The lake has shrunk in the summer heat.",
+   "options": [
+    {
+     "value": "The bushes have spread outwards from the shore.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": true,
+     "execution": "Swaps which of the two moved; the lines move the water."
+    },
+    {
+     "value": "The lake has shrunk in the summer heat.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The shore turns inwards again after the point.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The water has worn a cliff away from the bank.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-019-BV-10",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 49 to 54. How does Bevis learn that the cliff can be got past?",
+    "passageRef": "stream-a-20-bevis",
+    "orderAnchor": 49
+   },
+   "key": "He watches Pan run along the face of it.",
+   "options": [
+    {
+     "value": "He watches Pan run along the face of it.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Pan follows him along once he has set off.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": true,
+     "execution": "Turns the dog into the follower; line 52 has Pan go first."
+    },
+    {
+     "value": "He finds the narrow ledge and then calls Pan back.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He sees a set of footmarks left along the sand.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-021-ED-04",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 10 to 14. Why does Ralph say the world has grown smaller?",
+    "passageRef": "stream-a-09-eighty-days",
+    "orderAnchor": 10
+   },
+   "key": "The world can be crossed ten times faster than before.",
+   "options": [
+    {
+     "value": "The search for the thief has been made easier.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": true,
+     "execution": "Line 13 gives that as the result of the smallness, not the reason for it."
+    },
+    {
+     "value": "The world can be crossed ten times faster than before.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The thief can now get away more easily.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "There are fewer places left that nobody has been to.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  }
+ ]
+}

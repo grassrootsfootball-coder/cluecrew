@@ -1,0 +1,1167 @@
+{
+ "entry": {
+  "id": "en-emotion-label-approximation",
+  "status": "ACTIVE",
+  "district": "ENGLISH",
+  "category": null,
+  "description": "Chooses an adjacent emotion word rather than the precisely evidenced one.",
+  "childHint": "Pick the word you can prove from the text. Close is not the same.",
+  "approvedBy": "human:staff-reviewer@cluecrew.test",
+  "approvalMethod": "written review 2026-08-02",
+  "approvalNote": "Cleared on the printed review pack; returned marked up.",
+  "textProvenance": {
+   "note": "Ruled when written; absent from the store until now (R403/R410).",
+   "state": "RECORDED",
+   "appliedOn": "2026-08-22",
+   "authority": "annie-seventyseventh-return.md, read from the file, sha256 1c7070f52f67c5d9664f26f1fdefa17323ff1b9111a84ca7c4d093c8c48f79a7",
+   "approvedByPerson": "Annie"
+  }
+ },
+ "carrierCount": 29,
+ "carriers": [
+  {
+   "itemId": "ENG-001-WIW-10",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 23 to 27. What does the way the Mole treats the rabbits show about him?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 10
+   },
+   "key": "He is so excited that he will not stop for anyone.",
+   "options": [
+    {
+     "value": "He is frightened of the older rabbit.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": true,
+     "execution": "Fear is an approximation of the two words the passage does give — 'impatient and contemptuous' at line 23."
+    },
+    {
+     "value": "He is so excited that he will not stop for anyone.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He is a cruel animal who is always unkind.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He is rushing home to get his dinner.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He is sorry at once for knocking the rabbit over.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-16",
+   "status": "LIVE",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Lines 48 to 52 are four very short paragraphs. Each one adds one new detail. Why does the writer do this?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 16
+   },
+   "key": "To let the reader see the face appear bit by bit, just as the Mole does.",
+   "options": [
+    {
+     "value": "To show that the Mole was creeping closer with every step.",
+     "isKey": false,
+     "tag": "en-technique-effect-mislocated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To show that the Mole was afraid of the face.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": true,
+     "execution": "Fear is put on the Mole; lines 48 to 52 give him no feeling at all."
+    },
+    {
+     "value": "To let the reader see the face appear bit by bit, just as the Mole does.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To copy the little jumps the Mole made across the meadow.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To make the face sound as grand as it possibly could be.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-17",
+   "status": "LIVE",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Read line 49: 'A grave round face'. What does 'grave' mean here?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 17
+   },
+   "key": "Serious and calm.",
+   "options": [
+    {
+     "value": "Serious and calm.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A place where someone is buried.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Dark and dirty with earth.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Very sad and upset.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": true,
+     "execution": "Sadness is an approximation of 'serious'; the passage gives the Rat no feeling here at all."
+    },
+    {
+     "value": "Round and rather fat.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-18",
+   "status": "LIVE",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 56 to 62. The Mole says, 'Oh, it’s all very well to talk.' What does this show about him?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 18
+   },
+   "key": "He did not know how anyone could get across the river.",
+   "options": [
+    {
+     "value": "He did not know how anyone could get across the river.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He thought the Water Rat was being unkind to him.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": true,
+     "execution": "'Pettishly' at line 57 is the Mole's own tone, read as the Rat being unkind to him."
+    },
+    {
+     "value": "He did not want to be friends with the Water Rat.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He was too tired from his walk to move.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He knew all about boats but did not own one.",
+     "isKey": false,
+     "tag": "en-contradicted-by-the-text",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-21",
+   "status": "LIVE",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 66 to 67. What does the last thing the Mole says show about his day?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 21
+   },
+   "key": "The whole day had been full of things he had never done before.",
+   "options": [
+    {
+     "value": "He was hoping the Rat would let him hold the oars.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He was still frightened of the water.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": true,
+     "execution": "Fear is put on him; line 65 gives 'surprise and rapture'."
+    },
+    {
+     "value": "The whole day had been full of things he had never done before.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He was already wishing he was back in his own house.",
+     "isKey": false,
+     "tag": "en-contradicted-by-the-text",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He had been in boats before, but never one as fine as this.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-19",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Read lines 57 to 59. Mr Bingley cries: 'I would not be so fastidious as you are.' What does 'fastidious' mean here?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 19
+   },
+   "key": "Very hard to please.",
+   "options": [
+    {
+     "value": "Very hard to please.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Very quick and in a hurry.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Very shy with people you do not know.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Very tidy and neat.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Very rude to other people.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": true,
+     "execution": "Rudeness is an approximation: Mr Darcy IS rude at line 66, and that is not what 'fastidious' names."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-20",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Read lines 65 to 67. Mr Darcy says Elizabeth 'is tolerable: but not handsome enough to tempt me'. What does 'tolerable' mean here?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 20
+   },
+   "key": "Only just good enough to look at.",
+   "options": [
+    {
+     "value": "Kind, and easy to get along with.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Good at putting up with things without complaining.",
+     "isKey": false,
+     "tag": "en-vocab-built-from-parts",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Only just good enough to look at.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Very good-looking, so he is paying her a compliment.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": true,
+     "execution": "Reads the word as praise, which line 66's 'but not handsome enough' immediately cancels."
+    },
+    {
+     "value": "Too proud to dance with anybody.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-21",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Read lines 70 to 73. Elizabeth 'told the story, however, with great spirit'. What does 'spirit' mean here?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 21
+   },
+   "key": "Being lively and cheerful.",
+   "options": [
+    {
+     "value": "A ghost.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Anger.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": true,
+     "execution": "Anger is an approximation of the feeling: line 70 gives 'no very cordial feelings', and line 71 gives the telling as lively."
+    },
+    {
+     "value": "Care and quietness, so that nobody else heard.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Being lively and cheerful.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Bravery when you are in danger.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-004-AGG-07",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Read lines 29 to 31. Line 30 says the task was harder than 'bearding a lion in its den'. Why does the writer compare it to that?",
+    "passageRef": "stream-a-06-anne-green-gables",
+    "orderAnchor": 7
+   },
+   "key": "To show how frightening an everyday task felt to shy Matthew.",
+   "options": [
+    {
+     "value": "To show that Matthew is bold, like a lion hunter.",
+     "isKey": false,
+     "tag": "en-comparison-vehicle-misread",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To show that Matthew felt sad about the mistake.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": true,
+     "execution": "Picks a neighbouring feeling; lines 29 and 31 point to dread, not sadness."
+    },
+    {
+     "value": "To show how frightening an everyday task felt to shy Matthew.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To show that Matthew had once faced real danger.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-005-BB-09",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at what the master does on the bridge. Then look at what he says at the hall door. What does the writer want us to understand? (lines 36 to 38 and 62 to 63)",
+    "passageRef": "stream-a-04-black-beauty",
+    "orderAnchor": 36
+   },
+   "key": "The master punished Beauty for the very thing that saved them.",
+   "options": [
+    {
+     "value": "The master punished Beauty for the very thing that saved them.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The master knew that Beauty was right to stop on the bridge.",
+     "isKey": false,
+     "tag": "en-relation-word-flipped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Beauty was too frightened of the water to cross the bridge.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": true,
+     "execution": "Line 41 says he knew the bridge was not safe, so it is knowledge, not fear."
+    },
+    {
+     "value": "The master had wanted to test whether Beauty would obey him at all.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-005-BB-12",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Beauty repeats what the people say, word for word. What does the writer keep reminding us at the same time?",
+    "answerShape": "keeps-both-halves",
+    "techniqueKey": "narrator-supplies-speech-verbatim-while-disclaiming-comprehension"
+   },
+   "key": "He gives us their words exactly, but says he cannot follow them.",
+   "options": [
+    {
+     "value": "That Beauty is too frightened to listen properly.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": true,
+     "execution": "Swaps the evidenced limit, understanding, for a feeling the passage does not give."
+    },
+    {
+     "value": "That the people never speak to Beauty at all.",
+     "isKey": false,
+     "tag": "en-negation-dropped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That Beauty repeats the words to show off what he knows.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He gives us their words exactly, but says he cannot follow them.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-007-LP-02",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Ilya talks about Year Six and about Whitby. What do Reuben's answers have in common? (lines 15 to 22)",
+    "passageRef": "stream-b-04",
+    "orderAnchor": 2
+   },
+   "key": "Both are about the sorting, not about next year.",
+   "options": [
+    {
+     "value": "Both show he is annoyed with Ilya.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": true,
+     "execution": "Imports a feeling; his answers are flat and on the job, with no sharpness in them."
+    },
+    {
+     "value": "Both are about the sorting, not about next year.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Both show he has not been listening.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Both show he wants the tall lockers too.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-007-LP-11",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Miss Bhatt looked at Reuben 'for a second or two longer than the answer needed'. What does this show? (lines 46 to 49)",
+    "passageRef": "stream-b-04",
+    "orderAnchor": 11
+   },
+   "key": "She does not believe his reason, but lets it stand.",
+   "options": [
+    {
+     "value": "She is waiting for him to say sorry for the mistake.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She has not understood what he said.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She does not believe his reason, but lets it stand.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She is cross that he has wasted the afternoon.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": true,
+     "execution": "Picks a neighbouring feeling; her next action is careful and quiet, not cross."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-008-RC-04",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 16 to 19. What does Roberta's reply show about her?",
+    "passageRef": "stream-a-02-railway-children",
+    "orderAnchor": 16
+   },
+   "key": "She puts the work first and keeps the garden for later.",
+   "options": [
+    {
+     "value": "She wants to see the garden before starting work.",
+     "isKey": false,
+     "tag": "en-negation-dropped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She is annoyed with Phyllis for talking about the garden.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": true,
+     "execution": "Line 18 gives earnest energy, which is eagerness rather than annoyance."
+    },
+    {
+     "value": "She thinks the garden will turn out to be a disappointment.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She puts the work first and keeps the garden for later.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-010-JE-04",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 11 to 18. Why does the Gytrash come into Jane's mind?",
+    "passageRef": "stream-a-11-jane-eyre",
+    "orderAnchor": 11
+   },
+   "key": "She was young, and old nursery tales came back strongly.",
+   "options": [
+    {
+     "value": "She had seen a Gytrash on this lane before.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Because a Gytrash comes upon lonely travellers who are out late.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She was terrified of being alone in the lane.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": true,
+     "execution": "Line 11 gives fancies both bright and dark, which is not the same as terror."
+    },
+    {
+     "value": "She was young, and old nursery tales came back strongly.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-010-JE-07",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 29 to 33. Why does the dog run up to Jane?",
+    "passageRef": "stream-a-11-jane-eyre",
+    "orderAnchor": 29
+   },
+   "key": "There was nobody else nearby that it could fetch.",
+   "options": [
+    {
+     "value": "It had been frightened by the fall.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": true,
+     "execution": "Line 30 has it come back and bark to raise help, which is not the same as fright."
+    },
+    {
+     "value": "It wanted her to take hold of the horse.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "There was nobody else nearby that it could fetch.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "It barked until the evening hills echoed the sound back.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-010-JE-11",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 70 to 81, then lines 86 to 88. What do these two parts together show about the traveller?",
+    "passageRef": "stream-a-11-jane-eyre",
+    "orderAnchor": 86
+   },
+   "key": "He questions her like a stranger, but knew of the governess.",
+   "options": [
+    {
+     "value": "Jane has met Mr Rochester before, though only once at the hall.",
+     "isKey": false,
+     "tag": "en-negation-dropped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He is annoyed to find her out, and says so.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": true,
+     "execution": "Line 87's deuce take me is aimed at his own forgetting, not at her being there."
+    },
+    {
+     "value": "He questions her like a stranger, but knew of the governess.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Jane is the one who asks, and he is the one who answers.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-011-CV-09",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 24 to 27. What does Mrs Otis's reply show about her?",
+    "passageRef": "stream-a-07-canterville-ghost",
+    "orderAnchor": 9
+   },
+   "key": "She wants the mark gone rather than the story explained.",
+   "options": [
+    {
+     "value": "She wants the mark gone rather than the story explained.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She is frightened by what the old housekeeper has just told her.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": true,
+     "execution": "Line 26 gives distaste at a mess, and line 27 has her order it cleaned up."
+    },
+    {
+     "value": "She rather likes a blood-stain in a sitting-room.",
+     "isKey": false,
+     "tag": "en-negation-dropped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She doubts the story rather than the stain itself.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-011-CV-11",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 47 to 49. What does Mr Otis's answer show?",
+    "passageRef": "stream-a-07-canterville-ghost",
+    "orderAnchor": 11
+   },
+   "key": "He treats her fainting as a cost to be charged for.",
+   "options": [
+    {
+     "value": "He is worried about the old woman's health.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": true,
+     "execution": "Line 48 answers with a charge to her wages, and she comes to on her own."
+    },
+    {
+     "value": "He wants her to pay for something that she has broken.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He treats her fainting as a cost to be charged for.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He means to send for a doctor from the nearby village.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-012-ML-04",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 12 to 15. What does Tom's answer about Lucy show?",
+    "passageRef": "stream-a-14-mill-on-floss",
+    "orderAnchor": 4
+   },
+   "key": "He rates people by whether they can play his games.",
+   "options": [
+    {
+     "value": "He is jealous of the notice that Lucy will get tomorrow.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": true,
+     "execution": "Line 14 asks what he cares about Lucy, and gives bandy as the ground."
+    },
+    {
+     "value": "He is thinking hard about how to divide the puff.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He thinks Lucy will want a share of the puff.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He rates people by whether they can play his games.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-012-ML-07",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 33 to 35. Why does Maggie shut her eyes tight?",
+    "passageRef": "stream-a-14-mill-on-floss",
+    "orderAnchor": 7
+   },
+   "key": "She wants Tom pleased with her more than she wants him fed.",
+   "options": [
+    {
+     "value": "She is afraid that Tom will take both of the halves himself.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She is sorry for Tom having the smaller share.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": true,
+     "execution": "Line 33 says she cared LESS about that than about pleasing him."
+    },
+    {
+     "value": "She wants Tom pleased with her more than she wants him fed.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She gives up the best piece out of pure sacrifice.",
+     "isKey": false,
+     "tag": "en-negation-dropped",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-012-ML-09",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Read lines 43 to 46. What do these lines tell you about Tom?",
+    "passageRef": "stream-a-14-mill-on-floss",
+    "orderAnchor": 9
+   },
+   "key": "He finished first and watched her, wanting more.",
+   "options": [
+    {
+     "value": "He did not know that Maggie was looking across at him.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He was pleased to watch her enjoy her half.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": true,
+     "execution": "Line 44 gives him a capacity for more, which is appetite rather than pleasure."
+    },
+    {
+     "value": "He was lost to everything but jam and idleness.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He finished first and watched her, wanting more.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-012-ML-10",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 47 to 51. Why does Tom call Maggie greedy?",
+    "passageRef": "stream-a-14-mill-on-floss",
+    "orderAnchor": 10
+   },
+   "key": "He had been fair and expected her to offer him some.",
+   "options": [
+    {
+     "value": "Because she swallowed the very last morsel of her half.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He had been fair and expected her to offer him some.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Because he was jealous of how much she enjoyed it.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": true,
+     "execution": "Line 48 gives an expectation he thought she owed him, not envy of her pleasure."
+    },
+    {
+     "value": "He would have taken a bit of hers beforehand too.",
+     "isKey": false,
+     "tag": "en-relation-word-flipped",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-014-TS-07",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 34 to 37. How does Ben's feeling about the job change?",
+    "passageRef": "stream-a-05-tom-sawyer",
+    "orderAnchor": 34
+   },
+   "key": "He grows more and more taken with it.",
+   "options": [
+    {
+     "value": "He stops nibbling his apple at last.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He starts to sweep the brush daintily.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He grows more and more taken with it.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He begins to feel sorry for Tom.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": true,
+     "execution": "An adjacent feeling; lines 36 and 37 name interest rather than pity."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-014-TS-10",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Look at lines 53 to 55. What does 'alacrity' on line 53 mean here?",
+    "passageRef": "stream-a-05-tom-sawyer",
+    "orderAnchor": 53
+   },
+   "key": "A keen and willing feeling.",
+   "options": [
+    {
+     "value": "A slow and unwilling feeling.",
+     "isKey": false,
+     "tag": "en-relation-word-flipped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A keen and willing feeling.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A proud and boastful feeling.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": true,
+     "execution": "An adjacent feeling; line 53 fixes eagerness rather than pride."
+    },
+    {
+     "value": "The look on his face.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-015-CC-05",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Look at lines 23 to 27. What does 'irresolution' on line 23 mean here?",
+    "passageRef": "stream-a-08-christmas-carol",
+    "orderAnchor": 23
+   },
+   "key": "A moment of not knowing what to do.",
+   "options": [
+    {
+     "value": "A moment of not knowing what to do.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A promise that he had not kept.",
+     "isKey": false,
+     "tag": "en-vocab-built-from-parts",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A sudden rush of panic at the door.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": true,
+     "execution": "An adjacent state; line 23 gives a moment of hanging back rather than panic."
+    },
+    {
+     "value": "A careful look behind the open door.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-017-CR-11",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Look at lines 52 to 54. What does 'inexorable' on line 53 mean here?",
+    "passageRef": "stream-a-17-cranford",
+    "orderAnchor": 52
+   },
+   "key": "Not to be moved by anything he tried.",
+   "options": [
+    {
+     "value": "Not able to be excused for what she did.",
+     "isKey": false,
+     "tag": "en-vocab-built-from-parts",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Still in a fury with him about it.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": true,
+     "execution": "An adjacent state; line 53 gives an unmoving one rather than a hot one."
+    },
+    {
+     "value": "Not to be moved by anything he tried.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Trying to talk of some pleasanter thing.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-018-RB-05",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Look at lines 27 to 32. What does 'sardonic' on line 28 mean here?",
+    "passageRef": "stream-a-21-rebecca-sunnybrook",
+    "orderAnchor": 27
+   },
+   "key": "Bitter, and making fun of her.",
+   "options": [
+    {
+     "value": "Bitter, and making fun of her.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Short, and quickly over with.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Warm, and very pleased with her.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": true,
+     "execution": "An adjacent feeling; line 29 has her put the child right rather than enjoy her."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-020-HD-08",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 34 to 36. Why does Heidi ask Clara the same thing more than once?",
+    "passageRef": "stream-a-19-heidi",
+    "orderAnchor": 34
+   },
+   "key": "Because she wants to be sure the promise will be kept.",
+   "options": [
+    {
+     "value": "Because Clara keeps adding or more.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Because she is still angry about the bread.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": true,
+     "execution": "A near-neighbour of the real feeling; the lines give her doubt, not anger."
+    },
+    {
+     "value": "Because she wants to be sure the promise will be kept.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Because she has not understood what Clara said.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    }
+   ]
+  }
+ ]
+}

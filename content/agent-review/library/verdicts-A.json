@@ -1,0 +1,101 @@
+{
+  "reviewer": "rev-agent-01",
+  "entries": [
+    {
+      "id": "en-plausible-not-stated",
+      "verdict": "ATTEST",
+      "reason": "Screened all 196 carriers in the file (188 DRAFT + 8 LIVE; the brief named 188, which is the DRAFT count). Pass 1 (assertion): the childHint makes no claim about a feature of the item. 'Find the line that proves it.' describes a move and is true wherever the picked option is unsupported, which is every carrier, including those where the passage contradicts the option (the search then turns up the line that disproves it). 'Sounding sensible is not enough.' characterises the child's reason for choosing, not the item; it holds on every carrier as read from the chooser's side. The description's clause 'options the passage never states' is the entry's definition; it is false only on carriers already listed as misfiled (pp-23, BB-11, TM-02, GK-02, where the option's content is in the passage). 'especially motives' is an emphasis, not a universal: 51 of 196 stems are why/reason/want-type questions by a broad keyword count; the wording does not claim more, so no transform. Pass 2 (generality): the hint is short (5 and 6 words), British English, ends on full stops, and gives a child an action they can take in a silent test. It is general by necessity across 196 carriers, but the move it names is the exact remedy for this mistake on retrieval, inference and technique items; it is weakest on the 18 vocab carriers, where 'the line' is already given in the stem, but still actionable (test the meaning in that line). Item-level notes, not entry faults: 13 carriers listed as misfiled; 6 carriers have no stem.passageRef (ENG-005-BB-13, ENG-007-LP-08, ENG-015-CC-12, ENG-018-RB-01, ENG-018-RB-11, ENG-023-RT-08) while citing line numbers; 2 carrying options have no execution note (ENG-005-BB-13, ENG-007-LP-08). A further class exists that I did not list as misfiled: roughly 20 carriers where the passage CONTRADICTS the option rather than merely not stating it (e.g. WIW-10, pp-07, pp-15, BB-08, RC-06, RC-11, CV-07, ML-05, ML-11, AL-01, RR-11, PR-10). The entry's definition still technically covers them and the hint serves them; whether 'contradicted' should be a separate entry is a library-structure question for a human, not ruled here.",
+      "assertionClauses": [
+        {
+          "clause": "Sounding sensible is not enough.",
+          "falseOn": []
+        },
+        {
+          "clause": "Find the line that proves it.",
+          "falseOn": []
+        },
+        {
+          "clause": "(description) Picks real-world-plausible options the passage never states",
+          "falseOn": [
+            "ENG-002-pp-23",
+            "ENG-005-BB-11",
+            "ENG-006-TM-02",
+            "ENG-022-GK-02"
+          ]
+        },
+        {
+          "clause": "(description) especially motives",
+          "falseOn": []
+        }
+      ],
+      "transforms": [],
+      "misfiledCarriers": [
+        {
+          "itemId": "ENG-001-WIW-11",
+          "option": "An argument between two of the rabbits.",
+          "why": "'row' meaning a quarrel is the word's other common sense; the execution itself says the noise sense invites it. This is a word-sense mistake (en-vocab-dominant-sense family), not an unstated real-world detail. LIVE item."
+        },
+        {
+          "itemId": "ENG-002-pp-05",
+          "option": "Everybody who came to the assembly that night.",
+          "why": "Wrong extent of 'party' (the whole gathering vs the five who arrived); a scope error on the word's meaning, not a plausible unstated detail."
+        },
+        {
+          "itemId": "ENG-002-pp-08",
+          "option": "The good name a person's family has in the county.",
+          "why": "Execution: \"'countenance' sounds like it should be\" — the pull is the word's sound, not real-world plausibility (en-vocab-not-this-word / built-from-parts family)."
+        },
+        {
+          "itemId": "ENG-002-pp-20",
+          "option": "Kind, and easy to get along with.",
+          "why": "Execution: \"'tolerable' sounds like a word about temperament\" — a word-form guess, not an unstated plausible detail."
+        },
+        {
+          "itemId": "ENG-002-pp-23",
+          "option": "We are shown what they do, but never told whether the writer approves.",
+          "why": "Half the option is in the passage (execution: 'The showing is there', line 37); the fault is a near-key half-claim, so 'the passage never states' is false of it."
+        },
+        {
+          "itemId": "ENG-005-BB-04",
+          "option": "A long wait outside, with nothing to eat.",
+          "why": "Contradicted by the word under test ('a GOOD bait'); not real-world plausible in context, so it is a misreading, not a sensible-but-unstated pick."
+        },
+        {
+          "itemId": "ENG-005-BB-11",
+          "option": "That they were lucky the wind had lulled when it did.",
+          "why": "The lull is stated at line 51; the fault is retrieving a real detail from outside what the lines report them thinking (en-wrong-scope-retrieval)."
+        },
+        {
+          "itemId": "ENG-006-TM-02",
+          "option": "Measures the wall to find where the nail goes.",
+          "why": "The measuring IS stated, at line 38; the fault is order/scope (en-chronology-collapse / en-wrong-scope-retrieval), not an unstated detail."
+        },
+        {
+          "itemId": "ENG-006-TM-08",
+          "option": "A habit he always follows when working.",
+          "why": "'rule' as a habit/principle is the word's other common sense; a word-sense mistake (en-vocab-dominant-sense), not an unstated plausible detail."
+        },
+        {
+          "itemId": "ENG-018-RB-11",
+          "option": "Somebody who has paid for a seat.",
+          "why": "Execution: 'It is what the word usually means' — a dominant-sense pull (en-vocab-dominant-sense), not a plausible unstated detail."
+        },
+        {
+          "itemId": "ENG-021-ED-09",
+          "option": "Everything he owns, down to the last penny.",
+          "why": "The stake is stated and the option overstates it (execution: 'this overstates'); an en-extreme-option-pull shape."
+        },
+        {
+          "itemId": "ENG-022-GK-02",
+          "option": "He goes in goal, but he was picked eighth for it.",
+          "why": "Both halves are in the poem (goal; picked eighth at line 38); execution says it reverses the order — a relation/order fault, not an unstated detail."
+        },
+        {
+          "itemId": "ENG-025-LW-06",
+          "option": "Jo has forgotten by the river what she said at the tea table earlier.",
+          "why": "Execution: 'The reverse of the relation' — primarily an en-relation-word-flipped shape; the unstated forgetting is secondary."
+        }
+      ]
+    }
+  ]
+}

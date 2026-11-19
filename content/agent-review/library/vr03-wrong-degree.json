@@ -1,0 +1,227 @@
+{
+ "entry": {
+  "id": "vr03-wrong-degree",
+  "status": "ACTIVE",
+  "district": "VR",
+  "category": null,
+  "description": "Applies the right relationship but at the wrong strength or scale (wet for damp→soaked — the right direction of change, not its size).",
+  "childHint": "You found the right link. Now check how big the change is.",
+  "approvedBy": null,
+  "approvalMethod": null,
+  "approvalNote": null,
+  "textProvenance": null
+ },
+ "carrierCount": 6,
+ "carriers": [
+  {
+   "itemId": "gen-vr-03-related-words-34",
+   "status": "DRAFT",
+   "questionType": "vr-03-related-words",
+   "stem": {
+    "pairA": [
+     "warm",
+     "hot"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "damp"
+   },
+   "key": "soaked",
+   "options": [
+    {
+     "value": "soaked",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "wet",
+     "isKey": false,
+     "tag": "vr03-wrong-degree",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "mouldy",
+     "isKey": false,
+     "tag": "vr03-wrong-link",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-03-related-words-35",
+   "status": "DRAFT",
+   "questionType": "vr-03-related-words",
+   "stem": {
+    "pairA": [
+     "breeze",
+     "gale"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "shower"
+   },
+   "key": "downpour",
+   "options": [
+    {
+     "value": "downpour",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "puddle",
+     "isKey": false,
+     "tag": "vr03-wrong-link",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "drizzle",
+     "isKey": false,
+     "tag": "vr03-wrong-degree",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-03-related-words-36",
+   "status": "DRAFT",
+   "questionType": "vr-03-related-words",
+   "stem": {
+    "pairA": [
+     "whisper",
+     "shout"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "glance"
+   },
+   "key": "stare",
+   "options": [
+    {
+     "value": "stare",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "peek",
+     "isKey": false,
+     "tag": "vr03-wrong-degree",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "blink",
+     "isKey": false,
+     "tag": "vr03-wrong-link",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-03-related-words-37",
+   "status": "DRAFT",
+   "questionType": "vr-03-related-words",
+   "stem": {
+    "pairA": [
+     "chuckle",
+     "roar"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "sniffle"
+   },
+   "key": "wail",
+   "options": [
+    {
+     "value": "wail",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "sneeze",
+     "isKey": false,
+     "tag": "vr03-wrong-link",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "cry",
+     "isKey": false,
+     "tag": "vr03-wrong-degree",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-03-related-words-38",
+   "status": "DRAFT",
+   "questionType": "vr-03-related-words",
+   "stem": {
+    "pairA": [
+     "annoyed",
+     "furious"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "pleased"
+   },
+   "key": "delighted",
+   "options": [
+    {
+     "value": "delighted",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "content",
+     "isKey": false,
+     "tag": "vr03-wrong-degree",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "calm",
+     "isKey": false,
+     "tag": "vr03-wrong-link",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-03-related-words-48",
+   "status": "DRAFT",
+   "questionType": "vr-03-related-words",
+   "stem": {
+    "pairA": [
+     "hesitate",
+     "act"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "doubt"
+   },
+   "key": "believe",
+   "options": [
+    {
+     "value": "believe",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "accept",
+     "isKey": false,
+     "tag": "vr03-wrong-degree",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "suspect",
+     "isKey": false,
+     "tag": "vr03-wrong-link",
+     "carriesThisEntry": false
+    }
+   ]
+  }
+ ]
+}

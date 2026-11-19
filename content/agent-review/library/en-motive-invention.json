@@ -1,0 +1,2774 @@
+{
+ "entry": {
+  "id": "en-motive-invention",
+  "status": "ACTIVE",
+  "district": "ENGLISH",
+  "category": null,
+  "description": "Attributes a plausible motive the text never supports.",
+  "childHint": "A reason has to be given, not guessed. Ask what the text says about why.",
+  "approvedBy": "human:staff-reviewer@cluecrew.test",
+  "approvalMethod": "written review 2026-08-02",
+  "approvalNote": "Cleared on the printed review pack; returned marked up.",
+  "textProvenance": {
+   "note": "Ruled when written; absent from the store until now (R403/R410).",
+   "state": "RECORDED",
+   "appliedOn": "2026-08-22",
+   "authority": "annie-seventysixth-return.md, read from the file, sha256 583df5ad8d5a5779b6f20830ea0041d93670236acff44649190836e3764fc536",
+   "approvedByPerson": "Annie"
+  }
+ },
+ "carrierCount": 70,
+ "carriers": [
+  {
+   "itemId": "ENG-001-WIW-03",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 5 to 9. Why did the Mole suddenly stop cleaning and run outside?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 3
+   },
+   "key": "Spring outside was pulling at him and he could not sit still.",
+   "options": [
+    {
+     "value": "He had finished every job in the house.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Spring outside was pulling at him and he could not sit still.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "His back and arms hurt too much to go on.",
+     "isKey": false,
+     "tag": "en-physical-vs-emotional-cue",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The Water Rat called him from up above.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He wanted to find the river he had heard about.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "He has not heard of the river — line 29 says he had never seen one in his life. The motive is supplied by the reader."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-10",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 23 to 27. What does the way the Mole treats the rabbits show about him?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 10
+   },
+   "key": "He is so excited that he will not stop for anyone.",
+   "options": [
+    {
+     "value": "He is frightened of the older rabbit.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He is so excited that he will not stop for anyone.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He is a cruel animal who is always unkind.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He is rushing home to get his dinner.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "Dinner is nowhere in the passage, and he is going away from his house rather than towards it."
+    },
+    {
+     "value": "He is sorry at once for knocking the rabbit over.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-18",
+   "status": "LIVE",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 56 to 62. The Mole says, 'Oh, it’s all very well to talk.' What does this show about him?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 18
+   },
+   "key": "He did not know how anyone could get across the river.",
+   "options": [
+    {
+     "value": "He did not know how anyone could get across the river.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He thought the Water Rat was being unkind to him.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He did not want to be friends with the Water Rat.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A wish not to be friends is supplied; line 61 has his whole heart going out to the boat."
+    },
+    {
+     "value": "He was too tired from his walk to move.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He knew all about boats but did not own one.",
+     "isKey": false,
+     "tag": "en-contradicted-by-the-text",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-21",
+   "status": "LIVE",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 66 to 67. What does the last thing the Mole says show about his day?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 21
+   },
+   "key": "The whole day had been full of things he had never done before.",
+   "options": [
+    {
+     "value": "He was hoping the Rat would let him hold the oars.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "The sculls are the Rat's at line 66; the wish to hold them is supplied by the reader."
+    },
+    {
+     "value": "He was still frightened of the water.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The whole day had been full of things he had never done before.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He was already wishing he was back in his own house.",
+     "isKey": false,
+     "tag": "en-contradicted-by-the-text",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He had been in boats before, but never one as fine as this.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-03",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Mr Bingley said no to the Bennets' dinner. Read lines 9 to 12. What reason did his answer give?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 3
+   },
+   "key": "He had to be in London the next day.",
+   "options": [
+    {
+     "value": "He had promised to dine with Lady Lucas instead.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He did not want to meet the Bennet daughters.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A wish to avoid the daughters is supplied; lines 5 and 6 have him hoping to see them."
+    },
+    {
+     "value": "He was busy planning the courses for a dinner of his own.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He had to be in London the next day.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He had gone to London to gather a big group for the ball.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-04",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Mr Bingley's answer upset Mrs Bennet. Read lines 13 to 16. What was she most afraid of?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 4
+   },
+   "key": "That he would keep moving about and never really live at Netherfield.",
+   "options": [
+    {
+     "value": "That he would keep moving about and never really live at Netherfield.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That her dinner had all been cooked and would now be wasted.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That he had gone to London to look for guests for the ball.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That the girls would have to meet twelve strange ladies.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That Mr Bingley did not like her daughters.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A dislike of her daughters is supplied; the passage gives his reason as business in town."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-11",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Read lines 36 to 41. The writer suddenly says: 'What a contrast between him and his friend!' Why is that sentence put there?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 11
+   },
+   "key": "To make the reader notice how differently the two men were behaving.",
+   "options": [
+    {
+     "value": "To tell the reader that the two men had fallen out.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To show that Mr Bingley was cross about something.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To show that the writer likes Mr Darcy the better of the two.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A preference is supplied for the writer, who states the contrast and takes no side in it."
+    },
+    {
+     "value": "To make the reader notice how differently the two men were behaving.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To show that the two men were really rather alike.",
+     "isKey": false,
+     "tag": "en-relation-word-flipped",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-13",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Read lines 41 to 43. The writer says: 'His character was decided. He was the proudest, most disagreeable man in the world.' What do these short, sure sentences do?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 13
+   },
+   "key": "They make the room's quick opinion sound like a settled fact.",
+   "options": [
+    {
+     "value": "They prove that Mr Darcy really was the worst man alive.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They show that the writer had run out of things to say about him.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A motive is supplied for the writer; the shortness is doing the room's certainty, not his."
+    },
+    {
+     "value": "They make the room's quick opinion sound like a settled fact.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They show that Mr Darcy had at last made up his mind about something.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They tell us that Mr Darcy said nothing to anybody all evening.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-15",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Elizabeth had to sit down for two dances. Read lines 47 to 48. Why?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 15
+   },
+   "key": "There were not enough gentlemen for all the ladies.",
+   "options": [
+    {
+     "value": "She did not feel like dancing that evening.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Mr Darcy had refused to dance with her.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She wanted to listen to Mr Darcy and Mr Bingley talking.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A motive is supplied; line 48 has the overhearing happen because he stood near enough, not because she arranged it."
+    },
+    {
+     "value": "There were not enough gentlemen for all the ladies.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Her eldest sister was dancing with Mr Bingley.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-16",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Elizabeth hears Mr Darcy's words herself. A friend does not tell her later. Read lines 47 to 50. Why is that a good choice?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 16
+   },
+   "key": "The reader hears the unkind words at the very moment Elizabeth does.",
+   "options": [
+    {
+     "value": "It shows that Elizabeth enjoyed listening in on other people.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A taste for listening in is supplied; line 48 has him standing near enough for her to overhear."
+    },
+    {
+     "value": "It shows that the room had almost emptied by then.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The reader hears the unkind words at the very moment Elizabeth does.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Mr Bingley had planned for her to hear his kind words about her.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "It shows that Mr Darcy was speaking loudly to the whole room.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-17",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 51 and 52. Mr Bingley says to his friend: 'I hate to see you standing about by yourself in this stupid manner.' What is Mr Bingley trying to do?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 17
+   },
+   "key": "Get his friend to join the dancing.",
+   "options": [
+    {
+     "value": "Tell his friend off for being rude about the ladies.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Get his friend to join the dancing.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Ask his friend to leave the ball and go home.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Make his friend feel sorry for the ladies who have no partner.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "Pity for partnerless ladies is supplied; the speech is about his friend and no one else."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-18",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Read lines 53 to 56. Mr Darcy says: 'Your sisters are engaged.' What does 'engaged' mean here?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 18
+   },
+   "key": "They have already promised their dances to other partners.",
+   "options": [
+    {
+     "value": "They have promised to marry somebody.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They are busy and cannot be spoken to.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They are standing and talking with Mr Bingley.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They do not want to dance with Mr Darcy.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A wish not to dance with him is supplied; line 54 says nothing about what the sisters want."
+    },
+    {
+     "value": "They have already promised their dances to other partners.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-22",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "At the end, Elizabeth turns what happened into a story for her friends. Read lines 70 to 73. What does this tell us about her?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 22
+   },
+   "key": "She can find the funny side of things, even when she has been treated badly.",
+   "options": [
+    {
+     "value": "She has completely forgiven Mr Darcy.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She can find the funny side of things, even when she has been treated badly.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She wants her friends to feel sorry for her.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A wish for sympathy is supplied; lines 71 and 72 give her a lively, playful disposition instead."
+    },
+    {
+     "value": "What Mr Darcy said did not bother her at all.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She thinks Mr Darcy is a fine, handsome man.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-004-AGG-03",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Read lines 15 and 16. The girl said there was 'more scope for imagination' outside. What does 'scope' on line 15 mean here?",
+    "passageRef": "stream-a-06-anne-green-gables",
+    "orderAnchor": 3
+   },
+   "key": "Room for the mind to work.",
+   "options": [
+    {
+     "value": "Somewhere cooler than the waiting room.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A quiet spot away from people.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "Invents a reason for staying outside; the girl gives imagining as her reason."
+    },
+    {
+     "value": "Room for the mind to work.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A tool for seeing far away.",
+     "isKey": false,
+     "tag": "en-vocab-built-from-parts",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-004-AGG-06",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Why does Matthew wish Marilla was there? (lines 24 and 25)",
+    "passageRef": "stream-a-06-anne-green-gables",
+    "orderAnchor": 6
+   },
+   "key": "He finds this sort of trouble hard to face alone.",
+   "options": [
+    {
+     "value": "He knows Marilla is the shy one of the two.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He finds this sort of trouble hard to face alone.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He hopes Marilla will send the girl straight back.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "Supplies a motive the passage never gives; line 62 leaves all of that until later."
+    },
+    {
+     "value": "He wants Marilla to drive the horse home.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-004-AGG-11",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Matthew decides to take the girl home. What does this decision show about him? (lines 59 to 63)",
+    "passageRef": "stream-a-06-anne-green-gables",
+    "orderAnchor": 11
+   },
+   "key": "He would rather be kind now than face a hard talk.",
+   "options": [
+    {
+     "value": "Marilla had told him what to do in this case.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He never makes a decision by himself.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He would rather be kind now than face a hard talk.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He had always hoped that a girl would come.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "Gives him a wish the passage never states; line 61 still calls it a mistake."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-005-BB-04",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "In town Beauty says 'I had a good bait'. What does 'bait' mean here? (line 14)",
+    "passageRef": "stream-a-04-black-beauty",
+    "orderAnchor": 14
+   },
+   "key": "A feed and a rest.",
+   "options": [
+    {
+     "value": "Something used to catch a fish.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A long wait outside, with nothing to eat.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A trick played to make him go on.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "Invents a purpose; nothing in the line suggests he was tricked."
+    },
+    {
+     "value": "A feed and a rest.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-005-BB-07",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "What did John say they would have to do? (lines 29 to 31)",
+    "passageRef": "stream-a-04-black-beauty",
+    "orderAnchor": 29
+   },
+   "key": "Go back to the crossways and round, six miles further.",
+   "options": [
+    {
+     "value": "Drive slowly over the tree where it lay lowest.",
+     "isKey": false,
+     "tag": "en-relation-word-flipped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Wait by the wood until the storm had passed.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Go back to the crossways and round, six miles further.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Unhitch Beauty and lead him home on foot.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "Invents an action; line 31 says the horse is fresh, so they drive on."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-005-BB-09",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at what the master does on the bridge. Then look at what he says at the hall door. What does the writer want us to understand? (lines 36 to 38 and 62 to 63)",
+    "passageRef": "stream-a-04-black-beauty",
+    "orderAnchor": 36
+   },
+   "key": "The master punished Beauty for the very thing that saved them.",
+   "options": [
+    {
+     "value": "The master punished Beauty for the very thing that saved them.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The master knew that Beauty was right to stop on the bridge.",
+     "isKey": false,
+     "tag": "en-relation-word-flipped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Beauty was too frightened of the water to cross the bridge.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The master had wanted to test whether Beauty would obey him at all.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "Invents a purpose; line 37 has him simply telling Beauty to go on."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-005-BB-11",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "What did the master and John work out on the way home? (lines 54 to 58)",
+    "passageRef": "stream-a-04-black-beauty",
+    "orderAnchor": 54
+   },
+   "key": "That going on would probably have drowned them all.",
+   "options": [
+    {
+     "value": "That Beauty had been badly trained and needed more work.",
+     "isKey": false,
+     "tag": "en-relation-word-flipped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That the gatekeeper was to blame for the broken bridge.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "Invents a complaint; the passage gives them no blame at all."
+    },
+    {
+     "value": "That going on would probably have drowned them all.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That they were lucky the wind had lulled when it did.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-005-BB-12",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Beauty repeats what the people say, word for word. What does the writer keep reminding us at the same time?",
+    "answerShape": "keeps-both-halves",
+    "techniqueKey": "narrator-supplies-speech-verbatim-while-disclaiming-comprehension"
+   },
+   "key": "He gives us their words exactly, but says he cannot follow them.",
+   "options": [
+    {
+     "value": "That Beauty is too frightened to listen properly.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That the people never speak to Beauty at all.",
+     "isKey": false,
+     "tag": "en-negation-dropped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That Beauty repeats the words to show off what he knows.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "Invents a motive; the narrator's remarks are about what he cannot do, not what he can."
+    },
+    {
+     "value": "He gives us their words exactly, but says he cannot follow them.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-006-TM-06",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "A whole semi-circle of people stands round while Uncle Podger works. What does the writer show by this? (lines 26 to 29)",
+    "passageRef": "stream-a-10-three-men-boat",
+    "orderAnchor": 26
+   },
+   "key": "A tiny job has taken over the whole household.",
+   "options": [
+    {
+     "value": "The family are eager to learn how to hang a picture.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "Invents a reason for standing there; line 26 says only that they are ready to help."
+    },
+    {
+     "value": "A tiny job has taken over the whole household.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The family were too busy to watch him properly.",
+     "isKey": false,
+     "tag": "en-relation-word-flipped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The picture is very heavy and needs several people.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-006-TM-10",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "What does Aunt Maria say she would like to do next time? (lines 49 to 51)",
+    "passageRef": "stream-a-10-three-men-boat",
+    "orderAnchor": 49
+   },
+   "key": "Go and stay with her mother while the job is done.",
+   "options": [
+    {
+     "value": "Ask Uncle Podger to let her hang the picture instead.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Go and stay with her mother while the job is done.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Send for a man to come and do it properly.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Hide the hammer so he cannot start at all.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "Invents a plan; her words are about leaving, not about stopping him."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-006-TM-11",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Uncle Podger begins by telling them to leave it to him. He ends by saying some people would have had a man in. What does the writer show by this? (lines 6 and 7, and 61 to 63)",
+    "passageRef": "stream-a-10-three-men-boat",
+    "orderAnchor": 61
+   },
+   "key": "He thinks of it as a success, exactly as he did at the start.",
+   "options": [
+    {
+     "value": "He has learned, as he did not know then, that the job was hard.",
+     "isKey": false,
+     "tag": "en-relation-word-flipped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He is pleased, and glad they all helped so much at the end.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "Invents gratitude; at line 37 he calls them fools and at line 52 he blames them."
+    },
+    {
+     "value": "He thinks of it as a success, exactly as he did at the start.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He is boasting to them, and hiding it, because it went so badly.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-007-LP-06",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Reuben returns a cardigan whose owner has left. Later he puts his own named jumper in the charity box. What does the writer show by this? (lines 11 to 14 and 29 to 33)",
+    "passageRef": "stream-b-04",
+    "orderAnchor": 6
+   },
+   "key": "He keeps the rule for everyone else and breaks it for himself.",
+   "options": [
+    {
+     "value": "He stops taking care by the end and forgets what he set out to do.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He keeps the rule for everyone else and breaks it for himself.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He could not tell whose the jumper was, so he put it in the box.",
+     "isKey": false,
+     "tag": "en-relation-word-flipped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He thinks the jumper too worn for anybody to want it back.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "The cover story he gives at line 47 is about next year's fit, not about wear."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-007-LP-11",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Miss Bhatt looked at Reuben 'for a second or two longer than the answer needed'. What does this show? (lines 46 to 49)",
+    "passageRef": "stream-b-04",
+    "orderAnchor": 11
+   },
+   "key": "She does not believe his reason, but lets it stand.",
+   "options": [
+    {
+     "value": "She is waiting for him to say sorry for the mistake.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "Invents a demand; at line 49 she folds the jumper away as he had it."
+    },
+    {
+     "value": "She has not understood what he said.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She does not believe his reason, but lets it stand.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She is cross that he has wasted the afternoon.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-007-LP-13",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Reuben put a cardigan in the returns box even though its owner had left. What does this show? (lines 11 to 14)"
+   },
+   "key": "He would rather try to return a thing than give it away.",
+   "options": [
+    {
+     "value": "He did not know the girl had left in Year Four.",
+     "isKey": false,
+     "tag": "en-negation-dropped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He was working faster than Ilya and made a mistake.",
+     "isKey": false,
+     "tag": "en-relation-word-flipped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He wanted to keep the cardigan for himself.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "He would rather try to return a thing than give it away.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-008-RC-04",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 16 to 19. What does Roberta's reply show about her?",
+    "passageRef": "stream-a-02-railway-children",
+    "orderAnchor": 16
+   },
+   "key": "She puts the work first and keeps the garden for later.",
+   "options": [
+    {
+     "value": "She wants to see the garden before starting work.",
+     "isKey": false,
+     "tag": "en-negation-dropped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She is annoyed with Phyllis for talking about the garden.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She thinks the garden will turn out to be a disappointment.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "The passage gives her no opinion of the garden, only the word yet."
+    },
+    {
+     "value": "She puts the work first and keeps the garden for later.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-010-JE-07",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 29 to 33. Why does the dog run up to Jane?",
+    "passageRef": "stream-a-11-jane-eyre",
+    "orderAnchor": 29
+   },
+   "key": "There was nobody else nearby that it could fetch.",
+   "options": [
+    {
+     "value": "It had been frightened by the fall.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "It wanted her to take hold of the horse.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "Nothing gives it that plan; line 32 says fetching help was all it could do."
+    },
+    {
+     "value": "There was nobody else nearby that it could fetch.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "It barked until the evening hills echoed the sound back.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-012-ML-04",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 12 to 15. What does Tom's answer about Lucy show?",
+    "passageRef": "stream-a-14-mill-on-floss",
+    "orderAnchor": 4
+   },
+   "key": "He rates people by whether they can play his games.",
+   "options": [
+    {
+     "value": "He is jealous of the notice that Lucy will get tomorrow.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He is thinking hard about how to divide the puff.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He thinks Lucy will want a share of the puff.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "Nothing links Lucy to the puff; line 15 gives bandy as his reason."
+    },
+    {
+     "value": "He rates people by whether they can play his games.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-012-ML-07",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 33 to 35. Why does Maggie shut her eyes tight?",
+    "passageRef": "stream-a-14-mill-on-floss",
+    "orderAnchor": 7
+   },
+   "key": "She wants Tom pleased with her more than she wants him fed.",
+   "options": [
+    {
+     "value": "She is afraid that Tom will take both of the halves himself.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "Nothing gives her that fear; line 34 gives what she wanted from him instead."
+    },
+    {
+     "value": "She is sorry for Tom having the smaller share.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She wants Tom pleased with her more than she wants him fed.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She gives up the best piece out of pure sacrifice.",
+     "isKey": false,
+     "tag": "en-negation-dropped",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-013-TI-03",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 10 to 14. What reason does Jim give for staying hidden?",
+    "passageRef": "stream-a-01-treasure-island",
+    "orderAnchor": 10
+   },
+   "key": "He alone held the lives of the honest men.",
+   "options": [
+    {
+     "value": "He was just about to jump up.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He hoped to hear where the treasure was buried.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A plausible reason for listening; lines 10 to 14 never give it."
+    },
+    {
+     "value": "He alone held the lives of the honest men.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He was in fear and in curiosity.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-013-TI-08",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 38 to 42. Why has Hands had enough of Captain Smollett?",
+    "passageRef": "stream-a-01-treasure-island",
+    "orderAnchor": 38
+   },
+   "key": "Smollett has driven him hard for a long time.",
+   "options": [
+    {
+     "value": "Hands wants the pickles and the wine in the cabin.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He means to take the ship for himself.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A plausible aim for a pirate; lines 38 to 42 never give it."
+    },
+    {
+     "value": "They are standing off and on like a blessed bumboat.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Smollett has driven him hard for a long time.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-013-TI-12",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Think about the whole passage. What does Jim keep doing while he lies in the barrel?",
+    "passageRef": "stream-a-01-treasure-island",
+    "answerShape": "stillness-set-against-understanding",
+    "orderAnchor": 999,
+    "techniqueKey": "a-hidden-narrator-who-cannot-act-and-goes-on-understanding"
+   },
+   "key": "His body cannot move, but his mind goes on working things out.",
+   "options": [
+    {
+     "value": "His nerve holds while he hides, but it breaks once the moon rises.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He tells us he would not have shown himself for the world.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He hears the plot, so he goes to warn the honest men.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "Plausible after line 14; nowhere in this passage does he set out to do anything."
+    },
+    {
+     "value": "His body cannot move, but his mind goes on working things out.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-014-TS-05",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 25 to 29. Why does Tom ask Ben what he calls work?",
+    "passageRef": "stream-a-05-tom-sawyer",
+    "orderAnchor": 25
+   },
+   "key": "To make Ben doubt that painting a fence is work.",
+   "options": [
+    {
+     "value": "To make Ben doubt that painting a fence is work.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To find out whether Ben has done any work himself.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A plausible reason to ask; lines 25 to 29 never give it."
+    },
+    {
+     "value": "To show that the job suits Tom Sawyer.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To answer the question Ben asked about work.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-014-TS-06",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 30 to 33. Why does Tom ask whether a boy gets such a chance every day?",
+    "passageRef": "stream-a-05-tom-sawyer",
+    "orderAnchor": 30
+   },
+   "key": "To make the job sound like a rare treat for a boy.",
+   "options": [
+    {
+     "value": "To say again that he sees no reason to dislike it.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To make the job sound like a rare treat for a boy.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To remind Ben that his aunt has told him to keep on.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "Plausible for a set job; lines 30 to 33 never say it."
+    },
+    {
+     "value": "To let the brush go on moving without a break.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-014-TS-09",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 45 to 52. Why does Ben end up offering his whole apple?",
+    "passageRef": "stream-a-05-tom-sawyer",
+    "orderAnchor": 45
+   },
+   "key": "Tom keeps saying no, so Ben wants the brush more.",
+   "options": [
+    {
+     "value": "Tom keeps saying no, so Ben wants the brush more.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Tom gave up the brush, so Ben offered the apple.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Ben has eaten his fill and wants to be rid of it.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "Plausible for a boy with a part-eaten apple; lines 45 to 52 never say it."
+    },
+    {
+     "value": "Ben says he will be just as careful with it.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-015-CC-07",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 32 to 37. What is Scrooge doing in these lines?",
+    "passageRef": "stream-a-08-christmas-carol",
+    "orderAnchor": 32
+   },
+   "key": "Looking in every place a person could hide.",
+   "options": [
+    {
+     "value": "Finding all the rooms in order, just as before.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Noting the gruel standing ready on the hob.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Looking in every place a person could hide.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Making sure the servants have all gone home.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A plausible reason to walk the rooms; lines 32 to 37 never give it."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-015-CC-12",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Think about the whole passage. What does Scrooge keep doing after he sees the face?",
+    "answerShape": "words-set-against-actions",
+    "techniqueKey": "denial-spoken-aloud-while-the-body-goes-on-checking"
+   },
+   "key": "He says he is not frightened, but he checks the whole house.",
+   "options": [
+    {
+     "value": "He says Pooh, pooh, and then a little later he says Humbug too.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He says he is not frightened, but he checks the whole house.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He is bold at the start, but his nerve does not last.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He fears the thing, so he sends for help to sit up.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A plausible course for a frightened man; he is alone throughout and asks no one."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-016-HB-07",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 40 to 44. What has the moor got in it besides stone?",
+    "passageRef": "stream-a-12-hound-baskervilles",
+    "orderAnchor": 40
+   },
+   "key": "The bare moor and the hidden man together chill him.",
+   "options": [
+    {
+     "value": "He pulled his overcoat more closely round him.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The moor was mottled with gnarled and craggy cairns.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The bare moor and the hidden man together chill him.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He is beginning to wish he had never come home.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A plausible thought for him here; lines 40 to 46 never give it."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-016-HB-12",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Think about the whole passage. How does Watson write about the moor?",
+    "passageRef": "stream-a-12-hound-baskervilles",
+    "answerShape": "inert-land-set-against-a-mind-put-into-it",
+    "orderAnchor": 999,
+    "techniqueKey": "a-still-landscape-given-feelings-and-intentions-it-cannot-have"
+   },
+   "key": "He writes a still moor, but he gives it a mind of its own.",
+   "options": [
+    {
+     "value": "He tells us the hills were jagged, and the wind was very cold.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The moor is calm by day, but it turns cruel after dark.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He is afraid of the moor, so he keeps his eyes on the road.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A plausible reason to look away; nowhere does he say he looked away from it."
+    },
+    {
+     "value": "He writes a still moor, but he gives it a mind of its own.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-017-CR-06",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 26 to 29. Why does Miss Jenkyns send for the other book?",
+    "passageRef": "stream-a-17-cranford",
+    "orderAnchor": 26
+   },
+   "key": "To answer his reading with a reading of her own.",
+   "options": [
+    {
+     "value": "To show the company that she owns a book-room.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A plausible piece of pride; lines 26 to 29 never give it."
+    },
+    {
+     "value": "To answer his reading with a reading of her own.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To let the present company judge between the two.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To let the Captain choose the second book.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-017-CR-10",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 50 and 51. Why will the narrator not vouch for what she reports?",
+    "passageRef": "stream-a-17-cranford",
+    "orderAnchor": 50
+   },
+   "key": "She only has it at second hand from others.",
+   "options": [
+    {
+     "value": "She thinks the Captain was right to say it.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A plausible sympathy; lines 50 and 51 never give her a view on it at all."
+    },
+    {
+     "value": "She only has it at second hand from others.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She was staying in the house and did not dare.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "It is only said that he was heard to say it.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-017-CR-12",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Think about the whole passage. What does the person telling this keep doing?",
+    "passageRef": "stream-a-17-cranford",
+    "answerShape": "full-report-set-against-a-missing-judgement",
+    "orderAnchor": 999,
+    "techniqueKey": "a-narrator-who-reports-a-quarrel-and-withholds-her-own-verdict"
+   },
+   "key": "She reports all of the quarrel, but never says who was right.",
+   "options": [
+    {
+     "value": "She takes the Captain's part, and lets it show in her words.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She tells us the trays came at nine, and the cards were compared.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She was staying in the house, but she wrote it all down after.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "Line 24 gives her reason for not laughing; nowhere does she say she wrote anything."
+    },
+    {
+     "value": "She reports all of the quarrel, but never says who was right.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-018-RB-12",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Think about the whole passage. How much are we told about what Rebecca thinks?",
+    "passageRef": "stream-a-21-rebecca-sunnybrook",
+    "answerShape": "speech-set-against-a-withheld-mind",
+    "orderAnchor": 999,
+    "techniqueKey": "a-child-given-entirely-from-outside-while-she-talks-throughout"
+   },
+   "key": "We hear her talk the whole way, but we never get inside her head.",
+   "options": [
+    {
+     "value": "She is shy at the start, but she is not shy by the end.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "We are told she was small for her age, and that her braid was black.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She wants the seat in front, so she works out how to ask for it.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A plausible piece of scheming; line 45 has her simply ask, with no plan reported."
+    },
+    {
+     "value": "We hear her talk the whole way, but we never get inside her head.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-019-BV-02",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 6 to 9. Why does Bevis say \"if you had run quick!\"?",
+    "quotesAuthority": "David, 20 August: repair the splice to the second half only. The quotation is now ONE span, verbatim in line 8 of stream-a-20-bevis at the item's own lineRefs."
+   },
+   "key": "Mark would not go, and the fish left while they argued.",
+   "options": [
+    {
+     "value": "Mark has promised to fetch everything for him.",
+     "isKey": false,
+     "tag": "en-negation-dropped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Mark ran for the rod while the fish waited.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Mark would not go, and the fish left while they argued.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He wants Mark to admit he cannot run fast.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A reason a reader can supply; the lines give him none."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-019-BV-03",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 10 to 13. What does Mark do when he interrupts?",
+    "passageRef": "stream-a-20-bevis",
+    "orderAnchor": 10
+   },
+   "key": "He keeps the same example and swaps the two boys round.",
+   "options": [
+    {
+     "value": "He offers to hand Bevis the gun while Bevis shoots.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He keeps the same example and swaps the two boys round.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He says he might be shooting an elephant.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He wants to stop Bevis before he can finish.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "Line 11 does break off, which invites this; no line gives him the aim."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-019-BV-08",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 33 to 43. Why does Bevis stay at the cliff instead of walking round it?",
+    "passageRef": "stream-a-20-bevis",
+    "orderAnchor": 33
+   },
+   "key": "He will not let Mark reach the new sea first.",
+   "options": [
+    {
+     "value": "He has made up his mind that he will not go round.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Mark had climbed over the railings between the fields.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He is afraid the deep water would be too cold.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "The water is dark and deep at line 34; no line gives him the fear."
+    },
+    {
+     "value": "He will not let Mark reach the new sea first.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-020-HD-01",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 2 to 8. Why does Fraulein Rottenmeier decide to give Heidi some of Clara's clothes?",
+    "passageRef": "stream-a-19-heidi",
+    "orderAnchor": 2
+   },
+   "key": "Because Heidi will then look decent when Herr Sesemann comes home.",
+   "options": [
+    {
+     "value": "Because Clara was willing to give away any number of dresses.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Because Heidi will then look decent when Herr Sesemann comes home.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Because she had looked in the wardrobe and found it bare.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Because Heidi's own clothes were spoiled on the journey.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "Lines 2 and 3 put her appearance on the road, which supplies this."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-020-HD-04",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 16 to 20. Why does Fraulein Rottenmeier keep her hand on Heidi?",
+    "passageRef": "stream-a-19-heidi",
+    "orderAnchor": 16
+   },
+   "key": "To stop her reaching Tinette.",
+   "options": [
+    {
+     "value": "Because Heidi had agreed to let the bread go.",
+     "isKey": false,
+     "tag": "en-negation-dropped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To comfort her while the rolls were carried out.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A kind reason; line 19 gives her a determined tone instead."
+    },
+    {
+     "value": "To stop her reaching Tinette.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Because the bread and rubbish belong somewhere else.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-020-HD-08",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 34 to 36. Why does Heidi ask Clara the same thing more than once?",
+    "passageRef": "stream-a-19-heidi",
+    "orderAnchor": 34
+   },
+   "key": "Because she wants to be sure the promise will be kept.",
+   "options": [
+    {
+     "value": "Because Clara keeps adding or more.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Because she is still angry about the bread.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Because she wants to be sure the promise will be kept.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Because she has not understood what Clara said.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A reason repetition usually has, and no line gives it here."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-020-HD-10",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 39 to 41. What is Sebastian telling Heidi?",
+    "passageRef": "stream-a-19-heidi",
+    "orderAnchor": 39
+   },
+   "key": "That he has kept something of hers safe.",
+   "options": [
+    {
+     "value": "That he wants her to point at her own head.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That he will speak to Fraulein Rottenmeier for her.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A rescue the scene invites; no line gives him the plan."
+    },
+    {
+     "value": "That she saw her own roll at supper.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That he has kept something of hers safe.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-021-ED-08",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 32 to 42. What makes Stuart put the cards down again?",
+    "passageRef": "stream-a-09-eighty-days",
+    "orderAnchor": 32
+   },
+   "key": "He has decided to make the wager after all.",
+   "options": [
+    {
+     "value": "He took the pack up with a feverish hand.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He is too annoyed with his friend to play on.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "Line 38 does give him annoyance, and no line makes it the reason."
+    },
+    {
+     "value": "Fallentin has told him it is only a joke.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He has decided to make the wager after all.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-021-ED-10",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 53 to 61. What does Fogg add when Sullivan says he is joking?",
+    "passageRef": "stream-a-09-eighty-days",
+    "orderAnchor": 53
+   },
+   "key": "That the eighty days are so many hours and minutes.",
+   "options": [
+    {
+     "value": "That the eighty days are so many hours and minutes.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That he will jump from trains onto steamers.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That he means to prove his friends mistaken in public.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A motive the scene invites and no line gives him."
+    },
+    {
+     "value": "That he has made the journey once before.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-022-GK-02",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Look at lines 7 to 11 and lines 38 and 39. What do the two put together?",
+    "passageRef": "stream-c-01",
+    "answerShape": "two-halved-contrast-of-what-he-claims-against-what-happened",
+    "orderAnchor": 7,
+    "techniqueKey": "a-choice-insisted-on-against-the-picking-that-produced-it"
+   },
+   "key": "He says he chose the goal, but he was picked last of them.",
+   "options": [
+    {
+     "value": "He put himself in goal, and Dan picked him eighth of eight.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He goes in goal, but he was picked eighth for it.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He wanted the goal, so that Dan would pick him sooner the next time.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A plan the lines never give him."
+    },
+    {
+     "value": "He says he chose the goal, but he was picked last of them.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-022-GK-06",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 23 to 27. What is he claiming about the goal he let in?",
+    "passageRef": "stream-c-01",
+    "orderAnchor": 23
+   },
+   "key": "That he could have stopped it and chose not to.",
+   "options": [
+    {
+     "value": "That he had his hands on the ball.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That Reece has never scored in his life.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That he wanted the game to end sooner.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A reason a reader can supply; no line gives it."
+    },
+    {
+     "value": "That he could have stopped it and chose not to.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-022-GK-07",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 28 to 30. What does he tell his mum?",
+    "passageRef": "stream-c-01",
+    "orderAnchor": 28
+   },
+   "key": "That he does not want a go up front.",
+   "options": [
+    {
+     "value": "That she asked him about going up front.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That it is all right then, love.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That he does not want a go up front.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That the others would not let him go up front.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A reason the poem invites and never gives."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-023-RT-02",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Look at lines 8 to 12 and lines 69 to 72. What do lines 69 to 72 show about the creature in lines 8 to 12?",
+    "passageRef": "stream-a-15-jungle-book",
+    "answerShape": "what-he-was-on-arrival-against-what-he-is-to-nag",
+    "orderAnchor": 8,
+    "techniqueKey": "the-half-drowned-arrival-set-against-the-fear-he-now-causes"
+   },
+   "key": "The creature they took for dead is the one the cobra now fears.",
+   "options": [
+    {
+     "value": "The summer flood washed him down a roadside ditch, and Nag was afraid at heart.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The creature they took for dead is the one the cobra now fears.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Nag was afraid of him on the day the flood washed him up.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He faces Nag so the family who saved him will keep him.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A plan the lines never give him."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-023-RT-05",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 25 to 29. Why does Rikki-tikki decide to stay?",
+    "passageRef": "stream-a-15-jungle-book",
+    "orderAnchor": 25
+   },
+   "key": "There is more to find out there than his family ever could.",
+   "options": [
+    {
+     "value": "There is more to find out there than his family ever could.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He liked the little piece of raw meat.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The sunshine on the veranda dried his fur.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The family would go on feeding him if he stayed.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A bargain the lines never give him."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-023-RT-11",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 63 to 67. What is Nag trying to do by showing his mark?",
+    "passageRef": "stream-a-15-jungle-book",
+    "orderAnchor": 63
+   },
+   "key": "Make Rikki-tikki afraid of him.",
+   "options": [
+    {
+     "value": "Tell him that Brahm marked all his people.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Spread his hood out more than before.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Make Rikki-tikki afraid of him.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Warn him to keep away from Darzee’s nest.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A purpose the lines never give him."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-024-BF-01",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Look at lines 3 to 5 and lines 44 to 47. Why does Dilan stand up at the end?",
+    "passageRef": "stream-b-03",
+    "answerShape": "what-the-chair-meant-once-against-what-he-expects-now",
+    "orderAnchor": 3,
+    "techniqueKey": "an-earlier-reward-used-to-read-the-present-moment"
+   },
+   "key": "He is expecting the sort of thank you that Farhan got.",
+   "options": [
+    {
+     "value": "He is expecting the sort of thank you that Farhan got.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Farhan handed in a wallet, and a butterfly sits on the doorframe.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The handle is going down, so he gets up off the chair.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He wants his mother to hear that he is being thanked.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A plan no line gives him."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-024-BF-05",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 17 to 20. Why does Dilan use his lunchbox?",
+    "passageRef": "stream-b-03",
+    "orderAnchor": 17
+   },
+   "key": "The net will not carry flat.",
+   "options": [
+    {
+     "value": "The net will not carry flat.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Two of them are riding on his sleeve.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He wants to keep them hidden from the teachers.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A plan no line gives him."
+    },
+    {
+     "value": "A lunchbox would keep them warm on the way.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-025-LW-03",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 19 to 23. What does Amy think the burning has settled?",
+    "passageRef": "stream-a-16-little-women",
+    "orderAnchor": 19
+   },
+   "key": "That Jo has now paid for being cross to her.",
+   "options": [
+    {
+     "value": "That she told Jo she would make her pay.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That Jo meant to finish it before Father got home.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That Jo has now paid for being cross to her.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That Jo will take her skating the next time.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A bargain the lines never give her."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-025-LW-06",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Look at lines 33 to 35 and lines 68 to 73. What do the two moments show about Jo’s refusal?",
+    "passageRef": "stream-a-16-little-women",
+    "answerShape": "what-the-refusal-cost-then-against-what-it-costs-now",
+    "orderAnchor": 33,
+    "techniqueKey": "a-refusal-spoken-cheaply-and-then-held-when-it-has-a-price"
+   },
+   "key": "It was easy enough to say at the table, and it is hard now.",
+   "options": [
+    {
+     "value": "It was spoken at the table, and the warning came later on.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "It was easy enough to say at the table, and it is hard now.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Jo has forgotten by the river what she said at the tea table earlier.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Jo keeps quiet so that Laurie will have to do the warning.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A plan the lines never give her."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-025-LW-09",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 51 to 55. What does Meg tell Amy to wait for?",
+    "passageRef": "stream-a-16-little-women",
+    "orderAnchor": 51
+   },
+   "key": "A quiet minute once Jo has cheered up.",
+   "options": [
+    {
+     "value": "A quiet minute once Jo has cheered up.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That it is hard to forgive the loss of the book.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That she was very naughty.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Until Laurie has gone off home and left them alone.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A condition the lines never give."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-026-AL-02",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 7 to 9. What does Cass decide about her grandad’s remark?",
+    "passageRef": "stream-b-05",
+    "orderAnchor": 2
+   },
+   "key": "That it is not worth arguing with.",
+   "options": [
+    {
+     "value": "That the dahlias were taller than both of them.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That it is not worth arguing with.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That Denise stakes her dahlias too late.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That he wants her to tell Denise about the staking.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "An errand the lines never give her."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-026-AL-03",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Look at lines 11 and 12 and lines 43 to 47. What do these lines together show about the shed key?",
+    "passageRef": "stream-b-05",
+    "answerShape": "who-it-was-moved-for-against-who-ends-up-holding-it",
+    "orderAnchor": 3,
+    "techniqueKey": "a-key-moved-for-one-person-and-then-given-to-another"
+   },
+   "key": "He moved it for Alan, and it is Cass who ends up with it.",
+   "options": [
+    {
+     "value": "The key was under the brick, and after that it was in her hand.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The brick was too heavy for him to lift on his own.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He moved it for Alan, and it is Cass who ends up with it.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He gives it to her, so that Alan cannot get into the shed.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A plan the lines never give him."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-026-AL-09",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 32 to 34. What does Grandad’s plan for November take for granted?",
+    "passageRef": "stream-b-05",
+    "orderAnchor": 9
+   },
+   "key": "That Cass will still be coming up here.",
+   "options": [
+    {
+     "value": "That Cass will still be coming up here.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That his knots have gone useless and hers are neat.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That Cass said she would come.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That she will want a plot of her own one day.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A wish the lines never give her."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-027-RR-02",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Look at lines 6 to 9 and lines 60 to 63. What do the two moments show about how well he is being looked at?",
+    "passageRef": "stream-a-22-prisoner-of-zenda",
+    "answerShape": "what-the-crowd-checks-against-what-nobody-checks",
+    "orderAnchor": 6,
+    "techniqueKey": "a-test-he-passes-set-against-a-test-nobody-runs"
+   },
+   "key": "They test his hair and pass him, but nobody puts the two men together.",
+   "options": [
+    {
+     "value": "They saw his helmet come off in the street, and the princess had no doubt.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They test his hair and pass him, but nobody puts the two men together.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The princess is the one person who suspects him, but she says nothing.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He shows his hair so that the story will reach the palace.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A plan the lines never give him."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-028-PR-06",
+   "status": "LIVE",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Look at lines 21 and 22 and lines 48 to 50. What do the two moments show about Priya and the nest?",
+    "passageRef": "stream-b-01",
+    "answerShape": "what-she-told-nobody-against-what-she-says-at-the-door",
+    "orderAnchor": 21,
+    "techniqueKey": "a-thing-kept-secret-and-then-claimed-out-loud"
+   },
+   "key": "She kept them to herself, and now she says out loud that they are hers.",
+   "options": [
+    {
+     "value": "She told nobody about them, and she has two fists in his sleeve at the door.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She kept them to herself, and now she says out loud that they are hers.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She had already told her mother about them before this morning.",
+     "isKey": false,
+     "tag": "en-contradicted-by-the-text",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She speaks so that Grandad will not be stung by them.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": true,
+     "execution": "A reason the lines never give her."
+    }
+   ]
+  }
+ ]
+}

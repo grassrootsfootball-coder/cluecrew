@@ -68,9 +68,9 @@ async function main() {
 
   // Build every touched row AS IT WILL BE.
   const touched = new Set<string>([...(prop.seats ?? []), ...(prop.redrafts ?? []), ...(prop.rebuilds ?? [])].map((x) => x.itemId));
-  const live = await prisma.item.findMany({ where: { id: { in: [...touched] } }, select: { id: true, status: true, stem: true, explanation: true,
+  const live = await prisma.item.findMany({ where: { id: { in: [...touched] } }, select: { id: true, status: true, questionTypeId: true, stem: true, explanation: true,
     options: { select: { id: true, content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true }, orderBy: { id: 'asc' } } } });
-  type Row = { id: string; stem: Record<string, unknown>; options: Opt[]; refs: string[] };
+  type Row = { id: string; type: string; stem: Record<string, unknown>; options: Opt[]; refs: string[] };
   const after = new Map<string, Row>();
   const faults = new Map<string, string[]>();
   const fault = (id: string, f: string) => faults.set(id, [...(faults.get(id) ?? []), f]);
@@ -79,7 +79,7 @@ async function main() {
     // signed projection, so the row a child meets does not move. Any value or stem change needs DRAFT.
     const onlyRedrafts = ![...(prop.seats ?? []), ...(prop.rebuilds ?? [])].some((x) => x.itemId === r.id);
     if (r.status !== 'DRAFT' && !(r.status === 'LIVE' && onlyRedrafts)) fault(r.id, `status ${r.status}`);
-    after.set(r.id, { id: r.id, stem: r.stem as Record<string, unknown>, refs: [],
+    after.set(r.id, { id: r.id, type: r.questionTypeId, stem: r.stem as Record<string, unknown>, refs: [],
       options: r.options.map((o) => ({ optionId: o.id, value: val(o.content), isKey: o.isCorrect, tag: o.misconceptionId, execution: o.misconceptionExecution?.trim() || null })) });
   }
   for (const id of touched) if (!after.has(id)) fault(id, 'row not found');
@@ -110,7 +110,8 @@ async function main() {
     const vals = r.options.map((o) => o.value.toLowerCase());
     if (new Set(vals).size !== vals.length) fault(r.id, 'two options share a value');
     const keyValue = keys[0]?.value ?? '';
-    const k = checkKeyPerformsStem({ questionTypeId: packet.questionType, stem: r.stem, keyValue, optionValues: r.options.map((o) => o.value) }, isWord);
+    // Each row's OWN type: a case can map several (maths-01), and a door-level type would run the wrong predicate.
+    const k = checkKeyPerformsStem({ questionTypeId: r.type, stem: r.stem, keyValue, optionValues: r.options.map((o) => o.value) }, isWord);
     if (k.verdict === 'REFUSES') fault(r.id, `key gate REFUSES: ${k.why}`);
     for (const f of checkItemChildFacing({ id: r.id, stem: r.stem, options: r.options.map((o) => ({ content: { value: o.value }, isCorrect: o.isKey })) }))
       fault(r.id, `child-facing: ${JSON.stringify(f).slice(0, 200)}`);
@@ -121,11 +122,11 @@ async function main() {
         const g = checkTagWrite({ stem: r.stem, optionValue: o.value, keyValue, misconceptionId: o.tag }, isWord);
         if (g.verdict === 'REFUSES') fault(r.id, `${o.value}: tag gate REFUSES ${o.tag}: ${g.why}`);
       }
-      if (packet.questionType === 'vr-20-complete-the-word') {
+      if (r.type === 'vr-20-complete-the-word') {
         const filled = String(r.stem.wordWithGap ?? '').replace('_', o.value);
         if (isWord(filled)) fault(r.id, `${o.value}: fills ${filled}, a real word — a second correct answer`);
       }
-      if (packet.questionType === 'vr-08-move-letter')
+      if (r.type === 'vr-08-move-letter')
         for (const w of vr08Derived(r.stem, o.value)) if (isWord(w) && !isAppropriateForAChild(w)) fault(r.id, `${o.value}: derives ${w}, not suitable for a child`);
     }
   }

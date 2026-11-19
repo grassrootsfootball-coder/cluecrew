@@ -1,0 +1,61 @@
+{
+ "entry": {
+  "id": "en-physical-vs-emotional-cue",
+  "status": "ACTIVE",
+  "district": "ENGLISH",
+  "category": null,
+  "description": "Explains body-language physically when the text signals a feeling.",
+  "childHint": "A racing heart usually shows a feeling. Check what the character is feeling right then.",
+  "approvedBy": "human:staff-reviewer@cluecrew.test",
+  "approvalMethod": "written review 2026-08-02",
+  "approvalNote": "Cleared on the printed review pack; returned marked up.",
+  "textProvenance": null
+ },
+ "carrierCount": 1,
+ "carriers": [
+  {
+   "itemId": "ENG-001-WIW-03",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 5 to 9. Why did the Mole suddenly stop cleaning and run outside?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 3
+   },
+   "key": "Spring outside was pulling at him and he could not sit still.",
+   "options": [
+    {
+     "value": "He had finished every job in the house.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Spring outside was pulling at him and he could not sit still.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "His back and arms hurt too much to go on.",
+     "isKey": false,
+     "tag": "en-physical-vs-emotional-cue",
+     "carriesThisEntry": true,
+     "execution": "Line 4 gives the aching back and weary arms — a physical state offered in place of the pull of spring at lines 5 and 6."
+    },
+    {
+     "value": "The Water Rat called him from up above.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He wanted to find the river he had heard about.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    }
+   ]
+  }
+ ]
+}

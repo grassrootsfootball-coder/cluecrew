@@ -1,0 +1,923 @@
+{
+ "door": "vr-03",
+ "caseId": "case-vr-03",
+ "title": "The Bridge Builder",
+ "questionType": "vr-03-related-words",
+ "entries": {
+  "vr03-part-for-kind": {
+   "description": "Gave a part of the second word where the example gave a kind, a whole, or a category.",
+   "childHint": "A part is not the same as a whole. Check what the first pair gave you."
+  },
+  "vr03-example-anchor": {
+   "description": "Chose a word related to the first pair rather than applying the relationship to the second.",
+   "childHint": "The first pair only shows the rule. Now use that rule on the new word."
+  },
+  "vr03-wrong-link": {
+   "description": "Found a genuine relationship between the pair and applied it consistently, but not the one the example shows.",
+   "childHint": "Make the first pair into a sentence. Then try your answer in the same sentence."
+  },
+  "vr03-same-topic": {
+   "description": "Chose a word from the same topic without the same relationship.",
+   "childHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+  },
+  "vr03-reversed-relation": {
+   "description": "Applied the relationship backwards.",
+   "childHint": "Check which way round the first pair goes. Keep your answer the same way round."
+  },
+  "vr03-wrong-degree": {
+   "description": "Applies the right relationship but at the wrong strength or scale (wet for damp→soaked — the right direction of change, not its size).",
+   "childHint": "You found the right link. Now check how big the change is."
+  }
+ },
+ "houseFormExemplars": {},
+ "rows": [
+  {
+   "itemId": "gen-vr-03-related-words-26",
+   "signed": false,
+   "stem": {
+    "pairA": [
+     "clock",
+     "time"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "thermometer"
+   },
+   "solution": null,
+   "key": "temperature",
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-26-opt1",
+     "value": "temperature",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-26-opt2",
+     "value": "mercury",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-26-opt3",
+     "value": "hour",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-03-related-words-27",
+   "signed": false,
+   "stem": {
+    "pairA": [
+     "author",
+     "novel"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "composer"
+   },
+   "solution": null,
+   "key": "symphony",
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-27-opt1",
+     "value": "symphony",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-27-opt2",
+     "value": "orchestra",
+     "isKey": false,
+     "tag": "vr03-wrong-link",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-27-opt3",
+     "value": "note",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-03-related-words-28",
+   "signed": false,
+   "stem": {
+    "pairA": [
+     "shepherd",
+     "sheep"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "beekeeper"
+   },
+   "solution": null,
+   "key": "bees",
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-28-opt1",
+     "value": "bees",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-28-opt2",
+     "value": "sting",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-28-opt3",
+     "value": "wool",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-03-related-words-29",
+   "signed": false,
+   "stem": {
+    "pairA": [
+     "library",
+     "books"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "gallery"
+   },
+   "solution": null,
+   "key": "paintings",
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-29-opt1",
+     "value": "paintings",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-29-opt2",
+     "value": "artist",
+     "isKey": false,
+     "tag": "vr03-wrong-link",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-29-opt3",
+     "value": "frame",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-03-related-words-30",
+   "signed": false,
+   "stem": {
+    "pairA": [
+     "drought",
+     "rain"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "famine"
+   },
+   "solution": null,
+   "key": "food",
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-30-opt1",
+     "value": "food",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-30-opt2",
+     "value": "crop",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-30-opt3",
+     "value": "hunger",
+     "isKey": false,
+     "tag": "vr03-wrong-link",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-03-related-words-31",
+   "signed": false,
+   "stem": {
+    "pairA": [
+     "captain",
+     "crew"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "conductor"
+   },
+   "solution": null,
+   "key": "orchestra",
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-31-opt1",
+     "value": "orchestra",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-31-opt2",
+     "value": "ship",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-31-opt3",
+     "value": "violin",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-03-related-words-32",
+   "signed": false,
+   "stem": {
+    "pairA": [
+     "recipe",
+     "meal"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "blueprint"
+   },
+   "solution": null,
+   "key": "building",
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-32-opt1",
+     "value": "building",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-32-opt2",
+     "value": "brick",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-32-opt3",
+     "value": "architect",
+     "isKey": false,
+     "tag": "vr03-wrong-link",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-03-related-words-33",
+   "signed": false,
+   "stem": {
+    "pairA": [
+     "chapter",
+     "novel"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "scene"
+   },
+   "solution": null,
+   "key": "play",
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-33-opt1",
+     "value": "play",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-33-opt2",
+     "value": "actor",
+     "isKey": false,
+     "tag": "vr03-wrong-link",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-33-opt3",
+     "value": "line",
+     "isKey": false,
+     "tag": "vr03-reversed-relation",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-03-related-words-34",
+   "signed": false,
+   "stem": {
+    "pairA": [
+     "warm",
+     "hot"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "damp"
+   },
+   "solution": null,
+   "key": "soaked",
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-34-opt1",
+     "value": "soaked",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-34-opt2",
+     "value": "wet",
+     "isKey": false,
+     "tag": "vr03-wrong-degree",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-34-opt3",
+     "value": "mouldy",
+     "isKey": false,
+     "tag": "vr03-wrong-link",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-03-related-words-35",
+   "signed": false,
+   "stem": {
+    "pairA": [
+     "breeze",
+     "gale"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "shower"
+   },
+   "solution": null,
+   "key": "downpour",
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-35-opt1",
+     "value": "downpour",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-35-opt2",
+     "value": "puddle",
+     "isKey": false,
+     "tag": "vr03-wrong-link",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-35-opt3",
+     "value": "drizzle",
+     "isKey": false,
+     "tag": "vr03-wrong-degree",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-03-related-words-36",
+   "signed": false,
+   "stem": {
+    "pairA": [
+     "whisper",
+     "shout"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "glance"
+   },
+   "solution": null,
+   "key": "stare",
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-36-opt1",
+     "value": "stare",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-36-opt2",
+     "value": "peek",
+     "isKey": false,
+     "tag": "vr03-wrong-degree",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-36-opt3",
+     "value": "blink",
+     "isKey": false,
+     "tag": "vr03-wrong-link",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-03-related-words-37",
+   "signed": false,
+   "stem": {
+    "pairA": [
+     "chuckle",
+     "roar"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "sniffle"
+   },
+   "solution": null,
+   "key": "wail",
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-37-opt1",
+     "value": "wail",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-37-opt2",
+     "value": "sneeze",
+     "isKey": false,
+     "tag": "vr03-wrong-link",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-37-opt3",
+     "value": "cry",
+     "isKey": false,
+     "tag": "vr03-wrong-degree",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-03-related-words-38",
+   "signed": false,
+   "stem": {
+    "pairA": [
+     "annoyed",
+     "furious"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "pleased"
+   },
+   "solution": null,
+   "key": "delighted",
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-38-opt1",
+     "value": "delighted",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-38-opt2",
+     "value": "content",
+     "isKey": false,
+     "tag": "vr03-wrong-degree",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-38-opt3",
+     "value": "calm",
+     "isKey": false,
+     "tag": "vr03-wrong-link",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-03-related-words-39",
+   "signed": false,
+   "stem": {
+    "pairA": [
+     "wheat",
+     "flour"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "grape"
+   },
+   "solution": null,
+   "key": "juice",
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-39-opt1",
+     "value": "juice",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-39-opt2",
+     "value": "skin",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-39-opt3",
+     "value": "vine",
+     "isKey": false,
+     "tag": "vr03-reversed-relation",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-03-related-words-40",
+   "signed": false,
+   "stem": {
+    "pairA": [
+     "sculptor",
+     "marble"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "potter"
+   },
+   "solution": null,
+   "key": "clay",
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-40-opt1",
+     "value": "clay",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-40-opt2",
+     "value": "handle",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-40-opt3",
+     "value": "statue",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-03-related-words-41",
+   "signed": false,
+   "stem": {
+    "pairA": [
+     "herd",
+     "cattle"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "flock"
+   },
+   "solution": null,
+   "key": "sheep",
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-41-opt1",
+     "value": "sheep",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-41-opt2",
+     "value": "shepherd",
+     "isKey": false,
+     "tag": "vr03-wrong-link",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-41-opt3",
+     "value": "wool",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-03-related-words-42",
+   "signed": false,
+   "stem": {
+    "pairA": [
+     "novel",
+     "chapter"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "symphony"
+   },
+   "solution": null,
+   "key": "movement",
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-42-opt1",
+     "value": "movement",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-42-opt2",
+     "value": "note",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-42-opt3",
+     "value": "paragraph",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-03-related-words-43",
+   "signed": false,
+   "stem": {
+    "pairA": [
+     "dictionary",
+     "word"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "atlas"
+   },
+   "solution": null,
+   "key": "map",
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-43-opt1",
+     "value": "map",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-43-opt2",
+     "value": "country",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-43-opt3",
+     "value": "geography",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-03-related-words-44",
+   "signed": false,
+   "stem": {
+    "pairA": [
+     "cowardice",
+     "bravery"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "cruelty"
+   },
+   "solution": null,
+   "key": "kindness",
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-44-opt1",
+     "value": "kindness",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-44-opt2",
+     "value": "violence",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-44-opt3",
+     "value": "mercy",
+     "isKey": false,
+     "tag": "vr03-wrong-link",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-03-related-words-45",
+   "signed": false,
+   "stem": {
+    "pairA": [
+     "witness",
+     "trial"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "referee"
+   },
+   "solution": null,
+   "key": "match",
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-45-opt1",
+     "value": "match",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-45-opt2",
+     "value": "player",
+     "isKey": false,
+     "tag": "vr03-wrong-link",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-45-opt3",
+     "value": "whistle",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-03-related-words-46",
+   "signed": false,
+   "stem": {
+    "pairA": [
+     "drop",
+     "ocean"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "grain"
+   },
+   "solution": null,
+   "key": "desert",
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-46-opt1",
+     "value": "desert",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-46-opt2",
+     "value": "camel",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-46-opt3",
+     "value": "dune",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-03-related-words-47",
+   "signed": false,
+   "stem": {
+    "pairA": [
+     "sketch",
+     "painting"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "draft"
+   },
+   "solution": null,
+   "key": "essay",
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-47-opt1",
+     "value": "essay",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-47-opt2",
+     "value": "outline",
+     "isKey": false,
+     "tag": "vr03-wrong-link",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-47-opt3",
+     "value": "pen",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-03-related-words-48",
+   "signed": false,
+   "stem": {
+    "pairA": [
+     "hesitate",
+     "act"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "doubt"
+   },
+   "solution": null,
+   "key": "believe",
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-48-opt1",
+     "value": "believe",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-48-opt2",
+     "value": "accept",
+     "isKey": false,
+     "tag": "vr03-wrong-degree",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-48-opt3",
+     "value": "suspect",
+     "isKey": false,
+     "tag": "vr03-wrong-link",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-03-related-words-49",
+   "signed": false,
+   "stem": {
+    "pairA": [
+     "apprentice",
+     "master"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "sapling"
+   },
+   "solution": null,
+   "key": "oak",
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-49-opt1",
+     "value": "oak",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-49-opt2",
+     "value": "branch",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-49-opt3",
+     "value": "acorn",
+     "isKey": false,
+     "tag": "vr03-reversed-relation",
+     "execution": null
+    }
+   ]
+  }
+ ]
+}

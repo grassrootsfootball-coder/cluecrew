@@ -1,0 +1,37 @@
+{
+  "door": "vr-06",
+  "reviewer": "rev-agent-01",
+  "executions": [],
+  "rows": [
+    {
+      "itemId": "bank-vr-06-missing-word-15",
+      "verdict": "HOLD",
+      "reason": "Child-facing gate refuses the stem on house vocabulary: \"poorly\" in the sentence hits the banned-vocabulary rule '\"poor\" (voice)', pattern \\bpoor(ly)?\\b (packages/core/src/banned-vocabulary.json). Reword (e.g. 'When I felt ill'), do not exempt. On merit the row is otherwise sound: DOC+TOR = DOCTOR fits 'at the surgery' and is the only fit; FAC+TOR = FACTOR and EDI+TOR = EDITOR are real words that do not fit, so both existing executions are true of the row."
+    },
+    {
+      "itemId": "bank-vr-06-missing-word-17",
+      "verdict": "HOLD",
+      "reason": "Child-facing gate refuses the stem on house vocabulary: \"You must\" opens the sentence and hits the banned-vocabulary rule '\"you must\" (§1.3)', pattern \\byou must\\b. Reword (e.g. 'Drivers need a special ___MIT...'), do not exempt. On merit the row is otherwise sound: PER+MIT = PERMIT is the only fit; SUB+MIT = SUBMIT and SUM+MIT = SUMMIT are real words that do not fit, so both existing executions are true of the row."
+    },
+    {
+      "itemId": "bank-vr-06-missing-word-23",
+      "verdict": "SIGN",
+      "reason": "Checked: BUR+DEN = BURDEN fits 'a great ___ to carry' and is the only option that does; GAR+DEN = GARDEN and SUD+DEN = SUDDEN are real words that make no sense there, so both executions are true; nothing unsuitable or non-British."
+    },
+    {
+      "itemId": "bank-vr-06-missing-word-35",
+      "verdict": "SIGN",
+      "reason": "Checked: ANX+IOUS = ANXIOUS fits 'felt very ___ ... tummy full of butterflies' and is the only fit; OBV+IOUS = OBVIOUS and VAR+IOUS = VARIOUS are real words that cannot describe how Mia felt, so both executions are true; nothing unsuitable."
+    },
+    {
+      "itemId": "bank-vr-06-missing-word-36",
+      "verdict": "SIGN",
+      "reason": "Checked: DEF+IANT = DEFIANT fits 'glared ... refused to say sorry' and is the only fit; RAD+IANT = RADIANT and REL+IANT = RELIANT are real words that contradict or do not fit the glaring, unrepentant boy, so both executions are true; being told off is suitable for a child."
+    },
+    {
+      "itemId": "bank-vr-06-missing-word-40",
+      "verdict": "HOLD",
+      "reason": "Child-facing gate refuses the stem on house vocabulary: \"weak\" in 'felt weak and ___BLE' hits the banned-vocabulary rule '\"weak\" (voice)', pattern \\bweak(er|est|ness)?\\b. Reword (e.g. 'felt tired and ___BLE'), do not exempt. On merit the row is otherwise sound: FEE+BLE = FEEBLE is the only fit; MAR+BLE = MARBLE and TRE+BLE = TREBLE are real words that do not fit, so both existing executions are true of the row."
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+ "entry": {
+  "id": "en-vocab-not-this-word",
+  "status": "ACTIVE",
+  "district": "ENGLISH",
+  "category": "vocabulary",
+  "description": "Child chooses \"a park keeper\" for \"tramp\" where the answer is \"a person with no settled home\", picking a meaning that belongs to neither sense of the word.",
+  "childHint": "That meaning belongs to a different word. Read the sentence again.",
+  "approvedBy": "current-reviewer",
+  "approvalMethod": "written review — vocabulary in context, annie 2026-08-08",
+  "approvalNote": null,
+  "textProvenance": null
+ },
+ "carrierCount": 3,
+ "carriers": [
+  {
+   "itemId": "ENG-001-WIW-08",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Read line 18. What does 'the carol of happy birds' mean?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 8
+   },
+   "key": "The singing of the birds.",
+   "options": [
+    {
+     "value": "A Christmas song the birds had learned.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The singing of the birds.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A church bell ringing far away.",
+     "isKey": false,
+     "tag": "en-vocab-not-this-word",
+     "carriesThisEntry": true,
+     "execution": "A bell is nowhere in the passage; it arrives with the Christmas sense and nothing else."
+    },
+    {
+     "value": "The sound of the river chattering.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A shout from someone in the meadow.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-20",
+   "status": "LIVE",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Read line 65. The Mole was 'seated in the stern of a real boat'. What is the stern?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 20
+   },
+   "key": "The back part of the boat.",
+   "options": [
+    {
+     "value": "A strict and serious look.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The oars that push the boat along.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A soft seat with a cushion on it.",
+     "isKey": false,
+     "tag": "en-vocab-not-this-word",
+     "carriesThisEntry": true,
+     "execution": "A cushioned seat is nowhere in the passage; 'seated in' invites it."
+    },
+    {
+     "value": "The rope that held the boat to the bank.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The back part of the boat.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-028-PR-05",
+   "status": "LIVE",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Look at lines 16 to 19. What does \"hovered\" mean here?",
+    "passageRef": "stream-b-01",
+    "orderAnchor": 16
+   },
+   "key": "Stayed up in the air for a moment first.",
+   "options": [
+    {
+     "value": "Stayed up in the air for a moment first.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Waited about near somebody, unsure what to do.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Landed on the sugar water and stayed there.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Moved in a straight line towards the lid.",
+     "isKey": false,
+     "tag": "en-vocab-not-this-word",
+     "carriesThisEntry": true,
+     "execution": "No line gives them a straight line anywhere."
+    }
+   ]
+  }
+ ]
+}

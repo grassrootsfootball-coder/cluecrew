@@ -1,0 +1,1760 @@
+{
+ "entry": {
+  "id": "en-attribute-transfer",
+  "status": "ACTIVE",
+  "district": "ENGLISH",
+  "category": null,
+  "description": "Assigns one character's described attribute to another, or the right attribute at the wrong value.",
+  "childHint": "Two people are being described. Check which one each detail belongs to.",
+  "approvedBy": "human:staff-reviewer@cluecrew.test",
+  "approvalMethod": "written review 2026-08-02",
+  "approvalNote": "Cleared on the printed review pack; returned marked up.",
+  "textProvenance": {
+   "state": "RECORDED",
+   "appliedOn": "2026-08-21",
+   "authority": "annie-eighteenth-return.md, read from the file, sha256 b2e9e673669861e3b82d8a9a1fbc8a883a9f4b8f634353b3c8b407b74fa468ca",
+   "approvedByPerson": "Annie"
+  }
+ },
+ "carrierCount": 44,
+ "carriers": [
+  {
+   "itemId": "ENG-001-WIW-01",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Read lines 1 to 4. What had the Mole been doing all morning?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 1
+   },
+   "key": "Cleaning his little home from top to bottom.",
+   "options": [
+    {
+     "value": "Digging out a brand new tunnel.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Cleaning his little home from top to bottom.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Painting his house blue outside and white inside.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "Blue outside and white within is the Rat's boat at line 60; the colours are carried across to the house."
+    },
+    {
+     "value": "Resting his aching back and weary arms.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Singing along with the happy birds.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-02",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Read lines 3 to 4. What was all over the Mole's black fur?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 2
+   },
+   "key": "Splashes of whitewash.",
+   "options": [
+    {
+     "value": "Dust, which had got into his throat and eyes.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Bits of straw from his brooms.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Warm grass from the great meadow.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Splashes of whitewash.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Blue and white paint.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "Blue and white are the boat's colours at line 60, transferred onto the fur."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-17",
+   "status": "LIVE",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Read line 49: 'A grave round face'. What does 'grave' mean here?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 17
+   },
+   "key": "Serious and calm.",
+   "options": [
+    {
+     "value": "Serious and calm.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A place where someone is buried.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Dark and dirty with earth.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "Earth and dirt belong to the Mole's own fur at line 4, carried across to the Rat's face."
+    },
+    {
+     "value": "Very sad and upset.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Round and rather fat.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-20",
+   "status": "LIVE",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Read line 65. The Mole was 'seated in the stern of a real boat'. What is the stern?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 20
+   },
+   "key": "The back part of the boat.",
+   "options": [
+    {
+     "value": "A strict and serious look.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The oars that push the boat along.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A soft seat with a cushion on it.",
+     "isKey": false,
+     "tag": "en-vocab-not-this-word",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The rope that held the boat to the bank.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "The rope at line 59 is gear ATTACHED to the boat, and this transfers it into being a part OF the boat. The distinction is the item's whole subject, and it is a different error from picking the oars."
+    },
+    {
+     "value": "The back part of the boat.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-01",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "The Bennet daughters did not meet Mr Bingley when he called at their house. Read lines 5 to 8. What were they able to find out about him?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 1
+   },
+   "key": "What colour his coat was, and what colour his horse was.",
+   "options": [
+    {
+     "value": "That he was cheerful and talked to everybody.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That he had ten thousand pounds a year.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "Ten thousand a year is Mr Darcy's, at line 29, carried across to Mr Bingley. In the window, line 8 answers the stem: 'window, that he wore a blue coat and rode'."
+    },
+    {
+     "value": "What colour his coat was, and what colour his horse was.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That he stayed about ten minutes with their father.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That he liked the big house he had taken.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-02",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Mr Bingley hoped for something on this visit that he did not get. Read lines 5 to 6. What was it?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 2
+   },
+   "key": "A look at Mr Bennet's daughters.",
+   "options": [
+    {
+     "value": "A book from Mr Bennet's library.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A look at Mr Bennet's daughters.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A chance to invite the Bennets to dinner at his own house.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A ride on Mr Bennet's black horse.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "The black horse at line 8 is a thing the ladies saw, turned into something he wanted. In the window, line 5 answers the stem: 'him in his library. He had entertained hopes of'."
+    },
+    {
+     "value": "A dance with the eldest Miss Bennet.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-03",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Mr Bingley said no to the Bennets' dinner. Read lines 9 to 12. What reason did his answer give?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 3
+   },
+   "key": "He had to be in London the next day.",
+   "options": [
+    {
+     "value": "He had promised to dine with Lady Lucas instead.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He did not want to meet the Bennet daughters.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He was busy planning the courses for a dinner of his own.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "The planning of courses at lines 9 and 10 is MRS BENNET'S, carried across to him."
+    },
+    {
+     "value": "He had to be in London the next day.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He had gone to London to gather a big group for the ball.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-04",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Mr Bingley's answer upset Mrs Bennet. Read lines 13 to 16. What was she most afraid of?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 4
+   },
+   "key": "That he would keep moving about and never really live at Netherfield.",
+   "options": [
+    {
+     "value": "That he would keep moving about and never really live at Netherfield.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That her dinner had all been cooked and would now be wasted.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That he had gone to London to look for guests for the ball.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "The guest-gathering at lines 16 and 17 is Lady Lucas's comfort, and this transfers it into Mrs Bennet's fear."
+    },
+    {
+     "value": "That the girls would have to meet twelve strange ladies.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That Mr Bingley did not like her daughters.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-09",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "When Mr Darcy first walked in, the room thought very well of him. Read lines 26 to 30. Why?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 9
+   },
+   "key": "Because of his looks, and because of the news that he was very rich.",
+   "options": [
+    {
+     "value": "Because he danced with lots of different ladies.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "Dancing every dance is Mr Bingley at line 37, carried across to Mr Darcy, who dances twice. In the window, line 27 answers the stem: 'drew the attention of the room by his fine'."
+    },
+    {
+     "value": "Because he spoke kindly to everyone he was introduced to.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Because he was the tallest man in the room.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Because of his looks, and because of the news that he was very rich.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Because he owned a large estate in Derbyshire.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-10",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Halfway through the evening, people changed their minds about Mr Darcy. Read lines 30 to 35. What changed them?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 10
+   },
+   "key": "The way he behaved, as if he were better than everyone there.",
+   "options": [
+    {
+     "value": "They found out that he was not really rich after all.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They decided he was less good-looking than Mr Bingley.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The way he behaved, as if he were better than everyone there.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He complained that the ball had ended too early.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "Complaining that the ball closed early is Mr Bingley at line 37, transferred to Mr Darcy. In the window, line 31 answers the stem: 'with great admiration for about half the evening, till'."
+    },
+    {
+     "value": "Everybody disliked him from the moment he walked in.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-12",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Read lines 39 to 41. How many dances did Mr Darcy dance, and who did he dance with?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 12
+   },
+   "key": "Two: one with Mrs Hurst and one with Miss Bingley.",
+   "options": [
+    {
+     "value": "Every dance of the evening.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "Every dance is Mr Bingley's at line 37, one line above, carried across to Mr Darcy. In the window, line 39 answers the stem: 'speak for themselves. What a contrast between him and'."
+    },
+    {
+     "value": "Two: one with Mrs Hurst and one with Miss Bingley.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Two: one with Miss Bingley and one with Elizabeth.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "None at all.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Three: with Mrs Hurst, Miss Bingley and Miss Bennet.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-004-AGG-02",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Read lines 6 and 7. Line 7 speaks of 'her attitude and expression'. What does 'attitude' mean here?",
+    "passageRef": "stream-a-06-anne-green-gables",
+    "orderAnchor": 2
+   },
+   "key": "The way she was holding herself.",
+   "options": [
+    {
+     "value": "How tired she was after her journey.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The way she was holding herself.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "What she thought about waiting.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "How shy and awkward she looked.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "Gives the girl Matthew's quality; line 6 gives her tense rigidity, not shyness."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-004-AGG-04",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Who was Matthew expecting to meet at Bright River? (lines 17 and 18)",
+    "passageRef": "stream-a-06-anne-green-gables",
+    "orderAnchor": 4
+   },
+   "key": "A boy, sent over by Mrs Spencer.",
+   "options": [
+    {
+     "value": "A girl, sent over by Mrs Spencer.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "Keeps the right person but the wrong value: line 17 says he is not expecting a girl."
+    },
+    {
+     "value": "A boy, sent over by the man at the station.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "His sister Marilla, coming in on the train.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A boy, sent over by Mrs Spencer.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-004-AGG-06",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Why does Matthew wish Marilla was there? (lines 24 and 25)",
+    "passageRef": "stream-a-06-anne-green-gables",
+    "orderAnchor": 6
+   },
+   "key": "He finds this sort of trouble hard to face alone.",
+   "options": [
+    {
+     "value": "He knows Marilla is the shy one of the two.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "Gives Marilla the shyness the preamble gives Matthew."
+    },
+    {
+     "value": "He finds this sort of trouble hard to face alone.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He hopes Marilla will send the girl straight back.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He wants Marilla to drive the horse home.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-005-BB-10",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Read lines 50 to 52. Line 52 says it grew 'darker and darker, stiller and stiller'. Why does the writer write it that way?",
+    "passageRef": "stream-a-04-black-beauty",
+    "orderAnchor": 50
+   },
+   "key": "To make the change feel slow and steady.",
+   "options": [
+    {
+     "value": "To show the storm was still getting worse.",
+     "isKey": false,
+     "tag": "en-relation-word-flipped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To make the change feel slow and steady.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To show Beauty was growing tired at the end of the day.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "Gives the horse the evening's quality; the lines describe the dark and the quiet."
+    },
+    {
+     "value": "To copy the sound of the wheels on the soft road.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-005-BB-13",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Beauty says 'I dare not stir'. What does 'stir' mean here? (lines 36 to 38)"
+   },
+   "key": "Move at all.",
+   "options": [
+    {
+     "value": "Move at all.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Mix something round and round.",
+     "isKey": false,
+     "tag": "en-vocab-secondary-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Make any sound.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "Wake up from a doze.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-006-TM-01",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Lines 1 and 2 speak of 'such a commotion up and down a house'. What does 'commotion' on line 1 mean here?",
+    "passageRef": "stream-a-10-three-men-boat",
+    "orderAnchor": 1
+   },
+   "key": "A great deal of noisy fuss.",
+   "options": [
+    {
+     "value": "A great deal of noisy fuss.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A long argument between two people.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A slow and careful piece of work.",
+     "isKey": false,
+     "tag": "en-relation-word-flipped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A crowd of people arriving at once.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "Moves it to visitors; the people are the family already in the house."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-006-TM-07",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "Lines 27 to 29 count the helpers as a second, a third, a fourth, a fifth. Why does the writer number them like that?",
+    "passageRef": "stream-a-10-three-men-boat",
+    "orderAnchor": 27
+   },
+   "key": "To make the crowd grow bigger with every word.",
+   "options": [
+    {
+     "value": "To show the family were well organised.",
+     "isKey": false,
+     "tag": "en-relation-word-flipped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To show how long the job took to finish.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "Moves it to time; the numbers count people, and the time is given elsewhere."
+    },
+    {
+     "value": "To make the crowd grow bigger with every word.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To help the reader remember all their names.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-008-RC-05",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Read lines 20 to 23. What do the children use for the table?",
+    "passageRef": "stream-a-02-railway-children",
+    "orderAnchor": 20
+   },
+   "key": "A glass ash-tray for salt, and a baking-tin for bread.",
+   "options": [
+    {
+     "value": "A glass ash-tray for salt, and a baking-tin for bread.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "A baking-tin for salt, and a glass ash-tray for bread.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "Both objects sit in lines 21 and 22, with their jobs the other way round."
+    },
+    {
+     "value": "They find all the right things and lay them out.",
+     "isKey": false,
+     "tag": "en-negation-dropped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Bread and butter, set out ready on the table.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-009-SM-04",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Read lines 15 to 17. What do these lines tell you about the trip?",
+    "passageRef": "stream-b-02",
+    "orderAnchor": 15
+   },
+   "key": "He kept the trip from his mother.",
+   "options": [
+    {
+     "value": "His mother would have stopped him going.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He had promised Nan he would go out there.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "Line 15 has him promise a picture, not a visit; the promise moves to the wrong thing."
+    },
+    {
+     "value": "His mother told him to go round to Ryan's.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He kept the trip from his mother.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-009-SM-12",
+   "status": "DRAFT",
+   "questionType": "en-comp-technique",
+   "stem": {
+    "text": "The writer moves between tenses by a rule. What decides which he uses?",
+    "passageRef": "stream-b-02",
+    "answerShape": "tense-split",
+    "orderAnchor": 9999,
+    "techniqueKey": "present-tense-reserved-for-what-is-still-true"
+   },
+   "key": "The present is kept for what is still true, but the walk stays past.",
+   "options": [
+    {
+     "value": "The walk is two miles out along the sea wall to a ruined cottage.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He tells the whole of it the way his Nan has always told it to them.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Nan's part is in the present, but his own is in the past.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "Lines 9 and 18 are his own sentences, and both are in the present."
+    },
+    {
+     "value": "The present is kept for what is still true, but the walk stays past.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-012-ML-09",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Read lines 43 to 46. What do these lines tell you about Tom?",
+    "passageRef": "stream-a-14-mill-on-floss",
+    "orderAnchor": 9
+   },
+   "key": "He finished first and watched her, wanting more.",
+   "options": [
+    {
+     "value": "He did not know that Maggie was looking across at him.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He was pleased to watch her enjoy her half.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He was lost to everything but jam and idleness.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "That is Maggie at line 46, seesawing on the bough."
+    },
+    {
+     "value": "He finished first and watched her, wanting more.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-014-TS-03",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 10 to 14. What shows us that Ben was in a happy mood?",
+    "passageRef": "stream-a-05-tom-sawyer",
+    "orderAnchor": 10
+   },
+   "key": "The way he came hopping and skipping along.",
+   "options": [
+    {
+     "value": "The calm way of working that is described.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "Line 10 gives that calm to Tom; this reads it as a sign about Ben."
+    },
+    {
+     "value": "The fruit he had in his hand.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The way he came hopping and skipping along.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "His heart was light and his hopes were high.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-014-TS-07",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 34 to 37. How does Ben's feeling about the job change?",
+    "passageRef": "stream-a-05-tom-sawyer",
+    "orderAnchor": 34
+   },
+   "key": "He grows more and more taken with it.",
+   "options": [
+    {
+     "value": "He stops nibbling his apple at last.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He starts to sweep the brush daintily.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "Lines 34 and 35 give the sweeping to Tom, not to Ben."
+    },
+    {
+     "value": "He grows more and more taken with it.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "He begins to feel sorry for Tom.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-015-CC-01",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 1 to 5. What was the one odd thing about the knocker?",
+    "passageRef": "stream-a-08-christmas-carol",
+    "orderAnchor": 1
+   },
+   "key": "The very great size of the thing itself.",
+   "options": [
+    {
+     "value": "The very great size of the thing itself.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Scrooge had seen it night and morning.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The thing had hung there for many years.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "It had as little fancy about it as any man.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "Line 3 and line 4 give that want of fancy to Scrooge, not to the knocker."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-015-CC-10",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 68 to 70. What did the flame do as the ghost came in?",
+    "passageRef": "stream-a-08-christmas-carol",
+    "orderAnchor": 68
+   },
+   "key": "It leaped up and then fell back again.",
+   "options": [
+    {
+     "value": "It came on through the heavy door.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "Line 68 gives that to the ghost, not to the flame."
+    },
+    {
+     "value": "It leaped up and then fell back again.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "It called out that it knew Marley.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Scrooge changed colour as the thing passed.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-017-CR-05",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Look at lines 22 to 25. What does 'resignation' on line 22 mean here?",
+    "passageRef": "stream-a-17-cranford",
+    "orderAnchor": 22
+   },
+   "key": "Putting up with something you dislike.",
+   "options": [
+    {
+     "value": "Putting up with something you dislike.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Giving up a job that you hold.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Sitting in a patient and grave way.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Deciding to laugh along with the rest.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "Line 23 gives the laughing to some of the others, not to her."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-017-CR-06",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 26 to 29. Why does Miss Jenkyns send for the other book?",
+    "passageRef": "stream-a-17-cranford",
+    "orderAnchor": 26
+   },
+   "key": "To answer his reading with a reading of her own.",
+   "options": [
+    {
+     "value": "To show the company that she owns a book-room.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To answer his reading with a reading of her own.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To let the present company judge between the two.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "To let the Captain choose the second book.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "Line 26 has her name the book herself, so this hands her choice to him."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-017-CR-11",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Look at lines 52 to 54. What does 'inexorable' on line 53 mean here?",
+    "passageRef": "stream-a-17-cranford",
+    "orderAnchor": 52
+   },
+   "key": "Not to be moved by anything he tried.",
+   "options": [
+    {
+     "value": "Not able to be excused for what she did.",
+     "isKey": false,
+     "tag": "en-vocab-built-from-parts",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Still in a fury with him about it.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Not to be moved by anything he tried.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Trying to talk of some pleasanter thing.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "Lines 52 and 53 give that to the Captain, not to her."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-018-RB-03",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 8 to 16. How do we know the child was afraid of being late?",
+    "passageRef": "stream-a-21-rebecca-sunnybrook",
+    "orderAnchor": 8
+   },
+   "key": "She ran to her mother when she was called.",
+   "options": [
+    {
+     "value": "She had an air of being small for her age.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Her mother counted out the silver with care.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "Line 16 gives that care to the mother, not to the child."
+    },
+    {
+     "value": "She ran to her mother when she was called.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She had been waiting outside since early morning.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-018-RB-06",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Look at lines 33 to 35. What does 'oblivion' on line 35 mean here?",
+    "passageRef": "stream-a-21-rebecca-sunnybrook",
+    "orderAnchor": 33
+   },
+   "key": "Being quite unable to remember.",
+   "options": [
+    {
+     "value": "Being wiped out altogether.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Being quite unable to remember.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Being lulled by the heat and dust.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Thinking hard about the errands ahead.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "Line 34 gives the errands as one of the things lulling him, not as his thoughts."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-018-RB-08",
+   "status": "DRAFT",
+   "questionType": "en-comp-inference",
+   "stem": {
+    "text": "Look at lines 45 to 49. What does riding inside stop Rebecca from doing?",
+    "passageRef": "stream-a-21-rebecca-sunnybrook",
+    "orderAnchor": 45
+   },
+   "key": "The windows only show her bits of things.",
+   "options": [
+    {
+     "value": "Her trunk has fallen off the back.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "The stage is slippery and shiny down there.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Her mother is very choice of the trunk.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "Line 49 gives that care to her mother, not to her."
+    },
+    {
+     "value": "The windows only show her bits of things.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-018-RB-10",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 53 to 56. What did Rebecca do with her sunshade?",
+    "passageRef": "stream-a-21-rebecca-sunnybrook",
+    "orderAnchor": 53
+   },
+   "key": "Put it under the folds of her dress.",
+   "options": [
+    {
+     "value": "Pushed it back off her head.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "Line 55 gives that to her hat, not to the sunshade."
+    },
+    {
+     "value": "Put it under the folds of her dress.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Smoothed it out with great care.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Held it up against the afternoon sun.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-019-BV-05",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Look at lines 19 and 20. What does \"yielding\" on line 20 mean here?",
+    "passageRef": "stream-a-20-bevis",
+    "orderAnchor": 19
+   },
+   "key": "Soft, so that a foot sinks into it.",
+   "options": [
+    {
+     "value": "Soft, so that a foot sinks into it.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Giving in to somebody who insists.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Marked with the prints of somebody who has walked over it.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Moving slowly and stubbornly along.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "Line 19's manner belongs to Bevis, not to the sand."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-020-HD-05",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 21 to 25. What does Heidi keep sobbing out?",
+    "passageRef": "stream-a-19-heidi",
+    "orderAnchor": 21
+   },
+   "key": "That the bread was all for grandmother and is gone.",
+   "options": [
+    {
+     "value": "That her heart would break.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That the bread was all for grandmother and is gone.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That she is distressed and alarmed.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "True at lines 25 and 26, and it belongs to Clara."
+    },
+    {
+     "value": "That she wants to go back to the mountain.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-022-GK-07",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 28 to 30. What does he tell his mum?",
+    "passageRef": "stream-c-01",
+    "orderAnchor": 28
+   },
+   "key": "That he does not want a go up front.",
+   "options": [
+    {
+     "value": "That she asked him about going up front.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That it is all right then, love.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "True at line 30, and the words belong to his mother."
+    },
+    {
+     "value": "That he does not want a go up front.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That the others would not let him go up front.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-023-RT-03",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 14 to 16. What did the big man say about Rikki-tikki?",
+    "passageRef": "stream-a-15-jungle-book",
+    "orderAnchor": 14
+   },
+   "key": "That he was not dead, only half choked.",
+   "options": [
+    {
+     "value": "That he was dead when they carried him in.",
+     "isKey": false,
+     "tag": "en-negation-dropped",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That he opened his eyes and sneezed.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That he was not dead, only half choked.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That they might take him in and dry him.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "Line 13 gives those words to the mother, and line 14 has them already indoors."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-024-BF-07",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 25 to 28. What does Dilan say about Reception?",
+    "passageRef": "stream-b-03",
+    "orderAnchor": 25
+   },
+   "key": "They are fine, and the screaming is just what Reception is like.",
+   "options": [
+    {
+     "value": "That seven of the butterflies are back.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They had to sit down and have a drink of water.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "True at line 25, and it belongs to Miss Deller, not Reception."
+    },
+    {
+     "value": "They are fine, and the screaming is just what Reception is like.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Their teacher took the whole class outside.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-025-LW-01",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 2 to 5. What did Amy do while the others answered Jo?",
+    "passageRef": "stream-a-16-little-women",
+    "orderAnchor": 2
+   },
+   "key": "She poked the fire and said nothing.",
+   "options": [
+    {
+     "value": "She poked the fire and said nothing.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She said no at once and looked surprised.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "True at line 4, and it belongs to Meg and Beth."
+    },
+    {
+     "value": "Her colour rose while Jo was watching her.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She went red and owned up straight away.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-025-LW-05",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 28 to 30. What did Meg and Beth each do?",
+    "passageRef": "stream-a-16-little-women",
+    "orderAnchor": 28
+   },
+   "key": "Meg went to Amy and Beth went to Jo.",
+   "options": [
+    {
+     "value": "Meg went to Amy and Beth went to Jo.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Meg went to Jo and Beth went to Amy.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "True of line 28 with the two of them swapped."
+    },
+    {
+     "value": "One of them boxed her sister’s ear.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "They went up to the garret after her.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-025-LW-11",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 64 to 66. What did Jo do while Amy put her skates on?",
+    "passageRef": "stream-a-16-little-women",
+    "orderAnchor": 64
+   },
+   "key": "She went slowly down the river without turning.",
+   "options": [
+    {
+     "value": "She stamped her feet and blew on her fingers.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "True at lines 64 and 65, and it is Amy rather than Jo."
+    },
+    {
+     "value": "She saw Amy coming and turned her back on her.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She went slowly down the river without turning.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "She called out to Amy to hurry along after her.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-026-AL-08",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 25 to 29. What does Grandad answer when Alan mentions Thursday?",
+    "passageRef": "stream-b-05",
+    "orderAnchor": 8
+   },
+   "key": "If I’m about.",
+   "options": [
+    {
+     "value": "You’ll be about.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "True at line 29, and the words are Alan’s."
+    },
+    {
+     "value": "That Alan brought a marrow he did not want.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That he will get the beans in himself.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "If I’m about.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-027-RR-01",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 1 to 4. Setting modesty aside, what does the narrator admit?",
+    "passageRef": "stream-a-22-prisoner-of-zenda",
+    "orderAnchor": 1
+   },
+   "key": "That he made a very fine figure.",
+   "options": [
+    {
+     "value": "That he made a very fine figure.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That he was dressed all in white but his boots.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "That he would be doing the King little credit.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "True at line 3, and it belongs to what he says of the King."
+    },
+    {
+     "value": "That he had been practising the ride for days.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-027-RR-11",
+   "status": "DRAFT",
+   "questionType": "en-comp-retrieval",
+   "stem": {
+    "text": "Look at lines 64 to 68. Why is the narrator thankful about old Lord Topham?",
+    "passageRef": "stream-a-22-prisoner-of-zenda",
+    "orderAnchor": 64
+   },
+   "key": "Because the old man could hardly see.",
+   "options": [
+    {
+     "value": "Because he had danced at Lord Topham’s house many times.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Because the ambassadors had paid their respects.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": true,
+     "execution": "True at line 65, and it belongs to the ambassadors as a group."
+    },
+    {
+     "value": "Because the old man could hardly see.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Because the old man had left before he arrived.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  }
+ ]
+}

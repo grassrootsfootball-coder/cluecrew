@@ -1,0 +1,24 @@
+{
+ "door": "vr-06",
+ "mode": "APPLIED",
+ "landed": 0,
+ "signed": 3,
+ "seatsHeld": [],
+ "rowsHeld": [
+  {
+   "itemId": "bank-vr-06-missing-word-15",
+   "verdict": "HOLD",
+   "reason": "Child-facing gate refuses the stem on house vocabulary: \"poorly\" in the sentence hits the banned-vocabulary rule '\"poor\" (voice)', pattern \\bpoor(ly)?\\b (packages/core/src/banned-vocabulary.json). Reword (e.g. 'When I felt ill'), do not exempt. On merit the row is otherwise sound: DOC+TOR = DOCTOR fits 'at the surgery' and is the only fit; FAC+TOR = FACTOR and EDI+TOR = EDITOR are real words that do not fit, so both existing executions are true of the row."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-17",
+   "verdict": "HOLD",
+   "reason": "Child-facing gate refuses the stem on house vocabulary: \"You must\" opens the sentence and hits the banned-vocabulary rule '\"you must\" (§1.3)', pattern \\byou must\\b. Reword (e.g. 'Drivers need a special ___MIT...'), do not exempt. On merit the row is otherwise sound: PER+MIT = PERMIT is the only fit; SUB+MIT = SUBMIT and SUM+MIT = SUMMIT are real words that do not fit, so both existing executions are true of the row."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-40",
+   "verdict": "HOLD",
+   "reason": "Child-facing gate refuses the stem on house vocabulary: \"weak\" in 'felt weak and ___BLE' hits the banned-vocabulary rule '\"weak\" (voice)', pattern \\bweak(er|est|ness)?\\b. Reword (e.g. 'felt tired and ___BLE'), do not exempt. On merit the row is otherwise sound: FEE+BLE = FEEBLE is the only fit; MAR+BLE = MARBLE and TRE+BLE = TREBLE are real words that do not fit, so both existing executions are true of the row."
+  }
+ ]
+}

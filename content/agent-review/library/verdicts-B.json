@@ -1,0 +1,205 @@
+{
+  "reviewer": "rev-agent-01",
+  "entries": [
+    {
+      "id": "en-inference-literal-lookalike",
+      "verdict": "REFUSE",
+      "reason": "Pass 1 (assertion): the childHint opens by asserting a feature of the item - 'Some options only copy words from the passage.' On 8 of 115 carriers the carrying option copies no passage wording (its own execution describes a literal reading, a paraphrase or a distortion instead); a ninth, ENG-007-LP-15, has no execution recorded and could not be checked. The description's scope 'For why/imply questions' is false on the 18 carriers that are retrieval (13) or vocab (5) questions, and it strains on the many technique 'what does the writer keep doing' stems. The second sentence 'Ask what those words are telling you.' describes a move and holds on every carrier. Pass 2 (generality): the move is usable by a child and fits the main population (an option that reuses a line but gives the wrong kind of answer - a feeling for a reason, a quote for a pattern). It is weaker, though still true, for the 16 'both spans handed back in order, with no relation named' carriers (e.g. ENG-019-BV-04, ENG-020-HD-03, ENG-028-PR-06), where the move a child needs is 'what joins them'. Both sentences are under 16 words, end on a full stop and are British English. The transform turns the first sentence from an assertion into a general warning, so it holds whether or not this item has a copying option. Misfiled carriers are listed; they are an item fault.",
+      "assertionClauses": [
+        {
+          "clause": "Some options only copy words from the passage.",
+          "falseOn": [
+            "ENG-001-WIW-13",
+            "ENG-001-WIW-14",
+            "ENG-002-pp-16",
+            "ENG-005-BB-02",
+            "ENG-007-LP-12",
+            "ENG-011-CV-12",
+            "ENG-009-SM-12",
+            "ENG-012-ML-12"
+          ]
+        },
+        {
+          "clause": "For why/imply questions",
+          "falseOn": [
+            "ENG-005-BB-02",
+            "ENG-007-LP-01",
+            "ENG-007-LP-09",
+            "ENG-007-LP-15",
+            "ENG-008-RC-02",
+            "ENG-009-SM-08",
+            "ENG-010-JE-03",
+            "ENG-010-JE-09",
+            "ENG-010-JE-10",
+            "ENG-012-ML-01",
+            "ENG-013-TI-08",
+            "ENG-014-TS-03",
+            "ENG-016-HB-04",
+            "ENG-016-HB-09",
+            "ENG-016-HB-11",
+            "ENG-017-CR-02",
+            "ENG-020-HD-02",
+            "ENG-020-HD-07"
+          ]
+        },
+        {
+          "clause": "picks the option that reuses passage wording",
+          "falseOn": [
+            "ENG-001-WIW-13",
+            "ENG-001-WIW-14",
+            "ENG-002-pp-16",
+            "ENG-005-BB-02",
+            "ENG-007-LP-12",
+            "ENG-011-CV-12",
+            "ENG-009-SM-12",
+            "ENG-012-ML-12"
+          ]
+        }
+      ],
+      "transforms": [
+        {
+          "field": "childHint",
+          "from": "Some options only copy words from the passage.",
+          "to": "Words copied from the passage can still miss the question."
+        },
+        {
+          "field": "description",
+          "from": "For why/imply questions, picks",
+          "to": "Picks"
+        }
+      ],
+      "misfiledCarriers": [
+        {
+          "itemId": "ENG-001-WIW-13",
+          "option": "Because the Mole thought a big animal was in front of him.",
+          "why": "Reads the river-as-animal figure as the Mole literally mistaking it for a creature; no passage wording is copied. Fits en-figurative-taken-literally."
+        },
+        {
+          "itemId": "ENG-001-WIW-14",
+          "option": "The Mole could not keep up with the river.",
+          "why": "Reads 'trotted' literally as failing to keep pace; a literal reading of a figure, not copied wording. Fits en-figurative-taken-literally."
+        },
+        {
+          "itemId": "ENG-002-pp-16",
+          "option": "It shows that Mr Darcy was speaking loudly to the whole room.",
+          "why": "Paraphrases 'near enough to overhear' into 'loudly to the whole room'; an invented reading, not reused words."
+        },
+        {
+          "itemId": "ENG-005-BB-02",
+          "option": "Painted so they could be seen.",
+          "why": "'Painted so they could be seen' copies nothing from the passage; its own execution says it reuses an 'idea', not wording."
+        },
+        {
+          "itemId": "ENG-011-CV-12",
+          "option": "They keep saying, over and over, that the house has no ghost.",
+          "why": "Its execution says it changes 'not afraid of ghosts' into 'no ghost', a different claim; a distortion, not copied wording."
+        },
+        {
+          "itemId": "ENG-007-LP-01",
+          "option": "Anything that smelled of chlorine.",
+          "why": "Takes the chlorine smell from line 5, outside the lines 7 to 9 the stem names; this is wrong-scope retrieval."
+        },
+        {
+          "itemId": "ENG-007-LP-09",
+          "option": "They will do it instead of going to Whitby.",
+          "why": "Takes Whitby from line 19, outside the lines 40 and 41 the stem names; this is wrong-scope retrieval."
+        }
+      ]
+    },
+    {
+      "id": "en-wrong-scope-retrieval",
+      "verdict": "REFUSE",
+      "reason": "Pass 1 (assertion): 'A true fact from somewhere else' asserts that the carrying option is TRUE in the passage. On 9 of 88 carriers it is not - the option is unstated, contradicted, moved onto another character, or a splice of two details, per each option's own execution. The description's 'a true detail' carries the same claim on the same 9. 'Find the part the question points to.' describes a move and holds on every carrier with a line window (86 of 88); ENG-001-WIW-22 points to no window, and ENG-006-TM-12 points only to a repeated word. Pass 2 (generality): the move is concrete, a child can act on it, and it fits the core population well - most carriers' executions name the exact line outside the window. Both sentences are under 16 words, end on a full stop and are British English. The transform removes 'true' from both fields, so the clause stays correct where the option is a wrong-part detail that is not itself true. Borderline, not counted: ENG-002-pp-04, ENG-002-pp-14 and ENG-004-AGG-01, where the detail is true but belongs to someone else. Misfiled carriers are listed; they are an item fault.",
+      "assertionClauses": [
+        {
+          "clause": "A true fact from somewhere else does not answer this question.",
+          "falseOn": [
+            "ENG-001-WIW-01",
+            "ENG-001-WIW-04",
+            "ENG-001-WIW-09",
+            "ENG-001-WIW-12",
+            "ENG-001-WIW-22",
+            "ENG-002-pp-03",
+            "ENG-002-pp-13",
+            "ENG-002-pp-22",
+            "ENG-023-RT-08"
+          ]
+        },
+        {
+          "clause": "Answers from a true detail in the wrong part of the passage.",
+          "falseOn": [
+            "ENG-001-WIW-01",
+            "ENG-001-WIW-04",
+            "ENG-001-WIW-09",
+            "ENG-001-WIW-12",
+            "ENG-001-WIW-22",
+            "ENG-002-pp-03",
+            "ENG-002-pp-13",
+            "ENG-002-pp-22",
+            "ENG-023-RT-08"
+          ]
+        },
+        {
+          "clause": "Find the part the question points to.",
+          "falseOn": [
+            "ENG-001-WIW-22"
+          ]
+        }
+      ],
+      "transforms": [
+        {
+          "field": "childHint",
+          "from": "A true fact from somewhere else",
+          "to": "Something from another part of the passage"
+        },
+        {
+          "field": "description",
+          "from": "from a true detail",
+          "to": "from a detail"
+        }
+      ],
+      "misfiledCarriers": [
+        {
+          "itemId": "ENG-001-WIW-01",
+          "option": "Digging out a brand new tunnel. | Singing along with the happy birds.",
+          "why": "Option 'Singing along with the happy birds.' - its own execution says the Mole never sings and nothing states it; that is en-plausible-not-stated, not a true detail from elsewhere."
+        },
+        {
+          "itemId": "ENG-001-WIW-09",
+          "option": "Help with his own spring-cleaning. | A ride across the river in a boat.",
+          "why": "Option 'Help with his own spring-cleaning.' - the spring-cleaning is the Mole's, moved onto the rabbit; that is en-attribute-transfer."
+        },
+        {
+          "itemId": "ENG-001-WIW-12",
+          "option": "A great meadow. | A face with whiskers.",
+          "why": "Option 'A great meadow.' - its own execution calls it 'plausible and unstated'; that is en-plausible-not-stated."
+        },
+        {
+          "itemId": "ENG-001-WIW-22",
+          "option": "He keeps the animals quiet, still and dull, but lets the river chatter, gurgle and laugh.",
+          "why": "Its execution says the claim is false of the text (the animals talk throughout); a contradicted claim, not a true detail from elsewhere."
+        },
+        {
+          "itemId": "ENG-002-pp-13",
+          "option": "They tell us that Mr Darcy said nothing to anybody all evening.",
+          "why": "Line 41 has Darcy speaking, so the option is contradicted by the text, not a true detail from the wrong part."
+        },
+        {
+          "itemId": "ENG-002-pp-22",
+          "option": "She thinks Mr Darcy is a fine, handsome man.",
+          "why": "The praise of Darcy's looks belongs to the ladies of the room (line 30), moved onto Elizabeth; that is en-attribute-transfer."
+        },
+        {
+          "itemId": "ENG-002-pp-03",
+          "option": "He had gone to London to gather a big group for the ball.",
+          "why": "The London party is Lady Lucas's guess (lines 15 to 17), offered as fact; a guess in the passage is not a true fact."
+        },
+        {
+          "itemId": "ENG-023-RT-08",
+          "option": "By wrapping it in cotton wool over a little fire.",
+          "why": "Splices cotton (line 49, inside the window) with the fire (lines 15 and 16) into a nest that never existed; a splice, not one true detail."
+        }
+      ]
+    }
+  ]
+}

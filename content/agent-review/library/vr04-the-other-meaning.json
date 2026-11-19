@@ -1,0 +1,177 @@
+{
+ "entry": {
+  "id": "vr04-the-other-meaning",
+  "status": "ACTIVE",
+  "district": "VR",
+  "category": "vr-04-closest-meaning",
+  "description": "Picks a genuine meaning of the headword, but not the sense the carrier sentence fixes (poor for HUMBLE in \"stayed HUMBLE after winning\" — the humble-cottage sense). T4/T5 only.",
+  "childHint": "This word has more than one meaning. Read the sentence and pick the one it shows.",
+  "approvedBy": null,
+  "approvalMethod": null,
+  "approvalNote": null,
+  "textProvenance": null
+ },
+ "carrierCount": 4,
+ "carriers": [
+  {
+   "itemId": "gen-vr-04-closest-meaning-26",
+   "status": "DRAFT",
+   "questionType": "vr-04-closest-meaning",
+   "stem": {
+    "words": [
+     "recede"
+    ],
+    "prompt": "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "sentence": "They waited for the floodwater to RECEDE."
+   },
+   "key": "retreat",
+   "options": [
+    {
+     "value": "retreat",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "vanish",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "settle",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "fade",
+     "isKey": false,
+     "tag": "vr04-the-other-meaning",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-28",
+   "status": "DRAFT",
+   "questionType": "vr-04-closest-meaning",
+   "stem": {
+    "words": [
+     "exhausted"
+    ],
+    "prompt": "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "sentence": "After the long walk home they were EXHAUSTED."
+   },
+   "key": "drained",
+   "options": [
+    {
+     "value": "drained",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "tired",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "sleepy",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "empty",
+     "isKey": false,
+     "tag": "vr04-the-other-meaning",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-34",
+   "status": "DRAFT",
+   "questionType": "vr-04-closest-meaning",
+   "stem": {
+    "words": [
+     "exquisite"
+    ],
+    "prompt": "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "sentence": "The lace on the dress was EXQUISITE."
+   },
+   "key": "beautiful",
+   "options": [
+    {
+     "value": "beautiful",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "pretty",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "delicate",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "sharp",
+     "isKey": false,
+     "tag": "vr04-the-other-meaning",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-38",
+   "status": "DRAFT",
+   "questionType": "vr-04-closest-meaning",
+   "stem": {
+    "words": [
+     "transparent"
+    ],
+    "prompt": "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "sentence": "The lid was TRANSPARENT, so she could see the cake inside."
+   },
+   "key": "clear",
+   "options": [
+    {
+     "value": "clear",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "thin",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "shiny",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "obvious",
+     "isKey": false,
+     "tag": "vr04-the-other-meaning",
+     "carriesThisEntry": true,
+     "execution": null
+    }
+   ]
+  }
+ ]
+}

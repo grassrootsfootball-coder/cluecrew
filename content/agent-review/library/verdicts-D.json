@@ -1,0 +1,534 @@
+{
+ "reviewer": "rev-agent-01",
+ "entries": [
+  {
+   "id": "en-vocab-dominant-sense",
+   "verdict": "REFUSE",
+   "reason": "42 carriers screened. Description holds on 40 of the 42 carrying options. The hint fails the entry's own scoping ruling (2026-08-16: the tag reaches technique stems): 'this word' and 'that meaning' presuppose a stem that names one target word, and on ENG-002-pp-13 (a technique stem about 'His character was decided') the child is given no word to look at. Narrow transform keeps the move and drops the referent. Proposal is ungated; run it through checkItemChildFacing / scan:vocab before applying.",
+   "assertionClauses": [
+    {
+     "clause": "You know one meaning for this word (presupposes the stem names a single target word)",
+     "falseOn": [
+      "ENG-002-pp-13"
+     ]
+    },
+    {
+     "clause": "The sense chosen is a real sense of the same word (description)",
+     "falseOn": [
+      "ENG-001-WIW-19"
+     ]
+    }
+   ],
+   "transforms": [
+    {
+     "field": "childHint",
+     "from": "You know one meaning for this word. Check that meaning fits what the sentence is saying here.",
+     "to": "Words can have more than one meaning. Check that the meaning you used fits what the sentence is saying here."
+    }
+   ],
+   "misfiledCarriers": [
+    {
+     "itemId": "ENG-001-WIW-19",
+     "option": "Waved to the Mole from the boat.",
+     "why": "Waving is no sense of 'made fast'; its own execution says it is nowhere in the passage. That is en-vocab-not-this-word. The item also carries this tag on two options."
+    },
+    {
+     "itemId": "ENG-028-PR-01",
+     "option": "Rises louder, the way music does.",
+     "why": "LIVE. 'Gets bigger' (the key) is the commoner sense of swell; the music sense is the rarer one, so this is en-vocab-neighbouring-sense, not the dominant sense arriving first."
+    }
+   ]
+  },
+  {
+   "id": "en-relation-word-flipped",
+   "verdict": "ATTEST",
+   "reason": "30 carriers screened. Hint is a move ('Find that word and read it again') in child language and is right on every carrier that has a relation word (contrast, if, but, however, yet, even then, and, after, behind). It presupposes such a word, and that is false on 17 of 30 carriers, but on each of those the option reverses a plain fact, a negation or a content word with no relation word involved: the tag has been used as a general 'reverses the text' tag. That is an item fault (misfiling), not an entry fault; widening the entry to fit them would erase what it names. 13 carriers fit; 17 misfiled (more than half; two executions are null).",
+   "assertionClauses": [
+    {
+     "clause": "Some words tell you how two things go together (presupposes a relation word is the point at issue)",
+     "falseOn": [
+      "ENG-005-BB-03",
+      "ENG-005-BB-07",
+      "ENG-005-BB-09",
+      "ENG-005-BB-10",
+      "ENG-005-BB-11",
+      "ENG-006-TM-01",
+      "ENG-006-TM-06",
+      "ENG-006-TM-07",
+      "ENG-006-TM-11",
+      "ENG-007-LP-06",
+      "ENG-007-LP-09",
+      "ENG-007-LP-13",
+      "ENG-012-ML-10",
+      "ENG-013-TI-05",
+      "ENG-017-CR-03",
+      "ENG-017-CR-08",
+      "ENG-018-RB-04"
+     ]
+    }
+   ],
+   "transforms": [],
+   "misfiledCarriers": [
+    {
+     "itemId": "ENG-005-BB-03",
+     "option": "It was falling now that the rain had stopped.",
+     "why": "Reverses 'rising', a content word; no relation word. Candidate en-contradicted-by-the-text."
+    },
+    {
+     "itemId": "ENG-005-BB-07",
+     "option": "Drive slowly over the tree where it lay lowest.",
+     "why": "Drops 'cannot ... nor'; candidate en-negation-dropped."
+    },
+    {
+     "itemId": "ENG-005-BB-09",
+     "option": "The master knew that Beauty was right to stop on the bridge.",
+     "why": "Reverses the master's action (touch and sharp cut); no relation word. Candidate en-contradicted-by-the-text."
+    },
+    {
+     "itemId": "ENG-005-BB-10",
+     "option": "To show the storm was still getting worse.",
+     "why": "Contradicts 'the wind had lulled'; no relation word."
+    },
+    {
+     "itemId": "ENG-005-BB-11",
+     "option": "That Beauty had been badly trained and needed more work.",
+     "why": "Reverses the sense of line 55; no relation word."
+    },
+    {
+     "itemId": "ENG-006-TM-01",
+     "option": "A slow and careful piece of work.",
+     "why": "A vocabulary opposite of 'commotion'; no relation word. A vocab error, not this one."
+    },
+    {
+     "itemId": "ENG-006-TM-06",
+     "option": "The family were too busy to watch him properly.",
+     "why": "Contradicts the semicircle at line 26; no relation word."
+    },
+    {
+     "itemId": "ENG-006-TM-07",
+     "option": "To show the family were well organised.",
+     "why": "Misreads a technique's effect; no relation word."
+    },
+    {
+     "itemId": "ENG-006-TM-11",
+     "option": "He has learned, as he did not know then, that the job was hard.",
+     "why": "Contradicts the 'evident pride' at line 62; no relation word."
+    },
+    {
+     "itemId": "ENG-007-LP-06",
+     "option": "He could not tell whose the jumper was, so he put it in the box.",
+     "why": "Contradicts line 31 (he knew whose it was); no relation word."
+    },
+    {
+     "itemId": "ENG-007-LP-09",
+     "option": "It has already been cleared by somebody else.",
+     "why": "Contradicts line 40 ('another one still to do'); no relation word."
+    },
+    {
+     "itemId": "ENG-007-LP-13",
+     "option": "He was working faster than Ilya and made a mistake.",
+     "why": "Execution is null; the option invents a reason (closer to en-plausible-not-stated / en-motive-invention) and flips no relation word."
+    },
+    {
+     "itemId": "ENG-012-ML-10",
+     "option": "He would have taken a bit of hers beforehand too.",
+     "why": "Reverses the verb 'refused'; no relation word. Candidate en-contradicted-by-the-text."
+    },
+    {
+     "itemId": "ENG-013-TI-05",
+     "option": "First he spends all he earns, then he puts a little away.",
+     "why": "Content reversal of lines 20 to 22; no relation word."
+    },
+    {
+     "itemId": "ENG-017-CR-03",
+     "option": "She grows warmer towards Boz, but the Captain cools towards him.",
+     "why": "Reverses which way each person moves; no relation word."
+    },
+    {
+     "itemId": "ENG-017-CR-08",
+     "option": "He wants the whole company to hear the question.",
+     "why": "Drops the negated purpose ('so she would not'); candidate en-negation-dropped."
+    },
+    {
+     "itemId": "ENG-018-RB-04",
+     "option": "Sit quiet and look neat when she arrives.",
+     "why": "Reads what she is told to do as what she will do; an instruction/expectation confusion, not a flipped relation word."
+    }
+   ]
+  },
+  {
+   "id": "en-emotion-label-approximation",
+   "verdict": "REFUSE",
+   "reason": "29 carriers screened. Both texts assert that the chosen feeling is CLOSE to an evidenced feeling. On 8 carriers the execution itself says the text gives no feeling, or gives a non-feeling state (knowledge, understanding, a cost, a reason, a purpose): there the option imports a feeling, and 'Close is not the same' is false. 'Pick the word' also misdescribes options that are sentences. Proposed hint is a move (find the words that show the feeling) that is true on every carrier. Two carriers choose no feeling at all and are misfiled. Proposal is ungated.",
+   "assertionClauses": [
+    {
+     "clause": "Close is not the same (childHint: asserts the chosen feeling is near an evidenced one)",
+     "falseOn": [
+      "ENG-001-WIW-16",
+      "ENG-005-BB-09",
+      "ENG-005-BB-12",
+      "ENG-007-LP-02",
+      "ENG-010-JE-07",
+      "ENG-011-CV-11",
+      "ENG-012-ML-04",
+      "ENG-012-ML-10"
+     ]
+    },
+    {
+     "clause": "an adjacent emotion word rather than the precisely evidenced one (description)",
+     "falseOn": [
+      "ENG-001-WIW-16",
+      "ENG-005-BB-09",
+      "ENG-005-BB-12",
+      "ENG-007-LP-02",
+      "ENG-010-JE-07",
+      "ENG-011-CV-11",
+      "ENG-012-ML-04",
+      "ENG-012-ML-10"
+     ]
+    }
+   ],
+   "transforms": [
+    {
+     "field": "childHint",
+     "from": "Pick the word you can prove from the text. Close is not the same.",
+     "to": "Which words in the text show that feeling? If you cannot find them, look again."
+    },
+    {
+     "field": "description",
+     "from": "Chooses an adjacent emotion word rather than the precisely evidenced one.",
+     "to": "Chooses a feeling near the one the text evidences, or puts a feeling where the text gives a different state or none."
+    }
+   ],
+   "misfiledCarriers": [
+    {
+     "itemId": "ENG-002-pp-19",
+     "option": "Very rude to other people.",
+     "why": "Rudeness is a behaviour, not a feeling, and is Darcy's at line 66; closer to en-attribute-transfer / form-led vocab error."
+    },
+    {
+     "itemId": "ENG-002-pp-20",
+     "option": "Very good-looking, so he is paying her a compliment.",
+     "why": "Reads 'tolerable' as praise against 'but not handsome enough'; no feeling is chosen. Closer to en-relation-word-flipped (the 'but')."
+    }
+   ]
+  },
+  {
+   "id": "en-agent-patient-reversal",
+   "verdict": "REFUSE",
+   "reason": "24 carriers screened. Hint ('Ask who is doing it and who it is being done to') is a move and fits every genuine carrier. The description restricts the error to 'reported speech', which is false on 8 carriers set in narration or narrative technique; the transform removes the restriction and names the patient side the hint already names. 4 carriers misfiled.",
+   "assertionClauses": [
+    {
+     "clause": "in reported speech (description)",
+     "falseOn": [
+      "ENG-001-WIW-09",
+      "ENG-002-pp-02",
+      "ENG-008-RC-01",
+      "ENG-011-CV-03",
+      "ENG-011-CV-07",
+      "ENG-012-ML-09",
+      "ENG-014-TS-12",
+      "ENG-025-LW-12"
+     ]
+    }
+   ],
+   "transforms": [
+    {
+     "field": "description",
+     "from": "Swaps who did or thought something in reported speech.",
+     "to": "Swaps who did or thought something, or who it was done to."
+    }
+   ],
+   "misfiledCarriers": [
+    {
+     "itemId": "ENG-002-pp-10",
+     "option": "They decided he was less good-looking than Mr Bingley.",
+     "why": "Reverses a comparison ('handsomer'), not who acted; candidate en-contradicted-by-the-text."
+    },
+    {
+     "itemId": "ENG-002-pp-20",
+     "option": "Too proud to dance with anybody.",
+     "why": "Moves a quality from Darcy onto Elizabeth on a vocab stem; that is en-attribute-transfer, and it is no meaning of 'tolerable'."
+    },
+    {
+     "itemId": "ENG-006-TM-03",
+     "option": "To tell him that Pa's leg is better.",
+     "why": "Swaps whose leg (an attribute) and turns a hope into a message; en-attribute-transfer."
+    },
+    {
+     "itemId": "ENG-006-TM-10",
+     "option": "Ask Uncle Podger to let her hang the picture instead.",
+     "why": "Execution: she never offers the job at all; nothing is reversed. Candidate en-plausible-not-stated."
+    }
+   ]
+  },
+  {
+   "id": "en-extreme-option-pull",
+   "verdict": "ATTEST",
+   "reason": "26 carriers screened. Hint is a move ('Check the strongest word in the option') and a question, child language, true on 25 of 26. Description's 'always/never/impossible' reads as examples; superlatives (easiest, tallest, worst) and 'every/nobody/none' carriers fit the same error. One carrier misfiled: its strongest words are the passage's own.",
+   "assertionClauses": [
+    {
+     "clause": "Does the passage really go that far?",
+     "falseOn": [
+      "ENG-002-pp-14"
+     ]
+    }
+   ],
+   "transforms": [],
+   "misfiledCarriers": [
+    {
+     "itemId": "ENG-002-pp-14",
+     "option": "He was the proudest man in the world, and she hated proud people.",
+     "why": "'The proudest man in the world' is quoted from line 42, so the passage does go that far; the error is a general reason offered for a particular one (en-wrong-scope-retrieval). Execution is null on ENG-007-LP-08 but the option ('Nobody') fits."
+    }
+   ]
+  },
+  {
+   "id": "en-minimal-pair-skim",
+   "verdict": "REFUSE",
+   "reason": "16 carriers screened. 'Two answers can look almost the same' asserts a near-twin pair among the options. On the genuine carriers the near-twin is sometimes the key (pp-12, AGG-01, AGG-09, AGG-12, TM-03, SM-02, JE-01, LP-01) and sometimes the text line (WIW-21, pp-06, BB-01: the option is one word away from the line, not from another option). The second sentence ('Find what differs and check it against the text') is a good move and is kept. Transform makes the first sentence true on both kinds. 5 carriers misfiled (no minimal pair at all; two are form-led vocab errors).",
+   "assertionClauses": [
+    {
+     "clause": "Two answers can look almost the same (childHint)",
+     "falseOn": [
+      "ENG-001-WIW-17",
+      "ENG-001-WIW-21",
+      "ENG-002-pp-06",
+      "ENG-002-pp-08",
+      "ENG-002-pp-19",
+      "ENG-005-BB-01",
+      "ENG-005-BB-05",
+      "ENG-006-TM-09"
+     ]
+    },
+    {
+     "clause": "when two options differ by a single word (description)",
+     "falseOn": [
+      "ENG-001-WIW-17",
+      "ENG-001-WIW-21",
+      "ENG-002-pp-06",
+      "ENG-002-pp-08",
+      "ENG-002-pp-19",
+      "ENG-005-BB-01",
+      "ENG-005-BB-05",
+      "ENG-006-TM-09"
+     ]
+    }
+   ],
+   "transforms": [
+    {
+     "field": "childHint",
+     "from": "Two answers can look almost the same.",
+     "to": "An answer can look almost like the text."
+    },
+    {
+     "field": "description",
+     "from": "when two options differ by a single word",
+     "to": "when it differs from the text, or from the key, by a single word or detail"
+    }
+   ],
+   "misfiledCarriers": [
+    {
+     "itemId": "ENG-001-WIW-17",
+     "option": "Round and rather fat.",
+     "why": "LIVE. No near-twin of the key or the line; 'grave' is skimmed onto the next word 'round'. A proximity/vocab error, not a minimal pair."
+    },
+    {
+     "itemId": "ENG-002-pp-08",
+     "option": "A count of how many people are in a room.",
+     "why": "Takes 'count' out of 'countenance'; that is en-vocab-built-from-parts."
+    },
+    {
+     "itemId": "ENG-002-pp-19",
+     "option": "Very quick and in a hurry.",
+     "why": "Takes 'fast' out of 'fastidious'; en-vocab-built-from-parts."
+    },
+    {
+     "itemId": "ENG-005-BB-05",
+     "option": "A great branch from one of the swaying trees.",
+     "why": "A different element of the passage (John's worry at line 20), not a one-word variant; en-within-span-wrong-element."
+    },
+    {
+     "itemId": "ENG-006-TM-09",
+     "option": "The kitchen-chair he had been standing on.",
+     "why": "A different object in the scene (line 42), not a one-word variant of anything; en-within-span-wrong-element."
+    }
+   ]
+  },
+  {
+   "id": "en-vocab-built-from-parts",
+   "verdict": "ATTEST",
+   "reason": "13 carriers screened. Hint is a move ('Check the whole word in the sentence') with a general truth before it; it asserts no feature of any item. 8 carriers genuinely sum parts (office, a-light, mis+gave, ir+resolution, skirt, shift, strange+er, master). 5 are misfiled: the option takes the meaning of a different whole word the target resembles, not a sum of its parts. That is the line the library draws between this entry and en-vocab-form-lookalike, and four of the five executions say so in terms ('a word it resembles in form'). Also ENG-020-HD-09 ('press' inside 'suppress') is carried by en-figurative-taken-literally and belongs here.",
+   "assertionClauses": [
+    {
+     "clause": "The child takes the word apart into parts ... and sums them (description)",
+     "falseOn": [
+      "ENG-002-pp-20",
+      "ENG-004-AGG-03",
+      "ENG-015-CC-11",
+      "ENG-017-CR-11",
+      "ENG-019-BV-09"
+     ]
+    }
+   ],
+   "transforms": [],
+   "misfiledCarriers": [
+    {
+     "itemId": "ENG-002-pp-20",
+     "option": "Good at putting up with things without complaining.",
+     "why": "Meaning of TOLERANT (its own repaired note says so); en-vocab-form-lookalike."
+    },
+    {
+     "itemId": "ENG-004-AGG-03",
+     "option": "A tool for seeing far away.",
+     "why": "Meaning of telescope/microscope, whole words that contain 'scope'; nothing is taken apart. en-vocab-form-lookalike."
+    },
+    {
+     "itemId": "ENG-015-CC-11",
+     "option": "Careful about every word he uses.",
+     "why": "Meaning of CAUTIOUS, 'a word it resembles in form'; en-vocab-form-lookalike."
+    },
+    {
+     "itemId": "ENG-017-CR-11",
+     "option": "Not able to be excused for what she did.",
+     "why": "Meaning of INEXCUSABLE, 'a word it resembles in form'; en-vocab-form-lookalike."
+    },
+    {
+     "itemId": "ENG-019-BV-09",
+     "option": "Leaning over to see better.",
+     "why": "'Inclined' does not contain 'lean'; leaning is a real physical sense of incline. en-vocab-neighbouring-sense."
+    }
+   ]
+  },
+  {
+   "id": "en-figurative-taken-literally",
+   "verdict": "ATTEST",
+   "reason": "16 carriers screened. Description and hint fit the 14 carriers where a simile, personification, idiom or jeer is taken as a literal event. 'Figures of speech' is KS2 vocabulary; the hint is general but its first sentence names the move. Two carriers have no figure of speech: both are form-led vocab errors.",
+   "assertionClauses": [
+    {
+     "clause": "Figures of speech are not facts (presupposes a figure of speech in the item)",
+     "falseOn": [
+      "ENG-020-HD-09",
+      "ENG-021-ED-11"
+     ]
+    }
+   ],
+   "transforms": [],
+   "misfiledCarriers": [
+    {
+     "itemId": "ENG-020-HD-09",
+     "option": "To press down hard on a thing.",
+     "why": "Execution: 'built out of press, which sits inside the word'. That is en-vocab-built-from-parts."
+    },
+    {
+     "itemId": "ENG-021-ED-11",
+     "option": "Careful scraping away at a surface.",
+     "why": "Execution: 'the scrape the word sounds like'. A different word the target resembles: en-vocab-form-lookalike."
+    }
+   ]
+  },
+  {
+   "id": "en-repetition-purpose",
+   "verdict": "ATTEST",
+   "reason": "2 carriers screened. Hint is a general truth plus a move ('Ask what the echo does to the reader'), child language. Fits ENG-001-WIW-05 (LIVE, repeated verbs read as boredom). ENG-002-pp-07 has no repeated words: the device is three changing numbers, and the carrying option takes it as an instruction to the reader. That is a misread technique effect, not this error, and on that item 'what the echo does to the reader' points towards the carrying option itself.",
+   "assertionClauses": [
+    {
+     "clause": "why a writer repeats words / the echo (description and childHint)",
+     "falseOn": [
+      "ENG-002-pp-07"
+     ]
+    }
+   ],
+   "transforms": [],
+   "misfiledCarriers": [
+    {
+     "itemId": "ENG-002-pp-07",
+     "option": "To make sure the reader counts the guests carefully.",
+     "why": "No repetition in the item (three different numbers). Candidate en-technique-effect-mislocated or a technique-purpose tag."
+    }
+   ]
+  },
+  {
+   "id": "en-vocab-not-this-word",
+   "verdict": "REFUSE",
+   "reason": "3 carriers screened. The description is one specific example ('tramp' / 'a park keeper') that is on none of the carriers. The hint says the meaning 'belongs to a different word', which is the case en-vocab-form-lookalike names (see the retired en-vocab-secondary-sense description), and it is false on all three: a church bell, a cushioned seat and a straight line are the meanings of no word the target resembles. Transform: the hint says what is true (this word never means that) and gives a move; the description says what the entry covers and how it differs from its neighbours. Proposal is ungated.",
+   "assertionClauses": [
+    {
+     "clause": "That meaning belongs to a different word (childHint)",
+     "falseOn": [
+      "ENG-001-WIW-08",
+      "ENG-001-WIW-20",
+      "ENG-028-PR-05"
+     ]
+    },
+    {
+     "clause": "Child chooses \"a park keeper\" for \"tramp\" (description: an example on no carrier)",
+     "falseOn": [
+      "ENG-001-WIW-08",
+      "ENG-001-WIW-20",
+      "ENG-028-PR-05"
+     ]
+    }
+   ],
+   "transforms": [
+    {
+     "field": "childHint",
+     "from": "That meaning belongs to a different word.",
+     "to": "This word never means that. Put your answer in its place."
+    },
+    {
+     "field": "description",
+     "from": "Child chooses \"a park keeper\" for \"tramp\" where the answer is \"a person with no settled home\", picking a meaning that belongs to neither sense of the word.",
+     "to": "Picks a meaning that belongs to no sense of the word and to no word it resembles in form."
+    }
+   ],
+   "misfiledCarriers": []
+  },
+  {
+   "id": "en-physical-vs-emotional-cue",
+   "verdict": "REFUSE",
+   "reason": "1 carrier screened. The hint's first sentence names a racing heart; the only carrier (ENG-001-WIW-03) has an aching back and weary arms and no heart at all. The description says 'body-language', but the carrier offers a stated physical state (tiredness) as the cause in place of a feeling (the pull of spring). The second sentence ('Check what the character is feeling right then') is a good move and fits. Transforms drop the feature and widen the description to the carrier's actual shape. Proposal is ungated.",
+   "assertionClauses": [
+    {
+     "clause": "A racing heart usually shows a feeling (childHint)",
+     "falseOn": [
+      "ENG-001-WIW-03"
+     ]
+    },
+    {
+     "clause": "Explains body-language physically (description)",
+     "falseOn": [
+      "ENG-001-WIW-03"
+     ]
+    }
+   ],
+   "transforms": [
+    {
+     "field": "childHint",
+     "from": "A racing heart usually shows a feeling.",
+     "to": "A body clue can point to a feeling."
+    },
+    {
+     "field": "description",
+     "from": "Explains body-language physically when the text signals a feeling.",
+     "to": "Gives a physical cause, from the body or body-language, when the text signals a feeling."
+    }
+   ],
+   "misfiledCarriers": []
+  },
+  {
+   "id": "en-vocab-secondary-sense",
+   "verdict": "REFUSE",
+   "reason": "RETIRED 2026-08-15; no transform proposed because a retired entry's text should not be served. It still has 1 DRAFT carrier, ENG-005-BB-13, which must be retagged before that item can go LIVE. The carrying option 'Mix something round and round.' for 'stir' (key: 'Move at all.') is the commonest everyday sense of 'stir' arriving ahead of the sentence's sense: retag to en-vocab-dominant-sense. It is a real sense of the same word, so not en-vocab-form-lookalike; it is the commoner sense, so not en-vocab-neighbouring-sense.",
+   "assertionClauses": [],
+   "transforms": [],
+   "misfiledCarriers": [
+    {
+     "itemId": "ENG-005-BB-13",
+     "option": "Mix something round and round.",
+     "why": "Carries a RETIRED entry. Retag to en-vocab-dominant-sense (commonest sense of 'stir', displaced by 'I dare not stir')."
+    }
+   ]
+  }
+ ]
+}

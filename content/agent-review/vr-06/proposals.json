@@ -1,0 +1,101 @@
+{
+ "door": "vr-06",
+ "proposer": "agent",
+ "seats": [],
+ "redrafts": [],
+ "rebuilds": [
+  {
+   "itemId": "bank-vr-06-missing-word-15",
+   "why": "Reword the sentence only to clear the house-vocabulary gate; letters, key, options, tags and executions unchanged.",
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "When I felt ill, Mum took me to see the ___TOR at the surgery."
+   },
+   "options": [
+    {
+     "optionId": "cmscb159y0075tmzvznn18hmh",
+     "value": "DOC",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb159y0076tmzvlsvi20pq",
+     "value": "FAC",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (FACTOR)."
+    },
+    {
+     "optionId": "cmscb159y0077tmzvhe5offq1",
+     "value": "EDI",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (EDITOR)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-17",
+   "why": "Reword the sentence only to clear the house-vocabulary gate; letters, key, options, tags and executions unchanged.",
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "Drivers need a special ___MIT to park a car on this busy road."
+   },
+   "options": [
+    {
+     "optionId": "cmscb15a2007dtmzvdc3ybpmu",
+     "value": "PER",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15a2007etmzvrxutmsge",
+     "value": "SUB",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (SUBMIT)."
+    },
+    {
+     "optionId": "cmscb15a2007ftmzvmybkyjdi",
+     "value": "SUM",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (SUMMIT)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-40",
+   "why": "Reword the sentence only to clear the house-vocabulary gate; letters, key, options, tags and executions unchanged.",
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "After being ill in bed for a week, Grandad felt tired and ___BLE and could hardly stand."
+   },
+   "options": [
+    {
+     "optionId": "cmscb15ba009xtmzvjjbljeqv",
+     "value": "FEE",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15ba009ytmzvia60zuti",
+     "value": "MAR",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (MARBLE)."
+    },
+    {
+     "optionId": "cmscb15ba009ztmzvzcdpu6oj",
+     "value": "TRE",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (TREBLE)."
+    }
+   ]
+  }
+ ]
+}

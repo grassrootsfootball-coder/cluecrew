@@ -1,0 +1,53 @@
+{
+ "entry": {
+  "id": "en-vocab-secondary-sense",
+  "status": "RETIRED",
+  "district": "ENGLISH",
+  "category": null,
+  "description": "RETIRED 2026-08-15. Matches a synonym to the wrong sense of the target word. Use en-vocab-dominant-sense (the commonest sense arrives first), en-vocab-neighbouring-sense (another genuine sense of the same word) or en-vocab-form-lookalike (the meaning belongs to a different word).",
+  "childHint": "Swap your word into the sentence — does it still mean the same thing?",
+  "approvedBy": "human:staff-reviewer@cluecrew.test",
+  "approvalMethod": "written review 2026-08-02",
+  "approvalNote": "Cleared on the printed review pack; returned marked up.",
+  "textProvenance": null
+ },
+ "carrierCount": 1,
+ "carriers": [
+  {
+   "itemId": "ENG-005-BB-13",
+   "status": "DRAFT",
+   "questionType": "en-comp-vocab",
+   "stem": {
+    "text": "Beauty says 'I dare not stir'. What does 'stir' mean here? (lines 36 to 38)"
+   },
+   "key": "Move at all.",
+   "options": [
+    {
+     "value": "Move at all.",
+     "isKey": true,
+     "tag": null,
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Mix something round and round.",
+     "isKey": false,
+     "tag": "en-vocab-secondary-sense",
+     "carriesThisEntry": true,
+     "execution": null
+    },
+    {
+     "value": "Make any sound.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "carriesThisEntry": false
+    },
+    {
+     "value": "Wake up from a doze.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "carriesThisEntry": false
+    }
+   ]
+  }
+ ]
+}
