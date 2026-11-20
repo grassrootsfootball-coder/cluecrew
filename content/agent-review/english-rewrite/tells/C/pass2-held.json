@@ -1,0 +1,121 @@
+{
+ "door": "english-rewrite/tells/C",
+ "mode": "APPLIED",
+ "landed": [
+  "ENG-018-RB-01",
+  "ENG-006-TM-05",
+  "ENG-006-TM-11",
+  "ENG-019-BV-10",
+  "ENG-008-RC-06",
+  "ENG-019-BV-05",
+  "ENG-022-GK-06",
+  "ENG-012-ML-06",
+  "ENG-012-ML-10",
+  "ENG-006-TM-02",
+  "ENG-018-RB-07",
+  "ENG-012-ML-01",
+  "ENG-012-ML-03",
+  "ENG-018-RB-08",
+  "ENG-026-AL-02",
+  "ENG-018-RB-10",
+  "ENG-008-RC-01",
+  "ENG-011-CV-01",
+  "ENG-012-ML-09"
+ ],
+ "held": [
+  {
+   "itemId": "ENG-006-TM-10",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "seat:cmsw2f4ux00bjtmbvszhqnr73",
+     "verdict": "REFUSE",
+     "reason": "The option contradicts itself. Uncle Podger is the one doing the job, so 'Have him stay at his mother's while the job is done' sends away the only person doing it. A child can see that without reading lines 49-51, so it is not a reading mistake. It is the key with its pronouns flipped: its scored tokens (stay, mother, while, job, done) are the key's exactly. That gives a twin of the key in which only the key makes sense, a new giveaway. It also invents a mother for Uncle Podger, and the execution says nothing about that change. The tag fits only in form."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-006-TM-10",
+    "verdict": "HOLD",
+    "reason": "Its only seat is refused: the option sends Uncle Podger away 'while the job is done' although he is the one doing it. It is the key with pronouns flipped, and only the key makes sense, which is a new giveaway."
+   }
+  },
+  {
+   "itemId": "ENG-006-TM-04",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "seat:cmsw2f4ut00attmbvdb4qa16o",
+     "verdict": "REFUSE",
+     "reason": "The emphatic 'does' is there for the instrument, not the child. With plain 'and he saves the glass' the measure's stemmer turns 'saves' into 'sav', which misses the window's 'save', so overlap drops to 0.60 and the key's 0.80 stays unique. 'does save' keeps the bare 'save' and fakes a tie at 0.80. It also stretches the option to 13 words against the key's 11. To a child, emphatic do-support reads as a line arguing back ('he DOES save it'), so it marks this option as the trap. Wrongness and tag are fine: lines 24-25 say a new glass had to be got, which is en-minimal-pair-skim. Redraft with a natural wording that ties on overlap without leaning on the stemmer."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-006-TM-04",
+    "verdict": "HOLD",
+    "reason": "Its only seat is refused: the emphatic 'he does save the glass' exists to keep the measure's stemmed overlap tied, and it marks the option to a child. Comma, two-part and overlap still single out the key until a natural redraft lands."
+   }
+  },
+  {
+   "itemId": "ENG-008-RC-03",
+   "gateFaults": [],
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-008-RC-03",
+    "verdict": "SIGN",
+    "reason": "One defensible answer (lines 9-10). Two-part, longest and window overlap no longer single out the key. The measure shows no tell on the key."
+   }
+  },
+  {
+   "itemId": "ENG-006-TM-09",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "seat:cmsw2f4uw00bdtmbvm7pq6k3n",
+     "verdict": "REFUSE",
+     "reason": "'The string.' can be ruled out from the stem alone. The question already says the string is what slips ('when the string slips'), so a child crosses it off without opening lines 43-45. That makes it a stem echo, the very thing the brief says to replace, even though at one token it falls below the measure's 3-token echo threshold. It is not a reading mistake, so en-within-span-wrong-element (located the lines, took the wrong element) fits only in form. Its tie is with a 2-word key, and it now leaves 'shortest (characters)' on the key (10 vs 11 characters). The drafter's worry is also correct: the remaining window elements ('the notes', 'the keys', 'his head') are what he struck, so they risk a second answer. This window may offer no safe tie. Better to leave the seat as it was than seat a free elimination."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-006-TM-09",
+    "verdict": "HOLD",
+    "reason": "Its only seat is refused: 'The string.' is eliminable from the stem itself. The window offers no safe tie, because the other in-window elements risk a second answer. Leaving the row as it was is preferable to a free elimination."
+   }
+  },
+  {
+   "itemId": "ENG-012-ML-07",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "seat:cmsw2f4wf00kktmbv6dr7dnmj",
+     "verdict": "REFUSE",
+     "reason": "Three faults. (1) Contorted to win measures: 'out of her power of sacrifice' is line 33's phrase lifted into a sentence no child would write. It brings the option to 12 words, tying the key, and to 1.00 window overlap. (2) Dropping 'pure' removes what made the old value wrong. Line 33 does not deny Maggie a power of sacrifice. It says that power 'did not extend so far', and line 35 says she wants credit 'for giving him the best bit'. A reader can argue she acts partly from sacrifice, so the option is no longer cleanly false. (3) For the same reason en-negation-dropped fits only loosely. Dropping the 'not' gives 'her power of sacrifice extended so far', which is not what the option says. 'She gives Tom the best bit' is also off the stem: it does not say why she shuts her eyes."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-012-ML-07",
+    "verdict": "HOLD",
+    "reason": "Its only seat is refused: the lifted 'out of her power of sacrifice' is contorted for word count and overlap. Dropping 'pure' leaves the option arguable against line 33's 'did not extend so far'. The old seat's longest and passage-overlap tells stand until a redraft."
+   }
+  },
+  {
+   "itemId": "ENG-019-BV-06",
+   "gateFaults": [],
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-019-BV-06",
+    "verdict": "SIGN",
+    "reason": "One defensible answer (line 24: the lake shrank). Window overlap tied. 'shortest (characters)' picks the key, as before. Twin of the key decided by line 24's referent."
+   }
+  },
+  {
+   "itemId": "ENG-019-BV-02",
+   "gateFaults": [],
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-019-BV-02",
+    "verdict": "SIGN",
+    "reason": "One defensible answer (Mark refused, lines 3 and 5; the fish left, line 6). Comma, 'not' and longest words tied. 'longest (characters)' remains on the key and is not failing."
+   }
+  }
+ ]
+}

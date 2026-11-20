@@ -1,0 +1,56 @@
+{
+ "door": "english-rewrite/tells/D",
+ "mode": "APPLIED",
+ "landed": [
+  "ENG-028-PR-10",
+  "ENG-028-PR-02",
+  "ENG-020-HD-06",
+  "ENG-009-SM-11",
+  "ENG-009-SM-03",
+  "ENG-028-PR-03",
+  "ENG-020-HD-08",
+  "ENG-013-TI-06",
+  "ENG-028-PR-04",
+  "ENG-020-HD-02",
+  "ENG-027-RR-10",
+  "ENG-020-HD-05",
+  "ENG-027-RR-11",
+  "ENG-009-SM-01",
+  "ENG-009-SM-05",
+  "ENG-009-SM-10"
+ ],
+ "held": [
+  {
+   "itemId": "ENG-028-PR-09",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "seat:cmsw2f50u01aftmbvzuuaesat",
+     "verdict": "REFUSE",
+     "reason": "This seat replaces a stem-restating distractor, but the new value can also be ruled out from the stem alone. 'Two STILL go in ... as regular as buses' says the traffic has NOT changed. The question is 'How has the traffic under the boards changed?', and line 34 says it 'has changed'. So a child can drop it without reading lines 6-7, which is the same defect as the value it replaces. With 'Priya is looking past his shoulder' also falling to the stem (it is about Priya, not traffic), the row becomes two-from-four on the question alone. Fix: drop 'still' ('Two go in, and one comes out, as regular as buses.'). That is a true wrong-scope reading of line 7 that a child has to read to rule out, and it keeps the comma and two-part tie. As written, the execution's 'True at lines 6 and 7' is also not true of the word 'still'."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-028-PR-09",
+    "verdict": "HOLD",
+    "reason": "As proposed, two of three distractors fall to the stem alone. 'Two still go in ... as regular as buses' denies the change the question presupposes, and 'Priya is looking past his shoulder' is not about the traffic. That reproduces the stem-only elimination the seat was meant to remove. Drop 'still' and the row signs: the key is correct (lines 35-36), 'moved away from the roofline' is contradicted at line 36, and the comma and two-part tie holds."
+   }
+  },
+  {
+   "itemId": "ENG-020-HD-11",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "seat:cmsw2f4yo00xrtmbv14jogp6s",
+     "verdict": "REFUSE",
+     "reason": "The value is sound. Line 44 is unambiguous ('after wrapping a handkerchief round it, she stuck it'), so cupboard-then-handkerchief is wrong under every reading. The fault is the TAG. In entries, en-chronology-collapse is 'picks a cause that happens LATER in the passage than the effect being asked about'. 'What does Heidi do with the hat?' asks about no cause and no effect. The execution's closing words ('only the order rules it out') borrow that tag's description, which is a story fitted to the tag. The mistake here is a match on gist that differs from the text in one detail, the order: that is en-minimal-pair-skim, as the drafter's own note says. Re-propose with tag en-minimal-pair-skim; the value and execution facts can stand (line 44 wrap and stuck, line 45 as far back as she could)."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-020-HD-11",
+    "verdict": "HOLD",
+    "reason": "Content reads correctly: one defensible answer (wrap, then cupboard), the order-swap distractor is wrong, and the length and overlap tells are broken. Held only because its seat is refused on the tag. en-chronology-collapse describes a later cause for an earlier effect, which is not this mistake. Retag to en-minimal-pair-skim and the row signs."
+   }
+  }
+ ]
+}

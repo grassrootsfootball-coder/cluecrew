@@ -1,0 +1,1576 @@
+{
+ "door": "english-rewrite/tells/r2/A",
+ "questionType": "english",
+ "ruling": "R1029",
+ "entries": {
+  "en-physical-vs-emotional-cue": {
+   "description": "Gives a physical cause, from the body or body-language, when the text signals a feeling.",
+   "childHint": "Look past what the body is doing. Check what the character is feeling right then."
+  },
+  "en-comma-subject-verb-split": {
+   "description": "Accepts a comma cutting subject from verb.",
+   "childHint": "Never let a single comma cut the do-er off from the doing."
+  },
+  "en-terminal-punctuation-blind": {
+   "description": "Accepts a full stop on a question; misses run-ons and missing boundaries.",
+   "childHint": "Read it in your head. Where your voice would stop or ask, the punctuation must match."
+  },
+  "en-inference-literal-lookalike": {
+   "description": "Picks the option that reuses passage wording.",
+   "childHint": "Words copied from the passage can still miss the question. Ask what those words are telling you."
+  },
+  "en-technique-intent-as-character": {
+   "description": "Child gives \"the boy feels tense\" where the answer is that the writer builds tension, treating the writer's choice as the character's state.",
+   "childHint": "Ask who is doing this. Is it the writer, or the character?"
+  },
+  "en-double-consonant-boundary": {
+   "description": "Guesses whether a consonant doubles when an ending is added, or doubles the wrong letter: begining for beginning, dissapointed for disappointed, stoped for stopped.",
+   "childHint": "Say the root word first, then add the beginning or ending. Check which letter really doubles."
+  },
+  "en-unstressed-suffix-vowel": {
+   "description": "Guesses between -ant/-ent, -ance/-ence, -ary/-ory/-ery.",
+   "childHint": "Many words ending -ant or -ent have a partner ending -ance or -ence. The partner almost always keeps the same vowel, like assistant and assistance. For -ary, -ery or -ory, a family word may help, like librarian for library."
+  },
+  "en-motive-invention": {
+   "description": "Attributes a plausible motive the text never supports.",
+   "childHint": "A reason has to be given, not guessed. Ask what the text says about why."
+  },
+  "en-conjunction-logic": {
+   "description": "Chooses a conjunction with the wrong logical relation.",
+   "childHint": "Is the second idea a reason, a surprise, or just what happened next?"
+  },
+  "en-comparison-vehicle-misread": {
+   "description": "Child gives the quality of the thing a comparison compares TO, where the answer is the quality of the thing being described — reading the vehicle of a simile or metaphor as the subject.",
+   "childHint": "Find the two things being compared. The one being described is the one that matters."
+  },
+  "en-parallel-read-as-sequence": {
+   "description": "The child reads two parallel descriptions of one thing as two moments in time. Where a writer gives the same subject twice — two ways of seeing it, two accounts of it, two things it is at once — she converts the pair into a sequence and looks for what changed between them. Nothing changed. What differs is the vantage, not the subject, and the relation between the two descriptions is what the question asks for.",
+   "childHint": "These two descriptions are of the same thing at the same time. Ask what is different about who is looking."
+  },
+  "en-technique-effect-mislocated": {
+   "description": "Child gives the effect of an earlier or neighbouring part of the passage where the answer is the effect of the quoted phrase, reading past the words under test.",
+   "childHint": "Find the exact words the question quotes. Answer about those words only."
+  },
+  "en-vocab-form-lookalike": {
+   "description": "The meaning the child chooses belongs to a DIFFERENT WORD that the target resembles in form, or to a morpheme she has met in other words. She has not chosen among the target's senses at all — she has misidentified the word. Scoped to the ERROR, not to vocabulary items.",
+   "childHint": "This word looks like one you know. Read it letter by letter and check it is the same word."
+  },
+  "en-determiner-omitted": {
+   "description": "Leaves the determiner out altogether before a singular countable noun, treating a, an and the as optional rather than required. Distinct from en-article-definiteness, which is a choice BETWEEN articles, and from en-a-an-by-spelling, which is a sound judgement.",
+   "childHint": "A single thing needs a word in front of it. Say the line aloud and listen."
+  },
+  "en-vocab-neighbouring-sense": {
+   "description": "The child chooses another genuine sense of the same word, neither the commonest one nor the one the passage fixes. The option is defensible in isolation and is ruled out only by the surrounding text, so the child gets no signal that anything is wrong. This holds only where the surrounding text fixes the sense decisively. Where it does not, the option is a defensible second answer and the item is faulty rather than hard. Scoped to the ERROR, not to vocabulary items.",
+   "childHint": "More than one meaning fits this word. Find the words nearby that decide which one it has to be."
+  },
+  "en-narrator-voice-as-fact": {
+   "description": "The child treats a crowd's opinion that the narrator reports in flat, certain sentences as the narrator's own verdict, and so takes it as settled truth rather than as something the text is quietly laughing at. Distinct from en-extreme-option-pull, which is about the pull of absolute wording; this one is about mistaking whose voice is speaking.",
+   "childHint": "Before you take this as true, ask whose opinion it is."
+  },
+  "en-relative-pronoun-choice": {
+   "description": "Picks a relative pronoun by habit rather than by what it stands for: which for people, whose in place of who, whom in a subject slot.",
+   "childHint": "Ask what the joining word stands for — a person, a thing, or something belonging to someone."
+  },
+  "en-whole-text-absence-asserted": {
+   "description": "The passage sustains an ABSENCE across its whole length — it never states a feeling, never names a motive, never gives a verdict — and the option asserts the withheld thing as though it were there. There is no negative word to drop, because the negation is a property of the text rather than of any line: the child has failed to notice something maintained across sixty lines, not misread a word in one. Characteristically the option is defeated by no single line and only by the absence itself, so its disposal must cite the SPAN of the withholding rather than a disposal point.",
+   "childHint": "Choose a line number for the option you like. If you cannot find one anywhere in the passage, that option is not it."
+  },
+  "en-negation-dropped": {
+   "description": "The passage carries an explicit negative — no, not, never, nothing, without, could not, sha'n't — and the option states the affirmative. The child has read the content words of the sentence and dropped the word that reverses them. Requires a negative WORD in a named line. A negation sustained across a whole text with no such word is en-whole-text-absence-asserted.",
+   "childHint": "A negative word can change the whole answer. Read the line again for one."
+  },
+  "en-comparative-superlative-form": {
+   "description": "Errors in forming or choosing comparatives and superlatives: double marking (most fastest), the comparative used for a whole group, or the bare adjective after 'the'.",
+   "childHint": "Comparing two, or more than two? Then check the ending and the word before it are not both doing the job."
+  },
+  "en-coordination-wrong-conjunct": {
+   "description": "The target word sits in a coordination — X and Y, X as well as Y, X as Y, X beside Y — and the child attaches the meaning to the wrong conjunct. She takes the half of the pair she read last, or the half that is easier to picture, and glosses the target with it. The error is syntactic: she has parsed which item the word attaches to incorrectly, and the option she picks is usually TRUE of the other conjunct, which is why it survives a check against the passage.",
+   "childHint": "This word is joined to another one. Work out which of the two the question is asking about before you answer."
+  },
+  "en-subject-verb-agreement-by-proximity": {
+   "description": "Agrees the verb with the nearest noun instead of the true subject, usually across an of-phrase: 'the row of new labels were'.",
+   "childHint": "Ignore the of-part. Match the verb to what is left."
+  },
+  "en-question-tag-polarity": {
+   "description": "Repeats instead of flipping polarity in question tags; mismatches the auxiliary.",
+   "childHint": "A tag flips the sentence. A positive sentence takes a negative tag. If there is no helper verb, use do, does or did."
+  },
+  "en-within-span-wrong-element": {
+   "description": "The option states something that is true inside the cited window and answers a different question from the one asked. The child has located the right lines and taken the wrong element out of them. A named sub-route is the WRONG SPEAKER: the material is inside the window but belongs to the other party in an exchange — one child's answer offered where the other child's instruction was asked for. The cure is the same in both cases, so the sub-route shares this hint.",
+   "childHint": "Being in the lines is not enough. Check it answers the question you were asked."
+  },
+  "en-emotion-label-approximation": {
+   "description": "Chooses an adjacent emotion word rather than the precisely evidenced one.",
+   "childHint": "Find the words in the text that show the feeling. Close is not the same."
+  },
+  "en-spelling-form-lookalike": {
+   "description": "Accepts or writes a word's visual near-twin: quiet for quite, dairy for diary, angel for angle, loose for lose.",
+   "childHint": "Two words can look almost the same. Read the middle letters slowly, not the shape."
+  },
+  "en-article-avoids-the-sound-choice": {
+   "description": "On an a or an choice, picks the to avoid the vowel-sound judgement. The fits any noun without a sound decision, so the child reaches for the article that asks nothing of her ear.",
+   "childHint": "This gap wants a or an. Say the next word aloud. Which sound starts it?"
+  },
+  "en-plausible-not-stated": {
+   "description": "Picks real-world-plausible options the passage never states, especially motives.",
+   "childHint": "Sounding sensible is not enough. Find the line that proves it."
+  },
+  "en-relation-word-flipped": {
+   "description": "The child reads a word that names a relationship between two things (contrast, unless, however, instead of) as its opposite, usually as plain 'and' or 'the same as'. The result is an option that keeps every fact but reverses how the facts sit together.",
+   "childHint": "Some words tell you how two things go together. Find that word and read it again."
+  },
+  "en-extreme-option-pull": {
+   "description": "Chooses always/never/impossible options when the text is measured.",
+   "childHint": "Does the passage really go that far? Check the strongest word in the option."
+  },
+  "en-vocab-built-from-parts": {
+   "description": "The child takes the word apart into parts she has met in other words and sums them. She has not mistaken which word it is — she has taken it apart, and the parts are real while the sum is not the word. Scoped to the ERROR, not to vocabulary items.",
+   "childHint": "The parts of a word do not always add up. Check the whole word in the sentence."
+  },
+  "en-figurative-taken-literally": {
+   "description": "Reads similes and idioms as literal events.",
+   "childHint": "Figures of speech are not facts. Ask what the words are really saying."
+  },
+  "en-repetition-purpose": {
+   "description": "Cannot say why a writer repeats words; defaults to literal or dismissive readings.",
+   "childHint": "Writers repeat on purpose. Ask what the echo does to the reader."
+  },
+  "en-attribute-transfer": {
+   "description": "Assigns a detail the text gives to one character or thing to another, or the right attribute at the wrong value.",
+   "childHint": "Check who or what each detail belongs to in the text."
+  },
+  "en-cause-agent-swap": {
+   "description": "Attributes the right event to the wrong cause or character.",
+   "childHint": "Ask who did this, or what caused it, in the text. Re-read the moment step by step."
+  },
+  "en-wrong-scope-retrieval": {
+   "description": "Answers from a detail in the wrong part of the passage.",
+   "childHint": "Something from another part of the passage does not answer this question. Find the part the question points to."
+  },
+  "en-vocab-dominant-sense": {
+   "description": "The child applies the word's commonest everyday sense in a context that does not support it. The sense chosen is a real sense of the same word; it is simply the one that arrives first, and the sentence around the word is what should have displaced it. Scoped to the ERROR, not to vocabulary items: it occurs wherever a word's sense is load-bearing, including on technique stems.",
+   "childHint": "Words can have more than one meaning. Check that the meaning you used fits what the sentence is saying here."
+  },
+  "en-agent-patient-reversal": {
+   "description": "Swaps who did or thought something, or who it was done to.",
+   "childHint": "Ask who is doing it and who it is being done to."
+  },
+  "en-minimal-pair-skim": {
+   "description": "Matches an option on gist when it differs from the text, or from the key, by a single word or detail.",
+   "childHint": "An answer can look almost like the text. Find what differs and check it against the text."
+  },
+  "en-vocab-not-this-word": {
+   "description": "Picks a meaning that belongs to no sense of the word and to no word it resembles in form.",
+   "childHint": "This word never means that. Put your answer in its place. Read the sentence again."
+  },
+  "en-chronology-collapse": {
+   "description": "The child picks a cause that happens LATER in the passage than the effect being asked about. The two events are both real and both about the same people, so the option reads well; only the order rules it out.",
+   "childHint": "Check what happened first, and what the question asks for."
+  },
+  "en-technique-device-confusion": {
+   "description": "Child gives \"metaphor\" for a comparison using \"like\" where the answer is simile, naming a device of the right family and the wrong kind.",
+   "childHint": "Does the line say like or as? A comparison using those words is a simile."
+  },
+  "en-contradicted-by-the-text": {
+   "description": "Chooses an option the passage explicitly denies, rather than one it merely fails to support. Distinguished from a plausible option the passage never states: here the passage states the contrary. Negation-dropped loses a WORD; this loses a CLAIM, and the option may share no wording with the line that refutes it.",
+   "childHint": "The passage says something different. Go back and find it."
+  },
+  "en-technique-structure-effect-blind": {
+   "description": "Child gives what the words say where the answer is what their shape does (a short sentence makes a moment land suddenly; a count that grows or shrinks builds a pattern), reading content where the question asks about shape.",
+   "childHint": "Notice how the writer has built it, not just what it says. What does that do for the reader?"
+  },
+  "en-a-an-by-spelling": {
+   "description": "Chooses a/an by following letter rather than sound.",
+   "childHint": "Listen to the sound that starts the next word."
+  },
+  "en-article-definiteness": {
+   "description": "Chooses between a, the and no article by habit, missing that the thing has already been named in the text or is one of a kind. Distinct from en-a-an-by-spelling, which is a sound judgement.",
+   "childHint": "Has the text named it already? That changes which little word fits."
+  },
+  "en-contraction-apostrophe": {
+   "description": "Omits or misplaces the apostrophe in a contraction: Youre for You're, dont for don't, wont for won't.",
+   "childHint": "Two words squeezed into one leave letters out. The apostrophe stands where the letters were."
+  },
+  "en-homophone-by-sound": {
+   "description": "Spells the wrong member of a homophone pair; their/there/they're.",
+   "childHint": "Sound will not help with sound-alike words. Work out the meaning, then spell it from that."
+  },
+  "en-n-option-avoidance": {
+   "description": "Never selects the no-mistake option in error-spotting.",
+   "childHint": "Check every part in turn. No mistake is a real answer, not a way out."
+  },
+  "en-silent-letter-dropped": {
+   "description": "Drops silent letters when spelling.",
+   "childHint": "A letter can be there without being heard. Spell it out, do not sound it out."
+  },
+  "en-speech-punctuation-inside": {
+   "description": "Places a quoted question's mark outside the speech marks.",
+   "childHint": "The question belongs to the spoken words. Keep the mark inside."
+  },
+  "en-unstressed-medial-vowel": {
+   "description": "Guesses a vowel in an unstressed syllable inside a word: regester for register. Scoped to the ERROR. Distinct from en-unstressed-suffix-vowel, whose vowel surfaces when the stress shifts (definite/definition); a medial vowel has no family word that stresses it, so the remediation is the spelling pattern — minister, sinister, register.",
+   "childHint": "A quiet middle vowel is still a letter. Say the word in parts and choose it."
+  },
+  "en-preposition-collocation": {
+   "description": "Chooses a preposition that is close in meaning but does not go with the verb: returned on the shelf, listened at the teacher.",
+   "childHint": "Say the whole phrase in your head. Which little word does this verb usually take?"
+  },
+  "en-tense-sequence": {
+   "description": "Uses simple past where prior events need 'had'; drifts tense mid-narrative.",
+   "childHint": "Did it happen before the story-moment? Then you usually need 'had' and the verb. If not, keep to the same tense as the story around it."
+  },
+  "en-word-class-by-ending": {
+   "description": "Classifies words by suffix rather than sentence job; participial adjective traps.",
+   "childHint": "Ask what job the word does in this sentence. Is it describing, or is it the action? If it describes, is the thing doing the action or having it done to it?"
+  },
+  "en-paired-punctuation": {
+   "description": "Misses unclosed brackets or quotes.",
+   "childHint": "Brackets come in pairs, like shoes. Hunt for the partner."
+  },
+  "en-modal-conditional-form": {
+   "description": "Mismatches the modal to its if-clause, or builds an impossible modal form: 'if we painted ... people will know', 'would knew', 'would be knowing'.",
+   "childHint": "An imagined if takes 'would'. A real if takes 'will'. In an imagined if, a past word like 'painted' without 'had' means now or later. 'Would have' is for imagining the past."
+  },
+  "en-apostrophe-possession": {
+   "description": "Misses possessive apostrophes; confuses its/it's.",
+   "childHint": "Ask whose it is. An owner needs an apostrophe straight after the owner word, like children's or boys'. Owner words like its, his, ours and theirs never have one. If you see it's, try swapping in 'it is'."
+  }
+ },
+ "passages": {
+  "stream-a-13-pride-prejudice": {
+   "numberedLines": [
+    {
+     "n": 1,
+     "text": "“If I can but see one of my daughters happily settled at Netherfield,” said Mrs. Bennet",
+     "label": ""
+    },
+    {
+     "n": 2,
+     "text": "to her husband, “and all the others equally well married, I shall have nothing to wish",
+     "label": ""
+    },
+    {
+     "n": 3,
+     "text": "for.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 4,
+     "text": "In a few days Mr. Bingley returned Mr. Bennet’s visit, and sat about ten minutes with",
+     "label": ""
+    },
+    {
+     "n": 5,
+     "text": "him in his library. He had entertained hopes of being admitted to a sight of the young",
+     "label": "5"
+    },
+    {
+     "n": 6,
+     "text": "ladies, of whose beauty he had heard much; but he saw only the father. The ladies were",
+     "label": ""
+    },
+    {
+     "n": 7,
+     "text": "somewhat more fortunate, for they had the advantage of ascertaining, from an upper",
+     "label": ""
+    },
+    {
+     "n": 8,
+     "text": "window, that he wore a blue coat and rode a black horse.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 9,
+     "text": "An invitation to dinner was soon afterwards despatched; and already had Mrs. Bennet",
+     "label": ""
+    },
+    {
+     "n": 10,
+     "text": "planned the courses that were to do credit to her housekeeping, when an answer arrived",
+     "label": "10"
+    },
+    {
+     "n": 11,
+     "text": "which deferred it all. Mr. Bingley was obliged to be in town the following day, and",
+     "label": ""
+    },
+    {
+     "n": 12,
+     "text": "consequently unable to accept the honour of their invitation, etc. Mrs. Bennet was quite",
+     "label": ""
+    },
+    {
+     "n": 13,
+     "text": "disconcerted. She could not imagine what business he could have in town so soon after",
+     "label": ""
+    },
+    {
+     "n": 14,
+     "text": "his arrival in Hertfordshire; and she began to fear that he might always be flying about",
+     "label": ""
+    },
+    {
+     "n": 15,
+     "text": "from one place to another, and never settled at Netherfield as he ought to be. Lady",
+     "label": "15"
+    },
+    {
+     "n": 16,
+     "text": "Lucas quieted her fears a little by starting the idea of his being gone to London only",
+     "label": ""
+    },
+    {
+     "n": 17,
+     "text": "to get a large party for the ball; and a report soon followed that Mr. Bingley was to",
+     "label": ""
+    },
+    {
+     "n": 18,
+     "text": "bring twelve ladies and seven gentlemen with him to the assembly. The girls grieved over",
+     "label": ""
+    },
+    {
+     "n": 19,
+     "text": "such a number of ladies; but were comforted the day before the ball by hearing that,",
+     "label": ""
+    },
+    {
+     "n": 20,
+     "text": "instead of twelve, he had brought only six with him from London, his five sisters and a",
+     "label": "20"
+    },
+    {
+     "n": 21,
+     "text": "cousin. And when the party entered the assembly-room, it consisted of only five",
+     "label": ""
+    },
+    {
+     "n": 22,
+     "text": "altogether: Mr. Bingley, his two sisters, the husband of the eldest, and another young",
+     "label": ""
+    },
+    {
+     "n": 23,
+     "text": "man.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 24,
+     "text": "Mr. Bingley was good-looking and gentlemanlike: he had a pleasant countenance, and easy,",
+     "label": ""
+    },
+    {
+     "n": 25,
+     "text": "unaffected manners. His sisters were fine women, with an air of decided fashion. His",
+     "label": "25"
+    },
+    {
+     "n": 26,
+     "text": "brother-in-law, Mr. Hurst, merely looked the gentleman; but his friend Mr. Darcy soon",
+     "label": ""
+    },
+    {
+     "n": 27,
+     "text": "drew the attention of the room by his fine, tall person, handsome features, noble mien,",
+     "label": ""
+    },
+    {
+     "n": 28,
+     "text": "and the report, which was in general circulation within five minutes after his entrance,",
+     "label": ""
+    },
+    {
+     "n": 29,
+     "text": "of his having ten thousand a year. The gentlemen pronounced him to be a fine figure of a",
+     "label": ""
+    },
+    {
+     "n": 30,
+     "text": "man, the ladies declared he was much handsomer than Mr. Bingley, and he was looked at",
+     "label": "30"
+    },
+    {
+     "n": 31,
+     "text": "with great admiration for about half the evening, till his manners gave a disgust which",
+     "label": ""
+    },
+    {
+     "n": 32,
+     "text": "turned the tide of his popularity; for he was discovered to be proud, to be above his",
+     "label": ""
+    },
+    {
+     "n": 33,
+     "text": "company, and above being pleased; and not all his large estate in Derbyshire could save",
+     "label": ""
+    },
+    {
+     "n": 34,
+     "text": "him from having a most forbidding, disagreeable countenance, and being unworthy to be",
+     "label": ""
+    },
+    {
+     "n": 35,
+     "text": "compared with his friend.",
+     "label": "35"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 36,
+     "text": "Mr. Bingley had soon made himself acquainted with all the principal people in the room:",
+     "label": ""
+    },
+    {
+     "n": 37,
+     "text": "he was lively and unreserved, danced every dance, was angry that the ball closed so",
+     "label": ""
+    },
+    {
+     "n": 38,
+     "text": "early, and talked of giving one himself at Netherfield. Such amiable qualities must",
+     "label": ""
+    },
+    {
+     "n": 39,
+     "text": "speak for themselves. What a contrast between him and his friend! Mr. Darcy danced only",
+     "label": ""
+    },
+    {
+     "n": 40,
+     "text": "once with Mrs. Hurst and once with Miss Bingley, declined being introduced to any other",
+     "label": "40"
+    },
+    {
+     "n": 41,
+     "text": "lady, and spent the rest of the evening in walking about the room, speaking occasionally",
+     "label": ""
+    },
+    {
+     "n": 42,
+     "text": "to one of his own party. His character was decided. He was the proudest, most",
+     "label": ""
+    },
+    {
+     "n": 43,
+     "text": "disagreeable man in the world, and everybody hoped that he would never come there again.",
+     "label": ""
+    },
+    {
+     "n": 44,
+     "text": "Amongst the most violent against him was Mrs. Bennet, whose dislike of his general",
+     "label": ""
+    },
+    {
+     "n": 45,
+     "text": "behaviour was sharpened into particular resentment by his having slighted one of her",
+     "label": "45"
+    },
+    {
+     "n": 46,
+     "text": "daughters.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 47,
+     "text": "Elizabeth Bennet had been obliged, by the scarcity of gentlemen, to sit down for two",
+     "label": ""
+    },
+    {
+     "n": 48,
+     "text": "dances; and during part of that time, Mr. Darcy had been standing near enough for her to",
+     "label": ""
+    },
+    {
+     "n": 49,
+     "text": "overhear a conversation between him and Mr. Bingley, who came from the dance for a few",
+     "label": ""
+    },
+    {
+     "n": 50,
+     "text": "minutes to press his friend to join it.",
+     "label": "50"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 51,
+     "text": "“Come, Darcy,” said he, “I must have you dance. I hate to see you standing about by",
+     "label": ""
+    },
+    {
+     "n": 52,
+     "text": "yourself in this stupid manner. You had much better dance.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 53,
+     "text": "“I certainly shall not. You know how I detest it, unless I am particularly acquainted",
+     "label": ""
+    },
+    {
+     "n": 54,
+     "text": "with my partner. At such an assembly as this, it would be insupportable. Your sisters",
+     "label": ""
+    },
+    {
+     "n": 55,
+     "text": "are engaged, and there is not another woman in the room whom it would not be a",
+     "label": "55"
+    },
+    {
+     "n": 56,
+     "text": "punishment to me to stand up with.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 57,
+     "text": "“I would not be so fastidious as you are,” cried Bingley, “for a kingdom! Upon my",
+     "label": ""
+    },
+    {
+     "n": 58,
+     "text": "honour, I never met with so many pleasant girls in my life as I have this evening; and",
+     "label": ""
+    },
+    {
+     "n": 59,
+     "text": "there are several of them, you see, uncommonly pretty.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 60,
+     "text": "“You are dancing with the only handsome girl in the room,” said Mr. Darcy, looking at",
+     "label": "60"
+    },
+    {
+     "n": 61,
+     "text": "the eldest Miss Bennet.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 62,
+     "text": "“Oh, she is the most beautiful creature I ever beheld! But there is one of her sisters",
+     "label": ""
+    },
+    {
+     "n": 63,
+     "text": "sitting down just behind you, who is very pretty, and I dare say very agreeable. Do let",
+     "label": ""
+    },
+    {
+     "n": 64,
+     "text": "me ask my partner to introduce you.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 65,
+     "text": "“Which do you mean?” and turning round, he looked for a moment at Elizabeth, till,",
+     "label": "65"
+    },
+    {
+     "n": 66,
+     "text": "catching her eye, he withdrew his own, and coldly said, “She is tolerable: but not",
+     "label": ""
+    },
+    {
+     "n": 67,
+     "text": "handsome enough to tempt me; and I am in no humour at present to give consequence to",
+     "label": ""
+    },
+    {
+     "n": 68,
+     "text": "young ladies who are slighted by other men. You had better return to your partner and",
+     "label": ""
+    },
+    {
+     "n": 69,
+     "text": "enjoy her smiles, for you are wasting your time with me.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 70,
+     "text": "Mr. Bingley followed his advice. Mr. Darcy walked off; and Elizabeth remained with no",
+     "label": "70"
+    },
+    {
+     "n": 71,
+     "text": "very cordial feelings towards him. She told the story, however, with great spirit among",
+     "label": ""
+    },
+    {
+     "n": 72,
+     "text": "her friends; for she had a lively, playful disposition, which delighted in anything",
+     "label": ""
+    },
+    {
+     "n": 73,
+     "text": "ridiculous.",
+     "label": ""
+    }
+   ]
+  },
+  "stream-b-04": {
+   "numberedLines": [
+    {
+     "n": 1,
+     "text": "Miss Bhatt asked for two volunteers and Reuben's hand went up before he had decided",
+     "label": ""
+    },
+    {
+     "n": 2,
+     "text": "anything about it.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 3,
+     "text": "The lost-property cupboard was a room at the end of the corridor by the hall, with a",
+     "label": ""
+    },
+    {
+     "n": 4,
+     "text": "sloping ceiling and a light you had to hold the switch down for. When he pulled the door",
+     "label": ""
+    },
+    {
+     "n": 5,
+     "text": "back the smell came out ahead of the coats, chlorine and old banana, and Ilya said he",
+     "label": "5"
+    },
+    {
+     "n": 6,
+     "text": "was going to die in here and it would be on Miss Bhatt.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 7,
+     "text": "She gave them two boxes and a bin bag. Named things went in the first box to be",
+     "label": ""
+    },
+    {
+     "n": 8,
+     "text": "returned. Everything with no name went in the second, which was going to the charity",
+     "label": ""
+    },
+    {
+     "n": 9,
+     "text": "collection on Friday morning. The bin bag was for anything with the sole coming off it.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 10,
+     "text": "Ilya did it the way he did everything, at speed, holding each item up for half a second",
+     "label": "10"
+    },
+    {
+     "n": 11,
+     "text": "before deciding. Reuben turned the collars out and read them. Some of the names had gone",
+     "label": ""
+    },
+    {
+     "n": 12,
+     "text": "the colour of weak tea and some had been done in the sort of laundry pen that outlasts",
+     "label": ""
+    },
+    {
+     "n": 13,
+     "text": "the jumper, and he found a cardigan belonging to a girl who had left in Year Four and",
+     "label": ""
+    },
+    {
+     "n": 14,
+     "text": "put it in the returns box anyway.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 15,
+     "text": "\"When we're in Year Six,\" Ilya said, \"we get the lockers by the science room. The tall",
+     "label": "15"
+    },
+    {
+     "n": 16,
+     "text": "ones. Not those little ones by the gym.\"",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 17,
+     "text": "\"These are all size nine,\" Reuben said. He had four grey jumpers across his arms, all of",
+     "label": ""
+    },
+    {
+     "n": 18,
+     "text": "them size nine, none of them named.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 19,
+     "text": "\"And you're in my group for Whitby. I've already told Miss. I said it before Kyle could",
+     "label": ""
+    },
+    {
+     "n": 20,
+     "text": "ask.\"",
+     "label": "20"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 21,
+     "text": "Reuben held up a swimming hat that had perished into something like a dried leaf and",
+     "label": ""
+    },
+    {
+     "n": 22,
+     "text": "asked whether that went in the bag or the box.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 23,
+     "text": "At half past two Miss Bhatt put her head round the door to see how far they had got, and",
+     "label": ""
+    },
+    {
+     "n": 24,
+     "text": "Reuben asked her where the charity bags actually went afterwards. A warehouse, she said.",
+     "label": ""
+    },
+    {
+     "n": 25,
+     "text": "Leeds, she thought, or somewhere near it, and then out to shops all over the place. He",
+     "label": "25"
+    },
+    {
+     "n": 26,
+     "text": "asked if that was far. She said far enough, and laughed, and he laughed as well,",
+     "label": ""
+    },
+    {
+     "n": 27,
+     "text": "slightly after her.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 28,
+     "text": "Ilya found a Manchester United sock and became busy with it for a while.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 29,
+     "text": "The navy jumper was under a pair of trousers nobody was ever going to claim. The cuffs",
+     "label": ""
+    },
+    {
+     "n": 30,
+     "text": "had gone thin and there was a mark on the front from a Sports Day two years ago. Reuben",
+     "label": "30"
+    },
+    {
+     "n": 31,
+     "text": "knew before he turned the collar out whose it was, because he knew the shape of the",
+     "label": ""
+    },
+    {
+     "n": 32,
+     "text": "capitals his mum used and he knew she pressed too hard with the pen. He held it a",
+     "label": ""
+    },
+    {
+     "n": 33,
+     "text": "moment. Then he put it in the Friday box, low down, underneath the swimming things, and",
+     "label": ""
+    },
+    {
+     "n": 34,
+     "text": "pushed it flat with the heel of his hand so it lay level with the rest. Then he took the",
+     "label": ""
+    },
+    {
+     "n": 35,
+     "text": "folded paper out of his blazer pocket, looked at the edge of it and put it back without",
+     "label": "35"
+    },
+    {
+     "n": 36,
+     "text": "opening it.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 37,
+     "text": "On the way to fetch the second bin bag he passed the noticeboard. The sheet for",
+     "label": ""
+    },
+    {
+     "n": 38,
+     "text": "September football trials had eleven names on it in eleven different pens. There was",
+     "label": ""
+    },
+    {
+     "n": 39,
+     "text": "plenty of room left at the bottom.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 40,
+     "text": "\"You've missed a cupboard,\" Ilya said, when he came back. \"There's another one. In the",
+     "label": "40"
+    },
+    {
+     "n": 41,
+     "text": "annexe. Miss said we can do that one on Monday and get out of spellings.\"",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 42,
+     "text": "\"Monday's fine,\" Reuben said.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 43,
+     "text": "At half three Miss Bhatt came in properly to check what they had put where, and lifted",
+     "label": ""
+    },
+    {
+     "n": 44,
+     "text": "the top layer out of the Friday box. She got to the navy jumper and turned it over and",
+     "label": ""
+    },
+    {
+     "n": 45,
+     "text": "found the collar.",
+     "label": "45"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 46,
+     "text": "\"Reuben. This one's got your name in it.\"",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 47,
+     "text": "\"It's all right,\" he said. \"It won't fit me next year.\"",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 48,
+     "text": "She looked at him for a second or two longer than the answer needed. Then she folded it",
+     "label": ""
+    },
+    {
+     "n": 49,
+     "text": "the way he had folded it, low down, underneath, and pressed the flaps of the box shut.",
+     "label": ""
+    }
+   ]
+  }
+ },
+ "rows": [
+  {
+   "itemId": "ENG-002-pp-05",
+   "questionType": "en-comp-vocab",
+   "passageRef": "stream-a-13-pride-prejudice",
+   "stem": {
+    "text": "Read lines 17 to 21. Line 21 says: 'when the party entered the assembly-room'. What does 'party' mean here?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 5
+   },
+   "lineRefs": [
+    17,
+    18,
+    19,
+    20,
+    21
+   ],
+   "explanation": {
+    "quotes": [
+     {
+      "rule": "quoted-from-passage",
+      "text": "when the party entered the assembly-room",
+      "passageRef": "stream-a-13-pride-prejudice"
+     }
+    ],
+    "hintCore": "Can a birthday party walk into a room?",
+    "walkScript": "Read line 21 to the full stop. The party 'entered' the room, and five people are named. So a party here is a group who come in together. The ball comes later.",
+    "passageReadingContext": {
+     "why": "The highest comprehension figure in the fifteen-passage pack, and a year above the 10-13 the passage was commissioned against.",
+     "note": "Authored before anybody had measured this passage. It should meet the reading when it is read, not after.",
+     "readBy": "Annie",
+     "readOn": "2026-08-21",
+     "passage": "stream-a-13-pride-prejudice",
+     "decodingAge": 12,
+     "comprehensionAge": 14,
+     "NOT_A_READING_AGE": "Neither figure is a reading age and neither may be printed as one (R350)."
+    }
+   },
+   "tellsPointingAtKey": [],
+   "distractorsRestatingStem": [],
+   "keyInClosestNearTwinPair": true,
+   "previousRound": {
+    "reviewOfRow": null,
+    "reviewOfChanges": []
+   },
+   "options": [
+    {
+     "optionId": "cmsw5vr560007tm8e6rhyhwgq",
+     "value": "A celebration with food, music and games.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "execution": "A birthday party is the sense a child meets first, and the word sits in a sentence about a ball.",
+     "features": {
+      "comma": true,
+      "twoPart": false,
+      "words": 7,
+      "windowOverlap": 0,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw5vr560008tm8ers7s9upq",
+     "value": "The ball that Mr Bingley talked of giving at Netherfield.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "Mr Bingley talks of giving a ball at Netherfield at line 38, later in the passage, and the child carries that party-like event back to line 21. At line 21 'party' is the group that entered the assembly-room, counted at lines 21 and 22 as five people.",
+     "features": {
+      "comma": false,
+      "twoPart": false,
+      "words": 10,
+      "windowOverlap": 0.4,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw5vr560009tm8e3d3kl2qz",
+     "value": "A group of people who arrive together.",
+     "isKey": true,
+     "tag": null,
+     "execution": null,
+     "features": {
+      "comma": false,
+      "twoPart": false,
+      "words": 7,
+      "windowOverlap": 0,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw5vr56000atm8ei4ouwxc6",
+     "value": "A group of people who run a country together.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "execution": "The political sense is a real second sense of the word and nothing in the line supports it.",
+     "features": {
+      "comma": false,
+      "twoPart": false,
+      "words": 9,
+      "windowOverlap": 0,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw5vr56000btm8el6a5gujj",
+     "value": "Everybody who came to the assembly that night.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "execution": "The child has the right kind of meaning, a group of people, at the wrong size: everyone at the assembly. Lines 21 and 22 count the party that entered as five people who came in together.",
+     "features": {
+      "comma": false,
+      "twoPart": false,
+      "words": 8,
+      "windowOverlap": 0.25,
+      "not": false
+     }
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-12",
+   "questionType": "en-comp-retrieval",
+   "passageRef": "stream-a-13-pride-prejudice",
+   "stem": {
+    "text": "Read lines 39 to 41. How many dances did Mr Darcy dance, and who did he dance with?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 12
+   },
+   "lineRefs": [
+    39,
+    40,
+    41
+   ],
+   "explanation": {
+    "quotes": [
+     {
+      "rule": "R4",
+      "text": "danced only once with Mrs. Hurst and once with Miss Bingley",
+      "lineRefs": [
+       39,
+       40
+      ],
+      "exemptFrom": [
+       "banList",
+       "sentenceCap",
+       "vocabularyCeiling",
+       "longWordCeiling"
+      ],
+      "passageRef": "stream-a-13-pride-prejudice"
+     }
+    ],
+    "hintCore": "Count how many times the word 'once' appears.",
+    "walkScript": "The sentence about Mr Darcy starts at line 39. He danced once with Mrs Hurst and once with Miss Bingley. That is two dances, and every dance belongs to Mr Bingley.",
+    "passageReadingContext": {
+     "why": "The highest comprehension figure in the fifteen-passage pack, and a year above the 10-13 the passage was commissioned against.",
+     "note": "Authored before anybody had measured this passage. It should meet the reading when it is read, not after.",
+     "readBy": "Annie",
+     "readOn": "2026-08-21",
+     "passage": "stream-a-13-pride-prejudice",
+     "decodingAge": 12,
+     "comprehensionAge": 14,
+     "NOT_A_READING_AGE": "Neither figure is a reading age and neither may be printed as one (R350)."
+    }
+   },
+   "tellsPointingAtKey": [],
+   "distractorsRestatingStem": [],
+   "keyInClosestNearTwinPair": true,
+   "previousRound": {
+    "reviewOfRow": {
+     "itemId": "ENG-002-pp-12",
+     "verdict": "SIGN",
+     "reason": "Read whole: only the key matches line 40; no tell on the key after. Pre-existing staff execution on 'Every dance of the evening.' quotes a line-39 fragment that does not answer the stem; worth tidying, not child-facing."
+    },
+    "reviewOfChanges": [
+     {
+      "ref": "seat:cmsw2f4tv0059tmbv1xbzsfbj",
+      "verdict": "ATTEST",
+      "reason": "Wrong: line 40 gives Mrs Hurst and Miss Bingley; Mr Darcy never dances with Elizabeth (she sits out, line 47; he refuses at 66-67). Tag en-minimal-pair-skim right: one name differs from the key. Adding the surname is natural, not padding. Ties length in words (10 each)."
+     }
+    ]
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4tv0057tmbvsa1sruh7",
+     "value": "Every dance of the evening.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "execution": "Every dance is Mr Bingley's at line 37, one line above, carried across to Mr Darcy. In the window, line 39 answers the stem: 'speak for themselves. What a contrast between him and'.",
+     "features": {
+      "comma": false,
+      "twoPart": false,
+      "words": 5,
+      "windowOverlap": 0.33,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw2f4tv0058tmbvpyno9fos",
+     "value": "Two: one with Mrs Hurst and one with Miss Bingley.",
+     "isKey": true,
+     "tag": null,
+     "execution": null,
+     "features": {
+      "comma": false,
+      "twoPart": false,
+      "words": 10,
+      "windowOverlap": 0.5,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw2f4tv0059tmbv1xbzsfbj",
+     "value": "Two: one with Miss Bingley and one with Elizabeth Bennet.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "execution": "One name changed: Elizabeth Bennet for Mrs Hurst. Line 40 has Mr Darcy dance 'once with Mrs. Hurst and once with Miss Bingley'. Elizabeth sits out two dances at line 47, and Mr Darcy turns her down at lines 66 and 67.",
+     "features": {
+      "comma": false,
+      "twoPart": false,
+      "words": 10,
+      "windowOverlap": 0.29,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw2f4tv005atmbvr0w4106n",
+     "value": "None at all.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "execution": "'None at all' is the absolute version of 'danced only once... and once' at lines 39 and 40.",
+     "features": {
+      "comma": false,
+      "twoPart": false,
+      "words": 3,
+      "windowOverlap": 0,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw2f4tv005btmbv02jdmvfv",
+     "value": "Three: with Mrs Hurst, Miss Bingley and Miss Bennet.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "A third dance with Miss Bennet is supplied; she dances with Mr Bingley at line 63 and never with him.",
+     "features": {
+      "comma": true,
+      "twoPart": false,
+      "words": 9,
+      "windowOverlap": 0.67,
+      "not": false
+     }
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-15",
+   "questionType": "en-comp-retrieval",
+   "passageRef": "stream-a-13-pride-prejudice",
+   "stem": {
+    "text": "Elizabeth had to sit down for two dances. Read lines 47 to 48. Why?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 15
+   },
+   "lineRefs": [
+    47,
+    48
+   ],
+   "explanation": {
+    "quotes": [
+     {
+      "rule": "quoted-from-passage",
+      "text": "obliged, by the scarcity of gentlemen, to sit down",
+      "passageRef": "stream-a-13-pride-prejudice"
+     }
+    ],
+    "hintCore": "Find the word in line 47 that says she had no choice. What forced her?",
+    "walkScript": "Line 47 holds the reason. She was 'obliged, by the scarcity of gentlemen, to sit down'. A scarcity means too few men for the ladies. Mr Darcy's words come later.",
+    "passageReadingContext": {
+     "why": "The highest comprehension figure in the fifteen-passage pack, and a year above the 10-13 the passage was commissioned against.",
+     "note": "Authored before anybody had measured this passage. It should meet the reading when it is read, not after.",
+     "readBy": "Annie",
+     "readOn": "2026-08-21",
+     "passage": "stream-a-13-pride-prejudice",
+     "decodingAge": 12,
+     "comprehensionAge": 14,
+     "NOT_A_READING_AGE": "Neither figure is a reading age and neither may be printed as one (R350)."
+    }
+   },
+   "tellsPointingAtKey": [
+    "most words shared with the cited lines"
+   ],
+   "distractorsRestatingStem": [],
+   "keyInClosestNearTwinPair": false,
+   "previousRound": {
+    "reviewOfRow": {
+     "itemId": "ENG-002-pp-15",
+     "verdict": "HOLD",
+     "reason": "HOLD: the only change on this row is refused. Read whole, 'Mr Darcy was standing near and would not dance with her.' is a defensible second reason she kept sitting: he is one of the gentlemen who would not dance (line 40, lines 51-56), and 'standing near' ties it to the cited lines. A second answer is worse than the window-overlap tell it was written to break. Re-draft as suggested on the seat."
+    },
+    "reviewOfChanges": [
+     {
+      "ref": "seat:cmsw2f4ty005qtmbvcxcdm3f1",
+      "verdict": "REFUSE",
+      "reason": "Second-answer risk, and the tag does not hold. 'Would not dance with her' is a standing unwillingness, not a single later event: line 40 already has Mr Darcy decline 'being introduced to any other lady', lines 53-56 refuse dancing outright, and lines 62-67 refuse Elizabeth by name while she sits. The 'scarcity of gentlemen' at line 47 is partly HIS doing: he is a gentleman standing about by himself (lines 51-52) who would not dance. So 'Mr Darcy was standing near and would not dance with her' can be defended as a reason she had to keep sitting, and the added 'standing near' now grounds it in the cited window (line 48). en-chronology-collapse requires the cause to come LATER than the effect; the unwillingness is stated at line 40, before line 47, so the execution's 'a later event as the cause of an earlier one' is not true of this wording. Suggested repair for the overlap tell instead: a within-span option from lines 48-50 that answers a different question, e.g. 'Mr Bingley came away from the dance to talk to Mr Darcy.' (true at lines 49-50, not why she sat), tagged en-within-span-wrong-element."
+     }
+    ]
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4ty005ptmbvei52nvya",
+     "value": "She did not feel like dancing that evening.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "A wish not to dance is supplied; line 47 says she was OBLIGED to sit down.",
+     "features": {
+      "comma": false,
+      "twoPart": false,
+      "words": 8,
+      "windowOverlap": 0.25,
+      "not": true
+     }
+    },
+    {
+     "optionId": "cmsw2f4ty005qtmbvcxcdm3f1",
+     "value": "Mr Darcy had refused to dance with her.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "execution": "Line 47 has Elizabeth already sitting down because there were too few gentlemen. Mr Darcy's refusal comes at lines 65 to 67, while she is sitting, so the child gives a later event as the cause of an earlier one.",
+     "features": {
+      "comma": false,
+      "twoPart": false,
+      "words": 8,
+      "windowOverlap": 0.33,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw2f4ty005rtmbv04h7lmwn",
+     "value": "She wanted to listen to Mr Darcy and Mr Bingley talking.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "execution": "A motive is supplied; line 48 has the overhearing happen because he stood near enough, not because she arranged it.",
+     "features": {
+      "comma": false,
+      "twoPart": false,
+      "words": 11,
+      "windowOverlap": 0.2,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw2f4ty005stmbvq9lrteil",
+     "value": "There were not enough gentlemen for all the ladies.",
+     "isKey": true,
+     "tag": null,
+     "execution": null,
+     "features": {
+      "comma": false,
+      "twoPart": false,
+      "words": 9,
+      "windowOverlap": 0.67,
+      "not": true
+     }
+    },
+    {
+     "optionId": "cmsw2f4ty005ttmbvonuo56i2",
+     "value": "Her eldest sister was dancing with Mr Bingley.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "Her eldest sister dancing with Mr Bingley is line 60, true, and not the reason line 47 gives.",
+     "features": {
+      "comma": false,
+      "twoPart": false,
+      "words": 8,
+      "windowOverlap": 0.25,
+      "not": false
+     }
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-007-LP-04",
+   "questionType": "en-comp-retrieval",
+   "passageRef": "stream-b-04",
+   "stem": {
+    "text": "What did Miss Bhatt say happens to the charity bags? (lines 24 to 26)",
+    "quotes": [],
+    "passageRef": "stream-b-04",
+    "orderAnchor": 4
+   },
+   "lineRefs": [
+    24,
+    25,
+    26
+   ],
+   "explanation": {
+    "hintCore": "Read her whole answer to Reuben before you choose.",
+    "walkScript": "Look at lines 24 and 25. She says a warehouse, and thinks it is near Leeds. Then she says they go out to shops all over the place. Her answer has two stages in it."
+   },
+   "tellsPointingAtKey": [
+    "most words shared with the cited lines",
+    "most words shared with the whole passage",
+    "the only option with a comma"
+   ],
+   "distractorsRestatingStem": [],
+   "keyInClosestNearTwinPair": false,
+   "previousRound": {
+    "reviewOfRow": {
+     "itemId": "ENG-007-LP-04",
+     "verdict": "HOLD",
+     "reason": "HOLD: the only change on this row is refused for its tag (the value is not true inside the window, and the child hint for en-within-span-wrong-element would mislead). The row otherwise reads with one defensible answer, and the tells would be broken. Retag to en-minimal-pair-skim with 'in Leeds' dropped, then it can sign."
+    },
+    "reviewOfChanges": [
+     {
+      "ref": "seat:cmsw2f4v100c5tmbvgqit3fr3",
+      "verdict": "REFUSE",
+      "reason": "The tag does not name this mistake. en-within-span-wrong-element is defined as an option that is TRUE inside the cited window and answers a different question; 'They go to shops in Leeds, then to a warehouse.' is not true anywhere in lines 24-25 and it does answer the question asked, only in the wrong order and with the shops moved to Leeds (two altered details). Its child hint ('Check it answers the question you were asked') would send a child who chose it to the wrong fix. The value itself is wrong under every reading and the execution's quotations are exact; the fault is the tag. Repair: drop 'in Leeds' so one detail differs ('They go out to shops, then to a warehouse.', which keeps the comma and the window words) and tag en-minimal-pair-skim."
+     }
+    ]
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4v100c5tmbvgqit3fr3",
+     "value": "They are sorted again at the school on Friday.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The child goes back to lines 7 to 9, where the box goes to the charity collection on Friday morning, and builds an answer about school. Lines 24 and 25 have Miss Bhatt say the bags go to a warehouse and then out to shops.",
+     "features": {
+      "comma": false,
+      "twoPart": false,
+      "words": 9,
+      "windowOverlap": 0,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw2f4v100c6tmbvwdsudjeb",
+     "value": "They go to families who need them nearby.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "A natural guess about charity, but she names a warehouse and shops.",
+     "features": {
+      "comma": false,
+      "twoPart": false,
+      "words": 8,
+      "windowOverlap": 0,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw2f4v100c7tmbvbqs4p5kd",
+     "value": "She said she did not really know.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "execution": "Stretches her doubt further than the passage goes. At line 25 she only thought it was Leeds, but she is plain that the bags go to a warehouse (line 24) and then out to shops (line 25). The child turns doubt about one town into not knowing at all.",
+     "features": {
+      "comma": false,
+      "twoPart": false,
+      "words": 7,
+      "windowOverlap": 0.33,
+      "not": true
+     }
+    },
+    {
+     "optionId": "cmsw2f4v100c8tmbvgvofb0yc",
+     "value": "They go to a warehouse, then out to shops.",
+     "isKey": true,
+     "tag": null,
+     "execution": null,
+     "features": {
+      "comma": true,
+      "twoPart": false,
+      "words": 9,
+      "windowOverlap": 1,
+      "not": false
+     }
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-007-LP-15",
+   "questionType": "en-comp-retrieval",
+   "passageRef": "stream-b-04",
+   "stem": {
+    "text": "What did Reuben do with the navy jumper? (lines 33 and 34)",
+    "quotes": [],
+    "passageRef": "stream-b-04"
+   },
+   "lineRefs": [
+    33,
+    34
+   ],
+   "explanation": {
+    "hintCore": "Read the whole sentence that starts on line 33, right to its end.",
+    "walkScript": "Look at lines 33 and 34. He puts it in the Friday box. He puts it low down, underneath the swimming things. Then he pushes it flat so it lies level with the rest."
+   },
+   "tellsPointingAtKey": [],
+   "distractorsRestatingStem": [],
+   "keyInClosestNearTwinPair": true,
+   "previousRound": {
+    "reviewOfRow": {
+     "itemId": "ENG-007-LP-15",
+     "verdict": "SIGN",
+     "reason": "Read whole: only the key names the Friday box; no tell on the key after."
+    },
+    "reviewOfChanges": [
+     {
+      "ref": "seat:cmtdflmpc000ptmf5ujf9ioc4",
+      "verdict": "ATTEST",
+      "reason": "Wrong: line 33 'in the Friday box, low down'. Tag en-contradicted-by-the-text right. Quotes at lines 33 and 34 verified; the returns box is the named-things box (lines 7-8, 14). It uses the passage's 'pushed' where the key says 'pressed'; they are synonyms, so the key stays correct. Ties two-part and window overlap."
+     }
+    ]
+   },
+   "options": [
+    {
+     "optionId": "cmtdflmpc000otmf541ei95uo",
+     "value": "Put it in the Friday box, low down, and pressed it flat.",
+     "isKey": true,
+     "tag": null,
+     "execution": null,
+     "features": {
+      "comma": true,
+      "twoPart": true,
+      "words": 12,
+      "windowOverlap": 0.83,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmtdflmpc000ptmf5ujf9ioc4",
+     "value": "Put it in the returns box, low down, and pushed it flat.",
+     "isKey": false,
+     "tag": "en-contradicted-by-the-text",
+     "execution": "Line 33 says he put it 'in the Friday box, low down', the box going to the charity collection, and line 34 that he 'pushed it flat'. The child keeps how he did it and changes the box to the returns box, which named things go in at lines 7 and 8 and which the passage says he did not use here.",
+     "features": {
+      "comma": true,
+      "twoPart": true,
+      "words": 12,
+      "windowOverlap": 0.83,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmtdflmpc000qtmf5u76vaj7b",
+     "value": "Put it in the bin bag, because the cuffs had gone thin.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Reuses the cuffs that had gone thin at lines 29 and 30. Those words describe the jumper, but line 33 has him put it in the Friday box, not the bin bag.",
+     "features": {
+      "comma": true,
+      "twoPart": false,
+      "words": 12,
+      "windowOverlap": 0.14,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmtdflmpc000rtmf508bendq3",
+     "value": "Folded it and gave it to Miss Bhatt.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "Miss Bhatt has the jumper only at lines 44 to 49, when she finds it in the box herself and folds it. The child answers from that later part instead of lines 33 and 34.",
+     "features": {
+      "comma": false,
+      "twoPart": false,
+      "words": 8,
+      "windowOverlap": 0,
+      "not": false
+     }
+    }
+   ]
+  }
+ ]
+}

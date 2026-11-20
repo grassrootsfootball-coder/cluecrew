@@ -1,0 +1,195 @@
+{
+ "door": "english-rewrite/tells/D",
+ "proposer": "agent",
+ "seats": [
+  {
+   "optionId": "cmsw2f4vg00eutmbv4zol6abr",
+   "itemId": "ENG-009-SM-01",
+   "oldValue": "Because the two miles of sea wall begin there.",
+   "tag": "en-within-span-wrong-element",
+   "newValue": "Because the sea wall went on from there.",
+   "execution": "Line 2 says that from the shelter it was two miles of sea wall. That is the walk ahead of him, not a reason the bus stops; lines 1 and 2 give the reason after because, that there is nowhere to turn round."
+  },
+  {
+   "optionId": "cmsw2f4vi00f1tmbv8wfhevnv",
+   "itemId": "ENG-009-SM-03",
+   "oldValue": "Nan asked him to bring her back a picture.",
+   "tag": "en-cause-agent-swap",
+   "newValue": "Nan said he should get her a picture.",
+   "execution": "Lines 14 and 15 have him say he would get her a picture of the place; the offer is his, and no line has Nan ask for one. The reason is at line 14: nothing on her wall but a calendar."
+  },
+  {
+   "optionId": "cmsw2f4vk00fetmbv5ajic2oo",
+   "itemId": "ENG-009-SM-05",
+   "oldValue": "The remains of a row of four cottages.",
+   "tag": "en-wrong-scope-retrieval",
+   "newValue": "A step down into water, and a piece of a wall.",
+   "execution": "Lines 8 and 9 give a step that goes down into water and a piece of wall, and both are out at Saltmere, not below the sea wall. Lines 20 and 21 put a boat in the mud below him, with a gull standing on it."
+  },
+  {
+   "optionId": "cmsw2f4vo00fztmbvvxwm1c9f",
+   "itemId": "ENG-009-SM-10",
+   "oldValue": "A bell in the chapel that went under the sea years ago.",
+   "tag": "en-plausible-not-stated",
+   "newValue": "A bell in the chapel, which the sea took years ago.",
+   "execution": "Line 6 says there is no chapel on the map, and no line gives a real bell; the sea taking the lot at lines 10 and 11 is about the cottages. Lines 37 and 38 say the sound is a buoy that knocks when the water moves."
+  },
+  {
+   "optionId": "cmsw2f4vp00g7tmbvoi2716j5",
+   "itemId": "ENG-009-SM-11",
+   "oldValue": "Holding it in both hands is what shook it.",
+   "tag": "en-relation-word-flipped",
+   "newValue": "Holding it in both hands is why the picture came out shaken.",
+   "execution": "Lines 41 and 42 say he had to hold it in both hands, and even then the picture came out grey and shaken. Even then means in spite of that, and this reads it as because; line 42 puts the shake down to where his hand had moved."
+  },
+  {
+   "optionId": "cmsw2f4vp00g5tmbv5y6x5n3h",
+   "itemId": "ENG-009-SM-11",
+   "oldValue": "There was something the matter with the camera on his phone.",
+   "tag": "en-plausible-not-stated",
+   "newValue": "The camera on his phone was not working properly.",
+   "execution": "No line says anything is wrong with the phone itself. Line 40 gives the light going, and line 42 gives his hand moving; the not here is still a wrong claim."
+  },
+  {
+   "optionId": "cmsw2f4wo00lztmbv3h15ti42",
+   "itemId": "ENG-013-TI-06",
+   "oldValue": "He liked the job from the very start.",
+   "tag": "en-negation-dropped",
+   "newValue": "He liked the job long before the talk took place.",
+   "execution": "Lines 27 and 28 have the lad say he didn't half a quarter like the job till he had this talk. Dropping the didn't turns that into liking it all along, before the talk."
+  },
+  {
+   "optionId": "cmsw2f4yh00witmbv30wx10iq",
+   "itemId": "ENG-020-HD-02",
+   "oldValue": "A thing that nobody had ever done before.",
+   "tag": "en-within-span-wrong-element",
+   "newValue": "An expression of horror on her face.",
+   "execution": "True at line 9, where she comes back with an expression of horror upon her face. That is how she looks, not what she finds; line 12 says she finds a heap of rolls at the bottom. Retagged from en-inference-literal-lookalike: the value is now a within-window detail answering a different question."
+  },
+  {
+   "optionId": "cmsw2f4yj00x0tmbv2bg9s591",
+   "itemId": "ENG-020-HD-05",
+   "oldValue": "That she wants to go back to the mountain.",
+   "tag": "en-plausible-not-stated",
+   "newValue": "That she wants to go back home to the mountain again.",
+   "execution": "No line from 21 to 25 has her sob anything about going home or the mountain. What she keeps sobbing out, at lines 23 and 24, is that the bread was all for grandmother and is gone."
+  },
+  {
+   "optionId": "cmsw2f4yk00x2tmbv3qhrz3fi",
+   "itemId": "ENG-020-HD-06",
+   "oldValue": "They had already gone hard and stale in the wardrobe.",
+   "tag": "en-minimal-pair-skim",
+   "newValue": "The rolls Heidi kept in the cupboard were hard and stale by now.",
+   "execution": "Line 29 has Clara say the rolls would have been hard and stale by then, meaning by the time Heidi went home. The child keeps hard and stale and changes one detail, by then to by now, so a reason about the future becomes a fact about the present."
+  },
+  {
+   "optionId": "cmsw2f4ym00xdtmbv6o9fb4qq",
+   "itemId": "ENG-020-HD-08",
+   "oldValue": "Because she is still angry about the bread.",
+   "tag": "en-emotion-label-approximation",
+   "newValue": "Because she is still angry that her bread was taken away.",
+   "execution": "Line 33 says she asks to make sure she could depend upon Clara's promise, which is doubt, not anger. Anger is a near neighbour of her distress over the bread, and no line from 33 to 36 gives it."
+  },
+  {
+   "optionId": "cmsw2f4yo00xrtmbv14jogp6s",
+   "itemId": "ENG-020-HD-11",
+   "oldValue": "She puts it in the cupboard and then wraps it up.",
+   "tag": "en-chronology-collapse",
+   "newValue": "She sticks it far back in the cupboard and then wraps a handkerchief round it.",
+   "execution": "Lines 44 and 45 say she stuck it in a corner of the cupboard after wrapping a handkerchief round it. This keeps both actions and swaps their order, so the wrapping comes last; only the order rules it out."
+  },
+  {
+   "optionId": "cmsw2f50l018ytmbv84gyywgn",
+   "itemId": "ENG-027-RR-10",
+   "oldValue": "He is ill and cannot help the shaking.",
+   "tag": "en-plausible-not-stated",
+   "newValue": "He is ill, and he cannot stop his hand from shaking.",
+   "execution": "No line gives him any illness; lines 53 and 54 say he looked to the right and to the left, as a man looks who thinks on flight, which is fear. The second half matches line 55, where his hand shook, so the first claim is the wrong one."
+  },
+  {
+   "optionId": "cmsw2f50l0190tmbv3cfti7vu",
+   "itemId": "ENG-027-RR-11",
+   "oldValue": "Because he had danced at Lord Topham’s house many times.",
+   "tag": "en-within-span-wrong-element",
+   "newValue": "Because he had danced at Lord Topham’s house before.",
+   "execution": "True at lines 66 and 67, where he had danced a score of times at Lord Topham's house in Grosvenor Square. That is why the old man might know him, the danger, not why he is thankful; line 67 gives that, the old man was as blind as a bat."
+  },
+  {
+   "optionId": "cmsw2f50o019itmbvb8lyuoh7",
+   "itemId": "ENG-028-PR-02",
+   "oldValue": "So many going in that she cannot keep count.",
+   "tag": "en-contradicted-by-the-text",
+   "newValue": "So many going in and out that she cannot count them.",
+   "execution": "Lines 7 and 8 say her eyes do the counting now without being asked, and line 7 gives the count itself: two go in, one comes out. So she can count them, and the passage says so."
+  },
+  {
+   "optionId": "cmsw2f50p019ltmbv087icdax",
+   "itemId": "ENG-028-PR-03",
+   "oldValue": "He wipes his hands down his shirt.",
+   "tag": "en-within-span-wrong-element",
+   "newValue": "He wipes his hands down his shirt and looks at the door.",
+   "execution": "True at line 11, where he wipes his hands down his shirt and looks at the door. That is what he does next about the bolt, not what he does with her words; line 10 is where he brushes those aside."
+  },
+  {
+   "optionId": "cmsw2f50q019rtmbvhr26rlax",
+   "itemId": "ENG-028-PR-04",
+   "oldValue": "Grandad showed her the gap under the boards.",
+   "tag": "en-plausible-not-stated",
+   "newValue": "Grandad had shown her the gap under the roof boards.",
+   "execution": "No line has anyone show her anything. Line 13 says she found them, and lines 13 and 14 say she reached in because her ball had gone down the side of the shed."
+  },
+  {
+   "optionId": "cmsw2f50u01aftmbvzuuaesat",
+   "itemId": "ENG-028-PR-09",
+   "oldValue": "The traffic under the boards has changed.",
+   "tag": "en-wrong-scope-retrieval",
+   "newValue": "Two still go in, and one comes out, as regular as buses.",
+   "execution": "True at lines 6 and 7, before anything changes: the traffic goes in and out as regular as buses, two in and one out. Lines 35 and 36 say they are now not going anywhere in particular. Replaces a value that restated the stem; retagged from en-inference-literal-lookalike."
+  },
+  {
+   "optionId": "cmsw2f50v01ajtmbvrtdoh49w",
+   "itemId": "ENG-028-PR-10",
+   "oldValue": "She has said it twice this morning.",
+   "tag": "en-within-span-wrong-element",
+   "newValue": "She has said his name twice this morning in that voice.",
+   "execution": "True at line 39, where she has said his name twice this morning in that voice. That is how often she has said it, not what happens; lines 39 and 40 say both times he has answered a different question."
+  }
+ ],
+ "redrafts": [
+  {
+   "optionId": "cmsw2f50u01ahtmbvdktbe0tp",
+   "itemId": "ENG-028-PR-09",
+   "value": "They have moved away from the roofline altogether.",
+   "tag": "en-contradicted-by-the-text",
+   "execution": "Line 36 keeps them turning over the same square of air above the guttering, so they have not moved away from the roofline. The passage states the contrary of this option."
+  },
+  {
+   "optionId": "cmsw2f50q019qtmbvnsvzuvz7",
+   "itemId": "ENG-028-PR-04",
+   "value": "She held a torch up to the gap.",
+   "tag": "en-wrong-scope-retrieval",
+   "execution": "True at line 19, on the Sunday, well after she first reached into the nettles on the second day of the holidays at line 13. Lines 13 and 14 say she reached in because her ball had gone down the side of the shed."
+  }
+ ],
+ "rebuilds": [],
+ "notes": {
+  "ENG-009-SM-01": "Most words shared with the cited lines and with the passage picked the key. The sea-wall distractor now reuses only line 1 and 2 words, so it ties the key on both.",
+  "ENG-009-SM-03": "Most words shared with the cited lines and the passage picked the key. The agent-swap distractor now uses window words (said, get, picture), tying the key on both.",
+  "ENG-009-SM-05": "The key was the only comma, the only two-part option and the longest. The wrong-scope distractor now has the same shape: two Saltmere details joined by a comma and and, 11 words.",
+  "ENG-009-SM-10": "The key was the only option with a comma. The chapel-bell distractor now carries a comma clause; same mistake.",
+  "ENG-009-SM-11": "Most words shared and the only not picked the key. The relation-word-flipped distractor now reuses window words; the not-stated phone distractor now carries a not.",
+  "ENG-013-TI-06": "The key was the longest in words. The negation-dropped distractor is now 10 words, tying it.",
+  "ENG-020-HD-02": "Most words shared with the cited lines and the passage picked the key. The seat that gave her feeling now gives her look from line 9, all window words; retagged within-span.",
+  "ENG-020-HD-05": "The key was the longest. The not-stated distractor is now 11 words.",
+  "ENG-020-HD-06": "The key was the longest and shared most words. The minimal-pair distractor now reuses hard, stale, Heidi and rolls, changing by then to by now.",
+  "ENG-020-HD-08": "The key was the longest. The emotion distractor now names what the anger is about, 11 words.",
+  "ENG-020-HD-11": "The key was the longest and shared most words. The order-swap distractor now names both actions in window words, 15 words. Its tag is kept as attested; en-minimal-pair-skim would also describe it.",
+  "ENG-027-RR-10": "The key was the only comma, the only two-part option and the longest. The illness distractor now has the same shape; its first claim is the wrong one.",
+  "ENG-027-RR-11": "Most words shared with the passage picked the key. The dancing distractor now ties it (0.8).",
+  "ENG-028-PR-02": "The key was the longest. The contradicted counting distractor is now 11 words.",
+  "ENG-028-PR-03": "The key was the longest. The within-span distractor now carries the rest of the line 11 to 12 sentence, 12 words.",
+  "ENG-028-PR-04": "The key was the longest. The not-stated distractor is now 10 words.",
+  "ENG-028-PR-09": "The key was the only comma, the only two-part and the longest, and one distractor restated the stem. That distractor is replaced with the old traffic pattern from lines 6 and 7, in the key's shape.",
+  "ENG-028-PR-10": "The key was the longest. The within-span distractor now carries in that voice, from the same line."
+ }
+}

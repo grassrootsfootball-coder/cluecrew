@@ -1,0 +1,109 @@
+{
+ "door": "english-rewrite/tells/B",
+ "mode": "APPLIED",
+ "landed": [
+  "ENG-005-BB-07",
+  "ENG-005-BB-05",
+  "ENG-005-BB-06",
+  "ENG-001-WIW-13",
+  "ENG-005-BB-12",
+  "ENG-001-WIW-07",
+  "ENG-004-AGG-09",
+  "ENG-001-WIW-16",
+  "ENG-001-WIW-09",
+  "ENG-010-JE-03",
+  "ENG-001-WIW-14",
+  "ENG-010-JE-05",
+  "ENG-025-LW-07",
+  "ENG-010-JE-02",
+  "ENG-001-WIW-05",
+  "ENG-025-LW-02",
+  "ENG-014-TS-07",
+  "ENG-017-CR-04",
+  "ENG-017-CR-06",
+  "ENG-021-ED-06",
+  "ENG-005-BB-11",
+  "ENG-005-BB-01",
+  "ENG-004-AGG-12",
+  "ENG-005-BB-03",
+  "ENG-010-JE-10",
+  "ENG-017-CR-01",
+  "ENG-025-LW-11",
+  "ENG-017-CR-03",
+  "ENG-010-JE-04",
+  "ENG-014-TS-02",
+  "ENG-017-CR-02",
+  "ENG-021-ED-09",
+  "ENG-004-AGG-11",
+  "ENG-001-WIW-02",
+  "ENG-010-JE-06"
+ ],
+ "held": [
+  {
+   "itemId": "ENG-001-WIW-06",
+   "gateFaults": [],
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-001-WIW-06",
+    "verdict": "HOLD",
+    "reason": "A tell in tellsPointingAtKey still singles out the key. The measure with --after shows 'most words shared with the cited lines' still picking the key: it is lifted verbatim from lines 14 to 15, and the drafter says so. The seat breaks longest (words) only. This needs a rebuild that rewords the key while keeping it complete, for example 'In a great field of warm grass.' Or it needs a distractor built only from window words that is wrong under every reading. The row is otherwise one-answer."
+   }
+  },
+  {
+   "itemId": "ENG-004-AGG-05",
+   "gateFaults": [],
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-004-AGG-05",
+    "verdict": "SIGN",
+    "reason": "One answer: off the train with the girl, then left with the stationmaster. Longest and window broken; no tell points at the key."
+   }
+  },
+  {
+   "itemId": "ENG-004-AGG-01",
+   "gateFaults": [],
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-004-AGG-01",
+    "verdict": "SIGN",
+    "reason": "One answer: he slipped past without looking. Window tell broken; no option now has a comma, so no comma tell either way."
+   }
+  },
+  {
+   "itemId": "ENG-017-CR-08",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "seat:cmsw2f4xu00sutmbv7madxw37",
+     "verdict": "REFUSE",
+     "reason": "Not wrong under every reading. Lines 15 to 16 say the remark was 'evidently too much for Captain Brown to take placidly'. Lines 32 to 33 have him screw his lips up and drum on the table. His Rambler question at line 36 is a pointed retort to her 'finishing blow' (lines 33 to 35). So 'Angrily' has real support, and the new clause 'as he could not keep his temper' nearly paraphrases lines 15 to 16. A child, or a parent marking, can defend it, which gives the row a second answer. The execution says 'anger is a likely-sounding manner the lines never give', true only of lines 35 to 37, and leaves out lines 15 to 16 and 32 to 33, which point the other way. Use a manner the passage flatly denies. Or put the needed 'not' on the loud-voice seat: 'In a loud voice that Miss Jenkyns could not miss.'"
+    }
+   ],
+   "row": {
+    "itemId": "ENG-017-CR-08",
+    "verdict": "HOLD",
+    "reason": "The temper seat is refused: 'Angrily' is supported by lines 15 to 16 ('too much for Captain Brown to take placidly') and lines 32 to 33 (screwed lips, drumming). As proposed, the row has a defensible second answer to how he asked. Without that seat the only-'not' tell is unbroken, because the key's 'could not hear' would again be the only 'not'. Rework the temper seat, or move the 'not' to the loud-voice seat. The key also stays the only hedged option ('probably'), which is not failing but is worth removing if the key is touched."
+   }
+  },
+  {
+   "itemId": "ENG-001-WIW-10",
+   "gateFaults": [],
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-001-WIW-10",
+    "verdict": "SIGN",
+    "reason": "One answer from 'impatient' and the rush. Longest and only-'not' are broken; no tell points at the key."
+   }
+  },
+  {
+   "itemId": "ENG-001-WIW-03",
+   "gateFaults": [],
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-001-WIW-03",
+    "verdict": "SIGN",
+    "reason": "Key alone correct within lines 5 to 9. Longest (words) and only-'not' are broken. Longest (characters) and stem overlap still point at the key, as before; neither is failing. Note for a later fix, not the child's row: the untouched cause-agent execution says the Rat does not appear until line 54, but he is named at line 52."
+   }
+  }
+ ]
+}

@@ -1,0 +1,268 @@
+{
+ "door": "english-rewrite/tells/C",
+ "reviewer": "rev-agent-01",
+ "changes": [
+  {
+   "ref": "seat:cmsw2f4ur00aktmbv48ymj7ni",
+   "verdict": "ATTEST",
+   "reason": "Wrong under every reading: line 9 sends 'one of the boys after her', Uncle Podger does not go himself. Agent swap on the second half is what en-cause-agent-swap names. Execution checked against lines 8-9. Ties the key on comma, 11 words and full window overlap."
+  },
+  {
+   "ref": "seat:cmsw2f4ut00attmbvdb4qa16o",
+   "verdict": "REFUSE",
+   "reason": "The emphatic 'does' is there for the instrument, not the child. With plain 'and he saves the glass' the measure's stemmer turns 'saves' into 'sav', which misses the window's 'save', so overlap drops to 0.60 and the key's 0.80 stays unique. 'does save' keeps the bare 'save' and fakes a tie at 0.80. It also stretches the option to 13 words against the key's 11. To a child, emphatic do-support reads as a line arguing back ('he DOES save it'), so it marks this option as the trap. Wrongness and tag are fine: lines 24-25 say a new glass had to be got, which is en-minimal-pair-skim. Redraft with a natural wording that ties on overlap without leaning on the stemmer."
+  },
+  {
+   "ref": "seat:cmsw2f4ut00aztmbvtut0vrwb",
+   "verdict": "ATTEST",
+   "reason": "Lines 20-21 put the handkerchief in the coat pocket. The tools are what the house leaves off looking for (line 22) and are brought separately at line 25. Moving the coat to the tools is a true en-attribute-transfer, and the wording is coherent as a wrong reason. Execution's line numbers and facts checked. Retag from literal-lookalike is right."
+  },
+  {
+   "ref": "seat:cmsw2f4uw00bdtmbvm7pq6k3n",
+   "verdict": "REFUSE",
+   "reason": "'The string.' can be ruled out from the stem alone. The question already says the string is what slips ('when the string slips'), so a child crosses it off without opening lines 43-45. That makes it a stem echo, the very thing the brief says to replace, even though at one token it falls below the measure's 3-token echo threshold. It is not a reading mistake, so en-within-span-wrong-element (located the lines, took the wrong element) fits only in form. Its tie is with a 2-word key, and it now leaves 'shortest (characters)' on the key (10 vs 11 characters). The drafter's worry is also correct: the remaining window elements ('the notes', 'the keys', 'his head') are what he struck, so they risk a second answer. This window may offer no safe tie. Better to leave the seat as it was than seat a free elimination."
+  },
+  {
+   "ref": "seat:cmsw2f4ux00bjtmbvszhqnr73",
+   "verdict": "REFUSE",
+   "reason": "The option contradicts itself. Uncle Podger is the one doing the job, so 'Have him stay at his mother's while the job is done' sends away the only person doing it. A child can see that without reading lines 49-51, so it is not a reading mistake. It is the key with its pronouns flipped: its scored tokens (stay, mother, while, job, done) are the key's exactly. That gives a twin of the key in which only the key makes sense, a new giveaway. It also invents a mother for Uncle Podger, and the execution says nothing about that change. The tag fits only in form."
+  },
+  {
+   "ref": "seat:cmsw2f4ux00botmbvfxke6ea2",
+   "verdict": "ATTEST",
+   "reason": "Same claim as the reviewed old value, now 15 words with real content. 'very' in 'went very badly' is natural English. Wrong: line 62 has evident pride, and lines 59-60 make him the one person not wretched ('except Uncle Podger'), so no line shows him aware that it went badly. en-plausible-not-stated fits. Execution true. It also clears the old 'only option without a comma' pointer at the key."
+  },
+  {
+   "ref": "seat:cmsw2f4v600d6tmbvpx40n2et",
+   "verdict": "ATTEST",
+   "reason": "No blankets or bed appear anywhere in the passage (searched). Line 1 gives the hair-pulling. 'one by one' is a mild manner phrase that parallels the key's 'gently but hard enough', not a contortion. en-plausible-not-stated fits. Execution true. The comma tell is broken and the option is 8 words to the key's 8."
+  },
+  {
+   "ref": "seat:cmsw2f4v800dftmbv4z0pz8m0",
+   "verdict": "ATTEST",
+   "reason": "Wrong: lines 9-10 have them wash under the spout of the pump, and line 11 ('more fun than basin washing') shows there was no basin. The basin comes from line 11, outside the 8-10 window, which is en-wrong-scope-retrieval. Execution checked. Ties the key on 'while' and window overlap (0.60)."
+  },
+  {
+   "ref": "seat:cmsw2f4vb00dvtmbv3ii0vcak",
+   "verdict": "ATTEST",
+   "reason": "Same claim as the reviewed old value, recast as 'X, so Y'. Line 41 calls it an excellent fire and no line says it was too big. The cause is the kettle left on from half-past five (line 41) until eight (line 39). Execution true. en-plausible-not-stated fits. Breaks 'only option with a comma'."
+  },
+  {
+   "ref": "seat:cmsw2f4w000i2tmbvygbnbl8j",
+   "verdict": "ATTEST",
+   "reason": "Both halves are true in the window: the drive starts at line 2 and the lovely July evening is at line 3. Neither is the reason. Line 1 gives the seven miles, and 'they started their drive' follows the sending and does not cause it. That is en-within-span-wrong-element exactly. Execution true (paraphrase, not quotation). Ties passage overlap."
+  },
+  {
+   "ref": "seat:cmsw2f4wa00jqtmbvebr7f15z",
+   "verdict": "ATTEST",
+   "reason": "No school anywhere in the passage (searched). Lines 1-4 give the scents. ', as a treat' is natural, plausible content and not padding. en-plausible-not-stated fits. Execution true. Breaks the comma tell."
+  },
+  {
+   "ref": "seat:cmsw2f4wc00k0tmbv2w4ipamx",
+   "verdict": "ATTEST",
+   "reason": "Lines 7-8 have Maggie ask, and Tom answers at lines 9-10. The full swap of asker and answerer is en-agent-patient-reversal. Execution true, including the 'to-morrow' quotation. The added '; she says she will not' gives the option a 'not' that is still wrong. Pre-existing, not introduced here: 'Tom asks...' contradicts the stem ('What does Maggie ask'), so a stem reader can drop it. See the row note."
+  },
+  {
+   "ref": "seat:cmsw2f4wf00kftmbvx9omd5j1",
+   "verdict": "ATTEST",
+   "reason": "Line 31 is Tom's 'You keep your eyes shut' to Maggie, and line 30 is his 'you choose'. Swapping who instructs whom is en-agent-patient-reversal. Execution true. 'keep his own eyes shut' is natural wording and ties window overlap at 0.83. The stem contradiction ('Maggie tells Tom' against 'What does Tom tell Maggie') was already there."
+  },
+  {
+   "ref": "seat:cmsw2f4wf00kktmbv6dr7dnmj",
+   "verdict": "REFUSE",
+   "reason": "Three faults. (1) Contorted to win measures: 'out of her power of sacrifice' is line 33's phrase lifted into a sentence no child would write. It brings the option to 12 words, tying the key, and to 1.00 window overlap. (2) Dropping 'pure' removes what made the old value wrong. Line 33 does not deny Maggie a power of sacrifice. It says that power 'did not extend so far', and line 35 says she wants credit 'for giving him the best bit'. A reader can argue she acts partly from sacrifice, so the option is no longer cleanly false. (3) For the same reason en-negation-dropped fits only loosely. Dropping the 'not' gives 'her power of sacrifice extended so far', which is not what the option says. 'She gives Tom the best bit' is also off the stem: it does not say why she shuts her eyes."
+  },
+  {
+   "ref": "seat:cmsw2f4wh00krtmbvksm0gmyp",
+   "verdict": "ATTEST",
+   "reason": "Wrong: lines 43-44 have him look on 'feeling in himself a capacity for more', which is appetite, and at line 47 he calls her greedy. en-emotion-label-approximation fits. Execution true ('watch' paraphrases 'look on', not a quotation). Ties the key's 'watched her,' comma shape naturally."
+  },
+  {
+   "ref": "seat:cmsw2f4wi00kxtmbvkrck1b5j",
+   "verdict": "ATTEST",
+   "reason": "Same motive as the reviewed old value. 'her half' is natural and adds content, not padding, and ties at 11 words. Lines 48-49 give his reason: he acted fairly and she ought to have made up to him for it. Jealousy is invented, which is en-motive-invention. Execution true."
+  },
+  {
+   "ref": "seat:cmt9qp4p30003tmovpgjineba",
+   "verdict": "ATTEST",
+   "reason": "Lines 25-26 put 'eight miles' and 'this morning' in the mother's speech, outside the 1-4 window. Lines 3-4 give the mail. en-wrong-scope-retrieval fits. Execution true (paraphrase). 'that very morning' is an ordinary idiom, not contortion. The 'very' is there for the word count (9 vs 9) but does not read as padding."
+  },
+  {
+   "ref": "seat:cmsw2f4y200u5tmbvo0af9gaq",
+   "verdict": "ATTEST",
+   "reason": "Lines 36-37: the rattle of the wheels and the creaking of the harness are what he heard the voice ABOVE, not what he took it for. Line 37 gives the cricket, tree toad or bird. That is en-within-span-wrong-element exactly, and wrong under every reading. Execution true. Breaks the comma and longest tells."
+  },
+  {
+   "ref": "seat:cmsw2f4y300uctmbvs6fya95w",
+   "verdict": "ATTEST",
+   "reason": "Line 46: the stage is 'so much too big for me'. Line 47: the windows are 'so small'. The option swaps both sizes, so both halves are wrong. That is en-attribute-transfer (right attribute, wrong value). Execution true. Ties the key's ', and' shape."
+  },
+  {
+   "ref": "seat:cmsw2f4y500umtmbv7ibfyiae",
+   "verdict": "ATTEST",
+   "reason": "Hardest look, but it holds. Line 53 smooths the DRESS under her. Line 54 puts the sunshade 'under its extended folds', and 'its' can only be the dress. No reading has her smooth the sunshade or sit on it, so the option is wrong. The same element of the same lines is applied to the wrong object, which is en-within-span-wrong-element as on the reviewed old value. 'as she sat' is line 53's 'sat down', it reads naturally, and it is not padding a child would notice. Execution true."
+  },
+  {
+   "ref": "seat:cmt9qp4r2000gtmovjo6jhpp4",
+   "verdict": "ATTEST",
+   "reason": "Lines 3 and 5: Mark refuses ('No, you go', 'I shan't'). The option's first claim is the contrary, which is en-contradicted-by-the-text, and its second half being true does not save it. Execution true. Ties the key on comma, two parts and 'not'."
+  },
+  {
+   "ref": "seat:cmsw2f4y900vctmbvktd7vyvp",
+   "verdict": "ATTEST",
+   "reason": "Same content as the reviewed old value, reordered. Line 19's 'marched on very upright' belongs to Bevis, not to the sand, so this is en-attribute-transfer. Execution true. Breaks the comma tell."
+  },
+  {
+   "ref": "seat:cmsw2f4ya00vetmbvsa221id7",
+   "verdict": "ATTEST",
+   "reason": "Line 24's 'it had shrunk' refers to the lake ('the willow bushes... which... were in the water'). Giving the shrinking to the bushes misreads the referent, which is en-cause-agent-swap. Shrunk bushes would not leave them yards from the water, so the option is wrong under every reading. Execution true. Ties window overlap (1.00)."
+  },
+  {
+   "ref": "seat:cmsw2f4yd00vztmbvukuyrbxe",
+   "verdict": "ATTEST",
+   "reason": "Lines 49-53: Pan comes back, waits, then runs along the face of the cliff ahead of Bevis. Having Pan follow Bevis is en-cause-agent-swap and is wrong. The hint 'Two of these put Bevis in front of the dog' still counts true (this option and the ledge option). Execution true. Window overlap moves to this distractor."
+  },
+  {
+   "ref": "seat:cmsw2f4z5010gtmbvmgbd8uxi",
+   "verdict": "ATTEST",
+   "reason": "Lines 26-27 'I could have had it. I had my hands / on it.' is quoted exactly. 'did not even get a hand to it' is the contrary claim, so the retag to en-contradicted-by-the-text is right. It is a familiar football phrase for a 9-11-year-old. Breaks the 'only not' and longest tells."
+  },
+  {
+   "ref": "seat:cmsw2f504016atmbv5hkbac6o",
+   "verdict": "ATTEST",
+   "reason": "Grandad's remark at line 7 ('Staked late') is restated with a 'not'. It is the remark, not Cass's decision, which is en-within-span-wrong-element. Line 8's 'taller than me and him put together' shows she does not agree, so the option is wrong. Execution true. Breaks the 'only not' tell."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "ENG-006-TM-02",
+   "verdict": "SIGN",
+   "reason": "Read whole: one defensible answer (line 9: a boy follows the girl). Comma and longest no longer single out the key, and the measure after shows no tell pointing at it. Minimal-pair twin with the key, decidable from line 9."
+  },
+  {
+   "itemId": "ENG-006-TM-04",
+   "verdict": "HOLD",
+   "reason": "Its only seat is refused: the emphatic 'he does save the glass' exists to keep the measure's stemmed overlap tied, and it marks the option to a child. Comma, two-part and overlap still single out the key until a natural redraft lands."
+  },
+  {
+   "itemId": "ENG-006-TM-05",
+   "verdict": "SIGN",
+   "reason": "One defensible answer (the handkerchief, lines 20-21). Comma, two-part, longest words and overlap are tied. 'longest (characters)' still picks the key (76 vs 70), which is not a failing tell. No new giveaway."
+  },
+  {
+   "itemId": "ENG-006-TM-09",
+   "verdict": "HOLD",
+   "reason": "Its only seat is refused: 'The string.' is eliminable from the stem itself. The window offers no safe tie, because the other in-window elements risk a second answer. Leaving the row as it was is preferable to a free elimination."
+  },
+  {
+   "itemId": "ENG-006-TM-10",
+   "verdict": "HOLD",
+   "reason": "Its only seat is refused: the option sends Uncle Podger away 'while the job is done' although he is the one doing it. It is the key with pronouns flipped, and only the key makes sense, which is a new giveaway."
+  },
+  {
+   "itemId": "ENG-006-TM-11",
+   "verdict": "SIGN",
+   "reason": "One defensible answer (lines 59-62: unchanged pride). Longest is tied at 15 words. The 'only option without a comma' pointer is cleared. 'most words shared with the stem' still picks the key, as before, and is not failing."
+  },
+  {
+   "itemId": "ENG-008-RC-01",
+   "verdict": "SIGN",
+   "reason": "One defensible answer (line 1). Comma and word count are tied. 'longest (characters)' remains on the key by 2 characters and is not failing. No new giveaway."
+  },
+  {
+   "itemId": "ENG-008-RC-03",
+   "verdict": "SIGN",
+   "reason": "One defensible answer (lines 9-10). Two-part, longest and window overlap no longer single out the key. The measure shows no tell on the key."
+  },
+  {
+   "itemId": "ENG-008-RC-06",
+   "verdict": "SIGN",
+   "reason": "One defensible answer (left on from half-past five to eight). Comma tie. 'FEWEST words shared with the cited lines' still picks the key, as before, and is not failing for inference."
+  },
+  {
+   "itemId": "ENG-011-CV-01",
+   "verdict": "SIGN",
+   "reason": "One defensible answer (line 1). Passage overlap tied. 'shortest (characters)' picks the key, as before, and is not a key-pointing failure. No new giveaway."
+  },
+  {
+   "itemId": "ENG-012-ML-01",
+   "verdict": "SIGN",
+   "reason": "One defensible answer (lines 1-4). Comma tie. 'shortest (characters)' picks the key, as before."
+  },
+  {
+   "itemId": "ENG-012-ML-03",
+   "verdict": "SIGN",
+   "reason": "One defensible answer (lines 7-10). 'not' and longest tied, and no tell picks the key. Note for the author, not introduced here: the reversal option opens 'Tom asks', which contradicts the stem's 'What does Maggie ask', so a stem reader drops it. The key also sits at the overlap of two twins (the 'he says he will' option and this one)."
+  },
+  {
+   "itemId": "ENG-012-ML-06",
+   "verdict": "SIGN",
+   "reason": "One defensible answer (lines 27-31). Window overlap tied, and no tell picks the key. Pre-existing note: 'Maggie tells Tom...' contradicts the stem's 'What does Tom tell Maggie'."
+  },
+  {
+   "itemId": "ENG-012-ML-07",
+   "verdict": "HOLD",
+   "reason": "Its only seat is refused: the lifted 'out of her power of sacrifice' is contorted for word count and overlap. Dropping 'pure' leaves the option arguable against line 33's 'did not extend so far'. The old seat's longest and passage-overlap tells stand until a redraft."
+  },
+  {
+   "itemId": "ENG-012-ML-09",
+   "verdict": "SIGN",
+   "reason": "One defensible answer (lines 43-44: wanting more). Comma tied, and no tell picks the key."
+  },
+  {
+   "itemId": "ENG-012-ML-10",
+   "verdict": "SIGN",
+   "reason": "One defensible answer (lines 48-49). Longest tied at 11 words. 'only hedged option' picks the key through its 'some', as before, and is not failing."
+  },
+  {
+   "itemId": "ENG-018-RB-01",
+   "verdict": "SIGN",
+   "reason": "One defensible answer (lines 3-4: the mail). Longest tied at 9 words, and no tell picks the key."
+  },
+  {
+   "itemId": "ENG-018-RB-07",
+   "verdict": "SIGN",
+   "reason": "One defensible answer (line 37). Comma and longest no longer single out the key. 'shortest (characters)' now picks the key (37 characters) and is not failing (x0.76 door-wide)."
+  },
+  {
+   "itemId": "ENG-018-RB-08",
+   "verdict": "SIGN",
+   "reason": "One defensible answer (lines 45-47). Comma and two-part tied. 'longest (characters)' remains on the key by 3 characters and is not failing."
+  },
+  {
+   "itemId": "ENG-018-RB-10",
+   "verdict": "SIGN",
+   "reason": "One defensible answer (lines 54-55). Longest and window overlap no longer single out the key, and no tell picks it. The smoothing distractor cannot be read as true of the sunshade."
+  },
+  {
+   "itemId": "ENG-019-BV-02",
+   "verdict": "SIGN",
+   "reason": "One defensible answer (Mark refused, lines 3 and 5; the fish left, line 6). Comma, 'not' and longest words tied. 'longest (characters)' remains on the key and is not failing."
+  },
+  {
+   "itemId": "ENG-019-BV-05",
+   "verdict": "SIGN",
+   "reason": "One defensible answer (soft ground that takes a print). Comma tied, and no tell picks the key."
+  },
+  {
+   "itemId": "ENG-019-BV-06",
+   "verdict": "SIGN",
+   "reason": "One defensible answer (line 24: the lake shrank). Window overlap tied. 'shortest (characters)' picks the key, as before. Twin of the key decided by line 24's referent."
+  },
+  {
+   "itemId": "ENG-019-BV-10",
+   "verdict": "SIGN",
+   "reason": "One defensible answer (lines 52-54). Window overlap moved off the key. The hint's 'two of these' still holds. 'shortest (characters)' picks the key, as before."
+  },
+  {
+   "itemId": "ENG-022-GK-06",
+   "verdict": "SIGN",
+   "reason": "One defensible answer (lines 23 and 26-27). 'not' and longest words tied. 'longest (characters)' remains on the key and is not failing."
+  },
+  {
+   "itemId": "ENG-026-AL-02",
+   "verdict": "SIGN",
+   "reason": "One defensible answer (line 9: not that kind of conversation). The 'only not' tell is broken. 'shortest (characters)' and 'FEWEST cited-line words' picked the key before this change and still do, and neither is a key-pointing failure."
+  }
+ ]
+}

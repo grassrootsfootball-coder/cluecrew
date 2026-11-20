@@ -1,0 +1,328 @@
+{
+ "door": "english-rewrite/tells/A",
+ "reviewer": "rev-agent-01",
+ "changes": [
+  {
+   "ref": "seat:cmsw2f4tk003htmbvrm3ku9zj",
+   "verdict": "ATTEST",
+   "reason": "Wrong under every reading: lines 5-6 give his hopes and what he had heard, narrated, not something the daughters found out; lines 7-8 give only the coat and horse. Retag to en-within-span-wrong-element fits (true inside lines 5-8, answers a different question). Execution quote checked against lines 5-6 verbatim; line refs right. Breaks comma, two-part, longest-words and window overlap (measure: no tell left on the key)."
+  },
+  {
+   "ref": "seat:cmsw2f4tp004atmbvxcya03ju",
+   "verdict": "ATTEST",
+   "reason": "Wrong: line 22 names only 'the husband of the eldest', and five altogether (lines 21-22) leaves no room for a second husband; arithmetic 1+2+2+1=6 is right. Retag to en-minimal-pair-skim fits: one detail (eldest -> both) differs from the key/text. Quote 'consisted of only five altogether' spans lines 21-22 as cited. Breaks two-part and longest."
+  },
+  {
+   "ref": "seat:cmsw5vr57000etm8esao6ledr",
+   "verdict": "ATTEST",
+   "reason": "Wrong under every reading: the passage itself separates the two at lines 24-25 ('a pleasant countenance, and easy, unaffected manners') and for Mr Darcy at lines 31 and 34. Retag to en-coordination-wrong-conjunct fits exactly: the gloss is taken from the other conjunct of the pair. Both quotations verified at the cited lines. Breaks two-part and window overlap; key was already the shortest option before the change, so that is not new."
+  },
+  {
+   "ref": "seat:cmsw2f4ts004ptmbvsq6f4lim",
+   "verdict": "ATTEST",
+   "reason": "Wrong: liveliness and dancing are Mr Bingley's (line 37); Mr Darcy dances twice (lines 39-40) and in any case had not danced when he first walked in. Tag en-attribute-transfer unchanged and right. Quotations at lines 27, 29 and 37 verified. Ties comma, two-part and length with the key."
+  },
+  {
+   "ref": "seat:cmsw2f4tt004ytmbv8edsn0z2",
+   "verdict": "ATTEST",
+   "reason": "Wrong: the anger at the ball closing is Mr Bingley's, and comes at the end of the evening, not halfway. Tag en-attribute-transfer right. Quotes verified; note the quote 'was angry that the ball closed so early' runs from line 37 onto line 38 (cited as 'Line 37', where it begins), and 'to be above his company' runs 32-33 inside the cited 31 to 33. Ties comma and length."
+  },
+  {
+   "ref": "seat:cmsw2f4tv0059tmbv1xbzsfbj",
+   "verdict": "ATTEST",
+   "reason": "Wrong: line 40 gives Mrs Hurst and Miss Bingley; Mr Darcy never dances with Elizabeth (she sits out, line 47; he refuses at 66-67). Tag en-minimal-pair-skim right: one name differs from the key. Adding the surname is natural, not padding. Ties length in words (10 each)."
+  },
+  {
+   "ref": "seat:cmsw2f4ty005qtmbvcxcdm3f1",
+   "verdict": "REFUSE",
+   "reason": "Second-answer risk, and the tag does not hold. 'Would not dance with her' is a standing unwillingness, not a single later event: line 40 already has Mr Darcy decline 'being introduced to any other lady', lines 53-56 refuse dancing outright, and lines 62-67 refuse Elizabeth by name while she sits. The 'scarcity of gentlemen' at line 47 is partly HIS doing: he is a gentleman standing about by himself (lines 51-52) who would not dance. So 'Mr Darcy was standing near and would not dance with her' can be defended as a reason she had to keep sitting, and the added 'standing near' now grounds it in the cited window (line 48). en-chronology-collapse requires the cause to come LATER than the effect; the unwillingness is stated at line 40, before line 47, so the execution's 'a later event as the cause of an earlier one' is not true of this wording. Suggested repair for the overlap tell instead: a within-span option from lines 48-50 that answers a different question, e.g. 'Mr Bingley came away from the dance to talk to Mr Darcy.' (true at lines 49-50, not why she sat), tagged en-within-span-wrong-element."
+  },
+  {
+   "ref": "seat:cmsw2f4u6006wtmbv4brlsm83",
+   "verdict": "ATTEST",
+   "reason": "Wrong: lines 71-73 have her tell it 'with great spirit' because she 'delighted in anything ridiculous', which is not seeking pity. Tag en-motive-invention right. Quotes verified (the second runs 72-73, inside the cited 71 to 73). The added clause is real content, not padding; ties length. The key is now the option with fewest window words, but that tell is not failing (x0.64 door-wide) and it was already so on the live row."
+  },
+  {
+   "ref": "seat:cmsw2f4uz00bxtmbvr595tuqp",
+   "verdict": "ATTEST",
+   "reason": "Wrong: line 9 gives the bin bag to soles coming off; the charity collection is the second box's. Tag en-within-span-wrong-element right (true in lines 8-9 of the second box). Quote 'the charity collection on Friday morning' runs lines 8-9 as cited. 'On Friday' is passage content, not padding. Breaks longest-words."
+  },
+  {
+   "ref": "seat:cmsw2f4v000c2tmbvpp505y63",
+   "verdict": "ATTEST",
+   "reason": "Wrong: Reuben's first reply ('These are all size nine', line 17) comes before Whitby is mentioned, and neither reply is about Whitby or the group. Retag to en-within-span-wrong-element fits its named WRONG SPEAKER sub-route: Whitby and the group are Ilya's (line 19). Line refs in the execution verified. Ties comma and 'not' with the key."
+  },
+  {
+   "ref": "seat:cmsw2f4v100c5tmbvgqit3fr3",
+   "verdict": "REFUSE",
+   "reason": "The tag does not name this mistake. en-within-span-wrong-element is defined as an option that is TRUE inside the cited window and answers a different question; 'They go to shops in Leeds, then to a warehouse.' is not true anywhere in lines 24-25 and it does answer the question asked, only in the wrong order and with the shops moved to Leeds (two altered details). Its child hint ('Check it answers the question you were asked') would send a child who chose it to the wrong fix. The value itself is wrong under every reading and the execution's quotations are exact; the fault is the tag. Repair: drop 'in Leeds' so one detail differs ('They go out to shops, then to a warehouse.', which keeps the comma and the window words) and tag en-minimal-pair-skim."
+  },
+  {
+   "ref": "seat:cmsw2f4v100cctmbvnnbq0nq2",
+   "verdict": "ATTEST",
+   "reason": "Wrong: line 31 says he 'knew before he turned the collar out whose it was'. Tag en-contradicted-by-the-text right: the passage states the contrary. Collar found at lines 44-45 verified. The new wording no longer restates the stem (measure: no echo on this row)."
+  },
+  {
+   "ref": "seat:cmsw2f4v200cftmbvz13535wn",
+   "verdict": "ATTEST",
+   "reason": "Wrong: lines 35-36 'put it back without opening it'. Tag en-negation-dropped right: 'without' is the negative word dropped. Quote verified across lines 35-36. Breaks the window-overlap tell."
+  },
+  {
+   "ref": "seat:cmtdflmov000dtmf5bfbxp4lb",
+   "verdict": "ATTEST",
+   "reason": "Wrong: lines 38-39 give eleven names and 'plenty of room left at the bottom', so the sheet is not full. Retag to en-contradicted-by-the-text fits: the passage states the contrary. Execution facts verified. Ties 'not' and breaks longest-words. One new non-failing tell on the key (fewest window words, x0.64 door-wide, x1.06 in inference); not a giveaway."
+  },
+  {
+   "ref": "seat:cmsw2f4v400cqtmbv9nugjx8z",
+   "verdict": "ATTEST",
+   "reason": "Wrong: 'get out of spellings' (line 41) means missing them; 'after spellings' means doing them first. No reasonable reading of 'get out of' gives 'after'. Retag to en-minimal-pair-skim fits: one detail differs from the key. Quote verified at line 41. Breaks window and passage overlap."
+  },
+  {
+   "ref": "seat:cmsw2f4v500cutmbvizmkauqb",
+   "verdict": "ATTEST",
+   "reason": "Wrong: at lines 48-49 she folds the jumper 'the way he had folded it' and shuts the box; she waits for no apology. The first claim alone ('thinks he made a mistake') is arguable, but the second is false, so the option is wrong as a whole. Tag en-motive-invention right. Quotes at lines 47 and 49 verified. Ties comma and two-part."
+  },
+  {
+   "ref": "seat:cmtdflmp3000ktmf5zcispic4",
+   "verdict": "ATTEST",
+   "reason": "Wrong: line 14 has him 'put it in the returns box anyway'. Tag en-motive-invention right. Quote verified (line 14, inside the cited 13 and 14). Ties the 'rather' hedge and the length."
+  },
+  {
+   "ref": "seat:cmtdflmpc000ptmf5ujf9ioc4",
+   "verdict": "ATTEST",
+   "reason": "Wrong: line 33 'in the Friday box, low down'. Tag en-contradicted-by-the-text right. Quotes at lines 33 and 34 verified; the returns box is the named-things box (lines 7-8, 14). It uses the passage's 'pushed' where the key says 'pressed'; they are synonyms, so the key stays correct. Ties two-part and window overlap."
+  },
+  {
+   "ref": "seat:cmsw2f4xc00pxtmbvvoozp22k",
+   "verdict": "ATTEST",
+   "reason": "Wrong: 'as though it cried' (lines 69-70) is a figure; the flame did not speak. Tag en-figurative-taken-literally right. Quote verified across lines 69-70. Ties length in words (8 each). Note: the drafter's row note says the option 'now quotes Marley's Ghost'; it does not. It adds 'loud'. The seat is fine; the note is inaccurate."
+  },
+  {
+   "ref": "seat:cmsw2f4xg00qitmbvsjiocosv",
+   "verdict": "ATTEST",
+   "reason": "Wrong: lines 11-16 never mention crowding; the surprise is the armed men in 'a sweet, simple country spot'. Tag en-plausible-not-stated right. Quotes verified (lines 12-14). 'Not big enough' is a natural rewording, not padding. Ties 'not' and length (11 words each)."
+  },
+  {
+   "ref": "seat:cmsw2f4xg00qktmbvj3bjadn4",
+   "verdict": "ATTEST",
+   "reason": "Wrong: the gabled houses are in the sunlit country (lines 17-18), not behind it; line 19 gives the moor. Tag en-within-span-wrong-element right. Quotations verified. Ties comma; window overlap is no longer the key's alone."
+  },
+  {
+   "ref": "seat:cmsw2f4zb011ltmbvhf39febq",
+   "verdict": "ATTEST",
+   "reason": "Wrong: line 15 'not dead but half choked'; the swap contradicts it. Retag to en-minimal-pair-skim fits: one detail, which word goes with 'not' and which with 'half'. Quote verified at line 15. Ties comma and 'not'."
+  },
+  {
+   "ref": "seat:cmsw2f4zd011vtmbvgarr8mc5",
+   "verdict": "ATTEST",
+   "reason": "Wrong: lines 28-29 give his own reason (more things to find out); no line offers continued feeding. Tag en-motive-invention right. Quotes at lines 25 and 28 verified. 'Raw meat' is passage content, not padding. Breaks longest."
+  },
+  {
+   "ref": "seat:cmsw2f4zf0122tmbv3xbj4jcy",
+   "verdict": "ATTEST",
+   "reason": "Wrong: it describes the garden rather than saying what it means to him (line 44, 'splendid hunting-ground'). Tag en-inference-literal-lookalike right. Quote 'a large garden, only half cultivated' verified across lines 41-42. Ties length in words (10 each)."
+  },
+  {
+   "ref": "seat:cmsw2f4zg0129tmbvw8anrpba",
+   "verdict": "ATTEST",
+   "reason": "Wrong: 'a stranger here' (line 54) is somebody new to the place; the article rules out a comparative. Tag en-vocab-built-from-parts right (strange + -er). Quote verified at line 54. Ties comma. 'Odd' and 'more strange' say much the same thing, but as one mistaken gloss, not as filler a child would spot. The key is longer by one character; it was already the longest by characters on the live row, and that tell is not failing (x0.73 in vocab)."
+  },
+  {
+   "ref": "seat:cmsw2f4zg012ftmbvvquly3xn",
+   "verdict": "ATTEST",
+   "reason": "Wrong: lines 55-56 give the hiss as why they cower without answering; the baby news (lines 52-53) does not say who Nag is, which is the question they leave unanswered. Tag en-wrong-scope-retrieval right. Quote verified across lines 52-53. Breaks longest."
+  },
+  {
+   "ref": "seat:cmsw2f4zl0136tmbvbzr1es6v",
+   "verdict": "ATTEST",
+   "reason": "Wrong: it restates the instruction, not how Dilan deals with it. Tag en-inference-literal-lookalike right. Quote of line 12 exact; 'by Thursday the instruction is basically out of date' runs lines 13-14 as cited. Ties comma and length; 'on Monday' is passage content."
+  },
+  {
+   "ref": "seat:cmsw2f4zm013etmbvzn3z2w7e",
+   "verdict": "ATTEST",
+   "reason": "Wrong: nothing in lines 17-20 has the governors tell him anything, and line 20 has him not even know they are in the hall. Tag en-plausible-not-stated fits (the hint, 'find the line that proves it', is the right cure), though its real-world plausibility is modest. Quotes at lines 17 and 20 verified. Ties 'not' and breaks overlap; the key was already the shortest option on the live row."
+  },
+  {
+   "ref": "seat:cmsw2f4zo013mtmbvlawr0pn5",
+   "verdict": "ATTEST",
+   "reason": "Wrong: the PE bench and the long drink are Miss Deller's (line 25); line 26 says Reception are fine. Tag en-attribute-transfer right. Quotes verified at lines 25 and 26. Ties comma and two-part and outruns the key's length. Key keeps the most words shared with the stem ('Reception'), as it already did live; that tell is not failing (x0.21 in retrieval)."
+  },
+  {
+   "ref": "seat:cmsw2f4zp013qtmbvaqyvqkw2",
+   "verdict": "ATTEST",
+   "reason": "Wrong: the beam is Dilan's own account (line 29); Mr Okafor says 'nobody is going up there for a butterfly, not today' (lines 29-30). Same defensibility as the live option it extends: the reported-speech boundary is clear at 'and Mr Okafor says'. Tag en-within-span-wrong-element right. Quotes verified. The added words are verbatim passage text, not padding. Breaks longest."
+  },
+  {
+   "ref": "seat:cmsw2f4zr0146tmbv71yp5k14",
+   "verdict": "ATTEST",
+   "reason": "Wrong: a fact about his mother (line 36), not his explanation of 'again' (line 39). Tag en-within-span-wrong-element right. Both quotations verified at lines 36 and 39. Ties comma and length."
+  },
+  {
+   "ref": "redraft:cmsw2f4zm013dtmbv9u6gcnt7",
+   "verdict": "ATTEST",
+   "reason": "Value and tag unchanged from the store. Execution checked: line 17 'The net will not carry flat'; 'the whole way' at line 19, with two riding on his sleeve (lines 18-19). True and over 40 characters."
+  },
+  {
+   "ref": "redraft:cmsw2f4zr0148tmbvccshhkd5",
+   "verdict": "ATTEST",
+   "reason": "Value and tag unchanged from the store. Execution checked: she 'did not say anything on the way past' and gave 'a small nod' (lines 36-37); line 39 quotation exact. True and over 40 characters."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "ENG-002-pp-01",
+   "verdict": "SIGN",
+   "reason": "Read whole: only the key gives what was seen from the window; no option outshines it; comma, two-part, length and overlap no longer single out the key (measure: none left)."
+  },
+  {
+   "itemId": "ENG-002-pp-06",
+   "verdict": "SIGN",
+   "reason": "Read whole: one five-person answer; the two near-twins differ on 'elder' vs 'both' and only the key fits line 22; no tell on the key after."
+  },
+  {
+   "itemId": "ENG-002-pp-08",
+   "verdict": "SIGN",
+   "reason": "Read whole: 'face, and the look on it' is the only sense that fits both lines 24 and 34; two-part and overlap broken; shortest-characters was already on the key and is not failing."
+  },
+  {
+   "itemId": "ENG-002-pp-09",
+   "verdict": "SIGN",
+   "reason": "Read whole: only the key gives looks and money (lines 27-29); the transferred Bingley pair is clearly his; no tell on the key after. Pre-existing staff execution on the wrong-scope option quotes an unhelpful fragment of line 27; worth tidying, not child-facing."
+  },
+  {
+   "itemId": "ENG-002-pp-10",
+   "verdict": "SIGN",
+   "reason": "Read whole: only the key gives his behaviour (lines 31-33); no tell on the key after."
+  },
+  {
+   "itemId": "ENG-002-pp-12",
+   "verdict": "SIGN",
+   "reason": "Read whole: only the key matches line 40; no tell on the key after. Pre-existing staff execution on 'Every dance of the evening.' quotes a line-39 fragment that does not answer the stem; worth tidying, not child-facing."
+  },
+  {
+   "itemId": "ENG-002-pp-15",
+   "verdict": "HOLD",
+   "reason": "HOLD: the only change on this row is refused. Read whole, 'Mr Darcy was standing near and would not dance with her.' is a defensible second reason she kept sitting: he is one of the gentlemen who would not dance (line 40, lines 51-56), and 'standing near' ties it to the cited lines. A second answer is worse than the window-overlap tell it was written to break. Re-draft as suggested on the seat."
+  },
+  {
+   "itemId": "ENG-002-pp-22",
+   "verdict": "SIGN",
+   "reason": "Read whole: only the key fits 'with great spirit' and 'delighted in anything ridiculous'; longest broken; fewest-window-words was already on the key and is not failing."
+  },
+  {
+   "itemId": "ENG-007-LP-01",
+   "verdict": "SIGN",
+   "reason": "Read whole: only the key is the bin bag's job (line 9); no tell on the key after."
+  },
+  {
+   "itemId": "ENG-007-LP-02",
+   "verdict": "SIGN",
+   "reason": "Read whole: only the key fits both replies (lines 17, 21-22); the new wrong-speaker option fails on the first reply; no tell on the key after. Two options now share the 'Both are about...' frame, which still needs reading to choose."
+  },
+  {
+   "itemId": "ENG-007-LP-04",
+   "verdict": "HOLD",
+   "reason": "HOLD: the only change on this row is refused for its tag (the value is not true inside the window, and the child hint for en-within-span-wrong-element would mislead). The row otherwise reads with one defensible answer, and the tells would be broken. Retag to en-minimal-pair-skim with 'in Leeds' dropped, then it can sign."
+  },
+  {
+   "itemId": "ENG-007-LP-06",
+   "verdict": "SIGN",
+   "reason": "Read whole: only the key states the kept-and-broken rule; the stem-echo is gone; no tell on the key."
+  },
+  {
+   "itemId": "ENG-007-LP-07",
+   "verdict": "SIGN",
+   "reason": "Read whole: only the key keeps 'without opening it'; no tell on the key after."
+  },
+  {
+   "itemId": "ENG-007-LP-08",
+   "verdict": "SIGN",
+   "reason": "Read whole: only the key reads the empty space against Reuben; the new option is refuted by the stem's own quotation; 'not' and longest broken; one new non-failing tell on the key (fewest window words), not a giveaway."
+  },
+  {
+   "itemId": "ENG-007-LP-09",
+   "verdict": "SIGN",
+   "reason": "Read whole: only the key reads 'get out of spellings' as missing them; no tell on the key after."
+  },
+  {
+   "itemId": "ENG-007-LP-11",
+   "verdict": "SIGN",
+   "reason": "Read whole: only the key fits the long look followed by folding it his way; no tell on the key after."
+  },
+  {
+   "itemId": "ENG-007-LP-13",
+   "verdict": "SIGN",
+   "reason": "Read whole: only the key fits returning a leaver's cardigan; hedge and length tied; no tell on the key after."
+  },
+  {
+   "itemId": "ENG-007-LP-15",
+   "verdict": "SIGN",
+   "reason": "Read whole: only the key names the Friday box; no tell on the key after."
+  },
+  {
+   "itemId": "ENG-015-CC-10",
+   "verdict": "SIGN",
+   "reason": "Read whole: only the key gives what the flame did; no tell on the key after. Drafter's note misdescribes the change (no 'Marley's Ghost' in the new value)."
+  },
+  {
+   "itemId": "ENG-016-HB-03",
+   "verdict": "SIGN",
+   "reason": "Read whole: only the key names the armed men out of place; 'not' and length tied; no tell on the key after."
+  },
+  {
+   "itemId": "ENG-016-HB-04",
+   "verdict": "SIGN",
+   "reason": "Read whole: only the key is behind the countryside (line 19); no tell on the key after."
+  },
+  {
+   "itemId": "ENG-023-RT-03",
+   "verdict": "SIGN",
+   "reason": "Read whole: only the key matches line 15; no tell on the key after."
+  },
+  {
+   "itemId": "ENG-023-RT-05",
+   "verdict": "SIGN",
+   "reason": "Read whole: only the key gives his stated reason (lines 28-29); no tell on the key after."
+  },
+  {
+   "itemId": "ENG-023-RT-07",
+   "verdict": "SIGN",
+   "reason": "Read whole: only the key says what the garden means to him (line 44); no tell on the key after."
+  },
+  {
+   "itemId": "ENG-023-RT-09",
+   "verdict": "SIGN",
+   "reason": "Read whole: only the key fits 'a stranger here' followed by 'Who is Nag?'; comma broken; longest-characters was already on the key and is not failing."
+  },
+  {
+   "itemId": "ENG-023-RT-10",
+   "verdict": "SIGN",
+   "reason": "Read whole: only the key gives the hiss from the grass as the reason; no tell on the key after."
+  },
+  {
+   "itemId": "ENG-024-BF-04",
+   "verdict": "SIGN",
+   "reason": "Read whole: only the key says how he deals with the rule; no tell on the key after."
+  },
+  {
+   "itemId": "ENG-024-BF-05",
+   "verdict": "SIGN",
+   "reason": "Read whole: only the key is line 17's reason; overlap and 'not' broken; shortest was already on the key and is not failing."
+  },
+  {
+   "itemId": "ENG-024-BF-07",
+   "verdict": "SIGN",
+   "reason": "Read whole: only the key is what he says of Reception (line 26); comma, two-part and length broken; stem overlap was already on the key and is not failing."
+  },
+  {
+   "itemId": "ENG-024-BF-08",
+   "verdict": "SIGN",
+   "reason": "Read whole: only the key is Mr Okafor's speech; longest broken; no tell on the key after."
+  },
+  {
+   "itemId": "ENG-024-BF-11",
+   "verdict": "SIGN",
+   "reason": "Read whole: only the key is his explanation (line 39); no tell on the key after."
+  }
+ ]
+}

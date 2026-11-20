@@ -1,0 +1,3830 @@
+{
+ "door": "english-rewrite/tells/r2/B",
+ "questionType": "english",
+ "ruling": "R1029",
+ "entries": {
+  "en-physical-vs-emotional-cue": {
+   "description": "Gives a physical cause, from the body or body-language, when the text signals a feeling.",
+   "childHint": "Look past what the body is doing. Check what the character is feeling right then."
+  },
+  "en-comma-subject-verb-split": {
+   "description": "Accepts a comma cutting subject from verb.",
+   "childHint": "Never let a single comma cut the do-er off from the doing."
+  },
+  "en-terminal-punctuation-blind": {
+   "description": "Accepts a full stop on a question; misses run-ons and missing boundaries.",
+   "childHint": "Read it in your head. Where your voice would stop or ask, the punctuation must match."
+  },
+  "en-inference-literal-lookalike": {
+   "description": "Picks the option that reuses passage wording.",
+   "childHint": "Words copied from the passage can still miss the question. Ask what those words are telling you."
+  },
+  "en-technique-intent-as-character": {
+   "description": "Child gives \"the boy feels tense\" where the answer is that the writer builds tension, treating the writer's choice as the character's state.",
+   "childHint": "Ask who is doing this. Is it the writer, or the character?"
+  },
+  "en-double-consonant-boundary": {
+   "description": "Guesses whether a consonant doubles when an ending is added, or doubles the wrong letter: begining for beginning, dissapointed for disappointed, stoped for stopped.",
+   "childHint": "Say the root word first, then add the beginning or ending. Check which letter really doubles."
+  },
+  "en-unstressed-suffix-vowel": {
+   "description": "Guesses between -ant/-ent, -ance/-ence, -ary/-ory/-ery.",
+   "childHint": "Many words ending -ant or -ent have a partner ending -ance or -ence. The partner almost always keeps the same vowel, like assistant and assistance. For -ary, -ery or -ory, a family word may help, like librarian for library."
+  },
+  "en-motive-invention": {
+   "description": "Attributes a plausible motive the text never supports.",
+   "childHint": "A reason has to be given, not guessed. Ask what the text says about why."
+  },
+  "en-conjunction-logic": {
+   "description": "Chooses a conjunction with the wrong logical relation.",
+   "childHint": "Is the second idea a reason, a surprise, or just what happened next?"
+  },
+  "en-comparison-vehicle-misread": {
+   "description": "Child gives the quality of the thing a comparison compares TO, where the answer is the quality of the thing being described — reading the vehicle of a simile or metaphor as the subject.",
+   "childHint": "Find the two things being compared. The one being described is the one that matters."
+  },
+  "en-parallel-read-as-sequence": {
+   "description": "The child reads two parallel descriptions of one thing as two moments in time. Where a writer gives the same subject twice — two ways of seeing it, two accounts of it, two things it is at once — she converts the pair into a sequence and looks for what changed between them. Nothing changed. What differs is the vantage, not the subject, and the relation between the two descriptions is what the question asks for.",
+   "childHint": "These two descriptions are of the same thing at the same time. Ask what is different about who is looking."
+  },
+  "en-technique-effect-mislocated": {
+   "description": "Child gives the effect of an earlier or neighbouring part of the passage where the answer is the effect of the quoted phrase, reading past the words under test.",
+   "childHint": "Find the exact words the question quotes. Answer about those words only."
+  },
+  "en-vocab-form-lookalike": {
+   "description": "The meaning the child chooses belongs to a DIFFERENT WORD that the target resembles in form, or to a morpheme she has met in other words. She has not chosen among the target's senses at all — she has misidentified the word. Scoped to the ERROR, not to vocabulary items.",
+   "childHint": "This word looks like one you know. Read it letter by letter and check it is the same word."
+  },
+  "en-determiner-omitted": {
+   "description": "Leaves the determiner out altogether before a singular countable noun, treating a, an and the as optional rather than required. Distinct from en-article-definiteness, which is a choice BETWEEN articles, and from en-a-an-by-spelling, which is a sound judgement.",
+   "childHint": "A single thing needs a word in front of it. Say the line aloud and listen."
+  },
+  "en-vocab-neighbouring-sense": {
+   "description": "The child chooses another genuine sense of the same word, neither the commonest one nor the one the passage fixes. The option is defensible in isolation and is ruled out only by the surrounding text, so the child gets no signal that anything is wrong. This holds only where the surrounding text fixes the sense decisively. Where it does not, the option is a defensible second answer and the item is faulty rather than hard. Scoped to the ERROR, not to vocabulary items.",
+   "childHint": "More than one meaning fits this word. Find the words nearby that decide which one it has to be."
+  },
+  "en-narrator-voice-as-fact": {
+   "description": "The child treats a crowd's opinion that the narrator reports in flat, certain sentences as the narrator's own verdict, and so takes it as settled truth rather than as something the text is quietly laughing at. Distinct from en-extreme-option-pull, which is about the pull of absolute wording; this one is about mistaking whose voice is speaking.",
+   "childHint": "Before you take this as true, ask whose opinion it is."
+  },
+  "en-relative-pronoun-choice": {
+   "description": "Picks a relative pronoun by habit rather than by what it stands for: which for people, whose in place of who, whom in a subject slot.",
+   "childHint": "Ask what the joining word stands for — a person, a thing, or something belonging to someone."
+  },
+  "en-whole-text-absence-asserted": {
+   "description": "The passage sustains an ABSENCE across its whole length — it never states a feeling, never names a motive, never gives a verdict — and the option asserts the withheld thing as though it were there. There is no negative word to drop, because the negation is a property of the text rather than of any line: the child has failed to notice something maintained across sixty lines, not misread a word in one. Characteristically the option is defeated by no single line and only by the absence itself, so its disposal must cite the SPAN of the withholding rather than a disposal point.",
+   "childHint": "Choose a line number for the option you like. If you cannot find one anywhere in the passage, that option is not it."
+  },
+  "en-negation-dropped": {
+   "description": "The passage carries an explicit negative — no, not, never, nothing, without, could not, sha'n't — and the option states the affirmative. The child has read the content words of the sentence and dropped the word that reverses them. Requires a negative WORD in a named line. A negation sustained across a whole text with no such word is en-whole-text-absence-asserted.",
+   "childHint": "A negative word can change the whole answer. Read the line again for one."
+  },
+  "en-comparative-superlative-form": {
+   "description": "Errors in forming or choosing comparatives and superlatives: double marking (most fastest), the comparative used for a whole group, or the bare adjective after 'the'.",
+   "childHint": "Comparing two, or more than two? Then check the ending and the word before it are not both doing the job."
+  },
+  "en-coordination-wrong-conjunct": {
+   "description": "The target word sits in a coordination — X and Y, X as well as Y, X as Y, X beside Y — and the child attaches the meaning to the wrong conjunct. She takes the half of the pair she read last, or the half that is easier to picture, and glosses the target with it. The error is syntactic: she has parsed which item the word attaches to incorrectly, and the option she picks is usually TRUE of the other conjunct, which is why it survives a check against the passage.",
+   "childHint": "This word is joined to another one. Work out which of the two the question is asking about before you answer."
+  },
+  "en-subject-verb-agreement-by-proximity": {
+   "description": "Agrees the verb with the nearest noun instead of the true subject, usually across an of-phrase: 'the row of new labels were'.",
+   "childHint": "Ignore the of-part. Match the verb to what is left."
+  },
+  "en-question-tag-polarity": {
+   "description": "Repeats instead of flipping polarity in question tags; mismatches the auxiliary.",
+   "childHint": "A tag flips the sentence. A positive sentence takes a negative tag. If there is no helper verb, use do, does or did."
+  },
+  "en-within-span-wrong-element": {
+   "description": "The option states something that is true inside the cited window and answers a different question from the one asked. The child has located the right lines and taken the wrong element out of them. A named sub-route is the WRONG SPEAKER: the material is inside the window but belongs to the other party in an exchange — one child's answer offered where the other child's instruction was asked for. The cure is the same in both cases, so the sub-route shares this hint.",
+   "childHint": "Being in the lines is not enough. Check it answers the question you were asked."
+  },
+  "en-emotion-label-approximation": {
+   "description": "Chooses an adjacent emotion word rather than the precisely evidenced one.",
+   "childHint": "Find the words in the text that show the feeling. Close is not the same."
+  },
+  "en-spelling-form-lookalike": {
+   "description": "Accepts or writes a word's visual near-twin: quiet for quite, dairy for diary, angel for angle, loose for lose.",
+   "childHint": "Two words can look almost the same. Read the middle letters slowly, not the shape."
+  },
+  "en-article-avoids-the-sound-choice": {
+   "description": "On an a or an choice, picks the to avoid the vowel-sound judgement. The fits any noun without a sound decision, so the child reaches for the article that asks nothing of her ear.",
+   "childHint": "This gap wants a or an. Say the next word aloud. Which sound starts it?"
+  },
+  "en-plausible-not-stated": {
+   "description": "Picks real-world-plausible options the passage never states, especially motives.",
+   "childHint": "Sounding sensible is not enough. Find the line that proves it."
+  },
+  "en-relation-word-flipped": {
+   "description": "The child reads a word that names a relationship between two things (contrast, unless, however, instead of) as its opposite, usually as plain 'and' or 'the same as'. The result is an option that keeps every fact but reverses how the facts sit together.",
+   "childHint": "Some words tell you how two things go together. Find that word and read it again."
+  },
+  "en-extreme-option-pull": {
+   "description": "Chooses always/never/impossible options when the text is measured.",
+   "childHint": "Does the passage really go that far? Check the strongest word in the option."
+  },
+  "en-vocab-built-from-parts": {
+   "description": "The child takes the word apart into parts she has met in other words and sums them. She has not mistaken which word it is — she has taken it apart, and the parts are real while the sum is not the word. Scoped to the ERROR, not to vocabulary items.",
+   "childHint": "The parts of a word do not always add up. Check the whole word in the sentence."
+  },
+  "en-figurative-taken-literally": {
+   "description": "Reads similes and idioms as literal events.",
+   "childHint": "Figures of speech are not facts. Ask what the words are really saying."
+  },
+  "en-repetition-purpose": {
+   "description": "Cannot say why a writer repeats words; defaults to literal or dismissive readings.",
+   "childHint": "Writers repeat on purpose. Ask what the echo does to the reader."
+  },
+  "en-attribute-transfer": {
+   "description": "Assigns a detail the text gives to one character or thing to another, or the right attribute at the wrong value.",
+   "childHint": "Check who or what each detail belongs to in the text."
+  },
+  "en-cause-agent-swap": {
+   "description": "Attributes the right event to the wrong cause or character.",
+   "childHint": "Ask who did this, or what caused it, in the text. Re-read the moment step by step."
+  },
+  "en-wrong-scope-retrieval": {
+   "description": "Answers from a detail in the wrong part of the passage.",
+   "childHint": "Something from another part of the passage does not answer this question. Find the part the question points to."
+  },
+  "en-vocab-dominant-sense": {
+   "description": "The child applies the word's commonest everyday sense in a context that does not support it. The sense chosen is a real sense of the same word; it is simply the one that arrives first, and the sentence around the word is what should have displaced it. Scoped to the ERROR, not to vocabulary items: it occurs wherever a word's sense is load-bearing, including on technique stems.",
+   "childHint": "Words can have more than one meaning. Check that the meaning you used fits what the sentence is saying here."
+  },
+  "en-agent-patient-reversal": {
+   "description": "Swaps who did or thought something, or who it was done to.",
+   "childHint": "Ask who is doing it and who it is being done to."
+  },
+  "en-minimal-pair-skim": {
+   "description": "Matches an option on gist when it differs from the text, or from the key, by a single word or detail.",
+   "childHint": "An answer can look almost like the text. Find what differs and check it against the text."
+  },
+  "en-vocab-not-this-word": {
+   "description": "Picks a meaning that belongs to no sense of the word and to no word it resembles in form.",
+   "childHint": "This word never means that. Put your answer in its place. Read the sentence again."
+  },
+  "en-chronology-collapse": {
+   "description": "The child picks a cause that happens LATER in the passage than the effect being asked about. The two events are both real and both about the same people, so the option reads well; only the order rules it out.",
+   "childHint": "Check what happened first, and what the question asks for."
+  },
+  "en-technique-device-confusion": {
+   "description": "Child gives \"metaphor\" for a comparison using \"like\" where the answer is simile, naming a device of the right family and the wrong kind.",
+   "childHint": "Does the line say like or as? A comparison using those words is a simile."
+  },
+  "en-contradicted-by-the-text": {
+   "description": "Chooses an option the passage explicitly denies, rather than one it merely fails to support. Distinguished from a plausible option the passage never states: here the passage states the contrary. Negation-dropped loses a WORD; this loses a CLAIM, and the option may share no wording with the line that refutes it.",
+   "childHint": "The passage says something different. Go back and find it."
+  },
+  "en-technique-structure-effect-blind": {
+   "description": "Child gives what the words say where the answer is what their shape does (a short sentence makes a moment land suddenly; a count that grows or shrinks builds a pattern), reading content where the question asks about shape.",
+   "childHint": "Notice how the writer has built it, not just what it says. What does that do for the reader?"
+  },
+  "en-a-an-by-spelling": {
+   "description": "Chooses a/an by following letter rather than sound.",
+   "childHint": "Listen to the sound that starts the next word."
+  },
+  "en-article-definiteness": {
+   "description": "Chooses between a, the and no article by habit, missing that the thing has already been named in the text or is one of a kind. Distinct from en-a-an-by-spelling, which is a sound judgement.",
+   "childHint": "Has the text named it already? That changes which little word fits."
+  },
+  "en-contraction-apostrophe": {
+   "description": "Omits or misplaces the apostrophe in a contraction: Youre for You're, dont for don't, wont for won't.",
+   "childHint": "Two words squeezed into one leave letters out. The apostrophe stands where the letters were."
+  },
+  "en-homophone-by-sound": {
+   "description": "Spells the wrong member of a homophone pair; their/there/they're.",
+   "childHint": "Sound will not help with sound-alike words. Work out the meaning, then spell it from that."
+  },
+  "en-n-option-avoidance": {
+   "description": "Never selects the no-mistake option in error-spotting.",
+   "childHint": "Check every part in turn. No mistake is a real answer, not a way out."
+  },
+  "en-silent-letter-dropped": {
+   "description": "Drops silent letters when spelling.",
+   "childHint": "A letter can be there without being heard. Spell it out, do not sound it out."
+  },
+  "en-speech-punctuation-inside": {
+   "description": "Places a quoted question's mark outside the speech marks.",
+   "childHint": "The question belongs to the spoken words. Keep the mark inside."
+  },
+  "en-unstressed-medial-vowel": {
+   "description": "Guesses a vowel in an unstressed syllable inside a word: regester for register. Scoped to the ERROR. Distinct from en-unstressed-suffix-vowel, whose vowel surfaces when the stress shifts (definite/definition); a medial vowel has no family word that stresses it, so the remediation is the spelling pattern — minister, sinister, register.",
+   "childHint": "A quiet middle vowel is still a letter. Say the word in parts and choose it."
+  },
+  "en-preposition-collocation": {
+   "description": "Chooses a preposition that is close in meaning but does not go with the verb: returned on the shelf, listened at the teacher.",
+   "childHint": "Say the whole phrase in your head. Which little word does this verb usually take?"
+  },
+  "en-tense-sequence": {
+   "description": "Uses simple past where prior events need 'had'; drifts tense mid-narrative.",
+   "childHint": "Did it happen before the story-moment? Then you usually need 'had' and the verb. If not, keep to the same tense as the story around it."
+  },
+  "en-word-class-by-ending": {
+   "description": "Classifies words by suffix rather than sentence job; participial adjective traps.",
+   "childHint": "Ask what job the word does in this sentence. Is it describing, or is it the action? If it describes, is the thing doing the action or having it done to it?"
+  },
+  "en-paired-punctuation": {
+   "description": "Misses unclosed brackets or quotes.",
+   "childHint": "Brackets come in pairs, like shoes. Hunt for the partner."
+  },
+  "en-modal-conditional-form": {
+   "description": "Mismatches the modal to its if-clause, or builds an impossible modal form: 'if we painted ... people will know', 'would knew', 'would be knowing'.",
+   "childHint": "An imagined if takes 'would'. A real if takes 'will'. In an imagined if, a past word like 'painted' without 'had' means now or later. 'Would have' is for imagining the past."
+  },
+  "en-apostrophe-possession": {
+   "description": "Misses possessive apostrophes; confuses its/it's.",
+   "childHint": "Ask whose it is. An owner needs an apostrophe straight after the owner word, like children's or boys'. Owner words like its, his, ours and theirs never have one. If you see it's, try swapping in 'it is'."
+  }
+ },
+ "passages": {
+  "stream-a-03-wind-in-willows": {
+   "numberedLines": [
+    {
+     "n": 1,
+     "text": "The Mole had been working very hard all the morning, spring-cleaning his little home.",
+     "label": ""
+    },
+    {
+     "n": 2,
+     "text": "First with brooms, then with dusters; then on ladders and steps and chairs, with a brush",
+     "label": ""
+    },
+    {
+     "n": 3,
+     "text": "and a pail of whitewash; till he had dust in his throat and eyes, and splashes of",
+     "label": ""
+    },
+    {
+     "n": 4,
+     "text": "whitewash all over his black fur, and an aching back and weary arms. Spring was moving",
+     "label": ""
+    },
+    {
+     "n": 5,
+     "text": "in the air above and in the earth below and around him, penetrating even his dark and",
+     "label": "5"
+    },
+    {
+     "n": 6,
+     "text": "lowly little house with its spirit of divine discontent and longing. It was small",
+     "label": ""
+    },
+    {
+     "n": 7,
+     "text": "wonder, then, that he suddenly flung down his brush on the floor, said “Bother!” and “O",
+     "label": ""
+    },
+    {
+     "n": 8,
+     "text": "blow!” and also “Hang spring-cleaning!” and bolted out of the house without even waiting",
+     "label": ""
+    },
+    {
+     "n": 9,
+     "text": "to put on his coat. Something up above was calling him imperiously, and he made for the",
+     "label": ""
+    },
+    {
+     "n": 10,
+     "text": "steep little tunnel which answered in his case to the gravelled carriage-drive owned by",
+     "label": "10"
+    },
+    {
+     "n": 11,
+     "text": "animals whose residences are nearer to the sun and air. So he scraped and scratched and",
+     "label": ""
+    },
+    {
+     "n": 12,
+     "text": "scrabbled and scrooged and then he scrooged again and scrabbled and scratched and",
+     "label": ""
+    },
+    {
+     "n": 13,
+     "text": "scraped, working busily with his little paws and muttering to himself, “Up we go! Up we",
+     "label": ""
+    },
+    {
+     "n": 14,
+     "text": "go!” till at last, pop! his snout came out into the sunlight, and he found himself",
+     "label": ""
+    },
+    {
+     "n": 15,
+     "text": "rolling in the warm grass of a great meadow.",
+     "label": "15"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 16,
+     "text": "“This is fine!” he said to himself. “This is better than whitewashing!” The sunshine",
+     "label": ""
+    },
+    {
+     "n": 17,
+     "text": "struck hot on his fur, soft breezes caressed his heated brow, and after the seclusion of",
+     "label": ""
+    },
+    {
+     "n": 18,
+     "text": "the cellarage he had lived in so long the carol of happy birds fell on his dulled",
+     "label": ""
+    },
+    {
+     "n": 19,
+     "text": "hearing almost like a shout. Jumping off all his four legs at once, in the joy of living",
+     "label": ""
+    },
+    {
+     "n": 20,
+     "text": "and the delight of spring without its cleaning, he pursued his way across the meadow",
+     "label": "20"
+    },
+    {
+     "n": 21,
+     "text": "till he reached the hedge on the further side.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 22,
+     "text": "“Hold up!” said an elderly rabbit at the gap. “Sixpence for the privilege of passing by",
+     "label": ""
+    },
+    {
+     "n": 23,
+     "text": "the private road!” He was bowled over in an instant by the impatient and contemptuous",
+     "label": ""
+    },
+    {
+     "n": 24,
+     "text": "Mole, who trotted along the side of the hedge chaffing the other rabbits as they peeped",
+     "label": ""
+    },
+    {
+     "n": 25,
+     "text": "hurriedly from their holes to see what the row was about. “Onion-sauce! Onion-sauce!” he",
+     "label": "25"
+    },
+    {
+     "n": 26,
+     "text": "remarked jeeringly, and was gone before they could think of a thoroughly satisfactory",
+     "label": ""
+    },
+    {
+     "n": 27,
+     "text": "reply.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 28,
+     "text": "He thought his happiness was complete when, as he meandered aimlessly along, suddenly he",
+     "label": ""
+    },
+    {
+     "n": 29,
+     "text": "stood by the edge of a full-fed river. Never in his life had he seen a river before—this",
+     "label": ""
+    },
+    {
+     "n": 30,
+     "text": "sleek, sinuous, full-bodied animal, chasing and chuckling, gripping things with a gurgle",
+     "label": "30"
+    },
+    {
+     "n": 31,
+     "text": "and leaving them with a laugh, to fling itself on fresh playmates that shook themselves",
+     "label": ""
+    },
+    {
+     "n": 32,
+     "text": "free, and were caught and held again. All was a-shake and a-shiver—glints and gleams and",
+     "label": ""
+    },
+    {
+     "n": 33,
+     "text": "sparkles, rustle and swirl, chatter and bubble. The Mole was bewitched, entranced,",
+     "label": ""
+    },
+    {
+     "n": 34,
+     "text": "fascinated. By the side of the river he trotted as one trots, when very small, by the",
+     "label": ""
+    },
+    {
+     "n": 35,
+     "text": "side of a man who holds one spell-bound by exciting stories; and when tired at last, he",
+     "label": "35"
+    },
+    {
+     "n": 36,
+     "text": "sat on the bank, while the river still chattered on to him, a babbling procession of the",
+     "label": ""
+    },
+    {
+     "n": 37,
+     "text": "best stories in the world, sent from the heart of the earth to be told at last to the",
+     "label": ""
+    },
+    {
+     "n": 38,
+     "text": "insatiable sea.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 39,
+     "text": "As he sat on the grass and looked across the river, a dark hole in the bank opposite,",
+     "label": ""
+    },
+    {
+     "n": 40,
+     "text": "just above the water’s edge, caught his eye, and dreamily he fell to considering what a",
+     "label": "40"
+    },
+    {
+     "n": 41,
+     "text": "nice snug dwelling-place it would make for an animal with few wants and fond of a bijou",
+     "label": ""
+    },
+    {
+     "n": 42,
+     "text": "riverside residence, above flood level and remote from noise and dust. As he gazed,",
+     "label": ""
+    },
+    {
+     "n": 43,
+     "text": "something bright and small seemed to twinkle down in the heart of it, vanished, then",
+     "label": ""
+    },
+    {
+     "n": 44,
+     "text": "twinkled once more like a tiny star. But it could hardly be a star in such an unlikely",
+     "label": ""
+    },
+    {
+     "n": 45,
+     "text": "situation; and it was too glittering and small for a glow-worm. Then, as he looked, it",
+     "label": "45"
+    },
+    {
+     "n": 46,
+     "text": "winked at him, and so declared itself to be an eye; and a small face began gradually to",
+     "label": ""
+    },
+    {
+     "n": 47,
+     "text": "grow up round it, like a frame round a picture.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 48,
+     "text": "A brown little face, with whiskers.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 49,
+     "text": "A grave round face, with the same twinkle in its eye that had first attracted his",
+     "label": ""
+    },
+    {
+     "n": 50,
+     "text": "notice.",
+     "label": "50"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 51,
+     "text": "Small neat ears and thick silky hair.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 52,
+     "text": "It was the Water Rat!",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 53,
+     "text": "Then the two animals stood and regarded each other cautiously.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 54,
+     "text": "“Hullo, Mole!” said the Water Rat.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 55,
+     "text": "“Hullo, Rat!” said the Mole.",
+     "label": "55"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 56,
+     "text": "“Would you like to come over?” enquired the Rat presently.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 57,
+     "text": "“Oh, it’s all very well to talk,” said the Mole, rather pettishly, he being new to a",
+     "label": ""
+    },
+    {
+     "n": 58,
+     "text": "river and riverside life and its ways.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 59,
+     "text": "The Rat said nothing, but stooped and unfastened a rope and hauled on it; then lightly",
+     "label": ""
+    },
+    {
+     "n": 60,
+     "text": "stepped into a little boat which the Mole had not observed. It was painted blue outside",
+     "label": "60"
+    },
+    {
+     "n": 61,
+     "text": "and white within, and was just the size for two animals; and the Mole’s whole heart went",
+     "label": ""
+    },
+    {
+     "n": 62,
+     "text": "out to it at once, even though he did not yet fully understand its uses.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 63,
+     "text": "The Rat sculled smartly across and made fast. Then he held up his forepaw as the Mole",
+     "label": ""
+    },
+    {
+     "n": 64,
+     "text": "stepped gingerly down. “Lean on that!” he said. “Now then, step lively!” and the Mole to",
+     "label": ""
+    },
+    {
+     "n": 65,
+     "text": "his surprise and rapture found himself actually seated in the stern of a real boat.",
+     "label": "65"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 66,
+     "text": "“This has been a wonderful day!” said he, as the Rat shoved off and took to the sculls",
+     "label": ""
+    },
+    {
+     "n": 67,
+     "text": "again. “Do you know, I’ve never been in a boat before in all my life.”",
+     "label": ""
+    }
+   ]
+  },
+  "stream-a-06-anne-green-gables": {
+   "numberedLines": [
+    {
+     "n": 1,
+     "text": "When he reached Bright River there was no sign of any train; he thought he was too",
+     "label": ""
+    },
+    {
+     "n": 2,
+     "text": "early, so he tied his horse in the yard of the small Bright River hotel and went over to",
+     "label": ""
+    },
+    {
+     "n": 3,
+     "text": "the station house. The long platform was almost deserted; the only living creature in",
+     "label": ""
+    },
+    {
+     "n": 4,
+     "text": "sight being a girl who was sitting on a pile of shingles at the extreme end. Matthew,",
+     "label": ""
+    },
+    {
+     "n": 5,
+     "text": "barely noting that it was a girl, sidled past her as quickly as possible without looking",
+     "label": "5"
+    },
+    {
+     "n": 6,
+     "text": "at her. Had he looked he could hardly have failed to notice the tense rigidity and",
+     "label": ""
+    },
+    {
+     "n": 7,
+     "text": "expectation of her attitude and expression. She was sitting there waiting for something",
+     "label": ""
+    },
+    {
+     "n": 8,
+     "text": "or somebody and, since sitting and waiting was the only thing to do just then, she sat",
+     "label": ""
+    },
+    {
+     "n": 9,
+     "text": "and waited with all her might and main.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 10,
+     "text": "Matthew encountered the stationmaster locking up the ticket office preparatory to going",
+     "label": "10"
+    },
+    {
+     "n": 11,
+     "text": "home for supper, and asked him if the five-thirty train would soon be along.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 12,
+     "text": "“The five-thirty train has been in and gone half an hour ago,” answered that brisk",
+     "label": ""
+    },
+    {
+     "n": 13,
+     "text": "official. “But there was a passenger dropped off for you--a little girl. She’s sitting",
+     "label": ""
+    },
+    {
+     "n": 14,
+     "text": "out there on the shingles. I asked her to go into the ladies’ waiting room, but she",
+     "label": ""
+    },
+    {
+     "n": 15,
+     "text": "informed me gravely that she preferred to stay outside. ‘There was more scope for",
+     "label": "15"
+    },
+    {
+     "n": 16,
+     "text": "imagination,’ she said. She’s a case, I should say.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 17,
+     "text": "“I’m not expecting a girl,” said Matthew blankly. “It’s a boy I’ve come for. He should",
+     "label": ""
+    },
+    {
+     "n": 18,
+     "text": "be here. Mrs. Alexander Spencer was to bring him over from Nova Scotia for me.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 19,
+     "text": "The stationmaster whistled.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 20,
+     "text": "“Guess there’s some mistake,” he said. “Mrs. Spencer came off the train with that girl",
+     "label": "20"
+    },
+    {
+     "n": 21,
+     "text": "and gave her into my charge. Said you and your sister were adopting her from an orphan",
+     "label": ""
+    },
+    {
+     "n": 22,
+     "text": "asylum and that you would be along for her presently. That’s all I know about it--and I",
+     "label": ""
+    },
+    {
+     "n": 23,
+     "text": "haven’t got any more orphans concealed hereabouts.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 24,
+     "text": "“I don’t understand,” said Matthew helplessly, wishing that Marilla was at hand to cope",
+     "label": ""
+    },
+    {
+     "n": 25,
+     "text": "with the situation.",
+     "label": "25"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 26,
+     "text": "“Well, you’d better question the girl,” said the stationmaster carelessly. “I dare say",
+     "label": ""
+    },
+    {
+     "n": 27,
+     "text": "she’ll be able to explain--she’s got a tongue of her own, that’s certain. Maybe they",
+     "label": ""
+    },
+    {
+     "n": 28,
+     "text": "were out of boys of the brand you wanted.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 29,
+     "text": "He walked jauntily away, being hungry, and the unfortunate Matthew was left to do that",
+     "label": ""
+    },
+    {
+     "n": 30,
+     "text": "which was harder for him than bearding a lion in its den--walk up to a girl--a strange",
+     "label": "30"
+    },
+    {
+     "n": 31,
+     "text": "girl--an orphan girl--and demand of her why she wasn’t a boy. Matthew groaned in spirit",
+     "label": ""
+    },
+    {
+     "n": 32,
+     "text": "as he turned about and shuffled gently down the platform towards her.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 33,
+     "text": "She had been watching him ever since he had passed her and she had her eyes on him now.",
+     "label": ""
+    },
+    {
+     "n": 34,
+     "text": "Matthew was not looking at her and would not have seen what she was really like if he",
+     "label": ""
+    },
+    {
+     "n": 35,
+     "text": "had been, but an ordinary observer would have seen this: A child of about eleven, garbed",
+     "label": "35"
+    },
+    {
+     "n": 36,
+     "text": "in a very short, very tight, very ugly dress of yellowish-gray wincey. She wore a faded",
+     "label": ""
+    },
+    {
+     "n": 37,
+     "text": "brown sailor hat and beneath the hat, extending down her back, were two braids of very",
+     "label": ""
+    },
+    {
+     "n": 38,
+     "text": "thick, decidedly red hair. Her face was small, white and thin, also much freckled; her",
+     "label": ""
+    },
+    {
+     "n": 39,
+     "text": "mouth was large and so were her eyes, which looked green in some lights and moods and",
+     "label": ""
+    },
+    {
+     "n": 40,
+     "text": "gray in others.",
+     "label": "40"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 41,
+     "text": "So far, the ordinary observer; an extraordinary observer might have seen that the chin",
+     "label": ""
+    },
+    {
+     "n": 42,
+     "text": "was very pointed and pronounced; that the big eyes were full of spirit and vivacity;",
+     "label": ""
+    },
+    {
+     "n": 43,
+     "text": "that the mouth was sweet-lipped and expressive; that the forehead was broad and full; in",
+     "label": ""
+    },
+    {
+     "n": 44,
+     "text": "short, our discerning extraordinary observer might have concluded that no commonplace",
+     "label": ""
+    },
+    {
+     "n": 45,
+     "text": "soul inhabited the body of this stray woman-child of whom shy Matthew Cuthbert was so",
+     "label": "45"
+    },
+    {
+     "n": 46,
+     "text": "ludicrously afraid.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 47,
+     "text": "Matthew, however, was spared the ordeal of speaking first, for as soon as she concluded",
+     "label": ""
+    },
+    {
+     "n": 48,
+     "text": "that he was coming to her she stood up, grasping with one thin brown hand the handle of",
+     "label": ""
+    },
+    {
+     "n": 49,
+     "text": "a shabby, old-fashioned carpet-bag; the other she held out to him.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 50,
+     "text": "“I suppose you are Mr. Matthew Cuthbert of Green Gables?” she said in a peculiarly",
+     "label": "50"
+    },
+    {
+     "n": 51,
+     "text": "clear, sweet voice. “I’m very glad to see you. I was beginning to be afraid you weren’t",
+     "label": ""
+    },
+    {
+     "n": 52,
+     "text": "coming for me and I was imagining all the things that might have happened to prevent",
+     "label": ""
+    },
+    {
+     "n": 53,
+     "text": "you. I had made up my mind that if you didn’t come for me tonight I’d go down the track",
+     "label": ""
+    },
+    {
+     "n": 54,
+     "text": "to that big wild cherry-tree at the bend, and climb up into it to stay all night. I",
+     "label": ""
+    },
+    {
+     "n": 55,
+     "text": "wouldn’t be a bit afraid, and it would be lovely to sleep in a wild cherry-tree all",
+     "label": "55"
+    },
+    {
+     "n": 56,
+     "text": "white with bloom in the moonshine, don’t you think? You could imagine you were dwelling",
+     "label": ""
+    },
+    {
+     "n": 57,
+     "text": "in marble halls, couldn’t you? And I was quite sure you would come for me in the",
+     "label": ""
+    },
+    {
+     "n": 58,
+     "text": "morning, if you didn’t tonight.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 59,
+     "text": "Matthew had taken the scrawny little hand awkwardly in his; then and there he decided",
+     "label": ""
+    },
+    {
+     "n": 60,
+     "text": "what to do. He could not tell this child with the glowing eyes that there had been a",
+     "label": "60"
+    },
+    {
+     "n": 61,
+     "text": "mistake; he would take her home and let Marilla do that. She couldn’t be left at Bright",
+     "label": ""
+    },
+    {
+     "n": 62,
+     "text": "River anyhow, no matter what mistake had been made, so all questions and explanations",
+     "label": ""
+    },
+    {
+     "n": 63,
+     "text": "might as well be deferred until he was safely back at Green Gables.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 64,
+     "text": "“I’m sorry I was late,” he said shyly. “Come along. The horse is over in the yard. Give",
+     "label": ""
+    },
+    {
+     "n": 65,
+     "text": "me your bag.”",
+     "label": "65"
+    }
+   ]
+  },
+  "stream-a-04-black-beauty": {
+   "numberedLines": [
+    {
+     "n": 1,
+     "text": "One day late in the autumn my master had a long journey to go on business. I was put",
+     "label": ""
+    },
+    {
+     "n": 2,
+     "text": "into the dog-cart, and John went with his master. I always liked to go in the dog-cart,",
+     "label": ""
+    },
+    {
+     "n": 3,
+     "text": "it was so light and the high wheels ran along so pleasantly. There had been a great deal",
+     "label": ""
+    },
+    {
+     "n": 4,
+     "text": "of rain, and now the wind was very high and blew the dry leaves across the road in a",
+     "label": ""
+    },
+    {
+     "n": 5,
+     "text": "shower. We went along merrily till we came to the toll-bar and the low wooden bridge.",
+     "label": "5"
+    },
+    {
+     "n": 6,
+     "text": "The river banks were rather high, and the bridge, instead of rising, went across just",
+     "label": ""
+    },
+    {
+     "n": 7,
+     "text": "level, so that in the middle, if the river was full, the water would be nearly up to the",
+     "label": ""
+    },
+    {
+     "n": 8,
+     "text": "woodwork and planks; but as there were good substantial rails on each side, people did",
+     "label": ""
+    },
+    {
+     "n": 9,
+     "text": "not mind it.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 10,
+     "text": "The man at the gate said the river was rising fast, and he feared it would be a bad",
+     "label": "10"
+    },
+    {
+     "n": 11,
+     "text": "night. Many of the meadows were under water, and in one low part of the road the water",
+     "label": ""
+    },
+    {
+     "n": 12,
+     "text": "was halfway up to my knees; the bottom was good, and master drove gently, so it was no",
+     "label": ""
+    },
+    {
+     "n": 13,
+     "text": "matter.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 14,
+     "text": "When we got to the town of course I had a good bait, but as the master's business",
+     "label": ""
+    },
+    {
+     "n": 15,
+     "text": "engaged him a long time we did not start for home till rather late in the afternoon. The",
+     "label": "15"
+    },
+    {
+     "n": 16,
+     "text": "wind was then much higher, and I heard the master say to John that he had never been out",
+     "label": ""
+    },
+    {
+     "n": 17,
+     "text": "in such a storm; and so I thought, as we went along the skirts of a wood, where the",
+     "label": ""
+    },
+    {
+     "n": 18,
+     "text": "great branches were swaying about like twigs, and the rushing sound was terrible.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 19,
+     "text": "“I wish we were well out of this wood,” said my master.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 20,
+     "text": "“Yes, sir,” said John, “it would be rather awkward if one of these branches came down",
+     "label": "20"
+    },
+    {
+     "n": 21,
+     "text": "upon us.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 22,
+     "text": "The words were scarcely out of his mouth when there was a groan, and a crack, and a",
+     "label": ""
+    },
+    {
+     "n": 23,
+     "text": "splitting sound, and tearing, crashing down among the other trees came an oak, torn up",
+     "label": ""
+    },
+    {
+     "n": 24,
+     "text": "by the roots, and it fell right across the road just before us. I will never say I was",
+     "label": ""
+    },
+    {
+     "n": 25,
+     "text": "not frightened, for I was. I stopped still, and I believe I trembled; of course I did",
+     "label": "25"
+    },
+    {
+     "n": 26,
+     "text": "not turn round or run away; I was not brought up to that. John jumped out and was in a",
+     "label": ""
+    },
+    {
+     "n": 27,
+     "text": "moment at my head.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 28,
+     "text": "“That was a very near touch,” said my master. “What's to be done now?”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 29,
+     "text": "“Well, sir, we can't drive over that tree, nor yet get round it; there will be nothing",
+     "label": ""
+    },
+    {
+     "n": 30,
+     "text": "for it, but to go back to the four crossways, and that will be a good six miles before",
+     "label": "30"
+    },
+    {
+     "n": 31,
+     "text": "we get round to the wooden bridge again; it will make us late, but the horse is fresh.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 32,
+     "text": "So back we went and round by the crossroads, but by the time we got to the bridge it was",
+     "label": ""
+    },
+    {
+     "n": 33,
+     "text": "very nearly dark; we could just see that the water was over the middle of it; but as",
+     "label": ""
+    },
+    {
+     "n": 34,
+     "text": "that happened sometimes when the floods were out, master did not stop. We were going",
+     "label": ""
+    },
+    {
+     "n": 35,
+     "text": "along at a good pace, but the moment my feet touched the first part of the bridge I felt",
+     "label": "35"
+    },
+    {
+     "n": 36,
+     "text": "sure there was something wrong. I dare not go forward, and I made a dead stop. “Go on,",
+     "label": ""
+    },
+    {
+     "n": 37,
+     "text": "Beauty,” said my master, and he gave me a touch with the whip, but I dare not stir; he",
+     "label": ""
+    },
+    {
+     "n": 38,
+     "text": "gave me a sharp cut; I jumped, but I dare not go forward.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 39,
+     "text": "“There's something wrong, sir,” said John, and he sprang out of the dog-cart and came to",
+     "label": ""
+    },
+    {
+     "n": 40,
+     "text": "my head and looked all about. He tried to lead me forward. “Come on, Beauty, what's the",
+     "label": "40"
+    },
+    {
+     "n": 41,
+     "text": "matter?” Of course I could not tell him, but I knew very well that the bridge was not",
+     "label": ""
+    },
+    {
+     "n": 42,
+     "text": "safe.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 43,
+     "text": "Just then the man at the toll-gate on the other side ran out of the house, tossing a",
+     "label": ""
+    },
+    {
+     "n": 44,
+     "text": "torch about like one mad.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 45,
+     "text": "“Hoy, hoy, hoy! halloo! stop!” he cried.",
+     "label": "45"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 46,
+     "text": "“What's the matter?” shouted my master.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 47,
+     "text": "“The bridge is broken in the middle, and part of it is carried away; if you come on",
+     "label": ""
+    },
+    {
+     "n": 48,
+     "text": "you'll be into the river.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 49,
+     "text": "“Thank God!” said my master. “You Beauty!” said John, and took the bridle and gently",
+     "label": ""
+    },
+    {
+     "n": 50,
+     "text": "turned me round to the right-hand road by the river side. The sun had set some time; the",
+     "label": "50"
+    },
+    {
+     "n": 51,
+     "text": "wind seemed to have lulled off after that furious blast which tore up the tree. It grew",
+     "label": ""
+    },
+    {
+     "n": 52,
+     "text": "darker and darker, stiller and stiller. I trotted quietly along, the wheels hardly",
+     "label": ""
+    },
+    {
+     "n": 53,
+     "text": "making a sound on the soft road. For a good while neither master nor John spoke, and",
+     "label": ""
+    },
+    {
+     "n": 54,
+     "text": "then master began in a serious voice. I could not understand much of what they said, but",
+     "label": ""
+    },
+    {
+     "n": 55,
+     "text": "I found they thought, if I had gone on as the master wanted me, most likely the bridge",
+     "label": "55"
+    },
+    {
+     "n": 56,
+     "text": "would have given way under us, and horse, chaise, master, and man would have fallen into",
+     "label": ""
+    },
+    {
+     "n": 57,
+     "text": "the river; and as the current was flowing very strongly, and there was no light and no",
+     "label": ""
+    },
+    {
+     "n": 58,
+     "text": "help at hand, it was more than likely we should all have been drowned.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 59,
+     "text": "We saw a light at the hall-door and at the upper windows, and as we came up mistress ran",
+     "label": ""
+    },
+    {
+     "n": 60,
+     "text": "out, saying, “Are you really safe, my dear? Oh! I have been so anxious, fancying all",
+     "label": "60"
+    },
+    {
+     "n": 61,
+     "text": "sorts of things. Have you had no accident?”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 62,
+     "text": "“No, my dear; but if your Black Beauty had not been wiser than we were we should all",
+     "label": ""
+    },
+    {
+     "n": 63,
+     "text": "have been carried down the river at the wooden bridge.”",
+     "label": ""
+    }
+   ]
+  },
+  "stream-a-11-jane-eyre": {
+   "numberedLines": [
+    {
+     "n": 1,
+     "text": "This lane inclined up-hill all the way to Hay; having reached the middle, I sat down on",
+     "label": ""
+    },
+    {
+     "n": 2,
+     "text": "a stile which led thence into a field. Gathering my mantle about me, and sheltering my",
+     "label": ""
+    },
+    {
+     "n": 3,
+     "text": "hands in my muff, I did not feel the cold, though it froze keenly; as was attested by a",
+     "label": ""
+    },
+    {
+     "n": 4,
+     "text": "sheet of ice covering the causeway, where a little brooklet, now congealed, had",
+     "label": ""
+    },
+    {
+     "n": 5,
+     "text": "overflowed after a rapid thaw some days since. From my seat I could look down on",
+     "label": "5"
+    },
+    {
+     "n": 6,
+     "text": "Thornfield: the grey and battlemented hall was the principal object in the vale below",
+     "label": ""
+    },
+    {
+     "n": 7,
+     "text": "me; its woods and dark rookery rose against the west. I lingered till the sun went down",
+     "label": ""
+    },
+    {
+     "n": 8,
+     "text": "amongst the trees, and sank crimson and clear behind them. I then turned eastward.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 9,
+     "text": "The din was on the causeway: a horse was coming; the windings of the lane yet hid it,",
+     "label": ""
+    },
+    {
+     "n": 10,
+     "text": "but it approached. I was just leaving the stile; yet, as the path was narrow, I sat",
+     "label": "10"
+    },
+    {
+     "n": 11,
+     "text": "still to let it go by. In those days I was young, and all sorts of fancies bright and",
+     "label": ""
+    },
+    {
+     "n": 12,
+     "text": "dark tenanted my mind: the memories of nursery stories were there amongst other rubbish;",
+     "label": ""
+    },
+    {
+     "n": 13,
+     "text": "and when they recurred, maturing youth added to them a vigour and vividness beyond what",
+     "label": ""
+    },
+    {
+     "n": 14,
+     "text": "childhood could give. As this horse approached, and as I watched for it to appear",
+     "label": ""
+    },
+    {
+     "n": 15,
+     "text": "through the dusk, I remembered certain of Bessie’s tales, wherein figured a North-of-",
+     "label": "15"
+    },
+    {
+     "n": 16,
+     "text": "England spirit called a “Gytrash,” which, in the form of horse, mule, or large dog,",
+     "label": ""
+    },
+    {
+     "n": 17,
+     "text": "haunted solitary ways, and sometimes came upon belated travellers, as this horse was now",
+     "label": ""
+    },
+    {
+     "n": 18,
+     "text": "coming upon me.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 19,
+     "text": "It was very near, but not yet in sight; when, in addition to the tramp, tramp, I heard a",
+     "label": ""
+    },
+    {
+     "n": 20,
+     "text": "rush under the hedge, and close down by the hazel stems glided a great dog, whose black",
+     "label": "20"
+    },
+    {
+     "n": 21,
+     "text": "and white colour made him a distinct object against the trees. It was exactly one form",
+     "label": ""
+    },
+    {
+     "n": 22,
+     "text": "of Bessie’s Gytrash—a lion-like creature with long hair and a huge head: it passed me,",
+     "label": ""
+    },
+    {
+     "n": 23,
+     "text": "however, quietly enough; not staying to look up, with strange pretercanine eyes, in my",
+     "label": ""
+    },
+    {
+     "n": 24,
+     "text": "face, as I half expected it would. The horse followed,—a tall steed, and on its back a",
+     "label": ""
+    },
+    {
+     "n": 25,
+     "text": "rider. The man, the human being, broke the spell at once. No Gytrash was this,—only a",
+     "label": "25"
+    },
+    {
+     "n": 26,
+     "text": "traveller taking the short cut to Millcote. He passed, and I went on; a few steps, and I",
+     "label": ""
+    },
+    {
+     "n": 27,
+     "text": "turned: a sliding sound and an exclamation of “What the deuce is to do now?” and a",
+     "label": ""
+    },
+    {
+     "n": 28,
+     "text": "clattering tumble, arrested my attention. Man and horse were down; they had slipped on",
+     "label": ""
+    },
+    {
+     "n": 29,
+     "text": "the sheet of ice which glazed the causeway. The dog came bounding back, and seeing his",
+     "label": ""
+    },
+    {
+     "n": 30,
+     "text": "master in a predicament, and hearing the horse groan, barked till the evening hills",
+     "label": "30"
+    },
+    {
+     "n": 31,
+     "text": "echoed the sound, which was deep in proportion to his magnitude. He snuffed round the",
+     "label": ""
+    },
+    {
+     "n": 32,
+     "text": "prostrate group, and then he ran up to me; it was all he could do,—there was no other",
+     "label": ""
+    },
+    {
+     "n": 33,
+     "text": "help at hand to summon. I obeyed him, and walked down to the traveller, by this time",
+     "label": ""
+    },
+    {
+     "n": 34,
+     "text": "struggling himself free of his steed. His efforts were so vigorous, I thought he could",
+     "label": ""
+    },
+    {
+     "n": 35,
+     "text": "not be much hurt; but I asked him the question—",
+     "label": "35"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 36,
+     "text": "“Are you injured, sir?”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 37,
+     "text": "“Can I do anything?” I asked again.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 38,
+     "text": "“You must just stand on one side,” he answered as he rose, first to his knees, and then",
+     "label": ""
+    },
+    {
+     "n": 39,
+     "text": "to his feet. I did; whereupon began a heaving, stamping, clattering process, accompanied",
+     "label": ""
+    },
+    {
+     "n": 40,
+     "text": "by a barking and baying which removed me effectually some yards’ distance; but I would",
+     "label": "40"
+    },
+    {
+     "n": 41,
+     "text": "not be driven quite away till I saw the event. This was finally fortunate; the horse was",
+     "label": ""
+    },
+    {
+     "n": 42,
+     "text": "re-established, and the dog was silenced with a “Down, Pilot!” The traveller now,",
+     "label": ""
+    },
+    {
+     "n": 43,
+     "text": "stooping, felt his foot and leg, as if trying whether they were sound; apparently",
+     "label": ""
+    },
+    {
+     "n": 44,
+     "text": "something ailed them, for he halted to the stile whence I had just risen, and sat down.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 45,
+     "text": "I was in the mood for being useful, or at least officious, I think, for I now drew near",
+     "label": "45"
+    },
+    {
+     "n": 46,
+     "text": "him again.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 47,
+     "text": "“If you are hurt, and want help, sir, I can fetch some one either from Thornfield Hall",
+     "label": ""
+    },
+    {
+     "n": 48,
+     "text": "or from Hay.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 49,
+     "text": "“Thank you: I shall do: I have no broken bones,—only a sprain;” and again he stood up",
+     "label": ""
+    },
+    {
+     "n": 50,
+     "text": "and tried his foot, but the result extorted an involuntary “Ugh!”",
+     "label": "50"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 51,
+     "text": "Something of daylight still lingered, and the moon was waxing bright: I could see him",
+     "label": ""
+    },
+    {
+     "n": 52,
+     "text": "plainly. His figure was enveloped in a riding cloak, fur collared and steel clasped; its",
+     "label": ""
+    },
+    {
+     "n": 53,
+     "text": "details were not apparent, but I traced the general points of middle height and",
+     "label": ""
+    },
+    {
+     "n": 54,
+     "text": "considerable breadth of chest. He had a dark face, with stern features and a heavy brow;",
+     "label": ""
+    },
+    {
+     "n": 55,
+     "text": "his eyes and gathered eyebrows looked ireful and thwarted just now; he was past youth,",
+     "label": "55"
+    },
+    {
+     "n": 56,
+     "text": "but had not reached middle-age; perhaps he might be thirty-five. I felt no fear of him,",
+     "label": ""
+    },
+    {
+     "n": 57,
+     "text": "and but little shyness.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 58,
+     "text": "If even this stranger had smiled and been good-humoured to me when I addressed him; if",
+     "label": ""
+    },
+    {
+     "n": 59,
+     "text": "he had put off my offer of assistance gaily and with thanks, I should have gone on my",
+     "label": ""
+    },
+    {
+     "n": 60,
+     "text": "way and not felt any vocation to renew inquiries: but the frown, the roughness of the",
+     "label": "60"
+    },
+    {
+     "n": 61,
+     "text": "traveller, set me at my ease: I retained my station when he waved to me to go, and",
+     "label": ""
+    },
+    {
+     "n": 62,
+     "text": "announced—",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 63,
+     "text": "“I cannot think of leaving you, sir, at so late an hour, in this solitary lane, till I",
+     "label": ""
+    },
+    {
+     "n": 64,
+     "text": "see you are fit to mount your horse.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 65,
+     "text": "“I should think you ought to be at home yourself,” said he, “if you have a home in this",
+     "label": "65"
+    },
+    {
+     "n": 66,
+     "text": "neighbourhood: where do you come from?”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 67,
+     "text": "“From just below; and I am not at all afraid of being out late when it is moonlight: I",
+     "label": ""
+    },
+    {
+     "n": 68,
+     "text": "will run over to Hay for you with pleasure, if you wish it: indeed, I am going there to",
+     "label": ""
+    },
+    {
+     "n": 69,
+     "text": "post a letter.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 70,
+     "text": "“You live just below—do you mean at that house with the battlements?” pointing to",
+     "label": "70"
+    },
+    {
+     "n": 71,
+     "text": "Thornfield Hall, on which the moon cast a hoary gleam, bringing it out distinct and pale",
+     "label": ""
+    },
+    {
+     "n": 72,
+     "text": "from the woods that, by contrast with the western sky, now seemed one mass of shadow.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 73,
+     "text": "“Yes, sir.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 74,
+     "text": "“Whose house is it?”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 75,
+     "text": "“Mr. Rochester’s.”",
+     "label": "75"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 76,
+     "text": "“Do you know Mr. Rochester?”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 77,
+     "text": "“No, I have never seen him.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 78,
+     "text": "“He is not resident, then?”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 79,
+     "text": "“No.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 80,
+     "text": "“Can you tell me where he is?”",
+     "label": "80"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 81,
+     "text": "“I cannot.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 82,
+     "text": "“You are not a servant at the hall, of course. You are—” He stopped, ran his eye over my",
+     "label": ""
+    },
+    {
+     "n": 83,
+     "text": "dress, which, as usual, was quite simple: a black merino cloak, a black beaver bonnet;",
+     "label": ""
+    },
+    {
+     "n": 84,
+     "text": "neither of them half fine enough for a lady’s-maid. He seemed puzzled to decide what I",
+     "label": ""
+    },
+    {
+     "n": 85,
+     "text": "was; I helped him.",
+     "label": "85"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 86,
+     "text": "“I am the governess.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 87,
+     "text": "“Ah, the governess!” he repeated; “deuce take me, if I had not forgotten! The",
+     "label": ""
+    },
+    {
+     "n": 88,
+     "text": "governess!” and again my raiment underwent scrutiny. In two minutes he rose from the",
+     "label": ""
+    },
+    {
+     "n": 89,
+     "text": "stile: his face expressed pain when he tried to move.",
+     "label": ""
+    }
+   ]
+  },
+  "stream-a-17-cranford": {
+   "numberedLines": [
+    {
+     "n": 1,
+     "text": "When the trays re-appeared with biscuits and wine, punctually at a quarter to nine,",
+     "label": ""
+    },
+    {
+     "n": 2,
+     "text": "there was conversation, comparing of cards, and talking over tricks; but by-and-by",
+     "label": ""
+    },
+    {
+     "n": 3,
+     "text": "Captain Brown sported a bit of literature.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 4,
+     "text": "“Have you seen any numbers of ‘The Pickwick Papers’?” said he. (They were then",
+     "label": ""
+    },
+    {
+     "n": 5,
+     "text": "publishing in parts.) “Capital thing!”",
+     "label": "5"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 6,
+     "text": "Now Miss Jenkyns was daughter of a deceased rector of Cranford; and, on the strength",
+     "label": ""
+    },
+    {
+     "n": 7,
+     "text": "of a number of manuscript sermons, and a pretty good library of divinity, considered",
+     "label": ""
+    },
+    {
+     "n": 8,
+     "text": "herself literary, and looked upon any conversation about books as a challenge to her.",
+     "label": ""
+    },
+    {
+     "n": 9,
+     "text": "So she answered and said, “Yes, she had seen them; indeed, she might say she had read",
+     "label": ""
+    },
+    {
+     "n": 10,
+     "text": "them.”",
+     "label": "10"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 11,
+     "text": "“And what do you think of them?” exclaimed Captain Brown. “Aren’t they famously good?”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 12,
+     "text": "So urged Miss Jenkyns could not but speak.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 13,
+     "text": "“I must say, I don’t think they are by any means equal to Dr Johnson. Still, perhaps,",
+     "label": ""
+    },
+    {
+     "n": 14,
+     "text": "the author is young. Let him persevere, and who knows what he may become if he will",
+     "label": ""
+    },
+    {
+     "n": 15,
+     "text": "take the great Doctor for his model?” This was evidently too much for Captain Brown to",
+     "label": "15"
+    },
+    {
+     "n": 16,
+     "text": "take placidly; and I saw the words on the tip of his tongue before Miss Jenkyns had",
+     "label": ""
+    },
+    {
+     "n": 17,
+     "text": "finished her sentence.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 18,
+     "text": "“It is quite a different sort of thing, my dear madam,” he began.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 19,
+     "text": "“I am quite aware of that,” returned she. “And I make allowances, Captain Brown.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 20,
+     "text": "“Just allow me to read you a scene out of this month’s number,” pleaded he. “I had it",
+     "label": "20"
+    },
+    {
+     "n": 21,
+     "text": "only this morning, and I don’t think the company can have read it yet.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 22,
+     "text": "“As you please,” said she, settling herself with an air of resignation. He read the",
+     "label": ""
+    },
+    {
+     "n": 23,
+     "text": "account of the “swarry” which Sam Weller gave at Bath. Some of us laughed heartily.",
+     "label": ""
+    },
+    {
+     "n": 24,
+     "text": "_I_ did not dare, because I was staying in the house. Miss Jenkyns sat in patient",
+     "label": ""
+    },
+    {
+     "n": 25,
+     "text": "gravity. When it was ended, she turned to me, and said with mild dignity—",
+     "label": "25"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 26,
+     "text": "“Fetch me ‘Rasselas,’ my dear, out of the book-room.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 27,
+     "text": "When I had brought it to her, she turned to Captain Brown—",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 28,
+     "text": "“Now allow _me_ to read you a scene, and then the present company can judge between",
+     "label": ""
+    },
+    {
+     "n": 29,
+     "text": "your favourite, Mr Boz, and Dr Johnson.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 30,
+     "text": "She read one of the conversations between Rasselas and Imlac, in a high-pitched,",
+     "label": "30"
+    },
+    {
+     "n": 31,
+     "text": "majestic voice: and when she had ended, she said, “I imagine I am now justified in my",
+     "label": ""
+    },
+    {
+     "n": 32,
+     "text": "preference of Dr Johnson as a writer of fiction.” The Captain screwed his lips up, and",
+     "label": ""
+    },
+    {
+     "n": 33,
+     "text": "drummed on the table, but he did not speak. She thought she would give him a finishing",
+     "label": ""
+    },
+    {
+     "n": 34,
+     "text": "blow or two.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 35,
+     "text": "“I consider it vulgar, and below the dignity of literature, to publish in numbers.”",
+     "label": "35"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 36,
+     "text": "“How was the _Rambler_ published, ma’am?” asked Captain Brown in a low voice, which I",
+     "label": ""
+    },
+    {
+     "n": 37,
+     "text": "think Miss Jenkyns could not have heard.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 38,
+     "text": "“Dr Johnson’s style is a model for young beginners. My father recommended it to me",
+     "label": ""
+    },
+    {
+     "n": 39,
+     "text": "when I began to write letters—I have formed my own style upon it; I recommend it to",
+     "label": ""
+    },
+    {
+     "n": 40,
+     "text": "your favourite.”",
+     "label": "40"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 41,
+     "text": "“I should be very sorry for him to exchange his style for any such pompous writing,”",
+     "label": ""
+    },
+    {
+     "n": 42,
+     "text": "said Captain Brown.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 43,
+     "text": "Miss Jenkyns felt this as a personal affront, in a way of which the Captain had not",
+     "label": ""
+    },
+    {
+     "n": 44,
+     "text": "dreamed. Epistolary writing she and her friends considered as her _forte_. Many a copy",
+     "label": ""
+    },
+    {
+     "n": 45,
+     "text": "of many a letter have I seen written and corrected on the slate, before she “seized",
+     "label": "45"
+    },
+    {
+     "n": 46,
+     "text": "the half-hour just previous to post-time to assure” her friends of this or of that;",
+     "label": ""
+    },
+    {
+     "n": 47,
+     "text": "and Dr Johnson was, as she said, her model in these compositions. She drew herself up",
+     "label": ""
+    },
+    {
+     "n": 48,
+     "text": "with dignity, and only replied to Captain Brown’s last remark by saying, with marked",
+     "label": ""
+    },
+    {
+     "n": 49,
+     "text": "emphasis on every syllable, “I prefer Dr Johnson to Mr Boz.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 50,
+     "text": "It is said—I won’t vouch for the fact—that Captain Brown was heard to say, _sotto",
+     "label": "50"
+    },
+    {
+     "n": 51,
+     "text": "voce_, “D—n Dr Johnson!” If he did, he was penitent afterwards, as he showed by going",
+     "label": ""
+    },
+    {
+     "n": 52,
+     "text": "to stand near Miss Jenkyns’ arm-chair, and endeavouring to beguile her into",
+     "label": ""
+    },
+    {
+     "n": 53,
+     "text": "conversation on some more pleasing subject. But she was inexorable. The next day she",
+     "label": ""
+    },
+    {
+     "n": 54,
+     "text": "made the remark I have mentioned about Miss Jessie’s dimples.",
+     "label": ""
+    }
+   ]
+  },
+  "stream-a-16-little-women": {
+   "numberedLines": [
+    {
+     "n": 1,
+     "text": "There Jo was mistaken, for next day she made a discovery which produced a tempest.",
+     "label": ""
+    },
+    {
+     "n": 2,
+     "text": "Meg, Beth, and Amy were sitting together, late in the afternoon, when Jo burst into",
+     "label": ""
+    },
+    {
+     "n": 3,
+     "text": "the room, looking excited and demanding breathlessly, “Has anyone taken my book?”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 4,
+     "text": "Meg and Beth said, “No.” at once, and looked surprised. Amy poked the fire and said",
+     "label": ""
+    },
+    {
+     "n": 5,
+     "text": "nothing. Jo saw her color rise and was down upon her in a minute.",
+     "label": "5"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 6,
+     "text": "“Amy, you’ve got it!”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 7,
+     "text": "“No, I haven’t.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 8,
+     "text": "“You know where it is, then!”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 9,
+     "text": "“No, I don’t.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 10,
+     "text": "“That’s a fib!” cried Jo, taking her by the shoulders, and looking fierce enough to",
+     "label": "10"
+    },
+    {
+     "n": 11,
+     "text": "frighten a much braver child than Amy.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 12,
+     "text": "“It isn’t. I haven’t got it, don’t know where it is now, and don’t care.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 13,
+     "text": "“You know something about it, and you’d better tell at once, or I’ll make you.” And Jo",
+     "label": ""
+    },
+    {
+     "n": 14,
+     "text": "gave her a slight shake.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 15,
+     "text": "“Scold as much as you like, you’ll never see your silly old book again,” cried Amy,",
+     "label": "15"
+    },
+    {
+     "n": 16,
+     "text": "getting excited in her turn.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 17,
+     "text": "“Why not?”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 18,
+     "text": "“I burned it up.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 19,
+     "text": "“What! My little book I was so fond of, and worked over, and meant to finish before",
+     "label": ""
+    },
+    {
+     "n": 20,
+     "text": "Father got home? Have you really burned it?” said Jo, turning very pale, while her",
+     "label": "20"
+    },
+    {
+     "n": 21,
+     "text": "eyes kindled and her hands clutched Amy nervously.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 22,
+     "text": "“Yes, I did! I told you I’d make you pay for being so cross yesterday, and I have,",
+     "label": ""
+    },
+    {
+     "n": 23,
+     "text": "so...”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 24,
+     "text": "Amy got no farther, for Jo’s hot temper mastered her, and she shook Amy till her teeth",
+     "label": ""
+    },
+    {
+     "n": 25,
+     "text": "chattered in her head, crying in a passion of grief and anger...",
+     "label": "25"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 26,
+     "text": "“You wicked, wicked girl! I never can write it again, and I’ll never forgive you as",
+     "label": ""
+    },
+    {
+     "n": 27,
+     "text": "long as I live.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 28,
+     "text": "Meg flew to rescue Amy, and Beth to pacify Jo, but Jo was quite beside herself, and",
+     "label": ""
+    },
+    {
+     "n": 29,
+     "text": "with a parting box on her sister’s ear, she rushed out of the room up to the old sofa",
+     "label": ""
+    },
+    {
+     "n": 30,
+     "text": "in the garret, and finished her fight alone.",
+     "label": "30"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 31,
+     "text": "When the tea bell rang, Jo appeared, looking so grim and unapproachable that it took",
+     "label": ""
+    },
+    {
+     "n": 32,
+     "text": "all Amy’s courage to say meekly...",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 33,
+     "text": "“Please forgive me, Jo. I’m very, very sorry.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 34,
+     "text": "“I never shall forgive you,” was Jo’s stern answer, and from that moment she ignored",
+     "label": ""
+    },
+    {
+     "n": 35,
+     "text": "Amy entirely.",
+     "label": "35"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 36,
+     "text": "As Jo received her good-night kiss, Mrs. March whispered gently, “My dear, don’t let",
+     "label": ""
+    },
+    {
+     "n": 37,
+     "text": "the sun go down upon your anger. Forgive each other, help each other, and begin again",
+     "label": ""
+    },
+    {
+     "n": 38,
+     "text": "tomorrow.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 39,
+     "text": "Jo wanted to lay her head down on that motherly bosom, and cry her grief and anger all",
+     "label": ""
+    },
+    {
+     "n": 40,
+     "text": "away, but tears were an unmanly weakness, and she felt so deeply injured that she",
+     "label": "40"
+    },
+    {
+     "n": 41,
+     "text": "really couldn’t quite forgive yet. So she winked hard, shook her head, and said",
+     "label": ""
+    },
+    {
+     "n": 42,
+     "text": "gruffly because Amy was listening, “It was an abominable thing, and she doesn’t",
+     "label": ""
+    },
+    {
+     "n": 43,
+     "text": "deserve to be forgiven.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 44,
+     "text": "With that she marched off to bed, and there was no merry or confidential gossip that",
+     "label": ""
+    },
+    {
+     "n": 45,
+     "text": "night.",
+     "label": "45"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 46,
+     "text": "“Everybody is so hateful, I’ll ask Laurie to go skating. He is always kind and jolly,",
+     "label": ""
+    },
+    {
+     "n": 47,
+     "text": "and will put me to rights, I know,” said Jo to herself, and off she went.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 48,
+     "text": "Amy heard the clash of skates, and looked out with an impatient exclamation.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 49,
+     "text": "“There! She promised I should go next time, for this is the last ice we shall have.",
+     "label": ""
+    },
+    {
+     "n": 50,
+     "text": "But it’s no use to ask such a crosspatch to take me.”",
+     "label": "50"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 51,
+     "text": "“Don’t say that. You were very naughty, and it is hard to forgive the loss of her",
+     "label": ""
+    },
+    {
+     "n": 52,
+     "text": "precious little book, but I think she might do it now, and I guess she will, if you",
+     "label": ""
+    },
+    {
+     "n": 53,
+     "text": "try her at the right minute,” said Meg. “Go after them. Don’t say anything till Jo has",
+     "label": ""
+    },
+    {
+     "n": 54,
+     "text": "got good-natured with Laurie, then take a quiet minute and just kiss her, or do some",
+     "label": ""
+    },
+    {
+     "n": 55,
+     "text": "kind thing, and I’m sure she’ll be friends again with all her heart.”",
+     "label": "55"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 56,
+     "text": "“I’ll try,” said Amy, for the advice suited her, and after a flurry to get ready, she",
+     "label": ""
+    },
+    {
+     "n": 57,
+     "text": "ran after the friends, who were just disappearing over the hill.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 58,
+     "text": "It was not far to the river, but both were ready before Amy reached them. Jo saw her",
+     "label": ""
+    },
+    {
+     "n": 59,
+     "text": "coming, and turned her back. Laurie did not see, for he was carefully skating along",
+     "label": ""
+    },
+    {
+     "n": 60,
+     "text": "the shore, sounding the ice, for a warm spell had preceded the cold snap.",
+     "label": "60"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 61,
+     "text": "“I’ll go on to the first bend, and see if it’s all right before we begin to race,” Amy",
+     "label": ""
+    },
+    {
+     "n": 62,
+     "text": "heard him say, as he shot away, looking like a young Russian in his fur-trimmed coat",
+     "label": ""
+    },
+    {
+     "n": 63,
+     "text": "and cap.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 64,
+     "text": "Jo heard Amy panting after her run, stamping her feet and blowing on her fingers as",
+     "label": ""
+    },
+    {
+     "n": 65,
+     "text": "she tried to put her skates on, but Jo never turned and went slowly zigzagging down",
+     "label": "65"
+    },
+    {
+     "n": 66,
+     "text": "the river, taking a bitter, unhappy sort of satisfaction in her sister’s troubles. She",
+     "label": ""
+    },
+    {
+     "n": 67,
+     "text": "had cherished her anger till it grew strong and took possession of her, as evil",
+     "label": ""
+    },
+    {
+     "n": 68,
+     "text": "thoughts and feelings always do unless cast out at once. As Laurie turned the bend, he",
+     "label": ""
+    },
+    {
+     "n": 69,
+     "text": "shouted back...",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 70,
+     "text": "“Keep near the shore. It isn’t safe in the middle.” Jo heard, but Amy was struggling",
+     "label": "70"
+    },
+    {
+     "n": 71,
+     "text": "to her feet and did not catch a word. Jo glanced over her shoulder, and the little",
+     "label": ""
+    },
+    {
+     "n": 72,
+     "text": "demon she was harboring said in her ear...",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 73,
+     "text": "“No matter whether she heard or not, let her take care of herself.”",
+     "label": ""
+    }
+   ]
+  }
+ },
+ "rows": [
+  {
+   "itemId": "ENG-001-WIW-06",
+   "questionType": "en-comp-retrieval",
+   "passageRef": "stream-a-03-wind-in-willows",
+   "stem": {
+    "text": "Read lines 14 to 15. Where did the Mole find himself when his snout came out into the sunlight?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 6
+   },
+   "lineRefs": [
+    14,
+    15
+   ],
+   "explanation": {
+    "quotes": [
+     {
+      "rule": "R4",
+      "text": "pop!",
+      "lineRefs": [
+       14,
+       14
+      ],
+      "exemptFrom": [
+       "banList",
+       "sentenceCap",
+       "vocabularyCeiling",
+       "longWordCeiling"
+      ],
+      "passageRef": "stream-a-03-wind-in-willows"
+     },
+     {
+      "rule": "R4",
+      "text": "in the warm grass of a great meadow",
+      "lineRefs": [
+       15,
+       15
+      ],
+      "exemptFrom": [
+       "banList",
+       "sentenceCap",
+       "vocabularyCeiling",
+       "longWordCeiling"
+      ],
+      "passageRef": "stream-a-03-wind-in-willows"
+     }
+    ],
+    "hintCore": "Read to the end of the sentence with 'pop!' in it.",
+    "walkScript": "Start at 'pop!' on line 14. Line 15 lands him 'in the warm grass of a great meadow'. So he comes up in the meadow. The carriage-drive is earlier, the hedge and river later.",
+    "hintAuthority": "annie-eightyninth-return.md (CONFIRMATIONS block), sha256 a51e2126cbfe9f2282254afc915fd340d851fa619fc53f9f4a7c5e4637193118",
+    "hintAuthoredBy": "Annie"
+   },
+   "tellsPointingAtKey": [
+    "longest (words)",
+    "most words shared with the cited lines"
+   ],
+   "distractorsRestatingStem": [],
+   "keyInClosestNearTwinPair": false,
+   "previousRound": {
+    "reviewOfRow": {
+     "itemId": "ENG-001-WIW-06",
+     "verdict": "HOLD",
+     "reason": "A tell in tellsPointingAtKey still singles out the key. The measure with --after shows 'most words shared with the cited lines' still picking the key: it is lifted verbatim from lines 14 to 15, and the drafter says so. The seat breaks longest (words) only. This needs a rebuild that rewords the key while keeping it complete, for example 'In a great field of warm grass.' Or it needs a distractor built only from window words that is wrong under every reading. The row is otherwise one-answer."
+    },
+    "reviewOfChanges": [
+     {
+      "ref": "seat:cmsw2f4t3000qtmbv88nrsh0f",
+      "verdict": "ATTEST",
+      "reason": "The hedge on the far side is line 21 and the gap is line 22, after he crosses the meadow; lines 14 to 15 put him in the meadow. Wrong scope; quotes exact. Breaks longest (words): 9 words, the same as the key. Window overlap is not broken; that is a row matter."
+     }
+    ]
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4t3000ptmbv450ti5ag",
+     "value": "On the bank of the river.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The bank is line 36, at the end of the river paragraph — a true place from a different part.",
+     "features": {
+      "comma": false,
+      "twoPart": false,
+      "words": 6,
+      "windowOverlap": 0,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw2f4t3000qtmbv88nrsh0f",
+     "value": "At the gap in the hedge.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The gap in the hedge is line 22, where the elderly rabbit stops him, well after lines 14 and 15. The child answers from a later part of the passage instead of the lines the stem names, where he is rolling in the meadow grass.",
+     "features": {
+      "comma": false,
+      "twoPart": false,
+      "words": 6,
+      "windowOverlap": 0,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw2f4t3000rtmbv6gj5oywm",
+     "value": "In a boat painted blue and white.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The blue and white boat is line 60, near the end of the passage, long after he comes out into the sunlight. The child answers from that later part instead of lines 14 and 15, where he finds himself rolling in a meadow.",
+     "features": {
+      "comma": false,
+      "twoPart": false,
+      "words": 7,
+      "windowOverlap": 0,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw2f4t3000stmbvgguub34i",
+     "value": "Rolling in the warm grass of a great meadow.",
+     "isKey": true,
+     "tag": null,
+     "execution": null,
+     "features": {
+      "comma": false,
+      "twoPart": false,
+      "words": 9,
+      "windowOverlap": 1,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw2f4t4000ttmbve80d9bm6",
+     "value": "On a gravelled carriage-drive.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "execution": "Line 10 uses the carriage-drive as a comparison for his tunnel. This takes the comparison as the place he arrives.",
+     "features": {
+      "comma": false,
+      "twoPart": false,
+      "words": 4,
+      "windowOverlap": 0,
+      "not": false
+     }
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-004-AGG-04",
+   "questionType": "en-comp-retrieval",
+   "passageRef": "stream-a-06-anne-green-gables",
+   "stem": {
+    "text": "Who was Matthew expecting to meet at Bright River? (lines 17 and 18)",
+    "quotes": [],
+    "passageRef": "stream-a-06-anne-green-gables",
+    "orderAnchor": 4
+   },
+   "lineRefs": [
+    17,
+    18
+   ],
+   "explanation": {
+    "hintCore": "Matthew says out loud who he came for.",
+    "walkScript": "Look at lines 17 and 18. Matthew says he is not expecting a girl. He says it is a boy he has come for. The same two lines name Mrs Spencer as the one bringing him."
+   },
+   "tellsPointingAtKey": [],
+   "distractorsRestatingStem": [],
+   "keyInClosestNearTwinPair": true,
+   "previousRound": {
+    "reviewOfRow": null,
+    "reviewOfChanges": []
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4ua007ktmbvtslp678m",
+     "value": "A girl, sent over by Mrs Spencer.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "execution": "Keeps the right person but the wrong value: line 17 says he is not expecting a girl.",
+     "features": {
+      "comma": true,
+      "twoPart": false,
+      "words": 7,
+      "windowOverlap": 0.67,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw2f4ua007ltmbvvyql4ay6",
+     "value": "A boy, sent over by the man at the station.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "execution": "Right arrangement, wrong person: line 18 names Mrs Spencer.",
+     "features": {
+      "comma": true,
+      "twoPart": false,
+      "words": 10,
+      "windowOverlap": 0.25,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw2f4ua007mtmbvp3zdyjl2",
+     "value": "His sister Marilla, coming in on the train.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "Marilla is named elsewhere, but never as someone arriving by train.",
+     "features": {
+      "comma": true,
+      "twoPart": false,
+      "words": 8,
+      "windowOverlap": 0,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw2f4ua007ntmbvjcs6a51y",
+     "value": "A boy, sent over by Mrs Spencer.",
+     "isKey": true,
+     "tag": null,
+     "execution": null,
+     "features": {
+      "comma": true,
+      "twoPart": false,
+      "words": 7,
+      "windowOverlap": 0.67,
+      "not": false
+     }
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-004-AGG-12",
+   "questionType": "en-comp-retrieval",
+   "passageRef": "stream-a-06-anne-green-gables",
+   "stem": {
+    "text": "What does Matthew ask the girl to do at the end? (lines 64 and 65)",
+    "quotes": [],
+    "passageRef": "stream-a-06-anne-green-gables",
+    "orderAnchor": 12
+   },
+   "lineRefs": [
+    64,
+    65
+   ],
+   "explanation": {
+    "hintCore": "He asks for two things, not one.",
+    "walkScript": "Look at lines 64 and 65. He tells her to come along. He then asks her to give him her bag. Both things are asked in the same short speech."
+   },
+   "tellsPointingAtKey": [],
+   "distractorsRestatingStem": [],
+   "keyInClosestNearTwinPair": true,
+   "previousRound": {
+    "reviewOfRow": {
+     "itemId": "ENG-004-AGG-12",
+     "verdict": "SIGN",
+     "reason": "One answer: come along and hand him the bag. Passage tell broken; no tell points at the key."
+    },
+    "reviewOfChanges": [
+     {
+      "ref": "seat:cmsw2f4uf008ktmbvn89tfhlo",
+      "verdict": "ATTEST",
+      "reason": "'Give me your bag' (lines 64 to 65): he asks to have the bag himself. 'Take her own bag' means she keeps it, the reverse of that one detail, under any reading. Quotes exact. Ties passage overlap."
+     }
+    ]
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4uf008jtmbvlp6i5ijo",
+     "value": "Go and sit in the ladies' waiting room.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "True of line 14, where the stationmaster asked her to go into the ladies' waiting room. Matthew never asks it; lines 64 and 65 give what he asks.",
+     "features": {
+      "comma": false,
+      "twoPart": false,
+      "words": 8,
+      "windowOverlap": 0,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw2f4uf008ktmbvn89tfhlo",
+     "value": "Come along with him, and take her own bag.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "execution": "Right on 'Come along' (line 64) and wrong on one detail: lines 64 to 65 end 'Give me your bag', so Matthew asks to take the bag himself, not for her to keep it.",
+     "features": {
+      "comma": true,
+      "twoPart": true,
+      "words": 9,
+      "windowOverlap": 0.75,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw2f4ug008ltmbv9olp7bo4",
+     "value": "Tell him her name before they set off.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "A natural next thing to ask, but he never asks it in these lines.",
+     "features": {
+      "comma": false,
+      "twoPart": false,
+      "words": 8,
+      "windowOverlap": 0,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw2f4ug008mtmbviiin01b8",
+     "value": "Come along with him, and hand him her bag.",
+     "isKey": true,
+     "tag": null,
+     "execution": null,
+     "features": {
+      "comma": true,
+      "twoPart": true,
+      "words": 9,
+      "windowOverlap": 0.75,
+      "not": false
+     }
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-005-BB-01",
+   "questionType": "en-comp-retrieval",
+   "passageRef": "stream-a-04-black-beauty",
+   "stem": {
+    "text": "Why did Beauty like going in the dog-cart? (lines 2 and 3)",
+    "quotes": [],
+    "passageRef": "stream-a-04-black-beauty",
+    "orderAnchor": 2
+   },
+   "lineRefs": [
+    2,
+    3
+   ],
+   "explanation": {
+    "hintCore": "One sentence gives two reasons together.",
+    "walkScript": "Look at lines 2 and 3. Beauty says the dog-cart was so light. He says the high wheels ran along so pleasantly. Those two things are his reason."
+   },
+   "tellsPointingAtKey": [],
+   "distractorsRestatingStem": [],
+   "keyInClosestNearTwinPair": true,
+   "previousRound": {
+    "reviewOfRow": {
+     "itemId": "ENG-005-BB-01",
+     "verdict": "SIGN",
+     "reason": "One answer: light, with wheels that run pleasantly. 'Heavy' reverses the stated reason. Window, passage and two-part broken; no tell points at the key."
+    },
+    "reviewOfChanges": [
+     {
+      "ref": "seat:cmsw2f4ug008rtmbvg5j0st6p",
+      "verdict": "ATTEST",
+      "reason": "Line 3: 'it was so light'. 'Heavy' reverses the one reason while the wheels clause stays right, so minimal pair fits. Quotes exact. Ties the key on window, passage and two-part."
+     }
+    ]
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4ug008otmbv92z2yyao",
+     "value": "It was light, and its big wheels ran along pleasantly.",
+     "isKey": true,
+     "tag": null,
+     "execution": null,
+     "features": {
+      "comma": true,
+      "twoPart": true,
+      "words": 10,
+      "windowOverlap": 0.83,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw2f4ug008ptmbvd66gpwt4",
+     "value": "It was the only cart he was strong enough to pull.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "A reason a child may supply; the passage gives lightness as the cart's quality, not his.",
+     "features": {
+      "comma": false,
+      "twoPart": false,
+      "words": 11,
+      "windowOverlap": 0.25,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw2f4ug008qtmbvabzjqs1d",
+     "value": "It meant John came with him instead of the master.",
+     "isKey": false,
+     "tag": "en-contradicted-by-the-text",
+     "execution": "Line 2 says 'John went with his master', so the master went too. The child half-reads that line and has John go in place of the master, the contrary of what it states.",
+     "features": {
+      "comma": false,
+      "twoPart": false,
+      "words": 10,
+      "windowOverlap": 0.4,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw2f4ug008rtmbvg5j0st6p",
+     "value": "The cart was heavy, and its wheels ran along pleasantly.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "execution": "Differs from the text by one word: line 3 says 'it was so light'. The wheels running along 'so pleasantly' are right, so a child matching on gist takes it; heavy is the reverse of the reason Beauty gives.",
+     "features": {
+      "comma": true,
+      "twoPart": true,
+      "words": 10,
+      "windowOverlap": 0.83,
+      "not": false
+     }
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-005-BB-03",
+   "questionType": "en-comp-retrieval",
+   "passageRef": "stream-a-04-black-beauty",
+   "stem": {
+    "text": "What did the man at the gate say about the river? (lines 10 and 11)",
+    "quotes": [],
+    "passageRef": "stream-a-04-black-beauty",
+    "orderAnchor": 10
+   },
+   "lineRefs": [
+    10,
+    11
+   ],
+   "explanation": {
+    "hintCore": "He says two things: what is happening, and what he fears.",
+    "walkScript": "Look at lines 10 and 11. The man says the river was rising fast. He says he feared it would be a bad night. The broken bridge is not known until much later."
+   },
+   "tellsPointingAtKey": [],
+   "distractorsRestatingStem": [],
+   "keyInClosestNearTwinPair": true,
+   "previousRound": {
+    "reviewOfRow": {
+     "itemId": "ENG-005-BB-03",
+     "verdict": "SIGN",
+     "reason": "One answer: rising fast, and a feared bad night. All four tells broken. The twin shape is what the brief asks for, and 'low' is plainly the road's."
+    },
+    "reviewOfChanges": [
+     {
+      "ref": "seat:cmsw2f4ui008ztmbv20uliq9j",
+      "verdict": "ATTEST",
+      "reason": "Line 10: 'the river was rising fast'. 'Low' is the road's, at line 11 ('one low part of the road'), so attribute transfer is the right retag. Quotes exact. Ties the key on all four features."
+     }
+    ]
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4ui008ytmbvlmj82uew",
+     "value": "It had already broken the wooden bridge.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The broken bridge is line 47, where a man at the far side shouts the news hours later. The child answers from that part of the passage instead of lines 10 and 11, where the gate-man says the river is rising fast.",
+     "features": {
+      "comma": false,
+      "twoPart": false,
+      "words": 7,
+      "windowOverlap": 0,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw2f4ui008ztmbv20uliq9j",
+     "value": "It was low, and he feared a bad night.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "execution": "The man said 'the river was rising fast' (line 10). Low belongs to the road in line 11, 'one low part of the road', and has been moved onto the river.",
+     "features": {
+      "comma": true,
+      "twoPart": true,
+      "words": 9,
+      "windowOverlap": 1,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw2f4ui0090tmbv99fz3qt7",
+     "value": "It was rising fast, and he feared a bad night.",
+     "isKey": true,
+     "tag": null,
+     "execution": null,
+     "features": {
+      "comma": true,
+      "twoPart": true,
+      "words": 10,
+      "windowOverlap": 1,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw2f4ui0091tmbvrm0vqv8x",
+     "value": "It had covered the meadows so the road was shut.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "Line 11 says meadows were under water, but nothing says the road was shut.",
+     "features": {
+      "comma": false,
+      "twoPart": false,
+      "words": 10,
+      "windowOverlap": 0.5,
+      "not": false
+     }
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-010-JE-04",
+   "questionType": "en-comp-inference",
+   "passageRef": "stream-a-11-jane-eyre",
+   "stem": {
+    "text": "Read lines 11 to 18. Why does the Gytrash come into Jane's mind?",
+    "quotes": [],
+    "passageRef": "stream-a-11-jane-eyre",
+    "orderAnchor": 11
+   },
+   "lineRefs": [
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+   ],
+   "explanation": {
+    "hintCore": "Find where the tale comes back to her. Ask what is happening at that moment.",
+    "walkScript": "Lines 11 to 13 say that when she was young, her mind was full of fancies. At lines 14 and 15 a horse is coming through the dusk. Just then, line 15 says, she remembered Bessie's tales. Lines 16 and 17 say a Gytrash came upon travellers out late. Lines 17 and 18 say this horse was now coming upon her in the same way."
+   },
+   "tellsPointingAtKey": [],
+   "distractorsRestatingStem": [],
+   "keyInClosestNearTwinPair": true,
+   "previousRound": {
+    "reviewOfRow": {
+     "itemId": "ENG-010-JE-04",
+     "verdict": "SIGN",
+     "reason": "One answer under the stem's lines 11 to 18: the horse; the dog arrives only at line 20. Longest (words), window and comma broken; longest (characters) as before, not failing. Key and dog option differ by one word, the shape the brief allows; the passage decides between them."
+    },
+    "reviewOfChanges": [
+     {
+      "ref": "seat:cmsw2f4vt00gttmbv7wpjp25e",
+      "verdict": "ATTEST",
+      "reason": "Checked the order hard. The Gytrash comes into her mind at lines 14 to 15, 'As this horse approached', and 'I remembered certain of Bessie's tales'. Line 19 then says 'not yet in sight'. The dog first appears at line 20, after the memory, and only 'passed' her. The 'large dog' at line 16 is a form the tale names, not a dog arriving, and the stem limits the reader to lines 11 to 18. So the order is not defensible and the option is wrong. Later event given as the cause, so chronology collapse fits. Quote exact; ties longest (words), window and comma."
+     }
+    ]
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4vt00gttmbv7wpjp25e",
+     "value": "A dog was coming upon her in the dusk, as in Bessie's tales.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "execution": "The dog is real but comes later: it glides out at line 20. The Gytrash comes into her mind at lines 14 to 18, 'As this horse approached', before any dog has appeared.",
+     "features": {
+      "comma": true,
+      "twoPart": false,
+      "words": 13,
+      "windowOverlap": 1,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw2f4vt00gutmbvym937j4v",
+     "value": "She had always believed every one of Bessie's tales was true.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "execution": "Stretches lines 11 to 13 into always and every. Line 12 counts the nursery stories among other rubbish, so the text is measured.",
+     "features": {
+      "comma": false,
+      "twoPart": false,
+      "words": 11,
+      "windowOverlap": 0.29,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw2f4vt00gvtmbveqs456qn",
+     "value": "She was terrified of being alone in the lane.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "execution": "Line 11 gives fancies both bright and dark, which is not the same as terror.",
+     "features": {
+      "comma": false,
+      "twoPart": false,
+      "words": 9,
+      "windowOverlap": 0,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw2f4vt00gwtmbv2iy5qbd5",
+     "value": "A horse was coming upon her in the dusk, as in Bessie's tales.",
+     "isKey": true,
+     "tag": null,
+     "execution": null,
+     "features": {
+      "comma": true,
+      "twoPart": false,
+      "words": 13,
+      "windowOverlap": 1,
+      "not": false
+     }
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-010-JE-10",
+   "questionType": "en-comp-retrieval",
+   "passageRef": "stream-a-11-jane-eyre",
+   "stem": {
+    "text": "Read lines 49 and 50. What does the traveller say is the matter?",
+    "quotes": [],
+    "passageRef": "stream-a-11-jane-eyre",
+    "orderAnchor": 49
+   },
+   "lineRefs": [
+    49,
+    50
+   ],
+   "explanation": {
+    "hintCore": "Read all of what he says in line 49. Check each option against every part of it.",
+    "walkScript": "Read line 49 as one speech. He gives two things: what he has not got, and what he has. Line 50 shows the sprain is real when he tries his foot."
+   },
+   "tellsPointingAtKey": [],
+   "distractorsRestatingStem": [],
+   "keyInClosestNearTwinPair": true,
+   "previousRound": {
+    "reviewOfRow": {
+     "itemId": "ENG-010-JE-10",
+     "verdict": "SIGN",
+     "reason": "One answer: a sprain, and no bones broken. All four tells broken; shortest (characters) as before, not failing."
+    },
+    "reviewOfChanges": [
+     {
+      "ref": "seat:cmsw2f4vy00hmtmbva8hvsq6q",
+      "verdict": "ATTEST",
+      "reason": "Line 49: 'I have no broken bones,—only a sprain'. Dropping the 'no' gives this option. Quote exact. Ties the key on all four features."
+     }
+    ]
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4vy00hmtmbva8hvsq6q",
+     "value": "A sprain, and some broken bones in his foot.",
+     "isKey": false,
+     "tag": "en-negation-dropped",
+     "execution": "Line 49 says 'I have no broken bones,—only a sprain'. The sprain is right; dropping the 'no' adds broken bones he says he does not have.",
+     "features": {
+      "comma": true,
+      "twoPart": true,
+      "words": 9,
+      "windowOverlap": 1,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw2f4vy00hntmbvv79271kf",
+     "value": "A sprain, and no bones broken.",
+     "isKey": true,
+     "tag": null,
+     "execution": null,
+     "features": {
+      "comma": true,
+      "twoPart": true,
+      "words": 6,
+      "windowOverlap": 1,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw2f4vy00hotmbvaghpjmf8",
+     "value": "He says that he shall do well enough.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Reuses line 49, and that is what he claims, not what is the matter.",
+     "features": {
+      "comma": false,
+      "twoPart": false,
+      "words": 8,
+      "windowOverlap": 0.25,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw2f4vy00hptmbvok7aybjx",
+     "value": "His shoulder was hurt when he came down.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "Line 49 names a sprain and line 50 has him try his foot; no shoulder appears.",
+     "features": {
+      "comma": false,
+      "twoPart": false,
+      "words": 8,
+      "windowOverlap": 0,
+      "not": false
+     }
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-017-CR-08",
+   "questionType": "en-comp-retrieval",
+   "passageRef": "stream-a-17-cranford",
+   "stem": {
+    "text": "Look at lines 35 to 37. How does Captain Brown ask his question about the Rambler?",
+    "quotes": [],
+    "passageRef": "stream-a-17-cranford",
+    "orderAnchor": 35
+   },
+   "lineRefs": [
+    35,
+    36,
+    37
+   ],
+   "explanation": {
+    "hintCore": "Find where his voice is described. Then read on to the end of line 37.",
+    "walkScript": "Line 36 has him ask how the Rambler was published. The same line says he asked it in a low voice. Line 37 says the narrator thinks Miss Jenkyns could not have heard it."
+   },
+   "tellsPointingAtKey": [
+    "most words shared with the cited lines",
+    "most words shared with the whole passage",
+    "the only option containing \"not\"/\"n't\""
+   ],
+   "distractorsRestatingStem": [],
+   "keyInClosestNearTwinPair": false,
+   "previousRound": {
+    "reviewOfRow": {
+     "itemId": "ENG-017-CR-08",
+     "verdict": "HOLD",
+     "reason": "The temper seat is refused: 'Angrily' is supported by lines 15 to 16 ('too much for Captain Brown to take placidly') and lines 32 to 33 (screwed lips, drumming). As proposed, the row has a defensible second answer to how he asked. Without that seat the only-'not' tell is unbroken, because the key's 'could not hear' would again be the only 'not'. Rework the temper seat, or move the 'not' to the loud-voice seat. The key also stays the only hedged option ('probably'), which is not failing but is worth removing if the key is touched."
+    },
+    "reviewOfChanges": [
+     {
+      "ref": "seat:cmsw2f4xu00sttmbv8g015a78",
+      "verdict": "ATTEST",
+      "reason": "Line 36: 'in a low voice'. Line 37: Miss Jenkyns 'could not have heard'. Loud and surely heard is the stated contrary, so contradicted fits. Quotes exact. Ties the key on window and passage overlap at 0.67."
+     },
+     {
+      "ref": "seat:cmsw2f4xu00sutmbv7madxw37",
+      "verdict": "REFUSE",
+      "reason": "Not wrong under every reading. Lines 15 to 16 say the remark was 'evidently too much for Captain Brown to take placidly'. Lines 32 to 33 have him screw his lips up and drum on the table. His Rambler question at line 36 is a pointed retort to her 'finishing blow' (lines 33 to 35). So 'Angrily' has real support, and the new clause 'as he could not keep his temper' nearly paraphrases lines 15 to 16. A child, or a parent marking, can defend it, which gives the row a second answer. The execution says 'anger is a likely-sounding manner the lines never give', true only of lines 35 to 37, and leaves out lines 15 to 16 and 32 to 33, which point the other way. Use a manner the passage flatly denies. Or put the needed 'not' on the loud-voice seat: 'In a loud voice that Miss Jenkyns could not miss.'"
+     }
+    ]
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4xu00sstmbvd4uw7jsk",
+     "value": "In a grand voice, as if reading aloud to them all.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "execution": "Lines 30 and 31 give a high-pitched, majestic voice to Miss Jenkyns as she reads. Line 36 gives him a low voice.",
+     "features": {
+      "comma": true,
+      "twoPart": false,
+      "words": 11,
+      "windowOverlap": 0.25,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw2f4xu00sttmbv8g015a78",
+     "value": "In a loud voice that the whole room could hear.",
+     "isKey": false,
+     "tag": "en-contradicted-by-the-text",
+     "execution": "Line 36 says he asked in a low voice, and line 37 has the narrator think Miss Jenkyns could not have heard. The option states the contrary.",
+     "features": {
+      "comma": false,
+      "twoPart": false,
+      "words": 10,
+      "windowOverlap": 0.2,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw2f4xu00sutmbv7madxw37",
+     "value": "Angrily, after losing his temper with her.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "He might well be cross, but lines 35 to 37 never say anything about his temper. Line 36 gives only a low voice.",
+     "features": {
+      "comma": true,
+      "twoPart": false,
+      "words": 7,
+      "windowOverlap": 0,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw2f4xu00svtmbvplir1nwb",
+     "value": "In a low voice that Miss Jenkyns probably could not hear.",
+     "isKey": true,
+     "tag": null,
+     "execution": null,
+     "features": {
+      "comma": false,
+      "twoPart": false,
+      "words": 11,
+      "windowOverlap": 0.67,
+      "not": true
+     }
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-025-LW-05",
+   "questionType": "en-comp-retrieval",
+   "passageRef": "stream-a-16-little-women",
+   "stem": {
+    "text": "Look at lines 28 to 30. What did Meg and Beth each do?",
+    "quotes": [],
+    "passageRef": "stream-a-16-little-women",
+    "orderAnchor": 28
+   },
+   "lineRefs": [
+    28,
+    29,
+    30
+   ],
+   "explanation": {
+    "hintCore": "One of these swaps the two sisters over.",
+    "walkScript": "Line 28 says Meg flew to rescue Amy. Line 28 says Beth went to pacify Jo. Line 29 says Jo boxed her sister’s ear."
+   },
+   "tellsPointingAtKey": [],
+   "distractorsRestatingStem": [],
+   "keyInClosestNearTwinPair": true,
+   "previousRound": {
+    "reviewOfRow": null,
+    "reviewOfChanges": []
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4zw014ztmbvu9j5seco",
+     "value": "Meg went to Amy and Beth went to Jo.",
+     "isKey": true,
+     "tag": null,
+     "execution": null,
+     "features": {
+      "comma": false,
+      "twoPart": false,
+      "words": 9,
+      "windowOverlap": 0.6,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw2f4zw0150tmbvz44i89fr",
+     "value": "Meg went to Jo and Beth went to Amy.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "execution": "True of line 28 with the two of them swapped.",
+     "features": {
+      "comma": false,
+      "twoPart": false,
+      "words": 9,
+      "windowOverlap": 0.6,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw2f4zw0151tmbv505xp1k0",
+     "value": "One of them boxed her sister’s ear.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at line 29, and it is Jo rather than either of them.",
+     "features": {
+      "comma": false,
+      "twoPart": false,
+      "words": 7,
+      "windowOverlap": 0.75,
+      "not": false
+     }
+    },
+    {
+     "optionId": "cmsw2f4zw0152tmbvyhosa1gt",
+     "value": "They went up to the garret after her.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "A sister storming off invites it; line 30 has her alone.",
+     "features": {
+      "comma": false,
+      "twoPart": false,
+      "words": 8,
+      "windowOverlap": 0.5,
+      "not": false
+     }
+    }
+   ]
+  }
+ ]
+}

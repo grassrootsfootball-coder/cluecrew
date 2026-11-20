@@ -1,0 +1,378 @@
+{
+ "door": "english-rewrite/tells/D",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "ENG-028-PR-10",
+   "passageRef": "stream-b-01",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/D",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Read whole: only 'answered a different question both times' (lines 39-40) is what happens. The count, line 2 and 'be quiet' are each wrong. The longest tell now picks a distractor. 'Most words shared with the stem' still picks the key through 'both times', but that tell is below chance for retrieval (x0.20).",
+   "landedAt": "2026-11-20T19:53:02.160Z",
+   "changes": [
+    {
+     "field": "option A (cmsw2f50v01ajtmbvrtdoh49w).value",
+     "before": "She has said it twice this morning.",
+     "after": "She has said his name twice this morning in that voice."
+    },
+    {
+     "field": "option A (cmsw2f50v01ajtmbvrtdoh49w).execution",
+     "before": "True at line 39, and it is how often rather than what happened.",
+     "after": "True at line 39, where she has said his name twice this morning in that voice. That is how often she has said it, not what happens; lines 39 and 40 say both times he has answered a different question."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-028-PR-02",
+   "passageRef": "stream-b-01",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/D",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Read whole: the gap (line 6) is what she sees. The flagstone is where she stands, the nest is line 20, and 'cannot count' is contradicted at lines 7-8. The traffic is also visible, but the only traffic option is the contradicted one, so no second answer. The length tell is broken.",
+   "landedAt": "2026-11-20T19:53:02.160Z",
+   "changes": [
+    {
+     "field": "option D (cmsw2f50o019itmbvb8lyuoh7).value",
+     "before": "So many going in that she cannot keep count.",
+     "after": "So many going in and out that she cannot count them."
+    },
+    {
+     "field": "option D (cmsw2f50o019itmbvb8lyuoh7).execution",
+     "before": "Line 7 has her eyes doing the counting without being asked.",
+     "after": "Lines 7 and 8 say her eyes do the counting now without being asked, and line 7 gives the count itself: two go in, one comes out. So she can count them, and the passage says so."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-020-HD-06",
+   "passageRef": "stream-a-19-heidi",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/D",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Read whole: only 'would have gone hard and stale before Heidi went home' is Clara's stated reason (line 29). The walkScript rules out 'by now' explicitly. The length and overlap tells no longer pick the key.",
+   "landedAt": "2026-11-20T19:53:02.160Z",
+   "changes": [
+    {
+     "field": "option A (cmsw2f4yk00x2tmbv3qhrz3fi).value",
+     "before": "They had already gone hard and stale in the wardrobe.",
+     "after": "The rolls Heidi kept in the cupboard were hard and stale by now."
+    },
+    {
+     "field": "option A (cmsw2f4yk00x2tmbv3qhrz3fi).execution",
+     "before": "Line 29 says the rolls would have been hard and stale by the time Heidi went home. The child keeps the stale rolls and changes one detail, 'would have been' to 'had already', so a future reason becomes a present fact.",
+     "after": "Line 29 has Clara say the rolls would have been hard and stale by then, meaning by the time Heidi went home. The child keeps hard and stale and changes one detail, by then to by now, so a reason about the future becomes a fact about the present."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-009-SM-11",
+   "passageRef": "stream-b-02",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/D",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Read whole: light going (line 40) and his moving hand (line 42) is the only defensible cause. Wind, a faulty phone and 'both hands caused it' are each wrong. Overlap and 'not' tells broken.",
+   "landedAt": "2026-11-20T19:53:02.160Z",
+   "changes": [
+    {
+     "field": "option B (cmsw2f4vp00g5tmbv5y6x5n3h).value",
+     "before": "There was something the matter with the camera on his phone.",
+     "after": "The camera on his phone was not working properly."
+    },
+    {
+     "field": "option B (cmsw2f4vp00g5tmbv5y6x5n3h).execution",
+     "before": "Lines 40 and 41 give the light and his hands, and nothing about the phone itself.",
+     "after": "No line says anything is wrong with the phone itself. Line 40 gives the light going, and line 42 gives his hand moving; the not here is still a wrong claim."
+    },
+    {
+     "field": "option D (cmsw2f4vp00g7tmbvoi2716j5).value",
+     "before": "Holding it in both hands is what shook it.",
+     "after": "Holding it in both hands is why the picture came out shaken."
+    },
+    {
+     "field": "option D (cmsw2f4vp00g7tmbvoi2716j5).execution",
+     "before": "Line 41 says even then, which means despite that, and this reads it as because.",
+     "after": "Lines 41 and 42 say he had to hold it in both hands, and even then the picture came out grey and shaken. Even then means in spite of that, and this reads it as because; line 42 puts the shake down to where his hand had moved."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-009-SM-03",
+   "passageRef": "stream-b-02",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/D",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Read whole: the calendar (line 14) is the only reason given. Nan asking, the forgotten visit and 'for himself' are each wrong. No tell picks the key after.",
+   "landedAt": "2026-11-20T19:53:02.160Z",
+   "changes": [
+    {
+     "field": "option A (cmsw2f4vi00f1tmbv8wfhevnv).value",
+     "before": "Nan asked him to bring her back a picture.",
+     "after": "Nan said he should get her a picture."
+    },
+    {
+     "field": "option A (cmsw2f4vi00f1tmbv8wfhevnv).execution",
+     "before": "Line 15 has him say he would get her one; the offer is his.",
+     "after": "Lines 14 and 15 have him say he would get her a picture of the place; the offer is his, and no line has Nan ask for one. The reason is at line 14: nothing on her wall but a calendar."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-028-PR-03",
+   "passageRef": "stream-b-01",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/D",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Read whole: only 'puts it aside' answers what he does with her words (line 10). Repeating him, the bolt actions and the mower time are each wrong. The length tell is broken, and fewest-overlap ties at zero between the key and the mower option.",
+   "landedAt": "2026-11-20T19:53:02.160Z",
+   "changes": [
+    {
+     "field": "option B (cmsw2f50p019ltmbv087icdax).value",
+     "before": "He wipes his hands down his shirt.",
+     "after": "He wipes his hands down his shirt and looks at the door."
+    },
+    {
+     "field": "option B (cmsw2f50p019ltmbv087icdax).execution",
+     "before": "True at line 11, and it is what he does with the bolt.",
+     "after": "True at line 11, where he wipes his hands down his shirt and looks at the door. That is what he does next about the bolt, not what he does with her words; line 10 is where he brushes those aside."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-020-HD-08",
+   "passageRef": "stream-a-19-heidi",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/D",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Read whole: only 'sure the promise will be kept' matches line 33. 'Or more' is the answer, not a reason; anger and not understanding are not given. The word length ties.",
+   "landedAt": "2026-11-20T19:53:02.160Z",
+   "changes": [
+    {
+     "field": "option B (cmsw2f4ym00xdtmbv6o9fb4qq).value",
+     "before": "Because she is still angry about the bread.",
+     "after": "Because she is still angry that her bread was taken away."
+    },
+    {
+     "field": "option B (cmsw2f4ym00xdtmbv6o9fb4qq).execution",
+     "before": "A near-neighbour of the real feeling; the lines give her doubt, not anger.",
+     "after": "Line 33 says she asks to make sure she could depend upon Clara's promise, which is doubt, not anger. Anger is a near neighbour of her distress over the bread, and no line from 33 to 36 gives it."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-013-TI-06",
+   "passageRef": "stream-a-01-treasure-island",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/D",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Read whole: 'won him over' is the only option consistent with lines 27-29. The longest tell is now a tie. The new seat starts 'He' while the others start 'It has', but the stored value already did that and it points at a distractor, not the key.",
+   "landedAt": "2026-11-20T19:53:02.160Z",
+   "changes": [
+    {
+     "field": "option A (cmsw2f4wo00lztmbv3h15ti42).value",
+     "before": "He liked the job from the very start.",
+     "after": "He liked the job long before the talk took place."
+    },
+    {
+     "field": "option A (cmsw2f4wo00lztmbv3h15ti42).execution",
+     "before": "Lines 27 and 28 say he did not half a quarter like it until the talk.",
+     "after": "Lines 27 and 28 have the lad say he didn't half a quarter like the job till he had this talk. Dropping the didn't turns that into liking it all along, before the talk."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-028-PR-04",
+   "passageRef": "stream-b-01",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/D",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Read whole: only the ball (lines 13-14) is why she first reached in. The humming came during the reach, the torch is on the Sunday, and Grandad never showed her. The word length ties.",
+   "landedAt": "2026-11-20T19:53:02.160Z",
+   "changes": [
+    {
+     "field": "option B (cmsw2f50q019qtmbvnsvzuvz7).execution",
+     "before": "True at line 19, on the Sunday.",
+     "after": "True at line 19, on the Sunday, well after she first reached into the nettles on the second day of the holidays at line 13. Lines 13 and 14 say she reached in because her ball had gone down the side of the shed."
+    },
+    {
+     "field": "option C (cmsw2f50q019rtmbvhr26rlax).value",
+     "before": "Grandad showed her the gap under the boards.",
+     "after": "Grandad had shown her the gap under the roof boards."
+    },
+    {
+     "field": "option C (cmsw2f50q019rtmbvhr26rlax).execution",
+     "before": "No line has anyone show her anything.",
+     "after": "No line has anyone show her anything. Line 13 says she found them, and lines 13 and 14 say she reached in because her ball had gone down the side of the shed."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-020-HD-02",
+   "passageRef": "stream-a-19-heidi",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/D",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Read whole: only the heap of rolls (line 12) is found in the wardrobe. The hat is line 15, the clothes are not stated, the horror is on her face. The hintCore still matches the reseated option. The overlap and shortest tells are broken.",
+   "landedAt": "2026-11-20T19:53:02.160Z",
+   "changes": [
+    {
+     "field": "option A (cmsw2f4yh00witmbv30wx10iq).value",
+     "before": "A thing that nobody had ever done before.",
+     "after": "An expression of horror on her face."
+    },
+    {
+     "field": "option A (cmsw2f4yh00witmbv30wx10iq).tag",
+     "before": "en-inference-literal-lookalike",
+     "after": "en-within-span-wrong-element"
+    },
+    {
+     "field": "option A (cmsw2f4yh00witmbv30wx10iq).execution",
+     "before": "Reuses lines 10 and 11 and gives her feeling instead of the thing.",
+     "after": "True at line 9, where she comes back with an expression of horror upon her face. That is how she looks, not what she finds; line 12 says she finds a heap of rolls at the bottom. Retagged from en-inference-literal-lookalike: the value is now a within-window detail answering a different question."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-027-RR-10",
+   "passageRef": "stream-a-22-prisoner-of-zenda",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/D",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Read whole: 'afraid, and looking for a way out' is the only option supported by line 54's 'thinks on flight'. The patched face is description, Sapt is another person, and illness is unstated even though the shaking is real. Comma, two-part and length tells tie. 'Most words shared with the stem' still picks the key, through 'looking' matching the stem's 'Look'. That tell is not failing for inference (x1.37) and is not in this row's tellsPointingAtKey.",
+   "landedAt": "2026-11-20T19:53:02.160Z",
+   "changes": [
+    {
+     "field": "option D (cmsw2f50l018ytmbv84gyywgn).value",
+     "before": "He is ill and cannot help the shaking.",
+     "after": "He is ill, and he cannot stop his hand from shaking."
+    },
+    {
+     "field": "option D (cmsw2f50l018ytmbv84gyywgn).execution",
+     "before": "A shaking hand invites illness; no line gives him any.",
+     "after": "No line gives him any illness; lines 53 and 54 say he looked to the right and to the left, as a man looks who thinks on flight, which is fear. The second half matches line 55, where his hand shook, so the first claim is the wrong one."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-020-HD-05",
+   "passageRef": "stream-a-19-heidi",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/D",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Read whole: only the bread for grandmother is what she sobs out (lines 23-24). The 'heart would break' words are the writer's, the alarm is Clara's, and the mountain is unstated. The longest tell now picks a distractor.",
+   "landedAt": "2026-11-20T19:53:02.160Z",
+   "changes": [
+    {
+     "field": "option D (cmsw2f4yj00x0tmbv2bg9s591).value",
+     "before": "That she wants to go back to the mountain.",
+     "after": "That she wants to go back home to the mountain again."
+    },
+    {
+     "field": "option D (cmsw2f4yj00x0tmbv2bg9s591).execution",
+     "before": "A wish the scene invites and no line here gives her.",
+     "after": "No line from 21 to 25 has her sob anything about going home or the mountain. What she keeps sobbing out, at lines 23 and 24, is that the bread was all for grandmother and is gone."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-027-RR-11",
+   "passageRef": "stream-a-22-prisoner-of-zenda",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/D",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Read whole: only 'could hardly see' (line 67) is the relief. Dancing is the danger, the ambassadors are not the reason, and his having left is contradicted at lines 65-66. The whole-passage overlap tell is broken. 'Shortest' still picks the key, but that tell runs below chance door-wide (x0.73).",
+   "landedAt": "2026-11-20T19:53:02.160Z",
+   "changes": [
+    {
+     "field": "option A (cmsw2f50l0190tmbv3cfti7vu).value",
+     "before": "Because he had danced at Lord Topham’s house many times.",
+     "after": "Because he had danced at Lord Topham’s house before."
+    },
+    {
+     "field": "option A (cmsw2f50l0190tmbv3cfti7vu).execution",
+     "before": "True at lines 66 and 67, and it is the danger rather than the escape.",
+     "after": "True at lines 66 and 67, where he had danced a score of times at Lord Topham's house in Grosvenor Square. That is why the old man might know him, the danger, not why he is thankful; line 67 gives that, the old man was as blind as a bat."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-009-SM-01",
+   "passageRef": "stream-b-02",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/D",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Read whole: only the because-clause of lines 1-2 answers why; the line-5 option and the 'nobody lives' option are ruled out. Overlap tells no longer pick the key (measured after).",
+   "landedAt": "2026-11-20T19:53:02.160Z",
+   "changes": [
+    {
+     "field": "option D (cmsw2f4vg00eutmbv4zol6abr).value",
+     "before": "Because the two miles of sea wall begin there.",
+     "after": "Because the sea wall went on from there."
+    },
+    {
+     "field": "option D (cmsw2f4vg00eutmbv4zol6abr).execution",
+     "before": "Line 1 gives the reason outright: the bus has no way of turning round.",
+     "after": "Line 2 says that from the shelter it was two miles of sea wall. That is the walk ahead of him, not a reason the bus stops; lines 1 and 2 give the reason after because, that there is nowhere to turn round."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-009-SM-05",
+   "passageRef": "stream-b-02",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/D",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Read whole: only the boat (lines 20-21) is in the mud below him. Posts are further along, the bridge is a simile, and step and wall are at Saltmere. The comma, two-part and length tells tie; two options have commas and two do not.",
+   "landedAt": "2026-11-20T19:53:02.160Z",
+   "changes": [
+    {
+     "field": "option D (cmsw2f4vk00fetmbv5ajic2oo).value",
+     "before": "The remains of a row of four cottages.",
+     "after": "A step down into water, and a piece of a wall."
+    },
+    {
+     "field": "option D (cmsw2f4vk00fetmbv5ajic2oo).execution",
+     "before": "The cottages are real, at line 7, and they are out at Saltmere, not here.",
+     "after": "Lines 8 and 9 give a step that goes down into water and a piece of wall, and both are out at Saltmere, not below the sea wall. Lines 20 and 21 put a boat in the mud below him, with a gull standing on it."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-009-SM-10",
+   "passageRef": "stream-b-02",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/D",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Read whole: only the buoy (line 37) makes the sound. The bell, the 'musical note' and the turning tide are each wrong. Comma tell broken, no reverse tell.",
+   "landedAt": "2026-11-20T19:53:02.160Z",
+   "changes": [
+    {
+     "field": "option A (cmsw2f4vo00fztmbvvxwm1c9f).value",
+     "before": "A bell in the chapel that went under the sea years ago.",
+     "after": "A bell in the chapel, which the sea took years ago."
+    },
+    {
+     "field": "option A (cmsw2f4vo00fztmbvvxwm1c9f).execution",
+     "before": "Line 6 says there is no chapel on the map, and no bell appears anywhere.",
+     "after": "Line 6 says there is no chapel on the map, and no line gives a real bell; the sea taking the lot at lines 10 and 11 is about the cottages. Lines 37 and 38 say the sound is a buoy that knocks when the water moves."
+    }
+   ]
+  }
+ ]
+}

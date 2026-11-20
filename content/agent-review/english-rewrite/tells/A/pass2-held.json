@@ -1,0 +1,123 @@
+{
+ "door": "english-rewrite/tells/A",
+ "mode": "APPLIED",
+ "landed": [
+  "ENG-002-pp-01",
+  "ENG-002-pp-12",
+  "ENG-007-LP-07",
+  "ENG-007-LP-15",
+  "ENG-007-LP-13",
+  "ENG-007-LP-06",
+  "ENG-024-BF-04",
+  "ENG-024-BF-07",
+  "ENG-007-LP-02",
+  "ENG-002-pp-10",
+  "ENG-023-RT-05",
+  "ENG-023-RT-07",
+  "ENG-016-HB-03",
+  "ENG-023-RT-10",
+  "ENG-016-HB-04",
+  "ENG-024-BF-05",
+  "ENG-024-BF-08",
+  "ENG-002-pp-22",
+  "ENG-007-LP-11",
+  "ENG-024-BF-11",
+  "ENG-002-pp-08",
+  "ENG-023-RT-09",
+  "ENG-015-CC-10"
+ ],
+ "held": [
+  {
+   "itemId": "ENG-002-pp-09",
+   "gateFaults": [],
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-002-pp-09",
+    "verdict": "SIGN",
+    "reason": "Read whole: only the key gives looks and money (lines 27-29); the transferred Bingley pair is clearly his; no tell on the key after. Pre-existing staff execution on the wrong-scope option quotes an unhelpful fragment of line 27; worth tidying, not child-facing."
+   }
+  },
+  {
+   "itemId": "ENG-007-LP-01",
+   "gateFaults": [],
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-007-LP-01",
+    "verdict": "SIGN",
+    "reason": "Read whole: only the key is the bin bag's job (line 9); no tell on the key after."
+   }
+  },
+  {
+   "itemId": "ENG-007-LP-09",
+   "gateFaults": [],
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-007-LP-09",
+    "verdict": "SIGN",
+    "reason": "Read whole: only the key reads 'get out of spellings' as missing them; no tell on the key after."
+   }
+  },
+  {
+   "itemId": "ENG-002-pp-15",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "seat:cmsw2f4ty005qtmbvcxcdm3f1",
+     "verdict": "REFUSE",
+     "reason": "Second-answer risk, and the tag does not hold. 'Would not dance with her' is a standing unwillingness, not a single later event: line 40 already has Mr Darcy decline 'being introduced to any other lady', lines 53-56 refuse dancing outright, and lines 62-67 refuse Elizabeth by name while she sits. The 'scarcity of gentlemen' at line 47 is partly HIS doing: he is a gentleman standing about by himself (lines 51-52) who would not dance. So 'Mr Darcy was standing near and would not dance with her' can be defended as a reason she had to keep sitting, and the added 'standing near' now grounds it in the cited window (line 48). en-chronology-collapse requires the cause to come LATER than the effect; the unwillingness is stated at line 40, before line 47, so the execution's 'a later event as the cause of an earlier one' is not true of this wording. Suggested repair for the overlap tell instead: a within-span option from lines 48-50 that answers a different question, e.g. 'Mr Bingley came away from the dance to talk to Mr Darcy.' (true at lines 49-50, not why she sat), tagged en-within-span-wrong-element."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-002-pp-15",
+    "verdict": "HOLD",
+    "reason": "HOLD: the only change on this row is refused. Read whole, 'Mr Darcy was standing near and would not dance with her.' is a defensible second reason she kept sitting: he is one of the gentlemen who would not dance (line 40, lines 51-56), and 'standing near' ties it to the cited lines. A second answer is worse than the window-overlap tell it was written to break. Re-draft as suggested on the seat."
+   }
+  },
+  {
+   "itemId": "ENG-002-pp-06",
+   "gateFaults": [],
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-002-pp-06",
+    "verdict": "SIGN",
+    "reason": "Read whole: one five-person answer; the two near-twins differ on 'elder' vs 'both' and only the key fits line 22; no tell on the key after."
+   }
+  },
+  {
+   "itemId": "ENG-007-LP-08",
+   "gateFaults": [],
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-007-LP-08",
+    "verdict": "SIGN",
+    "reason": "Read whole: only the key reads the empty space against Reuben; the new option is refuted by the stem's own quotation; 'not' and longest broken; one new non-failing tell on the key (fewest window words), not a giveaway."
+   }
+  },
+  {
+   "itemId": "ENG-007-LP-04",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "seat:cmsw2f4v100c5tmbvgqit3fr3",
+     "verdict": "REFUSE",
+     "reason": "The tag does not name this mistake. en-within-span-wrong-element is defined as an option that is TRUE inside the cited window and answers a different question; 'They go to shops in Leeds, then to a warehouse.' is not true anywhere in lines 24-25 and it does answer the question asked, only in the wrong order and with the shops moved to Leeds (two altered details). Its child hint ('Check it answers the question you were asked') would send a child who chose it to the wrong fix. The value itself is wrong under every reading and the execution's quotations are exact; the fault is the tag. Repair: drop 'in Leeds' so one detail differs ('They go out to shops, then to a warehouse.', which keeps the comma and the window words) and tag en-minimal-pair-skim."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-007-LP-04",
+    "verdict": "HOLD",
+    "reason": "HOLD: the only change on this row is refused for its tag (the value is not true inside the window, and the child hint for en-within-span-wrong-element would mislead). The row otherwise reads with one defensible answer, and the tells would be broken. Retag to en-minimal-pair-skim with 'in Leeds' dropped, then it can sign."
+   }
+  },
+  {
+   "itemId": "ENG-023-RT-03",
+   "gateFaults": [],
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-023-RT-03",
+    "verdict": "SIGN",
+    "reason": "Read whole: only the key matches line 15; no tell on the key after."
+   }
+  }
+ ]
+}

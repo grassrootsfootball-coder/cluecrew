@@ -1,0 +1,434 @@
+{
+ "door": "english-rewrite/tells/C",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "ENG-018-RB-01",
+   "passageRef": "stream-a-21-rebecca-sunnybrook",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/C",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One defensible answer (lines 3-4: the mail). Longest tied at 9 words, and no tell picks the key.",
+   "landedAt": "2026-11-20T19:53:01.371Z",
+   "changes": [
+    {
+     "field": "option C (cmt9qp4p30003tmovpgjineba).value",
+     "before": "That they had driven eight miles that day.",
+     "after": "That they had driven eight miles that very morning."
+    },
+    {
+     "field": "option C (cmt9qp4p30003tmovpgjineba).execution",
+     "before": "Lines 25 and 26 have the mother say they drove eight miles that morning. That is outside this window, and it was the child and her mother, not Mr Cobb.",
+     "after": "Lines 25 and 26 have the mother say they drove eight miles that morning. That is outside this window, and it was the child and her mother, not Mr Cobb; lines 3 and 4 say he never lost sight of the fact that he carried the mail."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-006-TM-05",
+   "passageRef": "stream-a-10-three-men-boat",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/C",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One defensible answer (the handkerchief, lines 20-21). Comma, two-part, longest words and overlap are tied. 'longest (characters)' still picks the key (76 vs 70), which is not a failing tell. No new giveaway.",
+   "landedAt": "2026-11-20T19:53:01.371Z",
+   "changes": [
+    {
+     "field": "option D (cmsw2f4ut00aztmbvtut0vrwb).value",
+     "before": "Because he goes out of the room to see to his cut.",
+     "after": "Because his tools are in the coat, and nobody knows where the coat is."
+    },
+    {
+     "field": "option D (cmsw2f4ut00aztmbvtut0vrwb).tag",
+     "before": "en-inference-literal-lookalike",
+     "after": "en-attribute-transfer"
+    },
+    {
+     "field": "option D (cmsw2f4ut00aztmbvtut0vrwb).execution",
+     "before": "Reuses the cut from line 19; line 23 keeps him in the room, dancing round and hindering.",
+     "after": "Lines 20 and 21 put the handkerchief in the pocket of the coat he had taken off. The tools are what the house leaves off looking for at line 22; the child moves the coat pocket from the handkerchief to the tools."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-006-TM-11",
+   "passageRef": "stream-a-10-three-men-boat",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/C",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One defensible answer (lines 59-62: unchanged pride). Longest is tied at 15 words. The 'only option without a comma' pointer is cleared. 'most words shared with the stem' still picks the key, as before, and is not failing.",
+   "landedAt": "2026-11-20T19:53:01.371Z",
+   "changes": [
+    {
+     "field": "option D (cmsw2f4ux00botmbvfxke6ea2).value",
+     "before": "He is boasting to them, and hiding it, because it went so badly.",
+     "after": "He is boasting so that nobody will see he knows the job went very badly."
+    },
+    {
+     "field": "option D (cmsw2f4ux00botmbvfxke6ea2).execution",
+     "before": "A knowing reading, but line 62 states the pride as real, so nothing shows him aware.",
+     "after": "A knowing reading, but line 62 states the pride as real: he surveys the mess with evident pride. No line shows him aware that the job went badly."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-019-BV-10",
+   "passageRef": "stream-a-20-bevis",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/C",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One defensible answer (lines 52-54). Window overlap moved off the key. The hint's 'two of these' still holds. 'shortest (characters)' picks the key, as before.",
+   "landedAt": "2026-11-20T19:53:01.371Z",
+   "changes": [
+    {
+     "field": "option B (cmsw2f4yd00vztmbvukuyrbxe).value",
+     "before": "Pan follows him along once he has set off.",
+     "after": "Pan follows him along the face of the cliff."
+    },
+    {
+     "field": "option B (cmsw2f4yd00vztmbvukuyrbxe).execution",
+     "before": "Turns the dog into the follower; line 52 has Pan go first.",
+     "after": "Turns the dog into the follower. Lines 52 and 53 have Pan run along the face of the cliff ahead of Bevis, who has only just pushed into the furze."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-008-RC-06",
+   "passageRef": "stream-a-02-railway-children",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/C",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One defensible answer (left on from half-past five to eight). Comma tie. 'FEWEST words shared with the cited lines' still picks the key, as before, and is not failing for inference.",
+   "landedAt": "2026-11-20T19:53:01.371Z",
+   "changes": [
+    {
+     "field": "option C (cmsw2f4vb00dvtmbv3ii0vcak).value",
+     "before": "They built the fire far too big for the kettle.",
+     "after": "They made the fire far too big, so the kettle burned."
+    },
+    {
+     "field": "option C (cmsw2f4vb00dvtmbv3ii0vcak).execution",
+     "before": "Line 41 calls it an excellent fire, and no line says it was too big. The kettle burns because it was left on the fire from half-past five with nobody indoors.",
+     "after": "Line 41 calls it an excellent fire, and no line says it was too big. The bottom burns out because the kettle was set on at about half-past five, at line 41, and left there while they sat outside and fell asleep."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-019-BV-05",
+   "passageRef": "stream-a-20-bevis",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/C",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One defensible answer (soft ground that takes a print). Comma tied, and no tell picks the key.",
+   "landedAt": "2026-11-20T19:53:01.371Z",
+   "changes": [
+    {
+     "field": "option D (cmsw2f4y900vctmbvktd7vyvp).value",
+     "before": "Standing up very straight and stiff.",
+     "after": "Stiff, and standing up very straight."
+    },
+    {
+     "field": "option D (cmsw2f4y900vctmbvktd7vyvp).execution",
+     "before": "Line 19 gives this manner to Bevis, who marched on very upright. The child moves Bevis's detail onto the sand he walks over.",
+     "after": "Line 19 gives this manner to Bevis, who marched on very upright. The child moves Bevis's detail onto the sand; line 20 has Mark put his feet into the marks Bevis left in it."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-022-GK-06",
+   "passageRef": "stream-c-01",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/C",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One defensible answer (lines 23 and 26-27). 'not' and longest words tied. 'longest (characters)' remains on the key and is not failing.",
+   "landedAt": "2026-11-20T19:53:01.371Z",
+   "changes": [
+    {
+     "field": "option C (cmsw2f4z5010gtmbvmgbd8uxi).value",
+     "before": "That he wanted the game to end sooner.",
+     "after": "That he did not even get a hand to it."
+    },
+    {
+     "field": "option C (cmsw2f4z5010gtmbvmgbd8uxi).tag",
+     "before": "en-motive-invention",
+     "after": "en-contradicted-by-the-text"
+    },
+    {
+     "field": "option C (cmsw2f4z5010gtmbvmgbd8uxi).execution",
+     "before": "A reason a reader can supply; no line gives it.",
+     "after": "Lines 26 and 27 say \"I could have had it. I had my hands on it.\" The option claims the contrary of what he says about this goal."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-012-ML-06",
+   "passageRef": "stream-a-14-mill-on-floss",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/C",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One defensible answer (lines 27-31). Window overlap tied, and no tell picks the key. Pre-existing note: 'Maggie tells Tom...' contradicts the stem's 'What does Tom tell Maggie'.",
+   "landedAt": "2026-11-20T19:53:01.371Z",
+   "changes": [
+    {
+     "field": "option D (cmsw2f4wf00kftmbvx9omd5j1).value",
+     "before": "Maggie tells Tom to shut his own eyes and then choose.",
+     "after": "Maggie tells Tom to keep his own eyes shut and choose."
+    },
+    {
+     "field": "option D (cmsw2f4wf00kftmbvx9omd5j1).execution",
+     "before": "Line 27 runs the other way: he asks which she will have.",
+     "after": "Lines 27 to 31 run the other way: Tom asks Maggie to choose right or left, and tells her to keep her eyes shut. The child swaps who gives the instruction and who obeys it."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-012-ML-10",
+   "passageRef": "stream-a-14-mill-on-floss",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/C",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One defensible answer (lines 48-49). Longest tied at 11 words. 'only hedged option' picks the key through its 'some', as before, and is not failing.",
+   "landedAt": "2026-11-20T19:53:01.371Z",
+   "changes": [
+    {
+     "field": "option C (cmsw2f4wi00kxtmbvkrck1b5j).value",
+     "before": "Because he was jealous of how much she enjoyed it.",
+     "after": "Because he was jealous of how much she enjoyed her half."
+    },
+    {
+     "field": "option C (cmsw2f4wi00kxtmbvkrck1b5j).execution",
+     "before": "Lines 48 and 49 give Tom's reason: he had acted fairly and thought she ought to make up to him for it. The child supplies a different motive, jealousy of her pleasure, that the text never supports.",
+     "after": "Lines 48 and 49 give Tom's reason: he was conscious of having acted very fairly, and thought she ought to have made up to him for it. The child supplies a different motive, jealousy of her pleasure, that the text never supports."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-006-TM-02",
+   "passageRef": "stream-a-10-three-men-boat",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/C",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Read whole: one defensible answer (line 9: a boy follows the girl). Comma and longest no longer single out the key, and the measure after shows no tell pointing at it. Minimal-pair twin with the key, decidable from line 9.",
+   "landedAt": "2026-11-20T19:53:01.371Z",
+   "changes": [
+    {
+     "field": "option D (cmsw2f4ur00aktmbv48ymj7ni).value",
+     "before": "Sends the girl for nails and goes with her.",
+     "after": "Sends the girl out for nails, then he goes after her."
+    },
+    {
+     "field": "option D (cmsw2f4ur00aktmbv48ymj7ni).execution",
+     "before": "Takes the right sentence but the wrong second half: a boy is sent after her, not himself.",
+     "after": "Takes the right sentence but the wrong second half. Line 9 has him send one of the boys after her to tell her what size to get; he does not go after her himself."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-018-RB-07",
+   "passageRef": "stream-a-21-rebecca-sunnybrook",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/C",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One defensible answer (line 37). Comma and longest no longer single out the key. 'shortest (characters)' now picks the key (37 characters) and is not failing (x0.76 door-wide).",
+   "landedAt": "2026-11-20T19:53:01.371Z",
+   "changes": [
+    {
+     "field": "option A (cmsw2f4y200u5tmbvo0af9gaq).value",
+     "before": "The rattle and rumble of the wheels.",
+     "after": "The rattle of the wheels, or the creaking harness."
+    },
+    {
+     "field": "option A (cmsw2f4y200u5tmbvo0af9gaq).execution",
+     "before": "True at line 36, and it is the noise he heard it over rather than what he took it for.",
+     "after": "Lines 36 and 37 give the rattle and rumble of the wheels and the creaking of the harness as the noise he heard the voice above. The child takes those noises for the answer; line 37 says he first thought it was a cricket, a tree toad, or a bird."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-012-ML-01",
+   "passageRef": "stream-a-14-mill-on-floss",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/C",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One defensible answer (lines 1-4). Comma tie. 'shortest (characters)' picks the key, as before.",
+   "landedAt": "2026-11-20T19:53:01.371Z",
+   "changes": [
+    {
+     "field": "option C (cmsw2f4wa00jqtmbvebr7f15z).value",
+     "before": "The children had been given the day off school.",
+     "after": "Tom and Maggie were let off school, as a treat."
+    },
+    {
+     "field": "option C (cmsw2f4wa00jqtmbvebr7f15z).execution",
+     "before": "No school is mentioned anywhere in the passage.",
+     "after": "No school is mentioned anywhere in the passage, let alone a day off as a treat. Lines 1 to 4 give the reason: the scents of plumcakes, jellies and gravy make it impossible to feel altogether gloomy."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-012-ML-03",
+   "passageRef": "stream-a-14-mill-on-floss",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/C",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One defensible answer (lines 7-10). 'not' and longest tied, and no tell picks the key. Note for the author, not introduced here: the reversal option opens 'Tom asks', which contradicts the stem's 'What does Maggie ask', so a stem reader drops it. The key also sits at the overlap of two twins (the 'he says he will' option and this one).",
+   "landedAt": "2026-11-20T19:53:01.371Z",
+   "changes": [
+    {
+     "field": "option D (cmsw2f4wc00k0tmbv2w4ipamx).value",
+     "before": "Tom asks whether Maggie will run away tomorrow.",
+     "after": "Tom asks whether Maggie will run away; she says she will not."
+    },
+    {
+     "field": "option D (cmsw2f4wc00k0tmbv2w4ipamx).execution",
+     "before": "Lines 7 and 8 run the other way: Maggie is the one who asks.",
+     "after": "Lines 7 and 8 run the other way: Maggie asks Tom whether he shall run away to-morrow, and Tom answers at lines 9 and 10. The child swaps who asks and who answers."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-018-RB-08",
+   "passageRef": "stream-a-21-rebecca-sunnybrook",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/C",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One defensible answer (lines 45-47). Comma and two-part tied. 'longest (characters)' remains on the key by 3 characters and is not failing.",
+   "landedAt": "2026-11-20T19:53:01.371Z",
+   "changes": [
+    {
+     "field": "option C (cmsw2f4y300uctmbvs6fya95w).value",
+     "before": "The stage is far too small for her.",
+     "after": "The stage is too small, and the windows are too big."
+    },
+    {
+     "field": "option C (cmsw2f4y300uctmbvs6fya95w).execution",
+     "before": "Line 46 says the stage is much too big for her, and line 47 gives smallness to the windows. The child moves the small from the windows to the stage.",
+     "after": "Line 46 says the stage is so much too big for her, and line 47 says the windows are so small. The child swaps the two sizes between the stage and the windows."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-026-AL-02",
+   "passageRef": "stream-b-05",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/C",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One defensible answer (line 9: not that kind of conversation). The 'only not' tell is broken. 'shortest (characters)' and 'FEWEST cited-line words' picked the key before this change and still do, and neither is a key-pointing failure.",
+   "landedAt": "2026-11-20T19:53:01.371Z",
+   "changes": [
+    {
+     "field": "option C (cmsw2f504016atmbv5hkbac6o).value",
+     "before": "That Denise stakes her dahlias too late.",
+     "after": "That Denise does not stake her dahlias early enough."
+    },
+    {
+     "field": "option C (cmsw2f504016atmbv5hkbac6o).execution",
+     "before": "True at line 7, and it is his remark rather than her decision.",
+     "after": "True at line 7, where Grandad says staked late. It is his remark, not what Cass decides about it; lines 8 and 9 say she did not say so, because it was not that kind of conversation."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-018-RB-10",
+   "passageRef": "stream-a-21-rebecca-sunnybrook",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/C",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One defensible answer (lines 54-55). Longest and window overlap no longer single out the key, and no tell picks it. The smoothing distractor cannot be read as true of the sunshade.",
+   "landedAt": "2026-11-20T19:53:01.371Z",
+   "changes": [
+    {
+     "field": "option C (cmsw2f4y500umtmbv7ibfyiae).value",
+     "before": "Smoothed it out with great care.",
+     "after": "Smoothed it out under her as she sat."
+    },
+    {
+     "field": "option C (cmsw2f4y500umtmbv7ibfyiae).execution",
+     "before": "True at line 53 of her dress, and it is what she did to that instead.",
+     "after": "Line 53 has her sit down carefully, smoothing her dress under her. That is what she did to her dress; line 54 has her put the sunshade under its extended folds."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-008-RC-01",
+   "passageRef": "stream-a-02-railway-children",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/C",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One defensible answer (line 1). Comma and word count are tied. 'longest (characters)' remains on the key by 2 characters and is not failing. No new giveaway.",
+   "landedAt": "2026-11-20T19:53:01.371Z",
+   "changes": [
+    {
+     "field": "option C (cmsw2f4v600d6tmbvpx40n2et).value",
+     "before": "By pulling the blankets off her bed.",
+     "after": "By pulling her blankets off, one by one."
+    },
+    {
+     "field": "option C (cmsw2f4v600d6tmbvpx40n2et).execution",
+     "before": "A common way to wake someone, and nowhere in this passage.",
+     "after": "Pulling the blankets off is a common way to wake someone, but no line in the passage has it. Line 1 says Roberta woke Phyllis by pulling her hair gently."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-011-CV-01",
+   "passageRef": "stream-a-07-canterville-ghost",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/C",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One defensible answer (line 1). Passage overlap tied. 'shortest (characters)' picks the key, as before, and is not a key-pointing failure. No new giveaway.",
+   "landedAt": "2026-11-20T19:53:01.371Z",
+   "changes": [
+    {
+     "field": "option B (cmsw2f4w000i2tmbvygbnbl8j).value",
+     "before": "Because it was a lovely July evening for a drive.",
+     "after": "Because it was a lovely July evening, and they started their drive."
+    },
+    {
+     "field": "option B (cmsw2f4w000i2tmbvygbnbl8j).execution",
+     "before": "True at line 3, and the weather is not why he sent for anything.",
+     "after": "True at lines 2 and 3: they started on their drive, and it was a lovely July evening. Neither is why he sent for anything; line 1 gives the reason, that the nearest railway station is seven miles away."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-012-ML-09",
+   "passageRef": "stream-a-14-mill-on-floss",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/C",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One defensible answer (lines 43-44: wanting more). Comma tied, and no tell picks the key.",
+   "landedAt": "2026-11-20T19:53:01.371Z",
+   "changes": [
+    {
+     "field": "option B (cmsw2f4wh00krtmbvksm0gmyp).value",
+     "before": "He was pleased to watch her enjoy her half.",
+     "after": "He watched her, pleased to see her enjoy it."
+    },
+    {
+     "field": "option B (cmsw2f4wh00krtmbvksm0gmyp).execution",
+     "before": "Line 44 gives him a capacity for more, which is appetite rather than pleasure.",
+     "after": "Line 44 has him watch her feeling in himself a capacity for more, which is appetite rather than pleasure. At line 47 he calls her a greedy thing, so he was not pleased."
+    }
+   ]
+  }
+ ]
+}

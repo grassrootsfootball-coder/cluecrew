@@ -1,0 +1,811 @@
+{
+ "door": "english-rewrite/tells/B",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "ENG-005-BB-07",
+   "passageRef": "stream-a-04-black-beauty",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One answer: back by the crossways, six miles round. 'Round the tree' is denied at line 29. Longest (words), window, passage and comma broken; longest (characters) as before, not failing.",
+   "landedAt": "2026-11-20T19:53:00.541Z",
+   "changes": [
+    {
+     "field": "option A (cmsw2f4ul009itmbvjq568u1t).value",
+     "before": "Drive slowly over the tree where it lay lowest.",
+     "after": "Drive round the tree, then on to the wooden bridge."
+    },
+    {
+     "field": "option A (cmsw2f4ul009itmbvjq568u1t).execution",
+     "before": "Line 29 has John say 'we can't drive over that tree, nor yet get round it'. The child reads the content words and drops the 'can't', so the option states the very thing John rules out.",
+     "after": "Line 29 says 'we can't drive over that tree, nor yet get round it'. Dropping the 'nor' turns the plan into going round the tree, where John's actual plan is 'to go back to the four crossways' (line 30)."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-005-BB-05",
+   "passageRef": "stream-a-04-black-beauty",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One answer: the oak torn up by the roots. Window tell broken; shortest (characters) still picks the key as before, not failing.",
+   "landedAt": "2026-11-20T19:53:00.541Z",
+   "changes": [
+    {
+     "field": "option D (cmsw2f4uk009btmbv4d6fthuz).value",
+     "before": "A shower of dry leaves blown across the road.",
+     "after": "Other trees came crashing down around the oak."
+    },
+    {
+     "field": "option D (cmsw2f4uk009btmbv4d6fthuz).tag",
+     "before": "en-wrong-scope-retrieval",
+     "after": "en-agent-patient-reversal"
+    },
+    {
+     "field": "option D (cmsw2f4uk009btmbv4d6fthuz).execution",
+     "before": "The dry leaves blown across the road are at lines 4 and 5, at the start of the journey, outside lines 22 to 24. Within the window, lines 23 and 24 give what fell: an oak, torn up by the roots.",
+     "after": "Line 23 reads 'crashing down among the other trees came an oak'. The oak is what fell; the other trees are where it fell. This swaps them, making the other trees fall around the oak."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-005-BB-06",
+   "passageRef": "stream-a-04-black-beauty",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One answer: he was not brought up to run. Only-comma broken; no tell points at the key.",
+   "landedAt": "2026-11-20T19:53:00.541Z",
+   "changes": [
+    {
+     "field": "option C (cmsw2f4uk009ftmbvmmxx9bfb).value",
+     "before": "The dog-cart was too heavy to turn on the road.",
+     "after": "The dog-cart was too heavy, so he could not turn it round."
+    },
+    {
+     "field": "option C (cmsw2f4uk009ftmbvmmxx9bfb).execution",
+     "before": "A sensible guess, but the passage gives his training as the reason.",
+     "after": "Nothing in lines 24 to 26 is about the weight of the cart, and line 3 calls the dog-cart 'so light'. Beauty gives his own reason in line 26: 'I was not brought up to that'."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-13",
+   "passageRef": "stream-a-03-wind-in-willows",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One answer: the river made alive and playful. Only-comma broken, and the hedge stays on a distractor too; no tell points at the key.",
+   "landedAt": "2026-11-20T19:53:00.541Z",
+   "changes": [
+    {
+     "field": "option C (cmsw2f4tb001xtmbv25sj12gz).value",
+     "before": "Because the river was dangerous and might grab the Mole.",
+     "after": "Because the river was dangerous, as it might grab the Mole."
+    },
+    {
+     "field": "option C (cmsw2f4tb001xtmbv25sj12gz).execution",
+     "before": "'Gripping things' at line 30 is pushed to a threat; the passage's next words are 'with a gurgle' and 'leaving them with a laugh'.",
+     "after": "Pulls the gripping in line 30 to its most threatening reading. Lines 30 to 31 have the river 'chuckling', leaving things 'with a laugh' and finding 'fresh playmates', so it is playful, not a danger to the Mole."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-005-BB-12",
+   "passageRef": "stream-a-04-black-beauty",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One answer: exact words, but he cannot speak or understand much. Longest, window, two-part and comma broken; no tell points at the key.",
+   "landedAt": "2026-11-20T19:53:00.541Z",
+   "changes": [
+    {
+     "field": "option C (cmtdflmnv0002tmf56k64gfvw).value",
+     "before": "That Beauty repeats the words to show off what he knows.",
+     "after": "That Beauty repeats their words to show off, and prove how much he understands."
+    },
+    {
+     "field": "option C (cmtdflmnv0002tmf56k64gfvw).execution",
+     "before": "Invents a motive; the narrator's remarks are about what he cannot do, not what he can.",
+     "after": "An invented motive, and the reverse of what the lines keep saying. Line 41 has 'Of course I could not tell him' and line 54 'I could not understand much of what they said'."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-07",
+   "passageRef": "stream-a-03-wind-in-willows",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Key alone explains the 'shout' as his dulled hearing. Longest and only-'not' are broken; no tell points at the key after the change.",
+   "landedAt": "2026-11-20T19:53:00.541Z",
+   "changes": [
+    {
+     "field": "option A (cmsw2f4t4000vtmbv6g8tc6te).value",
+     "before": "The birds were much louder than usual that day.",
+     "after": "The birds were shouting at him because they did not want him in the meadow."
+    },
+    {
+     "field": "option A (cmsw2f4t4000vtmbv6g8tc6te).tag",
+     "before": "en-cause-agent-swap",
+     "after": "en-figurative-taken-literally"
+    },
+    {
+     "field": "option A (cmsw2f4t4000vtmbv6g8tc6te).execution",
+     "before": "The change is put on the birds; lines 18 and 19 put it on his dulled hearing.",
+     "after": "Line 19 says the song fell on his hearing 'almost like a shout', a comparison, not real shouting. Line 18 calls it 'the carol of happy birds', so nothing in the text makes them hostile; the loudness comes from his 'dulled hearing' after the cellarage."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-004-AGG-09",
+   "passageRef": "stream-a-06-anne-green-gables",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One answer: one hand on the bag, the other held out. Longest, window and comma broken; no tell points at the key.",
+   "landedAt": "2026-11-20T19:53:00.541Z",
+   "changes": [
+    {
+     "field": "option C (cmsw2f4ud0086tmbv4bdclu1o).value",
+     "before": "She stands up and holds out both her hands.",
+     "after": "She stands up, grasping the handle of her bag with both hands."
+    },
+    {
+     "field": "option C (cmsw2f4ud0086tmbv4bdclu1o).execution",
+     "before": "Differs by one detail: line 48 puts the bag in one hand and only the other is held out.",
+     "after": "One detail differs: lines 48 to 49 say she grasps the bag 'with one thin brown hand' and 'the other she held out to him'. Both hands on the bag leaves nothing held out."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-16",
+   "passageRef": "stream-a-03-wind-in-willows",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One answer: the face appears bit by bit. Longest (words) and only-comma broken; longest (characters) as before, not failing.",
+   "landedAt": "2026-11-20T19:53:00.541Z",
+   "changes": [
+    {
+     "field": "option A (cmsw387yg000ptmqbycz7if33).value",
+     "before": "To show that the Mole was creeping closer with every step.",
+     "after": "To show the Mole was creeping up to the hole, one small step at a time."
+    },
+    {
+     "field": "option A (cmsw387yg000ptmqbycz7if33).execution",
+     "before": "Nothing in lines 48 to 52 moves the Mole; he is looking, and it is the face that comes into view a piece at a time. The child supplies an approach, a likely thing to go with details arriving one by one, which the passage never states.",
+     "after": "Line 39 has the Mole sitting: 'As he sat on the grass and looked across the river', and the hole is in 'the bank opposite' (line 39). He does not move; only the face appears, one detail per line, as lines 48 to 52 show."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-09",
+   "passageRef": "stream-a-03-wind-in-willows",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One defensible answer (sixpence). The privilege option fails because the rabbit grants the privilege and does not want it. Window and passage tells broken; no tell points at the key after the change.",
+   "landedAt": "2026-11-20T19:53:00.541Z",
+   "changes": [
+    {
+     "field": "option D (cmsw2f4t7001atmbvi285jr7m).value",
+     "before": "To be let past the hedge himself.",
+     "after": "The privilege of passing by the private road."
+    },
+    {
+     "field": "option D (cmsw2f4t7001atmbvi285jr7m).execution",
+     "before": "It reverses who is passing whom: the Mole is going by, and the rabbit is the one charging for it.",
+     "after": "Reverses the exchange in lines 22 to 23. The rabbit asks 'Sixpence for the privilege of passing by the private road': the privilege is what the Mole would get, and the sixpence is what the rabbit wants from him."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-010-JE-03",
+   "passageRef": "stream-a-11-jane-eyre",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One answer: the path was narrow. Only-comma broken; no tell points at the key.",
+   "landedAt": "2026-11-20T19:53:00.541Z",
+   "changes": [
+    {
+     "field": "option A (cmsw2f4vs00gotmbvlhldt6i4).value",
+     "before": "She was afraid of the horse in the dusk.",
+     "after": "In the dusk, she was afraid of the horse."
+    },
+    {
+     "field": "option A (cmsw2f4vs00gotmbvlhldt6i4).execution",
+     "before": "Line 10 gives the narrow path as her reason, and no fear is stated.",
+     "after": "Lines 10 to 11 give the reason outright: 'as the path was narrow, I sat still to let it go by'. Fear is not stated there; she was 'just leaving the stile' (line 10) and stayed only to let the horse pass."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-14",
+   "passageRef": "stream-a-03-wind-in-willows",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One answer: the river holds him so he follows it. Longest (words) broken; longest (characters) still picks the key as before, not failing. The 'Read lines 33 to 36' stem against lineRefs 34 to 36 is unchanged and outside this repair.",
+   "landedAt": "2026-11-20T19:53:00.541Z",
+   "changes": [
+    {
+     "field": "option A (cmsw2f4tc0021tmbvpodnk62w).value",
+     "before": "The Mole could not keep up with the river.",
+     "after": "The Mole was too small and slow to keep up with the river."
+    },
+    {
+     "field": "option A (cmsw2f4tc0021tmbvpodnk62w).execution",
+     "before": "Line 34 compares the Mole to a very small child trotting beside a storyteller. The child carries the small child's struggle to keep pace over to the Mole, where the comparison is about being spellbound and wanting to follow.",
+     "after": "Takes 'when very small' from the comparison in line 34 as a fact about the Mole. The words 'very small' belong to the child walking beside the storyteller; the Mole himself 'trotted' beside the river and kept with it, held 'spell-bound' (line 35) as the child is."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-010-JE-05",
+   "passageRef": "stream-a-11-jane-eyre",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One answer: the rider breaks the spell. Longest, window and comma broken; no tell points at the key.",
+   "landedAt": "2026-11-20T19:53:00.541Z",
+   "changes": [
+    {
+     "field": "option B (cmsw2f4vu00gztmbv96spn6zd).value",
+     "before": "Its black and white colour stood out against the trees.",
+     "after": "It was exactly one form of Bessie's Gytrash, with a huge head."
+    },
+    {
+     "field": "option B (cmsw2f4vu00gztmbv96spn6zd).execution",
+     "before": "True at lines 20 and 21, but that is what made the dog easy to see. It does not tell her it is no Gytrash.",
+     "after": "True inside the window (lines 21 to 22), but it is why the dog looked like a Gytrash, not what showed her it was not one. That is the rider in lines 24 to 26: 'The man, the human being, broke the spell at once.'"
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-025-LW-07",
+   "passageRef": "stream-a-16-little-women",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One answer: she holds it in and says a hard thing. Longest broken; the 'fewest window words' pick was there before and is not failing.",
+   "landedAt": "2026-11-20T19:53:00.541Z",
+   "changes": [
+    {
+     "field": "option D (cmsw2f4zy015ctmbvu8fa7yac).value",
+     "before": "She tells her mother she will forgive Amy tomorrow.",
+     "after": "She tells her mother she will forgive Amy in the morning."
+    },
+    {
+     "field": "option D (cmsw2f4zy015ctmbvu8fa7yac).execution",
+     "before": "Lines 37 and 38 invite it; no line has her agree.",
+     "after": "No such promise is in lines 39 to 43. She 'couldn’t quite forgive yet' (line 41) and says aloud that Amy 'doesn’t deserve to be forgiven' (lines 42 to 43)."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-010-JE-02",
+   "passageRef": "stream-a-11-jane-eyre",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One answer: the sheet of ice. Window broken; shortest (characters) as before, not failing.",
+   "landedAt": "2026-11-20T19:53:00.541Z",
+   "changes": [
+    {
+     "field": "option A (cmsw2f4vr00gjtmbvms00kpbe).value",
+     "before": "Jane could feel the cold through her muff.",
+     "after": "Jane could feel the cold in her hands."
+    },
+    {
+     "field": "option A (cmsw2f4vr00gjtmbvms00kpbe).execution",
+     "before": "Line 3 says she did not feel it, and this option loses that.",
+     "after": "Line 3 says 'I did not feel the cold', with her hands sheltered 'in my muff'. Dropping the 'not' turns the line round; the cold is shown by the 'sheet of ice covering the causeway' (line 4)."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-05",
+   "passageRef": "stream-a-03-wind-in-willows",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Read whole: only the key gives the effect of the repeated digging verbs. 'Bored' is contradicted by 'working busily' and 'Up we go!'. All three tells are broken; no tell points at the key after the change.",
+   "landedAt": "2026-11-20T19:53:00.541Z",
+   "changes": [
+    {
+     "field": "option B (cmsw2f4t2000ktmbvjk27iuxw).value",
+     "before": "To show the Mole was bored and fed up with the climb.",
+     "after": "To show the Mole was bored, and fed up with hard work."
+    },
+    {
+     "field": "option B (cmsw2f4t2000ktmbvjk27iuxw).execution",
+     "before": "The repeated verbs are read as boredom rather than as duration — the standard misreading of a repeated action word.",
+     "after": "A dismissive reading of the repetition. Lines 11 to 14 show him 'working busily' and cheering himself on with 'Up we go! Up we go!', which is effort, not boredom; the piled-up digging verbs make the climb feel long and hard."
+    },
+    {
+     "field": "option E (cmsw2f4t2000ntmbvsd01cs63).value",
+     "before": "To make the reader feel sorry for the Mole's sore arms.",
+     "after": "To make the reader feel sorry for the Mole's aching back."
+    },
+    {
+     "field": "option E (cmsw2f4t2000ntmbvsd01cs63).execution",
+     "before": "The sore arms are line 4 and the sympathy is the reader's; the repetition is doing length, not pity.",
+     "after": "Gives the effect of line 4, where he has 'an aching back and weary arms' from the cleaning, not of the repeated digging verbs in lines 11 to 13. Those make the climb itself feel long and hard."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-025-LW-02",
+   "passageRef": "stream-a-16-little-women",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One answer: she burned it (line 18). The 'never see it again' option names no deed. Window broken; shortest (characters) as before, not failing.",
+   "landedAt": "2026-11-20T19:53:00.541Z",
+   "changes": [
+    {
+     "field": "option C (cmsw2f4zu014mtmbvtaoxysfh).value",
+     "before": "She tells Jo to scold as much as she likes.",
+     "after": "Jo will never see her silly old book again."
+    },
+    {
+     "field": "option C (cmsw2f4zu014mtmbvtaoxysfh).execution",
+     "before": "True at line 15, and it is what she says first.",
+     "after": "True inside the window: line 15 has Amy say 'you’ll never see your silly old book again'. That is what follows, not what she has done; the deed is line 18, 'I burned it up.'"
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-014-TS-07",
+   "passageRef": "stream-a-05-tom-sawyer",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One answer: he grows more and more taken with it. Longest broken; the 'fewest window words' pick was there before and is not failing.",
+   "landedAt": "2026-11-20T19:53:00.541Z",
+   "changes": [
+    {
+     "field": "option D (cmsw2f4x000nvtmbvqljibntn).value",
+     "before": "He begins to feel sorry for Tom.",
+     "after": "He begins to feel very sorry for Tom."
+    },
+    {
+     "field": "option D (cmsw2f4x000nvtmbvqljibntn).execution",
+     "before": "An adjacent feeling; lines 36 and 37 name interest rather than pity.",
+     "after": "Lines 34 to 37 show interest, not pity: Ben stops 'nibbling his apple' and watches 'every move', 'getting more and more interested, more and more absorbed'."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-017-CR-04",
+   "passageRef": "stream-a-17-cranford",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One answer: to read a scene. Longest and window broken; no tell points at the key.",
+   "landedAt": "2026-11-20T19:53:00.541Z",
+   "changes": [
+    {
+     "field": "option A (cmsw2f4xq00s8tmbvv1o6st7t).value",
+     "before": "Explain that it is a different sort of thing.",
+     "after": "Tell madam it is quite a different sort of thing."
+    },
+    {
+     "field": "option A (cmsw2f4xq00s8tmbvv1o6st7t).execution",
+     "before": "Line 18 is inside the window, and the Captain does say it is quite a different sort of thing. That is what he says, not what he asks to do; at line 20 he asks to read a scene from the new number.",
+     "after": "Line 18 is something he already said, 'It is quite a different sort of thing, my dear madam', not something he asks leave to do. The request is line 20: 'Just allow me to read you a scene'."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-017-CR-06",
+   "passageRef": "stream-a-17-cranford",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One answer: her reading to answer his. Longest broken; no tell points at the key.",
+   "landedAt": "2026-11-20T19:53:00.541Z",
+   "changes": [
+    {
+     "field": "option D (cmsw2f4xs00sltmbvvmtlkbm8).value",
+     "before": "To let the Captain choose the second book.",
+     "after": "To let the Captain choose the second book to read."
+    },
+    {
+     "field": "option D (cmsw2f4xs00sltmbvvmtlkbm8).execution",
+     "before": "Line 26 has her name the book herself, so this hands her choice to him.",
+     "after": "The choosing belongs to Miss Jenkyns: at line 26 she orders 'Fetch me', naming the book herself, and at line 28 says 'Now allow _me_ to read you a scene'."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-021-ED-06",
+   "passageRef": "stream-a-09-eighty-days",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One answer: he has already allowed for every delay. Longest (words) broken; longest (characters) as before, not failing.",
+   "landedAt": "2026-11-20T19:53:00.541Z",
+   "changes": [
+    {
+     "field": "option B (cmsw2f4yu00yrtmbvlr0kmcpe).value",
+     "before": "He agrees that those things were left out.",
+     "after": "He agrees that all of those things were left out."
+    },
+    {
+     "field": "option B (cmsw2f4yu00yrtmbvlr0kmcpe).execution",
+     "before": "Line 23 has Fogg answer 'All included', the contrary of leaving them out. The child takes Stuart's complaint at line 21, that the plan does not take them into account, as what Fogg agrees to.",
+     "after": "Stuart says the plan 'doesn’t take into account' those delays (line 21); Fogg answers 'All included' (line 23), the opposite of agreeing they were left out."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-005-BB-11",
+   "passageRef": "stream-a-04-black-beauty",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One answer: going on would have drowned them. Window broken; shortest and hedged picks were there before and are not failing.",
+   "landedAt": "2026-11-20T19:53:00.541Z",
+   "changes": [
+    {
+     "field": "option B (cmsw2f4uo00a3tmbvbzdhj4t6).value",
+     "before": "That the gatekeeper was to blame for the broken bridge.",
+     "after": "That Beauty could not understand much of what they said."
+    },
+    {
+     "field": "option B (cmsw2f4uo00a3tmbvbzdhj4t6).tag",
+     "before": "en-plausible-not-stated",
+     "after": "en-within-span-wrong-element"
+    },
+    {
+     "field": "option B (cmsw2f4uo00a3tmbvbzdhj4t6).execution",
+     "before": "Blaming someone for the broken bridge is a likely thing to talk over, but lines 54 to 58 give no blame at all. The child supplies a conclusion the passage never states, where they work out that going on would probably have drowned them.",
+     "after": "True inside the window: line 54 has Beauty say 'I could not understand much of what they said'. It is the wrong element; what master and John worked out follows in lines 55 to 58, that they would 'all have been drowned'."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-005-BB-01",
+   "passageRef": "stream-a-04-black-beauty",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One answer: light, with wheels that run pleasantly. 'Heavy' reverses the stated reason. Window, passage and two-part broken; no tell points at the key.",
+   "landedAt": "2026-11-20T19:53:00.541Z",
+   "changes": [
+    {
+     "field": "option D (cmsw2f4ug008rtmbvg5j0st6p).value",
+     "before": "It was slow, so the journey felt easy.",
+     "after": "The cart was heavy, and its wheels ran along pleasantly."
+    },
+    {
+     "field": "option D (cmsw2f4ug008rtmbvg5j0st6p).execution",
+     "before": "Differs by one word: line 3 says light, not slow.",
+     "after": "Differs from the text by one word: line 3 says 'it was so light'. The wheels running along 'so pleasantly' are right, so a child matching on gist takes it; heavy is the reverse of the reason Beauty gives."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-004-AGG-12",
+   "passageRef": "stream-a-06-anne-green-gables",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One answer: come along and hand him the bag. Passage tell broken; no tell points at the key.",
+   "landedAt": "2026-11-20T19:53:00.541Z",
+   "changes": [
+    {
+     "field": "option B (cmsw2f4uf008ktmbvn89tfhlo).value",
+     "before": "Come along with him, and carry her own bag.",
+     "after": "Come along with him, and take her own bag."
+    },
+    {
+     "field": "option B (cmsw2f4uf008ktmbvn89tfhlo).execution",
+     "before": "Differs by one detail: line 65 asks her to give him the bag.",
+     "after": "Right on 'Come along' (line 64) and wrong on one detail: lines 64 to 65 end 'Give me your bag', so Matthew asks to take the bag himself, not for her to keep it."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-005-BB-03",
+   "passageRef": "stream-a-04-black-beauty",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One answer: rising fast, and a feared bad night. All four tells broken. The twin shape is what the brief asks for, and 'low' is plainly the road's.",
+   "landedAt": "2026-11-20T19:53:00.541Z",
+   "changes": [
+    {
+     "field": "option B (cmsw2f4ui008ztmbv20uliq9j).value",
+     "before": "It was falling now that the rain had stopped.",
+     "after": "It was low, and he feared a bad night."
+    },
+    {
+     "field": "option B (cmsw2f4ui008ztmbv20uliq9j).tag",
+     "before": "en-contradicted-by-the-text",
+     "after": "en-attribute-transfer"
+    },
+    {
+     "field": "option B (cmsw2f4ui008ztmbv20uliq9j).execution",
+     "before": "Line 10 has the man at the gate say the river was rising fast, the contrary of falling. The child gives the river the opposite movement from the one the line states.",
+     "after": "The man said 'the river was rising fast' (line 10). Low belongs to the road in line 11, 'one low part of the road', and has been moved onto the river."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-010-JE-10",
+   "passageRef": "stream-a-11-jane-eyre",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One answer: a sprain, and no bones broken. All four tells broken; shortest (characters) as before, not failing.",
+   "landedAt": "2026-11-20T19:53:00.541Z",
+   "changes": [
+    {
+     "field": "option A (cmsw2f4vy00hmtmbva8hvsq6q).value",
+     "before": "He has broken a bone in his foot.",
+     "after": "A sprain, and some broken bones in his foot."
+    },
+    {
+     "field": "option A (cmsw2f4vy00hmtmbva8hvsq6q).execution",
+     "before": "Line 49 says he has no broken bones, and this option loses that.",
+     "after": "Line 49 says 'I have no broken bones,—only a sprain'. The sprain is right; dropping the 'no' adds broken bones he says he does not have."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-017-CR-01",
+   "passageRef": "stream-a-17-cranford",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One answer: numbers of a book coming out in parts. Longest broken; hedged ('some') as before, not failing.",
+   "landedAt": "2026-11-20T19:53:00.541Z",
+   "changes": [
+    {
+     "field": "option D (cmsw2f4xo00rwtmbv8lrf3lfa).value",
+     "before": "A newspaper he had brought in with him.",
+     "after": "A newspaper that he had brought in with him."
+    },
+    {
+     "field": "option D (cmsw2f4xo00rwtmbv8lrf3lfa).execution",
+     "before": "A man with news might; lines 1 to 5 give him nothing but the numbers.",
+     "after": "No newspaper appears in lines 1 to 5. Line 4 has him ask about 'The Pickwick Papers', which lines 4 to 5 say were 'then publishing in parts'; the word papers makes a newspaper sound likely."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-025-LW-11",
+   "passageRef": "stream-a-16-little-women",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One answer: she went slowly down the river without turning. Window broken; no tell points at the key.",
+   "landedAt": "2026-11-20T19:53:00.541Z",
+   "changes": [
+    {
+     "field": "option A (cmsw2f501015ttmbvo7cybnqn).value",
+     "before": "She stamped her feet and blew on her fingers.",
+     "after": "She was stamping her feet and blowing on her fingers."
+    },
+    {
+     "field": "option A (cmsw2f501015ttmbvo7cybnqn).execution",
+     "before": "True at lines 64 and 65, and it is Amy rather than Jo.",
+     "after": "Line 64 gives the stamping and the blowing to Amy, 'stamping her feet and blowing on her fingers' as she put her skates on. They are moved onto Jo, who 'never turned' (line 65)."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-017-CR-03",
+   "passageRef": "stream-a-17-cranford",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One answer: some hope at first, none at the end. Longest broken; the 'fewest window words' pick was there before and is not failing.",
+   "landedAt": "2026-11-20T19:53:00.541Z",
+   "changes": [
+    {
+     "field": "option A (cmsw2f4xq00s3tmbvks2rhjhh).value",
+     "before": "At first she has read them, and at the end she prefers Dr Johnson.",
+     "after": "At first she says she has read them, and at the end she prefers Dr Johnson."
+    },
+    {
+     "field": "option A (cmsw2f4xq00s3tmbvks2rhjhh).execution",
+     "before": "Reuses lines 9 and 49, and lists what she says rather than what changed in how she says it.",
+     "after": "Lifts wording (line 9, line 49) without saying what changed. She prefers Dr Johnson in both answers; what differs is that line 14 still allows 'who knows what he may become', and line 49 gives the author nothing."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-010-JE-04",
+   "passageRef": "stream-a-11-jane-eyre",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One answer under the stem's lines 11 to 18: the horse; the dog arrives only at line 20. Longest (words), window and comma broken; longest (characters) as before, not failing. Key and dog option differ by one word, the shape the brief allows; the passage decides between them.",
+   "landedAt": "2026-11-20T19:53:00.541Z",
+   "changes": [
+    {
+     "field": "option A (cmsw2f4vt00gttmbv7wpjp25e).value",
+     "before": "She had seen a Gytrash on this lane before.",
+     "after": "A dog was coming upon her in the dusk, as in Bessie's tales."
+    },
+    {
+     "field": "option A (cmsw2f4vt00gttmbv7wpjp25e).tag",
+     "before": "en-plausible-not-stated",
+     "after": "en-chronology-collapse"
+    },
+    {
+     "field": "option A (cmsw2f4vt00gttmbv7wpjp25e).execution",
+     "before": "Lines 11 to 18 give her Bessie's tales, and no sighting of her own.",
+     "after": "The dog is real but comes later: it glides out at line 20. The Gytrash comes into her mind at lines 14 to 18, 'As this horse approached', before any dog has appeared."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-014-TS-02",
+   "passageRef": "stream-a-05-tom-sawyer",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One answer: the first heap bought nothing, the second made him rich. Only-'not' broken; longest (characters) and stem overlap as before, not failing.",
+   "landedAt": "2026-11-20T19:53:00.541Z",
+   "changes": [
+    {
+     "field": "option C (cmsw2f4wv00n5tmbvaqlswh58).value",
+     "before": "He grew rich first, but then he gave up buying the boys.",
+     "after": "He grew rich first, but then he could not buy the boys."
+    },
+    {
+     "field": "option C (cmsw2f4wv00n5tmbvaqlswh58).execution",
+     "before": "Line 7 has him give up buying before line 61 has him rich, so this turns the order round.",
+     "after": "The order is reversed. His goods could not buy freedom at lines 4 to 7, in the morning; he is 'rolling in wealth' only by 'the middle of the afternoon' (lines 60 to 61)."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-017-CR-02",
+   "passageRef": "stream-a-17-cranford",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One answer: the sermons and divinity books, which line 6 names as 'the strength' she claims on. Window broken; no tell points at the key.",
+   "landedAt": "2026-11-20T19:53:00.541Z",
+   "changes": [
+    {
+     "field": "option A (cmsw2f4xp00rytmbvim4jq13r).value",
+     "before": "Her father was the rector of the town.",
+     "after": "She was the daughter of a rector of Cranford."
+    },
+    {
+     "field": "option A (cmsw2f4xp00rytmbvim4jq13r).execution",
+     "before": "True at line 6, and it is who her father was rather than what she went on.",
+     "after": "True of her (line 6), but it is not the cause the text gives. Lines 6 to 8 say she 'considered herself literary' 'on the strength of a number of manuscript sermons, and a pretty good library of divinity'."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-021-ED-09",
+   "passageRef": "stream-a-09-eighty-days",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One answer: twenty thousand at Baring's. Window broken; longest (characters) as before, not failing.",
+   "landedAt": "2026-11-20T19:53:00.541Z",
+   "changes": [
+    {
+     "field": "option A (cmsw2f4yx00z5tmbvwff8ibo7).value",
+     "before": "The least possible time the journey can take.",
+     "after": "The least possible time for the journey."
+    },
+    {
+     "field": "option A (cmsw2f4yx00z5tmbvwff8ibo7).execution",
+     "before": "True at lines 50 and 51, and it is what Sullivan says rather than the stake.",
+     "after": "Lines 50 to 51 say eighty days are 'the least possible time in which the journey can be made'. True inside the window, but it is the time, not the stake; what he will 'risk' is the twenty thousand at line 46."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-004-AGG-11",
+   "passageRef": "stream-a-06-anne-green-gables",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One answer: kind now, the hard talk later. Longest broken. The 'only hedged' pick ('rather') was there before and is not failing.",
+   "landedAt": "2026-11-20T19:53:00.541Z",
+   "changes": [
+    {
+     "field": "option B (cmsw2f4uf008ftmbvwe2ypr1k).value",
+     "before": "He never makes a decision by himself.",
+     "after": "He is a man who never makes a decision by himself."
+    },
+    {
+     "field": "option B (cmsw2f4uf008ftmbvwe2ypr1k).execution",
+     "before": "Line 59 shows him deciding by himself, so never cannot hold.",
+     "after": "An absolute the text refutes: lines 59 to 60 say 'then and there he decided what to do', and the decision is his own. Handing the telling to Marilla (line 61) is one choice, not proof that he never decides."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-02",
+   "passageRef": "stream-a-03-wind-in-willows",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One answer: whitewash on the fur. Window tell broken (tie at 1.0); no new tell points at the key.",
+   "landedAt": "2026-11-20T19:53:00.541Z",
+   "changes": [
+    {
+     "field": "option A (cmsw2f4t00007tmbvtfp4o2p3).value",
+     "before": "Dust, which had got into his throat and eyes.",
+     "after": "Dust, which was in his throat and eyes."
+    },
+    {
+     "field": "option A (cmsw2f4t00007tmbvtfp4o2p3).execution",
+     "before": "Line 3 puts the dust in his throat and eyes. True, inside the window, and the wrong element for a question about his fur.",
+     "after": "Line 3 puts the dust 'in his throat and eyes'. That is true inside the window, but it is the wrong element: lines 3 to 4 say it was 'splashes of whitewash' that were 'all over his black fur'."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-010-JE-06",
+   "passageRef": "stream-a-11-jane-eyre",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One answer: they slipped on the ice. Window and passage broken; no tell points at the key.",
+   "landedAt": "2026-11-20T19:53:00.541Z",
+   "changes": [
+    {
+     "field": "option D (cmsw2f4vv00h6tmbvxcw713cg).value",
+     "before": "The exclamation the rider made as he went down on the road.",
+     "after": "A sliding sound, an exclamation and then a clattering tumble."
+    },
+    {
+     "field": "option D (cmsw2f4vv00h6tmbvxcw713cg).execution",
+     "before": "Line 27 gives that, and it came with the slide rather than causing it.",
+     "after": "All three are in lines 27 to 28, but they are what Jane heard as the fall happened, not what caused it. The cause is in lines 28 to 29: 'they had slipped on the sheet of ice'."
+    }
+   ]
+  }
+ ]
+}
