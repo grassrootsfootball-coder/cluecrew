@@ -1,0 +1,1209 @@
+{
+ "door": "english-rewrite/G2",
+ "proposer": "agent",
+ "rebuilds": [
+  {
+   "itemId": "ENG-007-LP-02",
+   "why": "Two faults. (1) The execution on 'Both show he has not been listening' said 'He answers each time', which contradicts the key's premise, and the option itself could only be excluded by inference. The option is replaced with 'Both show he agrees with Ilya's plans' (same tag, en-plausible-not-stated), which the text excludes directly: neither reply mentions the lockers or Whitby, so there is nothing in them to agree with. (2) The key said 'not about next year', asserting Whitby is next year, which lines 19-20 never state; it now reads 'not about what Ilya said'. Stem, hint and walk script unchanged.",
+   "stem": {
+    "text": "Ilya talks about Year Six and about Whitby. What do Reuben's answers have in common? (lines 15 to 22)",
+    "quotes": [],
+    "passageRef": "stream-b-04",
+    "orderAnchor": 2
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4v000c0tmbv6r6oy554",
+     "value": "Both show he is annoyed with Ilya.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "execution": "Imports a feeling; his answers are flat and on the job, with no sharpness in them."
+    },
+    {
+     "optionId": "cmsw2f4v000c1tmbvjldjnc27",
+     "value": "Both are about the sorting, not about what Ilya said.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4v000c2tmbvpp505y63",
+     "value": "Both show he agrees with Ilya's plans.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "Supplies the agreement a friend might be expected to give, which the passage never states. Neither reply mentions the lockers or Whitby: line 17 is about jumper sizes and lines 21 and 22 about a swimming hat, so there is nothing in them to agree with."
+    },
+    {
+     "optionId": "cmsw2f4v000c3tmbvtxj7ocvg",
+     "value": "Both show he wants the tall lockers too.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Reuses Ilya's lockers from line 15; Reuben never mentions them."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-007-LP-04",
+   "why": "Two faults. (1) hintCore 'She names a stop and then a destination' gave the key's shape; it is now a move, 'Read her whole answer to Reuben before you choose.' (2) en-relation-word-flipped on 'She said she did not really know' named no relation word. The mistake is stretching her hedge 'she thought' (line 25) into total ignorance, so it is retagged en-extreme-option-pull (the passage is measured, the option goes further) with an execution saying so. Options' values, key and walk script unchanged.",
+   "stem": {
+    "text": "What did Miss Bhatt say happens to the charity bags? (lines 24 to 26)",
+    "quotes": [],
+    "passageRef": "stream-b-04",
+    "orderAnchor": 4
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4v100c5tmbvgqit3fr3",
+     "value": "They are sorted again at the school on Friday.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The child goes back to lines 7 to 9, where the box goes to the charity collection on Friday morning, and builds an answer about school. Lines 24 and 25 have Miss Bhatt say the bags go to a warehouse and then out to shops."
+    },
+    {
+     "optionId": "cmsw2f4v100c6tmbvwdsudjeb",
+     "value": "They go to families who need them nearby.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "A natural guess about charity, but she names a warehouse and shops."
+    },
+    {
+     "optionId": "cmsw2f4v100c7tmbvbqs4p5kd",
+     "value": "She said she did not really know.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "execution": "Stretches her doubt further than the passage goes. At line 25 she only thought it was Leeds, but she is plain that the bags go to a warehouse (line 24) and then out to shops (line 25). The child turns doubt about one town into not knowing at all."
+    },
+    {
+     "optionId": "cmsw2f4v100c8tmbvgvofb0yc",
+     "value": "They go to a warehouse, then out to shops.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Read her whole answer to Reuben before you choose."
+   }
+  },
+  {
+   "itemId": "ENG-007-LP-06",
+   "why": "walkScript called the cardigan 'a stranger's'; line 13 says only that its owner 'had left in Year Four', so that word is removed and the walk now cites lines 13 and 14 for the cardigan. hintCore 'Two named jumpers' miscounted (the line 13 item is a cardigan); it is now 'Compare which box each named thing goes into.' Key and options unchanged.",
+   "stem": {
+    "text": "Reuben returns a cardigan whose owner has left. Later he puts his own named jumper in the charity box. What does the writer show by this? (lines 11 to 14 and 29 to 33)",
+    "quotes": [],
+    "passageRef": "stream-b-04",
+    "orderAnchor": 6
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4v100catmbvt4ku63t3",
+     "value": "He stops taking care by the end and forgets what he set out to do.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "Lines 33 and 34 are careful work: low down, underneath, pressed flat."
+    },
+    {
+     "optionId": "cmsw2f4v100cbtmbv8epe6fe8",
+     "value": "He keeps the rule for everyone else and breaks it for himself.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4v100cctmbvnnbq0nq2",
+     "value": "He could not tell whose the jumper was, so he put it in the box.",
+     "isKey": false,
+     "tag": "en-contradicted-by-the-text",
+     "execution": "Lines 30 to 32 say Reuben knew whose the jumper was before he turned the collar out, from the shape of his mum's capitals. The child gives him the very doubt the passage rules out."
+    },
+    {
+     "optionId": "cmsw2f4v200cdtmbvbxe1rj5x",
+     "value": "He thinks the jumper too worn for anybody to want it back.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "execution": "The cover story he gives at line 47 is about next year's fit, not about wear."
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Compare which box each named thing goes into.",
+    "walkScript": "Look at lines 13 and 14 first. A cardigan goes to returns, though its owner has left. Now look at lines 31 to 33. He knows the jumper is his and hides it low down. The same rule is kept for her and broken for him."
+   }
+  },
+  {
+   "itemId": "ENG-007-LP-07",
+   "why": "hintCore 'The last three words of line 36 matter most' was false (line 36 is 'opening it.', two words; 'without' is on line 35). Replaced with a move that sends the child to the end of the sentence without miscounting: 'Read the sentence about the paper right to its last word.' Nothing else changed.",
+   "stem": {
+    "text": "What did Reuben do with the folded paper from his pocket? (lines 34 to 36)",
+    "quotes": [],
+    "passageRef": "stream-b-04",
+    "orderAnchor": 7
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4v200cftmbvz13535wn",
+     "value": "Read it and then put it away again.",
+     "isKey": false,
+     "tag": "en-negation-dropped",
+     "execution": "Line 36 says without opening it, so he does not read it."
+    },
+    {
+     "optionId": "cmsw2f4v200cgtmbvedt8ltf2",
+     "value": "Put it in the Friday box with the jumper.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "execution": "The Friday box is where the jumper goes at line 33. The child gives the jumper's destination to the folded paper, which at lines 34 to 36 he looks at and puts back in his pocket unopened."
+    },
+    {
+     "optionId": "cmsw2f4v200chtmbvfivjosa9",
+     "value": "Looked at its edge and put it back unopened.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4v200citmbvawidrbpx",
+     "value": "Showed it to Ilya when he came back.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "Ilya speaks at line 40, but the paper is never mentioned to him."
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Read the sentence about the paper right to its last word."
+   }
+  },
+  {
+   "itemId": "ENG-007-LP-08",
+   "why": "passageRef was missing: stem.passageRef set to stream-b-04. The stem already cites lines 37 to 39 and lineRefs [37,38,39] stand. The stem's quotation 'plenty of room left at the bottom' (verbatim, line 39) is now declared in stem.quotes. Executions written for all three distractors. The tag on 'Reuben has already written his name on it' was en-negation-dropped, but lines 37 to 39 carry no negative word; the mistake is supplying a signature the passage never gives him, so it is retagged en-plausible-not-stated. Values, key, hint and walk script unchanged.",
+   "stem": {
+    "text": "The trials sheet has eleven names and 'plenty of room left at the bottom'. Why does the writer tell us? (lines 37 to 39)",
+    "quotes": [
+     "plenty of room left at the bottom"
+    ],
+    "passageRef": "stream-b-04"
+   },
+   "options": [
+    {
+     "optionId": "cmtdflmov000ctmf5btqjosde",
+     "value": "The football team still needs more players.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "Gives a reason about the team, which the passage never states: lines 37 to 39 say nothing about players being short. The room left on the sheet matters because Reuben walks past it, not because of the team."
+    },
+    {
+     "optionId": "cmtdflmov000dtmf5bfbxp4lb",
+     "value": "Reuben has already written his name on it.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "Lines 37 to 39 have Reuben only pass the noticeboard on the way to fetch a bin bag. The child supplies a signature the passage never gives him; the room at the bottom is still there at line 39."
+    },
+    {
+     "optionId": "cmtdflmov000etmf5g8vv9xgo",
+     "value": "Nobody at the school wants to play in September.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "execution": "Line 38 gives eleven names on the sheet, so eleven people do want to play. The child turns room left at the bottom into nobody at all, which goes much further than the passage."
+    },
+    {
+     "optionId": "cmtdflmov000ftmf5ikypq0x4",
+     "value": "There is a space Reuben is not going to fill.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-007-LP-09",
+   "why": "hintCore 'He gives a day and a thing they escape' mapped one-to-one onto the key; it is now a move, 'Read everything Ilya says about the annexe, right to the end.' The tag on 'It has already been cleared by somebody else' already reads en-contradicted-by-the-text in the store (not en-relation-word-flipped), which fits; its execution claimed line 40 says the cupboard is 'still to do', which line 40 alone does not, so it now cites lines 40 and 41 (missed, and can be done on Monday). Key and other options unchanged.",
+   "stem": {
+    "text": "What does Ilya say about the cupboard in the annexe? (lines 40 and 41)",
+    "quotes": [],
+    "passageRef": "stream-b-04",
+    "orderAnchor": 9
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4v400cptmbv9qqj69ob",
+     "value": "They can do it on Monday and miss spellings.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4v400cqtmbv9nugjx8z",
+     "value": "Miss Bhatt wants it done before Friday.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "execution": "Friday belongs to the charity collection at lines 8 and 9. The child moves it onto the annexe cupboard, which Ilya says at line 41 they can do on Monday."
+    },
+    {
+     "optionId": "cmsw2f4v400crtmbvl46dvrvo",
+     "value": "It has already been cleared by somebody else.",
+     "isKey": false,
+     "tag": "en-contradicted-by-the-text",
+     "execution": "Lines 40 and 41 have Ilya say they have missed a cupboard and can do it on Monday, so it is still to be done. The child says it has already been cleared, which those lines state the contrary of."
+    },
+    {
+     "optionId": "cmsw2f4v400cstmbve8p0yad0",
+     "value": "They will do it instead of going to Whitby.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "Whitby is line 19, from Ilya's earlier talk about groups. The child answers from that part of the passage instead of line 41, where doing the cupboard gets them out of spellings."
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Read everything Ilya says about the annexe, right to the end."
+   }
+  },
+  {
+   "itemId": "ENG-007-LP-10",
+   "why": "hintCore 'She lifts it out, so it is a thing, not a coating' ruled out the dominant-sense distractor the item exists to test. It is now a move that sends the child to the context without doing the vocabulary work: 'Picture what Miss Bhatt is doing at the box in lines 43 and 44.' Nothing else changed.",
+   "stem": {
+    "text": "Read lines 43 and 44. On line 44 Miss Bhatt lifted 'the top layer' out of the Friday box. What is a 'layer' here?",
+    "quotes": [
+     "the top layer"
+    ],
+    "passageRef": "stream-b-04",
+    "orderAnchor": 10
+   },
+   "options": [
+    {
+     "optionId": "cmsw5vr5g001wtm8ec3ke4dy0",
+     "value": "A thin coat of paint or dust.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "execution": "The commonest other sense of the word, which a box of clothes does not fit."
+    },
+    {
+     "optionId": "cmsw5vr5g001xtm8e7whza9ya",
+     "value": "The things lying across the top.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw5vr5g001ytm8eupycie97",
+     "value": "A hen that lays eggs.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "execution": "A second everyday sense, and nothing in a cupboard of clothes supports it."
+    },
+    {
+     "optionId": "cmsw5vr5g001ztm8enka65ik7",
+     "value": "A list of what is in the box.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "No list exists; she lifts things out and looks under them."
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Picture what Miss Bhatt is doing at the box in lines 43 and 44."
+   }
+  },
+  {
+   "itemId": "ENG-007-LP-12",
+   "why": "Three faults. (1) The key 'We get no thoughts from him' was false: lines 31 and 32 give what Reuben knew and why. The key now says what the writer does without denying his thoughts: 'By showing what he does with things, like the jumper and the paper.' (lines 33 to 36). (2) hintCore 'Look for his hands' named the one word only the key carried; it is now a move to the jumper scene. (3) walkScript listed 'laughing late' as hands; the list now cites only things he handles, with line numbers. Because the key's frame changed, the en-minimal-pair-skim distractor no longer differed from it by one detail; it is rewritten as the key's frame with Reuben swapped for Ilya (Ilya's sock, line 28), so the tag names its mistake again.",
+   "stem": {
+    "text": "We are never told what Reuben is feeling. How does the writer let us know anyway?",
+    "quotes": [],
+    "passageRef": "stream-b-04",
+    "answerShape": "withholds-and-evidences",
+    "orderAnchor": 12,
+    "techniqueKey": "interiority-withheld-and-displaced-into-handled-objects"
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4v500cztmbvgx5mwntn",
+     "value": "The writer tells us he is sad, and then shows us only the reasons for it.",
+     "isKey": false,
+     "tag": "en-whole-text-absence-asserted",
+     "execution": "Reads past the absence; the passage never states a feeling anywhere."
+    },
+    {
+     "optionId": "cmsw2f4v500d0tmbvzy5u8zfn",
+     "value": "By showing what Ilya does with things, like the football sock.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "execution": "Keeps the key's frame and changes one detail, Reuben to Ilya. Ilya busy with a Manchester United sock at line 28 tells us nothing of what Reuben feels; the child matches on gist and misses who is doing the handling."
+    },
+    {
+     "optionId": "cmsw2f4v500d1tmbvh5lshs9v",
+     "value": "He describes only the old clothes, and so we get nothing else.",
+     "isKey": false,
+     "tag": "en-contradicted-by-the-text",
+     "execution": "The passage describes much more than old clothes: Ilya's talk, Miss Bhatt, the football sheet at lines 37 to 39 and the folded paper at lines 35 and 36. The child claims the telling gives clothes and nothing else, which the passage contradicts, and so misses that Reuben's feeling is carried by what he handles."
+    },
+    {
+     "optionId": "cmsw2f4v600d2tmbv5vyp15p7",
+     "value": "By showing what he does with things, like the jumper and the paper.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Go to the moment he finds the navy jumper. Read what the writer lets you see.",
+    "walkScript": "Reuben never says how he feels, anywhere in this passage. Instead you see what he does with things. At lines 33 and 34 he hides the jumper low down and pushes it flat. At lines 35 and 36 he looks at the folded paper and puts it back unopened. The writer puts the feeling into what he does with things."
+   }
+  },
+  {
+   "itemId": "ENG-007-LP-13",
+   "why": "passageRef was missing: stem.passageRef set to stream-b-04; the stem already cites lines 11 to 14, and lineRefs (null) is set to [11,12,13,14]. Executions written for all three distractors. Two tags did not name their mistakes and are swapped to ones that do: 'He did not know the girl had left in Year Four' carried en-negation-dropped, but the lines hold no negative word; the mistake is reading past 'anyway' (line 14), which says he knew and did it all the same, so it is en-relation-word-flipped. 'He was working faster than Ilya and made a mistake' carried en-relation-word-flipped, but it gives Ilya's speed (line 10) to Reuben, so it is en-attribute-transfer. hintCore quotes 'anyway', now declared in explanation.quotes. walkScript said the owner 'left years ago', which the passage does not say (only 'had left in Year Four'); corrected, and the returns box cited at line 14.",
+   "stem": {
+    "text": "Reuben put a cardigan in the returns box even though its owner had left. What does this show? (lines 11 to 14)",
+    "quotes": [],
+    "passageRef": "stream-b-04"
+   },
+   "options": [
+    {
+     "optionId": "cmtdflmp3000itmf5s6ourkbf",
+     "value": "He did not know the girl had left in Year Four.",
+     "isKey": false,
+     "tag": "en-relation-word-flipped",
+     "execution": "At line 14 he puts the cardigan in the returns box anyway. That word says he knew she had left and returned it all the same; the child reads it as a plain and, and so decides he did not know."
+    },
+    {
+     "optionId": "cmtdflmp3000jtmf5s1j9wdfc",
+     "value": "He was working faster than Ilya and made a mistake.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "execution": "Speed belongs to Ilya at line 10, who holds each item up for half a second. At line 11 Reuben turns the collars out and reads them, so the child gives Ilya's haste to Reuben."
+    },
+    {
+     "optionId": "cmtdflmp3000ktmf5zcispic4",
+     "value": "He wanted to keep the cardigan for himself.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "execution": "Lines 13 and 14 have him put the cardigan in the returns box, not keep it. The child gives him a wish the passage never states."
+    },
+    {
+     "optionId": "cmtdflmp3000ltmf5v2f9v83h",
+     "value": "He would rather try to return a thing than give it away.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ],
+   "explanationPatch": {
+    "quotes": [
+     {
+      "rule": "quoted-from-passage",
+      "text": "anyway",
+      "passageRef": "stream-b-04"
+     }
+    ],
+    "walkScript": "Look at lines 11 and 12. Reuben turns the collars out and reads the names. At line 13 he finds a cardigan belonging to a girl who left in Year Four. At line 14 he puts it in the returns box anyway."
+   },
+   "lineRefs": [
+    11,
+    12,
+    13,
+    14
+   ]
+  },
+  {
+   "itemId": "ENG-007-LP-15",
+   "why": "passageRef was missing: stem.passageRef set to stream-b-04; the stem already cites lines 33 and 34, and lineRefs (null) is set to [33,34]. Executions written for all three distractors. Two tags did not name their mistakes: 'Put it in the returns box, because it had a name in it' (en-relation-word-flipped, no relation word) is the child following the named-things rule of lines 7 and 8 against line 33, which states the Friday box, so it is en-contradicted-by-the-text; 'Folded it and gave it to Miss Bhatt' (en-chronology-collapse, which is about a later CAUSE) answers from lines 44 to 49 where Miss Bhatt finds and folds it herself, so it is en-wrong-scope-retrieval. hintCore 'One sentence holds three separate movements' gave the key's three-part shape, the same coaching fault ruled on LP-04, so it is now a move: 'Read the whole sentence that starts on line 33, right to its end.'",
+   "stem": {
+    "text": "What did Reuben do with the navy jumper? (lines 33 and 34)",
+    "quotes": [],
+    "passageRef": "stream-b-04"
+   },
+   "options": [
+    {
+     "optionId": "cmtdflmpc000otmf541ei95uo",
+     "value": "Put it in the Friday box, low down, and pressed it flat.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmtdflmpc000ptmf5ujf9ioc4",
+     "value": "Put it in the returns box, because it had a name in it.",
+     "isKey": false,
+     "tag": "en-contradicted-by-the-text",
+     "execution": "Line 33 says he put it in the Friday box, the one going to the charity collection. The child follows the rule at lines 7 and 8, that named things are returned, which the passage says Reuben did not do here."
+    },
+    {
+     "optionId": "cmtdflmpc000qtmf5u76vaj7b",
+     "value": "Put it in the bin bag, because the cuffs had gone thin.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Reuses the cuffs that had gone thin at lines 29 and 30. Those words describe the jumper, but line 33 has him put it in the Friday box, not the bin bag."
+    },
+    {
+     "optionId": "cmtdflmpc000rtmf508bendq3",
+     "value": "Folded it and gave it to Miss Bhatt.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "Miss Bhatt has the jumper only at lines 44 to 49, when she finds it in the box herself and folds it. The child answers from that later part instead of lines 33 and 34."
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Read the whole sentence that starts on line 33, right to its end."
+   },
+   "lineRefs": [
+    33,
+    34
+   ]
+  },
+  {
+   "itemId": "ENG-015-CC-01",
+   "why": "walkScript put 'except that it was very large' on line 1 (it is on line 2) and 'night and morning' at line 2 alone (it runs across lines 2 and 3). Line numbers corrected; nothing else changed.",
+   "stem": {
+    "text": "Look at lines 1 to 5. What was the one odd thing about the knocker?",
+    "quotes": [],
+    "passageRef": "stream-a-08-christmas-carol",
+    "orderAnchor": 1
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4x500omtmbvgrohu7ci",
+     "value": "The very great size of the thing itself.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4x500ontmbvnk6sxgfj",
+     "value": "Scrooge had seen it night and morning.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at lines 2 and 3, and it says how often he saw it rather than what was odd."
+    },
+    {
+     "optionId": "cmsw2f4x500ootmbv4u57lw0w",
+     "value": "The thing had hung there for many years.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "Likely for an old house; lines 1 to 5 never say it."
+    },
+    {
+     "optionId": "cmsw2f4x500optmbvqaycc5b4",
+     "value": "It had as little fancy about it as any man.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "execution": "Line 3 and line 4 give that want of fancy to Scrooge, not to the knocker."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Line 1 says there was nothing at all particular about the knocker. Line 2 gives the one exception: it was very large. How often he saw it comes next, at lines 2 and 3."
+   }
+  },
+  {
+   "itemId": "ENG-015-CC-03",
+   "why": "'That' at line 15 may point back to the whole sentence that begins with the stirred hair at line 14, so the hair distractor was a defensible part-answer and the execution and walkScript asserted an antecedent the text does not fix. The hair option is replaced with the ghostly spectacles (lines 13 and 14), which sit in the sentence before and are excluded under every reading of 'That'; same tag, en-within-span-wrong-element. The key (still open eyes and the colour) is right under either reading. walkScript no longer says 'not to the hair'.",
+   "stem": {
+    "text": "Look at lines 11 to 17. What made the face horrible to look at?",
+    "quotes": [],
+    "passageRef": "stream-a-08-christmas-carol",
+    "orderAnchor": 11
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4x600owtmbvjv0p4wdf",
+     "value": "It looked angry and fierce at him.",
+     "isKey": false,
+     "tag": "en-negation-dropped",
+     "execution": "Lines 12 and 13 say it was not angry or ferocious."
+    },
+    {
+     "optionId": "cmsw2f4x600oxtmbvqhy48phz",
+     "value": "It had a dismal light, like a bad lobster.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Reuses line 12 and names how it looked rather than what made it horrible."
+    },
+    {
+     "optionId": "cmsw2f4x600oytmbvu3xqiv91",
+     "value": "The still open eyes and the awful colour.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4x600oztmbvvrpgbcyb",
+     "value": "Its ghostly spectacles turned up on its forehead.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at lines 13 and 14, where the face looks at Scrooge as Marley used to look. The child takes a detail from the right lines, but the horror is tied to what lines 14 to 16 describe after it, not to the spectacles."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Lines 14 and 15 describe the stirred hair and the wide open eyes that never move. Line 15 then says that this, and its livid colour, made it horrible. So the still eyes and the colour both made it horrible."
+   }
+  },
+  {
+   "itemId": "ENG-015-CC-04",
+   "why": "The execution on 'He let go of the key' cited line 20; 'the key he had relinquished' is on line 21. The walkScript repeated line 20 for it ('put his hand upon the key' runs across lines 20 and 21). Both corrected; nothing else changed.",
+   "stem": {
+    "text": "Look at lines 19 to 22. What did Scrooge do after the shock?",
+    "quotes": [],
+    "passageRef": "stream-a-08-christmas-carol",
+    "orderAnchor": 19
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4x700p1tmbvhvafjvzc",
+     "value": "The sight left him quite unmoved.",
+     "isKey": false,
+     "tag": "en-negation-dropped",
+     "execution": "Lines 19 and 20 say it would be untrue to say he was not startled."
+    },
+    {
+     "optionId": "cmsw2f4x700p2tmbvly5zpof2",
+     "value": "He let go of the key he was holding.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at line 21, where the key is one he had relinquished, so he had already let go of it. It is what he had done before rather than what came next."
+    },
+    {
+     "optionId": "cmsw2f4x700p3tmbv7gg5axtf",
+     "value": "He lighted his candle, then turned the key.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "execution": "Line 21 turns the key before line 22 lights the candle, so this reverses them."
+    },
+    {
+     "optionId": "cmsw2f4x700p4tmbvug6sej4w",
+     "value": "He turned his key and he walked in.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Lines 20 and 21 say he put his hand upon the key he had let go. Line 21 says he turned it sturdily and walked in. The candle at line 22 comes after both."
+   }
+  },
+  {
+   "itemId": "ENG-015-CC-06",
+   "why": "Three faults. (1) hintCore 'Two of these only list the noises' eliminated two distractors; it is now 'Read to the end of both sets of lines, not just the sounds.' (2) 'The second noise' was ambiguous, since lines 60 to 66 hold the bells and then the clanking; the stem now names both noises (the bang of the door, the clanking) and the second window starts at line 61, where the clanking begins, so lineRefs drop line 60. The key and the literal-lookalike option are reworded to the named noises with their meaning unchanged. (3) The flame execution carried a malformed fragment; rewritten. walkScript reworded to the named noises with line numbers checked.",
+   "stem": {
+    "text": "Look at lines 28 to 31 and 61 to 66. What does the clanking do that the bang of the door does not?",
+    "quotes": [],
+    "passageRef": "stream-a-08-christmas-carol",
+    "orderAnchor": 28
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4x900pbtmbvw6u4ngnw",
+     "value": "The bang is like thunder, and the clanking is like a dragged chain.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Reuses lines 28 and 62, and names what each sound is like rather than what the clanking does."
+    },
+    {
+     "optionId": "cmsw2f4x900pctmbvks1baptt",
+     "value": "He walks away from the bang, but the clanking comes after him.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4x900pdtmbva4wxhy29",
+     "value": "The bells ring first, and the door bangs a long while after.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "execution": "Line 27 bangs the door before line 59 rings the bells, so this turns the order round."
+    },
+    {
+     "optionId": "cmsw2f4x900petmbvo82d5iqq",
+     "value": "The flame leaps up first, and then it falls again in the grate.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "True at lines 69 and 70, outside both sets of lines; neither has a flame in it. The child answers from the ghost's arrival rather than from the two noises."
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Read to the end of both sets of lines, not just the sounds.",
+    "walkScript": "At lines 30 and 31 he walks up the stairs, away from the echoes. Lines 65 and 66 have the clanking come up the stairs, straight towards his door. He leaves the bang behind, but the clanking comes to find him."
+   },
+   "lineRefs": [
+    28,
+    29,
+    30,
+    31,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66
+   ]
+  },
+  {
+   "itemId": "ENG-015-CC-07",
+   "why": "Distractor 'Finding all the rooms in order, just as before' was supported by line 32 'All as they should be' and line 36 'Lumber-room as usual', so it was a second defensible answer. Replaced with 'Hanging his dressing-gown up against the wall' (same tag, en-inference-literal-lookalike): it reuses lines 35 and 36, where the gown is already hanging and he is checking nobody is in it. Key and the other options unchanged.",
+   "stem": {
+    "text": "Look at lines 32 to 37. What is Scrooge doing in these lines?",
+    "quotes": [],
+    "passageRef": "stream-a-08-christmas-carol",
+    "orderAnchor": 32
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4x900pgtmbvfczs8wja",
+     "value": "Hanging his dressing-gown up against the wall.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Reuses lines 35 and 36, where the dressing-gown is already hanging up against the wall. He is checking that nobody is in it, not hanging it up."
+    },
+    {
+     "optionId": "cmsw2f4x900phtmbvik7xd6cx",
+     "value": "Noting the gruel standing ready on the hob.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at lines 33 and 34, and it is one item on the list rather than the point of it."
+    },
+    {
+     "optionId": "cmsw2f4xa00pitmbv6zb2f256",
+     "value": "Looking in every place a person could hide.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4xa00pjtmbvx11fjy4d",
+     "value": "Making sure the servants have all gone home.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "execution": "A plausible reason to walk the rooms; lines 32 to 37 never give it."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-015-CC-08",
+   "why": "hintCore 'One of these says it was his custom. Line 39 does not.' pointed at the key's clause; it is now a move, 'Check each thing he does against what the writer says about it.' The walkScript and the execution on 'He put on his dressing-gown and his nightcap' asserted these are what he does every night, which the passage never states; both now say only that the writer marks nothing unusual about them. The execution on 'Double-locking the door was his usual custom' was under the gate's minimum length and now says how the mistake arises (dropping the not at line 39). Key and option values unchanged.",
+   "stem": {
+    "text": "Look at lines 38 to 41. What shows that the face has shaken him?",
+    "quotes": [],
+    "passageRef": "stream-a-08-christmas-carol",
+    "orderAnchor": 38
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4xa00pltmbvgtr9nvjt",
+     "value": "He was quite satisfied, and so he closed his door.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Reuses line 38 and repeats his own verdict rather than the sign against it."
+    },
+    {
+     "optionId": "cmsw2f4xa00pmtmbvv54itffc",
+     "value": "He put on his dressing-gown and his nightcap.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at lines 39 and 40, but the writer says nothing unusual about it. Only the double-locking at lines 38 and 39 is marked as not his custom."
+    },
+    {
+     "optionId": "cmsw2f4xa00pntmbvk3rx3sme",
+     "value": "Double-locking the door was his usual custom.",
+     "isKey": false,
+     "tag": "en-negation-dropped",
+     "execution": "Line 39 says it was not his custom. The child drops the not and reads the double-locking as his usual habit."
+    },
+    {
+     "optionId": "cmsw2f4xa00potmbvzrz3i6ty",
+     "value": "He turned the lock a second time, which was new.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Check each thing he does against what the writer says about it.",
+    "walkScript": "Line 38 says he double-locked himself in. Line 39 adds that this was not his custom. The writer says nothing unusual about the gown and the nightcap."
+   }
+  },
+  {
+   "itemId": "ENG-015-CC-11",
+   "why": "The hold named en-vocab-built-from-parts on 'Careful about every word he uses', whose execution describes a lookalike (cautious), not word parts. In the store this option already carries en-vocab-form-lookalike, and its execution already names the lookalike: the tag now names the mistake. No change is needed; the row is submitted as it stands so the hold can be re-read and cleared.",
+   "stem": {
+    "text": "Look at lines 78 and 79. What does 'caustic' on line 78 mean here?",
+    "quotes": [
+     "caustic"
+    ],
+    "passageRef": "stream-a-08-christmas-carol",
+    "orderAnchor": 78
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4xd00q0tmbvbz2g0y0o",
+     "value": "Able to burn like a strong acid.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "execution": "The commonest everyday sense of the word; line 78 puts it on how he speaks."
+    },
+    {
+     "optionId": "cmsw2f4xd00q1tmbvibioy3c1",
+     "value": "Careful about every word he uses.",
+     "isKey": false,
+     "tag": "en-vocab-form-lookalike",
+     "execution": "Careful is the meaning of 'cautious', a different word that 'caustic' resembles in form. The child has misidentified the word; line 78 has Scrooge speak sharply, caustic and cold as ever."
+    },
+    {
+     "optionId": "cmsw2f4xd00q2tmbva6ynkqun",
+     "value": "Sharp and cutting in what he says.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4xd00q3tmbvxhjk1f15",
+     "value": "Cold, in the way he had always been.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at line 78, and it names the other half of the pair rather than this word."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-015-CC-12",
+   "why": "passageRef was missing: stem.passageRef set to stream-a-08-christmas-carol. The row had no line references, so the stem now cites lines 18 to 78 (from the face turning back into a knocker to the last line any option or execution cites) and lineRefs is set to match. Executions were already present. walkScript put 'under the bed' at line 35 (it is on line 34) and the look behind the door at line 24 (it runs across lines 23 and 24); both corrected. Key, options and hint unchanged.",
+   "stem": {
+    "text": "Think about lines 18 to 78. What does Scrooge keep doing after he sees the face?",
+    "quotes": [],
+    "answerShape": "words-set-against-actions",
+    "techniqueKey": "denial-spoken-aloud-while-the-body-goes-on-checking",
+    "passageRef": "stream-a-08-christmas-carol"
+   },
+   "options": [
+    {
+     "optionId": "cmt0m4n0s0001tmhftf6pz6p0",
+     "value": "He says Pooh, pooh, and then a little later he says Humbug too.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Reuses lines 26 and 53 and quotes him twice rather than naming anything he does."
+    },
+    {
+     "optionId": "cmt0m4n0s0002tmhfoc56oq1f",
+     "value": "He says he is not frightened, but he checks the whole house.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmt0m4n0s0003tmhf49an6qta",
+     "value": "He is bold at the start, but his nerve does not last.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "A tidy shape the passage never carries: line 78 still has him caustic and cold."
+    },
+    {
+     "optionId": "cmt0m4n0s0004tmhfd4se6qoz",
+     "value": "He fears the thing, so he sends for help to sit up.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "Nowhere in the passage does Scrooge send for anyone or ask anyone to sit up with him. The child supplies what a frightened man might well do, which the passage never states; Scrooge searches the rooms himself at lines 32 to 36."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "At lines 23 and 24 he looks behind the door before he will shut it. At lines 34 and 35 he is looking under the bed and in the closet. At line 67 he says it is humbug still, and will not believe it."
+   },
+   "lineRefs": [
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78
+   ]
+  },
+  {
+   "itemId": "ENG-023-RT-02",
+   "why": "The key 'The creature they took for dead' was inaccurate: only the boy calls him dead (line 12); the mother doubts it (line 13) and the man says he was not dead (line 15). The key now reads 'the boy took for dead'. walkScript placed Nag's fear at line 71; 'afraid' is on line 72, so it now cites lines 71 and 72. The motive-invention execution was under the gate's minimum length; it now cites lines 70 and 71 for what a mongoose's business is. Nothing else changed.",
+   "stem": {
+    "text": "Look at lines 8 to 12 and lines 69 to 72. What do lines 69 to 72 show about the creature in lines 8 to 12?",
+    "quotes": [],
+    "passageRef": "stream-a-15-jungle-book",
+    "answerShape": "what-he-was-on-arrival-against-what-he-is-to-nag",
+    "orderAnchor": 8,
+    "techniqueKey": "the-half-drowned-arrival-set-against-the-fear-he-now-causes"
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4za011dtmbvd5fgx7ag",
+     "value": "The summer flood washed him down a roadside ditch, and Nag was afraid at heart.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Both spans handed back in order, with no relation named."
+    },
+    {
+     "optionId": "cmsw2f4za011etmbv3bdjvzy9",
+     "value": "The creature the boy took for dead is the one the cobra now fears.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4za011ftmbvini30zit",
+     "value": "Nag was afraid of him on the day the flood washed him up.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "execution": "Line 69 says he had never met a live cobra before this."
+    },
+    {
+     "optionId": "cmsw2f4za011gtmbvozbm4d2m",
+     "value": "He faces Nag so the family who saved him will keep him.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "execution": "A plan the lines never give him. Lines 70 and 71 give a mongoose's business in life, to fight and eat snakes, not to win a home."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Line 11 has him lying in the sun, very draggled. Line 12 has a boy call him a dead mongoose. Lines 71 and 72 say Nag was afraid at heart."
+   }
+  },
+  {
+   "itemId": "ENG-023-RT-04",
+   "why": "Two faults. (1) en-vocab-form-lookalike on 'So that he could go on and do something' misfitted: 'in order to' uses the same word, while the tag is about a different word. That option is replaced by one whose mistake a tag names: 'A wet and tangled mess, like after the flood' (en-vocab-not-this-word), which order never means and which, put in its place, makes nonsense of line 22. (2) walkScript 'Everything near it is about his body' was untrue; it now says what lines 22 and 23 show. hintCore 'Nobody is giving him an instruction here' ruled out the dominant-sense distractor outright, the coaching fault ruled on ENG-007-LP-10, so it is now a move to the surrounding lines.",
+   "stem": {
+    "text": "Look at lines 21 to 23. What does \"order\" mean here?",
+    "quotes": [
+     "order"
+    ],
+    "passageRef": "stream-a-15-jungle-book",
+    "orderAnchor": 21
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4zc011ntmbv87ewk53q",
+     "value": "A command that somebody had given him.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "execution": "The commonest sense a child owns, and it is the same word."
+    },
+    {
+     "optionId": "cmsw2f4zc011otmbvz6lqzt4l",
+     "value": "The place each thing takes in a line.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "execution": "Built from the sequence sense, which is also common."
+    },
+    {
+     "optionId": "cmsw2f4zc011ptmbv6d9kl6ng",
+     "value": "A wet and tangled mess, like after the flood.",
+     "isKey": false,
+     "tag": "en-vocab-not-this-word",
+     "execution": "Order never means a mess. The fur was draggled at line 11, but put in its place at line 22 this would have him make his fur tangled, when he is setting it right."
+    },
+    {
+     "optionId": "cmsw2f4zc011qtmbvwldsqk42",
+     "value": "A tidy state, with everything smoothed down.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Read what he does just before and just after, on lines 21 to 23.",
+    "walkScript": "Line 22 has him sit up and put his fur in order. Straight after, he scratches himself. Nobody gives him an instruction, and nothing is being put in a line."
+   }
+  },
+  {
+   "itemId": "ENG-023-RT-05",
+   "why": "hintCore 'Two of these are things that happened, not reasons' eliminated two of the three distractors. It is now a move that does not sort the options: 'Find where Rikki-tikki gives his own reason.' The motive-invention execution was under the gate's minimum length; it now cites his own reason at lines 28 and 29. Nothing else changed.",
+   "stem": {
+    "text": "Look at lines 25 to 29. Why does Rikki-tikki decide to stay?",
+    "quotes": [],
+    "passageRef": "stream-a-15-jungle-book",
+    "orderAnchor": 25
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4zd011stmbvgdif185r",
+     "value": "There is more to find out there than his family ever could.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4zd011ttmbvy1mua1vi",
+     "value": "He liked the little piece of raw meat.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Reuses line 25 and gives a taste rather than a reason."
+    },
+    {
+     "optionId": "cmsw2f4zd011utmbv4rwchgj9",
+     "value": "The sunshine on the veranda dried his fur.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at lines 26 and 27, and it is what made him feel better."
+    },
+    {
+     "optionId": "cmsw2f4zd011vtmbvgarr8mc5",
+     "value": "The family would go on feeding him if he stayed.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "execution": "A bargain the lines never give him. Lines 28 and 29 give his own reason, that there is more to find out in this house."
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Find where Rikki-tikki gives his own reason."
+   }
+  },
+  {
+   "itemId": "ENG-023-RT-06",
+   "why": "The execution on 'He sat on all of their laps' claimed line 34 answers the stem and quoted another distractor's content. It now says the option comes from breakfast the next morning (lines 38 and 39) while lines 34 to 36 give what kept him up. Nothing else changed.",
+   "stem": {
+    "text": "Look at lines 30 to 36. What kept Rikki-tikki getting up in the night?",
+    "quotes": [],
+    "passageRef": "stream-a-15-jungle-book",
+    "orderAnchor": 30
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4ze011xtmbvft6ile79",
+     "value": "He climbed up when Teddy went to bed.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at line 34, and it is how he got there rather than why he woke."
+    },
+    {
+     "optionId": "cmsw2f4ze011ytmbvkippy71b",
+     "value": "He had to find out what made every noise.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4ze011ztmbv5gztyjel",
+     "value": "He sat on all of their laps in turn.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "True at lines 38 and 39, at breakfast the next morning. The child answers from the morning, but lines 34 to 36 give what kept him up in the night."
+    },
+    {
+     "optionId": "cmsw2f4ze0120tmbvunnwwutb",
+     "value": "He was keeping watch on the door for the family.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "A restless animal invites a guard; no line gives him one."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-023-RT-07",
+   "why": "The execution on 'A garden that somebody keeps tidy for him' said 'only half cultivated, so nobody is keeping it', but half cultivated means half of it is kept. The exclusion now rests on 'for him'. walkScript placed 'his tail grew bottle-brushy' at line 45; it runs across lines 44 and 45, now cited as such. Nothing else changed.",
+   "stem": {
+    "text": "Look at lines 41 to 46. What does the garden mean to Rikki-tikki at first?",
+    "quotes": [],
+    "passageRef": "stream-a-15-jungle-book",
+    "orderAnchor": 41
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4zf0122tmbv3xbj4jcy",
+     "value": "It was large and only half looked after.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Reuses lines 41 and 42 and describes it rather than saying what it means."
+    },
+    {
+     "optionId": "cmsw2f4zf0123tmbvl986pb1w",
+     "value": "A thorn-bush with sorrowful voices in it.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at line 46, and it is what stops him rather than the garden."
+    },
+    {
+     "optionId": "cmsw2f4zf0124tmbvrd1ytiws",
+     "value": "A place with plenty in it for him to hunt.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4zf0125tmbvobtcvm7j",
+     "value": "A garden that somebody keeps tidy for him.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "Nothing in lines 41 to 46 says the garden is kept for Rikki-tikki, who has only just arrived. The child supplies a keeper working for him, which the passage never gives."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Line 44 has him lick his lips at the garden. Line 44 calls it a splendid hunting-ground. Lines 44 and 45 say his tail grew bottle-brushy."
+   }
+  },
+  {
+   "itemId": "ENG-023-RT-08",
+   "why": "passageRef was missing: stem.passageRef set to stream-a-15-jungle-book. The stem already cites lines 47 to 50, lineRefs [47,48,49,50] stand, and every distractor already has an execution (checked against the lines). Nothing else changed.",
+   "stem": {
+    "text": "Look at lines 47 to 50. How had Darzee and his wife made their nest?",
+    "quotes": [],
+    "passageRef": "stream-a-15-jungle-book"
+   },
+   "options": [
+    {
+     "optionId": "cmt9qp4ra000mtmovwfgl6tq6",
+     "value": "By swaying it to and fro as they sat on the rim.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at line 49, and the swaying is the nest rather than their work."
+    },
+    {
+     "optionId": "cmt9qp4ra000ntmov1shebn0r",
+     "value": "By wrapping it in cotton wool over a little fire.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "execution": "Lines 15 and 16 are where the family wrap Rikki-tikki in cotton wool and warm him over a little fire. The child carries that care of the mongoose across to the birds' nest, helped by the cotton that does fill the nest at line 49."
+    },
+    {
+     "optionId": "cmt9qp4ra000otmov5oirrm7j",
+     "value": "By tying it to the thorn-bush with fibres.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "Line 48 names what the leaves were stitched with; no line ties the nest to anything."
+    },
+    {
+     "optionId": "cmt9qp4ra000ptmovdbfj689d",
+     "value": "By stitching two big leaves together at the edges.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-023-RT-10",
+   "why": "The execution on 'Because they had already told him about the baby' claimed line 55 answers the stem by quoting the literal-lookalike's restatement. It now gives the real reason, the hiss at lines 55 and 56. Nothing else changed.",
+   "stem": {
+    "text": "Look at lines 55 to 58. Why do Darzee and his wife not answer?",
+    "quotes": [],
+    "passageRef": "stream-a-15-jungle-book",
+    "orderAnchor": 55
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4zg012ctmbvoj8aqgij",
+     "value": "They cowered down in the nest without answering.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Reuses line 55 and repeats them rather than giving a reason."
+    },
+    {
+     "optionId": "cmsw2f4zg012dtmbved1qbq4d",
+     "value": "Because the snake was in the grass below their nest.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4zg012etmbvsai3o06r",
+     "value": "Because the hiss made Rikki-tikki jump back.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at lines 56 and 57, and it is about him rather than them."
+    },
+    {
+     "optionId": "cmsw2f4zg012ftmbvvquly3xn",
+     "value": "Because they had already told him about the baby.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "True at lines 52 and 53, before the hiss came. The child answers from the earlier talk, but lines 55 and 56 give the hiss from the grass as the reason they say nothing."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-023-RT-12",
+   "why": "The en-whole-text-absence-asserted distractor 'The writer says each time that Rikki-tikki is only proving the rule' was partly defensible, because lines 39 and 68 do tie his acts to the rule, and its execution called them 'without comment', which is false. The option is replaced with 'The writer says Rikki-tikki is not like other mongooses at all.', tagged en-contradicted-by-the-text: line 21 says he 'was a true mongoose'. Key, other options, hint and walk script unchanged.",
+   "stem": {
+    "text": "Think about the whole passage. What does the writer keep doing with mongooses?",
+    "quotes": [],
+    "passageRef": "stream-a-15-jungle-book",
+    "answerShape": "rule-about-all-of-them-set-against-one-of-them-doing-it",
+    "orderAnchor": 999,
+    "techniqueKey": "general-laws-about-mongooses-stated-then-acted-out"
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4zi012mtmbvmr3sggcs",
+     "value": "A motto is given for the whole mongoose family, and it says run and find out.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Reuses line 20 and quotes the rule instead of naming the pattern."
+    },
+    {
+     "optionId": "cmsw2f4zi012ntmbv3y7byb2w",
+     "value": "Rikki-tikki is braver, but he is still the youngest of his family.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "A ranking across the whole passage that no line makes."
+    },
+    {
+     "optionId": "cmsw2f4zi012otmbv0w7whjrx",
+     "value": "The writer says Rikki-tikki is not like other mongooses at all.",
+     "isKey": false,
+     "tag": "en-contradicted-by-the-text",
+     "execution": "Line 21 says Rikki-tikki was a true mongoose, and lines 39 and 68 tie what he does to every mongoose. The child takes the hero of the story to be unlike the rest, which the passage states the contrary of."
+    },
+    {
+     "optionId": "cmsw2f4zi012ptmbvu0idwl32",
+     "value": "A rule about all mongooses is given, but Rikki-tikki is the one who does it.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ]
+  }
+ ],
+ "cannotFix": []
+}

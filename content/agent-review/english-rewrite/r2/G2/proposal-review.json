@@ -1,0 +1,116 @@
+{
+  "door": "english-rewrite/r2/G2",
+  "reviewer": "rev-agent-01",
+  "changes": [
+    {
+      "ref": "rebuild:ENG-007-LP-07",
+      "verdict": "ATTEST",
+      "reason": "Round 2 changes only the en-negation-dropped execution: 'Lines 35 and 36 say he put it back without opening it'. 'put it back without' is on line 35 and 'opening it.' on line 36, so the negative word is now on a cited line. The round 1 hint (attested) is kept unchanged."
+    },
+    {
+      "ref": "rebuild:ENG-007-LP-12",
+      "verdict": "ATTEST",
+      "reason": "New hintCore 'Find a moment where a feeling could have been told. Read what the writer gives you instead.' is a move and shares no word only the key carries (no jumper, paper, hands or things). The distractor now says 'like the sock he finds', and its execution cites line 28 exactly ('Ilya found a Manchester United sock and became busy with it'). Both changes answer faults named in round 1. Round 1 key and walk fixes are kept."
+    },
+    {
+      "ref": "rebuild:ENG-015-CC-03",
+      "verdict": "ATTEST",
+      "reason": "The walk now says 'Lines 15 and 16 then say that this, and its livid colour, made it horrible'. 'That, and' ends line 15 and 'its livid colour, made it horrible' is on line 16, so this is correct. 'Lines 14 and 15' for the stirred hair (14) and the wide-open, motionless eyes (15) is correct. Nothing else changed from round 1."
+    },
+    {
+      "ref": "rebuild:ENG-015-CC-04",
+      "verdict": "ATTEST",
+      "reason": "The en-chronology-collapse execution now says he 'turns the key at line 21 and lights his candle at lines 21 and 22'. 'turned it sturdily' and 'lighted his' are on line 21, and 'candle.' is on line 22. Correct. Nothing else changed."
+    },
+    {
+      "ref": "rebuild:ENG-015-CC-06",
+      "verdict": "ATTEST",
+      "reason": "The stem now reads 'Look at lines 27 to 31 and 61 to 66. What does the clanking do that the bang at line 27 does not?', and lineRefs gain 27. Line 27 'closed it with a bang' is the only bang in either window, and the cellar door's 'booming sound' (65) is not a bang, so the noise is fixed. This is exactly the fault named in round 1."
+    },
+    {
+      "ref": "rebuild:ENG-015-CC-07",
+      "verdict": "ATTEST",
+      "reason": "The walk now says 'Lines 32 to 35 give under the table, under the sofa, in the closet'. Table is on 32, sofa on 33 and closet on 35. Correct. Nothing else changed."
+    },
+    {
+      "ref": "rebuild:ENG-015-CC-12",
+      "verdict": "ATTEST",
+      "reason": "stem.passageRef is set (the hold). The unrequested stem text and lineRefs from round 1 are reverted: the stem is again 'Think about the whole passage...' and lineRefs stay []. The walk corrections are true: behind the door 23-24, under the bed 34, closet 35, humbug 67. The key change answers the round 1 HOLD. The new key 'He calls it nonsense, but he still keeps on checking' is true of the text: 'Pooh, pooh!' (26), 'Humbug!' (53) and 'It's humbug still!' (67). After 'Pooh, pooh!' at 26 he still searches the rooms at 32-37, and he had looked behind the door at 23-25."
+    },
+    {
+      "ref": "rebuild:ENG-023-RT-06",
+      "verdict": "ATTEST",
+      "reason": "The walk now says 'Lines 35 and 36 say he had to find out what made it'. 'find out what made' is on line 35 and 'it.' on line 36, and 'had to' follows the text. Nothing else changed."
+    },
+    {
+      "ref": "rebuild:ENG-023-RT-08",
+      "verdict": "ATTEST",
+      "reason": "The walk now says 'Lines 47 and 48 say they pulled two big leaves together'. 'by pulling' is on line 47 and 'two big leaves together' on line 48. Correct. The round 1 passageRef fix is kept. Nothing else changed."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "ENG-007-LP-07",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Checked against lines 33-40. The key matches 35-36 ('looked at the edge of it and put it back without opening it'). Every execution's lines are true: without on 35-36, Friday box on 33, Ilya on 40. The hint is a move and does not miscount lines.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-007-LP-12",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "The key is true of 33-36 and does not deny lines 31-32. No distractor is defensible: Ilya's sock (28) says nothing of Reuben, and the passage states no feeling, which rules out the claim that it says he is sad. The clothes-only execution checks: football sheet 37-39, paper 35-36. The hint shares no word only the key carries. The walk cites 33-34 and 35-36 correctly and no longer lists 'laughing late'.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-015-CC-03",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "The key (still eyes and colour, 15-16) holds under either reading of 'That'. The spectacles (13-14) sit in the sentence before and are excluded under both readings. 'not angry / or ferocious' is on 12-13 and the lobster on 12. The walk's lines are now exact. The hint only points to the denied option and does not give the key away.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-015-CC-04",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "The key (turned it sturdily, walked in) is on line 21 and is what follows the shock (19-20). 'relinquished' is on 21, so 'let go' is earlier. The candle is 21-22, so the reversed order is wrong. 'would be untrue' is on 19-20. The walk's 'The candle at line 22' names the word on line 22. Every line number checks.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-015-CC-06",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "The key is true: he walks up the stairs, away from the bang, at 30-31, and the clanking comes up the stairs to his door at 65-66. Thunder (28) and the dragged chain (62) describe how the noises sound, not what they do. The bang at 27 comes before the bells at 59. The flame is at 69-70, outside both windows. The hint no longer sorts options by shape. The walk's lines check.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-015-CC-07",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "The key (looking in every hiding place) is true of 32-36: table, sofa, bed, closet and dressing-gown. The dressing-gown is already hanging at 35-36. The gruel is one item on the list (33-34). No line mentions servants. No distractor supports 'All as they should be'. The walk's lines are now exact.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-015-CC-12",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "passageRef is set. The new key holds both ways: he calls it nonsense ('Pooh, pooh!' 26, 'Humbug!' 53, 'humbug still' 67) and still checks (door 23-25, rooms 32-37). The 'Pooh/Humbug' option gives only his words and misses the checking. He is still 'caustic and cold' at 78, so the nerve option fails. Nobody is sent for (32-36). The walk's lines check, and the hint is a move.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-023-RT-06",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "The key matches 35-36 ('attend to every noise ... find out what made it'). Climbing up is on 34, and it explains how he got there, not why he woke. The laps are at 38-39, at the next morning's breakfast (37). No line has him keeping watch. The walk's lines are now exact. The hint only sets aside the morning option.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-023-RT-08",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "The key matches 47-48 ('pulling two big leaves together and stitching them up the edges'). The nest's swaying is on 49. The cotton wool and fire are Rikki-tikki's, at 15-16, and the cotton in the nest is on 49. Line 48 has the leaves stitched with fibres, but no line ties the nest to anything. The walk's lines are exact. passageRef is set.",
+      "faultField": null
+    }
+  ]
+}

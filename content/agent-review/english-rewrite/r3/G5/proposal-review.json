@@ -1,0 +1,44 @@
+{
+  "door": "english-rewrite/r3/G5",
+  "reviewer": "rev-agent-01",
+  "changes": [
+    {
+      "ref": "rebuild:ENG-011-CV-06",
+      "verdict": "ATTEST",
+      "reason": "Only hintCore changed. The new second sentence 'Then read line 2 to see how those people travelled.' is true: line 2 has the waggonette and 'they started on their drive'. It no longer echoes the key's 'on arriving at the house', and 'travelled' matches the wording of no option. The first sentence 'Find who does the alighting on line 15.' is true (line 15 'as they alighted') and names no bare pronoun, so it cannot read as Mrs Umney. The round 2 coaching fault is gone."
+    },
+    {
+      "ref": "rebuild:ENG-018-RB-02",
+      "verdict": "REFUSE",
+      "reason": "The change fixes both faults I named in round 2: the whip is dropped, and 'over the dashboard' is now placed on lines 5 and 6. But the new sentence 'In lines 63 and 64 he takes his foot down and pushes his hat back.' puts the foot-taking on lines 63-64, and 'took' is the last word of line 62 ('He put the whip back in its socket, took'). Line 63 starts 'his foot from the dashboard'. The why repeats the error: it quotes line 63 as 'took his foot from the dashboard'. In round 2 I held this row because a clause that runs over two lines was cited to one of them (line 5/6). This is the same fault at the other end of the row. 'Lines 62 to 64', the stem's own window, would be true."
+    },
+    {
+      "ref": "rebuild:ENG-026-AL-03",
+      "verdict": "REFUSE",
+      "reason": "The change fixes the fault I named in round 2. The heavy-brick option is now read as a reason for not leaving the key under the brick at lock-up (line 43 'did not put the key back under the brick'), not as a reason for moving it for Alan. Line 45 has 'it would save him hunting about'. But 'Line 45 gives the real reason' claims something the passage does not settle. Line 45 gives the reason Grandad gives. This passage keeps showing what he says against what is happening: 'he had had an enormous breakfast' when he passes her half his sandwich (lines 35-36), 'it was nothing' about Thursday (line 38), his knee (lines 30-31), and his knots gone useless (line 33). The row's own key, 'Grandad stops keeping the key', is about a handing-over that 'save him hunting about' does not settle. The words 'the real reason' come from my own round 2 reason, and I withdraw them. 'Line 45 gives the reason he gives' would be true. The motive-invention execution already words it correctly: 'line 45 says only that it would save him hunting about'."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "ENG-011-CV-06",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "faultField": null,
+      "reason": "Whole row re-read against lines 2, 12-16. The key 'got down on arriving at the house' is the only defensible meaning of 'as they alighted' (line 15). The curtsey is hers, joined by 'as' (line 15), so the coordination execution is true. Mrs Umney stands on the steps (line 12), so 'came down the steps towards them' is her act given to the word, and the en-agent-patient-reversal execution is true. 'caught fire and burned' is not supported, and its execution is true (line 12 woman to receive them). The hint is true (lines 15 and 2) and does not coach. The walkScript is true (lines 12 and 15). Original hold: the ambiguous 'they' is gone and en-cause-agent-swap is retagged, so it is fixed."
+    },
+    {
+      "itemId": "ENG-018-RB-02",
+      "verdict": "HOLD",
+      "holdFixed": true,
+      "faultField": "walkScript",
+      "reason": "Original hold fixed: the hat 'reversal' option and the defensible 'lolls back ... clears his mental decks' are both replaced. Every execution checks: lines 5-6 lolled back with a foot over the dashboard; 62-64 foot down and hat back; line 7 quid of tobacco; lines 51-52 boosted her up and resumed his own place. The key is the only defensible answer, and the hint 'The hat moves twice' is true (line 6 pulled over his eyes, line 63 pushed back) and does not coach. Held on the walkScript: 'In lines 63 and 64 he takes his foot down' leaves out line 62, where 'took' stands ('...in its socket, took' / 'his foot from the dashboard'). That is the same split-line fault this row was held for in round 2. Fix: cite 'Lines 62 to 64'."
+    },
+    {
+      "itemId": "ENG-026-AL-03",
+      "verdict": "HOLD",
+      "holdFixed": true,
+      "faultField": "execution",
+      "reason": "Original hold fixed: the wholly true pairing option is replaced by 'He put the key back under the brick when they locked up', which line 43 'did not' falsifies. The key 'Grandad stops keeping the key, leaving it for Alan, then giving it to Cass' is true and the only defensible answer: belt loop at line 10, moved for Alan and under the brick at lines 11-12, put into her hand to hang on to at lines 43-45, Cass at line 27. The hint is true and does not coach. The walkScript is true at lines 10, 11, 12 and 43-45. The negation and motive executions are true at lines 43, 11 and 45. Held on the heavy-brick execution: 'Line 45 gives the real reason' asserts that Grandad's stated reason is the true one, and the passage leaves that open (lines 30-38 show his stated reasons covering what is happening). Fix: 'Line 45 gives the reason he gives'. The phrase came from my round 2 reason, which I withdraw."
+    }
+  ]
+}

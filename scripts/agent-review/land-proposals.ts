@@ -24,6 +24,8 @@ import { checkItemChildFacing } from '../../packages/core/src/item-content-gate'
 import { isAppropriateForAChild } from '../../packages/core/src/appropriateness';
 import { canonicalOrderHash } from '../lib/pin-projection';
 import { loadChildLexicon } from '../lib/child-lexicon';
+import { canonicalJson } from '../lib/findings-digest';
+import { exportEnglishRewriteReturn, type RowChange } from './export-english-rewrite-return';
 
 const DIR = pjoin(__dirname, '..', '..', 'content', 'agent-review');
 const arg = (k: string) => process.argv.find((a) => a.startsWith(`--${k}=`))?.slice(k.length + 3);
@@ -41,9 +43,12 @@ interface Opt { optionId: string; value: string; isKey: boolean; tag: string | n
 interface Proposals {
   seats?: Array<{ optionId: string; itemId: string; oldValue: string; tag: string; newValue: string; execution: string }>;
   redrafts?: Array<{ optionId: string; itemId: string; value: string; tag: string; execution: string }>;
-  rebuilds?: Array<{ itemId: string; stem: Record<string, unknown>; options: Opt[]; why: string; explanation?: Record<string, unknown> }>;
+  // `explanationPatch` merges into the stored explanation key by key (R1023: an English row's explanation
+  // carries quotes, reading context and more that a rewrite must not drop by omission); `lineRefs` is item-level (R80).
+  rebuilds?: Array<{ itemId: string; stem: Record<string, unknown>; options: Opt[]; why: string; explanation?: Record<string, unknown>; explanationPatch?: Record<string, unknown>; lineRefs?: number[] }>;
 }
-interface Review { changes: Array<{ ref: string; verdict: string; reason?: string }>; rows: Array<{ itemId: string; verdict: string; reason?: string }> }
+interface Review { changes: Array<{ ref: string; verdict: string; reason?: string }>; rows: Array<{ itemId: string; verdict: string; reason?: string; holdFixed?: boolean }> }
+type Hold = { reason: string; faultField: string };
 
 /** Words a vr-08 option DERIVES: the first word without the letter, the second word with it at each position. */
 function vr08Derived(stem: Record<string, unknown>, letter: string): string[] {
@@ -59,7 +64,14 @@ function vr08Derived(stem: Record<string, unknown>, letter: string): string[] {
 async function main() {
   if (!DOOR) throw new Error('pass --door=vr-NN');
   const dir = pjoin(DIR, DOOR);
-  const packet = JSON.parse(readFileSync(pjoin(dir, 'packet.json'), 'utf8')) as { questionType: string; entries: Record<string, unknown> };
+  const packet = JSON.parse(readFileSync(pjoin(dir, 'packet.json'), 'utf8')) as { questionType: string; entries: Record<string, unknown>; holds?: Record<string, Hold> };
+  /**
+   * R1023 — A DOOR WHOSE PACKET CARRIES `holds` IS A REWRITE OF ROWS A REVIEW HELD. Only those rows may be
+   * touched; a row lands only if the reviewer says the ORIGINAL hold's fault is fixed (`holdFixed: true`,
+   * R1022: a hold stands until the review that placed it re-reads its field); landing clears the hold and
+   * writes the field-level changeset the return leg carries to the authoring store.
+   */
+  const HOLDS = packet.holds ?? null;
   const propText = readFileSync(pjoin(dir, 'proposals.json'), 'utf8');
   const prop = JSON.parse(propText) as Proposals;
   const lex = loadChildLexicon();
@@ -70,9 +82,9 @@ async function main() {
 
   // Build every touched row AS IT WILL BE.
   const touched = new Set<string>([...(prop.seats ?? []), ...(prop.redrafts ?? []), ...(prop.rebuilds ?? [])].map((x) => x.itemId));
-  const live = await prisma.item.findMany({ where: { id: { in: [...touched] } }, select: { id: true, status: true, questionTypeId: true, stem: true, explanation: true,
+  const live = await prisma.item.findMany({ where: { id: { in: [...touched] } }, select: { id: true, status: true, questionTypeId: true, stem: true, explanation: true, lineRefs: true,
     options: { select: { id: true, content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true }, orderBy: { id: 'asc' } } } });
-  type Row = { id: string; type: string; stem: Record<string, unknown>; explanation: unknown; options: Opt[]; refs: string[] };
+  type Row = { id: string; type: string; stem: Record<string, unknown>; explanation: unknown; lineRefs: number[]; options: Opt[]; refs: string[] };
   const after = new Map<string, Row>();
   const faults = new Map<string, string[]>();
   const fault = (id: string, f: string) => faults.set(id, [...(faults.get(id) ?? []), f]);
@@ -83,7 +95,8 @@ async function main() {
     const onlyRedrafts = !(prop.rebuilds ?? []).some((x) => x.itemId === r.id)
       && !(prop.seats ?? []).some((x) => x.itemId === r.id && x.newValue !== x.oldValue);
     if (r.status !== 'DRAFT' && !(r.status === 'LIVE' && onlyRedrafts)) fault(r.id, `status ${r.status}`);
-    after.set(r.id, { id: r.id, type: r.questionTypeId, stem: r.stem as Record<string, unknown>, explanation: r.explanation, refs: [],
+    if (HOLDS && !HOLDS[r.id]) fault(r.id, 'not a held row — a rewrite door may touch only the rows its review held (R1023)');
+    after.set(r.id, { id: r.id, type: r.questionTypeId, stem: r.stem as Record<string, unknown>, explanation: r.explanation, lineRefs: (r.lineRefs ?? []) as number[], refs: [],
       options: r.options.map((o) => ({ optionId: o.id, value: val(o.content), isKey: o.isCorrect, tag: o.misconceptionId, execution: o.misconceptionExecution?.trim() || null })) });
   }
   for (const id of touched) if (!after.has(id)) fault(id, 'row not found');
@@ -91,7 +104,23 @@ async function main() {
     const r = after.get(b.itemId); if (!r) continue;
     const ids = r.options.map((o) => o.optionId).sort().join();
     if (b.options.map((o) => o.optionId).sort().join() !== ids) fault(b.itemId, 'a rebuild must keep the same option ids');
-    r.stem = b.stem; if (b.explanation) r.explanation = b.explanation; r.options = b.options.map((o) => ({ ...o, execution: o.isKey ? null : o.execution })); r.refs.push(`rebuild:${b.itemId}`);
+    if (b.explanation && b.explanationPatch) fault(b.itemId, 'a rebuild gives explanation OR explanationPatch, not both');
+    /**
+     * A REBUILD NEVER DROPS WHAT IT WAS NOT SHOWN (R57, 2026-11-20). Packets hide `_`-prefixed stem keys
+     * (retention/provenance, outside the signed projection), so a proposer cannot name them and a
+     * wholesale stem replace erased them: ENG-007-LP-10 lost `_previousQuotes` this way. Every stored
+     * `_` key the rebuild does not itself set is carried forward.
+     */
+    const storedStem = r.stem;
+    r.stem = { ...Object.fromEntries(Object.entries(storedStem).filter(([k]) => k.startsWith('_') && !(k in b.stem))), ...b.stem };
+    if (b.explanation) r.explanation = b.explanation;
+    if (b.explanationPatch) r.explanation = { ...((r.explanation ?? {}) as Record<string, unknown>), ...b.explanationPatch };
+    if (b.lineRefs) {
+      if (!Array.isArray(b.lineRefs) || !b.lineRefs.every((n) => Number.isInteger(n) && n > 0)) fault(b.itemId, 'lineRefs must be positive line numbers');
+      r.lineRefs = b.lineRefs;
+    }
+    if (HOLDS && typeof b.stem.passageRef !== 'string') fault(b.itemId, 'an English rewrite must carry stem.passageRef (the row must be able to show its passage)');
+    r.options = b.options.map((o) => ({ ...o, execution: o.isKey ? null : o.execution })); r.refs.push(`rebuild:${b.itemId}`);
   }
   for (const s of prop.seats ?? []) {
     const r = after.get(s.itemId); const o = r?.options.find((x) => x.optionId === s.optionId);
@@ -114,6 +143,22 @@ async function main() {
     const vals = r.options.map((o) => o.value.toLowerCase());
     if (new Set(vals).size !== vals.length) fault(r.id, 'two options share a value');
     const keyValue = keys[0]?.value ?? '';
+    /**
+     * A PERSON'S APPROVAL MUST NOT RIDE ON TEXT AN AGENT WROTE (R94, R1023 condition 1). `chooseHint`
+     * serves an item hint only when `hintAuthoredBy` + `hintAuthority` name a reader, so a rewrite that
+     * leaves Annie's marker in place would put machine words in front of a child under her name. A
+     * rewrite of a marked field must clear the marker; the before value travels in the changeset.
+     */
+    {
+      const be = ((live.find((x) => x.id === r.id)?.explanation ?? {}) as Record<string, unknown>);
+      const ae = (r.explanation ?? {}) as Record<string, unknown>;
+      const MARKERS: Record<string, string[]> = { hintCore: ['hintAuthoredBy', 'hintAuthority'], walkScript: ['walkScriptApprovedBy', '_walkScriptAuthority'] };
+      for (const [f, marks] of Object.entries(MARKERS)) {
+        if (canonicalJson(be[f] ?? null) === canonicalJson(ae[f] ?? null)) continue;
+        const kept = marks.filter((m) => typeof ae[m] === 'string' && (ae[m] as string).trim() !== '');
+        if (kept.length) fault(r.id, `${f} rewritten but ${kept.join(' + ')} still names a person's approval of the old text (R94) — clear it`);
+      }
+    }
     // Each row's OWN type: a case can map several (maths-01), and a door-level type would run the wrong predicate.
     const k = checkKeyPerformsStem({ questionTypeId: r.type, stem: r.stem, keyValue, optionValues: r.options.map((o) => o.value) }, isWord);
     if (k.verdict === 'REFUSES') fault(r.id, `key gate REFUSES: ${k.why}`);
@@ -147,27 +192,54 @@ async function main() {
   const review = JSON.parse(reviewText) as Review;
   const verdict = new Map(review.changes.map((c) => [c.ref, c.verdict]));
   const signs = new Map(review.rows.map((r) => [r.itemId, r]));
-  const land = ok.filter((id) => after.get(id)!.refs.every((ref) => verdict.get(ref) === 'ATTEST') && signs.get(id)?.verdict === 'SIGN' && !HOLD.has(id));
+  const land = ok.filter((id) => after.get(id)!.refs.every((ref) => verdict.get(ref) === 'ATTEST') && signs.get(id)?.verdict === 'SIGN' && !HOLD.has(id)
+    && (!HOLDS || signs.get(id)?.holdFixed === true));
   const notLanded = [...after.keys()].filter((id) => !land.includes(id)).map((id) => ({ itemId: id, gateFaults: faults.get(id) ?? [],
+    ...(HOLDS ? { originalHold: HOLDS[id], holdFixed: signs.get(id)?.holdFixed ?? null } : {}),
     unattested: after.get(id)!.refs.filter((ref) => verdict.get(ref) !== 'ATTEST').map((ref) => ({ ref, verdict: verdict.get(ref) ?? 'none', reason: review.changes.find((c) => c.ref === ref)?.reason })),
     row: signs.get(id) ?? { verdict: 'none' } }));
   console.log(`  ${land.length} rows land and are signed; ${notLanded.length} held`);
 
+  // FIELD-LEVEL DIFF, compared order-insensitively (JSONB does not keep key order — CLAUDE.md).
+  const fieldChanges = (id: string) => {
+    const r = after.get(id)!; const b = live.find((x) => x.id === id)!;
+    const out: Array<{ field: string; before: unknown; after: unknown }> = [];
+    const cmp = (field: string, x: unknown, y: unknown) => { if (canonicalJson(x ?? null) !== canonicalJson(y ?? null)) out.push({ field, before: x ?? null, after: y ?? null }); };
+    const bs = b.stem as Record<string, unknown>;
+    for (const k of new Set([...Object.keys(bs), ...Object.keys(r.stem)])) cmp(`stem.${k}`, bs[k], r.stem[k]);
+    const be = (b.explanation ?? {}) as Record<string, unknown>; const ae = (r.explanation ?? {}) as Record<string, unknown>;
+    for (const k of new Set([...Object.keys(be), ...Object.keys(ae)])) cmp(`explanation.${k}`, be[k], ae[k]);
+    cmp('lineRefs', b.lineRefs, r.lineRefs);
+    for (const o of r.options) {
+      const bo = b.options.find((x) => x.id === o.optionId)!; const label = (bo.content as { label?: string })?.label ?? o.optionId;
+      cmp(`option ${label} (${o.optionId}).value`, val(bo.content), o.value);
+      cmp(`option ${label} (${o.optionId}).isKey`, bo.isCorrect, o.isKey);
+      cmp(`option ${label} (${o.optionId}).tag`, bo.misconceptionId, o.isKey ? null : o.tag);
+      cmp(`option ${label} (${o.optionId}).execution`, bo.misconceptionExecution?.trim() || null, o.isKey ? null : o.execution);
+    }
+    return out;
+  };
+
   if (APPLY && land.length) {
-    const method = `agent review pass 2 (David's ruling 2026-11-18): proposed by a proposing agent, ATTESTED change-by-change and the row SIGNED by the machine reviewer rev-agent-01; every gate passed on the row as written. proposals ${sha(propText).slice(0, 16)}, review ${sha(reviewText).slice(0, 16)}. Not read by a person.`;
+    const method = HOLDS
+      ? `English rewrite under R1023 (David, 2026-11-20: "Yes, agents rewrite"): the held fields were REWRITTEN BY A DRAFTING AGENT, not by Cowork and not by a person; ATTESTED change-by-change and the row SIGNED by the machine reviewer rev-agent-01, which re-read the original hold and found its fault fixed; every gate passed on the row as written. proposals ${sha(propText).slice(0, 16)}, review ${sha(reviewText).slice(0, 16)}. Not read by a person.`
+      : `agent review pass 2 (David's ruling 2026-11-18): proposed by a proposing agent, ATTESTED change-by-change and the row SIGNED by the machine reviewer rev-agent-01; every gate passed on the row as written. proposals ${sha(propText).slice(0, 16)}, review ${sha(reviewText).slice(0, 16)}. Not read by a person.`;
+    const changes = new Map(land.map((id) => [id, fieldChanges(id)]));
     await prisma.$transaction(async (tx) => {
       for (const id of land) {
         const r = after.get(id)!;
         const before = live.find((x) => x.id === id)!;
         if (JSON.stringify(before.stem) !== JSON.stringify(r.stem)) await tx.item.update({ where: { id }, data: { stem: r.stem as object } });
         if (JSON.stringify(before.explanation) !== JSON.stringify(r.explanation)) await tx.item.update({ where: { id }, data: { explanation: r.explanation as object } });
+        if (canonicalJson(before.lineRefs) !== canonicalJson(r.lineRefs)) await tx.item.update({ where: { id }, data: { lineRefs: r.lineRefs } });
         for (const o of r.options) {
           const b = before.options.find((x) => x.id === o.optionId)!;
           if (val(b.content) === o.value && b.isCorrect === o.isKey && b.misconceptionId === o.tag && (b.misconceptionExecution?.trim() || null) === o.execution) continue;
           await tx.itemOption.update({ where: { id: o.optionId }, data: { content: { ...(b.content as object), value: o.value }, isCorrect: o.isKey, misconceptionId: o.isKey ? null : o.tag, misconceptionExecution: o.isKey ? null : o.execution } });
         }
-        await tx.attributionEvent.create({ data: { recordType: 'item', recordId: id, action: 'AMENDED', reviewerId: REVIEWER, actor: 'agent-reviewer', recordedBy: RECORDED_BY,
-          field: 'stem/options', method, note: r.refs.join(' ') } });
+        await tx.attributionEvent.create({ data: { recordType: 'item', recordId: id, action: 'AMENDED', reviewerId: REVIEWER,
+          actor: HOLDS ? 'agent-drafter' : 'agent-reviewer', recordedBy: RECORDED_BY,
+          field: HOLDS ? changes.get(id)!.map((c) => c.field).join(', ').slice(0, 900) : 'stem/options', method, note: r.refs.join(' ') } });
       }
     }, { timeout: 120000 });
     for (const id of land) {
@@ -176,6 +248,27 @@ async function main() {
         method: `${method} Reviewer note: ${signs.get(id)?.reason ?? ''}`.slice(0, 900),
         subjectHash: canonicalOrderHash(r), subjectKind: SIGNATURE_SUBJECTS.ROW_PROJECTION_CANONICAL_ORDER.kind,
         subjectSpec: SIGNATURE_SUBJECTS.ROW_PROJECTION_CANONICAL_ORDER.spec } as Parameters<typeof recordSignature>[1]);
+    }
+    if (HOLDS) {
+      // 1. The changeset, captured now — the only moment the before value is still in hand. Appended across rounds.
+      const csPath = pjoin(dir, 'changeset.json');
+      const prior = existsSync(csPath) ? (JSON.parse(readFileSync(csPath, 'utf8')) as { rows: RowChange[] }).rows : [];
+      const landedAt = new Date().toISOString();
+      const fresh: RowChange[] = land.map((id) => ({ itemId: id, passageRef: (after.get(id)!.stem.passageRef as string) ?? null, hold: HOLDS[id]!,
+        reviewerNote: signs.get(id)?.reason ?? '', landedAt, changes: changes.get(id)! }));
+      writeFileSync(csPath, JSON.stringify({ door: DOOR, ruling: 'R1023', rows: [...prior.filter((p) => !land.includes(p.itemId)), ...fresh] }, null, 1));
+      // 2. Clear the hold — only for rows the review that placed it has now re-read and signed with the fault fixed.
+      const holdPath = pjoin(DIR, 'english', 'held-for-authoring-store.json');
+      const hf = JSON.parse(readFileSync(holdPath, 'utf8')) as { note: string; byField: Record<string, number>; held: Array<{ itemId: string; faultField?: string }>; clearedUnderR1023?: unknown[] };
+      const clearing = hf.held.filter((h) => land.includes(h.itemId));
+      if (clearing.length !== land.length) throw new Error(`hold file: ${land.length} rows landed but ${clearing.length} found standing — the hold file and this door disagree`);
+      const held = hf.held.filter((h) => !land.includes(h.itemId));
+      const byField = held.reduce<Record<string, number>>((a, h) => { const k = String(h.faultField ?? 'unstated'); a[k] = (a[k] ?? 0) + 1; return a; }, {});
+      writeFileSync(holdPath, JSON.stringify({ ...hf, byField, held, clearedUnderR1023: [...(hf.clearedUnderR1023 ?? []),
+        ...clearing.map((h) => ({ ...h, clearedAt: landedAt, clearedBy: `${REVIEWER} re-read the held field after an agent rewrite (${DOOR})`, reviewerNote: signs.get(h.itemId)?.reason ?? '' }))] }, null, 1));
+      console.log(`  holds cleared: ${clearing.length}; ${held.length} still standing`);
+      // 3. The return leg follows the write automatically (CLAUDE.md: an applier re-exports as its final step).
+      exportEnglishRewriteReturn();
     }
   }
   writeFileSync(pjoin(dir, 'pass2-held.json'), JSON.stringify({ door: DOOR, mode: APPLY ? 'APPLIED' : 'DRY RUN', landed: APPLY ? land : [], held: notLanded }, null, 1));

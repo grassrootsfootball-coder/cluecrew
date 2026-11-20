@@ -1,0 +1,55 @@
+{
+ "door": "english-rewrite/G3",
+ "mode": "APPLIED",
+ "landed": [
+  "ENG-005-BB-13",
+  "ENG-005-BB-07",
+  "ENG-005-BB-09",
+  "ENG-005-BB-04",
+  "ENG-001-WIW-01",
+  "ENG-005-BB-11",
+  "ENG-005-BB-01",
+  "ENG-005-BB-03",
+  "ENG-005-BB-02",
+  "ENG-005-BB-10",
+  "ENG-001-WIW-10",
+  "ENG-021-ED-07",
+  "ENG-014-TS-02",
+  "ENG-014-TS-04",
+  "ENG-014-TS-05",
+  "ENG-014-TS-06",
+  "ENG-014-TS-08",
+  "ENG-014-TS-12",
+  "ENG-021-ED-02",
+  "ENG-021-ED-06",
+  "ENG-021-ED-08",
+  "ENG-021-ED-10",
+  "ENG-021-ED-12",
+  "ENG-021-ED-11"
+ ],
+ "held": [
+  {
+   "itemId": "ENG-005-BB-12",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "passageRef missing (row has passageRefMissing: true; it cannot show its passage). Also: stem gives no line references.",
+    "faultField": "passageRef"
+   },
+   "holdFixed": false,
+   "unattested": [
+    {
+     "ref": "rebuild:ENG-005-BB-12",
+     "verdict": "REFUSE",
+     "reason": "passageRef and the n6kj retag are correct (its execution's lines 36-37, 40 and 49 all check). But the new stem sentence 'Look at lines 41 and 54' sends the child to line 41, where Beauty says 'Of course I could not tell him'. That line is about not being able to SPEAK to John, and it shows he understood John's question. It does not support the key's 'says he cannot follow them'; only line 54 ('I could not understand much') does. So the new line reference is not evidence for the answer, and the stem's 'keep reminding us' rests on it."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-005-BB-12",
+    "verdict": "HOLD",
+    "holdFixed": false,
+    "reason": "The stem now cites lines 41 and 54 for what the writer 'keeps reminding us'. Line 41 is Beauty unable to tell John, and he has followed John's question there, so it does not support the key's 'cannot follow them'. Only line 54 does. Either the key's second half or the cited lines must change so the two agree. passageRef is now set, but the line references the hold asked for do not correctly locate the evidence, so I do not count the hold as fixed.",
+    "faultField": "stem"
+   }
+  }
+ ]
+}

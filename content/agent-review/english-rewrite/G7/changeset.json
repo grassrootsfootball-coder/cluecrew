@@ -1,0 +1,654 @@
+{
+ "door": "english-rewrite/G7",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "ENG-020-HD-07",
+   "passageRef": "stream-a-19-heidi",
+   "hold": {
+    "reason": "hintCore 'The word has an upon it after it. Find what the it is.' is ungrammatical and confusing for a 9-11 reader (two different 'it's in one sentence, 'the it'). Key 'trust' for 'depend upon it' (l.33) and distractors otherwise check.",
+    "faultField": "hintCore"
+   },
+   "reviewerNote": "Key 'trust that a thing will happen' fits 'depend upon it' (the promise, l.32-33); hang-down (real older sense), leave-off-crying (l.32), keep-on-saying (l.33) wrong; hint grammatical and not coaching.",
+   "landedAt": "2026-11-20T17:01:22.974Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "The word has an upon it after it. Find what the it is.",
+     "after": "Line 33 says she wants to depend upon something. Find what it is on line 32."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-020-HD-09",
+   "passageRef": "stream-a-19-heidi",
+   "hold": {
+    "reason": "hintCore 'Nothing here is being put down by force' eliminates the dominant-sense distractor the item tests (coaching, R572); and the 'press down hard' distractor is tagged en-figurative-taken-literally while its execution ('Built out of press') describes a built-from-parts error.",
+    "faultField": "hintCore"
+   },
+   "reviewerNote": "Substituted into 'could not suppress a sob' (l.37-38): only 'hold back a thing that is coming out' reads; put-down-a-rising (dominant sense), sit-quietly (l.38-39, what she must do), press-down-hard (built from parts, literal pressing on a thing) wrong; tag and execution consistent; hint not coaching.",
+   "landedAt": "2026-11-20T17:01:22.974Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "Nothing here is being put down by force.",
+     "after": "Try each answer in place of suppress on line 38. Read the sentence again each time."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-009-SM-03",
+   "passageRef": "stream-b-02",
+   "hold": {
+    "reason": "hintCore 'Find the bare wall. The reason is what would go on it.' states the key's content (Nan's wall is bare) rather than pointing to evidence - coaching (R572). Key and distractors otherwise check against lines 13-15.",
+    "faultField": "hintCore"
+   },
+   "reviewerNote": "Checked key against l.14 (bare wall, so I said I would get her a picture); Nan-asked (offer is his, l.14-15), which-visit (true at l.15, not the reason) and for-himself (not stated) all wrong; hint no longer names the wall; walkScript true to l.13-14.",
+   "landedAt": "2026-11-20T17:01:22.974Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "Find the bare wall. The reason is what would go on it.",
+     "after": "Find where he says he would get her a picture. Read what comes just before it."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-009-SM-04",
+   "passageRef": "stream-b-02",
+   "hold": {
+    "reason": "Distractor 'He had promised Nan he would go out there' is defensible: lines 14-15 'I said I would get her a picture of the place' is a promise that can only be kept by going there; the execution's picture-not-visit distinction is too thin for a child to be marked wrong on, under a stem as open as 'what do these lines tell you about the trip'.",
+    "faultField": "options"
+   },
+   "reviewerNote": "Checked key 'kept the trip from his mother' against l.17; the replaced distractor is no longer a second answer; mother-would-stop (not stated) and mother-told-him (reversal of l.17) wrong; hint 'ask who was told what' does not give the key.",
+   "landedAt": "2026-11-20T17:01:22.974Z",
+   "changes": [
+    {
+     "field": "option B (cmsw2f4vj00f7tmbv43zunuxh).value",
+     "before": "He had promised Nan he would go out there.",
+     "after": "He told Nan he was going to Ryan's."
+    },
+    {
+     "field": "option B (cmsw2f4vj00f7tmbv43zunuxh).execution",
+     "before": "Line 15 has him promise a picture, not a visit; the promise moves to the wrong thing.",
+     "after": "Line 17 has him tell Mum he was going to Ryan's. The child moves that detail onto Nan, who fills lines 15 and 16."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-009-SM-07",
+   "passageRef": "stream-b-02",
+   "hold": {
+    "reason": "hintCore 'One word here is doing something only a plant can do' tells the child the elder is a plant, which alone selects 'a small tree or bush' from the three options - coaching (R572). Key, distractors and walkScript otherwise correct for l.29.",
+    "faultField": "hintCore"
+   },
+   "reviewerNote": "Checked key 'small tree or bush' against 'an elder growing out of' (l.29); older-family-member (dominant sense) and window-shaped hole (other conjunct, l.30) wrong; hint is a move, not the category.",
+   "landedAt": "2026-11-20T17:01:22.974Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "One word here is doing something only a plant can do.",
+     "after": "Read the rest of line 29. What is the elder doing on top of the wall?"
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-009-SM-08",
+   "passageRef": "stream-b-02",
+   "hold": {
+    "reason": "hintCore '... ruins. Not a result.' rules out the dominant-sense distractor that the item exists to test, leaving the key as the only feeling-word option - coaching (R572). Key 'feeling of the visit' is otherwise defensible for 'spoiled the effect' (l.32).",
+    "faultField": "hintCore"
+   },
+   "reviewerNote": "Substituted each option into l.32 'which spoiled the effect': only 'the feeling of the visit he was making' reads; result-sense, the-carrying (l.32 is what spoils) and seemed-rude (copied l.31) all fail; hint names no option.",
+   "landedAt": "2026-11-20T17:01:22.974Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "Ask what a can in your hand ruins. Not a result.",
+     "after": "Try each answer in place of the effect on line 32. Read the sentence again each time."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-009-SM-09",
+   "passageRef": "stream-b-02",
+   "hold": {
+    "reason": "Key 'the water he watches is the slow one' is not supported: the passage never says standing on the step settles anything about Nan's story - a tide coming in and out over a boot (l.33-35) is not evidence for forty years of erosion over one February night (l.10-12), and the stem's 'settle' asserts a conclusion the text leaves open. Key wording ('two speeds, but...') is also hard for a 9-11 reader.",
+    "faultField": "key"
+   },
+   "reviewerNote": "Key 'goes on in its own way, whatever he does' follows from l.34 (he moved back, it came further up) and l.34-35 'not going to stop doing that for me'; one-night story (l.10-11, wrong scope), tide going out (contradicted by l.34) and leaves-the-step-alone (drops 'not', l.34-35) all wrong; hint points to l.34 without stating the key; walkScript accurate. Original faults (unsupported key, 'settle', hard wording) gone.",
+   "landedAt": "2026-11-20T17:01:22.974Z",
+   "changes": [
+    {
+     "field": "stem.text",
+     "before": "Read lines 10 to 12, then lines 33 to 35. What does standing on the step settle about Nan's story?",
+     "after": "Read lines 33 to 35. What does he come to understand about the water?"
+    },
+    {
+     "field": "explanation.hintCore",
+     "before": "The story offers two speeds. Ask which one the step shows.",
+     "after": "See what he does in line 34. Then see what the water does next."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Read line 11 and find the two versions: one night, or forty years. Now read line 34. The water comes up, goes out, and comes further up. That is the slow version happening while he stands there.",
+     "after": "Read line 33. The water comes over his boot and goes out again. In line 34 he moves back, and a minute later it comes further up. Lines 34 and 35 say it was not going to stop for him. Nothing he does will change it."
+    },
+    {
+     "field": "lineRefs",
+     "before": [
+      10,
+      11,
+      12,
+      33,
+      34,
+      35
+     ],
+     "after": [
+      33,
+      34,
+      35
+     ]
+    },
+    {
+     "field": "option A (cmsw2f4vn00futmbv3iuh1ro9).value",
+     "before": "The story has two speeds, but the water he watches is the slow one.",
+     "after": "It goes on in its own way, whatever he does."
+    },
+    {
+     "field": "option B (cmsw2f4vn00fvtmbvc712zu07).value",
+     "before": "The sea took the whole row in one night in February, as she says.",
+     "after": "The sea took the whole row in one night in February."
+    },
+    {
+     "field": "option B (cmsw2f4vn00fvtmbvc712zu07).tag",
+     "before": "en-within-span-wrong-element",
+     "after": "en-wrong-scope-retrieval"
+    },
+    {
+     "field": "option B (cmsw2f4vn00fvtmbvc712zu07).execution",
+     "before": "That is the other version, at line 11, and the step shows the slow one instead.",
+     "after": "One telling of Nan's story at lines 10 and 11, outside this window. It is not what he works out on the step."
+    },
+    {
+     "field": "option C (cmsw2f4vn00fwtmbvt3yu9o0f).value",
+     "before": "None of what Nan has told him about the place ever really happened.",
+     "after": "The tide had turned and the water was going out."
+    },
+    {
+     "field": "option C (cmsw2f4vn00fwtmbvt3yu9o0f).tag",
+     "before": "en-extreme-option-pull",
+     "after": "en-contradicted-by-the-text"
+    },
+    {
+     "field": "option C (cmsw2f4vn00fwtmbvt3yu9o0f).execution",
+     "before": "Line 33 has him standing on the step, so at least that much of it is real.",
+     "after": "Line 34 has the water come further up a minute later, so it is coming in. The child may borrow the tide turning from line 36."
+    },
+    {
+     "field": "option D (cmsw2f4vn00fxtmbvdr01upkl).execution",
+     "before": "Line 34 says it was not going to stop, and this option loses that.",
+     "after": "Lines 34 and 35 say it was not going to stop, and this option loses the not."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-013-TI-03",
+   "passageRef": "stream-a-01-treasure-island",
+   "hold": {
+    "reason": "Distractor 'He was in fear and in curiosity' is defensible: lines 11-13 have him lie there 'trembling ... in the extreme of fear', and fear is an ordinary reason for staying hidden; the item leans on the hint ('That is not why he stayed') to exclude it, which is itself coaching away the main competitor.",
+    "faultField": "options"
+   },
+   "reviewerNote": "Key matches l.13-14 'the lives of all the honest men aboard depended upon me alone'; about-to-jump-up (l.10, what he nearly did), treasure (not given) and barrel-shook (l.9-10, no reason) are not reasons; no remaining option is a defensible feeling-as-reason; hint points to the connective, not the content.",
+   "landedAt": "2026-11-20T17:01:22.974Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "One of these is how he felt. That is not why he stayed.",
+     "after": "Find the word on line 13 that brings in his reason. Read what follows it."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 11 says he would not have shown himself for all the world. Lines 13 and 14 say why: the honest men lived or died by him. Fear and curiosity are what he felt, not what held him there.",
+     "after": "Line 11 says he would not have shown himself for all the world. Lines 13 and 14 say why: the honest men lived or died by him. The small word for, on line 13, brings in that reason."
+    },
+    {
+     "field": "option D (cmsw2f4wm00lntmbve7ugp36g).value",
+     "before": "He was in fear and in curiosity.",
+     "after": "The barrel shook as the man leaned on it."
+    },
+    {
+     "field": "option D (cmsw2f4wm00lntmbve7ugp36g).execution",
+     "before": "Reuses line 12 and 13 and names a state rather than a reason.",
+     "after": "Reuses lines 9 and 10, which tell what happened to the barrel and give no reason for staying hidden."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-013-TI-06",
+   "passageRef": "stream-a-01-treasure-island",
+   "hold": {
+    "reason": "Distractor 'Silver praised him, so he agreed to join' is defensible: line 15-16 says Silver addressed the lad 'in the very same words of flattery', and that flattering talk (l.18-26) is what the lad says won him over (l.27-28); the execution only considers the later praise at l.29.",
+    "faultField": "options"
+   },
+   "reviewerNote": "Key 'won him over to the job at last' checks against l.27-28; liked-from-start drops the negation; Silver-shook-hand is l.29-30 and about Silver; put-off reverses 'till'; no remaining option is a second answer; hint points to the turning word without giving the key.",
+   "landedAt": "2026-11-20T17:01:22.974Z",
+   "changes": [
+    {
+     "field": "option D (cmsw2f4wp00m2tmbvitw6qupl).value",
+     "before": "Silver praised him, so he agreed to join.",
+     "after": "It has put him off the job."
+    },
+    {
+     "field": "option D (cmsw2f4wp00m2tmbvitw6qupl).tag",
+     "before": "en-chronology-collapse",
+     "after": "en-relation-word-flipped"
+    },
+    {
+     "field": "option D (cmsw2f4wp00m2tmbvitw6qupl).execution",
+     "before": "The praise at line 29 comes after the hand at line 28, so the cause sits later than the effect.",
+     "after": "Line 27 says he did not like the job till he had the talk. The child reads till as because, so the talk causes the dislike."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-013-TI-05",
+   "passageRef": "stream-a-01-treasure-island",
+   "hold": {
+    "reason": "Execution on 'calls Dick square / trusts him with the keg' ends 'In the window, line 22 answers the stem: 'it all away, some here, some there, and none'' - false (line 22 alone does not say how the two speeches differ) and the quote is a truncated fragment. Key otherwise checks against l.21-22 and l.44-47.",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Key checks against l.21-22 (puts it all away) and l.44-47 (Smollett sails, squire and doctor find the stuff); rough/pay both from first speech (l.18-20); Dick/keg outside windows (l.37, 56); spends-all contradicted by l.20-22; hint and walkScript accurate.",
+   "landedAt": "2026-11-20T17:01:22.974Z",
+   "changes": [
+    {
+     "field": "option C (cmsw2f4wo00lwtmbv0hsjxe3l).execution",
+     "before": "True at line 37 and at line 56, both outside the two windows named here. In the window, line 22 answers the stem: 'it all away, some here, some there, and none'.",
+     "after": "True at line 37 and at line 56, both outside the two windows named here, so neither half compares the two speeches."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-013-TI-08",
+   "passageRef": "stream-a-01-treasure-island",
+   "hold": {
+    "reason": "hintCore 'Read on to the end of that line' has no referent - the stem cites five lines and names none, so the child cannot tell which line is meant. Key ('hazed me long enough', l.41) and distractors otherwise check.",
+    "faultField": "hintCore"
+   },
+   "reviewerNote": "Key 'driven him hard for a long time' checks against 'he's hazed me long enough' (l.41); pickles/wine (l.42, what he wants), take the ship (not given), bumboat (l.40-41, the waiting) wrong; hint now has a referent.",
+   "landedAt": "2026-11-20T17:01:22.974Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "Read on to the end of that line.",
+     "after": "Find where Hands says he has had enough of the captain. Read on to the end of that line."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-013-TI-10",
+   "passageRef": "stream-a-01-treasure-island",
+   "hold": {
+    "reason": "'my limbs and heart alike misgave me' (l.53): with 'heart' as subject, 'misgave' carries the established sense of foreboding/doubt, so the neighbouring-sense distractor is partly supported and its execution ('line 53 fixes the sense of giving way') is not true for the heart; the hint 'Limbs cannot doubt' ignores the heart and also eliminates two distractors outright.",
+    "faultField": "options"
+   },
+   "reviewerNote": "With the doubt sense gone, key 'would not do as he wanted them to' is the only defensible gloss for limbs and heart misgiving (l.53); mis+gave (built from parts), strong-enough (contradicted l.52-53), leaped-out (l.52, what he wanted) wrong; walkScript accurate.",
+   "landedAt": "2026-11-20T17:01:22.974Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "Limbs cannot doubt, and they cannot hand things over.",
+     "after": "Read line 52 first. Ask what kept him from leaping out."
+    },
+    {
+     "field": "option C (cmsw2f4ws00mltmbvpgl6c3fl).value",
+     "before": "They filled him with doubt about Silver.",
+     "after": "They were strong enough to carry him out."
+    },
+    {
+     "field": "option C (cmsw2f4ws00mltmbvpgl6c3fl).tag",
+     "before": "en-vocab-neighbouring-sense",
+     "after": "en-contradicted-by-the-text"
+    },
+    {
+     "field": "option C (cmsw2f4ws00mltmbvpgl6c3fl).execution",
+     "before": "Misgive can mean to fill with doubt; line 53 fixes the sense of giving way.",
+     "after": "Lines 52 and 53 say he would have leaped out if he had found the strength, so he did not find it. The child gives his limbs the strength the line denies."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-013-TI-12",
+   "passageRef": "stream-a-01-treasure-island",
+   "hold": {
+    "reason": "hintCore '... He does not move' states half the key (coaching, R572); and walkScript claims 'At lines 32 and 33 he cannot move' - those lines say nothing about his movement, only his understanding.",
+    "faultField": "hintCore"
+   },
+   "reviewerNote": "Key checks across l.10-12, 32-33, 52-53 (in the barrel throughout, understanding growing); nerve-breaks-at-moon (moon brings 'Land ho!' l.58-60), shown-himself (l.11, one thing), warns-the-men (contradicted l.11-12) wrong; hint no longer states half the key; walkScript true.",
+   "landedAt": "2026-11-20T17:01:22.974Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "Watch him from the first line to the last. He does not move.",
+     "after": "Pick three moments, early, middle and late. Ask what is true of Jim at each one."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "At line 10 he means to jump up, and instead he lies there trembling. At lines 32 and 33 he cannot move, yet he works out what their terms mean. At line 53 his limbs give way while his ears keep gathering the plot.",
+     "after": "At line 10 he means to jump up, and instead he lies there trembling. At lines 32 and 33, still in the barrel, he works out what their terms mean. At line 53 his limbs give way while his ears keep gathering the plot."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-020-HD-01",
+   "passageRef": "stream-a-19-heidi",
+   "hold": {
+    "reason": "hintCore 'Two of these are true things that happen next' is false: only the Clara-willing option is true; the wardrobe option says she found it bare, but she found rolls (l.12). Key 'decent appearance when Herr Sesemann returned' (l.5) otherwise correct.",
+    "faultField": "hintCore"
+   },
+   "reviewerNote": "Key checks against l.4-6; Clara-willing (l.6-7, enabler not reason), wardrobe-bare (she goes up at l.7, after the decision, and finds rolls), clothes-spoiled (not stated) wrong; hint true and not coaching.",
+   "landedAt": "2026-11-20T17:01:22.974Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "Two of these are true things that happen next.",
+     "after": "Find where she makes up her mind. Read to the end of that sentence."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-020-HD-08",
+   "passageRef": "stream-a-19-heidi",
+   "hold": {
+    "reason": "Wrong window: the reason is stated at line 33 ('to make sure that she could depend upon it she kept on saying'), outside the cited lines 34-36. walkScript also says 'Line 35 puts the same question to Clara again' - line 35 is Clara's assurance.",
+    "faultField": "stem"
+   },
+   "reviewerNote": "Key 'wants to be sure the promise will be kept' checks against l.33; or-more (l.36, Clara's answer), angry (not given), not-understood (not given) wrong; cited lines now contain the answer; walkScript accurate.",
+   "landedAt": "2026-11-20T17:01:22.974Z",
+   "changes": [
+    {
+     "field": "stem.text",
+     "before": "Look at lines 34 to 36. Why does Heidi ask Clara the same thing more than once?",
+     "after": "Look at lines 33 to 36. Why does Heidi ask Clara the same thing more than once?"
+    },
+    {
+     "field": "stem.orderAnchor",
+     "before": 34,
+     "after": 33
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 34 has her ask whether she will have quite as many. Line 35 puts the same question to Clara again. She is checking that the promise holds.",
+     "after": "Line 33 says she wants to make sure she can depend upon it. Line 34 has her ask whether she will have quite as many. She asks again and again to check that the promise holds."
+    },
+    {
+     "field": "lineRefs",
+     "before": [
+      34,
+      35,
+      36
+     ],
+     "after": [
+      33,
+      34,
+      35,
+      36
+     ]
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-020-HD-02",
+   "passageRef": "stream-a-19-heidi",
+   "hold": {
+    "reason": "walkScript misquotes and mislines: it gives 'bread in a wardrobe, a whole pile of bread' as line 12, but the text runs over l.12-13 and reads 'bread in a wardrobe! a whole pile of bread!'. The hat-option execution also ends in a truncated fragment ('a heap'). Key (heap of rolls, l.12) is correct.",
+    "faultField": "walkScript"
+   },
+   "reviewerNote": "Key 'heap of rolls at the bottom' checks against l.11-12; never-done-before (l.10-11, her feeling), straw hat (l.15, on the table, outside window), clothes-too-small (not stated) wrong; walkScript lines and quotations verified verbatim.",
+   "landedAt": "2026-11-20T17:01:22.974Z",
+   "changes": [
+    {
+     "field": "explanation.quotes",
+     "before": [
+      {
+       "rule": "quoted-from-passage",
+       "text": "what do I see at the bottom but a heap of rolls",
+       "passageRef": "stream-a-19-heidi"
+      }
+     ],
+     "after": [
+      {
+       "rule": "quoted-from-passage",
+       "text": "what do I see at the bottom but a heap of rolls",
+       "passageRef": "stream-a-19-heidi"
+      },
+      {
+       "rule": "quoted-from-passage",
+       "text": "a whole pile of bread",
+       "passageRef": "stream-a-19-heidi"
+      }
+     ]
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 12 asks 'what do I see at the bottom but a heap of rolls'. Line 12 then says it again. It calls the find 'bread in a wardrobe, a whole pile of bread'.",
+     "after": "Lines 11 and 12 ask 'what do I see at the bottom but a heap of rolls'. Line 13 says it again, calling it 'a whole pile of bread'."
+    },
+    {
+     "field": "option B (cmsw2f4yh00wjtmbvi3y4hub8).execution",
+     "before": "True at line 15, three lines past the end of this window. In the window, line 12 answers the stem: 'do I see at the bottom but a heap'.",
+     "after": "True at line 15, three lines past the end of this window, where Tinette is told to take it away."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-020-HD-11",
+   "passageRef": "stream-a-19-heidi",
+   "hold": {
+    "reason": "Distractor 'She squeezes it further out of shape in her delight' is a second correct answer: 'made it more out of shape still in her joy' runs onto line 44, inside the cited window, and is something she does with the hat; the execution wrongly places it wholly at l.43.",
+    "faultField": "options"
+   },
+   "reviewerNote": "Key 'wraps a handkerchief round it and pushes it to the back of the cupboard' checks against l.44-45; cupboard-then-wrap (order reversed), finds-it (l.42-43, outside window), wears-it-in-bed (not stated) wrong; no option now matches l.43-44's out-of-shape clause; walkScript accurate.",
+   "landedAt": "2026-11-20T17:01:22.974Z",
+   "changes": [
+    {
+     "field": "option B (cmsw2f4yo00xstmbvozspknrn).value",
+     "before": "She squeezes it further out of shape in her delight.",
+     "after": "She finds it lying under the counterpane."
+    },
+    {
+     "field": "option B (cmsw2f4yo00xstmbvozspknrn).execution",
+     "before": "True at line 43, one line before this window. In the window, line 44 answers the stem: 'still in her joy, and then, after wrapping a'.",
+     "after": "True at lines 42 and 43, before this window, and it is how she comes upon the hat rather than what she does with it."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-020-HD-12",
+   "passageRef": "stream-a-19-heidi",
+   "hold": {
+    "reason": "Distractor 'What is taken is her bread, but what returns is her hat' is true of the passage and answers 'What is true of the things done to Heidi and ... for her'; and hintCore 'Look for the line where the writer gives a verdict' sends the child to search for a line that does not exist.",
+    "faultField": "options"
+   },
+   "reviewerNote": "Key checks: taking is spoken and ordered aloud (l.4-6, 10-15, 17-19) and the hat returns by signs only (l.39-42); gentle/sharp (manners swapped), writer-judges (no verdict line), missed-by-all (not stated) wrong; hint is a compare move; walkScript lines 4, 6, 13, 40-41, 42 verified.",
+   "landedAt": "2026-11-20T17:01:22.974Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "Look for the line where the writer gives a verdict.",
+     "after": "List what is done to Heidi and what is done for her. Compare how each one happens."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "At line 4 Fraulein Rottenmeier settles the clothes without asking her. At line 6 she settles it with Clara. At line 13 she gives Tinette the order. At line 41 Sebastian says nothing at all and the hat is back.",
+     "after": "At line 4 Fraulein Rottenmeier settles the clothes without asking her. At line 6 she settles it with Clara. At line 13 she gives Tinette the order. At lines 40 and 41 Sebastian makes only signs. At line 42 the hat is back."
+    },
+    {
+     "field": "option B (cmsw2f4yp00xxtmbvabzkc9ko).value",
+     "before": "What is taken is her bread, but what returns is her hat.",
+     "after": "What is taken is taken gently, but what returns comes with sharp words."
+    },
+    {
+     "field": "option B (cmsw2f4yp00xxtmbvabzkc9ko).tag",
+     "before": "en-inference-literal-lookalike",
+     "after": "en-attribute-transfer"
+    },
+    {
+     "field": "option B (cmsw2f4yp00xxtmbvabzkc9ko).execution",
+     "before": "Both halves of the day named, with nothing that joins them.",
+     "after": "Fraulein Rottenmeier takes the bread in a determined tone at line 19, and Sebastian's signs at lines 40 and 41 are kind. The child swaps the two manners."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-027-RR-03",
+   "passageRef": "stream-a-22-prisoner-of-zenda",
+   "hold": {
+    "reason": "hintCore 'This is a thing he has, not a thing he refuses' eliminates the won't-lookalike distractor that the item exists to test - coaching (R572). Key 'usual way of looking' for 'paler than his wont' (l.11) is correct.",
+    "faultField": "hintCore"
+   },
+   "reviewerNote": "Substituted into 'He looks paler than his wont' (l.11): key 'his usual way of looking' fits; refusal (won't lookalike), reason-for-pale (l.12 reply), and pictures (l.15, not tied to the word) are not the word's meaning; hint is a move; walkScript accurate.",
+   "landedAt": "2026-11-20T17:01:22.974Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "This is a thing he has, not a thing he refuses.",
+     "after": "Try each answer in place of wont on line 11. Read the sentence again each time."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-027-RR-06",
+   "passageRef": "stream-a-22-prisoner-of-zenda",
+   "hold": {
+    "reason": "Lines 19-20 give being 'spared the unpleasant sight' as the direct reason he is glad, so 'His brother's portrait was in most of the windows' (the sight) is a defensible answer alongside the temper reason. walkScript also misquotes l.20 as 'a hot temper'; the text says 'quick temper'.",
+    "faultField": "options"
+   },
+   "reviewerNote": "Key 'might have lost his temper over it' follows from l.20-21 (quick temper; perhaps not so placidly); calm-as-narrator (negation dropped), ironical greeting (l.19, what the sight was), glad-brother-loved (contradicted l.19-20) wrong; no option now offers the sight as an answer; hint points to l.20-21 without stating the key; walkScript lines verified.",
+   "landedAt": "2026-11-20T17:01:22.974Z",
+   "changes": [
+    {
+     "field": "stem.text",
+     "before": "Look at lines 19 to 21. Why is the narrator glad the King was not there?",
+     "after": "Look at lines 19 to 21. How does the narrator think the King would have taken the sight?"
+    },
+    {
+     "field": "explanation.hintCore",
+     "before": "Two of these are about the sight, not the man.",
+     "after": "Find what line 20 says about the kind of man the King was. Then read line 21."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 19 says he was glad the King was spared it. Line 20 says the King was a man of a hot temper. Line 21 says he would not have taken it so placidly.",
+     "after": "Lines 19 and 20 say he was glad the King was spared the sight. Line 20 says the King was a man who was easily angered. Line 21 says he would not have taken it so placidly. So he might well have lost his temper."
+    },
+    {
+     "field": "option A (cmsw2f50i018gtmbv1zfn2n0c).value",
+     "before": "His brother’s portrait was in most of the windows.",
+     "after": "He would have taken it as calmly as the narrator did."
+    },
+    {
+     "field": "option A (cmsw2f50i018gtmbv1zfn2n0c).tag",
+     "before": "en-inference-literal-lookalike",
+     "after": "en-negation-dropped"
+    },
+    {
+     "field": "option A (cmsw2f50i018gtmbv1zfn2n0c).execution",
+     "before": "Reuses lines 18 and 19 and gives the sight rather than the reason.",
+     "after": "Line 21 says he would not have taken it so placidly as the narrator did. This option drops the not."
+    },
+    {
+     "field": "option B (cmsw2f50i018htmbvs5brrwti).value",
+     "before": "The King would not have borne the sight quietly.",
+     "after": "He might have lost his temper over it."
+    },
+    {
+     "field": "option C (cmsw2f50i018itmbvphq8ygwq).execution",
+     "before": "True at line 19, and it is what the sight was rather than why he is glad.",
+     "after": "True at line 19, and it says what the sight was rather than how the King would have taken it."
+    },
+    {
+     "field": "option D (cmsw2f50i018jtmbv04wcc3ba).value",
+     "before": "The King had asked not to be told about it.",
+     "after": "He would have been glad to see his brother so loved."
+    },
+    {
+     "field": "option D (cmsw2f50i018jtmbv04wcc3ba).tag",
+     "before": "en-plausible-not-stated",
+     "after": "en-contradicted-by-the-text"
+    },
+    {
+     "field": "option D (cmsw2f50i018jtmbv04wcc3ba).execution",
+     "before": "A spared unpleasantness invites a request; no line gives one.",
+     "after": "Line 20 calls the portraits an unpleasant sight he was spared, and line 19 an ironical greeting. The passage states the opposite of gladness."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-027-RR-07",
+   "passageRef": "stream-a-22-prisoner-of-zenda",
+   "hold": {
+    "reason": "Execution on the kneeling option ends 'In the window, line 24 answers the stem: 'before me, and the sudden sense of my audacity'' - false: the answer is 'Everything was in a mist as I dismounted' (l.24-25); the quoted fragment is not it. Key correct.",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Key 'everything went into a mist' checks against 'Everything was in a mist as I dismounted' (l.24-25); grey front (l.22-24, the building), kneeling (l.37, wrong scope), helped down (l.25 has them seen dimly, never touching him) wrong; walkScript accurate.",
+   "landedAt": "2026-11-20T17:01:22.974Z",
+   "changes": [
+    {
+     "field": "option B (cmsw2f50j018mtmbvv7u4d8t4).execution",
+     "before": "True at line 37, after he had walked up the nave. In the window, line 24 answers the stem: 'before me, and the sudden sense of my audacity'.",
+     "after": "True at line 37, after he had walked up the nave, well past this window."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-027-RR-09",
+   "passageRef": "stream-a-22-prisoner-of-zenda",
+   "hold": {
+    "reason": "Execution on the oath option ends 'In the window, line 41 answers the stem: 'before them all. Then the great organ pealed out'' - false: that fragment is the organ (distractor 2), not the proclamation (l.41-42). hintCore 'The heralds say who he now is' also states the key's content.",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Key checks against l.41-42 'bade the heralds proclaim me, and Rudolf the Fifth was crowned King'; organ (l.41, the sound), oath (l.39, what he did), brother agreed (nowhere) wrong; hint is a move that skips past the organ without naming the key.",
+   "landedAt": "2026-11-20T17:01:22.974Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "The heralds say who he now is.",
+     "after": "Find the heralds on line 41. Read on to see what follows."
+    },
+    {
+     "field": "option C (cmsw2f50k018stmbvpamsqckx).execution",
+     "before": "True at line 39, just before the heralds were called. In the window, line 41 answers the stem: 'before them all. Then the great organ pealed out'.",
+     "after": "True at line 39, just before the heralds were called, and it is what he did rather than what they proclaimed."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-027-RR-10",
+   "passageRef": "stream-a-22-prisoner-of-zenda",
+   "hold": {
+    "reason": "Stem asks what the Duke's 'hands and face' show, but the key's 'looking for a way out' comes from where he looks ('to the right and to the left, as a man looks who thinks on flight', l.53-54), not his hands or face. hintCore 'Two of these describe him without saying why' is false: the Sapt option does not describe him.",
+    "faultField": "stem"
+   },
+   "reviewerNote": "Key 'afraid, and looking for a way out' checks against l.53-56 (trembling step, thinks on flight, shaking hand, dry lips); face patched (l.54-55, description not feeling), Sapt smiling (l.56, the sentence that goes on to the Duke at l.58), ill (not stated) wrong; walkScript accurate; hint names no option.",
+   "landedAt": "2026-11-20T17:01:22.974Z",
+   "changes": [
+    {
+     "field": "stem.text",
+     "before": "Look at lines 53 to 59. What do the Duke’s hands and face show?",
+     "after": "Look at lines 53 to 59. What do these lines show about what the Duke is feeling and thinking?"
+    },
+    {
+     "field": "explanation.hintCore",
+     "before": "Two of these describe him without saying why.",
+     "after": "Find each thing the Duke does in lines 53 to 56. Ask what would make a man do it."
+    },
+    {
+     "field": "option A (cmsw2f50k018vtmbv7767gfnk).execution",
+     "before": "Reuses line 54 and describes him rather than saying what it shows.",
+     "after": "Reuses lines 54 and 55, and describes his face rather than what he is feeling or thinking."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,56 @@
+{
+ "door": "english-rewrite/r2/G3",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "ENG-005-BB-12",
+   "passageRef": "stream-a-04-black-beauty",
+   "hold": {
+    "reason": "passageRef missing (row has passageRefMissing: true; it cannot show its passage). Also: stem gives no line references.",
+    "faultField": "passageRef"
+   },
+   "reviewerNote": "Checked: passageRef set. Stem cites lines 41 and 54, which are the two places Beauty names his own limit (could not tell John; could not understand much), and lineRefs match. The key ('their words exactly', with speeches at 19, 28 and 47) is the only defensible answer. The people speak to him at lines 36-37, 40 and 49 (contradicted). Fear is real at line 25 but is never what stops him listening (plausible-not-stated). The show-off motive is invented. The hint is a move. The walk is accurate to lines 19/28/47, 41 and 54. Original hold (no passageRef, no line references) is gone.",
+   "landedAt": "2026-11-20T17:14:17.688Z",
+   "changes": [
+    {
+     "field": "stem.text",
+     "before": "Beauty repeats what the people say, word for word. What does the writer keep reminding us at the same time?",
+     "after": "Beauty repeats what the people say, word for word. Look at lines 41 and 54. What does the writer keep reminding us at the same time?"
+    },
+    {
+     "field": "stem.passageRef",
+     "before": null,
+     "after": "stream-a-04-black-beauty"
+    },
+    {
+     "field": "lineRefs",
+     "before": [],
+     "after": [
+      41,
+      54
+     ]
+    },
+    {
+     "field": "option A (cmtdflmnu0000tmf5t3fddt23).execution",
+     "before": "The limit Beauty keeps giving is understanding: at line 54 he could not understand much of what they said. The child supplies fear as the reason he cannot follow, a likely state for a horse in a storm, but the passage never makes fear what stops him.",
+     "after": "The limits Beauty gives are speaking, at line 41 where he could not tell John, and understanding, at line 54 where he could not understand much of what they said. The child supplies fear as the reason he cannot follow, a likely state for a horse in a storm, but the passage never makes fear what stops him."
+    },
+    {
+     "field": "option B (cmtdflmnv0001tmf527ean6kj).tag",
+     "before": "en-negation-dropped",
+     "after": "en-contradicted-by-the-text"
+    },
+    {
+     "field": "option B (cmtdflmnv0001tmf527ean6kj).execution",
+     "before": "Reads past the fact that they do speak to him, at lines 36, 40 and 49.",
+     "after": "The people speak to Beauty several times: 'Go on, Beauty' at lines 36 and 37, 'Come on, Beauty' at line 40 and 'You Beauty!' at line 49. The option states the contrary of what those lines show."
+    },
+    {
+     "field": "option D (cmtdflmnv0003tmf5wpgl9nrs).value",
+     "before": "He gives us their words exactly, but says he cannot follow them.",
+     "after": "He gives us their words exactly, but says he cannot speak or understand much."
+    }
+   ]
+  }
+ ]
+}

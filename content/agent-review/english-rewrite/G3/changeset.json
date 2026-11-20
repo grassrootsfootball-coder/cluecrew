@@ -1,0 +1,591 @@
+{
+ "door": "english-rewrite/G3",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "ENG-005-BB-13",
+   "passageRef": "stream-a-04-black-beauty",
+   "hold": {
+    "reason": "passageRef missing (row has passageRefMissing: true). Also: every distractor's execution is null, so criterion 3 cannot be checked.",
+    "faultField": "passageRef"
+   },
+   "reviewerNote": "Key 'Move at all' is right for 'I dare not stir' (lines 36-38: dead stop, would not go forward). Mixing is the dominant sense, sound is no sense, waking is a neighbouring sense ruled out by the moving context. Hint does not name the key; walk accurate to lines 36 and 38.",
+   "landedAt": "2026-11-20T17:02:20.030Z",
+   "changes": [
+    {
+     "field": "stem.passageRef",
+     "before": null,
+     "after": "stream-a-04-black-beauty"
+    },
+    {
+     "field": "explanation.quotes",
+     "before": null,
+     "after": [
+      {
+       "rule": "quoted-from-passage",
+       "text": "I dare not stir",
+       "passageRef": "stream-a-04-black-beauty"
+      }
+     ]
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": [
+      36,
+      37,
+      38
+     ]
+    },
+    {
+     "field": "option B (cmtdflmoc0007tmf5whgki462).tag",
+     "before": "en-vocab-secondary-sense",
+     "after": "en-vocab-dominant-sense"
+    },
+    {
+     "field": "option B (cmtdflmoc0007tmf5whgki462).execution",
+     "before": null,
+     "after": "Mixing, as with a spoon in a pan, is the commonest everyday sense of 'stir'. Lines 36 to 38 are about a horse who will not go forward, which that sense does not fit."
+    },
+    {
+     "field": "option C (cmtdflmoc0008tmf5vzd596ys).tag",
+     "before": "en-attribute-transfer",
+     "after": "en-vocab-not-this-word"
+    },
+    {
+     "field": "option C (cmtdflmoc0008tmf5vzd596ys).execution",
+     "before": null,
+     "after": "Making a sound is no sense of 'stir' and belongs to no word it looks like. The child supplies something a frightened horse might hold back, where lines 36 to 38 are about moving forward."
+    },
+    {
+     "field": "option D (cmtdflmoc0009tmf5zpe3o98k).tag",
+     "before": "en-plausible-not-stated",
+     "after": "en-vocab-neighbouring-sense"
+    },
+    {
+     "field": "option D (cmtdflmoc0009tmf5zpe3o98k).execution",
+     "before": null,
+     "after": "To stir can mean to begin to wake, a real sense of the word. Line 35 has Beauty going along at a good pace before he stops, so he is awake and the sense here is moving."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-005-BB-07",
+   "passageRef": "stream-a-04-black-beauty",
+   "hold": {
+    "reason": "Tag en-relation-word-flipped (child hint: 'Some words tell you how two things go together') does not name this mistake: 'Drive slowly over the tree' drops the negative in 'we can't drive over that tree' (line 29), which is en-negation-dropped. Key (back to the crossways, six miles) correct; hint and walk accurate.",
+    "faultField": "options"
+   },
+   "reviewerNote": "Lines 29-31: key (back to the four crossways, a good six miles) correct; drive-over drops 'can't'; waiting and unhitching are unstated plans. Hint and walk accurate. Hold's tag fault gone.",
+   "landedAt": "2026-11-20T17:02:20.030Z",
+   "changes": []
+  },
+  {
+   "itemId": "ENG-005-BB-09",
+   "passageRef": "stream-a-04-black-beauty",
+   "hold": {
+    "reason": "Tag en-relation-word-flipped (child hint: 'Some words tell you how two things go together') does not name this mistake: 'The master knew that Beauty was right' contradicts his whip at lines 37-38; no relation word is flipped. Key (punished the thing that saved them, 37-38 vs 62-63) correct; hint and walk accurate.",
+    "faultField": "options"
+   },
+   "reviewerNote": "Key (punished the thing that saved them) rests on lines 37-38 against 62-63. I tested the 'master knew' option under the reading 'by the hall door he knew', and line 62 'wiser than we were' still says he had not known, so it is not a second answer. Fear option fails on line 41 (he knew); test motive is invented. Hint and walk accurate.",
+   "landedAt": "2026-11-20T17:02:20.030Z",
+   "changes": [
+    {
+     "field": "option B (cmsw2f4un009ttmbv28o2md0c).tag",
+     "before": "en-relation-word-flipped",
+     "after": "en-contradicted-by-the-text"
+    },
+    {
+     "field": "option B (cmsw2f4un009ttmbv28o2md0c).execution",
+     "before": "Reverses lines 37 and 38, where he gives a touch and then a sharp cut to force him on.",
+     "after": "Lines 37 and 38 have the master give a touch of the whip and then a sharp cut to force Beauty on. At line 62 he says Beauty was 'wiser than we were', so the passage states he did not know."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-005-BB-04",
+   "passageRef": "stream-a-04-black-beauty",
+   "hold": {
+    "reason": "Minor: the fish-bait distractor's execution reads 'which this sentence does not fix' (should say the sense does not fit). Key 'a feed and a rest' is defensible for line 14; other distractors, hint and walk are sound.",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Line 14 'I had a good bait' verified; key 'a feed and a rest' is the archaic travelling sense; fish (dominant), wait (form lookalike) and lure/trick (neighbouring sense) each tagged correctly. Hint points at the horse without naming the answer; walk accurate.",
+   "landedAt": "2026-11-20T17:02:20.030Z",
+   "changes": [
+    {
+     "field": "option A (cmsw2f4uj0093tmbvcj8n5w7j).execution",
+     "before": "The commonest other sense of the word, which this sentence does not fix.",
+     "after": "Bait for catching fish is the commonest sense of the word. It does not fit line 14, where a horse that has pulled a cart to town has 'a good bait'."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-01",
+   "passageRef": "stream-a-03-wind-in-willows",
+   "hold": {
+    "reason": "Key (spring-cleaning, line 1) correct. walkScript says 'The other choices happen later in the passage' — false: aching back is line 4 (inside the window), and singing / painting the house blue and white never happen. Also 'Singing along with the happy birds' is tagged en-wrong-scope-retrieval while its execution says nothing states it (plausible-not-stated).",
+    "faultField": "walkScript"
+   },
+   "reviewerNote": "Line 1 key (spring-cleaning his home) is right. The new tunnel is lines 9-13 and an existing tunnel; blue/white is the boat at lines 60-61; resting is not what he was doing; singing is unstated. Hint and walk accurate. Both faults in the hold are gone.",
+   "landedAt": "2026-11-20T17:02:20.030Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Go straight to line 1. It tells you the Mole had been spring-cleaning his little home. That gives you your answer. The other choices happen later in the passage.",
+     "after": "Go straight to line 1. It tells you the Mole had been spring-cleaning his little home. That gives you your answer. The aching back at line 4 is what the work did to him."
+    },
+    {
+     "field": "option D (cmsw2f4sy0004tmbvwa6w95ga).value",
+     "before": "Resting his aching back and weary arms.",
+     "after": "Resting his aching back after the work."
+    },
+    {
+     "field": "option D (cmsw2f4sy0004tmbvwa6w95ga).execution",
+     "before": "Line 4 gives 'an aching back and weary arms' as what the morning left him with. The phrase is true and inside the window; resting is the wrong element of it.",
+     "after": "Line 4 gives 'an aching back' as what the morning's work left him with. That detail is true and inside the window; resting is the wrong element of it, since the question asks what he had been doing."
+    },
+    {
+     "field": "option E (cmsw2f4sy0005tmbv7hb4y20p).tag",
+     "before": "en-wrong-scope-retrieval",
+     "after": "en-plausible-not-stated"
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-005-BB-11",
+   "passageRef": "stream-a-04-black-beauty",
+   "hold": {
+    "reason": "Tag en-relation-word-flipped (child hint: 'Some words tell you how two things go together') does not name this mistake: 'Beauty had been badly trained' is an invented opposite judgement, not a flipped relation word. Key (would probably all have drowned, 55-58) correct; hint and walk accurate.",
+    "faultField": "options"
+   },
+   "reviewerNote": "Lines 54-58: key (going on would probably have drowned them all) matches 'more than likely we should all have been drowned'; badly trained is contradicted by line 62; gatekeeper blame is unstated; the lull is line 51, before they speak (lines 53-54). Hint and walk accurate.",
+   "landedAt": "2026-11-20T17:02:20.030Z",
+   "changes": []
+  },
+  {
+   "itemId": "ENG-005-BB-01",
+   "passageRef": "stream-a-04-black-beauty",
+   "hold": {
+    "reason": "Within-span distractor's execution says it 'takes a true detail from the SAME sentence, line 2' — but 'John went with his master' is the previous sentence, and the option ('John came with him instead of the master') contradicts line 2 rather than reusing a true detail. Key (lines 2-3), hint and walk are correct.",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Checked lines 1-3: key (light, big/high wheels running pleasantly) is line 2-3's reason and the only answer; 'only cart he could pull' unstated, John option contradicts line 2, 'slow' contradicts 'light'. Hint does not coach; walk accurate. Hold fault (execution) gone.",
+   "landedAt": "2026-11-20T17:02:20.030Z",
+   "changes": [
+    {
+     "field": "option A (cmsw2f4ug008otmbv92z2yyao).value",
+     "before": "It was light, and its high wheels ran along pleasantly.",
+     "after": "It was light, and its big wheels ran along pleasantly."
+    },
+    {
+     "field": "option C (cmsw2f4ug008qtmbvabzjqs1d).tag",
+     "before": "en-within-span-wrong-element",
+     "after": "en-contradicted-by-the-text"
+    },
+    {
+     "field": "option C (cmsw2f4ug008qtmbvabzjqs1d).execution",
+     "before": "Takes a true detail from the SAME sentence, line 2, but not the one that answers why.",
+     "after": "Line 2 says 'John went with his master', so the master went too. The child half-reads that line and has John go in place of the master, the contrary of what it states."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-005-BB-03",
+   "passageRef": "stream-a-04-black-beauty",
+   "hold": {
+    "reason": "Tag en-relation-word-flipped (child hint: 'Some words tell you how two things go together') does not name this mistake: 'falling' reverses 'rising' (line 10), an antonym reversal with no relation word involved. Key, other distractors, hint and walk correct.",
+    "faultField": "options"
+   },
+   "reviewerNote": "Lines 10-11: key (rising fast, feared a bad night) exact; broken bridge is line 47 (wrong scope), falling contradicts line 10, road shut is unstated (line 12-13 they drive through). Hint and walk accurate. Hold's tag fault gone.",
+   "landedAt": "2026-11-20T17:02:20.030Z",
+   "changes": []
+  },
+  {
+   "itemId": "ENG-005-BB-02",
+   "passageRef": "stream-a-04-black-beauty",
+   "hold": {
+    "reason": "Key 'strong and solidly built' correct from lines 6-9. But the 'Painted so they could be seen' distractor's execution ('reuses the idea of good rails as a warning') names an idea the passage never has, and the option copies no passage words, so en-inference-literal-lookalike does not name its mistake.",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Line 8 'good substantial rails' verified; key 'Strong and solidly built' fits 'people did not mind it' (lines 8-9); 'very large in amount' (dominant sense) and 'newly put up' (unstated) excluded; painted option now tagged and executed correctly. Hint and walk accurate. Note: the sentence the hint leans on ends on line 9, one line past the cited 6-8; I judged that acceptable.",
+   "landedAt": "2026-11-20T17:02:20.030Z",
+   "changes": []
+  },
+  {
+   "itemId": "ENG-005-BB-10",
+   "passageRef": "stream-a-04-black-beauty",
+   "hold": {
+    "reason": "Tag en-relation-word-flipped (child hint: 'Some words tell you how two things go together') does not name this mistake: 'the storm was still getting worse' ignores the lull at line 51, it does not flip a relation word. Key (slow, steady change) correct; quote on line 52 correct; hint and walk accurate.",
+    "faultField": "options"
+   },
+   "reviewerNote": "Quote 'darker and darker, stiller and stiller' is on line 52; key (change feels slow and steady) is right; worse-storm contradicts line 51; tired Beauty is intent-as-character; wheels option reuses line 52-53 wording. Hint does not name the key; walk accurate.",
+   "landedAt": "2026-11-20T17:02:20.030Z",
+   "changes": []
+  },
+  {
+   "itemId": "ENG-001-WIW-10",
+   "passageRef": "stream-a-03-wind-in-willows",
+   "hold": {
+    "reason": "walkScript reasons 'contemptuous means looking down on someone. So he will not stop for anyone' — a non sequitur; the key (too excited to stop) rests on 'impatient' (line 23) and lines 19-20's joy, not on contempt. hintCore 'He is not thinking about the rabbits at all' is also contestable: he chaffs and jeers at them (24-26).",
+    "faultField": "walkScript"
+   },
+   "reviewerNote": "Lines 22-27: key (too excited to stop for anyone) is supported by 'impatient' (line 23) and lines 19-20. Fear, a permanent cruel character (the extreme 'always'), dinner (unstated) and remorse (line 26 'gone before they could think') are excluded. The hint asks for the word on line 23, not for the key. Walk accurate to lines 19-20, 23 and 26.",
+   "landedAt": "2026-11-20T17:02:20.030Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "He is not thinking about the rabbits at all. What is he thinking about?",
+     "after": "Read line 23 again. Which word shows how he feels about being held up?"
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 23 gives two words: 'impatient and contemptuous'. That word 'contemptuous' means looking down on someone. So he will not stop for anyone. It happens in one rush past the hedge.",
+     "after": "Line 23 gives two words: 'impatient and contemptuous'. Impatient means he does not want to wait. Lines 19 and 20 show why: he is full of the joy of spring. So he will not stop for anyone. He bowls the rabbit over and is gone in one rush."
+    },
+    {
+     "field": "explanation.hintAuthority",
+     "before": "annie-sixtyfifth-return.md, sha256 0cd56a0547dbca75363163584f63656b8da67411cfa49783b4c2ed8217ea7469",
+     "after": null
+    },
+    {
+     "field": "explanation.hintAuthoredBy",
+     "before": "Annie",
+     "after": null
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-021-ED-07",
+   "passageRef": "stream-a-09-eighty-days",
+   "hold": {
+    "reason": "walkScript never reaches the meaning: after line 24 it moves to line 27 (the challenge) and line 31 ('quite possible'), neither of which bears on 'deal'. Also the stem asks the meaning of the phrase 'turn it was to deal' while options define 'deal'; window 'lines 24 to 31' is wider than the evidence.",
+    "faultField": "walkScript"
+   },
+   "reviewerNote": "Key 'give out the cards again' is right: line 23 Fogg throws down the cards, line 24 Stuart gathers them up and deals. Bargain (dominant sense), large amount (neighbouring) and gather up (in span, wrong element) are excluded. Walk accurate. Note: the unchanged hint's 'a bargain is being argued about' is true of the scene (line 29 onward) rather than of lines 23-24; I judged that acceptable.",
+   "landedAt": "2026-11-20T17:02:20.030Z",
+   "changes": [
+    {
+     "field": "stem.text",
+     "before": "Look at lines 24 to 31. What does \"turn it was to deal\" on line 24 mean here?",
+     "after": "Look at lines 23 and 24. What does \"whose turn it was to deal\" on line 24 mean here?"
+    },
+    {
+     "field": "stem.quotes",
+     "before": [
+      "turn it was to deal"
+     ],
+     "after": [
+      "whose turn it was to deal"
+     ]
+    },
+    {
+     "field": "explanation.quotes",
+     "before": [
+      {
+       "rule": "quoted-from-passage",
+       "text": "turn it was to deal",
+       "passageRef": "stream-a-09-eighty-days"
+      }
+     ],
+     "after": [
+      {
+       "rule": "quoted-from-passage",
+       "text": "whose turn it was to deal",
+       "passageRef": "stream-a-09-eighty-days"
+      }
+     ]
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 24 says it was Stuart’s turn to deal. Line 27 has him challenge Fogg to do it. Line 31 has Fogg call the journey quite possible.",
+     "after": "Line 23 has Fogg throw down the cards. Line 24 says it was Stuart’s turn to deal, and he gathers them up. To deal is to give out the cards to each player. So it was Stuart’s turn to hand them out again."
+    },
+    {
+     "field": "lineRefs",
+     "before": [
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+     ],
+     "after": [
+      23,
+      24
+     ]
+    },
+    {
+     "field": "option A (cmsw2f4yv00yvtmbvw4mqmj2l).value",
+     "before": "A bargain made between two people.",
+     "after": "It was his to make a bargain."
+    },
+    {
+     "field": "option A (cmsw2f4yv00yvtmbvw4mqmj2l).execution",
+     "before": "The commonest sense, and a wager is being argued about in the same lines.",
+     "after": "The commonest everyday sense of 'deal' is a bargain, and a wager is argued over a few lines later. But line 24 has Stuart gather up the cards, so the deal here is of cards."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-014-TS-02",
+   "passageRef": "stream-a-05-tom-sawyer",
+   "hold": {
+    "reason": "Key 'same sort of trash, but he paid nothing for it' misses the change the passage states (from not half enough to buy half an hour, line 6, to 'literally rolling in wealth', line 61), and 'paid nothing' is contestable — he traded turns at the fence for each item. Walk also misquotes line 60-61 as 'the middle of the day' (text: 'middle of the afternoon').",
+    "faultField": "key"
+   },
+   "reviewerNote": "Key states the change the passage gives (worthless to rich). The twelve-marbles option lists goods; the 'rich first, then gave up buying' option reverses lines 7 and 61; Billy Fisher is line 58, outside both windows. Hint does not coach. Walk misquote fixed.",
+   "landedAt": "2026-11-20T17:02:20.030Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 5 has bits of toys and marbles, and not enough to buy an hour. Line 61 says he was rolling in wealth by the middle of the day. The goods at line 62 are the same sort, and he paid nothing for them.",
+     "after": "Line 5 lists bits of toys, marbles and trash. Line 6 says that is not half enough to buy half an hour of freedom. Line 60 says the middle of the afternoon has come. Line 61 says he is now rolling in wealth. The goods are the same sort of things, but now there are heaps of them."
+    },
+    {
+     "field": "option B (cmsw2f4wv00n4tmbv796nrzxk).value",
+     "before": "His pockets hold the same sort of trash, but he paid nothing for it.",
+     "after": "The first heap could not buy his freedom, but the second makes him rich."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-014-TS-04",
+   "passageRef": "stream-a-05-tom-sawyer",
+   "hold": {
+    "reason": "Key (the apple, line 19) correct and distractors excluded, but hintCore 'A small no sits in one line. Read it twice.' points to line 15's 'paid no attention' — the steamboat distractor's line — not to line 19, which carries no negative ('but he stuck to his work'). The hint steers the child to the wrong line.",
+    "faultField": "hintCore"
+   },
+   "reviewerNote": "Line 19 key (Ben's apple) verified; steamboat (line 15 'paid no attention'), brush sweep (lines 17-18) and swimming (line 23, outside the window) excluded. New hint is a move, not coaching. Walk accurate.",
+   "landedAt": "2026-11-20T17:02:20.030Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "A small no sits in one line. Read it twice.",
+     "after": "Find what Tom wants in these lines. Then check what he does instead."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-014-TS-05",
+   "passageRef": "stream-a-05-tom-sawyer",
+   "hold": {
+    "reason": "Key (to make Ben doubt it is work) correct, but the 'answer the question Ben asked about work' distractor's execution says Ben's question only comes after (line 27). Ben has already asked about work at line 20 ('you got to work, hey?') and lines 23-24, so the execution is false and the distractor is partly supported by the window's run-up.",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Lines 25-29: key (make Ben doubt it is work) rests on line 29 'maybe it is, and maybe it ain't'. The other options are an invented motive, the line 29 answer repeated (literal lookalike) and a cause from line 38 (later). New hint is a move. Walk accurate. Hold's false execution gone.",
+   "landedAt": "2026-11-20T17:02:20.030Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "Two of these come from what he says. Ask why he asked.",
+     "after": "Read what Tom says straight after his question. Then ask why he asked it."
+    },
+    {
+     "field": "option D (cmsw2f4wy00nltmbvqv4nl9y6).value",
+     "before": "To answer the question Ben asked about work.",
+     "after": "To stop Ben begging for a turn with the brush."
+    },
+    {
+     "field": "option D (cmsw2f4wy00nltmbvqv4nl9y6).execution",
+     "before": "Ben's line 27 comes after Tom's question at line 26, so the cause sits later.",
+     "after": "Ben first asks to whitewash at line 38, well after Tom's question at line 26. The child takes a later moment between the same two boys as the reason for the earlier one."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-014-TS-06",
+   "passageRef": "stream-a-05-tom-sawyer",
+   "hold": {
+    "reason": "Key (make the job sound like a rare treat) correct; distractors excluded. walkScript says 'Rare is the word doing the work', but 'rare' is not in the passage — line 33 says 'every day'. Walk is not accurate to the text.",
+    "faultField": "walkScript"
+   },
+   "reviewerNote": "Key (job sounds like a rare treat) is the force of lines 32-33. The other options are a restatement (literal lookalike), the aunt (unstated in 30-33) and the brush moving (line 31, the wrong element). Hint does not coach. Walk now accurate.",
+   "landedAt": "2026-11-20T17:02:20.030Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 30 has Ben doubt that Tom can like the job. Line 32 has Tom answer with a question about how rare the chance is. Rare is the word doing the work, and it is doing it on Ben.",
+     "after": "Line 30 has Ben doubt that Tom can like the job. Lines 32 and 33 have Tom ask if a boy gets such a chance every day. The answer is no, so the job sounds like a treat that rarely comes. Tom says it to work on Ben."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-014-TS-08",
+   "passageRef": "stream-a-05-tom-sawyer",
+   "hold": {
+    "reason": "Second defensible answer: 'About one boy in a thousand could do it well' is close to what line 43 says (not one in a thousand, maybe two thousand) and it is itself a reason Tom gives for keeping the brush. Its negation-dropped execution overstates the difference. hintCore ('One of these drops a word that means no') also points at that distractor rather than helping to the key.",
+    "faultField": "options"
+   },
+   "reviewerNote": "Lines 40-44: key (Aunt Polly particular about this fence) is unique now that 'one in a thousand' is gone. Back-fence-wouldn't-matter is the case that does not apply; Aunt-Polly-would-mind drops 'she wouldn't'; finish-by-noon is unstated. Hint ('where Tom first says no', line 40) does not name the key. Walk accurate.",
+   "landedAt": "2026-11-20T17:02:20.030Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "One of these drops a word that means no.",
+     "after": "Find the line where Tom first says no. Then read on to see why."
+    },
+    {
+     "field": "option B (cmsw2f4x000nytmbvq0hqmbug).value",
+     "before": "About one boy in a thousand could do it well.",
+     "after": "Aunt Polly would mind if it were the back fence."
+    },
+    {
+     "field": "option B (cmsw2f4x000nytmbvq0hqmbug).execution",
+     "before": "Line 43 says there is not one boy in a thousand who can.",
+     "after": "Line 41 has Tom say that for the back fence 'I wouldn't mind and she wouldn't'. The child drops her 'wouldn't' and has Aunt Polly mind about the back fence, the case Tom says she would not."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-014-TS-12",
+   "passageRef": "stream-a-05-tom-sawyer",
+   "hold": {
+    "reason": "hintCore 'Two of these are about the ending. Read the middle.' is false: only the three-coats option is about the ending. Also the chronology distractor's execution says 'line 53 has Ben give in' — line 53 is Tom giving up the brush; Ben gives in at line 52. Key itself is defensible.",
+    "faultField": "hintCore"
+   },
+   "reviewerNote": "Key (what Ben can see shown, Tom's plan held back) rests on line 8 (unnamed inspiration), line 39 and line 53. The reversal option cites Ben's mind at lines 12 and 37 correctly, the three-coats option reports the ending, and the chronology option is now correctly executed. The hint is a move. Walk line refs 8, 39 and 53 check.",
+   "landedAt": "2026-11-20T17:02:20.030Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "Two of these are about the ending. Read the middle.",
+     "after": "Find where Tom changes his mind. Check what the writer tells us about why."
+    },
+    {
+     "field": "option C (cmsw2f4x400ojtmbvvztl35cw).execution",
+     "before": "Line 51 still has Tom refusing, and line 53 has Ben give in after that, so this turns the order round.",
+     "after": "Tom keeps refusing from line 39 to line 51, and Ben gives in only at line 52 by offering all of the apple. The option turns that order round."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-021-ED-02",
+   "passageRef": "stream-a-09-eighty-days",
+   "hold": {
+    "reason": "Key defensible (remark, then instruction about the game, lines 7-8 and 81-82), but hintCore 'One of these joins his two speeches with an and' fits both the key ('and then tells them') and the literal-lookalike ('and then asks'), so it does not discriminate; walk's 'At line 81 he has staked half his fortune' cites line 74's fact at line 81.",
+    "faultField": "hintCore"
+   },
+   "reviewerNote": "Lines 7-8 ('It was once' / 'Cut, sir') and 81-82 ('quite ready now' / 'be so good as to play') support the key; the other options are a list, a reversed order and an unstated change. The hint discriminates now. Walk accurate. Minor: ka84's execution 'Line 7 ... both times' is loosely worded but not false.",
+   "landedAt": "2026-11-20T17:02:20.030Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "One of these joins his two speeches with an and.",
+     "after": "Ask what kind of thing he says first each time, and what kind comes next."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 7 has him say the world was big once, then say Cut, sir. At line 81 he has staked half his fortune. Line 81 has him say he is ready, then call diamonds trumps.",
+     "after": "Line 7 has him say the world was big once, then say Cut, sir. Line 74 says he has staked half his fortune. Line 81 has him say he is ready, then call diamonds trumps."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-021-ED-06",
+   "passageRef": "stream-a-09-eighty-days",
+   "hold": {
+    "reason": "Key (he has allowed for every delay) correct, but 'He agrees those things were left out' is tagged en-negation-dropped while line 23 ('All included') contains no negative to drop — the option ACCEPTS Stuart's negative ('doesn't take into account', line 21). Tag does not name the mistake.",
+    "faultField": "options"
+   },
+   "reviewerNote": "Lines 20-23: key (already allowed for every delay) is what 'All included' means. The others are the list handed back, a statement line 23 contradicts, and 'Two trumps' (the next words). Hint and walk accurate.",
+   "landedAt": "2026-11-20T17:02:20.030Z",
+   "changes": [
+    {
+     "field": "option B (cmsw2f4yu00yrtmbvlr0kmcpe).tag",
+     "before": "en-negation-dropped",
+     "after": "en-contradicted-by-the-text"
+    },
+    {
+     "field": "option B (cmsw2f4yu00yrtmbvlr0kmcpe).execution",
+     "before": "The words say the opposite of leaving them out.",
+     "after": "Line 23 has Fogg answer 'All included', the contrary of leaving them out. The child takes Stuart's complaint at line 21, that the plan does not take them into account, as what Fogg agrees to."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-021-ED-08",
+   "passageRef": "stream-a-09-eighty-days",
+   "hold": {
+    "reason": "Key (decided to wager after all, line 42) correct; but the wrong-scope distractor's execution states 'In the window, line 39 answers the stem: Come, let's go on with the game' — line 39 is the opposite of the answer; line 42 answers it.",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Lines 32-42: key (decided to wager after all, line 42) is right. The feverish hand describes rather than explains; the annoyance at line 38 is not his reason (line 39 he wants to play on); Fallentin is line 43. Hint points to line 42 as a move. Walk accurate.",
+   "landedAt": "2026-11-20T17:02:20.030Z",
+   "changes": [
+    {
+     "field": "option C (cmsw2f4yw00z2tmbvlgo27msc).execution",
+     "before": "True at line 43, one line past the end of this window. In the window, line 39 answers the stem: 'friend. “Come, let’s go on with the game.”'.",
+     "after": "True at line 43, one line past the end of this window. Stuart has already put the cards down and agreed to wager at lines 41 and 42; Fallentin speaks only after that."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-021-ED-10",
+   "passageRef": "stream-a-09-eighty-days",
+   "hold": {
+    "reason": "Stem (and walk) say Sullivan says he is joking, but line 56 'You are joking.' is unattributed — the passage names Sullivan only at line 47. Not checkable from the text. Key is also only one of several things Fogg adds (57-58 'A true Englishman doesn't joke', the bet against anyone).",
+    "faultField": "stem"
+   },
+   "reviewerNote": "Fogg's reply (57-61) adds the eighty days as hours and minutes; the jumping is line 55, before line 56; the public-proof motive and the earlier journey are unstated. Hint ('what he says last') points to 59-60 without naming it. Walk accurate. Both faults in the hold are gone.",
+   "landedAt": "2026-11-20T17:02:20.030Z",
+   "changes": [
+    {
+     "field": "stem.text",
+     "before": "Look at lines 53 to 61. What does Fogg add when Sullivan says he is joking?",
+     "after": "Look at lines 53 to 61. At line 56, someone tells Fogg he is joking. In his reply, what does Fogg add about the eighty days?"
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 56 has Sullivan say he is joking. Lines 57 and 58 have Fogg deny it. Lines 59 and 60 add the hours and the minutes.",
+     "after": "Line 56 has someone tell Fogg he is joking. Lines 57 and 58 have Fogg say he does not joke about a wager. Then lines 59 and 60 give the eighty days again as hours and minutes."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-021-ED-12",
+   "passageRef": "stream-a-09-eighty-days",
+   "hold": {
+    "reason": "Second defensible answer: 'The wager grows larger, and the card game goes on beside it' is true of the passage (29-46, with cards at 7, 15, 23, 40, 81), and the stem 'What happens every time the argument gets bigger?' does not ask for the relation the key adds. Distinction rests on the technique the stem never names.",
+    "faultField": "options"
+   },
+   "reviewerNote": "Key (he answers about the cards) is borne out at lines 7, 15, 23, 40 and 81. The others are a stopped game (contradicted), a writer's verdict the text never gives, and a 'wins them round' line 62 does not support. Hint and walk accurate. The second defensible answer is gone.",
+   "landedAt": "2026-11-20T17:02:20.030Z",
+   "changes": [
+    {
+     "field": "stem.text",
+     "before": "Think about the whole passage. What happens every time the argument gets bigger?",
+     "after": "Think about the whole passage. As the argument gets bigger, what does Fogg keep doing?"
+    },
+    {
+     "field": "option A (cmsw2f4yz00zktmbvrach3q0l).value",
+     "before": "The wager grows larger, and the card game goes on beside it.",
+     "after": "He stops the card game so they can argue."
+    },
+    {
+     "field": "option A (cmsw2f4yz00zktmbvrach3q0l).tag",
+     "before": "en-inference-literal-lookalike",
+     "after": "en-contradicted-by-the-text"
+    },
+    {
+     "field": "option A (cmsw2f4yz00zktmbvrach3q0l).execution",
+     "before": "Both halves stated in order, with nothing named that joins them.",
+     "after": "Fogg never stops the game: at line 15 he asks Stuart to play, and at lines 79 to 82 the others offer to stop and he tells them to play. The option states the contrary."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-021-ED-11",
+   "passageRef": "stream-a-09-eighty-days",
+   "hold": {
+    "reason": "Key (uneasy feelings about rightness, lines 76-78) correct, but 'Careful scraping away at a surface' is tagged en-figurative-taken-literally while its execution says it is 'built from the scrape the word sounds like' — a form-lookalike mistake; nothing figurative is read literally.",
+    "faultField": "options"
+   },
+   "reviewerNote": "'scruples' is on line 77; key (uneasy feelings about rightness) fits 'scruples about betting under conditions so difficult to their friend'. The chemist's weight is a genuine other sense, the stake's value is what they were NOT agitated by (lines 76-77), and scraping is a form lookalike. Hint and walk accurate.",
+   "landedAt": "2026-11-20T17:02:20.030Z",
+   "changes": []
+  }
+ ]
+}

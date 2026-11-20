@@ -1,0 +1,80 @@
+{
+  "door": "english-rewrite/r2/G1",
+  "reviewer": "rev-agent-01",
+  "changes": [
+    {
+      "ref": "rebuild:ENG-002-pp-14",
+      "verdict": "ATTEST",
+      "reason": "Stem 'Mrs Bennet was one of the people most against Mr Darcy' matches line 44 ('Amongst the most violent against him'). 'What made her dislike of him stronger?' matches lines 44-45 ('dislike ... was sharpened into particular resentment by'). hintCore no longer compares her with anyone and does not quote or paraphrase the key. The i9ct execution's false 'line 44 answers the stem' is replaced by 'Lines 45 and 46 give her own reason', which is true ('his having slighted one of her / daughters'). The h86p fix (lines 60-61) and the quote-declaration removal are as attested in round 1."
+    },
+    {
+      "ref": "rebuild:ENG-002-pp-16",
+      "verdict": "ATTEST",
+      "reason": "hintCore 'Imagine a friend passing the words on to her later instead. What would the reader miss?' asks for the effect without offering the key as half of a choice. The je4d execution is now true. She overhears the whole conversation (lines 48-49), including Bingley's kind words at lines 62-63. Line 50 has him come 'to press his friend to join it'. Line 48 has Darcy 'near enough for her to overhear'. The walkScript removal is as attested in round 1."
+    },
+    {
+      "ref": "rebuild:ENG-002-pp-23",
+      "verdict": "ATTEST",
+      "reason": "Only the two held executions changed from round 1. x664: looks and wealth at lines 26-29 ('fine, tall person, handsome features, noble mien', 'ten thousand a year'). Conduct at 39-42 (danced only twice, declined introductions, walked about the room). Rude words at 53-56 and 65-69. None of it is kindness: true. x8pm: Elizabeth's feelings at 70-71. Gentlemen and ladies at 29-35. Room's verdict at 42-43. Mrs Bennet at 44-46. His words at 53-56, 60-61 and 65-69. All line numbers check, and Bingley (36-38) is no longer counted as the room."
+    },
+    {
+      "ref": "rebuild:ENG-016-HB-01",
+      "verdict": "ATTEST",
+      "reason": "hintCore 'Use only lines 1 to 4. Check each answer against those lines.' drops the reviewer word 'window' and states the range the stem gives. Nothing else changed from the round-1 version I attested."
+    },
+    {
+      "ref": "rebuild:ENG-016-HB-02",
+      "verdict": "ATTEST",
+      "reason": "hintCore 'Read lines 5 to 10, then lines 45 and 46. What is different about him?' names the stem's own ranges in place of 'window' and gives no count. The executions are as attested in round 1."
+    },
+    {
+      "ref": "rebuild:ENG-016-HB-12",
+      "verdict": "ATTEST",
+      "reason": "44v9 execution: 'a melancholy hill at line 4' and 'a forbidding moor at line 8' check, and no line shows the moor calm (the 'peaceful and sunlit countryside' at line 18 is set against the moor). The false 'broad daylight' is gone. hintCore points to Watson's word choices with no count and no paraphrase of the key. The walkScript is as attested in round 1."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "ENG-002-pp-14",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "faultField": null,
+      "reason": "Checked lines 44-46. The slight sharpened her dislike, and the key 'rude about one of her daughters' is the only fit. The other options are defeated as follows. Introduction: declined to 'any other lady' at line 40. Mr Bennet: no such remark is made. Bingley's dance: lines 60-61, and not the cause. Proud-people motive: invented, from lines 42-43. The hint no longer quotes 'one of her daughters', and the walk checks. Original hold (coaching hint) is gone."
+    },
+    {
+      "itemId": "ENG-002-pp-16",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "faultField": null,
+      "reason": "Checked lines 47-50. Darcy stands 'near enough for her to overhear', so the reader meets the words as she does, and the key is the only fit. The other options are defeated as follows. Listening-in taste: invented. Empty room: the dance is in progress at line 49. Bingley's plan: nothing says so, and line 48 is the cause. Speaking loudly to the room: contradicted, since it is an overheard two-person conversation at 48-49. The hint does not coach. Original hold ('The room hears nothing of this') is gone."
+    },
+    {
+      "itemId": "ENG-002-pp-23",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "faultField": null,
+      "reason": "Checked the whole passage for Darcy. The room's verdicts (29-35, 42-46) all come before his own words (53-56, 60-61, 65-69), so the key's order claim is true. Kind-underneath is not stated. 'Never speaks' is contradicted at 53-69. Elizabeth's view appears only at 70-71. The hint is a move, and the walk checks. Original hold (a second defensible answer, and the hint calling Austen 'he') is gone: the question is narrowed to Darcy, and the writer is 'herself'."
+    },
+    {
+      "itemId": "ENG-016-HB-01",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "faultField": null,
+      "reason": "Checked lines 1-4: 'there is your first sight of the moor' (line 1), and he points out of the carriage window (line 2). The fields at line 3 are what the hill rises over. The station is at line 11. No road is mentioned. The hint and walk are accurate. Original hold ('what they pass over') is gone."
+    },
+    {
+      "itemId": "ENG-016-HB-02",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "faultField": null,
+      "reason": "Checked lines 9-10 (a comrade who 'would bravely share it') against 45-46 ('Even Baskerville fell silent', overcoat). The key is the only change that fits. Eyes-fixed comes from lines 5-6 only. The silent-first option reverses the order (45 - 9 = 36). The lamps are at 69-71, outside both ranges. The hint and walk check. Original hold (a false 'two in one window' hint; 'line 9 answers the stem') is gone."
+    },
+    {
+      "itemId": "ENG-016-HB-12",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "faultField": null,
+      "reason": "Checked: melancholy (line 4), forbidding (8) and sinister (20), plus Nature's 'sad gifts' (27-28), give the inert land a mind. Jagged (20) and cold wind (41) are lookalike details. The day/night shape is not carried. Looking away is never said. The hint is a move, and the walk is now true of lines 4, 8, 20 and 27-28. Original hold ('before anyone has said a word'; 'throws at them') is gone."
+    }
+  ]
+}

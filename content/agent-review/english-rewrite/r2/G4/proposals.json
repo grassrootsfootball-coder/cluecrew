@@ -1,0 +1,106 @@
+{
+  "door": "english-rewrite/r2/G4",
+  "proposer": "agent",
+  "rebuilds": [
+    {
+      "itemId": "ENG-004-AGG-09",
+      "why": "Original hold: the 'stays sitting' execution said line 47 answers the stem and quoted a clause about Matthew. Round 1 rewrote it to cite line 33 and lines 47 and 48; the reviewer attested that execution fix (kept unchanged). Also named in the hold: the hint 'three things' matched only the key; that coaching is gone. Round 2, per the review: the round-1 hint 'Find the sentence that follows her decision' misdirected, because her decision and her actions are in ONE sentence (lines 47 to 49) and the next sentence is her speech at line 50. hintCore is now 'Start at line 47 and read to the end of that sentence. Check every detail of each answer against it.' The sentence beginning at line 47 ends at line 49, and holds the stand, the bag and the held-out hand. The hint gives no count of the key's parts. Stem, options, tags, the other executions and the walkScript are unchanged.",
+      "stem": {
+        "text": "What does the girl do once she decides Matthew is coming to her? (lines 47 to 49)",
+        "quotes": [],
+        "passageRef": "stream-a-06-anne-green-gables",
+        "orderAnchor": 9
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4ud0084tmbviaml2rp3",
+          "value": "She stands up, takes her bag and holds out her hand.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4ud0085tmbvmnsgqkux",
+          "value": "She stays sitting and watches him come closer.",
+          "isKey": false,
+          "tag": "en-wrong-scope-retrieval",
+          "execution": "True of line 33, where she sits watching him before she stands. Lines 47 and 48 say she stands up as soon as she decides he is coming to her."
+        },
+        {
+          "optionId": "cmsw2f4ud0086tmbv4bdclu1o",
+          "value": "She stands up and holds out both her hands.",
+          "isKey": false,
+          "tag": "en-minimal-pair-skim",
+          "execution": "Differs by one detail: line 48 puts the bag in one hand and only the other is held out."
+        },
+        {
+          "optionId": "cmsw2f4ud0087tmbvo27kwpqk",
+          "value": "She walks along the platform to meet him.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "She stands and waits where she is; line 48 has him come to her."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Start at line 47 and read to the end of that sentence. Check every detail of each answer against it."
+      }
+    },
+    {
+      "itemId": "ENG-010-JE-12",
+      "why": "Original hold: the stem gave no line window over 89 lines, and 'again and again' overstated a pattern resting on two instances (R591). Round 1 bounded the stem to lines 51 to 56 and 70 to 72 with 'in both places' and set lineRefs; the reviewer attested it (kept unchanged). Round 2, per the review: (1) hintCore 'Find what she says about seeing, just before each description' paraphrased the key ('reports the light first'), with the stem already saying 'before describing something' (R572). Replaced with a move: 'Put the two places side by side. Find the words that match up.' It does not name light, seeing or order. (2) The en-plausible-not-stated execution said the traveller 'acts from line 27', but he rides past at line 26 ('He passed'). Now: 'The traveller rides past at line 26 and falls at line 28, but is not described until lines 51 to 56.' Option values, tags, the other executions and the walkScript are unchanged.",
+      "stem": {
+        "text": "Look at lines 51 to 56 and lines 70 to 72. Jane does the same thing in both places before describing something. What is it?",
+        "quotes": [],
+        "passageRef": "stream-a-11-jane-eyre",
+        "answerShape": "observation-bounded-by-conditions",
+        "orderAnchor": 9999,
+        "techniqueKey": "the-light-is-reported-before-the-description"
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4vz00hwtmbvxmvvrbp4",
+          "value": "She tells us the sun sank down crimson and clear behind the trees.",
+          "isKey": false,
+          "tag": "en-inference-literal-lookalike",
+          "execution": "Reuses line 8, and one sunset is not a thing she does each time."
+        },
+        {
+          "optionId": "cmsw2f4vz00hxtmbvtwwwf8bn",
+          "value": "She describes each person in full first, but gives their actions later.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "The traveller rides past at line 26 and falls at line 28, but is not described until lines 51 to 56."
+        },
+        {
+          "optionId": "cmsw2f4w000hytmbvzreaacp9",
+          "value": "She never describes a person, but only the weather and the sky.",
+          "isKey": false,
+          "tag": "en-extreme-option-pull",
+          "execution": "Lines 52 to 56 describe the traveller closely, from his cloak to his age."
+        },
+        {
+          "optionId": "cmsw2f4w000hztmbvdsoy6cjn",
+          "value": "She reports the light first, but describes little beyond what it shows.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        }
+      ],
+      "lineRefs": [
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        70,
+        71,
+        72
+      ],
+      "explanationPatch": {
+        "hintCore": "Put the two places side by side. Find the words that match up."
+      }
+    }
+  ],
+  "cannotFix": []
+}

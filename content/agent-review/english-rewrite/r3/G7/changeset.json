@@ -1,0 +1,33 @@
+{
+ "door": "english-rewrite/r3/G7",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "ENG-009-SM-11",
+   "passageRef": "stream-b-02",
+   "hold": {
+    "reason": "hintCore 'Two causes, one in each line' names a property only the key has (it is the only option with two causes), so it selects the key without reading - coaching (R572). Key and distractors otherwise check against l.40-42.",
+    "faultField": "hintCore"
+   },
+   "reviewerNote": "Whole row re-read against lines 40-42. The key (light going, line 40; hand moved despite both hands, lines 41-42) is the only defensible answer. Wind: nothing in 40-42, and the hand moved at line 42, so the execution is true. Camera: lines 40-41 give the light and the hands, nothing about the phone, so the execution is true. 'even then' is on line 41 and means despite, so the relation-word execution is true. The hint (lines 40 and 41, even then) is true and names no property only the key has, so the original coaching fault is gone. The walkScript is true (line 40 light, line 41 hands, even then). Note, not a hold: the passage never gives the narrator's sex. The row says 'his', which matches the sibling items on this passage.",
+   "landedAt": "2026-11-20T17:19:23.420Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "Two causes, one in each line. Watch the words even then.",
+     "after": "Read lines 40 and 41 for what made the picture hard to take. Watch the words even then."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Read line 40 for the light, then line 41 for his hands. Two things are going against him at once. The words even then join them. They mean the second happened despite the first.",
+     "after": "Read line 40 for the light, then line 41 for his hands. Two things are going against him at once. He holds the phone in both hands. The words even then mean that this still did not stop the shake."
+    },
+    {
+     "field": "option A (cmsw2f4vp00g4tmbvad2thy9l).execution",
+     "before": "Line 41 gives the movement to his own hand, not to any wind.",
+     "after": "Line 42 gives the movement to his own hand, not to any wind."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,636 @@
+{
+ "door": "english-rewrite/r3/G6",
+ "round": 3,
+ "questionType": "english",
+ "ruling": "R1023",
+ "holds": {
+  "ENG-022-GK-11": {
+   "reason": "walkScript's evidence for 'each time' does not hold: line 22 (four unsaveable) and line 26 (could have had it) do not go against his case; only line 7 against line 38 does. hintCore 'Look for the line where the writer gives a verdict' sends the child looking for a line that does not exist.",
+   "faultField": "walkScript"
+  }
+ },
+ "entries": {
+  "en-a-an-by-spelling": {
+   "description": "Chooses a/an by following letter rather than sound.",
+   "childHint": "Listen to the sound that starts the next word.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-agent-patient-reversal": {
+   "description": "Swaps who did or thought something, or who it was done to.",
+   "childHint": "Ask who is doing it and who it is being done to.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-apostrophe-possession": {
+   "description": "Misses possessive apostrophes; confuses its/it's.",
+   "childHint": "Ask whose it is. An owner needs an apostrophe straight after the owner word, like children's or boys'. Owner words like its, his, ours and theirs never have one. If you see it's, try swapping in 'it is'.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-article-avoids-the-sound-choice": {
+   "description": "On an a or an choice, picks the to avoid the vowel-sound judgement. The fits any noun without a sound decision, so the child reaches for the article that asks nothing of her ear.",
+   "childHint": "This gap wants a or an. Say the next word aloud. Which sound starts it?",
+   "approvalNote": null
+  },
+  "en-article-definiteness": {
+   "description": "Chooses between a, the and no article by habit, missing that the thing has already been named in the text or is one of a kind. Distinct from en-a-an-by-spelling, which is a sound judgement.",
+   "childHint": "Has the text named it already? That changes which little word fits.",
+   "approvalNote": "Second-pass returns: ten new proposals cleared, WIW-14 stem rewritten, mistag check completed across the remaining 69."
+  },
+  "en-attribute-transfer": {
+   "description": "Assigns a detail the text gives to one character or thing to another, or the right attribute at the wrong value.",
+   "childHint": "Check who or what each detail belongs to in the text.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-cause-agent-swap": {
+   "description": "Attributes the right event to the wrong cause or character.",
+   "childHint": "Ask who did this, or what caused it, in the text. Re-read the moment step by step.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-chronology-collapse": {
+   "description": "The child picks a cause that happens LATER in the passage than the effect being asked about. The two events are both real and both about the same people, so the option reads well; only the order rules it out.",
+   "childHint": "Check what happened first, and what the question asks for.",
+   "approvalNote": "Second-pass returns: ten new proposals cleared, WIW-14 stem rewritten, mistag check completed across the remaining 69."
+  },
+  "en-comma-subject-verb-split": {
+   "description": "Accepts a comma cutting subject from verb.",
+   "childHint": "Never let a single comma cut the do-er off from the doing.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-comparative-superlative-form": {
+   "description": "Errors in forming or choosing comparatives and superlatives: double marking (most fastest), the comparative used for a whole group, or the bare adjective after 'the'.",
+   "childHint": "Comparing two, or more than two? Then check the ending and the word before it are not both doing the job.",
+   "approvalNote": "Second-pass returns: ten new proposals cleared, WIW-14 stem rewritten, mistag check completed across the remaining 69. | DEDUPE RECORDED 2026-08-19: queue text survives, capped library text superseded and quoted in textProvenance."
+  },
+  "en-comparison-vehicle-misread": {
+   "description": "Child gives the quality of the thing a comparison compares TO, where the answer is the quality of the thing being described — reading the vehicle of a simile or metaphor as the subject.",
+   "childHint": "Find the two things being compared. The one being described is the one that matters.",
+   "approvalNote": "BOUNDARY vs en-attribute-transfer: both put a quality on the wrong holder. Attribute-transfer moves it BETWEEN CHARACTERS; this moves it from a comparison's VEHICLE to its SUBJECT. Different remedies, different hints."
+  },
+  "en-conjunction-logic": {
+   "description": "Chooses a conjunction with the wrong logical relation.",
+   "childHint": "Is the second idea a reason, a surprise, or just what happened next?",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-contraction-apostrophe": {
+   "description": "Omits or misplaces the apostrophe in a contraction: Youre for You're, dont for don't, wont for won't.",
+   "childHint": "Two words squeezed into one leave letters out. The apostrophe stands where the letters were.",
+   "approvalNote": null
+  },
+  "en-contradicted-by-the-text": {
+   "description": "Chooses an option the passage explicitly denies, rather than one it merely fails to support. Distinguished from a plausible option the passage never states: here the passage states the contrary. Negation-dropped loses a WORD; this loses a CLAIM, and the option may share no wording with the line that refutes it.",
+   "childHint": "The passage says something different. Go back and find it.",
+   "approvalNote": null
+  },
+  "en-coordination-wrong-conjunct": {
+   "description": "The target word sits in a coordination — X and Y, X as well as Y, X as Y, X beside Y — and the child attaches the meaning to the wrong conjunct. She takes the half of the pair she read last, or the half that is easier to picture, and glosses the target with it. The error is syntactic: she has parsed which item the word attaches to incorrectly, and the option she picks is usually TRUE of the other conjunct, which is why it survives a check against the passage.",
+   "childHint": "This word is joined to another one. Work out which of the two the question is asking about before you answer.",
+   "approvalNote": null
+  },
+  "en-determiner-omitted": {
+   "description": "Leaves the determiner out altogether before a singular countable noun, treating a, an and the as optional rather than required. Distinct from en-article-definiteness, which is a choice BETWEEN articles, and from en-a-an-by-spelling, which is a sound judgement.",
+   "childHint": "A single thing needs a word in front of it. Say the line aloud and listen.",
+   "approvalNote": null
+  },
+  "en-double-consonant-boundary": {
+   "description": "Guesses whether a consonant doubles when an ending is added, or doubles the wrong letter: begining for beginning, dissapointed for disappointed, stoped for stopped.",
+   "childHint": "Say the root word first, then add the beginning or ending. Check which letter really doubles.",
+   "approvalNote": "Second-pass returns: ten new proposals cleared, WIW-14 stem rewritten, mistag check completed across the remaining 69."
+  },
+  "en-emotion-label-approximation": {
+   "description": "Chooses an adjacent emotion word rather than the precisely evidenced one.",
+   "childHint": "Find the words in the text that show the feeling. Close is not the same.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-extreme-option-pull": {
+   "description": "Chooses always/never/impossible options when the text is measured.",
+   "childHint": "Does the passage really go that far? Check the strongest word in the option.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-figurative-taken-literally": {
+   "description": "Reads similes and idioms as literal events.",
+   "childHint": "Figures of speech are not facts. Ask what the words are really saying.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-homophone-by-sound": {
+   "description": "Spells the wrong member of a homophone pair; their/there/they're.",
+   "childHint": "Sound will not help with sound-alike words. Work out the meaning, then spell it from that.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-inference-literal-lookalike": {
+   "description": "Picks the option that reuses passage wording.",
+   "childHint": "Words copied from the passage can still miss the question. Ask what those words are telling you.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-minimal-pair-skim": {
+   "description": "Matches an option on gist when it differs from the text, or from the key, by a single word or detail.",
+   "childHint": "An answer can look almost like the text. Find what differs and check it against the text.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-modal-conditional-form": {
+   "description": "Mismatches the modal to its if-clause, or builds an impossible modal form: 'if we painted ... people will know', 'would knew', 'would be knowing'.",
+   "childHint": "An imagined if takes 'would'. A real if takes 'will'. In an imagined if, a past word like 'painted' without 'had' means now or later. 'Would have' is for imagining the past.",
+   "approvalNote": "Second-pass returns: ten new proposals cleared, WIW-14 stem rewritten, mistag check completed across the remaining 69."
+  },
+  "en-motive-invention": {
+   "description": "Attributes a plausible motive the text never supports.",
+   "childHint": "A reason has to be given, not guessed. Ask what the text says about why.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-n-option-avoidance": {
+   "description": "Never selects the no-mistake option in error-spotting.",
+   "childHint": "Check every part in turn. No mistake is a real answer, not a way out.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up. — REACHABILITY (annie, 2026-08-09): unreachable BY DESIGN in spag-punct-speech, which carries no N option at all (R33) — recorded as designed-out rather than unused, so a later coverage sweep does not read it as a gap and re-add the option. Reachable in the other EIGHT spot families, each keying N at a real rate."
+  },
+  "en-narrator-voice-as-fact": {
+   "description": "The child treats a crowd's opinion that the narrator reports in flat, certain sentences as the narrator's own verdict, and so takes it as settled truth rather than as something the text is quietly laughing at. Distinct from en-extreme-option-pull, which is about the pull of absolute wording; this one is about mistaking whose voice is speaking.",
+   "childHint": "Before you take this as true, ask whose opinion it is.",
+   "approvalNote": null
+  },
+  "en-negation-dropped": {
+   "description": "The passage carries an explicit negative — no, not, never, nothing, without, could not, sha'n't — and the option states the affirmative. The child has read the content words of the sentence and dropped the word that reverses them. Requires a negative WORD in a named line. A negation sustained across a whole text with no such word is en-whole-text-absence-asserted.",
+   "childHint": "A negative word can change the whole answer. Read the line again for one.",
+   "approvalNote": null
+  },
+  "en-paired-punctuation": {
+   "description": "Misses unclosed brackets or quotes.",
+   "childHint": "Brackets come in pairs, like shoes. Hunt for the partner.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-parallel-read-as-sequence": {
+   "description": "The child reads two parallel descriptions of one thing as two moments in time. Where a writer gives the same subject twice — two ways of seeing it, two accounts of it, two things it is at once — she converts the pair into a sequence and looks for what changed between them. Nothing changed. What differs is the vantage, not the subject, and the relation between the two descriptions is what the question asks for.",
+   "childHint": "These two descriptions are of the same thing at the same time. Ask what is different about who is looking.",
+   "approvalNote": "RESTATED, NOT RECOVERED (Annie, 2026-08-16). Approved 8 August; no row existed in either store. Her line, which settles a CLASS rather than this instance: if a copy of the 8 August original turns up later and differs, THIS VERSION IS THE APPROVED ONE, because it is the one that exists. A restated approval outranks a recovered one. Proposed on ENG-004-AGG-08 option A — lines 35-40 give what an ordinary observer would see, 41-46 what an extraordinary one might: same girl, same moment, two watchers."
+  },
+  "en-physical-vs-emotional-cue": {
+   "description": "Gives a physical cause, from the body or body-language, when the text signals a feeling.",
+   "childHint": "Look past what the body is doing. Check what the character is feeling right then.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-plausible-not-stated": {
+   "description": "Picks real-world-plausible options the passage never states, especially motives.",
+   "childHint": "Sounding sensible is not enough. Find the line that proves it.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-preposition-collocation": {
+   "description": "Chooses a preposition that is close in meaning but does not go with the verb: returned on the shelf, listened at the teacher.",
+   "childHint": "Say the whole phrase in your head. Which little word does this verb usually take?",
+   "approvalNote": "Second-pass returns: ten new proposals cleared, WIW-14 stem rewritten, mistag check completed across the remaining 69."
+  },
+  "en-question-tag-polarity": {
+   "description": "Repeats instead of flipping polarity in question tags; mismatches the auxiliary.",
+   "childHint": "A tag flips the sentence. A positive sentence takes a negative tag. If there is no helper verb, use do, does or did.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-relation-word-flipped": {
+   "description": "The child reads a word that names a relationship between two things (contrast, unless, however, instead of) as its opposite, usually as plain 'and' or 'the same as'. The result is an option that keeps every fact but reverses how the facts sit together.",
+   "childHint": "Some words tell you how two things go together. Find that word and read it again.",
+   "approvalNote": "Second-pass returns: ten new proposals cleared, WIW-14 stem rewritten, mistag check completed across the remaining 69."
+  },
+  "en-relative-pronoun-choice": {
+   "description": "Picks a relative pronoun by habit rather than by what it stands for: which for people, whose in place of who, whom in a subject slot.",
+   "childHint": "Ask what the joining word stands for — a person, a thing, or something belonging to someone.",
+   "approvalNote": null
+  },
+  "en-repetition-purpose": {
+   "description": "Cannot say why a writer repeats words; defaults to literal or dismissive readings.",
+   "childHint": "Writers repeat on purpose. Ask what the echo does to the reader.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-silent-letter-dropped": {
+   "description": "Drops silent letters when spelling.",
+   "childHint": "A letter can be there without being heard. Spell it out, do not sound it out.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-speech-punctuation-inside": {
+   "description": "Places a quoted question's mark outside the speech marks.",
+   "childHint": "The question belongs to the spoken words. Keep the mark inside.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-spelling-form-lookalike": {
+   "description": "Accepts or writes a word's visual near-twin: quiet for quite, dairy for diary, angel for angle, loose for lose.",
+   "childHint": "Two words can look almost the same. Read the middle letters slowly, not the shape.",
+   "approvalNote": null
+  },
+  "en-subject-verb-agreement-by-proximity": {
+   "description": "Agrees the verb with the nearest noun instead of the true subject, usually across an of-phrase: 'the row of new labels were'.",
+   "childHint": "Ignore the of-part. Match the verb to what is left.",
+   "approvalNote": "Second-pass returns: ten new proposals cleared, WIW-14 stem rewritten, mistag check completed across the remaining 69. | DEDUPE RECORDED 2026-08-19: queue text survives, capped library text superseded and quoted in textProvenance."
+  },
+  "en-technique-device-confusion": {
+   "description": "Child gives \"metaphor\" for a comparison using \"like\" where the answer is simile, naming a device of the right family and the wrong kind.",
+   "childHint": "Does the line say like or as? A comparison using those words is a simile.",
+   "approvalNote": null
+  },
+  "en-technique-effect-mislocated": {
+   "description": "Child gives the effect of an earlier or neighbouring part of the passage where the answer is the effect of the quoted phrase, reading past the words under test.",
+   "childHint": "Find the exact words the question quotes. Answer about those words only.",
+   "approvalNote": null
+  },
+  "en-technique-intent-as-character": {
+   "description": "Child gives \"the boy feels tense\" where the answer is that the writer builds tension, treating the writer's choice as the character's state.",
+   "childHint": "Ask who is doing this. Is it the writer, or the character?",
+   "approvalNote": "annie: the single most consequential comprehension misunderstanding — invest here."
+  },
+  "en-technique-structure-effect-blind": {
+   "description": "Child gives what the words say where the answer is what their shape does (a short sentence makes a moment land suddenly; a count that grows or shrinks builds a pattern), reading content where the question asks about shape.",
+   "childHint": "Notice how the writer has built it, not just what it says. What does that do for the reader?",
+   "approvalNote": "annie: structure had NO tag — one-word paragraphs and lists of three were untaggable. Invest here."
+  },
+  "en-tense-sequence": {
+   "description": "Uses simple past where prior events need 'had'; drifts tense mid-narrative.",
+   "childHint": "Did it happen before the story-moment? Then you usually need 'had' and the verb. If not, keep to the same tense as the story around it.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-terminal-punctuation-blind": {
+   "description": "Accepts a full stop on a question; misses run-ons and missing boundaries.",
+   "childHint": "Read it in your head. Where your voice would stop or ask, the punctuation must match.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-unstressed-medial-vowel": {
+   "description": "Guesses a vowel in an unstressed syllable inside a word: regester for register. Scoped to the ERROR. Distinct from en-unstressed-suffix-vowel, whose vowel surfaces when the stress shifts (definite/definition); a medial vowel has no family word that stresses it, so the remediation is the spelling pattern — minister, sinister, register.",
+   "childHint": "A quiet middle vowel is still a letter. Say the word in parts and choose it.",
+   "approvalNote": null
+  },
+  "en-unstressed-suffix-vowel": {
+   "description": "Guesses between -ant/-ent, -ance/-ence, -ary/-ory/-ery.",
+   "childHint": "Many words ending -ant or -ent have a partner ending -ance or -ence. The partner almost always keeps the same vowel, like assistant and assistance. For -ary, -ery or -ory, a family word may help, like librarian for library.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-vocab-built-from-parts": {
+   "description": "The child takes the word apart into parts she has met in other words and sums them. She has not mistaken which word it is — she has taken it apart, and the parts are real while the sum is not the word. Scoped to the ERROR, not to vocabulary items.",
+   "childHint": "The parts of a word do not always add up. Check the whole word in the sentence.",
+   "approvalNote": null
+  },
+  "en-vocab-dominant-sense": {
+   "description": "The child applies the word's commonest everyday sense in a context that does not support it. The sense chosen is a real sense of the same word; it is simply the one that arrives first, and the sentence around the word is what should have displaced it. Scoped to the ERROR, not to vocabulary items: it occurs wherever a word's sense is load-bearing, including on technique stems.",
+   "childHint": "Words can have more than one meaning. Check that the meaning you used fits what the sentence is saying here.",
+   "approvalNote": "Hint READ from the authored field in her own document, character for character, never retyped. Supersedes en-vocab-secondary-sense. | SCOPING RULED 2026-08-16 (Annie): the tag is scoped to the ERROR, not to vocabulary items — it occurs wherever a word’s sense is load-bearing, including on technique stems. Her own 8 August ruling applied to this entry; the sentence had lived only in the drafting store until 16 August."
+  },
+  "en-vocab-form-lookalike": {
+   "description": "The meaning the child chooses belongs to a DIFFERENT WORD that the target resembles in form, or to a morpheme she has met in other words. She has not chosen among the target's senses at all — she has misidentified the word. Scoped to the ERROR, not to vocabulary items.",
+   "childHint": "This word looks like one you know. Read it letter by letter and check it is the same word.",
+   "approvalNote": null
+  },
+  "en-vocab-neighbouring-sense": {
+   "description": "The child chooses another genuine sense of the same word, neither the commonest one nor the one the passage fixes. The option is defensible in isolation and is ruled out only by the surrounding text, so the child gets no signal that anything is wrong. This holds only where the surrounding text fixes the sense decisively. Where it does not, the option is a defensible second answer and the item is faulty rather than hard. Scoped to the ERROR, not to vocabulary items.",
+   "childHint": "More than one meaning fits this word. Find the words nearby that decide which one it has to be.",
+   "approvalNote": null
+  },
+  "en-vocab-not-this-word": {
+   "description": "Picks a meaning that belongs to no sense of the word and to no word it resembles in form.",
+   "childHint": "This word never means that. Put your answer in its place. Read the sentence again.",
+   "approvalNote": null
+  },
+  "en-whole-text-absence-asserted": {
+   "description": "The passage sustains an ABSENCE across its whole length — it never states a feeling, never names a motive, never gives a verdict — and the option asserts the withheld thing as though it were there. There is no negative word to drop, because the negation is a property of the text rather than of any line: the child has failed to notice something maintained across sixty lines, not misread a word in one. Characteristically the option is defeated by no single line and only by the absence itself, so its disposal must cite the SPAN of the withholding rather than a disposal point.",
+   "childHint": "Choose a line number for the option you like. If you cannot find one anywhere in the passage, that option is not it.",
+   "approvalNote": null
+  },
+  "en-within-span-wrong-element": {
+   "description": "The option states something that is true inside the cited window and answers a different question from the one asked. The child has located the right lines and taken the wrong element out of them. A named sub-route is the WRONG SPEAKER: the material is inside the window but belongs to the other party in an exchange — one child's answer offered where the other child's instruction was asked for. The cure is the same in both cases, so the sub-route shares this hint.",
+   "childHint": "Being in the lines is not enough. Check it answers the question you were asked.",
+   "approvalNote": null
+  },
+  "en-word-class-by-ending": {
+   "description": "Classifies words by suffix rather than sentence job; participial adjective traps.",
+   "childHint": "Ask what job the word does in this sentence. Is it describing, or is it the action? If it describes, is the thing doing the action or having it done to it?",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-wrong-scope-retrieval": {
+   "description": "Answers from a detail in the wrong part of the passage.",
+   "childHint": "Something from another part of the passage does not answer this question. Find the part the question points to.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  }
+ },
+ "passages": {
+  "stream-c-01": {
+   "id": "stream-c-01",
+   "numberedLines": [
+    {
+     "n": 1,
+     "text": "I get there first, every break.",
+     "label": "1"
+    },
+    {
+     "n": 2,
+     "text": "You have to, for the jumpers.",
+     "label": "2"
+    },
+    {
+     "n": 3,
+     "text": "Two at their end, two at ours,",
+     "label": "3"
+    },
+    {
+     "n": 4,
+     "text": "paced out with your feet so it's fair,",
+     "label": "4"
+    },
+    {
+     "n": 5,
+     "text": "so nobody argues later when the ball",
+     "label": "5"
+    },
+    {
+     "n": 6,
+     "text": "goes by the post and Kieran swears it was in.",
+     "label": "6"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 7,
+     "text": "I put myself in goal. Nobody put me there.",
+     "label": "7"
+    },
+    {
+     "n": 8,
+     "text": "Dan does the picking because it's his ball,",
+     "label": "8"
+    },
+    {
+     "n": 9,
+     "text": "and he said, anyone, and I said, me,",
+     "label": "9"
+    },
+    {
+     "n": 10,
+     "text": "and he said, fine, go in.",
+     "label": "10"
+    },
+    {
+     "n": 11,
+     "text": "So that's me choosing.",
+     "label": "11"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 12,
+     "text": "You can see everything from this end.",
+     "label": "12"
+    },
+    {
+     "n": 13,
+     "text": "That's the bit people don't get.",
+     "label": "13"
+    },
+    {
+     "n": 14,
+     "text": "Up there in the middle you spend the whole game",
+     "label": "14"
+    },
+    {
+     "n": 15,
+     "text": "running at the back of somebody's head.",
+     "label": "15"
+    },
+    {
+     "n": 16,
+     "text": "Back here I know who's tired,",
+     "label": "16"
+    },
+    {
+     "n": 17,
+     "text": "who's got a stitch and won't say it,",
+     "label": "17"
+    },
+    {
+     "n": 18,
+     "text": "who does the same trick every single time,",
+     "label": "18"
+    },
+    {
+     "n": 19,
+     "text": "who looks at the ball too long before he goes.",
+     "label": "19"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 20,
+     "text": "Fourteen went past me last Tuesday.",
+     "label": "20"
+    },
+    {
+     "n": 21,
+     "text": "I'm not ashamed of fourteen.",
+     "label": "21"
+    },
+    {
+     "n": 22,
+     "text": "Four of them nobody alive could have saved.",
+     "label": "22"
+    },
+    {
+     "n": 23,
+     "text": "One I let in on purpose, because Reece",
+     "label": "23"
+    },
+    {
+     "n": 24,
+     "text": "has never scored in his life,",
+     "label": "24"
+    },
+    {
+     "n": 25,
+     "text": "and you should have seen him after.",
+     "label": "25"
+    },
+    {
+     "n": 26,
+     "text": "I could have had it. I had my hands",
+     "label": "26"
+    },
+    {
+     "n": 27,
+     "text": "on it.",
+     "label": "27"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 28,
+     "text": "My mum asked if I ever get a go up front.",
+     "label": "28"
+    },
+    {
+     "n": 29,
+     "text": "I told her I don't want one.",
+     "label": "29"
+    },
+    {
+     "n": 30,
+     "text": "She said all right then, love.",
+     "label": "30"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 31,
+     "text": "Their end has proper netting,",
+     "label": "31"
+    },
+    {
+     "n": 32,
+     "text": "knotted stuff the caretaker put up in March.",
+     "label": "32"
+    },
+    {
+     "n": 33,
+     "text": "Ours is two jumpers and the air between them.",
+     "label": "33"
+    },
+    {
+     "n": 34,
+     "text": "We still say net.",
+     "label": "34"
+    },
+    {
+     "n": 35,
+     "text": "It hit the net. It's in the net.",
+     "label": "35"
+    },
+    {
+     "n": 36,
+     "text": "Nobody has ever once said",
+     "label": "36"
+    },
+    {
+     "n": 37,
+     "text": "there isn't one.",
+     "label": "37"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 38,
+     "text": "Dan picked me eighth last week. Out of eight.",
+     "label": "38"
+    },
+    {
+     "n": 39,
+     "text": "He was being funny. I laughed as well.",
+     "label": "39"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 40,
+     "text": "Bell goes. I collect the jumpers,",
+     "label": "40"
+    },
+    {
+     "n": 41,
+     "text": "mine, Reece's, Kieran's, the two blue ones,",
+     "label": "41"
+    },
+    {
+     "n": 42,
+     "text": "and stack them by the fence for tomorrow.",
+     "label": "42"
+    },
+    {
+     "n": 43,
+     "text": "I'm not shifting out of there.",
+     "label": "43"
+    },
+    {
+     "n": 44,
+     "text": "Somebody has to keep the goal.",
+     "label": "44"
+    }
+   ]
+  }
+ },
+ "rows": [
+  {
+   "itemId": "ENG-022-GK-11",
+   "questionType": "en-comp-technique",
+   "difficultyTier": 4,
+   "passageRef": "stream-c-01",
+   "passageRefMissing": false,
+   "hold": {
+    "reason": "walkScript's evidence for 'each time' does not hold: line 22 (four unsaveable) and line 26 (could have had it) do not go against his case; only line 7 against line 38 does. hintCore 'Look for the line where the writer gives a verdict' sends the child looking for a line that does not exist.",
+    "faultField": "walkScript"
+   },
+   "previousRound": {
+    "proposal": null,
+    "cannotFix": {
+     "itemId": "ENG-022-GK-11",
+     "why": "Kept in cannotFix from round 1; the reviewer returned no verdict on it. The fault is in the question, not only the walk. The key says that EACH time he explains himself his own proof goes against his case, and the techniqueKey ('every claim of control undone by the detail offered to support it') makes that the item's point. The hold finds only one site where it holds: line 7 ('Nobody put me there') against line 38 (picked eighth out of eight). Lines 22 and 26 do not go against him. Other candidates need a reading the reviewer would rightly call open: lines 8 to 11 (Dan said 'anyone', 'So that's me choosing'), line 44 ('Somebody has to keep the goal'), lines 28 to 30 (his mum) and line 39 ('I laughed as well'). Round 2 also tested a narrower stem, 'What happens when he explains why he is in goal?', built on lines 7 to 11, 38 and 44. It fails twice: two of its three sites are interpretive, and under it the distractor 'He minds it early on, but he has made his peace' becomes defensible, since line 43 ('I'm not shifting out of there') and line 44 read as acceptance of goal, which its execution ('still refusing to move') cites against it. Repairing that means a new stem, new key and new distractors on a whole-text purpose item: new authoring, not a repair. Fixing only the hint (it sends the child to a verdict line that does not exist) and the walk would leave an unsupported key, so the row stays held."
+    },
+    "reviewOfChange": null,
+    "reviewOfRow": null
+   },
+   "stem": {
+    "text": "Think about the whole poem. What happens each time he explains himself?",
+    "quotes": [],
+    "passageRef": "stream-c-01",
+    "answerShape": "two-halved-contrast-of-the-claim-against-its-own-evidence",
+    "orderAnchor": 9999,
+    "techniqueKey": "every-claim-of-control-undone-by-the-detail-offered-to-support-it"
+   },
+   "lineRefs": [],
+   "explanation": {
+    "hintCore": "Look for the line where the writer gives a verdict.",
+    "walkScript": "Line 7 says nobody put him there, and line 38 says he was picked eighth. Line 22 says four could not be saved. Line 26 says he could have had that one."
+   },
+   "key": "He gives the proof himself, but it goes against his own case.",
+   "options": [
+    {
+     "optionId": "cmsw2f4z90113tmbvpzgwn37x",
+     "value": "He says he chose it, and he says that he was picked eighth.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "tagAttested": true,
+     "execution": "Two of his claims stated in order, with nothing that joins them."
+    },
+    {
+     "optionId": "cmsw2f4z90114tmbv6hwvd5lk",
+     "value": "He is called out by the writer, but he goes on pretending anyway.",
+     "isKey": false,
+     "tag": "en-whole-text-absence-asserted",
+     "tagAttested": true,
+     "execution": "No line anywhere gives a verdict on him."
+    },
+    {
+     "optionId": "cmsw2f4z90115tmbvlu6f49wv",
+     "value": "He gives the proof himself, but it goes against his own case.",
+     "isKey": true,
+     "tag": null,
+     "tagAttested": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4z90116tmbvp5kxbrrp",
+     "value": "He minds it early on, but he has made his peace.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "tagAttested": true,
+     "execution": "Line 43 has him still refusing to move."
+    }
+   ]
+  }
+ ]
+}

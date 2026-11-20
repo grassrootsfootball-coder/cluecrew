@@ -1,0 +1,111 @@
+{
+ "door": "english-rewrite/G7",
+ "mode": "APPLIED",
+ "landed": [
+  "ENG-020-HD-07",
+  "ENG-020-HD-09",
+  "ENG-009-SM-03",
+  "ENG-009-SM-04",
+  "ENG-009-SM-07",
+  "ENG-009-SM-08",
+  "ENG-009-SM-09",
+  "ENG-013-TI-03",
+  "ENG-013-TI-06",
+  "ENG-013-TI-05",
+  "ENG-013-TI-08",
+  "ENG-013-TI-10",
+  "ENG-013-TI-12",
+  "ENG-020-HD-01",
+  "ENG-020-HD-08",
+  "ENG-020-HD-02",
+  "ENG-020-HD-11",
+  "ENG-020-HD-12",
+  "ENG-027-RR-03",
+  "ENG-027-RR-06",
+  "ENG-027-RR-07",
+  "ENG-027-RR-09",
+  "ENG-027-RR-10"
+ ],
+ "held": [
+  {
+   "itemId": "ENG-020-HD-10",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "Execution on 'she saw her own roll' ends 'In the window, line 40 answers the stem: 'all sorts of strange signs, pointing to his own'' - false: the message is at line 41 ('I have got it all safe for you'); line 40 only describes the signs. Key otherwise correct.",
+    "faultField": "execution"
+   },
+   "holdFixed": true,
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-020-HD-10",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "reason": "The hold's execution fault is fixed, but the unchanged walkScript is untrue to the passage. It says 'Line 41 has him say I have got it all safe for you'. In l.40-41 Sebastian says nothing: he makes signs and 'little nods as much as to say' those words. HD-12's key, on the same passage, turns on exactly this point ('what returns comes in silence'). Key and distractors otherwise check against l.39-41.",
+    "faultField": "walkScript"
+   }
+  },
+  {
+   "itemId": "ENG-009-SM-11",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "hintCore 'Two causes, one in each line' names a property only the key has (it is the only option with two causes), so it selects the key without reading - coaching (R572). Key and distractors otherwise check against l.40-42.",
+    "faultField": "hintCore"
+   },
+   "holdFixed": true,
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-009-SM-11",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "reason": "The hold's hint fault is fixed, but the unchanged walkScript misreads 'even then'. It says the light (l.40) and his hands (l.41) are 'two things going against him', then 'The words even then join them. They mean the second happened despite the first.' In l.41-42, 'even then' joins holding the phone in both hands to the picture still coming out shaken. It does not join the light and the hands, and nothing in l.40-42 says the hands happened despite the light. Key and distractors check against l.40-42.",
+    "faultField": "walkScript"
+   }
+  },
+  {
+   "itemId": "ENG-009-SM-12",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "hintCore 'Sort the sentences into what still stands and what happened' restates the key ('present kept for what is still true, the walk stays past') - coaching (R572). The key itself checks (l.1, 6, 8, 13, 18, 28-29, 37, 42-43 present and still true; the walk past). Distractor 2 'told it to them' has no referent for 'them'.",
+    "faultField": "hintCore"
+   },
+   "holdFixed": true,
+   "unattested": [
+    {
+     "ref": "rebuild:ENG-009-SM-12",
+     "verdict": "REFUSE",
+     "reason": "The hold named only the missing referent for 'them' in distractor 2. The proposal changes that option from 'He tells the whole of it the way his Nan has always told it to them.' to 'He tells all of it the way Nan has always told it to him.' It also rewords 'the whole of it' to 'all of it' and drops 'his' from 'his Nan'. Neither change bears on the fault, and the why does not disclose them: it claims the change is 'now told it to him' (value only). This is needless restyling of correct wording. Re-propose with only them->him changed. The hintCore change is sound."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-009-SM-12",
+    "verdict": "SIGN",
+    "holdFixed": true,
+    "reason": "Row as proposed reads correctly: present-tense sentences (l.1, 6-9, 13, 16, 18, 28-29, 36-37, 42-43) are all still true and the walk is past, so the key holds; summary, Nan's-way (story changes at l.10, reread at l.38) and Nan-present/his-past (l.9 and l.18 are his, in the present) all wrong; hint is a move. Does not land while the change is REFUSED.",
+    "faultField": null
+   }
+  },
+  {
+   "itemId": "ENG-020-HD-03",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "Distractor 'Somebody took it away, and later it was in her bed' is a true answer to 'What has happened to the hat between the two?' - Tinette is ordered to take it (l.13-15) and it is found under the counterpane (l.42); the execution's 'nothing named that links them' does not make it false. Also, l.39-41 strongly imply Sebastian, so the key's 'never says who' needs care.",
+    "faultField": "options"
+   },
+   "holdFixed": true,
+   "unattested": [
+    {
+     "ref": "rebuild:ENG-020-HD-03",
+     "verdict": "REFUSE",
+     "reason": "Most of the change is sound and needed. 'Nobody touched it, and it stayed where it was' is contradicted by the table at l.15 and the counterpane at l.42-43. 'these lines never say who' is true of l.13-15 and 42-43, and l.39-41 imply Sebastian. The hint and walkScript had to change because they referred to the removed distractor and the over-strong 'nothing between them says who'. But the key also changes from 'Somebody has put it back' to 'Somebody has given it back to her'. The hold did not name that verb, it was not wrong, and the why does not disclose the change: it presents the key edit as only 'these lines never say who' in place of 'the passage'. Needless restyling of correct key wording. Re-propose keeping 'Somebody has put it back'."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-020-HD-03",
+    "verdict": "SIGN",
+    "holdFixed": true,
+    "reason": "Row as proposed reads correctly: the hat is ordered away (l.13-15) and found under the counterpane (l.42-43) with no hand named in those lines; stayed-where-it-was contradicted; Tinette-brought-it not stated; changed-her-mind not stated; hint is a move; walkScript true of the two cited parts. Does not land while the change is REFUSED.",
+    "faultField": null
+   }
+  }
+ ]
+}

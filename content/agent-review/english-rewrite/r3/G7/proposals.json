@@ -1,0 +1,51 @@
+{
+  "door": "english-rewrite/r3/G7",
+  "proposer": "agent",
+  "rebuilds": [
+    {
+      "itemId": "ENG-009-SM-11",
+      "why": "Original hold: hintCore 'Two causes, one in each line' named a property only the key has. Round 1's replacement hint and round 2's walkScript fix were attested and are kept unchanged. Round 3 review (execution): the en-cause-agent-swap execution on 'The wind shook the phone as he held it' said 'Line 41 gives the movement to his own hand'. The movement is on line 42 ('where my hand had moved'); line 41 has only holding it in both hands. Changed 'Line 41' to 'Line 42' in that execution; no other word changed. Line numbers rechecked: camera execution (light at line 40, hands at line 41) true; relation-word execution ('even then' on line 41) true; walkScript (light line 40, hands line 41) true; hint (lines 40 and 41, even then) true. Stem, options, tags and the other executions are unchanged.",
+      "stem": {
+        "text": "Read lines 40 to 42. Why did the picture come out grey and shaken?",
+        "quotes": [],
+        "passageRef": "stream-b-02",
+        "orderAnchor": 40
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4vp00g4tmbvad2thy9l",
+          "value": "The wind shook the phone as he held it.",
+          "isKey": false,
+          "tag": "en-cause-agent-swap",
+          "execution": "Line 42 gives the movement to his own hand, not to any wind."
+        },
+        {
+          "optionId": "cmsw2f4vp00g5tmbv5y6x5n3h",
+          "value": "There was something the matter with the camera on his phone.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "Lines 40 and 41 give the light and his hands, and nothing about the phone itself."
+        },
+        {
+          "optionId": "cmsw2f4vp00g6tmbvzg3lyxnb",
+          "value": "The light had gone and his hands would not hold still.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4vp00g7tmbvoi2716j5",
+          "value": "Holding it in both hands is what shook it.",
+          "isKey": false,
+          "tag": "en-relation-word-flipped",
+          "execution": "Line 41 says even then, which means despite that, and this reads it as because."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Read lines 40 and 41 for what made the picture hard to take. Watch the words even then.",
+        "walkScript": "Read line 40 for the light, then line 41 for his hands. Two things are going against him at once. He holds the phone in both hands. The words even then mean that this still did not stop the shake."
+      }
+    }
+  ],
+  "cannotFix": []
+}

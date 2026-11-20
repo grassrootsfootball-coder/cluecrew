@@ -1,0 +1,70 @@
+{
+ "door": "english-rewrite/r2/G4",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "ENG-004-AGG-09",
+   "passageRef": "stream-a-06-anne-green-gables",
+   "hold": {
+    "reason": "The key is correct (lines 47-49). But the 'stays sitting' distractor's execution says 'line 47 answers the stem' and quotes 'Matthew, however, was spared the ordeal of speaking first'. That clause does not answer what she does; standing, the bag and the held-out hand are in lines 48-49. Note also: the hint ('three things') matches only the key.",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Checked lines 47-49. Key: she stands, grasps the carpet-bag and holds out the other hand. Stays-sitting: she watches him at line 33, before the stand at 47-48. Both-hands: one hand holds the bag (48-49). Walks-to-him: she stays put while he comes (32, 47-48). The hint now points to the right sentence. The walk is accurate. Original held execution ('line 47 answers the stem') is gone, and the 'three things' coaching is gone.",
+   "landedAt": "2026-11-20T17:14:18.408Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "One sentence holds three things she does.",
+     "after": "Start at line 47 and read to the end of that sentence. Check every detail of each answer against it."
+    },
+    {
+     "field": "option B (cmsw2f4ud0085tmbvmnsgqkux).execution",
+     "before": "True of line 33, before she stands; the question asks what she does next. In the window, line 47 answers the stem: 'Matthew, however, was spared the ordeal of speaking first'.",
+     "after": "True of line 33, where she sits watching him before she stands. Lines 47 and 48 say she stands up as soon as she decides he is coming to her."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-010-JE-12",
+   "passageRef": "stream-a-11-jane-eyre",
+   "hold": {
+    "reason": "The stem gives no line window over an 89-line passage. It also claims Jane reports the light 'again and again before describing something', but the pattern rests on two instances (lines 51 and 71). The descriptions of Thornfield (line 6) and her own dress (line 83) have no light report first, so the stem overstates its population (R591).",
+    "faultField": "stem"
+   },
+   "reviewerNote": "Checked: line 51 gives the light (daylight lingering, the moon) before the description at 52-56. Line 71 gives the moon's gleam before Thornfield 'distinct and pale'. Line 53 keeps to 'general points'. The key is the only fit. The sunset (line 8) is outside both places. The traveller acts at 26-28 before he is described at 51-56. Lines 52-56 describe a person, which defeats 'never'. The hint is a move, and the walk checks. Original hold (no line window; 'again and again' overstating two instances) is gone.",
+   "landedAt": "2026-11-20T17:14:18.408Z",
+   "changes": [
+    {
+     "field": "stem.text",
+     "before": "Jane does the same thing again and again before describing something. What?",
+     "after": "Look at lines 51 to 56 and lines 70 to 72. Jane does the same thing in both places before describing something. What is it?"
+    },
+    {
+     "field": "explanation.hintCore",
+     "before": "Find what she says about seeing, just before each description.",
+     "after": "Put the two places side by side. Find the words that match up."
+    },
+    {
+     "field": "lineRefs",
+     "before": [],
+     "after": [
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      70,
+      71,
+      72
+     ]
+    },
+    {
+     "field": "option B (cmsw2f4vz00hxtmbvtwwwf8bn).execution",
+     "before": "The traveller acts from line 27, and is not described until lines 51 to 56.",
+     "after": "The traveller rides past at line 26 and falls at line 28, but is not described until lines 51 to 56."
+    }
+   ]
+  }
+ ]
+}

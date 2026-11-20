@@ -1,0 +1,663 @@
+{
+ "door": "english-rewrite/G6",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "ENG-008-RC-02",
+   "passageRef": "stream-a-02-railway-children",
+   "hold": {
+    "reason": "hintCore coaches: 'what she wants to be true before Mother comes down' restates the key's distinguishing clause ('before Mother gets up', line 6), so matching hint to options selects the key without reading.",
+    "faultField": "hintCore"
+   },
+   "reviewerNote": "The key is line 6 ('have everything beautiful before Mother gets up'). The servants option is denied by lines 4 and 5, the Peter option is a step at lines 6 and 7, and the Mother-asked option is unsupported. The new hint does not single out the key.",
+   "landedAt": "2026-11-20T17:04:19.810Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "Ask what she wants to be true before Mother comes down.",
+     "after": "Read her whole speech. Which part says what the plan is for?"
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-008-RC-03",
+   "passageRef": "stream-a-02-railway-children",
+   "hold": {
+    "reason": "Key correct (line 10), but the basin distractor's execution asserts 'line 9 answers the stem' with a truncated fragment ('...washed as much as') that does not contain the answer; the key is settled by line 10.",
+    "faultField": "execution"
+   },
+   "reviewerNote": "The key is line 10 ('One pumped and the other washed'). Line 8 rules out the bedroom, line 11 puts the basin out of the window, and line 10's 'but' rules out 'spoiled'. Executions and walk checked.",
+   "landedAt": "2026-11-20T17:04:19.810Z",
+   "changes": [
+    {
+     "field": "option B (cmsw2f4v800dftmbv4z0pz8m0).execution",
+     "before": "Basin washing is real in the passage, but at line 11, as the thing compared. In the window, line 9 answers the stem: 'when they got down they washed as much as'.",
+     "after": "Basin washing is in the passage, but at line 11, where Roberta compares it with the pump. Lines 9 and 10 have them wash under the pump in the yard."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-008-RC-04",
+   "passageRef": "stream-a-02-railway-children",
+   "hold": {
+    "reason": "hintCore coaches: 'turns a refusal into a delay' states the inference the key expresses ('keeps the garden for later'), leaving only one matching option.",
+    "faultField": "hintCore"
+   },
+   "reviewerNote": "The key rests on line 18's 'yet' and line 19's 'begin to work'. The other three options are unsupported or denied by line 18. The hint does not coach.",
+   "landedAt": "2026-11-20T17:04:19.810Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "One small word turns a refusal into a delay. Find it.",
+     "after": "Read lines 18 and 19 word by word. Which answer fits every word she says?"
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-008-RC-06",
+   "passageRef": "stream-a-02-railway-children",
+   "hold": {
+    "reason": "walkScript says line 39's eight o'clock is 'three hours later' than line 41's half-past five; it is two and a half. The 'fire far too big' execution reasons 'fire had been out for some time, so it was not too fierce', which does not follow (line 41 calls it 'an excellent fire').",
+    "faultField": "walkScript"
+   },
+   "reviewerNote": "The key is supported by lines 37 to 43: they set the kettle on at half-past five and were asleep outside at eight, when the water had boiled away. The Mother option fails at lines 38 and 42, the chronology option at lines 39 and 41, and the too-big option has no line. The walk's two and a half hours is correct.",
+   "landedAt": "2026-11-20T17:04:19.810Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Look at line 41 first, and note the time given there. Line 39 gives a second time, three hours later. In between, the children are asleep on the hillside. Nobody is in the kitchen at all.",
+     "after": "Look at line 41 first, and note the time given there. Line 39 gives a second time, two and a half hours later. In between, the children are asleep on the hillside. Nobody is in the kitchen at all."
+    },
+    {
+     "field": "option C (cmsw2f4vb00dvtmbv3ii0vcak).execution",
+     "before": "Line 42 says the fire had been out for some time, so it was not too fierce.",
+     "after": "Line 41 calls it an excellent fire, and no line says it was too big. The kettle burns because it was left on the fire from half-past five with nobody indoors."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-019-BV-02",
+   "passageRef": "stream-a-20-bevis",
+   "hold": {
+    "reason": "passageRef missing (passageRefMissing: true). Also: distractor 'Mark ran for the rod while the fish waited' is tagged en-chronology-collapse, which does not name its mistake.",
+    "faultField": "passageRef"
+   },
+   "reviewerNote": "passageRef is now set. The quote 'if you had run quick!' is verbatim on line 8. The key is supported by lines 6 to 9 (the tench leaves 'just then'; Mark will not fetch). The promise option is denied by line 9, the ran-for-the-rod option by lines 3, 5 and 6, and the cannot-run-fast motive has no line.",
+   "landedAt": "2026-11-20T17:04:19.810Z",
+   "changes": [
+    {
+     "field": "stem.passageRef",
+     "before": null,
+     "after": "stream-a-20-bevis"
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-008-RC-07",
+   "passageRef": "stream-a-02-railway-children",
+   "hold": {
+    "reason": "Key 'worried and in a hurry' fits line 48. The wrong-scope distractor's execution claims 'line 48 answers the stem' quoting 'The forgotten room opened out of the kitchen. In' - a fragment that says nothing about the word's meaning; untrue as written.",
+    "faultField": "execution"
+   },
+   "reviewerNote": "The key fits 'In the agitation and half darkness the night before' (lines 48 and 49). The darkness option is the other conjunct, the liquid sense is excluded, and the excitement option is line 46, the next morning. The hint names the other cause, not the meaning.",
+   "landedAt": "2026-11-20T17:04:19.810Z",
+   "changes": [
+    {
+     "field": "option D (cmsw2f4vb00e1tmbvkog79w1v).execution",
+     "before": "That happens at line 46, the morning after, and this word is about the night before. In the window, line 48 answers the stem: 'The forgotten room opened out of the kitchen. In'.",
+     "after": "Mother's excitement over the forgotten room comes at line 46, the next morning. Lines 48 and 49 tie this word to the night before, when the door was mistaken for a cupboard's."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-008-RC-11",
+   "passageRef": "stream-a-02-railway-children",
+   "hold": {
+    "reason": "Distractor 'The garden had hidden itself away, and the high wall kept it out of sight' pairs the figurative phrase with a literal clause the text supports ('a high wall all round', line 72); a child can defend it, and its execution addresses only the figurative half.",
+    "faultField": "options"
+   },
+   "reviewerNote": "The key is supported by line 27 (they went round the house) and lines 71 and 72 (the garden is right behind the stables, across the yard). The field option overstates line 29, the imagined-wall option is denied by line 30, and the moving-garden option is figurative read literally. No second answer.",
+   "landedAt": "2026-11-20T17:04:19.810Z",
+   "changes": [
+    {
+     "field": "option D (cmsw2f4vf00ektmbviod4pnb6).value",
+     "before": "The garden had hidden itself away, and the high wall kept it out of sight.",
+     "after": "The garden had moved in the night and hidden itself on purpose."
+    },
+    {
+     "field": "option D (cmsw2f4vf00ektmbviod4pnb6).execution",
+     "before": "Line 72's hidden itself is a way of speaking, not something the garden did.",
+     "after": "Takes line 72's 'the garden had hidden itself' as something the garden did. It is a way of speaking: the garden never moved, and lines 72 and 73 find it where it always was, behind the stables."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-019-BV-05",
+   "passageRef": "stream-a-20-bevis",
+   "hold": {
+    "reason": "Key correct. The attribute-transfer distractor surfaces tag hint 'Two people are being described', false here (Bevis and the sand; library en-attribute-transfer, R586), and its execution misreads line 19, which gives Bevis 'very upright and very angry', not slow and stubborn.",
+    "faultField": "execution"
+   },
+   "reviewerNote": "The key fits line 20's 'yielding sand', which takes Bevis's footprints. The giving-in sense is ruled out by its object, the prints option is what the sand shows, and the upright option is line 19's detail for Bevis. Executions, hint and walk checked.",
+   "landedAt": "2026-11-20T17:04:19.810Z",
+   "changes": [
+    {
+     "field": "option D (cmsw2f4y900vctmbvktd7vyvp).value",
+     "before": "Moving slowly and stubbornly along.",
+     "after": "Standing up very straight and stiff."
+    },
+    {
+     "field": "option D (cmsw2f4y900vctmbvktd7vyvp).execution",
+     "before": "Line 19's manner belongs to Bevis, not to the sand.",
+     "after": "Line 19 gives this manner to Bevis, who marched on very upright. The child moves Bevis's detail onto the sand he walks over."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-019-BV-04",
+   "passageRef": "stream-a-20-bevis",
+   "hold": {
+    "reason": "Key's 'while he is losing' at line 14 is not established: Bevis is asserting, and his defeat comes at lines 18-19. Executions for 'order first, reason once won' ('Line 14 comes seventy lines before line 87') and 'learns it while he climbs' (half-rations at line 90) do not show those options false.",
+    "faultField": "key"
+   },
+   "reviewerNote": "The new key is supported: the made-up elephant example is at lines 10 to 17, and Mark's real running ahead is at lines 30 to 32 and 41, blamed at line 85. The reversed-order option, the Mark-as-captain option (denied by line 14's 'Impossible' and line 93's 'lieutenant') and the joined-by-and option all fail. The hint targets the 'and' option without coaching. The walk is accurate.",
+   "landedAt": "2026-11-20T17:04:19.810Z",
+   "changes": [
+    {
+     "field": "stem.text",
+     "before": "Look at lines 14 to 17 and lines 87 to 88. What is true of the rule about captains both times Bevis states it?",
+     "after": "Look at lines 10 to 17 and lines 85 to 88. Bevis uses the rule about captains twice. What is different about what he uses it on?"
+    },
+    {
+     "field": "stem.orderAnchor",
+     "before": 14,
+     "after": 10
+    },
+    {
+     "field": "stem.techniqueKey",
+     "before": "same-rule-asserted-from-defeat-and-from-victory",
+     "after": "same-rule-applied-first-to-a-made-up-example-then-to-a-real-act"
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "At line 14 Bevis is losing the argument about the biscuit. He says 'the captain who always does everything'. At line 87 he has won, and says 'People must do as the captain tells them'. The same claim, from opposite ends.",
+     "after": "Lines 10 to 13 are a made-up example about shooting an elephant. At lines 14 and 15 Bevis answers it with 'the captain who always does everything'. At line 85 he blames Mark for running ahead, which Mark really did. At lines 87 and 88 he says 'People must do as the captain tells them'."
+    },
+    {
+     "field": "lineRefs",
+     "before": [
+      14,
+      15,
+      16,
+      17,
+      87,
+      88
+     ],
+     "after": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      85,
+      86,
+      87,
+      88
+     ]
+    },
+    {
+     "field": "option A (cmsw2f4y800v4tmbvemiulg0y).execution",
+     "before": "Both lines handed back joined by an and, with no relation named.",
+     "after": "Both lines handed back joined by an and. It says what he states each time, not what he uses it on."
+    },
+    {
+     "field": "option B (cmsw2f4y800v5tmbvnhtb00h5).value",
+     "before": "He gives the order first, and gives the reason once he has won.",
+     "after": "First he uses it on Mark running ahead, but then on a made-up example."
+    },
+    {
+     "field": "option B (cmsw2f4y800v5tmbvnhtb00h5).execution",
+     "before": "Line 14 comes seventy lines before line 87.",
+     "after": "Both events are real, in the wrong order. The made-up elephant example is at lines 10 to 17; Mark runs ahead later, from line 30, and the rule about that comes at line 87."
+    },
+    {
+     "field": "option C (cmsw2f4y800v6tmbvb7u77nw0).value",
+     "before": "He learns it while he climbs, and again once he is across.",
+     "after": "First he lets Mark be the captain, but then he takes it back himself."
+    },
+    {
+     "field": "option C (cmsw2f4y800v6tmbvb7u77nw0).tag",
+     "before": "en-plausible-not-stated",
+     "after": "en-contradicted-by-the-text"
+    },
+    {
+     "field": "option C (cmsw2f4y800v6tmbvb7u77nw0).execution",
+     "before": "A tidy shape; at line 90 he is still threatening half-rations.",
+     "after": "At line 14 he calls Mark shooting the elephant impossible, and line 15 gives the captain everything. Mark is never the captain; the text states the contrary of the first half."
+    },
+    {
+     "field": "option D (cmsw2f4y800v7tmbv882vxche).value",
+     "before": "He claims it while he is losing, and again once he has won.",
+     "after": "First he uses it on a made-up example, but then on something Mark really did."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-022-GK-06",
+   "passageRef": "stream-c-01",
+   "hold": {
+    "reason": "Second defensible answer: 'That he had his hands on the ball' is a claim he makes about that goal (lines 26-27); its execution concedes it repeats him.",
+    "faultField": "options"
+   },
+   "reviewerNote": "The key is lines 23 and 26 ('One I let in on purpose', 'I could have had it'). The 'hands on the ball' second answer is gone. The 'nobody alive' option is line 22's claim about four other goals and is denied for this one by line 26. Reece never scoring is the reason, not the claim. The walk citations are correct.",
+   "landedAt": "2026-11-20T17:04:19.810Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 23 says one he let in on purpose. Line 26 says he could have had it. Line 26 says he had his hands on it.",
+     "after": "Line 23 says one he let in on purpose. Line 26 says he could have had it. Lines 26 and 27 say he had his hands on it."
+    },
+    {
+     "field": "option A (cmsw2f4z4010etmbvc33bwiar).value",
+     "before": "That he had his hands on the ball.",
+     "after": "That nobody alive could have saved it."
+    },
+    {
+     "field": "option A (cmsw2f4z4010etmbvc33bwiar).tag",
+     "before": "en-inference-literal-lookalike",
+     "after": "en-wrong-scope-retrieval"
+    },
+    {
+     "field": "option A (cmsw2f4z4010etmbvc33bwiar).execution",
+     "before": "Reuses line 26 and repeats him rather than saying what he claims.",
+     "after": "Line 22 says this about four other goals, just before this window. Lines 23 and 26 say he let this one in on purpose and could have had it."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-012-ML-01",
+   "passageRef": "stream-a-14-mill-on-floss",
+   "hold": {
+    "reason": "hintCore coaches: 'Follow the smells. The reason is in the list.' names the key ('The smells of baking and gravy'). Minor: key's 'through the house' is not in lines 1-4.",
+    "faultField": "hintCore"
+   },
+   "reviewerNote": "The key now matches lines 2 and 3 (plumcakes, jellies, gravy, so that it was impossible to feel gloomy). The visitors are the occasion (line 1), school is absent, and 'hope in the air' restates the effect. The hint does not name the key.",
+   "landedAt": "2026-11-20T17:04:19.810Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "Follow the smells. The reason is in the list.",
+     "after": "Find the words about feeling gloomy. Then look back for what caused that."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Read line 2 and find what is listed: plumcakes, jellies, gravy. Line 3 says these scents made gloom impossible. The visitors are why the baking happens, not why the day feels hopeful.",
+     "after": "Read lines 2 and 3 and find what is listed: plumcakes, jellies, gravy. Line 3 says these scents made gloom impossible. The visitors are why the baking happens, not why the day feels hopeful."
+    },
+    {
+     "field": "option A (cmsw2f4wa00jotmbvfpnwczzh).value",
+     "before": "The smells of baking and gravy through the house.",
+     "after": "The smells of cakes, jellies and gravy."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-012-ML-03",
+   "passageRef": "stream-a-14-mill-on-floss",
+   "hold": {
+    "reason": "Key correct (lines 8-10), but hintCore 'Keep the small word no' resolves the only difference between the key and the nearest distractor ('he says he will'), giving the key away.",
+    "faultField": "hintCore"
+   },
+   "reviewerNote": "The key is line 8 (the question) and lines 9 and 10 ('no, I sha'n't'). The negation-dropped, agent-patient and puff options all fail on the lines named in their executions. The hint does not resolve the 'not'.",
+   "landedAt": "2026-11-20T17:04:19.810Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "One question, one answer. Keep the small word no.",
+     "after": "Check who asks and who answers. Then read the answer to the end."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-012-ML-05",
+   "passageRef": "stream-a-14-mill-on-floss",
+   "hold": {
+    "reason": "Second defensible answer: line 18 'that'll be good the day after' says Tom expects the tipsy-cake to be good, so 'The tipsy-cake...' also answers the stem as worded ('What is Tom looking forward to?'). Also hintCore 'Take the second' gives the key away.",
+    "faultField": "stem"
+   },
+   "reviewerNote": "Under the new stem the only reason Tom gives is the pudding: 'It's the pudden ... apricot roll-up', line 18. The tipsy-cake is Maggie's guess and he turns it down. In the swapped option Maggie is made the one who knows. The visitors are never his reason. The hint does not coach.",
+   "landedAt": "2026-11-20T17:04:19.810Z",
+   "changes": [
+    {
+     "field": "stem.text",
+     "before": "Read lines 16 to 19. What is Tom looking forward to?",
+     "after": "Read lines 16 to 19. Maggie is guessing why Tom will not run away. What reason does he give?"
+    },
+    {
+     "field": "explanation.hintCore",
+     "before": "He rejects one and names another. Take the second.",
+     "after": "Maggie makes a guess. Read every word of Tom's answer to it."
+    },
+    {
+     "field": "option B (cmsw2f4we00k8tmbvnial2asq).execution",
+     "before": "True at line 18, and he names it as the thing it is not.",
+     "after": "True at line 18, but there Tom says no to the tipsy-cake as his reason. It is Maggie's guess from line 16, which he turns down."
+    },
+    {
+     "field": "option C (cmsw2f4we00k9tmbvywx31ngm).value",
+     "before": "Maggie tells him what the pudding is to be.",
+     "after": "The pudding, which Maggie has guessed will be apricot roll-up."
+    },
+    {
+     "field": "option C (cmsw2f4we00k9tmbvywx31ngm).execution",
+     "before": "Line 18 runs the other way: he says he knows what it is to be.",
+     "after": "Swaps who knows. At line 16 Maggie guesses the tipsy-cake; at line 18 it is Tom who says he knows what the pudding is to be."
+    },
+    {
+     "field": "option D (cmsw2f4we00katmbvoeajbli5).value",
+     "before": "He is disappointed that it is not to be tipsy-cake.",
+     "after": "He wants to be there when the aunts and uncles come."
+    },
+    {
+     "field": "option D (cmsw2f4we00katmbvoeajbli5).execution",
+     "before": "Line 19's O my buttons is delight at what it is, not regret at what it is not.",
+     "after": "Line 1 says the aunts and uncles are coming, and staying for them sounds sensible. Tom never gives it as his reason; at line 18 he names the pudding."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-012-ML-10",
+   "passageRef": "stream-a-14-mill-on-floss",
+   "hold": {
+    "reason": "Key correct (lines 48-49). Distractor 'would have taken a bit of hers beforehand' reverses 'refused' (line 49) - an antonym swap, not a relation word, so tag en-relation-word-flipped does not name the mistake. hintCore 'He expected something back' also mirrors the key's 'expected her to offer him some'.",
+    "faultField": "options"
+   },
+   "reviewerNote": "The key is lines 48 and 49 ('acted very fairly ... made up to him for it'). The last-morsel option is when he says it (line 47), jealousy has no line, and the 'taken a bit' option is denied by line 49's 'refused'. The new hint points to narration and does not mirror the key.",
+   "landedAt": "2026-11-20T17:04:19.810Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "He expected something back. Find what, and for what.",
+     "after": "Find where the writer tells you what Tom was thinking."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-019-BV-03",
+   "passageRef": "stream-a-20-bevis",
+   "hold": {
+    "reason": "Second defensible answer: 'He says he might be shooting an elephant' is literally what Mark does when he interrupts (line 12), and the stem asks what he does; its execution concedes it repeats him.",
+    "faultField": "stem"
+   },
+   "reviewerNote": "The key is lines 10 to 13: the same elephant example, with Mark holding the gun and Bevis handing it. The replacement distractor is line 18, said after Bevis has finished. The agent-patient option restores Bevis's arrangement. The motive option has no line. No second answer remains.",
+   "landedAt": "2026-11-20T17:04:19.810Z",
+   "changes": [
+    {
+     "field": "option A (cmsw2f4y700uztmbvr9yi15sk).value",
+     "before": "He offers to hand Bevis the gun while Bevis shoots.",
+     "after": "He offers to be the one who hands Bevis the gun."
+    },
+    {
+     "field": "option C (cmsw2f4y700v1tmbvv3zwnrf9).value",
+     "before": "He says he might be shooting an elephant.",
+     "after": "He says that he hates dying under a tree."
+    },
+    {
+     "field": "option C (cmsw2f4y700v1tmbvv3zwnrf9).tag",
+     "before": "en-inference-literal-lookalike",
+     "after": "en-wrong-scope-retrieval"
+    },
+    {
+     "field": "option C (cmsw2f4y700v1tmbvv3zwnrf9).execution",
+     "before": "Reuses line 12 and repeats him rather than naming what he is doing.",
+     "after": "Mark does say this, but at line 18, after Bevis has finished at line 17. The interruption is at line 12, where he swaps the two boys round."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-019-BV-06",
+   "passageRef": "stream-a-20-bevis",
+   "hold": {
+    "reason": "Key correct (line 24). The wrong-scope execution claims 'line 23 answers the stem' quoting 'about and sniffed among the willow bushes on their', which gives no reason; the answer is on line 24.",
+    "faultField": "execution"
+   },
+   "reviewerNote": "The key is line 24 ('shrunk under the summer heat'). The spreading-bushes option reverses what moved, line 21 gives shape and not distance, and the cliff option is lines 27 and 28, outside the window. All executions are now true.",
+   "landedAt": "2026-11-20T17:04:19.810Z",
+   "changes": [
+    {
+     "field": "option D (cmsw2f4ya00vhtmbvus3grpas).execution",
+     "before": "True at lines 27 and 28, past the end of this window. In the window, line 23 answers the stem: 'about and sniffed among the willow bushes on their'.",
+     "after": "The water wearing a cliff is at lines 27 and 28, past the end of this window. Line 24 gives the reason: the lake has shrunk under the summer heat."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-019-BV-08",
+   "passageRef": "stream-a-20-bevis",
+   "hold": {
+    "reason": "Key is wrong: lines 38-41 give fear of Mark boasting as the reason not to go HOME for nails; going round would let him keep up (line 45 'run round and overtake Mark'). The lines give no reason for refusing to go round beyond 'having determined' (33-34). Wrong-scope execution quote 'drive into the hard sand to catch hold of' answers nothing; walk repeats the misreading.",
+    "faultField": "key"
+   },
+   "reviewerNote": "The key is lines 39 to 41: Mark would be so far ahead he could not overtake him, and would boast he had explored the new sea first. The nothing-to-hold option is why the steps failed (lines 37 and 38), the railings option is line 44, and the family option has no line. The hint and walk are accurate and do not coach.",
+   "landedAt": "2026-11-20T17:04:19.810Z",
+   "changes": [
+    {
+     "field": "stem.text",
+     "before": "Look at lines 33 to 43. Why does Bevis stay at the cliff instead of walking round it?",
+     "after": "Look at lines 36 to 41. Why does Bevis not go home to fetch some big nails?"
+    },
+    {
+     "field": "stem.orderAnchor",
+     "before": 33,
+     "after": 36
+    },
+    {
+     "field": "explanation.hintCore",
+     "before": "Saying again that he would not go round is not a reason.",
+     "after": "He has a plan for the nails. Find the problem he sees with it."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 39 says that by then Mark would be far ahead. Line 40 says Mark would boast that he had explored the new sea first. That is the thing Bevis will not allow.",
+     "after": "Lines 38 and 39 give his plan. He would fetch big nails from home to hold on to. Lines 39 and 40 say that by then Mark would be far ahead. Lines 40 and 41 say Mark would boast that he had explored the new sea first. So going home would let Mark win."
+    },
+    {
+     "field": "lineRefs",
+     "before": [
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43
+     ],
+     "after": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41
+     ]
+    },
+    {
+     "field": "option A (cmsw2f4yc00votmbv9wt8mf95).value",
+     "before": "He has made up his mind that he will not go round.",
+     "after": "He would have nothing to hold on to as he climbed."
+    },
+    {
+     "field": "option A (cmsw2f4yc00votmbv9wt8mf95).tag",
+     "before": "en-inference-literal-lookalike",
+     "after": "en-within-span-wrong-element"
+    },
+    {
+     "field": "option A (cmsw2f4yc00votmbv9wt8mf95).execution",
+     "before": "Reuses lines 33 and 34 and says the decision again instead of the reason.",
+     "after": "True at lines 37 and 38, but it is why cutting steps would not work. The nails were his answer to that, so it is not why he gives them up."
+    },
+    {
+     "field": "option B (cmsw2f4yc00vptmbvhycr0yrp).execution",
+     "before": "True at line 44, one line past the end of this window. In the window, line 39 answers the stem: 'drive into the hard sand to catch hold of'.",
+     "after": "True at line 44, past the end of this window, and it is what Bevis sees Mark doing afterwards. Lines 39 to 41 give the reason."
+    },
+    {
+     "field": "option C (cmsw2f4yc00vqtmbvi5zifxgb).value",
+     "before": "He is afraid the deep water would be too cold.",
+     "after": "He is afraid his family would not let him come back out."
+    },
+    {
+     "field": "option C (cmsw2f4yc00vqtmbvi5zifxgb).execution",
+     "before": "The water is dark and deep at line 34; no line gives him the fear.",
+     "after": "No line gives him this fear. Lines 39 to 41 give his only reason, which is Mark getting ahead."
+    },
+    {
+     "field": "option D (cmsw2f4yc00vrtmbvu2jehl7v).value",
+     "before": "He will not let Mark reach the new sea first.",
+     "after": "Mark would get too far ahead and boast that he explored first."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-019-BV-12",
+   "passageRef": "stream-a-20-bevis",
+   "hold": {
+    "reason": "walkScript asserts 'He made up the game and Mark never agreed to it', which the passage does not show (preamble only says Bevis appointed himself; Mark accepts at lines 89-92).",
+    "faultField": "walkScript"
+   },
+   "reviewerNote": "The walk now asserts only what lines 14 and 15, 87 and 88, and 90 show. The key stands (Bevis's self-appointed captaincy, rules said as fact). The verdict option is an absence, and the kinder-by-the-end option fails both the stem (it is about change, not his rules) and line 90.",
+   "landedAt": "2026-11-20T17:04:19.810Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "At line 14 he says 'the captain who always does everything'. At line 87 he says 'People must do as the captain tells them'. At line 90 he says 'you ought to be put on half-rations'. He made up the game and Mark never agreed to it.",
+     "after": "At lines 14 and 15 he says 'the captain who always does everything'. At lines 87 and 88 he says 'People must do as the captain tells them'. At line 90 he says 'you ought to be put on half-rations'. Each rule comes from Bevis, and he says each one as plain fact."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-019-BV-09",
+   "passageRef": "stream-a-20-bevis",
+   "hold": {
+    "reason": "Key correct. Distractor 'Leaning over to see better' tagged en-vocab-built-from-parts with execution 'Built from lean, which the word looks and sounds like' - 'inclined' neither contains nor sounds like 'lean'; the tag does not name the mistake (a physical neighbouring sense).",
+    "faultField": "execution"
+   },
+   "reviewerNote": "The key fits 'almost felt inclined to leave it and run round' (lines 45 and 46). The sloping and leaning senses are excluded by what follows the word, and the railings option is Mark at line 44. Executions, hint and walk checked.",
+   "landedAt": "2026-11-20T17:04:19.810Z",
+   "changes": [
+    {
+     "field": "option C (cmsw2f4yd00vvtmbvrds7tu8c).execution",
+     "before": "Inclined as bent or leaning forward is a genuine sense of the word, but not the one line 45 fixes. He 'almost felt inclined to leave it and run round', which is about wanting to do something.",
+     "after": "Inclined as bent or leaning forward is a genuine sense of the word, but not the one lines 45 and 46 fix. He 'almost felt inclined to leave it and run round', which is about wanting to do something."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-022-GK-01",
+   "passageRef": "stream-c-01",
+   "hold": {
+    "reason": "Key correct (line 2). The wrong-scope execution claims 'line 1 answers the stem' quoting 'I get there first, every break', which restates the stem; line 2 answers it.",
+    "faultField": "execution"
+   },
+   "reviewerNote": "The key is line 2 ('You have to, for the jumpers') with line 3. The argues-later option is what the pacing is for (line 5), collecting is lines 40 to 42, and picked-first is against line 38. All executions are now true.",
+   "landedAt": "2026-11-20T17:04:19.810Z",
+   "changes": [
+    {
+     "field": "option C (cmsw2f4z000zrtmbvfds9iplr).execution",
+     "before": "True at lines 40 to 42, at the far end of the poem. In the window, line 1 answers the stem: 'I get there first, every break'.",
+     "after": "Collecting the jumpers is at lines 40 to 42, after the bell at the end of the poem. Lines 2 and 3 have him there first to put them down as goals."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-022-GK-02",
+   "passageRef": "stream-c-01",
+   "hold": {
+    "reason": "Distractor 'He goes in goal, but he was picked eighth for it' is near-identical to the key and defensible; its execution ('reverses the order') is untrue - it has the same order as the key.",
+    "faultField": "options"
+   },
+   "reviewerNote": "The key sets line 7 ('Nobody put me there') against line 38 (eighth out of eight). The near-key duplicate is gone. The best-keeper and picked-sooner options have no line, and the joined-by-and option is the literal list the hint warns against.",
+   "landedAt": "2026-11-20T17:04:19.810Z",
+   "changes": [
+    {
+     "field": "option B (cmsw2f4z100zvtmbvlfauuebi).value",
+     "before": "He goes in goal, but he was picked eighth for it.",
+     "after": "He chose the goal because he is the best keeper they have."
+    },
+    {
+     "field": "option B (cmsw2f4z100zvtmbvlfauuebi).execution",
+     "before": "A tidy reason the poem never gives, and it reverses the order.",
+     "after": "A sensible-sounding reason the poem never gives. No line calls him the best, and line 20 has fourteen go past him."
+    },
+    {
+     "field": "option C (cmsw2f4z100zwtmbvddaft6gf).execution",
+     "before": "A plan the lines never give him.",
+     "after": "A plan the lines never give him. Nothing in lines 7 to 11 or lines 38 and 39 links the goal to being picked sooner."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-022-GK-04",
+   "passageRef": "stream-c-01",
+   "hold": {
+    "reason": "Key correct. Distractor 'A tear that has been sewn up again' is tagged en-vocab-form-lookalike, whose hint says 'check it is the same word' - it IS the same word; the mistake is the sewing sense, so the tag does not name it.",
+    "faultField": "options"
+   },
+   "reviewerNote": "The key fits lines 15 to 17 (running, tired, a stitch he won't admit). The sewing sense is excluded by the hint and the context, the trick option is line 18, and the itch option is a form lookalike. One sewing option now, and no overlap.",
+   "landedAt": "2026-11-20T17:04:19.810Z",
+   "changes": [
+    {
+     "field": "option D (cmsw2f4z30107tmbvpgy6lckd).value",
+     "before": "A tear that has been sewn up again.",
+     "after": "An itch that somebody wants to scratch."
+    },
+    {
+     "field": "option D (cmsw2f4z30107tmbvpgy6lckd).execution",
+     "before": "Built from the sewing sense the word looks like.",
+     "after": "Reads the itch inside stitch and takes that word's meaning instead. Lines 16 and 17 are about players worn out by running."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-022-GK-05",
+   "passageRef": "stream-c-01",
+   "hold": {
+    "reason": "Key correct (line 22). The wrong-scope execution claims 'line 20 answers the stem' quoting 'Fourteen went past me last Tuesday', which says nothing about the four; line 22 answers.",
+    "faultField": "execution"
+   },
+   "reviewerNote": "The key is line 22. 'Not ashamed' is about all fourteen (line 21), 'on purpose' is one goal at line 23, and blaming the defenders has no line. Executions, hint and walk checked.",
+   "landedAt": "2026-11-20T17:04:19.810Z",
+   "changes": [
+    {
+     "field": "option C (cmsw2f4z4010btmbvol67owl7).execution",
+     "before": "True at line 23, one line past the end of this window. In the window, line 20 answers the stem: 'Fourteen went past me last Tuesday'.",
+     "after": "True at line 23, one line past the end of this window, and it is about one goal, not four. Line 22 says what he claims about the four."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-022-GK-10",
+   "passageRef": "stream-c-01",
+   "hold": {
+    "reason": "hintCore 'The line after it says why he stays' supplies the meaning (not shifting = staying), giving the key away.",
+    "faultField": "hintCore"
+   },
+   "reviewerNote": "The key fits 'I'm not shifting out of there' (line 43). The change-of-shape and work-shift senses fail when substituted, and stacking is line 42. The new substitution hint gives no meaning away.",
+   "landedAt": "2026-11-20T17:04:19.810Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "The line after it says why he stays.",
+     "after": "Put each answer in place of the word. Then read the line again."
+    }
+   ]
+  }
+ ]
+}

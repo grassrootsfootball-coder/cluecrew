@@ -1,0 +1,2079 @@
+{
+ "door": "english-rewrite/r2/G1",
+ "round": 2,
+ "questionType": "english",
+ "ruling": "R1023",
+ "holds": {
+  "ENG-002-pp-14": {
+   "reason": "hintCore 'The words one of her daughters are the clue' quotes the key's own phrase ('rude about one of her daughters'), so it coaches (R572).",
+   "faultField": "hintCore"
+  },
+  "ENG-002-pp-16": {
+   "reason": "walkScript ends 'The room hears nothing of this'; the passage never says so (line 48 says only that Darcy stood near enough for Elizabeth to overhear).",
+   "faultField": "walkScript"
+  },
+  "ENG-002-pp-23": {
+   "reason": "Key 'never whether the writer agrees' is not the only defensible answer: the narrator characterises directly at lines 24-25 ('good-looking and gentlemanlike... easy, unaffected manners') and lines 72-73 ('a lively, playful disposition'), which supports distractor 'We are told what the writer thinks'. Also hintCore calls Jane Austen 'he'.",
+   "faultField": "key"
+  },
+  "ENG-016-HB-01": {
+   "reason": "Execution on 'The green squares of the fields' says they are 'what they pass over'; line 3 has the HILL rising over the fields, not the travellers passing over them (the walkScript has it right).",
+   "faultField": "execution"
+  },
+  "ENG-016-HB-02": {
+   "reason": "hintCore 'Two of these sit in one window only' is false: only the 'eyes fixed... eager' option sits in one window; the lamps option is in neither and the other two use both. Also the lamps option's execution carries an appended clause 'line 9 answers the stem' which is untrue for a what-has-changed question.",
+   "faultField": "hintCore"
+  },
+  "ENG-016-HB-12": {
+   "reason": "walkScript says 'At line 4 the hill is melancholy before anyone has said a word', but Dr Mortimer speaks at lines 1-2 before it; it also says Nature 'throws at them' where line 28 has 'throw before the carriage'.",
+   "faultField": "walkScript"
+  }
+ },
+ "entries": {
+  "en-a-an-by-spelling": {
+   "description": "Chooses a/an by following letter rather than sound.",
+   "childHint": "Listen to the sound that starts the next word.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-agent-patient-reversal": {
+   "description": "Swaps who did or thought something, or who it was done to.",
+   "childHint": "Ask who is doing it and who it is being done to.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-apostrophe-possession": {
+   "description": "Misses possessive apostrophes; confuses its/it's.",
+   "childHint": "Ask whose it is. An owner needs an apostrophe straight after the owner word, like children's or boys'. Owner words like its, his, ours and theirs never have one. If you see it's, try swapping in 'it is'.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-article-avoids-the-sound-choice": {
+   "description": "On an a or an choice, picks the to avoid the vowel-sound judgement. The fits any noun without a sound decision, so the child reaches for the article that asks nothing of her ear.",
+   "childHint": "This gap wants a or an. Say the next word aloud. Which sound starts it?",
+   "approvalNote": null
+  },
+  "en-article-definiteness": {
+   "description": "Chooses between a, the and no article by habit, missing that the thing has already been named in the text or is one of a kind. Distinct from en-a-an-by-spelling, which is a sound judgement.",
+   "childHint": "Has the text named it already? That changes which little word fits.",
+   "approvalNote": "Second-pass returns: ten new proposals cleared, WIW-14 stem rewritten, mistag check completed across the remaining 69."
+  },
+  "en-attribute-transfer": {
+   "description": "Assigns a detail the text gives to one character or thing to another, or the right attribute at the wrong value.",
+   "childHint": "Check who or what each detail belongs to in the text.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-cause-agent-swap": {
+   "description": "Attributes the right event to the wrong cause or character.",
+   "childHint": "Ask who did this, or what caused it, in the text. Re-read the moment step by step.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-chronology-collapse": {
+   "description": "The child picks a cause that happens LATER in the passage than the effect being asked about. The two events are both real and both about the same people, so the option reads well; only the order rules it out.",
+   "childHint": "Check what happened first, and what the question asks for.",
+   "approvalNote": "Second-pass returns: ten new proposals cleared, WIW-14 stem rewritten, mistag check completed across the remaining 69."
+  },
+  "en-comma-subject-verb-split": {
+   "description": "Accepts a comma cutting subject from verb.",
+   "childHint": "Never let a single comma cut the do-er off from the doing.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-comparative-superlative-form": {
+   "description": "Errors in forming or choosing comparatives and superlatives: double marking (most fastest), the comparative used for a whole group, or the bare adjective after 'the'.",
+   "childHint": "Comparing two, or more than two? Then check the ending and the word before it are not both doing the job.",
+   "approvalNote": "Second-pass returns: ten new proposals cleared, WIW-14 stem rewritten, mistag check completed across the remaining 69. | DEDUPE RECORDED 2026-08-19: queue text survives, capped library text superseded and quoted in textProvenance."
+  },
+  "en-comparison-vehicle-misread": {
+   "description": "Child gives the quality of the thing a comparison compares TO, where the answer is the quality of the thing being described — reading the vehicle of a simile or metaphor as the subject.",
+   "childHint": "Find the two things being compared. The one being described is the one that matters.",
+   "approvalNote": "BOUNDARY vs en-attribute-transfer: both put a quality on the wrong holder. Attribute-transfer moves it BETWEEN CHARACTERS; this moves it from a comparison's VEHICLE to its SUBJECT. Different remedies, different hints."
+  },
+  "en-conjunction-logic": {
+   "description": "Chooses a conjunction with the wrong logical relation.",
+   "childHint": "Is the second idea a reason, a surprise, or just what happened next?",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-contraction-apostrophe": {
+   "description": "Omits or misplaces the apostrophe in a contraction: Youre for You're, dont for don't, wont for won't.",
+   "childHint": "Two words squeezed into one leave letters out. The apostrophe stands where the letters were.",
+   "approvalNote": null
+  },
+  "en-contradicted-by-the-text": {
+   "description": "Chooses an option the passage explicitly denies, rather than one it merely fails to support. Distinguished from a plausible option the passage never states: here the passage states the contrary. Negation-dropped loses a WORD; this loses a CLAIM, and the option may share no wording with the line that refutes it.",
+   "childHint": "The passage says something different. Go back and find it.",
+   "approvalNote": null
+  },
+  "en-coordination-wrong-conjunct": {
+   "description": "The target word sits in a coordination — X and Y, X as well as Y, X as Y, X beside Y — and the child attaches the meaning to the wrong conjunct. She takes the half of the pair she read last, or the half that is easier to picture, and glosses the target with it. The error is syntactic: she has parsed which item the word attaches to incorrectly, and the option she picks is usually TRUE of the other conjunct, which is why it survives a check against the passage.",
+   "childHint": "This word is joined to another one. Work out which of the two the question is asking about before you answer.",
+   "approvalNote": null
+  },
+  "en-determiner-omitted": {
+   "description": "Leaves the determiner out altogether before a singular countable noun, treating a, an and the as optional rather than required. Distinct from en-article-definiteness, which is a choice BETWEEN articles, and from en-a-an-by-spelling, which is a sound judgement.",
+   "childHint": "A single thing needs a word in front of it. Say the line aloud and listen.",
+   "approvalNote": null
+  },
+  "en-double-consonant-boundary": {
+   "description": "Guesses whether a consonant doubles when an ending is added, or doubles the wrong letter: begining for beginning, dissapointed for disappointed, stoped for stopped.",
+   "childHint": "Say the root word first, then add the beginning or ending. Check which letter really doubles.",
+   "approvalNote": "Second-pass returns: ten new proposals cleared, WIW-14 stem rewritten, mistag check completed across the remaining 69."
+  },
+  "en-emotion-label-approximation": {
+   "description": "Chooses an adjacent emotion word rather than the precisely evidenced one.",
+   "childHint": "Find the words in the text that show the feeling. Close is not the same.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-extreme-option-pull": {
+   "description": "Chooses always/never/impossible options when the text is measured.",
+   "childHint": "Does the passage really go that far? Check the strongest word in the option.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-figurative-taken-literally": {
+   "description": "Reads similes and idioms as literal events.",
+   "childHint": "Figures of speech are not facts. Ask what the words are really saying.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-homophone-by-sound": {
+   "description": "Spells the wrong member of a homophone pair; their/there/they're.",
+   "childHint": "Sound will not help with sound-alike words. Work out the meaning, then spell it from that.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-inference-literal-lookalike": {
+   "description": "Picks the option that reuses passage wording.",
+   "childHint": "Words copied from the passage can still miss the question. Ask what those words are telling you.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-minimal-pair-skim": {
+   "description": "Matches an option on gist when it differs from the text, or from the key, by a single word or detail.",
+   "childHint": "An answer can look almost like the text. Find what differs and check it against the text.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-modal-conditional-form": {
+   "description": "Mismatches the modal to its if-clause, or builds an impossible modal form: 'if we painted ... people will know', 'would knew', 'would be knowing'.",
+   "childHint": "An imagined if takes 'would'. A real if takes 'will'. In an imagined if, a past word like 'painted' without 'had' means now or later. 'Would have' is for imagining the past.",
+   "approvalNote": "Second-pass returns: ten new proposals cleared, WIW-14 stem rewritten, mistag check completed across the remaining 69."
+  },
+  "en-motive-invention": {
+   "description": "Attributes a plausible motive the text never supports.",
+   "childHint": "A reason has to be given, not guessed. Ask what the text says about why.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-n-option-avoidance": {
+   "description": "Never selects the no-mistake option in error-spotting.",
+   "childHint": "Check every part in turn. No mistake is a real answer, not a way out.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up. — REACHABILITY (annie, 2026-08-09): unreachable BY DESIGN in spag-punct-speech, which carries no N option at all (R33) — recorded as designed-out rather than unused, so a later coverage sweep does not read it as a gap and re-add the option. Reachable in the other EIGHT spot families, each keying N at a real rate."
+  },
+  "en-narrator-voice-as-fact": {
+   "description": "The child treats a crowd's opinion that the narrator reports in flat, certain sentences as the narrator's own verdict, and so takes it as settled truth rather than as something the text is quietly laughing at. Distinct from en-extreme-option-pull, which is about the pull of absolute wording; this one is about mistaking whose voice is speaking.",
+   "childHint": "Before you take this as true, ask whose opinion it is.",
+   "approvalNote": null
+  },
+  "en-negation-dropped": {
+   "description": "The passage carries an explicit negative — no, not, never, nothing, without, could not, sha'n't — and the option states the affirmative. The child has read the content words of the sentence and dropped the word that reverses them. Requires a negative WORD in a named line. A negation sustained across a whole text with no such word is en-whole-text-absence-asserted.",
+   "childHint": "A negative word can change the whole answer. Read the line again for one.",
+   "approvalNote": null
+  },
+  "en-paired-punctuation": {
+   "description": "Misses unclosed brackets or quotes.",
+   "childHint": "Brackets come in pairs, like shoes. Hunt for the partner.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-parallel-read-as-sequence": {
+   "description": "The child reads two parallel descriptions of one thing as two moments in time. Where a writer gives the same subject twice — two ways of seeing it, two accounts of it, two things it is at once — she converts the pair into a sequence and looks for what changed between them. Nothing changed. What differs is the vantage, not the subject, and the relation between the two descriptions is what the question asks for.",
+   "childHint": "These two descriptions are of the same thing at the same time. Ask what is different about who is looking.",
+   "approvalNote": "RESTATED, NOT RECOVERED (Annie, 2026-08-16). Approved 8 August; no row existed in either store. Her line, which settles a CLASS rather than this instance: if a copy of the 8 August original turns up later and differs, THIS VERSION IS THE APPROVED ONE, because it is the one that exists. A restated approval outranks a recovered one. Proposed on ENG-004-AGG-08 option A — lines 35-40 give what an ordinary observer would see, 41-46 what an extraordinary one might: same girl, same moment, two watchers."
+  },
+  "en-physical-vs-emotional-cue": {
+   "description": "Gives a physical cause, from the body or body-language, when the text signals a feeling.",
+   "childHint": "Look past what the body is doing. Check what the character is feeling right then.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-plausible-not-stated": {
+   "description": "Picks real-world-plausible options the passage never states, especially motives.",
+   "childHint": "Sounding sensible is not enough. Find the line that proves it.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-preposition-collocation": {
+   "description": "Chooses a preposition that is close in meaning but does not go with the verb: returned on the shelf, listened at the teacher.",
+   "childHint": "Say the whole phrase in your head. Which little word does this verb usually take?",
+   "approvalNote": "Second-pass returns: ten new proposals cleared, WIW-14 stem rewritten, mistag check completed across the remaining 69."
+  },
+  "en-question-tag-polarity": {
+   "description": "Repeats instead of flipping polarity in question tags; mismatches the auxiliary.",
+   "childHint": "A tag flips the sentence. A positive sentence takes a negative tag. If there is no helper verb, use do, does or did.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-relation-word-flipped": {
+   "description": "The child reads a word that names a relationship between two things (contrast, unless, however, instead of) as its opposite, usually as plain 'and' or 'the same as'. The result is an option that keeps every fact but reverses how the facts sit together.",
+   "childHint": "Some words tell you how two things go together. Find that word and read it again.",
+   "approvalNote": "Second-pass returns: ten new proposals cleared, WIW-14 stem rewritten, mistag check completed across the remaining 69."
+  },
+  "en-relative-pronoun-choice": {
+   "description": "Picks a relative pronoun by habit rather than by what it stands for: which for people, whose in place of who, whom in a subject slot.",
+   "childHint": "Ask what the joining word stands for — a person, a thing, or something belonging to someone.",
+   "approvalNote": null
+  },
+  "en-repetition-purpose": {
+   "description": "Cannot say why a writer repeats words; defaults to literal or dismissive readings.",
+   "childHint": "Writers repeat on purpose. Ask what the echo does to the reader.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-silent-letter-dropped": {
+   "description": "Drops silent letters when spelling.",
+   "childHint": "A letter can be there without being heard. Spell it out, do not sound it out.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-speech-punctuation-inside": {
+   "description": "Places a quoted question's mark outside the speech marks.",
+   "childHint": "The question belongs to the spoken words. Keep the mark inside.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-spelling-form-lookalike": {
+   "description": "Accepts or writes a word's visual near-twin: quiet for quite, dairy for diary, angel for angle, loose for lose.",
+   "childHint": "Two words can look almost the same. Read the middle letters slowly, not the shape.",
+   "approvalNote": null
+  },
+  "en-subject-verb-agreement-by-proximity": {
+   "description": "Agrees the verb with the nearest noun instead of the true subject, usually across an of-phrase: 'the row of new labels were'.",
+   "childHint": "Ignore the of-part. Match the verb to what is left.",
+   "approvalNote": "Second-pass returns: ten new proposals cleared, WIW-14 stem rewritten, mistag check completed across the remaining 69. | DEDUPE RECORDED 2026-08-19: queue text survives, capped library text superseded and quoted in textProvenance."
+  },
+  "en-technique-device-confusion": {
+   "description": "Child gives \"metaphor\" for a comparison using \"like\" where the answer is simile, naming a device of the right family and the wrong kind.",
+   "childHint": "Does the line say like or as? A comparison using those words is a simile.",
+   "approvalNote": null
+  },
+  "en-technique-effect-mislocated": {
+   "description": "Child gives the effect of an earlier or neighbouring part of the passage where the answer is the effect of the quoted phrase, reading past the words under test.",
+   "childHint": "Find the exact words the question quotes. Answer about those words only.",
+   "approvalNote": null
+  },
+  "en-technique-intent-as-character": {
+   "description": "Child gives \"the boy feels tense\" where the answer is that the writer builds tension, treating the writer's choice as the character's state.",
+   "childHint": "Ask who is doing this. Is it the writer, or the character?",
+   "approvalNote": "annie: the single most consequential comprehension misunderstanding — invest here."
+  },
+  "en-technique-structure-effect-blind": {
+   "description": "Child gives what the words say where the answer is what their shape does (a short sentence makes a moment land suddenly; a count that grows or shrinks builds a pattern), reading content where the question asks about shape.",
+   "childHint": "Notice how the writer has built it, not just what it says. What does that do for the reader?",
+   "approvalNote": "annie: structure had NO tag — one-word paragraphs and lists of three were untaggable. Invest here."
+  },
+  "en-tense-sequence": {
+   "description": "Uses simple past where prior events need 'had'; drifts tense mid-narrative.",
+   "childHint": "Did it happen before the story-moment? Then you usually need 'had' and the verb. If not, keep to the same tense as the story around it.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-terminal-punctuation-blind": {
+   "description": "Accepts a full stop on a question; misses run-ons and missing boundaries.",
+   "childHint": "Read it in your head. Where your voice would stop or ask, the punctuation must match.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-unstressed-medial-vowel": {
+   "description": "Guesses a vowel in an unstressed syllable inside a word: regester for register. Scoped to the ERROR. Distinct from en-unstressed-suffix-vowel, whose vowel surfaces when the stress shifts (definite/definition); a medial vowel has no family word that stresses it, so the remediation is the spelling pattern — minister, sinister, register.",
+   "childHint": "A quiet middle vowel is still a letter. Say the word in parts and choose it.",
+   "approvalNote": null
+  },
+  "en-unstressed-suffix-vowel": {
+   "description": "Guesses between -ant/-ent, -ance/-ence, -ary/-ory/-ery.",
+   "childHint": "Many words ending -ant or -ent have a partner ending -ance or -ence. The partner almost always keeps the same vowel, like assistant and assistance. For -ary, -ery or -ory, a family word may help, like librarian for library.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-vocab-built-from-parts": {
+   "description": "The child takes the word apart into parts she has met in other words and sums them. She has not mistaken which word it is — she has taken it apart, and the parts are real while the sum is not the word. Scoped to the ERROR, not to vocabulary items.",
+   "childHint": "The parts of a word do not always add up. Check the whole word in the sentence.",
+   "approvalNote": null
+  },
+  "en-vocab-dominant-sense": {
+   "description": "The child applies the word's commonest everyday sense in a context that does not support it. The sense chosen is a real sense of the same word; it is simply the one that arrives first, and the sentence around the word is what should have displaced it. Scoped to the ERROR, not to vocabulary items: it occurs wherever a word's sense is load-bearing, including on technique stems.",
+   "childHint": "Words can have more than one meaning. Check that the meaning you used fits what the sentence is saying here.",
+   "approvalNote": "Hint READ from the authored field in her own document, character for character, never retyped. Supersedes en-vocab-secondary-sense. | SCOPING RULED 2026-08-16 (Annie): the tag is scoped to the ERROR, not to vocabulary items — it occurs wherever a word’s sense is load-bearing, including on technique stems. Her own 8 August ruling applied to this entry; the sentence had lived only in the drafting store until 16 August."
+  },
+  "en-vocab-form-lookalike": {
+   "description": "The meaning the child chooses belongs to a DIFFERENT WORD that the target resembles in form, or to a morpheme she has met in other words. She has not chosen among the target's senses at all — she has misidentified the word. Scoped to the ERROR, not to vocabulary items.",
+   "childHint": "This word looks like one you know. Read it letter by letter and check it is the same word.",
+   "approvalNote": null
+  },
+  "en-vocab-neighbouring-sense": {
+   "description": "The child chooses another genuine sense of the same word, neither the commonest one nor the one the passage fixes. The option is defensible in isolation and is ruled out only by the surrounding text, so the child gets no signal that anything is wrong. This holds only where the surrounding text fixes the sense decisively. Where it does not, the option is a defensible second answer and the item is faulty rather than hard. Scoped to the ERROR, not to vocabulary items.",
+   "childHint": "More than one meaning fits this word. Find the words nearby that decide which one it has to be.",
+   "approvalNote": null
+  },
+  "en-vocab-not-this-word": {
+   "description": "Picks a meaning that belongs to no sense of the word and to no word it resembles in form.",
+   "childHint": "This word never means that. Put your answer in its place. Read the sentence again.",
+   "approvalNote": null
+  },
+  "en-whole-text-absence-asserted": {
+   "description": "The passage sustains an ABSENCE across its whole length — it never states a feeling, never names a motive, never gives a verdict — and the option asserts the withheld thing as though it were there. There is no negative word to drop, because the negation is a property of the text rather than of any line: the child has failed to notice something maintained across sixty lines, not misread a word in one. Characteristically the option is defeated by no single line and only by the absence itself, so its disposal must cite the SPAN of the withholding rather than a disposal point.",
+   "childHint": "Choose a line number for the option you like. If you cannot find one anywhere in the passage, that option is not it.",
+   "approvalNote": null
+  },
+  "en-within-span-wrong-element": {
+   "description": "The option states something that is true inside the cited window and answers a different question from the one asked. The child has located the right lines and taken the wrong element out of them. A named sub-route is the WRONG SPEAKER: the material is inside the window but belongs to the other party in an exchange — one child's answer offered where the other child's instruction was asked for. The cure is the same in both cases, so the sub-route shares this hint.",
+   "childHint": "Being in the lines is not enough. Check it answers the question you were asked.",
+   "approvalNote": null
+  },
+  "en-word-class-by-ending": {
+   "description": "Classifies words by suffix rather than sentence job; participial adjective traps.",
+   "childHint": "Ask what job the word does in this sentence. Is it describing, or is it the action? If it describes, is the thing doing the action or having it done to it?",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-wrong-scope-retrieval": {
+   "description": "Answers from a detail in the wrong part of the passage.",
+   "childHint": "Something from another part of the passage does not answer this question. Find the part the question points to.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  }
+ },
+ "passages": {
+  "stream-a-13-pride-prejudice": {
+   "id": "stream-a-13-pride-prejudice",
+   "work": {
+    "author": "Jane Austen",
+    "title": "Pride and Prejudice",
+    "firstPublished": 1813,
+    "authorDied": 1817
+   },
+   "sceneTitle": "The New Neighbour Comes to the Assembly",
+   "preamble": "A rich young man called Mr Bingley has taken the big house near the Bennet family. Mrs Bennet has five grown-up daughters, and everyone in the village is waiting to see him at the next dance.",
+   "numberedLines": [
+    {
+     "n": 1,
+     "text": "“If I can but see one of my daughters happily settled at Netherfield,” said Mrs. Bennet",
+     "label": ""
+    },
+    {
+     "n": 2,
+     "text": "to her husband, “and all the others equally well married, I shall have nothing to wish",
+     "label": ""
+    },
+    {
+     "n": 3,
+     "text": "for.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 4,
+     "text": "In a few days Mr. Bingley returned Mr. Bennet’s visit, and sat about ten minutes with",
+     "label": ""
+    },
+    {
+     "n": 5,
+     "text": "him in his library. He had entertained hopes of being admitted to a sight of the young",
+     "label": "5"
+    },
+    {
+     "n": 6,
+     "text": "ladies, of whose beauty he had heard much; but he saw only the father. The ladies were",
+     "label": ""
+    },
+    {
+     "n": 7,
+     "text": "somewhat more fortunate, for they had the advantage of ascertaining, from an upper",
+     "label": ""
+    },
+    {
+     "n": 8,
+     "text": "window, that he wore a blue coat and rode a black horse.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 9,
+     "text": "An invitation to dinner was soon afterwards despatched; and already had Mrs. Bennet",
+     "label": ""
+    },
+    {
+     "n": 10,
+     "text": "planned the courses that were to do credit to her housekeeping, when an answer arrived",
+     "label": "10"
+    },
+    {
+     "n": 11,
+     "text": "which deferred it all. Mr. Bingley was obliged to be in town the following day, and",
+     "label": ""
+    },
+    {
+     "n": 12,
+     "text": "consequently unable to accept the honour of their invitation, etc. Mrs. Bennet was quite",
+     "label": ""
+    },
+    {
+     "n": 13,
+     "text": "disconcerted. She could not imagine what business he could have in town so soon after",
+     "label": ""
+    },
+    {
+     "n": 14,
+     "text": "his arrival in Hertfordshire; and she began to fear that he might always be flying about",
+     "label": ""
+    },
+    {
+     "n": 15,
+     "text": "from one place to another, and never settled at Netherfield as he ought to be. Lady",
+     "label": "15"
+    },
+    {
+     "n": 16,
+     "text": "Lucas quieted her fears a little by starting the idea of his being gone to London only",
+     "label": ""
+    },
+    {
+     "n": 17,
+     "text": "to get a large party for the ball; and a report soon followed that Mr. Bingley was to",
+     "label": ""
+    },
+    {
+     "n": 18,
+     "text": "bring twelve ladies and seven gentlemen with him to the assembly. The girls grieved over",
+     "label": ""
+    },
+    {
+     "n": 19,
+     "text": "such a number of ladies; but were comforted the day before the ball by hearing that,",
+     "label": ""
+    },
+    {
+     "n": 20,
+     "text": "instead of twelve, he had brought only six with him from London, his five sisters and a",
+     "label": "20"
+    },
+    {
+     "n": 21,
+     "text": "cousin. And when the party entered the assembly-room, it consisted of only five",
+     "label": ""
+    },
+    {
+     "n": 22,
+     "text": "altogether: Mr. Bingley, his two sisters, the husband of the eldest, and another young",
+     "label": ""
+    },
+    {
+     "n": 23,
+     "text": "man.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 24,
+     "text": "Mr. Bingley was good-looking and gentlemanlike: he had a pleasant countenance, and easy,",
+     "label": ""
+    },
+    {
+     "n": 25,
+     "text": "unaffected manners. His sisters were fine women, with an air of decided fashion. His",
+     "label": "25"
+    },
+    {
+     "n": 26,
+     "text": "brother-in-law, Mr. Hurst, merely looked the gentleman; but his friend Mr. Darcy soon",
+     "label": ""
+    },
+    {
+     "n": 27,
+     "text": "drew the attention of the room by his fine, tall person, handsome features, noble mien,",
+     "label": ""
+    },
+    {
+     "n": 28,
+     "text": "and the report, which was in general circulation within five minutes after his entrance,",
+     "label": ""
+    },
+    {
+     "n": 29,
+     "text": "of his having ten thousand a year. The gentlemen pronounced him to be a fine figure of a",
+     "label": ""
+    },
+    {
+     "n": 30,
+     "text": "man, the ladies declared he was much handsomer than Mr. Bingley, and he was looked at",
+     "label": "30"
+    },
+    {
+     "n": 31,
+     "text": "with great admiration for about half the evening, till his manners gave a disgust which",
+     "label": ""
+    },
+    {
+     "n": 32,
+     "text": "turned the tide of his popularity; for he was discovered to be proud, to be above his",
+     "label": ""
+    },
+    {
+     "n": 33,
+     "text": "company, and above being pleased; and not all his large estate in Derbyshire could save",
+     "label": ""
+    },
+    {
+     "n": 34,
+     "text": "him from having a most forbidding, disagreeable countenance, and being unworthy to be",
+     "label": ""
+    },
+    {
+     "n": 35,
+     "text": "compared with his friend.",
+     "label": "35"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 36,
+     "text": "Mr. Bingley had soon made himself acquainted with all the principal people in the room:",
+     "label": ""
+    },
+    {
+     "n": 37,
+     "text": "he was lively and unreserved, danced every dance, was angry that the ball closed so",
+     "label": ""
+    },
+    {
+     "n": 38,
+     "text": "early, and talked of giving one himself at Netherfield. Such amiable qualities must",
+     "label": ""
+    },
+    {
+     "n": 39,
+     "text": "speak for themselves. What a contrast between him and his friend! Mr. Darcy danced only",
+     "label": ""
+    },
+    {
+     "n": 40,
+     "text": "once with Mrs. Hurst and once with Miss Bingley, declined being introduced to any other",
+     "label": "40"
+    },
+    {
+     "n": 41,
+     "text": "lady, and spent the rest of the evening in walking about the room, speaking occasionally",
+     "label": ""
+    },
+    {
+     "n": 42,
+     "text": "to one of his own party. His character was decided. He was the proudest, most",
+     "label": ""
+    },
+    {
+     "n": 43,
+     "text": "disagreeable man in the world, and everybody hoped that he would never come there again.",
+     "label": ""
+    },
+    {
+     "n": 44,
+     "text": "Amongst the most violent against him was Mrs. Bennet, whose dislike of his general",
+     "label": ""
+    },
+    {
+     "n": 45,
+     "text": "behaviour was sharpened into particular resentment by his having slighted one of her",
+     "label": "45"
+    },
+    {
+     "n": 46,
+     "text": "daughters.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 47,
+     "text": "Elizabeth Bennet had been obliged, by the scarcity of gentlemen, to sit down for two",
+     "label": ""
+    },
+    {
+     "n": 48,
+     "text": "dances; and during part of that time, Mr. Darcy had been standing near enough for her to",
+     "label": ""
+    },
+    {
+     "n": 49,
+     "text": "overhear a conversation between him and Mr. Bingley, who came from the dance for a few",
+     "label": ""
+    },
+    {
+     "n": 50,
+     "text": "minutes to press his friend to join it.",
+     "label": "50"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 51,
+     "text": "“Come, Darcy,” said he, “I must have you dance. I hate to see you standing about by",
+     "label": ""
+    },
+    {
+     "n": 52,
+     "text": "yourself in this stupid manner. You had much better dance.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 53,
+     "text": "“I certainly shall not. You know how I detest it, unless I am particularly acquainted",
+     "label": ""
+    },
+    {
+     "n": 54,
+     "text": "with my partner. At such an assembly as this, it would be insupportable. Your sisters",
+     "label": ""
+    },
+    {
+     "n": 55,
+     "text": "are engaged, and there is not another woman in the room whom it would not be a",
+     "label": "55"
+    },
+    {
+     "n": 56,
+     "text": "punishment to me to stand up with.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 57,
+     "text": "“I would not be so fastidious as you are,” cried Bingley, “for a kingdom! Upon my",
+     "label": ""
+    },
+    {
+     "n": 58,
+     "text": "honour, I never met with so many pleasant girls in my life as I have this evening; and",
+     "label": ""
+    },
+    {
+     "n": 59,
+     "text": "there are several of them, you see, uncommonly pretty.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 60,
+     "text": "“You are dancing with the only handsome girl in the room,” said Mr. Darcy, looking at",
+     "label": "60"
+    },
+    {
+     "n": 61,
+     "text": "the eldest Miss Bennet.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 62,
+     "text": "“Oh, she is the most beautiful creature I ever beheld! But there is one of her sisters",
+     "label": ""
+    },
+    {
+     "n": 63,
+     "text": "sitting down just behind you, who is very pretty, and I dare say very agreeable. Do let",
+     "label": ""
+    },
+    {
+     "n": 64,
+     "text": "me ask my partner to introduce you.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 65,
+     "text": "“Which do you mean?” and turning round, he looked for a moment at Elizabeth, till,",
+     "label": "65"
+    },
+    {
+     "n": 66,
+     "text": "catching her eye, he withdrew his own, and coldly said, “She is tolerable: but not",
+     "label": ""
+    },
+    {
+     "n": 67,
+     "text": "handsome enough to tempt me; and I am in no humour at present to give consequence to",
+     "label": ""
+    },
+    {
+     "n": 68,
+     "text": "young ladies who are slighted by other men. You had better return to your partner and",
+     "label": ""
+    },
+    {
+     "n": 69,
+     "text": "enjoy her smiles, for you are wasting your time with me.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 70,
+     "text": "Mr. Bingley followed his advice. Mr. Darcy walked off; and Elizabeth remained with no",
+     "label": "70"
+    },
+    {
+     "n": 71,
+     "text": "very cordial feelings towards him. She told the story, however, with great spirit among",
+     "label": ""
+    },
+    {
+     "n": 72,
+     "text": "her friends; for she had a lively, playful disposition, which delighted in anything",
+     "label": ""
+    },
+    {
+     "n": 73,
+     "text": "ridiculous.",
+     "label": ""
+    }
+   ],
+   "readingSupport": [
+    {
+     "kind": "reading-support-note",
+     "note": "One period idiom about manners giving offence may be misread in a modern sense; worth a glossary note.",
+     "movedFrom": "contentFlags, reclassified by Annie, ninety-sixth return: a comprehension hazard, not a content judgement",
+     "channelQuestion": "does a glossary channel exist for passage idioms? A word card on the idiom is glossary-shaped; routed, not ruled",
+     "sourceProse": "One period idiom about manners giving offence may be misread in a modern sense; worth a glossary note."
+    }
+   ]
+  },
+  "stream-a-12-hound-baskervilles": {
+   "id": "stream-a-12-hound-baskervilles",
+   "work": {
+    "author": "Arthur Conan Doyle",
+    "title": "The Hound of the Baskervilles",
+    "firstPublished": 1902,
+    "authorDied": 1930
+   },
+   "sceneTitle": "The Drive to Baskerville Hall",
+   "preamble": "Dr Watson is travelling down to Devon by train with young Sir Henry Baskerville, who has come back from America to take over his family’s old house, and with Dr Mortimer, a country doctor. Sir Henry has just said he is impatient for his first sight of the moor. His uncle, Sir Charles, died in the grounds of the house a few months ago, and none of them has seen the place yet.",
+   "numberedLines": [
+    {
+     "n": 1,
+     "text": "“Are you? Then your wish is easily granted, for there is your first sight of the moor,”",
+     "label": ""
+    },
+    {
+     "n": 2,
+     "text": "said Dr. Mortimer, pointing out of the carriage window.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 3,
+     "text": "Over the green squares of the fields and the low curve of a wood there rose in the",
+     "label": ""
+    },
+    {
+     "n": 4,
+     "text": "distance a grey, melancholy hill, with a strange jagged summit, dim and vague in the",
+     "label": ""
+    },
+    {
+     "n": 5,
+     "text": "distance, like some fantastic landscape in a dream. Baskerville sat for a long time, his",
+     "label": "5"
+    },
+    {
+     "n": 6,
+     "text": "eyes fixed upon it, and I read upon his eager face how much it meant to him, this first",
+     "label": ""
+    },
+    {
+     "n": 7,
+     "text": "sight of that strange spot where the men of his blood had held sway so long and left",
+     "label": ""
+    },
+    {
+     "n": 8,
+     "text": "their mark so deep. If on that forbidding moor a difficult and dangerous quest should",
+     "label": ""
+    },
+    {
+     "n": 9,
+     "text": "lie before us, this was at least a comrade for whom one might venture to take a risk",
+     "label": ""
+    },
+    {
+     "n": 10,
+     "text": "with the certainty that he would bravely share it.",
+     "label": "10"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 11,
+     "text": "The train pulled up at a small wayside station and we all descended. Outside, beyond the",
+     "label": ""
+    },
+    {
+     "n": 12,
+     "text": "low, white fence, a wagonette with a pair of cobs was waiting. It was a sweet, simple",
+     "label": ""
+    },
+    {
+     "n": 13,
+     "text": "country spot, but I was surprised to observe that by the gate there stood two soldierly",
+     "label": ""
+    },
+    {
+     "n": 14,
+     "text": "men in dark uniforms who leaned upon their short rifles and glanced keenly at us as we",
+     "label": ""
+    },
+    {
+     "n": 15,
+     "text": "passed. The coachman, a hard-faced, gnarled little fellow, saluted Sir Henry",
+     "label": "15"
+    },
+    {
+     "n": 16,
+     "text": "Baskerville, and in a few minutes we were flying swiftly down the broad, white road.",
+     "label": ""
+    },
+    {
+     "n": 17,
+     "text": "Rolling pasture lands curved upward on either side of us, and old gabled houses peeped",
+     "label": ""
+    },
+    {
+     "n": 18,
+     "text": "out from amid the thick green foliage, but behind the peaceful and sunlit countryside",
+     "label": ""
+    },
+    {
+     "n": 19,
+     "text": "there rose ever, dark against the evening sky, the long, gloomy curve of the moor,",
+     "label": ""
+    },
+    {
+     "n": 20,
+     "text": "broken by the jagged and sinister hills.",
+     "label": "20"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 21,
+     "text": "The wagonette swung round into a side road, and we curved upward through deep lanes worn",
+     "label": ""
+    },
+    {
+     "n": 22,
+     "text": "by centuries of wheels, high banks on either side, heavy with dripping moss and fleshy",
+     "label": ""
+    },
+    {
+     "n": 23,
+     "text": "hart’s-tongue ferns. Bronzing bracken and mottled bramble gleamed in the light of the",
+     "label": ""
+    },
+    {
+     "n": 24,
+     "text": "sinking sun. Still steadily rising, we passed over a narrow granite bridge and skirted a",
+     "label": ""
+    },
+    {
+     "n": 25,
+     "text": "noisy stream which gushed swiftly down, foaming and roaring amid the grey boulders. Both",
+     "label": "25"
+    },
+    {
+     "n": 26,
+     "text": "road and stream wound up through a valley dense with scrub oak and fir. The rattle of",
+     "label": ""
+    },
+    {
+     "n": 27,
+     "text": "our wheels died away as we drove through drifts of rotting vegetation—sad gifts, as it",
+     "label": ""
+    },
+    {
+     "n": 28,
+     "text": "seemed to me, for Nature to throw before the carriage of the returning heir of the",
+     "label": ""
+    },
+    {
+     "n": 29,
+     "text": "Baskervilles.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 30,
+     "text": "“Halloa!” cried Dr. Mortimer, “what is this?”",
+     "label": "30"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 31,
+     "text": "A steep curve of heath-clad land, an outlying spur of the moor, lay in front of us. On",
+     "label": ""
+    },
+    {
+     "n": 32,
+     "text": "the summit, hard and clear like an equestrian statue upon its pedestal, was a mounted",
+     "label": ""
+    },
+    {
+     "n": 33,
+     "text": "soldier, dark and stern, his rifle poised ready over his forearm. He was watching the",
+     "label": ""
+    },
+    {
+     "n": 34,
+     "text": "road along which we travelled.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 35,
+     "text": "“What is this, Perkins?” asked Dr. Mortimer.",
+     "label": "35"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 36,
+     "text": "Our driver half turned in his seat. “There’s a convict escaped from Princetown, sir.",
+     "label": ""
+    },
+    {
+     "n": 37,
+     "text": "He’s been out three days now, and the warders watch every road and every station, but",
+     "label": ""
+    },
+    {
+     "n": 38,
+     "text": "they’ve had no sight of him yet. The farmers about here don’t like it, sir, and that’s a",
+     "label": ""
+    },
+    {
+     "n": 39,
+     "text": "fact.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 40,
+     "text": "Our wagonette had topped a rise and in front of us rose the huge expanse of the moor,",
+     "label": "40"
+    },
+    {
+     "n": 41,
+     "text": "mottled with gnarled and craggy cairns and tors. A cold wind swept down from it and set",
+     "label": ""
+    },
+    {
+     "n": 42,
+     "text": "us shivering. Somewhere there, on that desolate plain, was lurking this fiendish man,",
+     "label": ""
+    },
+    {
+     "n": 43,
+     "text": "hiding in a burrow like a wild beast, his heart full of malignancy against the whole",
+     "label": ""
+    },
+    {
+     "n": 44,
+     "text": "race which had cast him out. It needed but this to complete the grim suggestiveness of",
+     "label": ""
+    },
+    {
+     "n": 45,
+     "text": "the barren waste, the chilling wind, and the darkling sky. Even Baskerville fell silent",
+     "label": "45"
+    },
+    {
+     "n": 46,
+     "text": "and pulled his overcoat more closely around him.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 47,
+     "text": "We had left the fertile country behind and beneath us. We looked back on it now, the",
+     "label": ""
+    },
+    {
+     "n": 48,
+     "text": "slanting rays of a low sun turning the streams to threads of gold and glowing on the red",
+     "label": ""
+    },
+    {
+     "n": 49,
+     "text": "earth new turned by the plough and the broad tangle of the woodlands. The road in front",
+     "label": ""
+    },
+    {
+     "n": 50,
+     "text": "of us grew bleaker and wilder over huge russet and olive slopes, sprinkled with giant",
+     "label": "50"
+    },
+    {
+     "n": 51,
+     "text": "boulders. Now and then we passed a moorland cottage, walled and roofed with stone, with",
+     "label": ""
+    },
+    {
+     "n": 52,
+     "text": "no creeper to break its harsh outline. Suddenly we looked down into a cuplike",
+     "label": ""
+    },
+    {
+     "n": 53,
+     "text": "depression, patched with stunted oaks and firs which had been twisted and bent by the",
+     "label": ""
+    },
+    {
+     "n": 54,
+     "text": "fury of years of storm. Two high, narrow towers rose over the trees. The driver pointed",
+     "label": ""
+    },
+    {
+     "n": 55,
+     "text": "with his whip.",
+     "label": "55"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 56,
+     "text": "“Baskerville Hall,” said he.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 57,
+     "text": "Its master had risen and was staring with flushed cheeks and shining eyes. A few minutes",
+     "label": ""
+    },
+    {
+     "n": 58,
+     "text": "later we had reached the lodge-gates, a maze of fantastic tracery in wrought iron, with",
+     "label": ""
+    },
+    {
+     "n": 59,
+     "text": "weather-bitten pillars on either side, blotched with lichens, and surmounted by the",
+     "label": ""
+    },
+    {
+     "n": 60,
+     "text": "boars’ heads of the Baskervilles.",
+     "label": "60"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 61,
+     "text": "Through the gateway we passed into the avenue, where the wheels were again hushed amid",
+     "label": ""
+    },
+    {
+     "n": 62,
+     "text": "the leaves, and the old trees shot their branches in a sombre tunnel over our heads.",
+     "label": ""
+    },
+    {
+     "n": 63,
+     "text": "Baskerville shuddered as he looked up the long, dark drive to where the house glimmered",
+     "label": ""
+    },
+    {
+     "n": 64,
+     "text": "like a ghost at the farther end.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 65,
+     "text": "“Was it here?” he asked in a low voice.",
+     "label": "65"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 66,
+     "text": "“No, no, the yew alley is on the other side.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 67,
+     "text": "The young heir glanced round with a gloomy face.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 68,
+     "text": "“It’s no wonder my uncle felt as if trouble were coming on him in such a place as this,”",
+     "label": ""
+    },
+    {
+     "n": 69,
+     "text": "said he. “It’s enough to scare any man. I’ll have a row of electric lamps up here inside",
+     "label": ""
+    },
+    {
+     "n": 70,
+     "text": "of six months, and you won’t know it again, with a thousand candle-power Swan and Edison",
+     "label": "70"
+    },
+    {
+     "n": 71,
+     "text": "right here in front of the hall door.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 72,
+     "text": "The avenue opened into a broad expanse of turf, and the house lay before us. In the",
+     "label": ""
+    },
+    {
+     "n": 73,
+     "text": "fading light I could see that the centre was a heavy block of building from which a",
+     "label": ""
+    },
+    {
+     "n": 74,
+     "text": "porch projected. The whole front was draped in ivy, with a patch clipped bare here and",
+     "label": ""
+    },
+    {
+     "n": 75,
+     "text": "there where a window or a coat of arms broke through the dark veil. From this central",
+     "label": "75"
+    },
+    {
+     "n": 76,
+     "text": "block rose the twin towers, ancient, crenelated, and pierced with many loopholes. To",
+     "label": ""
+    },
+    {
+     "n": 77,
+     "text": "right and left of the turrets were more modern wings of black granite. A dull light",
+     "label": ""
+    },
+    {
+     "n": 78,
+     "text": "shone through heavy mullioned windows, and from the high chimneys which rose from the",
+     "label": ""
+    },
+    {
+     "n": 79,
+     "text": "steep, high-angled roof there sprang a single black column of smoke.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 80,
+     "text": "“Welcome, Sir Henry! Welcome to Baskerville Hall!”",
+     "label": "80"
+    }
+   ]
+  }
+ },
+ "rows": [
+  {
+   "itemId": "ENG-002-pp-14",
+   "questionType": "en-comp-inference",
+   "difficultyTier": 3,
+   "passageRef": "stream-a-13-pride-prejudice",
+   "passageRefMissing": false,
+   "hold": {
+    "reason": "hintCore 'The words one of her daughters are the clue' quotes the key's own phrase ('rude about one of her daughters'), so it coaches (R572).",
+    "faultField": "hintCore"
+   },
+   "previousRound": {
+    "proposal": {
+     "itemId": "ENG-002-pp-14",
+     "why": "hintCore quoted the key's own phrase 'one of her daughters' (R572). Replaced it with a move (read on from line 44 for what made her dislike sharper) and removed the quote declaration only that hint used; the walkScript's declared quotation 'slighted one of her daughters' stays. Also corrected a false line number in the en-cause-agent-swap execution: Mr Bingley's dancing with the eldest daughter is lines 60 and 61, not line 63.",
+     "stem": {
+      "text": "Mrs Bennet disliked Mr Darcy more strongly than anybody else in the room did. Read lines 44 to 46. What made her feeling so strong?",
+      "passageRef": "stream-a-13-pride-prejudice",
+      "orderAnchor": 14
+     },
+     "options": [
+      {
+       "optionId": "cmsw2f4tx005jtmbv2opgmyy9",
+       "value": "He had been rude about one of her daughters.",
+       "isKey": true,
+       "tag": null,
+       "execution": null
+      },
+      {
+       "optionId": "cmsw2f4tx005ktmbvl8w0i9ct",
+       "value": "He would not let anyone introduce him to her.",
+       "isKey": false,
+       "tag": "en-wrong-scope-retrieval",
+       "execution": "Declining to be introduced is line 40, and it is to any other LADY, not to Mrs Bennet in particular. In the window, line 44 answers the stem: 'Amongst the most violent against him was Mrs. Bennet'."
+      },
+      {
+       "optionId": "cmsw2f4tx005ltmbvnezeuckm",
+       "value": "He had told Mr Bennet that he did not like the neighbourhood.",
+       "isKey": false,
+       "tag": "en-plausible-not-stated",
+       "execution": "Mr Bennet is not at the ball at all in this passage, and no such remark is made."
+      },
+      {
+       "optionId": "cmsw2f4tx005mtmbvczt4h86p",
+       "value": "Mr Bingley had chosen to dance with her eldest daughter.",
+       "isKey": false,
+       "tag": "en-cause-agent-swap",
+       "execution": "The cause is moved to Mr Bingley's dancing with the eldest daughter at lines 60 and 61; lines 45 and 46 name the slight as the reason."
+      },
+      {
+       "optionId": "cmsw2f4tx005ntmbvjzaza47x",
+       "value": "He was the proudest man in the world, and she hated proud people.",
+       "isKey": false,
+       "tag": "en-motive-invention",
+       "execution": "The child takes line 42's 'the proudest ... man in the world' and adds a general reason, a dislike of proud people, that the passage never gives Mrs Bennet. Lines 45 and 46 give her own reason: he had slighted one of her daughters."
+      }
+     ],
+     "explanationPatch": {
+      "hintCore": "Read on from line 44. Find what made her dislike sharper than everyone else's.",
+      "quotes": [
+       {
+        "rule": "quoted-from-passage",
+        "text": "slighted one of her daughters",
+        "passageRef": "stream-a-13-pride-prejudice"
+       }
+      ]
+     }
+    },
+    "cannotFix": null,
+    "reviewOfChange": {
+     "ref": "rebuild:ENG-002-pp-14",
+     "verdict": "REFUSE",
+     "reason": "New hint 'Find what made her dislike sharper than everyone else's' asserts something the passage does not say. Line 44 has 'Amongst the MOST violent against him was Mrs. Bennet', so she is one of the most, not more than everyone. 'Sharpened' at line 45 is set against her own dislike of his 'general behaviour', not against anyone else's. (The cause-agent-swap line fix, lines 60-61, is correct.)"
+    },
+    "reviewOfRow": {
+     "itemId": "ENG-002-pp-14",
+     "verdict": "HOLD",
+     "holdFixed": true,
+     "reason": "The original fault is gone: the hint no longer quotes 'one of her daughters'. But the stem premise 'Mrs Bennet disliked Mr Darcy more strongly than anybody else in the room did' overstates line 44, which says only 'Amongst the most violent against him'. The new hintCore repeats the same false comparison ('sharper than everyone else's'). Also, the wrong-scope execution's suffix 'line 44 answers the stem' is wrong: the reason is at lines 45-46.",
+     "faultField": "stem"
+    }
+   },
+   "stem": {
+    "text": "Mrs Bennet disliked Mr Darcy more strongly than anybody else in the room did. Read lines 44 to 46. What made her feeling so strong?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 14
+   },
+   "lineRefs": [
+    44,
+    45,
+    46
+   ],
+   "explanation": {
+    "quotes": [
+     {
+      "rule": "quoted-from-passage",
+      "text": "one of her daughters",
+      "passageRef": "stream-a-13-pride-prejudice"
+     },
+     {
+      "rule": "quoted-from-passage",
+      "text": "slighted one of her daughters",
+      "passageRef": "stream-a-13-pride-prejudice"
+     }
+    ],
+    "hintCore": "The words 'one of her daughters' are the clue. Why do they matter to her?",
+    "walkScript": "Read lines 44 to 46. He had 'slighted one of her daughters'. Slighted means treated as nothing. So the sting is her own child.",
+    "passageReadingContext": {
+     "why": "The highest comprehension figure in the fifteen-passage pack, and a year above the 10-13 the passage was commissioned against.",
+     "note": "Authored before anybody had measured this passage. It should meet the reading when it is read, not after.",
+     "readBy": "Annie",
+     "readOn": "2026-08-21",
+     "passage": "stream-a-13-pride-prejudice",
+     "decodingAge": 12,
+     "comprehensionAge": 14,
+     "NOT_A_READING_AGE": "Neither figure is a reading age and neither may be printed as one (R350)."
+    }
+   },
+   "key": "He had been rude about one of her daughters.",
+   "options": [
+    {
+     "optionId": "cmsw2f4tx005jtmbv2opgmyy9",
+     "value": "He had been rude about one of her daughters.",
+     "isKey": true,
+     "tag": null,
+     "tagAttested": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4tx005ktmbvl8w0i9ct",
+     "value": "He would not let anyone introduce him to her.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "tagAttested": true,
+     "execution": "Declining to be introduced is line 40, and it is to any other LADY, not to Mrs Bennet in particular. In the window, line 44 answers the stem: 'Amongst the most violent against him was Mrs. Bennet'."
+    },
+    {
+     "optionId": "cmsw2f4tx005ltmbvnezeuckm",
+     "value": "He had told Mr Bennet that he did not like the neighbourhood.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "tagAttested": true,
+     "execution": "Mr Bennet is not at the ball at all in this passage, and no such remark is made."
+    },
+    {
+     "optionId": "cmsw2f4tx005mtmbvczt4h86p",
+     "value": "Mr Bingley had chosen to dance with her eldest daughter.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "tagAttested": true,
+     "execution": "The cause is moved to Mr Bingley's dancing at line 63; lines 45 and 46 name the slight as the reason."
+    },
+    {
+     "optionId": "cmsw2f4tx005ntmbvjzaza47x",
+     "value": "He was the proudest man in the world, and she hated proud people.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "tagAttested": true,
+     "execution": "The child takes line 42's 'the proudest ... man in the world' and adds a general reason, a dislike of proud people, that the passage never gives Mrs Bennet. Lines 45 and 46 give her own reason: he had slighted one of her daughters."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-16",
+   "questionType": "en-comp-technique",
+   "difficultyTier": 3,
+   "passageRef": "stream-a-13-pride-prejudice",
+   "passageRefMissing": false,
+   "hold": {
+    "reason": "walkScript ends 'The room hears nothing of this'; the passage never says so (line 48 says only that Darcy stood near enough for Elizabeth to overhear).",
+    "faultField": "walkScript"
+   },
+   "previousRound": {
+    "proposal": {
+     "itemId": "ENG-002-pp-16",
+     "why": "walkScript ended 'The room hears nothing of this', which the passage never says (line 48 says only that Mr Darcy stood near enough for Elizabeth to overhear). Removed that sentence; the rest of the walk is unchanged.",
+     "stem": {
+      "text": "Elizabeth hears Mr Darcy's words herself. A friend does not tell her later. Read lines 47 to 50. Why is that a good choice?",
+      "passageRef": "stream-a-13-pride-prejudice",
+      "orderAnchor": 16
+     },
+     "options": [
+      {
+       "optionId": "cmsw2f4tz005vtmbvrk3q5mlp",
+       "value": "It shows that Elizabeth enjoyed listening in on other people.",
+       "isKey": false,
+       "tag": "en-motive-invention",
+       "execution": "A taste for listening in is supplied; line 48 has him standing near enough for her to overhear."
+      },
+      {
+       "optionId": "cmsw2f4tz005wtmbvypke96lq",
+       "value": "It shows that the room had almost emptied by then.",
+       "isKey": false,
+       "tag": "en-plausible-not-stated",
+       "execution": "An empty room is not stated; line 49 has Mr Bingley coming from the dance, so it is in progress."
+      },
+      {
+       "optionId": "cmsw2f4tz005xtmbvfi1ywl9g",
+       "value": "The reader hears the unkind words at the very moment Elizabeth does.",
+       "isKey": true,
+       "tag": null,
+       "execution": null
+      },
+      {
+       "optionId": "cmsw2f4tz005ytmbv0zlcje4d",
+       "value": "Mr Bingley had planned for her to hear his kind words about her.",
+       "isKey": false,
+       "tag": "en-cause-agent-swap",
+       "execution": "The planning is given to Mr Bingley, and the words Elizabeth hears are Mr Darcy's, not his."
+      },
+      {
+       "optionId": "cmsw2f4tz005ztmbvk8wxh0ha",
+       "value": "It shows that Mr Darcy was speaking loudly to the whole room.",
+       "isKey": false,
+       "tag": "en-contradicted-by-the-text",
+       "execution": "Lines 48 and 49 have Elizabeth overhear a conversation between Mr Darcy and Mr Bingley, because Mr Darcy was standing near her. The child turns overhearing into Mr Darcy speaking loudly to everyone, which those lines contradict."
+      }
+     ],
+     "explanationPatch": {
+      "walkScript": "Line 48 puts him 'near enough for her to overhear'. So the words come in his voice. You hear them as Elizabeth does."
+     }
+    },
+    "cannotFix": null,
+    "reviewOfChange": {
+     "ref": "rebuild:ENG-002-pp-16",
+     "verdict": "ATTEST",
+     "reason": "Removing 'The room hears nothing of this' takes out the only unsupported sentence. The remaining walk matches lines 48-49 ('near enough for her to / overhear')."
+    },
+    "reviewOfRow": {
+     "itemId": "ENG-002-pp-16",
+     "verdict": "HOLD",
+     "holdFixed": true,
+     "reason": "The walk fault is gone. hintCore 'Do you hear the words, or only hear about them later?' offers a choice whose first half is the key ('The reader hears the unkind words at the very moment Elizabeth does'). That is coaching under R572. Also, the en-cause-agent-swap execution says 'the words Elizabeth hears are Mr Darcy's, not his'. That is false: lines 48-49 have her overhear a conversation between Mr Darcy and Mr Bingley, so she also hears Bingley's kind words at lines 62-63.",
+     "faultField": "hintCore"
+    }
+   },
+   "stem": {
+    "text": "Elizabeth hears Mr Darcy's words herself. A friend does not tell her later. Read lines 47 to 50. Why is that a good choice?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 16
+   },
+   "lineRefs": [
+    47,
+    48,
+    49,
+    50
+   ],
+   "explanation": {
+    "quotes": [
+     {
+      "rule": "quoted-from-passage",
+      "text": "near enough for her to overhear",
+      "passageRef": "stream-a-13-pride-prejudice"
+     }
+    ],
+    "hintCore": "Do you hear the words, or only hear about them later?",
+    "walkScript": "Line 48 puts him 'near enough for her to overhear'. So the words come in his voice. You hear them as Elizabeth does. The room hears nothing of this.",
+    "passageReadingContext": {
+     "why": "The highest comprehension figure in the fifteen-passage pack, and a year above the 10-13 the passage was commissioned against.",
+     "note": "Authored before anybody had measured this passage. It should meet the reading when it is read, not after.",
+     "readBy": "Annie",
+     "readOn": "2026-08-21",
+     "passage": "stream-a-13-pride-prejudice",
+     "decodingAge": 12,
+     "comprehensionAge": 14,
+     "NOT_A_READING_AGE": "Neither figure is a reading age and neither may be printed as one (R350)."
+    }
+   },
+   "key": "The reader hears the unkind words at the very moment Elizabeth does.",
+   "options": [
+    {
+     "optionId": "cmsw2f4tz005vtmbvrk3q5mlp",
+     "value": "It shows that Elizabeth enjoyed listening in on other people.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "tagAttested": true,
+     "execution": "A taste for listening in is supplied; line 48 has him standing near enough for her to overhear."
+    },
+    {
+     "optionId": "cmsw2f4tz005wtmbvypke96lq",
+     "value": "It shows that the room had almost emptied by then.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "tagAttested": true,
+     "execution": "An empty room is not stated; line 49 has Mr Bingley coming from the dance, so it is in progress."
+    },
+    {
+     "optionId": "cmsw2f4tz005xtmbvfi1ywl9g",
+     "value": "The reader hears the unkind words at the very moment Elizabeth does.",
+     "isKey": true,
+     "tag": null,
+     "tagAttested": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4tz005ytmbv0zlcje4d",
+     "value": "Mr Bingley had planned for her to hear his kind words about her.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "tagAttested": true,
+     "execution": "The planning is given to Mr Bingley, and the words Elizabeth hears are Mr Darcy's, not his."
+    },
+    {
+     "optionId": "cmsw2f4tz005ztmbvk8wxh0ha",
+     "value": "It shows that Mr Darcy was speaking loudly to the whole room.",
+     "isKey": false,
+     "tag": "en-contradicted-by-the-text",
+     "tagAttested": true,
+     "execution": "Lines 48 and 49 have Elizabeth overhear a conversation between Mr Darcy and Mr Bingley, because Mr Darcy was standing near her. The child turns overhearing into Mr Darcy speaking loudly to everyone, which those lines contradict."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-23",
+   "questionType": "en-comp-technique",
+   "difficultyTier": 4,
+   "passageRef": "stream-a-13-pride-prejudice",
+   "passageRefMissing": false,
+   "hold": {
+    "reason": "Key 'never whether the writer agrees' is not the only defensible answer: the narrator characterises directly at lines 24-25 ('good-looking and gentlemanlike... easy, unaffected manners') and lines 72-73 ('a lively, playful disposition'), which supports distractor 'We are told what the writer thinks'. Also hintCore calls Jane Austen 'he'.",
+    "faultField": "key"
+   },
+   "previousRound": {
+    "proposal": {
+     "itemId": "ENG-002-pp-23",
+     "why": "The key ('never whether the writer agrees') was not the only defensible answer: the writer characterises Mr Bingley directly at lines 24 and 25 and Elizabeth at lines 72 and 73, which supported the distractor 'We are told what the writer thinks'. No small repair fixes a false whole-passage premise, so the question is REWRITTEN on the same passage, same questionType (en-comp-technique) and same tier (4), narrowed to Mr Darcy, whose character the passage gives only through the room (lines 29 to 35, 42 to 46) and then his own overheard words (lines 53 to 56, 60 to 61, 65 to 69). techniqueKey and answerShape changed to match. New key: the room's verdict comes first, then his own words. Distractors: only Elizabeth's view (kept, en-extreme-option-pull, execution redrafted for the new stem); the writer says he is kind underneath (en-plausible-not-stated: a reader who knows the novel may supply it, no line gives it); he never speaks (en-contradicted-by-the-text: lines 53 to 69). hintCore rewritten as a move, and it no longer calls the writer 'he'. walkScript rewritten to match. lineRefs stay empty (whole passage).",
+     "stem": {
+      "text": "Think about the whole passage. How do we learn what Mr Darcy is like?",
+      "quotes": [],
+      "passageRef": "stream-a-13-pride-prejudice",
+      "answerShape": "two-halved-sequence-of-the-room-s-verdict-then-his-own-words",
+      "orderAnchor": 23,
+      "techniqueKey": "room-verdict-first-then-his-own-words-heard"
+     },
+     "options": [
+      {
+       "optionId": "cmsw2f4u60070tmbvdcmgx664",
+       "value": "The writer tells us herself that he is kind under all his pride.",
+       "isKey": false,
+       "tag": "en-plausible-not-stated",
+       "execution": "No line says Mr Darcy is kind underneath. A reader who knows how the story ends may supply it, but this passage gives only his pride and his rude words at lines 53 to 56 and 65 to 69."
+      },
+      {
+       "optionId": "cmsw2f4u60071tmbvsbowke6z",
+       "value": "He never speaks, so we have only the room's word for what he is like.",
+       "isKey": false,
+       "tag": "en-contradicted-by-the-text",
+       "execution": "Lines 53 to 56 and 65 to 69 give Mr Darcy's own words to Mr Bingley, so the passage states the contrary. The child remembers the room's verdict at lines 42 and 43 and forgets the talk Elizabeth overhears."
+      },
+      {
+       "optionId": "cmsw2f4u60072tmbvpk6ox8pm",
+       "value": "We are given only Elizabeth's view, and no other opinion is ever allowed.",
+       "isKey": false,
+       "tag": "en-extreme-option-pull",
+       "execution": "Elizabeth's feelings about him appear only at lines 70 and 71. Before that come the room's opinion at lines 29 to 43, Mrs Bennet's at lines 44 to 46, and his own words at lines 53 to 69, so 'only' claims far too much."
+      },
+      {
+       "optionId": "cmsw2f4u60073tmbv5jefao4e",
+       "value": "We hear the room's verdict on him first, and then his own words.",
+       "isKey": true,
+       "tag": null,
+       "execution": null
+      }
+     ],
+     "explanationPatch": {
+      "hintCore": "Find each place where we learn about him. Ask who is speaking each time.",
+      "walkScript": "Lines 29 to 35 give what the gentlemen and the ladies think of him. Lines 42 to 46 give the room's verdict and Mrs Bennet's. Then lines 53 to 69 let us hear his own words to Mr Bingley. So the room speaks first, and then we hear him."
+     }
+    },
+    "cannotFix": null,
+    "reviewOfChange": {
+     "ref": "rebuild:ENG-002-pp-23",
+     "verdict": "REFUSE",
+     "reason": "The rewrite is justified, because the old whole-passage key was not the only defensible answer, and the new key is the only defensible option. But the new execution on 'The writer tells us herself that he is kind under all his pride' says 'this passage gives only his pride and his rude words'. That is false: lines 26-29 give his 'fine, tall person, handsome features, noble mien' and ten thousand a year, and lines 39-42 narrate his conduct. The why's premise that his character comes 'only through the room... and then his own overheard words' leaves out that same narrated conduct at 39-42. The new en-extreme-option-pull execution cites 'the room's opinion at lines 29 to 43', but 36-38 are about Bingley and 39-42 are narration of what Darcy did."
+    },
+    "reviewOfRow": {
+     "itemId": "ENG-002-pp-23",
+     "verdict": "HOLD",
+     "holdFixed": true,
+     "reason": "The original fault is gone: the key is now the only defensible option, and the hint no longer calls the writer 'he'. Key checked: the room's verdicts (29-35, 42-46) all come before his words (53-56, 60-61, 65-69). The hint is a move and the walk is accurate. Held for two execution claims the passage contradicts: 'gives only his pride and his rude words' (lines 26-29 give his looks and wealth), and 'room's opinion at lines 29 to 43' (that span includes Bingley at 36-38 and narrated conduct at 39-42).",
+     "faultField": "execution"
+    }
+   },
+   "stem": {
+    "text": "Think about the whole passage. How do we learn what the people in it are like?",
+    "quotes": [],
+    "passageRef": "stream-a-13-pride-prejudice",
+    "answerShape": "two-halved-contrast-of-what-is-given-against-what-is-withheld",
+    "orderAnchor": 23,
+    "techniqueKey": "verdicts-always-in-other-mouths-narrator-never-adjudicates"
+   },
+   "lineRefs": [],
+   "explanation": {
+    "hintCore": "You are about to say what the writer thinks of them. Find the line where he says it.",
+    "walkScript": "Line 29 has the gentlemen and the ladies pronouncing. Line 42 says his character was decided, and names nobody. Line 44 gives Mrs Bennet's dislike. Each verdict belongs to somebody in the room.",
+    "passageReadingContext": {
+     "why": "The highest comprehension figure in the fifteen-passage pack, and a year above the 10-13 the passage was commissioned against.",
+     "note": "Authored before anybody had measured this passage. It should meet the reading when it is read, not after.",
+     "readBy": "Annie",
+     "readOn": "2026-08-21",
+     "passage": "stream-a-13-pride-prejudice",
+     "decodingAge": 12,
+     "comprehensionAge": 14,
+     "NOT_A_READING_AGE": "Neither figure is a reading age and neither may be printed as one (R350)."
+    }
+   },
+   "key": "We are told what others say of them, but never whether the writer agrees.",
+   "options": [
+    {
+     "optionId": "cmsw2f4u60070tmbvdcmgx664",
+     "value": "We are told what the writer thinks, and not only what the room says.",
+     "isKey": false,
+     "tag": "en-narrator-voice-as-fact",
+     "tagAttested": true,
+     "execution": "Reads the reported verdicts as the writer's own. Line 42's 'His character was decided' names nobody as deciding it, which is the point this option misses."
+    },
+    {
+     "optionId": "cmsw2f4u60071tmbvsbowke6z",
+     "value": "We are shown what they do, but never told whether the writer approves.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "tagAttested": true,
+     "execution": "The showing is there — line 37 has Mr Bingley dancing every dance — but line 38 answers it with 'such amiable qualities must speak for themselves', which declines the plain telling this half-claims."
+    },
+    {
+     "optionId": "cmsw2f4u60072tmbvpk6ox8pm",
+     "value": "We are given only Elizabeth's view, and no other opinion is ever allowed.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "tagAttested": true,
+     "execution": "Elizabeth does not appear until line 47 and gives no verdict at all; the opinions at lines 29, 42 and 44 belong to the room and to Mrs Bennet."
+    },
+    {
+     "optionId": "cmsw2f4u60073tmbv5jefao4e",
+     "value": "We are told what others say of them, but never whether the writer agrees.",
+     "isKey": true,
+     "tag": null,
+     "tagAttested": null,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-016-HB-01",
+   "questionType": "en-comp-retrieval",
+   "difficultyTier": 1,
+   "passageRef": "stream-a-12-hound-baskervilles",
+   "passageRefMissing": false,
+   "hold": {
+    "reason": "Execution on 'The green squares of the fields' says they are 'what they pass over'; line 3 has the HILL rising over the fields, not the travellers passing over them (the walkScript has it right).",
+    "faultField": "execution"
+   },
+   "previousRound": {
+    "proposal": {
+     "itemId": "ENG-016-HB-01",
+     "why": "Execution on 'The green squares of the fields' said they are what the travellers pass over; line 3 has the hill rising over the fields. Rewrote the execution to say so. Nothing else changed.",
+     "stem": {
+      "text": "Look at lines 1 to 4. What does Dr Mortimer point out of the window?",
+      "quotes": [],
+      "passageRef": "stream-a-12-hound-baskervilles",
+      "orderAnchor": 1
+     },
+     "options": [
+      {
+       "optionId": "cmsw2f4xe00q5tmbvi7gyjdex",
+       "value": "The first sight of the moor itself.",
+       "isKey": true,
+       "tag": null,
+       "execution": null
+      },
+      {
+       "optionId": "cmsw2f4xe00q6tmbvv7lngw6o",
+       "value": "The green squares of the fields.",
+       "isKey": false,
+       "tag": "en-within-span-wrong-element",
+       "execution": "True at line 3, where the far hill rises over the fields. Dr Mortimer points out the moor itself at lines 1 and 2, not the fields in front of it."
+      },
+      {
+       "optionId": "cmsw2f4xe00q7tmbva3jv3h3e",
+       "value": "The small station where they get down.",
+       "isKey": false,
+       "tag": "en-wrong-scope-retrieval",
+       "execution": "True at line 11, outside this window; lines 1 to 4 have them still on the train."
+      },
+      {
+       "optionId": "cmsw2f4xe00q8tmbvkpnnk786",
+       "value": "The road that runs up to the Hall.",
+       "isKey": false,
+       "tag": "en-plausible-not-stated",
+       "execution": "They are bound for the Hall; lines 1 to 4 never mention a road."
+      }
+     ]
+    },
+    "cannotFix": null,
+    "reviewOfChange": {
+     "ref": "rebuild:ENG-016-HB-01",
+     "verdict": "ATTEST",
+     "reason": "Line 3 has the hill rising over the fields ('Over the green squares of the fields... there rose'), and Dr Mortimer points out the moor at lines 1-2. The new execution is true. Nothing else touched."
+    },
+    "reviewOfRow": {
+     "itemId": "ENG-016-HB-01",
+     "verdict": "HOLD",
+     "holdFixed": true,
+     "reason": "The execution fault is gone. hintCore 'The window is only four lines wide' uses reviewer jargon ('window' for a line range) in a row whose stem uses 'window' literally ('point out of the window', the carriage window at line 2). A child meets two meanings of one word in one item and is not told the hint means lines 1 to 4.",
+     "faultField": "hintCore"
+    }
+   },
+   "stem": {
+    "text": "Look at lines 1 to 4. What does Dr Mortimer point out of the window?",
+    "quotes": [],
+    "passageRef": "stream-a-12-hound-baskervilles",
+    "orderAnchor": 1
+   },
+   "lineRefs": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "explanation": {
+    "hintCore": "The window is only four lines wide. Try each answer against it.",
+    "walkScript": "Line 1 has Dr Mortimer say there is your first sight of the moor. Line 2 says he pointed out of the carriage window as he said it. The fields and the wood at line 3 are what the moor rises beyond."
+   },
+   "key": "The first sight of the moor itself.",
+   "options": [
+    {
+     "optionId": "cmsw2f4xe00q5tmbvi7gyjdex",
+     "value": "The first sight of the moor itself.",
+     "isKey": true,
+     "tag": null,
+     "tagAttested": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4xe00q6tmbvv7lngw6o",
+     "value": "The green squares of the fields.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "tagAttested": true,
+     "execution": "True at line 3, and it is what they pass over rather than what he points at."
+    },
+    {
+     "optionId": "cmsw2f4xe00q7tmbva3jv3h3e",
+     "value": "The small station where they get down.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "tagAttested": true,
+     "execution": "True at line 11, outside this window; lines 1 to 4 have them still on the train."
+    },
+    {
+     "optionId": "cmsw2f4xe00q8tmbvkpnnk786",
+     "value": "The road that runs up to the Hall.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "tagAttested": true,
+     "execution": "They are bound for the Hall; lines 1 to 4 never mention a road."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-016-HB-02",
+   "questionType": "en-comp-inference",
+   "difficultyTier": 4,
+   "passageRef": "stream-a-12-hound-baskervilles",
+   "passageRefMissing": false,
+   "hold": {
+    "reason": "hintCore 'Two of these sit in one window only' is false: only the 'eyes fixed... eager' option sits in one window; the lamps option is in neither and the other two use both. Also the lamps option's execution carries an appended clause 'line 9 answers the stem' which is untrue for a what-has-changed question.",
+    "faultField": "hintCore"
+   },
+   "previousRound": {
+    "proposal": {
+     "itemId": "ENG-016-HB-02",
+     "why": "hintCore 'Two of these sit in one window only' was false (only the 'eyes fixed' option sits in one window). Replaced it with a move: read each window, then say what is different. The lamps option's execution carried a false appended clause ('line 9 answers the stem'); removed it, and gave the lamps lines as 69 to 71. Also corrected the en-chronology-collapse execution's arithmetic: line 45 is thirty-six lines after line 9, not thirty-five.",
+     "stem": {
+      "text": "Look at lines 5 to 10 and 45 to 46. What has changed in Sir Henry?",
+      "quotes": [],
+      "passageRef": "stream-a-12-hound-baskervilles",
+      "orderAnchor": 5
+     },
+     "options": [
+      {
+       "optionId": "cmsw2f4xf00qatmbvgobhphrc",
+       "value": "His eyes were fixed upon it, and his face was eager to see it.",
+       "isKey": false,
+       "tag": "en-inference-literal-lookalike",
+       "execution": "Reuses lines 5 and 6, and both halves come from the first window alone."
+      },
+      {
+       "optionId": "cmsw2f4xf00qbtmbvbe4mhwbh",
+       "value": "He is a brave comrade at first, but the moor has silenced him.",
+       "isKey": true,
+       "tag": null,
+       "execution": null
+      },
+      {
+       "optionId": "cmsw2f4xf00qctmbv1cf2jzpp",
+       "value": "He falls silent first, but Watson had judged him brave.",
+       "isKey": false,
+       "tag": "en-chronology-collapse",
+       "execution": "Line 45 comes thirty-six lines after line 9, so this turns the order round."
+      },
+      {
+       "optionId": "cmsw2f4xf00qdtmbv5os75kel",
+       "value": "He talks of electric lamps, and then he says nothing more.",
+       "isKey": false,
+       "tag": "en-wrong-scope-retrieval",
+       "execution": "True at lines 69 to 71, outside both windows; neither window has him speak at all."
+      }
+     ],
+     "explanationPatch": {
+      "hintCore": "Read the first window, then the second. What is different about him?"
+     }
+    },
+    "cannotFix": null,
+    "reviewOfChange": {
+     "ref": "rebuild:ENG-016-HB-02",
+     "verdict": "ATTEST",
+     "reason": "New hint is no longer false. The lamps execution drops the untrue 'line 9 answers the stem', and lines 69-71 is right. The arithmetic fix (45 - 9 = 36) corrects a false number; it is not restyling."
+    },
+    "reviewOfRow": {
+     "itemId": "ENG-016-HB-02",
+     "verdict": "HOLD",
+     "holdFixed": true,
+     "reason": "Key checked against lines 9-10 (a comrade who 'would bravely share it') and line 45 ('Even Baskerville fell silent'). Distractors and executions are true. The held fault is gone. Held because the new hintCore 'Read the first window, then the second' carries the reviewer word 'window' for a line range, which no child has been taught. The stem gives the ranges as lines, and this passage's only literal window is the carriage window at line 2.",
+     "faultField": "hintCore"
+    }
+   },
+   "stem": {
+    "text": "Look at lines 5 to 10 and 45 to 46. What has changed in Sir Henry?",
+    "quotes": [],
+    "passageRef": "stream-a-12-hound-baskervilles",
+    "orderAnchor": 5
+   },
+   "lineRefs": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    45,
+    46
+   ],
+   "explanation": {
+    "hintCore": "Two of these sit in one window only. Check both.",
+    "walkScript": "Line 9 has Watson call him a comrade worth taking a risk for. Line 45 says even Baskerville fell silent as the moor opened out. Line 46 has him pull his overcoat more closely round him."
+   },
+   "key": "He is a brave comrade at first, but the moor has silenced him.",
+   "options": [
+    {
+     "optionId": "cmsw2f4xf00qatmbvgobhphrc",
+     "value": "His eyes were fixed upon it, and his face was eager to see it.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "tagAttested": true,
+     "execution": "Reuses lines 5 and 6, and both halves come from the first window alone."
+    },
+    {
+     "optionId": "cmsw2f4xf00qbtmbvbe4mhwbh",
+     "value": "He is a brave comrade at first, but the moor has silenced him.",
+     "isKey": true,
+     "tag": null,
+     "tagAttested": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4xf00qctmbv1cf2jzpp",
+     "value": "He falls silent first, but Watson had judged him brave.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "tagAttested": true,
+     "execution": "Line 45 comes thirty-five lines after line 9, so this turns the order round."
+    },
+    {
+     "optionId": "cmsw2f4xf00qdtmbv5os75kel",
+     "value": "He talks of electric lamps, and then he says nothing more.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "tagAttested": true,
+     "execution": "True at line 69 and line 71, outside both windows; neither window has him speak. In the window, line 9 answers the stem: 'lie before us, this was at least a comrade'."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-016-HB-12",
+   "questionType": "en-comp-technique",
+   "difficultyTier": 4,
+   "passageRef": "stream-a-12-hound-baskervilles",
+   "passageRefMissing": false,
+   "hold": {
+    "reason": "walkScript says 'At line 4 the hill is melancholy before anyone has said a word', but Dr Mortimer speaks at lines 1-2 before it; it also says Nature 'throws at them' where line 28 has 'throw before the carriage'.",
+    "faultField": "walkScript"
+   },
+   "previousRound": {
+    "proposal": {
+     "itemId": "ENG-016-HB-12",
+     "why": "walkScript said the hill at line 4 is melancholy 'before anyone has said a word', but Dr Mortimer speaks at lines 1 and 2; and it said Nature 'throws at them' where line 28 has 'throw before the carriage'. Removed the false clause, and made the line 27 sentence say the rotting plants are thrown before the carriage. Nothing else changed.",
+     "stem": {
+      "text": "Think about the whole passage. How does Watson write about the moor?",
+      "quotes": [],
+      "passageRef": "stream-a-12-hound-baskervilles",
+      "answerShape": "inert-land-set-against-a-mind-put-into-it",
+      "orderAnchor": 999,
+      "techniqueKey": "a-still-landscape-given-feelings-and-intentions-it-cannot-have"
+     },
+     "options": [
+      {
+       "optionId": "cmsw2f4xn00rotmbve306xibw",
+       "value": "He tells us the hills were jagged, and the wind was very cold.",
+       "isKey": false,
+       "tag": "en-inference-literal-lookalike",
+       "execution": "Reuses lines 20 and 41 and reports two details rather than anything the telling does."
+      },
+      {
+       "optionId": "cmsw2f4xn00rptmbvws2x44v9",
+       "value": "The moor is calm by day, but it turns cruel after dark.",
+       "isKey": false,
+       "tag": "en-plausible-not-stated",
+       "execution": "A tidy shape the passage never carries: line 4 is grim in broad daylight."
+      },
+      {
+       "optionId": "cmsw2f4xn00rqtmbv4zfms514",
+       "value": "He is afraid of the moor, so he keeps his eyes on the road.",
+       "isKey": false,
+       "tag": "en-motive-invention",
+       "execution": "A plausible reason to look away; nowhere does he say he looked away from it."
+      },
+      {
+       "optionId": "cmsw2f4xn00rrtmbvgvsxxs8k",
+       "value": "He writes a still moor, but he gives it a mind of its own.",
+       "isKey": true,
+       "tag": null,
+       "execution": null
+      }
+     ],
+     "explanationPatch": {
+      "walkScript": "At line 4 the far-off hill is melancholy. At line 8 the moor is forbidding, and at line 20 the hills are sinister. At line 27 the rotting plants become sad gifts that Nature throws before the carriage."
+     }
+    },
+    "cannotFix": null,
+    "reviewOfChange": {
+     "ref": "rebuild:ENG-016-HB-12",
+     "verdict": "ATTEST",
+     "reason": "The false clause about nobody having spoken is removed. Line 28 has the gifts 'for Nature to throw before the carriage', and the new walk says 'before the carriage'. Lines 4 (melancholy), 8 (forbidding), 20 (sinister) and 27-28 (rotting vegetation, sad gifts) check."
+    },
+    "reviewOfRow": {
+     "itemId": "ENG-016-HB-12",
+     "verdict": "HOLD",
+     "holdFixed": true,
+     "reason": "The walk fault is gone. Held on the en-plausible-not-stated execution 'line 4 is grim in broad daylight'. No line says broad daylight, and the passage points the other way: line 19 has 'the evening sky' soon after the train, and line 24 'the sinking sun'. Also, hintCore 'Two of these are things the moor does' has no clear count: only the 'calm by day, cruel after dark' option is plainly something the moor does. That is the same kind of fault held on HB-02's old hint.",
+     "faultField": "execution"
+    }
+   },
+   "stem": {
+    "text": "Think about the whole passage. How does Watson write about the moor?",
+    "quotes": [],
+    "passageRef": "stream-a-12-hound-baskervilles",
+    "answerShape": "inert-land-set-against-a-mind-put-into-it",
+    "orderAnchor": 999,
+    "techniqueKey": "a-still-landscape-given-feelings-and-intentions-it-cannot-have"
+   },
+   "lineRefs": [],
+   "explanation": {
+    "hintCore": "Two of these are things the moor does. Check whether it does them.",
+    "walkScript": "At line 4 the hill is melancholy before anyone has said a word. At line 8 the moor is forbidding, and at line 20 the hills are sinister. At line 27 the fallen leaves become sad gifts that Nature throws at them."
+   },
+   "key": "He writes a still moor, but he gives it a mind of its own.",
+   "options": [
+    {
+     "optionId": "cmsw2f4xn00rotmbve306xibw",
+     "value": "He tells us the hills were jagged, and the wind was very cold.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "tagAttested": true,
+     "execution": "Reuses lines 20 and 41 and reports two details rather than anything the telling does."
+    },
+    {
+     "optionId": "cmsw2f4xn00rptmbvws2x44v9",
+     "value": "The moor is calm by day, but it turns cruel after dark.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "tagAttested": true,
+     "execution": "A tidy shape the passage never carries: line 4 is grim in broad daylight."
+    },
+    {
+     "optionId": "cmsw2f4xn00rqtmbv4zfms514",
+     "value": "He is afraid of the moor, so he keeps his eyes on the road.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "tagAttested": true,
+     "execution": "A plausible reason to look away; nowhere does he say he looked away from it."
+    },
+    {
+     "optionId": "cmsw2f4xn00rrtmbvgvsxxs8k",
+     "value": "He writes a still moor, but he gives it a mind of its own.",
+     "isKey": true,
+     "tag": null,
+     "tagAttested": null,
+     "execution": null
+    }
+   ]
+  }
+ ]
+}

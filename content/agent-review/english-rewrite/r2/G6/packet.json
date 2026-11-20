@@ -1,0 +1,2166 @@
+{
+ "door": "english-rewrite/r2/G6",
+ "round": 2,
+ "questionType": "english",
+ "ruling": "R1023",
+ "holds": {
+  "ENG-008-RC-05": {
+   "reason": "Key correct (lines 21-22). Faults: the attribute-transfer distractor surfaces tag hint 'Two people are being described', false here (two objects; library en-attribute-transfer wording, R586); walkScript says 'the other holds the bread' but line 23 has them with no bread ('if they had any').",
+   "faultField": "options"
+  },
+  "ENG-012-ML-07": {
+   "reason": "Distractor 'afraid that Tom will take both of the halves himself' is textually supported: Tom threatens 'else you sha'n't have any' (lines 31-32) and line 33 says her sacrifice 'did not extend so far' - she shut her eyes so as not to lose her share. Its execution 'Nothing gives her that fear' is false.",
+   "faultField": "options"
+  },
+  "ENG-012-ML-11": {
+   "reason": "Key 'Maggie cannot let it go' (and walk 'Only one of the two can put it down') is contradicted by lines 72-73, where after ten minutes 'resentment began to give way to the desire of reconciliation'.",
+   "faultField": "key"
+  },
+  "ENG-012-ML-12": {
+   "reason": "Every option refers to the writer as 'He'; George Eliot (Mary Ann Evans) was a woman - a factual error a child or parent may know. walkScript also calls the jam puff 'a bun'.",
+   "faultField": "options"
+  },
+  "ENG-022-GK-11": {
+   "reason": "walkScript's evidence for 'each time' does not hold: line 22 (four unsaveable) and line 26 (could have had it) do not go against his case; only line 7 against line 38 does. hintCore 'Look for the line where the writer gives a verdict' sends the child looking for a line that does not exist.",
+   "faultField": "walkScript"
+  }
+ },
+ "entries": {
+  "en-a-an-by-spelling": {
+   "description": "Chooses a/an by following letter rather than sound.",
+   "childHint": "Listen to the sound that starts the next word.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-agent-patient-reversal": {
+   "description": "Swaps who did or thought something, or who it was done to.",
+   "childHint": "Ask who is doing it and who it is being done to.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-apostrophe-possession": {
+   "description": "Misses possessive apostrophes; confuses its/it's.",
+   "childHint": "Ask whose it is. An owner needs an apostrophe straight after the owner word, like children's or boys'. Owner words like its, his, ours and theirs never have one. If you see it's, try swapping in 'it is'.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-article-avoids-the-sound-choice": {
+   "description": "On an a or an choice, picks the to avoid the vowel-sound judgement. The fits any noun without a sound decision, so the child reaches for the article that asks nothing of her ear.",
+   "childHint": "This gap wants a or an. Say the next word aloud. Which sound starts it?",
+   "approvalNote": null
+  },
+  "en-article-definiteness": {
+   "description": "Chooses between a, the and no article by habit, missing that the thing has already been named in the text or is one of a kind. Distinct from en-a-an-by-spelling, which is a sound judgement.",
+   "childHint": "Has the text named it already? That changes which little word fits.",
+   "approvalNote": "Second-pass returns: ten new proposals cleared, WIW-14 stem rewritten, mistag check completed across the remaining 69."
+  },
+  "en-attribute-transfer": {
+   "description": "Assigns a detail the text gives to one character or thing to another, or the right attribute at the wrong value.",
+   "childHint": "Check who or what each detail belongs to in the text.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-cause-agent-swap": {
+   "description": "Attributes the right event to the wrong cause or character.",
+   "childHint": "Ask who did this, or what caused it, in the text. Re-read the moment step by step.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-chronology-collapse": {
+   "description": "The child picks a cause that happens LATER in the passage than the effect being asked about. The two events are both real and both about the same people, so the option reads well; only the order rules it out.",
+   "childHint": "Check what happened first, and what the question asks for.",
+   "approvalNote": "Second-pass returns: ten new proposals cleared, WIW-14 stem rewritten, mistag check completed across the remaining 69."
+  },
+  "en-comma-subject-verb-split": {
+   "description": "Accepts a comma cutting subject from verb.",
+   "childHint": "Never let a single comma cut the do-er off from the doing.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-comparative-superlative-form": {
+   "description": "Errors in forming or choosing comparatives and superlatives: double marking (most fastest), the comparative used for a whole group, or the bare adjective after 'the'.",
+   "childHint": "Comparing two, or more than two? Then check the ending and the word before it are not both doing the job.",
+   "approvalNote": "Second-pass returns: ten new proposals cleared, WIW-14 stem rewritten, mistag check completed across the remaining 69. | DEDUPE RECORDED 2026-08-19: queue text survives, capped library text superseded and quoted in textProvenance."
+  },
+  "en-comparison-vehicle-misread": {
+   "description": "Child gives the quality of the thing a comparison compares TO, where the answer is the quality of the thing being described — reading the vehicle of a simile or metaphor as the subject.",
+   "childHint": "Find the two things being compared. The one being described is the one that matters.",
+   "approvalNote": "BOUNDARY vs en-attribute-transfer: both put a quality on the wrong holder. Attribute-transfer moves it BETWEEN CHARACTERS; this moves it from a comparison's VEHICLE to its SUBJECT. Different remedies, different hints."
+  },
+  "en-conjunction-logic": {
+   "description": "Chooses a conjunction with the wrong logical relation.",
+   "childHint": "Is the second idea a reason, a surprise, or just what happened next?",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-contraction-apostrophe": {
+   "description": "Omits or misplaces the apostrophe in a contraction: Youre for You're, dont for don't, wont for won't.",
+   "childHint": "Two words squeezed into one leave letters out. The apostrophe stands where the letters were.",
+   "approvalNote": null
+  },
+  "en-contradicted-by-the-text": {
+   "description": "Chooses an option the passage explicitly denies, rather than one it merely fails to support. Distinguished from a plausible option the passage never states: here the passage states the contrary. Negation-dropped loses a WORD; this loses a CLAIM, and the option may share no wording with the line that refutes it.",
+   "childHint": "The passage says something different. Go back and find it.",
+   "approvalNote": null
+  },
+  "en-coordination-wrong-conjunct": {
+   "description": "The target word sits in a coordination — X and Y, X as well as Y, X as Y, X beside Y — and the child attaches the meaning to the wrong conjunct. She takes the half of the pair she read last, or the half that is easier to picture, and glosses the target with it. The error is syntactic: she has parsed which item the word attaches to incorrectly, and the option she picks is usually TRUE of the other conjunct, which is why it survives a check against the passage.",
+   "childHint": "This word is joined to another one. Work out which of the two the question is asking about before you answer.",
+   "approvalNote": null
+  },
+  "en-determiner-omitted": {
+   "description": "Leaves the determiner out altogether before a singular countable noun, treating a, an and the as optional rather than required. Distinct from en-article-definiteness, which is a choice BETWEEN articles, and from en-a-an-by-spelling, which is a sound judgement.",
+   "childHint": "A single thing needs a word in front of it. Say the line aloud and listen.",
+   "approvalNote": null
+  },
+  "en-double-consonant-boundary": {
+   "description": "Guesses whether a consonant doubles when an ending is added, or doubles the wrong letter: begining for beginning, dissapointed for disappointed, stoped for stopped.",
+   "childHint": "Say the root word first, then add the beginning or ending. Check which letter really doubles.",
+   "approvalNote": "Second-pass returns: ten new proposals cleared, WIW-14 stem rewritten, mistag check completed across the remaining 69."
+  },
+  "en-emotion-label-approximation": {
+   "description": "Chooses an adjacent emotion word rather than the precisely evidenced one.",
+   "childHint": "Find the words in the text that show the feeling. Close is not the same.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-extreme-option-pull": {
+   "description": "Chooses always/never/impossible options when the text is measured.",
+   "childHint": "Does the passage really go that far? Check the strongest word in the option.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-figurative-taken-literally": {
+   "description": "Reads similes and idioms as literal events.",
+   "childHint": "Figures of speech are not facts. Ask what the words are really saying.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-homophone-by-sound": {
+   "description": "Spells the wrong member of a homophone pair; their/there/they're.",
+   "childHint": "Sound will not help with sound-alike words. Work out the meaning, then spell it from that.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-inference-literal-lookalike": {
+   "description": "Picks the option that reuses passage wording.",
+   "childHint": "Words copied from the passage can still miss the question. Ask what those words are telling you.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-minimal-pair-skim": {
+   "description": "Matches an option on gist when it differs from the text, or from the key, by a single word or detail.",
+   "childHint": "An answer can look almost like the text. Find what differs and check it against the text.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-modal-conditional-form": {
+   "description": "Mismatches the modal to its if-clause, or builds an impossible modal form: 'if we painted ... people will know', 'would knew', 'would be knowing'.",
+   "childHint": "An imagined if takes 'would'. A real if takes 'will'. In an imagined if, a past word like 'painted' without 'had' means now or later. 'Would have' is for imagining the past.",
+   "approvalNote": "Second-pass returns: ten new proposals cleared, WIW-14 stem rewritten, mistag check completed across the remaining 69."
+  },
+  "en-motive-invention": {
+   "description": "Attributes a plausible motive the text never supports.",
+   "childHint": "A reason has to be given, not guessed. Ask what the text says about why.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-n-option-avoidance": {
+   "description": "Never selects the no-mistake option in error-spotting.",
+   "childHint": "Check every part in turn. No mistake is a real answer, not a way out.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up. — REACHABILITY (annie, 2026-08-09): unreachable BY DESIGN in spag-punct-speech, which carries no N option at all (R33) — recorded as designed-out rather than unused, so a later coverage sweep does not read it as a gap and re-add the option. Reachable in the other EIGHT spot families, each keying N at a real rate."
+  },
+  "en-narrator-voice-as-fact": {
+   "description": "The child treats a crowd's opinion that the narrator reports in flat, certain sentences as the narrator's own verdict, and so takes it as settled truth rather than as something the text is quietly laughing at. Distinct from en-extreme-option-pull, which is about the pull of absolute wording; this one is about mistaking whose voice is speaking.",
+   "childHint": "Before you take this as true, ask whose opinion it is.",
+   "approvalNote": null
+  },
+  "en-negation-dropped": {
+   "description": "The passage carries an explicit negative — no, not, never, nothing, without, could not, sha'n't — and the option states the affirmative. The child has read the content words of the sentence and dropped the word that reverses them. Requires a negative WORD in a named line. A negation sustained across a whole text with no such word is en-whole-text-absence-asserted.",
+   "childHint": "A negative word can change the whole answer. Read the line again for one.",
+   "approvalNote": null
+  },
+  "en-paired-punctuation": {
+   "description": "Misses unclosed brackets or quotes.",
+   "childHint": "Brackets come in pairs, like shoes. Hunt for the partner.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-parallel-read-as-sequence": {
+   "description": "The child reads two parallel descriptions of one thing as two moments in time. Where a writer gives the same subject twice — two ways of seeing it, two accounts of it, two things it is at once — she converts the pair into a sequence and looks for what changed between them. Nothing changed. What differs is the vantage, not the subject, and the relation between the two descriptions is what the question asks for.",
+   "childHint": "These two descriptions are of the same thing at the same time. Ask what is different about who is looking.",
+   "approvalNote": "RESTATED, NOT RECOVERED (Annie, 2026-08-16). Approved 8 August; no row existed in either store. Her line, which settles a CLASS rather than this instance: if a copy of the 8 August original turns up later and differs, THIS VERSION IS THE APPROVED ONE, because it is the one that exists. A restated approval outranks a recovered one. Proposed on ENG-004-AGG-08 option A — lines 35-40 give what an ordinary observer would see, 41-46 what an extraordinary one might: same girl, same moment, two watchers."
+  },
+  "en-physical-vs-emotional-cue": {
+   "description": "Gives a physical cause, from the body or body-language, when the text signals a feeling.",
+   "childHint": "Look past what the body is doing. Check what the character is feeling right then.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-plausible-not-stated": {
+   "description": "Picks real-world-plausible options the passage never states, especially motives.",
+   "childHint": "Sounding sensible is not enough. Find the line that proves it.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-preposition-collocation": {
+   "description": "Chooses a preposition that is close in meaning but does not go with the verb: returned on the shelf, listened at the teacher.",
+   "childHint": "Say the whole phrase in your head. Which little word does this verb usually take?",
+   "approvalNote": "Second-pass returns: ten new proposals cleared, WIW-14 stem rewritten, mistag check completed across the remaining 69."
+  },
+  "en-question-tag-polarity": {
+   "description": "Repeats instead of flipping polarity in question tags; mismatches the auxiliary.",
+   "childHint": "A tag flips the sentence. A positive sentence takes a negative tag. If there is no helper verb, use do, does or did.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-relation-word-flipped": {
+   "description": "The child reads a word that names a relationship between two things (contrast, unless, however, instead of) as its opposite, usually as plain 'and' or 'the same as'. The result is an option that keeps every fact but reverses how the facts sit together.",
+   "childHint": "Some words tell you how two things go together. Find that word and read it again.",
+   "approvalNote": "Second-pass returns: ten new proposals cleared, WIW-14 stem rewritten, mistag check completed across the remaining 69."
+  },
+  "en-relative-pronoun-choice": {
+   "description": "Picks a relative pronoun by habit rather than by what it stands for: which for people, whose in place of who, whom in a subject slot.",
+   "childHint": "Ask what the joining word stands for — a person, a thing, or something belonging to someone.",
+   "approvalNote": null
+  },
+  "en-repetition-purpose": {
+   "description": "Cannot say why a writer repeats words; defaults to literal or dismissive readings.",
+   "childHint": "Writers repeat on purpose. Ask what the echo does to the reader.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-silent-letter-dropped": {
+   "description": "Drops silent letters when spelling.",
+   "childHint": "A letter can be there without being heard. Spell it out, do not sound it out.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-speech-punctuation-inside": {
+   "description": "Places a quoted question's mark outside the speech marks.",
+   "childHint": "The question belongs to the spoken words. Keep the mark inside.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-spelling-form-lookalike": {
+   "description": "Accepts or writes a word's visual near-twin: quiet for quite, dairy for diary, angel for angle, loose for lose.",
+   "childHint": "Two words can look almost the same. Read the middle letters slowly, not the shape.",
+   "approvalNote": null
+  },
+  "en-subject-verb-agreement-by-proximity": {
+   "description": "Agrees the verb with the nearest noun instead of the true subject, usually across an of-phrase: 'the row of new labels were'.",
+   "childHint": "Ignore the of-part. Match the verb to what is left.",
+   "approvalNote": "Second-pass returns: ten new proposals cleared, WIW-14 stem rewritten, mistag check completed across the remaining 69. | DEDUPE RECORDED 2026-08-19: queue text survives, capped library text superseded and quoted in textProvenance."
+  },
+  "en-technique-device-confusion": {
+   "description": "Child gives \"metaphor\" for a comparison using \"like\" where the answer is simile, naming a device of the right family and the wrong kind.",
+   "childHint": "Does the line say like or as? A comparison using those words is a simile.",
+   "approvalNote": null
+  },
+  "en-technique-effect-mislocated": {
+   "description": "Child gives the effect of an earlier or neighbouring part of the passage where the answer is the effect of the quoted phrase, reading past the words under test.",
+   "childHint": "Find the exact words the question quotes. Answer about those words only.",
+   "approvalNote": null
+  },
+  "en-technique-intent-as-character": {
+   "description": "Child gives \"the boy feels tense\" where the answer is that the writer builds tension, treating the writer's choice as the character's state.",
+   "childHint": "Ask who is doing this. Is it the writer, or the character?",
+   "approvalNote": "annie: the single most consequential comprehension misunderstanding — invest here."
+  },
+  "en-technique-structure-effect-blind": {
+   "description": "Child gives what the words say where the answer is what their shape does (a short sentence makes a moment land suddenly; a count that grows or shrinks builds a pattern), reading content where the question asks about shape.",
+   "childHint": "Notice how the writer has built it, not just what it says. What does that do for the reader?",
+   "approvalNote": "annie: structure had NO tag — one-word paragraphs and lists of three were untaggable. Invest here."
+  },
+  "en-tense-sequence": {
+   "description": "Uses simple past where prior events need 'had'; drifts tense mid-narrative.",
+   "childHint": "Did it happen before the story-moment? Then you usually need 'had' and the verb. If not, keep to the same tense as the story around it.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-terminal-punctuation-blind": {
+   "description": "Accepts a full stop on a question; misses run-ons and missing boundaries.",
+   "childHint": "Read it in your head. Where your voice would stop or ask, the punctuation must match.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-unstressed-medial-vowel": {
+   "description": "Guesses a vowel in an unstressed syllable inside a word: regester for register. Scoped to the ERROR. Distinct from en-unstressed-suffix-vowel, whose vowel surfaces when the stress shifts (definite/definition); a medial vowel has no family word that stresses it, so the remediation is the spelling pattern — minister, sinister, register.",
+   "childHint": "A quiet middle vowel is still a letter. Say the word in parts and choose it.",
+   "approvalNote": null
+  },
+  "en-unstressed-suffix-vowel": {
+   "description": "Guesses between -ant/-ent, -ance/-ence, -ary/-ory/-ery.",
+   "childHint": "Many words ending -ant or -ent have a partner ending -ance or -ence. The partner almost always keeps the same vowel, like assistant and assistance. For -ary, -ery or -ory, a family word may help, like librarian for library.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-vocab-built-from-parts": {
+   "description": "The child takes the word apart into parts she has met in other words and sums them. She has not mistaken which word it is — she has taken it apart, and the parts are real while the sum is not the word. Scoped to the ERROR, not to vocabulary items.",
+   "childHint": "The parts of a word do not always add up. Check the whole word in the sentence.",
+   "approvalNote": null
+  },
+  "en-vocab-dominant-sense": {
+   "description": "The child applies the word's commonest everyday sense in a context that does not support it. The sense chosen is a real sense of the same word; it is simply the one that arrives first, and the sentence around the word is what should have displaced it. Scoped to the ERROR, not to vocabulary items: it occurs wherever a word's sense is load-bearing, including on technique stems.",
+   "childHint": "Words can have more than one meaning. Check that the meaning you used fits what the sentence is saying here.",
+   "approvalNote": "Hint READ from the authored field in her own document, character for character, never retyped. Supersedes en-vocab-secondary-sense. | SCOPING RULED 2026-08-16 (Annie): the tag is scoped to the ERROR, not to vocabulary items — it occurs wherever a word’s sense is load-bearing, including on technique stems. Her own 8 August ruling applied to this entry; the sentence had lived only in the drafting store until 16 August."
+  },
+  "en-vocab-form-lookalike": {
+   "description": "The meaning the child chooses belongs to a DIFFERENT WORD that the target resembles in form, or to a morpheme she has met in other words. She has not chosen among the target's senses at all — she has misidentified the word. Scoped to the ERROR, not to vocabulary items.",
+   "childHint": "This word looks like one you know. Read it letter by letter and check it is the same word.",
+   "approvalNote": null
+  },
+  "en-vocab-neighbouring-sense": {
+   "description": "The child chooses another genuine sense of the same word, neither the commonest one nor the one the passage fixes. The option is defensible in isolation and is ruled out only by the surrounding text, so the child gets no signal that anything is wrong. This holds only where the surrounding text fixes the sense decisively. Where it does not, the option is a defensible second answer and the item is faulty rather than hard. Scoped to the ERROR, not to vocabulary items.",
+   "childHint": "More than one meaning fits this word. Find the words nearby that decide which one it has to be.",
+   "approvalNote": null
+  },
+  "en-vocab-not-this-word": {
+   "description": "Picks a meaning that belongs to no sense of the word and to no word it resembles in form.",
+   "childHint": "This word never means that. Put your answer in its place. Read the sentence again.",
+   "approvalNote": null
+  },
+  "en-whole-text-absence-asserted": {
+   "description": "The passage sustains an ABSENCE across its whole length — it never states a feeling, never names a motive, never gives a verdict — and the option asserts the withheld thing as though it were there. There is no negative word to drop, because the negation is a property of the text rather than of any line: the child has failed to notice something maintained across sixty lines, not misread a word in one. Characteristically the option is defeated by no single line and only by the absence itself, so its disposal must cite the SPAN of the withholding rather than a disposal point.",
+   "childHint": "Choose a line number for the option you like. If you cannot find one anywhere in the passage, that option is not it.",
+   "approvalNote": null
+  },
+  "en-within-span-wrong-element": {
+   "description": "The option states something that is true inside the cited window and answers a different question from the one asked. The child has located the right lines and taken the wrong element out of them. A named sub-route is the WRONG SPEAKER: the material is inside the window but belongs to the other party in an exchange — one child's answer offered where the other child's instruction was asked for. The cure is the same in both cases, so the sub-route shares this hint.",
+   "childHint": "Being in the lines is not enough. Check it answers the question you were asked.",
+   "approvalNote": null
+  },
+  "en-word-class-by-ending": {
+   "description": "Classifies words by suffix rather than sentence job; participial adjective traps.",
+   "childHint": "Ask what job the word does in this sentence. Is it describing, or is it the action? If it describes, is the thing doing the action or having it done to it?",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-wrong-scope-retrieval": {
+   "description": "Answers from a detail in the wrong part of the passage.",
+   "childHint": "Something from another part of the passage does not answer this question. Find the part the question points to.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  }
+ },
+ "passages": {
+  "stream-a-02-railway-children": {
+   "id": "stream-a-02-railway-children",
+   "work": {
+    "author": "E. Nesbit",
+    "title": "The Railway Children",
+    "firstPublished": 1906,
+    "authorDied": 1924
+   },
+   "sceneTitle": "The First Morning at the New House",
+   "preamble": "Roberta, Peter and Phyllis have just moved with their mother from a comfortable town house to an old cottage in the country. They arrived late at night, tired and hungry, and there are no servants to help any more.",
+   "numberedLines": [
+    {
+     "n": 1,
+     "text": "Next morning Roberta woke Phyllis by pulling her hair gently, but quite enough for her",
+     "label": ""
+    },
+    {
+     "n": 2,
+     "text": "purpose.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 3,
+     "text": "“Wassermarrer?” asked Phyllis, still almost wholly asleep.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 4,
+     "text": "“Wake up! wake up!” said Roberta. “We're in the new house--don't you remember? No",
+     "label": ""
+    },
+    {
+     "n": 5,
+     "text": "servants or anything. Let's get up and begin to be useful. We'll just creep down mouse-",
+     "label": "5"
+    },
+    {
+     "n": 6,
+     "text": "quietly, and have everything beautiful before Mother gets up. I've woke Peter. He'll be",
+     "label": ""
+    },
+    {
+     "n": 7,
+     "text": "dressed as soon as we are.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 8,
+     "text": "So they dressed quietly and quickly. Of course, there was no water in their room, so",
+     "label": ""
+    },
+    {
+     "n": 9,
+     "text": "when they got down they washed as much as they thought was necessary under the spout of",
+     "label": ""
+    },
+    {
+     "n": 10,
+     "text": "the pump in the yard. One pumped and the other washed. It was splashy but interesting.",
+     "label": "10"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 11,
+     "text": "“It's much more fun than basin washing,” said Roberta. “How sparkly the weeds are",
+     "label": ""
+    },
+    {
+     "n": 12,
+     "text": "between the stones, and the moss on the roof--oh, and the flowers!”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 13,
+     "text": "The roof of the back kitchen sloped down quite low. It was made of thatch and it had",
+     "label": ""
+    },
+    {
+     "n": 14,
+     "text": "moss on it, and house-leeks and stonecrop and wallflowers, and even a clump of purple",
+     "label": ""
+    },
+    {
+     "n": 15,
+     "text": "flag-flowers, at the far corner.",
+     "label": "15"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 16,
+     "text": "“This is far, far, far and away prettier than Edgecombe Villa,” said Phyllis. “I wonder",
+     "label": ""
+    },
+    {
+     "n": 17,
+     "text": "what the garden's like.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 18,
+     "text": "“We mustn't think of the garden yet,” said Roberta, with earnest energy. “Let's go in",
+     "label": ""
+    },
+    {
+     "n": 19,
+     "text": "and begin to work.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 20,
+     "text": "They lighted the fire and put the kettle on, and they arranged the crockery for",
+     "label": "20"
+    },
+    {
+     "n": 21,
+     "text": "breakfast; they could not find all the right things, but a glass ash-tray made an",
+     "label": ""
+    },
+    {
+     "n": 22,
+     "text": "excellent salt-cellar, and a newish baking-tin seemed as if it would do to put bread on,",
+     "label": ""
+    },
+    {
+     "n": 23,
+     "text": "if they had any.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 24,
+     "text": "When there seemed to be nothing more that they could do, they went out again into the",
+     "label": ""
+    },
+    {
+     "n": 25,
+     "text": "fresh bright morning.",
+     "label": "25"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 26,
+     "text": "“We'll go into the garden now,” said Peter. But somehow they couldn't find the garden.",
+     "label": ""
+    },
+    {
+     "n": 27,
+     "text": "They went round the house and round the house. The yard occupied the back, and across it",
+     "label": ""
+    },
+    {
+     "n": 28,
+     "text": "were stables and outbuildings. On the other three sides the house stood simply in a",
+     "label": ""
+    },
+    {
+     "n": 29,
+     "text": "field, without a yard of garden to divide it from the short smooth turf. And yet they",
+     "label": ""
+    },
+    {
+     "n": 30,
+     "text": "had certainly seen the garden wall the night before.",
+     "label": "30"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 31,
+     "text": "It was a hilly country. Down below they could see the line of the railway, and the black",
+     "label": ""
+    },
+    {
+     "n": 32,
+     "text": "yawning mouth of a tunnel. The station was out of sight. There was a great bridge with",
+     "label": ""
+    },
+    {
+     "n": 33,
+     "text": "tall arches running across one end of the valley.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 34,
+     "text": "“Never mind the garden,” said Peter; “let's go down and look at the railway. There might",
+     "label": ""
+    },
+    {
+     "n": 35,
+     "text": "be trains passing.”",
+     "label": "35"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 36,
+     "text": "“We can see them from here,” said Roberta, slowly; “let's sit down a bit.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 37,
+     "text": "So they all sat down on a great flat grey stone that had pushed itself up out of the",
+     "label": ""
+    },
+    {
+     "n": 38,
+     "text": "grass; it was one of many that lay about on the hillside, and when Mother came out to",
+     "label": ""
+    },
+    {
+     "n": 39,
+     "text": "look for them at eight o'clock, she found them deeply asleep in a contented, sun-warmed",
+     "label": ""
+    },
+    {
+     "n": 40,
+     "text": "bunch.",
+     "label": "40"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 41,
+     "text": "They had made an excellent fire, and had set the kettle on it at about half-past five.",
+     "label": ""
+    },
+    {
+     "n": 42,
+     "text": "So that by eight the fire had been out for some time, the water had all boiled away, and",
+     "label": ""
+    },
+    {
+     "n": 43,
+     "text": "the bottom was burned out of the kettle. Also they had not thought of washing the",
+     "label": ""
+    },
+    {
+     "n": 44,
+     "text": "crockery before they set the table.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 45,
+     "text": "“But it doesn't matter--the cups and saucers, I mean,” said Mother. “Because I've found",
+     "label": "45"
+    },
+    {
+     "n": 46,
+     "text": "another room--I'd quite forgotten there was one. And it's magic! And I've boiled the",
+     "label": ""
+    },
+    {
+     "n": 47,
+     "text": "water for tea in a saucepan.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 48,
+     "text": "The forgotten room opened out of the kitchen. In the agitation and half darkness the",
+     "label": ""
+    },
+    {
+     "n": 49,
+     "text": "night before its door had been mistaken for a cupboard's. It was a little square room,",
+     "label": ""
+    },
+    {
+     "n": 50,
+     "text": "and on its table, all nicely set out, was a joint of cold roast beef, with bread,",
+     "label": "50"
+    },
+    {
+     "n": 51,
+     "text": "butter, cheese, and a pie.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 52,
+     "text": "“Pie for breakfast!” cried Peter; “how perfectly ripping!”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 53,
+     "text": "“It isn't pigeon-pie,” said Mother; “it's only apple. Well, this is the supper we ought",
+     "label": ""
+    },
+    {
+     "n": 54,
+     "text": "to have had last night. And there was a note from Mrs. Viney. Her son-in-law has broken",
+     "label": ""
+    },
+    {
+     "n": 55,
+     "text": "his arm, and she had to get home early. She's coming this morning at ten.”",
+     "label": "55"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 56,
+     "text": "That was a wonderful breakfast. It is unusual to begin the day with cold apple pie, but",
+     "label": ""
+    },
+    {
+     "n": 57,
+     "text": "the children all said they would rather have it than meat.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 58,
+     "text": "“You see it's more like dinner than breakfast to us,” said Peter, passing his plate for",
+     "label": ""
+    },
+    {
+     "n": 59,
+     "text": "more, “because we were up so early.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 60,
+     "text": "The day passed in helping Mother to unpack and arrange things. Six small legs quite",
+     "label": "60"
+    },
+    {
+     "n": 61,
+     "text": "ached with running about while their owners carried clothes and crockery and all sorts",
+     "label": ""
+    },
+    {
+     "n": 62,
+     "text": "of things to their proper places. It was not till quite late in the afternoon that",
+     "label": ""
+    },
+    {
+     "n": 63,
+     "text": "Mother said:--",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 64,
+     "text": "“There! That'll do for to-day. I'll lie down for an hour, so as to be as fresh as a lark",
+     "label": ""
+    },
+    {
+     "n": 65,
+     "text": "by supper-time.”",
+     "label": "65"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 66,
+     "text": "Then they all looked at each other. Each of the three expressive countenances expressed",
+     "label": ""
+    },
+    {
+     "n": 67,
+     "text": "the same thought. That thought was double, and consisted, like the bits of information",
+     "label": ""
+    },
+    {
+     "n": 68,
+     "text": "in the Child's Guide to Knowledge, of a question and an answer.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 69,
+     "text": "Q. Where shall we go?",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 70,
+     "text": "A. To the railway.",
+     "label": "70"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 71,
+     "text": "So to the railway they went, and as soon as they started for the railway they saw where",
+     "label": ""
+    },
+    {
+     "n": 72,
+     "text": "the garden had hidden itself. It was right behind the stables, and it had a high wall",
+     "label": ""
+    },
+    {
+     "n": 73,
+     "text": "all round.",
+     "label": ""
+    }
+   ]
+  },
+  "stream-a-14-mill-on-floss": {
+   "id": "stream-a-14-mill-on-floss",
+   "work": {
+    "author": "George Eliot",
+    "title": "The Mill on the Floss",
+    "firstPublished": 1860,
+    "authorDied": 1880
+   },
+   "sceneTitle": "Tom and Maggie Divide the Last Jam Puff",
+   "preamble": "Tom and Maggie Tulliver are a brother and sister who live at a country mill. Tomorrow all their aunts and uncles are coming to dinner, and today the kitchen is full of baking.",
+   "numberedLines": [
+    {
+     "n": 1,
+     "text": "On Wednesday, the day before the aunts and uncles were coming, there were such various",
+     "label": ""
+    },
+    {
+     "n": 2,
+     "text": "and suggestive scents, as of plumcakes in the oven and jellies in the hot state, mingled",
+     "label": ""
+    },
+    {
+     "n": 3,
+     "text": "with the aroma of gravy, that it was impossible to feel altogether gloomy: there was",
+     "label": ""
+    },
+    {
+     "n": 4,
+     "text": "hope in the air. Tom and Maggie made several inroads into the kitchen, and, like other",
+     "label": ""
+    },
+    {
+     "n": 5,
+     "text": "marauders, were induced to keep aloof for a time only by being allowed to carry away a",
+     "label": "5"
+    },
+    {
+     "n": 6,
+     "text": "sufficient load of booty.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 7,
+     "text": "“Tom,” said Maggie, as they sat on the boughs of the elder-tree, eating their jam-puffs,",
+     "label": ""
+    },
+    {
+     "n": 8,
+     "text": "“shall you run away to-morrow?”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 9,
+     "text": "“No,” said Tom, slowly, when he had finished his puff, and was eying the third, which",
+     "label": ""
+    },
+    {
+     "n": 10,
+     "text": "was to be divided between them,—“no, I sha’n’t.”",
+     "label": "10"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 11,
+     "text": "“Why, Tom? Because Lucy’s coming?”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 12,
+     "text": "“No,” said Tom, opening his pocket-knife and holding it over the puff, with his head on",
+     "label": ""
+    },
+    {
+     "n": 13,
+     "text": "one side in a dubitative manner. (It was a difficult problem to divide that very",
+     "label": ""
+    },
+    {
+     "n": 14,
+     "text": "irregular polygon into two equal parts.) “What do I care about Lucy? She’s only a",
+     "label": ""
+    },
+    {
+     "n": 15,
+     "text": "girl,—she can’t play at bandy.”",
+     "label": "15"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 16,
+     "text": "“Is it the tipsy-cake, then?” said Maggie, exerting her hypothetic powers, while she",
+     "label": ""
+    },
+    {
+     "n": 17,
+     "text": "leaned forward toward Tom with her eyes fixed on the hovering knife.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 18,
+     "text": "“No, you silly, that’ll be good the day after. It’s the pudden. I know what the pudden’s",
+     "label": ""
+    },
+    {
+     "n": 19,
+     "text": "to be,—apricot roll-up—O my buttons!”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 20,
+     "text": "With this interjection, the knife descended on the puff, and it was in two, but the",
+     "label": "20"
+    },
+    {
+     "n": 21,
+     "text": "result was not satisfactory to Tom, for he still eyed the halves doubtfully. At last he",
+     "label": ""
+    },
+    {
+     "n": 22,
+     "text": "said,—",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 23,
+     "text": "“Shut your eyes, Maggie.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 24,
+     "text": "“What for?”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 25,
+     "text": "“You never mind what for. Shut ’em when I tell you.”",
+     "label": "25"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 26,
+     "text": "Maggie obeyed.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 27,
+     "text": "“Now, which’ll you have, Maggie,—right hand or left?”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 28,
+     "text": "“I’ll have that with the jam run out,” said Maggie, keeping her eyes shut to please Tom.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 29,
+     "text": "“Why, you don’t like that, you silly. You may have it if it comes to you fair, but I",
+     "label": ""
+    },
+    {
+     "n": 30,
+     "text": "sha’n’t give it you without. Right or left,—you choose, now. Ha-a-a!” said Tom, in a",
+     "label": "30"
+    },
+    {
+     "n": 31,
+     "text": "tone of exasperation, as Maggie peeped. “You keep your eyes shut, now, else you sha’n’t",
+     "label": ""
+    },
+    {
+     "n": 32,
+     "text": "have any.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 33,
+     "text": "Maggie’s power of sacrifice did not extend so far; indeed, I fear she cared less that",
+     "label": ""
+    },
+    {
+     "n": 34,
+     "text": "Tom should enjoy the utmost possible amount of puff, than that he should be pleased with",
+     "label": ""
+    },
+    {
+     "n": 35,
+     "text": "her for giving him the best bit. So she shut her eyes quite close, till Tom told her to",
+     "label": "35"
+    },
+    {
+     "n": 36,
+     "text": "“say which,” and then she said, “Left hand.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 37,
+     "text": "“You’ve got it,” said Tom, in rather a bitter tone.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 38,
+     "text": "“What! the bit with the jam run out?”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 39,
+     "text": "“No; here, take it,” said Tom, firmly, handing, decidedly the best piece to Maggie.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 40,
+     "text": "“Oh, please, Tom, have it; I don’t mind—I like the other; please take this.”",
+     "label": "40"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 41,
+     "text": "“No, I sha’n’t,” said Tom, almost crossly, beginning on his own inferior piece.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 42,
+     "text": "Maggie, thinking it was no use to contend further, began too, and ate up her half puff",
+     "label": ""
+    },
+    {
+     "n": 43,
+     "text": "with considerable relish as well as rapidity. But Tom had finished first, and had to",
+     "label": ""
+    },
+    {
+     "n": 44,
+     "text": "look on while Maggie ate her last morsel or two, feeling in himself a capacity for more.",
+     "label": ""
+    },
+    {
+     "n": 45,
+     "text": "Maggie didn’t know Tom was looking at her; she was seesawing on the elder-bough, lost to",
+     "label": "45"
+    },
+    {
+     "n": 46,
+     "text": "almost everything but a vague sense of jam and idleness.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 47,
+     "text": "“Oh, you greedy thing!” said Tom, when she had swallowed the last morsel. He was",
+     "label": ""
+    },
+    {
+     "n": 48,
+     "text": "conscious of having acted very fairly, and thought she ought to have considered this,",
+     "label": ""
+    },
+    {
+     "n": 49,
+     "text": "and made up to him for it. He would have refused a bit of hers beforehand, but one is",
+     "label": ""
+    },
+    {
+     "n": 50,
+     "text": "naturally at a different point of view before and after one’s own share of puff is",
+     "label": "50"
+    },
+    {
+     "n": 51,
+     "text": "swallowed.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 52,
+     "text": "Maggie turned quite pale. “Oh, Tom, why didn’t you ask me?”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 53,
+     "text": "“I wasn’t going to ask you for a bit, you greedy. You might have thought of it without,",
+     "label": ""
+    },
+    {
+     "n": 54,
+     "text": "when you knew I gave you the best bit.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 55,
+     "text": "“But I wanted you to have it; you know I did,” said Maggie, in an injured tone.",
+     "label": "55"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 56,
+     "text": "“Yes, but I wasn’t going to do what wasn’t fair, like Spouncer. He always takes the best",
+     "label": ""
+    },
+    {
+     "n": 57,
+     "text": "bit, if you don’t punch him for it; and if you choose the best with your eyes shut, he",
+     "label": ""
+    },
+    {
+     "n": 58,
+     "text": "changes his hands. But if I go halves, I’ll go ’em fair; only I wouldn’t be a greedy.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 59,
+     "text": "With this cutting innuendo, Tom jumped down from his bough, and threw a stone with a",
+     "label": ""
+    },
+    {
+     "n": 60,
+     "text": "“hoigh!” as a friendly attention to Yap, who had also been looking on while the eatables",
+     "label": "60"
+    },
+    {
+     "n": 61,
+     "text": "vanished, with an agitation of his ears and feelings which could hardly have been",
+     "label": ""
+    },
+    {
+     "n": 62,
+     "text": "without bitterness. Yet the excellent dog accepted Tom’s attention with as much alacrity",
+     "label": ""
+    },
+    {
+     "n": 63,
+     "text": "as if he had been treated quite generously.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 64,
+     "text": "But Maggie, gifted with that superior power of misery which distinguishes the human",
+     "label": ""
+    },
+    {
+     "n": 65,
+     "text": "being, and places him at a proud distance from the most melancholy chimpanzee, sat still",
+     "label": "65"
+    },
+    {
+     "n": 66,
+     "text": "on her bough, and gave herself up to the keen sense of unmerited reproach. She would",
+     "label": ""
+    },
+    {
+     "n": 67,
+     "text": "have given the world not to have eaten all her puff, and to have saved some of it for",
+     "label": ""
+    },
+    {
+     "n": 68,
+     "text": "Tom. Not but that the puff was very nice, for Maggie’s palate was not at all obtuse, but",
+     "label": ""
+    },
+    {
+     "n": 69,
+     "text": "she would have gone without it many times over, sooner than Tom should call her greedy",
+     "label": ""
+    },
+    {
+     "n": 70,
+     "text": "and be cross with her. And he had said he wouldn’t have it, and she ate it without",
+     "label": "70"
+    },
+    {
+     "n": 71,
+     "text": "thinking; how could she help it? The tears flowed so plentifully that Maggie saw nothing",
+     "label": ""
+    },
+    {
+     "n": 72,
+     "text": "around her for the next ten minutes; but by that time resentment began to give way to",
+     "label": ""
+    },
+    {
+     "n": 73,
+     "text": "the desire of reconciliation, and she jumped from her bough to look for Tom.",
+     "label": ""
+    }
+   ]
+  },
+  "stream-c-01": {
+   "id": "stream-c-01",
+   "numberedLines": [
+    {
+     "n": 1,
+     "text": "I get there first, every break.",
+     "label": "1"
+    },
+    {
+     "n": 2,
+     "text": "You have to, for the jumpers.",
+     "label": "2"
+    },
+    {
+     "n": 3,
+     "text": "Two at their end, two at ours,",
+     "label": "3"
+    },
+    {
+     "n": 4,
+     "text": "paced out with your feet so it's fair,",
+     "label": "4"
+    },
+    {
+     "n": 5,
+     "text": "so nobody argues later when the ball",
+     "label": "5"
+    },
+    {
+     "n": 6,
+     "text": "goes by the post and Kieran swears it was in.",
+     "label": "6"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 7,
+     "text": "I put myself in goal. Nobody put me there.",
+     "label": "7"
+    },
+    {
+     "n": 8,
+     "text": "Dan does the picking because it's his ball,",
+     "label": "8"
+    },
+    {
+     "n": 9,
+     "text": "and he said, anyone, and I said, me,",
+     "label": "9"
+    },
+    {
+     "n": 10,
+     "text": "and he said, fine, go in.",
+     "label": "10"
+    },
+    {
+     "n": 11,
+     "text": "So that's me choosing.",
+     "label": "11"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 12,
+     "text": "You can see everything from this end.",
+     "label": "12"
+    },
+    {
+     "n": 13,
+     "text": "That's the bit people don't get.",
+     "label": "13"
+    },
+    {
+     "n": 14,
+     "text": "Up there in the middle you spend the whole game",
+     "label": "14"
+    },
+    {
+     "n": 15,
+     "text": "running at the back of somebody's head.",
+     "label": "15"
+    },
+    {
+     "n": 16,
+     "text": "Back here I know who's tired,",
+     "label": "16"
+    },
+    {
+     "n": 17,
+     "text": "who's got a stitch and won't say it,",
+     "label": "17"
+    },
+    {
+     "n": 18,
+     "text": "who does the same trick every single time,",
+     "label": "18"
+    },
+    {
+     "n": 19,
+     "text": "who looks at the ball too long before he goes.",
+     "label": "19"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 20,
+     "text": "Fourteen went past me last Tuesday.",
+     "label": "20"
+    },
+    {
+     "n": 21,
+     "text": "I'm not ashamed of fourteen.",
+     "label": "21"
+    },
+    {
+     "n": 22,
+     "text": "Four of them nobody alive could have saved.",
+     "label": "22"
+    },
+    {
+     "n": 23,
+     "text": "One I let in on purpose, because Reece",
+     "label": "23"
+    },
+    {
+     "n": 24,
+     "text": "has never scored in his life,",
+     "label": "24"
+    },
+    {
+     "n": 25,
+     "text": "and you should have seen him after.",
+     "label": "25"
+    },
+    {
+     "n": 26,
+     "text": "I could have had it. I had my hands",
+     "label": "26"
+    },
+    {
+     "n": 27,
+     "text": "on it.",
+     "label": "27"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 28,
+     "text": "My mum asked if I ever get a go up front.",
+     "label": "28"
+    },
+    {
+     "n": 29,
+     "text": "I told her I don't want one.",
+     "label": "29"
+    },
+    {
+     "n": 30,
+     "text": "She said all right then, love.",
+     "label": "30"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 31,
+     "text": "Their end has proper netting,",
+     "label": "31"
+    },
+    {
+     "n": 32,
+     "text": "knotted stuff the caretaker put up in March.",
+     "label": "32"
+    },
+    {
+     "n": 33,
+     "text": "Ours is two jumpers and the air between them.",
+     "label": "33"
+    },
+    {
+     "n": 34,
+     "text": "We still say net.",
+     "label": "34"
+    },
+    {
+     "n": 35,
+     "text": "It hit the net. It's in the net.",
+     "label": "35"
+    },
+    {
+     "n": 36,
+     "text": "Nobody has ever once said",
+     "label": "36"
+    },
+    {
+     "n": 37,
+     "text": "there isn't one.",
+     "label": "37"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 38,
+     "text": "Dan picked me eighth last week. Out of eight.",
+     "label": "38"
+    },
+    {
+     "n": 39,
+     "text": "He was being funny. I laughed as well.",
+     "label": "39"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 40,
+     "text": "Bell goes. I collect the jumpers,",
+     "label": "40"
+    },
+    {
+     "n": 41,
+     "text": "mine, Reece's, Kieran's, the two blue ones,",
+     "label": "41"
+    },
+    {
+     "n": 42,
+     "text": "and stack them by the fence for tomorrow.",
+     "label": "42"
+    },
+    {
+     "n": 43,
+     "text": "I'm not shifting out of there.",
+     "label": "43"
+    },
+    {
+     "n": 44,
+     "text": "Somebody has to keep the goal.",
+     "label": "44"
+    }
+   ]
+  }
+ },
+ "rows": [
+  {
+   "itemId": "ENG-008-RC-05",
+   "questionType": "en-comp-retrieval",
+   "difficultyTier": 2,
+   "passageRef": "stream-a-02-railway-children",
+   "passageRefMissing": false,
+   "hold": {
+    "reason": "Key correct (lines 21-22). Faults: the attribute-transfer distractor surfaces tag hint 'Two people are being described', false here (two objects; library en-attribute-transfer wording, R586); walkScript says 'the other holds the bread' but line 23 has them with no bread ('if they had any').",
+    "faultField": "options"
+   },
+   "previousRound": {
+    "proposal": {
+     "itemId": "ENG-008-RC-05",
+     "why": "Two faults. (1) Tag hint: the en-attribute-transfer entry offered in this packet now reads 'Check who or what each detail belongs to in the text.', which is true of two objects, so the tag still names the mistake (the two objects' jobs swapped) and the option and its execution stay as they are. (2) walkScript said 'the other holds the bread', but line 23 says 'if they had any'. Rewrote the walk so the baking-tin is only for putting bread on, and line 23's point is that they may have no bread.",
+     "stem": {
+      "text": "Read lines 20 to 23. What do the children use for the table?",
+      "quotes": [],
+      "passageRef": "stream-a-02-railway-children",
+      "orderAnchor": 20
+     },
+     "options": [
+      {
+       "optionId": "cmsw2f4va00dotmbv19ddd21z",
+       "value": "A glass ash-tray for salt, and a baking-tin for bread.",
+       "isKey": true,
+       "tag": null,
+       "execution": null
+      },
+      {
+       "optionId": "cmsw2f4va00dptmbvl6k07a72",
+       "value": "A baking-tin for salt, and a glass ash-tray for bread.",
+       "isKey": false,
+       "tag": "en-attribute-transfer",
+       "execution": "Both objects sit in lines 21 and 22, with their jobs the other way round."
+      },
+      {
+       "optionId": "cmsw2f4va00dqtmbvbukacfvc",
+       "value": "They find all the right things and lay them out.",
+       "isKey": false,
+       "tag": "en-negation-dropped",
+       "execution": "Line 21 says they could not find all the right things, and this option drops that."
+      },
+      {
+       "optionId": "cmsw2f4va00drtmbvn9jzirfa",
+       "value": "Bread and butter, set out ready on the table.",
+       "isKey": false,
+       "tag": "en-wrong-scope-retrieval",
+       "execution": "That table is at line 51, in the forgotten room, and line 23 says they had no bread."
+      }
+     ],
+     "explanationPatch": {
+      "walkScript": "Start at line 21 and find the two things they borrow. One is for the salt, and the other is to put bread on. Read which object does which job. Line 23 adds a joke: they may not have any bread."
+     }
+    },
+    "cannotFix": null,
+    "reviewOfChange": {
+     "ref": "rebuild:ENG-008-RC-05",
+     "verdict": "ATTEST",
+     "reason": "Only walkScript changed, and the change is true: line 22 has the baking-tin 'to put bread on', line 23 'if they had any'. The tag-hint half of the hold is met by the library: en-attribute-transfer now reads 'Check who or what each detail belongs to in the text.', true of two objects."
+    },
+    "reviewOfRow": {
+     "itemId": "ENG-008-RC-05",
+     "verdict": "HOLD",
+     "holdFixed": true,
+     "reason": "The hold's faults are gone: the library tag hint is now true of two objects, and the walk no longer says the tin holds bread. The bread-and-butter execution is still not true of the passage. It says 'That table is at line 51', but the forgotten room's table, and the bread on it, are on line 50 ('on its table, all nicely set out ... with bread,'). Only 'butter' is on line 51. It also says 'line 23 says they had no bread', where line 23 says 'if they had any'. The row's own new walk reads that, correctly, as 'they may not have any bread'.",
+     "faultField": "execution"
+    }
+   },
+   "stem": {
+    "text": "Read lines 20 to 23. What do the children use for the table?",
+    "quotes": [],
+    "passageRef": "stream-a-02-railway-children",
+    "orderAnchor": 20
+   },
+   "lineRefs": [
+    20,
+    21,
+    22,
+    23
+   ],
+   "explanation": {
+    "hintCore": "Two ordinary objects, two new jobs. Check which goes with which.",
+    "walkScript": "Start at line 21 and find the two things they borrow. One holds the salt, the other holds the bread. Read which object does which job. Line 23 adds a joke about the bread."
+   },
+   "key": "A glass ash-tray for salt, and a baking-tin for bread.",
+   "options": [
+    {
+     "optionId": "cmsw2f4va00dotmbv19ddd21z",
+     "value": "A glass ash-tray for salt, and a baking-tin for bread.",
+     "isKey": true,
+     "tag": null,
+     "tagAttested": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4va00dptmbvl6k07a72",
+     "value": "A baking-tin for salt, and a glass ash-tray for bread.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "tagAttested": true,
+     "execution": "Both objects sit in lines 21 and 22, with their jobs the other way round."
+    },
+    {
+     "optionId": "cmsw2f4va00dqtmbvbukacfvc",
+     "value": "They find all the right things and lay them out.",
+     "isKey": false,
+     "tag": "en-negation-dropped",
+     "tagAttested": true,
+     "execution": "Line 21 says they could not find all the right things, and this option drops that."
+    },
+    {
+     "optionId": "cmsw2f4va00drtmbvn9jzirfa",
+     "value": "Bread and butter, set out ready on the table.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "tagAttested": true,
+     "execution": "That table is at line 51, in the forgotten room, and line 23 says they had no bread."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-012-ML-07",
+   "questionType": "en-comp-inference",
+   "difficultyTier": 3,
+   "passageRef": "stream-a-14-mill-on-floss",
+   "passageRefMissing": false,
+   "hold": {
+    "reason": "Distractor 'afraid that Tom will take both of the halves himself' is textually supported: Tom threatens 'else you sha'n't have any' (lines 31-32) and line 33 says her sacrifice 'did not extend so far' - she shut her eyes so as not to lose her share. Its execution 'Nothing gives her that fear' is false.",
+    "faultField": "options"
+   },
+   "previousRound": {
+    "proposal": {
+     "itemId": "ENG-012-ML-07",
+     "why": "The distractor 'afraid that Tom will take both of the halves himself' is supported by Tom's threat at lines 31 and 32 ('else you sha'n't have any') and line 33's 'did not extend so far', and its execution was false. Replaced it with a fear no line gives (that Tom will tell their mother she cheated). Tag unchanged.",
+     "stem": {
+      "text": "Read lines 33 to 35. Why does Maggie shut her eyes tight?",
+      "quotes": [],
+      "passageRef": "stream-a-14-mill-on-floss",
+      "orderAnchor": 7
+     },
+     "options": [
+      {
+       "optionId": "cmsw2f4wf00khtmbv5oeal3ir",
+       "value": "She is afraid Tom will tell their mother that she cheated.",
+       "isKey": false,
+       "tag": "en-motive-invention",
+       "execution": "No line has Tom threaten to tell anyone. His only threat, at lines 31 and 32, is that she will get none, and line 34 gives what she wanted from him instead."
+      },
+      {
+       "optionId": "cmsw2f4wf00kitmbvqfrmk9xm",
+       "value": "She is sorry for Tom having the smaller share.",
+       "isKey": false,
+       "tag": "en-emotion-label-approximation",
+       "execution": "Line 33 says she cared LESS about that than about pleasing him."
+      },
+      {
+       "optionId": "cmsw2f4wf00kjtmbvl75ji6kq",
+       "value": "She wants Tom pleased with her more than she wants him fed.",
+       "isKey": true,
+       "tag": null,
+       "execution": null
+      },
+      {
+       "optionId": "cmsw2f4wf00kktmbv6dr7dnmj",
+       "value": "She gives up the best piece out of pure sacrifice.",
+       "isKey": false,
+       "tag": "en-negation-dropped",
+       "execution": "Line 33 says her power of sacrifice did not extend so far."
+      }
+     ],
+     "explanationPatch": {}
+    },
+    "cannotFix": null,
+    "reviewOfChange": {
+     "ref": "rebuild:ENG-012-ML-07",
+     "verdict": "ATTEST",
+     "reason": "The replacement 'afraid Tom will tell their mother that she cheated' has no textual support: no mother appears and nobody threatens to tell. The execution is true: the only threat is lines 31 and 32 ('else you sha'n't have any'). Tag en-motive-invention fits."
+    },
+    "reviewOfRow": {
+     "itemId": "ENG-012-ML-07",
+     "verdict": "HOLD",
+     "holdFixed": true,
+     "reason": "The options fault is fixed: the replacement fear has no support, and its execution is true. But hintCore 'Two wants are compared. Find which she cared about more.' paraphrases the key 'She wants Tom pleased with her more than she wants him fed'. The key is the only option that compares two wants, and it reuses the hint's 'wants' and 'more'. Matching hint to options selects the key without reading lines 33 to 35 (R572).",
+     "faultField": "hintCore"
+    }
+   },
+   "stem": {
+    "text": "Read lines 33 to 35. Why does Maggie shut her eyes tight?",
+    "quotes": [],
+    "passageRef": "stream-a-14-mill-on-floss",
+    "orderAnchor": 7
+   },
+   "lineRefs": [
+    33,
+    34,
+    35
+   ],
+   "explanation": {
+    "hintCore": "Two wants are compared. Find which she cared about more.",
+    "walkScript": "Read line 33 and find the words cared less, which weigh two wants. One is Tom enjoying more puff; the other is Tom being pleased with her. Line 34 says which of the two won."
+   },
+   "key": "She wants Tom pleased with her more than she wants him fed.",
+   "options": [
+    {
+     "optionId": "cmsw2f4wf00khtmbv5oeal3ir",
+     "value": "She is afraid that Tom will take both of the halves himself.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "tagAttested": true,
+     "execution": "Nothing gives her that fear; line 34 gives what she wanted from him instead."
+    },
+    {
+     "optionId": "cmsw2f4wf00kitmbvqfrmk9xm",
+     "value": "She is sorry for Tom having the smaller share.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "tagAttested": true,
+     "execution": "Line 33 says she cared LESS about that than about pleasing him."
+    },
+    {
+     "optionId": "cmsw2f4wf00kjtmbvl75ji6kq",
+     "value": "She wants Tom pleased with her more than she wants him fed.",
+     "isKey": true,
+     "tag": null,
+     "tagAttested": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4wf00kktmbv6dr7dnmj",
+     "value": "She gives up the best piece out of pure sacrifice.",
+     "isKey": false,
+     "tag": "en-negation-dropped",
+     "tagAttested": true,
+     "execution": "Line 33 says her power of sacrifice did not extend so far."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-012-ML-11",
+   "questionType": "en-comp-inference",
+   "difficultyTier": 4,
+   "passageRef": "stream-a-14-mill-on-floss",
+   "passageRefMissing": false,
+   "hold": {
+    "reason": "Key 'Maggie cannot let it go' (and walk 'Only one of the two can put it down') is contradicted by lines 72-73, where after ten minutes 'resentment began to give way to the desire of reconciliation'.",
+    "faultField": "key"
+   },
+   "previousRound": {
+    "proposal": {
+     "itemId": "ENG-012-ML-11",
+     "why": "Key 'Maggie cannot let it go' and the walk 'Only one of the two can put it down' are contradicted by lines 72 and 73, where her resentment gives way after ten minutes. Rewrote the key to what lines 62 to 66 contrast: Yap gets over it at once, Maggie is left in misery. Walk changed to match; it also cited 'sits still' at line 66 (it is lines 65 and 66) and the ten minutes at line 71 (it is line 72), now corrected. The 'fed him well' execution put the eatables vanishing on line 60; 'vanished' is on line 61, so it now says lines 60 and 61.",
+     "stem": {
+      "text": "Read lines 59 to 63, then lines 66 to 71. Why are Yap and Maggie put side by side?",
+      "quotes": [],
+      "passageRef": "stream-a-14-mill-on-floss",
+      "orderAnchor": 11
+     },
+     "options": [
+      {
+       "optionId": "cmsw2f4wi00l0tmbvor0en781",
+       "value": "Yap is happier than Maggie, for Tom has just fed him well.",
+       "isKey": false,
+       "tag": "en-plausible-not-stated",
+       "execution": "Lines 60 and 61 have the eatables vanish while he looks on, so he was given nothing."
+      },
+      {
+       "optionId": "cmsw2f4wj00l1tmbvrk3bfho3",
+       "value": "Yap sulked at the stone, and Maggie forgave Tom at once too.",
+       "isKey": false,
+       "tag": "en-relation-word-flipped",
+       "execution": "Line 62 says YET he took it with alacrity, and line 66 leaves her in misery."
+      },
+      {
+       "optionId": "cmsw2f4wj00l2tmbve1uvj7zk",
+       "value": "Yap gets over it at once, but Maggie is left in misery.",
+       "isKey": true,
+       "tag": null,
+       "execution": null
+      },
+      {
+       "optionId": "cmsw2f4wj00l3tmbvwlewfbr7",
+       "value": "Maggie wishes, too late, that she had saved him some puff.",
+       "isKey": false,
+       "tag": "en-within-span-wrong-element",
+       "execution": "True at line 67, and it is part of her misery rather than why the two are paired."
+      }
+     ],
+     "explanationPatch": {
+      "walkScript": "Read line 61 and line 62. The dog feels it, and takes the stone anyway. Now read lines 65 and 66: she sits still on her bough. Lines 71 and 72 have her in tears for ten minutes. The dog gets over it at once, and she does not."
+     }
+    },
+    "cannotFix": null,
+    "reviewOfChange": {
+     "ref": "rebuild:ENG-012-ML-11",
+     "verdict": "ATTEST",
+     "reason": "The new key 'Yap gets over it at once, but Maggie is left in misery' is supported: line 62 has Yap accept with 'alacrity', and lines 64 to 66 have Maggie's 'power of misery' as she sits still. Lines 72 and 73 do not contradict it. The changed citations are correct: 'vanished' is on line 61, 'sat still' on lines 65 and 66, 'ten minutes' on line 72."
+    },
+    "reviewOfRow": {
+     "itemId": "ENG-012-ML-11",
+     "verdict": "HOLD",
+     "holdFixed": true,
+     "reason": "The key fault is gone: 'Maggie is left in misery' is not contradicted by lines 72 and 73. But the stem's windows, 'lines 59 to 63, then lines 66 to 71' (lineRefs the same), now leave out the lines the new key and walk depend on. Line 64 ('But Maggie, gifted with that superior power of misery') turns the comparison and supplies the key's 'misery'. Line 65 has 'sat still', which the walk cites. Line 72 has the 'ten minutes', which the walk also cites. The walk sends the child to two lines the stem told them to skip, and the stem window cuts the contrasting sentence in half.",
+     "faultField": "stem"
+    }
+   },
+   "stem": {
+    "text": "Read lines 59 to 63, then lines 66 to 71. Why are Yap and Maggie put side by side?",
+    "quotes": [],
+    "passageRef": "stream-a-14-mill-on-floss",
+    "orderAnchor": 11
+   },
+   "lineRefs": [
+    59,
+    60,
+    61,
+    62,
+    63,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71
+   ],
+   "explanation": {
+    "hintCore": "Both were hard done by. Ask what each does next.",
+    "walkScript": "Read line 61 and line 62. The dog feels it, and takes the stone anyway. Now read line 66 and line 71: she sits still and cries for ten minutes. Only one of the two can put it down."
+   },
+   "key": "Yap shakes off the unfairness, but Maggie cannot let it go.",
+   "options": [
+    {
+     "optionId": "cmsw2f4wi00l0tmbvor0en781",
+     "value": "Yap is happier than Maggie, for Tom has just fed him well.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "tagAttested": true,
+     "execution": "Line 60 has the eatables vanish while he looks on, so he was given nothing."
+    },
+    {
+     "optionId": "cmsw2f4wj00l1tmbvrk3bfho3",
+     "value": "Yap sulked at the stone, and Maggie forgave Tom at once too.",
+     "isKey": false,
+     "tag": "en-relation-word-flipped",
+     "tagAttested": true,
+     "execution": "Line 62 says YET he took it with alacrity, and line 66 leaves her in misery."
+    },
+    {
+     "optionId": "cmsw2f4wj00l2tmbve1uvj7zk",
+     "value": "Yap shakes off the unfairness, but Maggie cannot let it go.",
+     "isKey": true,
+     "tag": null,
+     "tagAttested": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4wj00l3tmbvwlewfbr7",
+     "value": "Maggie wishes, too late, that she had saved him some puff.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "tagAttested": true,
+     "execution": "True at line 67, and it is part of her misery rather than why the two are paired."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-012-ML-12",
+   "questionType": "en-comp-technique",
+   "difficultyTier": 4,
+   "passageRef": "stream-a-14-mill-on-floss",
+   "passageRefMissing": false,
+   "hold": {
+    "reason": "Every option refers to the writer as 'He'; George Eliot (Mary Ann Evans) was a woman - a factual error a child or parent may know. walkScript also calls the jam puff 'a bun'.",
+    "faultField": "options"
+   },
+   "previousRound": {
+    "proposal": {
+     "itemId": "ENG-012-ML-12",
+     "why": "Every option called the writer 'He'; George Eliot was a woman. Each option now says 'The writer' instead, so no option asserts the writer's sex; meanings unchanged. The walkScript called the jam puff 'a bun'; now 'a jam puff'. The walk also put the polygon on line 13; 'irregular polygon' is on line 14, so it now says lines 13 and 14.",
+     "stem": {
+      "text": "The writer keeps doing something the two children could not do. What?",
+      "quotes": [],
+      "passageRef": "stream-a-14-mill-on-floss",
+      "answerShape": "narrator-register-above-the-scene",
+      "orderAnchor": 12,
+      "techniqueKey": "a-child-quarrel-narrated-in-adult-general-terms"
+     },
+     "options": [
+      {
+       "optionId": "cmsw2f4wj00l5tmbvrx1ll1np",
+       "value": "The writer tells us that Tom cut the puff and gave Maggie the best bit.",
+       "isKey": false,
+       "tag": "en-inference-literal-lookalike",
+       "execution": "A summary of what happens, which names nothing the writer does with it."
+      },
+      {
+       "optionId": "cmsw2f4wj00l6tmbvydtuph75",
+       "value": "The writer takes Maggie's side, but never says so.",
+       "isKey": false,
+       "tag": "en-plausible-not-stated",
+       "execution": "Lines 33 and 34 are a dig at Maggie in the writer's own voice."
+      },
+      {
+       "optionId": "cmsw2f4wj00l7tmbvccpm1yi3",
+       "value": "The writer never once tells us what either child is feeling.",
+       "isKey": false,
+       "tag": "en-extreme-option-pull",
+       "execution": "Lines 33, 48 and 64 all give feelings the children never speak aloud."
+      },
+      {
+       "optionId": "cmsw2f4wj00l8tmbv8loya9ra",
+       "value": "The writer gives a children's quarrel, but explains it in grown-up words.",
+       "isKey": true,
+       "tag": null,
+       "execution": null
+      }
+     ],
+     "explanationPatch": {
+      "walkScript": "Find the sentences the children could not have said themselves. Lines 13 and 14 give a difficult problem in polygons, line 16 hypothetic powers. Line 64 gives a superior power of misery. Each puts a grown-up's words on a quarrel about a jam puff."
+     }
+    },
+    "cannotFix": null,
+    "reviewOfChange": {
+     "ref": "rebuild:ENG-012-ML-12",
+     "verdict": "ATTEST",
+     "reason": "Each option now says 'The writer', and no option implies the writer's sex. 'keeps it out of his words' became 'never says so' with the same meaning. The walk now says 'a jam puff' where it said 'a bun', and 'irregular polygon' is correctly cited at lines 13 and 14. Dropping 'of it' in the summary option is trivial and sits inside a value that had to change anyway."
+    },
+    "reviewOfRow": {
+     "itemId": "ENG-012-ML-12",
+     "verdict": "HOLD",
+     "holdFixed": true,
+     "reason": "The hold's faults are gone: no option calls the writer 'He', and the walk says 'jam puff' and cites lines 13 and 14 correctly. But hintCore 'Find the words no child in the tree would use.' paraphrases the key's deciding half, 'explains it in grown-up words'. The key is the only option about words at all, so the hint selects it without the passage (R572).",
+     "faultField": "hintCore"
+    }
+   },
+   "stem": {
+    "text": "The writer keeps doing something the two children could not do. What?",
+    "quotes": [],
+    "passageRef": "stream-a-14-mill-on-floss",
+    "answerShape": "narrator-register-above-the-scene",
+    "orderAnchor": 12,
+    "techniqueKey": "a-child-quarrel-narrated-in-adult-general-terms"
+   },
+   "lineRefs": [],
+   "explanation": {
+    "hintCore": "Find the words no child in the tree would use.",
+    "walkScript": "Find the sentences the children could not have said themselves. Line 13 gives a difficult problem in polygons, line 16 hypothetic powers. Line 64 gives a superior power of misery. Each puts a grown-up's words on a quarrel about a bun."
+   },
+   "key": "He gives a children's quarrel, but explains it in grown-up words.",
+   "options": [
+    {
+     "optionId": "cmsw2f4wj00l5tmbvrx1ll1np",
+     "value": "He tells us that Tom cut the puff and gave Maggie the best bit of it.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "tagAttested": true,
+     "execution": "A summary of what happens, which names nothing the writer does with it."
+    },
+    {
+     "optionId": "cmsw2f4wj00l6tmbvydtuph75",
+     "value": "He takes Maggie's side, but keeps it out of his words.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "tagAttested": true,
+     "execution": "Lines 33 and 34 are a dig at Maggie in the writer's own voice."
+    },
+    {
+     "optionId": "cmsw2f4wj00l7tmbvccpm1yi3",
+     "value": "He never once tells us what either child is feeling.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "tagAttested": true,
+     "execution": "Lines 33, 48 and 64 all give feelings the children never speak aloud."
+    },
+    {
+     "optionId": "cmsw2f4wj00l8tmbv8loya9ra",
+     "value": "He gives a children's quarrel, but explains it in grown-up words.",
+     "isKey": true,
+     "tag": null,
+     "tagAttested": null,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-022-GK-11",
+   "questionType": "en-comp-technique",
+   "difficultyTier": 4,
+   "passageRef": "stream-c-01",
+   "passageRefMissing": false,
+   "hold": {
+    "reason": "walkScript's evidence for 'each time' does not hold: line 22 (four unsaveable) and line 26 (could have had it) do not go against his case; only line 7 against line 38 does. hintCore 'Look for the line where the writer gives a verdict' sends the child looking for a line that does not exist.",
+    "faultField": "walkScript"
+   },
+   "previousRound": {
+    "proposal": null,
+    "cannotFix": {
+     "itemId": "ENG-022-GK-11",
+     "why": "The fault is in the question, not the walk. The key says that EACH time he explains himself his own proof goes against his case, and the techniqueKey ('every claim of control undone by the detail offered to support it') makes that the item's point. The hold finds only one site where it holds: line 7 ('Nobody put me there') against line 38 (picked eighth out of eight). Lines 22 and 26 do not go against him, and I find no other line that clearly does: line 13 (seeing everything), lines 28 to 30 (his mum) and line 39 ('I laughed as well') need an interpretation the reviewer would rightly call open. A whole-text purpose item needs three sites, none enough alone (T4 bounding rule, section 4). With one site, a corrected walk would only show the key is unsupported. A different whole-text item would be new authoring, not a repair. So the row stays held. The hint fault (it sends the child to look for a verdict line that does not exist) is real too, but fixing the hint alone would leave an unsupported key."
+    },
+    "reviewOfChange": null,
+    "reviewOfRow": null
+   },
+   "stem": {
+    "text": "Think about the whole poem. What happens each time he explains himself?",
+    "quotes": [],
+    "passageRef": "stream-c-01",
+    "answerShape": "two-halved-contrast-of-the-claim-against-its-own-evidence",
+    "orderAnchor": 9999,
+    "techniqueKey": "every-claim-of-control-undone-by-the-detail-offered-to-support-it"
+   },
+   "lineRefs": [],
+   "explanation": {
+    "hintCore": "Look for the line where the writer gives a verdict.",
+    "walkScript": "Line 7 says nobody put him there, and line 38 says he was picked eighth. Line 22 says four could not be saved. Line 26 says he could have had that one."
+   },
+   "key": "He gives the proof himself, but it goes against his own case.",
+   "options": [
+    {
+     "optionId": "cmsw2f4z90113tmbvpzgwn37x",
+     "value": "He says he chose it, and he says that he was picked eighth.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "tagAttested": true,
+     "execution": "Two of his claims stated in order, with nothing that joins them."
+    },
+    {
+     "optionId": "cmsw2f4z90114tmbv6hwvd5lk",
+     "value": "He is called out by the writer, but he goes on pretending anyway.",
+     "isKey": false,
+     "tag": "en-whole-text-absence-asserted",
+     "tagAttested": true,
+     "execution": "No line anywhere gives a verdict on him."
+    },
+    {
+     "optionId": "cmsw2f4z90115tmbvlu6f49wv",
+     "value": "He gives the proof himself, but it goes against his own case.",
+     "isKey": true,
+     "tag": null,
+     "tagAttested": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4z90116tmbvp5kxbrrp",
+     "value": "He minds it early on, but he has made his peace.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "tagAttested": true,
+     "execution": "Line 43 has him still refusing to move."
+    }
+   ]
+  }
+ ]
+}

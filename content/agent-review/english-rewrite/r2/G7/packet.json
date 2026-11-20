@@ -1,0 +1,1355 @@
+{
+ "door": "english-rewrite/r2/G7",
+ "round": 2,
+ "questionType": "english",
+ "ruling": "R1023",
+ "holds": {
+  "ENG-009-SM-11": {
+   "reason": "hintCore 'Two causes, one in each line' names a property only the key has (it is the only option with two causes), so it selects the key without reading - coaching (R572). Key and distractors otherwise check against l.40-42.",
+   "faultField": "hintCore"
+  },
+  "ENG-009-SM-12": {
+   "reason": "hintCore 'Sort the sentences into what still stands and what happened' restates the key ('present kept for what is still true, the walk stays past') - coaching (R572). The key itself checks (l.1, 6, 8, 13, 18, 28-29, 37, 42-43 present and still true; the walk past). Distractor 2 'told it to them' has no referent for 'them'.",
+   "faultField": "hintCore"
+  },
+  "ENG-020-HD-03": {
+   "reason": "Distractor 'Somebody took it away, and later it was in her bed' is a true answer to 'What has happened to the hat between the two?' - Tinette is ordered to take it (l.13-15) and it is found under the counterpane (l.42); the execution's 'nothing named that links them' does not make it false. Also, l.39-41 strongly imply Sebastian, so the key's 'never says who' needs care.",
+   "faultField": "options"
+  },
+  "ENG-020-HD-10": {
+   "reason": "Execution on 'she saw her own roll' ends 'In the window, line 40 answers the stem: 'all sorts of strange signs, pointing to his own'' - false: the message is at line 41 ('I have got it all safe for you'); line 40 only describes the signs. Key otherwise correct.",
+   "faultField": "execution"
+  }
+ },
+ "entries": {
+  "en-a-an-by-spelling": {
+   "description": "Chooses a/an by following letter rather than sound.",
+   "childHint": "Listen to the sound that starts the next word.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-agent-patient-reversal": {
+   "description": "Swaps who did or thought something, or who it was done to.",
+   "childHint": "Ask who is doing it and who it is being done to.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-apostrophe-possession": {
+   "description": "Misses possessive apostrophes; confuses its/it's.",
+   "childHint": "Ask whose it is. An owner needs an apostrophe straight after the owner word, like children's or boys'. Owner words like its, his, ours and theirs never have one. If you see it's, try swapping in 'it is'.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-article-avoids-the-sound-choice": {
+   "description": "On an a or an choice, picks the to avoid the vowel-sound judgement. The fits any noun without a sound decision, so the child reaches for the article that asks nothing of her ear.",
+   "childHint": "This gap wants a or an. Say the next word aloud. Which sound starts it?",
+   "approvalNote": null
+  },
+  "en-article-definiteness": {
+   "description": "Chooses between a, the and no article by habit, missing that the thing has already been named in the text or is one of a kind. Distinct from en-a-an-by-spelling, which is a sound judgement.",
+   "childHint": "Has the text named it already? That changes which little word fits.",
+   "approvalNote": "Second-pass returns: ten new proposals cleared, WIW-14 stem rewritten, mistag check completed across the remaining 69."
+  },
+  "en-attribute-transfer": {
+   "description": "Assigns a detail the text gives to one character or thing to another, or the right attribute at the wrong value.",
+   "childHint": "Check who or what each detail belongs to in the text.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-cause-agent-swap": {
+   "description": "Attributes the right event to the wrong cause or character.",
+   "childHint": "Ask who did this, or what caused it, in the text. Re-read the moment step by step.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-chronology-collapse": {
+   "description": "The child picks a cause that happens LATER in the passage than the effect being asked about. The two events are both real and both about the same people, so the option reads well; only the order rules it out.",
+   "childHint": "Check what happened first, and what the question asks for.",
+   "approvalNote": "Second-pass returns: ten new proposals cleared, WIW-14 stem rewritten, mistag check completed across the remaining 69."
+  },
+  "en-comma-subject-verb-split": {
+   "description": "Accepts a comma cutting subject from verb.",
+   "childHint": "Never let a single comma cut the do-er off from the doing.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-comparative-superlative-form": {
+   "description": "Errors in forming or choosing comparatives and superlatives: double marking (most fastest), the comparative used for a whole group, or the bare adjective after 'the'.",
+   "childHint": "Comparing two, or more than two? Then check the ending and the word before it are not both doing the job.",
+   "approvalNote": "Second-pass returns: ten new proposals cleared, WIW-14 stem rewritten, mistag check completed across the remaining 69. | DEDUPE RECORDED 2026-08-19: queue text survives, capped library text superseded and quoted in textProvenance."
+  },
+  "en-comparison-vehicle-misread": {
+   "description": "Child gives the quality of the thing a comparison compares TO, where the answer is the quality of the thing being described — reading the vehicle of a simile or metaphor as the subject.",
+   "childHint": "Find the two things being compared. The one being described is the one that matters.",
+   "approvalNote": "BOUNDARY vs en-attribute-transfer: both put a quality on the wrong holder. Attribute-transfer moves it BETWEEN CHARACTERS; this moves it from a comparison's VEHICLE to its SUBJECT. Different remedies, different hints."
+  },
+  "en-conjunction-logic": {
+   "description": "Chooses a conjunction with the wrong logical relation.",
+   "childHint": "Is the second idea a reason, a surprise, or just what happened next?",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-contraction-apostrophe": {
+   "description": "Omits or misplaces the apostrophe in a contraction: Youre for You're, dont for don't, wont for won't.",
+   "childHint": "Two words squeezed into one leave letters out. The apostrophe stands where the letters were.",
+   "approvalNote": null
+  },
+  "en-contradicted-by-the-text": {
+   "description": "Chooses an option the passage explicitly denies, rather than one it merely fails to support. Distinguished from a plausible option the passage never states: here the passage states the contrary. Negation-dropped loses a WORD; this loses a CLAIM, and the option may share no wording with the line that refutes it.",
+   "childHint": "The passage says something different. Go back and find it.",
+   "approvalNote": null
+  },
+  "en-coordination-wrong-conjunct": {
+   "description": "The target word sits in a coordination — X and Y, X as well as Y, X as Y, X beside Y — and the child attaches the meaning to the wrong conjunct. She takes the half of the pair she read last, or the half that is easier to picture, and glosses the target with it. The error is syntactic: she has parsed which item the word attaches to incorrectly, and the option she picks is usually TRUE of the other conjunct, which is why it survives a check against the passage.",
+   "childHint": "This word is joined to another one. Work out which of the two the question is asking about before you answer.",
+   "approvalNote": null
+  },
+  "en-determiner-omitted": {
+   "description": "Leaves the determiner out altogether before a singular countable noun, treating a, an and the as optional rather than required. Distinct from en-article-definiteness, which is a choice BETWEEN articles, and from en-a-an-by-spelling, which is a sound judgement.",
+   "childHint": "A single thing needs a word in front of it. Say the line aloud and listen.",
+   "approvalNote": null
+  },
+  "en-double-consonant-boundary": {
+   "description": "Guesses whether a consonant doubles when an ending is added, or doubles the wrong letter: begining for beginning, dissapointed for disappointed, stoped for stopped.",
+   "childHint": "Say the root word first, then add the beginning or ending. Check which letter really doubles.",
+   "approvalNote": "Second-pass returns: ten new proposals cleared, WIW-14 stem rewritten, mistag check completed across the remaining 69."
+  },
+  "en-emotion-label-approximation": {
+   "description": "Chooses an adjacent emotion word rather than the precisely evidenced one.",
+   "childHint": "Find the words in the text that show the feeling. Close is not the same.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-extreme-option-pull": {
+   "description": "Chooses always/never/impossible options when the text is measured.",
+   "childHint": "Does the passage really go that far? Check the strongest word in the option.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-figurative-taken-literally": {
+   "description": "Reads similes and idioms as literal events.",
+   "childHint": "Figures of speech are not facts. Ask what the words are really saying.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-homophone-by-sound": {
+   "description": "Spells the wrong member of a homophone pair; their/there/they're.",
+   "childHint": "Sound will not help with sound-alike words. Work out the meaning, then spell it from that.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-inference-literal-lookalike": {
+   "description": "Picks the option that reuses passage wording.",
+   "childHint": "Words copied from the passage can still miss the question. Ask what those words are telling you.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-minimal-pair-skim": {
+   "description": "Matches an option on gist when it differs from the text, or from the key, by a single word or detail.",
+   "childHint": "An answer can look almost like the text. Find what differs and check it against the text.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-modal-conditional-form": {
+   "description": "Mismatches the modal to its if-clause, or builds an impossible modal form: 'if we painted ... people will know', 'would knew', 'would be knowing'.",
+   "childHint": "An imagined if takes 'would'. A real if takes 'will'. In an imagined if, a past word like 'painted' without 'had' means now or later. 'Would have' is for imagining the past.",
+   "approvalNote": "Second-pass returns: ten new proposals cleared, WIW-14 stem rewritten, mistag check completed across the remaining 69."
+  },
+  "en-motive-invention": {
+   "description": "Attributes a plausible motive the text never supports.",
+   "childHint": "A reason has to be given, not guessed. Ask what the text says about why.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-n-option-avoidance": {
+   "description": "Never selects the no-mistake option in error-spotting.",
+   "childHint": "Check every part in turn. No mistake is a real answer, not a way out.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up. — REACHABILITY (annie, 2026-08-09): unreachable BY DESIGN in spag-punct-speech, which carries no N option at all (R33) — recorded as designed-out rather than unused, so a later coverage sweep does not read it as a gap and re-add the option. Reachable in the other EIGHT spot families, each keying N at a real rate."
+  },
+  "en-narrator-voice-as-fact": {
+   "description": "The child treats a crowd's opinion that the narrator reports in flat, certain sentences as the narrator's own verdict, and so takes it as settled truth rather than as something the text is quietly laughing at. Distinct from en-extreme-option-pull, which is about the pull of absolute wording; this one is about mistaking whose voice is speaking.",
+   "childHint": "Before you take this as true, ask whose opinion it is.",
+   "approvalNote": null
+  },
+  "en-negation-dropped": {
+   "description": "The passage carries an explicit negative — no, not, never, nothing, without, could not, sha'n't — and the option states the affirmative. The child has read the content words of the sentence and dropped the word that reverses them. Requires a negative WORD in a named line. A negation sustained across a whole text with no such word is en-whole-text-absence-asserted.",
+   "childHint": "A negative word can change the whole answer. Read the line again for one.",
+   "approvalNote": null
+  },
+  "en-paired-punctuation": {
+   "description": "Misses unclosed brackets or quotes.",
+   "childHint": "Brackets come in pairs, like shoes. Hunt for the partner.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-parallel-read-as-sequence": {
+   "description": "The child reads two parallel descriptions of one thing as two moments in time. Where a writer gives the same subject twice — two ways of seeing it, two accounts of it, two things it is at once — she converts the pair into a sequence and looks for what changed between them. Nothing changed. What differs is the vantage, not the subject, and the relation between the two descriptions is what the question asks for.",
+   "childHint": "These two descriptions are of the same thing at the same time. Ask what is different about who is looking.",
+   "approvalNote": "RESTATED, NOT RECOVERED (Annie, 2026-08-16). Approved 8 August; no row existed in either store. Her line, which settles a CLASS rather than this instance: if a copy of the 8 August original turns up later and differs, THIS VERSION IS THE APPROVED ONE, because it is the one that exists. A restated approval outranks a recovered one. Proposed on ENG-004-AGG-08 option A — lines 35-40 give what an ordinary observer would see, 41-46 what an extraordinary one might: same girl, same moment, two watchers."
+  },
+  "en-physical-vs-emotional-cue": {
+   "description": "Gives a physical cause, from the body or body-language, when the text signals a feeling.",
+   "childHint": "Look past what the body is doing. Check what the character is feeling right then.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-plausible-not-stated": {
+   "description": "Picks real-world-plausible options the passage never states, especially motives.",
+   "childHint": "Sounding sensible is not enough. Find the line that proves it.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-preposition-collocation": {
+   "description": "Chooses a preposition that is close in meaning but does not go with the verb: returned on the shelf, listened at the teacher.",
+   "childHint": "Say the whole phrase in your head. Which little word does this verb usually take?",
+   "approvalNote": "Second-pass returns: ten new proposals cleared, WIW-14 stem rewritten, mistag check completed across the remaining 69."
+  },
+  "en-question-tag-polarity": {
+   "description": "Repeats instead of flipping polarity in question tags; mismatches the auxiliary.",
+   "childHint": "A tag flips the sentence. A positive sentence takes a negative tag. If there is no helper verb, use do, does or did.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-relation-word-flipped": {
+   "description": "The child reads a word that names a relationship between two things (contrast, unless, however, instead of) as its opposite, usually as plain 'and' or 'the same as'. The result is an option that keeps every fact but reverses how the facts sit together.",
+   "childHint": "Some words tell you how two things go together. Find that word and read it again.",
+   "approvalNote": "Second-pass returns: ten new proposals cleared, WIW-14 stem rewritten, mistag check completed across the remaining 69."
+  },
+  "en-relative-pronoun-choice": {
+   "description": "Picks a relative pronoun by habit rather than by what it stands for: which for people, whose in place of who, whom in a subject slot.",
+   "childHint": "Ask what the joining word stands for — a person, a thing, or something belonging to someone.",
+   "approvalNote": null
+  },
+  "en-repetition-purpose": {
+   "description": "Cannot say why a writer repeats words; defaults to literal or dismissive readings.",
+   "childHint": "Writers repeat on purpose. Ask what the echo does to the reader.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-silent-letter-dropped": {
+   "description": "Drops silent letters when spelling.",
+   "childHint": "A letter can be there without being heard. Spell it out, do not sound it out.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-speech-punctuation-inside": {
+   "description": "Places a quoted question's mark outside the speech marks.",
+   "childHint": "The question belongs to the spoken words. Keep the mark inside.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-spelling-form-lookalike": {
+   "description": "Accepts or writes a word's visual near-twin: quiet for quite, dairy for diary, angel for angle, loose for lose.",
+   "childHint": "Two words can look almost the same. Read the middle letters slowly, not the shape.",
+   "approvalNote": null
+  },
+  "en-subject-verb-agreement-by-proximity": {
+   "description": "Agrees the verb with the nearest noun instead of the true subject, usually across an of-phrase: 'the row of new labels were'.",
+   "childHint": "Ignore the of-part. Match the verb to what is left.",
+   "approvalNote": "Second-pass returns: ten new proposals cleared, WIW-14 stem rewritten, mistag check completed across the remaining 69. | DEDUPE RECORDED 2026-08-19: queue text survives, capped library text superseded and quoted in textProvenance."
+  },
+  "en-technique-device-confusion": {
+   "description": "Child gives \"metaphor\" for a comparison using \"like\" where the answer is simile, naming a device of the right family and the wrong kind.",
+   "childHint": "Does the line say like or as? A comparison using those words is a simile.",
+   "approvalNote": null
+  },
+  "en-technique-effect-mislocated": {
+   "description": "Child gives the effect of an earlier or neighbouring part of the passage where the answer is the effect of the quoted phrase, reading past the words under test.",
+   "childHint": "Find the exact words the question quotes. Answer about those words only.",
+   "approvalNote": null
+  },
+  "en-technique-intent-as-character": {
+   "description": "Child gives \"the boy feels tense\" where the answer is that the writer builds tension, treating the writer's choice as the character's state.",
+   "childHint": "Ask who is doing this. Is it the writer, or the character?",
+   "approvalNote": "annie: the single most consequential comprehension misunderstanding — invest here."
+  },
+  "en-technique-structure-effect-blind": {
+   "description": "Child gives what the words say where the answer is what their shape does (a short sentence makes a moment land suddenly; a count that grows or shrinks builds a pattern), reading content where the question asks about shape.",
+   "childHint": "Notice how the writer has built it, not just what it says. What does that do for the reader?",
+   "approvalNote": "annie: structure had NO tag — one-word paragraphs and lists of three were untaggable. Invest here."
+  },
+  "en-tense-sequence": {
+   "description": "Uses simple past where prior events need 'had'; drifts tense mid-narrative.",
+   "childHint": "Did it happen before the story-moment? Then you usually need 'had' and the verb. If not, keep to the same tense as the story around it.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-terminal-punctuation-blind": {
+   "description": "Accepts a full stop on a question; misses run-ons and missing boundaries.",
+   "childHint": "Read it in your head. Where your voice would stop or ask, the punctuation must match.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-unstressed-medial-vowel": {
+   "description": "Guesses a vowel in an unstressed syllable inside a word: regester for register. Scoped to the ERROR. Distinct from en-unstressed-suffix-vowel, whose vowel surfaces when the stress shifts (definite/definition); a medial vowel has no family word that stresses it, so the remediation is the spelling pattern — minister, sinister, register.",
+   "childHint": "A quiet middle vowel is still a letter. Say the word in parts and choose it.",
+   "approvalNote": null
+  },
+  "en-unstressed-suffix-vowel": {
+   "description": "Guesses between -ant/-ent, -ance/-ence, -ary/-ory/-ery.",
+   "childHint": "Many words ending -ant or -ent have a partner ending -ance or -ence. The partner almost always keeps the same vowel, like assistant and assistance. For -ary, -ery or -ory, a family word may help, like librarian for library.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-vocab-built-from-parts": {
+   "description": "The child takes the word apart into parts she has met in other words and sums them. She has not mistaken which word it is — she has taken it apart, and the parts are real while the sum is not the word. Scoped to the ERROR, not to vocabulary items.",
+   "childHint": "The parts of a word do not always add up. Check the whole word in the sentence.",
+   "approvalNote": null
+  },
+  "en-vocab-dominant-sense": {
+   "description": "The child applies the word's commonest everyday sense in a context that does not support it. The sense chosen is a real sense of the same word; it is simply the one that arrives first, and the sentence around the word is what should have displaced it. Scoped to the ERROR, not to vocabulary items: it occurs wherever a word's sense is load-bearing, including on technique stems.",
+   "childHint": "Words can have more than one meaning. Check that the meaning you used fits what the sentence is saying here.",
+   "approvalNote": "Hint READ from the authored field in her own document, character for character, never retyped. Supersedes en-vocab-secondary-sense. | SCOPING RULED 2026-08-16 (Annie): the tag is scoped to the ERROR, not to vocabulary items — it occurs wherever a word’s sense is load-bearing, including on technique stems. Her own 8 August ruling applied to this entry; the sentence had lived only in the drafting store until 16 August."
+  },
+  "en-vocab-form-lookalike": {
+   "description": "The meaning the child chooses belongs to a DIFFERENT WORD that the target resembles in form, or to a morpheme she has met in other words. She has not chosen among the target's senses at all — she has misidentified the word. Scoped to the ERROR, not to vocabulary items.",
+   "childHint": "This word looks like one you know. Read it letter by letter and check it is the same word.",
+   "approvalNote": null
+  },
+  "en-vocab-neighbouring-sense": {
+   "description": "The child chooses another genuine sense of the same word, neither the commonest one nor the one the passage fixes. The option is defensible in isolation and is ruled out only by the surrounding text, so the child gets no signal that anything is wrong. This holds only where the surrounding text fixes the sense decisively. Where it does not, the option is a defensible second answer and the item is faulty rather than hard. Scoped to the ERROR, not to vocabulary items.",
+   "childHint": "More than one meaning fits this word. Find the words nearby that decide which one it has to be.",
+   "approvalNote": null
+  },
+  "en-vocab-not-this-word": {
+   "description": "Picks a meaning that belongs to no sense of the word and to no word it resembles in form.",
+   "childHint": "This word never means that. Put your answer in its place. Read the sentence again.",
+   "approvalNote": null
+  },
+  "en-whole-text-absence-asserted": {
+   "description": "The passage sustains an ABSENCE across its whole length — it never states a feeling, never names a motive, never gives a verdict — and the option asserts the withheld thing as though it were there. There is no negative word to drop, because the negation is a property of the text rather than of any line: the child has failed to notice something maintained across sixty lines, not misread a word in one. Characteristically the option is defeated by no single line and only by the absence itself, so its disposal must cite the SPAN of the withholding rather than a disposal point.",
+   "childHint": "Choose a line number for the option you like. If you cannot find one anywhere in the passage, that option is not it.",
+   "approvalNote": null
+  },
+  "en-within-span-wrong-element": {
+   "description": "The option states something that is true inside the cited window and answers a different question from the one asked. The child has located the right lines and taken the wrong element out of them. A named sub-route is the WRONG SPEAKER: the material is inside the window but belongs to the other party in an exchange — one child's answer offered where the other child's instruction was asked for. The cure is the same in both cases, so the sub-route shares this hint.",
+   "childHint": "Being in the lines is not enough. Check it answers the question you were asked.",
+   "approvalNote": null
+  },
+  "en-word-class-by-ending": {
+   "description": "Classifies words by suffix rather than sentence job; participial adjective traps.",
+   "childHint": "Ask what job the word does in this sentence. Is it describing, or is it the action? If it describes, is the thing doing the action or having it done to it?",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  },
+  "en-wrong-scope-retrieval": {
+   "description": "Answers from a detail in the wrong part of the passage.",
+   "childHint": "Something from another part of the passage does not answer this question. Find the part the question points to.",
+   "approvalNote": "Cleared on the printed review pack; returned marked up."
+  }
+ },
+ "passages": {
+  "stream-b-02": {
+   "id": "stream-b-02",
+   "numberedLines": [
+    {
+     "n": 1,
+     "text": "The bus went as far as the caravan park and stopped, because after that there is nowhere",
+     "label": ""
+    },
+    {
+     "n": 2,
+     "text": "to turn round. From the shelter it was two miles of sea wall, with the marsh on my left",
+     "label": ""
+    },
+    {
+     "n": 3,
+     "text": "going the colour of a bruise as the afternoon got on.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 4,
+     "text": "I had been meaning to walk out to Saltmere for about four years. Twice I had got as far",
+     "label": ""
+    },
+    {
+     "n": 5,
+     "text": "as the caravan park.",
+     "label": "5"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 6,
+     "text": "Nan calls it the chapel, although there is no chapel on the map and no name printed",
+     "label": ""
+    },
+    {
+     "n": 7,
+     "text": "anywhere near it. Her mother was born out there in a row of four cottages. By the time",
+     "label": ""
+    },
+    {
+     "n": 8,
+     "text": "Nan was my age there were two of them left, and now there is a step that goes down into",
+     "label": ""
+    },
+    {
+     "n": 9,
+     "text": "water and a piece of wall with the shape of a window in it. That is the story I have had",
+     "label": ""
+    },
+    {
+     "n": 10,
+     "text": "all my life, told slightly differently each time. Some years the sea came in one night",
+     "label": "10"
+    },
+    {
+     "n": 11,
+     "text": "in February and took the lot. Some years it took forty years about it, a bit at a go,",
+     "label": ""
+    },
+    {
+     "n": 12,
+     "text": "and everybody watched it happen and moved their furniture up the hill.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 13,
+     "text": "The photograph was the reason I was out there. Nan has been at Fern Court since March",
+     "label": ""
+    },
+    {
+     "n": 14,
+     "text": "and there is nothing on her wall but a calendar from the surgery, so I said I would get",
+     "label": ""
+    },
+    {
+     "n": 15,
+     "text": "her a picture of the place. I could not tell you which visit I said it on. She agrees",
+     "label": "15"
+    },
+    {
+     "n": 16,
+     "text": "with most things now, the way you agree with the radio.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 17,
+     "text": "I had told Mum I was going to Ryan's.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 18,
+     "text": "The wall is only a bank of earth with a path worn along the top of it, and the further",
+     "label": ""
+    },
+    {
+     "n": 19,
+     "text": "out you go the less anybody has bothered with it. There were sheep on the landward side",
+     "label": ""
+    },
+    {
+     "n": 20,
+     "text": "and hardly any grass for them. Below me a boat lay in the mud with its ribs showing",
+     "label": "20"
+    },
+    {
+     "n": 21,
+     "text": "through and a gull standing on it, and further along, a half mile of posts went out into",
+     "label": ""
+    },
+    {
+     "n": 22,
+     "text": "the channel in a line, black and leaning, like the last of something that used to be a",
+     "label": ""
+    },
+    {
+     "n": 23,
+     "text": "bridge.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 24,
+     "text": "About halfway along, the wind dropped out of my ears and I could hear how much water",
+     "label": ""
+    },
+    {
+     "n": 25,
+     "text": "there was. It sat behind the bank on my right, shifting itself about, higher up than the",
+     "label": "25"
+    },
+    {
+     "n": 26,
+     "text": "field I was walking beside. I kept going and did not look over for a while.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 27,
+     "text": "The birds went up twice. Both times it was because of me.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 28,
+     "text": "Saltmere, when I got to it, was smaller than any version of the story. The step is",
+     "label": ""
+    },
+    {
+     "n": 29,
+     "text": "there. The wall is there, about as high as a wheelie bin, with an elder growing out of",
+     "label": ""
+    },
+    {
+     "n": 30,
+     "text": "the top and the window-shape you can put your arm through. Somebody had been out before",
+     "label": "30"
+    },
+    {
+     "n": 31,
+     "text": "me and left a can in the grass. I picked it up because it seemed rude not to, and then",
+     "label": ""
+    },
+    {
+     "n": 32,
+     "text": "had nowhere to put it, so I carried it round with me, which spoiled the effect.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 33,
+     "text": "I stood on the step. The water came up over the toe of my boot and went out again. I",
+     "label": ""
+    },
+    {
+     "n": 34,
+     "text": "moved back, and a minute later it came further up, and I understood it was not going to",
+     "label": ""
+    },
+    {
+     "n": 35,
+     "text": "stop doing that for me.",
+     "label": "35"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 36,
+     "text": "Nan says you can hear the bell out there when the tide turns. I stood still long enough",
+     "label": ""
+    },
+    {
+     "n": 37,
+     "text": "to be sure. There is a buoy in the channel that knocks when the water moves, a flat",
+     "label": ""
+    },
+    {
+     "n": 38,
+     "text": "sound with nothing musical in it, and I decided that was what she had always meant, and",
+     "label": ""
+    },
+    {
+     "n": 39,
+     "text": "that she knew it.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 40,
+     "text": "The light was going, and the marsh behind me had gone from bruise to no colour at all. I",
+     "label": "40"
+    },
+    {
+     "n": 41,
+     "text": "got the phone out. I had to hold it in both hands, and even then the picture came out",
+     "label": ""
+    },
+    {
+     "n": 42,
+     "text": "grey and shaken along one edge where my hand had moved. It has the elder in it and about",
+     "label": ""
+    },
+    {
+     "n": 43,
+     "text": "half the window. I have not sent it to anybody. I put the phone back in my pocket and",
+     "label": ""
+    },
+    {
+     "n": 44,
+     "text": "started counting the posts the other way.",
+     "label": ""
+    }
+   ]
+  },
+  "stream-a-19-heidi": {
+   "id": "stream-a-19-heidi",
+   "work": {
+    "author": "Johanna Spyri",
+    "title": "Heidi",
+    "firstPublished": 1881,
+    "authorDied": 1901
+   },
+   "sceneTitle": "The Rolls in the Wardrobe",
+   "preamble": "Heidi has been brought from her mountain home to live in a rich house in the city as a companion to Clara, who cannot walk. She misses an old blind grandmother she used to visit, who has no teeth for hard black bread. Fraulein Rottenmeier runs the household, and has just been speaking with Heidi’s tutor.",
+   "numberedLines": [
+    {
+     "n": 1,
+     "text": "Fraulein Rottenmeier was considerably relieved by his words, and released the tutor to",
+     "label": ""
+    },
+    {
+     "n": 2,
+     "text": "his work. In the course of the afternoon the remembrance of Heidi's appearance the day",
+     "label": ""
+    },
+    {
+     "n": 3,
+     "text": "before, as she was starting out on her travels, suddenly returned to the lady, and she",
+     "label": ""
+    },
+    {
+     "n": 4,
+     "text": "made up her mind that she would supplement the child's clothing with various garments",
+     "label": ""
+    },
+    {
+     "n": 5,
+     "text": "from Clara's wardrobe, so as to give her a decent appearance when Herr Sesemann",
+     "label": "5"
+    },
+    {
+     "n": 6,
+     "text": "returned. She confided her intention to Clara, who was quite willing to make over any",
+     "label": ""
+    },
+    {
+     "n": 7,
+     "text": "number of dresses and hats to Heidi; so the lady went upstairs to overhaul the child's",
+     "label": ""
+    },
+    {
+     "n": 8,
+     "text": "belongings and see what was to be kept and what thrown away. She returned, however, in",
+     "label": ""
+    },
+    {
+     "n": 9,
+     "text": "the course of a few minutes with an expression of horror upon her face.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 10,
+     "text": "\"What is this, Adelaide, that I find in your wardrobe!\" she exclaimed. \"I never heard",
+     "label": "10"
+    },
+    {
+     "n": 11,
+     "text": "of any one doing such a thing before! In a cupboard meant for clothes, Adelaide, what",
+     "label": ""
+    },
+    {
+     "n": 12,
+     "text": "do I see at the bottom but a heap of rolls! Will you believe it, Clara, bread in a",
+     "label": ""
+    },
+    {
+     "n": 13,
+     "text": "wardrobe! a whole pile of bread! Tinette,\" she called to that young woman, who was in",
+     "label": ""
+    },
+    {
+     "n": 14,
+     "text": "the dining-room, \"go upstairs and take away all those rolls out of Adelaide's cupboard",
+     "label": ""
+    },
+    {
+     "n": 15,
+     "text": "and the old straw hat on the table.\"",
+     "label": "15"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 16,
+     "text": "\"No! no!\" screamed Heidi. \"I must keep the hat, and the rolls are for grandmother,\"",
+     "label": ""
+    },
+    {
+     "n": 17,
+     "text": "and she was rushing to stop Tinette when Fraulein Rottenmeier took hold of her. \"You",
+     "label": ""
+    },
+    {
+     "n": 18,
+     "text": "will stop here, and all that bread and rubbish shall be taken to the place they belong",
+     "label": ""
+    },
+    {
+     "n": 19,
+     "text": "to,\" she said in a determined tone as she kept her hand on the child to prevent her",
+     "label": ""
+    },
+    {
+     "n": 20,
+     "text": "running forward.",
+     "label": "20"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 21,
+     "text": "Then Heidi in despair flung herself down on Clara's couch and broke into a wild fit of",
+     "label": ""
+    },
+    {
+     "n": 22,
+     "text": "weeping, her crying becoming louder and more full of distress, every minute, while she",
+     "label": ""
+    },
+    {
+     "n": 23,
+     "text": "kept on sobbing out at intervals, \"Now grandmother's' bread is all gone! They were all",
+     "label": ""
+    },
+    {
+     "n": 24,
+     "text": "for grandmother, and now they are taken away, and grandmother won't have one,\" and she",
+     "label": ""
+    },
+    {
+     "n": 25,
+     "text": "wept as if her heart would break. Fraulein Rottenmeier ran out of the room. Clara was",
+     "label": "25"
+    },
+    {
+     "n": 26,
+     "text": "distressed and alarmed at the child's crying. \"Heidi, Heidi,\" she said imploringly,",
+     "label": ""
+    },
+    {
+     "n": 27,
+     "text": "\"pray do not cry so! listen to me; don't be so unhappy; look now, I promise you that",
+     "label": ""
+    },
+    {
+     "n": 28,
+     "text": "you shall have just as many rolls, or more, all fresh and new to take to grandmother",
+     "label": ""
+    },
+    {
+     "n": 29,
+     "text": "when you go home; yours would have been hard and stale by then. Come, Heidi, do not",
+     "label": ""
+    },
+    {
+     "n": 30,
+     "text": "cry any more!\"",
+     "label": "30"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 31,
+     "text": "Heidi could not get over her sobs for a long time; she would never have been able to",
+     "label": ""
+    },
+    {
+     "n": 32,
+     "text": "leave off crying at all if it had not been for Clara's promise, which comforted her.",
+     "label": ""
+    },
+    {
+     "n": 33,
+     "text": "But to make sure that she could depend upon it she kept on saying to Clara, her voice",
+     "label": ""
+    },
+    {
+     "n": 34,
+     "text": "broken with her gradually subsiding sobs, \"Will you give me as many, quite as many, as",
+     "label": ""
+    },
+    {
+     "n": 35,
+     "text": "I had, for grandmother?\" And Clara assured her each time that she would give her as",
+     "label": "35"
+    },
+    {
+     "n": 36,
+     "text": "many, \"or more,\" she added, \"only be happy again.\"",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 37,
+     "text": "Heidi appeared at supper with her eyes red with weeping, and when she saw her roll she",
+     "label": ""
+    },
+    {
+     "n": 38,
+     "text": "could not suppress a sob. But she made an effort to control herself, for she knew she",
+     "label": ""
+    },
+    {
+     "n": 39,
+     "text": "must sit quietly at table. Whenever Sebastian could catch her eye this evening he made",
+     "label": ""
+    },
+    {
+     "n": 40,
+     "text": "all sorts of strange signs, pointing to his own head and then to hers, and giving",
+     "label": "40"
+    },
+    {
+     "n": 41,
+     "text": "little nods as much as to say, \"Don't you be unhappy! I have got it all safe for you.\"",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 42,
+     "text": "When Heidi was going to get into bed that night she found her old straw hat lying",
+     "label": ""
+    },
+    {
+     "n": 43,
+     "text": "under the counterpane. She snatched it up with delight, made it more out of shape",
+     "label": ""
+    },
+    {
+     "n": 44,
+     "text": "still in her joy, and then, after wrapping a handkerchief round it, she stuck it in a",
+     "label": ""
+    },
+    {
+     "n": 45,
+     "text": "corner of the cupboard as far back as she could.",
+     "label": "45"
+    }
+   ]
+  }
+ },
+ "rows": [
+  {
+   "itemId": "ENG-009-SM-11",
+   "questionType": "en-comp-inference",
+   "difficultyTier": 3,
+   "passageRef": "stream-b-02",
+   "passageRefMissing": false,
+   "hold": {
+    "reason": "hintCore 'Two causes, one in each line' names a property only the key has (it is the only option with two causes), so it selects the key without reading - coaching (R572). Key and distractors otherwise check against l.40-42.",
+    "faultField": "hintCore"
+   },
+   "previousRound": {
+    "proposal": {
+     "itemId": "ENG-009-SM-11",
+     "why": "hintCore 'Two causes, one in each line' named a property only the key has. Replaced with a move that sends the child to lines 40 and 41 without saying how many causes there are; the pointer to even then is kept. Nothing else changed.",
+     "stem": {
+      "text": "Read lines 40 to 42. Why did the picture come out grey and shaken?",
+      "quotes": [],
+      "passageRef": "stream-b-02",
+      "orderAnchor": 40
+     },
+     "options": [
+      {
+       "optionId": "cmsw2f4vp00g4tmbvad2thy9l",
+       "value": "The wind shook the phone as he held it.",
+       "isKey": false,
+       "tag": "en-cause-agent-swap",
+       "execution": "Line 41 gives the movement to his own hand, not to any wind."
+      },
+      {
+       "optionId": "cmsw2f4vp00g5tmbv5y6x5n3h",
+       "value": "There was something the matter with the camera on his phone.",
+       "isKey": false,
+       "tag": "en-plausible-not-stated",
+       "execution": "Lines 40 and 41 give the light and his hands, and nothing about the phone itself."
+      },
+      {
+       "optionId": "cmsw2f4vp00g6tmbvzg3lyxnb",
+       "value": "The light had gone and his hands would not hold still.",
+       "isKey": true,
+       "tag": null,
+       "execution": null
+      },
+      {
+       "optionId": "cmsw2f4vp00g7tmbvoi2716j5",
+       "value": "Holding it in both hands is what shook it.",
+       "isKey": false,
+       "tag": "en-relation-word-flipped",
+       "execution": "Line 41 says even then, which means despite that, and this reads it as because."
+      }
+     ],
+     "explanationPatch": {
+      "hintCore": "Read lines 40 and 41 for what made the picture hard to take. Watch the words even then."
+     }
+    },
+    "cannotFix": null,
+    "reviewOfChange": {
+     "ref": "rebuild:ENG-009-SM-11",
+     "verdict": "ATTEST",
+     "reason": "Only hintCore changed. New hint sends the child to l.40-41 for what made the picture hard to take, without saying how many causes there are, so it no longer names a property only the key has."
+    },
+    "reviewOfRow": {
+     "itemId": "ENG-009-SM-11",
+     "verdict": "HOLD",
+     "holdFixed": true,
+     "reason": "The hold's hint fault is fixed, but the unchanged walkScript misreads 'even then'. It says the light (l.40) and his hands (l.41) are 'two things going against him', then 'The words even then join them. They mean the second happened despite the first.' In l.41-42, 'even then' joins holding the phone in both hands to the picture still coming out shaken. It does not join the light and the hands, and nothing in l.40-42 says the hands happened despite the light. Key and distractors check against l.40-42.",
+     "faultField": "walkScript"
+    }
+   },
+   "stem": {
+    "text": "Read lines 40 to 42. Why did the picture come out grey and shaken?",
+    "quotes": [],
+    "passageRef": "stream-b-02",
+    "orderAnchor": 40
+   },
+   "lineRefs": [
+    40,
+    41,
+    42
+   ],
+   "explanation": {
+    "hintCore": "Two causes, one in each line. Watch the words even then.",
+    "walkScript": "Read line 40 for the light, then line 41 for his hands. Two things are going against him at once. The words even then join them. They mean the second happened despite the first."
+   },
+   "key": "The light had gone and his hands would not hold still.",
+   "options": [
+    {
+     "optionId": "cmsw2f4vp00g4tmbvad2thy9l",
+     "value": "The wind shook the phone as he held it.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "tagAttested": true,
+     "execution": "Line 41 gives the movement to his own hand, not to any wind."
+    },
+    {
+     "optionId": "cmsw2f4vp00g5tmbv5y6x5n3h",
+     "value": "There was something the matter with the camera on his phone.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "tagAttested": true,
+     "execution": "Lines 40 and 41 give the light and his hands, and nothing about the phone itself."
+    },
+    {
+     "optionId": "cmsw2f4vp00g6tmbvzg3lyxnb",
+     "value": "The light had gone and his hands would not hold still.",
+     "isKey": true,
+     "tag": null,
+     "tagAttested": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4vp00g7tmbvoi2716j5",
+     "value": "Holding it in both hands is what shook it.",
+     "isKey": false,
+     "tag": "en-relation-word-flipped",
+     "tagAttested": true,
+     "execution": "Line 41 says even then, which means despite that, and this reads it as because."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-009-SM-12",
+   "questionType": "en-comp-technique",
+   "difficultyTier": 4,
+   "passageRef": "stream-b-02",
+   "passageRefMissing": false,
+   "hold": {
+    "reason": "hintCore 'Sort the sentences into what still stands and what happened' restates the key ('present kept for what is still true, the walk stays past') - coaching (R572). The key itself checks (l.1, 6, 8, 13, 18, 28-29, 37, 42-43 present and still true; the walk past). Distractor 2 'told it to them' has no referent for 'them'.",
+    "faultField": "hintCore"
+   },
+   "previousRound": {
+    "proposal": {
+     "itemId": "ENG-009-SM-12",
+     "why": "hintCore restated the key (what still stands against what happened). Replaced with a move: pick out the present-tense sentences and ask what each is about. Also distractor 2 'told it to them' had no referent for 'them'; now 'told it to him' (value only, tag and execution unchanged).",
+     "stem": {
+      "text": "The writer moves between tenses by a rule. What decides which he uses?",
+      "quotes": [],
+      "passageRef": "stream-b-02",
+      "answerShape": "tense-split",
+      "orderAnchor": 9999,
+      "techniqueKey": "present-tense-reserved-for-what-is-still-true"
+     },
+     "options": [
+      {
+       "optionId": "cmsw2f4vp00g9tmbvoxq5zezp",
+       "value": "The walk is two miles out along the sea wall to a ruined cottage.",
+       "isKey": false,
+       "tag": "en-inference-literal-lookalike",
+       "execution": "A summary of what happens, which names no choice about tense at all."
+      },
+      {
+       "optionId": "cmsw2f4vp00gatmbv4jfte8kl",
+       "value": "He tells all of it the way Nan has always told it to him.",
+       "isKey": false,
+       "tag": "en-plausible-not-stated",
+       "execution": "Line 10 says her story changes each time, and at line 38 he corrects it."
+      },
+      {
+       "optionId": "cmsw2f4vq00gbtmbvir1rnoqj",
+       "value": "Nan's part is in the present, but his own is in the past.",
+       "isKey": false,
+       "tag": "en-attribute-transfer",
+       "execution": "Lines 9 and 18 are his own sentences, and both are in the present."
+      },
+      {
+       "optionId": "cmsw2f4vq00gctmbv0gu92sgj",
+       "value": "The present is kept for what is still true, but the walk stays past.",
+       "isKey": true,
+       "tag": null,
+       "execution": null
+      }
+     ],
+     "explanationPatch": {
+      "hintCore": "Pick out the sentences in the present tense. Ask what each one is about."
+     }
+    },
+    "cannotFix": null,
+    "reviewOfChange": {
+     "ref": "rebuild:ENG-009-SM-12",
+     "verdict": "REFUSE",
+     "reason": "The hold named only the missing referent for 'them' in distractor 2. The proposal changes that option from 'He tells the whole of it the way his Nan has always told it to them.' to 'He tells all of it the way Nan has always told it to him.' It also rewords 'the whole of it' to 'all of it' and drops 'his' from 'his Nan'. Neither change bears on the fault, and the why does not disclose them: it claims the change is 'now told it to him' (value only). This is needless restyling of correct wording. Re-propose with only them->him changed. The hintCore change is sound."
+    },
+    "reviewOfRow": {
+     "itemId": "ENG-009-SM-12",
+     "verdict": "SIGN",
+     "holdFixed": true,
+     "reason": "Row as proposed reads correctly: present-tense sentences (l.1, 6-9, 13, 16, 18, 28-29, 36-37, 42-43) are all still true and the walk is past, so the key holds; summary, Nan's-way (story changes at l.10, reread at l.38) and Nan-present/his-past (l.9 and l.18 are his, in the present) all wrong; hint is a move. Does not land while the change is REFUSED.",
+     "faultField": null
+    }
+   },
+   "stem": {
+    "text": "The writer moves between tenses by a rule. What decides which he uses?",
+    "quotes": [],
+    "passageRef": "stream-b-02",
+    "answerShape": "tense-split",
+    "orderAnchor": 9999,
+    "techniqueKey": "present-tense-reserved-for-what-is-still-true"
+   },
+   "lineRefs": [],
+   "explanation": {
+    "hintCore": "Sort the sentences into what still stands and what happened.",
+    "walkScript": "Pick out the sentences in the present tense: line 8, line 18, line 37. Each one is about something that is still true today. Now check the afternoon itself. Every part of the walk is in the past."
+   },
+   "key": "The present is kept for what is still true, but the walk stays past.",
+   "options": [
+    {
+     "optionId": "cmsw2f4vp00g9tmbvoxq5zezp",
+     "value": "The walk is two miles out along the sea wall to a ruined cottage.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "tagAttested": true,
+     "execution": "A summary of what happens, which names no choice about tense at all."
+    },
+    {
+     "optionId": "cmsw2f4vp00gatmbv4jfte8kl",
+     "value": "He tells the whole of it the way his Nan has always told it to them.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "tagAttested": true,
+     "execution": "Line 10 says her story changes each time, and at line 38 he corrects it."
+    },
+    {
+     "optionId": "cmsw2f4vq00gbtmbvir1rnoqj",
+     "value": "Nan's part is in the present, but his own is in the past.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "tagAttested": true,
+     "execution": "Lines 9 and 18 are his own sentences, and both are in the present."
+    },
+    {
+     "optionId": "cmsw2f4vq00gctmbv0gu92sgj",
+     "value": "The present is kept for what is still true, but the walk stays past.",
+     "isKey": true,
+     "tag": null,
+     "tagAttested": null,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-020-HD-03",
+   "questionType": "en-comp-technique",
+   "difficultyTier": 4,
+   "passageRef": "stream-a-19-heidi",
+   "passageRefMissing": false,
+   "hold": {
+    "reason": "Distractor 'Somebody took it away, and later it was in her bed' is a true answer to 'What has happened to the hat between the two?' - Tinette is ordered to take it (l.13-15) and it is found under the counterpane (l.42); the execution's 'nothing named that links them' does not make it false. Also, l.39-41 strongly imply Sebastian, so the key's 'never says who' needs care.",
+    "faultField": "options"
+   },
+   "previousRound": {
+    "proposal": {
+     "itemId": "ENG-020-HD-03",
+     "why": "Distractor 'Somebody took it away, and later it was in her bed' was a true answer. Replaced with 'Nobody touched it, and it stayed where it was', which lines 15 and 42 contradict (on the table, then under the counterpane). Lines 39-41 strongly imply Sebastian, so the key now says 'these lines never say who' (true of the two cited windows) rather than 'the passage'; walkScript's 'Nothing between them says who' was false for the same reason and now speaks of the two cited parts. Hint addressed the removed distractor, so it is now a move.",
+     "stem": {
+      "text": "Look at lines 13 to 15 and lines 42 and 43. What has happened to the hat between the two?",
+      "quotes": [],
+      "passageRef": "stream-a-19-heidi",
+      "answerShape": "two-halved-contrast-of-what-was-ordered-against-what-is-found",
+      "orderAnchor": 13,
+      "techniqueKey": "an-order-quietly-undone-by-a-hand-the-passage-never-names"
+     },
+     "options": [
+      {
+       "optionId": "cmsw2f4yh00wntmbvive8xo50",
+       "value": "Somebody has given it back to her, and these lines never say who.",
+       "isKey": true,
+       "tag": null,
+       "execution": null
+      },
+      {
+       "optionId": "cmsw2f4yh00wotmbvtpxzktw2",
+       "value": "Nobody touched it, and it stayed where it was.",
+       "isKey": false,
+       "tag": "en-contradicted-by-the-text",
+       "execution": "Line 15 puts the hat on the table and lines 42 and 43 find it under the counterpane, so it has been moved. The child takes the order as never carried out."
+      },
+      {
+       "optionId": "cmsw2f4yi00wptmbv6158smmt",
+       "value": "Somebody sent Tinette for it, and she is the one who brought it.",
+       "isKey": false,
+       "tag": "en-plausible-not-stated",
+       "execution": "Tinette is named at line 13 and is the only servant sent; no line brings it back."
+      },
+      {
+       "optionId": "cmsw2f4yi00wqtmbvhvrbn8wg",
+       "value": "Somebody changed her mind, and the passage never hides who.",
+       "isKey": false,
+       "tag": "en-whole-text-absence-asserted",
+       "execution": "A decision the passage withholds, asserted as though it were on the page."
+      }
+     ],
+     "explanationPatch": {
+      "hintCore": "Find where the hat is in each part. Then ask how it got from one to the other.",
+      "walkScript": "Lines 13 to 15 have Tinette told to take away the rolls and the hat. Lines 42 and 43 have Heidi find that hat under the counterpane. Neither part says who put it there."
+     }
+    },
+    "cannotFix": null,
+    "reviewOfChange": {
+     "ref": "rebuild:ENG-020-HD-03",
+     "verdict": "REFUSE",
+     "reason": "Most of the change is sound and needed. 'Nobody touched it, and it stayed where it was' is contradicted by the table at l.15 and the counterpane at l.42-43. 'these lines never say who' is true of l.13-15 and 42-43, and l.39-41 imply Sebastian. The hint and walkScript had to change because they referred to the removed distractor and the over-strong 'nothing between them says who'. But the key also changes from 'Somebody has put it back' to 'Somebody has given it back to her'. The hold did not name that verb, it was not wrong, and the why does not disclose the change: it presents the key edit as only 'these lines never say who' in place of 'the passage'. Needless restyling of correct key wording. Re-propose keeping 'Somebody has put it back'."
+    },
+    "reviewOfRow": {
+     "itemId": "ENG-020-HD-03",
+     "verdict": "SIGN",
+     "holdFixed": true,
+     "reason": "Row as proposed reads correctly: the hat is ordered away (l.13-15) and found under the counterpane (l.42-43) with no hand named in those lines; stayed-where-it-was contradicted; Tinette-brought-it not stated; changed-her-mind not stated; hint is a move; walkScript true of the two cited parts. Does not land while the change is REFUSED.",
+     "faultField": null
+    }
+   },
+   "stem": {
+    "text": "Look at lines 13 to 15 and lines 42 and 43. What has happened to the hat between the two?",
+    "quotes": [],
+    "passageRef": "stream-a-19-heidi",
+    "answerShape": "two-halved-contrast-of-what-was-ordered-against-what-is-found",
+    "orderAnchor": 13,
+    "techniqueKey": "an-order-quietly-undone-by-a-hand-the-passage-never-names"
+   },
+   "lineRefs": [
+    13,
+    14,
+    15,
+    42,
+    43
+   ],
+   "explanation": {
+    "hintCore": "Telling the two halves in order is the story, not the answer.",
+    "walkScript": "Line 15 has Tinette told to take away the rolls and the hat. Line 42 has Heidi find that hat under the counterpane. Nothing between them says who put it there."
+   },
+   "key": "Somebody has put it back, and the passage never says who.",
+   "options": [
+    {
+     "optionId": "cmsw2f4yh00wntmbvive8xo50",
+     "value": "Somebody has put it back, and the passage never says who.",
+     "isKey": true,
+     "tag": null,
+     "tagAttested": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4yh00wotmbvtpxzktw2",
+     "value": "Somebody took it away, and later it was in her bed.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "tagAttested": true,
+     "execution": "Both halves in order, joined, with nothing named that links them."
+    },
+    {
+     "optionId": "cmsw2f4yi00wptmbv6158smmt",
+     "value": "Somebody sent Tinette for it, and she is the one who brought it.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "tagAttested": true,
+     "execution": "Tinette is named at line 13 and is the only servant sent; no line brings it back."
+    },
+    {
+     "optionId": "cmsw2f4yi00wqtmbvhvrbn8wg",
+     "value": "Somebody changed her mind, and the passage never hides who.",
+     "isKey": false,
+     "tag": "en-whole-text-absence-asserted",
+     "tagAttested": true,
+     "execution": "A decision the passage withholds, asserted as though it were on the page."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-020-HD-10",
+   "questionType": "en-comp-inference",
+   "difficultyTier": 3,
+   "passageRef": "stream-a-19-heidi",
+   "passageRefMissing": false,
+   "hold": {
+    "reason": "Execution on 'she saw her own roll' ends 'In the window, line 40 answers the stem: 'all sorts of strange signs, pointing to his own'' - false: the message is at line 41 ('I have got it all safe for you'); line 40 only describes the signs. Key otherwise correct.",
+    "faultField": "execution"
+   },
+   "previousRound": {
+    "proposal": {
+     "itemId": "ENG-020-HD-10",
+     "why": "Execution on 'she saw her own roll' ended with a false boilerplate sentence (the message is at line 41, not 40). Removed it. Nothing else changed.",
+     "stem": {
+      "text": "Look at lines 39 to 41. What is Sebastian telling Heidi?",
+      "quotes": [],
+      "passageRef": "stream-a-19-heidi",
+      "orderAnchor": 39
+     },
+     "options": [
+      {
+       "optionId": "cmsw2f4yn00xmtmbvsaau0l1j",
+       "value": "That he wants her to point at her own head.",
+       "isKey": false,
+       "tag": "en-inference-literal-lookalike",
+       "execution": "Reuses line 40 and copies the sign instead of reading it."
+      },
+      {
+       "optionId": "cmsw2f4yn00xntmbvmj6egr3g",
+       "value": "That he will speak to Fraulein Rottenmeier for her.",
+       "isKey": false,
+       "tag": "en-motive-invention",
+       "execution": "A rescue the scene invites; no line gives him the plan."
+      },
+      {
+       "optionId": "cmsw2f4yo00xotmbvsu603jex",
+       "value": "That she saw her own roll at supper.",
+       "isKey": false,
+       "tag": "en-wrong-scope-retrieval",
+       "execution": "True at line 37, before this window, and it is not what he points at."
+      },
+      {
+       "optionId": "cmsw2f4yo00xptmbvq91hbmou",
+       "value": "That he has kept something of hers safe.",
+       "isKey": true,
+       "tag": null,
+       "execution": null
+      }
+     ]
+    },
+    "cannotFix": null,
+    "reviewOfChange": {
+     "ref": "rebuild:ENG-020-HD-10",
+     "verdict": "ATTEST",
+     "reason": "Execution only. The false sentence placing the message at l.40 is removed. What remains ('True at line 37, before this window, and it is not what he points at') is true."
+    },
+    "reviewOfRow": {
+     "itemId": "ENG-020-HD-10",
+     "verdict": "HOLD",
+     "holdFixed": true,
+     "reason": "The hold's execution fault is fixed, but the unchanged walkScript is untrue to the passage. It says 'Line 41 has him say I have got it all safe for you'. In l.40-41 Sebastian says nothing: he makes signs and 'little nods as much as to say' those words. HD-12's key, on the same passage, turns on exactly this point ('what returns comes in silence'). Key and distractors otherwise check against l.39-41.",
+     "faultField": "walkScript"
+    }
+   },
+   "stem": {
+    "text": "Look at lines 39 to 41. What is Sebastian telling Heidi?",
+    "quotes": [],
+    "passageRef": "stream-a-19-heidi",
+    "orderAnchor": 39
+   },
+   "lineRefs": [
+    39,
+    40,
+    41
+   ],
+   "explanation": {
+    "quotes": [
+     {
+      "rule": "quoted-from-passage",
+      "text": "I have got it all safe for you",
+      "passageRef": "stream-a-19-heidi"
+     }
+    ],
+    "hintCore": "Copying the sign is not the same as reading it.",
+    "walkScript": "Line 40 has him point to his own head and then to hers. Line 41 has him say 'I have got it all safe for you'. A thing that goes on a head, and it is hers."
+   },
+   "key": "That he has kept something of hers safe.",
+   "options": [
+    {
+     "optionId": "cmsw2f4yn00xmtmbvsaau0l1j",
+     "value": "That he wants her to point at her own head.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "tagAttested": true,
+     "execution": "Reuses line 40 and copies the sign instead of reading it."
+    },
+    {
+     "optionId": "cmsw2f4yn00xntmbvmj6egr3g",
+     "value": "That he will speak to Fraulein Rottenmeier for her.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "tagAttested": true,
+     "execution": "A rescue the scene invites; no line gives him the plan."
+    },
+    {
+     "optionId": "cmsw2f4yo00xotmbvsu603jex",
+     "value": "That she saw her own roll at supper.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "tagAttested": true,
+     "execution": "True at line 37, before this window, and it is not what he points at. In the window, line 40 answers the stem: 'all sorts of strange signs, pointing to his own'."
+    },
+    {
+     "optionId": "cmsw2f4yo00xptmbvq91hbmou",
+     "value": "That he has kept something of hers safe.",
+     "isKey": true,
+     "tag": null,
+     "tagAttested": null,
+     "execution": null
+    }
+   ]
+  }
+ ]
+}

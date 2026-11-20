@@ -1,0 +1,435 @@
+{
+  "door": "english-rewrite/r2/G5",
+  "proposer": "agent",
+  "rebuilds": [
+    {
+      "itemId": "ENG-006-TM-04",
+      "why": "Original hold (hintCore singled out the key as the only three-mishap option): kept round 1's attested hint 'Read only lines 18 and 19. Check every part of your answer against them.' Round 2 review (execution): removed the false stock clause 'In the window, line 18 answers the stem: And then he would lift up the picture, and' from the execution on 'He drops the hammer on somebody's toes'. That execution now reads: Line 48 has him drop the hammer on somebody's toes, but that is much later, at the first blow. The child answers from that part instead of lines 18 and 19. Nothing else changed.",
+      "stem": {
+        "text": "What happens when Uncle Podger first lifts up the picture? (lines 18 and 19)",
+        "quotes": [],
+        "passageRef": "stream-a-10-three-men-boat",
+        "orderAnchor": 18
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4us00artmbv5sd1aeal",
+          "value": "He hangs it crooked and has to start again.",
+          "isKey": false,
+          "tag": "en-wrong-scope-retrieval",
+          "execution": "The crooked picture is line 58, at the very end of the whole business. The child answers from that part of the passage instead of lines 18 and 19, where he drops the picture, the frame comes off and he cuts himself."
+        },
+        {
+          "optionId": "cmsw2f4us00astmbvh0xmqmvo",
+          "value": "He drops the hammer on somebody's toes.",
+          "isKey": false,
+          "tag": "en-wrong-scope-retrieval",
+          "execution": "Line 48 has him drop the hammer on somebody's toes, but that is much later, at the first blow. The child answers from that part instead of lines 18 and 19."
+        },
+        {
+          "optionId": "cmsw2f4ut00attmbvdb4qa16o",
+          "value": "He drops it and the glass stays whole.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "Line 19 says he tries to save the glass and cuts himself on it."
+        },
+        {
+          "optionId": "cmsw2f4ut00autmbv2yhdnuja",
+          "value": "He drops it, the frame comes off, and he cuts himself.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Read only lines 18 and 19. Check every part of your answer against them."
+      }
+    },
+    {
+      "itemId": "ENG-006-TM-09",
+      "why": "Original hold (hintCore 'find the instrument' made the piano pickable): kept round 1's attested hint 'Start at line 43, where the string slips. Read on until he stops sliding.' Round 2 review (execution): removed the false stock clause 'In the window, line 43 answers the stem: inches beyond what was possible for him to reach' from the execution on 'Somebody's toes, with a yell'. That execution now reads: Line 48 has the hammer dropped, with a yell, on somebody's toes. That is the hammer falling, not Uncle Podger, and it comes after lines 43 to 45, where he slides on to the piano. Nothing else changed.",
+      "stem": {
+        "text": "What does Uncle Podger fall onto when the string slips? (lines 43 to 45)",
+        "quotes": [],
+        "passageRef": "stream-a-10-three-men-boat",
+        "orderAnchor": 43
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4uw00bbtmbv6ci1sncm",
+          "value": "The piano.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4uw00bctmbvw1r6a31f",
+          "value": "The kitchen-chair he had been standing on.",
+          "isKey": false,
+          "tag": "en-wrong-scope-retrieval",
+          "execution": "The chair is line 42, where he is leaning over it before the string slips. The child answers from that earlier line instead of lines 43 to 45, where he slides down on to the piano."
+        },
+        {
+          "optionId": "cmsw2f4uw00bdtmbvm7pq6k3n",
+          "value": "The charwoman's corns.",
+          "isKey": false,
+          "tag": "en-wrong-scope-retrieval",
+          "execution": "The charwoman's corns are line 61, at the very end, when he steps off the chair on to them. The child answers from that later part of the passage instead of lines 43 to 45, where he slides on to the piano."
+        },
+        {
+          "optionId": "cmsw2f4uw00betmbvki8pv5s0",
+          "value": "Somebody's toes, with a yell.",
+          "isKey": false,
+          "tag": "en-wrong-scope-retrieval",
+          "execution": "Line 48 has the hammer dropped, with a yell, on somebody's toes. That is the hammer falling, not Uncle Podger, and it comes after lines 43 to 45, where he slides on to the piano."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Start at line 43, where the string slips. Read on until he stops sliding."
+      }
+    },
+    {
+      "itemId": "ENG-011-CV-06",
+      "why": "Original hold: (1) hintCore's ambiguous 'they' steered to the curtsey distractor; (2) 'came down the steps towards them' carried en-cause-agent-swap with nothing causal swapped. (2) stays as round 1 had it and the reviewer accepted: retagged en-agent-patient-reversal. Round 2 review: round 1's hint 'Line 15 has two actions in it' was false (line 15 has three verbs: curtsey, alighted, said). Replaced with a move that counts nothing: 'Find who does the alighting on line 15. Then look back at how those people reached the house.' (They arrived in the waggonette, line 2.) It names no pronoun, so it cannot read as Mrs Umney. Reviewer also said the execution's 'never comes down them' went beyond the text: that clause is removed. The execution on 'came down the steps towards them' now reads: The child gives the word to the wrong party. Line 15 has her curtsey as they alighted, so the alighting belongs to the family arriving. Mrs Umney is the one standing on the steps at line 12. Nothing else changed.",
+      "stem": {
+        "text": "Look at lines 12 to 16. What does 'alighted' on line 15 mean there?",
+        "quotes": [
+          "alighted"
+        ],
+        "passageRef": "stream-a-07-canterville-ghost",
+        "orderAnchor": 6
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4w400iptmbvcwhewxef",
+          "value": "caught fire and burned",
+          "isKey": false,
+          "tag": "en-vocab-built-from-parts",
+          "execution": "The word looks like a-light, and line 12 has a woman waiting to receive people."
+        },
+        {
+          "optionId": "cmsw2f4w400iqtmbv7snl6asg",
+          "value": "got down on arriving at the house",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4w500irtmbv1ojrvpfb",
+          "value": "made a low curtsey to each one of the family",
+          "isKey": false,
+          "tag": "en-coordination-wrong-conjunct",
+          "execution": "That is what Mrs Umney does at line 15, joined to this word by as."
+        },
+        {
+          "optionId": "cmsw2f4w500istmbv1vt0l24f",
+          "value": "came down the steps towards them",
+          "isKey": false,
+          "tag": "en-agent-patient-reversal",
+          "execution": "The child gives the word to the wrong party. Line 15 has her curtsey as they alighted, so the alighting belongs to the family arriving. Mrs Umney is the one standing on the steps at line 12."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Find who does the alighting on line 15. Then look back at how those people reached the house."
+      }
+    },
+    {
+      "itemId": "ENG-011-CV-10",
+      "why": "Original hold (walk called Washington a boy with a stick of cosmetic): kept round 1's attested walk, which names Washington and says no trace of the stain can be seen (lines 37-38). Round 2 review (options): on 'It cannot be removed, she says, because the tourists admire it', the execution put the joining 'and' on line 32; it is on line 33 ('tourists and others, and cannot be removed'). And en-relation-word-flipped did not fit: no relation word is flipped, the child reads a plain 'and' as 'because'. Retagged en-conjunction-logic (wrong logical relation; its hint asks whether the second idea is a reason or just what comes next). Execution now reads: Line 33 joins the two with a plain and: much admired by tourists and others, and cannot be removed. The child reads that and as because, a reason the text never gives. Option wording unchanged. Nothing else changed.",
+      "stem": {
+        "text": "Read lines 28 to 33, then lines 37 and 38. What do these two parts together show?",
+        "quotes": [],
+        "passageRef": "stream-a-07-canterville-ghost",
+        "orderAnchor": 10
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4w800j9tmbv59rimy79",
+          "value": "Sir Simon, she says, has haunted the Chase for years.",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "True at line 32, and it is about the ghost rather than about the stain."
+        },
+        {
+          "optionId": "cmsw2f4w800jatmbvf2ov8e6g",
+          "value": "It cannot be removed, she says, but it goes in moments.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4w800jbtmbv9jc9o01p",
+          "value": "It went, she saw, but only after hard scrubbing by the family.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "Line 37 has Washington do it alone with a small stick, in a few moments."
+        },
+        {
+          "optionId": "cmsw2f4w800jctmbvv7vstvhe",
+          "value": "It cannot be removed, she says, because the tourists admire it.",
+          "isKey": false,
+          "tag": "en-conjunction-logic",
+          "execution": "Line 33 joins the two with a plain and: much admired by tourists and others, and cannot be removed. The child reads that and as because, a reason the text never gives."
+        }
+      ],
+      "explanationPatch": {
+        "walkScript": "Read line 33 and find the last three words: cannot be removed. Now read lines 37 and 38. After Washington's scrubbing, no trace of the stain can be seen. The one thing she says is impossible takes him a few moments."
+      }
+    },
+    {
+      "itemId": "ENG-011-CV-12",
+      "why": "Original hold (walk paired 'charge it to her' with the stain; 'every one belongs to running a house' and the key overstated): kept round 1's attested key 'They mostly answer with everyday things, like stains, weather and pay' and its attested walk. Round 2 review (options): on 'They never take her to heart, and answer her coldly', en-extreme-option-pull did not name the mistake; the option failed on 'coldly', not on its extreme word, and 'never take her to heart' was arguably true. Replaced the option value with 'They never once say a word to her about ghosts.' It is wrong exactly by its extreme word: the key's 'mostly' is the measured claim, and lines 54-55 give the one direct reply (not afraid of ghosts). Tag kept en-extreme-option-pull. Execution now reads: Lines 54 and 55 have them assure her that they are not afraid of ghosts. The child sees that most of their answers are about everyday things and pushes that to never, where the text has one direct reply. Nothing else changed.",
+      "stem": {
+        "text": "Mrs Umney offers the family a ghost story. How do they keep answering it?",
+        "quotes": [],
+        "passageRef": "stream-a-07-canterville-ghost",
+        "answerShape": "register-mismatch",
+        "orderAnchor": 12,
+        "techniqueKey": "the-ghost-story-is-answered-in-household-business"
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4w900jjtmbvpeu4ptuu",
+          "value": "They keep saying, over and over, that the house has no ghost.",
+          "isKey": false,
+          "tag": "en-minimal-pair-skim",
+          "execution": "Lines 54 and 55 have them say they are not afraid of ghosts. The child changes one detail, turning not being afraid of ghosts into there being no ghost, and matches the option on gist."
+        },
+        {
+          "optionId": "cmsw2f4w900jktmbvzgxqun6m",
+          "value": "They laugh at her openly, while she is out of the room.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "Line 54 has them warmly assure her, and nothing anywhere has them laugh."
+        },
+        {
+          "optionId": "cmsw2f4w900jltmbv2dtlhyxg",
+          "value": "They never once say a word to her about ghosts.",
+          "isKey": false,
+          "tag": "en-extreme-option-pull",
+          "execution": "Lines 54 and 55 have them assure her that they are not afraid of ghosts. The child sees that most of their answers are about everyday things and pushes that to never, where the text has one direct reply."
+        },
+        {
+          "optionId": "cmsw2f4wa00jmtmbvi0qg7wbc",
+          "value": "They mostly answer with everyday things, like stains, weather and pay.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        }
+      ],
+      "explanationPatch": {
+        "walkScript": "Mrs Umney offers a murder, a ghost and a stain that cannot be removed. To the blood, Mrs Otis says it must be removed at once. Washington answers the stain with a stain remover. The thunder only gets a grumble about English weather. Her fainting gets a joke about charging her for it. At lines 54 and 55 they do say they are not afraid of ghosts. Even that ends in a pay rise for her, at lines 56 and 57."
+      }
+    },
+    {
+      "itemId": "ENG-018-RB-01",
+      "why": "Original hold (passageRef missing): stem.passageRef set to stream-a-21-rebecca-sunnybrook, as round 1 and attested. Kept round 1's attested walk fix ('on the hill' removed; the hills are line 4). Round 2 review (execution): removed the false stock clause 'In the window, line 3 answers the stem: Mr. Jeremiah Cobb was favoring the horses as much' from the execution on 'That they had driven eight miles that day'. That execution now reads: Lines 25 and 26 have the mother say they drove eight miles that morning. That is outside this window, and it was the child and her mother, not Mr Cobb. Nothing else changed.",
+      "stem": {
+        "text": "Look at lines 1 to 4. What did Mr Cobb keep in mind as he spared the horses?",
+        "quotes": [],
+        "passageRef": "stream-a-21-rebecca-sunnybrook"
+      },
+      "options": [
+        {
+          "optionId": "cmt9qp4p30001tmovn25h1edp",
+          "value": "That he had the mail on board with him.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmt9qp4p30002tmovemovf1zg",
+          "value": "That the day was as warm as midsummer.",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "True at line 2, and it is the weather rather than a thing he was minding."
+        },
+        {
+          "optionId": "cmt9qp4p30003tmovpgjineba",
+          "value": "That they had driven eight miles that day.",
+          "isKey": false,
+          "tag": "en-wrong-scope-retrieval",
+          "execution": "Lines 25 and 26 have the mother say they drove eight miles that morning. That is outside this window, and it was the child and her mother, not Mr Cobb."
+        },
+        {
+          "optionId": "cmt9qp4p30004tmovhuyy5i1z",
+          "value": "That he was late leaving the post-office.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "A driver might well be; lines 1 to 4 give him no hurry at all."
+        }
+      ],
+      "explanationPatch": {
+        "walkScript": "Line 3 says how he was treating the horses. The same sentence says he never lost sight of one thing. Lines 3 and 4 name it: he carried the mail."
+      }
+    },
+    {
+      "itemId": "ENG-018-RB-02",
+      "why": "Original hold (hat option not a reversal; 'lolls back ... clears his mental decks' defensible): kept round 1's attested replacements, 'He sits more lazily at the end than he did at the start' (en-contradicted-by-the-text) and 'He revolves a quid of tobacco in his left cheek' (en-within-span-wrong-element). Round 2 review (execution): removed the false stock clause 'In the window, line 5 answers the stem: in his hands as he lolled back in his' from the execution on 'He boosts her up to the seat...'. That execution now reads: Lines 51 and 52 have him boost her up and resume his own place, outside both windows. The child answers from that part instead of lines 5 to 7 and 62 to 64. Also corrected one line number in round 1's execution on 'He sits more lazily...': 'Line 5 has him lolled back with a foot over the dashboard' now says 'Lines 5 and 6', since 'over the dashboard' is on line 6. Nothing else changed.",
+      "stem": {
+        "text": "Look at lines 5 to 7 and 62 to 64. What has happened to the way Mr Cobb sits?",
+        "quotes": [],
+        "passageRef": "stream-a-21-rebecca-sunnybrook",
+        "orderAnchor": 4
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4xy00thtmbvcqqtc6gv",
+          "value": "He sits more lazily at the end than he did at the start.",
+          "isKey": false,
+          "tag": "en-contradicted-by-the-text",
+          "execution": "Lines 5 and 6 have him lolled back with a foot over the dashboard at the start. Lines 62 to 64 have him take that foot down and push his hat back. The passage states the contrary of lazier at the end."
+        },
+        {
+          "optionId": "cmsw2f4xy00titmbviqgwjxut",
+          "value": "He settles in at the start, and he undoes it all at the end.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4xy00tjtmbvkbi1vyuy",
+          "value": "He revolves a quid of tobacco in his left cheek.",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "True at line 7, inside the first window, but it is one detail of how he rides, not what has happened to the way he sits. The child takes a single element from the right lines and misses the change between the two windows."
+        },
+        {
+          "optionId": "cmsw2f4xy00tktmbvvhwtotgg",
+          "value": "He boosts her up to the seat, and then he resumes his own place.",
+          "isKey": false,
+          "tag": "en-wrong-scope-retrieval",
+          "execution": "Lines 51 and 52 have him boost her up and resume his own place, outside both windows. The child answers from that part instead of lines 5 to 7 and 62 to 64."
+        }
+      ]
+    },
+    {
+      "itemId": "ENG-018-RB-05",
+      "why": "Original hold (walk put the laugh at line 27): kept round 1's attested walk (laugh at line 28, her words at line 29). Round 2 review (options): 'Warm, and very pleased with her' carried en-emotion-label-approximation with the execution 'An adjacent feeling', but it is the reverse of the key, not a near neighbour. Retagged en-vocab-not-this-word (a meaning that belongs to no sense of the word), matching how the antonym option on TM-01 was resolved. Option wording unchanged. Execution now reads: The child does not know the word and fills it from laugh, which usually goes with pleasure. Sardonic never means that, and line 29 has her cut the child down. Nothing else changed.",
+      "stem": {
+        "text": "Look at lines 27 to 32. What does 'sardonic' on line 28 mean here?",
+        "quotes": [
+          "sardonic"
+        ],
+        "passageRef": "stream-a-21-rebecca-sunnybrook",
+        "orderAnchor": 27
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4y100twtmbvus618vrq",
+          "value": "Bitter, and making fun of her.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4y100txtmbv4txufpxa",
+          "value": "Short, and quickly over with.",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "True at line 28, and it is the other word in the same phrase."
+        },
+        {
+          "optionId": "cmsw2f4y100tytmbveywymqth",
+          "value": "Warm, and very pleased with her.",
+          "isKey": false,
+          "tag": "en-vocab-not-this-word",
+          "execution": "The child does not know the word and fills it from laugh, which usually goes with pleasure. Sardonic never means that, and line 29 has her cut the child down."
+        }
+      ],
+      "explanationPatch": {
+        "walkScript": "Line 28 says the laugh was short and this. Line 29 gives what she said next, which cuts the child down. So the word names the mocking, not the shortness."
+      }
+    },
+    {
+      "itemId": "ENG-026-AL-01",
+      "why": "Original hold (hintCore 'Count the places he stopped' pointed at the key): kept round 1's attested hint 'Line 3 gives two times for the walk. Read on to find what slowed them down.' Round 2 review (execution): removed the false stock clause 'In the window, line 3 answers the stem: It is a fifteen-minute walk from his flat. We' from the execution on 'He sat down on the upturned crate'. That execution now reads: Line 21 has him sit on the upturned crate, but that is later, while they dig the potatoes. The child answers from that part instead of lines 3 to 6, where he stops twice on the way up. Nothing else changed.",
+      "stem": {
+        "text": "Look at lines 3 to 6. Why did the walk take about thirty-five minutes?",
+        "quotes": [],
+        "passageRef": "stream-b-05",
+        "orderAnchor": 1
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f5030163tmbvndhvo7fi",
+          "value": "He stopped twice on the way up.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f5030164tmbvpgbmoykw",
+          "value": "It is a fifteen-minute walk from his flat.",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "True at line 3, and it is the usual time rather than the reason."
+        },
+        {
+          "optionId": "cmsw2f5030165tmbvnqk01x2e",
+          "value": "He sat down on the upturned crate.",
+          "isKey": false,
+          "tag": "en-wrong-scope-retrieval",
+          "execution": "Line 21 has him sit on the upturned crate, but that is later, while they dig the potatoes. The child answers from that part instead of lines 3 to 6, where he stops twice on the way up."
+        },
+        {
+          "optionId": "cmsw2f5030166tmbvw689r2hk",
+          "value": "The allotment is further than he remembered.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "A slow walk invites a distance; line 3 gives fifteen minutes."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Line 3 gives two times for the walk. Read on to find what slowed them down."
+      }
+    },
+    {
+      "itemId": "ENG-026-AL-03",
+      "why": "Original hold (the true pairing 'The key was under the brick, and after that it was in her hand' was a second key): kept round 1's attested replacement 'He put the key back under the brick when they locked up' (en-negation-dropped, line 43 'did not') and the two lengthened executions. Round 2 review (key): round 1's key 'It is passing out of Grandad's hands, first to Alan and then to Cass' said the key passed to Alan; the text has it moved for Alan and left under the brick (lines 11-12), so Alan never holds it. Key now reads 'Grandad stops keeping the key, leaving it for Alan, then giving it to Cass.' It is true of each step: the key usually lives on his belt loop (line 10), he left it under the brick for Alan (lines 11-12), and he gives it to her to keep (lines 43-45). Walk changed to match: round 1's last sentence 'Bit by bit, the key is leaving his hands' made the same claim, and now reads 'Bit by bit, he stops keeping the key himself'; line 10 (belt loop) added; 'Line 11 says he had moved the key for Alan. Line 12 says it was under the brick.' becomes 'Line 11 says he had moved it for Alan. Line 12 finds it under the brick.'; 'give the key to her' becomes 'give it to her'. Hint kept as round 1: 'Ask who the key is for, each time it moves.' (replacing the stored 'The brick is not the point here', which would rule out two distractors outright). Nothing else changed.",
+      "stem": {
+        "text": "Look at lines 11 and 12 and lines 43 to 47. What do these lines together show about the shed key?",
+        "quotes": [],
+        "passageRef": "stream-b-05",
+        "answerShape": "who-it-was-moved-for-against-who-ends-up-holding-it",
+        "orderAnchor": 3,
+        "techniqueKey": "a-key-moved-for-one-person-and-then-given-to-another"
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f505016dtmbvdyiwrpv9",
+          "value": "He put the key back under the brick when they locked up.",
+          "isKey": false,
+          "tag": "en-negation-dropped",
+          "execution": "Line 43 says that when they locked up he did not put the key back under the brick. The child keeps the content words of the line and drops the not."
+        },
+        {
+          "optionId": "cmsw2f505016etmbvu0ashlwu",
+          "value": "The brick was too heavy for him to lift on his own.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "Nothing in the lines says the brick is heavy. The child supplies a likely reason for the key's move, where line 11 gives the real one: he moved it for Alan."
+        },
+        {
+          "optionId": "cmsw2f505016ftmbvlkbek66l",
+          "value": "Grandad stops keeping the key, leaving it for Alan, then giving it to Cass.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f505016gtmbv7wsmun17",
+          "value": "He gives it to her, so that Alan cannot get into the shed.",
+          "isKey": false,
+          "tag": "en-motive-invention",
+          "execution": "The child invents a motive for the gift. Line 11 has him move the key for Alan, and line 45 says only that it would save him hunting about."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Ask who the key is for, each time it moves.",
+        "walkScript": "Line 10 says the key lives on his belt loop. Line 11 says he had moved it for Alan. Line 12 finds it under the brick. Lines 43 to 45 have him give it to her to keep. Bit by bit, he stops keeping the key himself."
+      }
+    }
+  ],
+  "cannotFix": []
+}

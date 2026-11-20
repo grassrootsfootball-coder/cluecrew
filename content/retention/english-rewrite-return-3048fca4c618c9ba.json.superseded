@@ -1,0 +1,341 @@
+{
+ "kind": "english-rewrite-return",
+ "ruling": "R1023 (David, 2026-11-20): agents may rewrite the English rows R1022 held for the authoring store.",
+ "forCowork": "MERGE FIELD BY FIELD. For each change, apply `after` ONLY if your copy of that field still equals `before`. If it does not, both sides have moved: that change is a conflict to resolve by hand, never to apply. Fields not listed were not touched.",
+ "authorship": "Every `after` value was written by a drafting AGENT and attested by the machine reviewer rev-agent-01. No person wrote or read it. Do not attribute it to Annie or to Cowork.",
+ "stampedOver": "rows",
+ "generatedAt": "2026-11-20T16:58:39.868Z",
+ "sourceHash": "72a4183473f6180f",
+ "hashSpec": {
+  "algorithm": "sha256",
+  "digestChars": 16,
+  "over": "the canonicalised declared projection named in stampedOver — NOT the file bytes",
+  "fileDigest": "DECLARED AT CROSSING: the .sha256 sidecar beside this file and the STAGED line, both computed over the file bytes at delivery — a file cannot contain its own digest, and null left the crossing bare"
+ },
+ "rowCount": 14,
+ "fieldChangeCount": 22,
+ "rows": [
+  {
+   "itemId": "ENG-002-pp-01",
+   "passageRef": "stream-a-13-pride-prejudice",
+   "hold": {
+    "reason": "Execution on 'That he stayed about ten minutes with their father' says 'Line 5 does say he sat about ten minutes... inside the window'; 'sat about ten minutes' is line 4, outside the 5-8 window.",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Checked key against line 8 ('wore a blue coat and rode a black horse'); line 4 ten-minute visit, lines 36-37 Bingley lively, line 29 Darcy's ten thousand, nothing on liking the house. All executions true; hint does not name the key.",
+   "landedAt": "2026-11-20T16:58:39.866Z",
+   "changes": [
+    {
+     "field": "option D (cmsw2f4tk003gtmbvucil487r).tag",
+     "before": "en-within-span-wrong-element",
+     "after": "en-wrong-scope-retrieval"
+    },
+    {
+     "field": "option D (cmsw2f4tk003gtmbvucil487r).execution",
+     "before": "Line 5 does say he sat about ten minutes. True, inside the window, and it is what MR BENNET got out of the visit rather than what the daughters found out.",
+     "after": "The ten-minute visit is at line 4, just before the window opens at line 5. It is true, and it is what happened in Mr Bennet's library, not what the daughters found out from the upper window at lines 7 and 8."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-02",
+   "passageRef": "stream-a-13-pride-prejudice",
+   "hold": {
+    "reason": "Execution on 'A dance with the eldest Miss Bennet' asserts the assembly is 'weeks after this visit'; the passage gives no such interval (and his dancing with the eldest is at line 60, not lines 36-41).",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Key checked against lines 5-6 ('saw only the father'); library line 5, invitation lines 9-12 from the Bennets, black horse line 8 is Bingley's own, dance lines 60-61. Hint contrasts wanted and got without naming the key.",
+   "landedAt": "2026-11-20T16:58:39.866Z",
+   "changes": [
+    {
+     "field": "option E (cmsw2f4tl003ntmbvn364ifjh).execution",
+     "before": "The dancing is lines 36 to 41, at the assembly, weeks after this visit. In the window, line 5 answers the stem: 'him in his library. He had entertained hopes of'.",
+     "after": "His dance with the eldest Miss Bennet is at lines 60 and 61, at the assembly, a later scene in the passage, and it is something he did get. On this visit, lines 5 and 6 give what he hoped for: a sight of the young ladies."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-03",
+   "passageRef": "stream-a-13-pride-prejudice",
+   "hold": {
+    "reason": "hintCore 'Find the words obliged to be in town' quotes the answer clause itself; the key is a paraphrase of those words, so the hint coaches (R572).",
+    "faultField": "hintCore"
+   },
+   "reviewerNote": "Key checked against line 11 ('obliged to be in town the following day'), with London confirmed at line 16. Lady Lucas at 15-16, courses at 9-10 are Mrs Bennet's, hopes at 5-6, London party at 15-17. Hint no longer coaches.",
+   "landedAt": "2026-11-20T16:58:39.866Z",
+   "changes": [
+    {
+     "field": "explanation.quotes",
+     "before": [
+      {
+       "rule": "quoted-from-passage",
+       "text": "obliged to be in town",
+       "passageRef": "stream-a-13-pride-prejudice"
+      }
+     ],
+     "after": []
+    },
+    {
+     "field": "explanation.hintCore",
+     "before": "Find the words 'obliged to be in town'.",
+     "after": "Read only what his answer says. Leave out what other people guess later."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-10",
+   "passageRef": "stream-a-13-pride-prejudice",
+   "hold": {
+    "reason": "Option 'They decided he was less good-looking than Mr Bingley' is TRUE of lines 34-35 as an outcome ('forbidding, disagreeable countenance... unworthy to be compared with his friend'); execution says only that it 'reverses line 30' and the tag (agent-patient-reversal) does not name the actual mistake, which is taking the result for the cause.",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Key checked against lines 31-33 (manners, 'proud... above his company'). Estate 'large' line 33, ball closing early is Bingley's at 37-38, admiration lines 30-31 defeats 'from the moment he walked in'. Hint points to 'till' at line 31 without stating the key.",
+   "landedAt": "2026-11-20T16:58:39.866Z",
+   "changes": [
+    {
+     "field": "option B (cmsw2f4tt004wtmbv3dbiapy3).tag",
+     "before": "en-contradicted-by-the-text",
+     "after": "en-chronology-collapse"
+    },
+    {
+     "field": "option B (cmsw2f4tt004wtmbv3dbiapy3).execution",
+     "before": "Line 30 has the ladies declare Mr Darcy much handsomer than Mr Bingley, which is the contrary of this. The child misses that his looks were praised and that what turned people was his manners, at lines 31 to 33.",
+     "after": "Lines 34 and 35 do have the room find his face forbidding and him unworthy to be compared with Mr Bingley. That verdict comes after his manners turned the tide at lines 31 and 32, so the child gives the result of the change as its cause."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-13",
+   "passageRef": "stream-a-13-pride-prejudice",
+   "hold": {
+    "reason": "hintCore 'Whose opinion is this - the writer's own, or the room's?' offers a binary whose second half is the key ('the room's quick opinion'), so it coaches (R572). Also: option 'said nothing to anybody all evening' is tagged en-wrong-scope-retrieval but its execution refutes it from line 41 inside the window, so the tag does not name the mistake.",
+    "faultField": "hintCore"
+   },
+   "reviewerNote": "Key checked: lines 42-43 'His character was decided' names no one deciding it, so a one-night verdict reads as fact. Distractors checked; the 'said nothing' option is refuted inside the window at lines 41-42. Hint no longer coaches.",
+   "landedAt": "2026-11-20T16:58:39.866Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "Whose opinion is this — the writer's own, or the room's?",
+     "after": "Notice how certain these short sentences are. Then ask what they are based on."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-15",
+   "passageRef": "stream-a-13-pride-prejudice",
+   "hold": {
+    "reason": "hintCore 'What does scarcity of gentlemen mean?' asks the child to define the exact phrase whose definition is the key ('not enough gentlemen'), so it coaches (R572).",
+    "faultField": "hintCore"
+   },
+   "reviewerNote": "Key checked against line 47 ('obliged, by the scarcity of gentlemen, to sit down'). Darcy's remark at 65-67 comes later, the overhearing at 48-49 has its cause in his position, the eldest sister's dance is at 60-61. Hint no longer coaches.",
+   "landedAt": "2026-11-20T16:58:39.866Z",
+   "changes": [
+    {
+     "field": "explanation.quotes",
+     "before": [
+      {
+       "rule": "quoted-from-passage",
+       "text": "scarcity of gentlemen",
+       "passageRef": "stream-a-13-pride-prejudice"
+      },
+      {
+       "rule": "quoted-from-passage",
+       "text": "obliged, by the scarcity of gentlemen, to sit down",
+       "passageRef": "stream-a-13-pride-prejudice"
+      }
+     ],
+     "after": [
+      {
+       "rule": "quoted-from-passage",
+       "text": "obliged, by the scarcity of gentlemen, to sit down",
+       "passageRef": "stream-a-13-pride-prejudice"
+      }
+     ]
+    },
+    {
+     "field": "explanation.hintCore",
+     "before": "What does 'scarcity of gentlemen' mean?",
+     "after": "Find the word in line 47 that says she had no choice. What forced her?"
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-20",
+   "passageRef": "stream-a-13-pride-prejudice",
+   "hold": {
+    "reason": "walkScript ends 'Putting up with things is the other sense', but the row's own repaired execution states that meaning belongs to TOLERANT and is not a sense of 'tolerable' at all; the walk is wrong about English.",
+    "faultField": "walkScript"
+   },
+   "reviewerNote": "Key 'only just good enough to look at' checked against lines 66-67 ('tolerable: but not handsome enough to tempt me'). Tolerant is a different word, 'very good-looking' is contradicted by 66-67, and pride is Darcy's at line 32. The walk is now accurate about English.",
+   "landedAt": "2026-11-20T16:58:39.866Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Read on from 'tolerable' in line 66. It is 'but not handsome enough to tempt me'. So it means only just good enough. Putting up with things is the other sense.",
+     "after": "Read on from 'tolerable' in line 66. It is 'but not handsome enough to tempt me'. So it means only just good enough. Putting up with things belongs to a different word, tolerant."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-016-HB-03",
+   "passageRef": "stream-a-12-hound-baskervilles",
+   "hold": {
+    "reason": "hintCore 'Ask what does not belong in a sweet, simple spot' restates the key ('Armed men do not belong in a sweet and simple spot') almost word for word, so it coaches (R572).",
+    "faultField": "hintCore"
+   },
+   "reviewerNote": "Key checked against line 12 ('sweet, simple country spot') set against lines 13-14 (soldierly men leaning on rifles). The wagonette is at line 12 and the rifles/keen glance at lines 14-15; nothing says the station is too small. Hint no longer coaches.",
+   "landedAt": "2026-11-20T16:58:39.866Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "Ask what does not belong in a sweet, simple spot.",
+     "after": "Find the word that says Watson was surprised. Read what comes either side of it."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-016-HB-05",
+   "passageRef": "stream-a-12-hound-baskervilles",
+   "hold": {
+    "reason": "Execution on 'Was covered over by a skirt' opens 'The commonest everyday sense of the word', which is false of 'skirted' and contradicts its own retag note (en-vocab-built-from-parts); the execution no longer describes the tagged mistake.",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Key 'went along the edge of it' checked: line 24 'skirted a / noisy stream', line 26 'Both road and stream wound up'. The bridge is line 24 and 'kept a long way clear' is ruled out by line 26. Execution now names its tag's mistake.",
+   "landedAt": "2026-11-20T16:58:39.866Z",
+   "changes": [
+    {
+     "field": "option B (cmsw2f4xh00qqtmbvv9yk3m0r).execution",
+     "before": "The commonest everyday sense of the word; line 24 puts it on a road and a stream. RETAGGED 2026-08-15: The meaning does not belong to this word. \"Covered over by a skirt\" reads the noun inside the verb rather than choosing among the verb's senses, which is the library's own test between the two entries.",
+     "after": "The child finds the noun skirt inside skirted and adds the parts up to a covering. The parts are real, but the sum is not this word. Line 24 has them skirting a noisy stream, going along beside it."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-016-HB-07",
+   "passageRef": "stream-a-12-hound-baskervilles",
+   "hold": {
+    "reason": "Stem asks 'What has the moor got in it besides stone?' but the key answers a different question ('The bare moor and the hidden man together chill him'), as do the executions ('rather than what chills him', window 'lines 40 to 46' against a stem window of 40 to 44).",
+    "faultField": "stem"
+   },
+   "reviewerNote": "Key checked: lines 42-44 (the lurking convict) 'complete the grim suggestiveness of the barren waste, the chilling wind', then line 45 silence. Overcoat line 46 is what he did, cairns line 41 is appearance, the homesick motive is unstated. Stem, key and executions now agree.",
+   "landedAt": "2026-11-20T16:58:39.866Z",
+   "changes": [
+    {
+     "field": "stem.text",
+     "before": "Look at lines 40 to 44. What has the moor got in it besides stone?",
+     "after": "Look at lines 40 to 46. Even Sir Henry falls silent. What has chilled him?"
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 40 has the huge expanse of the moor rise in front of them. Lines 42 and 43 put the escaped man out there, lurking like a beast. Line 44 says it needed but this to complete the grim feeling.",
+     "after": "Line 40 has the huge expanse of the moor rise in front of them. Lines 42 and 43 put the escaped man out there, lurking like a beast. Line 44 says it needed but this to complete the grim feeling. At line 45 even Baskerville fell silent."
+    },
+    {
+     "field": "lineRefs",
+     "before": [
+      40,
+      41,
+      42,
+      43,
+      44
+     ],
+     "after": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46
+     ]
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-016-HB-08",
+   "passageRef": "stream-a-12-hound-baskervilles",
+   "hold": {
+    "reason": "Key 'The gold and the green give way to bare stone' misstates lines 47-51: green is not given for the country behind, the slopes ahead are 'russet and olive' (olive is a green), and they are 'sprinkled with giant boulders', not bare stone. The hint ('The question asks about ahead') also pulls against a key that describes behind-to-ahead.",
+    "faultField": "key"
+   },
+   "reviewerNote": "Key checked against lines 47-50. The 'driving down towards the fertile country' option is refuted by line 47, gold streams are line 48 (view behind), towers line 54 (arrival). Walk true of lines 48-52. Hint is a move.",
+   "landedAt": "2026-11-20T16:58:39.866Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "One of these is the view behind. The question asks about ahead.",
+     "after": "A change needs a before and an after. Find both in these lines."
+    },
+    {
+     "field": "option C (cmsw2f4xk00r6tmbvwk97o6m6).value",
+     "before": "Two high, narrow towers rose over the trees.",
+     "after": "Two tall, narrow towers rose over the trees."
+    },
+    {
+     "field": "option D (cmsw2f4xk00r7tmbvxgouqwpv).value",
+     "before": "The gold and the green give way to bare stone.",
+     "after": "They leave fertile farmland behind for bleaker, wilder country ahead."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-016-HB-10",
+   "passageRef": "stream-a-12-hound-baskervilles",
+   "hold": {
+    "reason": "Execution on 'Night had fallen before they reached it' cites 'line 57 has them arriving in a fading light'; 'fading light' is line 73 and line 57 says nothing of light.",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Key checked against line 62 ('shot their branches in a sombre tunnel over our heads'). The ghost house at 63-64 is distant and the hushed wheels at 61-62 are a sound. Execution line now right.",
+   "landedAt": "2026-11-20T16:58:39.866Z",
+   "changes": [
+    {
+     "field": "option D (cmsw2f4xl00rhtmbvpqejtl26).execution",
+     "before": "A dark drive invites it; line 57 has them arriving in a fading light.",
+     "after": "A dark drive invites it, but no line says night had fallen. At line 73 Watson still sees the house in the fading light."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-024-BF-04",
+   "passageRef": "stream-b-03",
+   "hold": {
+    "reason": "walkScript 'Line 13 says she said it on Monday' is wrong: 'She said it on Monday' is on line 12; line 13 is that they were still asleep on Monday.",
+    "faultField": "walkScript"
+   },
+   "reviewerNote": "Key checked against lines 12-14 (a Monday rule, 'by Thursday the instruction is basically out of date'). Negation at line 12 ('nobody'), Marnie and the fountain at 14-16. Walk lines now right.",
+   "landedAt": "2026-11-20T16:58:39.866Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 12 says nobody was to open the net except her. Line 13 says she said it on Monday. Line 14 says the instruction is out of date.",
+     "after": "Line 12 says nobody was to open the net except her. The same line says she said it on Monday. Line 13 says they were all still asleep then. Line 14 says the instruction is out of date."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-024-BF-07",
+   "passageRef": "stream-b-03",
+   "hold": {
+    "reason": "walkScript 'Line 27 says that is what half past two is like' misreports lines 26-27, which say screaming is 'just what Reception is like at half past two'.",
+    "faultField": "walkScript"
+   },
+   "reviewerNote": "Key checked against lines 26-27. Seven butterflies line 28, the drink of water is Miss Deller's at line 25, no teacher takes the class out. Walk now accurate.",
+   "landedAt": "2026-11-20T16:58:39.866Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 26 says Reception are fine. Line 26 says some of them are screaming. Line 27 says that is what half past two is like.",
+     "after": "Line 26 says Reception are fine. Line 26 says some of them are screaming. Lines 26 and 27 say that is just what Reception is like at half past two."
+    }
+   ]
+  }
+ ],
+ "instrumentProvenance": {
+  "emittedBy": "land-proposals.ts",
+  "carriedFixture": false,
+  "MARK": "FROM AN UNFIXTURED INSTRUMENT",
+  "meaning": "this emitter carries no fixture, so nothing in this run proves it can find what it claims to find or stay silent on what is clean. Read its figures accordingly (Annie's clause, R726).",
+  "remedy": "the emitter earns a carried fixture before its next emission crosses (R725)."
+ }
+}

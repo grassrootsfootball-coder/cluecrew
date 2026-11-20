@@ -28553,3 +28553,86 @@ doors one or two distractor types carrying most seats (vr-03 anchor/topic 30 of 
 (`content/agent-review/english/held-for-authoring-store.json`): item text is the authoring store's under
 "Cowork authors, the DB holds", and whether agents may now rewrite it is his call. A new entry for
 reversed-order events; the door-level distribution caps; maths-99's example.
+
+## R1023 — Agents may rewrite held English item text; the return leg carries every change to Cowork (David, 2026-11-20)
+
+**THE RULING.** David, asked whether agents may now rewrite the 183 English drafts R1022 held for the
+authoring store: *"Yes, agents rewrite."* This extends R1021 from REVIEWING to AUTHORING, for those rows
+only. "Cowork authors, the DB holds" stood because two stores editing one item drifted invisibly; it is
+not repealed. It is overridden for the held rows, by David, because the store it routes them to has
+delivered no English since the end of August and the rows would otherwise never move.
+
+**THE CONDITIONS, STATED BEFORE ANY WRITE.**
+1. **Machine authorship is recorded as machine authorship.** Every rewritten row carries an AMENDED
+   event naming the drafting agent as author and `rev-agent-01` as reviewer, with the exact fields it
+   changed. No row is attributed to Cowork, to Annie or to any person for text an agent wrote (R94, R98).
+2. **The hold is cleared only by the review that placed it re-reading its field** (R1022). The
+   reviewer reads each rewritten row against its passage and against the ORIGINAL hold reason, and
+   says whether that fault is fixed; a row leaves the hold file only on SIGN with the fault fixed.
+3. **Independence.** One agent drafts, a separate agent reviews and never adopts the drafter's
+   reasons as its own. Every change is attested, every touched row signed whole, all-or-nothing.
+4. **Fix the fault named, nothing else** — no restyling of fields the hold did not name, so the
+   changeset Cowork must absorb is as small as the faults.
+5. **The return leg carries every change** (R88, "export a MERGE, never a wholesale replace"): the
+   landing writes a field-level changeset — item, field, value before, value after, the hold it
+   answers — as its final step, delivered for Cowork to merge.
+
+**A PRECONDITION THAT COULD NOT BE MET HERE, NAMED.** The plan was to diff Cowork's copy against the
+database before writing, in case Cowork had moved since August. Cowork's store (`~/Downloads/11+`)
+is not on this machine, so that diff was NOT run. The changeset is therefore built to be safe against
+a moved copy: it carries the BEFORE value of every field it changes, so Cowork can tell at merge time
+whether its own copy still holds what this side replaced, and must not apply a change whose before
+value it does not hold.
+
+**OUTCOME (2026-11-20).** Of the 183 held rows, **180 are rewritten, signed by `rev-agent-01` with the
+original hold re-read and fixed, and LIVE**: English went from 197 to 377 LIVE. Three rounds: 146 of
+183 landed in round 1, 32 of 36 in round 2 (each row repaired from the reviewer's named faults, with
+the previous proposal in its packet), and 2 of 4 in round 3. 514 field changes over 180 rows:
+executions 152, option values 93, hints 77, walk scripts 72, tags 49, stem text 22, `lineRefs` 13,
+`passageRef` 10. Every change travels in `english-rewrite-return-*.json` with its before value. Across
+all rounds the reviewer attested 207 changes and refused 15. It held further rows whose changes it had
+attested, for faults elsewhere in the row. Its commonest grounds were rewording nobody asked for and a
+line number one off where a clause runs across two lines.
+
+**STILL HELD (3), with the latest finding on each row in the hold file (`latestUnderR1023`):**
+`ENG-022-GK-11` (two drafters each found no honest key: "each time" holds at one site of the three a
+whole-text item needs; a fix is a new question, not a repair); `ENG-018-RB-02` (a walk cites lines 63
+to 64 for a clause beginning on line 62); `ENG-026-AL-03` (an execution calls Grandad's stated reason
+"the real reason", which the passage leaves open).
+
+**WHAT THE PASS FOUND.**
+1. **12 of the 183 holds were already fixed on the store.** The earlier retag pass had corrected the
+   tag a hold named, and the hold file still listed the old fault. Those rows landed unchanged once the
+   reviewer re-read them. A hold reason describes the row on the day it was written, not the row now.
+2. **R57 again, inside this pass's own tooling.** The rewrite packets hid `_`-prefixed stem keys (as
+   `export-english-packets` does), so a drafter could not name them. A rebuild replaced the stem
+   wholesale, so ENG-007-LP-10 lost `_previousQuotes`. That was caught only because the return tally
+   listed `stem._previousQuotes` as a change. The value is restored from the captured before value, with
+   its own event. It sits outside the signed projection, so the signature still recomputes (checked).
+   `land-proposals` now carries forward every stored `_` key a rebuild does not set, for every door.
+3. **A person's approval marker on machine text.** ENG-001-WIW-10's hint carried
+   `hintAuthoredBy: Annie`. Rewriting the text while the marker stayed would have served agent words
+   under her name, because `chooseHint` serves on that pair. The drafter cleared it. `land-proposals`
+   now refuses any rewrite of `hintCore`/`walkScript` that leaves a person's marker in place
+   (canary-tested: it fires on the uncleared proposal).
+4. **NONE OF THE 77 REWRITTEN HINTS REACHES A CHILD.** `chooseHint` serves an item hint only when a
+   named reader is recorded, and no agent-written hint has one. Those rows serve the library hint, as
+   328 of 377 LIVE English rows already do. That is the safe default, but it means the hint work is
+   inert until David decides whether `rev-agent-01` may put an item hint into service.
+5. **The stock execution sentence "In the window, line N answers the stem: '…'"** was false wherever
+   the reviewers examined it, and is removed from every row this pass touched. **18 options on 17 LIVE
+   English rows still carry it.** It is staff-facing and outside the signed projection, so it misleads
+   reviewers, not children.
+6. **Gate-forced rewording of option values the holds did not name.** The appropriateness screen refuses
+   bare "high", "arms" and "shoots" ("high wheels" → "big wheels"). These are in the return like any
+   other change.
+
+**THE RETURN LEG, STATED AS WHAT IT IS.** Delivered through `deliver()` to the outbound folder, which
+did not exist on this machine and was created by this run. Cowork's store is not here, so ARRIVAL IS
+UNCONFIRMED until Cowork names the digest. The diff against Cowork's copy (condition 5's precondition)
+was never run.
+
+**OPEN FOR DAVID.** Whether `rev-agent-01` may put an item hint into service (finding 4). GK-11 needs
+a new question. The two one-line holds can go round once more. The 17 LIVE rows carrying the stock
+sentence. Separately, `check:line-refs` fails on LIVE `ENG-015-CC-10` (`attractorLine` set without
+`defeaterLine`). That was already there and is untouched here.

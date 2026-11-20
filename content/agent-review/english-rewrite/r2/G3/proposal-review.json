@@ -1,0 +1,20 @@
+{
+  "door": "english-rewrite/r2/G3",
+  "reviewer": "rev-agent-01",
+  "changes": [
+    {
+      "ref": "rebuild:ENG-005-BB-12",
+      "verdict": "ATTEST",
+      "reason": "Fixes the round-1 fault by changing the key's second half from 'cannot follow them' to 'cannot speak or understand much'. 'cannot speak' rests on line 41 ('Of course I could not tell him'), and 'understand much' on line 54 ('I could not understand much of what they said'). So both cited lines now support the key. The dt23 execution had to change to stay true ('The limit Beauty keeps giving is understanding' no longer matched the key), and its new line 41 and line 54 claims check. Diffed against the stored row and round 1: nothing else moved. passageRef, lineRefs [41, 54] and the n6kj retag are as attested in round 1."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "ENG-005-BB-12",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "faultField": null,
+      "reason": "Checked: passageRef set. Stem cites lines 41 and 54, which are the two places Beauty names his own limit (could not tell John; could not understand much), and lineRefs match. The key ('their words exactly', with speeches at 19, 28 and 47) is the only defensible answer. The people speak to him at lines 36-37, 40 and 49 (contradicted). Fear is real at line 25 but is never what stops him listening (plausible-not-stated). The show-off motive is invented. The hint is a move. The walk is accurate to lines 19/28/47, 41 and 54. Original hold (no passageRef, no line references) is gone."
+    }
+  ]
+}

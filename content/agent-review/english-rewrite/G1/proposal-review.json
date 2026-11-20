@@ -1,0 +1,248 @@
+{
+  "door": "english-rewrite/G1",
+  "reviewer": "rev-agent-01",
+  "changes": [
+    {
+      "ref": "rebuild:ENG-002-pp-01",
+      "verdict": "ATTEST",
+      "reason": "'sat about ten minutes' is line 4, outside the 5-8 window; new execution says so, and the upper window is lines 7-8. Retag to en-wrong-scope-retrieval is needed because en-within-span-wrong-element asserts the detail is inside the window. Nothing else touched."
+    },
+    {
+      "ref": "rebuild:ENG-002-pp-02",
+      "verdict": "ATTEST",
+      "reason": "Dance with the eldest Miss Bennet is lines 60-61 at the assembly; no interval is invented; lines 5-6 give his hope of 'a sight of the young ladies'. Only the held execution changed."
+    },
+    {
+      "ref": "rebuild:ENG-002-pp-03",
+      "verdict": "ATTEST",
+      "reason": "New hint quotes nothing and paraphrases no key; it steers away from Lady Lucas's later guess (lines 15-17). Dropping the quote declaration is right: the walk carries no quoted span."
+    },
+    {
+      "ref": "rebuild:ENG-002-pp-10",
+      "verdict": "ATTEST",
+      "reason": "The hold named the execution and the tag. Lines 34-35 do give 'forbidding, disagreeable countenance... unworthy to be compared with his friend', and that comes after the turn at lines 31-32 ('till his manners gave a disgust which turned the tide'). en-chronology-collapse (a later event given as the cause) names the result-for-cause mistake."
+    },
+    {
+      "ref": "rebuild:ENG-002-pp-13",
+      "verdict": "ATTEST",
+      "reason": "New hint drops the binary whose one half was the key. 'How certain these short sentences are' echoes the stem's 'short, sure sentences', and 'what they are based on' is a move, not the key. Second fault checked: the stored row already carries en-contradicted-by-the-text, with 'speaking occasionally' (line 41) 'to one of his own party' (line 42). Left alone, correctly."
+    },
+    {
+      "ref": "rebuild:ENG-002-pp-14",
+      "verdict": "REFUSE",
+      "reason": "New hint 'Find what made her dislike sharper than everyone else's' asserts something the passage does not say. Line 44 has 'Amongst the MOST violent against him was Mrs. Bennet', so she is one of the most, not more than everyone. 'Sharpened' at line 45 is set against her own dislike of his 'general behaviour', not against anyone else's. (The cause-agent-swap line fix, lines 60-61, is correct.)"
+    },
+    {
+      "ref": "rebuild:ENG-002-pp-15",
+      "verdict": "ATTEST",
+      "reason": "New hint sends the child to 'obliged' on line 47 and asks what forced her. It does not ask for the definition of 'scarcity of gentlemen', which is the key. The remaining quote declaration covers the walk's quoted span."
+    },
+    {
+      "ref": "rebuild:ENG-002-pp-16",
+      "verdict": "ATTEST",
+      "reason": "Removing 'The room hears nothing of this' takes out the only unsupported sentence. The remaining walk matches lines 48-49 ('near enough for her to / overhear')."
+    },
+    {
+      "ref": "rebuild:ENG-002-pp-20",
+      "verdict": "ATTEST",
+      "reason": "'Putting up with things belongs to a different word, tolerant' is true and agrees with the row's en-vocab-form-lookalike execution. Only the false sentence changed."
+    },
+    {
+      "ref": "rebuild:ENG-002-pp-23",
+      "verdict": "REFUSE",
+      "reason": "The rewrite is justified, because the old whole-passage key was not the only defensible answer, and the new key is the only defensible option. But the new execution on 'The writer tells us herself that he is kind under all his pride' says 'this passage gives only his pride and his rude words'. That is false: lines 26-29 give his 'fine, tall person, handsome features, noble mien' and ten thousand a year, and lines 39-42 narrate his conduct. The why's premise that his character comes 'only through the room... and then his own overheard words' leaves out that same narrated conduct at 39-42. The new en-extreme-option-pull execution cites 'the room's opinion at lines 29 to 43', but 36-38 are about Bingley and 39-42 are narration of what Darcy did."
+    },
+    {
+      "ref": "rebuild:ENG-016-HB-01",
+      "verdict": "ATTEST",
+      "reason": "Line 3 has the hill rising over the fields ('Over the green squares of the fields... there rose'), and Dr Mortimer points out the moor at lines 1-2. The new execution is true. Nothing else touched."
+    },
+    {
+      "ref": "rebuild:ENG-016-HB-02",
+      "verdict": "ATTEST",
+      "reason": "New hint is no longer false. The lamps execution drops the untrue 'line 9 answers the stem', and lines 69-71 is right. The arithmetic fix (45 - 9 = 36) corrects a false number; it is not restyling."
+    },
+    {
+      "ref": "rebuild:ENG-016-HB-03",
+      "verdict": "ATTEST",
+      "reason": "New hint sends the child to 'surprised' (line 13) and either side of it. It no longer restates 'armed men do not belong in a sweet and simple spot'."
+    },
+    {
+      "ref": "rebuild:ENG-016-HB-05",
+      "verdict": "ATTEST",
+      "reason": "The new execution describes en-vocab-built-from-parts (the noun skirt inside skirted, parts summed) and no longer claims a commonest sense. Dropping the contradicting retag note is part of the held execution. 'skirted' is line 24."
+    },
+    {
+      "ref": "rebuild:ENG-016-HB-07",
+      "verdict": "ATTEST",
+      "reason": "The stem now asks the question the key answers, and widening the window to 40-46 matches what the executions already cite. Line 45 'Even Baskerville fell silent' supports 'Even Sir Henry falls silent'. The one added walk sentence covers line 45, now inside the window."
+    },
+    {
+      "ref": "rebuild:ENG-016-HB-08",
+      "verdict": "ATTEST",
+      "reason": "New key matches line 47 ('left the fertile country behind and beneath us') and lines 49-50 ('The road in front / of us grew bleaker and wilder'). The new hint no longer pulls against a before/after key. The 'high' to 'tall' edit is gate-forced: 'high' is on FLAG_AMBIGUOUS_SENSE in packages/core/src/appropriateness.ts, and option values are screened bare. It must go back to Cowork as a gate-forced change."
+    },
+    {
+      "ref": "rebuild:ENG-016-HB-10",
+      "verdict": "ATTEST",
+      "reason": "'fading light' is at lines 72-73 ('In the / fading light I could see') and no line says night had fallen. The new execution is true."
+    },
+    {
+      "ref": "rebuild:ENG-016-HB-12",
+      "verdict": "ATTEST",
+      "reason": "The false clause about nobody having spoken is removed. Line 28 has the gifts 'for Nature to throw before the carriage', and the new walk says 'before the carriage'. Lines 4 (melancholy), 8 (forbidding), 20 (sinister) and 27-28 (rotting vegetation, sad gifts) check."
+    },
+    {
+      "ref": "rebuild:ENG-024-BF-04",
+      "verdict": "ATTEST",
+      "reason": "'She said it on Monday' is line 12, 'still asleep' line 13, 'out of date' line 14. The new walk places each correctly."
+    },
+    {
+      "ref": "rebuild:ENG-024-BF-07",
+      "verdict": "ATTEST",
+      "reason": "Lines 26-27 say the screaming 'is just what Reception is like / at half past two'. The new walk says exactly that."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "ENG-002-pp-01",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Checked key against line 8 ('wore a blue coat and rode a black horse'); line 4 ten-minute visit, lines 36-37 Bingley lively, line 29 Darcy's ten thousand, nothing on liking the house. All executions true; hint does not name the key.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-002-pp-02",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Key checked against lines 5-6 ('saw only the father'); library line 5, invitation lines 9-12 from the Bennets, black horse line 8 is Bingley's own, dance lines 60-61. Hint contrasts wanted and got without naming the key.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-002-pp-03",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Key checked against line 11 ('obliged to be in town the following day'), with London confirmed at line 16. Lady Lucas at 15-16, courses at 9-10 are Mrs Bennet's, hopes at 5-6, London party at 15-17. Hint no longer coaches.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-002-pp-10",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Key checked against lines 31-33 (manners, 'proud... above his company'). Estate 'large' line 33, ball closing early is Bingley's at 37-38, admiration lines 30-31 defeats 'from the moment he walked in'. Hint points to 'till' at line 31 without stating the key.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-002-pp-13",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Key checked: lines 42-43 'His character was decided' names no one deciding it, so a one-night verdict reads as fact. Distractors checked; the 'said nothing' option is refuted inside the window at lines 41-42. Hint no longer coaches.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-002-pp-14",
+      "verdict": "HOLD",
+      "holdFixed": true,
+      "reason": "The original fault is gone: the hint no longer quotes 'one of her daughters'. But the stem premise 'Mrs Bennet disliked Mr Darcy more strongly than anybody else in the room did' overstates line 44, which says only 'Amongst the most violent against him'. The new hintCore repeats the same false comparison ('sharper than everyone else's'). Also, the wrong-scope execution's suffix 'line 44 answers the stem' is wrong: the reason is at lines 45-46.",
+      "faultField": "stem"
+    },
+    {
+      "itemId": "ENG-002-pp-15",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Key checked against line 47 ('obliged, by the scarcity of gentlemen, to sit down'). Darcy's remark at 65-67 comes later, the overhearing at 48-49 has its cause in his position, the eldest sister's dance is at 60-61. Hint no longer coaches.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-002-pp-16",
+      "verdict": "HOLD",
+      "holdFixed": true,
+      "reason": "The walk fault is gone. hintCore 'Do you hear the words, or only hear about them later?' offers a choice whose first half is the key ('The reader hears the unkind words at the very moment Elizabeth does'). That is coaching under R572. Also, the en-cause-agent-swap execution says 'the words Elizabeth hears are Mr Darcy's, not his'. That is false: lines 48-49 have her overhear a conversation between Mr Darcy and Mr Bingley, so she also hears Bingley's kind words at lines 62-63.",
+      "faultField": "hintCore"
+    },
+    {
+      "itemId": "ENG-002-pp-20",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Key 'only just good enough to look at' checked against lines 66-67 ('tolerable: but not handsome enough to tempt me'). Tolerant is a different word, 'very good-looking' is contradicted by 66-67, and pride is Darcy's at line 32. The walk is now accurate about English.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-002-pp-23",
+      "verdict": "HOLD",
+      "holdFixed": true,
+      "reason": "The original fault is gone: the key is now the only defensible option, and the hint no longer calls the writer 'he'. Key checked: the room's verdicts (29-35, 42-46) all come before his words (53-56, 60-61, 65-69). The hint is a move and the walk is accurate. Held for two execution claims the passage contradicts: 'gives only his pride and his rude words' (lines 26-29 give his looks and wealth), and 'room's opinion at lines 29 to 43' (that span includes Bingley at 36-38 and narrated conduct at 39-42).",
+      "faultField": "execution"
+    },
+    {
+      "itemId": "ENG-016-HB-01",
+      "verdict": "HOLD",
+      "holdFixed": true,
+      "reason": "The execution fault is gone. hintCore 'The window is only four lines wide' uses reviewer jargon ('window' for a line range) in a row whose stem uses 'window' literally ('point out of the window', the carriage window at line 2). A child meets two meanings of one word in one item and is not told the hint means lines 1 to 4.",
+      "faultField": "hintCore"
+    },
+    {
+      "itemId": "ENG-016-HB-02",
+      "verdict": "HOLD",
+      "holdFixed": true,
+      "reason": "Key checked against lines 9-10 (a comrade who 'would bravely share it') and line 45 ('Even Baskerville fell silent'). Distractors and executions are true. The held fault is gone. Held because the new hintCore 'Read the first window, then the second' carries the reviewer word 'window' for a line range, which no child has been taught. The stem gives the ranges as lines, and this passage's only literal window is the carriage window at line 2.",
+      "faultField": "hintCore"
+    },
+    {
+      "itemId": "ENG-016-HB-03",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Key checked against line 12 ('sweet, simple country spot') set against lines 13-14 (soldierly men leaning on rifles). The wagonette is at line 12 and the rifles/keen glance at lines 14-15; nothing says the station is too small. Hint no longer coaches.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-016-HB-05",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Key 'went along the edge of it' checked: line 24 'skirted a / noisy stream', line 26 'Both road and stream wound up'. The bridge is line 24 and 'kept a long way clear' is ruled out by line 26. Execution now names its tag's mistake.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-016-HB-07",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Key checked: lines 42-44 (the lurking convict) 'complete the grim suggestiveness of the barren waste, the chilling wind', then line 45 silence. Overcoat line 46 is what he did, cairns line 41 is appearance, the homesick motive is unstated. Stem, key and executions now agree.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-016-HB-08",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Key checked against lines 47-50. The 'driving down towards the fertile country' option is refuted by line 47, gold streams are line 48 (view behind), towers line 54 (arrival). Walk true of lines 48-52. Hint is a move.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-016-HB-10",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Key checked against line 62 ('shot their branches in a sombre tunnel over our heads'). The ghost house at 63-64 is distant and the hushed wheels at 61-62 are a sound. Execution line now right.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-016-HB-12",
+      "verdict": "HOLD",
+      "holdFixed": true,
+      "reason": "The walk fault is gone. Held on the en-plausible-not-stated execution 'line 4 is grim in broad daylight'. No line says broad daylight, and the passage points the other way: line 19 has 'the evening sky' soon after the train, and line 24 'the sinking sun'. Also, hintCore 'Two of these are things the moor does' has no clear count: only the 'calm by day, cruel after dark' option is plainly something the moor does. That is the same kind of fault held on HB-02's old hint.",
+      "faultField": "execution"
+    },
+    {
+      "itemId": "ENG-024-BF-04",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Key checked against lines 12-14 (a Monday rule, 'by Thursday the instruction is basically out of date'). Negation at line 12 ('nobody'), Marnie and the fountain at 14-16. Walk lines now right.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-024-BF-07",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Key checked against lines 26-27. Seven butterflies line 28, the drink of water is Miss Deller's at line 25, no teacher takes the class out. Walk now accurate.",
+      "faultField": null
+    }
+  ]
+}

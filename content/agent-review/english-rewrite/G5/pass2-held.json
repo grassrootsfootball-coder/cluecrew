@@ -1,0 +1,208 @@
+{
+ "door": "english-rewrite/G5",
+ "mode": "APPLIED",
+ "landed": [
+  "ENG-018-RB-11",
+  "ENG-006-TM-01",
+  "ENG-006-TM-07",
+  "ENG-006-TM-06",
+  "ENG-006-TM-11",
+  "ENG-006-TM-12",
+  "ENG-006-TM-02",
+  "ENG-011-CV-04",
+  "ENG-011-CV-05",
+  "ENG-011-CV-07",
+  "ENG-018-RB-03",
+  "ENG-018-RB-04",
+  "ENG-018-RB-06",
+  "ENG-018-RB-08",
+  "ENG-018-RB-12",
+  "ENG-026-AL-02",
+  "ENG-026-AL-09",
+  "ENG-026-AL-12"
+ ],
+ "held": [
+  {
+   "itemId": "ENG-018-RB-01",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "passageRef missing",
+    "faultField": "passageRef"
+   },
+   "holdFixed": true,
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-018-RB-01",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "reason": "passageRef fault is fixed. But the execution on 'That they had driven eight miles that day' ends 'In the window, line 3 answers the stem: Mr. Jeremiah Cobb was favoring the horses as much'. Those words are the stem's premise (sparing the horses), not what he kept in mind ('carried the mail', lines 3-4). Templated execution clause (R1022): remove or make it true.",
+    "faultField": "execution"
+   }
+  },
+  {
+   "itemId": "ENG-006-TM-04",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "Key correct (lines 18-19), but hintCore 'One sentence holds three mishaps in a row' singles out the key by form: it is the only option listing three mishaps, the distractors list two (coaching).",
+    "faultField": "hintCore"
+   },
+   "holdFixed": true,
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-006-TM-04",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "reason": "Hint fault is fixed, but the execution on 'He drops the hammer on somebody's toes' ends with the machine clause 'In the window, line 18 answers the stem: And then he would lift up the picture, and'. Those quoted words are the stem's own premise and answer nothing; the answer is drop / out of the frame / cut himself across lines 18-19. Templated execution clause (R1022): remove or make it true.",
+    "faultField": "execution"
+   }
+  },
+  {
+   "itemId": "ENG-006-TM-09",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "Key correct (line 44), but hintCore 'Something musical happens, so find the instrument' makes the key pickable from the options alone - the piano is the only instrument offered (coaching).",
+    "faultField": "hintCore"
+   },
+   "holdFixed": true,
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-006-TM-09",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "reason": "Hint fault is fixed, but the execution on 'Somebody's toes, with a yell' ends 'In the window, line 43 answers the stem: inches beyond what was possible for him to reach'. That is false: those words are about reaching, and what he falls onto ('on to the piano') is at line 44. Templated execution clause (R1022): remove or make it true.",
+    "faultField": "execution"
+   }
+  },
+  {
+   "itemId": "ENG-011-CV-12",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "walkScript pairs 'charge it to her' as the reply to 'a stain that will not go', but line 48 answers her fainting; and lines 54-55 have the Otises reply directly about ghosts ('not afraid of ghosts'), so 'every one belongs to running a house' and the key's 'keep to household business' overstate.",
+    "faultField": "walkScript"
+   },
+   "holdFixed": true,
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-011-CV-12",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "reason": "Key and walk faults are fixed. But 'They never take her to heart, and answer her coldly' carries en-extreme-option-pull, and the extreme word is not what makes it wrong. 'Never take her to heart' is arguably true of how they treat her warnings (line 34 'all nonsense', line 55 'not afraid of ghosts'). The option fails on 'coldly', which line 54's 'warmly' contradicts, so the tag does not name the mistake.",
+    "faultField": "options"
+   }
+  },
+  {
+   "itemId": "ENG-011-CV-06",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "Key correct, but hintCore 'Someone is waiting to receive them. Ask what they do.' has an ambiguous 'they' that reads as the someone (Mrs Umney), steering to the curtsey distractor; 'came down the steps towards them' also carries en-cause-agent-swap where nothing causal is swapped.",
+    "faultField": "hintCore"
+   },
+   "holdFixed": true,
+   "unattested": [
+    {
+     "ref": "rebuild:ENG-011-CV-06",
+     "verdict": "REFUSE",
+     "reason": "New hintCore 'Line 15 has two actions in it' is false. Line 15 holds three verbs: she 'made them each a low curtsey', they 'alighted', and she 'said'. A child counting two may pair the two Mrs Umney acts (curtsey and said), which steers back towards the curtsey distractor. The retag of 'came down the steps towards them' to en-agent-patient-reversal is sound; the execution's 'never comes down them' goes beyond what the text says (line 16 has the family follow her in)."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-011-CV-06",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "reason": "The original fault is gone (the ambiguous 'they' is removed; the cause-agent-swap tag is replaced). But the new hintCore asserts that line 15 has two actions when it has three (made a curtsey / alighted / said).",
+    "faultField": "hintCore"
+   }
+  },
+  {
+   "itemId": "ENG-011-CV-10",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "Key correct, but walkScript says 'A boy with a stick of cosmetic removes it'; line 37 says only 'what looked like a black cosmetic' (it is Pinkerton's stain remover, line 34), and Washington is never called a boy.",
+    "faultField": "walkScript"
+   },
+   "holdFixed": true,
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-011-CV-10",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "reason": "Walk fault is fixed. But on 'It cannot be removed, she says, because the tourists admire it', the execution says 'Line 32 joins the two with and', and line 32 has no 'and'. The joining 'and cannot be removed' is on line 33. The tag en-relation-word-flipped also names no relation word to flip: the child reads a plain 'and' as 'because', which is the reverse of what that entry describes. This is the same mis-tag held on TM-01, TM-06 and TM-11.",
+    "faultField": "options"
+   }
+  },
+  {
+   "itemId": "ENG-018-RB-02",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "Execution for 'He tucks his hat down first, and then he pulls it over his eyes' says it reverses lines 6 and 63, but the option never pushes the hat back - it is not a reversal; and 'He lolls back, and later he clears his mental decks' is true at lines 5 and 64 and defensible as what happened to how he sits.",
+    "faultField": "execution"
+   },
+   "holdFixed": true,
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-018-RB-02",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "reason": "Both named faults are fixed. But the execution on 'He boosts her up to the seat...' ends 'In the window, line 5 answers the stem: in his hands as he lolled back in his'. That fragment starts mid-clause (the reins), gives only the first window, and does not answer what has happened to the way he sits, which needs lines 62-64. Templated execution clause (R1022): remove or make it true.",
+    "faultField": "execution"
+   }
+  },
+  {
+   "itemId": "ENG-018-RB-05",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "walkScript says 'Line 27 says the laugh was short and this'; line 27 is Rebecca's speech, the laugh is at line 28.",
+    "faultField": "walkScript"
+   },
+   "holdFixed": true,
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-018-RB-05",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "reason": "Walk fault is fixed. But 'Warm, and very pleased with her' carries en-emotion-label-approximation with the execution 'An adjacent feeling'. Warm and pleased is the reverse of the bitter mocking the key gives, not a near neighbour of it. The execution's claim is false and the tag does not name the mistake (the same antonym-mis-tag class held on TM-01).",
+    "faultField": "options"
+   }
+  },
+  {
+   "itemId": "ENG-026-AL-01",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "Key correct (lines 3-5), but hintCore 'Count the places he stopped' points straight at the key 'He stopped twice' - the only option about stopping (coaching).",
+    "faultField": "hintCore"
+   },
+   "holdFixed": true,
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-026-AL-01",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "reason": "Hint fault is fixed. But the execution on 'He sat down on the upturned crate' ends 'In the window, line 3 answers the stem: It is a fifteen-minute walk from his flat. We'. That quotes the usual time, which is the within-span distractor's content, not the reason ('because he stopped at the bottom gate ... and then again halfway up', lines 3-5). Templated execution clause (R1022): remove or make it true.",
+    "faultField": "execution"
+   }
+  },
+  {
+   "itemId": "ENG-026-AL-03",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "'The key was under the brick, and after that it was in her hand' is wholly true (lines 12, 43-44) and as much a 'what these lines show' as the key, which is itself a literal pairing of two facts; no defensible distinction between them.",
+    "faultField": "options"
+   },
+   "holdFixed": true,
+   "unattested": [
+    {
+     "ref": "rebuild:ENG-026-AL-03",
+     "verdict": "REFUSE",
+     "reason": "The replacement distractor is sound: 'He put the key back under the brick when they locked up' drops the 'did not' of line 43. The two lengthened executions are gate-forced and true. But the new key, 'It is passing out of Grandad's hands, first to Alan and then to Cass', says the key passed to Alan. Line 11 says only that he had moved it for Alan, and it was under the brick (line 12). Alan never has it, so that wording is not true of the passage."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-026-AL-03",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "reason": "The original fault is gone: the wholly true pairing is replaced and the key is no longer a bare pairing. But the new key states the shed key passed 'first to Alan'. The text has it moved for Alan and left under the brick (lines 11-12). This is the same precision fault held on RB-03 and TM-11.",
+    "faultField": "key"
+   }
+  }
+ ]
+}

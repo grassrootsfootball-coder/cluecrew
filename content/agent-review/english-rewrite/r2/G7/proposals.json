@@ -1,0 +1,192 @@
+{
+  "door": "english-rewrite/r2/G7",
+  "proposer": "agent",
+  "rebuilds": [
+    {
+      "itemId": "ENG-009-SM-11",
+      "why": "Original hold: hintCore 'Two causes, one in each line' named a property only the key has. Round 1 replaced it and the reviewer attested it (kept unchanged). Round 2, per the review: the stored walkScript misread 'even then', saying it joins the light and the hands and means 'the second happened despite the first'. In lines 41 and 42 'even then' joins holding the phone in both hands to the picture still coming out shaken. The walkScript's first two sentences are unchanged. Its last two sentences ('The words even then join them. They mean the second happened despite the first.') are replaced by 'He holds the phone in both hands. The words even then mean that this still did not stop the shake.' Stem, options, tags and executions are unchanged.",
+      "stem": {
+        "text": "Read lines 40 to 42. Why did the picture come out grey and shaken?",
+        "quotes": [],
+        "passageRef": "stream-b-02",
+        "orderAnchor": 40
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4vp00g4tmbvad2thy9l",
+          "value": "The wind shook the phone as he held it.",
+          "isKey": false,
+          "tag": "en-cause-agent-swap",
+          "execution": "Line 41 gives the movement to his own hand, not to any wind."
+        },
+        {
+          "optionId": "cmsw2f4vp00g5tmbv5y6x5n3h",
+          "value": "There was something the matter with the camera on his phone.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "Lines 40 and 41 give the light and his hands, and nothing about the phone itself."
+        },
+        {
+          "optionId": "cmsw2f4vp00g6tmbvzg3lyxnb",
+          "value": "The light had gone and his hands would not hold still.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4vp00g7tmbvoi2716j5",
+          "value": "Holding it in both hands is what shook it.",
+          "isKey": false,
+          "tag": "en-relation-word-flipped",
+          "execution": "Line 41 says even then, which means despite that, and this reads it as because."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Read lines 40 and 41 for what made the picture hard to take. Watch the words even then.",
+        "walkScript": "Read line 40 for the light, then line 41 for his hands. Two things are going against him at once. He holds the phone in both hands. The words even then mean that this still did not stop the shake."
+      }
+    },
+    {
+      "itemId": "ENG-009-SM-12",
+      "why": "Original hold: hintCore 'Sort the sentences into what still stands and what happened' restated the key (R572); and distractor 2 'told it to them' had no referent for 'them'. hintCore is now 'Pick out the sentences in the present tense. Ask what each one is about.' (round 1, which the reviewer found sound). Distractor 2: per the review, ONLY 'them' is changed to 'him'. The round-1 rewording of 'the whole of it' and 'his Nan' is reverted to the stored wording, so the value is 'He tells the whole of it the way his Nan has always told it to him.' Its tag and execution are unchanged. Stem, the other options, tags, executions and walkScript are unchanged.",
+      "stem": {
+        "text": "The writer moves between tenses by a rule. What decides which he uses?",
+        "quotes": [],
+        "passageRef": "stream-b-02",
+        "answerShape": "tense-split",
+        "orderAnchor": 9999,
+        "techniqueKey": "present-tense-reserved-for-what-is-still-true"
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4vp00g9tmbvoxq5zezp",
+          "value": "The walk is two miles out along the sea wall to a ruined cottage.",
+          "isKey": false,
+          "tag": "en-inference-literal-lookalike",
+          "execution": "A summary of what happens, which names no choice about tense at all."
+        },
+        {
+          "optionId": "cmsw2f4vp00gatmbv4jfte8kl",
+          "value": "He tells the whole of it the way his Nan has always told it to him.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "Line 10 says her story changes each time, and at line 38 he corrects it."
+        },
+        {
+          "optionId": "cmsw2f4vq00gbtmbvir1rnoqj",
+          "value": "Nan's part is in the present, but his own is in the past.",
+          "isKey": false,
+          "tag": "en-attribute-transfer",
+          "execution": "Lines 9 and 18 are his own sentences, and both are in the present."
+        },
+        {
+          "optionId": "cmsw2f4vq00gctmbv0gu92sgj",
+          "value": "The present is kept for what is still true, but the walk stays past.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Pick out the sentences in the present tense. Ask what each one is about."
+      }
+    },
+    {
+      "itemId": "ENG-020-HD-03",
+      "why": "Original hold: distractor 'Somebody took it away, and later it was in her bed' was a true answer; and lines 39 to 41 strongly imply Sebastian, so the key's 'the passage never says who' needed care. (1) That distractor is replaced with 'Nobody touched it, and it stayed where it was.' (en-contradicted-by-the-text): line 15 has the hat on the table, and lines 42 and 43 find it under the counterpane. (2) KEY: per the review, the round-1 change of 'put it back' to 'given it back to her' is reverted. The only change to the key is 'the passage never says who' becoming 'these lines never say who', which is true of lines 13 to 15 and 42 and 43, the two parts the stem cites. Stored key 'Somebody has put it back, and the passage never says who.' becomes 'Somebody has put it back, and these lines never say who.' (3) hintCore 'Telling the two halves in order is the story, not the answer.' addressed the removed distractor, so it is now a move: 'Find where the hat is in each part. Then ask how it got from one to the other.' (4) walkScript said 'Nothing between them says who put it there', which lines 39 to 41 make too strong. It now speaks of the two cited parts: 'Lines 13 to 15 have Tinette told to take away the rolls and the hat. Lines 42 and 43 have Heidi find that hat under the counterpane. Neither part says who put it there.' Stem, the other options, tags and executions are unchanged. The reviewer accepted (1), (3) and (4) in round 1 and signed the row as otherwise correct.",
+      "stem": {
+        "text": "Look at lines 13 to 15 and lines 42 and 43. What has happened to the hat between the two?",
+        "quotes": [],
+        "passageRef": "stream-a-19-heidi",
+        "answerShape": "two-halved-contrast-of-what-was-ordered-against-what-is-found",
+        "orderAnchor": 13,
+        "techniqueKey": "an-order-quietly-undone-by-a-hand-the-passage-never-names"
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4yh00wntmbvive8xo50",
+          "value": "Somebody has put it back, and these lines never say who.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4yh00wotmbvtpxzktw2",
+          "value": "Nobody touched it, and it stayed where it was.",
+          "isKey": false,
+          "tag": "en-contradicted-by-the-text",
+          "execution": "Line 15 puts the hat on the table and lines 42 and 43 find it under the counterpane, so it has been moved. The child takes the order as never carried out."
+        },
+        {
+          "optionId": "cmsw2f4yi00wptmbv6158smmt",
+          "value": "Somebody sent Tinette for it, and she is the one who brought it.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "Tinette is named at line 13 and is the only servant sent; no line brings it back."
+        },
+        {
+          "optionId": "cmsw2f4yi00wqtmbvhvrbn8wg",
+          "value": "Somebody changed her mind, and the passage never hides who.",
+          "isKey": false,
+          "tag": "en-whole-text-absence-asserted",
+          "execution": "A decision the passage withholds, asserted as though it were on the page."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Find where the hat is in each part. Then ask how it got from one to the other.",
+        "walkScript": "Lines 13 to 15 have Tinette told to take away the rolls and the hat. Lines 42 and 43 have Heidi find that hat under the counterpane. Neither part says who put it there."
+      }
+    },
+    {
+      "itemId": "ENG-020-HD-10",
+      "why": "Original hold: the execution on 'That she saw her own roll at supper' ended with a false stock sentence placing the message at line 40. Round 1 removed it and the reviewer attested it (kept unchanged). Round 2, per the review: the stored walkScript said 'Line 41 has him say I have got it all safe for you', but Sebastian says nothing; at lines 40 and 41 he makes signs and 'little nods as much as to say' those words. That sentence is replaced by two: 'He says nothing aloud. At line 41 his little nods mean 'I have got it all safe for you'.' The quotation is still verbatim from line 41 and stays declared. The walkScript's first and last sentences are unchanged. Stem, options, tags, executions and hintCore are unchanged.",
+      "stem": {
+        "text": "Look at lines 39 to 41. What is Sebastian telling Heidi?",
+        "quotes": [],
+        "passageRef": "stream-a-19-heidi",
+        "orderAnchor": 39
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4yn00xmtmbvsaau0l1j",
+          "value": "That he wants her to point at her own head.",
+          "isKey": false,
+          "tag": "en-inference-literal-lookalike",
+          "execution": "Reuses line 40 and copies the sign instead of reading it."
+        },
+        {
+          "optionId": "cmsw2f4yn00xntmbvmj6egr3g",
+          "value": "That he will speak to Fraulein Rottenmeier for her.",
+          "isKey": false,
+          "tag": "en-motive-invention",
+          "execution": "A rescue the scene invites; no line gives him the plan."
+        },
+        {
+          "optionId": "cmsw2f4yo00xotmbvsu603jex",
+          "value": "That she saw her own roll at supper.",
+          "isKey": false,
+          "tag": "en-wrong-scope-retrieval",
+          "execution": "True at line 37, before this window, and it is not what he points at."
+        },
+        {
+          "optionId": "cmsw2f4yo00xptmbvq91hbmou",
+          "value": "That he has kept something of hers safe.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        }
+      ],
+      "explanationPatch": {
+        "walkScript": "Line 40 has him point to his own head and then to hers. He says nothing aloud. At line 41 his little nods mean 'I have got it all safe for you'. A thing that goes on a head, and it is hers.",
+        "quotes": [
+          {
+            "rule": "quoted-from-passage",
+            "text": "I have got it all safe for you",
+            "passageRef": "stream-a-19-heidi"
+          }
+        ]
+      }
+    }
+  ],
+  "cannotFix": []
+}

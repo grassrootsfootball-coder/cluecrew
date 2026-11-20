@@ -1,0 +1,291 @@
+{
+  "door": "english-rewrite/r2/G1",
+  "proposer": "agent",
+  "rebuilds": [
+    {
+      "itemId": "ENG-002-pp-14",
+      "why": "Original hold: hintCore quoted the key's own phrase 'one of her daughters' (R572). Round 1 replaced it, and the reviewer accepted that the quotation is gone. Round 2, per the review: (1) the stem premise 'Mrs Bennet disliked Mr Darcy more strongly than anybody else in the room did' overstated line 44 ('Amongst the most violent against him'); the stem's first sentence is now 'Mrs Bennet was one of the people most against Mr Darcy.' and its question 'What made her feeling so strong?' is now 'What made her dislike of him stronger?', which is what lines 44 to 46 say ('sharpened into particular resentment by'). (2) The round-1 hint 'Find what made her dislike sharper than everyone else's' repeated that false comparison; hintCore is now 'Read lines 44 to 46. Find the words that say what turned her dislike into something stronger.' It names no comparison with anyone else and does not quote or paraphrase the key. (3) The en-wrong-scope-retrieval execution's stock sentence 'In the window, line 44 answers the stem: ...' was wrong (the reason is at lines 45 and 46); replaced with 'Lines 45 and 46 give her own reason: he had slighted one of her daughters.' Kept from round 1 (accepted): the en-cause-agent-swap execution's line correction to lines 60 and 61, and removal of the quote declaration 'one of her daughters' that only the old hint used; 'slighted one of her daughters' stays declared for the walkScript. Options' values, tags and the walkScript are unchanged.",
+      "stem": {
+        "text": "Mrs Bennet was one of the people most against Mr Darcy. Read lines 44 to 46. What made her dislike of him stronger?",
+        "passageRef": "stream-a-13-pride-prejudice",
+        "orderAnchor": 14
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4tx005jtmbv2opgmyy9",
+          "value": "He had been rude about one of her daughters.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4tx005ktmbvl8w0i9ct",
+          "value": "He would not let anyone introduce him to her.",
+          "isKey": false,
+          "tag": "en-wrong-scope-retrieval",
+          "execution": "Declining to be introduced is line 40, and it is to any other LADY, not to Mrs Bennet in particular. Lines 45 and 46 give her own reason: he had slighted one of her daughters."
+        },
+        {
+          "optionId": "cmsw2f4tx005ltmbvnezeuckm",
+          "value": "He had told Mr Bennet that he did not like the neighbourhood.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "Mr Bennet is not at the ball at all in this passage, and no such remark is made."
+        },
+        {
+          "optionId": "cmsw2f4tx005mtmbvczt4h86p",
+          "value": "Mr Bingley had chosen to dance with her eldest daughter.",
+          "isKey": false,
+          "tag": "en-cause-agent-swap",
+          "execution": "The cause is moved to Mr Bingley's dancing with the eldest daughter at lines 60 and 61; lines 45 and 46 name the slight as the reason."
+        },
+        {
+          "optionId": "cmsw2f4tx005ntmbvjzaza47x",
+          "value": "He was the proudest man in the world, and she hated proud people.",
+          "isKey": false,
+          "tag": "en-motive-invention",
+          "execution": "The child takes line 42's 'the proudest ... man in the world' and adds a general reason, a dislike of proud people, that the passage never gives Mrs Bennet. Lines 45 and 46 give her own reason: he had slighted one of her daughters."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Read lines 44 to 46. Find the words that say what turned her dislike into something stronger.",
+        "quotes": [
+          {
+            "rule": "quoted-from-passage",
+            "text": "slighted one of her daughters",
+            "passageRef": "stream-a-13-pride-prejudice"
+          }
+        ]
+      }
+    },
+    {
+      "itemId": "ENG-002-pp-16",
+      "why": "Original hold: walkScript ended 'The room hears nothing of this', which the passage never says; round 1 removed that sentence and the reviewer attested it (kept unchanged). Round 2, per the review: (1) hintCore 'Do you hear the words, or only hear about them later?' offered a choice whose first half is the key (R572). Replaced with a move that does not offer the key as one half of a choice: 'Imagine a friend passing the words on to her later instead. What would the reader miss?' (2) The en-cause-agent-swap execution said 'the words Elizabeth hears are Mr Darcy's, not his', which is false: she overhears the whole conversation, including Mr Bingley's kind words at lines 62 and 63. Rewritten to say she does hear his kind words, that nothing says he planned it (line 50: he came to press his friend to dance), and that line 48 gives the real cause. The tag stays en-cause-agent-swap: the event (her hearing kind words) is real and the cause is moved to Bingley's plan. Stem, option values, tags and the other executions are unchanged.",
+      "stem": {
+        "text": "Elizabeth hears Mr Darcy's words herself. A friend does not tell her later. Read lines 47 to 50. Why is that a good choice?",
+        "passageRef": "stream-a-13-pride-prejudice",
+        "orderAnchor": 16
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4tz005vtmbvrk3q5mlp",
+          "value": "It shows that Elizabeth enjoyed listening in on other people.",
+          "isKey": false,
+          "tag": "en-motive-invention",
+          "execution": "A taste for listening in is supplied; line 48 has him standing near enough for her to overhear."
+        },
+        {
+          "optionId": "cmsw2f4tz005wtmbvypke96lq",
+          "value": "It shows that the room had almost emptied by then.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "An empty room is not stated; line 49 has Mr Bingley coming from the dance, so it is in progress."
+        },
+        {
+          "optionId": "cmsw2f4tz005xtmbvfi1ywl9g",
+          "value": "The reader hears the unkind words at the very moment Elizabeth does.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4tz005ytmbv0zlcje4d",
+          "value": "Mr Bingley had planned for her to hear his kind words about her.",
+          "isKey": false,
+          "tag": "en-cause-agent-swap",
+          "execution": "Elizabeth does overhear Mr Bingley's kind words about her at lines 62 and 63. But nothing says he planned it: line 50 has him come to press his friend to dance, and line 48 gives the real cause, Mr Darcy standing near enough for her to overhear."
+        },
+        {
+          "optionId": "cmsw2f4tz005ztmbvk8wxh0ha",
+          "value": "It shows that Mr Darcy was speaking loudly to the whole room.",
+          "isKey": false,
+          "tag": "en-contradicted-by-the-text",
+          "execution": "Lines 48 and 49 have Elizabeth overhear a conversation between Mr Darcy and Mr Bingley, because Mr Darcy was standing near her. The child turns overhearing into Mr Darcy speaking loudly to everyone, which those lines contradict."
+        }
+      ],
+      "explanationPatch": {
+        "walkScript": "Line 48 puts him 'near enough for her to overhear'. So the words come in his voice. You hear them as Elizabeth does.",
+        "hintCore": "Imagine a friend passing the words on to her later instead. What would the reader miss?"
+      }
+    },
+    {
+      "itemId": "ENG-002-pp-23",
+      "why": "Original hold: the key ('never whether the writer agrees') was not the only defensible answer, because the writer characterises Mr Bingley directly at lines 24 and 25 and Elizabeth at lines 72 and 73; and hintCore called Jane Austen 'he'. Round 1 REWROTE the question on the same passage, same questionType (en-comp-technique) and same tier (4), narrowed to how we learn what Mr Darcy is like; the reviewer accepted the rewrite, the new key (the room's verdict first, then his own words), the hint and the walk, and found the hold fixed. Round 2 fixes the two execution claims the reviewer held: (1) on 'The writer tells us herself that he is kind under all his pride', 'this passage gives only his pride and his rude words' was false; it now lists what the writer does give (his looks and wealth at lines 26 to 29, his conduct at lines 39 to 42, his rude words at lines 53 to 56 and 65 to 69) and says none of it is kindness. (2) On the en-extreme-option-pull option, 'the room's opinion at lines 29 to 43' wrongly took in Bingley at lines 36 to 38 and narrated conduct at lines 39 to 42; it now cites the gentlemen's and ladies' opinion at lines 29 to 35 and the room's verdict at lines 42 and 43, and his words as lines 53 to 56, 60 and 61, and 65 to 69. The round-1 premise that his character comes 'only through the room and then his own words' is withdrawn: the passage also narrates his looks (26 to 29) and conduct (39 to 42). The key does not depend on it, since the key claims only the ORDER in which the room's verdict and his words arrive. Stem, options' values and tags, the en-contradicted-by-the-text execution, hintCore and walkScript are exactly as in round 1.",
+      "stem": {
+        "text": "Think about the whole passage. How do we learn what Mr Darcy is like?",
+        "quotes": [],
+        "passageRef": "stream-a-13-pride-prejudice",
+        "answerShape": "two-halved-sequence-of-the-room-s-verdict-then-his-own-words",
+        "orderAnchor": 23,
+        "techniqueKey": "room-verdict-first-then-his-own-words-heard"
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4u60070tmbvdcmgx664",
+          "value": "The writer tells us herself that he is kind under all his pride.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "No line says Mr Darcy is kind underneath. A reader who knows how the story ends may supply it, but the writer never says it here. She gives his looks and wealth at lines 26 to 29, his conduct at lines 39 to 42 and his rude words at lines 53 to 56 and 65 to 69, and none of them is kindness."
+        },
+        {
+          "optionId": "cmsw2f4u60071tmbvsbowke6z",
+          "value": "He never speaks, so we have only the room's word for what he is like.",
+          "isKey": false,
+          "tag": "en-contradicted-by-the-text",
+          "execution": "Lines 53 to 56 and 65 to 69 give Mr Darcy's own words to Mr Bingley, so the passage states the contrary. The child remembers the room's verdict at lines 42 and 43 and forgets the talk Elizabeth overhears."
+        },
+        {
+          "optionId": "cmsw2f4u60072tmbvpk6ox8pm",
+          "value": "We are given only Elizabeth's view, and no other opinion is ever allowed.",
+          "isKey": false,
+          "tag": "en-extreme-option-pull",
+          "execution": "Elizabeth's feelings about him appear only at lines 70 and 71. Before that come the gentlemen's and ladies' opinion at lines 29 to 35, the room's verdict at lines 42 and 43, Mrs Bennet's at lines 44 to 46, and his own words at lines 53 to 56, 60 and 61, and 65 to 69, so 'only' claims far too much."
+        },
+        {
+          "optionId": "cmsw2f4u60073tmbv5jefao4e",
+          "value": "We hear the room's verdict on him first, and then his own words.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Find each place where we learn about him. Ask who is speaking each time.",
+        "walkScript": "Lines 29 to 35 give what the gentlemen and the ladies think of him. Lines 42 to 46 give the room's verdict and Mrs Bennet's. Then lines 53 to 69 let us hear his own words to Mr Bingley. So the room speaks first, and then we hear him."
+      }
+    },
+    {
+      "itemId": "ENG-016-HB-01",
+      "why": "Original hold: the execution on 'The green squares of the fields' said they are what the travellers pass over; line 3 has the hill rising over the fields. Round 1 rewrote that execution and the reviewer attested it (kept unchanged). Round 2, per the review: hintCore 'The window is only four lines wide. Try each answer against it.' used 'window' for a line range in an item whose stem uses 'window' literally (the carriage window, line 2). Replaced with 'Use only lines 1 to 4. Check each answer against those lines.' Stem, options, tags, the other executions and the walkScript are unchanged.",
+      "stem": {
+        "text": "Look at lines 1 to 4. What does Dr Mortimer point out of the window?",
+        "quotes": [],
+        "passageRef": "stream-a-12-hound-baskervilles",
+        "orderAnchor": 1
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4xe00q5tmbvi7gyjdex",
+          "value": "The first sight of the moor itself.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4xe00q6tmbvv7lngw6o",
+          "value": "The green squares of the fields.",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "True at line 3, where the far hill rises over the fields. Dr Mortimer points out the moor itself at lines 1 and 2, not the fields in front of it."
+        },
+        {
+          "optionId": "cmsw2f4xe00q7tmbva3jv3h3e",
+          "value": "The small station where they get down.",
+          "isKey": false,
+          "tag": "en-wrong-scope-retrieval",
+          "execution": "True at line 11, outside this window; lines 1 to 4 have them still on the train."
+        },
+        {
+          "optionId": "cmsw2f4xe00q8tmbvkpnnk786",
+          "value": "The road that runs up to the Hall.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "They are bound for the Hall; lines 1 to 4 never mention a road."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Use only lines 1 to 4. Check each answer against those lines."
+      }
+    },
+    {
+      "itemId": "ENG-016-HB-02",
+      "why": "Original hold: hintCore 'Two of these sit in one window only' was false, and the lamps execution carried a false appended 'line 9 answers the stem'. Round 1 fixed both and corrected the en-chronology-collapse arithmetic (line 45 is thirty-six lines after line 9); the reviewer attested all of it (kept unchanged, including the lamps lines 69 to 71). Round 2, per the review: the round-1 hint 'Read the first window, then the second.' used the reviewer word 'window' for a line range, in a passage whose only literal window is the carriage window at line 2. hintCore is now 'Read lines 5 to 10, then lines 45 and 46. What is different about him?' The second sentence is unchanged from round 1. Stem, options, tags and walkScript are unchanged.",
+      "stem": {
+        "text": "Look at lines 5 to 10 and 45 to 46. What has changed in Sir Henry?",
+        "quotes": [],
+        "passageRef": "stream-a-12-hound-baskervilles",
+        "orderAnchor": 5
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4xf00qatmbvgobhphrc",
+          "value": "His eyes were fixed upon it, and his face was eager to see it.",
+          "isKey": false,
+          "tag": "en-inference-literal-lookalike",
+          "execution": "Reuses lines 5 and 6, and both halves come from the first window alone."
+        },
+        {
+          "optionId": "cmsw2f4xf00qbtmbvbe4mhwbh",
+          "value": "He is a brave comrade at first, but the moor has silenced him.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4xf00qctmbv1cf2jzpp",
+          "value": "He falls silent first, but Watson had judged him brave.",
+          "isKey": false,
+          "tag": "en-chronology-collapse",
+          "execution": "Line 45 comes thirty-six lines after line 9, so this turns the order round."
+        },
+        {
+          "optionId": "cmsw2f4xf00qdtmbv5os75kel",
+          "value": "He talks of electric lamps, and then he says nothing more.",
+          "isKey": false,
+          "tag": "en-wrong-scope-retrieval",
+          "execution": "True at lines 69 to 71, outside both windows; neither window has him speak at all."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Read lines 5 to 10, then lines 45 and 46. What is different about him?"
+      }
+    },
+    {
+      "itemId": "ENG-016-HB-12",
+      "why": "Original hold: walkScript said the hill at line 4 is melancholy 'before anyone has said a word' (Dr Mortimer speaks at lines 1 and 2), and that Nature 'throws at them' where line 28 has 'throw before the carriage'. Round 1 fixed both and the reviewer attested it (walkScript kept exactly as round 1). Round 2, per the review: (1) the en-plausible-not-stated execution said 'line 4 is grim in broad daylight'; no line says broad daylight, and line 19 has the evening sky and line 24 the sinking sun. Now: 'A tidy day-and-night shape the passage never carries. No line shows the moor calm: it is already a melancholy hill at line 4 and a forbidding moor at line 8.' (2) hintCore 'Two of these are things the moor does. Check whether it does them.' had no clear count. Replaced with a move: 'Look at the words Watson chooses for the hills and the moor. Ask what they make the land seem like.' It names no count and does not quote the key. Stem, option values, tags and the other executions are unchanged.",
+      "stem": {
+        "text": "Think about the whole passage. How does Watson write about the moor?",
+        "quotes": [],
+        "passageRef": "stream-a-12-hound-baskervilles",
+        "answerShape": "inert-land-set-against-a-mind-put-into-it",
+        "orderAnchor": 999,
+        "techniqueKey": "a-still-landscape-given-feelings-and-intentions-it-cannot-have"
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4xn00rotmbve306xibw",
+          "value": "He tells us the hills were jagged, and the wind was very cold.",
+          "isKey": false,
+          "tag": "en-inference-literal-lookalike",
+          "execution": "Reuses lines 20 and 41 and reports two details rather than anything the telling does."
+        },
+        {
+          "optionId": "cmsw2f4xn00rptmbvws2x44v9",
+          "value": "The moor is calm by day, but it turns cruel after dark.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "A tidy day-and-night shape the passage never carries. No line shows the moor calm: it is already a melancholy hill at line 4 and a forbidding moor at line 8."
+        },
+        {
+          "optionId": "cmsw2f4xn00rqtmbv4zfms514",
+          "value": "He is afraid of the moor, so he keeps his eyes on the road.",
+          "isKey": false,
+          "tag": "en-motive-invention",
+          "execution": "A plausible reason to look away; nowhere does he say he looked away from it."
+        },
+        {
+          "optionId": "cmsw2f4xn00rrtmbvgvsxxs8k",
+          "value": "He writes a still moor, but he gives it a mind of its own.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        }
+      ],
+      "explanationPatch": {
+        "walkScript": "At line 4 the far-off hill is melancholy. At line 8 the moor is forbidding, and at line 20 the hills are sinister. At line 27 the rotting plants become sad gifts that Nature throws before the carriage.",
+        "hintCore": "Look at the words Watson chooses for the hills and the moor. Ask what they make the land seem like."
+      }
+    }
+  ],
+  "cannotFix": []
+}

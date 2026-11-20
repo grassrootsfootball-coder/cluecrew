@@ -1,0 +1,308 @@
+{
+  "door": "english-rewrite/G3",
+  "reviewer": "rev-agent-01",
+  "changes": [
+    {
+      "ref": "rebuild:ENG-005-BB-01",
+      "verdict": "ATTEST",
+      "reason": "John option retagged en-contradicted-by-the-text; new execution true: line 2 'John went with his master', so the master went too and the option states the contrary. Key 'high wheels' -> 'big wheels' is gate-forced: I ran checkItemChildFacing on the old key and it routes on the bare token 'high'; 'big wheels' passes and keeps line 3's meaning. Nothing else touched."
+    },
+    {
+      "ref": "rebuild:ENG-005-BB-02",
+      "verdict": "ATTEST",
+      "reason": "No field changed. Verified the stored row already carries the repair: 'Painted so they could be seen' is en-vocab-not-this-word with an execution that is true of line 8."
+    },
+    {
+      "ref": "rebuild:ENG-005-BB-03",
+      "verdict": "ATTEST",
+      "reason": "No field changed. Verified the stored row already carries the repair: 'falling' is en-contradicted-by-the-text and its execution correctly cites line 10 'rising fast'."
+    },
+    {
+      "ref": "rebuild:ENG-005-BB-04",
+      "verdict": "ATTEST",
+      "reason": "Only the fish-bait execution changed, as the hold named; the new text is true (fishing bait is the commonest sense; it does not fit a horse's 'good bait' at line 14)."
+    },
+    {
+      "ref": "rebuild:ENG-005-BB-07",
+      "verdict": "ATTEST",
+      "reason": "No field changed. Verified the stored row already carries the repair: 'Drive slowly over the tree' is en-negation-dropped and its execution quotes line 29 'we can't drive over that tree, nor yet get round it' verbatim."
+    },
+    {
+      "ref": "rebuild:ENG-005-BB-09",
+      "verdict": "ATTEST",
+      "reason": "Only the named option's tag and execution changed. en-contradicted-by-the-text fits: the whip at lines 37-38 ('a touch with the whip', 'a sharp cut') and line 62 'wiser than we were' both deny that the master knew. Line numbers and quotation checked."
+    },
+    {
+      "ref": "rebuild:ENG-005-BB-10",
+      "verdict": "ATTEST",
+      "reason": "No field changed. Verified the stored row already carries the repair: 'storm still getting worse' is en-contradicted-by-the-text, citing the lull at line 51 correctly."
+    },
+    {
+      "ref": "rebuild:ENG-005-BB-11",
+      "verdict": "ATTEST",
+      "reason": "No field changed. Verified the stored row already carries the repair: 'badly trained' is en-contradicted-by-the-text and its execution cites lines 55-58 and line 62 correctly."
+    },
+    {
+      "ref": "rebuild:ENG-005-BB-12",
+      "verdict": "REFUSE",
+      "reason": "passageRef and the n6kj retag are correct (its execution's lines 36-37, 40 and 49 all check). But the new stem sentence 'Look at lines 41 and 54' sends the child to line 41, where Beauty says 'Of course I could not tell him'. That line is about not being able to SPEAK to John, and it shows he understood John's question. It does not support the key's 'says he cannot follow them'; only line 54 ('I could not understand much') does. So the new line reference is not evidence for the answer, and the stem's 'keep reminding us' rests on it."
+    },
+    {
+      "ref": "rebuild:ENG-005-BB-13",
+      "verdict": "ATTEST",
+      "reason": "passageRef and lineRefs [36,37,38] added as the hold required; 'I dare not stir' is on line 37. Executions written for all three distractors, and each line reference checks (line 35 'along at a good pace'). Tag changes were needed: en-vocab-secondary-sense is not an offered entry; 'make any sound' is no sense of stir (en-vocab-not-this-word); 'begin to wake' is a genuine neighbouring sense. The explanation.quotes declaration is the R23 requirement for the stem's quotation, not restyling."
+    },
+    {
+      "ref": "rebuild:ENG-014-TS-02",
+      "verdict": "ATTEST",
+      "reason": "Key value rewritten on the same option id. Line 5-6 'not half enough to buy so much as half an hour of pure freedom' and line 61 'literally rolling in wealth' support 'could not buy his freedom / makes him rich', and the contestable 'paid nothing' is gone. The walk now says 'the middle of the afternoon' (line 60) and its other line references check; the 'not' that the walk gives to line 6 sits at the end of line 5, in the same sentence, which I accept."
+    },
+    {
+      "ref": "rebuild:ENG-014-TS-04",
+      "verdict": "ATTEST",
+      "reason": "Only hintCore changed, as the hold named. 'Find what Tom wants... Then check what he does instead' leads to line 19 (mouth watered for the apple / stuck to his work) without naming the apple, and no longer steers to line 15."
+    },
+    {
+      "ref": "rebuild:ENG-014-TS-05",
+      "verdict": "ATTEST",
+      "reason": "The partly supported option is replaced with a genuinely later cause: Ben first asks to whitewash at line 38, after Tom's question at line 26. Execution true; en-chronology-collapse fits. The hint rewrite was needed, because the old 'Two of these come from what he says' became false once that option went."
+    },
+    {
+      "ref": "rebuild:ENG-014-TS-06",
+      "verdict": "ATTEST",
+      "reason": "Only walkScript changed, as the hold named. It now reports lines 32-33 ('Does a boy get a chance to whitewash a fence every day?') and no longer claims 'rare' is a passage word; 'rarely comes' is unquoted paraphrase."
+    },
+    {
+      "ref": "rebuild:ENG-014-TS-08",
+      "verdict": "ATTEST",
+      "reason": "The second-answer option is replaced with a true negation drop: Tom says of the back fence 'I wouldn't mind and she wouldn't'. The quotation is verbatim. It begins on line 41 and her 'wouldn't' falls on line 42, so citing line 41 for where the clause starts is acceptable. The hint is rewritten as a move to line 40, as the hold required."
+    },
+    {
+      "ref": "rebuild:ENG-014-TS-12",
+      "verdict": "ATTEST",
+      "reason": "hintCore replaced (the old 'two of these are about the ending' was false). The chronology execution's lines are corrected: Tom refuses from line 39 ('altered his mind') to line 51 ('No, Ben, now don't'), and Ben gives in at line 52 ('I'll give you all of it!'). Both are what the hold named."
+    },
+    {
+      "ref": "rebuild:ENG-021-ED-02",
+      "verdict": "ATTEST",
+      "reason": "hintCore now asks for the KIND of thing said first and next, which separates the key (remark, then instruction) from the literal-lookalike list. The walk now cites line 74 ('half of his fortune') where it had line 81. Both are the faults the hold named."
+    },
+    {
+      "ref": "rebuild:ENG-021-ED-06",
+      "verdict": "ATTEST",
+      "reason": "Only the named option's tag and execution changed. Line 23 'All included' states the contrary of 'those things were left out'; the execution's line 21 ('doesn't take into account') checks."
+    },
+    {
+      "ref": "rebuild:ENG-021-ED-07",
+      "verdict": "ATTEST",
+      "reason": "Stem and lineRefs narrowed to lines 23-24 as the hold required. 'whose turn it was to deal' is verbatim on line 24 and its declaration is updated to match. The bargain option is recast into the 'It was his to' form so that every option defines the phrase. Its execution is true: a wager is argued at line 29, and line 24 has Stuart gather up the cards. The walk now reaches the meaning from lines 23-24."
+    },
+    {
+      "ref": "rebuild:ENG-021-ED-08",
+      "verdict": "ATTEST",
+      "reason": "Only the named execution changed. Stuart puts the cards down (line 41) and agrees the wager (line 42) before Fallentin speaks at line 43; that is true."
+    },
+    {
+      "ref": "rebuild:ENG-021-ED-10",
+      "verdict": "ATTEST",
+      "reason": "Stem no longer names Sullivan ('someone' at line 56 is accurate, because line 56 is unattributed). It now asks what Fogg adds about the eighty days, which only the key answers (lines 59-60: 1,920 hours, 115,200 minutes). The walk is rewritten to match, and lines 57-58 'doesn't joke ... a wager' are correct."
+    },
+    {
+      "ref": "rebuild:ENG-021-ED-11",
+      "verdict": "ATTEST",
+      "reason": "No field changed. Verified the stored row already carries the repair: 'Careful scraping' is en-vocab-form-lookalike with an execution matching it."
+    },
+    {
+      "ref": "rebuild:ENG-021-ED-12",
+      "verdict": "ATTEST",
+      "reason": "The stem now asks what Fogg keeps doing as the argument grows, which removes the second answer. The replacement option 'He stops the card game so they can argue' is contradicted: line 15 'Be so good as to play', and lines 79-82, where the others offer to suspend the game and he says play. Retag and execution are true."
+    },
+    {
+      "ref": "rebuild:ENG-001-WIW-01",
+      "verdict": "ATTEST",
+      "reason": "The walk's false 'other choices happen later' is replaced with a true sentence about line 4. The singing option is retagged en-plausible-not-stated, matching its execution (birds at line 18, the Mole never sings). The arms option rewording is gate-forced: I ran checkItemChildFacing on 'Resting his aching back and weary arms.' and it routes on the bare token 'arms'; the new value passes, and its execution is true of line 4. Annie's hint untouched."
+    },
+    {
+      "ref": "rebuild:ENG-001-WIW-10",
+      "verdict": "ATTEST",
+      "reason": "The walk now rests the key on 'impatient' (line 23, quoted verbatim and already declared) and the joy of lines 19-20; the non sequitur is gone. The new hint is a move to line 23 and no longer makes the contestable claim. Clearing hintAuthoredBy/hintAuthority is correct (R94). Note: the why says Annie's wording 'is kept in _replacedHintCore', but the patch writes no such field. Her text survives only as the before value in the landing changeset."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "ENG-005-BB-01",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Checked lines 1-3: key (light, big/high wheels running pleasantly) is line 2-3's reason and the only answer; 'only cart he could pull' unstated, John option contradicts line 2, 'slow' contradicts 'light'. Hint does not coach; walk accurate. Hold fault (execution) gone.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-005-BB-02",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Line 8 'good substantial rails' verified; key 'Strong and solidly built' fits 'people did not mind it' (lines 8-9); 'very large in amount' (dominant sense) and 'newly put up' (unstated) excluded; painted option now tagged and executed correctly. Hint and walk accurate. Note: the sentence the hint leans on ends on line 9, one line past the cited 6-8; I judged that acceptable.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-005-BB-03",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Lines 10-11: key (rising fast, feared a bad night) exact; broken bridge is line 47 (wrong scope), falling contradicts line 10, road shut is unstated (line 12-13 they drive through). Hint and walk accurate. Hold's tag fault gone.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-005-BB-04",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Line 14 'I had a good bait' verified; key 'a feed and a rest' is the archaic travelling sense; fish (dominant), wait (form lookalike) and lure/trick (neighbouring sense) each tagged correctly. Hint points at the horse without naming the answer; walk accurate.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-005-BB-07",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Lines 29-31: key (back to the four crossways, a good six miles) correct; drive-over drops 'can't'; waiting and unhitching are unstated plans. Hint and walk accurate. Hold's tag fault gone.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-005-BB-09",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Key (punished the thing that saved them) rests on lines 37-38 against 62-63. I tested the 'master knew' option under the reading 'by the hall door he knew', and line 62 'wiser than we were' still says he had not known, so it is not a second answer. Fear option fails on line 41 (he knew); test motive is invented. Hint and walk accurate.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-005-BB-10",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Quote 'darker and darker, stiller and stiller' is on line 52; key (change feels slow and steady) is right; worse-storm contradicts line 51; tired Beauty is intent-as-character; wheels option reuses line 52-53 wording. Hint does not name the key; walk accurate.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-005-BB-11",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Lines 54-58: key (going on would probably have drowned them all) matches 'more than likely we should all have been drowned'; badly trained is contradicted by line 62; gatekeeper blame is unstated; the lull is line 51, before they speak (lines 53-54). Hint and walk accurate.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-005-BB-12",
+      "verdict": "HOLD",
+      "holdFixed": false,
+      "reason": "The stem now cites lines 41 and 54 for what the writer 'keeps reminding us'. Line 41 is Beauty unable to tell John, and he has followed John's question there, so it does not support the key's 'cannot follow them'. Only line 54 does. Either the key's second half or the cited lines must change so the two agree. passageRef is now set, but the line references the hold asked for do not correctly locate the evidence, so I do not count the hold as fixed.",
+      "faultField": "stem"
+    },
+    {
+      "itemId": "ENG-005-BB-13",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Key 'Move at all' is right for 'I dare not stir' (lines 36-38: dead stop, would not go forward). Mixing is the dominant sense, sound is no sense, waking is a neighbouring sense ruled out by the moving context. Hint does not name the key; walk accurate to lines 36 and 38.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-014-TS-02",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Key states the change the passage gives (worthless to rich). The twelve-marbles option lists goods; the 'rich first, then gave up buying' option reverses lines 7 and 61; Billy Fisher is line 58, outside both windows. Hint does not coach. Walk misquote fixed.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-014-TS-04",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Line 19 key (Ben's apple) verified; steamboat (line 15 'paid no attention'), brush sweep (lines 17-18) and swimming (line 23, outside the window) excluded. New hint is a move, not coaching. Walk accurate.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-014-TS-05",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Lines 25-29: key (make Ben doubt it is work) rests on line 29 'maybe it is, and maybe it ain't'. The other options are an invented motive, the line 29 answer repeated (literal lookalike) and a cause from line 38 (later). New hint is a move. Walk accurate. Hold's false execution gone.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-014-TS-06",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Key (job sounds like a rare treat) is the force of lines 32-33. The other options are a restatement (literal lookalike), the aunt (unstated in 30-33) and the brush moving (line 31, the wrong element). Hint does not coach. Walk now accurate.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-014-TS-08",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Lines 40-44: key (Aunt Polly particular about this fence) is unique now that 'one in a thousand' is gone. Back-fence-wouldn't-matter is the case that does not apply; Aunt-Polly-would-mind drops 'she wouldn't'; finish-by-noon is unstated. Hint ('where Tom first says no', line 40) does not name the key. Walk accurate.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-014-TS-12",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Key (what Ben can see shown, Tom's plan held back) rests on line 8 (unnamed inspiration), line 39 and line 53. The reversal option cites Ben's mind at lines 12 and 37 correctly, the three-coats option reports the ending, and the chronology option is now correctly executed. The hint is a move. Walk line refs 8, 39 and 53 check.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-021-ED-02",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Lines 7-8 ('It was once' / 'Cut, sir') and 81-82 ('quite ready now' / 'be so good as to play') support the key; the other options are a list, a reversed order and an unstated change. The hint discriminates now. Walk accurate. Minor: ka84's execution 'Line 7 ... both times' is loosely worded but not false.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-021-ED-06",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Lines 20-23: key (already allowed for every delay) is what 'All included' means. The others are the list handed back, a statement line 23 contradicts, and 'Two trumps' (the next words). Hint and walk accurate.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-021-ED-07",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Key 'give out the cards again' is right: line 23 Fogg throws down the cards, line 24 Stuart gathers them up and deals. Bargain (dominant sense), large amount (neighbouring) and gather up (in span, wrong element) are excluded. Walk accurate. Note: the unchanged hint's 'a bargain is being argued about' is true of the scene (line 29 onward) rather than of lines 23-24; I judged that acceptable.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-021-ED-08",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Lines 32-42: key (decided to wager after all, line 42) is right. The feverish hand describes rather than explains; the annoyance at line 38 is not his reason (line 39 he wants to play on); Fallentin is line 43. Hint points to line 42 as a move. Walk accurate.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-021-ED-10",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Fogg's reply (57-61) adds the eighty days as hours and minutes; the jumping is line 55, before line 56; the public-proof motive and the earlier journey are unstated. Hint ('what he says last') points to 59-60 without naming it. Walk accurate. Both faults in the hold are gone.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-021-ED-11",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "'scruples' is on line 77; key (uneasy feelings about rightness) fits 'scruples about betting under conditions so difficult to their friend'. The chemist's weight is a genuine other sense, the stake's value is what they were NOT agitated by (lines 76-77), and scraping is a form lookalike. Hint and walk accurate.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-021-ED-12",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Key (he answers about the cards) is borne out at lines 7, 15, 23, 40 and 81. The others are a stopped game (contradicted), a writer's verdict the text never gives, and a 'wins them round' line 62 does not support. Hint and walk accurate. The second defensible answer is gone.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-001-WIW-01",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Line 1 key (spring-cleaning his home) is right. The new tunnel is lines 9-13 and an existing tunnel; blue/white is the boat at lines 60-61; resting is not what he was doing; singing is unstated. Hint and walk accurate. Both faults in the hold are gone.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-001-WIW-10",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Lines 22-27: key (too excited to stop for anyone) is supported by 'impatient' (line 23) and lines 19-20. Fear, a permanent cruel character (the extreme 'always'), dinner (unstated) and remorse (line 26 'gone before they could think') are excluded. The hint asks for the word on line 23, not for the key. Walk accurate to lines 19-20, 23 and 26.",
+      "faultField": null
+    }
+  ]
+}

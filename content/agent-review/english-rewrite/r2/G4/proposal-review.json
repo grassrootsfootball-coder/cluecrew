@@ -1,0 +1,32 @@
+{
+  "door": "english-rewrite/r2/G4",
+  "reviewer": "rev-agent-01",
+  "changes": [
+    {
+      "ref": "rebuild:ENG-004-AGG-09",
+      "verdict": "ATTEST",
+      "reason": "Only hintCore changed from round 1. 'Start at line 47 and read to the end of that sentence' is true: the sentence starting 'Matthew, however,' at line 47 ends 'held out to him.' at line 49, and it holds the stand, the bag and the held-out hand. It gives no count and does not paraphrase the key. The qkux execution is unchanged from the version attested in round 1."
+    },
+    {
+      "ref": "rebuild:ENG-010-JE-12",
+      "verdict": "ATTEST",
+      "reason": "hintCore 'Put the two places side by side. Find the words that match up.' is a move. The matching word is 'moon' (line 51 'the moon was waxing bright', line 71 'the moon cast a hoary gleam'), so it points to the method without stating the key. The f8bn execution now reads 'rides past at line 26' ('He passed', line 26) and 'falls at line 28' ('a clattering tumble ... Man and horse were down', line 28), and both are true. The stem and lineRefs are unchanged from round 1's attested version."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "ENG-004-AGG-09",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "faultField": null,
+      "reason": "Checked lines 47-49. Key: she stands, grasps the carpet-bag and holds out the other hand. Stays-sitting: she watches him at line 33, before the stand at 47-48. Both-hands: one hand holds the bag (48-49). Walks-to-him: she stays put while he comes (32, 47-48). The hint now points to the right sentence. The walk is accurate. Original held execution ('line 47 answers the stem') is gone, and the 'three things' coaching is gone."
+    },
+    {
+      "itemId": "ENG-010-JE-12",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "faultField": null,
+      "reason": "Checked: line 51 gives the light (daylight lingering, the moon) before the description at 52-56. Line 71 gives the moon's gleam before Thornfield 'distinct and pale'. Line 53 keeps to 'general points'. The key is the only fit. The sunset (line 8) is outside both places. The traveller acts at 26-28 before he is described at 51-56. Lines 52-56 describe a person, which defeats 'never'. The hint is a move, and the walk checks. Original hold (no line window; 'again and again' overstating two instances) is gone."
+    }
+  ]
+}

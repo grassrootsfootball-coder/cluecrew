@@ -1,0 +1,1192 @@
+{
+  "door": "english-rewrite/G7",
+  "proposer": "agent",
+  "rebuilds": [
+    {
+      "itemId": "ENG-009-SM-03",
+      "why": "hintCore stated the key's content (the bare wall). Replaced with a move that sends the child to the words before his offer on line 14, without naming what they say. Nothing else changed.",
+      "stem": {
+        "text": "Read lines 13 to 15. Why did he want a photograph of the place?",
+        "quotes": [],
+        "passageRef": "stream-b-02",
+        "orderAnchor": 13
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4vi00f1tmbv8wfhevnv",
+          "value": "Nan asked him to bring her back a picture.",
+          "isKey": false,
+          "tag": "en-cause-agent-swap",
+          "execution": "Line 15 has him say he would get her one; the offer is his."
+        },
+        {
+          "optionId": "cmsw2f4vi00f2tmbvwt8nx926",
+          "value": "He cannot remember which visit he promised it on.",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "True at line 15, and it is about the promise rather than the reason for it."
+        },
+        {
+          "optionId": "cmsw2f4vi00f3tmbvmyvsfj2f",
+          "value": "Nan's wall has nothing on it but a calendar.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4vi00f4tmbvziy76m74",
+          "value": "He wanted a picture of Saltmere for himself.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "Lines 13 to 15 put the picture on her wall, and say nothing about his own."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Find where he says he would get her a picture. Read what comes just before it."
+      }
+    },
+    {
+      "itemId": "ENG-009-SM-04",
+      "why": "Distractor 'He had promised Nan he would go out there' was defensible, since a promised picture of the place implies going. Replaced it with 'He told Nan he was going to Ryan's', which moves the line 17 detail (told Mum) onto Nan; tag en-attribute-transfer kept, execution rewritten.",
+      "stem": {
+        "text": "Read lines 15 to 17. What do these lines tell you about the trip?",
+        "quotes": [],
+        "passageRef": "stream-b-02",
+        "orderAnchor": 15
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4vj00f6tmbvrogfotg3",
+          "value": "His mother would have stopped him going.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "The passage never gives her a view on it; only that he did not tell her."
+        },
+        {
+          "optionId": "cmsw2f4vj00f7tmbv43zunuxh",
+          "value": "He told Nan he was going to Ryan's.",
+          "isKey": false,
+          "tag": "en-attribute-transfer",
+          "execution": "Line 17 has him tell Mum he was going to Ryan's. The child moves that detail onto Nan, who fills lines 15 and 16."
+        },
+        {
+          "optionId": "cmsw2f4vj00f8tmbvdv4woynq",
+          "value": "His mother told him to go round to Ryan's.",
+          "isKey": false,
+          "tag": "en-agent-patient-reversal",
+          "execution": "Line 17 runs the other way: he is the one doing the telling."
+        },
+        {
+          "optionId": "cmsw2f4vj00f9tmbvmkvxysrq",
+          "value": "He kept the trip from his mother.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        }
+      ]
+    },
+    {
+      "itemId": "ENG-009-SM-07",
+      "why": "hintCore told the child the elder is a plant, which alone selects the key. Replaced with a move pointing to the rest of line 29 without naming what the elder is. Nothing else changed.",
+      "stem": {
+        "text": "Look at lines 28 to 30. Line 29 puts an 'elder' on top of the wall. What is an 'elder' here?",
+        "quotes": [
+          "elder"
+        ],
+        "passageRef": "stream-b-02",
+        "orderAnchor": 28
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4vl00fltmbv72clwgu3",
+          "value": "an older member of the family",
+          "isKey": false,
+          "tag": "en-vocab-dominant-sense",
+          "execution": "A real sense of the word, and line 29 has this one growing out of the wall."
+        },
+        {
+          "optionId": "cmsw2f4vl00fmtmbv2s68ga64",
+          "value": "the hole shaped like a window",
+          "isKey": false,
+          "tag": "en-coordination-wrong-conjunct",
+          "execution": "That is the other thing on the wall at line 30, joined to this one by and."
+        },
+        {
+          "optionId": "cmsw2f4vl00fntmbvas8jqq4s",
+          "value": "a small tree or bush",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Read the rest of line 29. What is the elder doing on top of the wall?"
+      }
+    },
+    {
+      "itemId": "ENG-009-SM-08",
+      "why": "hintCore ruled out the dominant-sense distractor the item exists to test ('Not a result'). Replaced with a substitution move that rules nothing out by name. Nothing else changed.",
+      "stem": {
+        "text": "Look at lines 31 and 32. On line 32 the can he is carrying 'spoiled the effect'. What does he mean by 'the effect'?",
+        "quotes": [
+          "the effect"
+        ],
+        "passageRef": "stream-b-02",
+        "orderAnchor": 31
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4vm00fptmbv351v71ww",
+          "value": "what picking the can up led to",
+          "isKey": false,
+          "tag": "en-vocab-dominant-sense",
+          "execution": "A real sense of the word, and here it is a feeling being spoiled, not a result."
+        },
+        {
+          "optionId": "cmsw2f4vm00fqtmbvh6dlmf9s",
+          "value": "the trouble of carrying a can round with him",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "Line 32 has him carrying it, and the carrying is what does the spoiling."
+        },
+        {
+          "optionId": "cmsw2f4vm00frtmbvu011bbg1",
+          "value": "that it seemed rude not to pick it up",
+          "isKey": false,
+          "tag": "en-inference-literal-lookalike",
+          "execution": "Reuses line 31 word for word, and says nothing about what the word means."
+        },
+        {
+          "optionId": "cmsw2f4vm00fstmbvz0l6tdyu",
+          "value": "the feeling of the visit he was making",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Try each answer in place of the effect on line 32. Read the sentence again each time."
+      }
+    },
+    {
+      "itemId": "ENG-009-SM-09",
+      "why": "Key was unsupported: a tide over a boot (l.33-35) settles nothing about Nan's one-night or forty-year story (l.10-12), the stem's 'settle' asserted a conclusion the text leaves open, and the key wording was hard. No small repair works, so the question is rewritten on the same passage, same type (inference) and tier 4: what he comes to understand about the water at l.33-35 ('it was not going to stop doing that for me'). All four options, hint and walkScript rewritten to match; lineRefs narrowed to 33-35.",
+      "stem": {
+        "text": "Read lines 33 to 35. What does he come to understand about the water?",
+        "quotes": [],
+        "passageRef": "stream-b-02",
+        "orderAnchor": 33
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4vn00futmbv3iuh1ro9",
+          "value": "It goes on in its own way, whatever he does.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4vn00fvtmbvc712zu07",
+          "value": "The sea took the whole row in one night in February.",
+          "isKey": false,
+          "tag": "en-wrong-scope-retrieval",
+          "execution": "One telling of Nan's story at lines 10 and 11, outside this window. It is not what he works out on the step."
+        },
+        {
+          "optionId": "cmsw2f4vn00fwtmbvt3yu9o0f",
+          "value": "The tide had turned and the water was going out.",
+          "isKey": false,
+          "tag": "en-contradicted-by-the-text",
+          "execution": "Line 34 has the water come further up a minute later, so it is coming in. The child may borrow the tide turning from line 36."
+        },
+        {
+          "optionId": "cmsw2f4vn00fxtmbvdr01upkl",
+          "value": "The water comes up, but then leaves the step alone.",
+          "isKey": false,
+          "tag": "en-negation-dropped",
+          "execution": "Lines 34 and 35 say it was not going to stop, and this option loses the not."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "See what he does in line 34. Then see what the water does next.",
+        "walkScript": "Read line 33. The water comes over his boot and goes out again. In line 34 he moves back, and a minute later it comes further up. Lines 34 and 35 say it was not going to stop for him. Nothing he does will change it."
+      },
+      "lineRefs": [
+        33,
+        34,
+        35
+      ]
+    },
+    {
+      "itemId": "ENG-009-SM-11",
+      "why": "hintCore 'Two causes, one in each line' named a property only the key has. Replaced with a move that sends the child to lines 40 and 41 without saying how many causes there are; the pointer to even then is kept. Nothing else changed.",
+      "stem": {
+        "text": "Read lines 40 to 42. Why did the picture come out grey and shaken?",
+        "quotes": [],
+        "passageRef": "stream-b-02",
+        "orderAnchor": 40
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4vp00g4tmbvad2thy9l",
+          "value": "The wind shook the phone as he held it.",
+          "isKey": false,
+          "tag": "en-cause-agent-swap",
+          "execution": "Line 41 gives the movement to his own hand, not to any wind."
+        },
+        {
+          "optionId": "cmsw2f4vp00g5tmbv5y6x5n3h",
+          "value": "There was something the matter with the camera on his phone.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "Lines 40 and 41 give the light and his hands, and nothing about the phone itself."
+        },
+        {
+          "optionId": "cmsw2f4vp00g6tmbvzg3lyxnb",
+          "value": "The light had gone and his hands would not hold still.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4vp00g7tmbvoi2716j5",
+          "value": "Holding it in both hands is what shook it.",
+          "isKey": false,
+          "tag": "en-relation-word-flipped",
+          "execution": "Line 41 says even then, which means despite that, and this reads it as because."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Read lines 40 and 41 for what made the picture hard to take. Watch the words even then."
+      }
+    },
+    {
+      "itemId": "ENG-009-SM-12",
+      "why": "hintCore restated the key (what still stands against what happened). Replaced with a move: pick out the present-tense sentences and ask what each is about. Also distractor 2 'told it to them' had no referent for 'them'; now 'told it to him' (value only, tag and execution unchanged).",
+      "stem": {
+        "text": "The writer moves between tenses by a rule. What decides which he uses?",
+        "quotes": [],
+        "passageRef": "stream-b-02",
+        "answerShape": "tense-split",
+        "orderAnchor": 9999,
+        "techniqueKey": "present-tense-reserved-for-what-is-still-true"
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4vp00g9tmbvoxq5zezp",
+          "value": "The walk is two miles out along the sea wall to a ruined cottage.",
+          "isKey": false,
+          "tag": "en-inference-literal-lookalike",
+          "execution": "A summary of what happens, which names no choice about tense at all."
+        },
+        {
+          "optionId": "cmsw2f4vp00gatmbv4jfte8kl",
+          "value": "He tells all of it the way Nan has always told it to him.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "Line 10 says her story changes each time, and at line 38 he corrects it."
+        },
+        {
+          "optionId": "cmsw2f4vq00gbtmbvir1rnoqj",
+          "value": "Nan's part is in the present, but his own is in the past.",
+          "isKey": false,
+          "tag": "en-attribute-transfer",
+          "execution": "Lines 9 and 18 are his own sentences, and both are in the present."
+        },
+        {
+          "optionId": "cmsw2f4vq00gctmbv0gu92sgj",
+          "value": "The present is kept for what is still true, but the walk stays past.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Pick out the sentences in the present tense. Ask what each one is about."
+      }
+    },
+    {
+      "itemId": "ENG-013-TI-03",
+      "why": "Distractor 'He was in fear and in curiosity' was defensible (fear is an ordinary reason for hiding), and the hint coached it away. Replaced it with 'The barrel shook as the man leaned on it' (l.9-10), a lookalike that gives no reason; hint now points to the word on line 13 that brings in his reason; the walkScript's last sentence, which asserted fear was not the reason, now names that word instead.",
+      "stem": {
+        "text": "Look at lines 10 to 14. What reason does Jim give for staying hidden?",
+        "quotes": [],
+        "passageRef": "stream-a-01-treasure-island",
+        "orderAnchor": 10
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4wm00lktmbvww936ekd",
+          "value": "He was just about to jump up.",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "True at line 10, and it is what he nearly did rather than why he stayed."
+        },
+        {
+          "optionId": "cmsw2f4wm00lltmbvsg3cvja9",
+          "value": "He hoped to hear where the treasure was buried.",
+          "isKey": false,
+          "tag": "en-motive-invention",
+          "execution": "A plausible reason for listening; lines 10 to 14 never give it."
+        },
+        {
+          "optionId": "cmsw2f4wm00lmtmbv02gbfeuq",
+          "value": "He alone held the lives of the honest men.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4wm00lntmbve7ugp36g",
+          "value": "The barrel shook as the man leaned on it.",
+          "isKey": false,
+          "tag": "en-inference-literal-lookalike",
+          "execution": "Reuses lines 9 and 10, which tell what happened to the barrel and give no reason for staying hidden."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Find the word on line 13 that brings in his reason. Read what follows it.",
+        "walkScript": "Line 11 says he would not have shown himself for all the world. Lines 13 and 14 say why: the honest men lived or died by him. The small word for, on line 13, brings in that reason."
+      }
+    },
+    {
+      "itemId": "ENG-013-TI-05",
+      "why": "Execution on 'calls Dick square / trusts him with the keg' ended with a false boilerplate sentence and a truncated quotation. Removed it; the execution now says only what is true (l.37 and l.56, outside both windows). Nothing else changed.",
+      "stem": {
+        "text": "Look at lines 18 to 26 and 43 to 49. How do Silver's two speeches differ?",
+        "quotes": [],
+        "passageRef": "stream-a-01-treasure-island",
+        "orderAnchor": 18
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4wo00lutmbvvoj7apgb",
+          "value": "First he talks of his own money, then of using other men.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4wo00lvtmbv393m5veu",
+          "value": "First he says the life is rough, then he says the pay is good.",
+          "isKey": false,
+          "tag": "en-inference-literal-lookalike",
+          "execution": "Reuses lines 18 and 19, and both halves come from the first speech alone."
+        },
+        {
+          "optionId": "cmsw2f4wo00lwtmbv0hsjxe3l",
+          "value": "First he calls Dick square, then he trusts him with the keg.",
+          "isKey": false,
+          "tag": "en-wrong-scope-retrieval",
+          "execution": "True at line 37 and at line 56, both outside the two windows named here, so neither half compares the two speeches."
+        },
+        {
+          "optionId": "cmsw2f4wo00lxtmbvjs3hwmxa",
+          "value": "First he spends all he earns, then he puts a little away.",
+          "isKey": false,
+          "tag": "en-contradicted-by-the-text",
+          "execution": "Lines 20 to 22 say most gentlemen of fortune spend it on rum, but Silver puts it all away. The child gives Silver the spending the speech denies him, and shrinks his saving to a little."
+        }
+      ]
+    },
+    {
+      "itemId": "ENG-013-TI-06",
+      "why": "Distractor 'Silver praised him, so he agreed to join' was defensible: the flattering talk at l.18-26 is what the lad says won him over. Replaced with 'It has put him off the job', the reading that takes till on line 27 as because; tag en-relation-word-flipped.",
+      "stem": {
+        "text": "Look at lines 27 to 31. What has the talk with Silver done to the lad?",
+        "quotes": [],
+        "passageRef": "stream-a-01-treasure-island",
+        "orderAnchor": 27
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4wo00lztmbv3h15ti42",
+          "value": "He liked the job from the very start.",
+          "isKey": false,
+          "tag": "en-negation-dropped",
+          "execution": "Lines 27 and 28 say he did not half a quarter like it until the talk."
+        },
+        {
+          "optionId": "cmsw2f4wo00m0tmbveoosog4y",
+          "value": "It has won him over to the job at last.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4wo00m1tmbvh7hu3rem",
+          "value": "It has made Silver shake his hand hard.",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "True at lines 29 and 30, and it answers what Silver did rather than what changed in the lad."
+        },
+        {
+          "optionId": "cmsw2f4wp00m2tmbvitw6qupl",
+          "value": "It has put him off the job.",
+          "isKey": false,
+          "tag": "en-relation-word-flipped",
+          "execution": "Line 27 says he did not like the job till he had the talk. The child reads till as because, so the talk causes the dislike."
+        }
+      ]
+    },
+    {
+      "itemId": "ENG-013-TI-08",
+      "why": "hintCore 'Read on to the end of that line' had no referent. Replaced with a hint that names the line by what Hands says there, then gives the same move. Nothing else changed.",
+      "stem": {
+        "text": "Look at lines 38 to 42. Why has Hands had enough of Captain Smollett?",
+        "quotes": [],
+        "passageRef": "stream-a-01-treasure-island",
+        "orderAnchor": 38
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4wq00m9tmbvuboltw08",
+          "value": "Hands wants the pickles and the wine in the cabin.",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "True at line 42, and it answers what he wants rather than why he is done with Smollett."
+        },
+        {
+          "optionId": "cmsw2f4wq00matmbvn19twkws",
+          "value": "He means to take the ship for himself.",
+          "isKey": false,
+          "tag": "en-motive-invention",
+          "execution": "A plausible aim for a pirate; lines 38 to 42 never give it."
+        },
+        {
+          "optionId": "cmsw2f4wq00mbtmbvinb6t4xl",
+          "value": "They are standing off and on like a blessed bumboat.",
+          "isKey": false,
+          "tag": "en-inference-literal-lookalike",
+          "execution": "Reuses lines 40 and 41 and names the waiting rather than the reason."
+        },
+        {
+          "optionId": "cmsw2f4wq00mctmbv8j0hvp9z",
+          "value": "Smollett has driven him hard for a long time.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Find where Hands says he has had enough of the captain. Read on to the end of that line."
+      }
+    },
+    {
+      "itemId": "ENG-013-TI-10",
+      "why": "With heart as a subject, 'misgave' can carry the sense of doubt, so the neighbouring-sense distractor 'They filled him with doubt about Silver' was partly supported and its execution untrue for the heart. Replaced it with 'They were strong enough to carry him out', which the passage contradicts (l.52: he would have leaped out if he had found the strength). Hint 'Limbs cannot doubt' ignored the heart and eliminated two distractors; replaced with a move to line 52.",
+      "stem": {
+        "text": "Look at lines 52 and 53. What does 'misgave' on line 53 mean here?",
+        "quotes": [
+          "misgave"
+        ],
+        "passageRef": "stream-a-01-treasure-island",
+        "orderAnchor": 52
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4ws00mjtmbvukwxsd52",
+          "value": "They handed him something by mistake.",
+          "isKey": false,
+          "tag": "en-vocab-built-from-parts",
+          "execution": "Reads mis and gave as two parts, so the meaning comes from a different word."
+        },
+        {
+          "optionId": "cmsw2f4ws00mktmbvyiochytv",
+          "value": "They would not do as he wanted them to.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4ws00mltmbvpgl6c3fl",
+          "value": "They were strong enough to carry him out.",
+          "isKey": false,
+          "tag": "en-contradicted-by-the-text",
+          "execution": "Lines 52 and 53 say he would have leaped out if he had found the strength, so he did not find it. The child gives his limbs the strength the line denies."
+        },
+        {
+          "optionId": "cmsw2f4ws00mmtmbvq5xg1s43",
+          "value": "He would have leaped out and run for it.",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "True at line 52, and it states what he wanted rather than the meaning of the word."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Read line 52 first. Ask what kept him from leaping out."
+      }
+    },
+    {
+      "itemId": "ENG-013-TI-12",
+      "why": "hintCore 'He does not move' stated half the key. Replaced with a sampling move that names neither half. walkScript said 'At lines 32 and 33 he cannot move', which those lines do not say; now 'still in the barrel', which is true throughout.",
+      "stem": {
+        "text": "Think about the whole passage. What does Jim keep doing while he lies in the barrel?",
+        "quotes": [],
+        "passageRef": "stream-a-01-treasure-island",
+        "answerShape": "stillness-set-against-understanding",
+        "orderAnchor": 999,
+        "techniqueKey": "a-hidden-narrator-who-cannot-act-and-goes-on-understanding"
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4wt00mttmbvyk9g3hep",
+          "value": "His nerve holds while he hides, but it breaks once the moon rises.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "A tidy shape the passage never carries: he is afraid from the moment he hears Silver, and the moon brings land rather than panic."
+        },
+        {
+          "optionId": "cmsw2f4wt00mutmbvx4vt0qab",
+          "value": "He tells us he would not have shown himself for the world.",
+          "isKey": false,
+          "tag": "en-inference-literal-lookalike",
+          "execution": "Reuses line 11 and names one thing he did rather than anything he keeps doing."
+        },
+        {
+          "optionId": "cmsw2f4wt00mvtmbvjdzw5emy",
+          "value": "He hears the plot, so he goes to warn the honest men.",
+          "isKey": false,
+          "tag": "en-contradicted-by-the-text",
+          "execution": "Lines 11 and 12 have Jim say he would not have shown himself for all the world, and he lies there trembling and listening. The child gives him a course of action the passage states the contrary of; he stays in the barrel throughout."
+        },
+        {
+          "optionId": "cmsw2f4wu00mwtmbvodlqcq9x",
+          "value": "His body cannot move, but his mind goes on working things out.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Pick three moments, early, middle and late. Ask what is true of Jim at each one.",
+        "walkScript": "At line 10 he means to jump up, and instead he lies there trembling. At lines 32 and 33, still in the barrel, he works out what their terms mean. At line 53 his limbs give way while his ears keep gathering the plot."
+      }
+    },
+    {
+      "itemId": "ENG-020-HD-01",
+      "why": "hintCore 'Two of these are true things that happen next' was false (only the Clara option is true). Replaced with a move to the sentence where she makes up her mind. Nothing else changed.",
+      "stem": {
+        "text": "Look at lines 2 to 8. Why does Fraulein Rottenmeier decide to give Heidi some of Clara's clothes?",
+        "quotes": [],
+        "passageRef": "stream-a-19-heidi",
+        "orderAnchor": 2
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4yg00wdtmbvthlzevjc",
+          "value": "Because Clara was willing to give away any number of dresses.",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "True at lines 6 and 7, and it is what made it possible rather than why."
+        },
+        {
+          "optionId": "cmsw2f4yg00wetmbv6x3wu9hx",
+          "value": "Because Heidi will then look decent when Herr Sesemann comes home.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4yg00wftmbvp0crr6gk",
+          "value": "Because she had looked in the wardrobe and found it bare.",
+          "isKey": false,
+          "tag": "en-chronology-collapse",
+          "execution": "She goes up at line 7, after the decision at line 4."
+        },
+        {
+          "optionId": "cmsw2f4yg00wgtmbvrzpp3p1g",
+          "value": "Because Heidi's own clothes were spoiled on the journey.",
+          "isKey": false,
+          "tag": "en-motive-invention",
+          "execution": "Lines 2 and 3 put her appearance on the road, which supplies this."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Find where she makes up her mind. Read to the end of that sentence."
+      }
+    },
+    {
+      "itemId": "ENG-020-HD-02",
+      "why": "walkScript misquoted and mislined the bread line, and 'what do I see' starts on line 11 not 12. Now cites lines 11 and 12 for the declared quotation and quotes 'a whole pile of bread' exactly from line 13 (declared). Hat-option execution lost its truncated trailing sentence.",
+      "stem": {
+        "text": "Look at lines 9 to 12. What does Fraulein Rottenmeier find in the wardrobe?",
+        "quotes": [],
+        "passageRef": "stream-a-19-heidi",
+        "orderAnchor": 9
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4yh00witmbv30wx10iq",
+          "value": "A thing that nobody had ever done before.",
+          "isKey": false,
+          "tag": "en-inference-literal-lookalike",
+          "execution": "Reuses lines 10 and 11 and gives her feeling instead of the thing."
+        },
+        {
+          "optionId": "cmsw2f4yh00wjtmbvi3y4hub8",
+          "value": "An old straw hat left out on the table.",
+          "isKey": false,
+          "tag": "en-wrong-scope-retrieval",
+          "execution": "True at line 15, three lines past the end of this window, where Tinette is told to take it away."
+        },
+        {
+          "optionId": "cmsw2f4yh00wktmbvacb613mg",
+          "value": "Clothes that had grown too small for the child.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "She went up to see what to keep and what to throw away, which invites this."
+        },
+        {
+          "optionId": "cmsw2f4yh00wltmbvghnroy1f",
+          "value": "A heap of rolls at the bottom of it.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        }
+      ],
+      "explanationPatch": {
+        "walkScript": "Lines 11 and 12 ask 'what do I see at the bottom but a heap of rolls'. Line 13 says it again, calling it 'a whole pile of bread'.",
+        "quotes": [
+          {
+            "rule": "quoted-from-passage",
+            "text": "what do I see at the bottom but a heap of rolls",
+            "passageRef": "stream-a-19-heidi"
+          },
+          {
+            "rule": "quoted-from-passage",
+            "text": "a whole pile of bread",
+            "passageRef": "stream-a-19-heidi"
+          }
+        ]
+      }
+    },
+    {
+      "itemId": "ENG-020-HD-03",
+      "why": "Distractor 'Somebody took it away, and later it was in her bed' was a true answer. Replaced with 'Nobody touched it, and it stayed where it was', which lines 15 and 42 contradict (on the table, then under the counterpane). Lines 39-41 strongly imply Sebastian, so the key now says 'these lines never say who' (true of the two cited windows) rather than 'the passage'; walkScript's 'Nothing between them says who' was false for the same reason and now speaks of the two cited parts. Hint addressed the removed distractor, so it is now a move.",
+      "stem": {
+        "text": "Look at lines 13 to 15 and lines 42 and 43. What has happened to the hat between the two?",
+        "quotes": [],
+        "passageRef": "stream-a-19-heidi",
+        "answerShape": "two-halved-contrast-of-what-was-ordered-against-what-is-found",
+        "orderAnchor": 13,
+        "techniqueKey": "an-order-quietly-undone-by-a-hand-the-passage-never-names"
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4yh00wntmbvive8xo50",
+          "value": "Somebody has given it back to her, and these lines never say who.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4yh00wotmbvtpxzktw2",
+          "value": "Nobody touched it, and it stayed where it was.",
+          "isKey": false,
+          "tag": "en-contradicted-by-the-text",
+          "execution": "Line 15 puts the hat on the table and lines 42 and 43 find it under the counterpane, so it has been moved. The child takes the order as never carried out."
+        },
+        {
+          "optionId": "cmsw2f4yi00wptmbv6158smmt",
+          "value": "Somebody sent Tinette for it, and she is the one who brought it.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "Tinette is named at line 13 and is the only servant sent; no line brings it back."
+        },
+        {
+          "optionId": "cmsw2f4yi00wqtmbvhvrbn8wg",
+          "value": "Somebody changed her mind, and the passage never hides who.",
+          "isKey": false,
+          "tag": "en-whole-text-absence-asserted",
+          "execution": "A decision the passage withholds, asserted as though it were on the page."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Find where the hat is in each part. Then ask how it got from one to the other.",
+        "walkScript": "Lines 13 to 15 have Tinette told to take away the rolls and the hat. Lines 42 and 43 have Heidi find that hat under the counterpane. Neither part says who put it there."
+      }
+    },
+    {
+      "itemId": "ENG-020-HD-07",
+      "why": "hintCore was ungrammatical (two different 'it's, 'the it'). Replaced with two plain sentences giving the same move. Nothing else changed.",
+      "stem": {
+        "text": "Look at lines 32 and 33. What does \"depend\" on line 33 mean here?",
+        "quotes": [
+          "depend"
+        ],
+        "passageRef": "stream-a-19-heidi",
+        "orderAnchor": 32
+      },
+      "options": [
+        {
+          "optionId": "cmsw5vr5i0025tm8eku9j9hjt",
+          "value": "To be able to trust that a thing will happen.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw5vr5i0026tm8ewcu8b9mv",
+          "value": "To hang down from something.",
+          "isKey": false,
+          "tag": "en-vocab-neighbouring-sense",
+          "execution": "The older sense the word carries in pendant, and it is a real one."
+        },
+        {
+          "optionId": "cmsw5vr5i0027tm8ebsxnx7pw",
+          "value": "To leave off crying at last.",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "True at line 32, and it is what the promise did to her."
+        },
+        {
+          "optionId": "cmsw5vr5i0028tm8e6qtg1usm",
+          "value": "To keep on saying a thing to Clara.",
+          "isKey": false,
+          "tag": "en-inference-literal-lookalike",
+          "execution": "Reuses line 33 and names what she does instead of what the word means."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Line 33 says she wants to depend upon something. Find what it is on line 32."
+      }
+    },
+    {
+      "itemId": "ENG-020-HD-08",
+      "why": "Wrong window: the reason is at line 33, outside the cited 34-36. Stem now cites lines 33 to 36 (lineRefs and orderAnchor updated). walkScript said line 35 repeats the question, but line 35 is Clara's assurance; it now cites line 33 for the reason and line 34 for the question.",
+      "stem": {
+        "text": "Look at lines 33 to 36. Why does Heidi ask Clara the same thing more than once?",
+        "quotes": [],
+        "passageRef": "stream-a-19-heidi",
+        "orderAnchor": 33
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4ym00xctmbv566ntl8f",
+          "value": "Because Clara keeps adding or more.",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "True at line 36, and it is the answer rather than the reason for asking."
+        },
+        {
+          "optionId": "cmsw2f4ym00xdtmbv6o9fb4qq",
+          "value": "Because she is still angry about the bread.",
+          "isKey": false,
+          "tag": "en-emotion-label-approximation",
+          "execution": "A near-neighbour of the real feeling; the lines give her doubt, not anger."
+        },
+        {
+          "optionId": "cmsw2f4ym00xetmbve0ekugkg",
+          "value": "Because she wants to be sure the promise will be kept.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4ym00xftmbv46y4o2xr",
+          "value": "Because she has not understood what Clara said.",
+          "isKey": false,
+          "tag": "en-motive-invention",
+          "execution": "A reason repetition usually has, and no line gives it here."
+        }
+      ],
+      "explanationPatch": {
+        "walkScript": "Line 33 says she wants to make sure she can depend upon it. Line 34 has her ask whether she will have quite as many. She asks again and again to check that the promise holds."
+      },
+      "lineRefs": [
+        33,
+        34,
+        35,
+        36
+      ]
+    },
+    {
+      "itemId": "ENG-020-HD-09",
+      "why": "hintCore 'Nothing here is being put down by force' eliminated the dominant-sense distractor the item tests. Replaced with a substitution move. The tag mismatch the hold names is already resolved on the stored row (the 'press down hard' option carries en-vocab-built-from-parts, matching its execution), so options are unchanged.",
+      "stem": {
+        "text": "Look at lines 37 and 38. What does \"suppress\" on line 38 mean here?",
+        "quotes": [
+          "suppress"
+        ],
+        "passageRef": "stream-a-19-heidi",
+        "orderAnchor": 37
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4yn00xhtmbv7n8q9tjy",
+          "value": "To put down a rising by force.",
+          "isKey": false,
+          "tag": "en-vocab-dominant-sense",
+          "execution": "The sense a child meets in history, and it is the commoner one."
+        },
+        {
+          "optionId": "cmsw2f4yn00xitmbv8cbllgh3",
+          "value": "To hold back a thing that is coming out.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4yn00xjtmbvyam18ung",
+          "value": "To sit quietly at the table.",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "True at line 38, and it is what she knew she must do."
+        },
+        {
+          "optionId": "cmsw2f4yn00xktmbvuwze5cxo",
+          "value": "To press down hard on a thing.",
+          "isKey": false,
+          "tag": "en-vocab-built-from-parts",
+          "execution": "The child finds 'press' inside 'suppress' and builds a meaning from that part. The part is real but the sum is not the word: at line 38 Heidi could not hold back a sob."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Try each answer in place of suppress on line 38. Read the sentence again each time."
+      }
+    },
+    {
+      "itemId": "ENG-020-HD-10",
+      "why": "Execution on 'she saw her own roll' ended with a false boilerplate sentence (the message is at line 41, not 40). Removed it. Nothing else changed.",
+      "stem": {
+        "text": "Look at lines 39 to 41. What is Sebastian telling Heidi?",
+        "quotes": [],
+        "passageRef": "stream-a-19-heidi",
+        "orderAnchor": 39
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4yn00xmtmbvsaau0l1j",
+          "value": "That he wants her to point at her own head.",
+          "isKey": false,
+          "tag": "en-inference-literal-lookalike",
+          "execution": "Reuses line 40 and copies the sign instead of reading it."
+        },
+        {
+          "optionId": "cmsw2f4yn00xntmbvmj6egr3g",
+          "value": "That he will speak to Fraulein Rottenmeier for her.",
+          "isKey": false,
+          "tag": "en-motive-invention",
+          "execution": "A rescue the scene invites; no line gives him the plan."
+        },
+        {
+          "optionId": "cmsw2f4yo00xotmbvsu603jex",
+          "value": "That she saw her own roll at supper.",
+          "isKey": false,
+          "tag": "en-wrong-scope-retrieval",
+          "execution": "True at line 37, before this window, and it is not what he points at."
+        },
+        {
+          "optionId": "cmsw2f4yo00xptmbvq91hbmou",
+          "value": "That he has kept something of hers safe.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        }
+      ]
+    },
+    {
+      "itemId": "ENG-020-HD-11",
+      "why": "Distractor 'She squeezes it further out of shape in her delight' was a second correct answer ('still in her joy' runs onto line 44). Replaced with 'She finds it lying under the counterpane', true only at lines 42 and 43, before the window, and not something she does with the hat.",
+      "stem": {
+        "text": "Look at lines 44 and 45. What does Heidi do with the hat?",
+        "quotes": [],
+        "passageRef": "stream-a-19-heidi",
+        "orderAnchor": 44
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4yo00xrtmbv14jogp6s",
+          "value": "She puts it in the cupboard and then wraps it up.",
+          "isKey": false,
+          "tag": "en-chronology-collapse",
+          "execution": "Line 44 wraps it before line 45 puts it away."
+        },
+        {
+          "optionId": "cmsw2f4yo00xstmbvozspknrn",
+          "value": "She finds it lying under the counterpane.",
+          "isKey": false,
+          "tag": "en-wrong-scope-retrieval",
+          "execution": "True at lines 42 and 43, before this window, and it is how she comes upon the hat rather than what she does with it."
+        },
+        {
+          "optionId": "cmsw2f4yo00xttmbvx7gtqjjm",
+          "value": "She wraps a handkerchief round it and pushes it to the back of the cupboard.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4yo00xutmbvv4v3unz7",
+          "value": "She puts it on and keeps it on in bed.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "She is getting into bed at line 42, which invites this."
+        }
+      ]
+    },
+    {
+      "itemId": "ENG-020-HD-12",
+      "why": "Distractor 'What is taken is her bread, but what returns is her hat' was true. Replaced with 'What is taken is taken gently, but what returns comes with sharp words', which swaps the manners (determined tone at l.19, kind signs at l.40-41); tag en-attribute-transfer. hintCore sent the child to a verdict line that does not exist; now a compare move. walkScript put the hat back at line 41 and had Sebastian say nothing; now signs at 40-41, hat back at 42.",
+      "stem": {
+        "text": "Think about the whole passage. What is true of the things done to Heidi and the things done for her?",
+        "quotes": [],
+        "passageRef": "stream-a-19-heidi",
+        "answerShape": "two-halved-contrast-of-what-is-taken-against-what-is-given",
+        "orderAnchor": 9999,
+        "techniqueKey": "decisions-taken-over-the-child-and-kindness-done-without-a-word"
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4yp00xwtmbvyzktf3kr",
+          "value": "What is taken is settled aloud, but what returns comes in silence.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4yp00xxtmbvabzkc9ko",
+          "value": "What is taken is taken gently, but what returns comes with sharp words.",
+          "isKey": false,
+          "tag": "en-attribute-transfer",
+          "execution": "Fraulein Rottenmeier takes the bread in a determined tone at line 19, and Sebastian's signs at lines 40 and 41 are kind. The child swaps the two manners."
+        },
+        {
+          "optionId": "cmsw2f4yp00xytmbvlcf8gmpt",
+          "value": "What is taken is judged by the writer, but the giving is never judged.",
+          "isKey": false,
+          "tag": "en-whole-text-absence-asserted",
+          "execution": "No line anywhere gives a verdict on the house."
+        },
+        {
+          "optionId": "cmsw2f4yp00xztmbvixwi9p8n",
+          "value": "What is taken is missed by all, but only Heidi says so.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "Fraulein Rottenmeier runs out of the room at line 25 and never comes back."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "List what is done to Heidi and what is done for her. Compare how each one happens.",
+        "walkScript": "At line 4 Fraulein Rottenmeier settles the clothes without asking her. At line 6 she settles it with Clara. At line 13 she gives Tinette the order. At lines 40 and 41 Sebastian makes only signs. At line 42 the hat is back."
+      }
+    },
+    {
+      "itemId": "ENG-027-RR-03",
+      "why": "hintCore ruled out the won't-lookalike distractor the item tests. Replaced with a substitution move. Nothing else changed.",
+      "stem": {
+        "text": "Look at lines 11 and 12. What does \"wont\" mean here?",
+        "quotes": [
+          "wont"
+        ],
+        "passageRef": "stream-a-22-prisoner-of-zenda",
+        "orderAnchor": 11
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f50f0181tmbv9z300mwg",
+          "value": "His refusal to do something.",
+          "isKey": false,
+          "tag": "en-vocab-form-lookalike",
+          "execution": "Built from the contraction a child meets constantly in the other spelling."
+        },
+        {
+          "optionId": "cmsw2f50f0182tmbvsxqetufs",
+          "value": "His reason for looking pale.",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "True at line 12, and it is the reply rather than the word."
+        },
+        {
+          "optionId": "cmsw2f50f0183tmbvdthbltrf",
+          "value": "His usual way of looking.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f50f0184tmbv7m30zvwz",
+          "value": "His look in the pictures of him.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "Pictures of him are named later; no line ties them to this word."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Try each answer in place of wont on line 11. Read the sentence again each time."
+      }
+    },
+    {
+      "itemId": "ENG-027-RR-06",
+      "why": "Two distractors described the sight itself (the portraits; the ironical greeting), and since being spared the sight is the stated reason for gladness (l.19-20), the portrait one was defensible and the irony one only less obviously so. A small repair cannot fix a stem that admits the sight as a reason, so the question is reframed on the same lines, same type and tier: how the narrator thinks the King would have taken the sight. Key reworded to match ('perhaps' kept as 'might'); portrait option replaced by the negation-dropped reading of line 21; the request option replaced by one the passage contradicts. hintCore referred to the old options and is now a move. walkScript misquoted l.20 as 'a hot temper'; it now paraphrases the text's 'quick temper' as 'a man who was easily angered' (the scanner bars 'quick' in child-facing text, so the passage word cannot be quoted).",
+      "stem": {
+        "text": "Look at lines 19 to 21. How does the narrator think the King would have taken the sight?",
+        "quotes": [],
+        "passageRef": "stream-a-22-prisoner-of-zenda",
+        "orderAnchor": 19
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f50i018gtmbv1zfn2n0c",
+          "value": "He would have taken it as calmly as the narrator did.",
+          "isKey": false,
+          "tag": "en-negation-dropped",
+          "execution": "Line 21 says he would not have taken it so placidly as the narrator did. This option drops the not."
+        },
+        {
+          "optionId": "cmsw2f50i018htmbvs5brrwti",
+          "value": "He might have lost his temper over it.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f50i018itmbvphq8ygwq",
+          "value": "It was an ironical sort of greeting to the King.",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "True at line 19, and it says what the sight was rather than how the King would have taken it."
+        },
+        {
+          "optionId": "cmsw2f50i018jtmbv04wcc3ba",
+          "value": "He would have been glad to see his brother so loved.",
+          "isKey": false,
+          "tag": "en-contradicted-by-the-text",
+          "execution": "Line 20 calls the portraits an unpleasant sight he was spared, and line 19 an ironical greeting. The passage states the opposite of gladness."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Find what line 20 says about the kind of man the King was. Then read line 21.",
+        "walkScript": "Lines 19 and 20 say he was glad the King was spared the sight. Line 20 says the King was a man who was easily angered. Line 21 says he would not have taken it so placidly. So he might well have lost his temper."
+      }
+    },
+    {
+      "itemId": "ENG-027-RR-07",
+      "why": "Execution on the kneeling option ended with a false boilerplate sentence and a fragment that is not the answer. Removed it. Nothing else changed.",
+      "stem": {
+        "text": "Look at lines 22 to 26. What happened to the narrator as he dismounted?",
+        "quotes": [],
+        "passageRef": "stream-a-22-prisoner-of-zenda",
+        "orderAnchor": 22
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f50j018ltmbvxyxc73rn",
+          "value": "The great grey front of it rose before him.",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "True at lines 22 and 23, and it is the building rather than him."
+        },
+        {
+          "optionId": "cmsw2f50j018mtmbvv7u4d8t4",
+          "value": "He knelt down in front of the altar.",
+          "isKey": false,
+          "tag": "en-wrong-scope-retrieval",
+          "execution": "True at line 37, after he had walked up the nave, well past this window."
+        },
+        {
+          "optionId": "cmsw2f50j018ntmbv2l69wbxb",
+          "value": "Everything went into a mist for him.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f50j018otmbvq4o6c38u",
+          "value": "He was helped down by the Marshal and Sapt.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "Two men are named at line 25; no line has either touch him."
+        }
+      ]
+    },
+    {
+      "itemId": "ENG-027-RR-09",
+      "why": "Execution on the oath option ended with a false boilerplate sentence quoting the organ. Removed it. hintCore 'The heralds say who he now is' stated the key's content; replaced with a move to line 41.",
+      "stem": {
+        "text": "Look at lines 41 to 43. What did the heralds proclaim?",
+        "quotes": [],
+        "passageRef": "stream-a-22-prisoner-of-zenda",
+        "orderAnchor": 41
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f50j018qtmbvnucerh7n",
+          "value": "That Rudolf the Fifth was crowned King.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f50k018rtmbvbeeyvou2",
+          "value": "That the great organ pealed out again.",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "True at line 41, and it is the sound rather than the words."
+        },
+        {
+          "optionId": "cmsw2f50k018stmbvpamsqckx",
+          "value": "That he had sworn the old oath of the King.",
+          "isKey": false,
+          "tag": "en-wrong-scope-retrieval",
+          "execution": "True at line 39, just before the heralds were called, and it is what he did rather than what they proclaimed."
+        },
+        {
+          "optionId": "cmsw2f50k018ttmbvz1t2fdym",
+          "value": "That the King’s own brother had agreed to the crowning.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "No line anywhere has his brother agree to anything."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Find the heralds on line 41. Read on to see what follows."
+      }
+    },
+    {
+      "itemId": "ENG-027-RR-10",
+      "why": "Stem asked what the Duke's 'hands and face' show, but the key's 'looking for a way out' comes from where he looks (l.53-54). Stem now asks what the lines show about what he is feeling and thinking, which takes in his step, his looking about, his face and his hand. The face option's execution is aligned to the new stem and its lines corrected (54-55). hintCore 'Two of these describe him without saying why' was false; now a move.",
+      "stem": {
+        "text": "Look at lines 53 to 59. What do these lines show about what the Duke is feeling and thinking?",
+        "quotes": [],
+        "passageRef": "stream-a-22-prisoner-of-zenda",
+        "orderAnchor": 53
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f50k018vtmbv7767gfnk",
+          "value": "His face was patched with red and white.",
+          "isKey": false,
+          "tag": "en-inference-literal-lookalike",
+          "execution": "Reuses lines 54 and 55, and describes his face rather than what he is feeling or thinking."
+        },
+        {
+          "optionId": "cmsw2f50k018wtmbvnf7zw9c7",
+          "value": "He is afraid, and he is looking for a way out.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f50k018xtmbv8myrynco",
+          "value": "Sapt was smiling again into his beard.",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "True at line 56, and it is somebody else in the same sentence."
+        },
+        {
+          "optionId": "cmsw2f50l018ytmbv84gyywgn",
+          "value": "He is ill and cannot help the shaking.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "A shaking hand invites illness; no line gives him any."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Find each thing the Duke does in lines 53 to 56. Ask what would make a man do it."
+      }
+    }
+  ],
+  "cannotFix": []
+}

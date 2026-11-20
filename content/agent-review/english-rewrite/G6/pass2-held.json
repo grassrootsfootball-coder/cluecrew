@@ -1,0 +1,100 @@
+{
+ "door": "english-rewrite/G6",
+ "mode": "APPLIED",
+ "landed": [
+  "ENG-008-RC-02",
+  "ENG-008-RC-03",
+  "ENG-008-RC-04",
+  "ENG-008-RC-06",
+  "ENG-019-BV-02",
+  "ENG-008-RC-07",
+  "ENG-008-RC-11",
+  "ENG-019-BV-05",
+  "ENG-019-BV-04",
+  "ENG-022-GK-06",
+  "ENG-012-ML-01",
+  "ENG-012-ML-03",
+  "ENG-012-ML-05",
+  "ENG-012-ML-10",
+  "ENG-019-BV-03",
+  "ENG-019-BV-06",
+  "ENG-019-BV-08",
+  "ENG-019-BV-12",
+  "ENG-019-BV-09",
+  "ENG-022-GK-01",
+  "ENG-022-GK-02",
+  "ENG-022-GK-04",
+  "ENG-022-GK-05",
+  "ENG-022-GK-10"
+ ],
+ "held": [
+  {
+   "itemId": "ENG-008-RC-05",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "Key correct (lines 21-22). Faults: the attribute-transfer distractor surfaces tag hint 'Two people are being described', false here (two objects; library en-attribute-transfer wording, R586); walkScript says 'the other holds the bread' but line 23 has them with no bread ('if they had any').",
+    "faultField": "options"
+   },
+   "holdFixed": true,
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-008-RC-05",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "reason": "The hold's faults are gone: the library tag hint is now true of two objects, and the walk no longer says the tin holds bread. The bread-and-butter execution is still not true of the passage. It says 'That table is at line 51', but the forgotten room's table, and the bread on it, are on line 50 ('on its table, all nicely set out ... with bread,'). Only 'butter' is on line 51. It also says 'line 23 says they had no bread', where line 23 says 'if they had any'. The row's own new walk reads that, correctly, as 'they may not have any bread'.",
+    "faultField": "execution"
+   }
+  },
+  {
+   "itemId": "ENG-012-ML-07",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "Distractor 'afraid that Tom will take both of the halves himself' is textually supported: Tom threatens 'else you sha'n't have any' (lines 31-32) and line 33 says her sacrifice 'did not extend so far' - she shut her eyes so as not to lose her share. Its execution 'Nothing gives her that fear' is false.",
+    "faultField": "options"
+   },
+   "holdFixed": true,
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-012-ML-07",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "reason": "The options fault is fixed: the replacement fear has no support, and its execution is true. But hintCore 'Two wants are compared. Find which she cared about more.' paraphrases the key 'She wants Tom pleased with her more than she wants him fed'. The key is the only option that compares two wants, and it reuses the hint's 'wants' and 'more'. Matching hint to options selects the key without reading lines 33 to 35 (R572).",
+    "faultField": "hintCore"
+   }
+  },
+  {
+   "itemId": "ENG-012-ML-11",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "Key 'Maggie cannot let it go' (and walk 'Only one of the two can put it down') is contradicted by lines 72-73, where after ten minutes 'resentment began to give way to the desire of reconciliation'.",
+    "faultField": "key"
+   },
+   "holdFixed": true,
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-012-ML-11",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "reason": "The key fault is gone: 'Maggie is left in misery' is not contradicted by lines 72 and 73. But the stem's windows, 'lines 59 to 63, then lines 66 to 71' (lineRefs the same), now leave out the lines the new key and walk depend on. Line 64 ('But Maggie, gifted with that superior power of misery') turns the comparison and supplies the key's 'misery'. Line 65 has 'sat still', which the walk cites. Line 72 has the 'ten minutes', which the walk also cites. The walk sends the child to two lines the stem told them to skip, and the stem window cuts the contrasting sentence in half.",
+    "faultField": "stem"
+   }
+  },
+  {
+   "itemId": "ENG-012-ML-12",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "Every option refers to the writer as 'He'; George Eliot (Mary Ann Evans) was a woman - a factual error a child or parent may know. walkScript also calls the jam puff 'a bun'.",
+    "faultField": "options"
+   },
+   "holdFixed": true,
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-012-ML-12",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "reason": "The hold's faults are gone: no option calls the writer 'He', and the walk says 'jam puff' and cites lines 13 and 14 correctly. But hintCore 'Find the words no child in the tree would use.' paraphrases the key's deciding half, 'explains it in grown-up words'. The key is the only option about words at all, so the hint selects it without the passage (R572).",
+    "faultField": "hintCore"
+   }
+  }
+ ]
+}

@@ -1,0 +1,72 @@
+{
+ "door": "english-rewrite/r2/G5",
+ "mode": "APPLIED",
+ "landed": [
+  "ENG-018-RB-01",
+  "ENG-006-TM-04",
+  "ENG-006-TM-09",
+  "ENG-011-CV-12",
+  "ENG-011-CV-10",
+  "ENG-018-RB-05",
+  "ENG-026-AL-01"
+ ],
+ "held": [
+  {
+   "itemId": "ENG-011-CV-06",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "Key correct, but hintCore 'Someone is waiting to receive them. Ask what they do.' has an ambiguous 'they' that reads as the someone (Mrs Umney), steering to the curtsey distractor; 'came down the steps towards them' also carries en-cause-agent-swap where nothing causal is swapped.",
+    "faultField": "hintCore"
+   },
+   "holdFixed": true,
+   "unattested": [
+    {
+     "ref": "rebuild:ENG-011-CV-06",
+     "verdict": "REFUSE",
+     "reason": "The execution fix is sound: 'never comes down them' is removed, and what remains is true (line 15 'as they alighted'; line 12 she stands on the steps). The new hintCore drops the false count, and both its sentences are true (line 15; the drive is at line 2, and 'reached the house' is at line 10). But 'look back at how those people reached the house' paraphrases half of the key, 'got down on arriving at the house'. 'Reached the house' echoes 'arriving at the house', which no other option contains. A child can pick the key by matching the hint's words, without reading the passage (coaching, R572). The second sentence must send her to how they travelled without restating the arrival."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-011-CV-06",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "reason": "The original fault is gone: the ambiguous 'they' is removed and en-cause-agent-swap is replaced with en-agent-patient-reversal, whose execution is now true. But the new hintCore 'Then look back at how those people reached the house' paraphrases half the key ('on arriving at the house'). It is the only option the hint's words match, so the key can be picked from the hint and the options alone (coaching, R572).",
+    "faultField": "hintCore"
+   }
+  },
+  {
+   "itemId": "ENG-018-RB-02",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "Execution for 'He tucks his hat down first, and then he pulls it over his eyes' says it reverses lines 6 and 63, but the option never pushes the hat back - it is not a reversal; and 'He lolls back, and later he clears his mental decks' is true at lines 5 and 64 and defensible as what happened to how he sits.",
+    "faultField": "execution"
+   },
+   "holdFixed": true,
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-018-RB-02",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "reason": "The original execution faults are gone, and every execution is now true (lines 5-6, 7, 51-52, 62-64). But the unchanged walkScript is not accurate. 'Lines 62 to 64 take back the whip, the foot, the hat and the tobacco' misdescribes line 62: he 'put the whip back in its socket', and a child will read 'take back the whip' as picking it up again. The whip is also not in lines 5-7, so it is not something he undoes. 'Line 5 has him lolled back with his foot over the dashboard' also places 'over the dashboard' on line 5, when it is line 6. That is the same line fault this round corrected in the execution.",
+    "faultField": "walkScript"
+   }
+  },
+  {
+   "itemId": "ENG-026-AL-03",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "'The key was under the brick, and after that it was in her hand' is wholly true (lines 12, 43-44) and as much a 'what these lines show' as the key, which is itself a literal pairing of two facts; no defensible distinction between them.",
+    "faultField": "options"
+   },
+   "holdFixed": true,
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-026-AL-03",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "reason": "The original fault is gone (the wholly true pairing is replaced), and the new key is true at each step (lines 10-12, 43-45). But the execution on 'The brick was too heavy for him to lift on his own' is not true of the row. A heavy brick is no reason to move the key under the brick for Alan. The child's likely use of it is a reason he does not put the key back at lock-up, and the text's real reason for that is lines 44-45 ('it would save him hunting about'), not line 11. I attested this execution in round 1 and withdraw that reading.",
+    "faultField": "execution"
+   }
+  }
+ ]
+}

@@ -1,0 +1,92 @@
+{
+ "door": "english-rewrite/r2/G7",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "ENG-020-HD-10",
+   "passageRef": "stream-a-19-heidi",
+   "hold": {
+    "reason": "Execution on 'she saw her own roll' ends 'In the window, line 40 answers the stem: 'all sorts of strange signs, pointing to his own'' - false: the message is at line 41 ('I have got it all safe for you'); line 40 only describes the signs. Key otherwise correct.",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Checked lines 39-41. He points to his own head and hers (line 40), and his nods say 'I have got it all safe for you' (line 41), so the key 'kept something of hers safe' is the only fit. Point-at-head copies the sign (line 40). Speaking to Fraulein Rottenmeier is invented. The roll is line 37, outside the window. The hint is a move. The walk is now accurate that he says nothing aloud. Original held execution ('line 40 answers the stem') is gone.",
+   "landedAt": "2026-11-20T17:14:19.199Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 40 has him point to his own head and then to hers. Line 41 has him say 'I have got it all safe for you'. A thing that goes on a head, and it is hers.",
+     "after": "Line 40 has him point to his own head and then to hers. He says nothing aloud. At line 41 his little nods mean 'I have got it all safe for you'. A thing that goes on a head, and it is hers."
+    },
+    {
+     "field": "option C (cmsw2f4yo00xotmbvsu603jex).execution",
+     "before": "True at line 37, before this window, and it is not what he points at. In the window, line 40 answers the stem: 'all sorts of strange signs, pointing to his own'.",
+     "after": "True at line 37, before this window, and it is not what he points at."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-009-SM-12",
+   "passageRef": "stream-b-02",
+   "hold": {
+    "reason": "hintCore 'Sort the sentences into what still stands and what happened' restates the key ('present kept for what is still true, the walk stays past') - coaching (R572). The key itself checks (l.1, 6, 8, 13, 18, 28-29, 37, 42-43 present and still true; the walk past). Distractor 2 'told it to them' has no referent for 'them'.",
+    "faultField": "hintCore"
+   },
+   "reviewerNote": "Read the present-tense sentences (lines 1, 6, 8-9, 13-16, 18, 28-29, 36-37, 42-43). All of them are still true, and the walk is past, so the key holds. Each wrong option checks. The summary option names no tense choice. The Nan's-way option is defeated by her story changing (line 10) and his own reading of the bell (line 38). The Nan-present/his-past option is defeated by lines 9 and 18, which are his and are present. The hint is a move. The walk's present-tense sentences at lines 8, 18 and 37 check. Original hold (coaching hint; no referent for 'them') is gone.",
+   "landedAt": "2026-11-20T17:14:19.199Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "Sort the sentences into what still stands and what happened.",
+     "after": "Pick out the sentences in the present tense. Ask what each one is about."
+    },
+    {
+     "field": "option B (cmsw2f4vp00gatmbv4jfte8kl).value",
+     "before": "He tells the whole of it the way his Nan has always told it to them.",
+     "after": "He tells the whole of it the way his Nan has always told it to him."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-020-HD-03",
+   "passageRef": "stream-a-19-heidi",
+   "hold": {
+    "reason": "Distractor 'Somebody took it away, and later it was in her bed' is a true answer to 'What has happened to the hat between the two?' - Tinette is ordered to take it (l.13-15) and it is found under the counterpane (l.42); the execution's 'nothing named that links them' does not make it false. Also, l.39-41 strongly imply Sebastian, so the key's 'never says who' needs care.",
+    "faultField": "options"
+   },
+   "reviewerNote": "Checked lines 13-15 (Tinette told to take the hat on the table) and 42-43 (hat under the counterpane). Neither names who moved it, so the key is the only defensible option. The Tinette option is not stated (Tinette named at line 13; nothing brings the hat back). The changed-her-mind option is not on the page. The hint is a move, and the walk is true of the two cited parts. Original hold (a distractor that was a true answer; 'the passage never says who' too strong given lines 39-41) is gone.",
+   "landedAt": "2026-11-20T17:14:19.199Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "Telling the two halves in order is the story, not the answer.",
+     "after": "Find where the hat is in each part. Then ask how it got from one to the other."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 15 has Tinette told to take away the rolls and the hat. Line 42 has Heidi find that hat under the counterpane. Nothing between them says who put it there.",
+     "after": "Lines 13 to 15 have Tinette told to take away the rolls and the hat. Lines 42 and 43 have Heidi find that hat under the counterpane. Neither part says who put it there."
+    },
+    {
+     "field": "option A (cmsw2f4yh00wntmbvive8xo50).value",
+     "before": "Somebody has put it back, and the passage never says who.",
+     "after": "Somebody has put it back, and these lines never say who."
+    },
+    {
+     "field": "option B (cmsw2f4yh00wotmbvtpxzktw2).value",
+     "before": "Somebody took it away, and later it was in her bed.",
+     "after": "Nobody touched it, and it stayed where it was."
+    },
+    {
+     "field": "option B (cmsw2f4yh00wotmbvtpxzktw2).tag",
+     "before": "en-inference-literal-lookalike",
+     "after": "en-contradicted-by-the-text"
+    },
+    {
+     "field": "option B (cmsw2f4yh00wotmbvtpxzktw2).execution",
+     "before": "Both halves in order, joined, with nothing named that links them.",
+     "after": "Line 15 puts the hat on the table and lines 42 and 43 find it under the counterpane, so it has been moved. The child takes the order as never carried out."
+    }
+   ]
+  }
+ ]
+}

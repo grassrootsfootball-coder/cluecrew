@@ -1,0 +1,202 @@
+{
+ "door": "english-rewrite/G2",
+ "mode": "APPLIED",
+ "landed": [
+  "ENG-007-LP-13",
+  "ENG-007-LP-15",
+  "ENG-007-LP-02",
+  "ENG-007-LP-10",
+  "ENG-007-LP-09",
+  "ENG-007-LP-04",
+  "ENG-007-LP-06",
+  "ENG-007-LP-08",
+  "ENG-015-CC-01",
+  "ENG-015-CC-08",
+  "ENG-015-CC-11",
+  "ENG-023-RT-02",
+  "ENG-023-RT-04",
+  "ENG-023-RT-05",
+  "ENG-023-RT-07",
+  "ENG-023-RT-10",
+  "ENG-023-RT-12"
+ ],
+ "held": [
+  {
+   "itemId": "ENG-007-LP-12",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "Key 'We get no thoughts from him' is false: lines 31-32 give what Reuben knew and why ('he knew the shape of the capitals his mum used'). hintCore 'Look for his hands' names the one word only the key carries (coaching); walkScript lists 'laughing late' as hands.",
+    "faultField": "key"
+   },
+   "holdFixed": false,
+   "unattested": [
+    {
+     "ref": "rebuild:ENG-007-LP-12",
+     "verdict": "REFUSE",
+     "reason": "The key fix is sound: 'By showing what he does with things, like the jumper and the paper' is true of lines 33-36. The walk corrections are also accurate. But the new hintCore, 'Go to the moment he finds the navy jumper', repeats the fault the hold named. 'jumper' appears in the key and in no other option, so the child can match the hint to the key without reading, as with 'hands' before. Minor point: the new distractor calls line 28's 'Manchester United sock' 'the football sock', which the passage does not."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-007-LP-12",
+    "verdict": "HOLD",
+    "holdFixed": false,
+    "reason": "The key is fixed, but the hintCore fault the hold named is still there. The new hint names 'the navy jumper', and 'jumper' is carried only by the key (the other options say sad, football sock, old clothes). That is coaching by shared word (R572). The hint needs a move that names nothing only the key carries.",
+    "faultField": "hintCore"
+   }
+  },
+  {
+   "itemId": "ENG-023-RT-08",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "passageRef missing (row cannot show its passage).",
+    "faultField": "passageRef"
+   },
+   "holdFixed": true,
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-023-RT-08",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "reason": "The passageRef is fixed. But the walkScript (unchanged) says 'Line 48 says they pulled two big leaves together'. 'by pulling' is on line 47, and line 48 starts 'two big leaves together'. It should cite lines 47 and 48.",
+    "faultField": "walkScript"
+   }
+  },
+  {
+   "itemId": "ENG-007-LP-07",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "hintCore 'The last three words of line 36 matter most' is false: line 36 is 'opening it.' (two words); 'without' is on line 35. Key and distractors otherwise check.",
+    "faultField": "hintCore"
+   },
+   "holdFixed": true,
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-007-LP-07",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "reason": "The hint fault is fixed. But the execution on 'Read it and then put it away again' (en-negation-dropped) says 'Line 36 says without opening it'. Line 36 is only 'opening it.' and the negative word 'without' is on line 35. The same line split was named in the original hold. A negation-dropped execution must put the negative word on the line it names, so this should cite lines 35 and 36.",
+    "faultField": "execution"
+   }
+  },
+  {
+   "itemId": "ENG-015-CC-12",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "passageRef missing (row cannot show its passage).",
+    "faultField": "passageRef"
+   },
+   "holdFixed": true,
+   "unattested": [
+    {
+     "ref": "rebuild:ENG-015-CC-12",
+     "verdict": "REFUSE",
+     "reason": "stem.passageRef is set, which is all the hold asked for, and the walk line corrections are right (23-24 behind the door; 34-35 bed and closet). But the stem text was changed from 'Think about the whole passage' to 'Think about lines 18 to 78', and lineRefs were filled 18-78. Neither was needed to fix a missing passageRef: lineRefs were [] (not null), and a whole-passage technique row stands with [] (ENG-007-LP-12 passes the same gates). This is an unrequested change to a child-facing stem."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-015-CC-12",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "reason": "passageRef is now set, so the held fault is fixed. But the key 'He says he is not frightened, but he checks the whole house' is not true of the text. He checks only his own rooms ('Sitting-room, bedroom, lumber-room', 32), while lines 28-29 name rooms above and cellars below that he never checks. He never says he is not frightened either: he says 'Pooh, pooh!' (26), 'Humbug!' (53) and 'I won't believe it' (67). A child taught to check the strongest word can rightly reject this key on 'whole'.",
+    "faultField": "key"
+   }
+  },
+  {
+   "itemId": "ENG-015-CC-03",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "'That' at line 15 points back to the whole preceding sentence, which begins with the hair 'curiously stirred, as if by breath or hot air' (line 14); under that reading the hair distractor is a defensible part-answer, and the execution/walkScript 'not to the hair' assert an antecedent the text does not fix.",
+    "faultField": "options"
+   },
+   "holdFixed": true,
+   "unattested": [
+    {
+     "ref": "rebuild:ENG-015-CC-03",
+     "verdict": "REFUSE",
+     "reason": "The option fix is sound. The ghostly spectacles (13-14) sit in the sentence before line 14's hair and are excluded under either reading of 'That'. The execution's 'lines 14 to 16' is right. But the new walk says 'Line 15 then says that this, and its livid colour, made it horrible'. Line 15 ends 'That, and', and 'its livid colour, made it horrible' is on line 16. That is a wrong line number in new text."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-015-CC-03",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "reason": "The held fault is gone: the hair option is replaced, and the key (still open eyes and the colour) is right under both readings of 'That'. But the new walkScript puts 'its livid colour, made it horrible' on line 15 when it is on line 16. It should cite lines 15 and 16.",
+    "faultField": "walkScript"
+   }
+  },
+  {
+   "itemId": "ENG-015-CC-04",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "Execution on 'He let go of the key' cites 'True at line 20'; 'the key he had relinquished' is on line 21 (walkScript repeats line 20 for it). Key and order otherwise check.",
+    "faultField": "execution"
+   },
+   "holdFixed": true,
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-015-CC-04",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "reason": "The held fault is fixed. But the en-chronology-collapse execution (unchanged) says 'Line 21 turns the key before line 22 lights the candle'. 'lighted his' is on line 21 and only 'candle.' is on line 22, so the lighting is on lines 21-22. This is the same line-split class as the original hold, and it should cite lines 21 and 22.",
+    "faultField": "execution"
+   }
+  },
+  {
+   "itemId": "ENG-015-CC-06",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "hintCore 'Two of these only list the noises' eliminates two of three distractors outright, leaving the key against a flame option that is not a noise - coaching. Also lines 60-66 hold two noises (bells, then clanking), so 'the second noise' is ambiguous; the flame execution carries a malformed fragment ('own. Scrooge was not a man...').",
+    "faultField": "hintCore"
+   },
+   "holdFixed": true,
+   "unattested": [
+    {
+     "ref": "rebuild:ENG-015-CC-06",
+     "verdict": "REFUSE",
+     "reason": "The hint fix and the flame-execution fix are sound ('dying flame leaped up' 69, 'fell again' 70). But the new stem names the first noise 'the bang of the door'. 'bang' is on line 27, outside the cited lines 28-31, which say only 'The sound'. Inside the other cited window, line 65 has 'The cellar-door flew open with a booming sound'. A child can reasonably take 'the bang of the door' to be the cellar door, and on that reading the key's 'He walks away from the bang' is false."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-015-CC-06",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "reason": "The original three faults are gone: the hint no longer sorts options by shape, the clanking is named, and the flame execution is clean. But the new stem's 'the bang of the door' is not fixed by its cited lines. 'bang' is on line 27, outside 28-31, and a second door noise (the cellar-door's 'booming sound', 65) sits inside 61-66. The stem needs to cite line 27 or name the front door unambiguously.",
+    "faultField": "stem"
+   }
+  },
+  {
+   "itemId": "ENG-015-CC-07",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "Distractor 'Finding all the rooms in order, just as before' is supported by line 32 'All as they should be' and line 36 'Lumber-room as usual' - it is a true account of what he is doing (outcome rather than search), so the key is not the only defensible answer.",
+    "faultField": "options"
+   },
+   "holdFixed": true,
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-015-CC-07",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "reason": "The held fault is fixed: no distractor now supports 'All as they should be'. But the walkScript (unchanged) says 'Lines 33 to 35 give under the table, under the sofa, in the closet'. 'Nobody under the table' is on line 32, and lines 33-35 hold the sofa, bed and closet.",
+    "faultField": "walkScript"
+   }
+  },
+  {
+   "itemId": "ENG-023-RT-06",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "Execution on 'He sat on all of their laps' claims 'line 34 answers the stem' and quotes 'Teddy went to bed Rikki-tikki climbed up too. But' - that is another distractor's content; the answer is lines 35-36.",
+    "faultField": "execution"
+   },
+   "holdFixed": true,
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-023-RT-06",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "reason": "The held execution is fixed. But the walkScript (unchanged) says 'Line 36 says he found out what made it'. Line 36 is only 'it.', and 'find out what made' is on line 35. It should cite lines 35 and 36.",
+    "faultField": "walkScript"
+   }
+  }
+ ]
+}

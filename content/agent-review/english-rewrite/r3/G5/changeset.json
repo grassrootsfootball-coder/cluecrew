@@ -1,0 +1,33 @@
+{
+ "door": "english-rewrite/r3/G5",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "ENG-011-CV-06",
+   "passageRef": "stream-a-07-canterville-ghost",
+   "hold": {
+    "reason": "Key correct, but hintCore 'Someone is waiting to receive them. Ask what they do.' has an ambiguous 'they' that reads as the someone (Mrs Umney), steering to the curtsey distractor; 'came down the steps towards them' also carries en-cause-agent-swap where nothing causal is swapped.",
+    "faultField": "hintCore"
+   },
+   "reviewerNote": "Whole row re-read against lines 2, 12-16. The key 'got down on arriving at the house' is the only defensible meaning of 'as they alighted' (line 15). The curtsey is hers, joined by 'as' (line 15), so the coordination execution is true. Mrs Umney stands on the steps (line 12), so 'came down the steps towards them' is her act given to the word, and the en-agent-patient-reversal execution is true. 'caught fire and burned' is not supported, and its execution is true (line 12 woman to receive them). The hint is true (lines 15 and 2) and does not coach. The walkScript is true (lines 12 and 15). Original hold: the ambiguous 'they' is gone and en-cause-agent-swap is retagged, so it is fixed.",
+   "landedAt": "2026-11-20T17:19:22.725Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "Someone is waiting to receive them. Ask what they do.",
+     "after": "Find who does the alighting on line 15. Then read line 2 to see how those people travelled."
+    },
+    {
+     "field": "option D (cmsw2f4w500istmbv1vt0l24f).tag",
+     "before": "en-cause-agent-swap",
+     "after": "en-agent-patient-reversal"
+    },
+    {
+     "field": "option D (cmsw2f4w500istmbv1vt0l24f).execution",
+     "before": "Line 12 has Mrs Umney standing on the steps, and line 15 gives this act to them.",
+     "after": "The child gives the word to the wrong party. Line 15 has her curtsey as they alighted, so the alighting belongs to the family arriving. Mrs Umney is the one standing on the steps at line 12."
+    }
+   ]
+  }
+ ]
+}

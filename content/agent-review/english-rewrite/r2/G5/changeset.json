@@ -1,0 +1,185 @@
+{
+ "door": "english-rewrite/r2/G5",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "ENG-018-RB-01",
+   "passageRef": "stream-a-21-rebecca-sunnybrook",
+   "hold": {
+    "reason": "passageRef missing",
+    "faultField": "passageRef"
+   },
+   "reviewerNote": "Checked: passageRef is set. Key true at lines 3-4 ('never losing sight of the fact that he carried the mail'). Warmth is line 2. Eight miles is lines 25-26, said by the mother. Nothing in lines 1-4 says he was late. Walk is true with no 'on the hill'. No 'In the window' clause remains. The hint only removes the weather option and does not coach the key.",
+   "landedAt": "2026-11-20T17:13:52.018Z",
+   "changes": [
+    {
+     "field": "stem.passageRef",
+     "before": null,
+     "after": "stream-a-21-rebecca-sunnybrook"
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 3 says how he was treating the horses on the hill. The same sentence says he never lost sight of one thing. Lines 3 and 4 name it: he carried the mail.",
+     "after": "Line 3 says how he was treating the horses. The same sentence says he never lost sight of one thing. Lines 3 and 4 name it: he carried the mail."
+    },
+    {
+     "field": "option C (cmt9qp4p30003tmovpgjineba).execution",
+     "before": "True at line 25, outside this window; that was the child and her mother, not him. In the window, line 3 answers the stem: 'Mr. Jeremiah Cobb was favoring the horses as much'.",
+     "after": "Lines 25 and 26 have the mother say they drove eight miles that morning. That is outside this window, and it was the child and her mother, not Mr Cobb."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-006-TM-04",
+   "passageRef": "stream-a-10-three-men-boat",
+   "hold": {
+    "reason": "Key correct (lines 18-19), but hintCore 'One sentence holds three mishaps in a row' singles out the key by form: it is the only option listing three mishaps, the distractors list two (coaching).",
+    "faultField": "hintCore"
+   },
+   "reviewerNote": "Checked: key true at lines 18-19 (drops it, out of the frame, cuts himself), the only defensible option. Crooked is line 58. Hammer on toes is line 48. 'Glass stays whole' is not stated, and a new glass is needed at lines 24-25. Hint is a move and does not single out the key by form. Walk is accurate. No 'In the window' clause remains.",
+   "landedAt": "2026-11-20T17:13:52.018Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "One sentence holds three mishaps in a row.",
+     "after": "Read only lines 18 and 19. Check every part of your answer against them."
+    },
+    {
+     "field": "option B (cmsw2f4us00astmbvh0xmqmvo).execution",
+     "before": "True of line 48, but that is much later, at the first blow. In the window, line 18 answers the stem: 'And then he would lift up the picture, and'.",
+     "after": "Line 48 has him drop the hammer on somebody's toes, but that is much later, at the first blow. The child answers from that part instead of lines 18 and 19."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-006-TM-09",
+   "passageRef": "stream-a-10-three-men-boat",
+   "hold": {
+    "reason": "Key correct (line 44), but hintCore 'Something musical happens, so find the instrument' makes the key pickable from the options alone - the piano is the only instrument offered (coaching).",
+    "faultField": "hintCore"
+   },
+   "reviewerNote": "Checked: key true at line 44 ('down he would slide on to the piano'). Chair is line 42, corns are line 61, toes are line 48 (the hammer). Every execution is true. Hint 'Start at line 43, where the string slips' is true and no longer makes the key pickable by instrument. Walk is accurate to lines 43-45.",
+   "landedAt": "2026-11-20T17:13:52.018Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "Something musical happens, so find the instrument.",
+     "after": "Start at line 43, where the string slips. Read on until he stops sliding."
+    },
+    {
+     "field": "option D (cmsw2f4uw00betmbvki8pv5s0).execution",
+     "before": "True of line 48, but that is the hammer falling, not Uncle Podger. In the window, line 43 answers the stem: 'inches beyond what was possible for him to reach'.",
+     "after": "Line 48 has the hammer dropped, with a yell, on somebody's toes. That is the hammer falling, not Uncle Podger, and it comes after lines 43 to 45, where he slides on to the piano."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-011-CV-12",
+   "passageRef": "stream-a-07-canterville-ghost",
+   "hold": {
+    "reason": "walkScript pairs 'charge it to her' as the reply to 'a stain that will not go', but line 48 answers her fainting; and lines 54-55 have the Otises reply directly about ghosts ('not afraid of ghosts'), so 'every one belongs to running a house' and the key's 'keep to household business' overstate.",
+    "faultField": "walkScript"
+   },
+   "reviewerNote": "Checked: key 'mostly ... stains, weather and pay' holds (lines 26-27, 34-35, 43-46, 48, 56-57) and allows for lines 54-55. 'No ghost' is a minimal-pair skim of 'not afraid of ghosts'. Nothing has them laugh. 'Never once ... about ghosts' is contradicted at lines 54-55. Every walk pairing is verified. The stem cites no lines and lineRefs is empty, which is consistent for this whole-passage technique item.",
+   "landedAt": "2026-11-20T17:13:52.018Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Take three things Mrs Umney offers: spilt blood, a murder, a stain that will not go. Now find each reply. Remove it at once, a stain remover, charge it to her. Every one of the three belongs to running a house.",
+     "after": "Mrs Umney offers a murder, a ghost and a stain that cannot be removed. To the blood, Mrs Otis says it must be removed at once. Washington answers the stain with a stain remover. The thunder only gets a grumble about English weather. Her fainting gets a joke about charging her for it. At lines 54 and 55 they do say they are not afraid of ghosts. Even that ends in a pay rise for her, at lines 56 and 57."
+    },
+    {
+     "field": "option C (cmsw2f4w900jltmbv2dtlhyxg).value",
+     "before": "They never take her to heart, and answer her coldly.",
+     "after": "They never once say a word to her about ghosts."
+    },
+    {
+     "field": "option C (cmsw2f4w900jltmbv2dtlhyxg).execution",
+     "before": "Line 54 has them answer her warmly, and line 57 leaves her better paid.",
+     "after": "Lines 54 and 55 have them assure her that they are not afraid of ghosts. The child sees that most of their answers are about everyday things and pushes that to never, where the text has one direct reply."
+    },
+    {
+     "field": "option D (cmsw2f4wa00jmtmbvi0qg7wbc).value",
+     "before": "They keep to household business, though she speaks of ghosts.",
+     "after": "They mostly answer with everyday things, like stains, weather and pay."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-011-CV-10",
+   "passageRef": "stream-a-07-canterville-ghost",
+   "hold": {
+    "reason": "Key correct, but walkScript says 'A boy with a stick of cosmetic removes it'; line 37 says only 'what looked like a black cosmetic' (it is Pinkerton's stain remover, line 34), and Washington is never called a boy.",
+    "faultField": "walkScript"
+   },
+   "reviewerNote": "Checked: key true ('cannot be removed' line 33; 'no trace' lines 37-38, 'in a few moments' line 37). Ghost option is line 32, scrubbing option is lines 36-37, and the 'and' is at line 33 with a verbatim quote. Every tag names its mistake. Hint does not coach. Walk names Washington, and 'cannot be removed' are line 33's last three words.",
+   "landedAt": "2026-11-20T17:13:52.018Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Read line 33 and find the last three words: cannot be removed. Now read line 37 and line 38. A boy with a stick of cosmetic removes it. The one thing she says is impossible takes him a few moments.",
+     "after": "Read line 33 and find the last three words: cannot be removed. Now read lines 37 and 38. After Washington's scrubbing, no trace of the stain can be seen. The one thing she says is impossible takes him a few moments."
+    },
+    {
+     "field": "option D (cmsw2f4w800jctmbvv7vstvhe).tag",
+     "before": "en-relation-word-flipped",
+     "after": "en-conjunction-logic"
+    },
+    {
+     "field": "option D (cmsw2f4w800jctmbvv7vstvhe).execution",
+     "before": "Line 32 joins the two with and, so admiring is not the reason for anything.",
+     "after": "Line 33 joins the two with a plain and: much admired by tourists and others, and cannot be removed. The child reads that and as because, a reason the text never gives."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-018-RB-05",
+   "passageRef": "stream-a-21-rebecca-sunnybrook",
+   "hold": {
+    "reason": "walkScript says 'Line 27 says the laugh was short and this'; line 27 is Rebecca's speech, the laugh is at line 28.",
+    "faultField": "walkScript"
+   },
+   "reviewerNote": "Checked: 'sardonic' is at line 28, and the key 'Bitter, and making fun of her' fits line 29 cutting the child down. 'Short' is the other word in the line 28 phrase. The 'Warm' tag and execution now fit. The hint is a move. The walk has the laugh at line 28 and her words at line 29.",
+   "landedAt": "2026-11-20T17:13:52.018Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 27 says the laugh was short and this. Lines 28 and 29 give what she said next, which cuts the child down. So the word names the mocking, not the shortness.",
+     "after": "Line 28 says the laugh was short and this. Line 29 gives what she said next, which cuts the child down. So the word names the mocking, not the shortness."
+    },
+    {
+     "field": "option C (cmsw2f4y100tytmbveywymqth).tag",
+     "before": "en-emotion-label-approximation",
+     "after": "en-vocab-not-this-word"
+    },
+    {
+     "field": "option C (cmsw2f4y100tytmbveywymqth).execution",
+     "before": "An adjacent feeling; line 29 has her put the child right rather than enjoy her.",
+     "after": "The child does not know the word and fills it from laugh, which usually goes with pleasure. Sardonic never means that, and line 29 has her cut the child down."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-026-AL-01",
+   "passageRef": "stream-b-05",
+   "hold": {
+    "reason": "Key correct (lines 3-5), but hintCore 'Count the places he stopped' points straight at the key 'He stopped twice' - the only option about stopping (coaching).",
+    "faultField": "hintCore"
+   },
+   "reviewerNote": "Checked: key true at lines 4-5 (stopped at the bottom gate, then again halfway up). Fifteen minutes is line 3, within span. The crate is line 21, during the digging. 'Further than he remembered' is not stated. Hint 'Line 3 gives two times' is true and does not name stopping. Walk line numbers are verified.",
+   "landedAt": "2026-11-20T17:13:52.018Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "Count the places he stopped.",
+     "after": "Line 3 gives two times for the walk. Read on to find what slowed them down."
+    },
+    {
+     "field": "option C (cmsw2f5030165tmbvnqk01x2e).execution",
+     "before": "True at line 21, later in the day. In the window, line 3 answers the stem: 'It is a fifteen-minute walk from his flat. We'.",
+     "after": "Line 21 has him sit on the upturned crate, but that is later, while they dig the potatoes. The child answers from that part instead of lines 3 to 6, where he stops twice on the way up."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,485 @@
+{
+ "door": "english-rewrite/G5",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "ENG-018-RB-11",
+   "passageRef": "stream-a-21-rebecca-sunnybrook",
+   "hold": {
+    "reason": "passageRef missing",
+    "faultField": "passageRef"
+   },
+   "reviewerNote": "Checked lines 16, 45, 47, 50 and 57-59: key 'can see where she goes' is the only defensible answer among the options; long-way (lines 58-59) and paid-for-a-seat (lines 16, 45, 50) fail as tagged; hint does not coach.",
+   "landedAt": "2026-11-20T17:04:03.309Z",
+   "changes": [
+    {
+     "field": "stem.passageRef",
+     "before": null,
+     "after": "stream-a-21-rebecca-sunnybrook"
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 57 has her say this is better, and names what it is like. The same line has her call herself a real passenger now. Line 58 gives the other side: down there she felt shut in like a hen.",
+     "after": "Line 57 has her say this is better, and names what it is like. The same line has her call herself a real passenger now. Line 58 gives the other side: down there she felt shut in like a hen. Down there, line 47 says, she could only see pieces of things. Up here she can see where she is going."
+    },
+    {
+     "field": "option A (cmt9qp4qu0008tmovvxj7742q).tag",
+     "before": "en-relation-word-flipped",
+     "after": "en-within-span-wrong-element"
+    },
+    {
+     "field": "option A (cmt9qp4qu0008tmovvxj7742q).execution",
+     "before": "Line 58 gives that as what she was before, so this reads the comparison backwards.",
+     "after": "True at line 58 of how she felt down there, before she moved up. The child takes the other half of the comparison, what she was, for what a real passenger is."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-006-TM-01",
+   "passageRef": "stream-a-10-three-men-boat",
+   "hold": {
+    "reason": "Key correct, but two tags do not name the mistake: 'A slow and careful piece of work' carries en-relation-word-flipped where no relation word exists (it is an antonym of the sense), and 'A crowd of people arriving at once' carries en-attribute-transfer where no detail moves between two described entities.",
+    "faultField": "options"
+   },
+   "reviewerNote": "Checked: quote spans lines 1-2 verbatim; key 'noisy fuss' fits lines 1-2; both retags fit their entries; 'cross words later' true (lines 37, 52); hint and walk accurate (line 2 'undertook to do a job').",
+   "landedAt": "2026-11-20T17:04:03.309Z",
+   "changes": []
+  },
+  {
+   "itemId": "ENG-006-TM-07",
+   "passageRef": "stream-a-10-three-men-boat",
+   "hold": {
+    "reason": "Stem says lines 27-29 count helpers 'a second, a third, a fourth, a fifth', but line 27 reads 'Two people would have to hold the chair, and a third' - there is no 'a second'; walkScript repeats the misquote ('A second person'). Also 'well organised' tagged en-relation-word-flipped and 'how long the job took' tagged en-attribute-transfer do not name those mistakes.",
+    "faultField": "stem"
+   },
+   "reviewerNote": "Checked stem, walk and both new executions against lines 24, 27-30, 57-58; key is the only defensible effect; 'remember their names' fails (they are only numbered); new hint is a move.",
+   "landedAt": "2026-11-20T17:04:03.309Z",
+   "changes": [
+    {
+     "field": "stem.text",
+     "before": "Lines 27 to 29 count the helpers as a second, a third, a fourth, a fifth. Why does the writer number them like that?",
+     "after": "Lines 27 to 29 number the helpers: two, a third, a fourth, a fifth. Why does the writer number them like that?"
+    },
+    {
+     "field": "explanation.hintCore",
+     "before": "Read the numbers in order and feel the group grow.",
+     "after": "Say the numbers in order. Ask what the counting does to the scene."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Look at lines 27 to 29. A second person, then a third, then a fourth, then a fifth. Each number adds one more body round the chair. The counting is what makes it feel like a crowd.",
+     "after": "Look at lines 27 to 29. Two people hold the chair, then come a third, a fourth and a fifth. Each number adds one more body round the chair. The counting is what makes it feel like a crowd."
+    },
+    {
+     "field": "option A (cmsw2f4uv00b6tmbv6k6d3jds).tag",
+     "before": "en-relation-word-flipped",
+     "after": "en-technique-structure-effect-blind"
+    },
+    {
+     "field": "option A (cmsw2f4uv00b6tmbv6k6d3jds).execution",
+     "before": "Reverses the effect; the numbering piles people up rather than ordering the work.",
+     "after": "The child reads what the words say, that each helper is given a job, and takes it for good order. She misses what the count does: two, a third, a fourth, a fifth piles up people for one nail, and at lines 29 and 30 he drops it."
+    },
+    {
+     "field": "option B (cmsw2f4uv00b7tmbvlry89rga).tag",
+     "before": "en-attribute-transfer",
+     "after": "en-technique-effect-mislocated"
+    },
+    {
+     "field": "option B (cmsw2f4uv00b7tmbvlry89rga).execution",
+     "before": "Moves it to time; the numbers count people, and the time is given elsewhere.",
+     "after": "Time is the business of other lines: half an hour is spent at line 24 and the picture is up about midnight at line 58. The child gives that effect to lines 27 to 29, where the numbers count people standing round at one moment."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-006-TM-06",
+   "passageRef": "stream-a-10-three-men-boat",
+   "hold": {
+    "reason": "Key defensible, but 'The family were too busy to watch him properly' carries en-relation-word-flipped with no relation word in lines 26-29 to flip; tag does not name the mistake.",
+    "faultField": "options"
+   },
+   "reviewerNote": "Checked lines 26-29: key 'a tiny job has taken over the whole household' is the only defensible reading; motive, weight and contradiction distractors each fail as their tags say; walk's count (two, third, fourth, then fifth with the hammer) is accurate.",
+   "landedAt": "2026-11-20T17:04:03.309Z",
+   "changes": []
+  },
+  {
+   "itemId": "ENG-006-TM-11",
+   "passageRef": "stream-a-10-three-men-boat",
+   "hold": {
+    "reason": "'He has learned... that the job was hard' carries en-relation-word-flipped with no relation word to flip; and the key 'thinks of it as a success, exactly as he did at the start' is imprecise - at lines 6-7 there is no success yet, only confidence it is easy.",
+    "faultField": "options"
+   },
+   "reviewerNote": "Checked lines 6-7, 37, 52, 61-63: key the only defensible answer; executions' line refs true; hint is a move; walk consistent with the new key.",
+   "landedAt": "2026-11-20T17:04:03.309Z",
+   "changes": [
+    {
+     "field": "option C (cmsw2f4ux00bntmbvfuo2bx8d).value",
+     "before": "He thinks of it as a success, exactly as he did at the start.",
+     "after": "He is as sure of himself at the end as he was at the start."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-006-TM-12",
+   "passageRef": "stream-a-10-three-men-boat",
+   "hold": {
+    "reason": "walkScript cites line 1's 'always' as part of the pattern, but that 'He always reminds me' is about Harris, not Uncle Podger; and 'every action takes would' is false (line 57 'we had to find', 'a new hole was made'). The 'remembered years after' distractor is also arguably true of the narration.",
+    "faultField": "walkScript"
+   },
+   "reviewerNote": "Checked the walk against lines 1-5, 11, 37, 57; key (habitual, every time) is the only defensible answer; 'never hung' fails at lines 57-58; new distractor's tag and execution fit; hint does not coach.",
+   "landedAt": "2026-11-20T17:04:03.309Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 1 says he always reminds me, and line 2 sets up a job he undertook. Then every action takes 'would': he would shout, drop, dance, call us fools. A single day would be told with 'he shouted' and 'he dropped'.",
+     "after": "Lines 1 and 2 set up what happened when he undertook to do a job. From line 3, most of what he does takes 'would'. He would shout at line 11 and would call us all fools at line 37. A single day would be told with plain past words, like shouted and dropped. So the passage gives what happened every time, not one day."
+    },
+    {
+     "field": "explanation.quotes",
+     "before": null,
+     "after": [
+      {
+       "rule": "quoted-from-passage",
+       "text": "would",
+       "passageRef": "stream-a-10-three-men-boat"
+      }
+     ]
+    },
+    {
+     "field": "option C (cmsw2f4uy00bstmbvhoy04uck).value",
+     "before": "It tells us the story is remembered years after it all happened.",
+     "after": "It tells us Uncle Podger was cross with everyone all day."
+    },
+    {
+     "field": "option C (cmsw2f4uy00bstmbvhoy04uck).tag",
+     "before": "en-wrong-scope-retrieval",
+     "after": "en-technique-intent-as-character"
+    },
+    {
+     "field": "option C (cmsw2f4uy00bstmbvhoy04uck).execution",
+     "before": "True of line 1, which is about remembering, not about how often it happened.",
+     "after": "The child reads the writer's choice as the character's state, so the repeated 'would' becomes Uncle Podger's mood. 'Would' marks what happened every time he took on a job, and he is not cross all day: at line 62 he surveys the mess with evident pride."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-006-TM-02",
+   "passageRef": "stream-a-10-three-men-boat",
+   "hold": {
+    "reason": "Key correct (lines 8-9), but hintCore 'Two people are sent before anything else happens' states the key's content; only the key has two people sent, so it is answerable from the hint without reading (coaching, R572).",
+    "faultField": "hintCore"
+   },
+   "reviewerNote": "Checked lines 8-9 (girl sent for nails, boy after her); step-ladder/kitchen-chair at line 12 and re-measure at line 38 are true; 'goes with her' is the wrong agent; walk accurate; hint does not coach.",
+   "landedAt": "2026-11-20T17:04:03.309Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "Two people are sent before anything else happens.",
+     "after": "Find where he takes off his coat. Then read the next sentence to its very end."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-011-CV-04",
+   "passageRef": "stream-a-07-canterville-ghost",
+   "hold": {
+    "reason": "'A great flight of rooks goes silently over their heads' is true at line 9 and is itself one of the changes as they enter, so a child can defend it as an answer to 'What changes'; walkScript also concludes 'the change they make is a mood', which is not what the key states.",
+    "faultField": "options"
+   },
+   "reviewerNote": "Checked lines 6-11: 'suddenly' is at line 8; clouds, stillness, silent rooks and rain all follow; key the only defensible answer; 'pleasanter' flips line 8's however; 'house comes into sight' fails at line 10. Note: the rabbits' tails reach line 7, inside the stem's window, but they come before the turn, so the wrong-scope tag holds.",
+   "landedAt": "2026-11-20T17:04:03.309Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Read line 8 and find the word suddenly, then count what follows it. Clouds, a stillness, silent rooks, the first rain. All four arrive together, and the change they make is a mood.",
+     "after": "Read line 8 and find the word suddenly, then count what follows it. Clouds, a stillness, silent rooks, the first rain. All four arrive together. The weather turns, and everything goes still and silent."
+    },
+    {
+     "field": "option A (cmsw2f4w300iftmbvvozc2nud).value",
+     "before": "A great flight of rooks goes silently over their heads.",
+     "after": "The rabbits scud away with their white tails in the air."
+    },
+    {
+     "field": "option A (cmsw2f4w300iftmbvvozc2nud).tag",
+     "before": "en-within-span-wrong-element",
+     "after": "en-wrong-scope-retrieval"
+    },
+    {
+     "field": "option A (cmsw2f4w300iftmbvvozc2nud).execution",
+     "before": "True at line 9, and it is one part of the change rather than the change itself.",
+     "after": "The rabbits scud away at lines 6 and 7, on the pleasant drive before line 8's however. The child answers from that earlier part instead of what changes as they enter the avenue."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-011-CV-05",
+   "passageRef": "stream-a-07-canterville-ghost",
+   "hold": {
+    "reason": "Key correct (lines 13-14), but walkScript says 'Two women are named in it' of lines 13-14; three are named (Mrs Umney, Mrs Otis, Lady Canterville).",
+    "faultField": "walkScript"
+   },
+   "reviewerNote": "Checked lines 12-14: key (Mrs Otis agreed, at Lady Canterville's request) correct; reversal, plausible and within-span distractors fail as tagged; hint makes the child read the direction of the request and does not give it.",
+   "landedAt": "2026-11-20T17:04:03.309Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Read line 13 and line 14 as one sentence. Two women are named in it. One made a request; the other agreed to it. Read which way round it goes.",
+     "after": "Read line 13 and line 14 as one sentence. Three women are named in it. One made a request; another agreed to it. Read which way round it goes."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-011-CV-07",
+   "passageRef": "stream-a-07-canterville-ghost",
+   "hold": {
+    "reason": "Line 19 says they 'began to look round' the library, which contains the stained glass window (line 18), so 'They look at the large stained glass window' is close to supported; execution's 'describes the room rather than what they do' ignores 'look round'.",
+    "faultField": "options"
+   },
+   "reviewerNote": "Checked lines 17-20: key (wraps off at line 19, sit down to the tea laid out at line 18) correct and the only answer; reversal at line 19 and 'shown upstairs' both fail; walk line refs true.",
+   "landedAt": "2026-11-20T17:04:03.309Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Read line 18 and find what is laid out for them. Tea. Line 19 gives what they do before sitting: they take off their wraps. The window is part of the room, not part of the answer.",
+     "after": "Read line 18 and find what is laid out for them. Tea. Line 19 gives what they do before sitting: they take off their wraps. The hall at line 17 is on the way in, not part of the answer."
+    },
+    {
+     "field": "option A (cmsw2f4w500iutmbvqdqc2xh3).value",
+     "before": "They look at the large stained glass window.",
+     "after": "They pass through the fine Tudor hall."
+    },
+    {
+     "field": "option A (cmsw2f4w500iutmbvqdqc2xh3).execution",
+     "before": "True at line 18, and it describes the room rather than what they do.",
+     "after": "True at line 17, but that is how they reach the library, not what they do in it. The child takes an element from the right lines that answers a different question."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-018-RB-03",
+   "passageRef": "stream-a-21-rebecca-sunnybrook",
+   "hold": {
+    "reason": "Key says she ran 'when she was called', but line 10-11 has the mother nod to her; nobody calls her.",
+    "faultField": "key"
+   },
+   "reviewerNote": "Checked lines 8-16: key true and the only answer to how we know she feared being late; 'small for her age' (line 13) and the mother's care (line 16) fail as tagged; walk line refs true; hint does not coach.",
+   "landedAt": "2026-11-20T17:04:03.309Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 11 says she was eagerly waiting for the answer. Line 12 says she ran as if she feared to be too late. How small she looked comes after, at line 13.",
+     "after": "Line 10 says her mother nodded to her. Line 11 says she was eagerly waiting for the answer. Lines 11 and 12 say she ran as if she feared to be too late. How small she looked comes after, at line 13."
+    },
+    {
+     "field": "option C (cmsw2f4xz00totmbv5ujvqx1i).value",
+     "before": "She ran to her mother when she was called.",
+     "after": "She ran to her mother the moment her mother nodded."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-018-RB-04",
+   "passageRef": "stream-a-21-rebecca-sunnybrook",
+   "hold": {
+    "reason": "'What does the mother expect Rebecca to do' reads naturally as 'require', under which 'Sit quiet and look neat when she arrives' (lines 22-23) is a second correct answer; the hint concedes the ambiguity. That option's en-relation-word-flipped tag also names no relation word.",
+    "faultField": "stem"
+   },
+   "reviewerNote": "Checked lines 17-26: key the only forecast; 'Don't be any trouble' at line 23 for the negation-dropped option; brick-house option unsupported; hint (sort order from forecast) does not coach; walk line refs true.",
+   "landedAt": "2026-11-20T17:04:03.309Z",
+   "changes": [
+    {
+     "field": "stem.text",
+     "before": "Look at lines 17 to 26. What does the mother expect Rebecca to do on the way?",
+     "after": "Look at lines 17 to 26. What does the mother think Rebecca will do, given the chance?"
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 20 asks Mr Cobb to keep an eye on her. Lines 21 and 22 say she will get with folks if she can. The sitting quiet at line 22 is an order, not a forecast.",
+     "after": "Line 20 asks Mr Cobb to keep an eye on her. Lines 21 and 22 say she will get with folks if she can. The sitting quiet at lines 22 and 23 is an order, not a forecast."
+    },
+    {
+     "field": "option A (cmsw2f4y000trtmbv1nifzwyc).execution",
+     "before": "Lines 22 and 23 are inside the window and do say this, but as an instruction the mother gives Rebecca. The child takes what Rebecca is told to do for what the mother expects her to do, which lines 21 and 22 give as getting in with folks.",
+     "after": "Lines 22 and 23 are inside the window and do say this, but as an order the mother gives Rebecca. The child takes what Rebecca is told to do for what her mother thinks she will do given the chance, which lines 21 and 22 give as getting in with folks."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-018-RB-06",
+   "passageRef": "stream-a-21-rebecca-sunnybrook",
+   "hold": {
+    "reason": "Execution for 'Thinking hard about the errands ahead' says line 34 gives the errands 'not as his thoughts', but line 34 says 'the contemplation of errands' - they are his thoughts; the tag en-attribute-transfer does not name the actual mistake.",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Checked lines 33-35: key 'quite unable to remember' fits 'complete oblivion as to his promise'; dominant-sense and the two within-span causes fail as tagged; hint and walk accurate.",
+   "landedAt": "2026-11-20T17:04:03.309Z",
+   "changes": []
+  },
+  {
+   "itemId": "ENG-018-RB-08",
+   "passageRef": "stream-a-21-rebecca-sunnybrook",
+   "hold": {
+    "reason": "Stem asks what riding inside stops her 'doing' but every option is a state, not an action; and lines 47-49 also show inside stops her seeing whether her trunk is safe, so the stem does not single out the window complaint.",
+    "faultField": "stem"
+   },
+   "reviewerNote": "Checked lines 45-49: key the only defensible answer; every execution's line refs true; hint is a move; walk accurate.",
+   "landedAt": "2026-11-20T17:04:03.309Z",
+   "changes": [
+    {
+     "field": "stem.text",
+     "before": "Look at lines 45 to 49. What does riding inside stop Rebecca from doing?",
+     "after": "Look at lines 45 to 49. What does Rebecca dislike about riding inside?"
+    },
+    {
+     "field": "explanation.hintCore",
+     "before": "She lists her complaints. Ask which one the front seat would mend.",
+     "after": "Sort her questions from her complaints. Then check each part of your answer against her words."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 45 has her ask what it costs to ride up in front. Line 47 says the windows are so small she can only see pieces of things. The slipperiness at line 45 is a different complaint from the seeing.",
+     "after": "Line 45 has her ask what it costs to ride up in front. That is a question, not a complaint. Lines 45 and 46 say it is slippery inside, and she rattles round. Line 47 says the windows are so small she sees only pieces of things. Lines 48 and 49 only wonder whether the trunk has fallen off."
+    },
+    {
+     "field": "option B (cmsw2f4y300ubtmbvvi80hwyv).value",
+     "before": "The stage is slippery and shiny down there.",
+     "after": "She wants to know what it costs to ride in front."
+    },
+    {
+     "field": "option B (cmsw2f4y300ubtmbvvi80hwyv).execution",
+     "before": "True at lines 45 and 46, and it is what throws her about rather than what she misses.",
+     "after": "True at line 45, but it is her question about the front seat, not something wrong with riding inside. The child takes the right lines and lifts the wrong element from them."
+    },
+    {
+     "field": "option C (cmsw2f4y300uctmbvs6fya95w).value",
+     "before": "Her mother is very choice of the trunk.",
+     "after": "The stage is far too small for her."
+    },
+    {
+     "field": "option C (cmsw2f4y300uctmbvs6fya95w).execution",
+     "before": "Line 49 gives that care to her mother, not to her.",
+     "after": "Line 46 says the stage is much too big for her, and line 47 gives smallness to the windows. The child moves the small from the windows to the stage."
+    },
+    {
+     "field": "option D (cmsw2f4y300udtmbvrgybx2nc).value",
+     "before": "The windows only show her bits of things.",
+     "after": "She rattles round, and she can only see bits of things."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-018-RB-12",
+   "passageRef": "stream-a-21-rebecca-sunnybrook",
+   "hold": {
+    "reason": "walkScript line references are off: the braid is line 40 not 39, and Mr Cobb's thought begins at line 60 not 61; key's 'talk the whole way' also overstates (she is silent lines 33-42).",
+    "faultField": "walkScript"
+   },
+   "reviewerNote": "Checked the whole passage: no line gives Rebecca's thoughts from inside, so the key is the only defensible answer; 'shy at the start' fails at line 30; the appearance and motive options fail as tagged; walk accurate.",
+   "landedAt": "2026-11-20T17:04:03.309Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "At line 13 we are given her age and her size, from outside. At line 28 her mother sums her up to the driver. At line 39 he sees a small shape and a braid before he sees a child. At line 61 the thought about her arrives, and it is his thought, not hers.",
+     "after": "At lines 12 and 13 we are given her age and her size, from outside. At lines 28 and 29 her mother sums her up to the driver. At line 39 he sees a small shape, and line 40 gives her braid. At line 60 the thought about her arrives, and it is his thought, not hers."
+    },
+    {
+     "field": "option D (cmsw2f4y600ustmbv545e6wc8).value",
+     "before": "We hear her talk the whole way, but we never get inside her head.",
+     "after": "We hear what she says, but we are never let inside her head."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-026-AL-02",
+   "passageRef": "stream-b-05",
+   "hold": {
+    "reason": "walkScript says 'Line 9 says she did not say so'; 'I did not say so' is on line 8, and the walk ends before reaching the reason the key rests on.",
+    "faultField": "walkScript"
+   },
+   "reviewerNote": "Checked lines 7-9: key 'not worth arguing with' is the best and only defensible reading of her silence; the literal, within-span and motive options fail as tagged; hint points to line 9 without stating the key.",
+   "landedAt": "2026-11-20T17:04:03.309Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 7 has him say they were staked late. Line 8 says the dahlias were taller than the two of them. Line 9 says she did not say so.",
+     "after": "Line 7 has him say they were staked late. Line 8 says the dahlias were taller than the two of them. The same line says she did not say so. Line 9 gives the reason: it was not that kind of conversation."
+    },
+    {
+     "field": "option D (cmsw2f504016btmbvk5tpcvo4).execution",
+     "before": "An errand the lines never give her.",
+     "after": "An errand the lines never give her. Nothing in lines 7 to 9 has him ask Cass to pass anything on to Denise."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-026-AL-09",
+   "passageRef": "stream-b-05",
+   "hold": {
+    "reason": "Key 'That Cass will still be coming up here' is something he asks for (line 33), not takes for granted; what the November plan presupposes is that he himself will still be there to garden (against lines 30-31, 38), so the key is not the only or best defensible answer.",
+    "faultField": "key"
+   },
+   "reviewerNote": "Checked lines 30-34: key the only defensible presupposition; knots (a stated reason), her promise (line 34) and the invented wish fail as tagged; new hint is a move; walk line refs true.",
+   "landedAt": "2026-11-20T17:04:03.309Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "He is arranging something months away.",
+     "after": "Ask what must be true for his plan to happen."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 32 says the garlic goes in in November. Line 33 says he would want her up here to do the string. Line 34 says she said she would come.",
+     "after": "Line 32 says the garlic goes in in November. Line 33 says he wants her up here to do the string for him. For that, he must be here too, planting. Yet lines 30 and 31 have Alan taking the plot on from the autumn. The plan takes it for granted that he will still be gardening."
+    },
+    {
+     "field": "option A (cmsw2f50a0177tmbvs75arf3m).value",
+     "before": "That Cass will still be coming up here.",
+     "after": "That he will still be gardening here in November."
+    },
+    {
+     "field": "option D (cmsw2f50a017atmbvjdjxlpml).execution",
+     "before": "A wish the lines never give her.",
+     "after": "The child invents a wish for Cass. Lines 32 to 34 give only his plan and her promise to come and do the string."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-026-AL-12",
+   "passageRef": "stream-b-05",
+   "hold": {
+    "reason": "Key 'each time... the next detail says otherwise' is false on carriers in the passage: the key 'would be under the brick. It was under the brick' (line 12) and 'enormous breakfast... He always has' (lines 36-37) both confirm him; walk's Thursday step (line 39) shows a change of subject, not contradiction.",
+    "faultField": "key"
+   },
+   "reviewerNote": "Checked the whole passage: no line has Cass contradict or question him, so the key is the only defensible answer; the walk's lines 14-15, 36, 38 and 40 are verified; the literal (line 15), plausible and absence options fail as tagged.",
+   "landedAt": "2026-11-20T17:04:03.309Z",
+   "changes": [
+    {
+     "field": "stem.answerShape",
+     "before": "what-he-says-set-against-what-is-reported-next",
+     "after": "what-he-says-set-against-what-she-lets-pass"
+    },
+    {
+     "field": "stem.techniqueKey",
+     "before": "each-explanation-answered-by-the-detail-that-follows-it",
+     "after": "each-explanation-let-stand-by-a-narrator-who-does-not-argue"
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 14 says he soaked the tomatoes on Tuesday. Line 16 says the butt was full to the lid. Line 38 says it was nothing and line 39 turns to the parking.",
+     "after": "Lines 14 and 15 blame the sun for the tomatoes, and Cass agrees about the weather. Line 36 has him blame an enormous breakfast, and she backs him up. Line 38 says Thursday is nothing. At line 40 she only agrees the parking is a scandal. Each time, she lets his reason stand."
+    },
+    {
+     "field": "option B (cmsw2f50c017ntmbvi1mgmuxk).execution",
+     "before": "Line 9 has her decide not to ask, and no line has her asking.",
+     "after": "Lines 8 and 9 have her keep a thought to herself, and no line has her question him. The child supplies a familiar shape, a child asking and an adult not answering, that the passage never states."
+    },
+    {
+     "field": "option D (cmsw2f50c017ptmbvyddtwizh).value",
+     "before": "He explains each thing away, but the next detail says otherwise.",
+     "after": "Cass lets it pass, and does not argue with him."
+    }
+   ]
+  }
+ ]
+}

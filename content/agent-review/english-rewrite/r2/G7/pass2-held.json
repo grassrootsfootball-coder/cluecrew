@@ -1,0 +1,28 @@
+{
+ "door": "english-rewrite/r2/G7",
+ "mode": "APPLIED",
+ "landed": [
+  "ENG-020-HD-10",
+  "ENG-009-SM-12",
+  "ENG-020-HD-03"
+ ],
+ "held": [
+  {
+   "itemId": "ENG-009-SM-11",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "hintCore 'Two causes, one in each line' names a property only the key has (it is the only option with two causes), so it selects the key without reading - coaching (R572). Key and distractors otherwise check against l.40-42.",
+    "faultField": "hintCore"
+   },
+   "holdFixed": true,
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-009-SM-11",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "faultField": "execution",
+    "reason": "The original hint fault is fixed, and the walkScript now reads 'even then' correctly. Held on the en-cause-agent-swap execution for 'The wind shook the phone as he held it': 'Line 41 gives the movement to his own hand, not to any wind.' The movement is on line 42 ('grey and shaken along one edge where my hand had moved'). Line 41 has only 'I had to hold it in both hands'. I missed this line number in round 1. Other checks: the camera execution (light at 40, hands at 41) is true. The relation-word execution on 'even then' (line 41) is true. The key's 'The light had gone' is a defensible inference from line 40's 'The light was going', since the picture is taken after it, and I do not hold the row for it."
+   }
+  }
+ ]
+}

@@ -1,0 +1,52 @@
+{
+  "door": "english-rewrite/r2/G3",
+  "proposer": "agent",
+  "rebuilds": [
+    {
+      "itemId": "ENG-005-BB-12",
+      "why": "Original hold: passageRef missing, and the stem gave no line references. Round 1 set stem.passageRef to stream-a-04-black-beauty, added 'Look at lines 41 and 54.' to the stem with lineRefs [41, 54], and retagged 'That the people never speak to Beauty at all' from en-negation-dropped to en-contradicted-by-the-text with a new execution; the reviewer accepted the passageRef and the retag (kept unchanged). Round 2, per the review: line 41 ('Of course I could not tell him') is about not being able to SPEAK to John, so it did not support the key's 'says he cannot follow them'; only line 54 ('I could not understand much') did. The reviewer allowed either the key's second half or the cited lines to change. Lines 41 and 54 are the only two places Beauty states a limit of his own on the talk, so keeping both is what lets the stem's 'keep reminding us' stand. The KEY is therefore changed from 'He gives us their words exactly, but says he cannot follow them.' to 'He gives us their words exactly, but says he cannot speak or understand much.' Only the words after 'says he' change: 'cannot follow them' becomes 'cannot speak or understand much'. 'cannot speak' rests on line 41, and 'understand much' on line 54, where the passage's own word is 'understand' and its own limit is 'much'. This also stops the key claiming he follows none of it, which lines 16 and 17 would contradict. The en-plausible-not-stated execution named only understanding as Beauty's limit; its first sentence now names both limits with their lines (41 and 54). Its second sentence is unchanged. Stem (as round 1), lineRefs [41, 54], the other distractors, tags, hintCore and walkScript are unchanged; the stored walkScript already cites line 41 (could not tell John) and line 54 (could not understand much), and now matches the key. The key stays the only defensible answer: the people do speak to him (36 to 37, 40, 49), fear is never given as what stops him, and his remarks are about what he cannot do, not about showing off.",
+      "stem": {
+        "text": "Beauty repeats what the people say, word for word. Look at lines 41 and 54. What does the writer keep reminding us at the same time?",
+        "quotes": [],
+        "answerShape": "keeps-both-halves",
+        "techniqueKey": "narrator-supplies-speech-verbatim-while-disclaiming-comprehension",
+        "passageRef": "stream-a-04-black-beauty"
+      },
+      "options": [
+        {
+          "optionId": "cmtdflmnu0000tmf5t3fddt23",
+          "value": "That Beauty is too frightened to listen properly.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "The limits Beauty gives are speaking, at line 41 where he could not tell John, and understanding, at line 54 where he could not understand much of what they said. The child supplies fear as the reason he cannot follow, a likely state for a horse in a storm, but the passage never makes fear what stops him."
+        },
+        {
+          "optionId": "cmtdflmnv0001tmf527ean6kj",
+          "value": "That the people never speak to Beauty at all.",
+          "isKey": false,
+          "tag": "en-contradicted-by-the-text",
+          "execution": "The people speak to Beauty several times: 'Go on, Beauty' at lines 36 and 37, 'Come on, Beauty' at line 40 and 'You Beauty!' at line 49. The option states the contrary of what those lines show."
+        },
+        {
+          "optionId": "cmtdflmnv0002tmf56k64gfvw",
+          "value": "That Beauty repeats the words to show off what he knows.",
+          "isKey": false,
+          "tag": "en-motive-invention",
+          "execution": "Invents a motive; the narrator's remarks are about what he cannot do, not what he can."
+        },
+        {
+          "optionId": "cmtdflmnv0003tmf5wpgl9nrs",
+          "value": "He gives us their words exactly, but says he cannot speak or understand much.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        }
+      ],
+      "lineRefs": [
+        41,
+        54
+      ]
+    }
+  ],
+  "cannotFix": []
+}

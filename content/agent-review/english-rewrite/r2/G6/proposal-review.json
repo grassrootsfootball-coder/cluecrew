@@ -1,0 +1,56 @@
+{
+  "door": "english-rewrite/r2/G6",
+  "reviewer": "rev-agent-01",
+  "changes": [
+    {
+      "ref": "rebuild:ENG-008-RC-05",
+      "verdict": "ATTEST",
+      "reason": "The en-wrong-scope-retrieval execution now reads 'bread is set out at line 50 and butter at line 51'. Line 50 has 'on its table, all nicely set out ... with bread,' and line 51 has 'butter'. It now says 'line 23 says they may not have any bread', which matches 'if they had any'. 'the table they lay at lines 20 to 23' is true (crockery arranged, 20-21). This is exactly the round 1 fault. The round 1 walk fix is kept."
+    },
+    {
+      "ref": "rebuild:ENG-012-ML-07",
+      "verdict": "ATTEST",
+      "reason": "New hintCore 'Read the whole sentence that begins on line 33. Then test each option against it.' is a move. That sentence does run from line 33 to 'the best bit.' on line 35. The hint shares no word with the key ('wants', 'more', 'pleased', 'fed'). The round 1 distractor replacement is kept."
+    },
+    {
+      "ref": "rebuild:ENG-012-ML-11",
+      "verdict": "ATTEST",
+      "reason": "The stem is now 'Read lines 59 to 73' with lineRefs 59-73. This takes in line 64 ('power of misery'), 65 ('sat still') and 72-73 ('ten minutes', reconciliation), which the round 1 hold named. Two executions are corrected for that window, and both are true. One reads 'misery' 64 to 66 and 'tears ... ten minutes ... look for Tom' 71-73. The other reads 'given the world' (66) to 'for Tom' (68). Both changes were needed once lines 72-73 joined the window, so this is not restyling."
+    },
+    {
+      "ref": "rebuild:ENG-012-ML-12",
+      "verdict": "ATTEST",
+      "reason": "New hintCore 'Read lines 13 to 16 slowly. Then test each option against what you find.' is a move. It names nothing the key carries (no words, grown-up, child or explain). Lines 13-16 do hold 'difficult problem', 'irregular polygon' and 'hypothetic powers'. The round 1 fixes ('The writer' in every option, 'jam puff', polygon at 13-14) are kept."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "ENG-008-RC-05",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "The key matches 21-22: the ash-tray is the salt-cellar and the baking-tin is to put bread on. The swap is wrong. 'could not find all the right things' is on line 21. The bread-and-butter table is the forgotten room's (50-51). The library hint now reads 'who or what' and is true of two objects. The walk no longer has the tin holding bread. The hint leaves the key against its swap, but only lines 21-22 decide between them, so it does not give the key away.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-012-ML-07",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "The key matches 33-35: 'cared less that Tom should enjoy the utmost ... puff, than that he should be pleased with her ... So she shut her eyes'. The new fear has no support, since the only threat is at 31-32. 'cared less' (33) rules out sorrow for Tom, and 'did not extend so far' (33) rules out sacrifice. The hint no longer paraphrases the key. The walk is accurate.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-012-ML-11",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "The key holds with 72-73 inside the window. Yap accepts the attention with alacrity at once (62), and Maggie sits in misery (64-66) and cries for ten minutes (71-72) before her resentment gives way. Every execution's lines check: vanished 60-61, Yet 62, wishing she had saved some 66-68. 'forgave Tom at once' is answered by the ten minutes. The walk's lines check: 61-62, 65-66, 71-72.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-012-ML-12",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "No option gives the writer a sex. The key (a grown-up register) is evidenced at 13-14, 16 and 64. The plot summary names no technique. Lines 33-34 are the narrator's dig at Maggie, so the claim of taking her side quietly fails. The narrator does give feelings, at 33, 48 and 64. The walk says 'jam puff' and its lines check. The new hint is a move.",
+      "faultField": null
+    }
+  ]
+}

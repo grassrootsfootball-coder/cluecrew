@@ -1,0 +1,74 @@
+{
+ "door": "english-rewrite/G4",
+ "mode": "APPLIED",
+ "landed": [
+  "ENG-004-AGG-01",
+  "ENG-004-AGG-05",
+  "ENG-004-AGG-10",
+  "ENG-004-AGG-12",
+  "ENG-017-CR-08",
+  "ENG-010-JE-10",
+  "ENG-017-CR-11",
+  "ENG-010-JE-01",
+  "ENG-010-JE-03",
+  "ENG-010-JE-04",
+  "ENG-010-JE-05",
+  "ENG-010-JE-11",
+  "ENG-017-CR-01",
+  "ENG-017-CR-03",
+  "ENG-017-CR-05",
+  "ENG-017-CR-06",
+  "ENG-017-CR-07",
+  "ENG-017-CR-04",
+  "ENG-017-CR-10",
+  "ENG-025-LW-03",
+  "ENG-025-LW-06",
+  "ENG-025-LW-07",
+  "ENG-025-LW-08",
+  "ENG-025-LW-11",
+  "ENG-025-LW-12",
+  "ENG-025-LW-09"
+ ],
+ "held": [
+  {
+   "itemId": "ENG-004-AGG-09",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "The key is correct (lines 47-49). But the 'stays sitting' distractor's execution says 'line 47 answers the stem' and quotes 'Matthew, however, was spared the ordeal of speaking first'. That clause does not answer what she does; standing, the bag and the held-out hand are in lines 48-49. Note also: the hint ('three things') matches only the key.",
+    "faultField": "execution"
+   },
+   "holdFixed": true,
+   "unattested": [
+    {
+     "ref": "rebuild:ENG-004-AGG-09",
+     "verdict": "REFUSE",
+     "reason": "The execution fix is right: lines 47 to 48 have her stand once she concludes he is coming. But the new hint 'Find the sentence that follows her decision' is not true of the passage. Her decision ('as soon as she concluded', lines 47 to 48) and her actions (lines 48 to 49) are in ONE sentence. The sentence that follows is her speech at line 50, which holds none of the actions, so a child following the hint is sent to the wrong place."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-004-AGG-09",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "reason": "Held execution is fixed, and the 'three things' coaching is gone. But the hintCore now misdirects. 'The sentence that follows her decision' points past lines 47 to 49 to line 50, because the decision and the stand, bag and hand are all in the same sentence.",
+    "faultField": "hintCore"
+   }
+  },
+  {
+   "itemId": "ENG-010-JE-12",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "The stem gives no line window over an 89-line passage. It also claims Jane reports the light 'again and again before describing something', but the pattern rests on two instances (lines 51 and 71). The descriptions of Thornfield (line 6) and her own dress (line 83) have no light report first, so the stem overstates its population (R591).",
+    "faultField": "stem"
+   },
+   "holdFixed": true,
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-010-JE-12",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "reason": "Held stem fault is gone. But hintCore 'Find what she says about seeing, just before each description' paraphrases the key ('reports the light first'). With the stem already saying 'before describing something', the hint supplies the rest of the answer (R572 coaching). Also in execution: the 'described in full first' execution says the traveller 'acts from line 27', but he rides past at line 26 ('He passed').",
+    "faultField": "hintCore"
+   }
+  }
+ ]
+}

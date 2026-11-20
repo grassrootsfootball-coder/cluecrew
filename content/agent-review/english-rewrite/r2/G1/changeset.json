@@ -1,0 +1,240 @@
+{
+ "door": "english-rewrite/r2/G1",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "ENG-002-pp-23",
+   "passageRef": "stream-a-13-pride-prejudice",
+   "hold": {
+    "reason": "Key 'never whether the writer agrees' is not the only defensible answer: the narrator characterises directly at lines 24-25 ('good-looking and gentlemanlike... easy, unaffected manners') and lines 72-73 ('a lively, playful disposition'), which supports distractor 'We are told what the writer thinks'. Also hintCore calls Jane Austen 'he'.",
+    "faultField": "key"
+   },
+   "reviewerNote": "Checked the whole passage for Darcy. The room's verdicts (29-35, 42-46) all come before his own words (53-56, 60-61, 65-69), so the key's order claim is true. Kind-underneath is not stated. 'Never speaks' is contradicted at 53-69. Elizabeth's view appears only at 70-71. The hint is a move, and the walk checks. Original hold (a second defensible answer, and the hint calling Austen 'he') is gone: the question is narrowed to Darcy, and the writer is 'herself'.",
+   "landedAt": "2026-11-20T17:14:16.945Z",
+   "changes": [
+    {
+     "field": "stem.text",
+     "before": "Think about the whole passage. How do we learn what the people in it are like?",
+     "after": "Think about the whole passage. How do we learn what Mr Darcy is like?"
+    },
+    {
+     "field": "stem.answerShape",
+     "before": "two-halved-contrast-of-what-is-given-against-what-is-withheld",
+     "after": "two-halved-sequence-of-the-room-s-verdict-then-his-own-words"
+    },
+    {
+     "field": "stem.techniqueKey",
+     "before": "verdicts-always-in-other-mouths-narrator-never-adjudicates",
+     "after": "room-verdict-first-then-his-own-words-heard"
+    },
+    {
+     "field": "explanation.hintCore",
+     "before": "You are about to say what the writer thinks of them. Find the line where he says it.",
+     "after": "Find each place where we learn about him. Ask who is speaking each time."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 29 has the gentlemen and the ladies pronouncing. Line 42 says his character was decided, and names nobody. Line 44 gives Mrs Bennet's dislike. Each verdict belongs to somebody in the room.",
+     "after": "Lines 29 to 35 give what the gentlemen and the ladies think of him. Lines 42 to 46 give the room's verdict and Mrs Bennet's. Then lines 53 to 69 let us hear his own words to Mr Bingley. So the room speaks first, and then we hear him."
+    },
+    {
+     "field": "option A (cmsw2f4u60070tmbvdcmgx664).value",
+     "before": "We are told what the writer thinks, and not only what the room says.",
+     "after": "The writer tells us herself that he is kind under all his pride."
+    },
+    {
+     "field": "option A (cmsw2f4u60070tmbvdcmgx664).tag",
+     "before": "en-narrator-voice-as-fact",
+     "after": "en-plausible-not-stated"
+    },
+    {
+     "field": "option A (cmsw2f4u60070tmbvdcmgx664).execution",
+     "before": "Reads the reported verdicts as the writer's own. Line 42's 'His character was decided' names nobody as deciding it, which is the point this option misses.",
+     "after": "No line says Mr Darcy is kind underneath. A reader who knows how the story ends may supply it, but the writer never says it here. She gives his looks and wealth at lines 26 to 29, his conduct at lines 39 to 42 and his rude words at lines 53 to 56 and 65 to 69, and none of them is kindness."
+    },
+    {
+     "field": "option B (cmsw2f4u60071tmbvsbowke6z).value",
+     "before": "We are shown what they do, but never told whether the writer approves.",
+     "after": "He never speaks, so we have only the room's word for what he is like."
+    },
+    {
+     "field": "option B (cmsw2f4u60071tmbvsbowke6z).tag",
+     "before": "en-plausible-not-stated",
+     "after": "en-contradicted-by-the-text"
+    },
+    {
+     "field": "option B (cmsw2f4u60071tmbvsbowke6z).execution",
+     "before": "The showing is there — line 37 has Mr Bingley dancing every dance — but line 38 answers it with 'such amiable qualities must speak for themselves', which declines the plain telling this half-claims.",
+     "after": "Lines 53 to 56 and 65 to 69 give Mr Darcy's own words to Mr Bingley, so the passage states the contrary. The child remembers the room's verdict at lines 42 and 43 and forgets the talk Elizabeth overhears."
+    },
+    {
+     "field": "option C (cmsw2f4u60072tmbvpk6ox8pm).execution",
+     "before": "Elizabeth does not appear until line 47 and gives no verdict at all; the opinions at lines 29, 42 and 44 belong to the room and to Mrs Bennet.",
+     "after": "Elizabeth's feelings about him appear only at lines 70 and 71. Before that come the gentlemen's and ladies' opinion at lines 29 to 35, the room's verdict at lines 42 and 43, Mrs Bennet's at lines 44 to 46, and his own words at lines 53 to 56, 60 and 61, and 65 to 69, so 'only' claims far too much."
+    },
+    {
+     "field": "option D (cmsw2f4u60073tmbv5jefao4e).value",
+     "before": "We are told what others say of them, but never whether the writer agrees.",
+     "after": "We hear the room's verdict on him first, and then his own words."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-16",
+   "passageRef": "stream-a-13-pride-prejudice",
+   "hold": {
+    "reason": "walkScript ends 'The room hears nothing of this'; the passage never says so (line 48 says only that Darcy stood near enough for Elizabeth to overhear).",
+    "faultField": "walkScript"
+   },
+   "reviewerNote": "Checked lines 47-50. Darcy stands 'near enough for her to overhear', so the reader meets the words as she does, and the key is the only fit. The other options are defeated as follows. Listening-in taste: invented. Empty room: the dance is in progress at line 49. Bingley's plan: nothing says so, and line 48 is the cause. Speaking loudly to the room: contradicted, since it is an overheard two-person conversation at 48-49. The hint does not coach. Original hold ('The room hears nothing of this') is gone.",
+   "landedAt": "2026-11-20T17:14:16.945Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "Do you hear the words, or only hear about them later?",
+     "after": "Imagine a friend passing the words on to her later instead. What would the reader miss?"
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 48 puts him 'near enough for her to overhear'. So the words come in his voice. You hear them as Elizabeth does. The room hears nothing of this.",
+     "after": "Line 48 puts him 'near enough for her to overhear'. So the words come in his voice. You hear them as Elizabeth does."
+    },
+    {
+     "field": "option D (cmsw2f4tz005ytmbv0zlcje4d).execution",
+     "before": "The planning is given to Mr Bingley, and the words Elizabeth hears are Mr Darcy's, not his.",
+     "after": "Elizabeth does overhear Mr Bingley's kind words about her at lines 62 and 63. But nothing says he planned it: line 50 has him come to press his friend to dance, and line 48 gives the real cause, Mr Darcy standing near enough for her to overhear."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-14",
+   "passageRef": "stream-a-13-pride-prejudice",
+   "hold": {
+    "reason": "hintCore 'The words one of her daughters are the clue' quotes the key's own phrase ('rude about one of her daughters'), so it coaches (R572).",
+    "faultField": "hintCore"
+   },
+   "reviewerNote": "Checked lines 44-46. The slight sharpened her dislike, and the key 'rude about one of her daughters' is the only fit. The other options are defeated as follows. Introduction: declined to 'any other lady' at line 40. Mr Bennet: no such remark is made. Bingley's dance: lines 60-61, and not the cause. Proud-people motive: invented, from lines 42-43. The hint no longer quotes 'one of her daughters', and the walk checks. Original hold (coaching hint) is gone.",
+   "landedAt": "2026-11-20T17:14:16.945Z",
+   "changes": [
+    {
+     "field": "stem.text",
+     "before": "Mrs Bennet disliked Mr Darcy more strongly than anybody else in the room did. Read lines 44 to 46. What made her feeling so strong?",
+     "after": "Mrs Bennet was one of the people most against Mr Darcy. Read lines 44 to 46. What made her dislike of him stronger?"
+    },
+    {
+     "field": "explanation.quotes",
+     "before": [
+      {
+       "rule": "quoted-from-passage",
+       "text": "one of her daughters",
+       "passageRef": "stream-a-13-pride-prejudice"
+      },
+      {
+       "rule": "quoted-from-passage",
+       "text": "slighted one of her daughters",
+       "passageRef": "stream-a-13-pride-prejudice"
+      }
+     ],
+     "after": [
+      {
+       "rule": "quoted-from-passage",
+       "text": "slighted one of her daughters",
+       "passageRef": "stream-a-13-pride-prejudice"
+      }
+     ]
+    },
+    {
+     "field": "explanation.hintCore",
+     "before": "The words 'one of her daughters' are the clue. Why do they matter to her?",
+     "after": "Read lines 44 to 46. Find the words that say what turned her dislike into something stronger."
+    },
+    {
+     "field": "option B (cmsw2f4tx005ktmbvl8w0i9ct).execution",
+     "before": "Declining to be introduced is line 40, and it is to any other LADY, not to Mrs Bennet in particular. In the window, line 44 answers the stem: 'Amongst the most violent against him was Mrs. Bennet'.",
+     "after": "Declining to be introduced is line 40, and it is to any other LADY, not to Mrs Bennet in particular. Lines 45 and 46 give her own reason: he had slighted one of her daughters."
+    },
+    {
+     "field": "option D (cmsw2f4tx005mtmbvczt4h86p).execution",
+     "before": "The cause is moved to Mr Bingley's dancing at line 63; lines 45 and 46 name the slight as the reason.",
+     "after": "The cause is moved to Mr Bingley's dancing with the eldest daughter at lines 60 and 61; lines 45 and 46 name the slight as the reason."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-016-HB-01",
+   "passageRef": "stream-a-12-hound-baskervilles",
+   "hold": {
+    "reason": "Execution on 'The green squares of the fields' says they are 'what they pass over'; line 3 has the HILL rising over the fields, not the travellers passing over them (the walkScript has it right).",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Checked lines 1-4: 'there is your first sight of the moor' (line 1), and he points out of the carriage window (line 2). The fields at line 3 are what the hill rises over. The station is at line 11. No road is mentioned. The hint and walk are accurate. Original hold ('what they pass over') is gone.",
+   "landedAt": "2026-11-20T17:14:16.945Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "The window is only four lines wide. Try each answer against it.",
+     "after": "Use only lines 1 to 4. Check each answer against those lines."
+    },
+    {
+     "field": "option B (cmsw2f4xe00q6tmbvv7lngw6o).execution",
+     "before": "True at line 3, and it is what they pass over rather than what he points at.",
+     "after": "True at line 3, where the far hill rises over the fields. Dr Mortimer points out the moor itself at lines 1 and 2, not the fields in front of it."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-016-HB-02",
+   "passageRef": "stream-a-12-hound-baskervilles",
+   "hold": {
+    "reason": "hintCore 'Two of these sit in one window only' is false: only the 'eyes fixed... eager' option sits in one window; the lamps option is in neither and the other two use both. Also the lamps option's execution carries an appended clause 'line 9 answers the stem' which is untrue for a what-has-changed question.",
+    "faultField": "hintCore"
+   },
+   "reviewerNote": "Checked lines 9-10 (a comrade who 'would bravely share it') against 45-46 ('Even Baskerville fell silent', overcoat). The key is the only change that fits. Eyes-fixed comes from lines 5-6 only. The silent-first option reverses the order (45 - 9 = 36). The lamps are at 69-71, outside both ranges. The hint and walk check. Original hold (a false 'two in one window' hint; 'line 9 answers the stem') is gone.",
+   "landedAt": "2026-11-20T17:14:16.945Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "Two of these sit in one window only. Check both.",
+     "after": "Read lines 5 to 10, then lines 45 and 46. What is different about him?"
+    },
+    {
+     "field": "option C (cmsw2f4xf00qctmbv1cf2jzpp).execution",
+     "before": "Line 45 comes thirty-five lines after line 9, so this turns the order round.",
+     "after": "Line 45 comes thirty-six lines after line 9, so this turns the order round."
+    },
+    {
+     "field": "option D (cmsw2f4xf00qdtmbv5os75kel).execution",
+     "before": "True at line 69 and line 71, outside both windows; neither window has him speak. In the window, line 9 answers the stem: 'lie before us, this was at least a comrade'.",
+     "after": "True at lines 69 to 71, outside both windows; neither window has him speak at all."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-016-HB-12",
+   "passageRef": "stream-a-12-hound-baskervilles",
+   "hold": {
+    "reason": "walkScript says 'At line 4 the hill is melancholy before anyone has said a word', but Dr Mortimer speaks at lines 1-2 before it; it also says Nature 'throws at them' where line 28 has 'throw before the carriage'.",
+    "faultField": "walkScript"
+   },
+   "reviewerNote": "Checked: melancholy (line 4), forbidding (8) and sinister (20), plus Nature's 'sad gifts' (27-28), give the inert land a mind. Jagged (20) and cold wind (41) are lookalike details. The day/night shape is not carried. Looking away is never said. The hint is a move, and the walk is now true of lines 4, 8, 20 and 27-28. Original hold ('before anyone has said a word'; 'throws at them') is gone.",
+   "landedAt": "2026-11-20T17:14:16.945Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "Two of these are things the moor does. Check whether it does them.",
+     "after": "Look at the words Watson chooses for the hills and the moor. Ask what they make the land seem like."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "At line 4 the hill is melancholy before anyone has said a word. At line 8 the moor is forbidding, and at line 20 the hills are sinister. At line 27 the fallen leaves become sad gifts that Nature throws at them.",
+     "after": "At line 4 the far-off hill is melancholy. At line 8 the moor is forbidding, and at line 20 the hills are sinister. At line 27 the rotting plants become sad gifts that Nature throws before the carriage."
+    },
+    {
+     "field": "option B (cmsw2f4xn00rptmbvws2x44v9).execution",
+     "before": "A tidy shape the passage never carries: line 4 is grim in broad daylight.",
+     "after": "A tidy day-and-night shape the passage never carries. No line shows the moor calm: it is already a melancholy hill at line 4 and a forbidding moor at line 8."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,172 @@
+{
+ "door": "english-rewrite/r2/G6",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "ENG-008-RC-05",
+   "passageRef": "stream-a-02-railway-children",
+   "hold": {
+    "reason": "Key correct (lines 21-22). Faults: the attribute-transfer distractor surfaces tag hint 'Two people are being described', false here (two objects; library en-attribute-transfer wording, R586); walkScript says 'the other holds the bread' but line 23 has them with no bread ('if they had any').",
+    "faultField": "options"
+   },
+   "reviewerNote": "The key matches 21-22: the ash-tray is the salt-cellar and the baking-tin is to put bread on. The swap is wrong. 'could not find all the right things' is on line 21. The bread-and-butter table is the forgotten room's (50-51). The library hint now reads 'who or what' and is true of two objects. The walk no longer has the tin holding bread. The hint leaves the key against its swap, but only lines 21-22 decide between them, so it does not give the key away.",
+   "landedAt": "2026-11-20T17:13:44.180Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Start at line 21 and find the two things they borrow. One holds the salt, the other holds the bread. Read which object does which job. Line 23 adds a joke about the bread.",
+     "after": "Start at line 21 and find the two things they borrow. One is for the salt, and the other is to put bread on. Read which object does which job. Line 23 adds a joke: they may not have any bread."
+    },
+    {
+     "field": "option D (cmsw2f4va00drtmbvn9jzirfa).execution",
+     "before": "That table is at line 51, in the forgotten room, and line 23 says they had no bread.",
+     "after": "True of the forgotten room's table, where bread is set out at line 50 and butter at line 51. That is not the table they lay at lines 20 to 23, where line 23 says they may not have any bread."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-012-ML-07",
+   "passageRef": "stream-a-14-mill-on-floss",
+   "hold": {
+    "reason": "Distractor 'afraid that Tom will take both of the halves himself' is textually supported: Tom threatens 'else you sha'n't have any' (lines 31-32) and line 33 says her sacrifice 'did not extend so far' - she shut her eyes so as not to lose her share. Its execution 'Nothing gives her that fear' is false.",
+    "faultField": "options"
+   },
+   "reviewerNote": "The key matches 33-35: 'cared less that Tom should enjoy the utmost ... puff, than that he should be pleased with her ... So she shut her eyes'. The new fear has no support, since the only threat is at 31-32. 'cared less' (33) rules out sorrow for Tom, and 'did not extend so far' (33) rules out sacrifice. The hint no longer paraphrases the key. The walk is accurate.",
+   "landedAt": "2026-11-20T17:13:44.180Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "Two wants are compared. Find which she cared about more.",
+     "after": "Read the whole sentence that begins on line 33. Then test each option against it."
+    },
+    {
+     "field": "option A (cmsw2f4wf00khtmbv5oeal3ir).value",
+     "before": "She is afraid that Tom will take both of the halves himself.",
+     "after": "She is afraid Tom will tell their mother that she cheated."
+    },
+    {
+     "field": "option A (cmsw2f4wf00khtmbv5oeal3ir).execution",
+     "before": "Nothing gives her that fear; line 34 gives what she wanted from him instead.",
+     "after": "No line has Tom threaten to tell anyone. His only threat, at lines 31 and 32, is that she will get none, and line 34 gives what she wanted from him instead."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-012-ML-11",
+   "passageRef": "stream-a-14-mill-on-floss",
+   "hold": {
+    "reason": "Key 'Maggie cannot let it go' (and walk 'Only one of the two can put it down') is contradicted by lines 72-73, where after ten minutes 'resentment began to give way to the desire of reconciliation'.",
+    "faultField": "key"
+   },
+   "reviewerNote": "The key holds with 72-73 inside the window. Yap accepts the attention with alacrity at once (62), and Maggie sits in misery (64-66) and cries for ten minutes (71-72) before her resentment gives way. Every execution's lines check: vanished 60-61, Yet 62, wishing she had saved some 66-68. 'forgave Tom at once' is answered by the ten minutes. The walk's lines check: 61-62, 65-66, 71-72.",
+   "landedAt": "2026-11-20T17:13:44.180Z",
+   "changes": [
+    {
+     "field": "stem.text",
+     "before": "Read lines 59 to 63, then lines 66 to 71. Why are Yap and Maggie put side by side?",
+     "after": "Read lines 59 to 73. Why are Yap and Maggie put side by side?"
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Read line 61 and line 62. The dog feels it, and takes the stone anyway. Now read line 66 and line 71: she sits still and cries for ten minutes. Only one of the two can put it down.",
+     "after": "Read line 61 and line 62. The dog feels it, and takes the stone anyway. Now read lines 65 and 66: she sits still on her bough. Lines 71 and 72 have her in tears for ten minutes. The dog gets over it at once, and she does not."
+    },
+    {
+     "field": "lineRefs",
+     "before": [
+      59,
+      60,
+      61,
+      62,
+      63,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71
+     ],
+     "after": [
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73
+     ]
+    },
+    {
+     "field": "option A (cmsw2f4wi00l0tmbvor0en781).execution",
+     "before": "Line 60 has the eatables vanish while he looks on, so he was given nothing.",
+     "after": "Lines 60 and 61 have the eatables vanish while he looks on, so he was given nothing."
+    },
+    {
+     "field": "option B (cmsw2f4wj00l1tmbvrk3bfho3).execution",
+     "before": "Line 62 says YET he took it with alacrity, and line 66 leaves her in misery.",
+     "after": "Line 62 says YET he took it with alacrity. Lines 64 to 66 leave her in misery, and lines 71 to 73 have her in tears for ten minutes before she looks for Tom."
+    },
+    {
+     "field": "option C (cmsw2f4wj00l2tmbve1uvj7zk).value",
+     "before": "Yap shakes off the unfairness, but Maggie cannot let it go.",
+     "after": "Yap gets over it at once, but Maggie is left in misery."
+    },
+    {
+     "field": "option D (cmsw2f4wj00l3tmbvwlewfbr7).execution",
+     "before": "True at line 67, and it is part of her misery rather than why the two are paired.",
+     "after": "True at lines 66 to 68, and it is part of her misery rather than why the two are paired."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-012-ML-12",
+   "passageRef": "stream-a-14-mill-on-floss",
+   "hold": {
+    "reason": "Every option refers to the writer as 'He'; George Eliot (Mary Ann Evans) was a woman - a factual error a child or parent may know. walkScript also calls the jam puff 'a bun'.",
+    "faultField": "options"
+   },
+   "reviewerNote": "No option gives the writer a sex. The key (a grown-up register) is evidenced at 13-14, 16 and 64. The plot summary names no technique. Lines 33-34 are the narrator's dig at Maggie, so the claim of taking her side quietly fails. The narrator does give feelings, at 33, 48 and 64. The walk says 'jam puff' and its lines check. The new hint is a move.",
+   "landedAt": "2026-11-20T17:13:44.180Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "Find the words no child in the tree would use.",
+     "after": "Read lines 13 to 16 slowly. Then test each option against what you find."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Find the sentences the children could not have said themselves. Line 13 gives a difficult problem in polygons, line 16 hypothetic powers. Line 64 gives a superior power of misery. Each puts a grown-up's words on a quarrel about a bun.",
+     "after": "Find the sentences the children could not have said themselves. Lines 13 and 14 give a difficult problem in polygons, line 16 hypothetic powers. Line 64 gives a superior power of misery. Each puts a grown-up's words on a quarrel about a jam puff."
+    },
+    {
+     "field": "option A (cmsw2f4wj00l5tmbvrx1ll1np).value",
+     "before": "He tells us that Tom cut the puff and gave Maggie the best bit of it.",
+     "after": "The writer tells us that Tom cut the puff and gave Maggie the best bit."
+    },
+    {
+     "field": "option B (cmsw2f4wj00l6tmbvydtuph75).value",
+     "before": "He takes Maggie's side, but keeps it out of his words.",
+     "after": "The writer takes Maggie's side, but never says so."
+    },
+    {
+     "field": "option C (cmsw2f4wj00l7tmbvccpm1yi3).value",
+     "before": "He never once tells us what either child is feeling.",
+     "after": "The writer never once tells us what either child is feeling."
+    },
+    {
+     "field": "option D (cmsw2f4wj00l8tmbv8loya9ra).value",
+     "before": "He gives a children's quarrel, but explains it in grown-up words.",
+     "after": "The writer gives a children's quarrel, but explains it in grown-up words."
+    }
+   ]
+  }
+ ]
+}

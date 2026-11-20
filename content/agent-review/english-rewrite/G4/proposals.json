@@ -1,0 +1,1203 @@
+{
+  "door": "english-rewrite/G4",
+  "proposer": "agent",
+  "rebuilds": [
+    {
+      "itemId": "ENG-004-AGG-01",
+      "why": "Hold (walkScript): the walk said line 6 means 'had he looked, he could hardly have missed her', but line 6 is about what he would have noticed (her tense, expectant stillness), and line 5 shows he did see her. Rewrote the walk's last sentence to say that, and split the line 5 action so it is accurate. Also named: the hint ('what he did and what he did not do') pointed at the only option with a negative; replaced it with a move that does not single out the key. Options unchanged.",
+      "stem": {
+        "text": "What did Matthew do when he first saw the girl? (lines 4 to 6)",
+        "quotes": [],
+        "passageRef": "stream-a-06-anne-green-gables",
+        "orderAnchor": 1
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4u70075tmbv63m6rhqi",
+          "value": "He slipped past her without looking at her.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4u70076tmbvl1pzlxqm",
+          "value": "He noticed her red hair and freckled face.",
+          "isKey": false,
+          "tag": "en-wrong-scope-retrieval",
+          "execution": "True of the description at lines 37 and 38, but line 6 says he did not look at her."
+        },
+        {
+          "optionId": "cmsw2f4u70077tmbvpg80kcx9",
+          "value": "He asked her who she was waiting for.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "The natural thing to do, but he says nothing to her until line 64."
+        },
+        {
+          "optionId": "cmsw2f4u70078tmbv52vg4qve",
+          "value": "He slipped past her, glancing at her as he went.",
+          "isKey": false,
+          "tag": "en-minimal-pair-skim",
+          "execution": "Differs from the key by one element: line 5 says without looking at her."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Find the sentence where he first goes past her. Check each option against every part of it.",
+        "walkScript": "Look at lines 4 to 6. Matthew barely notices that it is a girl. He slips past her without looking at her. Line 6 says that if he had looked, he would have seen how tense she was."
+      }
+    },
+    {
+      "itemId": "ENG-004-AGG-05",
+      "why": "Hold (execution): the Nova Scotia distractor's execution carried boilerplate citing line 20 with a quotation cut off before the answer. Removed the boilerplate and pointed the execution at lines 20 and 21, where the stationmaster says what Mrs Spencer did. Nothing else changed.",
+      "stem": {
+        "text": "In lines 20 to 22, what does the stationmaster say Mrs Spencer did at the station?",
+        "quotes": [],
+        "passageRef": "stream-a-06-anne-green-gables",
+        "orderAnchor": 5
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4ua007ptmbvvx7frca0",
+          "value": "She came off the train with the girl and left her with him.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4ub007qtmbvqupe4atn",
+          "value": "She waited beside the girl until Matthew came.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "A helpful thing to do, but line 21 says she gave the girl into his charge and went."
+        },
+        {
+          "optionId": "cmsw2f4ub007rtmbvq2n6i1m9",
+          "value": "She was to bring a boy over from Nova Scotia.",
+          "isKey": false,
+          "tag": "en-wrong-scope-retrieval",
+          "execution": "True of the passage, but from line 18 and spoken by Matthew, not by the stationmaster. Lines 20 and 21 give what the stationmaster says she did."
+        },
+        {
+          "optionId": "cmsw2f4ub007stmbvtkpfjjop",
+          "value": "She took the girl into her charge from him.",
+          "isKey": false,
+          "tag": "en-agent-patient-reversal",
+          "execution": "Reverses line 21, where she is the one who gives the girl into his charge."
+        }
+      ]
+    },
+    {
+      "itemId": "ENG-004-AGG-09",
+      "why": "Hold (execution): the 'stays sitting' execution said line 47 answers the stem and quoted a clause about Matthew. Rewrote it to cite line 33 (she sits watching him) and lines 47 and 48 (she stands as soon as she concludes he is coming to her). Also named: the hint ('three things') matched only the key; replaced with a move that does not count the key's parts.",
+      "stem": {
+        "text": "What does the girl do once she decides Matthew is coming to her? (lines 47 to 49)",
+        "quotes": [],
+        "passageRef": "stream-a-06-anne-green-gables",
+        "orderAnchor": 9
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4ud0084tmbviaml2rp3",
+          "value": "She stands up, takes her bag and holds out her hand.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4ud0085tmbvmnsgqkux",
+          "value": "She stays sitting and watches him come closer.",
+          "isKey": false,
+          "tag": "en-wrong-scope-retrieval",
+          "execution": "True of line 33, where she sits watching him before she stands. Lines 47 and 48 say she stands up as soon as she decides he is coming to her."
+        },
+        {
+          "optionId": "cmsw2f4ud0086tmbv4bdclu1o",
+          "value": "She stands up and holds out both her hands.",
+          "isKey": false,
+          "tag": "en-minimal-pair-skim",
+          "execution": "Differs by one detail: line 48 puts the bag in one hand and only the other is held out."
+        },
+        {
+          "optionId": "cmsw2f4ud0087tmbvo27kwpqk",
+          "value": "She walks along the platform to meet him.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "She stands and waits where she is; line 48 has him come to her."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Find the sentence that follows her decision. Check each detail in it, one by one."
+      }
+    },
+    {
+      "itemId": "ENG-004-AGG-10",
+      "why": "Hold (hintCore): 'Notice what she turns the night into' used the key's own wording ('turn a hard situation into something lovely'), coaching under R572. Replaced the first half with a move (read how she describes her plan) that does not echo the key; kept the second half, which serves the 'rather sleep outside' distractor. Nothing else changed.",
+      "stem": {
+        "text": "The girl says she had planned to sleep in a wild cherry-tree. What does this show about her? (lines 51 to 58)",
+        "quotes": [],
+        "passageRef": "stream-a-06-anne-green-gables",
+        "orderAnchor": 10
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4ue0089tmbvpd7oawfh",
+          "value": "She would rather sleep outside than go to Green Gables.",
+          "isKey": false,
+          "tag": "en-relation-word-flipped",
+          "execution": "Drops the 'if' in line 53; lines 57 and 58 say she expected him to come in the morning."
+        },
+        {
+          "optionId": "cmsw2f4ue008atmbvumyhzfzm",
+          "value": "She can turn a hard situation into something lovely.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4ue008btmbvu1tuemq4",
+          "value": "She is never frightened by anything at all.",
+          "isKey": false,
+          "tag": "en-extreme-option-pull",
+          "execution": "Stretches line 55; lines 51 and 52 say she was beginning to be afraid he was not coming."
+        },
+        {
+          "optionId": "cmsw2f4ue008ctmbv91tww3t0",
+          "value": "She has slept outdoors many times before.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "She sounds practised, but the passage gives this as a plan, not as something already done."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Read how she describes her plan for the night, and what she expected all along."
+      }
+    },
+    {
+      "itemId": "ENG-004-AGG-12",
+      "why": "Hold (execution): the waiting-room distractor's execution quoted a truncated fragment of line 64 as the answer. Rewrote it to cite line 14 for the stationmaster's request and lines 64 and 65 for what Matthew asks. Also named: the walkScript said 'the bag changes hands', which lines 64 and 65 do not show; removed that clause.",
+      "stem": {
+        "text": "What does Matthew ask the girl to do at the end? (lines 64 and 65)",
+        "quotes": [],
+        "passageRef": "stream-a-06-anne-green-gables",
+        "orderAnchor": 12
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4uf008jtmbvlp6i5ijo",
+          "value": "Go and sit in the ladies' waiting room.",
+          "isKey": false,
+          "tag": "en-wrong-scope-retrieval",
+          "execution": "True of line 14, where the stationmaster asked her to go into the ladies' waiting room. Matthew never asks it; lines 64 and 65 give what he asks."
+        },
+        {
+          "optionId": "cmsw2f4uf008ktmbvn89tfhlo",
+          "value": "Come along with him, and carry her own bag.",
+          "isKey": false,
+          "tag": "en-minimal-pair-skim",
+          "execution": "Differs by one detail: line 65 asks her to give him the bag."
+        },
+        {
+          "optionId": "cmsw2f4ug008ltmbv9olp7bo4",
+          "value": "Tell him her name before they set off.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "A natural next thing to ask, but he never asks it in these lines."
+        },
+        {
+          "optionId": "cmsw2f4ug008mtmbviiin01b8",
+          "value": "Come along with him, and hand him her bag.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        }
+      ],
+      "explanationPatch": {
+        "walkScript": "Look at lines 64 and 65. He tells her to come along. He then asks her to give him her bag. Both things are asked in the same short speech."
+      }
+    },
+    {
+      "itemId": "ENG-010-JE-01",
+      "why": "Hold (execution): the 'in the field' execution said the stile is what she sits on 'to reach' the field, inventing a purpose. Rewrote it: line 2 names the field only as where the stile leads, and she never goes into it. Nothing else changed.",
+      "stem": {
+        "text": "Look at lines 1 and 2. Where does Jane sit down?",
+        "quotes": [],
+        "passageRef": "stream-a-11-jane-eyre",
+        "orderAnchor": 1
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4vq00getmbv2u7stla3",
+          "value": "On a stile that leads into a field.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4vq00gftmbvm28itq4l",
+          "value": "In the field on the other side of the stile.",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "Line 2 names the field, but only as the place the stile leads into. She sits on the stile and never goes into the field."
+        },
+        {
+          "optionId": "cmsw2f4vq00ggtmbv281ducz4",
+          "value": "On a low wall beside the frozen causeway.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "No wall appears anywhere in the lane; line 2 gives a stile."
+        },
+        {
+          "optionId": "cmsw2f4vq00ghtmbvf6k4trf0",
+          "value": "On a stile that leads into a lane.",
+          "isKey": false,
+          "tag": "en-minimal-pair-skim",
+          "execution": "One word out: line 2 says the stile led into a field."
+        }
+      ]
+    },
+    {
+      "itemId": "ENG-010-JE-03",
+      "why": "Hold (hintCore): 'The reason is one word about the path' pointed at the only option mentioning the path (R572). Replaced with a move: find the small word in line 10 that brings in a reason (as) and read what follows. It names neither the path nor narrowness. Nothing else changed.",
+      "stem": {
+        "text": "Read lines 9 and 10. Why does Jane stay sitting on the stile?",
+        "quotes": [],
+        "passageRef": "stream-a-11-jane-eyre",
+        "orderAnchor": 9
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4vs00gotmbvlhldt6i4",
+          "value": "She was afraid of the horse in the dusk.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "Line 10 gives the narrow path as her reason, and no fear is stated."
+        },
+        {
+          "optionId": "cmsw2f4vs00gptmbvw1vnde7q",
+          "value": "She was just leaving the stile at that moment.",
+          "isKey": false,
+          "tag": "en-inference-literal-lookalike",
+          "execution": "Reuses line 10 word for word, and it is what she stopped doing."
+        },
+        {
+          "optionId": "cmsw2f4vs00gqtmbvtcclye4s",
+          "value": "The path was narrow, so she stayed where she was.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4vs00grtmbvv88majam",
+          "value": "She sat down on the stile because she heard the horse.",
+          "isKey": false,
+          "tag": "en-chronology-collapse",
+          "execution": "Line 10 has her already seated and just leaving, before the horse is in sight."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Find the small word in line 10 that brings in a reason. Read what follows it."
+      }
+    },
+    {
+      "itemId": "ENG-010-JE-04",
+      "why": "Hold (options): second defensible answer. Lines 14 to 18 tie the memory to the moment (a Gytrash came upon belated travellers, 'as this horse was now coming upon me'), so the travellers option was a reason the text gives. Repaired on the same stem, type and tier: the key now names the trigger the text gives (the horse coming upon her in the dusk, as in Bessie's tales), and the travellers option is replaced by an extreme-option distractor ('always ... every' tale true) that line 12 refutes ('rubbish'). Also named: the hint pointed at 'her age', which only the old key mentioned; replaced with a move. The walk now traces lines 11 to 18 to the new key.",
+      "stem": {
+        "text": "Read lines 11 to 18. Why does the Gytrash come into Jane's mind?",
+        "quotes": [],
+        "passageRef": "stream-a-11-jane-eyre",
+        "orderAnchor": 11
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4vt00gttmbv7wpjp25e",
+          "value": "She had seen a Gytrash on this lane before.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "Lines 11 to 18 give her Bessie's tales, and no sighting of her own."
+        },
+        {
+          "optionId": "cmsw2f4vt00gutmbvym937j4v",
+          "value": "She had always believed every one of Bessie's tales was true.",
+          "isKey": false,
+          "tag": "en-extreme-option-pull",
+          "execution": "Stretches lines 11 to 13 into always and every. Line 12 counts the nursery stories among other rubbish, so the text is measured."
+        },
+        {
+          "optionId": "cmsw2f4vt00gvtmbveqs456qn",
+          "value": "She was terrified of being alone in the lane.",
+          "isKey": false,
+          "tag": "en-emotion-label-approximation",
+          "execution": "Line 11 gives fancies both bright and dark, which is not the same as terror."
+        },
+        {
+          "optionId": "cmsw2f4vt00gwtmbv2iy5qbd5",
+          "value": "A horse was coming upon her in the dusk, as in Bessie's tales.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Find where the tale comes back to her. Ask what is happening at that moment.",
+        "walkScript": "Lines 11 to 13 say that when she was young, her mind was full of fancies. At lines 14 and 15 a horse is coming through the dusk. Just then, line 15 says, she remembered Bessie's tales. Lines 16 and 17 say a Gytrash came upon travellers out late. Lines 17 and 18 say this horse was now coming upon her in the same way."
+      }
+    },
+    {
+      "itemId": "ENG-010-JE-05",
+      "why": "Hold (key): the key rested on reading 'however' (lines 22-23) as doubt, which the text never states, while line 25 says the rider 'broke the spell at once'; the walk invented a sentence and the hint pointed at the key. No small repair saves 'what FIRST makes her doubt', so the question is rewritten on the same passage, same questionType and tier: 'What tells Jane that this is no Gytrash after all?' The key is the rider (line 25: the man broke the spell; only a traveller). The old key (the dog passing quietly) is removed rather than kept as a distractor, since it is arguably a partial answer. Distractors: the colour (within the window, answers a different question), the fall on the ice (lines 28-29, after the spell is broken: chronology), and a tail-wag no line gives. New hint is a move; new walk cites lines 21 to 26.",
+      "stem": {
+        "text": "Read lines 21 to 26. What tells Jane that this is no Gytrash after all?",
+        "quotes": [],
+        "passageRef": "stream-a-11-jane-eyre",
+        "orderAnchor": 21
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4vu00gytmbv08tebfyk",
+          "value": "A man is riding the horse, and he is only a traveller.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4vu00gztmbv96spn6zd",
+          "value": "Its black and white colour stood out against the trees.",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "True at lines 20 and 21, but that is what made the dog easy to see. It does not tell her it is no Gytrash."
+        },
+        {
+          "optionId": "cmsw2f4vu00h0tmbv4xxsans3",
+          "value": "The horse and its rider slipped and fell on the ice.",
+          "isKey": false,
+          "tag": "en-chronology-collapse",
+          "execution": "Man and horse fall at lines 28 and 29, after line 25 has already broken the spell. A later event is offered as the cause."
+        },
+        {
+          "optionId": "cmsw2f4vu00h1tmbv68pewit2",
+          "value": "It wagged its tail at her as it went past.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "A friendly dog sounds ordinary, but no line in 21 to 26 has it wag its tail. Line 25 gives the rider as what broke the spell."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Find the line where the spell is broken. Read what comes just before it.",
+        "walkScript": "Lines 21 and 22 say the dog looked just like one form of the Gytrash. Lines 24 and 25 say the horse followed, with a rider on its back. Line 25 says the man broke the spell at once. Lines 25 and 26 say he was only a traveller on a short cut."
+      }
+    },
+    {
+      "itemId": "ENG-010-JE-10",
+      "why": "Hold (hintCore): 'He names two things. Keep both' matched only the key, the one option holding both (R572). Replaced with a move: read all of line 49 and check each option against every part of it. Nothing else changed.",
+      "stem": {
+        "text": "Read lines 49 and 50. What does the traveller say is the matter?",
+        "quotes": [],
+        "passageRef": "stream-a-11-jane-eyre",
+        "orderAnchor": 49
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4vy00hmtmbva8hvsq6q",
+          "value": "He has broken a bone in his foot.",
+          "isKey": false,
+          "tag": "en-negation-dropped",
+          "execution": "Line 49 says he has no broken bones, and this option loses that."
+        },
+        {
+          "optionId": "cmsw2f4vy00hntmbvv79271kf",
+          "value": "A sprain, and no bones broken.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4vy00hotmbvaghpjmf8",
+          "value": "He says that he shall do well enough.",
+          "isKey": false,
+          "tag": "en-inference-literal-lookalike",
+          "execution": "Reuses line 49, and that is what he claims, not what is the matter."
+        },
+        {
+          "optionId": "cmsw2f4vy00hptmbvok7aybjx",
+          "value": "His shoulder was hurt when he came down.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "Line 49 names a sprain and line 50 has him try his foot; no shoulder appears."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Read all of what he says in line 49. Check each option against every part of it."
+      }
+    },
+    {
+      "itemId": "ENG-010-JE-11",
+      "why": "Hold (execution): the first distractor's execution cited line 72 for 'she has never seen him'; that is line 77 ('No, I have never seen him.'). Corrected the line number. Nothing else changed.",
+      "stem": {
+        "text": "Read lines 70 to 81, then lines 86 to 88. What do these two parts together show about the traveller?",
+        "quotes": [],
+        "passageRef": "stream-a-11-jane-eyre",
+        "orderAnchor": 86
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4vz00hrtmbv7lpojn9p",
+          "value": "Jane has met Mr Rochester before, though only once at the hall.",
+          "isKey": false,
+          "tag": "en-negation-dropped",
+          "execution": "Line 77 says she has never seen him, and this option loses that."
+        },
+        {
+          "optionId": "cmsw2f4vz00hstmbvdytt035d",
+          "value": "He is annoyed to find her out, and says so.",
+          "isKey": false,
+          "tag": "en-emotion-label-approximation",
+          "execution": "Line 87's deuce take me is aimed at his own forgetting, not at her being there."
+        },
+        {
+          "optionId": "cmsw2f4vz00httmbveq6v5kks",
+          "value": "He questions her like a stranger, but knew of the governess.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4vz00hutmbvdu5wyzwc",
+          "value": "Jane is the one who asks, and he is the one who answers.",
+          "isKey": false,
+          "tag": "en-agent-patient-reversal",
+          "execution": "Line 74 runs the other way: he asks, and she answers at line 75."
+        }
+      ]
+    },
+    {
+      "itemId": "ENG-010-JE-12",
+      "why": "Hold (stem): no line window over 89 lines, and 'again and again' overstated a pattern that rests on two instances (lines 51 and 71); Thornfield at line 6 and her dress at line 83 have no light report first (R591). The stem now bounds the question to the two places the pattern holds (lines 51 to 56 and 70 to 72) and says 'in both places'; lineRefs set to match. Other stem keys, options, hint and walk unchanged (each stays true under the bounded stem).",
+      "stem": {
+        "text": "Look at lines 51 to 56 and lines 70 to 72. Jane does the same thing in both places before describing something. What is it?",
+        "quotes": [],
+        "passageRef": "stream-a-11-jane-eyre",
+        "answerShape": "observation-bounded-by-conditions",
+        "orderAnchor": 9999,
+        "techniqueKey": "the-light-is-reported-before-the-description"
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4vz00hwtmbvxmvvrbp4",
+          "value": "She tells us the sun sank down crimson and clear behind the trees.",
+          "isKey": false,
+          "tag": "en-inference-literal-lookalike",
+          "execution": "Reuses line 8, and one sunset is not a thing she does each time."
+        },
+        {
+          "optionId": "cmsw2f4vz00hxtmbvtwwwf8bn",
+          "value": "She describes each person in full first, but gives their actions later.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "The traveller acts from line 27, and is not described until lines 51 to 56."
+        },
+        {
+          "optionId": "cmsw2f4w000hytmbvzreaacp9",
+          "value": "She never describes a person, but only the weather and the sky.",
+          "isKey": false,
+          "tag": "en-extreme-option-pull",
+          "execution": "Lines 52 to 56 describe the traveller closely, from his cloak to his age."
+        },
+        {
+          "optionId": "cmsw2f4w000hztmbvdsoy6cjn",
+          "value": "She reports the light first, but describes little beyond what it shows.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        }
+      ],
+      "lineRefs": [
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        70,
+        71,
+        72
+      ]
+    },
+    {
+      "itemId": "ENG-017-CR-01",
+      "why": "Hold (execution): the Bath-scene execution said line 1 answers the stem and quoted line 1, which does not say what Captain Brown brought up. Removed the boilerplate; the execution now points to lines 3 and 4. Nothing else changed.",
+      "stem": {
+        "text": "Look at lines 1 to 5. What did Captain Brown bring up at the party?",
+        "quotes": [],
+        "passageRef": "stream-a-17-cranford",
+        "orderAnchor": 1
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4xo00rttmbvb0dtwss9",
+          "value": "Some numbers of a book coming out in parts.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4xo00rutmbvdr7mrnb3",
+          "value": "Conversation, and comparing of cards, and tricks.",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "True at lines 1 and 2, and it is what the room was already doing."
+        },
+        {
+          "optionId": "cmsw2f4xo00rvtmbvyu8aivpn",
+          "value": "The scene about a party given at Bath.",
+          "isKey": false,
+          "tag": "en-wrong-scope-retrieval",
+          "execution": "True at line 23, outside this window; he reads that scene later in the evening. Lines 3 and 4 give what he brought up."
+        },
+        {
+          "optionId": "cmsw2f4xo00rwtmbv8lrf3lfa",
+          "value": "A newspaper he had brought in with him.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "A man with news might; lines 1 to 5 give him nothing but the numbers."
+        }
+      ]
+    },
+    {
+      "itemId": "ENG-017-CR-03",
+      "why": "Hold (walkScript): the walk cited line 13 for 'the author is young' (it is line 14) and called the Johnson-as-model advice 'a reason', which was the walk's whole support for the key 'gives reasons'. Since that support does not hold, the key is reworded to what lines 13 to 15 do show: she holds out hope for the author ('who knows what he may become'), and line 49 holds out none. Same stem, same other options. Walk rewritten with correct line numbers, and the hint ('Ask whether both are arguments') replaced with a move, since it served the old key.",
+      "stem": {
+        "text": "Look at lines 13 to 17 and 43 to 49. How does her second answer differ from her first?",
+        "quotes": [],
+        "passageRef": "stream-a-17-cranford",
+        "orderAnchor": 13
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4xq00s3tmbvks2rhjhh",
+          "value": "At first she has read them, and at the end she prefers Dr Johnson.",
+          "isKey": false,
+          "tag": "en-inference-literal-lookalike",
+          "execution": "Reuses lines 9 and 49, and lists what she says rather than what changed in how she says it."
+        },
+        {
+          "optionId": "cmsw2f4xq00s4tmbva09avitu",
+          "value": "She takes the affront first, and then she offers to make allowances.",
+          "isKey": false,
+          "tag": "en-chronology-collapse",
+          "execution": "Line 43 has the affront long after line 19 has the allowances, so this reverses them."
+        },
+        {
+          "optionId": "cmsw2f4xq00s5tmbvfy1mogkt",
+          "value": "At first she gives the author some hope, but at the end she gives him none.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4xq00s6tmbvyn9jddmi",
+          "value": "She grows warmer towards Boz, but the Captain cools towards him.",
+          "isKey": false,
+          "tag": "en-relation-word-flipped",
+          "execution": "Lines 13 and 49 have her go the other way, and line 41 has him defending Boz."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Read each answer and ask what is in the first that is missing from the second.",
+        "walkScript": "Line 13 has her say the books are not equal to Dr Johnson. Line 14 adds that the author is young and may still become something. Lines 14 and 15 offer him Dr Johnson as a model. Line 49 states her preference and holds out no hope at all."
+      }
+    },
+    {
+      "itemId": "ENG-017-CR-04",
+      "why": "Hold (execution): the 'Explain that it is a different sort of thing' distractor was tagged en-chronology-collapse with an execution saying 'this puts it after'. The row as the packet holds it already carries the fix: tag en-within-span-wrong-element (true at line 18, inside the window, but a statement where the stem asks for a request), with an execution that says so and cites lines 18 and 20 correctly. Checked against the passage; resubmitted unchanged so the reviewer can confirm the hold is cleared.",
+      "stem": {
+        "text": "Look at lines 18 to 21. What does Captain Brown ask to be allowed to do?",
+        "quotes": [],
+        "passageRef": "stream-a-17-cranford",
+        "orderAnchor": 18
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4xq00s8tmbvv1o6st7t",
+          "value": "Explain that it is a different sort of thing.",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "Line 18 is inside the window, and the Captain does say it is quite a different sort of thing. That is what he says, not what he asks to do; at line 20 he asks to read a scene from the new number."
+        },
+        {
+          "optionId": "cmsw2f4xr00s9tmbv73f74pt3",
+          "value": "Fetch the month's number from his own house.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "He says he had it that morning; lines 18 to 21 never send him for it."
+        },
+        {
+          "optionId": "cmsw2f4xr00satmbve1scrodt",
+          "value": "Make allowances for Miss Jenkyns and her taste.",
+          "isKey": false,
+          "tag": "en-agent-patient-reversal",
+          "execution": "Line 19 has HER making the allowances, so this turns the two round."
+        },
+        {
+          "optionId": "cmsw2f4xr00sbtmbv68j73bqn",
+          "value": "Read the company a scene out of the new number.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        }
+      ]
+    },
+    {
+      "itemId": "ENG-017-CR-05",
+      "why": "Hold (hintCore): the hint ('Check the word against a chair') and the dominant-sense execution ('settling into a chair') introduced a chair lines 22 to 25 do not contain; line 22 says only 'settling herself'. Hint now points to what she says just before the word (As you please); the execution now says she settles herself to hear him read. Nothing else changed.",
+      "stem": {
+        "text": "Look at lines 22 to 25. What does 'resignation' on line 22 mean here?",
+        "quotes": [
+          "resignation"
+        ],
+        "passageRef": "stream-a-17-cranford",
+        "orderAnchor": 22
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4xr00sdtmbvhbscsbis",
+          "value": "Putting up with something you dislike.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4xr00setmbvgcvwga6s",
+          "value": "Giving up a job that you hold.",
+          "isKey": false,
+          "tag": "en-vocab-dominant-sense",
+          "execution": "The commonest everyday sense of the word; line 22 has her settle herself to hear him read, and nobody gives up a job."
+        },
+        {
+          "optionId": "cmsw2f4xr00sftmbvpc53gwfa",
+          "value": "Sitting in a patient and grave way.",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "True at lines 24 and 25, and that is what she did next rather than the word."
+        },
+        {
+          "optionId": "cmsw2f4xs00sgtmbvl6e2lujw",
+          "value": "Deciding to laugh along with the rest.",
+          "isKey": false,
+          "tag": "en-attribute-transfer",
+          "execution": "Line 23 gives the laughing to some of the others, not to her."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Nobody leaves a job in these lines. Check the word against what she says just before it."
+      }
+    },
+    {
+      "itemId": "ENG-017-CR-06",
+      "why": "Hold (options): 'To let the present company judge between the two' is her stated purpose at lines 28 and 29, a second defensible answer, and the hint asked the child to distrust a reason the text gives. Replaced that distractor with one no reading supports: answering the Captain calling Johnson's writing pompous, which happens at line 41, after she sends for the book (chronology). Hint replaced with a move that does not ask the child to doubt the text.",
+      "stem": {
+        "text": "Look at lines 26 to 29. Why does Miss Jenkyns send for the other book?",
+        "quotes": [],
+        "passageRef": "stream-a-17-cranford",
+        "orderAnchor": 26
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4xs00sitmbve9s92rmq",
+          "value": "To show the company that she owns a book-room.",
+          "isKey": false,
+          "tag": "en-motive-invention",
+          "execution": "A plausible piece of pride; lines 26 to 29 never give it."
+        },
+        {
+          "optionId": "cmsw2f4xs00sjtmbvhkafb9hv",
+          "value": "To answer his reading with a reading of her own.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4xs00sktmbvk8kkiaqp",
+          "value": "To answer the Captain calling Dr Johnson's writing pompous.",
+          "isKey": false,
+          "tag": "en-chronology-collapse",
+          "execution": "The Captain calls that style pompous at line 41, long after she sends for the book at line 26. A later remark cannot be her reason."
+        },
+        {
+          "optionId": "cmsw2f4xs00sltmbvvmtlkbm8",
+          "value": "To let the Captain choose the second book.",
+          "isKey": false,
+          "tag": "en-attribute-transfer",
+          "execution": "Line 26 has her name the book herself, so this hands her choice to him."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Compare what she asks to do with what the Captain has just done."
+      }
+    },
+    {
+      "itemId": "ENG-017-CR-07",
+      "why": "Hold (walkScript): the walk ended 'she reads him as beaten', leaning to the defeat reading, and never tied the screwed lips and drumming to held-back speech. Rewrote the walk to make that link and to note that when he does speak (line 36) it is to argue back. Also named: the 'agrees at last' distractor was tagged en-negation-dropped though no negative is dropped; retagged en-contradicted-by-the-text, since line 41 has him call Johnson's style pompous. Gate-forced: the precheck's subject-matter screen refuses 'high' in the option 'She has read her scene in a high, grand voice.', so it now reads 'in a grand voice' (same tag and execution).",
+      "stem": {
+        "text": "Look at lines 30 to 34. What does the Captain's silence show?",
+        "quotes": [],
+        "passageRef": "stream-a-17-cranford",
+        "orderAnchor": 30
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4xt00sntmbv3bghdrrn",
+          "value": "He agrees with her about Dr Johnson at last.",
+          "isKey": false,
+          "tag": "en-contradicted-by-the-text",
+          "execution": "Reads his silence as agreement. Nothing in lines 30 to 34 has him agree, and at line 41 he calls Johnson's style pompous."
+        },
+        {
+          "optionId": "cmsw2f4xt00sotmbv3cxh34te",
+          "value": "He screwed his lips up and drummed on the table.",
+          "isKey": false,
+          "tag": "en-inference-literal-lookalike",
+          "execution": "Reuses lines 32 and 33 and names the actions rather than what they show."
+        },
+        {
+          "optionId": "cmsw2f4xt00sptmbv5lo4pte2",
+          "value": "He is holding back something he wants to say.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4xt00sqtmbvblff3w6e",
+          "value": "She has read her scene in a grand voice.",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "True at lines 30 and 31, and it is about her rather than about him."
+        }
+      ],
+      "explanationPatch": {
+        "walkScript": "Line 32 has him screw his lips up and drum on the table. Line 33 says that he did not speak. Pressed lips and drumming fingers are ways of keeping words in. When he does speak, at line 36, it is to argue back."
+      }
+    },
+    {
+      "itemId": "ENG-017-CR-08",
+      "why": "Hold (key): a retrieval stem asked WHY he speaks low, but the passage gives no reason; line 37 is only the narrator's guess at the effect, so the key asserted an intent the text does not state, and one execution invented it too. Rewrote the question on the same passage, same questionType and tier, to ask HOW he asks his question, which lines 36 and 37 answer directly (a low voice, which the narrator thinks Miss Jenkyns could not have heard). New distractors: her grand reading voice from lines 30 and 31 (attribute-transfer; 'high' is refused by the subject-matter screen), a loud voice (contradicted by line 36), and anger the lines never state. The existing walk already fits and is unchanged; hint replaced.",
+      "stem": {
+        "text": "Look at lines 35 to 37. How does Captain Brown ask his question about the Rambler?",
+        "quotes": [],
+        "passageRef": "stream-a-17-cranford",
+        "orderAnchor": 35
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4xu00sstmbvd4uw7jsk",
+          "value": "In a grand voice, as if reading aloud to them all.",
+          "isKey": false,
+          "tag": "en-attribute-transfer",
+          "execution": "Lines 30 and 31 give a high-pitched, majestic voice to Miss Jenkyns as she reads. Line 36 gives him a low voice."
+        },
+        {
+          "optionId": "cmsw2f4xu00sttmbv8g015a78",
+          "value": "In a loud voice that the whole room could hear.",
+          "isKey": false,
+          "tag": "en-contradicted-by-the-text",
+          "execution": "Line 36 says he asked in a low voice, and line 37 has the narrator think Miss Jenkyns could not have heard. The option states the contrary."
+        },
+        {
+          "optionId": "cmsw2f4xu00sutmbv7madxw37",
+          "value": "Angrily, after losing his temper with her.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "He might well be cross, but lines 35 to 37 never say anything about his temper. Line 36 gives only a low voice."
+        },
+        {
+          "optionId": "cmsw2f4xu00svtmbvplir1nwb",
+          "value": "In a low voice that Miss Jenkyns probably could not hear.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Find where his voice is described. Then read on to the end of line 37."
+      }
+    },
+    {
+      "itemId": "ENG-017-CR-10",
+      "why": "Hold (options): 'It is only said that he was heard to say it' is the hearsay reason itself (line 50, 'It is said'), the same reason as the key in other words. Replaced it with a distractor that is true in the window but answers a different question: his being penitent afterwards (line 51), which is what he did next, not why she will not vouch. Nothing else changed.",
+      "stem": {
+        "text": "Look at lines 50 and 51. Why will the narrator not vouch for what she reports?",
+        "quotes": [],
+        "passageRef": "stream-a-17-cranford",
+        "orderAnchor": 50
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4xw00t2tmbvl0pm6rv3",
+          "value": "She thinks the Captain was right to say it.",
+          "isKey": false,
+          "tag": "en-motive-invention",
+          "execution": "A plausible sympathy; lines 50 and 51 never give her a view on it at all."
+        },
+        {
+          "optionId": "cmsw2f4xw00t3tmbv0d89hh5g",
+          "value": "She only has it at second hand from others.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4xw00t4tmbvap5q9t4e",
+          "value": "She was staying in the house and did not dare.",
+          "isKey": false,
+          "tag": "en-wrong-scope-retrieval",
+          "execution": "True at line 24, outside this window; that was about laughing, not about this. In the window, line 50 answers the stem: 'It is said—I won’t vouch for the fact—that Captain'."
+        },
+        {
+          "optionId": "cmsw2f4xw00t5tmbvfpuyo0w1",
+          "value": "The Captain was sorry afterwards and tried to make it up to her.",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "Line 51 is inside the window and says that, if he did, he was penitent afterwards. That is what he did next, not why she will not vouch for the report."
+        }
+      ]
+    },
+    {
+      "itemId": "ENG-017-CR-11",
+      "why": "Hold (walkScript): 'Line 54 shows it still holding the next day' rests on an unexplained remark about Miss Jessie's dimples, which a child cannot read as hostility from this passage. Replaced that sentence with one grounded in line 53 (the But set against his trying). Nothing else changed.",
+      "stem": {
+        "text": "Look at lines 52 to 54. What does 'inexorable' on line 53 mean here?",
+        "quotes": [
+          "inexorable"
+        ],
+        "passageRef": "stream-a-17-cranford",
+        "orderAnchor": 52
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4xw00t7tmbvgwlz3p4z",
+          "value": "Not able to be excused for what she did.",
+          "isKey": false,
+          "tag": "en-vocab-form-lookalike",
+          "execution": "Not able to be excused is the meaning of 'inexcusable', a different word that 'inexorable' resembles in form. The child has misidentified the word; line 53 says she would not be moved by anything he tried."
+        },
+        {
+          "optionId": "cmsw2f4xx00t8tmbvbup439tb",
+          "value": "Still in a fury with him about it.",
+          "isKey": false,
+          "tag": "en-emotion-label-approximation",
+          "execution": "An adjacent state; line 53 gives an unmoving one rather than a hot one."
+        },
+        {
+          "optionId": "cmsw2f4xx00t9tmbv1a69zyto",
+          "value": "Not to be moved by anything he tried.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4xx00tatmbvvh5j61ek",
+          "value": "Trying to talk of some pleasanter thing.",
+          "isKey": false,
+          "tag": "en-attribute-transfer",
+          "execution": "Lines 52 and 53 give that to the Captain, not to her."
+        }
+      ],
+      "explanationPatch": {
+        "walkScript": "Line 52 has him stand by her chair and try to change the subject. Line 53 says she was this, and the word answers his trying. The word But in front of it shows his trying got nowhere."
+      }
+    },
+    {
+      "itemId": "ENG-025-LW-03",
+      "why": "Hold (hintCore): 'Two of these are things somebody said' was misleading, since the key paraphrases what Amy says at line 22, so a child could use the hint to rule the key out. Replaced with a move: read Amy's words in line 22 to the end. Gate-forced: the skating distractor's execution ('A bargain the lines never give her.') was under the precheck's 40-character minimum; it now cites line 49 and lines 19 to 23.",
+      "stem": {
+        "text": "Look at lines 19 to 23. What does Amy think the burning has settled?",
+        "quotes": [],
+        "passageRef": "stream-a-16-little-women",
+        "orderAnchor": 19
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4zv014ptmbvupv7mpd9",
+          "value": "That she told Jo she would make her pay.",
+          "isKey": false,
+          "tag": "en-inference-literal-lookalike",
+          "execution": "Reuses line 22 and repeats her rather than saying what it settles."
+        },
+        {
+          "optionId": "cmsw2f4zv014qtmbvklilpss0",
+          "value": "That Jo meant to finish it before Father got home.",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "True at lines 19 and 20, and it is Jo’s loss rather than Amy’s account."
+        },
+        {
+          "optionId": "cmsw2f4zv014rtmbv1xl9w9mm",
+          "value": "That Jo has now paid for being cross to her.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4zv014stmbvtusz3ppw",
+          "value": "That Jo will take her skating the next time.",
+          "isKey": false,
+          "tag": "en-motive-invention",
+          "execution": "Amy wants skating later, at line 49, but lines 19 to 23 give no bargain. Line 22 is about paying Jo back."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Read Amy's words in line 22 right to the end."
+      }
+    },
+    {
+      "itemId": "ENG-025-LW-06",
+      "why": "Hold (key): the key ('easy enough to say at the table, and it is hard now') was unsupported: no line says the refusal was easy or that holding it is hard for Jo, lines 66 and 67 give her a bitter satisfaction, and there is no table (line 31 has a tea bell). Repaired on the same stem, type and tier: the key now says what the two moments do show, that she holds to her refusal even when it may put Amy in danger (line 70 the warning Amy misses; lines 72 and 73 the demon's words). The two distractors that said 'table' now say 'tea'; the 'forgotten' one is retagged en-contradicted-by-the-text (lines 66 and 67 say she cherished her anger), and the 'spoken then, warning later' one is retagged en-technique-structure-effect-blind (it reports content and order, not what the pairing shows). Walk rewritten to reach the key; it no longer claims Jo 'says nothing' at line 73. Gate-forced: the Laurie distractor's execution was under the precheck's 40-character minimum; it now adds that Laurie has already shouted the warning at line 70.",
+      "stem": {
+        "text": "Look at lines 33 to 35 and lines 68 to 73. What do the two moments show about Jo’s refusal?",
+        "quotes": [],
+        "passageRef": "stream-a-16-little-women",
+        "answerShape": "what-the-refusal-cost-then-against-what-it-costs-now",
+        "orderAnchor": 33,
+        "techniqueKey": "a-refusal-spoken-cheaply-and-then-held-when-it-has-a-price"
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4zx0154tmbvjg4z69rc",
+          "value": "It was said at tea, and the warning came later on.",
+          "isKey": false,
+          "tag": "en-technique-structure-effect-blind",
+          "execution": "Hands back what each moment holds, in order: tea at line 31, the warning at line 70. It says what happens, not what setting them side by side shows."
+        },
+        {
+          "optionId": "cmsw2f4zx0155tmbvego4e3wp",
+          "value": "She holds on to it, even when it may put Amy in danger.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4zx0156tmbvw79ctylp",
+          "value": "By the river, Jo has forgotten what she said at tea.",
+          "isKey": false,
+          "tag": "en-contradicted-by-the-text",
+          "execution": "Lines 66 and 67 say she had cherished her anger till it grew strong, the contrary of forgetting."
+        },
+        {
+          "optionId": "cmsw2f4zx0157tmbvlwihgwga",
+          "value": "Jo keeps quiet so that Laurie will have to do the warning.",
+          "isKey": false,
+          "tag": "en-motive-invention",
+          "execution": "A plan the lines never give her. Laurie has already shouted the warning at line 70."
+        }
+      ],
+      "explanationPatch": {
+        "walkScript": "Line 33 has Amy ask to be forgiven, and line 34 is Jo refusing. At line 70 Laurie warns that the middle is not safe. Jo hears it, but Amy does not. Lines 72 and 73 have a demon tell Jo to let Amy take care of herself. Her refusal holds, even with Amy in danger."
+      }
+    },
+    {
+      "itemId": "ENG-025-LW-07",
+      "why": "Hold (options): 'She keeps her voice gruff because Amy is listening' (line 42) is something Jo does with her feeling, a second defensible answer alongside the key's 'says a hard thing aloud'. Replaced it with a negation-dropped distractor: line 41 says she 'really couldn't quite forgive yet'. Also named: the hint pointed at the gruff speech as much as at the key; replaced with a move.",
+      "stem": {
+        "text": "Look at lines 39 to 43. What does Jo do with what she is feeling?",
+        "quotes": [],
+        "passageRef": "stream-a-16-little-women",
+        "orderAnchor": 39
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4zy0159tmbvzi3twd0t",
+          "value": "She wanted to cry her grief and anger away.",
+          "isKey": false,
+          "tag": "en-inference-literal-lookalike",
+          "execution": "Reuses lines 39 and 40 and gives the wish rather than what she does."
+        },
+        {
+          "optionId": "cmsw2f4zy015atmbvbq54yzok",
+          "value": "She forgives Amy before going up to bed.",
+          "isKey": false,
+          "tag": "en-negation-dropped",
+          "execution": "Line 41 says she really couldn't quite forgive yet. The option drops the negative and keeps the forgiving."
+        },
+        {
+          "optionId": "cmsw2f4zy015btmbvsalbnv74",
+          "value": "She holds it in and says a hard thing aloud.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4zy015ctmbvu8fa7yac",
+          "value": "She tells her mother she will forgive Amy tomorrow.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "Lines 37 and 38 invite it; no line has her agree."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Follow Jo from line 39 to line 43. Check each option against what she actually does."
+      }
+    },
+    {
+      "itemId": "ENG-025-LW-08",
+      "why": "Hold (execution): the Laurie-testing execution said line 48 answers the stem and quoted line 48, which says nothing about the ice. Removed the boilerplate; it now cites lines 59 and 60 for Laurie sounding the ice and line 49 for what Amy says. Nothing else changed.",
+      "stem": {
+        "text": "Look at lines 48 to 50. What does Amy say about the ice?",
+        "quotes": [],
+        "passageRef": "stream-a-16-little-women",
+        "orderAnchor": 48
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4zz015etmbv02ohfx7v",
+          "value": "Jo promised she could go the next time.",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "True at line 49, and it is the promise rather than the ice."
+        },
+        {
+          "optionId": "cmsw2f4zz015ftmbv1drulrzn",
+          "value": "Laurie is testing whether it is safe.",
+          "isKey": false,
+          "tag": "en-wrong-scope-retrieval",
+          "execution": "True at lines 59 and 60, further down the river, where Laurie sounds the ice. Line 49 gives what Amy says about the ice."
+        },
+        {
+          "optionId": "cmsw2f4zz015gtmbvm701qb9z",
+          "value": "Amy has been skating on it all week.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "A last day invites earlier days; no line gives one."
+        },
+        {
+          "optionId": "cmsw2f4zz015htmbvmpujz1c3",
+          "value": "It is the last ice they will get.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        }
+      ]
+    },
+    {
+      "itemId": "ENG-025-LW-09",
+      "why": "Hold (execution): 'Until Laurie has gone off home' was tagged en-motive-invention though it is an invented condition. The row as the packet holds it already carries the fix: tag en-plausible-not-stated, with an execution citing lines 53 and 54 accurately. Checked against the passage; resubmitted unchanged so the reviewer can confirm the hold is cleared.",
+      "stem": {
+        "text": "Look at lines 51 to 55. What does Meg tell Amy to wait for?",
+        "quotes": [],
+        "passageRef": "stream-a-16-little-women",
+        "orderAnchor": 51
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f500015jtmbvhousyaxb",
+          "value": "A quiet minute once Jo has cheered up.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f500015ktmbvidvxmyxq",
+          "value": "That it is hard to forgive the loss of the book.",
+          "isKey": false,
+          "tag": "en-inference-literal-lookalike",
+          "execution": "Reuses lines 51 and 52 and gives Meg’s view rather than her instruction."
+        },
+        {
+          "optionId": "cmsw2f500015ltmbvlnefuu3y",
+          "value": "That she was very naughty.",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "True at line 51, and it is Meg’s judgement rather than the advice."
+        },
+        {
+          "optionId": "cmsw2f500015mtmbvof5oua5v",
+          "value": "Until Laurie has gone off home and left them alone.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "Lines 53 and 54 tell Amy to wait until Jo has got good-natured with Laurie, then take a quiet minute. The child supplies a different, likely condition, Laurie going home, which Meg never gives."
+        }
+      ]
+    },
+    {
+      "itemId": "ENG-025-LW-11",
+      "why": "Hold (execution): the turned-her-back execution said line 64 answers the stem and quoted words about Amy. Removed the boilerplate; it now cites lines 58 and 59 for when Jo turned her back and line 65 for what Jo does while Amy puts her skates on. Nothing else changed.",
+      "stem": {
+        "text": "Look at lines 64 to 66. What did Jo do while Amy put her skates on?",
+        "quotes": [],
+        "passageRef": "stream-a-16-little-women",
+        "orderAnchor": 64
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f501015ttmbvo7cybnqn",
+          "value": "She stamped her feet and blew on her fingers.",
+          "isKey": false,
+          "tag": "en-attribute-transfer",
+          "execution": "True at lines 64 and 65, and it is Amy rather than Jo."
+        },
+        {
+          "optionId": "cmsw2f501015utmbvll8uoray",
+          "value": "She saw Amy coming and turned her back on her.",
+          "isKey": false,
+          "tag": "en-wrong-scope-retrieval",
+          "execution": "True at lines 58 and 59, when Amy first reached the river. Line 65 gives what Jo does while Amy puts her skates on."
+        },
+        {
+          "optionId": "cmsw2f501015vtmbvfidz8jqq",
+          "value": "She went slowly down the river without turning.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f501015wtmbv1h69jxh1",
+          "value": "She called out to Amy to hurry along after her.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "A sister waiting invites a shout; no line gives one."
+        }
+      ]
+    },
+    {
+      "itemId": "ENG-025-LW-12",
+      "why": "Hold (execution): the 'under control from the table onwards' execution refuted it with lines 24 and 28, which come before tea (line 31). It now refutes it with lines 67 and 72, which come after. Nothing else changed.",
+      "stem": {
+        "text": "Think about the whole passage. How does the writer keep describing Jo’s anger?",
+        "quotes": [],
+        "passageRef": "stream-a-16-little-women",
+        "answerShape": "what-she-does-set-against-what-is-done-to-her",
+        "orderAnchor": 999,
+        "techniqueKey": "jos-anger-reported-as-something-that-acts-on-her"
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f502015ytmbvqfl8uw2s",
+          "value": "Her hot temper mastered her, and she shook Amy.",
+          "isKey": false,
+          "tag": "en-inference-literal-lookalike",
+          "execution": "Reuses line 24 and quotes one moment instead of naming the pattern."
+        },
+        {
+          "optionId": "cmsw2f502015ztmbvas8q2qjy",
+          "value": "The writer tells us Jo is angry, but never shows the anger doing anything.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "Lines 24, 67 and 72 all have the anger doing something."
+        },
+        {
+          "optionId": "cmsw2f5020160tmbv7ejk1f7b",
+          "value": "Jo has her anger under control from the table onwards, and keeps it there.",
+          "isKey": false,
+          "tag": "en-agent-patient-reversal",
+          "execution": "Reverses who acts. After tea, line 67 has her anger take possession of her, and line 72 has a demon speak in her ear."
+        },
+        {
+          "optionId": "cmsw2f5020161tmbvta3qxp3a",
+          "value": "The anger is the one acting, but Jo is the one acted on.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        }
+      ]
+    }
+  ],
+  "cannotFix": []
+}

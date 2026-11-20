@@ -1,0 +1,411 @@
+{
+  "door": "english-rewrite/r2/G2",
+  "proposer": "agent",
+  "rebuilds": [
+    {
+      "itemId": "ENG-007-LP-07",
+      "why": "Round 1 fix kept: hintCore 'The last three words of line 36 matter most' was false (line 36 is 'opening it.', two words; 'without' is on line 35), replaced with 'Read the sentence about the paper right to its last word.' (attested). Round 2: the reviewer held the en-negation-dropped execution, which said 'Line 36 says without opening it' when 'without' is on line 35. It now reads 'Lines 35 and 36 say he put it back without opening it, so he does not read it.' Nothing else changed.",
+      "stem": {
+        "text": "What did Reuben do with the folded paper from his pocket? (lines 34 to 36)",
+        "quotes": [],
+        "passageRef": "stream-b-04",
+        "orderAnchor": 7
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4v200cftmbvz13535wn",
+          "value": "Read it and then put it away again.",
+          "isKey": false,
+          "tag": "en-negation-dropped",
+          "execution": "Lines 35 and 36 say he put it back without opening it, so he does not read it."
+        },
+        {
+          "optionId": "cmsw2f4v200cgtmbvedt8ltf2",
+          "value": "Put it in the Friday box with the jumper.",
+          "isKey": false,
+          "tag": "en-attribute-transfer",
+          "execution": "The Friday box is where the jumper goes at line 33. The child gives the jumper's destination to the folded paper, which at lines 34 to 36 he looks at and puts back in his pocket unopened."
+        },
+        {
+          "optionId": "cmsw2f4v200chtmbvfivjosa9",
+          "value": "Looked at its edge and put it back unopened.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4v200citmbvawidrbpx",
+          "value": "Showed it to Ilya when he came back.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "Ilya speaks at line 40, but the paper is never mentioned to him."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Read the sentence about the paper right to its last word."
+      }
+    },
+    {
+      "itemId": "ENG-007-LP-12",
+      "why": "Round 1 fixes kept (reviewer accepted them): (1) the key 'We get no thoughts from him' was false (lines 31 and 32 give what Reuben knew and why); the key is now 'By showing what he does with things, like the jumper and the paper.' (lines 33 to 36). (2) walkScript listed 'laughing late' as hands; it now cites only what he handles, with line numbers. (3) Because the key changed, the en-minimal-pair-skim distractor was rewritten as the key's frame with Ilya in place of Reuben. Round 2: the reviewer refused hintCore 'Go to the moment he finds the navy jumper' because 'jumper' is carried only by the key. hintCore is now 'Find a moment where a feeling could have been told. Read what the writer gives you instead.' It names no word any option carries (not jumper, paper, hands, things, sock or Ilya). Also per the reviewer: the distractor said 'the football sock', which the passage does not; it now says 'like the sock he finds' (line 28: 'Ilya found a Manchester United sock'), and its execution says 'Ilya finding a Manchester United sock and becoming busy with it at line 28' in place of 'Ilya busy with a Manchester United sock at line 28'.",
+      "stem": {
+        "text": "We are never told what Reuben is feeling. How does the writer let us know anyway?",
+        "quotes": [],
+        "passageRef": "stream-b-04",
+        "answerShape": "withholds-and-evidences",
+        "orderAnchor": 12,
+        "techniqueKey": "interiority-withheld-and-displaced-into-handled-objects"
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4v500cztmbvgx5mwntn",
+          "value": "The writer tells us he is sad, and then shows us only the reasons for it.",
+          "isKey": false,
+          "tag": "en-whole-text-absence-asserted",
+          "execution": "Reads past the absence; the passage never states a feeling anywhere."
+        },
+        {
+          "optionId": "cmsw2f4v500d0tmbvzy5u8zfn",
+          "value": "By showing what Ilya does with things, like the sock he finds.",
+          "isKey": false,
+          "tag": "en-minimal-pair-skim",
+          "execution": "Keeps the key's frame and changes one detail, Reuben to Ilya. Ilya finding a Manchester United sock and becoming busy with it at line 28 tells us nothing of what Reuben feels; the child matches on gist and misses who is doing the handling."
+        },
+        {
+          "optionId": "cmsw2f4v500d1tmbvh5lshs9v",
+          "value": "He describes only the old clothes, and so we get nothing else.",
+          "isKey": false,
+          "tag": "en-contradicted-by-the-text",
+          "execution": "The passage describes much more than old clothes: Ilya's talk, Miss Bhatt, the football sheet at lines 37 to 39 and the folded paper at lines 35 and 36. The child claims the telling gives clothes and nothing else, which the passage contradicts, and so misses that Reuben's feeling is carried by what he handles."
+        },
+        {
+          "optionId": "cmsw2f4v600d2tmbv5vyp15p7",
+          "value": "By showing what he does with things, like the jumper and the paper.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Find a moment where a feeling could have been told. Read what the writer gives you instead.",
+        "walkScript": "Reuben never says how he feels, anywhere in this passage. Instead you see what he does with things. At lines 33 and 34 he hides the jumper low down and pushes it flat. At lines 35 and 36 he looks at the folded paper and puts it back unopened. The writer puts the feeling into what he does with things."
+      }
+    },
+    {
+      "itemId": "ENG-015-CC-03",
+      "why": "Round 1 fix kept (reviewer accepted it): under the reading that 'That' at line 15 points back to the whole sentence beginning with the stirred hair (line 14), the hair distractor was a defensible part-answer. It is replaced with 'Its ghostly spectacles turned up on its forehead.' (lines 13 and 14, in the sentence before, excluded under every reading of 'That'); same tag, en-within-span-wrong-element. The walkScript no longer says 'not to the hair'. Round 2: the reviewer held the new walkScript for putting 'its livid colour, made it horrible' on line 15; it is on line 16. 'Line 15 then says' is now 'Lines 15 and 16 then say'. Nothing else changed.",
+      "stem": {
+        "text": "Look at lines 11 to 17. What made the face horrible to look at?",
+        "quotes": [],
+        "passageRef": "stream-a-08-christmas-carol",
+        "orderAnchor": 11
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4x600owtmbvjv0p4wdf",
+          "value": "It looked angry and fierce at him.",
+          "isKey": false,
+          "tag": "en-negation-dropped",
+          "execution": "Lines 12 and 13 say it was not angry or ferocious."
+        },
+        {
+          "optionId": "cmsw2f4x600oxtmbvqhy48phz",
+          "value": "It had a dismal light, like a bad lobster.",
+          "isKey": false,
+          "tag": "en-inference-literal-lookalike",
+          "execution": "Reuses line 12 and names how it looked rather than what made it horrible."
+        },
+        {
+          "optionId": "cmsw2f4x600oytmbvu3xqiv91",
+          "value": "The still open eyes and the awful colour.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4x600oztmbvvrpgbcyb",
+          "value": "Its ghostly spectacles turned up on its forehead.",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "True at lines 13 and 14, where the face looks at Scrooge as Marley used to look. The child takes a detail from the right lines, but the horror is tied to what lines 14 to 16 describe after it, not to the spectacles."
+        }
+      ],
+      "explanationPatch": {
+        "walkScript": "Lines 14 and 15 describe the stirred hair and the wide open eyes that never move. Lines 15 and 16 then say that this, and its livid colour, made it horrible. So the still eyes and the colour both made it horrible."
+      }
+    },
+    {
+      "itemId": "ENG-015-CC-04",
+      "why": "Round 1 fix kept (attested): the execution on 'He let go of the key' cited line 20 when 'the key he had relinquished' is on line 21, and the walkScript repeated line 20 ('put his hand upon the key' runs across lines 20 and 21); both corrected. Round 2: the reviewer held the en-chronology-collapse execution, 'Line 21 turns the key before line 22 lights the candle', because 'lighted his' is on line 21 and only 'candle.' on line 22. It now reads 'He turns the key at line 21 and lights his candle at lines 21 and 22, after it, so this reverses them.' Nothing else changed.",
+      "stem": {
+        "text": "Look at lines 19 to 22. What did Scrooge do after the shock?",
+        "quotes": [],
+        "passageRef": "stream-a-08-christmas-carol",
+        "orderAnchor": 19
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4x700p1tmbvhvafjvzc",
+          "value": "The sight left him quite unmoved.",
+          "isKey": false,
+          "tag": "en-negation-dropped",
+          "execution": "Lines 19 and 20 say it would be untrue to say he was not startled."
+        },
+        {
+          "optionId": "cmsw2f4x700p2tmbvly5zpof2",
+          "value": "He let go of the key he was holding.",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "True at line 21, where the key is one he had relinquished, so he had already let go of it. It is what he had done before rather than what came next."
+        },
+        {
+          "optionId": "cmsw2f4x700p3tmbv7gg5axtf",
+          "value": "He lighted his candle, then turned the key.",
+          "isKey": false,
+          "tag": "en-chronology-collapse",
+          "execution": "He turns the key at line 21 and lights his candle at lines 21 and 22, after it, so this reverses them."
+        },
+        {
+          "optionId": "cmsw2f4x700p4tmbvug6sej4w",
+          "value": "He turned his key and he walked in.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        }
+      ],
+      "explanationPatch": {
+        "walkScript": "Lines 20 and 21 say he put his hand upon the key he had let go. Line 21 says he turned it sturdily and walked in. The candle at line 22 comes after both."
+      }
+    },
+    {
+      "itemId": "ENG-015-CC-06",
+      "why": "Round 1 fixes kept (reviewer accepted them): (1) hintCore 'Two of these only list the noises' eliminated two distractors; it is now 'Read to the end of both sets of lines, not just the sounds.' (2) 'The second noise' was ambiguous (lines 60 to 66 hold the bells and then the clanking), so the stem names the clanking, the second window starts at line 61, and the key and the literal-lookalike option name the two noises. (3) The flame execution's malformed fragment is rewritten. Round 2: the reviewer held the stem because 'the bang of the door' was not fixed by its cited lines: 'bang' is on line 27, outside 28 to 31, and the cellar-door's 'booming sound' (line 65) sits inside 61 to 66. The stem now reads 'Look at lines 27 to 31 and 61 to 66. What does the clanking do that the bang at line 27 does not?' ('lines 28 to 31' became 'lines 27 to 31'; 'the bang of the door' became 'the bang at line 27'), and lineRefs gain line 27. Line 27 'closed it with a bang' is the only bang in the windows.",
+      "stem": {
+        "text": "Look at lines 27 to 31 and 61 to 66. What does the clanking do that the bang at line 27 does not?",
+        "quotes": [],
+        "passageRef": "stream-a-08-christmas-carol",
+        "orderAnchor": 28
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4x900pbtmbvw6u4ngnw",
+          "value": "The bang is like thunder, and the clanking is like a dragged chain.",
+          "isKey": false,
+          "tag": "en-inference-literal-lookalike",
+          "execution": "Reuses lines 28 and 62, and names what each sound is like rather than what the clanking does."
+        },
+        {
+          "optionId": "cmsw2f4x900pctmbvks1baptt",
+          "value": "He walks away from the bang, but the clanking comes after him.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4x900pdtmbva4wxhy29",
+          "value": "The bells ring first, and the door bangs a long while after.",
+          "isKey": false,
+          "tag": "en-chronology-collapse",
+          "execution": "Line 27 bangs the door before line 59 rings the bells, so this turns the order round."
+        },
+        {
+          "optionId": "cmsw2f4x900petmbvo82d5iqq",
+          "value": "The flame leaps up first, and then it falls again in the grate.",
+          "isKey": false,
+          "tag": "en-wrong-scope-retrieval",
+          "execution": "True at lines 69 and 70, outside both sets of lines; neither has a flame in it. The child answers from the ghost's arrival rather than from the two noises."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Read to the end of both sets of lines, not just the sounds.",
+        "walkScript": "At lines 30 and 31 he walks up the stairs, away from the echoes. Lines 65 and 66 have the clanking come up the stairs, straight towards his door. He leaves the bang behind, but the clanking comes to find him."
+      },
+      "lineRefs": [
+        27,
+        28,
+        29,
+        30,
+        31,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ]
+    },
+    {
+      "itemId": "ENG-015-CC-07",
+      "why": "Round 1 fix kept (attested): the distractor 'Finding all the rooms in order, just as before' was supported by line 32 'All as they should be' and line 36 'Lumber-room as usual'; replaced with 'Hanging his dressing-gown up against the wall.' (same tag, en-inference-literal-lookalike; at lines 35 and 36 the gown is already hanging and he checks nobody is in it). Round 2: the reviewer held the walkScript, which said 'Lines 33 to 35 give under the table'; 'Nobody under the table' is on line 32. 'Lines 33 to 35' is now 'Lines 32 to 35'. Nothing else changed.",
+      "stem": {
+        "text": "Look at lines 32 to 37. What is Scrooge doing in these lines?",
+        "quotes": [],
+        "passageRef": "stream-a-08-christmas-carol",
+        "orderAnchor": 32
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4x900pgtmbvfczs8wja",
+          "value": "Hanging his dressing-gown up against the wall.",
+          "isKey": false,
+          "tag": "en-inference-literal-lookalike",
+          "execution": "Reuses lines 35 and 36, where the dressing-gown is already hanging up against the wall. He is checking that nobody is in it, not hanging it up."
+        },
+        {
+          "optionId": "cmsw2f4x900phtmbvik7xd6cx",
+          "value": "Noting the gruel standing ready on the hob.",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "True at lines 33 and 34, and it is one item on the list rather than the point of it."
+        },
+        {
+          "optionId": "cmsw2f4xa00pitmbv6zb2f256",
+          "value": "Looking in every place a person could hide.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4xa00pjtmbvx11fjy4d",
+          "value": "Making sure the servants have all gone home.",
+          "isKey": false,
+          "tag": "en-motive-invention",
+          "execution": "A plausible reason to walk the rooms; lines 32 to 37 never give it."
+        }
+      ],
+      "explanationPatch": {
+        "walkScript": "Line 32 lists the rooms and then starts on the places. Lines 32 to 35 give under the table, under the sofa, in the closet. Every one of them is a place a person could be."
+      }
+    },
+    {
+      "itemId": "ENG-015-CC-12",
+      "why": "passageRef was missing: stem.passageRef set to stream-a-08-christmas-carol. Round 2, per the reviewer: (a) the round 1 change of the stem text to 'Think about lines 18 to 78' and the lineRefs 18 to 78 were unrequested; both are reverted, so the stem text is the stored 'Think about the whole passage. What does Scrooge keep doing after he sees the face?' and lineRefs stay []. (b) The walkScript line corrections the reviewer accepted are kept: 'At line 24' became 'At lines 23 and 24' (the look behind the door), and 'At line 35 he is looking in the closet and under the bed' became 'At lines 34 and 35 he is looking under the bed and in the closet'. (c) The reviewer held the key 'He says he is not frightened, but he checks the whole house' as false: he checks only his own rooms (line 32), not the rooms above or the cellars (lines 28 and 29), and he never says he is not frightened; he says 'Pooh, pooh!' (26), 'Humbug!' (53) and 'It's humbug still! I won't believe it.' (67). The key is now 'He calls it nonsense, but he still keeps on checking.' Both halves hold: humbug and pooh-pooh call it nonsense (26, 53, 67); he looks behind the door (23 to 25) and searches the rooms (32 to 37). Options, executions and hint otherwise unchanged.",
+      "stem": {
+        "text": "Think about the whole passage. What does Scrooge keep doing after he sees the face?",
+        "quotes": [],
+        "answerShape": "words-set-against-actions",
+        "techniqueKey": "denial-spoken-aloud-while-the-body-goes-on-checking",
+        "passageRef": "stream-a-08-christmas-carol"
+      },
+      "options": [
+        {
+          "optionId": "cmt0m4n0s0001tmhftf6pz6p0",
+          "value": "He says Pooh, pooh, and then a little later he says Humbug too.",
+          "isKey": false,
+          "tag": "en-inference-literal-lookalike",
+          "execution": "Reuses lines 26 and 53 and quotes him twice rather than naming anything he does."
+        },
+        {
+          "optionId": "cmt0m4n0s0002tmhfoc56oq1f",
+          "value": "He calls it nonsense, but he still keeps on checking.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmt0m4n0s0003tmhf49an6qta",
+          "value": "He is bold at the start, but his nerve does not last.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "A tidy shape the passage never carries: line 78 still has him caustic and cold."
+        },
+        {
+          "optionId": "cmt0m4n0s0004tmhfd4se6qoz",
+          "value": "He fears the thing, so he sends for help to sit up.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "Nowhere in the passage does Scrooge send for anyone or ask anyone to sit up with him. The child supplies what a frightened man might well do, which the passage never states; Scrooge searches the rooms himself at lines 32 to 36."
+        }
+      ],
+      "explanationPatch": {
+        "walkScript": "At lines 23 and 24 he looks behind the door before he will shut it. At lines 34 and 35 he is looking under the bed and in the closet. At line 67 he says it is humbug still, and will not believe it."
+      }
+    },
+    {
+      "itemId": "ENG-023-RT-06",
+      "why": "Round 1 fix kept (attested): the execution on 'He sat on all of their laps' claimed line 34 answers the stem and quoted another distractor's content; it now says the laps come at breakfast the next morning (lines 38 and 39) while lines 34 to 36 give what kept him up. Round 2: the reviewer held the walkScript, 'Line 36 says he found out what made it', because line 36 is only 'it.' and 'find out what made' is on line 35. That sentence now reads 'Lines 35 and 36 say he had to find out what made it.' ('found out' became 'had to find out', as the text has it). Nothing else changed.",
+      "stem": {
+        "text": "Look at lines 30 to 36. What kept Rikki-tikki getting up in the night?",
+        "quotes": [],
+        "passageRef": "stream-a-15-jungle-book",
+        "orderAnchor": 30
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4ze011xtmbvft6ile79",
+          "value": "He climbed up when Teddy went to bed.",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "True at line 34, and it is how he got there rather than why he woke."
+        },
+        {
+          "optionId": "cmsw2f4ze011ytmbvkippy71b",
+          "value": "He had to find out what made every noise.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4ze011ztmbv5gztyjel",
+          "value": "He sat on all of their laps in turn.",
+          "isKey": false,
+          "tag": "en-wrong-scope-retrieval",
+          "execution": "True at lines 38 and 39, at breakfast the next morning. The child answers from the morning, but lines 34 to 36 give what kept him up in the night."
+        },
+        {
+          "optionId": "cmsw2f4ze0120tmbvunnwwutb",
+          "value": "He was keeping watch on the door for the family.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "A restless animal invites a guard; no line gives him one."
+        }
+      ],
+      "explanationPatch": {
+        "walkScript": "Line 34 says he was a restless companion. Line 35 says he had to attend to every noise. Lines 35 and 36 say he had to find out what made it."
+      }
+    },
+    {
+      "itemId": "ENG-023-RT-08",
+      "why": "passageRef was missing: stem.passageRef set to stream-a-15-jungle-book (attested). Round 2: the reviewer held the walkScript, 'Line 48 says they pulled two big leaves together', because 'by pulling' is on line 47. 'Line 48 says they pulled' is now 'Lines 47 and 48 say they pulled'. Nothing else changed.",
+      "stem": {
+        "text": "Look at lines 47 to 50. How had Darzee and his wife made their nest?",
+        "quotes": [],
+        "passageRef": "stream-a-15-jungle-book"
+      },
+      "options": [
+        {
+          "optionId": "cmt9qp4ra000mtmovwfgl6tq6",
+          "value": "By swaying it to and fro as they sat on the rim.",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "True at line 49, and the swaying is the nest rather than their work."
+        },
+        {
+          "optionId": "cmt9qp4ra000ntmov1shebn0r",
+          "value": "By wrapping it in cotton wool over a little fire.",
+          "isKey": false,
+          "tag": "en-attribute-transfer",
+          "execution": "Lines 15 and 16 are where the family wrap Rikki-tikki in cotton wool and warm him over a little fire. The child carries that care of the mongoose across to the birds' nest, helped by the cotton that does fill the nest at line 49."
+        },
+        {
+          "optionId": "cmt9qp4ra000otmov5oirrm7j",
+          "value": "By tying it to the thorn-bush with fibres.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "Line 48 names what the leaves were stitched with; no line ties the nest to anything."
+        },
+        {
+          "optionId": "cmt9qp4ra000ptmovdbfj689d",
+          "value": "By stitching two big leaves together at the edges.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        }
+      ],
+      "explanationPatch": {
+        "walkScript": "Line 47 says they had made a beautiful nest. Lines 47 and 48 say they pulled two big leaves together. Line 48 says they stitched up the edges."
+      }
+    }
+  ],
+  "cannotFix": []
+}

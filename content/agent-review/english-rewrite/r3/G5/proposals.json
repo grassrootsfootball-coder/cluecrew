@@ -1,0 +1,141 @@
+{
+  "door": "english-rewrite/r3/G5",
+  "proposer": "agent",
+  "rebuilds": [
+    {
+      "itemId": "ENG-011-CV-06",
+      "why": "Original hold: (1) hintCore's ambiguous 'they' steered to the curtsey distractor; (2) 'came down the steps towards them' carried en-cause-agent-swap with nothing causal swapped. Both stay fixed as in round 2: the hint names no bare pronoun, and the option is retagged en-agent-patient-reversal with the execution the round 2 reviewer accepted. Round 3 review (hintCore coaching): round 2's second hint sentence 'Then look back at how those people reached the house.' echoed the key's 'on arriving at the house'. It is replaced by 'Then read line 2 to see how those people travelled.' It sends the child to the waggonette and the drive on line 2 without naming the arrival, and its words match no option. The first hint sentence 'Find who does the alighting on line 15.' is unchanged. Line numbers rechecked: executions cite line 12 (woman on the steps to receive them) and line 15 (curtsey as they alighted), both true; the stored walkScript cites lines 12 and 15, both true, and is not changed. Nothing else changed.",
+      "stem": {
+        "text": "Look at lines 12 to 16. What does 'alighted' on line 15 mean there?",
+        "quotes": [
+          "alighted"
+        ],
+        "passageRef": "stream-a-07-canterville-ghost",
+        "orderAnchor": 6
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4w400iptmbvcwhewxef",
+          "value": "caught fire and burned",
+          "isKey": false,
+          "tag": "en-vocab-built-from-parts",
+          "execution": "The word looks like a-light, and line 12 has a woman waiting to receive people."
+        },
+        {
+          "optionId": "cmsw2f4w400iqtmbv7snl6asg",
+          "value": "got down on arriving at the house",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4w500irtmbv1ojrvpfb",
+          "value": "made a low curtsey to each one of the family",
+          "isKey": false,
+          "tag": "en-coordination-wrong-conjunct",
+          "execution": "That is what Mrs Umney does at line 15, joined to this word by as."
+        },
+        {
+          "optionId": "cmsw2f4w500istmbv1vt0l24f",
+          "value": "came down the steps towards them",
+          "isKey": false,
+          "tag": "en-agent-patient-reversal",
+          "execution": "The child gives the word to the wrong party. Line 15 has her curtsey as they alighted, so the alighting belongs to the family arriving. Mrs Umney is the one standing on the steps at line 12."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Find who does the alighting on line 15. Then read line 2 to see how those people travelled."
+      }
+    },
+    {
+      "itemId": "ENG-018-RB-02",
+      "why": "Original hold (hat option not a reversal; 'lolls back ... clears his mental decks' defensible): kept the attested replacements 'He sits more lazily at the end than he did at the start' (en-contradicted-by-the-text) and 'He revolves a quid of tobacco in his left cheek' (en-within-span-wrong-element), and round 2's attested executions unchanged. Round 3 review (walkScript): the stored walkScript placed 'over the dashboard' on line 5 (it is line 6), and said 'Lines 62 to 64 take back the whip, the foot, the hat and the tobacco', where line 62 puts the whip back in its socket and the whip is not in lines 5 to 7. Changes: 'Line 5 has him lolled back with his foot over the dashboard.' becomes 'Lines 5 and 6 have him lolled back with his foot over the dashboard.' The last sentence is replaced by 'In lines 63 and 64 he takes his foot down and pushes his hat back. Then he blows the tobacco into the road.' (line 63: took his foot from the dashboard, pushed his hat back, blew his quid of tobacco into the; line 64: road). The whip is dropped. The middle sentence 'Line 6 has the hat over his eyes and line 7 the tobacco in his cheek.' is unchanged. Line numbers rechecked in every execution: lines 5 and 6 (lolled back, foot over the dashboard), 62 to 64 (foot down, hat back), 7 (quid of tobacco), 51 and 52 (boosted her up, resumed his own place), all true. Nothing else changed.",
+      "stem": {
+        "text": "Look at lines 5 to 7 and 62 to 64. What has happened to the way Mr Cobb sits?",
+        "quotes": [],
+        "passageRef": "stream-a-21-rebecca-sunnybrook",
+        "orderAnchor": 4
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4xy00thtmbvcqqtc6gv",
+          "value": "He sits more lazily at the end than he did at the start.",
+          "isKey": false,
+          "tag": "en-contradicted-by-the-text",
+          "execution": "Lines 5 and 6 have him lolled back with a foot over the dashboard at the start. Lines 62 to 64 have him take that foot down and push his hat back. The passage states the contrary of lazier at the end."
+        },
+        {
+          "optionId": "cmsw2f4xy00titmbviqgwjxut",
+          "value": "He settles in at the start, and he undoes it all at the end.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4xy00tjtmbvkbi1vyuy",
+          "value": "He revolves a quid of tobacco in his left cheek.",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "True at line 7, inside the first window, but it is one detail of how he rides, not what has happened to the way he sits. The child takes a single element from the right lines and misses the change between the two windows."
+        },
+        {
+          "optionId": "cmsw2f4xy00tktmbvvhwtotgg",
+          "value": "He boosts her up to the seat, and then he resumes his own place.",
+          "isKey": false,
+          "tag": "en-wrong-scope-retrieval",
+          "execution": "Lines 51 and 52 have him boost her up and resume his own place, outside both windows. The child answers from that part instead of lines 5 to 7 and 62 to 64."
+        }
+      ],
+      "explanationPatch": {
+        "walkScript": "Lines 5 and 6 have him lolled back with his foot over the dashboard. Line 6 has the hat over his eyes and line 7 the tobacco in his cheek. In lines 63 and 64 he takes his foot down and pushes his hat back. Then he blows the tobacco into the road."
+      }
+    },
+    {
+      "itemId": "ENG-026-AL-03",
+      "why": "Original hold (the true pairing 'The key was under the brick, and after that it was in her hand' was a second key): kept round 1's attested replacement (en-negation-dropped), round 2's attested key 'Grandad stops keeping the key, leaving it for Alan, then giving it to Cass.', and round 2's hint and walkScript, all unchanged. Round 3 review (execution): the execution on 'The brick was too heavy for him to lift on his own' said the child supplies a reason for the key's move and that line 11 gives the real one. A heavy brick is no reason to move the key under the brick. It now reads: 'Nothing in the lines says the brick is heavy. The child supplies a likely reason why he stops leaving the key under the brick at lock-up, on line 43. Line 45 gives the real reason: it would save him hunting about.' Line numbers rechecked: line 43 (did not put the key back under the brick), line 45 (it would save him hunting about), line 11 (moved it for Alan), line 10 (belt loop), line 12 (under the brick), lines 43 to 45 (into her hand, hang on to it), all true. Nothing else changed.",
+      "stem": {
+        "text": "Look at lines 11 and 12 and lines 43 to 47. What do these lines together show about the shed key?",
+        "quotes": [],
+        "passageRef": "stream-b-05",
+        "answerShape": "who-it-was-moved-for-against-who-ends-up-holding-it",
+        "orderAnchor": 3,
+        "techniqueKey": "a-key-moved-for-one-person-and-then-given-to-another"
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f505016dtmbvdyiwrpv9",
+          "value": "He put the key back under the brick when they locked up.",
+          "isKey": false,
+          "tag": "en-negation-dropped",
+          "execution": "Line 43 says that when they locked up he did not put the key back under the brick. The child keeps the content words of the line and drops the not."
+        },
+        {
+          "optionId": "cmsw2f505016etmbvu0ashlwu",
+          "value": "The brick was too heavy for him to lift on his own.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "Nothing in the lines says the brick is heavy. The child supplies a likely reason why he stops leaving the key under the brick at lock-up, on line 43. Line 45 gives the real reason: it would save him hunting about."
+        },
+        {
+          "optionId": "cmsw2f505016ftmbvlkbek66l",
+          "value": "Grandad stops keeping the key, leaving it for Alan, then giving it to Cass.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f505016gtmbv7wsmun17",
+          "value": "He gives it to her, so that Alan cannot get into the shed.",
+          "isKey": false,
+          "tag": "en-motive-invention",
+          "execution": "The child invents a motive for the gift. Line 11 has him move the key for Alan, and line 45 says only that it would save him hunting about."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Ask who the key is for, each time it moves.",
+        "walkScript": "Line 10 says the key lives on his belt loop. Line 11 says he had moved it for Alan. Line 12 finds it under the brick. Lines 43 to 45 have him give it to her to keep. Bit by bit, he stops keeping the key himself."
+      }
+    }
+  ],
+  "cannotFix": []
+}

@@ -1,0 +1,56 @@
+{
+  "door": "english-rewrite/r2/G7",
+  "reviewer": "rev-agent-01",
+  "changes": [
+    {
+      "ref": "rebuild:ENG-009-SM-11",
+      "verdict": "ATTEST",
+      "reason": "Only the walkScript's last two sentences changed. 'He holds the phone in both hands. The words even then mean that this still did not stop the shake.' is true of lines 41-42: 'I had to hold it in both hands, and even then the picture came out grey and shaken'. It no longer claims that 'even then' joins the light and the hands. hintCore is as attested in round 1."
+    },
+    {
+      "ref": "rebuild:ENG-009-SM-12",
+      "verdict": "ATTEST",
+      "reason": "Diffed against the stored value. The only change to distractor 2 is now 'them' to 'him' ('He tells the whole of it the way his Nan has always told it to him.'), so the round-1 restyling is reverted, as asked. 'him' matches the stem's 'he'. hintCore 'Pick out the sentences in the present tense. Ask what each one is about.' is a move and does not restate the key."
+    },
+    {
+      "ref": "rebuild:ENG-020-HD-03",
+      "verdict": "ATTEST",
+      "reason": "The key keeps 'Somebody has put it back' (the round-1 'given it back to her' is reverted). Its only change is 'the passage' to 'these lines', which is true of lines 13-15 and 42-43; lines 39-41 imply Sebastian. 'Nobody touched it, and it stayed where it was' is contradicted by 'the old straw hat on the table' (line 15) against 'under the counterpane' (lines 42-43). The hint and walkScript had to change with the removed distractor, and both are true of the two cited parts."
+    },
+    {
+      "ref": "rebuild:ENG-020-HD-10",
+      "verdict": "ATTEST",
+      "reason": "walkScript: 'He says nothing aloud. At line 41 his little nods mean 'I have got it all safe for you'.' is true. Line 41 opens 'little nods as much as to say', and line 40 has only signs and pointing. The declared quotation is verbatim from line 41. The 3jex execution keeps round 1's removal of the false 'line 40 answers the stem'. No other field moved."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "ENG-009-SM-11",
+      "verdict": "HOLD",
+      "holdFixed": true,
+      "faultField": "execution",
+      "reason": "The original hint fault is fixed, and the walkScript now reads 'even then' correctly. Held on the en-cause-agent-swap execution for 'The wind shook the phone as he held it': 'Line 41 gives the movement to his own hand, not to any wind.' The movement is on line 42 ('grey and shaken along one edge where my hand had moved'). Line 41 has only 'I had to hold it in both hands'. I missed this line number in round 1. Other checks: the camera execution (light at 40, hands at 41) is true. The relation-word execution on 'even then' (line 41) is true. The key's 'The light had gone' is a defensible inference from line 40's 'The light was going', since the picture is taken after it, and I do not hold the row for it."
+    },
+    {
+      "itemId": "ENG-009-SM-12",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "faultField": null,
+      "reason": "Read the present-tense sentences (lines 1, 6, 8-9, 13-16, 18, 28-29, 36-37, 42-43). All of them are still true, and the walk is past, so the key holds. Each wrong option checks. The summary option names no tense choice. The Nan's-way option is defeated by her story changing (line 10) and his own reading of the bell (line 38). The Nan-present/his-past option is defeated by lines 9 and 18, which are his and are present. The hint is a move. The walk's present-tense sentences at lines 8, 18 and 37 check. Original hold (coaching hint; no referent for 'them') is gone."
+    },
+    {
+      "itemId": "ENG-020-HD-03",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "faultField": null,
+      "reason": "Checked lines 13-15 (Tinette told to take the hat on the table) and 42-43 (hat under the counterpane). Neither names who moved it, so the key is the only defensible option. The Tinette option is not stated (Tinette named at line 13; nothing brings the hat back). The changed-her-mind option is not on the page. The hint is a move, and the walk is true of the two cited parts. Original hold (a distractor that was a true answer; 'the passage never says who' too strong given lines 39-41) is gone."
+    },
+    {
+      "itemId": "ENG-020-HD-10",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "faultField": null,
+      "reason": "Checked lines 39-41. He points to his own head and hers (line 40), and his nods say 'I have got it all safe for you' (line 41), so the key 'kept something of hers safe' is the only fit. Point-at-head copies the sign (line 40). Speaking to Fraulein Rottenmeier is invented. The roll is line 37, outside the window. The hint is a move. The walk is now accurate that he says nothing aloud. Original held execution ('line 40 answers the stem') is gone."
+    }
+  ]
+}

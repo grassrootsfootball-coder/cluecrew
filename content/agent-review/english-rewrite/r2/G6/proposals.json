@@ -1,0 +1,204 @@
+{
+  "door": "english-rewrite/r2/G6",
+  "proposer": "agent",
+  "rebuilds": [
+    {
+      "itemId": "ENG-008-RC-05",
+      "why": "Round 1 fixes kept (attested): the en-attribute-transfer hint in the offered entry now reads 'Check who or what each detail belongs to in the text.', true of two objects, so the tag, option and execution stand; the walkScript no longer says the tin holds the bread (line 23: 'if they had any'). Round 2: the reviewer held the en-wrong-scope-retrieval execution, which said 'That table is at line 51' (the forgotten room's table and its bread are on line 50; only 'butter' is on line 51) and 'line 23 says they had no bread' (line 23 says 'if they had any'). It now reads: 'True of the forgotten room's table, where bread is set out at line 50 and butter at line 51. That is not the table they lay at lines 20 to 23, where line 23 says they may not have any bread.' Nothing else changed.",
+      "stem": {
+        "text": "Read lines 20 to 23. What do the children use for the table?",
+        "quotes": [],
+        "passageRef": "stream-a-02-railway-children",
+        "orderAnchor": 20
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4va00dotmbv19ddd21z",
+          "value": "A glass ash-tray for salt, and a baking-tin for bread.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4va00dptmbvl6k07a72",
+          "value": "A baking-tin for salt, and a glass ash-tray for bread.",
+          "isKey": false,
+          "tag": "en-attribute-transfer",
+          "execution": "Both objects sit in lines 21 and 22, with their jobs the other way round."
+        },
+        {
+          "optionId": "cmsw2f4va00dqtmbvbukacfvc",
+          "value": "They find all the right things and lay them out.",
+          "isKey": false,
+          "tag": "en-negation-dropped",
+          "execution": "Line 21 says they could not find all the right things, and this option drops that."
+        },
+        {
+          "optionId": "cmsw2f4va00drtmbvn9jzirfa",
+          "value": "Bread and butter, set out ready on the table.",
+          "isKey": false,
+          "tag": "en-wrong-scope-retrieval",
+          "execution": "True of the forgotten room's table, where bread is set out at line 50 and butter at line 51. That is not the table they lay at lines 20 to 23, where line 23 says they may not have any bread."
+        }
+      ],
+      "explanationPatch": {
+        "walkScript": "Start at line 21 and find the two things they borrow. One is for the salt, and the other is to put bread on. Read which object does which job. Line 23 adds a joke: they may not have any bread."
+      }
+    },
+    {
+      "itemId": "ENG-012-ML-07",
+      "why": "Round 1 fix kept (attested): the distractor 'afraid that Tom will take both of the halves himself' was supported by Tom's threat at lines 31 and 32 and line 33's 'did not extend so far', and its execution was false; replaced with 'She is afraid Tom will tell their mother that she cheated.' (same tag, en-motive-invention), which no line supports. Round 2: the reviewer held hintCore 'Two wants are compared. Find which she cared about more.' because it paraphrases the key, the only option comparing two wants. hintCore is now 'Read the whole sentence that begins on line 33. Then test each option against it.' It is a move and names nothing any option carries (no 'wants', 'more', 'pleased' or 'fed'). The sentence runs from line 33 to 'the best bit.' on line 35. Nothing else changed.",
+      "stem": {
+        "text": "Read lines 33 to 35. Why does Maggie shut her eyes tight?",
+        "quotes": [],
+        "passageRef": "stream-a-14-mill-on-floss",
+        "orderAnchor": 7
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4wf00khtmbv5oeal3ir",
+          "value": "She is afraid Tom will tell their mother that she cheated.",
+          "isKey": false,
+          "tag": "en-motive-invention",
+          "execution": "No line has Tom threaten to tell anyone. His only threat, at lines 31 and 32, is that she will get none, and line 34 gives what she wanted from him instead."
+        },
+        {
+          "optionId": "cmsw2f4wf00kitmbvqfrmk9xm",
+          "value": "She is sorry for Tom having the smaller share.",
+          "isKey": false,
+          "tag": "en-emotion-label-approximation",
+          "execution": "Line 33 says she cared LESS about that than about pleasing him."
+        },
+        {
+          "optionId": "cmsw2f4wf00kjtmbvl75ji6kq",
+          "value": "She wants Tom pleased with her more than she wants him fed.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4wf00kktmbv6dr7dnmj",
+          "value": "She gives up the best piece out of pure sacrifice.",
+          "isKey": false,
+          "tag": "en-negation-dropped",
+          "execution": "Line 33 says her power of sacrifice did not extend so far."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Read the whole sentence that begins on line 33. Then test each option against it."
+      }
+    },
+    {
+      "itemId": "ENG-012-ML-11",
+      "why": "Round 1 fixes kept (attested): the key 'Maggie cannot let it go' and the walk 'Only one of the two can put it down' were contradicted by lines 72 and 73; the key is now 'Yap gets over it at once, but Maggie is left in misery.', the walk matches it with corrected citations, and the 'fed him well' execution cites lines 60 and 61. Round 2: the reviewer held the stem because its windows 'lines 59 to 63, then lines 66 to 71' left out line 64 (the turn and the word 'misery'), line 65 ('sat still') and line 72 ('ten minutes'), all of which the key and walk use, and cut the contrasting sentence in half. The stem now reads 'Read lines 59 to 73. Why are Yap and Maggie put side by side?' and lineRefs are 59 to 73, so the window runs to the end of the sentence that holds the ten minutes. With lines 72 and 73 now in the window, two executions were made exact: the en-relation-word-flipped execution said 'line 66 leaves her in misery' ('misery' is on line 64) and now reads 'Line 62 says YET he took it with alacrity. Lines 64 to 66 leave her in misery, and lines 71 to 73 have her in tears for ten minutes before she looks for Tom.', so a child who reads 'forgave Tom at once' off line 73 is answered; the en-within-span-wrong-element execution said 'True at line 67', but 'She would have given the world' starts on line 66 and 'saved some of it for Tom' ends on line 68, so it now says 'lines 66 to 68'. Key, options and hint unchanged.",
+      "stem": {
+        "text": "Read lines 59 to 73. Why are Yap and Maggie put side by side?",
+        "quotes": [],
+        "passageRef": "stream-a-14-mill-on-floss",
+        "orderAnchor": 11
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4wi00l0tmbvor0en781",
+          "value": "Yap is happier than Maggie, for Tom has just fed him well.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "Lines 60 and 61 have the eatables vanish while he looks on, so he was given nothing."
+        },
+        {
+          "optionId": "cmsw2f4wj00l1tmbvrk3bfho3",
+          "value": "Yap sulked at the stone, and Maggie forgave Tom at once too.",
+          "isKey": false,
+          "tag": "en-relation-word-flipped",
+          "execution": "Line 62 says YET he took it with alacrity. Lines 64 to 66 leave her in misery, and lines 71 to 73 have her in tears for ten minutes before she looks for Tom."
+        },
+        {
+          "optionId": "cmsw2f4wj00l2tmbve1uvj7zk",
+          "value": "Yap gets over it at once, but Maggie is left in misery.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4wj00l3tmbvwlewfbr7",
+          "value": "Maggie wishes, too late, that she had saved him some puff.",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "True at lines 66 to 68, and it is part of her misery rather than why the two are paired."
+        }
+      ],
+      "explanationPatch": {
+        "walkScript": "Read line 61 and line 62. The dog feels it, and takes the stone anyway. Now read lines 65 and 66: she sits still on her bough. Lines 71 and 72 have her in tears for ten minutes. The dog gets over it at once, and she does not."
+      },
+      "lineRefs": [
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73
+      ]
+    },
+    {
+      "itemId": "ENG-012-ML-12",
+      "why": "Round 1 fixes kept (attested): every option called the writer 'He' (George Eliot was a woman); each now says 'The writer', and 'keeps it out of his words' became 'never says so'. The walkScript's 'a bun' became 'a jam puff', and the polygon is cited at lines 13 and 14. Round 2: the reviewer held hintCore 'Find the words no child in the tree would use.' because it paraphrases the key's deciding half, 'explains it in grown-up words'. hintCore is now 'Read lines 13 to 16 slowly. Then test each option against what you find.' It is a move and names nothing the key carries (no words, grown-up, child or explain). Lines 13 to 16 hold the writer's 'difficult problem' and 'irregular polygon' beside Tom's own talk, and 'hypothetic powers', which also tests the other options. Nothing else changed.",
+      "stem": {
+        "text": "The writer keeps doing something the two children could not do. What?",
+        "quotes": [],
+        "passageRef": "stream-a-14-mill-on-floss",
+        "answerShape": "narrator-register-above-the-scene",
+        "orderAnchor": 12,
+        "techniqueKey": "a-child-quarrel-narrated-in-adult-general-terms"
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4wj00l5tmbvrx1ll1np",
+          "value": "The writer tells us that Tom cut the puff and gave Maggie the best bit.",
+          "isKey": false,
+          "tag": "en-inference-literal-lookalike",
+          "execution": "A summary of what happens, which names nothing the writer does with it."
+        },
+        {
+          "optionId": "cmsw2f4wj00l6tmbvydtuph75",
+          "value": "The writer takes Maggie's side, but never says so.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "Lines 33 and 34 are a dig at Maggie in the writer's own voice."
+        },
+        {
+          "optionId": "cmsw2f4wj00l7tmbvccpm1yi3",
+          "value": "The writer never once tells us what either child is feeling.",
+          "isKey": false,
+          "tag": "en-extreme-option-pull",
+          "execution": "Lines 33, 48 and 64 all give feelings the children never speak aloud."
+        },
+        {
+          "optionId": "cmsw2f4wj00l8tmbv8loya9ra",
+          "value": "The writer gives a children's quarrel, but explains it in grown-up words.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        }
+      ],
+      "explanationPatch": {
+        "walkScript": "Find the sentences the children could not have said themselves. Lines 13 and 14 give a difficult problem in polygons, line 16 hypothetic powers. Line 64 gives a superior power of misery. Each puts a grown-up's words on a quarrel about a jam puff.",
+        "hintCore": "Read lines 13 to 16 slowly. Then test each option against what you find."
+      }
+    }
+  ],
+  "cannotFix": [
+    {
+      "itemId": "ENG-022-GK-11",
+      "why": "Kept in cannotFix from round 1; the reviewer returned no verdict on it. The fault is in the question, not only the walk. The key says that EACH time he explains himself his own proof goes against his case, and the techniqueKey ('every claim of control undone by the detail offered to support it') makes that the item's point. The hold finds only one site where it holds: line 7 ('Nobody put me there') against line 38 (picked eighth out of eight). Lines 22 and 26 do not go against him. Other candidates need a reading the reviewer would rightly call open: lines 8 to 11 (Dan said 'anyone', 'So that's me choosing'), line 44 ('Somebody has to keep the goal'), lines 28 to 30 (his mum) and line 39 ('I laughed as well'). Round 2 also tested a narrower stem, 'What happens when he explains why he is in goal?', built on lines 7 to 11, 38 and 44. It fails twice: two of its three sites are interpretive, and under it the distractor 'He minds it early on, but he has made his peace' becomes defensible, since line 43 ('I'm not shifting out of there') and line 44 read as acceptance of goal, which its execution ('still refusing to move') cites against it. Repairing that means a new stem, new key and new distractors on a whole-text purpose item: new authoring, not a repair. Fixing only the hint (it sends the child to a verdict line that does not exist) and the walk would leave an unsupported key, so the row stays held."
+    }
+  ]
+}

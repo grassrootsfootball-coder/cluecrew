@@ -1,0 +1,136 @@
+{
+ "door": "english-rewrite/G1",
+ "mode": "APPLIED",
+ "landed": [
+  "ENG-002-pp-01",
+  "ENG-002-pp-02",
+  "ENG-002-pp-10",
+  "ENG-002-pp-13",
+  "ENG-002-pp-15",
+  "ENG-002-pp-20",
+  "ENG-002-pp-03",
+  "ENG-016-HB-03",
+  "ENG-016-HB-05",
+  "ENG-016-HB-07",
+  "ENG-016-HB-08",
+  "ENG-016-HB-10",
+  "ENG-024-BF-04",
+  "ENG-024-BF-07"
+ ],
+ "held": [
+  {
+   "itemId": "ENG-002-pp-23",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "Key 'never whether the writer agrees' is not the only defensible answer: the narrator characterises directly at lines 24-25 ('good-looking and gentlemanlike... easy, unaffected manners') and lines 72-73 ('a lively, playful disposition'), which supports distractor 'We are told what the writer thinks'. Also hintCore calls Jane Austen 'he'.",
+    "faultField": "key"
+   },
+   "holdFixed": true,
+   "unattested": [
+    {
+     "ref": "rebuild:ENG-002-pp-23",
+     "verdict": "REFUSE",
+     "reason": "The rewrite is justified, because the old whole-passage key was not the only defensible answer, and the new key is the only defensible option. But the new execution on 'The writer tells us herself that he is kind under all his pride' says 'this passage gives only his pride and his rude words'. That is false: lines 26-29 give his 'fine, tall person, handsome features, noble mien' and ten thousand a year, and lines 39-42 narrate his conduct. The why's premise that his character comes 'only through the room... and then his own overheard words' leaves out that same narrated conduct at 39-42. The new en-extreme-option-pull execution cites 'the room's opinion at lines 29 to 43', but 36-38 are about Bingley and 39-42 are narration of what Darcy did."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-002-pp-23",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "reason": "The original fault is gone: the key is now the only defensible option, and the hint no longer calls the writer 'he'. Key checked: the room's verdicts (29-35, 42-46) all come before his words (53-56, 60-61, 65-69). The hint is a move and the walk is accurate. Held for two execution claims the passage contradicts: 'gives only his pride and his rude words' (lines 26-29 give his looks and wealth), and 'room's opinion at lines 29 to 43' (that span includes Bingley at 36-38 and narrated conduct at 39-42).",
+    "faultField": "execution"
+   }
+  },
+  {
+   "itemId": "ENG-002-pp-16",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "walkScript ends 'The room hears nothing of this'; the passage never says so (line 48 says only that Darcy stood near enough for Elizabeth to overhear).",
+    "faultField": "walkScript"
+   },
+   "holdFixed": true,
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-002-pp-16",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "reason": "The walk fault is gone. hintCore 'Do you hear the words, or only hear about them later?' offers a choice whose first half is the key ('The reader hears the unkind words at the very moment Elizabeth does'). That is coaching under R572. Also, the en-cause-agent-swap execution says 'the words Elizabeth hears are Mr Darcy's, not his'. That is false: lines 48-49 have her overhear a conversation between Mr Darcy and Mr Bingley, so she also hears Bingley's kind words at lines 62-63.",
+    "faultField": "hintCore"
+   }
+  },
+  {
+   "itemId": "ENG-002-pp-14",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "hintCore 'The words one of her daughters are the clue' quotes the key's own phrase ('rude about one of her daughters'), so it coaches (R572).",
+    "faultField": "hintCore"
+   },
+   "holdFixed": true,
+   "unattested": [
+    {
+     "ref": "rebuild:ENG-002-pp-14",
+     "verdict": "REFUSE",
+     "reason": "New hint 'Find what made her dislike sharper than everyone else's' asserts something the passage does not say. Line 44 has 'Amongst the MOST violent against him was Mrs. Bennet', so she is one of the most, not more than everyone. 'Sharpened' at line 45 is set against her own dislike of his 'general behaviour', not against anyone else's. (The cause-agent-swap line fix, lines 60-61, is correct.)"
+    }
+   ],
+   "row": {
+    "itemId": "ENG-002-pp-14",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "reason": "The original fault is gone: the hint no longer quotes 'one of her daughters'. But the stem premise 'Mrs Bennet disliked Mr Darcy more strongly than anybody else in the room did' overstates line 44, which says only 'Amongst the most violent against him'. The new hintCore repeats the same false comparison ('sharper than everyone else's'). Also, the wrong-scope execution's suffix 'line 44 answers the stem' is wrong: the reason is at lines 45-46.",
+    "faultField": "stem"
+   }
+  },
+  {
+   "itemId": "ENG-016-HB-01",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "Execution on 'The green squares of the fields' says they are 'what they pass over'; line 3 has the HILL rising over the fields, not the travellers passing over them (the walkScript has it right).",
+    "faultField": "execution"
+   },
+   "holdFixed": true,
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-016-HB-01",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "reason": "The execution fault is gone. hintCore 'The window is only four lines wide' uses reviewer jargon ('window' for a line range) in a row whose stem uses 'window' literally ('point out of the window', the carriage window at line 2). A child meets two meanings of one word in one item and is not told the hint means lines 1 to 4.",
+    "faultField": "hintCore"
+   }
+  },
+  {
+   "itemId": "ENG-016-HB-02",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "hintCore 'Two of these sit in one window only' is false: only the 'eyes fixed... eager' option sits in one window; the lamps option is in neither and the other two use both. Also the lamps option's execution carries an appended clause 'line 9 answers the stem' which is untrue for a what-has-changed question.",
+    "faultField": "hintCore"
+   },
+   "holdFixed": true,
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-016-HB-02",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "reason": "Key checked against lines 9-10 (a comrade who 'would bravely share it') and line 45 ('Even Baskerville fell silent'). Distractors and executions are true. The held fault is gone. Held because the new hintCore 'Read the first window, then the second' carries the reviewer word 'window' for a line range, which no child has been taught. The stem gives the ranges as lines, and this passage's only literal window is the carriage window at line 2.",
+    "faultField": "hintCore"
+   }
+  },
+  {
+   "itemId": "ENG-016-HB-12",
+   "gateFaults": [],
+   "originalHold": {
+    "reason": "walkScript says 'At line 4 the hill is melancholy before anyone has said a word', but Dr Mortimer speaks at lines 1-2 before it; it also says Nature 'throws at them' where line 28 has 'throw before the carriage'.",
+    "faultField": "walkScript"
+   },
+   "holdFixed": true,
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-016-HB-12",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "reason": "The walk fault is gone. Held on the en-plausible-not-stated execution 'line 4 is grim in broad daylight'. No line says broad daylight, and the passage points the other way: line 19 has 'the evening sky' soon after the train, and line 24 'the sinking sun'. Also, hintCore 'Two of these are things the moor does' has no clear count: only the 'calm by day, cruel after dark' option is plainly something the moor does. That is the same kind of fault held on HB-02's old hint.",
+    "faultField": "execution"
+   }
+  }
+ ]
+}

@@ -1,0 +1,128 @@
+{
+  "door": "english-rewrite/r2/G5",
+  "reviewer": "rev-agent-01",
+  "changes": [
+    {
+      "ref": "rebuild:ENG-006-TM-04",
+      "verdict": "ATTEST",
+      "reason": "Only the execution on 'He drops the hammer on somebody's toes' changed. The false stock clause is gone. The new text is true: line 48 has him drop the hammer on somebody's toes at the first blow (lines 47-48), long after lines 18-19. Round 1's attested hint is unchanged."
+    },
+    {
+      "ref": "rebuild:ENG-006-TM-09",
+      "verdict": "ATTEST",
+      "reason": "Only the execution on 'Somebody's toes, with a yell' changed. The false stock clause is gone. The new text is true: line 48 has the hammer dropped 'with a yell, on somebody's toes', and that comes after lines 43-45, where he slides on to the piano (line 44)."
+    },
+    {
+      "ref": "rebuild:ENG-011-CV-06",
+      "verdict": "REFUSE",
+      "reason": "The execution fix is sound: 'never comes down them' is removed, and what remains is true (line 15 'as they alighted'; line 12 she stands on the steps). The new hintCore drops the false count, and both its sentences are true (line 15; the drive is at line 2, and 'reached the house' is at line 10). But 'look back at how those people reached the house' paraphrases half of the key, 'got down on arriving at the house'. 'Reached the house' echoes 'arriving at the house', which no other option contains. A child can pick the key by matching the hint's words, without reading the passage (coaching, R572). The second sentence must send her to how they travelled without restating the arrival."
+    },
+    {
+      "ref": "rebuild:ENG-011-CV-10",
+      "verdict": "ATTEST",
+      "reason": "On 'It cannot be removed, she says, because the tourists admire it', the joining 'and' is now placed correctly at line 33. The quote 'much admired by tourists and others, and cannot be removed' is verbatim from lines 32-33. The retag to en-conjunction-logic fits: the child reads a plain 'and' as 'because', which is the wrong logical relation, and that entry's hint asks exactly whether the second idea is a reason. The option wording and the attested walk are unchanged."
+    },
+    {
+      "ref": "rebuild:ENG-011-CV-12",
+      "verdict": "ATTEST",
+      "reason": "The faulted option is replaced with 'They never once say a word to her about ghosts.' Lines 54-55 contradict it ('warmly assured the honest soul that they were not afraid of ghosts'), and it fails exactly on its extreme word against the key's 'mostly', so en-extreme-option-pull now names the mistake. The new execution is true. The key and walk are round 1's attested versions, unchanged."
+    },
+    {
+      "ref": "rebuild:ENG-018-RB-01",
+      "verdict": "ATTEST",
+      "reason": "Only the execution on 'That they had driven eight miles that day' changed. The false stock clause is gone. The new text is true: the mother says 'drove from her house--eight miles it is--this morning' at lines 25-26, which is outside lines 1-4, and 'we' there is the mother and child, not Mr Cobb."
+    },
+    {
+      "ref": "rebuild:ENG-018-RB-02",
+      "verdict": "ATTEST",
+      "reason": "The stock clause on 'He boosts her up...' is gone. The new execution is true: line 51 has him boost her to the front seat and resume his own place, finished on line 52, outside both windows. The second edit, 'Line 5' to 'Lines 5 and 6' in the 'more lazily' execution, corrects a real line fault ('over the dashboard' is line 6), so it is a needed correction, not restyling."
+    },
+    {
+      "ref": "rebuild:ENG-018-RB-05",
+      "verdict": "ATTEST",
+      "reason": "'Warm, and very pleased with her' is retagged from en-emotion-label-approximation to en-vocab-not-this-word. 'Sardonic' has no sense of warm or pleased, which fits the entry ('a meaning that belongs to no sense of the word'). The new execution is true: line 29 has her cut the child down ('that isn't much to be journey-proud on'). The option wording and the attested walk are unchanged."
+    },
+    {
+      "ref": "rebuild:ENG-026-AL-01",
+      "verdict": "ATTEST",
+      "reason": "Only the execution on 'He sat down on the upturned crate' changed. The false stock clause is gone. The new text is true: he 'sat down on the upturned crate' at line 21, while they dig the potatoes (lines 18-24). The two stops on the way up are at lines 4-5."
+    },
+    {
+      "ref": "rebuild:ENG-026-AL-03",
+      "verdict": "ATTEST",
+      "reason": "The new key, 'Grandad stops keeping the key, leaving it for Alan, then giving it to Cass', is true at every step. The key lives on his belt loop (line 10). He had moved it for Alan and it was under the brick (lines 11-12). He puts it into her hand to hang on to (lines 43-45). Cass is the narrator (line 27). Alan no longer holds it. The walk changes are needed to match the key, and each line is verified: line 10 belt loop, line 11 'moved it for Alan', line 12 'It was under the brick', lines 43-45 the gift."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "ENG-006-TM-04",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Checked: key true at lines 18-19 (drops it, out of the frame, cuts himself), the only defensible option. Crooked is line 58. Hammer on toes is line 48. 'Glass stays whole' is not stated, and a new glass is needed at lines 24-25. Hint is a move and does not single out the key by form. Walk is accurate. No 'In the window' clause remains.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-006-TM-09",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Checked: key true at line 44 ('down he would slide on to the piano'). Chair is line 42, corns are line 61, toes are line 48 (the hammer). Every execution is true. Hint 'Start at line 43, where the string slips' is true and no longer makes the key pickable by instrument. Walk is accurate to lines 43-45.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-011-CV-06",
+      "verdict": "HOLD",
+      "holdFixed": true,
+      "reason": "The original fault is gone: the ambiguous 'they' is removed and en-cause-agent-swap is replaced with en-agent-patient-reversal, whose execution is now true. But the new hintCore 'Then look back at how those people reached the house' paraphrases half the key ('on arriving at the house'). It is the only option the hint's words match, so the key can be picked from the hint and the options alone (coaching, R572).",
+      "faultField": "hintCore"
+    },
+    {
+      "itemId": "ENG-011-CV-10",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Checked: key true ('cannot be removed' line 33; 'no trace' lines 37-38, 'in a few moments' line 37). Ghost option is line 32, scrubbing option is lines 36-37, and the 'and' is at line 33 with a verbatim quote. Every tag names its mistake. Hint does not coach. Walk names Washington, and 'cannot be removed' are line 33's last three words.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-011-CV-12",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Checked: key 'mostly ... stains, weather and pay' holds (lines 26-27, 34-35, 43-46, 48, 56-57) and allows for lines 54-55. 'No ghost' is a minimal-pair skim of 'not afraid of ghosts'. Nothing has them laugh. 'Never once ... about ghosts' is contradicted at lines 54-55. Every walk pairing is verified. The stem cites no lines and lineRefs is empty, which is consistent for this whole-passage technique item.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-018-RB-01",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Checked: passageRef is set. Key true at lines 3-4 ('never losing sight of the fact that he carried the mail'). Warmth is line 2. Eight miles is lines 25-26, said by the mother. Nothing in lines 1-4 says he was late. Walk is true with no 'on the hill'. No 'In the window' clause remains. The hint only removes the weather option and does not coach the key.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-018-RB-02",
+      "verdict": "HOLD",
+      "holdFixed": true,
+      "reason": "The original execution faults are gone, and every execution is now true (lines 5-6, 7, 51-52, 62-64). But the unchanged walkScript is not accurate. 'Lines 62 to 64 take back the whip, the foot, the hat and the tobacco' misdescribes line 62: he 'put the whip back in its socket', and a child will read 'take back the whip' as picking it up again. The whip is also not in lines 5-7, so it is not something he undoes. 'Line 5 has him lolled back with his foot over the dashboard' also places 'over the dashboard' on line 5, when it is line 6. That is the same line fault this round corrected in the execution.",
+      "faultField": "walkScript"
+    },
+    {
+      "itemId": "ENG-018-RB-05",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Checked: 'sardonic' is at line 28, and the key 'Bitter, and making fun of her' fits line 29 cutting the child down. 'Short' is the other word in the line 28 phrase. The 'Warm' tag and execution now fit. The hint is a move. The walk has the laugh at line 28 and her words at line 29.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-026-AL-01",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "reason": "Checked: key true at lines 4-5 (stopped at the bottom gate, then again halfway up). Fifteen minutes is line 3, within span. The crate is line 21, during the digging. 'Further than he remembered' is not stated. Hint 'Line 3 gives two times' is true and does not name stopping. Walk line numbers are verified.",
+      "faultField": null
+    },
+    {
+      "itemId": "ENG-026-AL-03",
+      "verdict": "HOLD",
+      "holdFixed": true,
+      "reason": "The original fault is gone (the wholly true pairing is replaced), and the new key is true at each step (lines 10-12, 43-45). But the execution on 'The brick was too heavy for him to lift on his own' is not true of the row. A heavy brick is no reason to move the key under the brick for Alan. The child's likely use of it is a reason he does not put the key back at lock-up, and the text's real reason for that is lines 44-45 ('it would save him hunting about'), not line 11. I attested this execution in round 1 and withdraw that reading.",
+      "faultField": "execution"
+    }
+  ]
+}
