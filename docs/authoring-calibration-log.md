@@ -28844,3 +28844,34 @@ were found and cleared, including the "how much change" one round 1 created. Fou
 (maths-111 to 114) name mistakes the library had no word for. Every #63 tag that named a carry where
 none happened was corrected. Two ranks now sit exactly on their limits (second-smallest at 52, largest
 at 28), so any later change to this door must be re-measured before it is signed.
+
+## R1028 — English answer tells: the key is the one with a comma (2026-11-20)
+
+**THE QUESTION.** David: *"do the English measurement."* After vr-08, vr-16 and maths-01, the same
+question for the 345 LIVE English comprehension rows: does a surface feature pick the key without
+reading? `scripts/agent-review/measure-english-tells.ts` tests each candidate tell. A tell either picks
+one option (a unique extreme) or none, and its hits are set against chance (Σ 1/k over the rows where it
+picks). Option order is shuffled per child, so position is not a tell.
+
+**WHAT IT FOUND.**
+- **The only option with a comma is the key on 38 of 66 rows (58%, chance 24%, ×2.4)**: retrieval
+  18 of 27, inference 15 of 23. **The only two-part option** (", and" / "while" / "but") is the key on
+  20 of 39 (×2.1), and 11 of 15 in retrieval. Together they point at the key on 45 rows. The rows were
+  read before this was believed: keys are written as fuller, qualified, two-claim statements ("A
+  sprain, and no bones broken"; "his looks, and … very rich"); distractors as short single claims.
+- **Retrieval: the option sharing most words with the cited lines** is the key on 40 of 81 (49%, ×2.0).
+  Matching words to the lines is part of retrieval, but distractors that never reuse the window's
+  words make word-matching enough on its own.
+- **Inference: the longest option by words** is the key on 35 of 78 (45%, ×1.8).
+- **No strong door-wide tell** from length alone (×1.2–1.4), hedges (35 picks), absolutes (5), or
+  overlap with the stem or the whole passage (all at or below chance).
+- **Two distractors restate the stem** and can be ruled out without reading: ENG-028-PR-09 ("The traffic
+  under the boards has changed.") and ENG-007-LP-06.
+
+**THE REPAIR, NOT YET DONE.** This is a DISTRACTOR-writing fault, as in maths. The fix is on the wrong
+answers: give some of them the key's shape (two claims, a comma, words lifted from the cited lines
+with the wrong element, which `en-within-span-wrong-element` already names), and stop writing every key
+as the fuller statement. It is English item text, so under R1023 it runs drafter → independent
+reviewer → `land-proposals --from-live`, and every change travels back to Cowork in the return
+changeset. The measure is the acceptance test: no tell above ×1.5 on 30+ picks door-wide, and none
+on 10+ picks within a type.
