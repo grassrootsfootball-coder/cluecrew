@@ -28930,3 +28930,36 @@ give. Their signed proposals stay on file.
   they were.
 - The door-B reviewer asked whether visible near-twin pairs below the 0.5 threshold (AGG-04 at 0.40,
   LW-05 at 0.43) should count. That is a threshold ruling, not a row fault.
+
+## R1030 — The orderable VR doors: the generator's wrong answers give the key away (2026-11-20)
+
+**THE QUESTION.** David: *"do the number VR check."* This is R1025's maths question asked of every VR door
+whose options can be ordered: numbers by value, single letters by alphabet position.
+`scripts/agent-review/measure-vr-key-rank.ts`.
+
+**WHAT IT FOUND (LIVE practice rows):**
+| door | key rank (0 = smallest) | the shortcut |
+|---|---|---|
+| vr-14 letter connections | rank 2 on **25 of 25** | always the second-latest letter; and "H" is a distractor on every row shown, so it is never the answer |
+| vr-11 number series | 3 options: middle on **12 of 12**; 4 options: smallest on **13 of 13** | every distractor is larger than the key |
+| vr-07 letters for numbers | ranks 2–3 on **0 of 25** | the key is always one of the two smallest |
+| vr-09 letter series | ranks 0–1 on 23 of 25 | the key is almost always one of the two earliest letters |
+| vr-18 related numbers | middle on 14 of 25 | milder |
+| vr-17 complete the sum | largest on 0 of 25 | milder |
+| vr-19 word-number codes | 10/10/5 | within reason |
+
+The flag rule needs 20 rows per option count, so it missed vr-11's two perfect splits. Read the
+table, not the ✗ count.
+
+**THE CAUSE IS THE GENERATOR, NOT A ROW.** The distractors are DERIVED in code
+(`buildDerivedVrDistractors`), and every derivation lands on one side of the key. vr-11 uses
+off-by-one (+1), step applied twice, and sum of the last two, all above the key. vr-14 uses ±1 and a
+direction error that lands on a fixed letter. vr-07's operation slip and dropped term produce larger
+totals. Generating to diagnosis made each mistake PREDICTABLE IN DIRECTION, which is the house rule's
+warning about predictable distractor types, arriving through value instead of type.
+
+**THE REPAIR IS NOT DONE.** The fix is in the generator: choose derivations that fall on both sides
+(off-by-one in either direction, a wrong-direction step, under-counted terms), so each door's key-rank
+spread is near uniform. Because these rows are LIVE and reviewed, R62 applies: `content:generate`
+refuses to rewrite reviewed rows, so a generator change means re-deriving each door, re-reviewing,
+re-signing and republishing under R1021. Measure each door with this script before and after.
