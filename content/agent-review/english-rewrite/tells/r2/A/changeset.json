@@ -1,0 +1,82 @@
+{
+ "door": "english-rewrite/tells/r2/A",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "ENG-002-pp-12",
+   "passageRef": "stream-a-13-pride-prejudice",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/r2/A",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Read whole: only the key matches line 40 (two dances, Mrs Hurst and Miss Bingley). The Elizabeth, 'Every dance', 'None at all' and 'Three' options are each wrong by the text. The convergence pair is broken (closest pairs tie at 0.43). No tell points at the key after. No padding.",
+   "landedAt": "2026-11-20T20:25:16.175Z",
+   "changes": [
+    {
+     "field": "option A (cmsw2f4tv0057tmbvsa1sruh7).execution",
+     "before": "Every dance is Mr Bingley's at line 37, one line above, carried across to Mr Darcy. In the window, line 39 answers the stem: 'speak for themselves. What a contrast between him and'.",
+     "after": "Every dance belongs to Mr Bingley: line 37 says he 'danced every dance'. The child carries it across to Mr Darcy, who at lines 39 and 40 'danced only once with Mrs. Hurst and once with Miss Bingley'."
+    },
+    {
+     "field": "option C (cmsw2f4tv0059tmbv1xbzsfbj).value",
+     "before": "Two: one with Miss Bingley and one with Elizabeth Bennet.",
+     "after": "Two: once with Elizabeth Bennet and once with Miss Bingley."
+    },
+    {
+     "field": "option C (cmsw2f4tv0059tmbv1xbzsfbj).execution",
+     "before": "One name changed: Elizabeth Bennet for Mrs Hurst. Line 40 has Mr Darcy dance 'once with Mrs. Hurst and once with Miss Bingley'. Elizabeth sits out two dances at line 47, and Mr Darcy turns her down at lines 66 and 67.",
+     "after": "One name changed: Elizabeth Bennet for Mrs Hurst. Line 40 has Mr Darcy dance 'once with Mrs. Hurst and once with Miss Bingley'. Elizabeth sits down for two dances at lines 47 and 48, and Mr Darcy turns her down at lines 66 and 67."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-15",
+   "passageRef": "stream-a-13-pride-prejudice",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/r2/A",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Read whole: one defensible reason, too few gentlemen (line 47). The new standing-near option states a circumstance and not a cause, so it gives no second answer. The cited-lines overlap tell now picks a distractor. 'Not' appears on the key and on one distractor. No near-twin pair (top 0.14). Words suitable.",
+   "landedAt": "2026-11-20T20:25:16.175Z",
+   "changes": [
+    {
+     "field": "option B (cmsw2f4ty005qtmbvcxcdm3f1).value",
+     "before": "Mr Darcy had refused to dance with her.",
+     "after": "Mr Darcy was standing near enough for her to hear him."
+    },
+    {
+     "field": "option B (cmsw2f4ty005qtmbvcxcdm3f1).tag",
+     "before": "en-chronology-collapse",
+     "after": "en-within-span-wrong-element"
+    },
+    {
+     "field": "option B (cmsw2f4ty005qtmbvcxcdm3f1).execution",
+     "before": "Line 47 has Elizabeth already sitting down because there were too few gentlemen. Mr Darcy's refusal comes at lines 65 to 67, while she is sitting, so the child gives a later event as the cause of an earlier one.",
+     "after": "True of lines 48 and 49: Mr Darcy 'had been standing near enough for her to overhear a conversation' with Mr Bingley. That is what happened while she sat, not why she sat. Line 47 gives the reason: she was 'obliged, by the scarcity of gentlemen, to sit down'."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-05",
+   "passageRef": "stream-a-13-pride-prejudice",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/r2/A",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Read whole: only 'A group of people who arrive together.' fits line 21's party that 'entered' and is counted as five. Birthday, ball, political and whole-assembly senses are each ruled out by lines 21 to 22. Measure after: no near-twin pair; the only tell on the key is 'shortest (characters)', which was there before and is not failing (vocab x1.24).",
+   "landedAt": "2026-11-20T20:25:16.175Z",
+   "changes": [
+    {
+     "field": "option D (cmsw5vr56000atm8ei4ouwxc6).value",
+     "before": "A group of people who run a country together.",
+     "after": "A team that people vote for in an election."
+    },
+    {
+     "field": "option D (cmsw5vr56000atm8ei4ouwxc6).execution",
+     "before": "The political sense is a real second sense of the word and nothing in the line supports it.",
+     "after": "The political sense, a side that people vote for, is a real second sense of 'party'. Line 21 rules it out: the party 'entered the assembly-room', and lines 21 to 22 count it as 'only five altogether'."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,143 @@
+{
+ "door": "english-rewrite/tells/r2/B",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "ENG-004-AGG-12",
+   "passageRef": "stream-a-06-anne-green-gables",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/r2/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Read whole: one answer, come along and give him her bag (lines 64 to 65). The horse option is wrong only on the bag, and the waiting-room and name options are not in his speech. The near-twin pair is broken (0.60 to 0.33). The only tell on the key is longest (characters) by 2. That tell is not failing (retrieval x0.64) and no child could spot two characters.",
+   "landedAt": "2026-11-20T20:25:16.954Z",
+   "changes": [
+    {
+     "field": "option B (cmsw2f4uf008ktmbvn89tfhlo).value",
+     "before": "Come along with him, and take her own bag.",
+     "after": "Come to the horse, and take her own bag."
+    },
+    {
+     "field": "option B (cmsw2f4uf008ktmbvn89tfhlo).execution",
+     "before": "Right on 'Come along' (line 64) and wrong on one detail: lines 64 to 65 end 'Give me your bag', so Matthew asks to take the bag himself, not for her to keep it.",
+     "after": "Right on going to the horse, which line 64 says 'is over in the yard', and wrong on one detail: lines 64 to 65 end 'Give me your bag', so Matthew asks to carry the bag himself, not for her to keep it."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-010-JE-10",
+   "passageRef": "stream-a-11-jane-eyre",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/r2/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Read whole: one answer, a sprain and no broken bones (line 49). The new option is what he does, not what he says; 'do well enough' is his claim, not the matter; the shoulder is not stated. The near-twin pair is broken (0.75 to 0.00). Shortest (characters) still picks the key, as before round 2. That tell is not failing (retrieval x0.81).",
+   "landedAt": "2026-11-20T20:25:16.954Z",
+   "changes": [
+    {
+     "field": "option A (cmsw2f4vy00hmtmbva8hvsq6q).value",
+     "before": "A sprain, and some broken bones in his foot.",
+     "after": "He stood up again, and tried his foot."
+    },
+    {
+     "field": "option A (cmsw2f4vy00hmtmbva8hvsq6q).tag",
+     "before": "en-negation-dropped",
+     "after": "en-within-span-wrong-element"
+    },
+    {
+     "field": "option A (cmsw2f4vy00hmtmbva8hvsq6q).execution",
+     "before": "Line 49 says 'I have no broken bones,—only a sprain'. The sprain is right; dropping the 'no' adds broken bones he says he does not have.",
+     "after": "True of lines 49 and 50: 'again he stood up and tried his foot'. It is what he does next, not what he says is the matter, which line 49 gives as 'no broken bones,—only a sprain'."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-025-LW-05",
+   "passageRef": "stream-a-16-little-women",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/r2/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Read whole: one answer, Meg to Amy and Beth to Jo (line 28). The swap is wrong both ways, it was Jo who boxed an ear (line 29), and Jo went to the garret alone (line 30). The 1.00 twin is broken to 0.43 and no tell points at the key. Residual noted: the key and the swap remain the unique closest pair under the 0.5 line. Both are the only options that give each sister an action, which is the stem's shape rather than a copied wording.",
+   "landedAt": "2026-11-20T20:25:16.954Z",
+   "changes": [
+    {
+     "field": "option B (cmsw2f4zw0150tmbvz44i89fr).value",
+     "before": "Meg went to Jo and Beth went to Amy.",
+     "after": "Meg looked after Jo; Beth flew to save Amy."
+    },
+    {
+     "field": "option B (cmsw2f4zw0150tmbvz44i89fr).execution",
+     "before": "True of line 28 with the two of them swapped.",
+     "after": "Line 28 has 'Meg flew to rescue Amy, and Beth to pacify Jo'. This keeps both actions and swaps who did which: Meg is given Beth's calming of Jo, and Beth is given Meg's rush to Amy."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-005-BB-03",
+   "passageRef": "stream-a-04-black-beauty",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/r2/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Read whole: one answer, rising fast and a feared bad night (line 10). The low-river option is contradicted by line 10, the meadows-shut and broken-bridge options are not what he said, and the bridge comes later. The key is in no near-twin pair (it shares nothing with the others); no tell points at the key after.",
+   "landedAt": "2026-11-20T20:25:16.954Z",
+   "changes": [
+    {
+     "field": "option B (cmsw2f4ui008ztmbv20uliq9j).value",
+     "before": "It was low, and he feared a bad night.",
+     "after": "It was low, and the road was under water."
+    },
+    {
+     "field": "option B (cmsw2f4ui008ztmbv20uliq9j).execution",
+     "before": "The man said 'the river was rising fast' (line 10). Low belongs to the road in line 11, 'one low part of the road', and has been moved onto the river.",
+     "after": "The man said 'the river was rising fast' (line 10). Low belongs to the road at line 11, 'one low part of the road', and has been moved onto the river; the water on the road is the narrator's report, not what the man said about the river."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-004-AGG-04",
+   "passageRef": "stream-a-06-anne-green-gables",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/r2/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Read whole: one answer, a boy brought by Mrs Spencer (lines 17 to 18). The girl, station-man and Marilla options are each wrong by the text. The measured near-twin pair is broken (0.50 to 0.17), and shortest (characters) moved off the key. Residual noted, not new: the key and 'A boy, sent over by the man at the station.' share the frame 'A boy, sent over by' (0.40, unique closest). They are a cause-agent pair from the original authoring, below the 0.5 line.",
+   "landedAt": "2026-11-20T20:25:16.954Z",
+   "changes": [
+    {
+     "field": "option A (cmsw2f4ua007ktmbvtslp678m).value",
+     "before": "A girl, sent over by Mrs Spencer.",
+     "after": "A girl, sent from Nova Scotia."
+    },
+    {
+     "field": "option A (cmsw2f4ua007ktmbvtslp678m).execution",
+     "before": "Keeps the right person but the wrong value: line 17 says he is not expecting a girl.",
+     "after": "Line 18 has Mrs Spencer bring the boy 'over from Nova Scotia', and line 13 has a little girl waiting. The child gives the boy's journey to the girl, but line 17 has Matthew say he is 'not expecting a girl'."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-010-JE-04",
+   "passageRef": "stream-a-11-jane-eyre",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/r2/B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Read whole under lines 11 to 18: one answer, the approaching horse (lines 14 to 18). The dog comes at line 20, 'always believed every' is an extreme pull, and terror is not the 'bright and dark' fancies. The near-twin pair is broken (0.71 to 0.09), and longest (characters) moved off the key. No tell points at the key.",
+   "landedAt": "2026-11-20T20:25:16.954Z",
+   "changes": [
+    {
+     "field": "option A (cmsw2f4vt00gttmbv7wpjp25e).value",
+     "before": "A dog was coming upon her in the dusk, as in Bessie's tales.",
+     "after": "A large dog, a form of the Gytrash, approached her in the dusk."
+    },
+    {
+     "field": "option A (cmsw2f4vt00gttmbv7wpjp25e).execution",
+     "before": "The dog is real but comes later: it glides out at line 20. The Gytrash comes into her mind at lines 14 to 18, 'As this horse approached', before any dog has appeared.",
+     "after": "The dog is real but comes later: it glides out at line 20, and only then is it 'one form of Bessie’s Gytrash' (lines 21 to 22). The Gytrash comes into her mind at lines 14 to 16, 'As this horse approached', when the 'large dog' of line 16 is only a form in the tale."
+    }
+   ]
+  }
+ ]
+}

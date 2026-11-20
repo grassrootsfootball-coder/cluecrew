@@ -1,0 +1,63 @@
+{
+ "door": "english-rewrite/tells/r2/A",
+ "reviewer": "rev-agent-01",
+ "changes": [
+  {
+   "ref": "seat:cmsw5vr56000atm8ei4ouwxc6",
+   "verdict": "ATTEST",
+   "reason": "Wrong under every reading: line 21 has the party 'entered the assembly-room' and lines 21 to 22 count it as 'only five altogether', which fixes the sense decisively, so en-vocab-neighbouring-sense holds (a real political sense, ruled out only by the text). Quotes exact. Jaccard with the key falls from 0.50 to 0.14 (recomputed), so the key is no longer in a near-twin pair; no other pair reaches 0.5. Plain words, 9 words, no padding."
+  },
+  {
+   "ref": "seat:cmsw2f4tv0059tmbv1xbzsfbj",
+   "verdict": "ATTEST",
+   "reason": "Wrong: line 40 gives 'once with Mrs. Hurst and once with Miss Bingley'; Mr Darcy never dances with Elizabeth, who sits down for two dances (lines 47 to 48) and whom he turns down (lines 66 to 67). One name differs, so en-minimal-pair-skim holds. Execution facts and line numbers checked. Recomputed: the closest pairs now tie at 0.43 (this option with the 'Three' option; the key with the 'Three' option), so no unique pair counts. Reads naturally; the passage's own 'once with' is a fair trap for a word-matcher."
+  },
+  {
+   "ref": "seat:cmsw2f4ty005qtmbvcxcdm3f1",
+   "verdict": "ATTEST",
+   "reason": "Fixes the round-1 fault: it asserts no unwillingness on Mr Darcy's part, only that he stood near enough for her to hear him, which is true at lines 48 to 49 and is not a reason for sitting down under any reading (line 47 gives the reason: 'obliged, by the scarcity of gentlemen'). So en-within-span-wrong-element is right: true in the window, answers a different question. Quotes exact. It now takes the highest window overlap (0.8 against the key's 0.67), so that tell no longer points at the key; 11 words ties the longest rather than standing alone."
+  },
+  {
+   "ref": "seat:cmsw2f4v100c5tmbvgqit3fr3",
+   "verdict": "REFUSE",
+   "reason": "Wrong under every reading, the tag fits (line 26 is true and answers 'how far', not 'what happens'), and the quotes are exact. The fault is the wording: 'Far enough, she said, laughing as she said it.' says 'said' twice in seven words, and 'laughing as she said it' is not how anyone would put it. The passage has 'She said far enough, and laughed'. The clause is there to add window words ('laugh', 'said') and a second comma, and it reads contorted to a child. A plainer within-span wording with the same features would serve, e.g. 'She said that it was far enough, then laughed.' (9 words like the key, a comma, every content word from line 26 so it ties the key on window overlap, no 'and'). Please recheck the measure on the redraft."
+  },
+  {
+   "ref": "seat:cmtdflmpc000ptmf5ujf9ioc4",
+   "verdict": "REFUSE",
+   "reason": "Still wrong (line 33: 'in the Friday box'; the returns box is for named things, lines 7 to 8), the tag holds and the quotes are exact. The fault is the wording: 'Put it underneath in the returns box' leaves 'underneath' hanging with nothing to be under, which is not natural English. It was swapped in for 'low down' to cut the Jaccard with the key while keeping window overlap, so it reads as contorted to beat the measure. The same tokens in a natural order would keep every number: 'Put it in the returns box, underneath, and pushed it flat.' (11 words like the proposed seat, Jaccard 0.33 with the key, window overlap 0.83, the same as the key)."
+  },
+  {
+   "ref": "redraft:cmsw2f4tv0057tmbvsa1sruh7",
+   "verdict": "ATTEST",
+   "reason": "Staff execution only; the value and tag are unchanged. Line 37: Mr Bingley 'danced every dance'. Lines 39 to 40: Mr Darcy 'danced only once with Mrs. Hurst and once with Miss Bingley'. Quotes exact. It fixes the round-1 note: the old execution quoted a line-39 fragment that did not answer the stem. en-attribute-transfer is right."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "ENG-002-pp-05",
+   "verdict": "SIGN",
+   "reason": "Read whole: only 'A group of people who arrive together.' fits line 21's party that 'entered' and is counted as five. Birthday, ball, political and whole-assembly senses are each ruled out by lines 21 to 22. Measure after: no near-twin pair; the only tell on the key is 'shortest (characters)', which was there before and is not failing (vocab x1.24)."
+  },
+  {
+   "itemId": "ENG-002-pp-12",
+   "verdict": "SIGN",
+   "reason": "Read whole: only the key matches line 40 (two dances, Mrs Hurst and Miss Bingley). The Elizabeth, 'Every dance', 'None at all' and 'Three' options are each wrong by the text. The convergence pair is broken (closest pairs tie at 0.43). No tell points at the key after. No padding."
+  },
+  {
+   "itemId": "ENG-002-pp-15",
+   "verdict": "SIGN",
+   "reason": "Read whole: one defensible reason, too few gentlemen (line 47). The new standing-near option states a circumstance and not a cause, so it gives no second answer. The cited-lines overlap tell now picks a distractor. 'Not' appears on the key and on one distractor. No near-twin pair (top 0.14). Words suitable."
+  },
+  {
+   "itemId": "ENG-007-LP-04",
+   "verdict": "HOLD",
+   "reason": "The only change on this row is refused for contorted wording. Without it, the key is still the only option with a comma and the unique top on cited-line and whole-passage overlap, so all three tells in tellsPointingAtKey still point at the key. Otherwise the row has one answer. A plain within-span redraft can sign."
+  },
+  {
+   "itemId": "ENG-007-LP-15",
+   "verdict": "HOLD",
+   "reason": "The only change on this row is refused for its wording ('Put it underneath in the returns box'). Without it, the key and the returns-box option stay the unique closest pair at 0.50, so keyInClosestNearTwinPair is unbroken. Otherwise the row has one answer. The reordered wording in the seat reason keeps every measured number and can sign."
+  }
+ ]
+}

@@ -28875,3 +28875,58 @@ as the fuller statement. It is English item text, so under R1023 it runs drafter
 reviewer → `land-proposals --from-live`, and every change travels back to Cowork in the return
 changeset. The measure is the acceptance test: no tell above ×1.5 on 30+ picks door-wide, and none
 on 10+ picks within a type.
+
+## R1029 — The English answer tells repaired, and what the repair taught the measure (David, 2026-11-20)
+
+**THE INSTRUCTION.** David, on R1028: *"Yes, repair them."*
+
+**THE REPAIR.** Two rounds under R1021/R1023: four drafters by passage group, independent reviewers, and
+`land-proposals --from-live`, so only rows that land leave service. **105 LIVE English rows changed**;
+141 changes attested and 15 refused. Every change is in the return changeset to Cowork, with its before
+value (`english-rewrite-return`, now 314 rows / 801 field changes across R1023–R1029). The method: on each
+row, one DISTRACTOR takes the key's surface shape (a comma, two claims, its length, words from the cited
+lines), aiming for a tie. No key was reworded except ENG-001-WIW-06, which was rebuilt and signed.
+
+**RESULT, measured on the live store** (345 comprehension rows):
+
+| tell | before | after |
+|---|---|---|
+| only option with a comma | 38 of 66, x2.38 | 5 of 35, x0.60 |
+| only two-part option | 20 of 39, x2.14 | 5 of 27, x0.77 |
+| longest (words) | x1.38 (inference x1.84) | x0.54 |
+| most words shared with the cited lines, retrieval | 40 of 81, x2.02 | under x1.5 |
+| key in the closest near-twin pair | 21 of 22 (retrieval 17 of 17) | 3 of 5, x1.20 |
+| distractors restating the stem | 2 rows | 0 |
+
+**WHAT THE REPAIR TAUGHT THE MEASURE. Three faults were found only by running it on a repair.**
+1. **A one-sided target lets a repair FLIP a tell rather than remove it.** Round 1 as drafted met "nothing
+   above x1.5" while making the comma option the key on 0 of 30 rows: "never the comma" is a tell too.
+   The target is now two-sided for SURFACE tells (x0.5–1.5). It stays one-sided for CONTENT tells
+   (overlap with the lines, passage or stem), because ruling out an option the text does not support is
+   reading. The ORIGINAL authoring already had that (an option sharing no words with the cited lines
+   was the retrieval key 1 time in 77).
+2. **A tie-based repair manufactures CONVERGENCE.** Giving a distractor the key's words makes a near-twin
+   pair, and "the answer is one of the two nearly identical options" halves the choice. The door-C
+   reviewer named this before any measure could. It is now a tell (chance 2/k, the pair must be unique
+   and share half its content words). Round 1 had raised it from 14/14 to 17/17 in retrieval; round 2
+   broke it.
+3. **Two distractors written to beat the measure were refused on sight**: an emphatic "does save" to win a
+   stemmed word count, and a lifted phrase to win overlap. A measure that drafters iterate against
+   becomes a target. The reviewer reading the row as a child is the guard, and the 15 refusals are
+   where it acted.
+
+**BALANCE BY WITHHOLDING, NOT AUTHORING.** Where landing every signed row would push a surface tell below
+x0.5, the fewest signed rows were WITHHELD and left LIVE as already reviewed (13 in round 1, 4 in round
+2; lists in `tells/withheld-for-balance.json` and `tells/r2/withheld-for-balance.json`). A withheld row
+is a correct row that keeps the key as the unique comma or longest option, at the rate chance would
+give. Their signed proposals stay on file.
+
+**STILL OUTSIDE THE BAND, NAMED.**
+- Inference "longest (words)" x0.44 and "only two-part" x0.43 (1 of 10): mild elimination tells.
+  Ruling the longest option out takes a guess from 25% to about 30%.
+- Three technique tells (shortest x0.10, only-without-comma, only one-part). These were in the original
+  authoring; a technique key ("the writer shows X by Y") is structurally the fullest option.
+- Rows held with a reviewer's fix on file (LP-04, LP-15, BB-01, CR-08, HD-11, RR-04, TM-09) stay LIVE as
+  they were.
+- The door-B reviewer asked whether visible near-twin pairs below the 0.5 threshold (AGG-04 at 0.40,
+  LW-05 at 0.43) should count. That is a threshold ruling, not a row fault.

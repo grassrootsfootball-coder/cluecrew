@@ -1,0 +1,103 @@
+{
+ "door": "english-rewrite/tells/r2/B",
+ "reviewer": "rev-agent-01",
+ "changes": [
+  {
+   "ref": "rebuild:ENG-001-WIW-06",
+   "verdict": "ATTEST",
+   "reason": "Fixes the named fault: the key is no longer lifted verbatim from lines 14 to 15. New key 'In the warm grass of a big field.' is correct: line 15 has him 'rolling in the warm grass of a great meadow', and a great meadow is a big grassy field. It is the only correct option. The bank (line 36), the boat (line 60) and the carriage-drive (line 10, a comparison) are elsewhere. The far hedge is reached only after he 'pursued his way across the meadow' (lines 20 to 21), not when his snout came out. Diffed against the stored row: the stem (all three keys), lineRefs, ids, isKey and the other three options' values, tags and executions are unchanged; only the key value and the hedge value and execution change. The hedge quote is exact. The hedge option's en-wrong-scope-retrieval tag is right. Recomputed: the key and hedge tie on window overlap (0.5) and words (8); the key no longer leads on any tell; no near-twin pair (all 0.00). The walk script ('So he comes up in the meadow ... the hedge and river later') still matches."
+  },
+  {
+   "ref": "seat:cmsw2f4ua007ktmbvtslp678m",
+   "verdict": "ATTEST",
+   "reason": "Wrong under every reading: line 17, 'I'm not expecting a girl', and 'It's a boy I've come for'. en-attribute-transfer holds: Nova Scotia belongs to the boy Mrs Spencer was to bring (line 18). The passage never says the girl came from there; line 21 says only 'an orphan asylum'. Quotes exact. Jaccard with the key falls from 0.50 to 0.17, so the girl option is no longer the key's twin. It keeps a comma, so the key is not the only option with one."
+  },
+  {
+   "ref": "seat:cmsw2f4uf008ktmbvn89tfhlo",
+   "verdict": "ATTEST",
+   "reason": "Wrong: lines 64 to 65 end 'Give me your bag', so she does not keep it. 'Come to the horse' is a fair reading of 'Come along. The horse is over in the yard.' (line 64), so only one detail is wrong and en-minimal-pair-skim holds. Quotes exact. Jaccard with the key falls from 0.60 to 0.33. It ties the key on words (9), comma and two-part. The key is now uniquely longest in characters by 2 (42 against 40). That tell is at x0.64 in retrieval, so this one pick is not a giveaway; noted, not held."
+  },
+  {
+   "ref": "seat:cmsw2f4ug008rtmbvg5j0st6p",
+   "verdict": "REFUSE",
+   "reason": "Wrong (line 3: 'it was so light'), and the tag broadly holds. The fault is the wording: 'The dog-cart was very heavy, and its wheels ran along.' cuts 'pleasantly' to get under the twin threshold, and leaves 'its wheels ran along', which reads as a sentence with its last word missing. It is not a reason anyone would give for liking a cart. 'Very' and 'dog-' then pad it back to the key's 54 characters. A child reads that as contorted. A natural wording keeps the numbers: 'The cart was heavy, and the high wheels ran pleasantly.' (10 words like the key, window overlap 0.83 = the key's, Jaccard 0.33 with the key, comma and two-part kept; it is longest by one character, on a distractor)."
+  },
+  {
+   "ref": "seat:cmsw2f4ui008ztmbv20uliq9j",
+   "verdict": "ATTEST",
+   "reason": "Wrong: line 10, the man said 'the river was rising fast'. 'Low' belongs to the road ('one low part of the road', line 11), so en-attribute-transfer holds. The road water is the narrator's report, not what the man said about the river. Quotes exact. It no longer shares 'he feared a bad night' with the key (0.00). Recomputed, the closest pair is now two distractors at 0.14. It ties the key on window overlap, comma and two-part. Natural wording."
+  },
+  {
+   "ref": "seat:cmsw2f4vt00gttmbv7wpjp25e",
+   "verdict": "ATTEST",
+   "reason": "Order rechecked. The Gytrash comes into her mind at lines 14 to 15 ('As this horse approached', 'I remembered certain of Bessie's tales'). Within the stem's lines 11 to 18 the 'large dog' is only a form in the tale (line 16). The real dog glides out at line 20 and is 'one form of Bessie's Gytrash' at lines 21 to 22, after the memory. So the option is wrong, and en-chronology-collapse names the mistake. Quotes exact, including the curly apostrophe. Jaccard with the key falls from 0.71 to 0.09. Natural, not padded: 13 words, the same as the key."
+  },
+  {
+   "ref": "seat:cmsw2f4vy00hmtmbva8hvsq6q",
+   "verdict": "ATTEST",
+   "reason": "Wrong: the stem asks what he SAYS is the matter, and standing up and trying his foot (lines 49 to 50) is what he does. No reading makes it his account of the injury. The retag to en-within-span-wrong-element is right: true in the window, answers a different question. Quotes exact ('again he stood up and tried his foot'; 'no broken bones,—only a sprain'). The note's reason is honest: any negation-dropped wording of this three-word key stays its twin. It shares no word with the key (0.00); it ties on comma and two-part."
+  },
+  {
+   "ref": "seat:cmsw2f4xu00sttmbv8g015a78",
+   "verdict": "REFUSE",
+   "reason": "Wrong (line 36 'in a low voice'; line 37 'could not have heard'), the tag holds and the quotes are exact. The fault is that this wording builds a NEW near-twin of the key. 'In a loud voice that Miss Jenkyns could not possibly miss.' against 'In a low voice that Miss Jenkyns probably could not hear.' is the same eleven-word frame with three swaps (low/loud, probably/possibly, hear/miss), and low against loud is an opposite pair. The measure misses it because the shared words are mostly stop-words: content Jaccard is 0.38, but it is the unique closest pair and it holds the key. Over all words it is 0.62. As the child meets the row, 'the answer is one of the two nearly identical options' now works here. That convergence is what round 2 exists to remove, and before round 2 this row had no such pair (0.22). Carry the 'not' and the window words without copying the key's 'In a ... voice that Miss Jenkyns ... could not' frame. Or give that frame to a second distractor too, so no unique closest pair holds the key. Avoid a comma, or the key becomes the only option without one."
+  },
+  {
+   "ref": "seat:cmsw2f4xu00sutmbv7madxw37",
+   "verdict": "ATTEST",
+   "reason": "Fixes the round-1 fault. 'Angrily' had support at lines 15 to 16 and 32 to 33. 'Pleading' has none for the Rambler question, a quiet retort to her 'finishing blow' (lines 33 to 36). He pleads at line 20 ('pleaded he'), when he asks to read her a scene. So en-wrong-scope-retrieval is right and the option is wrong under every reading. Quotes exact. Natural wording; 'pleading' is known at this age. No near-twin with any option (top 0.14)."
+  },
+  {
+   "ref": "seat:cmsw2f4zw0150tmbvz44i89fr",
+   "verdict": "ATTEST",
+   "reason": "Wrong under every reading: line 28, 'Meg flew to rescue Amy, and Beth to pacify Jo'. This option swaps who did which, so en-attribute-transfer holds. Quote exact. Jaccard with the key falls from 1.00 to 0.43. The semicolon joins two parallel clauses correctly and reads naturally (Year 6 punctuation), and 'looked after' is a fair child word for pacify in the wrong place. No comma or second 'and', so no comma or two-part tell is created. Residual noted: the key and this option are still the unique closest pair, below the 0.5 line."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "ENG-001-WIW-06",
+   "verdict": "SIGN",
+   "reason": "Read whole as rebuilt: one answer, the meadow grass (line 15), now in the child's own words, while the far-hedge option carries the passage's 'great meadow' as a trap. Longest (words) and cited-line overlap no longer pick the key (measure with --after). No new tell on the key; no near-twin pair. Words suitable."
+  },
+  {
+   "itemId": "ENG-004-AGG-04",
+   "verdict": "SIGN",
+   "reason": "Read whole: one answer, a boy brought by Mrs Spencer (lines 17 to 18). The girl, station-man and Marilla options are each wrong by the text. The measured near-twin pair is broken (0.50 to 0.17), and shortest (characters) moved off the key. Residual noted, not new: the key and 'A boy, sent over by the man at the station.' share the frame 'A boy, sent over by' (0.40, unique closest). They are a cause-agent pair from the original authoring, below the 0.5 line."
+  },
+  {
+   "itemId": "ENG-004-AGG-12",
+   "verdict": "SIGN",
+   "reason": "Read whole: one answer, come along and give him her bag (lines 64 to 65). The horse option is wrong only on the bag, and the waiting-room and name options are not in his speech. The near-twin pair is broken (0.60 to 0.33). The only tell on the key is longest (characters) by 2. That tell is not failing (retrieval x0.64) and no child could spot two characters."
+  },
+  {
+   "itemId": "ENG-005-BB-01",
+   "verdict": "HOLD",
+   "reason": "The only change on this row is refused for contorted wording. Without it, the key and the heavy-cart option stay the unique closest pair at 0.50, so keyInClosestNearTwinPair is unbroken. Otherwise the row has one answer. The wording in the seat reason keeps every measured tie and can sign."
+  },
+  {
+   "itemId": "ENG-005-BB-03",
+   "verdict": "SIGN",
+   "reason": "Read whole: one answer, rising fast and a feared bad night (line 10). The low-river option is contradicted by line 10, the meadows-shut and broken-bridge options are not what he said, and the bridge comes later. The key is in no near-twin pair (it shares nothing with the others); no tell points at the key after."
+  },
+  {
+   "itemId": "ENG-010-JE-04",
+   "verdict": "SIGN",
+   "reason": "Read whole under lines 11 to 18: one answer, the approaching horse (lines 14 to 18). The dog comes at line 20, 'always believed every' is an extreme pull, and terror is not the 'bright and dark' fancies. The near-twin pair is broken (0.71 to 0.09), and longest (characters) moved off the key. No tell points at the key."
+  },
+  {
+   "itemId": "ENG-010-JE-10",
+   "verdict": "SIGN",
+   "reason": "Read whole: one answer, a sprain and no broken bones (line 49). The new option is what he does, not what he says; 'do well enough' is his claim, not the matter; the shoulder is not stated. The near-twin pair is broken (0.75 to 0.00). Shortest (characters) still picks the key, as before round 2. That tell is not failing (retrieval x0.81)."
+  },
+  {
+   "itemId": "ENG-017-CR-08",
+   "verdict": "HOLD",
+   "reason": "The pleading seat is good, but the loud-voice seat is refused because it makes a new near-twin of the key ('In a lo_ voice that Miss Jenkyns ... could not ...', an opposite pair). A child can then narrow the row to two. Without that seat the key is again the only option with 'not' and the only hedged one, and it is unique top on cited-line overlap, so tellsPointingAtKey is not cleared. One answer otherwise ('in a low voice', line 36)."
+  },
+  {
+   "itemId": "ENG-025-LW-05",
+   "verdict": "SIGN",
+   "reason": "Read whole: one answer, Meg to Amy and Beth to Jo (line 28). The swap is wrong both ways, it was Jo who boxed an ear (line 29), and Jo went to the garret alone (line 30). The 1.00 twin is broken to 0.43 and no tell points at the key. Residual noted: the key and the swap remain the unique closest pair under the 0.5 line. Both are the only options that give each sister an action, which is the stem's shape rather than a copied wording."
+  }
+ ]
+}

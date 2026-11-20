@@ -1,0 +1,214 @@
+{
+ "door": "english-rewrite/tells/r2/C",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "ENG-006-TM-05",
+   "passageRef": "stream-a-10-three-men-boat",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/r2/C",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One defensible answer (the handkerchief, lines 20-21). The near-twin pair no longer holds the key. Longest by characters still picks the key (76 vs 70); that tell is not failing (x0.78 door-wide) and the round-1 reviewer accepted it. No new giveaway.",
+   "landedAt": "2026-11-20T20:25:17.743Z",
+   "changes": [
+    {
+     "field": "option D (cmsw2f4ut00aztmbvtut0vrwb).value",
+     "before": "Because his tools are in the coat, and nobody knows where the coat is.",
+     "after": "Because his tools are in his coat pocket, and he has put it somewhere."
+    },
+    {
+     "field": "option D (cmsw2f4ut00aztmbvtut0vrwb).execution",
+     "before": "Lines 20 and 21 put the handkerchief in the pocket of the coat he had taken off. The tools are what the house leaves off looking for at line 22; the child moves the coat pocket from the handkerchief to the tools.",
+     "after": "Lines 20 and 21 put the handkerchief in the pocket of the coat he had taken off, and lines 21 and 22 say he did not know where he had put the coat. The tools are what the house leaves off looking for at line 22; the child moves the pocket from the handkerchief to the tools."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-008-RC-05",
+   "passageRef": "stream-a-02-railway-children",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/r2/C",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One defensible answer (lines 21-22: ash-tray for salt, baking-tin for bread), every distractor wrong, and the near-twin pair is gone. Longest by characters now picks the key (54 vs 48). That is not failing (x0.78). For the author: the row no longer carries the object-swap trap that its hint ('Check which goes with which') and walk script are built around. The hint is still true and still helps, but the row is easier than it was.",
+   "landedAt": "2026-11-20T20:25:17.743Z",
+   "changes": [
+    {
+     "field": "option B (cmsw2f4va00dptmbvl6k07a72).value",
+     "before": "A baking-tin for salt, and a glass ash-tray for bread.",
+     "after": "They light the fire, and then put the kettle on."
+    },
+    {
+     "field": "option B (cmsw2f4va00dptmbvl6k07a72).tag",
+     "before": "en-attribute-transfer",
+     "after": "en-within-span-wrong-element"
+    },
+    {
+     "field": "option B (cmsw2f4va00dptmbvl6k07a72).execution",
+     "before": "Both objects sit in lines 21 and 22, with their jobs the other way round.",
+     "after": "True at line 20, where they light the fire and put the kettle on before arranging the crockery for breakfast. It is what they do, not what they use for the table; lines 21 and 22 give the glass ash-tray for salt and the baking-tin for bread."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-008-RC-09",
+   "passageRef": "stream-a-02-railway-children",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/r2/C",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One defensible answer (line 54: her son-in-law). The twin pair is broken and no failing tell picks the key. Naming Mrs Viney makes it the stem-overlap option, which is not a failing tell.",
+   "landedAt": "2026-11-20T20:25:17.743Z",
+   "changes": [
+    {
+     "field": "option A (cmsw2f4vd00e7tmbv8hc6zol4).value",
+     "before": "She had broken her own arm.",
+     "after": "Mrs Viney had broken her own arm."
+    },
+    {
+     "field": "option A (cmsw2f4vd00e7tmbv8hc6zol4).execution",
+     "before": "Line 54 names her son-in-law as the one with the broken arm.",
+     "after": "Lines 54 and 55 give the broken arm to her son-in-law, not to Mrs Viney. The child keeps the right event, a broken arm, and gives it to the wrong person, the one who left the note."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-006-TM-02",
+   "passageRef": "stream-a-10-three-men-boat",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/r2/C",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Read whole: one defensible answer (lines 8-9: girl for nails, then a boy after her), every distractor wrong. No tell points at the key in the measure after, and the near-twin pair is gone. No new giveaway.",
+   "landedAt": "2026-11-20T20:25:17.743Z",
+   "changes": [
+    {
+     "field": "option D (cmsw2f4ur00aktmbv48ymj7ni).value",
+     "before": "Sends the girl out for nails, then he goes after her.",
+     "after": "Goes after the girl, to tell her which size to get."
+    },
+    {
+     "field": "option D (cmsw2f4ur00aktmbv48ymj7ni).execution",
+     "before": "Takes the right sentence but the wrong second half. Line 9 has him send one of the boys after her to tell her what size to get; he does not go after her himself.",
+     "after": "Gives the right errand to the wrong person. Line 9 has him send one of the boys after the girl to tell her what size to get; Uncle Podger does not go after her himself. It also skips what he does first at lines 8 and 9, sending the girl out for nails."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-019-BV-04",
+   "passageRef": "stream-a-20-bevis",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/r2/C",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One defensible answer (made-up example first, then something Mark really did). The twin pair is broken and longest words is tied. Fewest window words still picks the key: it did so before this round, and the tell is not failing in technique (x1.27). The hint's 'joins ... with an and' still names exactly one option.",
+   "landedAt": "2026-11-20T20:25:17.743Z",
+   "changes": [
+    {
+     "field": "option B (cmsw2f4y800v5tmbvnhtb00h5).value",
+     "before": "First he uses it on Mark running ahead, but then on a made-up example.",
+     "after": "First he uses it on Mark running ahead, but then on an imaginary elephant hunt."
+    },
+    {
+     "field": "option B (cmsw2f4y800v5tmbvnhtb00h5).tag",
+     "before": "en-chronology-collapse",
+     "after": "en-minimal-pair-skim"
+    },
+    {
+     "field": "option B (cmsw2f4y800v5tmbvnhtb00h5).execution",
+     "before": "Both events are real, in the wrong order. The made-up elephant example is at lines 10 to 17; Mark runs ahead later, from line 30, and the rule about that comes at line 87.",
+     "after": "Both uses are real, in the wrong order. The imaginary elephant hunt is the made-up example at lines 10 to 17. Mark gets ahead from line 30, and Bevis turns the rule on that at lines 85 to 88. Only the order differs from the text, so retagged from en-chronology-collapse, which needs a later cause for an earlier effect."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-012-ML-05",
+   "passageRef": "stream-a-14-mill-on-floss",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/r2/C",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One defensible answer (lines 18-19: Tom knows it is apricot roll-up). The twin pair is broken. The distractor names the right pudding with the wrong knower, as the stored value did, and is decidable from line 16. No failing tell picks the key.",
+   "landedAt": "2026-11-20T20:25:17.743Z",
+   "changes": [
+    {
+     "field": "option C (cmsw2f4we00k9tmbvywx31ngm).value",
+     "before": "The pudding, which Maggie has guessed will be apricot roll-up.",
+     "after": "Apricot roll-up, which is what Maggie has guessed."
+    },
+    {
+     "field": "option C (cmsw2f4we00k9tmbvywx31ngm).execution",
+     "before": "Swaps who knows. At line 16 Maggie guesses the tipsy-cake; at line 18 it is Tom who says he knows what the pudding is to be.",
+     "after": "Swaps who knows. Maggie's guess at line 16 is the tipsy-cake, which Tom turns down; at lines 18 and 19 it is Tom who says he knows what the pudding is to be, apricot roll-up."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-011-CV-05",
+   "passageRef": "stream-a-07-canterville-ghost",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/r2/C",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One defensible answer (lines 13-14: Mrs Otis consented at Lady Canterville's request). The twin pair is broken; cited-line and passage overlap now pick this distractor, which is not a failing tell. No new giveaway.",
+   "landedAt": "2026-11-20T20:25:17.743Z",
+   "changes": [
+    {
+     "field": "option B (cmsw2f4w400iltmbvqnj967s3).value",
+     "before": "Lady Canterville agreed to Mrs Otis's earnest request.",
+     "after": "Mrs Otis made an earnest request and Lady Canterville consented."
+    },
+    {
+     "field": "option B (cmsw2f4w400iltmbvqnj967s3).execution",
+     "before": "Line 14 runs the other way: the request is Lady Canterville's.",
+     "after": "Lines 13 and 14 run the other way: the earnest request is Lady Canterville's, and it is Mrs Otis who consented to keep Mrs Umney in her former position. The child swaps who asked and who agreed."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-012-ML-03",
+   "passageRef": "stream-a-14-mill-on-floss",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/r2/C",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One defensible answer (lines 7-10: she asks about running away; he says no). The closest pair is now two distractors. 'Not' stays tied with the reversal option. Fewest window words picks the key, which is far under chance in retrieval. No new giveaway.",
+   "landedAt": "2026-11-20T20:25:17.743Z",
+   "changes": [
+    {
+     "field": "option A (cmsw2f4wc00jxtmbvobcp1lyy).value",
+     "before": "Whether he will run away tomorrow; he says he will.",
+     "after": "Maggie asks whether Tom will run away; he says he will."
+    },
+    {
+     "field": "option A (cmsw2f4wc00jxtmbvobcp1lyy).execution",
+     "before": "Line 10 says no, I sha'n't, and this option loses that.",
+     "after": "The option has Maggie ask the question of lines 7 and 8, but at lines 9 and 10 Tom answers no, and says it twice. The option keeps the content words of his answer and drops the no, so he says he will."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-011-CV-03",
+   "passageRef": "stream-a-07-canterville-ghost",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/r2/C",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One defensible answer (lines 5-7: squirrels peer, rabbits scud away). The twin pair is broken; window overlap stays tied with the pheasant option. No failing tell picks the key.",
+   "landedAt": "2026-11-20T20:25:17.743Z",
+   "changes": [
+    {
+     "field": "option A (cmsw2f4w200iatmbvz9in5dg2).value",
+     "before": "The rabbits peer and the squirrels run away.",
+     "after": "The rabbits look and the squirrels dash off."
+    },
+    {
+     "field": "option A (cmsw2f4w200iatmbvz9in5dg2).execution",
+     "before": "Lines 5 and 6 run the other way round: squirrels peer, rabbits scud away.",
+     "after": "Swaps which animal does which. Lines 5 to 7 have the squirrels peer at them from the beech-trees and the rabbits scud away through the brushwood. This option gives the looking to the rabbits and the running to the squirrels."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "door": "english-rewrite/tells/r2/D",
+ "reviewer": "rev-agent-01",
+ "changes": [
+  {
+   "ref": "seat:cmsw2f4vh00ewtmbve513loln",
+   "verdict": "ATTEST",
+   "reason": "Wrong under every reading: lines 4-5 say 'Twice I had got as far as the caravan park'; Saltmere is where he has meant to walk for four years. Saltmere in place of the caravan park is the one-detail mistake of en-minimal-pair-skim, the same mistake as the stored value. Execution checked. The fronted 'Twice,' is natural narrative English. It breaks the twin with the key (measure after: no key in the closest pair)."
+  },
+  {
+   "ref": "seat:cmsw2f4yo00xrtmbv14jogp6s",
+   "verdict": "REFUSE",
+   "reason": "The value, the tag and the execution are sound. Line 44 is unambiguous ('after wrapping a handkerchief round it, she stuck it'), and the retag to en-minimal-pair-skim is the one round 1 asked for. The fault is a FLIP where the brief asks for a tie. At 16 words against the key's 15 (80 characters against 76), this distractor is now the unique longest in words and in characters; the measure after shows both moving from key to distractor. Longest (words) in en-comp-retrieval is a FAILING elimination tell once C and D land (5 of 63, x0.32), and this row adds a distractor pick to it. That is the reverse length tell round 2 forbids. The note's reason, that 15 words needs a comma or dropping 'then', is not true: 'She sticks it in the cupboard's back corner and then puts a handkerchief round it.' is 15 words, has no comma, keeps 'then' and the window words. Treat that as a starting point and re-measure it."
+  },
+  {
+   "ref": "seat:cmsw2f50g0186tmbvlu1doc06",
+   "verdict": "REFUSE",
+   "reason": "On its own the seat is sound. Lines 15-16 say she spoke 'taking great care that I should hear', so 'does not care if he hears her' is contradicted, en-contradicted-by-the-text fits, and the execution is true. On this row it makes two faults. (1) The row's hint is 'One of these is about the way she spoke.' Two options would now be about how she spoke (this one and 'took great care he would hear her'), so the hint states a false count. The hint is Cowork's text and this door cannot change it. (2) It removes the only other option about the pictures. Three distractors would then open 'That she...' and the key alone opens 'That the pictures...', so the key is the odd one out in subject and frame. A child can pick it without reading line 15. Break the twin and the lone 'not' with a distractor about the PICTURES that does not share most of the key's content words (for example one where the pictures make him look too handsome). Put the 'not' on that option or another, and check that it stays wrong under every reading. 'Aren't handsome enough' means he is better-looking than his pictures, so any 'he looks better than his pictures' wording is the KEY."
+  },
+  {
+   "ref": "seat:cmsw2f50u01aftmbvzuuaesat",
+   "verdict": "ATTEST",
+   "reason": "Round-1 fault fixed: 'still' is dropped, so the option no longer denies the change the stem assumes, and a child must read to rule it out. True at lines 6-7 ('as regular as buses. Two go in. One comes out.'). It is not lines 34-36, where more are out and going nowhere in particular, so it is en-wrong-scope-retrieval. Execution facts checked. It replaces the stem-restating distractor (measure after: 0 restating rows) and ties the key on comma, two-part and 11 words."
+  },
+  {
+   "ref": "redraft:cmsw2f50u01ahtmbvdktbe0tp",
+   "verdict": "ATTEST",
+   "reason": "Stored value and tag unchanged. The execution is now 40+ characters and true: line 36 keeps them 'turning over the same square of air above the guttering', and line 34 has Priya look at the roofline. Calling the guttering 'by the roofline' is a fair staff-facing gloss."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "ENG-009-SM-02",
+   "verdict": "SIGN",
+   "reason": "One defensible answer (lines 4-5: twice as far as the caravan park), every distractor wrong. The twin pair is gone and no failing tell picks the key. Three options name Saltmere, as before this round, and the stem names Saltmere, so that pattern draws children AWAY from the key rather than to it."
+  },
+  {
+   "itemId": "ENG-020-HD-11",
+   "verdict": "HOLD",
+   "reason": "Its only seat is refused. The order-swap distractor is right in content and tag, but at 16 words against 15 it flips the length tell onto a distractor instead of tying it. That feeds longest (words), which is a failing elimination tell in retrieval once C and D land. A comma-free 15-word wording exists (see the seat). Re-propose that and the row signs."
+  },
+  {
+   "itemId": "ENG-027-RR-04",
+   "verdict": "HOLD",
+   "reason": "Its only seat is refused. With it, the hint 'One of these is about the way she spoke' becomes false, because two options would be about her manner. The key would also be the only option about the pictures and the only one not opening 'That she...', which is an odd-one-out giveaway. The near-twin and 'not' tells must be broken by an option about the pictures that is not the key's twin."
+  },
+  {
+   "itemId": "ENG-028-PR-09",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "reason": "Round-1 hold fixed exactly as ruled ('still' dropped). One defensible answer (lines 35-36: more out, circling one patch of air). The stem-restating distractor is gone. Comma, two-part and longest words no longer single out the key; longest by characters still does (53 vs 50), as before, and is not failing. 'Priya is looking past his shoulder' still falls to the stem. Round 1 accepted that and the hint targets it."
+  }
+ ]
+}

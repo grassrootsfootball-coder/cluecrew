@@ -1,0 +1,56 @@
+{
+ "door": "english-rewrite/tells/r2/B",
+ "mode": "APPLIED",
+ "landed": [
+  "ENG-004-AGG-12",
+  "ENG-010-JE-10",
+  "ENG-025-LW-05",
+  "ENG-005-BB-03",
+  "ENG-004-AGG-04",
+  "ENG-010-JE-04"
+ ],
+ "held": [
+  {
+   "itemId": "ENG-001-WIW-06",
+   "gateFaults": [],
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-001-WIW-06",
+    "verdict": "SIGN",
+    "reason": "Read whole as rebuilt: one answer, the meadow grass (line 15), now in the child's own words, while the far-hedge option carries the passage's 'great meadow' as a trap. Longest (words) and cited-line overlap no longer pick the key (measure with --after). No new tell on the key; no near-twin pair. Words suitable."
+   }
+  },
+  {
+   "itemId": "ENG-005-BB-01",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "seat:cmsw2f4ug008rtmbvg5j0st6p",
+     "verdict": "REFUSE",
+     "reason": "Wrong (line 3: 'it was so light'), and the tag broadly holds. The fault is the wording: 'The dog-cart was very heavy, and its wheels ran along.' cuts 'pleasantly' to get under the twin threshold, and leaves 'its wheels ran along', which reads as a sentence with its last word missing. It is not a reason anyone would give for liking a cart. 'Very' and 'dog-' then pad it back to the key's 54 characters. A child reads that as contorted. A natural wording keeps the numbers: 'The cart was heavy, and the high wheels ran pleasantly.' (10 words like the key, window overlap 0.83 = the key's, Jaccard 0.33 with the key, comma and two-part kept; it is longest by one character, on a distractor)."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-005-BB-01",
+    "verdict": "HOLD",
+    "reason": "The only change on this row is refused for contorted wording. Without it, the key and the heavy-cart option stay the unique closest pair at 0.50, so keyInClosestNearTwinPair is unbroken. Otherwise the row has one answer. The wording in the seat reason keeps every measured tie and can sign."
+   }
+  },
+  {
+   "itemId": "ENG-017-CR-08",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "seat:cmsw2f4xu00sttmbv8g015a78",
+     "verdict": "REFUSE",
+     "reason": "Wrong (line 36 'in a low voice'; line 37 'could not have heard'), the tag holds and the quotes are exact. The fault is that this wording builds a NEW near-twin of the key. 'In a loud voice that Miss Jenkyns could not possibly miss.' against 'In a low voice that Miss Jenkyns probably could not hear.' is the same eleven-word frame with three swaps (low/loud, probably/possibly, hear/miss), and low against loud is an opposite pair. The measure misses it because the shared words are mostly stop-words: content Jaccard is 0.38, but it is the unique closest pair and it holds the key. Over all words it is 0.62. As the child meets the row, 'the answer is one of the two nearly identical options' now works here. That convergence is what round 2 exists to remove, and before round 2 this row had no such pair (0.22). Carry the 'not' and the window words without copying the key's 'In a ... voice that Miss Jenkyns ... could not' frame. Or give that frame to a second distractor too, so no unique closest pair holds the key. Avoid a comma, or the key becomes the only option without one."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-017-CR-08",
+    "verdict": "HOLD",
+    "reason": "The pleading seat is good, but the loud-voice seat is refused because it makes a new near-twin of the key ('In a lo_ voice that Miss Jenkyns ... could not ...', an opposite pair). A child can then narrow the row to two. Without that seat the key is again the only option with 'not' and the only hedged one, and it is unique top on cited-line overlap, so tellsPointingAtKey is not cleared. One answer otherwise ('in a low voice', line 36)."
+   }
+  }
+ ]
+}

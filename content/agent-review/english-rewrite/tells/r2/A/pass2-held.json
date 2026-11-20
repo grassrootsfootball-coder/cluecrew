@@ -1,0 +1,43 @@
+{
+ "door": "english-rewrite/tells/r2/A",
+ "mode": "APPLIED",
+ "landed": [
+  "ENG-002-pp-12",
+  "ENG-002-pp-15",
+  "ENG-002-pp-05"
+ ],
+ "held": [
+  {
+   "itemId": "ENG-007-LP-15",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "seat:cmtdflmpc000ptmf5ujf9ioc4",
+     "verdict": "REFUSE",
+     "reason": "Still wrong (line 33: 'in the Friday box'; the returns box is for named things, lines 7 to 8), the tag holds and the quotes are exact. The fault is the wording: 'Put it underneath in the returns box' leaves 'underneath' hanging with nothing to be under, which is not natural English. It was swapped in for 'low down' to cut the Jaccard with the key while keeping window overlap, so it reads as contorted to beat the measure. The same tokens in a natural order would keep every number: 'Put it in the returns box, underneath, and pushed it flat.' (11 words like the proposed seat, Jaccard 0.33 with the key, window overlap 0.83, the same as the key)."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-007-LP-15",
+    "verdict": "HOLD",
+    "reason": "The only change on this row is refused for its wording ('Put it underneath in the returns box'). Without it, the key and the returns-box option stay the unique closest pair at 0.50, so keyInClosestNearTwinPair is unbroken. Otherwise the row has one answer. The reordered wording in the seat reason keeps every measured number and can sign."
+   }
+  },
+  {
+   "itemId": "ENG-007-LP-04",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "seat:cmsw2f4v100c5tmbvgqit3fr3",
+     "verdict": "REFUSE",
+     "reason": "Wrong under every reading, the tag fits (line 26 is true and answers 'how far', not 'what happens'), and the quotes are exact. The fault is the wording: 'Far enough, she said, laughing as she said it.' says 'said' twice in seven words, and 'laughing as she said it' is not how anyone would put it. The passage has 'She said far enough, and laughed'. The clause is there to add window words ('laugh', 'said') and a second comma, and it reads contorted to a child. A plainer within-span wording with the same features would serve, e.g. 'She said that it was far enough, then laughed.' (9 words like the key, a comma, every content word from line 26 so it ties the key on window overlap, no 'and'). Please recheck the measure on the redraft."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-007-LP-04",
+    "verdict": "HOLD",
+    "reason": "The only change on this row is refused for contorted wording. Without it, the key is still the only option with a comma and the unique top on cited-line and whole-passage overlap, so all three tells in tellsPointingAtKey still point at the key. Otherwise the row has one answer. A plain within-span redraft can sign."
+   }
+  }
+ ]
+}

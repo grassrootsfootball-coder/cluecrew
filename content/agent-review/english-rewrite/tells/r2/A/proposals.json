@@ -1,0 +1,63 @@
+{
+ "door": "english-rewrite/tells/r2/A",
+ "proposer": "agent",
+ "seats": [
+  {
+   "optionId": "cmsw5vr56000atm8ei4ouwxc6",
+   "itemId": "ENG-002-pp-05",
+   "oldValue": "A group of people who run a country together.",
+   "tag": "en-vocab-neighbouring-sense",
+   "newValue": "A team that people vote for in an election.",
+   "execution": "The political sense, a side that people vote for, is a real second sense of 'party'. Line 21 rules it out: the party 'entered the assembly-room', and lines 21 to 22 count it as 'only five altogether'."
+  },
+  {
+   "optionId": "cmsw2f4tv0059tmbv1xbzsfbj",
+   "itemId": "ENG-002-pp-12",
+   "oldValue": "Two: one with Miss Bingley and one with Elizabeth Bennet.",
+   "tag": "en-minimal-pair-skim",
+   "newValue": "Two: once with Elizabeth Bennet and once with Miss Bingley.",
+   "execution": "One name changed: Elizabeth Bennet for Mrs Hurst. Line 40 has Mr Darcy dance 'once with Mrs. Hurst and once with Miss Bingley'. Elizabeth sits down for two dances at lines 47 and 48, and Mr Darcy turns her down at lines 66 and 67."
+  },
+  {
+   "optionId": "cmsw2f4ty005qtmbvcxcdm3f1",
+   "itemId": "ENG-002-pp-15",
+   "oldValue": "Mr Darcy had refused to dance with her.",
+   "tag": "en-within-span-wrong-element",
+   "newValue": "Mr Darcy was standing near enough for her to hear him.",
+   "execution": "True of lines 48 and 49: Mr Darcy 'had been standing near enough for her to overhear a conversation' with Mr Bingley. That is what happened while she sat, not why she sat. Line 47 gives the reason: she was 'obliged, by the scarcity of gentlemen, to sit down'."
+  },
+  {
+   "optionId": "cmsw2f4v100c5tmbvgqit3fr3",
+   "itemId": "ENG-007-LP-04",
+   "oldValue": "They are sorted again at the school on Friday.",
+   "tag": "en-within-span-wrong-element",
+   "newValue": "Far enough, she said, laughing as she said it.",
+   "execution": "True of line 26: when Reuben asked if that was far, 'She said far enough, and laughed'. It answers his second question, how far, not what happens to the bags. Lines 24 and 25 give that: a warehouse, 'and then out to shops all over the place'."
+  },
+  {
+   "optionId": "cmtdflmpc000ptmf5ujf9ioc4",
+   "itemId": "ENG-007-LP-15",
+   "oldValue": "Put it in the returns box, low down, and pushed it flat.",
+   "tag": "en-contradicted-by-the-text",
+   "newValue": "Put it underneath in the returns box, and pushed it flat.",
+   "execution": "Line 33 says he put it 'in the Friday box, low down, underneath the swimming things', the box going to the charity collection, and line 34 that he 'pushed it flat'. The child keeps how he did it and changes the box to the returns box, which named things go in at lines 7 and 8."
+  }
+ ],
+ "redrafts": [
+  {
+   "optionId": "cmsw2f4tv0057tmbvsa1sruh7",
+   "itemId": "ENG-002-pp-12",
+   "value": "Every dance of the evening.",
+   "tag": "en-attribute-transfer",
+   "execution": "Every dance belongs to Mr Bingley: line 37 says he 'danced every dance'. The child carries it across to Mr Darcy, who at lines 39 and 40 'danced only once with Mrs. Hurst and once with Miss Bingley'."
+  }
+ ],
+ "rebuilds": [],
+ "notes": {
+  "ENG-002-pp-05": "Convergence: key and the political-sense distractor shared 'a group of people ... together' (Jaccard 0.5). The political sense is reworded so it no longer shares the key's words (0.14); same mistake, same tag. No other pair reaches 0.5.",
+  "ENG-002-pp-12": "Convergence: key and the one-name-changed distractor were the closest pair (0.57). The distractor now uses the passage's own 'once with ... once with' and puts the wrong name first; the three closest pairs all sit at 0.43, so no pair counts. Still one name changed, still the same length in words as the key (10). The redraft tidies the 'Every dance' execution the round-1 reviewer flagged (it quoted a line-39 fragment that does not answer the stem).",
+  "ENG-002-pp-15": "Round-1 HOLD/REFUSE: the 'would not dance with her' seat gave a defensible second answer. Re-drafted as the reviewer suggested, a within-span option that answers a different question, but worded from lines 47 to 48 themselves (the suggested Bingley wording shares only 'Darcy' with the two cited lines and would not break the overlap tell). It claims no unwillingness on Mr Darcy's part, only that he stood near (line 48). It now has the highest window overlap (0.8 against the key's 0.67), and at 11 words it ties the longest option rather than becoming the only longest.",
+  "ENG-007-LP-04": "Round-1 HOLD: the Leeds seat was mis-tagged. The reviewer's suggested repair ('They go out to shops, then to a warehouse.') has exactly the key's content words, Jaccard 1.0 with the key, which is the round-2 convergence tell, so it is not used. Instead a genuinely within-span option: Miss Bhatt's 'far enough' (line 26), which answers how far, not what happens. It ties the key on window and passage overlap and on the comma, and is not a twin of the key (0.0).",
+  "ENG-007-LP-15": "Convergence: key and the returns-box distractor were the closest pair at 0.5. The distractor keeps its mistake (returns box), its two-part shape and its comma, but swaps 'low down' for the passage's 'underneath', so it shares 3 of 9 words with the key (0.33) and still ties it on window overlap (0.83). No pair now reaches 0.5."
+ }
+}

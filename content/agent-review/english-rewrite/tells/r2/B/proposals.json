@@ -1,0 +1,138 @@
+{
+ "door": "english-rewrite/tells/r2/B",
+ "proposer": "agent",
+ "seats": [
+  {
+   "optionId": "cmsw2f4ua007ktmbvtslp678m",
+   "itemId": "ENG-004-AGG-04",
+   "oldValue": "A girl, sent over by Mrs Spencer.",
+   "tag": "en-attribute-transfer",
+   "newValue": "A girl, sent from Nova Scotia.",
+   "execution": "Line 18 has Mrs Spencer bring the boy 'over from Nova Scotia', and line 13 has a little girl waiting. The child gives the boy's journey to the girl, but line 17 has Matthew say he is 'not expecting a girl'."
+  },
+  {
+   "optionId": "cmsw2f4uf008ktmbvn89tfhlo",
+   "itemId": "ENG-004-AGG-12",
+   "oldValue": "Come along with him, and take her own bag.",
+   "tag": "en-minimal-pair-skim",
+   "newValue": "Come to the horse, and take her own bag.",
+   "execution": "Right on going to the horse, which line 64 says 'is over in the yard', and wrong on one detail: lines 64 to 65 end 'Give me your bag', so Matthew asks to carry the bag himself, not for her to keep it."
+  },
+  {
+   "optionId": "cmsw2f4ug008rtmbvg5j0st6p",
+   "itemId": "ENG-005-BB-01",
+   "oldValue": "The cart was heavy, and its wheels ran along pleasantly.",
+   "tag": "en-minimal-pair-skim",
+   "newValue": "The dog-cart was very heavy, and its wheels ran along.",
+   "execution": "Differs from the text on the one reason that matters: line 3 says 'it was so light'. The wheels that 'ran along' are right, so a child matching on gist takes it; very heavy is the reverse of the reason Beauty gives."
+  },
+  {
+   "optionId": "cmsw2f4ui008ztmbv20uliq9j",
+   "itemId": "ENG-005-BB-03",
+   "oldValue": "It was low, and he feared a bad night.",
+   "tag": "en-attribute-transfer",
+   "newValue": "It was low, and the road was under water.",
+   "execution": "The man said 'the river was rising fast' (line 10). Low belongs to the road at line 11, 'one low part of the road', and has been moved onto the river; the water on the road is the narrator's report, not what the man said about the river."
+  },
+  {
+   "optionId": "cmsw2f4vt00gttmbv7wpjp25e",
+   "itemId": "ENG-010-JE-04",
+   "oldValue": "A dog was coming upon her in the dusk, as in Bessie's tales.",
+   "tag": "en-chronology-collapse",
+   "newValue": "A large dog, a form of the Gytrash, approached her in the dusk.",
+   "execution": "The dog is real but comes later: it glides out at line 20, and only then is it 'one form of Bessie’s Gytrash' (lines 21 to 22). The Gytrash comes into her mind at lines 14 to 16, 'As this horse approached', when the 'large dog' of line 16 is only a form in the tale."
+  },
+  {
+   "optionId": "cmsw2f4vy00hmtmbva8hvsq6q",
+   "itemId": "ENG-010-JE-10",
+   "oldValue": "A sprain, and some broken bones in his foot.",
+   "tag": "en-within-span-wrong-element",
+   "newValue": "He stood up again, and tried his foot.",
+   "execution": "True of lines 49 and 50: 'again he stood up and tried his foot'. It is what he does next, not what he says is the matter, which line 49 gives as 'no broken bones,—only a sprain'."
+  },
+  {
+   "optionId": "cmsw2f4xu00sttmbv8g015a78",
+   "itemId": "ENG-017-CR-08",
+   "oldValue": "In a loud voice that the whole room could hear.",
+   "tag": "en-contradicted-by-the-text",
+   "newValue": "In a loud voice that Miss Jenkyns could not possibly miss.",
+   "execution": "Line 36 says he asked 'in a low voice', and line 37 has the narrator think Miss Jenkyns 'could not have heard'. A loud voice that she could not miss is the stated contrary of both."
+  },
+  {
+   "optionId": "cmsw2f4xu00sutmbv7madxw37",
+   "itemId": "ENG-017-CR-08",
+   "oldValue": "Angrily, after losing his temper with her.",
+   "tag": "en-wrong-scope-retrieval",
+   "newValue": "Pleading, as he did when he asked to read a scene.",
+   "execution": "Line 20 has him ask to read her a scene, 'pleaded he'. That is a different request in an earlier part of the passage. Line 36 gives how he asks about the Rambler: 'in a low voice'."
+  },
+  {
+   "optionId": "cmsw2f4zw0150tmbvz44i89fr",
+   "itemId": "ENG-025-LW-05",
+   "oldValue": "Meg went to Jo and Beth went to Amy.",
+   "tag": "en-attribute-transfer",
+   "newValue": "Meg looked after Jo; Beth flew to save Amy.",
+   "execution": "Line 28 has 'Meg flew to rescue Amy, and Beth to pacify Jo'. This keeps both actions and swaps who did which: Meg is given Beth's calming of Jo, and Beth is given Meg's rush to Amy."
+  }
+ ],
+ "redrafts": [],
+ "rebuilds": [
+  {
+   "itemId": "ENG-001-WIW-06",
+   "why": "Round-1 HOLD: the key was lifted verbatim from lines 14 to 15, so it alone shared every word with the cited lines, and it was the longest option. The key is reworded, still complete and correct (a great meadow is a big grassy field), and the hedge seat reuses 'great meadow' from line 15 while staying wrong (he reaches the far hedge only after crossing the meadow, lines 20 to 21). The two tie on window overlap (0.5) and on length in words (8).",
+   "stem": {
+    "text": "Read lines 14 to 15. Where did the Mole find himself when his snout came out into the sunlight?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 6
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4t3000ptmbv450ti5ag",
+     "value": "On the bank of the river.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The bank is line 36, at the end of the river paragraph — a true place from a different part."
+    },
+    {
+     "optionId": "cmsw2f4t3000qtmbv88nrsh0f",
+     "value": "At the far hedge of the great meadow.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The hedge on the further side is line 21, reached only after he 'pursued his way across the meadow' at line 20. The child answers from that later part instead of lines 14 and 15, where he first comes up in the meadow grass."
+    },
+    {
+     "optionId": "cmsw2f4t3000rtmbv6gj5oywm",
+     "value": "In a boat painted blue and white.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The blue and white boat is line 60, near the end of the passage, long after he comes out into the sunlight. The child answers from that later part instead of lines 14 and 15, where he finds himself rolling in a meadow."
+    },
+    {
+     "optionId": "cmsw2f4t3000stmbvgguub34i",
+     "value": "In the warm grass of a big field.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4t4000ttmbve80d9bm6",
+     "value": "On a gravelled carriage-drive.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "execution": "Line 10 uses the carriage-drive as a comparison for his tunnel. This takes the comparison as the place he arrives."
+    }
+   ]
+  }
+ ],
+ "notes": {
+  "ENG-001-WIW-06": "Rebuild (key reworded) for the round-1 HOLD; see the rebuild's why. Only the key and the hedge seat change; the other three options, tags and executions are as stored. No option has a comma or two parts, as before.",
+  "ENG-004-AGG-04": "Convergence: key and the girl distractor differed by one word (0.5). The girl distractor keeps its mistake (a girl, with the boy's Nova Scotia journey) but no longer shares the key's 'sent over by Mrs Spencer' (0.17). It keeps a comma so no option is the only one without, and it is now the shortest option where the key used to be.",
+  "ENG-004-AGG-12": "Convergence: key and the minimal pair shared 'Come along with him' (0.6). The minimal pair now goes to the horse (line 64) and keeps the one wrong detail, her own bag. 0.33 with the key; ties it on window overlap (0.75), passage overlap, words (9), comma and two-part. Known cost: the key is now 2 characters longer than any other option (42 against 40), so 'longest (characters)' picks it on this row. Every 9-word wording of 42+ characters I found either drops the window tie or makes the distractor the only 10-word option, which feeds the retrieval 'longest (words)' elimination tell; 'longest (characters)' is at x0.60 in retrieval, so one more key pick moves it toward chance.",
+  "ENG-005-BB-01": "Convergence: key and the heavy-cart minimal pair were the closest pair at 0.5. The distractor now names the dog-cart and drops 'pleasantly', so it shares 3 of 9 words with the key (0.33); it still ties the key on window overlap (0.83), length in characters (54), comma and two-part.",
+  "ENG-005-BB-03": "Convergence: key and the 'low' distractor shared 'he feared a bad night' (0.5). The 'low' distractor now carries the road's water instead, from the same lines, so it shares no content word with the key and still ties it on window overlap (1.0), comma and two-part. Same mistake, same tag.",
+  "ENG-010-JE-04": "Convergence: key and the dog distractor differed by one word (0.71). The dog distractor is reworded from line 16's 'form ... large dog' and line 14's 'approached' (0.09 with the key), keeping its chronology mistake. It ties the key on window overlap (1.0) and words (13), and is one character longer (63 against 62), which removes the key's old unique 'longest (characters)'.",
+  "ENG-010-JE-10": "Convergence: key and the negation-dropped distractor shared sprain/bones/broken (0.75). Any negation-dropped value here must say 'broken bones', and with this three-word key it either stays a near-twin or needs a padded second clause, so the seat is retagged to en-within-span-wrong-element: what he does in the same lines, not what he says is the matter. No shared word with the key; it ties on window overlap (1.0), comma and two-part.",
+  "ENG-017-CR-08": "Round-1 HOLD. Temper seat: 'Angrily' had real support (lines 15 to 16, 32 to 33), so it is replaced by a manner from another part of the passage, the pleading of line 20 ('pleaded he'). The 'not' moves to the loud-voice seat, in the reviewer's own suggested wording with 'possibly' added: the key is no longer the only option with 'not', the loud seat ties it on window overlap (0.67) and words (11), and 'possibly' means the key is no longer the only hedged option either (the reviewer asked for that if the key were touched; this does it without touching the key). The loud seat is now the longest by one character, so the key's old unique 'longest (characters)' is gone too.",
+  "ENG-025-LW-05": "Convergence: the swap distractor had exactly the key's words (1.0). It now uses the passage's own verbs, swapped, so it shares 3 of 7 words with the key (0.43). 'looked' matters: without a stem word the key becomes the unique closest match to the stem, so this option now takes that place instead. The semicolon keeps it at 9 words, the key's length, without a comma or a second 'and' (either would make it the only comma or two-part option)."
+ }
+}

@@ -1,0 +1,54 @@
+{
+ "door": "english-rewrite/tells/r2/D",
+ "proposer": "agent",
+ "seats": [
+  {
+   "optionId": "cmsw2f4vh00ewtmbve513loln",
+   "itemId": "ENG-009-SM-02",
+   "oldValue": "He got as far as Saltmere, twice.",
+   "tag": "en-minimal-pair-skim",
+   "newValue": "Twice, he walked out as far as Saltmere.",
+   "execution": "Lines 4 and 5 say twice he had got as far as the caravan park; Saltmere is where he has been meaning to walk to for about four years. The option keeps the twice and puts Saltmere in place of the caravan park."
+  },
+  {
+   "optionId": "cmsw2f4yo00xrtmbv14jogp6s",
+   "itemId": "ENG-020-HD-11",
+   "oldValue": "She puts it in the cupboard and then wraps it up.",
+   "tag": "en-minimal-pair-skim",
+   "newValue": "She sticks it in a corner of the cupboard and then puts a handkerchief round it.",
+   "execution": "Lines 44 and 45 say that after wrapping a handkerchief round it, she stuck it in a corner of the cupboard as far back as she could. The option keeps both actions and swaps their order, so the handkerchief comes last. The order is the one detail that differs from the text."
+  },
+  {
+   "optionId": "cmsw2f50g0186tmbvlu1doc06",
+   "itemId": "ENG-027-RR-04",
+   "oldValue": "That the pictures of him are handsome enough.",
+   "tag": "en-contradicted-by-the-text",
+   "newValue": "That she does not care if he hears her.",
+   "execution": "Lines 15 and 16 say she spoke taking great care that the narrator should hear, so the passage states the contrary. What she actually says at line 15 is about the pictures of him."
+  },
+  {
+   "optionId": "cmsw2f50u01aftmbvzuuaesat",
+   "itemId": "ENG-028-PR-09",
+   "oldValue": "The traffic under the boards has changed.",
+   "tag": "en-wrong-scope-retrieval",
+   "newValue": "Two go in, and one comes out, as regular as buses.",
+   "execution": "True at lines 6 and 7, before anything changes: the traffic goes in and out as regular as buses, two in and one out. The question asks about lines 34 to 36, where more of them are out than she has ever seen and they are not going anywhere in particular."
+  }
+ ],
+ "redrafts": [
+  {
+   "optionId": "cmsw2f50u01ahtmbvdktbe0tp",
+   "itemId": "ENG-028-PR-09",
+   "value": "They have moved away from the roofline altogether.",
+   "tag": "en-contradicted-by-the-text",
+   "execution": "Line 36 has them turning over the same square of air above the guttering, by the roofline Priya looks at in line 34. They have not moved away from it."
+  }
+ ],
+ "rebuilds": [],
+ "notes": {
+  "ENG-009-SM-02": "Convergence: the minimal-pair seat shared 'got as far ... twice' with the key (0.5). It now keeps the same one-detail mistake (Saltmere for the caravan park) as 'Twice, he walked out as far as Saltmere.', Jaccard 0.29, with full window overlap and a comma like the key.",
+  "ENG-020-HD-11": "Round-1 HOLD: retagged to en-minimal-pair-skim as the reviewer ruled. The reviewer's value would have made a new near-twin of the key (Jaccard 0.63), so the order swap is worded with line 45's 'corner of the cupboard' and 'puts a handkerchief round it' (0.33). It ties the key's window overlap and is 16 words against 15; a 15-word wording needed either a comma (a new only-comma) or dropping 'then', which makes the order arguable.",
+  "ENG-027-RR-04": "Convergence plus 'not': the negation-dropped option had the key's exact words (1.0), and the key was the only option with 'not'. Replaced with an option the text contradicts: she takes great care that he should hear (lines 15 and 16). It ties 'not', 9 words and window overlap; it and the 'took great care' option are now the closest pair, which holds no key. The key was already longest by characters before this round and still is (49 against 45).",
+  "ENG-028-PR-09": "Round-1 HOLD: 'still' is dropped exactly as the reviewer asked, so the option no longer falls to the stem; it ties the key on comma, two-part and 11 words. The key was and stays longest by characters (53 against 50). The other contradicted distractor's execution is redrafted to 40+ characters."
+ }
+}

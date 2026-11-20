@@ -1,0 +1,60 @@
+{
+ "door": "english-rewrite/tells/r2/D",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "ENG-028-PR-09",
+   "passageRef": "stream-b-01",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/r2/D",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Round-1 hold fixed exactly as ruled ('still' dropped). One defensible answer (lines 35-36: more out, circling one patch of air). The stem-restating distractor is gone. Comma, two-part and longest words no longer single out the key; longest by characters still does (53 vs 50), as before, and is not failing. 'Priya is looking past his shoulder' still falls to the stem. Round 1 accepted that and the hint targets it.",
+   "landedAt": "2026-11-20T20:25:18.477Z",
+   "changes": [
+    {
+     "field": "option B (cmsw2f50u01aftmbvzuuaesat).value",
+     "before": "The traffic under the boards has changed.",
+     "after": "Two go in, and one comes out, as regular as buses."
+    },
+    {
+     "field": "option B (cmsw2f50u01aftmbvzuuaesat).tag",
+     "before": "en-inference-literal-lookalike",
+     "after": "en-wrong-scope-retrieval"
+    },
+    {
+     "field": "option B (cmsw2f50u01aftmbvzuuaesat).execution",
+     "before": "Reuses line 34 and says it has changed rather than how.",
+     "after": "True at lines 6 and 7, before anything changes: the traffic goes in and out as regular as buses, two in and one out. The question asks about lines 34 to 36, where more of them are out than she has ever seen and they are not going anywhere in particular."
+    },
+    {
+     "field": "option D (cmsw2f50u01ahtmbvdktbe0tp).execution",
+     "before": "Line 36 keeps them above the guttering.",
+     "after": "Line 36 has them turning over the same square of air above the guttering, by the roofline Priya looks at in line 34. They have not moved away from it."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-009-SM-02",
+   "passageRef": "stream-b-02",
+   "hold": {
+    "reason": "not a held row: english-rewrite/tells/r2/D",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One defensible answer (lines 4-5: twice as far as the caravan park), every distractor wrong. The twin pair is gone and no failing tell picks the key. Three options name Saltmere, as before this round, and the stem names Saltmere, so that pattern draws children AWAY from the key rather than to it.",
+   "landedAt": "2026-11-20T20:25:18.477Z",
+   "changes": [
+    {
+     "field": "option A (cmsw2f4vh00ewtmbve513loln).value",
+     "before": "He got as far as Saltmere, twice.",
+     "after": "Twice, he walked out as far as Saltmere."
+    },
+    {
+     "field": "option A (cmsw2f4vh00ewtmbve513loln).execution",
+     "before": "One word out: line 5 says the caravan park, which is where the bus stops.",
+     "after": "Lines 4 and 5 say twice he had got as far as the caravan park; Saltmere is where he has been meaning to walk to for about four years. The option keeps the twice and puts Saltmere in place of the caravan park."
+    }
+   ]
+  }
+ ]
+}
