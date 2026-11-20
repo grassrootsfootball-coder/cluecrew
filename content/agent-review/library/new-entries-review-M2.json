@@ -1,0 +1,11 @@
+{
+  "batch": "M2",
+  "reviewer": "rev-agent-01",
+  "entries": [
+    {
+      "id": "maths-114-read-from-the-digit-to-the-end",
+      "verdict": "ATTEST",
+      "reason": "(1) Real mistake: giving the tail of the number (652 for the 6 in 4,652) is a recognisable value-of-the-digit error. It comes from reading the number aloud, where the 6 opens the spoken chunk 'six hundred and fifty-two', and a teacher would recognise it. It is less common than face value (maths-62) or the wrong column (maths-61), and the drafter says so and cites no frequency. The rank-breaking motive is real, but the value is not fitted: it comes from a single fixed rule applied the same way on all five rows, not chosen per row. (2) Not a duplicate: I read all 114 ACTIVE maths entries. maths-61 gives one digit followed by zeros (60 or 6,000). maths-62 gives the face value. maths-02, maths-07 and maths-67 are about writing numbers or about decimals. No entry names keeping the digits after the named one. (3) Numbers recomputed from the stems: 4,652 digit 6 gives 652 (key 600). 3,826 digit 8 gives 826 (key 800). 7,283 digit 2 gives 283 (key 200). 5,914 digit 9 gives 914 (key 900). 8,473 digit 4 gives 473 (key 400). All five are right. None is a current option, since the current options are the key, x/10, the face value and x*10. Each value lies strictly between the key and the one-column-left value, as the why says. The description's 652/600 example matches MC01-NPV-01. (4) Hint: 'Keep that digit in its column and change all the other digits to zeros.' For 4,652 this gives 0,600, which is 600. For 5.284 (MC03-NPV-06) it gives 0.080, which is 0.08. For 6.351 (MC04-NPV-05) it gives 0.050, which is 0.05. For 7.482 (MC05-NPV-05) it gives 0.080, which is 0.08. So it is a correct method on every whole-number and decimal value-of-digit row. 'The digits after it are not part of its value.' is true on all of them. The sentences have 14 and 10 words, use British English and plain words, and describe a move. 'zeros' is already used in ACTIVE hints (maths-05). Minor and not blocking: a child may write the leading zero (0600). (5) Each value is above the key by a non-zero tail, so it can never be accepted as correct. The entry is tagged only on the five whole-number carriers, not on the decimal rows, where the move has no single value. That is the right call."
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
- "measuredAt": "2026-11-20T19:01:31.485Z",
+ "measuredAt": "2026-11-20T19:10:55.594Z",
  "after": null,
  "rankable": 161,
  "unrankable": [
@@ -24,8 +24,8 @@
  ],
  "ranks": {
   "0": 40,
-  "1": 50,
-  "2": 43,
+  "1": 52,
+  "2": 41,
   "3": 28
  },
  "tagCount": {
@@ -54,7 +54,7 @@
   "maths-38-perimeter-vs-area-adding": 5,
   "maths-100-steps-out-of-order": 5,
   "maths-83-money-place-value-slip": 14,
-  "maths-61-reading-the-wrong-place-value-column": 26,
+  "maths-61-reading-the-wrong-place-value-column": 24,
   "maths-62-reading-a-digit-at-face-value": 10,
   "maths-69-dropped-calculation-carry": 20,
   "maths-64-leading-zero-ordering-slip": 2,
@@ -101,6 +101,7 @@
   "maths-26-percentage-symbol-as-a-unit": 1,
   "maths-06-multiplying-by-10-adds-a-zero": 1,
   "maths-33-12-24-hour-confusion": 1,
+  "maths-114-read-from-the-digit-to-the-end": 2,
   "maths-63-misaligned-addition-carry": 2,
   "maths-16-reversing-division": 3,
   "maths-111-halved-instead-of-quartered": 3,
@@ -115,47 +116,7 @@
   "maths-52-ratio-to-fraction-confusion": 1,
   "maths-113-lost-the-bridge-to-the-pound": 1
  },
- "flaggedGroups": [
-  {
-   "group": "template FDP-04",
-   "rows": 5,
-   "rank": 2,
-   "count": 5,
-   "itemIds": [
-    "MC01-FDP-04",
-    "MC02-FDP-04",
-    "MC03-FDP-04",
-    "MC04-FDP-04",
-    "MC05-FDP-04"
-   ]
-  },
-  {
-   "group": "template NPV-01",
-   "rows": 5,
-   "rank": 2,
-   "count": 5,
-   "itemIds": [
-    "MC01-NPV-01",
-    "MC02-NPV-01",
-    "MC03-NPV-01",
-    "MC04-NPV-01",
-    "MC05-NPV-01"
-   ]
-  },
-  {
-   "group": "template NPV-07",
-   "rows": 5,
-   "rank": 2,
-   "count": 4,
-   "itemIds": [
-    "MC01-NPV-07",
-    "MC02-NPV-07",
-    "MC03-NPV-07",
-    "MC04-NPV-07",
-    "MC05-NPV-07"
-   ]
-  }
- ],
+ "flaggedGroups": [],
  "rows": [
   {
    "itemId": "MC01-CALC-02",
@@ -1051,10 +1012,10 @@
   {
    "itemId": "MC03-NPV-01",
    "type": "maths-npv",
-   "rank": 2,
+   "rank": 1,
    "options": 4,
    "sides": {
-    "cmteo82ej00attmmj07lxhegn": "below",
+    "cmteo82ej00attmmj07lxhegn": "above",
     "cmteo82ej00autmmjabw1hq0y": "below",
     "cmteo82ej00avtmmjb407wspc": "above"
    }
@@ -1810,10 +1771,10 @@
   {
    "itemId": "MC05-NPV-01",
    "type": "maths-npv",
-   "rank": 2,
+   "rank": 1,
    "options": 4,
    "sides": {
-    "cmteo82ra00ittmmj070beim2": "below",
+    "cmteo82ra00ittmmj070beim2": "above",
     "cmteo82ra00iutmmjlcdxtzzf": "below",
     "cmteo82ra00ivtmmjqf0xz8js": "above"
    }

@@ -28801,3 +28801,46 @@ templates: 6 → 3.** MEAS-01 and FDP-02 cleared.
 - `land-library.ts` passes the role `'misconception-hint'`, which is not a `ContentRole`.
   `checkChildFacingText` treats an unknown role with the STRICTEST rules, so hints there were
   over-gated, never under-gated. The new door uses `'hint'`.
+
+## R1027 — The value-of-the-digit shortcut closed, and two "templates" that were never templates (David, 2026-11-20)
+
+**THE INSTRUCTION.** David: *"Yes, do NPV-01."* "In the number 4,652, what is the value of the digit
+6?" ran on all five papers with the same wrong answers: face value 6, one column right 60, one column
+left 6000. So the key was second-largest on 5 of 5, by construction.
+
+**THE ENTRY.** `maths-114-read-from-the-digit-to-the-end`: the child gives 652 for the 6 in 4,652, taking
+the digit and everything after it as its value (the 6 starts the spoken chunk "six hundred and
+fifty-two"). Drafted by one agent and attested by another through `land-new-entries`. The reviewer was
+told the entry existed to break a pattern, which is a motive to fit, and judged it real because the
+value comes from one fixed rule applied identically on every row, not chosen row by row. Neither
+agent could cite a published frequency, and the entry's note says so. It is distinct from maths-61
+(a digit followed by zeros) and maths-62 (the bare digit). Its carriers are the five whole-number rows
+only: on decimal rows the move has no single value.
+
+**THE ROWS.** MC03-NPV-01 and MC05-NPV-01 take 283 and 473 in place of 20 and 40. Those were maths-61,
+which occurs 26 times on the door and stays on each row's 2000/4000 option. 6 changes attested, 2 rows
+signed. NPV-01 drops from 5 of 5 to 3 of 5 at one rank. **Door ranks 40/52/41/28.**
+
+**THE INSTRUMENT WAS WRONG ABOUT TWO SLOTS.** `measure-maths-key-rank` treated every paper slot
+(MCnn-<slot>) as a template. FDP-04 holds five DIFFERENT questions (glasses, adding fractions ×2, a sale
+price, a fraction as a decimal), and NPV-07 holds three kinds (hundreds in a number ×2, the largest
+decimal, rounding ×2). A child meets the stem, never the slot number, so a rank shared across a mixed
+slot is no shortcut. Two rounds of proposers and the reviewer spent effort on a pattern that did not
+exist; the reviewer twice called FDP-04 "structural" before the cause was named. Both slots are now
+DECLARED mixed in the script, with their kinds written out, and printed on every run. The stem-shape
+grouping still screens their rows. Baseline (R149) before and after: exactly those two groups moved
+from flagged to declared, and nothing else moved. **Within-template: 0 flagged.** The two pairs inside
+NPV-07 (both rounding rows, both hundreds rows) share a rank, and at 2 rows they are below the
+3-row floor. A third paper would make them a real group.
+
+**A TRUNCATION, CAUGHT BY A REVIEWER, IN THIS PASS'S OWN DOOR.** `land-new-entries` cut the approval
+note at 1,800 characters. maths-113's note had already lost most of the reviewer's half (2,929 → 1,800),
+which was the overlap finding the note was extended to carry. The cut is removed and the note restored
+whole from the two files, with an AMENDED event. The same fault R87 names: the write succeeded,
+reported success, and dropped the part nobody was looking at.
+
+**WHERE maths-01 ENDS.** Over six rounds: key rank 29/69/50/13 → 40/52/41/28. Seven template shortcuts
+were found and cleared, including the "how much change" one round 1 created. Four new library entries
+(maths-111 to 114) name mistakes the library had no word for. Every #63 tag that named a carry where
+none happened was corrected. Two ranks now sit exactly on their limits (second-smallest at 52, largest
+at 28), so any later change to this door must be re-measured before it is signed.

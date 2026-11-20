@@ -1,0 +1,48 @@
+{
+  "door": "patterns/maths-01",
+  "reviewer": "rev-agent-01",
+  "changes": [
+    {
+      "ref": "seat:cmteo82ej00attmmj07lxhegn",
+      "verdict": "ATTEST",
+      "reason": "MC03-NPV-01 asks for the value of the 2 in 7,283; the key is 200. This seat replaces 20 (maths-61, one column right) with 283 (maths-114). The child drops the 7 in front of the 2 and keeps the 8 and 3 after it, which gives 283. That is exactly the move maths-114 names, with no fitting. Execution checked word by word: 7, 8, 3, 2, 7,283, 283 and 200 are all on the row; the 2 is the hundreds digit, so its value is 200. 283 is wrong, differs from 2, 200 and 2000, and no marker could accept it, since it is not a rounding or another form of 200. The replaced tag maths-61 occurs 26 times on the door (at least 10 needed), and the row keeps maths-61 on 2000. maths-114 had 0 uses on the door, so this is the rare tag the brief prefers. The seat moves 20 (below the key) to 283 (above it), so the row goes from rank 2 to rank 1. That is not one of the two moves the brief lists, but it is what clears the NPV-01 template flag, and the door total stays in range."
+    },
+    {
+      "ref": "seat:cmteo82ra00ittmmj070beim2",
+      "verdict": "ATTEST",
+      "reason": "MC05-NPV-01 asks for the value of the 4 in 8,473; the key is 400. This seat replaces 40 (maths-61) with 473 (maths-114). The child drops the 8 in front and keeps the 7 and 3 after the 4, which gives 473. Execution checked: 8, 7, 3, 4, 8,473, 473 and 400 are all on the row, and the 4 is the hundreds digit. 473 is wrong, unique on the row, and never acceptable. maths-61 keeps 4000 on the row and stays at 26 or more on the door. The row moves from rank 2 to rank 1."
+    },
+    {
+      "ref": "redraft:cmteo82ej00autmmjabw1hq0y",
+      "verdict": "ATTEST",
+      "reason": "Value 2, tag maths-62 (face value), both unchanged. The execution says the 2 in 7,283 is in the hundreds column, so its value is 2 hundreds, or 200. Every number is on the row and the arithmetic is right. The execution is at least 40 characters."
+    },
+    {
+      "ref": "redraft:cmteo82ej00avtmmjb407wspc",
+      "verdict": "ATTEST",
+      "reason": "Value 2000, tag maths-61, both unchanged. The execution says the child reads the 2 one column to the left, in the thousands. In 7,283 the thousands digit is in fact 7 and the 2 is in the hundreds column. All correct. The execution writes 2,000 where the option shows 2000; it is the same number, and the comma matches how the stem writes 7,283."
+    },
+    {
+      "ref": "redraft:cmteo82ra00iutmmjlcdxtzzf",
+      "verdict": "ATTEST",
+      "reason": "Value 4, tag maths-62, both unchanged. The execution says the 4 in 8,473 is in the hundreds column, so its value is 4 hundreds, or 400. Correct, and every number is on the row."
+    },
+    {
+      "ref": "redraft:cmteo82ra00ivtmmjqf0xz8js",
+      "verdict": "ATTEST",
+      "reason": "Value 4000, tag maths-61, both unchanged. The execution says the child reads the 4 one column to the left, in the thousands. In 8,473 the thousands digit is 8 and the 4 is in the hundreds column, so its value is 400. Correct."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "MC03-NPV-01",
+      "verdict": "SIGN",
+      "reason": "As the child will meet it: 'In the number 7,283, what is the value of the digit 2?', with options 2 (face value), 200 (key), 283 (tail) and 2000 (one column left). The row can be answered from what is on it, and 200 is the only correct option. All three distractors come from different mistakes: face value, wrong column, and keeping the digits after the 2. Previously the row was the set 2/20/200/2000, so a child only had to pick 'the middle power of ten'; that is now gone. On this row and MC05, 283 is the only other 3-digit option besides the key. A child who already knows the 2 is worth hundreds must still tell 200 from 283, and that is the very mistake being tested, not a giveaway. Every word is plain. Across the five NPV-01 rows as they will stand: MC01, MC02 and MC04 are 6/60/600/6000-shape (rank 2), and MC03 and MC05 are d/d00/tail/d000 (rank 1). The tail value is always above the key by construction, but it appears on only 2 rows, so no rank or pairing pattern forms. Pre-existing and not caused by this proposal: the options show 2000 with no comma while the stem writes 7,283."
+    },
+    {
+      "itemId": "MC05-NPV-01",
+      "verdict": "SIGN",
+      "reason": "As the child will meet it: 'In the number 8,473, what is the value of the digit 4?', with options 4, 400 (key), 473 and 4000. 400 is the only correct option. 4, 473 and 4000 are each wrong, unique, and come from three different mistakes, and every distractor now has a checked execution. The row reads like MC03, and the same reasoning about tells applies: no rank, size or pairing pattern gives the key away within the NPV-01 template or across the door. The same pre-existing note applies: the options show 4000 with no comma, against 8,473 in the stem."
+    }
+  ]
+}

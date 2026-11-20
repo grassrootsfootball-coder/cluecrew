@@ -1,0 +1,22 @@
+{
+  "batch": "M2",
+  "proposer": "agent",
+  "entries": [
+    {
+      "id": "maths-114-read-from-the-digit-to-the-end",
+      "district": "MATHS",
+      "category": "Number & Place Value",
+      "description": "Child gives 652 for the 6 in 4,652 where the answer is 600, taking the digits from the 6 to the end of the number as its value.",
+      "childHint": "Keep that digit in its column and change all the other digits to zeros. The digits after it are not part of its value.",
+      "why": "A real mistake on 'value of the digit' questions: the child drops the digits in front of the named one but keeps every digit after it, so the answer is the tail of the number. Reading the number aloud feeds it on these rows, since the 6 in 4,652 begins the spoken chunk 'six hundred and fifty-two'. It is less common than face value or the wrong column, and I cannot cite a published frequency for it. No ACTIVE entry names it. maths-62 (face value) gives 6: it drops the column as well as the digits after. maths-61 (wrong column) gives 60 or 6,000: one digit followed by zeros, not the digits after. maths-02 (zero placeholder added) is about writing a number from words, such as 3004 for 'three hundred and four', and has nothing to do with a digit's value. maths-07 (decimals read as two whole numbers) is a decimal-only mistake. The value is always above the key on these rows, because it is the key plus the tens and ones after it, and here those are never both zero. It is always below the one-column-left value held by maths-61. Values: MC01-NPV-01 4,652, digit 6, key 600, gives 652. MC02-NPV-01 3,826, digit 8, key 800, gives 826. MC03-NPV-01 7,283, digit 2, key 200, gives 283. MC04-NPV-01 5,914, digit 9, key 900, gives 914. MC05-NPV-01 8,473, digit 4, key 400, gives 473. None of the five is an option now. The current options on each row are the key, face value (maths-62), and one column right and one column left (maths-61). I do NOT propose the three decimal rows (MC03-NPV-06 5.284, MC04-NPV-05 6.351, MC05-NPV-05 7.482): there the move has no single value, since 84 and 0.084 are both readings of it, and the 84 reading sits close to maths-07's 80. The hint describes the move and stays true there too: keeping the 8 in 5.284 in its column and zeroing the rest gives 0.080, which is 0.08. The entry would fail on a digit whose following digits are all zero (6 in 4,600), or on a ones digit, because the value then equals the key. No carrier has that shape.",
+      "carriers": ["MC01-NPV-01", "MC02-NPV-01", "MC03-NPV-01", "MC04-NPV-01", "MC05-NPV-01"],
+      "valuesProduced": {
+        "MC01-NPV-01": "652",
+        "MC02-NPV-01": "826",
+        "MC03-NPV-01": "283",
+        "MC04-NPV-01": "914",
+        "MC05-NPV-01": "473"
+      }
+    }
+  ]
+}

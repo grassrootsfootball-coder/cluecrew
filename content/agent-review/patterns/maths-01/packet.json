@@ -41,7 +41,7 @@
    "childHint": "The top numbers match, so look at the bottoms. Smaller bottoms make bigger pieces."
   },
   "maths-75-incomplete-fraction-of-an-amount": {
-   "description": "Child gives 2/3 of 12 = 24 where the answer is 8, using only the numerator; or 15 divided by 3/4 = 5 where the answer is 20, using only the denominator — treating the fraction as a single number.",
+   "description": "Child gives 2/3 of 12 = 24 where the answer is 8, using only the numerator; or 15 divided by 3/4 = 5 where the answer is 20, dividing by the numerator alone — treating the fraction as a single number.",
    "childHint": "A fraction is two numbers working together. Use both."
   },
   "maths-24-inverted-fraction-of-an-amount": {
@@ -459,6 +459,10 @@
   "maths-30-fractions-of-different-wholes": {
    "description": "Child gives 1/4 of a 20 cm ribbon as the same length as 1/4 of a 40 cm ribbon where the answers are 5 cm and 10 cm, treating a fraction as a fixed amount rather than a share of its own whole.",
    "childHint": "Fractions show proportions, not exact sizes. A quarter of a small pizza differs from a massive one!"
+  },
+  "maths-114-read-from-the-digit-to-the-end": {
+   "description": "Child gives 652 for the 6 in 4,652 where the answer is 600, taking the digits from the 6 to the end of the number as its value.",
+   "childHint": "Keep that digit in its column and change all the other digits to zeros. The digits after it are not part of its value."
   }
  },
  "houseFormExemplars": {
@@ -2486,10 +2490,10 @@
     },
     {
      "optionId": "cmteo823z004rtmmj7lti23g0",
-     "value": "72",
+     "value": "8",
      "isKey": false,
      "tag": "maths-75-incomplete-fraction-of-an-amount",
-     "execution": "The child multiplies 24 by the top number 3 and never divides by the bottom number 4, giving 72 instead of 18. The fraction is treated as the single number 3. Using it upside down would give 24 × 4 ÷ 3 = 32, not 72."
+     "execution": "The child divides 24 by the top number 3 and stops there, giving 8 instead of 18. The fraction is treated as the single number 3; three quarters of 24 is 24 ÷ 4 × 3 = 18."
     }
    ]
   },

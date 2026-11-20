@@ -1,0 +1,53 @@
+{
+ "door": "patterns/maths-01",
+ "proposer": "agent",
+ "seats": [
+  {
+   "optionId": "cmteo82ej00attmmj07lxhegn",
+   "itemId": "MC03-NPV-01",
+   "oldValue": "20",
+   "tag": "maths-114-read-from-the-digit-to-the-end",
+   "newValue": "283",
+   "execution": "The child drops the 7 in front of the 2 but keeps the 8 and the 3 that follow it, giving 283 as the value of the 2. Only the 2 itself counts. It sits in the hundreds column of 7,283, so its value is 200."
+  },
+  {
+   "optionId": "cmteo82ra00ittmmj070beim2",
+   "itemId": "MC05-NPV-01",
+   "oldValue": "40",
+   "tag": "maths-114-read-from-the-digit-to-the-end",
+   "newValue": "473",
+   "execution": "The child drops the 8 in front of the 4 but keeps the 7 and the 3 that follow it, giving 473 as the value of the 4. Only the 4 itself counts. It sits in the hundreds column of 8,473, so its value is 400."
+  }
+ ],
+ "redrafts": [
+  {
+   "optionId": "cmteo82ej00autmmjabw1hq0y",
+   "itemId": "MC03-NPV-01",
+   "value": "2",
+   "tag": "maths-62-reading-a-digit-at-face-value",
+   "execution": "The child gives the digit itself, 2, and ignores the column it sits in. The 2 in 7,283 is in the hundreds column, so its value is 2 hundreds, or 200."
+  },
+  {
+   "optionId": "cmteo82ej00avtmmjb407wspc",
+   "itemId": "MC03-NPV-01",
+   "value": "2000",
+   "tag": "maths-61-reading-the-wrong-place-value-column",
+   "execution": "The child reads the 2 as if it sat one column to the left, in the thousands, giving 2,000. In 7,283 the thousands digit is 7 and the 2 is in the hundreds column, so its value is 200."
+  },
+  {
+   "optionId": "cmteo82ra00iutmmjlcdxtzzf",
+   "itemId": "MC05-NPV-01",
+   "value": "4",
+   "tag": "maths-62-reading-a-digit-at-face-value",
+   "execution": "The child gives the digit itself, 4, and ignores the column it sits in. The 4 in 8,473 is in the hundreds column, so its value is 4 hundreds, or 400."
+  },
+  {
+   "optionId": "cmteo82ra00ivtmmjqf0xz8js",
+   "itemId": "MC05-NPV-01",
+   "value": "4000",
+   "tag": "maths-61-reading-the-wrong-place-value-column",
+   "execution": "The child reads the 4 as if it sat one column to the left, in the thousands, giving 4,000. In 8,473 the thousands digit is 8 and the 4 is in the hundreds column, so its value is 400."
+  }
+ ],
+ "rebuilds": []
+}

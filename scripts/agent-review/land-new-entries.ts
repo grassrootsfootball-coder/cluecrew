@@ -53,7 +53,9 @@ async function main() {
         status: 'ACTIVE', proposedBy: 'agent:drafter (R1021)', approvedBy: `reviewer:${AGENT}`, approvalMethod: method, recordedBy: RECORDED_BY,
         // The drafter's reason AND the reviewer's: a reviewer can find more than the drafter claimed (maths-113's
         // overlap with maths-99 on four rows, not one), and an approval note carrying only the drafter's half is incomplete.
-        approvalNote: `Why (drafter): ${e.why} | Reviewer (${AGENT}): ${verdict.get(e.id)?.reason ?? ''}`.slice(0, 1800),
+        // Not truncated: the column is text, and a cut here silently dropped the REVIEWER's half on a long
+        // drafter note (caught by the reviewer of batch M2). A note is evidence; it is stored whole.
+        approvalNote: `Why (drafter): ${e.why} | Reviewer (${AGENT}): ${verdict.get(e.id)?.reason ?? ''}`,
         textProvenance: { state: 'RECORDED', date, text: 'description+childHint', method,
           authoredBy: { kind: 'MACHINE', name: 'agent:drafter' }, approvedBy: { kind: 'MACHINE', name: `reviewer:${AGENT}` } } } });
       await tx.attributionEvent.create({ data: { recordType: 'misconception', recordId: e.id, action: 'AUTHORED', reviewerId: AGENT, actor: 'agent-drafter', recordedBy: RECORDED_BY, field: 'description/childHint', method } });

@@ -86,14 +86,29 @@ async function main() {
     const id = String(r.itemId); const rank = Number(r.rank);
     for (const g of [`template ${id.replace(/^MC\d+-/, '')}`, `shape "${shapeOf(stems.get(id) ?? '')}"`]) (groups.get(g) ?? groups.set(g, []).get(g)!).push({ id, rank });
   }
+  /**
+   * A SLOT IS A TEMPLATE ONLY IF IT HOLDS ONE KIND OF QUESTION (R1026). The papers put five DIFFERENT
+   * questions in some slots; a child meets the stem, never the slot number, so a rank shared across a
+   * mixed slot is no shortcut, and flagging it sent two rounds of repair after a pattern that does not
+   * exist. Each declaration names the kinds and is printed on every run, so it cannot quietly cover a
+   * slot that later becomes uniform; the STEM-SHAPE grouping still screens every row in it.
+   */
+  const MIXED_SLOTS: Record<string, string> = {
+    'FDP-04': 'five kinds: half-litre glasses, adding fractions (x2), a percentage sale, a fraction as a decimal',
+    'NPV-07': 'three kinds: hundreds in a number (x2), the largest decimal, rounding to the nearest 100 (x2)',
+  };
   const flagged: Array<Record<string, unknown>> = [];
+  const declared: string[] = [];
   for (const [g, rs] of groups) {
     if (rs.length < 3) continue;
     const c: Record<number, number> = {}; for (const x of rs) c[x.rank] = (c[x.rank] ?? 0) + 1;
     const [top, cnt] = Object.entries(c).sort((a, b) => b[1] - a[1])[0]!;
+    const slot = g.startsWith('template ') ? g.slice(9) : null;
+    if (slot && MIXED_SLOTS[slot]) { declared.push(`${g} — declared MIXED (${MIXED_SLOTS[slot]}); rank ${top} on ${cnt} of ${rs.length}, screened by shape instead`); continue; }
     if (cnt >= Math.ceil(0.75 * rs.length)) flagged.push({ group: g, rows: rs.length, rank: Number(top), count: cnt, itemIds: rs.map((x) => x.id) });
   }
-  console.log(`  within-template: ${groups.size} groups screened; ${flagged.length} FLAGGED (one rank on >= 3/4 of a group of 3+)`);
+  console.log(`  within-template: ${groups.size} groups screened; ${flagged.length} FLAGGED (one rank on >= 3/4 of a group of 3+); ${declared.length} slot(s) declared mixed`);
+  for (const d of declared) console.log(`    · ${d}`);
   for (const f of flagged) console.log(`    ✗ ${f.group}: rank ${f.rank} on ${f.count} of ${f.rows} — ${(f.itemIds as string[]).join(', ')}`);
   if (flagged.length) process.exitCode = 1;
   if (outPath) writeFileSync(outPath, JSON.stringify({ measuredAt: new Date().toISOString(), after: afterPath ?? null, rankable: n, unrankable, ranks, tagCount, flaggedGroups: flagged, rows: perRow }, null, 1));
